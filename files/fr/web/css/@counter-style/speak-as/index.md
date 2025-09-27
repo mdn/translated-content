@@ -1,13 +1,11 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-Le descripteur **`speak-as`**, rattaché à la règle @ {{cssxref("@counter-style")}}, permet d'indiquer la représentation sonore du compteur qui doit être utilisée par l'agent utilisateur si nécessaire. Ainsi, on peut utiliser ce descripteur pour que le compteur soit énoncé comme un nombre ou avec un signal audio particulier.
-
-Ce descripteur pourra prendre les valeurs `auto`, `bullets`, `numbers`, `words`, `spell-out` ou alors pourra pointer vers un autre style de compteur avec le nom de ce style.
+Le descripteur **`speak-as`** permet de spécifier comment un symbole de compteur construit avec une [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref('@counter-style')}} sera représenté à l'oral. Par exemple, l'auteur·ice peut indiquer qu'un symbole de compteur doit être prononcé comme sa valeur numérique ou simplement représenté par une indication sonore.
 
 ## Syntaxe
 
@@ -19,76 +17,82 @@ speak-as: numbers;
 speak-as: words;
 speak-as: spell-out;
 
-/* Nom d'un autre style @counter-style */
+/* Valeur de nom @counter-style */
 speak-as: <counter-style-name>;
 ```
 
 ### Valeurs
 
 - `auto`
-  - : Dans ce cas, la valeur réelle de `speak-as` sera définie selon la valeur utilisée pour le descripteur {{cssxref("system")}} :
-    - Si `system` vaut `alphabetic`, `speak-as` sera alors synonyme de `spell-out`.
-    - Si `system` vaut `cyclic`, `speak-as` sera alors synonyme de `bullets`.
-    - Si `system` vaut `extends`, la valeur de `speak-as` sera la même que celle correspondante à `auto` dans le style étendu.
-    - Dans les autres cas, le comportement de `numbers` sera utilisé.
+  - : Si la valeur de `speak-as` est spécifiée comme `auto`, la valeur effective de `speak-as` sera déterminée en fonction de la valeur du descripteur {{cssxref("@counter-style/system", "system")}}&nbsp;:
+    - Si la valeur de `system` est `alphabetic`, la valeur effective de `speak-as` sera `spell-out`.
+    - Si `system` est `cyclic`, la valeur effective de `speak-as` sera `bullets`.
+    - Si `system` est `extends`, la valeur de `speak-as` sera la même que si `speak-as: auto` était spécifié sur le style étendu.
+    - Dans tous les autres cas, spécifier `auto` a le même effet que spécifier `speak-as: numbers`.
 
 - `bullets`
-  - : Un morceau ou un signal sonore utilisé par l'agent utilisateur et qui représente la façon d'énoncer une liste non-ordonnée.
+  - : Une phrase ou une indication sonore définie par l'{{Glossary("user agent", "agent utilisateur")}} pour représenter un élément de liste non ordonnée sera prononcée.
 - `numbers`
-  - : La valeur numérique du compteur sera énoncée dans la langue du document.
+  - : La valeur numérique du compteur sera prononcée dans la langue du document.
 - `words`
-  - : L'agent utilisateur génèrera une représentation normale du compteur et la lira comme un mot, dans la langue du document.
+  - : L'agent utilisateur générera la valeur du compteur normalement et la prononcera comme un mot dans la langue du document.
 - `spell-out`
-  - : L'agent utilisateur génèrera une représentation normale du compteur et l'énoncera en l'épelant. Si l'agent utilisateur ne sait pas comment prononcer une valeur du compteur, il la prononcera comme avec la valeur `numbers`.
+  - : L'agent utilisateur générera la représentation du compteur normalement et la prononcera lettre par lettre. Si l'agent utilisateur ne sait pas comment prononcer un symbole de compteur particulier, il pourra le prononcer comme si la valeur de `speak-as` était `numbers`.
 - `<counter-style-name>`
-  - : Si la valeur du descripteur est le nom d'un autre style de compteur, ce sera la valeur de `speak-as` de ce style qui sera utilisée. Si la style visé n'existe pas, cette valeur sera alors synonyme de `auto`.
+  - : Le nom d'un autre style de compteur, spécifié comme {{cssxref("&lt;custom-ident&gt;")}}. Si cette valeur est incluse, le compteur sera prononcé selon la forme spécifiée dans ce style de compteur, un peu comme si on spécifiait le descripteur {{cssxref("@counter-style/fallback", "fallback")}}. Si le style spécifié n'existe pas, `speak-as` revient à `auto`.
+
+## Accessibilité
+
+La prise en charge par les technologies d'assistance de la propriété `speak-as` est très limitée. Ne comptez pas sur cette propriété pour transmettre des informations essentielles à la compréhension de la page.
+
+[Parlons de CSS Speech | Css Tricks <sup>(angl.)</sup>](https://css-tricks.com/lets-talk-speech-css/) (2017)
 
 ## Définition formelle
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Définir la forme orale d'un compteur
+
+Dans cet exemple, le système de compteur est fixe avec des symboles visuels inintelligibles. Cependant, le descripteur `speak-as` est utilisé pour que les marqueurs des éléments de liste soient lus comme des nombres dans l'arbre d'accessibilité. Lorsque cette propriété est prise en charge, les lecteurs d'écran liront les nombres plutôt que les marqueurs visuels.
+
+Pour expérimenter le résultat du descripteur `speak-as`, utilisez une technologie d'assistance comme VoiceOver ou un autre lecteur d'écran, ou consultez le [panneau d'accessibilité <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/index.html#accessibility-inspector) dans les outils de développement d'un navigateur qui prend en charge `speak-as`.
+
+#### HTML
+
+```html
+<ul class="list">
+  <li>J'ai eu une pomme</li>
+  <li>J'ai mangé deux bananes</li>
+  <li>J'ai dévoré trois oranges</li>
+  <li>Je n'ai pas faim pour le dîner</li>
+  <li>Mais je prendrai cinq boules de glace en dessert</li>
+</ul>
+```
+
+#### CSS
 
 ```css
-@counter-style speak-as-exemple {
+@counter-style speak-as-example {
   system: fixed;
   symbols:     ;
   suffix: " ";
   speak-as: numbers;
 }
 
-.exemple {
-  list-style: speak-as-exemple;
+.list {
+  list-style: speak-as-example;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<ul class="exemple">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples')}}
-
-## Accessibilité
-
-La prise en charge de cette fonctionnalité par les outils d'assistance est actuellement très restreinte. Veillez à ne pas reposer sur cette propriété si vous souhaitez transmettre des informations majeures quant au but de la page.
-
-- [Let's Talk About Speech CSS, CSS Tricks](https://css-tricks.com/lets-talk-speech-css/)
+{{ EmbedLiveSample('définir_la_forme_orale_dun_compteur') }}
 
 ## Spécifications
 
@@ -100,7 +104,8 @@ La prise en charge de cette fonctionnalité par les outils d'assistance est actu
 
 ## Voir aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}} : la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}} et {{cssxref("@counter-style/fallback", "fallback")}}
+- Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)

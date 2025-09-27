@@ -1,67 +1,80 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-Le descripteur **`negative`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir la représentation du compteur lorsque la valeur est négative.
-
-```css
-/* Valeurs représentant les symboles */
-negative: "-"; /* Préfixe '-' si la valeur est négative */
-negative: "(" ")"; /* Entoure la valeur avec '(' et ')' si elle est négative */
-```
-
-Si la valeur du compteur est négative, le symbole fourni par le descripteur sera utilisé comme préfixe à la représentation du compteur. Un deuxième symbole peut être indiqué et est alors utilisé comme suffixe. Le descripteur `negative` n'a d'effet que si la valeur du descripteur `system` est `symbolic`, `alphabetic`, `numeric`, `additive` ou `extends` et si le compteur personnalisé utilise des indices négatifs. Dans les autres cas, si le descripteur `negative` est fourni, il est ignoré.
+Le descripteur **`negative`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}} permet de définir comment les valeurs négatives du compteur sont représentées lors de la création de styles de compteur personnalisés. La valeur du descripteur `negative` définit les symboles à ajouter avant et après la représentation du compteur lorsque la valeur du compteur est négative.
 
 ## Syntaxe
 
+```css
+/* Une valeur <symbol> */
+negative: "--"; /* Ajoute '--' avant si la valeur du compteur est négative */
+
+/* Deux valeurs <symbol> */
+negative: "(" ")"; /* Ajoute '(-' avant et ')' après si la valeur du compteur est négative */
+```
+
 ### Valeurs
 
-- Premier symbole
-  - : Le préfixe (type {{cssxref("&lt;symbol&gt;")}}) à ajouter à la représentation lorsque la valeur du compteur est négative.
-- Deuxième symbole {{optional_inline}}
-  - : Si cette valeur (type {{cssxref("&lt;symbol&gt;")}}) est présente, le symbole sera ajouté après la représentation du compteur lorsque sa valeur est négative.
+Le descripteur `negative` accepte jusqu'à deux valeurs [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#valeurs).
+
+- `<symbol>`
+  - : Si une seule valeur est spécifiée, elle est ajoutée avant la représentation du compteur lorsque celui-ci est négatif. Si deux valeurs sont spécifiées, la première est ajoutée avant et la seconde après la représentation du compteur lorsque celui-ci est négatif.
+
+## Description
+
+Si la valeur du compteur est négative, le `<symbol>` spécifié pour le descripteur `negative` est ajouté avant la représentation du compteur, remplaçant le `-` par défaut pour les valeurs négatives. Le second `<symbol>`, s'il est spécifié, est ajouté après la représentation du compteur.
+
+Le descripteur `negative` est pertinent dans deux cas&nbsp;: si les styles de compteur ont la valeur `system` de `symbolic`, `alphabetic`, `numeric` ou `additive` et que le compteur est négatif&nbsp;; et si la valeur `system` est `extends` et que le style de compteur étendu utilise lui-même un signe négatif. Pour les systèmes qui ne prennent pas en charge les valeurs négatives, la spécification du descripteur `negative` n'a aucun effet et est ignorée.
 
 ## Définition formelle
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Rendu des compteurs négatifs
+
+Cet exemple [étend](/fr/docs/Web/CSS/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
+
+#### HTML
+
+```html
+<ol start="-3">
+  <li>Trois négatif</li>
+  <li>Deux négatif</li>
+  <li>Un négatif</li>
+  <li>Zéro</li>
+  <li>Un</li>
+</ol>
+```
+
+#### CSS
 
 ```css
 @counter-style neg {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  system: extends decimal;
   negative: "(-" ")";
+  suffix: ": ";
 }
-.exemple {
+
+ol {
   list-style: neg;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<ul class="exemple" start="-3">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
-  <li>Quatre</li>
-  <li>Cinq</li>
-</ul>
-```
+{{ EmbedLiveSample('rendu_des_compteurs_négatifs') }}
 
-### Résultat
-
-{{EmbedLiveSample('Exemples')}}
+Le préfixe et le suffixe indiqués comme valeur du descripteur `negative` ne sont ajoutés au marqueur que lorsque la valeur du compteur est inférieure à zéro.
 
 ## Spécifications
 
@@ -73,7 +86,8 @@ Si la valeur du compteur est négative, le symbole fourni par le descripteur ser
 
 ## Voir aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle pour créer des styles de compteur anonymes.
+- Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
+- Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)

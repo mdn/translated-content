@@ -1,65 +1,75 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
+l10n:
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-{{CSSRef}}
+Le descripteur **`prefix`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref('@counter-style')}} permet de spécifier le contenu qui sera ajouté au début de la représentation du marqueur du compteur.
 
-Le descripteur **`prefix`**, utilisé avec la règle @ {{cssxref("@counter-style")}}, permet de définir un symbole qui sera ajouté comme préfixe à la représentation du marqueur. Si aucune valeur n'est fournie, la valeur utilisée par défaut sera la chaîne de caractères vide.
+Lorsque la valeur du compteur est négative, le `prefix` apparaît avant le signe négatif et tout autre `<symbol>` ajouté par le descripteur {{cssxref("@counter-style/negative", "negative")}}.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de symbole */
+/* Valeur <symbol>&nbsp;: chaîne de caractères, image ou identifiant */
 prefix: "»";
-prefix: "Page";
+prefix: "Page ";
+prefix: url("bullet.png");
 ```
 
 ### Valeurs
 
+Le descripteur **`prefix`** accepte comme valeur un seul `<symbol>`&nbsp;:
+
 - `<symbol>`
-  - : Définit le symbole à utilisé comme préfixe devant le marqueur du compteur de la liste. Cette valeur peut être une valeur de type {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}} ou {{cssxref("&lt;custom-ident&gt;")}}.
+  - : Spécifie un `<symbol>` — une {{cssxref("&lt;string&gt;")}}, une {{cssxref("&lt;image&gt;")}} ou un {{cssxref("&lt;custom-ident&gt;")}} — qui est ajouté avant la représentation du marqueur.
 
 ## Définition formelle
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Ajouter un préfixe à un compteur
+
+Dans cet exemple, chaque numéro du compteur est précédé de «&nbsp;Livre&nbsp;» (avec un espace) et suivi d'un deux-points (`:`). Le deux-points est ajouté avec le descripteur {{cssxref("@counter-style/suffix", "suffix")}}.
+
+#### HTML
+
+```html
+<ol class="livres">
+  <li>Flamer, de Mike Curato</li>
+  <li>Gender Queer&nbsp;: A Memoir, de Maia Kobabe</li>
+  <li>Tricks, de Ellen Hopkins</li>
+  <li>The Handmaid's Tale&nbsp;: The Graphic Novel, de Margaret Atwood</li>
+  <li>Crank, de Ellen Hopkins</li>
+</ol>
+```
+
+#### CSS
 
 ```css
-@counter-style chapitres {
+@counter-style livres {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: "Chapitre ";
+  prefix: "Livre ";
+  suffix: " : ";
 }
 
-.exemple {
-  list-style: chapitres;
+.livres {
+  list-style: livres;
   padding-left: 15ch;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<ul class="exemple">
-  <li>Au fond du terrier</li>
-  <li>La mare aux larmes</li>
-  <li>La course cocasse</li>
-  <li>L'habitation du lapin blanc</li>
-  <li>Conseils d'une chenille</li>
-</ul>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples')}}
+{{ EmbedLiveSample('ajouter_un_préfixe_à_un_compteur') }}
 
 ## Spécifications
 
@@ -71,7 +81,8 @@ prefix: "Page";
 
 ## Voir aussi
 
-- {{cssxref("list-style")}},
-- {{cssxref("list-style-image")}},
-- {{cssxref("list-style-position")}},
-- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.
+- Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
+- Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
