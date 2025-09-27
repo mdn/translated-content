@@ -437,7 +437,7 @@ Tous les événements qui remontent ne peuvent pas atteindre l'objet `Window`. S
 - {{domxref("HTMLMediaElement/ended_event", "ended")}}
 - {{domxref("HTMLFormElement/formdata_event", "formdata")}}
 - {{domxref("Element/input_event", "input")}}
-- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
 - {{domxref("Element/keydown_event", "keydown")}}
 - {{domxref("Element/keypress_event", "keypress")}}
 - {{domxref("Element/keyup_event", "keyup")}}
@@ -462,7 +462,7 @@ Tous les événements qui remontent ne peuvent pas atteindre l'objet `Window`. S
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
 - {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
 - {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
-- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLInputElement/select_event", "select")}}
 - {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
 - {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
 - {{domxref("HTMLFormElement/submit_event", "submit")}}
