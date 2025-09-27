@@ -152,7 +152,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - Propriétés nommées
   - : Certains éléments du document sont également exposés comme propriétés de window&nbsp;:
     - Pour chaque élément {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}} et {{HTMLElement("object")}}, son `name` (s'il n'est pas vide) est exposé.
-  Par exemple, si le document contient `<form name="my_form">`, alors `window["my_form"]` (et son équivalent `window.my_form`) renverra une référence vers cet élément.
+      Par exemple, si le document contient `<form name="my_form">`, alors `window["my_form"]` (et son équivalent `window.my_form`) renverra une référence vers cet élément.
     - Pour chaque élément HTML, son `id` (s'il n'est pas vide) est exposé.
 
   Si une propriété correspond à un seul élément, cet élément est directement renvoyé. Si la propriété correspond à plusieurs éléments, alors un objet {{domxref("HTMLCollection")}} contenant tous ces éléments est renvoyé. Si l'un des éléments est une `<iframe>` ou un `<object>` navigable, alors la propriété {{domxref("HTMLIFrameElement/contentWindow", "contentWindow")}} du premier iframe de ce type est renvoyée à la place.
