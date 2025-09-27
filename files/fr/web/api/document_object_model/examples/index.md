@@ -16,9 +16,7 @@ L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pou
 ```html
 <p>
   Image 1&nbsp;: sans height, width, ni style
-  <img
-    id="image1"
-    src="https://www.mozilla.org/images/mozilla-banner.gif" />
+  <img id="image1" src="https://www.mozilla.org/images/mozilla-banner.gif" />
 </p>
 
 <p>
