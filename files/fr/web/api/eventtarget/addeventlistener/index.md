@@ -222,7 +222,7 @@ myObject.register();
 
 Les écouteurs d'événements n'acceptent qu'un seul argument&nbsp;: un objet {{domxref("Event")}} ou une sous-classe de `Event`, qui est automatiquement transmis à l'écouteur. La valeur de retour est ignorée.
 
-Ainsi, pour transmettre des données à un écouteur ou en récupérer, il faut utiliser des [fermetures (<i lang="en">closures</i> en anglais)](/fr/docs/Web/JavaScript/Guide/Fonctions#fermetures_closures) plutôt que de passer des paramètres ou de s'appuyer sur la valeur de retour.
+Ainsi, pour transmettre des données à un écouteur ou en récupérer, il faut utiliser des [fermetures (<i lang="en">closures</i> en anglais)](/fr/docs/Web/JavaScript/Guide/Functions#fermetures_closures) plutôt que de passer des paramètres ou de s'appuyer sur la valeur de retour.
 
 Les fonctions passées comme écouteurs d'événements ont accès à toutes les variables déclarées dans les portées englobantes.
 
@@ -241,7 +241,7 @@ monBouton.addEventListener("click", () => {
 console.log(uneChaine); // Valeur attendue : « Donnée » (n'affichera jamais « Donnée modifiée »)
 ```
 
-Voir [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions#fermetures_closures) pour plus d'informations sur la portée des fonctions.
+Voir [le guide sur les fonctions](/fr/docs/Web/JavaScript/Guide/Functions#fermetures_closures) pour plus d'informations sur la portée des fonctions.
 
 ### Problèmes de mémoire
 
@@ -597,7 +597,9 @@ Vous pouvez définir plusieurs options dans le paramètre `options`. Dans l'exem
 
 ```html
 <button id="bouton-exemple">Vous n'avez pas cliqué sur ce bouton.</button>
-<button id="bouton-reinitialisation">Cliquez sur ce bouton pour réinitialiser le premier bouton.</button>
+<button id="bouton-reinitialisation">
+  Cliquez sur ce bouton pour réinitialiser le premier bouton.
+</button>
 ```
 
 #### JavaScript
