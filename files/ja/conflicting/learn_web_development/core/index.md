@@ -1,7 +1,7 @@
 ---
 title: Challenge solutions
-slug: Learn_web_development/Core/Challenges
-original_slug: Web/Guide/CSS/Getting_started/Challenge_solutions
+slug: conflicting/Learn_web_development/Core
+original_slug: Learn_web_development/Core/Challenges
 ---
 
 このページは、 [CSS Getting Started](/ja/docs/Learn_web_development/Core/Styling_basics) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
