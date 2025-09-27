@@ -61,10 +61,14 @@ margin: 0;
 }
 ```
 
-上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
+## 组成属性
 
-> [!NOTE]
-> 外边距控制的是元素外部空出的空间。相反，{{cssxref("padding")}} 操作元素*内部*空出的空间。
+此属性是以下 CSS 属性的简写：
+
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
 
 ## 语法
 
