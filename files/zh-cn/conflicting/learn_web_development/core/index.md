@@ -1,6 +1,7 @@
 ---
 title: 挑战的参考答案
-slug: Learn_web_development/Core/Challenges
+slug: conflicting/Learn_web_development/Core
+original_slug: Learn_web_development/Core/Challenges
 ---
 
 本页针对 [CSS 样式处理基础](/zh-CN/docs/Learn_web_development/Core/Styling_basics)模块中提出的挑战提供了解决方案。这些并非唯一可能的解决方案。下面的章节与教程章节的标题相对应。
