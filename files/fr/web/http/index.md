@@ -28,7 +28,7 @@ Les sous-sections suivantes sont également notables&nbsp;:
 
 - [Directives CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
   - : Les champs de l'en-tête de réponse [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) permettent d'encadrer les ressources accessibles pour un·e utilisateur·ice sur une page donnée. Il s'agit en général de directives sur l'origine du serveur et les points de terminaison des scripts.
-- [Directives Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
+- [Directives Permissions-Policy](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
   - : L'en-tête de réponse {{HTTPHeader("Permissions-Policy")}} permet d'autoriser ou d'interdire l'utilisation de fonctionnalités du navigateur dans un document ou dans tout élément {{HTMLElement("iframe")}} du document.
     Cette section liste les directives utilisables dans un en-tête Permissions-Policy, avec des pages de documentation qui expliquent leur fonctionnement et leur usage.
 
