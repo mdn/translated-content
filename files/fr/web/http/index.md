@@ -21,7 +21,7 @@ La documentation de la [référence HTTP](/fr/docs/Web/HTTP/Reference) contient 
     Les méthodes les plus courantes sont {{HTTPMethod("GET")}} et {{HTTPMethod("POST")}} pour récupérer et envoyer des données aux serveurs, respectivement, mais d'autres méthodes existent pour d'autres usages.
 - [Codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
   - : Les codes de réponse HTTP indiquent si une requête HTTP aboutit. Les réponses se regroupent en cinq classes&nbsp;: réponses informationnelles, succès, redirections, erreurs client et erreurs serveur.
-- [Ressources et spécifications HTTP](/en-US/docs/Web/HTTP/Reference/Resources_and_specifications)
+- [Ressources et spécifications HTTP](/fr/docs/Web/HTTP/Reference/Resources_and_specifications)
   - : Cette page recense les ressources pertinentes sur HTTP depuis sa première spécification au début des années 1990.
 
 Les sous-sections suivantes sont également notables&nbsp;:
