@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.stopNotifications()`** 方法返回一个 {{jsxref("Promise")}}，当该特性上不再有活动通知时，该 promise 会兑现为蓝牙远程 GATT 特性实例。
+**`BluetoothRemoteGATTCharacteristic.stopNotifications()`** 方法返回一个当该特性上不再有活动通知时，会兑现为 BluetoothRemoteGATTCharacteristic 实例的 {{jsxref("Promise")}}。
 
 ## 语法
 
