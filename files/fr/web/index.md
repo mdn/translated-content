@@ -62,7 +62,7 @@ Le Web fournit d'incroyables opportunités aux développeur·euse·s. Pour tirer
 - [EXSLT](/fr/docs/Web/XML/EXSLT)
   - : EXSLT est un ensemble d'extensions pour [XSLT](/fr/docs/Web/XML/XSLT).
 
-## Developer tools documentation
+## Documentation des outils de développement
 
 - [Outils de développement Firefox <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : Documentation des outils de développement web intégrés à Firefox.
