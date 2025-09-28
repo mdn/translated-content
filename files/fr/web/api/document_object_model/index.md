@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-Le **\*Document Object Model** (**<abbr>DOM</abbr>**) pour _Modèle Object de Document_ relie les pages web aux scripts ou aux langages de programmation en représentant la structure d'un document — comme le HTML d'une page web — en mémoire. Le terme fait généralement référence à JavaScript, même si la modélisation des documents HTML, SVG ou XML sous forme d'objets ne fait pas partie du cœur du langage JavaScript.
+Le **Document Object Model** (**<abbr>DOM</abbr>**) pour _Modèle Object de Document_ relie les pages web aux scripts ou aux langages de programmation en représentant la structure d'un document — comme le HTML d'une page web — en mémoire. Le terme fait généralement référence à JavaScript, même si la modélisation des documents HTML, SVG ou XML sous forme d'objets ne fait pas partie du cœur du langage JavaScript.
 
 Le DOM représente un document sous forme d'arbre logique. Chaque branche de l'arbre se termine par un nœud, et chaque nœud contient des objets. Les méthodes du DOM permettent d'accéder à l'arbre par programmation. Elles permettent de modifier la structure, le style ou le contenu du document.
 
