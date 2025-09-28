@@ -3,7 +3,7 @@ title: BluetoothRemoteGATTCharacteristic：writeValue() 方法
 short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
 l10n:
-  sourceCommit: 0eeaa04378b34bce70e618ee20434e1193cdec17
+  sourceCommit: 5fd5cc8885286bfa5bae8b3e9970e1eab26e941d
 ---
 
 {{APIRef("Bluetooth API")}}{{Deprecated_header}}{{SecureContext_Header}}
@@ -21,7 +21,7 @@ writeValue(value)
 ### 参数
 
 - `value`
-  - : {{jsxref("ArrayBuffer")}}。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。
 
 ## 返回值
 
