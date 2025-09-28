@@ -16,7 +16,7 @@ l10n:
 - {{domxref("ImageData.ImageData", "ImageData()")}}
   - : 주어진 {{jsxref("Uint8ClampedArray")}} 또는 {{jsxref("Float16Array")}} 와 해당 배열이 포함하는 이미지의 크기로 `ImageData` 객체를 생성합니다. 배열이 주어지지 않으면, 투명한 검은색 사각형 이미지를 생성합니다. {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 는 워커에서 사용할 수 없으므로 워커에서 이러한 객체를 생성하는 가장 일반적인 방법임을 유의해야합니다.
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageData.data")}} {{ReadOnlyInline}}
   - : RGBA 순서로 데이터를 포함하는 1차원 배열을 나타내는 {{jsxref("Uint8ClampedArray")}} 또는 {{jsxref("Float16Array")}} 입니다. 순서는 왼쪽 상단 픽셀부터 오른쪽 하단까지 행 단위로 진행됩니다.
