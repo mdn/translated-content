@@ -58,7 +58,7 @@ corner-top-right-shape: unset;
 
 #### CSS
 
-我们为这个盒子提供了一些基础样式（这里为了简洁已省略），并且应用了一个 {{cssxref("box-shadow")}}、一个 60 像素的 `border-radius`，以及一个取值为 `bevel` 的 `corner-top-right-shape`。
+我们为这个盒子提供了一些基础样式（这里为了简洁已省略），并且应用了 {{cssxref("box-shadow")}}、60 像素的 `border-radius`，以及一个取值为 `bevel` 的 `corner-top-right-shape`。
 
 ```css hidden live-sample___basic-usage
 body {
@@ -94,7 +94,7 @@ div {
 
 渲染结果如下所示：
 
-{{EmbedLiveSample("基础用法", "100%", "240")}}
+{{EmbedLiveSample("basic-usage", "100%", "240")}}
 
 ## 规范
 
