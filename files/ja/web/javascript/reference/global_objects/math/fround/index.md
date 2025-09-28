@@ -1,11 +1,10 @@
 ---
 title: Math.fround()
+short-title: fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 l10n:
-  sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.fround()`** は静的メソッドで、ある数値を表す最も近い [32 ビット単精度](https://ja.wikipedia.org/wiki/単精度浮動小数点数)浮動小数点数を返します。
 
@@ -13,16 +12,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.fround(5.5));
-// Expected output: 5.5
+// 予想される結果: 5.5
 
 console.log(Math.fround(5.05));
-// Expected output: 5.050000190734863
+// 予想される結果: 5.050000190734863
 
 console.log(Math.fround(5));
-// Expected output: 5
+// 予想される結果: 5
 
 console.log(Math.fround(-5.05));
-// Expected output: -5.050000190734863
+// 予想される結果: -5.050000190734863
 ```
 
 ## 構文
@@ -84,4 +83,5 @@ Math.fround(2 ** 150); // Infinity
 ## 関連情報
 
 - [`Math.fround` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims における `Math.fround` のポリフィル](https://www.npmjs.com/package/math.fround)
 - {{jsxref("Math.round()")}}

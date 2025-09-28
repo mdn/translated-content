@@ -1,11 +1,10 @@
 ---
 title: Math.clz32()
+short-title: clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 l10n:
-  sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.clz32()`** は静的メソッドで、引数として与えられた数値の 32 ビットバイナリー表現での先頭の 0 の個数を返します。
 
@@ -14,15 +13,15 @@ l10n:
 ```js interactive-example
 // 00000000000000000000000000000001
 console.log(Math.clz32(1));
-// Expected output: 31
+// 予想される結果: 31
 
 // 00000000000000000000000000000100
 console.log(Math.clz32(4));
-// Expected output: 29
+// 予想される結果: 29
 
 // 00000000000000000000001111101000
 console.log(Math.clz32(1000));
-// Expected output: 22
+// 予想される結果: 22
 ```
 
 ## 構文
@@ -167,5 +166,6 @@ const { ctrz, ctron } = countTrailsMethods;
 ## 関連情報
 
 - [`Math.clz32` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.clz32` のポリフィル](https://www.npmjs.com/package/math.clz32)
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

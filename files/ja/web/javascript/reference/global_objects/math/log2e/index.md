@@ -1,13 +1,12 @@
 ---
 title: Math.LOG2E
+short-title: LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Math.LOG2E`** プロパティは 2 を底とした [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) の対数、約 1.442 を表します。
+**`Math.LOG2E`** は静的データプロパティで、2 を底とした [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) の対数、約 1.443 を表します。
 
 {{InteractiveExample("JavaScript デモ: Math.LOG2E", "shorter")}}
 

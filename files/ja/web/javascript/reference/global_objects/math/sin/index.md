@@ -1,11 +1,10 @@
 ---
 title: Math.sin()
+short-title: sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.sin()`** 静的メソッドは、ラジアンの数値の正弦 (サイン) を返します。
 
@@ -17,13 +16,13 @@ function getCircleY(radians, radius) {
 }
 
 console.log(getCircleY(1, 10));
-// Expected output: 8.414709848078965
+// 予想される結果: 8.414709848078965
 
 console.log(getCircleY(2, 10));
-// Expected output: 9.092974268256818
+// 予想される結果: 9.092974268256818
 
 console.log(getCircleY(Math.PI, 10));
-// Expected output: 1.2246467991473533e-15
+// 予想される結果: 1.2246467991473533e-15
 ```
 
 ## 構文

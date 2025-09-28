@@ -1,29 +1,28 @@
 ---
 title: Math.abs()
+short-title: abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 l10n:
-  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.abs()`** は静的メソッドで、数値の絶対値を返します。
 
 {{InteractiveExample("JavaScript デモ: Math.abs()")}}
 
 ```js interactive-example
-function difference(a, b) {
+jfunction difference(a, b) {
   return Math.abs(a - b);
 }
 
 console.log(difference(3, 5));
-// Expected output: 2
+// 予想される結果: 2
 
 console.log(difference(5, 3));
-// Expected output: 2
+// 予想される結果: 2
 
 console.log(difference(1.23456, 7.89012));
-// Expected output: 6.6555599999999995
+// 予想される結果: 6.6555599999999995
 ```
 
 ## 構文

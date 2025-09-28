@@ -1,13 +1,12 @@
 ---
 title: Math.sqrt()
+short-title: sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`Math.sqrt()`** 静的メソッドは、ある数の平方根を返します。
+**`Math.sqrt()`** は静的メソッドで、ある数の平方根を返します。
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -23,13 +22,13 @@ function calcHypotenuse(a, b) {
 }
 
 console.log(calcHypotenuse(3, 4));
-// Expected output: 5
+// 予想される結果: 5
 
 console.log(calcHypotenuse(5, 12));
-// Expected output: 13
+// 予想される結果: 13
 
 console.log(calcHypotenuse(0, 0));
-// Expected output: 0
+// 予想される結果: 0
 ```
 
 ## 構文

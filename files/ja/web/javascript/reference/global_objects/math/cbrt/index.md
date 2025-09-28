@@ -1,11 +1,10 @@
 ---
 title: Math.cbrt()
+short-title: cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.cbrt()`** は静的メソッドで、引数として与えた数の立方根を返します。
 
@@ -19,16 +18,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.cbrt(-1));
-// Expected output: -1
+// 予想される結果: -1
 
 console.log(Math.cbrt(1));
-// Expected output: 1
+// 予想される結果: 1
 
 console.log(Math.cbrt(Infinity));
-// Expected output: Infinity
+// 予想される結果: Infinity
 
 console.log(Math.cbrt(64));
-// Expected output: 4
+// 予想される結果: 4
 ```
 
 ## 構文
@@ -75,5 +74,6 @@ Math.cbrt(Infinity); // Infinity
 ## 関連情報
 
 - [`Math.cbrt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.cbrt` のポリフィル](https://www.npmjs.com/package/math.cbrt)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

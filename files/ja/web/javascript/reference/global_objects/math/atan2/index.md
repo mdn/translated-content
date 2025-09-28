@@ -1,11 +1,10 @@
 ---
 title: Math.atan2()
+short-title: atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 l10n:
-  sourceCommit: c5f507e86a21e2a0472d9fb11fae619e8c126441
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.atan2()`** は静的メソッドで、`Math.atan2(y, x)` に対して点 (0, 0) から点 (x, y) までの半直線と、正の x 軸の間の平面上での角度（ラジアン単位）を返します。
 
@@ -17,13 +16,13 @@ function calcAngleDegrees(x, y) {
 }
 
 console.log(calcAngleDegrees(5, 5));
-// Expected output: 45
+// 予想される結果: 45
 
 console.log(calcAngleDegrees(10, 10));
-// Expected output: 45
+// 予想される結果: 45
 
 console.log(calcAngleDegrees(0, 10));
-// Expected output: 90
+// 予想される結果: 90
 ```
 
 ## 構文
@@ -47,7 +46,7 @@ Math.atan2(y, x)
 
 `Math.atan2()` メソッドは、正の x 軸と `(x, y)` 座標の角度 θ をラジアンで表す計測します。なお、この関数への引数は、先に y 座標、次に x 座標であることに注意してください。
 
-![atan2(y, x) から返される角度を表す略図](atan2.png)
+![atan2(y, x) から返される角度を表す図](atan2.png)
 
 `Math.atan2()` は、`x` と `y` を別々に受け取るのに対し、 [`Math.atan()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) は 2 つの引数の比率を受け取ります。 `Math.atan2(y, x)` は以下の場合に `Math.atan(y / x)` とは異なります。
 
