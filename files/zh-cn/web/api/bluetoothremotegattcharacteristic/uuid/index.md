@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.uuid`** 只读属性返回包含特性的 UUID 的字符串，例如心率测量特性的 UUID 是 `'00002a37-0000-1000-8000-00805f9b34fb'`。
+**`BluetoothRemoteGATTCharacteristic.uuid`** 只读属性返回包含特性的 UUID 字符串，例如心率测量特性的 UUID 是 `'00002a37-0000-1000-8000-00805f9b34fb'`。
 
 ## 值
 
