@@ -381,4 +381,4 @@ Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) de `@pag
 - La propriété {{cssxref("page")}}
 - Le descripteur [`size`](/fr/docs/Web/CSS/@page/size) de `@page`
 - Le module [Médias paginés CSS](/fr/docs/Web/CSS/CSS_paged_media)
-- Le ticket [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)
+- Le ticket [\[META\] CSS Paged Media Module Level 3 <sup>(angl.)</sup>](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)
