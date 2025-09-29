@@ -27,7 +27,7 @@ s {
 
 ## 无障碍
 
-大多数屏幕阅读技术在默认配置下不会朗读 `s` 元素的存在。可以通过结合使用 CSS 的 {{cssxref("content")}} 属性与 {{cssxref("::before")}} 和 {{cssxref("::after")}} 伪元素，使其被朗读出来。
+大多数屏幕阅读技术在默认配置下不会播报 `s` 元素的存在。可以通过结合使用 CSS 的 {{cssxref("content")}} 属性与 {{cssxref("::before")}} 和 {{cssxref("::after")}} 伪元素，实现播报功能。
 
 ```css
 s::before,
@@ -52,7 +52,7 @@ s::after {
 
 一些使用屏幕阅读器的人会刻意禁用朗读某些内容，以避免产生过多的冗余信息。正因如此，务必要避免滥用这种技术，只应在“不知道内容已被删除会严重影响理解”的情况下才使用。
 
-- [关于让你的标记更具可访问性的简短说明 | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [关于让你的标记更具无障碍性的简短说明 | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
 - [调整文本级样式 | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 示例
