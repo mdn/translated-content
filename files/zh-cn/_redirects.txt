@@ -1436,6 +1436,7 @@
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/Your_own_automation_environment	/zh-CN/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment
 /zh-CN/docs/Learn_web_development/Core/CSS_layout/Grid_skills	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 /zh-CN/docs/Learn_web_development/Core/CSS_layout/Position_skills	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
+/zh-CN/docs/Learn_web_development/Core/Challenges	/zh-CN/docs/Learn_web_development/Core
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
@@ -2782,7 +2783,7 @@
 /zh-CN/docs/Web/Guide/CSS/CSS_Layout	/zh-CN/docs/Web/CSS/Guides
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
-/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/zh-CN/docs/Learn_web_development/Core/Challenges
+/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/zh-CN/docs/Learn_web_development/Core
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Content	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
