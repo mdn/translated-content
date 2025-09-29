@@ -10,9 +10,9 @@ l10n:
 
 {{domxref("WebTransportBidirectionalStream")}} 接口的只读属性 **`readable`** 返回一个 {{domxref("WebTransportReceiveStream")}} 实例，可用于可靠地读取传入的数据。
 
-## 取值
+## 值
 
-一个 {{domxref("WebTransportReceiveStream")}}。
+{{domxref("WebTransportReceiveStream")}}。
 
 ## 示例
 
