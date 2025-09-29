@@ -42,7 +42,9 @@ Cet exemple montre les deux options&nbsp;: le thème A utilise des couleurs clai
 <br />
 
 <div class="box theme-b">Thème B (initial)</div>
-<div class="box theme-b adaptive">Thème B (change si mode clair à favoriser)</div>
+<div class="box theme-b adaptive">
+  Thème B (change si mode clair à favoriser)
+</div>
 ```
 
 #### CSS
