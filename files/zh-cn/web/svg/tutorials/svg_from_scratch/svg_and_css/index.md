@@ -13,17 +13,21 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
 
 建立一个 SVG 文件 `doc8.svg`。复制下面所有内容：
 
-```html
+```html live-sample___example
 <svg
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <link rel="stylesheet" href="style8.css" type="text/css" />
+  <link
+    xmlns="http://www.w3.org/1999/xhtml"
+    rel="stylesheet"
+    href="style8.css"
+    type="text/css" />
 
-  <title>SVG demonstration</title>
-  <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
+  <title>SVG 演示</title>
+  <desc>Mozilla CSS 入门指南 - SVG 演示</desc>
 
   <defs>
     <radialGradient
@@ -37,9 +41,9 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
     </radialGradient>
   </defs>
 
-  <text id="heading" x="-280" y="-270">SVG demonstration</text>
+  <text id="heading" x="-280" y="-270">SVG 演示</text>
   <text id="caption" x="-280" y="-250">
-    Move your mouse pointer over the flower.
+    将鼠标指针移到花朵上。
   </text>
 
   <g id="flower">
@@ -144,108 +148,14 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
         </g>
       </g>
     </g>
-
-    <g id="inner-petals" transform="rotate(9) scale(0.33)">
-      <g class="quadrant">
-        <g class="segment">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(18)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(36)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(54)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(72)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-      </g>
-
-      <g class="quadrant">
-        <g class="segment" transform="rotate(90)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(108)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(126)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(144)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(162)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-      </g>
-
-      <g class="quadrant">
-        <g class="segment" transform="rotate(180)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(198)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(216)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(234)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(252)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-      </g>
-
-      <g class="quadrant">
-        <g class="segment" transform="rotate(270)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(288)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(306)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(324)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-        <g class="segment" transform="rotate(342)">
-          <path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z" />
-          <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
-        </g>
-      </g>
-    </g>
   </g>
 </svg>
 ```
 
 创建一个 CSS 文件，`style8.css`。复制下面所有内容：
 
-```css
-/*** SVG demonstration ***/
+```css live-sample___example
+/*** SVG 演示 ***/
 
 /* page */
 svg {
@@ -388,10 +298,26 @@ svg {
 
 ## 挑战
 
-| 修改样式表使得当鼠标指针移到任何一个内层花瓣上时所有内层花瓣都变为粉色，但不改变外层花瓣的效果。 |
-| ------------------------------------------------------------------------------------------------ |
+修改样式表使得当鼠标指针移到任何一个内层花瓣上时所有内层花瓣都变为粉色，但不改变外层花瓣的效果。
 
-[查看挑战的参考答案](/zh-CN/docs/Learn_web_development/Core/Challenges#svg_和_css)
+<details>
+<summary>点击这里查看解决方案</summary>
+
+将 `:hover` 伪类的位置从特定花瓣移动到所有花瓣：
+
+```css
+#inner-petals {
+  --segment-fill-fill-hover: pink;
+}
+
+/* 针对某些旧版浏览器的非标准方式 */
+#inner-petals:hover .segment-fill {
+  fill: pink;
+  stroke: none;
+}
+```
+
+</details>
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
