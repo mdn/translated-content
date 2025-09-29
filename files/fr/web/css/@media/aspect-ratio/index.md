@@ -91,7 +91,7 @@ w.onchange = w.oninput = () => {
 
 h.onchange = h.oninput = () => {
   outer.style.height = `${h.value}px`;
-  hf.textContent = `hauteur : ${h.value}`;
+  hf.textContent = `hauteur : ${h.value}`;
   updateRatio();
 };
 ```
