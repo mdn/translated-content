@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("WebSocketStream")}} 接口的只读属性 **`url`** 返回创建 `WebSocketStream` 实例时所用的 WebSocket 服务器的 URL。
 
-## 取值
+## 值
 
 字符串。
 
