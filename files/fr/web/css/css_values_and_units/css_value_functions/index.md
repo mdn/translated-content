@@ -364,5 +364,5 @@ Les fonctions suivantes renvoient une valeur entière basée sur l'arbre DOM, pl
 
 ## Voir aussi
 
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units) module
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
