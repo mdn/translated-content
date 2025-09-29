@@ -17,7 +17,7 @@ La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [
 
 ## Syntaxe
 
-- {{cssxref("<number>")}}
+- {{cssxref("&lt;number&gt;")}}
   - : Nombre de pixels physiques par pixel CSS.
 
 **Média&nbsp;:** {{cssxref("@media")}}<br />

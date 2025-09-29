@@ -12,7 +12,7 @@ l10n:
 
 ## Syntaxe
 
-La caractéristique `-webkit-device-pixel-ratio` se définit avec une valeur de type {{cssxref("<number>")}}. Il s'agit d'une caractéristique d'intervalle&nbsp;: on peut donc aussi utiliser les variantes préfixées **`-webkit-min-device-pixel-ratio`** et **`-webkit-max-device-pixel-ratio`** pour interroger respectivement une valeur minimale ou maximale.
+La caractéristique `-webkit-device-pixel-ratio` se définit avec une valeur de type {{cssxref("&lt;number&gt;")}}. Il s'agit d'une caractéristique d'intervalle&nbsp;: on peut donc aussi utiliser les variantes préfixées **`-webkit-min-device-pixel-ratio`** et **`-webkit-max-device-pixel-ratio`** pour interroger respectivement une valeur minimale ou maximale.
 
 ### Valeurs
 
