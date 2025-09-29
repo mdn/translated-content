@@ -36,7 +36,9 @@ Cet exemple montre les deux options&nbsp;: le thème A utilise des couleurs clai
 
 ```html
 <div class="box theme-a">Thème A (initial)</div>
-<div class="box theme-a adaptive">Thème A (change si mode sombre à favoriser)</div>
+<div class="box theme-a adaptive">
+  Thème A (change si mode sombre à favoriser)
+</div>
 <br />
 
 <div class="box theme-b">Thème B (initial)</div>
