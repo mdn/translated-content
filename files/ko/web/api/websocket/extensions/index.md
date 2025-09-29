@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Sockets API")}}{{AvailableInWorkers}}
 
-**`WebSocket.extensions`** 은 읽기 전용 속성으로 서버에서 선택한 확장을 반환합니다. 이 값은 현재 빈 문자열이거나 연결 협상에 따라 결정된 확장자 목록입니다.
+**`WebSocket.extensions`** 은 읽기 전용 속성으로 서버에서 선택한 확장을 반환합니다. 이 값은 현재 빈 문자열이거나 연결에서 협상되어 사용 가능한 확장의 목록입니다.
 
 ## 값
 
