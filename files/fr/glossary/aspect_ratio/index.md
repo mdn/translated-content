@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Un **rapport d'aspect** est la relation proportionnelle entre la largeur et la hauteur d'un élément ou de la {{glossary("viewport", "zone d'affichage")}}. Il s'exprime comme un {{cssxref("ratio", "rapport")}} de deux nombres.
+Un **rapport d'aspect** est la relation proportionnelle entre la largeur et la hauteur d'un élément ou de la {{glossary("viewport", "zone d'affichage")}}. Il s'exprime comme un {{cssxref("ratio")}} de deux nombres.
 
 Le fait de définir un rapport d'aspect, qu'il soit inhérent (comme pour les images et vidéos) ou défini de façon extrinsèque, permet de conserver les proportions prévues d'un élément. Il est aussi possible d'interroger le rapport d'aspect d'un élément ou d'une zone d'affichage, ce qui est utile pour développer des composants et des mises en page flexibles.
 
-En CSS, le type de donnée {{cssxref("ratio", "rapport")}} s'écrit sous la forme `largeur / hauteur` (par exemple, `1 / 1` pour un carré, `16 / 9` pour du format large) ou comme un nombre seul, auquel cas ce nombre représente la largeur et la hauteur vaut `1`.
+En CSS, le type de donnée {{cssxref("ratio")}} s'écrit sous la forme `largeur / hauteur` (par exemple, `1 / 1` pour un carré, `16 / 9` pour du format large) ou comme un nombre seul, auquel cas ce nombre représente la largeur et la hauteur vaut `1`.
 
 ```css
 .wideBox {
@@ -20,7 +20,7 @@ En CSS, le type de donnée {{cssxref("ratio", "rapport")}} s'écrit sous la form
 }
 ```
 
-En SVG, le rapport d'aspect est défini par l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) à quatre valeurs. Les deux premières valeurs sont les coordonnées X et Y minimales d'origine que le SVG peut avoir, et les deux suivantes sont la largeur et la hauteur qui fixent le rapport d'aspect du SVG.
+En SVG, le rapport d'aspect est défini par l'attribut [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) à quatre valeurs. Les deux premières valeurs sont les coordonnées X et Y minimales d'origine que le SVG peut avoir, et les deux suivantes sont la largeur et la hauteur qui fixent le rapport d'aspect du SVG.
 
 ```svg
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"></svg>
