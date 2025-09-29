@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}{{Deprecated_Header}}
 
-[CSS](/zh-CN/docs/Web/CSS) 非标准的属性 **`-moz-float-edge`** 指定了元素的高度和宽度是否包括外边距、边框或内边距。
+[CSS](/zh-CN/docs/Web/CSS) 非标准属性 **`-moz-float-edge`** 指定了元素的高度和宽度是否包括外边距、边框或内边距。
 
 ## 语法
 
