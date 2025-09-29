@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.startNotifications()`** 方法在存在活动通知时返回一个 {{jsxref("Promise")}}，其会兑现为蓝牙远程 GATT 特性实例。
+**`BluetoothRemoteGATTCharacteristic.startNotifications()`** 方法在存在活动通知时返回一个 {{jsxref("Promise")}}，其会兑现为 BluetoothRemoteGATTCharacteristic 实例。
 
 ## 语法
 
@@ -22,7 +22,7 @@ startNotifications()
 
 ## 返回值
 
-{{jsxref("Promise")}}，且该 promise 将会兑现为蓝牙远程 GATT 特性实例。
+{{jsxref("Promise")}}，且该 promise 将会兑现为 BluetoothRemoteGATTCharacteristic 实例。
 
 ## 规范
 
