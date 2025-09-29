@@ -38,8 +38,9 @@ abbr {
   La
   <abbr title="Administration nationale de l'aéronautique et de l'espace">
     NASA
-  </abbr> est une agence gouvernementale américaine responsable des sciences et
-  des technologies liées à l'air et à l'espace.
+  </abbr>
+  est une agence gouvernementale américaine responsable des sciences et des
+  technologies liées à l'air et à l'espace.
 </p>
 ```
 
