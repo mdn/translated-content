@@ -1,7 +1,7 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-ll10n:
+l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
