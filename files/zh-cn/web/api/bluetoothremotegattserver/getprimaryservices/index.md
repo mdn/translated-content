@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**BluetoothRemoteGATTServer.getPrimaryServices()** 方法返回一个 {{jsxref("Promise")}}，其会兑现为由蓝牙设备提供的指定 `BluetoothServiceUUID` 的主服务列表。
+**BluetoothRemoteGATTServer.getPrimaryServices()** 方法返回一个 {{jsxref("Promise")}}，其会兑现为由蓝牙设备为指定 `BluetoothServiceUUID` 提供的主要 {{domxref("BluetoothRemoteGATTService")}} 对象列表。
 
 ## 语法
 
