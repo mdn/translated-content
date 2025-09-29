@@ -11,7 +11,7 @@ La plupart des ordinateurs et smartphones modernes disposent d'écrans matriciel
 
 ## Syntaxe
 
-La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxref("&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.
+La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxref("CSS_media_queries/Using_media_queries", "&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.
 
 ## Exemples
 
