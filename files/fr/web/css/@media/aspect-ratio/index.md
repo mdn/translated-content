@@ -85,7 +85,7 @@ const updateRatio = () => {
 
 w.onchange = w.oninput = () => {
   outer.style.width = `${w.value}px`;
-  wf.textContent = `largeur : ${w.value}`;
+  wf.textContent = `largeur : ${w.value}`;
   updateRatio();
 };
 
