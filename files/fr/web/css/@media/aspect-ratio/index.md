@@ -80,7 +80,7 @@ iframe {
 outer.style.width = outer.style.height = "165px";
 
 const updateRatio = () => {
-  ratio.textContent = `aspect-ratio : ${w.value}/${h.value} = ${(w.value / h.value).toFixed(2)}`;
+  ratio.textContent = `aspect-ratio : ${w.value}/${h.value} = ${(w.value / h.value).toFixed(2)}`;
 };
 
 w.onchange = w.oninput = () => {
