@@ -47,7 +47,7 @@ get(options)
         既定値は `"optional"` です。
 
         > [!NOTE]
-        > [連合認証 (FedCM API)](/ja/docs/Web/API/FedCM_API) リクエストにおいて、`mediation` の値が `optional` または `silent` である場合、[自動再認証](/ja/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication)が試行されることがあります。これが発生するか否かは、検証中に IdP の `id_assertion_endpoint` に送信される [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) 引数によって伝えられ、{{domxref("IdentityCredential.isAutoSelected")}} プロパティによって認証依頼者 (RP) に伝えられます。これは、パフォーマンス評価、セキュリティ要件（IdP が自動再認証要求を拒否し、常にユーザーの介入を必要としたい場合）、および一般的な UX（IdP またはRP が自動ログインと非自動ログインの体験に対して異なる UX を表示したい場合）に有益です。
+        > [連合認証 (FedCM API)](/ja/docs/Web/API/FedCM_API) リクエストにおいて、`mediation` の値が `optional` または `silent` である場合、[自動再認証](/ja/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication)が試行されることがあります。これが発生するか否かは、検証中に IdP の `id_assertion_endpoint` に送信される [`is_auto_selected`](/ja/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) 引数によって伝えられ、{{domxref("IdentityCredential.isAutoSelected")}} プロパティによって認証依頼者 (RP) に伝えられます。これは、パフォーマンス評価、セキュリティ要件（IdP が自動再認証要求を拒否し、常にユーザーの介入を必要としたい場合）、および一般的な UX（IdP またはRP が自動ログインと非自動ログインの体験に対して異なる UX を表示したい場合）に有益です。
 
     - `signal` {{optional_inline}}
       - : 進行中の `get()` 操作を中止できる {{domxref("AbortSignal")}} オブジェクトインスタンス。中止される操作は、通常通り完了する場合（一般的に操作完了後に中止信号を受信した場合）と、`AbortError` {{domxref("DOMException")}} で拒否されることがあります。
