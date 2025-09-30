@@ -13,14 +13,20 @@ Les littéraux de gabarits sont des littéraux de chaînes de caractères permet
 ## Syntaxe
 
 ```js
-`texte`
+`texte`;
+```
 
+```js
 `ligne de texte 1
-  ligne de texte 2`
+  ligne de texte 2`;
+```
 
-`texte ${expression} texte`
+```js
+`texte ${expression} texte`;
+```
 
-etiquette`texte ${expression} texte`
+```js
+etiquette`texte ${expression} texte`;
 ```
 
 ## Description
