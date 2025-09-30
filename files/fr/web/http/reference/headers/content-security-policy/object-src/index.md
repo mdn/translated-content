@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`object-src`** spécifie les sources valides pour les éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
 
-Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet), voir la directive [`plugin-types`](/fr/docs/orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types).
+Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
 
 > [!NOTE]
 > Les éléments contrôlés par `object-src` sont considérés comme des éléments HTML historiques et qui ne recevront pas de nouvelles fonctionnalités standardisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). Ainsi, il est [recommandé](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive en définissant `object-src 'none'`.
@@ -76,4 +76,3 @@ Ces éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<emb
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
 - [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet)
-- [`plugin-types`](/fr/docs/orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types)

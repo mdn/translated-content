@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 ---
 
-{{CSSRef}}
-
 Le **contexte d'empilement** est une conceptualisation en trois dimensions de la façon dont les éléments HTML sont placés sur un axe de profondeur relatif à la personne qui fait face à la page web. Les éléments HTML s'organisent dans ce volume selon un ordre construit à partir des attributs de l'élément.
 
 ## Le contexte d'empilement
@@ -29,7 +27,6 @@ Un contexte d'empilement est formé dans le document par n'importe quel élémen
   - [`mask`](/fr/docs/Web/CSS/mask) / [`mask-image`](/fr/docs/Web/CSS/mask-image) / [`mask-border`](/fr/docs/Web/CSS/mask-border)
 
 - Un élément pour lequel [`isolation`](/fr/docs/Web/CSS/isolation) vaut `isolate`
-- Un élément pour lequel [`-webkit-overflow-scrolling`](/fr/docs/orphaned/Web/CSS/-webkit-overflow-scrolling) vaut `touch`.
 - Un élément pour lequel la valeur de la propriété [`will-change`](/fr/docs/Web/CSS/will-change) concerne une propriété qui créerait un contexte d'empilement avec une valeur non-initiale (voir [ce billet en anglais](https://dev.opera.com/articles/css-will-change-property/)).
 - Un élément pour lequel la valeur de la propriété [`contain`](/fr/docs/Web/CSS/contain) est `layout`, `paint` ou une valeur composite contenant un de ces mots-clés (par exemple `contain: strict` ou `contain: content`).
 

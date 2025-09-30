@@ -1,15 +1,18 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`overflow-inline`** permet de tester la façon dont l'appareil de sortie gère le contenu qui déborde du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) initial selon l'axe en ligne.
 
-**`overflow-inline`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique en ligne (c'est-à-dire le sens correspondant au sens de lecture).
+> [!NOTE]
+> La propriété `overflow-inline` ne détermine pas si un dépassement a lieu&nbsp;; elle indique comment l'appareil gère ce dépassement. En général, sur les écrans dans la plupart des navigateurs, le comportement sera «&nbsp;scroll&nbsp;»&nbsp;: lorsque le contenu dépasse l'espace horizontal disponible, l'appareil permet de faire défiler pour accéder au contenu débordant.
 
 ## Syntaxe
 
-La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux de la liste suivante :
+La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux de la liste suivante&nbsp;:
 
 - `none`
   - : Le contenu qui dépasse n'est pas affiché.

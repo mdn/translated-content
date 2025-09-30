@@ -1,15 +1,18 @@
 ---
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`overflow-block`** permet de tester la façon dont l'appareil de sortie gère le contenu qui déborde du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) initial selon l'axe du bloc.
 
-**`overflow-block`** est une caractéristique média CSS qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique de bloc (c'est-à-dire le sens perpendiculaire au sens de lecture).
+> [!NOTE]
+> La propriété `overflow-block` ne détermine pas si un dépassement a lieu&nbsp;; elle indique comment l'appareil gère ce dépassement. En général, sur les écrans dans la plupart des navigateurs, le comportement sera «&nbsp;scroll&nbsp;»&nbsp;: lorsque le contenu dépasse l'espace vertical disponible, l'appareil permet de faire défiler pour accéder au contenu débordant.
 
 ## Syntaxe
 
-La caractéristique `overflow-block` est définie avec un mot-clé de la liste suivante :
+La caractéristique `overflow-block` est définie avec un mot-clé de la liste suivante&nbsp;:
 
 - `none`
   - : Le contenu qui dépasse n'est pas affiché.
@@ -49,7 +52,7 @@ La caractéristique `overflow-block` est définie avec un mot-clé de la liste s
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("exemples")}}
 
 ## Spécifications
 
@@ -58,3 +61,8 @@ La caractéristique `overflow-block` est définie avec un mot-clé de la liste s
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

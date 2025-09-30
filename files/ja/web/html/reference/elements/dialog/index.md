@@ -295,7 +295,7 @@ jsCloseBtn.addEventListener("click", (e) => {
 
 3 つの {{htmlelement("button")}} 要素と 3 つの `<dialog>` 要素があります。各ボタンは、`closedby` 属性の 3 つの値（`none`、`closerequest`、`any`）のいずれかの動作を示す異なるダイアログを開くようにプログラムされています。各 `<dialog>` 要素には、それを閉じるために使用される `<button>` 要素が含まれていることに注意してください。
 
-```html live-sample___closedbyvalues
+```html-nolint live-sample___closedbyvalues
 <p>表示する <code>&lt;dialog&gt;</code> の種類を選択:</p>
 <div id="controls">
   <button id="none-btn"><code>closedby="none"</code></button>

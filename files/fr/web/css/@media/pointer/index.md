@@ -1,18 +1,18 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal est un dispositif de pointage et, le cas échéant, de connaître sa précision.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`pointer`** permet de tester si l'utilisateur·ice dispose d'un dispositif de pointage (comme une souris) et, le cas échéant, d'évaluer la précision du dispositif de pointage principal.
 
 > [!NOTE]
 > Si on souhaite tester la précision de n'importe quel dispositif de pointage, on utilisera plutôt la caractéristique [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer).
 
 ## Syntaxe
 
-Cette caractéristique est définie avec un mot-clé parmi les suivants :
+Cette caractéristique est définie avec un mot-clé parmi les suivants&nbsp;:
 
 - `none`
   - : Le mécanisme de saisie principal n'inclut pas de dispositif de pointage.
@@ -63,7 +63,7 @@ input[type="checkbox"]:checked {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("exemples")}}
 
 ## Spécifications
 

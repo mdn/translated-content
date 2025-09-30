@@ -1,11 +1,11 @@
 ---
 title: height
 slug: Web/CSS/@media/height
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`height`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur représente la hauteur de la zone d'affichage (_viewport_) (ou de la boîte de page pour les média paginés).
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`height`** permet d'appliquer des styles en fonction de la hauteur de la {{glossary("viewport", "zone d'affichage")}} (ou de la boîte de page, pour les [médias paginés](/fr/docs/Web/CSS/CSS_paged_media)).
 
 ## Syntaxe
 
@@ -57,3 +57,8 @@ La caractéristique `height` est définie comme une longueur (type {{cssxref("&l
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

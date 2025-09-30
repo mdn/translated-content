@@ -1,15 +1,15 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
-
-**`monochrome`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`monochrome`** permet de tester le nombre de bits par pixel dans le tampon d'affichage monochrome de l'appareil de sortie.
 
 ## Syntaxe
 
-La caractéristique `monochrome` est un entier (type {{cssxref("&lt;integer&gt;")}})) dont la valeur correspond au nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil. Si l'appareil n'est pas monochrome, cela vaudra 0. Cette caractéristique est une caractéristique d'intervalle ce qui signifie qu'on peut également utiliser les variantes préfixées **`min-monochrome`** et **`max-monochrome`** afin de cibler les règles en fonction d'un minimum ou d'un maximum.
+La caractéristique `monochrome` est un entier (type {{cssxref("&lt;integer&gt;")}}) dont la valeur correspond au nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil. Si l'appareil n'est pas monochrome, cela vaudra 0. Cette caractéristique est une caractéristique d'intervalle ce qui signifie qu'on peut également utiliser les variantes préfixées **`min-monochrome`** et **`max-monochrome`** afin de cibler les règles en fonction d'un minimum ou d'un maximum.
 
 ## Exemples
 
@@ -29,7 +29,7 @@ p {
   display: none;
 }
 
-/* Any monochrome device */
+/* N'importe quel appareil monochrome */
 @media (monochrome) {
   p.mono {
     display: block;
@@ -37,7 +37,7 @@ p {
   }
 }
 
-/* Any non-monochrome device */
+/* N'importe quel appareil non monochrome */
 @media (monochrome: 0) {
   p.no-mono {
     display: block;
@@ -48,7 +48,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("exemples")}}
 
 ## Spécifications
 

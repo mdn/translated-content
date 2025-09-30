@@ -1,49 +1,57 @@
 ---
-title: Localisation des éléments DOM avec les sélecteurs
+title: Localiser des éléments DOM avec les sélecteurs
 slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+l10n:
+  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds [`Element`](/fr/docs/Web/API/Element) du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.
+L'API des sélecteurs fournit des méthodes qui permettent de retrouver rapidement et facilement des nœuds {{domxref("Element")}} dans le DOM en utilisant un ensemble de [sélecteurs](/fr/docs/Web/CSS/CSS_selectors). Cela est bien plus rapide que les techniques anciennes, où il fallait, par exemple, utiliser une boucle en JavaScript pour localiser les éléments recherchés.
 
 ## L'interface NodeSelector
 
-Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant en oeuvre les interfaces [`Document`](/fr/docs/Web/API/Document), [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) ou [`Element`](/fr/docs/Web/API/Element) :
+Cette spécification ajoute deux nouvelles méthodes à tout objet implémentant les interfaces {{domxref("Document")}}, {{domxref("DocumentFragment")}} ou {{domxref("Element")}}&nbsp;:
 
-- `querySelector`
-  - : Renvoie le premier noeud [`Element`](/fr/docs/Web/API/Element) correspondant dans la sous-arborescence du noeud. Si aucun noeud correspondant n'est trouvé, `null` est renvoyé.
-- `querySelectorAll`
-  - : Renvoie une [`NodeList`](/fr/docs/Web/API/NodeList) (_liste de noeuds_) contenant tous les noeuds `Element` correspondants dans la sous-arborescence du noeud, ou une `NodeList` vide si aucune correspondance n'a été trouvée.
+- {{domxref("Element.querySelector", "querySelector()")}}
+  - : Retourne le premier nœud {{domxref("Element")}} correspondant dans le sous-arbre du nœud. Si aucun nœud correspondant n'est trouvé, `null` est retourné.
+- {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
+  - : Retourne une {{domxref("NodeList")}} contenant tous les nœuds `Element` correspondants dans le sous-arbre du nœud, ou une `NodeList` vide si aucun nœud n'est trouvé.
 
 > [!NOTE]
-> La [`NodeList`](/fr/docs/Web/API/NodeList) retournée par [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) n'est pas directe. À la différence des autres méthodes de requêtes DOM qui retournent une liste de noeuds directe.
+> La {{domxref("NodeList")}} retournée par {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} n'est pas vivante, ce qui signifie que les modifications du DOM ne sont pas reflétées dans la collection. Cela diffère d'autres méthodes de requête DOM qui retournent des listes de nœuds vivantes.
 
-Vous pouvez trouver des exemples et des détails en lisant la documentation sur les méthodes [`querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll), ainsi que dans l'article [Extraits de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector).
+Vous trouverez des exemples et des détails dans la documentation des méthodes {{domxref("Element.querySelector()")}} et {{domxref("Element.querySelectorAll()")}}.
 
 ## Sélecteurs
 
-Les méthodes de Selector acceptent un ou plusieurs sélecteurs séparés par des virgules pour déterminer les éléments à renvoyer. Par exemple, pour sélectionner tous les éléments paragraphe (`p`) dans le document dont la classe CSS est soit `warning` soit `note`, vous pouvez utiliser ce qui suit :
+Les méthodes de sélection acceptent des [sélecteurs](/fr/docs/Web/CSS/CSS_selectors) pour déterminer quel ou quels éléments doivent être retournés. Cela inclut les [listes de sélecteurs](/fr/docs/Web/CSS/Selector_list), ce qui permet de regrouper plusieurs sélecteurs dans une seule requête.
+
+Pour protéger la vie privée des utilisateur·ice·s, certaines [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) ne sont pas prises en charge ou se comportent différemment. Par exemple, {{cssxref(":visited")}} ne retournera aucun résultat et {{cssxref(":link")}} est traité comme {{cssxref(":any-link")}}.
+
+Seuls les éléments peuvent être sélectionnés, donc les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) ne sont pas pris en charge.
+
+## Exemples
+
+Pour sélectionner tous les éléments paragraphe (`p`) d'un document dont la classe inclut `warning` ou `note`, vous pouvez faire&nbsp;:
 
 ```js
-var special = document.querySelectorAll("p.warning, p.note");
+const special = document.querySelectorAll("p.warning, p.note");
 ```
 
-Vous pouvez aussi interroger par l'ID (_identifiant_). Par exemple :
+Vous pouvez aussi interroger par identifiant. Par exemple&nbsp;:
 
 ```js
-var el = document.querySelector("#main, #basic, #exclamation");
+const el = document.querySelector("#main, #basic, #exclamation");
 ```
 
-Après l'exécution du code ci-dessus, `el` contient le premier élément dans le document dont l'ID est `main`, `basic` ou `exclamation`.
-
-Vous pouvez utiliser tous les sélecteurs CSS avec les méthodes `querySelector()` et `querySelectorAll()`.
+Après l'exécution du code ci-dessus, `el` contient le premier élément du document dont l'identifiant est `main`, `basic` ou `exclamation`.
 
 ## Voir aussi
 
-- [API Selectors](https://www.w3.org/TR/selectors-api/) (en)
-- [`element.querySelector`](/fr/docs/Web/API/Element/querySelector)
-- [`element.querySelectorAll`](/fr/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector`](/fr/docs/Web/API/Document/querySelector)
-- [`document.querySelectorAll`](/fr/docs/Web/API/Document/querySelectorAll)
-- [Extraits de code pour querySelector](/fr/docs/Code_snippets/QuerySelector)
+- [Spécification des sélecteurs <sup>(angl.)</sup>](https://drafts.csswg.org/selectors/)
+- [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}

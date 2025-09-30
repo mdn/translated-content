@@ -1,11 +1,11 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`color-index`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur correspond au nombre d'entrées que comporte la palette de couleurs du périphérique de sortie, ou zéro si ce dernier n'en utilise pas.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color-index`** est utilisée pour tester le nombre d'entrées dans la table de recherche des couleurs du périphérique de sortie.
 
 ## Syntaxe
 
@@ -53,7 +53,7 @@ Ce fragment HTML permet d'appliquer une feuille de style spécifique pour les ap
 <link rel="stylesheet" href="http://toto.truc.com/base.css" />
 <link
   rel="stylesheet"
-  media="all and (min-color-index: 256)"
+  media="(color-index >= 256)"
   href="http://toto.truc.com/feuille_style_couleurs.css" />
 ```
 
@@ -64,3 +64,8 @@ Ce fragment HTML permet d'appliquer une feuille de style spécifique pour les ap
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

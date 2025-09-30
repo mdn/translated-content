@@ -1,18 +1,20 @@
 ---
-title: Utilisation du DOM Level 1 Core du W3C
+title: Utiliser le Modèle Objet de Document
 slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+l10n:
+  sourceCommit: d4a50b63d9afd826e61eb8833e8e6337b5059e8a
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.
+Le _Modèle Objet de Document_ (<i lang="en">Document Object Model</i> ou <abbr>DOM</abbr> en anglais) est une API permettant de manipuler les arbres DOM de documents HTML et XML (et d'autres documents arborescents). Cette API est à la base de la description d'une page et sert de fondement au script sur le Web.
 
-## Définition d'un arbre de contenu
+## Qu'est-ce qu'un arbre DOM ?
 
-Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Web/CSS/CSS_text/Whitespace))&nbsp;:
+Un **arbre DOM** est une [structure arborescente](https://fr.wikipedia.org/wiki/Arborescence) dont les nœuds représentent le contenu d'un document HTML ou XML. Chaque document HTML ou XML possède une représentation sous forme d'arbre DOM. Par exemple, considérez le document suivant&nbsp;:
 
 ```html
-<html>
+<html lang="fr">
   <head>
     <title>Mon document</title>
   </head>
@@ -23,63 +25,97 @@ Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un 
 </html>
 ```
 
-![](using_the_w3c_dom_level_1_core-doctree.jpg)
+Il possède un arbre DOM qui ressemble à ceci&nbsp;:
 
-Lorsque Mozilla examine un document, un arbre de contenu est construit et ensuite utilisé pour l'affichage.
+![Le DOM comme représentation arborescente d'un document, avec une racine et des nœuds contenant du contenu](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant&nbsp;: le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)
+Bien que l'arbre ci-dessus soit similaire à l'arbre DOM réel du document, ils ne sont pas identiques, car l'arbre DOM réel préserve les [espaces dans le DOM](/fr/docs/Web/CSS/CSS_text/Whitespace).
 
-## Ce que permet le DOM Level 1 Core
+Lorsqu'un navigateur Web analyse un document HTML, il construit un arbre DOM puis l'utilise pour afficher le document.
 
-Le DOM Level 1 permet de modifier l'arbre du contenu*selon vos désirs*. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens&nbsp;: depuis la propriété `document` de l'objet global. Cet objet `document` implémente l'[interface Document](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document) de la spécification DOM Level 1 du W3C.
+## Que permet l'API Document ?
 
-## Un exemple simple
+L'API Document, parfois appelée API DOM, permet de modifier un arbre DOM _comme vous le souhaitez_. Elle permet de créer n'importe quel document HTML ou XML à partir de rien, ou de modifier n'importe quel contenu d'un document existant. Les auteur·ice·s de pages Web peuvent modifier le DOM d'un document en utilisant JavaScript pour accéder à la propriété `document` de l'objet global. Cet objet `document` implémente l'interface {{domxref("Document")}}.
 
-Supposons que l'auteur désire prendre le document présenté plus haut et changer le contenu du titre, ainsi qu'écrire deux paragraphes plutôt qu'un seul. Le script suivant le permettrait :
+## Lire et modifier l'arbre
 
-### Contenu HTML
+Supposons que vous souhaitiez modifier l'en-tête du document ci-dessus et écrire deux paragraphes au lieu d'un seul. Le script suivant le permet&nbsp;:
+
+### HTML
 
 ```html
-<body>
-  <input type="button" value="Change this document." onclick="change()" />
-  <h2>Header</h2>
-  <p>Paragraph</p>
-</body>
+<html lang="fr">
+  <head>
+    <title>Mon document</title>
+  </head>
+  <body>
+    <input type="button" value="Modifier ce document." />
+    <h2>Titre</h2>
+    <p>Paragraphe</p>
+  </body>
+</html>
 ```
 
-### Contenu JavaScript
+### JavaScript
 
 ```js
-function change() {
-  // document.getElementsByTagName ("H2") renvoie un NodeList du <h2>
-  // éléments dans le document, et le premier est le nombre 0:
+document.querySelector("input").addEventListener("click", () => {
+  // document.getElementsByTagName("h2") renvoie un NodeList des éléments <h2> du document, le premier est à l'indice 0 :
+  const header = document.getElementsByTagName("h2").item(0);
 
-  var header = document.getElementsByTagName("H2").item(0);
-  // le firstChild de l'en-tête est un noeud texte::
-  header.firstChild.data = "A dynamic document";
-  // maintenant l'en-tête est "Un document dynamique".
+  // Le firstChild de l'en-tête est un nœud texte :
+  header.firstChild.data = "Un document dynamique";
+  // Maintenant, l'en-tête est "Un document dynamique".
 
-  var para = document.getElementsByTagName("P").item(0);
-  para.firstChild.data = "This is the first paragraph.";
+  // Accéder au premier paragraphe
+  const para = document.getElementsByTagName("p").item(0);
+  para.firstChild.data = "Ceci est le premier paragraphe.";
 
-  // crée un nouveau noeud texte pour le second paragraphe
-  var newText = document.createTextNode("This is the second paragraph.");
-  // crée un nouvel Element pour le second paragraphe
-  var newElement = document.createElement("P");
-  // pose le texte dans le paragraphe
+  // Créer un nouveau nœud texte pour le second paragraphe
+  const newText = document.createTextNode("Ceci est le second paragraphe.");
+
+  // Créer un nouvel élément pour le second paragraphe
+  const newElement = document.createElement("p");
+
+  // Ajouter le texte dans le paragraphe
   newElement.appendChild(newText);
-  // et pose le paragraphe à la fin du document en l'ajoutant
-  // au BODY (qui est le parent de para)
+
+  // Ajouter le paragraphe à la fin du document (dans le body, parent de para)
   para.parentNode.appendChild(newElement);
-}
+});
 ```
 
-{{ EmbedLiveSample('Un_exemple_simple', 800, 300) }}
+{{ EmbedLiveSample('lire_et_modifier_larbre', 800, 300) }}
 
-Vous pouvez voir ce script dans [un exemple complet](https://www.mozilla.org/docs/dom/technote/intro/example.html).
+## Créer un arbre en JavaScript
 
-### Pour en apprendre plus
+Vous pouvez aussi créer l'arbre ci-dessus entièrement en JavaScript&nbsp;:
 
-Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant [les méthodes fondamentales de DOM Level 1](/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). C'est la suite de ce document.
+```js
+const racine = document.createElement("html");
+racine.lang = "fr";
 
-Consultez également la [spécification DOM Level 1 Core](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html) du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre [documentation complète sur le DOM](/fr/docs/Web/API/Document_Object_Model).
+const head = document.createElement("head");
+const title = document.createElement("title");
+title.appendChild(document.createTextNode("Mon document"));
+head.appendChild(title);
+
+const body = document.createElement("body");
+const header = document.createElement("h1");
+header.appendChild(document.createTextNode("Titre"));
+const paragraphe = document.createElement("p");
+paragraphe.appendChild(document.createTextNode("Paragraphe"));
+body.appendChild(header);
+body.appendChild(paragraphe);
+
+racine.appendChild(head);
+racine.appendChild(body);
+```
+
+## Pour en apprendre plus
+
+Maintenant que vous êtes familiarisé·e avec les concepts de base du DOM, vous pouvez en apprendre davantage sur les fonctionnalités fondamentales de l'API Document en lisant [comment parcourir un tableau HTML avec JavaScript et les interfaces DOM](/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
+
+## Voir aussi
+
+- Le [Modèle Objet de Document (DOM)](/fr/docs/Web/API/Document_Object_Model).

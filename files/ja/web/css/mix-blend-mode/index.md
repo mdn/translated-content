@@ -94,7 +94,7 @@ mix-blend-mode: unset;
 
 ### mix-blend-mode の様々な値の効果
 
-```html hidden
+```html-nolint hidden
 <div class="grid">
   <div class="col">
     <div class="note">

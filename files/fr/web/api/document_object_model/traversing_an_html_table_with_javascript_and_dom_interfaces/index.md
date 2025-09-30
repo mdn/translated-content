@@ -1,394 +1,388 @@
 ---
-title: Explorer un tableau HTML avec des interfaces DOM et JavaScript
+title: Parcourir un tableau HTML avec JavaScript et les interfaces DOM
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+l10n:
+  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-## Introduction
-
-Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
+Cet article est un aperçu des méthodes fondamentales et puissantes du DOM niveau 1, et comment les utiliser en JavaScript. Vous apprendrez à créer, lire, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM présentées ici ne sont pas spécifiques à HTML&nbsp;: elles s'appliquent aussi à XML. Les démonstrations fournies fonctionnent dans tout navigateur moderne.
 
 > [!NOTE]
-> Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
+> Les méthodes DOM présentées ici font partie de la spécification Document Object Model (Core) niveau 1. Le DOM niveau 1 inclut à la fois des méthodes d'accès et de manipulation génériques (DOM 1 Core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
 
-## Création d'un tableau HTML dynamiquement
+## Créer dynamiquement un tableau HTML
 
-### Contenu HTML
+### Exemple
+
+Dans cet exemple, un nouveau tableau est ajouté à la page lorsqu'un bouton est cliqué.
+
+#### HTML
 
 ```html
-<input type="button" value="Generate a table." onclick="generate_table()" />
+<input type="button" value="Générer un tableau" />
 ```
 
-### Contenu JavaScript
+#### JavaScript
 
 ```js
-function generate_table() {
-  // get the reference for the body
-  var body = document.getElementsByTagName("body")[0];
+function generateTable() {
+  // crée un élément <table> et un élément <tbody>
+  const tbl = document.createElement("table");
+  const tblBody = document.createElement("tbody");
 
-  // creates a <table> element and a <tbody> element
-  var tbl = document.createElement("table");
-  var tblBody = document.createElement("tbody");
+  // création de toutes les cellules
+  for (let i = 0; i < 2; i++) {
+    // crée une ligne de tableau
+    const row = document.createElement("tr");
 
-  // creating all cells
-  for (var i = 0; i < 2; i++) {
-    // creates a table row
-    var row = document.createElement("tr");
-
-    for (var j = 0; j < 2; j++) {
-      // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-      var cell = document.createElement("td");
-      var cellText = document.createTextNode(
-        "cell in row " + i + ", column " + j,
+    for (let j = 0; j < 2; j++) {
+      // Crée un élément <td> et un nœud texte, place le texte
+      // dans le <td>, puis place le <td> à la fin de la ligne
+      const cell = document.createElement("td");
+      const cellText = document.createTextNode(
+        `cellule ligne ${i}, colonne ${j}`,
       );
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
 
-    // add the row to the end of the table body
+    // ajoute la ligne à la fin du corps du tableau
     tblBody.appendChild(row);
   }
 
-  // put the <tbody> in the <table>
+  // place le <tbody> dans le <table>
   tbl.appendChild(tblBody);
-  // appends <table> into <body>
-  body.appendChild(tbl);
-  // sets the border attribute of tbl to 2;
+  // ajoute <table> dans <body>
+  document.body.appendChild(tbl);
+  // définit l'attribut border de tbl à '2'
   tbl.setAttribute("border", "2");
+}
+
+document
+  .querySelector("input[type='button']")
+  .addEventListener("click", generateTable);
+```
+
+```css hidden
+table {
+  margin: 1rem auto;
+}
+
+td {
+  padding: 0.5rem;
 }
 ```
 
-{{ EmbedLiveSample('Création_d\'un_tableau_HTML_dynamiquement') }}
+#### Résultat
 
-Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés&nbsp;:
+{{ EmbedLiveSample('exemple') }}
 
-1. On crée d'abord l'élément \<table>.
-2. Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
-3. Puis, grâce à une boucle, on crée les éléments \<tr>, qui sont des enfants de l'élément \<tbody>.
-4. Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
-5. Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
+### Explications
 
-Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse&nbsp;:
+Notez l'ordre dans lequel nous avons créé les éléments et le nœud texte&nbsp;:
 
-1. On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
+1. D'abord, nous avons créé l'élément `<table>`.
+2. Ensuite, nous avons créé l'élément `<tbody>`, enfant de `<table>`.
+3. Puis, nous avons utilisé une boucle pour créer les éléments `<tr>`, enfants de `<tbody>`.
+4. Pour chaque `<tr>`, une boucle crée les éléments `<td>`, enfants de `<tr>`.
+5. Pour chaque `<td>`, on crée ensuite le nœud texte avec le texte de la cellule.
+
+Une fois tous les éléments créés, on les ajoute à leur parent dans l'ordre inverse&nbsp;:
+
+1. On attache chaque nœud texte à son parent `<td>` avec
 
    ```js
-   cell.appendChild(texte);
+   cell.appendChild(cellText);
    ```
 
-2. Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
+2. On attache chaque `<td>` à son parent `<tr>` avec
 
    ```js
    row.appendChild(cell);
    ```
 
-3. Puis chaque \<tr> à son parent \<tbody> avec
+3. On attache chaque `<tr>` à son parent `<tbody>` avec
 
    ```js
-   tablebody.appendChild(row);
+   tblBody.appendChild(row);
    ```
 
-4. Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
+4. On attache `<tbody>` à son parent `<table>` avec
 
    ```js
-   table.appendChild(tablebody);
+   tbl.appendChild(tblBody);
    ```
 
-5. Enfin, \<table> est rattaché à \<body> avec
+5. On attache `<table>` à son parent `<body>` avec
 
    ```js
-   body.appendChild(table);
+   document.body.appendChild(tbl);
    ```
 
-Souvenez-vous de cette technique, vous l'utiliserez souvent en programmant pour le DOM W3C. On crée d'abord les éléments du haut vers le bas, puis on attache les enfants aux parents dans l'ordre inverse.
+Retenez cette technique&nbsp;: vous l'utiliserez souvent avec le DOM du W3C. On crée les éléments du haut vers le bas, puis on attache les enfants aux parents du bas vers le haut.
 
-Voici l'HTML généré par ce code JavaScript&nbsp;:
+Voici le balisage HTML généré par le code JavaScript&nbsp;:
 
 ```html
-...
 <table border="2">
-  <tr>
-    <td>la cellule est ligne 0 colonne 0</td>
-    <td>la cellule est ligne 0 colonne 1</td>
-  </tr>
-  <tr>
-    <td>la cellule est ligne 1 colonne 0</td>
-    <td>la cellule est ligne 1 colonne 1</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>cellule ligne 0, colonne 0</td>
+      <td>cellule ligne 0, colonne 1</td>
+    </tr>
+    <tr>
+      <td>cellule ligne 1, colonne 0</td>
+      <td>cellule ligne 1, colonne 1</td>
+    </tr>
+  </tbody>
 </table>
-...
 ```
 
-Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants&nbsp;:
+Voici l'arbre d'objets DOM généré pour l'élément `<table>` et ses enfants&nbsp;:
 
-![](sample1-tabledom.jpg)
+![Comment un arbre d'objets DOM est généré à partir de l'élément principal et de ses enfants](sample1-tabledom.jpg)
 
-Vous pouvez construire ce tableau ainsi que ses éléments enfants internes en utilisant juste quelques méthodes DOM. Conservez à l'esprit le modèle en arbre des structures que vous comptez créer, cela rendra plus facile l'écriture du code nécessaire. Dans l'arbre \<table> de la figure 1, l'élément \<table> a un enfant, l'élément \<tbody>, qui lui-même a deux enfants \<tr>, qui à leur tour ont chacun un enfant \<td>. Enfin, chacun de ces éléments \<td> a un enfant, un nœud texte.
+Vous pouvez construire ce tableau et ses éléments internes avec seulement quelques méthodes DOM. Gardez à l'esprit le modèle arborescente pour les structures que vous souhaitez créer&nbsp;: cela facilitera l'écriture du code. Dans l'arbre du `<table>` de la figure, l'élément `<table>` a un enfant&nbsp;: l'élément `<tbody>`. `<tbody>` a deux enfants. Chaque enfant `<tr>` de `<tbody>` a deux enfants `<td>`. Enfin, chaque `<td>` a un enfant&nbsp;: un nœud texte.
 
-## Définition de la couleur d'arrière-plan d'un paragraphe
+## Définir la couleur de fond d'un paragraphe
 
-`getElementsByTagName` est à la fois une méthode de l'interface Document et de l'interface Element. Lorsqu'il est appelé, il renvoie un tableau avec tous les descendants de l'élément correspondant au nom de l'étiquette. Le premier élément de la liste se trouve à la position \[0] dans le tableau.
+### Exemple
 
-### Contenu HTML
+Dans cet exemple, on change la couleur de fond d'un paragraphe lorsqu'un bouton est cliqué.
+
+#### HTML
 
 ```html
 <body>
-  <input
-    type="button"
-    value="Set paragraph background color"
-    onclick="set_background()" />
-  <p>hi</p>
-  <p>hello</p>
+  <input type="button" value="Définir la couleur de fond du paragraphe" />
+  <p>salut</p>
+  <p>bonjour</p>
 </body>
 ```
 
-### Contenu JavaScript
+#### JavaScript
 
 ```js
-function set_background() {
-  // récupère une liste de tous les éléments body (il n'y en aura qu'un),
-  // et sélectionne le premier (indice 0) de ces éléments
-  myBody = document.getElementsByTagName("body")[0];
+function setBackground() {
+  // récupère tous les éléments p du document
+  const paragraphs = document.getElementsByTagName("p");
 
-  // à présent, trouve tous les éléments p enfants de cet élément body
-  myBodyElements = myBody.getElementsByTagName("p");
+  // récupère le deuxième paragraphe de la liste
+  const secondParagraph = paragraphs[1];
 
-  // récupère le second élément de cette liste d'éléments p
-  myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  // applique le style en ligne
+  secondParagraph.style.background = "red";
 }
+
+document.querySelector("input").addEventListener("click", setBackground);
 ```
 
-{{ EmbedLiveSample('Définition_de_la_couleur_d\'arrière-plan_d\'un_paragraphe') }}
+#### Résultat
 
-Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élément `p` du corps (body).
+{{ EmbedLiveSample('exemple_2') }}
 
-1. On récupère d'abord une liste de tous les éléments body avec
+### Explications
 
-   ```js
-   myBody = document.getElementsByTagName("body")[0];
-   ```
+`getElementsByTagName(tagNameValue)` est une méthode disponible sur tout {{domxref("Element")}} DOM ou sur l'élément racine {{domxref("Document")}}. Elle retourne un tableau de tous les descendants de l'élément correspondant au nom de balise. Le premier élément de la liste est à la position `[0]` du tableau.
 
-   Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `[0]`.
+Voici les étapes réalisées&nbsp;:
 
-2. Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
+1. On récupère tous les éléments `p` du document&nbsp;:
 
    ```js
-   myBodyElements = myBody.getElementsByTagName("p");
+   const paragraphs = document.getElementsByTagName("p");
    ```
 
-3. Pour finir on prend le deuxième élément de la liste des éléments p avec
+2. On récupère le deuxième élément paragraphe de la liste&nbsp;:
 
    ```js
-   myP = myBodyElements[1];
+   const secondParagraph = paragraphs[1];
    ```
 
-![](sample2a2.jpg)
+   ![Un élément paragraphe est ajouté comme nouveau frère à un paragraphe existant dans un arbre DOM](sample2a2.jpg)
 
-Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement&nbsp;:
+3. Enfin, on définit la couleur de fond sur rouge avec la propriété {{domxref("HTMLElement.style", "style")}} de l'objet {{domxref("HTMLParagraphElement", "paragraphe")}}&nbsp;:
+
+   ```js
+   secondParagraph.style.background = "red";
+   ```
+
+### Créer des TextNodes avec document.createTextNode("..")
+
+Utilisez l'objet document pour appeler la méthode `createTextNode` et créer un nœud texte. Il suffit de passer le contenu du texte. La valeur de retour est un objet représentant le nœud texte.
 
 ```js
-myP.style.background = "rgb(255,0,0)";
-// ajoute une propriété de style inline
+myTextNode = document.createTextNode("le monde");
 ```
 
-### Création de nœuds texte avec `document.createTextNode("..")`
+Cela signifie que vous avez créé un nœud de type `TEXT_NODE` (un morceau de texte) dont la donnée texte est «&nbsp;le monde&nbsp;», et `myTextNode` est votre référence vers ce nœud. Pour insérer ce texte dans votre page HTML, il faut faire de ce nœud texte un enfant d'un autre élément.
 
-Employez l'objet `document` pour appeler la méthode `createTextNode` et créer un nœud texte. Il suffit de lui communiquer le contenu texte, et la valeur renvoyée est un objet représentant le nœud texte.
+### Insérer des éléments avec appendChild(..)
 
-```html
-myTextNode = document.createTextNode("world");
-```
-
-Ce morceau de code crée un nœud de type TEXT_NODE qui contient la donnée texte `"world"`, et `monNoeudTexte` est la référence de l'objet nœud créé. Pour afficher ce texte sur votre page HTML, vous devez ensuite définir ce nœud texte comme l'enfant d'un autre élément nœud.
-
-### Insertion d'éléments avec appendChild(...)
-
-En invoquant `myP.appendChild('node_element')` , vous définissez `node_element` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
+En appelant `secondParagraph.appendChild(node_element)`, vous faites de l'élément un nouvel enfant du deuxième élément `<p>`.
 
 ```js
-myP.appendChild(noeudTexte);
+secondParagraph.appendChild(myTextNode);
 ```
 
-En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
+Après avoir testé cet exemple, vous remarquerez que les mots bonjour et monde sont collés&nbsp;: bonjourle monde. Visuellement, dans la page HTML, il semble qu'il n'y ait qu'un seul nœud texte, mais dans le modèle de document, il y a bien deux nœuds. Le second est un nouveau nœud de type `TEXT_NODE`, et c'est le deuxième enfant du deuxième `<p>`. La figure suivante montre le nœud texte nouvellement créé dans l'arbre du document.
 
-![](sample2b2.jpg)
+![Les nœuds texte d'un élément paragraphe comme frères dans l'arbre DOM.](sample2b2.jpg)
 
 > [!NOTE]
-> L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de «&nbsp;world&nbsp;» placé après «&nbsp;hello&nbsp;». Pour ajouter un nœud texte entre «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
+> `createTextNode()` et `appendChild()` sont un moyen simple d'inclure un espace entre les mots _bonjour_ et _le monde_. Notez aussi que la méthode `appendChild` ajoute l'enfant après le dernier enfant, comme le mot _monde_ ajouté après _bonjour_. Si vous souhaitez insérer un nœud texte entre _bonjour_ et _le monde_, utilisez `insertBefore` au lieu de `appendChild`.
 
-### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
+### Créer de nouveaux éléments avec document.createElement(..)
 
-Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple&nbsp;:
-
-```js
-nouveauNoeudBALISEP = document.createElement("p");
-body.appendChild(nouveauNoeudBALISEP);
-```
-
-![](sample2c.jpg)
-
-### Suppression de nœuds avec la méthode `removeChild(...)`
-
-Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot «&nbsp;world&nbsp;»&nbsp;:
+Vous pouvez créer de nouveaux éléments HTML ou tout autre élément avec `createElement`. Par exemple, pour créer un nouvel élément `<p>` comme enfant de `<body>`, utilisez l'objet `myBody` de l'exemple précédent et ajoutez un nouvel élément. Pour créer un nœud, appelez `document.createElement("nomDeBalise")`. Exemple&nbsp;:
 
 ```js
-myP.removeChild(noeudTexte);
+myNewPTagNode = document.createElement("p");
+myBody.appendChild(myNewPTagNode);
 ```
 
-Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé&nbsp;:
+![Comment un nouvel élément est ajouté à un nœud texte dans l'arbre du document](sample2c.jpg)
+
+### Supprimer des nœuds avec removeChild(..)
+
+Les nœuds peuvent être supprimés. Le code suivant supprime le nœud texte `myTextNode` (contenant le mot "monde") du deuxième élément `<p>`, `secondParagraph`.
 
 ```js
-nouveauNoeudBALISEP.appendChild(noeudTexte);
+secondParagraph.removeChild(myTextNode);
 ```
 
-L'arborescence des objets se présente désormais comme ceci&nbsp;:
+Le nœud texte `myTextNode` (contenant "monde") existe toujours. Le code suivant rattache `myTextNode` au nouvel élément `<p>`, `myNewPTagNode`.
 
-![](sample2d.jpg)
+```js
+myNewPTagNode.appendChild(myTextNode);
+```
 
-## Création dynamique d'un tableau (retour à Sample1.html)
+L'état final de l'arbre d'objets modifié ressemble à ceci&nbsp;:
 
-Jusqu'à la fin de cet article, nous travaillons de nouveau sur Exemple1.html. Le schéma qui suit vous rappelle la structure de l'arbre des objets pour le tableau créé dans l'exemple.
+![Création et ajout d'un nouvel élément à la structure d'objets texte](sample2d.jpg)
 
-### Rappel de la structure arborescente d'un tableau HTML
+## Créer dynamiquement un tableau
 
-![](sample1-tabledom.jpg)
+La figure suivante montre la structure arborescente d'objets pour le tableau créé dans l'exemple.
 
-### Création et insertion des éléments dans l'arborescence
+### Structure du tableau HTML
 
-On peut décomposer la création du tableau de Exemple1.html en trois étapes&nbsp;:
+![La structure arborescente d'objets du tableau HTML après ajout de nouveaux éléments](sample1-tabledom.jpg)
 
-- Récupérer l'objet body (c'est le premier élément de l'objet document).
+### Créer des nœuds éléments et les insérer dans l'arbre du document
+
+Les étapes de base pour créer le tableau sont&nbsp;:
+
+- Récupérer l'objet body (premier élément du document).
 - Créer tous les éléments.
-- Greffer chaque enfant sur son parent en respectant la structure du tableau (cf. le schéma ci-dessus).
-
-Le code source qui suit est un exemple commenté qui crée le tableau de Exemple1.
+- Enfin, ajouter chaque enfant selon la structure du tableau (comme dans la figure ci-dessus).
 
 > [!NOTE]
-> Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments&nbsp;: le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
-
-```html
-<head>
-<title>Code de démonstration - Explorer un tableau HTML avec des interfaces DOM et JavaScript</title>
-<script>
-    function start() {
-        // récupère une référence vers l'élément body
-        var body = document.getElementsByTagName("body")[0];
-
-        // création des éléments <table> et <tbody>
-        table     = document.createElement("table");
-        tablebody = document.createElement("tbody");
-
-        // création des cellules
-        for(var j = 0; j < 2; j++) {
-            // création d'un élément <tr>
-            row = document.createElement("tr");
-
-            for(var i = 0; i < 2; i++) {
-                // création d'un élément <td>
-                cell = document.createElement("td");
-                // création d'un nœud texte
-                texte = document.createTextNode("la cellule est ligne " + j + ", colonne " + i);
-                // ajoute le nœud texte créé à la cellule <td>
-                cell.appendChild(texte);
-                // ajoute la cellule <td> à la ligne <tr>
-                row.appendChild(cell);
-            }
-            // ajoute la ligne <tr> à l'élément <tbody>
-            tablebody.appendChild(row);
-        }
-
-        // ajoute <tbody> à l'élément <table>
-        table.appendChild(tablebody);
-        // ajoute <table> à l'élément <body>
-        body.appendChild(table);
-        // définit l'attribut border de table à 2;
-        table.setAttribute("border", "2");
-    }
-</script>
-</head>
-<body onload="start()">
-</body>
-</html>
-```
-
-## Manipulation du tableau avec DOM et CSS
-
-### Récupérer un nœud texte dans le tableau
-
-Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la notation `[x]` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
-
-> [!NOTE]
-> Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut `data`.
+> À la fin du script, une nouvelle ligne de code définit la propriété `border` du tableau avec la méthode DOM `setAttribute()`. Cette méthode prend deux arguments&nbsp;: le nom de l'attribut et sa valeur. Vous pouvez définir n'importe quel attribut d'un élément avec `setAttribute`.
 
 ```js
-mybody = document.getElementsByTagName("body")[0];
-mytable = mybody.getElementsByTagName("table")[0];
-mytablebody = mytable.getElementsByTagName("tbody")[0];
-myrow = mytablebody.getElementsByTagName("tr")[1];
-mycel = myrow.getElementsByTagName("td")[1];
+// récupère la référence du body
+const myBody = document.getElementsByTagName("body")[0];
 
-// premier élément du noeud liste des enfants de mycel
-myceltext = mycel.childNodes[0];
+// crée les éléments <table> et <tbody>
+const myTable = document.createElement("table");
+const myTableBody = document.createElement("tbody");
 
-//  contenu de currenttext est le contenu des données de myceltext
-currenttext = document.createTextNode(myceltext.data);
-mybody.appendChild(currenttext);
+// création de toutes les cellules
+for (let j = 0; j < 3; j++) {
+  // crée une ligne <tr>
+  const myCurrentRow = document.createElement("tr");
+
+  for (let i = 0; i < 4; i++) {
+    // crée une cellule <td>
+    const myCurrentCell = document.createElement("td");
+    // crée un nœud texte
+    const currentText = document.createTextNode(
+      `cellule ligne ${j}, colonne ${i}`,
+    );
+    // ajoute le nœud texte à la cellule <td>
+    myCurrentCell.appendChild(currentText);
+    // ajoute la cellule <td> à la ligne <tr>
+    myCurrentRow.appendChild(myCurrentCell);
+  }
+  // ajoute la ligne <tr> au <tbody>
+  myTableBody.appendChild(myCurrentRow);
+}
+
+// ajoute <tbody> à <table>
+myTable.appendChild(myTableBody);
+// ajoute <table> à <body>
+myBody.appendChild(myTable);
+// définit l'attribut border de myTable à 2
+myTable.setAttribute("border", "2");
+```
+
+## Manipuler le tableau avec le DOM et CSS
+
+### Récupérer un nœud texte du tableau
+
+Cet exemple introduit deux nouveaux attributs DOM. D'abord, il utilise l'attribut `childNodes` pour obtenir la liste des nœuds enfants de myCell. La liste `childNodes` inclut tous les nœuds enfants, quel que soit leur nom ou type. Comme `getElementsByTagName()`, elle retourne une liste de nœuds.
+
+Les différences sont&nbsp;: (a) `getElementsByTagName()` ne retourne que les éléments du nom de balise spécifié&nbsp;; (b) `childNodes` inclut tous les descendants à tous les niveaux, pas seulement les enfants immédiats.
+
+Une fois la liste obtenue, utilisez `[x]` pour récupérer l'enfant souhaité. Cet exemple stocke dans `myCellText` le nœud texte de la deuxième cellule de la deuxième ligne du tableau.
+
+Pour afficher le résultat, on crée un nouveau nœud texte dont le contenu est la donnée de `myCellText`, puis on l'ajoute comme enfant de `<body>`.
+
+> [!NOTE]
+> Si votre objet est un nœud texte, vous pouvez utiliser l'attribut data pour récupérer le texte du nœud.
+
+```js
+const myBody = document.getElementsByTagName("body")[0];
+const myTable = myBody.getElementsByTagName("table")[0];
+const myTableBody = myTable.getElementsByTagName("tbody")[0];
+const myRow = myTableBody.getElementsByTagName("tr")[1];
+const myCell = myRow.getElementsByTagName("td")[1];
+
+// premier élément de la liste childNodes de myCell
+const myCellText = myCell.childNodes[0];
+
+// le contenu de currentText est la donnée de myCellText
+const currentText = document.createTextNode(myCellText.data);
+myBody.appendChild(currentText);
 ```
 
 ### Récupérer la valeur d'un attribut
 
-A la fin d'Exemple1, l'appel à `setAttribute` sur l'objet `table` définit la propriété `border` du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode `getAttribute`&nbsp;:
+À la fin de l'exemple 1, on utilise `setAttribute` sur l'objet `myTable` pour définir la bordure. Pour récupérer la valeur de l'attribut, utilisez la méthode `getAttribute`&nbsp;:
 
-```html
-mytable.getAttribute("border");
+```js
+myTable.getAttribute("border");
 ```
 
-### Cacher une colonne en changeant les propriétés de style
+### Masquer une colonne en modifiant les propriétés de style
 
-Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez définir les propriétés directement. Le code qui suit est une version modifiée de Exemple1.html où les cellules de la seconde colonne sont cachées, et le fond de celles de la première colonne est rouge. Remarquez que la propriété de style y est définie directement.
+Une fois l'objet obtenu dans votre variable JavaScript, vous pouvez définir les propriétés `style` directement. Le code suivant est une version modifiée où chaque cellule de la deuxième colonne est masquée et chaque cellule de la première colonne a un fond rouge. Notez que la propriété `style` est définie directement.
 
-```html
-<html>
-  <body onload="start()"></body>
-  <script>
-    function start() {
-      var body = document.getElementsByTagName("body")[0];
-      table = document.createElement("table");
-      tablebody = document.createElement("tbody");
+```js
+const myBody = document.getElementsByTagName("body")[0];
+const myTable = document.createElement("table");
+const myTableBody = document.createElement("tbody");
 
-      for (var j = 0; j < 2; j++) {
-        row = document.createElement("tr");
-        for (var i = 0; i < 2; i++) {
-          cell = document.createElement("td");
-          text = document.createTextNode("la cellule est&nbsp;:" + i + j);
-          cell.appendChild(text);
-          row.appendChild(cell);
-          // change la couleur de fond de la cellule
-          // si la colonne est 0. Si la colonne est 1, cache la cellule
-          if (i == 0) {
-            cell.style.background = "rgb(255,0,0)";
-          } else {
-            cell.style.display = "none";
-          }
-        }
-        tablebody.appendChild(row);
-      }
-      table.appendChild(tablebody);
-      body.appendChild(table);
+for (let row = 0; row < 2; row++) {
+  const myCurrentRow = document.createElement("tr");
+  for (let col = 0; col < 2; col++) {
+    const myCurrentCell = document.createElement("td");
+    const currentText = document.createTextNode(`cellule&nbsp;: ${row}${col}`);
+    myCurrentCell.appendChild(currentText);
+    myCurrentRow.appendChild(myCurrentCell);
+    // définit la couleur de fond de la cellule
+    // si la colonne est 0. Si la colonne est 1, masque la cellule
+    if (col === 0) {
+      myCurrentCell.style.background = "red";
+    } else {
+      myCurrentCell.style.display = "none";
     }
-  </script>
-</html>
+  }
+  myTableBody.appendChild(myCurrentRow);
+}
+myTable.appendChild(myTableBody);
+myBody.appendChild(myTable);
 ```
-
-#### Original Document Information
-
-- Author(s)
-  - : Marcio Galli
-- Migrated from
-  - : <http://web.archive.org/web/20000815054125/http://mozilla.org/docs/dom/technote/tn-dom-table/>
-
-Interwik
