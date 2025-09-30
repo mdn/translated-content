@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le descripteur **`system`** permet de spécifier l'algorithme à utiliser pour convertir la valeur entière d'un compteur en une représentation sous forme de chaîne de caractères. Il est utilisé dans une [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}} pour définir le comportement du style défini.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`system`** permet de spécifier l'algorithme à utiliser pour convertir la valeur entière d'un compteur en une représentation sous forme de chaîne de caractères. Il est utilisé dans une règle {{cssxref("@counter-style")}} pour définir le comportement du style défini.
 
 Si l'algorithme spécifié dans le descripteur `system` ne peut pas construire la représentation pour une certaine valeur du compteur, alors la représentation de cette valeur sera construite en utilisant le système de repli fourni.
 

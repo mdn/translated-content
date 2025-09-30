@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le descripteur **`fallback`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}} permet de spécifier un style de compteur de repli si le style de compteur défini ne peut pas créer de représentation pour une certaine valeur du compteur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`fallback`** de la règle {{cssxref("@counter-style")}} permet de spécifier un style de compteur de repli si le style de compteur défini ne peut pas créer de représentation pour une certaine valeur du compteur.
 
 ## Syntaxe
 

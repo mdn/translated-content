@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-Le descripteur **`prefix`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref('@counter-style')}} permet de spécifier le contenu qui sera ajouté au début de la représentation du marqueur du compteur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`prefix`** de la règle {{cssxref('@counter-style')}} permet de spécifier le contenu qui sera ajouté au début de la représentation du marqueur du compteur.
 
 Lorsque la valeur du compteur est négative, le `prefix` apparaît avant le signe négatif et tout autre `<symbol>` ajouté par le descripteur {{cssxref("@counter-style/negative", "negative")}}.
 

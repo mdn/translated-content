@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le descripteur **`symbols`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}} est utilisé pour spécifier les symboles servant à créer les représentations du compteur dans le système de compteur indiqué. Ce descripteur est obligatoire lorsque la valeur du descripteur {{cssxref('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`symbols`** de la règle {{cssxref("@counter-style")}} est utilisé pour spécifier les symboles servant à créer les représentations du compteur dans le système de compteur indiqué. Ce descripteur est obligatoire lorsque la valeur du descripteur {{cssxref('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`.
 
 ## Syntaxe
 

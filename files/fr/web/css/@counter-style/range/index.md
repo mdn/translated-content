@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le descripteur **`range`** permet à l'auteur·ice de spécifier une ou plusieurs plages de valeurs du compteur pour lesquelles le style est appliqué lors de la définition de styles de compteur personnalisés avec la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}}. Lorsque le descripteur `range` est inclus, le compteur défini ne sera utilisé que pour les valeurs comprises dans les plages définies. Si la valeur du compteur est en dehors de la plage spécifiée, le style de repli sera utilisé pour construire la représentation de ce marqueur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`range`** de la règle {{cssxref("@counter-style")}} permet à l'auteur·ice de spécifier une ou plusieurs plages de valeurs du compteur pour lesquelles le style est appliqué lors de la définition de styles de compteur personnalisés. Lorsque le descripteur `range` est inclus, le compteur défini ne sera utilisé que pour les valeurs comprises dans les plages définies. Si la valeur du compteur est en dehors de la plage spécifiée, le style de repli sera utilisé pour construire la représentation de ce marqueur.
 
 ## Syntaxe
 

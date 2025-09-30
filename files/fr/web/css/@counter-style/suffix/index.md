@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-Le descripteur **`suffix`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}} permet de spécifier le contenu qui sera ajouté à la fin de la représentation du marqueur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`suffix`** de la règle {{cssxref("@counter-style")}} permet de spécifier le contenu qui sera ajouté à la fin de la représentation du marqueur.
 
 ## Syntaxe
 

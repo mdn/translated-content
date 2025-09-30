@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le descripteur **`pad`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@counter-style")}} permet de définir une longueur minimale pour les représentations des marqueurs.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`pad`** de la règle {{cssxref("@counter-style")}} permet de définir une longueur minimale pour les représentations des marqueurs.
 
 ## Syntaxe
 
