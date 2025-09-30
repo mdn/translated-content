@@ -7,7 +7,7 @@ l10n:
 
 La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-feature-values`** permet d'utiliser un nom commun dans la propriété {{cssxref("font-variant-alternates")}} pour des fonctionnalités activées différemment en OpenType. Cela peut simplifier votre CSS lorsque vous utilisez plusieurs polices.
 
-The `@font-feature-values` at-rule may be used either at the top level of your CSS or inside any CSS conditional-group at-rule.
+La règle `@font-feature-values` peut être utilisée soit au début de votre CSS, soit à l'intérieur de n'importe quelle règle conditionnelle CSS.
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ The `@font-feature-values` at-rule may be used either at the top level of your C
 
 Chaque bloc `@font-feature-values` peut contenir une liste de blocs de valeurs de fonctionnalités (listés ci-dessous), ainsi que le descripteur {{cssxref("@font-feature-values/font-display", "font-display")}}.
 
-### Blocs de valeurs de fonctionnalités
+### Blocs liés aux caractéristiques
 
 - `@swash`
   - : Définit un nom de fonctionnalité utilisable avec la notation fonctionnelle {{cssxref("font-variant-alternates", "swash()", "#swash")}} de {{cssxref("font-variant-alternates")}}. Une définition de valeur de fonctionnalité swash n'accepte qu'une seule valeur&nbsp;: `ident1: 2` est valide, mais `ident2: 2 4` ne l'est pas.
