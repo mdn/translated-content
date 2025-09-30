@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Les **fonctions mathématiques CSS** permettent d'écrire la valeur d'une propriété — comme la `height`, la `animation-duration` ou la `font-size` d'un élément — sous forme d'expression mathématique.
+Les **fonctions mathématiques CSS** permettent d'écrire la valeur d'une propriété — comme la hauteur (`height`), la durée d'animation (`animation-duration`) ou la taille de police (`font-size`) d'un élément — sous forme d'expression mathématique.
 
 Sans utiliser de calcul, les [unités CSS intégrées](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) comme `rem`, `vw` et `%` sont souvent assez flexibles pour styliser les éléments HTML et obtenir une expérience utilisateur particulière.
 Cependant, il existe des cas où l'on se sent limité·e en exprimant le style d'un élément avec une seule valeur et unité. Considérez les exemples suivants&nbsp;:
@@ -340,5 +340,5 @@ Pour la mise en page et le style des éléments du DOM, les quatre fonctions mat
 ## Pour aller plus loin
 
 - Vous pouvez utiliser les fonctions mathématiques CSS pour créer des interfaces utilisateur réactives sans écrire de code JavaScript.
-- Les fonctions mathématiques CSS peuvent parfois remplacer les [médias-queries CSS](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour définir des points de rupture de mise en page.
+- Les fonctions mathématiques CSS peuvent parfois remplacer les [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour définir des points de rupture de mise en page.
 - En 2023, les membres du projet Interop [ont sélectionné «&nbsp;CSS Math Functions&nbsp;» comme axe d'amélioration <sup>(angl.)</sup>](https://github.com/web-platform-tests/interop/blob/main/2023/README.md#css-math-functions). Cela signifie que les éditeurs de navigateurs collaborent pour garantir que les fonctions mathématiques CSS se comportent de la même façon sur tous les navigateurs et appareils.
