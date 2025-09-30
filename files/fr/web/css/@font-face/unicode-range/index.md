@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`unicode-range`**, associé à la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}}, définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`unicode-range`** pour à la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}}, définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
 
 ## Syntaxe
 
