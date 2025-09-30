@@ -70,9 +70,9 @@ Les macros suivantes servent à afficher les bannières de statut en haut des pa
 
 Les macros suivantes servent à afficher les icônes de statut en ligne à côté des éléments de liste de définitions&nbsp;:
 
-- [`\{{Experimental_Inline}} <sup>(angl.)</sup>`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Experimental_Inline}}
-- [`\{{Non-standard_Inline}} <sup>(angl.)</sup>`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Non-standard_Inline}}
-- [`\{{Deprecated_Inline}} <sup>(angl.)</sup>`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Deprecated_Inline}}
+- [`\{{Experimental_Inline}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Experimental_Inline}}
+- [`\{{Non-standard_Inline}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Non-standard_Inline}}
+- [`\{{Deprecated_Inline}}` <sup>(angl.)</sup>](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icône&nbsp;: {{Deprecated_Inline}}
 
 Si une page de fonctionnalité web possède une bannière de statut, alors les macros en ligne du même statut sont utilisées explicitement pour chaque membre ou valeur de la fonctionnalité dans la liste de définitions.
 Par exemple, si une page est marquée expérimentale avec `\{{SeeCompatTable}}`, chaque membre ou valeur de la fonctionnalité est explicitement marqué expérimental avec la macro `\{{Experimental_Inline}}` dans la liste de définitions.
