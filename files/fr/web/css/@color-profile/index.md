@@ -25,7 +25,7 @@ La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@c
 - `src`
   - : Indique l'URL où sont situées les informations sur le profil de couleur.
 - `rendering-intent`
-  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur {{Glozzary("Gamut", "les gamuts")}} plus petits pour lesquels ce profil est défini.
+  - : Si le profil de couleur contient plusieurs indications de rendu, ce descripteur permet de sélectionner celui à utiliser pour définir la correspondance de la couleur sur {{Glossary("Gamut", "les gamuts")}} plus petits pour lesquels ce profil est défini.
 
     Si ce descripteur est utilisé, sa valeur doit être l'un des mots-clés suivants&nbsp;:
     - `relative-colorimetric`
