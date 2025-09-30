@@ -25,7 +25,7 @@ Ces types incluent des mots-clés et des identifiants ainsi que des chaînes de 
 - Mots-clés globaux CSS
   - : Toutes les propriétés, y compris les propriétés personnalisées, acceptent les mots-clés globaux CSS&nbsp;:
     - {{CSSXref("initial")}}
-      - La valeur spécifiée comme valeur initiale de la propriété.
+      - La valeur définie comme valeur initiale de la propriété.
     - {{CSSXref("inherit")}}
       - La valeur calculée de la propriété sur l'élément parent.
     - {{CSSXref("revert")}}
@@ -93,11 +93,11 @@ Certaines propriétés CSS peuvent accepter une dimension ou une valeur de pourc
 Le module [Couleur CSS](/fr/docs/Web/CSS/CSS_colors) définit le type de données {{cssxref("&lt;color&gt;")}}, ainsi que d'autres types liés à la couleur en CSS.
 
 - {{cssxref("&lt;color&gt;")}}
-  - : Spécifié comme un mot-clé ou une valeur numérique de couleur.
+  - : Définit comme un mot-clé ou une valeur numérique de couleur.
 - {{cssxref("&lt;alpha-value&gt;")}}
-  - : Spécifie la transparence d'une couleur. Peut être un `<number>`, auquel cas 0 est complètement transparent et 1 est complètement opaque, ou un `<percentage>`, auquel cas 0% est complètement transparent et 100% complètement opaque.
+  - : Définit la transparence d'une couleur. Peut être un `<number>`, auquel cas 0 est complètement transparent et 1 est complètement opaque, ou un `<percentage>`, auquel cas 0% est complètement transparent et 100% complètement opaque.
 - {{cssxref("&lt;hue&gt;")}}
-  - : Spécifie l'`<angle>`, avec un identifiant d'unité de `deg`, `grad`, `rad` ou `turn`, ou un `<number>` sans unité interprété comme `deg`, de la {{glossary("color wheel")}} spécifique aux `<absolute-color-functions>` dont il est un composant.
+  - : Définit l'`<angle>`, avec un identifiant d'unité de `deg`, `grad`, `rad` ou `turn`, ou un `<number>` sans unité interprété comme `deg`, de la {{glossary("color wheel")}} spécifique aux `<absolute-color-functions>` dont il est un composant.
 
 ## Images
 
