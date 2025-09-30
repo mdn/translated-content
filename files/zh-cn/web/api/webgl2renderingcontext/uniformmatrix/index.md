@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`** 方法用于为 uniform 变量指定矩阵数值。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`** 方法用于为 uniform 变量指定矩阵数值。
 
 > [!NOTE]
 > 此方法并没有真正名为 `2x2`、`3x3` 和 `4x4` 的版本，它们分别被简写为 `2`、`3` 和 `4`。请参阅下方语法说明。
