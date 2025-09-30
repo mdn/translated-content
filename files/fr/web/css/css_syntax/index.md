@@ -11,7 +11,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 
 ## Règles @
 
-- aucune
+- Aucune
 
 > [!NOTE]
 > Le module précise que {{cssxref("@charset")}} n'est pas une véritable règle @, mais plutôt une règle héritée non reconnue qui doit être omise lors de la vérification grammaticale d'une feuille de style. La seule utilisation valide de `@charset` se trouve au tout début d'une feuille de style, où elle est interprétée comme une séquence d'octets spéciale supprimée avant le traitement du contenu.
@@ -20,21 +20,21 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 
 ### Concepts clés
 
-- {{cssxref("CSS_syntax/At-rule", "règles @")}}
-- [échappement de caractères](/fr/docs/Web/CSS/custom-ident#escaping_characters)
-- [commentaires CSS](/fr/docs/Web/CSS/CSS_syntax/Comments)
-- [déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
-- [bloc de déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [fonction CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-- [gestion d'erreur](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
-- [règle de style](/fr/docs/Web/API/CSSStyleRule)
+- {{cssxref("CSS_syntax/At-rule", "Règles @")}}
+- [Échappement de caractères](/fr/docs/Web/CSS/custom-ident#escaping_characters)
+- [Commentaires CSS](/fr/docs/Web/CSS/CSS_syntax/Comments)
+- [Déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
+- [Bloc de déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
+- [Fonction CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [Gestion d'erreur](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
+- [Règle de style](/fr/docs/Web/API/CSSStyleRule)
 
 ### Termes du glossaire
 
-- {{glossary("CSS_Descriptor", "descripteur CSS")}}
-- {{glossary("parse", "analyse")}}
-- {{glossary("stylesheet", "feuille de style")}}
-- {{glossary("whitespace", "espace blanc")}}
+- {{glossary("CSS_Descriptor", "Descripteur CSS")}}
+- {{glossary("parse", "Analyse")}}
+- {{glossary("stylesheet", "Feuille de style")}}
+- {{glossary("whitespace", "Espace blanc")}}
 
 ## Guides
 
