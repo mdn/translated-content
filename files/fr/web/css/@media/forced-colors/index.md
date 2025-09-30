@@ -34,8 +34,8 @@ Ces valeurs imposées sont choisies parmi l'ensemble des couleurs système, ce q
 - {{cssxref("outline-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("-webkit-tap-highlight-color")}}
-- L'[attribut SVG `fill`](/fr/docs/Web/SVG/Attribute/fill)
-- L'[attribut SVG `stroke`](/fr/docs/Web/SVG/Attribute/stroke)
+- L'[attribut SVG `fill`](/fr/docs/Web/SVG/Reference/Attribute/fill)
+- L'[attribut SVG `stroke`](/fr/docs/Web/SVG/Reference/Attribute/stroke)
 
 De plus, les propriétés suivantes ont un comportement particulier en mode couleurs forcées&nbsp;:
 
