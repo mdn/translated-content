@@ -9,9 +9,9 @@ Le statut d'une fonctionnalité indique globalement l'état d'implémentation en
 
 Il s'agit de l'un des statuts suivants&nbsp;:
 
-- [`déprécié <sup>(angl.)</sup>`](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-deprecated)
-- [`expérimental <sup>(angl.)</sup>`](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-experimental)
-- [`non standardisé <sup>(angl.)</sup>`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
+- [`déprécié` <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-deprecated)
+- [`expérimental` <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-experimental)
+- [`non standardisé` <sup>(angl.)</sup>](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
 
 > [!WARNING]
 > Ne mettez pas à jour manuellement les statuts des fonctionnalités dans les dépôts `mdn/content` et `mdn/translated-content`.
