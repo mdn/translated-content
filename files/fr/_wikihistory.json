@@ -38577,50 +38577,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Glossary/CORS-safelisted_request_header": {
-    "modified": "2019-03-18T21:45:54.235Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Glossary/CORS-safelisted_response_header": {
-    "modified": "2019-03-18T21:45:55.399Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Glossary/Denial_of_Service": {
-    "modified": "2019-03-23T22:38:58.117Z",
-    "contributors": [
-      "xdelatour"
-    ]
-  },
-  "conflicting/Glossary/Hash_function": {
-    "modified": "2019-03-23T22:39:24.362Z",
-    "contributors": [
-      "loella16",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Glossary/Hash_function_3097209ba1840fd21a5674e950742f0f46fa7eda3af44a3eeb313cd360fdbff2": {
-    "modified": "2019-03-23T22:39:11.400Z",
-    "contributors": [
-      "loella16",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Glossary/IIFE": {
-    "modified": "2019-03-18T21:27:08.446Z",
-    "contributors": [
-      "Porkepix"
-    ]
-  },
-  "conflicting/Glossary/SLD": {
-    "modified": "2019-01-16T21:52:29.757Z",
-    "contributors": [
-      "xdelatour"
-    ]
-  },
   "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {
     "modified": "2020-07-16T22:27:21.075Z",
     "contributors": [
@@ -38939,27 +38895,6 @@
       "Delapouite"
     ]
   },
-  "conflicting/Web/HTTP": {
-    "modified": "2019-03-23T22:24:52.804Z",
-    "contributors": [
-      "SphinxKnight",
-      "Alpha",
-      "ftoulouse",
-      "cissoid"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers": {
-    "modified": "2020-10-15T22:15:05.344Z",
-    "contributors": [
-      "dragon38800"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers/Referrer-Policy": {
-    "modified": "2020-10-29T16:54:20.565Z",
-    "contributors": [
-      "JNa0"
-    ]
-  },
   "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-03-12T19:40:53.485Z",
     "contributors": [
@@ -39014,94 +38949,6 @@
     "contributors": [
       "chrisdavidmills",
       "Fredchat"
-    ]
-  },
-  "orphaned/MDN/At_ten": {
-    "modified": "2019-03-23T22:50:40.435Z",
-    "contributors": [
-      "lumiru",
-      "achraf",
-      "stephaniehobson",
-      "Cyber-Tron",
-      "ArtonP",
-      "SphinxKnight",
-      "tchevalier"
-    ]
-  },
-  "orphaned/MDN/At_ten/History_of_MDN": {
-    "modified": "2019-03-23T22:50:37.833Z",
-    "contributors": [
-      "stephaniehobson",
-      "tchevalier",
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/CSS/-webkit-overflow-scrolling": {
-    "modified": "2020-10-15T21:33:11.491Z",
-    "contributors": [
-      "SphinxKnight",
-      "alhuno1"
-    ]
-  },
-  "orphaned/Web/CSS/::-moz-page": {
-    "modified": "2020-10-15T21:44:27.397Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "xdelatour"
-    ]
-  },
-  "orphaned/Web/CSS/::-moz-page-sequence": {
-    "modified": "2020-10-15T21:48:23.764Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "orphaned/Web/CSS/::-moz-scrolled-page-sequence": {
-    "modified": "2020-10-15T21:48:22.005Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "orphaned/Web/CSS/initial-letter-align": {
-    "modified": "2020-10-15T21:43:51.948Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/Demos": {
-    "modified": "2019-03-18T20:44:11.081Z",
-    "contributors": [
-      "goofy_mdn",
-      "xavierjs",
-      "qwincy_p"
-    ]
-  },
-  "orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2019-03-18T21:41:54.222Z",
-    "contributors": [
-      "SphinxKnight",
-      "Alpha"
-    ]
-  },
-  "orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types": {
-    "modified": "2020-10-29T15:18:48.722Z",
-    "contributors": [
-      "JNa0"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign": {
-    "modified": "2020-03-12T19:43:42.883Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-03-12T19:43:44.123Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   }
 }

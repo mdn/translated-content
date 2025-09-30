@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/canvas
 original_slug: Web/HTML/Element/canvas
 ---
 
-{{HTMLSidebar}}
-
 On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/Canvas_API), ou l'API [WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 
 <table class="properties">
@@ -183,5 +181,4 @@ Seul, l'élément `<canvas>` est une image matricielle et ne fournit pas d'infor
 - [Le portail MDN sur l'élément `<canvas>`](/fr/docs/Web/API/Canvas_API)
 - [Tutoriel `<canvas>`](/fr/docs/Web/API/Canvas_API/Tutorial)
 - [Anti-sèche `<canvas>`](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Démonstrations liées à `<canvas>`](/fr/docs/orphaned/Web/Demos)
 - [Introduction à `<canvas>` par Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) (en anglais)
