@@ -118,7 +118,7 @@ Pour l'élément trois, la valeur de `--item-size` est définie sur `1000px`. Bi
 
 ### Animer la valeur d'une propriété personnalisée
 
-Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type [`<percentage>`](/fr/docs/Web/CSS/percentage) et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{cssxref("linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
+Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type [`<percentage>`](/fr/docs/Web/CSS/percentage) et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
 
 ```html
 <div class="bar"></div>
