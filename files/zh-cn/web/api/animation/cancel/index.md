@@ -45,4 +45,4 @@ cancel()
 - {{domxref("KeyframeEffect")}}
 - {{domxref("Animation")}}
 - {{domxref("Animation.playState")}}
-- {{domxref("Animation.finished")}} returns the promise this action will reject if the animation's `playState` is not `"idle"`.
+- {{domxref("Animation.finished")}} 返回的 promise，如果动画的 animation `playState` 不是 `"idle"`，将会拒绝。
