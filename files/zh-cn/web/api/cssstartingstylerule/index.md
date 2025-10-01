@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("CSSOM") }}
 
-[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model) 的 **`CSSStartingStyleRule`** 接口表示一个 CSS {{CSSxRef("@starting-style")}} at-规则。
+[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)的 **`CSSStartingStyleRule`** 接口表示一个 CSS {{CSSxRef("@starting-style")}} at-规则。
 
 {{InheritanceDiagram}}
 
