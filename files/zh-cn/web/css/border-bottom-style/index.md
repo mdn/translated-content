@@ -1,6 +1,8 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-bottom-style`** 设置元素底部 {{cssxref("border")}} 的线条样式。
