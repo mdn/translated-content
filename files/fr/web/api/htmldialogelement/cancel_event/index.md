@@ -68,7 +68,8 @@ openDialog.addEventListener("click", () => {
     dialog.showModal();
     result.textContent = "";
   } else {
-    result.textContent = "L'API dialog n'est pas prise en charge par ce navigateur";
+    result.textContent =
+      "L'API dialog n'est pas prise en charge par ce navigateur";
   }
 });
 
