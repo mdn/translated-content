@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-L'attribut `aria-colspan` définit le nombre de colonnes occupées par une cellule ou une cellule de grille (`gridcell`) dans un [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou une [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
+L'attribut `aria-colspan` définit le nombre de colonnes occupées par une cellule ou une cellule de grille (`gridcell`) dans un tableau ([`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)), une grille ([`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) ou une grille arborescente ([`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)).
 
 ## Description
 
