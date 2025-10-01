@@ -106,4 +106,4 @@ cancelButton.addEventListener("click", () => {
 ## Voir aussi
 
 - Élément HTML implémentant cette interface&nbsp;:
-  - {{ HTMLElement("dialog") }}.
+  - {{ HTMLElement("dialog") }}
