@@ -1,7 +1,8 @@
 ---
 title: "SpeechRecognitionEvent: emma プロパティ"
 short-title: emma
-slug: Web/API/SpeechRecognitionEvent/emma
+slug: conflicting/Web/API/SpeechRecognitionEvent_4d8f69cd8daa11701cd65eea1620ce48e506d3faec14b86419373ab86463b6b2
+original_slug: Web/API/SpeechRecognitionEvent/emma
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---

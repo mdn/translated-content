@@ -3373,6 +3373,8 @@
 /ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
+/ja/docs/Web/API/SpeechRecognitionEvent/emma	/ja/docs/conflicting/Web/API/SpeechRecognitionEvent_4d8f69cd8daa11701cd65eea1620ce48e506d3faec14b86419373ab86463b6b2
+/ja/docs/Web/API/SpeechRecognitionEvent/interpretation	/ja/docs/conflicting/Web/API/SpeechRecognitionEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/Web/API/Text

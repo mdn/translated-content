@@ -1,7 +1,8 @@
 ---
 title: "SpeechRecognitionEvent: interpretation プロパティ"
 short-title: interpretation
-slug: Web/API/SpeechRecognitionEvent/interpretation
+slug: conflicting/Web/API/SpeechRecognitionEvent
+original_slug: Web/API/SpeechRecognitionEvent/interpretation
 l10n:
   sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
