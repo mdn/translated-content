@@ -93,4 +93,5 @@ closeButton.addEventListener("click", () => {
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("dialog")}}
+- Élément HTML implémentant cette interface&nbsp;:
+  - {{HTMLElement("dialog")}}
