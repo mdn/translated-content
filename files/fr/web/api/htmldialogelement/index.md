@@ -222,4 +222,5 @@ Notez que les boutons _Confirmer_ et _Annuler_ déclenchent tous deux l'événem
 
 ## Voir aussi
 
-- L'élément HTML implémentant cette interface&nbsp;: {{ HTMLElement("dialog") }}
+- Élément HTML implémentant cette interface&nbsp;:
+  - {{HTMLElement("dialog")}}
