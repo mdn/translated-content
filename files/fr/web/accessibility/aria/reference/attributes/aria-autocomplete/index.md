@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
 
-L'attribut `aria-autocomplete` indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs suggestions de la valeur souhaitée par l'utilisateur·ice pour une [`boîte combinée`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), une [`zone de recherche`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) ou une [`zone de saisie`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), et précise comment ces suggestions seront présentées si elles existent.
+L'attribut `aria-autocomplete` indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs suggestions de la valeur souhaitée par l'utilisateur·ice pour une boîte combinée [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), une zone de recherche [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) ou une zone de saisie [`textbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), et précise comment ces suggestions seront présentées si elles existent.
 
 ## Description
 
