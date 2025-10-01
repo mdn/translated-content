@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-L'attribut `aria-colcount` définit le nombre total de colonnes dans un [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) ou une [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) lorsque toutes les colonnes ne sont pas présentes dans le [DOM](/fr/docs/Glossary/DOM).
+L'attribut `aria-colcount` définit le nombre total de colonnes dans un tableau ([`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)), une grille ([`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) ou une grille arborescente ([`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)) lorsque toutes les colonnes ne sont pas présentes dans le [DOM](/fr/docs/Glossary/DOM).
 
 ## Description
 
