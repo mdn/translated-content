@@ -3,7 +3,7 @@ title: ::first-letter
 slug: Web/CSS/::first-letter
 ---
 
-**`::first-letter`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [블록 컨테이너](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers)의 첫 번째 줄에 있는 첫 글자에 스타일을 적용합니다. 단, 그 앞에 다른 콘텐츠(이미지나 인라인 테이블)가 없는 경우에만 적용됩니다.
+**`::first-letter`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [블록 컨테이너](/ko/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers)의 첫 번째 줄에 있는 첫 글자에 스타일을 적용합니다. 단, 그 앞에 다른 콘텐츠(이미지나 인라인 테이블)가 없는 경우에만 적용됩니다.
 
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 
