@@ -60,7 +60,6 @@ Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs repré
 - `turn`
   - : Représente un angle en nombre de tours. Un cercle complet correspond à `1turn`. Exemples&nbsp;: `0turn`, `0.25turn`, `1.2turn`.
 
-
 ## Exemples
 
 ### Définir un angle droit dans le sens horaire
