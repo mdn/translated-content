@@ -51,11 +51,11 @@ Dans CSS1 (1996), le facteur d'échelle entre deux mots-clés adjacents était d
 
 Pour chaque mot-clé `<absolute-size>`, le tableau suivant indique le facteur d'échelle, la correspondance avec les titres [`<h1>` à `<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et la correspondance avec l'attribut HTML [size](#attribut_html_size) obsolète.
 
-| `<absolute-size>`     | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
-| --------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
-| facteur d'échelle     | 3/5      | 3/4     | 8/9   | 1      | 6/5   | 3/2     | 2/1      | 3/1       |
-| Titres HTML           | h6       |         | h5    | h4     | h3    | h2      | h1       |           |
-| Attribut HTML `size`  | 1        |         | 2     | 3      | 4     | 5       | 6        | 7         |
+| `<absolute-size>`    | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
+| -------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
+| facteur d'échelle    | 3/5      | 3/4     | 8/9   | 1      | 6/5   | 3/2     | 2/1      | 3/1       |
+| Titres HTML          | h6       |         | h5    | h4     | h3    | h2      | h1       |           |
+| Attribut HTML `size` | 1        |         | 2     | 3      | 4     | 5       | 6        | 7         |
 
 ### Attribut HTML size
 
