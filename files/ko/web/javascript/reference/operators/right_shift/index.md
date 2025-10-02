@@ -1,6 +1,8 @@
 ---
 title: 오른쪽 시프트 (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
+l10n:
+  sourceCommit: cd45b5f9ac2d4badfb27970fe55b11d491eb2591
 ---
 
 {{jsSidebar("Operators")}}
