@@ -56,7 +56,7 @@ Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs repré
 - `grad`
   - : Représente un angle en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspond à `400grad`. Exemples&nbsp;: `0grad`, `100grad`, `38.8grad`.
 - `rad`
-  - : Représente un angle en [radians](<https://fr.wikipedia.org/wiki/Radian>). Un cercle complet correspond à 2π radians (soit environ `6.2832rad`). `1rad` correspond à 180/π degrés. Exemples&nbsp;: `0rad`, `1.0708rad`, `6.2832rad`.
+  - : Représente un angle en [radians](https://fr.wikipedia.org/wiki/Radian). Un cercle complet correspond à 2π radians (soit environ `6.2832rad`). `1rad` correspond à 180/π degrés. Exemples&nbsp;: `0rad`, `1.0708rad`, `6.2832rad`.
 - `turn`
   - : Représente un angle en nombre de tours. Un cercle complet correspond à `1turn`. Exemples&nbsp;: `0turn`, `0.25turn`, `1.2turn`.
 
