@@ -1223,7 +1223,7 @@
 /ja/docs/DragDrop/Drag_Operations	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ja/docs/DragDrop/Drag_and_Drop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
-/ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+/ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /ja/docs/DragDrop/ドラッグ＆ドロップ	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Drawing_text_using_a_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -3180,6 +3180,7 @@
 /ja/docs/Web/API/HTMLTableRowElement.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
 /ja/docs/Web/API/HTMLTableRowElement.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
 /ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /ja/docs/Web/API/History_API/Example	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/API/Houdini	/ja/docs/Web/API/Houdini_APIs
 /ja/docs/Web/API/IDBDatabase.close	/ja/docs/Web/API/IDBDatabase/close
@@ -3373,6 +3374,8 @@
 /ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
+/ja/docs/Web/API/SpeechRecognitionEvent/emma	/ja/docs/Web/API/SpeechRecognitionEvent
+/ja/docs/Web/API/SpeechRecognitionEvent/interpretation	/ja/docs/Web/API/SpeechRecognitionEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/Web/API/Text

@@ -23,7 +23,7 @@ l10n:
 
 ## 値
 
-値は {{domxref("CSSStyleSheet")}} インスタンスの配列す。これらは同じ {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} のコンテキスト内で {{domxref("Document")}} コンストラクターを使用して作成されている必要があります。
+値は {{domxref("CSSStyleSheet")}} インスタンスの配列です。これらは同じ {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} のコンテキスト内で {{domxref("Document")}} コンストラクターを使用して作成されている必要があります。
 
 配列を変更する必要がある場合は、`push()` のようなその場での変更を使用 してください。また、{{domxref("CSSStyleSheet")}} インスタンス自体も変更することができ、この変更はこのスタイルシートが採用されている場所であればどこでも適用されます。
 

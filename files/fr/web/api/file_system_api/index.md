@@ -174,7 +174,7 @@ async function returnPathDirectories(directoryHandle) {
 
 ### Écriture dans les fichiers
 
-La fonction asynchrone suivante ouvre le sélecteur de fichiers de sauvegarde, qui renvoie un {{domxref('FileSystemFileHandle')}} une fois un fichier sélectionné. Un flux accessible en écriture est ensuite créé à l'aide de la méthode {{domxref('FileSystemFileHandle. createWritable()')}}.
+La fonction asynchrone suivante ouvre le sélecteur de fichiers de sauvegarde, qui renvoie un {{domxref('FileSystemFileHandle')}} une fois un fichier sélectionné. Un flux accessible en écriture est ensuite créé à l'aide de la méthode {{domxref('FileSystemFileHandle.createWritable()')}}.
 
 Un {{domxref('Blob')}} défini par l'utilisateur·ice est ensuite écrit dans le flux qui est ensuite fermé.
 
@@ -253,7 +253,7 @@ onmessage = async (e) => {
 ```
 
 > [!NOTE]
-> Dans les versions antérieures de la spécification, {{domxref("FileSystemSyncAccessHandle. close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle. flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle. getSize()", "getSize()")}} et {{domxref("FileSystemSyncAccessHandle. truncate()", "truncate()")}} ont été spécifiés de manière non ergonomique comme méthodes asynchrones. Cela a maintenant été [modifié <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/7), mais certains navigateurs soutiennent toujours les versions asynchrones.
+> Dans les versions antérieures de la spécification, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} et {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} ont été spécifiés de manière non ergonomique comme méthodes asynchrones. Cela a maintenant été [modifié <sup>(angl.)</sup>](https://github.com/whatwg/fs/issues/7), mais certains navigateurs soutiennent toujours les versions asynchrones.
 
 ## Caractéristiques
 
