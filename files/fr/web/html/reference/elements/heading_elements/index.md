@@ -201,7 +201,7 @@ Le contenu sectionnant peut être libellé en utilisant une combinaison des attr
 </footer>
 ```
 
-{{EmbedLiveSample('','100%','190')}}
+{{EmbedLiveSample('exemples_de_contenu_sectionné','100%','190')}}
 
 Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
 
@@ -227,7 +227,7 @@ On utilise ici tous les niveaux de titre.
 
 #### Résultat
 
-{{EmbedLiveSample('', '280', '370')}}
+{{EmbedLiveSample('tous_les_niveaux', '280', '370')}}
 
 ### Une page d'exemple
 
@@ -253,19 +253,35 @@ Ici, on utilise des titres avec du contenu intercalaire.
 
 #### Résultat
 
-{{EmbedLiveSample('', '280', '630')}}
+{{EmbedLiveSample('une_page_dexemple', '280', '630')}}
 
 ## Résumé technique
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
-      <td><a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_titre">contenu de titre</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a>.</td>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >, <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_titre"
+          >contenu de titre</a
+        >, <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
+          >contenu tangible</a
+        >.
+      </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td><a href="/fr/docs/Web/HTML/Content_categories#contenu_phrasé">Contenu phrasé</a>.</td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
+          >Contenu phrasé</a
+        >.
+      </td>
     </tr>
     <tr>
       <th scope="row">Omission de balise</th>
@@ -273,20 +289,31 @@ Ici, on utilise des titres avec du contenu intercalaire.
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
-      <td>Tout élément acceptant du <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.</td>
+      <td>Tout élément acceptant du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a>.</td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/heading_role"><code>heading</code></a></td>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role"
+          ><code>heading</code></a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, ou <a href="/fr/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"
+          ><code>tab</code></a
+        >, <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
+          ><code>presentation</code></a
+        >, ou <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"
+          ><code>none</code></a
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLHeadingElement"><code>HTMLHeadingElement</code></a></td>
+      <td>{{domxref("HTMLHeadingElement")}}</td>
     </tr>
   </tbody>
 </table>
