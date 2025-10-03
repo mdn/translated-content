@@ -1,7 +1,8 @@
 ---
 title: "Tutoriels : Comment faire ?"
 short-title: Comment faire ?
-slug: Web/Accessibility/ARIA/How_to
+slug: orphaned/Web/Accessibility/ARIA/How_to
+original_slug: Web/Accessibility/ARIA/How_to
 l10n:
   sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---

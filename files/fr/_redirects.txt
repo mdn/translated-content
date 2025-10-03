@@ -16,7 +16,7 @@
 /fr/docs/Accessibilité/ARIA	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Accessible_Rich_Internet_Applications	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Applications_riches_Internet_accessibles	/fr/docs/Web/Accessibility/ARIA
-/fr/docs/Accessibilité/ARIA/Comment_deposer_un_bug_lie_a_ARIA	/fr/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/fr/docs/Accessibilité/ARIA/Comment_deposer_un_bug_lie_a_ARIA	/fr/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Guides_ARIA	/fr/docs/Web/Accessibility/ARIA/Guides
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA	/fr/docs/Web/Accessibility/ARIA/Guides/Techniques
@@ -4421,7 +4421,9 @@
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role
 /fr/docs/Web/Accessibility/ARIA/Attributes	/fr/docs/Web/Accessibility/ARIA/Reference/Attributes
 /fr/docs/Web/Accessibility/ARIA/Attributes/aria-required	/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required
-/fr/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/fr/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/fr/docs/Web/Accessibility/ARIA/How_to	/fr/docs/orphaned/Web/Accessibility/ARIA/How_to
+/fr/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/fr/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/fr/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/fr/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /fr/docs/Web/Accessibility/ARIA/Multipart_labels	/fr/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /fr/docs/Web/Accessibility/ARIA/Roles/alert_role	/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role	/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role

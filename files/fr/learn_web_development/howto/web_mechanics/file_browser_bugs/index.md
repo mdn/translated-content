@@ -1,7 +1,7 @@
 ---
 title: Comment signaler un bug lié à ARIA
-slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
-original_slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+slug: Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+original_slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
 l10n:
   sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
