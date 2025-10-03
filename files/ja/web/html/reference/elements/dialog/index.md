@@ -1,12 +1,9 @@
 ---
 title: "<dialog>: ダイアログ要素"
 slug: Web/HTML/Reference/Elements/dialog
-original_slug: Web/HTML/Element/dialog
 l10n:
-  sourceCommit: be7cf520036291031985ab0b38c487539b1faa9d
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
-
-{{HTMLSidebar}}
 
 **`<dialog>`** は [HTML](/ja/docs/Web/HTML) の要素で、モーダルまたは非モーダルダイアログボックスや、それ以外の消すことができるアラート、インスペクター、サブウィンドウなどのような対話的コンポーネントを表します。
 
@@ -21,16 +18,34 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 > [!WARNING]
 > `tabindex` 属性を `<dialog>` 要素で使用してはいけません。詳しく[使用上の注意](#使用上の注意)を参照してください。
 
+- `closedby`
+  - : `<dialog>` 要素を閉じるために使用できるユーザー操作の種類を指定します。この属性は、ダイアログが閉じられる可能性のある 3 つの方法を区別します。
+    - 「簡単な解除のユーザー操作」。ユーザーがダイアログの外側をクリックまたはタップすると、`<dialog>` が閉じられます。これは、[「自動」状態のポップオーバーにおける「簡単な解除」動作](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) と同等です。
+    - 「プラットフォーム固有のユーザー操作」。例えば、デスクトッププラットフォームでは <kbd>Esc</kbd> キーを押す操作、モバイルプラットフォームでは「戻る」または「閉じる」ジェスチャーなど。
+    - 開発者が指定した機構（例：{{htmlelement("button")}} に [`click`](/ja/docs/Web/API/Element/click_event) ハンドラーを設定し、そこで {{domxref("HTMLDialogElement.close()")}} を呼び出したり、 {{htmlelement("form")}} を送信したりする。
+
+    利用可能な値は次の通りです。
+    - `any`
+      - : ダイアログは、3 つのいずれかの方法で閉じることができます。
+    - `closerequest`
+      - : ダイアログは、プラットフォーム固有のユーザー操作または開発者が指定した機構で閉じることができます。
+    - `none`
+      - : このダイアログは開発者が指定した機構でのみ閉じることができます。
+
+    `<dialog>` 要素に有効な `closedby` 値が指定されていない場合、
+    - {{domxref("HTMLDialogElement.showModal()", "showModal()")}} を使用して開かれた場合、値が `"closerequest"` であるかのように動作します。
+    - それ以外の場合、値が `"none"` であるかのように動作します。
+
 - `open`
   - : ダイアログボックスがアクティブであり、操作できる状態であることを示します。 `open` が設定されていない場合、ダイアログボックスはユーザーに表示されません。
     ダイアログを表示するには、`open` 属性ではなく `.show()` または `.showModal()` メソッドを使用することが推奨されます。もし `<dialog>` が `open` 属性を使用して開かれた場合、そのダイアログは非モーダルになります。
 
     > [!NOTE]
-    > モーダルではないダイアログボックスの開いた状態と閉じた状態を切り替えるには、`open` 属性の有無を切り替えることができますが、この手法は推奨されません。
+    > モーダルではないダイアログボックスの開いた状態と閉じた状態を切り替えるには、`open` 属性の有無を切り替えることができますが、この手法は推奨されません。詳しくは {{domxref("HTMLDialogElement.open", "open")}} を参照してください。
 
 ## 使用上の注意
 
-- HTML の {{HTMLElement("form")}} 要素は、属性 method=「dialog」 を保有している場合、またはフォームを送信するボタンに [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input#formmethod) が設定されている場合に、ダイアログボックスを閉じることができます。 `<dialog>` 内の `<form>` が `dialog` メソッドで確定されると、ダイアログボックスが閉じられ、そのフォームコントロールの状態が保存されますが、送信はされません。また、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティは、押されたボタンの値に設定されます。
+- HTML の {{HTMLElement("form")}} 要素は、属性 `method="dialog"` がついている場合、またはフォームを送信するボタンに [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input#formmethod) が設定されている場合に、ダイアログボックスを閉じることができます。 `<dialog>` 内の `<form>` が `dialog` メソッドで確定されると、ダイアログボックスが閉じられ、そのフォームコントロールの状態が保存されますが、送信はされません。また、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティは、押されたボタンの値に設定されます。
 - CSS の {{cssxref('::backdrop')}} 擬似要素は、モーダルダイアログの背景をスタイル設定するために使用することができます。これは、{{domxref("HTMLDialogElement.showModal()")}} メソッドを使用してダイアログを表示した際に、`<dialog>` 要素の背後に表示されます。例えば、この擬似要素を使用して、モーダルダイアログの背後の無効なコンテンツをぼかしたり、暗くしたり、といった方法で分かりにくくすることができます。
 - [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性を、モーダルダイアログが開いた直後にユーザーが操作することが想定される要素に追加すべきです。他に即座の操作が想定される要素がない場合は、`autofocus` をダイアログ内の［閉じる］ボタンに追加するか、ユーザーがクリック/アクティブにして閉じることが想定される場合はダイアログ自体に追加することをお勧めします。
 - `<dialog>` 要素に `tabindex` プロパティを追加しないでください。この要素は操作対象ではなく、フォーカスを受け取らないからです。ダイアログの内容は（ダイアログに含まれない閉じるボタンを含め）、フォーカスを受け取ることができ、操作対象となります。
@@ -69,7 +84,7 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 > [!NOTE]
 > 出力結果をリセットするには、このページを再読み込みしてください。
 
-このダイアログは、`open` 属性が存在するために最初に開かれます。`open` 属性を使用して表示されるダイアログは、モーダルではありません。［OK］をクリックすると、ダイアログは閉じられ、結果フレームは空になります。ダイアログが閉じられた後、それを再度開くための方法は提供されていません。このため、モーダルではないダイアログを表示するには、 {{domxref("HTMLDialogElement.show()")}} メソッドを使用するのが推奨されます。論理属性である `open` を追加または削除することで、ダイアログの表示を切り替えることも可能ですが、推奨される方法ではありません。
+このダイアログは、`open` 属性が存在するため最初に開かれます。`open` 属性を使用して表示されるダイアログは、モーダルではありません。［OK］をクリックすると、ダイアログは閉じられ、結果フレームは空になります。ダイアログが閉じられた後、それを再度開くための方法は提供されていません。このため、モーダルではないダイアログを表示するには、 {{domxref("HTMLDialogElement.show()")}} メソッドを使用するのが推奨されます。論理属性である `open` を追加または削除することで、ダイアログの表示を切り替えることも可能ですが、推奨される方法ではありません。
 
 ### モーダルダイアログの作成
 
@@ -106,7 +121,7 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 
 #### JavaScript
 
-ダイアログは、`.showModal()` メソッドを使用してモーダルに開かれ、`.close()` メソッドを使用して閉じられます。
+ダイアログは、`.showModal()` メソッドを使用してモーダルに開かれ、`.close()` または `.requestClose()` メソッドを使用して閉じられます。
 
 ```js
 const dialog = document.querySelector("dialog");
@@ -207,7 +222,7 @@ confirmBtn.addEventListener("click", (event) => {
 - {{domxref("HTMLDialogElement.close()")}} メソッドを呼び出すことによって（[モーダルの例](#モーダルダイアログの作成)にあるように）。
   この例では、［キャンセル］ボタンはダイアログフォームメソッドを介してダイアログを閉じ、［確認］ボタンは {{domxref("HTMLDialogElement.close()")}} メソッドを介してダイアログを閉じます。
 
-［キャンセル］ボタンには [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) が含まれており、 {{HTMLElement("form")}} の既定の {{HTTPMethod("GET")}} メソッド ([`method`](/ja/docs/Web/HTML/Reference/Elements/form#method)) を上書きします。フォームのメソッドが [`dialog`](#usage_notes) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
+［キャンセル］ボタンには [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) が含まれており、 {{HTMLElement("form")}} の既定の {{HTTPMethod("GET")}} メソッドを上書きします。フォームのメソッドが [`dialog`](#使用上の注意) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
 
 `action` がない場合、既定の {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。JavaScript を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxref("event.preventDefault()")}} と {{domxref("HTMLDialogElement.close()")}} メソッドを使用しています。
 
@@ -272,9 +287,118 @@ jsCloseBtn.addEventListener("click", (e) => {
 
 出力から、［通常 閉じる］ボタンを使用してダイアログを閉じることができないことが分かります。しかし、［無検証 閉じる］ボタンの `formnovalidate` 属性を使用してフォームの検証をバイパスすれば、ダイアログを閉じることができます。プログラム上では、`dialog.close()` を使用しても同様にダイアログを閉じることができます。
 
+### 様々な closedby 動作の比較
+
+この例は、[`closedby`](#closedby)属性の様々な値による動作の違いを示しています。
+
+#### HTML
+
+3 つの {{htmlelement("button")}} 要素と 3 つの `<dialog>` 要素があります。各ボタンは、`closedby` 属性の 3 つの値（`none`、`closerequest`、`any`）のいずれかの動作を示す異なるダイアログを開くようにプログラムされています。各 `<dialog>` 要素には、それを閉じるために使用される `<button>` 要素が含まれていることに注意してください。
+
+```html-nolint live-sample___closedbyvalues
+<p>表示する <code>&lt;dialog&gt;</code> の種類を選択:</p>
+<div id="controls">
+  <button id="none-btn"><code>closedby="none"</code></button>
+  <button id="closerequest-btn">
+    <code>closedby="closerequest"</code>
+  </button>
+  <button id="any-btn"><code>closedby="any"</code></button>
+</div>
+
+<dialog closedby="none">
+  <h2><code>closedby="none"</code></h2>
+  <p>
+    特定の提供された機構を操作することによってのみ閉じることが可能です。
+    この場合は、下部の「閉じる」ボタンを押してください。
+  </p>
+  <button class="close">閉じる</button>
+</dialog>
+
+<dialog closedby="closerequest">
+  <h2><code>closedby="closerequest"</code></h2>
+  <p>「閉じる」ボタンまたは Esc キーで閉じられます。</p>
+  <button class="close">閉じる</button>
+</dialog>
+
+<dialog closedby="any">
+  <h2><code>closedby="any"</code></h2>
+  <p>
+    「閉じる」ボタン、Esc キー、またはダイアログの外側をクリックすることで閉じられます。「簡単な解除」の動作です。
+  </p>
+  <button class="close">閉じる</button>
+</dialog>
+```
+
+```css hidden live-sample___closedbyvalues
+body {
+  font-family: sans-serif;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+dialog {
+  width: 480px;
+  border-radius: 5px;
+  border-color: rgb(0 0 0 / 0.3);
+}
+
+dialog h2 {
+  margin: 0;
+}
+
+dialog p {
+  line-height: 1.4;
+}
+```
+
+#### JavaScript
+
+ここでは、メインコントロールの `<button>` 要素、`<dialog>` 要素、ダイアログ内の「閉じる」の `<button>` 要素を参照するために、異なる変数を割り当てます。まず [`click`](/ja/docs/Web/API/Element/click_event) イベントリスナーを [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) で各コントロールボタンに割り当て、そのイベントハンドラー関数で関連する `<dialog>` 要素を [`showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal) で開くようにします。 次に「閉じる」の `<button>` 要素をループ処理し、それぞれに `click` イベントハンドラー関数を割り当てます。この関数は対応する `<dialog>` 要素を、 [`close()`](/ja/docs/Web/API/HTMLDialogElement/close) で閉じます。
+
+```js live-sample___closedbyvalues
+const noneBtn = document.getElementById("none-btn");
+const closerequestBtn = document.getElementById("closerequest-btn");
+const anyBtn = document.getElementById("any-btn");
+
+const noneDialog = document.querySelector("[closedby='none']");
+const closerequestDialog = document.querySelector("[closedby='closerequest']");
+const anyDialog = document.querySelector("[closedby='any']");
+
+const closeBtns = document.querySelectorAll(".close");
+
+noneBtn.addEventListener("click", () => {
+  noneDialog.showModal();
+});
+
+closerequestBtn.addEventListener("click", () => {
+  closerequestDialog.showModal();
+});
+
+anyBtn.addEventListener("click", () => {
+  anyDialog.showModal();
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+  });
+});
+```
+
+#### 結果
+
+レンダリング結果は次のとおりです。
+
+{{EmbedLiveSample("closedby-values", "100%", 300)}}
+
+各ボタンをクリックしてダイアログを開いてみてください。最初のダイアログは「閉じる」ボタンをクリックすることでのみ閉じられます。2 つ目のダイアログは、<kbd>Esc</kbd> キーを押すなど、端末固有のユーザー操作でも閉じられます。3つ目のダイアログは完全な[「簡単な解除」動作](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」)を備えているため、ダイアログの外側をクリックまたはタップしても閉じられます。
+
 ### アニメーションするダイアログ
 
-`<dialog>` 要素は、非表示時には [`display: none;`](/ja/docs/Web/CSS/display) 表示時には `display: block;` と設定され、{{glossary("top layer","最上位レイヤー")}}および[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree)から削除されたり、追加されたりします。したがって、 `<dialog>` 要素をアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション化する必要があります。[対応ブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` プロパティを[離散的なアニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)で変化させてアニメーション化します。具体的には、ブラウザーは `none` と他の `display` 値を交互に切り替えることで、アニメーション化されたコンテンツがアニメーションの全期間にわたって表示されるようにします。
+`<dialog>` 要素は、非表示時には [`display: none;`](/ja/docs/Web/CSS/display) 表示時には `display: block;` と設定され、{{glossary("top layer","最上位レイヤー")}}および[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#アクセシビリティツリーの構築)から削除されたり、追加されたりします。したがって、 `<dialog>` 要素をアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション化する必要があります。[対応ブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` プロパティを[離散的なアニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)で変化させてアニメーション化します。具体的には、ブラウザーは `none` と他の `display` 値を交互に切り替えることで、アニメーション化されたコンテンツがアニメーションの全期間にわたって表示されるようにします。
 
 例えば、
 
@@ -314,18 +438,18 @@ CSS トランジションで `<dialog>` をアニメーションさせる場合�
 
 ##### CSS
 
-CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog[open]` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際の既定の `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
+この CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog:open` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際の既定の `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
 
-また、開いたときに現れる `<dialog>` の背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog[open]::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
+また、開いたときに現れる `<dialog>` の背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog:open::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
 
 ```css
-/*   開いた状態のダイアログ  */
-dialog[open] {
+/* 開いた状態のダイアログ */
+dialog:open {
   opacity: 1;
   transform: scaleY(1);
 }
 
-/*   閉じた状態のダイアログ   */
+/* 閉じた状態のダイアログ */
 dialog {
   opacity: 0;
   transform: scaleY(0);
@@ -338,10 +462,10 @@ dialog {
   と等しい*/
 }
 
-/*   開く前の状態  */
-/* 詳細度が同じであるため、前の dialog[open] ルールの後に置かなければ効果がありません */
+/* 開く前の状態 */
+/* 詳細度が同じであるため、前の dialog:open ルールの後に置かなければ効果がありません */
 @starting-style {
-  dialog[open] {
+  dialog:open {
     opacity: 0;
     transform: scaleY(0);
   }
@@ -349,7 +473,7 @@ dialog {
 
 /* ダイアログがモーダルで最上位に来た場合に :backdrop をトランジションする */
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -358,7 +482,7 @@ dialog::backdrop {
   と等しい */
 }
 
-dialog[open]::backdrop {
+dialog:open::backdrop {
   background-color: rgb(0 0 0 / 25%);
 }
 
@@ -366,11 +490,14 @@ dialog[open]::backdrop {
 入れ子セレクターは擬似要素を表すことができないからです。 */
 
 @starting-style {
-  dialog[open]::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+  dialog:open::backdrop {
+    background-color: transparent;
   }
 }
 ```
+
+> [!NOTE]
+> {{cssxref(":open")}} 擬似クラスに非対応のブラウザーでは、属性セレクター `dialog[open]` が使用して `<dialog>` 要素が開いた状態のときにスタイルを適用することができます。
 
 ##### JavaScript
 
@@ -397,7 +524,7 @@ closeBtn.addEventListener("click", () => {
 {{ EmbedLiveSample("dialog 要素のトランジション", "100%", "200") }}
 
 > [!NOTE]
-> `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog[open]` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog[open]` 状態から既定の `dialog` 状態にトランジションします。
+> `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog:open` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog:open` 状態から既定の `dialog` 状態にトランジションします。
 >
 > このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used)」をご覧ください。
 
@@ -434,15 +561,16 @@ dialog {
   animation: fade-out 0.7s ease-out;
 }
 
-dialog[open] {
+dialog:open {
   animation: fade-in 0.7s ease-out;
 }
 
-dialog[open]::backdrop {
+dialog:open::backdrop {
+  background-color: black;
   animation: backdrop-fade-in 0.7s ease-out forwards;
 }
 
-/* Animation keyframes */
+/* アニメーションのキーフレーム */
 
 @keyframes fade-in {
   0% {
@@ -474,11 +602,11 @@ dialog[open]::backdrop {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0%);
+    opacity: 0;
   }
 
   100% {
-    background-color: rgb(0 0 0 / 25%);
+    opacity: 0.25;
   }
 }
 
@@ -518,17 +646,17 @@ closeBtn.addEventListener("click", () => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">区分化ルート</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        区分化ルート
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -538,7 +666,7 @@ closeBtn.addEventListener("click", () => {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるあらゆる要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるあらゆる要素
       </td>
     </tr>
     <tr>
@@ -569,8 +697,8 @@ closeBtn.addEventListener("click", () => {
 ## 関連情報
 
 - {{domxref("HTMLDialogElement")}} インターフェイス
-- {{domxref("HTMLDialogElement/close_event", "close")}} イベント
-- {{domxref("HTMLElement/cancel_event", "cancel")}} イベント
+- {{domxref("HTMLDialogElement/close_event", "close")}} イベント（`HTMLDialogElement` インターフェイス）
+- {{domxref("HTMLElement/cancel_event", "cancel")}} イベント（`HTMLDialogElement` インターフェイス）
 - {{domxref("HTMLDialogElement/open", "open")}} プロパティ（`HTMLDialogElement` インターフェイス）
 - [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) グローバル属性（HTML 要素）
 - CSS の {{CSSXref("::backdrop")}} 擬似要素

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**`static`** キーワードは、クラスに[静的メソッドや静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes#静的メソッドとフィールド)、または[政敵初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)を定義します（この使い方について詳しくは、リンク先を参照してください）。 静的プロパティは、クラスのインスタンスから直接アクセスすることはできません。代わりに、クラス自体に対してアクセスします。
+**`static`** キーワードは、クラスに[静的メソッドや静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes#静的メソッドとフィールド)、または[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)を定義します（この使い方について詳しくは、リンク先を参照してください）。 静的プロパティは、クラスのインスタンスから直接アクセスすることはできません。代わりに、クラス自体に対してアクセスします。
 
 静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
 

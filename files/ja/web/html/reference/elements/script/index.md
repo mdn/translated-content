@@ -1,12 +1,9 @@
 ---
 title: "<script>: スクリプト要素"
 slug: Web/HTML/Reference/Elements/script
-original_slug: Web/HTML/Element/script
 l10n:
-  sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
+  sourceCommit: 0e2ec54f4eb55cccad11af843d83061857918bee
 ---
-
-{{HTMLSidebar}}
 
 **`<script>`** は [HTML](/ja/docs/Web/HTML) の要素で、実行できるコードやデータを埋め込むために使用します。ふつうは JavaScript のコードの埋め込みや参照に使用されます。 `<script>` 要素は [WebGL](/ja/docs/Web/API/WebGL_API) の GLSL shader プログラミング言語、 [JSON](/ja/docs/Glossary/JSON) 等の他の言語にも使用することができます。
 
@@ -55,13 +52,16 @@ l10n:
     詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
 - `blocking`
-  - : この属性は、スクリプトを取得する際に特定の操作をブロックすべきであることを明示的に示します。ブロックされる操作は、下記に掲載されているブロックトークンの空白区切りリストでなければなりません。
+  - : この属性は、スクリプトが実行されるまで特定の操作をブロックすべきであることを明示的に示します。ブロック対象の操作は、ブロック対象のトークンを空白区切りで列挙したリストでなければなりません。現在、トークンは 1 つしか存在しません。
     - `render`: 画面へのコンテンツのレンダリングのブロックします。
 
+    > [!NOTE]
+    > `script` 要素のうち、文書の `<head>` 内に存在するもののみがレンダリングをブロックする可能性があります。スクリプトは既定ではレンダリングをブロックしません。 `script` 要素が `type="module"`、`async`、`defer` を含まないと、構文解析をブロックしますが、レンダリングはブロックしません。このような `script` 要素をスクリプト経由で動的に追加した場合、レンダリングをブロックさせるには `blocking = "render"` を設定する必要があります。
+
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-  - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('Window.error_event', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)をご覧ください。
+  - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックが通らないスクリプトに対して、 {{domxref('Window.error_event', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)をご覧ください。
 - `defer`
-  - : この論理属性は、スクリプトを文書の解析完了後かつ {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前に実行することをブラウザーに示します。
+  - : この論理属性は、文書の構文解析完了後かつ {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前に、このスクリプトを実行することをブラウザーに示します。
 
     `defer` 属性の付いたスクリプトは、スクリプトが読み込まれて評価が完了するまで、 `DOMContentLoaded` イベントの発生が抑制されます。
 
@@ -91,7 +91,7 @@ l10n:
     詳しくは {{domxref("HTMLScriptElement.fetchPriority")}} を参照してください。
 
 - `integrity`
-  - : この属性には、取得したリソースが予期せぬ操作なしに配信されたことをユーザーエージェントが確認するために使用できるインラインメタデータが含まれています。 `src` 属性が指定されていない場合は、この属性を指定してはなりません。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
+  - : この属性には、取得したリソースが予期せぬ操作なしに配信されたことをユーザーエージェントが確認するために使用できるインラインメタデータが含まれています。 `src` 属性がない場合は、この属性を指定してはいけません。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
 - `nomodule`
   - : この論理属性は、 [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているブラウザーでは、スクリプトを実行するべきではないことを示します。要するに、モジュール式の JavaScript コードに対応していない古いブラウザー向けの代替スクリプトを提供するために使用できます。
 - `nonce`
@@ -152,13 +152,13 @@ l10n:
 
 ### 基本的な使い方
 
-これらの例は `<script>` 要素を使用して (外部の) スクリプトをインポートする方法を紹介します。
+この例は `<script>` 要素を使用して (外部の) スクリプトをインポートする方法を紹介します。
 
 ```html
 <script src="javascript.js"></script>
 ```
 
-また、以下の例は `<script>` 要素内に (インライン) スクリプトを置く方法を示します。
+次の例は、`<script>` 要素内に（インライン）スクリプトを配置する方法を示しています。
 
 ```html
 <script>
@@ -217,7 +217,7 @@ _この画像は [HTML 仕様書](https://html.spec.whatwg.org/images/asyncdefer
 
 ### モジュールの代替
 
-`module` の値を持つ [`type`](#type) 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
+`module` の値を持つ [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
 
 ```html
 <script type="module" src="main.js"></script>
@@ -226,12 +226,12 @@ _この画像は [HTML 仕様書](https://html.spec.whatwg.org/images/asyncdefer
 
 ### importmap によるモジュールのインポート
 
-スクリプトでモジュールをインポートするとき、[`type=importmap`](#importmap) 機能を使用しない場合、各モジュールは絶対 URL または相対 URL のどちらかのモジュール指定子を使用してインポートする必要があります。
-下記の例では、1 つ目のモジュール指定子 ("./shapes/square.js") は文書のベース URL に対して相対的に解決され、2 つ目は絶対 URL となります。
+スクリプトでモジュールをインポートするとき、[`type=importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) 機能を使用しない場合、各モジュールは絶対 URL または相対 URL のどちらかのモジュール指定子を使用してインポートする必要があります。
+以下の例では、最初のモジュール指定子は絶対 URL であり、2 番目のモジュール指定子 (`"./shapes/square.js"`) は文書のベース URL を基準に相対的に解決されます。
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
 インポートマップを使用すると、一致した場合にモジュール指定子のテキストを置き換えることができる対応表を提供することができます。
@@ -241,8 +241,8 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 <script type="importmap">
   {
     "imports": {
-      "square": "./shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./shapes/square.js"
     }
   }
 </script>
@@ -251,8 +251,8 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 これにより、（絶対 URL や相対 URL ではなく）モジュール指定子の名前を使用してモジュールをインポートすることができます。
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
 インポートマップでできることの例については、JavaScript モジュールガイドの[インポートマップを使用したモジュールのインポート](/ja/docs/Web/JavaScript/Guide/Modules#インポートマップを使用したモジュールのインポート)の項を参照してください。
@@ -292,10 +292,12 @@ import { name as circleName } from "circle";
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+         <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -309,13 +311,13 @@ import { name as circleName } from "circle";
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
     <tr>
