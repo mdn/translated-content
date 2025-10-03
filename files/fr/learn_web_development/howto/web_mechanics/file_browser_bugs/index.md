@@ -1,7 +1,6 @@
 ---
 title: Quand et comment signaler des bugs avec les navigateurs
 slug: Learn_web_development/Howto/Web_mechanics/File_browser_bugs
-original_slug: Web/Access
 l10n:
   sourceCommit: cab1109a0c225299a9fb2b3402bcd4a1931b8ab7
 ---
