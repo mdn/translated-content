@@ -79,14 +79,14 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code pour modifier ces v
 <div class="box">
   <div class="shape"></div>
   <p>
-    Une nuit de novembre de l'année 1782, d'après la légende, deux frères étaient
-    assis près de leur feu d'hiver dans la petite ville française d'Annonay,
-    observant les volutes de fumée grisâtres monter dans la large cheminée. Ils
-    s'appelaient Stephen et Joseph Montgolfier, étaient papetiers de profession
-    et se distinguaient par leur curiosité scientifique et leur goût pour les
-    nouvelles découvertes. Avant cette nuit—qui devait s'avérer mémorable—des
-    centaines de millions de personnes avaient vu monter la fumée de leurs feux
-    sans y prêter plus d'attention.
+    Une nuit de novembre de l'année 1782, d'après la légende, deux frères
+    étaient assis près de leur feu d'hiver dans la petite ville française
+    d'Annonay, observant les volutes de fumée grisâtres monter dans la large
+    cheminée. Ils s'appelaient Stephen et Joseph Montgolfier, étaient papetiers
+    de profession et se distinguaient par leur curiosité scientifique et leur
+    goût pour les nouvelles découvertes. Avant cette nuit—qui devait s'avérer
+    mémorable—des centaines de millions de personnes avaient vu monter la fumée
+    de leurs feux sans y prêter plus d'attention.
   </p>
 </div>
 ```
