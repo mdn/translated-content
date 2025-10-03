@@ -3883,13 +3883,6 @@
       "Wind1808"
     ]
   },
-  "Learn_web_development/Core/Challenges": {
-    "modified": "2019-03-23T23:30:43.615Z",
-    "contributors": [
-      "teoli",
-      "ethertank"
-    ]
-  },
   "Learn_web_development/Core/Frameworks_libraries": {
     "modified": "2020-11-17T06:32:35.649Z",
     "contributors": [
@@ -14771,6 +14764,13 @@
       "drry"
     ]
   },
+  "Web/API/HTML_Drag_and_Drop_API/Drag_data_store": {
+    "modified": "2020-10-07T03:14:28.263Z",
+    "contributors": [
+      "mpcjazz",
+      "Piro"
+    ]
+  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2019-03-24T00:06:21.211Z",
     "contributors": [
@@ -14778,13 +14778,6 @@
       "dlwe",
       "Piro",
       "drry"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
-    "modified": "2020-10-07T03:14:28.263Z",
-    "contributors": [
-      "mpcjazz",
-      "Piro"
     ]
   },
   "Web/API/Headers": {
@@ -43611,6 +43604,13 @@
       "hamasaki",
       "kenji-yamasaki",
       "sii"
+    ]
+  },
+  "conflicting/Learn_web_development/Core": {
+    "modified": "2019-03-23T23:30:43.615Z",
+    "contributors": [
+      "teoli",
+      "ethertank"
     ]
   },
   "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {
