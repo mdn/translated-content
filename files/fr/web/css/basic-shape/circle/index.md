@@ -81,8 +81,7 @@ Dans l'exemple ci‑dessous, la propriété {{cssxref("shape-outside")}} a pour 
 <div class="box">
   <img
     alt="A hot air balloon"
-    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png"
-    />
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
   <p>
     Une nuit de novembre en 1782, paraît‑il, deux frères étaient assis près de
     leur feu d'hiver dans la petite ville française d'Annonay, observant les
