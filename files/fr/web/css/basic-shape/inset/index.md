@@ -72,7 +72,7 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
 
 ### Exemple basique d'`ellipse()`
 
-Cet exemple montre une ellipse positionnée à gauche, avec un rayon horizontal de 40 % et un rayon vertical de 50 %.  Le centre de l'ellipse se trouve donc sur le bord gauche de la boîte, ce qui crée une demi‑ellipse autour de laquelle le texte s'enroule.
+Cet exemple montre une ellipse positionnée à gauche, avec un rayon horizontal de 40 % et un rayon vertical de 50 %. Le centre de l'ellipse se trouve donc sur le bord gauche de la boîte, ce qui crée une demi‑ellipse autour de laquelle le texte s'enroule.
 Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code pour modifier ces valeurs et voir l'évolution de l'ellipse&nbsp;:
 
 ```html live-sample___ellipse
