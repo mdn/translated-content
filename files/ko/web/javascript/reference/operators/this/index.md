@@ -130,7 +130,7 @@ console.log(getThis() === globalThis); // true
 
 #### 콜백
 
-함수가 콜백으로 전달될 때, `this`의 값은 콜백이 어떻게 호출되는지에 따라 달라집니다. 이 호출 방식은 API를 구현한 사람이 결정합니다. 콜백은 일반적으로 어떤 객체에도 붙이지 않고 직접 호출되므로, `this` 값이 `undefined`로 전달되는 경우가 많습니다. 즉, 함수가 비엄격 모드라면, `this`는 전역 객체({{jsxref("globalThis")}})를 가리키게 됩니다. 이러한 경우는 배열의 [반복 메서드(iterative array methods)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드), [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 생성자 등이 해당합니다.
+함수가 콜백으로 전달될 때, `this`의 값은 콜백이 어떻게 호출되는지에 따라 달라집니다. 이 호출 방식은 API를 구현한 사람이 결정합니다. 콜백은 일반적으로 어떤 객체에도 붙이지 않고 직접 호출되므로, `this` 값이 `undefined`로 전달되는 경우가 많습니다. 즉, 함수가 비엄격 모드라면, `this`는 전역 객체({{jsxref("globalThis")}})를 가리키게 됩니다. 이러한 경우는 [배열의 순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드), [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 생성자 등이 해당합니다.
 
 ```js
 function logThis() {
