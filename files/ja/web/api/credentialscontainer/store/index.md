@@ -39,7 +39,7 @@ store(credentials)
 
 このコードは、ユーザーがサインアップまたはログインした後、サーバーが資格情報を確認して正しいことを確認した後に実行されます。
 
-```js
+```js-nolint
 // ブラウザーがパスワード資格情報（および資格情報管理 API）に対応しているか調べる
 if ("PasswordCredential" in window) {
   let credential = new PasswordCredential({

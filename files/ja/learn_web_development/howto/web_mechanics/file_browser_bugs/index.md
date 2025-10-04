@@ -1,6 +1,7 @@
 ---
 title: ARIA に関するバグの報告方法
-slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+slug: Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+original_slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
 l10n:
   sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---

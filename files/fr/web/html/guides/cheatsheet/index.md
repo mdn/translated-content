@@ -1,12 +1,13 @@
 ---
-title: Cheatsheet HTML
+title: Fiche de synthèse HTML pour la syntaxe et les tâches courantes
+short-title: Fiche de synthèse
 slug: Web/HTML/Guides/Cheatsheet
 original_slug: Learn/HTML/Cheatsheet
+l10n:
+  sourceCommit: b9d130d2fcfcc37d57ec3b039ff7c3e7939d2e15
 ---
 
-{{LearnSidebar}}
-
-Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Reference/Elements) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn_web_development/Howto/Solve_HTML_problems). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
+Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Reference/Elements) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn_web_development/Core/Structuring_content). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
 
 > [!NOTE]
 > Les balises HTML doivent en premier lieu être utilisées pour leur sémantique et non pour leur apparence. Il est toujours possible de modifier la mise en forme d'une balise donnée grâce à {{Glossary("CSS")}}. Aussi, quand vous utilisez HTML, soyez concentré-e sur la signification plutôt que sur l'apparence finale.
@@ -16,6 +17,7 @@ Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et réca
 Un élément est une partie d'une page web. Certains éléments sont agissent comme des conteneurs&nbsp;: ils sont grands et contiennent de plus petits éléments. Certains éléments sont plus petits et sont imbriqués dans des éléments plus grands. Par défaut les éléments «&nbsp;en ligne&nbsp;» apparaissent les uns à côté des autres sur une page web. Ils prennent autant de largeur que nécessaire sur une page et s'organisent horizontalement à la façon des mots dans une phrase ou des livres dans une bibliothèque. Tous les éléments en ligne peuvent être placés à l'intérieur de l'élément `<body>`.
 
 <table class="standard-table">
+  <caption>Éléments en ligne&nbsp;: usage et exemples</caption>
   <thead>
     <tr>
       <th scope="col">Usage</th>
@@ -242,6 +244,9 @@ mais &#x3C;code>celui-ci représente du code&#x3C;/code>.</pre
 ## Éléments de bloc
 
 Les éléments de bloc, en revanche, occupent toutes la largeur de la page. Ils occupent une ligne entière et ne sont pas apposés les uns à côtés des autres. Ils s'empilent plutôt à l'instar des paragraphes dans un texte.
+
+> [!NOTE]
+> Parce que cette feuille de triche est limitée à quelques éléments représentant des structures spécifiques ou ayant une sémantique particulière, l'élément {{HTMLElement("div")}} n'est pas inclus intentionnellement — car l'élément `div` ne représente rien et n'a pas de sémantique particulière.
 
 <table class="standard-table">
   <thead>
