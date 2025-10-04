@@ -141,14 +141,14 @@ function logThis() {
 [1, 2, 3].forEach(logThis); // undefined, undefined, undefined
 ```
 
-일부 API에서는 콜백을 호출할 때 사용할 `this` 값을 설정할 수 있습니다. 예를 들어, 모든 배열 반복 메서드와 {{jsxref("Set.prototype.forEach()")}} 같은 관련 메서드는 선택적인 `thisArg` 매개변수를 받아 `this` 값을 지정할 수 있습니다.
+일부 API에서는 콜백을 호출할 때 사용할 `this` 값을 설정할 수 있습니다. 예를 들어, 모든 배열 순회 메서드와 {{jsxref("Set.prototype.forEach()")}} 같은 관련 메서드는 선택적인 `thisArg` 매개변수를 받아 `this` 값을 지정할 수 있습니다.
 
 ```js
 [1, 2, 3].forEach(logThis, { name: "obj" });
 // { name: 'obj' }, { name: 'obj' }, { name: 'obj' }
 ```
 
-때때로 콜백은 `undefined`가 아닌 다른 `this` 값과 함께 호출되기도 합니다. 예를 들어, {{jsxref("JSON.parse()")}}의 `reviver` 매개변수와 {{jsxref("JSON.stringify()")}}의 `replacer` 매개변수는 해당 속성이 속한 객체를 `this`로 설정한 상태에서 호출됩니다.
+때때로 콜백은 `undefined`가 아닌 다른 `this` 값과 함께 호출되기도 합니다. 예를 들어, {{jsxref("JSON.parse()")}}의 `reviver` 매개변수와 {{jsxref("JSON.stringify()")}}의 `replacer` 매개변수는 모두 파싱 혹은 직렬화 되는 해당 속성이 속한 객체를 `this`로 설정한 상태에서 호출됩니다.
 
 #### 화살표 함수
 
@@ -162,7 +162,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-화살표 함수는 주변 스코프의 `this` 값에 대한 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 생성합니다. 즉, 화살표 함수는 마치 "자동 바인딩"된 것처럼 동작합니다. 함수가 어떻게 호출되든, `this`는 함수가 생성될 때의 값에 고정됩니다. (위 예에서는 전역 객체) 같은 원리가 다른 함수 안에서 생성된 화살표 함수에도 적용됩니다. 이 경우에도 `this`는 외부 렉시컬 컨텍스트를 그대로 유지합니다. [아래 예시를 확인해보세요.](/ko/docs/Web/JavaScript/Reference/Operators/this#화살표_함수에서의_this)
+화살표 함수는 주변 스코프의 `this` 값에 대한 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 생성합니다. 즉, 화살표 함수는 마치 "자동 바인딩"된 것처럼 동작합니다. 함수가 어떻게 호출되든, `this`는 함수가 생성될 때의 값에 고정됩니다. (위 예에서는 전역 객체) 같은 원리가 다른 함수 안에서 생성된 화살표 함수에도 적용됩니다. 이 경우에도 `this`는 외부 렉시컬 컨텍스트를 그대로 유지합니다. [아래 예제를 확인해보세요](/ko/docs/Web/JavaScript/Reference/Operators/this#화살표_함수에서의_this).
 
 또한, 화살표 함수를 `call()`, `bind()`, `apply()`로 호출하더라도, `thisArg` 매개변수는 무시됩니다. 이때 다른 인수는 여전히 전달할 수 있습니다.
 
@@ -202,15 +202,13 @@ console.log(o.a); // 38
 
 #### super
 
-함수가 `super.method()` 형태로 호출될 때, 메서드 내부의 `this`는 `super.method()` 호출 주변의 `this` 값과 동일합니다. 대부분 이 `this` 값은 `super`가 참조하는 객체와 같지 않습니다. 이는 `super.method`가 위에서 설명한 일반 객체 멤버 접근과 달리, 특수한 문법이며 다른 바인딩 규칙을 가지기 때문입니다. 자세한 예시는 {{jsxref("Operators/super", "super()")}}를 참고하세요.
+함수가 `super.method()` 형태로 호출될 때, `method` 함수 내부의 `this`는 `super.method()` 호출 주변의 `this` 값과 동일합니다. 대부분 이 `this` 값은 `super`가 참조하는 객체와 같지 않습니다. 이는 `super.method`가 위에서 설명한 일반 객체 멤버 접근과 달리, 특수한 문법이며 다른 바인딩 규칙을 가지기 때문입니다. 자세한 예제는 [`super`에서 메서드 호출](/ko/docs/Web/JavaScript/Reference/Operators/super#super에서_메서드_호출)을 참고하세요.
 
 ### 클래스 컨텍스트
 
 [클래스](/ko/docs/Web/JavaScript/Reference/Classes)는 정적 컨텍스트와 인스턴스 컨텍스트 두 가지로 나눌 수 있습니다. [생성자](/ko/docs/Web/JavaScript/Reference/Classes/constructor), 메서드, 인스턴스 필드 초기화([public](/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields) 또는 [private](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements))는 인스턴스 컨텍스트에 속합니다. [정적 메서드](/ko/docs/Web/JavaScript/Reference/Classes/static), 정적 필드 초기화, [정적 초기화 블록](/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)은 정적 컨텍스트에 속합니다. 각 컨텍스트에서 `this`의 값은 서로 다릅니다.
 
-클래스 생성자는 항상 `new`와 함께 호출되므로, 동작은 일반 [함수 생성자](/ko/docs/Web/JavaScript/Reference/Operators/this#생성자)와 같습니다. `this` 값은 생성 중인 새로운 인스턴스를 가리킵니다.
-
-클래스 메서드는 객체 리터럴의 메서드처럼 동작합니다. `this` 값은 메서드가 접근된 객체입니다. 메서드가 다른 객체로 전달되지 않는 한, `this`는 일반적으로 클래스의 인스턴스입니다.
+클래스 생성자는 항상 `new`와 함께 호출되므로, 동작은 일반 [함수 생성자](/ko/docs/Web/JavaScript/Reference/Operators/this#생성자)와 같습니다. `this` 값은 생성 중인 새로운 인스턴스를 가리킵니다. 클래스 메서드는 객체 리터럴의 메서드처럼 동작합니다. `this` 값은 메서드가 접근된 객체입니다. 메서드가 다른 객체로 전달되지 않는 한, `this`는 일반적으로 클래스의 인스턴스입니다.
 
 정적 메서드는 `this`의 속성이 아니라 클래스 자체의 속성입니다. 따라서 일반적으로 클래스에서 접근하며, `this`는 클래스 자체(또는 서브클래스)를 가리킵니다. 정적 초기화 블록도 `this`가 현재 클래스로 설정된 상태에서 평가됩니다.
 
@@ -229,13 +227,14 @@ console.log(C.staticField === C); // true
 
 ### 파생 클래스 생성자
 
-부모 클래스 생성자와 달리, 파생 클래스(자식 클래스) 생성자에는 초기 `this` 바인딩이 없습니다. [`super()`](/ko/docs/Web/JavaScript/Reference/Operators/super)를 호출하면 생성자 안에서 `this` 바인딩이 생성되며, 사실상 아래 코드를 평가하는 것과 동일한 효과를 가집니다. (Base는 부모 클래스입니다.)
+부모 클래스 생성자와 달리, 파생 클래스(자식 클래스) 생성자에는 초기 `this` 바인딩이 없습니다. [`super()`](/ko/docs/Web/JavaScript/Reference/Operators/super)를 호출하면 생성자 안에서 `this` 바인딩이 생성되며, 사실상 아래 코드를 평가하는 것과 동일한 효과를 가집니다. (`Base`는 부모 클래스입니다.)
 
-```js
+```js-nolint
 this = new Base();
 ```
 
-> **경고:** `super()`를 호출하기 전에 참조하는 것은 에러를 발생시킵니다.
+> [!WARNING]
+> `super()`를 호출하기 전에 `this`를 참조하는 것은 에러를 발생시킵니다.
 
 파생 클래스의 생성자는 `super()`를 호출하기 전에 반환해서는 안 됩니다. 단, 생성자가 객체를 반환하여 `this` 값이 대체되거나, 클래스에 생성자가 아예 없는 경우는 예외입니다.
 
@@ -262,7 +261,8 @@ new Bad(); // ReferenceError: 파생 클래스에서는 this에 접근하거나 
 
 스크립트 최상위 수준에서는, 엄격 모드 여부와 상관없이 `this`는 항상 {{jsxref("globalThis")}}를 가리킵니다. 이는 일반적으로 전역 객체와 동일합니다. 예를 들어 HTML [`<script>`](/ko/docs/Web/HTML/Reference/Elements/script) 요소 안에서 스크립트를 실행하면 `this === window`가 됩니다.
 
-> **참고:** `globalThis`는 일반적으로 전역 객체와 동일한 개념입니다. 즉, `globalThis`에 프로퍼티를 추가하면 전역 변수가 됩니다. 브라우저와 Node.js에서는 이 규칙이 적용됩니다. 하지만 호스트 환경에 따라, 전역 객체와 관련 없는 다른 값을 `globalThis`로 제공할 수도 있습니다.
+> [!NOTE]
+> `globalThis`는 일반적으로 전역 객체와 동일한 개념입니다. 즉, `globalThis`에 프로퍼티를 추가하면 전역 변수가 됩니다. 브라우저와 Node.js에서는 이 규칙이 적용됩니다. 하지만 호스트 환경에 따라, 전역 객체와 관련 없는 다른 값을 `globalThis`로 제공할 수도 있습니다.
 
 ```js
 // 웹 브라우저에서는 window 객체가 전역 객체
@@ -273,7 +273,7 @@ console.log(window.b); // "MDN"
 console.log(b); // "MDN"
 ```
 
-소스가 [모듈](/ko/docs/Web/JavaScript/Guide/Modules)로 로드된 경우(HTML에서는 `<script>` 태그에 type="module"을 추가), 최상위 수준에서 `this`는 항상 `undefined`입니다.
+소스가 [모듈](/ko/docs/Web/JavaScript/Guide/Modules)로 로드된 경우(HTML에서는 `<script>` 태그에 `type="module"`을 추가), 최상위 수준에서 `this`는 항상 `undefined`입니다.
 
 소스가 [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)로 실행될 경우, [직접 eval](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval#direct_and_indirect_eval)에서는 `this`가 포함하고 있는 컨텍스트와 동일합니다. 간접 eval에서는 this가 `globalThis`와 동일하게 됩니다(마치 별도의 전역 스크립트에서 실행된 것처럼).
 
@@ -302,7 +302,7 @@ const obj = {
 console.log(obj.a === window); // true
 ```
 
-## 예시
+## 예제
 
 ### 함수 컨텍스트에서의 this
 
@@ -389,11 +389,7 @@ const obj = {
 };
 ```
 
-우리는 `getThisGetter`를 `obj`의 메서드로 호출할 수 있으며, 이 경우 함수 내부의 `this`는 `obj`에 바인딩됩니다.
-반환된 함수는 변수 `fn`에 할당됩니다.
-이제 `fn`을 호출하면, 반환되는 `this` 값은 여전히 `getThisGetter` 호출 시 설정된 `obj`으로 고정됩니다.
-만약 반환된 함수가 화살표 함수가 아니라면, 이러한 호출에서는 `this` 값이 `globalThis`가 됩니다.
-그 이유는 `getThisGetter`가 비엄격 함수이기 때문입니다.
+우리는 `getThisGetter`를 `obj`의 메서드로 호출할 수 있으며, 이 경우 함수 내부의 `this`는 `obj`에 바인딩됩니다. 반환된 함수는 변수 `fn`에 할당됩니다. 이제 `fn`을 호출하면, 반환되는 `this` 값은 여전히 `getThisGetter` 호출 시 설정된 `obj`으로 고정됩니다. 만약 반환된 함수가 화살표 함수가 아니라면, 이러한 호출에서는 `this` 값이 `globalThis`가 됩니다. 그 이유는 `getThisGetter`가 비엄격 함수이기 때문입니다.
 
 ```js
 const fn = obj.getThisGetter();
@@ -411,7 +407,7 @@ console.log(fn2()() === globalThis); // true in non-strict mode
 
 ### getter와 setter의 this
 
-`getter`와 `setter`에서의 `this`는 프로퍼티가 정의된 객체가 아니라, 해당 프로퍼티에 접근한 객체를 기준으로 결정됩니다. 즉, `getter`나 `setter`로 사용되는 함수의 `this`는 프로퍼티를 읽거나 쓰는 대상 객체에 바인딩됩니다.
+getter와 setter에서의 `this`는 프로퍼티가 정의된 객체가 아니라, 해당 프로퍼티에 접근한 객체를 기준으로 결정됩니다. 즉, getter나 setter로 사용되는 함수의 `this`는 프로퍼티를 읽거나 쓰는 대상 객체에 바인딩됩니다.
 
 ```js
 function sum() {
@@ -438,7 +434,7 @@ console.log(o.average, o.sum); // 2, 6
 
 ### DOM 이벤트 핸들러에서의 this
 
-함수가 이벤트 핸들러로 사용될 때, 그 함수의 `this`는 리스너가 등록된 DOM 요소에 바인딩됩니다. (단, 일부 브라우저에서는 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) 이외의 방법으로 동적으로 추가된 리스너에 대해서는 이 규칙을 따르지 않을 수 있습니다.)
+함수가 이벤트 핸들러로 사용될 때, 그 함수의 `this`는 리스너가 등록된 DOM 요소에 바인딩됩니다. (단, 일부 브라우저에서는 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 이외의 방법으로 동적으로 추가된 리스너에 대해서는 이 규칙을 따르지 않을 수 있습니다.)
 
 ```js
 // 리스너로 호출하면 관련 객체를 파란색으로 바꿈
@@ -521,15 +517,15 @@ bird.sayBye = car.sayBye;
 bird.sayBye(); // Bye from Ferrari
 ```
 
-> **참고:** 클래스는 항상 엄격모드에서 동작합니다. 따라서 메서드가 `undefined`인 `this`로 호출되면, 그 메서드가 `this`의 프로퍼티에 접근하려는 순간 오류가 발생합니다.
+> [!NOTE]
+> 클래스는 항상 엄격모드에서 동작합니다. 따라서 메서드가 `undefined`인 `this`로 호출되면, 그 메서드가 `this`의 프로퍼티에 접근하려는 순간 오류가 발생합니다.
 >
 > ```js example-bad
 > const carSayHi = car.sayHi;
 > carSayHi(); // TypeError가 발생합니다. 엄격모드에서 this는 undefined이고, sayHi 메서드가 this.name에 접근하려고 하기 때문입니다.
 > ```
 
-하지만 주의해야 할 점은, 자동으로 바인딩된 메서드는 클래스 속성으로 [화살표 함수를 사용할 때와 같은 문제가 있다는 것입니다.](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions#메서드로_사용할_수_없습니다)
-즉, 클래스의 각 인스턴스가 메서드의 자기 복사본을 가지게 되므로 메모리 사용량이 증가합니다. 따라서 반드시 필요한 경우에만 사용해야 합니다. 또 하나의 방법으로는 [`Intl.NumberFormat.prototype.format()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format#map과_함께_format_사용하기)의 구현 방식을 흉내 낼 수 있습니다. 즉, 프로퍼티를 getter로 정의하여 접근할 때 바인딩된 함수를 반환하고 저장하도록 하면, 그 함수는 단 한 번만 생성되고, 필요할 때만 생성되게 할 수 있습니다.
+하지만 주의해야 할 점은, 자동으로 바인딩된 메서드는 클래스 속성으로 [화살표 함수를 사용할 때와 같은 문제가 있다는 것입니다](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions#메서드로_사용할_수_없습니다). 즉, 클래스의 각 인스턴스가 메서드의 자기 복사본을 가지게 되므로 메모리 사용량이 증가합니다. 따라서 반드시 필요한 경우에만 사용해야 합니다. 또 하나의 방법으로는 [`Intl.NumberFormat.prototype.format()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format#map과_함께_format_사용하기)의 구현 방식을 흉내 낼 수 있습니다. 즉, 프로퍼티를 getter로 정의하여 접근할 때 바인딩된 함수를 반환하고 저장하도록 하면, 그 함수는 단 한 번만 생성되고, 필요할 때만 생성되게 할 수 있습니다.
 
 ### with 구문에서의 this
 
