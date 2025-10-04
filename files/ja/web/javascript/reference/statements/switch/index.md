@@ -2,14 +2,12 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 l10n:
-  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Statements")}}
 
 **`switch`** 文は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)を評価して、一連の `case` 節に対してその式の値を照合し、最初に値が一致した `case` 節の後の[文](/ja/docs/Web/JavaScript/Reference/Statements)を、`break` 文に出会うまで実行します。一致した `case` の後にある文も同様に実行します。`switch` 文の `default` 節には、 `case` が式の値と一致しない場合にジャンプします。
 
-{{InteractiveExample("JavaScript デモ: Statement - Switch", "taller")}}
+{{InteractiveExample("JavaScript デモ: switch 文", "taller")}}
 
 ```js interactive-example
 const expr = "Papayas";
@@ -20,7 +18,7 @@ switch (expr) {
   case "Mangoes":
   case "Papayas":
     console.log("Mangoes and papayas are $2.79 a pound.");
-    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    // 予想される結果: "Mangoes and papayas are $2.79 a pound."
     break;
   default:
     console.log(`Sorry, we are out of ${expr}.`);
