@@ -114,7 +114,7 @@ Les deux versions sont genrées. Pour corriger, utilisez des pronoms neutres&nbs
 
 Une autre option consiste à mettre les utilisateur·ice·s au pluriel&nbsp;:
 
-- **Correct**&nbsp;: «&nbsp;Une boîte de dialogue de confirmation demande aux utilisateur·ice·s s'iels souhaitent autoriser la page à utiliser leurs webcams.&nbsp;»
+- **Correct**&nbsp;: «&nbsp;Une boîte de dialogue de confirmation demande aux utilisateur·ice·s s'il·elle·s souhaitent autoriser la page à utiliser leurs webcams.&nbsp;»
 
 La meilleure solution reste de réécrire pour éliminer les pronoms&nbsp;:
 
@@ -167,7 +167,7 @@ La liste de contrôle suivante est utile lors de la rédaction et de la relectur
 
   Il est donc important de s'assurer que chaque page a son propre contenu. Les suggestions suivantes peuvent aider&nbsp;:
   - **Expliquez davantage de notions distinctives**&nbsp;: Cherchez des cas d'usage où il pourrait y avoir plus de différences qu'on ne le pense. Par exemple, pour `width` et `height`, parlez des différences d'usage de l'espace horizontal et vertical, et proposez une discussion adaptée. Vous pouvez mentionner par exemple l'usage de `width` pour faire de la place à une barre latérale, tandis que `height` gère le défilement vertical ou les pieds de page. Inclure des informations d'accessibilité est aussi utile et important.
-  - **Utilisez des exemples différents**&nbsp;: Les exemples sont souvent encore plus similaires que le corps du texte car ils peuvent utiliser plusieurs des mêmes méthodes ou propriétés. Écrivez donc un nouvel exemple, ou fournissez-en plusieurs, dont au moins certains différents.
+  - **Utilisez des exemples différents**&nbsp;: Les exemples sont souvent encore plus similaires que le corps du texte, car ils peuvent utiliser plusieurs des mêmes méthodes ou propriétés. Écrivez donc un nouvel exemple, ou fournissez-en plusieurs, dont au moins certains différents.
   - **Ajoutez des descriptions pour les exemples**&nbsp;: Incluez un aperçu de ce que fait l'exemple ainsi qu'une explication de son fonctionnement, avec un niveau de détail adapté au sujet et au public cible.
 
   La façon la plus simple d'éviter une trop grande similarité est d'écrire chaque article à partir de zéro si le temps le permet.
@@ -182,7 +182,7 @@ La liste de contrôle suivante est utile lors de la rédaction et de la relectur
   - **Ajoutez des exemples**&nbsp;: Il devrait y avoir des exemples couvrant tous les paramètres ou au moins ceux que les personnes débutantes à intermédiaires utiliseront, ainsi que ceux avancés qui demandent des explications supplémentaires. Chaque exemple doit être précédé d'un aperçu de ce qu'il fait, des connaissances nécessaires, etc. Après l'exemple (ou entre des parties), ajoutez du texte expliquant le fonctionnement du code. Ne négligez pas les détails ni la gestion des erreurs. Gardez à l'esprit que les utilisateur·ice·s copieront vos exemples et que votre code finira en production.
     Voir nos [recommandations pour les exemples de code](/fr/docs/MDN/Writing_guidelines/Code_style_guide) pour plus d'informations.
   - **Expliquez les cas d'usage**&nbsp;: S'il existe des cas d'usage fréquents pour la fonctionnalité décrite, parlez-en. Au lieu de supposer qu'une personne déduira qu'une méthode peut résoudre un problème courant, ajoutez une section avec un exemple et une explication.
-  - **Ajoutez des informations sur les images**&nbsp;: Incluez un texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) approprié sur toutes les images et schémas. Ce texte, ainsi que les légendes, comptent car les robots d'indexation ne lisent pas les images, donc le texte `alt` leur décrit le contenu.
+  - **Ajoutez des informations sur les images**&nbsp;: Incluez un texte [`alt`](/fr/docs/Web/HTML/Reference/Elements/img#alt) approprié sur toutes les images et schémas. Ce texte, ainsi que les légendes, comptent, car les robots d'indexation ne lisent pas les images, donc le texte `alt` leur décrit le contenu.
 
     > [!NOTE]
     > Il n'est pas recommandé d'ajouter trop de mots-clés ni des mots-clés non liés au sujet pour tenter d'améliorer le classement. Ce type de comportement est repéré et souvent pénalisé.
@@ -211,8 +211,8 @@ Outre des phrases grammaticalement correctes en français, nous recommandons de 
 Une abréviation est une version raccourcie d'un mot plus long, tandis qu'un acronyme est un nouveau mot créé à partir des premières lettres d'une expression. Cette section décrit les règles pour les abréviations et acronymes.
 
 - **Développements**&nbsp;: À la première mention d'un terme sur une page, développez les acronymes susceptibles d'être inconnus. En cas de doute, développez. Mieux encore, liez l'article ou l'entrée du [glossaire](/fr/docs/Glossary) qui décrit la technologie.
-  - **Correct**&nbsp;: «&nbsp;XUL (XML User Interface Language) est le langage XML de Mozilla...&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;XUL est le langage XML de Mozilla...&nbsp;»
+  - **Correct**&nbsp;: «&nbsp;XUL (XML User Interface Language) est le langage XML de Mozilla…&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;XUL est le langage XML de Mozilla…&nbsp;»
 
 - **Capitalisation et points**&nbsp;: Utilisez des majuscules complètes et supprimez les points dans toutes les abréviations et acronymes, y compris pour des organisations comme «&nbsp;US&nbsp;» et «&nbsp;UN&nbsp;».
   - **Correct**&nbsp;: XUL
@@ -221,18 +221,18 @@ Une abréviation est une version raccourcie d'un mot plus long, tandis qu'un acr
 - **Abréviations latines**&nbsp;: Vous pouvez utiliser des abréviations latines courantes (etc., c-à-d., ex&nbsp;:) dans des parenthèses et des notes. Utilisez des points dans ces abréviations, suivis d'une virgule ou de la ponctuation adéquate.
 
   <!-- markdownlint-disable search-replace -->
-  - **Correct**&nbsp;: «&nbsp;Les navigateurs (ex&nbsp;: Firefox) peuvent être utilisés ...&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs ex Firefox peuvent être utilisés ...&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs, ex. Firefox, peuvent être utilisés ...&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs, (ex: Firefox) peuvent être utilisés ...&nbsp;»
+  - **Correct**&nbsp;: «&nbsp;Les navigateurs (ex&nbsp;: Firefox) peuvent être utilisés…&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs ex Firefox peuvent être utilisés…&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs, ex. Firefox, peuvent être utilisés…&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs, (ex: Firefox) peuvent être utilisés…&nbsp;»
   <!-- markdownlint-enable search-replace -->
 
   Dans le texte normal (c'est-à-dire hors notes ou parenthèses), utilisez l'équivalent en toutes lettres en français.
-  - **Correct**&nbsp;: «&nbsp;... navigateurs web, et cetera.&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;... navigateurs web, etc.&nbsp;»
+  - **Correct**&nbsp;: «&nbsp;… navigateurs web, et cetera.&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;… navigateurs web, etc.&nbsp;»
 
-  - **Correct**&nbsp;: «&nbsp;Les navigateurs web tels que Firefox peuvent être utilisés ...&nbsp;»
-  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs web ex, Firefox peuvent être utilisés ...&nbsp;»
+  - **Correct**&nbsp;: «&nbsp;Les navigateurs web tels que Firefox peuvent être utilisés…&nbsp;»
+  - **Incorrect**&nbsp;: «&nbsp;Les navigateurs web ex, Firefox peuvent être utilisés…&nbsp;»
 
   Le tableau suivant résume les significations et équivalents français des abréviations latines&nbsp;:
 
@@ -284,7 +284,7 @@ Certains mots doivent toujours être capitalisés, comme les marques qui incluen
 
 Certains outils et projets ont leur capitalisation de marque. Cela peut être tout en minuscules («&nbsp;npm&nbsp;» ou «&nbsp;webpack&nbsp;»), tout en majuscules («&nbsp;UNIX&nbsp;», «&nbsp;GNOME&nbsp;», «&nbsp;VIM&nbsp;») ou en casse mixte («&nbsp;TypeScript&nbsp;», «&nbsp;macOS&nbsp;», «&nbsp;jQuery&nbsp;»).
 
-La capitalisation officielle du site ou de la documentation doit toujours être respectée, même en début de phrase. Si vous n'aimez pas commencer par une minuscule, reformulez. Par exemple&nbsp;: «&nbsp;Vous pouvez utiliser le gestionnaire de paquets npm pour...&nbsp;» plutôt que «&nbsp;npm permet de...&nbsp;».
+La capitalisation officielle du site ou de la documentation doit toujours être respectée, même en début de phrase. Si vous n'aimez pas commencer par une minuscule, reformulez. Par exemple&nbsp;: «&nbsp;Vous pouvez utiliser le gestionnaire de paquets npm pour…&nbsp;» plutôt que «&nbsp;npm permet de…&nbsp;».
 
 ### Contractions
 
@@ -296,7 +296,7 @@ Notre style rédactionnel a tendance à être informel, donc vous pouvez utilise
   - **Correct**&nbsp;: 4000&nbsp;; 54 000
   - **Incorrect**&nbsp;: 4,000&nbsp;; 54000
 
-- **Dates**&nbsp;: Pour les dates (hors échantillons de code), utilisez le format «&nbsp;1er Janvier 1900&nbsp;».
+- **Dates**&nbsp;: Pour les dates (hors échantillons de code), utilisez le format «&nbsp;1<sup>er</sup> Janvier 1900&nbsp;».
   - **Correct**&nbsp;: 24 février 1906
   - **Incorrect**&nbsp;: February 24th, 1906&nbsp;; 24 February, 1906&nbsp;; 24/02/1906
 
@@ -319,8 +319,8 @@ Utilisez les pluriels français, pas les formes influencées par le latin ou le 
 
 N'utilisez pas de guillemets ou d'apostrophes «&nbsp;courbes&nbsp;». Sur MDN Web Docs, utilisez uniquement des guillemets droits et des apostrophes droites. En effet, nous devons choisir une seule forme pour la cohérence. Si des caractères courbes se glissent dans des extraits de code, même en ligne, des personnes pourraient les copier en pensant qu'ils fonctionnent, ce qui n'est pas le cas.
 
-- **Correct**&nbsp;: Please don't use "curly quotes."
-- **Incorrect**&nbsp;: Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
+- **Correct**&nbsp;: N'utilisez pas les «&nbsp;apostrophes courbes&nbsp;».
+- **Incorrect**&nbsp;: N&rsquo;utilisez pas les &ldquo;apostrophes courbes.&rdquo;
 
 ### Virgules
 
@@ -348,7 +348,7 @@ La liste suivante décrit des situations courantes où il faut connaître les r�
   Utilisez une virgule avant «&nbsp;mais&nbsp;» si elles relient deux propositions indépendantes. Si la phrase devient trop longue ou complexe, envisagez de la scinder.
   - Exemple 1&nbsp;:
     - **Correct**&nbsp;: «&nbsp;Vous pouvez effectuer cette étape, mais vous devez faire attention au paramètre du fichier.&nbsp;»
-    - **Incorrect**&nbsp;: «&nbsp;Vous pouvez effectuer cette étape mais vous devez faire attention au paramètre du fichier.&nbsp;»
+    - **Incorrect**&nbsp;: «&nbsp;Vous pouvez effectuer cette étape, mais vous devez faire attention au paramètre du fichier.&nbsp;»
   - Exemple 2&nbsp;:
     - **Correct**&nbsp;: «&nbsp;Mon père est strict mais affectueux.&nbsp;»
     - **Incorrect**&nbsp;: «&nbsp;Mon père est strict, mais affectueux.&nbsp;»
@@ -380,7 +380,7 @@ Les mots composés ne doivent être traités avec un trait d'union que lorsque l
 
 Utilisez l'orthographe du français moderne.
 
-De manière générale, utilisez la première entrée du [Dictionnaire de l'Académie française](https://www.dictionnaire-academie.fr/), sauf si cette entrée est une variante ou est principalement utilisée dans une autre forme du français. Par exemple, si vous [recherchez «&nbsp;événement&nbsp;»](<https://www.dictionnaire-academie.fr/article/A9E3137*>), vous trouverez la mention «&nbsp;événement&nbsp;» comme forme principale, et «&nbsp;évènement&nbsp;» comme variante admise mais moins courante.
+De manière générale, utilisez la première entrée du [Dictionnaire de l'Académie française](https://www.dictionnaire-academie.fr/), sauf si cette entrée est une variante ou est principalement utilisée dans une autre forme du français. Par exemple, si vous [recherchez «&nbsp;événement&nbsp;»](https://www.dictionnaire-academie.fr/article/A9E3137*), vous trouverez la mention «&nbsp;événement&nbsp;» comme forme principale, et «&nbsp;évènement&nbsp;» comme variante admise mais moins courante.
 N'utilisez pas les variantes orthographiques non recommandées.
 
 <!-- cSpell:ignore évènement -->
@@ -411,7 +411,7 @@ Voici nos recommandations pour certains termes techniques&nbsp;:
   - **Avec accents graves**&nbsp;: `<span>`
   - **Avec la macro**&nbsp;: {{HTMLElement("span")}}
 
-- **Paramètres vs. arguments**&nbsp;: Le terme préféré sur MDN Web Docs est **parameters**. Évitez «&nbsp;arguments&nbsp;» pour la cohérence quand c'est possible.
+- **Paramètres vs. arguments**&nbsp;: Le terme préféré sur MDN Web Docs est **paramètres**. Évitez «&nbsp;arguments&nbsp;» pour la cohérence quand c'est possible.
 
 - **Actions d'interface**&nbsp;: Dans des séquences de tâches, décrivez les actions avec l'impératif. Identifiez l'élément d'interface par son libellé et son type.
   - **Correct**&nbsp;: «&nbsp;Cliquez sur le bouton Modifier.&nbsp;»
@@ -443,7 +443,7 @@ Cette section liste les lignes directrices à suivre pour différentes parties d
 Une page MDN Web Docs peut contenir plusieurs exemples de code. Les recommandations suivantes s'appliquent à l'écriture d'exemples&nbsp;:
 
 - Chaque extrait devrait inclure&nbsp;:
-  - **Titre**&nbsp;: Un court titre `###` (`<h3>`) décrivant le scénario démontré par l'exemple. Par exemple, «&nbsp;Using offset printing&nbsp;» et «&nbsp;Reverting to style in previous layer&nbsp;».
+  - **Titre**&nbsp;: Un court titre `###` (`<h3>`) décrivant le scénario démontré par l'exemple. Par exemple, «&nbsp;Utilisation de l'impression offset&nbsp;» et «&nbsp;Revenir au style du calque précédent&nbsp;».
   - **Description**&nbsp;: Une brève description avant le code qui précise ce sur quoi attirer l'attention. Par exemple, «&nbsp;Dans l'exemple suivant, deux couches de cascade sont définies en CSS, `base` et `special`.&nbsp;»
   - **Explication du résultat**&nbsp;: Une explication après le code qui décrit le résultat et le fonctionnement.
 - En général, l'exemple doit non seulement montrer la syntaxe et l'usage de la fonctionnalité, mais aussi mettre en avant l'objectif et les situations où une personne développeuse voudrait ou devrait l'utiliser.
@@ -525,7 +525,7 @@ N'utilisez pas de liens créés via des raccourcisseurs tiers ouverts. Par exemp
 Quand un nouveau paragraphe ouvre une nouvelle section, ajoutez un titre.
 Utilisez les niveaux de titre Markdown sans en sauter&nbsp;: `##`, puis `###`, puis `####`, qui correspondent aux balises HTML [de titres](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) `<h2>`, `<h3>`, et `<h4>`.
 
-`##` est le plus haut niveau autorisé car `#` est réservé au titre de page.
+`##` est le plus haut niveau autorisé, car `#` est réservé au titre de page.
 Nous recommandons de ne pas dépasser trois niveaux. Si vous pensez avoir besoin d'un quatrième niveau, envisagez de scinder l'article. Vous pouvez aussi présenter l'information sous forme de points pour éviter un niveau quatre.
 
 Gardez à l'esprit les recommandations suivantes lors de la création de sous-titres&nbsp;:
@@ -565,7 +565,7 @@ Selon le type de liste, adaptez l'écriture comme décrit ci-dessous. Dans les d
 
   Si des éléments sont des phrases incomplètes, aucun point n'est requis à la fin. Par exemple&nbsp;:
 
-  > Les propriétés liées à la couleur utiles dans ce scénario sont&nbsp;:
+  > Les propriétés, liées à la couleur, utiles dans ce scénario sont&nbsp;:
   >
   > - propriétéA&nbsp;: Définit la couleur d'arrière-plan
   > - propriétéB&nbsp;: Ajoute une ombre au texte
@@ -697,6 +697,7 @@ Pour améliorer vos compétences en rédaction et en édition, les ressources su
 - En français&nbsp;:
   - [Dictionnaire de l'Académie française](https://www.dictionnaire-academie.fr/) sur dictionnaire-academie.fr
   - [Dire, Ne pas dire](https://www.academie-francaise.fr/dire-ne-pas-dire) sur academie-francaise.fr
+  - [Grammarlecte, un outil de correction grammaticale et orthographique pour Firefox](https://addons.mozilla.org/fr/firefox/addon/grammalecte-fr/)
 - En anglais&nbsp;:
   - [Erreurs courantes en anglais <sup>(angl.)</sup>](https://brians.wsu.edu/common-errors-in-english-usage/) sur brians.wsu.edu
   - [FAQ grammaire anglaise <sup>(angl.)</sup>](https://websites.umich.edu/~jlawler/aue.html) sur alt-usage-english.org
