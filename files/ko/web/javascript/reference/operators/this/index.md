@@ -126,7 +126,7 @@ console.log(typeof (1).getThis()); // "object"
 console.log(getThis() === globalThis); // true
 ```
 
-일반적인 함수 호출에서는 `this`가 함수의 접두사(점(.) 앞의 부분)를 통해 매개변수처럼 암묵적으로 전달됩니다. 또한 {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}}, {{jsxref("Reflect.apply()")}} 메서드를 사용하여 `this` 값을 명시적으로 설정할 수도 있습니다. {{jsxref("Function.prototype.bind()")}}를 사용하면, 함수가 어떻게 호출되든 변하지 않는 특정 `this` 값을 가진 새 함수를 생성할 수 있습니다. 이때, 함수가 비엄격 모드라면 앞서 설명한 this 치환(this substitution) 규칙이 여전히 적용됩니다.
+일반적인 함수 호출에서는 `this`가 함수의 접두사(점(.) 앞의 부분)를 통해 매개변수처럼 암묵적으로 전달됩니다. 또한 {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}}, {{jsxref("Reflect.apply()")}} 메서드를 사용하여 `this` 값을 명시적으로 설정할 수도 있습니다. {{jsxref("Function.prototype.bind()")}}를 사용하면, 함수가 어떻게 호출되든 변하지 않는 특정 `this` 값을 가진 새 함수를 생성할 수 있습니다. 이때, 함수가 비엄격 모드라면 앞서 설명한 `this` 치환 규칙이 여전히 적용됩니다.
 
 #### 콜백
 
