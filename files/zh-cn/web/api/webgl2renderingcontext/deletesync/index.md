@@ -1,6 +1,6 @@
 ---
 title: WebGL2RenderingContext：deleteSync() 方法
-slug: Web/API/WebGL2RenderingContext/deletesync
+slug: Web/API/WebGL2RenderingContext/deleteSync
 l10n:
   sourceCommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
 ---
