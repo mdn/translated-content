@@ -154,7 +154,7 @@ function logThis() {
 
 화살표 함수에서는 `this`가 외부 렉시컬 컨텍스트의 `this` 값을 유지합니다. 다시 말해, 화살표 함수의 본문을 평가할 때, 자바스크립트는 새로운 `this` 바인딩을 생성하지 않습니다.
 
-예를 들어, 전역 코드에서는 전역 컨텍스트 바인딩 때문에, 엄격 모드 여부와 상관없이 `this`는 항상 `globalThis`가 됩니다.
+예를 들어, 전역 코드에서는 [전역 컨텍스트](#전역_컨텍스트) 바인딩 때문에, 엄격 모드 여부와 상관없이 `this`는 항상 `globalThis`가 됩니다.
 
 ```js
 const globalObject = this;
@@ -290,7 +290,7 @@ function test() {
 test.call({ name: "obj" }); // Logs 3 "true"
 ```
 
-일부 소스 코드는 겉보기에는 전역 스코프처럼 보이지만, 실제로는 실행될 때 함수 안에 감싸져 있습니다. 예를 들어, Node.js의 CommonJS 모듈은 함수로 감싸져 실행되며, 이때 `this` 값은 `module.exports`로 설정됩니다. [이벤트 핸들러](/ko/docs/Web/JavaScript/Reference/Operators/this#인라인_이벤트_핸들러에서_this) 속성도 실행될 때 `this`가 해당 속성이 붙은 요소를 가리키도록 설정됩니다.
+일부 소스 코드는 겉보기에는 전역 스코프처럼 보이지만, 실제로는 실행될 때 함수 안에 감싸져 있습니다. 예를 들어, Node.js의 CommonJS 모듈은 함수로 감싸져 실행되며, 이때 `this` 값은 `module.exports`로 설정됩니다. [이벤트 핸들러 속성](/ko/docs/Web/JavaScript/Reference/Operators/this#인라인_이벤트_핸들러에서_this)도 실행될 때 `this`가 해당 속성이 붙은 요소를 가리키도록 설정됩니다.
 
 객체 리터럴 자체는 `this` 스코프를 생성하지 않습니다. 오직 객체 안에 정의된 함수(메서드)만 가집니다. 따라서 객체 리터럴 내에서 `this`를 사용하면, 주변 스코프에서 상속된 값을 참조하게 됩니다.
 
@@ -403,7 +403,7 @@ const fn2 = obj.getThisGetter;
 console.log(fn2()() === globalThis); // true in non-strict mode
 ```
 
-이러한 동작 방식은 콜백 함수를 정의할 때 매우 유용합니다. 일반적으로 각 함수 표현식은 자신만의 `this` 바인딩을 생성하며, 상위 스코프의 `this` 값을 가립니다. 하지만 화살표 함수를 사용하면, `this `값에 신경 쓰지 않아도 되고, 실제로 `this`가 필요한 경우에만 (예: 클래스 메서드 안) 바인딩을 생성하면 됩니다. [`setTimeout()` 예제를 참고하세요.](/ko/docs/Web/API/Window/setTimeout#this_문제)
+이러한 동작 방식은 콜백 함수를 정의할 때 매우 유용합니다. 일반적으로 각 함수 표현식은 자신만의 `this` 바인딩을 생성하며, 상위 스코프의 `this` 값을 가립니다. 하지만 화살표 함수를 사용하면, `this` 값에 신경 쓰지 않아도 되고, 실제로 `this`가 필요한 경우에만 (예: 클래스 메서드 안) 바인딩을 생성하면 됩니다. [`setTimeout()` 예제를 참고하세요.](/ko/docs/Web/API/Window/setTimeout#this_문제)
 
 ### getter와 setter의 this
 
