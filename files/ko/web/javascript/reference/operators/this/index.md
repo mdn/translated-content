@@ -112,8 +112,8 @@ console.log(typeof getThisStrict()); // "undefined"
 
 비엄격 모드에서는 [`this` 치환(this substitution)](/ko/docs/Web/JavaScript/Reference/Strict_mode#javascript_보안)이라는 특별한 과정이 있어 `this`의 값이 항상 객체가 되도록 보장됩니다.
 
-- 함수가 `this`가 `undefined`나 `null`로 설정된 상태에서 호출되면, `this`는 {{jsxref("globalThis")}}로 치환됩니다.
-- 함수가 `this`가 원시 값으로 설정된 상태에서 호출되면, `this`는 해당 원시 값의 래퍼 객체로 치환됩니다.
+- 함수의 `this`가 `undefined`나 `null`로 설정된 상태에서 호출되면, `this`는 {{jsxref("globalThis")}}로 치환됩니다.
+- 함수의 `this`가 원시 값으로 설정된 상태에서 호출되면, `this`는 해당 원시 값의 래퍼 객체로 치환됩니다.
 
 ```js
 function getThis() {
