@@ -28,7 +28,7 @@ Bienvenue sur MDN **Apprendre le développement web** (aussi appelé **Apprendre
 - Au-delà des bases&nbsp;?
   - : Nos [modules d'extension](/fr/docs/Learn_web_development/Extensions) couvrent des compétences supplémentaires utiles à acquérir au fur et à mesure que vous élargissez vos connaissances et développez des spécialisations. Passez à ceux-ci après avoir terminé nos modules de base.
 - Vous travaillez dans un établissement scolaire&nbsp;?
-  - : Utilisez nos modules pour guider votre enseignement, consultez notre [page Enseignant·e·s](/fr/docs/Learn_web_development/Educators) pour plus d'idées, ou inscrivez vos étudiant·e·s au [Frontend Developer Career Path de Scrimba <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>.
+  - : Utilisez nos modules pour guider votre enseignement, consultez notre [page Enseignant·e·s](/fr/docs/Learn_web_development/Educators) pour plus d'idées, ou inscrivez vos étudiant·e·s au [Frontend Developer Career Path de Scrimba <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>.
 
 ## Testez vos compétences
 
@@ -61,7 +61,7 @@ Si vous souhaitez contribuer à l'amélioration du contenu, consultez [comment v
 
 ## Voir aussi
 
-- [Le parcours professionnel d'un développeur front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Le parcours professionnel d'un développeur front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
   - : [Scrimba <sup>(angl.)</sup>](https://scrimba.com?via=mdn) Le _Parcours professionnel d'un développeur front-end_ enseigne tout ce qu'il faut savoir pour devenir un·e développeur·euse front-end compétent·e, avec des leçons interactives ludiques, des défis, des enseignant·e·s expérimenté·e·s et une communauté bienveillante. Passez de zéro à votre premier emploi front-end&nbsp;! De nombreux modules du cours sont disponibles gratuitement en version autonome.
 - [Codecademy <sup>(angl.)</sup>](https://www.codecademy.com/)
   - : Un excellent site interactif pour apprendre les langages de programmation depuis le début.
