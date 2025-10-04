@@ -3852,7 +3852,7 @@
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-level	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-live	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline
-/ja/docs/Web/Accessibility/ARIA/How_to	/ja/docs/orphaned/Web/Accessibility/ARIA/How_to
+/ja/docs/Web/Accessibility/ARIA/How_to	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/ja/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /ja/docs/Web/Accessibility/ARIA/Multipart_labels	/ja/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /ja/docs/Web/Accessibility/ARIA/Roles	/ja/docs/Web/Accessibility/ARIA/Reference/Roles
