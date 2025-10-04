@@ -25,9 +25,7 @@ Les fonctions récursives doivent faire attention aux structures de données cir
 
 ```js
 // Appeler un callback sur ce qui est stocké dans un objet
-function execRecursively(fn, subject, _refs = null) {
-  if (!_refs) _refs = new WeakSet();
-
+function execRecursively(fn, subject, _refs = new WeakSet() ) {
   // On évite une récursion infinie
   if (_refs.has(subject)) return;
 
