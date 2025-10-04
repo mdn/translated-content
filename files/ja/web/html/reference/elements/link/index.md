@@ -1,12 +1,9 @@
 ---
 title: "<link>: 外部リソースへのリンク要素"
 slug: Web/HTML/Reference/Elements/link
-original_slug: Web/HTML/Element/link
 l10n:
-  sourceCommit: e651c702e7a16093ca5a615f74fde1d9ef234508
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
-
-{{HTMLSidebar}}
 
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
 この要素は{{Glossary("CSS", "スタイルシート")}}へのリンクに最もよく使用されますが、サイトのアイコン（"favicon" スタイルのアイコンと、モバイル端末のホーム画面やアプリのアイコンの両方）の確立や、その他のことにも使用されます。
@@ -16,9 +13,9 @@ l10n:
 ```html interactive-example
 <link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
 
-<p>This text will be red as defined in the external stylesheet.</p>
+<p>このテキストは外部スタイルシートで定義されている通り赤になります。</p>
 <p style="color: blue">
-  The <code>style</code> attribute can override it, though.
+  ただし <code>style</code> 属性で上書きすることは可能です。
 </p>
 ```
 
@@ -28,7 +25,7 @@ l10n:
 <link href="main.css" rel="stylesheet" />
 ```
 
-この単純な例では、`href` 属性内にスタイルシートへのパスを提供し、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性の値を `stylesheet` にしています。`rel` は "relationship" を意味し、おそらく `<link>` 要素の重要な機能の一つです。 — 値はこれを含んでいる文書にどのように関係するかを示します。
+この例では、`href` 属性内にスタイルシートへのパスを提供し、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性の値を `stylesheet` にしています。`rel` は "relationship" を意味し、`<link>` 要素の重要な機能の一つです。 — 値はこれを含んでいる文書にどのように関係するかを示します。
 
 他にも見かけるであろう他の一般的な種別はたくさんあります。例えば、サイトのファビコンへのリンクがあります。
 
@@ -52,10 +49,7 @@ l10n:
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
-<link
-  href="mobile.css"
-  rel="stylesheet"
-  media="screen and (max-width: 600px)" />
+<link href="mobile.css" rel="stylesheet" media="screen and (width <= 600px)" />
 ```
 
 `<link>` 要素には、興味深いパフォーマンスやセキュリティの機能もいくつか追加されています。以下の例を見てみましょう。
@@ -75,7 +69,8 @@ l10n:
 その他の使い方のメモです。
 
 - `<link>` 要素は[リンク種別](https://html.spec.whatwg.org/multipage/links.html#body-ok)が **body-ok** であるかどうかによって、 {{HTMLElement("head")}} 要素または {{HTMLElement("body")}} 要素のどちらかに置くことができます。例えば `stylesheet` リンク種別は body-ok であり、`<link rel="stylesheet">` を body 要素内に置くことができます。しかし、これは従うべき良い方法ではありません。 `<link>` 要素は `<head>` に入れて本文から離した方が分かりやすくなります。
-- サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
+- サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。
+  ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
 - HTML および XHTML の仕様では `<link>` 要素向けのイベントハンドラーを定義していますが、それらがどのように使用されるかは不明確です。
 - XHTML 1.0 では `<link>` のような{{glossary("void element", "空要素")}}では、 `<link />` のように末尾のスラッシュが必要です。
 - WebTV は `rel` に `next` の値を使用して、一連の文書の次のページを先読みすることに対応しています。
@@ -116,7 +111,7 @@ l10n:
             <p>fetch, XHR</p>
             <div class="notecard note">
               <p>
-                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Reference/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
+                <strong>メモ:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Reference/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
               </p>
             </div>
           </td>
@@ -127,7 +122,7 @@ l10n:
             <p>CSS @font-face</p>
             <div class="notecard note">
               <p>
-                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Reference/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
+                <strong>メモ:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Reference/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
               </p>
             </div>
           </td>
@@ -170,19 +165,22 @@ l10n:
       </tbody>
     </table>
 
-- `blocking` {{Experimental_Inline}}
-  - : この属性は、外部リソースの取得時に特定の処理をブロックすることを明示的に示します。これは `rel` 属性に `expect` または `stylesheet` キーワードが格納されている場合にのみ使用しなければなりません。ブロックする演算子は、下記のブロックトークンをスペース区切りで列挙したものでなければなりません。
+- `blocking`
+  - : この属性は、特定の条件が満たされるまで特定の操作をブロックすべきであることを明示的に示します。`rel` 属性に `expect` または `stylesheet` キーワードが含まれる場合にのみ使用する必要があります。`rel="expect"` の場合、特定の DOM ノードが構文解析されるまで操作をブロックすべきことを示します。[`rel="stylesheet"`](/ja/docs/Web/HTML/Reference/Attributes/rel#stylesheet) では、外部スタイルシートとその重要なサブリソースが取得され、文書に適用されるまで操作をブロックすべきことを示します。ブロックすべき操作は、以下に列挙するブロック対象トークンの空白区切りリストでなければなりません。今のところ、トークンは 1 つだけです。
     - `render`: 画面へのコンテンツの描画がブロックされます。
 
-- `crossorigin`
+    > [!NOTE]
+    > 文書の `<head>` 内にある `link` 要素のみがレンダリングをブロックする可能性があります。既定では、 `<head>` 内の `rel="stylesheet"` を持つ `link` 要素は、ブラウザーが構文解析中にこれを検出すると、レンダリングをブロックします。スクリプト経由で動的に追加されたそのような `link` 要素がレンダリングをブロックするには、追加で `blocking = "render"` を設定する必要があります。
+
+- [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
     [CORS が有効な画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、<em>汚染</em>されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます。
     - `anonymous`
-      - : オリジン間リクエスト (つまり、 HTTP の {{HTTPHeader("Origin")}} ヘッダーを持つリクエスト) が実行されます。ただし、信用情報は送信されません (Cookie、X.509 証明書、 HTTP ベーシック認証は利用されません)。
-        サーバーが元のサイトに信用情報を付与しない (HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーの設定がない) 場合、リソースが汚染され、その使用も制限されます。
+      - : オリジン間リクエスト (つまり、 HTTP の {{HTTPHeader("Origin")}} ヘッダーを持つリクエスト) が実行されます。ただし、資格情報は送信されません（Cookie、X.509 証明書、 HTTP ベーシック認証は利用されません）。
+        サーバーがそのオリジンのサイトに資格情報を付与していない（HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーの設定がない）場合、リソースが汚染され、その使用も制限されます。
     - `use-credentials`
-      - : オリジン間リクエスト (つまり、 HTTP の `Origin` ヘッダーを持つリクエスト) が実行され、信用情報が送信されます (Cookie、証明書、HTTP ベーシック認証が利用されます)。
-        サーバーが元のサイトに信用情報を付与しない場合 (HTTP の {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーに関わらず)、画像が<em>汚染</em>され、その使用も制限されます。
+      - : オリジン間リクエスト (つまり、 HTTP の `Origin` ヘッダーを持つリクエスト) が実行され、資格情報が送信されます (Cookie、証明書、HTTP ベーシック認証が利用されます)。
+        サーバーが元のサイトに資格情報を付与しない場合 (HTTP の {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーに関わらず)、画像が<em>汚染</em>され、その使用も制限されます。
 
     この属性が存在しない場合、リソースは {{Glossary("CORS")}} リクエストなしで (`Origin` HTTP ヘッダーを送信せずに) 取得され、汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワード **anonymous** が指定されたものとして扱われます。
     それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を参照してください。
@@ -193,25 +191,30 @@ l10n:
     DOM から `disabled` プロパティの値を変更すると、そのスタイルシートを文書の {{domxref("Document.styleSheets")}} の一覧から削除します。
 
 - `fetchpriority`
-  - : 先読みされたリソースを取得する際に使用する相対的な優先度のヒントを 提供します。使用できる値は次の通りです。
+  - : 特定の種類のリソースを取得する際に使用する、相対的な優先度の目安を提供します。
+    使用できる値は次の通りです。
     - `high`
-      - : 同じ型を持つ他のリソースと比較して、優先度の高い取り込みを示します。
+      - : 他の同種のリソースと比較して、優先度を高く設定してリソースを取得する。
     - `low`
-      - : 同じ型の他のリソースと比較して、優先順位が低い取り込みを示します。
+      - : 他の同種のリソースと比較して、優先度を低く設定してリソースを取得する。
     - `auto`
-      - : 既定値。同じ型の他のリソースに対するフェッチ優先順位を自動的に決定することを示します。
+      - : 取得の優先度の設定を行わない。
+        これが既定値です。
+        値が設定されていない場合、または無効な値が設定されている場合に使用されます。
+
+    詳しくは {{domxref("HTMLLinkElement.fetchPriority")}} を参照してください。
 
 - `href`
   - : この属性は、リンクしたリソースの {{glossary("URL")}} を指定します。 URL は絶対・相対のどちらでもかまいません。
 - `hreflang`
   - : この属性は、リンク先のリソースの言語を示します。
     これは単なる助言です。
-    許容される値は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定めています。
+    値は、有効な {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}であるべきです。
     この属性は、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が提供されている場合にのみ使用します。
 - `imagesizes`
-  - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
+  - : `rel="preload"` および `as="image"` が付いている場合にのみ、 `imagesizes` 属性は [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性と同様の構文と意味を持ち、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示します。
 - `imagesrcset`
-  - : `rel="preload"` および `as="image"` において、 `imagesrcset` 属性は `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)です。
+  - : `rel="preload"` および `as="image"` が付いている場合にのみ、 `imagesrcset` 属性は [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性と同様の構文と意味を持ち、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示します。
 - `integrity`
   - : インラインメタデータを格納します。ブラウザーに取得するよう指示するリソース (ファイル) の、base64 エンコードされた暗号化ハッシュです。
     ブラウザーはこれを使用して、取得したリソースが予期せぬ操作なしに配信されたことを確認することができます。
@@ -229,7 +232,7 @@ l10n:
     - `origin-when-cross-origin` は、異なるオリジンへの移動ではリファラーをスキーム、ホスト、ポートに制限します。同一オリジンへの移動では、リファラーのパスも含めます。
     - `unsafe-url` は、リファラーにオリジンとパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでないオリジンへ漏えいしますので、安全ではありません。
 
-- `rel`
+- [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
   - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)のリストでなければなりません。
 - `sizes`
   - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
@@ -238,10 +241,10 @@ l10n:
 
     > [!NOTE]
     > ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
-    > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
+    > Microsoft の ICO 形式と Apple の ICNS 形式は、単一のファイルに複数のアイコンサイズを保存できます。ICO はブラウザーのサポートが良いので、ブラウザー間の対応を気にする場合はこの形式を使用すべきです。
 
 - `title`
-  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet) を定義します。
+  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[既定のスタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet) を定義します。
 - `type`
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
     この属性の一般的な使用法は、参照されるスタイルシートのタイプ（**text/css** など）の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、`type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
@@ -249,19 +252,13 @@ l10n:
 
 ### 標準外の属性
 
-- `methods` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : この属性の値は、オブジェクト上で動作する関数についての情報を提供します。
-    この値は基本的に HTTP プロトコルが利用されたときに与えられますが、(**title** 属性と同じような理由で) リンク先の情報を前もって含めるときに役立ちます。
-    例えば定義されたメソッドの機能によって、異なるリンクの描画をブラウザーが選択します。
-    検索可能なリンクで異なるアイコンを取得したり、外部リンクには現在のサイトから去ることを示す描画にしたりできます。
-    この属性は、定義された Internet Explorer 4 ですら、あまり理解されておらず対応もされていません。
 - `target` {{Deprecated_Inline}}
   - : 定義されたリンク関係を持つ、またはリンクしたリソースを表示するフレームまたはウィンドウの名前を定義します。
 
 ### 廃止された属性
 
 - `charset` {{deprecated_inline}}
-  - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、スペースまたはカンマで区切られたリストです。
+  - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、空白またはカンマで区切られたリストです。
     既定値は `iso-8859-1` です。
 
     > [!NOTE]
@@ -273,7 +270,8 @@ l10n:
     この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。
 
     > [!NOTE]
-    > 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > `rev` の代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。
+    > 例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 
@@ -298,22 +296,35 @@ l10n:
 <link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
-### 異なる利用場面のアイコンの提供
+### さまざまな利用場面のアイコンの提供
 
 同じページにいくつかの異なるアイコンへのリンクを含めて、ブラウザーが `rel` や `sizes` の値をヒントとして使用し、特定の場面で最適に動作する一つを選択するようにすることができます。
 
 ```html
-<!-- 高解像度ディスプレイの第 3 世代 iPad -->
-<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
-<!-- 高解像度ディスプレイの iPhone -->
-<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
-<!-- 第 1、第 2 世代の iPad: -->
-<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
-<!-- 高解像度でない iPhone, iPod Touch, Android 2.1 以降の端末 -->
-<link rel="apple-touch-icon" href="favicon57.png" />
+<!-- iPad Pro （高解像度 Retina ディスプレイ搭載）: -->
+<link
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x 解像度の iPhone: -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- Retina ではない iPad, iPad mini, など: -->
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x 解像度の iPhone およびその他の端末: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- 基本的なファビコン -->
-<link rel="icon" href="favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
+
+Apple アイコンの適切なサイズ選択については、[Apple のウェブアプリケーションの構成に関するドキュメント](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#///apple_ref/doc/uid/TP40002051-CH3-SW4) および参照されている [Apple ヒューマンインターフェースガイドライン](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes)を参照してください。通常は 192x192 などの大きな画像を用意し、ブラウザーが必要に応じて縮小表示させるだけで十分ですが、Apple のデザインガイドラインが推奨するように、サイズごとに異なる詳細レベルの画像を用意したい場合もあるでしょう。低解像度向けに小さいアイコンを用意すれば、帯域幅の節約にもなります。
+
+`<link>` 要素を全く提供する必要がない場合もあります。例えば、ブラウザーはサイトのルートから自動的に `/favicon.ico` をリクエストし、Apple も自動的に `/apple-touch-icon-[size].png` や `/apple-touch-icon.png` などを要求します。ただし、明示的なリンクを提供することで、これらの慣習の変更に対して保護されます。
 
 ### メディアクエリーのついた条件付きのリソース読み込み
 
@@ -322,14 +333,11 @@ l10n:
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
 <link href="mobile.css" rel="stylesheet" media="all" />
-<link
-  href="desktop.css"
-  rel="stylesheet"
-  media="screen and (min-width: 600px)" />
+<link href="desktop.css" rel="stylesheet" media="screen and (width >= 600px)" />
 <link
   href="highres.css"
   rel="stylesheet"
-  media="screen and (min-resolution: 300dpi)" />
+  media="screen and (resolution >= 300dpi)" />
 ```
 
 ### スタイルシートの load イベント
@@ -338,18 +346,18 @@ l10n:
 
 ```html
 <link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
+```
 
-<script>
-  const stylesheet = document.getElementById("my-stylesheet");
+```js
+const stylesheet = document.getElementById("my-stylesheet");
 
-  stylesheet.onload = () => {
-    // Do something interesting; the sheet has been loaded
-  };
+stylesheet.onload = () => {
+  // 何か興味深いことをする。シートが読み込まれた。
+};
 
-  stylesheet.onerror = () => {
-    console.log("An error occurred loading the stylesheet!");
-  };
-</script>
+stylesheet.onerror = () => {
+  console.log("スタイルシートの読み込みでエラーが発生しました。");
+};
 ```
 
 > [!NOTE]
@@ -374,11 +382,12 @@ l10n:
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         メタデータコンテンツ。
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>および<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。
+        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>および<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。
       </td>
     </tr>
     <tr>
@@ -393,7 +402,7 @@ l10n:
       <th>許可されている親要素</th>
       <td>
         メタデータ要素を受け入れるすべての要素。
-        <a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
@@ -422,4 +431,3 @@ l10n:
 ## 関連情報
 
 - HTTP の {{HTTPHeader("Link")}} ヘッダー
-- [The `integrity` attribute](https://150daysofhtml.com/book/day010/) (150daysofhtml.com, 2021)
