@@ -17,7 +17,7 @@ l10n:
 - `p3`
   - : 사용자 에이전트와 출력 장치가 [Display P3](https://www.color.org/chardata/rgb/DisplayP3.xalter) 색 공간에 지정된 색역 이상을 지원할 수 있습니다. P3 색역은 sRGB 색역보다 크며 이를 포함합니다.
 - `rec2020`
-  - : 사용자 에이전트와 출력 장치가 [ITU-R Recommendation BT.2020](https://en.wikipedia.org/wiki/Rec._2020) 색 공간에 지정된 색역 이상을 사용할 수 있습니다. REC. 2020 색역은 P3 색역보다 크며 이를 포함합니다. 
+  - : 사용자 에이전트와 출력 장치가 [ITU-R Recommendation BT.2020](https://en.wikipedia.org/wiki/Rec._2020) 색 공간에 지정된 색역 이상을 사용할 수 있습니다. REC. 2020 색역은 P3 색역보다 크며 이를 포함합니다.
 
 ## 예제
 
