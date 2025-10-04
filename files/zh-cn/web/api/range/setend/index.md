@@ -22,7 +22,7 @@ range.setEnd(endNode, endOffset);
 - _endNode_
   - : *endNode*用于设定 [`Range`](/zh-CN/docs/Web/API/Range)的结束位置。
 - _endOffset_
-  - : 必须为不小于 0 的整数。表示从*endNode*的结束位置算起的偏移量。
+  - : 一个大于或等于零的整数，表示 [`Range`](/zh-CN/docs/Web/API/Range) 的结束位置相对于 *endNode* 起始点的偏移量。
 
 ## 例子
 
