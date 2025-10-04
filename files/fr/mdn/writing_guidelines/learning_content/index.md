@@ -47,13 +47,13 @@ Il existe cependant quelques différences&nbsp;:
 - **Objectifs d'apprentissage stables**&nbsp;: Les objectifs d'apprentissage en haut de chaque tutoriel résument ce que chaque tutoriel enseigne, et ensemble, ils forment un programme structuré pour le développement front-end. Il est essentiel que les objectifs d'apprentissage et le contenu enseigné restent stables et synchronisés, sinon le contenu ne peut pas servir de base fiable à un apprentissage formel (cours, certifications, etc.). Les changements d'objectifs doivent donc être rares et motivés. Si vous essayez d'ajouter du contenu qui n'est pas couvert par les objectifs associés (ou inversement), votre pull request sera fermée. [Faites une suggestion](/fr/docs/MDN/Writing_guidelines/What_we_write#suggestion_de_contenus) d'abord.
 
 > [!NOTE]
-> Nous tenons un [journal des modifications](/fr/docs/Learn_web_development/Changelog) qui détaille tout changement significatif apporté aux objectifs d'apprentissage, afin que les enseignant·e·s puissent maintenir à jour leurs ressources basées sur MDN Learn.
+> Nous tenons un [journal des modifications](/fr/docs/Learn_web_development/Changelog) qui détaille tout changement significatif apporté aux objectifs d'apprentissage, afin que les enseignant·e·s puissent maintenir à jour leurs ressources basées sur la section MDN _Apprendre_.
 
 ## Liens partenaires et intégrations
 
 Comme indiqué dans nos [règles sur les liens externes](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#liens_externes), MDN n'autorise généralement pas les liens externes (ou intégrations) qui semblent promouvoir des produits commerciaux ou mènent à du contenu payant. Cela vise à éviter que le contenu MDN ne perde en crédibilité ou ne devienne moins utile à cause de liens publicitaires.
 
-Le contenu Learn de MDN fait cependant quelques exceptions. Nous autorisons des liens vers du contenu externe (parfois payant) provenant de partenaires de confiance. Ce sont des sites avec lesquels MDN a établi une relation de confiance, en examinant leur qualité, leur éthique et leur engagement envers les standards et bonnes pratiques du web, et en les aidant à mettre à jour leur contenu si besoin. Nous leur faisons confiance pour ne pas modifier leurs liens sans préavis, et pour que leur contenu soit sûr.
+Le contenu _Apprendre_ de MDN fait cependant quelques exceptions. Nous autorisons des liens vers du contenu externe (parfois payant) provenant de partenaires de confiance. Ce sont des sites avec lesquels MDN a établi une relation de confiance, en examinant leur qualité, leur éthique et leur engagement envers les standards et bonnes pratiques du web, et en les aidant à mettre à jour leur contenu si besoin. Nous leur faisons confiance pour ne pas modifier leurs liens sans préavis, et pour que leur contenu soit sûr.
 
 Les objectifs de ces liens partenaires sont&nbsp;:
 
@@ -69,7 +69,7 @@ Cependant, nous&nbsp;:
 
 ### Ordre des liens «&nbsp;Voir aussi&nbsp;»
 
-Sur les pages Learn, les liens «&nbsp;Voir aussi&nbsp;» en bas de page doivent apparaître dans l'ordre suivant&nbsp;:
+Sur les pages _Apprendre_, les liens «&nbsp;Voir aussi&nbsp;» en bas de page doivent apparaître dans l'ordre suivant&nbsp;:
 
 1. Liens internes.
 2. Liens vers du contenu gratuit.
