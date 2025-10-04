@@ -2,7 +2,7 @@
 title: JavaScript と DOM インターフェイスによる HTML の表の操作
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -374,7 +374,7 @@ for (let row = 0; row < 2; row++) {
     // 0 列目であればセルの背景色を設定し、
     // 1 列目であればセルを非表示とする
     if (col === 0) {
-      myCurrentCell.style.background = "rgb(255 0 0)";
+      myCurrentCell.style.background = "red";
     } else {
       myCurrentCell.style.display = "none";
     }

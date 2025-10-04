@@ -2,7 +2,7 @@
 title: ドキュメントオブジェクトモデルの使い方
 slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 l10n:
-  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
+  sourceCommit: d4a50b63d9afd826e61eb8833e8e6337b5059e8a
 ---
 
 {{DefaultAPISidebar("DOM")}}

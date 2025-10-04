@@ -1,12 +1,9 @@
 ---
 title: "<table>: 表要素"
 slug: Web/HTML/Reference/Elements/table
-original_slug: Web/HTML/Element/table
 l10n:
-  sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
-
-{{HTMLSidebar}}
 
 **`<table>`** は [HTML](/ja/docs/Web/HTML) の要素で、表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
 
@@ -15,40 +12,40 @@ l10n:
 ```html interactive-example
 <table>
   <caption>
-    Front-end web developer course 2021
+    フロントエンドウェブ開発者コース 2021
   </caption>
   <thead>
     <tr>
-      <th scope="col">Person</th>
-      <th scope="col">Most interest in</th>
-      <th scope="col">Age</th>
+      <th scope="col">名前</th>
+      <th scope="col">関心分野</th>
+      <th scope="col">年齢</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Chris</th>
-      <td>HTML tables</td>
+      <td>HTML 表</td>
       <td>22</td>
     </tr>
     <tr>
       <th scope="row">Dennis</th>
-      <td>Web accessibility</td>
+      <td>ウェブアクセシビリティ</td>
       <td>45</td>
     </tr>
     <tr>
       <th scope="row">Sarah</th>
-      <td>JavaScript frameworks</td>
+      <td>JavaScript フレームワーク</td>
       <td>29</td>
     </tr>
     <tr>
       <th scope="row">Karen</th>
-      <td>Web performance</td>
+      <td>ウェブパフォーマンス</td>
       <td>36</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row" colspan="2">Average age</th>
+      <th scope="row" colspan="2">平均年齢</th>
       <td>33</td>
     </tr>
   </tfoot>
@@ -176,14 +173,14 @@ tfoot td {
 
 これはスクリーンリーダーのような支援技術を利用して操作している人、弱視の人、認知問題を抱えた人にとって役立ちます。
 
-- [MDN \<caption> を用いて表にタイトルをつける](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#caption_を用いて表にキャプションを追加する)
+- [MDN \<caption> を用いて表にキャプションを追加する](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#caption_を用いて表にキャプションを追加する)
 - [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### 行と列のスコープ
 
 [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) 属性を見出しセル（{{HTMLElement("th")}} 要素）につけることは、文脈が単純な場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、見出しにスコープを設定すると使い勝手が向上することがあります。複雑な表では、 [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) を指定することで、セルと見出しの関係に関する必要な情報を提供することができます。
 
-- [MDN 視覚障碍者向けの表](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#視覚障碍者向けの表)
+- [MDN 表のアクセシビリティガイド](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 - [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -196,13 +193,13 @@ tfoot td {
 
 表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) および [`headers`](/ja/docs/Web/HTML/Reference/Elements/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連した見出し（{{HTMLElement("th")}} 要素）をプログラム的に結び付けてください。
 
-- [MDN 視覚障碍者向けの表](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#視覚障碍者向けの表)
+- [MDN 表のアクセシビリティガイド](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## 例
 
-下記の例には、徐々に複雑になる表が記載されています。 さらに詳しい例については、詳細なチュートリアルを含む「[ウェブ開発の学習](/ja/docs/Learn_web_development)」領域の「[HTML の表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)」シリーズを参照してください。 ここでは、表要素とその属性を使用して表形式のデータを正しく構造化する方法を学習できます。「[表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)ガイド」では、一般的な便利なテクニックを含む表のスタイル設定情報が指定されています。
+以下の例には、次第に複雑さを増す表が掲載されています。表のスタイル設定について、一般的な有用なテクニックを含む情報は、初心者向けガイド「[表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)」も参照してください。
 
 `<table>` の構造は、いくつかの表関連の HTML 要素と、関連付けられた様々な属性を使用するものであるため、次の例は、基本と一般的な標準をカバーするシンプルな説明を意図したものです。 追加の情報やより詳細な情報は、対応するリンク先のページで得られます。
 
@@ -785,174 +782,197 @@ tfoot td {
 <table>
   <thead>
     <tr>
-      <th>1<sup>3</sup> equals:
-      <th>2<sup>3</sup> equals:
-      <th>3<sup>3</sup> equals:
-      <th>4<sup>3</sup> equals:
-      <th>5<sup>3</sup> equals:
-      <th>6<sup>3</sup> equals:
-      <th>7<sup>3</sup> equals:
+      <th>1<sup>3</sup> は:</th>
+      <th>2<sup>3</sup> は:</th>
+      <th>3<sup>3</sup> は:</th>
+      <th>4<sup>3</sup> は:</th>
+      <th>5<sup>3</sup> は:</th>
+      <th>6<sup>3</sup> は:</th>
+      <th>7<sup>3</sup> は:</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>row 1: 1
-      <td>row 1: 8
-      <td>row 1: 27
-      <td>row 1: 64
-      <td>row 1: 125
-      <td>row 1: 216
-      <td>row 1: 343
+      <td>行 1: 1</td>
+      <td>行 1: 8</td>
+      <td>行 1: 27</td>
+      <td>行 1: 64</td>
+      <td>行 1: 125</td>
+      <td>行 1: 216</td>
+      <td>行 1: 343</td>
+    </tr>
     <tr>
-      <td>row 2: 1
-      <td>row 2: 8
-      <td>row 2: 27
-      <td>row 2: 64
-      <td>row 2: 125
-      <td>row 2: 216
-      <td>row 2: 343
+      <td>行 2: 1</td>
+      <td>行 2: 8</td>
+      <td>行 2: 27</td>
+      <td>行 2: 64</td>
+      <td>行 2: 125</td>
+      <td>行 2: 216</td>
+      <td>行 2: 343</td>
+    </tr>
     <tr>
-      <td>row 3: 1
-      <td>row 3: 8
-      <td>row 3: 27
-      <td>row 3: 64
-      <td>row 3: 125
-      <td>row 3: 216
-      <td>row 3: 343
+      <td>行 3: 1</td>
+      <td>行 3: 8</td>
+      <td>行 3: 27</td>
+      <td>行 3: 64</td>
+      <td>行 3: 125</td>
+      <td>行 3: 216</td>
+      <td>行 3: 343</td>
+    </tr>
     <tr>
-      <td>row 4: 1
-      <td>row 4: 8
-      <td>row 4: 27
-      <td>row 4: 64
-      <td>row 4: 125
-      <td>row 4: 216
-      <td>row 4: 343
+      <td>行 4: 1</td>
+      <td>行 4: 8</td>
+      <td>行 4: 27</td>
+      <td>行 4: 64</td>
+      <td>行 4: 125</td>
+      <td>行 4: 216</td>
+      <td>行 4: 343</td>
+    </tr>
     <tr>
-      <td>row 5: 1
-      <td>row 5: 8
-      <td>row 5: 27
-      <td>row 5: 64
-      <td>row 5: 125
-      <td>row 5: 216
-      <td>row 5: 343
+      <td>行 5: 1</td>
+      <td>行 5: 8</td>
+      <td>行 5: 27</td>
+      <td>行 5: 64</td>
+      <td>行 5: 125</td>
+      <td>行 5: 216</td>
+      <td>行 5: 343</td>
+    </tr>
     <tr>
-      <td>row 6: 1
-      <td>row 6: 8
-      <td>row 6: 27
-      <td>row 6: 64
-      <td>row 6: 125
-      <td>row 6: 216
-      <td>row 6: 343
+      <td>行 6: 1</td>
+      <td>行 6: 8</td>
+      <td>行 6: 27</td>
+      <td>行 6: 64</td>
+      <td>行 6: 125</td>
+      <td>行 6: 216</td>
+      <td>行 6: 343</td>
+    </tr>
     <tr>
-      <td>row 7: 1
-      <td>row 7: 8
-      <td>row 7: 27
-      <td>row 7: 64
-      <td>row 7: 125
-      <td>row 7: 216
-      <td>row 7: 343
+      <td>行 7: 1</td>
+      <td>行 7: 8</td>
+      <td>行 7: 27</td>
+      <td>行 7: 64</td>
+      <td>行 7: 125</td>
+      <td>行 7: 216</td>
+      <td>行 7: 343</td>
+    </tr>
     <tr>
-      <td>row 8: 1
-      <td>row 8: 8
-      <td>row 8: 27
-      <td>row 8: 64
-      <td>row 8: 125
-      <td>row 8: 216
-      <td>row 8: 343
+      <td>行 8: 1</td>
+      <td>行 8: 8</td>
+      <td>行 8: 27</td>
+      <td>行 8: 64</td>
+      <td>行 8: 125</td>
+      <td>行 8: 216</td>
+      <td>行 8: 343</td>
+    </tr>
     <tr>
-      <td>row 9: 1
-      <td>row 9: 8
-      <td>row 9: 27
-      <td>row 9: 64
-      <td>row 9: 125
-      <td>row 9: 216
-      <td>row 9: 343
+      <td>行 9: 1</td>
+      <td>行 9: 8</td>
+      <td>行 9: 27</td>
+      <td>行 9: 64</td>
+      <td>行 9: 125</td>
+      <td>行 9: 216</td>
+      <td>行 9: 343</td>
+    </tr>
     <tr>
-      <td>row 10: 1
-      <td>row 10: 8
-      <td>row 10: 27
-      <td>row 10: 64
-      <td>row 10: 125
-      <td>row 10: 216
-      <td>row 10: 343
+      <td>行 10: 1</td>
+      <td>行 10: 8</td>
+      <td>行 10: 27</td>
+      <td>行 10: 64</td>
+      <td>行 10: 125</td>
+      <td>行 10: 216</td>
+      <td>行 10: 343</td>
+    </tr>
     <tr>
-      <td>row 11: 1
-      <td>row 11: 8
-      <td>row 11: 27
-      <td>row 11: 64
-      <td>row 11: 125
-      <td>row 11: 216
-      <td>row 11: 343
+      <td>行 11: 1</td>
+      <td>行 11: 8</td>
+      <td>行 11: 27</td>
+      <td>行 11: 64</td>
+      <td>行 11: 125</td>
+      <td>行 11: 216</td>
+      <td>行 11: 343</td>
+    </tr>
     <tr>
-      <td>row 12: 1
-      <td>row 12: 8
-      <td>row 12: 27
-      <td>row 12: 64
-      <td>row 12: 125
-      <td>row 12: 216
-      <td>row 12: 343
+      <td>行 12: 1</td>
+      <td>行 12: 8</td>
+      <td>行 12: 27</td>
+      <td>行 12: 64</td>
+      <td>行 12: 125</td>
+      <td>行 12: 216</td>
+      <td>行 12: 343</td>
+    </tr>
     <tr>
-      <td>row 13: 1
-      <td>row 13: 8
-      <td>row 13: 27
-      <td>row 13: 64
-      <td>row 13: 125
-      <td>row 13: 216
-      <td>row 13: 343
+      <td>行 13: 1</td>
+      <td>行 13: 8</td>
+      <td>行 13: 27</td>
+      <td>行 13: 64</td>
+      <td>行 13: 125</td>
+      <td>行 13: 216</td>
+      <td>行 13: 343</td>
+    </tr>
     <tr>
-      <td>row 14: 1
-      <td>row 14: 8
-      <td>row 14: 27
-      <td>row 14: 64
-      <td>row 14: 125
-      <td>row 14: 216
-      <td>row 14: 343
+      <td>行 14: 1</td>
+      <td>行 14: 8</td>
+      <td>行 14: 27</td>
+      <td>行 14: 64</td>
+      <td>行 14: 125</td>
+      <td>行 14: 216</td>
+      <td>行 14: 343</td>
+    </tr>
     <tr>
-      <td>row 15: 1
-      <td>row 15: 8
-      <td>row 15: 27
-      <td>row 15: 64
-      <td>row 15: 125
-      <td>row 15: 216
-      <td>row 15: 343
+      <td>行 15: 1</td>
+      <td>行 15: 8</td>
+      <td>行 15: 27</td>
+      <td>行 15: 64</td>
+      <td>行 15: 125</td>
+      <td>行 15: 216</td>
+      <td>行 15: 343</td>
+    </tr>
     <tr>
-      <td>row 16: 1
-      <td>row 16: 8
-      <td>row 16: 27
-      <td>row 16: 64
-      <td>row 16: 125
-      <td>row 16: 216
-      <td>row 16: 343
+      <td>行 16: 1</td>
+      <td>行 16: 8</td>
+      <td>行 16: 27</td>
+      <td>行 16: 64</td>
+      <td>行 16: 125</td>
+      <td>行 16: 216</td>
+      <td>行 16: 343</td>
+    </tr>
     <tr>
-      <td>row 17: 1
-      <td>row 17: 8
-      <td>row 17: 27
-      <td>row 17: 64
-      <td>row 17: 125
-      <td>row 17: 216
-      <td>row 17: 343
+      <td>行 17: 1</td>
+      <td>行 17: 8</td>
+      <td>行 17: 27</td>
+      <td>行 17: 64</td>
+      <td>行 17: 125</td>
+      <td>行 17: 216</td>
+      <td>行 17: 343</td>
+    </tr>
     <tr>
-      <td>row 18: 1
-      <td>row 18: 8
-      <td>row 18: 27
-      <td>row 18: 64
-      <td>row 18: 125
-      <td>row 18: 216
-      <td>row 18: 343
+      <td>行 18: 1</td>
+      <td>行 18: 8</td>
+      <td>行 18: 27</td>
+      <td>行 18: 64</td>
+      <td>行 18: 125</td>
+      <td>行 18: 216</td>
+      <td>行 18: 343</td>
+    </tr>
     <tr>
-      <td>row 19: 1
-      <td>row 19: 8
-      <td>row 19: 27
-      <td>row 19: 64
-      <td>row 19: 125
-      <td>row 19: 216
-      <td>row 19: 343
+      <td>行 19: 1</td>
+      <td>行 19: 8</td>
+      <td>行 19: 27</td>
+      <td>行 19: 64</td>
+      <td>行 19: 125</td>
+      <td>行 19: 216</td>
+      <td>行 19: 343</td>
+    </tr>
     <tr>
-      <td>row 20: 1
-      <td>row 20: 8
-      <td>row 20: 27
-      <td>row 20: 64
-      <td>row 20: 125
-      <td>row 20: 216
-      <td>row 20: 343
+      <td>行 20: 1</td>
+      <td>行 20: 8</td>
+      <td>行 20: 27</td>
+      <td>行 20: 64</td>
+      <td>行 20: 125</td>
+      <td>行 20: 216</td>
+      <td>行 20: 343</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -995,7 +1015,7 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: white;
   vertical-align: bottom;
 }
 
@@ -1019,10 +1039,12 @@ tr:last-child td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -1085,7 +1107,7 @@ tr:last-child td {
 
 ## 関連情報
 
-- [学習: HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [学習: HTML 表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: その他の表関連要素
 - {{cssxref("background-color")}}: 表の背景色を設定する CSS プロパティ
 - {{cssxref("border")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}}: セルの境界線、罫線、枠線の外観をコントロールする CSS プロパティ
