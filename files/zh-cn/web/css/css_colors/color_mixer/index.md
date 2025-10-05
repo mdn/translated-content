@@ -142,7 +142,7 @@ l10n:
           HWB
         </a>
       </th>
-      <td><button id="copy-hwb-button">Copy</button><span></span></td>
+      <td><button id="copy-hwb-button">复制</button><span></span></td>
     </tr>
     <tr id="color-function">
       <th>
