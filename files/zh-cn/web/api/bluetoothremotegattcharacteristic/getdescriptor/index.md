@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.getDescriptor()`** 方法返回一个 {{jsxref("Promise")}}，且其会兑现为第一个具有给定描述符 UUID 的 {{domxref("BluetoothRemoteGATTDescriptor")}}。
+**`BluetoothRemoteGATTCharacteristic.getDescriptor()`** 方法返回一个将会兑现为第一个具有给定描述符 UUID 的 {{domxref("BluetoothRemoteGATTDescriptor")}} 的 {{jsxref("Promise")}}。
 
 ## 语法
 
@@ -22,7 +22,7 @@ getDescriptor(bluetoothDescriptorUUID)
 
 ## 返回值
 
-{{jsxref("Promise")}}，且该 promise 将会兑现为第一个满足要求的 {{domxref("BluetoothRemoteGATTDescriptor")}}。
+{{jsxref("Promise")}}，将会兑现为第一个满足要求的 {{domxref("BluetoothRemoteGATTDescriptor")}}。
 
 ## 规范
 
