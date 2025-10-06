@@ -26,7 +26,7 @@ Une chaîne de caractères. Il existe deux versions de cette propriété que vou
 
   ```js
   aElem.attributionSrc =
-    "https://a.example/register-source https://b.example/register-source";
+    "https://a.exemple/register-source https://b.exemple/register-source";
   ```
 
   Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionSrc`. Lorsque la requête de ressource a lieu, l'en-tête {{httpheader("Attribution-Reporting-Eligible")}} sera envoyé à l'(aux) URL(s) spécifiée(s) dans `attributionSrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{httpheader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
@@ -56,8 +56,8 @@ aElem.attributionSrc = "";
 ```js
 // encoder les URL au cas où elles contiendraient des caractères spéciaux
 // comme '=' qui seraient mal interprétés.
-const encodedUrlA = encodeURIComponent("https://a.example/register-source");
-const encodedUrlB = encodeURIComponent("https://b.example/register-source");
+const encodedUrlA = encodeURIComponent("https://a.exemple/register-source");
+const encodedUrlB = encodeURIComponent("https://b.exemple/register-source");
 
 const aElem = document.querySelector("a");
 aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
