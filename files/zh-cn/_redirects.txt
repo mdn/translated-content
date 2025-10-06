@@ -2444,7 +2444,6 @@
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
-/zh-CN/docs/Web/Accessibility/ARIA/How_to	/zh-CN/docs/orphaned/Web/Accessibility/ARIA/How_to
 /zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels	/zh-CN/docs/Web/Accessibility/ARIA/Guides/Multipart_labels

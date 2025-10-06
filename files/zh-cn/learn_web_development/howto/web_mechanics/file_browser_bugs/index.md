@@ -1,7 +1,6 @@
 ---
 title: 如何提交与 ARIA 相关的错误
 slug: Learn_web_development/Howto/Web_mechanics/File_browser_bugs
-original_slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
