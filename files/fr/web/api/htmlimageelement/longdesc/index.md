@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-La propriété **`longDesc`** (_obsolète_) de l'interface {{domxref("HTMLImageElement")}} spécifie l'URL d'un fichier texte ou HTML contenant une description détaillée de l'image. Cela peut être utilisé pour fournir des informations supplémentaires facultatives au-delà de la brève description fournie dans l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title).
+La propriété **`longDesc`** (_obsolète_) de l'interface {{domxref("HTMLImageElement")}} spécifie l'URL d'un fichier texte ou HTML contenant une description détaillée de l'image. Cela peut être utilisé pour fournir des informations supplémentaires facultatives au-delà de la brève description fournie dans l'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title).
 
 ## Valeur
 
