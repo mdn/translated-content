@@ -5,12 +5,13 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Intl.DurationFormat`** 은 언어에 맞는 지속 시간 서식을 지원하는 객체의 생성자입니다.
+
+**`Intl.DurationFormat`** 은 언어에 맞는 지속 시간 서식을 지원하는 객체입니다.
 
 ## 생성자
 
 - {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
-  - : 새로운`Intl.DurationFormat` 객체를 생성합니다.
+  - : 새로운 `Intl.DurationFormat` 객체를 생성합니다.
 
 ## 정적 메서드
 
@@ -23,11 +24,10 @@ l10n:
 
 - {{jsxref("Object/constructor", "Intl.DurationFormat.prototype.constructor")}}
   - : 인스턴스 객체를 만든 생성자 함수입니다. `Intl.DurationFormat` 인스턴스의 경우 초기 값은 {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat")}} 생성자입니다.
-
 - `Intl.DurationFormat.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.DurationFormat"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
-## Instance methods
+## 인스턴스 메서드
 
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
   - : `DurationFormat` 객체의 로케일과 서식 옵션에 맞춰 지속 시간을 서식화해 반환합니다.
@@ -59,7 +59,7 @@ new Intl.DurationFormat("en", { style: "short" }).format(duration);
 
 // 서식 옵션을 "narrow"으로 설정하고, 로케일을 "pt"로 설정
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1h 46min 40s"
+// "1h 46 min 40s"
 ```
 
 ## 명세서
@@ -72,6 +72,6 @@ new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 
 ## 같이 보기
 
-- [Polyfill of `Intl.DurationFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-durationformat/)
+- [FormatJS의 `Intl.DurationFormat` 폴리필](https://formatjs.github.io/docs/polyfills/intl-durationformat/)
 - {{jsxref("Intl")}}
 - {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}
