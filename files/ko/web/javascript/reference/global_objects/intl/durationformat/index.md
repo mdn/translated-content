@@ -5,7 +5,6 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-
 **`Intl.DurationFormat`** 은 언어에 맞는 지속 시간 서식을 지원하는 객체입니다.
 
 ## 생성자
