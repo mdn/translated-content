@@ -3,12 +3,12 @@ title: BluetoothRemoteGATTCharacteristic：readValue() 方法
 short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
 l10n:
-  sourceCommit: bfc735c04506625c8c60054fe6f2f136bc43bbea
+  sourceCommit: 5fd5cc8885286bfa5bae8b3e9970e1eab26e941d
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.readValue()`** 方法返回一个{{jsxref("Promise")}}，且其会兑现为一个包含 `value` 属性的副本（如果可用且受支持）的 {{jsxref("DataView")}}。否则该 promise 会以错误拒绝。
+**`BluetoothRemoteGATTCharacteristic.readValue()`** 方法返回一个 {{jsxref("Promise")}}，其会兑现为一个包含 `value` 属性的副本（如果可用且受支持）的 {{jsxref("DataView")}}。否则它将抛出一个错误。
 
 ## 语法
 
@@ -22,7 +22,7 @@ readValue()
 
 ## 返回值
 
-{{jsxref("Promise")}}，且该 promise 将会在成功时兑现为 {{jsxref("DataView")}}。
+会兑现为 {{jsxref("DataView")}} 的 {{jsxref("Promise")}}。
 
 ## 规范
 
