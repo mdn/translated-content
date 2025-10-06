@@ -7,7 +7,7 @@ l10n:
 
 Un **élément** est une partie d'une page web. En {{glossary("XML")}} et {{glossary("HTML")}}, un élément peut contenir une donnée, un morceau de texte ou une image, ou même parfois ne rien contenir du tout. Un élément est typiquement constitué d'une balise ouvrante ayant quelques attributs, du contenu textuel et d'une balise fermante.
 
-![Exemple&nbsp;: dans <p class="nice">Hello world!</p>, «&nbsp;<p class=\"nice\">&nbsp;» est une balise ouvrante, «&nbsp;class=\"nice\"&nbsp;» est un attribut et sa valeur, «&nbsp;Hello world!&nbsp;» est le contenu textuel, et «&nbsp;</p>&nbsp;» est une balise fermante.](anatomy-of-an-html-element.png)
+![Exemple : dans <p class="nice">Hello world!</p>, « <p class="nice"> » est une balise ouvrante, « class="nice" » est un attribut et sa valeur, « Hello world! » est le contenu textuel, et « </p> » est une balise fermante.](anatomy-of-an-html-element.png)
 
 Les éléments et les {{glossary("tag", "balises")}} _ne_ sont _pas_ la même chose. Les balises commencent ou clôturent un élément dans le code source, alors que les éléments font partie du {{glossary("DOM")}}, le document qui sert de modèle pour afficher la page dans le {{glossary("browser","navigateur")}}.
 
