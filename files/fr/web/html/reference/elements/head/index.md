@@ -2,35 +2,34 @@
 title: "<head> : l'élément de métadonnées (en-tête) du document"
 slug: Web/HTML/Reference/Elements/head
 original_slug: Web/HTML/Element/head
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
-
-L'élément HTML **\<head>** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.
+L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations générales ({{glossary("metadata", "métadonnées")}}) sur le document, incluant son [titre](/fr/docs/Web/HTML/Reference/Elements/title), [scripts](/fr/docs/Web/HTML/Reference/Elements/script), et [feuilles de style](/fr/docs/Web/HTML/Reference/Elements/style). Il ne peut y avoir qu'un seul élément `<head>` dans un document HTML.
 
 > [!NOTE]
 > L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `profile`{{deprecated_inline}}
-  - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.
+  - : L'{{glossary("URI")}} d'un ou plusieurs profils de métadonnées, séparés par un {{Glossary("whitespace", "espace")}}.
 
 ## Exemples
 
 ```html
-<html>
+<!doctype html>
+<html lang="fr">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Titre du document</title>
   </head>
 </html>
 ```
-
-## Notes
-
-La plupart des navigateurs conformes à HTML5 construisent automatiquement l'élément `<head>` si les balises sont omises dans le balisage. [Cependant, ce comportement n'est pas garanti pour les navigateurs antérieurs](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/).
 
 ## Résumé technique
 
@@ -49,13 +48,10 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Si le document est un document source
-        (<a href="/fr/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>) d'une
-        {{HTMLElement("iframe")}} ou si l'information pour le titre est
-        disponible via un protocole de plus haut niveau zéro ou plusieurs
-        éléments de méta-données.<br />Sinon un ou plusieurs éléments de
-        méta-données dont un (et un seul) est un élément
-        {{HTMLElement("title")}}.
+        Si le document est un document {{HTMLElement("iframe")}}
+        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a>, ou si des informations de titre sont disponibles via un protocole de
+        plus haut niveau (comme l'objet d'un courriel HTML), zéro ou plusieurs
+        éléments de contenu de métadonnées.
       </td>
     </tr>
     <tr>
@@ -75,8 +71,16 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant</a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -95,7 +99,7 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
 
 ## Voir aussi
 
-- Les éléments qui peuvent être utilisés à l'intérieur de l'élément `<head>` :
+- Les éléments qui peuvent être utilisés à l'intérieur de l'élément `<head>`&nbsp;:
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}
