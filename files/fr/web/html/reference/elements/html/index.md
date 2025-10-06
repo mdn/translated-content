@@ -2,49 +2,34 @@
 title: "<html> : l'élément de racine du document HTML"
 slug: Web/HTML/Reference/Elements/html
 original_slug: Web/HTML/Element/html
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
-
-{{HTMLSidebar}}
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `version`{{deprecated_inline}}
-  - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
+  - : Définit la version du document HTML <i lang="en">{{glossary("Doctype", "Document Type Definition")}}</i> qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
 - `xmlns`
-  - : Définit l'espace de noms XML du document. La valeur par défaut est "http\://www\.w3.org/1999/xhtml". Cet attribut est obligatoire dans un document XML et optionnel dans un document de type text/html.
+  - : Définit l'{{glossary("Namespace", "espace de noms")}} {{glossary("XML")}} du document. La valeur par défaut est `"http://www.w3.org/1999/xhtml"`. Ceci est requis dans les documents analysés avec des {{glossary("parser", "analyseurs")}} XML, et optionnel dans les documents text/html.
 
 ## Exemples
-
-Le DOCTYPE utilisé dans l'exemple suivant indique que le document est un document HTML5.
 
 ```html
 <!doctype html>
 <html lang="fr">
   <head>
-    ...
+    <!-- … -->
   </head>
   <body>
-    ...
+    <!-- … -->
   </body>
 </html>
 ```
-
-## Notes
-
-Puisque l'élément `<html>` est le premier élément dans un document, autre que les commentaires, il est désigné comme l'élément racine du document. Bien que cette balise soit implicite, ou non requise dans un document [HTML](/fr/docs/Web/HTML), il est requis dans un document [XHTML](/fr/docs/Glossary/XHTML) (à la fois pour la balise ouvrante et pour la balise fermante).
-
-## Accessibilité
-
-L'utilisation d'un attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang) [valide (au sens de l'IETF)](https://www.ietf.org/rfc/bcp/bcp47.txt) pour l'élément HTML permettra aux lecteurs d'écran de déterminer la langue à utiliser pour l'énonciation. La balise de langage utilisée doit correspondre à celle utilisée pour la majorité du contenu de la page. Sans cet attribut, les lecteurs d'écran utiliseront la lange paramétrée par le système d'exploitation, ce qui pourra entraîner des défauts de prononciations.
-
-Ajouter un attribut `lang` valide au sein de l'élément HTML permet également de s'assurer que les métadonnées importantes contenue dans l'élément {{HTMLElement("head")}}, telle que le titre de la page (cf. {{HTMLElement("title")}}) sont énoncées correctement.
-
-- [Comprendre les règles WCAG 3.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_—_Readable_Make_text_content_readable_and_understandable)
-- _[Understanding Success Criterion 3.1.1 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)_
 
 ## Résumé technique
 
@@ -81,8 +66,16 @@ Ajouter un attribut `lang` valide au sein de l'élément HTML permet également 
       <td>Aucun élément, c'est la racine du document.</td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
+          >document</a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>Aucun <code>role</code> autorisé.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -101,5 +94,5 @@ Ajouter un attribut `lang` valide au sein de l'élément HTML permet également 
 
 ## Voir aussi
 
-- L'élément MathML de plus haut niveau : {{MathMLElement("math")}}
-- L'élément SVG de plus haut niveau : {{SVGElement("svg")}}
+- L'élément MathML de plus haut niveau&nbsp;: {{MathMLElement("math")}}
+- L'élément SVG de plus haut niveau&nbsp;: {{SVGElement("svg")}}
