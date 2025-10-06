@@ -19,7 +19,7 @@ Une chaîne de caractères.
 ## Exemples
 
 ```js
-// Un élément <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> est dans le document
+// Un élément <a id="myAnchor" href="/fr/docs/HTMLAnchorElement"> est dans le document
 const anchor = document.getElementById("myAnchor");
 anchor.hostname; // retourne 'developer.mozilla.org'
 ```
