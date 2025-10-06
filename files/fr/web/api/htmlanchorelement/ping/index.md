@@ -19,16 +19,16 @@ Elle reflète l'attribut `ping` de l'élément HTML {{HTMLElement("a")}}.
 
 ```html
 <a
-  id="exampleLink"
-  href="https://example.com"
-  ping="https://example-tracking.com https://example-analytics.com"
+  id="lienExemple"
+  href="https://exemple.fr"
+  ping="https://exemple-tracking.fr https://exemple-analytics.fr"
   >Lien d'exemple</a
 >
 ```
 
 ```js
-const anchorElement = document.getElementById("exampleLink");
-console.log(anchorElement.ping); // Affiche : "https://example-tracking.com https://example-analytics.com"
+const anchorElement = document.getElementById("lienExemple");
+console.log(anchorElement.ping); // Affiche : "https://exemple-tracking.fr https://exemple-analytics.fr"
 ```
 
 ## Spécifications
