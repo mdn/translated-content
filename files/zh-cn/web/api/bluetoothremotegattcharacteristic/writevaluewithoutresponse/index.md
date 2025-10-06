@@ -3,12 +3,12 @@ title: BluetoothRemoteGATTCharacteristic：writeValueWithoutResponse() 方法
 short-title: writeValueWithoutResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse
 l10n:
-  sourceCommit: 0eeaa04378b34bce70e618ee20434e1193cdec17
+  sourceCommit: 5fd5cc8885286bfa5bae8b3e9970e1eab26e941d
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** 方法将 {{domxref("BluetoothRemoteGATTCharacteristic")}} 对象的 `value` 属性设置为给定的 {{JSxRef("ArrayBuffer")}} 中包含的字节，[写入特性值而不返回响应](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue)，并返回兑现为设置结果的 {{JSxRef("Promise")}}。
+**`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** 方法将 {{domxref("BluetoothRemoteGATTCharacteristic")}} 对象的 `value` 属性设置为给定的 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 中包含的字节，[写入特性值而不返回响应](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue)，并返回表示结果的 {{JSxRef("Promise")}}。
 
 ## 语法
 
@@ -19,7 +19,7 @@ writeValueWithoutResponse(value)
 ### 参数
 
 - `value`
-  - : {{jsxref("ArrayBuffer")}}。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}.。
 
 ## 返回值
 
