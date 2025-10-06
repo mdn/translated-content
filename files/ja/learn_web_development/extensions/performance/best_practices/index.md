@@ -1,7 +1,7 @@
 ---
 title: ウェブパフォーマンスの基礎
-slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
-original_slug: Learn/Performance/Web_Performance_Basics
+slug: Learn_web_development/Extensions/Performance/Best_practices
+original_slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
 ---
 
 {{LearnSidebar}}
