@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Media Capture and Streams")}}
 
-{{domxref("MediaStream")}} 接口的 **`addTrack()`** 方法用于向流中添加一个新的轨道。该轨道通过参数类型 {{domxref("MediaStreamTrack")}} 指定。
+{{domxref("MediaStream")}} 接口的 **`addTrack()`** 方法用于向流中添加一个新的轨道。该轨道通过类型为 {{domxref("MediaStreamTrack")}} 的参数指定。
 
 > [!NOTE]
 > 如果指定的轨道已经存在于该流的轨道集合中，该方法不会产生任何效果。
