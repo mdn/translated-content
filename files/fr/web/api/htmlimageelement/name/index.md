@@ -15,7 +15,7 @@ La propriété **`name`** (_obsolète_) de l'interface {{domxref("HTMLImageEleme
 Une chaîne de caractères fournissant un nom par lequel l'image peut être référencée.
 
 > [!WARNING]
-> Cette propriété est obsolète et n'est présente dans la spécification que pour des raisons de compatibilité. Puisqu'elle fonctionne de manière identique à [`id`](/fr/docs/Web/HTML/Global_attributes/id), vous pouvez et devez utiliser cette dernière à la place.
+> Cette propriété est obsolète et n'est présente dans la spécification que pour des raisons de compatibilité. Puisqu'elle fonctionne de manière identique à [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id), vous pouvez et devez utiliser cette dernière à la place.
 
 ## Spécifications
 
