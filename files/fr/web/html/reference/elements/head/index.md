@@ -38,7 +38,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     <tr>
       <th scope="row">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+          ><a href="/fr/docs/Web/HTML/Guides/Content_categories"
             >Catégories de contenu</a
           ></dfn
         >
