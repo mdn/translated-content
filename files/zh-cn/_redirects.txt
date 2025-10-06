@@ -1976,6 +1976,7 @@
 /zh-CN/docs/Web/API/HTMLMetaElement/charset	/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
+/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types	/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/Web/API/History_API/Working_with_the_History_API
 /zh-CN/docs/Web/API/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
@@ -2443,7 +2444,8 @@
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
-/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels	/zh-CN/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /zh-CN/docs/Web/Accessibility/ARIA/Roles	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles
 /zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role

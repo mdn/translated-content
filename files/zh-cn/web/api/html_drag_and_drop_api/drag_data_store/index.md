@@ -1,6 +1,7 @@
 ---
 title: 推荐拖动类型
-slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+slug: Web/API/HTML_Drag_and_Drop_API/Drag_data_store
+original_slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
