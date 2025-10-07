@@ -52,7 +52,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
   - : 本文从一个模块开始，很好地讲述了性能到底是什么——包括我们在考虑性能时需要考虑的工具、指标、API、网络和人群，以及如何使性能成为 Web 开发工作流程的一部分。
 - [用户如何感知性能？](/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
   - : 比网站在毫秒内的响应速度更重要的是，用户对网站的感知速度有多快。这些感知受到页面实际加载时间、空闲、用户交互响应以及滚动和其他动画的平滑度的影响。在本文中，我们将随着最佳实践来提升用户感知（而不是实际时间）并讨论各种加载指标、动画和响应性指标。
-- [Web 性能基础](/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
+- [Web 性能基础](/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices)
   - : 除了 HTML、CSS、JavaScript 和媒体文件这些前端组件之外，还有其他导致应用程序变慢，或在主观和客观上使应用程序变快的因素。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不当做法。我们将在基础层面上介绍这些影响因素，并提供进阶优化其中每一项性能的链接。
 - [HTML 性能特性](/zh-CN/docs/Learn_web_development/Extensions/Performance/HTML)
   - : 标记的某些属性和顺序可能会影响网站性能。通过最大程度地减少 DOM 节点的数量，确保使用最佳顺序和属性（包括样式、脚本、媒体和第三方脚本等内容），可以大大改善用户体验。该文详细介绍了如何使用 HTML 来确保最佳性能。

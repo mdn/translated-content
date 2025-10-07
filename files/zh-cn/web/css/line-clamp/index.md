@@ -1,26 +1,26 @@
 ---
 title: line-clamp
 slug: Web/CSS/line-clamp
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`line-clamp`** [CSS](/zh-CN/docs/Web/CSS) 属性可以把{{Glossary("Block", "块容器")}}中的内容限制为指定的行数。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`line-clamp`** 用于将{{Glossary("block", "区块")}}容器的内容限制为指定的行数。
 
 > [!NOTE]
-> 为了兼容旧版本，供应商前缀的 `-webkit-line-clamp` 属性仅在与 {{cssxref("display")}} 属性设置为 `-webkit-box` 或 `-webkit-inline-box` 且 {{cssxref("box-orient", "-webkit-box-orient")}} 属性设置为 `vertical` 时生效。尽管这些带前缀的属性已被废弃，但这三个属性的相互依赖关系是一种完全规范化的行为，并将继续得到支持。
+> 为了兼容旧版本，带有供应商前缀的 `-webkit-line-clamp` 属性只有在 {{cssxref("display")}} 属性设置为 `-webkit-box` 或 `-webkit-inline-box`，并且 {{cssxref("box-orient", "-webkit-box-orient")}} 属性设置为 `vertical` 时才会生效。尽管这些带前缀的属性已经被弃用，但这三者之间的依赖关系属于明确规范的行为，并且仍会继续受到支持。
 
-它只有在 {{cssxref("display")}} 属性设置成 `-webkit-box` 或者 `-webkit-inline-box` 并且 {{cssxref("box-orient")}} 属性设置成 `vertical`时才有效果。
+在大多数情况下，你还需要将 {{cssxref("overflow")}} 设置为 `hidden`，否则内容不会被裁剪，但在达到指定行数后仍然会显示省略号。
 
-在大部分情况下，也需要设置 {{cssxref("overflow")}} 属性为 `hidden`，否则，里面的内容不会被裁减，并且在内容显示为指定行数后还会显示省略号。
-
-当应用于锚（anchor）元素时，截断可以发生在文本中间，而不必在末尾。
+当应用于锚点元素时，截断可能会发生在文本的中间，而不一定在末尾。
 
 ## 语法
 
 ```css
-/* 关键词值 */
+/* 关键字值 */
 line-clamp: none;
 
-/* 整数值 */
+/* <integer> 值 */
 line-clamp: 3;
 line-clamp: 10;
 
@@ -32,10 +32,12 @@ line-clamp: revert-layer;
 line-clamp: unset;
 ```
 
+### 值
+
 - `none`
-  - : 这个值表明内容显示不会被限制。
+  - : 该值表示内容不会被截断。
 - {{cssxref("integer")}}
-  - : 这个值表明内容显示了多少行之后会被限制。必须大于 0。
+  - : 该值表示内容在指定的行数之后会被截断。其值必须大于 0。
 
 ## 形式定义
 

@@ -4929,6 +4929,13 @@
       "silverskyvicto"
     ]
   },
+  "Learn_web_development/Extensions/Performance/Best_practices": {
+    "modified": "2020-10-25T07:11:50.857Z",
+    "contributors": [
+      "silverskyvicto",
+      "shin1810"
+    ]
+  },
   "Learn_web_development/Extensions/Performance/Measuring_performance": {
     "modified": "2020-11-22T22:20:59.818Z",
     "contributors": [
@@ -4947,13 +4954,6 @@
     "contributors": [
       "succi0303",
       "hamasaki"
-    ]
-  },
-  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
-    "modified": "2020-10-25T07:11:50.857Z",
-    "contributors": [
-      "silverskyvicto",
-      "shin1810"
     ]
   },
   "Learn_web_development/Extensions/Performance/What_is_web_performance": {

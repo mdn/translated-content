@@ -24,5 +24,5 @@ Il n'y a pas de connaissances préalables requises pour commencer ce cours. Note
 
 ## Voir aussi
 
-- [Le cheminement de carrière du développeur Frontend <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaires d'apprentissages du MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_et_intégrations_des_partenaires)</sup>
+- [Le cheminement de carrière du développeur Frontend <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_Partenaires d'apprentissages du MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
   - : [Scrimba](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ vous enseigne tout ce que vous devez savoir pour devenir un développeur web front-end compétent, grâce à des leçons et des défis interactifs ludiques, des enseignant·e·s compétent·e·s et une communauté solidaire. Passez de zéro à votre premier emploi en <i lang="en">front-end</i>&nbsp;! De nombreux éléments du cours sont disponibles en version gratuite et autonome.

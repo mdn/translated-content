@@ -1,71 +1,50 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+l10n:
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-{{JSRef}}
-
-Un objet **`WeakSet`** permet de créer un ensemble dont les _objets_ sont contenus avec des références faibles.
+Un objet **`WeakSet`** est une collection de valeurs pouvant être collectées par le ramasse-miette (<i lang="en">garbage collector</i> en anglais), incluant des objets et des [symboles non enregistrés](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol#symboles_partagés_et_registre_global_des_symboles). Une valeur dans le `WeakSet` ne peut apparaître qu'une seule fois. Elle est unique dans la collection du `WeakSet`.
 
 ## Description
 
-Les `WeakSet` sont des ensembles d'objets. À l'instar de [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) objet présent dans un objet `WeakSet` ne peut apparaître qu'une seule fois, il est unique pour un `WeakSet` donné.
+Les valeurs d'un `WeakSet` doivent pouvoir être collectées par le ramasse-miette. La plupart des {{Glossary("Primitive", "types de données primitives")}} peuvent être créées arbitrairement et n'ont pas de durée de vie, elles ne peuvent donc pas être stockées. Les objets et les [symboles non enregistrés](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol#symboles_partagés_et_registre_global_des_symboles) peuvent être stockés car ils sont collectables par le ramasse-miette.
 
-Les principales différences avec l'objet [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) sont les suivantes&nbsp;:
+Les principales différences avec l'objet {{jsxref("Set")}} sont&nbsp;:
 
-- Contrairement aux `Sets`, les `WeakSets` sont des **ensembles uniquement constitués d'objets** et ne peuvent pas contenir des valeurs de n'importe quel type.
-- L'objet `WeakSet` est _faible_&nbsp;: les références vers les objets de l'ensemble sont des références faibles. Si aucune autre référence vers l'objet n'est présente en dehors du `WeakSet`, l'objet pourra alors être nettoyé par le ramasse-miette.
+- Les `WeakSet` sont des collections **uniquement d'objets et de symboles**. Ils ne peuvent pas contenir des valeurs de n'importe quel type, contrairement aux {{jsxref("Set")}}.
+- Le `WeakSet` est _faible_, ce qui signifie que les références aux objets dans un `WeakSet` sont maintenues _faiblement_. Si aucune autre référence à une valeur stockée dans le `WeakSet` n'existe, ces valeurs peuvent être collectées par le ramasse-miette.
 
   > [!NOTE]
-  > Cela signifie également qu'on ne peut pas lister les objets contenus à un instant donné dans l'ensemble. Les objets `WeakSets` ne sont pas énumérables.
+  > Cela signifie également qu'il n'existe pas de liste des valeurs actuellement stockées dans la collection. Les `WeakSet` ne sont pas énumérables.
 
-### Cas d'usage&nbsp;: détecter les références circulaires
+### Égalité des clés
 
-Les fonctions récursives doivent faire attention aux structures de données circulaires qu'elles consommeraient. Les objets `WeakSets` peuvent être utilisés pour ça&nbsp;:
-
-```js
-// Appeler un callback sur ce qui est stocké dans un objet
-function execRecursively(fn, subject, _refs = null) {
-  if (!_refs) _refs = new WeakSet();
-
-  // On évite une récursion infinie
-  if (_refs.has(subject)) return;
-
-  fn(subject);
-  if ("object" === typeof subject) {
-    _refs.add(subject);
-    for (let key in subject) execRecursively(fn, subject[key], _refs);
-  }
-}
-
-const toto = {
-  toto: "Toto",
-  truc: {
-    truc: "Truc",
-  },
-};
-
-toto.truc.machin = toto; // Référence circulaire !
-execRecursively((obj) => console.log(obj), toto);
-```
-
-Ici, on a un objet `WeakSet` qui est créé lors de la première exécution et qui est passé ensuite à chaque appel qui suit (via l'argument interne `_refs`).
-
-Le nombre d'objets ou l'ordre de parcours n'a pas d'importance et un objet `WeakSet` est donc plus adapté (y compris en termes de performances) qu'un [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set), notamment si un grand nombre d'objets sont concernés.
+Comme pour un `Set`, l'égalité des valeurs est basée sur l'algorithme [SameValueZero](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#égalité_de_valeurs_nulles), qui est équivalent à l'opérateur `===` car un `WeakSet` ne peut contenir que des objets et des symboles. Cela signifie que pour les objets, l'égalité est basée sur l'identité de l'objet. Ils sont comparés par [référence](/fr/docs/Glossary/Object_reference), et non par valeur.
 
 ## Constructeur
 
-- [`WeakSet()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet)
+- {{jsxref("WeakSet/WeakSet", "WeakSet()")}}
   - : Crée un nouvel objet `WeakSet`.
+
+## Propriétés d'instance
+
+Ces propriétés sont définies sur le `WeakSet.prototype` et partagées par toutes les instances de `WeakSet`.
+
+- {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `WeakSet`, la valeur initiale est le constructeur {{jsxref("WeakSet/WeakSet", "WeakSet")}}.
+- `WeakSet.prototype[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"WeakSet"`. Cette propriété est utilisée dans {{jsxref("Object.prototype.toString()")}}.
 
 ## Méthodes des instances
 
-- [`WeakSet.prototype.add(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add)
+- {{jsxref("WeakSet.prototype.add()")}}
   - : Ajoute `valeur` à l'ensemble `WeakSet`.
-- [`WeakSet.prototype.delete(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete)
+- {{jsxref("WeakSet.prototype.delete()")}}
   - : Retire `valeur` de l'ensemble `WeakSet`. Suite à cette opération, `WeakSet.prototype.has(valeur)` renverra `false`.
-- [`WeakSet.prototype.has(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has)
-  - : Renvoie un booléen indiquant si `valeur` est présente au sein de l'ensemble `WeakSet`.
+- {{jsxref("WeakSet.prototype.has()")}}
+  - : Retourne un booléen indiquant si `valeur` est (ou non) au sein de l'ensemble `WeakSet`.
 
 ## Exemples
 
@@ -89,6 +68,43 @@ ws.has(truc); // toujours true
 
 On notera que `toto !== truc`. Bien que ce soient des objets similaires, ce ne sont pas _**les mêmes objets**_. Aussi, les deux sont ajoutés à l'ensemble.
 
+### Détecter les références circulaires
+
+Les fonctions récursives doivent faire attention aux structures de données circulaires qu'elles consommeraient. Les objets `WeakSets` peuvent être utilisés pour ça&nbsp;:
+
+```js
+// Appeler un callback sur ce qui est stocké dans un objet
+function execRecursively(fn, subject, _refs = new WeakSet()) {
+  // On évite une récursion infinie
+  if (_refs.has(subject)) {
+    return;
+  }
+
+  fn(subject);
+  if (typeof subject === "object" && subject) {
+    _refs.add(subject);
+    for (const key in subject) {
+      execRecursively(fn, subject[key], _refs);
+    }
+    _refs.delete(subject);
+  }
+}
+
+const toto = {
+  toto: "Toto",
+  truc: {
+    truc: "Truc",
+  },
+};
+
+toto.truc.machin = toto; // Référence circulaire !
+execRecursively((obj) => console.log(obj), toto);
+```
+
+Ici, on a un objet `WeakSet` qui est créé lors de la première exécution et qui est passé ensuite à chaque appel qui suit (via l'argument interne `_refs`).
+
+Le nombre d'objets ou l'ordre de parcours n'a pas d'importance et un objet `WeakSet` est donc plus adapté (y compris en termes de performances) qu'un {{jsxref("Set")}}, notamment si un grand nombre d'objets sont concernés.
+
 ## Spécifications
 
 {{Specifications}}
@@ -99,7 +115,7 @@ On notera que `toto !== truc`. Bien que ce soient des objets similaires, ce ne s
 
 ## Voir aussi
 
-- [Une prothèse d'émulation pour `WeakSet` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#weakset)
-- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+- [Une prothèse d'émulation pour `WeakSet` avec la bibliothèque `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#weakset)
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}

@@ -99,7 +99,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-查看 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 了解可拖拽的常见数据类型（如文本、HTML、链接和文件），移步 [拖拽数据](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata) 获取更多有关拖拽数据的信息。
+参见[使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)，以了解更多信息。
 
 ### 定义拖拽图像
 
@@ -233,6 +233,6 @@ function dragstart_handler(ev) {
 ## 参见
 
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐拖拽元素类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推荐拖拽元素类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [HTML5 Living Standard：HTML5 拖放操作](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [来自 CanIUse 的拖放兼容数据](http://caniuse.com/#search=draganddrop)
