@@ -19,7 +19,7 @@ l10n:
 
 ## 现实世界命中检测
 
-“LIDAR”这个缩写词根据其实现细节的不同有多种定义，但最终结果是相同的。最常见的是指“_Laser Imaging, Detection, And Ranging_”（激光光成像，检测和测距）或“_LIght Detection and Ranging_”（光检测与测距）。
+“LIDAR”这个缩写词根据其实现细节的不同有多种定义，但最终结果是相同的。最常见的是指“_激光光成像、检测和测距_”（_Laser Imaging, Detection, And Ranging_）或“_光检测和测距_”（_LIght Detection and Ranging_）。
 
 与现实世界的碰撞检测是一个不同的问题，可能不仅涉及解释设备摄像头（如果可用）的图像，还可能涉及多个额外的传感器。一些设备包含红外传感器以帮助测距，而另一些设备则提供强大的[光学雷达](https://zh.wikipedia.org/wiki/光学雷达)系统，该系统使用激光（通常是人眼不可见的红外激光）来确定到世界中物体的距离。
 
