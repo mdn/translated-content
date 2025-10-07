@@ -1329,7 +1329,7 @@
 /zh-CN/docs/Learn/Performance/Measuring_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance
 /zh-CN/docs/Learn/Performance/Multimedia	/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia
 /zh-CN/docs/Learn/Performance/Perceived_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance
-/zh-CN/docs/Learn/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/zh-CN/docs/Learn/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
 /zh-CN/docs/Learn/Performance/What_is_web_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /zh-CN/docs/Learn/Performance/business_case_for_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
 /zh-CN/docs/Learn/Performance/video	/zh-CN/docs/Learn_web_development/Extensions/Performance/video
@@ -1450,6 +1450,7 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
+/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
