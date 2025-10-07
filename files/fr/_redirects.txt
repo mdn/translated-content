@@ -5701,8 +5701,6 @@
 /fr/docs/Web/JavaScript/Data_structures	/fr/docs/Web/JavaScript/Guide/Data_structures
 /fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties	/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
 /fr/docs/Web/JavaScript/Equality_comparisons_and_sameness	/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness
-/fr/docs/Web/JavaScript/EventLoop	/fr/docs/Web/JavaScript/Reference/Execution_model
-/fr/docs/Web/JavaScript/Event_loop	/fr/docs/Web/JavaScript/Reference/Execution_model
 /fr/docs/Web/JavaScript/Extensions_JavaScript_Microsoft/debugger	/fr/docs/Web/JavaScript/Reference/Statements/debugger
 /fr/docs/Web/JavaScript/Extensions_Microsoft/debugger	/fr/docs/Web/JavaScript/Reference/Statements/debugger
 /fr/docs/Web/JavaScript/Gestion_de_la_mémoire	/fr/docs/Web/JavaScript/Guide/Memory_management
