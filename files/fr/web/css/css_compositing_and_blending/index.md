@@ -16,11 +16,11 @@ Dans cet exemple, chaque boîte possède une bordure, deux images de fond rayée
 ```html hidden live-sample___compositing
 <section>
   <div><span>Normal, sans fusion</span></div>
-    <div><span>Multiplie les couleurs</span></div>
-    <div><span>Multiplication selon la couleur d'arrière-plan</span></div>
-    <div>Normal, sans fusion</div>
-    <div>Multiplie les couleurs</div>
-    <div>Multiplication selon la couleur d'arrière-plan</div>
+  <div><span>Multiplie les couleurs</span></div>
+  <div><span>Multiplication selon la couleur d'arrière-plan</span></div>
+  <div>Normal, sans fusion</div>
+  <div>Multiplie les couleurs</div>
+  <div>Multiplication selon la couleur d'arrière-plan</div>
 </section>
 ```
 
