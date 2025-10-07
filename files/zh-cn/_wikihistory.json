@@ -4496,6 +4496,13 @@
       "yangchongduo"
     ]
   },
+  "Learn_web_development/Extensions/Performance/Best_practices": {
+    "modified": "2020-07-16T22:40:42.886Z",
+    "contributors": [
+      "shuiRong",
+      "creative_fish"
+    ]
+  },
   "Learn_web_development/Extensions/Performance/CSS": {
     "modified": "2020-07-16T22:40:41.520Z",
     "contributors": [
@@ -4509,13 +4516,6 @@
     "modified": "2020-07-16T22:40:43.760Z",
     "contributors": [
       "biqing"
-    ]
-  },
-  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
-    "modified": "2020-07-16T22:40:42.886Z",
-    "contributors": [
-      "shuiRong",
-      "creative_fish"
     ]
   },
   "Learn_web_development/Extensions/Server-side": {
