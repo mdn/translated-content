@@ -1,11 +1,13 @@
 ---
 title: translate
 slug: Web/CSS/translate
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`translate`** 允许你单独声明平移变换，并独立于 {{cssxref("transform")}} 属性。这在一些典型的用户界面上更好用，而且这样就无需在 `transform` 中声明该函数并记住转换函数的确切顺序了。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`translate`** 允许你单独地指定平移变换，而不必依赖 {{CSSxRef("transform")}} 属性。这种方式更符合典型的用户界面使用场景，并且避免了在 `transform` 值中必须记住各个变换函数的精确顺序。
 
-{{InteractiveExample("CSS Demo: translate")}}
+{{InteractiveExample("CSS 演示：translate")}}
 
 ```css interactive-example-choice
 translate: none;
@@ -67,32 +69,32 @@ translate: 20px 4rem 150px;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -125,19 +127,19 @@ translate: unset;
 ### 值
 
 - 单个 {{cssxref("&lt;length-percentage&gt;")}} 值
-  - : 一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，指沿 X 轴平移。等同于在 `translate()` 函数（2D 平移）中指定单个值。
+  - : 一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，用于指定沿 X 轴的平移。等价于只指定单个值的 `translate()`（2D 平移）函数。
 - 两个 {{cssxref("&lt;length-percentage&gt;")}} 值
-  - : 两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 表示在二维上分别按照指定 X 轴和 Y 轴的值进行的平移。等同于在 `translate()` 函数（2D 平移）中函数指定两个值。
+  - : 两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别用于指定 2D 平移的 X 轴和 Y 轴平移值（分别对应 X、Y 轴）。等价于带有两个值的 `translate()` （2D 平移）函数。
 - 三个值
-  - : 两个 {{cssxref("&lt;length-percentage&gt;")}} 和单个的 {{cssxref("&lt;length&gt;")}} 分别指定 X 轴、Y 轴、Z 轴的值进行三维平移。等同于 `translate3d()` 函数（3D 平移）。
+  - : 两个 {{cssxref("&lt;length-percentage&gt;")}} 值和单个 {{cssxref("&lt;length&gt;")}} 值，分别指定 3D 平移的 X、Y 和 Z 轴平移值（分别对应 X、Y、Z 轴）。等价于 `translate3d()`（3D 平移）函数。
 - `none`
-  - : 表示不应用平移效果。
+  - : 表示不应用任何平移。
 
 ## 形式定义
 
 {{CSSInfo}}
 
-### 形式语法
+## 形式语法
 
 {{CSSSyntax}}
 
@@ -145,7 +147,7 @@ translate: unset;
 
 ### 悬停时平移元素
 
-此示例显示如何使用 `translate` 属性在 X、Y、Z 三个轴上移动元素。第一个盒子沿 X 轴移动，第二个沿 X、Y 轴方向，第三个盒子沿着 X、Y、Z 轴，并且由于向父元素添加了 {{cssxref('perspective')}}，看起来是向着观察者移动。
+此示例展示了如何使用 `translate` 属性在三个轴上移动元素。第一个方块沿 X 轴 移动，第二个方块沿 X 轴和 Y 轴 移动。第三个方块沿 X、Y 和 Z 轴 移动，并且由于在父元素上添加了 {{cssxref('perspective')}}，它看起来像是朝向观察者移动。
 
 #### HTML
 
@@ -166,8 +168,8 @@ translate: unset;
   gap: 1em;
 }
 .wrapper > div {
-  width: 9em;
-  line-height: 8em;
+  width: 7em;
+  line-height: 7em;
   text-align: center;
   transition: 0.5s ease-in-out;
   border: 3px dotted;
@@ -203,4 +205,4 @@ translate: unset;
 - {{cssxref('rotate')}}
 - {{cssxref('transform')}}
 
-注意：skew 不是一个独立的变换属性。
+注意：skew 不是一个独立的变换值。
