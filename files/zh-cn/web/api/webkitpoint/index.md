@@ -21,7 +21,7 @@ l10n:
 
 ## 规范
 
-[2009 年 3 月 20 日 CSS 2D Transforms Module Level 3 的废弃工作草案](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/)中定义了该类，但该类并未在任何现行规范中存在。
+[2009 年 3 月 20 日 CSS 2D Transforms Module 第 3 版的废弃工作草案](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/)中定义了该类，但该类并未在任何现行规范中存在。
 
 ## 浏览器兼容性
 
