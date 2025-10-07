@@ -22,7 +22,7 @@ getDescriptors(bluetoothDescriptorUUID)
 
 ## 返回值
 
-{{jsxref("Promise")}}，且该 promise 将会兑现为包含 {{domxref("BluetoothRemoteGATTDescriptor")}} 对象的数组（{{jsxref("Array")}}）。
+{{jsxref("Promise")}}，其会兑现为包含 {{domxref("BluetoothRemoteGATTDescriptor")}} 对象的数组（{{jsxref("Array")}}）。
 
 ## 规范
 
