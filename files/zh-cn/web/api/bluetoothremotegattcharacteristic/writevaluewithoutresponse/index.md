@@ -19,7 +19,7 @@ writeValueWithoutResponse(value)
 ### 参数
 
 - `value`
-  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}.。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。
 
 ## 返回值
 
