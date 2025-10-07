@@ -205,4 +205,4 @@ translate: unset;
 - {{cssxref('rotate')}}
 - {{cssxref('transform')}}
 
-注意：skew 不是一个独立的变换属性。
+注意：skew 不是一个独立的变换值。
