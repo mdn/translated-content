@@ -9,8 +9,7 @@ l10n:
 {{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 {{domxref("EventSource")}} 인터페이스의 읽기 전용 속성인
- **`readyState`** 는 연결 상태를 나타내는 숫자를 반환합니다.
-
+**`readyState`** 는 연결 상태를 나타내는 숫자를 반환합니다.
 
 ## 값
 
