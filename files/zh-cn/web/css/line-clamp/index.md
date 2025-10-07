@@ -55,9 +55,8 @@ line-clamp: unset;
 
 ```html
 <p>
-  在此示例中，<code>-webkit-line-clamp</code> 属性被设置为
-  <code>3</code
-  >，这意味着文本在超过两行后将被截断。当前文本的截断处将显示省略号。
+  在此示例中，<code>-webkit-line-clamp</code> 属性设置为
+  <code>2</code>，即文本在超过两行后将被截断。文本截断处将显示省略号。
 </p>
 ```
 
@@ -68,7 +67,7 @@ p {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 ```
