@@ -3,7 +3,7 @@ title: ContactAddress：recipient 属性
 short-title: recipient
 slug: Web/API/ContactAddress/recipient
 l10n:
-  sourceCommit: fffaf01b3968b14820cdefdd988daecaf58fb286
+  sourceCommit: 8a258b0c01e60c001f6359e0c43e2135ce9c3c97
 ---
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
