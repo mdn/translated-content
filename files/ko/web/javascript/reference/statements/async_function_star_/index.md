@@ -1,6 +1,8 @@
 ---
 title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 {{jsSidebar("Statements")}}
