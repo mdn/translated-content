@@ -8,7 +8,7 @@ l10n:
 
 **`Reflect.has()`** 静态方法的作用类似于 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 运算符，但它以函数的形式实现。
 
-{{InteractiveExample("JavaScript 示例：Reflect.has()")}}
+{{InteractiveExample("JavaScript 演示：Reflect.has()")}}
 
 ```js interactive-example
 const object = {
@@ -16,13 +16,13 @@ const object = {
 };
 
 console.log(Reflect.has(object, "property1"));
-// 预期输出：true
+// 期望输出：true
 
 console.log(Reflect.has(object, "property2"));
-// 预期输出：false
+// 期望输出：false
 
 console.log(Reflect.has(object, "toString"));
-// 预期输出：true
+// 期望输出：true
 ```
 
 ## 语法
