@@ -22,7 +22,7 @@ contains(token)
 
 ### 返回值
 
-布尔值。如果调用的列表中包含 `token`，则为 `true`，否则为 `false`。
+布尔值，如果调用的列表中包含 `token`，则为 `true`，否则为 `false`。
 
 ## 示例
 
@@ -39,8 +39,8 @@ contains(token)
 ```js
 const span = document.querySelector("span");
 span.textContent = span.classList.contains("c")
-  ? "classList 中包含 'c'"
-  : "classList 中不包含 'c'";
+  ? "classList 中包含“c”"
+  : "classList 中不包含“c”";
 ```
 
 输出结果如下：
