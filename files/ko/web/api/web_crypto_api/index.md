@@ -26,7 +26,7 @@ slug: Web/API/Web_Crypto_API
   - : 강력한 난수 생성기 및 {{domxref("SubtleCrypto")}} 객체를 통한 암호화 기본 기능을 제공합니다.
     Crypto는 {{domxref("Window.crypto")}} 또는 {{domxref("WorkerGlobalScope.crypto")}}를 사용해서 전역 범위에서 접근할 수 있습니다.
 - {{domxref("SubtleCrypto")}}
-  - : 키 생성, 암호화, 복호화와 키 랩/언랩 등을 위한 저수준 암호화를 제공하는 객체입니다.
+  - : 키 생성, 암호화, 복호화와 키 랩/언랩 등을 위한 저수준 암호화를 제공하는 객체를 나타냅니다.
 - {{domxref("CryptoKey")}}
   - : {{domxref("SubtleCrypto")}} 인터페이스의 {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}} 메서드들로부터 얻어진 암호화 키를 나타냅니다.
 
@@ -45,27 +45,27 @@ slug: Web/API/Web_Crypto_API
 - {{domxref("EcKeyGenParams")}}
   - : 타원 곡선 기반 키 쌍을 생성할 때 [ECDSA](/ko/docs/Web/API/SubtleCrypto/sign#ecdsa) 혹은 [ECDH](/ko/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 알고리즘을 사용하는 경우, {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("EcKeyImportParams")}}
-  - : 타원 곡선 기반 키 쌍을 생성할 때 [ECDSA](/ko/docs/Web/API/SubtleCrypto/sign#ecdsa) 혹은 [ECDH](/ko/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 알고리즘을 사용하는 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : 타원 곡선 기반 키 쌍을 생성할 때 [ECDSA](/ko/docs/Web/API/SubtleCrypto/sign#ecdsa) 혹은 [ECDH](/ko/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 알고리즘을 사용하는 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("EcdhKeyDeriveParams")}}
-  - : [ECDH](/ko/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [ECDH](/ko/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("EcdsaParams")}}
-  - : [ECDSA](/ko/docs/Web/API/SubtleCrypto/sign#ecdsa) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.sign()")}}, {{domxref("SubtleCrypto.verify()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [ECDSA](/ko/docs/Web/API/SubtleCrypto/sign#ecdsa) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.sign()")}}, {{domxref("SubtleCrypto.verify()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("HkdfParams")}}
-  - : [HKDF](/ko/docs/Web/API/SubtleCrypto/deriveKey#hkdf) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [HKDF](/ko/docs/Web/API/SubtleCrypto/deriveKey#hkdf) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("HmacImportParams")}}
-  - : [HMAC](/ko/docs/Web/API/SubtleCrypto/sign#hmac) 알고리즘에 대한 키를 생성할 때 {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [HMAC](/ko/docs/Web/API/SubtleCrypto/sign#hmac) 알고리즘에 대한 키를 생성할 때 {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("HmacKeyGenParams")}}
-  - : [HMAC](/ko/docs/Web/API/SubtleCrypto/sign#hmac) 알고리즘에 대한 키를 생성할 때 {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [HMAC](/ko/docs/Web/API/SubtleCrypto/sign#hmac) 알고리즘에 대한 키를 생성할 때 {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("Pbkdf2Params")}}
-  - : [PBKDF2](/ko/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [PBKDF2](/ko/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaHashedImportParams")}}
-  - : RSA 기반의 쌍을 가져올 때, 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나로 지정된 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : RSA 기반의 쌍을 가져올 때, 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나로 지정된 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaHashedKeyGenParams")}}
-  - : RSA 기반의 키 쌍을 생성할 때 사용하는 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나일 경우, {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : RSA 기반의 키 쌍을 생성할 때 사용하는 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나일 경우, {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaOaepParams")}}
   - : [RSA_OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaPssParams")}}
-  - : [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.sign()")}}, {{domxref("SubtleCrypto.verify()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.sign()")}}, {{domxref("SubtleCrypto.verify()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 
 ### 다른 인터페이스에 대한 확장
 
