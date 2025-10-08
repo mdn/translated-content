@@ -26,7 +26,7 @@ preventSilentAccess()
 
 ## 返回值
 
-{{jsxref("Promise")}}，且其将兑现为 `undefined`。
+{{jsxref("Promise")}}，会兑现为 `undefined`。
 
 ## 规范
 
