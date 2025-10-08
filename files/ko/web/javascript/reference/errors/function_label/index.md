@@ -54,7 +54,7 @@ const createObj = () => {
 };
 ```
 
-여기서 `{...}`는 실제로 객체 리터럴이 아니라 [화살표 함수](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)의 블록 본문이므로 `greet:` 는 레이블이 됩니다. 이를 해결하려면 객체 리터럴을 괄호로 감싸야 합니다.
+여기서 `{...}`는 실제로 객체 리터럴이 아니라 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)의 블록 본문이므로 `greet:` 는 레이블이 됩니다. 이를 해결하려면 객체 리터럴을 괄호로 감싸야 합니다.
 
 ```js-nolint example-good
 const createObj = () => ({
@@ -64,7 +64,7 @@ const createObj = () => ({
 });
 ```
 
-객체 리터럴에 [메서드 구문](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) 을 사용하면 이러한 함정을 피할 수 있습니다.
+객체 리터럴에 [메서드 구문](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions) 을 사용하면 이러한 함정을 피할 수 있습니다.
 
 ```js example-good
 const createObj = () => ({
