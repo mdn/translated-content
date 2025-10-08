@@ -111,7 +111,7 @@ jobs:
         working-directory: content
         run: |
           echo "Pull request:"
-          echo "https://github.com/mdn/translated-content/pull/${{ steps.check.outputs.PR_NUMBER }}"
+          echo "https://github.com/mdn/translated-content/pull/$PR_NUMBER"
 
           node scripts/analyze-pr-build.js \
             --prefix="$PREFIX" \
