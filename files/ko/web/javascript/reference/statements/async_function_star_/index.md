@@ -156,12 +156,12 @@ console.log((await files.next()).value);
 
 ## 같이 보기
 
-- [Functions](/ko/docs/Web/JavaScript/Guide/Functions) guide
-- [Iterators and generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
-- [Functions](/ko/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions) 안내서
+- [반복기 및 생성기](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) 안내서
+- [함수](/ko/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("AsyncGeneratorFunction")}}
-- [`async function*` expression](/ko/docs/Web/JavaScript/Reference/Operators/async_function*)
-- {{jsxref("Statements/function", "function")}}
+- [`async function*` 표현식](/ko/docs/Web/JavaScript/Reference/Operators/async_function*)
+- {{jsxref("Statements/function", "함수 선언")}}
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function", "async function")}}
 - [Iteration protocols](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
