@@ -2,7 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
 {{JSRef}}
@@ -17,7 +17,7 @@ l10n:
 
 ### 값 동등성
 
-값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다.
+값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다. 또한 객체 키의 경우 동일성은 객체의 식별성(참조)에 기반합니다. 즉, 객체는 값이 아니라 참조로 비교됩니다. 예시는 [Set 객체 사용하기](#set-객체-사용하기)를 참고하세요.
 
 ### 성능
 
@@ -127,7 +127,7 @@ interface GPUSupportedFeatures {
 
 유사 `Set` 객체는 읽기 전용이거나 읽기-쓰기 가능합니다(위의 IDL에서 `readonly` 키워드 참조).
 
-- 읽기 전용 `Set` 유사 객체에는 [`size`](#set.prototype.size) 속성과 메서드 [`entries()`](#set.prototype.entries), [`forEach()`](#set. prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`Symbol.iterator()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)가 있습니다.
+- 읽기 전용 `Set` 유사 객체에는 [`size`](#set.prototype.size) 속성과 메서드 [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`Symbol.iterator()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)가 있습니다.
 - 쓰기 가능한 `Set` 유사 객체에는 추가적으로 [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), [`add()`](#set.prototype.add) 메서드가 있습니다.
 
 메서드와 속성은 항목의 유형에 대한 제한을 제외하고는 `Set`의 동등한 개체처럼 동일한 동작을 합니다.
@@ -403,8 +403,8 @@ console.assert(set.size === array.length);
 
 ## 같이 보기
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
-- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
+- [`core-js`의 `Set` 폴리필](https://github.com/zloirock/core-js#set)
+- [`es-shims`의 `Set` 폴리필](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
