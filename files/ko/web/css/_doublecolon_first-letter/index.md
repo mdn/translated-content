@@ -1,6 +1,8 @@
 ---
 title: ::first-letter
 slug: Web/CSS/::first-letter
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`::first-letter`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [블록 컨테이너](/ko/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers)의 첫 번째 줄에 있는 첫 글자에 스타일을 적용합니다. 단, 그 앞에 다른 콘텐츠(이미지나 인라인 테이블)가 없는 경우에만 적용됩니다.
@@ -32,7 +34,7 @@ p::first-letter {
 
 - 첫 글자 앞뒤에 오는 구두점은 매칭에 포함됩니다. 구두점에는 유니코드에서 정의된 여는 괄호(Ps), 닫는 괄호(Pe), 시작 따옴표(Pi), 끝 따옴표(Pf), 기타 구두점(Po) 클래스에 해당하는 문자가 포함됩니다.
 - 일부 언어에는 항상 함께 대문자로 쓰이는 이중 문자(digraph)가 있습니다. 예를 들어 네덜란드어의 `IJ`가 그러합니다. 이런 경우 `::first-letter` 의사 요소는 두 글자를 모두 매칭해야 합니다.
-- {{ cssxref("::before") }} 의사 요소와 {{ cssxref("content") }} 속성을 조합해 요소 앞에 텍스트를 삽입할 수 있습니다. 이 경우 ::first-letter는 삽입된 콘텐츠의 첫 글자를 매칭합니다.
+- {{ cssxref("::before") }} 의사 요소와 {{ cssxref("content") }} 속성을 조합해 요소 앞에 텍스트를 삽입할 수 있습니다. 이 경우 `::first-letter`는 삽입된 콘텐츠의 첫 글자를 매칭합니다.
 
 > [!NOTE]
 > CSS는 [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 `::first-letter`와 같이 콜론 두 개(`::`)를 사용하는 표기법을 도입했습니다. 하위 호환성을 위해 브라우저는 이전에 도입된 단일 콜론(`:first-letter`) 표기도 지원합니다.
