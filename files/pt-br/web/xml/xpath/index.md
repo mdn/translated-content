@@ -31,9 +31,9 @@ atributos XML.
 Os [guias XPath](/pt-BR/docs/Web/XML/XPath/Guides) abordam trechos práticos de
 código e descrevem como usar XPath em JavaScript.
 
-- [Introdução ao uso do XPath em JavaScript](/pt-BR/docs/Web/XML/XPath/Guides/Introdução_ao_uso_de_XPath_em_JavaScript)
+- [Introdução ao uso do XPath em JavaScript](/pt-BR/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : Descreve um uso não XSLT do XPath.
-- [trechos de código XPath](/pt-BR/docs/Web/XML/XPath/Guides/Snippets)
+- [Trechos de código XPath](/pt-BR/docs/Web/XML/XPath/Guides/Snippets)
   - : Estas são funções utilitárias JavaScript, que podem ser usadas em seu
     próprio código, com base nas APIs XPath.
 
