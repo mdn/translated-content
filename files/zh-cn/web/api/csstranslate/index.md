@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model) 的 **`CSSTranslate`** 接口表示 CSS 中 {{CSSXRef('transform')}} 属性的单个 [translate()](/zh-CN/docs/Web/CSS/transform-function/translate) 值。它继承自其 {{domxref('CSSTransformValue')}} 父接口。
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model) 的 **`CSSTranslate`** 接口表示 CSS 中 {{CSSXRef('transform')}} 属性的单个 [translate()](/zh-CN/docs/Web/CSS/transform-function/translate) 值。它从 {{domxref('CSSTransformValue')}} 父接口继承属性和方法。
 
 {{InheritanceDiagram}}
 
