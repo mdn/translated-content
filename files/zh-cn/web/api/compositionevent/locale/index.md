@@ -15,11 +15,11 @@ l10n:
 
 ## 值
 
-字符串。该字符串将表示当前输入法的区域设置。
+表示当前输入法的区域设置的字符串。
 
 ## 规范
 
-此属性曾出现在不同规范的早期版本中，现在仅保留以供兼容性使用，且在创建 {{domxref("CompositionEvent")}} 时设置其值的方式时[未明确定义的](https://github.com/w3c/uievents/issues/48)。
+此属性曾出现在不同规范的早期版本中，现在仅保留以供兼容性目的，且在创建 {{domxref("CompositionEvent")}} 时设置其值的方式是[未明确定义的](https://github.com/w3c/uievents/issues/48)。
 
 ## 浏览器兼容性
 
