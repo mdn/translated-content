@@ -9,7 +9,7 @@ l10n:
 
 **`async function*`** 선언은 주어진 이름으로 새 비동기 제너레이터 함수의 {{Glossary("binding")}}을 생성합니다.
 
-또한 [`async function*` expression](/ko/docs/Web/JavaScript/Reference/Operators/async_function*)을 사용해서 비동기 제너레이터 함수를 선언할 수 있습니다.
+또한 [`async function*` 표현식](/ko/docs/Web/JavaScript/Reference/Operators/async_function*)을 사용해서 비동기 제너레이터 함수를 선언할 수 있습니다.
 
 {{InteractiveExample("JavaScript Demo: async function* declaration", "taller")}}
 
@@ -51,7 +51,7 @@ async function* name(param0, param1, /* …, */ paramN) {
 > 비동기 제너레이터 함수는 그에 대응하는 화살표 함수 형태가 없습니다.
 
 > [!NOTE]
-> `function`과 `*`는 별개의 토큰이므로 공백이나 [줄바꿈 문자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#white_space)로 분리할 수 있습니다. 하지만 `async`와 `function` 사이에는 줄바꿈 문자가 올 수 없습니다. 그렇지 않으면 세미콜론이 [자동으로 삽입](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)되어, `async`는 식별자가 되고 나머지는 `function\*` 선언이 됩니다.
+> `function`과 `*`는 별개의 토큰이므로 공백이나 [줄바꿈 문자](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#white_space)로 분리할 수 있습니다. 하지만 `async`와 `function` 사이에는 줄바꿈 문자가 올 수 없습니다. 그렇지 않으면 세미콜론이 [자동으로 삽입](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)되어, `async`는 식별자가 되고 나머지는 `function*` 선언이 됩니다.
 
 ### 매개변수
 
