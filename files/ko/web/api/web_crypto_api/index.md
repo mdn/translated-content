@@ -1,8 +1,6 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
-page-type: web-api-overview
-browser-compat: api.Crypto
 ---
 
 {{DefaultAPISidebar("Web Crypto API")}}{{securecontext_header}}{{AvailableInWorkers}}
@@ -35,11 +33,11 @@ browser-compat: api.Crypto
 ### 객체 파라미터
 
 - {{domxref("AesCbcParams")}}
-  - : [AES-CBC](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)  알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
+  - : [AES-CBC](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("AesCtrParams")}}
-  - : [AES-CTR](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)  알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
+  - : [AES-CTR](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("AesGcmParams")}}
-  - : [AES-GCM](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)  알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
+  - : [AES-GCM](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터로 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("AesKeyGenParams")}}
   - : AES 키를 생성할 때 사용되는 알고리즘이 [AES-CBC](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-CTR](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-GCM](/ko/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), [AES-KW](/ko/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) 중 하나일 경우, {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("CryptoKeyPair")}}
@@ -53,13 +51,13 @@ browser-compat: api.Crypto
 - {{domxref("EcdsaParams")}}
   - : [ECDSA](/ko/docs/Web/API/SubtleCrypto/sign#ecdsa) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.sign()")}}, {{domxref("SubtleCrypto.verify()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
 - {{domxref("HkdfParams")}}
-  - : [HKDF](/ko/docs/Web/API/SubtleCrypto/deriveKey#hkdf)  알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [HKDF](/ko/docs/Web/API/SubtleCrypto/deriveKey#hkdf) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
 - {{domxref("HmacImportParams")}}
   - : [HMAC](/ko/docs/Web/API/SubtleCrypto/sign#hmac) 알고리즘에 대한 키를 생성할 때 {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
 - {{domxref("HmacKeyGenParams")}}
   - : [HMAC](/ko/docs/Web/API/SubtleCrypto/sign#hmac) 알고리즘에 대한 키를 생성할 때 {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
 - {{domxref("Pbkdf2Params")}}
-  - : [PBKDF2](/ko/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2)  알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
+  - : [PBKDF2](/ko/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
 - {{domxref("RsaHashedImportParams")}}
   - : RSA 기반의 쌍을 가져올 때, 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나로 지정된 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체입니다.
 - {{domxref("RsaHashedKeyGenParams")}}
