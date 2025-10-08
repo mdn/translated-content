@@ -84,7 +84,7 @@ foo()
 
 yield된 프로미스가 거부되면 이터레이터 결과 또한 거부되기 때문에, `Error: failed`가 로그될 것입니다. 비동기 제너레이터 이행 결과의 `value` 속성은 또 다른 프로미스가 아닙니다.
 
-`async function*` 선언은 {{jsxref("Statements/function", "function")}} 선언과 비슷하게 동작합니다 — 스코프의 최상단으로 [호이스팅](/ko/docs/Glossary/Hoisting)되어 스코프 내 어디서든 호출할 수 있으며, 특정 맥락에서만 다시 선언할 수 있습니다.
+`async function*` 선언은 {{jsxref("Statements/function", "function")}} 선언과 비슷하게 동작합니다 — 범위의 최상단으로 [호이스팅](/ko/docs/Glossary/Hoisting)되어 범위 내 어디서든 호출할 수 있으며, 특정 맥락에서만 다시 선언할 수 있습니다.
 
 ## 예제
 
