@@ -2,10 +2,10 @@
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: 7e1296fc0722c86fb7e15487b5e9626597c7a2a0
 ---
 
-{{cssxref("@font-face")}} 规则的 **`line-gap-override`** 是一个 CSS 描述符，用于定义字体的行间距（line-gap）度量值。行间距度量值是字体推荐的行间距，或称为外部行距（external leading）。
+{{cssxref("@font-face")}} at-规则的 **`line-gap-override`** [CSS](/zh-CN/docs/Web/CSS) 描述符用于定义字体的行间距（line-gap）度量值。行间距度量值是字体推荐的行间距，或称为外部行距（external leading）。
 
 ## 语法
 
@@ -17,7 +17,7 @@ line-gap-override: 90%;
 ### 值
 
 - `normal`
-  - : 默认值。使用该值时，度量数值将从字体文件中获取。
+  - : 默认值。使用该值时，度量值将从字体文件中获取。
 - `<percentage>`
   - : {{cssxref("&lt;percentage&gt;")}} 值。
 
@@ -33,7 +33,7 @@ line-gap-override: 90%;
 
 ### 覆盖后备字体的度量值
 
-`line-gap-override` 属性在覆盖后备字体的度量值时非常有用，可以让其更好地匹配主要 Web 字体的度量值。
+`line-gap-override` 属性在覆盖后备字体的度量值时非常有用，可以让其更好地匹配主要 web 字体的度量值。
 
 ```css
 @font-face {
