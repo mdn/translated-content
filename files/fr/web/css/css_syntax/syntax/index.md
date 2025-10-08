@@ -79,7 +79,7 @@ Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**
   - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
   - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
   - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Mode de mise en page](/fr/docs/Glossary/Layout_mode)
   - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
