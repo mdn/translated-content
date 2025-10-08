@@ -63,7 +63,7 @@ Ce code HTML s'affichera ainsi dans un navigateur web&nbsp;:
 
 En plus de structurer du texte, HTML a de nombreux autres usages&nbsp;: faire en sorte que du texte ou des images mènent à d'autres pages web, intégrer des images ou des vidéos, créer des tableaux de données, etc.
 
-### Créer votre premier document HTML
+## Créer votre premier document HTML
 
 Voyons comment les éléments individuels sont combinés pour former une page HTML. Dans cette section, vous allez créer un fichier HTML de base et examiner sa composition.
 
@@ -237,5 +237,10 @@ Si vous avez suivi l'ensemble des instructions de cet article, vous devriez obte
 Si vous coincez, vous pouvez toujours comparer votre travail avec [le code de notre exemple finalisé sur GitHub <sup>(angl)</sup>](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html).
 
 Nous n'avons fait qu'effleurer la surface de HTML. Vous en apprendrez beaucoup plus dans notre module principal [Structurer le contenu avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content) plus loin dans le cours.
+
+## Voir aussi
+
+- [Apprendre HTML et CSS <sup>(angl.)</sup>](https://scrimba.com/learn-html-and-css-c0p?via=mdn) sur Scrimba <sup>[Partenaire d'apprentissage MDN](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
+  - : Le cours [_Apprendre HTML et CSS_ <sup>(angl.)</sup>](https://scrimba.com?via=mdn) de Scrimba vous enseigne HTML et CSS à travers la création et la mise en ligne de cinq projets concrets, avec des leçons interactives et des défis ludiques animés par des formateur·ice·s expérimenté·e·s.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
