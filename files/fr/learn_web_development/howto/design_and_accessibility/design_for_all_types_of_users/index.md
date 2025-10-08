@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_
 original_slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
 
 <table class="standard-table">
@@ -249,11 +247,4 @@ Il est également nécessaire de fournir des alternatives à du contenu multimé
 
 ### Compression des images
 
-Certains utilisateurs pourraient avoir choisi d'afficher les images mais pourraient disposer d'une connexion instable ou limité (c'est le cas notamment dans les pays en développement et sur les appareils mobiles). Si vous souhaitez que votre site web soit le plus fonctionnel possible, il est nécessaire de compresser les images. Voici quelques outils pour vous aider à cette tâche (logiciels ou services en ligne)&nbsp;:
-
-- **Logiciels à installer&nbsp;:** [ImageOptim](https://imageoptim.com/) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (toutes les plates-formes, [PNGcrush](http://pmt.sourceforge.net/pngcrush/) (DOS, Unix/Linux)
-- **Outils en lignes&nbsp;:** [smushit!](http://smush.it/) de Yahoo!, [Online Image Optimizer](http://tools.dynamicdrive.com/imageoptimizer/) de Dynamic Drive (qui peut convertir d'un format à un autre si cela est plus efficace en termes de bande passante)
-
-## Prochaines étapes
-
-Cet article ne décrit que les bases d'un design accessible et universel. Si vous souhaitez aller plus loin dan ce domaine, vous pouvez poursuivre avec [les bases de l'ergonomie ou UX (_User Experience_ en anglais)](/fr/docs/Learn/Basics_of_UX_Design).
+Certain·e·s utilisateur·ice·s peuvent choisir d'afficher les images, mais disposer d'une bande passante limitée, notamment dans les pays en développement ou sur mobile. Pour un site efficace, compressez vos images. Il existe de nombreux outils pour cela, en ligne ou en local. Les outils locaux sont généralement préférés car ils s'intègrent mieux au flux de travail&nbsp;: [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](https://optipng.sourceforge.net/) (toutes plateformes), et [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux).

@@ -141,4 +141,4 @@ p {
 - [`max-width`](/fr/docs/Web/CSS/max-width)
 - [`min-height`](/fr/docs/Web/CSS/min-height)
 - [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

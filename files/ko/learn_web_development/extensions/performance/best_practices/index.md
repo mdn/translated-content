@@ -1,7 +1,7 @@
 ---
 title: 웹 성능 리소스
-slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
-original_slug: Learn/Performance/Web_Performance_Basics
+slug: Learn_web_development/Extensions/Performance/Best_practices
+original_slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
 l10n:
   sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---

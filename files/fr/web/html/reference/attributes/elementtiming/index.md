@@ -1,14 +1,19 @@
 ---
 title: "Attribut HTML : elementtiming"
+short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
 original_slug: Web/HTML/Attributes/elementtiming
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'attribut **`elementtiming`** sert à indiquer qu'un élément doit être suivi par des objets {{domxref("PerformanceObserver")}} utilisant le type `"element"`. Pour plus de détails, voir l'interface {{domxref("PerformanceElementTiming")}}.
 
-L'attribut **`elementtiming`** est utilisé pour indiquer qu'un élément est marqué pour le suivi par l'API [Element Timing](/fr/docs/Web/API/PerformanceElementTiming). Cet attribut peut être appliqué aux éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<image>`](/fr/docs/Web/SVG/Reference/Element/image) à l'intérieur d'un [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), aux vignettes des éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), aux éléments qui ont un [`background-image`](/fr/docs/Web/CSS/background-image) et aux éléments contenant des noeuds de texte, comme un [paragraphe (`<p>)`](/fr/docs/Web/HTML/Reference/Elements/p).
+Cet attribut peut être appliqué aux éléments HTML {{htmlelement("img")}}, {{SVGElement("image")}} à l'intérieur d'un {{SVGElement("svg")}}, aux images d'affiche des éléments {{htmlelement("video")}}, aux éléments ayant une {{cssxref("background-image")}}, et aux éléments contenant des nœuds de texte, comme un {{htmlelement("p")}}.
 
-## Utilisation
+Dans le DOM, cet attribut est reflété par la propriété {{domxref("Element.elementTiming")}}.
+
+## Notes d'utilisation
 
 La valeur donnée pour `elementtiming` devient un identifiant pour l'élément observé.
 
@@ -16,7 +21,7 @@ La valeur donnée pour `elementtiming` devient un identifiant pour l'élément o
 <img alt="alt" src="img.jpg" elementtiming="étiquette pour l'élément" />
 ```
 
-De bons candidats pour les éléments que vous pourriez vouloir observer sont :
+De bons candidats pour les éléments que vous pourriez vouloir observer sont&nbsp;:
 
 - L'image principale d'un article.
 - Le titre d'un article de blog.
@@ -26,21 +31,15 @@ De bons candidats pour les éléments que vous pourriez vouloir observer sont :
 ## Exemples
 
 ```html
-<img alt="Alt pour l'image principale d'un article de blog"
-     src="my-massive-image.jpg"
-     elementtiming="Image principale">
+<img
+  alt="Alt pour l'image principale d'un article de blog"
+  src="my-massive-image.jpg"
+  elementtiming="Image principale" />
 
-<p elementtiming="important-text">Quelques informations importantes.</p">
+<p elementtiming="important-text">Quelques informations importantes.</p>
 ```
-
-## Spécifications
-
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
 
 ## Voir aussi
 
-- [Métriques personnalisées](https://web.dev/custom-metrics/) (en anglais)
+- {{domxref("PerformanceElementTiming")}}
+- {{domxref("Element.elementTiming")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
 
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
 
-- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
+- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#la_méthode_post) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. C'est un modèle [Jinja2](https://jinja.palletsprojects.com/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > [!NOTE]
@@ -319,4 +319,4 @@ Si vous voulez en savoir plus par rapport aux applications web, vous pouvez cons
 - [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) (Projet pour la sécurité des applications dans un Web ouvert)
 - [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
 
-{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

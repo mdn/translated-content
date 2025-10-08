@@ -2,18 +2,22 @@
 title: aria-label
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-label
 original_slug: Web/Accessibility/ARIA/Attributes/aria-label
+l10n:
+  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
 
-`aria-label` 속성은 상호작용되는 요소에 레이블된 문자열 값을 정의합니다.
+`aria-label` 속성은 요소의 역할이 [이름 지정을 금지](#associated_roles)하지 않는 한, 요소의 이름으로 사용할 수 있는 문자열 값을 정의합니다.
 
 ## 설명
 
-때때로 요소의 기본 [접근자 이름](https://w3c.github.io/accname/#dfn-accessible-name)이 없는 경우, 또는 그 콘텐츠를 명확하게 설명하지 못한 경우, 그리고 해당 요소에게 의미를 주기 위한 객체와 연관된 DOM 안에 보이는 콘텐츠가 없는 경우가 있습니다. 흔한 예로 SVG 또는 [icon font (사용해서는 안되는 방법입니다)](https://www.youtube.com/watch?v=9xXBYcWgCHA).
+때때로 요소의 기본 [접근 가능한 이름](/ko/docs/Glossary/Accessible_name)이 없거나, 접근 가능한 이름이 요소의 내용을 정확하게 설명하지 못하고, 객체에 의미를 부여할 수 있는 보이는 DOM 콘텐츠도 없는 경우가 있습니다. 이러한 요소의 흔한 예는 텍스트 없이 SVG 아이콘만 포함된 버튼입니다.
 
-상호작용을 하는 요소에 접근자 이름이 없거나, 접근자 이름이 부정확한 경우, 또는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 속성을 통해 참조되는 DOM 안에 보이는 콘텐츠가 없는 경우에 `aria-label` 속성은 이 속성이 부여된 상호작용 요소에 지정할 문자열을 정의하는데 사용될 수 있습니다. 이는 해당 요소에게 접근자 이름을 제공하게 됩니다.
+요소가 [금지된 목록](#associated_roles)에 속하지 않고 접근 가능한 이름이 없거나 접근 가능한 이름이 부정확하며, [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 속성을 통해 참조할 수 있는 DOM의 보이는 콘텐츠도 없는 경우, `aria-label` 속성을 사용하여 해당 상호작용 요소에 레이블이 될 문자열을 정의할 수 있습니다. 이렇게 하면 요소에 접근 가능한 이름이 제공됩니다.
+
+아래 코드는 `<button>` 요소에 접근 가능한 이름을 제공하기 위해 `aria-label` 속성을 사용하는 방법의 예시를 보여줍니다. 이 예시의 버튼은 SVG 그래픽만 포함하고 텍스트 콘텐츠가 없으므로, 스크린 리더 사용자가 그 기능(이 경우 "Close")을 이해하기 위해 `aria-label`이 필수적입니다.
 
 ```html
-<button aria-label="Close" onclick="myDialog.close()">
+<button aria-label="Close">
   <svg
     aria-hidden="true"
     focusable="false"
@@ -22,79 +26,87 @@ original_slug: Web/Accessibility/ARIA/Attributes/aria-label
     xmlns="http://www.w3.org/2000/svg">
     <path
       d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z"
-      fill="#000" />
+      fill="black" />
   </svg>
 </button>
 ```
 
-> **참고:** `aria-label`은 레이블로 참조되어질 수 있는 DOM 안에 표시가능한 적당한 텍스트가 없을 때, 상호작용을 하는 요소들 또는 다른 ARIA 선언들을 통해 상호작용하도록 만들어진 요소에 사용하기 위한 것입니다.
+```js
+document.querySelector("button").addEventListener("click", () => {
+  myDialog.close();
+});
+```
 
-대부분의 콘텐츠에는 이를 직접 감싸는 요소의 텍스트 콘텐츠로부터 생성된 접근자 이름이 있습니다. 또한, 접근자이름들은 특정 속성들 또는 연관된 요소들로부터 생성될 수 있습니다.
+> [!NOTE]
+> `aria-label`은 암묵적 또는 명시적 역할이 이름 지정을 금지하지 않는 요소의 이름을 지정하기 위해 사용됩니다. 요소가 참조하여 이름을 얻을 수 있는 보이는 레이블이 있는 경우, `aria-label`보다 `aria-labelledby`를 우선적으로 사용하는 것이 강력히 권장됩니다.
 
-기본적으로, 버튼의 접근자 이름은 {{HTMLElement('button')}}의 여는 태그와, 닫는 태그 사이의 콘텐츠이고, image 요소의 접근자 이름은 [`alt`](/ko/docs/Web/HTML/Reference/Elements/img#alt) 속성의 콘텐츠, 그리고 form input요소의 접근자 이름은 연결된 {{HTMLElement('label')}} 요소의 콘텐츠입니다.
+대부분의 콘텐츠는 바로 감싸는 요소의 텍스트 콘텐츠로부터 접근 가능한 이름이 생성됩니다. 접근 가능한 이름은 특정 속성이나 연관된 요소로부터도 만들어질 수 있습니다.
 
-만약 이러한 옵션들 중 가능한 것이 없거나, 초기 접근자 이름이 적합하지 않은 경우, `aria-label` 속성을 사용하여 요소의 접근자 이름을 정의합니다.
+기본적으로 버튼의 접근 가능한 이름은 {{HTMLElement('button')}}의 여는 태그와 닫는 태그 사이의 콘텐츠이고, 이미지의 접근 가능한 이름은 [`alt`](/ko/docs/Web/HTML/Reference/Elements/img#alt) 속성의 콘텐츠이며, 폼 입력 요소의 접근 가능한 이름은 연결된 {{HTMLElement('label')}} 요소의 콘텐츠입니다.
 
-`aria-label`은 요소에 레이블할 수 있는 텍스트가 표기가능하지 _않은_ 경우 사용할 수 있습니다. 만일 요소에 레이블할 수 있는 보이는 텍스트가 있다면, [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)를 대신 사용하시기 바랍니다.
+이러한 옵션들을 사용할 수 없거나 기본 접근 가능한 이름이 적절하지 않은 경우, 요소의 접근 가능한 이름을 정의하기 위해 `aria-label` 속성을 사용하십시오.
 
-`aria-label`의 목적은 `aria-labelledby`와 같습니다. 둘 다 요소에 접근자 이름을 제공합니다. 만일 당신이 참조할 수 있는 요소에 대해 표시가능한 이름이 없다면, 사용자에게 인지가능하고 접근가능한 이름을 제공하기 위하여 `aria-label`을 사용하시기 바랍니다. 만약 레이블 텍스트가 DOM 안에 사용가능하고, DOM 콘텐츠 및 허용 가능한 사용자 경험을 참조하는 경우라면, `aria-labelledby`를 사용하는 것을 권장합니다. 둘 다 포함하여 사용하지 마시기 바랍니다. 둘 다 동일한 요소에 있다면, `aria-labelledby`가 `aria-label`보다 우선됩니다.
+> [!NOTE]
+> `aria-label`은 접근 가능한 이름을 가질 수 있는 모든 요소에 사용할 수 있지만, 실제로는 대화형 요소, [위젯](/ko/docs/Web/Accessibility/ARIA/Reference/Roles#2._widget_roles), [랜드마크](/ko/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles), 이미지, 그리고 iframe에서만 지원됩니다.
 
-`aria-label` 속성은 일반적인 시멘틱 HTML요소들과 함께 사용될 수 있습니다. 이는 [ARIA `roles`](/ko/docs/Web/Accessibility/ARIA/Roles)이 할당된 요소에만 국한되지 않습니다.
+`aria-label`을 사용할 때는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)도 함께 고려해야 합니다.
 
-`aria-label`을 "남용"하지 마십시오. 예를 들어, 추가적인 지침 또는 명확한 사용자 경험을 제공하기 위해 `aria-label`이 아닌 `aria-describedby` 또는 `aria-description`과 함께 표시가능한 텍스트를 사용하십시오. 오직 스크린 리더에만 지침을 지정하실 필요는 없음을 잊지 마십시오. 만일 지침이 필요하다면, 모두에게 제공하시기 바랍니다 (또는 가급적 사용자 인터페이스를 보다 직관적으로 만들어 주시기 바랍니다).
+- `aria-label`은 요소를 레이블할 수 있는 텍스트가 보이지 않는 경우에 사용할 수 있습니다. 요소를 레이블하는 보이는 텍스트가 있는 경우에는 `aria-labelledby`를 사용하십시오.
+- `aria-label`의 목적은 `aria-labelledby`와 동일합니다. 두 속성 모두 요소에 접근 가능한 이름을 제공합니다. 요소에 참조할 수 있는 보이는 이름이 없는 경우, `aria-label`을 사용하여 사용자에게 인식 가능한 접근 가능한 이름을 제공하십시오. DOM에 레이블 텍스트가 있고 이를 참조하여 수용 가능한 사용자 경험을 제공할 수 있다면 `aria-labelledby`를 사용하는 것이 좋습니다. 두 속성을 같은 요소에 함께 사용하지 마십시오. 둘 다 적용된 경우 `aria-labelledby`가 `aria-label`보다 우선합니다.
 
-모든 요소에 접근자 이름을 지정할 수 있는 것은 아닙니다. `aria-label`과 `aria-labelledby` 둘 다 `code`, `term`, 또는 `emphasis`와 같은 비상호작용 요소 또는 인라인 구조적 역할과 함께 사용해서는 안되며, 의미체계가 `presentation`, `none`, `hidden`을 포함한 접근성 API에 사상되지 않는 역할들과 함께 사용해서는 안됩니다. `aria-label` 속성은 오직 상호작용 요소에만 사용됩니다. 접근자 이름을 확실하게 하기 위해 `aria-label`을 사용하십시오. links, videos, form 조절, [랜드마크 roles](/ko/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), [위젯 roles](/ko/docs/Web/Accessibility/ARIA/Roles#2._widget_roles)과 같은 역할과 모든 상호작용 요소에 대하여 DOM에 아무것도 표시되지 않는 경우 접근자 이름이 제공되도록 `aria-label`을 사용하십시오.
+`aria-label`을 사용할 때는 다음 추가 지침을 유의하십시오.
 
-만일 {{HTMLElement('iframe')}}에 `title`, image에 `alt` 속성, 그리고 input과 연관된 {{HTMLElement('label')}}을 지정하면, `aria-label`은 필요하지 않습니다. 그러나, `aria-label`이 있는 경우 `iframe`과 image, `input`의 접근자 이름인 `title`과 `alt`, 그리고 `<label>` 보다 우선순위를 가지게 됩니다.
+- `aria-label` 속성은 일반적인 시맨틱 HTML 요소와 함께 사용할 수 있으며, [ARIA `role`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles)이 할당된 요소로만 제한되지 않습니다.
+- `aria-label`을 "남용"하지 마십시오. 이는 주로 보조 기술을 위한 것임을 기억해야 합니다. 추가적인 지침을 제공하거나 사용자 인터페이스를 명확히 하기 위해서는 `aria-label`이 아니라 [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)나 [`aria-description`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)과 함께 보이는 텍스트를 사용해야 합니다. 지침은 스크린 리더 사용자만이 아니라 모든 사용자가 접근할 수 있어야 하며, 가능하다면 사용자 인터페이스 자체를 더 직관적으로 만드는 것이 바람직합니다.
 
-> **참고:** `aria-label`은 오로지 "보이도록" 하는 보조적 기술입니다. 만일 사용자에게 추가하기에 충분히 중요한 정보인 경우 모든 사용자에게 표시되도록 하는 것이 좋습니다.
+  > [!NOTE]
+  > `aria-label`의 내용은 보조 기술 외에는 표시되지 않으므로, 중요한 정보라면 모든 사용자가 볼 수 있도록 표시하는 것이 좋습니다.
 
-## Values
+- 모든 요소에 접근 가능한 이름을 지정할 수 있는 것은 아닙니다. `aria-label`과 `aria-labelledby`는 `code`, `term`, `emphasis`와 같은 인라인 구조적 역할이나, `none`을 포함해 접근성 API에 매핑되지 않는 역할에는 사용해서는 안 됩니다. `aria-label` 속성은 링크, 비디오, 폼 컨트롤, [랜드마크 역할](/ko/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles)이나 [위젯 역할](/ko/docs/Web/Accessibility/ARIA/Reference/Roles#2._widget_roles)을 가진 요소와 같이 DOM에 보이는 레이블이 없을 때 접근 가능한 이름을 제공하기 위한 것입니다.
+- {{HTMLElement('iframe')}}에 `title`을 지정했거나, {{HTMLElement('img')}}에 `alt` 속성을 정의했거나, {{HTMLElement('input')}}에 {{HTMLElement('label')}}을 추가한 경우에는 `aria-label`이 필요하지 않습니다. 그러나 `aria-label` 속성이 있으면 iframe의 `title`, 이미지의 `alt`, 입력 요소의 `<label>` 텍스트보다 우선하여 해당 요소의 접근 가능한 이름으로 사용됩니다.
+
+## 값
 
 - `<string>`
-  - : 객체에 접근가능한 이름이 될 문자열 값
+  - : 객체에 접근 가능한 이름이 될 문자열 값입니다.
 
-## ARIAMixin API
+## 관련 인터페이스
 
 - {{domxref("Element.ariaLabel")}}
   - : {{domxref("Element")}} 인터페이스의 일부인 [`ariaLabel`](/ko/docs/Web/API/Element/ariaLabel) 속성은 `aria-label` 속성의 값을 반영합니다.
 - {{domxref("ElementInternals.ariaLabel")}}
   - : {{domxref("ElementInternals")}} 인터페이스의 일부인 [`ariaLabel`](/ko/docs/Web/API/ElementInternals/ariaLabel) 속성은 `aria-label` 속성의 값을 반영합니다.
 
-## Associated roles
+## 관련 역할
 
-작성자에 의해 접근자 이름을 제공할 수 없는 역할을 **제외한** 거의 모든 역할에 사용됩니다.
+작성자가 접근 가능한 이름을 제공할 수 없는 역할을 **제외한** 거의 모든 역할에서 사용됩니다.
 
-`aria-label` 속성이 지원되지 **않는** 역할들:
+`aria-label` 속성은 다음 역할에서는 **지원되지 않습니다.**
 
-- [`code`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`generic`](/ko/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/ko/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`presentation`](/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/ko/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/ko/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
-- [`term`](/ko/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/ko/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`caption`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`definition`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`deletion`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`emphasis`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`generic`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
+- [`insertion`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`mark`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role)
+- [`paragraph`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`presentation`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
+- [`strong`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`subscript`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`superscript`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`suggestion`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`term`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
+- [`time`](/ko/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
-> **참고:** `aria-label` 속성은 오로지 상호작용 요소에서만 사용됩니다. 위에 나열된 것들과 같은 비 상호작용 요소에 사용할 경우 aria-label 속성 값은 읽히지 않거나, 비 상호작용 요소를 상호작용하는 요소처럼 작동하는 것으로 사용자를 혼동시킬 수 있습니다.
-
-## 명세
+## 명세서
 
 {{Specifications}}
 
 ## 같이 보기
 
 - {{HTMLElement('label')}} 요소
-- [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-
-<section id="Quick_links">
-<strong><a href="/ko/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/ko/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- [`aria-description`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
+- [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+- [접근성을 높이기 위한 HTML 랜드마크 역할 사용하기](/ko/blog/aria-accessibility-html-landmark-roles/) — MDN 블로그 (2023)
