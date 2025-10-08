@@ -59,7 +59,7 @@ slug: Web/API/Web_Crypto_API
 - {{domxref("Pbkdf2Params")}}
   - : [PBKDF2](/ko/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) 알고리즘을 사용할 때 {{domxref("SubtleCrypto.deriveKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaHashedImportParams")}}
-  - : RSA 기반의 쌍을 가져올 때, 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나로 지정된 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
+  - : RSA 기반의 쌍을 가져올 때 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나로 지정된 경우, {{domxref("SubtleCrypto.importKey()")}}, {{domxref("SubtleCrypto.unwrapKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaHashedKeyGenParams")}}
   - : RSA 기반의 키 쌍을 생성할 때 사용하는 알고리즘이 [RSASSA-PKCS1-v1_5](/ko/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/ko/docs/Web/API/SubtleCrypto/sign#rsa-pss), [RSA-OAEP](/ko/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 중 하나일 경우, {{domxref("SubtleCrypto.generateKey()")}} 메서드의 `algorithm` 파라미터에 전달되어야 하는 객체를 나타냅니다.
 - {{domxref("RsaOaepParams")}}
