@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model) 的 **`CSSSkew`** 属于 {{domxref('CSSTransformValue')}} 接口，表示 CSS 中单个 {{CSSXRef('transform')}} 属性的 [`skew()`](/zh-CN/docs/Web/CSS/transform-function/skew) 值。
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model) {{domxref('CSSTransformValue')}} 接口的 **`CSSSkew`** 接口表示 CSS 中单个 {{CSSXRef('transform')}} 属性的 [`skew()`](/zh-CN/docs/Web/CSS/transform-function/skew) 值。
 
 {{InheritanceDiagram}}
 
