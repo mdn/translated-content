@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f3d234ca192782b7993276924bf64870612bcc1a
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<number>`** 表示整数或者是带有小数部分的数字。或者是以十进制指数的科学记数法。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<number>`** 表示整数或者是带有小数部分的数字，或者是以十进制指数的科学记数法。
 
 ## 语法
 
@@ -13,7 +13,7 @@ l10n:
 
 与整数相同，数值的第一个字符前可以紧跟 - 或 +，用来表示该数值是正数还是负数。
 
-## 差值
+## 插值
 
 当被动画化时，`<number>` CSS 数据类型的值会作为实数、浮点数进行插值计算。插值的速度由与动画相关的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)来决定。
 
