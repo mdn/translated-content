@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSStyleRule")}} 接口的只读属性 **`styleMap`** 返回提供对规则的属性—值对的访问 {{domxref('StylePropertyMap')}} 对象。
+{{domxref("CSSStyleRule")}} 接口的只读属性 **`styleMap`** 返回提供对规则的属性—值对的访问的 {{domxref('StylePropertyMap')}} 对象。
 
 ## 值
 
