@@ -5779,7 +5779,6 @@
 /fr/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/fr/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /fr/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/fr/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
-/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/fr/docs/conflicng/Web/JavaScript/Reference/Errors/Unexpected_token
 /fr/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/fr/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal	/fr/docs/Web/JavaScript/Reference/Errors/String_literal_EOL
 /fr/docs/Web/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
