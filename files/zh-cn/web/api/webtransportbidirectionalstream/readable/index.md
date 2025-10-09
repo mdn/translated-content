@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-{{domxref("WebTransportBidirectionalStream")}} 接口的只读属性 **`readable`** 返回一个 {{domxref("WebTransportReceiveStream")}} 实例，可用于可靠地读取传入的数据。
+{{domxref("WebTransportBidirectionalStream")}} 接口的只读属性 **`readable`** 返回一个可用于可靠地读取传入的数据 {{domxref("WebTransportReceiveStream")}} 实例。
 
 ## 值
 
