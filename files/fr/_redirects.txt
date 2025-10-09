@@ -3766,9 +3766,9 @@
 /fr/docs/Tools/about:debugging/about:debugging_before_Firefox_68	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
 /fr/docs/Transformations_XML_avec_XSLT	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /fr/docs/Transformations_XML_avec_XSLT/Autres_ressources	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/fr/docs/Transformations_XML_avec_XSLT/La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT
+/fr/docs/Transformations_XML_avec_XSLT/La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /fr/docs/Transformations_XML_avec_XSLT:Autres_ressources	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/fr/docs/Transformations_XML_avec_XSLT:La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT
+/fr/docs/Transformations_XML_avec_XSLT:La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /fr/docs/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Tutoriel_canvas/Advanced_animations	/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs	/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
@@ -7091,7 +7091,7 @@
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /fr/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT
+/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /fr/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/XSLT/Utilisation_de_l'interface_JavaScript_de_Mozilla_pour_les_transformations_XSL	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example	/fr/docs/Web/API/XSLTProcessor
