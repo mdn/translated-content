@@ -79,4 +79,4 @@ Gecko prend en charge certains alias d'objet événement non standard, répertor
 
 ## Voir aussi
 
-- [Création et déclenchement d'événements](/fr/docs/conflicting/Web/API/Document_Object_Model/Events)
+- [Création et déclenchement d'événements](/fr/docs/Web/API/Document_Object_Model/Events)

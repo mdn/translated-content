@@ -66,7 +66,7 @@ Vous êtes probablement en train de lire ces mots à l'aide d'un navigateur web 
 
 ### HTTP
 
-Hypertext Transfer Protocol, ou [HTTP](/fr/docs/conflicting/Web/HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
+Hypertext Transfer Protocol, ou [HTTP](/fr/docs/Web/HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
 
 ```
 "Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
