@@ -4300,7 +4300,6 @@
 /fr/docs/Web/API/XMLHttpRequest/abort_event	/fr/docs/Web/API/XMLHttpRequestEventTarget/abort_event
 /fr/docs/Web/API/XMLHttpRequest/loadend_event	/fr/docs/Web/API/XMLHttpRequestEventTarget/loadend_event
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
-/fr/docs/Web/API/XSLTProcessor/Generating_HTML	/fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/atob	/fr/docs/Web/API/Window/atob
 /fr/docs/Web/API/btoa	/fr/docs/Web/API/Window/btoa
