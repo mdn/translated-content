@@ -1,62 +1,98 @@
 ---
-title: window.prompt
+title: "Window : méthode prompt()"
+short-title: prompt()
 slug: Web/API/Window/prompt
+l10n:
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
 {{ApiRef("Window")}}
 
-La méthode `Window.prompt()` affiche une boîte de dialogue, éventuellement avec un message, qui invite l'utilisateur à saisir un texte.
+La méthode `window.prompt()` demande au navigateur d'afficher une boîte de dialogue avec un message optionnel pour inviter l'utilisateur·ice à saisir du texte, puis attend que l'utilisateur·ice soumette le texte ou annule la boîte de dialogue.
+
+Dans certaines conditions (par exemple si l'utilisateur·ice change d'onglet), le navigateur peut ne pas afficher de boîte de dialogue ou ne pas attendre la saisie ou l'annulation par l'utilisateur·ice.
 
 ## Syntaxe
 
 ```js
-résultat = window.prompt(message, défaut);
+prompt();
+prompt(message);
+prompt(message, defaultValue);
 ```
 
 ### Paramètres
 
 - `message` {{optional_inline}}
-  - : Une chaîne de caractères qui sera affichée pour l'utilisateur. Cet argument peut ne pas être utilisé s'il n'y a rien à afficher dans la fenêtre.
-- `default` {{optional_inline}}
-  - : Une chaîne de caractères contenant la valeur par défaut affichée pour la saisie. Pour Internet Explorer 7 et 8, si cet argument n'est pas fourni, ce sera la chaîne de caractères `"undefined"` qui sera la valeur par défaut.
+  - : Une chaîne de caractères affichée pour l'utilisateur·ice. Peut être omise s'il n'y a rien à afficher dans la fenêtre de saisie.
+- `defaultValue` {{optional_inline}}
+  - : Une chaîne de caractères contenant la valeur par défaut affichée dans le champ de saisie.
 
 ### Valeur de retour
 
-La chaîne de caractères qui a été saisie par l'utilisateur ou `null`.
+Une chaîne de caractères saisie par l'utilisateur·ice ou `null`.
 
 ## Exemples
 
-```js
-let signe = prompt("Quel est votre signe astrologique ?");
+### Utiliser prompt avec un message et une valeur par défaut
 
-if (signe.toLowerCase() == "verseau") {
-  console.log("Oh ? moi aussi je suis verseau :)");
-}
+L'exemple suivant montre comment vérifier la valeur retournée par prompt.
+Quand l'utilisateur·ice clique sur OK, le texte saisi dans le champ est retourné.
+Si l'utilisateur·ice clique sur OK sans saisir de texte, une chaîne de caractères vide est retournée.
+Si l'utilisateur·ice clique sur Annuler, la fonction retourne `null`.
 
-// Différentes façons d'utiliser prompt
-signe = window.prompt(); // ouvre une fenêtre de saisie sans texte
-signe = prompt(); //  ouvre une fenêtre de saisie sans texte
-
-// ouvre une fenêtre avec le texte "Quelle est la réponse ?"
-signe = window.prompt("Quelle est la réponse ?");
-
-// ouvre une fenêtre avec le texte "Quelle est la réponse ?"
-// avec la valeur "42" comme réponse par défaut
-signe = window.prompt("Quelle est la réponse ?", "42");
+```html live-sample___prompt
+<button id="boutonSigne">Vérifier le signe astrologique</button>
+<pre id="resultat"></pre>
 ```
 
-Lorsque l'utilisateur clique sur le bouton OK, le texte saisi dans le champ est renvoyé par la fonction. Si l'utilisateur clique sur OK sans avoir saisi de texte, c'est la chaîne vide qui est renvoyée. Si l'utilisateur clique sur le bouton "Annuler", la fonction renvoie `null`.
+```js live-sample___prompt
+const boutonSigne = document.querySelector("#boutonSigne");
+const resultat = document.querySelector("#resultat");
+
+boutonSigne.addEventListener("click", () => {
+  let signe = prompt("Quel est votre signe astrologique ?");
+
+  if (signe === null) {
+    resultat.innerText = "OK, peut-être la prochaine fois.";
+  } else if (signe.toLowerCase() === "") {
+    resultat.innerText = "N'ayez pas peur, entrez votre signe !";
+  } else if (signe.toLowerCase() === "scorpion") {
+    resultat.innerText = "Wow ! Je suis aussi scorpion !";
+  } else {
+    resultat.innerText = `${signe} est mon préféré !`;
+  }
+});
+```
+
+{{EmbedLiveSample('prompt', , , , , , , 'allow-modals')}}
+
+### Messages et valeurs par défaut pour prompt
+
+Il existe plusieurs façons d'utiliser prompt, que ce soit avec `prompt`, `window.prompt`, et en fournissant un message ou des valeurs par défaut&nbsp;:
+
+```js
+// ouvre une fenêtre de saisie vide
+signe = prompt();
+// ouvre une fenêtre de saisie vide
+signe = window.prompt();
+// ouvre une fenêtre de saisie avec le texte "Vous sentez-vous chanceux ?"
+signe = window.prompt("Vous sentez-vous chanceux ?");
+// ouvre une fenêtre de saisie avec le texte "Vous sentez-vous chanceux ?" et "sûr" comme valeur par défaut
+signe = prompt("Vous sentez-vous chanceux ?", "sûr");
+```
 
 ## Notes
 
-Une boîte de dialogue contient un texte sur une ligne, un bouton "Annuler" ainsi qu'un bouton "OK". Elle permet de renvoyer le texte (éventuellement vide) saisi par l'utilisateur dans le champ de saisie.
+Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur·ice d'accéder au reste de l'interface du programme tant que la boîte de dialogue n'est pas fermée.
+Pour cette raison, il vaut mieux ne pas abuser des fonctions qui créent ce type de fenêtre.
+On peut aussi utiliser l'élément {{HTMLElement("dialog")}} pour les confirmations.
 
-The following text is shared between this article, `DOM:window.confirm` and `DOM:window.alert`. Les boîtes de dialogue sont des fenêtres modales : elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant que la fenêtre n'est pas fermée. Pour ces raisons, mieux vaut ne pas abuser des fonctions qui créent de telles boîtes de dialogue et autres fenêtres modales.
-
-On notera que le résultat de la fonction est une chaîne de caractères. Cela signifie qu'il faut parfois convertir la valeur founie par l'utilisateur. Si, par exemple, on souhaite que la réponse soit un nombre, il faudra la convertir (avec le constructeur {{jsxref("Number")}} éventuellement).
+Une boîte de dialogue de type prompt contient un champ de saisie sur une ligne, un bouton Annuler et un bouton OK, et renvoie le texte (éventuellement vide) saisi par l'utilisateur·ice.
+Le résultat est une chaîne de caractères, il peut donc être nécessaire de convertir la valeur fournie par l'utilisateur·ice.
+Par exemple, si la réponse attendue est un nombre, il faut convertir la valeur avec le constructeur Number.
 
 ```js
-const aNumber = Number(window.prompt("Veuillez saisir un nombre.", ""));
+const unNombre = Number(window.prompt("Veuillez saisir un nombre.", ""));
 ```
 
 ## Spécifications
@@ -69,5 +105,7 @@ const aNumber = Number(window.prompt("Veuillez saisir un nombre.", ""));
 
 ## Voir aussi
 
-- {{domxref("window.alert", "alert")}}
-- {{domxref("window.confirm", "confirm")}}
+- L'élément HTML {{HTMLElement("dialog")}}
+- La méthode {{domxref("window.alert", "alert")}}
+- La méthode {{domxref("window.confirm", "confirm")}}
+- [Ne jamais utiliser un avertissement quand il faut proposer une annulation <sup>(angl.)</sup>](https://alistapart.com/article/neveruseawarning/) sur A List Apart (2017)
