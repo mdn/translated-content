@@ -3218,8 +3218,6 @@
 /fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande	/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /fr/docs/Learn/tutorial	/fr/docs/Learn_web_development
 /fr/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page	/fr/docs/Learn_web_development/Core/Structuring_content/Splash_page
-/fr/docs/Learn_web_development/Core/Styling_basics/
-/fr/docs/Learn_web_development/Extensions/Forms/
 /fr/docs/Littéraux_gabarits	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Localisation	/fr/docs/Glossary/Localization
 /fr/docs/Localization	/fr/docs/Glossary/Localization
@@ -4665,7 +4663,6 @@
 /fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes	/fr/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes
 /fr/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow	/fr/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow
 /fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts	/fr/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
-/fr/docs/Web/CSS/CSS_grid_layout/
 /fr/docs/Web/CSS/CSS_percentage_values	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context	/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1	/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
