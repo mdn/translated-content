@@ -13,7 +13,8 @@ Le standard qui spécifie JavaScript est [ECMAScript](/fr/docs/Web/JavaScript/Re
 
 JavaScript ne doit pas être confondu avec le [langage de programmation Java](https://fr.wikipedia.org/wiki/Java_%28langage%29). Java et JavaScript sont deux marques déposées par Oracle dans de nombreux pays mais ces deux langages de programmation ont chacun une syntaxe, une sémantique et des usages différents.
 
-> **Remarque :** **Vous cherchez à devenir un développeur web front-end ?**
+> [!CALLOUT]
+> **Vous cherchez à devenir un développeur web front-end ?**
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >

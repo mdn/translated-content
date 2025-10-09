@@ -25,7 +25,8 @@ Array(element0, element1, /* …, */ elementN)
 Array(arrayLength)
 ```
 
-> **참고:** `Array()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 붙이거나 붙이지 않고 호출할 수 있습니다. 둘 다 새 `Array` 인스턴스를 생성합니다.
+> [!NOTE]
+> `Array()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 붙이거나 붙이지 않고 호출할 수 있습니다. 둘 다 새 `Array` 인스턴스를 생성합니다.
 
 ### 매개변수
 
