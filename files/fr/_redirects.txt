@@ -3802,7 +3802,7 @@
 /fr/docs/Utilisation_de_la_géolocalisation	/fr/docs/Web/API/Geolocation_API
 /fr/docs/Utilisation_des_web_workers	/fr/docs/Web/API/Web_Workers_API/Using_web_workers
 /fr/docs/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/fr/docs/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model_ed1f254ab62fd5902b28ca4eb72ca773
+/fr/docs/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /fr/docs/Utilisation_du_cache_dans_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /fr/docs/Utilisation_du_cache_de_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /fr/docs/Web/API/API_HTML_Drag_and_Drop	/fr/docs/Web/API/HTML_Drag_and_Drop_API
