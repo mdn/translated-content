@@ -2,12 +2,12 @@
 title: outline-offset
 slug: Web/CSS/outline-offset
 l10n:
-  sourceCommit: cc4592258b952f452e8715b67b14ce3534ccfa69
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`outline-offset`** CSS 属性设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`outline-offset`** 设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
 
-{{InteractiveExample("CSS Demo: outline-offset")}}
+{{InteractiveExample("CSS 演示：outline-offset")}}
 
 ```css interactive-example-choice
 outline-offset: 4px;
@@ -25,7 +25,7 @@ outline: 5px dashed blue;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    这是一个带有轮廓线框的盒子。
   </div>
 </section>
 ```
@@ -109,6 +109,6 @@ p {
 ## 参见
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
