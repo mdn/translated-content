@@ -3,8 +3,6 @@ title: revert
 slug: Web/CSS/revert
 ---
 
-{{CSSRef}}
-
 Le mot-clé **`revert`** permet de _remonter_ la cascade afin que la propriété puisse prendre la valeur qui aurait été utilisée sans mise en forme particulière (la valeur qu'elle aurait eu sans mise en forme appliquée par la feuille de style de l'auteur, de l'utilisateur ou de l'agent utilisateur). Ainsi, si la propriété hérite de son parent, elle prendra la valeur héritée et sinon la valeur par défaut de l'agent utilisateur (ou de la feuille de style utilisateur).
 
 Cette valeur peut être utilisée pour n'importe quelle propriété CSS, y compris la propriété raccourcie {{cssxref("all")}}.
@@ -22,7 +20,7 @@ Le mot-clé `revert` fonctionne comme `unset` pour de nombreux cas. Les seules d
 > **Note :** `revert` est une simple valeur, il est toujours possible de la surcharger par une autre avec une règle d'une [spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#spécificité) supérieure.
 
 > [!NOTE]
-> Le mot-clé `revert` est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise [la valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc), définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, [la valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc) de {{cssxref("display")}} est `inline` mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : `block` pour {{HTMLElement("div")}}, `table` pour {{HTMLElement("table")}} etc.
+> Le mot-clé `revert` est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale), définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) de {{cssxref("display")}} est `inline` mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : `block` pour {{HTMLElement("div")}}, `table` pour {{HTMLElement("table")}} etc.
 
 ## Exemples
 

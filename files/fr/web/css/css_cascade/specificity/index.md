@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascade/Specificity
 original_slug: Web/CSS/Specificity
 ---
 
-{{CSSRef}}
-
 La **spécificité** est le moyen par lequel les navigateurs décident quelles valeurs de propriété CSS d'un élément sont les plus pertinentes et seront appliquées. La spécificité est basée sur les règles, ciblant un élément, composées par différents types de [sélecteurs CSS](/fr/docs/Web/CSS/Reference#sélecteurs).
 
 ## Détermination de la spécificité
@@ -346,10 +344,10 @@ Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, m
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
-    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [Utilisées](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
-    - [Effectives](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
   - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
