@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Bienvenue au cours pour débutant de MDN sur la programmation côté serveur. Dans ce premier article, nous allons regarder la programmation côté serveur sans rentrer dans les détails techniques, en répondant aux questions telles que "qu'est-ce que c'est?", "quelle est la différence avec la programmation côté client?", et "pourquoi est-ce utile?". Après avoir lu cet article vous comprendrez commment la programmation côté serveur donne toute leur puissance aux sites web.
 
@@ -79,7 +79,7 @@ Voyons maintenant le code impliqué dans la programmation côté serveur et côt
 
 Le code exécuté par le navigateur est connu sous le nom de **code côté client** (ou **front-end**) et se préoccupe principalement de l'apparence et du comportement des pages web affichées. Cela inclut sélectionner et styliser les composants de l'interface utilisateur, créer la mise en page, la navigation, valider les formulaires, etc. D'un autre côté, la programmation côté serveur implique de définir le contenu retourné au navigateur en réponse aux requêtes. Le code côté serveur gère des tâches telles que la validation des données envoyées, l'utilisation des bases de données pour stocker et récupérer des données et l'envoi de données générées au client tel qu'attendu.
 
-Le code client est écrit en [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) — il est exécuté dans un navigateur web et a peu ou pas accès au système d'exploitation de l'utilisateur (inclut un accès limité au système de fichiers).
+Le code client est écrit en [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) — il est exécuté dans un navigateur web et a peu ou pas accès au système d'exploitation de l'utilisateur (inclut un accès limité au système de fichiers).
 
 Les développeurs web ne peuvent pas contrôler quel navigateur est utilisé par l'utilisateur pour voir le site web — or les navigateurs fournissent des niveaux de compatibilité inconsistants quant aux fonctionnalités du code côté client, et une partie du challenge de la programmation côté client consiste à gérer les différences de support des navigateurs.
 

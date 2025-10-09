@@ -95,7 +95,7 @@ partieDecimaleAdeuxChiffres;
 
 ### Convertir des valeurs en type numérique
 
-Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs/conflicting/Learn_web_development/Extensions/Forms), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Reference/Elements/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
+Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs//Learn_web_development/Extensions/Forms\), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Reference/Elements/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
 
 Par exemple, essayez de taper ces lignes dans votre console&nbsp;:
 

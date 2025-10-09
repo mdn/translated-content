@@ -25,11 +25,11 @@ Apprenez comment programmer en JavaScript.
 
 ### Ressources pour commencer
 
-Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou en JavaScript, [la section JavaScript de la zone d'apprentissage de MDN (_learning area_)](/fr/docs/conflicting/Learn_web_development/Core/Scripting) est le meilleur endroit où commencer. Cette section contient les modules suivants :
+Si vous souhaitez apprendre JavaScript et que vous débutez en programmation ou en JavaScript, [la section JavaScript de la zone d'apprentissage de MDN (_learning area_)](/fr/docs/Learn_web_development/Core/Scripting) est le meilleur endroit où commencer. Cette section contient les modules suivants :
 
 - [Les premiers pas en JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
   - : Cet ensemble de chapitres répond à des questions telles que « qu'est-ce que JavaScript ? », « à quoi ressemble-t-il ? », « que puis-je faire avec ? » et présente des éléments clés du langage tels que les variables, les chaînes de caractères, les nombres et les tableaux.
-- [Les principaux blocs de JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting_fb235ec2f43049f379fbefbc9e0e7ee10637a460ab94430af2a806ab533a3580)
+- [Les principaux blocs de JavaScript](/fr/docs/Learn_web_development/Core/Scripting/What_is_JavaScript)
   - : On poursuit ici la présentation des fonctionnalités importantes de JavaScript, notamment celle des blocs de codes fréquemment utilisés comme les instructions conditionnelles, les boucles, les fonctions et les évènements.
 - [Une introduction aux objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : JavaScript est un langage de programmation « orienté objet » et ce concept est primordial pour utiliser JavaScript au mieux, écrire du code plus efficace et comprendre son fonctionnement. Ce module présente les bases de ces concepts.

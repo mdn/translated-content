@@ -129,7 +129,7 @@ p,
 }
 ```
 
-Dans cette règle CSS, on a inclus un **sélecteur d'élément** (ou **sélecteur de type**), qui sélectionne un élément HTML spécifique. On a aussi inclus deux autres types de sélecteurs, qui ne sont pas abordés dans le reste de ce tutoriel. Si vous êtes curieux·se de leur fonctionnement, consultez notre [guide sur les sélecteurs de base](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors).
+Dans cette règle CSS, on a inclus un **sélecteur d'élément** (ou **sélecteur de type**), qui sélectionne un élément HTML spécifique. On a aussi inclus deux autres types de sélecteurs, qui ne sont pas abordés dans le reste de ce tutoriel. Si vous êtes curieux·se de leur fonctionnement, consultez notre [guide sur les sélecteurs de base](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 > [!NOTE]
 > Le parcours Scrimba [Écrivez vos premières lignes de CSS&nbsp;!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> propose une introduction interactive utile à la syntaxe CSS.

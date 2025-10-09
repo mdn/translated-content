@@ -473,7 +473,7 @@ Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) DOM qui le porte
 - [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text)
 - [La compatibilité des propriétés CSS](/fr/docs/Learn_web_development/Extensions/Forms)

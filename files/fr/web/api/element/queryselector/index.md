@@ -16,7 +16,7 @@ element = baseElement.querySelector(selectors);
 ### Paramètres
 
 - `selectors`
-  - : est un groupe de [sélecteurs](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) à faire correspondre aux éléments descendants du [`Element`](/fr/docs/Web/API/Element) `baseElement` ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.
+  - : est un groupe de [sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) à faire correspondre aux éléments descendants du [`Element`](/fr/docs/Web/API/Element) `baseElement` ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.
 
 ### Valeur retournée
 

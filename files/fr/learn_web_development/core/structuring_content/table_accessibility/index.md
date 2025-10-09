@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 original_slug: Learn/HTML/Tables/Advanced
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
 
@@ -100,7 +100,7 @@ Mettons en œuvre ces nouveaux éléments.
 7. Enregistrez, actualisez et regardez le résultat. Si `<tbody>` et `<tfoot>` n'étaient pas en place, vous devriez écrire plus de commandes plus complexes (sélection/règles) pour l'application des mêmes styles.
 
 > [!NOTE]
-> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn_web_development/Core/Styling_basics/Tables)).
+> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn_web_development/Core/Styling_basics/Tables)).
 
 Le code de votre tableau fini devrait ressembler à quelque chose comme :
 

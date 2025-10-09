@@ -118,7 +118,7 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 Une fois que vous maîtriserez les technologies "brutes" qui permettent de construire des pages web (comme HTML, CSS, et JavaScript), vous rencontrerez rapidement divers outils permettant de faciliter ou d'accélerer votre travail. On peut citer comme exemples :
 
 - Les [outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) des navigateurs modernes qui permettent de déboguer votre code.
-- [Des outils de test](/fr/docs/conflicting/Learn_web_development/Extensions/Testing) pouvant être utilisés afin de vérifier si votre code se comporte comme vous l'aviez prévu.
+- [Des outils de test](/fr/docs/Learn_web_development/Extensions/Testing) pouvant être utilisés afin de vérifier si votre code se comporte comme vous l'aviez prévu.
 - Des bibliothèques et des cadres de travail (frameworks) basés sur JavaScript qui permettent de créer certains types de sites web beaucoup plus rapidement et efficacement .
 - Ce qu'on appelle les "Linters", des outils d'analyse qui prennent une liste de règles, parcourent votre code et listent les endroits où vous n'avez pas parfaitement suivi les règles.
 - Des minificateurs, qui retirent tous les blancs de vos fichiers de code pour les rendre plus compacts et donc plus rapides à télécharger.

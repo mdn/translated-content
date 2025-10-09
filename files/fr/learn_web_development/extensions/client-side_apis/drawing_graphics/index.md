@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 original_slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Un navigateur web contient certains outils graphiques très puissants, comme le langage [SVG](/fr/docs/Web/SVG) ou les API permettant de dessiner sur des éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) (voir [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API)). Dans cet article, nous verrons une introduction au canevas et les ressources complémentaires pour approfondir ces connaissances.
 
@@ -25,7 +25,7 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
 
 Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
 
-Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
+Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
 
 La situation a commencé à évoluer lorsque les navigateurs ont commencé à prendre en charge l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) et [l'API Canvas](/fr/docs/Web/API/Canvas_API) correspondante. Apple a conçu initialement cet ensemble vers 2004 et les autres éditeurs de navigateur l'ont implémenté dans les années qui ont suivi. Comme nous le verrons ci-après, le canevas fournit de nombreux outils pour créer des animations en 2D, des jeux, des visualisations de données et d'autres types d'application, notamment lorsqu'il est combiné avec les autres API Web exposées par les navigateurs.
 
