@@ -23,7 +23,7 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
 
 ## Les graphismes sur le Web
 
-Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
+Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn_web_development/Core/Structuring_content), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
 
 Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
 

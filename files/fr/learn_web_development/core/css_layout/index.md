@@ -31,7 +31,7 @@ Ces articles fourniront des instructions sur les outils et techniques de mise en
 
 - [Introduction à la mise en page en CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : Cet article récapitule quelques-unes des fonctionnalités de mise en page CSS que nous avons déjà abordées dans les modules précédents — telles que les diverses valeurs de [`display`](/fr/docs/Web/CSS/display) — et présente certains des concepts que nous couvrirons dans de ce module.
-- [Flux normal des éléments](/fr/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
+- [Flux normal des éléments](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : Les éléments se placent d'eux‑même sur les pages web selon un _flux normal_ sauf à ce que nous modifions la disposition avec CSS. Cet article explique les fondamentaux du flux normal pour permettre de comprendre comment le modifier.
 - [Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : [Flexbox](/fr/docs/Glossary/Flexbox) est une méthode de mise en page unidimensionnelle pour disposer les éléments en lignes ou en colonnes. Les éléments s'adaptent pour remplir de l'espace supplémentaire et se rétractent pour s'insérer dans des espaces plus petits. Cet article explique les bases de cet outil CSS.

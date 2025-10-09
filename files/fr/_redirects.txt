@@ -85,7 +85,6 @@
 /fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement	/fr/docs/Learn_web_development/Core/CSS_layout/Positioning
 /fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods	/fr/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 /fr/docs/Apprendre/CSS/CSS_layout/Multiple-column_Layout	/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
-/fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow	/fr/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs	/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 /fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design	/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /fr/docs/Apprendre/CSS/CSS_properties	/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
@@ -186,12 +185,10 @@
 /fr/docs/Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content	/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 /fr/docs/Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML	/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 /fr/docs/Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte	/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
-/fr/docs/Apprendre/HTML/Multimedia_and_embedding	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content
 /fr/docs/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /fr/docs/Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page	/fr/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /fr/docs/Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technologies	/fr/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
-/fr/docs/Apprendre/HTML/Tableaux	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /fr/docs/Apprendre/HTML/Tableaux/Advanced	/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /fr/docs/Apprendre/HTML/Tableaux/Basics	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /fr/docs/Apprendre/HTML/Tableaux/Structuring_planet_data	/fr/docs/Learn_web_development/Core/Structuring_content/Planet_data_table
@@ -2989,7 +2986,6 @@
 /fr/docs/Learn/CSS/CSS_layout/Introduction	/fr/docs/Learn_web_development/Core/CSS_layout/Introduction
 /fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods	/fr/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 /fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout	/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
-/fr/docs/Learn/CSS/CSS_layout/Normal_Flow	/fr/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction
 /fr/docs/Learn/CSS/CSS_layout/Positioning	/fr/docs/Learn_web_development/Core/CSS_layout/Positioning
 /fr/docs/Learn/CSS/CSS_layout/Practical_positioning_examples	/fr/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 /fr/docs/Learn/CSS/CSS_layout/Responsive_Design	/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
@@ -3105,14 +3101,12 @@
 /fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content	/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 /fr/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links	/fr/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 /fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
-/fr/docs/Learn/HTML/Multimedia_and_embedding	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content
 /fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/fr/docs/Learn_web_development/Core/Structuring_content/Splash_page
 /fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/fr/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/fr/docs/Web/HTML/Guides/Responsive_images
 /fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/fr/docs/Learn/HTML/Tables	/fr/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /fr/docs/Learn/HTML/Tables/Advanced	/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /fr/docs/Learn/HTML/Tables/Basics	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /fr/docs/Learn/HTML/Tables/Structuring_planet_data	/fr/docs/Learn_web_development/Core/Structuring_content/Planet_data_table
@@ -7475,7 +7469,6 @@
 /fr/docs/conflicting/Learn/Tools_and_testing/Cross_browser_testing/JavaScript	/fr/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
 /fr/docs/conflicting/Learn_370bfb0fa23e42f4384f010341852c43	/fr/docs/Learn_web_development
 /fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8	/fr/docs/Learn_web_development
-/fr/docs/conflicting/Learn_web_development/Core/Structuring_content_2f5dc6d6e575054cc70e0a8faa24bef31907d53cee6754dd2c92e644e705a7d8	/fr/docs/Learn_web_development/Core/Structuring_content
 /fr/docs/conflicting/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /fr/docs/conflicting/MDN/Writing_guidelines	/fr/docs/MDN/Writing_guidelines
 /fr/docs/conflicting/MDN/Writing_guidelines/Page_structures	/fr/docs/MDN/Writing_guidelines/Page_structures
