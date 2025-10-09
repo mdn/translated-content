@@ -1,13 +1,13 @@
 version: 2
-
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: /
     schedule:
       interval: daily
     open-pull-requests-limit: 10
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "daily"
+      interval: weekly
+    commit-message:
+      prefix: "ci(deps): "
