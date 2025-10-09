@@ -1,8 +1,6 @@
 ---
 title: 열 레이아웃
 slug: Web/CSS/Layout_cookbook/Column_layouts
-
-
 ---
 
 레이아웃을 구성할 때 여러 개의 열을 만들어야 하는 경우가 자주 있습니다. CSS는 이를 구현할 수 있는 여러 가지 방법을 제공합니다. [다단](/ko/docs/Web/CSS/CSS_multicol_layout), [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout), 또는 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 레이아웃 중 어떤 것을 사용할지는 구현하려는 목표에 따라 달라집니다. 이 문서에서는 이러한 다양한 방법들을 살펴보며 각각의 사용 방식을 비교합니다.
