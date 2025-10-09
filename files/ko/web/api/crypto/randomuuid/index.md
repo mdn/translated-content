@@ -1,5 +1,5 @@
 ---
-title: "Crypto.randomUUID()"
+title: Crypto.randomUUID()
 short-title: randomUUID()
 slug: Web/API/Crypto/randomUUID
 l10n:
