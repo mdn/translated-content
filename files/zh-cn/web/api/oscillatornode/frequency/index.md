@@ -3,7 +3,7 @@ title: OscillatorNode：frequency 属性
 short-title: frequency
 slug: Web/API/OscillatorNode/frequency
 l10n:
-  sourceCommit: 5cfd038b0d37452042461cfe169c0c9ab87be94d
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
 {{ APIRef("Web Audio API") }}
