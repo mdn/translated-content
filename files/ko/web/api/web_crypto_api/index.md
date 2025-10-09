@@ -2,7 +2,7 @@
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
 l10n:
-  sourceCommit: e79ec02b6c45e2157cb82c945fe9f992d214700c
+  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
 {{DefaultAPISidebar("Web Crypto API")}}{{securecontext_header}}{{AvailableInWorkers}}
