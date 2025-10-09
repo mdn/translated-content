@@ -45,7 +45,8 @@ La propriété `text-emphasis` est différente de {{cssxref("text-decoration")}}
 
 La taille du symbole d'emphase, comme celle des symboles Ruby, représente environ 50% de la taille de la police du texte. `text-emphasis` peut modifier la hauteur de la ligne lorsque l'interlignage n'est pas suffisant pour placer les marques.
 
-> **Note :** `text-emphasis` ne réinitialise pas la valeur de {{cssxref("text-emphasis-position")}}. En effet, bien que la couleur et le style des marques puisse varier, il est très peu probable qu'on change leurs positions au cours du même document.
+> [!NOTE]
+> `text-emphasis` ne réinitialise pas la valeur de {{cssxref("text-emphasis-position")}}. En effet, bien que la couleur et le style des marques puisse varier, il est très peu probable qu'on change leurs positions au cours du même document.
 
 ## Syntaxe
 

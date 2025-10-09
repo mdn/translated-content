@@ -81,7 +81,8 @@ La propriété `resize` peut être définie avec l'un des mots-clés suivants.
 - `inline` {{experimental_inline}}
   - : Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du flux en ligne.
 
-> **Note :** `resize` ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut `visible`.
+> [!NOTE]
+> `resize` ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut `visible`.
 
 ## Définition formelle
 
