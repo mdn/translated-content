@@ -2,7 +2,7 @@
 title: CSS 对象模型视图
 slug: Web/CSS/CSSOM_view
 l10n:
-  sourceCommit: 69fbf1cdb3cb8e2b3cb5ac21977ebf1b60cc0770
+  sourceCommit: 896a41d7d9832367a1e24af567fb419e9d4182f8
 ---
 
 **CSS 对象模型视图**（CSSOM view）模块支持通过脚本操作文档的可视化视图，具体功能包括：获取元素布局盒子的位置、读取视口的宽度或高度，以及控制元素的滚动行为。
@@ -32,87 +32,9 @@ l10n:
 - {{glossary("Layout viewport", "布局视口")}}
 - {{glossary("Visual viewport", "可视视口")}}
 
-### 接口
+### API
 
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
-- {{domxref("Screen")}}
-- {{domxref("CaretPosition")}}
-- {{domxref("VisualViewport")}}
-
-### 接口拓展
-
-该模块为其他规范中定义的接口扩展了属性和方法。
-
-- {{domxref("Window")}}
-  - {{domxref("Window.devicePixelRatio", "devicePixelRatio")}}
-  - {{domxref("Window.innerHeight", "innerHeight")}}
-  - {{domxref("Window.innerWidth", "innerWidth")}}
-  - {{domxref("Window.matchMedia", "matchMedia()")}}
-  - {{domxref("Window.moveBy", "moveBy()")}}
-  - {{domxref("Window.moveTo", "moveTo()")}}
-  - {{domxref("Window.outerHeight", "outerHeight")}}
-  - {{domxref("Window.outerWidth", "outerWidth")}}
-  - `pageXOffset`（参阅 {{domxref("Window.scrollX", "scrollX")}}）
-  - `pageYOffset`（参阅 {{domxref("Window.scrollY", "scrollY")}}）
-  - {{domxref("Window.resizeBy", "resizeBy()")}}
-  - {{domxref("Window.resizeTo", "resizeTo()")}}
-  - {{domxref("Window.screen", "screen")}}
-  - {{domxref("Window.screenLeft", "screenLeft")}}
-  - {{domxref("Window.screenTop", "screenTop")}}
-  - {{domxref("Window.screenX", "screenX")}}
-  - {{domxref("Window.screenY", "screenY")}}
-  - {{domxref("Window.visualViewport", "visualViewport")}}
-  - {{domxref("Window.scroll", "scroll()")}}
-  - {{domxref("Window.scrollBy", "scrollBy()")}}
-  - {{domxref("Window.scrollTo", "scrollTo()")}}
-  - {{domxref("Window.scrollX", "scrollX")}}
-  - {{domxref("Window.scrollY", "scrollY")}}
-- {{domxref("Document")}}
-  - {{domxref("Document.elementFromPoint", "elementFromPoint()")}}
-  - {{domxref("Document.caretPositionFromPoint", "caretPositionFromPoint()")}}
-  - {{domxref("Document.scrollingElement", "scrollingElement")}}
-- {{domxref("Element")}}
-  - {{domxref("Element.checkVisibility", "checkVisibility()")}}
-  - {{domxref("Element.clientHeight", "clientHeight")}}
-  - {{domxref("Element.clientLeft", "clientLeft")}}
-  - {{domxref("Element.clientTop", "clientTop")}}
-  - {{domxref("Element.clientWidth", "clientWidth")}}
-  - {{domxref("Element.currentCSSZoom", "currentCSSZoom")}}
-  - {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}}
-  - {{domxref("Element.getClientRects", "getClientRects()")}}
-  - {{domxref("Element.scroll", "scroll()")}}
-  - {{domxref("Element.scrollBy", "scrollBy()")}}
-  - {{domxref("Element.scrollHeight", "scrollHeight")}}
-  - {{domxref("Element.scrollIntoView", "scrollIntoView()")}}
-  - {{domxref("Element.scrollLeft", "scrollLeft")}}
-  - {{domxref("Element.scrollTo", "scrollTo()")}}
-  - {{domxref("Element.scrollTop", "scrollTop")}}
-  - {{domxref("Element.scrollWidth", "scrollWidth")}}
-- {{domxref("HTMLElement")}}
-  - {{domxref("HTMLElement.offsetHeight", "offsetHeight")}}
-  - {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}
-  - {{domxref("HTMLElement.offsetParent", "offsetParent")}}
-  - {{domxref("HTMLElement.offsetTop", "offsetTop")}}
-  - {{domxref("HTMLElement.offsetWidth", "offsetWidth")}}
-- {{domxref("HTMLImageElement")}}
-  - {{domxref("HTMLImageElement.x", "x")}}
-  - {{domxref("HTMLImageElement.y", "y")}}
-- {{domxref("Range")}}
-  - {{domxref("Range.getBoundingClientRect", "getBoundingClientRect()")}}
-  - {{domxref("Range.getClientRects", "getClientRects()")}}
-- {{domxref("MouseEvent")}}
-  - {{domxref("MouseEvent.clientX", "clientX")}}
-  - {{domxref("MouseEvent.clientY", "clientY")}}
-  - {{domxref("MouseEvent.offsetX", "offsetX")}}
-  - {{domxref("MouseEvent.offsetY", "offsetY")}}
-  - {{domxref("MouseEvent.pageX", "pageX")}}
-  - {{domxref("MouseEvent.pageY", "pageY")}}
-  - {{domxref("MouseEvent.screenY", "screenY")}}
-  - {{domxref("MouseEvent.x", "x")}}
-  - {{domxref("MouseEvent.y", "y")}}
-
-该模块为 {{domxref("Text")}}、{{domxref("Element")}}、{{domxref("CSSPseudoElement")}} 和 {{domxref("Document")}} 接口定义了几何工具方法。这些 `GeometryUtils` 特性目前尚未在任何浏览器中实现。
+有关此模块定义的 JavaScript API，请参阅 [CSSOM 视图 API](/zh-CN/docs/Web/API/CSSOM_view_API) 文档。
 
 ## 指南
 
@@ -124,10 +46,13 @@ l10n:
 ## 相关概念
 
 - {{cssxref("zoom")}}
+- {{htmlelement("meta")}}
+
+### 术语表和定义
+
 - {{glossary("CSSOM", "CSS 对象模型（CSSOM）")}}
 - {{glossary("CSS pixel", "CSS 像素")}}
 - {{glossary("Scroll container", "滚动容器")}}
-- {{htmlelement("meta")}}
 
 ## 规范
 
@@ -136,6 +61,8 @@ l10n:
 ## 参见
 
 - [CSS 对象模型（CSSOM）](/zh-CN/docs/Web/API/CSS_Object_Model)API
+- [CSSOM 视图 API](/zh-CN/docs/Web/API/CSSOM_view_API)
+- [CSS 视口](/zh-CN/docs/Web/CSS/CSS_viewport)模块
 - [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
 - [CSS 滚动边界](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块

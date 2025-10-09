@@ -108,7 +108,7 @@ On voit ici la bordure supplémentaire autour du texte en emphase.
   - [Règles-at](/fr/docs/Web/CSS/CSS_syntax/At-rule)
   - [Commentairess](/fr/docs/Web/CSS/CSS_syntax/Comments)
   - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
