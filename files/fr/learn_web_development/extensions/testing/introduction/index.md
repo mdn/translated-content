@@ -39,7 +39,8 @@ Le test de navigateur croisé est une façon de s'assurer que les sites web et l
 
 Souvenez-vous que vous n'êtes pas votre utilisateur — uniquement parce que votre site fonctionne sur votre Macbook Pro ou votre Galaxy Nexus haut de gamme, cela ne veut pas dire qu'il fonctionnera pour tout vos utilisateurs — Il y a encore un paquet de tests à effectuer !
 
-> **Note :** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) fournit une perspective plus précise sur les différents navigateurs que les gens utilisent, leur part de marché, et les problèmes de compatibilité entre navigateurs.
+> [!NOTE]
+> [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) fournit une perspective plus précise sur les différents navigateurs que les gens utilisent, leur part de marché, et les problèmes de compatibilité entre navigateurs.
 
 Il est important de préciser quelque termes de terminologie. Pour commencer, quand on parle de "travailler en navigateurs croisés", on veut vraiment dire que chaque navigateur doit être capable de fournir une expérience utilisateur acceptable. C'est potentiellement bon pour un site de ne pas fournir exactement la même expérience sur tous les navigateurs, tant que le noyau des fonctionnalités reste accessible. Avec des navigateurs modernes vous pourrez ajouter quelques animations 3D et stylisées, tandis que sur de plus vieux navigateurs vous pouvez juste utiliser un design plus plat représentant la même information. Tant que le propriétaire du site est content, alors vous avez terminé votre travail.
 

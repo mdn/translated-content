@@ -11,7 +11,8 @@ original_slug: Web/HTTP/Headers/Referer
 > [!NOTE]
 > referer는 단어 "referrer"의 잘못된 철자입니다. 자세한 내용은 [HTTP_referer](https://en.wikipedia.org/wiki/HTTP_referer)을 참고하세요.
 
-> **경고:** `Referer` 헤더는 사생활과 관련된 브라우징 히스토리에 관한 정보를 노출할 가능성이 있습니다. 더 많은 정보는 [Referer header: privacy and security concerns](/ko/docs/Web/Security/Referer_header:_privacy_and_security_concerns) 이곳을 참조하세요.
+> [!WARNING]
+> `Referer` 헤더는 사생활과 관련된 브라우징 히스토리에 관한 정보를 노출할 가능성이 있습니다. 더 많은 정보는 [Referer header: privacy and security concerns](/ko/docs/Web/Security/Referer_header:_privacy_and_security_concerns) 이곳을 참조하세요.
 
 <table class="properties">
   <tbody>

@@ -91,7 +91,8 @@ Si vous ne souhaitez pas que votre PWA soit disponible à la racine de votre pag
 
 Pour le cas de l'application de démonstration CycleTracker au fur et à mesure des différentes étapes du développement, `<nomutilisateur>` sera `mdn` et le dépôt est `pwa-examples`. Comme ce dépôt contient plusieurs exemples de PWA, chacune avec le code correspondant à différentes étapes du processus de développement, les fichiers (et donc les PWA correspondantes) sont disponibles avec des URL ayant plusieurs niveaux de profondeur.
 
-> **Note :** [Vous pouvez configurer un domaine personnalisé pour les sites GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+> [!NOTE]
+> [Vous pouvez configurer un domaine personnalisé pour les sites GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 ## Pour la suite
 

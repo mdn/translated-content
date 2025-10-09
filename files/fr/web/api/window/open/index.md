@@ -40,7 +40,8 @@ open(url, target, windowFeatures);
 
         Par exemple&nbsp;: `popup=yes`, `popup=1`, `popup=true`, et `popup` produiront le même résultat.
 
-        > **Note :** [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
+        > [!NOTE]
+        > [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
 
     - `width` ou `innerWidth`
       - : Indique la largeur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.

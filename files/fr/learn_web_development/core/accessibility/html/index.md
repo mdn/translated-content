@@ -517,7 +517,8 @@ Jetons un autre coup d'oeil à la quatrième méthode :
 
 Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d'écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n'est pas possible avec `alt`.
 
-> **Note :** `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
+> [!NOTE]
+> `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
 
 ### Autres mécanismes alternatifs de texte
 
