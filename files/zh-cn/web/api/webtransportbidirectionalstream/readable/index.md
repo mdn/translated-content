@@ -29,6 +29,6 @@ l10n:
 ## 参见
 
 - [使用 WebTransport](https://developer.chrome.google.cn/docs/capabilities/web-apis/webtransport)
-- {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
-- {{domxref("Streams API", "Streams API", "", "nocode")}}
+- {{domxref("WebSockets API", "WebSocket API", "", "nocode")}}
+- {{domxref("Streams API", "流 API", "", "nocode")}}
 - [基于 HTTP/3 的 WebTransport](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)
