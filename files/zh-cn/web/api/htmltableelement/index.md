@@ -20,7 +20,7 @@ _继承自父接口 {{DOMxRef("HTMLElement")}}。_
 - {{DOMxRef("HTMLTableElement.tHead")}}
   - : 表示该元素首个子元素 {{HTMLElement("thead")}} 的 {{DOMxRef("HTMLTableSectionElement")}} 对象，若未找到则返回 `null`。当设置此属性时，若对象不代表 `<thead>` 元素，则抛出名称为 `HierarchyRequestError` 的 {{DOMxRef("DOMException")}} 异常。若提供正确的对象，则将其插入树结构中：若存在既非 {{HTMLElement("caption")}} 也非 {{HTMLElement("colgroup")}} 的首个元素，则置于该元素之前；若不存在此类元素，则作为最后一个子元素插入。同时，若存在该元素的首个子元素为 `<thead>`，则将其从树结构中移除。
 - {{DOMxRef("HTMLTableElement.tFoot")}}
-  - : 表示该元素首个子元素 {{HTMLElement("tfoot")}} 的 {{DOMxRef("HTMLTableSectionElement")}} 对象，若未找到则返回 `null`。当设置此属性时，若对象不代表 `<tfoot>` 元素，则抛出名称为 `HierarchyRequestError` 的 {{DOMxRef("DOMException")}} 异常。若提供正确的对象，则将其插入树结构中，位置紧邻首个既非 {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}} 且非  {{HTMLElement("thead")}} 的元素之前插入树中；若不存在此类元素，则作为最后一个子元素插入。同时，若存在该元素的首个子元素为 `<tfoot>`，则将其从树结构中移除。
+  - : 表示该元素首个子元素 {{HTMLElement("tfoot")}} 的 {{DOMxRef("HTMLTableSectionElement")}} 对象，若未找到则返回 `null`。当设置此属性时，若对象不代表 `<tfoot>` 元素，则抛出名称为 `HierarchyRequestError` 的 {{DOMxRef("DOMException")}} 异常。若提供正确的对象，则将其插入树结构中，位置紧邻首个既非 {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}} 且非 {{HTMLElement("thead")}} 的元素之前插入树中；若不存在此类元素，则作为最后一个子元素插入。同时，若存在该元素的首个子元素为 `<tfoot>`，则将其从树结构中移除。
 - {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
   - : 返回一个包含元素所有行（即该元素的所有 {{HTMLElement("tr")}} 子元素，或其某个 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 或 {{HTMLElement("tfoot")}} 元素的子元素）的实时 {{DOMxRef("HTMLCollection")}}。`<thead>` 的行成员按树结构顺序优先呈现，`<tbody>` 的行成员按树结构顺序最后呈现。该 `HTMLCollection` 为实时集合，当 `HTMLTableElement` 发生变更时会自动更新。
 - {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
