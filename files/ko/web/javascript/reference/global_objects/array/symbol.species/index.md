@@ -10,7 +10,8 @@ l10n:
 
 **`Array[@@species]`** 정적 접근자 속성은 배열 메서드에서 반환 값을 구성하는 데 사용되는 생성자를 반환합니다.
 
-> **경고:** `@@species`가 존재하면 임의 코드가 실행될 수 있어 보안 취약점이 발생할 수 있습니다. 또한 특정 최적화를 훨씬 더 어렵게 만듭니다. 엔진 구현자는 [이 기능을 제거할지 검토](https://github.com/tc39/proposal-rm-builtin-subclassing)하고 있습니다. 가능하면 이 기능에 의존하지 마십시오. {{jsxref("Array/toReversed", "toReversed()")}}와 같은 최신 배열 메서드는 `@@species`를 사용하지 않으며, 항상 새 `Array` 기반 클래스 인스턴스를 반환합니다.
+> [!WARNING]
+> `@@species`가 존재하면 임의 코드가 실행될 수 있어 보안 취약점이 발생할 수 있습니다. 또한 특정 최적화를 훨씬 더 어렵게 만듭니다. 엔진 구현자는 [이 기능을 제거할지 검토](https://github.com/tc39/proposal-rm-builtin-subclassing)하고 있습니다. 가능하면 이 기능에 의존하지 마십시오. {{jsxref("Array/toReversed", "toReversed()")}}와 같은 최신 배열 메서드는 `@@species`를 사용하지 않으며, 항상 새 `Array` 기반 클래스 인스턴스를 반환합니다.
 
 ## 구문
 
