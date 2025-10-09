@@ -21,7 +21,7 @@ l10n:
 ## 示例
 
 ```html
-<span id="s1" style="color: red;">Some text</span>
+<span id="s1" style="color: red;">一些文本</span>
 ```
 
 ```js
