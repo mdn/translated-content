@@ -46,7 +46,8 @@ input {
 
 On les appelle boutons radios par analogie avec les boutons qui étaient utilisés sur les anciens postes de radios.
 
-> **Note :** [Les cases à cocher (_checkboxes_)](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.
+> [!NOTE]
+> [Les cases à cocher (_checkboxes_)](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.
 
 ## Valeur
 
