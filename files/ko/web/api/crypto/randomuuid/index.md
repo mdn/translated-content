@@ -3,7 +3,7 @@ title: Crypto.randomUUID()
 short-title: randomUUID()
 slug: Web/API/Crypto/randomUUID
 l10n:
-  sourceCommit: 92c3d788640c3142fbd6c20820d6c37948d6bec9
+  sourceCommit: cc27a64bb555b250cf0984a3a744e5fd251e3565
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
