@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("WindowClient")}} 接口的只读属性 **`ancestorOrigins`** 是一个字符串数组（{{jsxref("Array")}}），按逆序列出由该 `WindowClient` 表示的浏览上下文的所有祖先的源。
 
-数组中的第一个元素是此窗口父级的源，最后一个元素是顶级浏览上下文的源。如果此窗口本身是顶级浏览上下文，则 `ancestorOrigins` 是一个空数组（{{jsxref("Array")}}）。
+数组中的第一个元素是此窗口父级的源，最后一个元素是顶级浏览上下文的源。如果此窗口本身是顶级浏览上下文，则 `ancestorOrigins` 是一个空数组。
 
 ## 值
 
