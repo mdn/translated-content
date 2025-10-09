@@ -25,7 +25,8 @@ Essayez de modifier le code qui suit pour recréer l'exemple complet&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls1.html", '100%', 700)}}
 
-> **Note :** [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls1-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
+> [!NOTE]
+> [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls1-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
 
 ## Contrôles de base 2
 
@@ -40,7 +41,8 @@ Essayez de modifier le code qui suit pour recréer l'exemple complet&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls2.html", '100%', 700)}}
 
-> **Note :** [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls2-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
+> [!NOTE]
+> [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls2-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
 
 ## Contrôles de base 3
 
@@ -54,7 +56,8 @@ Essayez de modifier le code qui suit pour recréer l'exemple complet&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls3.html", '100%', 700)}}
 
-> **Note :** [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls3-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
+> [!NOTE]
+> [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls3-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
 
 ## Évaluation et aide
 

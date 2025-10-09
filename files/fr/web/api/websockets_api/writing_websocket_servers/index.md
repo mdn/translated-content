@@ -48,7 +48,8 @@ Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur
 > [!NOTE]
 > L'URI de la requête (`/chat` dans notre cas) n'a pas de signification particulièrement dans les spécifications en usage&nbsp;: elle permet simplement, par convention, de disposer d'une multitude d'applications en parallèle grâce à WebSocket. Par exemple, `exemple.com/chat` peut être associée à une API/une application de dialogue multiutilisateurs lorsque `/game` invoquera son homologue pour un jeu.
 
-> **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/fr/docs/Web/HTTP/Reference/Status) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
+> [!NOTE]
+> [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/fr/docs/Web/HTTP/Reference/Status) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
 
 ### La réponse du serveur lors de la poignée de mains
 

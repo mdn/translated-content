@@ -50,7 +50,8 @@ console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
 ```
 
-> **Note :** `{a, b} = {a:1, b:2}` n'est pas syntaxiquement valide en tant que tel, en effet `{a, b}` est ici considéré comme un bloc et non comme un objet littéral.
+> [!NOTE]
+> `{a, b} = {a:1, b:2}` n'est pas syntaxiquement valide en tant que tel, en effet `{a, b}` est ici considéré comme un bloc et non comme un objet littéral.
 >
 > Cependant, `({a, b} = {a:1, b:2})` sera valide comme pour la forme `let {a, b} = {a:1, b:2}`.
 

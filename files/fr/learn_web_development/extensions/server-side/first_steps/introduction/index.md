@@ -129,7 +129,8 @@ Les serveurs peuvent stocker et utiliser des informations sur les clients pour f
 
 Une analyse plus approfondie des habitudes des utilisateurs peut être utilisée pour anticiper leurs intérêts et personnaliser les réponses ou les notifications du serveur, par exemple pour fournir une liste des lieux précédemment visités ou les plus populaires que vous pourriez vouloir chercher sur la carte.
 
-> **Note :** [Google Maps](https://maps.google.com/) sauvegarde vos recherches et votre historique de visites. Les emplacement fréquemment visités ou fréquemment recherchés sont plus mis en avant que les autres.
+> [!NOTE]
+> [Google Maps](https://maps.google.com/) sauvegarde vos recherches et votre historique de visites. Les emplacement fréquemment visités ou fréquemment recherchés sont plus mis en avant que les autres.
 >
 > Les résultats de recherche Google sont optimisés en fonction des recherches précédentes.
 >
