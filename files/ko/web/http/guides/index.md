@@ -1,6 +1,6 @@
 ---
-title: HTTP guides
-short-title: Guides
+title: HTTP 안내서
+short-title: 안내서
 slug: Web/HTTP/Guides
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
