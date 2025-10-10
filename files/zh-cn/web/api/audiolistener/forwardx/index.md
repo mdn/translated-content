@@ -8,14 +8,14 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioListener") }} 接口的只读属性 `forwardX` 返回一个表示定义监听器指向方向的向量的 x 分量的 {{domxref("AudioParam")}}。
+{{ domxref("AudioListener") }} 接口的只读属性 `forwardX` 返回一个表示定义监听器指向方向向量的 x 分量的 {{domxref("AudioParam")}}。
 
 > [!NOTE]
 > 当与 {{domxref("PannerNode")}} 同时使用时，若将 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则该参数为 _a-rate_；否则为 _k-rate_。
 
 ## 值
 
-{{domxref("AudioParam")}}。默认值为 -1，范围可从负无穷到正无穷。
+{{domxref("AudioParam")}}。默认值为 0，范围可从负无穷到正无穷。
 
 ## 示例
 
