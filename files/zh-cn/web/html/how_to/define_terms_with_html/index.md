@@ -28,8 +28,8 @@ HTML 提供了多种方式来传达描述性语义，无论是内联还是结构
 
 当你需要查明某个术语的定义时，通常会直接翻阅词典或术语表。词典和术语表会正式地将关键词与一个或多个描述关联起来，例如：
 
-> - 湛蓝色（*形容词*）
->   - : 如晴空般的色彩。*“湛蓝的晴空”*
+> - 湛蓝色（_形容词_）
+>   - : 如晴空般的色彩。_“湛蓝的晴空”_
 
 但我们总是在非正式地定义关键词，例如在此处：
 
@@ -56,7 +56,8 @@ HTML 同样采用此法，但因 HTML 并非视觉媒介，故不使用粗体。
 
 ```html
 <p>
-  <dfn><abbr>HTML</abbr>（超文本标记语言）</dfn>是用于在 web 上为文档建立结构的描述性语言。
+  <dfn><abbr>HTML</abbr>（超文本标记语言）</dfn>是用于在 web
+  上为文档建立结构的描述性语言。
 </p>
 ```
 
@@ -70,13 +71,14 @@ HTML 同样采用此法，但因 HTML 并非视觉媒介，故不使用粗体。
 ```html
 <p>
   <span id="ff">
-    <dfn aria-describedby="ff">Firefox</dfn> 是由 Mozilla 基金会创建的 web 浏览器。
+    <dfn aria-describedby="ff">Firefox</dfn> 是由 Mozilla 基金会创建的 web
+    浏览器。
   </span>
   你可以在 <a href="https://www.mozilla.org">mozilla.org</a> 下载它。
 </p>
 ```
 
-辅助技术常可利用此属性为特定术语查找文本替代方案。您可在任何包含待定义关键词的标签上使用 `aria-describedby`（不仅限于 `<dfn>` 元素）。该属性通过 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 引用包含说明内容的元素。
+辅助技术常可利用此属性为特定术语查找文本替代方案。可在任何包含待定义关键词的标签上使用 `aria-describedby`（不仅限于 `<dfn>` 元素）。该属性通过 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 引用包含说明内容的元素。
 
 ## 如何构建描述列表
 
