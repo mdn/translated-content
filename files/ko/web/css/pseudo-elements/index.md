@@ -13,7 +13,8 @@ p::first-line {
 }
 ```
 
-> **참고:** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 의사 요소와 달리 요소의 **특정 상태**에 스타일을 적용할 때 사용합니다.
+> [!NOTE]
+> [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 의사 요소와 달리 요소의 **특정 상태**에 스타일을 적용할 때 사용합니다.
 
 ## 구문
 
