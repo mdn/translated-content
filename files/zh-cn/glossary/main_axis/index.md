@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
 {{glossary("flexbox", "弹性盒子")}}的主轴（main axis）由 {{cssxref("flex-direction")}} 属性设置的方向所定义。`flex-direction` 有四个取值，分别是：
 
 - `row`
