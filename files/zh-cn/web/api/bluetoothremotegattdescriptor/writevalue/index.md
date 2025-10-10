@@ -3,12 +3,12 @@ title: BluetoothRemoteGATTDescriptor：writeValue() 方法
 short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
 l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+  sourceCommit: 5fd5cc8885286bfa5bae8b3e9970e1eab26e941d
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTDescriptor.writeValue()`** 方法将 value 属性设置为包含在 {{jsxref("ArrayBuffer")}} 中的字节，并返回一个 {{jsxref("Promise")}}。
+**`BluetoothRemoteGATTDescriptor.writeValue()`** 方法将 value 属性设置为包含在 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 中的字节，并返回 {{jsxref("Promise")}}。
 
 ## 语法
 
@@ -19,7 +19,7 @@ writeValue(array)
 ### 参数
 
 - `array`
-  - : 使用数组中包含的字节设置值。
+  - : 使用缓冲区中包含的字节设置值。
 
 ## 返回值
 
