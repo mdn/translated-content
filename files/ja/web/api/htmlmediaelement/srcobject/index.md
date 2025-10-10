@@ -110,7 +110,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **メモ:** {{domxref("MediaSourceHandle")}} は、共有ワーカーまたはサービスワーカーへの、または共有ワーカーを介した移譲は正常にはできません。
+> [!NOTE]
+> {{domxref("MediaSourceHandle")}} は、共有ワーカーまたはサービスワーカーへの、または共有ワーカーを介した移譲は正常にはできません。
 
 ## 仕様書
 

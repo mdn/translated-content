@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-{{CSSRef}}
-
 **`min-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小高を設定します。これは {{cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、`min-height` で指定した値を下回ることを防ぎます。
 
-{{InteractiveExample("CSS Demo: min-height")}}
+{{InteractiveExample("CSS デモ: min-height")}}
 
 ```css interactive-example-choice
 min-height: 150px;

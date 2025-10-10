@@ -3,8 +3,6 @@ title: 网格布局中的盒模型对齐
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 ---
 
-{{CSSRef}}
-
 CSS 网格布局实现了[盒模型对齐 Level 3](https://drafts.csswg.org/css-align/) 规范，与用于弹性容器中元素对齐的[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的标准相同。这个规范详细约定了在不同的布局方式下如何处理对齐问题。布局方法会尽可能地符合规范，但仍因特性与约束的不同而存在行为的差异，浏览器还未完全实现所有的规范；好在 CSS 网格布局已被广泛支持。
 
 本文将演示它是如何工作的，你会发现很多属性和值与弹性盒布局中的用法是类似的，由于网格布局是二维的，弹性盒布局是一维的，所以你也会发现它们有一些小区别。我们就从处理网格对齐时用到的两条轴线开始吧。

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Access-Control-Allow-Methods`** especifica o método ou métodos permitidos quando acessando o recurso em resposta a uma {{glossary("preflight request")}}.
 
 <table class="properties">

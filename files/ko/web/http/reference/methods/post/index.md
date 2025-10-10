@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/POST
 original_slug: Web/HTTP/Methods/POST
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `POST` 메서드**는 서버로 데이터를 전송합니다. 요청 본문의 유형은 {{httpheader("Content-Type")}} 헤더로 나타냅니다.
 
 {{httpmethod("PUT")}}과 `POST`의 차이는 {{glossary("idempotent", "멱등성")}}으로, `PUT`은 멱등성을 가집니다. `PUT`은 한 번을 보내도, 여러 번을 연속으로 보내도 같은 효과를 보입니다. 즉, 부수 효과(side effect)가 없습니다.

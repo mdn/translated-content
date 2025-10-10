@@ -27,5 +27,5 @@ La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Objec
 
 ### Culture générale
 
-- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
+- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures)
 - [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia

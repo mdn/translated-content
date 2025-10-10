@@ -38,7 +38,7 @@ dispatchEvent(event);
 
 ## 예외
 
-[이벤트 생성과 발동](/ko/docs/Web/Events/Creating_and_triggering_events)를 확인하세요.
+[이벤트 생성과 발동](/ko/docs/Web/API/Document_Object_Model/Events)를 확인하세요.
 
 ## 명세
 

@@ -9,7 +9,7 @@ l10n:
 
 **`slice()`** は {{jsxref("SharedArrayBuffer")}} インスタンスのメソッドで、この `SharedArrayBuffer` の先頭位置 (含む) から末尾位置 (含まない) までのバイトのコピーである新しい `SharedArrayBuffer` を返します。開始位置または終わりが負の場合、それは配列の末尾からのインデックスを参照します。
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.slice()")}}
+{{InteractiveExample("JavaScript デモ: SharedArrayBuffer.prototype.slice()")}}
 
 ```js interactive-example
 // バイト数でサイズを指定して SharedArrayBuffer を作成

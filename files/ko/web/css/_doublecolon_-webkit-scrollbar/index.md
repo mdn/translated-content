@@ -3,7 +3,7 @@ title: ::-webkit-scrollbar
 slug: Web/CSS/::-webkit-scrollbar
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 CSS 의사 요소 `::-webkit-scrollbar` 는 요소에 `overflow:scroll;`이 설정되어 있을 때 해당 요소의 스크롤바 스타일에 영향을 끼칩니다.
 

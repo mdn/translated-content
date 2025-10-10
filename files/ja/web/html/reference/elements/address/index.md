@@ -9,7 +9,7 @@ l10n:
 
 **`<address>`** は [HTML](/ja/docs/Web/HTML) の要素で、この中の HTML が個人、団体、組織の連絡先情報を提供していることを示します。
 
-{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;address&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>このページの作者の連絡先:</p>

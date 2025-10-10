@@ -3,8 +3,6 @@ title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
 ---
 
-{{CSSRef}}
-
 **`rotate3d()`** CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。
 
 {{InteractiveExample("CSS Demo: rotate3d()")}}

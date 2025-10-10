@@ -9,7 +9,7 @@ l10n:
 
 **`global`** は {{jsxref("RegExp")}} インスタンスのプロパティで、`g` フラグが正規表現で使われているかどうかを返します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.global")}}
 
 ```js interactive-example
 const regex1 = new RegExp("foo", "g");

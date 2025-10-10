@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une image (type [`<image>`](/fr/docs/Web/CSS/image)) à la façon de la fonction [`url()`](/fr/docs/Web/CSS/url_value) mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
+La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
 
 > [!NOTE]
 > Attention à ne pas confondre cette notation fonctionnelle CSS avec le constructeur du DOM [`Image()` pour `HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement/Image).
@@ -21,7 +21,7 @@ où&nbsp;:
 - `image-tags` {{optional_inline}}
   - : La directionnalité de l'image, la valeur `ltr` pourra être utilisée afin d'indiquer que l'image est orientée de gauche à droite ou la valeur `rtl` pour indiquer une orientation de droite à gauche.
 - `image-src` {{optional_inline}}
-  - : Zéro, une ou plusieurs [URL](/fr/docs/Web/CSS/url_value) ou chaînes de caractères ([`<string>`](/fr/docs/Web/CSS/string)) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
+  - : Zéro, une ou plusieurs {{cssxref("url_value", "&lt;url&gt;")}} ou chaînes de caractères ({{CSSxRef("&lt;string&gt;")}}) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
 - `color` {{optional_inline}}
   - : Une couleur par défaut. Cette couleur sera utilisée par défaut si aucune image n'est trouvée ou prise en charge parmi les images fournies via `image-src`.
 
@@ -65,7 +65,7 @@ La taille du rectangle de couleur appliqué peut être définie grâce à la pro
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan, car les navigateurs n'extraient pas d'informations du contenu visuel des images. Si l'image contient des informations essentielles à la compréhension du document, il faudra décrire ces informations de façon sémantique dans le document afin, entre autres, que les outils d'assistance puissent transmettre les informations aux utilisateurs.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 Cette fonction peut aider à améliorer l'accessibilité en fournissant une couleur par défaut lorsque le chargement d'une image échoue. Bien qu'il faille toujours utiliser `background-color` comme défaut pour chaque image d'arrière-plan, la fonction CSS `image()` permet d'ajouter une couleur d'arrière-plan pour toute image dont le chargement échouerait (par exemple un fichier PNG/GIF/WebP avec de la transparence).
@@ -149,11 +149,11 @@ Dans l'exemple précédent, on placera un masque noir semi-transparent sur le lo
 
 ## Voir aussi
 
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`url()`](/fr/docs/Web/CSS/url_value)
-- [`clip-path`](/fr/docs/Web/CSS/clip-path)
-- [`-moz-image-rect()`](/fr/docs/Web/CSS/-moz-image-rect)
-- [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- {{CSSxRef("&lt;image&gt;")}}
+- {{CSSxRef("element", "element()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{CSSxRef("clip-path")}}
+- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("image/image-set", "image-set()")}}
+- {{CSSxRef("cross-fade", "cross-fade()")}}
+- Le module des [images CSS](/fr/docs/Web/CSS/CSS_images)

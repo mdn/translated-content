@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>アカウントにログインしてください:</p>
@@ -55,7 +55,8 @@ input[type="image"] {
 
 例えば、「今すぐログイン」をアイコンやテキストが入った画像を表示するグラフィックボタンの場合、 `alt` 属性も `今すぐログイン` のように設定してください。
 
-> **メモ:** `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
+> [!NOTE]
+> `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
 
 `<input type="image">` 要素の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性と同様に動作します。
 

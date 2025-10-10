@@ -1,11 +1,16 @@
 ---
 title: device-height
 slug: Web/CSS/@media/device-height
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
-**`device-height`** est une caractéristique média (cf. {{cssxref("@media")}}) dépréciée dont la valeur correspond à la hauteur de la surface de rendu pour l'appareil d'affichage.
+> [!NOTE]
+> Pour interroger la hauteur de la zone d'affichage, il faut utiliser la caractéristique média {{cssxref("@media/height", "height")}}.
+
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-height`** peut être utilisée pour tester la hauteur de la surface de rendu d'un périphérique de sortie.
 
 ## Syntaxe
 
@@ -13,7 +18,7 @@ La caractéristique `device-height` est définie comme une longueur (type {{cssx
 
 ## Exemples
 
-Ce fragment HTML applique une feuille de style spécifique pour les appareils dont la hauteur est inférieure à 800 pixels.
+### Appliquer une feuille de style spécifique pour les appareils dont la hauteur est inférieure à 800 pixels
 
 ```html
 <link
@@ -29,3 +34,8 @@ Ce fragment HTML applique une feuille de style spécifique pour les appareils do
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

@@ -10,7 +10,7 @@ l10n:
 
 **`<main>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書の {{HTMLElement("body")}} の主要なコンテンツを表します。メインコンテンツ領域は、文書の中心的なトピック、またはアプリケーションの中心的な機能に直接関連する、または展開されたコンテンツで構成されます。
 
-{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;main&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <header>Gecko facts</header>
