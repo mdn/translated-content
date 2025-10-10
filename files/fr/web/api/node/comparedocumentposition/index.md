@@ -13,7 +13,12 @@ rapporte la position de son nœud d'argument par rapport au nœud sur lequel ell
 ```js-nolint
 compareDocumentPosition(otherNode)
 
-## Retour
+### Paramètres
+
+- `otherNode`
+  - : Le nœud ({{domxref("Node")}}) pour lequel la position doit être signalée, par rapport au nœud.
+
+### Valeur de retour
 
 La valeur retournée est un masque de bits qui peut combiner plusieurs des valeurs suivantes :
 
