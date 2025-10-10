@@ -5,19 +5,19 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features) **`-webkit-device-pixel-ratio`** 是一个非标准的布尔型，它是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性的替代方案。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) **`-webkit-device-pixel-ratio`** 是一个非标准的布尔型，它是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性的替代方案。
 
 > [!NOTE]
-> 如果可以，请改用标准的 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性查询。虽然此前缀媒体特性是 WebKit 的特有功能，但其他浏览器引擎也可能支持它。详见下文的[浏览器兼容性](#浏览器兼容性)。
+> 如果可以，请改用标准的 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性查询。虽然此前缀媒体特性是 WebKit 特性，但其他浏览器引擎也可能支持它。详见下文的[浏览器兼容性](#浏览器兼容性)。
 
 ## 语法
 
-`-webkit-device-pixel-ratio` 特性被指定为一个 {{cssxref("&lt;number&gt;")}} 值。类型的值。它是一个范围特性，这意味着你还可以使用带前缀的 **`-webkit-min-device-pixel-ratio`** 和 **`-webkit-max-device-pixel-ratio`** 变体，分别用于查询最小值和最大值。
+`-webkit-device-pixel-ratio` 特性被指定为一个 {{cssxref("&lt;number&gt;")}} 类型的值。它是一个范围特性，这意味着你还可以使用带前缀的 **`-webkit-min-device-pixel-ratio`** 和 **`-webkit-max-device-pixel-ratio`** 变体，分别用于查询最小值和最大值。
 
 ### 值
 
 - {{cssxref("&lt;number&gt;")}}
-  - : 用于表示每个 CSS [`px`](/zh-CN/docs/Web/CSS/length#绝对长度单位) 所对应的设备像素数量。虽然该值是一个 `<number>`，因此在语法上不允许带单位，但它的隐含单位是 [`dppx`](/zh-CN/docs/Web/CSS/resolution#单位)。
+  - : 用于表示每个 CSS [`px`](/zh-CN/docs/Web/CSS/length#绝对长度单位) 所对应的设备像素数量。虽然该值是一个 `<number>`（因此在语法上不允许带单位），但它的隐含单位是 [`dppx`](/zh-CN/docs/Web/CSS/resolution#单位)。
 
 ## 实现
 
