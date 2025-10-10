@@ -26,17 +26,17 @@ compareDocumentPosition(otherNode)
 Une valeur entière représentant la position de `otherNode` par rapport à `node` comme un [masquage](https://fr.wikipedia.org/wiki/Masquage) combinant les propriétés constantes suivantes de l'interface {{domxref("Node")}}&nbsp;:
 
 - `Node.DOCUMENT_POSITION_DISCONNECTED` (`1`)
-  - Les deux nœuds sont dans différents documents ou différents arbres dans le même document.
+  - : Les deux nœuds sont dans différents documents ou différents arbres dans le même document.
 - `Node.DOCUMENT_POSITION_PRECEDING` (`2`)
-  - `otherNode` précède le nœud soit dans un [parcours en profondeur préfixé](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur) d'un arbre contenant les deux nœuds (par exemple en tant qu'ancêtre, nœud frère précédent, descendant d'un frère précédent ou frère précédent d'un ancêtre), soit — s'ils sont déconnectés — selon un ordre arbitraire mais cohérent.
+  - : `otherNode` précède le nœud soit dans un [parcours en profondeur préfixé](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur) d'un arbre contenant les deux nœuds (par exemple en tant qu'ancêtre, nœud frère précédent, descendant d'un frère précédent ou frère précédent d'un ancêtre), soit — s'ils sont déconnectés — selon un ordre arbitraire mais cohérent.
 - `Node.DOCUMENT_POSITION_FOLLOWING` (`4`)
-  - `otherNode` suit le nœud soit dans un [parcours en profondeur préfixé](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur) d'un arbre contenant les deux nœuds (par exemple en tant que descendant, nœud frère suivant, descendant d'un frère suivant ou frère suivant d'un ancêtre), soit — s'ils sont déconnectés — selon un ordre arbitraire mais cohérent.
+  - : `otherNode` suit le nœud soit dans un [parcours en profondeur préfixé](https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur) d'un arbre contenant les deux nœuds (par exemple en tant que descendant, nœud frère suivant, descendant d'un frère suivant ou frère suivant d'un ancêtre), soit — s'ils sont déconnectés — selon un ordre arbitraire mais cohérent.
 - `Node.DOCUMENT_POSITION_CONTAINS` (`8`)
-  - `otherNode` est un ancêtre du nœud.
+  - : `otherNode` est un ancêtre du nœud.
 - `Node.DOCUMENT_POSITION_CONTAINED_BY` (`16`)
-  - `otherNode` est un descendant du nœud.
+  - : `otherNode` est un descendant du nœud.
 - `Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` (`32`)
-  - Le résultat dépend d'un comportement arbitraire ou spécifique à l'implémentation et n'est pas garanti d'être portable.
+  - : Le résultat dépend d'un comportement arbitraire ou spécifique à l'implémentation et n'est pas garanti d'être portable.
 
 Zéro ou plusieurs bits peuvent être activés, en fonction des scénarios qui s'appliquent. Par exemple, si `otherNode` est situé plus haut dans le document **_et_** contient le noeud sur lequel `compareDocumentPosition()` a été appelé, alors les bits `DOCUMENT_POSITION_CONTAINS` et `DOCUMENT_POSITION_PRECEDING` seront tous deux positionnés, produisant une valeur de `10` (`0x0A`).
 
