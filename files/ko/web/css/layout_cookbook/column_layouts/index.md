@@ -231,6 +231,6 @@ l10n:
 
 ## MDN 참고 자료
 
-- [Guide to Multi-column Layout](/ko/docs/Web/CSS/CSS_multicol_layout)
-- [Guide to flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout)
-- [Guide to CSS grid layout](/ko/docs/Web/CSS/CSS_grid_layout)
+- [CSS 다단 레이아웃 가이드](/ko/docs/Web/CSS/CSS_multicol_layout)
+- [CSS 플렉스박스 가이드](/ko/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS 그리드 레이아웃 가이드](/ko/docs/Web/CSS/CSS_grid_layout)
