@@ -31,8 +31,6 @@ La valeur retournée est un masque de bits qui peut combiner plusieurs des valeu
 | `DOCUMENT_POSITION_CONTAINED_BY`            | 16     |
 | `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 32     |
 
-> [!NOTE]
-> Les [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators) doivent être utilisés pour s'assurer d'avoir un résultat cohérent.
 
 ## Exemple
 
