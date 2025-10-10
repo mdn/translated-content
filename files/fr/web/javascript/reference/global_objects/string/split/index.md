@@ -173,7 +173,8 @@ Ce script affichera :
 ["Hello ", "1", " word. Sentence number ", "2", "."];
 ```
 
-> **Note :** `\d` correspond à la [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) pour les chiffres compris entre 0 et 9.
+> [!NOTE]
+> `\d` correspond à la [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) pour les chiffres compris entre 0 et 9.
 
 ### Inverser une chaîne en utilisant `split()`
 
