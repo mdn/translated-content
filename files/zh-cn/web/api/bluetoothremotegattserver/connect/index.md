@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTServer.connect()`** 方法会触发脚本执行环境连接到 `this.device`。
+**`BluetoothRemoteGATTServer.disconnect()`** 方法会建立脚本执行环境与 `this.device` 的连接。
 
 ## 语法
 
@@ -21,7 +21,7 @@ connect()
 
 ## 返回值
 
-{{jsxref("Promise")}}，且该 promise 将会兑现为 {{domxref("BluetoothRemoteGATTServer")}} 对象。
+{{jsxref("Promise")}}，其会兑现为 {{domxref("BluetoothRemoteGATTServer")}}。
 
 ## 规范
 
