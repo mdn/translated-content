@@ -5,7 +5,8 @@ slug: Web/API/Node/compareDocumentPosition
 
 {{APIRef("DOM")}}
 
-La méthode **`Node.compareDocumentPosition()`** donne la position de l'argument `otherNode` par rapport au noeud `node` sur lequel la méthode est appellée.
+La méthode **`compareDocumentPosition()`** de l'interface {{domxref("Node")}}
+rapporte la position de son nœud d'argument par rapport au nœud sur lequel elle est appelée.
 
 ## Syntaxe
 
