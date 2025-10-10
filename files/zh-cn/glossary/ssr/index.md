@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d864c4fa589174ddd906bb679576d2265a20fad1
 ---
 
-{{GlossarySidebar}}
-
 **服务器端渲染**（SSR）指的是在服务器上生成 HTML 内容并将其发送到客户端的做法。SSR 与{{glossary("CSR", "客户端渲染")}}相对，后者由客户端使用 JavaScript 生成 HTML 内容。这两种技术并不互斥，可以在同一个应用中结合使用。
 
 {{glossary("SSG", "静态站点")}}可以被视为 SSR 的一种（并且可以使用 SSR 的基础设施生成），但两者有细微差别。它的内容是在构建时而非请求时生成的，通常无需部署在服务器上，并且可以通过 {{glossary("CDN")}} 进行分发。

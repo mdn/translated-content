@@ -70,7 +70,8 @@ L'algorithme de la cascade détermine quelle valeur s'applique pour chaque propr
 
 La cascade progresse dans l'ordre croissant des précédences, les animations ont donc la précédence sur les valeurs normales, qu'elles soient déclarées par l'utilisatrice ou l'utilisateur, le site, ou l'agent utilisateur. Les valeurs importantes l'emportent sur les animations, et les transitions l'emportent sur les valeurs importantes.
 
-> **Note :** **Transitions et animations**
+> [!NOTE]
+> **Transitions et animations**
 >
 > Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important)).
 >
@@ -288,7 +289,8 @@ p {
 
 Maintenant, le paragraphe sera bleu. Avec `!important`, ce sont les styles de la première couche qui l'emportent sur toutes les autres et sur les déclarations importantes en dehors des couches. Si le style en incise contenait `!important`, par exemple avec `<p style="color: black !important">`, là encore le paragraphe serait noir. L'importance des styles en incise l'emporte sur tous les autres styles important du site, quelle que soit la spécificité.
 
-> **Note :** `!important` renverse la précédence des couches de la cascade. Pour cette raison, plutôt que d'utiliser `!important` pour surcharger des styles externes, on importera des <i lang="en">frameworks</i>, des styles tiers, et des styles de widgets dans des couches pour réduire leur précédence. `!important` ne devrait être utilisé que très rarement, voire jamais, pour prévenir d'éventuels surchargements depuis la première couche.
+> [!NOTE]
+> `!important` renverse la précédence des couches de la cascade. Pour cette raison, plutôt que d'utiliser `!important` pour surcharger des styles externes, on importera des <i lang="en">frameworks</i>, des styles tiers, et des styles de widgets dans des couches pour réduire leur précédence. `!important` ne devrait être utilisé que très rarement, voire jamais, pour prévenir d'éventuels surchargements depuis la première couche.
 
 Les styles qui portent sur des transitions l'emportent sur tous les styles importants, quel que soit l'endroit ou la façon dont ils sont déclarés.
 
