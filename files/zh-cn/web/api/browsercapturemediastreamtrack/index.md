@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}
 
-**`BrowserCaptureMediaStreamTrack`** 接口是 {{domxref("Screen Capture API", "屏幕捕获 API", "", "nocode")}} 的一部分，用于表示单个视频轨道。它扩展了 {{domxref("MediaStreamTrack")}} 类，并添加了方法来限制自捕获流（例如用户的屏幕或窗口）中被捕获的部分。
+{{domxref("Screen Capture API", "屏幕捕获 API", "", "nocode")}} 的 **`BrowserCaptureMediaStreamTrack`** 接口用于表示单个视频轨道。它扩展了 {{domxref("MediaStreamTrack")}} 类，并添加了方法来限制自捕获流（例如用户的屏幕或窗口）中被捕获的部分。
 
 {{InheritanceDiagram}}
 
