@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
-`Client` 인터페이스는 {{domxref("Worker")}}나 {{domxref("SharedWorker")}}와 같은 실행 가능한 컨텍스트를 나타냅니다. {{domxref("Window")}} 클라이언트는 보다 구체적인 {{domxref("WindowClient")}}로 표현됩니다. {{domxref("Clients.matchAll","Clients.matchAll()")}}이나 {{domxref("Clients.get","Clients.get()")}}과 같은 메서드에서 `Client`/`WindowClient` 객체를 가져올 수 있습니다.
+`Client` 인터페이스는 {{domxref("Worker")}}나 {{domxref("SharedWorker")}}와 같은 실행 가능한 컨텍스트를 나타냅니다. {{domxref("Window")}} 클라이언트는 보다 구체적인 {{domxref("WindowClient")}}로 표현됩니다. `Client`/`WindowClient` 객체는 {{domxref("Clients.matchAll","Clients.matchAll()")}}이나 {{domxref("Clients.get","Clients.get()")}}과 같은 메서드를 통해 가져올 수 있습니다.
 
 ## 인스턴스 메서드
 
