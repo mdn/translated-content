@@ -10,9 +10,9 @@ rapporte la position de son nœud d'argument par rapport au nœud sur lequel ell
 
 ## Syntaxe
 
-````js-nolint
+```js-nolint
 compareDocumentPosition(otherNode)
-````
+```
 
 ### Paramètres
 
