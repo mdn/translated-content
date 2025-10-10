@@ -52,7 +52,7 @@ _继承自父接口 {{DOMxRef("HTMLElement")}}。_
 
 ## 方法
 
-_继承自父接口，{{DOMxRef("HTMLElement")}}_。
+_继承自父接口 {{DOMxRef("HTMLElement")}}_。
 
 - {{DOMxRef("HTMLTableElement.createTHead()")}}
   - : 返回表示子元素中的第一个 {{HTMLElement("thead")}} 的 {{DOMxRef("HTMLTableSectionElement")}}。如果找不到该元素，则创建一个新的并且立即插入到 DOM 树中既不是 {{HTMLElement("caption")}} 也不是 {{HTMLElement("colgroup")}} 的第一个元素之前，或者直接被作为最后一个元素插入（如果找不到上述元素的话）。
