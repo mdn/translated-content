@@ -41,7 +41,9 @@ Une valeur entière représentant la position de `otherNode` par rapport à `nod
 ```js
 var head = document.getElementsByTagName("head").item(0);
 
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");
