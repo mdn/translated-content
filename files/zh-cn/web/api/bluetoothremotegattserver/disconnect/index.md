@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`BluetoothRemoteGATTServer.disconnect()`** 方法会令脚本执行环境从 `this.device` 断开连接。
+**`BluetoothRemoteGATTServer.disconnect()`** 方法会端口脚本执行环境与 `this.device` 的连接。
 
 ## 语法
 
