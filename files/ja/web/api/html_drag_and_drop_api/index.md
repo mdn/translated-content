@@ -104,7 +104,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-- ドラッグ & ドロップで使用される一般的なデータ型の一覧 (テキスト、HTML、リンク、ファイルなど) については、[推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)をご覧ください。
+- ドラッグ & ドロップで使用される一般的なデータ型の一覧 (テキスト、HTML、リンク、ファイルなど) については、[推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)をご覧ください。
 - ドラッグデータについて詳しくは、[ドラッグデータ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata)をご覧ください。
 
 ### ドラッグ画像の定義
@@ -255,6 +255,6 @@ function dragstart_handler(ev) {
 ## 関連情報
 
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)

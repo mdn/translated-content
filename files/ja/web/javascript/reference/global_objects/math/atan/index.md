@@ -1,11 +1,10 @@
 ---
 title: Math.atan()
+short-title: atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.atan()`** は静的メソッドで、数値の逆正接（アークタンジェント）をラジアン単位で返します。
 
@@ -24,10 +23,10 @@ function calcAngle(opposite, adjacent) {
 }
 
 console.log(calcAngle(8, 10));
-// Expected output: 0.6747409422235527
+// 予想される結果: 0.6747409422235527
 
 console.log(calcAngle(5, 3));
-// Expected output: 1.0303768265243125
+// 予想される結果: 1.0303768265243125
 ```
 
 ## 構文
@@ -60,7 +59,7 @@ Math.atan(0); // 0
 Math.atan(1); // 0.7853981633974483  (π/4)
 Math.atan(Infinity); // 1.5707963267948966  (π/2)
 
-// The angle that the line (0,0) -- (x,y) forms with the x-axis in a Cartesian coordinate system
+// 直線 (0,0) -- (x,y) が直交座標系において x 軸となす角度
 const theta = (x, y) => Math.atan(y / x);
 ```
 

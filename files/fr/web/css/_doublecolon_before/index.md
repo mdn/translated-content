@@ -62,9 +62,9 @@ Si la propriété [`content`](/fr/docs/Web/CSS/content) n'est pas spécifiée, a
 
 Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{cssxref("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
 
-## Accessibility
+## Accessibilité
 
-Using a `::before` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
+Il est déconseillé d'utiliser un pseudo-élément `::before` pour ajouter du contenu, car ce n'est pas toujours accessible de manière fiable aux lecteur·ice·s d'écran.
 
 ## Exemples
 
