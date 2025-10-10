@@ -25,7 +25,7 @@ l10n:
 - {{domxref("Client.url")}} {{ReadOnlyInline}}
   - : 클라이언트의 URL을 문자열로 나타냅니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
