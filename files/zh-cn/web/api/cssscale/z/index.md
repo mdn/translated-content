@@ -14,7 +14,7 @@ l10n:
 
 ## 值
 
-{{domxref("CSSNumericValue")}}。可以设置为数字（该数字会被包装在具有 `unit: "number"` 的 {{domxref("CSSUnitValue")}} 中）。
+{{domxref("CSSNumericValue")}}。可以设置为数值（该数值会被包装在具有 `unit: "number"` 的 {{domxref("CSSUnitValue")}} 中）。
 
 ## 示例
 
