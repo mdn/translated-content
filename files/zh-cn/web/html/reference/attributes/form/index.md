@@ -70,7 +70,9 @@ HTML `form` 属性将表单相关元素与同一文档内的 {{htmlelement("form
 <form id="calcForm">
   <label>第一个数：<input id="a" value="2" type="number" /></label>
   <label>第二个数：<input id="b" value="3" type="number" /></label>
-  <label>总和：<output name="result" for="a b" form="calcForm">5</output></label>
+  <label
+    >总和：<output name="result" for="a b" form="calcForm">5</output></label
+  >
 </form>
 ```
 
@@ -85,9 +87,7 @@ HTML `form` 属性将表单相关元素与同一文档内的 {{htmlelement("form
   <label>用户名：<input type="text" name="username" /></label>
 </form>
 
-<label
-  >密码：<input form="loginForm" type="password" name="password"
-/></label>
+<label>密码：<input form="loginForm" type="password" name="password" /></label>
 <label>
   选择一个选项：
   <select form="loginForm" name="options">
@@ -97,9 +97,7 @@ HTML `form` 属性将表单相关元素与同一文档内的 {{htmlelement("form
 </label>
 <label
   >描述：
-  <textarea form="loginForm" rows="4" name="description">
-你好，世界！</textarea
-  >
+  <textarea form="loginForm" rows="4" name="description">你好，世界！</textarea>
 </label>
 <button form="loginForm" type="submit" name="submitLogin" value="Login">
   提交
