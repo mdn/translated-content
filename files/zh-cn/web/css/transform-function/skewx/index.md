@@ -1,11 +1,13 @@
 ---
 title: skewX()
 slug: Web/CSS/transform-function/skewX
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`skewX()`** 函数定义了一个转换，该转换将元素倾斜到二维平面上的水平方向。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
+**`skewX()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义在二维平面上沿水平方向倾斜元素的变换。它的结果是 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
-{{InteractiveExample("CSS Demo: skewX()")}}
+{{InteractiveExample("CSS 演示：skewX()")}}
 
 ```css interactive-example-choice
 transform: skewX(0);
@@ -33,7 +35,7 @@ transform: skewX(0.352rad);
 </section>
 ```
 
-这种转换是一种剪切映射 (横切)，它在水平和垂直方向上将单元内的每个点扭曲一定的角度。每个点的坐标根据指定的角度以及到原点的距离，进行成比例的值调整；因此，一个点离原点越远，其增加的值就越大。
+此类变换是一种[剪切影射](https://zh.wikipedia.org/wiki/错切)，它会将元素内的每个点在水平方向上按一定的角度进行扭曲。每个点的横坐标（水平方向，x 坐标）会根据指定的角度和该点到原点的距离按比例进行调整；因此，离原点越远的点，其被调整的值就越大。
 
 > [!NOTE]
 > `skewX(a)` 相当于 `skew(a)`。
@@ -47,64 +49,38 @@ skewX(a)
 ### 参数值
 
 - `a`
-  - : `a` 是一个 {{cssxref("&lt;angle&gt;")}}，表示用于沿横坐标扭曲元素的角度。
+  - : 一个表示沿横坐标（水平方向，x 坐标）扭曲元素的角度的 {{cssxref("&lt;angle&gt;")}}。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">笛卡儿坐标 ℝ<sup>2</sup></th>
-      <th scope="col">齐次坐标 ℝℙ<sup>2</sup></th>
-      <th scope="col">笛卡儿坐标 ℝ<sup>3</sup></th>
-      <th scope="col">齐次坐标 ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> 上的<a href="/zh-CN/docs/Web/CSS/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影平面">ℝℙ^2</a> 上的<a href="https://zh.wikipedia.org/wiki/齐次坐标">齐次坐标</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a> 上的笛卡尔坐标</th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影空间">ℝℙ^3</a> 上的齐次坐标</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ay)</mtd></mtr
-              ><mtr>0<mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} 1 & \tan(a) \\ 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & \tan(a) & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & \tan(a) & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
-      <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ay)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+      <td rowspan="2">
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & \tan(a) & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -113,13 +89,17 @@ skewX(a)
   </tbody>
 </table>
 
+## 形式语法
+
+{{CSSSyntax}}
+
 ## 示例
 
 ### HTML
 
 ```html
-<div>Normal</div>
-<div class="skewed">Skewed</div>
+<div>正常</div>
+<div class="skewed">倾斜</div>
 ```
 
 ### CSS
@@ -132,7 +112,7 @@ div {
 }
 
 .skewed {
-  transform: skewX(10deg); /* Equal to skew(10deg) */
+  transform: skewX(10deg); /* 相当于 skew(10deg) */
   background-color: pink;
 }
 ```
@@ -153,3 +133,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- 各变换属性：
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - 注意：没有 `skew` 属性
