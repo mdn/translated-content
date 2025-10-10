@@ -22,7 +22,7 @@ getTitlebarAreaRect()
 
 无。
 
-## 返回值
+### 返回值
 
 提供应用内容内标题栏区域的坐标和尺寸的 {{domxref("DOMRect")}}。
 
