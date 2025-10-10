@@ -120,7 +120,8 @@ counter-reset: reversed(section);
 
 카운터의 값은 {{cssxref("counter-increment")}} 의 음수값을 특정함에 따라 감소하게 됩니다.
 
-> **참고:** {{cssxref("counter-increment")}} 를 사용하여 역순이 아닌 카운터를 감소시킬 수 있습니다.
+> [!NOTE]
+> {{cssxref("counter-increment")}} 를 사용하여 역순이 아닌 카운터를 감소시킬 수 있습니다.
 > 역순 카운터의 주요 이점은 기본 초기값이며,`list-item` 카운터가 역순 카운터를 자동으로 감소시킨다는 점입니다.
 
 ### 목록 요소의 카운터
