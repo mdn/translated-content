@@ -20,7 +20,7 @@ compareDocumentPosition(otherNode)
 
 ### Valeur de retour
 
-La valeur retournée est un masque de bits qui peut combiner plusieurs des valeurs suivantes :
+Une valeur entière représentant la position de `otherNode` par rapport à `node` comme un [masquage](https://fr.wikipedia.org/wiki/Masquage) combinant les propriétés constantes suivantes de l'interface {{domxref("Node")}}&nbsp;:
 
 | Nom                                         | Valeur |
 | ------------------------------------------- | ------ |
