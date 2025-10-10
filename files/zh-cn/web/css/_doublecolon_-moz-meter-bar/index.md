@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Glossary/Pseudo-element) **`::-moz-meter-bar`** 表示 {{HTMLElement("meter")}} 元素中的标量条。它用于选择并应用样式到。它用于选择并应用样式到标量元素内部的标量部分。
+[CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Glossary/Pseudo-element) **`::-moz-meter-bar`** 表示 {{HTMLElement("meter")}} 元素中的标量条。它用于选择并应用样式到 meter 元素内部的标量部分。
 
 ## 语法
 
