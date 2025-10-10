@@ -1,13 +1,11 @@
 ---
 title: skewY()
 slug: Web/CSS/transform-function/skewY
-page-type: css-function
-browser-compat: css.types.transform-function.skewY
-sidebar: cssref
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-The **`skewY()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element in the vertical
-direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
+**`skewY()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义在二维平面上沿垂直方向倾斜元素的变换。其结果是 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS 演示：skewY()")}}
 
@@ -37,10 +35,7 @@ transform: skewY(0.352rad);
 </section>
 ```
 
-This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
-each point within an element by a certain angle in the vertical direction. The ordinate (vertical, y-coordinate) of each point is
-modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
-origin a point is, the greater will be the value added it.
+此类变换是一种[剪切影射](https://zh.wikipedia.org/wiki/错切)，它会将元素内的每个点在垂直方向上按一定的角度进行扭曲。每个点的纵坐标（垂直方向，y 坐标）会根据指定的角度和该点到原点的距离按比例进行调整；因此，离原点越远的点，其被调整的值就越大。
 
 ## 语法
 
@@ -51,15 +46,15 @@ skewY(a)
 ### 值
 
 - `a`
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the ordinate (vertical, y-coordinate).
+  - : 一个表示沿纵坐标（垂直方向，y 坐标）扭曲元素的角度的 {{cssxref("&lt;angle&gt;")}}。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/zh-CN/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
-      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
-      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> 上的<a href="/zh-CN/docs/Web/CSS/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影平面">ℝℙ^2</a> 上的<a href="https://zh.wikipedia.org/wiki/齐次坐标">齐次坐标</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a> 上的笛卡尔坐标</th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影空间">ℝℙ^3</a> 上的齐次坐标</th>
     </tr>
   </thead>
   <tbody>
@@ -100,8 +95,8 @@ skewY(a)
 ### HTML
 
 ```html
-<div>Normal</div>
-<div class="skewed">Skewed</div>
+<div>正常</div>
+<div class="skewed">倾斜</div>
 ```
 
 ### CSS
@@ -135,8 +130,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- 单独的变换属性：
+- 各变换属性：
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
-  - Note: there is no `skew` property
+  - 注意：没有 `skew` 属性
