@@ -1,11 +1,10 @@
 ---
 title: Math.sinh()
+short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.sinh()`** 静的メソッドは、数値の双曲線正弦 (ハイパーボリックサイン) を返します。
 
@@ -19,16 +18,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.sinh(0));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.sinh(1));
-// Expected output: 1.1752011936438014
+// 予想される結果: 1.1752011936438014
 
 console.log(Math.sinh(-1));
-// Expected output: -1.1752011936438014
+// 予想される結果: -1.1752011936438014
 
 console.log(Math.sinh(2));
-// Expected output: 3.626860407847019
+// 予想される結果: 3.626860407847019
 ```
 
 ## 構文
