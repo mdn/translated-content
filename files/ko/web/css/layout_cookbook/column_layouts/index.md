@@ -1,6 +1,8 @@
 ---
 title: 열 레이아웃
 slug: Web/CSS/Layout_cookbook/Column_layouts
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 레이아웃을 구성할 때 여러 개의 열을 만들어야 하는 경우가 자주 있습니다. CSS는 이를 구현할 수 있는 여러 가지 방법을 제공합니다. [다단](/ko/docs/Web/CSS/CSS_multicol_layout), [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout), 또는 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 레이아웃 중 어떤 것을 사용할지는 구현하려는 목표에 따라 달라집니다. 이 문서에서는 이러한 다양한 방법들을 살펴보며 각각의 사용 방식을 비교합니다.
@@ -11,9 +13,9 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 열을 사용하여 구현하고자 하는 다양한 디자인 패턴들이 있습니다.
 
-- [A continuous thread of content broken up into newspaper-style columns](#a_continuous_thread_of_content_—_multi-column_layout).
-- [A single row of items arranged as columns, with all heights being equal](#a_single_row_of_items_with_equal_heights_—_flexbox).
-- [Multiple rows of columns lined up by row and column](#lining_items_up_in_rows_and_columns_—_grid_layout).
+- [신문 스타일의 열로 나뉜 연속적인 콘텐츠](#연속된_콘텐츠_흐름,_다단_레이아웃).
+- [모든 높이가 동일한 열로 이루어진 단일 행 요소](#동일한_높이의_단일_행_요소,_플렉스박스).
+- [행과 열을 기준으로 정렬된 여러 열의 행](#요소를_행과_열로_정렬,_그리드_레이아웃).
 
 ## 예시
 
@@ -21,7 +23,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 ### 연속된 콘텐츠 흐름, 다단 레이아웃
 
-다단 레이아웃을 사용해 열을 만들면, 텍스트는 연속적인 흐름을 유지하며 각 열을 순서대로 채워 나갑니다. 모든 열의 크기는 동일해야 하며, 특정 열이나 해당 열의 콘텐츠만 개별적으로 선택하여 스타일링할 수는 없습니다.
+다단 레이아웃을 사용해 열을 만들면, 텍스트는 연속적인 흐름을 유지하며 각 열을 순서대로 채워 나갑니다. 모든 열의 크기는 동일해야 하며, 특정 열이나 해당 열의 콘텐츠만 개별적으로 선택하여 지정할 수는 없습니다.
 
 {{cssxref("column-gap")}} 또는 {{cssxref("gap")}} 속성을 사용하면 열 간의 간격을 조정할 수 있고, {{cssxref("column-rule")}} 속성을 사용하면 열 사이에 구분선을 추가할 수 있습니다.
 
