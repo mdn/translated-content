@@ -16,7 +16,7 @@ l10n:
 - {{domxref("BrowserCaptureMediaStreamTrack.clone", "clone()")}} {{Experimental_Inline}}
   - : 返回原始 `BrowserCaptureMediaStreamTrack` 的未裁剪、无限制的克隆对象。
 - {{domxref("BrowserCaptureMediaStreamTrack.cropTo", "cropTo()")}} {{Experimental_Inline}}
-  - : 将自捕获流裁剪到指定 DOM 元素呈现的区域。
+  - : 将自捕获流裁剪到指定 DOM 元素渲染的区域。
 - {{domxref("BrowserCaptureMediaStreamTrack.restrictTo", "restrictTo()")}} {{Experimental_Inline}}
   - : 将自捕获流限制到特定的 DOM 元素。
 
