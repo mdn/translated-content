@@ -3,8 +3,6 @@ title: 收尾工作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 本篇为 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的**第 10 节也是最后一节。**完成这篇课程后，你可以在 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html) 找到我们的源代码。

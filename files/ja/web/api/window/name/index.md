@@ -32,7 +32,8 @@ window.name = "lab_view";
 
 `Window.name` はまた、いくつかのフレームワーク ( SessionVars や Dojo の dojox.io.windowName など) によって JSONP のより安全な代替としてクロスドメインメッセージングを実現するために使われています。しかし、現代の機微なデータを扱うウェブアプリケーションは、クロスドメインメッセージングのために `window.name` に依存するべきではありません。なぜなら、これは意図された目的ではない上、ウィンドウ間での情報の共有にはより安全な/良い方法があります。{{domxref("Window.postMessage()")}} の利用を推奨します。
 
-> **メモ:** `window.name` は保存される全ての値を `toString` メソッドにより文字列表現に変換します。
+> [!NOTE]
+> `window.name` は保存される全ての値を `toString` メソッドにより文字列表現に変換します。
 
 ### 例
 

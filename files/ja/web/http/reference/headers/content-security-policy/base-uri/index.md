@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレクティブは、文書の {{HTMLElement("base")}} 要素で使用することができる URL を制限します。この値が存在しない場合は、任意の URI が許可されます。このディレクティブが存在しない場合、ユーザーエージェントは {{HTMLElement("base")}} 要素の値を使用します。
 
 <table class="properties">
@@ -21,7 +19,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレ�
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
-      <td>設定しないと、任意の URL が許可されます。</td>
+      <td>なし。設定しないと、任意の URL が許可されます。</td>
     </tr>
   </tbody>
 </table>

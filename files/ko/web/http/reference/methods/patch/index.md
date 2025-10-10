@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PATCH
 original_slug: Web/HTTP/Methods/PATCH
 ---
 
-{{HTTPSidebar}}
-
 **HTTP PATCH** 메소드는 리소스의 부분적인 수정을 할 때에 사용됩니다.
 
 HTTP {{HTTPMethod("PUT")}} 메소드는 문서 전체의 완전한 교체만을 허용합니다. 반면 `PATCH` 메소드는 `PUT` 메소드와 달리 멱등성을 가지지 않는데, 이는 동일한 patch 요청이 다른 결과를 야기할 수도 있음을 뜻합니다. 하지만 PATCH를 PUT과 같은 방식으로 사용함으로써 멱등성을 가지게 할 수도 있습니다.

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`lang`** permet de définir la langue utilisée pour l'élément. Pour les éléments non-éditables, c'est la langue dans laquelle ils sont écrits. Pour les éléments éditables, c'est la langue dans laquelle devrait écrire l'utilisateur. La valeur de cet attribut est une «&nbsp;balise de langue&nbsp;» dont le format est défini par le document de l'IETF : [_Les balises d'identification de langues (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). Si cette balise est la chaîne vide, la langue sera définie comme _inconnue_. Si la balise de langue n'est pas valide selon BCP47, la langue sera définie comme _invalide_.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`lang`** permet de définir la langue utilisée pour l'élément. Pour les éléments non-éditables, c'est la langue dans laquelle ils sont écrits. Pour les éléments éditables, c'est la langue dans laquelle devrait écrire l'utilisateur. La valeur de cet attribut est une «&nbsp;balise de langue&nbsp;» dont le format est défini par le document de l'IETF : [_Les balises d'identification de langues (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). Si cette balise est la chaîne vide, la langue sera définie comme _inconnue_. Si la balise de langue n'est pas valide selon BCP47, la langue sera définie comme _invalide_.
 
 {{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
 
@@ -32,7 +32,7 @@ p::before {
 }
 ```
 
-Même lorsque l'attribut **`lang`** est défini, il peut ne pas être pris en compte. En effet, l'attribut [`xml:lang`](/fr/docs/Web/HTML/Global_attributes#xml:lang) aura la priorité sur celui-ci.
+Même lorsque l'attribut **`lang`** est défini, il peut ne pas être pris en compte. En effet, l'attribut [`xml:lang`](/fr/docs/Web/HTML/Reference/Global_attributes#xml:lang) aura la priorité sur celui-ci.
 
 Pour la pseudo-classe CSS {{cssxref(":lang")}}, deux noms de langues invalides sont considérés différents si les noms utilisés sont différents. Par exemple, alors que `:lang(fr)` permet l'appariement avec les déclarations (valides) `lang="fr-BE"` ou `lang="fr-CH"`, un encodage (invalide) comme `:lang(xyzzy)` ne permet pas l'appariement avec une déclaration (invalide) comme `lang="xyzzy-Zorp!"`.
 
@@ -61,6 +61,6 @@ La sous-balise de script doit précéder la sous-balise régionale si les deux s
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - La pseudo-classe CSS {{cssxref(":lang")}}
 - L'en-tête HTTP {{HTTPHeader("Content-Language")}}

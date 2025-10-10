@@ -31,7 +31,8 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Reference/Global
 
     Si este atributo no está establecido, se hereda el valor del nodo principal.
 
-    > **Nota:** **No utilice este atributo, ya que es obsoleta (no soportado) en el último estándar**.
+    > [!NOTE]
+    > **No utilice este atributo, ya que es obsoleta (no soportado) en el último estándar**.
     >
     > - Para lograr el mismo efecto que los valores `left`, `center`, `right` o `justify`, utilice la propiedad CSS {{cssxref("text-align")}}.
     > - Para lograr el mismo efecto que el valor char, en CSS3, puede utilizar el valor de la [`char`](#char) como el valor de la propiedad {{cssxref("text-align")}}.

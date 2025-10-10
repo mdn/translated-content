@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当书签或文件夹被移动到不同的父文件夹或在文件夹内的位置时触发。
 
 > [!NOTE]

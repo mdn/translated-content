@@ -5,8 +5,6 @@ l10n:
   sourceCommit: acc6ec7d08ede0727a68cbc696e983c572940f62
 ---
 
-{{AddonSidebar}}
-
 每当响应数据可用时都会被调用的事件处理器。处理器会传递一个包含 `data` 属性的 [`Event` 对象](/zh-CN/docs/Web/API/Event)。`data` 属性包含以 {{jsxref("ArrayBuffer")}} 表示的一个响应数据分块。
 
 要对数据解码，请使用 {{domxref("TextDecoder")}} 或 {{domxref("Blob")}}。

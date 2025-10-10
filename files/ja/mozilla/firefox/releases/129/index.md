@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 10096e0e61277e85474989237545b705f1fa181b
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 129 の変更点をまとめています。Firefox 129 は、米国時間 [2024 年 8 月 6 日](https://whattrainisitnow.com/release/?version=129) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
