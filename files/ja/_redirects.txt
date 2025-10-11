@@ -2268,7 +2268,7 @@
 /ja/docs/Learn/Performance/Multimedia	/ja/docs/Learn_web_development/Extensions/Performance/Multimedia
 /ja/docs/Learn/Performance/Perceived_performance	/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/Guides/How_browsers_work
-/ja/docs/Learn/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/ja/docs/Learn/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Best_practices
 /ja/docs/Learn/Performance/What_is_web_performance	/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /ja/docs/Learn/Performance/business_case_for_performance	/ja/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
 /ja/docs/Learn/Performance/video	/ja/docs/Learn_web_development/Extensions/Performance/video
@@ -2386,6 +2386,7 @@
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/ja/docs/Learn_web_development/Extensions/Forms
+/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Best_practices
 /ja/docs/Learn_web_development/Extensions/Security_privacy	/ja/docs/Web/Security
 /ja/docs/Learn_web_development/Extensions/Transform_animate	/ja/docs/Learn_web_development/Extensions
 /ja/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/ja/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
@@ -3852,6 +3853,8 @@
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-level	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-live	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline
+/ja/docs/Web/Accessibility/ARIA/How_to	/ja/docs/Web/Accessibility/ARIA
+/ja/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/ja/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /ja/docs/Web/Accessibility/ARIA/Multipart_labels	/ja/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /ja/docs/Web/Accessibility/ARIA/Roles	/ja/docs/Web/Accessibility/ARIA/Reference/Roles
 /ja/docs/Web/Accessibility/ARIA/Roles/alert_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 语法指定了组成正确结构代码所需的{{Glossary("character", "字符")}}的组合和顺序。语法通常包括语法规则和适用于书写的规则，例如 Python 中的缩进要求。
 
 语法因语言而异（例如，{{Glossary("HTML")}} 和 {{Glossary("JavaScript")}} 的语法不同）。尽管语言在语法方面可能有一些相似之处，比如 JavaScript 和 Python 语言都有一条“操作数 运算符 操作数”语法规则，但这并不意味着两种语言的语法相似。

@@ -49,7 +49,8 @@ Une bonne pratique consiste à ne pas ajouter, modifier ou supprimer une propri�
 
 ### Utiliser `for...in` et parcourir un tableau
 
-> **Note :** `for...in` ne doit pas être utilisée pour parcourir un {{jsxref("Array")}} lorsque l'ordre des éléments est important.
+> [!NOTE]
+> `for...in` ne doit pas être utilisée pour parcourir un {{jsxref("Array")}} lorsque l'ordre des éléments est important.
 
 Les éléments des indices d'un tableau sont des propriétés énumérables dont les noms sont des entiers, excepté cela, elles sont en tout point identiques aux propriétés des objets en général. Ici aussi, il n'y a aucune certitude que `for...in` renvoie les indices dans un ordre particulier. Cette instruction listera également les propriétés énumérables dont les noms ne sont pas des entiers et celles qui sont héritées.
 
