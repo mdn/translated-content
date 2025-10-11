@@ -8,7 +8,8 @@ original_slug: Web/HTTP/Headers/Keep-Alive
 
 **`Keep-Alive`** 일반 헤더는 송신자가 연결에 대한 타임아웃과 요청 최대 개수를 어떻게 정했는지에 대해 알려줍니다.
 
-> **참고:** {{HTTPHeader("Connection")}} 헤더는 이 헤더를 위해 어떤 의미든 갖도록 "keep-alive"로 설정되어야 합니다. 또한, {{HTTPHeader("Connection")}}과 {{HTTPHeader("Keep-Alive")}}는 HTTP/2에서 무시됩니다; 연결 관리는 해당 프로토콜 내에서 다른 메커니즘에 의해 처리됩니다.
+> [!NOTE]
+> {{HTTPHeader("Connection")}} 헤더는 이 헤더를 위해 어떤 의미든 갖도록 "keep-alive"로 설정되어야 합니다. 또한, {{HTTPHeader("Connection")}}과 {{HTTPHeader("Keep-Alive")}}는 HTTP/2에서 무시됩니다; 연결 관리는 해당 프로토콜 내에서 다른 메커니즘에 의해 처리됩니다.
 
 <table class="properties">
   <tbody>

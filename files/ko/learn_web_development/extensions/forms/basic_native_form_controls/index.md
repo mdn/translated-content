@@ -52,7 +52,8 @@ l10n:
 - [`size`](/ko/docs/Web/HTML/Reference/Attributes/size) (상자의 물리적 크기)와 [`maxlength`](/ko/docs/Web/HTML/Reference/Attributes/maxlength) (상자에 입력할 수 있는 최대 문자 수)에서 제한될 수 있습니다.
 - 브라우저가 지원하는 경우 철자 검사를 받을 수 있습니다([`spellcheck`](/ko/docs/Web/HTML/Reference/Global_attributes/spellcheck) 속성 사용).
 
-> **참고:** {{htmlelement("input")}} 요소는 입력 유형에 따라 여러 가지 형태를 취할 수 있기 때문에 HTML 요소 중에서 유일합니다. 단일 줄 텍스트 필드, 시간 및 날짜 컨트롤, 텍스트 입력 없는 컨트롤(예: 체크박스, 라디오 버튼, 색상 선택기) 및 버튼을 포함한 대부분의 양식 위젯을 생성하는 데 사용됩니다.
+> [!NOTE]
+> {{htmlelement("input")}} 요소는 입력 유형에 따라 여러 가지 형태를 취할 수 있기 때문에 HTML 요소 중에서 유일합니다. 단일 줄 텍스트 필드, 시간 및 날짜 컨트롤, 텍스트 입력 없는 컨트롤(예: 체크박스, 라디오 버튼, 색상 선택기) 및 버튼을 포함한 대부분의 양식 위젯을 생성하는 데 사용됩니다.
 
 ### 단일 줄 텍스트 필드
 

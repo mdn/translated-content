@@ -50,7 +50,8 @@ Lorsqu'on utilise `XMLHttpRequest` pour obtenir le contenu d'un document XML dis
 3. Utiliser [`XMLSerializer`](/fr/docs/Web/API/XMLSerializer) afin de sérialiser **des arbres DOM en chaînes de caractères ou en fichiers**.
 4. [Les expressions rationnelles](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peuvent être utilisées pour scanner le document si on ne connaît pas son contenu au préalable. On peut ainsi retirer les sauts de ligne par exemple. Attention, cette méthode n'est à utiliser qu'en dernier recours, car si le code XML change légèrement, il faudra revoir la méthode.
 
-> **Note :** `XMLHttpRequest` peut également interpréter un document HTML avec la propriété [`responseXML`](/fr/docs/Web/API/XMLHttpRequest/responseXML). Voir l'article à propos de [la prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) pour apprendre comment faire.
+> [!NOTE]
+> `XMLHttpRequest` peut également interpréter un document HTML avec la propriété [`responseXML`](/fr/docs/Web/API/XMLHttpRequest/responseXML). Voir l'article à propos de [la prise en charge de HTML dans `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) pour apprendre comment faire.
 
 ### Traiter une propriété `responseText` contenant un document HTML
 

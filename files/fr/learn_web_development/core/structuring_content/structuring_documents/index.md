@@ -246,7 +246,7 @@ Ce n'est pas vraiment un élément `<aside>` et il n'a pas forcément de relatio
 > Les `div` sont si pratiques à utiliser qu'on est tenté de les utiliser à l'excès. Comme ils ne portent aucune valeur sémantique, ils encombrent votre code HTML. Prenez soin de ne les utiliser que s'il n'y a pas de meilleure solution sémantique et essayez de réduire leur utilisation au minimum sinon vous aurez du mal à mettre à jour et à maintenir vos documents.
 
 > [!NOTE]
-> Le tutoriel interactif [Semantic HTML <sup>(angl.)</sup>](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) de Scrimba propose un rappel utile sur le balisage sémantique et son intérêt, ainsi qu'un défi pour tester votre capacité à améliorer une base de code HTML avec des éléments sémantiques. <sup>[_Partenaire d'apprentissage de MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_et_cadres_partenaires)</sup>
+> Le tutoriel interactif [Semantic HTML <sup>(angl.)</sup>](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) de Scrimba propose un rappel utile sur le balisage sémantique et son intérêt, ainsi qu'un défi pour tester votre capacité à améliorer une base de code HTML avec des éléments sémantiques. <sup>[_Partenaire d'apprentissage de MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup>
 
 ### Sauts de ligne et traits horizontaux
 
