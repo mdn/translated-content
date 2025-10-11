@@ -14,7 +14,8 @@ slug: Web/API/Cache
 > [!NOTE]
 > 초기 캐시 구현(Blink 및 Gecko)은 응답이 완전히 기록될 때 {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, 그리고 {{domxref("Cache.put")}} 로 확인 됩니다. 보다 최근 사양 버전에서의 최신언어들은 응답이 여전히 스트리밍이 되는 경우에도 해당 내용이 데이터베이스에 기록되는 즉시 브라우저가 확인할 수 있습니다.
 
-> **참고:** {{domxref("Cache.put")}}, {{domxref("Cache.add")}}, 그리고{{domxref("Cache.addAll")}} 은 오직 `GET` 요청들만 cache로 저장됩니다.
+> [!NOTE]
+> {{domxref("Cache.put")}}, {{domxref("Cache.add")}}, 그리고{{domxref("Cache.addAll")}} 은 오직 `GET` 요청들만 cache로 저장됩니다.
 
 > [!NOTE]
 > 캐시 API는 HTTP 캐시 헤더를 따르지 않습니다.

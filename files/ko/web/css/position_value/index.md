@@ -5,7 +5,8 @@ slug: Web/CSS/position_value
 
 [CSS](/ko/docs/Web/CSS) **`<position>`** (또는 **`<bg-position>`**) [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 요소 박스에 대한 상대 좌표를 나타내는 2차원 좌표입니다. {{cssxref("background-position")}}, {{cssxref("offset-anchor")}} 속성에서 사용합니다.
 
-> **참고:** `<position>` 값이 설명하는 최종 위치가 요소 박스 내에 위치해야 할 필요는 없습니다.
+> [!NOTE]
+> `<position>` 값이 설명하는 최종 위치가 요소 박스 내에 위치해야 할 필요는 없습니다.
 
 ## 구문
 
@@ -46,7 +47,8 @@ keyword value keyword value /* Each value is an offset from the keyword that pre
 ]
 ```
 
-> **참고:** {{cssxref("background-position")}} 속성은 세 값 구문도 허용하나, `<position>`을 사용하는 다른 속성에서는 허용하지 않습니다.
+> [!NOTE]
+> {{cssxref("background-position")}} 속성은 세 값 구문도 허용하나, `<position>`을 사용하는 다른 속성에서는 허용하지 않습니다.
 
 ## 보간
 
