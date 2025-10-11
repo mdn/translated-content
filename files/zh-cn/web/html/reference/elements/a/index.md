@@ -3,8 +3,6 @@ title: <a>：锚元素
 slug: Web/HTML/Reference/Elements/a
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<a>`** 元素（或称*锚*元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、电子邮件地址、同一页面内的位置或任何其他 URL 的超链接。
 
 `<a>` 中的内容*应该*指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。
@@ -87,13 +85,13 @@ li {
 - `type`
   - : 该属性指定在一个 {{Glossary("MIME type","MIME 类型")}}链接目标的形式的媒体类型。没有内置的功能。
 
-### 废弃的属性
+### 已弃用属性
 
 - `charset` {{Deprecated_Inline}}
   - : 此属性定义链接资源的{{Glossary("character encoding","字符编码")}}。
 
     > [!NOTE]
-    > 该属性已作废，**不应使用**。请在链接的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 标头。
+    > 该属性已弃用，**不应由作者使用**。请在链接的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 标头。
 
 - `coords` {{Deprecated_Inline}}
   - : 与 [`shape` 属性](#shape)一同使用，以逗号分隔的坐标列表。
@@ -104,7 +102,7 @@ li {
     > 使用全局属性 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 来代替。
 
 - `rev` {{Deprecated_Inline}}
-  - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。
+  - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而弃用。
 - `shape` {{Deprecated_Inline}}
   - : 图像映射（image map）中超链接区域的形状。
 

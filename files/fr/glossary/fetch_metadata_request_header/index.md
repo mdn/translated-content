@@ -11,7 +11,7 @@ Un **en-tête de métadonnées de requête de récupération** (<i lang="en">fet
 
 Grâce à ces informations, un serveur peut implémenter [une politique d'isolation des ressources](/fr/docs/Glossary/Resource_isolation_policy), pour limiter l'accès aux seules ressources partageables pour les sites externes, lorsque l'usage correspondant est respecté. Cette approche permet de réduire les risques des vulnérabilités entre sites différents, comme [CSRF](/fr/docs/Glossary/CSRF), <i lang="en">Cross-site Script Inclusion</i> (XSSI), les attaques temporelles, et les fuites d'information entre origines.
 
-Ces en-têtes ont le préfixe `Sec-`, et sont donc des [noms d'en-tête interdits](/fr/docs/Glossary/Forbidden_header_name), qui ne peuvent pas être modifié depuis du code JavaScript.
+Ces en-têtes ont le préfixe `Sec-`, et sont donc des [noms d'en-tête interdits](/fr/docs/Glossary/Forbidden_request_header), qui ne peuvent pas être modifié depuis du code JavaScript.
 
 Les en-têtes de métadonnées de requête de récupération sont&nbsp;:
 
@@ -29,8 +29,8 @@ Quant aux en-têtes de requêtes qui suivent, ils ne font pas _strictement_ part
 
 - [Protéger vos ressources des attaques web avec les en-têtes de métadonnées de requête (en anglais)](https://web.dev/articles/fetch-metadata)
 - [Bac à sable pour les en-têtes de métadonnées de requête (en anglais)](https://secmetadata.appspot.com/)
-- [Liste des en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [En-têtes HTTP > En-têtes de métadonnées de requête](/fr/docs/Web/HTTP/Headers#en-têtes_de_requêtes_de_métadonnées)
+- [Liste des en-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+- [En-têtes HTTP > En-têtes de métadonnées de requête](/fr/docs/Web/HTTP/Reference/Headers#en-têtes_de_requêtes_de_métadonnées)
 - [Entrées du glossaire](/fr/docs/Glossary)
   - [En-tête de représentation](/fr/docs/Glossary/Representation_header)
   - [En-tête HTTP](/fr/docs/Glossary/HTTP_header)

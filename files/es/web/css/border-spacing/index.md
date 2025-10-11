@@ -3,8 +3,6 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/docs/Web/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.

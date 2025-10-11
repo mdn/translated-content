@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
 
-{{CSSRef}}
-
 {{cssxref("@font-face")}} @ 规则中的 **`src`** CSS 描述符指定了包含字体数据的资源。它是 `@font-face` 规则有效的必要条件。
 
 ## 语法

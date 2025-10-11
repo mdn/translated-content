@@ -3,8 +3,6 @@ title: XHTML
 slug: Glossary/XHTML
 ---
 
-{{GlossarySidebar}}
-
 **XHTML** 對 [XML](/zh-TW/docs/Web/XML) 而言是什麼，就如同 [HTML](/zh-TW/docs/Web/HTML) 對 [SGML](/zh-TW/docs/Glossary/SGML) 而言是什麼。也就是說，XHTML 是一種類似於 HTML 的標記語言，但是有更嚴格的語法。[W3C](https://www.w3.org/) 已完成兩種 XHTML 版本︰
 
 - [XHTML 1.0](https://www.w3.org/TR/xhtml1/) 就是把 HTML4 重新整理為 XML 的應用，並在有限的情況下向後相容於 HTML。

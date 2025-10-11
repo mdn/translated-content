@@ -8,7 +8,7 @@ slug: Web/API/Event/bubbles
 Indique si l'événement donné se propage à travers le DOM ou non.
 
 > [!NOTE]
-> Voir [Propagation et capture des évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) pour plus d'informations sur la propagation.
+> Voir [Propagation et capture des évènements](/fr/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture) pour plus d'informations sur la propagation.
 
 ## Syntaxe
 

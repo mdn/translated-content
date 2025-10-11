@@ -9,7 +9,8 @@ l10n:
 
 El método estático **`Object.hasOwn()`** devuelve `true` si el objeto especificado tiene la propiedad indicada como propiedad _propia_. Si la propiedad es heredada, o no existe, el método devuelve `false`.
 
-> **Nota:** `Object.hasOwn()` está pensada como un reemplazo de {{jsxref("Object.prototype.hasOwnProperty()")}}.
+> [!NOTE]
+> `Object.hasOwn()` está pensada como un reemplazo de {{jsxref("Object.prototype.hasOwnProperty()")}}.
 
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
 

@@ -1,19 +1,15 @@
 ---
 title: "スキルテスト: 値と単位"
+short-title: 値と単位
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
-original_slug: Learn_web_development/Core/Styling_basics/Values_tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
-
-{{LearnSidebar}}
 
 このスキルテストの目的は、 [CSS プロパティで使われる様々な種類の値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 
@@ -27,8 +23,6 @@ l10n:
 
 ![4 つのリストアイテム。最初の 3 つは同じ背景色で、最後の 1 つは明るい背景色です。](mdn-value-color.png)
 
-下記のライブコードを更新して、完成例を再現してみてください。
-
 ```html live-sample___color
 <ul>
   <li class="hex">hex color</li>
@@ -38,7 +32,7 @@ l10n:
 </ul>
 ```
 
-```css hidden live-sample___color
+```css live-sample___color
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -52,9 +46,7 @@ li {
   margin: 1em;
   padding: 0.5em;
 }
-```
 
-```css live-sample___color
 .hex {
   background-color: #86defa;
 }
@@ -65,7 +57,7 @@ li {
 {{EmbedLiveSample("color", "", "300px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 [色変換ツール](https://convertingcolors.com/hex-color-86DEFA.html)を使用することで、異なる[色関数](/ja/docs/Web/CSS/color_value#構文)を使用して同じ色を異なる方法で定義できるようになります。
 
@@ -102,8 +94,6 @@ li {
 
 ![大きさの異なるいくつかのテキスト。](mdn-value-length.png)
 
-下記のライブコードを更新して、完成例を再現してみてください。
-
 ```html live-sample___length
 <h1>Level 1 heading</h1>
 <p>
@@ -118,30 +108,32 @@ li {
 </p>
 ```
 
-```css hidden live-sample___length
+```css live-sample___length
 body {
   font: 1.2em / 1.5 sans-serif;
 }
-```
 
-```css live-sample___length
 h1 {
+  /* ここにスタイルを追加 */
 }
 
 h2 {
+  /* ここにスタイルを追加 */
 }
 
 p {
+  /* ここにスタイルを追加 */
 }
 
 h1 + p {
+  /* ここにスタイルを追加 */
 }
 ```
 
 {{EmbedLiveSample("length", "", "420px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 次の長さの値を使用することができます。
 
@@ -173,22 +165,18 @@ h1 + p {
 
 ![この課題では、背景画像が水平方向の中央に配置され、ボックスの上部から 20% になるように移動させます。](mdn-value-position.png)
 
-下記のライブコードを更新して、完成例を再現してみてください。
-
 ```html live-sample___position
 <div class="box"></div>
 ```
 
-```css hidden live-sample___position
+```css live-sample___position
 .box {
   border: 5px solid #000;
   height: 350px;
 }
-```
 
-```css live-sample___position
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
 }
 ```
@@ -196,20 +184,16 @@ h1 + p {
 {{EmbedLiveSample("position", "", "400px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 `background-position` に `center` キーワードとパーセント値を使用します。
 
 ```css
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
   background-position: center 20%;
 }
 ```
 
 </details>
-
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)

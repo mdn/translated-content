@@ -3,8 +3,6 @@ title: :last-child
 slug: Web/CSS/:last-child
 ---
 
-{{CSSRef}}
-
 **`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。
 
 ```
@@ -15,7 +13,7 @@ p:last-child {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :last-child", "tabbed-shorter")}}
 
 ```css interactive-example
 p {

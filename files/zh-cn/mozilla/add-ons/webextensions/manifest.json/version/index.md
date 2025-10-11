@@ -3,8 +3,6 @@ title: version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>

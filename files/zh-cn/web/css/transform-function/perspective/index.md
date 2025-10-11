@@ -3,8 +3,6 @@ title: perspective()
 slug: Web/CSS/transform-function/perspective
 ---
 
-{{CSSRef}}
-
 **`perspective()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义一个变换，设置用户与 z=0 平面之间的距离，即二维界面变为三维时用户的观看视角。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: perspective()")}}

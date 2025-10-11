@@ -140,7 +140,8 @@ self.addEventListener("install", (event) => {
 3. Si la promesse échoue, l'installation échoue et le <i lang="en">service worker</i> ne fera rien. Il est toujours possible de corriger le code et de réessayer lors du prochain enregistrement.
 4. Après une installation réussie, on passe à l'activation du <i lang="en">service worker</i>. Lors d'une première installation, cela peut ne pas avoir beaucoup d'intérêt, mais cela s'avèrera utile lors des mises à jour du <i lang="en">service worker</i> (voir la section [Mettre à jour le <i lang="en">service worker</i>](#mettre_à_jour_le_service_worker) ci-après).
 
-> **Note :** [L'API <i lang="en">Web Storage</i> (`localStorage`)](/fr/docs/Web/API/Web_Storage_API) fonctionne de façon semblable au cache d'un <i lang="en">service worker</i> mais est synchrone et son utilisation n'est donc pas autorisée dans les <i lang="en">services workers</i>.
+> [!NOTE]
+> [L'API <i lang="en">Web Storage</i> (`localStorage`)](/fr/docs/Web/API/Web_Storage_API) fonctionne de façon semblable au cache d'un <i lang="en">service worker</i> mais est synchrone et son utilisation n'est donc pas autorisée dans les <i lang="en">services workers</i>.
 
 > [!NOTE]
 > Si besoin, [l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API) peut être utilisée dans un <i lang="en">service worker</i> pour stocker des données.

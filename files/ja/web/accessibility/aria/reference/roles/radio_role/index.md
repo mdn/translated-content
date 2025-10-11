@@ -116,7 +116,8 @@ l10n:
     - `false`
       - : ラジオボタンがチェックされていません。
 
-> **メモ:** `role="radio"` をキーボードフォーカスを受け付けない要素に使用する場合は、 [`tabindex` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)を使用してください。例えば、 `<div>` や `<span>` などです。
+> [!NOTE]
+> `role="radio"` をキーボードフォーカスを受け付けない要素に使用する場合は、 [`tabindex` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)を使用してください。例えば、 `<div>` や `<span>` などです。
 
 ## キーボード操作
 

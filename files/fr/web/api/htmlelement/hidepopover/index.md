@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`hidePopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) masque un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en le supprimant de [la couche supérieure](/fr/docs/Glossary/Top_layer) et en le stylisant avec `display: none`.
+La méthode **`hidePopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) masque un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) valide) en le supprimant de [la couche supérieure](/fr/docs/Glossary/Top_layer) et en le stylisant avec `display: none`.
 
-Lorsque `hidePopover()` est appelée sur un élément affiché avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)&nbsp;:
+Lorsque `hidePopover()` est appelée sur un élément affiché avec l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)&nbsp;:
 
 1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
 2. Le <i lang="en">popover</i> est masqué.

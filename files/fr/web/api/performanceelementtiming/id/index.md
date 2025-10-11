@@ -5,7 +5,7 @@ slug: Web/API/PerformanceElementTiming/id
 
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
 
-La propriété en lecture seule **`id`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'[`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) de l'élément associé.
+La propriété en lecture seule **`id`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) de l'élément associé.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Globa
 
 ## Exemples
 
-Dans cet exemple, l'appel à `entry.id` entraînera l'affichage dans la console du code `myImage`, qui est l'[`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) de l'élément image.
+Dans cet exemple, l'appel à `entry.id` entraînera l'affichage dans la console du code `myImage`, qui est l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) de l'élément image.
 
 ```html
 <img

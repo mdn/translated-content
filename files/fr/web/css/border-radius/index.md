@@ -63,7 +63,7 @@ La propriété `border-radius` ne s'applique pas aux éléments de tableaux lors
 
 ## Propriétés détaillées correspondantes
 
-Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir&nbsp;:
+Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir&nbsp;:
 
 - [`border-top-left-radius`](/fr/docs/Web/CSS/border-top-left-radius),
 - [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius),

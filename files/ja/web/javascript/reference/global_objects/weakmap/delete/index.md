@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 
 **`delete()`** メソッドは、 {{jsxref("WeakMap")}} オブジェクトから指定された要素を削除します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+{{InteractiveExample("JavaScript デモ: WeakMap.prototype.delete()")}}
 
 ```js interactive-example
 const weakmap1 = new WeakMap();

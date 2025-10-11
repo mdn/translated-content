@@ -32,7 +32,8 @@ close(code, reason)
 - `reason` {{optional_inline}}
   - : 独自の [WebSocket 接続が閉じた理由](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.6)を提供する文字列（閉じたことについて簡潔で人間が読める散文的な説明）。この値は 123 バイト以下でなければなりません（UTF-8 でエンコードされます）。
 
-    > **メモ:** [ASCII](/ja/docs/Glossary/ASCII) 以外の文字をエンコードするのに [UTF-8 は 2 から 4 バイトを使用する](/ja/docs/Glossary/UTF-8)ため、 123 文字の `reason` 値に ASCII 以外の文字が入っていると、 123 バイトの制限を超える可能性があります。
+    > [!NOTE]
+    > [ASCII](/ja/docs/Glossary/ASCII) 以外の文字をエンコードするのに [UTF-8 は 2 から 4 バイトを使用する](/ja/docs/Glossary/UTF-8)ため、 123 文字の `reason` 値に ASCII 以外の文字が入っていると、 123 バイトの制限を超える可能性があります。
 
     `reason` の値を指定する場合は、 [`code`](#code) の値も指定してください。
 

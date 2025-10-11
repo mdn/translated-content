@@ -5,7 +5,7 @@ l10n:
   sourceCommit: dfad9eccce7c2f11c195003ec1cbd7b0fd9db577
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`view()`** は [CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、アニメーションタイムラインと共に使用して、アニメーションする無名ビュー進行タイムラインを提供する主体要素を示すことができます。ビュー進行タイムラインは、最も近い先祖スクロール内の主体要素の可視性の変化によって進行します。既定では、タイムラインは、主体がスクローラーの一方の端に最初に表示された時に 0% になり、反対側の端に達した時に 100% になります。
 
@@ -14,7 +14,8 @@ l10n:
 > [!NOTE]
 > 示された軸がスクロールバーを持たない場合、アニメーションタイムラインは非アクティブになります（進行がゼロになります）。
 
-> **メモ:** `view()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ViewTimeline")}} の固有のインスタンスが対応付けられます。
+> [!NOTE]
+> `view()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ViewTimeline")}} の固有のインスタンスが対応付けられます。
 
 ## 構文
 

@@ -47,7 +47,8 @@ svg {
 - {{SVGAttr("height")}}
   - : この use 要素の高さです。<br/>_値の型_: [**`<length>`**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `0`; _アニメーション_: **可**
 
-> **メモ:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
+> [!NOTE]
+> `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
 
 > [!NOTE]
 > SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。

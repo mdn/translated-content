@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Disposition
 original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
-
 Dans une réponse HTTP régulière, l'en-tête de réponse `Content-Disposition` est un en-tête indiquant si le contenu devrait être affiché en ligne dans le navigateur, c'est-à-dire en tant que page Web, dans une page Web ou en pièce jointe qui sera téléchargé et enregistré localement.
 
 Dans un corps `multipart / form-data`, l'en-tête général HTTP Content-Disposition est un en-tête qui peut être utilisé sur la sous-partie d'un corps multipart pour donner des informations sur le champ auquel il s'applique. La sous-partie est délimitée par la limite `boundary` définie dans l'en-tête {{HTTPHeader ("Content-Type")}}. Utilisé sur le corps même, `Content-Disposition` n'a aucun effet.
@@ -66,7 +64,7 @@ name="fieldName"; filename="filename.jpg"
 ## Directives
 
 `<name>`
-Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
+Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
 
 Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les pièces sans informations de charset explicites.
 
@@ -123,6 +121,6 @@ value2
 
 ## Voir aussi
 
-- [HTML Forms](/fr/docs/Learn/Forms)
+- [HTML Forms](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
 - {{HTTPHeader("Content-Type")}} définissant la limite du corps multipartie.
 - L'interface {{domxref("FormData")}} utilisée pour manipuler les données de formulaire à utiliser dans l'API {{domxref("XMLHttpRequest")}}.
