@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-[SVG](/zh-CN/docs/Web/SVG) 元素 **`<circle>`** 属于 [SVG 基本形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)，用于根据圆心坐标和半径绘制圆形。
+[SVG](/zh-CN/docs/Web/SVG) 元素 **`<circle>`** 是用于根据圆心坐标和半径绘制圆形的 [SVG 基本形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)。
 
 ## 使用上下文
 
