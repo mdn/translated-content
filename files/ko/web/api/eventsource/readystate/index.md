@@ -30,7 +30,7 @@ console.log(evtSource.readyState);
 ```
 
 > [!NOTE]
-> GitHub 에서 전체 예시를 확인할 수 있습니다. [PHP를 사용한 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/main/server-sent-events)를 확인하세요
+> GitHub 에서 전체 예시를 확인할 수 있습니다. [PHP를 사용한 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/main/server-sent-events)를 확인하세요.
 
 ## 명세서
 
