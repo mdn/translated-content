@@ -1,6 +1,8 @@
 ---
 title: Стилизация таблиц
 slug: Learn_web_development/Core/Styling_basics/Tables
+l10n:
+  sourceCommit: 074785cea106179cb3305637055ab0a009ca74f2
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}
@@ -132,7 +134,7 @@ td {
 
 Теперь мы ещё кое-что изменим.
 
-Во-первых, мы пойдём и найдём на [Google Fonts](https://www.google.com/fonts) шрифт который подходит в нашей ситуации с таблицей о панк группах. Вы можете можете выбрать для себя другой шрифт если захотят, тогда вам понадобится заменить представленный {{htmlelement("link")}} элемент и изменить объявление {{cssxref("font-family")}} на выбранный вами Google Fonts шрифт.
+Во-первых, мы пойдём и найдём на [Google Fonts](https://fonts.google.com) шрифт который подходит в нашей ситуации с таблицей о панк группах. Вы можете можете выбрать для себя другой шрифт если захотят, тогда вам понадобится заменить представленный {{htmlelement("link")}} элемент и изменить объявление {{cssxref("font-family")}} на выбранный вами Google Fonts шрифт.
 
 Добавьте элемент {{htmlelement("link")}} в блок head вашего HTML, на строчку выше существующего элемента `<link>`:
 
