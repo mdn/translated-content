@@ -3,8 +3,6 @@ title: "@media"
 slug: Web/CSS/@media
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/Web/CSS/CSS_media_queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas condicionales](/es/docs/Web/CSS/CSS_syntax/At-rule#grupos_de_reglas_condicionales).

@@ -3,8 +3,6 @@ title: var()
 slug: Web/CSS/var
 ---
 
-{{CSSRef}}
-
 **`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
 
 {{InteractiveExample("CSS Demo: var()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 此事件在请求即将发出且标头尚不可用时触发。如果你想取消或重定向请求，这是一个很好的监听位置。
 
 要取消或重定向请求，首先在传递给 `addListener()` 的 `extraInfoSpec` 数组参数中包含 `"blocking"`。然后，在监听器函数中返回一个 {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} 对象，并设置适当的属性：

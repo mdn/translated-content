@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb031733da9f5678de3cdc5b561123b111b3b2fc
 ---
 
-{{AddonSidebar}}
-
 与浏览器标签系统进行交互。
 
 > [!NOTE]

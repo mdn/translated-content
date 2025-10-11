@@ -15,17 +15,17 @@ L'accessibilité dans le développement web signifie permettre l'utilisation des
 
 La documentation MDN [Accessibilité](/fr/docs/Web/Accessibility) contient des tutoriaux modernes et à jour en ce qui concerne les points essentiels de l'accessibilité:
 
-- [Qu'est-ce que l'accessibilité?](/fr/docs/Learn/Accessibility/What_is_accessibility)
+- [Qu'est-ce que l'accessibilité?](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : Cet article présente un module général sur ce que l'accessibilité est actuellement — Cela inclut ce que des groupes de personnes ont besoin de considérer et pourquoi, quels outils ils utilisent afin d'interagir avec les pages web et comment rendre accessible la partie de notre espace de travail web.
-- [HTML: Une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML)
+- [HTML: Une bonne base pour l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/HTML)
   - : Un nombre important de ressources du web peuvent être accessibles juste en utilisant correctement les éléments HTML dans leur usage approprié. Cet article résume en détail comment le HTML peut être utilisé afin de garantir une accessibilité maximum.
-- [Meilleure pratiques d'accessibilité CSS et JavaScript](/fr/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [Meilleure pratiques d'accessibilité CSS et JavaScript](/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
   - : CSS et JavaScript, quand ils sont utilisés convenablement, ont le potentiel de permettre des expériences Web accessibles… ou bien ils peuvent significativement nuire à celle-ci si mal utilisés. Cet article décrit certaines pratiques exemplaires en langages CSS et JavaScript qui devraient être prises en compte pour garantir que le contenu, même complexe, soit aussi accessible que possible.
-- [Les bases de WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Les bases de WAI-ARIA](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
   - : Dans la continuité de l'article précédent, créer des interactions d'interface utilisateur (UX) complexes impliquant un HTML non sémantique et un contenu dynamique mis à jour par JavaScript peut être parfois compliqué. WAI-ARIA est une technologie qui peut aider à résoudre de tels problèmes en ajoutant d'autres sémantiques que les navigateurs et les technologies d'assistance peuvent reconnaître et utiliser afin de permettre aux utilisateurs d'être informés correctement. Ici, nous allons montrer comment l'utiliser à un niveau de base pour améliorer l'accessibilité.
-- [Multimédia accessible](/fr/docs/Learn/Accessibility/Multimedia)
+- [Multimédia accessible](/fr/docs/Learn_web_development/Core/Accessibility/Multimedia)
   - : Une autre catégorie de contenu pouvant créer des problèmes d'accessibilité est le multimédia&nbsp;: le contenu vidéo, audio et les images auxquels on doit fournir des textes équivalents pertinents afin qu'ils soient exploitables par les technologies d'assistance et compris par leurs utilisateurs. Cet article explique comment faire.
-- [Accessibilité sur mobile](/fr/docs/Learn/Accessibility/Mobile)
+- [Accessibilité sur mobile](/fr/docs/Learn_web_development/Core/Accessibility/Mobile)
   - : Étant donné que l'accès au Web sur les appareils mobiles est très populaire, et que les plates‑formes populaires telles que iOS et Android disposent d'outils d'accessibilité à part entière, il est important de considérer l'accessibilité de votre contenu Web sur ces plates‑formes. Cet article examine les considérations d'accessibilité spécifiques aux mobiles.
 
 ## Documentation
@@ -36,7 +36,7 @@ La documentation MDN [Accessibilité](/fr/docs/Web/Accessibility) contient des t
   - : Un ensemble d'articles pour apprendre à utiliser ARIA pour améliorer l'accessibilité de vos documents HTML.
 - [Développement de Technologie d'assistance (TA)](/fr/docs/Accessibilité/Développement_TA)
   - : Un ensemble d'articles destiné aux développeurs de technologies d'assistance.
-- [Check-list pour l'accessibilité mobile](/fr/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [Check-list pour l'accessibilité mobile](/fr/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : Ce document fournit une liste concise des requis accessibilité pour les développeurs d'applications mobiles.
 
 ## Outils pour les développeurs web

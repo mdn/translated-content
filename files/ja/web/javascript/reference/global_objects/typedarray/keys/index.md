@@ -9,7 +9,7 @@ l10n:
 
 **`keys()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対するキーを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.keys()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.keys()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

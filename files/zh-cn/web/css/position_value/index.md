@@ -3,8 +3,6 @@ title: <position>
 slug: Web/CSS/position_value
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
 
 > [!NOTE]

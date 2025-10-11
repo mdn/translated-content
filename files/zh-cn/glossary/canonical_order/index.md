@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 CSS **规范顺序**是指需要指定（或{{Glossary("parse", "解析")}}）或作为 CSS 属性值的一部分进行{{Glossary("serialization", "序列化")}}的单独值的顺序。它由属性的正式{{Glossary("syntax", "语法")}}定义，通常指的是应该在单个简写值的一部分中指定全称值的顺序。
 
 例如，{{cssxref("background")}} 简写属性值由几个 `background-*` 全称属性组成。这些全称值的规范顺序定义如下：

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{GlossarySidebar}}
-
 **CSS 选择器**是 CSS 规则的一部分，用于匹配文档中的元素。匹配的元素将会应用规则指定的样式。
 
 ## 示例

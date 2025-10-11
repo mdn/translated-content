@@ -312,7 +312,8 @@ session.onvisibilitychange = (event) => {
 
 これが発生すると、{{domxref("XRReferenceSpace.reset_event", "reset")}} イベントがセッションの {{domxref("XRReferenceSpace")}} に送信されます。 イベントの {{domxref("XRReferenceSpaceEvent.transform", "transform")}} プロパティは、ネイティブの原点を再調整するために必要な変換を詳述する {{domxref("XRRigidTransform")}} です。
 
-> **メモ:** `reset` イベントは {{domxref("XRSession")}} ではなく {{domxref("XRReferenceSpace")}} で発生することに注意してください。
+> [!NOTE]
+> `reset` イベントは {{domxref("XRSession")}} ではなく {{domxref("XRReferenceSpace")}} で発生することに注意してください。
 
 `reset` イベントのもう 1 つの一般的な原因は、制限付き参照空間（{{domxref("XRReferenceSpaceType")}} が `bounded-floor` である参照空間）が、{{domxref("XRBoundedReferenceSpace")}} のプロパティ {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} の変更によって指定されたジオメトリを持っている場合です。
 

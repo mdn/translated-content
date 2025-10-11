@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cbfc561e5e577975a51acceadbd7d2fec9b8e45e
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<marquee>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于插入滚动文本区域。你可以使用它的属性控制当文本到达容器边缘发生的事情。
 

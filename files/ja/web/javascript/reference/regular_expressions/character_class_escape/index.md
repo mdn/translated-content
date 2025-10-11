@@ -17,7 +17,8 @@ l10n:
 \w, \W
 ```
 
-> **メモ:** `,` is not part of the syntax.
+> [!NOTE]
+> `,` is not part of the syntax.
 
 ## 解説
 

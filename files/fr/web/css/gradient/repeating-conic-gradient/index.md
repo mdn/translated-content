@@ -59,7 +59,7 @@ background: repeating-conic-gradient(
   - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleurs adjacents. Cette indication indique l'emplacement où la couleur doit être la couleur intermédiaire entre les deux arrêts environnant. Si cette valeur est absente, la moitié de la transition entre les couleurs sera atteinte à la moitié de l'arc entre les deux arrêts.
 
 > [!NOTE]
-> Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour [les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour [les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 
@@ -114,7 +114,7 @@ Bien qu'il soit possible de mélanger et de combiner différentes unités pour l
 
 Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Bien qu'il soit possible de créer des camemberts, damiers, etc. avec CSS, si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document, car CSS ne fournit pas de méthode native pour indiquer un texte alternatif.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Exemples
