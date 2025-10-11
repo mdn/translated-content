@@ -277,4 +277,4 @@ L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire 
 - La propriété [`open`](/fr/docs/Web/API/HTMLDialogElement/open) de l'interface `HTMLDialogElement`
 - L'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
 - Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop)
-- [Guide sur les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)

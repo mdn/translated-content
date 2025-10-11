@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
+Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs//Learn*web_development/Extensions/Forms\) ou grâce à du code JavaScript [via l'API \_File*](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 

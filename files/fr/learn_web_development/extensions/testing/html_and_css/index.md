@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le [linting code](https://stackoverflow.com/questions/8503559/what-is-linting), la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des [polyfills](/fr/docs/Glossary/Polyfill) pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.
 
@@ -317,7 +317,7 @@ Cela paraît assez compliqué à gérer, mais heureusement il y a un {{glossary(
 
 #### Support de sélecteur
 
-Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons [sélecteurs](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.
+Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons [sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.
 
 Par exemple, dans l'outil de dev de Firefox, vous obtenez ce genre rendement en bas de l'inspecteur du DOM :
 

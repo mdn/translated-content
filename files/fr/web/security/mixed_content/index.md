@@ -90,6 +90,6 @@ Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être rempla
 ## Voir aussi
 
 - [La spécification du W3C sur le contenu mixte (en anglais)](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [Comment corriger un site avec du contenu mixte bloqué](/fr/docs/conflicting/Web/Security/Mixed_content)
+- [Comment corriger un site avec du contenu mixte bloqué](/fr/docs/Web/Security/Mixed_content)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}

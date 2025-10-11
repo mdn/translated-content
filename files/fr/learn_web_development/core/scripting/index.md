@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Scripting
 original_slug: Learn/JavaScript/First_steps
 ---
 
-{{LearnSidebar}}
-
 Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme «&nbsp;qu'est-ce que JavaScript&nbsp;?&nbsp;», «&nbsp;à quoi ressemble-t-il&nbsp;?&nbsp;» et «&nbsp;de quoi est-il capable&nbsp;?&nbsp;». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
 
 ## Prérequis
@@ -14,7 +12,7 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
 
 - [Commencer avec le Web](/fr/docs/Learn_web_development/Core/Structuring_content) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)).
 - [Introduction au langage HTML](/fr/docs/Learn_web_development/Core/Structuring_content).
-- [Introduction au langage CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
+- [Introduction au langage CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started).
 
 > [!NOTE]
 > Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

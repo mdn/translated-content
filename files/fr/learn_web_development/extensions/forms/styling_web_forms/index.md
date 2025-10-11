@@ -16,7 +16,7 @@ Quelques années plus tard, les CSS ont été créées et ce qui était une néc
 
 Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
-Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms).
+Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\).
 
 ### Tous les widgets ne sont pas égaux devant les CSS
 

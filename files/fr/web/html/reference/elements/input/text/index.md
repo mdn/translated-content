@@ -462,7 +462,7 @@ Vous trouverez de bons exemples de champs texte utilisés en contexte dans les a
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface DOM [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui le porte
 - [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search)
 - [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)&nbsp;: un élément qui permet de saisir du texte sur plusieurs lignes

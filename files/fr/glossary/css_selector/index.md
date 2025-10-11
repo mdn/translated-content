@@ -65,7 +65,7 @@ Le contenu de la page résultant ressemble à ceci:
 
 ## Voir aussi
 
-- [En apprendre plus sur les sélecteurs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) dans l'introduction à CSS
+- [En apprendre plus sur les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) dans l'introduction à CSS
 - Les sélecteurs simples
   - [Les sélecteurs de type](/fr/docs/Web/CSS/Type_selectors) `nomelement`
   - [Les sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) `.nomclasse`

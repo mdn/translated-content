@@ -3,9 +3,7 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 ---
 
-{{CSSRef}}
-
-La fonction CSS **`brightness()`** applique un multiplicateur linéaire sur une image afin de la rendre plus claire ou plus sombre. Le résultat obtenu est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+La [fonction](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`brightness()`** applique un multiplicateur linéaire sur une image afin de la rendre plus claire ou plus sombre. Le résultat obtenu est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
 {{InteractiveExample("CSS Demo: brightness()")}}
 

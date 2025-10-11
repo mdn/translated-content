@@ -68,13 +68,13 @@ Ce guide est divisé en plusieurs chapitres :
 - [Objet `Math`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_math)
 - [Objet `Date`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_date)
 
-## [Formatage du texte](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
+## [Formatage du texte](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Littéraux de chaînes de caractères](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_litt.c3.a9raux_de_cha.c3.aenes_de_caract.c3.a8res)
-- [Objet `String`](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_objets_string)
-- [Littéraux de gabarits](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_littéraux_de_gabarits)
-- [Internationalisation](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#internationalisation)
-- [Expressions rationnelles](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_expressions_rationnelles)
+- [Littéraux de chaînes de caractères](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#les_litt.c3.a9raux_de_cha.c3.aenes_de_caract.c3.a8res)
+- [Objet `String`](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#les_objets_string)
+- [Littéraux de gabarits](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#les_littéraux_de_gabarits)
+- [Internationalisation](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#internationalisation)
+- [Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#les_expressions_rationnelles)
 
 ## [Collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections#le_type_array)
 

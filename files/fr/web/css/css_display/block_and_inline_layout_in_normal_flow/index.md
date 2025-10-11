@@ -111,6 +111,6 @@ Dans ce guide, nous avons vu comment les éléments étaient affichés dans le f
 ## Voir aussi
 
 - [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_box_model)
-- [Apprendre - le fonctionnement du flux normal](/fr/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
+- [Apprendre - le fonctionnement du flux normal](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
 - [Les éléments HTML en ligne](/fr/docs/Glossary/Inline-level_content)
 - [Les éléments HTML de bloc](/fr/docs/Glossary/Block-level_content)

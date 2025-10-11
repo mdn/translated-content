@@ -14,7 +14,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ### A
 
-- [`accent-height`](/fr/docs/conflicting/Web/SVG/Reference/Attribute)
+- [`accent-height`](/fr/docs/Web/SVG/Reference/Attribute)
 - [`accumulate`](/fr/docs/Web/SVG/Attribute/accumulate)
 - [`additive`](/fr/docs/Web/SVG/Attribute/additive)
 - [`alignment-baseline`](/fr/docs/Web/SVG/Attribute/alignment-baseline)

@@ -44,7 +44,7 @@ Gecko utilise maintenant le parseur [HTML5](/fr/docs/Glossary/HTML5), qui corrig
 
 - [Rencontrez le parseur HTML5](/fr/docs/Learn_web_development/Core/Structuring_content)
   - : Un aperçu sur ce que le parseur HTML5 représente pour vous et comment intégrer du contenu SVG et MathML dans votre code.
-- [Les formulaires en HTML5](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires en HTML5](/fr/docs//Learn_web_development/Extensions/Forms\)
   - : Un aperçu de l'amélioration de formulaires Web en HTML5. Parmi les changements on ajoute les types d'entrée dans l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), la validation des données et d'autres modifications.
 - [Sections HTML5](/fr/docs/Sections_and_Outlines_of_an_HTML5_document)
   - : Gecko supporte à présent les nouveaux éléments HTML5 liés aux sections dans un document : [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<hgroup>`](/fr/docs/Web/HTML/Reference/Elements/hgroup), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) et [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer).

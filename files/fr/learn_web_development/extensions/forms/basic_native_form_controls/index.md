@@ -361,10 +361,6 @@ De nombreux éléments de formulaire disposent d'attributs qui leur sont spécif
   </tbody>
 </table>
 
-## Testez vos compétences&nbsp;!
-
-Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: contrôles de formulaire de base](/fr/docs/conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720).
-
 ## Résumé
 
 Dans cet article, nous avons abordé les contrôles de formulaire présents depuis les débuts de HTML et qui sont pris en charge par l'ensemble des navigateurs. Dans la prochaine section, nous verrons les valeurs plus récentes possibles pour l'attribut `type` qui ont été ajoutées en HTML5.

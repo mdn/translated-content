@@ -28,7 +28,7 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ## Description
 
-Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/conflicting/Web/CSS/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
+Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/Web/CSS/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
 
 La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/shape#syntaxe) qui génère une valeur de type [`<shape>`](/fr/docs/Web/CSS/shape). Les quatre valeurs indiquées font chacune référence au coin supérieur gauche de l'image.
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 Les [listes](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
 
@@ -215,7 +215,7 @@ ul {
 }
 ```
 
-Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de [`background`](/fr/docs/Web/CSS/background), dont vous apprendrez beaucoup plus dans le module [Blocs de base en CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics). Pour l'instant, voici un avant-goût&nbsp;!
+Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de [`background`](/fr/docs/Web/CSS/background), dont vous apprendrez beaucoup plus dans le module [Blocs de base en CSS](/fr/docs/Learn_web_development/Core/Styling_basics). Pour l'instant, voici un avant-goût&nbsp;!
 
 Dans notre exemple achevé, nous avons appliqué un style à la liste non ordonnée (en plus de ce que vous avez déjà vu ci-dessus) comme ceci&nbsp;:
 

@@ -6,9 +6,7 @@ l10n:
   sourceCommit: aa5dfde3e95f9d0f2cd73e6d639313e4e44a5418
 ---
 
-{{HTMLSidebar}}
-
-L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) ou ouvrir une boite de dialogue.
+L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs//Learn_web_development/Extensions/Forms\) ou ouvrir une boite de dialogue.
 
 Par défaut, les boutons HTML sont présentés dans un style ressemblant à la plate-forme d'exécution de [l'agent utilisateur](/fr/docs/Glossary/User_agent), mais vous pouvez modifier l'apparence des boutons avec [CSS](/fr/docs/Web/CSS).
 
@@ -126,7 +124,7 @@ Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléme
 
 Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `button`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
 
-Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton pourra déclencher des actions grâce à [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting), par exemple pour retirer un élément d'une liste.
+Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton pourra déclencher des actions grâce à [JavaScript](/fr/docs/Learn_web_development/Core/Scripting), par exemple pour retirer un élément d'une liste.
 
 ## Exemples
 

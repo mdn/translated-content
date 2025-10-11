@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 original_slug: Learn/CSS/Howto/CSS_FAQ
 ---
 
-{{LearnSidebar}}
-
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?
 
 Pour afficher un document, les navigateurs utilisent le `DOCTYPE` - contraction de l'anglais _document type_, littéralement «&nbsp;type de document&nbsp;». Ils utilisent un mode qui est compatible avec les standards du Web et avec les bugs des vieux navigateurs. Utiliser un `DOCTYPE` correct et moderne dès le début de votre code HTML améliorera la conformité aux standards du navigateur.
@@ -46,7 +44,7 @@ Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la m�
 
 Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
-Voire [Les sélecteurs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors).
+Voire [Les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Comment revenir à la valeur par défaut d'un propriété ?
 
