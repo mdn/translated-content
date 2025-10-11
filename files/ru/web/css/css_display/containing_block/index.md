@@ -45,7 +45,8 @@ slug: Web/CSS/CSS_display/Containing_block
    3. Свойство {{cssxref("filter")}} имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
    4. Свойство {{cssxref("contain")}} имеет значение `paint` (например, `contain: paint;`).
 
-> **Примечание:**Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
+> [!NOTE]
+> Содержащий блок в котором находится корневой элемент ({{HTMLElement("html")}}) представляет собой прямоугольник, который называется **начальный содержащий блок**. Он имеет размеры области просмотра (вьюпорт - viewport) для непрерывного медиа (continuous media) или области страницы (page area) для страничного медиа (paged media).
 
 ## Calculating percentage values from the containing block
 

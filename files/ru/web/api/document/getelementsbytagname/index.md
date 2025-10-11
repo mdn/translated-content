@@ -16,7 +16,8 @@ var elements = document.getElementsByTagName(name);
 - `elements` это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.
 - `name` строка представляющая собой имя элемента. Специальная строка "\*" позволяет получить все элементы.
 
-> **Примечание:** [Последняя W3C спецификация](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) говорит что `elements` является `HTMLCollection`; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. [Firefox bug 14869](https://bugzil.la/14869) для большей информации.
+> [!NOTE]
+> [Последняя W3C спецификация](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) говорит что `elements` является `HTMLCollection`; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. [Firefox bug 14869](https://bugzil.la/14869) для большей информации.
 
 ## Примеры
 

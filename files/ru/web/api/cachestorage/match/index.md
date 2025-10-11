@@ -9,7 +9,8 @@ slug: Web/API/CacheStorage/match
 
 Объекты Cache проверяются в порядке создания.
 
-> **Примечание:** {{domxref("CacheStorage.match()", "caches.match()")}} это метод для удобства в работе. Такая функциональность достигается вызовом {{domxref("cache.match()")}} для каждого объекта cache (в порядке полученном запросом {{domxref("CacheStorage.keys()", "caches.keys()")}}) пока {{domxref("Response")}} не будет найден.
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} это метод для удобства в работе. Такая функциональность достигается вызовом {{domxref("cache.match()")}} для каждого объекта cache (в порядке полученном запросом {{domxref("CacheStorage.keys()", "caches.keys()")}}) пока {{domxref("Response")}} не будет найден.
 
 ## Синтаксис
 

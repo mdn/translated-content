@@ -3,7 +3,8 @@ title: stroke-dashoffset
 slug: Web/SVG/Reference/Attribute/stroke-dashoffset
 ---
 
-> **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
+> [!NOTE]
+> **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
 > Этот атрибут определяет смещение обводки относительно начального положения.
 > При использовании [\<percentage>](/ru/docs/Web/SVG#percentage), значение будет вычисляться от текущего viewport.
 > Значение может быть отрицательным.

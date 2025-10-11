@@ -17,7 +17,8 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **Примечание:**Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
+> [!NOTE]
+> Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
 
 Возможно, вы думаете: «Почему бы просто не создавать отдельные вкладки в виде отдельных веб-страниц и просто иметь вкладки, переходящие на отдельные страницы, чтобы создать эффект?» Этот код был бы проще, да, но тогда каждый отдельный «просмотр страницы» на самом деле был бы вновь загруженной веб-страницей, что затрудняло бы сохранение информации между представлениями и интеграцию этой функции в более крупный дизайн пользовательского интерфейса. Кроме того, так называемые «одностраничные приложения» становятся очень популярными - особенно для мобильных веб-интерфейсов - потому что все, что обслуживается как один файл, сокращает количество HTTP-запросов, необходимых для просмотра всего содержимого, тем самым повышая производительность.
 
