@@ -1,11 +1,11 @@
 ---
-title: Espace de couleur (Color space)
+title: Espace de couleur
 slug: Glossary/Color_space
 l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-Les **espaces de couleur** sont des organisations nommées de couleurs pour des modèles de couleur sous-jacents basés sur des coordonnées. Un modèle de couleur définit comment les composants d'une couleur (par exemple, les canaux `h`, `w`, et `b` d'une couleur {{CSSXref("color_value/hwb", "hwb()")}}) se rapportent à un espace de couleur. La plupart des espaces de couleur sont des grilles tridimensionnelles ou quadridimensionnelles qui représentent les couleurs. Chaque dimension (ou axe) correspond à un canal différent. Les couleurs peuvent être exprimées dans plusieurs espaces de couleur, et peuvent être transformées d'un espace de couleur à un autre, tout en conservant la même apparence.
+Les **espaces de couleur** (<i lang="en">color spaces</i> en anglais) sont des organisations nommées de couleurs pour des modèles de couleur sous-jacents basés sur des coordonnées. Un modèle de couleur définit comment les composants d'une couleur (par exemple, les canaux `h`, `w`, et `b` d'une couleur {{CSSXref("color_value/hwb", "hwb()")}}) se rapportent à un espace de couleur. La plupart des espaces de couleur sont des grilles tridimensionnelles ou quadridimensionnelles qui représentent les couleurs. Chaque dimension (ou axe) correspond à un canal différent. Les couleurs peuvent être exprimées dans plusieurs espaces de couleur, et peuvent être transformées d'un espace de couleur à un autre, tout en conservant la même apparence.
 
 Les espaces de couleur catégorisent et définissent des gammes spécifiques de couleurs. Chaque espace de couleur est défini par un modèle mathématique et un ensemble de règles associées. Chaque espace de couleur a un {{glossary("Gamut", "gamut")}} défini, qui fait référence à la gamme spécifique de couleurs qu'il peut représenter. Ces règles permettent une représentation cohérente et reproductible des couleurs sur différents appareils et logiciels.
 
