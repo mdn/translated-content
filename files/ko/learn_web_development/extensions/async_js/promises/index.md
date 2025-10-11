@@ -276,7 +276,8 @@ fetch("coffee.jpg")
 
 fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 executor 함수가 가진 파라미터로 전달 된다는 것을 꼭 기억하세요.
 
-> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
+> [!NOTE]
+> `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
 
 ## Promise terminology recap
 
@@ -460,7 +461,8 @@ function fetchAndDecode(url, type) {
 
 이 로그는 각 fetch시도가 완료되면 콘솔에 메시지를 출력하여 사용자에게 알려줍니다.
 
-> **참고:** `then()`/`catch()`/`finally()` is the async equivalent to `try`/`catch`/`finally` in sync code.
+> [!NOTE]
+> `then()`/`catch()`/`finally()` is the async equivalent to `try`/`catch`/`finally` in sync code.
 
 ## Building your own custom promises
 

@@ -1,5 +1,6 @@
 ---
 title: Array() 생성자
+short-title: Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 l10n:
   sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
