@@ -29,7 +29,7 @@ sort()
 // 创建一个测试用的 URLSearchParams 对象
 const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 
-// 对键/值对进行派寻
+// 对键/值对进行排序
 searchParams.sort();
 
 // 显示排序后的查询字符串
