@@ -1,6 +1,7 @@
 ---
 title: "Desafío: Crear un elegante documento con membrete"
-slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+slug: conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3
+original_slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 l10n:
   sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
