@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 XLink 是用于描述 XML 与 XML 或其他文档之间的链接的 W3C 标准。一些行为留给实现来决定如何处理。
 
 在 Firefox 中，简单的 XLink 是“支持”的（至少在 SVG 和 MathML 中），尽管如果加载一个带有 XLink 的普通 XML 文档并尝试单击 XML 树中的相关点，则它们不会作为链接工作。

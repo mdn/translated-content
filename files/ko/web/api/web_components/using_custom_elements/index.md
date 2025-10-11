@@ -123,7 +123,8 @@ customElements.define("popup-info", PopUpInfo);
   back of your card."></popup-info>
 ```
 
-> **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js)를 여기서 확인할 수 있습니다.
+> [!NOTE]
+> [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js)를 여기서 확인할 수 있습니다.
 
 ### 내부 스타일 대 외부 스타일
 
@@ -182,7 +183,8 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 `<ul>` 요소를 평범하게 사용하나, `is` 특성 내부에 사용자 정의 요소의 이름을 명시합니다.
 
-> **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)를 확인해볼 수 있습니다.
+> [!NOTE]
+> [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)를 확인해볼 수 있습니다.
 
 ## 생명 주기 콜백 사용하기
 
@@ -190,7 +192,8 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 - `connectedCallback`: 사용자 정의 요소가 문서에 연결된 요소에 추가될 때마다 호출됩니다. 이것은 노드가 이동될 때마다 발생할 것이며, 요소의 내용이 완전히 해석되기 전에 발생할 지도 모릅니다.
 
-  > **참고:** `connectedCallback` 은 요소가 더 이상 연결되지 않았을 때 호출될 수도 있으므로, 확실하게 하기 위해선 {{domxref("Node.isConnected")}}를 사용하세요.
+  > [!NOTE]
+  > `connectedCallback` 은 요소가 더 이상 연결되지 않았을 때 호출될 수도 있으므로, 확실하게 하기 위해선 {{domxref("Node.isConnected")}}를 사용하세요.
 
 - `disconnectedCallback`: 사용자 정의 요소가 document의 DOM에서 연결 해제되었을 때마다 호출됩니다.
 - `adoptedCallback`: 사용자 정의 요소가 새로운 document로 이동되었을 때마다 호출됩니다.
@@ -266,7 +269,8 @@ static get observedAttributes() { return ['c', 'l']; }
 
 이 예제에서 이 메서드는 생성자의 바로 위에 위치해 있습니다.
 
-> **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)를 확인해 보세요.
+> [!NOTE]
+> [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)를 확인해 보세요.
 
 ## 트랜스파일러 대 클래스
 
