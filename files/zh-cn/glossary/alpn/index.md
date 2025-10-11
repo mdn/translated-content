@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **应用层协议协商**（**Application-Layer Protocol Negotiation**，简称 **ALPN**）是由 [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301) 定义的一个 {{Glossary("TLS")}} 扩展，用于在协商加密连接时识别应用层协议，避免了额外的往返通讯开销。
 
 | 协议                                        | 标识符字节序列                                          |
