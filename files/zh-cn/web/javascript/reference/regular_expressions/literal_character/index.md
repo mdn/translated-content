@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**字面字符**在输入文本中精确匹配其自身。
+**字面字符**（literal character）在输入文本中精确匹配其自身。
 
 ## 语法
 
@@ -174,7 +174,7 @@ console.log(
 > [!NOTE]
 > 在 `v` 模式字符类中，既可转义又可取消转义的字符恰恰是那些被禁止作为“双重标点符号”的字符。更多信息请参阅 [`v` 模式字符类](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_模式字符类)。
 
-当需要精确匹配语法字符时，必须使用反斜杠（`\`）进行转义。例如，要在模式中匹配字面 `*`，需在模式中写成 `\*`。将语法字符作为字面字符使用会导致意外结果或引发语法错误——例如 `/*/` 不是有效的正则表达式，因为量词前未跟随模式。在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下，若无法将 `]`、`{` 和 `}` 解析为字符类结束符或量词分隔符，则可能直接作为字面字符。这是一种[为兼容 web 而保留的已废弃的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖它。
+当需要精确匹配语法字符时，必须使用反斜杠（`\`）进行[转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)。例如，要在模式中匹配字面 `*`，需在模式中写成 `\*`。将语法字符作为字面字符使用会导致意外结果或引发语法错误——例如 `/*/` 不是有效的正则表达式，因为量词前未跟随模式。在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下，若无法将 `]`、`{` 和 `}` 解析为字符类结束符或量词分隔符，则可能直接作为字面字符。这是一种[为 web 兼容性而保留的已废弃的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖它。
 
 正则表达式字面量不能包含某些非语法字面字符。`/` 不能作为字面字符出现在正则表达式字面中，因为 `/` 本身是字面的分隔符。若需匹配字面 `/`，需将其转义为 `\/`。换行符同样不能作为字面字符出现在正则表达式字面中，因为字面不能跨行存在。此时需使用[字符转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)（如 `\n`）。使用 {{jsxref("RegExp/RegExp", "RegExp()")}} 构造函数时则无此限制，但字符串字面量有其自身的转义规则（例如 `"\\"` 实际表示单个反斜杠字符，因此 `new RegExp("\\*")` 与 `/\*/` 效果相同）。
 
