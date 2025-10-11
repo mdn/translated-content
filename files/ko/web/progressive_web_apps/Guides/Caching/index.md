@@ -81,7 +81,6 @@ PWA는 언제든지 리소스를 캐싱할 수 있지만, 실제로 대부분의
 
 먼저 서비스 워커는 `install` 이벤트 핸들러에서 정적 리소스를 프리캐싱합니다.
 
-
 ```js
 const cacheName = "MyCache_1";
 const precachedResources = ["/", "/app.js", "/style.css"];
