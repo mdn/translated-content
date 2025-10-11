@@ -32,7 +32,8 @@ Então você pode aplicar três estilos: O uso do `mask`, `clip-path`, ou `filte
 
 Por exemplo, você pod estabelecer um estilo CSS que provêm uma máscara gradiente para um documento HTML usando código SVG similar ao seguinte:
 
-> **Aviso:** **Namespacing não é válido no HTML5**, deixe de lado as tags "svg:" para documentos HTML.
+> [!WARNING]
+> **Namespacing não é válido no HTML5**, deixe de lado as tags "svg:" para documentos HTML.
 
 ```html
 <svg height="0">

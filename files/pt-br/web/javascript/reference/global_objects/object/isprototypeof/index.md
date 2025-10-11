@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protótipos de um outro objeto.
 
-> **Nota:** `isPrototypeOf()` difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
+> [!NOTE]
+> `isPrototypeOf()` difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
 

@@ -14,7 +14,8 @@ A espeficicação é calculada na concatenação da contagem de cada tipo de sel
 
 No caso de igualdade de especificação, a última declaração encontrada no CSS é aplicada ao elemento.
 
-> **Nota:**: O fato de elementos estarem próximos na árvore do documento não tem efeito sobre a especificação.
+> [!NOTE]
+> O fato de elementos estarem próximos na árvore do documento não tem efeito sobre a especificação.
 
 ### Ordem crescente de especificação
 

@@ -52,7 +52,8 @@ The very best _performance_ can be gained by using SQL, or whatever query langua
 
 The benefit of using an ORM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform validation and checking of data.
 
-> **Nota:** **Tip:** Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
+> [!NOTE]
+> **Tip:** Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
 
 ### Qual ORM/ODM eu devo usar?
 
@@ -76,7 +77,8 @@ Para o exemplo da _Local Library_ (e para o resto do tópico) nós iremos usar o
 
 Esse ODM (Object Data Model) e banco de dados combinados são extremamente populares na comunidade do Node, particularmente porque os documentos armazenados e os métodos de consultas se parecem muito com JSON, que consequentemente são muito familiares aos desenvolvedores JavaScript.
 
-> **Nota:** **Dica:** Você não precisa conhecer o MongoDB antes de usar o Mongoose, apesar de que partes da [documentação do Mongoose](http://mongoosejs.com/docs/guide.html) _são mais fáceis_ de entender se você já está familiarizado com o MongoDB.
+> [!NOTE]
+> **Dica:** Você não precisa conhecer o MongoDB antes de usar o Mongoose, apesar de que partes da [documentação do Mongoose](http://mongoosejs.com/docs/guide.html) _são mais fáceis_ de entender se você já está familiarizado com o MongoDB.
 
 O resto desse tutorial mostra como definir e acessar os modelos e schemas no Mongoose para o nosso website da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website).
 
@@ -145,7 +147,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
 
-> **Nota:** **Tip:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
+> [!NOTE]
+> **Tip:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
 
 ### Definindo e criando modelos
 
@@ -754,11 +757,13 @@ In order to test the models (and to create some example books and other items th
    node populatedb <your mongodb url>
    ```
 
-   > **Nota:** **Note for Windows operating system users**: If the above command results in the error `DeprecationWarning: current URL string parser is deprecated`, change the `mongoose.connect(mongoDB);` line in `populatedb.js` file with `mongoose.connect(mongoDB, { useNewUrlParser:true });`
+   > [!NOTE]
+   > **Note for Windows operating system users**: If the above command results in the error `DeprecationWarning: current URL string parser is deprecated`, change the `mongoose.connect(mongoDB);` line in `populatedb.js` file with `mongoose.connect(mongoDB, { useNewUrlParser:true });`
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Nota:** **Tip:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+> [!NOTE]
+> **Tip:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Resumo
 

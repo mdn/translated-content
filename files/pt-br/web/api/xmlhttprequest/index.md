@@ -553,7 +553,8 @@ void setRequestHeader(
 
 Inicializa o objeto para uso a partir do código C ++.
 
-> **Aviso:** **Nota:** Este método não deve ser chamado a partir do JavaScript.
+> [!WARNING]
+> **Nota:** Este método não deve ser chamado a partir do JavaScript.
 
 ```
 [noscript] void init(

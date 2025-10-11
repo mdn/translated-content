@@ -1123,7 +1123,8 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **Nota:**: O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
+> [!NOTE]
+> O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
 
 ## Especificações
 

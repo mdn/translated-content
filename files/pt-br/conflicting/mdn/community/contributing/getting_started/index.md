@@ -283,7 +283,8 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
     git add README.md
     ```
 
-    > **Nota:** `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
+    > [!NOTE]
+    > `README.md` é o caminho para o arquivo que você alterou, não apenas o nome dele. Se ele estiver dentro de um subdiretório, você teria que escrever o caminho completo para o arquivo.
 
 4. Se você rodar `git status` de novo, você vai ver isto agora:
 

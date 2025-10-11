@@ -314,7 +314,8 @@ Se o formulário não é válido, chamamos `render()` novamente, mas dessa vez o
 
 Se o formulário é válido, então podemos começar a utilizar os dados, acessando-o por meio do atributo`form.cleaned_data` (Ex. `data = form.cleaned_data['renewal_date']`). Aqui, apenas salvamos os dados no atributo `due_back` do objeto `BookInstance` associado.
 
-> **Aviso:** **Importante**: Embora você também possa acessar os dados do formulário diretamente por meio do _request_ (por exemplo, `request.POST['renewal_date']` ou `request.GET['renewal_date']` se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.
+> [!WARNING]
+> **Importante**: Embora você também possa acessar os dados do formulário diretamente por meio do _request_ (por exemplo, `request.POST['renewal_date']` ou `request.GET['renewal_date']` se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.
 
 A estapa final da manipulação de formulário na parte da _view_ é redirecionar para outra página, geralmente uma página de "êxito". Nesse caso, usamos `HttpResponseRedirect` e `reverse()` para redirecionar para a _view_ chamada `'all-borrowed'` (isso foi criado como desafio em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself)). Se você não criou está página considere redirecionar para a página principal na URL '/').
 
@@ -549,7 +550,8 @@ A classe `RenewBookModelForm` acima agora é funcionalmente equivalente a nossa 
 
 O algoritmo de manipulação de formulários que usamos em nosso exemplo de função _view_ acima, representa um padrão extremamente comum nas _views_ de edição de formulário. Django abstrai grande parte desse "_boilerplate_" (trabalho repetitivo) para você, criando [views genéricas de edição](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/) para views de criação, edição e exclusão baseadas em modelos. Não apenas lidam com o comportamento de visualização, mas também criam automaticamente para você a classe de formulário (uma `ModelForm`) a partir do modelo.
 
-> **Nota:**Além das _views_ de edição descritas aqui, há também uma classe [FormView](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview), que fica em algum lugar entre nossa função _view_ e outra _view_ genérica em termos de "flexibilidade" vs "esforço de codificação". Usando `FormView`, você ainda precisa criar seu `Form`, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.
+> [!NOTE]
+> Além das _views_ de edição descritas aqui, há também uma classe [FormView](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview), que fica em algum lugar entre nossa função _view_ e outra _view_ genérica em termos de "flexibilidade" vs "esforço de codificação". Usando `FormView`, você ainda precisa criar seu `Form`, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.
 
 Nessa seção vamos usar _views_ genericas de edição para criar páginas para adicionar funcionalidades para criar, editar e excluir registros de `Author` da nossa biblioteca — fornecendo efetivamente uma reimplementação básica de parte do site _Admin_ (isso poderá ser útil se você precisa oferecer funcionalidades de administrador de uma maneira mais flexível que possa ser fornecida pelo dite _Admin_).
 

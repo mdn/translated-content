@@ -49,7 +49,8 @@ Como foi dito anteriormente, o [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTi
 - Um número representando o intervalo de tempo em milissegundos (1000 milissegundos equivalem a 1 segundo) para esperar antes de executar o código. Se você especificar um valor de 0 (ou simplesmente omitir o valor), a função será executada assim que possível (mas não imediatamente).
 - Zero ou mais valores que representam quaisquer parâmetros que você quiser passar para a função quando ela for executada.
 
-> **Nota:** **NOTA:** O tempos especificafo **não** é o tempo garantido de execução, mas sim o tempo míniimo de execução. As callback que você passa para essas funções não podem ser executadas até que a main thread esteja vazia.
+> [!NOTE]
+> O tempos especificafo **não** é o tempo garantido de execução, mas sim o tempo míniimo de execução. As callback que você passa para essas funções não podem ser executadas até que a main thread esteja vazia.
 >
 > Como consequência, códigos como `setTimeout(fn, 0)`\_ \_serão executados assim que a fila estiver vazia, **não** imediatamente. Se você executar código como `setTimeout(fn, 0)` e depois imediatamente executar um loop que conta de 1 a 10 bilhões, sua callback será executada depois de alguns segundos.
 

@@ -19,7 +19,8 @@ Nesta tarefa queremos que você faça a marcação do HTML fornecido, utilizando
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
 
-> **Nota:** [Faça download do ponto de partida desta tarefa](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) para trabalhar em seu próprio editor ou em um editor online.
+> [!NOTE]
+> [Faça download do ponto de partida desta tarefa](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) para trabalhar em seu próprio editor ou em um editor online.
 
 ## Texto básico em HTML 2
 
@@ -29,7 +30,8 @@ Tente editar a amostra, ao vivo, para alterar o exemplo final:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
 
-> **Nota:** [Faça download do ponto de partida desta tarefa](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) para trabalhar em seu próprio editor ou em um editor online.
+> [!NOTE]
+> [Faça download do ponto de partida desta tarefa](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) para trabalhar em seu próprio editor ou em um editor online.
 
 ## Texto básico em HTML 3
 
@@ -39,7 +41,8 @@ Tente editar a amostra, ao vivo, para alterar o exemplo final:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3.html", '100%', 700)}}
 
-> **Nota:** [Faça download do ponto de partida desta tarefa](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) para trabalhar em seu próprio editor ou em um editor online.
+> [!NOTE]
+> [Faça download do ponto de partida desta tarefa](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) para trabalhar em seu próprio editor ou em um editor online.
 
 ## Avaliação ou ajuda adicional
 

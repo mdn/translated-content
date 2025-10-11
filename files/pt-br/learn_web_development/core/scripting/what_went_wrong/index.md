@@ -45,7 +45,8 @@ Para começar, voltemos ao nosso jogo de adivinhação - porém desta vez estare
 1. Para começar, abra a cópia local dentro do seu editor de texto favorito, e em seu navegador.
 2. Tente jogar o jogo - você notará que, quando você pressiona o botão "Enviar palpite", ele não funciona!
 
-> **Nota:**Talvez você tenha sua própria versão de exemplo do jogo que não funciona, e pode querer consertá-la! Nós ainda gostaríamos que você trabalhasse no artigo com a nossa versão, para que possa aprender as técnicas que estamos ensinando aqui. Daí então você pode voltar e tentar consertar seu exemplo.
+> [!NOTE]
+> Talvez você tenha sua própria versão de exemplo do jogo que não funciona, e pode querer consertá-la! Nós ainda gostaríamos que você trabalhasse no artigo com a nossa versão, para que possa aprender as técnicas que estamos ensinando aqui. Daí então você pode voltar e tentar consertar seu exemplo.
 
 Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamos qualquer erro de sintaxe, e então tentar consertá-lo. Você irá aprender como, logo abaixo.
 
@@ -81,7 +82,8 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
    ![](variavel-e-nula.png)
 3. Dessa vez o erro informado é "TypeError: baixoOuAlto is null", na linha 78.
 
-   > **Nota:** [`Null`](/pt-BR/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
+   > [!NOTE]
+   > [`Null`](/pt-BR/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
 
    > [!NOTE]
    > Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
@@ -104,7 +106,8 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
    console.log(baixoOuAlto);
    ```
 
-   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/console/log_static) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
+   > [!NOTE]
+   > [`console.log()`](/pt-BR/docs/Web/API/console/log_static) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
 
 7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
    ![](console-log-saida.png)

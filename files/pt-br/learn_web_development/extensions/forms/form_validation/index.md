@@ -230,7 +230,8 @@ Aqui está o exemplo rodando ao vivo:
 
 {{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 100)}}
 
-> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
+> [!NOTE]
+> `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
 
 ### Exemplo completo
 

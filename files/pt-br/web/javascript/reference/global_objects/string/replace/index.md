@@ -61,7 +61,8 @@ str.replace(regexp|substr, newSubStr|function)
     - `y` {{experimental_inline}}
       - : Sticky
 
-    > **Nota:**O argumento `flags` não funciona no v8 Core (Chrome e NodeJs).
+    > [!NOTE]
+    > O argumento `flags` não funciona no v8 Core (Chrome e NodeJs).
 
 ### Valor retornado
 

@@ -3,9 +3,11 @@ title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
-> **Aviso:** **Cuidado:** Alterando o `[[Prototype]]` de um objeto é, pela natureza que as engines do Javascript modernos otimizam os acessos à propriedades, uma operação muito lenta, em **_TODOS_ **os mecanismos browsers e JavaScript. Os efeitos no desempenho de alteração na herança são sutis e distantes, e não se limitam simplesmente ao tempo gasto em na declaração `obj.__proto__ = ...`, mas podem se estender para **_qualquer_** código que tenha acesso a **_qualquer_** objeto cujo `[[Prototype]]` foi alterado. Se você se preocupa com desempenho, evite configurar o `[[Prototype]]` de um objeto. Ao invés disso, crie um novo objeto com o `[[Prototype]]` desejado usando {{jsxref("Object.create()")}}.
+> [!WARNING]
+> **Cuidado:** Alterando o `[[Prototype]]` de um objeto é, pela natureza que as engines do Javascript modernos otimizam os acessos à propriedades, uma operação muito lenta, em **_TODOS_ **os mecanismos browsers e JavaScript. Os efeitos no desempenho de alteração na herança são sutis e distantes, e não se limitam simplesmente ao tempo gasto em na declaração `obj.__proto__ = ...`, mas podem se estender para **_qualquer_** código que tenha acesso a **_qualquer_** objeto cujo `[[Prototype]]` foi alterado. Se você se preocupa com desempenho, evite configurar o `[[Prototype]]` de um objeto. Ao invés disso, crie um novo objeto com o `[[Prototype]]` desejado usando {{jsxref("Object.create()")}}.
 
-> **Aviso:** **Cuidado:** Enquanto `Object.prototype.__proto__` é suportado hoje em dia em quase todos os navegadores, a existência e o comportamento exato foram padronizados na especificação ECMAScript 2015 como um recurso legado para assegurar compatibilidade com os navegadores. Para melhor suporte, recomenda-se que apenas {{jsxref("Object.getPrototypeOf()")}} seja usado em vez disso.
+> [!WARNING]
+> **Cuidado:** Enquanto `Object.prototype.__proto__` é suportado hoje em dia em quase todos os navegadores, a existência e o comportamento exato foram padronizados na especificação ECMAScript 2015 como um recurso legado para assegurar compatibilidade com os navegadores. Para melhor suporte, recomenda-se que apenas {{jsxref("Object.getPrototypeOf()")}} seja usado em vez disso.
 
 {{JSRef}}
 
