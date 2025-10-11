@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`DocumentTimeline`** 接口用于表示动画时间线（包括默认的文档时间线（可通过 {{domxref("Document.timeline")}} 访问））。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`DocumentTimeline`** 接口用于表示动画时间线（包括默认的文档时间线——可通过 {{domxref("Document.timeline")}} 访问）。
 
 {{InheritanceDiagram}}
 
@@ -18,10 +18,10 @@ l10n:
 
 ## 实例属性
 
-_此接口继承自其父接口 {{domxref("AnimationTimeline")}}。_
+_此接口从其父接口 {{domxref("AnimationTimeline")}} 继承属性。_
 
 - {{domxref("AnimationTimeline.currentTime")}}
-  - : 返回此时间线的时间值（以毫秒为单位），如果该时间线未激活，则返回 `null`。
+  - : 返回此时间线的时间值（以毫秒为单位），如果未激活则返回 `null`。
 
 ## 规范
 
