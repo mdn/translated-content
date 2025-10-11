@@ -29,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Get changed files
         id: check
@@ -81,6 +83,7 @@ jobs:
         with:
           repository: mdn/content
           path: mdn/content
+          persist-credentials: false
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
