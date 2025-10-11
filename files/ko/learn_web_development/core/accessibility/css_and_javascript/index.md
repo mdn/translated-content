@@ -211,7 +211,8 @@ a:active {
 
 반면에 {{cssxref("visibility")}}`:hidden` 또는 {{cssxref("display")}}`:none`은 스크린 리더에서 콘텐츠를 숨기기 때문에 사용하면 안 됩니다. 물론, 이 콘텐츠를 스크린 리더에서 숨기려는 타당한 이유가 있는 경우는 예외입니다.
 
-> **참고:** [스크린 리더 사용자만을 위한 보이지 않는 콘텐츠](https://webaim.org/techniques/css/invisiblecontent/)에는 이 주제와 관련된 훨씬 더 유용한 세부 정보가 있습니다.
+> [!NOTE]
+> [스크린 리더 사용자만을 위한 보이지 않는 콘텐츠](https://webaim.org/techniques/css/invisiblecontent/)에는 이 주제와 관련된 훨씬 더 유용한 세부 정보가 있습니다.
 
 ### 사용자가 스타일을 재정의하는 것을 허용
 

@@ -57,7 +57,8 @@ HTML 요소에 적용될 수 있는 여러 가지 유형의 위치잡기가 존�
 
 이제 저장하고 새로고침하면 두 번째 단락의 배경 색깔이 업데이트된 것을 제외하고 다른 차이가 없다는 것이 확인될 것입니다. 아무 문제없습니다. 앞에서 얘기했듯이 정적 위치잡기는 기본값으로 주어진 동작입니다!
 
-> **참고:** **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
+> [!NOTE]
+> **주석**: 이 시점에 예제의 실제 구현 장면을 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html)에서 볼 수 있습니다.([소스 코드는 여기서 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)).
 
 ## 상대 위치잡기
 
@@ -221,7 +222,8 @@ span {
 > [!NOTE]
 > 당신이 필요하다면 요소의 크기를 재지정하기 위해 {{cssxref("top")}}, {{cssxref("bottom")}}과 {{cssxref("left")}}, {{cssxref("right")}}를 사용할 수 있습니다. 당신이 위치잡기한 요소에 `top: 0; bottom: 0; left: 0; right: 0;`과 `margin: 0;`를 지정한 뒤 어떻게 되냐 보십시요! 해보고 다시 원상태로 돌리십시요...
 
-> **참고:** **주석**: 그렇습니다. 여백이 위치잡기한 요소에 여전히 영향을 미칩니다. 그러나 마진 축소 영향은 업습니다.
+> [!NOTE]
+> **주석**: 그렇습니다. 여백이 위치잡기한 요소에 여전히 영향을 미칩니다. 그러나 마진 축소 영향은 업습니다.
 
 > [!NOTE]
 > 당신은 [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html)에서 예제를 확인할 수 있습니다([소스 코드를 보세요](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)).
