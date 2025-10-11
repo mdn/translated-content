@@ -12,13 +12,15 @@ a::after {
 }
 ```
 
-> **참고:** `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에 적용할 수 없습니다.
+> [!NOTE]
+> `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에 적용할 수 없습니다.
 
 ## 구문
 
 {{csssyntax}}
 
-> **참고:** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 CSS3부터`::after` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:after`도 허용합니다.
+> [!NOTE]
+> [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 CSS3부터`::after` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:after`도 허용합니다.
 
 ## 예제
 
