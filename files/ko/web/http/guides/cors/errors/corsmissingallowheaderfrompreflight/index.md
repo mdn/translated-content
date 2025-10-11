@@ -6,8 +6,6 @@ l10n:
   sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
-{{HTTPSidebar}}
-
 ## 이유
 
 ```plain

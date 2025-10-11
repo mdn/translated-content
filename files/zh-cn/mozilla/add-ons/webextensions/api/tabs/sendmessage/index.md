@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 从扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）向任何运行在指定标签页中的[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)或在扩展的页面或 iframe 发送一条消息。
 
 该消息将在扩展上下文中由监听 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) 事件的监听器接收。监听器可以选择性地返回一个响应给发送者。

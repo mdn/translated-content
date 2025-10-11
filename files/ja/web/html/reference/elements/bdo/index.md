@@ -9,7 +9,7 @@ l10n:
 
 **`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。
 
-{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;bdo&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>有名な海辺の歌</h1>

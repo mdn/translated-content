@@ -60,26 +60,26 @@ float: inline-end;
 }
 ```
 
-Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/computed_value) de `float` est différente de `none`.
+Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de `float` est différente de `none`.
 
 `float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/display) dans certains cas&nbsp;:
 
-| [Valeur spécifiée](/fr/docs/Web/CSS/specified_value) | [Valeur calculée](/fr/docs/Web/CSS/computed_value) |
-| ---------------------------------------------------- | -------------------------------------------------- |
-| `inline`                                             | `block`                                            |
-| `inline-block`                                       | `block`                                            |
-| `inline-table`                                       | `table`                                            |
-| `table-row`                                          | `block`                                            |
-| `table-row-group`                                    | `block`                                            |
-| `table-column`                                       | `block`                                            |
-| `table-column-group`                                 | `block`                                            |
-| `table-cell`                                         | `block`                                            |
-| `table-caption`                                      | `block`                                            |
-| `table-header-group`                                 | `block`                                            |
-| `table-footer-group`                                 | `block`                                            |
-| `inline-flex`                                        | `flex`                                             |
-| `inline-grid`                                        | `grid`                                             |
-| _autre_                                              | _inchangée_                                        |
+| [Valeur spécifiée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4e3ad4bb8e93bd9e2a381021d1b939f81717e13df739659207d88907070d77aa) | [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `inline`                                                                                                                                       | `block`                                                          |
+| `inline-block`                                                                                                                                 | `block`                                                          |
+| `inline-table`                                                                                                                                 | `table`                                                          |
+| `table-row`                                                                                                                                    | `block`                                                          |
+| `table-row-group`                                                                                                                              | `block`                                                          |
+| `table-column`                                                                                                                                 | `block`                                                          |
+| `table-column-group`                                                                                                                           | `block`                                                          |
+| `table-cell`                                                                                                                                   | `block`                                                          |
+| `table-caption`                                                                                                                                | `block`                                                          |
+| `table-header-group`                                                                                                                           | `block`                                                          |
+| `table-footer-group`                                                                                                                           | `block`                                                          |
+| `inline-flex`                                                                                                                                  | `flex`                                                           |
+| `inline-grid`                                                                                                                                  | `grid`                                                           |
+| _autre_                                                                                                                                        | _inchangée_                                                      |
 
 > [!NOTE]
 > Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), la plupart des navigateurs récents permettront d'utiliser `float`, mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).

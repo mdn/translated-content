@@ -126,11 +126,11 @@ Voilà le résultat après mise à jour&nbsp;:
 
 {{EmbedLiveSample('', '100%', 55)}}
 
-Dans le prochain module, dans l'article [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), nous utiliserons les DevTools du navigateur pour déboguer des erreurs CSS. Ce sera aussi l'occasion de mieux comprendre comment le navigateur interprète CSS.
+Dans le prochain module, dans l'article [Débogage de CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS), nous utiliserons les DevTools du navigateur pour déboguer des erreurs CSS. Ce sera aussi l'occasion de mieux comprendre comment le navigateur interprète CSS.
 
 ## Que se passe-t-il quand un navigateur rencontre du CSS qu'il ne comprend pas&nbsp;?
 
-Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle — j'avais mentionné ce fait [dans une leçon précédente](/fr/docs/Learn/CSS/First_steps/What_is_CSS#prise_en_charge_par_les_navigateurs). Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.
+Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle — j'avais mentionné ce fait [dans une leçon précédente](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS#prise_en_charge_par_les_navigateurs). Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.
 
 La réponse&nbsp;: ne rien faire et passer à la suite&nbsp;!
 
@@ -169,6 +169,6 @@ Dans les leçons à venir, nous rencontrerons d'autres méthodes pour adapter le
 
 ## Et enfin
 
-Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
+Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}

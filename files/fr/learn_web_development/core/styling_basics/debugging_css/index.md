@@ -29,7 +29,7 @@ Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne f
 
 ## Comment accéder aux outils de développements des navigateurs
 
-L'article [Que sont les outils de développement des navigateurs&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) est un guide expliquant comment accéder aux outils de développement (<i lang="en">devtools</i>) des différents navigateurs sur les différentes plateformes. Même si vous pouvez choisir de développer principalement avec un navigateur donné et vous familiariser ainsi avec les outils de ce navigateur, mieux vaut savoir comment accéder à ces outils dans les différents navigateurs. Cela pourra vous aider si vous observez des résultats différents selon les navigateurs.
+L'article [Que sont les outils de développement des navigateurs&nbsp;?](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) est un guide expliquant comment accéder aux outils de développement (<i lang="en">devtools</i>) des différents navigateurs sur les différentes plateformes. Même si vous pouvez choisir de développer principalement avec un navigateur donné et vous familiariser ainsi avec les outils de ce navigateur, mieux vaut savoir comment accéder à ces outils dans les différents navigateurs. Cela pourra vous aider si vous observez des résultats différents selon les navigateurs.
 
 Vous pourrez également voir que les navigateurs ont chacun mis l'accent sur différentes parties de leurs outils de développement. Ainsi, Firefox dispose d'excellents outils pour travailler les dispositions CSS&nbsp;: l'inspection et l'édition [des grilles CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [des boîtes flexibles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html), et [des formes CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). Ceci étant, tous les navigateurs disposent des mêmes outils de base, par exemple pour inspecter les propriétés et valeurs appliquées aux éléments d'une page et les modifier depuis l'éditeur.
 
@@ -84,7 +84,7 @@ Vous pouvez utiliser les outils de développement pour ajouter de nouvelles prop
 
 ## Comprendre le modèle de boîtes
 
-Dans les articles précédents, nous avons abordé [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et le fait que le calcul de la taille des éléments dépend de leur taille mais aussi du remplissage (<i lang="en">padding</i>) et des bordures. Les outils de développement permettent de mieux comprendre comment la taille d'un élément est calculée.
+Dans les articles précédents, nous avons abordé [le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et le fait que le calcul de la taille des éléments dépend de leur taille mais aussi du remplissage (<i lang="en">padding</i>) et des bordures. Les outils de développement permettent de mieux comprendre comment la taille d'un élément est calculée.
 
 La [vue Disposition](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout-view) affiche un diagramme du modèle de boîtes pour l'élément sélectionné, avec une description des propriétés et valeurs qui modifient la disposition de l'élément. Cela inclut une description des propriétés qui pourraient ne pas être explicitement utilisées sur l'élément, mais qui ont des valeurs initiales.
 
@@ -120,7 +120,7 @@ Mais il y a également cette règle pour le sélecteur `.special`&nbsp;:
 }
 ```
 
-Si vous vous rappelez l'article sur [la cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) où nous avons abordé la spécificité, les sélecteurs de classe sont plus spécifiques que les sélecteurs d'élément. Pour notre exemple, c'est donc la deuxième règle qui décide de la couleur. Les outils de développement peuvent vous aider à identifier de tels problèmes, notamment lorsque l'information est enfouie dans une feuille de style conséquente.
+Si vous vous rappelez l'article sur [la cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) où nous avons abordé la spécificité, les sélecteurs de classe sont plus spécifiques que les sélecteurs d'élément. Pour notre exemple, c'est donc la deuxième règle qui décide de la couleur. Les outils de développement peuvent vous aider à identifier de tels problèmes, notamment lorsque l'information est enfouie dans une feuille de style conséquente.
 
 **Inspectez l'élément `<em>` avec la classe `.special`, les outils de développement montreront que c'est la couleur orange qui s'applique, mais aussi que la propriété `color` appliquée via le sélecteur `<em>` est barrée. Vous pouvez alors voir que le sélecteur de classe surcharge le sélecteur d'élément.**
 

@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_syntax/Comments
 original_slug: Web/CSS/Comments
 ---
 
-{{CSSRef}}
-
 CSS **주석**은 코드에 설명을 넣거나, 브라우저가 스타일 시트의 특정 부분을 읽지 못하도록 방지할 때 사용합니다. 주석은 문서의 레이아웃에 영향을 주지 않습니다.
 
 ## 구문

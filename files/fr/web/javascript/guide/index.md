@@ -61,20 +61,20 @@ Ce guide est divisé en plusieurs chapitres :
 - [Opérateurs binaires](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_binaires) et [logiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_logiques)
 - [Opérateur conditionnel](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateur_conditionnel_ternaire)
 
-## [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates)
+## [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Littéraux numériques](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#nombres)
+- [Littéraux numériques](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings#nombres)
 - [Objet `Number`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_number)
 - [Objet `Math`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_math)
 - [Objet `Date`](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates#l'objet_date)
 
-## [Formatage du texte](/fr/docs/Web/JavaScript/Guide/Text_formatting)
+## [Formatage du texte](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Littéraux de chaînes de caractères](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_litt.c3.a9raux_de_cha.c3.aenes_de_caract.c3.a8res)
-- [Objet `String`](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_objets_string)
-- [Littéraux de gabarits](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_littéraux_de_gabarits)
-- [Internationalisation](/fr/docs/Web/JavaScript/Guide/Text_formatting#internationalisation)
-- [Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_expressions_rationnelles)
+- [Littéraux de chaînes de caractères](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_litt.c3.a9raux_de_cha.c3.aenes_de_caract.c3.a8res)
+- [Objet `String`](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_objets_string)
+- [Littéraux de gabarits](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_littéraux_de_gabarits)
+- [Internationalisation](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#internationalisation)
+- [Expressions rationnelles](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#les_expressions_rationnelles)
 
 ## [Collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections#le_type_array)
 
@@ -94,10 +94,10 @@ Ce guide est divisé en plusieurs chapitres :
 - [Définition de méthodes](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_m.c3.a9thodes)
 - [Accesseurs et mutateurs](</fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_accesseurs_et_des_mutateurs_(getters_et_setters)>)
 
-## [Le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+## [Le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
-- [Modèle à base de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#langages_de_prototypes_.2f_langages_de_classes)
-- [Créer des hiérarchies d'objets](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#la_cr.c3.a9ation_de_la_hi.c3.a9rarchie)
+- [Modèle à base de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#langages_de_prototypes_.2f_langages_de_classes)
+- [Créer des hiérarchies d'objets](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#la_cr.c3.a9ation_de_la_hi.c3.a9rarchie)
 - [Héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#l'h.c3.a9ritage_de_propri.c3.a9t.c3.a9s_.3a_les_subtilit.c3.a9s)
 
 ## [Promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)

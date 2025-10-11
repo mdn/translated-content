@@ -3,8 +3,6 @@ title: 语法
 slug: Web/CSS/CSS_syntax/Syntax
 ---
 
-{{CSSRef}}
-
 层叠样式表（Cascading Stylesheet，简称 [CSS](/zh-CN/docs/Web/CSS)），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色、定位、装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
 
 - **属性**（property）是一个标识符，用可读的名称来表示其特性。

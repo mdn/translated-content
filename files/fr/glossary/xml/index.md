@@ -13,4 +13,4 @@ Les balises XML ressemblent aux balises HTML, mais XML est beaucoup plus flexibl
 
 ### Apprendre sur ce sujet
 
-- [Démarrer avec XML](/fr/docs/Web/XML/XML_introduction)
+- [Démarrer avec XML](/fr/docs/Web/XML/Guides/XML_introduction)

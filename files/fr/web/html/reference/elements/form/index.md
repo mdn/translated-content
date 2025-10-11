@@ -129,16 +129,16 @@ Il est possible d'utiliser les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:v
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `accept` {{deprecated_inline}}
   - : Cet attribut indique quels types de contenus sont acceptés par le serveur. Il peut y en avoir plusieurs, séparés par des virgules.
 
     > [!NOTE]
-    > Cet attribut a été retiré dans HTML5 et ne doit plus être utilisé. À la place, il faut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#attr-accept) de l'élément `<input type=file>`.
+    > Cet attribut a été retiré dans HTML5 et ne doit plus être utilisé. À la place, il faut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Elements/input#attr-accept) de l'élément `<input type=file>`.
 
 - `accept-charset`
-  - : Encodages de caractères séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie [le même encodage que celui de la page](/fr/docs/Web/HTTP/Headers/Content-Encoding).
+  - : Encodages de caractères séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie [le même encodage que celui de la page](/fr/docs/Web/HTTP/Reference/Headers/Content-Encoding).
     (Dans les versions précédentes de HTML, les codages de caractères pouvaient également être délimités par des virgules).
 - `autocapitalize` {{non-standard_inline}}
   - : Cet attribut est un attribut non-standard utilisé sur iOS par Safari Mobile qui contrôle la façon dont la valeur du texte est automatiquement transcrite en majuscules lors de la saisie par l'utilisateur. Si l'attribut `autocapitalize` est défini sur un des descendants du formulaire, il surchargera la valeur de `autocapitalize` utilisée pour le formulaire. Les valeurs non-dépréciées sont disponibles pour iOS 5 et supérieurs. La valeur par défaut est `sentences`. Les valeurs possibles sont:
@@ -155,32 +155,32 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 - `name`
   - : Le nom du formulaire. Il doit être unique parmi tous les formulaires d'un document, et ne doit pas être une chaîne de caractères vide.
 - `rel`
-  - : Crée un hyperlien ou une annotation en fonction de la valeur, voir l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) pour plus de détails.
+  - : Crée un hyperlien ou une annotation en fonction de la valeur, voir l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) pour plus de détails.
 
 ### Attributs pour l'envoi de formulaires
 
 Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire.
 
 - `action`
-  - : L'URL qui traite l'envoi du formulaire. Cette valeur peut être remplacée par un attribut [`formaction`](/fr/docs/Web/HTML/Element/button#attr-formaction) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+  - : L'URL qui traite l'envoi du formulaire. Cette valeur peut être remplacée par un attribut [`formaction`](/fr/docs/Web/HTML/Reference/Elements/button#attr-formaction) sur un [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 - `enctype`
   - : Lorsque la valeur de l'attribut `method` est `post`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui sera utilisé pour encoder les données envoyées au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
     - `application/x-www-form-urlencoded` : la valeur par défaut si l'attribut n'est pas défini
-    - `multipart/form-data` : la valeur utilisée par un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="file"`.
+    - `multipart/form-data` : la valeur utilisée par un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec l'attribut `type="file"`.
     - `text/plain`, correspondant au [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) éponyme et utilisé à des fins de débogage.
 
-    Cette valeur peut être remplacée par un attribut [`formenctype`](/fr/docs/Web/HTML/Element/button#attr-formenctype) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+    Cette valeur peut être remplacée par un attribut [`formenctype`](/fr/docs/Web/HTML/Reference/Elements/button#attr-formenctype) sur un [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 
 - `method`
   - : Cet attribut définit la méthode [HTTP](/fr/docs/Web/HTTP) qui sera utilisée pour envoyer les données au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
     - `post` : La méthode [POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; données du formulaire envoyées comme [corps de la requête](/fr/docs/Web/API/Body).
     - `get` : La méthode [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) ; données du formulaire annexées à l'URL `action` avec un séparateur `?`. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent).
-    - `dialog` : Lorsque le formulaire se trouve à l'intérieur d'un [`<dialog>`](/fr/docs/Web/HTML/Element/dialog), ferme la boîte de dialogue à la soumission.
+    - `dialog` : Lorsque le formulaire se trouve à l'intérieur d'un [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog), ferme la boîte de dialogue à la soumission.
 
-    Si cet attribut n'est pas défini, la valeur par défaut utilisée est `get`. Cette valeur peut-être remplacée par un attribut [`formmethod`](/fr/docs/Web/HTML/Element/button#attr-formmethod) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+    Si cet attribut n'est pas défini, la valeur par défaut utilisée est `get`. Cette valeur peut-être remplacée par un attribut [`formmethod`](/fr/docs/Web/HTML/Reference/Elements/button#attr-formmethod) sur un [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 
 - `novalidate`
-  - : Cet attribut booléen indique si le formulaire doit être validé au moment de sa soumission. S'il n'est pas défini, le formulaire sera validé lors de sa soumission. Il peut être surchargé par l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Element/button#attr-formnovalidate) des éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) appartenant au formulaire.
+  - : Cet attribut booléen indique si le formulaire doit être validé au moment de sa soumission. S'il n'est pas défini, le formulaire sera validé lors de sa soumission. Il peut être surchargé par l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Reference/Elements/button#attr-formnovalidate) des éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) ou [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) appartenant au formulaire.
 - `target`
   - : Un nom ou un mot-clé indiquant où afficher la réponse après avoir envoyé le formulaire. Dans HTML 4, c'est le nom, ou le mot-clé, d'une frame. Dans HTML5, c'est le nom, ou le mot-clé, d'un _contexte de navigation_ (onglet, fenêtre, frame). Les mots-clés suivants ont un sens particulier :
     - `_self` (par défaut) : Charger dans le même contexte de navigation que le contexte actuel.
@@ -188,10 +188,10 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
     - `_parent`: Charge dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, se comporte de la même manière que `_self`.
     - `_top`: Charger dans le contexte de navigation de niveau supérieur (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte actuel et qui n'a pas de parent). S'il n'y a pas de parent, se comporte de la même manière que `_self`.
 
-    Cette valeur peut être remplacée par un attribut [`formtarget`](/fr/docs/Web/HTML/Element/button#attr-formtarget) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+    Cette valeur peut être remplacée par un attribut [`formtarget`](/fr/docs/Web/HTML/Reference/Elements/button#attr-formtarget) sur un [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Reference/Elements/input/image).
 
     > [!NOTE]
-    > La définition de `target="_blank"` sur les éléments `<form>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`.
+    > La définition de `target="_blank"` sur les éléments `<form>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) qui ne définit pas `window.opener`.
 
 ## Exemples
 
@@ -239,8 +239,8 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 
 ## Voir aussi
 
-- [Guide des formulaires HTML](/fr/docs/Learn/Forms)
-- D'autres éléments qui sont utilisés lors de la création de formulaires : [`<button>`](/fr/docs/Web/HTML/Element/button), [`<datalist>`](/fr/docs/Web/HTML/Element/datalist), [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset), [`<input>`](/fr/docs/Web/HTML/Element/input), [`<label>`](/fr/docs/Web/HTML/Element/label), [`<legend>`](/fr/docs/Web/HTML/Element/legend), [`<meter>`](/fr/docs/Web/HTML/Element/meter), [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup), [`<option>`](/fr/docs/Web/HTML/Element/option), [`<output>`](/fr/docs/Web/HTML/Element/output), [`<progress>`](/fr/docs/Web/HTML/Element/progress), [`<select>`](/fr/docs/Web/HTML/Element/select), [`<textarea>`](/fr/docs/Web/HTML/Element/textarea).
+- [Guide des formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- D'autres éléments qui sont utilisés lors de la création de formulaires : [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist), [`<fieldset>`](/fr/docs/Web/HTML/Reference/Elements/fieldset), [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label), [`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend), [`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter), [`<optgroup>`](/fr/docs/Web/HTML/Reference/Elements/optgroup), [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option), [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output), [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea).
 - Obtenir une liste des éléments du formulaire : [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements)
 - [ARIA : rôle `form`](/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role)
 - [ARIA : rôle `search`](/fr/docs/Web/Accessibility/ARIA/Roles/Search_role)

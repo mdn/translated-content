@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Host
 original_slug: Web/HTTP/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de requête **`Host`** spécifie le nom de domaine du serveur (pour de l'hébergement virtuel), et (optionnellement) le numéro du port TCP sur lequel le serveur écoute.
 
 Si aucun port n'est donné, le port par défaut du service demandé sera utilisé (par exemple, "80" pour une URL HTTP).

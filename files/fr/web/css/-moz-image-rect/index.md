@@ -3,7 +3,7 @@ title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une image pour un arrière-plan (contrairement à [`background-image`](/fr/docs/Web/CSS/background-image)). On peut ainsi utiliser une image qui regroupe plusieurs _sprites_ à différentes fins, ce qui permet de diminuer le nombre de transfert réseau.
 
@@ -15,7 +15,7 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ### Valeurs
 
-- [`url()`](/fr/docs/Web/CSS/url_value)
+- {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : L'URI de l'image dont on veut obtenir une portion.
 - `top`
   - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
@@ -28,13 +28,13 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ## Description
 
-Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/Web/CSS/-moz-image-region) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
+Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/conflicting/Web/CSS/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
 
 La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/shape#syntaxe) qui génère une valeur de type [`<shape>`](/fr/docs/Web/CSS/shape). Les quatre valeurs indiquées font chacune référence au coin supérieur gauche de l'image.
 
 ## Exemples
 
-Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessiner le logo Firefox dans quatre éléments [`<div>`](/fr/docs/Web/HTML/Element/div). Lorsqu'on clique sur le conteneur, cela fait tourner les images entre les blocs.
+Dans cet exemple, on charge une image qu'on découpe en quatre zones pour dessiner le logo Firefox dans quatre éléments [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Lorsqu'on clique sur le conteneur, cela fait tourner les images entre les blocs.
 
 ### HTML
 
@@ -121,7 +121,7 @@ Dans ce script, on utilise la méthode [`window.getComputedStyle()`](/fr/docs/We
 
 ## Specifications
 
-Cette propriété ne fait partie d'aucun standard.
+Cette fonction ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
