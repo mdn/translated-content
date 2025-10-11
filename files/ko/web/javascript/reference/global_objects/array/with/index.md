@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
 l10n:
   sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c

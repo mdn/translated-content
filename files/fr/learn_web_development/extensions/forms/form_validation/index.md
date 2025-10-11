@@ -243,7 +243,8 @@ Voici cet exemple s'exécutant en «&nbsp;live&nbsp;»&nbsp;:
 
 {{EmbedLiveSample('Limitation_de_la_taille_des_entrées', "100%", 100)}}
 
-> **Note :** `<input type="number">` (et d'autres types, comme `range`) acceptent aussi un attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).
+> [!NOTE]
+> `<input type="number">` (et d'autres types, comme `range`) acceptent aussi un attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).
 
 ### Exemple complet
 

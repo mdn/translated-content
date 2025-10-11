@@ -1,15 +1,15 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+{{deprecated_header}}
 
-Le descripteur CSS **`font-stretch`** permet aux auteurs de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{cssxref("@font-face")}}.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet aux auteur·ice·s de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{cssxref("@font-face")}}.
 
-Pour une police donnée, les auteurs peuvent télécharger différentes fontes pour différents styles et utiliser alors `font-stretch` de façon explicite afin de choisir la fonte voulue. Les valeurs fournies au descripteur CSS sont les mêmes que celles qui peuvent être utilisées pour la propriété correspondante.
-
-{{cssinfo}}
+Pour une police donnée, les auteur·ice·s peuvent télécharger différentes fontes pour différents styles et utiliser alors `font-stretch` de façon explicite afin de choisir la fonte voulue. Les valeurs fournies au descripteur CSS sont les mêmes que celles qui peuvent être utilisées pour la propriété correspondante.
 
 ## Syntaxe
 
@@ -32,6 +32,8 @@ font-stretch: 200%;
 font-stretch: 75% 125%;
 font-stretch: condensed ultra-condensed;
 ```
+
+La propriété `font-stretch` est décrite à l'aide de l'une des valeurs énumérées ci-dessous.
 
 ### Valeurs
 
@@ -107,9 +109,20 @@ La plupart des polices disposent de fontes avec des formes "séparées"/"discrè
 
 Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"wdth"` qui est utilisé afin d'implémenter les largeurs variables des glyphes.
 
+## Accessibilité
+
+Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoir des difficultés à lire des textes dont la fonte est trop condensée, notamment [si le contraste des couleurs est trop faible](/fr/docs/Web/CSS/color#accessibility_concerns).
+
+- [Comprendre les règles WCAG - Partie 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Respecter le critère 1.4.8 - Comprendre les règles WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+
+## Définition formelle
+
+{{cssinfo}}
+
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax("font-width")}}
 
 ## Exemples
 
@@ -125,13 +138,6 @@ Dans l'exemple suivant, on charge une police Open Sans locale et on l'importe en
 }
 ```
 
-## Accessibilité
-
-Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoir des difficultés à lire des textes dont la fonte est trop condensée, notamment [si le contraste des couleurs est trop faible](/fr/docs/Web/CSS/color#accessibility_concerns).
-
-- [Comprendre les règles WCAG - Partie 1.4 (MDN)](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Respecter le critère 1.4.8 - Comprendre les règles WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
-
 ## Spécifications
 
 {{Specifications}}
@@ -142,12 +148,11 @@ Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoi
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-display", "font-display descriptor")}}
-- {{cssxref("@font-face/font-family", "font-family descriptor")}}
-- {{cssxref("@font-face/font-weight", "font-weight descriptor")}}
-- {{cssxref("@font-face/font-style", "font-style descriptor")}}
-- {{cssxref("@font-face/font-variant", "font-variant descriptor")}}
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}

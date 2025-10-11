@@ -395,7 +395,8 @@ UI 컨트롤에서 텍스트 라벨은 모든 사용자에게 유용하지만, �
 </p>
 ```
 
-> **참고:** [하이퍼링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 아티클에서 링크 구현과 모범 사례에 대한 더 많은 정보를 찾아볼 수 있습니다. 또한 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)와 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)에서도 좋은 예시와 나쁜 예시들을 살펴볼 수 있습니다.
+> [!NOTE]
+> [하이퍼링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 아티클에서 링크 구현과 모범 사례에 대한 더 많은 정보를 찾아볼 수 있습니다. 또한 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)와 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)에서도 좋은 예시와 나쁜 예시들을 살펴볼 수 있습니다.
 
 폼 라벨은 또한 각각의 인풋에 어떤 내용을 입력해야 하는지에 대한 단서를 주기 때문에 중요합니다. 다음 예시는 충분히 합리적인 것처럼 보입니다.
 
@@ -420,7 +421,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 추가로 대부분의 브라우저에서 폼의 라벨과 인풋을 연결하는 것은 라벨을 클릭해 폼 요소를 선택하거나 활성화시킬 수 있음을 의미합니다. 즉, 라벨까지 포함하는 더 큰 영역을 통해 인풋을 쉽게 선택할 수 있습니다.
 
-> **참고:** [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)과 [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)에서 폼의 좋은 예시와 나쁜 예시들을 볼 수 있습니다.
+> [!NOTE]
+> [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)과 [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)에서 폼의 좋은 예시와 나쁜 예시들을 볼 수 있습니다.
 
 다음의 영상에서는 제대로 된 텍스트 라벨의 중요성에 대한 좋은 설명과 [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)를 사용해 텍스트 라벨 이슈를 조사하는 방법을 배울 수 있습니다.
 
@@ -462,7 +464,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 - 테이블 헤더가 {{htmlelement("th")}} 요소를 통해 정의되어 있습니다. 또한 `scope` 속성을 통해 행을 위한 헤더인지 열을 위한 헤더인지도 명시할 수 있습니다. 이것은 스크린 리더가 하나의 단위로 읽을 수 있는 완전한 데이터 그룹을 만듭니다.
 - {{htmlelement("caption")}} 요소와 `<table>` 요소의 `summary` 속성은 둘 다 테이블의 대체 텍스트로서 비슷한 기능을 합니다. 스크린 리더 사용자에게 테이블 내용에 대한 유용하고 빠른 요약을 제공하는 것이죠. 사실 두개 다 사용하지는 않아도 됩니다. 주로 볼 수 있는 사용자들에게도 해당 콘텐츠를 제공하는 `<caption>` 요소가 선호됩니다.
 
-> **참고:** [HTML table advanced features and accessibility](/ko/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) 아티클에서 접근성을 갖춘 데이터 테이블에 대한 더 자세한 내용을 살펴보세요.
+> [!NOTE]
+> [HTML table advanced features and accessibility](/ko/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) 아티클에서 접근성을 갖춘 데이터 테이블에 대한 더 자세한 내용을 살펴보세요.
 
 ## 대체 텍스트
 
@@ -524,7 +527,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 이 경우는 `alt` 속성을 전혀 사용하지 않습니다. 대신, 이미지에 대한 설명을 일반적인 문단으로 작성하고, `id` 속성을 부여한 뒤 `aria-labelledby` 속성을 사용해 해당 `id`를 가리키도록 했습니다. 이렇게 하면 스크린 리더가 해당하는 문단을 이미지의 대체 텍스트/라벨로 사용합니다. 이런 방식은 여러 개의 이미지에 대해 같은 텍스트 라벨을 사용하고 싶을 때 특히 유용합니다. `alt` 속성만으로는 불가능한 일이죠.
 
-> **참고:** [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)는 개발자가 스크린 리더 접근성을 개선하기 위해 마크업에 추가 시맨틱을 구현할 수 있도록 해주는 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 스펙의 일부입니다. 더 알아보기 위해서는 [WAI-ARIA 기초](/ko/docs/Learn/Accessibility/WAI-ARIA_basics) 아티클을 읽어보세요.
+> [!NOTE]
+> [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)는 개발자가 스크린 리더 접근성을 개선하기 위해 마크업에 추가 시맨틱을 구현할 수 있도록 해주는 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 스펙의 일부입니다. 더 알아보기 위해서는 [WAI-ARIA 기초](/ko/docs/Learn/Accessibility/WAI-ARIA_basics) 아티클을 읽어보세요.
 
 ### 피규어와 피규어 캡션
 

@@ -1,11 +1,10 @@
 ---
 title: Math.cos()
+short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.cos()`** は静的メソッドで、ラジアンの数値の余弦（コサイン）を返します。
 
@@ -17,13 +16,13 @@ function getCircleX(radians, radius) {
 }
 
 console.log(getCircleX(1, 10));
-// Expected output: 5.403023058681398
+// 予想される結果: 5.403023058681398
 
 console.log(getCircleX(2, 10));
-// Expected output: -4.161468365471424
+// 予想される結果: -4.161468365471424
 
 console.log(getCircleX(Math.PI, 10));
-// Expected output: -10
+// 予想される結果: -10
 ```
 
 ## 構文

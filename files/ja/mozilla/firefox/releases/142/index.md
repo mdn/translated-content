@@ -1,9 +1,9 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Stable)
+short-title: Firefox 142
 slug: Mozilla/Firefox/Releases/142
 l10n:
-  sourceCommit: 7da6f52dac0fcdb22e42b17894a183b8d9eb21e0
+  sourceCommit: 4a54946791694e14bf3742f3f327bbea44c698c8
 ---
 
 このページでは、開発者に影響する Firefox 142 の変更点をまとめています。
@@ -71,6 +71,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 - {{WebExtAPIRef("cookies.set()")}} で作成した Cookie が Nightly 版で検証されるようになり、無効な Cookie は拒否されます。Nightly 版の実装は、何らかの問題に対して監視を可能にするためです。将来のリリースでは、すべてのチャンネルで検証を強制する予定です ([Firefox bug 1976197](https://bugzil.la/1976197))。
 - 拡張機能の動作に影響を与えるユーザー指定の設定変更をリッスンする、{{WebExtAPIRef("browserAction.onUserSettingsChanged")}} および {{WebExtAPIRef("action.onUserSettingsChanged")}} イベントを追加しました ([Firefox bug 1828220](https://bugzil.la/1828220))。
+- ブラウザーがタブバーを水平に表示するか、垂直に表示するかを拡張機能から制御可能にする {{WebExtAPIRef("browserSettings.verticalTabs")}} を追加しました ([Firefox bug 1946600](https://bugzil.la/1946600))。
 
 ## 実験的なウェブ機能
 

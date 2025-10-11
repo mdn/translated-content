@@ -8,7 +8,8 @@ original_slug: Web/SVG/Attribute/stroke-linejoin
 
 L'attribut **`stroke-linejoin`** définit la manière de dessiner la liaison entre deux segments de ligne.
 
-> **Note :** `stroke-linejoin` étant un attribut de présentation, il peut être utililsé comme propriété CSS.
+> [!NOTE]
+> `stroke-linejoin` étant un attribut de présentation, il peut être utililsé comme propriété CSS.
 
 Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 

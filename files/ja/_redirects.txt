@@ -245,7 +245,7 @@
 /ja/docs/CSS/Getting_Started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/CSS/Getting_Started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/CSS/Getting_Started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/ja/docs/CSS/Getting_Started/Challenge_solutions	/ja/docs/Learn_web_development/Core/Challenges
+/ja/docs/CSS/Getting_Started/Challenge_solutions	/ja/docs/Learn_web_development/Core
 /ja/docs/CSS/Getting_Started/Color	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color
 /ja/docs/CSS/Getting_Started/Content	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /ja/docs/CSS/Getting_Started/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
@@ -1223,7 +1223,7 @@
 /ja/docs/DragDrop/Drag_Operations	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ja/docs/DragDrop/Drag_and_Drop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
-/ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+/ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /ja/docs/DragDrop/ドラッグ＆ドロップ	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Drawing_text_using_a_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -2268,7 +2268,7 @@
 /ja/docs/Learn/Performance/Multimedia	/ja/docs/Learn_web_development/Extensions/Performance/Multimedia
 /ja/docs/Learn/Performance/Perceived_performance	/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/Guides/How_browsers_work
-/ja/docs/Learn/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/ja/docs/Learn/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Best_practices
 /ja/docs/Learn/Performance/What_is_web_performance	/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /ja/docs/Learn/Performance/business_case_for_performance	/ja/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
 /ja/docs/Learn/Performance/video	/ja/docs/Learn_web_development/Extensions/Performance/video
@@ -2338,6 +2338,7 @@
 /ja/docs/Learn_web_development/Core/CSS_layout/Position_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 /ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn	/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /ja/docs/Learn_web_development/Core/CSS_layout/rwd_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
+/ja/docs/Learn_web_development/Core/Challenges	/ja/docs/Learn_web_development/Core
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events
@@ -2385,6 +2386,7 @@
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/ja/docs/Learn_web_development/Extensions/Forms
+/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Best_practices
 /ja/docs/Learn_web_development/Extensions/Security_privacy	/ja/docs/Web/Security
 /ja/docs/Learn_web_development/Extensions/Transform_animate	/ja/docs/Learn_web_development/Extensions
 /ja/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/ja/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
@@ -2825,7 +2827,7 @@
 /ja/docs/Web-d/Guide/CSS/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web-d/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Web-d/Guide/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/ja/docs/Web-d/Guide/CSS/Getting_started/Challenge_solutions	/ja/docs/Learn_web_development/Core/Challenges
+/ja/docs/Web-d/Guide/CSS/Getting_started/Challenge_solutions	/ja/docs/Learn_web_development/Core
 /ja/docs/Web-d/Guide/CSS/Getting_started/Color	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color
 /ja/docs/Web-d/Guide/CSS/Getting_started/Content	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /ja/docs/Web-d/Guide/CSS/Getting_started/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
@@ -3006,7 +3008,6 @@
 /ja/docs/Web/API/Element/pointerlockchange_event	/ja/docs/Web/API/Document/pointerlockchange_event
 /ja/docs/Web/API/Element/pointerlockerror_event	/ja/docs/Web/API/Document/pointerlockerror_event
 /ja/docs/Web/API/Element/select_event	/ja/docs/Web/API/HTMLInputElement/select_event
-/ja/docs/Web/API/Element/setHTML	/ja/docs/Web/API/Element
 /ja/docs/Web/API/Element/show_event	/ja/docs/orphaned/Web/API/Element/show_event
 /ja/docs/Web/API/Event/Comparison_of_Event_Targets	/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
@@ -3180,6 +3181,7 @@
 /ja/docs/Web/API/HTMLTableRowElement.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
 /ja/docs/Web/API/HTMLTableRowElement.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
 /ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items	/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /ja/docs/Web/API/History_API/Example	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/API/Houdini	/ja/docs/Web/API/Houdini_APIs
 /ja/docs/Web/API/IDBDatabase.close	/ja/docs/Web/API/IDBDatabase/close
@@ -3311,9 +3313,6 @@
 /ja/docs/Web/API/PositionOptions	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/Web/API/ProgressEvent
 /ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable	/ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
-/ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/Web/API/CredentialsContainer/create
-/ja/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection	/ja/docs/Web/API/CredentialsContainer/create
-/ja/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials	/ja/docs/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
 /ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
@@ -3376,6 +3375,8 @@
 /ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
+/ja/docs/Web/API/SpeechRecognitionEvent/emma	/ja/docs/Web/API/SpeechRecognitionEvent
+/ja/docs/Web/API/SpeechRecognitionEvent/interpretation	/ja/docs/Web/API/SpeechRecognitionEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/Web/API/Text
@@ -3852,6 +3853,8 @@
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-level	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-live	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline
+/ja/docs/Web/Accessibility/ARIA/How_to	/ja/docs/Web/Accessibility/ARIA
+/ja/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/ja/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /ja/docs/Web/Accessibility/ARIA/Multipart_labels	/ja/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /ja/docs/Web/Accessibility/ARIA/Roles	/ja/docs/Web/Accessibility/ARIA/Reference/Roles
 /ja/docs/Web/Accessibility/ARIA/Roles/alert_role	/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
@@ -4113,7 +4116,7 @@
 /ja/docs/Web/CSS/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web/CSS/Getting_started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Web/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/ja/docs/Web/CSS/Getting_started/Challenge_solutions	/ja/docs/Learn_web_development/Core/Challenges
+/ja/docs/Web/CSS/Getting_started/Challenge_solutions	/ja/docs/Learn_web_development/Core
 /ja/docs/Web/CSS/Getting_started/Color	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color
 /ja/docs/Web/CSS/Getting_started/Content	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /ja/docs/Web/CSS/Getting_started/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
@@ -4392,7 +4395,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/ja/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/ja/docs/Learn_web_development/Core/Challenges
+/ja/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/ja/docs/Learn_web_development/Core
 /ja/docs/Web/Guide/CSS/Getting_started/Color	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color
 /ja/docs/Web/Guide/CSS/Getting_started/Content	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /ja/docs/Web/Guide/CSS/Getting_started/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
