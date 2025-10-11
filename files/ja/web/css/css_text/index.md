@@ -2,7 +2,7 @@
 title: CSS テキスト
 slug: Web/CSS/CSS_text
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: d92ee717f209ccad5d5a5705d64548e1d289f5d9
 ---
 
 **CSS テキスト** (CSS text) モジュールは、改行、文字揃え、配置、ホワイトスペースの扱い、テキスト変換などのテキスト操作の実行方法を定義します。
@@ -23,6 +23,7 @@ l10n:
 - {{cssxref("text-align-last")}}
 - {{cssxref("text-indent")}}
 - {{cssxref("text-justify")}}
+- {{cssxref("text-autospace")}}
 - {{cssxref("text-spacing-trim")}} {{Experimental_Inline}}
 - {{cssxref("text-transform")}}
 - {{cssxref("text-wrap")}}
@@ -33,7 +34,7 @@ l10n:
 - {{cssxref("word-break")}}
 - {{cssxref("word-spacing")}}
 
-仕様書では `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-autospace`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, `wrap-inside` の各プロパティも定義していますが、まだどのブラウザーも対応していません。
+仕様書では `hyphenate-limit-last`, `hyphenate-limit-lines`, `hyphenate-limit-zone`, `line-padding`, `text-align-all`, `text-group-align`, `text-spacing`, `white-space-trim`, `word-space-transform`, `wrap-after`, `wrap-before`, `wrap-inside` の各プロパティも定義していますが、まだどのブラウザーも対応していません。
 
 ### ガイド
 

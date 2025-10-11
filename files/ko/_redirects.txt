@@ -455,7 +455,7 @@
 /ko/docs/Learn/Performance	/ko/docs/Learn_web_development/Extensions/Performance
 /ko/docs/Learn/Performance/Measuring_performance	/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance
 /ko/docs/Learn/Performance/Multimedia	/ko/docs/Learn_web_development/Extensions/Performance/Multimedia
-/ko/docs/Learn/Performance/Web_Performance_Basics	/ko/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/ko/docs/Learn/Performance/Web_Performance_Basics	/ko/docs/Learn_web_development/Extensions/Performance/Best_practices
 /ko/docs/Learn/Performance/video	/ko/docs/Learn_web_development/Extensions/Performance/video
 /ko/docs/Learn/Performance/why_web_performance	/ko/docs/Learn_web_development/Extensions/Performance/why_web_performance
 /ko/docs/Learn/Server-side	/ko/docs/Learn_web_development/Extensions/Server-side
@@ -515,6 +515,7 @@
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /ko/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3
 /ko/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper	/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3
+/ko/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/ko/docs/Learn_web_development/Extensions/Performance/Best_practices
 /ko/docs/Learn_web_development/Extensions/Security_privacy	/ko/docs/conflicting/Web/Security
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ko/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ko/docs/Web/HTML/How_to/Use_data_attributes
@@ -803,7 +804,8 @@
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_basic_user_interface
 /ko/docs/Web/CSS/CSS_Variables	/ko/docs/Web/CSS/CSS_cascading_variables
 /ko/docs/Web/CSS/CSS_charsets	/ko/docs/Web/CSS/CSS_syntax
-/ko/docs/Web/CSS/CSS_colors/Color_picker_tool	/ko/docs/Web/CSS/CSS_colors/Color_picker
+/ko/docs/Web/CSS/CSS_colors/Color_picker	/ko/docs/Web/CSS/CSS_colors/Color_format_converter
+/ko/docs/Web/CSS/CSS_colors/Color_picker_tool	/ko/docs/Web/CSS/CSS_colors/Color_format_converter
 /ko/docs/Web/CSS/CSS_flow_layout	/ko/docs/Web/CSS/CSS_display/Flow_layout
 /ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow	/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 /ko/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow	/ko/docs/Web/CSS/CSS_display/Flow_layout_and_overflow

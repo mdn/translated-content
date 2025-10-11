@@ -1,11 +1,12 @@
 ---
 title: Function.prototype.arguments
+short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 > [!NOTE]
 > {{jsxref("Function")}} オブジェクトの `arguments` プロパティは非推奨です。推奨される `arguments` オブジェクトへのアクセス方法は、関数内で利用できる変数 {{jsxref("Functions/arguments", "arguments")}} を利用することです。

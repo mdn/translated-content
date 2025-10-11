@@ -3883,13 +3883,6 @@
       "Wind1808"
     ]
   },
-  "Learn_web_development/Core/Challenges": {
-    "modified": "2019-03-23T23:30:43.615Z",
-    "contributors": [
-      "teoli",
-      "ethertank"
-    ]
-  },
   "Learn_web_development/Core/Frameworks_libraries": {
     "modified": "2020-11-17T06:32:35.649Z",
     "contributors": [
@@ -4936,6 +4929,13 @@
       "silverskyvicto"
     ]
   },
+  "Learn_web_development/Extensions/Performance/Best_practices": {
+    "modified": "2020-10-25T07:11:50.857Z",
+    "contributors": [
+      "silverskyvicto",
+      "shin1810"
+    ]
+  },
   "Learn_web_development/Extensions/Performance/Measuring_performance": {
     "modified": "2020-11-22T22:20:59.818Z",
     "contributors": [
@@ -4954,13 +4954,6 @@
     "contributors": [
       "succi0303",
       "hamasaki"
-    ]
-  },
-  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
-    "modified": "2020-10-25T07:11:50.857Z",
-    "contributors": [
-      "silverskyvicto",
-      "shin1810"
     ]
   },
   "Learn_web_development/Extensions/Performance/What_is_web_performance": {
@@ -14771,6 +14764,13 @@
       "drry"
     ]
   },
+  "Web/API/HTML_Drag_and_Drop_API/Drag_data_store": {
+    "modified": "2020-10-07T03:14:28.263Z",
+    "contributors": [
+      "mpcjazz",
+      "Piro"
+    ]
+  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2019-03-24T00:06:21.211Z",
     "contributors": [
@@ -14778,13 +14778,6 @@
       "dlwe",
       "Piro",
       "drry"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
-    "modified": "2020-10-07T03:14:28.263Z",
-    "contributors": [
-      "mpcjazz",
-      "Piro"
     ]
   },
   "Web/API/Headers": {
@@ -24558,7 +24551,7 @@
       "karaage-kun"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-03-18T21:32:04.433Z",
     "contributors": [
       "mfuji09"
@@ -43611,6 +43604,13 @@
       "hamasaki",
       "kenji-yamasaki",
       "sii"
+    ]
+  },
+  "conflicting/Learn_web_development/Core": {
+    "modified": "2019-03-23T23:30:43.615Z",
+    "contributors": [
+      "teoli",
+      "ethertank"
     ]
   },
   "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {

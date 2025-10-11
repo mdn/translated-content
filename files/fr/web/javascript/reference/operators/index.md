@@ -124,7 +124,8 @@ Un opérateur de comparaison compare ses opérandes et renvoie une valeur boolé
 - [`>=`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
   - : L'opérateur de supériorité.
 
-> **Note :** `=>` n'est pas un opérateur mais la notation utilisée pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> `=>` n'est pas un opérateur mais la notation utilisée pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Opérateurs d'égalité
 

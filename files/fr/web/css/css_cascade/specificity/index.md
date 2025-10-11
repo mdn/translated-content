@@ -12,7 +12,8 @@ La **spécificité** est le moyen par lequel les navigateurs décident quelles v
 
 La spécificité est l'importance donnée à une déclaration CSS, déterminée par le nombre de [types de sélecteur](#types_de_sélecteurs) dans le sélecteur correspondant. Lorsque plusieurs déclarations ont une même spécificité, la dernière déclaration trouvée dans la CSS est appliquée à l'élément. La spécificité ne s'applique que lorsque le même élément est ciblé par plusieurs déclarations. Selon les règles CSS, [les éléments ciblés directement](#éléments_ciblés_directement_vs_styles_hérités) seront toujours prioritaires par rapport aux règles héritées par un élément de leurs ancêtres.
 
-> **Note :** [la proximité des éléments](#ignorance_de_la_proximité_dans_l'arborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
+> [!NOTE]
+> [la proximité des éléments](#ignorance_de_la_proximité_dans_l'arborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
 
 ### Types de sélecteurs
 
@@ -341,7 +342,7 @@ Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, m
   - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
   - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
   - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
