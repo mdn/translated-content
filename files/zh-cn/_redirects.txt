@@ -2656,8 +2656,7 @@
 /zh-CN/docs/Web/CSS/transform-function/scaleX()	/zh-CN/docs/Web/CSS/transform-function/scaleX
 /zh-CN/docs/Web/CSS/transform-function/skew()	/zh-CN/docs/Web/CSS/transform-function/skew
 /zh-CN/docs/Web/CSS/transform-function/skewX()	/zh-CN/docs/Web/CSS/transform-function/skewX
-/zh-CN/docs/Web/CSS/transform-function/skewY	/zh-CN/docs/Web/CSS/transform-function/skewX
-/zh-CN/docs/Web/CSS/transform-function/skewY()	/zh-CN/docs/Web/CSS/transform-function/skewX
+/zh-CN/docs/Web/CSS/transform-function/skewY()	/zh-CN/docs/Web/CSS/transform-function/skewY
 /zh-CN/docs/Web/CSS/transform-function/translate()	/zh-CN/docs/Web/CSS/transform-function/translate
 /zh-CN/docs/Web/CSS/transform-function/translate3d()	/zh-CN/docs/Web/CSS/transform-function/translate3d
 /zh-CN/docs/Web/CSS/transform-function/translateX()	/zh-CN/docs/Web/CSS/transform-function/translateX

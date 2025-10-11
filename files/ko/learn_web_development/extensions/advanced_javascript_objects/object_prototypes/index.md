@@ -131,7 +131,8 @@ var myString = "This is my string.";
 
 `myString` 인스턴스가 생성되는 즉시 [`split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace)등의 문자열을 위한 유용한 메소드들을 사용할 수 있는 이유입니다.
 
-> **경고:** **Important**: `prototype` 속성은 Javascript에서 가장 헷갈리는 명칭중 하나입니다. — 보통 `this`가 현재 객체의 프로토타입 객체를 가리킬 것이라 오해하지만 그렇지 않죠. (프로토타입 객체는 `__proto__` 속성으로 접근 가능한 내장 객체인 것 기억 하시나요?). 대신에 `prototype` 속성은 상속 시키려는 멤버들이 정의된 객체를 가리킵니다.
+> [!WARNING]
+> **Important**: `prototype` 속성은 Javascript에서 가장 헷갈리는 명칭중 하나입니다. — 보통 `this`가 현재 객체의 프로토타입 객체를 가리킬 것이라 오해하지만 그렇지 않죠. (프로토타입 객체는 `__proto__` 속성으로 접근 가능한 내장 객체인 것 기억 하시나요?). 대신에 `prototype` 속성은 상속 시키려는 멤버들이 정의된 객체를 가리킵니다.
 
 ## create() 다시보기
 
@@ -197,7 +198,8 @@ instanceName.constructor.name;
 person1.constructor.name;
 ```
 
-> **참고:** `constructor.name` 는 변경이 가능하므로(상속이나 바인딩, 전처리, 트랜스파일러 등에 의해) 복잡한 로직에 적용하기 위해서는 [`instanceof`](/ko/docs/Web/JavaScript/Reference/Operators/instanceof) 연산자를 사용하세요.
+> [!NOTE]
+> `constructor.name` 는 변경이 가능하므로(상속이나 바인딩, 전처리, 트랜스파일러 등에 의해) 복잡한 로직에 적용하기 위해서는 [`instanceof`](/ko/docs/Web/JavaScript/Reference/Operators/instanceof) 연산자를 사용하세요.
 
 ## 프로토타입 수정하기
 

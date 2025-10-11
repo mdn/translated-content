@@ -16,7 +16,8 @@ Revert 는 자식 요소까지 변경하지는 않습니다. (하지만 자식 �
 > [!NOTE]
 > Revert는 단순히 값입니다. 그러므로 `revert` 또한 다른 [specificity](/ko/docs/Web/CSS/CSS_cascade/Specificity)값으로 덮어 쓸 수 있습니다.
 
-> **참고:** `revert` 는 {{cssxref("initial")}} 키워드와는 다른데, [initial value](/ko/docs/Web/CSS/CSS_cascade/Value_processing) 는 프로퍼티 단위의 css 특성화입니다. user-agent의 스타일 시트도 default value로 되돌립니다..
+> [!NOTE]
+> `revert` 는 {{cssxref("initial")}} 키워드와는 다른데, [initial value](/ko/docs/Web/CSS/CSS_cascade/Value_processing) 는 프로퍼티 단위의 css 특성화입니다. user-agent의 스타일 시트도 default value로 되돌립니다..
 >
 > 예를 들어, {{cssxref("display")}} 속성에 대한 [initial value](/ko/docs/Web/CSS/CSS_cascade/Value_processing) 는 `inline` 입니다. 반면에 {{HTMLElement("div")}} 에 대한 {{cssxref("display")}} user agent 속성은 `block` 이고, {{HTMLElement("table")}} 에 대한 속성은 `table` 입니다.
 
