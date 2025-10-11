@@ -25,7 +25,8 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 
 {{domxref("WritableStream")}}을 사용하면 Stream에 데이터를 쓰는 것도 가능합니다..
 
-> **참고:** [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts), [Using readable streams](/ko/docs/Web/API/Streams_API/Using_readable_streams), [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) — 페이지에서 stream에 관한 더 자세한 이론과 예제를 찾을 수 있습니다.
+> [!NOTE]
+> [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts), [Using readable streams](/ko/docs/Web/API/Streams_API/Using_readable_streams), [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) — 페이지에서 stream에 관한 더 자세한 이론과 예제를 찾을 수 있습니다.
 
 ## 스트림 인터페이스
 
@@ -63,7 +64,8 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 
 ### ByteStream 관련 인터페이스
 
-> **경고:** **중요**: 아래 항목들은 아직 구현된 곳이 없으며, 스펙의 세부 사항이 구현할 수 있을 만큼 충분한 지 논의가 진행중입니다. 추후 변경될 수 있습니다.
+> [!WARNING]
+> **중요**: 아래 항목들은 아직 구현된 곳이 없으며, 스펙의 세부 사항이 구현할 수 있을 만큼 충분한 지 논의가 진행중입니다. 추후 변경될 수 있습니다.
 
 - {{domxref("ReadableStreamBYOBReader")}}
   - : 개발자가 직접 제공하여 stream data를 읽을 수 있는 BYOB ("bring your own buffer") reader를 표현합니다. (예 커스텀 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 생성자).

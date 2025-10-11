@@ -18,7 +18,8 @@ slug: Web/CSS/color_value
 
 `<color>` 자료형은 아래 나열된 선택지 중 하나를 사용해 지정합니다.
 
-> **참고:** `<color>` 값은 정확하게 정의할 수 있지만 실제로 화면에 표시될 때는 기기별로 차이가 있을 수도 있습니다. 대부분의 화면 색이 제대로 조정되지 않았으며 일부 브라우저는 기기의 [색상 프로필](https://ko.wikipedia.org/wiki/ICC_%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC)을 지원하지 않기 때문입니다.
+> [!NOTE]
+> `<color>` 값은 정확하게 정의할 수 있지만 실제로 화면에 표시될 때는 기기별로 차이가 있을 수도 있습니다. 대부분의 화면 색이 제대로 조정되지 않았으며 일부 브라우저는 기기의 [색상 프로필](https://ko.wikipedia.org/wiki/ICC_%ED%94%84%EB%A1%9C%ED%8C%8C%EC%9D%BC)을 지원하지 않기 때문입니다.
 
 ### 색상 키워드
 
@@ -819,9 +820,11 @@ slug: Web/CSS/color_value
 
 `transparent` 키워드는 완전히 투명한 색으로, "색"을 입힌 항목의 뒷편이 모두 보입니다. 기술적으로 `transparent`는 `rgba(0,0,0,0)`의 짧은 이름입니다.
 
-> **참고:** {{cssxref("gradient")}} 등 특정 상황에서 의도하지 않은 결과를 피하기 위해, 현재 CSS 명세에선 `transparent`를 [투명도를 미리 곱한 색 공간](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax)에서 계산하도록 명시하고 있습니다. 그러나 오래된 브라우저에서는 투명도 0의 검정으로 취급할 수 있다는 점을 주의하세요.
+> [!NOTE]
+> {{cssxref("gradient")}} 등 특정 상황에서 의도하지 않은 결과를 피하기 위해, 현재 CSS 명세에선 `transparent`를 [투명도를 미리 곱한 색 공간](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax)에서 계산하도록 명시하고 있습니다. 그러나 오래된 브라우저에서는 투명도 0의 검정으로 취급할 수 있다는 점을 주의하세요.
 
-> **참고:** `transparent`는 CSS Level 2 (Revision 1) 전까지 실제 색상이 아니었습니다. 대신 {{cssxref("background")}}와 {{cssxref("border")}}의 `<color>` 자리에 사용하는 특별한 키워드로, 상속받은 단색을 덮어 쓸 수 있도록 추가됐었습니다. CSS Colors Level 3에서 알파 채널이 추가되면서 `transparent`도 실제 색상으로 재정의되었습니다. 덕분에 `<color>` 값 어디에나 사용할 수 있습니다.
+> [!NOTE]
+> `transparent`는 CSS Level 2 (Revision 1) 전까지 실제 색상이 아니었습니다. 대신 {{cssxref("background")}}와 {{cssxref("border")}}의 `<color>` 자리에 사용하는 특별한 키워드로, 상속받은 단색을 덮어 쓸 수 있도록 추가됐었습니다. CSS Colors Level 3에서 알파 채널이 추가되면서 `transparent`도 실제 색상으로 재정의되었습니다. 덕분에 `<color>` 값 어디에나 사용할 수 있습니다.
 
 ### currentColor 키워드
 
