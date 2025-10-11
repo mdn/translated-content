@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/404
 original_slug: Web/HTTP/Status/404
 ---
 
-{{HTTPSidebar}}
-
 El codigo de error HTTP **`404 Not Found`** (404 No Encontrado) de respuesta de cliente indica que el servidor no puede encontrar el recurso solicitado. Vinculos que conducen a una pagina 404 son normalmente llamados _vinculos rotos_ o _vinculos muertos_, y pueden estar sujetos a [Enlace Roto](https://es.wikipedia.org/wiki/Enlace_roto).
 
 Un código de estado 404 no indica si el recurso está temporalmente o permanentemente ausente. Pero si un recurso es permanentemente eliminado, un {{HTTPStatus(410)}} (Gone) debe ser usado en lugar del estado 404.

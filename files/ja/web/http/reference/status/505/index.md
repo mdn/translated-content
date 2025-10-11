@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`505 HTTP Version Not Supported`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、リクエストで使用されている HTTP バージョンにサーバーが対応していないことを示します。
 
 リクエスト行が `GET /path to resource HTTP/1.1` のように正しく形成されていない場合や、リクエスト行の終端が `\r\n` ではなく `\n` になっている場合などに、このエラーが発生することがよくあります。

@@ -99,7 +99,8 @@ eventTarget.addEventListener("keyup", (event) => {
 });
 ```
 
-> **メモ:** `keydown` とは異なり、 `keyup` イベントには IME イベントのための即別な {{domxref("KeyboardEvent/keyCode", "keyCode")}} 値がありません。しかし、 `keydown` と同様に、 IME を開くための最初の文字を入力したときに、 `compositionstart` が `keyup` の後に発行されたり、 `compositionend` が `keyup` の前に発行されたりすることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。
+> [!NOTE]
+> `keydown` とは異なり、 `keyup` イベントには IME イベントのための即別な {{domxref("KeyboardEvent/keyCode", "keyCode")}} 値がありません。しかし、 `keydown` と同様に、 IME を開くための最初の文字を入力したときに、 `compositionstart` が `keyup` の後に発行されたり、 `compositionend` が `keyup` の前に発行されたりすることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。
 
 ## 仕様書
 

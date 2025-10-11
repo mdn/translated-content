@@ -3,8 +3,6 @@ title: Workflows for different game types
 slug: Games/Tutorials
 ---
 
-{{GamesSidebar}}
-
 Cette page contient plusieurs séries de tutoriels qui mettent en évidence différentes démarches pour créer efficacement différents types de jeux Web.
 
 - [Jeu 2D avec du pur JavaScript](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)

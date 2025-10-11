@@ -1,11 +1,11 @@
 ---
 title: color
 slug: Web/CSS/@media/color
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`color`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur est le nombre de bits par composante de couleur du périphérique de sortie, ou zéro si ce dernier ne gère pas les couleurs.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color`** est utilisée pour tester le nombre de bits par composante de couleur (rouge, vert, bleu) du périphérique de sortie.
 
 ## Syntaxe
 
@@ -13,6 +13,8 @@ La caractéristique `color` est définie avec un entier (type CSS {{cssxref("&lt
 
 > [!NOTE]
 > Si les différentes composantes sont représentées sur un nombre différent de bits, c'est le plus petit de ces nombres qui est utilisé. Par exemple, si un affichage utilise 5 bits pour le bleu et le rouge mais 6 bits pour le vert, on considèrera que l'appareil utilise 5 bits par couleur. Si l'appareil utilise des couleur indexées, c'est le nombre minimal de bits par composantes parmi les couleurs de l'index qui est utilisé.
+
+Consultez la page [Appliquer des couleurs au HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color) pour en savoir plus sur l'utilisation de CSS pour appliquer des couleurs aux éléments HTML.
 
 ## Exemples
 
@@ -50,7 +52,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("exemples")}}
 
 ## Spécifications
 
@@ -62,6 +64,5 @@ p {
 
 ## Voir aussi
 
-- [Appliquer des couleurs HTML à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - La propriété CSS {{cssxref("color")}}
 - Le type de donnée CSS {{cssxref("&lt;color&gt;")}}

@@ -41,9 +41,9 @@ FileReader FileReader();
 - {{domxref("FileReader.onload")}}
   - : Обработчик события [`load`](/ru/docs/Web/API/Window/load_event). Это событие возникает при каждом успешном завершении операции чтения.
 - {{domxref("FileReader.onloadstart")}}
-  - : Обработчик события [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event). Это событие возникает каждый раз, при запуске процесса чтения.
+  - : Обработчик события [`loadstart`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event). Это событие возникает каждый раз, при запуске процесса чтения.
 - {{domxref("FileReader.onloadend")}}
-  - : Обработчик события [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event). Это событие возникает каждый раз по окончании процесса чтения (не важно, успешном или нет).
+  - : Обработчик события [`loadend`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). Это событие возникает каждый раз по окончании процесса чтения (не важно, успешном или нет).
 - {{domxref("FileReader.onprogress")}}
   - : Обработчик события [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event). Это событие возникает во время чтения данных из {{domxref("Blob")}}.
 

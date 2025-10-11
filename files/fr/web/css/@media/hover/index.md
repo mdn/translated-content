@@ -1,11 +1,11 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`hover`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal permet à l'utilisateur de survoler les éléments.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`hover`** est utilisée pour tester si le _mécanisme_ de saisie principal de l'utilisateur·ice peut survoler des éléments.
 
 ## Syntaxe
 
@@ -27,16 +27,24 @@ La caractéristique `hover` est définie avec un mot-clé parmi ceux de la liste
 ### CSS
 
 ```css
+/* effet de survol par défaut */
+a:hover {
+  color: black;
+  background: yellow;
+}
+
 @media (hover: hover) {
+  /* quand le survol est pris en charge */
   a:hover {
-    background: yellow;
+    color: white;
+    background: black;
   }
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("exemples")}}
 
 ## Spécifications
 
@@ -48,4 +56,5 @@ La caractéristique `hover` est définie avec un mot-clé parmi ceux de la liste
 
 ## Voir aussi
 
-- [La caractéristique média `any-hover`](/fr/docs/Web/CSS/@media/any-hover)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

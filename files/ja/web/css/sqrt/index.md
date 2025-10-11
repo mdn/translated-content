@@ -2,10 +2,8 @@
 title: sqrt()
 slug: Web/CSS/sqrt
 l10n:
-  sourceCommit: c9f96f06d4fbd265808f298eb9b2773f739860c5
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`sqrt()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は指数関数で、数値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返します。
 
@@ -67,9 +65,9 @@ width: calc(100px * sqrt(100)); /* 1000px */
 ```css
 :root {
   --size-0: 50px;
-  --size-1: calc(var(--size-0) * sqrt(4)); /* 100px */
-  --size-2: calc(var(--size-0) * sqrt(9)); /* 150px */
-  --size-3: calc(var(--size-0) * sqrt(16)); /* 200px */
+  --size-1: calc(var(--size-0) * sqrt(4)); /*  100px */
+  --size-2: calc(var(--size-0) * sqrt(9)); /*  150px */
+  --size-3: calc(var(--size-0) * sqrt(16)); /*  200px */
 }
 ```
 

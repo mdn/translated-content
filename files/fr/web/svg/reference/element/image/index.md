@@ -38,11 +38,11 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs noyau](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événement graphique](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#xlink) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Attributs noyau](/fr/docs/Web/SVG/Reference/Attribute#core) »
+- [Attributs d'événement graphique](/fr/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Attributs Xlink](/fr/docs/Web/SVG/Reference/Attribute#xlink) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

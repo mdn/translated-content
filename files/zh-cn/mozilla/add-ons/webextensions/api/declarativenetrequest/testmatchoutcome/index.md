@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 检查扩展的任何 `declarativeNetRequest` 规则是否与假设请求匹配。仅在测试期间可用，因为这是用于扩展开发的。有关如何在每个浏览器中启用测试的详细信息，请参见[测试](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#测试)。
 
 ## 语法

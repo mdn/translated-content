@@ -1,11 +1,10 @@
 ---
 title: 段組みでのオーバーフローの処理
+short-title: オーバーフローの処理
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 l10n:
-  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 このガイドでは、段組み (_multicol_) レイアウトにおいて、段ボックス内およびコンテナーに収まらないコンテンツがある場合のオーバーフローに対処する方法について説明します。
 
@@ -138,7 +137,7 @@ body {
 
 ウェブでの段組みの問題の一つに、段がビューポートより高い場合、読み手は読むのに上下にスクロールしなければならなくなるので使い勝手が悪くなるというものがあります。これを防ぐ一つの方法が、十分な高さがあると分かった時にだけ段組みプロパティを適用することです。
 
-以下の例では、 {{CSSXref("min-height")}} の　[@media クエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を使用して、段組みプロパティを適用する前に高さを検査します。
+以下の例では、 `height` の [@media クエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を使用して、段組みプロパティを適用する前に高さを検査します。
 
 ```html hidden live-sample___min-height
 <div class="container">
@@ -165,7 +164,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 
-@media (min-height: 300px) {
+@media (height >= 300px) {
   .container {
     column-width: 200px;
   }

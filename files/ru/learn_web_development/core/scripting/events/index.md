@@ -27,7 +27,7 @@ slug: Learn_web_development/Core/Scripting/Events
 - Воспроизведение видео, пауза или завершение воспроизведения.
 - Произошла ошибка.
 
-Подробнее о событиях можно посмотреть в [Справочнике по событиям](/ru/docs/Web/Events).
+Подробнее о событиях можно посмотреть в [Справочнике по событиям](/ru/docs/Web/API/Document_Object_Model/Events).
 
 Каждое доступное событие имеет **обработчик событий** — блок кода (обычно это функция JavaScript, вводимая вами в качестве разработчика), который будет запускаться при срабатывании события. Когда такой блок кода определён на запуск в ответ на возникновение события, мы говорим, что мы **регистрируем обработчик событий**. Обратите внимание, что обработчики событий иногда называют слушателями событий (от англ. event listeners). Они в значительной степени взаимозаменяемы для наших целей, хотя, строго говоря, они работают вместе. Слушатель отслеживает событие, а обработчик — это код, который запускается в ответ на событие.
 
@@ -610,6 +610,6 @@ video.onclick = function (e) {
 
 - [Event order](https://www.quirksmode.org/js/events_order.html) (обсуждение захвата и всплытий) — превосходно детализированная часть от Peter-Paul Koch.
 - [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussing of the event object) — another excellently detailed piece by Peter-Paul Koch.
-- [Event reference](/ru/docs/Web/Events)
+- [Event reference](/ru/docs/Web/API/Document_Object_Model/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

@@ -2,21 +2,35 @@
 title: Fonction de hachage cryptographique
 slug: Glossary/Hash_function
 original_slug: Glossary/Cryptographic_hash_function
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Une **fonction de hachage** est une fonction qui prend une entrée de longueur variable et produit une sortie de longueur fixe, aussi appelée _empreinte_ (ou simplement «&nbsp;hachage&nbsp;»). Les fonctions de hachage doivent être rapides à calculer, et des entrées différentes doivent autant que possible produire des sorties différentes (c'est ce qu'on appelle la _résistance aux collisions_).
 
-Une fonction de hachage cryptographique est une primitive {{glossary("cryptographie", "cryptographique")}} qui transforme un message de taille arbitraire en un message de taille fixe, appelé un {{glossary("digest","condensé")}}. Les fonctions de hachage cryptographiques sont employées pour l'authentification, les {{Glossary("Digital signature", "signatures numériques")}} et les {{Glossary("HMAC", "codes d'authentification de messages")}}.
+Les fonctions de hachage ont des usages à la fois {{glossary("cryptography", "cryptographiques")}} et non cryptographiques. En dehors de la cryptographie, par exemple, les fonctions de hachage peuvent servir à générer les clés d'un tableau associatif comme une map ou un dictionnaire.
 
-Pour être utilisable en cryptographie, une fonction de hachage doit disposer de ces qualités :
+La fonction {{domxref("SubtleCrypto.digest()", "digest()")}} de l'interface {{domxref("SubtleCrypto")}} met différentes fonctions de hachage à disposition des applications web.
 
-- rapide à calculer (parce qu'elles sont fréquemment sollicitées)
-- non réversible (chaque condensé peut provenir d'un très grand nombre de messages, et seule la force brute peut générer un message qui conduit à un condensé donné)
-- résistant à la falsification (la moindre modification du message aboutit à un condensé différent)
-- résistant aux collisions (il devrait être impossible de trouver deux messages différents qui produisent le même condensé)
+## Fonctions de hachage cryptographiques
 
-Les fonctions de hachage cryptographiques comme MD5 et SHA-1 sont considérées cassées car des attaques permettant de réduire significativement leur résistance aux collisions ont été trouvées.
+En cryptographie, les fonctions de hachage ont de nombreuses applications, notamment les {{Glossary("digital signature", "signatures numériques")}} et les {{Glossary("HMAC", "codes d'authentification de message")}}.
+
+Toutes les fonctions de hachage ne conviennent pas à la cryptographie. Pour être utilisée en cryptographie, une fonction de hachage doit être&nbsp;:
+
+- rapide à calculer
+- à sens unique&nbsp;: connaissant la sortie, il doit être impossible ou irréaliste de retrouver l'entrée d'origine
+- résistante à la falsification&nbsp;: toute modification de l'entrée conduit à une sortie différente
+- résistante aux collisions&nbsp;: il doit être irréaliste de trouver deux entrées différentes produisant la même sortie
+
+Les fonctions de hachage les plus couramment utilisées en cryptographie appartiennent à la famille _SHA-2_ (Secure Hash Algorithm 2), dont les noms sont `"SHA-"` suivis de la longueur de l'empreinte en bits&nbsp;: par exemple, `"SHA-256"` et `"SHA-512"`.
+
+SHA-2 est le successeur de l'algorithme SHA-1, qui n'est plus considéré comme sûr et ne doit plus être utilisé en cryptographie. Notez que l'algorithme MD5 est également considéré comme non sécurisé.
 
 ## Voir aussi
 
-- [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia
+- {{domxref("SubtleCrypto.digest()")}}
+- [Fonction de hachage <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Hash_function) sur Wikipédia
+- [Fonction de hachage cryptographique <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Cryptographic_hash_function) sur Wikipédia
+- Termes du glossaire associés&nbsp;:
+  - {{Glossary("Symmetric-key cryptography")}}
