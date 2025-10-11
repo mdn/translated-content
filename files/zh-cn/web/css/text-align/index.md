@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eeabc0774ceb0b7447febce6f9743b903815b95b
 ---
 
-{{CSSRef}}
-
 `text-align` [CSS](/zh-CN/docs/Web/CSS) 属性设置块元素或者单元格框的行内内容的水平对齐。这意味着其效果和 {{cssxref("vertical-align")}} 类似，但是是水平方向的。
 
 {{InteractiveExample("CSS Demo: text-align")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}
-
 **`<area>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了图像映射中的一个区域，该区域具有预定义的可点击区域。*图像映射*允许将图像上的几何区域与{{Glossary("Hyperlink", "超链接")}}关联起来。
 
 此元素仅用于 {{HTMLElement("map")}} 元素内。

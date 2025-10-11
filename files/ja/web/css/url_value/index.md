@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
-{{CSSRef}}
-
 **`<url>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、リソースを指します。リソースには画像、動画、CSS ファイル、フォントファイル、SVG 機能などがあります。
 
 ## 構文

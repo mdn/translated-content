@@ -5,7 +5,7 @@ slug: Web/API/Element/className
 
 {{APIRef("DOM")}}
 
-La propriété **className** de l'interface {{domxref("Element")}} récupère et définit la valeur de l'[attribut `class`](/fr/docs/Web/HTML/Global_attributes/class) de l'élément spécifié.
+La propriété **className** de l'interface {{domxref("Element")}} récupère et définit la valeur de l'[attribut `class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) de l'élément spécifié.
 
 ## Syntaxe
 

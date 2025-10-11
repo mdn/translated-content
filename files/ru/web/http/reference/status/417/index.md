@@ -3,8 +3,6 @@ title: 417 Expectation Failed
 slug: Web/HTTP/Reference/Status/417
 ---
 
-{{HTTPSidebar}}
-
 Код ошибки HTTP **`417 Expectation Failed`** указывает на то, что ожидание, указанное в {{HTTPHeader("Expect")}}, не может быть выполнено.
 
 Дополнительную информацию смотрите в {{HTTPHeader("Expect")}}.

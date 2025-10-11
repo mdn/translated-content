@@ -3,10 +3,10 @@ title: "XMLHttpRequest: readyState プロパティ"
 short-title: readyState
 slug: Web/API/XMLHttpRequest/readyState
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: 9c78a44b9321fcd3fbe63d6f5b61ed749c2fa261
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 **XMLHttpRequest.readyState** プロパティは XMLHttpRequest (XHR) クライアントの状態を返します。XHR クライアントは次の状態のいずれかをとります。
 

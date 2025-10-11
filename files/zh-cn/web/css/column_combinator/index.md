@@ -2,10 +2,10 @@
 title: 列组合器
 slug: Web/CSS/Column_combinator
 l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **列组合器**（`||`）可置于两个 CSS 选择器之间。只有那些由第二个选择器匹配到的元素，且属于第一个选择器匹配到的列元素，才会被匹配。
 
@@ -74,7 +74,7 @@ col.selected||td {
 
 ## 浏览器兼容性
 
-{{Compat}}
+目前，没有任何浏览器支持该特性。
 
 ## 参见
 
@@ -83,3 +83,4 @@ col.selected||td {
 - {{CSSxRef("grid")}}
 - {{CSSxRef(":nth-of-type")}}
 - {{CSSxRef(":nth-last-of-type")}}
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块

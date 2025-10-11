@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-{{CSSRef}}
-
 **`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)大于 `max-width` 指定的值。
 
 {{InteractiveExample("CSS Demo: max-width")}}

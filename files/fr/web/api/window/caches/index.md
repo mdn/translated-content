@@ -1,40 +1,27 @@
 ---
-title: caches
+title: "Window : propriété caches"
+short-title: caches
 slug: Web/API/Window/caches
 original_slug: Web/API/caches
+l10n:
+  sourceCommit: 4a0413ef319179b7d0d833c42a156629544c8248
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{securecontext_header}}
 
-La propriété globale en lecture seule **`caches`** retourne l'objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage) associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
+La propriété en lecture seule **`caches`** retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel.
+Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
 
 ## Valeur
 
-Un objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage).
+Un objet {{domxref("CacheStorage")}}.
 
 ## Exemple
 
-L'exemple suivant montre comment mettre en cache un contexte de [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
+L'exemple suivant montre comment une fenêtre peut récupérer des données mises en cache.
 
 ```js
-this.addEventListener("install", function (event) {
-  event.waitUntil(
-    caches.open("v1").then(function (cache) {
-      return cache.addAll([
-        "/sw-test/",
-        "/sw-test/index.html",
-        "/sw-test/style.css",
-        "/sw-test/app.js",
-        "/sw-test/image-list.js",
-        "/sw-test/star-wars-logo.jpg",
-        "/sw-test/gallery/",
-        "/sw-test/gallery/bountyHunters.jpg",
-        "/sw-test/gallery/myLittleVader.jpg",
-        "/sw-test/gallery/snowTroopers.jpg",
-      ]);
-    }),
-  );
-});
+caches.open("v1").then((cache) => cache.match("/list"));
 ```
 
 ## Spécifications
@@ -48,6 +35,5 @@ this.addEventListener("install", function (event) {
 ## Voir aussi
 
 - [L'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API)
-- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
-- [`CacheStorage`](/fr/docs/Web/API/CacheStorage)
-- [`Cache`](/fr/docs/Web/API/Cache)
+- {{domxref("CacheStorage")}}
+- {{domxref("Cache")}}

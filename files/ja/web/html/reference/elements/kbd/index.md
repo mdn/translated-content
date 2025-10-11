@@ -10,7 +10,7 @@ l10n:
 
 **`<kbd>`** は [HTML](/ja/docs/Web/HTML) の要素で、キーボード、音声入力、その他の入力端末からのユーザーによる文字入力を表す行内の文字列の区間を表します。慣習的に、{{Glossary("user agent", "ユーザーエージェント")}}は既定で `<kbd>` 要素の中身を等幅フォントで表示しますが、 HTML 標準で規定されているものではありません。
 
-{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;kbd&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
