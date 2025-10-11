@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-**`static`** キーワードは、クラスに[静的メソッドや静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes#静的メソッドとフィールド)、または[政敵初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)を定義します（この使い方について詳しくは、リンク先を参照してください）。 静的プロパティは、クラスのインスタンスから直接アクセスすることはできません。代わりに、クラス自体に対してアクセスします。
+**`static`** キーワードは、クラスに[静的メソッドや静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes#静的メソッドとフィールド)、または[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)を定義します（この使い方について詳しくは、リンク先を参照してください）。 静的プロパティは、クラスのインスタンスから直接アクセスすることはできません。代わりに、クラス自体に対してアクセスします。
 
 静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
 
@@ -59,7 +59,7 @@ class ClassWithStatic {
 
 静的メソッドの多くは、インスタンスを作成したり複製したりするなどの、ユーティリティ関数です。パブリック静的フィールドは、作成するすべてのクラスインスタンスではなく、クラスごとに一つだけフィールドを存在させたい場合に有益です。これは、キャッシュや固定の構成値、 あるいはインスタンスをまたがって複製する必要のないデータなどに有益です。
 
-静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#計算プロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
+静的フィールド名は[計算](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#算出プロパティ名)できます。計算式の `this` 値はクラス定義の周囲の `this` であり、クラス名を参照すると、クラスがまだ初期化されていないため {{jsxref("ReferenceError")}} になります。この式では {{jsxref("Operators/await", "await")}} と {{jsxref("Operators/yield", "yield")}} は期待どおりに動作します。
 
 静的フィールドは初期化子を持つことができます。初期化子を持たない静的フィールドは `undefined` に初期化されます。パブリック静的フィールドはサブクラスでは再初期化されませんが、プロトタイプチェーン経由でアクセスすることができます。
 

@@ -2,10 +2,8 @@
 title: :scope
 slug: Web/CSS/:scope
 l10n:
-  sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
 
@@ -16,61 +14,96 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 }
 ```
 
-À l'heure actuelle, lorsqu'elle est utilisée dans une feuille de style, `:scope` est identique à [`:root`](/fr/docs/Web/CSS/:root), car il n'existe pas de moyen explicite pour créer un élément dont la portée est restreinte. Lorsqu'elle est utilisée à travers des méthodes telles que [`querySelector()`](/fr/docs/Web/API/Element/querySelector), [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll), [`matches()`](/fr/docs/Web/API/Element/matches) ou [`closest()`](/fr/docs/Web/API/Element/closest), `:scope` correspond à l'élément sur lequel la méthode est appelée.
+Le ou les éléments auxquels correspond `:scope` dépendent du contexte dans lequel il est utilisé&nbsp;:
+
+- Lorsqu'il est utilisé au niveau racine d'une feuille de style, `:scope` équivaut à {{cssxref(":root")}}, qui, dans un document HTML standard, correspond à l'élément {{htmlelement("html")}}.
+- Lorsqu'il est utilisé à l'intérieur d'un bloc {{cssxref("@scope")}}, `:scope` correspond à la racine de la portée définie du bloc. Il permet d'appliquer des styles à la racine de la portée à partir du bloc `@scope` lui-même.
+- Lorsqu'il est utilisé dans un appel API DOM, tel que {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}} ou {{domxref("Element.closest()", "closest()")}} — `:scope` correspond à l'élément sur lequel la méthode a été appelée.
 
 ## Syntaxe
 
 ```css
 :scope {
-  /* … */
+  /* ... */
 }
 ```
 
 ## Exemples
 
-### Identité
+### Utiliser `:scope` comme alternative à `:root`
 
-Dans cet exemple, on voit comment utiliser la pseudo-classe `:scope` avec la méthode [`Element.matches()`](/fr/docs/Web/API/Element/matches) afin de désigner l'élément sur lequel la méthode est appelée. Ici, si `:scope` est prise en charge et que le paragraphe est contenu dans la portée de `:root`, le texte est affiché dans le paragraphe avec l'identifiant `output`.
+Cet exemple montre que `:scope` est équivalent à `:root` lorsqu'il est utilisé au niveau racine d'une feuille de style. Dans ce cas, le CSS fourni colore l'arrière-plan de l'élément `<html>` en orange.
 
-#### JavaScript
-
-```js
-const paragraph = document.getElementById("para");
-const output = document.getElementById("output");
-
-if (paragraph.matches(":scope")) {
-  output.textContent =
-    "Le premier paragraphe est sa propre portée, comme attendu !";
+```css
+:scope {
+  background-color: orange;
 }
 ```
+
+{{ EmbedLiveSample("utiliser_scope_comme_alternative_à_root", "100%", 50) }}
+
+### Utiliser `:scope` pour mettre en forme la racine de la portée dans un bloc `@scope`
+
+Dans cet exemple, nous utilisons deux blocs `@scope` séparés pour faire correspondre les liens à l'intérieur des éléments avec une classe `.light-scheme` et `.dark-scheme` respectivement. Notez comment `:scope` est utilisé pour sélectionner et fournir un style aux racines de portée elles-mêmes. Dans cet exemple, les racines de portée sont les éléments {{htmlelement("div")}} qui ont les classes appliquées.
 
 #### HTML
 
 ```html
-<p id="para">
-  Ceci est un paragraphe, pas forcément intéressant en tant que tel.
-</p>
-<p id="output"></p>
+<div class="light-scheme">
+  <p>
+    Le MDN contient beaucoup d'informations sur
+    <a href="/fr/docs/Web/HTML">HTML</a>, <a href="/fr/docs/Web/CSS">CSS</a>, et
+    <a href="/fr/docs/Web/JavaScript">JavaScript</a>.
+  </p>
+</div>
+
+<div class="dark-scheme">
+  <p>
+    Le MDN contient beaucoup d'informations sur
+    <a href="/fr/docs/Web/HTML">HTML</a>, <a href="/fr/docs/Web/CSS">CSS</a>, et
+    <a href="/fr/docs/Web/JavaScript">JavaScript</a>.
+  </p>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  padding: 10px;
+}
+```
+
+```css
+@scope (.light-scheme) {
+  :scope {
+    background-color: plum;
+  }
+
+  a {
+    color: darkmagenta;
+  }
+}
+
+@scope (.dark-scheme) {
+  :scope {
+    background-color: darkmagenta;
+    color: antiquewhite;
+  }
+
+  a {
+    color: plum;
+  }
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{ EmbedLiveSample("utiliser_scope_pour_mettre_en_forme_la_racine_de_la_portée_dans_un_bloc_scope", "100%", 150) }}
 
-### Enfants directs
+### Utiliser `:scope` dans JavaScript
 
-La pseudo-classe `:scope` peut également s'avérer utile lorsqu'on doit obtenir un descendant direct d'un élément [`Element`](/fr/docs/Web/API/Element).
-
-#### JavaScript
-
-```js
-const context = document.getElementById("context");
-const selected = context.querySelectorAll(":scope > div");
-
-document.getElementById("results").innerHTML = Array.prototype.map
-  .call(selected, (element) => `#${element.getAttribute("id")}`)
-  .join(", ");
-```
+Cet exemple démontre l'utilisation de la pseudo-classe `:scope` dans JavaScript. Cela peut être utile si vous devez obtenir un descendant direct d'un {{domxref("Element")}} déjà récupéré.
 
 #### HTML
 
@@ -90,11 +123,22 @@ document.getElementById("results").innerHTML = Array.prototype.map
 </p>
 ```
 
+#### JavaScript
+
+```js
+const context = document.getElementById("context");
+const selected = context.querySelectorAll(":scope > div");
+
+document.getElementById("results").textContent = Array.prototype.map
+  .call(selected, (element) => `#${element.getAttribute("id")}`)
+  .join(", ");
+```
+
 #### Résultat
 
-{{EmbedLiveSample('')}}
+La portée de `context` est l'élément avec l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de `context`. Les éléments sélectionnés sont les éléments `<div>` qui sont des enfants directs de ce contexte — `element-1` et `element-2` — mais pas leurs descendants.
 
-La portée de `context` est l'élément dont [l'identifiant (`id`)](/fr/docs/Web/HTML/Reference/Global_attributes#id) vaut `context`. Les éléments sélectionnés sont les éléments `<div>` qui sont des enfants directs de ce contexte, c'est-à-dire `element-1` et `element-2`, mais pas leurs descendants à eux.
+{{ EmbedLiveSample('utiliser_scope_dans_javascript') }}
 
 ## Spécifications
 
@@ -106,8 +150,9 @@ La portée de `context` est l'élément dont [l'identifiant (`id`)](/fr/docs/Web
 
 ## Voir aussi
 
-- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [`:root`](/fr/docs/Web/CSS/:root)
-- [Localiser des éléments du DOM grâce aux sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`Element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
-- [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
-- [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)
+- La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@scope")}}
+- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":root")}}
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- {{domxref("Element.querySelector()")}} et {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}
+- {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}

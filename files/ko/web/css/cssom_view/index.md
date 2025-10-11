@@ -15,7 +15,7 @@ l10n:
 
 ## 안내서
 
-- [좌표계](/ko/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [좌표계](/ko/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : 디스플레이 맥락에서 위치의 위치를 지정하는 데 사용되는 좌표계에 대한 안내입니다. 이 맥락은 모니터의 창, 모바일 장치의 뷰포트 또는 인쇄 시 종이 위의 위치일 수 있습니다.
 
 ## 관련 개념

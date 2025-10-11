@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
 ---
 
-{{CSSRef}}
-
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:dir()`** permet de cibler un élément selon la direction du texte qu'il contient.
 
 ```css
@@ -27,8 +25,6 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 
 ## Syntaxe
 
-La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du texte qu'on souhaite cibler.
-
 ```css-nolint
 :dir([ltr | rtl]) {
   /* ... */
@@ -36,6 +32,8 @@ La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du t
 ```
 
 ### Paramètres
+
+La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du texte qu'on souhaite cibler.
 
 - `ltr`
   - : Cible les éléments écrits de gauche à droite.
@@ -70,7 +68,7 @@ La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du t
 
 ### Résultat
 
-{{EmbedLiveSample("", "100%", 70)}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

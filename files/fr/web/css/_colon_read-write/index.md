@@ -1,69 +1,178 @@
 ---
 title: :read-write
 slug: Web/CSS/:read-write
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-write`** représente un élément (tel que `input` ou `textarea`) qui peut être modifié par l'utilisateur·ice.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:read-write`** permet de cibler un élément lorsque celui-ci peut être édité par l'utilisateur (par exemple les champs texte d'un formulaire ou les éléments {{HTMLElement("textarea")}}).
+{{InteractiveExample("Démonstration CSS&nbsp;: :read-write", "tabbed-shorter")}}
 
-```css
-/* Cible tout élément éditable */
-/* Pris en charge dans Firefox avec un préfixe */
-input:-moz-read-write {
-  background-color: #ccc;
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
 }
 
-/* Pris en charge sans préfixe pour Blink/WebKit/Edge */
-input:read-write {
-  background-color: #ccc;
+*:read-write {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
 }
 ```
 
-> [!NOTE]
-> Ce sélecteur ne sélectionne pas que les champs de saisie textuels ({{HTMLElement("input")}} ou {{HTMLElement("textarea")}}). Il permet de sélectionner n'importe quel élément qui peut être édité par l'utilisateur (par exemple un élément {{htmlelement("p")}} avec un attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable)).
+```html interactive-example
+<p>Veuillez remplir vos coordonnées&nbsp;:</p>
+
+<form>
+  <label for="email">Adresse e-mail&nbsp;:</label>
+  <input id="email" name="email" type="email" value="test@example.com" />
+
+  <label for="note">Courte note à propos de vous&nbsp;:</label>
+  <textarea id="note" name="note">N'ayez pas peur</textarea>
+
+  <label for="pic">Votre photo&nbsp;:</label>
+  <input id="pic" name="pic" type="file" />
+
+  <input type="submit" value="Soumettre le formulaire" />
+</form>
+```
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:read-write {
+  /* ... */
+}
+```
 
 ## Exemples
 
-### CSS
+### Confirmation des détails du formulaire à l'aide de contrôles en lecture seule
+
+Vous pouvez utiliser le contrôle de formulaire [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) lorsque vous souhaitez qu'un·e utilisateur·ice vérifie les informations qu'il a saisies précédemment, que vous souhaitez soumettre avec de nouvelles données dans des contrôles en lecture-écriture.
+Dans l'exemple ci-dessous, la pseudo-classe {{cssxref(":read-only")}} est utilisée pour faire en sorte que le {{htmlelement("textarea")}} (l'adresse d'un utilisateur) ressemble à un paragraphe ordinaire. La pseudo-classe `:read-write` fournit un moyen de mettre en évidence le `<textarea>` modifiable (les instructions de livraison)&nbsp;:
+
+```css hidden
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 10px auto;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+label,
+textarea {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 30px;
+}
+
+textarea {
+  width: 50%;
+}
+
+textarea {
+  height: 70px;
+  resize: none;
+}
+
+label {
+  width: 40%;
+}
+```
 
 ```css
-input {
-  min-width: 25em;
-}
-input:-moz-read-write {
-  background: cyan;
-}
-input:read-write {
-  background: cyan;
+textarea:read-only {
+  border: 0;
 }
 
-p:-moz-read-write {
-  background: lightgray;
-}
-p:read-write {
-  background: lightgray;
-}
-p[contenteditable="true"] {
-  color: blue;
+textarea:read-write {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
 }
 ```
-
-### HTML
 
 ```html
-<input type="text" value="Un champ en lecture seule" />
-<p contenteditable>Essayez un peu d'éditer ce paragraphe.</p>
-<p>Bonne chance pour celui-là !</p>
+<form>
+  <fieldset>
+    <legend>Confirmer les détails d'expédition</legend>
+    <div>
+      <label for="address">Adresse&nbsp;:</label>
+      <textarea id="address" name="address" readonly>
+16 Rue des Blagues,
+Blagues en Cascades,
+France</textarea
+      >
+    </div>
+    <div>
+      <label for="instructions">Instructions de livraison&nbsp;:</label>
+      <textarea id="instructions" name="instructions"></textarea>
+    </div>
+  </fieldset>
+  <button type="submit">Confirmer</button>
+</form>
 ```
 
-### Résultat
+{{embedlivesample("confirmation_des_détails_du_formulaire_à_laide_de_contrôles_en_lecture_seule", , "300")}}
 
-{{EmbedLiveSample("Exemples")}}
+### Mise en forme des contrôles non-formulaires en lecture-écriture
+
+Ce sélecteur ne sélectionne pas seulement les éléments {{htmlElement("input")}}/{{htmlElement("textarea")}} — il sélectionnera _tout_ élément qui peut être modifié par l'utilisateur, comme un élément {{htmlelement("p")}} avec l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) activé.
+
+#### HTML
+
+```html
+<p contenteditable>
+  Ce paragraphe est modifiable&nbsp;; il est en lecture-écriture.
+</p>
+
+<p>Ce paragraphe n'est pas modifiable&nbsp;; il est en lecture seule.</p>
+```
+
+#### CSS
+
+```css
+body {
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 150%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+p:read-only {
+  background-color: red;
+  color: white;
+}
+
+p:read-write {
+  background-color: lime;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("mise_en_forme_des_contrôles_non-formulaires_en_lecture-écriture", '100%', 200)}}
 
 ## Spécifications
 

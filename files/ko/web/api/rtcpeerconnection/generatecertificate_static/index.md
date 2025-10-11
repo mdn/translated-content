@@ -18,7 +18,8 @@ var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm);
 - `keygenAlgorithm`
   - : 키를 생성하는데 사용하는 알고리즘을 식별하는 {{domxref("DOMString")}}입니다.
 
-> **참고:** `RTCPeerConnection.generateCertificate()` 은 정적인 메소드로, 따라서 인스턴스가 아닌 `RTCPeerConnection` 인터페이스에서 항상 호출됩니다.
+> [!NOTE]
+> `RTCPeerConnection.generateCertificate()` 은 정적인 메소드로, 따라서 인스턴스가 아닌 `RTCPeerConnection` 인터페이스에서 항상 호출됩니다.
 
 ### 반환 값
 

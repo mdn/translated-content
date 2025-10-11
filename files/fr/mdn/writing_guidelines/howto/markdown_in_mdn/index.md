@@ -245,7 +245,8 @@ Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 #### Remarques
 
 ```md
-> **Remarque :** **Voici comment écrire un encadré.**
+> [!CALLOUT]
+> **Voici comment écrire un encadré.**
 >
 > Il peut avoir plusieurs paragraphes.
 ```

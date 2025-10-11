@@ -1329,7 +1329,7 @@
 /zh-CN/docs/Learn/Performance/Measuring_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance
 /zh-CN/docs/Learn/Performance/Multimedia	/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia
 /zh-CN/docs/Learn/Performance/Perceived_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance
-/zh-CN/docs/Learn/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/zh-CN/docs/Learn/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
 /zh-CN/docs/Learn/Performance/What_is_web_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /zh-CN/docs/Learn/Performance/business_case_for_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
 /zh-CN/docs/Learn/Performance/video	/zh-CN/docs/Learn_web_development/Extensions/Performance/video
@@ -1436,6 +1436,7 @@
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/Your_own_automation_environment	/zh-CN/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment
 /zh-CN/docs/Learn_web_development/Core/CSS_layout/Grid_skills	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 /zh-CN/docs/Learn_web_development/Core/CSS_layout/Position_skills	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
+/zh-CN/docs/Learn_web_development/Core/Challenges	/zh-CN/docs/Learn_web_development/Core
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
@@ -1449,6 +1450,7 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
+/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
@@ -1975,6 +1977,7 @@
 /zh-CN/docs/Web/API/HTMLMetaElement/charset	/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
+/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types	/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/Web/API/History_API/Working_with_the_History_API
 /zh-CN/docs/Web/API/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
@@ -2442,7 +2445,8 @@
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
-/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels	/zh-CN/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /zh-CN/docs/Web/Accessibility/ARIA/Roles	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles
 /zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role
@@ -2488,7 +2492,8 @@
 /zh-CN/docs/Web/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
-/zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems
+/zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems
+/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems	/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
@@ -2549,6 +2554,8 @@
 /zh-CN/docs/Web/CSS/CSS_cascade/initial_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值
 /zh-CN/docs/Web/CSS/CSS_cascade/specified_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值
 /zh-CN/docs/Web/CSS/CSS_cascade/used_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值
+/zh-CN/docs/Web/CSS/CSS_colors/Color_picker	/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter
+/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool	/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter
 /zh-CN/docs/Web/CSS/CSS_container_queries	/zh-CN/docs/Web/CSS/CSS_containment/Container_queries
 /zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_flow_layout	/zh-CN/docs/Web/CSS/CSS_display/Flow_layout
@@ -2649,8 +2656,7 @@
 /zh-CN/docs/Web/CSS/transform-function/scaleX()	/zh-CN/docs/Web/CSS/transform-function/scaleX
 /zh-CN/docs/Web/CSS/transform-function/skew()	/zh-CN/docs/Web/CSS/transform-function/skew
 /zh-CN/docs/Web/CSS/transform-function/skewX()	/zh-CN/docs/Web/CSS/transform-function/skewX
-/zh-CN/docs/Web/CSS/transform-function/skewY	/zh-CN/docs/Web/CSS/transform-function/skewX
-/zh-CN/docs/Web/CSS/transform-function/skewY()	/zh-CN/docs/Web/CSS/transform-function/skewX
+/zh-CN/docs/Web/CSS/transform-function/skewY()	/zh-CN/docs/Web/CSS/transform-function/skewY
 /zh-CN/docs/Web/CSS/transform-function/translate()	/zh-CN/docs/Web/CSS/transform-function/translate
 /zh-CN/docs/Web/CSS/transform-function/translate3d()	/zh-CN/docs/Web/CSS/transform-function/translate3d
 /zh-CN/docs/Web/CSS/transform-function/translateX()	/zh-CN/docs/Web/CSS/transform-function/translateX
@@ -2779,7 +2785,7 @@
 /zh-CN/docs/Web/Guide/CSS/CSS_Layout	/zh-CN/docs/Web/CSS/Guides
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
-/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/zh-CN/docs/Learn_web_development/Core/Challenges
+/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/zh-CN/docs/Learn_web_development/Core
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Content	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS

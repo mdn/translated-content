@@ -62,7 +62,8 @@ order: 2;
 }
 ```
 
-> **Note :** `order` est uniquement conçue pour affecter **l'ordre visuel**. Elle ne doit pas être utilisée pour modifier l'ordre logique ou l'ordre de tabulation. **`order`** ne doit pas être utilisée avec les média non visuels comme les informations vocales.
+> [!NOTE]
+> `order` est uniquement conçue pour affecter **l'ordre visuel**. Elle ne doit pas être utilisée pour modifier l'ordre logique ou l'ordre de tabulation. **`order`** ne doit pas être utilisée avec les média non visuels comme les informations vocales.
 
 ## Syntaxe
 

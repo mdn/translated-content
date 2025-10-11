@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
-{{GlossarySidebar}}
-
 **驼峰式命名法**（Camel case）是一种不使用空格的短语书写方式，除了整个复合单词的首字母可以是大写或小写的之外，其他每个单词的首字母大写。该名称源于大写字母与骆驼背部的驼峰的相似性。它通常被写作“camelCase”，以提醒读者其外观。
 
 驼峰式命名法通常用作变量命名约定。以下变量使用了驼峰式命名法：{{domxref("console")}}、{{jsxref("encodeURIComponent")}}、{{jsxref("ArrayBuffer")}} 和 {{domxref("HTMLElement")}}。

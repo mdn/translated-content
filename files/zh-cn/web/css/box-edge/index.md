@@ -61,7 +61,7 @@ l10n:
   - : 在 SVG 中，指的是描边边界盒（stroke bounding box）。在 CSS 中，`stroke-box` 被视为 `border-box`。它用于定义应用描边时元素的形状。
 
 - `view-box`
-  - : 指的是最近的 SVG 视口元素的原点盒子（origin box）。原点盒子是一个矩形，其宽度和高度由该元素的 {{svgattr("viewBox")}} 属性建立的初始 SVG 用户坐标系决定。原点盒子的位置设定为其左上角锚定在[坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)的原点。在 CSS 中，`view-box` 被视为 `border-box`。
+  - : 指的是最近的 SVG 视口元素的原点盒子（origin box）。原点盒子是一个矩形，其宽度和高度由该元素的 {{svgattr("viewBox")}} 属性建立的初始 SVG 用户坐标系决定。原点盒子的位置设定为其左上角锚定在[坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)的原点。在 CSS 中，`view-box` 被视为 `border-box`。
     > [!NOTE]
     > 当 SVG 视口未锚定在原点时，原点盒子与 SVG 视口不对应。
 

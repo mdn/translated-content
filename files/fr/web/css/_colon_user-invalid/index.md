@@ -1,30 +1,53 @@
 ---
-title: :-moz-ui-invalid
+title: :user-invalid
 slug: Web/CSS/:user-invalid
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:user-invalid`** représente tout élément de formulaire validé dont la valeur n'est pas valide selon ses [contraintes de validation](/fr/docs/Web/HTML/Guides/Constraint_validation), après que l'utilisateur·ice a interagi avec lui.
 
-La pseudo-classe **`:-moz-ui-invalid`** représente n'importe quel élément de formulaire dont la valeur est invalide selon [ses contraintes de validation](/fr/docs/conflicting/Learn_web_development/Extensions/Forms#constraint_validation).
-
-Cette pseudo-classe est appliquée d'après les règles suivantes :
-
-- Si le contrôle n'a pas le focus et que cette valeur est invalide, la pseudo-classe est appliquée.
-- Si le contrôle a le focus et que la valeur était valide (même si elle était vide) lorsque le focus a été obtenu, la pseudo-classe n'est pas appliquée.
-- Si le contrôle a le focus et que la valeur était invalide lorsque le focus a été obtenu, on revalide le contenu à chaque frappe.
-- Si l'élément est obligatoire, les règles précédentes ne s'appliquent que si l'utilisateur a modifié la valeur ou tenté de soumettre le formulaire.
-
-Si le contrôle était valide au moment où l'utilisateur a commencé à l'utiliser, la mise en forme liée à la validité est uniquement modifiée lorsque l'utilisateur interagit avec un autre contrôle. Toutefois, si l'utilisateur tente de corriger une valeur invalide, le contrôle indique immédiatement lorsque celle-ci devient valide. Les éléments obligatoires sont considérés comme invalides uniquement si l'utilisateur les modifie ou essaie de soumettre une valeur invalide non-modifiée.
-
-Par défaut, Gecko applique un style qui crée un halo rouge (grâce à {{cssxref("box-shadow")}}) autour des éléments avec cette pseudo-clésse. Pour un exemple illustrant comment surcharger le style par défaut, on pourra utiliser la pseudo-classe {{cssxref(":invalid")}}.
+La pseudo-classe `:user-invalid` doit correspondre à un élément {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, ou vide mais {{CSSxRef(":required")}} entre le moment où l'utilisateur·ice a tenté de soumettre le formulaire et avant que l'utilisateur·ice n'ait interagi à nouveau avec l'élément du formulaire.
 
 ## Syntaxe
 
-{{CSSSyntax}}
+```css
+:user-invalid {
+  /* ... */
+}
+```
+
+## Exemples
+
+### Paramétrage d'une couleur et d'un symbole sur :user-invalid
+
+Dans l'exemple suivant, la bordure rouge et le symbole ❌ n'apparaissent qu'une fois que l'utilisateur·ice a interagi avec le champ.
+Essayez de taper quelque chose d'autre qu'une adresse e-mail pour le voir en action.
+
+```html
+<form>
+  <label for="email">E-mail *&nbsp;: </label>
+  <input id="email" name="email" type="email" required />
+  <span></span>
+</form>
+```
+
+```css
+input:user-invalid {
+  border: 2px solid red;
+}
+
+input:user-invalid + span::before {
+  content: "✖";
+  color: red;
+}
+```
+
+{{EmbedLiveSample("paramétrage_dune_couleur_et_dun_symbole_sur_user-invalid", 140, 100)}}
 
 ## Spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -32,8 +55,8 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Voir aussi
 
-- {{cssxref(":valid")}}
-- {{cssxref(":invalid")}}
-- {{cssxref(":required")}}
-- {{cssxref(":optional")}}
-- {{cssxref(":-moz-ui-valid")}}
+- {{CSSxRef(":valid")}}
+- {{CSSxRef(":invalid")}}
+- {{CSSxRef(":required")}}
+- {{CSSxRef(":optional")}}
+- {{CSSxRef(":user-valid")}}

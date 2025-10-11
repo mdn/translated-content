@@ -23,7 +23,8 @@ Voici ce qu'on souhaite obtenir :
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html).
 
 ## Choix effectués
 
@@ -43,7 +44,8 @@ Il existe différentes méthodes alternatives permettant d'obtenir ce résultat 
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html).
 
 Une fois que les éléments flottants sont des éléments de grille, les dégagements ne s'appliquent plus et il n'est donc pas nécessaire de retirer quoi que ce soit sur les dégagements.
 

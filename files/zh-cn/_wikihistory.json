@@ -4496,6 +4496,13 @@
       "yangchongduo"
     ]
   },
+  "Learn_web_development/Extensions/Performance/Best_practices": {
+    "modified": "2020-07-16T22:40:42.886Z",
+    "contributors": [
+      "shuiRong",
+      "creative_fish"
+    ]
+  },
   "Learn_web_development/Extensions/Performance/CSS": {
     "modified": "2020-07-16T22:40:41.520Z",
     "contributors": [
@@ -4509,13 +4516,6 @@
     "modified": "2020-07-16T22:40:43.760Z",
     "contributors": [
       "biqing"
-    ]
-  },
-  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
-    "modified": "2020-07-16T22:40:42.886Z",
-    "contributors": [
-      "shuiRong",
-      "creative_fish"
     ]
   },
   "Learn_web_development/Extensions/Server-side": {
@@ -7792,6 +7792,12 @@
       "teoli",
       "ziyunfei",
       "Anonymous"
+    ]
+  },
+  "Web/API/CSSOM_view_API/Coordinate_systems": {
+    "modified": "2019-03-18T21:28:19.895Z",
+    "contributors": [
+      "1Cr18Ni9"
     ]
   },
   "Web/API/CSSPageRule": {
@@ -14052,6 +14058,13 @@
       "yola0316"
     ]
   },
+  "Web/API/HTML_Drag_and_Drop_API/Drag_data_store": {
+    "modified": "2019-03-23T22:11:24.812Z",
+    "contributors": [
+      "plter",
+      "xgqfrms-GitHub"
+    ]
+  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2020-06-11T05:30:04.210Z",
     "contributors": [
@@ -14065,13 +14078,6 @@
     "contributors": [
       "Sherr_Y",
       "suvyme"
-    ]
-  },
-  "Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types": {
-    "modified": "2019-03-23T22:11:24.812Z",
-    "contributors": [
-      "plter",
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/HashChangeEvent": {
@@ -23419,12 +23425,6 @@
       "Pada"
     ]
   },
-  "Web/CSS/CSSOM_view/Coordinate_systems": {
-    "modified": "2019-03-18T21:28:19.895Z",
-    "contributors": [
-      "1Cr18Ni9"
-    ]
-  },
   "Web/CSS/CSSOM_view/Viewport_concepts": {
     "modified": "2020-04-19T23:11:40.286Z",
     "contributors": [
@@ -23730,7 +23730,7 @@
       "Dorence"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-09-28T22:09:24.320Z",
     "contributors": [
       "smnet1999",
