@@ -59,7 +59,8 @@ if (y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/z4zy79fo/","","395")}}
 
-> **참고:** **연습**: 공이 패들에 닿았을 때 공의 속도를 빠르게 만들어봅시다.
+> [!NOTE]
+> **연습**: 공이 패들에 닿았을 때 공의 속도를 빠르게 만들어봅시다.
 
 ## 다음 단계
 
