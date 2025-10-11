@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
@@ -36,6 +38,7 @@ jobs:
         with:
           repository: mdn/content
           path: mdn/content
+          persist-credentials: false
 
       - name: Setup Node.js environment
         if: steps.filter.outputs.required_files == 'true'

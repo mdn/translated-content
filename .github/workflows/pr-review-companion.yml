@@ -87,6 +87,7 @@ jobs:
         with:
           repository: mdn/content
           path: content
+          persist-credentials: false
 
       - name: Setup (mdn/content)
         uses: actions/setup-node@v4
