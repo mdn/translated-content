@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **SDP**（会话描述{{glossary("Protocol", "协议")}}）是一个描述 {{Glossary("P2P")}} 连接的标准，包含音视频的{{Glossary("codec", "编解码器")}}、源地址和时间信息。
 
 下面是一个典型的 SDP 信息示例：
