@@ -13,7 +13,7 @@ l10n:
 
 ## 값
 
-이 숫자는 {{domxref("EventSource")}} 인터페이스에 정의된 세 가지 상태 상수 중 하나입니다:
+이 숫자는 {{domxref("EventSource")}} 인터페이스에 정의된 세 가지 상태 상수 중 하나입니다.
 
 - `EventSource.CONNECTING` (0)
   - : 연결이 아직 열리지 않았습니다.
@@ -30,7 +30,7 @@ console.log(evtSource.readyState);
 ```
 
 > [!NOTE]
-> GitHub 에서 전체 예시를 확인할 수 있습니다 — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
+> GitHub 에서 전체 예시를 확인할 수 있습니다. [PHP를 사용한 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/main/server-sent-events)를 확인하세요
 
 ## 명세서
 
@@ -40,6 +40,6 @@ console.log(evtSource.readyState);
 
 {{Compat}}
 
-## 같이보기
+## 같이 보기
 
 - {{domxref("EventSource")}}
