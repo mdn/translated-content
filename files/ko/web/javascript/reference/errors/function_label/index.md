@@ -64,7 +64,7 @@ const createObj = () => ({
 });
 ```
 
-객체 리터럴에 [메서드 구문](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions) 을 사용하면 이러한 함정을 피할 수 있습니다.
+객체 리터럴에 [메서드 구문](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)을 사용하면 이러한 함정을 피할 수 있습니다.
 
 ```js example-good
 const createObj = () => ({
