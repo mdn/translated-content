@@ -13,7 +13,7 @@ WebAssembly 是一种运行在现代 Web 浏览器中的新型代码，不仅提
 
 对于 Web 平台而言，这具有巨大的意义——这为客户端 App 提供了一种在 Web 平台以接近本地速度的方式运行多种语言编写的代码的方式；在这之前，客户端 App 是不可能做到的。
 
-而且，你在不知道如何编写 WebAssembly 代码的情况下就可以使用它。WebAssembly 的模块可以被导入的到一个 Web App（或 Node.js）中，并且暴露出供 JavaScript 使用的 WebAssembly 函数。JavaScript 框架不但可以使用 WebAssembly 获得巨大性能优势和新特性，而且还能使得各种功能保持对网络开发者的易用性。
+而且，你在不知道如何编写 WebAssembly 代码的情况下就可以使用它。WebAssembly 的模块可以被导入的到一个 Web App（或 Node.js）中，并且暴露出供 JavaScript 使用的 WebAssembly 函数。JavaScript 框架不但可以使用 WebAssembly 获得巨大性能优势和新特性，而且还能使得各种功能保持对 Web 开发者的易用性。
 
 ## WebAssembly 的目标
 
@@ -21,27 +21,27 @@ WebAssembly 是一种运行在现代 Web 浏览器中的新型代码，不仅提
 
 - 快速、高效、可移植——通过利用[常见的硬件能力](http://webassembly.org/docs/portability/#assumptions-for-efficient-execution)，WebAssembly 代码在不同平台上能够以接近本地速度运行。
 - 可读、可调试——WebAssembly 是一门低阶语言，但是它也确实可以用一种人类可读的文本格式表示（其标准即将得到最终版本），这就允许开发者直接手工编写、查看以及调试代码。
-- 保持安全——WebAssembly 被限制运行在一个安全的沙箱执行环境中。像其他网络代码一样，它遵循浏览器的同源策略和授权策略。
-- 不破坏 Web——WebAssembly 的设计原则是与其他网络技术和谐共处并保持向后兼容。
+- 保持安全——WebAssembly 被限制运行在一个安全的沙箱执行环境中。像其他 Web 代码一样，它遵循浏览器的同源策略和授权策略。
+- 不破坏 Web——WebAssembly 的设计原则是与其他 Web 技术和谐共处并保持向后兼容。
 
 > [!NOTE]
-> WebAssembly 也可用于 Web 和 JavaScript 环境之外（参考[非网络嵌入](http://webassembly.org/docs/non-web/)）。
+> WebAssembly 也可用于 Web 和 JavaScript 环境之外（参考[非 Web 嵌入](http://webassembly.org/docs/non-web/)）。
 
-## WebAssembly 如何适应网络平台？
+## WebAssembly 如何适应 Web 平台？
 
 Web 平台可以被想象成拥有两个部分：
 
 - 一个运行 Web 程序代码的虚拟机（比如给你的程序提供能力的 JavaScript）
-- 一系列网络程序能够调用从而控制网络浏览器/设备功能，并且能够让事物发生变化的 Web API（[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-CN/docs/Web/API/WebGL_API)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等）。
+- 一系列 Web 程序能够调用从而控制 Web 浏览器/设备功能，并且能够让事物发生变化的 Web API（[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-CN/docs/Web/API/WebGL_API)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等）。
 
-从历史角度讲，虚拟机过去只能加载 JavaScript。这其实已经足够了，毕竟 JavaScript 足够强大，能够解决人们在当今网络上遇到的绝大部分问题。尽管如此，当试图把 JavaScript 应用到诸如 3D 游戏、虚拟现实、增强现实、计算机视觉、图像/视频编辑以及大量的要求原生性能的其他领域的时候，我们遇到了性能问题（参见 [WebAssembly 使用案例](http://webassembly.org/docs/use-cases/)获取更多细节）。
+从历史角度讲，虚拟机过去只能加载 JavaScript。这其实已经足够了，毕竟 JavaScript 足够强大，能够解决人们在当今 Web 上遇到的绝大部分问题。尽管如此，当试图把 JavaScript 应用到诸如 3D 游戏、虚拟现实、增强现实、计算机视觉、图像/视频编辑以及大量的要求原生性能的其他领域的时候，我们遇到了性能问题（参见 [WebAssembly 使用案例](http://webassembly.org/docs/use-cases/)获取更多细节）。
 
 而且，下载、解析以及编译巨大的 JavaScript 应用程序的成本是过高的。移动平台和其他资源受限平台进一步放大了这些性能瓶颈。
 
-WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来取代 JavaScript 的。相反，它被设计为和 JavaScript 一起协同工作，从而使得网络开发者能够利用两种语言的优势：
+WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来取代 JavaScript 的。相反，它被设计为和 JavaScript 一起协同工作，从而使得 Web 开发者能够利用两种语言的优势：
 
-- JavaScript 是一门高级语言。对于写网络应用程序而言，它足够灵活且富有表达力。它有许多优势——它是动态类型的，不需要编译环节以及一个巨大的能够提供强大框架、库和其他工具的生态系统。
-- WebAssembly 是一门低级的类汇编语言。它有一种紧凑的二进制格式，使其能够以接近原生性能的速度运行，并且为诸如 C++ 和 Rust 等拥有低级的内存模型语言提供了一个编译目标，以便它们能够在网络上运行。（注意，WebAssembly 有一个在将来支持使用了垃圾回收内存模型的语言的[高级目标](https://webassembly.org/docs/high-level-goals/)。）
+- JavaScript 是一门高级语言。对于写 Web 应用程序而言，它足够灵活且富有表达力。它有许多优势——它是动态类型的，不需要编译环节以及一个巨大的能够提供强大框架、库和其他工具的生态系统。
+- WebAssembly 是一门低级的类汇编语言。它有一种紧凑的二进制格式，使其能够以接近原生性能的速度运行，并且为诸如 C++ 和 Rust 等拥有低级的内存模型语言提供了一个编译目标，以便它们能够在 Web 上运行。（注意，WebAssembly 有一个在将来支持使用了垃圾回收内存模型的语言的[高级目标](https://webassembly.org/docs/high-level-goals/)。）
 
 随着 WebAssembly 出现在了浏览器中，我们前面提到的虚拟机将会加载和运行两种类型的代码——JavaScript 和 WebAssembly。
 
@@ -119,11 +119,11 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 ### 使用 AssemblyScript
 
-对于想尝试 WebAssembly 而又不需要学习 C 或 Rust 细节的网络开发者来说，AssemblyScript 将是最好的选择。AssemblyScript 将 TypeScript 的严格变体编译为 WebAssembly，让 Web 开发者可以继续使用他们熟悉的 TypeScript 兼容工具，如 Prettier、ESLint、VS Code IntelliSense 等。你可以在 <https://www.assemblyscript.org/> 上查看它的文档。
+对于想尝试 WebAssembly 而又不需要学习 C 或 Rust 细节的 Web 开发者来说，AssemblyScript 将是最好的选择。AssemblyScript 将 TypeScript 的严格变体编译为 WebAssembly，让 Web 开发者可以继续使用他们熟悉的 TypeScript 兼容工具，如 Prettier、ESLint、VS Code IntelliSense 等。你可以在 <https://www.assemblyscript.org/> 上查看它的文档。
 
 ## 总结
 
-本文主要阐述了 WebAssembly 是什么，它为什么如此有用，它是如何适应网络的，以及你要怎么做才能用上它。
+本文主要阐述了 WebAssembly 是什么，它为什么如此有用，它是如何适应 Web 环境的，以及你要怎么做才能用上它。
 
 ## 参考
 
