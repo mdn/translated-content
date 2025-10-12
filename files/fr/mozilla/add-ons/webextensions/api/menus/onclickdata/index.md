@@ -18,7 +18,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `checked` {{optional_inline}}
   - : `boolean`. Un _flag_ indiquant si une case à cocher ou un élément radio a été vérifié après avoir été cliqué.
 - `editable`
-  - : `boolean`. Un indicateur indiquant si l'élément est modifiable: par exemple, s'il s'agit d'un [textarea](/fr/docs/Web/HTML/Element/textarea).
+  - : `boolean`. Un indicateur indiquant si l'élément est modifiable: par exemple, s'il s'agit d'un [textarea](/fr/docs/Web/HTML/Reference/Elements/textarea).
 - `frameId` {{optional_inline}}
   - : `integer`. L'ID de l'image dans laquelle l'élément a été cliqué. L'ID de trame peut être utilisé dans d'autres API acceptant des ID de trame, tels que {{WebExtAPIRef("tabs.sendMessage()")}}. Si l'élément a été cliqué dans le document de niveau supérieur,par exemple, dans `tools_menu` ou `tab` context), `frameId` n'est `pas défini`.
 - `frameUrl` {{optional_inline}}
@@ -42,7 +42,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `srcUrl` {{optional_inline}}
   - : `string`. Sera présent pour les éléments avec une URL "src".
 - `targetElementId`{{optional_inline}}
-  - : `integer`. Un identificateur de l'élément, le cas échéant, sur lequel le menu contextuel a été créé. Utilisez {{WebExtAPIRef("menus.getTargetElement()")}} dans le script de contenu pour localiser l'élément. Notez que ce n'est pas l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes/id) de l'élément page.
+  - : `integer`. Un identificateur de l'élément, le cas échéant, sur lequel le menu contextuel a été créé. Utilisez {{WebExtAPIRef("menus.getTargetElement()")}} dans le script de contenu pour localiser l'élément. Notez que ce n'est pas l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément page.
 - `viewType` {{optional_inline}}
   - : {{WebExtAPIRef("extension.ViewType", "ViewType")}}. Le type de vue de l'extension.
 - `wasChecked` {{optional_inline}}

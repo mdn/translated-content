@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}
-
 **`initial-value`** は [CSS](/ja/docs/Web/CSS) の記述子で、構文があらゆる有効なトークンストリームを受け入れない限り {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用する上で必須です。そのプロパティの初期値を設定します。
 
 `initial-value` として選択された値は、構文の定義に従って正しく解釈しなければなりません。したがって、もし構文が `<color>` であれば、初期値は有効な {{cssxref("color")}} 値でなければなりません。

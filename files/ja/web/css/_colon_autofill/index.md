@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-{{CSSRef}}
-
 **`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
 
 {{InteractiveExample("CSS デモ: :autofill", "tabbed-shorter")}}

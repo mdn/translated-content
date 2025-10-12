@@ -52,11 +52,11 @@ Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cet
 > [!NOTE]
 > Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
 
-À ce stade, consultons la [console du développeur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.
+À ce stade, consultons la [console du développeur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.
 
 ## Réparer les erreurs de syntaxe
 
-Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) [des outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
+Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) [des outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
 
 1. Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
 2. C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
@@ -84,7 +84,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 2. Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur&nbsp;! ![](variable-is-null.png)
 3. Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
 
-   > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
+   > [!NOTE]
+   > [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
 
    > [!NOTE]
    > Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
@@ -107,7 +108,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
    console.log(lowOrHi);
    ```
 
-   > **Note :** [`console.log()`](/fr/docs/Web/API/console/log_static) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
+   > [!NOTE]
+   > [`console.log()`](/fr/docs/Web/API/console/log_static) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
 
 7. Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau&nbsp;; il y a bien un problème à la ligne 48.
 8. Quel est ce problème&nbsp;? Réfléchissons. À la ligne 48, nous avons utilisé la méthode [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question&nbsp;:

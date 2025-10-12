@@ -38,7 +38,7 @@ Voyons donc comment diagnostiquer et résoudre ces problèmes.
 
 ## Pédagogie active
 
-_Il n'existe pas encore de matériau interactif pour cet article. [N'hésitez pas à contribuer !](/fr/docs/MDN/Community/Contributing/Getting_started)_
+_Il n'existe pas encore de matériau interactif pour cet article. [N'hésitez pas à contribuer !](/fr/docs/MDN/Community/Getting_started)_
 
 ## Aller plus loin
 
@@ -126,7 +126,7 @@ Pour voir ces erreurs, ouvrez la console (**Outils ➤ Développement web ➤ Co
 
 ![A Javascript error is shown in the Console](Capture%20du%202015-10-12%2019-10-52.png)
 
-Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/docs/Learn/JavaScript)).
+Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/docs/conflicting/Learn_web_development/Core/Scripting)).
 
 ### D'autres points de contrôles
 
@@ -170,5 +170,5 @@ Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vou
 
 Félicitations ! Votre site est en ligne, fonctionne correctement et tout le monde peut le visiter. C'est une belle réussite ! Vous pouvez maintenant approfondir d'autres sujets.
 
-- De nombreuses personnes peuvent accéder à votre site, mieux vaut donc que celui-ci [soit le plus accessible possible](/fr/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility).
-- Le site a l'air brut de décoffrage ? C'est le bon moment pour [apprendre un peu de CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works).
+- De nombreuses personnes peuvent accéder à votre site, mieux vaut donc que celui-ci [soit le plus accessible possible](/fr/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility).
+- Le site a l'air brut de décoffrage ? C'est le bon moment pour [apprendre un peu de CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS).

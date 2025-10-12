@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
 **`steps()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力時間を同じ長さの指定した数値の間隔に分割する遷移を定義します。ステップ関数のサブクラスは、「階段関数」とも呼ばれることがあります。
 
 ## 構文

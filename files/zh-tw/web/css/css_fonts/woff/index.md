@@ -1,19 +1,27 @@
 ---
-title: 網路開放字型格式 (WOFF)
+title: Web 開放字型格式（WOFF）
 slug: Web/CSS/CSS_fonts/WOFF
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**WOFF**（**網頁開放字型格式**）是由 Mozilla、Type Supply、LettError 和其它組織協力開發的全新網路字型格式。它使用了同為表格結構的 `sfnt` 壓縮版，廣泛用於 TrueType、OpenType 和開放字型格式，另外加入了中繼資料和私有資料結構，其中包含事先定義的欄位，讓有意願的廠商和製造商提供授權資訊。
+**WOFF**（**Web 開放字型格式**）是一種由 Mozilla 與 Type Supply、LettError 及其他組織共同開發的 Web 字型格式。它使用與 TrueType、OpenType 和 Open Font Format 相同的基於表的 `sfnt` 結構的壓縮版本，但增加了後設資料和私用資料結構，包括允許字型公司和供應商在需要時提供授權訊息的預定義欄位。
 
-使用 WOFF 主要有以下三項好處：
+使用 WOFF 有三個主要好處：
 
-1. 字型資料經過壓縮，因此使用 WOFF 的網站流量降低，載入速度也會比未壓縮的 TrueType 或 OpenType 檔更快。
-2. 許多不願授權的字型商都可以授權 WOFF 格式的字型，網站設計師有更多的字型可以選擇。
-3. 專有軟體和自由軟體商都喜歡 WOFF 格式，因此在網路世界上，可以成為真正通用和可交換的字型格式，有別於目前其它字型格式。
+1. 字型資料經過壓縮，因此使用 WOFF 的網站將比使用同等的未壓縮 TrueType 或 OpenType 檔案佔用更少的頻寬，載入速度也更快。
+2. 許多不願意授權其 TrueType 或 OpenType 格式字型在 Web 上使用的字型供應商，會授權 WOFF 格式的字型。這提高了網站設計師可用的字型數量。
+3. 無論是專有軟體還是自由軟體的瀏覽器供應商都喜歡 WOFF 格式，因此它有潛力成為一種真正通用、可互通的 Web 字型格式，這點與其他現行的字型格式不同。
+
+WOFF 有兩種版本：WOFF 和 WOFF2。它們的主要區別在於使用的壓縮演算法。在 {{cssxref("@font-face")}} 中，它們分別由 `'woff'` 和 `'woff2'` 格式描述子識別。
 
 ## 使用 WOFF
 
-你可透過 {{cssxref("@font-face")}} CSS 屬性在網頁內的文字使用 WOFF 字型。它的運作方式和 OpenType 以及 TrueType 字型並無二異，但在下載內容時可能會更有效率，這完全歸功於其與生俱來的壓縮特性。
+你可以使用 {{cssxref("@font-face")}} CSS 屬性來將 WOFF 字型用於 Web 內容中的文字。它的運作方式與 OpenType 和 TrueType 格式的字型完全相同，但由於增加了壓縮功能，它可能會讓你的內容下載得更有效率。
+
+## 處理 WOFF 字型的工具
+
+- [處理 WOFF 的工具](https://github.com/odemiral/woff2sfnt-sfnt2woff)已經可用。`sfnt2woff` 和 `woff2sfnt` 可在 WOFF 和 OpenType 之間進行轉換。
 
 ## 規範
 

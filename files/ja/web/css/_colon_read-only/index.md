@@ -3,8 +3,6 @@ title: :read-only
 slug: Web/CSS/:read-only
 ---
 
-{{CSSRef}}
-
 **`:read-only`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できない要素 (`input` や `textarea` など) を表します。
 
 ```css
@@ -18,7 +16,7 @@ p:read-only {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :read-only", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :read-only", "tabbed-shorter")}}
 
 ```css interactive-example
 label,
