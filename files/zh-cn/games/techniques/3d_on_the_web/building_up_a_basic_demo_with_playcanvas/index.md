@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
 ---
 
-{{GamesSidebar}}
-
 **PlayCanvas** 是一个流行的 3D WebGL 游戏引擎，最初由 Will Eastcott 和 Dave Evans 创建。它已[在 GitHub 上开源](https://github.com/playcanvas/engine)，并提供了在线[编辑器](https://developer.playcanvas.com/user-manual/editor/)和完善的[文档](https://developer.playcanvas.com)。在线编辑器为公开项目免费开放并支持最多两名团队开发者，如果你想开发一个多名开发者同时参与的商用私有项目，也可以选择相应的[付费方案](https://playcanvas.com/plans)。
 
 ![PlayCanvas 网站。](playcanvas-cover.png)

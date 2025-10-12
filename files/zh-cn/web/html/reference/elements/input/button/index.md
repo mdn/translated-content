@@ -3,8 +3,6 @@ title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 ---
 
-{{HTMLSidebar}}
-
 **`button`** 类型的 {{htmlelement("input")}} 元素被渲染为简单的按钮，可以根据需要对其进行编程，可以为其分配一个事件处理函数（通常为 {{domxref("Element/click_event", "click")}} 事件），以控制网页上的任何地方的自定义功能。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}

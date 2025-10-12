@@ -29,7 +29,8 @@ O laço `for...in` iterage sobre as propriedades de um objeto em uma ordem arbit
 
 ### Iteração em Arrays e `for...in`
 
-> **Nota:** `for...in` não deve ser usado para iteração em uma {{jsxref("Array")}} onde a ordem é importante, visto que ele iterage em uma ordem arbitrária.
+> [!NOTE]
+> `for...in` não deve ser usado para iteração em uma {{jsxref("Array")}} onde a ordem é importante, visto que ele iterage em uma ordem arbitrária.
 
 Indices de arrays somente se tornam propriedades enumeradas com inteiros (integer). Não há garantia de que utilizando o laço for...in os indices de um array serão retornados em uma ordem particular ou irá retornar todas as propriedades enumeráveis. É recomendável utilizar o laço {{jsxref("Statements/for", "for")}} com índices numéricos ou {{jsxref("Array.prototype.forEach()")}} ou ainda {{jsxref("Statements/for...of", "for...of")}} quando iteragir sobre arrays onde a ordem é importante.
 

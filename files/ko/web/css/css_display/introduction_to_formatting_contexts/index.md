@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 original_slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 ---
 
-{{CSSRef}}
-
 이 문서는 서식 상황의 개념을 소개합니다. 서식 상황에는 블록 서식 상황과 인라인 서식 상황, 가변 서식 상황을 포함한 여러 유형이 있습니다. 그들이 어떻게 동작하고 어떻게 그러한 동작을 활용할 수 있는지에 대한 기본 사항도 소개합니다.
 
 페이지의 모든 것은 서식 상황(**formatting context**)의 일부이거나 특정 방식으로 콘텐츠를 배치하도록 정의된 영역입니다. 블록 서식 상황(**block formatting context**)은 블록 레이아웃 규칙에 따라 자식 요소를 배치하고, 가변 서식 상황(**flex formatting context**)은 자식을 {{Glossary("flex item", "flex items")}}로 취급해 배치합니다. 각 서식 상황은 해당 상황에 속했을 때 레이아웃이 어떻게 동작하는지에 대한 특정 규칙을 가지고 있습니다.

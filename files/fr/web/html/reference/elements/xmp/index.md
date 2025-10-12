@@ -17,7 +17,7 @@ L'élément HTML **`<xmp>`** (pour _example_) affiche le texte entre les balises
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Interface DOM
 

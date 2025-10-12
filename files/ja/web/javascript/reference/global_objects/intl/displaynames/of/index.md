@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 
 **`Intl.DisplayNames.prototype.of()`** メソッドは、コードを受け取り、Intl.DisplayNames をインスタンス化するときに指定されたロケールとオプションに基づいて文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{InteractiveExample("JavaScript デモ: Intl.DisplayNames")}}
 
 ```js interactive-example
 const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });

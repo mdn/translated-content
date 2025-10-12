@@ -3,8 +3,6 @@ title: :invalid
 slug: Web/CSS/:invalid
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/HTML/Constraint_validation).
 
 ```css

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/500
 original_slug: Web/HTTP/Status/500
 ---
 
-{{HTTPSidebar}}
-
 하이퍼텍스트 전송 프로토콜 (HTTP) **`500 Internal Server Error`** 서버 에러 응답 코드는 요청을 처리하는
 과정에서 서버가 예상하지 못한 상황에 놓였다는 것을 나타냅니다.
 

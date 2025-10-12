@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`<angle-percentage>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示 {{Cssxref("angle")}} 或 {{Cssxref("percentage")}} 的其中一个值。
 
 当指定允许的类型为 `<angle-percentage>` 时，这意味着百分比值会解析为一个角度，因此可以在 {{Cssxref("calc", "calc()")}} 表达式中使用。

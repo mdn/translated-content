@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers
 original_slug: Web/HTTP/Headers
 ---
 
-{{HTTPSidebar}}
-
 HTTP 헤더는 클라이언트와 서버가 요청 또는 응답으로 부가적인 정보를 전송할 수 있도록 해줍니다. HTTP 헤더는 대소문자를 구분하지 않는 이름과 콜론 '`:`' 다음에 오는 값(줄 바꿈 없이)으로 이루어져있습니다. 값 앞에 붙은 빈 문자열은 무시됩니다.
 
 커스텀 등록 헤더는 'X-'를 앞에 붙여 추가될 수 있지만, 이 관례는 [RFC 6648](https://tools.ietf.org/html/rfc6648)에서 비표준 필드가 표준이 되었을때 불편함을 유발하는 이유로 2012년 6월에 폐기되었습니다. 다른것들은 [IANA 레지스트리](https://www.iana.org/assignments/message-headers/perm-headers.html)에 나열되어 있으며, 원본 컨텐츠는 [RFC 4229](https://tools.ietf.org/html/rfc4229)에서 정의되었습니다. IANA는 또한 [제안된 새로운 메시지 헤더의 레지스트리](https://www.iana.org/assignments/message-headers/prov-headers.html)도 관리합니다.

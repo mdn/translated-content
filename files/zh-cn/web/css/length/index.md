@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
 
 > [!NOTE]
