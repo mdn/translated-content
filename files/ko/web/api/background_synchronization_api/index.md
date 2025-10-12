@@ -2,12 +2,12 @@
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
 l10n:
-  sourceCommit: 0c763b1f885044ec411f3b8b4ea0ab024739d03e
+  sourceCommit: dd84b3b089d199be3771d6afe01e068b19889e71
 ---
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
 
-**Background Synchronization API**를 사용하면 웹앱에서 작업을 연기하여 사용자가 안정적으로 네트워크에 연결되었을 때, [서비스워커](/ko/docs/Web/API/Service_Worker_API)에서 작업을 실행하도록 할 수 있습니다.
+**Background Synchronization API**를 사용하면 웹앱에서 작업을 연기하여 사용자가 안정적으로 네트워크에 연결되었을 때, [서비스 워커](/ko/docs/Web/API/Service_Worker_API)에서 작업을 실행하도록 할 수 있습니다.
 
 ## 개념과 사용법
 
@@ -22,13 +22,13 @@ Background Synchronization API를 사용하면 장치가 오프라인인 경우�
 ## 인터페이스
 
 - {{domxref('SyncManager')}} {{Experimental_Inline}}
-  - : 이후에 서비스워커 내에서 실행할 작업을 네트워크 연결에 등록합니다. 이러한 작업을 _백그라운드 동기 요청 (background sync requests)_ 라고 합니다.
+  - : 이후에 서비스워커 내에서 실행할 작업을 네트워크 연결에 등록합니다. 이러한 작업을 "백그라운드 동기 요청 (background sync requests)" 이라고 합니다.
 - {{domxref('SyncEvent')}} {{Experimental_Inline}}
   - : {{domxref('ServiceWorker')}}의 [글로벌 범위](/ko/docs/Web/API/ServiceWorkerGlobalScope)로 전송되는 동기화 이벤트를 나타냅니다. 이것은 장치가 네트워크에 연결됐을 때 서비스워커에서 작업을 실행할 수 있는 방법을 제공합니다.
 
 ### 타 인터페이스로의 확장
 
-[서비스워커 API](/ko/docs/Web/API/Service_worker_API)에 추가된 다음 추가항목은 백그라운드 동기화를 세팅할 수 있는 진입점을 제공합니다.
+[서비스 워커 API](/ko/docs/Web/API/Service_worker_API)에 추가된 다음 추가 항목은 백그라운드 동기화를 세팅할 수 있는 진입점을 제공합니다.
 
 - {{domxref('ServiceWorkerRegistration.sync')}} {{ReadOnlyInline}}
   - : 디바이스가 네트워크에 연결되면 실행할 작업을 등록하기 위한 {{domxref('SyncManager')}} 참조를 반환합니다.
