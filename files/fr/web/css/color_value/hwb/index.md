@@ -269,3 +269,11 @@ La sortie est la suivante&nbsp;:
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{CSSXref("&lt;color&gt;")}}&nbsp;: Pour une liste de toutes les notations de couleur
+- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Module Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- {{CSSXref("&lt;hue&gt;")}}&nbsp;: le type de donnée représentant un angle de teinte d'une couleur
