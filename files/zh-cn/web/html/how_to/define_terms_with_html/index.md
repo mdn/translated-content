@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-HTML 提供了多种方式来传达描述性语义，无论是内联还是结构化词汇表形式。本文将探讨在定义关键词时如何正确进行标记。
+HTML 提供了多种方式来传达描述性语义，既可以使用内联也可以使用结构化词汇表形式。本文将探讨如何正确使用标记定义关键词。
 
 <table class="standard-table">
   <tbody>
@@ -52,7 +52,7 @@ HTML 同样采用此法，但因 HTML 并非视觉媒介，故不使用粗体。
 
 ### 特殊用例：缩写
 
-最好使用 {{htmlelement("abbr")}} 对缩写词进行特殊标记，这样屏幕阅读器才能正确朗读，同时也能统一处理所有缩写词。如同任何新关键词一样，缩写词应在首次出现时进行定义。
+最好使用 {{htmlelement("abbr")}} 对缩写词进行特殊标记，这样屏幕阅读器便能正确朗读它们，同时也方便你统一地处理所有缩写词。如同任何新关键词一样，缩写词应在首次出现时进行定义。
 
 ```html
 <p>
@@ -85,7 +85,7 @@ HTML 同样采用此法，但因 HTML 并非视觉媒介，故不使用粗体。
 描述列表正如其名：由术语及其对应描述组成的列表（例如定义列表、词典条目、常见问题解答和键值对）。
 
 > [!NOTE]
-> 描述列表[不适用于标记对话内容](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element)，因为对话本身不会直接描述发言者。[此链接中](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations)阐明了标记对话的推荐方案。
+> 描述列表[不适用于标记对话内容](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element)，因为对话本身不会直接描述发言者。参见[标记对话的推荐方案](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations)。
 
 描述术语需置于 {{htmlelement("dt")}} 元素内，对应说明紧随其后，包含于一个或多个 {{htmlelement("dd")}} 元素中。整个说明列表应由 {{htmlelement("dl")}} 元素包裹。
 
