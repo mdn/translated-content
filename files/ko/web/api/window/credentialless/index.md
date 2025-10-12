@@ -2,8 +2,6 @@
 title: "Window: credentialless property"
 short-title: credentialless
 slug: Web/API/Window/credentialless
-status:
-  - experimental
 l10n:
   sourceCommit: fc763b932ad89104bcf06e3886d014a8485ad7d8
 ---
