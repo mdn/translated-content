@@ -32,7 +32,8 @@ Objetos {{jsxref("Statements/async_function", "async function")}} criados com o 
 
 Todos os argumentos passado para a função são tratados como nomes dos identificadores dos parâmetros na função que vai ser criada, na ordem que eles são passados.
 
-> **Nota:** {{jsxref("Statements/async_function", "async functions")}} criadas com o construtor `AsyncFunction` não cria closures para seus contextos de criação; elas sempre criadas no escopo global. Quando rodar eles, eles só poderão acessar suas variáveis local e as globais, mas não as que estão no escopo que o construtor foi `AsyncFunction` chamado. Isso é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com código para uma expressão async function.
+> [!NOTE]
+> {{jsxref("Statements/async_function", "async functions")}} criadas com o construtor `AsyncFunction` não cria closures para seus contextos de criação; elas sempre criadas no escopo global. Quando rodar eles, eles só poderão acessar suas variáveis local e as globais, mas não as que estão no escopo que o construtor foi `AsyncFunction` chamado. Isso é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com código para uma expressão async function.
 
 Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new`) tem o mesmo efeito de invocá-lo como um construtor.
 
