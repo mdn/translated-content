@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 用于为某些元素生成的用户界面控件设置{{Glossary("accent", "强调色")}}。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 用于为某些元素生成的用户界面控件设置{{Glossary("accent", "强调")}}色。
 
 {{InteractiveExample("CSS 演示：accent-color")}}
 
