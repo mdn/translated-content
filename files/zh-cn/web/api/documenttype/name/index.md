@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`name`** 只读属性返回文档的类型。
+{{domxref("DocumentType")}} 的只读属性 **`name`** 返回文档的类型。
 
 对于合成的 `DocumentType`，此属性将反映 {{domxref("DOMImplementation.createDocumentType()")}} 参数中给出的值。
 
@@ -22,7 +22,7 @@ l10n:
 ```js
 const docType = document.implementation.createDocumentType("html", "", "");
 
-console.log(docType.name); // “html”
+console.log(docType.name); // 显示“html”
 ```
 
 ## 规范
