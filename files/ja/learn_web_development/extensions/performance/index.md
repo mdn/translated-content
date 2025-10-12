@@ -46,7 +46,7 @@ l10n:
 
 ## 関連情報
 
-- [ウェブパフォーマンスのリソース](/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
+- [ウェブパフォーマンスのリソース](/ja/docs/Learn_web_development/Extensions/Performance/Best_practices)
   - : HTML、CSS、JavaScript、メディアファイルなどのフロントエンドの構成物に加えて、アプリケーションを遅くする機能と、主観的・客観的にアプリケーションを速くする機能があります。ウェブパフォーマンスに関連する API、開発者ツール、ベストプラクティス、バッドプラクティスは数多くあります。ここでは、これらの機能の多くを基本的なレベルで紹介し、それぞれのトピックについて、パフォーマンスを向上させるためのより深い考察へのリンクを提供します。
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
   - : この記事では、画面サイズや解像度などが大きく異なる端末でも動作する画像、すなわちレスポンシブ画像の概念を学び、それを実現するために HTML が提供するツールを紹介します。これにより、異なる端末間でのパフォーマンスを向上させることができます。レスポンシブ画像は、[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の一部であり、今後の CSS のテーマとなります。

@@ -19,7 +19,7 @@ CSS offre plusieurs fonctionnalités qui vous permettent d'ajuster les styles de
 
 - [Requêtes médias](/fr/docs/Web/CSS/CSS_media_queries)
   - : Définissez un ensemble de caractéristiques ou de paramètres requis pour appliquer les styles CSS qui sont spécifiés entre les accolades de la requête multimédia; par exemple: appliquer uniquement certains styles CSS pour les appareils inférieurs à 768 pixels.
-- {{cssxref("@media")}} [at-rule](/fr/docs/Web/CSS/At-rule)
-  - : Appliquez conditionnellement une partie d'une [feuille de style](/fr/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html), en fonction du résultat d'une requête multimédia.
+- {{cssxref("@media")}} [at-rule](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - : Appliquez conditionnellement une partie d'une [feuille de style](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_to_apply_your_css_to_your_html), en fonction du résultat d'une requête multimédia.
 - {{domxref("Window.matchMedia()")}}
   - : Testez le périphérique de visualisation par rapport à une requête multimédia.

@@ -10,7 +10,7 @@ l10n:
 
 **`<code>`** は [HTML](/ja/docs/Web/HTML) の要素で、コンピューターコードの短い断片の文字列であると識別できるような外見のコンテンツを表示します。既定では、中の文字列が{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントを使用して表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;code&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

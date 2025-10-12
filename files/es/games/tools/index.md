@@ -3,8 +3,6 @@ title: Herramientas para desarrolladores de juegos
 slug: Games/Tools
 ---
 
-{{GamesSidebar}}
-
 En esta pagina puedes encontrar enlaces a nuestros articulos de desarrollo de juegos, que enventualmente apuenta a cubrir frameworks, compiladores y herramientas de depuracion.
 
 - [asm.js](/es/docs/Games/Tools/asm.js)

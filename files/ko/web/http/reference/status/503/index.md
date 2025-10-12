@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/503
 original_slug: Web/HTTP/Status/503
 ---
 
-{{HTTPSidebar}}
-
 하이퍼텍스트 전송 프로토콜(HTTP) **`503 Service Unavailable`** 서버 에러 응답 코드는 서버가 요청을 처리할 준비가 되지 않은 것을 의미합니다.
 
 흔하게는 서버가 점검을 위해 다운되거나 과부하 때문에 발생합니다. 이 응답은 일시적인 상황을 위해 사용되어야 하며, {{HTTPHeader("Retry-After")}} HTTP 헤더는 가능하다면 서비스 복구를 위한 예상 시간을 포함해야 합니다.

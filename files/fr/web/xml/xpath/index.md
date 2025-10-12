@@ -6,9 +6,9 @@ original_slug: Web/XPath
 
 {{XSLTRef}}
 
-XPath est une abréviation pour _XML Path Language_ (qu'on pourrait traduire en français par « langage de chemin XML »). Ce langage utilise une syntaxe non-XML pour cibler différentes parties d'un document [XML](/fr/docs/Web/XML/XML_introduction). Il peut aussi être utilisé pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif particulier.
+XPath est une abréviation pour _XML Path Language_ (qu'on pourrait traduire en français par « langage de chemin XML »). Ce langage utilise une syntaxe non-XML pour cibler différentes parties d'un document [XML](/fr/docs/Web/XML/Guides/XML_introduction). Il peut aussi être utilisé pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif particulier.
 
-XPath est principalement utilisé avec [XSLT](/fr/docs/Web/XSLT), mais on peut tout aussi bien l'utiliser afin de naviguer dans le [DOM](/fr/docs/Web/API/Document_Object_Model) de tout document structuré avec un langage semblable à XML ([HTML](/fr/docs/Web/HTML) ou [SVG](/fr/docs/Web/SVG) par exemple) grâce à l'interface [`XPathExpression`](/fr/docs/Web/API/XPathExpression). Cela permet d'éviter les méthodes [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById) ou [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) ou encore les propriétés [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).
+XPath est principalement utilisé avec [XSLT](/fr/docs/Web/XML/XSLT), mais on peut tout aussi bien l'utiliser afin de naviguer dans le [DOM](/fr/docs/Web/API/Document_Object_Model) de tout document structuré avec un langage semblable à XML ([HTML](/fr/docs/Web/HTML) ou [SVG](/fr/docs/Web/SVG) par exemple) grâce à l'interface [`XPathExpression`](/fr/docs/Web/API/XPathExpression). Cela permet d'éviter les méthodes [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById) ou [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) ou encore les propriétés [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).
 
 XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la structure hiérarchique d'un document XML. Sa syntaxe est qualifiée de « non-XML » car un chemin XPath peut être utilisé au sein d'URI ou de valeurs d'attribut XML.
 
@@ -17,13 +17,13 @@ XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la
 
 ## Documentation
 
-- [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : Une utilisation de XPath qui n'est pas basée sur XSLT.
-- [Axes XPath](/fr/docs/Web/XPath/Axes)
+- [Axes XPath](/fr/docs/Web/XML/XPath/Reference/Axes)
   - : La liste et la définition des axes sont définies dans la spécification XPath. Les axes sont utilisés afin de décrire les relations entre les nœuds.
-- [Functions XPath](/fr/docs/Web/XPath/Functions)
+- [Functions XPath](/fr/docs/Web/XML/XPath/Reference/Functions)
   - : La liste et la description des fonctions principales de XPath et des additions propres à XSLT.
-- [Transformer du XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transformer du XML avec XSLT](/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT utilise XPath afin de cibler les segments d'un document XML pour ensuite les transformer.
 - [Fragments de code XPath](/fr/docs/Web/XPath/Snippets)
   - : Un ensemble d'exemples de code réutilisables en JavaScript qui utilisent les API [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/).
@@ -39,15 +39,15 @@ XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la
 
 ## Voir aussi
 
-- [XSLT](/fr/docs/Web/XSLT), [XML](/fr/docs/Web/XML), [DOM](/fr/docs/Web/API/Document_Object_Model)
-- [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
-- **[XSLT](/fr/docs/Web/XSLT)**
-- **[EXSLT](/fr/docs/Web/EXSLT)**
-- **[XPath](/fr/docs/Web/XPath)**
+- [XSLT](/fr/docs/Web/XML/XSLT), [XML](/fr/docs/Web/XML), [DOM](/fr/docs/Web/API/Document_Object_Model)
+- [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors)
+- **[XSLT](/fr/docs/Web/XML/XSLT)**
+- **[EXSLT](/fr/docs/Web/XML/EXSLT)**
+- **[XPath](/fr/docs/Web/XML/XPath)**
 - Guides
-  1. [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
+  1. [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors)
   2. [Exemples de fragments XPath](/fr/docs/Web/XPath/Snippets)
 
-- [Axes XPath](/fr/docs/Web/XPath/Axes)
+- [Axes XPath](/fr/docs/Web/XML/XPath/Reference/Axes)
   {{ListSubpagesForSidebar("/fr/docs/Web/XPath/Axes")}}
-- [Fonctions XPath](/fr/docs/Web/XPath/Functions){{ListSubpagesForSidebar("/fr/docs/Web/XPath/Functions")}}
+- [Fonctions XPath](/fr/docs/Web/XML/XPath/Reference/Functions){{ListSubpagesForSidebar("/fr/docs/Web/XPath/Functions")}}

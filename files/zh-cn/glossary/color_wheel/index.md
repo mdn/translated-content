@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
-{{GlossarySidebar}}
-
 **色环**，或称*色轮*，是一个代表一组颜色的调色板的圆形图表。色环可以显示由两个极坐标，即从原点（圆心）出发的*角度*和*距离*，确定的颜色。
 
 色环对比较用极坐标或柱坐标表示的颜色非常方便，比如 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)、[`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 或 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch)。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
 
-{{CSSRef}}
-
 CSS에서, **`::before`** 는 선택된 요소의 첫번째 자식인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 생성합니다. 이는 종종 {{cssxref("content")}} 속성을 활용하여 요소에 장식 콘텐츠를 추가하는 데에 사용됩니다. 기본적으로 인라인 형식입니다.
 
 {{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}

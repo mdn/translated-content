@@ -83,7 +83,7 @@ Imaginons qu'on veuille créer une disposition avec trois boîtes qui se suivent
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-Lorsque les navigateurs ne comprennent pas une propriété ou une valeur CSS, ils l'ignorent. On peut donc améliorer progressivement notre disposition avec les grilles CSS. Les navigateurs qui ne prennent pas en charge les grilles ignoreront la valeur `grid` pour la propriété `display`. Une fois qu'un objet flottant devient un élément de grille, son caractère flottant est retiré (voir [Prendre en charge les navigateurs plus anciens](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)) et la grille écrase alors la version flottante.
+Lorsque les navigateurs ne comprennent pas une propriété ou une valeur CSS, ils l'ignorent. On peut donc améliorer progressivement notre disposition avec les grilles CSS. Les navigateurs qui ne prennent pas en charge les grilles ignoreront la valeur `grid` pour la propriété `display`. Une fois qu'un objet flottant devient un élément de grille, son caractère flottant est retiré (voir [Prendre en charge les navigateurs plus anciens](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)) et la grille écrase alors la version flottante.
 
 Un problème persiste cependant. La propriété `width`, utilisée par les objets flottants pour afficher trois colonnes, est désormais interprétée par la grille comme étant la largeur de la piste pour la colonne (et pas la largeur du conteneur comme c'était le cas pour la disposition flottante).
 
@@ -108,6 +108,6 @@ Les requêtes de fonctionnalité permettent d'utiliser des fonctionnalités réc
 ## Voir aussi
 
 - La règle [@supports](/fr/docs/Web/CSS/@supports)
-- [Apprendre les dispositions en CSS et la prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Apprendre les dispositions en CSS et la prise en charge des anciens navigateurs](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/conflicting/Web/CSS/CSS_grid_layout)
 - [Utiliser les requêtes de fonctionnalités en CSS (billet du blog Hacks en anglais)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

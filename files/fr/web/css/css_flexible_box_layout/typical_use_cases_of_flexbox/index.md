@@ -121,7 +121,7 @@ Si on souhaite échanger la position de l'image dans l'objet média pour l'affic
 
 ## Les contrôles de formulaire
 
-Les boîtes flexibles s'avèrent particulièrement utiles losqu'on met en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) associé à un élément [`<button>`](/fr/docs/Web/HTML/Element/button) (par exemple un formulaire de recherche ou un champ où on souhaite qu'un visiteur saisisse une adresse électronique).
+Les boîtes flexibles s'avèrent particulièrement utiles losqu'on met en forme des contrôles de formulaires. Les formulaires sont généralement constitués de nombreux éléments qu'on souhaite aligner les uns avec les autres. Un motif fréquent se compose d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) associé à un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) (par exemple un formulaire de recherche ou un champ où on souhaite qu'un visiteur saisisse une adresse électronique).
 
 Les boîtes flexibles facilitent la construction de tels motifs. Dans l'exemple suivant, on enveloppe l'élément `<button>` et l'élément `<input>` dans un conteneur auquel on ajoute une bordure et pour lequel on a `display: flex`. On utilise ensuite les propriétés flexibles afin de permettre à l'élément `<input>` de grandir et de conserver la même taille pour le bouton. On a donc une paire d'éléments pour laquelle la zone de saisie s'ajuste en fonction de l'espace disponible.
 

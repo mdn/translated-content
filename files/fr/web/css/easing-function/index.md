@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<easing-function>`** représente une fonction mathématique décrivant la vitesse à laquelle la valeur change.
+Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<easing-function>`** représente une fonction mathématique décrivant la vitesse à laquelle la valeur change.
 
 Cette transition entre deux valeurs peut être appliquée dans différentes situations. Elle peut être utilisée pour décrire la rapidité selon laquelle les valeurs évoluent durant les animations. Elle permet ainsi de faire varier la vitesse de l'animation au fur et à mesure de sa progression. On peut utiliser une fonction d'évolution pour les [transitions](/fr/docs/Web/CSS/transition-timing-function) et [animations](/fr/docs/Web/CSS/animation-timing-function) CSS.
 

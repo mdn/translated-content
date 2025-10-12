@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fd4a5c3107826fe3689a0432ba56b3eba00a5f90
 ---
 
-{{GlossarySidebar}}
-
 **滚动边界**是指滚动元素在特定方向上无法再滚动的点，无论是在顶部还是底部（或左侧/右侧，用于水平滚动）。通常这是[滚动口](/zh-CN/docs/Glossary/Scroll_container#滚动口)的边缘。
 
 当{{Glossary("Scroll_container", "滚动容器")}}的内容在滚动方向上不超过容器大小时，容器被认为始终处于其滚动边界。这是因为没有额外的内容可以滚动。如果内容被禁止滚动，例如当设置了 {{cssxref("overflow", "overflow: hidden")}} 时，该元素不是滚动容器，因此没有滚动边界。

@@ -108,7 +108,7 @@ cite {
 
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -141,7 +141,7 @@ Voici des exemples d'œuvres auxquelles on pourrait faire référence grâce à 
 
 Il convient de noter que la spécification du W3C dit qu'une référence à une œuvre créative, telle qu'incluse dans un élément `<cite>`, peut inclure le nom de l'auteur de l'œuvre. Cependant, la spécification WHATWG pour `<cite>` dit le contraire : le nom d'une personne ne doit _jamais_ être inclus, en toutes circonstances.
 
-Pour inclure une référence à la source du matériel cité qui est contenu dans un élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) ou [`<q>`](/fr/docs/Web/HTML/Element/q), utilisez l'attribut [`cite`](/fr/docs/Web/HTML/Element/blockquote#attr-cite) sur l'élément.
+Pour inclure une référence à la source du matériel cité qui est contenu dans un élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) ou [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q), utilisez l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#attr-cite) sur l'élément.
 
 En général, les navigateurs donnent un style au contenu d'un élément `<cite>` en italique par défaut. Pour éviter cela, appliquez la propriété CSS [`font-style`](/fr/docs/Web/CSS/font-style) à l'élément `<cite>`.
 
@@ -165,5 +165,5 @@ En général, les navigateurs donnent un style au contenu d'un élément `<cite>
 
 ## Voir aussi
 
-- L'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote), utilisé pour des citations longues.
-- L'élément [`<q>`](/fr/docs/Web/HTML/Element/q), utilisé pour des citations en incise.
+- L'élément [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote), utilisé pour des citations longues.
+- L'élément [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q), utilisé pour des citations en incise.
