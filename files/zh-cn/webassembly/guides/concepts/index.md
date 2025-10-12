@@ -2,14 +2,14 @@
 title: WebAssembly 概念
 slug: WebAssembly/Guides/Concepts
 l10n:
-  sourceCommit: b9a41e258e656b57f41e8aaf88f93e51bb27974d
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-本文解释了 WebAssembly 如何工作的概念，包括它的目标、它解决的问题以及它是如何在网络浏览器的渲染引擎中运行的。
+本文阐述了 WebAssembly 如何工作这一主题，包括它的目标、它所解决的问题，以及它是如何在 Web 浏览器的 JavaScript 引擎中运行的。
 
 ## WebAssembly 是什么？
 
-WebAssembly 是一种运行在现代 web 浏览器中的新型代码，并且提供新的性能特性，同时提升了性能。它设计的目的不是为了手写代码，而是为诸如 C、C++ 和 Rust 等源语言提供一个有效的编译目标。
+WebAssembly 是一种运行在现代 Web 浏览器中的新型代码，不仅提供新的性能特性，同时还在性能方面有着巨大提升。它的设计本意并非是供开发者直接编辑的代码，而是为诸如 C、C++ 和 Rust 等源语言提供的一个有效的编译目标。
 
 对于 Web 平台而言，这具有巨大的意义——这为客户端 App 提供了一种在 Web 平台以接近本地速度的方式运行多种语言编写的代码的方式；在这之前，客户端 App 是不可能做到的。
 
@@ -17,24 +17,24 @@ WebAssembly 是一种运行在现代 web 浏览器中的新型代码，并且提
 
 ## WebAssembly 的目标
 
-作为 [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)中的一项开放标准，WebAssembly 是为下列目标而生的：
+作为 [W3C WebAssembly 社区组](https://www.w3.org/community/webassembly/)中的一项开放标准，WebAssembly 是为下列目标而生的：
 
 - 快速、高效、可移植——通过利用[常见的硬件能力](http://webassembly.org/docs/portability/#assumptions-for-efficient-execution)，WebAssembly 代码在不同平台上能够以接近本地速度运行。
-- 可读、可调试——WebAssembly 是一门低阶语言，但是它有确实有一种人类可读的文本格式（其标准即将得到最终版本），这允许通过手工来写代码，看代码以及调试代码。
+- 可读、可调试——WebAssembly 是一门低阶语言，但是它也确实可以用一种人类可读的文本格式表示（其标准即将得到最终版本），这就允许开发者直接手工编写、查看以及调试代码。
 - 保持安全——WebAssembly 被限制运行在一个安全的沙箱执行环境中。像其他网络代码一样，它遵循浏览器的同源策略和授权策略。
 - 不破坏 Web——WebAssembly 的设计原则是与其他网络技术和谐共处并保持向后兼容。
 
 > [!NOTE]
-> WebAssembly 也用在网络和 JavaScript 环境之外（参考[非网络嵌入](http://webassembly.org/docs/non-web/)）。
+> WebAssembly 也可用于 Web 和 JavaScript 环境之外（参考[非网络嵌入](http://webassembly.org/docs/non-web/)）。
 
 ## WebAssembly 如何适应网络平台？
 
-网络平台可以被想象成拥有两个部分：
+Web 平台可以被想象成拥有两个部分：
 
-- 一个运行网络程序（Web app）代码的虚拟机（比如给你的程序提供能力的 JavaScript）
+- 一个运行 Web 程序代码的虚拟机（比如给你的程序提供能力的 JavaScript）
 - 一系列网络程序能够调用从而控制网络浏览器/设备功能，并且能够让事物发生变化的 Web API（[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-CN/docs/Web/API/WebGL_API)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等）。
 
-从历史角度讲，虚拟机过去只能加载 JavaScript。这对我们而言足够了，因为 JavaScript 足够强大从而能够解决人们在当今网络上遇到的绝大部分问题。尽管如此，当试图把 JavaScript 应用到诸如 3D 游戏、虚拟现实、增强现实、计算机视觉、图像/视频编辑以及大量的要求原生性能的其他领域的时候，我们遇到了性能问题（参考 [WebAssembly 使用案例](http://webassembly.org/docs/use-cases/)获取更多细节）。
+从历史角度讲，虚拟机过去只能加载 JavaScript。这其实已经足够了，毕竟 JavaScript 足够强大，能够解决人们在当今网络上遇到的绝大部分问题。尽管如此，当试图把 JavaScript 应用到诸如 3D 游戏、虚拟现实、增强现实、计算机视觉、图像/视频编辑以及大量的要求原生性能的其他领域的时候，我们遇到了性能问题（参见 [WebAssembly 使用案例](http://webassembly.org/docs/use-cases/)获取更多细节）。
 
 而且，下载、解析以及编译巨大的 JavaScript 应用程序的成本是过高的。移动平台和其他资源受限平台进一步放大了这些性能瓶颈。
 
@@ -58,13 +58,13 @@ WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来�
 
 JavaScript API 为开发者提供了创建模块、内存、表格和实例的能力。给定一个 WebAssembly 实例，JavaScript 代码能够调用普通 JavaScript 函数暴露出来的导出代码。通过把 JavaScript 函数导入到 WebAssembly 实例中，任意的 JavaScript 函数都能被 WebAssembly 代码同步调用。
 
-因为 JavaScript 能够完全控制 WebAssembly 代码如何下载、编译运行，所以，JavaScript 开发者甚至可以把 WebAssembly 想象成一个高效地生成高性能函数的 JavaScript 特性。
+因为 JavaScript 能够完全控制 WebAssembly 代码如何下载、如何编译、如何运行，所以，JavaScript 开发者甚至可以把 WebAssembly 想象成一个高效地生成高性能函数的 JavaScript 特性。
 
 将来，WebAssembly 模块将会[像 ES 模块那样加载](http://webassembly.org/docs/modules/#integration-with-es6-modules)（使用 `<script type='module'>`），这也就意味着 JavaScript 代码能够像轻松地使用一个 ES 模块那样来获取、编译和导入一个 WebAssembly 模块。
 
 ## 如何在我的 app 中使用 WebAssembly？
 
-上面我们讨论了 WebAssembly 向网络平台增加的基本要素：代码的二进制格式、加载运行该二进制代码的 API。现在让我们讨论如何在实践中使用这些基本要素。
+上面我们讨论了 WebAssembly 向 Web 平台增加的基本要素：代码的二进制格式、加载运行该二进制代码的 API。现在让我们讨论如何在实践中使用这些基本要素。
 
 WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得不断出现。当前，有四个主要的着手点：
 
@@ -77,7 +77,7 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 
 ### 从 C/C++ 移植
 
-创建 WASM 代码的众多选项中有两个是在线 WASM 汇编程序或 [Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)。有许多在线 WASM 汇编程序可供选择，例如：
+要创建 WASM 代码，你可以使用众多选项其二的在线 WASM 汇编程序或 [Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)。有许多在线 WASM 汇编程序可供选择，例如：
 
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
@@ -90,7 +90,7 @@ Emscripten 工具可以将任何 C/C++ 源代码编译成 Wasm 模块，再加�
 
 简而言之，工作流程如下所示：
 
-1. Emscripten 首先把 C/C++ 提供给 clang+LLVM——一个成熟的开源 C/C++ 编译器工具链，比如，在 OSX 上是 XCode 的一部分。
+1. Emscripten 首先把 C/C++ 提供给 clang+LLVM——一个成熟的开源 C/C++ 编译器工具链，比如，在 macOS 上是 Xcode 的一部分。
 2. Emscripten 将 clang+LLVM 编译的结果转换为 Wasm 二进制文件。
 3. 目前，WebAssembly 本身无法直接访问 DOM；它只能调用 JavaScript，并且只能传入整型和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用 JavaScript，然后由 JavaScript 进行 Web API 调用。因此，Emscripten 创建了 HTML 和 JavaScript 粘合代码以便完成这些功能。
 
@@ -109,21 +109,21 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 你想构建自己的编译器，或者你自己的工具，或者创建一个能够在运行时生成 WebAssembly 代码的 JavaScript 库吗？
 
-就像真实的汇编语言一样，WebAssembly 的二进制格式也有文本表示——两者之间 1:1 对应。你可以手工书写或者生成这种格式然后使用这些工具（[WebAssembly 文本转化为二进制工具](http://webassembly.org/getting-started/advanced-tools/)）中的任何一个把它转换为二进制格式。
+就像真实的汇编语言一样，WebAssembly 的二进制格式也有文本表示——两者之间一一对应。你可以手工编写这些代码，然后使用 [WebAssembly 文本转化为二进制工具](http://webassembly.org/getting-started/advanced-tools/)中的任何一个把它转换为二进制格式。
 
 有关如何完成此操作的简单指南，请参阅我们的[转换 WebAssembly 文本格式为 Wasm](/zh-CN/docs/WebAssembly/Guides/Text_format_to_Wasm) 指南。
 
 ### 编写以 WebAssembly 为目标的 Rust 代码
 
-在 Rust WebAssembly 工作组（Rust WebAssembly Working Group）的不懈努力下，编写 Rust 代码并编译到 WebAssembly 也成为可能。你可以在我们的[从 Rust 编译到 WebAssembly](/zh-CN/docs/WebAssembly/Guides/Rust_to_Wasm) 一文中开始安装必要的工具链，将 Rust 示例程序编译到 WebAssembly npm 包中，并在示例 Web 应用程序中使用。
+在 Rust WebAssembly 工作组的不懈努力下，编写 Rust 代码并编译到 WebAssembly 也成为可能。你可以在我们的[从 Rust 编译到 WebAssembly](/zh-CN/docs/WebAssembly/Guides/Rust_to_Wasm) 一文中开始安装必要的工具链，将 Rust 示例程序编译到 WebAssembly npm 包中，并在示例 Web 应用程序中使用。
 
 ### 使用 AssemblyScript
 
-对于想尝试 WebAssembly 而又不需要学习 C 或 Rust 细节的网络开发者来说，AssemblyScript 将是最好的选择。AssemblyScript 将 TypeScript 的严格变体编译为 WebAssembly，让网络开发者可以继续使用他们熟悉的 TypeScript 兼容工具，如 Prettier、ESLint、VS Code IntelliSense 等。你可以在 <https://www.assemblyscript.org/> 上查看其文档。
+对于想尝试 WebAssembly 而又不需要学习 C 或 Rust 细节的网络开发者来说，AssemblyScript 将是最好的选择。AssemblyScript 将 TypeScript 的严格变体编译为 WebAssembly，让 Web 开发者可以继续使用他们熟悉的 TypeScript 兼容工具，如 Prettier、ESLint、VS Code IntelliSense 等。你可以在 <https://www.assemblyscript.org/> 上查看它的文档。
 
 ## 总结
 
-本文给你解释了 WebAssembly 是什么，它为什么如此有用，它是如何适应网络的以及你如何才能使用它。
+本文主要阐述了 WebAssembly 是什么，它为什么如此有用，它是如何适应网络的，以及你要怎么做才能用上它。
 
 ## 参考
 
