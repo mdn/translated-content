@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 883b021c97375f872d0702f0d0747b1373155cef
 ---
 
-{{CSSRef}}
-
 このツールを使用して、 CSS の {{cssxref("border-radius")}} の効果を生成することができます。
 
 {{EmbedGHLiveSample("css-examples/tools/border-radius-generator/", '100%', 900)}}

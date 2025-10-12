@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 El **método de solicitud HTTP `DELETE`** elimina el recurso especificado.
 
 <table class="properties">

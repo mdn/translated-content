@@ -2,7 +2,7 @@
 title: シャドウ DOM の使用
 slug: Web/API/Web_components/Using_shadow_DOM
 l10n:
-  sourceCommit: 9d76a1d4601c8e0042732899a99b6fecde2c919d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{DefaultAPISidebar("Web Components")}}

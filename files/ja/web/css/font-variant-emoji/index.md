@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`font-variant-emoji`** は [CSS](/ja/docs/Web/CSS) のプロパティで、絵文字の表示についての既定の表現を指定します。
 
 従来は、変化形セレクター（テキストの場合は `U+FE0E`、絵文字の場合は `U+FE0F`）をこの点に付加することで行われていました。このプロパティの影響を受けるのは、[Unicode emoji presentation sequence](https://www.unicode.org/emoji/charts/emoji-variants.html) に掲載されている絵文字だけです。

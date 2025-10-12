@@ -1,81 +1,65 @@
 ---
-title: HTML (HyperText Markup Language)
+title: "HTML : HyperText Markup Language"
+short-title: HTML
 slug: Web/HTML
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **HTML** signifie « _HyperText Markup Language_ » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
 
 L'« hypertexte » désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette « toile » (ce mot est traduit par _web_ en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
 
-Le langage HTML utilise des « balises » pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des « éléments » spéciaux tels que [`<head>`](/fr/docs/Web/HTML/Element/head), [`<title>`](/fr/docs/Web/HTML/Element/title), [`<body>`](/fr/docs/Web/HTML/Element/body), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<p>`](/fr/docs/Web/HTML/Element/p), [`<div>`](/fr/docs/Web/HTML/Element/div), [`<span>`](/fr/docs/Web/HTML/Element/span), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<datalist>`](/fr/docs/Web/HTML/Element/datalist), [`<details>`](/fr/docs/Web/HTML/Element/details), [`<embed>`](/fr/docs/Web/HTML/Element/embed), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<output>`](/fr/docs/Web/HTML/Element/output), [`<progress>`](/fr/docs/Web/HTML/Element/progress), [`<video>`](/fr/docs/Web/HTML/Element/video), [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<ol>`](/fr/docs/Web/HTML/Element/ol), [`<li>`](/fr/docs/Web/HTML/Element/li) et bien d'autres.
+Le langage HTML utilise des « balises » pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des « éléments » spéciaux tels que {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} et bien d'autres.
 
 En HTML, les balises sont insensibles à la casse et peuvent aussi bien être écrites en minuscules, en majuscules voire avec un mélange des deux. Autrement dit, la balise `<title>` pourrait très bien être écrite comme `<Title>`, `<TiTle>` ou d'une autre façon.
 
 Les articles suivants fournissent des éléments de référence utiles au développement web.
 
-## Ressources clés
-
-- Introduction au HTML
-  - : Vous faites vos premiers pas dans le développement web ? [Nos articles sur les bases de HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) expliquent ce qu'est HTML et comment l'utiliser.
-- Tutoriels HTML
-  - : Pour plus d'informations sur l'utilisation du HTML, des tutoriels et des exemples complets, vous pouvez consulter [notre section Apprendre HTML](/fr/docs/Learn/HTML).
-- Référence HTML
-  - : Dans notre [référence exhaustive](/fr/docs/Web/HTML/Reference), vous trouverez le détail de chaque élément et attribut constituant HTML.
-
-> [!CALLOUT]
->
-> Vous cherchez à devenir un développeur web front-end ?
->
-> Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
->
-> [Commencer](/fr/curriculum/)
-
 ## Tutoriels pour les débutants
 
-La section [Apprendre HTML](/fr/docs/Learn/HTML) contient plusieurs modules pour vous apprendre à utiliser HTML — sans autre connaissance particulière.
+- [Votre premier site web&nbsp;: création du contenu](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+  - : Cet article propose une brève introduction à ce qu'est HTML et à son utilisation, destiné aux personnes totalement débutantes en développement web.
+- [Structurer le contenu avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
+  - : Le module HTML de notre section [Apprendre le développement web](/fr/docs/Learn_web_development) enseigne toutes les bases de HTML depuis le début.
 
-- [Une introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
-  - : Dans ce module, on brosse un premier portrait de HTML pour présenter les concepts importants, la syntaxe. On voit comment appliquer HTML sur du texte, comment créer des hyperliens et comment structurer une page web grâce à HTML.
-- [Le multimédia et l'intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Dans ce module, on explore comment utiliser HTML pour intégrer des fichiers multimédias dans une page web. Cela couvre les différentes façons d'inclure une image, comment ajouter une vidéo ou un fichier audio voire aussi comment intégrer d'autres pages web.
-- [Les tableaux HTML](/fr/docs/Learn/HTML/Tables)
-  - : Il est parfois compliqué de représenter des données tabulaires de façon compréhensible et lisible sur une page web. Dans ce module, on voit les différentes balises utilisées pour construire des tableaux et certaines fonctionnalités plus complexes comme les légendes et résumés.
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
-  - : Les formulaires sont cruciaux sur le Web, ils permettent de créer un compte sur un site, de se connecter, d'acheter des produits, d'écrire des commentaires, etc. Dans ce module, on voit comment créer des formulaires pour le navigateur (« côté client »).
-- [Utiliser HTML pour résoudre des problèmes courants](/fr/docs/Learn/HTML/Howto)
-  - : Ce module fournit un ensemble d'articles au sujet des problèmes qu'on rencontre fréquemment lorsqu'on crée une page web : gérer les titres, ajouter des images ou des vidéos, mettre en avant une partie du texte, créer un formulaire, etc.
+## Guides
 
-## Sujets avancés
+Les [guides HTML](/fr/docs/Web/HTML/Guides) vous aident à construire avec HTML sur le Web, couvrant des sujets comme les formulaires, CORS, le préchargement de contenu et les images réactives.
 
-- [Images avec le contrôle d'accès HTTP](/fr/docs/Web/HTML/CORS_enabled_image)
-  - : L'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin), associé à un en-tête [CORS](/fr/docs/Glossary/CORS) approprié, permet de charger des images définies par l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) depuis des origines étrangères et de les utiliser dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme si elles étaient chargées depuis l'origine actuelle.
-- [Attributs de réglage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin)
-  - : Certains éléments HTML qui fournissent un support pour [CORS](/fr/docs/Web/HTTP/CORS), tels que [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<video>`](/fr/docs/Web/HTML/Element/video), ont un attribut `crossorigin` (propriété `crossOrigin`), qui vous permet de configurer les requêtes CORS pour les données extraites de l'élément.
-- [Précharger du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload)
-  - : La valeur `preload` de l'attribut [`<link>`](/fr/docs/Web/HTML/Element/link) de l'élément [`rel`](/fr/docs/Web/HTML/Element/link#attr-rel) vous permet d'écrire des requêtes déclaratives de récupération dans votre [`<head>`](/fr/docs/Web/HTML/Element/head) HTML, en spécifiant les ressources dont vos pages auront besoin très rapidement après le chargement, et que vous souhaitez donc commencer à précharger au début du cycle de vie d'une page, avant que le cycle de rendu du navigateur ne se mette en marche. Cela permet de s'assurer que ces éléments sont disponibles plus tôt et qu'ils risquent moins de bloquer le premier rendu de la page, améliorant ainsi les performances. Cet article fournit un guide de base sur le fonctionnement du `preload`.
+- [Formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
+  - : Les formulaires sont une partie très importante du Web&nbsp;: ils fournissent une grande partie des fonctionnalités nécessaires pour interagir avec les sites web (inscription, connexion, envoi de commentaires, achat de produits, etc.). Ce module vous initie à la création de la partie client/«&nbsp;front-end&nbsp;» des formulaires.
+- [Image avec CORS activé](/fr/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : L'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#crossorigin), combiné à un en-tête {{glossary("CORS")}} approprié, permet de charger des images définies par l'élément {{HTMLElement("img")}} depuis des origines externes et de les utiliser dans un élément {{HTMLElement("canvas")}} comme si elles étaient chargées depuis l'origine courante.
+- [Attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
+  - : Certains éléments HTML qui prennent en charge [CORS](/fr/docs/Web/HTTP/Guides/CORS), comme {{HTMLElement("img")}} ou {{HTMLElement("video")}}, possèdent un attribut `crossorigin` (propriété `crossOrigin`), qui permet de configurer les requêtes CORS pour les données récupérées par l'élément.
+- [Précharger du contenu avec rel="preload"](/fr/docs/Web/HTML/Reference/Attributes/rel/preload)
+  - : La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{htmlelement("link")}} permet d'écrire des requêtes de récupération déclaratives dans votre {{htmlelement("head")}} HTML, en spécifiant les ressources dont vos pages auront besoin très rapidement après le chargement. Vous pouvez ainsi commencer à précharger ces ressources tôt dans le cycle de chargement, avant que le moteur principal de rendu du navigateur ne démarre. Cela garantit leur disponibilité plus tôt et réduit le risque de bloquer le premier affichage de la page, ce qui améliore les performances. Cet article propose un guide de base sur le fonctionnement de `preload`.
+- [Images réactives](/fr/docs/Web/HTML/Guides/Responsive_images)
+  - : Cet article présente le concept d'images réactives&nbsp;: des images qui s'adaptent aux appareils ayant des tailles d'écran, des résolutions et d'autres caractéristiques très variées. Il présente aussi les outils HTML permettant de les mettre en œuvre, afin d'améliorer les performances sur différents appareils.
 
-## Références
+## Référence
 
 - [Référence HTML](/fr/docs/Web/HTML/Reference)
-  - : HTML est un langage décrivant la structure et le contenu sémantique d'un document web. Il est constitué d'**éléments**, chacun pouvant être paramétré grâce à différents **attributs**. Les documents HTML sont connectés à d'autres via des [liens](/fr/docs/Web/HTML/Attributes/rel)
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
-  - : Cette page liste les différents éléments HTML.
-- [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)
-  - : Les éléments du langage HTML possèdent des **attributs**. Il s'agit de valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de diverses manières.
-- [Attributs universels](/fr/docs/Web/HTML/Global_attributes)
-  - : Les attributs universels peuvent être spécifiés sur tous les [éléments HTML](/fr/docs/Web/HTML/Element), _même ceux qui ne sont pas spécifiés dans la norme_. Par exemple, les navigateurs qui prennent en charge HTML5 masquent les contenus marqués comme `<toto hidden>…<toto>` , bien que `<toto>` ne soit pas un élément valide HTML.
-- [Éléments en ligne](/fr/docs/Glossary/Inline-level_content) et [éléments de bloc](/fr/docs/Glossary/Block-level_content)
-  - : Les éléments HTML sont habituellement des éléments « en ligne » ou des éléments de bloc. Un élément en ligne occupe seulement l'espace associé aux balises. Les éléments de bloc sont une catégorie d'éléments HTML opposés aux éléments en ligne. Leur caractéristique principale réside dans le fait qu'ils sont séparés par un saut de ligne avant et après l'élément. Ce faisant, ils prennent la largeur de leurs conteneurs (créant ainsi un bloc de contenu).
-- [Types de lien](/fr/docs/Web/HTML/Attributes/rel)
-  - : Les différents liens permettent de décrire les relations entre deux documents qui sont reliés entre eux par un élément [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<link>`](/fr/docs/Web/HTML/Element/link).
-- [Formats de média audio et vidéo pris en charge par HTML](/fr/docs/Web/Media/Formats)
-  - : Les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video) permettent d'ajouter des médias audio et vidéo directement dans le navigateur (sans avoir à utiliser des plugins ou programmes tiers).
-- [Types de contenu HTML](/fr/docs/Web/HTML/Content_categories)
-  - : HTML s'organise selon différents types de contenu dont chacun peut être autorisé ou non en fonction du contexte. Ces catégories indiquent quels éléments peuvent être contenus ou non dans d'autres éléments. Cet article explique le fonctionnement de ces catégories.
+  - : HTML est composé d'**éléments**, chacun pouvant être modifié par un certain nombre d'**attributs**. Les documents HTML sont reliés entre eux par des **liens**.
+- [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements)
+  - : Parcourez la liste de tous les {{glossary("Element", "éléments")}} {{glossary("HTML")}}.
+- [Référence des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes)
+  - : Les éléments HTML possèdent des **attributs**. Ce sont des valeurs supplémentaires qui configurent les éléments ou modifient leur comportement de différentes manières.
+- [Attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes)
+  - : Les attributs globaux peuvent être spécifiés sur tous les [éléments HTML](/fr/docs/Web/HTML/Reference/Elements), _même ceux non spécifiés dans la norme_. Cela signifie que tout élément non standard doit tout de même accepter ces attributs, même si cela rend le document non conforme à HTML5.
+- [Éléments de type en-ligne](/fr/docs/Glossary/Inline-level_content) et [éléments de type bloc](/fr/docs/Glossary/Block-level_content)
+  - : Les éléments HTML sont généralement «&nbsp;en-ligne&nbsp;» ou «&nbsp;bloc&nbsp;». Un élément en-ligne occupe uniquement l'espace délimité par ses balises. Un élément de type bloc occupe tout l'espace de son élément parent (contenant), créant ainsi une «&nbsp;boîte de bloc&nbsp;».
+- [Commentaires HTML](/fr/docs/Web/HTML/Guides/Comments)
+  - : Les commentaires HTML servent à ajouter des notes explicatives dans le balisage ou à empêcher le navigateur d'interpréter certaines parties du document.
+- [Guide des types et formats de médias sur le web](/fr/docs/Web/Media/Guides/Formats)
+  - : Les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}} permettent de lire des médias audio et vidéo nativement dans votre contenu, sans avoir besoin de support logiciel externe.
+- [Catégories de contenu HTML](/fr/docs/Web/HTML/Guides/Content_categories)
+  - : HTML comprend plusieurs types de contenu, chacun pouvant être utilisé dans certains contextes et interdit dans d'autres. De même, chaque contexte a un ensemble d'autres catégories de contenu qu'il peut contenir et des éléments qui peuvent ou non y être utilisés. Ce guide présente ces catégories.
+- [Mode «&nbsp;Quirks&nbsp;» et mode standard](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
+  - : Informations historiques sur le mode «&nbsp;Quirks&nbsp;» et le mode standard.
 
-## Sujets connexes
+## Sujets associés
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-  - : Cet article couvre la plupart des façons d'utiliser CSS pour ajouter de la couleur au contenu HTML, en indiquant les parties des documents HTML qui peuvent être colorées et les propriétés CSS à utiliser pour ce faire. Il comprend des exemples, des liens vers des outils de création de palettes, etc.
+- [Appliquer de la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+  - : Cet article présente la plupart des façons d'utiliser CSS pour ajouter de la couleur au contenu HTML, en listant les parties des documents HTML qui peuvent être colorées et les propriétés CSS à utiliser.

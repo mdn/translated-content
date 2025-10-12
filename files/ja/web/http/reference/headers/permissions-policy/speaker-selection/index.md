@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーの `speaker-selection` ディレクティブは、現在の文書がオーディオ出力機器（スピーカー、ヘッドフォンなど）を列挙および選択できるかどうかを制御します。
 

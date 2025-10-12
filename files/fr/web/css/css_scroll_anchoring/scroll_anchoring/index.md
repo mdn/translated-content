@@ -50,7 +50,7 @@ Pour désactiver cette fonctionnalité sur une certaine partie du document, on c
 
 La spécification définit également certains évènements qui suppriment cette fonctionnalité où ça serait problématique. Si un évènement particulier se produit sur le nœud d'ancrage ou sur un ancêtre de celui-ci, l'ancrage est supprimé.
 
-Les évènements en question sont les modifications des [valeurs calculées](/fr/docs/Web/CSS/computed_value) des propriétés suivantes :
+Les évènements en question sont les modifications des [valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing) des propriétés suivantes :
 
 - {{cssxref("top")}}, {{cssxref("left")}}, {{cssxref("right")}} ou {{cssxref("bottom")}}
 - {{cssxref("margin")}} ou {{cssxref("padding")}}

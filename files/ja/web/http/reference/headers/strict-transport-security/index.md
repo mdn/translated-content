@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Strict-Transport-Security`** は{{Glossary("response header", "レスポンスヘッダー")}}で（しばしば {{Glossary("HSTS")}} と略されます）、ブラウザーに、そのサイトは HTTPS を使用してのみアクセスすべきであり、今後 HTTP を使用してアクセスしようとした場合は自動的に HTTPS にアップグレードされるべきであるという情報を通知します。
 
 > [!NOTE]

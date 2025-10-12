@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 
 **`getBigInt64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位のオフセット位置から取得します。
 
-{{InteractiveExample("JavaScript Demo: DataView.getBigUint64()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getBigUint64()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Patch`** 응답 HTTP 헤더는 서버가 PATCH 요청에서 어떤 미디어 유형을 이해할 수 있는지를 알려줍니다.
 
 메서드에 대한 응답으로 **`Accept-Patch`** 를 반환하면 Request-URI로 식별된 리소스에서 PATCH가 허용됨을 의미합니다. 두 가지 일반적인 경우가 이에 해당합니다.

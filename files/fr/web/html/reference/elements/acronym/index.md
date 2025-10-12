@@ -12,11 +12,11 @@ original_slug: Web/HTML/Element/acronym
 L'élément HTML **`<acronym>`**, pour les acronymes, permet aux auteurs de pages d'indiquer une suite de caractères composant un acronyme ou l'abréviation d'un mot.
 
 > [!NOTE]
-> Cet élément n'existe plus en HTML5 et ne devrait plus être utilisé. **Les développeuses et développeurs web devraient utiliser l'élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) à la place**.
+> Cet élément n'existe plus en HTML5 et ne devrait plus être utilisé. **Les développeuses et développeurs web devraient utiliser l'élément [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) à la place**.
 
 ## Attributs
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Interface DOM
 
@@ -42,7 +42,7 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 
 Bien que le but de cette balise ne soit simplement qu'un avantage pratique pour l'auteur, son style par défaut varie selon les navigateurs :
 
-- Certains navigateurs comme Internet Explorer lui attribuent le même style qu'un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
+- Certains navigateurs comme Internet Explorer lui attribuent le même style qu'un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span).
 - Opera, Firefox, et quelques autres ajoutent une ligne pointillée sous le contenu de l'élément.
 - Quelques navigateurs ajoutent une ligne pointillée en dessous et mettent le contenu en petites majuscules. Pour éviter ce comportement, il est possible d'ajouter `font-variant: none` à la feuille de style CSS.
 
@@ -58,4 +58,4 @@ Il est donc fortement recommandé que les développeurs web ne s'attendent pas �
 
 ## Voir aussi
 
-- L'élément HTML [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)
+- L'élément HTML [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr)

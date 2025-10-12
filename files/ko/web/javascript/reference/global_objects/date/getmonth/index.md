@@ -39,7 +39,8 @@ var month = Xmas95.getMonth();
 console.log(month); // 11
 ```
 
-> **참고:** **참고:** 필요한 경우 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat()")}}과 `options` 매개변수를 사용해 해당하는 달의 이름(`"January"` 등)을 가져올 수 있습니다. 이 방법을 사용하면 국제화도 보다 편리합니다.
+> [!NOTE]
+> **참고:** 필요한 경우 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat()")}}과 `options` 매개변수를 사용해 해당하는 달의 이름(`"January"` 등)을 가져올 수 있습니다. 이 방법을 사용하면 국제화도 보다 편리합니다.
 
 ```js
 var options = { month: "long" };

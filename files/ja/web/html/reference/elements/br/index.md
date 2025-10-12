@@ -9,7 +9,7 @@ l10n:
 
 **`<br>`** は [HTML](/ja/docs/Web/HTML) の要素で、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。
 
-{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;br&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>

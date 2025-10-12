@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 检查是否支持将某个正则表达式作为 {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` 规则的条件。
 
 ## 语法

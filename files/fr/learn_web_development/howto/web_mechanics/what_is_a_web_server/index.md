@@ -53,7 +53,7 @@ Par exemple, afin de produire la page web que vous voyez sur votre navigateur, l
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Getting_started)._
 
 ## Aller plus loin
 
@@ -72,7 +72,7 @@ D'un point de vue technique, il serait tout à fait possible de stocker tout ces
 
 Au regard de toutes ces raisons, il est crucial de trouver un hébergeur correct pour votre site web. Prenez donc le temps de parcourir les différentes offres afin de choisir celle qui correspond le mieux à votre besoin et à votre budget (qui pourra varier entre 0 € et plusieurs milliers d'euros par mois selon ce qui est demandé). Vous trouverez d'autres détails sur ce point [dans cet article](/fr/docs/Apprendre/How_much_does_it_cost#hosting).
 
-Une fois que vous avez trouvé votre hébergeur et la solution d'hébergement qui vous convient, il vous suffira [de transférer vos fichiers vers le serveur web](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+Une fois que vous avez trouvé votre hébergeur et la solution d'hébergement qui vous convient, il vous suffira [de transférer vos fichiers vers le serveur web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
 
 ### Communiquer via HTTP
 
@@ -113,6 +113,6 @@ Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer u
 
 Maintenant que vous connaissez les serveurs web, vous pourriez :
 
-- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).

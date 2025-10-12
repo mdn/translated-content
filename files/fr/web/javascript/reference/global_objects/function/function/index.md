@@ -27,7 +27,7 @@ new Function(arg1, … argN, corpsFonction)
 ### Paramètres
 
 - `arg1, … argN`
-  - : Les noms à utiliser par la fonction comme noms formels d'arguments. Chacun doit être une chaîne de caractères qui correspond à un paramètre JavaScript valide ([un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une décomposition en paramètres](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), éventuellement avec une valeur par défaut), ou une liste de telles chaînes, séparées par des virgules.
+  - : Les noms à utiliser par la fonction comme noms formels d'arguments. Chacun doit être une chaîne de caractères qui correspond à un paramètre JavaScript valide ([un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une décomposition en paramètres](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring), éventuellement avec une valeur par défaut), ou une liste de telles chaînes, séparées par des virgules.
 
     Les paramètres étant analysés de la même façon que les déclarations de fonction, les espaces et les commentaires sont acceptés. Ainsi, on pourra écrire `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"` (`"x, laValeur = 42", "[a, b]"` est également correct, mais porte plus à confusion.)
 
