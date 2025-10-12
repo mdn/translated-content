@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **`table-layout`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。
 
 {{InteractiveExample("CSS デモ: table-layout")}}

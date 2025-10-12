@@ -3,7 +3,7 @@ title: :-moz-first-node
 slug: Web/CSS/:-moz-first-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 **`:-moz-first-node`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示任何作为某个其他元素的第一个子节点的元素。它与 {{Cssxref(":first-child")}} 不同，因为它不匹配在其前面有（非空白）文本的第一个子元素。
 

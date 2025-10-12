@@ -55,4 +55,5 @@ l10n:
 - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS 生成コンテンツ](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
-> **メモ:** [CSS レイアウトの問題解決](/ja/docs/Web/CSS/Layout_cookbook)に向けた料理帳があり、良くあるレイアウトのタスクの完全に動作する例と説明が付いています。また、[実践的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)では、位置指定を使用してタブ付きの情報ボックスやスライド式の隠しパネルを作成することができますので、調べてみてください。
+> [!NOTE]
+> [CSS レイアウトの問題解決](/ja/docs/Web/CSS/Layout_cookbook)に向けた料理帳があり、良くあるレイアウトのタスクの完全に動作する例と説明が付いています。また、[実践的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)では、位置指定を使用してタブ付きの情報ボックスやスライド式の隠しパネルを作成することができますので、調べてみてください。

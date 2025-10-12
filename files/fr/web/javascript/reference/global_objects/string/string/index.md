@@ -42,4 +42,4 @@ Ici, la fonction produit une chaîne de caractères (une valeur primitive). Tout
 
 ## Voir aussi
 
-- [L'article sur le formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Text_formatting)
+- [L'article sur le formatage du texte dans le guide JavaScript](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)

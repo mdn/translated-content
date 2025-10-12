@@ -3,8 +3,6 @@ title: Introduction au développement de jeux vidéo
 slug: Games/Introduction
 ---
 
-{{GamesSidebar}}
-
 Le Web d'aujourd'hui est désormais une plate-forme viable pour créer des jeux époustouflants et de bonne qualité, mais aussi et surtout pour distribuer ces jeux. Imaginez tous les jeux qui peuvent être créés...
 
 Grâce aux technologies web actuelles et aux navigateurs récents, il est tout à fait possible de créer un jeu excellent pour le Web. Et nous ne parlons pas ici de jeux de cartes ou de jeux sociaux multi-joueurs déjà créés il y a longtemps, avec Flash®, mais bien de jeux de tirs en 3D, de RPG etc. Grâce aux améliorations des performances des compilateurs juste-à-temps [JavaScript](/fr/docs/Web/JavaScript) et aux nouvelles APIs, vous pouvez construire des jeux vidéo qui fonctionnent dans un navigateur (ou sur des plateformes HTML5 comme [Firefox OS](/fr/docs/Mozilla/Firefox_OS)) sans compromettre les performances.
@@ -45,7 +43,7 @@ Pour celles et ceux qui souhaitent plonger dans la technique, voici la liste des
   - : Si vous souhaitez que vos joueurs puissent utiliser des manettes ou d'autres contrôleurs pour votre jeu, vous aurez besoin de cette API.
 - [HTML](/fr/docs/Web/HTML) et [CSS](/fr/docs/Web/CSS)
   - : Combinées ensembles, ces deux technologies vous permettent de construire et de mettre en forme l'interface utilisateur de votre jeu. L'élément HTML {{HTMLElement("canvas")}} permet de gérer des graphismes en deux dimensions.
-- [HTML audio](/fr/docs/Web/HTML/Element/audio)
+- [HTML audio](/fr/docs/Web/HTML/Reference/Elements/audio)
   - : L'élément HTML {{HTMLElement("audio")}} vous permet de jouer de la musique et des sons. Si vous souhaitez aller plus loin, l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API) vous offre plus de possibilités de traitement !
 - [IndexedDB](/fr/docs/Web/API/IndexedDB_API)
   - : Une API puissante, permettant de maintenir les données de l'utilsateur stockées sur son ordinateur ou son appareil. Une bonne façon de sauvegarder l'état d'un jeu ou autre information localement de telle sorte qu'elle ne sera pas téléchargée à chaque fois qu'on aura besoin d'elle. Aussi utile pour rendre le jeu utilisable même quand le joueur n'est pas connecté à internet (comme durant un long vol en avion...).

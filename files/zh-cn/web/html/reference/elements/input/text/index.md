@@ -3,8 +3,6 @@ title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 ---
 
-{{HTMLSidebar}}
-
 **`text`** 类型的 {{HTMLElement("input")}} 元素创建了基础的单行文本字段。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}

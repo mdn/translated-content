@@ -3,8 +3,6 @@ title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 ---
 
-{{CSSRef}}
-
 `border-image-repeat` 定义图片如何填充边框。或为单个值，设置所有的边框；或为两个值，分别设置水平与垂直的边框。
 
 ## 语法

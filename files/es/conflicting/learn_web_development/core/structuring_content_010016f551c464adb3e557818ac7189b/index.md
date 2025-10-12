@@ -35,7 +35,7 @@ Este módulo contiene los siguientes artículos que te enseñarán todo lo funda
 
 Las siguientes evaluaciones pondrán a prueba tu comprensión de los conceptos básicos de HTML vistos en las guías anteriores.
 
-- [Página de bienvenida de Mozilla](/es/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)
+- [Página de bienvenida de Mozilla](/es/docs/Learn_web_development/Core/Structuring_content/Splash_page)
   - : En esta evaluación, probaremos tu conocimiento de algunas de las técnicas observadas en los artículos de este módulo, ¡lo que te permitirá agregar algunas imágenes y videos a una página original de Mozilla!
 
 ## Ver también

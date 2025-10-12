@@ -3,8 +3,6 @@ title: hsl()
 slug: Web/CSS/color_value/hsl
 ---
 
-{{CSSRef}}
-
 **`hsl()`** 函数标记根据其*色相*、*饱和度*和*明度*来表达 {{glossary("RGB", "sRGB")}} 颜色。可选的 _alpha_ 成分代表了颜色的透明度。
 
 > [!NOTE]

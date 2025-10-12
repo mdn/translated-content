@@ -1,16 +1,13 @@
 ---
 title: クリッピングとマスク
 slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
-original_slug: Web/SVG/Tutorial/Clipping_and_masking
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
-
-作成したものの一部を消去することは、一見矛盾しているように見えるかもしれません。しかし、例えばSVGで半円を作成しようとすると、次のプロパティを使用することがすぐにわかるでしょう。
+作成したものの一部を消去することは、一見矛盾しているように見えるかもしれません。しかし、例えば SVG で半円を作成しようとすると、次のプロパティを使用することがすぐにわかるでしょう。
 
 - **クリッピング**はある要素のうち、他の場所で定義された一部分を取り除くことを指します。この場合は半透明効果をかけることはできず、完全に表示するか全く表示しないかの扱いになります。
 
@@ -35,9 +32,9 @@ l10n:
 </svg>
 ```
 
-(100,100) を中心にした半径 100 の円を描画します。`clip-path` 属性は、`rect` 要素を 1 つ含む `{{ SVGElement("clipPath") }}` 要素を参照しています。この長方形は、キャンバスの上半分に黒色で描画されるものです。なお補足として、`clipPath` 要素はたいてい `defs` セクションに置かれます。
+(100,100) を中心にした半径 100 の円を描画します。`clip-path` 属性は、`rect` 要素を 1 つ含む {{ SVGElement("clipPath") }} 要素を参照しています。この矩形は、キャンバスの上半分に黒色で描画されるものです。なお補足として、`clipPath` 要素はたいてい `defs` セクションに置かれます。
 
-ところが、`rect` 要素は描画されません。描画されない代わりにそのピクセルデータは、円の中で最終的にレンダリングするピクセルを決定することに用いられます。長方形は円の上半分だけを覆っているため、円の下半分は消滅します。
+ところが、`rect` 要素は描画されません。描画されない代わりにそのピクセルデータは、円の中で最終的にレンダリングするピクセルを決定することに用いられます。矩形は円の上半分だけを覆っているため、円の下半分は消滅します。
 
 {{ EmbedLiveSample('Creating_clips','240','240') }}
 
@@ -69,7 +66,7 @@ l10n:
 </svg>
 ```
 
-最下層のレイヤーに緑色で塗りつぶした `rect`、最上位に赤色で塗りつぶした `rect` があります。また後者には、`mask` 要素を指し示す `mask` 属性があります。mask 要素の内容物は `rect` 要素が 1 つあり、これは透明から白色へのグラデーションで塗りつぶしています。この結果、赤色の長方形のピクセルは mask の内容物のアルファ値 (透明度) を継承して、最終的に緑色から赤色へのグラデーションができます。
+最下層のレイヤーに緑色で塗りつぶした `rect`、最上位に赤色で塗りつぶした `rect` があります。また後者には、`mask` 要素を指し示す `mask` 属性があります。mask 要素の内容物は `rect` 要素が 1 つあり、これは透明から白色へのグラデーションで塗りつぶしています。この結果、赤色の矩形のピクセルは mask の内容物のアルファ値 (透明度) を継承して、最終的に緑色から赤色へのグラデーションができます。
 
 {{ EmbedLiveSample('Masking','240','240') }}
 
@@ -81,7 +78,7 @@ l10n:
 <rect x="0" y="0" width="100" height="100" opacity=".5" />
 ```
 
-上記の長方形は、半透明で描画します。fill および stroke について分けられた 2 つの属性 `fill-opacity` と `stroke-opacity` があり、それぞれのプロパティの不透明度を分けて制御します。なお、ストロークは塗りつぶしの上層に描画することに注意してください。このために塗りつぶしもある要素でストロークの不透明度を設定した場合は、ストロークの半分で塗りつぶしが透けて見え、また同時に残り半分で背景が透けて見えます。
+上記の矩形は、半透明で描画します。fill および stroke について分けられた 2 つの属性 `fill-opacity` と `stroke-opacity` があり、それぞれのプロパティの不透明度を分けて制御します。なお、ストロークは塗りつぶしの上層に描画することに注意してください。このために塗りつぶしもある要素でストロークの不透明度を設定した場合は、ストロークの半分で塗りつぶしが透けて見え、また同時に残り半分で背景が透けて見えます。
 
 ```html
 <svg
@@ -110,4 +107,4 @@ l10n:
 
 ウェブ開発者のツールボックスの中で最も強力なツールの一つが `display: none` です。したがって、CSS 2 で定義されている `visibility` と `clip` とともに、この CSS プロパティを SVG にも導入することが決定されたのは驚くべきことではありません。 前回設定した `display: none` を元に戻すには、すべての SVG 要素の初期値が `inline` であることを知っておくことが重要です。
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}

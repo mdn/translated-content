@@ -3,8 +3,6 @@ title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
 ---
 
-{{CSSRef}}
-
 **`overscroll-behavior-y`** CSS 属性设置浏览器在到达滚动区域的垂直边界时的行为。
 
 有关完整说明，请参阅 {{cssxref("overscroll-behavior")}}。

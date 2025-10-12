@@ -52,7 +52,7 @@ Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comm
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un tel élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un tel élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
 
 ### Exemple 1
 
@@ -74,7 +74,7 @@ Si on n'indique aucune valeur, le bouton sera vide :
 
 ## Utiliser les boutons `<input>`
 
-Les éléments `<input type="button">` ne possèdent pas de comportement particulier (leurs analogues [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit) et [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset) permettent respectivement d'envoyer et de réinitialiser des formulaires). Pour qu'un bouton `<input type="button">` puisse avoir un effet, il est nécessaire d'écrire quelques lignes JavaScript.
+Les éléments `<input type="button">` ne possèdent pas de comportement particulier (leurs analogues [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit) et [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset) permettent respectivement d'envoyer et de réinitialiser des formulaires). Pour qu'un bouton `<input type="button">` puisse avoir un effet, il est nécessaire d'écrire quelques lignes JavaScript.
 
 ### Un bouton simple
 
@@ -110,9 +110,9 @@ Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputEle
 
 ### Ajouter des raccourcis clavier
 
-Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
+Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey) pour la liste de ces touches).
 
 ```html
 <form>
@@ -145,7 +145,7 @@ function updateBtn() {
 
 ### Désactiver et activer un bouton
 
-Pour désactiver un bouton, il suffit d'ajouter l'attribut universel [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) :
+Pour désactiver un bouton, il suffit d'ajouter l'attribut universel [`disabled`](/fr/docs/Web/HTML/Reference/Global_attributes#disabled) :
 
 ```html
 <input type="button" value="Je suis désactivé" disabled />
@@ -208,7 +208,7 @@ function disableBtn() {
 {{EmbedLiveSample("Exemple_2", 650, 60)}}
 
 > [!NOTE]
-> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 

@@ -236,7 +236,8 @@ btn.addEventListener("click", displayMessage());
 
 1. まず始めに、この実習に必要なアイコン（[warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) と [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)）を GitHub からダウンロードしてください。 HTML ファイルと同じ場所にある `icons` という新しいフォルダーに保存してください。
 
-   > **メモ:** [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！（実際のアイコンのページは移動か削除されています。）
+   > [!NOTE]
+   > [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！（実際のアイコンのページは移動か削除されています。）
 
 2. 次に、 HTML ファイル内の CSS を探します。私たちは、アイコンの道を作るためにいくつかの変更を行います。まず `.msgBox` の幅を次のように更新します。
 

@@ -3,8 +3,6 @@ title: Access-Control-Allow-Methods
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Methods`** это заголовок ответа, который определяет метод или методы доступа к ресурсам {{glossary("preflight request")}}.
 
 <table class="properties">

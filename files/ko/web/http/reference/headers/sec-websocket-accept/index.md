@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **Sec-WebSocket-Accept** 헤더는 웹소켓 오프닝 핸드셰이크에 사용됩니다. 이는 응답 헤더에 나타납니다. 즉, 이 헤더는 서버가 웹소켓 연결을 시작할 의향을 알리기 위해 서버에서 클라이언트로 전송하는 헤더입니다.
 
 <table class="properties">

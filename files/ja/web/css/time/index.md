@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
-
 **`<time>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、時間の値を秒単位またはミリ秒単位で表現します。これは {{cssxref("animation")}} や {{cssxref("transition")}} および関連するプロパティで使用されています。
 
 ## 構文
@@ -23,7 +21,8 @@ l10n:
 - `ms`
   - : ミリ秒単位の時間を表します。例: `0ms`, `150.25ms`, `-60000ms`
 
-> **メモ:** `s` と `ms` の間の変換は、論理的に `1s` = `1000ms` となります。
+> [!NOTE]
+> `s` と `ms` の間の変換は、論理的に `1s` = `1000ms` となります。
 
 ## 例
 

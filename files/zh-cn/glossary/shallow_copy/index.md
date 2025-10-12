@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3114504a9746114aa5501656b76198e85d7af901
 ---
 
-{{GlossarySidebar}}
-
 对象的**浅拷贝**是属性与拷贝的源对象属性共享相同的[引用](/zh-CN/docs/Glossary/Object_reference)（指向相同的底层值）的副本。因此，当你更改源对象或副本时，也可能导致另一个对象发生更改。与之相比，在[深拷贝](/zh-CN/docs/Glossary/Deep_copy)中，源对象和副本是完全独立的。
 
 形式化地，如果两个对象 `o1` 和 `o2` 是浅拷贝，那么：

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/HEAD
 original_slug: Web/HTTP/Methods/HEAD
 ---
 
-{{HTTPSidebar}}
-
 O **método HTTP `HEAD`** solicita os cabeçalhos retornados de um recurso específico que foi requisitado por um método HTTP {{HTTPMethod("GET")}}. Tal solicitação pode ser feita antes de baixar um grande recurso para economizar largura de banda, por exemplo.
 
 Uma resposta para um método `HEAD` não deve ter um corpo. Se tiver, deve ser ignorado. Mesmo assim, {{glossary("Entity header", "entity headers")}} (cabeçalhos de entidade) descrevendo o conteúdo do corpo (como {{HTTPHeader("Content-Length")}}) podem ser incluidos na resposta. Eles não se relacionam com o corpo da resposta `HEAD`, que deve estar vazio, e sim com o corpo de solicitação relacionado, usando o método {{HTTPMethod("GET")}} que teria retornado como resposta.

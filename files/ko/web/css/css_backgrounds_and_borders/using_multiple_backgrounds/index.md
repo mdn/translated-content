@@ -3,8 +3,6 @@ title: 한 번에 여러 배경 사용하기
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
-{{CSSRef}}
-
 **여러 개의 배경**을 한 번에 적용할 수도 있습니다. 첫 번째 배경이 맨 위에, 마지막 배경이 맨 밑에 위치하는 레이어 구조를 사용하게 됩니다. 마지막 배경에만 배경색을 적용할 수 있습니다.
 
 여러 배경을 적용하는 건 쉽습니다.

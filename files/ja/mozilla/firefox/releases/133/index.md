@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66fa0acf565a240c390418f588d571d6e650514d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 133 の変更点をまとめています。Firefox 133 は、米国時間 [2024 年 11 月 26 日](https://whattrainisitnow.com/release/?version=133) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

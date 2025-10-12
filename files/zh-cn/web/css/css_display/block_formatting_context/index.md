@@ -3,8 +3,6 @@ title: 区块格式化上下文
 slug: Web/CSS/CSS_display/Block_formatting_context
 ---
 
-{{CSSRef}}
-
 **区块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
 
 下列方式会创建块格式化上下文：

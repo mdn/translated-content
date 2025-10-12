@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`412 Precondition Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、ターゲットリソースへのアクセスが拒否されたことを示します。
 これは、[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} 以外のメソッドで行う際に、 {{HTTPHeader("If-Unmodified-Since")}} または {{HTTPHeader("If-Match")}} ヘッダーで定義された条件が満たされない場合に発生します。
 その場合、リクエスト（通常はリソースのアップロードまたは変更）は実行されず、このエラーレスポンスが返されます。
