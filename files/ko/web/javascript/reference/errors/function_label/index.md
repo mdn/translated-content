@@ -76,7 +76,7 @@ const createObj = () => ({
 
 ## 같이 보기
 
-- [Labeled statement](/ko/docs/Web/JavaScript/Reference/Statements/label)
+- [레이블이 지정된 문](/ko/docs/Web/JavaScript/Reference/Statements/label)
 - {{jsxref("Statements/function", "function")}}
-- [Strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)
-- [Deprecated and obsolete features](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)
+- [사용 중단 및 구식 기능](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
