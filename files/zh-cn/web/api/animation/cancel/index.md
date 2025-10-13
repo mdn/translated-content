@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 中 {{domxref("Animation")}} 接口的 **`cancel()`** 方法会清除由该动画产生的所有 {{domxref("KeyframeEffect")}}，并中止其播放。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 中 {{domxref("Animation")}} 接口的 **`cancel()`** 方法会清除由该动画产生的所有 {{domxref("KeyframeEffect")}}，并中止其播放。
 
 > [!NOTE]
 > 当动画被取消时，{{domxref("Animation.startTime", "startTime")}} 和 {{domxref("Animation.currentTime", "currentTime")}} 会被设为 `null`。
@@ -29,7 +29,7 @@ cancel()
 
 ### 异常
 
-该方法本身不会直接抛出异常；但是，如果在动画被取消时，{{domxref("Animation.playState", "playState")}} 不设为 `"idle"`，则 {{domxref("Animation.finished", "当前的 finished promise", "", 1)}} 会以名为 `AbortError` 的 {{domxref("DOMException")}} 被拒绝。
+该方法本身不会直接抛出异常；但是，如果在动画被取消时，{{domxref("Animation.playState", "playState")}} 不设为 `"idle"`，则{{domxref("Animation.finished", "当前的 finished promise", "", 1)}} 会以名为 `AbortError` 的 {{domxref("DOMException")}} 被拒绝。
 
 ## 规范
 
@@ -41,8 +41,8 @@ cancel()
 
 ## 参见
 
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("KeyframeEffect")}}
 - {{domxref("Animation")}}
 - {{domxref("Animation.playState")}}
-- {{domxref("Animation.finished")}} 返回的 promise，如果动画的 animation `playState` 不是 `"idle"`，将会拒绝。
+- {{domxref("Animation.finished")}} 返回的 promise，如果动画的 `playState` 不是 `"idle"`，将会拒绝。
