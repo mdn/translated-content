@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`sibling-index()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、 DOM ツリー内におけるすべての兄弟要素に対する、現在の要素の相対的な位置を表す整数を返します。返される値は、親要素内のすべての兄弟要素の中で、コンテキストの子要素の位置のインデックス番号です。最初の子供は `1`、最後の子供は {{domxref("Element.children")}}.length を返します。
+**`sibling-index()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 DOM ツリー内におけるすべての兄弟要素に対する、現在の要素の相対的な位置を表す整数を返します。返される値は、親要素内のすべての兄弟要素の中で、コンテキストの子要素の位置のインデックス番号です。最初の子供は `1`、最後の子供は {{domxref("Element.children")}}.length を返します。
 
 {{InteractiveExample("CSS Demo: sibling-index()")}}
 

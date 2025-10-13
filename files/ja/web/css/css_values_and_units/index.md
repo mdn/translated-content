@@ -168,7 +168,7 @@ CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/
 - [成分値の組み合わせ](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#成分値の組み合わせ)
 - [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css_全体のキーワード)
 - {{glossary("Device pixel", "デバイスピクセル")}}
-- [関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - {{glossary("Identifier", "識別子")}}
 - {{glossary("Interpolation", "補間")}}
 - {{glossary("Keyword", "キーワード")}}
@@ -191,7 +191,7 @@ CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/
 - [テキストデータ型](/ja/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
   - : テキストデータ型（定義済みのキーワード値、グローバル CSS キーワード値、 URL など）の概要。
 
-- [CSS 値関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [CSS 値関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
   - : CSS プロパティの CSS 値を返すために、特別なデータ処理や計算を呼び出す CSS 文の概要。
 
 - [CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)

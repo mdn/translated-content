@@ -135,7 +135,7 @@ footer {
 }
 ```
 
-また、 [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
+また、 [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
 
 ```css
 :root {

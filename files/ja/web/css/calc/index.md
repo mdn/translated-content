@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
 ---
 
-**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
+**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
 
 {{InteractiveExample("CSS デモ: calc()")}}
 
@@ -261,5 +261,5 @@ p {
 
 - {{CSSxRef("&lt;calc-sum&gt;")}}
 - {{CSSxRef("&lt;calc-keyword&gt;")}}
-- [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

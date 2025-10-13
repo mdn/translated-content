@@ -8,7 +8,7 @@ l10n:
 > [!NOTE]
 > La notation fonctionnelle `rgba()` est un alias de `rgb()`. Elles sont strictement équivalentes. Il est recommandé d'utiliser `rgb()`.
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`rgb()`** exprime une couleur dans l'{{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes rouge, verte et bleue. Un composant alpha optionnel représente la transparence de la couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`rgb()`** exprime une couleur dans l'{{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes rouge, verte et bleue. Un composant alpha optionnel représente la transparence de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rgb()")}}
 

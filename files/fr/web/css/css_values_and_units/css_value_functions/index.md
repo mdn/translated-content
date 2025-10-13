@@ -1,6 +1,6 @@
 ---
 title: Fonctions de valeur CSS
-slug: Web/CSS/CSS_values_and_units/CSS_Value_Functions
+slug: Web/CSS/CSS_values_and_units/CSS_value_functions
 l10n:
   sourceCommit: 9036ccca6d55b90913ca424e6706b0c9ed1fa93b
 ---

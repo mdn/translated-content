@@ -35,7 +35,7 @@ clip-pathプロパティは、クリップを適用します。このプロパ�
 
 ### `clip-path` プロパティの値
 
-要素を視覚的にクリップするには、 `clip-path` プロパティを {{cssxref("geometry-box")}}、{{cssxref("url_value", "url")}}、{{svgElement("clipPath")}} クリップソース、[shape 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#shape_functions)で作成した {{cssxref("basic-shape")}} のいずれかに設定します。
+要素を視覚的にクリップするには、 `clip-path` プロパティを {{cssxref("geometry-box")}}、{{cssxref("url_value", "url")}}、{{svgElement("clipPath")}} クリップソース、[shape 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#shape_functions)で作成した {{cssxref("basic-shape")}} のいずれかに設定します。
 
 ### 形状ボックス
 

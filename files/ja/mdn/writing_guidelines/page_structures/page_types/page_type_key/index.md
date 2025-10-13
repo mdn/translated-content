@@ -64,7 +64,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `css-at-rule`: [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)。例えば {{cssxref("@media")}} など。
 - `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/@counter-style/prefix) など。
 - `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)など。
-- `css-function`: [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)。例えば {{cssxref("max")}} など。
+- `css-function`: [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)。例えば {{cssxref("max")}} など。
 - `css-keyword`: キーワード。例えば {{cssxref("inherit")}} など。
 - `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/@media/hover) など。
 - `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)など。

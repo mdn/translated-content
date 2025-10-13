@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`contrast-color()`** prend une valeur {{cssxref("color_value","couleur")}} et retourne une couleur contrastée [garantie <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`contrast-color()`** prend une valeur {{cssxref("color_value","couleur")}} et retourne une couleur contrastée [garantie <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
 
 `contrast-color()` permet, par exemple, de définir une couleur de texte et de générer automatiquement une couleur d'arrière‑plan contrastée, ou l'inverse. Il évite le besoin de maintenir des paires de couleurs fond/texte.
 

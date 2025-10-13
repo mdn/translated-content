@@ -9,7 +9,7 @@ l10n:
 
 ## 構文
 
-`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#数学関数)で使用される数値の定数を定義します。
+`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)で使用される数値の定数を定義します。
 
 ### 値
 
@@ -53,7 +53,7 @@ l10n:
 
 ## 解説
 
-数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
+数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
 例えば、次のようになります。
 
 - `animation-name: pi;` は "pi" という名前のアニメーションを表し、数学定数の `pi` にはなりません。

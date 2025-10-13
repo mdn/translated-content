@@ -4027,7 +4027,7 @@
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
-/ja/docs/Web/CSS/CSS_Functions	/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions
+/ja/docs/Web/CSS/CSS_Functions	/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
 /ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility

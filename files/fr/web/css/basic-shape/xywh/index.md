@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`xywh()`** crée un rectangle à partir des distances spécifiées depuis le bord gauche (`x`) et le bord supérieur (`y`) du bloc englobant, ainsi que la largeur (`w`) et la hauteur (`h`) du rectangle. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `xywh()` dans des propriétés CSS telles que {{cssxref("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{cssxref("clip-path")}} pour définir la forme de la région de découpe.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`xywh()`** crée un rectangle à partir des distances spécifiées depuis le bord gauche (`x`) et le bord supérieur (`y`) du bloc englobant, ainsi que la largeur (`w`) et la hauteur (`h`) du rectangle. Il s'agit d'une fonction de forme de base du [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}. Vous pouvez utiliser la fonction `xywh()` dans des propriétés CSS telles que {{cssxref("offset-path")}} pour créer le chemin rectangulaire le long duquel un élément se déplace, ou dans {{cssxref("clip-path")}} pour définir la forme de la région de découpe.
 
 ## Syntaxe
 

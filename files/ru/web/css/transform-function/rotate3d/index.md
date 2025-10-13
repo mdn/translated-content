@@ -5,7 +5,7 @@ slug: Web/CSS/transform-function/rotate3d
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-[функция](/ru/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions) **`rotate3d()`** трансформирует элемент без деформации, вращая его в трёхмерном пространстве вокруг зафиксированной оси. Её результат представлен типом данных {{cssxref ("&lt;transform-function&gt;")}}.
+[CSS](/ru/docs/Web/CSS)-[функция](/ru/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`rotate3d()`** трансформирует элемент без деформации, вращая его в трёхмерном пространстве вокруг зафиксированной оси. Её результат представлен типом данных {{cssxref ("&lt;transform-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: rotate3d()")}}
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7e1296fc0722c86fb7e15487b5e9626597c7a2a0
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`circle()`** définit un cercle grâce à son rayon et à la position du centre.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`circle()`** définit un cercle grâce à son rayon et à la position du centre.
 Elle fait partie du [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: circle()")}}

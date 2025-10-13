@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-**`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: invert()")}}
 

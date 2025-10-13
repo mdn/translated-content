@@ -168,7 +168,7 @@ Le module des valeurs et unités CSS introduit également les types de données 
 - [Combinateurs de valeurs de composant](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#composants_à_valeurs_de_combinateurs)
 - [Mots-clés globaux CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types#mots-clés_applicables_à_lensemble_du_css)
 - {{glossary("Device pixel", "Pixel de l'appareil")}}
-- [Notation fonctionnelle](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [Notation fonctionnelle](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - {{glossary("Identifier", "Identifiant")}}
 - {{glossary("Interpolation")}}
 - {{glossary("Keyword", "Mot-clé")}}
@@ -191,7 +191,7 @@ Le module des valeurs et unités CSS introduit également les types de données 
 - [Types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
   - : Vue d'ensemble des types de données textuelles, y compris les valeurs de mots-clés prédéfinis, les mots-clés globaux CSS et les URL.
 
-- [Fonctions de valeur CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [Fonctions de valeur CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
   - : Vue d'ensemble des instructions CSS qui invoquent un traitement ou des calculs spéciaux pour retourner une valeur CSS pour une propriété CSS.
 
 - [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)

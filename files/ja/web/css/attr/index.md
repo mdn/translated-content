@@ -8,7 +8,7 @@ l10n:
 > [!NOTE]
 > `attr()` 関数はどの CSS プロパティでも使用することができますが、 {{CSSxRef("content")}} 以外のプロパティでの対応は実験的です。
 
-**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、選択した要素の属性の値を取得し、それをプロパティ値で使用するために使用されます。これは、 {{cssxref("var", "var()")}} 関数が独自のプロパティ値を置き換える方法と似ています。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
+**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、選択した要素の属性の値を取得し、それをプロパティ値で使用するために使用されます。これは、 {{cssxref("var", "var()")}} 関数が独自のプロパティ値を置き換える方法と似ています。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
 
 {{InteractiveExample("CSS デモ: attr()", "tabbed-shorter")}}
 

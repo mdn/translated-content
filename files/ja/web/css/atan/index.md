@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`asin()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、`-∞` から `+∞` までの数値の逆正接を返す三角関数です。この関数には、 `-90deg` から `90deg` までの {{cssxref("&lt;angle&gt;")}} を表すラジアンの数を返す単一の計算が含まれています。
+**`asin()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、`-∞` から `+∞` までの数値の逆正接を返す三角関数です。この関数には、 `-90deg` から `90deg` までの {{cssxref("&lt;angle&gt;")}} を表すラジアンの数を返す単一の計算が含まれています。
 
 ## 構文
 

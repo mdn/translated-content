@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`exp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、指数関数であり、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
+**`exp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、指数関数であり、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
 
 数学定数 [`e`](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) は自然対数の底で、約 `2.718281828459045` です。
 
