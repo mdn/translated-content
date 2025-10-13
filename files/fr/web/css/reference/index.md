@@ -3,7 +3,7 @@ title: Référence CSS
 slug: Web/CSS/Reference
 ---
 
-Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
+Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
 
 ## Syntaxe de règle basique
 
@@ -111,8 +111,8 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#spécificité)
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 
 ### Valeurs
 

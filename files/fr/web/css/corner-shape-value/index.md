@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
 
 ## Syntaxe
 

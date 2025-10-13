@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLCH. `oklch()` est la forme cylindrique de {{CSSXref("color_value/oklab", "oklab()")}}, utilisant le même axe `L`, mais avec des coordonnées polaires Chroma (`C`) et teinte (`h` pour <i lang="en">hue</i> en anglais).
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLCH. `oklch()` est la forme cylindrique de {{CSSXref("color_value/oklab", "oklab()")}}, utilisant le même axe `L`, mais avec des coordonnées polaires Chroma (`C`) et teinte (`h` pour <i lang="en">hue</i> en anglais).
 
 ## Syntaxe
 

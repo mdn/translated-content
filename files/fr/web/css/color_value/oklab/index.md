@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
 
 Oklab est un espace de couleur perceptuel et est utile pour&nbsp;:
 

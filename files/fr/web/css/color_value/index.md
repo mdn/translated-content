@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** représente une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** représente une couleur.
 Une valeur `<color>` peut aussi inclure une [_valeur de transparence_ (canal alpha)](https://fr.wikipedia.org/wiki/Alpha_blending), indiquant comment la couleur doit être [composée <sup>(angl.)</sup>](https://drafts.fxtf.org/compositing-1/#simplealphacompositing) avec son arrière-plan.
 
 > [!NOTE]

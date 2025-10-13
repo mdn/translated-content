@@ -483,6 +483,6 @@ Après que le contenu a fini de modifier les styles, on peut être dans une situ
     - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
     - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
     - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

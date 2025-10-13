@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} CIE L\*a\*b\*.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} CIE L\*a\*b\*.
 
 Lab représente toute la gamme de couleurs que les humains peuvent voir en définissant la luminosité de la couleur, une valeur d'axe rouge/vert, une valeur d'axe bleu/jaune, et une valeur alpha de transparence optionnelle.
 

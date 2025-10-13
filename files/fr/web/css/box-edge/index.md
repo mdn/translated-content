@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 896a41d7d9832367a1e24af567fb419e9d4182f8
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<box-edge>`** représentent un mot-clé de [bord de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), comme [`content-box`](#content-box) et [`border-box`](#border-box). Les mots-clés de bord de boîte servent à définir différents aspects du modèle de boîte d'un element et la façon dont les elements sont positionnés et affichés à l'écran.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<box-edge>`** représentent un mot-clé de [bord de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), comme [`content-box`](#content-box) et [`border-box`](#border-box). Les mots-clés de bord de boîte servent à définir différents aspects du modèle de boîte d'un element et la façon dont les elements sont positionnés et affichés à l'écran.
 
 Les mots-clés de bord de boîte sont les composants, entre autres, des types de données `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>` et `<geometry-box>`. Ces types sont utilisés dans des propriétés telles que {{cssxref("transform-box")}} et {{cssxref("background-clip")}}.
 
