@@ -5,9 +5,7 @@ l10n:
   sourceCommit: de7d710496266ccf4fce5ade75a67e6605f60ce5
 ---
 
-{{CSSRef}}
-
-La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir supérieure à la valeur spécifiée par `max-width`.
+La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir supérieure à la valeur spécifiée par `max-width`.
 
 {{InteractiveExample("CSS Demo: max-width")}}
 

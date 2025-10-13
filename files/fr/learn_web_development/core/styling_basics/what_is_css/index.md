@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 original_slug: Learn/CSS/First_steps/How_CSS_works
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
 Jusqu'ici, nous avons appris les bases du CSS, ses objectifs et comment écrire des feuilles de style élémentaires. Dans cette leçon, nous allons voir comment un navigateur prend du HTML et du CSS pour les transformer en une page web.
 
@@ -130,7 +130,7 @@ Dans le prochain module, dans l'article [Débogage de CSS](/fr/docs/Learn_web_de
 
 ## Que se passe-t-il quand un navigateur rencontre du CSS qu'il ne comprend pas&nbsp;?
 
-Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle — j'avais mentionné ce fait [dans une leçon précédente](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS#prise_en_charge_par_les_navigateurs). Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.
+Les navigateurs n'implémentent pas tous en même temps une fonctionnalité CSS nouvelle — j'avais mentionné ce fait [dans une leçon précédente](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#prise_en_charge_par_les_navigateurs). Rajoutez à cela le fait que trop de gens n'utilisent pas une version à jour de leur navigateur. CSS, lui, est en développement constant et donc toujours en avance par rapport à ce que les navigateurs peuvent implémenter. On doit donc se demander ce qui se passe quand un navigateur tombe sur un sélecteur ou une déclaration qu'il ne sait pas interpréter.
 
 La réponse&nbsp;: ne rien faire et passer à la suite&nbsp;!
 

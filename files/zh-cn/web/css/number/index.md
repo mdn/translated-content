@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f3d234ca192782b7993276924bf64870612bcc1a
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<number>`** 表示整数或者是带有小数部分的数字，或者是以十进制指数的科学记数法。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types) **`<number>`** 表示整数或者是带有小数部分的数字，或者是以十进制指数的科学记数法。
 
 ## 语法
 
@@ -53,4 +53,4 @@ l10n:
 
 - {{CSSxRef("integer")}}
 - {{CSSxRef("ratio")}}
-- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块
+- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)模块
