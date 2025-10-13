@@ -24266,7 +24266,7 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units": {
+  "Web/CSS/CSS_values_and_units": {
     "modified": "2020-10-27T06:39:35.001Z",
     "contributors": [
       "MikuroXina",
@@ -24274,19 +24274,19 @@
       "awazo"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
+  "Web/CSS/CSS_values_and_units/CSS_Value_Functions": {
     "modified": "2020-11-10T07:17:38.541Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
     "modified": "2020-11-10T07:25:34.702Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
     "modified": "2020-09-27T00:52:29.488Z",
     "contributors": [
       "mfuji09",

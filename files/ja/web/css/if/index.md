@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`if()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、条件付き検査の結果に応じて、プロパティに異なる値を設定することができます。この検査は、[スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)に基づいて行うことができます。
+**`if()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)で、条件付き検査の結果に応じて、プロパティに異なる値を設定することができます。この検査は、[スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)に基づいて行うことができます。
 
 ## 構文
 
@@ -605,4 +605,4 @@ h1::before {
 - [コンテナースタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)
 - [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS 値と単位モジュール](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位モジュール](/ja/docs/Web/CSS/CSS_values_and_units)

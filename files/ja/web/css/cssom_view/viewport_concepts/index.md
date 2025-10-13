@@ -100,13 +100,13 @@ iframe、オブジェクト、外部 SVG などがあるページでは、コン
 
 前述のレイアウトビューポートと視覚的ビューポートは、遭遇するビューポートの唯一の例ではありません。レイアウトビューポート内に完全にまたは部分的に表示されるすべてのサブビューポートは、視覚的ビューポートとみなされます。
 
-一般的に、 [`width`](/ja/docs/Web/CSS/@media/width) と [`height`](/ja/docs/Web/CSS/@media/height) のメディアクエリーは、ブラウザーウィンドウの幅と高さに関連していると考えられています。実際には、ビューポート（メインの文書のウィンドウ）に相対するものですが、オブジェクト、iframe、SVG などの埋め込まれた閲覧コンテキストにおいては、要素の親の内在サイズでもあります。 CSS では、[ビューポートのサイズに基づいた長さの単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ビューポート単位)もあります。 `vh` の単位は、レイアウトビューポートの高さの 1% です。 同様に、 `vw` の単位は、レイアウトビューポートの幅の 1% です。
+一般的に、 [`width`](/ja/docs/Web/CSS/@media/width) と [`height`](/ja/docs/Web/CSS/@media/height) のメディアクエリーは、ブラウザーウィンドウの幅と高さに関連していると考えられています。実際には、ビューポート（メインの文書のウィンドウ）に相対するものですが、オブジェクト、iframe、SVG などの埋め込まれた閲覧コンテキストにおいては、要素の親の内在サイズでもあります。 CSS では、[ビューポートのサイズに基づいた長さの単位](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ビューポート単位)もあります。 `vh` の単位は、レイアウトビューポートの高さの 1% です。 同様に、 `vw` の単位は、レイアウトビューポートの幅の 1% です。
 
 #### `<iframe>`
 
 {{htmlelement("iframe")}} 内では、視覚的ビューポートは親文書ではなく、 iframe の内側の幅と高さのサイズになります。 iframe には任意の幅と高さを設定できますが、文書全体が表示されない場合があります。
 
-iframe 文書内の CSS で[ビューポート単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ビューポート単位)を使用している場合、 `1vh` は iframe の高さの 1%、 `1vw` は文書の幅の 1% となります。
+iframe 文書内の CSS で[ビューポート単位](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ビューポート単位)を使用している場合、 `1vh` は iframe の高さの 1%、 `1vw` は文書の幅の 1% となります。
 
 ```css
 iframe {

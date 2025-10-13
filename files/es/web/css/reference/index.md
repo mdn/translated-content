@@ -146,7 +146,7 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 - [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-- [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ### Valores
 

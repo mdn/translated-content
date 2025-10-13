@@ -81,7 +81,7 @@ CSS のルールセット（またはルール）は下記の図のように表�
 - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-- [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - 値
   - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
   - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)

@@ -246,7 +246,7 @@ For example, below we are using `calc()` to make the box `20% + 100px` wide. The
 
 ## Summary
 
-This has been a quick run through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/ru/docs/Web/CSS/CSS_Values_and_Units) reference page; you will encounter many of these in use as you work through these lessons.
+This has been a quick run through of the most common types of values and units you might encounter. You can have a look at all of the different types on the [CSS Values and units](/ru/docs/Web/CSS/CSS_values_and_units) reference page; you will encounter many of these in use as you work through these lessons.
 
 The key thing to remember is that each property has a defined list of allowed values, and each value has a definition explaining what the sub-values are. You can then look up the specifics here on MDN.
 

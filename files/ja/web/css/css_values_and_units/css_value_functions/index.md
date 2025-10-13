@@ -1,11 +1,11 @@
 ---
 title: CSS 値関数
-slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+slug: Web/CSS/CSS_values_and_units/CSS_Value_Functions
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/CSS_Values_and_Units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
+**CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/CSS_values_and_units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
 
 ## 構文
 
@@ -25,7 +25,7 @@ l10n:
 
 ## 座標変換関数
 
-CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) は、表示の座標変換を表します。 {{CSSxRef("transform")}} の値として使用されます。
+CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types) は、表示の座標変換を表します。 {{CSSxRef("transform")}} の値として使用されます。
 
 ### 移動関数
 
@@ -91,7 +91,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 数学関数は、 CSS の数値を数式として記述することができるものです。
 
-下記の各ページには、数学関数の構文、ブラウザー互換性データ、例などの詳細情報が格納されています。CSS 数学関数の全体的な紹介は、[CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)を参照してください。
+下記の各ページには、数学関数の構文、ブラウザー互換性データ、例などの詳細情報が格納されています。CSS 数学関数の全体的な紹介は、[CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)を参照してください。
 
 ### 基本演算
 
@@ -157,7 +157,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 ## フィルター関数
 
-{{CSSxRef("&lt;filter-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、入力画像の外見を変更することができるグラフィック効果を表します。 {{CSSxRef("filter")}} および {{CSSxRef("backdrop-filter")}} プロパティで使用されます。
+{{CSSxRef("&lt;filter-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、入力画像の外見を変更することができるグラフィック効果を表します。 {{CSSxRef("filter")}} および {{CSSxRef("backdrop-filter")}} プロパティで使用されます。
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : 画像のガウスぼかしを大きくします。
@@ -182,7 +182,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 ## 色関数
 
-{{CSSxRef("color_value","&lt;color&gt;")}} CSS [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)は、様々な色の表現を指定します。
+{{CSSxRef("color_value","&lt;color&gt;")}} CSS [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)は、様々な色の表現を指定します。
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : ある色を、赤、緑、青とアルファ（透明度）の成分で定義します。
@@ -211,7 +211,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 ## 画像関数
 
-{{CSSxRef("&lt;image&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、画像やグラデーションのグラフィック表現を提供します。
+{{CSSxRef("&lt;image&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、画像やグラデーションのグラフィック表現を提供します。
 
 ### グラデーション関数
 
@@ -254,7 +254,7 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
 
 ## シェイプ関数
 
-{{CSSxRef("&lt;basic-shape&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、グラフィックの図形を表します。これは {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}} の各プロパティで使用されます。
+{{CSSxRef("&lt;basic-shape&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、グラフィックの図形を表します。これは {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}} の各プロパティで使用されます。
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : 円を定義します。
@@ -320,7 +320,7 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 
 ## イージング関数
 
-{{CSSxRef("&lt;easing-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、数学的な関数を表します。これはトランジション及びアニメーションのプロパティに使用されます。
+{{CSSxRef("&lt;easing-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、数学的な関数を表します。これはトランジション及びアニメーションのプロパティに使用されます。
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : 点間を直線的に補間するイージング関数です。
@@ -358,5 +358,5 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 
 ## 関連情報
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

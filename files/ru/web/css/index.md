@@ -27,7 +27,7 @@ slug: Web/CSS
 - Ключевые понятия CSS:
   - [Описание синтаксиса и внешнего вида языка](/ru/docs/Web/CSS/CSS_syntax/Syntax)
   - [Специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity), [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance) и [каскадирование](/ru/docs/Web/CSS/Cascade)
-  - [Единицы измерения в CSS](/ru/docs/Web/CSS/CSS_Values_and_Units) и [функции в CSS](/ru/docs/Web/CSS/CSS_Functions)
+  - [Единицы измерения в CSS](/ru/docs/Web/CSS/CSS_values_and_units) и [функции в CSS](/ru/docs/Web/CSS/CSS_Functions)
   - [Блоковая модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) и [схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [Содержащий блок](/ru/docs/Web/CSS/CSS_display/Containing_block)
   - [Контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)

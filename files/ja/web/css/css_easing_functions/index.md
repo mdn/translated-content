@@ -33,7 +33,7 @@ l10n:
 
 ## ガイド
 
-- [CSS 値関数: イージング関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#イージング関数)
+- [CSS 値関数: イージング関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#イージング関数)
   - : CSS プロパティの CSS 値を返すために、特別なデータ処理または計算を呼び出す CSS 文。
 
 ## 関連概念
@@ -52,5 +52,5 @@ l10n:
 
 ## 関連情報
 
-- [CSS 値関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS 値関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
 - CSS の {{cssxref("will-change")}} プロパティ

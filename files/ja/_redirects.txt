@@ -298,7 +298,7 @@
 /ja/docs/CSS/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/CSS/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /ja/docs/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
-/ja/docs/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/ja/docs/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /ja/docs/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ja/docs/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
 /ja/docs/CSS/align-content	/ja/docs/Web/CSS/align-content
@@ -4027,7 +4027,7 @@
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
-/ja/docs/Web/CSS/CSS_Functions	/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+/ja/docs/Web/CSS/CSS_Functions	/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions
 /ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
@@ -4068,7 +4068,7 @@
 /ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/ja/docs/Web/CSS/CSS_shapes/From_box_values
 /ja/docs/Web/CSS/CSS_Text/Wrapping_Text	/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text
-/ja/docs/Web/CSS/CSS_Types	/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/ja/docs/Web/CSS/CSS_Types	/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
@@ -4171,7 +4171,7 @@
 /ja/docs/Web/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /ja/docs/Web/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値

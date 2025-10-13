@@ -1,13 +1,13 @@
 ---
 title: CSS データ型
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
+slug: Web/CSS/CSS_values_and_units/CSS_data_types
 l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
 **CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。
 
-よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)仕様書で定義されています。この仕様書は[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
+よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)仕様書で定義されています。この仕様書は[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
 
 以下に、最もよく目にする型のリファレンスを掲載していますが、すべての CSS 仕様書で定義されている型を網羅しているわけではありません。
 
@@ -128,7 +128,7 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 
 ## 計算データ型
 
-これらのデータ型は [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#%e6%95%b0%e5%ad%a6%e9%96%a2%e6%95%b0)の計算で使用さます。
+これらのデータ型は [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#%e6%95%b0%e5%ad%a6%e9%96%a2%e6%95%b0)の計算で使用さます。
 
 - {{cssxref("&lt;calc-sum&gt;")}}
   - : 加算 (`+`) と減算 (`-`) 演算子を挟む一連の計算値。このデータ型は両方の値に単位があることを要求されます。
@@ -145,6 +145,6 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 
 ## 関連情報
 
-- [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 単位と値](/ja/docs/Web/CSS/CSS_values_and_units)
 - [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS 関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS 関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)

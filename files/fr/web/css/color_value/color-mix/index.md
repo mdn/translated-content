@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend deux couleurs ({{cssxref("&lt;color&gt;")}}) et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend deux couleurs ({{cssxref("&lt;color&gt;")}}) et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
 
 Le choix de l'espace colorimétrique est important pour obtenir le résultat souhaité. Pour les mêmes couleurs, différents espaces peuvent être plus adaptés selon le type d'interpolation recherché&nbsp;:
 

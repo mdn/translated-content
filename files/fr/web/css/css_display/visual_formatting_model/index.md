@@ -180,6 +180,6 @@ Pour un élément positionné de façon fixe, le bloc englobant sera la zone d'a
     - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
     - [Utilisées](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [Effectives](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

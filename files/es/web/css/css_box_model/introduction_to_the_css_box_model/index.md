@@ -54,6 +54,6 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
     - [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
     - [Valor usado](/es/docs/Web/CSS/used_value)
     - [Valor real](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)

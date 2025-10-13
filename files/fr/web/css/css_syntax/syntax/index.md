@@ -88,6 +88,6 @@ Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**
     - [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
     - [Valeur utilisée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [Valeur réelle](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

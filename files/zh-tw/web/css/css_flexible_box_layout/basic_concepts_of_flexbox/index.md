@@ -286,7 +286,7 @@ l10n:
 - `flex: none`
 - `flex: <positive-number>`
 
-`initial` 值是一個[全 CSS 關鍵字](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#全_css_關鍵字)，代表屬性的初始值。設定 `flex: initial` 會將項目重設為三個詳細屬性的[初始值](#初始值)，這與 `flex: 0 1 auto` 相同。`flex-grow` 的初始值為 `0`，所以項目不會增長超過其 `flex-basis` 尺寸。`flex-shrink` 的初始值為 `1`，所以項目可以在需要時縮小而不是溢出。`flex-basis` 的初始值為 `auto`。項目要麼使用在主維度上設定的任何尺寸，要麼從內容尺寸中獲取其尺寸。
+`initial` 值是一個[全 CSS 關鍵字](/zh-TW/docs/Web/CSS/CSS_values_and_units/CSS_data_types#全_css_關鍵字)，代表屬性的初始值。設定 `flex: initial` 會將項目重設為三個詳細屬性的[初始值](#初始值)，這與 `flex: 0 1 auto` 相同。`flex-grow` 的初始值為 `0`，所以項目不會增長超過其 `flex-basis` 尺寸。`flex-shrink` 的初始值為 `1`，所以項目可以在需要時縮小而不是溢出。`flex-basis` 的初始值為 `auto`。項目要麼使用在主維度上設定的任何尺寸，要麼從內容尺寸中獲取其尺寸。
 
 使用 `flex: auto` 與使用 `flex: 1 1 auto` 相同；這與 `flex: initial` 相似，只是項目可以增長並填滿容器，也可以在需要時縮小。
 

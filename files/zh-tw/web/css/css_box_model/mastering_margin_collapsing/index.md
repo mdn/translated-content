@@ -78,6 +78,6 @@ p {
     - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)
     - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#應用值)
     - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#實際值)
-  - [值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [值定義語法](/zh-TW/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "替換元素")}}

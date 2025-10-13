@@ -1,6 +1,6 @@
 ---
 title: テキストデータ型
-slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
+slug: Web/CSS/CSS_values_and_units/Textual_data_types
 l10n:
   sourceCommit: 83dd1960e946e82f2cf830ac5df5703df501f73b
 ---
@@ -91,8 +91,8 @@ left | right | none | inline-start | inline-end
 
 ## 関連情報
 
-- [数値データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [数値データ型](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
+- [CSS データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS カスケードと警鐘](/ja/docs/Web/CSS/CSS_cascade)モジュール

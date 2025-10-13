@@ -808,7 +808,7 @@
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /ru/docs/Web/CSS/CSS_Ruby	/ru/docs/Web/CSS/CSS_ruby_layout
-/ru/docs/Web/CSS/CSS_Types	/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/ru/docs/Web/CSS/CSS_Types	/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_animations/Tips	/ru/docs/Web/API/Web_Animations_API/Tips

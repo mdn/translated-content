@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{cssxref("clip-path")}} et {{cssxref("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`shape()`** permet de définir une forme pour les propriétés {{cssxref("clip-path")}} et {{cssxref("offset-path")}}. Elle combine un point de départ initial avec une série de commandes de forme qui définissent le tracé de la forme. La fonction `shape()` fait partie du [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}.
 
 ## Syntaxe
 

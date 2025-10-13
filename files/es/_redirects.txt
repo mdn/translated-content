@@ -2118,7 +2118,7 @@
 /es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento	/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 /es/docs/Web/CSS/CSS_Properties_Reference	/es/docs/orphaned/Web/CSS/CSS_Properties_Reference
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_conditional_rules
-/es/docs/Web/CSS/CSS_Types	/es/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/es/docs/Web/CSS/CSS_Types	/es/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /es/docs/Web/CSS/CSS_animations/Tips	/es/docs/Web/API/Web_Animations_API/Tips
 /es/docs/Web/CSS/CSS_cascade/actual_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing
 /es/docs/Web/CSS/CSS_cascade/computed_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
@@ -2165,7 +2165,7 @@
 /es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Next-sibling_combinator
 /es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/Subsequent-sibling_combinator
 /es/docs/Web/CSS/Shorthand_properties	/es/docs/Web/CSS/CSS_cascade/Shorthand_properties
-/es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /es/docs/Web/CSS/Specificity	/es/docs/Web/CSS/CSS_cascade/Specificity
 /es/docs/Web/CSS/Syntax	/es/docs/Web/CSS/CSS_syntax/Syntax
 /es/docs/Web/CSS/Texto_CSS	/es/docs/Web/CSS/CSS_text
@@ -2177,7 +2177,7 @@
 /es/docs/Web/CSS/Using_CSS_variables	/es/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /es/docs/Web/CSS/Valor_calculado	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
 /es/docs/Web/CSS/Valor_inicial	/es/docs/Web/CSS/CSS_cascade/Value_processing
-/es/docs/Web/CSS/Value_definition_syntax	/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/es/docs/Web/CSS/Value_definition_syntax	/es/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /es/docs/Web/CSS/actual_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing
 /es/docs/Web/CSS/after	/es/docs/Web/CSS/::after
 /es/docs/Web/CSS/animacion-iteracion-cuenta	/es/docs/Web/CSS/animation-iteration-count

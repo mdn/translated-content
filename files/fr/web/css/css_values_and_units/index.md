@@ -1,6 +1,6 @@
 ---
 title: Valeurs et unités CSS
-slug: Web/CSS/CSS_Values_and_Units
+slug: Web/CSS/CSS_values_and_units
 l10n:
   sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---
@@ -141,63 +141,63 @@ Le module des valeurs et unités CSS introduit également les types de données 
 - [`vw`](/fr/docs/Web/CSS/length#vw)
 - [`x`](/fr/docs/Web/CSS/resolution#x)
 
-[Unités flexibles](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_flexibles) (`fr`) et [unités de conteneur](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_conteneur) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) sont définies dans les modules [Modèle de grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) et [Règles conditionnelles CSS](/fr/docs/Web/CSS/CSS_conditional_rules).
+[Unités flexibles](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_flexibles) (`fr`) et [unités de conteneur](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_conteneur) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) sont définies dans les modules [Modèle de grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) et [Règles conditionnelles CSS](/fr/docs/Web/CSS/CSS_conditional_rules).
 
 #### Catégorisations des unités
 
-- [Unités de longueur absolue](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_longueure_absolue) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
-- [Unités d'angle](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_dangle) (`deg`, `grad`, `rad`, `turn`)
+- [Unités de longueur absolue](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_longueure_absolue) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
+- [Unités d'angle](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_dangle) (`deg`, `grad`, `rad`, `turn`)
 - [Unités de viewport par défaut](/fr/docs/Web/CSS/length#unités_de_zone_daffichage_par_défaut) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
 - [Unités de viewport dynamiques](/fr/docs/Web/CSS/length#unités_de_zone_daffichage_par_défaut) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
-- [Unités de fréquence](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_fréquence) (`Hz`, `kHz`)
+- [Unités de fréquence](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_fréquence) (`Hz`, `kHz`)
 - [Unités de pourcentage de viewport large](/fr/docs/Web/CSS/length#unités_de_zone_daffichage_large) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
-- [Unités de longueur relatives à la police locale](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#longueurs_relatives_à_la_police_locale) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
-- [Unités physiques](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_longueure_absolue) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
-- [Unités de longueur relatives](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_longueur_relative) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
-- [Unités de résolution](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_résolution) (`dpcm`, `dpi` , `dppx`, `x`)
-- [Unités de longueur relatives à la racine](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_longueur_relatives_à_la_racine) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
+- [Unités de longueur relatives à la police locale](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#longueurs_relatives_à_la_police_locale) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
+- [Unités physiques](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_longueure_absolue) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
+- [Unités de longueur relatives](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_longueur_relative) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
+- [Unités de résolution](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_résolution) (`dpcm`, `dpi` , `dppx`, `x`)
+- [Unités de longueur relatives à la racine](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_longueur_relatives_à_la_racine) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
 - [Unités de pourcentage de petite zone d'affichage](/fr/docs/Web/CSS/length#unités_de_petite_zone_daffichage) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
-- [Unités de temps](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_temps) (`ms`, `s`)
-- [Unités de zone d'affichage](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_zone_daffichage) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
-- [Unité d'angle visuel](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_longueure_absolue) (`px`)
+- [Unités de temps](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_temps) (`ms`, `s`)
+- [Unités de zone d'affichage](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_zone_daffichage) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [Unité d'angle visuel](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_longueure_absolue) (`px`)
 
 ### Concepts clés
 
 - {{glossary("Advance measure", "Chasse")}}
-- [Notation d'intervalle entre crochets](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#notation_par_crochets_minmax)
-- [Combinateurs de valeurs de composant](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#composants_à_valeurs_de_combinateurs)
-- [Mots-clés globaux CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#mots-clés_applicables_à_lensemble_du_css)
+- [Notation d'intervalle entre crochets](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#notation_par_crochets_minmax)
+- [Combinateurs de valeurs de composant](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#composants_à_valeurs_de_combinateurs)
+- [Mots-clés globaux CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types#mots-clés_applicables_à_lensemble_du_css)
 - {{glossary("Device pixel", "Pixel de l'appareil")}}
-- [Notation fonctionnelle](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [Notation fonctionnelle](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
 - {{glossary("Identifier", "Identifiant")}}
 - {{glossary("Interpolation")}}
 - {{glossary("Keyword", "Mot-clé")}}
-- [Fonction mathématique](/fr/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-- [Types de données numériques](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [Fonction mathématique](/fr/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)
+- [Types de données numériques](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
 - {{glossary("Origin", "Origine")}}
 - {{glossary("Pixel")}}
-- [Types de données textuelles](/fr/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- [Types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
 - {{glossary("URL")}}
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## Guides
 
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
   - : Introduction aux types de données CSS qui définissent les valeurs typiques acceptées par les propriétés et fonctions CSS.
 
-- [Types de données numériques](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [Types de données numériques](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
   - : Vue d'ensemble des types de données numériques, y compris les entiers, les nombres, les pourcentages et les dimensions, ainsi que les dimensions relatives et absolues, les angles et les unités de temps.
 
-- [Types de données textuelles](/fr/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- [Types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
   - : Vue d'ensemble des types de données textuelles, y compris les valeurs de mots-clés prédéfinis, les mots-clés globaux CSS et les URL.
 
-- [Fonctions de valeur CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [Fonctions de valeur CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
   - : Vue d'ensemble des instructions CSS qui invoquent un traitement ou des calculs spéciaux pour retourner une valeur CSS pour une propriété CSS.
 
-- [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)
   - : Les fonctions mathématiques CSS qui permettent d'écrire la valeur d'une propriété sous forme d'expression mathématique.
 
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - : La grammaire formelle utilisée pour définir l'ensemble des valeurs valides pour les propriétés et fonctions CSS.
 
 - [Apprendre&nbsp;: valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
@@ -215,10 +215,10 @@ Le module des valeurs et unités CSS introduit également les types de données 
 
 - Le module de [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)
   - {{cssxref("&lt;flex&gt;")}}
-  - [Unités flexibles](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_flexibles) (`fr`)
+  - [Unités flexibles](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_flexibles) (`fr`)
 
 - Le module de [règles conditionnelles CSS](/fr/docs/Web/CSS/CSS_conditional_rules)
-  - [Unités de conteneur](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#unités_de_conteneur) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
+  - [Unités de conteneur](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#unités_de_conteneur) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
 - Le module de [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
   - {{cssxref("&lt;color&gt;")}}

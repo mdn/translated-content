@@ -277,7 +277,7 @@ Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más
 
 ## Resumen
 
-Esta ha sido una revisión rápida de los tipos de valores y unidades más comunes que te puedes encontrar. Puedes echar un vistazo a todos los diferentes tipos en la página de referencia de [valores y unidades CSS](/es/docs/Web/CSS/CSS_Values_and_Units); encontrarás muchos de estos mientras trabajas en estos artículos.
+Esta ha sido una revisión rápida de los tipos de valores y unidades más comunes que te puedes encontrar. Puedes echar un vistazo a todos los diferentes tipos en la página de referencia de [valores y unidades CSS](/es/docs/Web/CSS/CSS_values_and_units); encontrarás muchos de estos mientras trabajas en estos artículos.
 
 Lo que debes recordar es que cada propiedad tiene una lista definida de valores admisibles, y cada valor incluye una definición que explica cuáles son sus subvalores. A continuación puedes buscar los detalles aquí, en MDN.
 
