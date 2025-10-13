@@ -39,7 +39,7 @@ JavaScript를 적용하여 당신의 웹 페이지를 다음 단계로 업그레
 
 ## HTML에 JavaScript를 적용하는 방법
 
-브라우저에서, JavaSript 자체만으로는 아무것도 할 수 없습니다. 당신은 HTML 웹 페이지 내부에서 JavaScript를 동작시킬 수 있습니다. HTML 내부에서 JavaScript 코드를 호출하기 위해서는 {{HTMLElement("script")}} 요소가 필요합니다. `script` 를 사용하는 방법에는 두 가지가 있습니다. 외부의 script를 연결해서 사용하거나 웹 페이지에 직접 script를 적용하여 사용할 수 있습니다.
+브라우저에서, JavaScript 자체만으로는 아무것도 할 수 없습니다. 당신은 HTML 웹 페이지 내부에서 JavaScript를 동작시킬 수 있습니다. HTML 내부에서 JavaScript 코드를 호출하기 위해서는 {{HTMLElement("script")}} 요소가 필요합니다. `script` 를 사용하는 방법에는 두 가지가 있습니다. 외부의 script를 연결해서 사용하거나 웹 페이지에 직접 script를 적용하여 사용할 수 있습니다.
 
 ### 외부 script를 연결하는 방법
 
@@ -71,7 +71,7 @@ JavaScript를 적용하여 당신의 웹 페이지를 다음 단계로 업그레
 
 접근성은 모든 소프트웨어 개발에 중요한 이슈입니다. JavaScript를 현명하게 사용한다면 이것은 당신의 웹 사이트를 더 접근성 있게 만들어 줄 것입니다. 만약 script 사용에 주의를 기울이지 않는다면 이것은 재난으로 다가올 것입니다. JavaScript가 더 유리하게 사용되기 위해서는, JavaScript 추가를 위한 몇 가지 모범사례를 숙지하는 게 좋습니다:
 
-- **모든 콘텐츠는 (구조화된) 텍스트로 이용할 수 있도록 만들어야 합니다.** 당신의 콘텐츠를 가능한 HTML에 의존하도록 하십시오. 예를 들어, 당신이 멋진 JavaScript 프로그레스 바 를 구현했다면, HTML 내부에 해당 상태를 나타내는 백분율 텍스트 또한 함께 제공해야 합니다. 마찬가지로, 드롭다운 메뉴는 [links](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 의 [unordered lists](/ko/docs/Learn_web_development/Core/Structuring_content/Lists#unordered_lists) 로 구조화 되어야 합니다.
+- **모든 콘텐츠는 (구조화된) 텍스트로 이용할 수 있도록 만들어야 합니다.** 당신의 콘텐츠를 가능한 HTML에 의존하도록 하십시오. 예를 들어, 당신이 멋진 JavaScript 프로그레스바 를 구현했다면, HTML 내부에 해당 상태를 나타내는 백분율 텍스트 또한 함께 제공해야 합니다. 마찬가지로, 드롭다운 메뉴는 [링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 의 [불릿 리스트](/ko/docs/Learn_web_development/Core/Structuring_content/Lists#unordered_lists) 로 구조화 되어야 합니다.
 - **모든 기능은 키보드로 사용할 수 있도록 만들어야 합니다.**
 
   - 사용자가 모든 동작을 (예, links와 form 입력) 작동 순서에 따라 Tab 할 수 있어야 합니다.
@@ -84,13 +84,13 @@ JavaScript를 적용하여 당신의 웹 페이지를 다음 단계로 업그레
 - **JavaScript가 없는 사용자를 위한 계획 B를 준비해야 합니다.** 사람들은 속도를 향상하거나 보안을 위해 JavaScript를 끌 수 있습니다. 사람들은 종종 스크립트 로딩을 방해하는 네트워크 문제를 마주하기도 합니다. 더하여, 서드파티 스크립트 (광고, 추적 스크립트, 브라우저 익스텐션) 는 당신의 스크립트를 손상할 수 있습니다.
 
   - 최소한, {{HTMLElement("noscript")}} 와 같은 짧은 문자를 남겨 주십시오: `<noscript>To use this site, please enable JavaScript.</noscript>`
-  - 이상적으로, 가능하다면 JavaScript의 기능을 HTML 과 서버-사이드 스크립팅을 사용하여 복제해 주십시오.
+  - 이상적으로, 가능하다면 JavaScript의 기능을 HTML과 서버-사이드 스크립팅을 사용하여 복제해 주십시오.
   - 만약 당신이 간단한 시작적 효과만 찾는다면, CSS는 종종 더 직관적인 작업을 가능하게 해줍니다.
-  - _대부분의 사람들이 JavaScript를 **사용**한다 해서, `<noscript>` 태그가 접근성 없는 스크립트의 사용을 정당화 해주지는 않습니다._
+  - 대부분의 사람들이 JavaScript를 **사용**한다 해서, `<noscript>` 태그가 접근성 없는 스크립트의 사용을 정당화 해주지는 않습니다.
 
 ## 더 학습하기
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
-- [Writing JavaScript with Accessibility in Mind](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) by Manuel Matuzovic (2017)
-- [Accessibility guidelines from W3C](https://www.w3.org/TR/WCAG20/)
+- [접근성을 고려한 자바스크립트 작성법](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) by Manuel Matuzovic (2017)
+- [W3C 접근성 가이드라인](https://www.w3.org/TR/WCAG20/)
