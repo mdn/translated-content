@@ -4795,8 +4795,8 @@
 /fr/docs/Web/CSS/Scaling_of_SVG_backgrounds	/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /fr/docs/Web/CSS/Shorthand_properties	/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /fr/docs/Web/CSS/Syntax	/fr/docs/Web/CSS/CSS_syntax/Syntax
-/fr/docs/Web/CSS/Syntaxe	/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started
-/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs	/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/fr/docs/Web/CSS/Syntaxe	/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started
+/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs	/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Next-sibling_combinator
 /fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Comparison_with_XPath	/fr/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors
@@ -4819,11 +4819,8 @@
 /fr/docs/Web/CSS/Utiliser_les_Media_queries	/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /fr/docs/Web/CSS/Utiliser_une_disposition_multi-colonnes	/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /fr/docs/Web/CSS/Valeur_calculée	/fr/docs/Web/CSS/CSS_cascade/Value_processing
-/fr/docs/Web/CSS/Valeur_initiale	/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc
-/fr/docs/Web/CSS/Valeur_spécifiée	/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4e3ad4bb8e93bd9e2a381021d1b939f81717e13df739659207d88907070d77aa
-/fr/docs/Web/CSS/Valeur_utilisée	/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2
-/fr/docs/Web/CSS/Valeurs_et_unités_CSS	/fr/docs/Web/CSS/CSS_Values_and_Units
-/fr/docs/Web/CSS/Value_definition_syntax	/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/fr/docs/Web/CSS/Valeurs_et_unités_CSS	/fr/docs/Web/CSS/CSS_values_and_units
+/fr/docs/Web/CSS/Value_definition_syntax	/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /fr/docs/Web/CSS/Viewport_concepts	/fr/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /fr/docs/Web/CSS/Visual_formatting_model	/fr/docs/Web/CSS/CSS_display/Visual_formatting_model
 /fr/docs/Web/CSS/_image	/fr/docs/Web/CSS/image/image

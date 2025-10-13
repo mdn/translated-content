@@ -2513,7 +2513,7 @@
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外	/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow
-/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_value_functions
+/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
