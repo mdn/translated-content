@@ -3,9 +3,7 @@ title: initial
 slug: Web/CSS/initial
 ---
 
-{{CSSRef}}
-
-Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc) spécifiée pour cette la propriété.
+Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) définie pour cette la propriété.
 
 La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de réinitialiser l'ensemble des propriétés CSS.
 
@@ -54,7 +52,7 @@ La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de
 
 ## Voir aussi
 
-- [La notion de valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
+- [La notion de valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
 - {{cssxref("inherit")}}
 - {{cssxref("unset")}}
 - {{cssxref("revert")}}
