@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`rect()`** [CSS](/zh-CN/docs/Web/CSS) 函数可以创建一个矩形，该矩形位于包含块的顶部和左侧边缘的指定距离处。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `rect()` 函数，例如 {{cssxref("offset-path")}} 创建元素移动的矩形路径，以及在 {{cssxref("clip-path")}} 中定义裁剪区域的形状。
+**`rect()`** [CSS](/zh-CN/docs/Web/CSS) 函数可以创建一个矩形，该矩形位于包含块的顶部和左侧边缘的指定距离处。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_Units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `rect()` 函数，例如 {{cssxref("offset-path")}} 创建元素移动的矩形路径，以及在 {{cssxref("clip-path")}} 中定义裁剪区域的形状。
 
 ## 语法
 

@@ -1,6 +1,6 @@
 ---
 title: CSS 基本数据类型
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
+slug: Web/CSS/CSS_values_and_Units/CSS_data_types
 ---
 
 **CSS** 基本数据类型是一种[组合值类型](https://www.w3.org/TR/css3-values/#component-types)。用于定义 CSS 属性和函数可以接受的变量（关键字和单位）的种类。

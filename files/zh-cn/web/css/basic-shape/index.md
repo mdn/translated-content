@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
+**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_Units/CSS_data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
 
 {{InteractiveExample("CSS 演示：&lt;basic-shape&gt;")}}
 
