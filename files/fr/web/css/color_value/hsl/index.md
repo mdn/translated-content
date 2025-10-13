@@ -8,7 +8,7 @@ l10n:
 > [!NOTE]
 > La notation fonctionnelle `hsla()` est un alias de `hsl()`. Elles sont exactement équivalentes. Il est recommandé d'utiliser `hsl()`.
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: hsl()")}}
 

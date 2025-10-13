@@ -194,7 +194,7 @@ Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Cor
     - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
     - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
     - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - Les propriétés raccourcies&nbsp;:
   - [`all`](/fr/docs/Web/CSS/all)

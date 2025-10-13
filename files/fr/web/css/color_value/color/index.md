@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
 
 Vous pouvez détecter la prise en charge d'un espace colorimétrique particulier avec la fonctionnalité média CSS [`color-gamut`](/fr/docs/Web/CSS/@media/color-gamut).
 

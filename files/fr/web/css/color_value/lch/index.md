@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{cssxref("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
+La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{cssxref("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
 
 ## Syntaxe
 

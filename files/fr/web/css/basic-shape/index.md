@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0fb61080baf21a3efd8f21911bd4554c14f75c17
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} et {{cssxref("offset-path")}}.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} et {{cssxref("offset-path")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;basic-shape&gt;")}}
 
