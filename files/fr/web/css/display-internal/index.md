@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<display-internal>`** définit les modes de disposition tels que `table` et `ruby` possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs «&nbsp;internes&nbsp;» pour `display` et qui s'appliquent dans un mode donné.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<display-internal>`** définit les modes de disposition tels que `table` et `ruby` possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs «&nbsp;internes&nbsp;» pour `display` et qui s'appliquent dans un mode donné.
 
 ## Syntaxe
 
