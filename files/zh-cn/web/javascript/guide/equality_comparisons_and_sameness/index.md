@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8e1184924387f88e2ee63a3c786b007aaf573105
 ---
 
-{{jsSidebar("Intermediate")}}
-
 JavaScript 提供三种不同的值比较运算：
 
 - [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)——严格相等（三个等号）

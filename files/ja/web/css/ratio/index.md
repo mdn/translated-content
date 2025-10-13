@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2ef2c905a7322f5a533cf7c96ec5a337fc614359
 ---
 
-{{CSSRef}}
-
 **`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、幅と高さの比例関係を記述します。これは、メディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナークエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
 
 ## 構文

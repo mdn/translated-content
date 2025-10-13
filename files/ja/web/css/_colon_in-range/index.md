@@ -3,8 +3,6 @@ title: :in-range
 slug: Web/CSS/:in-range
 ---
 
-{{CSSRef}}
-
 **`:in-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在の値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性による制限範囲内にある {{htmlelement("input")}} 要素を表します。
 
 ```css
@@ -15,7 +13,7 @@ input:in-range {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :in-range", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :in-range", "tabbed-shorter")}}
 
 ```css interactive-example
 label {

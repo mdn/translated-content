@@ -3,8 +3,6 @@ title: margin-top
 slug: Web/CSS/margin-top
 ---
 
-{{CSSRef}}
-
 **`margin-top`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的顶部外边距[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
 
 {{InteractiveExample("CSS Demo: margin-top")}}

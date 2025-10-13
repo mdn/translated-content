@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Permissions-Policy
 original_slug: Web/HTTP/Headers/Permissions-Policy
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Feature-Policy`** provê um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.
 
 > [!NOTE]

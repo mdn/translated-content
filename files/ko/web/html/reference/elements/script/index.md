@@ -87,7 +87,8 @@ original_slug: Web/HTML/Element/script
 
     `defer` 속성을 가진 스크립트는 자신의 평가가 끝나기 전까지 `DOMContentLoaded` 이벤트의 발생을 막습니다.
 
-    > **경고:** `src` 속성이 존재하지 않을 때(인라인 스크립트인 경우 등)에는 아무런 효과도 없으므로 사용해서는 안됩니다.
+    > [!WARNING]
+    > `src` 속성이 존재하지 않을 때(인라인 스크립트인 경우 등)에는 아무런 효과도 없으므로 사용해서는 안됩니다.
     >
     > 또한 [모듈 스크립트](/ko/docs/Web/JavaScript/Guide/Modules)는 기본적으로 지연 평가하므로, `defer`를 지정해도 변화가 없습니다.
 

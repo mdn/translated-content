@@ -20,7 +20,8 @@ blob()
 
 なし。
 
-> **メモ:** {{domxref("Response")}} の {{domxref("Response.type")}} が `"opaque"` の場合、結果の {{domxref("Blob")}} の {{domxref("Blob.size")}} は `0`、{{domxref("Blob.type")}} は空文字列 `""` になり、{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} のようなメソッドでは*役に立たなく*なります。
+> [!NOTE]
+> {{domxref("Response")}} の {{domxref("Response.type")}} が `"opaque"` の場合、結果の {{domxref("Blob")}} の {{domxref("Blob.size")}} は `0`、{{domxref("Blob.type")}} は空文字列 `""` になり、{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} のようなメソッドでは*役に立たなく*なります。
 
 ### 返値
 

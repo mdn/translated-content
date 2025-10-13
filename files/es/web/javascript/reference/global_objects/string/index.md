@@ -243,7 +243,8 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 
 ## Métodos de contenedor HTML
 
-> **Nota:** **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
+> [!NOTE]
+> **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
 
 - {{jsxref("String.prototype.anchor()")}}
   - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Reference/Elements/a#name) (hipertexto destino)

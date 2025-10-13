@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)メソッド (または{{Glossary("challenge", "チャレンジ")}}) を定義します。
 
 このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Guides/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で使用することができます。

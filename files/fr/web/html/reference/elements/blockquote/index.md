@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/blockquote
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation (voir [les notes](#usage_notes) ci-après). Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément [`<cite>`](/fr/docs/Web/HTML/Element/cite).
+L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation (voir [les notes](#usage_notes) ci-après). Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément [`<cite>`](/fr/docs/Web/HTML/Reference/Elements/cite).
 
 {{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
 
@@ -113,7 +113,7 @@ blockquote + p {
 
 ## Attributs
 
-Comme pour tous les éléments HTML, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme pour tous les éléments HTML, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`cite`**
   - : Une URL qui désigne la source du document ou du message cité. Cet attribut est prévu pour signaler l'information expliquant le contexte ou la référence de la citation
@@ -122,7 +122,7 @@ Comme pour tous les éléments HTML, on peut utiliser [les attributs universels]
 
 Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](/fr/docs/Glossary/CSS) [`margin-left`](/fr/docs/Web/CSS/margin-left) ou [`margin-right`](/fr/docs/Web/CSS/margin-right) (ou encore la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin))
 
-Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Element/q).
+Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q).
 
 ## Exemples
 
@@ -156,5 +156,5 @@ Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un 
 
 ## Voir aussi
 
-- [`<q>`](/fr/docs/Web/HTML/Element/q) qui permet de placer des citations en incise dans une ligne de texte.
-- [`<cite>`](/fr/docs/Web/HTML/Element/cite) qui permet d'indiquer la source de la citation.
+- [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q) qui permet de placer des citations en incise dans une ligne de texte.
+- [`<cite>`](/fr/docs/Web/HTML/Reference/Elements/cite) qui permet d'indiquer la source de la citation.

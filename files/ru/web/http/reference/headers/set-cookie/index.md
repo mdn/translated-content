@@ -3,8 +3,6 @@ title: Set-Cookie
 slug: Web/HTTP/Reference/Headers/Set-Cookie
 ---
 
-{{HTTPSidebar}}
-
 HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя.
 
 Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Guides/Cookies).

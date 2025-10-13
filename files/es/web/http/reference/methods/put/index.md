@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PUT
 original_slug: Web/HTTP/Methods/PUT
 ---
 
-{{HTTPSidebar}}
-
 La **petición HTTP PUT** crea un nuevo elemento o reemplaza una representación del elemento de destino con los datos de la petición.
 
 La diferencia entre el método `PUT` y el método {{HTTPMethod("POST")}} es que `PUT` es un método idempotente: llamarlo una o más veces de forma sucesiva tiene el mismo efecto (sin efectos secundarios), mientras que una sucesión de peticiones `POST` idénticas pueden tener efectos adicionales, como envíar una orden varias veces.

@@ -73,7 +73,7 @@ Il existe également un champ [`orientation`](/fr/docs/Web/Manifest/orientation)
 
 ### Couleurs
 
-- [`theme_color`](/fr/docs/Web/Manifest/theme_color)
+- [`theme_color`](/fr/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : [La couleur par défaut des éléments d'interface du système d'exploitation ou du navigateur](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) comme la barre d'état sur certains mobiles et la barre du titre d'application sur les systèmes d'exploitation de bureau.
 - [`background_color`](/fr/docs/Web/Manifest/background_color)
   - : Une couleur de substitution qui peut être affichée [comme arrière-plan de l'application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) jusqu'à ce que le CSS soit chargé. Pour créer une transition fluide entre le lancement de l'application et la fin du chargement, mieux vaudra utiliser [la couleur](/fr/docs/Web/CSS/color_value) déclarée pour [l'arrière-plan (propriété CSS `background-color`)](/fr/docs/Web/CSS/background-color) de l'application.
@@ -104,7 +104,7 @@ Dans [notre fichier CSS](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracke
 
 Les icônes d'une PWA aident à identifier l'application parmi les autres, aident à la rendre visuellement attractive et plus facilement découvrable. L'icône d'une PWA apparaît sur les écrans d'accueil, lanceurs d'application ou dans les résultats des magasins d'application. La taille de l'image affichée et les contraintes sur les fichiers utilisés varient selon le système et le contexte d'affichage. C'est dans le manifeste qu'on définit les images des différentes icônes.
 
-Dans l'objet JSON qui représente le manifeste, le champ `icons` est un tableau d'un ou plusieurs objets représentant des icônes, chacun avec les propriétés `src` et `sizes`, et pouvant également inclure les propriétés optionnelles `type` et `purpose`. La propriété `src` de chaque objet icône indique la source d'un seul fichier image. La propriété `sizes` fournit une liste de tailles prises en charge pour cette image, séparées par des espaces, ou le mot-clé `any` (la valeur est analogue à l'attribut [`sizes`](/fr/docs/Web/HTML/Element/link#sizes) de l'élément HTML [`<link>`](/fr/docs/Web/HTML/Element/link)). La propriété `type` indique le type MIME de l'image.
+Dans l'objet JSON qui représente le manifeste, le champ `icons` est un tableau d'un ou plusieurs objets représentant des icônes, chacun avec les propriétés `src` et `sizes`, et pouvant également inclure les propriétés optionnelles `type` et `purpose`. La propriété `src` de chaque objet icône indique la source d'un seul fichier image. La propriété `sizes` fournit une liste de tailles prises en charge pour cette image, séparées par des espaces, ou le mot-clé `any` (la valeur est analogue à l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/link#sizes) de l'élément HTML [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)). La propriété `type` indique le type MIME de l'image.
 
 ```js
 {
@@ -133,7 +133,7 @@ Dans l'objet JSON qui représente le manifeste, le champ `icons` est un tableau 
 
 Toutes les icônes devraient avoir le même aspect afin que votre application soit reconnaissable quelle que soit la taille utilisée. Plus l'icône est grande, plus elle pourra contenir de détails. Bien que tous les fichiers d'icônes soient des images carrées, certains systèmes d'exploitation pourront les afficher avec une autre forme, en coupant certaines sections ou en appliquant un masque sur l'icône pour obtenir une homogénéité entre les applications, voire en les réduisant, en les centrant et en ajoutant un arrière-plan si l'icône n'est pas masquable. La [zone sûre](/fr/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), celle qui sera affichée sans perte comme un cercle correspond aux 80% intérieurs de l'image. Les icônes qui peuvent recevoir un masque sans problème peuvent être identifiées avec la propriété `purpose` dotée de la valeur `maskable` (voir [les icônes adaptatives sur web.dev (en anglais)](https://web.dev/articles/maskable-icon)).
 
-Dans Safari (et donc sur iOS et iPadOS), si vous incluez des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) pour [les ressources non-standards `apple-touch-icon`](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site) dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head), ces icônes remplaceront celles déclarées dans le manifeste.
+Dans Safari (et donc sur iOS et iPadOS), si vous incluez des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) pour [les ressources non-standards `apple-touch-icon`](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#ajouter_des_icônes_personnalisées_à_un_site) dans l'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head), ces icônes remplaceront celles déclarées dans le manifeste.
 
 ### Tâche
 
@@ -206,7 +206,7 @@ Pour une PWA, le manifeste doit être référencé dans le document HTML de l'ap
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-L'élément `<link>` sert généralement à référencer les feuilles de style, et dans le cas des PWA, le manifeste. On l'utilise aussi, entre autres, pour [les icônes d'un site](/fr/docs/Web/HTML/Attributes/rel#icon) (qu'il s'agisse des «&nbsp;favicons&nbsp;» et des icônes pour les écrans d'accueil sur mobile).
+L'élément `<link>` sert généralement à référencer les feuilles de style, et dans le cas des PWA, le manifeste. On l'utilise aussi, entre autres, pour [les icônes d'un site](/fr/docs/Web/HTML/Reference/Attributes/rel#icon) (qu'il s'agisse des «&nbsp;favicons&nbsp;» et des icônes pour les écrans d'accueil sur mobile).
 
 ```html
 <link rel="icon" href="icons/circle.svg" />
@@ -222,7 +222,7 @@ Comme exercice facultatif, vous pouvez également ajouter un lien vers une icôn
 
 #### Exemple de solution
 
-L'élément [`<head>`](/fr/docs/Web/HTML/Element/head) de votre fichier `index.html` pourra ressembler à&nbsp;:
+L'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) de votre fichier `index.html` pourra ressembler à&nbsp;:
 
 ```html
 <head>

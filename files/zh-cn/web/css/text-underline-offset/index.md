@@ -3,8 +3,6 @@ title: text-underline-offset
 slug: Web/CSS/text-underline-offset
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 的 **`text-underline-offset`** 属性设置文本装饰下划线（使用 {{cssxref("text-decoration")}} 应用）与其原始位置的偏移距离。
 
 {{InteractiveExample("CSS Demo: text-underline-offset")}}

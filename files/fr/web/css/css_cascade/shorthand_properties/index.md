@@ -177,27 +177,27 @@ inset: 0 20px 0 20px;
 
 CSS fournit une propriété raccourcie universelle, [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés du document. Elle permet ainsi de changer le modèle d'héritage des propriétés.
 
-Voir les articles [La cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
+Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
 
 ## Voir aussi
 
 - Les concepts fondamentaux de CSS&nbsp;:
-  - [La syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Les règles @](/fr/docs/Web/CSS/At-rule)
-  - [Les commentaires](/fr/docs/Web/CSS/Comments)
-  - [La spécificité](/fr/docs/Web/CSS/Specificity)
-  - [L'héritage](/fr/docs/Web/CSS/Inheritance)
+  - [La syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Les règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Les commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
+  - [La spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [L'héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Les modes de disposition](/fr/docs/Web/CSS/Layout_mode)
-  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Les modes de disposition](/fr/docs/Glossary/Layout_mode)
+  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [La fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Les différentes valeurs
-    - [Les valeurs initiales](/fr/docs/Web/CSS/initial_value)
-    - [Les valeurs calculées](/fr/docs/Web/CSS/computed_value)
-    - [Les valeurs utilisées](/fr/docs/Web/CSS/used_value)
-    - [Les valeurs réelles](/fr/docs/Web/CSS/actual_value)
-  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+    - [Les valeurs initiales](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
+    - [Les valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [Les valeurs utilisées](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
+    - [Les valeurs réelles](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - Les propriétés raccourcies&nbsp;:
   - [`all`](/fr/docs/Web/CSS/all)
   - [`animation`](/fr/docs/Web/CSS/animation)

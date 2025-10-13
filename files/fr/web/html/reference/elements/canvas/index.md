@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/canvas
 original_slug: Web/HTML/Element/canvas
 ---
 
-{{HTMLSidebar}}
-
 On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/Canvas_API), ou l'API [WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 
 <table class="properties">
@@ -92,7 +90,7 @@ On utilise l'élément **HTML `<canvas>`** avec l'API [canvas](/fr/docs/Web/API/
 
 ## Attributs
 
-Comme les autres éléments HTML, cet élément possède les [attributs globaux](/fr/docs/Web/HTML/Global_attributes).
+Comme les autres éléments HTML, cet élément possède les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`height`**
   - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
@@ -109,7 +107,7 @@ Il est fortement recommandé de fournir un contenu alternatif au contenu du bloc
 
 ### Balise `</canvas>` obligatoire
 
-À la différence de [`<img>`](/fr/docs/Web/HTML/Element/img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
+À la différence de [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
 
 ### Dimensionnement du canevas : CSS ou HTML
 
@@ -183,5 +181,4 @@ Seul, l'élément `<canvas>` est une image matricielle et ne fournit pas d'infor
 - [Le portail MDN sur l'élément `<canvas>`](/fr/docs/Web/API/Canvas_API)
 - [Tutoriel `<canvas>`](/fr/docs/Web/API/Canvas_API/Tutorial)
 - [Anti-sèche `<canvas>`](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Démonstrations liées à `<canvas>`](/fr/docs/orphaned/Web/Demos)
 - [Introduction à `<canvas>` par Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) (en anglais)
