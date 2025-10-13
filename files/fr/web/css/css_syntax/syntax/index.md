@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
 ---
 
-{{CSSRef}}
-
 L'objectif fondamental du langage <i lang="en">Cascading Style Sheets</i> ([CSS](/fr/docs/Web/CSS)) est de permettre à un moteur de navigation d'associer des fonctionnalités spécifiques, comme les couleurs, le positionnement ou les décorations à des éléments de la page. La _syntaxe CSS_ reflète cet objectif et ses éléments de base sont&nbsp;:
 
 - La **propriété** est un identifiant, c'est-à-dire un _nom_ compréhensible par un être humain, qui définit quelle fonctionnalité est ciblée.
@@ -84,10 +82,10 @@ Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**
   - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
-    - [Valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
-    - [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [Valeur utilisée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
-    - [Valeur réelle](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
   - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
