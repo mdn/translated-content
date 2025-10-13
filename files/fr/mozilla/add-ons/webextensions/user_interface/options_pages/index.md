@@ -51,7 +51,8 @@ Vous devez également inclure une clé [`options_ui`](/fr/docs/Mozilla/Add-ons/W
 },
 ```
 
-> **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
+> [!NOTE]
+> **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
 Voir la page [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) pour les **options de partage** entre votre page d'options et les scripts d'arrière-plan ou de contenu.
 

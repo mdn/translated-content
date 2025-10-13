@@ -15,7 +15,8 @@ Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguinte
 > [!NOTE]
 > Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos](https://www.certificate-transparency.org/known-logs)**.
 
-> **Nota:** **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
+> [!NOTE]
+> **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
 
 > [!NOTE]
 > O `Expect-CT` provavelmente se tornará obsoleto em Junho de 2021. Desde Maio de 2018, esperasse que novos certificados suportem SCTs por padrão. Certificados de antes de Maio de 2018 eram permitidos ter uma vida útil de 39 meses, todos eles serão expirados em Junho de 2021.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
 
-{{GlossarySidebar}}
-
 **联合身份**系统是一个{{glossary("identity provider", "身份提供商")}}（IdP）在用户和{{glossary("relying party", "依赖方")}}之间充当中介的系统，让用户可以使用一组{{glossary("credential", "凭据")}}与多个不同的依赖方进行身份验证。
 
 传统上，在 Web 中用户将使用用户名和密码登录网站，网站将根据存储在后端的（经过适当{{glossary("hash function", "散列")}}和{{glossary("salt", "加盐")}}处理的）副本来验证密码。

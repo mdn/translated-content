@@ -960,7 +960,8 @@ A cor `rebeccapurple` é equivalente à cor `#639`, e mais informações sobre p
 
 A palavra-chave `transparent` representa uma cor totalmente transparente, isto é, a cor vista será a cor de fundo. Tecnicamente, é um preto com canal alfa no seu valor mínimo e é um atalho para `rgba(0,0,0,0)`.
 
-> **Nota:** **Nota histórica**
+> [!NOTE]
+> **Nota histórica**
 > A palavra-chave `transparent` não era uma cor verdadeira no CSS nível 2 (Revisão 1). Era uma palavra-chave específica que poderia ser usada no lugar de um valor `<color>` regular em duas propriedades CSS: {{Cssxref("background")}} e {{Cssxref("border")}}. Ela foi adicionada essencialmente para permitir a substituição de cores sólidas herdadas.
 >
 > Com o apoio da opacidade através de [canais alfal](https://en.wikipedia.org/wiki/Alpha_compositing), `transparent` foi redefinida como uma cor verdadeira no Cores CSS nível 3 permitindo seu uso em qualquer lugar onde for exigido um valor para `<color>`, como a propriedade {{Cssxref("color")}}.

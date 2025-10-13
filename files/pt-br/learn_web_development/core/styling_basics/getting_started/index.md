@@ -277,9 +277,11 @@ Definir propriedades CSS para valores específicos é a função central da ling
 - **{{cssxref("color")}}**
 - **{{cssxref("border")}}**
 
-> **Aviso:** **Importante**: Se uma propriedade é desconhecida ou se um valor não é válido para uma determinada propriedade, a declaração é considerada _inválida_ e é completamente ignorada pelo motor CSS do navegador.
+> [!WARNING]
+> **Importante**: Se uma propriedade é desconhecida ou se um valor não é válido para uma determinada propriedade, a declaração é considerada _inválida_ e é completamente ignorada pelo motor CSS do navegador.
 
-> **Aviso:** **Importante**: Em CSS (e em outros padrões da web), a ortografia americana foi estabelecida como padrão a ser seguido quando houver incerteza linguística. Por exemplo, `color` deve ser _sempre_ escrito como `color`. `colour` não funcionará.
+> [!WARNING]
+> **Importante**: Em CSS (e em outros padrões da web), a ortografia americana foi estabelecida como padrão a ser seguido quando houver incerteza linguística. Por exemplo, `color` deve ser _sempre_ escrito como `color`. `colour` não funcionará.
 
 ### Funções
 

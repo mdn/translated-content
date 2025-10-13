@@ -137,7 +137,8 @@ flexbox는 1차원 모델이지만 **flex 항목**이 여러 행에 나열되도
 
 항목의 최소 크기는 실제 축소량을 계산할 때 고려되기 때문에 flex-shrink 속성이 flex-grow 속성에 비해 덜 일관된 모습을 보여줄지도 모릅니다. `flex-shrink` 속성이 항목의 사이즈를 결정하는 알고리즘에 관해서는 [Controlling Ratios of Flex Items on the Main Axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)에서 자세히 살펴히보겠습니다.
 
-> **참고:** `flex-grow` 와 `flex-shrink`의 값이 비율임을 유의하세요. **flex 항목**의 flex 속성을 모두 `1 1 200px` 로 지정하고 한 항목만 크기가 늘어나는 비율을 타 항목의 두배로 하고 싶으면 해당 **flex 항목**의 flex 속성을 `2 1 200px`로 지정하면 되지만, flex 속성 값을 모두 `10 1 200px`로 지정하고 늘어나는 비율을 두 배로 하고 싶은 항목의 flex 속성 값만 `20 1 200px`로 지정해도 동일하게 동작합니다.
+> [!NOTE]
+> `flex-grow` 와 `flex-shrink`의 값이 비율임을 유의하세요. **flex 항목**의 flex 속성을 모두 `1 1 200px` 로 지정하고 한 항목만 크기가 늘어나는 비율을 타 항목의 두배로 하고 싶으면 해당 **flex 항목**의 flex 속성을 `2 1 200px`로 지정하면 되지만, flex 속성 값을 모두 `10 1 200px`로 지정하고 늘어나는 비율을 두 배로 하고 싶은 항목의 flex 속성 값만 `20 1 200px`로 지정해도 동일하게 동작합니다.
 
 ### 축약형 속성 flex
 

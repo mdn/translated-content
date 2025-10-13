@@ -258,7 +258,8 @@ for (let i = 0; i < cats.length; i++) {
 > [!NOTE]
 > 여러분은 이 [예제 코드를 Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)에서 또한 찾아볼 수 있습니다 (또한 [실제로 작동하는 모습도 볼 수 있습니다](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **경고:** **중요**: 모든 반복문과 마찬가지로 — for 문에서, 초기화식(initializer)이 결국 조건이 true가 아닌 지점에 닿도록, 경우에 따라, 증가되거나 혹은 감소되게 해야만 합니다. 만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
+> [!WARNING]
+> **중요**: 모든 반복문과 마찬가지로 — for 문에서, 초기화식(initializer)이 결국 조건이 true가 아닌 지점에 닿도록, 경우에 따라, 증가되거나 혹은 감소되게 해야만 합니다. 만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
 
 ## break로 반복문 종료하기
 
@@ -510,7 +511,8 @@ do {
 > [!NOTE]
 > 다시 말하지만, 이것은 예상한 바와 같이 똑같이 동작합니다 — 한 번 봐 보세요 [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (또한 [전체 소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)도 보세요).
 
-> **경고:** **중요**: 모든 반복문과 마찬가지로 — while과 do...while문에서, 조건이 결국 false가 되도록, 경우에 따라, 초기화식이 증가되거나 감소되게 해야만 합니다.만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
+> [!WARNING]
+> **중요**: 모든 반복문과 마찬가지로 — while과 do...while문에서, 조건이 결국 false가 되도록, 경우에 따라, 초기화식이 증가되거나 감소되게 해야만 합니다.만약 그렇지 않다면, 반복문은 영원히 계속될 것이고, 브라우저가 강제로 멈추게 하거나, 브라우저가 멈출(crash) 것입니다. 이것은 **무한 루프**(infinite loop)라고 불립니다.
 
 ## 직접 해보기: 카운트 다운 시작!
 

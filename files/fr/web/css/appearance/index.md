@@ -40,7 +40,8 @@ appearance: auto;
 
 Cette propriété était utilisée dans les feuilles de style XUL afin de mettre en forme des _widgets_ utilisant la mise en forme de la plateforme utilisée. Elle est également utilisée dans les implémentations XBL pour les _widgets_ livrés avec les logiciels Mozilla.
 
-> **Note :** _Cette propriété doit être utilisée avec beaucoup d'attention sur les sites web._ Son comportement peut varier d'un navigateur à l'autre bien que ces variations aient réduit avec le temps. Le mot-clé `none` peut avoir un comportement différent d'une plateforme à une autre et d'autres mots-clés ne sont pas pris en charge.
+> [!NOTE]
+> _Cette propriété doit être utilisée avec beaucoup d'attention sur les sites web._ Son comportement peut varier d'un navigateur à l'autre bien que ces variations aient réduit avec le temps. Le mot-clé `none` peut avoir un comportement différent d'une plateforme à une autre et d'autres mots-clés ne sont pas pris en charge.
 
 ## Syntaxe
 

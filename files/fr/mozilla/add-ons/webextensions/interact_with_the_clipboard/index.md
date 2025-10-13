@@ -104,7 +104,8 @@ Selon le navigateur, le code présenté juste avant pourra ne pas fonctionner. P
 
 Pour permettre ce cas d'usage, il faut demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Cette dernière permettra d'écrire dans le presse-papier en dehors des gestionnaires d'évènements éphémères déclenchés par une action de l'utilisatrice ou de l'utilisateur.
 
-> **Note :** [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) ne fonctionne pas pour les champs de formulaire avec `type="hidden"`, les éléments avec l'attribut HTML `"hidden"`, ou ceux ciblés par une règle CSS contenant `"display: none;"`.
+> [!NOTE]
+> [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) ne fonctionne pas pour les champs de formulaire avec `type="hidden"`, les éléments avec l'attribut HTML `"hidden"`, ou ceux ciblés par une règle CSS contenant `"display: none;"`.
 
 ### Considérations spécifiques à chaque navigateur
 

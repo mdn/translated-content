@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
 
 Dans ce module, nous vous recommandons d'utiliser Flexbox et les grilles CSS comme principales méthodes de mise en page de vos créations. Cependant, certains visiteurs de votre site utilisent des navigateurs plus anciens ou qui ne prennent pas en charge les méthodes que vous avez utilisées. Ce sera toujours le cas sur le Web : au fur et à mesure que de nouvelles fonctionnalités sont développées, les différents navigateurs donnent la priorité à certaines fonctionnalités plutôt qu'à d'autres. Cet article explique comment utiliser les techniques modernes du Web sans exclure les utilisateurs de technologies plus anciennes.
@@ -213,11 +211,11 @@ Dans les anciennes versions des navigateurs, vous pouvez trouver des itérations
 
 La spécification CSS Grid a été initialement prototypée dans Internet Explorer 10 ; cela signifie que si IE10 et IE11 ne disposent pas du support de la grille _moderne_, ils disposent d'une version de la mise en page Grid qui est très utilisable, bien que différente de la spécification moderne documentée sur ce site. Les implémentations d'IE10 et 11 sont préfixées `-ms-`, ce qui signifie que vous pouvez les utiliser pour ces navigateurs et qu'elles seront ignorées par les navigateurs non-Microsoft. Edge comprend toujours l'ancienne syntaxe, cependant, alors faites attention à ce que tout soit écrasé en toute sécurité dans votre grille CSS moderne.
 
-Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/conflicting/Web/CSS/CSS_grid_layout) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
+Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
 
 ## Test des anciens navigateurs
 
-La majorité des navigateurs prenant en charge Flexbox et Grid, il peut être raisonnablement difficile de tester les navigateurs plus anciens. Une façon de procéder est d'utiliser un outil de test en ligne tel que Sauce Labs, comme détaillé dans le module [Test sur plusieurs navigateurs](/fr/docs/conflicting/Learn_web_development/Extensions/Testing).
+La majorité des navigateurs prenant en charge Flexbox et Grid, il peut être raisonnablement difficile de tester les navigateurs plus anciens. Une façon de procéder est d'utiliser un outil de test en ligne tel que Sauce Labs, comme détaillé dans le module [Test sur plusieurs navigateurs](/fr/docs/Learn_web_development/Extensions/Testing).
 
 Vous pouvez également télécharger et installer des machines virtuelles, et exécuter les anciennes versions des navigateurs dans un environnement confiné sur votre propre ordinateur. Avoir accès à d'anciennes versions d'Internet Explorer est particulièrement utile, et à cette fin, Microsoft a mis à disposition [une gamme de machines virtuelles à télécharger gratuitement](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Celles-ci sont disponibles pour les systèmes d'exploitation Mac, Windows et Linux et constituent donc un excellent moyen de tester les navigateurs Windows anciens et modernes, même si vous n'utilisez pas d'ordinateur Windows.
 
@@ -229,7 +227,7 @@ Vous disposez désormais des connaissances nécessaires pour utiliser en toute c
 
 - [Utilisation des requêtes de fonctionnalités en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) (en)
 - [Mises en page avancées avec les boîtes flexibles](/fr/docs/Glossary/Flexbox)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/conflicting/Web/CSS/CSS_grid_layout)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Utilisation de la grille CSS : Prise en charge des navigateurs sans Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/) (en)
 - [Un tutoriel qui utilise la version IE10 et 11 de Grid](https://24ways.org/2012/css3-grid-layout/) (en)
 - [Dois-je essayer d'utiliser la mise en œuvre de la grille dans IE10 ?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/) (en)

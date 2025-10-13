@@ -9,7 +9,8 @@ l10n:
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-track`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la _piste_ (c'est-à-dire la rainure) dans laquelle l'indicateur glisse dans un élément {{HTMLElement("input")}} de type `range`.
 
-> **Note :** `::-moz-range-track` n'aura aucun effet s'il est utilisé sur autre chose qu'un élément `<input type="range">`.
+> [!NOTE]
+> `::-moz-range-track` n'aura aucun effet s'il est utilisé sur autre chose qu'un élément `<input type="range">`.
 
 ## Syntaxe
 

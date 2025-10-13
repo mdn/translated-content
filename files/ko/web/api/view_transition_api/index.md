@@ -113,7 +113,8 @@ figcaption {
 
 `view-transition-name`의 값은 `none`을 제외한 모든 값을 사용할 수 있으며, 특히 `none` 값은 해당 요소가 뷰 전환에 참여하지 않음을 의미합니다.
 
-> **참고:** `view-transition-name`은 고유해야 합니다. 만약 렌더링된 두 요소의 `view-transition-name`이 같으면, {{domxref("ViewTransition.ready")}}가 거부되고 전환이 건너뛰어집니다.
+> [!NOTE]
+> `view-transition-name`은 고유해야 합니다. 만약 렌더링된 두 요소의 `view-transition-name`이 같으면, {{domxref("ViewTransition.ready")}}가 거부되고 전환이 건너뛰어집니다.
 
 ### 애니메이션 사용자 지정하기
 
@@ -187,7 +188,8 @@ figcaption {
 
 기본적으로 `::view-transition-group` 은 이전 뷰와 새 뷰 간에 너비와 높이를 전환하기 때문에 이 방법이 작동합니다. 두 상태 모두에 고정된 `높이`를 설정하기만 하면 작동합니다.
 
-> **참고:** [View Transitions API를 사용한 부드럽고 간단한 전환](https://developer.chrome.com/docs/web-platform/view-transitions/)에는 몇 가지 다른 사용자 지정 예제가 포함되어 있습니다.
+> [!NOTE]
+> [View Transitions API를 사용한 부드럽고 간단한 전환](https://developer.chrome.com/docs/web-platform/view-transitions/)에는 몇 가지 다른 사용자 지정 예제가 포함되어 있습니다.
 
 ### JavaScript로 애니메이션 제어하기
 

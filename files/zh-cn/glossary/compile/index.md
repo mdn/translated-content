@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 06fb3fd5a4967ea68a766f318d08fd9d1bd46e9d
 ---
 
-{{GlossarySidebar}}
-
 **编译**是将使用特定{{Glossary("computer programming", "编程语言")}}编写的计算机程序转换为一组其他格式的指令或其他语言的过程。**编译器**是执行该任务的计算机程序。
 
 通常，编译器会将使用高级语言（如 [C++](https://zh.wikipedia.org/wiki/C++)、[Rust](https://zh.wikipedia.org/wiki/Rust) 或 [Java](https://zh.wikipedia.org/wiki/Java)）编写的代码转换为可执行的（可运行的）代码——即所谓的**二进制码**或**机器码**。[WebAssembly](/zh-CN/docs/WebAssembly) 就是一种可执行的二进制代码形式，[可以从使用 C++、Rust、C#、Go、Swift 等多种语言编写的代码进行编译](https://webassembly.org/getting-started/developers-guide/)，可以在现代浏览器中的任何网页上运行，并且大部分的功能都得到支持（详见[浏览器兼容性表](/zh-CN/docs/WebAssembly#浏览器兼容性)）。

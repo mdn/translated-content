@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<alpha-value>`** représente une valeur qui peut être soit un {{cssxref("&lt;number&gt;")}} soit un {{cssxref("&lt;percentage&gt;")}}, et qui définit le **canal alpha** (<i lang="en">alpha channel</i>) ou la **transparence** d'une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<alpha-value>`** représente une valeur qui peut être soit un {{cssxref("&lt;number&gt;")}} soit un {{cssxref("&lt;percentage&gt;")}}, et qui définit le **canal alpha** (<i lang="en">alpha channel</i>) ou la **transparence** d'une couleur.
 
 ## Syntaxe
 
@@ -51,6 +51,6 @@ shape-image-threshold: 0.7;
 ## Voir aussi
 
 - [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
 - [Couleur CSS](/fr/docs/Web/CSS/CSS_colors)
 - Le type de donnée [`<color>`](/fr/docs/Web/CSS/color_value)

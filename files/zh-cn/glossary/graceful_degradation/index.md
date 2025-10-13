@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f84053ea0611a96aa0e230eba1450b34d5c7ac81
 ---
 
-{{GlossarySidebar}}
-
 **优雅降级**（Graceful degradation）是一种设计理念，其核心是尝试构建可在最新浏览器中运行的现代网站/应用程序，而作为降级体验，在低版本浏览器中仍然提供必要的内容和功能。
 
 {{Glossary("Polyfill")}} 可用于使用 JavaScript 构建缺少的功能，但应尽可能提供样式和布局等功能的可接受替代方案，例如使用 CSS 层叠或 HTML 回退行为。在[处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS)中可以找到一些很好的例子。

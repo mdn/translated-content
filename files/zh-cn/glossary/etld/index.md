@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{GlossarySidebar}}
-
 **eTLD** 是指“有效顶级域”，即单个组织可以在其下注册域名的域。
 
 顶级域名（TLD）是域名中最后一个点后面的部分，例如，`crookedtimber.org` 中的顶级域名是 `org`。

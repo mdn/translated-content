@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}
 
-> **참고:** `SharedArrayBuffer` 생성자는 특정 [보안 요구 사항](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements)이 충족되지 않는 한 항상 전역적으로 사용할 수 없습니다.
+> [!NOTE]
+> `SharedArrayBuffer` 생성자는 특정 [보안 요구 사항](/ko/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements)이 충족되지 않는 한 항상 전역적으로 사용할 수 없습니다.
 
 **`SharedArrayBuffer()`** 생성자는 {{jsxref("SharedArrayBuffer")}} 객체를 생성합니다.
 
@@ -28,7 +29,8 @@ new SharedArrayBuffer(length)
 new SharedArrayBuffer(length, options)
 ```
 
-> **참고:** `SharedArrayBuffer()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하면 {{jsxref("TypeError")}} 예외가 발생합니다.
+> [!NOTE]
+> `SharedArrayBuffer()`는 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하면 {{jsxref("TypeError")}} 예외가 발생합니다.
 
 ### 매개변수
 
@@ -72,7 +74,8 @@ const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 buffer.grow(12);
 ```
 
-> **참고:** `maxByteLength`는 사용 사례에 맞게 가능하면 가장 작은 수를 설정하기를 권장합니다. 메모리 부족 오류의 위험성을 감소시키기 위해 `1073741824`(1GB)를 초과할 수 없습니다.
+> [!NOTE]
+> `maxByteLength`는 사용 사례에 맞게 가능하면 가장 작은 수를 설정하기를 권장합니다. 메모리 부족 오류의 위험성을 감소시키기 위해 `1073741824`(1GB)를 초과할 수 없습니다.
 
 ## 명세서
 

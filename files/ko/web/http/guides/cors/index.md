@@ -135,7 +135,8 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **참고:** [자격 증명](#requests_with_credentials)이 포함된 요청에 응답할 때, 서버는 Access-Control-Allow-Origin 헤더의 값으로 "\*" 와일드카드를 지정하는 대신 특정 출처를 **반드시** 지정해야 합니다.
+> [!NOTE]
+> [자격 증명](#requests_with_credentials)이 포함된 요청에 응답할 때, 서버는 Access-Control-Allow-Origin 헤더의 값으로 "\*" 와일드카드를 지정하는 대신 특정 출처를 **반드시** 지정해야 합니다.
 
 ### 사전 요청(Preflighted requests)
 
@@ -457,7 +458,8 @@ Origin: <origin>
 
 origin 값은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정보는 포함하지 않고, 오직 서버 이름만 포함합니다.
 
-> **참고:** `origin` 값은 `null` 또는 URI 가 올 수 있습니다.
+> [!NOTE]
+> `origin` 값은 `null` 또는 URI 가 올 수 있습니다.
 
 접근 제어 요청에는 **항상** {{HTTPHeader("Origin")}} 헤더가 전송됩니다.
 

@@ -333,7 +333,8 @@ for (const button of buttons) {
 이 속성은 `onclick` 속성보다 약간 길 수 있지만 페이지에 있는 버튼의 수나 추가 또는 제거된 버튼의 수에 관계없이 모든 버튼에 대해 작동합니다.
 JavaScript는 변경할 필요가 없습니다.
 
-> **참고:** `apply-javascript.html` 버전을 편집하고 파일에 버튼을 몇 개 더 추가해 보세요.
+> [!NOTE]
+> `apply-javascript.html` 버전을 편집하고 파일에 버튼을 몇 개 더 추가해 보세요.
 > 브라우저를 새로고침해보면, 아무 버튼을 누르더라도 새로운 문단이 생성되는 모습을 볼 수 있습니다.
 > 멋지지 않나요?
 
@@ -365,7 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 이 경우 스크립트와 HTML이 동시에 로드되어 코드가 작동합니다.
 
-> **참고:** `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded` 이벤트를 사용하지 않았습니다.
+> [!NOTE]
+> `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded` 이벤트를 사용하지 않았습니다.
 > `defer`은 외부 스크립트에서만 작동하기 때문에 내부 JavaScript 예제에서는 `defer` 솔루션을 사용하지 않았습니다.
 
 고전적인 방법은 스크립트 요소를 본문의 맨 마지막(`</body>` 태그 바로 앞)에 배치하는 것입니다. 그러면 모든 HTML을 읽은 후에 스크립트를 불러오게 됩니다.

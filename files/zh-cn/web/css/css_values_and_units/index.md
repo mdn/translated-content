@@ -1,6 +1,6 @@
 ---
 title: CSS 值和单位
-slug: Web/CSS/CSS_Values_and_Units
+slug: Web/CSS/CSS_values_and_units
 l10n:
   sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
@@ -138,63 +138,63 @@ l10n:
 - [`vw`](/zh-CN/docs/Web/CSS/length#vw)
 - [`x`](/zh-CN/docs/Web/CSS/resolution#x)
 
-[弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#弹性单位)（`fr`）和[容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）分别定义于 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout) 和 [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块。
+[弹性单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#弹性单位)（`fr`）和[容器单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）分别定义于 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout) 和 [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块。
 
 #### 单位分类
 
-- [绝对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`px`、`Q`）
-- [角度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#角度单位)（`deg`、`grad`、`rad`、`turn`）
+- [绝对长度单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`px`、`Q`）
+- [角度单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#角度单位)（`deg`、`grad`、`rad`、`turn`）
 - [默认视口单位](/zh-CN/docs/Web/CSS/length#默认视口单位)（`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
 - [动态视口单位](/zh-CN/docs/Web/CSS/length#动态视口单位)（`dvb`、`dvh`、`dvi`、`dvmax`、`dvmin`、`dvw`）
-- [频率单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#频率单位)（`Hz`、`kHz`）
+- [频率单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#频率单位)（`Hz`、`kHz`）
 - [大视口百分比单位](/zh-CN/docs/Web/CSS/length#大视口单位)（`lvb`、`lvh`、`lvi`、`lvmax`、`lvmin`、`lvw`）
-- [本地字体相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#本地字体相对长度单位)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`）
-- [物理单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`Q`）
-- [相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`、`rem`、`rlh`、`vb`、`vh`、`vi`、`vmax`、`vmin`、`vw`）
-- [分辨率单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#分辨率单位)（`dpcm`、`dpi` , `dppx`、`x`）
-- [根字体相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#根字号相关长度单位)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
+- [本地字体相对长度单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#本地字体相对长度单位)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`）
+- [物理单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`Q`）
+- [相对长度单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`、`rem`、`rlh`、`vb`、`vh`、`vi`、`vmax`、`vmin`、`vw`）
+- [分辨率单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#分辨率单位)（`dpcm`、`dpi` , `dppx`、`x`）
+- [根字体相对长度单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#根字号相关长度单位)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
 - [小视口百分比单位](/zh-CN/docs/Web/CSS/length#小视口单位)（`svb`、`svh`、`svi`、`svmax`、`svmin`、`svw`）
-- [时间单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#时间单位)（`ms`、`s`）
-- [视口单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#视口单位)（`dvh`、`dvw`、`lvh`、`lvw`、`svh`、`svw`、`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
-- [视觉角度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`px`）
+- [时间单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#时间单位)（`ms`、`s`）
+- [视口单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#视口单位)（`dvh`、`dvw`、`lvh`、`lvw`、`svh`、`svw`、`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
+- [视觉角度单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#绝对长度单位)（`px`）
 
 ### 关键概念
 
 - {{glossary("Advance measure", "步进尺寸")}}
-- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#方括号表示法（minmax）)
-- [组件值组合符](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#组件值组合符)
-- [CSS 全局关键字](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css_全局关键字)
+- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#方括号表示法（minmax）)
+- [组件值组合符](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#组件值组合符)
+- [CSS 全局关键字](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css_全局关键字)
 - {{glossary("Device pixel", "设备像素")}}
-- [函数表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [函数表示法](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
 - {{glossary("Identifier", "标识符")}}
 - {{glossary("Interpolation", "插值")}}
 - {{glossary("Keyword", "关键词")}}
-- [数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-- [数值数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)
+- [数值数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
 - {{glossary("Origin", "源")}}
 - {{glossary("Pixel", "像素")}}
-- [文本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- [文本数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
 - {{glossary("URL")}}
-- [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## 指南
 
-- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
   - : CSS 数据类型的简介，这些数据类型定义了 CSS 属性和函数接受的典型值。
 
-- [数值数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [数值数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
   - : 数值数据类型的概述，包括整数、数字、百分比和尺寸，以及相对与绝对长度、角度和时间单位。
 
-- [文本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- [文本数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
   - : 文本数据类型的概述，包括预定义关键字值、全局 CSS 关键字值以及 URL。
 
-- [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
   - : 概述那些通过特殊数据处理或计算来返回 CSS 属性值的 CSS 语句。
 
-- [使用 CSS 数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [使用 CSS 数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)
   - : CSS 数学函数允许将属性值写成数学表达式的形式。
 
-- [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - : 用于定义 CSS 属性和函数的有效值集合的形式语法。
 
 - [学习：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
@@ -212,10 +212,10 @@ l10n:
 
 - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)模块
   - {{cssxref("&lt;flex&gt;")}}
-  - [弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#弹性单位)（`fr`）
+  - [弹性单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#弹性单位)（`fr`）
 
 - [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
-  - [容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）
+  - [容器单位](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）
 
 - [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块
   - {{cssxref("&lt;color&gt;")}}

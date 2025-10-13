@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 31e158bf22cece84ba7de3de3551f2807fe587d0
 ---
 
-**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
+**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
 
 > [!NOTE]
 > 尽管 `<color>` 被精确定义，但在不同的输出设备上仍然有可能表现不一致（有时甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。

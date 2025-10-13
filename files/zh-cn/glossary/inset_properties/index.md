@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c5f403bb08c91ae77ddfe47f937438fb5e6fcae5
 ---
 
-{{GlossarySidebar}}
-
 CSS **inset 属性**通过指定元素相对于默认位置的偏移量控制定位元素的位置。inset 属性包括物理、逻辑和简写的 inset 属性。
 
 inset 属性包括物理属性（{{cssxref("top")}}、{{cssxref("left")}}、{{cssxref("bottom")}} 和 {{cssxref("right")}}）、与流式布局相关的等价{{glossary("logical properties", "逻辑属性")}}（{{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}} 和 {{cssxref("inset-inline-end")}}），以及 {{cssxref("inset-block")}}、{{cssxref("inset-inline")}} 和 {{cssxref("inset")}} 简写。

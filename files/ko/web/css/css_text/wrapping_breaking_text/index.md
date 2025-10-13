@@ -33,7 +33,8 @@ CSS는 데이터 손실을 방지하기 위해 넘치는 것을 이러한 방법
 
 {{EmbedGHLiveSample("css-examples/css-text/overflow-wrap.html", '100%', 660)}}
 
-> **참고:** `overflow-wrap` 속성은 비표준 속성인 `word-wrap` 과 같은 방식으로 동작합니다. 이제 브라우저에서는 `word-wrap` 속성을 표준 속성의 별칭처럼 취급합니다.
+> [!NOTE]
+> `overflow-wrap` 속성은 비표준 속성인 `word-wrap` 과 같은 방식으로 동작합니다. 이제 브라우저에서는 `word-wrap` 속성을 표준 속성의 별칭처럼 취급합니다.
 
 다른 대안 속성은 {{cssxref("word-break")}} 를 시도해 보는 것입니다. 이 속성은 단어를 넘치는 지점에서 끊습니다. 이 속성은 단어를 새 줄에 배치하면 끊지 않고 표시할 수 있는 경우에도 단어를 끊습니다.
 

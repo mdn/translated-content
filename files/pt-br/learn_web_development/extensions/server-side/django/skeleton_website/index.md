@@ -319,7 +319,8 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **Aviso:** **Importante**: Você precisará executar os comandos acima sempre que alterar seus models de uma forma que afete a estrutura de dados que precisa ser armazenada (incluindo adição e remoção de todos models e campos individuais).
+> [!WARNING]
+> **Importante**: Você precisará executar os comandos acima sempre que alterar seus models de uma forma que afete a estrutura de dados que precisa ser armazenada (incluindo adição e remoção de todos models e campos individuais).
 
 O comando `makemigrations` _cria_ (mas não aplica) as migrações para todos aplicativos instalados em seu projeto (você pode especificar o nome do aplicativo para executar apenas uma migração para um único projeto). Isso te permite checar o código para essas migrações antes delas serem aplicadas — quando você é experiente em Django, você pode escolher ajustá-los um pouco!
 

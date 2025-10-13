@@ -1,11 +1,11 @@
 ---
 title: Fonctions de valeur CSS
-slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+slug: Web/CSS/CSS_values_and_units/CSS_value_functions
 l10n:
   sourceCommit: 9036ccca6d55b90913ca424e6706b0c9ed1fa93b
 ---
 
-Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour renvoyer une [valeur](/fr/docs/Web/CSS/CSS_Values_and_Units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
+Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour renvoyer une [valeur](/fr/docs/Web/CSS/CSS_values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ Les fonctions peuvent prendre plusieurs arguments, qui sont formatés de manièr
 
 ## Les fonctions de transformation
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS {{CSSxRef("&lt;transform-function&gt;")}} représente la transformation d'apparence. Il est utilisé comme valeur de la propriété {{CSSxRef("transform")}}.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) CSS {{CSSxRef("&lt;transform-function&gt;")}} représente la transformation d'apparence. Il est utilisé comme valeur de la propriété {{CSSxRef("transform")}}.
 
 ### Les fonctions de déplacement
 
@@ -90,7 +90,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS 
 
 Les fonctions mathématiques permettent d'écrire des valeurs numériques CSS sous forme d'expressions mathématiques.
 
-Chacune des pages ci-dessous contient des informations détaillées sur la syntaxe d'une fonction mathématique, des données de compatibilité avec les navigateurs, des exemples, etc. Pour une introduction complète aux fonctions mathématiques CSS, regardez [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions).
+Chacune des pages ci-dessous contient des informations détaillées sur la syntaxe d'une fonction mathématique, des données de compatibilité avec les navigateurs, des exemples, etc. Pour une introduction complète aux fonctions mathématiques CSS, regardez [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions).
 
 ### Les opérations arithmétiques de base
 
@@ -156,7 +156,7 @@ Chacune des pages ci-dessous contient des informations détaillées sur la synta
 
 ## Les fonctions de filtre
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS {{CSSxRef("&lt;filter-function&gt;")}} représente un effet graphique qui peut modifier l'apparence d'une image d'entrée. Il est utilisé dans les propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}}.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) CSS {{CSSxRef("&lt;filter-function&gt;")}} représente un effet graphique qui peut modifier l'apparence d'une image d'entrée. Il est utilisé dans les propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}}.
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : Augmente le flou gaussien de l'image.
@@ -181,7 +181,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS 
 
 ## Les fonctions de couleur
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS {{CSSxRef("color_value","&lt;color&gt;")}} spécifie différentes représentations de couleurs.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) CSS {{CSSxRef("color_value","&lt;color&gt;")}} spécifie différentes représentations de couleurs.
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : Définit une couleur donnée selon ses composants rouge, vert, bleu et alpha (transparence).
@@ -210,7 +210,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS 
 
 ## Les fonctions d'image
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS {{CSSxRef("&lt;image&gt;")}} fournit une représentation graphique des images ou des dégradés.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) CSS {{CSSxRef("&lt;image&gt;")}} fournit une représentation graphique des images ou des dégradés.
 
 ### Les fonctions de dégradé
 
@@ -255,7 +255,7 @@ Les fonctions de compteur CSS sont généralement utilisées avec la propriété
 
 ### Les formes de base
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS {{CSSxRef("&lt;basic-shape&gt;")}} représente une forme graphique. Il est utilisé dans les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}} et {{CSSxRef("shape-outside")}}.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) CSS {{CSSxRef("&lt;basic-shape&gt;")}} représente une forme graphique. Il est utilisé dans les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}} et {{CSSxRef("shape-outside")}}.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : Définit une forme de cercle.
@@ -326,7 +326,7 @@ Les fonctions de police CSS sont utilisées avec la propriété {{CSSxRef("font-
 
 ## Les fonctions d'accélération
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) CSS {{CSSxRef("&lt;easing-function&gt;")}} représente une fonction mathématique. Il est utilisé dans les propriétés de transition et d'animation&nbsp;:
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) CSS {{CSSxRef("&lt;easing-function&gt;")}} représente une fonction mathématique. Il est utilisé dans les propriétés de transition et d'animation&nbsp;:
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : Fonction d'accélération qui interpole linéairement entre ses points.
@@ -364,5 +364,5 @@ Les fonctions suivantes renvoient une valeur entière basée sur l'arbre DOM, pl
 
 ## Voir aussi
 
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

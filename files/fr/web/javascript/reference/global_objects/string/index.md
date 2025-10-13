@@ -310,7 +310,7 @@ for (let i = 0, n = valeursEntree.length; i < n; ++i) {
 
 ## Voir aussi
 
-- [Formatage du texte dans le guide JavaScript](/fr/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
+- [Formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [Les chaînes binaires](/fr/docs/Web/API/Window/btoa)

@@ -959,7 +959,8 @@ div {
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **참고:** **노트:** 트랜지션을 중단하면 `transitionend` 이벤트는 발생하지 않습니다. 트랜지션을 완료하기 전에 애니메이션하고 있는 속성의 값이 바뀌기 때문입니다.
+> [!NOTE]
+> **노트:** 트랜지션을 중단하면 `transitionend` 이벤트는 발생하지 않습니다. 트랜지션을 완료하기 전에 애니메이션하고 있는 속성의 값이 바뀌기 때문입니다.
 
 ## 속성값 목록이 다른 개수를 가진 경우
 

@@ -51,7 +51,8 @@ transform: translateY(3ch);
 }
 ```
 
-> **Note :** `translateY(ty)` est équivalent à `translate(0, ty)` ou `translate3d(0, ty, 0)`.
+> [!NOTE]
+> `translateY(ty)` est équivalent à `translate(0, ty)` ou `translate3d(0, ty, 0)`.
 
 ## Syntaxe
 

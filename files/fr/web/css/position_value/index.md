@@ -94,7 +94,7 @@ bottom top
 
 ## Voir aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Tutoriel — Introduction aux valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [`background-position`](/fr/docs/Web/CSS/background-position)
 - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)

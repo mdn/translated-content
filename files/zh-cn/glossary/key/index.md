@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 密钥是一段用于{{Glossary("cipher", "密码算法")}}{{Glossary("encryption","加密")}}和/或{{Glossary("decryption","解密")}}的信息。
 
 经加密的消息需要确保即使{{Glossary("cryptosystem","密码系统")}}中除密钥外，其他部分在公开可见的情况下，仍然具有安全性。

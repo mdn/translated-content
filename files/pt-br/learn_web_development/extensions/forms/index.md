@@ -12,7 +12,8 @@ Este guia tem uma série de artigos que vão ajudar você a ficar craque em HTML
 
 Antes de iniciar este guia, você deve estar familiarizado com os conceitos da nossa [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content).
 
-> **Nota:** **Dica**: Se você está usando um computador/tablet/outro aparelho onde você não pode criar seus próprios arquivos, você pode testar (a maior parte) dos códigos de exemplo em uma ferramenta online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> **Dica**: Se você está usando um computador/tablet/outro aparelho onde você não pode criar seus próprios arquivos, você pode testar (a maior parte) dos códigos de exemplo em uma ferramenta online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias básicos
 

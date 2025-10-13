@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
 `flex` 是一个 CSS 的 {{cssxref("display")}} 属性中新添加一个值。与 `inline-flex` 一起，它将使应用了它的元素变成{{glossary("flex container", "弹性容器")}}，而这个元素的每个子元素将变成{{glossary("flex item", "弹性项目")}}。弹性项目会参与弹性布局，所有由 CSS 弹性盒子布局模块定义的属性都能被它们使用。
 
 `flex` 属性是 `flex-grow`、`flex-shrink` 和 `flex-basis` 属性的简写。

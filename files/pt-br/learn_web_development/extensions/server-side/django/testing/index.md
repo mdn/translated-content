@@ -50,7 +50,8 @@ Há inúmeros tipos, níveis, e classificações de testes e abordagens de teste
 - Testes de integração
   - : Verifica como agrupamentos de componentes funcionam quando utilizados juntos. Testes de integração estão cientes das interações necessárias entre componentes, mas não necessariamente das operações internas de cada componente. Eles podem abranger agrupamentos simples de componentes através de todo website.
 
-> **Nota:**Outros tipos de testes comuns incluem caixa preta (black box), caixa branca (white box), manual, automatizado, canário (canary), fumaça (smoke), conformidade (conformance), aceitação (acceptance), funcional (functional), sistema (system), _performance_, carga (load) e testes de _stress_. Procure-os para mais informaçãos.
+> [!NOTE]
+> Outros tipos de testes comuns incluem caixa preta (black box), caixa branca (white box), manual, automatizado, canário (canary), fumaça (smoke), conformidade (conformance), aceitação (acceptance), funcional (functional), sistema (system), _performance_, carga (load) e testes de _stress_. Procure-os para mais informaçãos.
 
 ### O que o Django fornece para testes?
 
@@ -232,7 +233,8 @@ Destroying test database for alias 'default'...
 
 Aqui vemos que tivemos uma falha no teste e podemos ver exatamente qual função falhou e por quê (essa falha é esperada, porque `False` não é `True`!).
 
-> **Nota:** **Dica:** A coisa mais importante para aprender com a saída do teste acima é que é muito mais valioso se você utilizar nomes descritivos/informativos para seus objetos e métodos.
+> [!NOTE]
+> **Dica:** A coisa mais importante para aprender com a saída do teste acima é que é muito mais valioso se você utilizar nomes descritivos/informativos para seus objetos e métodos.
 
 O texto acima mostrado em **negrito** normalmente não apareceria na saída do teste (isso é gerado pelas funções `print()` em nossos teste). Isso mostra como o método `setUpTestData()` é chamdo uma vez para classe e `setUp()` é chamado antes de cada método.
 
@@ -270,7 +272,8 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 
 Agora que sabemos como executar nosso testes e que tipo de coisas precisams testar, vamos ver alguns exemplos práticos.
 
-> **Nota:**Não escreveremos todos os testes possíveis, mas isso deve lhe dar uma ideia de como testes trabalham e o que mais você pode fazer.
+> [!NOTE]
+> Não escreveremos todos os testes possíveis, mas isso deve lhe dar uma ideia de como testes trabalham e o que mais você pode fazer.
 
 ### Models
 

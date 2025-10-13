@@ -10,7 +10,8 @@ Este header foi incluído pela Microsoft no IE 8 como uma maneira de webmasters 
 
 Experts em segurança da informação geralmente esperam que este header esteja presente.
 
-> **Nota:** `nosniff` só se aplica para tipos "script" e "style". Também, aplicar `nosniff` em tipos de imagem provou-se ser [incompatível com sites existentes](https://github.com/whatwg/fetch/issues/395).
+> [!NOTE]
+> `nosniff` só se aplica para tipos "script" e "style". Também, aplicar `nosniff` em tipos de imagem provou-se ser [incompatível com sites existentes](https://github.com/whatwg/fetch/issues/395).
 
 <table class="properties">
   <tbody>

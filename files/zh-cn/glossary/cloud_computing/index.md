@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{GlossarySidebar}}
-
 **云计算**指通过互联网（云）按需提供各种计算服务，如存储、数据库、网络、分析和智能等，这些服务也被称为**云服务**。
 
 云服务是由第三方提供商（如 Google（Google Cloud Platform）、Amazon AWS（Amazon Web Services）、Microsoft（Azure）等）通过互联网托管的基础设施、平台或软件。用户可以通过“按需付费”模式访问云服务，只为实际使用的部分付费，无需在本地计算机上进行复杂的软件安装。这种模式带来了更快的创新速度、灵活的可扩展性和显著的成本节约。

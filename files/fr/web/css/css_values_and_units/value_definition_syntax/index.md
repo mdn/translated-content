@@ -1,6 +1,6 @@
 ---
 title: Syntaxe de définition des valeurs
-slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+slug: Web/CSS/CSS_values_and_units/Value_definition_syntax
 original_slug: Web/CSS/Value_definition_syntax
 ---
 

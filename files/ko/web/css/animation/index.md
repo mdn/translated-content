@@ -143,7 +143,8 @@ animation:
 
 ## 예제
 
-> **참고:** [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
+> [!NOTE]
+> [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
 
 ### 해 뜨기
 

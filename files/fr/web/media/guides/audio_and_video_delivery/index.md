@@ -95,7 +95,8 @@ myAudio.play();
 
 On définit la source de l'audio en fonction du type de fichier audio pris en charge par le navigateur, puis nous plaçons la tête de lecture à 5 secondes et essayons de lire le fichier.
 
-> **Note :** `play()` sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.
+> [!NOTE]
+> `play()` sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.
 
 Il est également possible de donner un fichier WAV encodé en base64 à l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), permettant ainsi de générer de l'audio à la volée&nbsp;:
 

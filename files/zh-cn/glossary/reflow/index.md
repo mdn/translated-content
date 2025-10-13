@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 245307fe1bbb5a62c7e895fae62e0152f200b37b
 ---
 
-{{GlossarySidebar}}
-
 **重排**（reflow）发生在{{glossary("browser", "浏览器")}}重新计算网页的某些部分的位置和几何形状时（例如在交互式站点更新后）。这通常会紧接着重绘（repaint），即浏览器重新绘制网页以显示更新后的视觉效果。
 
 ## 参见

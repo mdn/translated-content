@@ -39,7 +39,8 @@ résultat = somme(3, 4); // renvoie 7
 résultat = somme(103, 104, 105); // renvoie 312
 ```
 
-> **Note :** `arguments.length` ne doit pas être confondu avec {{jsxref("Function.length")}}.
+> [!NOTE]
+> `arguments.length` ne doit pas être confondu avec {{jsxref("Function.length")}}.
 
 ## Spécifications
 

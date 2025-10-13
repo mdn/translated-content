@@ -31,7 +31,8 @@ AsyncFunction(arg1, arg2, functionBody)
 AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **참고:** `AsyncFunction()`은 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 혹은 그냥 없이도 호출할 수 있습니다. 둘 다 새로운 `AsyncFunction` 인스턴스를 생성합니다.
+> [!NOTE]
+> `AsyncFunction()`은 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 혹은 그냥 없이도 호출할 수 있습니다. 둘 다 새로운 `AsyncFunction` 인스턴스를 생성합니다.
 
 ### 매개변수
 

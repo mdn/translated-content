@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.
 
@@ -42,7 +42,7 @@ Regardons d'abord les trois méthodes pour appliquer CSS à un document.
 
 ### Feuille de style externe
 
-Dans la leçon [Démarrer avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
+Dans la leçon [Démarrer avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
 
 Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans un fichier séparé, avec l'extension `.css`. Un élément HTML `<link>` fait référence à ce fichier.
 
@@ -187,7 +187,7 @@ Bonne lecture !
 
 ## Sélecteurs
 
-Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
+Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
 
 Chaque règle CSS commence par un sélecteur ou une liste de sélecteurs afin d'indiquer au navigateur les éléments auxquels les règles doivent s'appliquer. Tous les exemples suivants sont des exemples de sélecteurs valides ou de listes de sélecteurs.
 
@@ -205,7 +205,7 @@ h1, h2, .intro
 Essayez de créer des règles CSS qui utilisent les sélecteurs ci-dessus et du code HTML à styler. Si vous ne savez pas ce que signifie la syntaxe ci-dessus, essayez de la rechercher sur MDN !
 
 > [!NOTE]
-> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors), dans un prochain cours.
+> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), dans un prochain cours.
 
 ### Spécificité
 

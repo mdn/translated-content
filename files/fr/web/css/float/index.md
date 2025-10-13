@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
 ---
 
-{{CSSRef}}
-
 La propriété CSS **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/position#positionnement_absolu)).
 
 {{InteractiveExample("CSS Demo: float")}}
@@ -64,22 +62,22 @@ Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr
 
 `float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/display) dans certains cas&nbsp;:
 
-| [Valeur spécifiée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4e3ad4bb8e93bd9e2a381021d1b939f81717e13df739659207d88907070d77aa) | [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `inline`                                                                                                                                       | `block`                                                          |
-| `inline-block`                                                                                                                                 | `block`                                                          |
-| `inline-table`                                                                                                                                 | `table`                                                          |
-| `table-row`                                                                                                                                    | `block`                                                          |
-| `table-row-group`                                                                                                                              | `block`                                                          |
-| `table-column`                                                                                                                                 | `block`                                                          |
-| `table-column-group`                                                                                                                           | `block`                                                          |
-| `table-cell`                                                                                                                                   | `block`                                                          |
-| `table-caption`                                                                                                                                | `block`                                                          |
-| `table-header-group`                                                                                                                           | `block`                                                          |
-| `table-footer-group`                                                                                                                           | `block`                                                          |
-| `inline-flex`                                                                                                                                  | `flex`                                                           |
-| `inline-grid`                                                                                                                                  | `grid`                                                           |
-| _autre_                                                                                                                                        | _inchangée_                                                      |
+| [Valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) | [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| `inline`                                                                       | `block`                                                                          |
+| `inline-block`                                                                 | `block`                                                                          |
+| `inline-table`                                                                 | `table`                                                                          |
+| `table-row`                                                                    | `block`                                                                          |
+| `table-row-group`                                                              | `block`                                                                          |
+| `table-column`                                                                 | `block`                                                                          |
+| `table-column-group`                                                           | `block`                                                                          |
+| `table-cell`                                                                   | `block`                                                                          |
+| `table-caption`                                                                | `block`                                                                          |
+| `table-header-group`                                                           | `block`                                                                          |
+| `table-footer-group`                                                           | `block`                                                                          |
+| `inline-flex`                                                                  | `flex`                                                                           |
+| `inline-grid`                                                                  | `grid`                                                                           |
+| _autre_                                                                        | _inchangée_                                                                      |
 
 > [!NOTE]
 > Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), la plupart des navigateurs récents permettront d'utiliser `float`, mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **`undefined`** 是一个{{Glossary("primitive", "原始值")}}，自动赋给刚刚声明的{{glossary("variable", "变量")}}，或那些没有提供实际{{Glossary("Argument", "参数")}}的形参。
 
 ## 示例

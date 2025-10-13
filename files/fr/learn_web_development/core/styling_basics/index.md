@@ -4,17 +4,15 @@ slug: Learn_web_development/Core/Styling_basics
 original_slug: Learn/CSS
 ---
 
-{{LearnSidebar}}
-
 > Les Cascading StyleSheets — ou {{glossary("CSS")}} — (Feuilles de style en cascade) sont la première technique à apprendre après le {{glossary("HTML")}}. Alors que {{glossary("HTML")}} s'utilise pour définir la structure et la sémantique du contenu, les {{Glossary('CSS')}} sont employées pour composer et déterminer l'apparence de ce contenu. Ainsi par exemple, vous utiliserez les CSS pour modifier les polices, la couleur, la taille et l'espacement de votre contenu, pour le répartir sur plusieurs colonnes ou bien pour ajouter des animations et autres fonctionnalités décoratives.
 
 ## Parcours d'apprentissage
 
 Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML](/fr/docs/Learn_web_development/Core/Structuring_content) — vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
 
-- des CSS, en commençant avec le module [Introduction aux CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
+- des CSS, en commençant avec le module [Introduction aux CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started)
 - des [Modules HTML](/fr/docs/Learn_web_development/Core/Structuring_content#modules) plus avancés
-- du [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) et sur la manière de l'utiliser pour ajouter des fonctionnalités dynamiques aux pages web.
+- du [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) et sur la manière de l'utiliser pour ajouter des fonctionnalités dynamiques aux pages web.
 
 Une fois compris les principes fondamentaux du HTML, nous vous recommandons d'apprendre HTML et CSS simultanément, en vous déplaçant d'un sujet à l'autre. Car le HTML est beaucoup plus intéressant et beaucoup plus amusant à apprendre en appliquant les CSS : vous ne pouvez pas apprendre réellement les CSS sans connaître le HTML.
 
@@ -26,9 +24,9 @@ Il est recommandé de travailler par le biais de Débuter avec le web avant d'es
 
 Cet article contient les modules suivants, dans l'ordre suggéré pour le parcours. Vous devez vraiment commencer par le premier.
 
-- [Introduction aux CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
+- [Introduction aux CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started)
   - : Ce module vous enseigne les bases du fonctionnement des CSS&nbsp;; il comprend les sélecteurs et les propriétés, l'écriture des règles des CSS, l'application des CSS au HTML, la définition de la longueur, de la couleur et d'autres unités avec les CSS, la cascade et l'héritage, les bases du modèle de boîte et le débogage du CSS.
-- [Styliser les boîtes](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics)
+- [Styliser les boîtes](/fr/docs/Learn_web_development/Core/Styling_basics)
   - : Ensuite, nous examinons la stylisation des boîtes&nbsp;: une des étapes fondamentales de la composition d'une page Web. Dans ce module, nous récapitulons les modèles de boîtes, puis nous nous penchons sur le contrôle de leur disposition en définissant le remplissage, les bordures et les marges, la personnalisation des couleurs d'arrière-plan, les images et autres caractéristiques, les caractéristiques de fantaisie telles que filtres et ombrages des boîtes.
 
 <!---->

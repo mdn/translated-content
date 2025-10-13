@@ -38,7 +38,8 @@ original_slug: Web/Media/Formats/codecs_parameter
 
 코덱의 속성 중 하나라도 퍼센트-인코딩이 필요한 특수문자{{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}를 사용하는 경우 MIME 타입을 기술하는 문자열의 `codecs` 파라미터를 `codecs*` (애스터리크(`*`) 추가됨에 유의)로 변경해야 합니다. JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function으로 파라미터 목록을 인코딩할 수 있습니다; 반대로 {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}를 통해 기인코딩된 파라미터 리스트를 디코딩할 수 있습니다.
 
-> **참고:** `codecs` 파라미터를 사용한다면, 파일 콘텐츠가 사용한 모든 코덱을 목록에 명시해야합니다. 목록에 파일이 사용하고 있지 않은 코덱을 명시하는 것도 가능합니다.
+> [!NOTE]
+> `codecs` 파라미터를 사용한다면, 파일 콘텐츠가 사용한 모든 코덱을 목록에 명시해야합니다. 목록에 파일이 사용하고 있지 않은 코덱을 명시하는 것도 가능합니다.
 
 ## 컨테이너별 코덱 옵션
 

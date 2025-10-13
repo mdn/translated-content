@@ -17,7 +17,8 @@ Les éléments de la liste doivent être affichés avec les indicateurs alignés
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
 
-> **Note :** [Télécharger l'exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html).
+> [!NOTE]
+> [Télécharger l'exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html).
 
 ## Choix effectués
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{GlossarySidebar}}
-
 [Rsync](https://rsync.samba.org/) 是一个开源文件同步工具，提供增量文件传输。它可以通过不安全和安全的传输方式（如 SSH）使用。它在大多数基于 Unix 的系统（如 macOS 和 Linux）和 Windows 上都可用。还有一些基于 GUI 的工具使用 rsync，例如 [Acrosync](https://acrosync.com/mac.html)。
 
 一段基础的命令如下：

@@ -24,7 +24,8 @@ _Il faudra changer le chemin de la macro pour correspondre à celui de votre exe
 
 _Il faut modifier le lien pour cibler la version téléchargeable de votre exemple._
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html).
 
 ## Choix effectués
 

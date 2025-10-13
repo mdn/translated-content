@@ -56,7 +56,8 @@ Les éléments appartenant à cette catégorie sont {{HTMLElement("h1")}}, {{HTM
 > [!NOTE]
 > Bien qu'il soit probable qu'un élément {{HTMLElement("header")}} comporte du contenu de titre, il n'est pas lui-même un contenu de titre.
 
-> **Note :** {{HTMLElement("hgroup")}} est supprimé du document recommandé par W3C.
+> [!NOTE]
+> {{HTMLElement("hgroup")}} est supprimé du document recommandé par W3C.
 
 ### Contenu phrasé
 

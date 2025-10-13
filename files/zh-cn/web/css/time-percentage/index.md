@@ -3,7 +3,7 @@ title: <time-percentage>
 slug: Web/CSS/time-percentage
 ---
 
-[CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)`<time-percentage> 的值`可以表示为时间或百分比。
+[CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)`<time-percentage> 的值`可以表示为时间或百分比。
 
 ## Syntax
 

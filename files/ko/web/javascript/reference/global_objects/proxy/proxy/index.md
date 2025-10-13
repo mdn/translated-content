@@ -13,7 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 new Proxy(target, handler);
 ```
 
-> **참고:** `Proxy()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 만들 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `Proxy()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 만들 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 

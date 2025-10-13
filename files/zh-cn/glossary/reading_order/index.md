@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7dda25db814fed5ae7498baaee80009b3569a8dc
 ---
 
-{{GlossarySidebar}}
-
 **阅读顺序**（Reading order）指的是内容被访问的顺序，例如被{{glossary("screen reader", "屏幕阅读器")}}朗读时的顺序，或通过顺序导航方式（如使用 Tab 键遍历链接或按钮）访问时的顺序。默认情况下，网页的阅读顺序由文档的源代码顺序决定。
 
 通常，源代码顺序应符合内容合理的阅读顺序，并且应与内容布局的视觉顺序相一致。然而，有时视觉顺序与源代码顺序会不同步。例如，你可能会根据[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)为文档应用不同的布局，以适应各种设备或用户需求，或者通过 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 调整 Tab 键导航顺序。

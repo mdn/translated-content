@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9fa28f84a3aef826a30d402e63153b63db739a89
 ---
 
-{{GlossarySidebar}}
-
 **顶层**是一个跨越整个视口的宽度和高度，并位于网页文档中显示的所有其他层的顶部的层。它由浏览器创建，用于包含应该显示在页面上所有其他内容之上的元素。
 
 在层叠上下文中，位于顶层的元素会生成一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，其对应的 {{cssxref("::backdrop")}} 伪元素也会生成一个新的层叠上下文。

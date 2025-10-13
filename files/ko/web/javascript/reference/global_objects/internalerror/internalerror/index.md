@@ -25,7 +25,8 @@ InternalError(message, fileName)
 InternalError(message, fileName, lineNumber)
 ```
 
-> **참고:** `InternalError()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 호출하거나 혹은 `new` 없이 호출할 수 있습니다. 두 방법 모두 새로운 `InternalError` 인스턴스를 생성합니다.
+> [!NOTE]
+> `InternalError()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 호출하거나 혹은 `new` 없이 호출할 수 있습니다. 두 방법 모두 새로운 `InternalError` 인스턴스를 생성합니다.
 
 ### 매개변수
 

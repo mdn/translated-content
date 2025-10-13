@@ -9,7 +9,8 @@ original_slug: Web/CSS/initial_value
 - [상속 속성](/ko/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)의 경우, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 없는 이상 초깃값은 **루트 요소에만** 쓰입니다.
 - [비상속 속성](/ko/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties)의 경우, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 없는 이상 초깃값은 **모든 요소**에 쓰입니다.
 
-> **참고:** {{cssxref("initial")}} 키워드를 사용해 명시적으로 초깃값을 지정할 수 있습니다.
+> [!NOTE]
+> {{cssxref("initial")}} 키워드를 사용해 명시적으로 초깃값을 지정할 수 있습니다.
 
 ## 명세
 

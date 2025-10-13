@@ -159,7 +159,8 @@ La syntaxe à quatre valeurs enfin permet d'indiquer la distance depuis certains
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
 
-> **Note :** `background-position` est un raccourci pour[`background-position-x`](/fr/docs/Web/CSS/background-position-x) et [`background-position-y`](/fr/docs/Web/CSS/background-position-y), qui permettent de fixer individuellement les positions sur chaque axe.
+> [!NOTE]
+> `background-position` est un raccourci pour[`background-position-x`](/fr/docs/Web/CSS/background-position-x) et [`background-position-y`](/fr/docs/Web/CSS/background-position-y), qui permettent de fixer individuellement les positions sur chaque axe.
 
 ### Utiliser un dégradé comme arrière-plan
 

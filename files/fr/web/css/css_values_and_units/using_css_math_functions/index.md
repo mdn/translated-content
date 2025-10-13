@@ -1,7 +1,7 @@
 ---
 title: Utiliser les fonctions mathématiques CSS
 short-title: Utiliser les fonctions mathématiques
-slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+slug: Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -19,7 +19,7 @@ Dans tous ces cas, il faut recourir aux mathématiques pour obtenir le résultat
 
 Dans de nombreux cas, y compris ceux ci-dessus, **vous pouvez utiliser à la place les fonctions mathématiques intégrées directement dans CSS**. Cette solution est souvent plus simple à mettre en œuvre et plus rapide à exécuter pour le navigateur que l'utilisation de JavaScript.
 
-Au total, les développeur·euse·s peuvent utiliser une combinaison de [près de deux douzaines de fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) dans leurs feuilles de style. Ce guide illustre quatre des plus courantes et présente les plus avancées.
+Au total, les développeur·euse·s peuvent utiliser une combinaison de [près de deux douzaines de fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions) dans leurs feuilles de style. Ce guide illustre quatre des plus courantes et présente les plus avancées.
 
 ## `calc()` : opérations mathématiques de base
 
@@ -315,11 +315,11 @@ div > code {
 
 Pour la mise en page et le style des éléments du DOM, les quatre fonctions mathématiques de base {{CSSxRef("calc", "calc()")}}, {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}} et {{CSSxRef("clamp", "clamp()")}} sont souvent suffisantes. Cependant, pour des usages avancés comme des supports d'apprentissage des mathématiques, des visualisations 3D ou des animations CSS, vous pouvez utiliser&nbsp;:
 
-- [Fonctions à valeurs par paliers](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_de_valeur_par_paliers)
+- [Fonctions à valeurs par paliers](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_valeur_par_paliers)
   - {{CSSxRef("round", "round()")}}&nbsp;: calcule une **valeur selon une stratégie d'arrondi**
   - {{CSSxRef("mod", "mod()")}}&nbsp;: calcule le **reste** d'une division avec le **même signe que le diviseur**
   - {{CSSxRef("rem", "rem()")}}&nbsp;: calcule le **reste** d'une division avec le **même signe que le dividende**
-- [Fonctions trigonométriques](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_trigonométriques)
+- [Fonctions trigonométriques](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_trigonométriques)
   - {{CSSxRef("sin", "sin()")}}&nbsp;: calcule le **sinus trigonométrique** d'un nombre
   - {{CSSxRef("cos", "cos()")}}&nbsp;: calcule le **cosinus trigonométrique** d'un nombre
   - {{CSSxRef("tan", "tan()")}}&nbsp;: calcule la **tangente trigonométrique** d'un nombre
@@ -327,13 +327,13 @@ Pour la mise en page et le style des éléments du DOM, les quatre fonctions mat
   - {{CSSxRef("acos", "acos()")}}&nbsp;: calcule l'**arccosinus** d'un nombre
   - {{CSSxRef("atan", "atan()")}}&nbsp;: calcule l'**arctangente** d'un nombre
   - {{CSSxRef("atan2", "atan2()")}}&nbsp;: calcule l'**arctangente** à partir de deux nombres
-- [Fonctions exponentielles](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_exponentielles)
+- [Fonctions exponentielles](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_exponentielles)
   - {{CSSxRef("pow", "pow()")}}&nbsp;: calcule un nombre **élevé à la puissance** d'un autre nombre
   - {{CSSxRef("sqrt", "sqrt()")}}&nbsp;: calcule la **racine carrée** d'un nombre
   - {{CSSxRef("hypot", "hypot()")}}&nbsp;: calcule la **racine carrée de la somme des carrés** des nombres donnés
   - {{CSSxRef("log", "log()")}}&nbsp;: calcule le **logarithme** d'un nombre (avec `e` comme base par défaut)
   - {{CSSxRef("exp", "exp()")}}&nbsp;: calcule **`e` élevé à la puissance** d'un autre nombre
-- [Fonctions de signe](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_liées_au_signe)
+- [Fonctions de signe](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_liées_au_signe)
   - {{CSSxRef("abs", "abs()")}}&nbsp;: calcule la **valeur absolue** d'un nombre
   - {{CSSxRef("sign", "sign()")}}&nbsp;: calcule le **signe (positif, négatif ou zéro)** d'un nombre
 

@@ -224,7 +224,8 @@ Les liens sont importants, ce sont eux qui forment la toile qu'est le Web&nbsp;!
 
 Attention, vous pourriez obtenir des résultats inattendus si vous omettez la partie `https://` ou `http://`, qui indique le _protocole_, au début de l'adresse. Après avoir créé un lien, cliquez dessus pour vous assurer qu'il pointe à l'endroit voulu.
 
-> **Note :** `href` peut sembler un peu obscure comme nom d'attribut&nbsp;: il signifie <i lang="en">hypertext reference</i> soit «**réf**érence **h**ypertexte ».
+> [!NOTE]
+> `href` peut sembler un peu obscure comme nom d'attribut&nbsp;: il signifie <i lang="en">hypertext reference</i> soit «**réf**érence **h**ypertexte ».
 
 Ajoutez un lien à votre page si ça n'est pas déjà fait.
 

@@ -78,7 +78,7 @@ caption {
 
 Si on veut qu'une cellule s'étende sur plusieurs lignes/colonnes, on pourra utiliser l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan) ou [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-rowspan) qui indiquent respectivement le nombre de colonnes / lignes sur lequel s'étendre (la valeur par défaut étant 1).
 
-La construction de tableau peut parfois demander un peu de pratique. Au-delà des exemples présentés ci-après, vous pouvez consulter [les tutoriels sur les tableaux HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics) afin d'apprendre comment utiliser ces éléments et attributs HTML afin d'organiser vos données tabulaires.
+La construction de tableau peut parfois demander un peu de pratique. Au-delà des exemples présentés ci-après, vous pouvez consulter [les tutoriels sur les tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) afin d'apprendre comment utiliser ces éléments et attributs HTML afin d'organiser vos données tabulaires.
 
 ## Attributs
 
@@ -655,7 +655,7 @@ Cette règle applique la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-al
 
 ## Voir aussi
 
-- [Apprendre : les tableaux HTML](/fr/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics) : une introduction à l'utilisation des tableaux qui aborde `<tr>`.
+- [Apprendre : les tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) : une introduction à l'utilisation des tableaux qui aborde `<tr>`.
 - Les autres éléments HTML relatifs aux tableaux : [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption), [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col), [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup), [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table), [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody), [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td), [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot), [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th), [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead).
 - [`HTMLTableRowElement`](/fr/docs/Web/API/HTMLTableRowElement) : l'interface DOM sur laquelle `<tr>` est basé.
 - Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tr>` :

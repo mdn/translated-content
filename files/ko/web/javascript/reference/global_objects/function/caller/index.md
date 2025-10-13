@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **참고:** [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 함수의 `caller`에 접근하면 오류가 발생합니다. 해당 API가 대체되지 않고 제거되었습니다. 이는 보안 위험을 초래하고 인라이닝 및 꼬리 호출(tail-call) 최적화와 같은 최적화의 가능성을 심각하게 제한하는 코드가 스택을 순차적으로 검사하는 것(walk the stack)을 방지하기 위한 것입니다. 자세한 설명은 [`arguments.callee`의 사용 중단에 대한 근거](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee#description)에서 확인할 수 있습니다.
+> [!NOTE]
+> [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 함수의 `caller`에 접근하면 오류가 발생합니다. 해당 API가 대체되지 않고 제거되었습니다. 이는 보안 위험을 초래하고 인라이닝 및 꼬리 호출(tail-call) 최적화와 같은 최적화의 가능성을 심각하게 제한하는 코드가 스택을 순차적으로 검사하는 것(walk the stack)을 방지하기 위한 것입니다. 자세한 설명은 [`arguments.callee`의 사용 중단에 대한 근거](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee#description)에서 확인할 수 있습니다.
 
 {{jsxref("Function")}} 인스턴스의 **`caller`** 접근자 속성은 이 함수를 호출한 함수를 반환합니다. [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode), 화살표, 비동기 및 제너레이터 함수의 경우 `caller` 속성에 액세스하면 {{jsxref("TypeError")}}가 발생합니다.
 

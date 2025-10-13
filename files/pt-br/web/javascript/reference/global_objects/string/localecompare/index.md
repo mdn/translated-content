@@ -48,7 +48,8 @@ Retorna um inteiro indicando se _`referenceStr`_ vem antes, depois ou é equival
 - Positivo quando o _`referenceStr`_ ocorre após _`compareString`_
 - Retorna `0` se eles forem equivalentes
 
-> **Aviso:** **NÃO confie em valores de retorno exatos de -1 ou 1!**
+> [!WARNING]
+> **NÃO confie em valores de retorno exatos de -1 ou 1!**
 >
 > Os resultados de números inteiros negativos e positivos variam entre os navegadores (bem como entre as versões dos navegadores) porque a especificação W3C exige apenas valores negativos e positivos. Alguns navegadores podem retornar `-2` ou `2`, ou mesmo algum outro valor negativo ou positivo.
 

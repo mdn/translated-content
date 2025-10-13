@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a3693d282028046f4e0dadf0b1aa068b407d1158
 ---
 
-{{GlossarySidebar}}
-
 **robots.txt** 是一個通常放置於網站根目錄的檔案（例如，`https://www.example.com/robots.txt`）。它用來指定是否允許{{Glossary("crawler", "爬蟲")}}存取整個網站或指定的資源。一個限制性的 `robots.txt` 檔案可以防止爬蟲消耗過多的頻寬。
 
 網站擁有者可以禁止爬蟲檢測某個路徑（以及該路徑中的所有檔案）或特定檔案。這通常用於防止這些資源被索引或被搜索引擎提供服務。

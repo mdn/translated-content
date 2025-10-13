@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5edd07155de2eec2a8b6b2ad95820748cfec7
 ---
 
-{{GlossarySidebar}}
-
 CSS **物理属性**根据物理方向或元素边界定义位置。例如：
 
 - {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}} 等 {{Glossary("inset properties", "inset 属性")}}引用视口的物理尺寸。

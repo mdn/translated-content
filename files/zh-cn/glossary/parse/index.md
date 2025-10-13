@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 解析就是将程序解析以及转换成能够在运行环境中运行的计算机内部格式，比如浏览器中的 {{glossary("JavaScript")}} 引擎。
 
 [浏览器会将 HTML 解析](/zh-CN/docs/Learn_web_development/Core/Structuring_content)为 {{glossary('DOM')}} 树。HTML 解析包括标记化和树结构构建。HTML 标记包括开始和结束标签，以及属性名和属性值。如果文档格式良好，解析过程就会简单且快速。解析器将标记化的输入语法解析为文档，构建文档树。

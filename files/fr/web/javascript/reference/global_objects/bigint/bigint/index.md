@@ -18,7 +18,8 @@ BigInt(valeur);
 - `valeur`
   - : La valeur numérique de l'objet à créer. Il peut s'agir d'une chaîne de caractères ou d'un entier.
 
-> **Note :** `BigInt()` ne s'utilise pas avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
+> [!NOTE]
+> `BigInt()` ne s'utilise pas avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
 
 ## Exemples
 

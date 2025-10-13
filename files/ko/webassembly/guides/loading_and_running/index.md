@@ -109,4 +109,5 @@ request.onload = function () {
 };
 ```
 
-> **참고:** [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) 에서도 예제를 확인할 수 있습니다.
+> [!NOTE]
+> [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) 에서도 예제를 확인할 수 있습니다.

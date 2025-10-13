@@ -23,7 +23,8 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 Un booléen ({{jsxref('Boolean')}}) qui vaut `false` si la commande n'est pas
 prise en charge ou si elle est désactivée.
 
-> **Note :** `document.execCommand()` ne renvoie
+> [!NOTE]
+> `document.execCommand()` ne renvoie
 > `true` que s'il est appelé à partir d'une interaction utilisateur. On ne
 > peut pas l'invoquer dans un script afin de vérifier la prise en charge navigateur avant
 > d'appeler une commande. À partir de Firefox 82, les appels imbriqués à

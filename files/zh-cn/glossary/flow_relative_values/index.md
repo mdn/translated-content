@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 63249f6b1e89f42e172878c54a2f9674bee50904
 ---
 
-{{GlossarySidebar}}
-
 CSS 中**流相对值**是相对于一个元素的块轴、行轴而言的方向性关键字值，包括 `block-start`、`block-end`、`inline-start`、`inline-end`、`start` 和 `end`。
 
 CSS 的{{glossary("physical properties", "物理属性")}}基于物理方向与参考元素的特定边定义了位置。

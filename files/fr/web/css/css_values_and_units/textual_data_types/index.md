@@ -1,6 +1,6 @@
 ---
 title: Types de données textuelles
-slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
+slug: Web/CSS/CSS_values_and_units/Textual_data_types
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -91,8 +91,8 @@ Le paramètre de `url()` peut être entre guillemets ou non. S'il ne l'est pas, 
 
 ## Voir aussi
 
-- [Types de données numériques](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Types de données numériques](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
+- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Apprendre&nbsp;: Les valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - Le module [Cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)

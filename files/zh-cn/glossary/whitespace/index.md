@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
-{{GlossarySidebar}}
-
 **空白字符**（whitespace）指用于在其他字符之间提供水平或垂直空间的{{Glossary("Character", "字符")}}。在 {{Glossary("HTML")}}、{{Glossary("CSS")}}、{{Glossary("JavaScript")}} 和其他计算机语言中，空白通常用于分隔标记符。
 
 空白字符及其用法因语言而异。

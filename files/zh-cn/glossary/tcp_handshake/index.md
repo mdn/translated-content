@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
 {{glossary('TCP')}}（传输控制协议）使用**三次握手**（也称为 TCP 握手、三消息握手或 SYN-SYN-ACK）在基于 IP 的网络上建立 TCP/IP 连接。类似地，使用**四次挥手**来终止连接。
 
 TCP 通过三个消息来协商和启动 TCP 会话，这三个消息分别被称为 SYN、_SYN-ACK_ 和 ACK，分别代表 **SYN**chronize（同步）、**SYN**chronize-**ACK**nowledgement（同步—确认）和 **ACK**nowledge（确认）。这三消息机制的设计是为了让两台想要互相传递信息的计算机在传输数据（例如 HTTP 浏览器请求）之前协商连接的参数。

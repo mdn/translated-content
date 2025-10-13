@@ -11,7 +11,8 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr
 
 Les objets `Cache` sont cherchés par ordre de création.
 
-> **Note :** {{domxref("CacheStorage.match()", "caches.match()")}} est une méthode de commodité. Une fonctionnalité équivalente consiste à appeler {{domxref("cache.match()")}} sur chaque cache (dans l'ordre renvoyé par {{domxref("CacheStorage.keys()", "caches.keys()")}}) jusqu'à ce qu'une {{domxref("Response", "Réponse")}} soit renvoyée.
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} est une méthode de commodité. Une fonctionnalité équivalente consiste à appeler {{domxref("cache.match()")}} sur chaque cache (dans l'ordre renvoyé par {{domxref("CacheStorage.keys()", "caches.keys()")}}) jusqu'à ce qu'une {{domxref("Response", "Réponse")}} soit renvoyée.
 
 ## Syntaxe
 

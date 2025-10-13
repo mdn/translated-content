@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **领域特定语言**（DSL）是一种具有有限的范围的计算机语言，旨在解决应用领域内的特定问题。
 
 与之相比，_通用语言_（GPL）是为解决跨领域的各种问题而设计的。

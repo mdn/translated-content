@@ -83,7 +83,8 @@ l10n:
 
 ![브라우저에 임베드된 공룡의 기본 이미지와 그 위에 "HTML로 된 이미지"라고 쓰여 있습니다.](basic-image.png)
 
-> **참고:** {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에서 확인할 수 있습니다.
+> [!NOTE]
+> {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에서 확인할 수 있습니다.
 
 > [!NOTE]
 > 완성된 예제들을 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)에서 확인하실 수 있습니다. ([source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)도 참고하세요.)
@@ -617,7 +618,8 @@ p {
 
 요약하기: 이미지가 의미가 있다면, 콘텐츠 관점에서, HTML 이미지를 사용해야 합니다. 이미지가 순전히 장식이라면, CSS 배경 이미지를 사용해야 합니다.
 
-> **참고:** [CSS 배경 이미지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)에 대해서는 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 주제에서 더 자세히 배울 수 있습니다.
+> [!NOTE]
+> [CSS 배경 이미지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)에 대해서는 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 주제에서 더 자세히 배울 수 있습니다.
 
 ## 스킬을 테스트 하세요!
 

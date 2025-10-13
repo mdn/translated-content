@@ -18,7 +18,8 @@ l10n:
 
 `fetch()` 메서드는 받아오려는 리소스의 지시어가 아니라, [Content Security Policy](/ko/docs/Web/HTTP/Headers/Content-Security-Policy)의 `connect-src` 지시어의 제어를 받습니다.
 
-> **참고:** `fetch()` 메서드의 매개변수는 {{domxref("Request.Request","Request()")}} 생성자와 동일합니다.
+> [!NOTE]
+> `fetch()` 메서드의 매개변수는 {{domxref("Request.Request","Request()")}} 생성자와 동일합니다.
 
 ## 구문
 
@@ -42,7 +43,8 @@ fetch(resource, options)
     - `headers`
       - : 요청에 추가하고자 하는 헤더들입니다. {{domxref("Headers")}} 객체에 넣어 제공할 수도 있고, {{jsxref("String")}} 값들을 가진 객체 리터럴로 제공해도 됩니다. [어떤 이름들은 금지](/ko/docs/Glossary/Forbidden_request_header)된다는 점을 주의하세요.
 
-        > **참고:** [`Authorization`](/ko/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
+        > [!NOTE]
+        > [`Authorization`](/ko/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
 
     - `body`
       - : 요청에 추가하고자 하는 본문입니다. {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 문자열 객체 또는 리터럴, {{domxref("ReadableStream")}} 객체를 사용할 수 있습니다. 제일 마지막은 아직 실험적 기능이므로 [호환성 정보](/ko/docs/Web/API/Request#browser_compatibility)를 먼저 확인해서 사용할 수 있을지 검증하세요. `GET`과 `HEAD` 메서드는 본문을 가질 수 없습니다.

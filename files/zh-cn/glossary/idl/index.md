@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d7828f5d7479c27cc7eaeed6cce0c02a9142555c
 ---
 
-{{GlossarySidebar}}
-
 **接口描述语言**（**IDL**）是一种用于指定独立于任何特定编程语言的对象接口的通用语言。
 
 ## 内容属性与接口描述语言属性

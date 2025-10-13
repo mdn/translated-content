@@ -97,7 +97,8 @@ function collisionDetection() {
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/2m74vr9r/1/","","395")}}
 
-> **참고:** **추가 학습**: 벽돌을 깰 때마다 얻는 점수를 늘리고, 게임 클리어 시 최종 점수를 경고창에 표시해 봅시다.
+> [!NOTE]
+> **추가 학습**: 벽돌을 깰 때마다 얻는 점수를 늘리고, 게임 클리어 시 최종 점수를 경고창에 표시해 봅시다.
 
 ## 다음 단계
 

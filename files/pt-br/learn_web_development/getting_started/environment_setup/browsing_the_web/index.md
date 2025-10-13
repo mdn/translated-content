@@ -72,7 +72,8 @@ Uma **página web** é simplesmente um documento que é renderizado ("mostrado")
 - _scripts_ — os quais são responsáveis por adicionar interatividade à página
 - _mídia_ — imagens, sons e vídeos.
 
-> **Nota:**Navegadores também são capazes de renderizar outros documentos, como arquivos {{Glossary("PDF")}} ou imagens, porém o termo **página web** se refere especificamente a documentos HTML. Todavia, usaremos apenas o termo **documento**.
+> [!NOTE]
+> Navegadores também são capazes de renderizar outros documentos, como arquivos {{Glossary("PDF")}} ou imagens, porém o termo **página web** se refere especificamente a documentos HTML. Todavia, usaremos apenas o termo **documento**.
 
 Todas as páginas web disponíveis na web são alcançáveis através de um único endereço. Para acessar uma página, basta digitar seu endereço na barra de endereços do seu navegador:
 

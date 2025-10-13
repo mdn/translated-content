@@ -191,7 +191,8 @@ def youngest(request):
 
 프로그래밍을 처음 접하는 생초보라면 "학습 편의성"에 따라 프레임 워크를 선택하게 될 것입니다. 언어 자체의 "사용 편의성"외에도 고품질 문서 / 자습서 및 새로운 사용자를 돕는 활동적인 커뮤니티가 가장 소중한 리소스입니다. 우리는 [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)를 선택하여 강의 후반에 예제를 작성했습니다. 배우기 쉽고 지원을 잘 받고 있기 때문입니다.
 
-> **참고:** [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)의 메인 웹사이트로 가보십시오, 그리고 문서와 커뮤니티를 확인하십시오.
+> [!NOTE]
+> [Django](https://www.djangoproject.com/) (Python) 와 [Express](http://expressjs.com/) (Node/JavaScript)의 메인 웹사이트로 가보십시오, 그리고 문서와 커뮤니티를 확인하십시오.
 >
 > 1. (위 링크들의) 메인 사이트를 둘러보기
 >    - Documentation 메뉴에 링크들(Documentation, Guide, API Reference, Getting Started등)을 클릭해보십시오.

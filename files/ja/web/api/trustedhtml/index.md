@@ -1,7 +1,6 @@
 ---
 title: TrustedHTML
 slug: Web/API/TrustedHTML
-page-type: web-api-interface
 l10n:
   sourceCommit: 3ceedbd90089cfb6970c9bf63ff9e6f3801fcbc5
 ---

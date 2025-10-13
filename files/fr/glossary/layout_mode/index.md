@@ -16,4 +16,5 @@ Un **mode de disposition CSS** (_layout mode_), parfois raccourci en « disposit
 - [*La disposition avec les boîtes flexibles (flexbox) (*flexible box layout*)*](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) : cette disposition permet d'organiser des pages complexes qui peuvent être redimensionnées facilement.
 - [*La disposition en grille (*Grid layout*)*](/fr/docs/Web/CSS/CSS_grid_layout) : cette disposition permet d'organiser les éléments relativement à une grille fixe.
 
-> **Note :** [Les propriétés CSS](/fr/docs/Web/CSS/Reference) ne s'appliquent toutes à tous les modes de disposition. La plupart des propriétés n'ont d'effet que pour un ou deux de ces modes et seront sans effet pour un élément qui s'inscrit dans un autre mode de disposition.
+> [!NOTE]
+> [Les propriétés CSS](/fr/docs/Web/CSS/Reference) ne s'appliquent toutes à tous les modes de disposition. La plupart des propriétés n'ont d'effet que pour un ou deux de ces modes et seront sans effet pour un élément qui s'inscrit dans un autre mode de disposition.

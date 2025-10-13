@@ -68,7 +68,8 @@ label {
   </tbody>
 </table>
 
-> **참고:** `<optgroup>` 요소는 중첩할 수 없습니다.
+> [!NOTE]
+> `<optgroup>` 요소는 중첩할 수 없습니다.
 
 ## 특성
 

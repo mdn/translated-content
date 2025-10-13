@@ -139,7 +139,8 @@ let resetButton;
 
 - 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-> **참고:** [바로 다음 글](/ko/docs/Learn_web_development/Core/Scripting/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
+> [!NOTE]
+> [바로 다음 글](/ko/docs/Learn_web_development/Core/Scripting/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
@@ -163,7 +164,8 @@ checkGuess();
 
 키보드의 <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-> **참고:** [이후 과정](/ko/docs/Learn_web_development/Core/Scripting/Functions)에서 함수에 대해 많이 배울 수 있습니다.
+> [!NOTE]
+> [이후 과정](/ko/docs/Learn_web_development/Core/Scripting/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 

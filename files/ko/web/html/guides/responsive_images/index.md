@@ -176,7 +176,8 @@ img {
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> **참고:** `media` 속성은 아트 디렉션 시나리오에서만 사용해야 하며, `media`를 사용하는 경우 `sizes` 속성 내에 미디어 조건도 제공하지 마세요.
+> [!NOTE]
+> `media` 속성은 아트 디렉션 시나리오에서만 사용해야 하며, `media`를 사용하는 경우 `sizes` 속성 내에 미디어 조건도 제공하지 마세요.
 
 ### CSS나 JavaScript를 사용하면 안 되는 이유는 무엇인가요?
 

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<url>`** est un pointeur vers une ressource. La ressource peut être une image, une vidéo, un fichier CSS, un fichier de police, une fonctionnalité SVG, etc.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<url>`** est un pointeur vers une ressource. La ressource peut être une image, une vidéo, un fichier CSS, un fichier de police, une fonctionnalité SVG, etc.
 
 ## Syntaxe
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ede0057ebf9c1dc646242d019803a567acbb2995
 ---
 
-{{GlossarySidebar}}
-
 定义了执行的[**作用域**](/zh-CN/docs/Glossary/Scope)的绑定。在{{glossary("JavaScript")}} 中，[**函数**](/zh-CN/docs/Glossary/Function)创建了闭包上下文。
 
 ## 参见

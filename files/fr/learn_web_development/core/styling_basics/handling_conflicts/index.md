@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
 
@@ -88,7 +88,7 @@ CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de c
 - [`inherit`](/fr/docs/Web/CSS/inherit)
   - : Applique la valeur de l'élément parent sur l'élément ciblé. Cela «&nbsp;force&nbsp;» l'héritage.
 - [`initial`](/fr/docs/Web/CSS/initial)
-  - : Applique la [valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc) de la propriété sur l'élément ciblé.
+  - : Applique la [valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) de la propriété sur l'élément ciblé.
 - [`revert`](/fr/docs/Web/CSS/revert)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)

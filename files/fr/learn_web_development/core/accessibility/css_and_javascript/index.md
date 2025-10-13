@@ -214,7 +214,8 @@ Les utilisateurs de lecteur d'écran ne s'inquiètent de rien. Ils sont satisfai
 
 Par contre, vous ne devriez pas utiliser {{cssxref("visibility")}}`:hidden` ou {{cssxref("display")}}`:none`, car ils masquent le contenu des lecteurs d'écran sauf si vous souhaitez que ce contenu leur soit masqué.
 
-> **Note :** [Contenu invisible juste pour les utilisateurs de lecteur d'écran](https://webaim.org/techniques/css/invisiblecontent/) contient beaucoup plus de détails utiles concernant ce sujet.
+> [!NOTE]
+> [Contenu invisible juste pour les utilisateurs de lecteur d'écran](https://webaim.org/techniques/css/invisiblecontent/) contient beaucoup plus de détails utiles concernant ce sujet.
 
 ### Accepter que les utilisateurs puissent remplacer les styles
 

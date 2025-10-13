@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
 
 L'objet **`Math`** est un objet natif dont les méthodes et propriétés permettent l'utilisation de constantes et fonctions mathématiques. Cet objet n'est pas une fonction.
 
-> **Attention :** `Math` fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.
+> [!WARNING]
+> `Math` fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.
 
 ## Description
 

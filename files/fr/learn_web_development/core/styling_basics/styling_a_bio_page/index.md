@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Le temps est venu d'évaluer tout ce que vous avez appris dans les leçons précécentes : vous savez comment mettre en forme des documents texte simples à l'aide de CSS.
 
@@ -81,6 +81,6 @@ Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et rec
 
 ## La suite ?
 
-Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics), nous approfondirons de nombreux points.
+Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/Learn_web_development/Core/Styling_basics), nous approfondirons de nombreux points.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Apprendre/CSS/Premiers_pas")}}

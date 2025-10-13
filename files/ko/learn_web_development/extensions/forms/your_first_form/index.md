@@ -145,7 +145,8 @@ by default this element is filled with this text
 - `reset` 버튼을 클릭하면 모든 폼 위젯이 즉시 기본값으로 재설정됩니다. UX 관점에서 볼 때 이것은 나쁜 관행으로 간주됩니다. 그래서 `reset` 버튼을 포함해야 하는 타당한 이유가 없는 한 굳이 사용하지 않는 것이 좋습니다.
 - `button` 버튼을 클릭하면 아무 일도 일어나지 않습니다! 그것은 조금 이상하게 들릴 수 있지만, 원하는 버튼을 만들기에 굉장히 유용합니다. JavaScript로 버튼이 수행할 특정 기능을 정의할 수 있기 때문입니다.
 
-> **참고:** {{HTMLElement("input")}} 요소도 적절한 `type` 속성을 함께 사용하면 버튼을 생성할 수 있습니다 (예: `<input type="submit">`). {{HTMLElement("input")}} 요소는 label에 일반 텍스트만 허용하는 반면에, {{HTMLElement("button")}} 요소는 전체 HTML 콘텐츠를 허용하므로 더 복잡하고 창의적인 버튼 콘텐츠를 만들 수 있다는 주요 장점이 있습니다.
+> [!NOTE]
+> {{HTMLElement("input")}} 요소도 적절한 `type` 속성을 함께 사용하면 버튼을 생성할 수 있습니다 (예: `<input type="submit">`). {{HTMLElement("input")}} 요소는 label에 일반 텍스트만 허용하는 반면에, {{HTMLElement("button")}} 요소는 전체 HTML 콘텐츠를 허용하므로 더 복잡하고 창의적인 버튼 콘텐츠를 만들 수 있다는 주요 장점이 있습니다.
 
 ## 기본 폼 스타일링
 

@@ -44,7 +44,8 @@ Nós já vimos isto em um artigo anterior:
 
 Note que, sempre é possível usar um widget de formulário fora de um elemento {{HTMLElement("form")}} mas se o fizer, o widget não terá nada a ver com o formulário. Estes widgets podem ser usados fora de um formulário, mas para tanto você deverá ter um plano especial para eles, pois este não farão nada por si próprios. Você terá de controlar o comportamento deles através de JavaScript.
 
-> **Nota:**O HTML 5 introduziu o atributo `form` no grupo de elementos de formulários em HTML. Ele deve deixá-lo atrelar explícitamente um elemento com um form mesmo se não estiver dentro de um {{ HTMLElement("form") }}. Infelizmente, devido ao tempo de vida, essa implementação ainda pelos navegadores ainda não é boa o suficiente para se confiar nela.
+> [!NOTE]
+> O HTML 5 introduziu o atributo `form` no grupo de elementos de formulários em HTML. Ele deve deixá-lo atrelar explícitamente um elemento com um form mesmo se não estiver dentro de um {{ HTMLElement("form") }}. Infelizmente, devido ao tempo de vida, essa implementação ainda pelos navegadores ainda não é boa o suficiente para se confiar nela.
 
 ## Os elementos \<fieldset> e \<legend>
 
@@ -119,7 +120,8 @@ Por exemplo:
 </form>
 ```
 
-> **Nota:** **Nota: Você pode encontrar este exemplo em** [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([ver ao vivo também](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> **Você pode encontrar este exemplo em** [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) ([ver ao vivo também](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Múltiplos labels
 

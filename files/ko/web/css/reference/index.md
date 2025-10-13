@@ -95,7 +95,8 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 - [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML이 포함하지 않은 객체를 나타냅니다.
 
-> **참고:** **같이 보기:** [Selectors Level 4 명세의 선택자 목록.](https://www.w3.org/TR/selectors/#overview)
+> [!NOTE]
+> **같이 보기:** [Selectors Level 4 명세의 선택자 목록.](https://www.w3.org/TR/selectors/#overview)
 
 ## 개념
 

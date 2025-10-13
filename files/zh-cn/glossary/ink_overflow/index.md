@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
-{{GlossarySidebar}}
-
 **墨水溢出**指的是盒子及其内容在边框外产生视觉效果的部分。由于只是视觉效果，墨水溢出不会影响布局，也不会对盒子模型属性产生影响。
 
 墨水溢出包括诸如 [box-shadow](/zh-CN/docs/Web/CSS/box-shadow)、[边框图片](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)、[文本装饰](/zh-CN/docs/Web/CSS/CSS_text_decoration)、[轮廓](/zh-CN/docs/Web/CSS/outline)等绘制效果的溢出，这些效果不会影响布局或扩展可滚动溢出区域。墨水溢出还包括字形的悬挂部分，例如超出 em 盒的升部和降部。

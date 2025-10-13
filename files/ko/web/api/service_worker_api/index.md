@@ -52,7 +52,8 @@ slug: Web/API/Service_Worker_API
 
 서비스 워커는 {{domxref("FetchEvent")}} 이벤트를 사용해 요청에 응답할 수 있습니다. {{domxref("FetchEvent.respondWith()")}} 메서드를 사용해 요청에 대한 응답을 원하는 방식으로 자유롭게 바꾸세요.
 
-> **참고:** `install`과 `activate` 이벤트 처리는 시간이 꽤 걸릴 수도 있기에, 서비스 워커 명세는 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 메서드를 제공합니다. `install`이나 `activate`에서 `waitUntil()`을 호출하면서 매개변수로 프로미스를 제공하면, 성공적으로 이행하기 전까지는 기능 이벤트가 발생하지 않습니다.
+> [!NOTE]
+> `install`과 `activate` 이벤트 처리는 시간이 꽤 걸릴 수도 있기에, 서비스 워커 명세는 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 메서드를 제공합니다. `install`이나 `activate`에서 `waitUntil()`을 호출하면서 매개변수로 프로미스를 제공하면, 성공적으로 이행하기 전까지는 기능 이벤트가 발생하지 않습니다.
 
 기본적인 첫 서비스 워커를 차근차근 만드는 방법은 [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)에서 읽어볼 수 있습니다.
 

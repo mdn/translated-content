@@ -55,7 +55,8 @@ La clé la plus intéressante ici est [`content_scripts`](/fr/docs/Mozilla/Add-o
 - [En savoir plus sur les scripts de contenu.](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [En savoir plus sur les motifs de correspondance.](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **Attention :** [Dans certaines situations, vous devez spécifier un identifiant pour votre extension](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id). Si vous avez besoin de spécifier un identifiant pour votre extension, vous devez inclure la clé [`browser_specific_settings`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) et définir sa propriété `gecko.id` dans votre fichier `manifest.json`&nbsp;:
+> [!WARNING]
+> [Dans certaines situations, vous devez spécifier un identifiant pour votre extension](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id). Si vous avez besoin de spécifier un identifiant pour votre extension, vous devez inclure la clé [`browser_specific_settings`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) et définir sa propriété `gecko.id` dans votre fichier `manifest.json`&nbsp;:
 >
 > ```json
 > "browser_specific_settings": {

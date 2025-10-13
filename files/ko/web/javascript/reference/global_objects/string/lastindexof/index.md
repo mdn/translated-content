@@ -52,7 +52,8 @@ str.lastIndexOf(searchValue[, fromIndex])
 "canal".lastIndexOf("", 2); //  2 반환
 ```
 
-> **참고:** `'abab'.lastIndexOf('ab', 2)`는 0이 아니고 2를 반환합니다. `fromIndex`는 탐색의 시작점만 제한하기 때문입니다.
+> [!NOTE]
+> `'abab'.lastIndexOf('ab', 2)`는 0이 아니고 2를 반환합니다. `fromIndex`는 탐색의 시작점만 제한하기 때문입니다.
 
 ### 대소문자 구분
 

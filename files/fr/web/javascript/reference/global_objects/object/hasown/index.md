@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 
 La méthode statique **`Object.hasOwn()`** renvoie `true` si l'objet indiqué possède la propriété indiquée comme propriété _propre_. Si la propriété est héritée ou qu'elle n'existe pas, la méthode renverra `false`.
 
-> **Note :** `Object.hasOwn()` est conçu comme une méthode de remplacement pour [`Object.hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty).
+> [!NOTE]
+> `Object.hasOwn()` est conçu comme une méthode de remplacement pour [`Object.hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty).
 
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
 

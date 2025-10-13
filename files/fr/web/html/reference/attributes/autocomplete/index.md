@@ -226,5 +226,5 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 - L'élément HTML [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)
 - L'élément HTML [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)
 - L'élément HTML [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [Les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).

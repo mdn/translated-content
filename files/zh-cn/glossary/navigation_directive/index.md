@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **{{Glossary("CSP")}} 导航指令**出现于 {{HTTPHeader("Content-Security-Policy")}} 标头，指示着用户所能浏览的或者提交表单的资源位置。
 
 导航指令不将 {{CSP("default-src")}} 指令作为回退机制。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e72890bafe775a38620def9a74beda8cf9c47411
 ---
 
-{{GlossarySidebar}}
-
 **MVC**（Model-View-Controller）是一种强调分离软件的业务逻辑和显示的软件设计模式。这种“分离”提供了更好的分工和改进的维护。一些其他的模式也是基于 MVC 来设计的，如 MVVM（Model-View-Viewmodel）、MVP（Model-View-Presenter）和 MVW（Model-View-Whatever）。
 
 对 MVC 软件设计模式的三个部分可以被描述如下：

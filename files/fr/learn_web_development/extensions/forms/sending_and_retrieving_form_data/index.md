@@ -301,7 +301,7 @@ Alors, comment combattre ces menaces ? Ce sujet va bien au-delà de ce guide, ma
 
 Toute donnée qui va dans un serveur doit être vérifiée et nettoyée. Toujours. Sans exception.
 
-- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
+- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
 - **Limitez la quantité de données entrantes pour n'autoriser que ce qui est nécessaire**.
 - **Sandbox des fichiers téléchargés**. Stockez-les sur un serveur différent et n'autorisez l'accès au fichier que par un sous-domaine différent ou, mieux encore, par un domaine complètement différent.
 

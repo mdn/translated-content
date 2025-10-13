@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Solve_CSS_problems
 original_slug: Learn/CSS/Howto
 ---
 
-{{LearnSidebar}}
-
 Les liens suivants pointent vers des solutions aux problèmes courants que vous devrez résoudre avec CSS.
 
 ## Scénarios fréquents
@@ -15,11 +13,11 @@ Les liens suivants pointent vers des solutions aux problèmes courants que vous 
 - [Comment appliquer CSS au HTML](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_to_apply_your_css_to_your_html)
 - [Comment utiliser les espaces en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started#les_blancs)
 - [Comment écrire des commentaires en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started#les_commentaires)
-- [Comment sélectionner des éléments par leur nom, leur classe ou leur ID](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#les_sélecteurs_simples)
+- [Comment sélectionner des éléments par leur nom, leur classe ou leur ID](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#les_sélecteurs_simples)
 - [Comment sélectionner des éléments par le nom et le contenu de l'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#les_sélecteurs_d'attribut)
-- [Comment utiliser les pseudo-classes](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#les_pseudo-classes)
-- [Comment utiliser les pseudo-éléments](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#les_pseudo-éléments)
-- [Comment appliquer plusieurs sélecteurs à la même règle](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors#les_combinateurs)
+- [Comment utiliser les pseudo-classes](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#les_pseudo-classes)
+- [Comment utiliser les pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#les_pseudo-éléments)
+- [Comment appliquer plusieurs sélecteurs à la même règle](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#les_combinateurs)
 - [Comment spécifier les couleurs en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#couleurs)
 - [Comment déboguer CSS dans le navigateur](/fr/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS#inspecting_the_dom_and_css)
 
@@ -36,7 +34,7 @@ Les liens suivants pointent vers des solutions aux problèmes courants que vous 
 - [Comment contrôler le contenu débordant](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_dépassements)
 - [Comment contrôler la partie des boîtes CSS dessinées au-dessus de l'arrière-plan](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#L%27arrière-plan)
 - [Comment définir _"inline_", _"block"_ et _"inline-block"_ ?](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_types_de_boîte)
-- [Comment créer des boîtes fantaisies](/fr/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes) (lire aussi le module [Styles pour boites](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics), généralités).
+- [Comment créer des boîtes fantaisies](/fr/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes) (lire aussi le module [Styles pour boites](/fr/docs/Learn_web_development/Core/Styling_basics), généralités).
 - [Comment utiliser `background-clip` pour contrôler combien de boîtes sont impactées par l'image de fond-d'écran](/fr/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#les_arrière-plans)
 - [Comment changer complètement le modèle de boîte en utilisant `box-sizing`](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#changing_the_box_model_completely)
 - [Comment contrôler l'arrière-plan](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

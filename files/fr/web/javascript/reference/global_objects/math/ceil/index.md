@@ -42,7 +42,8 @@ Le plus petit entier qui est supérieur ou égal au nombre donné.
 
 `ceil()` est une méthode statique de `Math`. Elle doit être utilisée avec la syntaxe `Math.ceil()`, plutôt que comme une méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-> **Note :** `Math.ceil(null)` renverra `0` et pas {{jsxref("NaN")}}.
+> [!NOTE]
+> `Math.ceil(null)` renverra `0` et pas {{jsxref("NaN")}}.
 
 ## Exemples
 

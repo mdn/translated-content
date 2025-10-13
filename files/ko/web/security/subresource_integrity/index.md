@@ -24,7 +24,8 @@ l10n:
 
 `integrity` 값은 하나 이상의 문자열로 시작하고, 각 문자열에는 특정 해시 알고리즘(현재 허용되는 접두사는 `sha256`, `sha384`, 그리고 `sha512`)을 나타내는 접두사가 포함되어 있으며, 대시가 따라온 뒤, 실제 base64로 인코딩된 해시로 끝납니다.
 
-> **참고:** **integrity** 값에는 공백으로 구분된 여러 해시가 포함될 수 있습니다. 해당 해시 중 하나와 일치하는 경우 리소스가 로드됩니다.
+> [!NOTE]
+> **integrity** 값에는 공백으로 구분된 여러 해시가 포함될 수 있습니다. 해당 해시 중 하나와 일치하는 경우 리소스가 로드됩니다.
 
 `integrity` 문자열과 base64로 인코딩된 sha384 해시의 예제입니다.
 
@@ -107,7 +108,8 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **참고:** `crossorigin` 속성의 용도에 대한 자세한 내용은 [CORS 설정 속성](/ko/docs/Web/HTML/Reference/Attributes/crossorigin)을 참조하십시오.
+> [!NOTE]
+> `crossorigin` 속성의 용도에 대한 자세한 내용은 [CORS 설정 속성](/ko/docs/Web/HTML/Reference/Attributes/crossorigin)을 참조하십시오.
 
 ## 브라우저가 하위 리소스 무결성을 처리하는 방법
 

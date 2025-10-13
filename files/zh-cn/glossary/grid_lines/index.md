@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
 **网格线**会在使用[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)时被创建。
 
 ## 示例

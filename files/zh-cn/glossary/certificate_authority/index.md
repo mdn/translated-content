@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
-{{GlossarySidebar}}
-
 证书颁发机构（CA）是一个组织，负责{{Glossary("Signature/Security", "签署")}}{{Glossary("Digital certificate", "数字证书")}}及其相关的{{Glossary("Key", "公钥")}}，从而确保所包含的信息和密钥是正确的。
 
 对于网站数字证书，这些信息至少包括请求数字证书的组织名称（例如，Mozilla 公司）、所属网站（例如，mozilla.org）以及证书颁发机构。

@@ -9,7 +9,8 @@ slug: Web/API/AudioWorkletProcessor
 
 ## 생성자
 
-> **참고:** `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다. 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다. 파생된 클래스의 생성자는 options 객체와 함께 호출되므로, 여러분은 사용자 정의 초기화 절차를 수행할 수 있습니다 — 자세한 사항은 생성자 페이지를 참고하세요.
+> [!NOTE]
+> `AudioWorkletProcessor` 와 이것으로부터 파생된 클래스들은 사용자에 의해 제공된 코드로부터 직접적으로 초기화될 수 없습니다. 대신, 이것들은 오직 연관된 {{domxref("AudioWorkletNode")}}들의 생성에 의해서만 내부적으로 생성됩니다. 파생된 클래스의 생성자는 options 객체와 함께 호출되므로, 여러분은 사용자 정의 초기화 절차를 수행할 수 있습니다 — 자세한 사항은 생성자 페이지를 참고하세요.
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : `AudioWorkletProcessor` 객체의 새 인스턴스를 생성합니다.

@@ -201,7 +201,8 @@ HTML에 적용해보겠습니다.
 }
 ```
 
-> **참고:** [사용자 속성](https://www.w3.org/TR/css-variables/#custom-property)같은 대체 구문은 쉼표를 허용한다. 예를 들어, var(--foo, red, blue)는 빨강, 파랑의 fallback을 정의하고 있다; 즉, 첫번째 쉼표와 함수 마지막 사이에 있는 값들은 모두 대체 변수로 간주한다.
+> [!NOTE]
+> [사용자 속성](https://www.w3.org/TR/css-variables/#custom-property)같은 대체 구문은 쉼표를 허용한다. 예를 들어, var(--foo, red, blue)는 빨강, 파랑의 fallback을 정의하고 있다; 즉, 첫번째 쉼표와 함수 마지막 사이에 있는 값들은 모두 대체 변수로 간주한다.
 
 ## 유효성과 값
 

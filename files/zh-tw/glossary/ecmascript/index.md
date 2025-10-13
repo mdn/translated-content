@@ -3,8 +3,6 @@ title: ECMAScript
 slug: Glossary/ECMAScript
 ---
 
-{{GlossarySidebar}}
-
 **ECMAScript** 是一種腳本語言，且 {{glossary("JavaScript")}} 奠基於此之上。[Ecma International](https://www.ecma-international.org) 這個組織負責將 ECMAScript 標準化。
 
 ## 了解更多

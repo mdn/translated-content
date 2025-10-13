@@ -15,7 +15,8 @@ Les éléments placés sur la grille devraient pouvoir être alignés au centre 
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html).
 
 ## Choix effectués
 

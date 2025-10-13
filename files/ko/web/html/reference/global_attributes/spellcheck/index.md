@@ -25,7 +25,8 @@ This exampull will nut be checkd fur spellung when you try to edit it.</textarea
 - `true`는 가능한 경우 요소의 맞춤법을 검사해야 함을 나타냅니다.
 - `false`는 요소의 맞춤법을 검사하지 않아야 함을 나타냅니다.
 
-> **참고:** `spellcheck` 특성은 불리언이 아니고 열거형 특성이므로 `true` 또는 `false`를 반드시 지정해야 합니다. 즉, `<textarea spellcheck></textarea>`처럼은 사용할 수 없으며, `<textarea spellcheck="true"></textarea>`와 같이 사용해야 합니다.
+> [!NOTE]
+> `spellcheck` 특성은 불리언이 아니고 열거형 특성이므로 `true` 또는 `false`를 반드시 지정해야 합니다. 즉, `<textarea spellcheck></textarea>`처럼은 사용할 수 없으며, `<textarea spellcheck="true"></textarea>`와 같이 사용해야 합니다.
 
 특성을 지정하지 않았을 때의 기본값은 브라우저 및 요소에 따라 다릅니다. 또한, `spellcheck` 특성은 상속 대상이므로, 부모 요소의 값에도 영향을 받습니다.
 

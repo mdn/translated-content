@@ -257,7 +257,8 @@ l10n:
     따라서 이 특성은 `rel` 특성의 값과 비교했을 때 반대되는 관계를 정의합니다.
     `rev` 특성의 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)은 [`rel`](#rel)에서 사용 가능한 값들과 유사합니다.
 
-    > **참고:** `rev`를 사용하는 대신, 반대되는 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)을 가지는 [`rel`](#rel) 특성을 사용하십시오.
+    > [!NOTE]
+    > `rev`를 사용하는 대신, 반대되는 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)을 가지는 [`rel`](#rel) 특성을 사용하십시오.
     > 예를 들어, `made`의 역방향 링크를 설정하려면 `author`를 명시해야 합니다. 또한 이 특성은 "리비전(revision)"의 축약어가 아니며, 버전 번호와 함께 사용되어서는 안됩니다. 많은 사이트에서 이런 식으로 오용하고 있습니다.
 
 ## 예제
@@ -344,7 +345,8 @@ l10n:
   onerror="sheetError()" />
 ```
 
-> **참고:** `load` 이벤트는 스타일시트를 포함한 불러온 모든 콘텐츠가 로드되고 분석된 뒤, style이 콘텐츠에 적용 시작되기 직전에 발생합니다.
+> [!NOTE]
+> `load` 이벤트는 스타일시트를 포함한 불러온 모든 콘텐츠가 로드되고 분석된 뒤, style이 콘텐츠에 적용 시작되기 직전에 발생합니다.
 
 ### Preload 예제
 

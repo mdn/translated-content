@@ -278,7 +278,8 @@ Ces propriétés définissent les couleurs utilisées pour les différentes part
 
 Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne contenant un [code de couleur CSS](/fr/docs/Web/CSS/color_value), ou un tableau RVB tel que `"tab_background_text": [ 107 , 99 , 23 ]`, ou en héxadécimal, tel que `"tab_background_text": #6b6317`.
 
-> **Note :** [Dans Chrome, les couleurs ne peuvent être spécifiées que sous forme de tableau RVB](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility).
+> [!NOTE]
+> [Dans Chrome, les couleurs ne peuvent être spécifiées que sous forme de tableau RVB](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility).
 >
 > Dans Firefox pour Android, les couleurs peuvent être spécifiées en utilisant:
 >

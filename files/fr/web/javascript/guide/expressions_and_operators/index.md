@@ -377,7 +377,8 @@ const var2 = 4;
   </tbody>
 </table>
 
-> **Note :** `=>` n'est pas un opérateur de comparaison, il s'agit de la notation pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> `=>` n'est pas un opérateur de comparaison, il s'agit de la notation pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ## Opérateurs arithmétiques
 

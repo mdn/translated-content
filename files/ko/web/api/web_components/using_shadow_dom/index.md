@@ -72,7 +72,8 @@ let myShadowDom = myCustomElem.shadowRoot;
 
 만약 `mode: closed` 로 사용자 정의 요소에 shadow root을 부착했다면, 외부로부터 shadow DOM에 접근할 수 없을 것입니다. `myCustomElem.shadowRoot` 은 `null` 을 반환합니다. 이것은 `<video>` 와 같이 shadow DOM을 포함하고 있는 내장 요소들의 경우입니다.
 
-> **참고:** [이 블로그 글](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af)이 보여주듯, closed인 shadow DOM을 우회하는 것은 사실 상당히 쉽고, shadow DOM을 완전히 숨기기 위한 귀찮은 일은 종종 그 일의 가치보다 더 큽니다.
+> [!NOTE]
+> [이 블로그 글](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af)이 보여주듯, closed인 shadow DOM을 우회하는 것은 사실 상당히 쉽고, shadow DOM을 완전히 숨기기 위한 귀찮은 일은 종종 그 일의 가치보다 더 큽니다.
 
 만약 shadow DOM을 사용자 정의 요소에 사용자 정의 요소 생성자의 일부로써 부착한다면 (단연코 shadow DOM의 가장 유용한 적용), 다음과 같이 할 것입니다.
 

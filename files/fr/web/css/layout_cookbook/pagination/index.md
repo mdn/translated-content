@@ -19,7 +19,8 @@ Généralement, l'outil de navigation sera centré horizontalement et placé sou
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/pagination--download.html).
 
 ## Choix effectués
 

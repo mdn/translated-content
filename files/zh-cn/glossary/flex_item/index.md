@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
-
 {{glossary("Flex Container", "弹性容器")}}的一级子项目（设置 `display: flex` 或 `display: inline-flex` 的子项目）是**弹性项目**。
 
 弹性容器内的连续文本，也将是弹性项目。

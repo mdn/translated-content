@@ -57,6 +57,6 @@ Enfin, notez que pour les éléments en ligne non remplacés, l'espace occupé (
     - [Valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
     - [Valeurs utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
     - [Valeurs réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Propriétés abrégées](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{Glossary("Replaced elements", "Éléments remplacés")}}

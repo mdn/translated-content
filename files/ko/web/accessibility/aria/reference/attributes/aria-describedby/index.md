@@ -20,7 +20,8 @@ l10n:
 
 `aria-describedby` 속성은 관련 콘텐츠에 일반 텍스트로 표시되는 설명이 포함되는 경우에 적절합니다. 콘텐츠에 많은 양의 콘텐츠, 유용한 시멘틱이 포함되어 있거나 사용자 탐색을 요구하는 복잡한 구조인 경우 [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)를 사용합니다. `aria-details`는 보조 기술 사용자에게 관련 구조화된 콘텐츠를 방문하고 추가 탐색 명령을 제공해서 구조를 더 쉽게 이해하거나 정보를 더 작은 조각으로 경험할 수 있게 해줍니다.
 
-> **참고:** `aria-describedby` 콘텐츠는 텍스트 문자열이어야 합니다. 콘텐츠에 중요한 기본 시멘틱이 있는 경우 [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)를 사용하는 것이 좋습니다.
+> [!NOTE]
+> `aria-describedby` 콘텐츠는 텍스트 문자열이어야 합니다. 콘텐츠에 중요한 기본 시멘틱이 있는 경우 [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)를 사용하는 것이 좋습니다.
 
 ## 예제
 
@@ -30,7 +31,8 @@ l10n:
 <p id="trash-desc">휴지통에 있는 항목은 30일 후에 영구적으로 삭제됩니다.</p>
 ```
 
-> **참고:** `aria-describedby` 속성은 외부 리소스로부터의 설명을 참조하도록 설계되지 않았습니다. 이 값은 하나 이상의 `id`(다수인 경우 공백으로 구분)이므로 동일한 DOM 문서에 있는 요소를 참조해야 합니다.
+> [!NOTE]
+> `aria-describedby` 속성은 외부 리소스로부터의 설명을 참조하도록 설계되지 않았습니다. 이 값은 하나 이상의 `id`(다수인 경우 공백으로 구분)이므로 동일한 DOM 문서에 있는 요소를 참조해야 합니다.
 
 ## 값
 

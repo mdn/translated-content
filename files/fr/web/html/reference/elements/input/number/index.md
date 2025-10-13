@@ -434,7 +434,7 @@ Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évèneme
 
 ## Voir aussi
 
-- [Guide sur les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
 - [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input/tel)
 - [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn_web_development/Extensions/Forms)

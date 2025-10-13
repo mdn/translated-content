@@ -487,7 +487,8 @@ Firefox ne prenait en charge ces pseudo-classes qu'avec un préfixe jusqu'à Fir
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **Note :** `:enabled` et `:read-write` sont deux pseudo-classes plus rarement utilisées, car elles décrivent des états par défaut pour les éléments de formulaire.
+> [!NOTE]
+> `:enabled` et `:read-write` sont deux pseudo-classes plus rarement utilisées, car elles décrivent des états par défaut pour les éléments de formulaire.
 
 ## État des cases à cocher et boutons radio&nbsp;: coché, par défaut, indéterminé
 

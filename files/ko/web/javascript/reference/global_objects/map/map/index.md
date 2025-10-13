@@ -16,7 +16,8 @@ new Map()
 new Map(iterable)
 ```
 
-> **참고:** `Map()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `Map()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 생성할 수 있습니다. `new` 없이 호출하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 

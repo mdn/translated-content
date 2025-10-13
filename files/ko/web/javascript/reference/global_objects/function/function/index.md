@@ -32,7 +32,8 @@ Function(arg1, arg2, functionBody)
 Function(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **참고:** `Function()`은 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하여 호출하거나 없이 호출할 수 있습니다. 두 방법 모두 새로운 `Function` 인스턴스를 생성합니다.
+> [!NOTE]
+> `Function()`은 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하여 호출하거나 없이 호출할 수 있습니다. 두 방법 모두 새로운 `Function` 인스턴스를 생성합니다.
 
 ### 매개변수
 

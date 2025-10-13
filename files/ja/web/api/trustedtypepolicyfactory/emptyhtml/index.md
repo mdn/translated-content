@@ -3,7 +3,7 @@ title: "TrustedTypePolicyFactory: emptyHTML プロパティ"
 short-title: emptyHTML
 slug: Web/API/TrustedTypePolicyFactory/emptyHTML
 l10n:
-  sourceCommit: 3ceedbd90089cfb6970c9bf63ff9e6f3801fcbc5
+  sourceCommit: 736da094f1fe86aefb458e5505ad216789b0ba12
 ---
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}

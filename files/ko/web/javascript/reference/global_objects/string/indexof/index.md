@@ -27,7 +27,8 @@ console.log(
 // Expected output: "The index of the second "dog" is 38"
 ```
 
-> **참고:** {{jsxref("Array")}}에서는 {{jsxref("Array.prototype.indexOf()")}} 메서드가 같은 역할을 합니다.
+> [!NOTE]
+> {{jsxref("Array")}}에서는 {{jsxref("Array.prototype.indexOf()")}} 메서드가 같은 역할을 합니다.
 
 ## 구문
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 根据不同的上下文，**Node** 可以有多种不同的含义，可能是：
 
 {{GlossaryDisambiguation}}

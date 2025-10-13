@@ -12,7 +12,8 @@ L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`nonce`*
 
 L'attribut `nonce` permet d'autoriser certains éléments spécifiques (comme un script ou un style donné) en évitant d'avoir à utiliser la directive [CSP](/fr/docs/Web/HTTP/Guides/CSP) `unsafe-inline` qui autoriserait _tous_ les scripts ou styles embarqués.
 
-> **Note :** `nonce` doit uniquement être utilisé pour les cas où il n'est pas possible de faire autrement que d'utiliser un script ou un style embarqué non sécurisé. Si vous n'avez pas besoin de `nonce`, il ne faut pas l'utiliser. Si votre script est statique, vous pouvez utiliser une empreinte (<i lang="en">hash</i>) CSP à la place (voir les notes d'utilisation sur [les scripts embarqués non sécurisés](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#scripts_embarqués_non_fiables).)
+> [!NOTE]
+> `nonce` doit uniquement être utilisé pour les cas où il n'est pas possible de faire autrement que d'utiliser un script ou un style embarqué non sécurisé. Si vous n'avez pas besoin de `nonce`, il ne faut pas l'utiliser. Si votre script est statique, vous pouvez utiliser une empreinte (<i lang="en">hash</i>) CSP à la place (voir les notes d'utilisation sur [les scripts embarqués non sécurisés](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#scripts_embarqués_non_fiables).)
 >
 > Mieux vaut toujours exploiter les protections [CSP](/fr/docs/Web/HTTP/Guides/CSP) au maximum et donc éviter les nonces ou les scripts embarqués non sécurisés tant que possible.
 

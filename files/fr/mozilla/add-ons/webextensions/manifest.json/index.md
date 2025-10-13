@@ -121,7 +121,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
 
 ## Compatibilité des navigateurs
 
-Pour un aperçu complet de l'ensemble des clés de manifeste et des sous-clés correspondantes, voir [le tableau de compatibilité complet pour `manifest.json`](/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json).
+Pour un aperçu complet de l'ensemble des clés de manifeste et des sous-clés correspondantes, voir [le tableau de compatibilité complet pour `manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 {{Compat}}
 

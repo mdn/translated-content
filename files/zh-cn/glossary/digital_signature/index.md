@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
 
-{{GlossarySidebar}}
-
 **数字签名**是用于{{glossary("authentication", "认证")}}文档或消息的对象。
 
 数字签名通常基于{{glossary("public-key cryptography", "非对称密钥密码")}}。其中，创建一个具有这样的属性的密钥对：如果某个输入使用一个密钥加密，那么只能使用另一个密钥解密，反之亦然。

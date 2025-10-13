@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
 ---
 
-{{GlossarySidebar}}
-
 **交互至下一次绘制**（INP，Interaction to Next Paint）衡量网站对用户交互（例如点击链接、点击按钮或使用自定义 JavaScript 控件）的响应速度。
 
 INP 由 Google 设计，是[核心 Web 指标](https://web.developers.google.cn/articles/vitals)（Core Web Vitals）之一，并于 2024 年 5 月取代了{{Glossary("First Input Delay", "首次输入延迟（FID）")}}。INP 与 FID 有两个关键区别，使其成为更可靠的页面响应性衡量标准：

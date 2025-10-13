@@ -8,7 +8,8 @@ original_slug: Web/SVG/Attribute/color
 
 L'attribut `color` est utilisé pour définir indirectement une valeur potentielle (`currentColor`) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.
 
-> **Note :** `color` étant un attribut de présentation, il peut être utilisé comme propriété CSS. Voir {{ cssxref("color","CSS color") }} pour plus d'informations.
+> [!NOTE]
+> `color` étant un attribut de présentation, il peut être utilisé comme propriété CSS. Voir {{ cssxref("color","CSS color") }} pour plus d'informations.
 
 ## Contexte d'utilisation
 

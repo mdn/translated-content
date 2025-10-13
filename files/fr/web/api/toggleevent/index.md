@@ -13,7 +13,8 @@ Cette interface est implémentée par les évènements [`beforetoggle`](/fr/docs
 
 {{InheritanceDiagram}}
 
-> **Note :** `ToggleEvent` n'a aucun rapport avec l'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) de l'élément [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details), qui se déclenche sur un élément `<details>` lorsque son état `open`/`closed` change. Dans ce cas, `toggle` implémente l'interface générique [`Event`](/fr/docs/Web/API/Event).
+> [!NOTE]
+> `ToggleEvent` n'a aucun rapport avec l'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) de l'élément [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details), qui se déclenche sur un élément `<details>` lorsque son état `open`/`closed` change. Dans ce cas, `toggle` implémente l'interface générique [`Event`](/fr/docs/Web/API/Event).
 
 ## Constructeur
 

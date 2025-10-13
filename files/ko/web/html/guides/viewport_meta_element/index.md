@@ -47,7 +47,8 @@ l10n:
 - `interactive-widget`
   - 가상 키보드와 같은 대화형 UI 위젯이 페이지의 뷰포트에 미치는 영향을 지정합니다. 유효한 값은 `resize-visual`, `resize-content`, 또는 `overlay-content` 입니다. 기본값은 `resize-visual`입니다.
 
-> **경고:** `user-scalable=no` 를 사용하면 저시력과 같은 시각 장애를 가진 사용자의 접근성 문제가 발생할 수 있습니다. [WCAG](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 는 최소 2배 이상의 스케일링을 요구하지만 5배 줌이 가능하도록 하는 것이 가장 좋습니다.
+> [!WARNING]
+> `user-scalable=no` 를 사용하면 저시력과 같은 시각 장애를 가진 사용자의 접근성 문제가 발생할 수 있습니다. [WCAG](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 는 최소 2배 이상의 스케일링을 요구하지만 5배 줌이 가능하도록 하는 것이 가장 좋습니다.
 
 ## 화면 밀도
 

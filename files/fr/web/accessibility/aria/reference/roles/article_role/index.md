@@ -68,7 +68,8 @@ Ce rôle ne prend pas en charge d'interactions au clavier particulières.
 - Modification des valeurs d'attribut
   - : Lors de la construction d'un flux, on définira les attributs `aria-posinset` et `aria-setsize` pour chaque article avec les valeurs appropriées, en se rappelant que la numérotation de `aria-posinset` commence à 1.
 
-> **Note :** **On privilégiera toujours les éléments natifs s'ils sont disponibles.** À la place d'un élément `<div>` avec le rôle `article`, on devrait utiliser un élément `<article>`.
+> [!NOTE]
+> **On privilégiera toujours les éléments natifs s'ils sont disponibles.** À la place d'un élément `<div>` avec le rôle `article`, on devrait utiliser un élément `<article>`.
 
 ## Exemples
 
