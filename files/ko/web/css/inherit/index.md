@@ -3,8 +3,6 @@ title: inherit
 slug: Web/CSS/inherit
 ---
 
-{{CSSRef}}
-
 CSS **`inherit`** 키워드를 사용한 속성은 부모 요소로부터 해당 속성의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)을 받아 사용합니다. CSS {{cssxref("all")}} 단축 속성을 포함한 모든 속성에 사용할 수 있습니다.
 
 상속되는 속성([inherited properties](/en-US/CSS/inheritance))의 경우, 이는 기본 동작(behavior)을 강화하고 오직 다른 규칙을 재정의(override)해야 합니다. 상속되지 않는 속성([non-inherited properties](/en-US/CSS/inheritance))은, 이는 보통 비교적 거의 의미가 없는 동작을 지정하고 당신은 대신 {{cssxref("initial")}} 혹은 {{cssxref("all")}} 속성에 {{cssxref("unset")}} 사용을 고려할 지도 모릅니다.

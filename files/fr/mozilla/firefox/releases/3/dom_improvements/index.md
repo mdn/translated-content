@@ -3,8 +3,6 @@ title: Améliorations DOM dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle objet de document](/fr/docs/Web/API/Document_Object_Model) (DOM), en particulier en ce qui concerne la gestion de ses extensions ajoutées par d'autres navigateurs. Cet article reprend une liste de ces améliorations ainsi que des liens vers une documentation plus détaillée.
 
 - Les extensions DOM d'Internet Explorer [`clientTop`](/fr/docs/DOM/element.clientTop) et [`clientLeft`](/fr/docs/Web/API/Element/clientLeft) sont à présent supportées.

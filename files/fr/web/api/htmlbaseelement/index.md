@@ -10,9 +10,9 @@ slug: Web/API/HTMLBaseElement
 _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBaseElement.href")}}
-  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Element/base#href), contenant l'URL de base pour les URLs relatives dans le document.
+  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Reference/Elements/base#href), contenant l'URL de base pour les URLs relatives dans le document.
 - {{domxref("HTMLBaseElement.target")}}
-  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`target`](/fr/docs/Web/HTML/Element/base#target), contenant un contexte de navigation cible par défaut ou une frame pour les éléments qui n'ont pas de cibe spécifiée.
+  - : est un {{domxref("DOMString")}} qui reflète l'attribut HTML [`target`](/fr/docs/Web/HTML/Reference/Elements/base#target), contenant un contexte de navigation cible par défaut ou une frame pour les éléments qui n'ont pas de cibe spécifiée.
 
 ## Methodes
 

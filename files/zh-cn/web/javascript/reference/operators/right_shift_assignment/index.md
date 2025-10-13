@@ -3,8 +3,6 @@ title: 右移赋值（>>=）
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 右移赋值运算符（`>>=`）将变量向右移动指定的位数，并将结果赋值给变量。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Right shift assignment operator")}}

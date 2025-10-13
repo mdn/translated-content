@@ -14,15 +14,15 @@ Pour construire une application web progressive, il faut créer une application 
 
 Notre projet consiste à créer CycleTracker, une application de suivi menstruel. La première étape de ce [tutoriel sur les PWA](/fr/docs/Web/Progressive_web_apps/Tutorials) consiste à écrire le squelette HTML et CSS. Pour notre application, la section située en haut de la page sera un formulaire où la personne pourra saisir les dates de début et de fin de chaque cycle menstruel. La section en bas de la page affichera une liste des cycles précédents.
 
-On crée un fichier HTML avec les métadonnées au sein de l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) et comme contenu un formulaire et un emplacement pour afficher les données saisies. On ajoute ensuite une feuille de styles CSS externe pour améliorer l'apparence du site.
+On crée un fichier HTML avec les métadonnées au sein de l'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) et comme contenu un formulaire et un emplacement pour afficher les données saisies. On ajoute ensuite une feuille de styles CSS externe pour améliorer l'apparence du site.
 
-Pour réaliser ce tutoriel, il est utile d'avoir des notions élémentaire en [HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics), et [JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous ne connaissez pas ces technologies, MDN contient des [guides pour démarrer sur le Web](/fr/docs/Learn/Getting_started_with_the_web), avec un ensemble d'articles introductifs au développement web.
+Pour réaliser ce tutoriel, il est utile d'avoir des notions élémentaire en [HTML](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content), [CSS](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content), et [JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). Si vous ne connaissez pas ces technologies, MDN contient des [guides pour démarrer sur le Web](/fr/docs/Learn_web_development/Getting_started/Your_first_website), avec un ensemble d'articles introductifs au développement web.
 
 Dans les chapitres suivants, nous mettrons en place [un environnement de développement local](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) et verrons notre avancée avant d'ajouter [des fonctionnalités JavaScript](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) pour convertir le contenu statique créé ici en une application web fonctionnelle. Une fois cette application fonctionnelle obtenue, nous pourrons l'améliorer progressivement pour obtenir une PWA qui puisse être installée et fonctionner hors-ligne.
 
 ## Contenu web statique
 
-Notre site HTML statique contient des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) et [`<script>`](/fr/docs/Web/HTML/Element/script) qui nous serviront à pointer vers les fichiers CSS et JavaScript externes à venir&nbsp;:
+Notre site HTML statique contient des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) et [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) qui nous serviront à pointer vers les fichiers CSS et JavaScript externes à venir&nbsp;:
 
 ```html
 <!doctype html>
@@ -71,7 +71,7 @@ La première ligne du document HTML est un préambule [doctype](/fr/docs/Glossar
 <!doctype html>
 ```
 
-La balise racine [`<html>`](/fr/docs/Web/HTML/Element/html) englobe tout le contenu et possède l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) qui indique la langue principale de la page.
+La balise racine [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) englobe tout le contenu et possède l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) qui indique la langue principale de la page.
 
 ```html
 <!doctype html>
@@ -82,9 +82,9 @@ La balise racine [`<html>`](/fr/docs/Web/HTML/Element/html) englobe tout le cont
 
 ### La tête du document (`<head>`)
 
-L'élément [`<head>`](/fr/docs/Web/HTML/Element/head) contient des informations à propos de l'application web, interprétables par une machine et qui ne sont pas visibles à l'exception de [`<title>`](/fr/docs/Web/HTML/Element/title) qui affiche le titre de la page dans l'onglet du navigateur.
+L'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) contient des informations à propos de l'application web, interprétables par une machine et qui ne sont pas visibles à l'exception de [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title) qui affiche le titre de la page dans l'onglet du navigateur.
 
-`<head>` contient toutes les [métadonnées](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Viewport_meta_tag) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Element/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
+`<head>` contient toutes les [métadonnées](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Guides/Viewport_meta_element) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
 
 ```html
 <head>
@@ -93,7 +93,7 @@ L'élément [`<head>`](/fr/docs/Web/HTML/Element/head) contient des informations
 </head>
 ```
 
-On définit le titre de la page avec le texte «&nbsp;Cycle Tracker&nbsp;» dans l'élément [`<title>`](/fr/docs/Web/HTML/Element/title). Même si le reste du contenu de `<head>` n'est pas visible sur la page, on peut voir le contenu de `<title>` dans l'onglet du navigateur lorsque la page est chargée, dans les résultats d'un moteur de recherche ou comme titre par défaut lorsqu'on met un marque-page. Le titre fournit également un nom accessible aux lecteurs d'écran pour les personnes qui se basent sur cette information pour savoir sur quel onglet elles sont.
+On définit le titre de la page avec le texte «&nbsp;Cycle Tracker&nbsp;» dans l'élément [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title). Même si le reste du contenu de `<head>` n'est pas visible sur la page, on peut voir le contenu de `<title>` dans l'onglet du navigateur lorsque la page est chargée, dans les résultats d'un moteur de recherche ou comme titre par défaut lorsqu'on met un marque-page. Le titre fournit également un nom accessible aux lecteurs d'écran pour les personnes qui se basent sur cette information pour savoir sur quel onglet elles sont.
 
 Le titre aurait pu être «&nbsp;Application de suivi des cycles menstruels&nbsp;», nous avons préféré une version plus courte et anglophone.
 
@@ -103,21 +103,21 @@ Le titre aurait pu être «&nbsp;Application de suivi des cycles menstruels&nbsp
 
 Bien qu'ils soient officiellement facultatifs, ces dex balises `<meta>` et l'élément `<title>` sont trois composants de l'élément `<head>` qui devraient être présents dans tout document HTML.
 
-Le dernier composant inclus dans l'élément `<head>` est un élément [`<link>`](/fr/docs/Web/HTML/Element/link) reliant à notre feuille de style externe `styles.css` (qui n'est pas encore écrite) à notre document HTML.
+Le dernier composant inclus dans l'élément `<head>` est un élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) reliant à notre feuille de style externe `styles.css` (qui n'est pas encore écrite) à notre document HTML.
 
 ```html
 <link rel="stylesheet" href="style.css" />
 ```
 
-L'élément HTML `<link>` établit une relation entre le document courant et une ressource externe. Il existe plus de 25 valeurs pour l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) (et de nombreuses autres valeurs ne sont pas spécifiées). La forme la plus fréquente, `rel="stylesheet"`, importe une ressource externe comme feuille de style.
+L'élément HTML `<link>` établit une relation entre le document courant et une ressource externe. Il existe plus de 25 valeurs pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) (et de nombreuses autres valeurs ne sont pas spécifiées). La forme la plus fréquente, `rel="stylesheet"`, importe une ressource externe comme feuille de style.
 
 Nous reverrons cet élément `<link>` et son attribut `rel` dans un prochain chapitre lorsque nous inclurons [un lien vers le manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#ajouter_le_manifeste_à_lapplication).
 
 ### Le corps du document (`<body>`)
 
-L'élément [`<body>`](/fr/docs/Web/HTML/Element/body) contient tout le contenu qu'on souhaite afficher aux personnes qui visitent le site sur Internet.
+L'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) contient tout le contenu qu'on souhaite afficher aux personnes qui visitent le site sur Internet.
 
-Dans cet élément `<body>`, on inclut le nom de l'application sous la forme d'un titre de niveau 1 avec un élément [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), puis on place un formulaire avec un élément [`<form>`](/fr/docs/Web/HTML/Element/form).
+Dans cet élément `<body>`, on inclut le nom de l'application sous la forme d'un titre de niveau 1 avec un élément [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), puis on place un formulaire avec un élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form).
 
 ```html
 <body>
@@ -128,7 +128,7 @@ Dans cet élément `<body>`, on inclut le nom de l'application sous la forme d'u
 
 Le formulaire contiendra les instructions, les contrôles de saisie, un libellé pour chaque contrôle et un bouton pour soumettre une nouvelle entrée. Pour les contrôles de notre formulaire, on doit pouvoir saisir une date de début et une date de fin pour chaque cycle menstruel.
 
-Au sein de l'élément `<form>`, on inclut un élément [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset) avec une légende ([`<legend>`](/fr/docs/Web/HTML/Element/legend)) qui décrit l'objectif de ce groupe de champs.
+Au sein de l'élément `<form>`, on inclut un élément [`<fieldset>`](/fr/docs/Web/HTML/Reference/Elements/fieldset) avec une légende ([`<legend>`](/fr/docs/Web/HTML/Reference/Elements/legend)) qui décrit l'objectif de ce groupe de champs.
 
 ```html
 <form>
@@ -140,16 +140,16 @@ Au sein de l'élément `<form>`, on inclut un élément [`<fieldset>`](/fr/docs/
 </form>
 ```
 
-Les sélecteurs de date sont des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) avec [`type="date"`](/fr/docs/Web/HTML/Element/input/date). On ajoute l'attribut [`required`](/fr/docs/Web/HTML/Attributes/required) pour réduire le risque d'erreur où la personne soumettrait un formulaire incomplet.
+Les sélecteurs de date sont des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) avec [`type="date"`](/fr/docs/Web/HTML/Reference/Elements/input/date). On ajoute l'attribut [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) pour réduire le risque d'erreur où la personne soumettrait un formulaire incomplet.
 
-Pour associer un libellé (`<label>`) avec chaque contrôle de formulaire, on utilise l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes/id) de chaque `<input>` et on fait correspondre la valeur de l'attribut [`for`](/fr/docs/Web/HTML/Attributes/for) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) associé. Chaque libellé associé fournit ainsi un [nom accessible](/fr/docs/Glossary/Accessible_name) au champ du formulaire..
+Pour associer un libellé (`<label>`) avec chaque contrôle de formulaire, on utilise l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de chaque `<input>` et on fait correspondre la valeur de l'attribut [`for`](/fr/docs/Web/HTML/Reference/Attributes/for) de l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) associé. Chaque libellé associé fournit ainsi un [nom accessible](/fr/docs/Glossary/Accessible_name) au champ du formulaire..
 
 ```html
 <label for="start-date">Date de début</label>
 <input type="date" id="start-date" required />
 ```
 
-Pour assembler le tout, on ajoute deux paragraphes ([`<p>`](/fr/docs/Web/HTML/Element/p)) au sein de l'élément `<fieldset>`, chacun contenant un sélecteur date pour le début et la fin du cycle menstruel saisi et les libellés ([`<label>`](/fr/docs/Web/HTML/Element/label)) associés. On ajoute aussi un élément [`<button>`](/fr/docs/Web/HTML/Element/button) pour soumettre le formulaire avec le texte «&nbsp;Ajouter un cycle menstruel&nbsp;» entre les balises de l'élément. L'attribut `type="submit"` est optionnel, en effet `submit` est le type par défaut pour les éléments `<button>`.
+Pour assembler le tout, on ajoute deux paragraphes ([`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)) au sein de l'élément `<fieldset>`, chacun contenant un sélecteur date pour le début et la fin du cycle menstruel saisi et les libellés ([`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)) associés. On ajoute aussi un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) pour soumettre le formulaire avec le texte «&nbsp;Ajouter un cycle menstruel&nbsp;» entre les balises de l'élément. L'attribut `type="submit"` est optionnel, en effet `submit` est le type par défaut pour les éléments `<button>`.
 
 ```html
 <form>
@@ -172,11 +172,11 @@ Pour assembler le tout, on ajoute deux paragraphes ([`<p>`](/fr/docs/Web/HTML/El
 </form>
 ```
 
-Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs/Learn/Forms).
+Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs/conflicting/Learn_web_development/Extensions/Forms).
 
 ### Textes temporaires en dur
 
-On ajoute ensuite un élément [`<section>`](/fr/docs/Web/HTML/Element/section) vide. Ce conteneur sera rempli grâce à du code JavaScript.
+On ajoute ensuite un élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) vide. Ce conteneur sera rempli grâce à du code JavaScript.
 
 ```html
 <section id="past-periods"></section>
@@ -200,7 +200,7 @@ Le contenu à l'intérieur de `<section id="past-periods"></section>` est tempor
 
 ### Lien JavaScript
 
-Avant de fermer l'élément `</body>`, on ajoute un lien vers le fichier JavaScript `app.js` (qui n'est pas encore écrit). On ajoute l'attribut [`defer`](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_et_defer) pour que le chargement du script soit différé après le chargement et l'analyse du document HTML.
+Avant de fermer l'élément `</body>`, on ajoute un lien vers le fichier JavaScript `app.js` (qui n'est pas encore écrit). On ajoute l'attribut [`defer`](/fr/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#async_et_defer) pour que le chargement du script soit différé après le chargement et l'analyse du document HTML.
 
 ```html
 <script src="app.js" defer></script>
@@ -323,13 +323,13 @@ li:nth-of-type(even) {
 }
 ```
 
-Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/CSS_selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/Learn/CSS/First_steps/Getting_started).
+Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/CSS_selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started).
 
 Que vous utilisiez le CSS précédent tel quel, ou que vous ayez adapté cette mise en forme, voire que vous ayez écrit votre feuille de style à partir de 0, incluez ce contenu CSS dans un nouveau fichier et enregistrez-le avec le nom [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), dans le même répertoire que le fichier `index.html`.
 
 ### Finaliser le HTML statique et le CSS de notre PWA
 
-Avant d'aller plus loin, [commentons](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#commentaires_en_html) ou supprimons les fausses données et le titre correspondant&nbsp;:
+Avant d'aller plus loin, [commentons](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#commentaires_en_html) ou supprimons les fausses données et le titre correspondant&nbsp;:
 
 ```html
 <section id="past-periods">

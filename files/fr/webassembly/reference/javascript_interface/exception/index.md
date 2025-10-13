@@ -8,7 +8,7 @@ original_slug: WebAssembly/JavaScript_interface/Exception
 
 Un objet **`WebAssembly.Exception`** représente une exception d'exécution levée depuis WebAssembly vers JavaScript ou levée depuis JavaScript vers un gestionnaire d'exception WebAssembly.
 
-Le [constructeur](/fr/docs/WebAssembly/JavaScript_interface/Exception/Exception) prend comme arguments un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag), un tableau de valeurs et un objet `options`.
+Le [constructeur](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception) prend comme arguments un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag), un tableau de valeurs et un objet `options`.
 
 La balise fournie par l'objet `WebAssembly.Tag` définit de façon unique le _type_ d'une exception, en incluant l'ordre de ses arguments et leurs types de données. Il est nécessaire d'utiliser la même balise que celle utilisée pour la création de l'objet `Exception` afin d'accéder aux arguments de l'exception déclenchée.
 
@@ -16,26 +16,26 @@ Différentes méthodes existent pour tester la correspondance entre une exceptio
 
 Le code JavaScript ou d'autre code côté client peut uniquement accéder aux valeurs des exceptions WebAssembly lorsque la balise associée est partagée (on ne peut pas utiliser une autre balise qui ne fait que définir les mêmes types de données). Sans balise correspondante, les exceptions peuvent être interceptées et réémises, mais elles ne peuvent pas être inspectées.
 
-Afin que l'émission des exceptions soit plus rapide, les exceptions levées depuis WebAssembly n'incluent généralement pas la pile d'appels (<i lang="en">stack trace</i>). Le code WebAssembly qui doit fournir une pile d'appels doit appeler une fonction JavaScript pour créer l'exception en passant le paramètre `options.traceStack=true` au constructeur. Une fois l'exception disponible pour le module WebAssembly, il peut y attacher une pile d'appels via la propriété [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack) puis lever l'exception.
+Afin que l'émission des exceptions soit plus rapide, les exceptions levées depuis WebAssembly n'incluent généralement pas la pile d'appels (<i lang="en">stack trace</i>). Le code WebAssembly qui doit fournir une pile d'appels doit appeler une fonction JavaScript pour créer l'exception en passant le paramètre `options.traceStack=true` au constructeur. Une fois l'exception disponible pour le module WebAssembly, il peut y attacher une pile d'appels via la propriété [`stack`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) puis lever l'exception.
 
 {{AvailableInWorkers}}
 
 ## Constructeur
 
-- [`WebAssembly.Exception()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/Exception)
+- [`WebAssembly.Exception()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception)
   - : Crée un nouvel objet `WebAssembly.Exception`.
 
 ## Méthodes des instansces
 
-- [`Exception.prototype.is()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/is)
+- [`Exception.prototype.is()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/is)
   - : Teste si une exception correspond à une balise donnée.
 
-- [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/getArg)
+- [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)
   - : Renvoie les champs de données d'une exception qui correspond à la balise donnée.
 
 ## Propriétés des instances
 
-- [`Exception.prototype.stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack)
+- [`Exception.prototype.stack`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack)
   - : Renvoie la pile d'appels de l'exception, ou `undefined`.
 
 ## Exemples
@@ -67,7 +67,7 @@ Prenons le code WebAssembly suivant et supposons qu'il soit compilé dans un fic
 )
 ```
 
-Le fragment de code qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) pour importer le fichier **exemple.wasm**, en lui passant un «&nbsp;objet d'import&nbsp;» (`importObject`) qui inclue une nouvelle balise ([`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag)) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à l'instruction `import` du code WebAssembly.
+Le fragment de code qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) pour importer le fichier **exemple.wasm**, en lui passant un «&nbsp;objet d'import&nbsp;» (`importObject`) qui inclue une nouvelle balise ([`WebAssembly.Tag`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag)) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à l'instruction `import` du code WebAssembly.
 
 Une fois le fichier instancié, le code appelle la méthode WebAssembly exportée `run1()`, qui lèvera immédiatement une exception.
 
@@ -97,7 +97,7 @@ exemple.js:41 getArg 0 : 42
 
 L'exception est interceptée en JavaScript à l'aide d'un bloc `catch`. On peut voir qu'elle est de type `WebAssembly.Exception`, mais si on ne dispose pas de la bonne balise, on ne pourrait pas en savoir grand-chose de plus.
 
-Ici, nous connaissons la balise et on utilise donc [`Exception.prototype.is()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/is) afin de vérifier que c'est la bonne balise. C'est bien le cas et on appelle [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/getArg) qui permet de lire la valeur "42".
+Ici, nous connaissons la balise et on utilise donc [`Exception.prototype.is()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/is) afin de vérifier que c'est la bonne balise. C'est bien le cas et on appelle [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) qui permet de lire la valeur "42".
 
 ## Spécifications
 
@@ -110,5 +110,5 @@ Ici, nous connaissons la balise et on utilise donc [`Exception.prototype.is()`](
 ## Voir aussi
 
 - [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

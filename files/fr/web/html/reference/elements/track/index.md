@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/track
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) et permet de fournir une piste texte pour le média (par exemple afin de gérer automatiquement les sous-titres). Les pistes texte utilisées avec cet élément sont formatées selon [le format WebVTT](/fr/docs/Web/API/WebVTT_API) (ce sont des fichiers `.vtt`) (WebVTT pour <i lang="en">Web Video Text Tracks</i>).
+L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et permet de fournir une piste texte pour le média (par exemple afin de gérer automatiquement les sous-titres). Les pistes texte utilisées avec cet élément sont formatées selon [le format WebVTT](/fr/docs/Web/API/WebVTT_API) (ce sont des fichiers `.vtt`) (WebVTT pour <i lang="en">Web Video Text Tracks</i>).
 
 {{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
 
@@ -70,7 +70,7 @@ video::cue {
 
 ## Attributs
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `default`
   - : Cet attribut booléen indique que c'est cette piste qui doit être activée par défaut, sauf si les réglages de l'utilisatrice ou l'utilisateur indiquent qu'une autre piste est plus appropriée. Pour un élément média donné, il ne peut y avoir qu'une seule piste avec cet attribut.
@@ -98,7 +98,7 @@ video::cue {
 - `label`
   - : Le titre associé à la piste et qui est affiché par le navigateur lorsque celui-ci liste les pistes disponibles.
 - `src`
-  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) de l'élément `<track>` possède un attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin).
+  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) de l'élément `<track>` possède un attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin).
 - `srclang`
   - : La langue dans laquelle est exprimée la piste textuelle. La valeur de cet attribut doit être une balise de langue [BCP 47](https://r12a.github.io/app-subtags/). Si l'attribut `kind` vaut `subtitles,` l'attribut `srclang` doit obligatoirement être défini.
 
@@ -108,7 +108,7 @@ video::cue {
 
 Le type de donnée fourni par un élément `track` est décrit par l'attribut `kind`. Cet attribut peut prendre une valeur parmi `subtitles`, `captions`, `descriptions`, `chapters` ou `metadata`. L'élément pointe vers un fichier source qui contient du texte avec des annotations temporelles que le navigateur affichera lorsque l'utilisatrice ou l'utilisateur en aura besoin.
 
-Un élément média ([`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video)) ne peut pas avoir plusieurs pistes partageant les mêmes valeurs pour les attributs `kind`, `srclang` et `label`.
+Un élément média ([`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)) ne peut pas avoir plusieurs pistes partageant les mêmes valeurs pour les attributs `kind`, `srclang` et `label`.
 
 ## Exemples
 

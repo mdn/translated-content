@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 在当前聚焦的窗口发生变化时触发。如果所有浏览器窗口都失去焦点，则会是 {{WebExtAPIRef('windows.WINDOW_ID_NONE')}}。
 
 > [!NOTE]

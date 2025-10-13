@@ -3,8 +3,6 @@ title: initial
 slug: Web/CSS/initial
 ---
 
-{{CSSRef}}
-
 [Guía de referencia de CSS](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

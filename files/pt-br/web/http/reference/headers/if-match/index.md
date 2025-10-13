@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/If-Match
 original_slug: Web/HTTP/Headers/If-Match
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`If-Match`** faz a requisição condicional. Para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado somente se ele corresponde com uma das `ETags` listadas. Para {{HTTPMethod("PUT")}} e outros métodos não-seguros, ele somente irá fazer o upload do recurso neste caso.
 
 A comparação com a {{HTTPHeader("ETag")}} guardada usa o _algoritmo de comparação forte_, significa dois arquivos são considerados idênticos _byte_ a _byte_ somente. Se a `ETag` listada com o prefixo `W/` indicando a _tag_ como uma entidade fraca, ele nunca irá combinar usando este algoritmo de comparação.

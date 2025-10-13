@@ -3,8 +3,6 @@ title: Uso de media queries
 slug: Web/CSS/CSS_media_queries/Using_media_queries
 ---
 
-{{CSSRef}}
-
 Las **_Media queries_** le permiten aplicar estilos CSS según el tipo general de un dispositivo (como impresión o pantalla) u otras características como la resolución de la pantalla o el ancho del _{{glossary("viewport")}}_ del navegador.
 Las _media queries_ se utilizan para lo siguiente:
 

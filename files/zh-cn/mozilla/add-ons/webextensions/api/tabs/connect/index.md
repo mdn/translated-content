@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 调用此函数来建立扩展的后台脚本（或其他特权脚本，如弹出窗口脚本或选项页脚本）与属于该扩展并正在指定标签中运行的任何内容脚本之间的连接。此函数返回一个 {{WebExtAPIRef("runtime.Port")}} 对象。
 
 调用此函数后，将在任何属于此扩展并在指定标签中运行的内容脚本中触发 {{WebExtAPIRef('runtime.onConnect')}} 事件。事件监听器将会收到另一个 {{WebExtAPIRef("runtime.Port")}} 对象。两侧可以使用 `Port` 对象来交换消息。

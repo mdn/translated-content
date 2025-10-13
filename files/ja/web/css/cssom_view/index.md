@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d13c1276b80bbfc940a1091b62f333fe9edc78a2
 ---
 
-{{CSSRef}}
-
 **CSSOM ビュー**モジュールでは、文書内の視覚的な表示を操作することができます。要素のレイアウトボックスの位置の取得、スクリプトからのビューポートの幅や高さの取得、要素のスクロールなどがあります。
 
 ## リファレンス
@@ -144,7 +142,7 @@ l10n:
 
 ## ガイド
 
-- [座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : モニター上のウィンドウ、モバイル機器のビューポート、印刷時の紙上の位置などのディスプレイコンテキストにおける位置を特定するために使われる座標系についてのガイドです。
 - [ビューポートの概念](/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts)
   - : ビューポートの概念（それが何か、CSS、SVG、モバイル端末への影響）と、視覚的ビューポートとレイアウトビューポートの違いについてです。

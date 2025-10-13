@@ -81,6 +81,6 @@ Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et rec
 
 ## La suite ?
 
-Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/Learn/CSS/Building_blocks), nous approfondirons de nombreux points.
+Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics), nous approfondirons de nombreux points.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Apprendre/CSS/Premiers_pas")}}

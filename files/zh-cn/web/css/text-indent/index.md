@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef}}
-
 **`text-indent`** CSS 属性设置区块元素中文本行前面空格（缩进）的长度。
 
 {{InteractiveExample("CSS Demo: text-indent")}}

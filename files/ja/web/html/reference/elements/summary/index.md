@@ -9,7 +9,7 @@ l10n:
 
 **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折りたたみボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
-{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;summary&gt;", "tabbed-shorter")}}
 
 ```html-nolint interactive-example
 <details>
@@ -113,7 +113,8 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
 
-> **警告:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例はスクリーンリーダーのような支援技術のユーザーには動作しません。`<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
+> [!WARNING]
+> `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例はスクリーンリーダーのような支援技術のユーザーには動作しません。`<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
 
 ### 概要の中の HTML
 

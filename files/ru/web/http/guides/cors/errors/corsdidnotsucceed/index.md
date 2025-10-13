@@ -3,8 +3,6 @@ title: "Причина: Не удалось выполнить запрос CORS
 slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
 ---
 
-{{HTTPSidebar}}
-
 ## Причина
 
 ```
