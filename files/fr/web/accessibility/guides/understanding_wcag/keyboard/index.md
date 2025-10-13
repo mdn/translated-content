@@ -18,7 +18,7 @@ La plupart des éléments interactifs peuvent recevoir le focus par défaut&nbsp
 
 ### Voir aussi
 
-- [tabindex](/fr/docs/Web/HTML/Attributs_globaux/tabindex) (attribut HTML global)
+- [tabindex](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) (attribut HTML global)
 - Élément&nbsp;: [événement keydown](/fr/docs/Web/API/Element/keydown_event)
 - Élément&nbsp;: [événement keyup](/fr/docs/Web/API/Element/keyup_event)
 
@@ -30,7 +30,7 @@ Cela crée de la confusion pour les utilisateur·ice·s qui n'utilisent que le c
 
 ### Voir aussi
 
-- [tabindex](/fr/docs/Web/HTML/Attributs_globaux/tabindex) (attribut HTML global)
+- [tabindex](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) (attribut HTML global)
 - [Comprendre l'ordre de tabulation <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
 - [Ne pas utiliser `tabindex` supérieur à 0 <sup>(angl.)</sup>](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 
@@ -42,7 +42,7 @@ Un élément est cliquable s'il possède un gestionnaire d'événement `onclick`
 
 ### Voir aussi
 
-- [tabindex](/fr/docs/Web/HTML/Attributs_globaux/tabindex) (attribut HTML global)
+- [tabindex](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) (attribut HTML global)
 - Élément&nbsp;: [événement keydown](/fr/docs/Web/API/Element/keydown_event)
 - Élément&nbsp;: [événement keyup](/fr/docs/Web/API/Element/keyup_event)
 
@@ -61,11 +61,11 @@ Si l'utilisateur·ice peut interagir avec un élément (par exemple, via le tact
 
 ### Voir aussi
 
-- [tabindex](/fr/docs/Web/HTML/Attributs_globaux/tabindex) (attribut HTML global)
+- [tabindex](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) (attribut HTML global)
 
 ## Un élément pouvant recevoir le focus doit avoir un style de focus visible
 
-Tout élément pouvant recevoir le focus au clavier doit avoir un style visible qui indique quand il a le focus. Vous pouvez faire cela avec les pseudo-classes CSS [`:focus`](/fr/docs/Web/CSS/:focus) et [`:focus-visible`](/fr/docs/Web/CSS/:focus-visible).
+Tout élément pouvant recevoir le focus au clavier doit avoir un style visible qui indique quand il a le focus. Vous pouvez faire cela avec les pseudo-classes CSS {{CSSXRef(":focus")}} et {{CSSXRef(":focus-visible")}}.
 
 Les éléments standards pouvant recevoir le focus, comme les liens et les champs de saisie, reçoivent un style particulier par défaut dans le navigateur, donc il n'est pas toujours nécessaire de définir un style de focus pour eux, sauf si vous souhaitez un style plus distinctif.
 
