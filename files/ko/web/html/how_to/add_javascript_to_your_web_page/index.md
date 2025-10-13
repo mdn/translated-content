@@ -73,7 +73,6 @@ JavaScript를 적용하여 당신의 웹 페이지를 다음 단계로 업그레
 
 - **모든 콘텐츠는 (구조화된) 텍스트로 이용할 수 있도록 만들어야 합니다.** 당신의 콘텐츠를 가능한 HTML에 의존하도록 하십시오. 예를 들어, 당신이 멋진 JavaScript 프로그레스바 를 구현했다면, HTML 내부에 해당 상태를 나타내는 백분율 텍스트 또한 함께 제공해야 합니다. 마찬가지로, 드롭다운 메뉴는 [링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 의 [불릿 리스트](/ko/docs/Learn_web_development/Core/Structuring_content/Lists#unordered_lists) 로 구조화 되어야 합니다.
 - **모든 기능은 키보드로 사용할 수 있도록 만들어야 합니다.**
-
   - 사용자가 모든 동작을 (예, links와 form 입력) 작동 순서에 따라 Tab 할 수 있어야 합니다.
   - 만약 당신이 포인터 이벤트를 (예, 마우스 이벤트와 터치 이벤트) 사용한다면, 기능적으로 키보드 이벤트에서 사용할 수 있게 복제해야 합니다.
   - 당신의 사이트를 키보드만 사용하여 테스트해야 합니다.
@@ -82,7 +81,6 @@ JavaScript를 적용하여 당신의 웹 페이지를 다음 단계로 업그레
 - **깜빡임 없이 간결한 애니메이션을 지켜야 합니다.** 깜빡임은 성가시며 [cause seizures](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) 를 유발할 수 있습니다. 더하여, 애니메이션이 몇 초 이상 지속된다면, 사용자에게 애니메이션을 취소하는 방법을 제공해 주십시오.
 - **사용자가 상호작용을 시작할 수 있도록 해야 합니다.** 다시 말해, 자동으로 콘텐츠를 업데이트하거나, 리디렉션하거나, 새로고침 하지 말아야 합니다. 경고 없이는 [캐로우셀](/ko/docs/Web/CSS/CSS_overflow/CSS_carousels) 이나 팝업을 사용하지 말아야 합니다.
 - **JavaScript가 없는 사용자를 위한 계획 B를 준비해야 합니다.** 사람들은 속도를 향상하거나 보안을 위해 JavaScript를 끌 수 있습니다. 사람들은 종종 스크립트 로딩을 방해하는 네트워크 문제를 마주하기도 합니다. 더하여, 서드파티 스크립트 (광고, 추적 스크립트, 브라우저 익스텐션) 는 당신의 스크립트를 손상할 수 있습니다.
-
   - 최소한, {{HTMLElement("noscript")}} 와 같은 짧은 문자를 남겨 주십시오: `<noscript>To use this site, please enable JavaScript.</noscript>`
   - 이상적으로, 가능하다면 JavaScript의 기능을 HTML과 서버-사이드 스크립팅을 사용하여 복제해 주십시오.
   - 만약 당신이 간단한 시작적 효과만 찾는다면, CSS는 종종 더 직관적인 작업을 가능하게 해줍니다.
