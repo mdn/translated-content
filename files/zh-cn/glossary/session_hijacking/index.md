@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **会话劫持**（Session hijacking）是指攻击者接管两台计算机之间的有效会话。攻击者窃取有效的会话 ID 以便侵入系统并窃取数据。
 
 大多数身份验证仅在 {{glossary("TCP")}} 会话开始时进行。在 TCP 会话劫持中，攻击者通过在会话中间接管两台机器之间的 TCP 会话来获得访问权限。

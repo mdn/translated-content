@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests
 original_slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Upgrade-Insecure-Requests`** envia um sinal ao servidor expressando a preferência do cliente por uma resposta criptografada e autenticada, e podendo manipular com êxito a diretiva {{CSP("upgrade-insecure-requests")}} [CSP](/pt-BR/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">

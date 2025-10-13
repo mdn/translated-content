@@ -1,10 +1,19 @@
 ---
-title: "ARIA : le rôle button"
+title: "ARIA : rôle button"
+short-title: button
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
 original_slug: Web/Accessibility/ARIA/Roles/button_role
+l10n:
+  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
 
-Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être utilisé pour les éléments cliquables qui déclenchent une réponse lorsqu'activés par l'utilisateur. Ajouter `role="button"` permettra à un élément d'apparaître comme un bouton de contrôle pour un lecteur d'écran. Ce rôle peut être utilisé avec l'attribut `aria-pressed` afin de créer des boutons interrupteurs.
+Le rôle `button` est destiné aux éléments cliquables qui déclenchent une réponse lorsqu'ils sont activés par l'utilisateur. Ajouter `role="button"` indique au lecteur d'écran que l'élément est un bouton, mais ne fournit aucune fonctionnalité de bouton. Utilisez {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.
+
+## Description
+
+Le rôle `button` identifie un élément comme étant un bouton pour les technologies d'assistance telles que les lecteurs d'écran. Un bouton est un widget utilisé pour effectuer des actions telles que soumettre un formulaire, ouvrir une boîte de dialogue, annuler une action ou exécuter une commande telle que l'insertion d'un nouvel enregistrement ou l'affichage d'informations. Ajouter `role="button"` indique aux technologies d'assistance que l'élément est un bouton, mais ne fournit aucune fonctionnalité de bouton. Utilisez {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.
+
+Ce rôle de `button` peut être utilisé en combinaison avec l'attribut [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) pour [créer des boutons interrupteurs](#boutons_à_bascule).
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">
@@ -12,108 +21,81 @@ Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être
 </div>
 ```
 
-L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec `type="button"` pour représenter des boutons :
+L'exemple ci-dessus crée un bouton sur lequel on peut se positionner, mais nécessite JavaScript et CSS pour inclure l'apparence et la fonctionnalité du bouton. Ces fonctionnalités sont fournies par défaut lorsque vous utilisez {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec des éléments `type="button"`&nbsp;:
 
 ```html
 <button id="saveChanges">Enregistrer</button>
 ```
 
 > [!NOTE]
-> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Element/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour {{domxref("Element/click_event", "click")}} et {{domxref("Element/keydown_event", "keydown")}}. Cela comprend la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
 
-## Description
+En plus du widget de bouton ordinaire, `role="button"` doit être inclus lors de la création d'un bouton interrupteur ou d'un bouton de menu à l'aide d'un élément non bouton.
 
-Le rôle `button` identifie un élément comme étant un bouton pour les lecteurs d'écran. Un bouton est un contrôle graphique qui permet d'effectuer des actions comme soumettre un formulaire, ouvrir une boîte de dialogue, annuler une action ou effectuer une commande (par exemple ajouter un nouvel enregistrement ou afficher des informations).
+Un bouton interrupteur est un bouton à deux états qui peut être soit éteint (non pressé), soit allumé (pressé). Les valeurs de l'attribut [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) `true` ou `false` identifient un bouton comme un bouton interrupteur.
 
-Pour indiquer qu'un bouton déclenchera l'ouverture d'une boîte de dialogue, on pourra utiliser la convention qui consiste à ajouter une ellipse (…) après l'étiquette du bouton, par exemple : "Enregistrer sous…".
+Un bouton de menu est un bouton qui contrôle un menu et a un attribut de propriété [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) défini sur `menu` ou `true`.
 
-En complément `role="button"` devrait également être utilisé pour les interrupteurs ou les menus qui n'utilisent pas l'élément HTML `<button>`. Un interrupteur est un bouton à deux états qui peut être éteint ou actif. Les valeurs de l'attribut `aria-pressed` : `true` ou `false` permettront d'identifier un bouton comme étant un interrupteur. Un bouton de menu permet, comme son nom l'indique, de contrôler un menu et possède un attribut `aria-haspopup` qui vaut `menu` ou `true`.
+### Rôles, états et propriétés ARIA associés
 
-### Rôles, propriétés et états ARIA associés
+- [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+  - : L'attribut `aria-pressed` définit le bouton comme bouton à bascule. La valeur décrit l'état du bouton. Les valeurs incluent `aria-pressed="false"` lorsqu'un bouton n'est pas actuellement enfoncé, `aria-pressed="true"` pour indiquer qu'un bouton est actuellement enfoncé, et `aria-pressed="mixed"` si le bouton est considéré comme partiellement enfoncé. Si l'attribut est omis ou défini sur sa valeur par défaut `aria-pressed="undefined"`, l'élément ne prend pas en charge l'état «&nbsp;enfoncé&nbsp;».
+- [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+  - : Si le bouton contrôle un groupe d'autres éléments, l'état `aria-expanded` indique si le groupe contrôlé est actuellement développé ou réduit. Si le bouton a `aria-expanded="false"`, le groupe n'est pas développé&nbsp;; si le bouton a `aria-expanded="true"`, il est développé&nbsp;; si le bouton a `aria-expanded="undefined"` ou si l'attribut est omis, il n'est pas extensible.
 
-- `aria-pressed`
-  - : Définit le bouton comme étant un interrupteur. La valeur de `aria-pressed` décrit l'état du bouton. Les valeurs utilisables incluent `aria-pressed="false"` pour indiquer qu'un bouton n'est pas pressé, `aria-pressed="true"` pour indiquer qu'un bouton est pressé et `aria-pressed="mixed"` pour indiquer que le bouton est partiellement pressé. Si cet attribut est omis ou qu'il utilise la valeur par défaut `aria-pressed="undefined"`, on ne pourra pas appuyer sur l'élément.
-- `aria-expanded`
-  - : Si le bouton contrôle un groupe d'autres éléments, l'état `aria-expanded` indique si le groupe contrôlé est développé ou replié. Si le bouton a `aria-expanded="false"`, le groupe n'est pas développé ; si le bouton a `aria-expanded="true"`, cela indique qu'il est actuellement développé ; si le bouton a `aria-expanded="undefined"` ou que l'attribut est absent, cela indique que le groupe ne peut pas être développé.
+### Boutons de base
 
-### Boutons simples
+Les boutons doivent toujours avoir un nom accessible. Pour la plupart des boutons, ce nom sera le même que le texte à l'intérieur du bouton, entre les balises ouvrante et fermante. Dans certains cas, par exemple les boutons représentés par des icônes, le nom accessible peut être fourni par les attributs [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
-Les boutons devraient toujours avoir un nom accessible. Pour la plupart des boutons, le nom sera le même que le texte écrit à l'intérieur du bouton. Dans certains cas, par exemple pour les boutons représentés par une icône, le nom accessible pourra être fourni par l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute).
+### Boutons à bascule
 
-### Interrupteurs
+Un bouton à bascule a généralement deux états&nbsp;: enfoncé et non enfoncé. Un troisième état «&nbsp;mixed&nbsp;» est disponible pour les boutons à bascule qui contrôlent d'autres éléments, tels que d'autres boutons à bascule ou des cases à cocher, qui ne partagent pas tou·tes la même valeur. Le fait qu'un élément soit un bouton à bascule ou non peut être indiqué avec l'attribut [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) en plus du rôle `button` (si l'élément n'est pas déjà un bouton natif)&nbsp;:
 
-Un interrupteur possède généralement deux états : activé ou désactivé. Un troisième état hybride est disponible pour les interrupteurs qui contrôlent d'autres éléments tels que d'autres interrupteurs ou cases à cocher qui n'ont pas tous la même valeur. On pourra indiquer qu'un élément est un interrupteur ou non via l'attribut `aria-pressed` en complément du rôle `button` (si l'élément n'est pas déjà un élément de bouton natif) :
+- Si `aria-pressed` n'est pas utilisé, ou est défini à l'état «&nbsp;undefined&nbsp;», le bouton n'est pas un bouton à bascule.
+- Si `aria-pressed="false"` est utilisé, le bouton est un bouton à bascule actuellement non enfoncé.
+- Si `aria-pressed="true"` est utilisé, le bouton est un bouton à bascule actuellement enfoncé.
+- Si `aria-pressed="mixed"` est utilisé, le bouton est considéré comme partiellement enfoncé.
 
-- Si `aria-pressed` n'est pas utilisé ou qu'il est défini avec l'état `"undefined"`, le bouton n'est pas un interrupteur.
-- Si `aria-pressed="false"` est utilisé, le bouton est un interrupteur qui n'est pas actif/pressé.
-- Si `aria-pressed="true"` est utilisé, le bouton est un interrupteur qui est actif/pressé.
-- Si `aria-pressed="mixed"` est utilisé, le bouton est considéré comme partiellement actif.
+Par exemple, le bouton muet d'un lecteur audio étiqueté «&nbsp;mute&nbsp;» pourrait indiquer que le son est coupé en définissant l'état `aria-pressed` à `true`. L'étiquette d'un bouton à bascule ne doit pas changer lorsque son état change. Dans notre exemple, l'étiquette reste «&nbsp;Mute&nbsp;» et un lecteur d'écran annoncera «&nbsp;Mute toggle button pressed&nbsp;» ou «&nbsp;Mute toggle button not pressed&nbsp;» selon la valeur de `aria-pressed`. Si la conception devait faire passer l'étiquette du bouton de «&nbsp;Mute&nbsp;» à «&nbsp;Unmute&nbsp;», un bouton à bascule ne serait pas approprié, et l'attribut `aria-pressed` serait omis.
 
-On peut, par exemple, avoir un bouton « Couper le son » sur un lecteur audio. Dans ce cas, on peut indiquer que le son est éteint lorsque l'état `aria-pressed` vaut `true`. Le libellé utilisé pour un interrupteur ne doit pas changer lorsque l'état change. Dans notre exemple, le libellé reste « Couper le son » et un lecteur d'écran indiquera « L'interrupteur couper le son est actif" ou « L'interrupteur couper le son est inactif » selon la valeur de `aria-pressed`. Si on souhaite avoir un changement de libellé et passer de « Couper le son » à « Réactiver le son », un interrupteur ne serait pas approprié et `aria-pressed` devrait alors être évité.
-
-### Interactions au clavier
+### Interactions clavier
 
 | Touche            | Fonction          |
 | ----------------- | ----------------- |
-| <kbd>Entrée</kbd> | Activer le bouton |
-| <kbd>Espace</kbd> | Activer le bouton |
+| <kbd>Entrer</kbd> | Active le bouton. |
+| <kbd>Espace</kbd> | Active le bouton. |
 
-Une fois le bouton activé, la gestion du focus dépendra du type d'action effectuée par le bouton. Ainsi, si cliquer sur le bouton déclenche l'ouverture d'une boîte de dialogue, le focus doit passer à cette boîte de dialogue. Si le bouton ferme une boîte de dialogue, le focus doit revenir sur le bouton qui permet d'ouvrir la boîte à moins que la fonction de la boîte de dialogue mène logiquement à un autre élément. Si le bouton modifie le contexte courant, le focus reste généralement sur le bouton (par exemple pour couper/remettre le son).
+Après l'activation du bouton, le focus est défini selon le type d'action réalisée. Par exemple, si cliquer sur le bouton ouvre une boîte de dialogue, le focus doit se déplacer vers celle-ci. Si le bouton ferme une boîte de dialogue, le focus doit revenir au bouton qui a ouvert la boîte de dialogue, sauf si la fonction réalisée dans le contexte de la boîte de dialogue mène logiquement à un autre élément. Si le bouton modifie le contexte courant, comme couper et rétablir le son d'un fichier audio, alors le focus reste généralement sur le bouton.
 
-### Fonctionnalités JavaScript nécessaires
+### Fonctionnalités JavaScript requises
 
-#### Gestionnaires d'évènements nécessaires
+#### Gestionnaires d'événements requis
 
-Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. Pour les éléments HTML natifs `<button>`, l'évènement `onclick` du bouton est déclenché lors du clic de la souris ou lorsque l'utilisatrice ou l'utilisateur utilise la touche <kbd>Espace</kbd> ou <kbd>Entrée</kbd> lorsque le bouton a le focus. Si un autre élément est utilisé pour créer un bouton, l'évènement `onclick` ne se déclenche qu'au clic de la souris, y compris lorsqu'on utilise `role="button"`. C'est pour cette raison qu'on doit ajouter des gestionnaires d'évènements distincts à l'élément afin de réagir aux appuis sur les touches <kbd>Espace</kbd> ou <kbd>Entrée</kbd>.
+Les boutons doivent pouvoir être utilisés par souris, tactile et clavier. Pour les éléments HTML natifs `<button>`, l'événement `onclick` est déclenché pour les clics de souris et lorsque l'utilisateur·ice appuie sur <kbd>Espace</kbd> ou <kbd>Entrer</kbd> lorsque le bouton a le focus. Mais si une autre balise est utilisée pour créer un bouton, l'événement `onclick` n'est déclenché que lors d'un clic avec la souris, même si `role="button"` est utilisé. Pour cette raison, des gestionnaires d'événements clavier distincts doivent être ajoutés à l'élément afin que le bouton soit déclenché lorsque la touche <kbd>Espace</kbd> ou <kbd>Entrer</kbd> est pressée.
 
 - `onclick`
-  - : Gère l'évènement déclenché lorsque le bouton est activé avec un clic de souris ou au toucher.
+  - : Gère l'événement levé quand le bouton est activé via un clic souris ou un événement tactile.
 - `onKeyDown`
-  - : Gère l'évènement déclenché lorsque le bouton est activé à l'aide de la touche
-
-    <kbd>Espace</kbd>
-
-    ou
-
-    <kbd>Entrée</kbd>
-
-    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Element/keypress_event)).
-
-#### Modifier les valeurs des attributs
-
-##### aria-pressed
-
-La valeur de `aria-pressed` définit l'état d'un interrupteur. Cet attribut peut avoir l'une des quatre valeurs suivantes :
-
-- `true`,
-- `false`,
-- `mixed`,
-- `undefined`.
+  - : Gère l'événement levé quand le bouton est activé avec les touches Entrer ou Espace du clavier. (À noter et non [l'événement obsolète onKeyPress](/fr/docs/Web/API/Element/keypress_event))
 
 ## Exemples
 
-### Exemple de bouton simple
+### Exemple de bouton basique
 
-Dans cet exemple, on a un élément `<span>` pour lequel on a mis le rôle `button`. Comme il s'agit d'un élément `<span>`, l'attribut `tabindex` est nécessaire pour permettre au bouton de recevoir le focus et de s'inscrire dans l'ordre des tabulations. Le style CSS inclus permet de transformer visuellement l'élément `<span>` afin qu'il ressemble à un bouton et pour fournir une indication visuelle lorsque celui-ci a le focus.
+Dans cet exemple, un élément `span` reçoit le rôle `button`. Comme un élément `<span>` est utilisé, l'attribut `tabindex` est requis pour rendre le bouton focalisable et l'ajouter à l'ordre de tabulation de la page. Le style CSS inclus sert à faire ressembler l'élément `<span>` à un bouton, et à fournir des indices visuels lorsqu'il a le focus.
 
-Les gestionnaires d'évènements `handleBtnClick` et `handleBtnKeyDown` exécutent l'action du bouton lorsqu'il est activé avec un clic de souris ou au clavier avec la touche <kbd>Espace</kbd> ou <kbd>Entrée</kbd>. Dans cet exemple, l'action consiste à ajouter un nouveau nom à une liste de noms.
+Les gestionnaires d'événements `handleBtnClick` et `handleBtnKeyDown` exécutent l'action du bouton lorsqu'iel est activé·e à l'aide d'un clic de souris ou des touches <kbd>Espace</kbd> ou <kbd>Entrer</kbd>. Ici, l'action ajoute un nouveau nom à la liste des noms.
 
-Vous pouvez essayer l'exemple en ajoutant un nom dans le champ texte. Le bouton ajoutera ensuite le nom à la liste.
+Essayez l'exemple en ajoutant un nom dans le champ de texte. Le bouton ajoutera le nom à la liste.
 
 #### HTML
 
 ```html
-<h1>Exemple de bouton avec ARIA</h1>
+<h1>Exemple de bouton ARIA</h1>
 <ul id="nameList"></ul>
-<label for="newName">Saisissez votre nom :</label>
+<label for="newName">Entrez votre nom&nbsp;: </label>
 <input type="text" id="newName" />
-<span
-  role="button"
-  tabindex="0"
-  onclick="handleCommand(event)"
-  onKeyDown="handleCommand(event)"
-  >Ajouter le nom</span
->
+<span role="button" tabindex="0">Ajouter un nom</span>
 ```
 
 #### CSS
@@ -140,11 +122,11 @@ ul {
 
 ```js
 function handleCommand(event) {
-  // Gère à la fois l'activation à la souris
-  // et au clavier
+  // Gère à la fois les clics souris et le clavier
+  // activation avec Enter ou Space
 
-  // Les touches autres que Entrée et Espace ne devraient
-  // déclencher de commande
+  // Les pressions de touches autres que Enter et Space
+  // ne doivent pas déclencher la commande
   if (
     event instanceof KeyboardEvent &&
     event.key !== "Enter" &&
@@ -153,52 +135,47 @@ function handleCommand(event) {
     return;
   }
 
-  // On récupère la valeur du nouveau nom à partir
-  // du champ en saisie
-  let newNameInput = document.getElementById("newName");
-  let name = newNameInput.value;
-  newNameInput.value = ""; // On vide le champ texte
-  newNameInput.focus(); // On passe le focus au champ texte pour
-  // permettre la saisie d'un autre nom
+  // Récupère la valeur du nouveau nom depuis le champ de saisie
+  const newNameInput = document.getElementById("newName");
+  const name = newNameInput.value;
+  newNameInput.value = ""; // efface le champ texte
+  newNameInput.focus(); // redonne le focus pour permettre la saisie d'un autre nom
 
-  // On évite d'ajouter des noms vides à la liste
+  // N'ajoute pas d'entrées vides à la liste
   if (name.length > 0) {
-    listItem = document.createElement("li");
+    const listItem = document.createElement("li");
     listItem.appendChild(document.createTextNode(name));
 
-    // On ajoute le nouveau nom à la liste.
-    let list = document.getElementById("nameList");
+    // Ajoute le nouveau nom à la liste
+    const list = document.getElementById("nameList");
     list.appendChild(listItem);
   }
 }
+
+const btn = document.querySelector("span[role='button']");
+btn.addEventListener("click", handleCommand);
+btn.addEventListener("keydown", handleCommand);
 ```
 
-{{EmbedLiveSample("Exemple_de_bouton_simple")}}
+#### Résultat
 
-### Exemple d'interrupteur
+{{EmbedLiveSample("exemple_de_bouton_basique")}}
 
-Dans le fragment qui suit, on convertit un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en interrupteur grâce au rôle `button` et à l'attribut `aria-pressed`. Lorsque le bouton est activé, `aria-pressed` change de valeur et alterne entre `true` et `false`.
+### Exemple de bouton à bascule
+
+Dans cet extrait, un élément {{HTMLElement("span")}} est converti en bouton à bascule à l'aide du rôle `button` et de l'attribut `aria-pressed`. Lorsque le bouton est activé, la valeur de `aria-pressed` change d'état&nbsp;; passant de `true` à `false` et inversement.
 
 #### HTML
 
 ```html
-<button type="button" onclick="handleBtnClick()" onKeyDown="handleBtnKeyDown()">
-  Couper le son
-</button>
+<button type="button">Couper le son</button>
 
-<span
-  role="button"
-  tabindex="0"
-  aria-pressed="false"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Couper le son
-</span>
+<span role="button" tabindex="0" aria-pressed="false"> Couper le son </span>
 
 <audio
   id="audio"
   src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
-  Votre navigateur ne prend pas en charge l'élément <code>audio</code>.
+  Votre navigateur ne prend pas en charge l'élément `audio`.
 </audio>
 ```
 
@@ -214,7 +191,7 @@ button,
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-  border: 2px solid #000;
+  border: 2px solid black;
 }
 ```
 
@@ -226,65 +203,71 @@ function handleBtnClick(event) {
 }
 
 function handleBtnKeyDown(event) {
-  // On vérifie si les touches Entrée ou Espace sont pressées
+  // Vérifie si Space ou Enter a été pressée
+  // "Spacebar" pour la compatibilité IE11
   if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-    // Prise en charge de "Spacebar" pour IE11
-    // On empêche le défilement par défaut lorsque
-    // la touche espace est utilisée
+    // Empêche l'action par défaut pour éviter le défilement avec Space
     event.preventDefault();
     toggleButton(event.target);
   }
 }
 
 function toggleButton(element) {
-  var audio = document.getElementById("audio");
-  // On vérifie si le bouton est pressé
-  var pressed = element.getAttribute("aria-pressed") === "true";
-  // On fait alterner aria-pressed vers l'état opposé
+  const audio = document.getElementById("audio");
+
+  // Vérifie si le bouton est enfoncé
+  const pressed = element.getAttribute("aria-pressed") === "true";
+
+  // Bascule aria-pressed vers l'état opposé
   element.setAttribute("aria-pressed", !pressed);
-  // On modifie l'état de lecture du fichier audio
+
+  // Bascule l'état de lecture du fichier audio
   if (pressed) {
     audio.pause();
   } else {
     audio.play();
   }
 }
+
+const button = document.querySelector("button");
+const spanButton = document.querySelector("span[role='button']");
+button.addEventListener("click", handleBtnClick);
+button.addEventListener("keydown", handleBtnKeyDown);
+spanButton.addEventListener("click", handleBtnClick);
+spanButton.addEventListener("keydown", handleBtnKeyDown);
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple_d\'interrupteur')}}
+{{EmbedLiveSample('exemple_de_bouton_à_bascule')}}
 
-## Accessibilité
+## Problèmes d'accessibilité
 
-Les boutons sont des contrôles interactifs et, à ce titre, peuvent recevoir le focus. Si le rôle `button` est ajouté à un élément qui ne peut recevoir le focus nativement (comme `<span>`, `<div>` ou `<p>`), l'attribut `tabindex` devra être utilisé afin de permettre le focus sur le bouton.
+Les boutons sont des contrôles interactifs et sont donc focalisables. Si le rôle `button` est ajouté à un élément qui n'est pas focalisable par lui‑même (comme `<span>`, `<div>` ou `<p>`), alors l'attribut `tabindex` doit être utilisé pour rendre le bouton focalisable.
 
 > [!WARNING]
-> Lorsqu'on utilise des liens avec le rôle `button`, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.
+> Soyez prudent·e lors de l'annotation de liens avec le rôle button. Les boutons doivent pouvoir être déclenchés avec les touches <kbd>Espace</kbd> ou <kbd>Entrer</kbd>, alors que les liens doivent être déclenchés avec la touche <kbd>Entrer</kbd>. En d'autres termes, lorsque des liens sont utilisés pour se comporter comme des boutons, ajouter seulement `role="button"` n'est pas suffisant. Il faudra aussi ajouter un gestionnaire d'événement clavier qui écoute la touche <kbd>Espace</kbd> afin d'être cohérent avec les boutons natifs.
 
-Lorsqu'on utilise le rôle `button`, les lecteurs d'écran annonce l'élément comme un bouton, généralement en énonçant « clic » suivi du nom accessible du bouton. Le nom accessible correspond au contenu de l'élément ou à la valeur de `aria-label` ou à l'élément référencé avec l'attribut `aria-labelledby`, ou à une description si elle existe.
+Lorsque le rôle `button` est utilisé, les lecteurs d'écran annoncent l'élément comme un bouton, disant généralement «&nbsp;clic&nbsp;» suivi du nom accessible du bouton. Le nom accessible est soit le contenu de l'élément, soit la valeur d'un `aria-label` ou de l'élément référencé par un attribut `aria-labelledby`, ou une description si elle est incluse.
 
 ## Bonnes pratiques
 
-Si un lien effectue l'action d'un bouton, fournir `role="button"` à l'élément permettra aux outils d'assistance de comprendre la fonction de l'élément. Toutefois, une meilleure solution consiste à ajuster l'aspect visuel afin qu'il corresponde à la fonction et au rôle ARIA. Lorsque c'est possible, il est recommandé d'utiliser les boutons HTML natifs (`<button>`, `<input type="button">`, `<input type="submit">`, `<input type="reset">` et `<input type="image">`) plutôt que le rôle `button`. En effet, les boutons HTML natifs sont pris en charge par l'ensemble des agents utilisateurs et outils d'assistance et satisfont aux règles de gestion du focus et du clavier, sans qu'il soit nécessaire d'ajouter des adaptations.
+Si un lien effectue l'action d'un bouton, donner à l'élément `role="button"` aide les utilisateur·ice·s de technologies d'assistance à comprendre la fonction de l'élément. Toutefois, une meilleure solution consiste à ajuster la conception visuelle pour qu'elle corresponde à la fonction et au rôle ARIA. Lorsque c'est possible, il est recommandé d'utiliser les boutons HTML natifs (`<button>`, `<input type="button">`, `<input type="submit">`, `<input type="reset">` et `<input type="image">`) plutôt que le rôle `button`, car les boutons HTML natifs sont pris en charge par tou·tes les agents utilisateurs et technologies d'assistance et fournissent par défaut le clavier et la gestion du focus, sans personnalisation supplémentaire.
 
 ## Spécifications
 
 {{Specifications}}
 
-## Notes
+## Voir aussi
 
-### Attributs ARIA utilisés
-
-- [`button`](https://www.w3.org/TR/wai-aria/roles#button)
-- [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
-- [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
-- [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
-
-### Ressources complémentaires
-
-- [Sémantique native forte en HTML5](https://www.w3.org/TR/html5/dom.html#aria-usage-note)
-- [Notes sur l'utilisation d'ARIA en HTML](https://www.w3.org/TR/aria-in-html/)
-- [Exemple de code officiel WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-- [Rôle ARIA `menubutton`](/fr/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
-- [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}
+- L'élément {{HTMLElement('button')}}
+- L'élément {{HTMLElement("input")}}
+- [`<input type="button">`](/fr/docs/Web/HTML/Reference/Elements/input/button)
+- [`<input type="submit">`](/fr/docs/Web/HTML/Reference/Elements/input/submit)
+- [`<input type="reset">`](/fr/docs/Web/HTML/Reference/Elements/input/reset)
+- L'attribut ARIA [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+- L'attribut ARIA [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- L'attribut ARIA [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
+- [Sémantique native puissante dans HTML5 <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
+- [Notes sur l'utilisation de l'ARIA dans HTML <sup>(angl.)</sup>](https://w3c.github.io/using-aria/)
+- [Code d'exemple officiel WAI-ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
-{{CSSRef}}
-
 **`background-color`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的背景色。
 
 {{InteractiveExample("CSS Demo: background-color")}}

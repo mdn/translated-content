@@ -58,7 +58,7 @@ Vous êtes désormais un créateur du numérique. Profitez de l'expérience et t
 
 ## Vue d'ensemble des outils Web modernes
 
-Il existe plusieurs technologies à maîtriser si vous souhaitez devenir développeur Web front-end, que nous décrirons brièvement dans cette section. Pour une explication plus détaillée de la façon dont certains d'entre eux interagissent, lisez notre article [Le fonctionnement du web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works).
+Il existe plusieurs technologies à maîtriser si vous souhaitez devenir développeur Web front-end, que nous décrirons brièvement dans cette section. Pour une explication plus détaillée de la façon dont certains d'entre eux interagissent, lisez notre article [Le fonctionnement du web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works).
 
 ### Navigateurs web
 
@@ -117,8 +117,8 @@ La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne res
 
 Une fois que vous maîtriserez les technologies "brutes" qui permettent de construire des pages web (comme HTML, CSS, et JavaScript), vous rencontrerez rapidement divers outils permettant de faciliter ou d'accélerer votre travail. On peut citer comme exemples :
 
-- Les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) des navigateurs modernes qui permettent de déboguer votre code.
-- [Des outils de test](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing) pouvant être utilisés afin de vérifier si votre code se comporte comme vous l'aviez prévu.
+- Les [outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) des navigateurs modernes qui permettent de déboguer votre code.
+- [Des outils de test](/fr/docs/conflicting/Learn_web_development/Extensions/Testing) pouvant être utilisés afin de vérifier si votre code se comporte comme vous l'aviez prévu.
 - Des bibliothèques et des cadres de travail (frameworks) basés sur JavaScript qui permettent de créer certains types de sites web beaucoup plus rapidement et efficacement .
 - Ce qu'on appelle les "Linters", des outils d'analyse qui prennent une liste de règles, parcourent votre code et listent les endroits où vous n'avez pas parfaitement suivi les règles.
 - Des minificateurs, qui retirent tous les blancs de vos fichiers de code pour les rendre plus compacts et donc plus rapides à télécharger.
@@ -156,4 +156,4 @@ Vous rencontrerez les concepts suivants à un moment donné de vos études.
 ## Voir aussi
 
 - [Histoire du World Wide Web](https://fr.wikipedia.org/wiki/World_Wide_Web#Histoire)
-- [Le fonctionnement de l'Internet](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Le fonctionnement de l'Internet](/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)

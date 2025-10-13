@@ -13,7 +13,7 @@ L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec u
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
 
 ## Interface DOM
 

@@ -2,27 +2,25 @@
 title: 代入演算子 (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Operators")}}
 
 **代入 (`=`)** 演算子は、変数またはプロパティに値を代入するために使用されます。代入式自体の値は、代入された値になります。これにより、複数の変数に 1 つの値を代入するために、複数の代入を連鎖させることができます。
 
-{{InteractiveExample("JavaScript デモ: 式 - 代入")}}
+{{InteractiveExample("JavaScript デモ: 代入演算子 (=)")}}
 
 ```js interactive-example
 let x = 2;
 const y = 3;
 
 console.log(x);
-// 予想される出力: 2
+// 予想される結果: 2
 
 console.log((x = y + 1)); // 3 + 1
-// 予想される出力: 4
+// 予想される結果: 4
 
 console.log((x = x * y)); // 4 * 3
-// 予想される出力: 12
+// 予想される結果: 12
 ```
 
 ## 構文

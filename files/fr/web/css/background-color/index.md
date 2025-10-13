@@ -139,7 +139,7 @@ Il est important de vérifier que le contraste entre la couleur d'arrière-plan 
 Le ratio de contraste entre les couleurs est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Pour respecter les règles d'accessibilité [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), il faut avoir un ratio de 4.5:1 pour le contenu textuel normal et un ratio de 3:1 pour les textes plus grands comme les titres (un texte sera considéré comme grand s'il est en gras et mesure au moins 18.66px ou s'il mesure au moins 24 pixels).
 
 - [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_Understanding Success Criterion 1.4.3, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Spécifications

@@ -14,7 +14,8 @@ l10n:
 
 {{domxref("RTCRtpReceiver")}} で、 `receiver` を送信者とペアにし、 `RTCTrackEvent` に関連付けられたトラックで使用される単一の双方向 {{Glossary("RTP", "SRTP")}} ストリームを確立するその他のプロパティを格納しています。
 
-> **メモ:** {{domxref("RTCTrackEvent.transceiver", "transceiver")}} には、それ自身で {{domxref("RTCRtpTransceiver.receiver", "receiver")}} プロパティが含まれます。これは、常にこれと同じ {{domxref("RTCRtpReceiver")}} になります。
+> [!NOTE]
+> {{domxref("RTCTrackEvent.transceiver", "transceiver")}} には、それ自身で {{domxref("RTCRtpTransceiver.receiver", "receiver")}} プロパティが含まれます。これは、常にこれと同じ {{domxref("RTCRtpReceiver")}} になります。
 
 ## 仕様書
 

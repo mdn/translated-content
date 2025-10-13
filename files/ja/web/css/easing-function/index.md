@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a075805de90029b65fa5cfcc8ea43737728320f5
 ---
 
-{{CSSRef}}
-
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、値が変化する割合を記述する数学的な関数を表します。
 
 この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。イージング関数は、CSS の [transition](/ja/docs/Web/CSS/transition-timing-function) および [animation](/ja/docs/Web/CSS/animation-timing-function) プロパティで指定することができます。
@@ -52,7 +50,8 @@ steps(10, jump-both)
 
         ![入力の進行から出力の進行へのグラフで、原点から (1, 1) まで延びる直線を表示しています。](linear.svg)
 
-        > **メモ:** `linear` キーワードは常に `linear(0, 1)` として解釈されます。ここで関数 `linear(0, 1)` は `linear(0 0%, 1 100%)` と解釈されます。
+        > [!NOTE]
+        > `linear` キーワードは常に `linear(0, 1)` として解釈されます。ここで関数 `linear(0, 1)` は `linear(0 0%, 1 100%)` と解釈されます。
 
     - {{cssxref("easing-function/linear", "linear()")}}
       - : 複数の進行の点を {{cssxref("&lt;number&gt;")}} 値で定義し、オプションの {{cssxref("&lt;percentage&gt;")}} 値でそのタイミングを制御します。

@@ -337,7 +337,8 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 追加のおまけとして、ほとんどのブラウザーにおいて、ラベルをフォーム入力欄に結びつけると、ラベルをクリックして当該フォーム要素を選択 / アクティブ化することができます。このため、入力欄に対して、より大きなヒット領域を与えることになり、入力欄が選択しやすくなります。
 
-> **メモ:** [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) と [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html) で、いくつかの良いフォーム例と悪いフォーム例を見られます。
+> [!NOTE]
+> [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) と [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html) で、いくつかの良いフォーム例と悪いフォーム例を見られます。
 
 適切なテキストラベルの重要性と、[Firefox のアクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)を使用してテキストラベルの問題を調査する方法については、以下の動画でうまく説明されています。
 
@@ -443,7 +444,8 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 この場合、`alt` 属性をまったく使っていません。その代わり、画像についての説明を通常のテキスト段落として提示し、その段落に `id` を与え、そして、その `id` を参照するための `aria-labelledby` 属性を用いました。こうすると、スクリーンリーダーに、その段落をその画像についての代替テキスト / ラベルとして使わせることになります。これは、複数の画像に対して同じテキストをラベルとして使いたい場合に、とりわけ有用です（これは、`alt` ではできません）。
 
-> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
+> [!NOTE]
+> [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
 
 ### figure と figcaption
 

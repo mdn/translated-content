@@ -496,7 +496,8 @@ Por ejemplo:
 
 Un objeto literal es una lista de cero o más pares de nombres de propiedad y valores asociados de un objeto, entre llaves (`{}`).
 
-> **Advertencia:** **¡No uses un objeto literal al comienzo de una declaración!** Esto dará lugar a un error (o no se comportará como esperabas), porque la `{` se interpretará como el comienzo de un bloque.
+> [!WARNING]
+> **¡No uses un objeto literal al comienzo de una declaración!** Esto dará lugar a un error (o no se comportará como esperabas), porque la `{` se interpretará como el comienzo de un bloque.
 
 El siguiente es un ejemplo de un objeto literal. El primer elemento del objeto `car` define una propiedad, `myCar`, y le asigna una nueva cadena, "`Saturn`"; al segundo elemento, la propiedad `getCar`, se le asigna inmediatamente el resultado de invocar a la función `(carTypes("Honda"));` el tercer elemento, la propiedad `special`, utiliza una variable (`sales`) existente.
 

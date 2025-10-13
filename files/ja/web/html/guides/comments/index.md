@@ -22,7 +22,8 @@ HTML の**コメント**は、マークアップに説明メモを追加した�
 - {{HTMLElement("html")}} 要素の前後
 - ほとんどの要素コンテンツ。ただし、{{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}, {{HTMLElement("textarea")}} は、コンテンツを生のテキストとして解釈するため不可。
 
-> **メモ:** `<script>` 要素は HTML コメントを持たず、[JavaScript コメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#コメント)を使用すべきですが、JavaScript に対応していない古いブラウザーではコンテンツがテキストとして表示されないように、スクリプトコンテンツ全体を HTML コメントで囲むという慣習が残っていました。これは現在では [JavaScript 自体の古い機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_コメント)であり、これに頼るべきではありません。
+> [!NOTE]
+> `<script>` 要素は HTML コメントを持たず、[JavaScript コメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#コメント)を使用すべきですが、JavaScript に対応していない古いブラウザーではコンテンツがテキストとして表示されないように、スクリプトコンテンツ全体を HTML コメントで囲むという慣習が残っていました。これは現在では [JavaScript 自体の古い機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_コメント)であり、これに頼るべきではありません。
 
 ## 構文
 

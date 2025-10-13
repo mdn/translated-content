@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 40590706f9ab23242bcd8c8966cc683d7d5b18aa
 ---
 
-{{CSSRef}}
-
 このガイドでは、主軸に沿ってアイテムの寸法と自由度を制御することができる 3 つのプロパティ、 {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, {{CSSxRef("flex-basis")}} を見ていきます。これらのプロパティがどのようにフレックスアイテムを伸縮させるかについて完全に理解することが、 [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)をマスターするための鍵です。
 
 ## 最初に見てみる

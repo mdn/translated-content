@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre de 2011 se lanzó la versión 9.0.1 para Mac y Linux, que corrigió un error de bloqueo descubierto en el último minuto.
 
 ## Cambios para desarrolladores web
@@ -44,7 +42,7 @@ _Ningún cambio._
 - Los [eventos de composición](/es/docs/Web/API/CompositionEvent) de DOM Nivel 3 ahora son compatibles.
 - Se implementó el atributo {{ domxref("Document.scripts") }}; esto devuelve un {{ domxref("HTMLCollection") }} de todos los elementos {{ HTMLElement("script") }} del documento.
 - Se implementó el método {{ domxref("Document.queryCommandSupported()") }}.
-- El conjunto de eventos que se pueden escuchar en los elementos {{ HTMLElement("body") }} se ha revisado para que coincida con el último borrador de la especificación HTML5. La lista de eventos en la [referencia de eventos DOM](/es/docs/Web/Events) refleja qué eventos se pueden detectar en {{ HTMLElement("body") }}.
+- El conjunto de eventos que se pueden escuchar en los elementos {{ HTMLElement("body") }} se ha revisado para que coincida con el último borrador de la especificación HTML5. La lista de eventos en la [referencia de eventos DOM](/es/docs/Web/API/Document_Object_Model/Events) refleja qué eventos se pueden detectar en {{ HTMLElement("body") }}.
 - El evento `readystatechange` ahora solo se activa en {{ domxref("Document") }}, según lo previsto.
 - Los manejadores de eventos ahora se implementan como interfaces IDL estándar. En la mayoría de los casos, esto no afectará el contenido, pero hay excepciones.
 - Se ha agregado un nuevo tipo de respuesta, "`moz-json`", a `XMLHttpRequest`, lo que permite que `XMLHttpRequest` analice automáticamente cadenas [JSON](/es/docs/Glossary/JSON); cuando solicita este tipo, se analiza una cadena JSON devuelta, de modo que el valor de la propiedad `response` es el objeto JavaScript resultante.

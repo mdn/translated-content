@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
 original_slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** bloque le chargement de ressources via HTTP lorsque la page utilise HTTPS.
 
 Toutes les requêtes vers des [contenus mixtes](/fr/docs/Sécurité/MixedContent) sont alors bloquées, y compris les ressources actives et passives. Cela s'applique aussi aux documents {{HTMLElement("iframe")}}, assurant que la page est complètement protégée contre les contenus mixtes.

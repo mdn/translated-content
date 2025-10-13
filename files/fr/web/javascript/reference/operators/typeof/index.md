@@ -39,7 +39,7 @@ typeof operande;
 
 ## Description
 
-Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pour plus d'informations sur les types et valeurs primitives en JavaScript, voir la page sur [les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures).
+Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pour plus d'informations sur les types et valeurs primitives en JavaScript, voir la page sur [les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures).
 
 | Type                                                                                                 | Résultat                   |
 | ---------------------------------------------------------------------------------------------------- | -------------------------- |
