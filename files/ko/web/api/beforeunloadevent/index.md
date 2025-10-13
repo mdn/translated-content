@@ -18,7 +18,7 @@ l10n:
 _부모인 {{DOMxRef("Event")}}로부터 속성을 상속받습니다._
 
 - {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} {{Deprecated_Inline}}
-  - : [참 같은 값(Truthy)](/ko/docs/Glossary/Truthy)  값으로 설정하면, 사용자가 페이지를 닫거나 새로 고치려고 할 때 페이지를 떠나겠는지 확인하는 브라우저 제어 확인 대화 상자가 표시됩니다. 이 방식은 레거시 기능으로 권장되는 방법은 `event.preventDefault()`를 호출하여 대화 상자를 트리거하고, 레거시 사례를 지원하기 위해 `returnValue` 도 함께 설정하는 것입니다.
+  - : [참 같은 값(Truthy)](/ko/docs/Glossary/Truthy)  값으로 설정하면, 사용자가 페이지를 닫거나 새로 고치려고 할 때 페이지를 떠나겠는지 확인하는 브라우저 제어 확인 대화 상자가 표시됩니다. 이 방식은 레거시 기능으로 권장되는 방법은 `event.preventDefault()`를 호출하여 대화 상자를 트리거하는 동시에 레거시 환경 호환을 위해 `returnValue` 도 함께 설정하는 것입니다.
 
 ## 메서드
 
