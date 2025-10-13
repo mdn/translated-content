@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ellipse()")}}
 
