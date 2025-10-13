@@ -3,8 +3,6 @@ title: Référence CSS
 slug: Web/CSS/Reference
 ---
 
-{{CSSRef}}
-
 Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
 
 ## Syntaxe de règle basique
@@ -118,12 +116,12 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 
 ### Valeurs
 
-- [Valeur réelle](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-- [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
-- [Valeur initiale](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
-- [Valeur résolue](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
-- [Valeur spécifiée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4e3ad4bb8e93bd9e2a381021d1b939f81717e13df739659207d88907070d77aa)
-- [Valeur utilisée](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
+- [Valeur réelle](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
+- [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+- [Valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+- [Valeur résolue](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_résolue)
+- [Valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie)
+- [Valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
 
 ### Disposition
 
