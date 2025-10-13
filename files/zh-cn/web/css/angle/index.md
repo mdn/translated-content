@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-**`<angle>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_Units/CSS_data_types)表示以度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）表示的角度值。例如，它在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些函数中被使用。
+**`<angle>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示以度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）表示的角度值。例如，它在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些函数中被使用。
 
 {{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
 
@@ -116,7 +116,7 @@ transform: rotate(1.75turn);
 
 ## 参见
 
-- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_Units/CSS_data_types)
+- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
 - [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 类型
 - CSS 旋转变换：[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate)、[`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)、[`rotateX()`](/zh-CN/docs/Web/CSS/transform-function/rotateX)、[`rotateY()`](/zh-CN/docs/Web/CSS/transform-function/rotateY) 和 [`rotateZ()`](/zh-CN/docs/Web/CSS/transform-function/rotateZ)
 - [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)
