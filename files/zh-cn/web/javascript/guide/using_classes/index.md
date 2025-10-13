@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
-JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。但是，对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建实例。
+JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。但是，对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建对象。
 
 在许多其他语言中，_类_（或构造函数）与*对象*（或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 纯函数都可用作构造函数——你可以用 `new` 运算符来调用一个构造函数以创建出一个新的对象。
 
@@ -27,7 +27,7 @@ if (bigDay.getTime() < Date.now()) {
 }
 ```
 
-在第一行，我们创建了一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类的实例，并将其命名为 `bigDay`。在第二行，我们在 `bigDay` 实例上调用了 [`toLocaleDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) [方法](/zh-CN/docs/Glossary/Method)，其会返回一个字符串。接下来，我们对比了两个数字：一个来自于方法 [`getTime()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) 的返回值，另个一来自于对 `Date` 类*本身*的直接调用，本例为 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。
+在第一行，我们创建了一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类的实例，并将其命名为 `bigDay`。在第二行，我们在 `bigDay` 实例上调用了 [`toLocaleDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) [方法](/zh-CN/docs/Glossary/Method)，其会返回一个字符串。接下来，我们对比了两个数字：一个来自于方法 [`getTime()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) 的返回值，另一个来自于对 `Date` 类*本身*的直接调用，本例为 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。
 
 `Date` 是一个 JavaScript 的内建类。从这个例子中，我们可以得到一些关于类的基本概念：
 
@@ -354,7 +354,7 @@ console.log(red.#values); // SyntaxError: Private field '#values' must be declar
 ```
 
 > [!NOTE]
-> 在 Chrome 控制台中运行的代码可以在类外访问私有字段，JavaScript 为了方便调试而仅在开发者工具中放宽了这一限制。
+> 在 Chrome 控制台中运行的代码可以访问类外的私有字段，这是开发者工具针对 JavaScript 语法限制的特殊放宽。
 
 JavaScript 中的私有字段是*硬私有*的：如果类没有实现暴露这些私有字段的方法，也就没有任何机制可以从类外访问它们。这意味着你可以对类的私有字段做任何重构，只要暴露的方法的行为保持不变即可。
 
@@ -472,7 +472,7 @@ customElements.define("num-counter", Counter);
 
 ## 访问器字段
 
-`color.getRed()` 和 `color.setRed()` 允许我们读取和写入颜色的红色值。如果你熟悉像 Java 这样的语言，你会对这种模式非常熟悉。然而，在 JavaScript 中，使用方法来简单地访问属性仍然有些不便。*getter 字段*允许我们像访问“实际属性”一样操作某些东西。
+`color.getRed()` 和 `color.setRed()` 允许我们读取和写入颜色的红色值。如果你熟悉像 Java 这样的语言，你会对这种模式非常熟悉。然而，在 JavaScript 中，使用方法来简单地访问属性仍然有些不便。*访问器字段*允许我们像访问“实际属性”一样操作某些东西。
 
 ```js
 class Color {
