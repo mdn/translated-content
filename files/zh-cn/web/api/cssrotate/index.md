@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model) 的 **`CSSRotate`** 接口表示 CSS 中 {{CSSXRef('transform')}} 属性的旋转值。它继承自父类 {{domxref('CSSTransformValue')}} 的属性和方法。
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model) 的 **`CSSRotate`** 接口表示 CSS 中 {{CSSXRef('transform')}} 属性的旋转值。它继承父接口 {{domxref('CSSTransformValue')}} 的属性和方法。
 
 {{InheritanceDiagram}}
 
