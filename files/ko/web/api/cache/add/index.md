@@ -1,5 +1,5 @@
 ---
-title: "Cache: add() method"
+title: "Cache: add() 메서드"
 short-title: add()
 slug: Web/API/Cache/add
 l10n:
