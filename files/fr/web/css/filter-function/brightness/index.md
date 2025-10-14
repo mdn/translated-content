@@ -151,7 +151,7 @@ p {
 
 ### Utiliser `brightness()` avec un filtre SVG via `url()`
 
-L'élément SVG {{SVGElement("filter")}} permet de définir des effets de filtre personnalisés qui peuvent ensuite être référencés par [`id`](/fr/docs/Web/HTML/Global_attributes/id). Le filtre utilise la primitive {{SVGElement("feComponentTransfer")}} pour permettre un remappage des couleurs au niveau du pixel.
+L'élément SVG {{SVGElement("filter")}} permet de définir des effets de filtre personnalisés qui peuvent ensuite être référencés par [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). Le filtre utilise la primitive {{SVGElement("feComponentTransfer")}} pour permettre un remappage des couleurs au niveau du pixel.
 
 Dans cet exemple, pour créer un filtre qui assombrit le contenu de 25&nbsp;% (c'est-à-dire 75&nbsp;% de la clarté d'origine), l'attribut `slope` est fixé à `0.75`. On peut alors référencer ce filtre par son identifiant.
 
