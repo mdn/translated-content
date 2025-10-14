@@ -88,4 +88,4 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 - [Négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation) HTTP
 - En-tête résultant de la négociation de contenu : [`Content-Encoding`](/fr/docs/Web/HTTP/Reference/Headers/Content-Encoding)
-- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Reference/Headers/Accept), [`Accept-Charset`](/fr/docs/Web/HTTP/Headers), [`Accept-Language`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Language)
+- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Reference/Headers/Accept), [`Accept-Charset`](/fr/docs/Web/HTTP/Reference/Headers), [`Accept-Language`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Language)
