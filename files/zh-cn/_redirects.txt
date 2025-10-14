@@ -1144,7 +1144,6 @@
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-/zh-CN/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /zh-CN/docs/Learn/Common_questions/How_much_does_it_cost	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /zh-CN/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -1152,7 +1151,6 @@
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -1455,7 +1453,6 @@
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/zh-CN/docs/Web/HTML/How_to/Use_data_attributes
-/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
