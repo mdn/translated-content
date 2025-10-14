@@ -19,7 +19,7 @@ Le type de données `<length>` consiste en un nombre ({{cssxref("&lt;number&gt;"
 
 La [valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) d'une longueur (_longueur définie_) est représentée par sa quantité et son unité. La [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) d'une longueur (_longueur calculée_) est la longueur spécifiée résolue en une longueur absolue, et son unité n'est pas distinguée.
 
-Les unités `<length>` peuvent être relatives ou absolues. Les longueurs relatives représentent une mesure en fonction d'une autre distance. Selon l'unité, cette distance peut être la taille d'un caractère spécifique, la [hauteur de ligne](/fr/docs/Web/CSS/line-height), ou la taille du {{Glossary("viewport", "zone d'affichage")}}. Les feuilles de style qui utilisent des unités de longueur relatives peuvent plus facilement s'adapter d'un environnement de sortie à un autre.
+Les unités `<length>` peuvent être relatives ou absolues. Les longueurs relatives représentent une mesure en fonction d'une autre distance. Selon l'unité, cette distance peut être la taille d'un caractère spécifique, la [hauteur de ligne](/fr/docs/Web/CSS/line-height), ou la taille de la {{Glossary("viewport", "zone d'affichage")}}. Les feuilles de style qui utilisent des unités de longueur relatives peuvent plus facilement s'adapter d'un environnement de sortie à un autre.
 
 > [!NOTE]
 > Les éléments enfants n'héritent pas des valeurs relatives telles que spécifiées pour leur parent&nbsp;; ils héritent des valeurs calculées.
@@ -36,14 +36,14 @@ Les longueurs liées à la police définissent la valeur `<length>` en fonction 
 > Ces unités, en particulier `em` et la racine relative `rem`, sont souvent utilisées pour créer des mises en page adaptatives, qui maintiennent le rythme vertical de la page même lorsque l'utilisateur·ice change la taille de la police.
 
 - `cap`
-  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la {{Cssxref("font")}} de l'élément.
+  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la police ({{Cssxref("font")}}) de l'élément.
 - `ch`
-  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la {{Cssxref("font")}} de l'élément.
+  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la police ({{Cssxref("font")}}) de l'élément.
     Dans les cas où il est impossible ou peu pratique de déterminer la mesure du glyphe `0`, il faut supposer qu'il mesure `0.5em` de large sur `1em` de haut.
 - `em`
-  - : Représente la {{Cssxref("font-size")}} calculée de l'élément. Si utilisée sur la propriété {{Cssxref("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
+  - : Représente la taille de police ({{Cssxref("font-size")}}) calculée de l'élément. Si utilisée sur la propriété {{Cssxref("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
 - `ex`
-  - : Représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la {{Cssxref("font")}} de l'élément. Dans les polices comportant la lettre `x`, il s'agit généralement de la hauteur des lettres minuscules de la police&nbsp;; `1ex ≈ 0.5em` dans de nombreuses polices.
+  - : Représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la police ({{Cssxref("font")}}) de l'élément. Dans les polices comportant la lettre `x`, il s'agit généralement de la hauteur des lettres minuscules de la police&nbsp;; `1ex ≈ 0.5em` dans de nombreuses polices.
 - `ic`
   - : Égal à la {{Glossary("advance measure", "mesure d'avancement")}} utilisée du glyphe "水" (idéogramme CJK de l'eau, U+6C34), trouvée dans la police utilisée pour l'afficher.
 - `lh`
@@ -54,11 +54,11 @@ Les longueurs liées à la police définissent la valeur `<length>` en fonction 
 Les unités de longueur relatives à la police de l'élément racine définissent la valeur `<length>` en fonction de la taille d'un caractère particulier ou d'une caractéristique de la police de l'élément {{Cssxref(":root")}}.
 
 - `rcap`
-  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la {{Cssxref("font")}} de l'élément racine.
+  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la police ({{Cssxref("font")}}) de l'élément racine.
 - `rch`
-  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la {{Cssxref("font")}} de l'élément racine.
+  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la police ({{Cssxref("font")}}) de l'élément racine.
 - `rem`
-  - : Représente la {{Cssxref("font-size")}} de l'élément racine (généralement l'élément {{HTMLElement("html")}}). Lorsqu'elle est utilisée sur la propriété {{Cssxref("font-size")}} de l'élément racine, elle représente sa valeur initiale. La valeur par défaut courante dans les navigateurs est `16px`, mais les préférences utilisateur·ice·s peuvent la modifier.
+  - : Représente la taille de police ({{Cssxref("font-size")}}) de l'élément racine (généralement l'élément {{HTMLElement("html")}}). Lorsqu'elle est utilisée sur la propriété {{Cssxref("font-size")}} de l'élément racine, elle représente sa valeur initiale. La valeur par défaut courante dans les navigateurs est `16px`, mais les préférences utilisateur·ice·s peuvent la modifier.
 - `rex`
   - : Représente la hauteur d'x de la police ({{Cssxref("font")}}) de l'élément racine.
 - `ric`
