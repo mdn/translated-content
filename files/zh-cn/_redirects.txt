@@ -53,7 +53,7 @@
 /zh-CN/docs/CSS/Understanding_z-index/Stacking_without_z-index	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /zh-CN/docs/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /zh-CN/docs/CSS/Universal_selectors	/zh-CN/docs/Web/CSS/Universal_selectors
-/zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /zh-CN/docs/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing
 /zh-CN/docs/CSS/animation-direction	/zh-CN/docs/Web/CSS/animation-direction
@@ -1144,7 +1144,6 @@
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-/zh-CN/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /zh-CN/docs/Learn/Common_questions/How_much_does_it_cost	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /zh-CN/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -1152,7 +1151,6 @@
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -1764,8 +1762,11 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
-/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Examples	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Introduction	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Whitespace	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
@@ -2513,7 +2514,7 @@
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外	/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow
-/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
@@ -2547,7 +2548,7 @@
 /zh-CN/docs/Web/CSS/CSS_Scrollbars	/zh-CN/docs/Web/CSS/CSS_scrollbars_styling
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors
 /zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes
-/zh-CN/docs/Web/CSS/CSS_Types	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/zh-CN/docs/Web/CSS/CSS_Types	/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /zh-CN/docs/Web/CSS/CSS_animations/Tips	/zh-CN/docs/Web/API/Web_Animations_API/Tips
 /zh-CN/docs/Web/CSS/CSS_cascade/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值
 /zh-CN/docs/Web/CSS/CSS_cascade/computed_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值
@@ -2610,7 +2611,7 @@
 /zh-CN/docs/Web/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /zh-CN/docs/Web/CSS/Using_CSS_custom_properties	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Using_CSS_variables	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
-/zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /zh-CN/docs/Web/CSS/Viewport_concepts	/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /zh-CN/docs/Web/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值

@@ -3,7 +3,7 @@ title: <custom-ident>
 slug: Web/CSS/custom-ident
 ---
 
-**`<custom-ident>`** 指用户自定义字符串标识符。一种[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)；要区分大小写，值不能有任何歧义。
+**`<custom-ident>`** 指用户自定义字符串标识符。一种[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)；要区分大小写，值不能有任何歧义。
 
 ## 语法
 
