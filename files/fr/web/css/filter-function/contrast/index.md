@@ -151,7 +151,7 @@ p {
 
 ### Avec `url()` et un filtre SVG `contrast`
 
-L'élément SVG {{SVGElement("filter")}} permet de définir des effets de filtre personnalisés qui peuvent ensuite être référencés par [`id`](/fr/docs/Web/HTML/Global_attributes/id). La primitive {{SVGElement("feComponentTransfer")}} du filtre permet un remappage des couleurs au niveau du pixel. Exemple&nbsp;:
+L'élément SVG {{SVGElement("filter")}} permet de définir des effets de filtre personnalisés qui peuvent ensuite être référencés par [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id). La primitive {{SVGElement("feComponentTransfer")}} du filtre permet un remappage des couleurs au niveau du pixel. Exemple&nbsp;:
 
 ```html live-sample___svg_filter
 <svg
