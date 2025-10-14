@@ -1,6 +1,6 @@
 ---
-title: "이진 대형 객체 URL"
-short-title: "이진 대형 객체"
+title: 이진 대형 객체 URL
+short-title: 이진 대형 객체
 slug: Web/URI/Reference/Schemes/blob
 l10n:
   sourceCommit: ca1647a3e2b77cdf9df220244998f25b86629048
