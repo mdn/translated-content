@@ -1,6 +1,7 @@
 ---
 title: DOM 概述
-slug: Web/API/Document_Object_Model/Introduction
+slug: conflicting/Web/API/Document_Object_Model
+original_slug: Web/API/Document_Object_Model/Introduction
 ---
 
 {{DefaultAPISidebar("DOM")}}

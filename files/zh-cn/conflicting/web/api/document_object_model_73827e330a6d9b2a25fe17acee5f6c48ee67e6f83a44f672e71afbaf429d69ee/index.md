@@ -1,6 +1,7 @@
 ---
 title: 使用文档对象模型
-slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+slug: conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
+original_slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 l10n:
   sourceCommit: 1f44fd905e4acbe867ca945b26a8b06ddb646328
 ---
