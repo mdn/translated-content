@@ -13,7 +13,7 @@ WebAssembly 是一种运行在现代 Web 浏览器中的新型代码，不仅提
 
 对于 Web 平台而言，这具有巨大的意义——这为客户端 App 提供了一种在 Web 平台以接近本地速度的方式运行多种语言编写的代码的方式；在这之前，客户端 App 是不可能做到的。
 
-而且，你在不知道如何编写 WebAssembly 代码的情况下就可以使用它。WebAssembly 的模块可以被导入的到一个 Web App（或 Node.js）中，并且暴露出供 JavaScript 使用的 WebAssembly 函数。JavaScript 框架不但可以使用 WebAssembly 获得巨大性能优势和新特性，而且还能使得各种功能保持对 Web 开发者的易用性。
+而且，你在不知道如何编写 WebAssembly 代码的情况下就可以使用它。WebAssembly 的模块可以被导入的到一个 Web（或 Node.js）App 中，并且暴露出供 JavaScript 使用的 WebAssembly 函数。JavaScript 框架不但可以使用 WebAssembly 获得巨大性能优势和新特性，而且还能使得各种功能保持对 Web 开发者的易用性。
 
 ## WebAssembly 的目标
 
@@ -32,7 +32,7 @@ WebAssembly 是一种运行在现代 Web 浏览器中的新型代码，不仅提
 Web 平台可以被想象成拥有两个部分：
 
 - 一个运行 Web 程序代码的虚拟机（比如给你的程序提供能力的 JavaScript）
-- 一系列 Web 程序能够调用从而控制 Web 浏览器/设备功能，并且能够让事物发生变化的 Web API（[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-CN/docs/Web/API/WebGL_API)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等）。
+- 一系列 Web 程序能够调用从而控制 Web 浏览器/设备功能，并且能够让事物发生变化的 Web API（[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model)、[WebGL](/zh-CN/docs/Web/API/WebGL_API)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 等）。
 
 从历史角度讲，虚拟机过去只能加载 JavaScript。这其实已经足够了，毕竟 JavaScript 足够强大，能够解决人们在当今 Web 上遇到的绝大部分问题。尽管如此，当试图把 JavaScript 应用到诸如 3D 游戏、虚拟现实、增强现实、计算机视觉、图像/视频编辑以及大量的要求原生性能的其他领域的时候，我们遇到了性能问题（参见 [WebAssembly 使用案例](http://webassembly.org/docs/use-cases/)获取更多细节）。
 
@@ -77,7 +77,7 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 
 ### 从 C/C++ 移植
 
-要创建 WASM 代码，你可以使用众多选项其二的在线 WASM 汇编程序或 [Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)。有许多在线 WASM 汇编程序可供选择，例如：
+要创建 WASM 代码，你可以使用众多选项其二的在线 WASM 汇编程序或 [Emscripten](https://emscripten.org/)。有许多在线 WASM 汇编程序可供选择，例如：
 
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
@@ -90,7 +90,7 @@ Emscripten 工具可以将任何 C/C++ 源代码编译成 Wasm 模块，再加�
 
 简而言之，工作流程如下所示：
 
-1. Emscripten 首先把 C/C++ 提供给 clang+LLVM——一个成熟的开源 C/C++ 编译器工具链，比如，在 macOS 上是 Xcode 的一部分。
+1. Emscripten 首先把 C/C++ 提供给 clang+LLVM——一个成熟的开源 C/C++ 编译器工具链，比如，在 OSX 上是 XCode 的一部分。
 2. Emscripten 将 clang+LLVM 编译的结果转换为 Wasm 二进制文件。
 3. 目前，WebAssembly 本身无法直接访问 DOM；它只能调用 JavaScript，并且只能传入整型和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用 JavaScript，然后由 JavaScript 进行 Web API 调用。因此，Emscripten 创建了 HTML 和 JavaScript 粘合代码以便完成这些功能。
 
