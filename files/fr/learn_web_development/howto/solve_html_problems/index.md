@@ -66,7 +66,7 @@ Au-delà des briques de bases qu'on peut assembler dans les exemples précédent
 
 ### Les formulaires
 
-Les formulaires correspondent à une structure HTML complexe qui permet d'envoyer des données d'une page web vers un serveur web. Nous vous invitons à suivre [le guide dédié aux formulaires](/fr/docs/conflicting/Learn_web_development/Extensions/Forms). Vous pouvez commencer ici :
+Les formulaires correspondent à une structure HTML complexe qui permet d'envoyer des données d'une page web vers un serveur web. Nous vous invitons à suivre [le guide dédié aux formulaires](/fr/docs//Learn_web_development/Extensions/Forms\). Vous pouvez commencer ici :
 
 - [Comment créer un formulaire web simple](/fr/docs/Learn_web_development/Extensions/Forms/Your_first_form)
 - [Comment organiser un formulaire web](/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)

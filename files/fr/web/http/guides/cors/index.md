@@ -465,7 +465,8 @@ Origin: <origine>
 
 L'origine est un URI qui indique le serveur à partir duquel la requête a été initiée. Elle n'inclut aucune information relative au chemin mais contient uniquement le nom du serveur.
 
-> **Note :** `origine` peut être une chaîne vide (ce qui s'avère notamment utile lorsque la source est une URL de donnée).
+> [!NOTE]
+> `origine` peut être une chaîne vide (ce qui s'avère notamment utile lorsque la source est une URL de donnée).
 
 Pour chaque requête avec contrôle d'accès, l'en-tête {{HTTPHeader("Origin")}} sera **toujours** envoyé.
 

@@ -169,7 +169,8 @@ La fréquence maximale à laquelle l'évènement `search` est envoyé est défin
 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
-> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
+> [!NOTE]
+> [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
 Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
@@ -473,7 +474,7 @@ Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) DOM qui le porte
 - [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text)
 - [La compatibilité des propriétés CSS](/fr/docs/Learn_web_development/Extensions/Forms)

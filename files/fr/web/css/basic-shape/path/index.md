@@ -2,49 +2,183 @@
 title: path()
 slug: Web/CSS/basic-shape/path
 original_slug: Web/CSS/path
+l10n:
+  sourceCommit: e85be070cbdbfd0ad1aad7b93b8d9752fef2df98
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte une chaîne de caractères représentant un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path) et permet de dessiner une forme dans les modules [formes CSS](/fr/docs/Web/CSS/CSS_shapes) et [chemin de déplacement CSS](/fr/docs/Web/CSS/CSS_motion_path). La fonction `path()` est une valeur du [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{cssxref("&lt;basic-shape&gt;")}}. Elle peut être utilisée dans les propriétés CSS [`offset-path`](/fr/docs/Web/CSS/offset-path) et [`clip-path`](/fr/docs/Web/CSS/clip-path), ainsi que dans l'attribut SVG [`d`](/fr/docs/Web/SVG/Reference/Attribute/d).
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte comme paramètre une chaîne représentant un tracé SVG. Elle est utilisée dans les formes CSS et les animations de tracés CSS pour permettre de dessiner une forme.
+Il existe certaines limitations à l'utilisation de la fonction `path()`. Le tracé doit être défini comme une seule chaîne de caractères, il n'est donc pas possible de créer un tracé personnalisé à l'aide de variables (fonctions [`var()`](/fr/docs/Web/CSS/var)). De plus, toutes les longueurs du tracé sont implicitement définies en [pixels](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#absolute_length_units) (`px`)&nbsp;; aucune autre unité n'est acceptée. La fonction [`shape()`](/fr/docs/Web/CSS/basic-shape/shape) offre plus de flexibilité que la fonction `path()`.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: path()")}}
+
+```css interactive-example-choice
+clip-path: path(
+  "M  20  240 \
+ L  20  80 L 160  80 \
+ L 160  20 L 280 100 \
+ L 160 180 L 160 120 \
+ L  60 120 L  60 240 Z"
+);
+```
+
+```css interactive-example-choice
+clip-path: path(
+  "M 20 240 \
+ C 20 0 300 0 300 240 Z"
+);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #ffee99;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntaxe
 
 ```css
-path( [[<'fill-rule'>,]?<string>)
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
+
+/* Utilisé uniquement avec clip-path */
+path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 ```
 
 ### Paramètres
 
-- `<'fill-rule'>`
-  - : La règle de remplissage de l'intérieur du tracé. Les valeurs possibles sont `nonzero` ou `evenodd`. La valeur par défaut est `nonzero`. Voir [fill-rule](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) pour plus de détails.
-- `<string>`
-  - : Doit être une [chaîne représentant les données d'un chemin SVG](/fr/docs/Web/SVG/Reference/Element/path).
+- [`<fill-rule>`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
+  - : Définit quelles parties du tracé sont à l'intérieur de la forme. Les valeurs possibles sont&nbsp;:
+    - `nonzero`&nbsp;: Un point est considéré comme étant à l'intérieur de la forme si un rayon tracé depuis ce point croise plus de segments du tracé de gauche à droite que de droite à gauche, ce qui donne un compte non nul. C'est la valeur par défaut si `<fill-rule>` est omis.
+
+    - `evenodd`&nbsp;: Un point est considéré comme étant à l'intérieur de la forme si un rayon tracé depuis ce point croise un nombre impair de segments du tracé. Cela signifie que chaque fois que le rayon entre dans la forme, il n'en est pas sorti un nombre égal de fois, indiquant un nombre impair d'entrées sans sorties correspondantes.
+
+    > [!WARNING]
+    > `<fill-rule>` n'est pas pris en charge dans {{cssxref("offset-path")}} et son utilisation invalide la propriété.
+
+- {{cssxref("string")}}
+  - : Une [chaîne de données](/fr/docs/Web/SVG/Reference/Attribute/d), placée entre guillemets, qui définit un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path). La chaîne de données du tracé SVG contient des [commandes de tracé](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands) qui utilisent implicitement l'unité pixel. Un tracé vide est considéré comme invalide.
+
+### Valeur de retour
+
+Retourne une valeur {{cssxref("basic-shape")}}.
+
+## Syntaxe formelle
+
+{{csssyntax}}
 
 ## Exemples
 
-### Exemples de valeurs correctes pour path()
+### Utiliser la fonction `path()` comme valeur de `offset-path`
 
-```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+Une fonction `path()` est utilisée comme valeur de {{cssxref("offset-path")}} dans l'exemple suivant pour créer un chemin elliptique le long duquel une balle se déplace.
+
+```html
+<div id="path">
+  <div id="ball"></div>
+</div>
+<button>animer</button>
 ```
 
-### Utilisation en tant que valeur de offset-path
+```css
+#path {
+  margin: 40px;
+  width: 400px;
+  height: 200px;
 
-La fonction `path()` est utilisée pour créer un tracé à suivre pour l'élément. La modification de l'une de ces valeurs conduira celui-ci à ne pas pouvoir suivre le tracé de façon nette lors de l'animation.
+  /* dessine la rampe grise */
+  background: radial-gradient(at 50% 0%, transparent 70%, grey 70%, grey 100%);
+}
 
-{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
+#ball {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+
+  /* marque le chemin elliptique */
+  offset-path: path("M 15 15 A 6 5.5 10 0 0 385 15");
+}
+```
+
+```js
+const btn = document.querySelector("button");
+const ball = document.getElementById("ball");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", true);
+  setTimeout(() => btn.removeAttribute("disabled"), 6000);
+
+  ball.animate(
+    // anime la distance sur le chemin
+    { offsetDistance: [0, "100%"] },
+    {
+      duration: 1500,
+      iterations: 4,
+      easing: "cubic-bezier(.667,0.01,.333,.99)",
+      direction: "alternate",
+    },
+  );
+});
+```
+
+{{EmbedLiveSample("Use as the value of offset-path", "100%", 350)}}
+
+### Modifier la valeur de l'attribut d du tracé SVG
+
+La fonction `path()` peut être utilisée pour modifier la valeur de l'attribut [`d`](/fr/docs/Web/SVG/Reference/Attribute/d) d'un tracé SVG, qui peut aussi être défini à `none` dans votre CSS.
+
+Le symbole «&nbsp;V&nbsp;» se retournera verticalement au survol, si `d` est pris en charge comme propriété CSS.
+
+#### CSS
+
+```css
+html,
+body,
+svg {
+  height: 100%;
+}
+
+/* Ce tracé s'affiche au survol */
+#svg_css_ex1:hover path {
+  d: path("M20,80 L50,20 L80,80");
+}
+```
+
+#### HTML
+
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+</svg>
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Modify the value of the SVG path d attribute', '100%', 200)}}
 
 ## Spécifications
 
 {{Specifications}}
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 ## Voir aussi
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [Formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Vue d'ensemble des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- <i lang="en">SVG Path Syntax Illustrated Guide</i>
-
-  [<i lang="en">SVG Path Syntax Illustrated Guide</i> (en anglais)](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+- Le module des [formes CSS](/fr/docs/Web/CSS/CSS_shapes)
+- [Présentation des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Guide illustré de la syntaxe du tracé SVG <sup>(angl.)</sup>](https://css-tricks.com/svg-path-syntax-illustrated-guide/) sur CSS-tricks (2021)

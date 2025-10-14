@@ -13,7 +13,8 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
 - [`EventSource`](/fr/docs/Web/API/EventSource),
 - [`Navigator.sendBeacon()`](/fr/docs/Web/API/Navigator/sendBeacon).
 
-> **Note :** `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter [ce ticket (en anglais)](https://github.com/w3c/webappsec-csp/issues/7).
+> [!NOTE]
+> `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter [ce ticket (en anglais)](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
   <tbody>

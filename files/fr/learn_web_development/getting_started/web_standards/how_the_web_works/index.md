@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5e00578fd0c3c4ed92c1785a878816a138b55178
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 Cet article illustre, de façon simplifiée, ce qui se passe quand une page web s'affiche dans un navigateur, sur votre ordinateur ou votre téléphone.
 
@@ -57,7 +57,7 @@ Lorsque vous saisissez une adresse web dans votre navigateur (dans notre analogi
 
 ## Ordre d'analyse des fichiers composants
 
-Lorsque les navigateurs envoient des requêtes aux serveurs pour recevoir des fichiers HTML, ceux-ci contiennent souvent des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) qui référencent des feuilles de style [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) externes et des éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) qui référencent des scripts [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) externes. Il est important de connaître l'ordre selon lequel ces fichiers sont [analysés par le navigateur](/fr/docs/Web/Performance/Guides/How_browsers_work#parsing) lorsqu'il charge la page&nbsp;:
+Lorsque les navigateurs envoient des requêtes aux serveurs pour recevoir des fichiers HTML, ceux-ci contiennent souvent des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) qui référencent des feuilles de style [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) externes et des éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) qui référencent des scripts [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) externes. Il est important de connaître l'ordre selon lequel ces fichiers sont [analysés par le navigateur](/fr/docs/Web/Performance/Guides/How_browsers_work#parsing) lorsqu'il charge la page&nbsp;:
 
 - Le navigateur commence par l'analyse du fichier HTML, ce qui lui permet de reconnaître les éventuels éléments `<link>` (pour les feuilles de style CSS externes) et `<script>` (pour les scripts).
 - Pendant l'analyse du fichier HTML, le navigateur envoie des requêtes au serveur pour les différents fichiers CSS indiqués par les éléments `<link>` et pour les fichiers JavaScript indiqués par les éléments `<script>`. Lorsque le navigateur a reçu ces fichiers, il analyse alors leur contenu CSS et JavaScript.
