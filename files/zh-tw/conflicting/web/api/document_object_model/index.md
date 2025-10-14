@@ -1,6 +1,7 @@
 ---
 title: 使用 web 和 XML 開發來使用 DOM
-slug: Web/API/Document_Object_Model/Examples
+slug: conflicting/Web/API/Document_Object_Model
+original_slug: Web/API/Document_Object_Model/Examples
 ---
 
 {{DefaultAPISidebar("DOM")}}

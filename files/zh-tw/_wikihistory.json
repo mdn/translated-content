@@ -2613,13 +2613,6 @@
       "Shiyou"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-04-22T07:31:11.966Z",
-    "contributors": [
-      "jackblackevo",
-      "PJCHENder"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-02-27T01:36:51.610Z",
     "contributors": [
@@ -6064,6 +6057,13 @@
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": [
       "Aries0d0f"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-04-22T07:31:11.966Z",
+    "contributors": [
+      "jackblackevo",
+      "PJCHENder"
     ]
   }
 }
