@@ -218,6 +218,6 @@ span {
 
 - [Manipuler les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Fonctions de dégradé&nbsp;: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Introduction à CSS&nbsp;: les unités et les valeurs](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
