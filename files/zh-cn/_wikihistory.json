@@ -42723,44 +42723,5 @@
     "contributors": [
       "Cyandev"
     ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-07-17T11:05:34.542Z",
-    "contributors": [
-      "JiLiangLai",
-      "locknono",
-      "ddtyjmyjm",
-      "YyzclYang",
-      "LiXin",
-      "Noly1990",
-      "lon",
-      "lazurey",
-      "gavinkwoe",
-      "huozicheng",
-      "leunggamciu",
-      "arunpandianp",
-      "ziyunfei",
-      "ReyCG_sub",
-      "Darrel.Hsu"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b": {
-    "modified": "2019-03-24T00:15:45.643Z",
-    "contributors": [
-      "LianJilu",
-      "Ke.shidong",
-      "Ende93",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee": {
-    "modified": "2019-12-13T21:06:35.933Z",
-    "contributors": [
-      "wbamberg",
-      "alwxkxk",
-      "xhlsrj",
-      "EugeneZeng"
-    ]
   }
 }

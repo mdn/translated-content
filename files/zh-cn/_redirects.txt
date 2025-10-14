@@ -1762,11 +1762,11 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
-/zh-CN/docs/Web/API/Document_Object_Model/Examples	/zh-CN/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b
-/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
-/zh-CN/docs/Web/API/Document_Object_Model/Introduction	/zh-CN/docs/conflicting/Web/API/Document_Object_Model
-/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/zh-CN/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
-/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
+/zh-CN/docs/Web/API/Document_Object_Model/Examples	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Introduction	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Whitespace	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
