@@ -10,7 +10,7 @@ Cet article fournit des conseils pratiques pour rédiger votre contenu Web afin 
 > [!NOTE]
 > Pour lire les définitions W3C du principe Robuste, de ses directives et critères de succès, voir [Principe 4&nbsp;: Robuste — Le contenu doit être suffisamment robuste pour être interprété de manière fiable par une grande variété d'agent·e·s utilisateur·ice·s, y compris les technologies d'assistance. <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#robust)
 
-## Directive 4.1 — Compatible : Maximiser la compatibilité avec les agent·e·s utilisateur·ice·s actuels et futurs, y compris les technologies d'assistance
+## Règle 4.1 — Compatible : Maximiser la compatibilité avec les agent·e·s utilisateur·ice·s actuels et futurs, y compris les technologies d'assistance
 
 Cette directive vise à rendre le contenu aussi compatible que possible, non seulement avec les agent·e·s utilisateur·ice·s actuels (par exemple, les navigateurs), mais aussi avec ceux à venir.
 
