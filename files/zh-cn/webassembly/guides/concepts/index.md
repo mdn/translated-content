@@ -86,7 +86,7 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 
 Emscripten 工具可以将任何 C/C++ 源代码编译成 Wasm 模块，再加上必要的 JavaScript 粘合代码，用于加载和运行模块，以及显示代码结果的 HTML 文档。
 
-[图：Emscripten 将 C/C++ 源代码编译成一个 Wasm 模块、一个 HTML 文档以及 JavaScript 的粘合代码。](emscripten-diagram.png)
+![图：Emscripten 将 C/C++ 源代码编译成一个 Wasm 模块、一个 HTML 文档以及 JavaScript 的粘合代码。](emscripten-diagram.png)
 
 简而言之，工作流程如下所示：
 
@@ -125,7 +125,7 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 本文主要阐述了 WebAssembly 是什么，它为什么如此有用，它是如何适应 Web 环境的，以及你要怎么做才能用上它。
 
-## 参考
+## 参见
 
 - [Mozilla Hacks 博客上关于 WebAssembly 的文章](https://hacks.mozilla.org/category/webassembly/)
 - [Mozilla Research 上关于 WebAssembly 的文章](https://research.mozilla.org/webassembly/)
