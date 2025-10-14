@@ -80,7 +80,7 @@ Les **unités de longueur en pourcentage de la zone d'affichage** sont basées s
 - **Unités pour grande zone d'affichage**
   - : Lorsque vous souhaitez utiliser la plus grande zone d'affichage possible en réponse à la rétraction dynamique des interfaces du navigateur, utilisez la «&nbsp;grande&nbsp;» taille de zone d'affichage. Cette taille permet au contenu de remplir toute la zone d'affichage lorsque les interfaces du navigateur sont rétractées. Attention&nbsp;: le contenu peut être masqué lorsque les interfaces s'étendent.
 
-    Par exemple, sur les téléphones mobiles où l'espace d'affichage est limité, les navigateurs masquent souvent tout ou partie de la barre de titre et de la barre d'adresse après un défilement. Un élément dimensionné avec une unité en pourcentage basée sur la grande zone d'affichage remplira toute la page visible lorsque ces interfaces sont masquées. Cependant, lorsque ces interfaces rétractables sont affichées, elles peuvent masquer le contenu dimensionné ou positionné avec les unités pour grande zone d'affichage.
+    Par exemple, sur les téléphones mobiles où l'espace d'affichage est limité, les navigateurs masquent souvent tout ou partie de la barre de titre et de la barre d'adresse après un défilement. Un élément dimensionné avec une unité, en pourcentage, basée sur la grande zone d'affichage remplira toute la page visible lorsque ces interfaces sont masquées. Cependant, lorsque ces interfaces rétractables sont affichées, elles peuvent masquer le contenu dimensionné ou positionné avec les unités pour grande zone d'affichage.
 
     La grande zone d'affichage est représentée par le préfixe `lv` et donne les unités de longueur en pourcentage `lv*`. Les tailles de ces unités sont fixes, donc stables, sauf si la zone d'affichage elle-même est redimensionnée.
 
@@ -90,13 +90,13 @@ Les **unités de longueur en pourcentage de la zone d'affichage** sont basées s
     La zone d'affichage dynamique est représentée par le préfixe `dv` et donne les unités de longueur en pourcentage `dv*`. Les tailles de ces unités ne sont pas stables, même si la zone d'affichage elle-même ne change pas.
 
     > [!NOTE]
-    > Bien que la zone d'affichage dynamique offre plus de contrôle et de flexibilité, l'utilisation d'unités en pourcentage basées sur cette taille peut entraîner un redimensionnement du contenu lors du défilement de la page, ce qui peut dégrader l'interface et impacter les performances.
+    > Bien que la zone d'affichage dynamique offre plus de contrôle et de flexibilité, l'utilisation d'unités, en pourcentage, basées sur cette taille peut entraîner un redimensionnement du contenu lors du défilement de la page, ce qui peut dégrader l'interface et impacter les performances.
 
 - **Unités pour zone d'affichage par défaut**
   - : La taille de zone d'affichage par défaut est définie par le navigateur. Le comportement de l'unité résultante peut être équivalent à celui d'une unité basée sur la petite, la grande, une taille intermédiaire ou la zone d'affichage dynamique.
 
     > [!NOTE]
-    > Par exemple, un navigateur peut implémenter l'unité par défaut pour la hauteur (`vh`) comme équivalente à l'unité de hauteur pour grande zone d'affichage (`lvh`). Cela peut masquer du contenu sur un affichage pleine page lorsque l'interface du navigateur est étendue. Actuellement, toutes les unités par défaut (`vh`, `vw`, etc.) sont équivalentes à leurs homologues pour grande zone d'affichage (`lvh`, `lvw`, etc.).
+    > Par exemple, un navigateur peut implémenter l'unité par défaut pour la hauteur (`vh`) comme équivalente à l'unité de hauteur pour grande zone d'affichage (`lvh`). Cela peut masquer du contenu sur un affichage en pleine page lorsque l'interface du navigateur est étendue. Actuellement, toutes les unités par défaut (`vh`, `vw`, etc.) sont équivalentes à leurs homologues pour grande zone d'affichage (`lvh`, `lvw`, etc.).
 
 Les longueurs en pourcentage de la zone d'affichage définissent des valeurs `<length>` en pourcentage par rapport à la taille du [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block), qui dépend soit de la taille de la {{Glossary("viewport", "zone d'affichage")}}, soit de la zone de page, c'est-à-dire la partie visible du document. Lorsque la hauteur ou la largeur du bloc englobant initial change, les éléments dimensionnés en fonction de celui-ci sont redimensionnés en conséquence. Il existe une variante d'unité de longueur en pourcentage de la zone d'affichage pour chacune des tailles décrites ci-dessus.
 
