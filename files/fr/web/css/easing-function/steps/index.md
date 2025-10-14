@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`steps()`** définit une transition qui divise le temps d'entrée en un nombre spécifié d'intervalles de même longueur. Cette sous-classe de fonctions en escalier est parfois aussi appelée _fonction en escalier_.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`steps()`** définit une transition qui divise le temps d'entrée en un nombre spécifié d'intervalles de même longueur. Cette sous-classe de fonctions en étapes est parfois aussi appelée _fonction en escalier_.
 
 ## Syntaxe
 
