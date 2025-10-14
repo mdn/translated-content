@@ -165,7 +165,7 @@ l10n:
 - [组件值组合符](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#组件值组合符)
 - [CSS 全局关键字](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css_全局关键字)
 - {{glossary("Device pixel", "设备像素")}}
-- [函数表示法](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [函数表示法](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - {{glossary("Identifier", "标识符")}}
 - {{glossary("Interpolation", "插值")}}
 - {{glossary("Keyword", "关键词")}}
@@ -188,7 +188,7 @@ l10n:
 - [文本数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
   - : 文本数据类型的概述，包括预定义关键字值、全局 CSS 关键字值以及 URL。
 
-- [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions)
+- [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
   - : 概述那些通过特殊数据处理或计算来返回 CSS 属性值的 CSS 语句。
 
 - [使用 CSS 数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)

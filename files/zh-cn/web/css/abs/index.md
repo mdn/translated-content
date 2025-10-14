@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b09d6e2402f997214bb80c93aba8ea1148e120d5
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions) **`abs()`** 返回其参数的绝对值，并且返回值的类型与输入类型相同。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`abs()`** 返回其参数的绝对值，并且返回值的类型与输入类型相同。
 
 ## 语法
 
