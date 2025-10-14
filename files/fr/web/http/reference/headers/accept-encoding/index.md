@@ -4,7 +4,7 @@ short-title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 original_slug: Web/HTTP/Headers/Accept-Encoding
 l10n:
-  source_commit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 L'en-tête HTTP **`Accept-Encoding`** de {{glossary("request header", "requête")}} et {{glossary("response header", "réponse")}} indique le codage du contenu (généralement un algorithme de compression) que l'émetteur peut comprendre.
