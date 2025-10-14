@@ -701,7 +701,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-一个类只能至多扩展自一个父类。这可以防止多重继承中的问题，例如[菱形问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)。然而，由于 JavaScript 的动态性，仍然可以通过类组合和[混入](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#混入) 来实现多重继承的效果。
+一个类只能至多扩展自一个父类。这可以防止多重继承中的问题，例如[菱形问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)。然而，由于 JavaScript 的动态性，仍然可以通过类组合和[混入](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#混入)来实现多重继承的效果。
 
 派生类的实例同时也是父类的实例，可用 [`instancesof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 运算符来验证。
 
@@ -736,7 +736,7 @@ console.log(date); // 2019-06-20
 
 ![一个典型 OOP 继承树，有五个类和三个层级](figure8.1.png)
 
-然而，如果我们只能继承自一个父类，我们又很难清楚地描述这种继承关系。一种常见的情况是，我们想要同时拥有来自多个类的行为。在 Java 中，我们可以利用接口；在 JavaScript 中，我们是用 mixin 来解决的。但归根结底，仍不是很方便。
+然而，当一个类只能继承另一个类时，往往难以清晰地描述这种继承关系。一种常见的情况是，我们想要同时拥有来自多个类的行为。在 Java 中，我们可以利用接口；在 JavaScript 中，我们可以利用混入。但归根结底，仍不是很方便。
 
 往好的方面想，类是一种非常强大的工具，我们可以利用它提高我们组织代码的层次。例如，如若没有 `Color` 类，我们可能需要创建一堆工具函数：
 
@@ -761,7 +761,7 @@ function isValidColor(color) {
 
 简而言之，你应该在你想要储存一些内部数据、并暴露大量方法的时候考虑使用类。例如这些内置的 JavaScript 类：
 
-- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 与 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 类存储了许多元素，你可以通过 `get()`、`set()`、`has()` 等方法访问它们。
+- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 与 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 类存储了元素的集合，你可以通过 `get()`、`set()`、`has()` 等方法访问它们。
 - [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类以 Unix 时间戳的形式存储日期，并允许你格式化、更新与读取单独的日期元素。
 - [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 类存储了特定异常的信息，包括错误消息、堆栈跟踪、原因等。它是少数几个拥有丰富继承结构的类之一：有多个内置类（例如 [`TypeError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 与 [`ReferenceError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)）继承自 `Error`。在发生错误时，这种继承允许细化错误的语义：每个错误类都代表一个特定类型的错误，可以很容易地通过 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 进行检查。
 
