@@ -201,7 +201,8 @@ A instrução `call` chama uma única função, dado seu índice ou nome. Por ex
     i32.add))
 ```
 
-> **Nota:** `i32.const` apenas define um inteiro de 32 bits e o coloca na pilha. Você pode trocar o `i32` por qualquer um dos outros tipos disponíveis e alterar o valor do const para o que quiser (aqui definimos o valor para `42`).
+> [!NOTE]
+> `i32.const` apenas define um inteiro de 32 bits e o coloca na pilha. Você pode trocar o `i32` por qualquer um dos outros tipos disponíveis e alterar o valor do const para o que quiser (aqui definimos o valor para `42`).
 
 Neste exemplo, você notará uma seção `(export "getAnswerPlus1")`, declarada logo após a instrução `func` na segunda função — esta é uma forma abreviada de declarar que queremos exportar esta função e definir o nome como queremos exportá-la.
 

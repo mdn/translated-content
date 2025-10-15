@@ -3,8 +3,6 @@ title: Rebota en las paredes
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
 
 Este es el **tercer** paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).

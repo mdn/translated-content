@@ -3,8 +3,6 @@ title: column-rule-color
 slug: Web/CSS/column-rule-color
 ---
 
-{{CSSRef}}
-
 **`column-rule-color`** [CSS](/zh-CN/docs/Web/CSS) 属性设置在多列布局中列与列之间绘制的线的颜色。
 
 {{InteractiveExample("CSS Demo: column-rule-color")}}

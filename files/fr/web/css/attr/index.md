@@ -358,5 +358,5 @@ body,
 ## Voir aussi
 
 - [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors)
-- [Attributs HTML `data-*`](/fr/docs/Web/HTML/Global_attributes/data-*)
+- [Attributs HTML `data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)
 - [Attributs SVG `data-*`](/fr/docs/Web/SVG/Attribute/data-*)

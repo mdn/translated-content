@@ -3,8 +3,6 @@ title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-
 {{jsxref("Promise")}} 是一個表示非同步運算的最終完成或失敗的物件。由於多數人使用預建立的 Promise，這個導覽會先講解回傳 Promise 的使用方式，之後再介紹如何建立。
 
 基本上，一個 Promise 是一個根據附加給他的 Callback 回傳的物件，以取代傳遞 Callback 到這個函數。

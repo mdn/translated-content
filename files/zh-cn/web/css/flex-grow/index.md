@@ -3,8 +3,6 @@ title: flex-grow
 slug: Web/CSS/flex-grow
 ---
 
-{{CSSRef}}
-
 CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸](https://www.w3.org/TR/css-flexbox/#main-size) 的 flex 增长系数。
 
 {{InteractiveExample("CSS Demo: flex-grow")}}
@@ -49,7 +47,7 @@ flex-grow: 3;
 
 ## 语法
 
-满足 [CSS 属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax) {{csssyntax("flex-grow")}}。
+满足 [CSS 属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax) {{csssyntax("flex-grow")}}。
 
 ```css
 /* <number> 值 */

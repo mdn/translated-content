@@ -3,8 +3,6 @@ title: 滚动吸附的基本概念
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 ---
 
-{{CSSRef}}
-
 [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块中的属性可以定义用户在滚动文档时滚动吸附到指定点的方式。
 
 滚动吸附特性可以定义吸附位置。[滚动容器](/zh-CN/docs/Glossary/Scroll_container)的滚动口在完成滚动操作后可能会停在或“吸附到”这些位置。

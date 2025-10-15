@@ -3,8 +3,6 @@ title: Objets avec média
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
 
-{{CSSRef}}
-
 Le motif _Media Object_ (qu'on peut traduire en « objet avec média ») est un motif qu'on rencontre fréquemment sur le Web. [Intitulé ainsi par Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), cela fait référence à une boîte organisée en deux colonnes dont l'une contient une image d'un côté et un texte descriptif de l'autre (par exemple l'image de profil de quelqu'un à gauche et un billet à droite).
 
 ![](media-object.png)
@@ -23,7 +21,8 @@ Voici ce qu'on souhaite obtenir :
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html).
 
 ## Choix effectués
 
@@ -43,7 +42,8 @@ Il existe différentes méthodes alternatives permettant d'obtenir ce résultat 
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html).
 
 Une fois que les éléments flottants sont des éléments de grille, les dégagements ne s'appliquent plus et il n'est donc pas nécessaire de retirer quoi que ce soit sur les dégagements.
 
@@ -56,7 +56,7 @@ En revanche, il faudra retirer les marges appliquées aux objets et les largeurs
 ## Voir aussi
 
 - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [L'amélioration progressive et les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [L'amélioration progressive et les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Utiliser les zones nommées des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [`fit-content`](/fr/docs/Web/CSS/fit-content)
 - [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas)

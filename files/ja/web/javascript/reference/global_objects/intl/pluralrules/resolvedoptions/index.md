@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 
 **`Intl.PluralRules.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.PluralRules")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.PluralRules.prototype.resolvedOptions()")}}
+{{InteractiveExample("JavaScript デモ: Intl.PluralRules.prototype.resolvedOptions()")}}
 
 ```js interactive-example
 const pluralRules1 = new Intl.PluralRules("uk");

@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### z-index가 없는 경우의 쌓임
@@ -18,7 +16,8 @@ original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_with
 
 다음 예제에는 위의 쌓임 규칙을 설명하기 위한 적당한 크기의 엘리먼트들이 준비되어있다.
 
-> **참고:** **노트:**
+> [!NOTE]
+> **노트:**
 >
 > - 주어진 동일한 엘리먼트들의 그룹은 모두 z-index가 설정되지 않았다. DIV #1 부터 DIV #4 까지는 position 속성이 설정되었다. 엘리먼트의 position속성 값과는 상관 없이 HTML 계층 구조대로 쌓임을 알 수 있다.
 > - position 속성이 지정되지 않은 블록(DIV #5)은 항상 position이 지정된 엘리먼트 이전에 렌더링 된다. 따라서 position이 지정된 엘리먼트 아래에 보인다. 설령 HTML 문서상에서 먼저 나오더라도 position이 지정되지 않은 엘리먼트는 지정된 엘리먼트보다 아래에 보인다.

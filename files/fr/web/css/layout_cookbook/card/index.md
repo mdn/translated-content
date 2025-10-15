@@ -21,7 +21,8 @@ Lorsqu'on ajoute des cartes à un ensemble de cartes, celles-ci devraient s'orga
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html).
 
 ## Choix effectués
 

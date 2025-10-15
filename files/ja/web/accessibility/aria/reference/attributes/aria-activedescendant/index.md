@@ -27,7 +27,8 @@ DOM フォーカスのある要素がコンボボックス、テキストボッ�
 > [!NOTE]
 > この属性はいくつかのロールにのみ対応しています。例えば、 `dialog` は `aria-activedescendant` に対応していません。コンボボックスがダイアログを開いた場合、DOMフォーカスはコンボボックスからダイアログに移ります。
 
-> **メモ:** `listbox`、`grid`、`tree` のポップアップの子孫にフォーカスが当たった場合、DOM フォーカスは combobox に残り、combobox には `aria-activedescendant` が設定され、ポップアップ内でフォーカスされた要素を参照する値が設定されます。
+> [!NOTE]
+> `listbox`、`grid`、`tree` のポップアップの子孫にフォーカスが当たった場合、DOM フォーカスは combobox に残り、combobox には `aria-activedescendant` が設定され、ポップアップ内でフォーカスされた要素を参照する値が設定されます。
 
 ## 値
 

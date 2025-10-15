@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`fit-content`** 키워드는 {{cssxref("fit-content_function", "fit-content(stretch)")}}와 동일합니다. 실제로 이는 박스가 사용 가능한 공간을 사용하되, 절대 {{cssxref("max-content")}}보다 크지는 않음을 의미합니다.
 
 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} 및 {{cssxref("max-height")}} 가 레이아웃된 박스의 크기로 사용된 경우, 최대 크기와 최소 크기는 콘텐츠의 크기를 참조합니다.

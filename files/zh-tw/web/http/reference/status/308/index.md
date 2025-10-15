@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`308 Permanent Redirect`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示請求的資源已永久移動到由 {{HTTPHeader("Location")}} 標頭所提供的 URL。
 
 當瀏覽器收到此狀態碼時，會自動請求 `Location` 標頭中指定的 URL，將使用者重新導向到新頁面。搜尋引擎接收到此回應時，會將指向原始 URL 的連結歸屬於重新導向後的資源，並將 {{Glossary("SEO")}} 排名傳遞給新 URL。

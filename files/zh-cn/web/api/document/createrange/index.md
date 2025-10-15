@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Docuemnt.createRange()`** 方法返回一个新的 {{domxref("Range")}} 对象。
+**`Document.createRange()`** 方法返回一个新的 {{domxref("Range")}} 对象。
 
 ## 语法
 

@@ -3,8 +3,6 @@ title: :out-of-range
 slug: Web/CSS/:out-of-range
 ---
 
-{{CSSRef}}
-
 **`:out-of-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-max) 限定的范围外。
 
 {{InteractiveExample("CSS Demo: :out-of-range", "tabbed-shorter")}}

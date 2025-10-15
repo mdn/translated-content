@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
 **CSS 数学関数**を使用すると、要素の `height`, `animation-duration`, `font-size` などのプロパティ値を数式として書くことができます。
 
 計算を使用しなくても、多くの場合は、組み込みの [CSS 単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)、たとえば `rem`、`vw`、`%` などを HTML 要素にスタイル設定すれば、特定の使い勝手を実現することができます。
