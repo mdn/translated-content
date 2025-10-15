@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`NodeList.length`** 属性返回 {{domxref("NodeList")}} 中包含的项数。
+**`NodeList.length`** 属性返回 {{domxref("NodeList")}} 中包含的元素数量。
 
 ## 值
 
