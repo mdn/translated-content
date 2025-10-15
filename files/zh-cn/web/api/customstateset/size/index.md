@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-整型。它表示 `CustomStateSet` 具有的属性数量。
+表示 `CustomStateSet` 具有的属性数量的整型值。
 
 ## 规范
 
