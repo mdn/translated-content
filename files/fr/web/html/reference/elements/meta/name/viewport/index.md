@@ -1,7 +1,7 @@
 ---
 title: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
-slug: Web/HTML/Guides/Viewport_meta_element
-original_slug: Web/HTML/Viewport_meta_tag
+slug: Web/HTML/Reference/Elements/meta/name/viewport
+original_slug: Web/HTML/Guides/Viewport_meta_element
 ---
 
 Le [_viewport_](/fr/docs/Glossary/Viewport) du navigateur est la zone de la fenêtre dans laquelle le contenu web peut être vu. Souvent, cette zone n'a pas la même taille que la page rendue, auquel cas le navigateur fournit des barres de défilement pour que l'utilisateur et l'utilisatrice puissent faire défiler la page et accéder à tout le contenu.

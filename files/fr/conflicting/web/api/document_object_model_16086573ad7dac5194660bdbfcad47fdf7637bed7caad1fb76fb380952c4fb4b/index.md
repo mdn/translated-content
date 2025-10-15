@@ -1,6 +1,7 @@
 ---
 title: Exemples de développement web et XML utilisant le DOM
-slug: Web/API/Document_Object_Model/Examples
+slug: conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b
+original_slug: Web/API/Document_Object_Model/Examples
 l10n:
   sourceCommit: 857ea18eaa00f33bfdca9b5d00c0d57e624a1e47
 ---

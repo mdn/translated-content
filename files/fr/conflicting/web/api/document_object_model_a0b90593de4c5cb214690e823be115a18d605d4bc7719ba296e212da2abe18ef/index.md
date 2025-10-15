@@ -1,6 +1,7 @@
 ---
 title: Introduction au DOM
-slug: Web/API/Document_Object_Model/Introduction
+slug: conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+original_slug: Web/API/Document_Object_Model/Introduction
 l10n:
   sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
