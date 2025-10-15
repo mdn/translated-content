@@ -1,29 +1,80 @@
 ---
 title: "<meta>: メタデータ要素"
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
-
 **`<meta>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("Metadata","メタデータ")}}を表します。これは、他のメタ関連要素 ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}) で表すことができないものを表します。
+
+`<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
+
+- [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性が設定されている場合、`<meta>` 要素は文書レベルメタデータを提供し、ページ全体に適用されます。
+- [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv) 属性が設定されている場合、 `<meta>` 要素はプラグマディレクティブであり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
+- [`charset`](#charset) 属性が設定されている場合、 `<meta>` 要素は文字セット宣言であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
+- [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性が設定されている場合、 `<meta>` 要素はユーザー定義のメタデータを提供します。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+
+> [!NOTE]
+> [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性は `<meta>` 要素において特別な意味を持ちます。
+> [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name), [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
+
+- `charset`
+  - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は ASCII 文字列で大文字小文字の区別なく `"utf-8"` と一致する必要があります。 UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
+- [`content`](/ja/docs/Web/HTML/Reference/Attributes/content)
+  - : この属性は状況に応じて、[`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv) 属性または [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性に関連付けられた値を持ちます。
+- [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv)
+  - : 文書を処理するためのブラウザーへの指示であるプラグマディレクティブを定義します。
+    属性名が `http-equivalent` の短縮形なのは、利用できる値が同等の HTTP ヘッダーの名前だからです。
+- `media`
+  - : `media` 属性は、 `content` 属性で定義されたテーマ色を適用するメディアを定義します。
+    値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で、属性が指定されていない場合は既定で `all` になります。
+    この属性は、要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性が [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color) に設定されている場合にのみ関連します。
+    それ以外の場合、効果はありませんので、含めないでください。
+- [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name)
+  - : `name` 属性と `content` 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。 `name` 属性はメタデータの名前、 `content` 属性がその値を指定します。
+
+## 例
+
+### meta 記述の設定
+
+次の `<meta>` タグは、ウェブページのメタデータとして `description` を提供します。
+
+```html
+<meta
+  name="description"
+  content="HTML リファレンスでは、すべての要素および属性について、すべての要素に適用されるグローバル属性も含めて説明しています。" />
+```
+
+### ページリダイレクトの設定
+
+次の例では、`http-equiv="refresh"` を使用して、ブラウザーにリダイレクトを実行するように指示しています。
+
+`content="3;url=https://www.mozilla.org"` 属性は、3 秒後にページを `https://www.mozilla.org` にリダイレクトします。
+
+```html
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
+```
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
-        >。 <a href="/ja/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> 属性がある場合は<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        >。 <a href="/ja/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a> 属性がある場合は<a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >。
       </td>
@@ -43,19 +94,19 @@ l10n:
       <td>
         <ul>
           <li>
-            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。<a href="#http-equiv"><code>http-equiv</code></a> がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
+            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。 <a href="/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv"><code>http-equiv</code></a> がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
           </li>
           <li>
             <code>&#x3C;meta name></code>: <a
-              href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+              href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
               >メタデータコンテンツ</a
             >を受け入れるすべての要素。
           </li>
           <li>
             <code>&#x3C;meta itemprop></code>: <a
-              href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
+              href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"
               >メタデータコンテンツ</a
-            >または<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+            >または<a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
               >フローコンテンツ</a
             >を受け入れるすべての要素。
           </li>
@@ -81,68 +132,6 @@ l10n:
   </tbody>
 </table>
 
-`<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
-
-- [`name`](#name) 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
-- [`http-equiv`](#http-equiv) 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
-- [`charset`](#charset) 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
-- [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性が設定されている場合、`<meta>` 要素は _ユーザー定義のメタデータ_ を提供します。
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
-
-> **メモ:** [`name`](#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、[`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性は、`<meta>` 要素にすでに [`name`](#name), [`http-equiv`](#http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
-
-- `charset`
-  - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
-- `content`
-  - : この属性は状況に応じて、[`http-equiv`](#http-equiv) 属性または [`name`](#name) 属性に関連付けられた値を持ちます。
-- `http-equiv`
-  - : プラグマディレクティブを定義します。属性名が `http-equiv(alent)` なのは、利用できる値のすべてが特定の HTTP ヘッダーの名前だからです。
-    - `content-security-policy`
-
-      この値により、ページ作者がページの[コンテンツポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)を定義できます。いくつかの例外を除き、ポリシーはサーバーオリジンやスクリプトのエンドポイントの指定に関与します。これは、クロスサイトスクリプティング攻撃の対策になります。
-
-    - `content-type`
-
-      文書の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に [`charset`](#charset) 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
-
-    - `default-style`
-
-    既定の [CSS スタイルシート](/ja/docs/Web/CSS)セットの名前を設定します。
-    - `x-ua-compatible`
-
-      指定された場合、 `content` 属性は "`IE=edge`" という値を持つ必要があります。ユーザーエージェントはこのプラグマを無視することが要求されます。
-
-    - `refresh` これは以下のことを指定する指示です。
-      - [`content`](#content) 属性に非負の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
-      - [`content`](#content) 属性に非負の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
-
-      > [!WARNING]
-      >
-      > `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
-      >
-      > - [MDN WCAG を理解する、ガイドライン 2.2 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.2_—_十分な時間_コンテンツを読んで使用するのに十分な時間をユーザーに提供する)
-      > - [MDN WCAG を理解する、ガイドライン 3.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
-      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
-
-- `name`
-  - : `name` 属性と `content` 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。 `name` 属性はメタデータの名前、 `content` 属性がその値を指定します。
-
-    HTML 仕様書で定義されている標準的なメタデータ名のセットについては、[標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)を参照してください。
-
-## 例
-
-```html
-<meta charset="utf-8" />
-
-<!-- 3 秒後にページをリダイレクト -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
-```
-
 ## 仕様書
 
 {{Specifications}}
@@ -154,5 +143,5 @@ l10n:
 ## 関連情報
 
 - [標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)
-- [学習: `<meta>`](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta要素)
+- [学習: `<meta>`](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta_要素)
 - [viewport メタタグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element)

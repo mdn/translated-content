@@ -17,4 +17,4 @@ L'implémentation est basée sur un en-tête {{Glossary("HTTP")}} appelé `Conte
 
 ### Connaissances techniques
 
-- [Documentation Content Security Policy sur MDN](/fr/docs/Web/HTTP/CSP)
+- [Documentation Content Security Policy sur MDN](/fr/docs/Web/HTTP/Guides/CSP)

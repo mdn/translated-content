@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-Un **contexte d'application** est un [contexte de navigation](/fr/docs/Glossary/Browsing_context) de haut niveau lié à un [manifeste](/fr/docs/Web/Manifest).
+Un **contexte d'application** est un [contexte de navigation](/fr/docs/Glossary/Browsing_context) de haut niveau lié à un [manifeste](/fr/docs/Web/Progressive_web_apps/Manifest).
 
 Le contexte d'application peut être créé suite à une requête à l'agent utilisateur visant à naviguer vers un lien en profondeur. Dans ce cas, l'agent utilisateur doit immédiatement naviguer vers le lien en profondeur avec l'option de remplacement activée. Autrement, quand le contexte d'application est créé, l'agent utilisateur doit immédiatement naviguer vers l'URL de départ avec cette même option activée.
 

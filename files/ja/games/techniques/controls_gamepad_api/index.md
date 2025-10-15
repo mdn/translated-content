@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 この記事では、ゲームパッド API を使用してウェブゲーム用の効果的なクロスブラウザー制御システムを実装し、ゲーム機のゲームコントローラーを使用してウェブゲームを制御できるようにします。 [Enclave Games](http://enclavegames.com/) によって作成されたケーススタディゲーム Hungry Fridge を掲載しています。
 
 ## ウェブゲームのコントロール

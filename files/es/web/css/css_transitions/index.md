@@ -3,7 +3,7 @@ title: CSS Transitions
 slug: Web/CSS/CSS_transitions
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **Transiciones CSS** es un módulo de CSS que define cómo crear transiciones suaves entre diferentes valores de las propiedades CSS. Permite tanto crearlas como definir su evolución usando funciones relacionadas con el tiempo.
 

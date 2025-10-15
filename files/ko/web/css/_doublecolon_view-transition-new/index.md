@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-new`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 전환 후의 상태를 나타내는 스냅샷, 즉 뷰 전환의 새로운 뷰 상태를 나타냅니다.
 

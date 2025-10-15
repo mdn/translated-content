@@ -3,8 +3,6 @@ title: contrast()
 slug: Web/CSS/filter-function/contrast
 ---
 
-{{CSSRef}}
-
 **`contrast()`** [CSS](/zh-CN/docs/Web/CSS) 函数调整输入图像的对比度。结果是一个 {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: contrast()")}}

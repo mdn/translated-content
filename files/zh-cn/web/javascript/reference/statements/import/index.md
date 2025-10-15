@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 静态 **`import`** 声明用于导入由另一个模块导出的只读动态（live）{{Glossary("binding", "绑定")}}。导入的绑定被称为*动态绑定*，因为它们会由导出绑定的模块更新，但导入模块不能重新赋值。
 
 要在源文件中使用 `import` 声明，该文件必须被运行时解释为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，这可以通过在 {{HTMLElement("script")}} 标签中添加 `type="module"` 来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。

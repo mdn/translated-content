@@ -1,29 +1,15 @@
 ---
 title: width
 slug: Web/CSS/@media/width
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/CSS_paged_media)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`width`** peut être utilisée pour tester la largeur de la {{glossary("viewport", "zone d'affichage")}} (ou de la boîte de page, pour [les médias paginés](/fr/docs/Web/CSS/CSS_paged_media)).
 
 ## Syntaxe
 
 **`width`** est une valeur décrivant la largeur d'affichage, les versions préfixées **`min-width`** et **`max-width`** peuvent également être utilisées afin de décrire la largeur minimale (resp. la largeur maximale).
-
-```css
-/* Largeur exacte */
-@media (width: 300px) {
-}
-
-/* Un viewport avec une largeur minimale */
-@media (min-width: 50em) {
-}
-
-/* Un viewport avec une largeur maximale */
-@media (max-width: 1000px) {
-}
-```
 
 ## Exemples
 
@@ -71,3 +57,8 @@ slug: Web/CSS/@media/width
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

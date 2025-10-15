@@ -3,7 +3,7 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 

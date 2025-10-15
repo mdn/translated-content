@@ -1,53 +1,61 @@
 ---
-title: Utiliser le rôle presentation
+title: "ARIA : rôle presentation"
+short-title: presentation
 slug: Web/Accessibility/ARIA/Reference/Roles/presentation_role
 original_slug: Web/Accessibility/ARIA/Roles/presentation_role
+l10n:
+  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-{{AccessibilitySidebar}}
+Le rôle `presentation` et son synonyme `none` suppriment les sémantiques ARIA implicites d'un élément afin qu'elles ne soient pas exposées à l'arbre d'accessibilité.
 
-Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role) et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.
+Le contenu de l'élément sera toujours accessible aux technologies d'assistance&nbsp;; seules les sémantiques du conteneur — et dans certains cas, les descendants associés requis — ne seront plus exposées à l'API d'accessibilité.
 
 ## Description
 
-Le rôle `presentation` est utilisé pour retirer toute représentation sémantique pour un élément donné ainsi que pour ses descendants. Par exemple, un tableau utilisé pour la mise en page pourrait avoir un rôle `presentation` appliqué sur l'élément `table` pour retirer la sémantique de l'élément en lui-même ainsi que tout ses sous-éléments, comme l'en-tête de tableau ou même les données de tableau elles-mêmes.
+Bien que l'ARIA soit principalement utilisée pour exprimer des sémantiques, il existe certaines situations où il est utile de masquer les sémantiques d'un élément aux technologies d'assistance. Cela se fait avec le rôle `presentation` ou son synonyme `none`, qui déclarent qu'un élément est utilisé uniquement pour la présentation et n'a donc pas de sémantiques d'accessibilité.
 
-## Effets possibles sur les agents utilisateurs et les technologies d'assistance
+Écrire `<h2 role="presentation">Les Licornes sont gentilles</h2>` supprime les sémantiques de titre de l'élément {{HTMLElement("Heading_Elements", "h2")}}, le rendant équivalent à `<div>Les Licornes sont gentilles</div>`. Les sémantiques de rôle de titre sont supprimées, mais le contenu lui-même est toujours disponible.
 
-Les agents utilisateurs ou les technologies d'assistance ne devrait normalement pas lire les éléments marqués comme étant de rôle `presentation`.
+Lorsque un élément a des descendants requis, comme les différents éléments {{HTMLElement('table')}}, et les enfants {{HTMLElement('li')}} d'un {{HTMLElement('ul')}} ou {{HTMLElement('ol')}}, le rôle `presentation` ou `none` appliqué à la table ou à la liste supprime les sémantiques par défaut de l'élément sur lequel il a été appliqué et de leurs éléments descendants requis.
+
+Si `presentation` ou `none` est appliqué à un élément {{HTMLElement('table')}}, les éléments descendants {{HTMLElement('caption')}}, {{HTMLElement('thead')}}, {{HTMLElement('tbody')}}, {{HTMLElement('tfoot')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, et {{HTMLElement('td')}} héritent du rôle et ne sont donc pas exposés aux technologies d'assistance. Mais, les éléments à l'intérieur des éléments {{HTMLElement('th')}} et {{HTMLElement('td')}} , y compris les tables imbriquées, sont exposés aux technologies d'assistance.
+
+```html
+<ul role="presentation">
+  <li>
+    <a href="#">Lien 1</a>
+  </li>
+  <li>
+    <a href="#">Lien 2</a>
+  </li>
+  <li>
+    <a href="#">Lien 3</a>
+  </li>
+</ul>
+```
+
+Parce que le rôle `presentation` a été appliqué à l'élément {{HTMLElement('ul')}}, chaque élément enfant {{HTMLElement('li')}} hérite du rôle `presentation`. Cela est dû au fait que l'ARIA exige que les éléments `listitem` aient un élément `list` parent. Bien que les éléments {{HTMLElement('li')}} ne soient pas exposés aux technologies d'assistance, les descendants de ces éléments requis le sont. Si nous avions imbriqué une liste dans l'un de ces {{HTMLElement('li')}} , elle serait visible pour les technologies d'assistance. Pour les éléments sans enfants requis, tous les éléments imbriqués à l'intérieur de l'élément avec `role="presentation"` ou `role="none"` conservent leur sémantique. Dans ce cas, les éléments {{HTMLElement('a')}} contenus à l'intérieur de ces éléments {{HTMLElement('li')}} sont exposés.
+
+L'élément {{HTMLElement('a')}} est un cas particulier. Son rôle aurait été exposé même s'il avait le rôle `presentation` ou `none` directement appliqué. Les navigateurs ignorent `role="presentation"` et `role="none"` sur les éléments focusables, y compris les liens et les entrées, ou tout élément avec un attribut [tabindex](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) défini. Les navigateurs ignorent également l'inclusion du rôle si l'un des éléments contient des états et propriétés ARIA globaux, tels que [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 > [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> L'élément avec `role="presentation"` ne fait pas partie de l'arbre d'accessibilité et ne doit pas avoir de nom accessible. Ne **pas** utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
+
+### Propriétés, états et rôles WAI-ARIA associés
+
+Aucun. Si un état et une propriété ARIA globaux sont définis, `presentation` ou `none` seront ignorés, et le rôle implicite de l'élément sera utilisé.
 
 ## Exemples
 
-### Exemple 1: Les icônes-fontes
-
-Une des recommandations d'accessibilité propose que les couleurs ou les représentations imagées (icônes par exemple) ne soient pas l'unique méthode pour transmettre une information. Ainsi nous pouvons partir du postula que votre icône est un complément décoratif à un texte explicite. Il faut donc lui appliquer un rôle `presentation`.
-
 ```html
-<i class="icon-user" role="presentation"></i>
+<hr role="none" />
 ```
 
-#### Exemples concrets
+## Spécifications
 
-Par exemple, en reprenant le bouton de la navigation principale de ce site web, nous pourrions écrire.
+{{Specifications}}
 
-```html
-<button type="button" aria-haspopup="true">
-  Technologies
-  <span class="main-menu-arrow" role="presentation">▼</span>
-</button>
-```
+## Voir aussi
 
-### Exemple 2 : Inline SVG
-
-De plus en plus d'images sont proposées sous la forme de compositions SVG directement insérées dans le document HTML. À l'image de l'attribut `alt` vide sur un élément `img`, il est possible d'indiquer qu'un élément SVG est purement décoratif grâce au rôle `presentation`.
-
-```html
-<svg role="presentation">…</svg>
-```
-
-## Autres ressources
-
-Using Aria - 2.9 Use of Role=presentation or Role=none: <https://www.w3.org/TR/using-aria/#presentation>
+- [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) contre [`role="presentation/none"`](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) — par Scott O'Hara

@@ -3,8 +3,6 @@ title: autocapitalize
 slug: Web/HTML/Reference/Global_attributes/autocapitalize
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 The **`autocapitalize`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 是一个枚举属性，它控制用户输入/编辑文本输入时文本输入是否自动大写，以及如何自动大写。属性必须取下列值之一：
 
 - `off` or `none`: 没有应用自动大写（所有字母都默认为小写字母）。
