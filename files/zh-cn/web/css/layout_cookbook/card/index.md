@@ -3,8 +3,6 @@ title: 卡片
 slug: Web/CSS/Layout_cookbook/Card
 ---
 
-{{CSSRef}}
-
 这个模式是带有可选页脚的“卡片”组件列表。
 
 ![Three card components in a row](cards.png)

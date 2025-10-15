@@ -163,7 +163,7 @@ class Student extends Person {
 }
 ```
 
-En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_properties). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
+En la clase anterior, `year` es una [propiedad de dato privada](/es/docs/Web/JavaScript/Reference/Classes/Private_elements). Podemos crear un objeto `Student` que puede acceder a la propiedad `#year` internamente, sin embargo, si algún código que se encuentre afuera de la clase intenta acceder a la propiedad `#year`, el navegador lanzará un error:
 
 ```js
 const summers = new Student("Summers", 2);

@@ -3,8 +3,6 @@ title: 多个背景的应用
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
-{{CSSRef}}
-
 你可以应用**多个背景**到元素。这些图层彼此叠加，第一个提供的背景位于最上层，最后一个提供的背景位于最下层。只有最后一个背景可以包含背景颜色。
 
 指定多个背景很简单：

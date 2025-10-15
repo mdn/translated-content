@@ -3,15 +3,13 @@ title: Firefox 17 pour les développeurs
 slug: Mozilla/Firefox/Releases/17
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page résume les principaux changements dans Firefox 17 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web
 
 ### HTML
 
-- Le support de l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) sur l'élément {{HTMLElement("iframe")}} a été ajouté. ([bug Firefox 341604](https://bugzil.la/341604))
+- Le support de l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) sur l'élément {{HTMLElement("iframe")}} a été ajouté. ([bug Firefox 341604](https://bugzil.la/341604))
 - Le support de l'attribut `inputmode` sur l'élément {{HTMLElement("input")}} a été ajouté. (Note : actuellement, les valeurs de Gecko diffèrent de la spécification HTML de WHATWG.) ([bug Firefox 746142](https://bugzil.la/746142))
 
 ### CSS

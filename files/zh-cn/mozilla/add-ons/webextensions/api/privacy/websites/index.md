@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `privacy.websites` 属性包含了控制浏览器与网站交互的隐私相关设置，其中的每个属性都是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象。
 
 在不同的浏览器中，下述属性的默认值可能有所不同。

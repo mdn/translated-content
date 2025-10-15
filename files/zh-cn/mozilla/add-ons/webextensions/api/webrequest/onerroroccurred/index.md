@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 当请求因错误（如网络连接中断）而无法处理时触发此事件。
 
 错误信息将通过 [`details`](#details) 对象的 `error` 属性传递给监听器。

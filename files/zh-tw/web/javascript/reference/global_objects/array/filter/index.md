@@ -2,10 +2,8 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實例的 **`filter()`** 方法會建立一個給定陣列部分的[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，過濾掉未通過所提供函式所實作測試的給定陣列元素。
 
@@ -148,7 +146,7 @@ console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```js
 const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
 const greatIDs = names
-  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
   .filter((id, idx, arr) => {
     // 若沒有 arr 引數，無法輕鬆存取中間陣列，除非將其儲存到變數中。
     if (idx > 0 && id <= arr[idx - 1]) return false;

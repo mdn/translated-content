@@ -3,8 +3,6 @@ title: HTML 元素参考
 slug: Web/HTML/Reference/Elements
 ---
 
-{{HTMLSidebar("Elements")}}
-
 此页面列出了所有使用{{Glossary("Tag","标签")}}创建的 {{Glossary("HTML")}} {{Glossary("Element","元素")}}。
 
 它们已被按照功能进行分组，以便更轻松地找到你想要的内容。同时，侧边栏中也按照字母排序列出了所有元素。

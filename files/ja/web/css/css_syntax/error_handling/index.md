@@ -3,10 +3,8 @@ title: CSS エラー処理
 short-title: エラー処理
 slug: Web/CSS/CSS_syntax/Error_handling
 l10n:
-  sourceCommit: 0dcad86763896bba7f8e1ddc30c6dfd2aa664c6b
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
-
-{{CSSRef}}
 
 CSS において、値が不正であったりセミコロンが欠落したりといったエラーが存在した場合、ブラウザー（または他のユーザーエージェント）は [JavaScript のようにエラーを報告する](/ja/docs/Web/JavaScript/Reference/Errors)のではなく、適切に修復します。ブラウザーは CSS 関連のアラートを表示したり、スタイル設定でエラーが発生したことを示したりはしません。ただ、不正な部分を破棄し、その後の有効なスタイルを構文解析します。これは CSS の機能であり、バグではありません。
 
@@ -45,7 +43,7 @@ div {
 
 ```css
 @import "assets/fonts.css" layer(fonts);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 ```
 
 パーサーがセミコロンの前に中括弧 (`{`) を見つけた場合、そのアットルールはブロックアットルールとして構文解析されます。[ブロックアットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule#ブロックアットルール)、例えば {{cssxref("@font-face")}} や {{cssxref("@keyframes")}} は、中括弧 (`{}`) で囲まれた宣言のブロックを持ちます。開始中括弧により、アットルールの前置きがどこで終わり、アットルールの本体がどこで始まるかをブラウザーが判断します。パーサーは対応するブロック（`()`、`{}`、`[]` で囲まれたコンテンツ）を探しながら、他に対応する中括弧がない閉じ中括弧 (`}`) を探していきます。

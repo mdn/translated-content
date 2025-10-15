@@ -3,8 +3,6 @@ title: 除法（/）
 slug: Web/JavaScript/Reference/Operators/Division
 ---
 
-{{jsSidebar("Operators")}}
-
 **除法**（**`/`**）运算符计算两个操作数的商，其中左操作数是被除数，右操作数是除数。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}

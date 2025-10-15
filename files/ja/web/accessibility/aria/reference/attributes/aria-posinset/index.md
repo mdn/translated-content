@@ -27,7 +27,8 @@ l10n:
 
 `aria-posinset` のそれぞれの値は、`1` 以上の整数であり、セットのサイズが分かっている場合はセットのサイズ以下の整数です。
 
-> **メモ:** `aria-posinset` を使用する場合は、セット全体のサイズである [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) の値も含める必要があります。セット全体のサイズが不明な場合は `aria-setsize="-1"` を設定します。
+> [!NOTE]
+> `aria-posinset` を使用する場合は、セット全体のサイズである [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) の値も含める必要があります。セット全体のサイズが不明な場合は `aria-setsize="-1"` を設定します。
 
 [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)、[`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)、または [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) の場合、区切り線を除いたメニュー内の項目の合計数に対して `aria-posinset` の値を設定します。
 

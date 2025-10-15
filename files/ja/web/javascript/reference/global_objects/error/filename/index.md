@@ -1,11 +1,20 @@
 ---
-title: Error.prototype.fileName
+title: "Error: fileName"
+short-title: fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-**`fileName`** プロパティは、このエラーを起こしたファイルへのパスを含みます。
+**`fileName`** は {{jsxref("Error")}} インスタンスのデータプロパティで、このエラーを起こしたファイルへのパスを含みます。
+
+## 値
+
+文字列です。
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## 解説
 
@@ -16,14 +25,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ### fileName の使用
 
 ```js
-var e = new Error("Could not parse input");
+const e = new Error("Could not parse input");
 throw e;
 // e.fileName could look like "file:///C:/example.html"
 ```
 
 ## 仕様書
 
-仕様の一部ではありません。
+仕様書に含まれていません。
 
 ## ブラウザーの互換性
 
@@ -33,4 +42,4 @@ throw e;
 
 - {{jsxref("Error.prototype.stack")}}
 - {{jsxref("Error.prototype.columnNumber")}}
-- {{jsxref("Error.prototype.fileName")}}
+- {{jsxref("Error.prototype.lineNumber")}}
