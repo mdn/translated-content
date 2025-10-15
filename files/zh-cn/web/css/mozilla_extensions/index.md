@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d36cd679498a75dccf51685d8e178994a0df585e
 ---
 
-{{CSSRef}}
-
 Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属性、值、伪元素、伪类、at 规则和媒体查询。这些扩展具有 `-moz-` 前缀。
 
 > [!NOTE]

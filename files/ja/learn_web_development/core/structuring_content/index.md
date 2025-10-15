@@ -44,7 +44,7 @@ HTML は、あらゆるウェブサイトのコンテンツと構造を定義す
   - : 当初、ウェブは単なるテキストであり、とてもつまらないものでした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。この記事では、 {{htmlelement("img")}} 要素の使い方について、基本的な使い方、 {{htmlelement("figure")}} を使用したキャプションの注釈、 {{glossary("CSS")}} 背景画像との関連の詳細などを詳しく見ていきます。
 - [HTML の動画と音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : ウェブページに簡単な画像を追加するのができるようになったので、次のステップは HTML 文書に動画と音声のプレイヤーを追加することです。この記事では {{htmlelement("video")}} と {{htmlelement("audio")}} 要素を使って実現することを見ていきます。それから動画にキャプションや字幕を追加する方法を見て完了します。
-- [Mozilla のスプラッシュページ](/ja/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page) <sup>課題</sup>
+- [Mozilla のスプラッシュページ](/ja/docs/Learn_web_development/Core/Structuring_content/Splash_page) <sup>課題</sup>
   - : 今回の評価試験では、このモジュールの記事で説明したいくつかの技術の知識をテストするために、Mozilla のすべてついてのファンキーなスプラッシュページに、いくつかの画像と動画を追加してもらいます！
 - [HTML の表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : この記事は、 HTML の表を始めるために、行やセルなどとても基本的なところから、見出し、複数列や行のセルの結合、スタイルを適用するために列の中のセルをすべてグループ化する方法などを扱います。

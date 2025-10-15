@@ -42,7 +42,8 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`       | {{domxref("ProcessingInstruction")}} ノードを出力します。 |
     | `NodeFilter.SHOW_TEXT`                                   | `0x4`        | {{domxref("Text")}} ノードを出力します。                  |
 
-    > **メモ:** `Attr` ノードの親は常に `null` であるため、{{DOMXref("TreeWalker.nextNode()")}} や {{DOMXref("TreeWalker.previousNode()")}} が `Attr` ノードを返すことはありません。`Attr` ノードを走査するには、{{DOMXref("Element.attributes")}} を使用してください。
+    > [!NOTE]
+    > `Attr` ノードの親は常に `null` であるため、{{DOMXref("TreeWalker.nextNode()")}} や {{DOMXref("TreeWalker.previousNode()")}} が `Attr` ノードを返すことはありません。`Attr` ノードを走査するには、{{DOMXref("Element.attributes")}} を使用してください。
 
 - `filter` {{optional_inline}}
   - : コールバック関数または `acceptNode()` メソッドを持つオブジェクトで、`NodeFilter.FILTER_ACCEPT`、`NodeFilter.FILTER_REJECT`、`NodeFilter.FILTER_SKIP` のいずれかを返します。この関数またはメソッドは、`whatToShow` フラグによって含まれるものとして受け入れられた `root` を基点とするサブツリーの各ノードに対して呼び出され、反復可能オブジェクトのリストに含めるかどうかを決定します。

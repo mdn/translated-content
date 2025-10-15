@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **`:target`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)選擇*文件中的目標元素*。當文件載入時，目標元素是根據文件的 [URL 片段標識符](/zh-TW/docs/Web/URI/Reference/Fragment#片段)確定的。
 
 ```css

@@ -1,27 +1,76 @@
 ---
 title: :focus
 slug: Web/CSS/:focus
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus`** permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire).
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:focus`** permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire).
+{{InteractiveExample("Démonstration CSS&nbsp;: :focus", "tabbed-shorter")}}
 
-```css
-/* Cible n'importe quel élément <input> */
-/* uniquement lorsqu'il a le focus */
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
 input:focus {
-  color: red;
+  background-color: lightblue;
+}
+
+select:focus {
+  background-color: ivory;
 }
 ```
 
-Cette pseudo-classe ne s'applique qu'aux éléments avec le focus, elle ne s'applique pas à ses parents (comme {{cssxref(":checked")}}, {{cssxref(":enabled")}} mais pas comme {{cssxref(":active")}} ou {{cssxref(":hover")}}).
+```html interactive-example
+<form>
+  <p>Quelle saveur souhaitez-vous commander ?</p>
+  <label>Nom complet : <input name="firstName" type="text" /></label>
+  <label
+    >Saveur :
+    <select name="flavor">
+      <option>Cerise</option>
+      <option>Thé vert</option>
+      <option>Vanille et beurre salé</option>
+      <option>Pépites de menthe</option>
+    </select>
+  </label>
+</form>
+```
+
+> [!NOTE]
+> Cette pseudo-classe s'applique uniquement à l'élément ayant le focus lui-même. Utilisez {{CSSxRef(":focus-within")}} si vous souhaitez sélectionner un élément qui _contient_ un élément ayant le focus.
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:focus {
+  /* ... */
+}
+```
+
+## Accessibilité
+
+Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
+
+- Indicateurs visuels de focus accessibles : [Conseils sur la conception d'indicateurs utiles et utilisables <sup>(angl.)</sup>](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+
+### `:focus { outline: none; }`
+
+Il ne faut jamais retirer l'indicateur de focus sans le remplacer par un autre indicateur qui respecte la recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) :
+
+- [Ne jamais retirer les bordures/contours CSS <sup>(angl.)</sup>](https://a11yproject.com/posts/never-remove-css-outlines/)
 
 ## Exemples
+
+### HTML
+
+```html
+<input class="prenom" value="Rouge si focus" />
+<input class="nom" value="Bleu si focus" />
+```
 
 ### CSS
 
@@ -33,32 +82,13 @@ Cette pseudo-classe ne s'applique qu'aux éléments avec le focus, elle ne s'app
 
 .nom:focus {
   background: yellow;
-  color: lime;
+  color: blue;
 }
-```
-
-### HTML
-
-```html
-<input class="prenom" value="Rouge si focus" />
-<input class="nom" value="Vert si focus" />
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', 40)}}
-
-## Accessibilité
-
-Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
-
-- Indicateurs visuels de focus accessibles : [Conseils sur la conception d'indicateurs utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-
-### `:focus { outline: none; }`
-
-Il ne faut jamais retirer l'indicateur de focus sans le remplacer par un autre indicateur qui respecte la recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) :
-
-- [Ne jamais retirer les bordures/contours CSS (en anglais)](https://a11yproject.com/posts/never-remove-css-outlines/)
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 
@@ -70,5 +100,5 @@ Il ne faut jamais retirer l'indicateur de focus sans le remplacer par un autre i
 
 ## Voir aussi
 
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus-visible")}}
 - {{cssxref(":focus-within")}}

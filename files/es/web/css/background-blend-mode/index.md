@@ -3,8 +3,6 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`background-blend-mode`** describe cómo las imágenes de fondo y el color de fondo del elemento deben mezclar entre sí.

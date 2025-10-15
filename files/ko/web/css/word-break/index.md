@@ -3,8 +3,6 @@ title: word-break
 slug: Web/CSS/word-break
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`word-break`** 속성은 텍스트가 자신의 콘텐츠 박스 밖으로 오버플로 할 때 줄을 바꿀 지 지정합니다.
 
 {{InteractiveExample("CSS Demo: word-break")}}
@@ -72,7 +70,8 @@ word-break: unset;
 - `break-word` {{Deprecated_inline}}
   - : 실제 {{cssxref("overflow-wrap")}} 속성에 상관하지 않고, `word-break: normal`과 `overflow-wrap: anywhere`를 설정한 것과 같은 효과를 냅니다.
 
-> **참고:** `word-break: break-word`와 `overflow-wrap: break-word`({{cssxref("overflow-wrap")}} 참고)와 달리, `word-break: break-all`은 텍스트의 오버플로가 시작하는 정확한 지점에서 줄을 바꿉니다. 단어 전체를 다음 줄로 이동하면 중간을 끊지 않아도 될 상황에서도 마찬가지입니다.
+> [!NOTE]
+> `word-break: break-word`와 `overflow-wrap: break-word`({{cssxref("overflow-wrap")}} 참고)와 달리, `word-break: break-all`은 텍스트의 오버플로가 시작하는 정확한 지점에서 줄을 바꿉니다. 단어 전체를 다음 줄로 이동하면 중간을 끊지 않아도 될 상황에서도 마찬가지입니다.
 
 ## 형식 정의
 

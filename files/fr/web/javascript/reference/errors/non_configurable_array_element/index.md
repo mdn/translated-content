@@ -18,7 +18,7 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 ## Quel est le problème ?
 
-On a voulu [raccourcir la longueur d'un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length#tronquer_un_tableau) mais l'un des éléments de ce tableau est [non-configurable](/fr/docs/Web/JavaScript/Data_structures#propriétés). Lorsqu'on tronque un tableau, les éléments situés au-delà de la nouvelle longueur seront supprimés. Dans ce cas, c'est cette suppression qui n'a pas pu être effectuée.
+On a voulu [raccourcir la longueur d'un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length#tronquer_un_tableau) mais l'un des éléments de ce tableau est [non-configurable](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés). Lorsqu'on tronque un tableau, les éléments situés au-delà de la nouvelle longueur seront supprimés. Dans ce cas, c'est cette suppression qui n'a pas pu être effectuée.
 
 L'attribut `configurable` permet de contrôler si la propriété peut être supprimée d'un objet et si ses attributs (en dehors de `writable`) peuvent être modifiés.
 
@@ -75,7 +75,7 @@ copie.length = 1;
 
 ## Voir aussi
 
-- [La propriété interne `[[Configurable]]`](/fr/docs/Web/JavaScript/Data_structures#Propriétés)
+- [La propriété interne `[[Configurable]]`](/fr/docs/Web/JavaScript/Guide/Data_structures#Propriétés)
 - {{jsxref("Array.length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
 
 {{InteractiveExample("CSS デモ: list-style")}}

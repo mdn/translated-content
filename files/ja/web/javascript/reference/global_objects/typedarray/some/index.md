@@ -9,7 +9,7 @@ l10n:
 
 **`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の中に指定された関数で実装されているテストに合格する要素が 1 つでもあるかどうかをテストします。型付き配列の中に指定された関数が true を返す要素があれば true を返し、なければ false を返します。型付き配列を変更することはありません。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.some()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

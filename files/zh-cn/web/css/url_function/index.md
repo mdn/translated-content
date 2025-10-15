@@ -5,9 +5,7 @@ l10n:
   sourceCommit: b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
 ---
 
-{{CSSRef}}
-
-**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
+**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
 
 > [!NOTE]
 > {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。

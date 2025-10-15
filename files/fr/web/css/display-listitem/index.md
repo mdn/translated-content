@@ -1,9 +1,9 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 Le mot-clé `list-item` permet à un élément de générer un pseudo-élément `::marker` dont le contenu est défini par les propriétés {{cssxref("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.
 
@@ -20,6 +20,12 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 
 ## Exemples
 
+### HTML
+
+```html
+<div class="fausse-liste">Je vais m'afficher comme un élément de liste</div>
+```
+
 ### CSS
 
 ```css
@@ -29,15 +35,13 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 }
 ```
 
-### HTML
-
-```html
-<div class="fausse-liste">Je vais m'afficher comme un élément de liste</div>
-```
-
 ### Résultat
 
 {{EmbedLiveSample("Exemples", "100%", 150)}}
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -45,7 +49,7 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 
 ## Voir aussi
 
-- {{CSSxRef("display")}}
+- Les types de données de la propriété {{CSSxRef("display")}}&nbsp;:
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

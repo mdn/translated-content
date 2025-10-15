@@ -189,7 +189,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Les fermetures (_closures_)](/fr/docs/Web/JavaScript/Closures) sont utiles lorsqu'on souhaite obtenir des fonctions paramétrées sans avoir à concaténer des chaînes de caractères.
+[Les fermetures (_closures_)](/fr/docs/Web/JavaScript/Guide/Closures) sont utiles lorsqu'on souhaite obtenir des fonctions paramétrées sans avoir à concaténer des chaînes de caractères.
 
 ### Convertir des chaînes JSON en objets JavaScript (_parsing_)
 
@@ -199,7 +199,7 @@ On notera que la syntaxe JSON est limitée relativement à la syntaxe JavaScript
 
 ### Transmettre des données et non du code
 
-Si on a par exemple une extension conçue pour parcourir le code d'une page web, on pourra transmettre des données [XPath](/fr/docs/Web/XPath) au lieu d'un code JavaScript.
+Si on a par exemple une extension conçue pour parcourir le code d'une page web, on pourra transmettre des données [XPath](/fr/docs/Web/XML/XPath) au lieu d'un code JavaScript.
 
 ### Exécuter du code avec des privilèges restreints
 

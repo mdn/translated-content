@@ -22,7 +22,7 @@ ruby {
 
 ## Attributs
 
-Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 

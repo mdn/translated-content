@@ -1,57 +1,60 @@
 ---
 title: ::spelling-error
 slug: Web/CSS/::spelling-error
+l10n:
+  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::spelling-error`** représente une portion de texte que l'{{glossary("user agent", "agent utilisateur")}} signale comme étant mal orthographiée.
 
-Le pseudo-élément **`::spelling-error`** représente une portion de texte que le navigateur signale comme étant mal orthographiée.
-
-```css
-::spelling-error {
-  color: red;
-}
-```
+Le pseudo-élément `::spelling-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de surlignage. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Propriétés autoriséees
 
-Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle dont le sélecteur contient `::spelling-error` :
+Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle dont le sélecteur contient `::spelling-error`&nbsp;:
 
-- {{cssxref("color")}},
-- {{cssxref("background-color")}},
-- {{cssxref("cursor")}},
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("cursor")}}
 - {{cssxref("caret-color")}}
-- {{cssxref("outline")}} et les propriétés détaillées correspondantes,
+- {{cssxref("outline")}} et les propriétés détaillées correspondantes.
 - {{cssxref("text-decoration")}} et les propriétés détaillées correspondantes.
-- {{cssxref("text-emphasis-color")}},
+- {{cssxref("text-emphasis-color")}}
 - {{cssxref("text-shadow")}}
 
 ## Syntaxe
 
 ```css
 ::spelling-error {
+  /* ... */
 }
 ```
 
 ## Exemples
 
-### CSS
+### Vérification orthographique de base
+
+Dans cet exemple, les navigateurs éventuellement compatibles devraient mettre en évidence toute erreur d'orthographe signalée avec les styles affichés.
+
+#### HTML
+
+```html
+<p contenteditable spellcheck="true">
+  Alice devina tout de suite qu'il cherch l'éventail et la paire de gants.
+</p>
+```
+
+#### CSS
 
 ```css
-p::spelling-error {
-  color: red;
+::spelling-error {
+  text-decoration: wavy red underline;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p>Alice devina tout de suite qu’il cherch l’éventail et la paire de gants.</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","250","100")}}
+{{EmbedLiveSample("vérification_orthographique_de_base", '100%', 60)}}
 
 ## Spécifications
 
@@ -64,3 +67,4 @@ p::spelling-error {
 ## Voir aussi
 
 - {{cssxref("::grammar-error")}}
+- {{cssxref("text-decoration-line")}}
