@@ -511,7 +511,7 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
-/zh-TW/docs/Web/API/Document_Object_Model/Examples	/zh-TW/docs/conflicting/Web/API/Document_Object_Model
+/zh-TW/docs/Web/API/Document_Object_Model/Examples	/zh-TW/docs/Web/API/Document_Object_Model
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/Web/API/Event

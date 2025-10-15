@@ -6058,12 +6058,5 @@
     "contributors": [
       "Aries0d0f"
     ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-04-22T07:31:11.966Z",
-    "contributors": [
-      "jackblackevo",
-      "PJCHENder"
-    ]
   }
 }
