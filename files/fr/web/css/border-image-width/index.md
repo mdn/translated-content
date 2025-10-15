@@ -96,7 +96,7 @@ La propriété `border-image-width` est définie avec une, deux, trois ou quatre
 - `<length-percentage>`
   - : Une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) représentant la largeur de la bordure. Cette longueur peut être absolue (ex. `px`) ou relative (ex. `rem`). Les pourcentages sont relatifs à la largeur de la boîte de bordure. Les valeurs négatives sont considérées invalides.
 - `<number>`
-  - : Représente un multiple de [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété [`border-width`](/fr/docs/Web/CSS/border-width) de l'élément. Les valeurs négatives sont considérées invalides.
+  - : Représente un multiple de [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de la propriété [`border-width`](/fr/docs/Web/CSS/border-width) de l'élément. Les valeurs négatives sont considérées invalides.
 - `auto`
   - : L'épaisseur de la bordure imagée est égale à la largeur ou à la hauteur (selon ce qui peut s'appliquer) de la propriété [`border-image-slice`](/fr/docs/Web/CSS/border-image-slice) correspondante. Si l'image ne possède pas de dimensions intrinsèques, c'est la valeur calculée de `border-width` qui sera utilisée à la place.
 
@@ -155,4 +155,4 @@ p {
 ## Voir aussi
 
 - [Arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Apprendre le CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Apprendre le CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

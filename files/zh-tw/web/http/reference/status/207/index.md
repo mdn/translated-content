@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`207 Multi-Status`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示有多種回應。此回應專門用於基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）的上下文中。
 
 回應主體是一個 `text/xml` 或 `application/xml` 的 HTTP 實體，具有一個 `multistatus` 根元素，其中列出了各個獨立的回應碼。

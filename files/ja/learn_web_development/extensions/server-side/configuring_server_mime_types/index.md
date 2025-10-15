@@ -1,14 +1,11 @@
 ---
 title: サーバーで MIME タイプを正しく設定する
 slug: Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
-original_slug: Learn/Server-side/Configuring_server_MIME_types
 l10n:
-  sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{LearnSidebar}}
-
-MIME タイプは、電子メール、またはウェブサーバーやウェブアプリケーションによって提供されるコンテンツのメディアの種類を記述します。これらは、コンテンツがどのように処理され表示されるべきかのヒントを提供することを支援することを意図しています。
+MIME タイプは、電子メール、またはウェブサーバーやウェブアプリケーションによって提供されるコンテンツのメディアの種類を記述します。これらは、コンテンツがどのように処理され表示されるべきかのヒントを提供することを支援するためのものです。
 
 MIME タイプの例です。
 
@@ -21,7 +18,7 @@ MIME タイプの例です。
 
 サーバーの既定の設定はさまざまで、コンテンツの種類を定義していないファイルには異なる MIME 型の既定値を設定します。
 
-Apache ウェブサーバーの **2.2.7 より前**のバージョンでは、未知のコンテンツの種類に対して `text/plain` か `application/octet-stream` の MIME タイプを報告するように設定されていました。
+Apache ウェブサーバーの **2.2.7 より前**のバージョンでは、未知のコンテンツの種類に対して `text/plain` または `application/octet-stream` の MIME タイプを報告するように設定されていました。
 
 [Nginx](https://nginx.org/) は既定のコンテンツの種類を定義しない場合、`text/plain` を報告します。
 
@@ -108,4 +105,4 @@ header('Content-Type: application/pdf')
 - [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)（英語）
 - [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Guides/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)（英語）
-- [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)（英語）
+- [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block/)（英語）

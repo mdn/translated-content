@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-{{CSSRef}}
-
 **`<angle>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、度、グラード、ラジアン、周の値で表される角度の値を表します。例えば、 {{cssxref("&lt;gradient&gt;")}} 関数や一部の {{cssxref("transform")}} 関数などで使われています。
 
-{{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
+{{InteractiveExample("CSS デモ: &lt;angle&gt;")}}
 
 ```css interactive-example-choice
 transform: rotate(45deg);

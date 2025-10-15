@@ -113,7 +113,7 @@ console.log(inventaire.findLast(pasSuffisant));
 
 #### En utilisant les fonctions fléchées et la décomposition
 
-L'exemple précédent peut être écrit à l'aide d'une fonction fléchée et [une décomposition d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposer_un_objet)&nbsp;:
+L'exemple précédent peut être écrit à l'aide d'une fonction fléchée et [une décomposition d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#décomposer_un_objet)&nbsp;:
 
 ```js
 const inventaire = [

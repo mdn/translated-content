@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`<angle-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{Cssxref("angle")}} または {{Cssxref("percentage")}} が取りうる値を表します。
 
 許容される型として `<angle-percentage>` が指定されている場合、これはパーセント値が角度に解決され、{{Cssxref("calc", "calc()")}} 式で使用できることを意味します。

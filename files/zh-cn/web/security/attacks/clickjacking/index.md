@@ -2,7 +2,7 @@
 title: 点击劫持
 slug: Web/Security/Attacks/Clickjacking
 l10n:
-  sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
+  sourceCommit: ade8d870ed7e18a71dc51fe25aa13d812fb82558
 ---
 
 在**点击劫持**攻击中，攻击者诱骗用户以非预期的方式与目标网站进行交互。
@@ -66,7 +66,3 @@ iframe {
 ## 参见
 
 - [owasp.org](https://owasp.org/) 上的[点击劫持防御备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html)
-
-<section id="Quick_links">
-{{ListSubpages("/zh-CN/docs/Web/Security", "1", "0", "1")}}
-</section>

@@ -3,8 +3,6 @@ title: padding-top
 slug: Web/CSS/padding-top
 ---
 
-{{CSSRef}}
-
 **`padding-top`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
 
 {{InteractiveExample("CSS Demo: padding-top")}}
@@ -56,7 +54,8 @@ padding-top: 0;
 
 ![The effect of the CSS padding-top property on the element box](/files/4105/padding-top.svg)
 
-> **참고:** {{cssxref("padding")}} 속성을 사용하면 하나의 선언으로 네 방향 여백을 모두 설정할 수 있습니다.
+> [!NOTE]
+> {{cssxref("padding")}} 속성을 사용하면 하나의 선언으로 네 방향 여백을 모두 설정할 수 있습니다.
 
 ## 구문
 

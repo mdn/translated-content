@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
 
-{{HTTPSidebar}}
-
 La cabecera de respuesta **`Access-Control-Expose-Headers`** indica qué cabeceras pueden ser expuestas como parte de la respuesta listando sus nombres.
 
 Por defecto, solo se exponen las 7 cabeceras HTTP seguras ({{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}, {{Glossary("Simple response header", "simple response headers")}}):

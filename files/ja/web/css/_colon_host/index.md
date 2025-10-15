@@ -5,14 +5,12 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
-
 **`:host`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その CSS を含む[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します。 — 言い換えれば、シャドウ DOM の中からカスタム要素を選択できるようにします。
 
 > [!NOTE]
 > これはシャドウ DOM の外で使われたときには効果がありません。
 
-{{InteractiveExample("CSS Demo: :host", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :host", "tabbed-shorter")}}
 
 ```css interactive-example
 /* This CSS is being applied inside the shadow DOM. */

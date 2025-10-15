@@ -3,8 +3,6 @@ title: font-family
 slug: Web/CSS/@font-face/font-family
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El descriptor CSS font-family CSS permite al autor especificar el tipo de fuente para un elemento.

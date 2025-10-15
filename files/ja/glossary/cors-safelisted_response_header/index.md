@@ -19,7 +19,8 @@ _CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/H
 
 {{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
 
-> **メモ:** {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
+> [!NOTE]
+> {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
 
 ## 例
 

@@ -3,8 +3,6 @@ title: delete 运算符
 slug: Web/JavaScript/Reference/Operators/delete
 ---
 
-{{jsSidebar("Operators")}}
-
 **`delete`** 运算符用于删除对象的一个属性；如果该属性的值是一个对象，并且没有更多对该对象的引用，该属性所持有的对象最终会自动释放。
 
 {{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}

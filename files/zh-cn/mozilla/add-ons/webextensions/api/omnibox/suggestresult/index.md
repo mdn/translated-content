@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 **`omnibox.SuggestResult`** 类型定义了扩展可以添加到地址栏下拉菜单中的建议。
 
 扩展的 {{WebExtAPIRef("omnibox.onInputChanged")}} 事件监听器会传递一个回调函数。为了响应用户的输入将推荐填入地址栏下拉菜单，扩展可以将一个 `omnibox.SuggestResult` 对象数组传递给这个回调函数。

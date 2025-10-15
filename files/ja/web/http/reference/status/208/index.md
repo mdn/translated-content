@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`208 Already Reported`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、容量を節約し、競合を防ぐため、{{HTTPStatus("207", "207 Multi-Status")}} レスポンスで用いられます。
 このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
 
