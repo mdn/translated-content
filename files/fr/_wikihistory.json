@@ -12594,36 +12594,6 @@
       "AlainRinder"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-03-23T23:50:50.905Z",
-    "contributors": [
-      "loella16",
-      "SphinxKnight",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Domif",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2020-10-18T13:14:40.506Z",
-    "contributors": [
-      "Lolo",
-      "diassynthesis",
-      "loella16",
-      "kekbait",
-      "SphinxKnight",
-      "yasakura_",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Mgjbot",
-      "Takenbot",
-      "Chbok"
-    ]
-  },
   "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-03-18T21:39:30.176Z",
     "contributors": [
@@ -12637,16 +12607,6 @@
       "BenoitL",
       "Mgjbot",
       "Planche"
-    ]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2020-03-02T10:16:52.732Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "loella16",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "Web/API/Element": {
@@ -21684,31 +21644,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_values_and_units": {
-    "modified": "2019-04-06T13:14:19.030Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_values_and_units/CSS_data_types": {
-    "modified": "2019-07-12T07:45:36.764Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
-    "modified": "2019-04-06T13:47:19.541Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "Guillaume-Heras",
-      "prayash",
-      "pixoux",
-      "teoli",
-      "FredB"
-    ]
-  },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2019-04-06T12:15:29.279Z",
     "contributors": [
@@ -22710,6 +22645,31 @@
       "Louis-MarieMatthews",
       "lotfire24",
       "amdufour"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units": {
+    "modified": "2019-04-06T13:14:19.030Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2019-07-12T07:45:36.764Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
+    "modified": "2019-04-06T13:47:19.541Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "Guillaume-Heras",
+      "prayash",
+      "pixoux",
+      "teoli",
+      "FredB"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
