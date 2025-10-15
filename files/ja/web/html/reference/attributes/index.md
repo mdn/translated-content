@@ -1335,7 +1335,7 @@ HTML では、論理属性に許されている値の制約を定義していま
 > [!WARNING]
 > イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
 
-上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#onevent_プロパティの使用)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idl_属性)として指定することができます。
+上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events#onevent_プロパティの使用)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idl_属性)として指定することができます。
 
 すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、 [JavaScript 関数](/ja/docs/Web/JavaScript/Reference/Functions)、たとえば `function name(/*args*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する JavaScript イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onerror` は5つの引数 (`event`, `source`, `lineno`, `colno`, `error`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
 

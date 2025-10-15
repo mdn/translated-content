@@ -10,7 +10,8 @@ l10n:
 
 `AnimationEffect.getTiming()` は {{domxref("AnimationEffect")}} メソッドのインターフェイスで、アニメーション効果のタイミングプロパティを格納したオブジェクトを返します。
 
-> **メモ:** `getTiming()` が返すタイミングプロパティのいくつかは、プレースホルダー値 `"auto"` を取ることがあります。タイミング計算で使用するために解決された値を取得するには、代わりに {{domxref("AnimationEffect.getComputedTiming()")}} を使用してください。
+> [!NOTE]
+> `getTiming()` が返すタイミングプロパティのいくつかは、プレースホルダー値 `"auto"` を取ることがあります。タイミング計算で使用するために解決された値を取得するには、代わりに {{domxref("AnimationEffect.getComputedTiming()")}} を使用してください。
 >
 > 将来的には、より多くのタイミングプロパティの型に `"auto"` や同様の値が追加され、{{domxref("AnimationEffect")}}の新しい型では `"auto"` が異なる値に解決されるかもしれません。
 

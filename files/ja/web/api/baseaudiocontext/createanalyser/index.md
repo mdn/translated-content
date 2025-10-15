@@ -10,7 +10,8 @@ l10n:
 
 `createAnalyser()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化を行います。
 
-> **メモ:** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} コンストラクターが {{domxref("AnalyserNode")}} を生成するのに推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 > [!NOTE]
 > このノードの詳しい説明は、 {{domxref("AnalyserNode")}} のページを参照してください。

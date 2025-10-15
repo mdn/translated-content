@@ -5,7 +5,8 @@ slug: orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-> **警告:** **moz** の接頭辞がついたメソッドやプロパティ（**mozSetDataAt()** など）は Gecko 固有のインターフェイスです。これらのインターフェイスは Gecko ベースのブラウザーで**しか**動作しません。
+> [!WARNING]
+> **moz** の接頭辞がついたメソッドやプロパティ（**mozSetDataAt()** など）は Gecko 固有のインターフェイスです。これらのインターフェイスは Gecko ベースのブラウザーで**しか**動作しません。
 
 Mozilla はいくつかの標準外の機能を使用した、複数のアイテムのドラッグができる機能に対応しています。これは {{domxref("DataTransfer.types","types")}} プロパティと、同様に {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}}, {{domxref("DataTransfer.clearData","clearData()")}} メソッドを反映したものですが、取得、修正、削除するアイテムの位置を指定する追加の引数を取ります。
 
@@ -86,7 +87,7 @@ const types = event.dataTransfer.mozTypesAt(1);
 
 ## 文字列でないデータのドラッグ
 
-上で解説した追加のメソッドが扱えるデータは文字列に限定されず、どんな種類のデータでも指定することができます。例えば、ファイルは [application/x-moz-file](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#file) 型で `nsIFile` のオブジェクトとして保持されてドラッグされます。 {{domxref("DataTransfer.setData","setData()")}} メソッドは文字列しか対応しておらず、 ドラッグするファイルを指定するのには利用できないため、代わりに {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} メソッドを使わなくてはなりません。
+上で解説した追加のメソッドが扱えるデータは文字列に限定されず、どんな種類のデータでも指定することができます。例えば、ファイルは [application/x-moz-file](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#file) 型で `nsIFile` のオブジェクトとして保持されてドラッグされます。 {{domxref("DataTransfer.setData","setData()")}} メソッドは文字列しか対応しておらず、 ドラッグするファイルを指定するのには利用できないため、代わりに {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} メソッドを使わなくてはなりません。
 
 ```js
 dt.mozSetDataAt("application/x-moz-file", file, 0);
@@ -154,5 +155,5 @@ dt.mozSetDataAt("application/x-moz-file", file, 0);
 
 - [HTML ドラッグ & ドロップ API （概要）](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

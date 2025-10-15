@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`text-indent`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック内のテキストの行の前に置く空白（字下げ）の幅を設定します。
 
-{{InteractiveExample("CSS Demo: text-indent")}}
+{{InteractiveExample("CSS デモ: text-indent")}}
 
 ```css interactive-example-choice
 text-indent: 0;

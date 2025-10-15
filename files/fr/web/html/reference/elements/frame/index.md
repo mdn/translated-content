@@ -6,18 +6,18 @@ original_slug: Web/HTML/Element/frame
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).
+L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Reference/Elements/frameset).
 
-Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance et un manque d'accessibilité pour les personnes utilisant des lecteurs d'écran. Utilisez plutôt l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance et un manque d'accessibilité pour les personnes utilisant des lecteurs d'écran. Utilisez plutôt l'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `src`
   - : Cet attribut indique le document qui doit être affiché dans la frame.
 - `name`
-  - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Element/a#attr-target) pour plus d'informations.
+  - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Reference/Elements/a#attr-target) pour plus d'informations.
 - `noresize`
   - : Cet attribut empêche aux utilisateurs de redimensionner les frames.
 - `scrolling`
@@ -48,5 +48,5 @@ Comme tous les autres éléments HTML, cet élément prend en charge les [attrib
 
 ## Voir aussi
 
-- L'élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset)
-- L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+- L'élément [`<frameset>`](/fr/docs/Web/HTML/Reference/Elements/frameset)
+- L'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)

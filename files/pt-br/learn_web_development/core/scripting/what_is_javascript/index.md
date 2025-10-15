@@ -78,7 +78,7 @@ function atualizarNome() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 Experimente clicar no botão acima para ver o que acontece (note também que você pode encontrar essa demonstração no GitHub — veja o [código fonte](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html) ou [veja funcionar](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
 

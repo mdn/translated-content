@@ -1,14 +1,14 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`any-pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin de déterminer si un des mécanismes de saisie/d'entrée disponibles est un dispositif de pointage et sa précision le cas échéant.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`any-pointer`** vérifie si l'utilisateur dispose _d'un_ dispositif de pointage (comme une souris) et, le cas échéant, quelle est sa précision.
 
 > [!NOTE]
-> Si on souhaite tester la précision du mécanisme de pointage _principal_, on pourra utiliser la caractéristique [`pointer`](/fr/docs/Web/CSS/@media/pointer) à la place.
+> Si on souhaite tester la précision du mécanisme de pointage _principal_, on pourra utiliser la caractéristique {{cssxref("@media/pointer", "pointer")}} à la place.
 
 ## Syntaxe
 

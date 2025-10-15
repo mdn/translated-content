@@ -13,7 +13,7 @@ l10n:
 
 ## 高层次概览
 
-本文假设你已经熟悉 [DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model/Introduction)的概念——一种连接节点的树状结构，代表标记文档（通常是在 web 文档中的 HTML 文档）中出现的不同元素和文本字符串。作为示例，请考虑以下 HTML 片段：
+本文假设你已经熟悉 [DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model)的概念——一种连接节点的树状结构，代表标记文档（通常是在 web 文档中的 HTML 文档）中出现的不同元素和文本字符串。作为示例，请考虑以下 HTML 片段：
 
 ```html
 <html lang="zh-CN">

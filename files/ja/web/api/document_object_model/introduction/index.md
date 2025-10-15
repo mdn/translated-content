@@ -2,7 +2,7 @@
 title: DOM の紹介
 slug: Web/API/Document_Object_Model/Introduction
 l10n:
-  sourceCommit: c367939020b2cbd60da7bd56a14670659d5e9491
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -57,7 +57,7 @@ p_list = doc.getElementsByTagName("para")
 DOM を使い始めるのに、特別なものは必要ありません。
 ブラウザーで実行されるプログラムである*スクリプト*と呼ばれるものの中から、 JavaScript で直接 API を使用するのです。
 
-スクリプトを作成すると、インラインの `<script>` 要素であろうと、ウェブページに含まれていようと、すぐに {{domxref("document")}} や {{domxref("Window", "window")}} オブジェクトの API を使って、文書自体やウェブページ内の様々な要素（文書の子孫要素）を操作し始めることができるようになるのです。 DOM プログラミングは、次の例のように、 {{domxref("console.log_static")}} 関数を使ってコンソールにメッセージを表示させるような簡単なものであってもかまいません。
+スクリプトを作成すると、インラインの `<script>` 要素であろうと、ウェブページに含まれていようと、すぐに {{domxref("document")}} や {{domxref("Window", "window")}} オブジェクトの API を使って、文書自体やウェブページ内の様々な要素（文書の子孫要素）を操作し始めることができるようになるのです。 DOM プログラミングは、次の例のように、 {{domxref("console/log_static", "console.log()")}} 関数を使ってコンソールにメッセージを表示させるような簡単なものであってもかまいません。
 
 ```html
 <body onload="console.log('ホームページへようこそ!');">
@@ -71,19 +71,16 @@ DOM を使い始めるのに、特別なものは必要ありません。
 
 ```html
 <html lang="en">
-  <head>
+  <head> </head>
+  <body>
     <script>
-      // この関数は文書が読み込まれた時に実行される
-      window.onload = () => {
-        // create a couple of elements in an otherwise empty HTML page
-        const heading = document.createElement("h1");
-        const headingText = document.createTextNode("Big Head!");
-        heading.appendChild(headingText);
-        document.body.appendChild(heading);
-      };
+      // 空の HTML ページに 2 つの要素を作成
+      const heading = document.createElement("h1");
+      const headingText = document.createTextNode("Big Head!");
+      heading.appendChild(headingText);
+      document.body.appendChild(heading);
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
 ```
 

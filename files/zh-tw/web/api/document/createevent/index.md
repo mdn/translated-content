@@ -63,4 +63,4 @@ elem.dispatchEvent(event);
 
 ## 參見
 
-- [建立與觸發事件](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
+- [建立與觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)
