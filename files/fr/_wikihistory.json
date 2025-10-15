@@ -38539,45 +38539,5 @@
     "contributors": [
       "SphinxKnight"
     ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2020-03-02T10:16:52.732Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "loella16",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b": {
-    "modified": "2019-03-23T23:50:50.905Z",
-    "contributors": [
-      "loella16",
-      "SphinxKnight",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Domif",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef": {
-    "modified": "2020-10-18T13:14:40.506Z",
-    "contributors": [
-      "Lolo",
-      "diassynthesis",
-      "loella16",
-      "kekbait",
-      "SphinxKnight",
-      "yasakura_",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Mgjbot",
-      "Takenbot",
-      "Chbok"
-    ]
   }
 }
