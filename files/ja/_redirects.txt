@@ -2047,7 +2047,6 @@
 /ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility	/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 /ja/docs/Learn/Common_questions/Design_for_all_types_of_users	/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 /ja/docs/Learn/Common_questions/HTML_features_for_accessibility	/ja/docs/Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility
-/ja/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/ja/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ja/docs/Learn/Common_questions/How_does_the_Internet_work	/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /ja/docs/Learn/Common_questions/How_much_does_it_cost	/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -2055,7 +2054,6 @@
 /ja/docs/Learn/Common_questions/Tools_and_setup	/ja/docs/Learn_web_development/Howto/Tools_and_setup
 /ja/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /ja/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/ja/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/ja/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -2396,7 +2394,6 @@
 /ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/ja/docs/Web/HTML/How_to/Define_terms_with_HTML
 /ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/ja/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
 /ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ja/docs/Web/HTML/How_to/Use_data_attributes
-/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/ja/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Glossary/Prefetch
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
