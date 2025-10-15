@@ -1,84 +1,121 @@
 ---
-title: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
+title: <meta name="viewport">
+short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
-original_slug: Web/HTML/Guides/Viewport_meta_element
+l10n:
+  sourceCommit: c7a8b2584452bcd5d2c135b637f4ec659ff74b99
 ---
 
-Le [_viewport_](/fr/docs/Glossary/Viewport) du navigateur est la zone de la fenêtre dans laquelle le contenu web peut être vu. Souvent, cette zone n'a pas la même taille que la page rendue, auquel cas le navigateur fournit des barres de défilement pour que l'utilisateur et l'utilisatrice puissent faire défiler la page et accéder à tout le contenu.
+La valeur **`viewport`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) d'un élément HTML {{htmlelement("meta")}} donne des indications sur la façon dont la {{glossary("viewport", "zone d'affichage")}} doit être dimensionnée.
 
-## Contexte
+Si elle est spécifiée, vous définissez les comportements liés à la zone d'affichage à l'aide de l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément HTML `<meta>`, sous la forme d'une liste séparée par des virgules d'une ou plusieurs valeurs.
 
-Les appareils à écran étroit (par exemple, les mobiles) rendent les pages dans une fenêtre virtuelle ou viewport, qui est généralement plus large que l'écran, puis réduisent le résultat rendu afin qu'il puisse être vu en une seule fois. Les utilisateurs et utilisatrices peuvent alors effectuer un panoramique et un zoom pour voir différentes zones de la page. Par exemple, si l'écran d'un téléphone mobile a une largeur de 640 pixels, les pages peuvent être affichées dans une fenêtre virtuelle de 980 pixels, puis réduites pour tenir dans l'espace de 640 pixels.
+## Notes d'utilisation
 
-En effet, de nombreuses pages ne sont pas optimisées pour les mobiles et ne fonctionnent pas (ou du moins n'ont pas l'air de fonctionner correctement) lorsqu'elles sont affichées sur un écran de petite taille. Cette fenêtre virtuelle est un moyen d'améliorer l'aspect des sites non optimisés pour les mobiles sur les appareils à écran étroit.
+Un élément `<meta name="viewport">` possède les attributs supplémentaires suivants&nbsp;:
 
-### Voici la métabalise viewport
+- [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content)
+  - : L'attribut `content` doit être défini et sa valeur détermine divers comportements liés à la zone d'affichage.
+    Sa valeur est une liste séparée par des virgules d'une ou plusieurs paires clé-valeur sous la forme `clé=valeur`. Les clés suivantes sont définies&nbsp;:
+    - `width`
+      - : Contrôle la largeur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `width=600`) ou sur la valeur spéciale `device-width`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vw`](/fr/docs/Web/CSS/length#unités_de_longueur_relatives_à_la_zone_daffichage).
+    - `height`
+      - : Contrôle la hauteur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `height=400`) ou sur la valeur spéciale `device-height`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vh`](/fr/docs/Web/CSS/length#unités_de_longueur_relatives_à_la_zone_daffichage).
+    - `initial-scale`
+      - : Définit le ratio entre la largeur de l'appareil (`device-width` en mode portrait ou `device-height` en mode paysage) et la taille de la zone d'affichage. Elle peut être un nombre compris entre `0.0` et `10.0`.
+    - `maximum-scale`
+      - : Définit le niveau de zoom maximal. Il doit être supérieur ou égal à `minimum-scale`, sinon le comportement est indéfini. Les paramètres du navigateur peuvent ignorer cette règle, et iOS 10+ l'ignore par défaut. Elle peut être un nombre compris entre `0.0` et `10.0`.
+    - `minimum-scale`
+      - : Définit le niveau de zoom minimal. Il doit être inférieur ou égal à `maximum-scale`, sinon le comportement est indéfini. Les paramètres du navigateur peuvent ignorer cette règle, et iOS 10+ l'ignore par défaut. Elle peut être un nombre compris entre `0.0` et `10.0`.
+    - `user-scalable`
+      - : Un booléen indiquant si l'utilisateur·ice peut zoomer la page web. Les paramètres du navigateur peuvent ignorer cette règle, et iOS 10+ l'ignore par défaut. Elle peut être soit `yes`, soit `no`, la valeur par défaut étant `yes`.
+        > [!WARNING]
+        > Désactiver la possibilité de zoomer en définissant `user-scalable` à `no` empêche les personnes ayant une basse vision de lire et comprendre le contenu de la page. De plus, la WCAG exige un zoom minimal de 2×&nbsp;; la meilleure pratique est de permettre un zoom de 5×. Pour plus d'informations, voir&nbsp;:
+        >
+        > - [MDN Comprendre la WCAG, explications de la directive 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+        > - [Comprendre le critère de succès 1.4.4 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+    - `interactive-widget`
+      - : Définit l'effet des widgets d'interface interactifs, comme les claviers virtuels, sur la zone d'affichage de la page. Elle peut prendre les mots-clés `resizes-visual`, `resizes-content` ou `overlays-content`.
+        - `resizes-visual`&nbsp;: La {{Glossary("visual viewport", "zone d'affichage visuelle")}} est redimensionnée par le widget interactif. C'est la valeur par défaut.
+        - `resizes-content`&nbsp;: La {{Glossary("viewport", "zone d'affichage")}} est redimensionnée par le widget interactif.
+        - `overlays-content`&nbsp;: Ni la zone d'affichage ni la zone d'affichage visuelle ne sont redimensionnées par le widget interactif.
 
-Cependant, ce mécanisme n'est pas aussi bon pour les pages qui sont optimisées pour les écrans étroits à l'aide de [_media queries_](/fr/docs/Web/CSS/CSS_media_queries) - si le viewport virtuel est de 980px par exemple, les media queries qui se déclenchent à 640px, 480px ou moins ne seront jamais utilisées, ce qui limite l'efficacité de ces techniques de _responsive design_.
+        Lorsque la {{Glossary("viewport", "zone d'affichage")}} est redimensionnée, le [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block) est également redimensionné, ce qui affecte la taille calculée des [unités de la zone d'affichage](/fr/docs/Web/CSS/length#unités_de_longueur_relatives_à_la_zone_daffichage).
 
-Pour atténuer ce problème de fenêtre virtuelle sur les appareils à écran étroit, Apple a introduit la «&nbsp;métabalise viewport&nbsp;» dans Safari iOS pour permettre à une page web de contrôler la taille et l'échelle de la fenêtre. De nombreux autres navigateurs mobiles prennent désormais en charge cette balise, bien qu'elle ne fasse partie d'aucune norme web. La [documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html) (en) d'Apple explique bien comment utiliser cette balise, mais nous avons dû faire un travail de détective pour savoir exactement comment l'implémenter dans Fennec. Par exemple, la documentation de Safari indique que le contenu est une « liste délimitée par des virgules », mais les navigateurs et pages web existants utilisent n'importe quel mélange de virgules, points-virgules et espaces comme séparateurs.
+    - `viewport-fit`
+      - : Définit les portions visibles de la page web. Elle peut prendre comme valeur `auto`, `contain` ou `cover`.
+        - `auto`&nbsp;: N'affecte pas la zone d'affichage initiale, et l'ensemble de la page web est visible.
+        - `contain`&nbsp;: La zone d'affichage est ajustée pour s'adapter au plus grand rectangle inscrit dans l'écran.
+        - `cover`&nbsp;: La zone d'affichage est ajustée pour remplir l'écran de l'appareil. Il est fortement recommandé d'utiliser les variables [`safe-area-inset-*`](/fr/docs/Web/CSS/env) pour s'assurer que le contenu important ne se retrouve pas hors de l'affichage.
 
-Pour en savoir plus sur les fenêtres d'affichage dans les différents navigateurs mobiles, consultez [A Tale of Two Viewports](https://www.quirksmode.org/mobile/viewports2.html) sur quirksmode.org.
+### Largeur de la zone d'affichage et largeur de l'écran
 
-## Un viewport de base
+La {{glossary("viewport", "zone d'affichage")}} du navigateur est la zone de la fenêtre dans laquelle le contenu web est visible. La taille de la zone d'affichage doit être calculée avant que le contenu de la page puisse être mis en page&nbsp;: la page peut déborder de la zone d'affichage, auquel cas le navigateur fournit des barres de défilement pour permettre à l'utilisateur·ice de parcourir et d'accéder à tout le contenu, mais la taille de la zone d'affichage sert de référence pour l'espace dans lequel le contenu doit s'adapter, en particulier horizontalement.
 
-Un site type, optimisé pour les mobiles, contient quelque chose comme ce qui suit :
+Certains appareils mobiles et autres écrans étroits affichent les pages dans une fenêtre ou une zone d'affichage virtuelle plus large que l'écran, puis réduisent le résultat pour l'adapter à la taille de l'écran. Les utilisateur·ice·s peuvent alors zoomer et se déplacer pour examiner de plus près différentes parties de la page. Par exemple, si un écran mobile a une largeur de 640px, les pages peuvent être affichées dans une zone d'affichage virtuelle de 980px, puis réduites pour s'adapter à l'espace de 640px. Cela est fait parce que toutes les pages ne sont pas optimisées pour le mobile et peuvent mal s'afficher (ou au moins sembler inadaptées) lorsqu'elles sont rendues avec une petite largeur de zone d'affichage. Cette zone d'affichage virtuelle permet d'améliorer l'apparence générale des sites non optimisés pour le mobile sur les appareils à écran étroit. Cependant, ce mécanisme n'est pas idéal pour les pages optimisées pour les écrans étroits à l'aide de [requêtes média](/fr/docs/Web/CSS/CSS_media_queries)&nbsp;: si la zone d'affichage virtuelle est de 980px, les requêtes média qui s'activent à 640px ou 480px ou moins ne seront jamais utilisées, ce qui limite l'efficacité de ces techniques de conception réactive. L'élément `<meta>` viewport permet d'atténuer ce problème de zone d'affichage virtuelle sur les appareils à écran étroit.
+
+Le paramètre le plus courant est le suivant, qui définit la zone d'affichage pour qu'elle corresponde à la largeur de l'appareil et affiche le contenu à un zoom de 100%&nbsp;:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
-La propriété `width` contrôle la taille de la zone d'affichage. Elle peut être définie sur un nombre spécifique de pixels comme `width=600` ou sur la valeur spéciale `device-width`, qui est la largeur de l'écran en pixels CSS à une échelle de 100%. (Il existe des valeurs `height` et `device-height` correspondantes, qui peuvent être utiles pour les pages comportant des éléments qui changent de taille ou de position en fonction de la hauteur du viewport).
+Les sites peuvent définir leur zone d'affichage sur une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à un petit écran de téléphone en mode portrait. Cela peut poser problème lorsque le navigateur affiche une page à une taille plus grande. Pour résoudre ce problème, les navigateurs élargiront la largeur de la zone d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. Cela est particulièrement utile sur les appareils à grand écran.
 
-La propriété `initial-scale` contrôle le niveau de zoom lors du premier chargement de la page. Les propriétés `maximum-scale`, `minimum-scale` et `user-scalable` contrôlent la manière dont les utilisateurs et utilisatrices sont autorisé·e·s à zoomer ou dézoomer la page.
-
-> [!WARNING]
-> L'utilisation du `user-scalable=no` peut causer des problèmes d'accessibilité aux utilisateurs et utilisatrices ayant des déficiences visuelles telles qu'une vision faible.
-
-## Un pixel n'est pas un pixel
-
-Ces dernières années, les résolutions d'écran ont atteint une taille telle que les pixels individuels sont difficiles à distinguer à l'œil nu. Par exemple, les smartphones récents ont généralement un écran de 5 pouces avec des résolutions supérieures à 1920-1080 pixels (\~400 dpi). Pour cette raison, de nombreux navigateurs peuvent afficher leurs pages dans une taille physique plus petite en convertissant plusieurs pixels matériels pour chaque « pixel » CSS. Au départ, cela a causé des problèmes de convivialité et de lisibilité sur de nombreux sites Web optimisés pour le tactile. Peter-Paul Koch a écrit sur ce problème dans [A pixel is not a pixel](https://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html) (en anglais).
-
-Sur les écrans à haute résolution, les pages avec `initial-scale=1` seront effectivement zoomées par les navigateurs. Leur texte sera lisse et net, mais leurs images bitmap ne profiteront probablement pas de la pleine résolution de l'écran. Pour obtenir des images plus nettes sur ces écrans, les développeurs web peuvent vouloir concevoir des images - ou des mises en page entières - à une échelle plus élevée que leur taille finale, puis les réduire à l'aide de CSS ou de propriétés viewport. Cette méthode est conforme à la spécification [CSS 2.1](https://www.w3.org/TR/CSS2/syndata.html#length-units), qui stipule ce qui suit :
-
-> Si la densité de pixels, du périphérique de sortie, est très différente de celle d'un écran d'ordinateur typique, l'agent utilisateur doit redimensionner les valeurs des pixels. Il est recommandé que l'unité de pixel fasse référence au nombre entier, de pixels du dispositif, qui se rapproche le plus du pixel de référence. Il est recommandé que le pixel de référence corresponde à l'angle visuel d'un pixel sur un dispositif, dont la densité de pixels est de 96 dpi et qui se trouve à une distance d'une longueur de bras du lecteur.
-
-Pour les développeurs et développeuses web, cela signifie que la taille d'une page est beaucoup plus petite que le nombre réel de pixels et que les navigateurs peuvent dimensionner leurs mises en page et leurs images en conséquence. Mais n'oubliez pas que tous les appareils mobiles n'ont pas la même largeur ; vous devez vous assurer que vos pages fonctionnent bien dans une grande variété de tailles d'écran et d'orientations.
-
-Le rapport de pixels par défaut dépend de la densité de l'affichage. Sur un écran dont la densité est inférieure à 200 dpi, le rapport est de 1,0. Sur les écrans dont la densité est comprise entre 200 et 300dpi, le ratio est de 1,5. Sur les écrans dont la densité est supérieure à 300dpi, le ratio est le chiffre entier inférieur (_densité_/150dpi). Notez que le ratio par défaut n'est vrai que lorsque l'échelle du viewport est égale à 1. Sinon, le rapport entre les pixels CSS et les pixels du périphérique dépend du niveau de zoom actuel.
-
-## Largeur de la zone d'affichage et largeur de l'écran
-
-Les sites peuvent définir leur viewport à une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à l'écran d'un petit téléphone en mode portrait. Cela peut causer [des problèmes](http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/) (en) lorsque le navigateur ne rend pas une page à une taille supérieure. Pour remédier à cela, les navigateurs étendent la largeur de la fenêtre d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. Cela est particulièrement utile sur les appareils à grand écran comme l'iPad. (L'article d'Allen Pike [Choosing a viewport for iPad sites](http://www.antipode.ca/2010/choosing-a-viewport-for-ipad-sites/) (en anglais) contient une bonne explication pour les développeurs et développeuses web).
-
-Pour les pages qui définissent une échelle initiale ou maximale, cela signifie que la propriété `width` se traduit en fait par une largeur _minimum_ de viewport. Par exemple, si votre mise en page nécessite une largeur d'au moins 500 pixels, vous pouvez utiliser le balisage suivant. Lorsque la largeur de l'écran est supérieure à 500 pixels, le navigateur élargira la fenêtre d'affichage (plutôt que de zoomer) pour s'adapter à l'écran :
+Pour les pages qui définissent une échelle initiale ou maximale, cela signifie que la propriété `width` correspond en réalité à une largeur minimale de zone d'affichage. Par exemple, si votre mise en page nécessite au moins 500 pixels de largeur, vous pouvez utiliser le balisage suivant. Lorsque l'écran fait plus de 500 pixels de large, le navigateur élargira la zone d'affichage (plutôt que de zoomer) pour remplir l'écran&nbsp;:
 
 ```html
 <meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
-Les autres [attributs](/fr/docs/Web/HTML/Reference/Elements/meta#attributes) disponibles sont `minimum-scale`, `maximum-scale` et `user-scalable`. Ces propriétés affectent l'échelle et la largeur initiales, ainsi que la limitation des changements de niveau de zoom.
+### Densité d'écran
 
-Tous les navigateurs mobiles ne gèrent pas les changements d'orientation de la même manière. Par exemple, Mobile Safari se contente souvent de zoomer la page lors du passage du portrait au paysage, au lieu de la disposer comme elle le ferait si elle était initialement chargée en paysage. Si les développeurs et développeuses Web veulent que leurs paramètres d'échelle restent cohérents lors du changement d'orientation sur l'iPhone, ils/elles doivent ajouter une valeur `maximum-scale` pour empêcher ce zoom, ce qui a l'effet secondaire parfois indésirable d'empêcher les utilisateurs/utilisatrices de faire un zoom avant&nbsp;:
+Les résolutions d'écran ont tellement augmenté que les pixels individuels sont devenus indiscernables à l'œil nu. Par exemple, les smartphones ont souvent de petits écrans avec des résolutions supérieures à 1920×1080 pixels (≈400dpi). Pour cette raison, de nombreux navigateurs peuvent afficher leurs pages dans une taille physique plus petite en traduisant plusieurs pixels matériels pour chaque «&nbsp;pixel&nbsp;» CSS. Initialement, cela a posé des problèmes d'utilisabilité et de lisibilité sur de nombreux sites optimisés pour le tactile.
+
+Sur les écrans à haute densité de pixels (<i lang="en">high dpi</i>), les pages avec `initial-scale=1` seront effectivement agrandies par les navigateurs. Le texte sera net et lisse, mais les images bitmap peuvent ne pas profiter de toute la résolution de l'écran. Pour obtenir des images plus nettes sur ces écrans, les développeur·euse·s web peuvent concevoir des images — ou des mises en page entières — à une échelle supérieure à leur taille finale, puis les réduire à l'aide du CSS ou des propriétés de la zone d'affichage (<i lang="en">viewport</i> en anglais).
+
+Le ratio de pixels par défaut dépend de la densité d'affichage. Sur un écran avec une densité inférieure à 200dpi, le ratio est de 1,0. Sur les écrans avec une densité comprise entre 200 et 300dpi, le ratio est de 1,5. Pour les écrans avec une densité supérieure à 300dpi, le ratio est l'entier inférieur de (_densité_/150dpi). Notez que ce ratio par défaut n'est valable que lorsque l'échelle de la zone d'affichage est égale à 1. Sinon, la relation entre les pixels CSS et les {{glossary("device pixel", "pixels physiques")}} dépend du niveau de zoom actuel.
+
+## Exemples
+
+### Utiliser une taille de zone d'affichage meta
+
+L'exemple suivant indique au navigateur que la page doit être affichée à la largeur de l'appareil&nbsp;:
 
 ```html
-<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
-Supprimer le petit zoom appliqué par de nombreux smartphones en définissant les valeurs d'échelle initiale et d'échelle minimale à 0,86. Le résultat est que le défilement horizontal est supprimé dans n'importe quelle orientation et que l'utilisateur peut zoomer s'il le souhaite.
+### Utiliser une requête média avec une meta viewport
+
+La valeur de `content` suivante utilise plusieurs mots-clés qui suggèrent au navigateur d'utiliser le mode plein écran, ainsi que `viewport-fit`, ce qui permet d'éviter les découpes d'affichage comme les encoches des appareils mobiles&nbsp;:
 
 ```html
 <meta
   name="viewport"
-  content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" />
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 ```
 
-## Tailles communes des fenêtres d'affichage pour les appareils mobiles et les tablettes
+### Effet des widgets d'interface interactifs
 
-Si vous voulez savoir quels appareils mobiles et tablettes ont quelles largeurs de visualisation, il existe une liste complète de [tailles de visualisation des appareils mobiles et tablettes ici](https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html). Elle donne des informations telles que la largeur du viewport en orientation portrait et paysage ainsi que la taille physique de l'écran, le système d'exploitation et la densité de pixels de l'appareil.
+Les widgets d'interface interactifs du navigateur peuvent influencer la taille des zones d'affichage de la page. Le widget le plus courant est le clavier virtuel. Pour contrôler le comportement de redimensionnement utilisé par le navigateur, définissez la propriété `interactive-widget`.
+
+Par défaut, le clavier virtuel ne redimensionne que la zone d'affichage visuelle, ce qui n'affecte pas la mise en page de la page. Vous pouvez adapter la mise en page à la présence du clavier virtuel en définissant la propriété `interactive-widget` à `resizes-content`&nbsp;:
+
+```html
+<meta name="viewport" content="interactive-widget=resizes-content" />
+```
 
 ## Spécifications
 
 {{Specifications}}
 
-{{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'entrée de glossaire de {{glossary("viewport", "zone d'affichage")}}
+- [Préparez-vous aux changements de comportement du redimensionnement de la zone d'affichage à venir dans Chrome sur Android <sup>(angl.)</sup>](https://developer.chrome.com/blog/viewport-resize-behavior/) sur developer.chrome.com
+- [Zones d'affichage mobiles pour des expériences réactives <sup>(angl.)</sup>](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/mobile-viewports) sur Adobe Experience League

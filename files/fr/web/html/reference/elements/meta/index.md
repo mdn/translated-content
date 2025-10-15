@@ -130,7 +130,7 @@ Les pages utilisant `refresh` risquent d'utiliser un intervalle de temps trop co
 
 - [Les noms des métadonnées standard](/fr/docs/Web/HTML/Reference/Elements/meta/name)
 - [Apprendre à utiliser `<meta>`](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#métadonnées_lélément_meta)
-- [La balise méta `viewport`](/fr/docs/Web/HTML/Guides/Viewport_meta_element)
+- [La balise méta `viewport`](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - Les autres éléments relatifs aux métadonnées&nbsp;:
   - [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base)
   - [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head)

@@ -247,7 +247,7 @@ En regardant le code source HTML d'une page <i lang="en">responsive</i>, vous re
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-La balise méta [`viewport`](/fr/docs/Web/HTML/Guides/Viewport_meta_element) indique aux navigateurs mobiles de fixer la largeur de la zone d'affichage sur la largeur de l'appareil et de mettre à l'échelle le document à 100% de sa taille voulue, permettant d'afficher le document sous sa forme optimisée pour mobile, comme voulu.
+La balise méta [`viewport`](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport) indique aux navigateurs mobiles de fixer la largeur de la zone d'affichage sur la largeur de l'appareil et de mettre à l'échelle le document à 100% de sa taille voulue, permettant d'afficher le document sous sa forme optimisée pour mobile, comme voulu.
 
 Pourquoi est-ce nécessaire&nbsp;? Eh bien parce que les navigateurs mobiles ont tendance à mentir à propos de la largeur de leur zone d'affichage.
 
