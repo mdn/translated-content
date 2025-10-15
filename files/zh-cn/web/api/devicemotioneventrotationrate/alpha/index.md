@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-`double` 类型的值。它表示围绕 Z 轴的旋转速率（以度/秒为单位）。更多详细信息，请参见[详述方向与运动数据](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)。
+`double` 类型的值，表示围绕 Z 轴的旋转速率（以度/秒为单位）。更多详细信息，请参见[方向与运动数据解释](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)。
 
 ## 规范
 
