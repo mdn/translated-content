@@ -1,6 +1,6 @@
 ---
 title: CSS 値関数
-slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+slug: Web/CSS/CSS_values_and_units/CSS_value_functions
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

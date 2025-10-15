@@ -23,7 +23,7 @@ None.
 
 ## 示例
 
-参见[冒泡事件](/zh-CN/docs/Web/API/Document_Object_Model/Examples#示例_5：事件传播)。
+参见[冒泡事件](/zh-CN/docs/Web/API/Document_Object_Model#事件传播)。
 
 ## 规范
 

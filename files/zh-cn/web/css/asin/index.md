@@ -3,7 +3,7 @@ title: asin()
 slug: Web/CSS/asin
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_Value_Functions) **`asin()`** 为三角函数，返回介于 `-1` 和 `1` 之间的数的反正弦值。此函数含有单个计算式，此式返回表示介于 `-90deg` 和 `90deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`asin()`** 为三角函数，返回介于 `-1` 和 `1` 之间的数的反正弦值。此函数含有单个计算式，此式返回表示介于 `-90deg` 和 `90deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
 
 ## 语法
 

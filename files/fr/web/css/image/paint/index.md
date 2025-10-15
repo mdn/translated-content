@@ -1,32 +1,36 @@
 ---
 title: paint()
 slug: Web/CSS/image/paint
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`paint()`** définit une valeur de type [`image`](/fr/docs/Web/CSS/image) générée avec un `PaintWorklet`.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`paint()`** définit une valeur de type {{cssxref("&lt;image&gt;")}} générée avec un `PaintWorklet`.
 
 ## Syntaxe
 
 ```css
-paint(nomWorklet, parametres)
+paint(workletName, ...parameters)
 ```
 
 ### Paramètres
 
-- `nomWorklet`
+- `workletName`
   - : Le nom du <i lang="en">worklet</i> enregistré.
-- `paramètres`
+- `parameters` {{optional_inline}}
   - : Des paramètres supplémentaires, optionnels, à passer à `paintWorklet`.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
-### Utilisation simple
+### Utilisation simple de `paint()`
 
-Il est possible de passer des arguments supplémentaires grâce à la fonction CSS `paint()`. Dans cet exemple, on passe deux arguments&nbsp;: le premier indiquant si l'image passée en arrière-plan est pleine ou constitue uniquement un contour, le second indiquant la largeur du contour ainsi formé.
+A partir du HTML suivant&nbsp;:
 
-```html hidden
+```html live-sample___example-boxbg
 <ul>
   <li>Élément 1</li>
   <li>Élément 2</li>
@@ -38,45 +42,92 @@ Il est possible de passer des arguments supplémentaires grâce à la fonction C
   <li>Élément 8</li>
   <li>Élément 9</li>
   <li>Élément 10</li>
-  <li>Élément 11</li>
-  <li>Élément 12</li>
-  <li>Élément 13</li>
-  <li>Élément 14</li>
-  <li>Élément 15</li>
-  <li>Élément 16</li>
-  <li>Élément 17</li>
-  <li>Élément 18</li>
-  <li>Élément 19</li>
-  <li>Élément 20</li>
+  <li>Élément N</li>
 </ul>
 ```
 
-```js hidden
+Avec JavaScript, nous enregistrons le [paint worklet](/fr/docs/Web/API/PaintWorkletGlobalScope)&nbsp;:
+
+```js live-sample___example-boxbg
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/boxbg.js",
+);
+```
+
+Dans le CSS, on définit la propriété `background-image` comme un type `paint()` avec le nom du worklet, `boxbg`, ainsi que toutes les variables (par ex.&nbsp;: `--box-color` et `--width-subtractor`) que le worklet utilisera&nbsp;:
+
+```css live-sample___example-boxbg
+body {
+  font: 1.2em / 1.2 sans-serif;
+}
+li {
+  background-image: paint(boxbg);
+  --box-color: hsl(55 90% 60%);
+}
+
+li:nth-of-type(3n) {
+  --box-color: hsl(155 90% 60%);
+  --width-subtractor: 20;
+}
+
+li:nth-of-type(3n + 1) {
+  --box-color: hsl(255 90% 60%);
+  --width-subtractor: 40;
+}
+```
+
+{{EmbedLiveSample("example-boxbg", "", "300px")}}
+
+### Utilisation de `paint()` avec paramètres
+
+Vous pouvez passer des arguments optionnels à la fonction CSS `paint()`. Dans cet exemple, nous passons deux arguments qui contrôlent si le `background-image` d'un groupe d'éléments de liste est «&nbsp;rempli&nbsp;» ou possède un contour («&nbsp;stroke&nbsp;»), ainsi que la largeur de ce contour&nbsp;:
+
+```html hidden live-sample___example-highlight
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+  <li>item 5</li>
+  <li>item 6</li>
+  <li>item 7</li>
+  <li>item 8</li>
+  <li>item 9</li>
+  <li>item 10</li>
+  <li>item N</li>
+</ul>
+```
+
+```js hidden live-sample___example-highlight
 CSS.paintWorklet.addModule(
   "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
 );
 ```
 
-```css
+```css live-sample___example-highlight
+body {
+  font: 1.2em / 1.2 sans-serif;
+}
+
 li {
-  --boxColor: hsla(55, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, stroke, 2px);
+  --box-color: hsl(55 90% 60% / 100%);
+  background-image: paint(hollow-highlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsla(155, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, filled, 3px);
+  --box-color: hsl(155 90% 60% / 100%);
+  background-image: paint(hollow-highlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsla(255, 90%, 60%, 1);
-  background-image: paint(hollowHighlights, stroke, 1px);
+  --box-color: hsl(255 90% 60% / 100%);
+  background-image: paint(hollow-highlights, stroke, 1px);
 }
 ```
 
-On a ajouté une propriété personnalisée dans le sélecteur pour définir `boxColor`. Cette propriété personnalisée est accessible depuis l'objet `PaintWorklet`.
+On a inclus une propriété personnalisée dans le bloc du sélecteur définissant une couleur de boîte (`boxColor`). Les propriétés personnalisées sont accessibles au PaintWorklet.
 
-{{EmbedLiveSample("", 300, 300)}}
+{{EmbedLiveSample("example-highlight", "", "300px")}}
 
 ## Spécifications
 
@@ -88,8 +139,8 @@ On a ajouté une propriété personnalisée dans le sélecteur pour définir `bo
 
 ## Voir aussi
 
-- [`PaintWorklet`](/fr/docs/Web/API/PaintWorkletGlobalScope)
-- [L'API `CSS Painting`](/fr/docs/Web/API/CSS_Painting_API)
+- L'interface {{domxref('PaintWorkletGlobalScope')}}
+- [L'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API)
 - [Utiliser l'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API/Guide)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`canvas`](/fr/docs/Web/API/Canvas_API)
+- {{cssxref("&lt;image&gt;")}}
+- [L'API Canvas](/fr/docs/Web/API/Canvas_API)

@@ -1,6 +1,6 @@
 ---
 title: CSS 値と単位
-slug: Web/CSS/CSS_Values_and_Units
+slug: Web/CSS/CSS_values_and_units
 l10n:
   sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---

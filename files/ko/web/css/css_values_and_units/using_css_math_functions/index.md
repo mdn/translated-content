@@ -1,7 +1,6 @@
 ---
 title: Using CSS math functions
-slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
-original_slug: Web/CSS/CSS_Functions/Using_CSS_math_functions
+slug: Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 l10n:
   sourceCommit: 8b70438172c589ea52ffb24714818da73d759537
 ---

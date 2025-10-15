@@ -13,8 +13,6 @@ DOM 用邏輯樹來表示文件。樹的每個分支都終止於一個節點，�
 
 節點也可以附加事件處理器。事件觸發後，事件處理器便會執行。
 
-若要深入了解 DOM 是什麼以及它如何表示文件，參見我們的文章 [DOM 簡介](/zh-TW/docs/Web/API/Document_Object_Model/Introduction)。
-
 ## DOM 介面
 
 - {{DOMxRef("AbortController")}}
@@ -93,5 +91,6 @@ HTML DOM API 提供了對各種瀏覽器功能的存取，例如分頁與視窗�
 
 ## 參見
 
-- [DOM 範例](/zh-TW/docs/Web/API/Document_Object_Model/Examples)
 - [CSS 物件模型（CSSOM）](/zh-TW/docs/Web/API/CSS_Object_Model)
+- [HTML DOM API](/zh-TW/docs/Web/API/HTML_DOM_API)
+- [SVG API](/zh-TW/docs/Web/API/SVG_API)

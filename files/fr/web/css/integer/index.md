@@ -1,48 +1,47 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
-
-Le type de donnée CSS **`<integer>`** permet de représenter des nombres entiers positifs ou négatifs. Aucune unité n'est liée à la valeur. Les entiers sont utilisés dans de nombreuses propriétés CSS comme {{cssxref("z-index")}}, {{cssxref("line-height")}}, {{cssxref("counter-increment")}}, {{cssxref("column-count")}}, {{cssxref("grid-row")}}, {{cssxref("repeat()")}}. Ce type est un sous-type de {{cssxref("number")}}.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<integer>`** est un type particulier de {{cssxref("number")}} qui représente un nombre entier positif ou négatif. Les entiers peuvent être utilisés dans de nombreuses propriétés et descripteurs CSS, comme les propriétés {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} et le descripteur {{cssxref("@counter-style/range", "range")}}.
 
 ## Syntaxe
 
-Un entier se compose d'un ou de plusieurs chiffres, de 0 à 9, éventuellement précédés par un seul signe `+` ou `-`. Il n'y a pas d'unité pour ce type de donnée.
-
-Toutes les valeurs de type `<integer>` sont également des valeurs de type {{cssxref("&lt;number&gt;")}}, bien que l'inverse ne soit pas vrai.
+Le type de donnée `<integer>` se compose d'un ou plusieurs chiffres décimaux, de 0 à 9 inclus, précédés éventuellement d'un seul signe `+` ou `-`. Il n'y a pas d'unité associée aux entiers.
 
 > [!NOTE]
-> Il n'y a pas de bornes à l'ensemble des valeurs de type `<entier>` valides. Opera supporte des valeurs jusqu'à 2^15-1, IE jusqu'à 2^20-1 et d'autres navigateurs des valeurs encore plus hautes. Durant le cycle CSS3 Values, il y a eu de nombreuses discussions pour définir une valeur minimale à supporter : la dernière décision, en date d'avril 2012 pendant la phase LC, était \[-2^27-1; 2^27-1] [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html) mais d'autres valeurs comme 2^24-1 et 2^30-1 ont aussi été proposées [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html) [#](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). Le dernier brouillon ne fait plus apparaître de limite.
+> Il n'existe pas de plage officielle de valeurs `<integer>` valides, et les spécifications n'en définissent pas.
 
 ## Interpolation
 
-Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_entière_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
+Lorsqu'elles sont animées, les valeurs du type `<integer>` sont {{Glossary("interpolation", "interpolées")}} par paliers entiers discrets. Le calcul est réalisé comme s'il s'agissait de nombres réels à virgule flottante&nbsp;; la valeur discrète est obtenue en utilisant la [fonction partie entière](https://fr.wikipedia.org/wiki/Partie_enti%C3%A8re_et_partie_fractionnaire). La rapidité de l'interpolation est déterminée par la [fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
 
 ## Exemples
 
-Ces valeurs sont des entiers valides :
+### Entiers valides
 
-```css
-12          Entier positif (sans le signe + à l'avant)
-+123        Entier positif (avec le signe + à l'avant)
+```plain example-good
+12          Entier positif (sans le signe +)
++123        Entier positif (avec le signe +)
 -456        Entier négatif
 0           Zéro
-+0          Zéro, avec un signe + à l'avant
--0          Zéro, avec un signe - à l'avant (bien qu'étrange, cette valeur est acceptée)
++0          Zéro, avec le signe +
+-0          Zéro, avec le signe -
 ```
 
-Ces valeurs sont des entiers non valides :
+### Entiers non valides
 
-```css example-bad
-12.0        Ceci est un {{cssxref("&lt;number&gt;")}}, pas un <entier>, bien qu'il représente un entier
-12.         Le point ne peut pas faire partie d'un <entier>
-+---12      Un seul +/- à l'avant est accepté
-ten         Les lettres ne sont pas acceptées
-_5          Les caractères spéciaux ne sont pas acceptés
-\35         Les caractères Unicode échappés ne sont pas acceptés, même s'ils sont un entier (ici : 5)
-\4E94       Les chiffres non-arabes ne sont pas acceptés, même échappés (ici : le 5 japonais, 五)
+```plain example-bad
+12.0        Ceci est un <number>, pas un <entier>, même si c'est un entier.
+12.         Le point ne peut pas faire partie d'un <entier>.
++---12      Un seul +/- à l'avant est autorisé.
+ten         Les lettres ne sont pas autorisées.
+_5          Les caractères spéciaux ne sont pas autorisés.
+\35         Les caractères Unicode échappés ne sont pas autorisés, même si c'est un entier (ici : 5).
+\4E94       Les chiffres non-arabes ne sont pas autorisés, même échappés (ici : le 5 japonais, 五).
+3e4         La notation scientifique n'est pas autorisée.
 ```
 
 ## Spécifications
@@ -55,4 +54,4 @@ _5          Les caractères spéciaux ne sont pas acceptés
 
 ## Voir aussi
 
-- {{cssxref("&lt;number&gt;")}}
+- Le type de donnée {{cssxref("&lt;number&gt;")}}

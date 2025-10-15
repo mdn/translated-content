@@ -1,6 +1,6 @@
 ---
 title: 値定義構文
-slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+slug: Web/CSS/CSS_values_and_units/Value_definition_syntax
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
