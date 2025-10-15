@@ -1,6 +1,7 @@
 ---
 title: Examples
-slug: Web/API/Document_Object_Model/Examples
+slug: conflicting/Web/API/Document_Object_Model
+original_slug: Web/API/Document_Object_Model/Examples
 ---
 
 {{DefaultAPISidebar("DOM")}}
