@@ -269,7 +269,8 @@ let mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-> **경고:** {{jsxref("Object.assign()")}}은 [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)를 트리거하는 반면 전개 연산자는 그렇지 않음을 유의하세요!
+> [!WARNING]
+> {{jsxref("Object.assign()")}}은 [setters](/ko/docs/Web/JavaScript/Reference/Functions/set)를 트리거하는 반면 전개 연산자는 그렇지 않음을 유의하세요!
 
 ### 프로토타입 변형
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/ETag
 original_slug: Web/HTTP/Headers/ETag
 ---
 
-{{HTTPSidebar}}
-
 El encabezado de respuesta de HTTP **`ETag`** es un identificador para una versión específica de un recurso. Permite a la memoria caché ser más eficiente, y ahorrar ancho de banda, en tanto que un servidor web no necesita enviar una respuesta completa si el contenido no ha cambiado. Por otro lado, si el contenido cambió, los etags son útiles para ayudar a prevenir actualizaciones simultáneas de un recurso de sobre-escribirlo por otro ("colisiones en el aire").
 
 Si el recurso en una URL dada cambia, un valor Etag debe ser generado. De esta forma los Etags son muy similares a las huellas digitales y pueden también usarse para propósitos de rastreo por algunos servidores. Un comparativo de ellos permite rápidamente determinar cuándo dos representaciones de un recurso son las mismas, pero podrían también configurarse para persistir indefinidamente por un servidor en rastreo.

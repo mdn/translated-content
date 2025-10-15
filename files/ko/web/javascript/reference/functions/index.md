@@ -24,7 +24,8 @@ JavaScript에서 함수는 다른 함수로 전달되거나 반환받을 수 있
 
 함수 실행이 [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문에서 끝나지 않거나 `return` 키워드 뒤에 표현식이 없는 경우 반환 값은 {{jsxref("undefined")}}가 됩니다. `return`문을 사용하면 함수에서 임의의 값을 반환할 수 있습니다. 하나의 함수 호출은 하나의 값만 반환할 수 있지만, 객체 또는 배열을 반환하고 그 결과를 [구조 분해](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)하여 여러 값을 반환하는 효과를 나타낼 수 있습니다.
 
-> **참고:** [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출되는 생성자에는 반환값을 결정하는 다른 로직이 있습니다.
+> [!NOTE]
+> [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출되는 생성자에는 반환값을 결정하는 다른 로직이 있습니다.
 
 ### 인수 전달
 

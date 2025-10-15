@@ -3,8 +3,6 @@ title: Build the brick field
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 9 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson09.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson09.html)完成本课后，你可以找到源代码。

@@ -115,7 +115,8 @@ HTML 오른쪽의 [Rules view](https://firefox-source-docs.mozilla.org/devtools-
 
 ![개발자 도구의 레이아웃 섹션](inspecting4-box-model.png)
 
-> **참고:** [박스 모델 검사](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)에서 자세히 알아보십시오.
+> [!NOTE]
+> [박스 모델 검사](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)에서 자세히 알아보십시오.
 
 ## 특이성 문제 해결
 

@@ -3,8 +3,6 @@ title: Randomizing gameplay
 slug: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 中的第**16 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson16.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson16.html)完成本课程后找到源代码。

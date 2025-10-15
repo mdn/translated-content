@@ -3,8 +3,6 @@ title: <h1>–<h6>：HTML 章節標題元素
 slug: Web/HTML/Reference/Elements/Heading_Elements
 ---
 
-{{HTMLSidebar}}
-
 **`<h1>`** 到 **`<h6>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表六個級別的章節標題。`<h1>` 是最高的章節級別，`<h6>` 是最低的。默認情況下，所有標題元素在佈局中創建一個[區塊級](/zh-TW/docs/Glossary/Block-level_content)區域，從新行開始並佔據其包含區塊中可用的全部寬度。
 
 {{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}

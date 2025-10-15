@@ -3,8 +3,6 @@ title: :disabled
 slug: Web/CSS/:disabled
 ---
 
-{{CSSRef}}
-
 `:disabled` [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何被禁用的元素。如果一个元素不能被激活（如选择、点击或接受文本输入）或获取焦点，则该元素处于被禁用状态。元素还有一个启用状态，在启用状态下，元素可以被激活或获取焦点。
 
 {{InteractiveExample("CSS Demo: :disabled", "tabbed-standard")}}

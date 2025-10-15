@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 设置在用户点击浏览器操作图标时，将会以弹出窗口的形式打开的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 ## 语法

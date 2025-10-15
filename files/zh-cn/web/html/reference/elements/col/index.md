@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
-{{HTMLSidebar}}
-
 **`<col>`** [HTML](/zh-CN/docs/Web/HTML) 元素在其父 {{HTMLElement("colgroup")}} 元素所代表的列组中定义一列或多列。`<col>` 元素只有作为没有定义 [`span`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#span) 属性的 {{HTMLElement("colgroup")}} 元素的子元素才有效。
 
 {{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}

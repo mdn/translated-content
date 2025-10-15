@@ -3,8 +3,6 @@ title: 反弹的墙壁
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第三节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 看到源码。

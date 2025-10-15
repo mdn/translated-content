@@ -1,55 +1,73 @@
 ---
 title: :hover
 slug: Web/CSS/:hover
+l10n:
+  sourceCommit: d64c2d5cb1f04b569e6af5d42feaadbc8c375b03
 ---
 
-{{CSSRef}}
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur·ice le survole avec le pointeur, sans nécessairement l'activer.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.
+{{InteractiveExample("CSS Demo: :hover", "tabbed-shorter")}}
 
-```css
-/* Cible n'importe quel élément <a> lorsque  */
-/* celui-ci est survolé */
-a:hover {
+```css interactive-example
+.joinBtn {
+  width: 10em;
+  height: 5ex;
   background-color: gold;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  background-color: bisque;
 }
 ```
 
-La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'autres pseudo-classes relatives aux liens hypertextes comme {{cssxref(":link")}}, {{cssxref(":visited")}}, et {{cssxref(":active")}}, apparaissant dans des règles subséquentes. Pour décorer les liens sans effet de bord problématique, on placera la règle `:hover` après les règles `:link` et `:visited` mais avant la règle `:active` (l'ordre est `:link` — `:visited` — `:hover` — `:active` – un moyen mnémotechnique est de se souvenir des initiales LVHA) tandis que l'ordre de la règle {{cssxref(":focus")}} est indifférent.
+```html interactive-example
+<p>Souhaitez-vous vous joindre à notre quête ?</p>
+<button class="joinBtn">Confirmer</button>
+```
 
-La pseudo-classe `:hover` peut être appliquée à n'importe quel [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements). {{experimental_inline}}
+Les styles définis par la pseudo-classe `:hover` seront remplacés par toute pseudo-classe liée à un lien ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, ou {{ cssxref(":active") }}) qui a au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:hover` après les règles `:link` et `:visited`, mais avant la règle `:active`, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`.
 
 > [!NOTE]
-> Sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.
+> Sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeur·euse·s web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateur·ice·s de tels appareils.
 
 ## Syntaxe
 
-{{csssyntax}}
-
-## Exemples
-
-### CSS
-
 ```css
-a:hover {
-  background-color: gold;
+:hover {
+  /* ... */
 }
 ```
+
+## Exemples
 
 ### HTML
 
 ```html
-<p>
-  <a href="#">Ce lien sera écrit sur un fond doré lors du survol.</a>
-</p>
+<a href="#">Ce lien sera écrit sur un fond doré lors du survol.</a>
+```
+
+### CSS
+
+```css
+a {
+  background-color: powderblue;
+  transition: background-color 0.5s;
+}
+
+a:hover {
+  background-color: gold;
+}
 ```
 
 ### Résultat
 
 {{EmbedLiveSample('Exemples')}}
-
-> [!NOTE]
-> On peut utiliser la pseudo-classe `:checked` dans une galerie d'images afin d'afficher une version agrandie de l'image lorsqu'on survole la vignette.
 
 ## Spécifications
 
@@ -61,5 +79,5 @@ a:hover {
 
 ## Voir aussi
 
-- [Bogue Chromium #370155 : Don't make :hover sticky on tap on sites that set a mobile viewport](https://code.google.com/p/chromium/issues/detail?id=370155)
-- [Bogue Chromium #306581 : Immediately show hover and active states on touch when page isn't scrollable](https://code.google.com/p/chromium/issues/detail?id=306581)
+- [Bogue Chromium #370155 : Don't make :hover sticky on tap on sites that set a mobile viewport <sup>(angl.)</sup>](https://code.google.com/p/chromium/issues/detail?id=370155)
+- [Bogue Chromium #306581 : Immediately show hover and active states on touch when page isn't scrollable <sup>(angl.)</sup>](https://code.google.com/p/chromium/issues/detail?id=306581)
