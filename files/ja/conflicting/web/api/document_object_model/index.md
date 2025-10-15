@@ -1,6 +1,7 @@
 ---
 title: ドキュメントオブジェクトモデルの使い方
-slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+slug: conflicting/Web/API/Document_Object_Model
+original_slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 l10n:
   sourceCommit: d4a50b63d9afd826e61eb8833e8e6337b5059e8a
 ---

@@ -1,6 +1,6 @@
 ---
 title: テキストデータ型
-slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
+slug: Web/CSS/CSS_values_and_units/Textual_data_types
 l10n:
   sourceCommit: 83dd1960e946e82f2cf830ac5df5703df501f73b
 ---

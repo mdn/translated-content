@@ -1,6 +1,6 @@
 ---
 title: CSS データ型
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
+slug: Web/CSS/CSS_values_and_units/CSS_data_types
 l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
