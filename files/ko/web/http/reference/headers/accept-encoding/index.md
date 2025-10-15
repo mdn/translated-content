@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Accept-Encoding
 original_slug: Web/HTTP/Headers/Accept-Encoding
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Encoding`** 요청 HTTP 헤더는, 보통 압축 알고리즘인, 클라이언트가 이해 가능한 컨텐츠 인코딩이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)을 사용하여, 서버는 제안된 내용 중 하나를 선택하고 사용하며 {{HTTPHeader("Content-Encoding")}} 응답 헤더를 이용해 선택된 것을 클라이언트에게 알려줍니다.
 
 클라이언트와 서버 모두 동일한 압축 알고리즘을 지원한다고 해도, 식별 값 또한 수용 가능하다면, 서버는 응답의 본문을 압축하지 않으려고 할 수 있습니다. 두 가지 일반적인 경우가 이런 일을 초래합니다:
@@ -15,7 +13,8 @@ original_slug: Web/HTTP/Headers/Accept-Encoding
 
 부호화(encoding)되지 않았음을 의미하는, `identity` 값이 식별에 대한 다른 명시적인 설정 값 없이 `identity;q=0` or a `*;q=0`에 의해 명시적으로 숨겨지지 않는 한, 서버는 {{HTTPStatus("406")}} `Acceptable` 오류를 회신해서는 결코 안됩니다.
 
-> **참고:** **Notes:**- IANA 레지스트리는 [공식적인 컨텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 운영 중입니다.
+> [!NOTE]
+> IANA 레지스트리는 [공식적인 컨텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 운영 중입니다.
 >
 > - 두 개의 다른 컨텐츠 인코딩, `bzip`과 `bzip2`이 표준은 아니지만 때때로 사용되기도 합니다. 그들은 두 개의 UNIX 프로그램에 의해 사용되는 알고리즘을 구현합니다. 첫번째 알고리즘은 특허 라이선스 문제 때문에 더 이상 유지되지 않는다는 것을 알아두시기 바랍니다.
 

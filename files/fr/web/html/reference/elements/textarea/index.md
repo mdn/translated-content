@@ -53,7 +53,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Attributs
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `autocapitalize` {{non-standard_inline}}
   - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles pour iOS 5 et les versions supérieures sont :
@@ -69,7 +69,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
     - `off` : l'utilisateur doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
     - `on` : le navigateur peut compléter la saisie de l'utilisateur en fonction de ce que l'utilisateur a déjà saisi précédemment sur ce champ.
 
-    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) de l'élément {{HTMLElement("form")}}.
+    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/form#autocomplete) de l'élément {{HTMLElement("form")}}.
 
 - `autofocus`
   - : Cet attribut permet d'indiquer que ce contrôle doit recevoir le focus au chargement de la page. Seul un élément de formulaire au sein d'un document peut avoir cet attribut déclaré.
@@ -103,9 +103,9 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Interaction avec CSS
 
-Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
+Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
 
-[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
+[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
 
 ### Incohérences quant à la ligne de base
 

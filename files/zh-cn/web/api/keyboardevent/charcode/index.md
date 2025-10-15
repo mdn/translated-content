@@ -53,7 +53,7 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 通过输入法输入的字符，不会被设置到注册到通过 `keyCode` 和 `charCode`。
 
-要查看特定按键的 `charCode` 值的列表，运行[示例 7：显示事件对象的属性](/zh-CN/docs/Web/API/Document_Object_Model/Examples#示例_7：显示事件对象的属性)并查看 HTML 表格结果。
+要查看特定按键的 `charCode` 值的列表，运行[示例 7：显示事件对象的属性](/zh-CN/docs/Web/API/Document_Object_Model#示例_7：显示事件对象的属性)并查看 HTML 表格结果。
 
 ## 规范
 

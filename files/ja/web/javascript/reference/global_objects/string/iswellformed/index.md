@@ -1,11 +1,10 @@
 ---
 title: String.prototype.isWellFormed()
+short-title: isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`isWellFormed()`** は {{jsxref("String")}} 値のメソッドで、この文字列に[孤立サロゲート](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)があるかどうかを示す論理値を返します。
 
@@ -89,5 +88,6 @@ if (illFormed.isWellFormed()) {
 ## 関連情報
 
 - [`String.prototype.isWellFormed` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#well-formed-unicode-strings)
+- [es-shims による `String.prototype.isWellFormed` のポリフィル](https://www.npmjs.com/package/string.prototype.iswellformed)
 - {{jsxref("String.prototype.toWellFormed()")}}
 - {{jsxref("String.prototype.normalize()")}}

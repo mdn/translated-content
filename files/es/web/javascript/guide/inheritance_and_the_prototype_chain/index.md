@@ -691,7 +691,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 Todos los objetos heredan el setter [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que se puede utilizar para configurar el `[[Prototype]]` de un objeto existente (si la clave `__proto__` no es anulada en el objeto).
 
-> **Advertencia:** `Object.prototype.__proto__` accessors son **no estandar** y están en desuso. En su lugar usted debería usar `Object.setPrototypeOf`.
+> [!WARNING]
+> `Object.prototype.__proto__` accessors son **no estandar** y están en desuso. En su lugar usted debería usar `Object.setPrototypeOf`.
 
 ```js
 const obj = {};

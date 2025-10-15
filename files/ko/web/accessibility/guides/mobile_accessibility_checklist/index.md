@@ -73,4 +73,5 @@ l10n:
 
 - 터치 요소는 유저가 상호작용 할 수 있을 정도로 충분한 크기를 가져야 합니다(적절한 터치 요소 크기에 대한 지침들은 [BBC 모바일 접근성 지침](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size)을 참고하세요).
 
-> **참고:** [이 문서 원문](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)의 작성자는 [Yura Zenevich](https://yzen.github.io/)입니다.
+> [!NOTE]
+> [이 문서 원문](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)의 작성자는 [Yura Zenevich](https://yzen.github.io/)입니다.

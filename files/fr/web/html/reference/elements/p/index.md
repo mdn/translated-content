@@ -2,23 +2,25 @@
 title: "<p> : l'élément paragraphe"
 slug: Web/HTML/Reference/Elements/p
 original_slug: Web/HTML/Element/p
+l10n:
+  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<p>`** représente un paragraphe. Les paragraphes sont généralement représentés dans les médias visuels comme des blocs de texte séparés des blocs adjacents par des lignes vides et/ou une indentation de première ligne, mais les paragraphes HTML peuvent être tout regroupement structurel de contenu lié, comme des images ou des champs de formulaire.
 
-L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Glossary/Block-level_content).
+Les paragraphes sont des [éléments de niveau bloc](/fr/docs/Glossary/Block-level_content) et, notamment, se ferment automatiquement si un autre élément de niveau bloc est analysé avant la balise de fermeture `</p>`. Voir «&nbsp;Omission de balises&nbsp;» ci-dessous.
 
-{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;p&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>
-  Geckos are a group of usually small, usually nocturnal lizards. They are found
-  on every continent except Antarctica.
+  Les geckos sont un groupe de lézards généralement petits et nocturnes. On les
+  trouve sur tous les continents sauf l'Antarctique.
 </p>
 
 <p>
-  Some species live in houses where they hunt insects attracted by artificial
-  light.
+  Certaines espèces vivent dans les maisons où elles chassent les insectes
+  attirés par la lumière artificielle.
 </p>
 ```
 
@@ -30,17 +32,26 @@ p {
 }
 ```
 
-Étant des éléments de bloc, les paragraphes se fermeront automatiquement si un autre élément de bloc est analysé avant la balise de fermeture `</p>` (voir Omission de balises dans le tableau qui suit).
-
-> [!NOTE]
-> Pour modifier l'espacement entre les paragraphes, il faudra utiliser la propriété CSS {{cssxref("margin")}}. _Il ne faut pas insérer de paragraphes vides ou d'éléments {{HTMLElement("br")}} afin de créer un espace_.
-
 ## Attributs
 
-Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.
+
+## Accessibilité
+
+Répartir le contenu entre différents paragraphes permet d'améliorer l'accessibilité d'une page. Les lecteurs d'écran et autres outils d'assistance fournissent des raccourcis qui permettent aux utilisateurs d'accéder rapidement au paragraphe suivant ou précédent et ainsi de naviguer plus rapidement sur la page, comme le permettent les blancs pour la navigation visuelle des autres utilisateurs.
+
+L'utilisation de paragraphes vides (des éléments HTML `<p>` sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance. Les lecteurs d'écran, par exemple, pourraient annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.
+
+S'il est nécessaire d'avoir un espace supplémentaire, on pourra utiliser des propriétés {{glossary("CSS")}} comme {{cssxref("margin")}} pour obtenir l'effet désiré.
+
+```css
+p {
+  margin-bottom: 2em; // on ajoute un espace après chaque paragraphe
+}
+```
 
 ## Exemples
 
@@ -59,21 +70,78 @@ Cet élément, comme les autres éléments HTML, inclut [les attributs universel
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","300","150")}}
+{{EmbedLiveSample("exemples")}}
 
-## Accessibilité
+## Mise en forme des paragraphes
 
-Répartir le contenu entre différents paragraphes permet d'améliorer l'accessibilité d'une page. Les lecteurs d'écran et autres outils d'assistance fournissent des raccourcis qui permettent aux utilisateurs d'accéder rapidement au paragraphe suivant ou précédent et ainsi de naviguer plus rapidement sur la page, comme le permettent les blancs pour la navigation visuelle des autres utilisateurs.
+Par défaut, les navigateurs séparent les paragraphes par une seule ligne vide. D'autres méthodes de séparation, comme l'indentation de la première ligne, peuvent être obtenues avec {{glossary("CSS")}}&nbsp;:
 
-L'utilisation de paragraphes vides (des éléments HTML `<p>` sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance. Les lecteurs d'écran, par exemple, pourraient annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.
+### HTML
 
-S'il est nécessaire d'avoir un espace supplémentaire, on pourra utiliser des propriétés CSS comme {{cssxref("margin")}} pour obtenir l'effet désiré.
+```html
+<p>
+  Séparer les paragraphes par des lignes vides est le plus facile à parcourir
+  pour les lecteurs·rices, mais ils peuvent aussi être séparés en indentant leur
+  première ligne. Cela est souvent utilisé pour prendre moins de place, par
+  exemple pour économiser du papier à l'impression.
+</p>
+
+<p>
+  Les écrits destinés à être modifiés, comme les devoirs scolaires et les
+  brouillons, utilisent à la fois des lignes vides et l'indentation pour séparer
+  les paragraphes. Dans les œuvres achevées, combiner les deux est considéré
+  comme redondant et peu professionnel.
+</p>
+
+<p>
+  Dans les écrits très anciens, les paragraphes étaient séparés par un caractère
+  spécial&nbsp;: ¶, le <i>pied-de-mouche</i>. Aujourd'hui, cela est considéré
+  comme oppressant et difficile à lire.
+</p>
+
+<p>
+  À quel point est-ce difficile à lire&nbsp;? Voyez par vous-même&nbsp;:
+  <button data-toggle-text="Oh non&nbsp;! Revenir en arrière&nbsp;!">
+    Utiliser le pied-de-mouche pour les paragraphes
+  </button>
+</p>
+```
+
+### CSS
 
 ```css
 p {
-  margin-bottom: 2em; // on ajoute un espace après chaque paragraphe
+  margin: 0;
+  text-indent: 3ch;
+}
+
+p.pilcrow {
+  text-indent: 0;
+  display: inline;
+}
+p.pilcrow + p.pilcrow::before {
+  content: " ¶ ";
 }
 ```
+
+### JavaScript
+
+```js
+document.querySelector("button").addEventListener("click", (event) => {
+  document.querySelectorAll("p").forEach((paragraph) => {
+    paragraph.classList.toggle("pilcrow");
+  });
+
+  [event.target.innerText, event.target.dataset.toggleText] = [
+    event.target.dataset.toggleText,
+    event.target.innerText,
+  ];
+});
+```
+
+### Résultat
+
+{{EmbedLiveSample('mise_en_forme_des_paragraphes')}}
 
 ## Résumé technique
 
@@ -81,23 +149,20 @@ p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -105,38 +170,49 @@ p {
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin peut être absente
-        si l'élément {{HTMLElement("p")}} est immédiatement suivi d'un
-        élément {{HTMLElement("address")}},
+        La balise de début est obligatoire. La balise de fin peut être omise si l'élément
+        <code>&lt;p&gt;</code> est immédiatement suivi d'un
+        {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
-        {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
+        {{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
+        {{HTMLElement("figcaption")}}, {{HTMLElement("figure")}},
         {{HTMLElement("footer")}}, {{HTMLElement("form")}},
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, {{HTMLElement("h6")}},
-        {{HTMLElement("header")}}, {{HTMLElement("hr")}},
-        {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
-        {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
+        {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>")}}, {{HTMLElement("Heading_Elements", "<code>&lt;h2&gt;</code>")}},
+        {{HTMLElement("Heading_Elements", "<code>&lt;h3&gt;</code>")}}, {{HTMLElement("Heading_Elements", "<code>&lt;h4&gt;</code>")}},
+        {{HTMLElement("Heading_Elements", "<code>&lt;h5&gt;</code>")}}, {{HTMLElement("Heading_Elements", "<code>&lt;h6&gt;</code>")}},
+        {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}},
+        {{HTMLElement("main")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
+        {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("search")}},
         {{HTMLElement("section")}}, {{HTMLElement("table")}},
-        {{HTMLElement("ul")}} ou d'un autre élément
-        {{HTMLElement("p")}} ou s'il n'y a plus de contenu dans
-        l'élément parent et que l'élément parent n'est pas un élément
-        {{HTMLElement("a")}}.
+        {{HTMLElement("ul")}} ou d'un autre élément <code>&lt;p&gt;</code>,
+        ou s'il n'y a plus de contenu dans l'élément parent et que l'élément parent n'est pas un élément
+        {{HTMLElement("a")}}, {{HTMLElement("audio")}},
+        {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}},
+        {{HTMLElement("noscript")}} ou {{HTMLElement("video")}},
+        ou un élément personnalisé autonome.
       </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles"
+          >paragraphe</a
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
+      <td>Tous</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -155,5 +231,5 @@ p {
 
 ## Voir aussi
 
-- {{HTMLElement("hr")}}
-- {{HTMLElement("br")}}
+- L'élément HTML {{HTMLElement("hr")}}
+- L'élément HTML {{HTMLElement("br")}}

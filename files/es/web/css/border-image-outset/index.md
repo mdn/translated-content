@@ -3,8 +3,6 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad **`border-image-outset`** describe el monto por el cual se extenderá la imagen de borde más allá del límite de la caja.

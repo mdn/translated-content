@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eb20a5272772231852864ddc71b9710de0fa1d4f
 ---
 
-{{CSSRef}}
-
 **`prefers-contrast`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#媒体特性)用于检测用户是否要求以更低或更高的对比度来呈现 Web 内容。
 
 ## 语法

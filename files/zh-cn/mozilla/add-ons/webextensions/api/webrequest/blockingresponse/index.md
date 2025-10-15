@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{AddonSidebar}}
-
 在 `extraInfoSpec` 参数中设置了 `"blocking"` 参数的事件监听器将返回该类型的对象。
 
 通过设置 `BlockingResponse` 中的特定属性，监听器可以修改网络请求。

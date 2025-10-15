@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### floating 엘리먼트의 쌓임
@@ -27,7 +25,8 @@ floating 엘리먼트들의 쌓임 순서는 약간 다르다. floating 엘리�
 4. inline 자식 엘리먼트는 보통의 흐름대로
 5. position이 지정된 자식 엘리먼트들은 HTML에서 등장하는 순서대로
 
-> **참고:** **노트:** 아래 예제에서 position이 지정되지 않은 엘리먼트 이외에는 모든 엘리먼트가 쌓임 순서를 보여주기 위해 반투명하게 설정되었다. 만약 position이 지정되지 않은 엘리먼트 (DIV #4)의 투명도를 낮추면 이상한 일이 일어난다. 배경과 테두리가 (원래에는 floating 엘리먼트 아래에 있어야 함에도 불구하고) floating 엘리먼트와 position이 지정된 엘리먼트 사이에 보이는 것이다. 이것이 명세의 일부인지 아니면 버그인지 확실하지 않다. 투명도를 적용하는것이 새로운 쌓임 맥락(stacking context)를 만드는 것일까?
+> [!NOTE]
+> **노트:** 아래 예제에서 position이 지정되지 않은 엘리먼트 이외에는 모든 엘리먼트가 쌓임 순서를 보여주기 위해 반투명하게 설정되었다. 만약 position이 지정되지 않은 엘리먼트 (DIV #4)의 투명도를 낮추면 이상한 일이 일어난다. 배경과 테두리가 (원래에는 floating 엘리먼트 아래에 있어야 함에도 불구하고) floating 엘리먼트와 position이 지정된 엘리먼트 사이에 보이는 것이다. 이것이 명세의 일부인지 아니면 버그인지 확실하지 않다. 투명도를 적용하는것이 새로운 쌓임 맥락(stacking context)를 만드는 것일까?
 
 ## 예제
 

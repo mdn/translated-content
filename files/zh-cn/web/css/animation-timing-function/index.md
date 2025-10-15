@@ -3,8 +3,6 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 ---
 
-{{CSSRef}}
-
 **`animation-timing-function`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画在每个周期的持续时间内如何进行。
 
 {{InteractiveExample("CSS Demo: animation-timing-function")}}

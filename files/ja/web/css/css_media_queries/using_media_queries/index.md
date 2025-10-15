@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
-{{CSSRef}}
-
 **メディアクエリー**によって、端末の種類（プリンターや画面など）や、画面の解像度、向き、{{glossary("aspect ratio", "アスペクト比")}}、ブラウザーの{{glossary("viewport", "ビューポート")}}の幅や高さ、ユーザーの設定（動きの軽減、データの使用、透明度など）などの機能や特徴に応じて CSS スタイルを適用することができます。
 
 メディアクエリーは以下の用途で使用されます。
@@ -69,7 +67,8 @@ l10n:
 メディア種別（指定されている場合）が文書を表示する端末と照合され、かつ、すべてのメディア機能式が `true` と計算されると、メディアクエリーは true と計算されます。
 未知のメディア種別を含むクエリーは常に false となります。
 
-> **メモ:** {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
+> [!NOTE]
+> {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
 > ただし、その内容は、クエリーの結果が `true` にならない限り適用されません。
 > なぜこのようになるかは、 Tomayac 氏のブログ [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2) に書かれています。
 

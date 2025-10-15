@@ -242,7 +242,8 @@ Si deseas buscar algo que tenga palabras de moda menos obvias, debes pensar en q
 
 Si tienes un problema con algún código y aparece un mensaje de error específico, a menudo es una buena idea copiar el mensaje de error en tu motor de búsqueda y utilizarlo como término de búsqueda. Si otras personas han tenido el mismo problema, es probable que haya algunos artículos o publicaciones de blog al respecto en lugares como MDN o Stack Overflow.
 
-> **Nota:** [Stack Overflow](https://stackoverflow.com/) es un sitio web realmente útil; básicamente es una enorme base de datos de preguntas y respuestas seleccionadas sobre diversas tecnologías y técnicas relacionadas. Probablemente encontrarás una respuesta que responda a tu pregunta. Si no, puedes hacer una pregunta y ver si alguien puede ayudarte.
+> [!NOTE]
+> [Stack Overflow](https://stackoverflow.com/) es un sitio web realmente útil; básicamente es una enorme base de datos de preguntas y respuestas seleccionadas sobre diversas tecnologías y técnicas relacionadas. Probablemente encontrarás una respuesta que responda a tu pregunta. Si no, puedes hacer una pregunta y ver si alguien puede ayudarte.
 
 #### Prueba en el navegador
 

@@ -14,7 +14,8 @@ l10n:
 
 `placeholder` 특성은 `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/password", "password")}}` 타입의 입력 필드와 `{{HTMLElement("textarea")}}` 요소에서 지원됩니다. 아래 [예제](#예제)에서는 입력 필드의 예상 형식을 설명하기 위해 `placeholder` 특성을 사용하는 방법을 보여줍니다.
 
-> **참고:** `placeholder` 특성에는 줄 바꿈(LF)이나 캐리지 리턴(CR)을 포함할 수 없습니다. 값에 이러한 문자가 포함되면 placeholder 텍스트가 잘리게 됩니다.
+> [!NOTE]
+> `placeholder` 특성에는 줄 바꿈(LF)이나 캐리지 리턴(CR)을 포함할 수 없습니다. 값에 이러한 문자가 포함되면 placeholder 텍스트가 잘리게 됩니다.
 
 ## 접근성 고려사항
 
