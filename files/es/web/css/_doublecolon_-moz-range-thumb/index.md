@@ -3,7 +3,7 @@ title: ::-moz-range-thumb
 slug: Web/CSS/::-moz-range-thumb
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

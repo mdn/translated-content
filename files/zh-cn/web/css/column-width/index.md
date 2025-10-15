@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`column-width`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多列布局中的理想列宽。容器会被尽可能多的列填充，其中，列的宽度不小于 `column-width` 值。如果容器的宽度比指定的值小，那么单列的宽度比会声明的列宽小。
 
 {{InteractiveExample("CSS Demo: column-width")}}

@@ -1,11 +1,11 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`resolution`** est une caractéristique média CSS dont la valeur représente la densité de pixels de l'appareil d'affichage.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`resolution`** peut être utilisée pour tester la densité de pixels de l'appareil de sortie.
 
 ## Syntaxe
 
@@ -55,3 +55,8 @@ La caractéristique `resolution` est une valeur de type {{cssxref("&lt;resolutio
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{domxref("window.devicePixelRatio")}}
+- La propriété {{cssxref("image-resolution")}}

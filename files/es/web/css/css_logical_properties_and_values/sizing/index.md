@@ -3,8 +3,6 @@ title: Dimensionamiento para propiedades lógicas
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 ---
 
-{{CSSRef}}
-
 En esta guía explicaremos las asignaciones relativas al flujo relativo entre las propiedades de dimensionamiento físico y lógico usados para dimensionar elementos en nuestras páginas.
 
 Cuando especificamos el tamaño de un ítem, las [Propiedades y Valores Lógicos](https://drafts.csswg.org/css-logical/) te dan la habilidad de indicar el dimensionamiento en relación al flujo relativo del texto (en línea y bloque) más bien que dimensionamiento físico con relación a las dimensiones físicas: horizontal y vertical (por ejemplo, left y right). Si bien estas asignaciones de flujo relativo pueden convertirse en el valor predeterminado para muchos de nosotros, en un diseño puede usar el tamaño físico y el tamaño lógico. Es posible que desee que algunas características se relacionen siempre con las dimensiones físicas, independientemente del modo de escritura.
@@ -54,4 +52,5 @@ El valor de la palabra clave de `both` para la propiedad de cambio de tamaño fu
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
 
-> **Advertencia:** **Nota:** Tenga en cuenta que actualmente los valores lógicos para el cambio de tamaño solo son compatibles con Firefox.
+> [!WARNING]
+> Tenga en cuenta que actualmente los valores lógicos para el cambio de tamaño solo son compatibles con Firefox.

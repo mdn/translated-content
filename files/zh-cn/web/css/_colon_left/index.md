@@ -3,8 +3,6 @@ title: :left
 slug: Web/CSS/:left
 ---
 
-{{CSSRef}}
-
 **`:left`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)需要和 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}} 配套使用，对打印文档的左侧页设置 CSS 样式。
 
 ```css

@@ -3,8 +3,6 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
 
-{{CSSRef}}
-
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
 {{InteractiveExample("CSS Demo: grid-auto-rows")}}

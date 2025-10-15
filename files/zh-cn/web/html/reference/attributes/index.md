@@ -3,8 +3,6 @@ title: HTML 属性参考
 slug: Web/HTML/Reference/Attributes
 ---
 
-{{HTMLSidebar("Attributes")}}
-
 HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配置元素或者以各种方式来调整元素的行为，进而满足用户所需的标准。
 
 ## 属性列表
@@ -1259,7 +1257,7 @@ HTML 定义了布尔属性允许的取值：如果属性存在，其值必须是
 > [!WARNING]
 > 不建议使用事件处理器属性。将 HTML 和 JavaScript 代码混合在一起通常会产生难以维护的代码，而且事件处理器属性的执行也可能会被内容安全策略阻止。
 
-除了上表中列出的属性，全局[事件处理器](/zh-CN/docs/Web/Events/Event_handlers#使用_onevent_属性)（例如 [`onclick`](/zh-CN/docs/Web/API/Element/click_event)）也可以作为[内容属性](#内容属性和_idl_属性)在所有元素上指定。
+除了上表中列出的属性，全局[事件处理器](/zh-CN/docs/Web/API/Document_Object_Model/Events#使用_onevent_属性)（例如 [`onclick`](/zh-CN/docs/Web/API/Element/click_event)）也可以作为[内容属性](#内容属性和_idl_属性)在所有元素上指定。
 
 所有事件处理器属性都接受字符串值。字符串将用于合成 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)，例如 `function name(/*args*/) {body}`，其中，`name` 为属性名，`body` 为属性值。处理器接收与其 JavaScript 事件处理器对应项相同的参数——大多数处理器只接收一个 `event` 参数，而 `onerror` 接收五个参数：`event`、`source`、`lineno`、`colno`、`error`。这意味着你通常可以在属性中使用 `event` 变量。
 

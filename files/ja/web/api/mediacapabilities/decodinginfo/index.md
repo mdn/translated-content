@@ -67,7 +67,8 @@ decodingInfo(configuration)
     - `keySystemConfiguration` {{optional_inline}}
       - : 暗号化されたメディアのキーシステム構成を指定するオブジェクトです。
 
-        > **メモ:** [`Navigator.requestMediaKeySystemAccess()`](/ja/docs/Web/API/Navigator/requestMediaKeySystemAccess) は `supportedConfigurations` 引数内と同じデータ型の一部を取ります。
+        > [!NOTE]
+        > [`Navigator.requestMediaKeySystemAccess()`](/ja/docs/Web/API/Navigator/requestMediaKeySystemAccess) は `supportedConfigurations` 引数内と同じデータ型の一部を取ります。
 
         指定された場合、[`type`](#type) は `media-source` または `file` である必要があります（`webrtc` は指定できません）。
         これには以下のプロパティがあります。<!-- 仕様書上の MediaCapabilitiesKeySystemConfiguration -->

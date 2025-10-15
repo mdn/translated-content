@@ -3,8 +3,6 @@ title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 ---
 
-{{HTTPSidebar}}
-
 **Метод запроса HTTP DELETE** удаляет указанный ресурс.
 
 <table class="properties">

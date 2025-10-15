@@ -11,7 +11,7 @@ Before contributing to translated content, we strongly recommend learning about 
 
 We also strongly recommend reading the [Translation guidelines][].
 
-In addition to the requirements described in the upstream contributing guide, there are additional prerequesites you must have when contributing to this repository:
+In addition to the requirements described in the upstream contributing guide, there are additional prerequisites you must have when contributing to this repository:
 
 - **Moderate knowledge of the English language:** You must have a good enough understanding of the English language to be able to decipher the meaning of a page while translating. (For simple typo fixes, this is not required.)
 - **Fluency in the downstream locale:** You must be able to fluently speak the language you are contributing to.

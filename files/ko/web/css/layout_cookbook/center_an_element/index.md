@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 70f49e78d0f6830748fcaa490d98b4ae3e2da161
 ---
 
-{{CSSRef}}
-
 이 조리법에서는 [flex 박스](#using_flexbox)와 [그리드](#using_grid)를 사용해서 박스를 다른 박스 내부에 중앙 정렬하는 방법을 배울 수 있습니다. 수평과 수직으로 중앙 정렬하는 것은 간단하고 직관적입니다.
 
 ![an element centered inside a larger box](cookbook-center.png)

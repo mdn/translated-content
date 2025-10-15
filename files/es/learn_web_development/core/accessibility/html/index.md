@@ -507,7 +507,8 @@ Echemos otro vistazo al cuarto método:
 
 En este caso, no estamos usando el atributo `alt` en absoluto; en cambio, hemos presentado nuestra descripción de la imagen como un párrafo de texto normal, le hemos dado un `id` y luego usamos el atributo `aria-labelledby` para referirnos a ese `id`, que hace que los lectores de pantalla usen ese párrafo como texto alternativo o etiqueta para esa imagen. Esto es especialmente útil si desea utilizar el mismo texto como etiqueta para varias imágenes, algo que no es posible con `alt`.
 
-> **Nota:** `aria-labelledby` es parte de la especificación [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite a los desarrolladores añadir semántica extra a su marcado para mejorar su accesibilidad para lectores de pantalla cuando sea necesario. Para aprender más sobre cómo funciona, lee nuestro artículo [WAI-ARIA Basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics).
+> [!NOTE]
+> `aria-labelledby` es parte de la especificación [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite a los desarrolladores añadir semántica extra a su marcado para mejorar su accesibilidad para lectores de pantalla cuando sea necesario. Para aprender más sobre cómo funciona, lee nuestro artículo [WAI-ARIA Basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics).
 
 ### Otros mecanismos de texto alternativo
 
