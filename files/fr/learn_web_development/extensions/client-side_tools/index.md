@@ -4,13 +4,11 @@ slug: Learn_web_development/Extensions/Client-side_tools
 original_slug: Learn/Tools_and_testing/Understanding_client-side_tools
 ---
 
-{{LearnSidebar}}
-
 Les outils côté client peuvent être intimidants, mais cette série d'articles vise à illustrer le but de certains des types d'outils côté client les plus courants, à expliquer les outils que vous pouvez enchaîner, comment les installer à l'aide de gestionnaires de packages et les contrôler à l'aide de la ligne de commande. Nous terminons en fournissant un exemple complet de chaîne d'outils vous montrant comment devenir productif.
 
 ## Conditions prérequises
 
-Vous devez vraiment apprendre les bases des langages [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) avant d'essayer d'utiliser les outils détaillés ici.
+Vous devez vraiment apprendre les bases des langages [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/Learn_web_development/Core/Scripting) avant d'essayer d'utiliser les outils détaillés ici.
 
 ## Guides
 

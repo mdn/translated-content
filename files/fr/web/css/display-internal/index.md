@@ -1,15 +1,15 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-Certains modes de disposition tels que `table` et `ruby` possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs « internes » pour `display` et qui s'appliquent dans un mode donné.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<display-internal>`** définit les modes de disposition tels que `table` et `ruby` possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs «&nbsp;internes&nbsp;» pour `display` et qui s'appliquent dans un mode donné.
 
 ## Syntaxe
 
-Sauf mention contraire, le type d'affichage intérieur et extérieur sont définis simultanément par le mot-clé indiqué.
+Valeurs valides pour `<display-internal>`&nbsp;:
 
 - `table-row-group`
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("tbody")}}.
@@ -27,14 +27,65 @@ Sauf mention contraire, le type d'affichage intérieur et extérieur sont défin
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("col")}}.
 - `table-caption`
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("caption")}}.
-- `ruby-base` {{Experimental_Inline}}
+- `ruby-base`
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rb")}}.
-- `ruby-text` {{Experimental_Inline}}
+- `ruby-text`
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rt")}}.
-- `ruby-base-container` {{Experimental_Inline}}
-  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rbc")}} générés comme des boîtes anonymes.
-- `ruby-text-container` {{Experimental_Inline}}
+- `ruby-base-container`
+  - : Ces éléments sont générés comme des boîtes anonymes.
+- `ruby-text-container`
   - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rtc")}}.
+
+## Syntaxe formelle
+
+{{csssyntax}}
+
+## Exemples
+
+### Exemples de tableaux CSS
+
+L'exemple suivant démontre la mise en page d'un formulaire en utilisant la disposition de tableau CSS.
+
+#### HTML
+
+```html
+<main>
+  <div>
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" />
+  </div>
+  <div>
+    <label for="age">Âge</label>
+    <input type="text" id="age" name="age" />
+  </div>
+</main>
+```
+
+#### CSS
+
+```css
+main {
+  display: table;
+}
+
+div {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin: 5px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Exemples de tableaux CSS', '100%', 100)}}
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -42,7 +93,7 @@ Sauf mention contraire, le type d'affichage intérieur et extérieur sont défin
 
 ## Voir aussi
 
-- {{CSSxRef("display")}}
+- Les types de données de la propriété {{CSSxRef("display")}}&nbsp;:
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

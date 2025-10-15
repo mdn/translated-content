@@ -3,8 +3,6 @@ title: CSS Display
 slug: Web/CSS/CSS_display
 ---
 
-{{CSSRef}}
-
 **L'affichage CSS** (_CSS Display)_ est un module CSS qui définit la façon dont l'arbre des boîtes pour la mise en forme est généré à partir de l'arbre des éléments du document et qui définit les propriétés qui le contrôlent.
 
 ## Référence
@@ -55,7 +53,7 @@ slug: Web/CSS/CSS_display
 - [L'alignement des boîtes dans les grilles](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Les grilles, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [Les grilles et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Les grilles et l'amélioration progressive](/fr/docs/conflicting/Web/CSS/CSS_grid_layout)
+- [Les grilles et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Réaliser des dispositions courantes à l'aide de grilles](/fr/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Spécifications

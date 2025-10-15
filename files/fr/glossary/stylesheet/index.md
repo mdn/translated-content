@@ -11,5 +11,5 @@ On préfèrera utiliser des feuilles de style externes, car elles permettent de 
 
 ## Voir aussi
 
-- [Premiers pas avec CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f)
+- [Premiers pas avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started)
 - Les feuilles de style sur [Wikipédia](https://fr.wikipedia.org/wiki/Feuille_de_style)

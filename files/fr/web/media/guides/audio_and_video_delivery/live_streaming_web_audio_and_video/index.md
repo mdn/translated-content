@@ -137,7 +137,8 @@ Opus est un format libre de droit et open source qui permet d'optimiser la quali
 
 Actuellement, Opus est supporté par Firefox (bureau et mobile) ainsi que les dernières versions de Chrome bureau et Opera.
 
-> **Note :** [Opus est un format obligatoire](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) pour les implémentations navigateur de WebRTC.
+> [!NOTE]
+> [Opus est un format obligatoire](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) pour les implémentations navigateur de WebRTC.
 
 ### MP3, AAC, Ogg Vorbis
 
@@ -162,7 +163,8 @@ Pour le transfert RTMP, vous pouvez utiliser le [module Nginx RTMP](https://gith
 
 [SHOUTcast](http://en.wikipedia.org/wiki/SHOUTcast) est une technologie propriétaire multi-plateforme pour diffuser des médias en streaming. Développé par Nullsoft, elle permet de diffuser du contenu audio au format MP3 ou AAC en broadcast. Pour utilisation sur le web, les streams SHOUTcast sont transmis sur HTTP.
 
-> **Note :** [Les urls SHOUTcast peuvent nécessiter l'ajout d'un point-virgule à la fin](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> [!NOTE]
+> [Les urls SHOUTcast peuvent nécessiter l'ajout d'un point-virgule à la fin](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 

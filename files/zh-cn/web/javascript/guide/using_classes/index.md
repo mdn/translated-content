@@ -1,11 +1,13 @@
 ---
 title: 使用类
 slug: Web/JavaScript/Guide/Using_classes
+l10n:
+  sourceCommit: 8c56e742169bd80f27cbc57591f6b3a00e23c873
 ---
 
 {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
-JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建实例。
+JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。但是，对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建对象。
 
 在许多其他语言中，_类_（或构造函数）与*对象*（或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 纯函数都可用作构造函数——你可以用 `new` 运算符来调用一个构造函数以创建出一个新的对象。
 
@@ -15,17 +17,18 @@ JavaScript 是一个基于原型的语言——一个对象的行为取决于它
 
 ## 类的概述
 
-如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对[这个](/zh-CN/docs/Web/JavaScript/Guide/Representing_dates_times)很熟悉：
+如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，[你可能会对这个很熟悉](/zh-CN/docs/Web/JavaScript/Guide/Representing_dates_times)：
 
 ```js
 const bigDay = new Date(2019, 6, 19);
 console.log(bigDay.toLocaleDateString());
 if (bigDay.getTime() < Date.now()) {
-  console.log("Once upon a time...");
+  console.log("曾几何时……");
 }
 ```
 
-在第一行，我们创建了一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类的实例，并将其命名为 `bigDay`。在第二行，我们在 `bigDay` 实例上调用了 [`toLocaleDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) [方法](/zh-CN/docs/Glossary/Method)，并返回了一个字符串。接下来，我们对比了两个数字：一个来自于方法 [`getTime()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) 的返回值，另个一来自于对 `Date` 类*本身*的直接调用，本例为 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。
+在第一行，我们创建了一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类的实例，并将其命名为 `bigDay`。在第二行，我们在 `bigDay` 实例上调用了 [`toLocaleDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString) [方法](/zh-CN/docs/Glossary/Method)，其会返回一个字符串。接下来，我们对比了两个数字：一个来自于方法 [`getTime()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) 的返回值，另一个来自于对 `Date` 类*本身*的直接调用，本例为 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)。
+
 `Date` 是一个 JavaScript 的内建类。从这个例子中，我们可以得到一些关于类的基本概念：
 
 - 类通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符创建对象。
@@ -44,7 +47,7 @@ if (bigDay.getTime() < Date.now()) {
 
 ```js
 class MyClass {
-  // 类体...
+  // 类主体……
 }
 ```
 
@@ -54,25 +57,25 @@ class MyClass {
 class MyClass {
   // 构造函数
   constructor() {
-    // 构造函数体
+    // 构造函数主体
   }
   // 实例字段
   myField = "foo";
   // 实例方法
   myMethod() {
-    // myMethod 体
+    // myMethod 主体
   }
   // 静态字段
   static myStaticField = "bar";
   // 静态方法
   static myStaticMethod() {
-    // myStaticMethod 体
+    // myStaticMethod 主体
   }
   // 静态块
   static {
     // 静态初始化代码
   }
-  // 字段、方法、静态字段、静态方法、静态块都可以使用私有形式
+  // 字段、方法、静态字段、静态方法、静态块都可以使用“私有”形式
   #myPrivateField = "bar";
 }
 ```
@@ -82,14 +85,14 @@ class MyClass {
 ```js
 function MyClass() {
   this.myField = "foo";
-  // 构造函数体
+  // 构造函数主体
 }
 MyClass.myStaticField = "bar";
 MyClass.myStaticMethod = function () {
-  // myStaticMethod 体
+  // myStaticMethod 主体
 };
 MyClass.prototype.myMethod = function () {
-  // myMethod 体
+  // myMethod 主体
 };
 
 (function () {
@@ -110,7 +113,7 @@ console.log(myInstance.myField); // 'foo'
 myInstance.myMethod();
 ```
 
-典型函数构造器可以使用 `new` 来构造，也可以不使用 `new` 来调用。然而，对于类的调用则必须使用 `new`，否则会导致错误。
+典型函数构造器可以使用 `new` 来构造，也可以不使用 `new` 来调用。然而，对于类的“调用”则必须使用 `new`，否则会导致错误。
 
 ```js
 const myInstance = MyClass(); // TypeError: Class constructor MyClass cannot be invoked without 'new'
@@ -134,15 +137,15 @@ class MyClass {}
 
 ```js
 const MyClass = class {
-  // 类体...
+  // 类主体……
 };
 ```
 
-类表达式也可以有名字。表达式的名字只在类体内可见。
+类表达式也可以有名字。表达式的名字只在类主体内可见。
 
 ```js
 const MyClass = class MyClassLongerName {
-  // 类体。这里 MyClass 和 MyClassLongerName 指向同一个类
+  // 类主体。这里 MyClass 和 MyClassLongerName 指向同一个类
 };
 new MyClassLongerName(); // ReferenceError: MyClassLongerName is not defined
 ```
@@ -209,7 +212,7 @@ console.log(red === anotherRed); // false
 
 在类的构造函数里，`this` 的值指向新创建的实例。你可以赋予它新的属性，或者读取已有的属性（尤其是方法——我们将在下一节中介绍）。
 
-`this` 的值将自动作为 `new` 的结果返回。不建议从构造函数中返回任何值——因为如果你返回一个非原始类型的值，它将成为 `new` 表达式的值，而 `this` 的值将被丢弃。你可以在 new 运算符的[描述](/zh-CN/docs/Web/JavaScript/Reference/Operators/new#描述)中阅读更多关于 `new` 的内容。
+`this` 的值将自动作为 `new` 的结果返回。不建议从构造函数中返回任何值——因为如果你返回一个非原始类型的值，它将成为 `new` 表达式的值，而 `this` 的值将被丢弃。你可以在 `new` 运算符的[描述](/zh-CN/docs/Web/JavaScript/Reference/Operators/new#描述)中阅读更多有关它的内容。
 
 ```js
 class MyClass {
@@ -265,7 +268,7 @@ console.log(new Color().getRed === new Color().getRed); // false
 
 与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在*哪里*——它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
 
-相似的，我们也可以添加一个 `setRed` 方法来设置红色值：
+相似地，我们也可以添加一个 `setRed` 方法来设置红色值：
 
 ```js
 class Color {
@@ -282,7 +285,7 @@ class Color {
 
 const red = new Color(255, 0, 0);
 red.setRed(0);
-console.log(red.getRed()); // 0; 此时也即黑色
+console.log(red.getRed()); // 0；此时也即黑色
 ```
 
 ## 私有字段
@@ -318,7 +321,7 @@ class Color {
 }
 
 const red = new Color(255, 0, 0);
-console.log(red.values[0]); // 0; 不再是 255，因为 HSL 模型下纯红色的 H 分量为 0
+console.log(red.values[0]); // 0；不再是 255，因为 HSL 模型下纯红色的 H 分量为 0
 ```
 
 用户对 `values` 数组代表 RGB 值的假设不再成立，这可能会打破他们的代码逻辑。因此，如果你是一个类的实现者，你应该隐藏实例的内部数据结构，以保持 API 的简洁性，并防止在你做了一些“无害的重构”时，用户代码不至于崩溃。在类中，这是通过[_私有字段_](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)来实现的。
@@ -351,7 +354,7 @@ console.log(red.#values); // SyntaxError: Private field '#values' must be declar
 ```
 
 > [!NOTE]
-> 在 Chrome 控制台中运行的代码可以在类外访问私有字段，JavaScript 为了方便调试而仅在 DevTools 中放宽了这一限制。
+> 在 Chrome 控制台中运行的代码可以访问类外的私有字段，这是开发者工具针对 JavaScript 语法限制的特殊放宽。
 
 JavaScript 中的私有字段是*硬私有*的：如果类没有实现暴露这些私有字段的方法，也就没有任何机制可以从类外访问它们。这意味着你可以对类的私有字段做任何重构，只要暴露的方法的行为保持不变即可。
 
@@ -410,7 +413,7 @@ class Color {
   }
   redDifference(anotherColor) {
     if (!(#values in anotherColor)) {
-      throw new TypeError("Color instance expected");
+      throw new TypeError("期望 Color 实例");
     }
     return this.#values[0] - anotherColor.#values[0];
   }
@@ -433,7 +436,7 @@ class BadIdeas {
 }
 ```
 
-方法、[getter 与 setter](#getter_字段) 也可以是私有的。当你需要类内部做一些复杂的事情，但是不希望代码的其他部分调用时，它们就很有用。
+方法、[getter 与 setter](#访问器字段) 也可以是私有的。当你需要类内部做一些复杂的事情，但是不希望代码的其他部分调用时，它们就很有用。
 
 例如，想象一下创建 [HTML 自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)时，当点击、触摸等事件被激活时可能会做一些有点复杂的事情。此外，当元素被点击时发生的有点复杂的事情应该限制在这个类中，因为程序的其他部分（或者不应该）永远不会访问它。
 
@@ -467,9 +470,9 @@ customElements.define("num-counter", Counter);
 
 在这个例子中，几乎每个字段和方法都是私有的。因此，它向程序的其他部分提供了一个接口，这个接口与内置的 HTML 元素非常相似，而 `Counter` 的内部则不受外部影响。
 
-## getter 字段
+## 访问器字段
 
-`color.getRed()` 和 `color.setRed()` 允许我们读取和写入颜色的红色值。如果你熟悉像 Java 这样的语言，你会对这种模式非常熟悉。然而，在 JavaScript 中，使用方法来简单地访问属性仍然有些不便。*getter 字段*允许我们像访问“实际属性”一样操作某些东西。
+`color.getRed()` 和 `color.setRed()` 允许我们读取和写入颜色的红色值。如果你熟悉像 Java 这样的语言，你会对这种模式非常熟悉。然而，在 JavaScript 中，使用方法来简单地访问属性仍然有些不便。*访问器字段*允许我们像访问“实际属性”一样操作某些东西。
 
 ```js
 class Color {
@@ -628,11 +631,11 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-有一些事情需要注意。首先，在构造器中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this`——JavaScript 会阻止你访问未初始化的 `this`。
+有一些事情需要注意。首先，在构造函数中，我们调用了 `super(r, g, b)`。在访问 `this` 之前，必须调用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)，这是 JavaScript 的要求。`super()` 调用父类的构造函数来初始化 `this`——这里大致相当于 `this = new Color(r, g, b)`。`super()` 之前也可以有代码，但你不能在 `super()` 之前访问 `this`——JavaScript 会阻止你访问未初始化的 `this`。
 
 在父类完成对 `this` 的修改后，派生类才可以对其进行自己的逻辑。这里我们添加了一个名为 `#alpha` 的私有字段，并提供了一对 getter/setter 来与之交互。
 
-派生类会继承父类的所有方法。例如，尽管 `ColorWithAlpha` 自身并没有声明一个 `get red()` getter，你仍然可以访问 `red`，因为这个行为是由父类指定的：
+派生类会继承父类的所有方法。例如，考虑我们为[访问器字段](#访问器字段)部分中的 `Color` 添加的 `get red()` 访问器——即使我们没有在 `ColorWithAlpha` 中声明它，我们仍然可以访问 `red`，因为这个行为是由父类指定的：
 
 ```js
 const color = new ColorWithAlpha(255, 0, 0, 0.5);
@@ -698,7 +701,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-一个类只能至多扩展自一个父类。这可以防止多重继承中的问题，例如[菱形问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)。然而，由于 JavaScript 的动态性，仍然可以通过类组合和 [mixin](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#mix-ins) 来实现多重继承的效果。
+一个类只能至多扩展自一个父类。这可以防止多重继承中的问题，例如[菱形问题](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem)。然而，由于 JavaScript 的动态性，仍然可以通过类组合和[混入](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#混入)来实现多重继承的效果。
 
 派生类的实例同时也是父类的实例，可用 [`instancesof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 运算符来验证。
 
@@ -733,7 +736,7 @@ console.log(date); // 2019-06-20
 
 ![一个典型 OOP 继承树，有五个类和三个层级](figure8.1.png)
 
-然而，如果我们只能继承自一个父类，我们又很难清楚地描述这种继承关系。一种常见的情况是，我们想要同时拥有来自多个类的行为。在 Java 中，我们可以利用接口；在 JavaScript 中，我们是用 mixin 来解决的。但归根结底，仍不是很方便。
+然而，当一个类只能继承另一个类时，往往难以清晰地描述这种继承关系。一种常见的情况是，我们想要同时拥有来自多个类的行为。在 Java 中，我们可以利用接口；在 JavaScript 中，我们可以利用混入。但归根结底，仍不是很方便。
 
 往好的方面想，类是一种非常强大的工具，我们可以利用它提高我们组织代码的层次。例如，如若没有 `Color` 类，我们可能需要创建一堆工具函数：
 
@@ -758,7 +761,7 @@ function isValidColor(color) {
 
 简而言之，你应该在你想要储存一些内部数据、并暴露大量方法的时候考虑使用类。例如这些内置的 JavaScript 类：
 
-- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 与 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 类存储了许多元素，你可以通过 `get()`、`set()`、`has()` 等方法访问它们。
+- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 与 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 类存储了元素的集合，你可以通过 `get()`、`set()`、`has()` 等方法访问它们。
 - [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 类以 Unix 时间戳的形式存储日期，并允许你格式化、更新与读取单独的日期元素。
 - [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 类存储了特定异常的信息，包括错误消息、堆栈跟踪、原因等。它是少数几个拥有丰富继承结构的类之一：有多个内置类（例如 [`TypeError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 与 [`ReferenceError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)）继承自 `Error`。在发生错误时，这种继承允许细化错误的语义：每个错误类都代表一个特定类型的错误，可以很容易地通过 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 进行检查。
 

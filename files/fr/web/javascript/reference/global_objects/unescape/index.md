@@ -13,7 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/unescape
 
 La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères et remplace les séquences d'échappement hexadécimales par les caractères qu'elles représentent. Les séquences d'échappement peuvent provenir de la fonction {{jsxref("escape")}}. Cette méthode est obsolète, c'est pourquoi il est conseillé d'utiliser {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}} à la place.
 
-> **Note :** `unescape()` ne doit pas être utilisée pour décoder les URI. À la place, utilisez `decodeURI`.
+> [!NOTE]
+> `unescape()` ne doit pas être utilisée pour décoder les URI. À la place, utilisez `decodeURI`.
 
 ## Syntaxe
 

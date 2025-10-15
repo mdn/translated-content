@@ -6,8 +6,6 @@ l10n:
   sourceCommit: be7a098e6af7b820c06a2d5169a9221ee2065e82
 ---
 
-{{CSSRef}}
-
 **_Les propriétés raccourcies_** sont des propriétés CSS permettant de paramétrer simultanément les valeurs de plusieurs propriétés CSS. Utiliser une propriété raccourcie permet d'obtenir des feuilles de style plus concises (et souvent plus lisibles).
 
 La spécification CSS définit des propriétés raccourcies qui regroupent des propriétés courantes portant sur le même thème. Ainsi, la propriété [`background`](/fr/docs/Web/CSS/background) est une propriété raccourcie qui permet de définir les valeurs de [`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-repeat`](/fr/docs/Web/CSS/background-repeat), et [`background-position`](/fr/docs/Web/CSS/background-position). De la même façon, la plupart des propriétés communes relatives aux polices peuvent être définies grâce à la propriété raccourcie [`font`](/fr/docs/Web/CSS/font), et celles portant sur les marges autour d'une boîte peuvent être paramétrées grâce à la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin).
@@ -192,11 +190,11 @@ Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Cor
   - [Les modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [La fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Les différentes valeurs
-    - [Les valeurs initiales](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc)
-    - [Les valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [Les valeurs utilisées](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
-    - [Les valeurs réelles](/fr/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
+  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - Les propriétés raccourcies&nbsp;:
   - [`all`](/fr/docs/Web/CSS/all)
