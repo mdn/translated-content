@@ -4,13 +4,11 @@ slug: Learn_web_development/Extensions/Client-side_APIs
 original_slug: Learn/JavaScript/Client-side_web_APIs
 ---
 
-{{LearnSidebar}}
-
 Lorsque vous écrivez du JavaScript côté client pour des sites Web ou des applications, vous n'irez pas très loin avant d'utiliser des API - des interfaces pour manipuler différents aspects du navigateur et du système d'exploitation sur lesquels le site opère, ou même des données provenant d'autres sites web ou services. Dans ce module, nous allons explorer ce que sont les API, et comment utiliser certaines API les plus courantes que vous rencontrerez souvent dans votre travail de développement.
 
 ## Prérequis
 
-Pour tirer le meilleur parti de ce module, vous devriez avoir parcouru les précédents modules JavaScript de la série ([Premiers pas](/fr/docs/Learn_web_development/Core/Scripting), [Building blocks](/fr/docs/conflicting/Learn_web_development/Core/Scripting_fb235ec2f43049f379fbefbc9e0e7ee10637a460ab94430af2a806ab533a3580) et [objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)). Ces modules impliquent tout de même un bon nombre d'utilisations simples de l'API, car il est difficile d'écrire des exemples JavaScript côté client faisant quelque chose d'utile sans eux! Ici, nous passons à un niveau supérieur, en supposant que vous connaissiez le langage JavaScript de base et explorant les APIs Web courantes de manière un peu plus détaillée.
+Pour tirer le meilleur parti de ce module, vous devriez avoir parcouru les précédents modules JavaScript de la série ([Premiers pas](/fr/docs/Learn_web_development/Core/Scripting), [Building blocks](/fr/docs/Learn_web_development/Core/Scripting/What_is_JavaScript) et [objets JavaScript](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)). Ces modules impliquent tout de même un bon nombre d'utilisations simples de l'API, car il est difficile d'écrire des exemples JavaScript côté client faisant quelque chose d'utile sans eux! Ici, nous passons à un niveau supérieur, en supposant que vous connaissiez le langage JavaScript de base et explorant les APIs Web courantes de manière un peu plus détaillée.
 
 Une connaissance basique de [HTML](/fr/docs/Learn_web_development/Core/Structuring_content) et [CSS](/fr/docs/Learn_web_development/Core/Styling_basics) serait aussi utile.
 

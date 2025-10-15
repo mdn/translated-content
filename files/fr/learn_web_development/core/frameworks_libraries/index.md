@@ -4,8 +4,6 @@ slug: Learn_web_development/Core/Frameworks_libraries
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
-{{LearnSidebar}}
-
 Les frameworks JavaScript sont une partie essentielle du développement web front-end moderne, fournissant aux développeurs des outils éprouvés pour construire des applications web évolutives et interactives. De nombreuses entreprises modernes utilisent des frameworks comme un élément normé de leur outillage, de sorte que de nombreux emplois de développement front-end requièrent désormais une expérience avec ces frameworks.
 
 En tant que futur développeur front-end, il peut être difficile de savoir par où commencer lors de l'apprentissage des frameworks – il y a tant de frameworks si différents les uns des autres et de nouveaux qui apparaissent sans cesse, ils fonctionnent généralement de manière similaire mais font certaines choses différemment, et il y a certaines choses spécifiques à avoir en tête lors de leur utilisation.
@@ -23,7 +21,7 @@ Après ceci, nous vous fournirons quelques tutoriels couvrant les notions fondam
 
 ## Prérequis
 
-Vous devez vraiment connaitre les bases des principaux langages du web ([HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et particulièrement [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting)) avant d'essayer de vous lancer dans l'apprentissage des frameworks côté client.
+Vous devez vraiment connaitre les bases des principaux langages du web ([HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et particulièrement [JavaScript](/fr/docs/Learn_web_development/Core/Scripting)) avant d'essayer de vous lancer dans l'apprentissage des frameworks côté client.
 
 Votre code n'en sera que plus qualitatif et plus professionnel, et vous serez en mesure de résoudre vos problèmes avec plus de confiance si vous comprenez les fonctionnalités fondamentales du web sur lesquelles les frameworks s'appuient.
 

@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<calc-keyword>`** représente des constantes bien définies comme `e` et `pi`. Plutôt que d'obliger les auteur·ice·s à saisir manuellement plusieurs chiffres de ces constantes mathématiques ou à les calculer, certaines d'entre elles sont directement fournies par CSS pour plus de commodité.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<calc-keyword>`** représente des constantes bien définies comme `e` et `pi`. Plutôt que d'obliger les auteur·ice·s à saisir manuellement plusieurs chiffres de ces constantes mathématiques ou à les calculer, certaines d'entre elles sont directement fournies par CSS pour plus de commodité.
 
 ## Syntaxe
 
-Le type `<calc-keyword>` définit des constantes numériques qui peuvent être utilisées dans les [fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_mathématiques).
+Le type `<calc-keyword>` définit des constantes numériques qui peuvent être utilisées dans les [fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_mathématiques).
 
 ### Valeurs
 
@@ -53,7 +53,7 @@ Des exemples illustrant l'application de ces règles sont présentés dans la se
 
 ## Description
 
-Les constantes mathématiques ne peuvent être utilisées que dans les [fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#les_fonctions_mathématiques) pour les calculs. Ces constantes ne sont pas des mots-clés CSS&nbsp;; si elles sont utilisées en dehors d'un calcul, elles sont traitées comme n'importe quel autre mot-clé.
+Les constantes mathématiques ne peuvent être utilisées que dans les [fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_mathématiques) pour les calculs. Ces constantes ne sont pas des mots-clés CSS&nbsp;; si elles sont utilisées en dehors d'un calcul, elles sont traitées comme n'importe quel autre mot-clé.
 Par exemple&nbsp;:
 
 - `animation-name: pi;` fait référence à une animation nommée «&nbsp;pi&nbsp;», et non à la constante numérique `pi`.

@@ -50,6 +50,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: mdn/content/.nvmrc
+          package-manager-cache: false
 
       - name: Install all yarn packages
         working-directory: ${{ github.workspace }}/mdn/content

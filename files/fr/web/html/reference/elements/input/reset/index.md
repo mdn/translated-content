@@ -192,4 +192,4 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 - L'élément {{HTMLElement("button")}}
 - [Apprendre les formulaires et les boutons](/fr/docs/Learn/HTML/Forms_and_buttons)
 - [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA)
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)

@@ -23,7 +23,7 @@ XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la
   - : La liste et la définition des axes sont définies dans la spécification XPath. Les axes sont utilisés afin de décrire les relations entre les nœuds.
 - [Functions XPath](/fr/docs/Web/XML/XPath/Reference/Functions)
   - : La liste et la description des fonctions principales de XPath et des additions propres à XSLT.
-- [Transformer du XML avec XSLT](/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
+- [Transformer du XML avec XSLT](/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT utilise XPath afin de cibler les segments d'un document XML pour ensuite les transformer.
 - [Fragments de code XPath](/fr/docs/Web/XPath/Snippets)
   - : Un ensemble d'exemples de code réutilisables en JavaScript qui utilisent les API [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/).
