@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-{{domxref("CustomStateSet")}} 接口的 **`values()`** 方法返回一个新的迭代器对象，该对象按插入顺序为 `CustomStateSet` 对象中的每个元素提供值。
+{{domxref("CustomStateSet")}} 接口的 **`values()`** 方法返回一个包含给定 `CustomStateSet` 对象中的每个元素的值（按插入顺序排列）的新迭代器对象。
 
 ## 语法
 
@@ -22,7 +22,7 @@ values()
 
 ## 返回值
 
-新的迭代器对象。它包含给定 `CustomStateSet` 中每个元素的值，并按插入顺序排列。
+包含给定 `CustomStateSet` 中每个元素的值（按插入顺序排列）的新迭代器对象。
 
 ## 规范
 
