@@ -70,7 +70,7 @@ fetch("example.xml")
 
 ### DOM ツリーを文字列にシリアライズ
 
-まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)で説明された方法で DOM ツリーを作成します。もしくは、 {{ domxref("Window/fetch", "fetch()") }} で取得した DOM ツリーを用います。
+まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model)で説明された方法で DOM ツリーを作成します。もしくは、 {{ domxref("Window/fetch", "fetch()") }} で取得した DOM ツリーを用います。
 
 DOM ツリー `doc` を XML 文字列にシリアライズするには、以下のように {{domxref("XMLSerializer.serializeToString()")}} を呼び出します。
 
