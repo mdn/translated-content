@@ -84,4 +84,4 @@ mailto:help@supercyberhelpdesk.info
 - [URI](/ko/docs/Web/URI)
 - [데이터 URI](/ko/docs/Web/URI/Reference/Schemes/data)
 - [리소스 URL](/ko/docs/Web/URI/Reference/Schemes/resource)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [IANA URI 스킴 목록](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
