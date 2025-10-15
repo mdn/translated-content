@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Request")}} 接口的 **`text()`** 方法用于读取请求体，并将其作为 Promise 返回，Promise 解析后得到一个 {{jsxref("String")}}。响应内容*始终*使用 UTF-8 解码。
+{{domxref("Request")}} 接口的 **`text()`** 方法用于读取请求体，并将其以会兑现为 {{jsxref("String")}} 的 promise 返回。响应内容*始终*使用 UTF-8 解码。
 
 ## 语法
 
