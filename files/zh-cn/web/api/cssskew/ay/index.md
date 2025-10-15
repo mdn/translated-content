@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}
 
-{{domxref("CSSSkew")}} 接口的 **`ay`** 属性用于获取和设置沿 y 轴（或纵轴）扭曲元素的角度。
+{{domxref("CSSSkew")}} 接口的 **`ay`** 属性用于获取和设置沿 y 轴（或纵坐标）扭曲元素的角度。
 
 ## 值
 
