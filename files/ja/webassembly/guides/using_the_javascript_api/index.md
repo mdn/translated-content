@@ -270,7 +270,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **メモ:** [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)も見てください。
+> [!NOTE]
+> [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)も見てください。
 
 ## 多重性
 

@@ -1,13 +1,13 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.
 
-La propriété **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.
-
-{{InteractiveExample("CSS Demo: background-image")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-image")}}
 
 ```css interactive-example-choice
 background-image: url("/shared-assets/images/examples/lizard.png");
@@ -47,34 +47,30 @@ background-image:
 
 Les images sont dessinées les unes au-dessus des autres. La première image indiquée est dessinée comme étant la plus proche de l'utilisateur.
 
-Les bordures de l'élément sont dessinées par-dessus l'arrière-plan et la couleur [`background-color`](/fr/docs/Web/CSS/background-color) est dessinée sous l'arrière-plan. La position et les limites de chaque image sont gérées grâce aux propriétés [`background-clip`](/fr/docs/Web/CSS/background-clip) et [`background-origin`](/fr/docs/Web/CSS/background-origin).
+Les bordures de l'élément sont dessinées par-dessus l'arrière-plan et la couleur {{cssxref("background-color")}} est dessinée sous l'arrière-plan. La position et les limites de chaque image sont gérées grâce aux propriétés {{cssxref("background-clip")}} et {{cssxref("background-origin")}}.
 
 Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impossible de charger un fichier via l'URI indiqué), les navigateurs considèreront la valeur comme `none`.
 
 > [!NOTE]
-> Même si les images sont opaques et que les couleurs ne seront pas affichées de façon normale, les développeurs doivent toujours définir une couleur d'arrière-plan via [`background-color`](/fr/docs/Web/CSS/background-color) au cas où les images ne peuvent être chargées.
+> Même si les images sont opaques et que les couleurs ne seront pas affichées de façon normale, les développeurs doivent toujours définir une couleur d'arrière-plan via {{cssxref("background-color")}} au cas où les images ne peuvent être chargées.
 
 ## Syntaxe
 
 ```css
 /* Valeur simple */
-background-image: url("https://example.com/bck.png");
+background-image: linear-gradient(black, white);
+background-image: url("cat-front.png");
 
 /* Plusieurs valeurs */
 background-image:
-  url("https://example.com/top.png"), url("https://example.com/bottom.png");
-
-background-image:
-  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
-  url("cat-front.png");
-
-/* Valeur avec un mot-clé */
-background-image: none;
+  radial-gradient(circle, transparent 45%, black 48%),
+  radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
 
 /* Valeurs globales */
 background-image: inherit;
 background-image: initial;
 background-image: revert;
+background-image: revert-layer;
 background-image: unset;
 ```
 
@@ -83,14 +79,14 @@ background-image: unset;
 - `none`
   - : Un mot-clé qui indique qu'aucune image ne doit être utilisée comme arrière-plan.
 - `<image>`
-  - : Une valeur [`<image>`](/fr/docs/Web/CSS/image) qui indique l'image à afficher. On peut avoir plusieurs images en arrière-plan en séparant les valeurs par des virgules.
+  - : Une valeur {{cssxref("&lt;image&gt;")}} qui indique l'image à afficher. On peut avoir plusieurs images en arrière-plan en séparant les valeurs par des virgules.
 
 ## Accessibilité
 
 Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
 
-- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de succès 1.1.1 — Comprendre les règles du WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Comprendre les critères de succès 1.1.1 — Comprendre les règles du WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle
 
@@ -102,9 +98,11 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 
 ## Exemples
 
+### Superposition d'images d'arrière-plan
+
 On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèrement transparente et se superpose par-dessus l'image du chat.
 
-### HTML
+#### HTML
 
 ```html
 <div>
@@ -121,7 +119,7 @@ On voit ici l'effet obtenu avec plusieurs images&nbsp;: l'étoile est légèreme
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -141,9 +139,9 @@ div {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('superposition_dimages_darriere-plan')}}
 
 ## Spécifications
 
@@ -155,21 +153,29 @@ div {
 
 ## Voir aussi
 
+- {{HTMLElement("img")}}
+- Les fonctions CSS associées aux images&nbsp;:
+  - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
+  - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+  - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
+  - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
+  - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+  - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+  - {{cssxref("url_value", "&lt;url&gt;")}}
+- [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - [Implémenter des sprites en CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- L'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img),
-- Les types de données CSS relatifs aux images&nbsp;:
-  - [`<image>`](/fr/docs/Web/CSS/image)
-  - [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- Les fonctions CSS relatives aux images&nbsp;:
-  - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
-  - [`element()`](/fr/docs/Web/CSS/element)
-  - [`image()`](</fr/docs/Web/CSS/image/image()>)
-  - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-  - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
-  - [`conic-gradient`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
-  - [`repeating-linear-gradient`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
-  - [`repeating-radial-gradient`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
-  - [`repeating-conic-gradient`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
-  - [`paint()`](</fr/docs/Web/CSS/image/paint()>)
-  - [`url()`](/fr/docs/Web/CSS/url_value)
+- Le module d'[images CSS](/fr/docs/Web/CSS/CSS_images)
+
+- Les propriétés CSS relatives aux arrière-plans&nbsp;:
+  - {{cssxref("background-attachment")}}
+  - {{cssxref("background-clip")}}
+  - {{cssxref("background-color")}}
+  - {{cssxref("background-origin")}}
+  - {{cssxref("background-position")}}
+  - {{cssxref("background-repeat")}}
+  - {{cssxref("background-size")}}
+  - {{cssxref("background")}} shorthand
+- [Apprendre&nbsp;: Bordures et arrière-plans](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- Le module [sur les arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)

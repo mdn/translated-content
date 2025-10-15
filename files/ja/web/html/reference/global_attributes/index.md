@@ -66,7 +66,8 @@ l10n:
 - [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is)
   - : 標準の HTML 要素が、登録したカスタム組み込み要素のようにふるまうように指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)を参照）。
 
-> **メモ:** `item*` 属性は、 [WHATWG HTML Microdata 仕様](https://html.spec.whatwg.org/multipage/microdata.html#microdata)の一部です。
+> [!NOTE]
+> `item*` 属性は、 [WHATWG HTML Microdata 仕様](https://html.spec.whatwg.org/multipage/microdata.html#microdata)の一部です。
 
 - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
   - : 項目の一意でグローバルな識別子です。

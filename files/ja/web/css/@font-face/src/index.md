@@ -2,10 +2,8 @@
 title: src
 slug: Web/CSS/@font-face/src
 l10n:
-  sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`src`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントデータを含むリソースを指定します。 `@font-face` ルールを有効にするためには必要です。
 
@@ -13,10 +11,9 @@ l10n:
 
 ```css
 /* <url> 値 */
-src: url(https://somewebsite.com/path/to/font.woff); /* 絶対 URL */
-src: url(path/to/font.woff); /* 相対 URL */
+src: url("https://somewebsite.com/path/to/font.woff"); /* 絶対 URL */
 src: url("path/to/font.woff"); /* 引用符付きの URL */
-src: url(path/to/svgfont.svg#example); /* フラグメントで識別するフォント */
+src: url("path/to/svgFont.svg#example"); /* フラグメントで識別するフォント */
 
 /* <font-face-name> 値 */
 src: local(font); /* 引用符なしの名前 */
@@ -25,17 +22,17 @@ src: local("font"); /* 引用符付きの名前 */
 src: local("some font"); /* 引用符付きの空白を含む */
 
 /* <tech(<font-tech>)> 値 */
-src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
-src: url(path/to/fontCOLR-svg.otf) tech(color-SVG);
+src: url("path/to/fontCOLRv1.otf") tech(color-COLRv1);
+src: url("path/to/fontCOLR-svg.otf") tech(color-SVG);
 
 /* <format(<font-format>)> 値 */
-src: url(path/to/font.woff) format("woff");
-src: url(path/to/font.otf) format("opentype");
+src: url("path/to/font.woff") format("woff");
+src: url("path/to/font.otf") format("opentype");
 
 /* 複数のリソース */
 src:
-  url(path/to/font.woff) format("woff"),
-  url(path/to/font.otf) format("opentype");
+  url("path/to/font.woff") format("woff"),
+  url("path/to/font.otf") format("opentype");
 
 /* フォントの形式と技術のついた複数のリソース */
 src:
@@ -73,7 +70,8 @@ src:
   - : ローカルにインストールされているフォントフェイスの完全な名前または PostScript 名を `local()` の部分値を使って指定します。
     名前はオプションで、引用符で囲むこともできます。フォントフェイス名は[大文字小文字を区別しません](https://drafts.csswg.org/css-fonts-3/#font-family-casing)。
 
-> **メモ:** {{domxref("Local Font Access API", "ローカルフォントアクセス API", "", "nocode")}} を使用することで、ユーザーがローカルにインストールしたフォントデータにアクセスすることができます。これは、名前、スタイル設定、ファミリーなどの高水準の詳細と、基盤となるフォントファイルの生のバイトを含みます。
+> [!NOTE]
+> {{domxref("Local Font Access API", "ローカルフォントアクセス API", "", "nocode")}} を使用することで、ユーザーがローカルにインストールしたフォントデータにアクセスすることができます。これは、名前、スタイル設定、ファミリーなどの高水準の詳細と、基盤となるフォントファイルの生のバイトを含みます。
 
 ## 解説
 

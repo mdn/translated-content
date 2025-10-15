@@ -2,7 +2,7 @@
 title: fill
 slug: Web/SVG/Reference/Attribute/fill
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
 **`fill`** 属性には使われ方により 2 つの意味があります. 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色（またはグラデーションやパターンなどの SVG ペイントサーバー）を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．
@@ -20,7 +20,6 @@ SVG のプレゼンテーション属性の `fill` と CSS の {{cssxref("fill")
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 SVG の `fill` 属性は、以下の SVG 要素でアニメーションの最後の状態を定義するために使用することができます。
@@ -85,7 +84,7 @@ svg {
   <style>
     path {
       stroke-width: 2px;
-      marker: url(#circle);
+      marker: url("#circle");
     }
   </style>
   <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z"
@@ -391,34 +390,6 @@ svg {
 ## textPath
 
 {{SVGElement('textPath')}} において、 `fill` はテキストの色を定義するプレゼンテーション属性です。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint">&#x3C;paint></a></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-## tref
-
-> [!WARNING]
-> SVG2 では、 {{SVGElement('tref')}} は非推奨であり、使用するべきではありません。
-
-{{SVGElement('tref')}} において、 `fill` はテキストの色を定義するプレゼンテーション属性です。
 
 <table class="properties">
   <tbody>

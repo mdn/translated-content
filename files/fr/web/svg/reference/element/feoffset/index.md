@@ -16,9 +16,9 @@ La primitive de filtre **`<feOffset>`** permet de décaler l'image qu'elle a en 
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitives de filtres](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
+- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
+- [Attributs de primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -88,4 +88,4 @@ Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Effets de filtre](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- [Tutoriel SVG: Effets de filtre](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

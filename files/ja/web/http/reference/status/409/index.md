@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`409 Conflict`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストが現在のサーバーの状態と競合したことを示します。
 
 {{glossary("WebDAV")}} のリモートウェブオーサリングでは、 `409 conflict` レスポンスはクライアントに送信されるエラーであり、ユーザーが競合を解決してリクエストを再送信できるようにするためのものです。

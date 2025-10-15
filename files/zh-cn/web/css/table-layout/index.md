@@ -3,8 +3,6 @@ title: table-layout
 slug: Web/CSS/table-layout
 ---
 
-{{CSSRef}}
-
 **table-layout** CSS 属性定义了用于布局{{htmlelement("table", "表格")}}的单元格、行和列的算法。
 
 {{InteractiveExample("CSS Demo: table-layout")}}

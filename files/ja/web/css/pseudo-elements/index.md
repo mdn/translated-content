@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。
 
 ## 構文
@@ -33,7 +31,8 @@ p::first-line {
 
 擬似要素は、対象要素の現在の状態に基づいて選択することができます。例えば、`p:hover::first-line` は、段落自体にカーソルが置かれているとき（擬似クラス）、その段落の最初の行（擬似要素）を選択します。
 
-> **メモ:** [セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)に無効なセレクターが含まれている場合、そのスタイルブロック全体が無効になります。
+> [!NOTE]
+> [セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)に無効なセレクターが含まれている場合、そのスタイルブロック全体が無効になります。
 
 ## 組版擬似要素
 
@@ -98,13 +97,13 @@ p::first-line {
 この擬似要素は、フォームコントロールに関連しています。
 
 - {{CSSxRef("::checkmark")}}
-  - : [カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select) の現在選択されている `<option>` 要素内に配置されたチェックマークを対象とし、どれが選択されているかを視覚的に示します。
+  - : [カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select) の現在選択されている `<option>` 要素内に配置されたチェックマークを対象とし、どれが選択されているかを視覚的に示します。
 - {{CSSxRef("::file-selector-button")}}
   - : {{HTMLElement("input") }} の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) のボタンです。
 - {{CSSxRef("::picker()")}}
-  - : 要素のピッカー部分、例えば[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーです。
+  - : 要素のピッカー部分、例えば[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーです。
 - {{CSSxRef("::picker-icon")}}
-  - : アイコンが関連付けられているフォームコントロール内のピッカーアイコン。[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select) の場合、選択が閉じられているときに下向きの矢印を選択します。
+  - : アイコンが関連付けられているフォームコントロール内のピッカーアイコン。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select) の場合、選択が閉じられているときに下向きの矢印を選択します。
 - {{CSSxRef("::placeholder")}}
   - : 入力フィールドのプレースホルダーテキストです。
 

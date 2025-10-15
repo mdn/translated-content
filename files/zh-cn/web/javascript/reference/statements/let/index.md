@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66149c2238e1beb7fc65dd998968aa0638c874a3
 ---
 
-{{jsSidebar("Statements")}}
-
 **`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以选择将其初始化为一个值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Let")}}

@@ -56,7 +56,8 @@ O ambiente de produção é o ambiente fornecido pelo computador/servidor onde v
 - Servidor de aplicativos que passa solicitações "dinâmicas" entre seu site Django e o servidor web.
 - Bancos de dados dos quais seu site depende.
 
-> **Nota:**Dependendo de como sua produção está configurada, você também pode ter um proxy reverso, load balancer(balanceador de carga), etc.
+> [!NOTE]
+> Dependendo de como sua produção está configurada, você também pode ter um proxy reverso, load balancer(balanceador de carga), etc.
 
 O computador/servidor pode estar localizado em suas instalações e conectado à Internet por um link rápido, mas é muito mais comum usar um computador hospedado "na nuvem". O que isso realmente significa é que seu código é executado em algum computador remoto (ou possivelmente em um computador "virtual") no(s) centro(s) de dados da empresa de hospedagem. O servidor remoto geralmente oferece algum nível garantido de recursos de computação (por exemplo, CPU, RAM, memória de armazenamento, etc.) e conectividade com a Internet por um determinado preço.
 
@@ -69,7 +70,8 @@ Outros provedores de hospedagem oferecem suporte a Django como parte de uma ofer
 
 Alguns desenvolvedores escolherão a maior flexibilidade fornecida por IaaS em vez de PaaS, enquanto outros apreciarão a sobrecarga de manutenção reduzida e escalonamento mais fácil de PaaS. Quando você está começando, configurar seu site em um sistema PaaS é muito mais fácil e é isso que faremos neste tutorial.
 
-> **Nota:** **Dica:** Se você escolher um provedor de hospedagem compatível com Python / Django, ele deve fornecer instruções sobre como configurar um site Django usando diferentes configurações de servidor da web, servidor de aplicativos, proxy reverso, etc (isso não será relevante se você escolher um PaaS ) Por exemplo, existem muitos guias passo a passo para várias configurações nos [documentos da comunidade Digital Ocean Django.](https://www.digitalocean.com/community/tutorials?q=django)
+> [!NOTE]
+> **Dica:** Se você escolher um provedor de hospedagem compatível com Python / Django, ele deve fornecer instruções sobre como configurar um site Django usando diferentes configurações de servidor da web, servidor de aplicativos, proxy reverso, etc (isso não será relevante se você escolher um PaaS ) Por exemplo, existem muitos guias passo a passo para várias configurações nos [documentos da comunidade Digital Ocean Django.](https://www.digitalocean.com/community/tutorials?q=django)
 
 ## Escolhendo um provedor de hospedagem
 
@@ -91,13 +93,15 @@ A boa notícia quando você está começando é que existem alguns sites que for
 
 Muitos provedores também têm uma camada "básica" que fornece níveis mais úteis de capacidade de computação e menos limitações. [Digital Ocean](https://www.digitalocean.com/) e [Python Anywhere](https://www.pythonanywhere.com/) são exemplos de provedores de hospedagem populares que oferecem uma camada de computação básica relativamente barata (na faixa de US$5 a US$10 por mês).
 
-> **Nota:**Lembre-se de que o preço não é o único critério de seleção. Se o seu site for bem-sucedido, pode ser que a escalabilidade seja a consideração mais importante.
+> [!NOTE]
+> Lembre-se de que o preço não é o único critério de seleção. Se o seu site for bem-sucedido, pode ser que a escalabilidade seja a consideração mais importante.
 
 ## Preparando seu site para publicação
 
 O [esqueleto do site do Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) criado usando as ferramentas django-admin e manage.py é configurado para tornar o desenvolvimento mais fácil. Muitas das configurações do projeto Django (especificadas em settings.py) devem ser diferentes para produção, por motivos de segurança ou desempenho.
 
-> **Nota:** **Dica:** É comum ter um arquivo **settings.py** separado para produção e importar configurações confidenciais de um arquivo separado ou de uma variável de ambiente. Este arquivo deve ser protegido, mesmo se o resto do código-fonte estiver disponível em um repositório público.
+> [!NOTE]
+> **Dica:** É comum ter um arquivo **settings.py** separado para produção e importar configurações confidenciais de um arquivo separado ou de uma variável de ambiente. Este arquivo deve ser protegido, mesmo se o resto do código-fonte estiver disponível em um repositório público.
 
 As configurações críticas que você deve verificar são:
 
@@ -283,7 +287,8 @@ The final steps are to copy your application into this local project directory a
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
-> **Nota:** **Tip:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
+> [!NOTE]
+> **Tip:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
 >
 > The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) is well worth the effort, but is beyond the scope of this topic.
 >
@@ -403,7 +408,8 @@ For more information, see [Django and Static Assets](https://devcenter.heroku.co
 
 There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the [WhiteNoise](https://warehouse.python.org/project/whitenoise/) project for serving of static assets directly from Gunicorn in production.
 
-> **Nota:**Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://warehouse.python.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
+> [!NOTE]
+> Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://warehouse.python.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
 The steps to set up _WhiteNoise_ to use with the project are [given here](http://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
 

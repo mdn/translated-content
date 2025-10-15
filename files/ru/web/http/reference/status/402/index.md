@@ -3,7 +3,7 @@ title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP-ответ **`402 Payment Required`** это нестандартная ошибка клиента, зарезервированная для использования в будущем.
 

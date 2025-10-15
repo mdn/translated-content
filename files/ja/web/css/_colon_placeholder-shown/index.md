@@ -3,8 +3,6 @@ title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
-{{CSSRef}}
-
 **`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[プレイスホルダー文字列](/ja/docs/Web/HTML/Reference/Elements/input#attr-placeholder)が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。
 
 ```css
@@ -14,7 +12,7 @@ slug: Web/CSS/:placeholder-shown
 }
 ```
 
-{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :placeholder-shown", "tabbed-shorter")}}
 
 ```css interactive-example
 label {
