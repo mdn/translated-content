@@ -8,12 +8,12 @@ l10n:
 
 {{APIRef("Performance API")}}{{deprecated_header}}
 
-已弃用的 **`Performance.timing`** 只读属性会返回一个与延迟相关的性能信息的 {{domxref("PerformanceTiming")}} 对象。
+遗留的 **`Performance.timing`** 只读属性会返回一个与延迟相关的性能信息的 {{domxref("PerformanceTiming")}} 对象。
 
 该属性在 worker 中不可用。
 
 > [!WARNING]
-> 此属性已在 [Navigation Timing Level 2 规范](https://w3c.github.io/navigation-timing/#obsolete)中被弃用。请改用 {{domxref("PerformanceNavigationTiming")}} 接口。
+> 此属性已在 [Navigation Timing 第 2 版规范](https://w3c.github.io/navigation-timing/#obsolete)中被弃用。请改用 {{domxref("PerformanceNavigationTiming")}} 接口。
 
 ## 值
 
