@@ -16,7 +16,8 @@ l10n:
 
 論理値です。端末に複数の画面がある場合は `true`、ない場合は `false`。
 
-> **メモ:** {{httpheader("Permissions-Policy/window-management", "window-management")}} の [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) が設定されており、ウィンドウ管理 API の使用をブロックしている場合、 `isExtended` は常に `false` を返します。
+> [!NOTE]
+> {{httpheader("Permissions-Policy/window-management", "window-management")}} の [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) が設定されており、ウィンドウ管理 API の使用をブロックしている場合、 `isExtended` は常に `false` を返します。
 
 ## 例
 

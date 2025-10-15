@@ -29,7 +29,7 @@ vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via 
 [`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling) peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
 que l'auteur comptait obtenir.
 
-Consultez [Gestion des espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
+Consultez [Gestion des espaces dans le DOM](/fr/docs/Web/CSS/CSS_text/Whitespace)
 et [_Why are some Text nodes empty?_
 dans la FAQ DOM 3 du W3C](https://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
 

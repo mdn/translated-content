@@ -77,7 +77,8 @@ l10n:
 4. エラーでは、"guessSubmit.addeventListener is not a function" とあり、これは JavaScript インタープリターに呼び出している関数が認識されないという意味です。しばしば、このエラーメッセージは、スペルミスをしたということです。もし正しい綴りがわからなければ、MDN のサイトで使用している機能を調べてみてください。きっと見つかります。いつもはお好みの検索エンジンで「mdn _機能の名前_」と検索してみるのがよいでしょう。今回は時間短縮のために [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) のリンクを張っておきます。
 5. ページによると、関数の名前を間違えたみたいですね。 JavaScript は大文字小文字を区別しますので、ちょっとでも違うとエラーの原因になることを覚えておきましょう。それでは `addeventListener` を `addEventListener` に修正してエラーを直しましょう。
 
-> **メモ:** [TypeError: "x" is not a function](/ja/docs/Web/JavaScript/Reference/Errors/Not_a_function) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [TypeError: "x" is not a function](/ja/docs/Web/JavaScript/Reference/Errors/Not_a_function) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### 構文エラーその 2
 
@@ -132,7 +133,8 @@ l10n:
 9. ここではクラスセレクターが必要です。クラスセレクターはドット (`.`) で始まりますが、 51 行目で `querySelector()` メソッドに渡された文字列にはドットがありません。これが問題でしょう！ 51 行目の `lowOrHi` を `.lowOrHi` に変更してみてください。
 10. ファイルを保存して再度読み込むと、`console.log()` の文は求めていた `<p>` 要素を表示しています。何とか次のエラーを潰すことができました！ `console.log()` の行は削除してもいいですし、後で使うために残しておいても大丈夫です。
 
-> **メモ:** [TypeError: "x" is (not) "y"](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [TypeError: "x" is (not) "y"](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### 構文エラーその 3
 
@@ -218,7 +220,8 @@ if (userGuess = randomNumber) {
 
 これは単純です。大体は関数やメソッドの呼び出しで閉じ括弧を忘れたことを表しています。
 
-> **メモ:** [SyntaxError: missing ) after argument list](/ja/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [SyntaxError: missing ) after argument list](/ja/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### SyntaxError: missing : after property id
 
@@ -246,7 +249,8 @@ function checkGuess( {
 
 どのエラーにも言えることですが、上の例でも見たように、考えてください。エラーが起きた時に、エラーが起きた行の番号をみて、その行にエラーがあるか見てみます。エラーはその行に存在しないこともありますし、上述した理由以外で起きることもあるということを心に留めておいてください。
 
-> **メモ:** [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: string literal contains an unescaped line break](/ja/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
+> [!NOTE]
+> [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: string literal contains an unescaped line break](/ja/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
 
 ## まとめ
 

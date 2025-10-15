@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 
 **`has()`** メソッドは、特定のキーをもつ要素が `WeakMap` オブジェクト内に存在するかどうかを示す真偽値を返します。
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+{{InteractiveExample("JavaScript デモ: WeakMap.prototype.has()")}}
 
 ```js interactive-example
 const weakmap1 = new WeakMap();

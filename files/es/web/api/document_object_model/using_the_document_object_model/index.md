@@ -27,7 +27,7 @@ Tiene un árbol DOM que se ve así:
 
 ![El DOM como una representación en forma de árbol de un documento que tiene una raíz y elementos de nodo que contienen contenido](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-Aunque el árbol anterior es similar al árbol DOM del documento anterior, no es idéntico, ya que [el árbol DOM real conserva los espacios en blanco](/es/docs/Web/API/Document_Object_Model/Whitespace).
+Aunque el árbol anterior es similar al árbol DOM del documento anterior, no es idéntico, ya que [el árbol DOM real conserva los espacios en blanco](/es/docs/Web/CSS/CSS_text/Whitespace).
 
 Cuando un navegador web analiza un documento HTML, crea un árbol DOM y luego lo usa para mostrar el documento.
 
