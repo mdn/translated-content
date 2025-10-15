@@ -1,7 +1,7 @@
 ---
 title: Viewport meta tag
-slug: Web/HTML/Guides/Viewport_meta_element
-original_slug: Web/HTML/Viewport_meta_tag
+slug: Web/HTML/Reference/Elements/meta/name/viewport
+original_slug: Web/HTML/Guides/Viewport_meta_element
 l10n:
   sourceCommit: 65e71ef4fbb2de409107dfbe61906d247b39d192
 ---

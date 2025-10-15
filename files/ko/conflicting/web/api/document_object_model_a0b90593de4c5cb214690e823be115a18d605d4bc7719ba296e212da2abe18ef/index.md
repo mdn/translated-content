@@ -1,6 +1,7 @@
 ---
 title: DOM 소개
-slug: Web/API/Document_Object_Model/Introduction
+slug: conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+original_slug: Web/API/Document_Object_Model/Introduction
 ---
 
 이 문서는 {{glossary("DOM")}}에 대한 개념을 간략하게 소개하는 문서이다: DOM 이 무엇이며, 그것이 어떻게 {{glossary("HTML")}}, {{glossary("XML")}} 문서들을 위한 구조를 제공하는지, 어떻게 DOM 에 접근하는지, API 가 어떻게 사용되는지에 대한 참조 정보와 예제들을 제공한다.
