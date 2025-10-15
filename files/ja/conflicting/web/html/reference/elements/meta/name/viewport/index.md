@@ -1,7 +1,8 @@
 ---
 title: ビューポートの meta 要素の使用
 short-title: ビューポートの meta 要素
-slug: Web/HTML/Guides/Viewport_meta_element
+slug: conflicting/Web/HTML/Reference/Elements/meta/name/viewport
+original_slug: Web/HTML/Guides/Viewport_meta_element
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
