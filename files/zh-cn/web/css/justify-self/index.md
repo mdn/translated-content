@@ -3,8 +3,6 @@ title: justify-self
 slug: Web/CSS/justify-self
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
 
 {{InteractiveExample("CSS Demo: justify-self")}}
@@ -98,7 +96,6 @@ justify-self: unset;
 - 基本关键字： `normal`， `auto`，或者 `stretch`。
 - 基线对齐：`baseline` 关键字，加上可选的 `first` 或者 `last`。
 - 可定位对齐：
-
   - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
   - 加上可选的 `safe` 或者`unsafe`。
 
@@ -107,9 +104,7 @@ justify-self: unset;
 - `auto`
   - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `normal`。
 - `normal`
-
   - : 这个效果取决于我们所处的布局模式：
-
     - 在块级布局中，这个关键字是 `start` 的同义词。
     - 在绝对定位的布局中，在可置换绝对定位的盒子中，这个关键字表现的与 `start` 相似，在其他绝对定位的盒子中，其表现得与 `stretch` 相似。
     - 在表格布局中，由于这个属性被忽略所以这个关键字没有作用。

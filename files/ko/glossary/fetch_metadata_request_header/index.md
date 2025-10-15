@@ -30,10 +30,9 @@ l10n:
 
 - web.dev의[메타데이터 가져오기를 사용해 웹 공격으로부터 리소스를 보호하세요](https://web.dev/fetch-metadata/)
 - [메타데이터 가져오기 요청 헤더 플레이그라운드](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
-- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Headers)
-- [모든 HTTP 헤더 > 메타데이터 가져오기 요청 헤더 목록](/ko/docs/Web/HTTP/Headers#fetch_metadata_request_headers)
+- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Reference/Headers)
+- [모든 HTTP 헤더 > 메타데이터 가져오기 요청 헤더 목록](/ko/docs/Web/HTTP/Reference/Headers#fetch_metadata_request_headers)
 - [용어사전](/ko/docs/Glossary)
-
   - {{Glossary("Representation header", "Representation 헤더")}}
   - {{Glossary("HTTP_header","HTTP 헤더")}}
   - {{Glossary("Response header", "Response 헤더")}}

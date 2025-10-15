@@ -20,9 +20,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet contenant éventuellement le `tabId` ou `windowId` à vérifier.
-
     - `tabId` {{optional_inline}}
       - : `integer`. ID d'un onglet à vérifier
     - `windowId` {{optional_inline}}

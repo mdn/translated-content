@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 この記事では、開発者に影響を与える Firefox 65 の変更点について説明します。Firefox 65 は 2019 年 1 月 29 日に出荷されました。
 
 ## ウェブ開発者のための変更
@@ -34,7 +32,6 @@ l10n:
 - {{cssxref("image-rendering")}} プロパティの値 `crisp-edges` の接頭辞を削除しました ([Firefox バグ 1496617](https://bugzil.la/1496617))。
 - 値が `auto` である {{cssxref("scrollbar-color")}} が、2 つの色ではなく `auto` として解釈するようになりました ([Firefox バグ 1501418](https://bugzil.la/1501418))。
 - `break-*` プロパティを実装して、古い `page-break-*` プロパティをそれらの別名にしました ([Firefox バグ 775618](https://bugzil.la/775618)):
-
   - {{cssxref("page-break-before")}} は {{cssxref("break-before")}} の別名になりました。
   - {{cssxref("page-break-after")}} は {{cssxref("break-after")}} の別名になりました。
   - {{cssxref("page-break-inside")}} は {{cssxref("break-inside")}} の別名になりました。
@@ -42,13 +39,11 @@ l10n:
 - {{cssxref("overflow-wrap")}} プロパティの値 `anywhere` を実装しました ([Firefox バグ 1505786](https://bugzil.la/1505786))。
 - 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` イージング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` イージング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
 - ほかのブラウザーとの互換性のために、{{cssxref("appearance", "-webkit-appearance")}} で新しい値をいくつか追加しました。特に、以下の値です。
-
   - `meter`。これはユーザーエージェントのスタイルシートで、{{htmlelement("meter")}} 要素のデフォルトの値として使用されます。既存の値 `meterbar` は、`meter` の別名になりました ([Firefox バグ 1501483](https://bugzil.la/1501483))。
   - `progress-bar`。これはユーザーエージェントのスタイルシートで、{{htmlelement("progress")}} 要素のデフォルトの値として使用されます。既存の値 `progressbar` は、`progress-bar` の別名になりました ([Firefox バグ 1501506](https://bugzil.la/1501506))。
   - `textarea`。これはユーザーエージェントのスタイルシートで、{{htmlelement("textarea")}} 要素のデフォルトの値として使用されます。既存の値 `textfield-multiline` は、`textarea` の別名になりました ([Firefox バグ 1507905](https://bugzil.la/1507905))。
 
 - ほかのブラウザーの動作に合わせるため、{{cssxref("user-select")}} の動作を変更しました ([Firefox バグ 1506547](https://bugzil.la/1506547))。具体的には以下のとおりです:
-
   - 要素で `user-select: all` を設定したとき、子孫要素で設定した `user-select` のほかの値を上書きしないようになりました。例えば、以下のコードをご覧ください:
 
     ```html
@@ -160,7 +155,6 @@ _変更なし。_
 ### その他
 
 - [WebP](/ja/docs/Glossary/WebP) 画像をサポートしました ([Firefox バグ 1294490](https://bugzil.la/1294490))。
-
   - また、特定の状況でブラウザー間の互換性を向上するために、WebP の MIMEType (`image/webp`) を HTML ファイルの {{httpheader("Accept")}} 標準 HTTP 要求ヘッダーに追加しました ([Firefox バグ 1507691](https://bugzil.la/1507691))。
 
 - Windows で、AV1 コーデックをデフォルトでサポートしました ([Firefox バグ 1452146](https://bugzil.la/1452146))。
@@ -172,7 +166,6 @@ _変更なし。_
 #### タブ
 
 - {{WebExtAPIRef("tabs", "tabs API", "", "1")}} を、タブサクセサーをサポートするように強化しました。タブがサクセサーを持つことができ、サクセサーはタブが閉じられたときにアクティブになるタブの ID です ([Firefox バグ 1500479](https://bugzil.la/1500479)。詳しくは [this blog post](https://qiita.com/piroor/items/ea7e727735631c45a366) をご覧ください)。特に、以下の値です:
-
   - {{WebExtAPIRef("tabs.Tab")}} 型が `successorId` プロパティを持つようになりました。これは、タブのサクセサーの ID を登録および取得するために使用できます。
   - {{WebExtAPIRef("tabs.onActivated")}} イベントリスナーのコールバックで、新しい引数 `previousTabId` を使用できます。これは、以前アクティブであったタブがまだ開かれていれば、その ID が入ります。
   - {{WebExtAPIRef("tabs.update()")}} 関数の `updateProperties` オブジェクトに、新しい省略可能のプロパティ`successorTabId` を追加しました。ID を更新するために使用できます。

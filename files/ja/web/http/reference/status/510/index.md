@@ -1,14 +1,11 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Reference/Status/510
-original_slug: Web/HTTP/Status/510
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`510 Not Extended`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、クライアントのリクエストで HTTP 拡張 ({{RFC("2774")}}) が宣言され、リクエストの処理に使用すべきであると指定されているにもかかわらず、その拡張に対応していない場合にコードが送信されます。
+HTTP の **`510 Not Extended`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、クライアントのリクエストで HTTP 拡張 ({{RFC("2774")}}) が宣言され、リクエストの処理に使用すべきであると指定されているにもかかわらず、その拡張に対応していない場合にコードが送信されます。
 
 ## ステータス
 

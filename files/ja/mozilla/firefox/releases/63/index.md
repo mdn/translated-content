@@ -3,8 +3,6 @@ title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされました。このページでは、開発者に影響する Firefox 63 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -72,7 +70,6 @@ _変更なし。_
 #### DOM
 
 - {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} で、以下の部分をデフォルトで有効にしました ([Firefox バグ 1476158](https://bugzil.la/1476158))。
-
   - {{domxref("Animation")}} の {{domxref("Animation.ready", "ready")}} および {{domxref("Animation.finished", "finished")}} プロパティ。`Animation` オブジェクトの `ready` および `finished` {{jsxref("Promise")}} を指定します。
   - {{domxref("Animation")}} オブジェクトの {{domxref("Animation.effect", "effect")}} プロパティ。
   - {{domxref("KeyframeEffect")}} および {{domxref("AnimationEffect")}} インターフェイス。
@@ -182,7 +179,6 @@ _変更なし。_
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} および {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} で、ブラウザーのアクションバッジの文字色を取得および設定できるようになりました ([Firefox バグ 1424620](https://bugzil.la/1424620))。
 - `manifest.json` のテーマ `colors` キーで、新しいタブの文字色を設定する `ntp_text` プロパティと、新しいタブの色を設定する `ntp_background` プロパティをサポートしました ([Firefox バグ 1347204](https://bugzil.la/1347204))。
 - ブックマークサイドバーなど、サイドバーの色をテーマで定義可能になりました ([Firefox バグ 1418602](https://bugzil.la/1418602))。関連プロパティ:
-
   - `sidebar`: サイドバーの背景色。
   - `sidebar_text`: サイドバーの文字色。
   - `sidebar_highlight`: サイドバーで選択したアイテムの背景色。

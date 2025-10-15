@@ -3,8 +3,6 @@ title: perspective-origin
 slug: Web/CSS/perspective-origin
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
 {{InteractiveExample("CSS Demo: perspective-origin")}}
@@ -120,18 +118,14 @@ perspective-origin: unset;
 ### 值
 
 - _x-position_
-
   - : 指定*消失点*的横坐标，其值有以下形式：
-
     - {{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素宽度的百分比值，可为负值。
     - `left`, 关键字，0 值的简记。
     - `center`, 关键字，50% 的简记。
     - `right`, 关键字，100% 的简记。
 
 - _y-position_
-
   - : 指定*消失点*的纵坐标，其值有以下形式：
-
     - {{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素高度的百分比值，可为负值。
     - `top`, 关键字，0 值的简记。
     - `center`, 关键字，50% 的简记。

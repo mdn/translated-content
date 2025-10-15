@@ -70,7 +70,6 @@ La entrada de envío - `submit` se mostrará como un botón (de forma predetermi
 
 - `action`: El recurso URL - resource/URL donde los datos serán enviados para su procesamiento cuando se envíe el formulario. Si esto no se establece (o se deja como una cadena vacía), entonces el formulario será enviado de regreso al URL de la página actual.
 - `method`: El método utilizado por HTTP para enviar los datos: _post_ o _get_.
-
   - El método `POST` siempre debe usarse si los datos enviados van a resultar en un cambio en la base de datos del servidor porque esto puede ser mas resistente a un ataque de solicitud de falsificación entre sitios (cross-site forgery request attacks).
   - El método `GET` unicamente debe usarse para cuando los formularios no cambian datos de usuario (por ejemplo, un formulario de búsqueda). También, este es recomendado para cuando desee guardar, marcar o compartir el URL.
 
@@ -89,16 +88,13 @@ A continuación se muestra un diagram de flujo del proceso de cómo Django manej
 Basado en el diagrama de anterior, las principales pasos que hace el proceso del manejo de formularios de Django son:
 
 1. Mostrar el formulario predeterminado la primera vez que es solicitado por el usuario.
-
    - El formulario puede contener campos en blanco (por ejemplo, si está creando un registro nuevo), o puede estar rellenado previamente con valores iniciales (por ejemplo, si está modificando un registro o si tiene valores iniciales predeterminados útiles).
    - El formulario se conoce como no vinculado en este punto porque no esta asociado con ningún dato ingresado por el usuario (aunque pueda tener valores iniciales).
 
 2. Recibir datos de una solicitud de envío y vincularlo al formulario.
-
    - La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario.
 
 3. Limpiar y validar los datos. Clean and validate the data.
-
    - La limpieza de los datos realiza una sanitización de la entrada (por ejemplo, remover caracteres no válidos que podrían ser usados para enviar contenido malicioso al servidor) y convertirlos en tipos consistente de Python.
    - La validación verifica que los valores sean apropiados para el campo (por ejemplo, que esten en el rango correcto de fechas, no sean demasiado cortos ni demasiado largos, etc.)
 

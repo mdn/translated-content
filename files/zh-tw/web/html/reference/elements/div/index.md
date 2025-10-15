@@ -3,8 +3,6 @@ title: <div>：內容分區元素
 slug: Web/HTML/Reference/Elements/div
 ---
 
-{{HTMLSidebar}}
-
 **`<div>`** [HTML](/zh-TW/docs/Web/HTML) 元素是流內容的通用容器。除非以某種方式使用 {{glossary("CSS")}} 進行樣式化（例如直接應用樣式或應用某種佈局模型，如 [Flexbox](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout) 到其父元素上），否則它對內容或佈局沒有影響。
 
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
@@ -43,7 +41,8 @@ slug: Web/HTML/Reference/Elements/div
 
 此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
-> **備註：** `align` 屬性已廢棄；請不要再使用。取而代之應該使用 CSS 屬性或技術，例如 [CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout) 或 [CSS Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 來對頁面上的 `<div>` 元素進行對齊和定位。
+> [!NOTE]
+> `align` 屬性已廢棄；請不要再使用。取而代之應該使用 CSS 屬性或技術，例如 [CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout) 或 [CSS Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 來對頁面上的 `<div>` 元素進行對齊和定位。
 
 ## 使用注意事項
 

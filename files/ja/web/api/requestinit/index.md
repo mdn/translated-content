@@ -16,9 +16,7 @@ l10n:
 ## インスタンスプロパティ
 
 - `attributionReporting` {{optional_inline}} {{experimental_inline}}
-
   - : このリクエストのレスポンスに JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録できるようにしたいことを示します。`attributionReporting` は以下のプロパティを格納するオブジェクトです。
-
     - `eventSourceEligible`
       - : 論理値。`true` に設定すると、このリクエストのレスポンスは帰属ソースの登録の対象となります。`false` に設定すると、対象になりません。
     - `triggerEligible`
@@ -27,9 +25,7 @@ l10n:
     詳しくは [Attribution Reporting API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
 - `body` {{optional_inline}}
-
   - : サーバーに送信する内容を含むリクエスト本体です。例えば {{httpmethod("POST")}} または {{httpmethod("PUT")}} リクエストで使用されます。 以下のいずれかの型のインスタンスとして指定します。
-
     - 文字列
     - {{jsxref("ArrayBuffer")}}
     - {{domxref("Blob")}}
@@ -43,19 +39,14 @@ l10n:
     詳しくは[本体の設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#本体の設定)を参照してください。
 
 - `browsingTopics` {{optional_inline}} {{experimental_inline}}
-
   - : 論理値で、現在のユーザーのために選択されたトピックを、 リクエストに関連付けられた {{httpheader("Sec-Browsing-Topics")}} ヘッダーで送ることを指定します。
 
     詳しくは [Using the Topics API](/ja/docs/Web/API/Topics_API/Using) を参照してください。
 
 - `cache` {{optional_inline}}
-
   - : リクエストに使用したい[キャッシュモード](/ja/docs/Web/API/Request/cache)を指定します。以下の値のいずれかを指定します。
-
     - `default`
-
       - : ブラウザーはリクエストに一致するレスポンスを HTTP キャッシュから探します。
-
         - 一致したものがあり[新しい](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)場合、それをキャッシュから返します。
         - もし一致するものがあっても[古い](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)場合は、ブラウザーはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を行います。サーバーがリソースが変更されていないことを示した場合、そのリソースはキャッシュから返されます。そうでなければ、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
         - 一致するものがない場合、ブラウザーは通常のリクエストを行い、ダウンロードされたリソースでキャッシュを更新します。
@@ -65,32 +56,24 @@ l10n:
     - `reload`
       - : ブラウザーは最初のキャッシュを見ずにリモートサーバーからリソースを取得しますが、ダウンロードしたリソースでキャッシュを更新します。
     - `no-cache`
-
       - : ブラウザーは、リクエストに一致するレスポンスがないか、HTTP キャッシュを探します。
-
         - 一致するものがあれば、新しいか古いかを問わず、ブラウザーはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を行います。サーバーがリソースが変更されていないことを示した場合、そのリソースはキャッシュから返されます。そうでなければ、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
         - 一致するものがない場合、ブラウザーは通常のリクエストを行い、ダウンロードされたリソースでキャッシュを更新します。
 
     - `force-cache`
-
       - : ブラウザーは、リクエストに一致するレスポンスを HTTP キャッシュから探します。
-
         - 一致するものがあれば、新しいか古いかを問わず、それをキャッシュから返します。
         - 一致するものがない場合、ブラウザーは通常のリクエストを行い、ダウンロードされたリソースでキャッシュを更新します。
 
     - `only-if-cached`
-
       - : ブラウザーは、リクエストに一致するレスポンスを HTTP キャッシュから探します。 {{experimental_inline}}
-
         - 一致するものがあれば、新しいか古いかを問わず、それをキャッシュから返します。
         - 一致するものがない場合は、ネットワークエラーを返します。
 
     `"only-if-cached"` モードはリクエストの [`mode`](/ja/docs/Web/API/Request/mode) が `"same-origin"` である場合にのみ使用することができます。リクエストの `redirect` プロパティが `"follow"` で、かつ `"same-origin"` モードに違反していなければ、キャッシュされたリダイレクトに従います。
 
 - `credentials` {{optional_inline}}
-
   - : ブラウザーがリクエストと共に資格情報を送るかどうか、また **`Set-Cookie`** レスポンスヘッダーを尊重するかどうかを制御します。資格情報とはクッキー、{{glossary("TLS")}} クライアント証明書、またはユーザー名とパスワードを格納した認証ヘッダーです。このオプションには以下の任意の値が指定できます。
-
     - `omit`
       - : リクエストで資格情報を送信したり、レスポンスに資格情報を含めたりしません。
     - `same-origin`
@@ -105,7 +88,6 @@ l10n:
     既定値は `same-origin` です。
 
 - `headers` {{optional_inline}}
-
   - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクト、またはキーがヘッダー名で値がヘッダー値であるオブジェクトリテラルが入ります。
 
     多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と呼ばれています。
@@ -115,20 +97,17 @@ l10n:
     詳しくは[ヘッダーの設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#ヘッダーの設定)を参照してください。
 
 - `integrity` {{optional_inline}}
-
   - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
 
     これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
 
     このオプションは `<hash-algo>-<hash-source>` という書式です。
-
     - `<hash-algo>` は `sha256`、`sha384`、`sha512` のいずれかです。
     - `<hash-source>` は指定したハッシュアルゴリズムでリソースをハッシュした結果の {{glossary("base64", "Base64 エンコーディング")}}です。
 
     既定値は空文字列です。
 
 - `keepalive` {{optional_inline}}
-
   - : 論理値。
     `true` に設定すると、リクエストが完全に完了する前にリクエストを開始したページが読み込まれなくなった場合でも、関連付けられたリクエストが中止されなくなります。
     これにより、ユーザーがページから離れたり閉じたりした場合でも、 {{domxref('Window.fetch','fetch()')}} リクエストによりセッションの終わりに分析データを送信することができます。
@@ -142,27 +121,20 @@ l10n:
     既定値は `false` です。
 
 - `method` {{optional_inline}}
-
   - : [リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)です。
 
     既定値は {{httpmethod("GET")}} です。
 
 - `mode` {{optional_inline}}
-
   - : オリジン間リクエストの動作を設定します。以下の値のいずれかです。
-
     - `same-origin`
-
       - : オリジン間リクエストを許可しません。 `same-origin` リクエストが異なるオリジンに送信された場合、ネットワークエラーが発生します。
 
     - `cors`
-
       - : このリクエストがオリジン間リクエストであった場合、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用します。 {{glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}のみがレスポンスに公開されます。
 
     - `no-cors`
-
       - : オリジン間リクエストで CORS を無効にします。このオプションには、次の制限があります。
-
         - メソッドは `HEAD`、`GET`、`POST` のいずれかである必要があります。
         - ヘッダーは {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}} のみですが、さらなる制約として {{httpheader("Range")}} ヘッダーも許可されません。これはサービスワーカーが追加したヘッダーにも適用されます。
         - レスポンスは不透明となり、ヘッダーと本体は JavaScript から利用できず、{{domxref("Response.status", "ステータスコード", "", "nocode")}}は常に `0` になります。
@@ -177,9 +149,7 @@ l10n:
     既定値は `cors` です。
 
 - `priority` {{optional_inline}}
-
   - : 同じ種類の他のリクエストに対する、この読み込みリクエストの優先度を指定します。以下の文字列のいずれかでなければなりません。
-
     - `high`
       - : 同じ種類の他のリクエストに対する優先度の高いフェッチリクエスト。
     - `low`
@@ -191,9 +161,7 @@ l10n:
     既定値は `auto` です。
 
 - `redirect` {{optional_inline}}
-
   - : サーバーが[リダイレクトステータス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)でレスポンスした場合のブラウザー動作を決定します。以下の値のいずれかです。
-
     - `follow`
       - : 自動的にリダイレクトを行います。
     - `error`
@@ -204,9 +172,7 @@ l10n:
     既定値は `follow` です。
 
 - `referrer` {{optional_inline}}
-
   - : リクエストの {{httpheader("Referer")}} ヘッダーに使用する値を指定する文字列。以下のいずれかを指定します。
-
     - 同じオリジンの相対 URL または絶対 URL
       - : 参照するヘッダー `Referer` を指定された値に設定します。相対 URL はリクエストを行ったページの URL に対して相対的に解決されます。
     - 空文字列

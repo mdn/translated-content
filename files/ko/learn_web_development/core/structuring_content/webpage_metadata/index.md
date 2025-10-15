@@ -67,7 +67,6 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 ### 능동적 학습: 간단한 예제 살펴보기
 
 1. 능동적인 학습을 시작하기 위해서, GitHub repo에가서 [title-example.html 페이지](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)의 복사본을 다운로드 하십시오. 다음 중 하나를 하면 됩니다:
-
    1. 복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
    2. 페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
 
@@ -271,7 +270,7 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 
 ## 문서의 기본 언어 설정
 
-마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
+마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
 
 ```html
 <html lang="en-US"></html>

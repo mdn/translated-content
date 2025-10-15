@@ -32,7 +32,6 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `align` {{deprecated_inline}}
   - : The alignment of the image with respect to its surrounding context. Use the {{cssxref('vertical-align')}} CSS property.
 - `alt`
-
   - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
@@ -40,9 +39,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `border` {{deprecated_inline}}
   - : The width of a border around the image.
 - `crossorigin`
-
   - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
-
     - anonymous
       - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted..
     - use-credentials
@@ -55,7 +52,6 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `hspace` {{deprecated_inline}}
   - : The number of pixels of white space to insert to the left and right of the image.
 - `ismap`
-
   - : This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.
 
     > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute.
@@ -67,9 +63,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `src`
   - : Image URL, this attribute is obligatory for the `<img>` element. On browsers supporting **srcset**, **src** is ignored if this one is provided.
 - `srcset`
-
   - : A list of one or more strings separated by commas indicating a set of possible images for the user agent to use. Each string is composed of:
-
     1. one URL to an image,
     2. a width descriptor, that is a positive integer directly followed by `'w'`. The default value, if missing, is the infinity.
     3. a pixel density descriptor, that is a positive floating number directly followed by `'x'`. The default value, if missing, is `1x`.
@@ -80,7 +74,6 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `width`
   - : The width of the image in pixels or percent.
 - `usemap`
-
   - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/Web/HTML/Element/map) associated with the element.
 
     > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.

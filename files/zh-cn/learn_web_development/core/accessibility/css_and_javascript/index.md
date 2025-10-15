@@ -205,7 +205,8 @@ a:active {
 
 另一方面，不应使用 {{cssxref("visibility")}}`:hidden` 或 {{cssxref("display")}}`:none`，因为它们会隐藏屏幕阅读器中的内容。当然，除非你希望从屏幕阅读器中隐藏此内容，这是有充分理由的。
 
-> **备注：** [专为屏幕阅读器用户设计的不可见内容](https://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
+> [!NOTE]
+> [专为屏幕阅读器用户设计的不可见内容](https://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
 
 ### 接受用户覆盖样式
 

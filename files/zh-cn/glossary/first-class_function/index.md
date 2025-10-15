@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 当一门编程语言的函数可以被当作变量一样用时，则称这门语言拥有**头等函数**。例如，在这样的语言中，函数可以被当作参数传递给其他函数，可以作为另一个函数的返回值，还可以被赋值给一个变量。
 
 ## 示例
@@ -64,7 +62,6 @@ function sayHello() {
 
 - 维基百科上的[头等函数](https://zh.wikipedia.org/wiki/头等函数)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{glossary("Callback function", "回调函数")}}
   - {{glossary("Function", "函数")}}
   - {{glossary("Variable", "变量")}}

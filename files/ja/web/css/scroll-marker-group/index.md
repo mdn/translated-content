@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{glossary("scroll container", "スクロールコンテナー")}}に {{cssxref("::scroll-marker-group")}} 擬似要素を生成するかどうか、生成する場合、既定の視覚的およびタブ順でコンテナーのコンテンツの直前 (`before`) に配置するか、直後 (`after`) に配置するかを制御します。
 
@@ -28,15 +28,12 @@ scroll-marker-group: unset;
 ### 値
 
 - `after`
-
   - : {{cssxref("::scroll-marker-group")}} 擬似要素は、スクロールコンテナーの子 DOM 要素の兄弟として、それらと、生成された {{cssxref("::scroll-button()")}} 擬似要素の直前に生成されます。コンテナーのタブ順およびレイアウトボックス順（DOM 構造順ではない）の最後に表示されます。
 
 - `before`
-
   - : {{cssxref("::scroll-marker-group")}} 擬似要素は、スクロールコンテナーの子 DOM 要素の兄弟として、それらと、生成された {{cssxref("::scroll-button()")}} 擬似要素の直前に生成されます。コンテナーのタブ順およびレイアウトボックス順（DOM 構造順ではない）の最後に表示されます。
 
 - `none`
-
   - : 要素には `::scroll-marker-group` 擬似要素は生成されません。これが既定値です。
 
 > [!NOTE]

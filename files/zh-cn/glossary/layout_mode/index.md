@@ -3,8 +3,6 @@ title: 布局模式
 slug: Glossary/Layout_mode
 ---
 
-{{GlossarySidebar}}
-
 [CSS](/zh-CN/docs/Web/CSS) **布局模式**，有时简称为布局，是一种基于盒子与其兄弟和祖辈盒子的交互方式来确定盒子的位置和大小的算法。有以下几种形式：
 
 - **块布局**：用来布置文件。块布局包含以文档为中心的功能，例如 [浮动](/zh-CN/docs/Web/CSS/float)元素或将其放置在[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)上的功能。
@@ -20,7 +18,6 @@ slug: Glossary/Layout_mode
 ## 参见
 
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
@@ -31,7 +28,6 @@ slug: Glossary/Layout_mode
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
@@ -39,6 +35,6 @@ slug: Glossary/Layout_mode
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "可替换元素")}}

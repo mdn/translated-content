@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
 
-{{CSSRef}}
-
 **`@view-transition`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)用于在跨文档导航的情况下选择当前文档和目标文档进行[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)。
 
 要使跨文档视图过渡正常工作，导航的当前文档和目标文档也需要同源。
@@ -22,9 +20,7 @@ l10n:
 ### 描述符
 
 - `navigation`
-
   - : 指定此规则对文档的视图过渡行为的影响。可能的值包括：
-
     - `auto`：如果导航是同源的，没有跨源重定向，并且其 {{domxref("NavigateEvent.navigationType", "navigationType")}} 为 `traverse`、`push` 或 `replace`，则文档在参与导航时将经历视图过渡。对于 `push` 或 `replace`，导航必须由用户与页面内容交互来发起，而不是由浏览器 UI 功能发起。
 
     - `none`：该文档将不会经历视图过渡。

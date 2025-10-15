@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 **`border-top-left-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティは、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の左上の角を丸くします。
 
-{{InteractiveExample("CSS Demo: border-top-left-radius")}}
+{{InteractiveExample("CSS デモ: border-top-left-radius")}}
 
 ```css interactive-example-choice
 border-top-left-radius: 80px 80px;

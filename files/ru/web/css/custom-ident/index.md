@@ -31,13 +31,11 @@ slug: Web/CSS/custom-ident
   {{CSSxRef("counter-reset")}}
 
   {{CSSxRef("counter-increment")}}
-
   - : Запрещают глобальные значения CSS (`unset`, `initial` и `inherit`), а также `none`.
 
 - {{CSSxRef("@counter-style")}}
 
   {{CSSxRef("list-style-type")}}
-
   - : Запрещает глобальные значения CSS (`unset`, `initial` и `inherit`), а также значения `none`, `inline` и `outside`. Также довольно много предопределённых значений используются в разных браузерах: `disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open`, and `disclosure-close`.
 
 - {{CSSxRef("grid-row-start")}}

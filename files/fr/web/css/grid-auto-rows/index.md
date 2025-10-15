@@ -111,7 +111,6 @@ grid-auto-rows: unset;
 - `<percentage>`
   - : Un pourcentage positif indiquant la taille de la ligne relativement à la taille du bloc qui contient la grille. Si la taille de ce bloc n'est pas définie, la valeur exprimée en pourcents est considérée comme `auto`.
 - `<flex>`
-
   - : Une dimension positive dont l'unité `fr` indique le facteur de flexibilité de la piste. Chaque piste dimensionnée avec `<flex>` occupera une partie de l'espace restant en fonction de ce facteur.
 
     Lorsque cette valeur apparaît en dehors de la notation `minmax()`, la valeur minimale `auto` est implicite (la valeur signifie `minmax(auto, <flex>)`).
@@ -123,7 +122,6 @@ grid-auto-rows: unset;
 - `minmax(min, max)`
   - : Une notation fonctionnelle qui définit un intervalle de taille entre `min` et `max`. Si `max` est inférieur à `min`, `max` est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur `<flex>` qui définit le facteur de flexibilité de la piste. En tant que minimum, elle est gérée comme zéro (ou comme le contenu minimal si le conteneur de la grille impose une contrainte de contenu minimal).
 - `auto`
-
   - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
     > [!NOTE]

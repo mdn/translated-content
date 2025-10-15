@@ -2,12 +2,10 @@
 title: place-items
 slug: Web/CSS/place-items
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
-{{CSSRef}}
-
-[CSS](/ko/docs/Web/CSS) 의 **`place-items`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 (예를 들어, {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성) 한번에 요소들을 정렬합니다. 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
+[CSS](/ko/docs/Web/CSS) 의 **`place-items`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 (예를 들어, {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성) 한번에 요소들을 정렬합니다. 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
 
 {{InteractiveExample("CSS Demo: place-items")}}
 
@@ -65,11 +63,9 @@ place-items: end center;
 ## 구문
 
 ```css
-/* 키워드 값 */
+/* 위치 정렬 */
 place-items: center;
 place-items: normal start;
-
-/* 위치 정렬 */
 place-items: center normal;
 place-items: start legacy;
 place-items: end normal;
@@ -219,7 +215,7 @@ values.addEventListener("change", (evt) => {
 }
 ```
 
-#### 결과ㄴ
+#### 결과
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
 

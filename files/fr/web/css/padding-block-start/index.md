@@ -126,7 +126,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("padding-top")}},
   - {{cssxref("padding-right")}},
   - {{cssxref("padding-bottom")}},

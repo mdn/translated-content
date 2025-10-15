@@ -245,7 +245,8 @@ Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 #### Remarques
 
 ```md
-> **Remarque :** **Voici comment écrire un encadré.**
+> [!CALLOUT]
+> **Voici comment écrire un encadré.**
 >
 > Il peut avoir plusieurs paragraphes.
 ```
@@ -335,7 +336,7 @@ Voir la discussion et le consensus à ce sujet dans <https://github.com/mdn/cont
 
 ## Listes de définitions
 
-Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas supportées par GFM. MDN introduit un format personnalisé pour les listes de définitions, qui est une forme modifiée des listes non-ordonnées de GFM ([`<ul>`](/fr/docs/Web/HTML/Element/ul)). Dans ce format&nbsp;:
+Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas supportées par GFM. MDN introduit un format personnalisé pour les listes de définitions, qui est une forme modifiée des listes non-ordonnées de GFM ([`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)). Dans ce format&nbsp;:
 
 - La liste `<ul>` de GFM contient n'importe quel nombre d'éléments GFM `<li>` de premier niveau.
 - Chacun de ces éléments GFM `<li>` de premier niveau doivent contenir un élément GFM `<ul>` en tant que dernier élément.
@@ -350,11 +351,9 @@ Par exemple, voici un `<dl>`&nbsp;:
 
 ````md
 - terme1
-
   - : Ma description du terme1
 
 - `terme2`
-
   - : Ma description du terme2
 
     Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:
@@ -581,7 +580,7 @@ Voir les discussions et consensus sur les <i lang="en">issues</i> GitHub suivant
 
 ## Exposant et indice
 
-On peut utiliser les éléments HTML [`<sup>`](/fr/docs/Web/HTML/Element/sup) et [`<sub>`](/fr/docs/Web/HTML/Element/sub) si nécessaire, mais on veillera à utiliser des formes alternatives dans les cas suivants&nbsp;:
+On peut utiliser les éléments HTML [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup) et [`<sub>`](/fr/docs/Web/HTML/Reference/Elements/sub) si nécessaire, mais on veillera à utiliser des formes alternatives dans les cas suivants&nbsp;:
 
 - Pour l'exponentiation, utilisez le circonflexe&nbsp;: `2^53`.
 - Pour des expressions ordinales comme 1<sup>er</sup>, préférez des mots comme «&nbsp;premier&nbsp;».

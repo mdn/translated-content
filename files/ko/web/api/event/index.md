@@ -124,4 +124,4 @@ l10n:
 
 - 사용 가능한 이벤트 유형 목록: [이벤트 참고서](/ko/docs/Web/Events)
 - [이벤트 대상의 비교](/ko/docs/Learn_web_development/Core/Scripting/Event_bubbling) (`target` vs. `currentTarget` vs. `relatedTarget` vs `originalTarget`)
-- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/API/Document_Object_Model/Events)

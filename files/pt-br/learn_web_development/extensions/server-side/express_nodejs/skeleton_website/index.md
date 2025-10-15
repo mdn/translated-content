@@ -36,7 +36,8 @@ Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "
 
 As seguintes sessões mostrará como chamar o "Application Generator", e prover uma pequena explicação sobre as diferentes opções de CSS. Também aprenderemos como a estrutura do site é definida. No final, será mostrado como podemos rodar o site para ver se funciona.
 
-> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem uma estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
+> [!NOTE]
+> O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem uma estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
 
 ## Usando o "Application Generator"
 
@@ -94,7 +95,6 @@ De um modo geral, você deve selecionar um mecanismo de modelagem que forneça t
 - Style — Alguns mecanismos de modelo usam marcação específica para indicar o conteúdo inserido no HTML "comum", enquanto outros constroem o HTML usando uma sintaxe diferente (por exemplo, usando recuo e nomes de bloco).
 - Performance/rendering time.
 - Features — você deve considerar se os mecanismos que você procura têm os seguintes recursos disponíveis:
-
   - Layout inheritance: Allows you to define a base template and then "inherit" just the parts of it that you want to be different for a particular page. This is typically a better approach than building templates by including a number of required components or building a template from scratch each time.
   - "Include" support: Allows you to build up templates by including other templates.
   - Concise variable and loop control syntax.
@@ -103,7 +103,8 @@ De um modo geral, você deve selecionar um mecanismo de modelagem que forneça t
   - Support for asynchronous operations and streaming.
   - Can be used on the client as well as the server. If a templating engine can be used on the client this allows the possibility of serving data and having all or most of the rendering done client-side.
 
-> **Nota:** **Tip:** Existem muitos recursos na Internet para ajudá-lo a comparar as diferentes opções!
+> [!NOTE]
+> **Tip:** Existem muitos recursos na Internet para ajudá-lo a comparar as diferentes opções!
 
 Para este projeto, usaremos o [Pug](https://pugjs.org/api/getting-started.html) mecanismo de modelagem (este é o mecanismo Jade que foi renomeado recentemente), pois esta é uma das linguagens de modelagem Express/JavaScript mais populares e é suportada imediatamente pelo gerador.
 
@@ -111,7 +112,8 @@ Para este projeto, usaremos o [Pug](https://pugjs.org/api/getting-started.html) 
 
 The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
 
-> **Nota:**CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
+> [!NOTE]
+> CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 
 Assim como nos mecanismos de modelagem, você deve usar o mecanismo de folha de estilo que permitirá que sua equipe seja mais produtiva. Para este projeto, usaremos o CSS comum (o padrão), pois nossos requisitos de CSS não são suficientemente complicados para justificar o uso de qualquer outra coisa.
 
@@ -179,7 +181,6 @@ At this point, we have a complete skeleton project. The website doesn't actually
    ```
 
 2. Then run the application.
-
    - On Windows, use this command:
 
      ```bash
@@ -356,7 +357,8 @@ The file **/bin/www** is the application entry point! The very first thing this 
 var app = require("../app");
 ```
 
-> **Nota:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
+> [!NOTE]
+> `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
 
 The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
 
@@ -467,7 +469,8 @@ module.exports = router;
 
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when an URL of `/users/` is received.
 
-> **Nota:** **Tip:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
+> [!NOTE]
+> **Tip:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
 One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 

@@ -3,7 +3,7 @@ title: 如何使用結構化資料
 short-title: 使用結構化資料
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
 ---
 
 MDN 會儘可能地以定義良好的結構來儲存資料。這些資訊隨後會被集中管理，只需更新一次，就可在眾多地方重複使用。
@@ -83,11 +83,9 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 
 ### GroupData 的更新流程
 
-此檔案應該在影響側邊欄的變更的同一個 PR 中更新。這樣可以確保側邊欄始終是最新的。審查者不應該合併未更新此檔案的 PR。
+此檔案位於 [`files/jsondata/GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json)，應該在影響側邊欄的變更的同一個 PR 中更新。這樣可以確保側邊欄始終是最新的。審查者不應該合併未更新此檔案的 PR。
 
 要測試你的修改，請確認 PR 中的檔案所顯示的側邊欄條目是否都正確顯示。
-
-`GroupData.json` 檔案位於[這裡](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json)（GitHub）。
 
 ## InterfaceData：記錄介面繼承
 
@@ -116,16 +114,13 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 
 ### InterfaceData 的更新流程
 
-新增繼承自其他介面的介面時，必須在相同的 PR 中更新此檔案。審查者不應該合併未作此更新的 PR。
+新增繼承自其他介面的介面時，必須在相同的 PR 中更新此檔案，其位於 [`files/jsondata/InterfaceData.json`](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json)。審查者不應該合併未作此更新的 PR。
 
 要測試你的修改，請確認你在 PR 中修改的每個介面的側邊欄是否正確顯示繼承關係。
 
-`InterfaceData.json` 檔案位於[這裡](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json)（GitHub）。
-
 ## SpecData：規範資訊
 
-> **警告：** `SpecData.json` 檔案已不再維護。正式的規範資訊儲存在 w3c/browser-spec 與 mdn/browser-compat-data 中各功能的 `spec_url` 鍵中。
+> [!WARNING]
+> [`SpecData.json`](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json) 檔案已不再維護。正式的規範資訊儲存在 [w3c/browser-specs](https://github.com/w3c/browser-specs) 與 [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) 中各功能所定義的 `spec_url` 鍵中。
 
-我們正在移除使用 `SpecData.json` 檔案的 `\{{SpecName}}` 與 `\{{Spec2}}` 巨集，不再接受對 `SpecData.json` 檔案的任何進一步貢獻；取而代之的是，請嘗試使用 `\{{Specifications}}` 巨集來插入規範表格，或直接硬編碼（且良好的）規範連結。請注意，多數情況下，在*規範*小節之外提及或連結規範，都代表該部分在 MDN 上的文件記錄不完整。
-
-`SpecData.json` 檔案位於[這裡](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json)（GitHub）。
+我們不再接受對 `SpecData.json` 檔案的任何進一步貢獻；取而代之的是，請使用 `\{{Specifications}}` 巨集來插入規範表格，或在內文中連結至規範。請注意，多數情況下，在*規範*小節之外提及或連結規範，都代表該部分在 MDN 上的文件記錄不完整。

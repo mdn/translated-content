@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
-
 **`white-space`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
 
-{{InteractiveExample("CSS Demo: white-space")}}
+{{InteractiveExample("CSS デモ: white-space")}}
 
 ```css interactive-example-choice
 white-space: normal;
@@ -109,9 +107,7 @@ white-space: unset;
 - `pre-line`
   - : 連続するホワイトスペースは[統合して](#ホワイトスペースの統合) 1 つになります。行の折り返しは、改行文字や {{HTMLElement("br")}} 要素のあるときか、行ボックスを埋めるのに必要なときに行われます。
 - `break-spaces`
-
   - : 下記の点を除いて、動作は `pre-wrap` と同じです。
-
     - そのまま残された連続するホワイトスペースは、行末にあるものを含め、空間を占有します。
     - 残されたそれぞれのホワイトスペースの後で、ホワイトスペースの間を含め、改行する可能性があります。
     - そのような残された空白は空間を占有し、ぶら下がらず、ボックスの内在の寸法 ({{cssxref("min-content")}} および {{cssxref("max-content")}} の大きさ) に影響します。
@@ -183,7 +179,8 @@ white-space: unset;
 
 タブの既定値は 8 文字で、 [`tab-size`](/ja/docs/Web/CSS/tab-size) プロパティを使用して設定できます。`normal`、`nowrap`、`pre-line` の値の場合、すべてのタブは空白文字 (U+0020) 文字に変換されます。
 
-> **メモ:** **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
+> [!NOTE]
+> **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
 >
 > - 空白
 >   - : 空白 (U+0020)、タブ (U+0009)、区切り文字 (改行など)。

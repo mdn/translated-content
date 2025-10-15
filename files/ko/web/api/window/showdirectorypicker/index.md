@@ -21,9 +21,7 @@ showDirectoryPicker()
 ### 매개변수
 
 - `options` {{optional_inline}}
-
   - : 아래의 옵션을 포함하는 객체입니다.
-
     - `id` {{optional_inline}}
       - : ID를 지정하면 브라우저가 선택창의 ID마다 마지막으로 탐색한 디렉터리를 기억합니다.
         다른 선택창에서 같은 ID를 사용한다면, 이전에 해당 ID로 탐색했던 디렉터리에서

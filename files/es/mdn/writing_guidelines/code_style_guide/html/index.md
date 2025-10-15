@@ -37,7 +37,7 @@ Debes utilizar el doctype HTML5. Es corto, fácil de recordar y compatible con v
 
 ### Idioma del documento
 
-Establece el idioma del documento usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang) en tu elemento {{htmlelement("html")}}:
+Establece el idioma del documento usando el atributo [`lang`](/es/docs/Web/HTML/Reference/Global_attributes#lang) en tu elemento {{htmlelement("html")}}:
 
 ```html example-good
 <html lang="en-US"></html>
@@ -63,7 +63,7 @@ Finalmente, siempre debes agregar la metaetiqueta viewport en tu HTML {{HTMLElem
 <meta name="viewport" content="width=device-width" />
 ```
 
-Para mas detalles ver: [Uso de la metaetiqueta viewport para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Viewport_meta_tag).
+Para mas detalles ver: [Uso de la metaetiqueta viewport para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Guides/Viewport_meta_element).
 
 ## Atributos
 

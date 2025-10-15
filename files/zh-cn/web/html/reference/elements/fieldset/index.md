@@ -3,8 +3,6 @@ title: <fieldset>
 slug: Web/HTML/Reference/Elements/fieldset
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<fieldset>`** 元素用于对表单中的控制元素进行分组（也包括 label 元素）。
 
 {{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
@@ -49,7 +47,6 @@ input {
 - `form`
   - : 将该值设为一个 {{HTMLElement("form")}} 元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性值以将 `<fieldset>` 设置成这个 {{HTMLElement("form")}} 的一部分。
 - `name`
-
   - : 元素分组的名称
 
     > [!NOTE]

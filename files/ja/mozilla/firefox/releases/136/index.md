@@ -5,8 +5,6 @@ l10n:
   sourceCommit: edf3344dc1edb0e2c07a20bd7e85211b4809fa8d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 136 の変更点をまとめています。Firefox 136 は、米国時間 [2025 年 3 月 4 日](https://whattrainisitnow.com/release/?version=136) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -39,7 +37,6 @@ l10n:
 - 要素のプロパティが [要素参照を含む Aria 属性](/ja/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) に反映されるようになりました ([Firefox bug 1919102](https://bugzil.la/1919102))。
 
   以下のプロパティが含まれます:
-
   - {{domxref("Element")}} インターフェイスの {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}、{{domxref("Element/ariaControlsElements","ariaControlsElements")}}、{{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}、{{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}、{{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}、{{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}、{{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}、{{domxref("Element/ariaOwnsElements","ariaOwnsElements")}}。
   - {{domxref("ElementInternals")}} インターフェイスの {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}、{{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}、{{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}、{{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}、{{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}、{{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}、{{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}、{{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}}。
 

@@ -3,8 +3,6 @@ title: flex
 slug: Web/CSS/flex
 ---
 
-{{CSSRef}}
-
 `flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
 
 {{InteractiveExample("CSS Demo: flex")}}
@@ -101,21 +99,17 @@ flex: unset;
 可以使用一个，两个或三个值来指定 `flex` 属性。
 
 - **单值语法**：值必须是以下之一：
-
   - 一个 {{cssxref("&lt;flex-grow&gt;")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> 1 0`。
   - 一个 {{cssxref("&lt;flex-basis&gt;")}} 的有效值：此时简写会扩展为 `flex: 1 1 <flex-basis>`。
   - 关键字 `none` 或者全局关键字之一。
 
 - **双值语法**：
-
   - 第一个值必须是一个 {{cssxref("flex-grow")}} 的有效值。
   - 第二个值必须是以下之一：
-
     - 一个 {{cssxref("flex-shrink")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> <flex-shrink> 0`。
     - 一个 {{cssxref("flex-basis")}} 的有效值：此时简写会扩展为 `flex: <flex-grow> 1 <flex-basis>`。
 
 - **三值语法**：值必须按照以下顺序指定：
-
   1. 一个 {{cssxref("flex-grow")}} 的有效值。
   2. 一个 {{cssxref("flex-shrink")}} 的有效值。
   3. 一个 {{cssxref("flex-basis")}} 的有效值。

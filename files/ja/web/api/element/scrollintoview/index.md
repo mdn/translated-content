@@ -21,17 +21,13 @@ scrollIntoView(scrollIntoViewOptions)
 ### 引数
 
 - `alignToTop` {{optional_inline}}
-
   - : 論理値です。
-
     - `true` の場合、要素の上端がスクロール可能な祖先の表示範囲の上端に来るようにスクロールします。 `scrollIntoViewOptions: {block: "start", inline: "nearest"}` に相当します。これが既定値です。
     - `false` の場合、要素の下端がスクロール可能祖先の表示範囲の下端に来るようにスクロールします。 `scrollIntoViewOptions: {block: "end", inline: "nearest"}` に相当します。
 
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `behavior` {{optional_inline}}
       - : スクロールを即座に行うか、滑らかにアニメーションさせるかを決定します。このオプションは文字列であり、以下のいずれかの値を取ります。
         - `smooth`: スクロールをスムーズなアニメーションで行う

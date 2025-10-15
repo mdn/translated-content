@@ -3,8 +3,6 @@ title: <table>（表格元素）
 slug: Web/HTML/Reference/Elements/table
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<table>` 元件**代表表格數據 ── 換句話說，就是透過二維資料表來呈現資訊。
 
 {{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
@@ -12,40 +10,40 @@ slug: Web/HTML/Reference/Elements/table
 ```html interactive-example
 <table>
   <caption>
-    Front-end web developer course 2021
+    2021 前端 Web 開發課程
   </caption>
   <thead>
     <tr>
-      <th scope="col">Person</th>
-      <th scope="col">Most interest in</th>
-      <th scope="col">Age</th>
+      <th scope="col">學生</th>
+      <th scope="col">對什麼感興趣</th>
+      <th scope="col">年齡</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Chris</th>
-      <td>HTML tables</td>
+      <td>HTML 表格</td>
       <td>22</td>
     </tr>
     <tr>
       <th scope="row">Dennis</th>
-      <td>Web accessibility</td>
+      <td>Web 無障礙</td>
       <td>45</td>
     </tr>
     <tr>
       <th scope="row">Sarah</th>
-      <td>JavaScript frameworks</td>
+      <td>JavaScript 框架</td>
       <td>29</td>
     </tr>
     <tr>
       <th scope="row">Karen</th>
-      <td>Web performance</td>
+      <td>Web 效能</td>
       <td>36</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row" colspan="2">Average age</th>
+      <th scope="row" colspan="2">平均年齡</th>
       <td>33</td>
     </tr>
   </tfoot>
@@ -132,11 +130,11 @@ tfoot td {
     </tr>
     <tr>
       <th scope="row">允許父元素</th>
-      <td>Any element that accepts flow content</td>
+      <td>任何允許流內容的元素</td>
     </tr>
     <tr>
       <th scope="row">允許 ARIA 規則</th>
-      <td>Any</td>
+      <td>任何</td>
     </tr>
     <tr>
       <th scope="row">DOM 介面</th>
@@ -152,9 +150,7 @@ tfoot td {
 ### 棄用屬性
 
 - `align` {{Deprecated_inline}}
-
   - : 這個枚舉屬性會指示表格中的文字要如何對齊。可用值如下：left：意思是表格應該顯示在文件的左方。
-
     - center：意思是表格應該顯示在文件的中間。
     - right：意思是表格應該顯示在文件的右方。在 CSS 要得出類似效果，應該設定 {{cssxref("margin-left")}} 與 {{cssxref("margin-right")}}；如果要置中，則要把 {{cssxref("margin")}} 屬性設定為 `0 auto`。
 
@@ -169,9 +165,7 @@ tfoot td {
 - `frame` {{Deprecated_inline}}
   - : 這個枚舉屬性定義圍繞在表格邊框的哪一邊要顯示。在 CSS 要得出類似效果，應該使用 {{cssxref("border-style")}} 與 {{cssxref("border-width")}} 屬性。
 - `rules` {{Deprecated_inline}}
-
   - : 這個枚舉屬性定義諸如線條之類的規則，要如何出現在表格。它擁有以下數值：`none`，代表沒有任何規則上的指示。這是預設值。
-
     - `groups`，只標示行群組和列群組（行群組由 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、和 {{HTMLElement("tfoot")}} 定義；列群組由 {{HTMLElement("col")}} 與 {{HTMLElement("colgroup")}} 定義）；
     - `rows`，會創立一組標示行的規則；
     - `columns`，會創立一組標示列的規則；
@@ -204,92 +198,92 @@ tfoot td {
 ### 更多範例
 
 ```html
-<p>Simple table with header</p>
+<p>有表頭的簡單表格</p>
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>姓</th>
+    <th>名</th>
   </tr>
   <tr>
+    <td>Doe</td>
     <td>John</td>
-    <td>Doe</td>
   </tr>
   <tr>
-    <td>Jane</td>
     <td>Doe</td>
+    <td>Jane</td>
   </tr>
 </table>
 
-<p>Table with thead, tfoot, and tbody</p>
+<p>有 thead、tfoot 和 tbody 的表格</p>
 <table>
   <thead>
     <tr>
-      <th>Header content 1</th>
-      <th>Header content 2</th>
+      <th>表頭 1</th>
+      <th>表頭 2</th>
     </tr>
   </thead>
   <tfoot>
     <tr>
-      <td>Footer content 1</td>
-      <td>Footer content 2</td>
+      <td>頁腳 1</td>
+      <td>頁腳 2</td>
     </tr>
   </tfoot>
   <tbody>
     <tr>
-      <td>Body content 1</td>
-      <td>Body content 2</td>
+      <td>主體內容 1</td>
+      <td>主體內容 2</td>
     </tr>
   </tbody>
 </table>
 
-<p>Table with colgroup</p>
+<p>有 colgroup 的表格</p>
 <table>
   <colgroup span="4"></colgroup>
   <tr>
-    <th>Countries</th>
-    <th>Capitals</th>
-    <th>Population</th>
-    <th>Language</th>
+    <th>國家</th>
+    <th>首都</th>
+    <th>人口</th>
+    <th>語言</th>
   </tr>
   <tr>
-    <td>USA</td>
-    <td>Washington D.C.</td>
-    <td>309 million</td>
-    <td>English</td>
+    <td>美國</td>
+    <td>華盛頓</td>
+    <td>三億零九百萬</td>
+    <td>英文</td>
   </tr>
   <tr>
-    <td>Sweden</td>
-    <td>Stockholm</td>
-    <td>9 million</td>
-    <td>Swedish</td>
+    <td>瑞典</td>
+    <td>斯德哥爾摩</td>
+    <td>九百萬</td>
+    <td>瑞典文</td>
   </tr>
 </table>
 
-<p>Table with colgroup and col</p>
+<p>有colgroup和col的表格</p>
 <table>
   <colgroup>
     <col style="background-color: #0f0" />
     <col span="2" />
   </colgroup>
   <tr>
-    <th>Lime</th>
-    <th>Lemon</th>
-    <th>Orange</th>
+    <th>酸橙</th>
+    <th>檸檬</th>
+    <th>橘子</th>
   </tr>
   <tr>
-    <td>Green</td>
-    <td>Yellow</td>
-    <td>Orange</td>
+    <td>綠</td>
+    <td>黃</td>
+    <td>橙</td>
   </tr>
 </table>
 
-<p>Simple table with caption</p>
+<p>有標題的簡單表格</p>
 <table>
   <caption>
-    Awesome caption
+    美妙的標題
   </caption>
   <tr>
-    <td>Awesome data</td>
+    <td>美妙的內容</td>
   </tr>
 </table>
 ```
@@ -333,19 +327,19 @@ td {
   </caption>
   <tbody>
     <tr>
-      <th scope="col">Name</th>
+      <th scope="col">名稱</th>
       <th scope="col">HEX</th>
       <th scope="col">HSLa</th>
       <th scope="col">RGBa</th>
     </tr>
     <tr>
-      <th scope="row">Teal</th>
+      <th scope="row">青色</th>
       <td><code>#51F6F6</code></td>
       <td><code>hsla(180, 90%, 64%, 1)</code></td>
       <td><code>rgba(81, 246, 246, 1)</code></td>
     </tr>
     <tr>
-      <th scope="row">Goldenrod</th>
+      <th scope="row">金針菇色</th>
       <td><code>#F6BC57</code></td>
       <td><code>hsla(38, 90%, 65%, 1)</code></td>
       <td><code>rgba(246, 188, 87, 1)</code></td>
@@ -383,9 +377,8 @@ td {
 
 ## 參見
 
-- CSS properties that may be especially useful to style the `<table>` element:
-
-  - {{cssxref("width")}} to control the width of the table;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
-  - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
-  - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.
+- 適合格式化 `<table>` 元素的 CSS：
+  - {{cssxref("width")}} 來控制表格寬度；
+  - {{cssxref("border")}}、{{cssxref("border-style")}}、{{cssxref("border-color")}}、{{cssxref("border-width")}}、{{cssxref("border-collapse")}}、{{cssxref("border-spacing")}} 來控制表格外框、樣式規則以及單元格的外框；
+  - {{cssxref("margin")}} 和 {{cssxref("padding")}} 來格式化單獨的單元格；
+  - {{cssxref("text-align")}} 和 {{cssxref("vertical-align")}} 來定義單元格內容以及文字的位置偏向。

@@ -22,9 +22,7 @@ browser.menus.overrideContext(
 ### Paramètres
 
 - `contextOptions`
-
   - : `object`. Options sur la façon dont les menus contextuels seront remplacés.
-
     - `showDefaults` {{optional_inline}}
       - : `boolean`. S'il faut également inclure les éléments de menu par défaut dans le menu.
     - `context` {{optional_inline}}

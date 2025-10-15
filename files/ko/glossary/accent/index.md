@@ -9,7 +9,7 @@ l10n:
 
 **악센트**는 일반적으로 색 구성표 내에서 보다 실용적인 배경 및 전경 색과 대조되는 밝은 색입니다. 이는 전부는 아니지만 많은 플랫폼의 시각적 스타일에서 존재합니다.
 
-웹에서는 {{HTMLElement("input")}} 요소의 컨트롤의 활성에 대해 악센트가 사용되는 경우가 있고, 그 예로 [체크박스](/ko/docs/Web/HTML/Element/input/checkbox)의 체크된 배경이 있습니다.
+웹에서는 {{HTMLElement("input")}} 요소의 컨트롤의 활성에 대해 악센트가 사용되는 경우가 있고, 그 예로 [체크박스](/ko/docs/Web/HTML/Reference/Elements/input/checkbox)의 체크된 배경이 있습니다.
 
 ## 같이 보기
 

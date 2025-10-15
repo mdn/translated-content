@@ -85,7 +85,6 @@ div {
 
 - La propriété raccourcie physique {{cssxref("margin")}}
 - Les propriétés physiques détaillées :
-
   - {{cssxref("top")}},
   - {{cssxref("right")}},
   - {{cssxref("bottom")}},

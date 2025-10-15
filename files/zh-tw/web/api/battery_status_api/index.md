@@ -2,7 +2,7 @@
 title: Battery Status API
 slug: Web/API/Battery_Status_API
 l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
 {{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
@@ -66,7 +66,7 @@ navigator.getBattery().then((battery) => {
 });
 ```
 
-參見[規範中的範例](https://www.w3.org/TR/battery-status/#examples)。
+參見[規範中的範例](https://w3c.github.io/battery/#examples)。
 
 ## 規範
 

@@ -39,7 +39,6 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
 ### Valeurs
 
 - `<repeat-style>`
-
   - : La notation utilisant une seule valeur est une notation raccourcie qui possède un équivalent avec deux valeurs :
 
     <table class="standard-table">

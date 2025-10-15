@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
 
-{{CSSRef}}
-
 **CSS シェイプ**は、 CSS で使用する幾何学的な図形を記述します。また、図形を使用して要素の浮動領域の形状を制御するために使用できる CSS プロパティも定義しています。この領域は、除外に適用したり、要素のコンテンツ領域を指定したりすることができます。
 
 仕様書では、シェイプを定義する様々な方法を定義しています。コンテンツの回り込みや内部への入り込みが、要素ボックスの長方形に層のではなく、図形に回り込むようになります。
@@ -73,19 +71,15 @@ img {
 ## ガイド
 
 - [シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-
   - : `shape-margin` および `clip-path` プロパティで基本的な図形を定義し、基本的なシェイプを開発者ツールでデバッグします。
 
 - [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/From_box_values)
-
   - : `border-radius` の曲率と CSS ボックスモデルの値を使用して図形を作成します。
 
 - [`shape-outside` による基本シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
-
   - : CSS シェイプ、参照ボックス、 `shape-outside` プロパティを使って矩形、円、楕円、多角形を作成します。
 
 - [画像からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)
-
   - : シェイプを半透過の画像ファイルや CSS グラデーションから作成します。
 
 ## 関連概念

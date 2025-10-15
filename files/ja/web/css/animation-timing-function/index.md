@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 30bf998d2d87c97c2865d713ad5afc9c476264a0
 ---
 
-{{CSSRef}}
-
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-timing-function")}}
+{{InteractiveExample("CSS デモ: animation-timing-function")}}
 
 ```css interactive-example-choice
 animation-timing-function: linear;
@@ -138,11 +136,9 @@ animation-timing-function: unset;
 ### 値
 
 - {{cssxref("&lt;easing-function&gt;")}}
-
   - : {{cssxref("animation-name")}} で定められた、アニメーションに対応するイージング関数です。
 
     ステップのないキーワードの値 （`ease`、`linear`、`ease-in-out` など）はそれぞれ、 4 つの点が修正された 3 次べジェ曲線を表しますが、 `cubic-bezier()` 関数の値では、定義されていない値を指定することができます。 `steps()` イージング関数は、入力時間を指定した等間隔の区間に分割します。この関数の引数には、ステップ数とステップ位置の 2 つが記載されています。
-
     - `linear`
       - : `cubic-bezier(0.0, 0.0, 1.0, 1.0)` と同じで、等しい速度でアニメーションします。
     - `ease`
@@ -152,22 +148,17 @@ animation-timing-function: unset;
     - `ease-out`
       - : `cubic-bezier(0, 0, 0.58, 1.0)` と同じで、アニメーションは速く始まり、速度を落としながら続きます。
     - `ease-in-out`
-
       - : `cubic-bezier(0.42, 0, 0.58, 1.0)` と同じで、プロパティのアニメーションはゆっくり変化し、速度を上げ、また速度を落とします。
 
     - `cubic-bezier(<number [0,1]> , <number> , <number [0,1]> , <number>)`
-
       - : ユーザー定義の二次元ベジェ曲線で、 1 つ目から 3 つ目までの値は 0 から 1 の間である必要があります。
 
     - `linear(<number> <percentage>{1,2}, …)`
-
       - : この関数は、指定されたイージング経由点間で直線的に補間処理を行います。経由点は、出力の進行度と入力のパーセント値のペアです。入力のパーセント値はオプションであり、指定しない場合は推測されます。入力のパーセント値が指定されていない場合、最初の経由点と最後の経由点はそれぞれ `0%` と `100%` に設定され、その間の経由点は、パーセント値を持つ最も近い前回と次回の経由点を直線的に補間して得られたパーセント値になります。
 
     - `steps(<integer>, <step-position>)`
-
       - : 遷移に沿った _n_ 個の経由点に沿ってアニメーションを表示し、それぞれの経由点を同じ時間の長さで表示します。例えば、 _n_ が 5 の場合、 5 つのステップがあります。
         アニメーションが保持される位置は、以下のどの経由転が使用されるかによって、アニメーションに沿って 0%, 20%, 40%, 60%, 80% となるか、 20%, 40%, 60%, 80%, 100% となるか、アニメーションの 0% と 100% の間で 5 つの経由点を設定するか、 0% と 100% を含む 5 つの経由点を設定するか（すなわち 0%, 25%, 50%, 75%, 100%）、のいずれかを使用します。
-
         - `jump-start`
           - : アニメーションの開始時に最初のジャンプが発生するように、左連続関数を表します。
         - `jump-end`
@@ -186,9 +177,11 @@ animation-timing-function: unset;
     - `step-end`
       - : `steps(1, jump-end)` と同じです。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** `animation-timing-function` は、 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
+> [!NOTE]
+> `animation-timing-function` は、 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するときに、通常の時間ベースのアニメーションと同じ効果があります。
 
 ## 解説
 

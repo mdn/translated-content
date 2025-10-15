@@ -72,7 +72,6 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 
 1. Coloque seu trabalho num editor de texto compartilhado online tal como o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/).
 2. Escreva um post perguntando por avaliação e/ou ajuda em [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
-
    - Um título descritivo, tal como "Avaliação desejada para primeiros passos em CSS".
    - Detalhes do que você já tentou, e o que gostaria que ós fizéssemos, p.e. se você está emperrado e precisa de ajuda, ou se deseja uma avalição.
    - Um link para o exemplo que você deseja ser avaliadao ou precisa de ajuda, em um editor online compartilhado (como mencionado no passo 1 acima). Esta é uma boa prática a se desenvolver — é muito difícil ajudar alguém com um problema de computação se não é possível ver o código dessa pessoa.

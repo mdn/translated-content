@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Disposition
 original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
-
 Em uma resposta HTTP normal, o cabeçalho de resposta **`Content-Disposition`** indica se o conteúdo é esperado a ser exibido _inline_ no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.
 
 Em um corpo `multipart/form-data`, o cabeçalho geral HTTP **`Content-Disposition`** é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, `Content-Disposition` não tem efeito.
@@ -53,7 +51,6 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### Diretivas
 
 - `name`
-
   - : O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) de um elemento `{HTMLElement("input","<input type=\"file\">")}}`), podem haver diversas subpartes com o mesmo nome.
 
     Um `name` com o valor de `'_charset_'` indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.

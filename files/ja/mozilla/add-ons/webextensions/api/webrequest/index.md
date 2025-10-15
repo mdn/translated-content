@@ -30,26 +30,21 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 いくつかのイベントでは、リクエストを修正できます。特に、次のことが可能:
 
 - 次の API でリクエストをキャンセル:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - 次の API でリクエストをリダイレクト:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 次の API でリクエストヘッダーの修正:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - 次の API でレスポンスヘッダーの修正:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 次の API で認証資格情報の提供:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 これを行うには、イベント `addListener()` の `extraInfoSpec` の引数に"blocking"の値のオプションを渡す必要があります。これによりリスナーが同期します。このリスナーでは {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} オブジェクトを返すことができ、このオブジェクトは加えた修正を指し示します: 例えば、送信したい修正後のリクエストヘッダーなど。

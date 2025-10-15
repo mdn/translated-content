@@ -1,16 +1,13 @@
 ---
 title: "<iframe>: インラインフレーム要素"
 slug: Web/HTML/Reference/Elements/iframe
-original_slug: Web/HTML/Element/iframe
 l10n:
-  sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+**`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに別のページを埋め込むことができます。
 
-**`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
-
-{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;iframe&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <iframe
@@ -25,11 +22,11 @@ l10n:
 ```css interactive-example
 iframe {
   border: 1px solid black;
-  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+  width: 100%; /* HTML の width 属性で設定された幅よりも優先する */
 }
 ```
 
-それぞれの閲覧コンテキストにはそれぞれの[文書](/ja/docs/Web/API/Document)があり、URL ナビゲーションができます。それぞれの埋め込み閲覧コンテキストのナビゲーションは、最上位の閲覧コンテキストの[セッション履歴](/ja/docs/Web/API/History)で直線化されます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
+それぞれの閲覧コンテキストにはそれぞれの[文書](/ja/docs/Web/API/Document)があり、URL でナビゲーションができます。それぞれの埋め込み閲覧コンテキストのナビゲーションは、最上位の閲覧コンテキストの[セッション履歴](/ja/docs/Web/API/History)で直線化されます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
 > [!WARNING]
 > それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリーやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
@@ -39,50 +36,42 @@ iframe {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `allow`
-
   - : [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
 
-    その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) を参照してください。
+    例については、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) を参照してください。
 
-    > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
+    > [!NOTE]
+    > `allow` 属性で指定され権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。置き換えるものではありません。
 
 - `allowfullscreen`
-
   - : この `<iframe>` が {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を呼び出して全画面モードにすることができる場合は、 `true` に設定します。
 
     > [!NOTE]
     > この属性は古い属性とみなされており、 `allow="fullscreen"` として再定義されました。
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
-
   - : 異なるオリジンの `<iframe>` で [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) の実行を許可する場合は `true` に設定します。
 
     > [!NOTE]
     > この属性は古い属性とみなされており、 `allow="payment"` として再定義されました。
 
 - `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
-
   - : 論理属性で、表示されている場合、現在のユーザーの選択されたトピックを `<iframe>` のソースのリクエストと共に送信することを指定します。詳細は、[トピック API の使用](/ja/docs/Web/API/Topics_API/Using)を参照してください。
 
 - `credentialless` {{Experimental_Inline}}
-
   - : `true` に設定すると `<iframe>` を無信頼であることを示します。 つまり、そのコンテンツは新しい、一時的なコンテキストで読み込まれることになります。これはそのオリジンに関連するネットワーク、クッキー、ストレージデータへのアクセス権がありません。最上位の文書の存続期間に依存する新しいコンテキストを使用します。その代わりに {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールは解除され、COEP を設定した文書はそうでない第三者の文書を埋め込むことができるようになります。詳しくは[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
 
 - `csp` {{experimental_inline}}
-
   - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
 
 - `height`
   - : フレームの高さを CSS ピクセル数で示します。既定値は `150` です。
 - `loading`
-
   - : ブラウザーが iframe をどのように読み込むかを示します。
-
     - `eager`
-      - : 可視ビューポートの外にあるかどうかに関わらず、 iframe を直ちにロードします（これが既定値です）。
+      - : ページ読み込み時に、直ちに iframe を読み込みます（これが既定値です）。
     - `lazy`
-
-      - : ブラウザーで定義された{{glossary("visual viewport", "ビューポート")}}からの計算された距離に達するまで iframe の読み込みを延期します。
+      - : ブラウザーで定義された{{glossary("visual viewport", "視覚的ビューポート")}}からの計算された距離に達するまで iframe の読み込みを延期します。
         その目的は、ブラウザーがフレームを使用すると合理的に確信できるまで、フレームの取得に必要なネットワークとストレージの帯域幅を使用しないようにすることです。
         これにより、ほとんどの典型的な使用用途において、特に初期ページの読み込み時点が縮小され、パフォーマンスとコストが改善されます。
 
@@ -91,32 +80,28 @@ iframe {
         > これはトラッキング対策です。
 
 - `name`
-  - : 埋め込み閲覧コンテキストのターゲットの名前です。 {{HTMLElement("a")}}, {{HTMLElement("form")}}, {{HTMLElement("base")}} 要素における `target` 属性の値、 {{HTMLElement("input")}} や {{HTMLElement("button")}} 要素における `formtarget` 属性の値、 {{domxref("Window.open()","window.open()")}} メソッドの `windowName` 引数の値として使用することができます。
+  - : 埋め込み閲覧コンテキストのターゲットの名前です。 {{HTMLElement("a")}}, {{HTMLElement("form")}}, {{HTMLElement("base")}} 要素における `target` 属性の値、 {{HTMLElement("input")}} や {{HTMLElement("button")}} 要素における `formtarget` 属性の値、 {{domxref("Window.open()","window.open()")}} メソッドの `windowName` 引数の値として使用することができます。さらに、この名前は {{domxref("Window")}} および {{domxref("Document")}} プロパティとなり、埋め込まれたウィンドウや要素自身への参照が入ります。
 - `referrerpolicy`
-
   - : フレームのリソースにアクセスする際にどの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
-
     - `no-referrer`
       - : {{HTTPHeader("Referer")}} ヘッダーを送信しません。
     - `no-referrer-when-downgrade`
       - : {{HTTPHeader("Referer")}} ヘッダーは {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) のない{{Glossary("origin", "オリジン")}}には送信しません。
     - `origin`
-      - : 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host", "ホスト名")}}, {{Glossary("port", "ポート番号")}}）に限定します。
+      - : 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}）に限定します。
     - `origin-when-cross-origin`
-      - : 他のオリジンへ送信されるリファラーは、スキーム、ホスト名、ポート番号のみにします。同一オリジンへの移動では、パスも含めます。
+      - : 他のオリジンへ送信されるリファラーは、スキーム、ホスト名、ポート番号のみにします。同じオリジンへの移動では、パスも含めます。
     - `same-origin`
       - : リファラーは{{Glossary("Same-origin policy", "同じオリジン")}}には送信しますが、異なるオリジンへのリクエストにはリファラー情報を送信しません。
     - `strict-origin`
       - : プロトコルのセキュリティ水準が同じ (HTTPS→HTTPS) である場合は、文書のオリジンのみをリファラーとして送信しますが、宛先の安全性が劣る場合 (HTTPS→HTTP) には送信しません。
-    - `strict-origin-when-cross-origin`
-      - : 同一オリジンへのリクエストには URL 全体を送信し、プロトコルのセキュリティ水準が同じ (HTTPS→HTTPS) である場合は、文書のオリジンのみをリファラーとして送信し、宛先の安全性が劣る場合 (HTTPS→HTTP) にはヘッダーを送信しません。
+    - `strict-origin-when-cross-origin` （既定値）
+      - : 同じオリジンへのリクエストには URL 全体を送信し、プロトコルのセキュリティ水準が同じ (HTTPS→HTTPS) である場合は、文書のオリジンのみをリファラーとして送信し、宛先の安全性が劣る場合 (HTTPS→HTTP) にはヘッダーを送信しません。
     - `unsafe-url`
-      - : リファラーにオリジン*および*パスを含めます（ただし、[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含めません）。オリジンやパスの情報が TLS で保護されたリソースから安全性の劣るオリジンへ漏えいしますので、**これは安全ではありません**。
+      - : リファラーにオリジンおよびパスを含めます（ただし、[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含めません）。オリジンやパスの情報が TLS で保護されたリソースから安全性の劣るオリジンへ漏えいしますので、**これは安全ではありません**。
 
 - `sandbox`
-
   - : `<iframe>` に埋め込まれたコンテンツに適用される制限を制御します。フレーム内のコンテンツに追加の制約を適用します。この属性の値は、空にするとすべての制約を適用し、空白区切りのトークンにすると特定の制約を外します。
-
     - `allow-downloads`
       - : [download](/ja/docs/Web/HTML/Reference/Elements/a#download) 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を通して、またファイルのダウンロードにつながるナビゲーションを通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
     - `allow-forms`
@@ -124,15 +109,15 @@ iframe {
     - `allow-modals`
       - : ページが {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}}, {{domxref("Window.prompt()")}} によってモーダルウィンドウを開くことができるようにしますが、 {{HTMLElement("dialog")}} は、このキーワードに関わらず開くことが可能です。また、ページが {{domxref("BeforeUnloadEvent")}} イベントを受信することができるようにもします。
     - `allow-orientation-lock`
-      - : リソースが[画面の方向をロック](/ja/docs/Web/API/Screen/lockOrientation)することができるようにします。
+      - : リソースが[画面の向きをロック](/ja/docs/Web/API/Screen/lockOrientation)することができるようにします。
     - `allow-pointer-lock`
       - : リソースが[ポインターロック API](/ja/docs/Web/API/Pointer_Lock_API) を使用できるようにします。
     - `allow-popups`
-      - : ポップアップを許可します（{{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}} などから）。このキーワードが使用されていない場合、その機能は静かに失敗します。
+      - : ポップアップ（{{domxref("Window.open()")}}、`target="_blank"` などで作成されたもの）を許可します。このキーワードが使用されていない場合、その機能は静かに失敗します。
     - `allow-popups-to-escape-sandbox`
       - : サンドボックス化された文書が、サンドボックス化フラグを強制することなく、新しい閲覧コンテキストを開くことができるようにします。これにより、例えばサードパーティ広告を、その広告がリンクしているページに同じ制限を強いることなく、安全にサンドボックス化することができます。このフラグが記載されていない場合、リダイレクトされたページ、ポップアップウィンドウ、新しいタブは元の `<iframe>` と同じサンドボックスの制限を受けることになります。
     - `allow-presentation`
-      - : リソースが[プレゼンテーションセッション](/ja/docs/Web/API/PresentationRequest)を開始できるようにします。
+      - : 埋め込み側が、 iframe が[プレゼンテーションセッション](/ja/docs/Web/API/PresentationRequest)を開始できるかどうかを制御することを許可します。
     - `allow-same-origin`
       - : このトークンが使用されていない場合、リソースは{{Glossary("same-origin policy", "同一オリジンポリシー")}}に常に失敗する特別なオリジンからのものとして扱われます（潜在的に[データストレージやクッキー](/ja/docs/Web/Security/Same-origin_policy#オリジンをまたいだデータストレージアクセス)へのアクセスや一部の JavaScript API の使用を阻止することがあります）。
     - `allow-scripts`
@@ -140,7 +125,7 @@ iframe {
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
       - : `<iframe>` で読み込んだ文書が{{domxref("Storage Access API", "ストレージアクセス API", "", "nocode")}} を使用して、分離されていないクッキーへのアクセスをリクエストできるようにします。
     - `allow-top-navigation`
-      - : リソースが最上位の閲覧コンテキスト（`_top` という名前のものに移動できるようにします。
+      - : リソースが最上位の閲覧コンテキスト（`_top` という名前のもの）に移動できるようにします。
     - `allow-top-navigation-by-user-activation`
       - : リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
     - `allow-top-navigation-to-custom-protocols`
@@ -148,23 +133,23 @@ iframe {
 
     > [!NOTE]
     >
-    > - 埋め込まれた文書のオリジンが埋め込み先のページと同じである場合、 `allow-scripts` と `allow-same-origin` を同時に使用すると、埋め込まれた文書から `sandbox` 属性を削除することができるようになるため、**絶対に避けるべき**です。 `sandbox` 属性をまったく使用しないよりも安全ではなくなります。
-    > - 攻撃者がサンドボックス化した `iframe` の外側にコンテンツを表示することができる場合、サンドボックス化は無意味です。例えば、閲覧者がフレームを新しいタブで開く場合などです。潜在的なダメージを抑えるため、そうしたコンテンツは*別のオリジン*から提供するようにもしてください。
+    > - 埋め込まれた文書のオリジンが埋め込み先のページと同じである場合、 `allow-scripts` と `allow-same-origin` を同時に使用すると、埋め込まれた文書から `sandbox` 属性を削除することができるようになるため、**絶対に避けるべき**です。 `sandbox` 属性をまったく使用しないよりも安全性が低下します。
+    > - 攻撃者がサンドボックス化した `iframe` の外側にコンテンツを表示することができる場合、サンドボックス化は無意味です。例えば、閲覧者がフレームを新しいタブで開く場合などです。潜在的なダメージを抑えるため、そうしたコンテンツは別のオリジンから提供するようにもしてください。
 
     > [!NOTE]
     > ユーザーをリダイレクトするとき、ポップアップウィンドウを開くとき、または `sandbox` 属性を持つ `<iframe>` 内に埋め込まれたページから新しいタブを開くとき、新しい閲覧コンテキストは同じ `sandbox` の制限に従います。例えば、`sandbox="allow-forms"`または`sandbox="allow-popups-to-escape-sandbox"` 属性が設定されていない`<iframe>`内に埋め込まれたページが別個のタブで新しいサイトを開いた場合、その新しい閲覧コンテキストでのフォーム送信は静かに失敗します。
 
 - `src`
-
   - : 埋め込むページの URL です。[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#オリジンの継承)に従う空白ページを埋め込む場合は、 `about:blank` の値を使用してください。また、プログラムから `<iframe>` の src 属性を削除すると (例えば {{domxref("Element.removeAttribute()")}} などで)、 Firefox (バージョン 65 以降)、 Chromium ベースのブラウザー、 Safari/iOS では `about:blank` が読み込まれます。
 
-    > **メモ:** `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
+    > [!NOTE]
+    > `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
 
 - `srcdoc`
-
   - : 埋め込むインライン HTML で、 `src` 属性を上書きします。そのコンテンツは完全な HTML 文書の構文に従う必要があります。この構文には doctype ディレクティブ、`<html>`、`<body>` タグなどが含まれますが、そのほとんどは省略して body のコンテンツだけにすることができます。この文書は位置が `about:srcdoc` となります。ブラウザーが `srcdoc` 属性に対応していない場合は、 `src` 属性の URL で代替されます。
 
-    > **メモ:** `about:srcdoc` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
+    > [!NOTE]
+    > `about:srcdoc` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
 
 - `width`
   - : フレームの幅を CSS ピクセル数で示します。既定値は `300` です。
@@ -184,9 +169,7 @@ iframe {
 - `marginwidth` {{deprecated_inline}}
   - : フレームの内容と左右の境界との間における、ピクセル単位の余白の量です。
 - `scrolling` {{deprecated_inline}}
-
   - : ブラウザーがフレームにスクロールバーを表示することを示します。
-
     - `auto`
       - : フレームの内容が、フレームの寸法よりも大きい場合のみ。
     - `yes`
@@ -206,9 +189,10 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 位置指定と表示倍率
 
-[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
+{{ glossary("replaced elements", "置換要素")}}であるため、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
 
-> **メモ:** {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
+> [!NOTE]
+> {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
 
 ## `error` および `load` イベントの動作
 
@@ -228,7 +212,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 例
 
-### シンプルな \<iframe>
+### 基本的な \<iframe>
 
 この例では、<https://example.org> のページを `<iframe>` で埋め込みます。これは iframe の一般的な用途で、他のサイトのコンテンツを埋め込むことです。例えば、ライブサンプル自体も、一番上の[試してみましょう](#試してみましょう)の例も、他の MDN サイトのコンテンツを `<iframe>` で埋め込んでいます。
 
@@ -245,7 +229,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 #### 結果
 
-{{ EmbedLiveSample('A_simple_iframe', 640,400)}}
+{{ EmbedLiveSample('A_basic_iframe', 640,400)}}
 
 ### \<iframe> 内へのソースコードの埋め込み
 
@@ -293,13 +277,15 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 埋め込みコンテンツ, 対話型コンテンツ, 知覚可能コンテンツ
       </td>
@@ -319,7 +305,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >
       </td>

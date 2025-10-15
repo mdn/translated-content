@@ -23,9 +23,7 @@ l10n:
 _还继承了其父接口 {{domxref("EventTarget")}} 的属性。_
 
 - {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
-
   - : 一个字符串，表示当前显示通知的权限。可能的值是：
-
     - `denied`——用户拒绝显示通知。
     - `granted`——用户接受显示通知。
     - `default`——用户选择是未知的，因此浏览器的行为类似于值是 denied。

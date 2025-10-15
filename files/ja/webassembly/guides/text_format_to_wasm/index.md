@@ -1,12 +1,9 @@
 ---
 title: WebAssembly テキスト形式から Wasm への変換
 slug: WebAssembly/Guides/Text_format_to_Wasm
-original_slug: WebAssembly/Text_format_to_Wasm
 l10n:
-  sourceCommit: 0cfdd279edb09f70fbeb52c67ecc2876da5ce32d
+  sourceCommit: 95a7913cbb3523812bbff003e4d4015e928e35c9
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly には S 式ベースのテキスト表現があります。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、これがどのように動作するか、テキスト形式のファイルを Wasm 形式に変換するのに利用可能なツールの使用方法について少し説明します。
 
@@ -15,11 +12,11 @@ WebAssembly には S 式ベースのテキスト表現があります。これ�
 
 ## 初めてのテキスト形式
 
-簡単な例を見てみましょう。次のプログラムは `imported_func` という名前の関数を `imports` というモジュールからインポートし、 `exported_func` という名前の関数をエクスポートしています。
+簡単な例を見てみましょう。次のプログラムは `imported_func` という名前の関数を `my_namespace` というモジュールからインポートし、 `exported_func` という名前の関数をエクスポートしています。
 
-```wasm
+```wat
 (module
-  (func $i (import "imports" "imported_func") (param i32))
+  (func $i (import "my_namespace" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
     call $i

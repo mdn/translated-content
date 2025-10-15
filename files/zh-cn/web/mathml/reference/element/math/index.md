@@ -13,9 +13,7 @@ slug: Web/MathML/Reference/Element/math
 该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)和以下属性：
 
 - `display`
-
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了应如何渲染封闭的 MathML 标记。其可以是以下值之一：
-
     - `block`，这意味着该元素将显示在当前文本范围之外的块中，并将 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `normal`。
     - `inline`，这意味着该元素将显示在当前的文本范围内，并将 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `compact`。
 

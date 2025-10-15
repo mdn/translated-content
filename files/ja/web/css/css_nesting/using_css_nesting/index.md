@@ -1,20 +1,16 @@
 ---
 title: CSS 入れ子の使用
+short-title: 入れ子の使用
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 l10n:
-  sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュールにより、スタイルシートをより読みやすく、よりモジュール化しやすく、より保守しやすく書くことができます。常にセレクターを繰り返すわけではないので、ファイルサイズも縮小することができます。
 
 CSS 入れ子は、 CSS プリプロセッサーで事前にコンパイルされるのではなく、ブラウザーで解釈できるという点で、 [Sass](https://sass-lang.com/) のような CSS プリプロセッサーとは異なります。また、 CSS 入れ子において、 [`&` 入れ子セレクターの詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)は {{cssxref(':is',':is()')}} 関数に似ており、関連するセレクターリストの中で最も高い詳細度を使用して計算されます。
 
 このガイドでは、CSSで入れ子を配置するさまざまな方法を示します。
-
-> [!NOTE]
-> 仕様の初期のバージョンでは、 [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)がないと、[型セレクター](/ja/docs/Web/CSS/Type_selectors) を入れ子にすることができませんでした。これは更新され、`&` 入れ子セレクタは必要なくなりました。執筆時点で（2023 年 8 月）、 Firefox は新しいバージョンの仕様に対応していますが、 Chrome と Safariは 古いバージョンの仕様に対応しており、型セレクターの入れ子には `&` 入れ子セレクターを使用する必要があります。
 
 ## 子セレクター
 
@@ -28,36 +24,33 @@ CSS 入れ子を使用して、親の子セレクターを作成し、そのセ�
 
 ```css
 /* 入れ子セレクターなし */
-parent {
+.parent {
   /* 親スタイル */
-  child {
+  .child {
     /* 親の子のスタイル */
   }
 }
 
 /* 入れ子セレクターあり */
-parent {
+.parent {
   /* 親スタイル */
-  & child {
+  & .child {
     /* 親の子のスタイル */
   }
 }
 
 /* ブラウザーは両者を次のように解釈する */
-parent {
+.parent {
   /* 親スタイル */
 }
-parent child {
+.parent .child {
   /* 親の子のスタイル */
 }
 ```
 
 ### 例
 
-この例では、 `&` 入れ子セレクターを使用しない場合と使用する場合で、 `<label>` 内の `<input>` は `<label>` の兄弟である `<input>` と異なる形でスタイル設定されています。これは `&` 入れ子セレクターを除外した場合の影響を示しています。
-
-> [!NOTE]
-> この例は、入れ子仕様の以前の仕様書と現在の仕様書を実装したブラウザーで出力が異なることを示しています。 Chrome や Safari で実装されている 2023 年 8 月以前の入れ子仕様では、 `&` の結合子が必須となっています。ブラウザーが現在の仕様に対応している場合、どちらの例も 2 番目の例と一致します。
+この例では、 `&` 入れ子セレクターを使用しない場合と使用する場合で、 `<label>` 内の `<input>` は `<label>` の兄弟である `<input>` と異なる形でスタイル設定されています。
 
 #### 入れ子セレクターなし
 
@@ -93,6 +86,7 @@ label {
   /* label のスタイル */
   font-family: system-ui;
   font-size: 1.25rem;
+
   input {
     /* label の中の input のスタイル */
     border: blue 2px dashed;
@@ -106,9 +100,7 @@ label {
 
 #### 入れ子セレクターあり
 
-##### HTML
-
-```html-nolint
+```html-nolint hidden
 <form>
   <label for="name">Name:
     <input type="text" id="name" />
@@ -138,6 +130,7 @@ label {
   /* label のスタイル */
   font-family: system-ui;
   font-size: 1.25rem;
+
   & input {
     /* label の中の input のスタイル */
     border: blue 2px dashed;
@@ -249,7 +242,7 @@ h2 {
 
 ##### CSS
 
-`.notices` のスタイルで{{cssxref('CSS_flexible_box_layout', 'フレックスボックスレイアウト')}}を使用して列を作成します。
+`.notices` のスタイルで[フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)を使用して列を作成します。
 
 ```css
 .notices {
@@ -261,7 +254,7 @@ h2 {
 }
 ```
 
-下記の CSS コードでは、 `&` の有無にかかわらず、入れ子を使用して複合セレクターを作成しています。最上位のセレクターは、 `class="notice"` を持つ要素の基本的なスタイルを定義します。そして、 `&` 入れ子セレクターは、 `class="notice warning"` または `class="notice success"` を持つ要素の複合セレクターを作成するために使用します。さらに、明示的に `&` を使用することなく複合セレクターを作成するために入れ子を使用することが、セレクター `.notice .notice-heading:before` でできます。
+下記の CSS コードでは、 `&` の有無にかかわらず、入れ子を使用して複合セレクターを作成しています。最上位のセレクターは、 `class="notice"` を持つ要素の基本的なスタイルを定義します。そして、 `&` 入れ子セレクターは、 `class="notice warning"` または `class="notice success"` を持つ要素の複合セレクターを作成するために使用します。さらに、セレクター `.notice .notice-heading::before` では、明示的に `&` を使用することなく複合セレクターを作成するために入れ子を使用することができます。
 
 ```css
 .notice {
@@ -272,8 +265,8 @@ h2 {
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  .notice-heading:before {
-    /* `.notice .notice-heading:before` と同等 */
+  .notice-heading::before {
+    /* `.notice .notice-heading::before` と同等 */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -281,8 +274,8 @@ h2 {
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    .warning-heading:before {
-      /* `.notice.warning .warning-heading:before` と同等 */
+    .warning-heading::before {
+      /* `.notice.warning .warning-heading::before` と同等 */
       content: "! ";
     }
   }
@@ -291,8 +284,8 @@ h2 {
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    .success-heading:before {
-      /* `.notice.success .success-heading:before` と同等 */
+    .success-heading::before {
+      /* `.notice.success .success-heading::before` と同等 */
       content: "✓ ";
     }
   }
@@ -336,7 +329,7 @@ h2 {
 
 #### 入れ子セレクターの追加
 
-この例では 3 枚のカードがあり、そのうちの 1 枚が機能です。カードはすべてまったく同じですが、 featured カードは見出しに別の色を保有します。入れ子セレクター `&` を追加することで、 `.featured .h2` のスタイルを `h2` のスタイルに入れ子にすることができます。
+この例では 3 枚のカードがあり、そのうちの 1 枚が機能です。カードはすべてまったく同じですが、 featured カードは見出しに別の色を保有します。入れ子セレクター `&` を追加することで、 `.featured h2` のスタイルを `h2` のスタイルに入れ子にすることができます。
 
 ##### HTML
 
@@ -368,7 +361,7 @@ h2 {
 }
 ```
 
-以下の CSS では、`.card`、`.card h2` のスタイルを作成し、 `h2` のスタイルでは、 `&` 入れ子セレクターを付加した `.featured` クラスを入れ子にすることで、 `.card.featured h2` のスタイルを作成しています。
+以下の CSS では、`.card` および `.card h2` のスタイルを作成しています。次に、`h2` スタイルブロックで、`&` 入れ子セレクターを付加した `.featured` クラスを入れ子にし、`.card :is(.featured h2)` のスタイルを作成しています。これは、`:is(.card h2):is(.featured h2)` と同じです。
 
 ```css
 .card {
@@ -379,7 +372,7 @@ h2 {
     /* `.card h2` と同等 */
     color: slateblue;
     .featured & {
-      /* `.featured.card h2` と同等 */
+      /* `:is(.card h2):is(.featured h2)` と同等 */
       color: tomato;
     }
   }
@@ -389,6 +382,46 @@ h2 {
 ##### 結果
 
 {{EmbedLiveSample('Appending_nesting_selector','100%','250')}}
+
+## 入れ子の宣言ルール
+
+入れ子の宣言ルールは、CSS ルールは CSS 文書に記述された順に構文解析されるというものです。
+
+以下の CSS に対応しています。
+
+```css
+.foo {
+  background-color: silver;
+  @media screen {
+    color: tomato;
+  }
+  color: black;
+}
+```
+
+`background-color` が最初に解釈され、銀色に設定されます。次に `@media` ルールが評価され、最後に `color` が評価されます。
+
+CSSOM は、次のように CSS を解釈します。
+
+```plain
+↳ CSSStyleRule
+  .style
+    - background-color: silver
+  ↳ CSSMediaRule
+    ↳ CSSNestedDeclarations
+      .style (CSSStyleDeclaration, 1) =
+      - color: tomato
+  ↳ CSSNestedDeclarations
+    .style (CSSStyleDeclaration, 1) =
+      - color: black
+```
+
+解釈の順序を保つため、入れ子になる前のルールはすべて最上位の `CSSRules` として扱われ、入れ子になった後の最上位のルールは `CSSNestedDeclarations` として表されます。
+そのため、`color-black` は、元の文書では最上位の宣言であるにもかかわらず、入れ子になった宣言の中に含まれます。
+
+> [!NOTE]
+> このルールは {{domxref("CSSNestedDeclarations")}} で追加されました。
+> [このインターフェイスに対応していない](/ja/docs/Web/API/CSSNestedDeclarations#ブラウザーの互換性)ブラウザーは、入れ子になったルールを間違った順序で解釈する場合があります。
 
 ## 連結（不可能）
 
@@ -446,3 +479,5 @@ element.my-class {
 - [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
 - [入れ子 `@` アットルール](/ja/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- {{domxref("CSSNestedDeclarations")}}
+- [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)

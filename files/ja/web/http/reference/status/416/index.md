@@ -1,12 +1,9 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Reference/Status/416
-original_slug: Web/HTTP/Status/416
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`416 Range Not Satisfiable`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、サーバーがリクエストされた範囲を提供できないことを示します。
 最も可能性の高い理由は、文書にそのような[範囲](/ja/docs/Web/HTTP/Guides/Range_requests)が含まれていないか、または {{HTTPHeader("Range")}} ヘッダー値が構文的には正しいものの、意味をなさないということです。

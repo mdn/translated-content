@@ -1,18 +1,15 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
-original_slug: Web/HTTP/Status/511
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`511 Network Authentication Required`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、コードは、クライアントがネットワークにアクセスするには認証が必要であることを示します。
+HTTP の **`511 Network Authentication Required`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、コードは、クライアントがネットワークにアクセスするには認証が必要であることを示します。
 このステータスは元のサーバーによって生成されるのではなく、ネットワークへのアクセスを制御する{{Glossary("Proxy_server", "プロキシー")}}によって生成されます。
 
 ネットワーク操作を行う際に、アクセスを許可する前に認証や利用規約への同意、他にもユーザー操作が要求されることがあります（例えば、インターネットカフェや空港など）。
-彼らはよく、MAC (Media Access Control) アドレスを使用していないクライアントを識別します。
+これらはよく、MAC (Media Access Control) アドレスを使用していないクライアントを識別します。
 
 ## ステータス
 

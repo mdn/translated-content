@@ -51,7 +51,7 @@ background-clip: content-box;
 Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
 
 > [!NOTE]
-> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-radius-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
+> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-radius-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
 ## Syntaxe
 
@@ -73,7 +73,6 @@ Cette propriété peut prendre deux formes :
 
 - Une première avec une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure pour ce coin
 - Une seconde avec deux valeurs
-
   - La première est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe horizontal de l'ellipse pour ce coin
   - La seconde est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe vertical de l'ellipse pour ce coin
 
@@ -147,7 +146,6 @@ div {
 
 - La propriété raccourcie {{cssxref("border-radius")}}
 - Les propriétés pour les autres coins :
-
   - {{cssxref("border-top-left-radius")}},
   - {{cssxref("border-bottom-right-radius")}},
   - {{cssxref("border-bottom-left-radius")}}.

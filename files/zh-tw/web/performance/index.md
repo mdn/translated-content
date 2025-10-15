@@ -154,7 +154,6 @@ HTML
 - [The `<video>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/video)
 - [The `<source>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/source)
 - [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Reference/Elements/img#Attributes)
-
   - [Responsive images](/zh-TW/docs/Web/HTML/Guides/Responsive_images)
 
 - [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
@@ -188,7 +187,6 @@ APIs
 - [Resource Timing API](/zh-TW/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/zh-TW/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/zh-TW/docs/Web/API/Background_Tasks_API)
-
   - [requestIdleCallback()](/zh-TW/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/zh-TW/docs/Web/API/Beacon_API)
@@ -218,7 +216,6 @@ Best Practices
 
 - [Using Service Workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Using Web Workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
-
   - [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
 
 - [PWA](/zh-TW/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)

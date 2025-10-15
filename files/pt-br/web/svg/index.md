@@ -22,9 +22,7 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
 - Melhorando o conteúdo HTML
   - : O SVG funciona juntamente com HTML, CSS e JavaScript. Use o SVG para melhorar uma página comum HTML ou uma aplicação web.
 - SVG na Mozilla
-
   - : Notas e informações sobre como o SVG é implementado na Mozilla.
-
     - [Como o SVG e implementado no Firefox](/pt-BR/docs/SVG_in_Firefox)
     - [Tutorial sobre como usá-lo](/pt-BR/docs/SVG_in_Firefox)
     - [SVG em XHTML](/pt-BR/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)

@@ -36,7 +36,6 @@ l10n:
    ```
 
    让我们逐步解读这段代码：
-
    - `const call = peer.call(code, window.localStream)`：这将使用我们之前赋值的 `code` 和 `window.localStream` 创建一个呼叫。请注意，`localStream` 将是用户的 `localStream`。因此，对于呼叫者 A，它将是他们的流，而对于 B，它将是他们自己的流。
    - `call.on('stream', (stream) => {`：peerJS 为我们提供了一个 `stream` 事件，你可以在已创建的 `call` 上使用它。当呼叫开始流式传输时，你需要确保将从呼叫中传来的远程流赋值到正确的 HTML 元素和窗口，这就是你要做的事情。
    - 匿名函数以 `MediaStream` 对象作为参数，然后你必须将其设置为你窗口的 HTML，就像之前所做的那样。在这里，我们获取你的远程 `<audio>` 元素，并将传递给函数的流赋值给 `srcObject` 属性。

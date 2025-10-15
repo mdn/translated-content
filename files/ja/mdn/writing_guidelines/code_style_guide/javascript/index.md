@@ -388,9 +388,11 @@ function doIt() {
   }
   ```
 
-> **警告:** `for...in` を配列や文字列に使用しないでください。
+> [!WARNING]
+> `for...in` を配列や文字列に使用しないでください。
 
-> **メモ:** `for`ループをまったく使用しないようにすることを検討してください。 [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) （または一部の操作においては [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)）使用している場合は、代わりに [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、その他多数のような、より意味づけされた反復処理メソッドを使用することを検討してください。
+> [!NOTE]
+> `for`ループをまったく使用しないようにすることを検討してください。 [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) （または一部の操作においては [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)）使用している場合は、代わりに [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、その他多数のような、より意味づけされた反復処理メソッドを使用することを検討してください。
 
 ### 制御文
 

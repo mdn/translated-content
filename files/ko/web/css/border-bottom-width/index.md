@@ -3,8 +3,6 @@ title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`border-bottom-width`** 속성은 요소의 아래 테두리 너비를 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-bottom-width")}}
@@ -70,7 +68,6 @@ border-bottom-width: unset;
 ### 값
 
 - `<line-width>`
-
   - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
 
     | `thin`   |     | 얇은 테두리 |

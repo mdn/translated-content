@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fd4a5c3107826fe3689a0432ba56b3eba00a5f90
 ---
 
-{{CSSRef}}
-
 **CSS オーバースクロール動作**モジュールは、{{Glossary("Scroll_container", "スクロールコンテナー")}}のスクロール位置が{{Glossary("Scroll_boundary", "スクロール境界")}}に達したときの挙動を制御するプロパティを提供します。この側面を制御することは、埋め込まれたスクロール可能な領域が親コンテナーのスクロールを発生させないようにするシナリオで具体的な有益なことです。
 
 ブログにコメントするとき、指定された {{htmlelement("textarea")}} の長さを超えてコメントすると、テキストエリアの終わりを越えてスクロールするとブログ全体がスクロールすることに気づくかもしれません。これは、{{Glossary("Scroll_boundary", "スクロール境界")}}として知られるスクロール可能な領域の終わりに達すると、他にもコンテンツやページ全体がスクロールする可能性があるためです。このようなスクロールの動作は{{Glossary("Scroll_chaining", "スクロール連鎖")}}と呼ばれます。
@@ -53,7 +51,6 @@ l10n:
 - {{Glossary("Scroll_container", "スクロールコンテナー")}}と[スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)（用語集の用語）
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール:
-
   - {{cssxref("scroll-padding")}} 一括指定プロパティ
   - {{cssxref("scroll-snap-type")}} プロパティ
   - {{cssxref("scroll-margin")}} 一括指定プロパティ

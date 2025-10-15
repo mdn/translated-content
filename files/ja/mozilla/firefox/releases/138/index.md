@@ -2,7 +2,7 @@
 title: Firefox 138 for developers
 slug: Mozilla/Firefox/Releases/138
 l10n:
-  sourceCommit: 1b8805ce680f1fbb9dfbade6a64d4671cd04da80
+  sourceCommit: f9f6cb5c92c5864691f0ba8f18d2035de6871c9b
 ---
 
 このページでは、開発者に影響する Firefox 138 の変更点をまとめています。
@@ -78,7 +78,8 @@ Firefox 138 は、米国時間 [2025 年 4 月 29 日](https://whattrainisitnow.
   - {{WebExtAPIRef("tabs.group()")}} および {{WebExtAPIRef("tabs.ungroup()")}} ([Firefox bug 1959714](https://bugzil.la/1959714))
   - {{WebExtAPIRef("tabs.Tab")}} の `groupId` ([Firefox bug 1959713](https://bugzil.la/1959713))
   - {{WebExtAPIRef("tabs.query")}} の `groupId` ([Firefox bug 1959715](https://bugzil.la/1959715))
-  - {{WebExtAPIRef("tabs.onUpdated")}} の `groupId` ([Firefox bug 1959716](https://bugzil.la/1959716))
+  - {{WebExtAPIRef("tabs.onUpdated")}} の `groupId` ([Firefox bug 1959716](https://bugzil.la/1959716)
+- Firefox で、{{WebExtAPIRef("webRequest.ResourceType")}} および {{WebExtAPIRef("declarativeNetRequest.ResourceType")}} で `json` リソースタイプをサポートしました。合わせて、インポート属性をデフォルトで有効化しました。以前は `script` と報告されていました ([Firefox bug 1858078](https://bugzil.la/1858078)、[Firefox bug 1950836](https://bugzil.la/1950836))。
 
 ## 実験的なウェブ機能
 

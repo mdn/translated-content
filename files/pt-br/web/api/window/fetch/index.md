@@ -33,16 +33,12 @@ const fetchResponsePromise = fetch(resource [, init])
 ### Parâmetros
 
 - `resource`
-
   - : Isto define o recurso que você deseja buscar. Isto pode ser:
-
     - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
     - Um objeto {{domxref("Request")}}.
 
 - `init` {{optional_inline}}
-
   - : Um objeto contendo quaisquer configurações customizadas que você deseja aplicar à solicitação. As opções possíveis são:
-
     - `method`
       - : O método da requisição, por exemplo `GET`, `POST`. Observe que o cabeçalho
         {{httpheader("Origin")}} não é definido em requisições Fetch com um método de
@@ -61,15 +57,12 @@ const fetchResponsePromise = fetch(resource [, init])
       - : O modo que deseja usar para a requisição, por exemplo, `cors`,
         `no-cors`, ou `same-origin`.
     - `credentials`
-
       - : Controla o que os navegadores fazem com as credenciais ([cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies), entradas de [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication), e certificados de cliente TLS). Deve ser uma das seguintes strings:
-
         - `omit`
           - : Diz aos navegadores para excluir credenciais da requisição, e ignorar quaisquer credenciais enviadas de volta na resposta (por exemplo, qualquer cabeçalho {{HTTPHeader("Set-Cookie")}}).
         - `same-origin`
           - : Diz aos navegadores para incluir credenciais com requisições para URLs da mesma origem, e usar quaisquer credenciais enviadas de volta nas respostas de URLs da mesma origem.
         - `include`
-
           - : Diz aos navegadores para incluir credenciais em ambas requisições `same-origin` e `cross-origin`, e sempre use as credenciais enviadas de volta nas respostas.
 
             > [!NOTE]
@@ -78,9 +71,7 @@ const fetchResponsePromise = fetch(resource [, init])
     - `cache`
       - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Guides/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
     - `redirect`
-
       - : Como lidar com uma resposta `redirect`:
-
         - `follow`: Segue os redirecionamentos automaticamente. A menos que esteja definido de outra forma, o redirecionamento é definido, por padrão, como `follow`.
         - `error`: Aborta com um erro se o redirecionamento ocorrer.
         - `manual`: O autor da chamada pretende processar a resposta em outro contexto.

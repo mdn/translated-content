@@ -25,7 +25,8 @@ URL.canParse(url, base)
 - `base` {{optional_inline}}
   - : 字符串，表示在 `url` 是相对 URL 的情况下使用的基本 URL。如果未指定，则默认为 `undefined`。
 
-> **备注：** `url` 和 `base` 参数将根据你传递的任何值进行字符串化，就像其他接受字符串的 Web API 一样。特别是，你可以使用一个现有的 {{domxref("URL")}} 对象作为任一参数，它将被字符串化为该对象的 {{domxref("URL.href", "href")}} 属性。
+> [!NOTE]
+> `url` 和 `base` 参数将根据你传递的任何值进行字符串化，就像其他接受字符串的 Web API 一样。特别是，你可以使用一个现有的 {{domxref("URL")}} 对象作为任一参数，它将被字符串化为该对象的 {{domxref("URL.href", "href")}} 属性。
 
 ### 返回值
 

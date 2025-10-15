@@ -49,14 +49,12 @@ La méthode `toString()` renvoie toujours une chaîne de caractères représenta
 - Un espace
 - La chaîne de caractères « GMT »
 - Le signe du décalage horaire par rapport à GMT :
-
   - La chaîne "+" pour les décalages positifs (0 ou plus)
   - La chaîne "-" pour les décalages strictement négatifs
 
 - L'heure de décalage sur deux chiffres
 - Les minutes de décalage sur deux chiffres
 - Et, éventuellement, le nom du fuseau horaire avec
-
   - Un espace
   - Une parenthèse ouvrante (« ( »)
   - Une chaîne de caractères, pouvant varier selon l'implémentation, qui désigne le fuseau horaire. Ce peut être une abréviation ou un nom complet.

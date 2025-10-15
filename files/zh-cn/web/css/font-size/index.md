@@ -3,8 +3,6 @@ title: font-size
 slug: Web/CSS/font-size
 ---
 
-{{CSSRef}}
-
 **`font-size`** [CSS](/zh-CN/docs/Web/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
 
 {{InteractiveExample("CSS Demo: font-size")}}
@@ -88,7 +86,6 @@ font-size: unset;
 - `larger`、`smaller`
   - : 相对大小关键字。字体大小将相对于父元素的字体大小变大或变小，大致按照上面用于区分绝对大小关键字的比率。
 - {{cssxref("&lt;length&gt;")}}
-
   - : 一个正的 {{cssxref("&lt;length&gt;")}} 值。对于大多数相对于字体的单位（例如 `em` 和 `ex`），字体大小相对于父元素的字体大小。
 
     对于基于根元素的字体相关单位（例如 `rem`），字体大小相对于 {{HTMLElement("html")}}（根）元素使用的字体大小。

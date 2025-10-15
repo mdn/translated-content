@@ -45,7 +45,8 @@ slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 - 它们可以使用 [`size`](/zh-CN/docs/Web/HTML/Reference/Attributes/size)（框的物理尺寸）和 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength)（可以输入的最大字符数）进行限制。
 - 如果浏览器支持的话，它们可以从拼写检查（使用 [`spellcheck`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/spellcheck) 属性）中获益。
 
-> **备注：** {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
+> [!NOTE]
+> {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
 
 ### 单行文本框
 
@@ -197,7 +198,8 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 
 我们也可以使用 {{htmlelement("button")}} 元素。它也带有 `submit`、`reset` 和 `button` 这几个 `type` 属性，与 `<input>` 的三种按钮行为一致。它们之间的主要区别在于 `<button>` 元素更易于设置样式。
 
-> **备注：** `image` input 类型同样被渲染为一个按钮。我们将在后面提到。
+> [!NOTE]
+> `image` input 类型同样被渲染为一个按钮。我们将在后面提到。
 
 > [!NOTE]
 > 你可以在 Github 上看到 [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。

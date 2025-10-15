@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c4e54c5dec15a1031081e39557af3eb7c754713a
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`align-items`** 속성은 모든 직계 자식에 대해 {{cssxref("align-self")}}값을 그룹으로 설정합니다. 플렉스박스의 {{glossary("Cross Axis", "교차축")}}을 따라 아이템을 정렬합니다. 그리드 레이아웃의 {{glossary("Grid Areas", "그리드 영역")}}내 블록 축을 따라 아이템을 정렬합니다.
 
 아래의 대화형 예제는 그리드 레이아웃을 사용하여 `align-items`의 속성 값을 시연합니다.
@@ -92,9 +90,7 @@ align-items: unset;
 ### 값
 
 - `normal`
-
   - : 현재 사용 중인 레이아웃에 따라 달라집니다.
-
     - 절대 위치 지정 레이아웃에서 교체된 절대 위치 지정 박스에서는 `start`로 동작하고 다른 모든 절대 위치 지정 박스에서는 `stretch`로 동작합니다.
     - 절대 위치 지정 레이아웃의 정적 위치에서 `stretch`로 동작합니다
     - 플렉스 아이템의 경우 `stretch`로 동작합니다

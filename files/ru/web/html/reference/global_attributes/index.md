@@ -56,7 +56,6 @@ slug: Web/HTML/Reference/Global_attributes
   `itemscope` {{experimental_inline}}
 
   [`itemtype`](/ru/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
-
   - : Эти атрибуты относятся к определению [микроданных](https://html.spec.whatwg.org/multipage/microdata.html).
 
 - [`lang`](/ru/docs/Web/HTML/Reference/Global_attributes/lang)

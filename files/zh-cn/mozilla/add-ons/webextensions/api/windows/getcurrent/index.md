@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取当前的浏览器窗口并将其详细信息传递到回调函数中。
 
 “当前”窗口不一定与当前聚焦的窗口相同。如果此函数从后台脚本中调用，则它将返回当前聚焦的窗口。但如果它是从与特定浏览器窗口关联的文档的脚本中调用的，则它将返回相应的浏览器窗口。例如，如果浏览器显示侧边栏，则每个浏览器窗口都有自己的侧边栏文档实例。如果运行在侧边栏文档中的脚本调用 `getCurrent()`，则它将返回该侧边栏文档的窗口。
@@ -24,9 +22,7 @@ let gettingCurrent = browser.windows.getCurrent(
 ### 参数
 
 - `getInfo` {{optional_inline}}
-
   - : `object`.
-
     - `populate` {{optional_inline}}
       - : `boolean`。默认为 `false`。若为 `true`，则 {{WebExtAPIRef('windows.Window')}} 对象将包含 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。只有在扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时 `Tab` 对象才会包含 `url`、`title` 和 `favIconUrl` 属性。
     - `windowTypes` {{deprecated_inline}} {{optional_inline}}

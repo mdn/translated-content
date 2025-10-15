@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 126 の変更点をまとめています。Firefox 126 は、米国時間 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -44,7 +42,6 @@ l10n:
 - [`URL.parse()`](/ja/docs/Web/API/URL/parse_static) 静的メソッドで [`URL`](/ja/docs/Web/API/URL) オブジェクトの生成をサポートしました。これは渡したパラメーターが有効な `URL` でない場合に `null` を返しますので、[`URL` コンストラクター](/ja/docs/Web/API/URL/URL) で `URL` オブジェクトを生成するための、例外を発生させない代替手段として使用できます ([Firefox bug 1823354](https://bugzil.la/1823354))。
 - [Screen Wake Lock API](/ja/docs/Web/API/Screen_Wake_Lock_API) をサポートしました。ウェブアプリケーションがアクティブな間は、スクリーンを暗くしたりロックしたりしないように要求できます。これはナビゲーションや読書のアプリケーション、および通常は起動したままにして使用中は通常のタッチ操作を受け取らない、その他のアプリケーションで特に役に立ちます。この API は保護されたコンテキストで {{domxref("Navigator.wakeLock")}} を通して使用でき、{{domxref("WakeLock")}} を返します。wake lock の状態を監視したり手動で解放したりするために使用できる {{domxref("WakeLockSentinel")}} を要求できます ([Firefox bug 1589554](https://bugzil.la/1589554)、[Firefox bug 1874849](https://bugzil.la/1874849))。
 - [`RTCIceCandidate`](/ja/docs/Web/API/RTCIceCandidate) で、未実装の `relayProtocol` および `url` プロパティを除くすべてのプロパティやメソッドをサポートして、仕様書に準拠するようになりました。`RTCIceCandidate` のプロパティで以下の変更があります:
-
   - 以下のプロパティは読み取り専用になりました: [`candidate`](/ja/docs/Web/API/RTCIceCandidate/candidate)、[`sdpMid`](/ja/docs/Web/API/RTCIceCandidate/sdpMid)、[`sdpMLineIndex`](/ja/docs/Web/API/RTCIceCandidate/sdpMLineIndex)、[`usernameFragment`](/ja/docs/Web/API/RTCIceCandidate/usernameFragment)。
   - 以下のプロパティを追加しました: [`foundation`](/ja/docs/Web/API/RTCIceCandidate/foundation)、[`component`](/ja/docs/Web/API/RTCIceCandidate/component)、[`priority`](/ja/docs/Web/API/RTCIceCandidate/priority)、[`address`](/ja/docs/Web/API/RTCIceCandidate/address)、[`protocol`](/ja/docs/Web/API/RTCIceCandidate/protocol)、[`port`](/ja/docs/Web/API/RTCIceCandidate/port)、[`type`](/ja/docs/Web/API/RTCIceCandidate/type)、[`tcpType`](/ja/docs/Web/API/RTCIceCandidate/tcpType)、[`relatedAddress`](/ja/docs/Web/API/RTCIceCandidate/relatedAddress)、[`relatedPort`](/ja/docs/Web/API/RTCIceCandidate/relatedPort)、[`usernameFragment`](/ja/docs/Web/API/RTCIceCandidate/usernameFragment)。
 

@@ -2,14 +2,12 @@
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
 l10n:
-  sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)之一。
 
-**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。
-
-{{InteractiveExample("CSS Demo: ellipse()")}}
+{{InteractiveExample("CSS 演示：ellipse()")}}
 
 ```css interactive-example-choice
 clip-path: ellipse(20px 50px);
@@ -57,16 +55,13 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ### 值
 
 - `<shape-radius>`
-
   - : 两个半径，按顺序是 x 和 y。可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或值 `closest-side` 和 `farthest-side`。
-
     - `closest-side`
       - : 使用形状中心到参考框最近边缘的长度。对于椭圆来说，这是半径维度中最近的边缘。
     - `farthest-side`
       - : 使用形状中心到参考框最远边缘的长度。对于椭圆来说，这是半径维度中最远的边缘。
 
 - `<position>`
-
   - : 移动椭圆的中心。可以是 {{cssxref("length")}}、 {{cssxref("percentage")}}，或者类似于 `left` 这样的值。如果省略 `<position>` 值，则默认为中心。
 
 ## 形式语法
@@ -83,15 +78,8 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 <div class="box">
   <div class="shape"></div>
   <p>
-    One November night in the year 1782, so the story runs, two brothers sat
-    over their winter fire in the little French town of Annonay, watching the
-    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
-    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
-    were noted as possessing thoughtful minds and a deep interest in all
-    scientific knowledge and new discovery. Before that night—a memorable night,
-    as it was to prove—hundreds of millions of people had watched the rising
-    smoke-wreaths of their fires without drawing any special inspiration from
-    the fact.
+    据说，1782 年 11
+    月的一个夜晚，在法国小城安诺内，有两兄弟坐在冬日的炉火旁，看着炉膛里灰色的烟圈沿着宽大的烟囱袅袅升起。他们的名字叫斯蒂芬·蒙哥菲尔和约瑟夫·蒙哥菲尔，职业是造纸工人，以心思缜密著称，对所有科学知识和新发现都有着浓厚的兴趣。在那个夜晚——一个值得纪念的夜晚——之前，数以亿计的人都在注视着自家炉火升起的烟圈，却没有从中得到任何特别的启发。
   </p>
 </div>
 ```
@@ -119,15 +107,8 @@ body {
 <div class="box">
   <div class="shape"></div>
   <p>
-    One November night in the year 1782, so the story runs, two brothers sat
-    over their winter fire in the little French town of Annonay, watching the
-    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
-    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
-    were noted as possessing thoughtful minds and a deep interest in all
-    scientific knowledge and new discovery. Before that night—a memorable night,
-    as it was to prove—hundreds of millions of people had watched the rising
-    smoke-wreaths of their fires without drawing any special inspiration from
-    the fact.
+    据说，1782 年 11
+    月的一个夜晚，在法国小城安诺内，有两兄弟坐在冬日的炉火旁，看着炉膛里灰色的烟圈沿着宽大的烟囱袅袅升起。他们的名字叫斯蒂芬·蒙哥菲尔和约瑟夫·蒙哥菲尔，职业是造纸工人，以心思缜密著称，对所有科学知识和新发现都有着浓厚的兴趣。在那个夜晚——一个值得纪念的夜晚——之前，数以亿计的人都在注视着自家炉火升起的烟圈，却没有从中得到任何特别的启发。
   </p>
 </div>
 ```

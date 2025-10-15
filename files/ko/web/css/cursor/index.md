@@ -3,8 +3,6 @@ title: cursor
 slug: Web/CSS/cursor
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`cursor`** 속성은 요소 위에 마우스 커서가 올라갔을 때 보여줄 모양을 지정합니다.
 
 {{InteractiveExample("CSS Demo: cursor")}}
@@ -93,11 +91,9 @@ cursor:
 - `<url>`
   - : 이미지 파일을 가리키는 `url(…)`, 또는 쉼표로 구분한 `url(…), url(…), …` 목록. 일부 커서 이미지를 사용할 수 없을 때를 대비해 여러 이미지를 지정할 수 있습니다. 이미지를 사용할 경우 URL이 아닌 값(하나 이상의 키워드 값)을 목록의 맨 뒤에 붙여야 합니다. [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/cursor)를 참고하세요.
 - `<x>` `<y>` {{experimental_inline}}
-
   - : xy 좌표. 32 미만의 {{cssxref("&lt;number&gt;")}}여야 합니다.
 
 - 키워드 값
-
   - : _행 위로 마우스를 올리면 현재 브라우저에서 보이는 모습을 확인할 수 있습니다._
 
     <table class="standard-table">

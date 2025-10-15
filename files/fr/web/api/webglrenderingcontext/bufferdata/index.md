@@ -22,13 +22,10 @@ void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, 
 ### Paramètres
 
 - cible
-
   - : Un {{domxref ("GLenum")}} spécifiant le point de liaison (cible). Valeurs possibles :
-
     - `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de sommet, des données de coordonnées de texture ou des données de couleurs de sommet ;
     - `gl.ELEMENT_ARRAY_BUFFER` : tampon utilisé pour les indices d'éléments ;
     - lors de l'utilisation d'un {{domxref ("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
       - `gl.COPY_READ_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
       - `gl.COPY_WRITE_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
       - `gl.TRANSFORM_FEEDBACK_BUFFER` : tampon pour les opérations de retour de transformation ;
@@ -41,14 +38,11 @@ void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, 
 - donneesSrc {{optional_inline}}
   - : Un {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} ou l'un des types de tableau typés {{domxref("ArrayBufferView")}} à copier dans le magasin de données. Si `null`, un magasin de données est quand même créé, mais son contenu n'est ni initialisé, ni défini.
 - utilisation
-
   - : Un {{domxref("GLenum")}} indiquant le modèle d'utilisation du magasin de données. Valeurs possibles :
-
     - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.DYNAMIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent&nbsp;; du contenu est écrit dans le tampon, mais non lu ;
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
       - `gl.STATIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
       - `gl.DYNAMIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
       - `gl.STREAM_READ`&nbsp;: le contenu du tampon est susceptible de ne pas être utilisé souvent ; du contenu est lu depuis le tampon, mais non écrit ;

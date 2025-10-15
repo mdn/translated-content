@@ -30,7 +30,6 @@ btn.addEventListener("click", () => {
 
 1. Получаем ссылку на элемент {{htmlelement("button")}}, который уже есть в DOM.
 2. Добавляем к кнопке обработчик события [`click`](/ru/docs/Web/API/Element/click_event) так, что при нажатии на неё:
-
    1. Выводится сообщение [`alert()`](/ru/docs/Web/API/Window/alert).
    2. После закрытия сообщения создаём элемент {{htmlelement("p")}} (абзац).
    3. Затем добавляем в абзац текст.

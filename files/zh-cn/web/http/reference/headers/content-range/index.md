@@ -5,8 +5,6 @@ l10n:
   sourceCommit: beb5d4126bd1e5c838d0fa0eea3e996eb0a9e0b9
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Range`** HTTP 响应标头表示部分消息在完整消息中的位置。
 
 <table class="properties">

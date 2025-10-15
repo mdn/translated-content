@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ## 쌓임 맥락 예제3
@@ -25,11 +23,8 @@ original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_cont
 이 상황을 더 잘 이해하기 위해 쌓임 맥락 계층 구조를 그려보자.
 
 - 뿌리 엘리먼트 쌓임 맥락
-
   - LEVEL #1
-
     - LEVEL #2 (z-index: 1)
-
       - LEVEL #3
       - ...
       - LEVEL #3
@@ -44,7 +39,8 @@ original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_cont
 
 이 문제를 해결하는 방법에는 1) 서로 다른 메뉴를 겹치지 않게 배치하기, 2) 클래스 선택자 뿐만 아니라 id 선택자를 이용하여 각각의 엘리먼트에 z-index 속성 값을 지정하기, 3) HTML 구조를 단순화하여 멀티 레벨 메뉴를 사용하지 않기 등이 있다.
 
-> **참고:** **노트:** 소스 코드에는 두번째 레벨 메뉴와 세번째 레벨 메뉴들이 position 속성이 absolute로 지정된 컨테이너에 싸여있는 것을 볼 수 있다. 이는 여러개의 엘리먼트들의 위치를 한꺼번에 지정하는데 유용하다.
+> [!NOTE]
+> **노트:** 소스 코드에는 두번째 레벨 메뉴와 세번째 레벨 메뉴들이 position 속성이 absolute로 지정된 컨테이너에 싸여있는 것을 볼 수 있다. 이는 여러개의 엘리먼트들의 위치를 한꺼번에 지정하는데 유용하다.
 
 ## 예제
 

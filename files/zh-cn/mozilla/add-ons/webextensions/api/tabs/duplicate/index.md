@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 根据标签页的 ID 复制一个标签页。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -25,9 +23,7 @@ let duplicating = browser.tabs.duplicate(
 - `tabId`
   - : `integer`。要复制的标签页的 ID。
 - `duplicateProperties` {{optional_inline}}
-
   - : `object`。一个描述如何复制标签页的对象。它包含以下属性：
-
     - `index` {{optional_inline}}
       - : `integer`。新标签页在窗口中的位置。该值的范围限制为零到窗口中标签页的数量。
     - `active` {{optional_inline}}

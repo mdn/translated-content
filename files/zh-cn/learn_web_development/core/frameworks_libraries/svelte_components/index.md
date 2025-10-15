@@ -319,7 +319,6 @@ export let onclick = (clicked) => {};
    ```
 
 2. 我们需要决定 `Todo` 组件将发出哪些事件：
-
    - 我们可以为状态切换和名称编辑分别发出不同的事件（例如 `updateTodoStatus` 和 `updateTodoName`）。
    - 或者我们可以采用更通用的方法，为这两个操作发出一个单独的 `update` 事件。
 

@@ -5,7 +5,7 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet d'appliquer une animation entre des styles.
+La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet d'appliquer une animation entre des styles.
 
 C'est une propriété qui synthétise les propriétés suivantes :
 
@@ -292,7 +292,6 @@ La propriété `animation` se définit grâce à une ou plusieurs animations, s�
 Chaque animation se définit comme :
 
 - zéro ou une valeur du type :
-
   - {{cssxref("&lt;single-transition-timing-function&gt;")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}

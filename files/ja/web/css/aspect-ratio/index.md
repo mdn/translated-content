@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素ボックスの望ましい幅と高さの比率を定義することができます。つまり、親コンテナーやビューポートのサイズが変更されても、ブラウザーは要素の寸法を調整して、指定された幅と高さの比率を維持します。指定された{{glossary("aspect ratio","アスペクト比")}}は、auto のサイズやその他のレイアウト機能の計算に使用されます。
 
 `aspect-ratio` が何らかの効果を持つためには、ボックスのサイズの少なくとも 1 つが自動である必要があります。幅も高さも自動サイズでない場合、指定されたアスペクト比はボックスの推奨サイズに何の影響も持ちません。
 
-{{InteractiveExample("CSS Demo: aspect-ratio")}}
+{{InteractiveExample("CSS デモ: aspect-ratio")}}
 
 ```css interactive-example-choice
 aspect-ratio: auto;
@@ -72,15 +70,12 @@ aspect-ratio: unset;
 ### 値
 
 - `auto`
-
   - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
 
 - {{cssxref("&lt;ratio&gt;")}}
-
   - : ボックスの推奨アスペクト比は、`width` / `height` で指定された比率です。`height` とそれに先立つスラッシュ文字が省略された場合、`height` の既定値は `1` です。推奨アスペクト比を含む寸法の計算では、`box-sizing` で指定されたボックスの寸法で行われます。
 
 - `auto && <ratio>`
-
   - : `auto` と `<ratio>` が両方指定された場合、要素が `<img>` 要素のように内在的な縦横比を持つ置換要素である場合は `auto` が使用されます。 それ以外の場合は、指定された `width` / `height` の比率が好ましい縦横比として使用されます。
 
 ## 公式定義

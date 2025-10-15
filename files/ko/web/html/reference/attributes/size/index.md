@@ -78,6 +78,6 @@ label {
 
 ## 같이 보기
 
-- [`maxlength`](/ko/docs/Web/HTML/Attributes/maxlength)
+- [`maxlength`](/ko/docs/Web/HTML/Reference/Attributes/maxlength)
 - [`minlength`](/ko/docs/Web/HTML/Attributes/minlength)
 - [`pattern`](/ko/docs/Web/HTML/Attributes/pattern)

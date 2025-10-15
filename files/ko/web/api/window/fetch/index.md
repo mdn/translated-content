@@ -18,7 +18,8 @@ l10n:
 
 `fetch()` 메서드는 받아오려는 리소스의 지시어가 아니라, [Content Security Policy](/ko/docs/Web/HTTP/Headers/Content-Security-Policy)의 `connect-src` 지시어의 제어를 받습니다.
 
-> **참고:** `fetch()` 메서드의 매개변수는 {{domxref("Request.Request","Request()")}} 생성자와 동일합니다.
+> [!NOTE]
+> `fetch()` 메서드의 매개변수는 {{domxref("Request.Request","Request()")}} 생성자와 동일합니다.
 
 ## 구문
 
@@ -30,51 +31,41 @@ fetch(resource, options)
 ### 매개변수
 
 - `resource`
-
   - : 취득하려는 리소스를 정의합니다. 다음 중 하나입니다.
-
     - 취득하려는 리소스의 URL을 제공하는 문자열 또는 {{domxref("URL")}}처럼 {{Glossary("stringifier", "문자열 변환자")}}를 포함한 객체.
     - {{domxref("Request")}} 객체.
 
 - `options` {{optional_inline}}
-
   - : 요청에 적용하고자 하는 사용자 지정 설정을 포함하는 객체입니다. 사용 가능한 설정은 다음과 같습니다.
-
     - `method`
-
       - : `GET`, `POST` 등 요청 메서드입니다. 참고로 {{httpheader("Origin")}} 헤더는 {{HTTPMethod("HEAD")}}나 {{HTTPMethod("GET")}} 메서드의 Fetch 요청에는 설정되지 않습니다. (이 동작은 Firefox 65에서 수정되었습니다. [Firefox bug 1508661](https://bugzil.la/1508661)을 참조하세요.) [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview)에 정의된 메서드 중 하나와 대소문자 구분 없이 일치하는 문자열은 자동으로 대문자화됩니다. `PATCH`처럼 별도로 정의한 메서드를 사용하려면 직접 대문자로 입력해야 합니다.
 
     - `headers`
+      - : 요청에 추가하고자 하는 헤더들입니다. {{domxref("Headers")}} 객체에 넣어 제공할 수도 있고, {{jsxref("String")}} 값들을 가진 객체 리터럴로 제공해도 됩니다. [어떤 이름들은 금지](/ko/docs/Glossary/Forbidden_request_header)된다는 점을 주의하세요.
 
-      - : 요청에 추가하고자 하는 헤더들입니다. {{domxref("Headers")}} 객체에 넣어 제공할 수도 있고, {{jsxref("String")}} 값들을 가진 객체 리터럴로 제공해도 됩니다. [어떤 이름들은 금지](/ko/docs/Glossary/Forbidden_header_name)된다는 점을 주의하세요.
-
-        > **참고:** [`Authorization`](/ko/docs/Web/HTTP/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
+        > [!NOTE]
+        > [`Authorization`](/ko/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
 
     - `body`
       - : 요청에 추가하고자 하는 본문입니다. {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 문자열 객체 또는 리터럴, {{domxref("ReadableStream")}} 객체를 사용할 수 있습니다. 제일 마지막은 아직 실험적 기능이므로 [호환성 정보](/ko/docs/Web/API/Request#browser_compatibility)를 먼저 확인해서 사용할 수 있을지 검증하세요. `GET`과 `HEAD` 메서드는 본문을 가질 수 없습니다.
     - `mode`
       - : 이 요청에 사용할 모드, 즉 `cors`, `no-cors`, 또는 `same-origin`입니다.
     - `credentials`
-
-      - : 브라우저가 자격증명([쿠키](/ko/docs/Web/HTTP/Cookies), [HTTP 인증](/ko/docs/Web/HTTP/Authentication) 항목, TLS 클라이언트 인증서)을 어떻게 취급할지 제어합니다. 다음 중 한 문자열이어야 합니다.
-
+      - : 브라우저가 자격증명([쿠키](/ko/docs/Web/HTTP/Guides/Cookies), [HTTP 인증](/ko/docs/Web/HTTP/Guides/Authentication) 항목, TLS 클라이언트 인증서)을 어떻게 취급할지 제어합니다. 다음 중 한 문자열이어야 합니다.
         - `omit`
           - : 브라우저가 요청에서 자격증명을 제외하도록 하고, {{HTTPHeader("Set-Cookie")}} 헤더처럼 응답에 포함된 자격증명도 무시하도록 지시합니다.
         - `same-origin`
           - : 브라우저가 동일 출처 URL 요청에 대해서는 자격증명을 보내고, 동일 출처 URL 응답에 포함된 자격증명도 사용하도록 지시합니다. **기본 값입니다.**
         - `include`
-
           - : 브라우저 동일과 교차 출처 요청 모두에 자격증명을 보내고, 응답 자격증명도 모두 사용하도록 지시합니다.
 
             > [!NOTE]
-            > 자격증명은 교차 출처에 대한 단순 요청과 "최종" 요청에는 포함될 수 있지만, [CORS 사전 요청](/ko/docs/Web/HTTP/CORS#preflight_requests_and_credentials)에는 포함되어선 안됩니다.
+            > 자격증명은 교차 출처에 대한 단순 요청과 "최종" 요청에는 포함될 수 있지만, [CORS 사전 요청](/ko/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials)에는 포함되어선 안됩니다.
 
     - `cache`
-      - : 요청이 브라우저 [HTTP 캐시](/ko/docs/Web/HTTP/Caching)와 어떻게 상호작용할지 제어합니다. 가능한 값은 `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` 중 하나고, 각각에 대한 설명은 {{domxref("Request")}} 객체 문서의 {{domxref("Request/cache", "cache")}} 속성에서 확인할 수 있습니다.
+      - : 요청이 브라우저 [HTTP 캐시](/ko/docs/Web/HTTP/Guides/Caching)와 어떻게 상호작용할지 제어합니다. 가능한 값은 `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` 중 하나고, 각각에 대한 설명은 {{domxref("Request")}} 객체 문서의 {{domxref("Request/cache", "cache")}} 속성에서 확인할 수 있습니다.
     - `redirect`
-
       - : 리다이렉트 응답 처리법입니다.
-
         - `follow`: 자동으로 리다이렉트를 따라갑니다. 기본 값입니다.
         - `error`: 리다이렉트 발생 시 오류와 함께 요청을 중단합니다.
         - `manual`: 호출자가 응답을 다른 컨텍스트에서 처리해야 합니다. 자세한 정보는 [WHATWG fetch 표준](https://fetch.spec.whatwg.org/#concept-request-redirect-mode)에서 확인하세요.
@@ -309,5 +300,5 @@ const myRequest = new Request("flowers.jpg", myInit);
 
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

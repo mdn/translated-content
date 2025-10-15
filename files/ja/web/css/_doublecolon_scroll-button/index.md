@@ -5,7 +5,7 @@ l10n:
   sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::scroll-button()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}のスクロールをコントロールするためのボタンを表します。これらは、 {{cssxref("content")}} 値が `none` 以外の場合に、スクロールコンテナー上に生成されます。スクロールの方向は、引数の値によって決まります。
 
@@ -20,9 +20,7 @@ l10n:
 ### 引数
 
 - `<scroll-button-direction>`
-
   - : 選択するスクロールボタンの方向を表す値です。次の値を利用できます。
-
     - `*`
       - : 元の要素のスクロールボタンをすべて選択し、単一のルールで各ボタンにスタイルを適用できるようにします。
     - `down`

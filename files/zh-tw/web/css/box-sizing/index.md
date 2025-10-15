@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`box-sizing`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定如何計算元素的總寬度與高度。
 
 {{InteractiveExample("CSS Demo: box-sizing")}}
@@ -91,13 +89,11 @@ box-sizing: unset;
 ### 值
 
 - `content-box`
-
   - : 這是 CSS 標準指定的初始值和預設值。{{Cssxref("width")}} 和 {{Cssxref("height")}} 屬性包含內容，但不包括內邊距、邊框或外邊距。例如，`.box {width: 350px; border: 10px solid black;}` 會呈現寬度為 370px 的盒子。
 
     此時，元素的尺寸計算為：_寬度 = 內容的寬度_，_高度 = 內容的高度_。（邊框和內邊距不包括在計算中。）
 
 - `border-box`
-
   - : {{Cssxref("width")}} 和 {{Cssxref("height")}} 屬性包含內容、內邊距和邊框，但不包括外邊距。請注意，內邊距和邊框會在盒子內。例如，`.box {width: 350px; border: 10px solid black;}` 會呈現寬度為 350px 的盒子，其中內容區域的寬度為 330px。內容框的寬度不能為負數，最小值為 0，因此無法使用 `border-box` 使元素消失。
 
     此時，元素的尺寸計算為：_寬度 = 邊框 + 內邊距 + 內容的寬度_，_高度 = 邊框 + 內邊距 + 內容的高度_。

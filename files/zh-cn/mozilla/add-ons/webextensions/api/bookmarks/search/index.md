@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.search()`** 函数用于搜索与给定查询匹配的书签树节点。
 
 如果任何输入参数无效或不是适当的类型，则此函数会引发异常；请查看[控制台](https://extensionworkshop.com/documentation/develop/debugging/)获取错误消息。异常没有错误 ID，并且消息本身可能会更改，因此不要编写试图解释它们的代码。
@@ -24,25 +22,20 @@ let searching = browser.bookmarks.search(
 ### 参数
 
 - `query`
-
   - : 描述要执行的查询的 {{jsxref("string")}} 或 {{jsxref("object")}}。
 
     如果 `query` 是一个**字符串**，它由零个或多个以空格分隔的搜索项组成。如果搜索项是书签的 URL 或标题的子字符串，则匹配。匹配不区分大小写。要使书签与查询匹配，必须匹配查询的所有搜索条件。
 
     如果 `query` 是一个**对象**，它由三个属性中的零个或多个组成：`query`、`title` 和 `url`，描述如下。要使书签与查询匹配，必须匹配所有属性的项。
-
     - query {{optional_inline}}
-
       - : 一个 {{jsxref("string")}}，指定要与之匹配的一个或多个项；其格式与 `query` 参数的字符串形式相同。如果这不是一个字符串，则会引发异常。
 
     - `url` {{optional_inline}}
-
       - : 一个 {{jsxref("string")}}，必须与书签的 URL 完全匹配。匹配不区分大小写，尾部斜杠会被忽略。
 
         如果传递了无效的 URL，则函数会引发异常。
 
     - `title` {{optional_inline}}
-
       - : 一个 {{jsxref("string")}}，必须与书签树节点的标题完全匹配。匹配区分大小写。
 
 ### 返回值

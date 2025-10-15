@@ -1,13 +1,11 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
+l10n:
+  sourceCommit: 0ca040b6a9cfd931558bd1d3a402707abddc1924
 ---
 
-{{CSSRef}}
-
-Le type **`<blend-mode>`** est un ensemble de mots-clés qui permettent de décrire les différents modes de fusion (_blend modes_). Ce type de valeur est utilisé pour les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.
-
-Un mode de fusion est une méthode de calcul permettant de déterminer la couleur finale d'un pixel lorsque plusieurs couches sont empilées. Chaque mode de fusion prend en entrée la couleur du premier plan et de l'arrière-plan (dans cet ordre) pour calculer la valeur de la couleur obtenue. Le résultat final est la couche visible obtenue lorsque les différents plans ont été fusionnés avec les modes de fusion.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<blend-mode>`** définit la façon dont les couleurs doivent apparaître lorsque des éléments se superposent. Il est utilisé dans les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.
 
 ## Syntaxe
 
@@ -52,7 +50,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 
 ## Exemples
 
-### normal
+### Exemple avec `normal`
 
 ```html hidden
 <div id="div"></div>
@@ -60,273 +58,264 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 
 ```css
 #div {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
-{{ EmbedLiveSample('', "300", "350") }}
+Essayez d'autres valeurs pour `background-blend-mode` pour observer les différents résultats.
 
-### multiply
+{{ EmbedLiveSample('exemple_avec_normal', "100%", "300") }}
+
+### Comparaison des différentes valeurs de `background-blend-mode`
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
 ```css
-#div {
-  width: 300px;
-  height: 300px;
+.container {
+  width: 720px;
+  height: 760px;
+  display: grid;
+  grid: auto-flow 190px / repeat(4, 180px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container div div {
+  margin-left: 15px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
-  background-blend-mode: multiply;
+}
+
+.container div p {
+  line-height: 30px;
+  margin: 0;
+  color: #a33333;
+  text-align: center;
 }
 ```
 
-{{ EmbedLiveSample('', "300", "350") }}
+```js
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+];
 
-### screen
+const containerElem = document.querySelector(".container");
+
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.style.backgroundBlendMode = item;
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
+```
+
+On crée plusieurs éléments HTML `<div>` en parcourant une liste et on applique une valeur différente de `backgroundBlendMode` à chacun.
+
+{{ EmbedLiveSample('comparaison_des_différentes_valeurs_de_background-blend-mode', "100%", "780") }}
+
+### Comparaison des différentes valeurs de `mix-blend-mode`
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
+```css hidden
+.container {
+  width: 640px;
+  height: 800px;
+  display: grid;
+  grid: auto-flow 160px / repeat(4, 160px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container > div > div {
+  position: relative;
+  margin-left: 20px;
+  width: 120px;
+  height: 120px;
+}
+
+.container div p {
+  margin: 0;
+  line-height: 30px;
+  color: #a33333;
+  text-align: center;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  position: absolute;
+}
+
+.circle-1 {
+  background: red;
+}
+
+.circle-2 {
+  background: lightgreen;
+  left: 40px;
+}
+
+.circle-3 {
+  background: blue;
+  left: 20px;
+  top: 40px;
+}
+
+.isolate {
+  isolation: isolate; /* Sans isolation, la couleur de fond sera prise en compte */
+  position: relative;
 }
 ```
 
-{{ EmbedLiveSample('', "300", "350") }}
+```js hidden
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+  "plus-darker",
+  "plus-lighter",
+];
 
-### overlay
+const containerElem = document.querySelector(".container");
 
-```html hidden
-<div id="div"></div>
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.innerHTML = `
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  `;
+
+  innerElem.querySelectorAll(".circle").forEach((circle) => {
+    circle.style.mixBlendMode = item;
+  });
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
 ```
 
+Dans l'exemple suivant, on crée plusieurs éléments `<div>` en parcourant une liste et on applique une valeur différente de `mixBlendMode` à chacun.
+
+{{ EmbedLiveSample('comparaison_des_différentes_valeurs_de_mix-blend-mode', "100%", "820") }}
+
+### Comparaison visuelle des modes de fusion
+
+Dans l'exemple suivant, un `<div>` possède deux images de fond&nbsp;: un logo Firefox au-dessus d'un dégradé linéaire. En dessous, un menu `<select>` permet de changer la valeur de `background-blend-mode` appliquée au `<div>`, afin de comparer les différents effets de mode de fusion.
+
+#### HTML
+
+```html
+<div></div>
+<p>Choisissez un mode de fusion&nbsp;:</p>
+<select>
+  <option selected>normal</option>
+  <option>multiply</option>
+  <option>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
+</select>
+```
+
+#### CSS
+
 ```css
-#div {
+div {
   width: 300px;
   height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: overlay;
+  background:
+    url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png")
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
-{{ EmbedLiveSample('', "300", "350") }}
+#### JavaScript
 
-### darken
+```js
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-```html hidden
-<div id="div"></div>
+selectElem.addEventListener("change", () => {
+  divElem.style.backgroundBlendMode = selectElem.value;
+});
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: darken;
-}
-```
+#### Résultat
 
-{{ EmbedLiveSample('', "300", "350") }}
-
-### lighten
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: lighten;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### color-dodge
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-dodge;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### color-burn
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-burn;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### hard-light
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hard-light;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### soft-light
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: soft-light;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### difference
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: difference;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### exclusion
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: exclusion;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### hue
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hue;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### saturation
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: saturation;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### color
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-### luminosity
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: luminosity;
-}
-```
-
-{{ EmbedLiveSample('', "300", "350") }}
-
-## L'interpolation des modes de fusion
-
-Il n'y a pas d'interpolation pour les modes de fusion. Toute transition se produit brutalement.
+{{EmbedLiveSample('comparaison_visuelle_des_modes_de_fusion', '100%', 400)}}
 
 ## Spécifications
 
@@ -339,7 +328,6 @@ Il n'y a pas d'interpolation pour les modes de fusion. Toute transition se produ
 ## Voir aussi
 
 - Les propriétés utilisant des valeurs de ce type :
-
   - {{cssxref("background-blend-mode")}}
   - {{cssxref("mix-blend-mode")}}
 

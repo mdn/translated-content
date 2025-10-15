@@ -2,10 +2,8 @@
 title: shortcuts
 slug: Web/Progressive_web_apps/Manifest/Reference/shortcuts
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `shortcuts` はマニフェストメンバーで、ウェブアプリケーション内の主要な課題やページへのリンクを指定するために使用します。
 ブラウザーは、この情報を使用してコンテキストメニューを作成することができます。コンテキストメニューは通常、ユーザーがウェブアプリケーションのアイコンを操作したときに表示されます。
@@ -53,35 +51,28 @@ l10n:
 ### 値
 
 - `shortcuts`
-
   - : オブジェクトの配列。各オブジェクトは、ウェブアプリの主要な課題またはページを表します。
 
     各オブジェクトは 1 つ以上のプロパティを持つことができます。このうち、 `name` と `url` のみが必須です。
     利用可能なプロパティは次の通りです。
-
     - `name`
-
       - : ショートカットの名前を表す文字列で、コンテキストメニューにユーザーに表示されます。
 
     - `short_name` {{Optional_Inline}}
-
       - : ショートカットの名前の短縮版を表す文字列。
         ブラウザーは、完全な名前を表示するのに十分な空間がないコンテキストでこれを使用することがあります。
 
     - `description` {{Optional_Inline}}
-
       - : ショートカットの目的を説明する文字列。
         ブラウザーは、この情報を支援技術（スクリーンリーダーなど）に公開することがあります。これにより、ユーザーはショートカットの目的を理解することができます。
 
     - `url`
-
       - : 関連付けられたショートカットが起動されたときに開くためのアプリの URL。
         URL はウェブアプリマニフェストの[スコープ](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope)に含まれている必要があります。値が絶対的なものである場合、マニフェストファイルにリンクするページと同じオリジンである必要があります。値が相対的なものである場合、マニフェストファイルの URL に対して解決されます。
         値が絶対的なものである場合、マニフェストファイルにリンクするページと同じオリジンである必要があります。
         値が相対的なものである場合、マニフェストファイルの URL に対して解決されます。
 
     - [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons) {{Optional_Inline}}
-
       - : さまざまなコンテキストにおけるショートカットを表すアイコンオブジェクトの配列。
         これは [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons) マニフェストメンバーと同じ形式です。
 

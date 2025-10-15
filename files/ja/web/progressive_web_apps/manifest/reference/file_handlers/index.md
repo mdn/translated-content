@@ -2,10 +2,10 @@
 title: file_handlers
 slug: Web/Progressive_web_apps/Manifest/Reference/file_handlers
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 26f9fbee05fb92b584d44fba4359e86796484aa6
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `file_handlers` メンバーは、インストールされた[プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) が処理できるファイルの型を表すオブジェクトの配列を指定します。
 
@@ -13,19 +13,18 @@ l10n:
 
 例えば、ある PWA を `text/plain` の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)と一致するファイルを処理させることができます。この PWA がインストールされると、オペレーティングシステムはこれを使用してテキストファイルを処理できるようになり、ユーザーがこの形式のファイルをオープンすると、PWA が開きます。なお、他にもテキストファイルのハンドラーとして登録されているアプリケーションがある可能性があり、オペレーティングシステムがファイル形式とアプリケーションの関連付けを管理する方法、および指定されたファイルを処理するアプリケーションをユーザーに選択させる方法は、端末によって異なる場合があります。
 
-> **メモ:** `file_handlers` メンバーは、指定されたファイル形式を設定して PWA を登録するために使用されますが、これによって一致するファイルがオープンされたときにのみ、オペレーティングシステムが PWA を起動する結果となります。その後、PWA は実際に JavaScript コードを使用してファイルを処理する必要があります。詳しくは[ファイルの処理](#ファイルの処理)を参照してください。
+> [!NOTE]
+> `file_handlers` メンバーは、指定されたファイル形式を設定して PWA を登録するために使用されますが、これによって一致するファイルがオープンされたときにのみ、オペレーティングシステムが PWA を起動する結果となります。その後、PWA は実際に JavaScript コードを使用してファイルを処理する必要があります。詳しくは[ファイルの処理](#ファイルの処理)を参照してください。
 
 ### 値
 
 オブジェクトの配列。配列内の各オブジェクトには、次の値が含まれている必要があります（`action` と `accept`は必須です）。
 
 - `action`
-
   - : ファイルを処理する際の移動先の URL が入っている文字列。
     この URL は、 PWA が移動できる URL のセットである PWA のナビゲーションスコープ内に設定する必要があります。 PWA のナビゲーションスコープは、 [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) メンバーが既定値ですが、 [`scope`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope) メンバーを使用して設定することもできます。
 
 - `accept`
-
   - : オブジェクトです。このオブジェクトのそれぞれのキーは次のようなものです。
     - プロパティのキーは MIME タイプです。
     - プロパティ値は、その MIME タイプに関連付けられたファイル拡張子を表す文字列の配列です。
@@ -91,5 +90,5 @@ if ("launchQueue" in window) {
 
 ## 関連情報
 
-- [Handle files in Progressive Web Apps on learn.microsoft.com](https://learn.microsoft.com/ja/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files)
+- [Handle files in Progressive Web Apps on learn.microsoft.com](https://learn.microsoft.com/ja/microsoft-edge/progressive-web-apps/how-to/handle-files)
 - [Let installed web applications be file handlers on developer.chrome.com](https://developer.chrome.com/docs/capabilities/web-apis/file-handling)

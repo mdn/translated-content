@@ -24,5 +24,4 @@ l10n:
 - [ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - 関連用語:
-
   - {{Glossary("Main thread", "メインスレッド")}}

@@ -132,7 +132,6 @@ python3 -V
 你可以輕鬆從[python.org](https://www.python.org/)安裝 Python 3（以及 pip3 工具）:
 
 1. 下載所需的安裝程序:
-
    1. 點擊<https://www.python.org/downloads/>
    2. 選擇**Download Python 3.7.0**按鈕(確切的版本號可能不同).
 
@@ -157,7 +156,6 @@ pip3 list
 windows 默認不安裝,但你可以從[python.org](https://www.python.org/)輕鬆安裝它（以及 pip3 工具）：
 
 1. 下載所需版本:
-
    1. 點擊 <https://www.python.org/downloads/>
    2. 選擇 **Download Python 3.7.0** 按鈕(確切的版本號可能不同).
    3. 通過雙擊下載的文件並按照提示安裝 Python
@@ -204,7 +202,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **備註：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
 >
 > 你可以使用`which virtualenvwrapper.sh` 和 `which python3`.的命令找到系統的正確位置。
 
@@ -246,7 +245,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **備註：** `VIRTUALENVWRAPPER_PYTHON`變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事，是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON`變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事，是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
 >
 > 例如，對 macOS 進行的一次安裝測試，最終在啟動文件中需要以下幾行：
 >

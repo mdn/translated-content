@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 original_slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
 
-{{HTTPSidebar}}
-
 ## 이유
 
 ```plain
@@ -20,7 +18,7 @@ Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 
 ## 같이보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)
 - [CORS 사용: 내 서버에 CORS를 추가하고 싶다면](https://enable-cors.org/server.html)

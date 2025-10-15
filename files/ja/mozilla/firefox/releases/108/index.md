@@ -5,8 +5,6 @@ l10n:
   sourceCommit: edeb48d22b0865ede34c8ca70cd2eb60010cbf9c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 108 の変更点をまとめています。Firefox 108 は、2022 年 12 月 13 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

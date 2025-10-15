@@ -10,7 +10,7 @@ l10n:
 
 **`<source>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("picture")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}} の各要素に対し、複数のメディアリソースを指定します。この要素は{{glossary("void element", "空要素")}}であり、すなわち中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Guides/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
 
-{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;source&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <video controls width="250" height="200" muted>
@@ -29,19 +29,15 @@ l10n:
 この要素はすべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)をサポートし、加えて下記の属性を使うことができます。
 
 - `type`
-
   - : [画像の MIME メディア型](/ja/docs/Web/Media/Guides/Formats/Image_types)または[その他のメディア型](/ja/docs/Web/Media/Guides/Formats/Containers)で、オプションで [`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)を伴います。
 
 - `src`
-
   - : メディアのリソースの URL です。この `source` 要素の親が {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の場合は必須ですが、`source` 要素の親が {{HTMLElement("picture")}} 要素である場合は指定できません。
 
 - `srcset`
-
   - : 1つ以上の画像のURLと記述子をカンマで区切ったリストです。この `source` 要素の親が {{HTMLElement("picture")}} 要素である場合は必須ですが、`source` 要素の親が {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の場合は指定できません。
 
     文字列をカンマ区切りで並べたリストであり、ブラウザーが使用できる画像のセットを示します。それぞれの文字列の構成は以下のとおりです。
-
     1. 画像を指定する 1 つの URL
     2. 幅記述子。これは正の整数に `"w"` を付加した文字列で、例えば `300w` のようになります。
     3. 画素密度記述子。これは直後に `"x"` を付加した正の浮動小数点数で、例えば `2x` のようになります。
@@ -49,23 +45,19 @@ l10n:
     有効であるためには、リスト内の各文字列は、少なくとも幅記述子またはピクセル密度記述子を持たなければなりません。2 種類の記述子が混在してはならず、リスト全体で一貫して一方のみを使用しなければなりません。リストの中で、各記述子の値は固有でなければなりません。ブラウザーは記述子を基に、指定された時点で表示するために最も適切な画像を選びます。記述子が存在しない場合の既定値は `1x` です。`sizes` 属性が存在する場合は、各文字列に対して幅の記述子を指定しなければなりません。ブラウザーが `srcset` に対応していない場合は、`src` が既定値として使用されます。
 
 - `sizes`
-
   - : ソースの寸法のリストで、そのソースが表す画像が最終的に表示される幅を表します。この `source` 要素の親が {{HTMLElement("picture")}} 要素である場合は指定可能ですが、`source` 要素の親が {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の場合は指定できません。
 
     リストはそれぞれのソースのサイズをカンマ区切りで並べたものです。サイズは、条件と長さの組です。この情報は [`srcset`](#srcset) で指定されたどの画像を使用するかを決めるため、ページのレイアウトを行う前にブラウザーが使用します。なお、 `sizes` は `srcset` でピクセル倍率ではなく幅指定子が提供された時（例えば 2x ではなく 200w の場合）のみ、効果があることに注意してください。
 
 - `media`
-
   - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)です。
 
 - `height`
-
   - : 画像の本来の高さをピクセル単位で指定します。この `source` 要素の親が {{HTMLElement("picture")}} 要素である場合は指定可能ですが、`source` 要素の親が {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の場合は指定できません。
 
     単位のない整数でなければなりません。
 
 - `width`
-
   - : 画像の本来の幅をピクセル単位で指定します。この `source` 要素の親が {{HTMLElement("picture")}} 要素である場合は指定可能ですが、`source` 要素の親が {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の場合は指定できません。
 
     単位のない整数でなければなりません。

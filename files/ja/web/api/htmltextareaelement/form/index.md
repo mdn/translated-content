@@ -3,7 +3,7 @@ title: "HTMLTextAreaElement: form プロパティ"
 short-title: form
 slug: Web/API/HTMLTextAreaElement/form
 l10n:
-  sourceCommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}

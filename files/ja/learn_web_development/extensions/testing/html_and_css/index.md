@@ -190,7 +190,8 @@ button:active {
 
 これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは 16 進数の色を指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
-> **メモ:** [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
+> [!NOTE]
+> [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
 
 ### セレクターの対応
 

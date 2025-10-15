@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`linear-gradient()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 두 개 이상의 색상이 직선을 따라 점진적으로 변화되는 선형 그라데이션 그림을 생성합니다. 그 결과는 {{CSSxRef("&lt;gradient&gt;")}} 데이터 유형의 객체이며, 이는 {{CSSxRef("&lt;image&gt;")}}의 특별한 종류 중 하나입니다.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}
@@ -72,23 +70,21 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### 값들
 
 - `<side-or-corner>`
-
   - : 그라데이션의 시작 지점의 위치. 이 값이 지정될 때에는 `to`라는 값과 함께 최대 2개의 키워드를 가질 수 있습니다. 한 경우는 `left`와 `right` 값을 통해 수평선을 의미하는 방식이고, 다른 경우는 `top`과 `bottom`을 이용해 수직선을 의미하는 방식입니다. 각 키워드의 순서는 중요하지 않습니다. 만약 이 값이 명시되지 않으면, 기본적으로 `to bottom`이 지정됩니다.
 
     `to top`, `to bottom`, `to left`, 그리고 `to right`은 각각 각도 `0deg`, `180deg`, `270deg`, `90deg`과 동일합니다. 다른 값의 경우는 각도 그 자체로 해석됩니다.
 
 - {{CSSxRef("&lt;angle&gt;")}}
-
   - : 그라데이션 선 방향의 각도. `0deg`은 `to top`과 동일한 의미를 가지며 값이 증가할수록 시계 방향으로 회전합니다.
 
 - `<linear-color-stop>`
-
   - : {{CSSxRef("&lt;color&gt;")}} 값의 색 중지점으로, 하나 혹은 두 개의 중지 위치에 대한 값이 뒤따라옵니다. 중지 위치에 대한 값은 그라데이션의 축을 따라 정해지는 {{CSSxRef("&lt;percentage&gt;")}} 혹은 {{CSSxRef("&lt;length&gt;")}} 값 입니다.
 
 - `<color-hint>`
   - : 인접한 색상 중지점 사이에서, 그라데이션이 어떻게 색을 어떻게 변화시킬지를 정의하기 위한 보간 정보. 길이는 두 색상 중지점 사이의 어떤 지점에서 중간 색상에 도달해야 하는지를 명시합니다. 만약 이 값이 명시되지 않으면, 색상 변화의 중간지점은 두 색상 중지점의 중간이 됩니다.
 
-> **참고:** [CSS 그라데이션의 색 중지점](#선형_그라데이션의_구성)의 렌더링 방식은 [SVG 그라데이션](/ko/docs/Web/SVG/Tutorial/Gradients)과 동일한 규칙을 따릅니다.
+> [!NOTE]
+> [CSS 그라데이션의 색 중지점](#선형_그라데이션의_구성)의 렌더링 방식은 [SVG 그라데이션](/ko/docs/Web/SVG/Tutorial/Gradients)과 동일한 규칙을 따릅니다.
 >
 > Mozilla Firefox, 특히 80.0b3 버전에서는 위의 첫 예제가 동일하게 렌더링되지 않음에 유의하세요. 동일하게 렌더링되기 위해서는 HTML의 height 특성을 100% 혹은 100vh로 설정해야 합니다.
 

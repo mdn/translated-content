@@ -6,14 +6,13 @@ original_slug: Web/HTML/Global_attributes/inputmode
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`inputmode`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소나 요소의 콘텐츠를 편집할 때 입력할 수 있는 데이터 유형의 힌트를 제공하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
+**`inputmode`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 사용자가 요소나 요소의 콘텐츠를 편집할 때 입력할 수 있는 데이터 유형의 힌트를 제공하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
 
 - `none`
   - : 가상 키보드를 사용하지 않습니다. 페이지가 자체 키보드나 입력 컨트롤을 구현할 때 사용합니다.
 - `text` (기본값)
   - : 사용자의 현재 로케일에 맞는 표준 키보드를 제공합니다.
 - `decimal`
-
   - : 사용자의 로케일에 맞는 소숫점(보통&#x20;
 
     <kbd>,</kbd>
@@ -31,7 +30,6 @@ original_slug: Web/HTML/Global_attributes/inputmode
 - `numeric`
   - : 숫자형 키보드를 제공합니다. 소숫점은 없으며, 음의 부호는 제공할 수도, 제공하지 않을 수도 있습니다.
 - `tel`
-
   - : 전화번호 키보드를 제공합니다. 숫자 0\~9, 별표(
 
     <kbd>\*</kbd>
@@ -45,7 +43,6 @@ original_slug: Web/HTML/Global_attributes/inputmode
 - `search`
   - : 검색 입력 칸에 최적화한 가상 키보드를 제공합니다. 예를 들면, 엔터/제출 키가 "검색" 아이콘이나 레이블을 가질 수 있습니다. 일반적인 경우, 반드시 검색 질의를 필요로 하는 입력 칸에는 `{{HTMLElement("input/search", '&lt;input type="search"&gt;')}}`를 사용해야 합니다.
 - `email`
-
   - : 이메일 입력에 최적화한 가상 키보드를 제공합니다. 보통&#x20;
 
     <kbd>@</kbd>
@@ -53,7 +50,6 @@ original_slug: Web/HTML/Global_attributes/inputmode
     &#x20;키 등을 제공합니다. 일반적인 경우, 반드시 이메일을 필요로 하는 입력 칸에는 `{{htmlelement("input/email", '&lt;input type="email"&gt;')}}`을 사용해야 합니다.
 
 - `url`
-
   - : {{glossary("URL")}} 입력에 최적화한 가상 키보드를 제공합니다. 보통&#x20;
 
     <kbd>/</kbd>
@@ -70,4 +66,4 @@ original_slug: Web/HTML/Global_attributes/inputmode
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).

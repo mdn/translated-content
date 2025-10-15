@@ -167,7 +167,7 @@ class Student extends Person {
 }
 ```
 
-在这个类的声明中，`#year` 是一个[私有数据属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
+在这个类的声明中，`#year` 是一个[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)。我们可以构造一个 `Student` 对象，然后在内部使用 `#year`，但如果在类的外部尝试访问 `#year`，浏览器将会抛出错误：
 
 ```js
 const summers = new Student("Summers", 2);
@@ -178,11 +178,11 @@ summers.canStudyArchery(); // true
 summers.#year; // SyntaxError
 ```
 
-私有数据属性必须在类的声明中声明，而且其名称需以 `#` 开头。
+私有字段必须在类的声明中声明，而且其名称需以 `#` 开头。
 
 ### 私有方法
 
-与私有数据属性一样，你也可以声明私有方法。而且名称也是以 `#` 开头，只能在类自己的方法中调用：
+与私有字段一样，你也可以声明私有方法。而且名称也是以 `#` 开头，只能在类自己的方法中调用：
 
 ```js
 class Example {

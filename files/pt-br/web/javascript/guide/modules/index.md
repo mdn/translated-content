@@ -33,7 +33,8 @@ Para demonstrar o uso dos módulos, criamos um [conjunto simples de exemplos](ht
 
 Estes são bastante triviais, mas foram mantidos deliberadamente simples para demonstrar claramente os módulos.
 
-> **Nota:** **Nota: Se você deseja fazer o download dos exemplos e executá-los localmente, precisará executá-los por meio de um servidor da web local.**
+> [!NOTE]
+> **Nota: Se você deseja fazer o download dos exemplos e executá-los localmente, precisará executá-los por meio de um servidor da web local.**
 
 ## Exemplo de uma estrutura básica
 
@@ -47,17 +48,16 @@ modules/
     square.js
 ```
 
-> **Nota:** **Nota: Todos os exemplos neste guia têm basicamente a mesma estrutura; o exposto acima deve começar a ficar bem familiar.**
+> [!NOTE]
+> **Nota: Todos os exemplos neste guia têm basicamente a mesma estrutura; o exposto acima deve começar a ficar bem familiar.**
 
 Os dois módulos do diretório modules são descritos abaixo:
 
 - `canvas.js` — contém funções relacionadas à configuração da tela:
-
   - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossary/Wrapper).
   - `createReportList()` — cria uma lista não ordenada anexada dentro de um elemento de wrapper especificado, que pode ser usado para gerar dados de relatório. Retorna o ID da lista.
 
 - `square.js` — contém:
-
   - `name` — uma constante contendo a string 'square'.
   - `draw()` — desenha um quadrado em uma tela especificada, com um tamanho, posição e cor especificados. Retorna um objeto que contém o tamanho, a posição e a cor do quadrado.
   - `reportArea()` — grava a área de um quadrado em uma lista de relatórios específica, considerando seu tamanho.
@@ -139,7 +139,8 @@ torna-se
 
 Você pode ver essas linhas em ação em [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Nota:** **Nota: Em alguns sistemas de módulos, você pode omitir a extensão do arquivo e o ponto**(e.g. `'/modules/square'`). Isso não funciona nos módulos JavaScript nativos.
+> [!NOTE]
+> **Nota: Em alguns sistemas de módulos, você pode omitir a extensão do arquivo e o ponto**(e.g. `'/modules/square'`). Isso não funciona nos módulos JavaScript nativos.
 
 Depois de importar os recursos para o seu script, você pode usá-los exatamente como eles foram definidos no mesmo arquivo. O seguinte é encontrado em
 `main.js`, abaixo das linhas de importação:
@@ -153,7 +154,8 @@ reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Nota:** **Nota: Embora os recursos importados estejam disponíveis no arquivo, eles são visualizações somente leitura do recurso que foi exportado. Você não pode alterar a variável importada, mas ainda pode modificar propriedades semelhantes à const. Além disso, esses recursos são importados como ligações ativas, o que significa que eles podem mudar de valor mesmo que você não possa modificar a ligação ao contrário de const.**
+> [!NOTE]
+> **Nota: Embora os recursos importados estejam disponíveis no arquivo, eles são visualizações somente leitura do recurso que foi exportado. Você não pode alterar a variável importada, mas ainda pode modificar propriedades semelhantes à const. Além disso, esses recursos são importados como ligações ativas, o que significa que eles podem mudar de valor mesmo que você não possa modificar a ligação ao contrário de const.**
 
 ## Aplicando o módulo ao seu HTML
 
@@ -217,7 +219,8 @@ Isso ocorre porque há apenas uma exportação padrão permitida por módulo e s
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Nota:** **Nota: A sintaxe as para renomear itens exportados é explicada abaixo no** [Renaming imports and exports](#renaming_imports_and_exports) seção.
+> [!NOTE]
+> **Nota: A sintaxe as para renomear itens exportados é explicada abaixo no** [Renaming imports and exports](#renaming_imports_and_exports) seção.
 
 ## Evitando conflitos de nomenclatura
 
@@ -439,7 +442,8 @@ export { Circle } from "./shapes/circle.js";
 
 Eles capturam as exportações dos submódulos individuais e os disponibilizam efetivamente no módulo shapes.js.
 
-> **Nota:** **Nota: As exportações mencionadas no shapes.js são basicamente redirecionadas pelo arquivo e realmente não existem nele, portanto, você não poderá escrever nenhum código relacionado útil dentro do mesmo arquivo.**
+> [!NOTE]
+> **Nota: As exportações mencionadas no shapes.js são basicamente redirecionadas pelo arquivo e realmente não existem nele, portanto, você não poderá escrever nenhum código relacionado útil dentro do mesmo arquivo.**
 
 Portanto, agora no arquivo main.js., podemos obter acesso às três classes de módulos substituindo
 

@@ -120,7 +120,7 @@ SVG에는 지금까지 설명한 것 외에도 몇 가지 추가적인 이점이
 
 ### 문제 해결 및 브라우저 간 지원
 
-SVG를 지원하지 않는 브라우저(IE 8 이하, Android 2.3 이하)의 경우, `src` 속성에서 PNG 또는 JPG를 참조하고 [`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 속성(최신 브라우저만 인식)을 사용하여 SVG를 참조할 수 있습니다. 이 경우 지원 브라우저에서만 SVG를 로드하며, 이전 브라우저에서는 대신 PNG를 로드합니다.
+SVG를 지원하지 않는 브라우저(IE 8 이하, Android 2.3 이하)의 경우, `src` 속성에서 PNG 또는 JPG를 참조하고 [`srcset`](/ko/docs/Web/HTML/Reference/Elements/img#srcset) 속성(최신 브라우저만 인식)을 사용하여 SVG를 참조할 수 있습니다. 이 경우 지원 브라우저에서만 SVG를 로드하며, 이전 브라우저에서는 대신 PNG를 로드합니다.
 
 ```html
 <img src="equilateral.png" alt="변이 같은 삼각형" srcset="equilateral.svg" />
@@ -136,7 +136,7 @@ background-size: contain;
 
 위에서 설명한 `<img>` 방법과 마찬가지로 CSS 배경 이미지를 사용하여 SVG를 삽입하면 Javascript로 SVG를 조작할 수 없으며 동일한 CSS 제한이 적용됩니다.
 
-SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았기 때문일 수 있습니다. [이 문서에서 올바른 방향을 안내](/ko/docs/Web/SVG/Tutorial/Getting_Started)해 드립니다.
+SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았기 때문일 수 있습니다. [이 문서에서 올바른 방향을 안내](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)해 드립니다.
 
 ### HTML에 SVG 코드를 포함하는 방법
 
@@ -183,7 +183,7 @@ SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았�
 
 ## 능동적 학습: SVG로 놀기
 
-이 능동적 학습 섹션에서는 몇 가지 SVG를 재미있게 사용해 보시기 바랍니다. 아래의 입력 섹션에서 시작하는 데 도움이 되는 몇 가지 샘플을 이미 제공한 것을 확인할 수 있습니다. 또한 [SVG 요소 참조](/ko/docs/Web/SVG/Element)로 이동하여 SVG에서 사용할 수 있는 다른 장난감에 대한 자세한 내용을 찾아서 사용해 볼 수도 있습니다. 이 섹션은 여러분의 리서치 기술을 연습하고 재미를 느끼기 위한 것입니다.
+이 능동적 학습 섹션에서는 몇 가지 SVG를 재미있게 사용해 보시기 바랍니다. 아래의 입력 섹션에서 시작하는 데 도움이 되는 몇 가지 샘플을 이미 제공한 것을 확인할 수 있습니다. 또한 [SVG 요소 참조](/ko/docs/Web/SVG/Reference/Element)로 이동하여 SVG에서 사용할 수 있는 다른 장난감에 대한 자세한 내용을 찾아서 사용해 볼 수도 있습니다. 이 섹션은 여러분의 리서치 기술을 연습하고 재미를 느끼기 위한 것입니다.
 
 코드가 멈춰서 작동되지 않는 경우 언제든지 재설정 버튼을 사용하여 코드를 재설정할 수 있습니다.
 
@@ -325,11 +325,11 @@ textarea.onkeyup = function () {
 
 이 글에서는 벡터 그래픽과 SVG가 무엇인지, 왜 알아두면 유용한지, 웹페이지에 SVG를 포함하는 방법에 대해 간략하게 살펴보았습니다. 이 글은 SVG를 배우기 위한 완전한 가이드가 아니라 웹을 돌아다니다가 SVG를 만났을 때 어떤 것인지 알 수 있도록 포인터를 제공하기 위한 것입니다. 따라서 아직 SVG 전문가가 아니라고 생각되더라도 걱정하지 마세요. 작동 원리에 대해 자세히 알아보고 싶으시다면 아래에 도움이 될 만한 링크가 포함되어 있습니다.
 
-이 모듈의 마지막 글에서는 [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)에 대해 자세히 살펴보면서 다양한 기기에서 이미지가 더 잘 작동하도록 하는 HTML의 도구를 살펴봅니다.
+이 모듈의 마지막 글에서는 [반응형 이미지](/ko/docs/Web/HTML/Guides/Responsive_images)에 대해 자세히 살펴보면서 다양한 기기에서 이미지가 더 잘 작동하도록 하는 HTML의 도구를 살펴봅니다.
 
 ## 같이 보기
 
-- MDN의 [SVG 튜토리얼](/ko/docs/Web/SVG/Tutorial/Getting_Started)
+- MDN의 [SVG 튜토리얼](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
 - [반응형 SVG를 위한 빠른 팁](https://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan의 반응형 SVG 이미지 튜토리얼](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [SVG의 접근성 이점](https://www.w3.org/TR/SVG-access/)

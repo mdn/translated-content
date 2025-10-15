@@ -3,8 +3,6 @@ title: <details>：详细信息展现元素
 slug: Web/HTML/Reference/Elements/details
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<details>`** 元素可创建一个组件，仅在被切换成展开状态时，它才会显示内含的信息。{{HTMLElement("summary")}} 元素可为该部件提供概要或者标签。
 
 展现组件通常在屏幕上使用一个小三角形，旋转（或扭转）以表示打开/关闭的状态，三角形旁边有一个标签。`<summary>` 元素的内容被用来作为展示小部件的标签。
@@ -56,7 +54,6 @@ details[open] summary {
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `open`
-
   - : 这个布尔属性表示细节内容——也就是 `<details>` 元素的内容——目前是否可见。默认情况下为 `false`，意味着细节内容是不可见的。
 
     > [!NOTE]

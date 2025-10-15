@@ -3,8 +3,6 @@ title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされました。このページでは、開発者に影響する Firefox 68 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -81,7 +79,6 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
 ### CSS
 
 - [CSS Scroll Snapping](/ja/docs/Web/CSS/CSS_scroll_snap) を、最新バージョンの仕様書に更新しました ([Firefox バグ 1312163](https://bugzil.la/1312163)) および ([Firefox バグ 1544136](https://bugzil.la/1544136))。変更点は以下のとおりです:
-
   - `scroll-padding` 関係のプロパティ ([Firefox バグ 1373832](https://bugzil.la/1373832))
   - `scroll-margin` 関係のプロパティ ([Firefox バグ 1373833](https://bugzil.la/1373833))
   - {{CSSxRef("scroll-snap-align")}} ([Firefox バグ 1373835](https://bugzil.la/1373835))

@@ -33,7 +33,8 @@ console.log(promise1);
 new Promise(executor)
 ```
 
-> **备注：** `Promise()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 异常。
+> [!NOTE]
+> `Promise()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 异常。
 
 ### 参数
 

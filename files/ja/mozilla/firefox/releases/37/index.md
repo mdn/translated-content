@@ -3,8 +3,6 @@ title: Firefox 37 for developers
 slug: Mozilla/Firefox/Releases/37
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -38,7 +36,6 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 - 非標準の {{jsxref("String.quote","String.prototype.quote()")}} メソッドを削除しました ([Firefox バグ 1103181](https://bugzil.la/1103181))。
 - {{jsxref("RegExp.prototype.flags")}} プロパティを実装しました ([Firefox バグ 1108467](https://bugzil.la/1108467))。
 - {{jsxref("Array")}} のメソッドのいくつかを、[Typed Array](/ja/docs/Web/JavaScript/Guide/Typed_arrays) にも実装しました:
-
   - {{jsxref("TypedArray.every", "every()")}} および {{jsxref("TypedArray.some", "some()")}} メソッド ([Firefox バグ 1116390](https://bugzil.la/1116390))。
   - {{jsxref("TypedArray.find", "find()")}} および {{jsxref("TypedArray.findIndex", "findIndex()")}} メソッド ([Firefox バグ 1078975](https://bugzil.la/1078975))。
   - {{jsxref("TypedArray.fill", "fill()")}} メソッド ([Firefox バグ 1113722](https://bugzil.la/1113722))。
@@ -59,7 +56,6 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 - [Service Worker](/ja/docs/Web/API/Service_Worker_API) の実験的な実装 (デフォルトで無効) を進めています。{{domxref("ServiceWorkerGlobalScope.update()")}} を実装しました ([Firefox バグ 1065366](https://bugzil.la/1065366))。
 - [Web workers](/ja/docs/Web/API/Web_Workers_API) で [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使用できるようになりました ([Firefox バグ 701634](https://bugzil.la/701634))。
 - WebGL 2.0 の実験的な実装を進めています!
-
   - バッファーオブジェクトへのアクセス機能を提供する、{{domxref("WebGL2RenderingContext.getBufferSubData()")}} メソッドを実装しました ([Firefox バグ 1048731](https://bugzil.la/1048731))。
 
 - `KeyboardEvent.key` のキー名の一部を、[最新の DOM Level 3 Events 仕様](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-key.html)に準拠するよう変更しました。[MDN で KeyboardEvent.key の値の一覧表](/ja/docs/Web/API/KeyboardEvent/key#key_values)をご覧ください。緑色のセルが新たな値です。また、紫色の値は変更される可能性があります。これらの値を使用する場合は注意してください (キー名の変更に関するメタバグは [Firefox バグ 900372](https://bugzil.la/900372) です)。

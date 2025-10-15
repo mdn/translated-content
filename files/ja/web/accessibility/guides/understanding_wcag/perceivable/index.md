@@ -108,7 +108,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 1.1: 代替テキスト](https://www.w3.org/TR/WCAG21/#text-alternatives)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.1: 代替テキスト](https://www.w3.org/TR/WCAG21/#text-alternatives)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.2 — 時間ベースのメディアのための代替テキストの提供
 
@@ -170,7 +171,8 @@ l10n:
  </tbody>
 </table>
 
-> **メモ:** [ガイドライン 1.2: タイムベースト・メディア: タイムベースト・メディアに代わるものを提供する](https://www.w3.org/TR/WCAG21/#time-based-media)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.2: タイムベースト・メディア: タイムベースト・メディアに代わるものを提供する](https://www.w3.org/TR/WCAG21/#time-based-media)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.3 — さまざまな方法で提示できるコンテンツの作成
 
@@ -329,7 +331,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 1.3: 適応可能: 情報や構造を失うことなくさまざまな方法で提示できるコンテンツを作成する](https://www.w3.org/TR/WCAG21/#adaptable)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.3: 適応可能: 情報や構造を失うことなくさまざまな方法で提示できるコンテンツを作成する](https://www.w3.org/TR/WCAG21/#adaptable)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.4: 前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする
 
@@ -581,12 +584,12 @@ l10n:
   </thead>
 </table>
 
-> **メモ:** [ガイドライン 1.4: 識別可能: 背景から前景を分離するなど、ユーザーがコンテンツを見やすく、聞き取りやすくする](https://www.w3.org/TR/WCAG21/#distinguishable)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.4: 識別可能: 背景から前景を分離するなど、ユーザーがコンテンツを見やすく、聞き取りやすくする](https://www.w3.org/TR/WCAG21/#distinguishable)（英語）に関する WCAG の説明も参照してください。
 
 ## 関連情報
 
 - [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. 知覚可能
   2. [操作可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

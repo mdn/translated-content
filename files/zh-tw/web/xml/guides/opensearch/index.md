@@ -37,7 +37,6 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
 - InputEncoding
   - : 提交輸入到搜尋引擎時使用的[字元編碼](/zh-TW/docs/Glossary/Character_encoding)。
 - Image
-
   - : 搜尋引擎圖標的 URL。盡可能包括一個 16×16 的 `image/x-icon` 類型圖像（例如 `/favicon.ico`）和一個 64×64 的 `image/jpeg` 或 `image/png` 類型圖像。
 
     URL 也可以使用 [`data:` URL 方案](/zh-TW/docs/Web/URI/Reference/Schemes/data)。（你可以在 [`data:` URL 廚房](https://software.hixie.ch/utilities/cgi/data/data) 生成一個 `data:` URL。）
@@ -56,11 +55,9 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
     ![Firefox 搜尋框中顯示的來自 Google 的搜尋建議](searchsuggestionsample.png)
 
 - Url
-
   - : 描述用於搜尋的 URL 或 URL。`template` 屬性指示搜尋查詢的基本 URL。
 
     Firefox 支援三種類型的 URL：
-
     - `type="text/html"` 指定實際搜尋查詢的 URL。
     - `type="application/x-suggestions+json"` 指定用於獲取搜尋建議的 URL。從 Firefox 63 開始，`type="application/json"` 被接受為此的別名。
     - `type="application/x-moz-keywordsearch"` 指定在位置欄中輸入關鍵字搜尋時使用的 URL。這僅在 Firefox 中支援。

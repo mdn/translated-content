@@ -254,7 +254,6 @@ ctx.fill();
    首先绘制一条直线，终点坐标为 (150, 50)。此时路径沿 x 轴向右行走 100 像素。
 
    然后利用三角函数来计算等边三角形的高。这里我们要绘制的三角形是朝下的。等边三角形每个角均为 60°，为计算高的值，我们可以将三角形从正中心分割为两个直角三角形，每个直角三角形的三个角分别为 90°、60°、30°。对于边：
-
    - 最长的边称为**斜边**。
    - 紧挨 60° 角的边称为**临边**，显然地，它的长度是刚才绘制的线的一半，即 50 像素。
    - 60° 角对面的边称为**对边**，即三角形的高，需要计算得到。
@@ -296,7 +295,6 @@ ctx.fill();
    ```
 
    模式基本一样，但有两点不同：
-
    - 将 `arc()` 的最后一个参数设置为 `true`，意味着弧将逆时针绘制，也就意味着即使起、止角度分别设置为 -45°、45°，我们还是得到了区域外的一条 270° 的弧。如果把 `true` 改为 `false` 重新运行，将得到 90° 的弧。
    - 在调用 `fill()` 前，我们绘制了一条终点为圆心的直线。然后我们就渲染出一个惟妙惟肖的吃豆人模型。如果删除这条线（可以试试！）再重新运行代码，你只能得到一个起止点间被砍掉一块的圆。这向我们展示了画布的另一个重要事项：如果要填充一个未完成（也就是没有首尾相接）的路径，浏览器将在起、止点件绘制一条直线，然后直接填充。
 
@@ -456,7 +454,6 @@ canvas.setAttribute("aria-label", "Canvas text");
    ```
 
    在每次迭代中：
-
    - 设置 `fillStyle` 为略透明的紫色渐变色。渐变由每次迭代时 `length` 值的改变实现。随着循环的运行，`length` 值逐渐变小，从而使连续的三角形颜色逐渐变亮。
    - 开始路径。
    - 将笔移动至坐标 `(moveOffset, moveOffset)`；该变量定义了每次要绘制新三角形时需要移动的距离。
@@ -586,7 +583,6 @@ loop();
    ```
 
    如你所见：
-
    - `image` 指定需要嵌入的图片。
    - 第二个和第三个参数指定切片左上顶点在原图的位置坐标，X 值为 `sprite`（精灵序列 0—5）乘 102，Y 值恒为 0。
    - 第四个和第五个参数指定切片尺寸：102 × 148 像素。
@@ -737,7 +733,6 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
    ```
 
    [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/zh/cameras/PerspectiveCamera) 构造函数有四个参数：
-
    - 观察区域：镜头视角大小，用角度表示。
    - {{glossary("aspect ratio", "纵横比")}}：一般情况下，宽高比等于屏幕的宽比上屏幕的高。使用其他的值会使场景扭曲（也许正是你需要的，但一般都不是）。
    - 近裁切面：停止渲染前对象离摄影机的最近距离。设想一下，举起一个手指，逐渐移近双眼，某个点后就在也看不到这根手指了。
@@ -777,7 +772,6 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
    ```
 
    内容很多，我们来剥丝抽茧：
-
    - 首先，创建一个全局变量 `cube`，这样就可以在代码任意位置访问我们的魔方。
    - 然后，创建一个 [`TextureLoader`](https://threejs.org/docs/index.html#api/zh/loaders/TextureLoader) 对象，并调用 `load()`。这里 `load()` 包含两个参数（其他情况可以有更多参数）：需要调用的纹理图（PNG 文件）和纹理加载成功后调用的函数。
    - 函数内部，我们用 [`texture`](https://threejs.org/docs/index.html#api/zh/textures/Texture) 对象的属性指明我们要在魔方的每个面渲染 2 × 2 的图片，然后创建一个 [`BoxGeometry`](https://threejs.org/docs/index.html#api/zh/geometries/BoxGeometry) 对象和一个 [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) 对象，将两者作为 [`Mesh`](https://threejs.org/docs/index.html#api/zh/objects/Mesh) 的参数来创建我们的魔方。[`Mesh`](https://threejs.org/docs/index.html#api/zh/objects/Mesh) 一般就需要两个参数：一个几何（形状）和一个素材（形状表面外观）。

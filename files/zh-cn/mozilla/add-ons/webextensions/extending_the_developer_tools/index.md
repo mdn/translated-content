@@ -3,8 +3,6 @@ title: 扩展开发人员工具
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > 本页介绍了火狐 Firefox 55 中存在的开发工具接口（devtools API)。虽然该接口 Api 基于 Chrome 开发工具 Api，仍有许多功能尚未实现在火狐中实现，因此未记录在本页内容中。查看当前缺失的功能，请参阅链接[开发工具 Api 的限制](#devtools_api_的局限性)。
 
@@ -27,7 +25,6 @@ devtools 页面没有任何可见的 DOM，但可以包含使用\<script>标记�
 - 可通过全局窗口对象访问的普通 DOM API
 - 与内容脚本中相同的 WebExtension API
 - The devtools APIs:
-
   - [`devtools.inspectedWindow`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

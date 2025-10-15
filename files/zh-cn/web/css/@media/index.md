@@ -3,8 +3,6 @@ title: "@media"
 slug: Web/CSS/@media
 ---
 
-{{CSSRef}}
-
 **`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > [!NOTE]
@@ -149,7 +147,6 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 - `and`
   - : 用于将多个媒体查询规则组合成单条媒体查询，当每个查询规则都为真时则该条媒体查询为 `true`，它还用于将媒体特性与媒体类型结合在一起。
 - `not`
-
   - : 用于否定媒体查询，如果不满足这个条件则返回 `true`，否则返回 `false`。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 `not` 运算符，则*还必须*指定媒体类型。
 
     > [!NOTE]

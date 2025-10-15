@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7c6b02283df15120126fd174f91519c9a76d81c9
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 119 中影响开发者的变更信息。Firefox 119 于 2023 年 10 月 24 日发布。
 
 ## 为 Web 开发者带来的变化
@@ -28,7 +26,7 @@ l10n:
 
 ### SVG
 
-- 接受 [`<length>`](/zh-CN/docs/Web/SVG/Guides/Content_type#length) 值的 [SVG 属性](/zh-CN/docs/Web/SVG/Reference/Attribute)现在支持所有 SVG 元素的[第 3 版](https://www.w3.org/TR/css-values-3/#lengths) [length](/zh-CN/docs/Web/CSS/length) [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)值。这样就可以根据字体大小（`cap`、`rem` 等）、视口（`vh`、`vw`、`vmin` 等）或绝对长度（`px`、`cm` 等）确定 SVG 元素的大小，例如：`<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`。（详见 [Firefox bug 1287054](https://bugzil.la/1287054)）。
+- 接受 [`<length>`](/zh-CN/docs/Web/SVG/Guides/Content_type#length) 值的 [SVG 属性](/zh-CN/docs/Web/SVG/Reference/Attribute)现在支持所有 SVG 元素的[第 3 版](https://www.w3.org/TR/css-values-3/#lengths) [length](/zh-CN/docs/Web/CSS/length) [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)值。这样就可以根据字体大小（`cap`、`rem` 等）、视口（`vh`、`vw`、`vmin` 等）或绝对长度（`px`、`cm` 等）确定 SVG 元素的大小，例如：`<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`。（详见 [Firefox bug 1287054](https://bugzil.la/1287054)）。
 
 ### HTTP
 

@@ -1,14 +1,13 @@
 ---
 title: ウェブパフォーマンスの「なぜ」
 slug: Learn_web_development/Extensions/Performance/why_web_performance
-original_slug: Learn/Performance/why_web_performance
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
-ウェブパフォーマンスは、遅い処理を速く*見せる*ことも含めて、ウェブサイトを速くすることがすべてです。この記事では、なぜウェブパフォーマンスがサイト訪問者にとって、またビジネスの目標にとって重要なのかを紹介しています。
+ウェブパフォーマンスは、遅い処理を速く見せることも含めて、ウェブサイトを速くすることがすべてです。この記事では、なぜウェブパフォーマンスがサイト訪問者にとって、またビジネスの目標にとって重要なのかを紹介しています。
 
 <table>
   <tbody>
@@ -16,10 +15,10 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >基本的なソフトウェアのインストール</a
         >、
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >クライアント側のウェブ技術</a
         >の基本的な知識
       </td>
@@ -47,7 +46,7 @@ l10n:
 
   22.6 MB のサイトはを 3G ネットワーク上で読み込みむには最大 83 秒かかり、[`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) (サイトのベースとなる HTML 構造の意味) は 31.86 秒でした。
 
-また、大きな問題はダウンロードにかかる時間だけではありません。多くの国ではいまだに、メガバイト単位で課金されるインターネット接続が使われています。例として挙げた 22.6MB の CNN.com をダウンロードするには、平均的なインド人の日給の約 11 % の費用がかかることになります。北西アフリカのモバイル端末からだと、平均的な給料の 2 日分になるかもしれません。このサイトをアメリカのキャリアの国際ローミングプランで読み込んだとしたら？誰もが泣きたくなるようなコストになります。（"[how much your site costs to download](https://whatdoesmysitecost.com/)" を参照。）
+そして、大きな問題となるのはダウンロードにかかる時間だけではありません。一部の地域では、インターネット接続はメガバイト単位で課金されるため、大容量のダウンロードは多額の費用が掛かります。この例で挙げた 22.6 MB の CNN.com の場合、モバイルデータユーザーの 1 日の通信量の大部分を消費し、一部の国際ローミングプランでは高額の料金が発生することになります。
 
 ### コンバージョン率を改善する
 
@@ -66,7 +65,7 @@ l10n:
 
 サイト訪問者を惹きつけ、維持するためには、アクセスしやすいサイトを作成し、優れたユーザー体験を提供する必要があります。ウェブサイトを構築するには、HTML、CSS、JavaScript が必要であり、通常は画像や動画などのバイナリーファイルタイプも含まれます。サイトを構築する際の決定やツールの選択は、完成した作品のパフォーマンスに大きく影響します。
 
-良いパフォーマンスは資産です。パフォーマンスが悪ければ負債となります。サイトの速度は、バウンス率、コンバージョン、収益、ユーザー満足度、検索エンジンランキングに直接影響します。パフォーマンスの高いサイトは、訪問者の維持率とユーザーの満足度を高めることが示されています。遅いコンテンツはサイトの放棄につながることが示されており、訪問者の中には二度と戻ってこない人もいます。クライアントとサーバーの間を通過するデータ量を減らすことで、すべての関係者のコストを削減します。 HTML/CSS/JavaScript とメディアファイルのサイズを減らすことで、ロード時間とサイトの消費電力の両方を削減できます ([パフォーマンス予算](/ja/docs/Web/Performance/Performance_budgets)を参照)。
+良いパフォーマンスは資産です。パフォーマンスが悪ければ負債となります。サイトの速度は、バウンス率、コンバージョン、収益、ユーザー満足度、検索エンジンランキングに直接影響します。パフォーマンスの高いサイトは、訪問者の維持率とユーザーの満足度を高めることが示されています。遅いコンテンツはサイトの放棄につながることが示されており、訪問者の中には二度と戻ってこない人もいます。クライアントとサーバーの間を通過するデータ量を減らすことで、すべての関係者のコストを削減します。 HTML/CSS/JavaScript とメディアファイルのサイズを減らすことで、ロード時間とサイトの消費電力の両方を削減できます ([パフォーマンス予算](/ja/docs/Web/Performance/Guides/Performance_budgets)を参照)。
 
 パフォーマンスのトラッキングは重要です。ネットワーク速度や端末の機能など、複数の要因がパフォーマンスに影響を与えます。また、ビジネスの目的が違えば、サイトやサポートしている組織の目標に応じて、異なる指標の方がより関連性が高いことを意味する場合もあります。サイトのパフォーマンスがどのように認識されるかは、ユーザー体験です。
 
@@ -74,4 +73,4 @@ l10n:
 
 ウェブパフォーマンスは、アクセシビリティだけでなく、組織やビジネスの目標を達成するための他のウェブサイトの測定基準にとっても重要です。ウェブサイトのパフォーマンスの良し悪しは、ほとんどのサイトの全体的な有効性と同様に、ユーザー体験と強力に相関しています。これが、ウェブパフォーマンスに注意を払うべき理由です。
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

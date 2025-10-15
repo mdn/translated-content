@@ -3,8 +3,6 @@ title: 重新介紹 JavaScript
 slug: Web/JavaScript/Guide/Language_overview
 ---
 
-{{jsSidebar}}
-
 ## 介紹
 
 為何需要重新介紹？因為 [JavaScript](/zh-TW/docs/Web/JavaScript) 堪稱是[全世界最被人誤解的程式語言](https://crockford.com/javascript/javascript.html)。儘管 JavaScript 再怎麼的被嘲諷為小兒科，在它誤導人的簡潔下隱藏著強大的語言功能。2005 年是個許多知名 JavaScript 應用程式推出的年度，在在證明：更加瞭解這項科技對任何網頁開發者來說皆是重要的技能。
@@ -33,7 +31,6 @@ Microsoft 在幾個月後隨著 IE 3 推出了跟該語言大致上相容的 JSc
 - String （字串）
 - Boolean （布林）
 - Object （物件）
-
   - Function （函式）
   - Array （陣列）
   - Date （日期）

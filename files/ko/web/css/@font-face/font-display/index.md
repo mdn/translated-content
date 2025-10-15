@@ -3,8 +3,6 @@ title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
 
-{{CSSRef}}
-
 **`font-display`** 설명자(descriptor)는 font face가 표시되는 방법을 결정합니다. 이는 다운로드 여부와 사용 시기에 따라 다릅니다.
 
 ## The font display timeline
@@ -54,8 +52,8 @@ font-display: optional;
 @font-face {
   font-family: ExampleFont;
   src:
-    url(/path/to/fonts/examplefont.woff) format("woff"),
-    url(/path/to/fonts/examplefont.eot) format("eot");
+    url("/path/to/fonts/example-font.woff") format("woff"),
+    url("/path/to/fonts/example-font.eot") format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

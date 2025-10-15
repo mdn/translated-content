@@ -74,7 +74,6 @@ block content
 
 1. Следует отредактировать `genre_list()` в файле **/controllers/genreController.js**.
 2. Реализация почти такая же, как и для контроллера `author_list()` .
-
    - Sort the results by name, in ascending order.
 
 3. Отображающий шаблон должен быть назван **genre_list.pug**.

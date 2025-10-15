@@ -3,8 +3,6 @@ title: 語法
 slug: Web/CSS/CSS_syntax/Syntax
 ---
 
-{{cssref}}
-
 串接式樣式表 ([CSS](/zh-TW/docs/Web/CSS)) 語言的基礎目標是是讓瀏覽器引擎用特定的功能將元素寫在頁面上，像是顏色、位置與裝飾。CSS 語法反映出了目的，而它的基本組成為：
 
 - **屬性**為人可閱讀的識別碼，定義使用哪項功能。
@@ -68,7 +66,6 @@ There is another group of statements - the **nested statements**. These are stat
 ## See also
 
 - CSS 重要概念：
-
   - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
@@ -79,7 +76,6 @@ There is another group of statements - the **nested statements**. These are stat
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
   - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
     - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-TW/docs/Web/CSS/resolved_value)

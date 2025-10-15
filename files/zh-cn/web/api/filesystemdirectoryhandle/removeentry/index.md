@@ -21,9 +21,7 @@ removeEntry(name, options)
 - `name`
   - : 一个字符串，表示你想要移除的条目的 {{domxref('FileSystemHandle.name')}}。
 - `options` {{optional_inline}}
-
   - : 一个包含以下选项的可选对象：
-
     - `recursive` {{optional_inline}}
       - : 布尔值，默认为 `false`。当设为 `true` 时，条目将会被递归移除。
 

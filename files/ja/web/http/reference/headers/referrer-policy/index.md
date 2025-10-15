@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Referrer-Policy
 original_slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
-{{HTTPSidebar}}
-
 **`Referrer-Policy`** は {{glossary("HTTP header", "HTTP ヘッダー")}}で、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) [リファラー情報](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
 
 <table class="properties">
@@ -53,14 +51,12 @@ Referrer-Policy: unsafe-url
 - `strict-origin`
   - : プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 - `strict-origin-when-cross-origin` (既定値)
-
   - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。オリジン間リクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 
     > [!NOTE]
     > これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
 
 - `unsafe-url`
-
   - : セキュリティに関係なく、どのリクエストを行った場合でも、オリジン、パス、クエリー文字列を送信します。
 
     > [!WARNING]

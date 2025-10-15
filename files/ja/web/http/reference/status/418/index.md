@@ -1,14 +1,11 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Reference/Status/418
-original_slug: Web/HTTP/Status/418
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`418 I'm a teapot`** ステータスレスポンスコードは、サーバーが、自身がティーポットであることを理由としてコーヒーを入れることを拒否することを示します。コーヒーとティーの複合ポットで、一時的にコーヒーが提供できない場合は、代わりに {{HTTPStatus("503")}} を返してください。
+HTTP の **`418 I'm a teapot`** はステータスレスポンスコードで、サーバーが、自身がティーポットであることを理由としてコーヒーを入れることを拒否することを示します。コーヒーとティーの複合ポットで、一時的にコーヒーが提供できない場合は、代わりに {{HTTPStatus("503")}} を返してください。
 このエラーは、1998 年および 2014 年のエイプリルフールのジョークである Hyper Text Coffee Pot Control Protocol に由来します。
 
 一部のウェブサイトでは、自動化されたクエリーなど、処理したくないリクエストに対してこのレスポンスを使用しています。

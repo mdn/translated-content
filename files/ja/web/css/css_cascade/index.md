@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 **CSS カスケードと継承** (CSS cascading and inheritance) モジュールは、カスケードと継承によってプロパティに値を割り当てるルールを定義します。このモジュールは、すべての要素のすべてのプロパティの指定値を探すルールを指定します。
 
 CSS の基本設計原則の一つに、ルールのカスケードがあります。これにより、複数のスタイルシートが文書の表示に影響を与えることができます。 CSS のプロパティ値の宣言は、文書の表示方法を定義します。複数の宣言が、同じ要素とプロパティの組み合わせに異なる値を設定することができますが、どの CSS プロパティでも適用できる値は 1 つだけです。 CSS カスケードモジュールは、これらの競合をどのように解決するかを定義します。
@@ -64,19 +62,15 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
 ## ガイド
 
 - [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-
   - : ユーザーエージェントが異なる元から来たプロパティ値をどのように結合するかを定義するカスケードアルゴリズムのガイドです。
 
 - [CSS の継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-
   - : CSS の継承のガイドです。
 
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : CSS の最も基本的な概念であるカスケード、詳細度、継承は、 CSS を HTML に適用する方法や競合を解決する方法を制御します。
 
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-
   - : [カスケードレイヤー](/ja/docs/Web/CSS/@layer) の紹介です。 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)の基本概念の上に構築された、より高度な機能です。
 
 ## 関連概念

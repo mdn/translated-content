@@ -23,4 +23,4 @@ Web API 主要与 JavaScript 一起使用，但情况并非总是如此。
 
 ## 参见
 
-- [Web API 事件参考](/zh-CN/docs/Web/Events)
+- [Web API 事件参考](/zh-CN/docs/Web/API/Document_Object_Model/Events)

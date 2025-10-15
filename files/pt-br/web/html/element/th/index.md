@@ -131,10 +131,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `rowspan`
   - : Este atributo contém um valor inteiro não negativo que indica quantas linhas a célula estende. Valor padrão `1`. Se seu valor é definido como `0`, ele se estende até o final da tabela ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, mesmo que implicitamente definido), que a célula pertence. Não é possível colocar valores superiores a 65534.
 - `scope`
-
   - : Este atributo define as células a que o cabeçalho (definido no elemento {{HTMLElement("th")}}) se relaciona.
     Possíveis valores:
-
     - `row`: O cabeçalho se relaciona com todas as células da linha a que pertence.
     - `col`: O cabeçalho se relaciona com todas as células da coluna a que pertence.
     - `rowgroup`: O cabeçalho pertence a um grupo de linhas e se relaciona com todas as suas células. Essas células podem ser colocadas à direita ou à esquerda do cabeçalho, dependendo do valor do atributo [`dir`](/pt-BR/docs/Web/HTML/Global_attributes/dir) no elemento {{HTMLElement("table")}}.
@@ -146,11 +144,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 ### Atributos depreciados
 
 - `align`
-
   - : Este atributo especifica como o alinhamento horizontal do conteúdo da célula será tratado.
 
     Possíveis valores:
-
     - `left`: O conteúdo é alinhado a esquerda da célula.
     - `center`: O conteúdo é centralizado da célula.
     - `right`: O conteúdo é alinhado a direita da célula.
@@ -164,14 +160,12 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > - Para alcançar o mesmo efeito que os valor `char`, atribue a {{cssxref("text-align")}} o mesmo valor que você usaria para [`char`](#char).
 
 - `axis`
-
   - : Este atributo contém uma lista de palavras separadas por espaço. Cada palavra é o `id` de um grupo de células às quais este cabeçalho se aplica.
 
     > [!NOTE]
     > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo [`scope`](#scope).
 
 - `bgcolor` {{Non-standard_inline}}
-
   - : Esse atributo define a cor de fundo de cada célula na coluna. Ele consiste de 6 digitos hexadecimais definidos pelo [sRGB](https://www.w3.org/Graphics/Color/sRGB) com o prefixo '#. Nesse atributo pode ser usado dezesseis cores predefinidas:
 
     |     | `black` = "#000000"   |     | `green` = "#008000"  |
@@ -188,30 +182,25 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando [CSS](/pt-BR/docs/Web/CSS). Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS).
 
 - `char`
-
   - : O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se [`align`](#align) não está definido no `char`, o atributo é ignorado.
 
     > [!NOTE]
     > Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}.
 
 - `charoff`
-
   - : Este atributo é usado para mudar os dados da coluna para a direita do caractere especificado pelo atributo **char**. Seu valor especifica o comprimento desse deslocamento.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente.
 
 - `height` {{Deprecated_inline}}
-
   - : Esse atributo é usado para definir uma altura recomendada da célula.
 
     > **Note:**Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("height")}}.
 
 - `valign`
-
   - : Esse atributo especifica como o texto é alinhado verticalmente na célula.
 
     Possíveis valores:
-
     - `baseline`: Posiciona o texto próximo à parte inferior da célula e o alinha ao [roda pé](https://en.wikipedia.org/wiki/Baseline_%28typography%29). Se os caracteres não descerem abaixo da linha de base, o valor da linha de base alcançará o mesmo efeito que `bottom`.
     - `bottom`: Posiciona o texto próximo à parte inferior da célula.
     - `middle`: Centraliza o texto na célula.
@@ -221,7 +210,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.
 
 - `width` {{Deprecated_inline}}
-
   - : Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
 
     > [!NOTE]

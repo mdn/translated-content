@@ -86,7 +86,6 @@ table-layout: unset;
 - {{cssxref("auto")}}
   - : Un algorithme automatique, utilisé communément par la plupart des navigateurs, est utilisé pour gérer la disposition du tableau. La largeur du tableau et de ses cellules dépendent de leur contenu.
 - `fixed`
-
   - : La largeur du tableau et celles des colonnes sont définies grâce aux largeurs des éléments `table` et `col` ou grâce à la largeur (explicite) de la première ligne de cellules. Les cellules des lignes suivantes n'affectent pas la largeur des colonnes.
 
     Avec cette méthode « fixée », tout le tableau peut être rendu dès que la première ligne a été téléchargée et analysée. Cela permet d'accélérer le temps de rendu par rapport à la valeur `auto`. En revanche, le contenu des lignes (en dehors de la première), peut ne pas rentrer dans les colonnes avec la largeur calculée. Les cellules dont le contenu est trop large utiliseront la propriété {{cssxref("overflow")}} pour déterminer comment gérer le dépassement.

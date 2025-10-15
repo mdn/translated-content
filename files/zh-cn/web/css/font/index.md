@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3fd4e2ff8c4da3b4ff7be34eeda4dd0cbbfc1a15
 ---
 
-{{CSSRef}}
-
 CSS [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) `font` 可设置某元素字体的不同属性，或将元素的字体设置为系统字体。
 
 {{InteractiveExample("CSS Demo: font")}}
@@ -112,12 +110,10 @@ font: caption;
 如果 `font` 指定为字体相关的属性的简写：
 
 - 必须包含以下值：
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - 可以选择性包含以下值：
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

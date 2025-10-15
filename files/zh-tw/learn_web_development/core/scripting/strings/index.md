@@ -259,7 +259,7 @@ button.onclick = function () {
 };
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, , , , , 'allow-modals') }}
 
 在程式第四行我們用了 {{domxref("window.prompt()", "window.prompt()")}} 這個函式，可以要求使用者透過彈出的對話框去回答問題，並將使用者輸入的文字儲存在給訂的變數內（在這個例子中就是 `name`）。接著我們在第五行用了 {{domxref("window.alert()", "window.alert()")}} 函式，顯示另一個彈出視窗，以連接的方式將兩段字串文字以及 `name` 這個變數結合成一個字串。
 
@@ -281,7 +281,6 @@ button.onclick = function () {
    ```
 
 3. 如果你想轉換數字變數成字串，但不要更動到原本的變數；或是想轉換字串變數成數字，也不要更動到原本的變數，你可以使用以下兩種方式：
-
    - 物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
 
      ```js

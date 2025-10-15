@@ -2,12 +2,10 @@
 title: shape()
 slug: Web/CSS/basic-shape/shape
 l10n:
-  sourceCommit: acc5072d1116cb02b67998e63de3d8b23e14e9ed
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
+**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
 
 ## 语法
 
@@ -55,28 +53,25 @@ clip-path: shape(
 ### 参数
 
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
-
   - : 指定了如何填充形状的重叠区域。可能的取值包括：
-
     - `nonzero`：如果从某点绘制的射线穿过的左到右路径段多于右到左路径段，即导致非零计数，则该点被视为在形状内部。当省略 `<fill-rule>` 时，这是默认值。
 
     - `evenodd`：如果从某点绘制的射线穿过的路径段数量为奇数，则该点被视为在形状内部。这意味着每当射线进入形状时，它都没有相等数量的退出，表明缺少对应的退出而具有奇数个条目。
 
-    > **警告：** `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
+    > [!WARNING]
+    > `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
 
 - `from <coordinate-pair>`
-
-  - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
+  - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考盒子](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考盒子)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
 
 - `<shape-command>`
-
   - : 指定一个或多个逗号分隔的命令列表，用于定义形状，其语法类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#路径命令)。命令包括 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close`。每个命令的起始点是前一个命令的结束点，形状的第一个点由 [`from <coordinate-pair>`](#from_coordinate-pair) 参数定义。
 
     大多数形状命令的语法是一个关键字，提供一个指令，如 `move` 或 `line`，后跟 `by` 或 `to` 关键字，以及一组坐标。
 
     `by`：表示 `<coordinate-pair>` 相对于命令的起始点的位置（“相对”值）。
 
-    `to`：表示 `<coordinate-pair>` 相对于参考框的左上角的位置（“绝对”值）。
+    `to`：表示 `<coordinate-pair>` 相对于参考盒子的左上角的位置（“绝对”值）。
 
     > [!NOTE]
     > 如果 `<coordinate-pair>` 中的坐标以百分比形式指定，则该值相对于参考框的宽度或高度进行计算。
@@ -89,15 +84,13 @@ clip-path: shape(
 
     `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值与命令开始时的保持一致。
 
-    `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。`via` 关键字指定贝塞尔曲线的控制点。
-
+    `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> with <coordinate-pair> [/ <coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。`with` 关键字指定贝塞尔曲线的控制点。
     - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一条[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Reference/Attribute/d#二次贝塞尔曲线)，它由三个点（起点、控制点和终点）定义。
     - 如果提供两个 `<coordinate-pair>` 值，该命令会绘制一条三次贝塞尔曲线，它由四个点（起点、两个控制点和终点）定义。
 
-    `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
-
-    - 如果省略 `via <coordinate-pair>`，该命令会绘制一条平滑的二次贝塞尔曲线，该曲线使用前一个控制点和当前终点来定义。
-    - 如果包含可选的 `via` 关键字，则通过 `<coordinate-pair>` 指定曲线的控制点，绘制一条平滑的三次贝塞尔曲线，该曲线由前一个控制点、当前控制点和当前终点定义。
+    `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [with <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
+    - 如果省略 `with <coordinate-pair>`，该命令会绘制一条平滑的二次贝塞尔曲线，该曲线使用前一个控制点和当前终点来定义。
+    - 如果包含可选的 `with` 关键字，则通过 `<coordinate-pair>` 指定曲线的控制点，绘制一条平滑的三次贝塞尔曲线，该曲线由前一个控制点、当前控制点和当前终点定义。
 
     平滑曲线确保形状的连续过渡，而二次曲线则不然。平滑的二次曲线使用单个控制点来保持无缝过渡，而平滑的三次曲线使用两个控制点提供更精细的过渡。
 
@@ -106,13 +99,11 @@ clip-path: shape(
     椭圆弧曲线命令定义了两个可能的椭圆，这两个椭圆都与起始点和结束点相交，并且每个椭圆都可以顺时针或逆时针追踪，从而根据弧的大小、方向和角度得到四个可能的弧。`of` 关键字指定从中获取弧的椭圆的大小。第一个 `<length-percentage>` 提供椭圆的水平半径，第二个提供垂直半径。如果只提供一个 `<length-percentage>`，则该值用于两个半径（圆的半径）。
 
     以下参数有助于确定使用哪个弧：
-
     - `<arc-sweep>`：指示所需的弧是否是顺时针（`cw`）或逆时针（`ccw`）围绕椭圆追踪的。如果省略，这默认为 `ccw`。
     - `<arc-size>`：指示所需的弧是否是两个弧中较大的一个（`large`）或较小的一个（`small`）。如果省略，这默认为 `small`。
     - `<angle>`：指定椭圆相对于 x 轴旋转的角度，单位为度。正角度将椭圆顺时针旋转，负角度将其逆时针旋转。如果省略，这默认为 `0deg`。
 
     特殊情况处理如下：
-
     - 如果只提供一个 `<length-percentage>`，则该值用于水平和垂直半径，从而有效地创建一个圆。在这种情况下，`<arc-size>` 和 `<angle>` 没有影响。
     - 如果任一半径为零，则该命令等同于到终点的 `<line-command>`。
     - 如果任一半径为负，则使用其绝对值。
@@ -233,7 +224,7 @@ body {
 
 #### 结果
 
-{{EmbedLiveSample('使用 shape() 来定义路径', '100%', 300)}}
+{{EmbedLiveSample('使用 shape() 定义路径', '100%', 300)}}
 
 ### 使用 `shape()` 定义元素的可见部分
 
@@ -290,19 +281,19 @@ body {
   clip-path: shape(from 0% 0%, line to 100% 0%, line to 50% 100%, close);
 }
 
-/* 包含曲线和平滑过渡以及一个矩形的剪切区域 */
+/* 使用弧线以及 hline 和 vline 变换的心形剪切区域 */
 .shape2 {
   clip-path: shape(
-    from 10px 10px,
-    curve to 60px 20% via 40px 0,
-    smooth to 90px 0,
-    curve by -20px 60% via 10% 40px 20% 20px,
-    smooth by -40% -10px via -10px 70px,
+    from 20px 70px,
+    arc to 100px 70px of 1% cw,
+    arc to 180px 70px of 1% cw,
+    curve to 100px 190px with 180px 130px,
+    curve to 20px 70px with 20px 130px,
     close,
-    move to 100px 100px,
-    hline by 50px,
-    vline by 50px,
-    hline by -50px,
+    move to 150px 150px,
+    hline by 40px,
+    vline by 40px,
+    hline by -40px,
     close
   );
 }
@@ -310,7 +301,7 @@ body {
 
 #### 结果
 
-{{EmbedLiveSample('使用 shape() 函数来定义元素的可见部分', '100%', 300)}}
+{{EmbedLiveSample('使用 shape() 定义元素的可见部分', '100%', 300)}}
 
 ## 规范
 

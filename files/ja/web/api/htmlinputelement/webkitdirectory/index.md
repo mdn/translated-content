@@ -24,26 +24,20 @@ l10n:
 ユーザーが選択を行った後、 `files` の中のそれぞれの {{domxref("File")}} オブジェクトは各自が {{domxref("File.webkitRelativePath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリーの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。
 
 - PhotoAlbums
-
   - Birthdays
-
     - Jamie's 1st birthday
-
       - PIC1000.jpg
       - PIC1004.jpg
       - PIC1044.jpg
 
     - Don's 40th birthday
-
       - PIC2343.jpg
       - PIC2344.jpg
       - PIC2355.jpg
       - PIC2356.jpg
 
   - Vacations
-
     - Mars
-
       - PIC5533.jpg
       - PIC5534.jpg
       - PIC5556.jpg
@@ -52,7 +46,8 @@ l10n:
 
 ユーザーが `PhotoAlbums` を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `PIC2343.jpg` の項目では `webkitRelativePath` が `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg` となります。これによって {{domxref("FileList")}} が平坦でも階層構造を知ることができます。
 
-> **メモ:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://crbug.com/124187)を参照してください。
+> [!NOTE]
+> `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://crbug.com/124187)を参照してください。
 
 ## 例
 

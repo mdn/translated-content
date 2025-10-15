@@ -120,18 +120,15 @@ border-right-color: unset;
 ## Voir aussi
 
 - Les propriétés raccourcies liées aux bordures
-
   - {{cssxref("border")}},
   - {{cssxref("border-right")}},
   - {{cssxref("border-color")}}.
 
 - Les propriétés de couleur pour les autres bordures :
-
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-bottom-color")}},
   - {{cssxref("border-left-color")}}.
 
 - Les autres propriétés liées à la bordure droite :
-
   - {{cssxref("border-right-style")}},
   - {{cssxref("border-right-width")}}.

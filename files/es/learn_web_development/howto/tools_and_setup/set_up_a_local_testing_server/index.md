@@ -49,7 +49,6 @@ Para evitar el problema de las solicitudes asíncronas, necesitamos probar estos
 Para hacer esto:
 
 1. Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes conseguir un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:
-
    - Vé a [python.org](https://www.python.org/)
    - Debajo de la sección de Descarga, haz clic en el link para Python "3.xxx".
    - En la parte superior de la página, selecciona el _instalador ejecutable windows x86_ y descárgalo.

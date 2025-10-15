@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Forwarded
 original_slug: Web/HTTP/Headers/Forwarded
 ---
 
-{{HTTPSidebar}}
-
 **`Forwarded`** 헤더는 클라이언트에서 접하고 있는 프록시 서버들이 요청에 대한 연결에 연관되어 있는 상황에서 해당 연결이 변경되거나 잃어버리게 되었을 때, 해당되는 정보를 가지고 있습니다.
 
 이 헤더를 대체하는 실질적인 표준 버전은 {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}}, 그리고 {{HTTPHeader("X-Forwarded-Proto")}} 입니다.
@@ -34,9 +32,7 @@ Forwarded: by=<identifier>; for=<identifier>; host=<host>; proto=<http|https>
 ## 지시자
 
 - \<identifier>
-
   - : 식별자는 프록시를 사용할 때, 대체되거나 잃어버린 정보를 밝힙니다. 이것은 다음과 같을 수 있습니다:
-
     - IP 주소(v4 또는 v6, 추가로 포트, 그리고 IPv6는 따옴표와 대괄호로 쌓여있습니다),
     - 애매한 식별자(예를 들면, "\_hidden" 또는 "\_secret"),
     - 또는 알 수 없는 개체를 진행하고자 했을 때 (그리고 당신이 계속 만들어진 요청이 전달되기를 원한다고 알려줄 때) "unknown" or "unknown".

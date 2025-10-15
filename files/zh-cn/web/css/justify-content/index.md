@@ -3,8 +3,6 @@ title: justify-content
 slug: Web/CSS/justify-content
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`justify-content`** 属性定义浏览器如何沿着弹性容器的{{Glossary("Main Axis", "主轴")}}和网格容器的行向轴分配内容元素之间和周围的空间。
 
 下面的交互示例演示了使用网格布局的一些值。
@@ -121,7 +119,6 @@ justify-content: unset;
 - `space-evenly`
   - : flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
 - `stretch`
-
   - : 如果元素沿主轴的组合尺寸小于对齐容器的尺寸，任何尺寸设置为 `auto` 的元素都会等比例地增加其尺寸（而不是按比例增加），同时仍然遵守由 {{cssxref("max-height")}}/{{cssxref("max-width")}}（或相应功能）施加的约束，以便沿主轴完全填充对齐容器的组合尺寸。
 
     > [!NOTE]

@@ -2,17 +2,15 @@
 title: "@media"
 slug: Web/CSS/@media
 l10n:
-  sourceCommit: f0fcb3b92e14a1d5b7f51947597cef1fbf4be64c
+  sourceCommit: 6ca92a0367203aee71e98c6c7b1501b5dc9a1fe0
 ---
-
-{{CSSRef}}
 
 **`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
-{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: @media", "tabbed-standard")}}
 
 ```css interactive-example
 abbr {
@@ -45,11 +43,9 @@ abbr {
 
 ## 構文
 
-`@media` アットルールは、コードの最上位に配置したり、他の条件付きグループアットルールの中に入れ子にして配置したりすることができます。
-
 ```css
 /* コードの最上位 */
-@media screen and (min-width: 900px) {
+@media screen and (width >= 900px) {
   article {
     padding: 1rem 3rem;
   }
@@ -57,13 +53,15 @@ abbr {
 
 /* 他の条件付きアットルールの中にネスト */
 @supports (display: flex) {
-  @media screen and (min-width: 900px) {
+  @media screen and (width >= 900px) {
     article {
       display: flex;
     }
   }
 }
 ```
+
+`@media` アットルールは、コードの最上位に配置したり、他の条件付きグループアットルールの中に入れ子にして配置したりすることができます。
 
 メディアクエリーの構文について詳しくは、[メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)を参照してください。
 
@@ -169,17 +167,17 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
   - : ユーザーエージェントの動画プレーンおよび出力端末が対応している、輝度、コントラスト比、および色深度の組み合わせ。メディアクエリーレベル 5 で追加されました。
 - {{cssxref("@media/width", "width")}}
   - : スクロールバーの幅を含むビューポートの幅。
-- {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
   - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性を `dppx` 単位で使用してください。
-- {{cssxref("@media/-webkit-animation", "-webkit-animation")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
   - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("animation")}} に対応しているかどうか。代わりに [`@supports (animation)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
 - {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
   - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性を `dppx` 単位で使用してください。
-- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
   - : ブラウザーが `-webkit` の接頭辞の付いた 2D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
   - : ブラウザーが `-webkit` の接頭辞の付いた 3D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
-- {{cssxref("@media/-webkit-transition", "-webkit-transition")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
   - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("transition")}} に対応しているかどうか。代わりに [`@supports (transition)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
 
 ### 論理演算子
@@ -191,7 +189,6 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
   - : 複数のメディア特性を 1 つのメディアクエリーに結合する際に使用されます。クエリーが `true` になるためには、結合させた各機能が `true` を返すことが必要です。
     また、メディア特性とメディア種別を結合する際にも使用されます。
 - `not`
-
   - : メディアクエリーを反転するために使用され、クエリーが `false` を返す場合に `true` を返します。
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
 
@@ -201,8 +198,8 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
 - `only`
   - : クエリー全体が一致する場合にのみスタイルを適用します。
     これは、古いブラウザーが選択したスタイルを適用できないようにするのに便利です。
-    `only` を使用しない場合、古いブラウザーは `screen and (max-width: 500px)` というクエリーを `screen` と解釈し、クエリーの残りの部分を無視して、すべての画面にそのスタイルを適用してしまいます。
-    `only` 演算子を使用する場合は、メディア種別*も*指定しなければなりません。
+    `only` を使用しない場合、古いブラウザーは `screen and (width <= 500px)` というクエリーを `screen` と解釈し、クエリーの残りの部分を無視して、すべての画面にそのスタイルを適用してしまいます。
+    `only` 演算子を使用する場合は、メディア種別も指定しなければなりません。
 - `,` (カンマ)
   - : カンマは、複数のメディアクエリーを 1 つのルールにまとめるために使用されます。
     カンマで区切られたリストの各クエリーは、他のクエリーとは別に扱われます。
@@ -256,12 +253,6 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
 @media screen, print {
   body {
     line-height: 1.2;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) and (resolution: 150dpi) {
-  body {
-    line-height: 1.4;
   }
 }
 ```

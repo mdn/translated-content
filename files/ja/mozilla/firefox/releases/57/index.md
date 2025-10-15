@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。
 
 ## Firefox 57 === Firefox Quantum
@@ -135,69 +133,55 @@ _変更なし。_
 以下の API を追加または拡張しました:
 
 - [`bookmarks`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
-
   - [`bookmarks.BookmarkTreeNodeType`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType) でセパレーターをサポートしました。
 
 - [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-
   - light/dark テーマアイコンのための `theme_icons` プロパティ
 
 - [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - [`browserAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
 
 - [`browserSettings`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [`allowPopupsForUserEvents`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
   - [`homepageOverride`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
   - [`imageAnimationBehavior`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
   - [`newTabPageOverride`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
 
 - [`browsingData`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [`browsingData.removeLocalStorage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
 
 - [`clipboard`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
-
   - [`setImageData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
 
 - [`contextualIdentities`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
-
   - [`onCreated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
   - [`onRemoved`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
   - [`onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
   - [`contextualIdentitities.ContextualIdentity`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity) の `colorCode` および `iconUrl`
 
 - [`devtools.panels`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
-
   - [`devtools.panels.ElementsPanel.createSidebarPane()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
 
 - [`downloads`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
-
   - [`downloads.download()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) の `incognito` オプション
   - [`downloads.DownloadItem`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem) の `estimatedEndTime` プロパティ
 
 - [`find`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find)
-
   - [`find()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
   - [`highlightResults()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
   - [`removeHighlighting()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
 - [`pageAction.openPopup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
 - [`privacy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
-
   - [`websites.trackingProtectionMode`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
 - [`proxy`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
-
   - `FindProxyForURL()` がオブジェクトを返せるようになりました
 
 - [`runtime`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
-
   - [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) を Android でサポート
 
 - [`sessions`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
-
   - [`setTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
   - [`getTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
   - [`removeTabValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
@@ -206,38 +190,31 @@ _変更なし。_
   - [`removeWindowValue()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
 
 - [`sidebarAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
-
   - [`sidebarAction.open()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
 
 - [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-
   - [`storage.managed`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
 
 - [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
-
   - [`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `loadReplace` オプション
   - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.onUpdated`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) の `discarded` プロパティ
   - [`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) で "view-source:" URL を開くことが可能になりました
   - [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)、[`tabs.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create)、[`tabs.query()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)、[`tabs.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update) の `openerTabId` プロパティ
 
 - [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
-
   - `colors.toolbar`
   - `colors.toolbar_field`
   - `colors.toolbar_field_text`
   - `colors.toolbar_text`
 
 - [`theme`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme)
-
   - [`theme.update()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) の `windowId` オプション
 
 - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
-
   - [`filterResponseData()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
   - [`webRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) イベントの `proxyInfo` プロパティ
 
 - [`windows`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)
-
   - [`windows.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) の `allowScriptsToClose` プロパティ
 
 ## 過去のバージョン

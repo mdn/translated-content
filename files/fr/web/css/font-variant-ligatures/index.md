@@ -75,37 +75,28 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 ### Valeurs
 
 - `normal`
-
   - : Cette valeur active les ligatures et les formes contextuelles courantes pour un rendu correct. Les ligatures et formes activées dépendent de la police utilisée, de la langue et de certains scripts. C'est la valeur par défaut.
 
 - `none`
-
   - : Cette valeur désactive toutes les ligatures et formes contextuelles, y compris celles couramment utilisées.
 
 - `<common-lig-values>`
-
   - : Ces valeurs contrôlent les ligatures les plus courantes, comme `fi`, `ffi`, `th` et autres. Elles correspondent aux valeurs OpenType `liga` et `clig`. Deux valeurs sont possibles&nbsp;:
-
     - `common-ligatures`&nbsp;: active ces ligatures. Notez que la valeur `normal` active ces ligatures.
     - `no-common-ligatures`&nbsp;: désactive ces ligatures.
 
 - `<discretionary-lig-values>`
-
   - : Ces valeurs contrôlent les ligatures spécifiques, spécifiques à la police et définies par le fondeur. Elles correspondent à la valeur OpenType `dlig`. Deux valeurs sont possibles&nbsp;:
-
     - `discretionary-ligatures`&nbsp;: active ces ligatures.
     - `no-discretionary-ligatures`&nbsp;: désactive ces ligatures. Notez que la valeur `normal` désactive ces ligatures.
 
 - `<historical-lig-values>`
-
   - : Ces valeurs contrôlent les ligatures historiques, utilisées dans les livres anciens, comme l'allemand tz qui devient ꜩ. Elles correspondent à la valeur OpenType `hlig`. Deux valeurs sont possibles&nbsp;:
     - `historical-ligatures`&nbsp;: active ces ligatures.
     - `no-historical-ligatures`&nbsp;: désactive ces ligatures. Notez que la valeur `normal` désactive ces ligatures.
 
 - `<contextual-alt-values>`
-
   - : Ces valeurs contrôlent la manière dont les lettres s'adaptent à leur contexte, c'est-à-dire aux lettres qui les entourent. Elles correspondent à la valeur OpenType `calt`. Deux valeurs sont possibles&nbsp;:
-
     - `contextual`&nbsp;: précise que des alternatives contextuelles peuvent être utilisées. Notez que la valeur `normal` active ces ligatures.
     - `no-contextual`&nbsp;: interdit leur utilisation.
 

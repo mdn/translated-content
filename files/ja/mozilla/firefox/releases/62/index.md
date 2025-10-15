@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされました。このページでは、開発者に影響する Firefox 62 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -153,7 +151,6 @@ _変更なし。_
 
 - [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) マニフェストキーで、インストール時に自動的にサイドバーを開くか否かを拡張機能で制御するための `open_at_install` プロパティを追加しました ([Firefox バグ 1460910](https://bugzil.la/1460910))。
 - さまざまなマニフェストキーで `browser_style` プロパティを変更しました:
-
   - [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) および [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) で、既定値が `false` になりました。
   - [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) および [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) で、既定値が `true` になりました。
 

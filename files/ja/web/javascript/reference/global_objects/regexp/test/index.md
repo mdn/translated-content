@@ -11,7 +11,7 @@ l10n:
 
 JavaScript の {{jsxref("RegExp")}} オブジェクトは {{jsxref("RegExp/global", "global")}} または {{jsxref("RegExp/sticky", "sticky")}} フラグ（`/foo/g` や `/foo/y` など）を設定すると**ステートフル**になります。これらは前回一致したときの {{jsxref("RegExp/lastIndex", "lastIndex")}} を格納します。これを内部的に使用することで、 `test()` を使用して文字列の複数の照合を反復処理することができます（キャプチャグループを使用）。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.test", "taller")}}
 
 ```js interactive-example
 const str = "table football";
@@ -86,7 +86,8 @@ function testInput(re, str) {
 
 その後にさらに `test(str)` を呼び出すと、 `str` を `lastIndex` から検索します。 `lastIndex` プロパティは `test()` が `true` を返すたびに増え続けます。
 
-> **メモ:** `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
+> [!NOTE]
+> `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
 
 `test()` が `false` を返した場合、正規表現の `lastIndex` プロパティを呼び出すと `0` にリセットされます。
 

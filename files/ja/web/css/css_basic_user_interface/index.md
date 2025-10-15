@@ -2,10 +2,8 @@
 title: CSS 基本ユーザーインターフェイス
 slug: Web/CSS/CSS_basic_user_interface
 l10n:
-  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{CSSRef}}
 
 **CSS 基本ユーザーインターフェイス** (CSS basic user interface) モジュールでは、輪郭線プロパティ、ポインティングデバイスやキーボードへの視覚的フィードバック、 UI ウィジェットの既定の外見の変更など、ユーザーインターフェイス関連の機能のレンダリングや機能を定義することができます。
 

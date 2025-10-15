@@ -5,11 +5,10 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`r`** は [CSS](/ja/docs/Web/CSS) のプロパティで、円の半径を定義します。これは SVG の {{SVGElement("circle")}} 要素でのみ使用されます。存在する場合、その円の {{SVGAttr("r")}} 属性を上書きします。
 
-> **メモ:** `r` プロパティは、 {{SVGElement("svg")}} の中にある {{SVGElement("circle")}} 要素にのみ適用されます。その他の SVG 要素、 HTML 要素、擬似要素には適用されません。
+> [!NOTE]
+> `r` プロパティは、 {{SVGElement("svg")}} の中にある {{SVGElement("circle")}} 要素にのみ適用されます。その他の SVG 要素、 HTML 要素、擬似要素には適用されません。
 
 ## 構文
 
@@ -31,11 +30,9 @@ r: unset;
 円の半径を定義する {{cssxref("length")}} と {{cssxref("percentage")}} の値です。
 
 - {{cssxref("length")}}
-
   - : 絶対的または相対的な長さで、 CSS の {{cssxref("&lt;length&gt;")}} データ型で許可されている任意の単位で表現することができます。負の値は無効です。
 
 - {{cssxref("percentage")}}
-
   - : 現在の SVG ビューポートの、 <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math> で計算される正規化された対角線を参照するパーセント値です。
 
 ## 公式定義

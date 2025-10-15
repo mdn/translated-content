@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66fa0acf565a240c390418f588d571d6e650514d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 133 の変更点をまとめています。Firefox 133 は、米国時間 [2024 年 11 月 26 日](https://whattrainisitnow.com/release/?version=133) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -24,7 +22,6 @@ l10n:
 - {{jsxref("Uint8Array")}} で、{{glossary("base64")}} や 16 進数表記でエンコードされた文字列とバイト配列の間の変換を容易にするメソッドをサポートしました ([Firefox bug 1917885](https://bugzil.la/1917885)、[Firefox bug 1862220](https://bugzil.la/1862220))。
 
   新しいメソッドは以下のとおりです:
-
   - {{jsxref("Uint8Array.fromBase64()")}} および {{jsxref("Uint8Array.fromHex()")}} 静的メソッド。それぞれ、base64 や 16 進数表記でエンコードされた文字列から新しい `Uint8Array` オブジェクトを構築します。
   - {{jsxref("Uint8Array.prototype.setFromBase64()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} インスタンスメソッド。base64 や 16 進数表記でエンコードされた文字列からバイト値を、既存の `Uint8Array` オブジェクトに追加します。
   - {{jsxref("Uint8Array.prototype.toBase64()")}}、{{jsxref("Uint8Array.prototype.toHex()")}} インスタンスメソッド。`Uint8Array` オブジェクトにあるデータから、base64 や 16 進数表記でエンコードされた文字列を返します。

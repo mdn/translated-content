@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### 쌓임 맥락 예제2
@@ -19,10 +17,8 @@ z-index 속성 값이 2인 DIV #2는 z-index 속성 값이 1인 DIV #3 위에 �
 이 상황을 더 잘 이해하기 위해서 쌓임 맥락 계층을 그려보자.
 
 - 루트 엘리먼트 쌓임 맥락
-
   - DIV #2 (z-index 2)
   - DIV #3 (z-index 1)
-
     - DIV #4 (z-index 10)
 
 > [!NOTE]

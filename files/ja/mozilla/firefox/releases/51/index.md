@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e0de864abf4c85888c0a790058e0d6f46462ca3a
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/)Firefox 51 は、米国時間 2017 年 1 月 24 日にリリースされました。このページでは、開発者に影響する Firefox 51 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -46,10 +44,8 @@ l10n:
 ### WebGL
 
 - [WebGL 2](/ja/docs/Web/API/WebGL_API) をデフォルトで有効化しました。[webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) でいくつかのデモをご覧ください。
-
   - WebGL 2 は、{{HTMLElement("canvas")}} 要素に OpenGL ES 3.0 をもたらす {{domxref("WebGL2RenderingContext")}} インターフェイスを提供します。
   - 新機能:
-
     - [3D テクスチャ](/ja/docs/Web/API/WebGL2RenderingContext/texImage3D)、
     - [Sampler object](/ja/docs/Web/API/WebGLSampler)、
     - [Uniform Buffer object](/ja/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects)、
@@ -66,7 +62,6 @@ l10n:
 ### IndexedDB v2
 
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API) バージョン 2 の実装が完了しました:
-
   - {{domxref("IDBObjectStore.getKey()")}} メソッドをサポートしました ([Firefox バグ 1271506](https://bugzil.la/1271506))。
   - {{domxref("IDBCursor.continuePrimaryKey()")}} メソッドをサポートしました ([Firefox バグ 1271505](https://bugzil.la/1271505))。
   - バイナリーキーをサポートしました ([Firefox バグ 1271500](https://bugzil.la/1271500))。
@@ -143,7 +138,6 @@ l10n:
 ### WebExtensions
 
 - 新規 API:
-
   - {{WebExtAPIRef("idle.queryState()")}} ([Firefox バグ 1299846](https://bugzil.la/1299846))
   - {{WebExtAPIRef("idle.onStateChanged")}} ([Firefox バグ 1299775](https://bugzil.la/1299775))
   - {{WebExtAPIRef("management.getSelf()")}} ([Firefox バグ 1283116](https://bugzil.la/1283116))
@@ -161,7 +155,6 @@ l10n:
 
 - アドオンがインストールされるときに Firefox でマルチプロセスの有効化を避けるために、[`install.rdf` の `multiprocessCompatible`](/ja/docs/Mozilla/Add-ons/Install_Manifests#multiprocesscompatible) プロパティで明示的に `false` を設定することが必要になりました。
 - Mozilla 特有の [Social API](/ja/docs/Mozilla/Projects/Social_API) を、以下のとおり大きく変更しました (主に、もはや使用されていない API を削除しました):
-
   - {{domxref("MozSocial")}} インターフェイスと、これをサポートする {{domxref("navigator.mozSocial")}} プロパティを削除しました。
   - [Social Bookmarks API](/ja/docs/Mozilla/Projects/Social_API/Bookmarks) を削除しました。
   - ソーシャルチャット機能を削除しました。

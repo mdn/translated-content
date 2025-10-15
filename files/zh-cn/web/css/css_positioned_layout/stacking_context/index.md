@@ -3,8 +3,6 @@ title: 层叠上下文
 slug: Web/CSS/CSS_positioned_layout/Stacking_context
 ---
 
-{{CSSRef}}
-
 我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，**层叠上下文**就是对这些 HTML 元素的一个三维构想。众 HTML 元素基于其元素属性按照优先级顺序占据这个空间。
 
 ## 层叠上下文
@@ -21,7 +19,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
 - {{cssxref("opacity")}} 属性值小于 `1` 的元素（参见 [the specification for opacity](https://www.w3.org/TR/css3-color/#transparency)）；
 - {{cssxref("mix-blend-mode")}} 属性值不为 `normal` 的元素；
 - 以下任意属性值不为 `none` 的元素：
-
   - {{cssxref("transform")}}
   - {{cssxref("filter")}}
   - {{cssxref("backdrop-filter")}}
@@ -51,11 +48,9 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
 在这个例子中，每个被定位的元素都创建了独自的层叠上下文，因为他们被指定了定位属性和 `z-index` 值。我们把层叠上下文的层级列在下面：
 
 - Root
-
   - DIV #1
   - DIV #2
   - DIV #3
-
     - DIV #4
     - DIV #5
     - DIV #6
@@ -68,16 +63,12 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
 > - 由此可得 DIV #2 (z-index 2) 被渲染在 DIV #5 (z-index 1) 之下，因为 DIV #5 归属于 z-index 较高的 DIV #3 元素。
 > - DIV #3 的 z-index 值是 4，但是这个值独立于 DIV #4，DIV #5 和 DIV #6 的 z-index 值，因为他们从属于不同的层叠上下文。
 > - 分辨出层叠的元素在 Z 轴上的*渲染顺序*的一个简单方法是将它们想象成一系列的版本号，子元素是其父元素版本号之下的次要版本。通过这个方法我们可以轻松地看出为什么一个 z-index 为 1 的元素（DIV #5）层叠于一个 z-index 为 2 的元素（DIV #2）之上，而一个 z-index 为 6 的元素（DIV #4）层叠于 z-index 为 5 的元素（DIV #1）之下。在我们的例子中（依照最终渲染次序排列）：
->
 >   - Root
->
 >     - DIV #2 - z-index 为 2
 >     - DIV #3 - z-index 为 4
->
 >       - DIV #5 - z-index 为 1，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.1
 >       - DIV #6 - z-index 为 3，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.3
 >       - DIV #4 - z-index 为 6，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.6
->
 >     - DIV #1 - z-index 为 5
 
 ## 示例源码

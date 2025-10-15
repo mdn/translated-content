@@ -3,8 +3,6 @@ title: 对齐弹性容器中的项目
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 ---
 
-{{CSSRef}}
-
 弹性盒之所以能迅速吸引开发者的注意，其中一个原因就是它首次为网页样式居中提供了合适的方案。得益于它提供的合适的垂直居中能力，我们可以很轻松地把一个盒子居中。在这份指南里，我们将详细地介绍 flexbox 的垂直和水平居中的工作原理。
 
 ## 在弹性盒中使用对齐
@@ -300,7 +298,8 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 
 {{EmbedLiveSample("align-content-column", "", "380px")}}
 
-> **备注：** `space-evenly` 没有在 flexbox 特性中定义，而是后来添加到 Box Alignment 的特性的属性。浏览器的支持没有 flexbox 特性好。
+> [!NOTE]
+> `space-evenly` 没有在 flexbox 特性中定义，而是后来添加到 Box Alignment 的特性的属性。浏览器的支持没有 flexbox 特性好。
 
 查看 [`justify-content` 在 MDN 的文档](/zh-CN/docs/Web/CSS/justify-content) 获取属性值的浏览器支持的更多详细说明。
 

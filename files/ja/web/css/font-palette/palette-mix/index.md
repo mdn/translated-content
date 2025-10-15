@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 879e0a9c9d60831afcc7f66ea1b5f43ea0cd4361
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`palette-mix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、新しい {{cssxref("font-palette")}} 値を、指定したパーセント値と色混合方式によって 2 個の `font-palette` 値を混ぜ合わせることによって生成することができます。
 
@@ -42,9 +42,7 @@ palette-mix(method, palette1 [p1], palette2 [p2])
 - `palette1`, `palette2`
   - : 互いに混合する {{cssxref("font-palette")}} 値です。これは任意の `font-palette` 値を取ることができます。 `palette-mix()` 関数、`normal`、`dark`、`light` などです。
 - `p1`, `p2` {{optional_inline}}
-
   - : {{cssxref("&lt;percentage&gt;")}} 値で、 `0%` ～ `100%` の間で混合するそれぞれのパレットの量を指定します。次のように一般化されます。
-
     - `p1` と `p2` の両方が省略された場合は、 `p1 = p2 = 50%` となります。
     - `p1` が省略された場合は、 `p1 = 100% - p2` となります。
     - `p2` が省略された場合は、 `p2 = 100% - p1` となります。

@@ -92,7 +92,6 @@ l10n:
 ## Смотрите также
 
 - Элементы, которые могут использоваться внутри `<head>`:
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

@@ -18,9 +18,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 - **`stream`**
   - : Объект потока {{domxref("MediaStream")}} источника из которого будет производиться запись. Может быть потоком, созданным {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} или {{HTMLElement("audio")}}, {{HTMLElement("video")}} или {{HTMLElement("canvas")}} элементами.
 - **`options`** {{optional_inline}}
-
   - : Объект, содержащий следующие свойства:
-
     - `mimeType`: `mime` тип, определяет формат результата записи, который нужно использовать в качестве контейнера для создаваемого объекта `MediaRecorder`. Можно просто указать формат контейнера, а браузер сам выберет нужный кодек для записи аудио/видео, или используйте [параметр codecs](/ru/docs/Web/Media/Guides/Formats/codecs_parameter) или параметр `profiles` для расширения информации об использовании и тонкой конфигурации кодеков. Приложения, предварительно, могут проверять поддержку браузерами определённого типа из свойства `mimeType` , вызывая метод {{domxref("MediaRecorder.isTypeSupported()")}}.
     - `audioBitsPerSecond`: Скорость записи медиа данных аудио.
     - `videoBitsPerSecond`: Скорость записи медиа данных видео.

@@ -3,8 +3,6 @@ title: Firefox 中的实验性特性
 slug: Mozilla/Firefox/Experimental_features
 ---
 
-{{FirefoxSidebar}}
-
 本页列出了 Firefox 的实验性和部分实现的特性，包括针对提议的或前沿的网络平台标准的特性，以及这些特性的版本信息、是否“默认”激活这些特性，以及可用于激活或停用这些特性的偏好设置。这样，就可以在特性发布前对其进行测试。
 
 新特性首先出现在 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 版本中，通常默认启用。它们随后会引入到 [Firefox 浏览器开发者版](https://www.mozilla.org/zh-CN/firefox/developer/)，并最终引入到发布版本中。在发布版中默认启用某项特性后，该特性就不再被视为实验性特性，应从主题中删除。

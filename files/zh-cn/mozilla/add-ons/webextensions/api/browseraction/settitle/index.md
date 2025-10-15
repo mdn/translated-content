@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的标题。标题会显示在浏览器操作图标的工具提示中。你可以传入一个 `tabId` 或 `windowId` 作为可选参数——如果这样做，则标题仅为指定的标签页或窗口更改。没有特定标题的标签页或窗口将继承全局标题文本，该文本默认为清单（manifest）中指定的 [`default_title`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 或 [`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)。
 
 ## 语法
@@ -20,27 +18,21 @@ browser.browserAction.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`。新标题和可选的目标标签页或窗口 ID。
-
     - `title`
-
       - : `string` 或 `null`。鼠标悬停时浏览器操作应显示的字符串。
 
         如果 `title` 是空字符串，则使用扩展名作为标题，但 {{WebExtAPIRef("browserAction.getTitle")}} 仍会提供空字符串。
 
         如果 `title` 为 `null`：
-
         - 如果指定了 `tabId`，并且该标签页设置了特定的标签页标题，则该标签页将继承其所属窗口的标题。
         - 如果指定了 `windowId`，并且该窗口设置了特定的窗口标题，则该窗口将继承全局标题。
         - 否则，全局标题将重置为清单中的标题。
 
     - `tabId` {{optional_inline}}
-
       - : `integer`。仅为指定的标签页设置标题。
 
     - `windowId` {{optional_inline}}
-
       - : `integer`。仅为指定的窗口设置标题。
 
 <!---->

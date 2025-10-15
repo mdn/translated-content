@@ -437,7 +437,6 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 制約違反のテキストを制御するには、以下の項目が有用です。
 
 - 以下の要素の `setCustomValidity(message)` メソッド
-
   - {{HTMLElement("fieldset")}} メモ: fieldset 要素にカスタム検証メッセージを設定しても、多くのブラウザーでは送信が抑止できません。
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

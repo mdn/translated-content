@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 为扩展配置 `USER_SCRIPT` 执行环境。
 
 对环境配置的更改仅适用于新实例：在重新加载文档之前，配置不会应用于通过执行文档中的用户脚本而初始化的环境。然而，当更新配置时，浏览器可能会撤销某些权限。例如，如果扩展将 `messaging` 设置为 `false`，来自 `USER_SCRIPT` 环境的消息调用可能会失败。
@@ -24,7 +22,6 @@ let configuredWorld = browser.userScripts.configureWorld(
 ### 参数
 
 - `properties`
-
   - : {{WebExtAPIRef("userScripts.WorldProperties")}}。`USER_SCRIPT` 环境的配置详情。
 
     当 `worldId` 被省略或为空字符串时，更新将应用于默认环境和所有没有显式配置的环境。当指定了 `worldId` 时，仅将只配置这一环境。

@@ -3,8 +3,6 @@ title: <fieldset>：欄集元素
 slug: Web/HTML/Reference/Elements/fieldset
 ---
 
-{{HTMLSidebar}}
-
 **`<fieldset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於在網頁表單中將多個控件以及標籤（{{HTMLElement("label")}}）分組。
 
 {{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
@@ -49,10 +47,10 @@ input {
 - `form`
   - : 這個屬性接受一個 {{HTMLElement("form")}} 元素的 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性的值，你希望 `<fieldset>` 成為該表單的一部分，即使它不在表單內。請注意，這種用法很混亂——如果你希望 `<fieldset>` 內的 {{HTMLElement("input")}} 元素與表單關聯，則需要直接在這些元素上使用 `form` 屬性。你可以使用 JavaScript 來檢查哪些元素與表單關聯，使用 {{domxref("HTMLFormElement.elements")}}。
 - `name`
-
   - : 與該組關聯的名稱。
 
-    > **備註：** `<fieldset>` 的標題由嵌套在其中的第一個 {{HTMLElement("legend")}} 元素提供。
+    > [!NOTE]
+    > `<fieldset>` 的標題由嵌套在其中的第一個 {{HTMLElement("legend")}} 元素提供。
 
 ## 使用 CSS 進行樣式設置
 

@@ -3,8 +3,6 @@ title: 层叠上下文示例 1
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 ---
 
-{{CSSRef}}
-
 ### 层叠上下文示例 1
 
 先看一个基础的例子。在根元素的层叠上下文中，有两个都是相对定位且没有设置 `z-index` 属性的 DIV（DIV #1 和 DIV #3）。在 DIV #1 中有一个绝对定位的 DIV #2，而在 DIV #3 中有一个绝对定位的 DIV #4，DIV #2 和 DIV #4 也都没有设置 `z-index` 属性。
@@ -26,7 +24,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 就层叠上下文而言，DIV #1 和 DIV #3 隶属于根元素，因此层次结构如下所示：
 
 - 根层叠上下文（root stacking context）
-
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 

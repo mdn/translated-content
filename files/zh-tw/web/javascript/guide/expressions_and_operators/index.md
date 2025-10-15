@@ -3,7 +3,7 @@ title: 運算式與運算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 這個章節將講述 JavaScript 的運算式與運算子，包括賦值運算子，比較運算子，算術運算子，位元運算子， 邏輯運算子, 字串運算子, 條件(三元)運算子 以及更多運算子.
 
@@ -104,7 +104,8 @@ var var2 = 4;
 | [小於](/zh-TW/docs/Web/JavaScript/Reference/Operators#less_than_operator) (`<`)                    | 假如左方運算元小於右方運算元，回傳 True。                                                                                                                      | `var1 < var2 "2" < 12`               |
 | [小於或等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator) (`<=`)    | 假如左方運算元小於或等於右方運算元，回傳 True。                                                                                                                | `var1 <= var2 var2 <= 5`             |
 
-> **備註：** `=>` 不是運算子，是 [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+> [!NOTE]
+> `=>` 不是運算子，是[箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
 ### 算術運算子
 

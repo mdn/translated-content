@@ -3,8 +3,6 @@ title: CSS 트랜지션 사용하기
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
-{{CSSRef}}
-
 **CSS 트랜지션**은 CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공합니다. 속성 변경이 즉시 영향을 미치게 하는 대신, 그 속성의 변화가 일정 기간에 걸쳐 일어나도록 할 수 있습니다. 예를 들어, 여러분이 어떤 요소의 색상을 흰색에서 검은색으로 변경한다면, 변화는 대개 즉시 일어납니다. CSS 트랜지션을 이용하면, 모두 커스터마이즈 가능한 어떤 가속도 곡선을 따르는 시간 주기마다 변화가 일어납니다.
 
 두 상태 사이의 트랜지션을 포함하는 애니메이션을 종종 암묵적 트랜지션이라고 부르는데, 이는 시작과 종료 상태 사이의 상태를 브라우저가 암묵적으로 정의하기 때문입니다.
@@ -78,7 +76,6 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
 - {{ cssxref("transition-property") }}
   - : 트랜지션을 적용해야 하는 CSS 속성의 이름 혹은 이름들을 명시합니다. 여기에 나열한 속성만 트랜지션하는 동안 움직입니다. 또한, 다른 모든 속성에 대한 변화는 보통 때와 같이 즉시 일어납니다.
 - {{ cssxref("transition-duration") }}
-
   - : 트랜지션이 일어나는 지속 시간을 명시합니다. 트랜지션 동안 모든 속성에 적용하는 단일 지속 시간을 명시하거나, 다른 주기로 각 속성이 트랜지션하게 하는 여러 지속 시간을 명시할 수 있습니다.
 
     `transition-duration: 0.5s`
@@ -366,7 +363,6 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     {{EmbedLiveSample("duration_4s",275,150)}}
 
 - {{ cssxref("transition-timing-function") }}
-
   - : ![](/files/3434/TF_with_output_gt_than_1.png)속성의 중간값을 계산하는 방법을 정의하는 함수를 명시합니다. *Timing functions*는 트랜지션의 중간값을 계산하는 방법을 결정합니다. 대부분의 [타이밍 함수](/ko/docs/Web/CSS/easing-function)는 큐빅 베이지어(cubic bezier)를 정의하는 네 점에 의해 정의되므로 상응하는 함수의 그래프로 제공해서 명시할 수 있습니다. [Easing Functions Cheat Sheet](https://easings.net/)에서 이징(easing, 역자주: 시간에 따른 파라미터 값의 변화율을 명시하는 함수)을 선택할 수도 있습니다.
 
     `transition-timing-function: ease`
@@ -646,7 +642,6 @@ CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용
     {{EmbedLiveSample("ttf_step4end",275,150)}}
 
 - {{ cssxref("transition-delay") }}
-
   - : 속성이 변한 시점과 트랜지션이 실제로 시작하는 사이에 기다리는 시간을 정의합니다.
 
     `transition-delay: 0.5s`
@@ -964,7 +959,8 @@ div {
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **참고:** **노트:** 트랜지션을 중단하면 `transitionend` 이벤트는 발생하지 않습니다. 트랜지션을 완료하기 전에 애니메이션하고 있는 속성의 값이 바뀌기 때문입니다.
+> [!NOTE]
+> **노트:** 트랜지션을 중단하면 `transitionend` 이벤트는 발생하지 않습니다. 트랜지션을 완료하기 전에 애니메이션하고 있는 속성의 값이 바뀌기 때문입니다.
 
 ## 속성값 목록이 다른 개수를 가진 경우
 

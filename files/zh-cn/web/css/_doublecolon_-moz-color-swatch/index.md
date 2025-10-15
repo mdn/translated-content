@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`::-moz-color-swatch`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示在 `type="color"` 的 {{HTMLElement("input")}} 中选择的颜色的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 
@@ -52,5 +52,4 @@ input[type="color"]::-moz-color-swatch {
 ## 参见
 
 - 其他浏览器也使用类似的伪元素：
-
   - {{cssxref("::-webkit-color-swatch")}}，WebKit 和 Blink（Safari、Chrome 和 Opera）支持的伪元素

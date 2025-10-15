@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-position`** 设置强调标记的位置。强调标记（如注音字符）在没有足够空间时，会自动增加行高。
 
 {{InteractiveExample("CSS Demo: text-emphasis-position")}}
@@ -152,7 +150,8 @@ text-emphasis-position: unset;
   </tbody>
 </table>
 
-> **备注：** `text-emphasis-position` 无法使用简写属性 {{cssxref("text-emphasis")}} 进行设置，因此也无法进行重置。
+> [!NOTE]
+> `text-emphasis-position` 无法使用简写属性 {{cssxref("text-emphasis")}} 进行设置，因此也无法进行重置。
 
 ## 形式定义
 

@@ -9,7 +9,7 @@ l10n:
 
 **`toLocaleString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の要素を表す文字列を返します。要素は `toLocaleString` メソッドを使用して文字列に変換され、これらの文字列はロケール依存の文字列（カンマ "," など）で区切られます。このメソッドは {{jsxref("Array.prototype.toLocaleString()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.toLocaleString()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.toLocaleString()")}}
 
 ```js interactive-example
 const uint8 = new Uint32Array([500, 8123, 12]);

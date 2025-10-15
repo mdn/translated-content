@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: e83aa62ce6bf2e2bc44f55a3fb73b63d724fa6a6
+  sourceCommit: d105060fc9f3269c6559e55c4fcd5cea27f065fa
 ---
 
 {{APIRef("DOM")}}
@@ -39,6 +39,8 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
   - : 返回代表元素顶部边框宽度的数值。
 - {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
   - : 返回代表元素内部宽度的数值。
+- {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
+  - : 表示元素有效缩放尺寸的数字，如果元素未渲染，则为 1.0。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : 一个字符串，反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) 属性，该属性在 {{domxref("PerformanceElementTiming")}} API 中标记了一个观察元素。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
@@ -52,12 +54,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : 一个字符串，代表元素限定名称的本地部分。
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : 元素对应的命名空间 URI，如果没有则返回 `null`。
-
-    > [!NOTE]
-    > 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
-
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : 一个 `Element`，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
 - {{DOMxRef("Element.outerHTML")}}
@@ -89,12 +86,16 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 
 ### ARIA 中包含的实例属性
 
-_`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
+_`Element` 接口也包括以下属性。_
 
 - {{domxref("Element.ariaAtomic")}}
   - : 反映 [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性的字符串，表示辅助技术是否将根据 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性定义的变更通知，显示全部或仅部分变更区域。
 - {{domxref("Element.ariaAutoComplete")}}
   - : 反映 [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性的字符串，表示输入文本是否会触发显示一个或多个用户对组合框、搜索框或文本框的预期值的预测，并指定如果进行了预测将如何显示。
+- {{domxref("Element.ariaBrailleLabel")}}
+  - : 反映 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 属性的字符串，该属性定义了元素的盲文标签。
+- {{domxref("Element.ariaBrailleRoleDescription")}}
+  - : 反映 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性的字符串，该属性定义了元素的 ARIA 盲文角色描述。
 - {{domxref("Element.ariaBusy")}}
   - : 反映 [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 属性的字符串，表示元素是否正在被修改，因为辅助技术可能希望等到修改完成后再向用户展示。
 - {{domxref("Element.ariaChecked")}}
@@ -103,7 +104,7 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
   - : 反映 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性的字符串，该属性定义了表格、网格或树状网格中的列数。
 - {{domxref("Element.ariaColIndex")}}
   - : 反映 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性的字符串，该属性定义了元素的列索引或相对于表格、网格或树状网格中列总数的位置。
-- {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
+- {{domxref("Element.ariaColIndexText")}}
   - : 反映 [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) 属性的字符串，该属性定义了 aria-colindex 的人类可读文本替代。
 - {{domxref("Element.ariaColSpan")}}
   - : 反映 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨列数。
@@ -119,6 +120,8 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
   - : 反映 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性的字符串，表示可由元素触发的交互式弹出元素（如菜单或对话框）的可用性和类型。
 - {{domxref("Element.ariaHidden")}}
   - : 反映 [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性的字符串，表示元素是否暴露于无障碍 API。
+- {{domxref("Element.ariaInvalid")}}
+  - : 反映 [`aria-invalid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) 属性的字符串，表示输入的值不符合应用程序预期的格式。
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : 反映 [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) 属性的字符串，表示作者为激活元素或将焦点赋予元素而实施的键盘快捷方式。
 - {{domxref("Element.ariaLabel")}}
@@ -171,6 +174,29 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
   - : 反映 [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性的字符串，该属性定义了范围部件的当前值。
 - {{domxref("Element.ariaValueText")}}
   - : 反映 [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性的字符串，该属性为范围部件定义了 aria-valuenow 的人类可读文本替代值。
+- {{domxref("Element.role")}}
+  - : 反映了显式设置的 [`role`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles) 属性的字符串，该属性提供了元素的语义角色。
+
+#### 从 ARIA 元素引用中反映的实例属性
+
+这些属性反映了相应属性中由 `id` 引用指定的元素，但有一些注意事项。更多信息请参阅*反射属性*指南中的[反射元素参考](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素参考)。
+
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : 当焦点位于 [`composite`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) 微件、[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) 或 [`application`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) 时，代表当前活动元素的元素。反射了 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性。
+- {{domxref("Element.ariaControlsElements")}}
+  - : 一个元素数组，其内容或存在由所应用的元素控制。反射了 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性。
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : 一个元素数组，包含所应用元素的无障碍描述。反射了 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性。
+- {{domxref("Element.ariaDetailsElements")}}
+  - : 一个元素数组，提供所应用元素的无障碍详细信息。反射了 [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) 属性。
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : 一个元素数组，为其应用的元素提供错误信息。反射了 [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) 属性。
+- {{domxref("Element.ariaFlowToElements")}}
+  - : 一个元素数组，用于在内容的另一种阅读顺序中标识下一个（或多个）元素，用户可自行决定覆盖一般默认阅读顺序。反射了 [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) 属性。
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : 一个元素数组，为所应用的元素提供无障碍名称。反射了 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性。
+- {{domxref("Element.ariaOwnsElements")}}
+  - : 该元素所拥有的元素数组。当 DOM 层次结构不能用来表示父元素和子元素之间的关系时，它就用来定义父元素和子元素之间的视觉、功能或上下文关系。反射了 [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) 属性。
 
 ## 实例方法
 
@@ -186,6 +212,8 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 为指定元素附加影子 DOM 树，并返回指向其 {{DOMxRef("ShadowRoot")}} 的引用。
 - {{DOMxRef("Element.before()")}}
   - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之前。
+- {{DOMxRef("Element.checkVisibility()")}}
+  - : 根据可配置的检查，返回元素是否可见。
 - {{DOMxRef("Element.closest()")}}
   - : 返回 `Element` 当前元素（或当前元素本身）最接近的祖先，且与参数中给定的选择器匹配。
 - {{DOMxRef("Element.computedStyleMap()")}}
@@ -214,6 +242,8 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的特定标签名的所有后代元素。
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
   - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的特定标签名和命名空间的所有后代元素。
+- {{DOMxRef("Element.getHTML()")}}
+  - : 以 HTML 字符串形式返回元素的 DOM 内容，可选择包含任何影子 DOM。
 - {{DOMxRef("Element.hasAttribute()")}}
   - : 返回一个布尔值，表示元素是否具有指定属性。
 - {{DOMxRef("Element.hasAttributeNS()")}}
@@ -230,6 +260,8 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 将给定的文本节点插入调用该函数的元素的指定位置。
 - {{DOMxRef("Element.matches()")}}
   - : 返回一个布尔值，表示该元素是否会被指定的选择器字符串选中。
+- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+  - : 将给定的 {{domxref("Node")}} 作为直接子节点移动到调用节点内部的给定引用节点之前，而无需先移除节点再插入。
 - {{DOMxRef("Element.prepend()")}}
   - : 在元素的第一个子元素之前插入一组 {{domxref("Node")}} 对象或字符串。
 - {{DOMxRef("Element.querySelector()")}}
@@ -274,6 +306,10 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 设置当前节点指定名称和命名空间的属性值。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 设置鼠标事件捕获，将所有鼠标事件重定向到此元素。
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+  - : 将 HTML 字符串解析并[净化](/zh-CN/docs/Web/API/HTML_Sanitizer_API)为文档片段，然后在 DOM 中替换元素的原始子树。
+- {{DOMxRef("Element.setHTMLUnsafe()")}}
+  - : 将 HTML 字符串解析为文档片段，不进行净化处理，然后替换 DOM 中元素的原始子树。HTML 字符串可能包含声明式影子根，如果使用 [`Element.innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 设置 HTML，这些影子根将被解析为模板元素。
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : 指定一个特定的元素作为未来[指针事件](/zh-CN/docs/Web/API/Pointer_events)的捕获目标。
 - {{DOMxRef("Element.toggleAttribute()")}}
@@ -283,18 +319,20 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 
 使用 `addEventListener()` 或将事件监听器分配给此接口的 `oneventname` 属性来监听这些事件。
 
-- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
-  - : 执行脚本时触发此事件。
-- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : 浏览器在（处于[_被找到前隐藏_](/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden)状态的）元素因用户已通过“在页面中查找”功能或片段导航找到了该内容而即将显示时触发。
-- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
+  - : 脚本执行完毕后触发此事件。
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+  - : 当输入元素的值即将被修改时触发此事件。
+- {{domxref("Element/beforematch_event", "beforematch")}}
+  - : 浏览器在（处于[_被找到前隐藏_](/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden)状态的）元素因用户已通过“在页面中查找”功能或片段导航找到了该内容而即将显示时触发此事件。
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : 脚本即将执行时触发此事件。
+- {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
+  - : 在派发 WebXR 选择事件（{{domxref("XRSession/select_event", "select")}}、{{domxref("XRSession/selectstart_event", "selectstart")}}、{{domxref("XRSession/selectend_event", "selectend")}}）前触发此事件。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
   - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
-- {{domxref("Element/scroll_event", "scroll")}}
-  - : 当文档视图或元素滚动时触发此事件。
-- {{domxref("Element/scrollend_event", "scrollend")}}
-  - : 当文档视图完成滚动时触发此事件。
+- {{domxref("Element/input_event","input")}}
+  - : 当用户操作直接导致元素值发生变化时触发此事件。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : 当违反[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)时触发此事件。
 - {{domxref("Element/wheel_event","wheel")}}
@@ -343,9 +381,9 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 ### 全屏事件
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : 当前 {{domxref("Element")}} 进入或退出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发送给该元素。
+  - : 当前 `Element` 进入或退出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时，向该 `Element` 发送此事件。
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
-  - : 如果在尝试将当前 `Element` 切换到或切换出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发生错误，则向该 `Element` 发送该事件。
+  - : 如果在尝试将当前 `Element` 切换到或切换出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发生错误，则向该 `Element` 发送此事件。
 
 ### 键盘事件
 
@@ -417,10 +455,21 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 当指针移出元素的*命中测试*边界（以及其他原因）时触发。
 - {{domxref("Element/pointerover_event", "pointerover")}}
   - : 当指针移动到元素的命中测试边界时触发。
-- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}
   - : 指针改变任何属性时触发，这些属性不会触发 {{domxref("Element/pointerdown_event", "pointerdown")}} 或 {{domxref("Element/pointerup_event", "pointerup")}} 事件。
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : 指针不再处于活动状态时触发。
+
+### 滚动事件
+
+- {{domxref("Element/scroll_event", "scroll")}}
+  - : 当文档视图或元素滚动时触发此事件。
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : 当文档视图完成滚动时触发此事件。
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : 当选择了新的滚动捕捉目标时，在滚动操作结束时在滚动容器上触发此事件。
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : 当浏览器确定有新的滚动捕捉目标（即当前滚动手势结束时将选择该目标）时，在滚动容器上触发此事件。
 
 ### 触摸事件
 

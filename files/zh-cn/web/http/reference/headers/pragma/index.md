@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 HTTP **`Pragma`** 标头是一个与实现相关的标头，在请求——响应链中可能会产生各种不同的影响。此标头用于向后兼容不支持 HTTP/1.1 中 {{HTTPHeader("Cache-Control")}} 标头的 HTTP/1.0 缓存。
 

@@ -75,7 +75,6 @@ background-repeat: unset;
 ### Значения
 
 - `<repeat-style>`
-
   - : Следующие однозначные имеют двухзначные эквиваленты:
 
     | `repeat-x`  | тоже самое, что и `repeat no-repeat`    |
