@@ -1,7 +1,6 @@
 ---
 title: viewport meta 标记
 slug: Web/HTML/Reference/Elements/meta/name/viewport
-original_slug: Web/HTML/Guides/Viewport_meta_element
 ---
 
 本文介绍如何使用 "viewport" `<meta>` 标记来控制视口的大小和形状。
