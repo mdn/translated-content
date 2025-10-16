@@ -11,7 +11,7 @@ l10n:
 **`WritableStreamDefaultWriter()`** 构造函数用于创建一个新的 {{domxref("WritableStreamDefaultWriter")}} 对象实例。
 
 > [!NOTE]
-> 通常情况下，你不会手动使用此构造函数；而是通过调用 {{domxref("WritableStream.getWriter()")}} 方法来获取写入器。
+> 通常情况下，你不会手动使用此构造函数；而是通过调用 {{domxref("WritableStream.getWriter()")}} 方法来获取。
 
 ## 语法
 
