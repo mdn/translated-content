@@ -3090,6 +3090,7 @@
 /zh-CN/docs/Web/HTML/Global_attributes/translate	/zh-CN/docs/Web/HTML/Reference/Global_attributes/translate
 /zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy	/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey
+/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element	/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content
 /zh-CN/docs/Web/HTML/Inline_elements	/zh-CN/docs/Glossary/Inline-level_content
@@ -3101,7 +3102,7 @@
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode	/zh-CN/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /zh-CN/docs/Web/HTML/Responsive_images	/zh-CN/docs/Web/HTML/Guides/Responsive_images
-/zh-CN/docs/Web/HTML/Viewport_meta_tag	/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element
+/zh-CN/docs/Web/HTML/Viewport_meta_tag	/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /zh-CN/docs/Web/HTML/microformats	/zh-CN/docs/Web/HTML/Guides/Microformats
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Reference/Global_attributes
 /zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Glossary/Inline-level_content
