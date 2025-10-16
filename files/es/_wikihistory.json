@@ -2443,15 +2443,6 @@
       "editorUOC"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:11.693Z",
-    "contributors": [
-      "Creasick",
-      "Enesimus",
-      "javierpolit",
-      "DennisM"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
     "modified": "2020-08-31T14:16:45.193Z",
     "contributors": [
@@ -5034,27 +5025,6 @@
       "ExE-Boss",
       "wbamberg",
       "gabo8611"
-    ]
-  },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-03-23T23:51:24.173Z",
-    "contributors": [
-      "SphinxKnight",
-      "khalid32",
-      "Mgjbot",
-      "Manu",
-      "Markens",
-      "Nathymig"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2019-03-23T23:48:16.078Z",
-    "contributors": [
-      "LuisSevillano",
-      "IsaacAaron",
-      "Sheppy",
-      "Uri",
-      "Nathymig"
     ]
   },
   "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
@@ -9315,21 +9285,6 @@
       "jota1410"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2019-03-18T21:35:39.343Z",
-    "contributors": [
-      "lajaso"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2019-03-23T22:38:52.899Z",
-    "contributors": [
-      "apazacoder",
-      "Sebastianz",
-      "Guillaume-Heras",
-      "VictorAbdon"
-    ]
-  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-07-06T16:16:21.887Z",
     "contributors": [
@@ -9452,7 +9407,7 @@
       "Krenair"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-03-23T22:23:27.596Z",
     "contributors": [
       "elihro"
@@ -9801,6 +9756,21 @@
       "teoli",
       "inma_610",
       "deimidis"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2019-03-18T21:35:39.343Z",
+    "contributors": [
+      "lajaso"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
+    "modified": "2019-03-23T22:38:52.899Z",
+    "contributors": [
+      "apazacoder",
+      "Sebastianz",
+      "Guillaume-Heras",
+      "VictorAbdon"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
@@ -19347,6 +19317,15 @@
       "RaulHernandez"
     ]
   },
+  "conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9": {
+    "modified": "2020-07-16T22:28:11.693Z",
+    "contributors": [
+      "Creasick",
+      "Enesimus",
+      "javierpolit",
+      "DennisM"
+    ]
+  },
   "conflicting/Learn_web_development/Extensions/Forms": {
     "modified": "2020-07-16T22:22:12.140Z",
     "contributors": [
@@ -19503,6 +19482,17 @@
       "BrodaNoel"
     ]
   },
+  "conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b": {
+    "modified": "2019-03-23T23:51:24.173Z",
+    "contributors": [
+      "SphinxKnight",
+      "khalid32",
+      "Mgjbot",
+      "Manu",
+      "Markens",
+      "Nathymig"
+    ]
+  },
   "conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10": {
     "modified": "2019-03-23T23:27:17.444Z",
     "contributors": [
@@ -19527,6 +19517,16 @@
     "contributors": [
       "jesusvillalta",
       "Sheppy",
+      "Nathymig"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef": {
+    "modified": "2019-03-23T23:48:16.078Z",
+    "contributors": [
+      "LuisSevillano",
+      "IsaacAaron",
+      "Sheppy",
+      "Uri",
       "Nathymig"
     ]
   },

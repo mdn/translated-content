@@ -1,6 +1,7 @@
 ---
 title: Uso del modelo de objetos del documento
-slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+slug: conflicting/Web/API/Document_Object_Model
+original_slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}
