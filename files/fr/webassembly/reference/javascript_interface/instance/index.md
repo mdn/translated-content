@@ -6,23 +6,23 @@ original_slug: WebAssembly/JavaScript_interface/Instance
 
 {{WebAssemblySidebar}}
 
-Un objet **`WebAssembly.Instance`** représente un objet exécutable, avec un état, qui est une instance d'un [module WebAssembly](/fr/docs/WebAssembly/JavaScript_interface/Module). Un objet `Instance` contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qui permettent d'invoquer du code WebAssembly depuis du code JavaScript.
+Un objet **`WebAssembly.Instance`** représente un objet exécutable, avec un état, qui est une instance d'un [module WebAssembly](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module). Un objet `Instance` contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Guides/Exported_functions) qui permettent d'invoquer du code WebAssembly depuis du code JavaScript.
 
 ## Constructeur
 
-- [`WebAssembly.Instance()`](/fr/docs/WebAssembly/JavaScript_interface/Instance/Instance)
+- [`WebAssembly.Instance()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance/Instance)
   - : Crée un nouvel objet `Instance`.
 
 ## Propriétés des instances
 
-- [`Instance.prototype.exports`](/fr/docs/WebAssembly/JavaScript_interface/Instance/exports)
+- [`Instance.prototype.exports`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports)
   - : Renvoie un objet dont les propriétés sont les fonctions exportées par l'instance de module WebAssembly afin qu'elles puissent être récupérées et utilisées en JavaScript. Cette propriété est uniquement accessible en lecture seule.
 
 ## Exemples
 
 ### Instancier un module WebAssembly de façon synchrone
 
-Le constructeur `WebAssembly.Instance()` peut être appelé afin d'instancier un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) de façon synchrone. Par exemple&nbsp;:
+Le constructeur `WebAssembly.Instance()` peut être appelé afin d'instancier un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module) de façon synchrone. Par exemple&nbsp;:
 
 ```js
 const importObject = {
@@ -42,7 +42,7 @@ fetch("simple.wasm")
   });
 ```
 
-La façon préconisée de récupérer un objet `Instance` est asynchrone, par exemple en utilisant la fonction [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) de cette façon&nbsp;:
+La façon préconisée de récupérer un objet `Instance` est asynchrone, par exemple en utilisant la fonction [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) de cette façon&nbsp;:
 
 ```js
 const importObject = {
@@ -71,5 +71,5 @@ Cet exemple illustre également comment la propriété `exports` est utilisée a
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

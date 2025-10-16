@@ -3,8 +3,6 @@ title: CSS Selectors
 slug: Web/CSS/CSS_selectors
 ---
 
-{{CSSRef}}
-
 **選擇器**可以定義某組 CSS 樣式要套用到哪些元素上。
 
 ## 基本選擇器

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
-
 **`::selection`** CSS [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 (클릭이나 마우스 드래그처럼) 사용자에 의해 하이라이트된 문서의 일부분에 스타일을 적용합니다.
 
 {{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}

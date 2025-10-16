@@ -9,7 +9,7 @@ l10n:
 
 **`sticky`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、この正規表現に `y` フラグが使用されているかどうかを返します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.sticky", "taller")}}
 
 ```js interactive-example
 const str1 = "table football";

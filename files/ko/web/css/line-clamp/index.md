@@ -4,8 +4,6 @@ slug: Web/CSS/line-clamp
 original_slug: Web/CSS/-webkit-line-clamp
 ---
 
-{{CSSRef}}
-
 **`-webkit-line-clamp`** CSS 속성은 {{Glossary("block container", "블록 컨테이너")}}의 콘텐츠를 지정한 줄 수만큼으로 제한합니다.
 
 {{cssxref("display")}} 속성을 `-webkit-box` 또는 `-webkit-inline-box`로, 그리고 {{cssxref("-webkit-box-orient")}} 속성을 `vertical`로 설정한 경우에만 동작합니다.
@@ -14,7 +12,8 @@ original_slug: Web/CSS/-webkit-line-clamp
 
 앵커 요소에 적용한 경우 텍스트의 끝이 아니라 중앙에서 잘리는 경우도 있습니다.
 
-> **참고:** `-webkit-line-clamp`는 원래 WebKit이 구현했었으며 몇몇 문제점을 가지고 있으나 레거시 지원을 위해 표준화를 거쳤습니다. [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) 명세의 {{cssxref("line-clamp")}}가 `-webkit-line-clamp`를 대체하기 위해 정의된 속성입니다.
+> [!NOTE]
+> `-webkit-line-clamp`는 원래 WebKit이 구현했었으며 몇몇 문제점을 가지고 있으나 레거시 지원을 위해 표준화를 거쳤습니다. [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) 명세의 {{cssxref("line-clamp")}}가 `-webkit-line-clamp`를 대체하기 위해 정의된 속성입니다.
 
 ## 구문
 

@@ -11,7 +11,7 @@ l10n:
 
 この種のウィジェットは厳密なものではないので、コントロールの正確な値が重要でない限り、通常は使用するべきではありません。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Audio settings:</p>

@@ -3,8 +3,6 @@ title: 文本渲染
 slug: Web/CSS/text-rendering
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 `text-rendering` CSS 属性定义浏览器渲染引擎如何渲染字体。浏览器会在速度、清晰度、几何精度之间进行权衡。

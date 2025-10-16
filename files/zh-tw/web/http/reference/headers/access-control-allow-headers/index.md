@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Headers`** 回應標頭用於回應包含 {{HTTPHeader("Access-Control-Request-Headers")}} 的{{glossary("preflight request", "預檢請求")}}，以指示實際請求中可以使用哪些 HTTP 標頭。
 
 如果請求包含 {{HTTPHeader("Access-Control-Request-Headers")}} 標頭，此標頭是必需的。

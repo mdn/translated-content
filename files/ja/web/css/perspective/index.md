@@ -5,11 +5,9 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`perspective`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 z=0 の平面とユーザーとの間の距離を定めて 3D に配置された要素に遠近感を与えます。
 
-{{InteractiveExample("CSS Demo: perspective")}}
+{{InteractiveExample("CSS デモ: perspective")}}
 
 ```css interactive-example-choice
 perspective: none;

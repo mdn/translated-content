@@ -17,7 +17,8 @@ let specific_tbody = document.getElementById(tbody_id);
 let row = specific_tbody.insertRow(index);
 ```
 
-> **メモ:** `insertRow()` は、表に直接行を挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<tr>` 要素を作成する場合のように、行を個別に追加する必要はありません。
+> [!NOTE]
+> `insertRow()` は、表に直接行を挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<tr>` 要素を作成する場合のように、行を個別に追加する必要はありません。
 
 ## 構文
 

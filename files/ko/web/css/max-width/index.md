@@ -3,8 +3,6 @@ title: max-width
 slug: Web/CSS/max-width
 ---
 
-{{CSSRef}}
-
 **`max-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최대 너비를 설정합니다. `max-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)이 자신의 값보다 커지는걸 방지합니다.
 
 {{InteractiveExample("CSS Demo: max-width")}}

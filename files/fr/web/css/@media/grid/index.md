@@ -1,17 +1,17 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`grid`** permet de tester si le périphérique de sortie utilise un écran basé sur une grille.
 
-**`grid`** est une caractéristique média CSS (cf {{cssxref("@media")}}) dont la valeur est un booléen qui indique si l'appareil d'affichage fonctionne grâce à une grille (ex. un terminal ou un appareil qui ne dispose que d'une police à chasse fixe) ou grâce à une matrice d'affichage (avec des pixels « classiques »).
-
-La plupart des ordinateurs actuels possèdent des écrans matriciels. Parmi les appareils qui utilisent un affichage en grille, on trouve les appareils qui n'affichent que du texte dans un terminal ou des téléphones simples avec une seule police fixe.
+La plupart des ordinateurs et smartphones modernes disposent d'écrans matriciels. Les appareils à grille incluent par exemple les terminaux texte uniquement et les téléphones basiques avec une seule police fixe.
 
 ## Syntaxe
 
-La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxref("&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.
+La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxref("CSS_media_queries/Using_media_queries", "&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.
 
 ## Exemples
 
@@ -66,3 +66,8 @@ La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxre
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}
