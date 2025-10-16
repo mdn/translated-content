@@ -52,7 +52,8 @@ label {
 
 참과 거짓 중 하나의 값을 갖는 비활성화 속성은 사용자가 컨트롤 또는 하위 컨트롤들과 상호작용할 수 없음을 의미합니다. 이 속성이 지정되지 않은 경우 컨트롤은 상위 요소, 예를 들어 `fieldset`에서 설정을 상속받습니다. `disabled` 속성이 설정된 상위 요소가 없고, 컨트롤도 해당 속성을 갖지 않는다면 컨트롤이 활성화됩니다. {{ HTMLElement("optgroup") }}에 선언되었을 경우 선택 요소와는 여전히 상호작용이 가능하지만 (다른 요소들은 비활성화되지 않았을 때), 옵션 그룹 내의 어떤 항목도 선택할 수 없습니다.
 
-> **참고:** {{ HTMLElement("fieldset") }} 이 비활성화된 경우 {{ HTMLElement("legend") }} 내의 폼 컨트롤을 제외한 모든 하위 폼 컨트롤들이 비활성화됩니다.
+> [!NOTE]
+> {{ HTMLElement("fieldset") }} 이 비활성화된 경우 {{ HTMLElement("legend") }} 내의 폼 컨트롤을 제외한 모든 하위 폼 컨트롤들이 비활성화됩니다.
 
 지원하는 요소에 `disabled` 속성이 적용되면 {{cssxref(":disabled")}} 의사 클래스가 해당 요소에 적용됩니다. 반대로 `disabled` 속성을 지원하지만 속성이 설정되지 않은 요소는 {{cssxref(":enabled")}} 의사 클래스가 적용됩니다.
 
@@ -66,7 +67,8 @@ Firefox는 다른 브라우저들과 달리 페이지를 불러올 때마다 {{h
 
 비활성화된 필드는 그 값이 변경될 수 없기 때문에, [`required`](/ko/docs/Web/HTML/Attributes/required)는 `disabled` 속성이 지정된 입력 필드에 아무 영향도 미치지 않습니다. 또한 요소들이 변경 불가능하게 되므로 [`pattern`](/ko/docs/Web/HTML/Attributes/pattern) 과 같은 대부분의 다른 속성들도 컨트롤이 활성화될 때까지 영향을 미치지 않습니다.
 
-> **참고:** `disabled` 속성이 지정된 입력 필드에는 `required` 속성을 사용할 수 없습니다.
+> [!NOTE]
+> `disabled` 속성이 지정된 입력 필드에는 `required` 속성을 사용할 수 없습니다.
 
 ### 유용성
 

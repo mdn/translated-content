@@ -10,7 +10,7 @@ l10n:
 
 **`<ul>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
-{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;ul&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <ul>

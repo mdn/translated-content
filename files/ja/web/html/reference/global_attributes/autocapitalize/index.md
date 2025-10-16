@@ -1,25 +1,112 @@
 ---
-title: autocapitalize
+title: HTML autocapitalize グローバル属性
+short-title: autocapitalize
 slug: Web/HTML/Reference/Global_attributes/autocapitalize
-original_slug: Web/HTML/Global_attributes/autocapitalize
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+**`autocapitalize`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)の属性で、ユーザーによって入力／編集されたとき、入力文字列の先頭大文字化が自動的に行われるかどうか、どのように行われるかを制御します。これは次のものに関連します。
 
-**`autocapitalize`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)の属性で、ユーザーによって入力／編集されたとき、入力文字列の先頭大文字化が自動的に行われるかどうか、どのように行われるかを制御します。
+- {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) が設定されたあらゆる要素。
 
-以下の値を指定することができます。
+`autocapitalize` は、物理キーボードで入力する場合の動作には影響しません。モバイル端末の仮想キーボードや音声入力など、その他の入力メカニズムの動作に影響します。これにより、例えば各文の最初の文字を自動的に大文字にするなど、データ入力がより迅速かつ容易になり、ユーザーを支援することができます。
 
-- `off` または `none`: 自動的な大文字化は適用されません (すべての文字は既定で小文字です)。
-- `on` または `sentences`: 各文の最初の文字を既定で大文字にします。それ以外の文字は既定で小文字です。
-- `words`: 各語の最初の文字を既定で大文字にします。それ以外の文字は既定で小文字です。
-- `characters`: すべての文字は既定で大文字になります。
+## 値
 
-`autocapitalize` 属性は、物理キーボードからの入力時の挙動には影響しません。モバイル端末の仮想キーボードや音声入力など、他の入力方式の挙動に影響します。その様な方式では、文の最初の文字を自動的に大文字化することでユーザーを補助することがよくあります。 `autocapitalize` 属性は要素単位の挙動を上書きすることができます。
+取りうる値は次の通りです。
 
-`autocapitalize` 属性では、 {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) の値が `url`, `email`, `password` の場合は自動大文字化が有効になりません。
+- `none` または `off`
+  - : 自動的な大文字化は適用されません。
+- `sentences` または `on`
+  - : 各文の最初の文字を既定で大文字にします。
+- `words`
+  - : 各語の最初の文字を既定で大文字にします。
+- `characters`
+  - : すべての文字が既定で大文字になります。
+
+## 使用上のメモ
+
+- `autocapitalize` は、`<input>` と `<textarea>` 要素、およびそれらを含む {{htmlelement("form")}} 要素に設定できます。 `autocapitalize` が `<form>` 要素に設定されている場合、その要素に含まれるすべての `<input>` および `<textarea>` 要素の自動大文字化動作が設定され、含まれている要素に設定されている `autocapitalize` の値は上書きされます。
+- `autocapitalize` は、自動大文字化が決して有効にならない `url`、`email`、`password` `<input>` 型には効果はありません。
+- `autocapitalize` が指定されていない場合、採用される既定の動作はブラウザーによって異なります。例を示します。
+  - Chrome および Safari の既定値は `on`/`sentences`です。
+  - Firefox の既定値は `off`/`none` です。
+
+## 例
+
+### HTML
+
+```html-nolint
+<p>さまざまな自動大文字化設定を検査するためのフォーム</p>
+
+<form>
+  <div>
+    <label for="default">既定: 自動大文字化の設定なし</label>
+    <input type="text" id="default" name="default" />
+  </div>
+  <div>
+    <label for="off">autocapitalize="off"</label>
+    <input type="text" id="off" name="off" autocapitalize="off" />
+  </div>
+  <div>
+    <label for="none">autocapitalize="none"</label>
+    <input type="text" id="none" name="none" autocapitalize="none" />
+  </div>
+  <div>
+    <label for="on">autocapitalize="on"</label>
+    <input type="text" id="on" name="on" autocapitalize="on" />
+  </div>
+  <div>
+    <label for="sentences">autocapitalize="sentences"</label>
+    <input
+      type="text"
+      id="sentences"
+      name="sentences"
+      autocapitalize="sentences" />
+  </div>
+  <div>
+    <label for="words">autocapitalize="words"</label>
+    <input type="text" id="words" name="words" autocapitalize="words" />
+  </div>
+  <div>
+    <label for="characters">autocapitalize="characters"</label>
+    <input
+      type="text"
+      id="characters"
+      name="characters"
+      autocapitalize="characters" />
+  </div>
+  <div>
+    <label for="characters-ta">autocapitalize="characters" on textarea</label>
+    <textarea
+      type="text"
+      id="characters-ta"
+      name="characters-ta"
+      autocapitalize="characters">
+    </textarea>
+  </div>
+</form>
+
+<hr />
+
+<p contenteditable autocapitalize="characters">
+  このコンテンツは編集可能であり、 autocapitalize="characters" が設定されています。
+</p>
+```
+
+```css hidden
+div {
+  margin-bottom: 20px;
+}
+```
+
+## 結果
+
+仮想キーボードまたは音声入力を使用して、各入力に対する効果を検査してください（キーボード入力は動作しません）。
+
+{{ EmbedLiveSample("Examples", "100%", "500") }}
 
 ## 仕様書
 

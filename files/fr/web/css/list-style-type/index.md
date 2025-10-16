@@ -88,7 +88,7 @@ hr {
 
 La [couleur](/fr/docs/Web/CSS/color_value) de la puce utilisée sera la même que la couleur calculée de l'élément sur lequel elle s'applique.
 
-Cette propriété s'applique aux éléments d'une liste (c'est-à-dire les éléments pour lesquels on a `display: list-item;`). Cela inclut par défaut les éléments [`li`](/fr/docs/Web/HTML/Element/li) et [`summary`](/fr/docs/Web/HTML/Element/summary). Il est possible de l'utiliser pour d'autres éléments si on utilise `display: list-item` sur ceux-ci. Cette propriété est héritée et on peut donc l'appliquer aux éléments parents (généralement [`ol`](/fr/docs/Web/HTML/Element/ol) ou [`ul`](/fr/docs/Web/HTML/Element/ul)) afin qu'elle s'applique à l'ensemble des éléments fils.
+Cette propriété s'applique aux éléments d'une liste (c'est-à-dire les éléments pour lesquels on a `display: list-item;`). Cela inclut par défaut les éléments [`li`](/fr/docs/Web/HTML/Reference/Elements/li) et [`summary`](/fr/docs/Web/HTML/Reference/Elements/summary). Il est possible de l'utiliser pour d'autres éléments si on utilise `display: list-item` sur ceux-ci. Cette propriété est héritée et on peut donc l'appliquer aux éléments parents (généralement [`ol`](/fr/docs/Web/HTML/Reference/Elements/ol) ou [`ul`](/fr/docs/Web/HTML/Reference/Elements/ul)) afin qu'elle s'applique à l'ensemble des éléments fils.
 
 ## Syntaxe
 
@@ -243,9 +243,9 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 - `upper-armenian` {{experimental_inline}}\*
   - : La numérotation arménienne traditionnelle en majuscules.
 - `disclosure-open` {{experimental_inline}}
-  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément [`<details>`](/fr/docs/Web/HTML/Element/details)) est déplié/révélé.
+  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details)) est déplié/révélé.
 - `disclosure-closed` {{experimental_inline}}
-  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément [`<details>`](/fr/docs/Web/HTML/Element/details)) est replié/masqué.
+  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details)) est replié/masqué.
 
 ### Extensions non-standards
 
@@ -274,7 +274,7 @@ ul li::before {
 ```
 
 - [_VoiceOver and_ `list-style-type: none` – _Unfettered Thoughts_ (en anglais)](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [MDN Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [_Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Définition formelle

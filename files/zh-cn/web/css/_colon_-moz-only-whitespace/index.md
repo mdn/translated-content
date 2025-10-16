@@ -3,7 +3,7 @@ title: :blank
 slug: Web/CSS/:-moz-only-whitespace
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) 用于匹配如下节点
 

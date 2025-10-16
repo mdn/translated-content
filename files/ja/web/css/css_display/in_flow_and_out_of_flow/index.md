@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-{{CSSRef}}
-
 [前のガイド](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。
 
 ## フロー内の要素の例

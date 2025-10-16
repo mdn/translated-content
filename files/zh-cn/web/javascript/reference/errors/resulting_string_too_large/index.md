@@ -3,8 +3,6 @@ title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain

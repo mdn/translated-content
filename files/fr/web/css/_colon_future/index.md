@@ -1,11 +1,11 @@
 ---
 title: :future
 slug: Web/CSS/:future
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:future`** est une pseudo-classe agissant dans la dimension temporelle qui cible n'importe quel élément apparaissant entièrement après un élément correspondant à {{cssxref(":current")}}. Ce sélecteur peut par exemple servir dans le cas d'une vidéo ayant des sous-titres affichés à l'aide du format [WebVTT](/fr/docs/Web/API/WebVTT_API).
+Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:future`** agit dans la dimension temporelle qui cible n'importe quel élément apparaissant entièrement après un élément correspondant à {{cssxref(":current")}}. Ce sélecteur peut par exemple servir dans le cas d'une vidéo ayant des sous-titres affichés à l'aide du format [WebVTT](/fr/docs/Web/API/WebVTT_API).
 
 ```css
 :future(p, span) {
@@ -15,17 +15,13 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 
 ## Syntaxe
 
-{{csssyntax}}
-
-## Exemples
-
-### CSS
-
 ```css
-:future(p, span) {
-  display: none;
+:future {
+  /* ... */
 }
 ```
+
+## Exemples
 
 ### HTML
 
@@ -40,6 +36,14 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
     src="subtitles.vtt"
     default />
 </video>
+```
+
+### CSS
+
+```css
+:future(p, span) {
+  display: none;
+}
 ```
 
 ### WebVTT
@@ -70,6 +74,6 @@ Voici le troisième sous-titre
 
 ## Voir aussi
 
-- [Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
+- [Format Web Video Text Tracks (WebVTT)](/fr/docs/Web/API/WebVTT_API)
 - {{cssxref(":current")}}
 - {{cssxref(":past")}}

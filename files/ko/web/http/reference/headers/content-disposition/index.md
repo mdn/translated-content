@@ -4,7 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Disposition
 original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
 일반적인 HTTP 응답에서 **`Content-Disposition`** 헤더는 컨텐츠가 브라우저에 _inline_ 되어야 하는 웹페이지 자체이거나 웹페이지의 일부인지, 아니면 *attachment*로써 다운로드 되거나 로컬에 저장될 용도록 쓰이는 것인지를 알려주는 헤더입니다.
 
 `multipart/form-data` 본문에서의 **`Content-Disposition`** 일반 헤더는 multipart의 하위파트에서 활용될 수 있는데, 이 때 이 헤더는 multipart 본문 내의 필드에 대한 정보를 제공합니다. multipart의 하위파트는 {{HTTPHeader("Content-Type")}} 헤더에 정의된 _boundary_ 구분자에 의해 구분되며, `Content-Disposition` 헤더를 multipart 자체에 사용하는 것은 아무런 효과를 발휘하지 못합니다.

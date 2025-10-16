@@ -1,28 +1,27 @@
 ---
 title: Math.imul()
+short-title: imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.imul()`** は静的メソッドで、2 つの引数で C 言語風の 32 ビット乗算を行った結果を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+{{InteractiveExample("JavaScript デモ: Math.imul()")}}
 
 ```js interactive-example
 console.log(Math.imul(3, 4));
-// Expected output: 12
+// 予想される結果: 12
 
 console.log(Math.imul(-5, 12));
-// Expected output: -60
+// 予想される結果: -60
 
 console.log(Math.imul(0xffffffff, 5));
-// Expected output: -5
+// 予想される結果: -5
 
 console.log(Math.imul(0xfffffffe, 5));
-// Expected output: -10
+// 予想される結果: -10
 ```
 
 ## 構文
@@ -73,4 +72,5 @@ Math.imul(0xfffffffe, 5); // -10
 ## 関連情報
 
 - [`Math.imul` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims における `Math.imul` のポリフィル](https://www.npmjs.com/package/math.imul)
 - [Emscripten](https://ja.wikipedia.org/wiki/Emscripten)

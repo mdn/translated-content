@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/501
 original_slug: Web/HTTP/Status/501
 ---
 
-{{HTTPSidebar}}
-
 하이퍼텍스트 전송 프로토콜(HTTP) **`501 Not Implemented`** 서버 응답 코드는
 **요청을 수행할 수 있는 기능을 서버가 지원하지 않는다**는 것을 의미합니다.
 

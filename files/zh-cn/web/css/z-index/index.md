@@ -3,8 +3,6 @@ title: z-index
 slug: Web/CSS/z-index
 ---
 
-{{CSSRef}}
-
 CSS **`z-index`** 属性设置定位元素及其后代元素或 flex 项目的 Z 轴顺序。z-index 较大的重叠元素会覆盖较小的元素。
 
 {{InteractiveExample("CSS Demo: z-index")}}

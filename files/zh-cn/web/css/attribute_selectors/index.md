@@ -3,8 +3,6 @@ title: 属性选择器
 slug: Web/CSS/Attribute_selectors
 ---
 
-{{CSSRef}}
-
 CSS **属性选择器**匹配那些具有特定属性或属性值的元素。
 
 ```css

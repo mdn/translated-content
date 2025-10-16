@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status
 original_slug: Web/HTTP/Status
 ---
 
-{{HTTPSidebar}}
-
 Os códigos de status de resposta HTTP indicam se uma solicitação [HTTP](/pt-BR/docs/Web/HTTP) específica foi concluída com êxito.
 As respostas são agrupadas em cinco classes:
 

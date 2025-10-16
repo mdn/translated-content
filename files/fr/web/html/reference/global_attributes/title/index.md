@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/title
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
 
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
 
@@ -36,7 +36,7 @@ On le trouve généralement utilisé pour :
 
 - Fournir un libellé pour les éléments {{HTMLElement("iframe")}}
 - Fournir un libellé associé automatiquement à un élément {{HTMLElement("input")}}
-- Fournir un libellé pour les contrôles des [tableaux de données](/fr/docs/Web/HTML/Element/table)
+- Fournir un libellé pour les contrôles des [tableaux de données](/fr/docs/Web/HTML/Reference/Elements/table)
 
 Si cet attribut est absent, cela signifie que le titre de l'élément ancêtre le plus proche est toujours pertinent (et pourrait être utilisé comme bulle d'information pour l'élément courant). Si cet attribut vaut la chaîne vide, cela signifie explicitement que la valeur du titre de l'ancêtre le plus proche n'est pas pertinent (et ne devrait pas être utilisé comme bulle d'information).
 
@@ -110,5 +110,5 @@ Cela est dû à une prise en charge hétérogène de la part des navigateurs. Si
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.title")}} that reflects this attribute.

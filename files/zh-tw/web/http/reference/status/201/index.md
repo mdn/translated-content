@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`201 Created`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示 HTTP 請求成功並導致資源的建立。這個狀態碼常見於 {{HTTPMethod("POST")}} 請求的結果。
 
 新資源或對新資源的描述與連結會在回應發送前建立。新建立的項目會在消息主體中返回，位置為**初始請求的 URL**，或是回應中 {{HTTPHeader("Location")}} 標頭所指定的 URL。

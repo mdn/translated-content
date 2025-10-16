@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 88866ee128116bd07235f5d3531152d5686a1e6d
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。

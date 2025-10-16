@@ -1,51 +1,49 @@
 ---
-title: DOMTokenList.contains()
+title: DOMTokenList：contains() 方法
 slug: Web/API/DOMTokenList/contains
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("DOMTokenList")}}接口的 **`contains()`** 方法返回 {{domxref("Boolean")}} 类型。若传入的参数 `token` 包含在列表中时则返回`true`，否则返回 `false`。
+{{domxref("DOMTokenList")}} 接口的 **`contains()`** 方法会返回布尔值——如果底层列表中包含给定的标记，则返回 `true`，否则返回 `false`。
 
 ## 语法
 
-```plain
-tokenList.contains(token);
+```js-nolint
+contains(token)
 ```
 
 ### 参数
 
 - `token`
-  - : {{domxref("DOMString")}}类型，用于判断是否存在于列表中的标记。
+  - : 表示你想要检查是否存在于列表中的标记的字符串。
 
 ### 返回值
 
-{{domxref("Boolean")}}类型，当`token`包含在列表中时返回`true`，否则返回`false`。
+布尔值，如果调用的列表中包含 `token`，则为 `true`，否则为 `false`。
 
 ## 示例
 
-在下面的列子中，我们通过{{domxref("Element.classList")}}方法从 {{htmlelement("span")}} 元素中获取`DOMTokenList` 对象。然后测试验证`"c"` 是否包含在列表中，结果输出到 `<span>`标签的内容 {{domxref("Node.textContent")}}。
+在下面的示例中，我们通过 {{domxref("Element.classList")}} 获取设置在 {{htmlelement("span")}} 元素上的 `DOMTokenList` 类型的类列表。然后我们检查列表中是否存在 `"c"` ，并将结果写入 `<span>` 的 {{domxref("Node.textContent")}}。
 
-HTML:
+首先是 HTML：
 
 ```html
 <span class="a b c"></span>
 ```
 
-JavaScript:
+然后是 JavaScript：
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
-let result = classes.contains("c");
-if (result) {
-  span.textContent = "The classList contains 'c'";
-} else {
-  span.textContent = "The classList does not contain 'c'";
-}
+const span = document.querySelector("span");
+span.textContent = span.classList.contains("c")
+  ? "classList 中包含“c”"
+  : "classList 中不包含“c”";
 ```
 
-结果如下：
+输出结果如下：
 
 {{ EmbedLiveSample('示例', '100%', 60) }}
 
@@ -53,6 +51,6 @@ if (result) {
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

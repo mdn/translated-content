@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
 **`oklch()`** 関数記法は、指定された色を Oklch 色空間で表現するものです。これは {{cssxref("color_value/oklab","oklab()")}} と同じ L 軸を持っていますが、極座標系の C （彩度）と H （色相）を使用します。
 
 ## 構文
@@ -30,7 +28,8 @@ Functional notation: `oklch(L C H[ / A])`
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> [!NOTE]
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 

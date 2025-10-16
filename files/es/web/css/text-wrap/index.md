@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
-{{CSSRef}}
-
 La propiedad abreviada de CSS **`text-wrap`** controla cómo se envuelve el texto dentro de un elemento. Los diferentes valores proporcionan:
 
 - Mejoras tipográficas, por ejemplo, longitudes de línea más equilibradas en títulos divididos.

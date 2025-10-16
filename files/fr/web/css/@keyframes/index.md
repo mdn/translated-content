@@ -1,27 +1,40 @@
 ---
 title: "@keyframes"
 slug: Web/CSS/@keyframes
+l10n:
+  sourceCommit: 3d06d82cbddf640291fd66cf85cd9014c4e867c5
 ---
 
-{{CSSRef}}
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
 
-La [règle](/fr/docs/Web/CSS/At-rule) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
+## Syntaxe
 
 ```css
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateX(0%);
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(100%);
   }
 }
 ```
 
-Il est possible de manipuler la règle @ `@keyframes` via JavaScript et le CSSOM, notamment avec l'interface {{domxref("CSSKeyframesRule")}}.
+### Valeurs
+
+- `<identifier>`
+  - : Un nom ({{cssxref("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/custom-ident).
+- `from`
+  - : Indique le point de départ de l'animation (correspond à un avancement de `0%`).
+- `to`
+  - : Indique la fin de l'animation (correspond à un avancement de `100%`).
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Le pourcentage d'avancement de l'animation auquel l'étape décrite s'applique.
+
+Il est possible de manipuler la règle `@keyframes` via JavaScript et le CSSOM, notamment avec l'interface {{domxref("CSSKeyframesRule")}}.
+
+## Description
 
 Afin d'utiliser ces règles, on créera une règle `@keyframes` avec un nom pour chaque étape et on utilisera ce nom avec la propriété {{cssxref("animation-name")}} afin qu'une animation corresponde à la liste des étapes qui la composent. Chaque règle `@keyframes` contient une liste de sélecteurs d'étapes dont chacun contient le pourcentage d'avancement de l'animation auquel il correspond ainsi que les informations de styles qui correspondent à cette étape..
 
@@ -65,7 +78,31 @@ Si des propriétés ne sont pas définies à chaque étape, elles sont interpol�
 
 Ici, la propriété {{cssxref("top")}} est animée en passant par les étapes `0%`, `30%` et `100%`. Quant à {{cssxref("left")}}, elle est animée aux étapes `0%`, `68%` , `72%` et `100%`.
 
-Seules les propriétés qui sont définies sur les étapes de début (`0%`) et de fin (`100%`) seront animées. Toutes les propriétés qui ne sont pas incluses dans les descriptions de ces étapes conserveront leurs valeurs de départ au cours de l'animation.
+### Quand une étape clé est définie plusieurs fois
+
+Si une étape clé est définie plusieurs fois mais que toutes les propriétés concernées ne figurent pas dans chaque étape clé, toutes les valeurs spécifiées dans ces étapes clés sont prises en compte. Par exemple :
+
+```css
+@keyframes identifier {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+```
+
+Dans cet exemple, à l'étape clé `50%`, les valeurs utilisées sont `top: 10px` et `left: 20px`.
+
+Les étapes clés en cascade sont prises en charge à partir de Firefox 14.
 
 ### `!important` dans une étape
 
@@ -77,8 +114,8 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
     margin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;
-  } /* ignorée */
+    margin-top: 150px !important; /* ignorée */
+  }
   to {
     margin-top: 100px;
   }
@@ -96,68 +133,15 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
 }
 ```
 
-## Syntaxe
-
-### Valeurs
-
-- `<identifier>`
-  - : Un nom ({{cssxref("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/custom-ident).
-- `from`
-  - : Indique le point de départ de l'animation (correspond à un avancement de `0%`).
-- `to`
-  - : Indique la fin de l'animation (correspond à un avancement de `100%`).
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Le pourcentage d'avancement de l'animation auquel l'étape décrite s'applique.
-
 ### Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Exemples d'animation CSS
 
-```css
-p {
-  animation-duration: 25s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  75% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-```
-
-### HTML
-
-```html
-<p>
-  Le Chat grimaça en apercevant Alice. Elle trouva qu’il avait l’air bon enfant,
-  et cependant il avait de très longues griffes et une grande rangée de dents ;
-  aussi comprit-elle qu’il fallait le traiter avec respect.
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","500","300")}}
-
-### Plus d'exemples ?
-
-Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) pour de plus amples exemples.
+Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) et [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) pour des exemples.
 
 ## Spécifications
 
@@ -169,5 +153,9 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- {{cssxref("animation-range")}}
+- [Animation déclenchée par le défilement en CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- Le module d'[animations CSS](/fr/docs/Web/CSS/CSS_animations)
+- [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

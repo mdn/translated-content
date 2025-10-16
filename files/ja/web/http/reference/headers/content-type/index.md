@@ -1,18 +1,16 @@
 ---
-title: Content-Type
+title: Content-Type ヘッダー
+short-title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
-original_slug: Web/HTTP/Headers/Content-Type
 l10n:
-  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`Content-Type`** は{{Glossary("representation header","表現ヘッダー")}}で、コンテンツへのエンコードが適用される前の、リソースの元の{{Glossary("MIME type","メディア種別")}}を示すために使用します。
 
 レスポンスにおいては、 `Content-Type` ヘッダーはクライアントに返されたコンテンツの実際の種類を伝えます。
 {{HTTPMethod("POST")}} や {{HTTPMethod("PUT")}} などのリクエストにおいては、クライアントは `Content-Type` ヘッダーを使用してサーバーに送信しようとしているコンテンツの種類を指定します。
-サーバーの実装や設定がコンテンツの種類に関して厳密な場合、 {{HTTPStatus("415")}} クライアントエラーレスポンスが返る可能性があります。
+サーバーの実装や設定がコンテンツの種別の扱いに関して厳密な場合、 {{HTTPStatus("415")}} クライアントエラーレスポンスが返る可能性があります。
 
 `Content-Type` ヘッダーは {{HTTPHeader("Content-Encoding")}} とは異なります。 `Content-Encoding` は、受信者がもとの形にデコードする方法を得るのに役立ちます。
 
@@ -72,7 +70,7 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
     - **`charset`**: 標準で使用する{{Glossary("character encoding","文字エンコーディング")}}を示します。
       この値は大文字小文字を区別しませんが、小文字を推奨します。
     - **`boundary`**: 本文がマルチパートである場合、 `boundary` ディレクティブが必要です。
-      メッセージの複数の部分の境界を区切るために使用します。
+      メッセージの複数のパートの境界を区切るために使用します。
       これはさまざまなシステム（メールゲートウェイなど）を通過しても大丈夫だと知られている文字の中から 1～70 文字で構成されます（ホワイトスペースで終了しません）。
       ふつう、ヘッダーの境界は 2 本のダッシュで始まり、最後の境界には最後にも 2 本のダッシュが入ります。
 
@@ -80,7 +78,7 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 
 ### 正しいコンテンツタイプで資産を提供
 
-例えば、次の2つのレスポンスの例では、JavaScript および CSS の資産は、JavaScript では `text/javascript` を、CSS では `text/css` を使用して配信されます。
+例えば、次の 2 つのレスポンスの例では、JavaScript および CSS の資産が、JavaScript には `text/javascript` を、CSS には `text/css` を用いて配信されます。
 これらのリソースに正しいコンテンツタイプを入力することで、ブラウザーにそれらをより安全に、より高いパフォーマンスで処理してもらうことができます。
 詳しくは[サーバーで MIME タイプを正しく設定する](/ja/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)を参照してください。
 
@@ -161,7 +159,7 @@ comment=Hello!
 
 ### REST API で JSON を使用した場合の `Content-Type`
 
-多くの {{Glossary("REST")}} APIは、 `application/json` をコンテンツタイプとして使用しており、これはマシン間の通信やプログラムによる操作に便利です。
+多くの {{Glossary("REST")}} API は、コンテンツタイプとして `application/json` を使用しており、これはマシン間の通信やプログラムによる操作に便利です。
 次の例は、リクエストが成功した結果を示す {{HTTPStatus("201", "201 Created")}} レスポンスを示しています。
 
 ```http

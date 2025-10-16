@@ -3,7 +3,7 @@ title: asm.js
 slug: Games/Tools/asm.js
 ---
 
-{{Deprecated_header}}{{GamesSidebar}}
+{{Deprecated_header}}
 
 [asm.js](http://asmjs.org/) は 高度に最適化可能な JavaScript のサブセットを規定する仕様です。この文書では、asm.js で可能なこと、利点、利用方法、そして関連する情報と使用例を解説します。
 
