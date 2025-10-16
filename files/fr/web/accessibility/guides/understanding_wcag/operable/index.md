@@ -1,14 +1,14 @@
 ---
-title: Opérable
+title: Utilisable
 slug: Web/Accessibility/Guides/Understanding_WCAG/Operable
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-Cet article fournit des conseils pratiques pour rédiger votre contenu web afin qu'il respecte les critères de succès du principe **Opérable** des Directives pour l'accessibilité du contenu Web (WCAG) 2.0 et 2.1. Le principe Opérable stipule que les composants d'interface utilisateur et la navigation doivent pouvoir être utilisés.
+Cet article fournit des conseils pratiques pour rédiger votre contenu web afin qu'il respecte les critères de succès du principe **Utilisable** des Directives pour l'accessibilité du contenu Web (WCAG) 2.0 et 2.1. Le principe Utilisable stipule que les composants d'interface utilisateur et la navigation doivent pouvoir être utilisés.
 
 > [!NOTE]
-> Pour lire les définitions du W3C concernant le principe Opérable, ses lignes directrices et ses critères de succès, consultez [Principe 2&nbsp;: Opérable — Les composants d'interface utilisateur et la navigation doivent pouvoir être utilisés. <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#operable)
+> Pour lire les définitions du W3C concernant le principe Utilisable, ses lignes directrices et ses critères de succès, consultez [Principe 2&nbsp;: Utilisable — Les composants d'interface utilisateur et la navigation doivent pouvoir être utilisés. <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#operable)
 
 ## Règle 2.1 — Accessibilité au clavier : rendre toutes les fonctionnalités accessibles au clavier
 
@@ -479,6 +479,6 @@ Les critères de succès de cette règle garantissent que les utilisateur·ice·
 
 - [WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
   1. [Perceptible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-  2. Opérable
+  2. Utilisable
   3. [Compréhensible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
   4. [Robuste](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
