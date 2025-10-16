@@ -172,5 +172,5 @@ chose.addEventListener("change", (e) => {
 ## 関連情報
 
 - {{cssxref('text-spacing-trim')}}
-- [`ic`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ローカルフォント相対長) および [`ric`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ルートフォント相対長) 単位
+- [`ic`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ローカルフォント相対長) および [`ric`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ルートフォント相対長) 単位
 - [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
