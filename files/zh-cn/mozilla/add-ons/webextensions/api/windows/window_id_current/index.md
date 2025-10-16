@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `browser.windows.WINDOW_ID_CURRENT` 是可以在部分 API 中用作 `windowId` 参数来表示当前窗口的值。
 
 ## 浏览器兼容性

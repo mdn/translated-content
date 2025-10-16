@@ -3,8 +3,6 @@ title: 協議升級機制
 slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
 ---
 
-{{HTTPSidebar}}
-
 [HTTP/1.1 協議](/zh-TW/docs/Web/HTTP)提供了一種特殊的機制，這一機制允許將一個已建立的連接升級成新的、不相容的協議。這篇指南涵蓋了其運作原理和使用場景。
 
 通常來說這一機制總是由客戶端發起的 （不過也有例外，比如說可以由服務端發起[升級到傳輸層安全協議（TLS）](#server-initiated_upgrade_to_tls)）， 服務端可以選擇是否要升級到新協議。借助這一技術，連接可以以常用的協議啟動（如 HTTP/1.1），隨後再升級到 HTTP2 甚至是 WebSockets.

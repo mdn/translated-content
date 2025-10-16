@@ -6,8 +6,6 @@ original_slug: Web/HTTP/Methods
 
 > _Nota: O conteúdo original publicado em inglês no Mozilla Developer Network utiliza o termo "resource", mantido na tradução, que refere-se a qualquer destino válido ao executar uma conexão usando o protocolo HTTP. Na língua portuguesa, ao falar sobre requisições, o termo é pouco usado com essa finalidade ou contexto._
 
-{{HTTPSidebar}}
-
 O protocolo HTTP define um conjunto de **métodos de requisição** responsáveis por indicar a ação a ser executada para um dado recurso. Embora esses métodos possam ser descritos como substantivos, eles também são comumente referenciados como **_HTTP Verbs (Verbos HTTP)_**. Cada um deles implementa uma semântica diferente, mas alguns recursos são compartilhados por um grupo deles, como por exemplo, qualquer método de requisição pode ser do tipo {{glossary("safe")}}, {{glossary("idempotent")}} ou {{glossary("cacheable")}}.
 
 - [`GET`](/pt-BR/docs/Web/HTTP/Reference/Methods/GET)

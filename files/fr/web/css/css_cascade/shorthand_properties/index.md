@@ -6,8 +6,6 @@ l10n:
   sourceCommit: be7a098e6af7b820c06a2d5169a9221ee2065e82
 ---
 
-{{CSSRef}}
-
 **_Les propriétés raccourcies_** sont des propriétés CSS permettant de paramétrer simultanément les valeurs de plusieurs propriétés CSS. Utiliser une propriété raccourcie permet d'obtenir des feuilles de style plus concises (et souvent plus lisibles).
 
 La spécification CSS définit des propriétés raccourcies qui regroupent des propriétés courantes portant sur le même thème. Ainsi, la propriété [`background`](/fr/docs/Web/CSS/background) est une propriété raccourcie qui permet de définir les valeurs de [`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-repeat`](/fr/docs/Web/CSS/background-repeat), et [`background-position`](/fr/docs/Web/CSS/background-position). De la même façon, la plupart des propriétés communes relatives aux polices peuvent être définies grâce à la propriété raccourcie [`font`](/fr/docs/Web/CSS/font), et celles portant sur les marges autour d'une boîte peuvent être paramétrées grâce à la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin).
@@ -177,27 +175,27 @@ inset: 0 20px 0 20px;
 
 CSS fournit une propriété raccourcie universelle, [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés du document. Elle permet ainsi de changer le modèle d'héritage des propriétés.
 
-Voir les articles [La cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
+Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
 
 ## Voir aussi
 
 - Les concepts fondamentaux de CSS&nbsp;:
-  - [La syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Les règles @](/fr/docs/Web/CSS/At-rule)
-  - [Les commentaires](/fr/docs/Web/CSS/Comments)
-  - [La spécificité](/fr/docs/Web/CSS/Specificity)
-  - [L'héritage](/fr/docs/Web/CSS/Inheritance)
+  - [La syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Les règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Les commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
+  - [La spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [L'héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Les modes de disposition](/fr/docs/Web/CSS/Layout_mode)
-  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Les modes de disposition](/fr/docs/Glossary/Layout_mode)
+  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [La fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Les différentes valeurs
-    - [Les valeurs initiales](/fr/docs/Web/CSS/initial_value)
-    - [Les valeurs calculées](/fr/docs/Web/CSS/computed_value)
-    - [Les valeurs utilisées](/fr/docs/Web/CSS/used_value)
-    - [Les valeurs réelles](/fr/docs/Web/CSS/actual_value)
-  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
+  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+  - [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - Les propriétés raccourcies&nbsp;:
   - [`all`](/fr/docs/Web/CSS/all)
   - [`animation`](/fr/docs/Web/CSS/animation)

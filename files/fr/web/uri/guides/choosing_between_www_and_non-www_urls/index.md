@@ -4,8 +4,6 @@ slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 original_slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 ---
 
-{{HTTPSidebar}}
-
 Une question récurrente chez les propriétaires de sites web est de choisir entre utiliser des URLs qui débutent ou non par www. Cette page fournit quelques conseils sur la meilleure approche à envisager.
 
 ## Que sont les noms de domaines ?

@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 
 {{learnsidebar}}
 
-L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn/JavaScript/First_steps/Arrays).
+L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn_web_development/Core/Scripting/Arrays).
 
 > [!NOTE]
 > Vous pouvez essayer vos solutions dans les éditeurs interactifs qui suivent. Toutefois, il peut aussi être utile de télécharger le code et d'utiliser un outil en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) afin de travailler sur ces tâches.
@@ -26,7 +26,8 @@ Vous pouvez mettre à jour le code suivant pour parvenir à la solution :
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays1.html", '100%', 400)}}
 
-> **Note :** [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
+> [!NOTE]
+> [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
 
 ## Tableaux - Exercice 2
 
@@ -40,7 +41,8 @@ Essayez de mettre à jour le code qui suit pour parvenir à la solution :
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays2.html", '100%', 400)}}
 
-> **Note :** [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
+> [!NOTE]
+> [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
 
 ## Tableaux - Exercice 3
 
@@ -55,7 +57,8 @@ Essayez de mettre à jour le code qui suit pour parvenir à la solution :
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays3.html", '100%', 400)}}
 
-> **Note :** [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
+> [!NOTE]
+> [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
 
 ## Recevoir une évaluation ou de l'aide
 

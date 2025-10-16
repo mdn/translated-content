@@ -1,11 +1,9 @@
 ---
 title: CSS 数学関数の使用
-slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+slug: Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
-
-{{CSSRef}}
 
 **CSS 数学関数**を使用すると、要素の `height`, `animation-duration`, `font-size` などのプロパティ値を数式として書くことができます。
 

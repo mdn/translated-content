@@ -3,13 +3,15 @@ title: ::-webkit-scrollbar
 slug: Web/CSS/::-webkit-scrollbar
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 CSS 의사 요소 `::-webkit-scrollbar` 는 요소에 `overflow:scroll;`이 설정되어 있을 때 해당 요소의 스크롤바 스타일에 영향을 끼칩니다.
 
-> **참고:** `overflow:scroll;`이 설정되지 않으면, 스크롤바가 표시되지 않습니다.
+> [!NOTE]
+> `overflow:scroll;`이 설정되지 않으면, 스크롤바가 표시되지 않습니다.
 
-> **참고:** `::-webkit-scrollbar`는 [Blink](https://www.chromium.org/blink/) 및 [WebKit](https://webkit.org) 기반의 브라우저에서만 사용 가능합니다. (예: Chrome, Edge, Opera, Safari, iOS의 모든 브라우저 [등등](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). 스크롤바를 스타일링하는 표준화된 방법은 {{cssxref("scrollbar-color")}}와 {{cssxref("scrollbar-width")}}로 이용 가능합니다.
+> [!NOTE]
+> `::-webkit-scrollbar`는 [Blink](https://www.chromium.org/blink/) 및 [WebKit](https://webkit.org) 기반의 브라우저에서만 사용 가능합니다. (예: Chrome, Edge, Opera, Safari, iOS의 모든 브라우저 [등등](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). 스크롤바를 스타일링하는 표준화된 방법은 {{cssxref("scrollbar-color")}}와 {{cssxref("scrollbar-width")}}로 이용 가능합니다.
 
 ## CSS 스크롤바 선택자
 
