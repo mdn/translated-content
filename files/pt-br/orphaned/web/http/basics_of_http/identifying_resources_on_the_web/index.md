@@ -4,8 +4,6 @@ slug: orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
 
-{{HTTPSidebar}}
-
 O alvo de uma requisição HTTP é chamada de "resource", ou recurso em português, com a natureza ainda não definida; Isso pode ser um documento, uma foto ou qualquer outra coisa. Cada recurso é identificado por uma Identificação de recursos uniforme, do inglês **Uniform Resource Identifier** ({{Glossary("URI")}}) usada pelo HTTP para identificar recursos.
 
 A identidade e a localização de recursos na Web são fornecidas, principalmente por um único URL (Uniform Resource Locator, um tipo de URI). Pode ser que as vezes as a identidade e a localização não são dadas pelo mesmo URI: O HTTP usa um cabeçalho HTTP específico, {{HTTPHeader("Alt-Svc")}} quando o recurso solicitado quer que o cliente acesse-o de outra localização

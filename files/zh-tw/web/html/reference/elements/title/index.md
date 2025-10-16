@@ -3,8 +3,6 @@ title: <title>
 slug: Web/HTML/Reference/Elements/title
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-TW/docs/Web/HTML) **`<title>`** 元素定義了顯示在{{glossary("Browser", "瀏覽器")}}標題欄或頁面標籤上的文件標題。它僅包含文本，元素內的標籤會被忽略。
 
 ```html

@@ -3,8 +3,6 @@ title: CSS 基础框盒模型
 slug: Web/CSS/CSS_box_model
 ---
 
-{{CSSRef}}
-
 **CSS 基础框盒模型**是 CSS 规范的一个模块，它定义了一种长方形的盒子——包括它们各自的内边距（padding）与外边距（margin），并根据[视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)来生成元素，对其进行布置、编排、布局（lay out）。常被直译为盒子模型、盒模型或框模型。
 
 CSS 基础框盒模型一般仅针对单个元素及其边距、内容进行布局，而非对多个元素进行综合的排版，即使[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)等特性涉及二个或二个以上元素之间部分属性的交互反馈。

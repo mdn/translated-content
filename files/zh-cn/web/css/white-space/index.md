@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
-
 **`white-space`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置如何处理元素内的{{Glossary("whitespace", "空白字符")}}。
 
 {{InteractiveExample("CSS Demo: white-space")}}

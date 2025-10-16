@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Length
 original_slug: Web/HTTP/Headers/Content-Length
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête (_header_) **`Content-Length`** indique la taille en octets (exprimée en base 10) du corps de la réponse envoyée au client.
 
 <table class="properties">

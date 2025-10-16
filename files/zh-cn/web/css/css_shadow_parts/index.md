@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **CSS 影子部件**模块定义了可在[影子宿主](/zh-CN/docs/Glossary/Shadow_tree)上设置的 {{CSSXref("::part", "::part()")}} 伪元素。使用这个伪元素，可以让影子宿主将影子树中的特定元素暴露给外部页面，以便进行样式设置。
 
 默认情况下，影子树中的元素只能在其所属的影子根内部进行样式设置。CSS 影子部件模块允许在构成自定义元素的 {{HTMLElement("template")}} 后代元素上包含 [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/part) 属性，从而通过 `::part()` 伪元素将影子树节点暴露到外部进行样式设置。

@@ -3,8 +3,6 @@ title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 ---
 
-{{HTMLSidebar}}
-
 \<samp> 元素用于标识计算机程序输出，通常使用浏览器缺省的 monotype 字体（例如 Lucida Console）。
 
 <table class="properties">

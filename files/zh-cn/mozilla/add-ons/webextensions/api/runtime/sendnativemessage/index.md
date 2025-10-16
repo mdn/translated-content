@@ -3,8 +3,6 @@ title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 ---
 
-{{AddonSidebar}}
-
 从 WebExtension 发送单条消息到 native application。
 
 它需要两个强制的参数：native application 的名字和要发送给它的 JSON 对象。浏览器将会加载 native application 然后发送这个消息。

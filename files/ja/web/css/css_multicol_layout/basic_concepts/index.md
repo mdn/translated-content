@@ -1,11 +1,10 @@
 ---
 title: 段組みの基本概念
+short-title: 基本概念
 slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 l10n:
-  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 段組みレイアウト (Multi-column layout) は、 multicol レイアウトとも呼ばれ、新聞のようにコンテンツを複数の段ボックスにレイアウトする仕様です。このガイドでは、この仕様がどのように働くかを、いくつかのよくある使用例と共に説明します。
 

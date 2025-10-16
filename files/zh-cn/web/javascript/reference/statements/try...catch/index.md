@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4e947e81afc753bedcaaba75f262a07b92511849
 ---
 
-{{jsSidebar("Statements")}}
-
 **`try...catch`** 语句由一个 `try` 块和一个 `catch` 块或 `finally` 块（或两者皆有）组成。首先执行 `try` 块中的代码，如果它抛出异常，则将执行 `catch` 块中的代码。`finally` 块中的代码将在控制流退出整个结构之前始终被执行。
 
 {{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}

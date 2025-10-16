@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`::-moz-list-number`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示有序列表（{{HTMLElement("ol")}}）中列表项（{{HTMLElement("li")}}）的标记（通常是数字）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 

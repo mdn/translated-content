@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
-
 **`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: translateX()")}}
+{{InteractiveExample("CSS デモ: translateX()")}}
 
 ```css interactive-example-choice
 transform: translateX(0);
@@ -53,7 +51,8 @@ transform: translateX(3ch);
 }
 ```
 
-> **メモ:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
+> [!NOTE]
+> `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
 
 ## 構文
 

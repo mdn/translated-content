@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f6ff6e14c5af7cb9ed701d7f4506f770014c704f
 ---
 
-{{AddonSidebar}}
-
 设置徽章的背景颜色。没有指定徽章背景颜色的标签页将继承全局徽章背景颜色（在 Firefox 中默认为 `[217, 0, 0, 255]`）。
 
 > [!NOTE]

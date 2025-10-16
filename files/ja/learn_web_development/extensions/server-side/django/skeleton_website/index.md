@@ -27,7 +27,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 3. プロジェクトにアプリケーションを含めるために登録します。
 4. url/path マッパーはそれらのアプリケーションを結びつけます。
 
-[Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは*locallibrary* という名前をつけます。また、１つのアプリケーションは*catalog*という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
+[Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは _locallibrary_ という名前をつけます。また、１つのアプリケーションは _catalog_ という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
 
 ```bash
 locallibrary/         # Website folder
@@ -205,12 +205,12 @@ urlpatterns = [
 ]
 ```
 
-The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls` , which contains the Administration application's own URL mapping definitions.
+URL マッピングは `urlpatterns` 変数で管理されます。これは Python の `path()` 関数の _list_ です。各 `path()` 関数は、 URL パターンを、パターンが一致したときに表示される _特定のビュー_ に関連付けるか、または別の URL パターンのテストコードのリストに関連付けます (後者の場合、パターンは対象モジュールで定義されたパターンの「ベース URL 」になります)。 `urlpatterns` リストは最初の要素で、パターン _admin/_ を持つすべての URL を、管理アプリケーションの URL マッピング定義を含むモジュール `admin.site.urls` にマッピングする単一の関数を定義しています。
 
 > [!NOTE]
-> The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **/catalog/**_any_chars_**/** and pass _any_chars_ to the view as a string with parameter name `id`). We discuss path methods and route patterns further in later topics.
+> `path()` 内のルートは、マッチする URL パターンを定義する文字列です。この文字列には、山括弧（`<>`）で囲まれた名前付き変数（例: `'catalog/<id>/'`）が含まれる場合があります。このパターンは **/catalog/**_any_chars_**/** のような URL にマッチし、 _any_chars_ をパラメーター名 `id` を持つ文字列としてビューに渡します。 path メソッドとルートパターンについては、後のトピックで詳しく説明します。
 
-Add the lines below to the bottom of the file in order to add a new list item to the `urlpatterns` list. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **/catalog/urls.py**).
+`urlpatterns` リストに新しいリスト項目を追加するには、以下の行をファイルの末尾に追加します。この新しい項目には、パターン `catalog/` を含むリクエストをモジュール `catalog.urls` （相対 URL が **/catalog/urls.py** であるファイル）に転送する `path()` が含まれます。
 
 ```python
 # Use include() to add paths from the catalog application
@@ -222,9 +222,9 @@ urlpatterns += [
 ]
 ```
 
-Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/`; this is the only app we'll be using in this project, so we might as well. To do this, we'll use a special view function (`RedirectView`), which takes as its first argument the new relative URL to redirect to (`/catalog/`) when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
+では、サイトのルート URL （つまり `127.0.0.1:8000` ）を `127.0.0.1:8000/catalog/` という URL にリダイレクトしてみましょう。このプロジェクトで使用するアプリはこれだけなので、リダイレクトすることにしました。これを行うには、特別なビュー関数（ `RedirectView` ）を使用します。この関数は、 `path()` 関数で指定された URL パターン（この場合はルート URL）に一致した場合に、リダイレクト先の新しい相対 URL （`/catalog/`）を最初の引数として受け取ります。
 
-Add the following lines, again to the bottom of the file:
+以下の行を、ファイルの末尾に追加します:
 
 ```python
 #Add URL maps to redirect the base URL to our application
@@ -234,7 +234,7 @@ urlpatterns += [
 ]
 ```
 
-Leave the first parameter of the path function empty to imply '/'. If you write the first parameter as '/' Django will give you the following warning when you start the development server:
+パス関数の最初のパラメーターを空にしておくと、 '/' として扱われます。最初のパラメーターに '/' と記述した場合、 Django は開発サーバーの起動時に以下の警告を表示します:
 
 ```python
 System check identified some issues:
@@ -245,9 +245,9 @@ Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
 ```
 
-Django does not serve static files like CSS, JavaScript, and images by default, but it can be useful for the development web server to do so while you're creating your site. As a final addition to this URL mapper, you can enable the serving of static files during development by appending the following lines.
+Django はデフォルトでは CSS 、 JavaScript 、画像などの静的ファイルの配信しませんが、サイト作成中に開発用ウェブサーバーでこれらのファイルを配信すると便利です。この URL マッパーに以下の行を追加することで、開発中に静的ファイルの配信を有効にすることができます。
 
-Add the following final block to the bottom of the file now:
+ファイルの最後に以下のブロックを追加します:
 
 ```
 # Use static() to add url mapping to serve static files during development (only)
@@ -258,7 +258,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
 > [!NOTE]
-> There are a number of ways to extend the `urlpatterns` list (above we just appended a new list item using the `+=` operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:
+> `urlpatterns` リストを拡張する方法はいくつかあります (上記では、古いコードと新しいコードを明確に区別するために、`+=` 演算子を使用して新しいリスト項目を追加しました)。代わりに、この新しいパターンマップを元のリスト定義に含めることもできます:
 >
 > ```python
 > urlpatterns = [
@@ -268,9 +268,9 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ```
 >
-> In addition, we included the import line (`from django.urls import include`) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.
+> さらに、インポート行 (`from django.urls import include`) を、それを使用するコードに含めました (そのため、追加した内容を簡単に確認できます)。ただし、すべてのインポート行を Python ファイルの先頭に含めるのが一般的です。
 
-As a final step, create a file inside your catalog folder called **urls.py**, and add the following text to define the (empty) imported `urlpatterns`. This is where we'll add our patterns as we build the application.
+最後のステップとして、 catalog フォルダー内に **urls.py** というファイルを作成し、以下のテキストを追加して、インポートする（空の） `urlpatterns` を定義します。アプリケーションをビルドする際に、ここにパターンを追加します。
 
 ```python
 from django.urls import path
@@ -284,15 +284,15 @@ urlpatterns = [
 
 ## ウェブサイトフレームワークのテスト
 
-At this point we have a complete skeleton project. The website doesn't actually _do_ anything yet, but its worth running it to make sure that none of our changes have broken anything.
+この時点で、スケルトンプロジェクトは完成しました。ウェブサイトはまだ実際には何も動作しませんが、変更によって何かが壊れていないか確認するために、実行してみる価値はあります。
 
-Before we do that, we should first run a _database migration_. This updates our database to include any models in our installed applications (and removes some build warnings).
+その前に、まずデータベースマイグレーションを実行する必要があります。これにより、インストール済みのアプリケーションのモデルがデータベースに追加され、ビルド時の警告もいくつか削除されます。
 
-### Running database migrations
+### データベースマイグレーションの実行
 
-Django uses an Object-Relational-Mapper (ORM) to map Model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/locallibrary/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
+Django は、オブジェクトリレーショナルマッパー (ORM) を使用して、 Django コード内のモデル定義を基盤となるデータベースで使用されるデータ構造にマッピングします。モデル定義を変更すると、Django はその変更を追跡し、データベースマイグレーションスクリプト（**/locallibrary/catalog/migrations/** 内）を作成して、データベース内の基盤となるデータ構造をモデルに合わせて自動的に移行します。
 
-When we created the website Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains **manage.py**):
+ウェブサイトを作成したときに、 Django はサイトの管理セクションで使用するためのモデルをいくつか自動的に追加しました (これについては後で説明します)。これらのモデルのテーブルをデータベースに定義するには、以下のコマンドを実行します（**manage.py** があるディレクトリーにいることを確認してください）:
 
 ```bash
 python3 manage.py makemigrations
@@ -300,23 +300,23 @@ python3 manage.py migrate
 ```
 
 > [!WARNING]
-> You'll need to run the above commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
+> モデルが変更され、保存する必要があるデータの構造に影響が出るたびに（モデル全体および個々のフィールドの追加と削除を含む）、上記のコマンドを実行する必要があります。
 
-The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project (you can specify the application name as well to just run a migration for a single project). This gives you a chance to checkout the code for these migrations before they are applied — when you're a Django expert you may choose to tweak them slightly!
+`makemigrations` コマンドは、プロジェクトにインストールされているすべてのアプリケーションのマイグレーションを _作成_ します（適用はしません）が、アプリケーション名を指定して単一のプロジェクトのみのマイグレーションを実行することもできます。これにより、マイグレーションを適用する前にコードをチェックアウトできます。 Django に精通している場合は、コードを微調整することもできます。
 
-The `migrate` command actually applies the migrations to your database (Django tracks which ones have been added to the current database).
-
-> [!NOTE]
-> See [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
-
-### Running the website
-
-During development you can test the website by first serving it using the _development web server_, and then viewing it on your local web browser.
+`migrate` コマンドは実際にデータベースにマイグレーションを適用します（Django は現在のデータベースに追加されたマイグレーションを追跡します）。
 
 > [!NOTE]
-> The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Django docs).
+> あまり使用されない移行コマンドの詳細については、 [マイグレーション](https://docs.djangoproject.com/ja/5.2/topics/migrations/) (Django ドキュメント) を参照してください。
 
-Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
+### ウェブサイトの実行
+
+開発中は、まず _開発用ウェブサーバー_ を使用してウェブサイトを配信し、次にローカルウェブブラウザーで表示することで、ウェブサイトをテストできます。
+
+> [!NOTE]
+> 開発用ウェブサーバーは、本番環境での使用に耐えるほど堅牢で高性能ではありませんが、開発中に Django ウェブサイトを立ち上げて簡単にテストを行うための非常に簡単な方法です。デフォルトではローカルコンピューター（ `http://127.0.0.1:8000/`）にサイトを配信しますが、ネットワーク上の他のコンピューターを指定することもできます。詳細については、 [django-admin と manage.py: runserver](https://docs.djangoproject.com/ja/5.2/ref/django-admin/#runserver) (Django ドキュメント) を参照してください。
+
+`runserver` コマンド (**manage.py** と同じディレクトリー内) を呼び出して、 _開発用ウェブサーバー_ を実行します:
 
 ```bash
 python3 manage.py runserver

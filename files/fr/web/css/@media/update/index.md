@@ -1,11 +1,11 @@
 ---
 title: update
 slug: Web/CSS/@media/update
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`update`** est une caractéristique média (cf. {{cssxref("@media")}}) qui permet de vérifier la vitesse à laquelle l'appareil d'affichage peut modifier l'apparence du contenu.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`update`** peut être utilisée pour tester la fréquence à laquelle (le cas échéant) l'appareil de sortie est capable de modifier l'apparence du contenu une fois rendu.
 
 ## Syntaxe
 
@@ -60,3 +60,8 @@ La caractéristique `update` est définie avec un mot-clé parmi ceux de la list
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

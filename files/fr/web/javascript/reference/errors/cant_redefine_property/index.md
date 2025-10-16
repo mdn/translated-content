@@ -19,7 +19,7 @@ TypeError: Cannot redefine property: "x" (Chrome)
 
 ## Quel est le problème ?
 
-On essaie de redéfinir une propriété alors que celle-ci est [non-configurable](/fr/docs/Web/JavaScript/Data_structures#propriétés). L'attribut `configurable` permet d'indiquer si la propriété peut être supprimée d'un objet et si ses attributs (en dehors de `writable`) peuvent être modifiés. Généralement, les propriétés d'un objet créées avec un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) sont configurables. Cependant, lorsqu'on utilise la méthode {{jsxref("Object.defineProperty()")}}, la propriété n'est pas configurable par défaut.
+On essaie de redéfinir une propriété alors que celle-ci est [non-configurable](/fr/docs/Web/JavaScript/Guide/Data_structures#propriétés). L'attribut `configurable` permet d'indiquer si la propriété peut être supprimée d'un objet et si ses attributs (en dehors de `writable`) peuvent être modifiés. Généralement, les propriétés d'un objet créées avec un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) sont configurables. Cependant, lorsqu'on utilise la méthode {{jsxref("Object.defineProperty()")}}, la propriété n'est pas configurable par défaut.
 
 ## Exemples
 
@@ -45,5 +45,5 @@ Object.defineProperty(obj, "toto", { value: "bidule", configurable: true });
 
 ## Voir aussi
 
-- [\[\[Configurable\]\]](/fr/docs/Web/JavaScript/Data_structures#Propriétés)
+- [\[\[Configurable\]\]](/fr/docs/Web/JavaScript/Guide/Data_structures#Propriétés)
 - {{jsxref("Object.defineProperty()")}}

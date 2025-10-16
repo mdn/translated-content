@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}
-
 CSS コンテナー (CSS containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
 
 {{cssxref("contain")}} と {{cssxref("content-visibility")}} プロパティを使うことで、開発者はユーザーエージェントに、要素がコンテンツをすべて表示すべきかどうか、また画面外にあるときにコンテンツを表示すべきかどうかを知らせることができます。ユーザーエージェントは、必要に応じて要素に抑制を適用し、必要なときまでレイアウトやレンダリングを延期することができます。
@@ -72,7 +70,8 @@ article {
 - レイアウトのコンテナーは `absolute`/`fixed` で位置指定された子孫要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)になります。
 - この包含ボックスは[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作ります。従って {{cssxref("z-index")}} を使用することができます。
 
-> **メモ:** `contain` の `style` および `layout` の値は、 {{cssxref("container-type")}} および {{cssxref("container-name")}} プロパティを使用すると自動的に適用されます。
+> [!NOTE]
+> `contain` の `style` および `layout` の値は、 {{cssxref("container-type")}} および {{cssxref("container-name")}} プロパティを使用すると自動的に適用されます。
 
 #### 描画抑制
 
@@ -186,7 +185,8 @@ article {
 
 これは上記のどちらの場合でも起こりますが、 `content-visibility: auto` の場合、コンテンツは検索でき、フォーカスを受け取ることができ、関連性のないものから関連性のあるものへと移行することができます。これは `content-visibility: hidden` では起こりません。
 
-> **メモ:** `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#display_と_content-visibility_のトランジション) を参照してください。
+> [!NOTE]
+> `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#display_と_content-visibility_のトランジション) を参照してください。
 
 ## 関連情報
 

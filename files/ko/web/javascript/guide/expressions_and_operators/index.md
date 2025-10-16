@@ -388,7 +388,8 @@ const var2 = 4;
   </tbody>
 </table>
 
-> **참고:** `=>`는 연산자가 아니라
+> [!NOTE]
+> `=>`는 연산자가 아니라
 > [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)의 표기법입니다.
 
 ### 산술 연산자

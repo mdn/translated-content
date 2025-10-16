@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **CSS 색상**은 색상, 색상 유형, 색상 혼합, 투명도 그리고 이러한 색상과 효과를 HTML에 적용하는 방법을 다루는 CSS 모듈입니다.
 
 이 모듈은 {{cssxref("color")}} 와 {{cssxref("opacity")}} 단 두 개의 속성만을 가지고 있지만, 20개가 넘는 CSS 와 SVG 속성들, CSS 이미지, @규칙 그리고 @미디어 규칙들이 이 두 속성에 의존합니다.
@@ -128,4 +126,4 @@ l10n:
 - [`VideoColorSpace`](/ko/docs/Web/API/VideoColorSpace) 인터페이스
 - SVG [`<feColorMatrix>`](/ko/docs/Web/SVG/Element/feColorMatrix) 요소
 - [Canvas API: 스타일과 색상 적용](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_picker_tool): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.
+- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_format_converter): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.

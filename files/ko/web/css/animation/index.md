@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e50172e0d7844ebf17e0eac05d5274a7df26d180
 ---
 
-{{CSSRef}}
-
 **`animation`** [단축](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
 
 {{InteractiveExample("CSS Demo: animation")}}
@@ -145,7 +143,8 @@ animation:
 
 ## 예제
 
-> **참고:** [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
+> [!NOTE]
+> [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
 
 ### 해 뜨기
 

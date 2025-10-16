@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`border-collapse`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlElement("table")}}) の中のセルが境界を共有するか分離するかを設定します。
 
 {{InteractiveExample("CSS デモ: border-collapse")}}

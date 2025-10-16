@@ -3,8 +3,6 @@ title: Firefox 74 for developers
 slug: Mozilla/Firefox/Releases/74
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 74 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
