@@ -1,14 +1,14 @@
 ---
-title: 이진 대형 객체 URL
-short-title: 이진 대형 객체
+title: "blob: URLs"
+short-title: "blob:"
 slug: Web/URI/Reference/Schemes/blob
 l10n:
   sourceCommit: ca1647a3e2b77cdf9df220244998f25b86629048
 ---
 
-**이진 대형 객체(또는 객체) URL**은 `blob:` 스킴이 접두사로 붙은 URL로, {{domxref("Blob")}} 또는 {{domxref("MediaSource")}} 객체를 {{HTMLElement("img")}} 요소와 같이 URL 기반으로만 동작하는 다른 API와 통합할 수 있도록 해줍니다. 이진 대형 객체 URL은 로컬에서 생성된 데이터를 탐색하거나 다운로드를 작동시키는 데에도 사용할 수 있습니다. 이 URL들은 불투명 식별자로 설계되어 있으므로 직접 작성해서 사용할 수 없으며, {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 및 {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 함수를 통해 생성 및 관리해야 합니다.
+**Blob(또는 객체) URL**은 `blob:` 스킴이 접두사로 붙은 URL로, {{domxref("Blob")}} 또는 {{domxref("MediaSource")}} 객체를 {{HTMLElement("img")}} 요소와 같이 URL 기반으로만 동작하는 다른 API와 통합할 수 있도록 해줍니다. Blob URL은 로컬에서 생성된 데이터를 탐색하거나 다운로드를 작동시키는 데에도 사용할 수 있습니다. 이 URL들은 불투명 식별자로 설계되어 있으므로 직접 작성해서 사용할 수 없으며, {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 및 {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 함수를 통해 생성 및 관리해야 합니다.
 
-이진 대형 객체 URL은 [데이터 URL](/ko/docs/Web/URI/Reference/Schemes/data)과 유사합니다. 두 방식 모두 메모리에 존재하는 리소스를 URL 형태로 표현할 수 있도록 한다는 공통점이 있습니다. 다만 데이터 URL은 리소스를 자체적으로 내장하며 크기 제한이 심한 반면, 이진 대형 객체 URL은 `Blob` 또는 `MediaSource`를 기반으로 하여 더 큰 리소스를 표현할 수 있다는 차이점이 있습니다.
+Blob URL은 [데이터 URL](/ko/docs/Web/URI/Reference/Schemes/data)과 유사합니다. 두 방식 모두 메모리에 존재하는 리소스를 URL 형태로 표현할 수 있도록 한다는 공통점이 있습니다. 다만 데이터 URL은 리소스를 자체적으로 내장하며 크기 제한이 심한 반면, Blob URL은 `Blob` 또는 `MediaSource`를 기반으로 하여 더 큰 리소스를 표현할 수 있다는 차이점이 있습니다.
 
 ## 구문
 
@@ -42,11 +42,11 @@ img.addEventListener("load", () => {
 document.body.appendChild(img);
 ```
 
-이미지가 렌더링된 직후 이진 대형 객체 URL을 해제하면, 사용자가 이미지와 상호작용할 수 없게 됩니다. 예를 들어 이미지를 마우스 오른쪽 버튼으로 저장하거나 새 탭에서 여는 동작이 불가능합니다. 장시간 실행되는 애플리케이션의 경우, 리소스가 사용자에게 더 이상 접근 불가능할 때만 객체 URL을 해제해야 합니다. 예를 들어 이미지가 DOM에서 제거되었을 때 객체 URL을 해제합니다.
+이미지가 렌더링된 직후 blob URL을 해제하면, 사용자가 이미지와 상호작용할 수 없게 됩니다. 예를 들어 이미지를 마우스 오른쪽 버튼으로 저장하거나 새 탭에서 여는 동작이 불가능합니다. 장시간 실행되는 애플리케이션의 경우, 리소스가 사용자에게 더 이상 접근 불가능할 때만 객체 URL을 해제해야 합니다. 예를 들어 이미지가 DOM에서 제거되었을 때 객체 URL을 해제합니다.
 
 ### 스토리지 분리
 
-이진 대형 객체 URL을 통한 리소스 접근은 다른 모든 저장 메커니즘과 동일한 제한을 받습니다. 즉, [상태 분리](/ko/docs/Web/Privacy/Guides/State_Partitioning)의 영향을 받습니다. 이진 대형 객체 URL은 출처가 함께 저장되어 있으며, 이는 URL 자체에 포함됩니다. 또한 저장 키가 생성 환경의 키와 일치하는 환경에서만 가져올 수 있습니다. 단, 이진 대형 객체 URL을 탐색하는 경우에는 이러한 제한이 적용되지 않습니다. 다만 브라우저는 사이트 간 Blob URL 탐색 시 [`noopener`](/ko/docs/Web/HTML/Reference/Attributes/rel/noopener)와 같은 프라이버시 보호 조치를 적용할 수 있습니다.
+blob URL을 통한 리소스 접근은 다른 모든 저장 메커니즘과 동일한 제한을 받습니다. 즉, [상태 분리](/ko/docs/Web/Privacy/Guides/State_Partitioning)의 영향을 받습니다. blob URL은 출처가 함께 저장되어 있으며, 이는 URL 자체에 포함됩니다. 또한 저장 키가 생성 환경의 키와 일치하는 환경에서만 가져올 수 있습니다. 단, blob URL을 탐색하는 경우에는 이러한 제한이 적용되지 않습니다. 다만 브라우저는 사이트 간 Blob URL 탐색 시 [`noopener`](/ko/docs/Web/HTML/Reference/Attributes/rel/noopener)와 같은 프라이버시 보호 조치를 적용할 수 있습니다.
 
 ### 미디어 스트림에 객체 URL 사용하기
 
@@ -57,19 +57,19 @@ document.body.appendChild(img);
 
 ### Range 헤더를 사용한 Fetch 요청
 
-이진 대형 객체 URL은 부분 콘텐츠 요청을 위해 [`Range`](/ko/docs/Web/HTTP/Reference/Headers/Range) 헤더를 사용하는 Fetch 요청을 지원합니다. 이 기능은 특히 대용량 이진 대형 객체를 다룰 때 유용하며, 전체 내용을 불러오지 않고 필요한 부분만 선택적으로 가져올 수 있습니다. 예시는 [이진 대형 객체 URL에서 범위를 지정하여 가져오기](/ko/docs/Web/HTTP/Reference/Headers/Range#fetching_a_range_from_a_blob_url) 문서를 참고하세요.
+blob URL은 부분 콘텐츠 요청을 위해 [`Range`](/ko/docs/Web/HTTP/Reference/Headers/Range) 헤더를 사용하는 Fetch 요청을 지원합니다. 이 기능은 특히 대형 blob를 다룰 때 유용하며, 전체 내용을 불러오지 않고 필요한 부분만 선택적으로 가져올 수 있습니다. 예시는 [blob URL에서 범위를 지정하여 가져오기](/ko/docs/Web/HTTP/Reference/Headers/Range#fetching_a_range_from_a_blob_url) 문서를 참고하세요.
 
 ## 예시
 
-### 유효한 이진 대형 객체 URL
+### 유효한 blob URL
 
 ```url
 blob:https://example.org/40a5fb5a-d56d-4a33-b4e2-0acf6a8e5f64
 ```
 
-### 이진 대형 객체 URL 생성하기
+### blob URL 생성하기
 
-이 예제에서는 먼저 {{HTMLElement("canvas")}} 요소로부터 {{domxref("Blob")}}을 생성하고, 그 이진 대형 객체에 대한 이진 대형 객체 URL을 만든 뒤, 마지막으로 해당 URL을 {{HTMLElement("img")}} 요소에 연결합니다.
+이 예제에서는 먼저 {{HTMLElement("canvas")}} 요소로부터 {{domxref("Blob")}}을 생성하고, 그것에 대한 blob URL을 만든 뒤, 마지막으로 해당 URL을 {{HTMLElement("img")}} 요소에 연결합니다.
 
 ```js
 const canvas = document.querySelector("canvas");
