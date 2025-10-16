@@ -9,7 +9,7 @@ l10n:
 
 **`byteLength`** は {{jsxref("TypedArray")}} のアクセサープロパティで、この型付き配列の長さを（バイト単位で）返します。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.byteLength", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.byteLength", "shorter")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

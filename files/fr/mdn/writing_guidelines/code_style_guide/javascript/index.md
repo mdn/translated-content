@@ -303,7 +303,7 @@ Le `textContent` est beaucoup plus efficace, et moins sujet aux erreurs que le `
 
 ### Usage général des boucles
 
-When [loops](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, feel free to choose an appropriate loop out of the available ones ([`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while), etc.) Just make sure to keep the code as understandable as possible.
+When [loops](/fr/docs/Learn_web_development/Core/Scripting/Loops) are required, feel free to choose an appropriate loop out of the available ones ([`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while), etc.) Just make sure to keep the code as understandable as possible.
 
 Lorsque vous utilisez des boucles `for`/`for...of`, veillez à définir correctement l'initialisateur, avec un mot clé `let` :
 

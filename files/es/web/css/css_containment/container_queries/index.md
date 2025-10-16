@@ -3,8 +3,6 @@ title: CSS Container Queries
 slug: Web/CSS/CSS_containment/Container_queries
 ---
 
-{{CSSRef}}
-
 [CSS Containment](/es/docs/Web/CSS/CSS_containment) proporciona una nueva forma para aislar secciones de una página e indicarle al navegador que estas secciones son independientes del resto de la página en términos de estilos y disposición (_layout_).
 
 Si estás creando un [diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), a menudo usas [_media queries_](/es/docs/Web/CSS/CSS_media_queries) para cambiar la disposición de la página con referencia al {{Glossary("viewport")}}.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 `scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。
 
 {{InteractiveExample("CSS デモ: scroll-padding-block")}}

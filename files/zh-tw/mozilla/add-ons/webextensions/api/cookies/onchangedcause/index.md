@@ -3,8 +3,6 @@ title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `OnChangedCause` 型別，代表觸發 cookie 資料變動的原因。
 
 ## 型別

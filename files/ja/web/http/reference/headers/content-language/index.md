@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Language
 original_slug: Web/HTTP/Headers/Content-Language
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Language`** は {{Glossary("entity header", "エンティティヘッダー")}} で、ユーザが自分の好みの言語に応じて区別できるように、オーディエンス向けの言語を記述するために使用されます。
 
 たとえば、"`Content-Language: de-DE`" が設定されている場合、その文書はドイツ語のスピーカーを対象としてます (ただし、文書がドイツ語で記述されていることを示すわけではありません。 たとえば、ドイツ語スピーカーのための語学コースの一部としての英語が書かれているかもしれません。文書が記述されている言語を示す場合は、代わりに [`lang` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)を使用します)。

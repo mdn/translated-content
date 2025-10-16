@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<link>`** 元素规定了当前文档与某个外部资源的关系。该元素最常用于链接{{Glossary("CSS", "样式表")}}，此外也可以被用来创建站点图标（比如 PC 端的“favicon”图标和移动设备上用以显示在主屏幕的图标) 。
 
 {{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}

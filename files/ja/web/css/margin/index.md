@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
 ---
 
-{{CSSRef}}
-
 **`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。
 
 {{InteractiveExample("CSS デモ: margin")}}

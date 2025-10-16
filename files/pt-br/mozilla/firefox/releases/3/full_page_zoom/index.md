@@ -3,8 +3,6 @@ title: Zoom de página inteira
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 ---
 
-{{FirefoxSidebar}}
-
 Zoom de página inteira (ou apenas fullzoom) é um novo recurso do [Firefox 3](/pt-BR/Firefox_3_for_developers).
 
 ### Exemplo (XUL:browser)

@@ -3,8 +3,6 @@ title: CSS Colors
 slug: Web/CSS/CSS_colors
 ---
 
-{{CSSRef}}
-
 **Los colores CSS** son un módulo de CSS que trabaja con colores, tipos de colores y transparencias.
 
 ## Referencia

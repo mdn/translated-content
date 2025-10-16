@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 95 の変更点をまとめています。
 Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 

@@ -10,7 +10,7 @@ l10n:
 
 **`<del>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。{{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
 
-{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;del&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <blockquote>

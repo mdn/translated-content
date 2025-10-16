@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
-{{CSSRef}}
-
 **`column-fill`** [CSS](/zh-CN/docs/Web/CSS) 属性可控制元素内容分成列时的平衡方式。
 
 {{InteractiveExample("CSS Demo: column-fill")}}

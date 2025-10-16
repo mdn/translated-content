@@ -12,7 +12,7 @@ l10n:
 
 既定では、 `<pre>` は[ブロックレベル](/ja/docs/Glossary/Block-level_content)要素であり、 {{cssxref("display")}} の既定値は `block` です。
 
-{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;pre&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <pre>
