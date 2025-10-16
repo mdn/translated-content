@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_a
 
 В этой статье показано, как определить страницу для удаления объектов `Author`.
 
-Как описано в разделе [form design](/ru/docs/Learn/Server-side/Express_Nodejs/forms#form_design), наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим `Author` быть удалённым, если на него ссылается `Book`). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удалён. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будет удалён объект `Author`.
+Как описано в разделе [form design](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms#form_design), наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим `Author` быть удалённым, если на него ссылается `Book`). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удалён. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будет удалён объект `Author`.
 
 ## Controller—get route
 
@@ -180,5 +180,5 @@ p
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms).
-- Proceed to the final subarticle of part 6: [Update Book form](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form).
+- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
+- Proceed to the final subarticle of part 6: [Update Book form](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form).

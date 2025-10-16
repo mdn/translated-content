@@ -17,7 +17,7 @@ l10n:
 
 ### 读取 meta 元素的元数据名称
 
-以下示例查询文档中第一个 `<meta>` 元素，`name` 值输出到控制台，显示为文档指定的[关键词](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)：
+以下示例查询文档中第一个 `<meta>` 元素，`name` 值输出到控制台，显示为文档指定的[关键词](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name#html_规范中定义的标准元数据名称)：
 
 ```js
 // 假设 <meta name="keywords" content="documentation, HTML, web technologies">
@@ -28,7 +28,7 @@ console.log(meta.name);
 
 ### 使用 `author` 元数据创建 meta 元素
 
-以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`author`](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置文档的作者，并把元素附加到文档 `<head>` 上。
+以下示例创建一个新的 `<meta>` 元素，其 `name` 属性设置为 [`author`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name#html_规范中定义的标准元数据名称)，`content` 属性设置文档的作者，并把元素附加到文档 `<head>` 上。
 
 ```js
 let meta = document.createElement("meta");
@@ -48,4 +48,4 @@ document.head.appendChild(meta);
 ## 参见
 
 - {{HTMLElement("meta")}}
-- [name 属性的可能值](/zh-CN/docs/Web/HTML/Element/meta/name#html_规范中定义的标准元数据名称)
+- [name 属性的可能值](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name#html_规范中定义的标准元数据名称)

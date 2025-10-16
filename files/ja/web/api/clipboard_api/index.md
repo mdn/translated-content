@@ -20,7 +20,7 @@ l10n:
 システムクリップボードは、ブラウザーが動作しているオペレーティングシステムに属するデータバッファーであり、短期間のデータ保存や文書またはアプリケーション間のデータ転送に使用します。
 通常、無名で一時的な[データバッファー](https://ja.wikipedia.org/wiki/バッファ)として実装されており、ペーストバッファーと呼ばれることもあります。環境内のほとんどまたはすべてのプログラムから定義されたプログラミングインターフェイスを通じてアクセス可能です。
 
-クリップボード API を使うと、ユーザーは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)の中で、[セキュリティに関する考慮事項](#セキュリティの考慮)で指定された条件が成立する限り、テキストや他にも様々な種類のデータをクリップボードにプログラムで読み書きすることができます。
+クリップボード API を使うと、ユーザーは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)の中で、[セキュリティに関する考慮事項](#セキュリティの考慮)で指定された条件が成立する限り、テキストや他にも様々な種類のデータをクリップボードにプログラムで読み書きすることができます。
 
 イベントは切り取り ({{domxref("Element/cut_event", "cut")}})、コピー ({{domxref("Element/copy_event", "copy")}})、貼り付け ({{domxref("Element/paste_event", "paste")}}) 操作がクリップボードを変更した結果として発行されます。
 イベントには既定のアクションがあり、例えば `copy` アクションは既定では現在の選択部分をシステムクリップボードにコピーします。
@@ -53,7 +53,7 @@ l10n:
 
 ## セキュリティの考慮
 
-クリップボード API は、ユーザーが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)のシステムクリップボードとの間で、テキストや他の種類のデータをプログラムで読み書きすることをできるようにします。
+クリップボード API は、ユーザーが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)のシステムクリップボードとの間で、テキストや他の種類のデータをプログラムで読み書きすることをできるようにします。
 
 この仕様では、クリップボードから読み取るために、ユーザーが最近ページを操作したことが要求されます（[単発のユーザーの活性化](/ja/docs/Web/Security/User_activation)が必要です）。
 読み取り処理がブラウザーやOSの「貼り付け要素」（コンテキストメニューなど）とのユーザー対話によって発生した場合、ブラウザーはユーザーに確認を促すことが期待されます。
@@ -69,7 +69,7 @@ Chromium 系のブラウザー:
   単発の活性化は要求されません。
 - 書き込みには `clipboard-read` 権限または単発の活性化が要求されます。
   権限が付与された場合、その権限は維持され、それ以上の単発の活性化は要求されません。
-- クリップボードにアクセスする {{HTMLElement("iframe")}} 要素には、HTTP の[Permissions-Policy](/ja/docs/Web/HTTP/Headers/Permissions-Policy) の `clipboard-read` と `clipboard-write` の権限を許可しなければなりません。
+- クリップボードにアクセスする {{HTMLElement("iframe")}} 要素には、HTTP の[Permissions-Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) の `clipboard-read` と `clipboard-write` の権限を許可しなければなりません。
 - ブラウザーや OS の「貼り付け要素」によって読み取り処理が発生した場合、持続的な貼り付けプロンプトは表示されません。
 
 Firefox および Safari:
@@ -82,7 +82,7 @@ Firefox の [Web Extensions](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_wit
 
 - テキストの読み込みは、Web Extension [`clipboardRead`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardread) 権限を持つ拡張機能でのみ利用できます。
   その権限があれば、拡張機能は単発の活性化や貼り付けのプロンプトを要求されません。
-- テキストの書き込みは、安全なコンテキストと単発の活性化で利用できます。
+- テキストの書き込みは、保護されたコンテキストと単発の活性化で利用できます。
   Web Extension の [`clipboardWrite`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboardwrite) 権限では、単発の活性化は要求されません。
 
 ## 例

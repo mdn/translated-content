@@ -29,9 +29,7 @@ Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
 - `locales`
   - : Un chaîne de caractères au format d'une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations sur le format de l'argument `locales`, voir la page {{jsxref("Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
 - `options`
-
   - : Paramètre optionnel, un objet pouvant avoir la propriété suivante :
-
     - `localeMatcher`
       - : L'algorithme de correspondance entre locales à utiliser. Les valeurs possibles sont "lookup" et "best fit". Pour plus d'informations sur ce sujet, voir la page {{jsxref("Intl", "Intl", "#Choix_de_la_locale")}}.
 

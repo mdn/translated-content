@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
-
 由分发事件的 API 所使用的常见类型。
 
 ## 类型
@@ -25,7 +23,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.events](https://developer.chrome.google.cn/docs/extensions/reference/api/events) API。本文衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
+> 此 API 基于 Chromium 的 [`chrome.events](https://developer.chrome.google.cn/docs/extensions/reference/api/events) API。该文档衍生自 Chromium 代码中的 [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

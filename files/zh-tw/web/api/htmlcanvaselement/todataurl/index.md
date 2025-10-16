@@ -2,12 +2,12 @@
 title: HTMLCanvasElement：toDataURL() 方法
 slug: Web/API/HTMLCanvasElement/toDataURL
 l10n:
-  sourceCommit: 7c2a91a8cf4d9889096019679e4319400e971b41
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data)，格式由參數 `type` 指定。
+**`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)，格式由參數 `type` 指定。
 
 可以指定所需的檔案格式和影像品質。如果未指定檔案格式，或者指定的格式不受支援，則數據會以 `image/png` 格式匯出。換句話說，如果對於任何其他類型（type）的請求地返回值是以 `data:image/png` 開頭，則表示該格式不受支援。
 
@@ -15,7 +15,8 @@ l10n:
 
 對於支援編碼解析度中繼資料的檔案格式，創建的影像數據將有 96dpi 的解析度。
 
-> **警告：** `toDataURL()` 會將整個影像編碼為一個內存字串。對於較大的影像，這可能會帶來效能問題，甚至在指定給 {{domxref("HTMLImageElement.src")}} 時超過瀏覽器的 URL 長度限制。建議一般使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob)，並搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}。
+> [!WARNING]
+> `toDataURL()` 會將整個影像編碼為一個內存字串。對於較大的影像，這可能會帶來效能問題，甚至在指定給 {{domxref("HTMLImageElement.src")}} 時超過瀏覽器的 URL 長度限制。建議一般使用 [`toBlob()`](/zh-TW/docs/Web/API/HTMLCanvasElement/toBlob)，並搭配 {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}。
 
 ## 語法
 
@@ -34,9 +35,9 @@ toDataURL(type, quality)
 
 ### 返回值
 
-包含請求的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data) 的字串。
+包含請求的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
 
-如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Element/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
+如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Reference/Elements/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
 
 ### 例外
 
@@ -137,4 +138,4 @@ function removeColors() {
 
 ## 參見
 
-- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data)。
+- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)。

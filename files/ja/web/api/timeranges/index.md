@@ -23,7 +23,7 @@ slug: Web/API/TimeRanges
 - {{domxref("TimeRanges.end()")}}
   - : 指定された範囲の終了時間を返します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

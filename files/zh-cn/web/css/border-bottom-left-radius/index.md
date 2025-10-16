@@ -2,14 +2,51 @@
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-bottom-left-radius`** 通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
 
-**`border-bottom-left-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
+{{InteractiveExample("CSS 演示：border-bottom-left-radius")}}
 
-{{EmbedInteractiveExample("pages/css/border-bottom-left-radius.html")}}
+```css interactive-example-choice
+border-bottom-left-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-bottom-left-radius: 250px 100px;
+```
+
+```css interactive-example-choice
+border-bottom-left-radius: 50%;
+```
+
+```css interactive-example-choice
+border-bottom-left-radius: 50%;
+border: black 10px double;
+background-clip: content-box;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    这是一个左下角带有圆角的盒子。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 圆角可以是圆形或椭圆形，如果其中一个值为 `0`，则不进行圆角处理，角保持为直角。
 
@@ -18,7 +55,7 @@ l10n:
 背景（无论是图片还是颜色）都会被边框处裁剪，即便是圆角边框也不例外；裁剪的具体位置由 {{cssxref("background-clip")}} 属性的值来定义。
 
 > [!NOTE]
-> 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为其默认初始值。
+> 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)重置为其默认初始值。
 
 ## 语法
 

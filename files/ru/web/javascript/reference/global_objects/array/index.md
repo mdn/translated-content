@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 {{JSRef}}
 
-Объект **`Array`**, как и массивы в других языках программирования, позволяет [хранить коллекцию из нескольких элементов под одним именем переменной](/ru/docs/Learn/JavaScript/First_steps/Arrays) и имеет методы для выполнения общих операций с массивами.
+Объект **`Array`**, как и массивы в других языках программирования, позволяет [хранить коллекцию из нескольких элементов под одним именем переменной](/ru/docs/Learn_web_development/Core/Scripting/Arrays) и имеет методы для выполнения общих операций с массивами.
 
 ## Описание
 
@@ -234,7 +234,7 @@ const myArray = myRe.exec("cdbBdbsbz");
   - : Возвращает новый объект [_array iterator_](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators), который содержит значения каждого индекса массива.
 - {{jsxref("Array.prototype.with()")}}
   - : Возвращает новый массив с заменённым значением элемента с указанным индексом без изменения исходного массива.
-- [`Array.prototype[@@iterator]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : Псевдоним метода [`values()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
 
 ## Примеры

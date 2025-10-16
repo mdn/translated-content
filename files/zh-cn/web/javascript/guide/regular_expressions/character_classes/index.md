@@ -3,8 +3,6 @@ title: 字符类
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
-{{JSSidebar("JavaScript Guide")}}
-
 字符类可以区分各种字符，例如区分字母和数字。
 
 {{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
@@ -250,7 +248,6 @@ console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
 ## 参见
 
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)

@@ -7,7 +7,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-{{domxref("Element")}} 接口的 **`id`** 属性表示元素的标识符，反映了全局属性 [**`id`**](/zh-CN/docs/Web/HTML/Global_attributes/id) 的值。
+{{domxref("Element")}} 接口的 **`id`** 属性表示元素的标识符，反映了全局属性 [**`id`**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 的值。
 
 如果 `id` 的值不为空字符串，则在同一文档中必须唯一。
 
@@ -30,4 +30,4 @@ l10n:
 
 ## 参见
 
-- DOM 全局属性 [**id**](/zh-CN/docs/Web/HTML/Global_attributes/id)。
+- DOM 全局属性 [**id**](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)。

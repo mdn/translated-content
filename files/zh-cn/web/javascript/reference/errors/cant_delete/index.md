@@ -3,8 +3,6 @@ title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 消息
 
 ```plain
@@ -18,7 +16,7 @@ TypeError: Cannot delete property 'x' of #<Object> (Chrome)
 
 ## 哪里有问题？
 
-尝试删除某个属性，但是这个属性是[不可配置的](/zh-CN/docs/Web/JavaScript/Data_structures#属性)。`configurable` 属性控制是否该属性能从对象上删除，以及它的属性（除了`writable`）能否被修改。
+尝试删除某个属性，但是这个属性是[不可配置的](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#属性)。`configurable` 属性控制是否该属性能从对象上删除，以及它的属性（除了`writable`）能否被修改。
 
 这个错误仅仅在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下出现。在非严格模式下，这个操作返回 `false`。
 

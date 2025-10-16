@@ -51,7 +51,7 @@ html(lang='en')
 
 Шаблон использует (и включает) JavaScript и CSS из [Bootstrap](http://getbootstrap.com/) , что позволяет улучшить макет и представление HTML-страницы. Применение Bootstrap или другого клиентского фреймворка - быстрый способ создать привлекательную, хорошо масштабируемую страницу. Кроме того, это позволяет получить представление страницы, не вдаваясь в детали - мы можем уделить все внимание коду на стороне сервера!
 
-Макет представляется достаточно очевидным, если вы уже прочли статью Основы шаблонов ([Template primer](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer)) выше. Обратите внимание на использование `block content` в качестве места для размещения контента отдельных страниц.
+Макет представляется достаточно очевидным, если вы уже прочли статью Основы шаблонов ([Template primer](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data#template_primer)) выше. Обратите внимание на использование `block content` в качестве места для размещения контента отдельных страниц.
 
 Базовый шаблон также ссылается на локальный файл стилей (**style.css**), что обеспечивает дополнительное управление внешним видом. Откройте **/public/stylesheets/style.css** и замените его содержимое таким текстом:
 
@@ -67,5 +67,5 @@ html(lang='en')
 
 ## Следующие шаги
 
-- Вернуться к [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Перейти к следующему подразделу [Домашняя страница](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).
+- Вернуться к [Учебник Express часть 5: Отображение данных библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
+- Перейти к следующему подразделу [Домашняя страница](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page).

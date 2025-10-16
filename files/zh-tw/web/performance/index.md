@@ -150,14 +150,13 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 
 HTML
 
-- [The `<picture>` Element](/zh-TW/docs/Web/HTML/Element/picture)
-- [The `<video>` Element](/zh-TW/docs/Web/HTML/Element/video)
-- [The `<source>` Element](/zh-TW/docs/Web/HTML/Element/source)
-- [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Element/img#Attributes)
+- [The `<picture>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/picture)
+- [The `<video>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/video)
+- [The `<source>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/source)
+- [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Reference/Elements/img#Attributes)
+  - [Responsive images](/zh-TW/docs/Web/HTML/Guides/Responsive_images)
 
-  - [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images)
-
-- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
+- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 
 CSS
 
@@ -188,17 +187,16 @@ APIs
 - [Resource Timing API](/zh-TW/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/zh-TW/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/zh-TW/docs/Web/API/Background_Tasks_API)
-
   - [requestIdleCallback()](/zh-TW/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/zh-TW/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Glossary/Prefetch), and prerender
+- Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Glossary/Prefetch), and prerender
 - [Fetchevent.navigationPreload](/zh-TW/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/zh-TW/docs/Web/API/PerformanceServerTiming)
 
 Headers
 
-- [Content-encoding](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding)
+- [Content-encoding](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Encoding)
 - HTTP/2
 - [gZip](/zh-TW/docs/Glossary/GZip_compression)
 - Client Hints
@@ -218,9 +216,8 @@ Best Practices
 
 - [Using Service Workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Using Web Workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
-
   - [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
 
 - [PWA](/zh-TW/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-- [Caching](/zh-TW/docs/Web/HTTP/Caching)
+- [Caching](/zh-TW/docs/Web/HTTP/Guides/Caching)
 - Content Delivery Networks (CDN)

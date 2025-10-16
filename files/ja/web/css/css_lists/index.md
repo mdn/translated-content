@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c642cf3df8c5bf401d9b69f9e7182a874b1e010b
 ---
 
-{{CSSRef}}
-
 **CSS リストとカウンター** (CSS lists and counters) モジュールにより、リストアイテムの箇条書き記号のスタイルや位置を指定したり、文字列、カウンターなどのの組み合わせによる値を操作したりすることができます。
 
 リストアイテムのマーカー、つまり箇条書き記号や番号付きカウンターが、定義する機能です。 リストアイテムは、 {{HTMLElement("ol")}} または {{HTMLElement("ul")}} 要素内にある {{HTMLElement("li")}} 要素に制限されません。 `display: list-item` を設定した要素すべてを指します。
@@ -45,7 +43,6 @@ l10n:
 ## ガイド
 
 - [一貫したリストのインデント](/ja/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
-
   - : 異なるブラウザー同士でも一貫したリストのインデントを実現する方法を説明します。
 
 - [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
@@ -54,7 +51,6 @@ l10n:
 ## 関連概念
 
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
-
   - {{cssxref("@counter-style")}} アットルール
   - [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name) データ型
   - [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#値) データ型

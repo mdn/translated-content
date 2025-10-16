@@ -5,11 +5,38 @@ l10n:
   sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
 ---
 
-{{CSSRef}}
-
 **`text-underline-position`** は [CSS](/ja/docs/Web/CSS) のプロパティであり、{{cssxref("text-decoration")}} プロパティの `underline` の値で設定される下線 (傍線) の位置を指定します。
 
-{{EmbedInteractiveExample("pages/css/text-underline-position.html")}}
+{{InteractiveExample("CSS デモ: text-underline-position")}}
+
+```css interactive-example-choice
+text-underline-position: auto;
+```
+
+```css interactive-example-choice
+text-underline-position: under;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    <span class="transition-all" id="example-element"
+      >C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></span
+    >
+    is the chemical formula for caffeine.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 ## 構文
 

@@ -5,11 +5,59 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{CSSRef}}
-
 **`text-transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。
 
-{{EmbedInteractiveExample("pages/css/text-transform.html")}}
+{{InteractiveExample("CSS デモ: text-transform")}}
+
+```css interactive-example-choice
+text-transform: capitalize;
+```
+
+```css interactive-example-choice
+text-transform: uppercase;
+```
+
+```css interactive-example-choice
+text-transform: lowercase;
+```
+
+```css interactive-example-choice
+text-transform: none;
+```
+
+```css interactive-example-choice
+text-transform: full-width;
+```
+
+```css interactive-example-choice
+text-transform: full-size-kana;
+```
+
+```css interactive-example-choice
+text-transform: math-auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      LONDON. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <p lang="el">
+      Σ is a Greek letter and appears in ΟΔΥΣΣΕΥΣ. Θα πάμε στο "Θεϊκό φαΐ" ή στη
+      "Νεράιδα"
+    </p>
+    <p lang="ja">ァィゥェ ォヵㇰヶ</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2em;
+}
+```
 
 `text-transform` プロパティは、以下のように言語固有の大文字小文字の扱いを考慮します。
 
@@ -20,7 +68,7 @@ l10n:
 - ギリシャ語 (`el`) で、小文字のシグマは `σ` と `ς` の 2 種類あります。`ς` は、単語の末尾にあるシグマに限り使用します。大文字のシグマ (`Σ`) に `text-transform: lowercase` を適用すると、ブラウザーは状況に応じて正しい小文字を選択しなければなりません。
 - アイルランド語 (`ga`) では、頭文字が大文字化されていても特定の接頭辞文字が小文字のままになります。例えば `text-transform: uppercase` は `ar aon tslí` を、予想される `AR AON TSLÍ` ではなく `AR AON tSLÍ` にします (Firefox に限る)。大文字化によりハイフンが削除される場合もあり、`an t-uisce` は `AN tUISCE` になります (また、`text-transform: lowercase` ではハイフンが適切に再挿入されます)。
 
-言語は HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性で定義します。
+言語は HTML の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性で定義します。
 
 > [!NOTE]
 > これらの特定のケースはブラウザーにより異なりますので、[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
@@ -46,12 +94,13 @@ text-transform: unset;
 ```
 
 - `capitalize`
-
   - : それぞれの単語の最初の*文字*を強制的に大文字に変換させるキーワードです。ほかの文字は変更しません。すなわち、要素のテキストで記載した元の表記を維持します。文字とは、文字または数字の一般カテゴリーの一部である任意の Unicode 文字です。単語の先頭にある句読点や記号は無視されます。
 
-    > **メモ:** `capitalize` が言語固有の先頭文字を大文字にする慣習 (英語で冠詞を除外するなど) に従うと期待するべきではありません。
+    > [!NOTE]
+    > `capitalize` が言語固有の先頭文字を大文字にする慣習 (英語で冠詞を除外するなど) に従うと期待するべきではありません。
 
-    > **メモ:** `capitalize` キーワードは CSS 1 および CSS 2.1 で定義されていたものでした。この結果、最初の文字を計算する方法は、ブラウザーによって異なっていました（Firefox は `-` および `_` を文字として捉えていましたが、他はそうではありませんでした。 Webkit 及び Gecko は `ⓐ` のような文字から作られた記号を、誤って文字として認識していました）。正しいふるまいを詳細に定義したので、 CSS Text Level 3 ではこれを一掃しました。ブラウザーの互換性表の `capitalize` の行は、それぞれのエンジンがこの詳細に定義された振る舞いに対応し始めたバージョンを記載しています。
+    > [!NOTE]
+    > `capitalize` キーワードは CSS 1 および CSS 2.1 で定義されていたものでした。この結果、最初の文字を計算する方法は、ブラウザーによって異なっていました（Firefox は `-` および `_` を文字として捉えていましたが、他はそうではありませんでした。 Webkit 及び Gecko は `ⓐ` のような文字から作られた記号を、誤って文字として認識していました）。正しいふるまいを詳細に定義したので、 CSS Text Level 3 ではこれを一掃しました。ブラウザーの互換性表の `capitalize` の行は、それぞれのエンジンがこの詳細に定義された振る舞いに対応し始めたバージョンを記載しています。
 
 - `uppercase`
   - : すべての文字を大文字に変換させるキーワードです。
@@ -71,7 +120,7 @@ text-transform: unset;
 
 テキストの長い区間に `text-transform` の値を `uppercase` で設定すると、失読症のような認知障碍を持つ人にとって読むのが難しくなることがあります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義

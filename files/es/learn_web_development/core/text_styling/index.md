@@ -10,7 +10,7 @@ Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS 
 
 ## Requisitos previos
 
-Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/Learn/CSS/First_steps).
+Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
 > Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/), [CodePen](https://codepen.io/) o [Glitch](https://glitch.com/).
@@ -19,13 +19,13 @@ Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se e
 
 Este módulo contiene los siguientes artículos, los cuales le enseñarán todos los elementos esenciales detras del diseño de contenido de texto HTML.
 
-- [Texto fundamental y estilo de fuente](/es/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Texto fundamental y estilo de fuente](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals)
   - : En este artículo iremos a través de todos los aspectos básicos del estilo de texto/fuente en detalle, incluyendo configuraciones del peso de la fuente, la familia y el estilo, taquigrafía de fuente, alineación de texto y otros efectos, línea y espaciado de letras.
-- [Estilos de listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
+- [Estilos de listas](/es/docs/Learn_web_development/Core/Text_styling/Styling_lists)
   - : Las listas, en su mayor parte, se comportan como cualquier otro texto, pero hay algunas propiedades de CSS específicas para las listas que debe conocer, y algunas de las mejores prácticas para tener en cuenta. Este artículo explica todo.
-- [Estilos de enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
+- [Estilos de enlaces](/es/docs/Learn_web_development/Core/Text_styling/Styling_links)
   - : Al diseñar enlaces, es importante comprender cómo hacer uso de pseudo-clases para diseñar estados de enlaces de manera efectiva, y cómo diseñar enlaces para su uso en características de interfaces variadas comunes tales como menús de navegación y pestañas. Veremos todos estos temas en este artículo.
-- [Fuentes web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Fuentes web](/es/docs/Learn_web_development/Core/Text_styling/Web_fonts)
   - : Aquí exploraremos las fuentes web en detalle — estas permiten descargar fuentes personalizadas junto con su página web, para permitir un estilo de texto más variado y personalizado.
 
 ## Evaluaciones

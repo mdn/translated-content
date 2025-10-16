@@ -3,9 +3,7 @@ title: <position>
 slug: Web/CSS/position_value
 ---
 
-{{CSSRef}}
-
-[CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
+[CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
 
 > [!NOTE]
 > 由 `<position>` 值表述的最终位置并不需要位于元素的盒子中。
@@ -37,7 +35,8 @@ value value              /* 每个方向一个值（先水平然后垂直） */
 keyword value keyword value /* 每个值都是其前面的关键字的偏移量 */
 ```
 
-> **备注：** {{cssxref("background-position")}} 属性也接受三值语法。这无法在其他使用 `<position>` 的属性中使用。
+> [!NOTE]
+> {{cssxref("background-position")}} 属性也接受三值语法。这无法在其他使用 `<position>` 的属性中使用。
 
 ## 插值
 
@@ -81,7 +80,7 @@ bottom top
 
 ## 参见
 
-- [CSS 值与单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 值与单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)
 - [CSS 值与单位介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}

@@ -1,69 +1,79 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-JavaScript の関数は、実際にはすべて `Function` オブジェクトです。これは、 `(function(){}).constructor === Function` というコードが true を返すことで確認することができます。
+**`Function`** オブジェクトは[関数](/ja/docs/Web/JavaScript/Reference/Functions)についてのメソッドを提供します。 JavaScript では、すべての関数が実際には `Function` オブジェクトです。
 
 ## コンストラクター
 
 - {{jsxref("Function/Function", "Function()")}}
-  - : 新しい `Function` オブジェクトを生成します。コンストラクターを直接呼び出すと関数を動的に生成することができますが、セキュリティや、 {{jsxref("eval")}} と似た性能の (ただし、はるかに重要性の低い) 問題を抱えます。ただし eval とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
+  - : 新しい `Function` オブジェクトを生成します。コンストラクターを直接呼び出すと関数を動的に生成することができますが、セキュリティや、 {{jsxref("Global_Objects/eval", "eval()")}} と似た性能の (ただし、はるかに重要性の低い) 問題を抱えます。ただし `eval()` とは異なり、 `Function` コンストラクターはグローバルスコープで実行される関数のみを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Function.arguments")}}
-  - : 関数に渡した引数に対応する配列です。
-    これは {{jsxref("Function")}} オブジェクトのプロパティとしては非推奨です。代わりに関数内に用意されている {{jsxref("Functions/arguments", "arguments")}} オブジェクト (関数内で使用可能) を使用してください。
-- {{jsxref("Function.caller")}}
-  - : 現在実行している関数を呼び出した関数を返します。
-    このプロパティは非推奨であり、一部の厳格モードではない関数でのみ機能します。
-- {{jsxref("Function.displayName")}}
+以下のプロパティは `Function.prototype` で定義されており、すべての `Function` インスタンスで共有されています。
+
+- {{jsxref("Function.prototype.arguments")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : この関数に渡された引数を表します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。代わりに関数のクロージャ内で {{jsxref("Functions/arguments", "arguments")}} オブジェクトを使用してください。
+- {{jsxref("Function.prototype.caller")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : 現在実行している関数を呼び出した関数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数については、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
+- {{jsxref("Object/constructor", "Function.prototype.constructor")}}
+  - : インスタンスオブジェクトを作成したコンストラクター関数。 `Function` のインスタンスの場合、初期値は {{jsxref("Function/Function", "Function")}} コンストラクターです。
+
+以下のプロパティは、それぞれの `Function` インスタンスが自分自身で持つプロパティです。
+
+- {{jsxref("Function/displayName", "displayName")}} {{non-standard_inline}} {{optional_inline}}
   - : 関数の表示名です。
-- {{jsxref("Function.length")}}
+- {{jsxref("Function/length", "length")}}
   - : 関数によって期待される引数の数を指定します。
-- {{jsxref("Function.name")}}
+- {{jsxref("Function/name", "name")}}
   - : 関数の名前です。
+- {{jsxref("Function/prototype", "prototype")}}
+  - : [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子付きでコンストラクターとして関数を使用する場合に使用されます。新しいオブジェクトのプロトタイプとなります。
 
 ## インスタンスメソッド
 
-- {{jsxref("Function.prototype.apply()", "Function.prototype.apply(<var>thisArg</var> [, <var>argsArray</var>])")}}
-  - : 関数を呼び出し、 `this` を提供された `thisArg` に設定します。引数は {{jsxref("Array")}} として渡すことができます。
-- {{jsxref("Function.prototype.bind()", "Function.prototype.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]]])")}}
-  - : 新しい関数を作成し、呼び出されたときに、 `this` を提供された `thisArg` に設定します。任意で、指定された一連の引数が、新しく結びつけられた関数が呼び出されたときに与えられた引数の前に付加されます。
-- {{jsxref("Function.prototype.call()", "Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])")}}
-  - : 関数を呼び出して、 `this` に提供した値を設定します。引数は、指定するオブジェクトのものとして渡すことができます。
-- {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
+- {{jsxref("Function.prototype.apply()")}}
+  - : 指定された `this` 値とオプションで引数を配列（または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)）として渡し、指定された関数を呼び出します。
+- {{jsxref("Function.prototype.bind()")}}
+  - : 新しい関数を作成し、呼び出されたときに、 `this` を指定された値に設定します。オプションで、指定された一連の引数が、新しく結びつけられた関数が呼び出されたときに与えられた引数の前に付加されます。
+- {{jsxref("Function.prototype.call()")}}
+  - : 指定された `this` 値とオプションで引数を渡し、指定された関数を呼び出します。
+- {{jsxref("Function.prototype.toString()")}}
   - : 関数のソースコードを表す文字列を返します。
     {{jsxref("Object.prototype.toString")}} メソッドを上書きします。
+- [`Function.prototype[Symbol.hasInstance]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
+  - : コンストラクター関数が、オブジェクトをコンストラクターのインスタンスの 1 つとして認識するかどうかを判断するための、既定の手順を指定します。 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子によって呼び出されます。
 
 ## 例
 
-### Funciton コンストラクターと関数宣言の違い
+### Function コンストラクターと関数宣言の違い
 
-`Function` コンストラクターで生成された関数は、生成コンテキストにクロージャを作りません。つまり常にグローバルスコープで生成されます。これを実行すると、 `Function` コンストラクターの呼び出し元のスコープは入らず、自身のローカル変数とグローバル変数だけにアクセスできます。これは関数式のコードに {{jsxref("eval")}} を使うのとは異なります。
+`Function` コンストラクターで生成された関数は、生成コンテキストにクロージャを作りません。つまり常にグローバルスコープで生成されます。これを実行すると、 `Function` コンストラクターの呼び出し元のスコープは入らず、自身のローカル変数とグローバル変数だけにアクセスできます。これは関数式のコードに {{jsxref("Global_Objects/eval", "eval()")}} を使うのとは異なります。
 
 ```js
+// `var` でグローバルプロパティを作成
 var x = 10;
 
 function createFunction1() {
-  var x = 20;
-  return new Function("return x;"); // この |x| はグローバルの |x| を表す
+  const x = 20;
+  return new Function("return x;"); // この `x` はグローバルの `x` を表す
 }
 
 function createFunction2() {
-  var x = 20;
+  const x = 20;
   function f() {
-    return x; // この |x| は上記のローカルの |x| を表す
+    return x; // この `x` は上記のローカルの `x` を表す
   }
   return f;
 }
 
-var f1 = createFunction1();
+const f1 = createFunction1();
 console.log(f1()); // 10
-var f2 = createFunction2();
+const f2 = createFunction2();
 console.log(f2()); // 20
 ```
 
@@ -79,10 +89,9 @@ console.log(f2()); // 20
 
 ## 関連情報
 
-- {{jsxref("Functions", "関数と関数スコープ", "", 1)}}
-- {{jsxref("Statements/function", "function")}} 文
-- {{jsxref("Operators/function", "function")}} 式
-- {{jsxref("Statements/function*", "function*")}} 文
-- {{jsxref("Operators/function*", "function*")}} 式
+- [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("AsyncGeneratorFunction")}}
 - {{jsxref("GeneratorFunction")}}
+- {{jsxref("Functions", "関数", "", 1)}}

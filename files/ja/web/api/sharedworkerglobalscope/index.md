@@ -53,13 +53,13 @@ _このインターフェイスは {{domxref("WorkerGlobalScope")}}、またそ�
   - : base-64 エンコードを使用してエンコードされている文字列をデコードします。
 - {{domxref("btoa", "btoa()")}}
   - : バイナリーデータの文字列から、 base-64 でエンコードされた ASCII 文字列を作成します。
-- {{domxref("clearInterval()")}}
-  - : {{domxref("setInterval()")}} を使用して設定された繰り返し実行を取り消します。
-- {{domxref("clearTimeout()")}}
-  - : {{domxref("setTimeout()")}} を使用して設定された繰り返し実行を取り消します。
-- {{domxref("setInterval()")}}
+- {{domxref("Window.clearInterval", "clearInterval()")}}
+  - : {{domxref("Window.setInterval", "setInterval()")}} を使用して設定された繰り返し実行を取り消します。
+- {{domxref("Window.clearTimeout", "clearTimeout()")}}
+  - : {{domxref("Window.setTimeout", "setTimeout()")}} を使用して設定された繰り返し実行を取り消します。
+- {{domxref("Window.setInterval", "setInterval()")}}
   - : X ミリ秒ごとに関数を実行するようスケジューリングします。
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
   - : 関数の実行の遅延を設定します。
 
 ## イベント

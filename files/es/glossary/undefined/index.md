@@ -11,5 +11,5 @@ Un valor **{{Glossary("primitivo")}}** automáticamente asignado a las **variabl
 
 ### Conocimientos generales
 
-- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
 - [Valor undefined en Wikipedia](http://en.wikipedia.org/wiki/Undefined_value)

@@ -5,11 +5,64 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境（存在する場合）を設定します。
 
-{{EmbedInteractiveExample("pages/css/pointer-events.html")}}
+{{InteractiveExample("CSS デモ: pointer-events")}}
+
+```css interactive-example-choice
+pointer-events: auto;
+```
+
+```css interactive-example-choice
+pointer-events: none;
+```
+
+```css interactive-example-choice
+pointer-events: stroke; /* SVG-only */
+```
+
+```css interactive-example-choice
+pointer-events: fill; /* SVG-only */
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element">
+    <p>
+      <a href="#">example link</a>
+    </p>
+    <p>
+      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <a xlink:href="#">
+          <circle
+            cx="50"
+            cy="50"
+            fill="#3E6E84"
+            r="40"
+            stroke="#ffb500"
+            stroke-width="5"></circle>
+          <text fill="white" text-anchor="middle" x="50" y="55">SVG</text>
+        </a>
+      </svg>
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-weight: bold;
+}
+
+#example-element a {
+  color: #009e5f;
+}
+
+#example-element svg {
+  width: 10em;
+  height: 10em;
+}
+```
 
 ## 構文
 
@@ -44,10 +97,10 @@ pointer-events: unset;
 - `auto`
   - : 要素は、 `pointer-events` プロパティが指定されていないときと同様にふるまいます。SVG コンテンツ内では `visiblePainted` を指定したときと同じ効果になります。
 - `none`
-
   - : 要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になることはありません。しかし、子孫要素が `pointer-events` の別の値をセットされていた場合は、その子孫要素自体はポインターイベントのターゲットとなりえます。その場合、ポインターイベントはイベントキャプチャ/[バブリング](/ja/docs/Web/API/Event/bubbles)の過程で必要に応じて親要素のイベントリスナーをトリガーします。
 
-    > **メモ:** `pointerenter` イベントと `pointerleave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointer-events: none` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
+    > [!NOTE]
+    > `pointerenter` イベントと `pointerleave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointer-events: none` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
 
 #### SVG のみ（HTML では実験的）
 

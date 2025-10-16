@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 允许扩展实现当用户在浏览器的地址栏输入时的自定义行为。
 
 当用户聚焦地址栏并开始输入时，浏览器会显示一个下拉菜单，其中包含基于用户输入的建议页面。这使用户可以快速访问，例如，他们的历史记录或书签中的页面。
@@ -53,4 +51,4 @@ l10n:
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。
+> 此 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。

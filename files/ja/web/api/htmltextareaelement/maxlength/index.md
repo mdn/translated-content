@@ -3,12 +3,12 @@ title: "HTMLTextAreaElement: maxLength プロパティ"
 short-title: maxLength
 slug: Web/API/HTMLTextAreaElement/maxLength
 l10n:
-  sourceCommit: 8cf200c4039f6399b6696fc710bee1c4b395d401
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`maxLength`** は {{domxref("HTMLTextAreaElement")}} インターフェイスのプロパティで、この {{HTMLElement("textarea")}} 要素の値として入力が許可される最大文字数（UTF-16 コード単位）と、有効な値として許可される最大文字数を示します。これは、この要素の [`maxlength`](/ja/docs/Web/HTML/Element/textarea#maxlength) 属性を反映します。`-1` は、値の長さに制限がないことを意味します。
+**`maxLength`** は {{domxref("HTMLTextAreaElement")}} インターフェイスのプロパティで、この {{HTMLElement("textarea")}} 要素の値として入力が許可される最大文字数（UTF-16 コード単位）と、有効な値として許可される最大文字数を示します。これは、この要素の [`maxlength`](/ja/docs/Web/HTML/Reference/Elements/textarea#maxlength) 属性を反映します。`-1` は、値の長さに制限がないことを意味します。
 
 > [!NOTE]
 > ブラウザーは通常、`maxlength` 属性で許可された文字数以上の文字が入力できないようにしています。長さがこれより長い場合、その要素は無効と見なされ、{{domxref("ValidityState")}} オブジェクトの {{domxref("ValidityState.tooLong", "tooLong")}} プロパティが `true` になります。
@@ -24,7 +24,7 @@ l10n:
 ```html
 <p>
   <label for="comment">コメント</label>
-  <textarea id="comment" minlength="10" maxlength="200" /></textarea>
+  <textarea id="comment" minlength="10" maxlength="200"></textarea>
 </p>
 ```
 

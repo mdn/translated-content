@@ -32,7 +32,7 @@ original_slug: Learn/CSS/CSS_layout/Flexbox
 
 ## ¿Por qué flexbox?
 
-Durante mucho tiempo, las únicas herramientas fiables con compatibilidad cruzada entre navegadores disponibles para crear diseños CSS fueron cosas como la [flotación](/es/docs/Learn/CSS/CSS_layout/Floats) y el [posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning). Están bien y funcionan, pero de alguna manera también limitan bastante y frustran.
+Durante mucho tiempo, las únicas herramientas fiables con compatibilidad cruzada entre navegadores disponibles para crear diseños CSS fueron cosas como la [flotación](/es/docs/Learn_web_development/Core/CSS_layout/Floats) y el [posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning). Están bien y funcionan, pero de alguna manera también limitan bastante y frustran.
 
 Con tales herramientas resulta difícil, si no imposible, lograr obtener en cualquier forma conveniente y flexible un diseño de página sencillo con unos requisitos como los siguientes:
 
@@ -333,7 +333,7 @@ Esto no importa demasiado mientras estás aprendiendo y experimentando; pero cua
 
 Las propiedades flexbox son un poco más complicadas que otras características de CSS. Por ejemplo, si un navegador no soporta sombras en CSS, es probable que el sitio todavía sea utilizable. Sin embargo, si no es compatible con las funciones flexbox, probablemente el diseño completo se romperá, y el sitio web se inutilizará.
 
-Expusimos estrategias para superar problemas de compatibilidad entre navegadores en nuestro módulo [Pruebas de compatibilidad del navegador](/es/docs/Learn/Tools_and_testing/Cross_browser_testing).
+Expusimos estrategias para superar problemas de compatibilidad entre navegadores en nuestro módulo [Pruebas de compatibilidad del navegador](/es/docs/Learn_web_development/Extensions/Testing).
 
 ## Pon a prueba tus habilidades
 

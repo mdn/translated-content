@@ -48,7 +48,7 @@ for (const source in xrSession.inputSources) {
 
 このループは、`gripSpace` の値を持つ各入力ソースについて、`gripSpace` によって記述される位置と向きを表す {{domxref("XRPose")}} を取得します。 有効なポーズが返された場合、メソッド `myDrawMeshUsingTransform()` を呼び出して、グリップポーズの変換行列を使用して変換されたコントローラーのメッシュを描画します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -3,8 +3,6 @@ title: Firefox 61 技術變動摘要
 slug: Mozilla/Firefox/Releases/61
 ---
 
-{{FirefoxSidebar}}
-
 此文章提供 Firefox 61 中與開發者較為相關之變動資訊。Firefox 61 預定於 [2018 年 6 月 26 日正式發表](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates)。
 
 ## Web 開發相關變動
@@ -65,7 +63,7 @@ _無變動。_
 
 ### HTTP
 
-- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookie](/zh-TW/docs/Web/HTTP/Cookies)。（[Firefox bug 795346](https://bugzil.la/795346)）
+- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie) 及 [HTTP cookie](/zh-TW/docs/Web/HTTP/Guides/Cookies)。（[Firefox bug 795346](https://bugzil.la/795346)）
 
 ### 安全性
 
@@ -97,7 +95,6 @@ _無變動。_
 
 - 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（[Firefox bug 1455763](https://bugzil.la/1455763)）
 - 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（[Firefox bug 1133172](https://bugzil.la/1133172)）：
-
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`

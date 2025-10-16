@@ -37,7 +37,7 @@ audioElement.play();
 - 音频被静音或其音量设置为 0
 - 用户和网页已有交互行为（包括点击、触摸、按下某个键等等）
 - 网站已被列入白名单；如果浏览器确定用户经常与媒体互动，这可能会自动发生，也可能通过首选项或其他用户界面功能手动发生
-- 自动播放[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)被应用于 {{HTMLElement("iframe")}} 或者其文档上，从而获得了自动播放的权限。
+- 自动播放[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)被应用于 {{HTMLElement("iframe")}} 或者其文档上，从而获得了自动播放的权限。
 
 否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。
 
@@ -52,7 +52,7 @@ audioElement.play();
 
 ### autoplay 属性
 
-想让内容自动播放的最简单方法是将 [`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay) 属性添加到 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素。并将 {{domxref("HTMLMediaElement.autoplay", "autoplay")}} 属性设置为 `true`，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
+想让内容自动播放的最简单方法是将 [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性添加到 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素。并将 {{domxref("HTMLMediaElement.autoplay", "autoplay")}} 属性设置为 `true`，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
 
 - 页面允许使用自动播放功能
 - 媒体元素已在页面加载期间创建
@@ -70,7 +70,7 @@ audioElement.play();
 
 #### 示例 2：检测是否允许自动播放
 
-如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于 [`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay) 属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
+如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于 [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
 
 如果你能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。你可以通过侦听要在媒体元素上触发的 [`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event) 事件来轻松实现此目的。
 
@@ -82,7 +82,7 @@ audioElement.play();
 <video src="myvideo.mp4" id="video" autoplay></video>
 ```
 
-这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.play_event", "play")}} 事件处理器；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
+这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.play_event", "play")}} 事件处理器；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
 
 `handleFirstPlay()` 看起来像这样：
 
@@ -156,14 +156,14 @@ if (startPlayPromise !== undefined) {
 
 ## 自动播放功能策略
 
-除了上述的浏览器端管理和对自动播放功能的控制之外，web 服务器也可以表示愿意让自动播放功能发挥作用。{{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} 标头的 [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) 指令用于控制哪些域（如果有）可用于自动播放媒体。默认情况下， `autoplay` 功能策略设置为 `'self'`（_包括单引号字符_），表示允许自动播放，因为它们与文档托管在同一域中。
+除了上述的浏览器端管理和对自动播放功能的控制之外，web 服务器也可以表示愿意让自动播放功能发挥作用。{{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} 标头的 [`autoplay`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay) 指令用于控制哪些域（如果有）可用于自动播放媒体。默认情况下， `autoplay` 功能策略设置为 `'self'`（_包括单引号字符_），表示允许自动播放，因为它们与文档托管在同一域中。
 
 你还可以指定 `'none'` 以完全禁用自动播放，`'*'` 以允许来自所有域的自动播放，或指定一个或多个可以自动播放媒体的特定来源。这些来源由空格字符分隔。
 
 > [!NOTE]
-> 指定的功能策略适用于文档以及嵌套在其中的每个 {{HTMLElement("iframe")}}，除非这些框架包含为该框架以及嵌套在其中的所有框架设置新的功能策略的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow)。
+> 指定的功能策略适用于文档以及嵌套在其中的每个 {{HTMLElement("iframe")}}，除非这些框架包含为该框架以及嵌套在其中的所有框架设置新的功能策略的 [`allow`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allow)。
 
-当使用 `<iframe>` 上的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow) 属性指定该框架及其嵌套框架的功能策略时，你还可以指定值 `'src'` 以允许仅自动播放来自与该框架的 [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) 属性指定的域相同的域的媒体。
+当使用 `<iframe>` 上的 [`allow`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allow) 属性指定该框架及其嵌套框架的功能策略时，你还可以指定值 `'src'` 以允许仅自动播放来自与该框架的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#src) 属性指定的域相同的域的媒体。
 
 ### 示例：仅允许来自文档域的自动播放
 
@@ -238,7 +238,7 @@ Permissions-Policy: autoplay 'none'
 <video src="/videos/awesomevid.webm" controls autoplay muted></video>
 ```
 
-该视频元素配置为包括用户控件（通常是播放/暂停、浏览视频时间线、音量控制和静音）；此外，由于包含 [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted) 属性，视频将自动播放，但音频静音。不过，用户可以选择通过单击控件中的取消静音按钮来重新启用音频。
+该视频元素配置为包括用户控件（通常是播放/暂停、浏览视频时间线、音量控制和静音）；此外，由于包含 [`muted`](/zh-CN/docs/Web/HTML/Reference/Elements/video#muted) 属性，视频将自动播放，但音频静音。不过，用户可以选择通过单击控件中的取消静音按钮来重新启用音频。
 
 ## 浏览器配置选项
 

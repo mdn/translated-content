@@ -7,7 +7,50 @@ slug: Web/CSS/border-image-source
 
 La propriété **`border-image-source`** définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut `none`, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.
 
-{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
+{{InteractiveExample("CSS Demo: border-image-source")}}
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
+```
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-stars.png");
+```
+
+```css interactive-example-choice
+border-image-source: repeating-linear-gradient(
+  45deg,
+  transparent,
+  #4d9f0c 20px
+);
+```
+
+```css interactive-example-choice
+border-image-source: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## Syntaxe
 

@@ -257,8 +257,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto",
-                1)}}
+        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… . …</code></td>

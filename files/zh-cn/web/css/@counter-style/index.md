@@ -3,8 +3,6 @@ title: "@counter-style"
 slug: Web/CSS/@counter-style
 ---
 
-{{CSSRef}}
-
 ## 概要
 
 `@counter-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)让开发者可以自定义计数器的样式。一个 `@counter-style` 规则定义了如何把一个计数器的值转化为字符串表示。
@@ -47,7 +45,6 @@ slug: Web/CSS/@counter-style
 - {{cssxref("fallback")}}
   - : 定义一个备用的系统，当自定义的系统不能使用或者计数器的值超过了定义的范围时使用。如果备用系统也不能表示计数器的值，那么备用系统的备用系统（如果有的话）将会启用。如果没有指定备用系统，或者备用系统链不能够正确表示一个值，那么最终会降为十进制样式表示。
 - {{cssxref("symbols-descriptor", "symbols")}}
-
   - : 定义一个符号，用于标记的表示。符号可以包含字符串，图片或自定义的识别码。这个符号怎样构建标记呢？这依赖于 system 描述符里面所定义的算法。举个例子，如果 system 的值是 fixed，那么 symbols 属性指定的固定的 N 个符号，将被用来表示计数器的前 N 个值。用完了前 N 个符号后，列表里剩下的值将使用 fallback 定义的样式来表示。
 
     下面的 @counter-style 规则使用图片而不是字符标记。
@@ -61,7 +58,6 @@ slug: Web/CSS/@counter-style
     ```
 
 - {{cssxref("additive-symbols")}}
-
   - : 尽管 symbols 属性中指定的符号可以被 system 中定义的大部分算法所使用，但是一些 system 属性的值，比如 additive，依赖于本描述符所描述的加性元组。Each additive tuple consists of a counter symbol and a non negative integer weight. 每个加性元组包含一个可数的符号和一个非负证书的权重。The additive tuples must be specified in the descending order of their weights.
 
 - {{cssxref("speak-as")}}

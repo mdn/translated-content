@@ -7,7 +7,51 @@ slug: Web/CSS/place-items
 
 Сокращённое свойство [CSS](/ru/docs/Web/CSS) **`place-items`** позволяет одновременно выравнивать элементы и колонки, и ряда (т.е. по свойствам {{CSSxRef("align-items")}} и {{CSSxRef("justify-items")}}) в соответствующей системе раскладки, такой как [гриды](/ru/docs/Web/CSS/CSS_grid_layout) или [флексбоксы](/ru/docs/Web/CSS/CSS_flexible_box_layout). Если задано одно значение, оно используется для выравнивания и в колонке, и в ряду.
 
-{{EmbedInteractiveExample("pages/css/place-items.html")}}
+{{InteractiveExample("CSS Demo: place-items")}}
+
+```css interactive-example-choice
+place-items: center stretch;
+```
+
+```css interactive-example-choice
+place-items: center start;
+```
+
+```css interactive-example-choice
+place-items: start end;
+```
+
+```css interactive-example-choice
+place-items: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Связанные свойства
 

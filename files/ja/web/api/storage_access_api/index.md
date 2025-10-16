@@ -17,7 +17,7 @@ Storage Access API（ストレージアクセス API）は、埋め込まれた�
 
 Storage Access API は、この問題を解決することを目的としています。 埋め込まれたクロスオリジンのコンテンツは、{{domxref("Document.requestStorageAccess()")}} メソッドを介してサイトごとにファーストパーティストレージへの無制限のアクセスを要求し、{{domxref("Document.hasStorageAccess()")}} メソッドを介して既にアクセス権があるかどうかを確認できます。
 
-さらに、セキュリティ上の理由から、サンドボックス化した {{htmlelement("iframe")}} にはデフォルトでストレージアクセスを許可できません。 そのため、API は、`allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Element/iframe#attr-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
+さらに、セキュリティ上の理由から、サンドボックス化した {{htmlelement("iframe")}} にはデフォルトでストレージアクセスを許可できません。 そのため、API は、`allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Reference/Elements/iframe#attr-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
 
 ```html
 <iframe
@@ -67,7 +67,7 @@ Storage Access API のメソッドは、{{domxref("Document")}} インターフ�
 
 {{htmlelement("iframe")}} 要素の `sandbox` 属性には新しいトークン `allow-storage-access-by-user-activation` があり、サンドボックス化した `<iframe>` は Storage Access API を使用してストレージアクセスを要求できます。
 
-## 仕様
+## 仕様書
 
 API は現在、提案段階にあり、標準化プロセスはまだ開始されていません。 現在、Apple の [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) ブログ投稿、および [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338) で API の仕様の詳細を見つけることができます。
 

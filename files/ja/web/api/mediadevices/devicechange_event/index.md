@@ -174,7 +174,7 @@ function updateDeviceList() {
 
 すべての機器の情報を出力するために、 {{jsxref("Array.forEach", "forEach()")}} ループを使用しています。それぞれの機器で、ユーザーへこの機器情報を見せるために新しい {{HTMLElement("li")}} オブジェクトを作成します。
 
-`let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);` の行について詳しく説明します。ここでは[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用しており、 {{jsxref("String.match()")}} によって返された配列の値を `kind`、`type`、`direction` の変数へ代入しています。なぜこのようなことをするのかというと、 {{domxref("MediaDeviceInfo.kind")}} の文字列は、 "audioinput" や "videooutput" のように、メディア種別とメディアフローの向きの 2 つの情報を含んでいるためです。この行で、種別（"audio" または "video"）と方向（"input" と "output"）を取り出すことで、一覧に表示する文字列を作成することができます。
+`let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);` の行について詳しく説明します。ここでは[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用しており、 {{jsxref("String.match()")}} によって返された配列の値を `kind`、`type`、`direction` の変数へ代入しています。なぜこのようなことをするのかというと、 {{domxref("MediaDeviceInfo.kind")}} の文字列は、 "audioinput" や "videooutput" のように、メディア種別とメディアフローの向きの 2 つの情報を含んでいるためです。この行で、種別（"audio" または "video"）と方向（"input" と "output"）を取り出すことで、一覧に表示する文字列を作成することができます。
 
 太字のデバイス名と括弧で囲まれた方向を含む文字列が作成されると、デバイス種別に基づいて`audioList`または`videoList`対応する一覧へ{{domxref("Node.appendChild", "appendChild()")}}の呼び出しによって追加されます。
 

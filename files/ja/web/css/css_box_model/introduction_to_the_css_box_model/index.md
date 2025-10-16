@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 28505c5b2d83732399d8ba96e4b32793580a7f13
 ---
 
-{{CSSRef}}
-
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。
 
 それぞれのボックスは 4 つの部品（または*領域*）から構成され、それぞれの縁について*コンテンツの縁 (content edge)*、_パディングの縁 (padding edge)_、_境界の縁 (border edge)_、_マージンの縁 (margin edge)_ が定義されています。
@@ -41,23 +39,23 @@ l10n:
 
 ## 関連情報
 
-- [レイアウトと包含ブロック](/ja/docs/Web/CSS/Containing_block)
-- [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)
-- [カスケード、詳細度、継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [レイアウトと包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
+- [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

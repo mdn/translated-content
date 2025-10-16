@@ -55,7 +55,7 @@ Es posible observar este tipo de comportamiento en las «hojas de estilo de pues
 
 ### Uso del selector universal para facilitar la legibilidad de tus selectores
 
-Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento `<article>` y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector {{cssxref(":first-child")}}, que veremos con mayor detalle más adelante en el artículo de [pseudoclases y pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), como selector descendente junto con el selector de elemento `<article>`:
+Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento `<article>` y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector {{cssxref(":first-child")}}, que veremos con mayor detalle más adelante en el artículo de [pseudoclases y pseudoelementos](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), como selector descendente junto con el selector de elemento `<article>`:
 
 ```css
 article :first-child {
@@ -106,6 +106,6 @@ Un selector de ID comienza con un carácter `#` en lugar de un punto, pero se ut
 
 ## En el próximo artículo
 
-Seguiremos con la descripción de los selectores examinando los [selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
+Seguiremos con la descripción de los selectores examinando los [selectores de atributo](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

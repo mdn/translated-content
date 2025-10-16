@@ -5,8 +5,6 @@ l10n:
   sourceCommit: acc6ec7d08ede0727a68cbc696e983c572940f62
 ---
 
-{{AddonSidebar}}
-
 当页面操作图标被点击时触发。如果页面操作有弹窗，则该事件将不会被触发。
 
 要定义右键单击操作，请使用{{WebExtAPIRef('contextMenus', "上下文菜单", "", "nocode")}} API（使用 `page_action` {{WebExtAPIRef('contextMenus/ContextType', '上下文类型', '', 'nocode')}}）。
@@ -33,15 +31,11 @@ browser.pageAction.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当该事件发生时要调用的函数。该函数接收如下参数：
-
     - `tab`
       - : 一个表示被点击的页面操作的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象。
     - `OnClickData`
-
       - : 包含有关点击的信息的对象。
-
         - `modifiers`
           - : `array`。点击页面操作按钮时使用的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`
@@ -69,7 +63,7 @@ browser.pageAction.onClicked.addListener(() => {});
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#event-onClicked) API。本文衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#event-onClicked) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 更新扩展的静态规则集。首先禁用 `options.disableRulesetIds` 中列出的规则集，然后激活 `options.enableRulesetIds` 中列出的规则集。请注意，启用的静态规则集的集合会跨会话保留，但不会跨扩展更新保留，即每次扩展更新时，[declarative_net_request.rule_resources 清单键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request)决定了启用的静态规则集的集合。
 
 ## 语法
@@ -20,7 +18,6 @@ let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
 ### 参数
 
 - `options`
-
   - : 一个详细说明扩展的静态规则集中要激活或禁用的规则集的对象。
     - `disableRulesetIds` {{optional_inline}}
       - : 一个 `string` 数组。要禁用的静态规则集的 ID。

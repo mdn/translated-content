@@ -3,7 +3,7 @@ title: -webkit-touch-callout
 slug: Web/CSS/-webkit-touch-callout
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

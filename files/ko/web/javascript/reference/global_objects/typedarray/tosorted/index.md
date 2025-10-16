@@ -19,7 +19,6 @@ toSorted(compareFn)
 ### 매개변수
 
 - `compareFn` {{optional_inline}}
-
   - : 요소 순서를 결정하는 함수입니다. 생략하면 배열 요소는 숫자 값에 따라 정렬됩니다. 자세한 정보는 {{jsxref("TypedArray/sort", "sort()")}}를 참고하시기 바랍니다.
 
 ### 반환 값

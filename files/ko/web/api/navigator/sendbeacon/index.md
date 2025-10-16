@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`navigator.sendBeacon()`** 메서드는 적은 양의 데이터를 포함하는 [HTTP POST](/ko/docs/Web/HTTP/Methods/POST) 요청을 {{glossary("Asynchronous", "비동기적")}}으로 웹 서버에 보냅니다.
+**`navigator.sendBeacon()`** 메서드는 적은 양의 데이터를 포함하는 [HTTP POST](/ko/docs/Web/HTTP/Reference/Methods/POST) 요청을 {{glossary("Asynchronous", "비동기적")}}으로 웹 서버에 보냅니다.
 
 {{domxref("XMLHttpRequest","XMLHttpRequest")}} 같은 오래된 기술로 웹 서버에 분석 정보를 전송할 때 생길 수 있는 일부 문제를 피하기 위해 고안됐습니다.
 
@@ -54,7 +54,7 @@ sendBeacon(url, data)
 - 비동기적임
 - 다음 페이지에 영향을 끼치지 않음
 
-데이터는 [HTTP POST](/ko/docs/Web/HTTP/Methods/POST) 요청으로 보내집니다.
+데이터는 [HTTP POST](/ko/docs/Web/HTTP/Reference/Methods/POST) 요청으로 보내집니다.
 
 ### 세션 끝에서 분석 정보 보내기
 

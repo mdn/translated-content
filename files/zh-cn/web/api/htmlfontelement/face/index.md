@@ -7,7 +7,7 @@ l10n:
 
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
-已过时的 **`HTMLFontElement.face`** 属性是一个反映 [`face`](/zh-CN/docs/Web/HTML/Element/font#face) HTML 属性的字符串，包含一个或多个字体名称的逗号分隔列表。
+已过时的 **`HTMLFontElement.face`** 属性是一个反映 [`face`](/zh-CN/docs/Web/HTML/Reference/Elements/font#face) HTML 属性的字符串，包含一个或多个字体名称的逗号分隔列表。
 
 默认样式的文档文本将以客户端浏览器支持的首个字体进行渲染。如果本地系统未安装列出的任何字体，浏览器通常会默认使用该系统的比例字体或等宽字体。
 

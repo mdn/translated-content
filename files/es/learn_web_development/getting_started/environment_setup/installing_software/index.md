@@ -45,6 +45,6 @@ Antes de continuar, deberías instalar al menos dos de estos navegadores y tener
 
 ### Instalación de un servidor web local
 
-Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en [¿Cómo se configura un servidor de prueba local?](/es/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en [¿Cómo se configura un servidor de prueba local?](/es/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

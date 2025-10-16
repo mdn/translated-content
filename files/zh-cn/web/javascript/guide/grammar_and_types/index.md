@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章讨论 JavaScript 的基本语法、变量声明、数据类型和字面量。
 
@@ -91,7 +91,7 @@ JavaScript 标识符通常以字母、下划线（`_`）或者美元符号（`$`
 - 使用关键字 {{jsxref("Statements/var", "var")}}。例如 `var x = 42`。这个语法可以用来声明**局部**变量和**全局**变量，具体取决于*执行上下文*。
 - 使用关键字 {{jsxref("Statements/const", "const")}} 或 {{jsxref("Statements/let", "let")}} 。例如 `let y = 13`。这个语法可以用来声明块级作用域的局部变量。（参见下方的[变量作用域](#变量作用域)。）
 
-你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)语法声明用于解包值的变量。例如 `const { bar } = foo`。这会创建一个名为 `bar` 的变量，并且将 `foo` 对象中属性名与之相同的属性的值赋给它。
+你可以使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)语法声明用于解包值的变量。例如 `const { bar } = foo`。这会创建一个名为 `bar` 的变量，并且将 `foo` 对象中属性名与之相同的属性的值赋给它。
 
 应该总是在声明变量后使用它们。JavaScript 过去允许给未声明的变量赋值，而这会创建一个**[未声明的全局](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#描述)**变量。这在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#给未声明的变量赋值)下是一个错误，应该彻底避免使用它。
 
@@ -242,7 +242,6 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 最新的 ECMAScript 标准定义了 8 种数据类型：
 
 - 七种{{Glossary("Primitive", "基本")}}数据类型：
-
   1. {{Glossary("Boolean")}}。`true` 和 `false`。
   2. {{Glossary("null")}}。一个表示空值的特殊关键字。（因为 JavaScript 是区分大小写的，所以 `null` 和 `Null`、`NULL` 或其他变体是不一样的。）
   3. {{Glossary("undefined")}}。一个未定义值的顶级属性。
@@ -377,7 +376,8 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> **备注：** [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
+> [!NOTE]
+> [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
 >
 > ```diff
 > const myList = [

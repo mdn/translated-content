@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 {{jsSidebar("Objects")}}
 
-> **경고:** **주의:** 문자열로부터 **`eval()`** 을 실행하는 것은 엄청나게 위험합니다. **`eval()`** 을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
+> [!WARNING]
+> **주의:** 문자열로부터 **`eval()`** 을 실행하는 것은 엄청나게 위험합니다. **`eval()`** 을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
 
 **`eval()`** 은 문자로 표현된 JavaScript 코드를 실행하는 함수입니다.
 
@@ -239,7 +240,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-또한 [클로저](/ko/docs/Web/JavaScript/Closures)를 이용해 문자열을 합치는 등의 연산 없이 매개변수화된 함수를 생성할 수 있습니다.
+또한 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)를 이용해 문자열을 합치는 등의 연산 없이 매개변수화된 함수를 생성할 수 있습니다.
 
 ### JSON 파싱 (문자열을 JavaScript 객체로 변환)
 
@@ -249,7 +250,7 @@ JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한
 
 ### 코드 대신 데이터 전달하기
 
-예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 [XPath](/ko/docs/Web/XPath)에 스크랩 규칙을 정의할 수 있습니다.
+예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 [XPath](/ko/docs/Web/XML/XPath)에 스크랩 규칙을 정의할 수 있습니다.
 
 ### 제한된 권한으로 코드 실행하기
 

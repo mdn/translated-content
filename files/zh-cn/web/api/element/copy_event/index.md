@@ -1,6 +1,5 @@
 ---
 title: Element：copy 事件
-short-title: copy
 slug: Web/API/Element/copy_event
 ---
 
@@ -14,7 +13,7 @@ slug: Web/API/Element/copy_event
 
 然而，事件处理器不可以*读取*剪贴板数据。
 
-可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `copy` 事件，但这不会影响系统剪贴板。
+可以构建和派发一个[合成](/zh-CN/docs/Web/API/Document_Object_Model/Events) `copy` 事件，但这不会影响系统剪贴板。
 
 ## 语法
 
@@ -80,6 +79,5 @@ source.addEventListener("copy", (event) => {
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/paste_event", "paste")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/copy_event", "copy")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/copy_event", "copy")}}
+- {{domxref("Element/cut_event", "cut")}} 事件
+- {{domxref("Element/paste_event", "paste")}} 事件

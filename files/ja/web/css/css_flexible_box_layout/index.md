@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8a7e911652fcb4a61cc95f458d53f39ad08c0946
 ---
 
-{{CSSRef}}
-
 **CSS フレックスボックスレイアウト** (CSS flexible box layout) は、ユーザーインターフェイスの設計に最適化された CSS ボックスモデルと、一次元のアイテムのレイアウトを定義します。フレックスレイアウトモデルでは、フレックスコンテナーの子は任意の方向にレイアウトすることができ、また使われていない空間を埋めるために伸長したり、あるいは親のあふれることを避けるために収縮したりと、そのサイズを「伸縮」することができます。子の水平方向と垂直方向の両方の整列を、容易に操作することが可能です。
 
 ## フレックスボックスレイアウトの実際
@@ -83,7 +81,7 @@ body {
   - : 複数行のフレックスコンテナーを作成する方法と、それらの行内でのアイテムの表示方法の制御。
 - [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 典型的なフレックスボックスの用途の一般的なデザインパターン。
-- [CSS レイアウト: フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
+- [CSS レイアウト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : フレックスボックスレイアウトを使用してウェブレイアウトを作成する方法を学びます。
 - [フレックスボックスのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
   - : [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の詳細機能のうち、フレックスボックスに特有のものです。
@@ -122,4 +120,4 @@ body {
 ## 関連情報
 
 - [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)

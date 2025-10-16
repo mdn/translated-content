@@ -116,7 +116,7 @@ customElements.define("popup-info", PopupInfo);
 
 一旦你定义并注册了自定义元素，就可以在代码中使用它。
 
-要使用自定义内置元素，请使用内置元素，但将自定义名称作为 [`is`](/zh-CN/docs/Web/HTML/Global_attributes/is) 属性的值：
+要使用自定义内置元素，请使用内置元素，但将自定义名称作为 [`is`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/is) 属性的值：
 
 ```html
 <p is="word-count"></p>
@@ -444,7 +444,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 你使用 `<ul>` 元素与往常一样，但在 `is` 属性内指定自定义元素的名称。
 
-请注意，在这种情况下，我们必须确保定义自定义元素的脚本在 DOM 完全解析后执行，因为 `connectedCallback()` 在展开的列表被添加到 DOM 时就会被调用，而此时其子元素尚未添加，因此 `querySelectorAll()` 调用将找不到任何项。确保这一点的一种方法是在包含脚本的行上添加 [defer](/zh-CN/docs/Web/HTML/Element/script#defer) 属性：
+请注意，在这种情况下，我们必须确保定义自定义元素的脚本在 DOM 完全解析后执行，因为 `connectedCallback()` 在展开的列表被添加到 DOM 时就会被调用，而此时其子元素尚未添加，因此 `querySelectorAll()` 调用将找不到任何项。确保这一点的一种方法是在包含脚本的行上添加 [defer](/zh-CN/docs/Web/HTML/Reference/Elements/script#defer) 属性：
 
 ```html
 <script src="main.js" defer></script>

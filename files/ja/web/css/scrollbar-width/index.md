@@ -2,12 +2,15 @@
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
 **`scrollbar-width`** プロパティは、要素のスクロールバーが表示される時の最大の太さを設定することができます。
+
+`scrollbar-width` の目的は、ページまたは要素上でスクロールバーが占める空間を最適化することです。スクロールバーの見栄えとは無関係です。 `scrollbar-width` の定義済みキーワード値は、通常のスクロールバーをレンダリングすべきか、小さいスクロールバーをレンダリングすべきかをユーザーエージェントに示します。スクロールバーを非表示にすると[アクセシビリティ](#アクセシビリティ) に悪影響を与えるため、 `none` の使用は避けてください。
+
+> [!NOTE]
+> プログラムによってのみスクロール可能であり、ユーザーの直接の操作ではスクロールできない要素には、 `scrollbar-width: none` ではなく、値 `hidden` を指定した {{cssxref("overflow")}} プロパティを使用してください。
 
 ## 構文
 
@@ -27,31 +30,15 @@ scrollbar-width: unset;
 
 ### 値
 
-- `<scrollbar-width>`
+- `auto`
+  - : プラットフォーム既定のスクロールバーの幅です。
+- `thin`
+  - : プラットフォームが提供している細いスクロールバー、またはプラットフォーム既定のスクロールバーの幅よりも細いスクロールバーです。
+- `none`
+  - : スクロールバーが表示されませんが、要素はスクロール可能です。
 
-  - : スクロールバーの幅を、長さまたはキーワードのどちらかで定義します。キーワードが使用する場合は、以下の値のうちの一つでなければなりません。
-
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td><code>auto</code></td>
-          <td>プラットフォーム既定のスクロールバーの幅です。</td>
-        </tr>
-        <tr>
-          <td><code>thin</code></td>
-          <td>
-            プラットフォームが提供している細いスクロールバー、またはプラットフォーム既定のスクロールバーの幅よりも細いスクロールバーです。
-          </td>
-        </tr>
-        <tr>
-          <td><code>none</code></td>
-          <td>スクロールバーが表示されませんが、要素はスクロール可能です。</td>
-        </tr>
-      </tbody>
-    </table>
-
-    > [!NOTE]
-    > ユーザーエージェントは、ビューポートのルート要素に何らかの `scrollbar-width` の値を設定する必要があります。
+> [!NOTE]
+> ユーザーエージェントは、ビューポートのルート要素に何らかの `scrollbar-width` の値を設定する必要があります。
 
 ## アクセシビリティ
 
@@ -59,8 +46,8 @@ scrollbar-width: unset;
 
 WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボードのアクセシビリティを勧告してきており、これはコンテンツ領域のスクロールも含みます。また、 WCAG 2.1 で導入された基準 2.5.5 (対象の寸法) では、タッチ対象の幅と高さを 44px 以上にすることを推奨しています (ただし、この問題は高解像度の画面ではさらに複雑になるため、十分なテストが必要です)。
 
-- [MDN WCAG の理解、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
-- [MDN WCAG の理解、ガイドライン 2.5 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.5_—_入力様式_キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする)
+- [MDN WCAG の理解、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
+- [MDN WCAG の理解、ガイドライン 2.5 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.5_—_入力様式_キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする)
 - [Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 
@@ -74,7 +61,7 @@ WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボード�
 
 ## 例
 
-### あふれた際のスクロールバーの大きさを調整
+### オーバーフローのスクロールバーの大きさを調整
 
 #### CSS
 
@@ -101,7 +88,7 @@ WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボード�
 
 #### 結果
 
-{{EmbedLiveSample("Sizing_overflow_scrollbars")}}
+{{EmbedLiveSample("あふれた際のスクロールバーの大きさを調整")}}
 
 ## 仕様書
 

@@ -1,12 +1,9 @@
 ---
 title: <xsl:when>
 slug: Web/XML/XSLT/Reference/Element/when
-original_slug: Web/XSLT/Reference/Element/when
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:when>` 要素は `<xsl:choose>` 要素内に常に表示され、case 文のように動作します。
 
@@ -35,6 +32,6 @@ l10n:
 
 XSLT, section 9.2.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

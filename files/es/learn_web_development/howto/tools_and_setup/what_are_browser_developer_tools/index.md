@@ -9,7 +9,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 
 > [!NOTE]
-> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](https://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/docs/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
+> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](https://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
 
 ## Cómo abrir devtools en tu navegador
 
@@ -20,7 +20,6 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
 ¿Cómo la levantas? Existen tres distintas maneras:
 
 - _**Teclado:** <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd>_, excepto en
-
   - **Internet Explorer y Edge:**
 
     <kbd>F12</kbd>
@@ -28,7 +27,6 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
   - **macOS:** _<kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>I</kbd>_
 
 - _**Barra de menú:**_
-
   - **Firefox**: Menú ![Devtools](2014-01-10-13-08-08-f52b8c.png)
 
     _➤ Desarrollador web ➤ Alternar herramientas,_ o _➤ Herramientas_
@@ -98,7 +96,6 @@ Notarás una serie de pestañas en las que se puede hacer clic en la parte super
 
 - _Calculado_: Muestra los estilos calculados para el elemento seleccionado actualmente (los valores finales normalizados que aplica el navegador).
 - _Diseño_: En Firefox, esta área incluye dos secciones:
-
   - _Modelo de caja_: representa visualmente el modelo de caja del elemento actual, por lo que de un vistazo puedes identificar qué relleno, borde y margen se le aplica, y qué tan grande es su contenido.
   - _Cuadrícula_: Si la página que estás inspeccionando utiliza Grid CSS, esta sección te permite ver los detalles de la cuadrícula.
 
@@ -233,5 +230,5 @@ Obtén más información sobre la consola de JavaScript en diferentes navegadore
 
 ## Ve también
 
-- [Depurar HTML.](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Depurar CSS.](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Depurar HTML.](/es/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+- [Depurar CSS.](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)

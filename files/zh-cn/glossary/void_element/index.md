@@ -2,10 +2,8 @@
 title: 空元素
 slug: Glossary/Void_element
 l10n:
-  sourceCommit: 73d8e953dbd0cf882a47419766f1a76b7332dd40
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
-
-{{GlossarySidebar}}
 
 **空元素**（void element）是 HTML 中**不能**存在子节点（例如内嵌的元素或者文本节点）的{{Glossary("element", "元素")}}。空元素只有开始标签且不能指定结束标签。
 
@@ -49,4 +47,4 @@ _HTML 中不存在自闭合标签（`<tag />`）。_
 
 ## 参见
 
-- [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements", "可替换元素")}}

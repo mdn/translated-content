@@ -3,8 +3,6 @@ title: 安全上下文
 slug: Web/Security/Secure_Contexts
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
-
 **安全上下文**是 `Window` 与 `Worker` 中满足了最低标准的身份验证和机密性的概念。许多 Web API 仅能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的接口，从而导致更加严重的破坏。
 
 ## 为什么要限制某些功能？
@@ -55,4 +53,4 @@ if (window.isSecureContext) {
 - [仅在安全上下文中可用的平台特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)——只在安全上下文中可用的特性列表
 - {{domxref("Window.isSecureContext")}} 和 {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site>——一个允许你检查你的浏览器在 HTTP 和 HTTPS 上采用何种 API 权限检查的网站
-- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 标头
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP 标头

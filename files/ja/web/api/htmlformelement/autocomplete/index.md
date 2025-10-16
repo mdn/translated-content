@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`autocomplete`** は {{DOMxRef("HTMLFormElement")}} インターフェイスのプロパティで、ブラウザーによってこのフォームのコントロールの値が自動的に補完できるかどうかを示します。これは、{{htmlelement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を反映します。
+**`autocomplete`** は {{DOMxRef("HTMLFormElement")}} インターフェイスのプロパティで、ブラウザーによってこのフォームのコントロールの値が自動的に補完できるかどうかを示します。これは、{{htmlelement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性を反映します。
 
 ## 値
 
@@ -32,6 +32,6 @@ console.log(formElement.autocomplete);
 ## 関連情報
 
 - {{HTMLElement("form")}}
-- HTML の [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性
-- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性
+- HTML の [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性
+- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性
 - [自動補完の無効化](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)

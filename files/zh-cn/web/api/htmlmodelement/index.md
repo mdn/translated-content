@@ -16,9 +16,9 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLModElement.cite")}}
-  - : 一个字符串，反映 [`cite`](/zh-CN/docs/Web/HTML/Element/del#cite) HTML 属性，包含解释更改的资源的 URI。
+  - : 一个字符串，反映 [`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/del#cite) HTML 属性，包含解释更改的资源的 URI。
 - {{domxref("HTMLModElement.dateTime")}}
-  - : 一个字符串，反映 [`datetime`](/zh-CN/docs/Web/HTML/Element/del#datetime) HTML 属性，包含表示更改时间戳的日期和时间的字符串。
+  - : 一个字符串，反映 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/del#datetime) HTML 属性，包含表示更改时间戳的日期和时间的字符串。
 
 ## 规范
 

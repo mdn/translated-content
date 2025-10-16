@@ -7,7 +7,40 @@ slug: Web/CSS/background-blend-mode
 
 [CSS-свойство](/ru/docs/Web/CSS) **`background-blend-mode`** описывает то, как фоновое изображение элемента должно накладываться на фоны других элементов.
 
-{{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: background-blend-mode")}}
+
+```css interactive-example-choice
+background-blend-mode: normal;
+```
+
+```css interactive-example-choice
+background-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+background-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+background-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: green;
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  width: 250px;
+  height: 305px;
+}
+```
 
 Режимы наложения должны быть определены в том же порядке, что и CSS-свойство {{cssxref("background-image")}}. Если количество режимов наложения будет больше или меньше количества фоновых изображений, то последние режимы будут либо отброшены, либо повторены до совпадения количества соответственно.
 

@@ -1,10 +1,9 @@
 ---
 title: 使用 CSS 为 Vue 组件添加样式
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_styling
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在终于到了使我们的应用程序看起来更好的时候了。在本文中，我们将探讨使用 CSS 样式化 Vue 组件的不同方法。
 
@@ -53,7 +52,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_sty
 
 首先，在 `src/assets` 目录中创建一个名为 `reset.css` 的文件。Webpack 将处理此文件夹中的文件。这意味着我们可以使用 CSS 预处理器（如 SCSS）或后处理器（如 PostCSS）。
 
-尽管本教程不会使用此类工具，但最好知道在资产文件夹中包含此类代码后，它将自动进行处理。
+尽管本教程不会使用此类工具，但最好知道在资源文件夹中包含此类代码后，它将自动进行处理。
 
 将以下内容添加到 `reset.css` 文件中：
 

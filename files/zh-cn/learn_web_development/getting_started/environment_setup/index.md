@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9b80c652eda0b516f3ed7f9be3b90f59aa9982e1
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started")}}
 
 在*环境搭建*模块中，我们将向你展示进行简单 Web 开发所需的工具以及正确安装它们的方法，并帮助你了解有关环境的要点，如文件系统和命令行。

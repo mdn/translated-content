@@ -8,7 +8,7 @@ l10n:
 {{APIRef("Web Audio API")}}
 
 > [!NOTE]
-> このインターフェイスは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)の外でも使用可能ですが、{{domxref("BaseAudioContext.audioWorklet")}} プロパティはそうではありません。そのため、独自の {{domxref("AudioWorkletProcessor")}} は安全なコンテキストの外では使用できません。
+> このインターフェイスは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)の外でも使用可能ですが、{{domxref("BaseAudioContext.audioWorklet")}} プロパティはそうではありません。そのため、独自の {{domxref("AudioWorkletProcessor")}} は保護されたコンテキストの外では使用できません。
 
 [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の **`AudioWorkletNode`** インターフェイスは、ユーザー定義の {{domxref("AudioNode")}} (他のノードとともに音声ルーティンググラフに接続できる) の基底クラスを表します。これは対応する {{domxref("AudioWorkletProcessor")}} (ウェブオーディオレンダリングスレッドで実際の音声処理を行う) を持ちます。
 

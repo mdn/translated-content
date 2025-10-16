@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---
 
-{{CSSRef}}
-
 `&` 入れ子セレクターの{{cssxref('specificity', "詳細度")}}は、関連するセレクターリストの中で最大の詳細度を使用して計算されます。これは、 {{cssxref(':is',':is()')}} 関数を使用した場合の詳細度の計算方法と同じです。
 
 ```html
@@ -43,7 +41,7 @@ l10n:
 }
 ```
 
-この例では、 id セレクター (`#a`) の詳細度は [`1-0-0`](/ja/docs/Web/CSS/Specificity#selector_weight_categories) になり、要素型セレクター (`b`) の詳細度は `0-0-1` になります。[ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) と `:is()` 擬似クラスはどちらも、 `#a` という id セレクターを使わなくても詳細度は `1-0-0` になります。
+この例では、 id セレクター (`#a`) の詳細度は [`1-0-0`](/ja/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories) になり、要素型セレクター (`b`) の詳細度は `0-0-1` になります。[ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) と `:is()` 擬似クラスはどちらも、 `#a` という id セレクターを使わなくても詳細度は `1-0-0` になります。
 
 `.foo` クラスセレクターの特異度は `0-1-0` です。これにより、 `& c` の特異性の合計は `1-0-1` となり、 `.foo c` の特異性は `0-1-1` となるので、 `color: blue;` が勝ちます。
 

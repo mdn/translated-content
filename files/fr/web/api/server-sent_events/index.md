@@ -22,7 +22,7 @@ Habituellement, une page web doit envoyer une requête au serveur pour obtenir d
 
 ## Rubriques connexes
 
-- [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/fr/docs/Web/JavaScript), [WebSockets](/fr/docs/Web/API/WebSockets_API)
+- [AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/fr/docs/Web/JavaScript), [WebSockets](/fr/docs/Web/API/WebSockets_API)
 
 ## Voir aussi
 

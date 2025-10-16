@@ -16,9 +16,7 @@ var root = node.getRootNode(options);
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 获取根节点时的可选参数对象。下列值可供选择：
-
     - `composed`: {{jsxref('Boolean')}} 如果检索到 shadow Root 需要返回，则设置为（`false`，默认值），如果跳过 shadow Root 检索普通 Root 则设置为（`true`）。
 
 ### 返回值

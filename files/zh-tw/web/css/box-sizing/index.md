@@ -2,14 +2,61 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`box-sizing`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定如何計算元素的總寬度與高度。
 
-{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
+{{InteractiveExample("CSS Demo: box-sizing")}}
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+```
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```css interactive-example-choice
+box-sizing: border-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-parent">
+    <p>父容器</p>
+    <div class="transition-all" id="example-element">
+      <p>子容器</p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-parent {
+  width: 220px;
+  height: 200px;
+  border: solid 10px #ffc129;
+  margin: 0.8em;
+}
+
+#example-element {
+  height: 60px;
+  margin: 2em auto;
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+#example-element > p {
+  margin: 0;
+}
+```
 
 在 [CSS 盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)中，預設情況下，你為元素指定的 `width` 和 `height` 只應用於元素的內容區域。如果元素有邊框或內邊距，這些會加到 `width` 和 `height` 上，從而得出畫面上呈現的盒子大小。這意味著當你設定 `width` 和 `height` 時，必須調整你給的值以考慮邊框或內邊距。例如，如果你有四個設為 `width: 25%;` 的盒子，若其中任何一個有左右內邊距或左右邊框，預設情況下它們將無法在父容器的限制內排成一行。
 
@@ -42,13 +89,11 @@ box-sizing: unset;
 ### 值
 
 - `content-box`
-
   - : 這是 CSS 標準指定的初始值和預設值。{{Cssxref("width")}} 和 {{Cssxref("height")}} 屬性包含內容，但不包括內邊距、邊框或外邊距。例如，`.box {width: 350px; border: 10px solid black;}` 會呈現寬度為 370px 的盒子。
 
     此時，元素的尺寸計算為：_寬度 = 內容的寬度_，_高度 = 內容的高度_。（邊框和內邊距不包括在計算中。）
 
 - `border-box`
-
   - : {{Cssxref("width")}} 和 {{Cssxref("height")}} 屬性包含內容、內邊距和邊框，但不包括外邊距。請注意，內邊距和邊框會在盒子內。例如，`.box {width: 350px; border: 10px solid black;}` 會呈現寬度為 350px 的盒子，其中內容區域的寬度為 330px。內容框的寬度不能為負數，最小值為 0，因此無法使用 `border-box` 使元素消失。
 
     此時，元素的尺寸計算為：_寬度 = 邊框 + 內邊距 + 內容的寬度_，_高度 = 邊框 + 內邊距 + 內容的高度_。

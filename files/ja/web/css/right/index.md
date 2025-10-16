@@ -5,11 +5,59 @@ l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
-{{CSSRef}}
-
 **`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
 
-{{EmbedInteractiveExample("pages/css/right.html")}}
+{{InteractiveExample("CSS デモ: right")}}
+
+```css interactive-example-choice
+right: 0;
+```
+
+```css interactive-example-choice
+right: 4em;
+```
+
+```css interactive-example-choice
+right: 10%;
+```
+
+```css interactive-example-choice
+right: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 ## 構文
 
@@ -35,18 +83,14 @@ right: unset;
 ### 値
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : 負、null、または正の {{cssxref("&lt;length&gt;")}} で、以下のものを表します。
-
     - *絶対位置指定要素*の場合は、包含ブロックの右辺までの距離。
     - *相対位置指定要素*の場合は、通常の位置からの左方向への移動量。
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : 包含ブロックの幅に対する {{cssxref("&lt;percentage&gt;")}} です。
 - `auto`
-
   - : 以下のように指定します。
-
     - *絶対位置指定要素*では、要素の位置は {{Cssxref("left")}} プロパティに基づいて決まり、 `width: auto` は内容物の幅に基づいて決まります。また、 `left` も `auto` であった場合は、要素は水平方向には静的要素が配置される場合と同様に配置されます。
     - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("left")}} に基づきます。また、 `left` も `auto` であった場合は、水平方向には移動しません。
 

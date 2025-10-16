@@ -2,14 +2,65 @@
 title: order
 slug: Web/CSS/order
 l10n:
-  sourceCommit: 4630ec673ad963bfa36a02a2c5d3f1d21c27a5d0
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`order`** 用于设置弹性或网格容器中项的布局顺序。容器中的项按 `order` 值升序排列，然后按它们的源代码顺序排列。未明确指定 `order` 值的项会被赋予默认值 `0`。
 
-**`order`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置弹性或网格容器中项的布局顺序。容器中的项按 `order` 值升序排列，然后按它们的源代码顺序排列。未明确指定 `order` 值的项会被赋予默认值 `0`。
+{{InteractiveExample("CSS 演示：order")}}
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">盒子 1：</div>
+  <div style="order: 1">盒子 2：<code>order: 1;</code></div>
+  <div style="order: 2">盒子 3：<code>order: 2;</code></div>
+  <div style="order: 2">盒子 4：<code>order: 2;</code></div>
+  <div style="order: 3">盒子 5：<code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgb(255 0 200 / 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 在上面的演示中，请选择左侧的选项来更改粉色盒子的 `order` 属性值。浅蓝色的盒子已被赋予了固定的 `order` 值。
 
@@ -45,7 +96,7 @@ order: unset;
 
 - [弹性盒子与键盘导航的脱节](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)——来自 Tink（2016）
 - [源代码顺序至关重要](https://adrianroselli.com/2015/09/source-order-matters.html)——来自 Adrian Roselli（2015）
-- [理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [了解成功标准 1.3.2 | W3C 对 WCAG 2.0 的理解](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## 形式定义
@@ -121,3 +172,4 @@ main > aside {
 - [弹性项排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS 显示](/zh-CN/docs/Web/CSS/CSS_display)模块
+- {{glossary("Reading order", "阅读顺序")}}

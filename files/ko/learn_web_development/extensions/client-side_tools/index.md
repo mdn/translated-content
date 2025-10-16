@@ -12,7 +12,7 @@ l10n:
 
 ## 필요한 사전 지식
 
-여기에 설명된 도구를 사용하기 전에 먼저 핵심 언어인 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS), 그리고 [JavaScript](/ko/docs/Learn/JavaScript)의 기본을 배워야 합니다.
+여기에 설명된 도구를 사용하기 전에 먼저 핵심 언어인 [HTML](/ko/docs/Learn_web_development/Core/Structuring_content), [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1), 그리고 [JavaScript](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)의 기본을 배워야 합니다.
 
 ## 안내서
 

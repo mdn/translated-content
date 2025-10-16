@@ -29,7 +29,7 @@ _{{domxref('CSSStyleValue')}} からメソッドを継承しています。_
 
 ## 例
 
-次の例は、CSS の {{cssxref('display')}} プロパティを既定値にリセットするために、インラインの [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性を `style="display: initial"` に設定します。これは[開発者ツールインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html)で見られます。
+次の例は、CSS の {{cssxref('display')}} プロパティを既定値にリセットするために、インラインの [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性を `style="display: initial"` に設定します。これは[開発者ツールインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html)で見られます。
 
 ```css hidden
 #myElement {

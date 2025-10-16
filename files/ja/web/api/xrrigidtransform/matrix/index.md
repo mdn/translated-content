@@ -59,7 +59,7 @@ let transform = new XRRigidTransform(
 drawGLObject("magic-lamp", transform.matrix);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

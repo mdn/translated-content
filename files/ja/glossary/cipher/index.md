@@ -26,7 +26,6 @@ l10n:
 - [暗号](https://ja.wikipedia.org/wiki/暗号)（ウィキペディア）
 - [暗号化と復号](/ja/docs/Archive/Security/Encryption_and_Decryption)
 - 関連用語:
-
   - {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
   - {{Glossary("Ciphertext", "暗号文")}}
   - {{Glossary("Cipher suite", "暗号スイート")}}

@@ -1,6 +1,9 @@
 ---
-title: CSSGroupingRule.deleteRule()
+title: "CSSGroupingRule: deleteRule() メソッド"
+short-title: deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{ APIRef("CSSOM") }}
@@ -9,13 +12,13 @@ slug: Web/API/CSSGroupingRule/deleteRule
 
 ## 構文
 
-```js
-deleteRule(index);
+```js-nolint
+deleteRule(index)
 ```
 
 ### 引数
 
-- index
+- `index`
   - : 削除するルールの位置です。
 
 ### 返値
@@ -33,7 +36,7 @@ deleteRule(index);
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-myRules[0].deleteRule(2); /* deletes the rule at index 2 */
+myRules[0].deleteRule(2); /* インデックス 2 にあるルールを削除 */
 ```
 
 ## 仕様書

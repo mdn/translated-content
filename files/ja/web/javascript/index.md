@@ -17,12 +17,12 @@ JavaScript の規格書は [ECMAScript Language Specification](https://tc39.es/e
 
 JavaScript を[プログラミング言語 Java](https://ja.wikipedia.org/wiki/Java) と混同しないでください。 **JavaScript は「インタープリター版の Java」では _ありません_**。 "Java" と "JavaScript" は両方ともアメリカやその他の国においてオラクルの商標または登録商標です。しかし、この 2 つのプログラミング言語は構文、セマンティック、利用形態が大きく異なります。
 
-コア言語機能の JavaScript ドキュメントは（多くの部分は純粋な [ECMAScript](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)）、以下のものがあります。
+コア言語機能の JavaScript ドキュメントは（多くの部分は純粋な [ECMAScript](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)）、以下のものがあります。
 
 - [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)
 - [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)
 
-JavaScript 仕様と関連技術に関する詳細は、 [JavaScript 技術概要](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)を参照してください。
+JavaScript 仕様と関連技術に関する詳細は、 [JavaScript 技術概要](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)を参照してください。
 
 ## チュートリアル
 
@@ -30,17 +30,17 @@ JavaScript 仕様と関連技術に関する詳細は、 [JavaScript 技術概�
 
 ### 完全な初心者向け
 
-JavaScript について学びたいと思っているが、JavaScript あるいはプログラミングについて過去に経験がないのであれば、 [JavaScript 学習エリアのトピック](/ja/docs/Learn/JavaScript)に向かいましょう。以下のモジュールが利用可能です。
+JavaScript について学びたいと思っているが、JavaScript あるいはプログラミングについて過去に経験がないのであれば、 [JavaScript 学習エリアのトピック](/ja/docs/Learn_web_development/Core/Scripting)に向かいましょう。以下のモジュールが利用可能です。
 
-- [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)
+- [JavaScript の第一歩](/ja/docs/Learn_web_development/Core/Scripting)
   - : 変数、文字列、数値、配列のような JavaScript の基本機能の解説に加え、「JavaScript とは何か」「何に似ているか」「何ができるか」といった基本的な質問に答えます。
-- [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript の構成要素](/ja/docs/Learn_web_development/Core/Scripting)
   - : 引き続き JavaScript の基本機能について、条件分岐、ループ、関数、イベントなどのよく目にするタイプのコードブロックに注意を向けつつ説明します。
-- [JavaScript のオブジェクトの紹介](/ja/docs/Learn/JavaScript/Objects)
+- [JavaScript のオブジェクトの紹介](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : 言語に関する知識をさらに深め、より効率的なコードを書きたいのであれば、JavaScript のオブジェクト指向の性質を理解することは重要です。このため、私たちが提供するこのモジュールが役立つでしょう。
-- [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
+- [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
   - : 非同期 JavaScript について、なぜ重要なのか、どのように使用してサーバーからのリソースの読み取りなどのブロックが発生する可能性がある操作を効果的に扱うことができるのかを説明します。
-- [クライアント側ウェブ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs)
+- [クライアント側ウェブ API](/ja/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : API とは何か、開発作業でよく見かける、最も一般的な API の一部の使い方を説明します。
 
 ### JavaScript ガイド
@@ -50,26 +50,26 @@ JavaScript について学びたいと思っているが、JavaScript あるい�
 
 ### 中級者向け
 
-- [クライアント側の JavaScript フレームワークの理解](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [クライアント側の JavaScript フレームワークの理解](/ja/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript フレームワークは、最新のフロントエンドウェブ開発に欠かせないもので、拡張性のある双方向のウェブアプリケーションを構築するための、試行錯誤されたツールを開発者に提供します。幾つかの有名なツールについて取り扱うチュートリアルに移動する前に、クライアントサイドのフレームワークがどのように動作するのか、自分のツールセットにどのように適合させるか、についての基本的な背景知識を提供します。
-- [JavaScript 言語概要](/ja/docs/Web/JavaScript/Language_overview)
+- [JavaScript 言語概要](/ja/docs/Web/JavaScript/Guide/Language_overview)
   - : 他のプログラミング言語から来た人がスピードアップするために、 JavaScript の基本的な構文と意味づけの概要を説明します。
-- [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
   - : JavaScript で利用可能なデータ構造の概要です。
-- [等値比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [等値比較と同一性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript には 3 つの異なる値の比較演算子があります。 `===` を用いる厳格な等値性比較、 `==` を用いる緩い等値性比較、そして {{jsxref("Object.is()")}} メソッドです。
-- [プロパティの列挙と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : オブジェクトプロパティのグループを1つずつ訪問する様々なメソッドが、プロパティの列挙可能性と所有権をどのように処理するかです。
-- [クロージャ](/ja/docs/Web/JavaScript/Closures)
+- [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)
   - : クロージャとは、関数とその関数が宣言された字句環境の組み合わせのことです。
 
 ### 上級者向け
 
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : よく誤解されたり過小評価されたりしているプロトタイプベースの継承に対する説明です。
-- [メモリー管理](/ja/docs/Web/JavaScript/Memory_management)
+- [メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)
   - : JavaScript におけるメモリーのライフサイクルとガベージコレクションです。
-- [イベントループ](/ja/docs/Web/JavaScript/Event_loop)
+- [イベントループ](/ja/docs/Web/JavaScript/Reference/Execution_model)
   - : JavaScript は「イベントループ」に基づく実行時モデルを持っています。
 
 ## リファレンス

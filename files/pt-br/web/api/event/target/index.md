@@ -40,4 +40,4 @@ list.addEventListener("click", hide, false);
 
 ## Veja também
 
-- [Comparison of Event Targets](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [Comparison of Event Targets](/pt-BR/docs/Learn_web_development/Core/Scripting/Event_bubbling)

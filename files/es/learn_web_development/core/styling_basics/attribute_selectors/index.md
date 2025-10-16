@@ -84,6 +84,6 @@ En el ejemplo siguiente, el primer selector relaciona valores que empiezan con `
 
 ## Próximos pasos
 
-Ahora que hemos terminado con los selectores de atributo, puedes avanzar al artículo siguiente y leer acerca de los [selectores de pseudoclases y pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements).
+Ahora que hemos terminado con los selectores de atributo, puedes avanzar al artículo siguiente y leer acerca de los [selectores de pseudoclases y pseudoelementos](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

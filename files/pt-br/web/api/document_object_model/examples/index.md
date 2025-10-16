@@ -418,5 +418,5 @@ Para adicionar uma linha e algumas células a uma tabela existente:
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
+- [Events and the DOM](/pt-BR/docs/Learn_web_development/Core/Scripting/Events)
 - [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)

@@ -18,7 +18,7 @@ l10n:
 
 ### `naturalWidth` のログ出力
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを使用しています。画像ファイルの幅は 1000px、高さは 750px あります。 `entry.naturalWidth` を呼び出すと、ピクセル単位の内在的な幅である `1000` を返します。
+この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを使用しています。画像ファイルの幅は 1000px、高さは 750px あります。 `entry.naturalWidth` を呼び出すと、ピクセル単位の内在的な幅である `1000` を返します。
 
 ```html
 <img

@@ -31,7 +31,6 @@ _該介面繼承了父介面 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}}�
 - {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
   - : 返回 `double` 值，該值表示滾輪的 z 軸方向上的滾動量。
 - {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
-
   - : 返回 `unsigned long` 值，該值表示上述各 delta 的值的單位。該值及所表示的單位如下：
 
     | 常數              | 值     | 描述               |
@@ -56,6 +55,5 @@ _該介面本身未定義方法，但繼承了父介面 {{domxref("MouseEvent")}
 
 - [`wheel`](/zh-TW/docs/Web/API/Element/wheel_event)
 - 該介面取代的過時介面：
-
   - {{ domxref("MouseScrollEvent") }}（Gecko 內核瀏覽器）
   - {{ domxref("MouseWheelEvent") }}（非 Gecko 內核的瀏覽器）

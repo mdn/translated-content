@@ -15,8 +15,7 @@ audioWorkletNodeInstance.parameters;
 
 ### 값
 
-{{domxref("AudioParam")}} 인스턴스들을 포함하는 {{domxref("AudioParamMap")}} 객체. 이것들은 기본 `AudioNode` 들과 같은 방법으로 자동화 가능하고, 그들의 계산된 값들은 여러분의 {{domxref("AudioWorkletProcessor")}}의 {{domxref("AudioWorkletProcessor.process",
-  "process")}} 메서드에서 사용될 수 있습니다.
+{{domxref("AudioParam")}} 인스턴스들을 포함하는 {{domxref("AudioParamMap")}} 객체. 이것들은 기본 `AudioNode` 들과 같은 방법으로 자동화 가능하고, 그들의 계산된 값들은 여러분의 {{domxref("AudioWorkletProcessor")}}의 {{domxref("AudioWorkletProcessor.process", "process")}} 메서드에서 사용될 수 있습니다.
 
 ## 예제
 

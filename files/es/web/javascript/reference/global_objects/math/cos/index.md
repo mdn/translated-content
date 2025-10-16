@@ -24,8 +24,6 @@ console.log(getCircleX(Math.PI, 10));
 // Expected output: -10
 ```
 
-El código fuente de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si te gustaría contribuir con el proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
-
 ## Sintaxis
 
 ```

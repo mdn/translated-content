@@ -26,9 +26,7 @@ var myWorker = new SharedWorker(aURL, options);
 - name {{optional_inline}}
   - : 一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。
 - _options_ {{optional_inline}}
-
   - : 创建实例时设定的包含了可选属性的对象。可用的属性包括：
-
     - `type`: 一个制定所创建 worker 类型的 {{domxref("DOMString")}}。可设定的值为 `classic` 或者 `module`. 若不指定，默认值为 `classic`.
     - `credentials`: 一个指定要用于工作程序的凭据类型的 {{domxref("DOMString")}}。可设定的值为* `omit、`*`same-origin` 或 *`include`. *若不指定，*或者 type 设定为 `classic`, *默认值为* `omit` （无需凭据）。*
     - *`name`: *一个指定表示 worker 范围的{{domxref("SharedWorkerGlobalScope")}}的标识名称的 {{domxref("DOMString")}}，主要用于调试。

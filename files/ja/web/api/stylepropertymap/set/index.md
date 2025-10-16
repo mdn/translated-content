@@ -28,7 +28,7 @@ set(property, value)
 
 ## 例
 
-この例では、要素の [style 属性](/ja/docs/Web/HTML/Global_attributes/style)の中で、 {{cssxref('padding-top')}} プロパティを指定された値に設定しています。
+この例では、要素の [style 属性](/ja/docs/Web/HTML/Reference/Global_attributes/style)の中で、 {{cssxref('padding-top')}} プロパティを指定された値に設定しています。
 
 ```js
 // button 属性を取得

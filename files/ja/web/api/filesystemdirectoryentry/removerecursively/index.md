@@ -43,9 +43,7 @@ removeRecursively(successCallback, errorCallback)
 - `FileError.NOT_READABLE_ERR`
   - : ディレクトリーにアクセスできません。他のアプリケーションで使用されているか、オペレーティングシステムレベルでロックされている可能性があります。
 - `FileError.SECURITY_ERR`
-
   - : セキュリティ上の理由でディレクトリーを除去できませんでした。取りうる理由は次の通りです。
-
     - ディレクトリーやその内容は、ウェブアプリケーションからアクセスするには安全ではないかもしれません。
     - ファイルシステムを呼び出す回数が多すぎます。
     - ユーザーエージェントまたはオペレーティングシステムによって提起される、セキュリティに関する他の懸念。
@@ -73,6 +71,6 @@ directory.removeRecursively(
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystemEntry.remove()")}}

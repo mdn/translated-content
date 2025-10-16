@@ -12,7 +12,6 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - [`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 `DATA_CLONE_ERR` 的异常。
 - 企图去克隆 DOM 节点同样会抛出 `DATA_CLONE_ERR` 异常。
 - 对象的某些特定参数也不会被保留
-
   - `RegExp` 对象的 `lastIndex` 字段不会被保留
   - 属性描述符，setters 以及 getters（以及其他类似元数据的功能）同样不会被复制。例如，如果一个对象用属性描述符标记为 read-only，它将会被复制为 read-write，因为这是默认的情况下。
   - 原形链上的属性也不会被追踪以及复制。
@@ -29,7 +28,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - {{jsxref("Error")}} 类型（仅限部分 [Error 类型](#error_类型)）。
 - {{jsxref("Map")}}
 - {{jsxref("Object")}} 对象：仅限简单对象（如使用对象字面量创建的）。
-- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)。
+- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#原始值)。
 - {{jsxref("RegExp")}}：`lastIndex` 字段不会被保留。
 - {{jsxref("Set")}}
 - {{jsxref("String")}}

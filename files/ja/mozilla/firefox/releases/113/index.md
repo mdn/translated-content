@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14c50bd73f6fee50b35b95b9fbb52387ff443321
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 113 の変更点をまとめています。Firefox 113 は、米国時間 2023 年 5 月 9 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -40,7 +38,7 @@ l10n:
 
 #### Media、WebRTC、Web Audio
 
-- [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を Android で有効化しました。デバイスがサポートしていれば、デコードでハードウェアアクセラレーションを使用します ([Firefox bug 1672276](https://bugzil.la/1672276))。
+- [AV1 動画コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) を Android で有効化しました。デバイスがサポートしていれば、デコードでハードウェアアクセラレーションを使用します ([Firefox bug 1672276](https://bugzil.la/1672276))。
 - 以下の WebRTC メソッド、プロパティおよびディクショナリーをサポートしました: [`RTCRtpSender.getCapabilities()`](/ja/docs/Web/API/RTCRtpSender/getCapabilities_static)、[`RTCRtpReceiver.getCapabilities()`](/ja/docs/Web/API/RTCRtpReceiver/getCapabilities_static)、[`RTCRtpSender.setStreams()`](/ja/docs/Web/API/RTCRtpSender/setStreams)、[`RTCSctpTransport`](/ja/docs/Web/API/RTCSctpTransport)、[`RTCPeerConnection.sctp`](/ja/docs/Web/API/RTCPeerConnection/sctp)、[`RTCMediaSourceStats`](/ja/docs/Web/API/RTCMediaSourceStats)、[`RTCPeerConnection.connectionState`](/ja/docs/Web/API/RTCPeerConnection/connectionState)、[`RTCPeerConnectionStats`](/ja/docs/Web/API/RTCPeerConnectionStats)。
   それぞれに対応するバグ報告は、[Firefox bug 1531460](https://bugzil.la/1531460)、[Firefox bug 1510802](https://bugzil.la/1510802)、[Firefox bug 1278299](https://bugzil.la/1278299)、[Firefox bug 1804678](https://bugzil.la/1804678)、[Firefox bug 1265827](https://bugzil.la/1265827)、[Firefox bug 1531087](https://bugzil.la/1531087) です。
 

@@ -53,9 +53,7 @@ _このインターフェイスには {{domxref("TextTrackCue")}} から継承�
 次の例は、新しい {{domxref("TextTrack")}} を動画に追加し、次に {{domxref("TextTrack.addCue()")}} メソッドを使用して `VTTCue` オブジェクトを値としてキューを追加します。
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 ### CSS

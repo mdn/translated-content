@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
-{{CSSRef}}
-
-**`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
+**`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
 
 ## 構文
 
@@ -21,7 +19,8 @@ l10n:
 
 ただし、改行を行うためには、{{cssxref("white-space")}} プロパティに適切な値を設定する必要があります。
 
-> **メモ:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
+> [!NOTE]
+> [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
 
 ## 例
 
@@ -59,5 +58,5 @@ awesome string"
 ## 関連情報
 
 - [CSS の単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_Types)
-- [CSS 入門: 単位と値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS 入門: 単位と値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

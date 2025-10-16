@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSFontFaceRule`** インターフェイスは {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/At-rule)を表します。
+**`CSSFontFaceRule`** インターフェイスは {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
 
 {{InheritanceDiagram}}
 

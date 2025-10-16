@@ -38,7 +38,6 @@ Un effet très visible est : `text-rendering : optimizeLegibility;` qui active l
 - `optimizeLegibility`
   - : Le navigateur privilégie la lisibilité par rapport à la vitesse de rendu ou la précision géométrique. Ceci active le crénage et les ligatures.
 - `geometricPrecision`
-
   - : Le navigateur privilégie la précision géométrique par rapport à la vitesse de rendu et la lisibilité. Certains aspects d'une police — comme le crénage — ne se mettent pas à l'échelle de manière linéaire, donc `geometricPrecision` peut rendre agréables à l'œil les textes utilisant ces polices.
 
     Avec SVG, lorsque le texte est agrandi ou réduit, le navigateur calcule la taille finale du texte (qui est la taille de police définie et le facteur appliqué) et demande une police de cette taille calculée au système de police de la plateforme. Mais si vous demandez une police de taille 9 avec un facteur de 140 %, la taille résultante de 12,6 n'existe pas dans la système de polices, donc le navigateur arrondi la taille de police à 12 dans ce cas. Ce qui aboutit à une mise à l'échelle en escalier du texte.

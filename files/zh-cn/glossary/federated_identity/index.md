@@ -2,14 +2,12 @@
 title: 联合身份
 slug: Glossary/Federated_identity
 l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+  sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
-
-{{GlossarySidebar}}
 
 **联合身份**系统是一个{{glossary("identity provider", "身份提供商")}}（IdP）在用户和{{glossary("relying party", "依赖方")}}之间充当中介的系统，让用户可以使用一组{{glossary("credential", "凭据")}}与多个不同的依赖方进行身份验证。
 
-传统上，在 Web 中用户将使用用户名和密码登录网站，网站将根据存储在后端的（经过适当{{glossary("hash", "哈希")}}和{{glossary("salt", "加盐")}}处理的）副本来验证密码。
+传统上，在 Web 中用户将使用用户名和密码登录网站，网站将根据存储在后端的（经过适当{{glossary("hash function", "散列")}}和{{glossary("salt", "加盐")}}处理的）副本来验证密码。
 
 在这种模型中，如果用户在不同的网站上有多个帐户，他们必须记住许多密码。这会促进不良的密码实践，比如为多个帐户使用相同的密码。
 

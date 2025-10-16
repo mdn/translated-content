@@ -3,8 +3,6 @@ title: color-mix()
 slug: Web/CSS/color_value/color-mix
 ---
 
-{{CSSRef}}
-
 **`color-mix()`** 函数标记接收两个 {{cssxref("&lt;color&gt;")}} 值，并返回在指定颜色空间、指定数量混合后的颜色。
 
 ## 语法
@@ -21,17 +19,13 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 函数标记：`color-mix(method, color1[ p1], color2[ p2])`
 
 - `method`
-
   - : 指定插值颜色空间的 {{CSSXref("&lt;color-interpolation-method&gt;")}} 值。
 
 - `color1`、`color2`
-
   - : 需要混合的 {{CSSXref("&lt;color&gt;")}} 值。
 
 - `p1`、`p2` {{optional_inline}}
-
   - : `0%` 到 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}} 值，指定每个颜色混合的数量。这两个值会按照以下的方式规范化：
-
     - 如果 `p1` 和 `p2` 都省略了，那么 `p1 = p2 = 50%`。
     - 如果 `p1` 省略，那么 `p1 = 100% - p2`。
     - 如果 `p2` 省略，那么 `p2 = 100% - p1`。

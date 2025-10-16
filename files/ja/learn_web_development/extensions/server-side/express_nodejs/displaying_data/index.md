@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
-これで[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)のウェブサイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したり、テンプレートを使用したりする際の実際的な経験を積むことになります。
+これで[地域図書館](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)のウェブサイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したり、テンプレートを使用したりする際の実際的な経験を積むことになります。
 
 | 前提条件: | 以前のチュートリアルのトピック ([Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)を含む) を完了してください。 |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 概要
 
-前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリーレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
+前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリーレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
 
 次のステップは、私たちの図書館情報を表示するページに適切な実装をすることです (後の記事で情報を作成、更新、または削除するフォームを特徴とする実装ページを見ます)。これには、モデルを使用してレコードを取得するためのコントローラ機能の更新、およびこの情報をユーザーに表示するためのテンプレートの定義が含まれます。
 
@@ -26,9 +26,9 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 次のサブ記事では、必要なウェブサイトページを表示するために必要なさまざまな機能を追加するプロセスについて説明します。次のものに進む前に、順番にこれらのそれぞれを読み、作業する必要があります。
 
-1. [async を使用した非同期フロー制御](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+1. [async を使用した非同期フロー制御](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
 2. [テンプレートプライマー](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3. [LocalLibrary 基本テンプレート](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+3. [LocalLibrary 基本テンプレート](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
 4. [ホームページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
 5. [ブックリストページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
 6. [ブックインスタンスリストページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
@@ -36,7 +36,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 8. [著者リストページとジャンルリストページのチャレンジ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
 9. [ジャンル詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
 10. [本の詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-11. [著者詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+11. [著者詳細ページ](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
 12. [ブックインスタンス詳細ページとチャレンジ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## まとめ

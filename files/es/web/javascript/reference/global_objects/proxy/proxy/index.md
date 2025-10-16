@@ -15,7 +15,8 @@ El constructor **`Proxy()`** crea objetos {{jsxref("Proxy")}}.
 new Proxy(target, handler)
 ```
 
-> **Nota:** `Proxy()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` arroja un {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Proxy()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` arroja un {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -48,8 +49,7 @@ Esta sección enumera todas las funciones de manejador que puede definir. Las fu
   - : Una trampa para el operador {{JSxRef("Operators/delete", "delete")}}.
 - {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
   - : Una trampa para obtener valores de propiedad.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor",
-    "handler.getOwnPropertyDescriptor()")}}
+- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : Una trampa para {{JSxRef("Object.getOwnPropertyDescriptor")}}.
 - {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
   - : Una trampa para {{JSxRef("Object.getPrototypeOf")}}.
@@ -59,8 +59,7 @@ Esta sección enumera todas las funciones de manejador que puede definir. Las fu
   - : Una trampa para {{JSxRef("Object.isExtensible")}}.
 - {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
   - : Una trampa para {{JSxRef("Object.getOwnPropertyNames")}} y {{JSxRef("Object.getOwnPropertySymbols")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions",
-    "handler.preventExtensions()")}}
+- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
   - : Una trampa para {{JSxRef("Object.preventExtensions")}}.
 - {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
   - : Una trampa para establecer valores de propiedad.

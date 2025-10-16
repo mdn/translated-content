@@ -1,12 +1,11 @@
 ---
 title: 如何使用 Promise
 slug: Learn_web_development/Extensions/Async_JS/Promises
-original_slug: Learn/JavaScript/Asynchronous/Promises
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
 
 **Promise** 是现代 JavaScript 中异步编程的基础。它是一个由异步函数返回的对象，可以指示操作当前所处的状态。在 Promise 返回给调用者的时候，操作往往还没有完成，但 Promise 对象提供了方法来处理操作最终的成功或失败。
 
@@ -73,7 +72,7 @@ Promise { <state>: "pending" }
 已收到响应：200
 ```
 
-请注意，`已发送请求……` 的消息在我们收到响应之前就被输出了。与同步函数不同，`fetch()` 在请求仍在进行时返回，这使我们的程序能够保持响应性。响应显示了 `200`（OK）的[状态码](/zh-CN/docs/Web/HTTP/Status)，意味着我们的请求成功了。
+请注意，`已发送请求……` 的消息在我们收到响应之前就被输出了。与同步函数不同，`fetch()` 在请求仍在进行时返回，这使我们的程序能够保持响应性。响应显示了 `200`（OK）的[状态码](/zh-CN/docs/Web/HTTP/Reference/Status)，意味着我们的请求成功了。
 
 可能这看起来很像上一篇文章中的例子中我们把事件处理程序添加到 {{domxref("XMLHttpRequest")}} 对象中。但不同的是，我们这一次将处理程序传递到返回的 Promise 对象的 `then()` 方法中。
 
@@ -181,7 +180,7 @@ Promise 中有一些具体的术语值得我们弄清楚。
 - **已兑现（fulfilled）**：意味着操作成功完成。当 Promise 完成时，它的 `then()` 处理函数被调用。
 - **已拒绝（rejected）**：意味着操作失败。当一个 Promise 失败时，它的 `catch()` 处理函数被调用。
 
-注意，这里的“成功”或“失败”的含义取决于所使用的 API：例如，`fetch()` 认为服务器返回一个错误（如 [404 Not Found](/zh-CN/docs/Web/HTTP/Status/404)）时请求成功，但如果网络错误阻止请求被发送，则认为请求失败。
+注意，这里的“成功”或“失败”的含义取决于所使用的 API：例如，`fetch()` 认为服务器返回一个错误（如 [404 Not Found](/zh-CN/docs/Web/HTTP/Reference/Status/404)）时请求成功，但如果网络错误阻止请求被发送，则认为请求失败。
 
 有时我们用**已敲定**（settled）这个词来同时表示**已兑现**（fulfilled）和**已拒绝**（rejected）两种情况。
 

@@ -16,12 +16,9 @@ void gl.bindFramebuffer(target, framebuffer);
 ### 参数
 
 - target
-
   - : {{domxref("GLenum")}} 指定绑定点 (目标)。可能的值为：
-
     - `gl.FRAMEBUFFER`: 收集用于渲染图像的颜色，alpha，深度和模板缓冲区的缓冲区数据存储。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
-
       - `gl.DRAW_FRAMEBUFFER`: 相当于`gl.FRAMEBUFFER`，用作绘图，渲染，清除和写入操作。
       - `gl.READ_FRAMEBUFFER`: 用作读取操作的资源。
 

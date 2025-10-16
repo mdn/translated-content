@@ -3,13 +3,59 @@ title: justify-content
 slug: Web/CSS/justify-content
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`justify-content`** 属性定义浏览器如何沿着弹性容器的{{Glossary("Main Axis", "主轴")}}和网格容器的行向轴分配内容元素之间和周围的空间。
 
 下面的交互示例演示了使用网格布局的一些值。
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
+
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 当 length 属性和自动外边距属性生效之后，对齐已经完成了。也就是说，如果[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)中存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 `0`，那么对齐方式不会生效，就像没有多余空间的情况。
 
@@ -73,7 +119,6 @@ justify-content: unset;
 - `space-evenly`
   - : flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
 - `stretch`
-
   - : 如果元素沿主轴的组合尺寸小于对齐容器的尺寸，任何尺寸设置为 `auto` 的元素都会等比例地增加其尺寸（而不是按比例增加），同时仍然遵守由 {{cssxref("max-height")}}/{{cssxref("max-width")}}（或相应功能）施加的约束，以便沿主轴完全填充对齐容器的组合尺寸。
 
     > [!NOTE]

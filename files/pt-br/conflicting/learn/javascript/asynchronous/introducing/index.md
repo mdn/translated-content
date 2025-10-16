@@ -166,8 +166,8 @@ O design moderno de software gira em torno do uso de programação assíncrona, 
 ## Nesse módulo
 
 - [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introduzindo o JavaScript assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Introduzindo o JavaScript assíncrono](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Introducing)
 - [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Código elegante usando as Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Código elegante usando as Promises](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - [Facilitando a programação async com async e await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
-- [Escolhendo a abordagem certa](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+- [Escolhendo a abordagem certa](/pt-BR/docs/Learn_web_development/Extensions/Async_JS)

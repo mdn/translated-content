@@ -2,7 +2,7 @@
 title: FileSystemFileHandle：createWritable() 方法
 slug: Web/API/FileSystemFileHandle/createWritable
 l10n:
-  sourceCommit: 1a7695e13c51d85a81e3e5d85feedbc5dbd2a379
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
@@ -21,11 +21,9 @@ createWritable(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
-
     - `keepExistingData` {{optional_inline}}
-      - : {{jsxref('Boolean', '布尔值', '', 'nocode')}}，默认为 `false`。当设为 `true` 时，如果文件存在，则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
+      - : {{jsxref('Boolean', '布尔值', '', 1)}}，默认为 `false`。当设为 `true` 时，如果文件存在，则现将现有文件的内容复制到临时文件，否则临时文件初始时内容为空。
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : 指定可写文件流的锁定模式的字符串。默认值为 `"siloed"`。可能的值包括：
         - `"exclusive"`
@@ -85,14 +83,14 @@ async function writeFile(fileHandle, contents) {
 <ol>
   <li>选择要写入的文件：<button class="select">选择文件</button></li>
   <li>
-    <label for="filetext">输入要写入文件的文本：</label>
-    <input type="text" id="filetext" name="filetext" disabled />
+    <label for="file-text">输入要写入文件的文本：</label>
+    <input type="text" id="file-text" name="file-text" disabled />
   </li>
   <li>将你的文本写入文件：<button class="write" disabled>写入文本</button></li>
 </ol>
 ```
 
-文本输入字段和写入文本按钮最初通过 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled) 属性设置为禁用——直到用户选择要写入的文件时，它们才应被使用。
+文本输入字段和写入文本按钮最初通过 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性设置为禁用——直到用户选择要写入的文件时，它们才应被使用。
 
 ```css hidden
 li {
@@ -107,7 +105,7 @@ li {
 ```js
 const selectBtn = document.querySelector(".select");
 const writeBtn = document.querySelector(".write");
-const fileText = document.querySelector("#filetext");
+const fileText = document.querySelector("#file-text");
 
 let writableStream = null;
 ```

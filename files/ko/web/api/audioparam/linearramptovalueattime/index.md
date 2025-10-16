@@ -27,8 +27,8 @@ var AudioParam = AudioParam.linearRampToValueAtTime(value, endTime);
 ## 예제
 
 이 예제에는 두 개의 제어 버튼을 가진 미디어 소스가 있습니다 (소스 코드는 [audio-param
-repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param)에서 볼 수 있고, [작동 예제](https://mdn.github.io/webaudio-examples/audio-param/)도 볼 수 있습니다). 이 버튼들이 눌렸을 때, `linearRampToValueAtTime()` 가 사용되어 각각 gain 값을 1.0까지, 그리고 0까지 서서히 사라지게(fade) 합니다. 비록 종종 {{
-  domxref("AudioParam.exponentialRampToValueAtTime()") }}가 좀 더 자연스럽다고 여겨지긴 하지만 이것은 페이드 인/페이드 아웃 이펙트에 아주 유용합니다.
+repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param)에서 볼 수 있고, [작동 예제](https://mdn.github.io/webaudio-examples/audio-param/)도 볼 수 있습니다). 이 버튼들이 눌렸을 때, `linearRampToValueAtTime()` 가 사용되어 각각 gain 값을 1.0까지, 그리고 0까지 서서히 사라지게(fade) 합니다. 비록 종종
+{{ domxref("AudioParam.exponentialRampToValueAtTime()") }}가 좀 더 자연스럽다고 여겨지긴 하지만 이것은 페이드 인/페이드 아웃 이펙트에 아주 유용합니다.
 
 ```js
 // 오디오 컨텍스트를 생성합니다

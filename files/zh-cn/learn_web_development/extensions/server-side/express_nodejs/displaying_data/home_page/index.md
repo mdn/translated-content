@@ -1,7 +1,6 @@
 ---
 title: 主页
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
 
 我们创建的第一个页面，是网站的主页面，可以从网站的根目录 (`'/'`) ，或者 catalog 的根目录 (`catalog/`) 访问。这将呈现一些网站的静态文字描述，以及动态计算数据库中不同记录类型的“计数”。

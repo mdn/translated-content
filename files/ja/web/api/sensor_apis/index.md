@@ -47,7 +47,7 @@ if (window.AmbientLightSensor) {
 
 以下のコード例で、これらの原則を説明します。{{jsxref('statements/try...catch', 'try...catch')}} ブロックにより、センサーの生成時に投げられるエラーをキャッチします。{{domxref('Sensor.error_event', 'error')}} イベントを監視することで、使用時に投げられるエラーをキャッチします。ユーザーに何かが提示されるのは、[許可](/ja/docs/Web/API/Permissions_API)の要求が必要なときと、端末がこのセンサーの種類に対応していないときだけです。
 
-さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる可能性があります。
+さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる可能性があります。
 
 ```js
 let accelerometer = null;

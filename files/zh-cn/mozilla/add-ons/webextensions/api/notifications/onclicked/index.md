@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当用户点击通知并且点击的并不是通知的按钮时触发（对于点击按钮的事件，参见 {{WebExtAPIRef("notifications.onButtonClicked")}}）。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.notifications.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数需要你传递下列参数：
-
     - `notificationId`
       - : `string`。用户点击的通知的 ID。
 
@@ -54,4 +50,4 @@ browser.notifications.onClicked.addListener((notificationId) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.notifications`](https://developer.chrome.google.cn/docs/extensions/reference/api/notifications) API。
+> 此 API 基于 Chromium 的 [`chrome.notifications`](https://developer.chrome.google.cn/docs/extensions/reference/api/notifications) API。

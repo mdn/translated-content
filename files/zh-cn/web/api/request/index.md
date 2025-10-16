@@ -133,5 +133,5 @@ fetch(request)
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

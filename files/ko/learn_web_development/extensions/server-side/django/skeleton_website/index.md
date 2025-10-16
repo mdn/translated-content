@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-[장고 튜토리얼](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)의 두 번째 기사에서는 웹 사이트 프로젝트의 기본 뼈대(skeleton)를 만들고, 사이트의 특성에 맞춰 설정, 경로, 모델, 뷰 및 템플릿을 다루는 방법을 보여줍니다.
+[장고 튜토리얼](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)의 두 번째 기사에서는 웹 사이트 프로젝트의 기본 뼈대(skeleton)를 만들고, 사이트의 특성에 맞춰 설정, 경로, 모델, 뷰 및 템플릿을 다루는 방법을 보여줍니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +48,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 3. 프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
 4. 각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.
 
-[Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 용으로 웹사이트 폴더와 프로젝트 폴더는 locallibrary라고 이름지어질 것입니다. 그리고 catalog라는 단 하나의 어플리케이션을 가질 겁니다. 그러므로 최상위 폴더 구조는 아래와 같습니다:
+[Local Library website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 용으로 웹사이트 폴더와 프로젝트 폴더는 locallibrary라고 이름지어질 것입니다. 그리고 catalog라는 단 하나의 어플리케이션을 가질 겁니다. 그러므로 최상위 폴더 구조는 아래와 같습니다:
 
 ```bash
 locallibrary/         # Website folder
@@ -61,7 +61,7 @@ locallibrary/         # Website folder
 
 ## 프로젝트 만들기
 
-먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
+먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
 
 ```bash
 mkdir locallibrary
@@ -105,7 +105,8 @@ locallibrary 프로젝트의 하위 폴더는 웹사이트의 시작점입니다
 python3 manage.py startapp catalog
 ```
 
-> **참고:** **주의** : 위 명령어는 리눅스/macOS X를 위한 명령어입니다. 윈도우에서의 명령어는 다음과 같습니다. `py -3 manage.py startapp catalog`
+> [!NOTE]
+> **주의** : 위 명령어는 리눅스/macOS X를 위한 명령어입니다. 윈도우에서의 명령어는 다음과 같습니다. `py -3 manage.py startapp catalog`
 >
 > 만약 윈도우에서 작업한다면, 이 튜토리얼 전체에서 `python3`를 `py -3`로 바꾸십시오.
 >
@@ -134,7 +135,8 @@ locallibrary/
 - **migrations 폴더** — 모델을 수정할 때 마다 자동으로 데이터베이스를 업데이트하는 것을 가능하게 해 줄 마이그레이션 파일들을 저장할 폴더
 - **\_\_init\_\_.py** — 장고/파이썬이 폴더를 [파이썬 패키지](https://docs.python.org/3/tutorial/modules.html#packages)로 인식하게 할 빈 파일입니다. 또한 프로젝트의 다른 부분에서 객체(object)를 사용할 수 있게 합니다.
 
-> **참고:** **주의** : 위의 파일 리스트에서 뭔가 부족한게 있다는 것을 알아챘나요? 뷰와 모델 관련 파일은 있는 반면 URL 맵핑, 템플릿, 정적 파일(static file)과 연관된 파일이 없습니다. 그들을 어떻게 생성하는지에 관해서는 추후에 보여드리겠습니다 (이것들은 모든 웹사이트에서 필요하진 않지만 우리 프로젝트에서는 필요합니다).
+> [!NOTE]
+> **주의** : 위의 파일 리스트에서 뭔가 부족한게 있다는 것을 알아챘나요? 뷰와 모델 관련 파일은 있는 반면 URL 맵핑, 템플릿, 정적 파일(static file)과 연관된 파일이 없습니다. 그들을 어떻게 생성하는지에 관해서는 추후에 보여드리겠습니다 (이것들은 모든 웹사이트에서 필요하진 않지만 우리 프로젝트에서는 필요합니다).
 
 ## catalog application 등록하기
 
@@ -156,7 +158,8 @@ INSTALLED_APPS = [
 
 새로운 행은 어플리케이션 구성 객체(application configuration object)(`CatalogConfig`)를 지정하게 됩니다. 이것은 어플리케이션을 생성할 때 **/locallibrary/catalog/apps.py** 안에 생성됩니다.
 
-> **참고:** **주의**: 설정 파일에 이미 많은 `INSTALLED_APPS` 항목과 `MIDDLEWARE` 항목이 있음을 알 수 있습니다. 이를 통해 [장고 관리 사이트](/ko/docs/Learn/Server-side/Django/Admin_site)를 지원할 수 있으며 결과적으로 세션, 인증 등을 포함한 많은 기능이 사용됩니다.
+> [!NOTE]
+> **주의**: 설정 파일에 이미 많은 `INSTALLED_APPS` 항목과 `MIDDLEWARE` 항목이 있음을 알 수 있습니다. 이를 통해 [장고 관리 사이트](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)를 지원할 수 있으며 결과적으로 세션, 인증 등을 포함한 많은 기능이 사용됩니다.
 
 ## 데이터베이스 설정
 
@@ -220,7 +223,8 @@ urlpatterns = [
 
 URL 맵핑은 `urlpatterns` 변수를 통해 관리되는데, 이 변수는 `path()` 함수의 파이썬 `list` 타입입니다. 각각의 `path()` 함수는 패턴이 일치할 때 표시될 뷰에 URL 패턴을 연결하거나, 다른 URL 패턴 테스트 코드 목록에 연결합니다(이 두 번째 경우에서 패턴은 대상 모듈에서 정의된 패턴의 "기본 URL"이 됩니다). `urlpatterns` 리스트는 맨 처음에 관리자 어플리케이션의 고유한 URL 맵핑 정의를 갖고 있는 `admin.site.urls` 모듈에 `admin/` 패턴을 가지고 있는 모든 URL을 매핑하는 단일 함수를 정의합니다.
 
-> **참고:** **주의**: `path()` 속의 경로는 일치시킬 URL 패턴을 정의하는 문자열입니다. 이 문자열은 명명된(named) 변수를 꺽쇠 괄호(`< >`) 안에 포함할 수 있습니다. (예시: `'catalog/<id>/'`) 이 패턴은 URL을 **/catalog/**_any_chars_**/** 처럼 일치시키고 *any_chars*를 뷰에 매개 변수 이름이 `id` 인 문자열로 전달합니다. 경로(path) 함수(method)와 경로(route) 패턴에 대해서는 추후에 더 논의하겠습니다.
+> [!NOTE]
+> **주의**: `path()` 속의 경로는 일치시킬 URL 패턴을 정의하는 문자열입니다. 이 문자열은 명명된(named) 변수를 꺽쇠 괄호(`< >`) 안에 포함할 수 있습니다. (예시: `'catalog/<id>/'`) 이 패턴은 URL을 **/catalog/**_any_chars_**/** 처럼 일치시키고 *any_chars*를 뷰에 매개 변수 이름이 `id` 인 문자열로 전달합니다. 경로(path) 함수(method)와 경로(route) 패턴에 대해서는 추후에 더 논의하겠습니다.
 
 `urlpatterns` 리스트에 새로운 리스트 항목을 추가하기 위해서 아래 코드를 파일의 마지막에 추가하세요. 이 새로운 항목은 요청(request)을 모듈 `catalog.urls`(관련 URL **/catalog/urls.py**가 있는 파일)에 `catalog/` 패턴과 함께 전달하는 `path()`를 포함합니다. (번역자주: 만일 `www.xxxx.com/catalog`로 시작되는 요청이 들어 오면 `catalog/urls.py`를 참조해서 맵핑하겠다는 의미)
 
@@ -272,7 +276,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **참고:** **주의**: `urlpatterns` 리스트를 확장하는 여러 가지 방법들이 있습니다(위에서는 코드들을 명백하게 구분하기 위해서 간단히 `+=` 연산자를 사용해서 새로운 리스트 항목을 추가했습니다). 대신 원래의 리스트 정의 안에 새로운 패턴-맵을 추가하는 방법이 있습니다:
+> [!NOTE]
+> **주의**: `urlpatterns` 리스트를 확장하는 여러 가지 방법들이 있습니다(위에서는 코드들을 명백하게 구분하기 위해서 간단히 `+=` 연산자를 사용해서 새로운 리스트 항목을 추가했습니다). 대신 원래의 리스트 정의 안에 새로운 패턴-맵을 추가하는 방법이 있습니다:
 >
 > ```python
 > urlpatterns = [
@@ -313,19 +318,22 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **경고:** **중요**: 저장되어야 할 데이터의 구조에 영향을 미치는 방식으로 모델이 변경될 때마다 위의 명령어를 실행해야 합니다(모든 모델과 개별적인 필드의 추가와 제거를 포함하여).
+> [!WARNING]
+> **중요**: 저장되어야 할 데이터의 구조에 영향을 미치는 방식으로 모델이 변경될 때마다 위의 명령어를 실행해야 합니다(모든 모델과 개별적인 필드의 추가와 제거를 포함하여).
 
 `makemigrations` 명령어는 프로젝트에 설치된 모든 어플리케이션에 대한 migration을 생성합니다(하지만 적용하진 않습니다)(또한 그저 단일 프로젝트를 위한 migration을 실행하기 위해 어플리케이션 이름을 지정할 수 있습니다). 이것으로 migration이 적용되기 전에 코드를 점검할 기회를 가질 수 있습니다 — 당신이 장고 전문가가 되었을 땐 그것들을 조금 조정할 수도 있습니다!
 
 `migrate` 명령어는 migration을 실제로 데이터베이스에 적용합니다(장고는 현재 데이터베이스에 어떤 것들이 추가되었는지 추적합니다).
 
-> **참고:** **주의**: 덜 사용되는 migration 명령어에 대한 추가적인 정보는 [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (장고 문서)를 참고하세요.
+> [!NOTE]
+> **주의**: 덜 사용되는 migration 명령어에 대한 추가적인 정보는 [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (장고 문서)를 참고하세요.
 
 ### 웹사이트 실행하기
 
 개발 중에 먼저 개발 웹 서버를 사용해서 웹사이트를 서비스한 후 로컬 웹 브라우저에서 볼 수 있습니다.
 
-> **참고:** **주의**: 개발용 웹 서버는 견고하거나 제품에 쓰일 만큼 충분하진 않지만, 개발 중에 편하고 빠른 테스트를 위해 장고 웹사이트를 실행할 수 있는 아주 쉬운 방법입니다. 기본적으로 사이트를 당신의 로컬 컴퓨터에(`http://127.0.0.1:8000/)`서비스 하지만, 네트워크에 있는 다른 컴퓨터를 지정해서 서비스하도록 할 수 있습니다. [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (장고 문서)에서 더 많은 정보를 확인하세요.
+> [!NOTE]
+> **주의**: 개발용 웹 서버는 견고하거나 제품에 쓰일 만큼 충분하진 않지만, 개발 중에 편하고 빠른 테스트를 위해 장고 웹사이트를 실행할 수 있는 아주 쉬운 방법입니다. 기본적으로 사이트를 당신의 로컬 컴퓨터에(`http://127.0.0.1:8000/)`서비스 하지만, 네트워크에 있는 다른 컴퓨터를 지정해서 서비스하도록 할 수 있습니다. [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (장고 문서)에서 더 많은 정보를 확인하세요.
 
 **manage.py**와 같은 디렉터리 안에 있는 `runserver` 명령어를 실행해 개발 웹 서버를 실행해 보세요.
 
@@ -347,11 +355,13 @@ python3 manage.py runserver
 
 걱정 마세요! 예상된 에러 페이지입니다. 그 이유는 아직(사이트의 루트에 대한 URL을 가져올 때 리다이렉트되는) `catalogs.urls` 모듈 안에 정의된 page/url들이 없기 때문입니다.
 
-> **참고:** **주의**: 위 페이지는 중요한 장고 기능을 보여줍니다— 자동화된 디버그 기록(logging)이죠. 에러 화면은 페이지를 찾을 수 없거나, 코드에서 에러가 발생했을 어떤 때라도 유용한 정보가 표시될 겁니다. 이 경우엔 (목록에 있는 대로) 우리가 제공한 URL과 일치하는 어떤 URL 패턴도 없다는 것을 볼 수 있습니다. 디버그 기록(logging)은 제품화되었을 (웹에 라이브로 사이트를 올려놓으면) 때는 꺼져 있을 겁니다. 정보는 더 적지만, 사용자 친화적인 페이지가 서비스되는 것이죠.
+> [!NOTE]
+> **주의**: 위 페이지는 중요한 장고 기능을 보여줍니다— 자동화된 디버그 기록(logging)이죠. 에러 화면은 페이지를 찾을 수 없거나, 코드에서 에러가 발생했을 어떤 때라도 유용한 정보가 표시될 겁니다. 이 경우엔 (목록에 있는 대로) 우리가 제공한 URL과 일치하는 어떤 URL 패턴도 없다는 것을 볼 수 있습니다. 디버그 기록(logging)은 제품화되었을 (웹에 라이브로 사이트를 올려놓으면) 때는 꺼져 있을 겁니다. 정보는 더 적지만, 사용자 친화적인 페이지가 서비스되는 것이죠.
 
 이 지점에서 장고가 작동한다는 것을 알 수 있습니다!
 
-> **참고:** **주의**: 어떤 때라도 중요한 변경이 있은 후에는 migration들을 재실행하고 사이트를 다시 테스트해야 합니다. 그렇게 오래 걸리진 않으니까 꼭 하세요!
+> [!NOTE]
+> **주의**: 어떤 때라도 중요한 변경이 있은 후에는 migration들을 재실행하고 사이트를 다시 테스트해야 합니다. 그렇게 오래 걸리진 않으니까 꼭 하세요!
 
 ## 도전 과제
 
@@ -363,7 +373,7 @@ python3 manage.py runserver
 
 이제 urls, models, views, 그리고 templates으로 채울 수 있는 완벽한 뼈대 웹사이트 프로젝트를 만들었습니다.
 
-[Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)를 위한 뼈대는 완성되어서 실행되고 있고, 이제는 이 웹사이트가 해야 할 일을 하게 만드는 코드를 작성할 시간입니다.
+[Local Library website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)를 위한 뼈대는 완성되어서 실행되고 있고, 이제는 이 웹사이트가 해야 할 일을 하게 만드는 코드를 작성할 시간입니다.
 
 ## 참고 항목
 

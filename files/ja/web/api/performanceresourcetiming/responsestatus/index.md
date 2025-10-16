@@ -15,8 +15,8 @@ l10n:
 
 `responseStatus` プロパティは以下の値を取ります。
 
-- リソースを読み取った際に返された [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)を示す数値。
-- [CORS](/ja/docs/Web/HTTP/CORS) のチェックに失敗した場合は `0`。
+- リソースを読み取った際に返された [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)を示す数値。
+- [CORS](/ja/docs/Web/HTTP/Guides/CORS) のチェックに失敗した場合は `0`。
 - 別オリジンの {{HTMLElement("iframe")}} オブジェクトの場合は `0`。
 
 ## 例
@@ -54,7 +54,7 @@ resources.forEach((entry) => {
 
 ### オリジン間のレスポンスステータスコード
 
-`responseStatus` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジンの外へのレスポンスステータスコードの表示を許可するには、[CORS](/ja/docs/Web/HTTP/CORS) の HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+`responseStatus` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジンの外へのレスポンスステータスコードの表示を許可するには、[CORS](/ja/docs/Web/HTTP/Guides/CORS) の HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
 
 例えば、`https://developer.mozilla.org` にレスポンスステータスコードを取得させるためには、オリジン間リソースが送信する必要があります。
 
@@ -72,6 +72,6 @@ Access-Control-Allow-Origin: https://developer.mozilla.org
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{domxref("Response.status")}}
-- [CORS](/ja/docs/Web/HTTP/CORS)
+- [CORS](/ja/docs/Web/HTTP/Guides/CORS)

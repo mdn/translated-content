@@ -16,11 +16,11 @@ l10n:
 _{{domxref("HTMLElement")}} から継承しているプロパティがあります。_
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : この {{HTMLElement("canvas")}} 要素の [`height`](/ja/docs/Web/HTML/Element/canvas#height) 属性で、このキャンバスの 1 列分の論理ピクセル数（または RGBA 値の数）を反映した正の整数です。この属性が指定されていないか、無効な値であった場合は、`150` の既定値が用いられます。もし {{HTMLElement("canvas")}} に CSS の高さが\[独立して]割り当てられていない場合、この値は CSS ピクセル数の単位で高さとしても使用されます。
+  - : この {{HTMLElement("canvas")}} 要素の [`height`](/ja/docs/Web/HTML/Reference/Elements/canvas#height) 属性で、このキャンバスの 1 列分の論理ピクセル数（または RGBA 値の数）を反映した正の整数です。この属性が指定されていないか、無効な値であった場合は、`150` の既定値が用いられます。もし {{HTMLElement("canvas")}} に CSS の高さが\[独立して]割り当てられていない場合、この値は CSS ピクセル数の単位で高さとしても使用されます。
 - {{domxref("HTMLCanvasElement.width")}}
-  - : この {{HTMLElement("canvas")}} 要素の [`width`](/ja/docs/Web/HTML/Element/canvas#width) 属性で、このキャンバスの 1 行分の論理ピクセル数（または RGBA 値の数）を反映した正の整数です。この属性が指定されていないか、無効な値であった場合は、`300` の既定値が用いられます。もし {{HTMLElement("canvas")}} に CSS の高さが\[独立して]割り当てられていない場合、この値は CSS ピクセル数の単位で幅としても使用されます。
+  - : この {{HTMLElement("canvas")}} 要素の [`width`](/ja/docs/Web/HTML/Reference/Elements/canvas#width) 属性で、このキャンバスの 1 行分の論理ピクセル数（または RGBA 値の数）を反映した正の整数です。この属性が指定されていないか、無効な値であった場合は、`300` の既定値が用いられます。もし {{HTMLElement("canvas")}} に CSS の高さが\[独立して]割り当てられていない場合、この値は CSS ピクセル数の単位で幅としても使用されます。
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : この {{HTMLElement("canvas")}} 要素の [`moz-opaque`](/ja/docs/Web/HTML/Element/canvas#moz-opaque) 属性を反映した論理値です。半透明の部分の有無をキャンバスに伝えることができます。キャンバスに半透明がないことがわかれば、描画のパフォーマンスを最適化することができます。これは Mozilla ベースのブラウザーでのみ対応しています。代わりに標準化された {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} を使用してください。
+  - : この {{HTMLElement("canvas")}} 要素の [`moz-opaque`](/ja/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) 属性を反映した論理値です。半透明の部分の有無をキャンバスに伝えることができます。キャンバスに半透明がないことがわかれば、描画のパフォーマンスを最適化することができます。これは Mozilla ベースのブラウザーでのみ対応しています。代わりに標準化された {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} を使用してください。
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}} {{non-standard_inline}}
   - : 初期状態では null である関数です。ウェブコンテンツでここに JavaScript 関数を設定すると、ページの印刷中にキャンバスが再描画される際に呼び出されます。呼び出される際、コールバック関数には "printState" オブジェクトが渡されます。これは [MozCanvasPrintState](https://searchfox.org/mozilla-central/search?q=interface%20MozCanvasPrintState&path=HTMLCanvasElement.webidl) インターフェイスです。 コールバックは printState オブジェクトから描画するコンテキストを取得することができ、完了したら done() を呼び出す必要があります。`mozPrintCallback` の目的は、使用するプリンターの解像度でキャンバスの高解像度レンダリングを行うことです。[このブログ記事を参照してください](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)。
 

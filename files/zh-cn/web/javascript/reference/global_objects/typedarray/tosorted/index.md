@@ -19,7 +19,6 @@ toSorted(compareFn)
 ### 参数
 
 - `compareFn` {{optional_inline}}
-
   - : 一个确定元素顺序的函数。如果忽略，该类型化数组的元素将按照数值大小进行排序。更多信息请参阅 {{jsxref("TypedArray/sort", "sort()")}}。
 
 ### 返回值

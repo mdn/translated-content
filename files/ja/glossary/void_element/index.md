@@ -49,4 +49,4 @@ HTML 要素の開始タグの末尾に `/` （スラッシュ）文字がある�
 
 ## 関連情報
 
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

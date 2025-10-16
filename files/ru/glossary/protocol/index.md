@@ -13,7 +13,7 @@ l10n:
 
 - [Протокол передачи данных](https://ru.wikipedia.org/wiki/Протокол_передачи_данных) в Википедии
 - [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/standards)
-- [Обзор протокола HTTP](/ru/docs/Web/HTTP/Overview)
+- [Обзор протокола HTTP](/ru/docs/Web/HTTP/Guides/Overview)
 - Связанные термины глоссария:
   - {{glossary("TCP")}}
   - {{glossary("Packet")}}

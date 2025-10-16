@@ -17,7 +17,7 @@ slug: Web/API/AuthenticatorResponse
 ## プロパティ
 
 - {{domxref("AuthenticatorResponse.clientDataJSON")}}
-  - : [JSON](/ja/docs/Learn/JavaScript/Objects/JSON) 文字列が入った {{domxref("ArrayBuffer")}} で、 {{domxref("CredentialsContainer.create()")}} または {{domxref("CredentialsContainer.get()")}} に渡されたクライアントデータを表します。
+  - : [JSON](/ja/docs/Learn_web_development/Core/Scripting/JSON) 文字列が入った {{domxref("ArrayBuffer")}} で、 {{domxref("CredentialsContainer.create()")}} または {{domxref("CredentialsContainer.get()")}} に渡されたクライアントデータを表します。
 
 ## メソッド
 

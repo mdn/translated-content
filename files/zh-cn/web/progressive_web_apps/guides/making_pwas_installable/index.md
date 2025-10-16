@@ -60,12 +60,12 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 基于 Chromium 的浏览器，包括 Google Chrome、Samsung Internet 和 Microsoft Edge，要求清单包含以下成员：
 
-- [`name`](/zh-CN/docs/Web/Manifest/name)
-- [`icons`](/zh-CN/docs/Web/Manifest/icons)
-- [`start_url`](/zh-CN/docs/Web/Manifest/start_url)
-- [`display`](/zh-CN/docs/Web/Manifest/display) 和/或 [`display_override`](/zh-CN/docs/Web/Manifest/display_override)
+- [`name`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/name)
+- [`icons`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
+- [`start_url`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
+- [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/display) 和/或 [`display_override`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/display_override)
 
-有关每个成员的完整描述，请参阅 [Web 应用清单参考文档](/zh-CN/docs/Web/Manifest)。
+有关每个成员的完整描述，请参阅 [Web 应用清单参考文档](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。
 
 ### 安全上下文
 
@@ -101,7 +101,7 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 当用户选择该图标时，浏览器会显示一个提示框询问他们是否要安装 PWA，如果他们接受，PWA 将被安装。
 
-该提示框显示的是 PWA 的名称和图标，取自 渐进式 Web 应用清单的 [`name`](/zh-CN/docs/Web/Manifest/name) 和 [`icons`](/zh-CN/docs/Web/Manifest/icons) 成员。
+该提示框显示的是 PWA 的名称和图标，取自 渐进式 Web 应用清单的 [`name`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/name) 和 [`icons`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/icons) 成员。
 
 ### 浏览器支持
 
@@ -137,7 +137,7 @@ PWA 可以提供自己的页面内用户界面，供用户打开安装提示，�
 
 ### 自定义安装提示
 
-默认情况下，安装提示中包含 PWA 的名称和图标。如果你为 [`description`](/zh-CN/docs/Web/Manifest/description) 和 [`screenshots`](/zh-CN/docs/Web/Manifest/screenshots) 这两个渐进式 Web 应用清单的成员提供值，则仅限于 Android，在安装提示中将显示这些值，为用户提供额外的上下文和安装 PWA 的动机。
+默认情况下，安装提示中包含 PWA 的名称和图标。如果你为 [`description`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/description) 和 [`screenshots`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/screenshots) 这两个渐进式 Web 应用清单的成员提供值，则仅限于 Android，在安装提示中将显示这些值，为用户提供额外的上下文和安装 PWA 的动机。
 
 下面的屏幕截图显示了在运行在 Android 上的 Google Chrome 上的 [PWAmp 演示](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp)的安装提示的外观：
 
@@ -147,9 +147,9 @@ PWA 可以提供自己的页面内用户界面，供用户打开安装提示，�
 
 一旦安装了 PWA，它的图标将显示在设备上，与用户安装的其他应用程序一起显示，并且点击图标将启动应用程序。
 
-你可以使用应用清单的成员 [`display`](/zh-CN/docs/Web/Manifest/display) 来控制 PWA 的*显示模式*，即 PWA 启动时的外观。具体而言：
+你可以使用应用清单的成员 [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/display) 来控制 PWA 的*显示模式*，即 PWA 启动时的外观。具体而言：
 
 - `"standalone"` 表示 PWA 应该看起来和感觉上像特定于平台的应用程序，没有浏览器的用户界面元素。
 - `"browser"` 表示 PWA 应该作为一个新的浏览器标签页或窗口打开，就像普通网站一样。
 
-如果浏览器不支持给定的显示模式，`display` 将会根据预定义的顺序回退到支持的显示模式。[`display_override`](/zh-CN/docs/Web/Manifest/display_override) 允许你重新定义回退顺序。
+如果浏览器不支持给定的显示模式，`display` 将会根据预定义的顺序回退到支持的显示模式。[`display_override`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) 允许你重新定义回退顺序。

@@ -3,8 +3,6 @@ title: 全称セレクター
 slug: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef}}
-
 CSS の**全称セレクター** (universal selector) (`*`) は、すべての種類の要素に一致します。
 
 ```css
@@ -92,4 +90,4 @@ example|* {
 ## 関連情報
 
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [CSS の学習: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+- [CSS の学習: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

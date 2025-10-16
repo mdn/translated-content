@@ -18,23 +18,23 @@ l10n:
 - `customError` {{ReadOnlyInline}}
   - : 論理値で、その要素のカスタム検証メッセージが {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} メソッドによって空でない文字列に設定されているかどうかを示します。
 - {{domxref("ValidityState.patternMismatch", "patternMismatch")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` は値が [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) の指定と一致しないことを示し、 `false` は一致することを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
+  - : 論理値で、 `true` は値が [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) の指定と一致しないことを示し、 `false` は一致することを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
 - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` は値が [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定された最大値を超えていることを示し、 `false` はその最大値以下である場合を示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
+  - : 論理値で、 `true` は値が [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性で指定された最大値を超えていることを示し、 `false` はその最大値以下である場合を示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` は値が [`min`](/ja/docs/Web/HTML/Element/input#min) 属性で指定された最小値未満であることを示し、 `false` はその最小値以上であることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
+  - : 論理値で、 `true` は値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) 属性で指定された最小値未満であることを示し、 `false` はその最小値以上であることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.stepMismatch", "stepMismatch")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` は値が [`step`](/ja/docs/Web/HTML/Element/input#step) 属性で決められた規則に合わないこと (つまり、step の値で割り切れないこと) を示し、 `false` は刻みの規則に合っていることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
+  - : 論理値で、 `true` は値が [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性で決められた規則に合わないこと (つまり、step の値で割り切れないこと) を示し、 `false` は刻みの規則に合っていることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.tooLong", "tooLong")}} {{ReadOnlyInline}}
   - : 論理値で、 `true` は値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトの `maxlength` で指定された長さを超えていることを示し、 `false` は長さがその最長値以下であることを示します。 _注: Gecko ではこのプロパティが `true` になることはありません。要素の値の長さが `maxlength` を超えないようになっているからです。_ `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.tooShort", "tooShort")}} {{ReadOnlyInline}}
   - : 論理値で、 `true` は値が {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトの `minlength` で指定された長さに満たないことを示し、 `false` は長さがその最短値以上であることを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} および {{cssxref(":out-of-range")}} の各擬似クラスに一致します。
 - {{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` は値が ([`type`](/ja/docs/Web/HTML/Element/input#type) が `email` または `url` の場合に) 要求された構文に合っていないことを示し、`false` は構文が正しいことを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
+  - : 論理値で、 `true` は値が ([`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `email` または `url` の場合に) 要求された構文に合っていないことを示し、`false` は構文が正しいことを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
 - `valid` {{ReadOnlyInline}}
   - : 論理値で、 `true` はその要素がすべての制約検証に適合し、合格したとみられることを示し、 `false` はいずれかの制約に適合しなかったことを示します。 `true` の場合、 CSS の {{cssxref(":valid")}} 擬似クラスに一致します。それ以外の場合は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
 - {{domxref("ValidityState.valueMissing", "valueMissing")}} {{ReadOnlyInline}}
-  - : 論理値で、 `true` はその要素に [`required`](/ja/docs/Web/HTML/Element/input#required) 属性があるものの、値がないことを示し、 `false` はそうではないことを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
+  - : 論理値で、 `true` はその要素に [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性があるものの、値がないことを示し、 `false` はそうではないことを示します。 `true` の場合、その要素は CSS の {{cssxref(":invalid")}} 擬似クラスに一致します。
 
 ## 仕様書
 
@@ -46,5 +46,5 @@ l10n:
 
 ## 関連情報
 
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
-- [チュートリアル: フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
+- [チュートリアル: フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)

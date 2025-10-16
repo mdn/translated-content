@@ -77,7 +77,7 @@ Promise가 왜 좋은지 이해하기 위해 구식 callbacks을 살펴보고 �
 2. 그다음 피자를 주문합니다. 식당이 바빠서 피자가 나오는 데 오래 걸릴 수 있고, 마침 재료가 다 떨어졌으면 피자를 만들 수 없다고 할 것 입니다.
 3. 마지막으로 피자를 받아서 먹습니다. 그런데! 만약 지갑을 놓고 와서 돈을 내지 못한다면 피자를 먹지 못할 수 있습니다.
 
-구식 [callbacks](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
+구식 [callbacks](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
 
 ```js
 chooseToppings(function (toppings) {
@@ -123,9 +123,15 @@ chooseToppings()
 
 ```js
 chooseToppings()
-  .then((toppings) => placeOrder(toppings))
-  .then((order) => collectOrder(order))
-  .then((pizza) => eatPizza(pizza))
+  .then((toppings) => {
+    return placeOrder(toppings);
+  })
+  .then((order) => {
+    return collectOrder(order);
+  })
+  .then((pizza) => {
+    return eatPizza(pizza);
+  })
   .catch(failureCallback);
 ```
 
@@ -165,10 +171,10 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
 모던 웹 API는 잠재적으로 긴 작업을 수행하는 함수에 Promise를 사용하므로 Promise가 무엇인지 이해하는것은 매우 중요합니다. 현대적인 웹 기술을 사용하려면 Promise를 사용해야합니다. 챕터의 후반부에서 직접 Promise를 만들어보겠지만, 지금은 일단 웹 API에서 접할 수 있는 몇 가지 예제를 살펴보겠습니다.
 
-첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
+첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
 
 > [!NOTE]
-> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
+> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
 
 1. 먼저 [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 와 fetch할 이미지인 [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) 을 다운받습니다.
 2. HTML {{htmlelement("body")}} 하단에 {{htmlelement("script")}} 엘리먼트를 삽입합니다.
@@ -199,7 +205,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
    }
    ```
 
-   이제 추가 설명은 충븐하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
+   이제 추가 설명은 충분하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
 
    ```js
    let promise2 = promise.then((response) => response.blob());
@@ -224,7 +230,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
    여기서 우리는 두 번째 Promise가 fulfills일 때 반횐된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
 
-If you save the HTML file you've just created and load it in your browser, you'll see that the image is displayed in the page as expected. Good work!
+방금 만든 HTML 파일을 저장하고 브라우저에서 불러오면, 이미지가 예상대로 페이지에 표시되는 것을 볼 수 있습니다. 잘 하셨습니다!
 
 > [!NOTE]
 > You will probably notice that these examples are somewhat contrived. You could just do away with the whole `fetch()` and `blob()` chain, and just create an `<img>` element and set its `src` attribute value to the URL of the image file, `coffee.jpg`. We did, however, pick this example because it demonstrates promises in a nice simple fashion, rather than for its real-world appropriateness.
@@ -270,7 +276,8 @@ fetch("coffee.jpg")
 
 fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 executor 함수가 가진 파라미터로 전달 된다는 것을 꼭 기억하세요.
 
-> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
+> [!NOTE]
+> `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
 
 ## Promise terminology recap
 
@@ -278,7 +285,6 @@ fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 e
 
 1. Promise가 생성되면 그 상태는 성공도 실패도 아닌 **pending**상태라고 부릅니다..
 2. Promise결과가 반환되면 결과에 상관 없이 **resolved**상태라고 부릅니다..
-
    1. 성공적으로 처리된 Promise는 **fulfilled**상태이다. 이 상태가 되면 Promise 체인의 다음 `.then()` 블럭에서 사용할 수 있는 값을 반환합니다.. 그리고 `.then()` 블럭 내부의 executor 함수에 Promise에서 반환된 값이 파라미터로 전달됩니다..
    2. 실패한 Promise는 **rejected**상태이다. 이때 어떤 이유(**reason)** 때문에 Promise가 rejected 됐는지를 나타내는 에러 메시지를 포함한 결과가 반환됩니다. Promise 체이닝의 제일 마지막 `.catch()` 에서 상세한 에러 메시지를 확인할 수 있습니다.
 
@@ -337,11 +343,9 @@ Promise.all([a, b, c]).then(values => {
    ```
 
    살짝 복잡해 보이므로 하나하나 살펴봅시다. :
-
    1. 먼저 fetchAndDecode() 함수를 정의했고 함수의 매개변수로 컨텐츠의 URL과 가져오는 리소스의 타입을 지정합니다.
    2. 함수 내부에 첫 번째 예에서 본 것과 유사한 구조를 가진 코드가 있습니다. — `fetch()` 함수를 호출하여 전달받은 URL에서 리소스를 받아오도록 했습니다. 그리고 다음 Promise를 연쇄적으로 호출하여 디코딩된 (혹은 "읽은") Response Body를 반환하게 합니다. 이전 예에선 Blob만을 가져오기 때문에 `blob()` 메서드만 썼습니다.
    3. 여기에선 이전과 다른 두 가지가 있습니다. :
-
       - 먼저 두 번째 Promise에서는 불러올 리소스의 `type` 이 무엇인지에 따라 반환받는 데이터가 다릅니다. executor 함수 내부에, 간단한 `if ... else if` 구문을 사용하여 어떤 종류의 파일을 디코딩해야 하는지에 따라 다른 Promise를 반환하게 했습니다. (이 경우 `blob` 이나 `text`밖에 없지만, 이것을 잘 활용하여 다른 코드에 확장하여 적용할 수 있습니다.).
       - 두 번째로, `fetch()` 호출 앞에 `return` 키워드를 추가했습니다. 이렇게 하면 Promise 체이닝의 마지막 결과값을 함수의 결과로 반환해 줄 수 있습니다. (이 경우 `blob()` 혹은 `text()`메서드에 의해 반환된 Promise 입니다.) 사실상 `fetch()` 앞의 `return` 구문은 체이닝 결과를 다시 상단으로 전달하는 행위 입니다.
 
@@ -457,7 +461,8 @@ function fetchAndDecode(url, type) {
 
 이 로그는 각 fetch시도가 완료되면 콘솔에 메시지를 출력하여 사용자에게 알려줍니다.
 
-> **참고:** `then()`/`catch()`/`finally()` is the async equivalent to `try`/`catch`/`finally` in sync code.
+> [!NOTE]
+> `then()`/`catch()`/`finally()` is the async equivalent to `try`/`catch`/`finally` in sync code.
 
 ## Building your own custom promises
 
@@ -578,13 +583,13 @@ function promisifyRequest(request) {
 
 ## Conclusion
 
-Promises are a good way to build asynchronous applications when we don't know the return value of a function or how long it will take to return. They make it easier to express and reason about sequences of asynchronous operations without deeply nested callbacks, and they support a style of error handling that is similar to the synchronous `try...catch` statement.
+Promise는 함수의 반환 값을 예측할 수 없거나 완료되기까지 시간이 걸리는 비동기 애플리케이션을 구축할 때 유용한 방법입니다. Promise를 사용하면 깊게 중첩된 콜백(callback) 없이도 연속적인 비동기 작업을 더 쉽게 표현하고 이해할 수 있으며, 동기 코드의 `try...catch` 문과 유사한 방식의 오류 처리를 지원합니다.
 
-Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
+Promise는 모든 최신 브라우저의 최신 버전에서 작동합니다. Promise 지원에 문제가 되는 곳은 Opera Mini와 IE11 및 그 이전 버전뿐입니다.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across further features and techniques.
+이 글에서는 Promise의 모든 기능을 다루지는 않았고, 가장 흥미롭고 유용한 것들만 살펴보았습니다. Promise에 대해 더 깊이 배우다 보면, 더 많은 기능과 기법들을 접하게 될 것입니다.
 
-Most modern Web APIs are promise-based, so you'll need to understand promises to get the most out of them. Among those APIs are [WebRTC](/ko/docs/Web/API/WebRTC_API), [Web Audio API](/ko/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/ko/docs/Web/API/Media_Capture_and_Streams_API), and many more. Promises will be more and more important as time goes on, so learning to use and understand them is an important step in learning modern JavaScript.
+대부분의 최신 웹 API는 Promise 기반이므로, 이를 최대한 활용하려면 Promise를 이해해야 합니다. 이러한 API에는 [WebRTC](/ko/docs/Web/API/WebRTC_API), [Web Audio API](/ko/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/ko/docs/Web/API/Media_Capture_and_Streams_API), 등이 있으며, 이 밖에도 많이 있습니다. Promise는 앞으로 점점 더 중요해질 것이므로, Promise의 사용법과 동작 원리를 배우는 것은 최신 JavaScript 학습의 중요한 과정입니다.
 
 ## See also
 

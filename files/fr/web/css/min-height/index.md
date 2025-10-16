@@ -3,11 +3,45 @@ title: min-height
 slug: Web/CSS/min-height
 ---
 
-{{CSSRef}}
+La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`height`](/fr/docs/Web/CSS/height) devienne inférieure à `min-height`.
 
-La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`height`](/fr/docs/Web/CSS/height) devienne inférieure à `min-height`.
+{{InteractiveExample("CSS Demo: min-height")}}
 
-{{EmbedInteractiveExample("pages/css/min-height.html")}}
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 La valeur de la propriété `min-height` surcharge celles de [`max-height`](/fr/docs/Web/CSS/max-height) et [`height`](/fr/docs/Web/CSS/height) lorsque `min-height` est supérieure.
 
@@ -81,5 +115,5 @@ form {
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
 - [`height`](/fr/docs/Web/CSS/height), [`max-height`](/fr/docs/Web/CSS/max-height)

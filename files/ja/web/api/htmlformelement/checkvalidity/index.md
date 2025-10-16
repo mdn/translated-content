@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`checkValidity()`** は {{domxref("HTMLFormElement")}} インターフェイスのメソッドで、関連付けられたコントロールすべてが適用された[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかを示す論理値を返します。 このメソッドは、値が不正な要素にそれぞれ対して {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発行しますが、このフォーム要素自体には発行しません。 `checkValidity()` には既定でブラウザーの動作が設定されていないため、この `invalid` イベントをキャンセルしても効果はありません。
+**`checkValidity()`** は {{domxref("HTMLFormElement")}} インターフェイスのメソッドで、関連付けられたコントロールすべてが適用された[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールを満たしているかどうかを示す論理値を返します。 このメソッドは、値が不正な要素にそれぞれ対して {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発行しますが、このフォーム要素自体には発行しません。 `checkValidity()` には既定でブラウザーの動作が設定されていないため、この `invalid` イベントをキャンセルしても効果はありません。
 
 > [!NOTE]
 > CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスは、`<form>` 要素自体の妥当性ではなく、 `<form>` 要素に所属するフォームコントロールの妥当性に基づいて適用されます。
@@ -48,5 +48,5 @@ console.log(element.checkValidity());
 
 - {{domxref("HTMLFormElement.reportValidity()")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

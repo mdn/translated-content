@@ -10,7 +10,7 @@ l10n:
 
 **`popoverTargetElement`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{htmlelement("input")}} 要素の `type="button"` 型で制御されるポップオーバー要素を取得および設定します。
 
-これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性に相当するものです。
+これは JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
 
 ## 値
 
@@ -43,7 +43,7 @@ if (popoverSupported) {
 `popover` 属性は [`"auto"`](/ja/docs/Web/API/Popover_API/Using#自動状態と「簡単な解除」) に設定されているので、ポップオーバーはポップオーバー領域の外側をクリックすることで閉じられた状態 ("light-dismissed") にすることができます。
 
 まず、ポップオーバーの表示と非表示に使用する `<input>` と、ポップオーバーとなる `<div>` を定義します。
-この場合、プログラムで行うのと同様に、ボタンには HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を設定しませんし、 [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を `<div>` に設定することもなく、
+この場合、プログラムで行うのと同様に、ボタンには HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を設定しませんし、 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を `<div>` に設定することもなく、
 
 ```html
 <input id="toggleBtn" type="button" value="ポップオーバーの表示切り替え" />
@@ -102,5 +102,5 @@ if (supportsPopover()) {
 
 ## 関連情報
 
-- [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
+- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

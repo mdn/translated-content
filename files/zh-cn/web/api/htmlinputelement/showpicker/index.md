@@ -9,7 +9,7 @@ slug: Web/API/HTMLInputElement/showPicker
 
 这与选择元素时通常展示的选择器相同，但是它可以由按钮或者用户交互触发。
 
-通常地，浏览器为这些类型的 input 实现此方法：`"date"`、`"month"`、`"week"`、`"time"`、`"datetime-local"`、`"color"` 或 `"file"`。它也可以预填充来自 {{htmlelement("datalist")}} 元素或者 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性的项目。
+通常地，浏览器为这些类型的 input 实现此方法：`"date"`、`"month"`、`"week"`、`"time"`、`"datetime-local"`、`"color"` 或 `"file"`。它也可以预填充来自 {{htmlelement("datalist")}} 元素或者 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性的项目。
 
 更一般地说，这种方法完美地展示了平台上任何具有选择器的 input 元素的选择器。
 
@@ -56,7 +56,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 这个示例展示了如何将这个功能用于 `color` 和 `file` 的 input 选择器。
 
-> **备注：** `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
+> [!NOTE]
+> `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
 
 #### HTML
 
@@ -97,7 +98,7 @@ document.querySelectorAll("button").forEach((button) => {
 
 ### showPicker() 用于 datalist input
 
-`showPicker()` 可以启动定义在 [`<datalist>`](/zh-CN/docs/Web/HTML/Element/datalist) 列表中选项的选择器。
+`showPicker()` 可以启动定义在 [`<datalist>`](/zh-CN/docs/Web/HTML/Reference/Elements/datalist) 列表中选项的选择器。
 
 首先，我们在 HTML 中定一个了 `<datalist>`，它由许多互联网浏览器、使用类型为 `text` 的 input 和 一个按钮组成。
 
@@ -132,7 +133,7 @@ button.addEventListener("click", () => {
 
 ### showPicker() 用于 autocomplete
 
-`showPicker()` 可以为一个 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) input 开启选择器。
+`showPicker()` 可以为一个 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) input 开启选择器。
 
 这里，我们定义了一个 input，其采用了 autocomplete 为“name”的选项。
 
@@ -168,4 +169,4 @@ button.addEventListener("click", () => {
 - {{ HTMLElement("input") }}
 - {{ domxref("HTMLInputElement") }}
 - {{htmlelement("datalist")}}
-- [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)

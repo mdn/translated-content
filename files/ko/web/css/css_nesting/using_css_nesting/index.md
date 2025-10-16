@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c8f8d139207c796a49390614fbe4e65a8ab9bfac
 ---
 
-{{CSSRef}}
-
 [CSS 중첩](/ko/docs/Web/CSS/CSS_nesting) 모듈은 스타일시트의 가독성을 높이고 모듈화하며 그리고 유지 보수하기 용이하게 만듭니다. 선택자를 반복하여 작성하지 않아도 되고, 이로 인해 파일 크기도 줄어들 수 있습니다.
 
 CSS 중첩은 [Sass](https://sass-lang.com/) 와 같은 CSS 전처리기와는 다릅니다. CSS 전처리기는 사전에 컴파일되지만, CSS 중첩은 브라우저에 의해 파싱됩니다. 또한 CSS 중첩에서는, [`&` 중첩 선택자의 명시도](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)는 {{cssxref(':is',':is()')}} 함수와 유사하며, 관련 선택자 목록과 연관에서 가장 높은 명시도를 이용하여 계산합니다.
@@ -148,7 +146,7 @@ label {
 
 ## 결합자
 
-[CSS 결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators) 역시 `&` 중첩 선택자가 사용되거나 사용되지 않을 수 있습니다.
+[CSS 결합자](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators) 역시 `&` 중첩 선택자가 사용되거나 사용되지 않을 수 있습니다.
 
 ### 예제
 
@@ -401,7 +399,7 @@ h2 {
 }
 ```
 
-> **경고** 이것은 CSS 중첩에서는 불가능한 일입니다. [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)가 사용되지 않는다면 중첩 선택자는 [타입 선택자](/ko/docs/Web/CSS/Type_selectors) 처럼 취급됩니다. 문자열 연쇄를 허용하면 이는 끊기게 됩니다.
+> **경고** 이것은 CSS 중첩에서는 불가능한 일입니다. [결합자](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators)가 사용되지 않는다면 중첩 선택자는 [타입 선택자](/ko/docs/Web/CSS/Type_selectors) 처럼 취급됩니다. 문자열 연쇄를 허용하면 이는 끊기게 됩니다.
 
 [걸합 선택자](/ko/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) 에서는, 타입 선택자가 가장 처음으로 위치해야 합니다. ([타입 선택자](/ko/docs/Web/CSS/Type_selectors)인) `&Element` 를 사용하는 것은 CSS 선택자 뿐만 아니라, 전체 선택자 블록을 무효로 만듭니다. 타입 선택자가 가장 먼저 위치함에 따라 결합 선택자는 `Element&` 로 작성되어야만 합니다.
 

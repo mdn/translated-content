@@ -33,11 +33,11 @@ var w4 = window.self;
 // w1, w2, w3, w4 は厳密に等価、しかし w2 だけは worker で動作します。
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

@@ -10,7 +10,8 @@ l10n:
 
 **`referrer`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントによってリクエストのリファラーが設定されます（`client` や `no-referrer`、URL、など）。
 
-> **メモ:** `referrer` の値が `no-referrer` だった場合、空文字が返されます。
+> [!NOTE]
+> `referrer` の値が `no-referrer` だった場合、空文字が返されます。
 
 ## 値
 
@@ -36,5 +37,5 @@ const myReferrer = myRequest.referrer; // 既定では "about:client" を返す
 ## 関連項目
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

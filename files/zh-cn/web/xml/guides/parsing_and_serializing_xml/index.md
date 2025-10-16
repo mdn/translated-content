@@ -1,10 +1,7 @@
 ---
 title: 解析或序列化 XML
 slug: Web/XML/Guides/Parsing_and_serializing_XML
-original_slug: Web/XML/Parsing_and_serializing_XML
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/XML")}}
 
 有时，你可能需要解析 {{Glossary("XML")}} 内容，并把它转换为 {{Glossary("DOM")}} 树，或者，反过来将现有的 DOM 树序列化成 XML。在本文中，我们将了解 web 平台提供的对象，以便轻松地完成序列化和解析 XML 的常见任务。
 
@@ -69,7 +66,7 @@ fetch("example.xml")
 
 ### 把 DOM 树序列化成字符串
 
-首先，使用[使用文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)中的方法构建一个 DOM 树。也可以使用从 {{domxref("fetch()")}} 中获得的 DOM 树。
+首先，使用[使用文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)中的方法构建一个 DOM 树。也可以使用从 {{domxref("fetch()")}} 中获得的 DOM 树。
 
 为了将 DOM 树 `doc` 序列化为 XML 文本，调用 {{domxref("XMLSerializer.serializeToString()")}}：
 

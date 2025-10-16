@@ -73,7 +73,7 @@ The following dictionaries are defined by the Screen Capture API.
 
 ## Feature Policy validation
 
-{{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow)) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
+{{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allow)) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html"></iframe>

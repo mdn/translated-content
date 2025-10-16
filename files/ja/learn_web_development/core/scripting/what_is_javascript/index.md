@@ -83,7 +83,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 テキストラベルの最新バージョンをクリックしてみて、何が起きるのか見てみましょう。（このデモは GitHub でも見られます。[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)または[ライブ実行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)を参照してください。）
 
@@ -114,7 +114,7 @@ API は大まかに 2 種類に分けられます。
 - [位置情報 API](/ja/docs/Web/API/Geolocation_API) は地理的な情報を取得します。これは [Google マップ](https://www.google.com/maps)が現在の所在地を見つけて地図上にプロットする場合に使用されています。
 - [キャンバス](/ja/docs/Web/API/Canvas_API)と [WebGL](/ja/docs/Web/API/WebGL_API) の API は 2D や 3D グラフィックでのアニメーションを可能とします。
   このウェブ技術を使用してすごいことをやってのける人たちがいます。 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) や [webglsamples](https://webglsamples.org/) などのページを見てください。
-- [音声と動画の API](/ja/docs/Web/Media/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や [WebRTC](/ja/docs/Web/API/WebRTC_API) などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
+- [音声と動画の API](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や [WebRTC](/ja/docs/Web/API/WebRTC_API) などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
 
 **サードパーティ API** はブラウザーには組み込まれておらず、さらに普通はウェブ上のどこかからそのコードと情報を探さなければなりません。例えば、
 
@@ -346,7 +346,6 @@ HTML が解釈できるようになった後にのみ JavaScript を実行する
 - 前述の内蔵 JavaScript の例では、スクリプト要素は文書本体の一番下に配置されているため、 HTML 本体の残りの部分が構文解析された後にのみ実行されます。
 - 上記のような外部 JavaScript の例では、スクリプト要素は HTML 本体の構文解析が行われる前に文書のヘッド部に配置されます。しかし、 `<script type="module">` を使用しているため、コードは[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)として扱われ、ブラウザーは HTML がすべて処理されるまで JavaScript モジュールの実行を待ちます。（外部スクリプトを本体の最後に配置することもできます。しかし、 HTML の量が多くネットワークが遅い場合、ブラウザーがスクリプトを取得し読み込むことを開始するまでに多くの時間がかかる可能性があるため、外部スクリプトをヘッド部に配置する方が通常は望ましいです。）
 - それでも文書のヘッド部でモジュール以外のスクリプトを使用したい場合は、ページ全体が表示されないようにブロックされたり、 HTML が解釈される前に実行されてエラーが発生したりする可能性があります。
-
   - 外部スクリプトにおいては、 `defer` （または HTML が利用できるようになるまで待つ必要がないのであれば `async`）属性を {{htmlelement("script")}} 要素に設定してください。
   - 内蔵スクリプトにおいては、コードを [`DOMContentLoaded` イベントリスナー](/ja/docs/Web/API/Document/DOMContentLoaded_event)で囲んでください。
 

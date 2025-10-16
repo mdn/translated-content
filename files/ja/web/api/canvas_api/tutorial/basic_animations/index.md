@@ -32,11 +32,11 @@ l10n:
 
 ### スケジュールの更新
 
-まず、{{domxref("setInterval()")}}、{{domxref("setTimeout()")}} があります。それから、{{domxref("window.requestAnimationFrame()")}} 関数があります。これらは、特定の関数を一定時間で呼び出すために使用できます。
+まず、{{domxref("Window.setInterval", "setInterval()")}}、{{domxref("Window.setTimeout", "setTimeout()")}} があります。それから、{{domxref("window.requestAnimationFrame()")}} 関数があります。これらは、特定の関数を一定時間で呼び出すために使用できます。
 
-- {{domxref("setInterval()")}}
+- {{domxref("Window.setInterval", "setInterval()")}}
   - : `function` で指定した関数を `delay` ミリ秒ごとに繰り返し実行します。
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
   - : `function` で指定した関数を `delay` ミリ秒後に実行します。
 - {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
   - : アニメーションを実行することをブラウザーに通知し、次の再描画の前にアニメーションを更新するため、ブラウザーが指定の関数を呼び出すように要求します。

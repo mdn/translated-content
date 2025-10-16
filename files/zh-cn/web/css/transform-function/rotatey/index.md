@@ -3,15 +3,40 @@ title: rotateY()
 slug: Web/CSS/transform-function/rotateY
 ---
 
-{{CSSRef}}
-
 **`rotateY()`** 函数定义了一个转换，它可以让一个元素围绕纵坐标 (垂直轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}
+{{InteractiveExample("CSS Demo: rotateY()")}}
+
+```css interactive-example-choice
+transform: rotateY(0);
+```
+
+```css interactive-example-choice
+transform: rotateY(45deg);
+```
+
+```css interactive-example-choice
+transform: rotateY(-0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotateY(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 旋转轴围绕原点旋转，而这个原点通过{{cssxref("transform-origin")}} 属性来定义。
 
-> **备注：** `rotateY(a)` 相当于 `rotate3d(0, 1, 0, a)`.
+> [!NOTE]
+> `rotateY(a)` 相当于 `rotate3d(0, 1, 0, a)`.
 
 > [!NOTE]
 > 与二维平面上的旋转不同，三维旋转的组合顺序通常是不可交换的。换句话说，三维旋转的应用顺序，将会影响最终结果。

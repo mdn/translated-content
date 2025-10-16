@@ -15,9 +15,9 @@ Nosso [Caminho de aprendizagem para desenvolvedores da web de front-end](/pt-BR/
 
 ## Maio 2020
 
-Nosso módulo [Entendendo as estruturas do Client-side JavaScript](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) já está disponível. Aprenda por que existem frameworks, quando você deve usar um (e quando não deveria), que tipos de recursos são comuns a todos os frameworks e como eles se relacionam com o JavaScript básico que você conhece. Depois de ter uma compreensão geral das estruturas, vá para a série de tutoriais que abrangem estruturas populares como React, Ember e Vue.
+Nosso módulo [Entendendo as estruturas do Client-side JavaScript](/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries) já está disponível. Aprenda por que existem frameworks, quando você deve usar um (e quando não deveria), que tipos de recursos são comuns a todos os frameworks e como eles se relacionam com o JavaScript básico que você conhece. Depois de ter uma compreensão geral das estruturas, vá para a série de tutoriais que abrangem estruturas populares como React, Ember e Vue.
 
-Nosso aprendizado de [Web Forms](/pt-BR/docs/Learn/Forms) agora tem avaliações "Teste suas habilidades" que acompanham os artigos.
+Nosso aprendizado de [Web Forms](/pt-BR/docs/Learn_web_development/Extensions/Forms) agora tem avaliações "Teste suas habilidades" que acompanham os artigos.
 
 ## Abril 2020
 
@@ -27,22 +27,22 @@ Nosso novo módulo [Entendendo as ferramentas de desenvolvimento client-side web
 
 Agora você encontrará avaliações "Teste suas habilidades" que acompanham os artigos nos seguintes módulos:
 
-- [CSS building blocks](/pt-BR/docs/Learn/CSS/Building_blocks)
-- [JavaScript primeiros passos](/pt-BR/docs/Learn/JavaScript/First_steps)
-- [JavaScript building blocks](/pt-BR/docs/Learn/JavaScript/Building_blocks)
-- [Introducing JavaScript objects](/pt-BR/docs/Learn/JavaScript/Objects)
+- [CSS building blocks](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333)
+- [JavaScript primeiros passos](/pt-BR/docs/Learn_web_development/Core/Scripting)
+- [JavaScript building blocks](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting)
+- [Introducing JavaScript objects](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 
 ## Janeiro 2020
 
 O módulo de formulários HTML foi significativamente atualizado:
 
-- Ele foi renomeado para [Web forms](/pt-BR/docs/Learn/Forms), e foi retirado da área de tópico HTML para reconhecer que ele é mais abrangente do que apenas elementos de formulários HTML — também abrange estilo, validação, os princípios básicos de como enviar dados e processá-los no servidor e muito mais.
+- Ele foi renomeado para [Web forms](/pt-BR/docs/Learn_web_development/Extensions/Forms), e foi retirado da área de tópico HTML para reconhecer que ele é mais abrangente do que apenas elementos de formulários HTML — também abrange estilo, validação, os princípios básicos de como enviar dados e processá-los no servidor e muito mais.
 - Ele tem novos exemplos desponíveis e técnicas cobertas.
 - Tem uma nova estrutura para tornar a experiência de aprendizagem mais eficaz.
 
 Mais seções "Teste suas habilidades" foram adicionadas. Você pode ver isso em:
 
-- [CSS layout: Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#test_your_skills!)
+- [CSS layout: Flexbox](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Flexbox#test_your_skills!)
 - [CSS layout: Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids#Test_your_skills!)
 - [CSS layout: Floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats#Test_your_skills!)
 
@@ -50,9 +50,9 @@ Mais seções "Teste suas habilidades" foram adicionadas. Você pode ver isso em
 
 estamos adicionando um novo tipo de artigo de avaliação à área de aprendizado — "Teste suas habilidades" — que oferecerá várias perguntas curtas destinadas a testar rapidadmente se você entendeu o que está acontecendo. Isso é uma adição aos artigos de avaliação mais longos que você já encontrará em alguns módulos de aprendizagem. Você encontrará esses novos artigos com links nas seções "Teste suas habilidades" na parte inferior dos artigos relevantes. Você pode ver isso em:
 
-- [HTML text fundamentals](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#test_your_skills!)
-- [Creating hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#test_your_skills!)
-- [Advanced text formatting](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#test_your_skills!)
-- [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#test_your_skills!)
-- [Video and audio content](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#test_your_skills!)
-- [From object to iframe — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#test_your_skills!)
+- [HTML text fundamentals](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#test_your_skills!)
+- [Creating hyperlinks](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links#test_your_skills!)
+- [Advanced text formatting](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#test_your_skills!)
+- [Images in HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images#test_your_skills!)
+- [Video and audio content](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#test_your_skills!)
+- [From object to iframe — other embedding technologies](/pt-BR/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies#test_your_skills!)

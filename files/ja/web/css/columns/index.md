@@ -2,14 +2,43 @@
 title: columns
 slug: Web/CSS/columns
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/columns.html")}}
+{{InteractiveExample("CSS デモ: columns")}}
+
+```css interactive-example-choice
+columns: 2;
+```
+
+```css interactive-example-choice
+columns: 6rem auto;
+```
+
+```css interactive-example-choice
+columns: 12em;
+```
+
+```css interactive-example-choice
+columns: 3;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 21rem;
+  text-align: left;
+}
+```
 
 ## 構成要素のプロパティ
 

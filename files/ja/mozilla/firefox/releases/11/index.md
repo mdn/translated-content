@@ -3,8 +3,6 @@ title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました。この記事はウェブ開発者とアドオン開発者向けに、今回のリリースにおける新機能と修正された重要なバグについての情報とより詳細なドキュメントへのリンクをまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -27,15 +25,15 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 - [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) で、[`defaultMuted`](/ja/docs/Web/API/HTMLMediaElement)、[`loop`](/ja/docs/Web/API/HTMLMediaElement)、[`muted`](/ja/docs/Web/API/HTMLMediaElement) の各プロパティがサポートされました。
 - ある要素で {{ domxref("element.mozRequestFullScreen()") }} メソッドを呼び出したときに別の要素がすでにフルスクリーンモードであった場合は、{{ domxref("document.mozCancelFullScreen()") }} を呼び出すときに、前にフルスクリーンモードであった要素を復元するようになりました。
 - {{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} メソッドは引数がない形式をサポートしなくなりました。このような形式はあまり使用されておらず、また標準化される見込みもありません。
-- 画像としての SVG が、[canvas を汚染せずに](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) canvas 内へ描画できるようになりました。
+- 画像としての SVG が、[canvas を汚染せずに](/ja/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) canvas 内へ描画できるようになりました。
 - `GeoPositionAddress`インターフェイスの非標準プロパティである `countryCode` を削除しました。`nsIDOMGeoPositionAddress` をご覧ください。
-- [Server-sent events](/ja/docs/Web/API/Server-sent_events) が [CORS](/ja/docs/Web/HTTP/CORS) をサポートしました。
+- [Server-sent events](/ja/docs/Web/API/Server-sent_events) が [CORS](/ja/docs/Web/HTTP/Guides/CORS) をサポートしました。
 - 従来、ユーザーがリンクをたどると {{ domxref("window.navigator") }} オブジェクトでセットしている値は新しいページが保持していました。これが、新しいページ用に新たな `navigator` オブジェクトを作成するようになりました。これにより、Firefox は他のブラウザーと同様に動作します。
 
 ### CSS
 
 - [`text-size-adjust`](/ja/docs/Web/CSS/text-size-adjust) プロパティがサポートされました。
-- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/Web/CSS/@media)、[@-moz-document](/ja/docs/Web/CSS/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/Web/CSS/Syntax) および [CSS at-rules](/ja/docs/Web/CSS/At-rule) をご覧ください)。
+- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/Web/CSS/@media)、[@-moz-document](/ja/docs/Web/CSS/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/Web/CSS/CSS_syntax/Syntax) および [CSS at-rules](/ja/docs/Web/CSS/CSS_syntax/At-rule) をご覧ください)。
 
 ### SVG
 

@@ -5,11 +5,35 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
 
-{{EmbedInteractiveExample("pages/css/font-kerning.html")}}
+{{InteractiveExample("CSS デモ: font-kerning")}}
+
+```css interactive-example-choice
+font-kerning: auto;
+```
+
+```css interactive-example-choice
+font-kerning: normal;
+```
+
+```css interactive-example-choice
+font-kerning: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    “We took Tracy to see ‘THE WATERFALL’ in W. Virginia.”
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-family: serif;
+}
+```
 
 *カーニング*は、文字の間隔をどれだけ取るかを定義します。_well-kerned_ フォントでは、この機能は文字間を他と比較してより整った読みやすい間隔にします。
 

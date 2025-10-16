@@ -7,7 +7,8 @@ l10n:
 
 {{jsSidebar("Statements")}}{{Deprecated_Header}}
 
-> **참고:** `with`문의 사용은 권장되지 않습니다. 혼란스러운 버그와 호환성 문제의 원인이 될 수 있고 최적화를 불가능하게 만들며 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 금지되어 있기 때문입니다. 속성에 접근하고자 하는 객체를 임시 변수에 할당하는 것이 대안으로 권장됩니다.
+> [!NOTE]
+> `with`문의 사용은 권장되지 않습니다. 혼란스러운 버그와 호환성 문제의 원인이 될 수 있고 최적화를 불가능하게 만들며 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 금지되어 있기 때문입니다. 속성에 접근하고자 하는 객체를 임시 변수에 할당하는 것이 대안으로 권장됩니다.
 
 `with`문은 문의 스코프 체인을 확장합니다.
 
@@ -86,7 +87,7 @@ with ([1, 2, 3]) {
 
   ECMAScript 5 환경에서 `f([1, 2, 3], obj)`를 호출하면, `with` 문 내의 `values` 참조는 `obj`로 이행됩니다. 그러나 ECMAScript 2015는 `Array.prototype`에 [`values`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 속성을 도입합니다(따라서 모든 배열에서 `values` 속성을 사용할 수 있게 됩니다). 따라서 환경을 업그레이드하면 `with` 문 내의 `values` 참조는 `[1, 2, 3].values`로 이행되며, 이는 버그를 일으킬 가능성이 큽니다.
 
-  이 특정 예제에서는 `values`가 [`Array.prototype[@@unscopables]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables)에 의해 스코프 지정 불가능하게 정의되어 있어 해당 코드의 `values`는 여전히 `values` 매개변수로 올바르게 이행됩니다. 만약 `values`가 스코프 지정 불가능으로 정의되지 않았다면, 이는 디버깅하기 어려운 문제가 될 수 있습니다.
+  이 특정 예제에서는 `values`가 [`Array.prototype[@@unscopables]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)에 의해 스코프 지정 불가능하게 정의되어 있어 해당 코드의 `values`는 여전히 `values` 매개변수로 올바르게 이행됩니다. 만약 `values`가 스코프 지정 불가능으로 정의되지 않았다면, 이는 디버깅하기 어려운 문제가 될 수 있습니다.
 
 ## 예제
 
@@ -107,7 +108,7 @@ with (Math) {
 
 ### 현재 스코프에서 속성 구조 분해 할당을 사용하여 with문 피하기
 
-대부분의 경우 [속성 구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 통해서 `with` 사용을 피할 수 있습니다. 여기서는 `with`가 추가 스코프를 생성하는 동작을 모방하기 위해 추가 블록을 만들었지만 실제 사용에서는 이 블록을 보통 생략할 수 있습니다.
+대부분의 경우 [속성 구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 통해서 `with` 사용을 피할 수 있습니다. 여기서는 `with`가 추가 스코프를 생성하는 동작을 모방하기 위해 추가 블록을 만들었지만 실제 사용에서는 이 블록을 보통 생략할 수 있습니다.
 
 ```js
 let a, x, y;

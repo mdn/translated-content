@@ -1,38 +1,11 @@
 ---
-title: 运用你的新知识
+title: 挑战：为传记页面添加样式
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 通过在前几节课程中学到的知识，你应该学会了用 CSS 组织一个简单的文本文件，并且在其中添加自己的 CSS 样式。本节中你将实现这一功能。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>
-        <p>
-          基本熟悉使用计算机，<a
-            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-            >基本工作环境的设置</a
-          >，基本的<a
-            href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
-            >文件处理知识</a
-          >，基本的 HTML 知识（在<a
-            href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
-            > HTML 概述</a
-          >中学习）和 CSS 基础（查看本模块其他内容）
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td><p>尝试使用一些 CSS 的新玩法并检验新的知识</p></td>
-    </tr>
-  </tbody>
-</table>
 
 ## 前提
 
@@ -71,22 +44,60 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 记住这里没有错误的答案——在这个阶段你可以在学习中娱乐一下。
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
+```html live-sample___biog
+<h1>Jane Doe</h1>
+<div class="job-title">Web Developer</div>
+<p>
+  Far far away, behind the word mountains, far from the countries Vokalia and
+  Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+  right at the coast of the Semantics, a large language ocean.
+</p>
 
-## 测评或请求帮助
+<p>
+  A small river named Duden flows by their place and supplies it with the
+  necessary regelialia. It is a paradisematic country, in which roasted parts of
+  sentences fly into your mouth.
+</p>
 
-如果你希望测试你的页面，或者你遇到困难想要求助，你可以：
+<h2>Contact information</h2>
+<ul>
+  <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
+  <li>Web: <a href="http://example.com">http://example.com</a></li>
+  <li>Tel: 123 45678</li>
+</ul>
+```
 
-1. 将你的文件提交到可网络共享的编辑器，如 CodePen、jsFiddle 或 Glitch。
-2. 在 MDN 论坛（[MDN Discourse forum](https://discourse.mozilla.org/c/mdn)）发帖请求测评或帮助。发帖时添加“学习”的标签，这样我们能够更容易找到它。你的帖子应包括以下内容：
+```css live-sample___biog
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-- 一个描述性标题，例如“CSS 的初步尝试需要测试”。
-- 详细描述你希望我们做些什么——比如，你已经尝试过了，但是卡住了，需要帮助。
-- 你希望测试的例子的在网络编辑器上的链接。这是很好的做法，因为如果不让帮助你的看到你的程序，他们就很难帮助你解决程序的问题。
-- 你的网页的测评页面链接，这样我们就可以找到你所求助的问题。
+h1 {
+  color: #375e97;
+  font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-bottom: 1px solid #375e97;
+}
 
-## 接下来是什么？
+h2 {
+  font-size: 1.5em;
+}
 
-恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)中，我们将对一些关键区域进行深入的学习。
+.job-title {
+  color: #999999;
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: #fb6542;
+}
+
+a:hover {
+  text-decoration: none;
+}
+```
+
+{{EmbedLiveSample("biog", "", "400px")}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

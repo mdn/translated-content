@@ -20,7 +20,6 @@ worker.postMessage(message, [transfer]);
 - _message_
   - : `Object` передаваемый в `worker`. Будет содержаться в поле `data` описания события обработчика {{domxref("DedicatedWorkerGlobalScope.onmessage")}}. Это может быть любое значение или объект JavaScript, которые может обработать алгоритм структурированного клонирования, поддерживающий циклические ссылки.
 - _transfer_ {{optional_inline}}
-
   - : Необязательный [`array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array) с передаваемыми ({{domxref("Transferable")}}) объектами (из тех, что были указаны в `message`) на которые передаются права собственности. Если право на объект передаётся, он становится непригодным (_neutered_) в контексте, из которого был отправлен, и становится доступным только в `worker`, которому он был отправлен.
 
     Переданные (`transferable`) объекты могут быть экземплярами классов {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} или {{domxref("ImageBitmap")}}. null не является допустимым значением для передачи прав.

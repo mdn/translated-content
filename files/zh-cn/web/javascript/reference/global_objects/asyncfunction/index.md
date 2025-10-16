@@ -33,7 +33,8 @@ _同时也从它的父类 {{jsxref("Function")}} 继承实例属性_。
 - `AsyncFunction.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncFunction"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
-> **备注：** `AsyncFunction` 实例并没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
+> [!NOTE]
+> `AsyncFunction` 实例并没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
 
 ## 实例方法
 

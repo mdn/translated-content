@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator
 
 **`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)の両方に準拠しています。
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - function* expression", "taller")}}
 
 ```js interactive-example
 const foo = function* () {
@@ -69,11 +69,11 @@ console.log(generator.next().value); // 2
 // ...
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

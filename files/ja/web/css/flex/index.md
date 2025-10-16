@@ -5,11 +5,56 @@ l10n:
   sourceCommit: e050b876063f44bde9bf011a2dfc94c0d90ca863
 ---
 
-{{CSSRef}}
+**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
 
-**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
+{{InteractiveExample("CSS デモ: flex")}}
 
-{{EmbedInteractiveExample("pages/css/flex.html")}}
+```css interactive-example-choice
+flex: 1;
+```
+
+```css interactive-example-choice
+flex: 2;
+```
+
+```css interactive-example-choice
+flex: 1 30px;
+```
+
+```css interactive-example-choice
+flex: 1 1 100px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change me</div>
+  <div>flex: 1</div>
+  <div>flex: 1</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -55,22 +100,18 @@ flex: unset;
 `flex` プロパティは 1 つ、2 つ、3 つの値を取ることができます。
 
 - **値 1 つの構文:** 値は以下のうちの 1 つです。
-
   - {{cssxref("&lt;flex-grow&gt;")}} として有効な値の場合、すべてのブラウザーで、この一括指定は `flex: <flex-grow> 1 0%` と展開されます。ただし、仕様書では `flex: <flex-grow> 1 0` と展開すべきであるとしています。
   - {{cssxref("&lt;flex-basis&gt;")}} として有効な値の場合、一括指定は `flex: 1 1 <flex-basis>` と展開されます。
   - キーワード `none` またはグローバルキーワードのいずれか。
 
 - **値 2 つの構文:**
-
   - 1 つ目は {{cssxref("flex-grow")}} として有効な値でなければなりません。
 
   - 2 つ目は以下のいずれかの値でなければなりません。
-
     - {{cssxref("flex-shrink")}} として有効な値の場合、すべてのブラウザーにおいて、この一括指定は `flex: <flex-grow> <flex-shrink> 0%` と展開されます。
     - {{cssxref("flex-basis")}} として有効な値の場合、この一括指定は `flex: <flex-grow> 1 <flex-basis>` と展開されます。
 
 - **値 3 つの構文:** 値は以下の順序でなければなりません。
-
   1. {{cssxref("flex-grow")}} として有効な値。
   2. {{cssxref("flex-shrink")}} として有効な値。
   3. {{cssxref("flex-basis")}} として有効な値。

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-old`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 전환 이전의 상태를 나타내는 스냅샷, 즉 뷰 전환의 과거 뷰 상태를 나타냅니다.
 
@@ -117,5 +117,5 @@ figcaption {
 
 ## 같이 보기
 
-- [뷰 전환 API](/ko/docs/Web/API/View_Transitions_API)
+- [뷰 전환 API](/ko/docs/Web/API/View_Transition_API)
 - [뷰 전환 API와 부드럽고 간단한 트랜지션](https://developer.chrome.com/docs/web-platform/view-transitions/)

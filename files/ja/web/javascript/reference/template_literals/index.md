@@ -2,14 +2,12 @@
 title: テンプレートリテラル (テンプレート文字列)
 slug: Web/JavaScript/Reference/Template_literals
 l10n:
-  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("More")}}
 
 **テンプレートリテラル**は逆引用符 (`` ` ``) で区切られたリテラルで、[複数行の文字列](#複数行の文字列)、埋め込み式による[文字列の補間](#文字列の補間)、[タグ付きテンプレート](#タグ付きテンプレート)と呼ばれる特殊な構文を許可します。
 
-テンプレートリテラルは非公式に「_テンプレート文字列_」と呼ばれることもあります。[文字列の補間](#文字列の補間)のためにもっともよく使用されるからです。しかし、タグ付けされたテンプレートリテラルが文字列になるとは限りません。カスタムの[タグ関数](#タグ付きテンプレート)と併用することで、テンプレートリテラルのさまざまな部分に対して、任意の操作を実行することができます。
+テンプレートリテラルは非公式に「テンプレート文字列」と呼ばれることもあります。[文字列の補間](#文字列の補間)のためにもっともよく使用されるからです。しかし、タグ付けされたテンプレートリテラルが文字列になるとは限りません。カスタムの[タグ関数](#タグ付きテンプレート)と併用することで、テンプレートリテラルのさまざまな部分に対して、任意の操作を実行することができます。
 
 ## 構文
 
@@ -60,7 +58,7 @@ tagFunction`string text ${expression} string text`
 通常の文字列を使う場合は、複数行の文字列を得るために次のような構文を使用する必要があります。
 
 ```js
-console.log("string text line 1\n" + "string text line 2");
+console.log("string text line 1\nstring text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -84,7 +82,7 @@ string text line 2`);
 
 ### 文字列の補間
 
-テンプレートリテラルなしで、式からの出力と文字列を結合したい場合、[結合](/ja/docs/Learn/JavaScript/First_steps/Strings#_を用いた連結)は[加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) `+` を使用して行うことになります。
+テンプレートリテラルなしで、式からの出力と文字列を結合したい場合、[結合](/ja/docs/Learn_web_development/Core/Scripting/Strings#_を用いた連結)は[加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) `+` を使用して行うことになります。
 
 ```js
 const a = 5;
@@ -322,11 +320,12 @@ const doc = html`<!doctype html>
 - `\u` に `{` が続かず、 4 桁以下（ないものも含む）の 16 進数が通づいたもの。例えば `\uz`
 - `\u{}` で有効な Unicode コードポイントを囲んだもの。ここには 16 進数以外のもの、まてゃあ `10FFFF` 以上の値。例えば `\u{110000}` や `\u{z}`
 
-> **メモ:** `\` に他の文字が続くと、何もエスケープされていないので、無意味かもしれませんが、構文エラーではありません。
+> [!NOTE]
+> `\` に他の文字が続くと、何もエスケープされていないので、無意味かもしれませんが、構文エラーではありません。
 
 しかし、これはタグ付きテンプレートにとっては問題です。「加工済み」リテラルに加えて、生のリテラルにもアクセスできるからです（エスケープシーケンスはそのまま保持されます）。
 
-タグ付きテンプレートでは、任意の文字列コンテンツを埋め込むことができ、エスケープシーケンスは異なる構文に従うことがあります。例えば、`String.raw` を使用して JavaScript で [LaTeX](https://en.wikipedia.org/wiki/LaTeX) のソーステキストを埋め込む場合を考えてみましょう。JavaScript の構文制限に従うことなく、`u` または `x` で始まる LaTeX マクロを使用できるようにしたい場合もあります。そのため、タグ付きテンプレートでは、正しく形成されたエスケープシーケンスの構文制限が解除されます。下記は、[MathJax](https://www.mathjax.org/) を使用して LaTeX を 1 つの要素でレンダリングする例です。
+タグ付きテンプレートでは、任意の文字列コンテンツを埋め込むことができ、エスケープシーケンスは異なる構文に従うことがあります。例えば、 JavaScript で [LaTeX](https://ja.wikipedia.org/wiki/LaTeX) のソーステキストを `String.raw` を使用して埋め込む場合を考えてみましょう。JavaScript の構文制限に従うことなく、`u` または `x` で始まる LaTeX マクロを使用できるようにしたい場合もあります。そのため、タグ付きテンプレートでは、正しく形成されたエスケープシーケンスの構文制限が解除されます。下記は、[MathJax](https://www.mathjax.org/) を使用して LaTeX を 1 つの要素でレンダリングする例です。
 
 ```js
 const node = document.getElementById("formula");
@@ -366,7 +365,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## 関連情報
 
-- [テキスト整形](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
+- [数値と文字列](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

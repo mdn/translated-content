@@ -1,7 +1,6 @@
 ---
 title: 書本清單頁面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
 
 接下做我們將實作書本列表頁面。這個頁面需要呈現數據庫中所有書本的列表，包含每本書的作者、標題，標題將成為一個超連結，連到書本詳細內容頁面。

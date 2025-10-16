@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaChecked`** は {{domxref("Element")}} インターフェイスプロパティで、チェックボックスやラジオボタン、その他のチェック状態のあるウィジェットの現在の "checked" 状態を示す [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked) 属性の値を反映します。
+**`ariaChecked`** は {{domxref("Element")}} インターフェイスプロパティで、チェックボックスやラジオボタン、その他のチェック状態のあるウィジェットの現在の "checked" 状態を示す [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性の値を反映します。
 
 > [!NOTE]
 > 可能な限り、HTML の {{htmlelement("input")}} 要素で `type="checkbox"` を使用してください。この要素には意味づけがあり、ARIA 属性は必要ありません。
@@ -58,4 +58,4 @@ console.log(el.ariaChecked); // "true"
 
 ## 関連情報
 
-- [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)

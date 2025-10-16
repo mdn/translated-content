@@ -122,7 +122,7 @@ Intente hacer clics rápidos y repetidos en el botón para aumentar el número d
 
 ## Véase también
 
-- [Introducción a los eventos](/es/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introducción a los eventos](/es/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

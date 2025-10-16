@@ -14,7 +14,7 @@ slug: Web/API/HTMLDialogElement
 _Наследует свойства от своего родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : {{domxref("Boolean")}} отражает HTML атрибут элемента [`open`](/ru/docs/Web/HTML/Element/dialog#open), указывающий на то, доступно ли диалоговое окно для воздействия.
+  - : {{domxref("Boolean")}} отражает HTML атрибут элемента [`open`](/ru/docs/Web/HTML/Reference/Elements/dialog#open), указывающий на то, доступно ли диалоговое окно для воздействия.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : {{domxref("DOMString")}} устанавливает или возвращает передаваемое диалоговому окну значение.
 

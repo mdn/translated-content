@@ -31,7 +31,6 @@ search(regexp)
 ### 参数
 
 - `regexp`
-
   - : 一个正则表达式对象，或者具有 [`Symbol.search`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search) 方法的任意对象。
 
     如果 `regexp` 不是 `RegExp` 对象，并且不具有 `Symbol.search` 方法，则会使用 `new RegExp(regexp)` 将其隐式转换为 {{jsxref("RegExp")}}。

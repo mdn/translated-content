@@ -59,4 +59,4 @@ function drop_handler(ev) {
 ## 関連情報
 
 - {{domxref("DataTransfer.type()")}}
-- [MIME タイプの不完全なリスト](/ja/docs/Web/HTTP/MIME_types/Common_types)
+- [MIME タイプの不完全なリスト](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)

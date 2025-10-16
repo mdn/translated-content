@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 726f971467b4cdd339e29ee10403fce5b3e87f42
 ---
 
-{{GlossarySidebar}}
-
 在 CSS 中，元素的*固有尺寸*是指基于其内容的尺寸，不考虑它所在的上下文影响。例如，CSS [盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)属性应用的尺寸。元素的固有尺寸由其 {{cssxref("min-content")}} 和 {{cssxref("max-content")}} 尺寸表示。
 
 行级元素的尺寸是固有的：[尺寸](/zh-CN/docs/Web/CSS/CSS_box_sizing)和[盒](/zh-CN/docs/Web/CSS/CSS_box_model)属性，包括 {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("block-size")}}、{{cssxref("inline-size")}}、{{cssxref("padding-block")}} 和 {{cssxref("margin-block")}} 都对其没有影响（尽管 {{cssxref("margin-inline")}} 和 {{cssxref("padding-inline")}} 有影响）。
@@ -15,7 +13,7 @@ l10n:
 
 对于图像，固有尺寸与文本的含义相同——在不应用任何 CSS 来改变渲染的情况下，图像显示的尺寸。
 
-像素密度和分辨率影响固有尺寸。默认情况下，假定图像具有“1x”像素密度（1 设备像素=1 CSS 像素），此时固有尺寸只是像素高度和宽度。图像的固有尺寸和分辨率可以在其 {{Glossary("EXIF")}} 数据中明确指定。图像的像素密度也可以使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性设置。请注意，如果同时使用两种机制，则 `srcset` 值覆盖 EXIF 值。
+像素密度和分辨率影响固有尺寸。默认情况下，假定图像具有“1x”像素密度（1 设备像素=1 CSS 像素），此时固有尺寸只是像素高度和宽度。图像的固有尺寸和分辨率可以在其 {{Glossary("EXIF")}} 数据中明确指定。图像的像素密度也可以使用 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性设置。请注意，如果同时使用两种机制，则 `srcset` 值覆盖 EXIF 值。
 
 固有尺寸及其计算方式在 [CSS 尺寸模块](/zh-CN/docs/Web/CSS/CSS_box_sizing)中定义。
 

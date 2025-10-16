@@ -14,4 +14,4 @@ slug: Glossary/OOP
 ### Conocimientos generales
 
 - [Programaci'ón orientada a objetos](https://es.wikipedia.org/wiki/Programación_orientada_a_objetos) en Wikipedia
-- [Introducción a JavaScript prientado a objetos](/es/docs/Learn/JavaScript/Objects)
+- [Introducción a JavaScript prientado a objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

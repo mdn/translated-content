@@ -8,9 +8,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`ariaDisabled`** は {{domxref("ElementInternals")}} インターフェイスのプロパティで、[`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性の値を反映し、要素が知覚可能だが無効であり、編集や他の処理をすることはできないことを示します。
+**`ariaDisabled`** は {{domxref("ElementInternals")}} インターフェイスのプロパティで、[`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) 属性の値を反映し、要素が知覚可能だが無効であり、編集や他の処理をすることはできないことを示します。
 
-> **メモ:** `ElementInternals` に aria 属性を設定することで、カスタム要素に既定値を定義することができます。これらは作成者が定義した属性によって上書きされる可能性がありますが、作成者が属性を削除したり、追加しなかった場合でも確実に既定値を定義することができます。より詳しい情報は、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
+> [!NOTE]
+> `ElementInternals` に aria 属性を設定することで、カスタム要素に既定値を定義することができます。これらは作成者が定義した属性によって上書きされる可能性がありますが、作成者が属性を削除したり、追加しなかった場合でも確実に既定値を定義することができます。より詳しい情報は、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
 
 ## 値
 

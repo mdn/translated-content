@@ -8,7 +8,7 @@ l10n:
 
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
-廃止された **`HTMLFontElement.size`** プロパティは、HTML の [`size`](/ja/docs/Web/HTML/Element/font#size) 属性を反映した文字列です。これは 1 から 7 までのフォントサイズか、例えば -2 や +1 のような既定値 3 からの相対値を格納します。
+廃止された **`HTMLFontElement.size`** プロパティは、HTML の [`size`](/ja/docs/Web/HTML/Reference/Elements/font#size) 属性を反映した文字列です。これは 1 から 7 までのフォントサイズか、例えば -2 や +1 のような既定値 3 からの相対値を格納します。
 
 文字列の形式は以下の HTML マイクロ構文のいずれかに従う必要があります。
 

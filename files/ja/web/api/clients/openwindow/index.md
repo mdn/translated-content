@@ -1,11 +1,12 @@
 ---
 title: "Clients: openWindow() メソッド"
+short-title: openWindow()
 slug: Web/API/Clients/openWindow
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 364a4d02b10854ab7cef4ff4b0ec3616d4e1c8ab
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 **`openWindow()`** は {{domxref("Clients")}} インターフェイスのメソッドで、新しい最上位の閲覧コンテキストを作成し、指定された URL をロードします。 呼び出し元のスクリプトにポップアップを表示する権限がない場合、`openWindow()` は `InvalidAccessError` 例外を発生させます。
 
@@ -27,6 +28,15 @@ openWindow(url)
 ### 返値
 
 URL がサービスワーカーと同じオリジンからのものである場合は {{domxref("WindowClient")}} オブジェクトに解決され、それ以外の場合は {{Glossary("null", "null 値")}}に解決される {{jsxref("Promise")}}。
+
+### 例外
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : アプリの元のウィンドウに[一時的な活性化](/ja/docs/Web/Security/User_activation)のウィンドウが存在しない場合、この例外でプロミスは拒否されます。
+
+## セキュリティ要件
+
+- アプリの元のウィンドウのうち、少なくとも 1 つは[一時的な活性化](/ja/docs/Web/Security/User_activation)が行われている必要があります。
 
 ## 例
 
@@ -51,17 +61,18 @@ self.addEventListener("notificationclick", (e) => {
   // すべての Window クライアントを取得します
   e.waitUntil(
     clients.matchAll({ type: "window" }).then((clientsArr) => {
-      // 対象 URL に一致するウィンドウタブが既に存在する場合は、それにフォーカスします。
-      const hadWindowToFocus = clientsArr.some((windowClient) =>
-        windowClient.url === e.notification.data.url
-          ? (windowClient.focus(), true)
-          : false,
+      const windowToFocus = clientsArr.find(
+        (windowClient) => windowClient.url === e.notification.data.url,
       );
-      // それ以外の場合は、適切な URL への新しいタブを開いてフォーカスします。
-      if (!hadWindowToFocus)
+      if (windowToFocus) {
+        // 対象 URL に一致するウィンドウタブが既に存在する場合は、それにフォーカスします。
+        windowToFocus.focus();
+      } else {
+        // それ以外の場合は、適切な URL への新しいタブを開いてフォーカスします。
         clients
           .openWindow(e.notification.data.url)
           .then((windowClient) => (windowClient ? windowClient.focus() : null));
+      }
     }),
   );
 });

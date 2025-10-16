@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b789d2ed3e6398b03fe22c95a3442be7b4669b47
 ---
 
-{{GlossarySidebar}}
-
 **RAIL**（**Response、Animation、Idle 和 Load 的首字母缩写**）是由 Google Chrome 团队于 2015 年提出一种用于提升浏览器内的用户体验和性能的性能模型。RAIL 模型的理念是“以用户为中心；最终目标不是让你的网站在任何特定设备上都能运行很快，而是使用户满意。”RAIL 把交互分为四个阶段：页面加载、空闲、响应用户输入、滚动和动画。按首字母缩写顺序，其主要原则是：
 
 - **响应**
@@ -20,4 +18,4 @@ l10n:
 
 ## 参见
 
-- [推荐的 Web 性能时间：应该有多长](/zh-CN/docs/Web/Performance/How_long_is_too_long)
+- [推荐的 Web 性能时间：应该有多长](/zh-CN/docs/Web/Performance/Guides/How_long_is_too_long)

@@ -491,9 +491,7 @@ XMLHttpRequest (
 ##### Параметры (нестандартные)
 
 - `objParameters`
-
   - : Вы можете использовать два флага:
-
     - `mozAnon`
       - : Boolean: Использование этого флага уберёт из запроса заголовки origin, и [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials). Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.
     - `mozSystem`
@@ -547,7 +545,6 @@ void open(
 - `url`
   - : URL адрес, на который будет отправлено сообщение.
 - `async`
-
   - : Необязательный boolean параметр, по умолчанию равный `true`. Определяет, будет ли запрос отправлен асинхронно. Если значение равно `false`, метод `send()` вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
 
     > [!NOTE]
@@ -728,14 +725,12 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 ## Смотрите также
 
 - MDN articles about XMLHttpRequest:
-
   - [AJAX - Getting Started](/en-US/AJAX/Getting_Started)
   - [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/en-US/HTML_in_XMLHttpRequest)
   - [`FormData`](/en-US/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest references from W3C and browser vendors:
-
   - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
   - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
@@ -746,6 +741,5 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 - [HTML5 Rocks - New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
 - [Thread on the naming convention of `XMLHttpRequest`](http://programmers.stackexchange.com/questions/157375/why-does-xmlhttprequest-not-seem-to-follow-a-naming-convention)
 - `Chrome scope availability` - how to access from JSM modules etc which do not have access to DOM
-
   - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)
   - [nsIXMLHttpRequest \[en-US\]](/ru/docs/nsIXMLHttpRequest)

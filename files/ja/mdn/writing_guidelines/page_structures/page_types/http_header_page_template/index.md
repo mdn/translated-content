@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -28,9 +29,9 @@ l10n:
 > ```
 >
 > - **title**
->   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader_ です。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control` となります。
+>   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader_ です。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control` となります。
 > - **slug**
->   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/HTML/Element/NameOfTheHeader` のような形式になります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) の _slug_ は `Web/HTTP/Headers/Cache-Control` となります。
+>   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/HTML/Element/NameOfTheHeader` のような形式になります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) の _slug_ は `Web/HTTP/Headers/Cache-Control` となります。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -48,16 +49,13 @@ l10n:
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
 >
-> - `\{{httpsidebar}}` — これはすべての HTTP リファレンスページに必ず現れる HTTP サイドバーを生成します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
->
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
 > **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 概要段落です。初めに、 http ヘッダー名と、それが何をするのかを説明し案す。
 できれば 1 つか 2 つの短い文章で説明してください。
@@ -70,11 +68,11 @@ l10n:
         ヘッダーカテゴリーを入れてください。例えば、
         {{Glossary("Request header", "リクエストヘッダー")}}、
         {{Glossary("Response header", "レスポンスヘッダー")}}、
-        <a href="/ja/docs/Web/HTTP/Client_hints">クライアントヒント</a>などです。
+        <a href="/ja/docs/Web/HTTP/Guides/Client_hints">クライアントヒント</a>などです。
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい または いいえ</td>
     </tr>
     <tr>

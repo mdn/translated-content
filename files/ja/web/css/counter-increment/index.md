@@ -5,15 +5,46 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 **`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値を増加または減少させたり、すべてのカウンターまたはここのカウンターが変化することを防いだりするためのプロパティです。
 
 空白で区切られたカウンターと値のリストに掲載されている名前付きカウンターが存在しない場合、作成されます。カウンターのリストでカウンターに値が指定されていない場合、カウンターは `1` だけ増加します。
 
 カウンターの値は CSS の {{cssxref("counter-reset")}} プロパティを使用して任意の値にリセットすることができます。
 
-{{EmbedInteractiveExample("pages/css/counter-increment.html")}}
+{{InteractiveExample("CSS デモ: counter-increment")}}
+
+```css interactive-example-choice
+counter-increment: example-counter;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 0;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 5;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Counter value:</div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-reset: example-counter;
+}
+
+#example-element::after {
+  content: counter(example-counter);
+}
+```
 
 ## 構文
 
@@ -52,7 +83,8 @@ counter-increment: unset;
 - `none`
   - : カウンターを増加または減少させる必要がないことを示します。この値は、特定のルールでカウンターが増加または減少するのをすべてキャンセルする場合にも使用することができます。これはプロパティの既定値です。
 
-> **メモ:** `none` 値を指定すると、このルールが適用される選択された要素のすべてのカウンターの増減が防止されます。特定のカウンターの増減のみを防止するには、関連するカウンターの `integer` 値を `0` に設定してください。
+> [!NOTE]
+> `none` 値を指定すると、このルールが適用される選択された要素のすべてのカウンターの増減が防止されます。特定のカウンターの増減のみを防止するには、関連するカウンターの `integer` 値を `0` に設定してください。
 
 ## 公式定義
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8ad43cb18baadffa72a32ba8b4524f09d611f078
 ---
 
-{{CSSRef}}
-
 **`stop-color`** [CSS](/ko/docs/Web/CSS) 속성은 그라디언트 내부에서 SVG {{SVGElement("stop")}} 요소에 어떤 색상이 쓰일지를 정의합니다. 이 속성이 존재한다면 요소의 {{SVGAttr("stop-color")}} 속성을 덮어쓰게 됩니다.
 
 > [!NOTE] > `stop-color` 속성은 {{SVGElement("svg")}} 내 {{SVGElement('stop')}} 요소에만 적용됩니다. 이는 다른 SVG, HTML 혹은 의사 요소에 적용되지 않습니다.
@@ -30,7 +28,6 @@ stop-color: unset;
 ### 값
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : 채우기 색상입니다. 이는 유효한 모든 CSS {{cssxref("color_value", "&lt;color>")}} 값에 사용될 수 있습니다.
 
 ## 형식 정의

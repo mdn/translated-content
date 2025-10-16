@@ -10,7 +10,7 @@ l10n:
 
 **`Navigator.hid`** は読み取り専用のプロパティで、{{domxref("HID")}} オブジェクトを返します。このオブジェクトは、HID デバイスへの接続およびアタッチした HID デバイスのリストアップを行うメソッドと、HID デバイスの接続を扱うイベントハンドラーを提供します。
 
-定義されている[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)が WebHID の使用をブロックしている場合、 `Navigator.hid` プロパティは利用できません。
+定義されている[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が WebHID の使用をブロックしている場合、 `Navigator.hid` プロパティは利用できません。
 
 ## 値
 

@@ -3,7 +3,7 @@ title: ::-webkit-slider-runnable-track
 slug: Web/CSS/::-webkit-slider-runnable-track
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 **`::-webkit-slider-runnable-track`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で {{HTMLElement("input/range", '&lt;input type="range"&gt;')}} の「トラック」 (インジケータがスライドする溝) を表します。
 
@@ -25,7 +25,6 @@ slug: Web/CSS/::-webkit-slider-runnable-track
 
 - {{CSSxRef("::-webkit-slider-thumb")}}
 - 他のブラウザーで使われている類似の擬似要素:
-
   - {{CSSxRef("::-ms-track")}}
   - {{CSSxRef("::-moz-range-track")}}
 

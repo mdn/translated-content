@@ -41,7 +41,7 @@ HTML 標準によって `Document` に追加されたものには、次のよう
 
 - ページを読み込む際に、 {{Glossary("HTTP")}} ヘッダーが提供する様々な情報へのアクセスに対応すること。例えば {{DOMxRef("Document/location", "location", "", "1")}} から文書を読み込んだ場所、{{DOMxRef("Document/cookie", "Cookie", "", "1")}}、{{DOMxRef("Document/lastModified", "最終更新日時", "", "1")}}、{{DOMxRef("Document/referrer", "リファラーサイト", "", "1")}}などです。
 - 文書の {{HTMLElement("head")}} ブロックや{{DOMxRef("Document/body", "本文", "", "1")}}に含まれている要素リストへのアクセス、また文書に含まれている{{DOMxRef("Document/images", "画像", "", "1")}}や{{DOMxRef("Document/links", "リンク", "", "1")}}のリストへのアクセス。
-- [編集可能なコンテンツ](/ja/docs/Web/HTML/Global_attributes/contenteditable)の {{DOMxRef("Document/hasFocus", "focus", "", "1")}} 検査やコマンドの実行によるユーザーとの対話への対応。
+- [編集可能なコンテンツ](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)の {{DOMxRef("Document/hasFocus", "focus", "", "1")}} 検査やコマンドの実行によるユーザーとの対話への対応。
 - HTML 標準で定義されている文書のイベントハンドラーで、{{DOMxRef("MouseEvent", "マウス", "", "1")}}や{{DOMxRef("KeyboardEvent", "キーボード", "", "1")}}イベント、{{DOMxRef("HTML_Drag_and_Drop_API", "ドラッグ＆ドロップ", "", "1")}}や{{DOMxRef("HTMLMediaElement", "メディア制御", "", "1")}}などのイベントにアクセスできるようにすること。
 - 要素と文書の両方に配信できるイベントのイベントハンドラー。現在のところ、{{DOMxRef("HTMLElement/copy_event", "コピー", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "切り取り", "", "1")}}、{{DOMxRef("HTMLElement/paste_event", "貼り付け", "", "1")}}操作のみが含まれています。
 
@@ -366,10 +366,10 @@ nameField.addEventListener("input", (event) => {
 
 ### リファレンス
 
-- [HTML 要素リファレンス](/ja/docs/Web/HTML/Element)
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
+- [HTML 要素リファレンス](/ja/docs/Web/HTML/Reference/Elements)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "ドキュメントオブジェクトモデル (DOM)", "", "1")}} リファレンス
 
 ### ガイド
 
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): DOM を操作するための初心者向けガイド。
+- [文書の操作](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting): DOM を操作するための初心者向けガイド。

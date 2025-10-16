@@ -112,7 +112,7 @@ Las unidades de longitud relativa son relativas a algo más, por ejemplo, al tam
 
 En el ejemplo siguiente puedes ver cómo se comportan algunas unidades de longitud relativa y absoluta. La primera caja tiene un ancho ({{cssxref ("width")}}) establecido en píxeles. Como unidad absoluta, este ancho será siempre el mismo aunque lo demás cambie.
 
-La segunda caja tiene un ancho establecido en unidades `vw` (ancho de ventana). Este valor es relativo al ancho de la ventana gráfica, por lo que 10vw es el 10 por ciento del ancho de la ventana gráfica. Si cambiases el ancho de la ventana de tu navegador, el tamaño de la caja cambiaría. Sin embargo, esto no te va a funcionar porque este ejemplo se ha incrustado en la página usando [`<iframe>`](/es/docs/Web/HTML/Element/iframe). Para verlo en acción debes [probar el ejemplo después de abrirlo en una pestaña independiente de tu navegador](https://mdn.github.io/css-examples/learn/values-units/length.html).
+La segunda caja tiene un ancho establecido en unidades `vw` (ancho de ventana). Este valor es relativo al ancho de la ventana gráfica, por lo que 10vw es el 10 por ciento del ancho de la ventana gráfica. Si cambiases el ancho de la ventana de tu navegador, el tamaño de la caja cambiaría. Sin embargo, esto no te va a funcionar porque este ejemplo se ha incrustado en la página usando [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe). Para verlo en acción debes [probar el ejemplo después de abrirlo en una pestaña independiente de tu navegador](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
 La tercera caja utiliza unidades `em`. Son unidades relativas al tamaño de la letra. Hemos establecido un tamaño de fuente de `1em` en el contenido {{htmlelement ("div")}}, que tiene una clase `.wrapper`. Si cambias este valor a `1.5em`, verás que el tamaño de letra de todos los elementos aumenta, pero solo se amplía el ancho en el último elemento, porque el ancho es relativo a ese tamaño de letra.
 
@@ -122,7 +122,7 @@ Después de seguir las instrucciones anteriores, juega un poco más con los valo
 
 #### ems y rems
 
-`em` y `rem` son las dos longitudes relativas que es probable que encuentres con mayor frecuencia al cambiar el tamaño de cualquier cosa, de cajas a texto. Vale la pena entender cómo funcionan y las diferencias entre ellos, especialmente cuando comienzas a abordar temas más complejos como [aplicar estilos a texto](/es/docs/Learn/CSS/Styling_text) o [compaginar con CSS](/es/docs/Learn/CSS/CSS_layout). El ejemplo siguiente te proporciona una muestra.
+`em` y `rem` son las dos longitudes relativas que es probable que encuentres con mayor frecuencia al cambiar el tamaño de cualquier cosa, de cajas a texto. Vale la pena entender cómo funcionan y las diferencias entre ellos, especialmente cuando comienzas a abordar temas más complejos como [aplicar estilos a texto](/es/docs/Learn_web_development/Core/Text_styling) o [compaginar con CSS](/es/docs/Learn_web_development/Core/CSS_layout). El ejemplo siguiente te proporciona una muestra.
 
 El HTML es un conjunto de listas anidadas: hay tres listas en total y ambos ejemplos tienen el mismo HTML. La única diferencia es que el primero tiene una clase _ems_ y el segundo una clase _rems_.
 
@@ -257,7 +257,7 @@ En el ejemplo siguiente hemos colocado una imagen de fondo a 40px de la parte su
 
 En los ejemplos anteriores hemos visto casos en que se usan palabras clave como valores (por ejemplo, palabras clave para `<color>`, como `red`, `black`, `rebeccapurple` y `goldenrod`). Estas palabras clave normalmente se describen como _identificadores_, un valor especial que el CSS entiende. Como tales, no se escriben entre comillas (es decir, no se tratan como cadenas).
 
-Hay casos en el CSS en que debes usar cadenas, por ejemplo, [al especificar el contenido que generas](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generar_contenido_con_before_y_after). En este caso, el valor se escribe entre comillas para mostrar que se trata de una cadena de caracteres. En el ejemplo siguiente hemos usado palabras clave para el color, sin entrecomillar, y también una cadena caracteres, de contenido generado, entrecomillada.
+Hay casos en el CSS en que debes usar cadenas, por ejemplo, [al especificar el contenido que generas](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generar_contenido_con_before_y_after). En este caso, el valor se escribe entre comillas para mostrar que se trata de una cadena de caracteres. En el ejemplo siguiente hemos usado palabras clave para el color, sin entrecomillar, y también una cadena caracteres, de contenido generado, entrecomillada.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 

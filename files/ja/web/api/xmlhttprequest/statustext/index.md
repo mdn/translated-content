@@ -3,12 +3,12 @@ title: "XMLHttpRequest: statusText プロパティ"
 short-title: statusText
 slug: Web/API/XMLHttpRequest/statusText
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`XMLHttpRequest.statusText`** は読み取り専用のプロパティで、文字列で HTTP サーバーから返されるステータスメッセージを示します。 [`XMLHTTPRequest.status`](/ja/docs/Web/API/XMLHttpRequest/status) が数値のステータスコードを示すのとは異なり、このプロパティはレスポンスステータスの*テキスト*を、 "OK" や "Not Found" のように示します。リクエストの [`readyState`](/ja/docs/Web/API/XMLHttpRequest/readyState) が `UNSENT` または `OPENED` の状態であった場合、 `statusText` の値は空文字列になります。
+**`XMLHttpRequest.statusText`** は読み取り専用のプロパティで、文字列で HTTP サーバーから返されるステータスメッセージを示します。 [`XMLHttpRequest.status`](/ja/docs/Web/API/XMLHttpRequest/status) が数値のステータスコードを示すのとは異なり、このプロパティはレスポンスステータスの*テキスト*を、 "OK" や "Not Found" のように示します。リクエストの [`readyState`](/ja/docs/Web/API/XMLHttpRequest/readyState) が `UNSENT` または `OPENED` の状態であった場合、 `statusText` の値は空文字列になります。
 
 サーバーが明示的にステータスのテキストを指定しなかった場合、 `statusText` は既定値 "OK" と見なされます。
 
@@ -58,6 +58,6 @@ xhr.send(null);
 
 ## 関連情報
 
-- [HTTP ステータス](/ja/docs/Web/HTTP/Status)の一覧
+- [HTTP ステータス](/ja/docs/Web/HTTP/Reference/Status)の一覧
 - [HTTP](/ja/docs/Web/HTTP)
 - [WHATWG Fetch Living Standard](https://fetch.spec.whatwg.org/#concept-response-status-message)

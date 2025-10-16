@@ -3,8 +3,6 @@ title: WebDriver
 slug: Web/WebDriver
 ---
 
-{{QuickLinksWithSubpages}}
-
 WebDriver 是远程控制接口，可以对用户代理进行控制。它提供了一个平台和中立语言协议结构，作为进程外程序远程指导 web 浏览器行为的方法。
 
 具备编写可以在不同平台上的许多浏览器中互换运行的指令集的能力，对于向用户提供一致的体验至关重要。随着网络平台的新一轮发展，设备多样性的增加以及对技术之间真正的互操作性的要求，WebDriver 提供了[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction)的工具。

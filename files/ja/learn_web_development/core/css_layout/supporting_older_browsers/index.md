@@ -156,6 +156,6 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 ## 関連情報
 
 - [`@supports`](/ja/docs/Web/CSS/@supports) アットルール
-- [CSS アットルール](/ja/docs/Web/CSS/At-rule)
+- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール

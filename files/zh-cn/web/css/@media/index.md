@@ -3,14 +3,39 @@ title: "@media"
 slug: Web/CSS/@media
 ---
 
-{{CSSRef}}
-
 **`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > [!NOTE]
 > 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+
+```css interactive-example
+abbr {
+  color: chocolate;
+}
+
+@media (hover: hover) {
+  abbr:hover {
+    color: limegreen;
+    transition-duration: 1s;
+  }
+}
+
+@media not all and (hover: hover) {
+  abbr::after {
+    content: " (" attr(title) ")";
+  }
+}
+```
+
+```html interactive-example
+<p>
+  <abbr title="National Aeronautics and Space Administration">NASA</abbr> is a
+  U.S. government agency that is responsible for science and technology related
+  to air and space.
+</p>
+```
 
 ## 语法
 
@@ -75,7 +100,7 @@ _媒体特性_（media feature）描述了{{glossary("user agent", "用户代理
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 输出设备渲染表面的宽度。于媒体查询第 4 版中被弃用。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
+  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : 用户代理和输出设备支持的亮度、对比度和色彩深度的组合。于媒体查询第 5 版中被添加。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
@@ -122,7 +147,6 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 - `and`
   - : 用于将多个媒体查询规则组合成单条媒体查询，当每个查询规则都为真时则该条媒体查询为 `true`，它还用于将媒体特性与媒体类型结合在一起。
 - `not`
-
   - : 用于否定媒体查询，如果不满足这个条件则返回 `true`，否则返回 `false`。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 `not` 运算符，则*还必须*指定媒体类型。
 
     > [!NOTE]
@@ -137,7 +161,7 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ### 用户代理客户端提示
 
-一些媒体查询有相应的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)。这是请求特定媒体要求的预优化内容的 HTTP 标头，其包括 {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} 和 {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}。
+一些媒体查询有相应的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)。这是请求特定媒体要求的预优化内容的 HTTP 标头，其包括 {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} 和 {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}。
 
 ## 无障碍考虑
 

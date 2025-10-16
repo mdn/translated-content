@@ -1,12 +1,9 @@
 ---
 title: Web 和 Web 标准
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
-original_slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 l10n:
   sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
-
-{{learnsidebar}}
 
 本文提供一些实用的和 Web 相关的背景故事——Web 是如何诞生的、什么是 Web 标准技术、Web 和 Web 标准技术是如何一起工作的、为什么“Web 开发者”是一个很好的职业选择，以及在课程中你将学习什么样的最佳实践。
 

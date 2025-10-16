@@ -1,10 +1,9 @@
 ---
 title: Arrays
 slug: Learn_web_development/Core/Scripting/Arrays
-original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
 在本單元的最後一篇文章中，我們將介紹陣列——一種在單個變數名下儲存資料項列表的簡潔方法。在這裡，我們看看為什麼這很有用，然後探討如何建立陣列，檢索、增加和刪除儲存在陣列中的項目等等。
 

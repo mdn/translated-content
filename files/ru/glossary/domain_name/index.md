@@ -11,4 +11,4 @@ slug: Glossary/Domain_name
 
 ### Общие сведения
 
-- [Understanding domain names](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Understanding domain names](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

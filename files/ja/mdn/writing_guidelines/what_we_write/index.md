@@ -2,10 +2,8 @@
 title: 私たちが書くもの
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs には、ウェブ開発者が**ブラウザーを意識することなく**コードを書けるように、**ブラウザー中立的な**文書を掲載しています。この記事では、特定のトピックやコンテンツの種類が MDN Web Docs に入れられるべきかどうかについての情報を探ります。
 
@@ -18,6 +16,9 @@ MDN Web Docs には、ウェブ開発者が**ブラウザーを意識するこ�
 MDN のすべてのコンテンツは、それが現れる技術セクションに関連していなければなりません。スパム（商業広告）およびその他の無関係なコンテンツは、このサイトでは受け付けられません。 Mozilla MDN のスタッフの裁量により、スパムを投稿するユーザーは MDN から追放されることがあります。
 
 リンクされているトピックに関連する商用サイトへの外部リンクは、ケースバイケースで判断されます。ウェブ開発者を支援するうえでのその価値は、リンク先サイトの商業的利益を上回るものでなければなりません。
+
+> [!NOTE]
+> MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)の章には、商用サイトへのリンクが表示されますが、これらは必要最小限に使用されており、信頼できる教育パートナーのみにリンクしています。これについての詳細は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)をご覧ください。
 
 ### 中立性
 
@@ -33,7 +34,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 新しいリファレンスページやガイドについては、[新しい issue](https://github.com/mdn/mdn/issues/new/choose) で、提案する内容とその理由を説明するディスカッションを開いてください（できるだけ明確にしてください）。
 
-コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
+コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
 
 ## どのようなトピックが MDN Web Docs に載るのか
 
@@ -63,7 +64,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 
-MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照してください。
+MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照してください。
 
 ### 新しい技術を文書化するとき
 

@@ -22,7 +22,7 @@ Casi todos los programas que hemos mostrado hasta ahora en el curso han involucr
 
 ## Cadenas — las bases
 
-A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveeremos de una aquí abajo (también puedes [abrir la consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separada, o usar la [consola de desarrollo del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si así lo prefieres).
+A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveremos de una aquí abajo (o utilice la [consola de desarrollador de navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
 <!doctype html>
@@ -251,7 +251,7 @@ button.onclick = function () {
 };
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, , , , , 'allow-modals') }}
 
 Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()")}} en la línea 4, que le pide al usuario la respuesta a una pregunta, através de un cuadro emergente (también llamado popup) y luego, almacenará el dato dentro de una variable dada — en este caso llamada `name (nombre)`. Luego, en la línea 5, usamos una función {{domxref("Window.alert()", "Window.alert()")}} para mostrar otra ventana emergente que contiene una cadena que hemos unido de la concatenación de dos string literales y la variable `name` (nombre).
 
@@ -273,7 +273,6 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
    ```
 
 3. Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
-
    - El objecto {{jsxref("Number")}} convertirá cualquier cosa que se le pase en un número, si puede. Intenta lo siguiente:
 
      ```js
@@ -294,7 +293,7 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
 
 ## Prueba tus habilidades
 
-Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
+Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
 
 ## Conclusión
 

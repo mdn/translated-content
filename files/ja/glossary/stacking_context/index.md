@@ -11,4 +11,4 @@ slug: Glossary/Stacking_context
 
 ### 一般知識
 
-- [詳しい説明と例](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [詳しい説明と例](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)

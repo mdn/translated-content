@@ -27,7 +27,7 @@ if (window.parent !== window.top) {
 }
 ```
 
-## 仕様
+## 仕様書
 
 - [HTML Standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
 

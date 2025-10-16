@@ -52,9 +52,7 @@ Object.defineProperty(obj, prop, descriptor)
 数据描述符和访问器描述符都是对象。它们共享以下可选键（请注意：在使用 `Object.defineProperty()` 定义属性的情况下，下述所有键都是**默认值**）：
 
 - `configurable`
-
   - : 当设置为 `false` 时，
-
     - 该属性的类型不能在数据属性和访问器属性之间更改，且
     - 该属性不可被删除，且
     - 其描述符的其他属性也不能被更改（但是，如果它是一个可写的数据描述符，则 `value` 可以被更改，`writable` 可以更改为 `false`）。
@@ -209,7 +207,7 @@ console.log(o.a); // 37；赋值不会成功
 
 #### Enumerable 特性
 
-`enumerable` 特性定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`enumerable` 特性定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)。
 
 ```js
 const o = {};
@@ -506,7 +504,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## 参见
 
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

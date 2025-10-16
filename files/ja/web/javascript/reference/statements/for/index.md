@@ -9,7 +9,7 @@ l10n:
 
 **`for`** 文は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文（ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)）から成るループを構成します。
 
-{{InteractiveExample("JavaScript Demo: Statement - For")}}
+{{InteractiveExample("JavaScript デモ: Statement - For")}}
 
 ```js interactive-example
 let str = "";
@@ -30,13 +30,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : ループが始まる前に一度だけ評価される（[代入式](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を含む）式または変数宣言。ふつうはカウンター変数を初期化するために使われます。この式では任意で、`var` キーワードを用いて新しい変数を宣言することもできます。`var` で宣言された変数はループ内のローカル変数にはなりません。すなわち、`for` ループが属するスコープと同じスコープになります。`let` で宣言された変数は文内のローカル変数になります。
 
     この式の結果は捨て去られます。
 
 - `condition` {{optional_inline}}
-
   - : ループのそれぞれの反復処理が行われる前に評価される式です。この式が [true と評価された](/ja/docs/Glossary/Truthy)場合は、 `statement` が実行されます。この式が [false と評価された](/ja/docs/Glossary/Falsy)場合は、実行は `for` 構造に続く最初の式に飛びます。
 
     この条件テストはオプションです。省略した場合、この条件は常に true と評価されます。
@@ -129,7 +127,7 @@ while (i <= 3) {
 
 ### 初期化ブロックの字句の宣言
 
-初期化ブロック内で変数を宣言する場合、上位の[スコープ](/ja/docs/Glossary/Scope)で宣言する場合と異なる点があり、特にループ本体内で[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成する場合は重要です。例えば、下記のコードを見てください。
+初期化ブロック内で変数を宣言する場合、上位の[スコープ](/ja/docs/Glossary/Scope)で宣言する場合と異なる点があり、特にループ本体内で[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を作成する場合は重要です。例えば、下記のコードを見てください。
 
 ```js
 for (let i = 0; i < 3; i++) {

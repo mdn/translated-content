@@ -5,11 +5,10 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`overflow-inline`** [CSS](/ko/docs/Web/CSS) 속성은 콘텐츠가 박스의 인라인 시작과 끝 가장자리를 넘어설 때 어떤 내용을 보여줄지를 설정합니다. 이는 아무 것도 표시하지 않을 수도 있고, 스크롤 바가 나타날 수도 있으며 넘친 콘텐츠가 보일 수도 있습니다.
 
-> **참고:** `overflow-inline` 속성은 문서의 작성 방식에 따라 {{Cssxref("overflow-y")}} 또는 {{Cssxref("overflow-x")}}로 매핑됩니다.
+> [!NOTE]
+> `overflow-inline` 속성은 문서의 작성 방식에 따라 {{Cssxref("overflow-y")}} 또는 {{Cssxref("overflow-x")}}로 매핑됩니다.
 
 ## 구문
 
@@ -137,4 +136,4 @@ div {
 - [CSS overflow](/ko/docs/Web/CSS/CSS_overflow) module
 - [CSS logical properties](/ko/docs/Web/CSS/CSS_logical_properties_and_values)
 - [CSS writing modes](/ko/docs/Web/CSS/CSS_writing_modes)
-- [CSS building blocks: Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS building blocks: Overflowing content](/ko/docs/Learn_web_development/Core/Styling_basics/Overflow)

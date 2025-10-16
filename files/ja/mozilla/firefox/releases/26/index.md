@@ -3,8 +3,6 @@ title: Firefox 26 for developers
 slug: Mozilla/Firefox/Releases/26
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 26 は米国時間 2013 年 12 月 10 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点一覧
@@ -31,7 +29,7 @@ Firefox 26 は米国時間 2013 年 12 月 10 日にリリースされました�
 - ECMAScript 2015 に準拠した構文の[ジェネレーター (yield)](http://wiki.ecmascript.org/doku.php?id=harmony:generators) を実装しました ([Firefox バグ 666399](https://bugzil.la/666399))。
 - ジェネレーター/イテレーターの結果が `{ value: foo, done: bool }` のように囲まれるようになりました ([Firefox バグ 907744](https://bugzil.la/907744))。
 - [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) へ新たに、数値計算メソッドである [`Math.fround()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/fround) を実装しました ([Firefox バグ 900125](https://bugzil.la/900125))。
-- [予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)を関数名に使用できません。使用すると [`SyntaxError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) が発生します ([Firefox バグ 907958](https://bugzil.la/907958))。
+- [予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)を関数名に使用できません。使用すると [`SyntaxError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) が発生します ([Firefox バグ 907958](https://bugzil.la/907958))。
 - [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)の構文が、デフォルト引数の後にデフォルトのない引数を許容するように更新されました。 `function f(x=1, y)` のような形です。 [Firefox バグ 777060](https://bugzil.la/777060) を参照してください。
 - {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} が実装されました ([Firefox バグ 904701](https://bugzil.la/904701))。
 

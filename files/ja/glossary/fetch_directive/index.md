@@ -9,19 +9,17 @@ slug: Glossary/Fetch_directive
 
 すべてのフェッチディレクティブは {{CSP("default-src")}} で代替することができます。つまり、フェッチディレクティブが CSP ヘッダーにない場合、ユーザーエージェントは `default-src` ディレクティブを探します。
 
-完全な一覧については[フェッチディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives)を参照してください。
+完全な一覧については[フェッチディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directives)を参照してください。
 
 ## 関連情報
 
 - 関連用語:
-
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
   - {{Glossary("Document directive", "文書ディレクティブ")}}
   - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
 
 - リファレンス
-
   - <https://www.w3.org/TR/CSP/#directives-fetch>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

@@ -22,11 +22,8 @@ Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
 ### Paramètres
 
 - `details`
-
   - : `object`
-
     - `text`
-
       - : `string` or `null`. N'importe quel nombre de caractères peut être passé, mais seulement quatre environ peuvent tenir dans l'espace.
 
         Utilisez une chaîne vide - `""` - si vous ne voulez pas de badge.
@@ -68,8 +65,6 @@ browser.browserAction.onClicked.addListener(increment);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

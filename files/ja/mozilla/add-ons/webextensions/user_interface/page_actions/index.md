@@ -16,12 +16,10 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 違いは次の通りです。
 
 - **ボタンの位置**
-
   - ページアクションは、ブラウザーのアドレスバーの中に表示されます。
   - ブラウザーアクションは、ブラウザーのツールバー内で、アドレスバーの外側に表示されます。
 
 - **ボタンの表示の有無**
-
   - ページアクションは既定で非表示であり（この既定値は `show_matches` および `hide_matches` [マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)プロパティで変更できます）、 [`pageAction.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) および [`pageAction.hide()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) を呼び出すことで、特定のタブを表示と非表示を切り替えることができます。
   - ブラウザーアクションは常に表示されます。
 

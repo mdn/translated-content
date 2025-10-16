@@ -26,7 +26,7 @@ getScreenDetails()
 ### 例外
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [Permissions-Policy](/ja/docs/Web/HTTP/Permissions_Policy) によって [Window Management API](/ja/docs/Web/API/Window_Management_API) の使用がブロックされている場合、またはユーザーが明示的にブラウザのパーミッションリクエストを拒否した場合にスローされます。
+  - : [Permissions-Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によって [Window Management API](/ja/docs/Web/API/Window_Management_API) の使用がブロックされている場合、またはユーザーが明示的にブラウザーのパーミッションリクエストを拒否した場合にスローされます。
 
 ## 例
 

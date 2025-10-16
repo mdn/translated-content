@@ -18,8 +18,7 @@ l10n:
 ## 関連情報
 
 - [Favicon](https://ja.wikipedia.org/wiki/Favicon)（ウィキペディア）
-- [link rel="icon"](/ja/docs/Web/HTML/Attributes/rel#icon) 要素のドキュメント。ページにファビコンを追加するのに使用します。
+- [link rel="icon"](/ja/docs/Web/HTML/Reference/Attributes/rel#icon) 要素のドキュメント。ページにファビコンを追加するのに使用します。
 - ツール
-
   - [Free favicon generator](https://favicon.io/)
   - [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)

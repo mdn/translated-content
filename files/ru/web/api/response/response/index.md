@@ -16,9 +16,7 @@ var myResponse = new Response(body, init);
 ### Параметры
 
 - _body_ {{optional_inline}}
-
   - : Объект, который определяет тело запроса. Может быть `null` (является значением по умолчанию), или:
-
     - {{domxref("Blob")}}
     - {{domxref("BufferSource")}}
     - {{domxref("FormData")}}
@@ -27,12 +25,10 @@ var myResponse = new Response(body, init);
     - {{domxref("USVString")}}
 
 - _init_ {{optional_inline}}
-
   - : An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
-
     - `status`: The status code for the reponse, e.g., `200`.
     - `statusText`: The status message associated with the status code, e.g., `OK`.
-    - `headers`: Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{domxref("ByteString")}} key/value pairs (see [HTTP headers](/ru/docs/Web/HTTP/Headers) for a reference).
+    - `headers`: Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{domxref("ByteString")}} key/value pairs (see [HTTP headers](/ru/docs/Web/HTTP/Reference/Headers) for a reference).
 
 ## Примеры
 
@@ -55,5 +51,5 @@ var myResponse = new Response(myBlob, init);
 ## Читай также
 
 - [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-**`willValidate`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の候補である送信可能要素である場合に `true` を返します。
+**`willValidate`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)の候補である送信可能要素である場合に `true` を返します。
 
 制約検証の候補から除外される要素には、`disabled`、`hidden`、`readonly`の属性を持つ要素、`type=button` や `type=reset` の入力要素、{{htmlelement("datalist")}} 要素や `<datalist>` 要素の祖先を持つ要素などがあります。
 

@@ -70,7 +70,7 @@ operand operator
 
 #### Деструктуризация
 
-Для более сложного присваивания в JavaScript есть синтаксис [деструктуризации](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) - это выражение, которое позволяет извлекать данные из массивов или объектов, используя синтаксис, который зеркалирует конструкторы массивов и литералы объектов.
+Для более сложного присваивания в JavaScript есть синтаксис [деструктуризации](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring) - это выражение, которое позволяет извлекать данные из массивов или объектов, используя синтаксис, который зеркалирует конструкторы массивов и литералы объектов.
 
 ```js
 var foo = ["one", "two", "three"];
@@ -97,7 +97,7 @@ var var1 = 3,
 | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | [Равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Equality) (`==`)                                  | Возвращает true, если операнды равны.                                                                                                                                              | `3 == var1` `"3" == var1` `3 == '3'` |
 | [Не равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Inequality) (`!=`)                             | Возвращает true, если операнды не равны.                                                                                                                                           | `var1 != 4 var2 != "3"`              |
-| [Строго равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Identity) (`===`)                          | Возвращает true, если операнды равны и имеют одинаковый тип. Смотрите также {{jsxref("Object.is")}} и [sameness in JS](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
+| [Строго равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Identity) (`===`)                          | Возвращает true, если операнды равны и имеют одинаковый тип. Смотрите также {{jsxref("Object.is")}} и [sameness in JS](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). | `3 === var1`                         |
 | [Строго не равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Nonidentity)(`!==`)                     | Возвращает true, если операнды не равны и/или имеют разный тип.                                                                                                                    | `var1 !== "3" 3 !== '3'`             |
 | [Больше](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Greater_than_operator) (`>`)                     | Возвращает true, если операнд слева больше операнда справа.                                                                                                                        | `var2 > var1 "12" > 2`               |
 | [Больше или равно](/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Greater_than_or_equal_operator) (`>=`) | Возвращает true, если операнд слева больше или равен операнду справа.                                                                                                              | `var2 >= var1 var1 >= 3`             |

@@ -5,11 +5,51 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ（あるいは重み）を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。
 
-{{EmbedInteractiveExample("pages/css/font-weight.html")}}
+{{InteractiveExample("CSS デモ: font-weight")}}
+
+```css interactive-example-choice
+font-weight: normal;
+```
+
+```css interactive-example-choice
+font-weight: bold;
+```
+
+```css interactive-example-choice
+font-weight: lighter;
+```
+
+```css interactive-example-choice
+font-weight: bolder;
+```
+
+```css interactive-example-choice
+font-weight: 100;
+```
+
+```css interactive-example-choice
+font-weight: 900;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 ## 構文
 
@@ -46,19 +86,15 @@ font-weight: unset;
 ### 値
 
 - `normal`
-
   - : 通常のフォントの太さです。 `400` と同じです。
 
 - `bold`
-
   - : 太字のフォントの太さです。 `700` と同じです。
 
 - `<number>`
-
   - : 1 以上 1000 以下の {{cssxref("&lt;number&gt;")}} 値です。数値が大きいと、数値が小さいものより太さが太い（または等しい）ことを表します。これにより、[可変フォント](#可変フォント)をきめ細かく制御することができます。可変フォントではない場合、指定した通りの太さが利用できない場合は、[太さの代替](#太さの代替)アルゴリズムが使用されます。100 で割り切れる数値は、下記の[一般的な太さ名との対応](#一般的な太さ名との対応)の節で説明されている一般的な太さ名に対応しています。
 
 - `lighter`
-
   - : フォントの太さが親要素よりも相対的に 1 つ細くなります。相対的な太さの計算に考慮されるフォントの太さは 4 つのみであることに注意してください。下記の[相対的な太さの意味](#相対的な太さの意味)を参照してください。
 
 - `bolder`
@@ -69,7 +105,6 @@ font-weight: unset;
 正確に一致する太さが利用できない場合、実際に表示される太さを定めるために以下の規則が使用されます。
 
 - 対象となる太さがが `400`～`500` で指定された場合
-
   - 利用できる太さを、対象値から `500` までの間で昇順で探します。
   - 一致するものがなければ、対象値未満の利用できる太さを降順で探します。
   - 一致するものがなければ、 `500` より大きい太さを昇順で探します。
@@ -199,7 +234,7 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 
 弱視の人は、 `font-weight` の値が `100` (Thin/Hairline) または `200` (Extra Light) の場合、特にフォントの[コントラスト比が低い場合](/ja/docs/Web/CSS/color#アクセシビリティ)は、テキストを読むのが難しくなることがあります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 公式定義

@@ -3,11 +3,62 @@ title: order
 slug: Web/CSS/order
 ---
 
-{{CSSRef}}
-
 **`order`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 또는 그리드 컨테이너 안에서 현재 요소의 배치 순서를 지정합니다. 컨테이너 아이템의 정렬 순서는 오름차순 `order` 값이고, 같은 값일 경우 소스 코드의 순서대로 정렬됩니다.
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 ## 구문
 
@@ -22,7 +73,8 @@ order: initial;
 order: unset;
 ```
 
-> **참고:** `order` 속성은 논리적인 순서나 탭 순서와는 전혀 상관 없이 **화면에 보이는 순서**에만 영향을 줍니다. 따라서 비시각적 매체에 적용해선 안됩니다.
+> [!NOTE]
+> `order` 속성은 논리적인 순서나 탭 순서와는 전혀 상관 없이 **화면에 보이는 순서**에만 영향을 줍니다. 따라서 비시각적 매체에 적용해선 안됩니다.
 
 ### 값
 

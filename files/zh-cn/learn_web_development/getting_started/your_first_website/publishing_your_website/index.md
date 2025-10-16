@@ -1,12 +1,11 @@
 ---
 title: 发布你的网站
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
-original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。本文描述如何以最简便的方式将你的简单示例上线至网络。
 
@@ -34,12 +33,13 @@ l10n:
 - 也有一些可用的免费服务比如 [Neocities](https://neocities.org/)、[Google Sites](https://sites.google.com/)、[Blogger](https://www.blogger.com) 和 [WordPress](https://wordpress.com/)。重复一遍，一分钱一分货，不过它们对于你的第一个网站是很理想的。
 - 许多公司会提供托管服务和域名。
 
-### 使用在线工具如 GitHub 或 Google App Engine
+### 使用在线工具
 
 有一些工具能让你在线发布网站：
 
 - [GitHub](https://github.com/) 是一个“社交编程”网站。它允许你上传代码库并将其储存在 [Git](https://git-scm.com/) 版本控制系统里。然后你可以在代码项目上进行协作，系统默认是开源的，也就是说世界上任何人都可以找到你 GitHub 上的代码，并进行使用、学习和改善。GitHub 有一个非常有用的特性叫 [GitHub Pages](https://pages.github.com/)，允许你发布网站。
-- [Google App Engine](https://cloud.google.com/appengine/) 是一个让你在 Google 的基础架构上构建和运行应用程序的强大的平台——无论你是需要从头开始构建一个多级的 Web 应用程序还是托管一个静态网站。更多信息请参阅[如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)。
+- [Netlify](https://www.netlify.com/) 是一个可以直接通过你的 GitHub 仓库提供静态网站托管的 Web 托管平台。它还提供许多其他功能，例如部署预览、无服务器函数计算和表单处理。
+- [Fly.io](https://fly.io/) 是一个允许你将应用程序和数据库部署到靠近用户位置的平台。如果你有需要后端服务的 Web 应用程序，这个平台会更适合你。
 
 尽管这类工具通常是免费的，但你只能使用有限的功能。
 

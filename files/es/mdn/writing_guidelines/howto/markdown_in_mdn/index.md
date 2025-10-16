@@ -246,7 +246,8 @@ Este HTML se representará como un cuadro resaltado:
 #### Observaciones
 
 ```md
-> **Observación:** **Así es como se escribe una observación.**
+> [!CALLOUT]
+> **Así es como se escribe una observación.**
 >
 > Puede tener varios párrafos.
 ```
@@ -351,11 +352,9 @@ Por ejemplo, esto es un `<dl>`:
 
 ````md
 - term1
-
   - : Mi descripción del term1
 
 - `term2`
-
   - : Mi descripción del term2
 
     Puede tener varios párrafos y también bloques de código:

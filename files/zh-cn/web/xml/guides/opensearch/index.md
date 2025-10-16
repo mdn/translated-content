@@ -1,12 +1,9 @@
 ---
 title: OpenSearch 描述格式
 slug: Web/XML/Guides/OpenSearch
-original_slug: Web/OpenSearch
 l10n:
   sourceCommit: 5309f49a300166809b098f1b7604d563f3332af2
 ---
-
-{{AddonSidebar}}
 
 [**OpenSearch 描述格式**](https://github.com/dewitt/opensearch)可用于描述搜索引擎的 Web 接口。这允许网站描述一个它自己的搜索引擎，浏览器或者其他客户端应用可以使用这个搜索引擎。OpenSearch 至少受到 Firefox、Safari 和 Chrome 的支持。（参见[参考资料](#参考资料)以获取其他浏览器文档的链接。）
 
@@ -41,10 +38,9 @@ OpenSearch 描述文件能[自动发现搜索插件](#自动发现搜索插件)�
 - InputEncoding
   - : 在将输入提交给搜索引擎时使用的[字符编码](/zh-CN/docs/Glossary/Character_encoding)。
 - Image
-
   - : 搜索引擎图标的 URL。在可能的情况下，包含一个 16x16 的 `image/x-icon` 类型的图标（例如 `/favicon.ico`），以及一个 64x64 的 `image/jpeg` 或 `image/png` 类型的图标。
 
-    URL 也可以使用 [`data:` URL 方案](/zh-CN/docs/Web/URI/Schemes/data)。（你可以在 [`data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) 直接从图标文件生成 `data:` URL。）
+    URL 也可以使用 [`data:` URL 方案](/zh-CN/docs/Web/URI/Reference/Schemes/data)。（你可以在 [`data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) 直接从图标文件生成 `data:` URL。）
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -60,11 +56,9 @@ OpenSearch 描述文件能[自动发现搜索插件](#自动发现搜索插件)�
     ![Firefox 搜索框中显示来自 Google 的搜索建议](searchsuggestionsample.png)
 
 - Url
-
   - : 描述搜索用的 URL。`template` 属性指示搜索查询的基本 URL。
 
     Firefox 支持三种 URL 类型：
-
     - `type="text/html"` 指定真实搜索查询的 URL。
     - `type="application/x-suggestions+json"` 指定用以获取搜索建议的 URL。在 Firefox 63 及以后的版本中，也接受作为其别名的 `type="application/json"`。
     - `type="application/x-moz-keywordsearch"` 指定在地址栏中输入关键词搜索时使用的 URL。其仅受 Firefox 的支持。

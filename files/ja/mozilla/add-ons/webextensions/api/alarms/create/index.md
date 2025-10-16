@@ -20,16 +20,14 @@ browser.alarms.create(
 
 - `name`{{optional_inline}}
   - : `string`. アラームの名前を指定します。デフォルト値は空の文字列です。
-    この値は {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.clear()')}} で特定のアラームを参照する際に用います。また、{{WebExtAPIRef('alarms.onAlarm')}} のリスナ関数に渡すオブジェクト {{WebExtAPIRef('alarms.Alarm')}} のプロパティ `name` からも参照されます。
+    この値は {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.clear()')}} で特定のアラームを参照する際に用います。また、{{WebExtAPIRef('alarms.onAlarm')}} のリスナー関数に渡すオブジェクト {{WebExtAPIRef('alarms.Alarm')}} のプロパティ `name` からも参照されます。
     アラームの名前は常に固有です（スコープはアドオンごとに区切られます）。以前そのアドオンが作成したアラーム名に一致する文字列を `name` に与えた場合、既存のアラームは削除されて発火しなくなります。
 - `alarmInfo`{{optional_inline}}
-
   - : `object`. アラームが最初に発火する時刻を指定する引数です。時刻の指定には絶対値（`when` プロパティ）か、アラーム設定時を基準とした時間（`delayInMinutes` プロパティ）のどちらかで指定します。アラームを周期的に発火させるには `periodInMinutes` プロパティも指定します。
 
     Chrome の場合、パッケージ化された状態でアドオンが読み込まれると、アラームを 1 分に 1 回以上の頻度で呼び出すことはできません。ここでアドオンが `delayInMinutes` や `when` に 1 未満の値を指定しようとすると、アラームは 1 分後に発火します。アドオンが `periodInMinutes` に 1 未満の値を指定した場合、アラームは 1 分おきに発火します。
 
     `alarmInfo` オブジェクトで指定できるプロパティは以下の通りです。
-
     - `when`{{optional_inline}}
       - : `double`. アラームが最初に発火する時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で指定します。現在までの経過ミリ秒は [`Date.now()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now) で取得できます。`when` を指定した場合`は delayInMinutes` を指定しないでください。
     - `delayInMinutes`{{optional_inline}}
@@ -78,7 +76,7 @@ chrome.alarms.create("my-periodic-alarm", {
 ```
 
 > [!NOTE]
-> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

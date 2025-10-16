@@ -19,7 +19,7 @@ slug: Web/API/Node/nodeName
 | [Document](/zh-CN/docs/Web/API/Document)                           | "#document"                                                                                    |
 | [DocumentFragment](/zh-CN/docs/Web/API/DocumentFragment)           | "#document-fragment"                                                                           |
 | [DocumentType](/zh-CN/docs/Web/API/DocumentType)                   | 等同于 [`DocumentType.name`](/zh-CN/docs/DOM/DocumentType.name) 属性的值                       |
-| [Element](/zh-CN/docs/Web/API/element)                             | 等同于 [`Element.tagName`](/zh-CN/docs/Web/API/Element/tagName) 属性的值                       |
+| [Element](/zh-CN/docs/Web/API/Element)                             | 等同于 [`Element.tagName`](/zh-CN/docs/Web/API/Element/tagName) 属性的值                       |
 | [Entity](/zh-CN/docs/DOM/Entity)                                   | 实体名称                                                                                       |
 | [EntityReference](/zh-CN/docs/DOM/EntityReference)                 | 实体引用名称                                                                                   |
 | [Notation](/zh-CN/docs/DOM/Notation)                               | Notation 名称                                                                                  |

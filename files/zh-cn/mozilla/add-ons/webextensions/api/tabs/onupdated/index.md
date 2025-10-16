@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
-{{AddonSidebar}}
-
 标签页更新时触发。
 
 当用户在标签页中导航到新 URL 时，通常会生成多个 `onUpdated` 事件，因为 {{WebExtAPIRef("tabs.Tab")}} 对象的各种属性会被更新。这包括 `url`，但也可能包括 `title` 和 `favIconUrl` 属性。`status` 属性会在 `"loading"` 和 `"complete"` 之间循环。
@@ -40,9 +38,7 @@ browser.tabs.onUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。更新的标签页的 ID。
     - `changeInfo`
@@ -51,15 +47,11 @@ browser.tabs.onUpdated.hasListener(listener)
       - : {{WebExtAPIRef('tabs.Tab')}}。标签页的新状态。
 
 - `filter` {{optional_inline}}
-
   - : `object`。一组过滤器，限制发送给此监听器的事件。此对象可以具有以下属性之一或多个。仅当事件满足提供的所有过滤器时才发送事件。
-
     - `urls`
       - : `Array`。一个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)数组。仅当标签页的当前 `url` 属性匹配任意一个模式时才触发事件。
     - `properties`
-
       - : `Array`。一个由支持的 {{WebExtAPIRef("tabs.Tab")}} 对象属性名称组成的字符串数组。仅当更改了数组中的某个属性时才触发事件。可以使用这些属性：
-
         - `"attention"`
         - `"autoDiscardable"`
         - `"audible"`
@@ -74,7 +66,8 @@ browser.tabs.onUpdated.hasListener(listener)
         - `"title"`
         - `"url"`
 
-        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
+        > [!NOTE]
+        > `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
 
     - `tabId`
       - : `Integer`。仅针对此 ID 标识的标签页触发该事件。
@@ -225,7 +218,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onUpdated) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onUpdated) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
@@ -256,5 +249,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

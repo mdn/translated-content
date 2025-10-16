@@ -1,12 +1,9 @@
 ---
 title: MDN Web Docs の変更履歴
 slug: MDN/Writing_guidelines/Changelog
-original_slug: MDN/Changelog
 l10n:
-  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 この文書は MDN コンテンツのプロセス、構造、ベストプラクティスが変更されたこと、いつ変更されたかを記録するものです。これは、定期的に協力する人が、 MDN のコンテンツ作成プロセスで何が変わったかを確認するのに役立ちます。
 
@@ -53,7 +50,10 @@ CSS スタイルガイドを複数更新し、 Markdown への移行を反映し
 Web IDL の[インターフェイスミックスイン](https://heycam.github.io/webidl/#idl-interface-mixins)は、 Web API を定義するための仕様書で使用されています。
 ウェブ開発者にとっては、直接見ることはできませんが、 API 定義の繰り返しを避けるためのヘルパーとして機能しています。
 
-これまでは、ミックスインクラス自体にランディングページを定義し、その下のサブページに定義されたメンバーを配置してから、それらのミックスインを実装したインターフェイスのランディングページからリンクするのが一般的でした。ミックスインは仕様上の構成要素であり、ミックスインクラスを使って定義されたメンバーにアクセスすることはないため、これは読者にとって誤解を招きやすいものでした。この混乱を避けるために、ミックスインで定義されたメンバーのページを、実装クラスのページの直下に配置しました。詳細については、 [API リファレンスの書き方](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins)に関するガイドページと、この変更に至るまでの [mdn/content#1940](https://github.com/mdn/content/issues/1940) の議論を参照してください。
+これまでは、ミックスインクラス自体にランディングページを定義し、その下のサブページに定義されたメンバーを配置してから、それらのミックスインを実装したインターフェイスのランディングページからリンクするのが一般的でした。
+ミックスインは仕様上の構成要素であり、ミックスインクラスを使って定義されたメンバーにアクセスすることはないため、これは読者にとって誤解を招きやすいものでした。
+この混乱を避けるために、ミックスインで定義されたメンバーのページを、実装クラスのページの直下に配置しました。
+詳細については、 [API リファレンスの書き方](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins)に関するガイドページと、この変更に至るまでの [mdn/content#1940](https://github.com/mdn/content/issues/1940) の議論を参照してください。
 
 ## 2021 年 1 月
 

@@ -98,4 +98,4 @@ git push
 
 Вы можете написать более подходящее сообщение вместо _another commit_, чтобы уточнить, что именно вы только что изменили.
 
-Мы едва коснулись Git. Чтобы узнать больше, начните с нашей статьи [Git и GitHub](/ru/docs/Learn/Tools_and_testing/GitHub).
+Мы едва коснулись Git. Чтобы узнать больше, начните с нашей статьи [Git и GitHub](/ru/docs/Learn_web_development/Core/Version_control).

@@ -10,7 +10,8 @@ l10n:
 
 **`Notification()`** コンストラクターは、ユーザー通知を表す新しい {{domxref("Notification")}} オブジェクトのインスタンスを生成します。
 
-> **メモ:** {{domxref("ServiceWorkerGlobalScope")}} 内で `Notification()` コンストラクターを使用して通知を作成しようとすると、`TypeError` が発生します。代わりに {{domxref("ServiceWorkerRegistration.showNotification()")}} を使用してください。
+> [!NOTE]
+> {{domxref("ServiceWorkerGlobalScope")}} 内で `Notification()` コンストラクターを使用して通知を作成しようとすると、`TypeError` が発生します。代わりに {{domxref("ServiceWorkerRegistration.showNotification()")}} を使用してください。
 
 ## 構文
 
@@ -24,9 +25,7 @@ new Notification(title, options)
 - `title`
   - : 通知ウィンドウの最上部に表示される、通知のためのタイトルを定義します。
 - `options` {{optional_inline}}
-
   - : 通知に適用するカスタム設定を含むオプションオブジェクトです。使用できるオプションは以下のとおりです。
-
     - `dir` {{optional_inline}}
       - : 通知を表示する方向です。既定値は `auto` で、ブラウザーの言語設定の振る舞いが適用されますが、 `ltr` と `rtl` の値で振る舞いを上書きできます (ただし、ほとんどのブラウザーがこれらの設定を無視しているようですが)。
     - `lang` {{optional_inline}}
@@ -57,9 +56,7 @@ new Notification(title, options)
       - : 通知が自動的に閉じるのではなく、ユーザーがクリックするか解除するまでアクティブな状態を維持すべきであることを示します。
         既定値は `false` です。
     - `actions` {{optional_inline}}
-
       - : 通知で表示するアクションの配列です。配列内のそれぞれの要素は、以下のメンバーを持つオブジェクトです。
-
         - `action`
           - : 通知上に表示されるユーザーアクションを特定する文字列。
         - `title`

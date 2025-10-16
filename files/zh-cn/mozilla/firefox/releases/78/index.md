@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 78 中影响开发者的变更信息。Firefox 78 于 2020 年 6 月 30 日发布。
 
 参见 Mozilla hacks 上的 [Firefox 78 中的新增功能：DevTools 的改进，新的正则表达式引擎以及大量的 Web 平台更新](https://hacks.mozilla.org/2020/06/new-in-firefox-78/)。
@@ -36,19 +34,16 @@ l10n:
 
 - 现在，{{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":where", ":where()")}} 伪类已默认启用（[Firefox bug 1632646](https://bugzil.la/1632646)）。
 - 现支持不带前缀的 {{CSSxRef(":read-only")}} 和 {{CSSxRef(":read-write")}} 伪类（[Firefox bug 312971](https://bugzil.la/312971)）。
-
-  - 此外，`:read-write` 样式不再应用于禁用的 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 和 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) 元素，之前的行为违反了 [HTML 规范](https://html.spec.whatwg.org/#selector-read-write)（[Firefox bug 888884](https://bugzil.la/888884)）。
+  - 此外，`:read-write` 样式不再应用于禁用的 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 和 [`<textarea>`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea) 元素，之前的行为违反了 [HTML 规范](https://html.spec.whatwg.org/#selector-read-write)（[Firefox bug 888884](https://bugzil.la/888884)）。
 
 ### JavaScript
 
 - 现支持 [`Intl.ListFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) API（[Firefox bug 1589095](https://bugzil.la/1589095)）。
 - 扩展了 [`Intl.NumberFormat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 构造函数，以支持 [Intl.NumberFormat Unified API 提案](https://github.com/tc39/proposal-unified-intl-numberformat)中指定的新选项（[Firefox bug 1633836](https://bugzil.la/1633836)）。其中包括：
-
   - [科学计数法支持](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#科学工程或紧凑型标记)
   - [单位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#单位格式化)、[货币](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#货币格式化)和[符号显示](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#符号显示)格式化
 
 - {{JSxRef("RegExp")}} 引擎[已更新](https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/)，现在支持 ECMAScript 2018 中引入的所有新特性：
-
   - [后行断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)（[Firefox bug 1225665](https://bugzil.la/1225665)）
   - {{JSxRef("RegExp.prototype.dotAll")}}（[Firefox bug 1361856](https://bugzil.la/1361856)）
   - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)（[Firefox bug 1361876](https://bugzil.la/1361876)）

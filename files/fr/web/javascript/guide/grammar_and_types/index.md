@@ -277,7 +277,6 @@ console.log(MON_TABLEAU); // ["HTML", "CSS", "JavaScript"]
 La dernière version du standard ECMAScript définit sept types de données :
 
 - Six types de données primitifs :
-
   - Type booléen : `true` et `false`.
   - Type nul (`null`), un mot-clé spécial pour indiquer une valeur nulle (au sens informatique). JavaScript étant sensible à la casse, `null` n'est pas `Null`, `NULL`, ou toute autre variante.
   - Un type pour les valeurs indéfinies (`undefined`).

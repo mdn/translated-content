@@ -100,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### 遍历对象
 
-使用[数组解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构数组)，你可以很容易地遍历对象。
+使用[数组解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#解构数组)，你可以很容易地遍历对象。
 
 ```js
 // 使用 for...of 循环
@@ -126,7 +126,7 @@ Object.entries(obj).forEach(([key, value]) => {
 ## 参见
 
 - [`core-js` 中 `Object.entries` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

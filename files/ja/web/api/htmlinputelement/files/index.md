@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("File and Directory Entries API")}}
 
-**`HTMLInputElement.files`** プロパティを通じて、[`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素で選択された {{domxref("FileList")}} にアクセスできます。
+**`HTMLInputElement.files`** プロパティを通じて、[`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file) 要素で選択された {{domxref("FileList")}} にアクセスできます。
 
 ## 値
 

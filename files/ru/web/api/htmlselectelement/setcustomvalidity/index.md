@@ -27,4 +27,4 @@ selectElt.setCustomValidity(string);
 
 ## Смотрите также
 
-- [Проверка(валидация) форм.](/ru/docs/Web/HTML/Constraint_validation)
+- [Проверка(валидация) форм.](/ru/docs/Web/HTML/Guides/Constraint_validation)

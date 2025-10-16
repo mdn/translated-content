@@ -30,7 +30,7 @@ original_slug: Learn/Server-side/Django/Testing
 
 ## 개요
 
-이제까지 개발된 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 의 현재 상태는 다음과 같다. 모든 book과 author의 목록, `Book` 과 `Author` 항목별 상세 뷰, `BookInstance` 갱신용 페이지, `Author` 항목의 생성,갱신,삭제를 위한 페이지( [forms tutorial](/ko/docs/Learn/Server-side/Django/Forms) 편의 도전과제도 완성 했다면 `Book` 편집 페이지도 포함)가 완성 되었다. 상대적으로 작은 이 사이트조차, 각 페이지가 기대한 대로 동작하는지 손으로 대강 체크하는 것만 해도 몇 분 정도는 걸린다. 사이트가 성장하면서 수정사항이 늘어날수록 적절하게 동작하는지 우리가 수동으로 체크해야 하는 양도 늘어날 수 밖에 없다. 손으로 직접 테스트 하는 방법을 계속 유지한다면, 결국은 대부분의 시간을 테스트에 사용하고 코드를 개선할 수 있는 시간은 거의 없어질 것이다.
+이제까지 개발된 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 의 현재 상태는 다음과 같다. 모든 book과 author의 목록, `Book` 과 `Author` 항목별 상세 뷰, `BookInstance` 갱신용 페이지, `Author` 항목의 생성,갱신,삭제를 위한 페이지( [forms tutorial](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Forms) 편의 도전과제도 완성 했다면 `Book` 편집 페이지도 포함)가 완성 되었다. 상대적으로 작은 이 사이트조차, 각 페이지가 기대한 대로 동작하는지 손으로 대강 체크하는 것만 해도 몇 분 정도는 걸린다. 사이트가 성장하면서 수정사항이 늘어날수록 적절하게 동작하는지 우리가 수동으로 체크해야 하는 양도 늘어날 수 밖에 없다. 손으로 직접 테스트 하는 방법을 계속 유지한다면, 결국은 대부분의 시간을 테스트에 사용하고 코드를 개선할 수 있는 시간은 거의 없어질 것이다.
 
 자동화된 테스트는 이러한 문제를 진짜로 해결할 수 있다! 명백한 이점은 수동 테스트보다는 훨신 빠르고, 훨씬 세부적인 내용까지도 테스트 할수 있으며, 매번 정확히 같은 기능을 테스트할 수 있다는 점(사람이 테스트한다면 결코 신뢰성있게 할 수 없는 부분!) 이다. 자동화 테스트는 빠르기 때문에 좀 더 정기적으로 실행할 수 있고, 테스트 실패시 코드가 기대대로 동작하지 않았던 부분을 정확히 지목할 수 있다.
 
@@ -49,7 +49,8 @@ original_slug: Learn/Server-side/Django/Testing
 - Integration tests ( 통합 테스트 )
   - : 유닛 테스트를 완료한 각각의 독립적인 콤포넌트들이 함께 결합되어 수행하는 동작을 검증한다. 통합 테스트는 콤포넌트간에 요구되는 상호작용을 검사하며, 각 콤포넌트의 내부적인 동작까지 검증할 필요는 없다. 이 테스트는 단지 전체 웹사이트에 걸쳐 각 콤포넌트가 결합하여 수행하는 동작을 대상으로 한다.
 
-> **참고:** **참고사항 :** 이외의 일반적인 테스트의 종류는 다음과 같다. 블랙박스, 화이트 박스, 수동, 자동, 카나리아, 스모크, 적합성 평가(conformance), 인수(acceptance), 기능성, 시스템, 성능, 로드, 스트레스 테스트등. 더 자세한 정보는 위의 키워드로 검색 바람.
+> [!NOTE]
+> **참고사항 :** 이외의 일반적인 테스트의 종류는 다음과 같다. 블랙박스, 화이트 박스, 수동, 자동, 카나리아, 스모크, 적합성 평가(conformance), 인수(acceptance), 기능성, 시스템, 성능, 로드, 스트레스 테스트등. 더 자세한 정보는 위의 키워드로 검색 바람.
 
 ### Django가 testing을 위해 제공하는 것은?
 
@@ -128,7 +129,7 @@ catalog/
 당신의 LocalLibrary 프로젝트에서 위와 같은 구조의 파일을 만드십시오. \_\_init\_\_.py 파일은 비어있는 파일입니다.(이것은 Python에게 이 디렉토리가 패키지임을 알려줍니다) skeleton 테스트파일인 /catalog/tests.py를 복사하여 이름을 바꿔서 위의 세개의 테스트파일을 만드십시오.
 
 > [!NOTE]
-> 이 skeleton 테스트파일 **/catalog/tests.py 은 우리가** [Django skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website) 를 만들었을 때 자동으로 생성됩니다. 당신의 테스트들을 여기에 모두 넣는 것도 괜찮습니다만, 당신이 적절하게 테스트를 해나가면 당신은 금방 매우 크고, 관리할 필요 없는 테스트파일로 끝나게 될 것입니다.
+> 이 skeleton 테스트파일 **/catalog/tests.py 은 우리가** [Django skeleton website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) 를 만들었을 때 자동으로 생성됩니다. 당신의 테스트들을 여기에 모두 넣는 것도 괜찮습니다만, 당신이 적절하게 테스트를 해나가면 당신은 금방 매우 크고, 관리할 필요 없는 테스트파일로 끝나게 될 것입니다.
 >
 > 이 skeleton 파일은 우리에게 필요하지 않으니 지우십시오.
 
@@ -229,7 +230,8 @@ Destroying test database for alias 'default'...
 
 여기서 우리는 테스트 하나가 실패했음을 알 수 있으며, 실패한 함수와 실패한 이유를 정확히 볼 수 있습니다 (False가 True가 아니기 때문에 실패하는 것이 당연합니다).
 
-> **참고:** **팁**: 우리는 위의 출력 결과를 통해서 객체와 메소드에 설명적인, 정보가 많은 이름을 사용하는 것이 테스트 결과를 이해하는데 도움이 된다는 것을 배울 수 있습니다.
+> [!NOTE]
+> **팁**: 우리는 위의 출력 결과를 통해서 객체와 메소드에 설명적인, 정보가 많은 이름을 사용하는 것이 테스트 결과를 이해하는데 도움이 된다는 것을 배울 수 있습니다.
 
 **굵게** 표시된 텍스트는 보통은 테스트 결과에 출력되지 않습니다 (우리가 테스트에서 사용한 `print()` 함수가 출력한 것입니다). 이는 `setUpTestData()` 가 클래스 당 한 번, `setUp()` 이 메소드 당 한 번 실행되는 것을 보여줍니다.
 
@@ -267,7 +269,8 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 
 테스트를 어떻게 돌릴지와 어떤 내용을 테스트할지를 알았으니 이제 실제 예제들을 봅시다.
 
-> **참고:**우리는 가능한 모든 테스트를 작성하지는 않을 것입니다. 하지만 아래의 예제만으로도 테스트가 어떻게 동작하는지와 어떤 테스트를 작성할 수 있을지 아이디어를 얻을 수 있을 것입니다.
+> [!NOTE]
+> 우리는 가능한 모든 테스트를 작성하지는 않을 것입니다. 하지만 아래의 예제만으로도 테스트가 어떻게 동작하는지와 어떤 테스트를 작성할 수 있을지 아이디어를 얻을 수 있을 것입니다.
 
 ### 모델
 
@@ -348,7 +351,8 @@ self.assertEquals(field_label, 'first name')
 - 우리는 `author.first_name.verbose_name` 을 이용해서 `verbose_name`을 얻지 않습니다. 왜냐면 `author.first_name`은 문자열이지 우리가 속성에 접근할 수 있는 `first_name`객체가 아니기 때문입니다. 대신 우리는 author 객체의 `_meta` 속성을 이용해서 필드에 접근하여 필요한 정보를 얻습니다.
 - 우리는 `assertTrue(field_label == 'first name'` 대신 `assertEquals(field_label,'first name')` 을 이용했습니다. 왜냐면 만약 테스트가 실패할 경우 후자는 실제 라벨의 값을 알려주어 디버깅을 조금 더 용이하게 만들어주기 때문입니다.
 
-> **참고:** `last_name` 과 `date_of_birth` 필드의 라벨에 대한 테스트와 `last_name` 필드의 길이에 대한 테스트는 생략되었습니다. 기존 테스트의 이름 작성 규칙 (naming convention)과 테스트 작성법을 이용해서 직접 테스트를 작성해보세요.
+> [!NOTE]
+> `last_name` 과 `date_of_birth` 필드의 라벨에 대한 테스트와 `last_name` 필드의 길이에 대한 테스트는 생략되었습니다. 기존 테스트의 이름 작성 규칙 (naming convention)과 테스트 작성법을 이용해서 직접 테스트를 작성해보세요.
 
 우리는 우리가 작성한 메서드도 테스트를 해야 합니다. 객체의 이름이 우리가 예상한 대로 "Last Name", "First Name" 규칙에 맞게 생성되었는지와 `Author` 객체의 URL이 우리가 예상한 대로 생성되는지를 보면 됩니다.
 
@@ -382,7 +386,8 @@ AssertionError: 'Died' != 'died'
 
 이는 아주 사소한 버그이지만, 테스트를 작성하는 것이 코드를 작성할 때 하는 가정들을 얼마나 꼼꼼히 체크하는지를 보여줍니다.
 
-> **참고:**date_of_death 필드의 라벨을 (/catalog/models.py) "died" 로 바꾸고 테스트를 다시 돌려보세요.
+> [!NOTE]
+> date_of_death 필드의 라벨을 (/catalog/models.py) "died" 로 바꾸고 테스트를 다시 돌려보세요.
 
 다른 모델을 테스트하는 패턴도 이와 비슷하므로 여기서는 더 다루지 않겠습니다. 다른 모델에 대한 테스트 코드도 직접 작성해 보세요.
 

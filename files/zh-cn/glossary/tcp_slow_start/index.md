@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 {{glossary('TCP')}} 慢启动有助于根据网络能力提高传输速度。它在最初不知道网络能力的情况下实现这一目标，并且不会造成拥塞。{{glossary('TCP')}} 慢启动本身是一种用于检测数据包传输可用带宽并平衡网络连接速度的算法。它能防止出现最初能力未知的网络拥塞，并且逐渐增加传输的信息量，直到找到网络的最大容量。
 
 要实现 TCP 慢启动，拥塞窗口（_cwnd_）为数据源设置了在接收到确认（ACK）之前可以在网络上传输的数据量的上限，慢开始阈值（_ssthresh_）则确定了慢启动的开始（和停止）。当建立新连接时，cwnd 被初始化为一个 TCP 数据或确认包，并等待确认（ACK）。当收到 ACK 时，拥塞窗口会逐步增加，直到 _cwnd_ 大于 _ssthresh_。慢开始也会在遇到拥塞时终止。
@@ -17,5 +15,5 @@ l10n:
 
 ## 参见
 
-- [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/How_browsers_work)
-- [HTTP 概览](/zh-CN/docs/Web/HTTP/Overview)
+- [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/Guides/How_browsers_work)
+- [HTTP 概览](/zh-CN/docs/Web/HTTP/Guides/Overview)

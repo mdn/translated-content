@@ -49,7 +49,7 @@ Il est tout à fait possible de combiner des valeurs avec différentes unités d
 
 ```html
 <img
-  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  src="/shared-assets/images/examples/web-docs-sprite.svg"
   alt="MDN Web Docs"
   class="logo" />
 ```
@@ -103,4 +103,4 @@ Avec ces règles, la valeur pour `font-size` vaudra au moins `2rems` ou deux foi
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [Valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Valeurs et unités en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

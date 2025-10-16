@@ -94,14 +94,14 @@ while (true) {
 ```
 
 上述的程式碼會在每秒產生一個類型為「ping」的事件。每一個事件的資料是一個 JSON 物件，內容為事件產生時的 ISO 8601 時間戳。同時會隨機發送一個簡易訊息（沒有事件類型）。
-迴圈的執行會獨立於連線的狀態，，所以在迴圈裡必須檢查連線的狀態，若斷線了要關閉連線（譬如，客戶端關閉了網頁）。
+迴圈的執行會獨立於連線的狀態，所以在迴圈裡必須檢查連線的狀態，若斷線了要關閉連線（譬如，客戶端關閉了網頁）。
 
 > [!NOTE]
 > 你可以從下列的 Github 文章中找到包含本文所使用程式碼的完整範例——參考 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## 錯誤處理
 
-當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
+當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
 
 ```js
 evtSource.onerror = function (err) {

@@ -3,8 +3,6 @@ title: hyphens
 slug: Web/CSS/hyphens
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`hyphens`** 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。
 
 连字规则具有语言特定性。在 HTML 中，语言由 lang 属性决定，浏览器只会在当前属性存在且有合适的连字字典可用的情况使用连字进行连接。在 XML 中，必须使用 `xml:lang` 属性。
@@ -34,7 +32,8 @@ hyphens: unset;
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in [Suggesting line break opportunities](#suggesting_line_break_opportunities), should be preferred over automatically selecting break points whenever possible.
 
-> **备注：** `auto` 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。你必须使用 HTML 属性 `lang` 指定语言，以确保自动断词在你选择的语言中得到应用。
+> [!NOTE]
+> `auto` 的行为取决于语言是否被正确地设置，以便可以选择适当的断词规则。你必须使用 HTML 属性 `lang` 指定语言，以确保自动断词在你选择的语言中得到应用。
 
 ## 建议换行点
 

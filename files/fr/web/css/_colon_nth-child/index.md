@@ -2,27 +2,66 @@
 title: :nth-child
 slug: Web/CSS/:nth-child
 l10n:
-  sourceCommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
+{{InteractiveExample("Démonstration CSS&nbsp;: :nth-child", "tabbed-shorter")}}
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:nth-child(-n + 3) {
+  border: 2px solid orange;
+  margin-bottom: 1px;
+}
+
+li:nth-child(even) {
+  background-color: lightyellow;
+}
+```
+
+```html interactive-example
+<p>Champions d'athlétisme&nbsp;:</p>
+<ul>
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
+</ul>
+```
 
 > [!NOTE]
 > Avec la syntaxe `element:nth-child()`, le nombre d'enfants compte les enfants voisins de n'importe quel type&nbsp;; toutefois, il y a uniquement correspondance lorsque l'élément _à cette position parmi les enfants_ correspond aux autres composantes du sélecteur.
 
 ## Syntaxe
 
-`:nth-child()` prend un seul argument, qui décrit un motif de correspondance basé sur les indices des éléments d'une liste de voisin. Les indices des éléments démarrent à 1.
-
 ```css-nolint
-:nth-child(<nieme> [of <complex-selector-list>]?) {
+:nth-child([ <An+B> | even | odd ] [of <complex-selector-list>]?) {
   /* ... */
 }
 ```
+
+### Paramètres
+
+`:nth-child()` prend un seul argument, qui décrit un motif de correspondance basé sur les indices des éléments d'une liste de voisin. Les indices des éléments démarrent à 1.
 
 ### Valeurs avec un mot-clé
 
@@ -34,9 +73,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child()`** permet de
 ### Notation fonctionnelle
 
 - `<An+B>`
-
   - : Représente les éléments dont la position numérique au sein de la liste des voisins correspond au motif `An+B`, pour chaque entier positif `n`, où&nbsp;:
-
     - `A` est un incrément entier,
     - `B` est un décalage entier,
     - `n` représente les entiers positifs à partir de 0.
@@ -179,7 +216,7 @@ div em {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple_détaillé', 550, 550)}}
+{{EmbedLiveSample('exemple_détaillé', 550, 550)}}
 
 ### Utiliser `of`
 
@@ -254,7 +291,7 @@ li:nth-child(even of .noted) {
 
 Les éléments avec `class="noted"` ont une bordure inférieure plus épaisse et les éléments 3, 10 et 17 ont un arrière-plan coloré, car ils sont les éléments _pairs_ de la liste des éléments ayant `class="noted"`.
 
-{{EmbedLiveSample('', 550, 120)}}
+{{EmbedLiveSample('utiliser_of', 550, 120)}}
 
 ### Syntaxe `of` et sélecteur du n-ième enfant
 
@@ -336,7 +373,7 @@ Dans le premier cas, on applique le style aux trois premiers éléments de la li
 
 Dans le second cas, on applique le style aux éléments ayant `class="noted"` s'ils font partie des trois premiers éléments de la liste.
 
-{{EmbedLiveSample('', 550, 150)}}
+{{EmbedLiveSample('syntaxe_of_et_sélecteur_du_n-ième_enfant', 550, 150)}}
 
 ### Utiliser `of` pour corriger les tableaux à bandes alternées
 
@@ -411,11 +448,11 @@ Dans le premier tableau, on utilise simplement `:nth-child(even)`, qui cible la 
 
 Dans le second tableau, on utilise la syntaxe `of` afin de cibler uniquement les lignes (`tr`) qui **ne sont pas** masquées, à l'aide de `:nth-child(even of :not([hidden]))`.
 
-{{EmbedLiveSample('', 550, 180)}}
+{{EmbedLiveSample('utiliser_of_pour_corriger_les_tableaux_à_bandes_alternées', 550, 180)}}
 
 ### Mettre en forme une colonne de tableau
 
-Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément [`<col>`](/fr/docs/Web/HTML/Element/col), car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes [`<tr>`](/fr/docs/Web/HTML/Element/tr)). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
+Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col), car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
 
 Dans cet exemple, on applique différents styles pour chaque colonne.
 
@@ -469,7 +506,7 @@ tbody tr :nth-child(3) {
 
 #### Résultat
 
-{{EmbedLiveSample('', 100, 200)}}
+{{EmbedLiveSample('mettre_en_forme_une_colonne_de_tableau', 100, 200)}}
 
 ## Specifications
 

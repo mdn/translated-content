@@ -44,5 +44,5 @@ xhr.send(null);
 
 ## 参考内容
 
-- List of [HTTP response codes](/zh-CN/docs/Web/HTTP/Status)
+- List of [HTTP response codes](/zh-CN/docs/Web/HTTP/Reference/Status)
 - [HTTP](/zh-CN/docs/Web/HTTP)

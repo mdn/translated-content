@@ -1,10 +1,9 @@
 ---
 title: Setting up a Node development environment
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
-original_slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 現在你已經了解 Express 的目的了，接下來繼續說明如何設定和測試 Windows、Linux (Ubuntu)和 Mac OS X 上的 Node/Express 開發環境。不管你用的是什麼作業系統，你都能在本文中找到開發 Express 應用的入門需知。
 
@@ -70,7 +69,6 @@ Node 有許多[版本](https://nodejs.org/en/blog/release/)，更新的版本代
 直接使用安裝檔吧！
 
 1. 下載需要的安裝檔：
-
    1. 開啟 <https://nodejs.org/en/>
    2. 對於大部分的使用者來說，直接下載 LTS 版本
 

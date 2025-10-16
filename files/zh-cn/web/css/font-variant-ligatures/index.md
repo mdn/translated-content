@@ -3,11 +3,46 @@ title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 ---
 
-{{CSSRef}}
-
 **`font-variant-ligatures`** 属性控制着其所应用元素文本的 {{Glossary("ligature", "ligatures")}} 与 {{Glossary("contextual forms")}} 。会使文字最终的表现形式更加统一。
 
-{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
+{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+
+```css interactive-example-choice
+font-variant-ligatures: normal;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: no-common-ligatures;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: common-ligatures;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 ## Syntax
 
@@ -39,30 +74,22 @@ font-variant-ligatures: unset;
 - `none`
   - : 不使用任何连字，包括常规的形式
 - _\<common-lig-values>_
-
   - : These values control the most common ligatures, like for `fi`, `ffi`, `th` or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
-
     - `common-ligatures` activating these ligatures. Note that the keyword `normal` activates these ligatures.
     - `no-common-ligatures` deactivating these ligatures.
 
 - _\<discretionary-lig-values>_
-
   - : These values control specific ligatures, specific to the font and defined by the type designer. They correspond to the OpenType values `dlig`. Two values are possible:
-
     - `discretionary-ligatures` activating these ligatures.
     - `no-discretionary-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
 
 - _\<historical-lig-values>_
-
   - : These values control the ligatures used historically, in old books, like the German tz digraph being displayed as ꜩ. They correspond to the OpenType values `hlig`. Two values are possible:
-
     - `historical-ligatures` activating these ligatures.
     - `no-historical-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
 
 - _\<contextual-alt-values>_
-
   - : These values control whether letters adapt to their context—that is, whether they adapt to the surrounding letters. These values correspond to the OpenType values `calt`. Two values are possible:
-
     - `contextual` specifies that the contextual alternates are to be used. Note that the keyword `normal` usually activates these ligatures too.
     - `no-contextual` prevents their use.
 

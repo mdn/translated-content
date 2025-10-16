@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 通过使用底层操作系统的通知机制向用户展现通知消息。由于此 API 使用操作系统的通知机制，通知的外观和行为细节可能会因操作系统和用户设置的不同而有所不同。
 
 在 macOS 上，通知看起来像这样：
@@ -55,4 +53,4 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.notifications`](https://developer.chrome.google.cn/docs/extensions/reference/api/notifications) API。
+> 此 API 基于 Chromium 的 [`chrome.notifications`](https://developer.chrome.google.cn/docs/extensions/reference/api/notifications) API。

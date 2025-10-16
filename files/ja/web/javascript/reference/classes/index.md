@@ -2,12 +2,10 @@
 title: クラス
 slug: Web/JavaScript/Reference/Classes
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Classes")}}
-
-クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに固有です。
+クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに独特のものです。
 
 例や説明については、[クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイドを参照してください。
 
@@ -69,11 +67,11 @@ const Rectangle = class Rectangle2 {
   - : パブリックインスタンスフィールド
 - [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static)
   - : パブリック静的メソッド、ゲッター、セッター、フィールド
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
   - : プライベートなものすべて
 
 > [!NOTE]
-> プライベートプロパティには、同じクラスで宣言するプロパティ名はすべて固有のものでなければならないという制約があります。他のすべてのパブリックプロパティにはこの制限はなく、同じ名前の複数のパブリックプロパティを持つことができ、最後のプロパティが他のプロパティを上書きします。これは[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)での処理と同じです。
+> プライベート要素には、同じクラスで宣言するプライベート名はすべて固有のものでなければならないという制約があります。他のすべてのパブリックプロパティにはこの制限はなく、同じ名前の複数のパブリックプロパティを持つことができ、最後のプロパティが他のプロパティを上書きします。これは[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#重複したプロパティ名)での処理と同じです。
 
 さらに、特別なクラス要素の構文として、 [`constructor`](#コンストラクター) と[静的初期化ブロック](#静的初期化ブロック)の 2 つがあり、自分自身で参照します。
 
@@ -180,13 +178,13 @@ class Rectangle {
 }
 ```
 
-クラスのフィールドはオブジェクトのプロパティに似ていて変数ではないので、宣言するために `const` などのキーワードは使用しません。 JavaScript では、[プライベートプロパティ](#プライベートプロパティ_2)は特別な識別子構文を使うので、 `public` や `private` のような修飾子キーワードも使うべきではありません。
+クラスのフィールドはオブジェクトのプロパティに似ていて変数ではないので、宣言するために `const` などのキーワードは使用しません。 JavaScript では、[プライベート要素](#プライベート要素)は特別な識別子構文を使うので、 `public` や `private` のような修飾子キーワードも使うべきではありません。
 
 上で見たように、フィールドは既定値付きで宣言することも、既定値なしで宣言することもできます。既定値のないフィールドは `undefined` が既定値となります。フィールドを前もって宣言することで、クラスの宣言がよりドキュメント化され、フィールドが常に存在するようになり、最適化しやすくします。
 
 詳細は[パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
-#### プライベートプロパティ
+#### プライベート要素
 
 プライベートフィールドを使うと、宣言は下記のように宣言できます。
 
@@ -206,7 +204,9 @@ class Rectangle {
 
 プライベートフィールドは、フィールド宣言でのみ宣言できます。通常のプロパティのように、後から割り当てることで作成することはできません。
 
-詳細情報については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+プライベートメソッドとアクセサーも、パブリックメソッドやアクセサーと同じ構文を使用して定義することができますが、識別子は `#` で 始める必要があります。
+
+詳細情報については、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 
 ### 継承
 

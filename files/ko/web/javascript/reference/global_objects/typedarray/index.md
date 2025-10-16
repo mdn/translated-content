@@ -182,8 +182,7 @@ new TypedArray(buffer, byteOffset, length);
   - : 배열 및 해당 요소를 나타내는 지역화된 문자열을 반환합니다. {{jsxref("Array.prototype.toLocaleString()")}}도 참조하시기 바랍니다.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : 배열과 해당 요소를 나타내는 문자열을 반환합니다. {{jsxref("Array.prototype.toString()")}}도 참조하시기 바랍니다.
-- {{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
   - : 배열의 각 인덱스에 대한 값을 포함하는 새 **배열 반복기** 객체를 반환합니다.
 
 ## 예제

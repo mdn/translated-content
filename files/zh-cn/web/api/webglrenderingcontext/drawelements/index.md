@@ -16,9 +16,7 @@ void gl.drawElements(mode, count, type, offset);
 ### 参数
 
 - `mode`
-
   - : {{domxref("枚举类型")}} 指定要渲染的图元类型。可以是以下类型：
-
     - `gl.POINTS`: 画单独的点。
     - `gl.LINE_STRIP`: 画一条直线到下一个顶点。
     - `gl.LINE_LOOP`: 绘制一条直线到下一个顶点，并将最后一个顶点返回到第一个顶点。
@@ -30,13 +28,10 @@ void gl.drawElements(mode, count, type, offset);
 - count
   - : {{domxref("整数型")}} 指定要渲染的元素数量。
 - type
-
   - : {{domxref("枚举类型")}} 指定元素数组缓冲区中的值的类型。可能的值是：
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
     - 当使用 {{domxref("OES_element_index_uint")}} 扩展时：
-
       - `gl.UNSIGNED_INT`
 
 - offset

@@ -9,7 +9,7 @@ l10n:
 
 L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'[accessibilité](/fr/docs/Glossary/Accessibility) pour la plupart des éléments HTML.
 
-Les navigateurs convertissent le balisage en une représentation interne appelée [_arbre DOM_](/fr/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
+Les navigateurs convertissent le balisage en une représentation interne appelée [_arbre DOM_](/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
 
 Un objet de l'arbre d'accessibilité contient quatre éléments&nbsp;:
 
@@ -20,7 +20,7 @@ Un objet de l'arbre d'accessibilité contient quatre éléments&nbsp;:
 - [**role**](/fr/docs/Web/Accessibility/ARIA/Roles)
   - : Quel genre de chose est cet élément&nbsp;? Par exemple est-ce un bouton, une barre de navigation ou une liste d'éléments&nbsp;?
 - **state**
-  - : A-t-il un état&nbsp;? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
+  - : A-t-il un état&nbsp;? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément [`<summary>`](/fr/docs/Web/HTML/Reference/Elements/summary).
 
 De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément&nbsp;: un lien peut être _suivi_, on peut _écrire dans_ un champ texte etc.
 
@@ -29,6 +29,5 @@ Toujours à l'état de brouillon au sein du Web Incubator Community Group en avr
 ## Voir aussi
 
 - [Glossaire](/fr/docs/Glossary)
-
   - [Accessibilité](/fr/docs/Glossary/Accessibility)
   - [ARIA](/fr/docs/Glossary/ARIA)

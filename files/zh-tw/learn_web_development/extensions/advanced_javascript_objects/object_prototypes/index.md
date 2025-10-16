@@ -1,10 +1,9 @@
 ---
 title: 物件原型
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且與典型的物件導向 (OO) 程式語言相較，其運作方式有所差異。我們將透過本文說明相異之處、解釋原型鍊 (Prototype chain) 運作的方式，並了解原型屬性是如何將函式新增至現有的建構子 (Constructor) 之中。
 
@@ -123,7 +122,8 @@ var myString = "This is my string.";
 
 `myString` 上立刻就有多個有用的函式，如 [`split()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
 
-> **警告：** `prototype` 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為`this`屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 `__proto__` 存取的內部物件(internal object)才對，記得上面說過的嗎？)。`prototype`是一個物件(object)，內含了你定義所應該繼承的成員。
+> [!WARNING]
+> `prototype` 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為`this`屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 `__proto__` 存取的內部物件(internal object)才對，記得上面說過的嗎？)。`prototype`是一個物件(object)，內含了你定義所應該繼承的成員。
 
 ## 再次溫習 create()
 

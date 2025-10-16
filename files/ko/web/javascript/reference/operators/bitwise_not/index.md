@@ -76,4 +76,4 @@ After:              10100000000000000110000000000001
 
 ## 같이 보기
 
-- [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%ED%95%A0%EB%8B%B9_%EC%97%B0%EC%82%B0%EC%9E%90)
+- [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ED%95%A0%EB%8B%B9_%EC%97%B0%EC%82%B0%EC%9E%90)

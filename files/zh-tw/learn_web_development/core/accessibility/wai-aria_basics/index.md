@@ -1,10 +1,9 @@
 ---
 title: WAI-ARIA基礎
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
-original_slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
 接續之前的文章，有時在涉及非語意 HTML 與動態 JavaScript 更新的內容製作複雜的 UI 控制措施將是個難題。WAI-ARIA 即是一個能藉由添加進一步的語意幫助處理這種問題的技術 ，讓瀏覽器與輔助科技可以辨識及用以讓使用者知道發生甚麼事情。這裡我們將展示如何以基本水準的運用來增進無障礙使用。
 
@@ -245,7 +244,8 @@ var intervalID = window.setInterval(showQuote, 10000);
 > [!NOTE]
 > 你可以查看完成的範例 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html))。
 
-> **備註：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。
+> [!NOTE]
+> [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。
 
 ### 增強鍵盤無障礙
 

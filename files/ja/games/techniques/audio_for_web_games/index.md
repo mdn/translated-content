@@ -3,8 +3,6 @@ title: ウェブゲーム用の音声
 slug: Games/Techniques/Audio_for_Web_Games
 ---
 
-{{GamesSidebar}}
-
 音声はゲームの重要部分です。つまりこれはフィードバックと雰囲気を与えます。ウェブベースの音声は早くから成熟していますが、まだ多くのブラウザーに案内すべき違いがあります。ゲームエクスペリエンスにとってどの音声パーツが重要で、どれがあっても良いけど不要なものかを決めて、それに従って戦略を決めるのが必要となる事がよくあります。この記事ではウェブゲーム用の音声を実装するための詳細なガイドを提供し、現在なるべく広い範囲のプラットフォームで動作するものを観察します。
 
 ## モバイル音声の注意点
@@ -381,7 +379,8 @@ trackEls.forEach((el, i) => {
 });
 ```
 
-> **メモ:** [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
+> [!NOTE]
+> [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
 
 ゲーム世界の文脈では、異なる状況で使用されるループやサンプルがあるかもしれません。よりシームレスな体験のために、他のトラックと同期させることができると便利です。
 
@@ -430,7 +429,7 @@ if (offset === 0) {
 ## 関連情報
 
 - [ウェブオーディオ API (MDN)](/ja/docs/Web/API/Web_Audio_API)
-- [`<audio>` (MDN)](/ja/docs/Web/HTML/Element/audio)
+- [`<audio>` (MDN)](/ja/docs/Web/HTML/Reference/Elements/audio)
 - [Developing Game Audio with the Web Audio API (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/games/)
 - [Mixing Positional Audio and WebGL (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)

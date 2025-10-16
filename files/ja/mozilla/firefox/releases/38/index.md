@@ -3,8 +3,6 @@ title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -30,7 +28,6 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 - 定義済みスタイル {{cssxref("list-style-type", "ethiopic-numeric")}} の接尾辞は最近の仕様書の変更に合わせて、ドットに代わり空白文字を使用するようになりました ([Firefox バグ 1120721](https://bugzil.la/1120721))。
 - インライン要素とブロック要素の両方に分けて生成した Generated Content ({{cssxref("::before")}} や {{cssxref("::after")}} による) の CSS Transitions が、仕様書で要求されているとおりに動作するようになりました ([Firefox バグ 1110277](https://bugzil.la/1110277))。
 - CSS 論理的プロパティの実装が大きく前進しました。 `layout.css.vertical-text.enabled` フラグの設定 (既定値は `false`) により、以下のプロパティを使用できます。
-
   - 書字方向に依存しない {{cssxref("width")}} および {{cssxref("height")}}: {{cssxref("block-size")}} および {{cssxref("inline-size")}} ([Firefox バグ 1117983](https://bugzil.la/1117983))。
   - 書字方向に依存しない {{cssxref("min-width")}} および {{cssxref("min-height")}}: {{cssxref("min-block-size")}} および {{cssxref("min-inline-size")}} ([Firefox バグ 1117983](https://bugzil.la/1117983))。
   - 書字方向に依存しない {{cssxref("max-width")}} および {{cssxref("max-height")}}: {{cssxref("max-block-size")}} および {{cssxref("max-block-size")}} ([Firefox バグ 1117983](https://bugzil.la/1117983))。
@@ -53,7 +50,6 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 - {{jsxref("Functions/set", "セッター", "", 1)}}が{{jsxref("Functions/rest_parameters", "残余引数", "", 1)}}を持っている場合に{{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1089632](https://bugzil.la/1089632))。
 - 関数の {{jsxref("Function/name", "name")}} プロパティが構成可能になりました ([Firefox バグ 1084019](https://bugzil.la/1084019))。
 - {{jsxref("Array")}} のメソッドのいくつかを、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) にも実装しました。
-
   - {{jsxref("TypedArray.of", "of()")}} メソッドと {{jsxref("TypedArray.from", "from()")}} メソッド ([Firefox バグ 896608](https://bugzil.la/896608))。
   - {{jsxref("TypedArray.forEach", "forEach()")}} メソッド ([Firefox バグ 1107645](https://bugzil.la/1107645))。
   - {{jsxref("TypedArray.filter", "filter()")}} メソッドと {{jsxref("TypedArray.map", "map()")}} メソッド ([Firefox バグ 1121936](https://bugzil.la/1121936))。
@@ -106,7 +102,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- Firefox では、ログインフォームを扱う際に [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete)`=false` 属性を無視するようになりました ([Firefox バグ 1025703](https://bugzil.la/1025703))。これはパスワードマネージャーがより確実に動作できるようにすることで、より安全なパスワードの使用を促進しようとするものです。
+- Firefox では、ログインフォームを扱う際に [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete)`=false` 属性を無視するようになりました ([Firefox バグ 1025703](https://bugzil.la/1025703))。これはパスワードマネージャーがより確実に動作できるようにすることで、より安全なパスワードの使用を促進しようとするものです。
 - ホワイトリストで明示されたウェブサイトを除き、TLS を使用する際は RC4 が無効になりました。このホワイトリストは、ウェブサイトが修正されるまでの経過措置です ([Firefox バグ 1124039](https://bugzil.la/1124039))。このフォールバック機能は設定項目 `security.tls.unrestricted_rc4_fallback` で制御されており、現在の既定値は `true` です ([Firefox バグ 1138882](https://bugzil.la/1138882))。
 - 安全でないバージョンの TLS へのフォールバックが必要なウェブサイトを、ハードコードされたホワイトリストに記載します。これは次第に削減する予定です ([Firefox バグ 1114816](https://bugzil.la/1114816))。 `security.tls.insecure_fallback_hosts.use_static_list` を `false` に設定すると、ホワイトリストを無効化できます。
 

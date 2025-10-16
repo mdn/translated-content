@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 指定通过 {{WebExtAPIRef("scripting.executeScript()")}} 插入或通过 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本的执行环境。
 
 ## 类型
@@ -31,4 +29,4 @@ l10n:
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#type-ExecutionWorld) API。
+> 此 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#type-ExecutionWorld) API。

@@ -3,8 +3,6 @@ title: minmax()
 slug: Web/CSS/minmax
 ---
 
-{{CSSRef}}
-
 La función **`minmax()`** [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_grid_layout).
 
 ```css
@@ -119,7 +117,7 @@ La función `minmax()` puede ser usada dentro de:
 
 ## Mira también
 
-- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()>)_
+- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Track_sizing_and_minmax()>)_
 - [Rejillas CSS, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - Video tutorial: _[Presentando minmax()](https://gridbyexample.com/video/series-minmax/)_
 
@@ -127,7 +125,6 @@ La función `minmax()` puede ser usada dentro de:
 2. [**Referencia CSS**](/es/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
 4. **Guías**
-
    1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -141,7 +138,6 @@ La función `minmax()` puede ser usada dentro de:
    11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Propiedades**
-
    1. [grid](/es/docs/Web/CSS/grid)
    2. [grid-area](/es/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
@@ -162,7 +158,6 @@ La función `minmax()` puede ser usada dentro de:
    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
 
 6. **Glosario**
-
    1. [Rejilla](/es/docs/Glossary/Grid)
    2. [Líneas de rejilla](/es/docs/Glossary/Grid_Lines)
    3. [Bandas de rejilla](/es/docs/Glossary/Grid_tracks)

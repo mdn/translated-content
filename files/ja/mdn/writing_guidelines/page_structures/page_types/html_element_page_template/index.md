@@ -2,12 +2,11 @@
 title: HTML 要素ページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{MDNSidebar}}
-
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -21,7 +20,7 @@ l10n:
 > ```md
 > ---
 > title: "<NameOfTheElement>: The NameOfTheElement 要素"
-> slug: Web/HTML/Element/NameOfTheElement
+> slug: Web/HTML/Reference/Elements/NameOfTheElement
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
@@ -30,11 +29,11 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
 >     書式は `'<NameOfTheElement>: 要素の目的'` です。
->     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
->     これは `Web/HTML/Element/NameOfTheElement` のような形式になります。
->     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
+>     これは `Web/HTML/Reference/Elements/NameOfTheElement` のような形式になります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の _slug_ は `Web/HTML/Reference/Elements/video` となります。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -42,7 +41,7 @@ l10n:
 >
 > **ページ先頭のマクロ**
 >
-> コンテンツ部の上部（ページのフロントマターのすぐ下）には、いくつかのマクロ呼び出しが現れます。
+> コンテンツセクションの先頭、ページヘッダーの直後に複数のマクロが現れます。
 > **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
@@ -50,32 +49,27 @@ l10n:
 > - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)であることを示します。
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
-> 下記のアドバイスに従って、以下のマクロを更新または削除してください。
+> 詳しくは「[機能の状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能の状態を追加または更新する方法)」を参照してください。
 >
-> - `\{{SecureContext_Header}}` — これは **安全なコンテキスト** バナーを生成し、この技術が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
->   そうではない場合は、マクロ呼び出すを削除することができます。
->   そうである場合は、[安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
-> - `\{{HTMLSidebar}}` — これは、要素のための左側のリファレンスサイドバーを生成します。
->   サイドバーのコンテンツはページメタデータのタグに依存します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
->
-> **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
->
-> **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **実験的**、**非推奨**、**標準外** の各バナーの例は、このメモブロックの直後に表示しています。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{HTMLSidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 **`<要素名を挿入>`** は [HTML](/ja/docs/Web/HTML) の要素で、 _（その要素の名前とそれが何をするのか、できれば 1 つか 2 つの短い文章で概要を述べてください）_ を行います。
 
-\\{{EmbedInteractiveExample("pages/tabbed/nameOfElement.html", "tabbed-standard")}}
+## 試してみましょう
+
+この節は `InteractiveExample` マクロによって生成されます。
+これには「試してみましょう」という節の見出しとコードエディターが含まれます。
+詳細は、執筆ガイドラインの[インタラクティブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#インタラクティブサンプル)の節を参照してください。
 
 追加情報を記述します。この点で、要素を使用する上で知っておくべき最も重要なことや、その主な機能を説明する段落をいくつか記述してください。この例で何が起こっているのかが分かりにくい場合は、簡単に説明するのが良いでしょう。また、この要素が重要な関連する JavaScript や CSS 機能とどのように相互作用するかについて、重要な点を説明することもできます。あまり詳しくは説明しないでください。ページをまたいでドキュメント化を繰り返したくはないでしょう。しかし、重要な点とその機能のページへのリンクは有益なものでしょう。この例も `<video>` ページを参照してください。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attribute1` {{Deprecated_inline}} {{experimental_inline}}
   - : この属性がどのような働きをするか、ここに記述してください。属性ごとに 1 つずつ用語と定義を記述してください。属性が実験的/非推奨でない場合は、関連するマクロ呼び出しを除去してください。
@@ -91,6 +85,10 @@ l10n:
 | イベント 1 | いつ発生するか短く説明してください |
 | イベント 2 | いつ発生するか短く説明してください |
 | 以下同様   |                                    |
+
+## アクセシビリティ
+
+この要素の使用に伴うアクセシビリティ上の懸念事項がある場合は警告し、その回避方法を説明してください。記載すべきものがない場合は、この節を削除してください。
 
 ## 例
 
@@ -128,12 +126,8 @@ l10n:
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
-
-## アクセシビリティの考慮
-
-オプションとして、この要素を使用することで存在する可能性のあるアクセシビリティへの問題点と、それを回避する作業方法を説明してください。掲載すべきものがなければ、この節は除去してください。
 
 ## 技術的概要
 
@@ -141,7 +135,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -163,7 +157,7 @@ l10n:
       <th scope="row">許可されている親要素</th>
       <td>
         どの親要素がこの要素を子にすることができるか。
-        例えば、「<a href="/ja/docs/Web/HTML/Content_categories#flow_content"
+        例えば、「<a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素。」
       </td>
@@ -172,7 +166,7 @@ l10n:
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         この要素に設定可能な ARIA ロールの一覧を記入します。例えば
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>。
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>。
       </td>
     </tr>
     <tr>

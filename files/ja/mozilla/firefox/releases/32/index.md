@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
@@ -33,13 +31,12 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("img")}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ([Firefox バグ 870021](https://bugzil.la/870021))。
-- [**id**](/ja/docs/Web/HTML/Global_attributes/id) および [**class**](/ja/docs/Web/HTML/Global_attributes/class) が真の[グローバル属性](/ja/docs/Web/HTML/Global_attributes)となり、名前空間の有無にかかわらず XML 要素にも適用されるようになりました ([Firefox バグ 741295](https://bugzil.la/741295))。
+- {{HTMLElement("img")}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ([Firefox バグ 870021](https://bugzil.la/870021))。
+- [**id**](/ja/docs/Web/HTML/Reference/Global_attributes/id) および [**class**](/ja/docs/Web/HTML/Reference/Global_attributes/class) が真の[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)となり、名前空間の有無にかかわらず XML 要素にも適用されるようになりました ([Firefox バグ 741295](https://bugzil.la/741295))。
 
 ### JavaScript
 
 - 新たな ECMAScript 2015 の組み込みメソッドを実装しました。
-
   - {{jsxref("Array.from()")}} ([Firefox バグ 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox バグ 934423](https://bugzil.la/934423))
   - {{jsxref("Number.isSafeInteger()")}} ([Firefox バグ 1003764](https://bugzil.la/1003764))

@@ -39,7 +39,7 @@ Un objet `Map` permet de parcourir ses éléments selon leur ordre d'insertion. 
 
 ### Égalité des clés
 
-- L'égalité des clés est testée avec l'algorithme basé sur [`sameValueZero`](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#samevaluezero)
+- L'égalité des clés est testée avec l'algorithme basé sur [`sameValueZero`](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#samevaluezero)
 - [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) est considéré égal à `NaN` (bien que pour l'égalité stricte, on a `NaN !== NaN`) et toutes les autres valeurs sont considérées égales au sens de l'égalité stricte (l'opérateur `===`).
 - Dans la version actuelle de la spécification ECMAScript, `-0` et `+0` sont considérées égaux même si ce n'était pas le cas dans les brouillons antérieurs. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
 
@@ -176,7 +176,7 @@ console.log(contacts.size); // 1
 
 ## Propriétés statiques
 
-- [`get Map[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species)
+- [`get Map[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : La fonction de construction utilisée pour créer les objets dérivés.
 
 ## Propriétés des instances
@@ -199,7 +199,7 @@ console.log(contacts.size); // 1
 
 ### Méthodes d'itération
 
-- [`Map.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Renvoie un nouvel objet itérateur qui contient **un tableau de `[cle, valeur]`** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
 - [`Map.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
   - : Renvoie un nouvel objet itérateur qui contient les **clés** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.

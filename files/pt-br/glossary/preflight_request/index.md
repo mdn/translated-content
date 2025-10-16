@@ -9,7 +9,7 @@ Uma requisição _preflight_ de [CORS](/pt-BR/docs/Glossary/CORS) é uma requisi
 
 É uma requisição {{HTTPMethod("OPTIONS")}}, que usa três cabeçalhos de solicitação HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e o cabeçalho {{HTTPHeader("Origin")}}.
 
-Uma requisição _preflight_ é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada ["para ser preflighted"](/pt-BR/docs/Web/HTTP/CORS#preflighted_requests) e omitida para [requisições simples](/pt-BR/docs/Web/HTTP/CORS#simple_requests).
+Uma requisição _preflight_ é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada ["para ser preflighted"](/pt-BR/docs/Web/HTTP/Guides/CORS#preflighted_requests) e omitida para [requisições simples](/pt-BR/docs/Web/HTTP/Guides/CORS#simple_requests).
 
 Por exemplo, o cliente pode perguntar ao servidor se este permitiria uma requisição {{HTTPMethod ("DELETE")}}, antes de enviá-la, usando uma requisição _preflight_:
 
@@ -30,7 +30,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Max-Age: 86400
 ```
 
-A resposta da requisição _preflight_ pode ser opcionalmente cacheada para requisições realizadas na mesma url usando o cabeçalho [Access-Control-Max-Age](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) como no exemplo acima.
+A resposta da requisição _preflight_ pode ser opcionalmente cacheada para requisições realizadas na mesma url usando o cabeçalho [Access-Control-Max-Age](/pt-BR/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age) como no exemplo acima.
 
 ## Veja também
 

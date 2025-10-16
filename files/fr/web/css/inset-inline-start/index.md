@@ -88,7 +88,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("top")}}
   - {{cssxref("right")}}
   - {{cssxref("bottom")}}

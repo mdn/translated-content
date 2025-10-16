@@ -5,11 +5,41 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS デモ: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
 
 ## 構文
 
@@ -49,21 +79,17 @@ font-size: unset;
 ### 値
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-
   - : [絶対的なサイズ](/ja/docs/Web/CSS/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
 
 - `larger`, `smaller`
-
   - : [相対的なサイズ](/ja/docs/Web/CSS/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : 正の {{cssxref("&lt;length&gt;")}} の値。 (`em` や `ex` などの) フォント相対単位のほとんどは、親要素のフォントサイズに対する相対値です。
 
     (`rem` などの) ルートを基準としたフォント相対単位では、フォントサイズは {{HTMLElement("html")}} （ルート）要素で使われているフォントのサイズからの相対値です。
 
 - {{cssxref("&lt;percentage&gt;")}}
-
   - : 正の {{cssxref("&lt;percentage&gt;")}} 値で、親要素のフォントサイズからの相対値です。
     > [!NOTE]
     > アクセシビリティを最大化するために、一般的に最適なのは、ユーザーの既定のフォントサイズからの相対値を使用することです。

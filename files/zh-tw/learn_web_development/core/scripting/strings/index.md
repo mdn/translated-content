@@ -1,10 +1,9 @@
 ---
 title: 處理文字 - JavaScript中的字串
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 接下來我們將把注意力轉向字串——這就是程式設計中調用的文字片段。在本文中，我們將介紹在學習 JavaScript 時你應該了解所有有關字串的常見事項，例如建立字串，跳脫字串中的引號以及將字串連接在一起。
 
@@ -31,7 +30,7 @@ original_slug: Learn/JavaScript/First_steps/Strings
 
 ## 字串 — 基礎
 
-剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)）。
+剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們先在[瀏覽器開發者控制台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)輸入一些基本字串來熟悉一下。
 
 ```html hidden
 <!doctype html>
@@ -260,7 +259,7 @@ button.onclick = function () {
 };
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, , , , , 'allow-modals') }}
 
 在程式第四行我們用了 {{domxref("window.prompt()", "window.prompt()")}} 這個函式，可以要求使用者透過彈出的對話框去回答問題，並將使用者輸入的文字儲存在給訂的變數內（在這個例子中就是 `name`）。接著我們在第五行用了 {{domxref("window.alert()", "window.alert()")}} 函式，顯示另一個彈出視窗，以連接的方式將兩段字串文字以及 `name` 這個變數結合成一個字串。
 
@@ -282,7 +281,6 @@ button.onclick = function () {
    ```
 
 3. 如果你想轉換數字變數成字串，但不要更動到原本的變數；或是想轉換字串變數成數字，也不要更動到原本的變數，你可以使用以下兩種方式：
-
    - 物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
 
      ```js
@@ -385,11 +383,6 @@ I gave it a score of ${(score / highestScore) * 100}%.`;
 我們有許多的例子仍然使用目前標準的字串語法，但我們未來將會加入更多模版字符串的應用。
 
 來我們的[Template literals](/zh-TW/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
-
-## 測試你的技能！
-
-你已到達文章的結尾了，但你能記得最重要的資訊嗎?
-在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
 
 ## 結語
 
