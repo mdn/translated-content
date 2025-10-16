@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("CSSTransformValue")}} 接口的只读属性 **`is2D`** 返回变换是 2D 还是 3D。
 
-当且仅当任何单个函数为 `Is2D` 返回 false 时返回 false，否则它将返回 true。
+当且仅当任何单个函数为 `Is2D` 返回 false 时返回 false，否则 `CSSTransformValue` 的这个属性将返回 true。
 
 ## 值
 
