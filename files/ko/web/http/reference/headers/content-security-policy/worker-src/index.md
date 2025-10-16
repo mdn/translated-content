@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
 
-{{HTTPSidebar}}
-
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`worker-src`** 지시문은 {{domxref("Worker")}}, {{domxref("SharedWorker")}}, 또는 {{domxref("ServiceWorker")}}의 유효한 스크립트 소스를 지정합니다.
 
 <table class="properties">

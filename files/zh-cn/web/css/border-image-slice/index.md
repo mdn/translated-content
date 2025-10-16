@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
-{{CSSRef}}
-
 **`border-image-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将使用 {{cssxref("border-image-source")}} 引用的图像划分为多个区域。这些区域组成了一个元素的[边框图像](/zh-CN/docs/Web/CSS/border-image)。
 
 {{InteractiveExample("CSS Demo: border-image-slice")}}

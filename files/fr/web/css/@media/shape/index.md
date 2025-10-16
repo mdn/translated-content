@@ -1,11 +1,13 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
+l10n:
+  sourceCommit: 10f562a8a12f7bbf4b35b21de449c721ed756eb4
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{SeeCompatTable}}
 
-La caractéristique média **`shape`** peut être utilisée afin de tester la forme d'un appareil pour distinguer les affichages rectangulaires des affichages ronds.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`shape`** peut être utilisée pour tester la forme de l'appareil afin de distinguer les affichages rectangulaires et ronds.
 
 ## Syntaxe
 
@@ -17,9 +19,6 @@ La caractéristique `shape` peut prendre une valeur parmi deux valeurs définies
   - : La forme est arrondie telle un cercle, un ovale ou une ellipse et les dispositions arrondies seront plus appropriées sur ces écrans.
 
 ## Exemples
-
-> [!NOTE]
-> Aucun navigateur n'implémente actuellement cette fonctionnalité.
 
 ### Exemple simple
 
@@ -49,10 +48,6 @@ h1 {
 }
 ```
 
-#### Résultat
-
-{{EmbedLiveSample("Exemple_simple")}}
-
 ### Feuille de style spécifique
 
 Ce fragment de code HTML permettra d'appliquer une feuille de style particulière pour les appareils qui ont des écrans arrondis.
@@ -74,4 +69,12 @@ Ce fragment de code HTML permettra d'appliquer une feuille de style particulièr
 
 ## Compatibilité des navigateurs
 
-{{Compat}}
+Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}
+- Le module d'[affichage arrondi CSS](/fr/docs/Web/CSS/CSS_round_display)
+- [Utiliser les variables d'environnement](/fr/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
+- Le module des [variables d'environnement CSS](/fr/docs/Web/CSS/CSS_environment_variables)

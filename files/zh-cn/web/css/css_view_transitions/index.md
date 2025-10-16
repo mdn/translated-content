@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee7620b98800392073f3c8f94a9b2d048191356d
 ---
 
-{{CSSRef}}
-
 **CSS 视图过渡**（CSS view transition）模块定义了[视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API) 的行为，它允许开发人员在文档之内或在文档之间的不同状态之间创建动画过渡。此模块还定义了用于设置这些过渡样式的 CSS 属性和伪元素。
 
 ## 参考

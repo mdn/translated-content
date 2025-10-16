@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 在给定窗口中侧边栏打开的情况下返回 `true`。
 
 此函数接受一个 `windowId` 作为参数：

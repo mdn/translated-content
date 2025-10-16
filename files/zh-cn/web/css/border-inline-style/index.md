@@ -3,8 +3,6 @@ title: border-inline-style
 slug: Web/CSS/border-inline-style
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-style`** 定义了元素的逻辑行向的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-style")}} 和 {{CSSXref("border-bottom-style")}}，或者 {{CSSXref("border-left-style")}} 和 {{CSSXref("border-right-style")}} 属性。
 
 {{InteractiveExample("CSS Demo: border-inline-style")}}

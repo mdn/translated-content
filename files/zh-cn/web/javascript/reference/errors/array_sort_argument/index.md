@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d311eaee27eef2a590de711bb545b741044cb9b8
 ---
 
-{{jsSidebar("Errors")}}
-
 JavaScript 异常“invalid Array.prototype.sort argument”会在 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时触发。
 
 ## 消息

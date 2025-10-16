@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b15c892914bbaa51a8c8f288426ebc6d5c1d57f8
 ---
 
-{{jsSidebar("Statements")}}
-
 **`async function`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新异步函数。函数体内允许使用 `await` 关键字，这使得我们可以更简洁地编写基于 promise 的异步代码，并且避免了显式地配置 promise 链的需要。
 
 你也可以使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)来定义异步函数。

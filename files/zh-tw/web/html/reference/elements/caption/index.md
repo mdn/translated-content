@@ -3,8 +3,6 @@ title: <caption>：表格標題元素
 slug: Web/HTML/Reference/Elements/caption
 ---
 
-{{HTMLSidebar}}
-
 **`<caption>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於指定表格的標題或標題，為表格提供了一個{{glossary("accessible description", "無障礙描述")}}。
 
 {{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}

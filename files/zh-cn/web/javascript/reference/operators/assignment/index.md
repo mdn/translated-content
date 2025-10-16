@@ -3,8 +3,6 @@ title: 赋值（=）
 slug: Web/JavaScript/Reference/Operators/Assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 简单赋值运算符（`=`）用于给变量赋值。赋值表达式本身的值为要赋值的值。为了将一个值赋给多个变量，可以链式使用赋值运算符。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}

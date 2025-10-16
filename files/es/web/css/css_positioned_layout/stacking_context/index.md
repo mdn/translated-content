@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 ---
 
-{{CSSRef}}
-
 « [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 El contexto de apilamiento es la conceptualización tridimensional de los elementos HTML a lo largo de un eje-Z imaginario relativo al usuario que se asume está de cara al viewport o página web. Los elementos HTML ocupan este espacio por orden de prioridad basado en sus atributos.

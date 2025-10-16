@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1a3107dc1b77e3ece12b0a7d872dadbe95813956
 ---
 
-{{CSSRef}}
-
 **CSS Lists**는 리스트 배치 방법 및 스타일 지정 방법을 정의하는 CSS 모듈입니다.
 
 ## 참고서

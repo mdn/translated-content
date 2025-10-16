@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/418
 original_slug: Web/HTTP/Status/418
 ---
 
-{{HTTPSidebar}}
-
 O código de erro HTTP para o cliente **`418 I'm a teapot`** indica que o servidor se recusa a preparar café por ser um bule de chá. Este erro é uma referência ao _Hyper Text Coffee Pot Control Protocol_, que foi uma piada de 1º de abril de 1998.
 
 ## Status

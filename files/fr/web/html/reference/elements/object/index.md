@@ -55,12 +55,12 @@ L'élément HTML **`<object>`** représente une ressource externe qui peut être
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `data`
   - : L'adresse de la ressource, une URL valide. Au moins un attribut `data` et un attribut `type` doivent être définis.
 - `form`
-  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) du même document.
+  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) du même document.
 - `height`
   - : La hauteur de la ressource à afficher, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px) (uniquement en valeur absolue, [pas de pourcentage autorisé](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 - `name`
@@ -68,7 +68,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - `type`
   - : Le [type MIME](/fr/docs/Glossary/MIME_type) de la ressource définie par `data`. Au moins un attribut `data` et un attribut `type` doivent être définis.
 - `usemap`
-  - : Une référence à l'élément [`<map>`](/fr/docs/Web/HTML/Element/map). La valeur de cet attribut doit être un '#' suivi de la valeur d'un attribut [`name`](/fr/docs/Web/HTML/Element/map#attr-name) d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
+  - : Une référence à l'élément [`<map>`](/fr/docs/Web/HTML/Reference/Elements/map). La valeur de cet attribut doit être un '#' suivi de la valeur d'un attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/map#attr-name) d'un élément [`<map>`](/fr/docs/Web/HTML/Reference/Elements/map).
 - `width`
   - : La largeur de la ressource à afficher, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px) (uniquement en valeur absolue, [pas de pourcentage autorisé](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 
@@ -112,5 +112,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ## Voir aussi
 
 - [`<applet>`](/fr/docs/Web/HTML/Element/applet) {{deprecated_inline}}
-- [`<param>`](/fr/docs/Web/HTML/Element/param)
-- [`<embed>`](/fr/docs/Web/HTML/Element/embed)
+- [`<param>`](/fr/docs/Web/HTML/Reference/Elements/param)
+- [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed)

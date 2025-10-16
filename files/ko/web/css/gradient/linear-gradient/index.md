@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`linear-gradient()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 두 개 이상의 색상이 직선을 따라 점진적으로 변화되는 선형 그라데이션 그림을 생성합니다. 그 결과는 {{CSSxRef("&lt;gradient&gt;")}} 데이터 유형의 객체이며, 이는 {{CSSxRef("&lt;image&gt;")}}의 특별한 종류 중 하나입니다.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}
@@ -85,7 +83,8 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : 인접한 색상 중지점 사이에서, 그라데이션이 어떻게 색을 어떻게 변화시킬지를 정의하기 위한 보간 정보. 길이는 두 색상 중지점 사이의 어떤 지점에서 중간 색상에 도달해야 하는지를 명시합니다. 만약 이 값이 명시되지 않으면, 색상 변화의 중간지점은 두 색상 중지점의 중간이 됩니다.
 
-> **참고:** [CSS 그라데이션의 색 중지점](#선형_그라데이션의_구성)의 렌더링 방식은 [SVG 그라데이션](/ko/docs/Web/SVG/Tutorial/Gradients)과 동일한 규칙을 따릅니다.
+> [!NOTE]
+> [CSS 그라데이션의 색 중지점](#선형_그라데이션의_구성)의 렌더링 방식은 [SVG 그라데이션](/ko/docs/Web/SVG/Tutorial/Gradients)과 동일한 규칙을 따릅니다.
 >
 > Mozilla Firefox, 특히 80.0b3 버전에서는 위의 첫 예제가 동일하게 렌더링되지 않음에 유의하세요. 동일하게 렌더링되기 위해서는 HTML의 height 특성을 100% 혹은 100vh로 설정해야 합니다.
 

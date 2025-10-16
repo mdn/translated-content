@@ -3,8 +3,6 @@ title: JavaScript 标准内置对象
 slug: Web/JavaScript/Reference/Global_Objects
 ---
 
-{{JSSidebar("Objects")}}
-
 本章介绍和说明了 JavaScript 中所有的标准内置对象、以及它们的方法和属性。
 
 这里的术语“全局对象”（或标准内置对象）不应与 **global 对象**混淆。这里的“全局对象”指的是**处在全局作用域里的多个对象**。

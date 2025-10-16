@@ -1,13 +1,15 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-CSS 2 utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriété `display`, il fallait plusieurs mots-clés pour les différentes variantes bloc/en ligne d'un même mode. Cette page décrit ces valeurs.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<display-legacy>`** décrit les valeurs de la propriété `display` dans CSS 2. Utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriété `display`, il fallait plusieurs mots-clés pour les différentes variantes bloc/en ligne d'un même mode. Cette page décrit ces valeurs.
 
 ## Syntaxe
+
+Valeurs valides pour `<display-legacy>`&nbsp;:
 
 - `inline-block`
   - : L'élément s'inscrit dans le contenu environnant comme une boîte en ligne et organise son propre contenu en bloc.
@@ -37,14 +39,6 @@ CSS 2 utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriét
 
 Dans l'exemple qui suit, on définit un conteneur flexible en ligne en utilisant le mot-clé historique `inline-flex`.
 
-### CSS
-
-```css
-.container {
-  display: inline-flex;
-}
-```
-
 ### HTML
 
 ```html
@@ -54,6 +48,14 @@ Dans l'exemple qui suit, on définit un conteneur flexible en ligne en utilisant
 </div>
 
 Pas d'élément flexible
+```
+
+### CSS
+
+```css
+.container {
+  display: inline-flex;
+}
 ```
 
 ### Résultat
@@ -68,13 +70,17 @@ Avec la nouvelle syntaxe, on peut décrire le conteneur avec deux valeurs : la p
 }
 ```
 
+## Spécifications
+
+{{Specifications}}
+
 ## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- {{CSSxRef("display")}}
+- Les types de données de la propriété {{CSSxRef("display")}}&nbsp;:
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

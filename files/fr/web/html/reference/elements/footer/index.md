@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/footer
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
+L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/HTML/Guides/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
 
 {{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
 
@@ -154,12 +154,12 @@ footer {
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- Les informations sur l'autrice ou l'auteur doivent être placées dans un élément [`<address>`](/fr/docs/Web/HTML/Element/address) et incluses dans l'élément `<footer>`.
-- L'élément `<footer>` n'a pas de contenu sectionnant et ne peut donc pas introduire une nouvelle section dans le [plan](/fr/docs/Web/HTML/Element/Heading_Elements).
+- Les informations sur l'autrice ou l'auteur doivent être placées dans un élément [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address) et incluses dans l'élément `<footer>`.
+- L'élément `<footer>` n'a pas de contenu sectionnant et ne peut donc pas introduire une nouvelle section dans le [plan](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements).
 
 ## Exemples
 
@@ -194,7 +194,7 @@ footer {
 
 ## Accessibilité
 
-Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) `contentinfo` n'était pas correctement exposé par [VoiceOver](https://help.apple.com/voiceover/info/guide/). Si vous devez prendre en charge les anciens navigateurs Safari, ajoutez `role="contentinfo"` à l'élément `footer` pour vous assurer que le landmark sera correctement exposé.
+Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#signpostslandmarks) `contentinfo` n'était pas correctement exposé par [VoiceOver](https://help.apple.com/voiceover/info/guide/). Si vous devez prendre en charge les anciens navigateurs Safari, ajoutez `role="contentinfo"` à l'élément `footer` pour vous assurer que le landmark sera correctement exposé.
 
 - En rapport : [WebKit Bugzilla : 146930 - AX : Les éléments natifs HTML (header, footer, main, aside, nav) devraient fonctionner de la même manière que les points de repère ARIA, parfois ce n'est pas le cas](https://bugs.webkit.org/show_bug.cgi?id=146930).
 
@@ -208,6 +208,6 @@ Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn/Accessib
 
 ## Voir aussi
 
-- Autres éléments liés à la section : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<address>`](/fr/docs/Web/HTML/Element/address) ;
-- [Utilisation des sections et des plans HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
+- Autres éléments liés à la section : [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Reference/Elements/hgroup), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header), [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address) ;
+- [Utilisation des sections et des plans HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA : rôle `contentinfo`](/fr/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
