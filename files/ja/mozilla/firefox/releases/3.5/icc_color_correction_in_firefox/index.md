@@ -3,8 +3,6 @@ title: Firefox の ICC カラーコレクション
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 ---
 
-{{FirefoxSidebar}}
-
 色補正のサポートは Firefox 3 で導入されましたが、デフォルトでは無効になっています。これを有効にするには、about:config ウィンドウを少し修正する必要があります。 Firefox 3.5 では、以前のバージョンではデフォルトで無効になっていた問題が解決されました。現在 [International Color Consortium](https://www.color.org/) (ICC) タグの画像は、デフォルトで色補正されています。
 
 下の画像は 3 つのセクションに分割されています。 左上隅には、Firefox 2 でレンダリングされた画像が表示されます。右上隅には、Firefox 3 での画像のレンダリング方法が表示されます。下には、Photoshop でレンダリングされた画像が表示されます。

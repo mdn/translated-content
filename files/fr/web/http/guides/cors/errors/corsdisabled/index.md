@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
 original_slug: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
-{{HTTPSidebar}}
-
 ## Raison
 
 ```http
@@ -21,6 +19,6 @@ Pour Firefox, la préférence qui désactive le CORS est `content.cors.disable`.
 
 ## Voir aussi
 
-- [Les erreurs CORS](/fr/docs/Web/HTTP/CORS/Errors)
+- [Les erreurs CORS](/fr/docs/Web/HTTP/Guides/CORS/Errors)
 - Le terme [CORS](/fr/docs/Glossary/CORS) sur le glossaire
-- [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
+- [Introduction au CORS](/fr/docs/Web/HTTP/Guides/CORS)

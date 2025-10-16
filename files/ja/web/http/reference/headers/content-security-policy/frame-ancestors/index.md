@@ -5,13 +5,12 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 、{{HTMLElement("embed")}} などを使ってページを埋め込むことのできる親を指定します。
 
 このディレクティブを `'none'` にすることは、 {{HTTPHeader("X-Frame-Options")}}`: deny`（これは古いブラウザーも同様に対応しています）を設定するのに似ています。
 
-> **メモ:** **`frame-ancestors`** は、ページを埋め込むことができる親ソースを指定することができます。
+> [!NOTE]
+> **`frame-ancestors`** は、ページを埋め込むことができる親ソースを指定することができます。
 > これは、ページ内の iframe をどこから読み込むかを指定する **`frame-src`** とは異なります。
 
 <table class="properties">
@@ -53,7 +52,8 @@ Content-Security-Policy: frame-ancestors <source-expression-list>;
     - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
-> **メモ:** `frame-ancestors` ディレクティブの構文は他のソースリスト（{{CSP("child-src")}} など）の構文と似ていますが、 `default-src` の設定に代替されることはありません。ポリシーで `default-src 'none'` と宣言しても、それでも誰でもリソースを埋め込むことができます。
+> [!NOTE]
+> `frame-ancestors` ディレクティブの構文は他のソースリスト（{{CSP("child-src")}} など）の構文と似ていますが、 `default-src` の設定に代替されることはありません。ポリシーで `default-src 'none'` と宣言しても、それでも誰でもリソースを埋め込むことができます。
 
 ## 例
 

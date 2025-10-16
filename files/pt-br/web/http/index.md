@@ -3,8 +3,6 @@ title: HTTP
 slug: Web/HTTP
 ---
 
-{{ HTTPSidebar }}
-
 **_Hypertext Transfer Protocol (HTTP)_** é um protocolo de [camada de aplicação](https://pt.wikipedia.org/wiki/Camada_de_aplica%C3%A7%C3%A3o) para transmissão de documentos hipermídia, como o HTML. Foi desenvolvido para comunicação entre navegadores web e servidores web, porém pode ser utilizado para outros propósitos também. Segue um [modelo cliente-servidor](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) clássico, onde um cliente abre uma conexão, executa uma requisição e espera até receber uma resposta. É também um protocolo [sem estado](https://pt.wikipedia.org/wiki/Protocolo_sem_estado) ou [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), que significa que o servidor não mantem nenhum dado entre duas requisições (_state_). Apesar de ser frequentemente baseado em uma camada TCP/IP, pode ser utilizado em qualquer [camada de transporte](https://pt.wikipedia.org/wiki/Camada_de_transporte) confiável, ou seja, um protocolo que não perde mensagens silenciosamente como o UDP.
 
 ## Tutoriais

@@ -9,7 +9,7 @@ l10n:
 
 **`forEach()`** メソッドは、指定された関数を `Map` オブジェクト内にあるキーと値のペアそれぞれに対して 1 回ずつ、挿入順に実行します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.forEach()")}}
 
 ```js interactive-example
 function logMapElements(value, key, map) {

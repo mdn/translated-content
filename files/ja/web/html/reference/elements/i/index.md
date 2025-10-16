@@ -10,7 +10,7 @@ l10n:
 
 **`<i>`** は [HTML](/ja/docs/Web/HTML) の要素で、何らかの理由で他のテキストと区別されるテキストの範囲を表します。例えば、慣用句、技術用語、分類学上の呼称、などです。英文においてはよくイタリック体で表現されてきたものであり、それがこの要素の `<i>` という名前の元になっています。
 
-{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;i&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>I looked at it and thought <i>This can't be real!</i></p>

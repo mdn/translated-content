@@ -3,8 +3,6 @@ title: At 规则
 slug: Web/CSS/CSS_syntax/At-rule
 ---
 
-{{CSSRef}}
-
 **At 规则**是一个 [CSS 语句](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句)，用来指示 CSS 如何运行。以 at 符号开头，'`@`'（`U+0040 COMMERCIAL AT`），后跟一个标识符，并包括直到下一个分号的所有内容，'`;`'（`U+003B SEMICOLON`），或下一个 [CSS 块](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明块)，以先到者为准。
 
 ## 语法
@@ -103,6 +101,6 @@ slug: Web/CSS/CSS_syntax/At-rule
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-  - [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [CSS 嵌套模块](/zh-CN/docs/Web/CSS/CSS_nesting)

@@ -10,7 +10,7 @@ l10n:
 
 **`<dl>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リストを表します。この要素は、一連の用語（{{HTMLElement("dt")}} 要素を使用して指定）と説明（{{HTMLElement("dd")}} 要素によって提供）をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ（キーと値のペアのリスト）の表示が挙げられます。
 
-{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;dl&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Cryptids of Cornwall:</p>

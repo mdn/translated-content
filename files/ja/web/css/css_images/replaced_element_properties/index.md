@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_images/Replaced_element_properties
 original_slug: Web/CSS/Replaced_element
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) において、**置換要素**は CSS のスコープの外で表現される要素です。 CSS の整形モデルとは独立して表現される外部オブジェクトです。
 
 もっと簡単な言葉で言い換えれば、コンテンツが現在の文書のスタイルに影響されない要素です。置換要素の位置は CSS を使用して変更することができますが、置換要素自身のコンテンツは違います。 {{HTMLElement("iframe")}} のような一部の置換要素では、独自のスタイルシートを持つことができますが、親文書のスタイルは継承されません。
@@ -66,5 +64,5 @@ CSS はマージンの計算時や一部の `auto` 値の時など場合によ�
     - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
     - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
     - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)

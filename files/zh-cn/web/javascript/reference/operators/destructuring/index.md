@@ -3,8 +3,6 @@ title: 解构
 slug: Web/JavaScript/Reference/Operators/Destructuring
 ---
 
-{{jsSidebar("Operators")}}
-
 **解构**语法是一种 Javascript 语法。可以将数组中的值或对象的属性取出，赋值给其他变量。它可以在接收数据的位置使用（例如赋值的左侧或创建新标识符绑定的任何位置）。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Destructuring", "taller")}}

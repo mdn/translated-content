@@ -5,11 +5,9 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
 
-{{InteractiveExample("CSS Demo: font-kerning")}}
+{{InteractiveExample("CSS デモ: font-kerning")}}
 
 ```css interactive-example-choice
 font-kerning: auto;

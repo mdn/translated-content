@@ -105,7 +105,8 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-> **メモ:** `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
+> [!NOTE]
+> `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
 
 ### セレクターのスコープ
 

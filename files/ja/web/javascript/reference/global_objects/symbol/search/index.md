@@ -11,7 +11,7 @@ l10n:
 
 詳しくは、[`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) と {{jsxref("String.prototype.search()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+{{InteractiveExample("JavaScript デモ: Symbol.search")}}
 
 ```js interactive-example
 class Search1 {

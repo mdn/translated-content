@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取侧边栏的标题。
 
 就像你可以使用 {{WebExtAPIRef("sidebarAction.setTitle()")}} 在每个标签上设置标题一样，你也可以通过将标签页的 ID 传递给此函数来检索特定于标签页的标题。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **CSS メディアクエリー**モジュールにより、ビューポートの値やブラウザーや端末の機能を検査および問い合わせして、現在のユーザー環境に応じて CSS スタイルを条件付きで適用することができます。メディアクエリーは、 CSS の `@media` ルールや、 HTML や JavaScript などの他のコンテキストや言語で使用されます。
 
 メディアクエリーは、[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の中心的な要素です。メディアクエリーを使用すると、端末の特性やその値に応じて条件付きで CSS スタイルを設定することができます。一般的には、ビューポートのサイズに基づいてメディアクエリーを使用し、様々な画面サイズの端末に適切なレイアウトを設定します。例えば、幅の広い画面では 3 段組み、幅の狭い画面では 1 段組みにするなどです。
@@ -121,7 +119,7 @@ l10n:
 - HTML
   - `sizes` 属性（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img#sizes)、[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#sizes)、{{HTMLElement("picture")}} の [`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#sizes)）
   - `media` 属性（[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link#media)、[`<source>`](/ja/docs/Web/HTML/Reference/Elements/source#media)、[HTML](/ja/docs/Web/HTML) の [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style#media)）
-  - [ビューポートの `<meta>` タグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element)
+  - [ビューポートの `<meta>` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)
 - SVG の [`media`](/ja/docs/Web/SVG/Reference/Attribute/media) 属性
 
 ## 仕様書
