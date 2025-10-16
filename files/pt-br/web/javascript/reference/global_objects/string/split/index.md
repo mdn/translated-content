@@ -176,7 +176,8 @@ O script exibirá o texto a seguir:
 [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **Nota:**`\d` corresponde à classe de caracteres para dígitos entre 0 e 9.
+> [!NOTE]
+> `\d` corresponde à classe de caracteres para dígitos entre 0 e 9.
 
 ### Revertendo uma String usando `split()`
 

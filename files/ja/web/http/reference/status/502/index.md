@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`502 Bad Gateway`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、ゲートウェイまたは{{Glossary("Proxy_server", "プロキシー")}}として機能しているサーバーが上流のサーバーから不正なレスポンスを受け取ったことを示しています。
 
 このレスポンスは、サーバーエラーの一般的な「例外処理」という意味では、{{HTTPStatus("500", "500 Internal Server Error")}} レスポンスと似ています。

@@ -1,9 +1,9 @@
 ---
 title: 子結合子
 slug: Web/CSS/Child_combinator
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **子結合子** (child combinator) (`>`) は 2 つの CSS セレクターの間に配置されます。 2 つ目のセレクターが 1 つ目のセレクターの直接の子要素の場合にのみ一致します。
 
@@ -18,8 +18,9 @@ ul.my-things > li {
 
 ## 構文
 
-```css
-セレクター1 > セレクター2 { スタイルプロパティ }
+```css-nolint
+/* > 結合子の周辺の空間はオプションですが、推奨されます。 */
+セレクター1 > セレクター2 { /* スタイルプロパティ */ }
 ```
 
 ## 例
@@ -40,8 +41,8 @@ div > span {
 
 ```html
 <div>
-  <span
-    >Span #1, in the div.
+  <span>
+    Span #1, in the div.
     <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>

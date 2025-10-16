@@ -30,7 +30,8 @@ console.log(location); // affiche "https://developer.mozilla.org/fr/docs/Web/API
 
 Lorsqu'une nouvelle valeur est affectée à l'objet `location`, un document sera chargé en utilisant l'URL comme si `location.assign()` avait été invoquée avec l'URL modifiée.
 
-> **Note :** [Les marqueurs de bac à sable relatifs à la navigation](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) pourront lever une exception et empêcher la navigation.
+> [!NOTE]
+> [Les marqueurs de bac à sable relatifs à la navigation](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate) pourront lever une exception et empêcher la navigation.
 
 ```js
 location.assign("http://www.mozilla.org"); // ou

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **标志位**是一组变量（通常是简单的数值），可以用于启用或禁用方法或其他代码结构的特定用途或特性。由于它们在位级别上运行，因此可以快速有效地实现这一点。同一组中的相关标志通常被赋予互补值，每个值都表示单个值（例如十六进制）中不同位的位置，以便用单个值表示多个标志的设置。
 
 例如，在 {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} 中，可以使用 {{domxref("GPUDevice.createBuffer()")}} 方法创建 {{domxref("GPUBuffer")}} 对象实例。在调用此方法时，需要在描述符中定义 `usage` 属性，其中包含一个或多个标志，启用该缓冲区不同的允许用途。

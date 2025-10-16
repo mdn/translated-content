@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。
 
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダー内の URL のリソースをリクエストし、ユーザーを新しいページにリダイレクトします。

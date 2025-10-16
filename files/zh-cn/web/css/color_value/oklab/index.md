@@ -3,8 +3,6 @@ title: oklab()
 slug: Web/CSS/color_value/oklab
 ---
 
-{{CSSRef}}
-
 函数记号 **`oklab()`** 在 Oklab 颜色空间中表示指定颜色，此颜色空间尽力模仿人眼感知颜色的方式。`oklab()` 在 Oklab 颜色空间中使用直角坐标系，有 a 轴和 b 轴。若想要极坐标颜色系统——色度和色相，请使用 {{CSSXref("color_value/oklch", "oklch()")}}。
 
 Oklab 为感知颜色空间，可用于：

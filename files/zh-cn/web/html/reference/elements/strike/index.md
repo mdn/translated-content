@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<strike>`** [HTML](/zh-CN/docs/Web/HTML) 元素在文本上添加删除线（水平线）。
 

@@ -3,7 +3,7 @@ title: ::view-transition-image-pair
 slug: Web/CSS/::view-transition-image-pair
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-image-pair`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示一个视图过渡的旧视图状态和新视图状态的容器——即过渡前和过渡后的状态。
 

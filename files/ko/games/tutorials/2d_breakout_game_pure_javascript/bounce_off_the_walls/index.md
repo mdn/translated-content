@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls")}}
 
 이 글은 [Gamedev Canvas 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)에 포함된 10단계 중 3단계 글입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html)에서 확인해볼 수 있습니다.

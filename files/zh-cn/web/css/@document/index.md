@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
+{{deprecated_header}}{{Non-standard_header}}
 
 **`@document`** [CSS](/zh-CN/docs/Web/CSS) [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表而设计的，但也可以在开发者定义的样式表上使用。
 

@@ -35,7 +35,7 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
 {{Glossary("JavaScript")}} est un langage de programmation principalement utilisé côté client et qui peut également être utilisé côté serveur. Il permet entre autres de rendre les pages web interactives. JavaScript offre une myriade de possibilités.
 
 > [!NOTE]
-> Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+> Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
 ## Comment déclencher le code JavaScript depuis le document HTML
 

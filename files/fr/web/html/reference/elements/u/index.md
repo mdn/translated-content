@@ -32,7 +32,7 @@ u {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 

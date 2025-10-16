@@ -1,15 +1,13 @@
 ---
-title: nonce
+title: HTML nonce グローバル属性
+short-title: nonce
 slug: Web/HTML/Reference/Global_attributes/nonce
-original_slug: Web/HTML/Global_attributes/nonce
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`nonce`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、
-これは暗号化ノンス ("number used once") を定義するコンテンツ属性で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) が指定された要素に対してフェッチの実行を許可するかどうかを決定するために使用することができます。
+これは暗号化ノンス ("number used once") を定義するコンテンツ属性で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)が指定された要素に対して読み取りを許可するかどうかを決定するために使用することができます。
 
 ## 解説
 
@@ -30,7 +28,8 @@ l10n:
 ウェブサーバーから、暗号的に安全な乱数発生器を用いて、少なくとも 128 ビットのデータをランダムに Base64 エンコードした文字列を生成します。ノンスはページを読み込むたびに違った形で生成する必要があります（ノンスは 1 回だけ）。例えば node.js で、次のように行います。
 
 ```js
-const crypto = require("crypto");
+import crypto from "node:crypto";
+
 crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```

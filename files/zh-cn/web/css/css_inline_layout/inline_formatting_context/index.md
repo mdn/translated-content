@@ -3,8 +3,6 @@ title: 行内格式化上下文
 slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 ---
 
-{{CSSRef}}
-
 该指南将解释什么是行内格式化上下文（inline formatting context）。
 
 ## 核心概念

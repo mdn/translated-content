@@ -1,15 +1,17 @@
 ---
 title: <number>
 slug: Web/CSS/number
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
-
-Le type de donnée CSS **`<number>`** permet de représenter des nombres entiers ou décimaux. C'est donc un type qui englobe le type de données {{cssxref("&lt;integer&gt;")}} (permettant de représenter des entiers).
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<number>`** représente un nombre, qu'il s'agisse d'un entier, d'un nombre avec une partie fractionnaire ou d'un exposant en base dix en notation scientifique.
 
 ## Syntaxe
 
-Pour représenter des nombres décimaux, on utilisera le point (.) comme séparateur. Comme pour {{cssxref("&lt;integer&gt;")}}, il n'y a aucune unité associée aux valeurs de type `<number>` (ce n'est donc pas une dimension).
+La syntaxe de `<number>` étend celle de {{CSSxRef("&lt;integer&gt;")}}. Une valeur fractionnaire est représentée par un `.` suivi d'un ou plusieurs chiffres décimaux, et peut être ajoutée à un entier. Un `<number>` peut aussi se terminer par la lettre `e` ou `E` suivie d'un entier, ce qui indique un exposant en base dix en notation scientifique. Aucun nombre n'est associé à une unité.
+
+Comme pour les entiers, le premier caractère du nombre peut être immédiatement précédé d'un signe - ou + pour indiquer la positivité ou la négativité du nombre.
 
 ## Interpolation
 
@@ -17,9 +19,9 @@ Les valeurs de type `<number>` peuvent être interpolées afin d'être utilisée
 
 ## Exemples
 
-Voici des exemples de valeurs `<number>` valides :
+### Nombres valides
 
-```css example-good
+```plain example-good
 12          Un entier (<integer>) est également un <number>
 4.01        Un nombre (décimal) positif
 -456.8      Un nombre décimal négatif
@@ -31,9 +33,9 @@ Voici des exemples de valeurs `<number>` valides :
 -3.4e-2     Un cas d'utilisation de notation scientifique plus complexe
 ```
 
-Voici des exemples de valeurs invalides :
+### Nombres invalides
 
-```css example-bad
+```plain example-bad
 12.         Le point doit être suivi par des chiffres
 +-12.2      Seul un +/- est autorisé.
 12.1.1      Seul un point est autorisé.
@@ -49,4 +51,6 @@ Voici des exemples de valeurs invalides :
 
 ## Voir aussi
 
-- {{cssxref("&lt;integer&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;integer&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;ratio&gt;")}}
+- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)

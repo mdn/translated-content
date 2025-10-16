@@ -1,19 +1,49 @@
 ---
 title: "@layer"
 slug: Web/CSS/@layer
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
 
-La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
+{{InteractiveExample("Démonstration CSS&nbsp;: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Attention aux zombies</p>
+```
 
 ## Syntaxe
 
 ```css
-@layer nom-couche {regles}
+/* déclaration de règle @ */
 @layer nom-couche;
 @layer nom-couche, nom-couche, nom-couche;
+
+/* règle @ en bloc */
 @layer {regles}
+@layer nom-couche {regles}
 ```
 
 où&nbsp;:
@@ -25,11 +55,20 @@ où&nbsp;:
 
 ## Description
 
-Les règles d'une même couche de cascade suivent la cascade ensemble, permettant un contrôle plus fin. Tous les styles qui n'appartiennent pas à une couche donnée sont placées dans une unique couche anonyme qui arrive après les couches déclarées, nommées et anonymes. Cela signifie que les styles déclarés en dehors d'une couche surchargeront les styles déclarés dans une couche, quelle que soit la spécificité.
+Les règles à l'intérieur d'une couche de cascade sont évaluées ensemble, ce qui donne plus de contrôle sur la cascade aux développeur·euse·s web. Les styles qui ne sont pas définis dans une couche l'emportent toujours sur les styles déclarés dans des couches nommées ou anonymes.
 
-La règle `@layer` permet de créer une couche de cascade de trois façons différentes.
+Le schéma suivant montre les priorités des couches selon l'ordre de déclaration&nbsp;: 1, 2, ..., N.
 
-La première façon consiste à créer une couche de cascade nommée et qui contient les règles CSS pour cette couche, comme ceci&nbsp;:
+![Schéma illustrant les priorités des couches de cascade](https://mdn.github.io/shared-assets/images/diagrams/css/at-rules/layer-cascade.svg)
+
+Comme indiqué dans le schéma ci-dessus, les _déclarations importantes_ (celles avec le drapeau `!important`) ont priorité sur les _déclarations normales_ (celles sans le drapeau `!important`). L'ordre de précédence entre les règles importantes est l'inverse de celui des règles normales. Les transitions ont la plus grande précédence. Viennent ensuite, de la plus haute à la plus basse priorité&nbsp;: les déclarations importantes de l'{{glossary("user agent", "agent utilisateur")}}, les déclarations importantes de l'utilisateur·rice, puis les déclarations importantes de l'auteur·ice (développeur·euse web), dans cet ordre. Les utilisateur·ice·s peuvent spécifier des styles via les préférences du navigateur, du système d'exploitation ou des extensions. Leurs déclarations importantes l'emportent sur celles écrites par l'auteur·ice ou le·la développeur·euse.
+
+Dans les styles de l'auteur·ice, toutes les déclarations importantes à l'intérieur des couches CSS l'emportent sur les déclarations importantes en dehors d'une couche, tandis que toutes les déclarations normales à l'intérieur des couches CSS ont une priorité inférieure à celles déclarées en dehors d'une couche.
+L'ordre de déclaration est important&nbsp;: la première couche déclarée a la priorité la plus faible et la dernière la plus forte. Cependant, la priorité est inversée lorsque le drapeau [`!important`](/fr/docs/Web/CSS/important) est utilisé.
+
+La règle @ `@layer` est utilisée pour créer une couche de cascade de trois façons.
+
+La première consiste à utiliser une règle @ `@layer` en bloc pour créer une couche de cascade nommée, avec les règles CSS de cette couche à l'intérieur, comme ceci&nbsp;:
 
 ```css
 @layer utilities {
@@ -76,9 +115,6 @@ Cela crée une _couche de cascade anonyme_. Cette couche fonctionne de façon an
 
 Une autre façon pour créer une couche de cascade consiste à utiliser [`@import`](/fr/docs/Web/CSS/@import). Dans ce cas, les règles associées proviendraient de la feuille de style importée.
 
-> [!WARNING]
-> La règle @ `@import` doit précéder tous les autres types de règles, à l'exception des règles `@charset`.
-
 ```css
 @import "theme.css" layer(utilities);
 ```
@@ -106,17 +142,13 @@ Pour ajouter des règles à la couche `layout` située à l'intérieur de `frame
 
 ## Syntaxe formelle
 
-```
-@layer [ <layer-name># | <layer-name>?  {
-  <stylesheet>
-} ]
-```
+{{csssyntax}}
 
 ## Exemples
 
 ### Exemple simple
 
-Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
+Dans l'exemple suivant, deux règles CSS sont créées. Une pour les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) en dehors de toute couche et une pour ceux qui sont situés dans une couche intitulée `type` pour `.box p`.
 
 Sans couche, le sélecteur `.box p` aurait la plus haute spécificité et le texte `Coucou le monde !` serait alors affiché en vert. La couche `type` arrivant avant la couche anonyme pour gérer le contenu qui n'est pas affecté à une couche, le texte sera en violet.
 
@@ -148,7 +180,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("")}}
+{{EmbedLiveSample("exemple_simple")}}
 
 ### Affecter des règles à des couches existantes
 
@@ -188,7 +220,7 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
 
 #### Résultat
 
-{{EmbedLiveSample("")}}
+{{EmbedLiveSample("affecter_des_règles_à_des_couches_existantes")}}
 
 ## Spécifications
 
@@ -200,4 +232,12 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
 
 ## Voir aussi
 
-- [Le future de CSS&nbsp;: les couches de cascade (en anglais)](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)
+- {{cssxref("@import")}}
+- {{domxref("CSSLayerBlockRule")}}
+- {{domxref("CSSLayerStatementRule")}}
+- {{cssxref("important", "!important")}}
+- {{cssxref("revert-layer")}}
+- [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade)
+- [Apprendre&nbsp;: Gérer les conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Apprendre&nbsp;: Les couches de cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [L'avenir du CSS&nbsp;: les couches de cascade <sup>(angl.)</sup>](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) sur bram.us (2021)
