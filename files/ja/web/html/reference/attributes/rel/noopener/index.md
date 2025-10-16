@@ -13,7 +13,8 @@ l10n:
 
 なお、 `noopener` を使用した場合、ターゲット名に `_top`, `_self`, `_parent` 以外の空でない名前を使用すると、新しいウィンドウやタブを開くかどうかの判断において、すべて `_blank` と同様に扱われます。
 
-> **メモ:** `target="_blank"` を `<a>`、`<area>`、`<form>` 要素に設定すると、暗黙的に `rel` の動作が `rel="noopener"` を設定した場合と同様、 `window.opener` を設定しないようになります。
+> [!NOTE]
+> `target="_blank"` を `<a>`、`<area>`、`<form>` 要素に設定すると、暗黙的に `rel` の動作が `rel="noopener"` を設定した場合と同様、 `window.opener` を設定しないようになります。
 
 ## 仕様書
 

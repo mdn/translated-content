@@ -47,7 +47,8 @@ original_slug: Web/HTML/Element/input/button
 }
 ```
 
-> **참고:** `<input>` 요소의 `button` 유형도 전혀 틀리지 않은 방법이지만, 이후에 생긴 {{HTMLElement("button")}} 요소를 사용하는 것이 선호되는 방식입니다. `<button>`의 레이블 텍스트는 여는 태그와 닫는 태그 사이에 넣기 때문에, 심지어 이미지까지도 포함할 수 있습니다.
+> [!NOTE]
+> `<input>` 요소의 `button` 유형도 전혀 틀리지 않은 방법이지만, 이후에 생긴 {{HTMLElement("button")}} 요소를 사용하는 것이 선호되는 방식입니다. `<button>`의 레이블 텍스트는 여는 태그와 닫는 태그 사이에 넣기 때문에, 심지어 이미지까지도 포함할 수 있습니다.
 
 <table class="properties">
   <tbody>

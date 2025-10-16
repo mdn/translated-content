@@ -3,8 +3,6 @@ title: minmax()
 slug: Web/CSS/minmax
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS)函数 **`minmax()`** 定义了一个长宽范围的闭区间，它与[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)一起使用。
 
 ```css

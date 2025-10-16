@@ -28,7 +28,8 @@ Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}
 
-> **Nota:** [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
+> [!NOTE]
+> [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
 
 ## Variáveis 2
 
@@ -38,7 +39,8 @@ Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}
 
-> **Nota:** [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
+> [!NOTE]
+> [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
 
 ## Variáveis 3
 
@@ -48,7 +50,8 @@ Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}
 
-> **Nota:** [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
+> [!NOTE]
+> [Faça o download do ponto de partida](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para esta tarefa funcionar em seu próprio editor ou em um editor online.
 
 ## Avaliação ou ajuda adicional
 

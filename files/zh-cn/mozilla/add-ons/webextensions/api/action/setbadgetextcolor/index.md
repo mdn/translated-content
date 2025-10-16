@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f6ff6e14c5af7cb9ed701d7f4506f770014c704f
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的徽章文本颜色。未指定徽章文本颜色的标签页将继承全局徽章文本颜色。
 
 > [!NOTE]

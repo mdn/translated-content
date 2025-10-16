@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `autoplay` ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。
 

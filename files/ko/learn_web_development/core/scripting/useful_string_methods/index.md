@@ -110,7 +110,8 @@ browserType[browserType.length - 1];
 
    이렇게 하면 "zilla"가 반환됩니다. 문자의 2번째 위치는 "z"이고 두 번째 매개 변수를 포함하지 않았기 때문에 반환된 하위 문자열은 문자열의 나머지 문자 모두입니다.
 
-> **참고:** `slice()` has other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
+> [!NOTE]
+> `slice()` has other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
 
 ### 대/소문자 변경
 

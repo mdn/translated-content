@@ -3,8 +3,6 @@ title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 ---
 
-{{HTMLSidebar}}
-
 _HTML 引用（Citation）标签_ (**\<cite>**) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。
 
 {{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}

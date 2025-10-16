@@ -2,12 +2,12 @@
 title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
-**`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性是一个用于在样式表中统一设置逻辑块起始边框各属性值的简写属性。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-border-before`** 是一个用于在样式表中统一设置逻辑块起始边框各属性值的简写属性。
 
 ## 组成属性
 
@@ -58,10 +58,7 @@ l10n:
 
 ## 形式语法
 
-```plain
--webkit-border-before =
-  <'border-width'> || <'border-style'> || <color>
-```
+{{CSSSyntaxRaw(`-webkit-border-before = <'border-width'> || <'border-style'> || <color>`)}}
 
 ## 示例
 

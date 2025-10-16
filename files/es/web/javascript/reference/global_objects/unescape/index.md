@@ -7,7 +7,8 @@ l10n:
 
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
-> **Nota:** `unescape()` no es una función estándar implementada por los navegadores y solo se estandarizó para la compatibilidad entre motores. No es necesario que todos los motores de JavaScript lo implementen y es posible que no funcione en todas partes. Use {{jsxref("decodeURIComponent()")}} o {{jsxref("decodeURI()")}} si es posible.
+> [!NOTE]
+> `unescape()` no es una función estándar implementada por los navegadores y solo se estandarizó para la compatibilidad entre motores. No es necesario que todos los motores de JavaScript lo implementen y es posible que no funcione en todas partes. Use {{jsxref("decodeURIComponent()")}} o {{jsxref("decodeURI()")}} si es posible.
 
 La función **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con los caracteres que representan. Las secuencias de escape pueden ser introducidas por una función como {{jsxref("escape()")}}.
 

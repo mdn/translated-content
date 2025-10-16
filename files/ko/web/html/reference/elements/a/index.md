@@ -39,8 +39,9 @@ li {
 
     - 값을 지정하면 저장할 때의 파일 이름으로서 제안합니다. `/`와 `\` 문자는`_`로 변환합니다. 파일시스템에서 다른 문자도 제한할 수 있으므로, 필요한 경우 브라우저가 추가로 이름을 조정할 수 있습니다.
 
-    > **참고:**- `download`는 [동일 출처 URL](/ko/docs/Web/Security/Same-origin_policy)과 `blob:`, `data:` 스킴에서만 작동합니다.
+    > [!NOTE]
     >
+    > - `download`는 [동일 출처 URL](/ko/docs/Web/Security/Same-origin_policy)과 `blob:`, `data:` 스킴에서만 작동합니다.
     > - `Content-Disposition`의 `filename`이 `download`와 다를 땐 헤더가 우선권을 가집니다. (`Content-Disposition: inline`일 때, Firefox는 헤더를 우선하고 Chrome은 `download`를 우선합니다.)
 
 - `href`
@@ -66,7 +67,8 @@ li {
     - `_parent`: URL을 현재 브라우징 맥락의 부모에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
     - `_top`: URL을 최상단 브라우징 맥락(현재 맥락의 부모면서 자신의 부모가 존재하지 않는, 제일 높은 맥락)에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
 
-    > **참고:** `target`을 사용할 때, `rel="noreferrer"`를 추가해 `window.opener` API의 악의적인 사용을 방지하는걸 고려하세요.
+    > [!NOTE]
+    > `target`을 사용할 때, `rel="noreferrer"`를 추가해 `window.opener` API의 악의적인 사용을 방지하는걸 고려하세요.
 
     > [!NOTE]
     > 최근의 브라우저(Firefox 79+ 등)에서는 target="\_blank"를 지정하면 `rel="noopener"`를 적용한 것과 같은 동작을 합니다.
@@ -213,7 +215,8 @@ a {
 <h2 id="Section_further_down">아래의 제목</h2>
 ```
 
-> **참고:** `href="#top"`이나 빈 프래그먼트(`href="#"`)를 사용하면 현재 페이지의 최상단으로 이동하는 링크를 생성할 수 있습니다. [HTML 명세](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)를 확인하세요.
+> [!NOTE]
+> `href="#top"`이나 빈 프래그먼트(`href="#"`)를 사용하면 현재 페이지의 최상단으로 이동하는 링크를 생성할 수 있습니다. [HTML 명세](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)를 확인하세요.
 
 ### 이메일 주소로 연결
 

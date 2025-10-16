@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e5f0e1070962ee4a595369218d85481542ec7ded
 ---
 
-{{jsSidebar("Objects")}}
-
 **`isNaN()`** 函数用来确定一个值是否为 {{jsxref("NaN")}}，若有必要，则首先将值转换为数字。由于 `isNaN()` 函数内部的强制类型转换可能[令人迷惑](#描述)，因此你可能更想要使用 {{jsxref("Number.isNaN()")}}。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}

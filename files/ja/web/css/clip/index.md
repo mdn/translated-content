@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 758ddcdfb06f53955fa3c05dd32e7e4e53fd3009
 ---
 
-{{CSSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
 > 作成者は、代わりに {{cssxref("clip-path")}} プロパティを使用することをお勧めします。

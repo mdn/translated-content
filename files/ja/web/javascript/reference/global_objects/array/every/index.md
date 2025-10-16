@@ -1,15 +1,14 @@
 ---
 title: Array.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`every()`** は {{jsxref("Array")}} インスタンスのメソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。
 
-{{InteractiveExample("JavaScript デモ: Array.every()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.every()", "shorter")}}
 
 ```js interactive-example
 const isBelowThreshold = (currentValue) => currentValue < 40;

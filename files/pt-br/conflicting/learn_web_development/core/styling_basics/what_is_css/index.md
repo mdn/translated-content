@@ -49,7 +49,8 @@ Um **documento** é normalmente um arquivo texto estruturado usando uma linguage
 
 **Apresentar** um documento para um usuário significa convertê-lo para um formato utilizável pelo seu público. {{Glossary("browser","Browsers")}}, como {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, ou {{Glossary("Microsoft Edge","Edge")}} , são projetados para apresentar documentos visualmente, por exemplo, um uma tela de computador, projetor ou impressora.
 
-> **Nota:** **Observação**: Um navegador web é as vezes chamado de {{Glossary("User agent","user agent")}}, o que, basicamente, significa um programa de computador que representa uma pessoa por trás do sistema. Navegadores web são o principal tipo de agente do usuário que nos referimos quando falamos sobre CSS, contudo, ele não é o único. Há outros agentes de usuário disponíveis — tais como aqueles que convertem documentos HTML e CSS para PDF a serem impressos.
+> [!NOTE]
+> **Observação**: Um navegador web é as vezes chamado de {{Glossary("User agent","user agent")}}, o que, basicamente, significa um programa de computador que representa uma pessoa por trás do sistema. Navegadores web são o principal tipo de agente do usuário que nos referimos quando falamos sobre CSS, contudo, ele não é o único. Há outros agentes de usuário disponíveis — tais como aqueles que convertem documentos HTML e CSS para PDF a serem impressos.
 
 O CSS pode ser usado para estilizar um documento muito básico de texto — por exemplo, alterando a [cor](/pt-BR/docs/Web/CSS/color_value) e [tamanho](/pt-BR/docs/Web/CSS/font-size) dos títulos e links. Pode ser usado para criar layout — por exemplo, [transformando uma simples coluna de texto em um layout](/pt-BR/docs/Web/CSS/Layout_cookbook/Column_layouts) com uma área de conteúdo principal e um sidebar (barra lateral) para as informações relacionadas. Pode até ser usado para efeitos tais como [animação](/pt-BR/docs/Web/CSS/CSS_Animations). Dê uma olhada nos links deste parágrafo, para ver exemplos específicos.
 
@@ -87,7 +88,8 @@ p {
 
 Você constatará que rapidamente aprende alguns valores, enquanto outros precisará pesquisar. As páginas de propriedades individuais no MDN dá a você uma maneira rápida de procurar propriedades e seus respectivos valores, quando você esquecer, ou desejar saber quais valores pode usar.
 
-> **Nota:** **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
+> [!NOTE]
+> **Observação**: Você pode achar links para todas as páginas de propriedades CSS (junto com outros recursos CSS) listados no MDN [referência CSS](/pt-BR/docs/Web/CSS/Reference). Alternativamente, você deve se acostumar a pesquisar por "mdn _css-feature-name_" no seu motor de busca favorito sempre que precisar procurar mais informações sobre uma característica CSS. Por exemplo, experimente pesquisar por "mdn color" e "mdn font-size"!
 
 ## Módulos CSS
 

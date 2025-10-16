@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Accept
 original_slug: Web/HTTP/Headers/Accept
 ---
 
-{{HTTPSidebar}}
-
 `La cabecera de pedido Accept` anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types). Usando [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation), el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de la cabecera de respuesta {{HTTPHeader("Content-Type")}} .
 
 Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.

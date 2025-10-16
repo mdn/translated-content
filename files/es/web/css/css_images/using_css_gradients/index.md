@@ -3,8 +3,6 @@ title: Usando degradados con CSS
 slug: Web/CSS/CSS_images/Using_CSS_gradients
 ---
 
-{{CSSRef}}
-
 Los **degradados en CSS** están representados por el tipo de dato {{cssxref("&lt;gradient&gt;")}}, un tipo especial de {{cssxref("&lt;image&gt;")}} hecho de una transición progresiva entre dos o más colores. Puede elegir entre tres tipos de degradados: lineal (creado con la función {{cssxref("gradient/linear-gradient", "linear-gradient()")}}), radial (creado con la función {{cssxref("gradient/radial-gradient", "radial-gradient()")}}) y cónica (creada con la función {{cssxref("gradient/conic-gradient", "conic-gradient()")}}). También puede crear degradados repetidos con {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", " repeating-radial-gradient()")}}, y {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}.
 
 Los degradados se pueden usar en cualquier lugar donde usaría `<image>`, como en los fondos. Debido a que los degradados se generan dinámicamente, pueden anular la necesidad de los archivos de imagen de trama que tradicionalmente se usaban para lograr efectos similares. Además, debido a que los degradados son generados por el navegador, se ven mejor que las imágenes rasterizadas cuando se acercan y se pueden cambiar de tamaño sobre la marcha.
