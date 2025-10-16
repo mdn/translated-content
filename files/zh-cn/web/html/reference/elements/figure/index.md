@@ -3,8 +3,6 @@ title: <figure>：可附标题内容元素
 slug: Web/HTML/Reference/Elements/figure
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<figure>`** 元素代表一段独立的内容，可能包含 {{HTMLElement("figcaption")}} 元素定义的说明元素。该插图、标题和其中的内容通常作为一个独立的引用单元。
 
 {{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}

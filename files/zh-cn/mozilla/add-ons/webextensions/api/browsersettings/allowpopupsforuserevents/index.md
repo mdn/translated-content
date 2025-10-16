@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，可用于启用或禁用网页在响应用户操作时打开弹出窗口的功能。
 
 其底层值是一个布尔值。

@@ -3,8 +3,6 @@ title: <blend-mode>
 slug: Web/CSS/blend-mode
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo **`<blend-mode>`** es una coleccion de palabras clave que describen modos de mezcla.

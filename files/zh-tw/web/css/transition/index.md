@@ -3,8 +3,6 @@ title: transition
 slug: Web/CSS/transition
 ---
 
-{{CSSRef}}
-
 **`transition`** [CSS](/zh-TW/docs/Web/CSS) 屬性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的[簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
 {{InteractiveExample("CSS Demo: transition")}}

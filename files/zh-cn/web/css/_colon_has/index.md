@@ -3,8 +3,6 @@ title: :has()
 slug: Web/CSS/:has
 ---
 
-{{CSSRef}}
-
 CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
 
 ```css

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0702c8b455d44d12892863735bf7f507ea8eb1cf
 ---
 
-{{CSSRef}}
-
 **`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。
 
 > [!NOTE]

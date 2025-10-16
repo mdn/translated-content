@@ -9,7 +9,7 @@ l10n:
 
 **`<aside>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書のメインコンテンツと間接的な関係しか持っていない文書の部分を表現します。サイドバーやコールアウトボックスなどを表現するためによく使われます。
 
-{{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;aside&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>

@@ -63,7 +63,8 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 - {{domxref("FileReader.onprogress")}}
   - : Un gestionnaire pour l'évènement [`progress`](/fr/docs/Web/API/FileReader/progress_event). Cet évènement est déclenché lorsque la lecture du {{domxref("Blob")}} est en cours.
 
-> **Note :** `FileReader` hérite de l'interface {{domxref("EventTarget")}} et tout ces évènements peuvent donc être « écoutés » grâce à la méthode {{domxref("EventTarget.addEventListener()","addEventListener")}}.
+> [!NOTE]
+> `FileReader` hérite de l'interface {{domxref("EventTarget")}} et tout ces évènements peuvent donc être « écoutés » grâce à la méthode {{domxref("EventTarget.addEventListener()","addEventListener")}}.
 
 ## Méthodes
 

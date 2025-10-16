@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Server-Timing`** 헤더는 요청-응답 주기에 관한 여러 메트릭과 그 설명을 전달하는 역할을 합니다. 사용자의 브라우저 내 개발자 도구나 {{domxref("PerformanceServerTiming")}} 인터페이스를 통해 백엔드 서버의 타이밍 메트릭(예: 데이터베이스 읽기/쓰기, CPU 처리 시간, 파일 시스템 접근 등)을 확인할 수 있게 도와줍니다.
 
 <table class="properties">

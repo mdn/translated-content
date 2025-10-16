@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/abbr
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<abbr>`** (**abréviation** en français) représente une abréviation ou un acronyme ; l'attribut facultatif [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) peut fournir une explication ou une description de l'abréviation. S'il est présent, `title` doit contenir cette description complète et rien d'autre.
+L'élément HTML **`<abbr>`** (**abréviation** en français) représente une abréviation ou un acronyme ; l'attribut facultatif [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-title) peut fournir une explication ou une description de l'abréviation. S'il est présent, `title` doit contenir cette description complète et rien d'autre.
 
 {{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
 
@@ -87,7 +87,7 @@ abbr {
 
 ## Attributs
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 On notera que l'attribut **`title`** possède ici une sémantique spécifique et il représente la description complète de l'abréviation. Souvent, mais pas nécessairement, il s'affiche comme une info-bulle au survol de la souris.
 
@@ -99,10 +99,10 @@ Chaque élément `<abbr>` est indépendant, rattacher un titre à l'un ne l'asso
 
 Il n'est pas obligatoire d'utiliser `<abbr>` pour toutes les abréviations d'un document mais voici quelques cas où cet élément s'avère pertinent :
 
-- Lorsqu'une abréviation est utilisée et qu'on souhaite fournir une définition ou une explication en dehors du contenu du document, on utilisera `<abbr>` avec un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) adéquat.
+- Lorsqu'une abréviation est utilisée et qu'on souhaite fournir une définition ou une explication en dehors du contenu du document, on utilisera `<abbr>` avec un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-title) adéquat.
 - Lorsqu'une abréviation fait partie d'un jargon ou d'un vocabulaire qui risque d'être inconnu du lecteur, un élément `<abbr>` avec un attribut `title` explicatif pourra être utilisé.
 - Lorsqu'on souhaite bénéficier de la sémantique liée à l'abréviation (par exemple pour les manipuler en script ou les mettre en forme avec des feuilles de style), on pourra utiliser `<abbr>` pour identifier ces contenus.
-- Lorsqu'on souhaite définir des termes qui sont des abréviations, on pourra utiliser une combinaison de `<abbr>` et de [`<dfn>`](/fr/docs/Web/HTML/Element/dfn). Voir ci-après pour un exemple.
+- Lorsqu'on souhaite définir des termes qui sont des abréviations, on pourra utiliser une combinaison de `<abbr>` et de [`<dfn>`](/fr/docs/Web/HTML/Reference/Elements/dfn). Voir ci-après pour un exemple.
 
 ### Grammaire
 
@@ -112,7 +112,7 @@ Lorsqu'il est présent, le nombre (grammatical) du texte de l'attribut **`title`
 
 Le but de cet élément est purement explicatif. Tous les navigateurs l'affichent en ligne (`display: inline`) par défaut mais le reste de la mise en forme par défaut peut varier d'un navigateur à l'autre :
 
-- Certains navigateurs tels qu'Internet Explore lui appliquent la même mise en forme qu'à un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
+- Certains navigateurs tels qu'Internet Explore lui appliquent la même mise en forme qu'à un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span).
 - Opera, Firefox et d'autres navigateurs souligne l'abréviation avec une ligne de points.
 - D'autres navigateurs ne soulignent pas le texte mais l'écrivent en petites majuscules. Pour éviter ce comportement, on pourra utiliser la règle CSS `font-variant: none`.
 
@@ -158,7 +158,7 @@ abbr {
 
 ### Fournir une description
 
-On peut ajouter un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) afin de fournir une description de l'abréviation ou de l'acronyme.
+On peut ajouter un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-title) afin de fournir une description de l'abréviation ou de l'acronyme.
 
 #### HTML
 
@@ -172,7 +172,7 @@ On peut ajouter un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-t
 
 ### Définir une abréviation
 
-Il est possible d'utiliser l'élément `<abbr>` avec [`<dfn>`](/fr/docs/Web/HTML/Element/dfn) afin de formellement définir une abréviation.
+Il est possible d'utiliser l'élément `<abbr>` avec [`<dfn>`](/fr/docs/Web/HTML/Reference/Elements/dfn) afin de formellement définir une abréviation.
 
 #### HTML
 
@@ -223,4 +223,4 @@ Cela peut servir aux personnes qui découvrent ces concepts pour la première fo
 
 ## Voir aussi
 
-- [Utiliser l'élément `<abbr>`](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [Utiliser l'élément `<abbr>`](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)

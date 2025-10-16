@@ -3,8 +3,6 @@ title: transform-box
 slug: Web/CSS/transform-box
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 **`transform-box`** 属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。

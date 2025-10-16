@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`300 Multiple Choices`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示該請求有多個可能的回應。使用者代理或使用者應該從中選擇一個。
 
 > [!NOTE]

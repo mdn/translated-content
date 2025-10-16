@@ -1,24 +1,37 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
+l10n:
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`inverted-colors`** permet de tester si l'{{glossary("user agent", "agent utilisateur")}} ou le système d'exploitation sous-jacent a inversé toutes les couleurs.
 
-**`inverted-colors`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs.
+L'inversion des couleurs peut avoir des effets indésirables, comme la transformation des ombres en zones claires, ce qui peut réduire la lisibilité du contenu. Grâce à cette caractéristique média, il est possible de détecter si une inversion est en cours et d'adapter la présentation du contenu tout en respectant la préférence de l'utilisateur·ice.
 
 ## Syntaxe
 
-Cette caractéristique est définie avec un des mots-clés parmi ceux qui suivent :
+```css
+/* Valeur par mot-clé */
+@media (inverted-colors: inverted) {
+  /* styles appliqués si une inversion des couleurs est détectée */
+}
+```
+
+La caractéristique `inverted-colors` se définit comme l'une des valeurs mot-clé suivantes&nbsp;:
 
 - `none`
-  - : Les couleurs sont affichées normalement.
+  - : Indique que les couleurs sont affichées normalement et qu'aucune inversion n'a eu lieu. Cette valeur est évaluée comme fausse.
 - `inverted`
-  - : Les couleurs des pixels de la zone affichée ont été inversées.
+  - : Indique que tous les pixels de la zone affichée ont été inversés. Cette valeur est évaluée comme vraie.
 
 ## Exemples
 
-### HTML
+### Appliquer des styles si une inversion des couleurs est détectée
+
+Cet exemple montre les effets des deux valeurs mot-clé de la caractéristique média `inverted-colors` ainsi que le cas où la caractéristique n'est pas prise en charge.
+
+#### HTML
 
 ```html
 <p>
@@ -31,7 +44,7 @@ Cette caractéristique est définie avec un des mots-clés parmi ceux qui suiven
 </p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 p {
@@ -47,15 +60,15 @@ p {
 
 @media (inverted-colors: none) {
   p {
-    background: #eee;
+    background: #eeeeee;
     color: red;
   }
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("appliquer_des_styles_si_une_inversion_des_couleurs_est_détectée")}}
 
 ## Spécifications
 
@@ -64,3 +77,9 @@ p {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("@media")}}
+- Le module des [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)

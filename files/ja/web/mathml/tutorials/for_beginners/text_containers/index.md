@@ -158,7 +158,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('Automatic italicization of <mi>', 700, 50) }}
 
-> **メモ:** [MathML Core のこの表](https://w3c.github.io/mathml-core/#italic-mappings)は、斜体化の指定された文字の完全なリストと、それに対応する斜体文字を提供しています。
+> [!NOTE]
+> [MathML Core のこの表](https://w3c.github.io/mathml-core/#italic-mappings)は、斜体化の指定された文字の完全なリストと、それに対応する斜体文字を提供しています。
 
 ## \<mi> の自動的なイタリック化の取り消し
 

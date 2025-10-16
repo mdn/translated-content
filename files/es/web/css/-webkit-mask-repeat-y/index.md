@@ -3,7 +3,7 @@ title: -webkit-mask-repeat-y
 slug: Web/CSS/-webkit-mask-repeat-y
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
