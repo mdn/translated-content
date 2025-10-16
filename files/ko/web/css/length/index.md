@@ -3,9 +3,10 @@ title: <length>
 slug: Web/CSS/length
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
 
-> **참고:** {{cssxref("&lt;percentage&gt;")}} 값을 일부 속성의 `<length>` 값으로 사용할 수는 있지만 `<percentage>`와 `<length>` 는 다릅니다. {{cssxref("&lt;length-percentage&gt;")}}를 참고하세요.
+> [!NOTE]
+> {{cssxref("&lt;percentage&gt;")}} 값을 일부 속성의 `<length>` 값으로 사용할 수는 있지만 `<percentage>`와 `<length>` 는 다릅니다. {{cssxref("&lt;length-percentage&gt;")}}를 참고하세요.
 
 ## 구문
 

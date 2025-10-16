@@ -78,7 +78,7 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
 - [要素に装着されたスタイル](/ja/docs/Web/HTML/Reference/Global_attributes/style)
 - [インラインスタイルとカスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade#インラインスタイル)
 - [@imports の条件付きルール](/ja/docs/Web/CSS/@import#条件付きで_css_ルールをインポート)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## 仕様書
 

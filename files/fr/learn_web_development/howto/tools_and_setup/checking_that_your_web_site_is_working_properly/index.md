@@ -126,7 +126,7 @@ Pour voir ces erreurs, ouvrez la console (**Outils ➤ Développement web ➤ Co
 
 ![A Javascript error is shown in the Console](Capture%20du%202015-10-12%2019-10-52.png)
 
-Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/docs/conflicting/Learn_web_development/Core/Scripting)).
+Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/docs/Learn_web_development/Core/Scripting)).
 
 ### D'autres points de contrôles
 

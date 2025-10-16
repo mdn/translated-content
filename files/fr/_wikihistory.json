@@ -4426,9 +4426,18 @@
     ]
   },
   "Learn_web_development/Extensions/Forms": {
-    "modified": "2020-07-16T22:21:39.980Z",
+    "modified": "2020-07-16T22:20:56.659Z",
     "contributors": [
-      "Dralyab"
+      "BAHLOUL_Farouk",
+      "Dralyab",
+      "klenzo",
+      "Porkepix",
+      "Orkrum",
+      "diomabb",
+      "SphinxKnight",
+      "Goofy",
+      "tregagnon",
+      "FredB"
     ]
   },
   "Learn_web_development/Extensions/Forms/Advanced_form_styling": {
@@ -12585,36 +12594,6 @@
       "AlainRinder"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-03-23T23:50:50.905Z",
-    "contributors": [
-      "loella16",
-      "SphinxKnight",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Domif",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2020-10-18T13:14:40.506Z",
-    "contributors": [
-      "Lolo",
-      "diassynthesis",
-      "loella16",
-      "kekbait",
-      "SphinxKnight",
-      "yasakura_",
-      "teoli",
-      "khalid32",
-      "BenoitL",
-      "Mgjbot",
-      "Takenbot",
-      "Chbok"
-    ]
-  },
   "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-03-18T21:39:30.176Z",
     "contributors": [
@@ -12628,16 +12607,6 @@
       "BenoitL",
       "Mgjbot",
       "Planche"
-    ]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2020-03-02T10:16:52.732Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "loella16",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "Web/API/Element": {
@@ -21675,31 +21644,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units": {
-    "modified": "2019-04-06T13:14:19.030Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2019-07-12T07:45:36.764Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2019-04-06T13:47:19.541Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "Guillaume-Heras",
-      "prayash",
-      "pixoux",
-      "teoli",
-      "FredB"
-    ]
-  },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2019-04-06T12:15:29.279Z",
     "contributors": [
@@ -22701,6 +22645,31 @@
       "Louis-MarieMatthews",
       "lotfire24",
       "amdufour"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units": {
+    "modified": "2019-04-06T13:14:19.030Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2019-07-12T07:45:36.764Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
+    "modified": "2019-04-06T13:47:19.541Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "Guillaume-Heras",
+      "prayash",
+      "pixoux",
+      "teoli",
+      "FredB"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
@@ -38569,380 +38538,6 @@
     "modified": "2020-10-15T21:52:22.760Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {
-    "modified": "2020-07-16T22:27:21.075Z",
-    "contributors": [
-      "Anonymous",
-      "Dralyab"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Scripting": {
-    "modified": "2020-07-16T22:29:38.759Z",
-    "contributors": [
-      "mper",
-      "Dralyab",
-      "tonybengue",
-      "loella16",
-      "SphinxKnight",
-      "Thogusa"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Scripting_fb235ec2f43049f379fbefbc9e0e7ee10637a460ab94430af2a806ab533a3580": {
-    "modified": "2020-07-16T22:31:07.626Z",
-    "contributors": [
-      "smeden-lod",
-      "tonybengue",
-      "SphinxKnight",
-      "benjaminlepine",
-      "loella16",
-      "daufinsyd"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Structuring_content": {
-    "modified": "2020-07-16T22:24:25.278Z",
-    "contributors": [
-      "tristantheb",
-      "Dralyab",
-      "AntoineJacquet",
-      "zakaila",
-      "Ilphrin"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics": {
-    "modified": "2020-07-16T22:25:11.317Z",
-    "contributors": [
-      "NerOcrO",
-      "Dralyab",
-      "loella16",
-      "tonybengue"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics": {
-    "modified": "2020-09-16T07:14:02.390Z",
-    "contributors": [
-      "Voulto",
-      "smeden-lod",
-      "AxelGiauffret",
-      "chrisdavidmills"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors": {
-    "modified": "2020-10-09T07:28:41.371Z",
-    "contributors": [
-      "chuck2kill",
-      "smeden-lod",
-      "Zouayni"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics/Getting_started": {
-    "modified": "2020-10-20T05:38:33.608Z",
-    "contributors": [
-      "SebastienLatouche",
-      "smeden-lod"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS": {
-    "modified": "2020-10-15T22:25:55.680Z",
-    "contributors": [
-      "geraldventadour",
-      "SphinxKnight",
-      "smeden-lod"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics_3fe7b053115cdfdcdb658e88312276a96d81de42552c60589901728cd9cfb3b3": {
-    "modified": "2020-07-16T22:28:26.748Z",
-    "contributors": [
-      "Dralyab"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f": {
-    "modified": "2020-10-08T12:02:37.318Z",
-    "contributors": [
-      "geraldventadour",
-      "ylerjen",
-      "smeden-lod",
-      "nherbaut",
-      "chrisdavidmills"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3": {
-    "modified": "2020-07-16T22:28:24.684Z",
-    "contributors": [
-      "LeMilitaire",
-      "Dralyab"
-    ]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9": {
-    "modified": "2020-07-16T22:28:12.063Z",
-    "contributors": [
-      "Dralyab"
-    ]
-  },
-  "conflicting/Learn_web_development/Extensions/Forms": {
-    "modified": "2020-07-16T22:20:56.659Z",
-    "contributors": [
-      "BAHLOUL_Farouk",
-      "Dralyab",
-      "klenzo",
-      "Porkepix",
-      "Orkrum",
-      "diomabb",
-      "SphinxKnight",
-      "Goofy",
-      "tregagnon",
-      "FredB"
-    ]
-  },
-  "conflicting/Learn_web_development/Extensions/Testing": {
-    "modified": "2020-11-23T17:27:15.888Z",
-    "contributors": [
-      "Chomchaum",
-      "Voulto",
-      "wbamberg",
-      "arai"
-    ]
-  },
-  "conflicting/MDN/Community": {
-    "modified": "2020-08-31T06:19:39.661Z",
-    "contributors": [
-      "Voulto",
-      "wbamberg",
-      "zakaila",
-      "callmemagnus",
-      "Danette41240",
-      "SphinxKnight",
-      "Porkepix",
-      "thbil",
-      "Goofy",
-      "Baball",
-      "teoli",
-      "wakka27",
-      "jswisher"
-    ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions/manifest.json": {
-    "modified": "2020-10-15T22:06:59.369Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT": {
-    "modified": "2019-03-23T23:51:13.681Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "Sheppy",
-      "Ultrafil",
-      "Mgjbot",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2019-03-24T00:07:12.456Z",
-    "contributors": [
-      "loella16",
-      "kmaglione",
-      "Azema",
-      "Valacar",
-      "Fredchat",
-      "Fping"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model_ed1f254ab62fd5902b28ca4eb72ca773": {
-    "modified": "2020-03-02T10:16:52.814Z",
-    "contributors": [
-      "SphinxKnight",
-      "loella16"
-    ]
-  },
-  "conflicting/Web/API/Element/copy_event": {
-    "modified": "2020-10-15T22:33:31.446Z",
-    "contributors": [
-      "Voulto"
-    ]
-  },
-  "conflicting/Web/API/Fetch_API/Using_Fetch": {
-    "modified": "2019-01-17T02:08:05.574Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "conflicting/Web/API/Navigator/registerProtocolHandler": {
-    "modified": "2019-03-23T23:58:55.939Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "tregagnon",
-      "muffinchoco",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/API/WebVTT_API": {
-    "modified": "2020-10-15T22:24:04.146Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/API/console": {
-    "modified": "2019-03-18T21:43:50.040Z",
-    "contributors": [
-      "tweqx"
-    ]
-  },
-  "conflicting/Web/CSS": {
-    "modified": "2019-04-06T12:54:16.767Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/CSS/@font-face": {
-    "modified": "2019-03-23T23:04:56.306Z",
-    "contributors": [
-      "Sebastianz",
-      "SphinxKnight",
-      "Barbrousse"
-    ]
-  },
-  "conflicting/Web/CSS/@media": {
-    "modified": "2019-04-06T12:01:18.819Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_cascade/Value_processing": {
-    "modified": "2019-04-06T12:16:17.195Z",
-    "contributors": [
-      "SphinxKnight",
-      "louuis",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_cascade/Value_processing_4e3ad4bb8e93bd9e2a381021d1b939f81717e13df739659207d88907070d77aa": {
-    "modified": "2019-07-12T07:46:53.914Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "tregagnon",
-      "FredB"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4": {
-    "modified": "2019-04-06T13:07:44.816Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2": {
-    "modified": "2019-07-12T07:47:30.131Z",
-    "contributors": [
-      "SphinxKnight",
-      "Golga",
-      "vava",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_cascade/Value_processing_f91302baa0061849ce1a7eea54ba57f650b9256fcf644b7a35a0645d353b08fc": {
-    "modified": "2019-04-06T13:12:40.534Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "louuis",
-      "FredB",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_grid_layout": {
-    "modified": "2020-05-31T18:37:08.537Z",
-    "contributors": [
-      "SphinxKnight",
-      "alexr"
-    ]
-  },
-  "conflicting/Web/CSS/clip": {
-    "modified": "2020-10-15T21:18:05.925Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "gudoy",
-      "FredB",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "conflicting/Web/HTML/Element": {
-    "modified": "2020-10-15T21:24:26.748Z",
-    "contributors": [
-      "SphinxKnight",
-      "JNa0",
-      "tregagnon",
-      "Delapouite"
-    ]
-  },
-  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
-    "modified": "2020-03-12T19:40:53.485Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "loicfrance",
-      "NemoNobobyPersonne"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_token": {
-    "modified": "2020-03-12T19:43:58.142Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/SVG/Reference/Attribute": {
-    "modified": "2019-03-23T22:21:03.889Z",
-    "contributors": [
-      "SphinxKnight",
-      "daimebag"
-    ]
-  },
-  "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT": {
-    "modified": "2019-01-16T15:43:09.128Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Fredchat",
-      "VincentN"
-    ]
-  },
-  "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_9adc47cddce7f9364218b6fd73567d129112759ac862deda93e66a6293721249": {
-    "modified": "2019-03-23T23:45:10.616Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6": {
-    "modified": "2019-03-23T23:49:47.376Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "Mgjbot",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
-    "modified": "2019-01-16T16:11:27.172Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Fredchat"
     ]
   }
 }
