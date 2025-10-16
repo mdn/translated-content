@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **`enterkeyhint`** 是一个[枚举属性](/zh-CN/docs/Glossary/Enumerated)，定义虚拟键盘上回车键的操作标签（或图标）。
 
 {{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}

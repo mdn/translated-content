@@ -3,8 +3,6 @@ title: Collision detection
 slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}
 
 Este es el **paso 10** de un total de 16, del tutorial de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y cómo queda al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson10.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson10.html).

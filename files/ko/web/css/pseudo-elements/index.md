@@ -3,8 +3,6 @@ title: 의사 요소
 slug: Web/CSS/Pseudo-elements
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **의사 요소**(가상 요소)는 선택자에 추가하는 키워드로, 선택한 요소의 일부분에만 스타일을 입힐 수 있습니다. 예를 들어 {{cssxref("::first-line")}}을 사용하면 문단 첫 줄의 글씨체만 바꿀 수 있습니다.
 
 ```css
@@ -15,7 +13,8 @@ p::first-line {
 }
 ```
 
-> **참고:** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 의사 요소와 달리 요소의 **특정 상태**에 스타일을 적용할 때 사용합니다.
+> [!NOTE]
+> [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 의사 요소와 달리 요소의 **특정 상태**에 스타일을 적용할 때 사용합니다.
 
 ## 구문
 

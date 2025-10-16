@@ -87,7 +87,7 @@ Il est nécessaire d'échapper les caractères `<`, `>`, `&`, et `"` afin de s'a
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `cols` {{non-standard_inline}} {{deprecated_inline}}
   - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Cet attribut était un synonyme non-standard de l'attribut `width` (voir ci-après). Afin d'obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/width).
@@ -102,7 +102,7 @@ Il est important de fournir une description alternative pour toute image ou diag
 
 Les personnes souffrant de troubles de la vision et/ou navigant à l'aide d'outils d'assistance comme des lecteurs d'écran peuvent ne pas comprendre le diagramme si celui-ci est construit avec des lettres et symboles et lu dans le désordre.
 
-Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments [`<figure>`](/fr/docs/Web/HTML/Element/figure) et [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) complétée par les attributs [ARIA](/fr/docs/Web/Accessibility/ARIA) `role` et [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément `<pre>` afin que le dessin en ASCII préformaté puisse être énoncé comme une image avec un texte alternatif, `<figcaption>` servant alors de légende à l'image.
+Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments [`<figure>`](/fr/docs/Web/HTML/Reference/Elements/figure) et [`<figcaption>`](/fr/docs/Web/HTML/Reference/Elements/figcaption) complétée par les attributs [ARIA](/fr/docs/Web/Accessibility/ARIA) `role` et [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément `<pre>` afin que le dessin en ASCII préformaté puisse être énoncé comme une image avec un texte alternatif, `<figcaption>` servant alors de légende à l'image.
 
 ### Exemple
 
@@ -125,7 +125,7 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
 </figure>
 ```
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Techniques H86&nbsp;: fournir des alternatives textuelles pour les dessins ASCII, les émoticônes, et le <i lang="en">leetspeak</i> | Techniques W3C pour WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## Exemples
@@ -179,4 +179,4 @@ if (i &lt; 10 &amp;&amp; i &gt; 0) {
   - [`white-space`](/fr/docs/Web/CSS/white-space)
   - [`word-break`](/fr/docs/Web/CSS/word-break)
 - [Les entités HTML](/fr/docs/Glossary/Entity)
-- L'élément HTML [`<code>`](/fr/docs/Web/HTML/Element/code)
+- L'élément HTML [`<code>`](/fr/docs/Web/HTML/Reference/Elements/code)

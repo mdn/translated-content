@@ -1,122 +1,52 @@
 ---
-title: Public Key Pinning
+title: Transparence des certificats
 slug: Web/Security/Certificate_Transparency
+l10n:
+  sourceCommit: ade8d870ed7e18a71dc51fe25aa13d812fb82558
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+La **transparence des certificats** (<i lang="en">Certificate Transparency</i> en anglais) est un cadre ouvert conçu pour protéger contre les mauvaises émissions de certificats et les surveiller. Avec la transparence des certificats, les certificats nouvellement émis sont «&nbsp;journalisés&nbsp;» dans des _journaux CT_ publics, souvent indépendants, qui maintiennent un enregistrement append-only (ajout-seulement) et garanti cryptographiquement des certificats TLS émis.
 
-L'extention **Public Key Pinning pour HTTP** (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques [MITM](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) avec des certificats contrefaits.
+De cette façon, les autorités de certification (CA) peuvent être soumises à un contrôle et une surveillance publics bien plus importants. Les certificats potentiellement malveillants, comme ceux qui enfreignent les _exigences de base_ du CA/B Forum, peuvent être détectés et révoqués beaucoup plus rapidement. Les éditeurs de navigateurs et les responsables des magasins de racines sont également en mesure de prendre des décisions plus éclairées concernant les CA problématiques qu'ils pourraient décider de ne plus approuver.
 
-> [!NOTE]
-> La Public Key Pinning décrite ici est différente du limité [preload list based key pinning](http://monica-at-mozilla.blogspot.de/2014/08/firefox-32-supports-public-key-pinning.html) introduit dans Firefox 32.
+## Contexte
 
-Pour s'assurer de l'authenticité de la clé publique du serveur utilisé dans une session TLS, cette clé publique est enveloppée dans un certificat X.509 qui est généralement signé par une autorité de certifications (CA, pour Certificate Authority). Les clients web tels que les navigateurs font confiance à beaucoup de ces autorités de certifications, et chacune d'entre elles peut créer des certificats pour des domaines arbitraires. Si un attaquant est capable de compromettre une seule de ces CA, il peut pratiquer des attaques {{Glossary("MitM")}} sur diverses connections TLS. HPKP peut contourner cette menace pour le protocole HTTPS en disant au client web quelles clés publiques appartiennent à un certain serveur web.
+Les journaux CT sont construits sur la structure de données _arbre de Merkle_. Les nœuds sont étiquetés avec les _hachages cryptographiques_ de leurs nœuds enfants. Les feuilles contiennent les hachages des véritables données. L'étiquette du nœud racine dépend donc de tous les autres nœuds de l'arbre.
 
-HPKP est une technique qui s'appuie sur la confiance au premier accès (TOFU, _Trust on First Use_). La première fois un serveur web dit au client en utilisant l'en-tête HTTP HPKP quelles clés publiques lui appartiennent, le client sauvegarde cette information pour une période de temps donnée. Quand le client visite le serveur à nouveau, il s'attend à un certificat contenant une clé publique dont l'empreinte est sauvegardée. Si le serveur présente une clé publique inconnue, le client doit présenter un avertissement à l'utilisateur.
+Dans le contexte de la transparence des certificats, les données hachées par les feuilles sont les certificats émis par les différentes autorités de certification actuelles. L'inclusion d'un certificat peut être vérifiée via une _preuve d'audit_ qui peut être générée et vérifiée efficacement, en temps logarithmique O(log n).
 
-> [!NOTE]
-> Firefox (et Chrome) **désactivent la vérification de l'épinglage** lorsqu'un site épinglé présentent une chaine de certificats qui se termine par **un certificat racine installé par l'utilisateur** (et non un certificat racine de base).
+La transparence des certificats est apparue initialement en 2013 dans un contexte de compromissions de CA (faille DigiNotar en 2011), de décisions discutables (incident Trustwave subordinate root en 2012) et de problèmes techniques d'émission (émission de certificats faibles à 512 bits par DigiCert Sdn Bhd en Malaisie).
 
-## Activer HPKP
+## Mise en œuvre
 
-Activer cette fonctionnalité pour votre site est simple : il faut juste retourner l'en tête HTTP `Public-Key-Pins` HTTP quand le site est accédé via HTTPS :
+Lorsque des certificats sont soumis à un journal CT, un _horodatage de certificat signé_ (SCT) est généré et renvoyé. Cela sert de preuve que le certificat a été soumis et sera ajouté au journal.
 
-```
-Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubdomains][; report-uri="reportURI"]
-```
+La spécification indique que les serveurs conformes _doivent_ fournir un certain nombre de ces SCT aux clients TLS lors de la connexion. Cela peut être réalisé par plusieurs mécanismes différents&nbsp;:
 
-- `pin-sha256`
-  - : La chaîne de caractère entre guillemets est l'empreinte du _Subject Public Key Information_ (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
-- `max-age`
-  - : Le temps, en seconde, pendant laquelle le navigateur doit mémoriser que le site ne doit être visité qu'avec l'une des clés épinglées.
-- `includeSubdomains` {{ optional_inline() }}
-  - : Si ce paramètre optionnel est spécifié, cette règle s'applique aussi a tous les sous-domaines du domaine actuel.
-- `report-uri` {{ optional_inline() }}
-  - : Si ce paramètre optionnel est spécifié, les échecs de validation sont notifiés à l'URL donnée.
+- Extension de certificat X.509v3 qui intègre les horodatages de certificat signés directement dans le certificat feuille
+- Extension TLS de type `signed_certificate_timestamp` envoyée lors de la poignée de main
+- OCSP stapling (c'est-à-dire l'extension TLS `status_request`) et fourniture d'une `SignedCertificateTimestampList` contenant un ou plusieurs SCT
 
-> [!NOTE]
-> La spécification actuelle **impose** d'inclure au minimum une seconde clé dite de sauvegarde, qui n'est pas encore utilisée en production. Cela permet de changer de clé publique sans bloquer l'accès aux clients qui auraient déjà noté les clés épinglés. C'est important par exemple dans le cas où la clé actuellement utilisées serait compromise, ce qui forcerait l'utilisation d'une clé différente (la clé de sauvegarde dans ce cas).
+Avec l'extension de certificat X.509, les SCT inclus sont décidés par la CA émettrice. Depuis juin 2021, la plupart des certificats utilisés activement et valides, reconnus publiquement, contiennent des données de transparence intégrées dans cette extension. Cette méthode ne devrait pas nécessiter de modification des serveurs web.
 
-> [!NOTE]
-> Firefox n'implémente pas encore les rapports de violation d'épinglage. Chrome les implémente à partie de la version 46.
->
-> - Firefox: [Bug 1091176 - Implement report-uri directive for HPKP](https://bugzilla.mozilla.org/show_bug.cgi?id=1091176) et [Bug 787133 - (hpkp) Implement Public Key Pinning Extension for HTTP (HPKP)](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)
-> - Chrome: <https://developers.google.com/web/updates/2015/09/HPKP-reporting-with-chrome-46> , [HTTP Public Key Pinning violating reporting](https://www.chromestatus.com/feature/4669935557017600) et [Issue 445793: HPKP Reporting on invalid pins](https://code.google.com/p/chromium/issues/detail?id=445793)
+Avec les autres méthodes, les serveurs devront être mis à jour pour envoyer les données requises. L'avantage est que l'opérateur du serveur peut personnaliser les sources de journaux CT fournissant les SCT envoyés via l'extension TLS ou la réponse OCSP staplée.
 
-### Extraire la clé publique encodé en Base64
+## Exigences des navigateurs
 
-En premier, vous devez extraire la clé publique depuis votre fichier de certificats ou de clés puis l'encoder en base 64.
+Google Chrome 107 et versions ultérieures exigent l'inclusion dans un journal CT pour tous les certificats émis avec une date notBefore postérieure au 30 avril 2018. Les utilisateur·ice·s seront empêché·e·s de visiter des sites utilisant des certificats TLS non conformes.
+Chrome exigeait auparavant l'inclusion CT pour les certificats à _validation étendue_ (EV) et ceux émis par Symantec.
 
-Les commandes suivantes vous aideront à extraire la clé publique et à l'encoder en base 64 depuis le fichier d'une clé, d'un certificat ou d'un CSR (Certificate Signing Request).
+Apple [exige <sup>(angl.)</sup>](https://support.apple.com/en-gb/103214) un nombre variable de SCT pour que Safari et d'autres serveurs fassent confiance aux certificats serveur.
 
-```bash
-openssl rsa -in my-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
-```
-
-```bash
-openssl req -in my-signing-request.csr -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-```
-
-```bash
-openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-```
-
-### Exemple d'entête HPKP
-
-```
-Public-Key-Pins: pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="; pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="; max-age=5184000; includeSubdomains; report-uri="https://www.example.net/hpkp-report"
-```
-
-Dans cet exemple, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** épingle la clé publique utilisée en production par le serveur. La deuxième déclaration d'épinglage **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** représente la clé de sauvegarde. **max-age=5184000** dit au client de mémoriser cette information pendant deux mois, ce qui est un temps raisonnable d'après la RFC. Cet épinglage s'applique aussi à tous les sous-domaines, car **includeSubdomains** est présent. Enfin, **report-uri="https\://www\.example.net/hpkp-report"** indique où envoyer les rapports d'erreurs de validation.
-
-### Mettre en place le header HPKP sur votre serveur web
-
-Les étapes concrètes nécessaires pour délivrer l'en-tête HPKP dépendent du serveur web que vous utilisez.
-
-> [!NOTE]
-> Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.
-
-Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..."`&nbsp;:
-
-#### Apache
-
-```
-Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
-```
-
-**Note :** Cela demande le module `mod_headers` activé.
-
-#### Nginx
-
-```
-add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains';
-```
-
-**Note :** Cela demande le module `ngx_http_headers_module`.
-
-#### Lighttpd
-
-```
-setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
-```
-
-**Note:** Cela demande le module `mod_setenv` chargé, ce qui peut être fait en ajoutant la ligne suivante (s'il n'est pas déjà chargé) :
-
-```
-server.modules += ( "mod_setenv" )
-```
+Firefox desktop à partir de la version 135 exige l'inclusion dans un journal CT pour tous les certificats émis par les autorités de certification du programme racine de Mozilla.
+Firefox pour Android n'exige pas actuellement l'inclusion dans un journal CT.
 
 ## Spécifications
 
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
+Les implémentations des navigateurs sont basées sur la spécification obsolète {{rfc("6962","Certificate Transparency <sup>(angl.)</sup>")}} (janvier 2025).
+La spécification actuelle est {{rfc("9162","Certificate Transparency Version 2.0 <sup>(angl.)</sup>")}}.
 
 ## Voir aussi
 
-- {{HTTPHeader("Public-Key-Pins")}}
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
-- {{HTTPHeader("Expect-CT")}}
+- [Programme de journaux Certificate Transparency d'Apple <sup>(angl.)</sup>](https://support.apple.com/en-us/103703)
+- [Politique des journaux Certificate Transparency de Chrome <sup>(angl.)</sup>](https://googlechrome.github.io/CertificateTransparency/log_policy.html)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `publickey-credentials-get` ディレクティブは、現在の文書が[ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) を使用して公開鍵を受け取ること、すなわち {{domxref("CredentialsContainer.get","navigator.credentials.get({publicKey})")}} を許可するかどうかを制御します。
 

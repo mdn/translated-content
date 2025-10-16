@@ -3,8 +3,6 @@ title: <percentage>
 slug: Web/CSS/percentage
 ---
 
-{{CSSRef}}
-
 ## Sumario
 
 Los tipos de dato `<porcentaje>` de [CSS](/es/docs/Web/CSS) representan un valor en forma de porcentaje. Muchas [propiedades de CSS](/en-US/CSS_Reference) pueden tomar valores porcentuales, siempre para definir longitudes con respecto al tamaño de los elementos padre. Los porcentajes estan formados por un [\<numero>](/es/docs/Web/CSS/number) seguido por el signo de porcentaje `%`. No hay un espacio entre el '%' y el numero.

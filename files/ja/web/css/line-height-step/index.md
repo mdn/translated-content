@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 293c903f50ef81458e5e1df61887abaf8b4d7bb9
 ---
 
-{{CSSRef}}
-
 {{SeeCompatTable}}
 
 **`line-height-step`** は CSS のプロパティで、行ボックスの高さにおける刻みの単位を設定します。このプロパティが設定された場合、行ボックスの高さは単位の倍数のうち最も近いものに切り上げられます。

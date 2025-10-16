@@ -3,8 +3,6 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 ---
 
-{{ CSSRef}}
-
 ## Resumen
 
 La propiedad [CSS](/es/docs/Web/CSS) **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.

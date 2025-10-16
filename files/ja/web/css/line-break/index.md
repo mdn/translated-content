@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
 ---
 
-{{CSSRef}}
-
 **`line-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
 
-{{InteractiveExample("CSS Demo: line-break")}}
+{{InteractiveExample("CSS デモ: line-break")}}
 
 ```css interactive-example-choice
 line-break: auto;

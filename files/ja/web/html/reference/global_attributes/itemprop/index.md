@@ -1,12 +1,10 @@
 ---
-title: itemprop
+title: HTML itemprop グローバル属性
+short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
-original_slug: Web/HTML/Global_attributes/itemprop
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`itemprop`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、アイテムにプロパティを追加するために使用します。すべての HTML 要素に `itemprop` 属性を設定することができ、 `itemprop` は名前と値の組み合わせで構成されます。名前と値の組み合わせは**プロパティ**と呼ばれ、 1 つまたは複数のプロパティで**アイテム**を構成します。プロパティ値は文字列又は URL のどちらかで、 {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, {{HTMLElement("video")}} など、広範にわたる要素と関連付けすることができます。
 
@@ -19,11 +17,11 @@ l10n:
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span
-    >Director:
+  <span>
+    Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span
-  >
+    (born August 16, 1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -37,11 +35,11 @@ l10n:
   <tbody>
     <tr>
       <td rowspan="2"> </td>
-      <th colspan="2"><strong>Item</strong></th>
+      <th colspan="2"><strong>アイテム</strong></th>
     </tr>
     <tr>
-      <th><strong>itemprop name</strong></th>
-      <th><strong>itemprop value</strong></th>
+      <th><strong>itemprop 名</strong></th>
+      <th><strong>itemprop 値</strong></th>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -143,8 +141,8 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
     Band:
     <span itemprop="band" itemscope>
       <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)</span
-    >
+      (<span itemprop="size">12</span> players)
+    </span>
   </p>
 </div>
 ```
@@ -192,8 +190,8 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
   <span
     itemprop="favorite-color
     favorite-fruit"
-    >orange</span
-  >
+    >orange
+  </span>
 </div>
 ```
 
@@ -345,8 +343,6 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 </div>
 ```
 
-以下も同等です。
-
 ```html
 <div itemscope>
   <p itemprop="a">1</p>
@@ -354,8 +350,6 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
   <p itemprop="a">2</p>
 </div>
 ```
-
-以下も同等です。
 
 ```html
 <div id="x">
@@ -421,10 +415,6 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 
