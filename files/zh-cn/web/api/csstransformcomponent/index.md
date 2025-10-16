@@ -2,7 +2,7 @@
 title: CSSTransformComponent
 slug: Web/API/CSSTransformComponent
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 1a5c9bf577facb17a2b34d1c27cfe6b3655787cd
 ---
 
 {{APIRef("CSS Typed OM")}}
@@ -19,9 +19,9 @@ l10n:
 - {{domxref("CSSTransformComponent.toMatrix()")}}
   - : 返回一个新的 {{domxref('DOMMatrix')}} 对象。
 - {{domxref("CSSTransformComponent.toString()")}}
-  - : 以 [CSS Transform 函数](/zh-CN/docs/Web/CSS/transform-function)形式返回一个字符串。
+  - : [CSS 变换函数](/zh-CN/docs/Web/CSS/transform-function)形式的字符串。
 
-    这将使用 `is2D` 的值来返回 2D 或 3D 变换。例如，如果组件表示 {{domxref("CSSRotate")}} 并且 `is2D` 为 false，则返回的字符串将以 CSS 转换函数 [`rotate3D()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 的形式表示。如果为 true，则返回的字符串将以 2D 的 [`rotate3D()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 函数的形式表示。
+    这将使用 `is2D` 的值来返回 2D 或 3D 变换。例如，如果组件表示 {{domxref("CSSRotate")}} 并且 `is2D` 为 false，则返回的字符串将以 CSS 转换函数 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 的形式。如果为 true，则返回的字符串将以 2D 的 [`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 函数的形式。
 
 ## 示例
 
