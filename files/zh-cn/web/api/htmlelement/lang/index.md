@@ -1,5 +1,5 @@
 ---
-title: "HTMLElement: lang 属性"
+title: "HTMLElement：lang 属性"
 short-title: lang
 slug: Web/API/HTMLElement/lang
 l10n:
