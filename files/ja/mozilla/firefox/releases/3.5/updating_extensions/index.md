@@ -3,8 +3,6 @@ title: Updating extensions for Firefox 3.1
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 ---
 
-{{FirefoxSidebar}}
-
 この記事は、自分の拡張機能を Firefox 3.1 で正しく動作するよう更新しようとしている拡張機能開発者のために役立つ情報を提供します。
 
 ## 更新の基本

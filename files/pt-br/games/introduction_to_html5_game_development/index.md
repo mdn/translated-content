@@ -3,8 +3,6 @@ title: Introduction to HTML5 Game Development (summary)
 slug: Games/Introduction_to_HTML5_Game_Development
 ---
 
-{{GamesSidebar}}
-
 ## Vantagens
 
 1. Os Jogos criados com HTML5 funcionam em Smartphones, tablets, PCs e smart TVs.

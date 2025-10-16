@@ -4,7 +4,7 @@ slug: orphaned/Web/CSS/::-moz-page
 original_slug: Web/CSS/::-moz-page
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

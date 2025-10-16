@@ -5,8 +5,6 @@ l10n:
   sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---
 
-{{CSSRef}}
-
 ブロックの[上端](/ja/docs/Web/CSS/margin-top)と[下端](/ja/docs/Web/CSS/margin-bottom)のマージンは、それぞれのマージンの大きい方の寸法（または等しい場合はいずれか 1 つ）の単一のマージンに結合される（折り畳まれる、collapsed）ことがあり、**マージンの相殺**という動作として知られています。なお、[浮動](/ja/docs/Web/CSS/float)要素と[絶対位置指定](/ja/docs/Web/CSS/position#位置の種類)要素では折り畳まれません。
 
 マージンの相殺は、基本的に 3 つの場合に発生します。
@@ -84,6 +82,6 @@ p {
     - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
     - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
     - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

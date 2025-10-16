@@ -33,7 +33,7 @@ Un fichier HTML est généralement enregistré avec une extension `.htm` ou `.ht
 
 ### Apprendre le HTML
 
-- [Notre tutoriel HTML](/fr/docs/Learn/HTML)
+- [Notre tutoriel HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
 - [Les cours web sur codecademy.com](https://www.codecademy.com/en/tracks/web)
 
 ### Référence technique

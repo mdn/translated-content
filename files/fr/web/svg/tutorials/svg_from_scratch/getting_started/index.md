@@ -33,13 +33,13 @@ Copiez le code précédent dans un document texte, puis enregistrez-le sous le n
 
 Quelques explications s'imposent quant au fonctionnement du rendu :
 
-1. Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Element/svg) à la racine :
+1. Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Reference/Element/svg) à la racine :
    - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
    - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, les attributs `version` et `baseProfile` devaient toujours être utilisés. Ces deux attributs sont dépréciés en SVG 2.
    - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
 
-2. L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise [`<rect>`](/fr/docs/Web/SVG/Element/rect) qui recouvre l'intégralité de l'espace.
-3. Un cercle ([`<circle>`](/fr/docs/Web/SVG/Element/circle)) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.
+2. L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise [`<rect>`](/fr/docs/Web/SVG/Reference/Element/rect) qui recouvre l'intégralité de l'espace.
+3. Un cercle ([`<circle>`](/fr/docs/Web/SVG/Reference/Element/circle)) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.
 4. Le texte "SVG" est dessiné. L'intérieur de chaque lettre est rempli de blanc. Le texte est positionné grâce à une ancre placée là où nous souhaitons qu'elle soit. Dans le cas présent, le centre du texte doit correspondre au milieu du rectangle rouge. De petits ajustements peuvent être apportés à la taille de la police et au positionnement vertical, de manière à assurer un résultat final esthétiquement agréable.
 
 ## Les propriétés basiques des fichiers SVG
@@ -61,9 +61,9 @@ Quelques explications s'imposent quant au fonctionnement du rendu :
     ```
 
   - Une balise `img` peut également être utilisée.
-  - Enfin, SVG peut être créé dynamiquement avec du JavaScript et injecté dans le DOM HTML. Ceci permet aux technologies de remplacement pour les navigateurs, qui ne peuvent pas traiter SVG, d'être mises en œuvre. Pour approfondir cette technique, vous pouvez lire [cette page](/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+  - Enfin, SVG peut être créé dynamiquement avec du JavaScript et injecté dans le DOM HTML. Ceci permet aux technologies de remplacement pour les navigateurs, qui ne peuvent pas traiter SVG, d'être mises en œuvre. Pour approfondir cette technique, vous pouvez lire [cette page](/fr/docs/Web/SVG/Guides/SVG_in_HTML).
 
-- La manière dont SVG gère les tailles et les unités sera traitée à [la page suivante](/fr/docs/Web/SVG/Tutorial/Positions).
+- La manière dont SVG gère les tailles et les unités sera traitée à [la page suivante](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions).
 
 ## Les types de fichiers SVG
 

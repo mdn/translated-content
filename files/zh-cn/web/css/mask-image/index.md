@@ -3,8 +3,6 @@ title: mask-image
 slug: Web/CSS/mask-image
 ---
 
-{{CSSRef}}
-
 **`mask-image`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了用作元素蒙版层的图像。默认情况下，这意味着蒙版图像的 alpha 通道将与元素的 alpha 通道相乘。可以使用 {{cssxref("mask-mode")}} 属性对此进行控制。
 
 ```css

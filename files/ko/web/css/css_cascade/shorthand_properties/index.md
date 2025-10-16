@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascade/Shorthand_properties
 original_slug: Web/CSS/Shorthand_properties
 ---
 
-{{cssref}}
-
 **단축 속성**은 서로 다른 여러 가지 CSS 속성의 값을 지정할 수 있는 CSS 속성입니다. 단축 속성을 사용하면 간결한 (그리고 읽기도 좋은) 스타일 시트를 작성해 시간과 체력을 아낄 수 있습니다.
 
 CSS 명세는 같은 주제를 가진 여러 공통 속성을 묶기 위해 단축 속성을 정의합니다. 가령 CSS {{cssxref("background")}} 속성은 {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, {{cssxref("background-position")}} 값을 정의할 수 있는 단축 속성입니다. 마찬가지로, 가장 흔히 쓰이는 글꼴 관련 속성은 {{cssxref("font")}} 단축 속성으로, 박스 주위의 바깥 여백은 {{cssxref("margin")}} 단축 속성으로 지정할 수 있습니다.

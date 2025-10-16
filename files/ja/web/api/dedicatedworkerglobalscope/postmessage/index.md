@@ -55,7 +55,8 @@ onmessage = (e) => {
 
 完全な例は、[基本的な専用ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker)を参照してください（[専用ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）。
 
-> **メモ:** `postMessage()` は一度に単一のオブジェクトしか送ることができません。上で見たように、複数の値を渡したい場合は、配列を送ることができます。
+> [!NOTE]
+> `postMessage()` は一度に単一のオブジェクトしか送ることができません。上で見たように、複数の値を渡したい場合は、配列を送ることができます。
 
 ## 仕様書
 
