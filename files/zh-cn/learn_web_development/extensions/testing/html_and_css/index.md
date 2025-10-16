@@ -258,7 +258,7 @@ form > #date
 
 ### 响应式设计问题
 
-响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
+响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
 
 分辨率也是个大问题——例如，移动设备不太可能需要大的图像，但更有可能有较慢的互联网连接，甚至可能有昂贵的数据流量计划，这会使浪费带宽成为一个问题。此外，不同的设备可能有各种不同的分辨率，这意味着较小的图像可能会出现像素化。有一些技术可以解决这些问题，从[媒体查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#媒体查询)到更复杂的[响应式图像技术](/zh-CN/docs/Web/HTML/Guides/Responsive_images#分辨率切换：不同的尺寸)，包括 {{HTMLElement('picture')}} 元素和 {{HTMLElement('img')}} 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes)属性。
 

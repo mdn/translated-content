@@ -3,8 +3,6 @@ title: Firefox 24 pour les développeurs
 slug: Mozilla/Firefox/Releases/24
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### CSS

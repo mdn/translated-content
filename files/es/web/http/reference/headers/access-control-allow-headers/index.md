@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 El encabezado de respuesta **`Access-Control-Allow-Headers`** es usado en la respuesta a una {{glossary("preflight request", "solicitud preflight")}} para indicar cuáles encabezados HTTP pueden ser usados durante dicha solicitud.
 
 Los {{glossary("simple header", "encabezados simples")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (pero sólo con un tipo MIME de sus valores analizados (ignorando los parámetros) de cualquier `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`), siempre están disponibles y no necesitan ser incluidos por este encabezado.

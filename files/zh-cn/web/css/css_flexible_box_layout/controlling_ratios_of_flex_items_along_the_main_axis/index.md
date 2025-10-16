@@ -3,8 +3,6 @@ title: 控制弹性元素在主轴上的比例
 slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 ---
 
-{{CSSRef}}
-
 在这篇指南中我们将探索应用于弹性（flex）元素的三个属性，它们能使我们在主轴方向上控制弹性元素的尺寸和伸缩性——{{cssxref("flex-grow")}}、{{cssxref("flex-shrink")}} 和 {{cssxref("flex-basis")}}。充分了解这些属性如何与伸张和缩小的元素一起工作是掌握弹性盒子（flexbox）的关键所在。
 
 ## 预览

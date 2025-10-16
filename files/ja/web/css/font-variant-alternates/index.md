@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`font-variant-alternates`** は [CSS](/ja/docs/Web/CSS) のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
 
 {{cssxref("@font-feature-values")}} アットルールを使って、与えられたフォントフェイスに対して、人間が読める名前と、特定の OpenType フォント機能を制御する数値インデックスを関連付けることができます。代替字体を選択する関数（`stylistic`、`styleset`、`character-variant`、`swash`、`ornament`、`annotation`）の場合、 `font-variant-alternates` プロパティで人間が読める名前を参照することで、関連する関数を適用することができます。

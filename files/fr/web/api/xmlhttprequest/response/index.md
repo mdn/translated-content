@@ -136,7 +136,7 @@ function load(url, callback) {
 
 - {{domxref("XMLSerializer")}} : Sérialisation d'un arbre DOM en XML
 - Tutoriels MDN couvrant le `XMLHttpRequest` :
-  - [Ajax — Pour commencer](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+  - [Ajax — Pour commencer](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
   - [Utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - [HTML dans XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - [Fetch API](/fr/docs/Web/API/Fetch_API)

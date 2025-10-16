@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---
 
-{{HTTPSidebar}}
-
 [HTTP/1.1 프로토콜](/ko/docs/Web/HTTP)은 {{HTTPHeader("Upgrade")}} 헤더 필드를 사용하여 이미 설정된 연결을 다른 프로토콜로 업그레이드하는데 사용할 수 있는 특별한 메커니즘을 제공합니다.
 
 이 메커니즘은 선택사항으로 프로토콜 변경을 강제하는데 사용할 수 없습니다. 구현체는 새로운 프로토콜을 지원하더라도 업그레이드를 이용하지 않도록 선택할 수 있으며, 실제로 이 메커니즘은 대부분 웹소켓 연결을 부트스트랩하는데 사용됩니다.
@@ -47,7 +45,8 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 {{domxref("WebSocket.WebSocket", "WebSocket()")}} 생성자는 초기 HTTP/1.1 연결을 생성하고, 핸드셰이킹과 업그레이드 프로세스를 처리하는 모든 작업을 수행합니다.
 
-> **참고:** `"wss://"` URL 스키마를 사용하여 보안 웹소켓 연결을 열 수 있습니다.
+> [!NOTE]
+> `"wss://"` URL 스키마를 사용하여 보안 웹소켓 연결을 열 수 있습니다.
 
 만약 웹소켓 연결을 처음부터 만들어야 한다면 핸드셰이크 과정을 직접 처리해야 합니다. 초기 HTTP/1.1 세션을 만든 후에는 다음과 같이 표준 요청에 {{HTTPHeader("Upgrade")}}와 {{HTTPHeader("Connection")}} 헤더를 추가하여 업그레이드를 요청해야 합니다.
 

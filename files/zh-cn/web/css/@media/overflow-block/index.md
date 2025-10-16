@@ -3,8 +3,6 @@ title: overflow-block
 slug: Web/CSS/@media/overflow-block
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features#媒体特性) **`overflow-block`** 可用于测试输出设备如何处理沿块向轴溢出初始[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的内容。
 
 ## 语法

@@ -2,10 +2,10 @@
 title: share_target
 slug: Web/Progressive_web_apps/Manifest/Reference/share_target
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 628b29f53d15f203c4a6b33c1d0303f864f6af63
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `share_target` はマニフェストのメンバーで、{{Glossary("Progressive web apps", "プログレッシブウェブアプリ")}} (PWA) をシステムの共有ダイアログの共有先として登録することができます。
 

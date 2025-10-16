@@ -3,7 +3,7 @@ title: transition
 slug: Web/CSS/transition
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Summary
 

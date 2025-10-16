@@ -63,7 +63,7 @@ console.log("La séquence parcourue contenait ", result.value, " éléments.");
 
 Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération (par exemple les valeurs qui seront utilisées dans une boucle {{jsxref("Instructions/for...of", "for...of")}}). Certains types natifs, tels qu'{{jsxref("Array")}} ou {{jsxref("Map")}}, possède un comportement par défaut pour les itérations, cependant d'autres types comme les Objets, ne possèdent pas ce comportement.
 
-Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
+Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
 
 ### Itérables personnalisés
 

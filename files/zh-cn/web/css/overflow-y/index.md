@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f89df1bb60b0d71d3e41bf5b1c0d8cb4eac45a27
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-y`** 设置当内容溢出块级元素的上下两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 简写属性来设置该属性。
 
 {{InteractiveExample("CSS Demo: overflow-y")}}

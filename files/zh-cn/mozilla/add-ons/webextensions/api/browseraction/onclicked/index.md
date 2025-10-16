@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5e1ef83ea9bd743f814258096abb05bdeb9c5ccf
 ---
 
-{{AddonSidebar}}
-
 在浏览器操作图标被点击时触发的事件。如果浏览器操作有弹出窗口，该事件将不会触发。
 
 要定义右键单击操作，请使用 [`contextMenus`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus) API 和“browser_action”[上下文类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)。
