@@ -24,7 +24,7 @@ CSS は多くの便利な定義済みカウンタースタイルを提供して�
 ### カウンタースタイル名
 
 - `<counter-style-name>`
-  - : カウンタスタイルの名前を提供します。大文字と小文字を区別する {{cssxref("custom-ident")}} として、引用符で囲まずに指定します。値は `none` と同じであってはなりません。すべての独自の識別子と同様に、カウンタースタイルの値は [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords) にはできません。[リスト](/ja/docs/Web/CSS/CSS_lists#プロパティ)および[カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles#プロパティ)プロパティの値を含む、それ以外の列挙された CSS プロパティの値は避けてください。カウンタの名前は、大文字と小文字を区別せず {{cssxref("list-style-type")}} プロパティの値である `decimal`、`disc`、`square`、`circle`、`disclosure-open`、`disclosure-closed` にはできません。
+  - : カウンタスタイルの名前を提供します。大文字と小文字を区別する {{cssxref("custom-ident")}} として、引用符で囲まずに指定します。値は `none` と同じであってはなりません。すべての独自の識別子と同様に、カウンタースタイルの値は [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css-wide_keywords) にはできません。[リスト](/ja/docs/Web/CSS/CSS_lists#プロパティ)および[カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles#プロパティ)プロパティの値を含む、それ以外の列挙された CSS プロパティの値は避けてください。カウンタの名前は、大文字と小文字を区別せず {{cssxref("list-style-type")}} プロパティの値である `decimal`、`disc`、`square`、`circle`、`disclosure-open`、`disclosure-closed` にはできません。
 
     > [!NOTE]
     > 上書きできないカウンタースタイル名 `decimal`、`disc`、`square`、`circle`、`disclosure-open`、および `disclosure-closed` は、独自のカウンターの名前として使用することはできません。ただし、 `<counter-style-name>` データ型が期待されるその他のコンテキスト、例えば `system: extends <counter-style-name>` では、これらは有効です。

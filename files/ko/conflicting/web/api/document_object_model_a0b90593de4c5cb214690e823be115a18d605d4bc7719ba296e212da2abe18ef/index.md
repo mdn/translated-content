@@ -278,8 +278,8 @@ table.summary = "note: increased border";
 ## Subnav
 
 - [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
+- [Introduction to the DOM](/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)
 - [Events and the DOM](/ko/docs/Learn_web_development/Core/Scripting/Events)
-- [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
+- [Examples](/ko/docs/conflicting/Web/API/Document_Object_Model)
 
 {{DefaultAPISidebar("DOM")}}

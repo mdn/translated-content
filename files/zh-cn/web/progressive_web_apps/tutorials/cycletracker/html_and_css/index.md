@@ -79,7 +79,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 弁言（preamble），可以
 
 {{HTMLelement("head")}} 包含了关于网页应用程序的不能被读者看到的机器可读信息，除了 `<title>` 之外，它显示在浏览器标签的标题中。
 
-`<head>` 包含了所有的[元数据](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)，和 [viewport](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
+`<head>` 包含了所有的[元数据](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)和 [viewport](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
 
 ```html
 <head>
