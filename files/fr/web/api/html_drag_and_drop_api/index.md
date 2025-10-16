@@ -56,7 +56,8 @@ L'objet {{domxref("DataTransferItemList")}} est une liste d'objets {{domxref("Da
 
 La différence principale entre {{domxref("DataTransfer")}} et {{domxref("DataTransferItem")}} est l'utilisation de la méthode synchrone {{domxref("DataTransfer.getData","getData()")}} pour la première et de la méthode asynchrone {{domxref("DataTransferItem.getAsString","getAsString()")}} pour la deuxième.
 
-> **Note :** {{domxref("DragEvent")}} et {{domxref("DataTransfer")}} sont largement prises en charge par les navigateurs de bureau tandis que {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}} ont une compatibilité plus restreinte. Voir la section ci-après sur l'interopérabilité.
+> [!NOTE]
+> {{domxref("DragEvent")}} et {{domxref("DataTransfer")}} sont largement prises en charge par les navigateurs de bureau tandis que {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}} ont une compatibilité plus restreinte. Voir la section ci-après sur l'interopérabilité.
 
 ### Interfaces spécifiques à Gecko
 
@@ -68,7 +69,7 @@ Dans cette section, nous allons voir les premières étapes nécessaires aux fon
 
 ### Identifier ce qui peut être déplacé
 
-Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
+Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#draggable) ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
 
 ```html
 <script>
@@ -83,7 +84,7 @@ Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`dr
 </p>
 ```
 
-Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Global_attributes/draggable) et [le guide sur les opérations de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) pour plus d'informations.
+Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Reference/Global_attributes/draggable) et [le guide sur les opérations de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) pour plus d'informations.
 
 ### Définir les données déplacées
 

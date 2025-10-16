@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーの `cross-origin-isolated` ディレクティブは、現在の文書が{{domxref("Window.crossOriginIsolated", "オリジン間分離", "", "nocode")}}を必要とする API を使用できるかどうかを制御します。
 

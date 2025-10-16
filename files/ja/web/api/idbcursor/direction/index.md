@@ -27,7 +27,8 @@ l10n:
 
 このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを使用してオブジェクトストア内の全レコードを走査します。それぞれの繰り返しにおいて、カーソルの方向を記録します。
 
-> **メモ:** `direction` プロパティは読み取り専用なので、このプロパティを用いてカーソルが動く方向を変えることはできません。カーソルが動く方向は、{{domxref("IDBObjectStore.openCursor")}} の第 2 引数で設定します。
+> [!NOTE]
+> `direction` プロパティは読み取り専用なので、このプロパティを用いてカーソルが動く方向を変えることはできません。カーソルが動く方向は、{{domxref("IDBObjectStore.openCursor")}} の第 2 引数で設定します。
 
 カーソルを使う場合、データをキーで選択する必要はなく、単に全て取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指している現在のレコードからデータを `cursor.value.foo` のようにして取得できます。動く例全体は、[IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))
 

@@ -1,112 +1,199 @@
 ---
-title: Quelle différence entre une page web, un site web, un serveur web et un moteur de recherche ?
+title: Naviguer sur le Web
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 original_slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
-Dans cet article, nous démystifions plusieurs notions liées au Web : page web, site web, serveur web et moteur de recherche. Ces termes sont souvent une source de confusion ou utilisés incorrectement : voyons leur signification.
+À ce stade du module, vous devriez avoir installé plusieurs navigateurs web modernes sur votre ordinateur ou d'autres appareils disponibles. Cet article va plus loin sur l'utilisation des navigateurs, en expliquant comment fonctionne un navigateur web, la différence entre certains éléments courants avec lesquels vous interagirez, et comment rechercher des informations.
 
-<table class="standard-table">
+> [!NOTE]
+> Si vous n'avez pas installé d'autres navigateurs que ceux fournis par défaut avec vos appareils, installez-en d'autres. Regardez la liste des [navigateurs web modernes](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#navigateurs_web_modernes) pour plus d'informations.
+
+Comme dans tout domaine, le web comporte beaucoup de jargon et de termes techniques. Pas d'inquiétude&nbsp;: nous n'allons pas tout vous présenter d'un coup (vous pouvez consulter le [glossaire](/fr/docs/Glossary) si vous êtes curieux·se). Cependant, il y a quelques termes de base à comprendre dès le début, car vous les entendrez souvent. Nous en présentons quelques-uns ci-dessous.
+
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Vous devriez au préalable comprendre
-        <a href="/fr/docs/Learn/Common_questions/How_does_the_Internet_work"
-          >comment fonctionne Internet</a
-        >.
+        Connaissance de base de votre système d'exploitation.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>
-        Être capable de décrire les différences entre une page web, un site web,
-        un serveur web et un moteur de recherche.
+        <ul>
+          <li>Différencier un navigateur web, un site web et un moteur de recherche.</li>
+          <li>Comprendre le fonctionnement de base d'un navigateur web.</li>
+          <li>Rechercher des informations.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## Résumé
+## Différence entre page web, site web, serveur web et moteur de recherche
 
-Le Web, comme tout autre champ de connaissance, est associé à un vaste vocabulaire technique. Ne vous inquiétez pas, nous n'avons pas l'intention de vous submerger avec tout cela (si vous êtes curieux, vous pouvez consulter notre [glossaire](/fr/docs/Glossary)). Nous nous devons toutefois de clarifier dès maintenant certaines notions de base, car elles reviendront fréquemment dans vos prochaines lectures. Ces notions peuvent parfois être confondues, car elles réfèrent à des fonctions apparentées, mais néanmoins distinctes. Il arrive que les termes correspondants soient utilisés, parfois à contresens, dans certains articles de presse ou autre : ce n'est pas surprenant de se mélanger les pinceaux.
+Nous allons commencer par décrire différents concepts liés au Web&nbsp;: pages web, sites web, serveurs web et moteurs de recherche. Ces termes sont souvent confondus par les débutant·e·s ou mal utilisés. Assurons-nous que vous sachiez ce qu'ils signifient&nbsp;!
 
-Nous approfondirons bientôt ces notions, mais vous pouvez commencer par vous familiariser avec ces définitions simples :
-
-- Page web
-  - : Un document qui peut être affiché par un navigateur web (tel que Mozilla Firefox, Google Chrome, Microsoft Internet Explorer ou Edge ou encore Safari). On parle aussi simplement de « pages ».
-- Site web
-  - : Un ensemble de pages web regroupées entre elles de différentes façons. On utilise également le terme « site » seul.
-- Serveur web
+- **Page web**
+  - : Un document affichable dans un {{Glossary("browser", "navigateur")}}. On parle aussi simplement de «&nbsp;page&nbsp;». Ces documents sont écrits en {{Glossary("HTML")}} (que nous verrons plus en détail plus loin).
+- **Site web**
+  - : Un ensemble de pages web regroupées en une seule ressource, reliées entre elles par des liens. On parle aussi de «&nbsp;site&nbsp;».
+- **Serveur web**
   - : Un ordinateur qui héberge un site web sur Internet.
-- Moteur de recherche
-  - : Un site web qui aide à trouver des pages web (par exemple, Google, Bing, Yahoo, DuckDuckGo, Qwant, etc.). On accède aux moteurs de recherche via un navigateur web (en utilisant la barre d'adresse ou de recherche de ceux-ci) ou via une page web (par exemple [bing.com](https://www.bing.com/) ou [duckduckgo.com](https://duckduckgo.com/)).
+- **Service web**
+  - : Un logiciel qui répond à des requêtes sur Internet pour effectuer une fonction ou fournir des données. Un service web s'appuie généralement sur un serveur web et peut fournir des pages web pour l'interaction utilisateur. Beaucoup de sites web sont aussi des services web, mais certains (comme MDN) ne proposent que du contenu statique. Exemples&nbsp;: un service qui redimensionne des images, fournit la météo ou gère la connexion utilisateur.
+- **Moteur de recherche**
+  - : Un service web qui aide à trouver d'autres pages web, comme Google, Bing, Yahoo ou DuckDuckGo. Les moteurs de recherche sont généralement accessibles via un navigateur web (par exemple, vous pouvez effectuer des recherches directement dans la barre d'adresse de Firefox, Chrome, etc.) ou via une page web (par exemple, [bing.com](https://www.bing.com/) ou [duckduckgo.com](https://duckduckgo.com/)).
 
-Prenons une analogie simple avec une bibliothèque. Voici une suite d'actions qu'on peut effectuer lorsqu'on se rend dans une bibliothèque :
+Prenons une analogie — une bibliothèque publique. Voici ce que vous feriez généralement en la visitant&nbsp;:
 
-1. On parcourt un index de recherche afin de trouver le titre du livre qu'on veut.
-2. On note la référence / le code du livre.
-3. On se rend à la section correspondante de la bibliothèque, on trouve le rayonnage pour la section qui contient le code, on trouve le livre spécifique via son code.
+1. Trouver un index de recherche et chercher le titre du livre voulu.
+2. Noter le numéro de catalogue du livre.
+3. Aller dans la section correspondante, trouver le bon numéro et prendre le livre.
 
-Comparons maintenant la bibliothèque avec un serveur web :
+Comparons une bibliothèque au web&nbsp;:
 
-- La bibliothèque est semblable à un serveur web : elle contient plusieurs sections, de la même façon qu'un serveur web peut héberger plusieurs sites web.
-- Les différentes sections (science, mathématiques, histoire, etc.) de la bibliothèque sont semblables à des sites web. Chaque section correspond à un site donné (deux sections ne contiennent pas les mêmes livres).
-- Les livres de chaque section sont semblables à des pages web. Un site web peut avoir plusieurs pages web. Ainsi, la section Science (qui correspond au site web) aura plusieurs livres, l'un sur la chaleur, l'autre sur le son ou la thermodynamique, etc. (qui correspondent aux pages web). Un emplacement donné (une URL) donne accès à une page web.
-- L'index pour la recherche agit comme le moteur de recherche. Chaque livre dispose de son propre emplacement dans la bibliothèque et deux livres différents ne peuvent pas avoir le même emplacement/code.
+- La bibliothèque est comme un serveur web. Elle a plusieurs sections, comme un serveur hébergeant plusieurs sites web.
+- Les différentes sections (sciences, maths, histoire, etc.) sont comme des sites web. Chaque section est un site unique (deux sections n'ont pas les mêmes livres).
+- Les livres de chaque section sont comme des pages web. Un site peut avoir plusieurs pages, par exemple la section Sciences (le site) aura des livres sur la chaleur, le son, la biologie, etc.
+- L'index de recherche est comme le moteur de recherche. Chaque livre a un emplacement unique (deux livres ne peuvent pas être au même endroit), défini par le numéro de catalogue.
 
-## Pédagogie active
-
-_Aucun contenu de pédagogie active n'est disponible pour le moment. [S'il vous plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Community/Contributing/Getting_started)_
-
-## Allons plus loin
-
-Explorons maintenant les liens qui unissent ces quatre notions et pourquoi elles sont parfois confondues.
+Voyons maintenant chaque terme plus en détail.
 
 ### Page web
 
-Une _page web_ est un document simple qui peut être affiché par un [navigateur](/fr/docs/Glossary/Browser). Ce document est écrit à l'aide du langage [HTML](/fr/docs/Glossary/HTML) (nous en reparlerons plus en profondeur dans d'[autres articles](/fr/docs/Web/HTML)) et peut inclure diverses autres ressources telles que :
+Une **page web** est un document simple affichable par un navigateur. Elle peut intégrer différents types de ressources&nbsp;:
 
-- des _feuilles de style_ — qui déterminent l'apparence de la page ;
-- des _scripts_ — qui ajoutent des fonctions interactives ; ou
-- du _contenu multimédia_ — images, sons, vidéos.
+- _Informations de style_ — pour contrôler l'apparence de la page.
+- _Scripts_ — pour ajouter de l'interactivité.
+- _Médias_ — images, sons, vidéos.
 
 > [!NOTE]
-> Les navigateurs peuvent afficher d'autres types de documents tels que des fichiers [PDF](/fr/docs/Glossary/PDF) ou des images, mais le terme **page web** désigne spécifiquement des documents HTML. Si nous parlons d'un autre type de contenu, nous utiliserons le terme **document**.
+> Les navigateurs peuvent aussi afficher d'autres documents comme des fichiers {{Glossary("PDF")}} ou des images/vidéos, mais le terme **page web** désigne spécifiquement les documents HTML.
 
-Toutes les pages web sont associées à une adresse unique. Pour atteindre une page, il suffit d'entrer son adresse dans la barre d'adresse du navigateur :
+Chaque page web possède une adresse unique (adresse web, aussi appelée {{Glossary("URL")}}). Pour y accéder, tapez son adresse dans la barre d'adresse de votre navigateur&nbsp;:
 
-![Exemple d'une adresse de page web dans la barre d'adresse du navigateur](web-page.jpg)
+![Exemple d'adresse de page web dans la barre d'adresse du navigateur](web-page.jpg)
 
-Un _site web_ est un ensemble de pages web reliées entre elles (ainsi que des ressources associées) qui partagent un nom de domaine. Chaque page d'un site fournit des liens explicites (généralement sous la forme de texte cliquable) qui permettent à l'utilisateur de naviguer entre les pages du site web.
+Essayez de charger l'un de vos sites préférés dans un navigateur, en gardant cela à l'esprit. Avez-vous tapé l'adresse vous-même ou l'avez-vous trouvée via un moteur de recherche&nbsp;?
 
-Pour atteindre un site web, vous devez saisir son nom de domaine dans la barre d'adresse de votre navigateur. Le navigateur affichera alors la page principale, appelée _page d'accueil_, du site web.
+### Site web
 
-![Example du nom de domaine d'un site web dans la barre d'adresse du navigateur](web-site.jpg)
+Un _site web_ est un ensemble de pages web liées (et leurs ressources associées) partageant un [nom de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) unique. Chaque page d'un site propose des liens explicites — souvent sous forme de texte cliquable — permettant de naviguer d'une page à l'autre.
 
-Les termes _page web_ et _site web_ sont souvent confondus lorsqu'un site web ne comprend qu'une seule page. Un tel site pourrait être appelé un _site web à page unique_.
+Quand vous chargez votre site préféré, la page principale (ou _page d'accueil_) s'affiche d'abord&nbsp;:
+
+![Exemple de nom de domaine dans la barre d'adresse du navigateur](web-site.jpg)
+
+Cliquez sur quelques menus ou liens pour explorer différentes pages de votre site favori. Notez comment l'adresse affichée change à chaque navigation.
+
+> [!NOTE]
+> Il existe aussi des {{Glossary("SPA", "<em>applications monopage</em>")}}&nbsp;: un site constitué d'une seule page HTML, mise à jour dynamiquement. Dans ce cas, l'adresse web peut ne pas changer lors de la navigation.
 
 ### Serveur web
 
-Un _serveur web_ est un ordinateur hébergeant un ou plusieurs _sites web_. « Héberger » signifie que toutes les _pages web_ et fichiers associés sont localement enregistrés sur cet ordinateur. À la demande d'un utilisateur, le _serveur web_ transmettra la _page web_ du _site web_ hébergé au navigateur de l'utilisateur.
+Un _serveur web_ est un ordinateur hébergeant un ou plusieurs _sites web_. «&nbsp;Héberger&nbsp;» signifie que toutes les _pages web_ et leurs fichiers associés sont disponibles sur cet ordinateur. Le _serveur web_ envoie les fichiers au navigateur de l'utilisateur·rice qui tente de les charger.
 
-Attention à ne pas confondre _site web_ et _serveur web_. Par exemple, si quelqu'un dit « Mon site web ne répond pas », cela signifie en fait que le _serveur web_ ne répond pas et que, par conséquent, le _site web_ n'est pas accessible. Par ailleurs, puisqu'un serveur web peut héberger plusieurs sites web, le terme _serveur web_ n'est jamais utilisé pour désigner un site web, car cela serait une importante source de confusion. Ainsi, dans l'exemple précédent, si on dit « Mon serveur web ne répond pas », cela signifie qu'aucun site web de ce serveur n'est disponible.
+Ne confondez pas _sites web_ et _serveurs web_. Si quelqu'un dit «&nbsp;Mon site ne répond plus&nbsp;», cela signifie probablement que le _serveur web_ ne répond plus, donc le _site web_ n'est pas accessible.
+
+Plus important encore, un serveur web peut héberger plusieurs sites. Le terme _serveur web_ ne désigne donc plus un site, pour éviter la confusion. Si quelqu'un dit «&nbsp;Mon serveur web ne répond plus&nbsp;», cela peut concerner plusieurs sites hébergés.
 
 ### Moteur de recherche
 
-Les moteurs de recherche sont à l'origine de beaucoup de confusion sur le Web. Un moteur de recherche est un type particulier de site web qui aide les utilisateurs à trouver les pages web d'_autres_ sites web.
+Il est courant de confondre moteurs de recherche et sites web. Un moteur de recherche est un service web spécial qui aide à trouver des pages web ou des contenus spécifiques (images, vidéos, actualités, etc.).
 
-Il y en a plein : [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://www.yandex.com/), [DuckDuckGo](https://duckduckgo.com/) et plusieurs autres encore. Certains sont généraux, alors que d'autres sont spécialisés pour certains sujets de recherche. Vous êtes libres d'utiliser celui qui vous convient le mieux.
+Les moteurs de recherche ont leur propre site pour accéder au service&nbsp;: [Google](https://www.google.com/), [Bing](https://www.bing.com/), [Yandex](https://yandex.com/), [DuckDuckGo](https://duckduckgo.com/), etc. Certains sont généralistes, d'autres spécialisés.
 
-Plusieurs débutants sur le Web confondent moteur de recherche et navigateur. Soyons clairs : un **_navigateur_** est un logiciel qui affiche des pages web, alors qu'un **_moteur de recherche_** est un site web qui aide les utilisateurs à trouver les pages web d'autres sites web. La confusion est due à l'affichage de la page d'accueil d'un moteur de recherche lors de l'ouverture initiale d'un navigateur. Cette façon de faire est tout de même logique, car la première chose que l'on veut faire en ouvrant un navigateur est de trouver une page à afficher. Faites attention de ne pas confondre infrastructure (par exemple, le navigateur) et service (par exemple, le moteur de recherche). Cette distinction vous sera bien utile, mais ne soyez pas trop inquiets, car même les professionnels tendent à être un peu vagues dans leur emploi de la terminologie.
+Beaucoup de débutant·e·s confondent moteurs de recherche et navigateurs. Clarifions&nbsp;:
 
-Voici un exemple du navigateur Firefox affichant une boîte de recherche Google sur sa page de démarrage par défaut :
+- Un _navigateur_ est un logiciel qui affiche les pages web.
+- Un _moteur de recherche_ est un service web (et souvent un site) qui aide à trouver des pages sur d'autres sites.
 
-![Exemple de Firefox nightly affichant par défaut une page Google page personnalisée](search-engine.jpg)
+La confusion vient du fait que, lors du premier lancement d'un navigateur, il affiche souvent la page d'accueil d'un moteur de recherche ou une barre de recherche. La plupart des navigateurs permettent aussi d'utiliser un moteur de recherche directement depuis la barre d'adresse.
 
-## Étapes suivantes
+C'est logique, car la première chose que l'on veut faire avec un navigateur est souvent de trouver une page à afficher. Ne confondez pas le logiciel (navigateur) et le service (moteur de recherche).
 
-- Allez plus loin : [Qu'est-ce qu'un serveur web ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- Voyez comment des pages web sont liées pour former un site web : [Comprendre comment fonctionnent les liens sur le Web](/fr/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
+Voici Firefox affichant une page Google personnalisée au démarrage&nbsp;:
+
+![Exemple de Firefox nightly affichant une page Google personnalisée par défaut](search-engine.jpg)
+
+Essayez d'utiliser un moteur de recherche pour trouver des informations sur un sujet qui vous intéresse&nbsp;:
+
+1. Rendez-vous sur la page d'accueil d'un moteur de recherche et saisissez un terme.
+2. Saisissez un terme directement dans la barre d'adresse du navigateur.
+
+## Comment fonctionne le web : les bases
+
+Dans de nombreuses régions du monde, le web est devenu aussi essentiel que les couverts, le vélo, la voiture ou la brosse à dents. Si cela vous semble exagéré, pensez à la fréquence à laquelle vous utilisez un site ou une appli chaque jour&nbsp;! Même sans taper d'adresse web, il y a de fortes chances qu'une appli utilise le web en arrière-plan pour récupérer des données.
+
+Quand vous accédez au web, beaucoup de choses se passent entre votre action (par exemple, taper une adresse dans le navigateur et appuyer sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>) et l'affichage du résultat (le site qui apparaît)&nbsp;:
+
+1. Le navigateur demande la ressource voulue (page, donnée, image, vidéo, etc.) au serveur web qui la stocke. Ces requêtes (et les réponses) utilisent le protocole [HTTP](/fr/docs/Glossary/HTTP) (<i lang="en">HyperText Transfer Protocol</i> en anglais), un protocole qui décrit les actions à effectuer (comme **GET**).
+2. Si la requête réussit, le serveur web renvoie une réponse HTTP contenant la ressource demandée.
+3. Parfois, la ressource demandée déclenche d'autres requêtes HTTP&nbsp;:
+   1. Lors du chargement d'un site, le fichier HTML principal est d'abord demandé.
+   2. Quand ce fichier est reçu, le navigateur le lit et trouve souvent des instructions pour charger d'autres fichiers (images, styles, scripts, etc.).
+4. Quand toutes les ressources sont chargées, le navigateur les analyse et les affiche à l'utilisateur·rice.
+
+Cette description est très simplifiée, mais c'est suffisant pour l'instant. Vous trouverez une explication plus détaillée du fonctionnement du navigateur dans notre module [Standards du web](/fr/docs/Learn_web_development/Getting_started/Web_standards).
+
+## Rechercher des informations
+
+En tant que développeur·euse web, vous passerez beaucoup de temps à chercher des informations, que ce soit une syntaxe oubliée ou une solution à un problème précis. Il est donc utile d'apprendre à bien chercher sur le web.
+
+Si vous connaissez un site spécialisé dans le sujet qui vous intéresse, commencez par là.
+
+Par exemple, pour une information sur une fonctionnalité web, tapez son nom dans la recherche MDN. Essayez par exemple `box model`, `fetch()`, ou `élément video`. Si vous ne trouvez pas, élargissez la recherche à un moteur généraliste.
+
+Pour une solution à un problème précis, comme «&nbsp;comment afficher la suite de Fibonacci en JavaScript&nbsp;» ou «&nbsp;comment savoir si un nombre est premier en JavaScript&nbsp;», cherchez sur un site comme [StackOverflow](https://stackoverflow.com/), une communauté dédiée à l'entraide en programmation. Là encore, essayez un moteur généraliste si besoin.
+
+Avant d'aller plus loin, essayez de chercher quelques sujets qui vous intéressent. Testez des recherches plus ou moins précises et différents termes pour voir ce qui fonctionne le mieux. Consultez nos [astuces de recherche](#astuces_de_recherche) pour d'autres conseils.
+
+### Utiliser l'IA
+
+Les résultats de recherche générés par l'IA sont très populaires. Ils offrent une recherche «&nbsp;améliorée&nbsp;»&nbsp;: ils effectuent de nombreuses recherches en arrière-plan, puis compilent les résultats en une réponse unique et digeste. Les plus connus sont [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app) et [Microsoft Copilot](https://copilot.microsoft.com/), accessibles en chat ou via des aides intégrées.
+
+Pour apprendre à coder, les IA peuvent être utiles de plusieurs façons&nbsp;:
+
+- Effectuer des recherches classiques, comme ci-dessus.
+- Trouver des bugs dans un bloc de code. Si votre code ne fonctionne pas, collez-le dans une IA avec une question du type «&nbsp;Où est l'erreur dans ce code&nbsp;?&nbsp;»
+- Générer une version optimisée d'un code. Pratique si vous voulez une version plus efficace ou plus robuste.
+- Conseiller sur une stratégie. Par exemple, demander non seulement où est le bug, mais aussi comment le corriger.
+
+Testez quelques outils d'IA pour faire des recherches.
+
+### À garder en tête
+
+L'IA est puissante, mais il reste essentiel de comprendre ce que vous faites, ce que fait le code, et où chaque morceau doit être utilisé. Sinon, vous ne serez pas efficace pour résoudre de vrais problèmes. Il faut donc continuer à apprendre à coder. L'IA est un outil précieux pour trouver des réponses plus vite, mais si vous tapez chaque question dans une IA, vous ne comprendrez rien au fonctionnement général.
+
+De plus&nbsp;:
+
+- Les IA donnent des réponses sûres d'elles, mais elles peuvent se tromper ou induire en erreur. Certaines erreurs sont subtiles. Elles n'ont pas d'intelligence propre — ce sont des outils d'appariement de modèles. Elles compilent des réponses à partir de sources variées, donc peuvent intégrer des erreurs. Même deux sources correctes peuvent donner une réponse fausse.
+- Les informations récentes peuvent manquer, ou les réponses être biaisées vers de la documentation ancienne, donc «&nbsp;comment faire X en JS&nbsp;» peut donner des conseils dépassés.
+
+Il faut donc toujours vérifier les réponses et ne pas tout croire sans recul.
+
+**Quand vous apprenez, essayez de résoudre le problème vous-même avant de chercher une réponse, que ce soit avec une IA ou un moteur classique. Cela fera de vous un·e meilleur·e développeur·euse.**
+
+### Astuces de recherche
+
+- Ajoutez le langage utilisé dans la recherche, comme dans les exemples ci-dessus. Si vous tapez juste «&nbsp;comment afficher la suite de Fibonacci&nbsp;», vous aurez des solutions en Python, C++, Java, Ruby, etc. — pas très utile si vous apprenez JavaScript&nbsp;!
+- Quand vous trouvez une réponse utile, mettez-la en favori ou copiez-la pour la retrouver plus tard. Vous serez surpris·e de rencontrer plusieurs fois le même problème.
+- Si votre code affiche un message d'erreur, essayez de le chercher tel quel. D'autres auront sûrement déjà rencontré ce problème et partagé la solution.
+- Privilégiez les sites recommandés comme MDN ou [StackOverflow](https://stackoverflow.com/).
+- Il existe de nombreuses techniques avancées pour améliorer vos recherches. Taper simplement `fourmis poisson fromage` retournera des résultats contenant n'importe lequel de ces mots. Mais la plupart des moteurs acceptent des syntaxes comme&nbsp;:
+  - `"fourmis poisson fromage"` (avec les guillemets) ne retourne que les résultats contenant exactement cette phrase.
+  - `fourmis fromage -poisson` retourne les résultats contenant «&nbsp;fourmis&nbsp;» et/ou «&nbsp;fromage&nbsp;» mais pas «&nbsp;poisson&nbsp;».
+  - `fourmis OR fromage` ne retourne que les résultats contenant l'un ou l'autre, pas les deux. (Cela fonctionne surtout sur Google.)
+  - `intitle:fromage` ne retourne que les résultats ayant «&nbsp;fromage&nbsp;» dans le titre principal.
+
+  > [!NOTE]
+  > Il existe bien d'autres techniques selon les moteurs. Essayez d'en trouver d'autres — quelques ressources utiles&nbsp;: [Affiner les recherches Google](https://support.google.com/websearch/answer/2466433?hl=fr), [Syntaxe avancée sur DuckDuckGo](https://duckduckgo.com/duckduckgo-help-pages/results/syntax) et [Microsoft&nbsp;: options de recherche avancée](https://support.microsoft.com/fr-fr/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

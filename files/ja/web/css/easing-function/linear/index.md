@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
 **`linear()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、点の間を均一の進行する遷移曲線を作成します。
 [`<easing-function>`](/ja/docs/Web/CSS/easing-function) としては、{{Glossary("Interpolation", "補間処理")}}が最初から最後まで一定の速度で起こる遷移を作成します。
 

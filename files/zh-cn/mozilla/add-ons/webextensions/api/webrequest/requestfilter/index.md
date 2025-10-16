@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
 ---
 
-{{AddonSidebar}}
-
 描述应用于 webRequest 事件的过滤器的对象。
 
 ## 类型

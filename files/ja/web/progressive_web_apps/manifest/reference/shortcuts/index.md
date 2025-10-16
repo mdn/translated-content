@@ -2,10 +2,8 @@
 title: shortcuts
 slug: Web/Progressive_web_apps/Manifest/Reference/shortcuts
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `shortcuts` はマニフェストメンバーで、ウェブアプリケーション内の主要な課題やページへのリンクを指定するために使用します。
 ブラウザーは、この情報を使用してコンテキストメニューを作成することができます。コンテキストメニューは通常、ユーザーがウェブアプリケーションのアイコンを操作したときに表示されます。

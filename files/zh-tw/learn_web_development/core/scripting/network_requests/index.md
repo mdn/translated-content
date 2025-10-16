@@ -3,9 +3,7 @@ title: Ajax
 slug: Learn_web_development/Core/Scripting/Network_requests
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-TW/docs/Web/Guide")}}
-</section>
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
 **非同步 JavaScript 及 XML**（Asynchronous JavaScript and XML，[AJAX](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df)）並不能稱做是種「技術」，而是 2005 年時由 Jesse James Garrett 所發明的術語，描述一種使用數個既有技術的「新」方法。這些技術包括 [HTML](/zh-TW/docs/Web/HTML) 或 [XHTML](/zh-TW/docs/Glossary/XHTML)、[層疊樣式表](/zh-TW/docs/Web/CSS)、[JavaScript](/zh-TW/docs/Web/JavaScript)、[文件物件模型](/zh-TW/docs/Web/API/Document_Object_Model)、[XML](/zh-TW/docs/Web/XML)、[XSLT](/zh-TW/docs/Web/XSLT) 以及最重要的 {{domxref("XMLHttpRequest")}} 物件。當這些技術被結合在 Ajax 模型中，Web 應用程式便能快速、即時更動介面及內容，不需要重新讀取整個網頁，讓程式更快回應使用者的操作。
 
@@ -314,3 +312,5 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/zh-
   - : The [XMLHttpRequest](https://xhr.spec.whatwg.org/) specification adds HTML parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only XML parsing. This feature allows Web apps to obtain an HTML resource as a parsed DOM using `XMLHttpRequest`.
 - [XMLHttpRequest specification](https://xhr.spec.whatwg.org/)
   - : WHATWG Living Standard
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

@@ -60,7 +60,8 @@ l10n:
 
 サービスワーカーは {{DOMxRef("FetchEvent")}} イベントを使用してリクエストに応答することができます。{{DOMxRef("FetchEvent.respondWith()")}} メソッドを使用して、これらのリクエストに対するレスポンスを何でも思うように変更できます。
 
-> **メモ:** `install`/`activate` イベントは完了するまでに時間がかかる可能性があるため、サービスワーカーの仕様書では {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} メソッドを提供しています。 `install` または `activate` イベント内でプロミスを指定してこのメソッドを呼び出すと、プロミスが正常に解決されるまで、 `fetch` や `push` などの関数イベントはサービスワーカーに配信されません。
+> [!NOTE]
+> `install`/`activate` イベントは完了するまでに時間がかかる可能性があるため、サービスワーカーの仕様書では {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} メソッドを提供しています。 `install` または `activate` イベント内でプロミスを指定してこのメソッドを呼び出すと、プロミスが正常に解決されるまで、 `fetch` や `push` などの関数イベントはサービスワーカーに配信されません。
 
 最初の基本的な例をどのように構築するかについての完全なチュートリアルは、[サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)を読んでください。
 

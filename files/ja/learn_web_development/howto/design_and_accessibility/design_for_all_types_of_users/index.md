@@ -229,7 +229,8 @@ div.container {
 
 画像が簡潔に記述できるのであれば、 `alt` 属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
 
-> **メモ:** `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
+> [!NOTE]
+> `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
 
 #### 音声/動画
 

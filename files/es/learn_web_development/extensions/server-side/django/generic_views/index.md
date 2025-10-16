@@ -469,7 +469,8 @@ def book_detail_view(request,pk):
 
 Primero, la vista intenta recuperar el registro del libro específico desde el modelo. Si esto falla, la vista debería lanzar una excepción de tipo `Http404` para indicar que el libro "no se encuentra". El último paso es, como de costumbre, llamar a `render()` con el nombre de la plantilla y la información del libro en el parámetro `context` (como un diccionario).
 
-> **Nota:** `get_object_or_404()` (que se muestra comentado arriba), es un atajo conveniente para lanzar una excepción de tipo `Http404` si el registro no se encuentra.
+> [!NOTE]
+> `get_object_or_404()` (que se muestra comentado arriba), es un atajo conveniente para lanzar una excepción de tipo `Http404` si el registro no se encuentra.
 
 ### Creando la plantilla de Vista de Detalle
 

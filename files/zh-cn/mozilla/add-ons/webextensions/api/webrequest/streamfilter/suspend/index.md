@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 暂停请求。在调用此函数后一直到通过调用 {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} 恢复请求之前都不会再传递更多数据。
 
 你只能在 {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} 事件触发后调用此函数。

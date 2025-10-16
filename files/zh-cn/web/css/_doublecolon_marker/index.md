@@ -3,8 +3,6 @@ title: ::marker
 slug: Web/CSS/::marker
 ---
 
-{{CSSRef}}
-
 **`::marker`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)匹配列表的标记框（通常为一个符号或数字）。它作用在任何设置了 [`display: list-item`](/zh-CN/docs/Web/CSS/display) 的元素或伪元素上，例如 {{HTMLElement("li")}} 和 {{HTMLElement("summary")}} 元素。
 
 {{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}

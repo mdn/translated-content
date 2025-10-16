@@ -3,8 +3,6 @@ title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
 ---
 
-{{AddonSidebar}}
-
 使用 `history` API 与浏览器历史记录进行交互。
 
 > [!NOTE]

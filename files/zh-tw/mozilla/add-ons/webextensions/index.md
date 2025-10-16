@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
-{{AddonSidebar}}
-
 擴充套件或附加元件可以修改並增強瀏覽器的功能。適用於 Firefox 的擴充功能是使用 WebExtension API 跨瀏覽器技術建構的。
 
 Firefox 的擴充套件技術在很大程度上與由 Chromium 為基礎的瀏覽器（如 Google Chrome、Microsoft Edge、Opera、Vivaldi）支援的[擴充套件 API](https://developer.chrome.com/docs/extensions/reference/)相容。大多數情況下，為 Chromium 瀏覽器撰寫的擴充套件只需進行[少量修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)即可在 Firefox 中執行。

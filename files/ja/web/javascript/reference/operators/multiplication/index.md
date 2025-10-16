@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Multiplication
 
 乗算演算子 (`*`) はオペランドの積を生成します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Multiplication operator")}}
 
 ```js interactive-example
 console.log(3 * 4);

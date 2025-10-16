@@ -17,7 +17,8 @@ Une telle barre de navigation consiste généralement à avoir un élément éca
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html).
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html).
 
 ## Choix effectués
 

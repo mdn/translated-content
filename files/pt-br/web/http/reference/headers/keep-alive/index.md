@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Keep-Alive
 original_slug: Web/HTTP/Headers/Keep-Alive
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Keep-Alive`** permite que o remetente indique como a conexão deve ser usada, para definir um tempo limite e um máximo de requisições.
 
 > [!NOTE]

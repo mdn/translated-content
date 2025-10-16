@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`207 Multi-Status`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、レスポンスが混在していることを示します。
 このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
 
