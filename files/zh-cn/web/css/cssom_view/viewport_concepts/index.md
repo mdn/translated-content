@@ -162,4 +162,3 @@ SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox) 属性，�
 
 - [Visual viewport API](/zh-CN/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}，特别是 `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport)
