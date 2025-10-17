@@ -111,7 +111,7 @@ HTML 是一种*标记语言*，由一系列**{{Glossary("element", "元素")}}**
 1. 用户有视觉障碍。有严重视觉障碍的用户可以使用屏幕阅读器来朗读 alt 属性的内容。
 2. 有些错误使图像无法显示。可以试着故意将 `src` 属性里的路径改错。保存并刷新页面就可以在图像位置看到：
 
-  ![文字“My test image”](alt-text-example.png)
+![文字“My test image”](alt-text-example.png)
 
 编写的替代文本应为读者提供足够的信息，使其能够充分理解图像所传达的内容。在此示例中，当前文本“My test image”并不理想，因为它未能描述图像的具体信息。对于 Firefox 徽标而言，更佳的替代方案应为：“The Firefox logo: a flaming fox surrounding the Earth.”。
 
@@ -135,7 +135,7 @@ HTML 是一种*标记语言*，由一系列**{{Glossary("element", "元素")}}**
 本小节包含了一些最常用的文本标记 HTML 元素。
 
 > [!NOTE]
-> Scrimba 的[语义 HTML 基础](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn)<sup>[_MDN学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>提供了一门互动课程，对 HTML 进行了实用性阐释，尤其强调了其*语义*特性的重要性。
+> Scrimba 的[语义 HTML 基础](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn)<sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>提供了一门互动课程，对 HTML 进行了实用性阐释，尤其强调了其*语义*特性的重要性。
 
 ### 标题
 
@@ -243,6 +243,6 @@ web 上有大量内容属于列表形式，HTML 为此提供了专用元素。�
 ## 参见
 
 - [学习 HTML 和 CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn，Scrimba <sup>[_MDN 学习伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
-  - : [Scrimba 的](https://scrimba.com?via=mdn)*学习 HTML 和 CSS* 课程通过构建和部署五个精彩项目来教你 HTML 和 CSS，课程包含有趣的互动式教学和挑战，由知识渊博的教师授课。
+  - : [Scrimba 的](https://scrimba.com?via=mdn)_学习 HTML 和 CSS_ 课程通过构建和部署五个精彩项目来教你 HTML 和 CSS，课程包含有趣的互动式教学和挑战，由知识渊博的教师授课。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
