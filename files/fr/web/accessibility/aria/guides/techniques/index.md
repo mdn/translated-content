@@ -24,7 +24,7 @@ ARIA définit des sémantiques applicables aux éléments, réparties en **rôle
 - [`radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [`scrollbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
-- [`separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (when focusable)
+- [`separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (quand sélectionnable)
 - [`slider`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [`switch`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
@@ -38,12 +38,12 @@ ARIA définit des sémantiques applicables aux éléments, réparties en **rôle
 Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôles enfants obligatoires ou facultatifs.
 
 - [`combobox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
-- [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) (including [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role), [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) roles)
-- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) (including [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role) role)
+- [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) (incluant les rôles [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role), [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role))
+- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) (incluant le rôle [`option`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/option_role))
 - [`menu`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
 - [`menubar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
-- [`radiogroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) (see [`radio` role](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role))
-- [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) (including [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) and [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) roles)
+- [`radiogroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) (voir [le rôle `radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role))
+- [`tablist`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) (incluant les rôles [`tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) et [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role))
 - [`tree`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
 - [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
