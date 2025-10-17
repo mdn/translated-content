@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-字符串。它是 [`<declaration-value>`](https://drafts.csswg.org/css-syntax/#typedef-declaration-value)。
+[`<declaration-value>`](https://drafts.csswg.org/css-syntax/#typedef-declaration-value) 字符串。
 
 ## 示例
 
