@@ -50,7 +50,7 @@ Access-Control-Allow-Origin: https://developer.mozilla.org
 
 ### CORS et le cache
 
-Si le serveur spécifie un hôte d'origine plutôt que "\*", il doit également inclure "_Origin_" dans l'en-tête de réponse "_[Vary](/fr/docs/Web/HTTP/Headers/Vary)_" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.
+Si le serveur spécifie un hôte d'origine plutôt que "\*", il doit également inclure "_Origin_" dans l'en-tête de réponse "_[Vary](/fr/docs/Web/HTTP/Reference/Headers/Vary)_" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.
 
 ```
 Access-Control-Allow-Origin: https://developer.mozilla.org

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-{{CSSRef}}
-
 **`transition-property`** [CSS](/ko/docs/Web/CSS) 속성은 [transition effect](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 을 적용해야 하는 CSS 속성을 명시합니다.
 
 {{InteractiveExample("CSS Demo: transition-property")}}

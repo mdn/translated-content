@@ -49,7 +49,8 @@ original_slug: Web/HTML/Global_attributes
 - [`is`](/ko/docs/Web/HTML/Reference/Global_attributes/is)
   - : 표준 HTML 요소가 사용자 정의 기본 요소처럼 동작하도록 지정합니다. (자세한 내용은 [사용자 정의 요소 사용하기](/ko/docs/Web/API/Web_components/Using_custom_elements)를 참고하세요[)](/ko/docs/Web/API/Web_components/Using_custom_elements)
 
-> **참고:**`item*` 특성은 [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata)의 일부입니다.
+> [!NOTE]
+> `item*` 특성은 [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata)의 일부입니다.
 
 - [`itemid`](/ko/docs/Web/HTML/Reference/Global_attributes/itemid)
   - : 아이템의 고유하고 전역적인 식별자입니다.

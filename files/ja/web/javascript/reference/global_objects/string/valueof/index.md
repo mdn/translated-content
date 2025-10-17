@@ -1,24 +1,23 @@
 ---
 title: String.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`valueOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列値を返します。
 
-**`valueOf()`** メソッドは、{{jsxref("String")}} オブジェクトのプリミティブ値を返します。
-
-{{InteractiveExample("JavaScript デモ: String.valueOf()")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.valueOf()")}}
 
 ```js interactive-example
 const stringObj = new String("foo");
 
 console.log(stringObj);
-// Expected output: String { "foo" }
+// 予想される結果: String { "foo" }
 
 console.log(stringObj.valueOf());
-// Expected output: "foo"
+// 予想される結果: "foo"
 ```
 
 ## 構文
@@ -26,6 +25,10 @@ console.log(stringObj.valueOf());
 ```js-nolint
 valueOf()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 

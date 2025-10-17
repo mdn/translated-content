@@ -3,7 +3,7 @@ title: SVG 要素リファレンス
 short-title: 要素
 slug: Web/SVG/Reference/Element
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
 
 SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。
@@ -26,7 +26,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
 
 ### E
 
@@ -119,9 +118,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("view")}}
 
-> [!NOTE]
-> [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリング用途では未知の要素を {{SVGElement("g")}} として扱われることが要求されています。
-
 ## SVG 要素一覧 (カテゴリー別)
 
 ### アニメーション要素
@@ -171,9 +167,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 ### 描画可能要素
 
 {{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
-
-> [!NOTE]
-> [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリング用途では未知の要素を {{SVGElement("g")}} として扱われることが要求されています。
 
 ### 図形要素
 

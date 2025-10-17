@@ -144,4 +144,4 @@ l10n:
 
 - [標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)
 - [学習: `<meta>`](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta_要素)
-- [viewport メタタグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element)
+- [viewport メタタグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)

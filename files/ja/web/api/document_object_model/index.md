@@ -13,7 +13,7 @@ DOM は文書を論理的なツリーで表現します。ツリーのそれぞ�
 
 ノードにはイベントハンドラーを割り当てることができます。イベントが発生すると、イベントハンドラーが実行されます。
 
-DOM とは何であるか、どのように文書を表現するのかについてもっと学習するのであれば、[DOM 入門](/ja/docs/Web/API/Document_Object_Model/Introduction)をご覧ください。
+DOM とは何であるか、どのように文書を表現するのかについてもっと学習するのであれば、[DOM 入門](/ja/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)をご覧ください。
 
 ## DOM インターフェイス
 
@@ -93,5 +93,5 @@ HTML DOM API によって、タブやウィンドウ、 CSS スタイルやス�
 
 ## 関連情報
 
-- [DOM の例](/ja/docs/Web/API/Document_Object_Model/Examples)
+- [DOM の例](/ja/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b)
 - [CSS オブジェクトモデル (CSSOM)](/ja/docs/Web/API/CSS_Object_Model)
