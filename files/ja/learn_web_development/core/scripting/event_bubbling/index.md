@@ -433,7 +433,7 @@ button.addEventListener("click", handleClick);
 ## 関連情報
 
 - [domevents.dev](https://domevents.dev/) — 探究を通して DOM イベントシステムの動作について学ぶことができる、とても有益なインタラクティブな遊び場アプリです。
-- [イベントリファレンス](/ja/docs/Web/Events)
+- [イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)
 - [Event order](https://www.quirksmode.org/js/events_order.html) （キャプチャとバブリングの議論） — Peter-Paul Koch による素晴らしい作品です。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn/JavaScript/Building_blocks")}}

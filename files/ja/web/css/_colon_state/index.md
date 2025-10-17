@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
-
 **`:state()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、特定のカスタム状態を持つ[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)に一致します。
 
 ## 構文

@@ -2,10 +2,8 @@
 title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
 l10n:
-  sourceCommit: 418b3ebf6464716649125199385c39d86c944973
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`size-adjust`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、このフォントに関連する字体のアウトラインとメトリックの乗数を定義します。これにより、同じフォントサイズでレンダリングしたときに、様々なフォントのデザインを調和させることが容易になります。
 
@@ -46,7 +44,7 @@ size-adjust: 90%;
 
 @font-face {
   font-family: local-font;
-  src: local(Local Font);
+  src: local("Local Font");
   size-adjust: 90%;
 }
 ```

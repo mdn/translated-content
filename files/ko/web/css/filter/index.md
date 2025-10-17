@@ -3,8 +3,6 @@ title: filter
 slug: Web/CSS/filter
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`filter`** 속성은 흐림 효과나 색상 변형 등 그래픽 효과를 요소에 적용합니다. 보통 필터는 이미지, 배경, 테두리 렌더링을 조정하는 데 쓰입니다.
 
 CSS 표준은 미리 정의된 효과를 내는 몇 가지 함수를 포함하고 있습니다. [SVG 필터 요소](/ko/docs/Web/SVG/Element/filter)를 가리키는 URL 참조를 사용하여 SVG 필터를 적용할 수도 있습니다.

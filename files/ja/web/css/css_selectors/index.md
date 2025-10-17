@@ -2,12 +2,10 @@
 title: CSS セレクター
 slug: Web/CSS/CSS_selectors
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---
 
-{{CSSRef}}
-
-**CSS セレクター**モジュールは、要素を選択するパターンを定義し、一連の CSS ルールをその{{cssxref("specificity", "詳細度")}}とともに適用します。 CSS セレクターモジュールには、 60 以上のセレクターと 5 つの結合子が用意されています。[他のモジュール](#関連概念)は、さらに擬似クラスセレクターと擬似要素が提供されています。
+**CSS セレクター**モジュールは、要素を選択するパターンを定義し、一連の CSS ルールをその[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)とともに適用します。 CSS セレクターモジュールには、 60 以上のセレクターと 5 つの結合子が用意されています。[他のモジュール](#関連概念)は、さらに擬似クラスセレクターと擬似要素が提供されています。
 
 CSS では、セレクターはスタイルを設定したい要素と照合、または選択するために使用されるパターンです。セレクターは JavaScript でも使用され、 [`NodeList`](/ja/docs/Web/API/NodeList) として返すDOMノードを選択することができます。
 
@@ -19,21 +17,20 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 
 - `+` （[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)）
 - `>` （[子結合子](/ja/docs/Web/CSS/Child_combinator)）
-- `||` （[列結合子](/ja/docs/Web/CSS/Column_combinator)）
 - `~` （[後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)）
 - " " （[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)）
 - `|` （[名前空間セパレーター](/ja/docs/Web/CSS/Namespace_separator)）
+- `,` （[セレクターリスト](/ja/docs/Web/CSS/Selector_list)）
+
+CSS セレクターモジュールでは、[列結合子](/ja/docs/Web/CSS/Column_combinator) (`||`) も導入されています。現在、この機能に対応しているブラウザーはありません。
 
 ### セレクター
 
 - {{CSSXref(":active")}}
 - {{CSSXref(":any-link")}}
 - {{CSSXref(":autofill")}}
-- {{CSSXref(":blank")}}
 - {{CSSXref(":buffering")}}
 - {{CSSXref(":checked")}}
-- {{CSSXref(":current")}}
-- {{CSSXref(":current", ":current()")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
 - {{CSSXref(":dir", ":dir()")}}
@@ -49,15 +46,14 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - {{CSSXref(":future")}}
 - {{CSSXref(":has", ":has()")}}
 - {{CSSXref(":hover")}}
-- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":in-range")}}
+- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":invalid")}}
 - {{CSSXref(":is", ":is()")}}
 - {{CSSXref(":lang", ":lang()")}}
 - {{CSSXref(":last-child")}}
 - {{CSSXref(":last-of-type")}}
 - {{CSSXref(":link")}}
-- {{CSSXref(":local-link")}}
 - `:matches()` （旧式のセレクターで、 {{CSSXref( ":is", ":is()")}} の別名）
 - {{CSSXref(":modal")}}
 - {{CSSXref(":muted")}}
@@ -68,6 +64,7 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
+- {{CSSXref(":open")}}
 - {{CSSXref(":optional")}}
 - {{CSSXref(":out-of-range")}}
 - {{CSSXref(":past")}}
@@ -75,6 +72,7 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - {{CSSXref(":picture-in-picture")}}
 - {{CSSXref(":placeholder-shown")}}
 - {{CSSXref(":playing")}}
+- {{CSSXref(":popover-open")}}
 - {{CSSXref(":read-only")}}
 - {{CSSXref(":read-write")}}
 - {{CSSXref(":required")}}
@@ -83,7 +81,6 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - {{CSSXref(":seeking")}}
 - {{CSSXref(":stalled")}}
 - {{CSSXref(":target")}}
-- {{CSSXref(":target-within")}}
 - {{CSSXref(":user-invalid")}}
 - {{CSSXref(":user-valid")}}
 - {{CSSXref(":valid")}}
@@ -97,6 +94,8 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)
 - [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
 
+CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":current")}}、{{CSSXref(":local-link")}}、{{CSSXref(":target-within")}} の各擬似クラスも導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
+
 ## 用語
 
 - {{glossary("Pseudo-class", "擬似クラス")}}（用語集の用語）
@@ -106,7 +105,6 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)
 - [複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)
 - [関連セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#関連セレクター)
-- [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 
 ## ガイド
@@ -120,11 +118,14 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
   - : 擬似クラスは、文書ツリーには含まれない状態情報に基づいて要素を選択できるようにするセレクターの一覧で、さまざまな CSS モジュールや HTML で定義されています。
 
-- [学習: CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-  - : CSS の構成要素の一部で、チュートリアルとして[要素・クラス・ID によるセレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)、[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)、[擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)、[カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)があります。
-
 - [セレクターでの `:target` 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
   - : {{CSSXref(":target")}} 擬似クラスを使って、 URL のフラグメント識別子をターゲット要素にスタイルを設定する方法を学びます。
+
+- [プライバシーと `:visited` セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+  - : ユーザーのプライバシー保護のために、`:visited` クラスに設定されているスタイル制限を追求します。
+
+- [CSS の構成要素: CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+  - : 基本的な CSS セレクター入門で、[要素型、クラス、ID によるセレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)、[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)、[擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)のチュートリアルがあります。
 
 - [学習: UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
   - : さまざまな状態のフォームをスタイル設定するために利用できる、さまざまな UI 擬似クラスについて学びます。
@@ -134,15 +135,30 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 
 ## 関連概念
 
-- {{CSSXref(":popover-open")}} 擬似クラス
 - {{CSSXref(":state","state()")}} 擬似クラス
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュール
   - : [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
-- [CSS scoping](/ja/docs/Web/CSS/CSS_scoping) モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
   - {{CSSXref(":host")}} 擬似クラス
   - {{CSSXref(":host_function", ":host()")}} 擬似クラス
-  - {{cssxref(":host-context", ":host-context()")}} 擬似クラス
+  - {{CSSXref(":host-context", ":host-context()")}} 擬似クラス
+  - {{CSSXref(":has-slotted")}} 擬似クラス
   - {{CSSXref("::slotted")}} 擬似要素
+
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+  - {{cssxref("::column")}}
+
+- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール
+  - {{CSSXref(":left")}} 擬似クラス
+  - {{CSSXref(":right")}} 擬似クラス
+  - {{CSSXref(":first")}} 擬似クラス
+  - `:blank` 擬似クラス
 
 - [CSS 擬似要素モジュール](/ja/docs/Web/CSS/CSS_pseudo-elements)（HTML に含まれないものを表すために使用）
   - {{CSSXref("::after")}}

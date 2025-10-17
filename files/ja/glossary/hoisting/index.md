@@ -18,7 +18,7 @@ JavaScript の**巻き上げ** (Hoisting) は、インタープリターがコ�
 
 上記の 4 つの関数宣言はタイプ 1 の動作で巻き上げが行われます。 `var` 宣言はタイプ 2 の動作で巻き上げが行われます。 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`class`](/ja/docs/Web/JavaScript/Reference/Statements/class) 宣言（まとめて字句宣言とも呼ばれる）はタイプ 3 の動作で巻き上げが行われます。 [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 宣言はタイプ 1 とタイプ 4 の動作で巻き上げが行われます。
 
-人によっては `let`, `const`, `class` を巻き上げが行われないと見なしますが、それは[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)で宣言前に変数を使用することを厳しく禁止しているからです。巻き上げは普遍的に同意された用語ではないので、この反論は問題ありません。しかし、一時的デッドゾーンはそのスコープで他にも観測可能な変化を発生させることがあり、これは何らかの形で巻き上げがあるといえます。
+人によっては `let`, `const`, `class` を巻き上げが行われないと見なしますが、それは[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)で宣言前に変数を使用することを厳しく禁止しているからです。巻き上げは普遍的に同意された用語ではないので、この反論は問題ありません。しかし、一時的デッドゾーンはそのスコープで他にも観測可能な変化を発生させることがあり、これは何らかの形で巻き上げがあるといえます。
 
 ```js
 const x = 1;
@@ -44,9 +44,9 @@ console.log(x); // 1
 巻き上げについての詳細は、次の記事を参照してください。
 
 - `var`/`let`/`const` の巻き上げ — [文法とデータ型ガイド](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数の巻き上げ)
-- `function` の巻き上げ — [関数ガイド](/ja/docs/Web/JavaScript/Guide/Functions#function_hoisting)
+- `function` の巻き上げ — [関数ガイド](/ja/docs/Web/JavaScript/Guide/Functions#関数の巻き上げ)
 - `class` の巻き上げ — [クラスガイド](/ja/docs/Web/JavaScript/Guide/Using_classes#クラス宣言の巻き上げ)
-- `import` の巻き上げ — [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#import_declarations_are_hoisted)
+- `import` の巻き上げ — [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#インポート宣言は巻き上げされる)
 
 ## 関連情報
 

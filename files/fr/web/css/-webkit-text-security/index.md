@@ -3,7 +3,7 @@ title: -webkit-text-security
 slug: Web/CSS/-webkit-text-security
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{Non-standard_Header}}
 
 **`-webkit-text-security`** est une propriété CSS non-standard qui permet de masquer les caractères saisis dans un camp d'un formulaire (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}) en les remplaçant par une forme géométrique. Cette propriété n'affecte que les champs qui ne sont pas de type `password`.
 
@@ -14,7 +14,18 @@ slug: Web/CSS/-webkit-text-security
 -webkit-text-security: disc;
 -webkit-text-security: square;
 -webkit-text-security: none;
+
+/* Valeurs globales */
+-webkit-text-security: inherit;
+-webkit-text-security: initial;
+-webkit-text-security: revert;
+-webkit-text-security: revert-layer;
+-webkit-text-security: unset;
 ```
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-text-security = circle | disc | square | none`)}}
 
 ## Exemples
 
@@ -40,12 +51,12 @@ input {
 
 ## Spécifications
 
-Cette propriété WebKit est spécifique à ce moteur et ne fait partie d'aucune spécification*.*
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
-Cette propriété est prise en charge par les navigateurs basés sur WebKit ou Blink.
+{{Compat}}
 
 ## Voir aussi
 
-- [Les extensions CSS spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{AddonSidebar}}
-
 有关过渡的额外信息。请注意，这里的许多值目前在 Firefox 中不受支持，详情请参见[浏览器兼容性表](#浏览器兼容性)。
 
 ## 类型

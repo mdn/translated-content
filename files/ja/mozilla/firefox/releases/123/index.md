@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14ce84d863643d7f729e497781bfd247add7d1ae
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 123 の変更点をまとめています。Firefox 123 は、米国時間 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=123) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

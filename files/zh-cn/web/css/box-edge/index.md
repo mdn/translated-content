@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 255a29f9e5bae99fd3bd98f6af1204a98be634bb
 ---
 
-{{CSSRef}}
-
 **`<box-edge>`** 值类型表示一个[盒子边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)关键字，例如 [`content-box`](#content-box) 和 [`border-box`](#border-box)。盒子边界关键字用于定义元素盒模型的不同方向，以及元素在屏幕上的定位和呈现方式。
 
 盒子边界关键字是构成数据类型（但不限于） `<visual-box>`、`<layout-box>`、`<paint-box>`、`<coord-box>` 和 `<geometry-box>` 的组成部分。这些类型被应用于诸如 {{cssxref("transform-box")}} 和 {{cssxref("background-clip")}} 属性。
@@ -63,7 +61,7 @@ l10n:
   - : 在 SVG 中，指的是描边边界盒（stroke bounding box）。在 CSS 中，`stroke-box` 被视为 `border-box`。它用于定义应用描边时元素的形状。
 
 - `view-box`
-  - : 指的是最近的 SVG 视口元素的原点盒子（origin box）。原点盒子是一个矩形，其宽度和高度由该元素的 {{svgattr("viewBox")}} 属性建立的初始 SVG 用户坐标系决定。原点盒子的位置设定为其左上角锚定在[坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems)的原点。在 CSS 中，`view-box` 被视为 `border-box`。
+  - : 指的是最近的 SVG 视口元素的原点盒子（origin box）。原点盒子是一个矩形，其宽度和高度由该元素的 {{svgattr("viewBox")}} 属性建立的初始 SVG 用户坐标系决定。原点盒子的位置设定为其左上角锚定在[坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)的原点。在 CSS 中，`view-box` 被视为 `border-box`。
     > [!NOTE]
     > 当 SVG 视口未锚定在原点时，原点盒子与 SVG 视口不对应。
 

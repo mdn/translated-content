@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Operators")}}
-
 该章节说明了 JavaScript 语言所有的运算符、表达式和关键字。
 
 ## 表达式和运算符分类

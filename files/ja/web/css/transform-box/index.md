@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b195721acf6cc4829f55168a415f3578c5b32a09
 ---
 
-{{CSSRef}}
-
 **`transform-box`** は CSS のプロパティで {{cssxref("transform")}}、独立した変換プロパティである {{cssxref("translate")}}、{{cssxref("scale")}}、{{cssxref("rotate")}}、および {{cssxref("transform-origin")}} プロパティが相対するレイアウトボックスを定義します。
 
 ## 構文

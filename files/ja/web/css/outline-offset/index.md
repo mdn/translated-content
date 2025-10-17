@@ -5,11 +5,9 @@ l10n:
   sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
-
 **`outline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の辺や境界線と[輪郭線](/ja/docs/Web/CSS/outline)との空間の量を設定します。
 
-{{InteractiveExample("CSS Demo: outline-offset")}}
+{{InteractiveExample("CSS デモ: outline-offset")}}
 
 ```css interactive-example-choice
 outline-offset: 4px;

@@ -3,8 +3,6 @@ title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
 ---
 
-{{CSSRef}}
-
 **`scroll-margin-block-start`** 属性定义了滚动吸附区域在的块首外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
 {{InteractiveExample("CSS Demo: scroll-margin-block-start")}}

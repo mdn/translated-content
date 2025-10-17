@@ -5,14 +5,12 @@ l10n:
   sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
 ---
 
-{{CSSRef}}
-
 **`cursor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マウスポインターが要素の上にいるときに表示されるマウスカーソルを設定します。
 
 カーソル設定により、テキスト選択、ヘルプやコンテキストメニューの有効化、コンテンツのコピー、表のリサイズなど、現在の位置で実行できるマウス操作をユーザーに知らせるべきです。
 キーワードを使用してカーソルの種類を指定するか、使用する固有のアイコンを読み込むことができます（オプションで代替画像、そして最終的なフォールバックとしてキーワードが必須です）。
 
-{{InteractiveExample("CSS Demo: cursor")}}
+{{InteractiveExample("CSS デモ: cursor")}}
 
 ```css interactive-example-choice
 cursor: help;

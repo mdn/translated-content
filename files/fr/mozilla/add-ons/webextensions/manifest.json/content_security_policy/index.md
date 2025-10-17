@@ -26,9 +26,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
   </tbody>
 </table>
 
-Les extensions ont une politique de sécurité de contenu qui leur est appliquée par défaut. La stratégie par défaut restreint les sources à partir desquelles elles peuvent charger les ressources [\<script>](/fr/docs/Web/HTML/Element/script) et [\<object>](/fr/docs/Web/HTML/Element/object), et interdit les pratiques potentiellement dangereuses telles que l'utilisation d'[`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu par défaut](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#politique_de_sécurité_du_contenu_par_défaut) pour en savoir plus sur ces implications.
+Les extensions ont une politique de sécurité de contenu qui leur est appliquée par défaut. La stratégie par défaut restreint les sources à partir desquelles elles peuvent charger les ressources [\<script>](/fr/docs/Web/HTML/Reference/Elements/script) et [\<object>](/fr/docs/Web/HTML/Reference/Elements/object), et interdit les pratiques potentiellement dangereuses telles que l'utilisation d'[`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu par défaut](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#politique_de_sécurité_du_contenu_par_défaut) pour en savoir plus sur ces implications.
 
-Vous pouvez utiliser la clé `"content_security_policy"` pour desserrer ou resserrer la politique par défaut. Cette clé est spécifiée de la même manière que l'en-tête HTTP Content-Security-Policy. Voir l'[utilisation de la politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) pour une description générale de la syntaxe de CSP.
+Vous pouvez utiliser la clé `"content_security_policy"` pour desserrer ou resserrer la politique par défaut. Cette clé est spécifiée de la même manière que l'en-tête HTTP Content-Security-Policy. Voir l'[utilisation de la politique de sécurité de contenu](/fr/docs/Web/HTTP/Guides/CSP) pour une description générale de la syntaxe de CSP.
 
 Par exemple, vous pouvez utiliser cette clé pour&nbsp;:
 

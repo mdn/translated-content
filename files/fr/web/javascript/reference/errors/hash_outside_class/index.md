@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Hash_outside_class
 
 {{jsSidebar("Errors")}}
 
-L'expression JavaScript "Unexpected '#' used outside of class body" (qu'on peut traduire par «&nbsp;'#' inattendu en dehors d'un corps de classe&nbsp;») se produit lorsqu'un croisillon («&nbsp;#&nbsp;») est trouvé dans un contexte inattendu, notamment [en dehors d'une déclaration de classe](/fr/docs/Web/JavaScript/Reference/Classes/Private_properties). Les croisillons sont valides au début d'un fichier [comme commentaire d'interpréteur](/fr/docs/Web/JavaScript/Reference/Lexical_grammar), ou à l'intérieur d'une classe pour indiquer un champ privé. Vous pouvez également rencontrer cette erreur si vous oubliez d'encadrer un identifiant DOM entre quotes (la chaîne de caractères n'étant alors pas délimitée).
+L'expression JavaScript "Unexpected '#' used outside of class body" (qu'on peut traduire par «&nbsp;'#' inattendu en dehors d'un corps de classe&nbsp;») se produit lorsqu'un croisillon («&nbsp;#&nbsp;») est trouvé dans un contexte inattendu, notamment [en dehors d'une déclaration de classe](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements). Les croisillons sont valides au début d'un fichier [comme commentaire d'interpréteur](/fr/docs/Web/JavaScript/Reference/Lexical_grammar), ou à l'intérieur d'une classe pour indiquer un champ privé. Vous pouvez également rencontrer cette erreur si vous oubliez d'encadrer un identifiant DOM entre quotes (la chaîne de caractères n'étant alors pas délimitée).
 
 ## Message
 
