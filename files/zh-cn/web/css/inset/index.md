@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`inset`** 是一个简写属性，对应于 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}} 属性。它的多值语法与 {{cssxref("margin")}} 简写属性相同。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`inset`** 是一个对应于 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}} 属性的简写属性。它的多值语法与 {{cssxref("margin")}} 简写属性相同。
 
 {{glossary("inset properties", "inset 属性")}}（包括 `inset`）对非定位元素无效。
 
@@ -61,7 +61,7 @@ inset: 0;
 }
 ```
 
-虽然该属性属于 [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)模块的一部分，但它并不定义*逻辑*偏移量。它定义的是*物理*偏移量，与元素的书写模式、文本方向或文字排列方向无关。
+虽然该属性属于 [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)模块，但它并不定义*逻辑*偏移量。它定义的是*物理*偏移量，与元素的书写模式、文本方向或文字排列方向无关。
 
 ## 组成属性
 
