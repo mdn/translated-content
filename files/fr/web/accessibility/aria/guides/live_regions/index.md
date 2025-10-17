@@ -118,7 +118,7 @@ Lorsque l'utilisateur·ice sélectionne une nouvelle planète, l'information dan
 
 Voici une capture d'écran de VoiceOver sur Mac annonçant la mise à jour (via les sous-titres) de la zone dynamique&nbsp;:
 
-![Capture d'écran de VoiceOver sur Mac annonçant la mise à jour d'une zone « live ». Les sous-titres sont affichés.](web_accessibility_aria_aria_live_regions.png)
+![Capture d'écran de VoiceOver sur Mac annonçant la mise à jour d'une zone « live ». Les sous-titres sont affichés.](web_accessibility_aria_aria_live_regions.png)
 
 ## Rôles avec attributs de zone « live » implicites
 
