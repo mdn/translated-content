@@ -1,72 +1,75 @@
 ---
-title: Check-list pour l'accessibilité mobile
+title: Liste de vérification de l'accessibilité mobile
 slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
 original_slug: Web/Accessibility/Mobile_accessibility_checklist
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{AccessibilitySidebar}}
+Ce document fournit une liste de vérification concise des exigences d'accessibilité pour les développeur·euse·s d'applications mobiles. Il a vocation à évoluer en continu à mesure que de nouveaux modèles apparaissent.
 
-Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.
+## Couleur
 
-## La couleur
+- Le contraste des couleurs doit être conforme aux [exigences du niveau AA de la WCAG 2.2 <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum)&nbsp;:
+  - Un ratio de contraste de 4,5:1 pour le texte normal (moins de 18 points ou 14 points en gras).
+  - Un ratio de contraste de 3:1 pour le texte de grande taille (au moins 18 points ou 14 points en gras).
 
-- Le contraste des couleurs **DOIT** être conforme aux [exigences du niveau AA du WCAG 2.1](https://www.w3.org/TR/WCAG/#contrast-minimum) :
-  - Un contraste dont le ratio est de 4.5:1 pour les textes normaux (dont la fonte est inférieure à 18 points ou 14 points en gras) ;
-  - Un contraste dont le ratio est de 3:1 pour les grands textes (18 points minimum ou 14 points en gras).
+- L'information transmise par la couleur doit aussi être disponible par d'autres moyens (texte souligné pour les liens, etc.).
 
-- L'information transmise par la couleur **DOIT** également être disponible par d'autres moyens (texte souligné pour les liens, etc.).
+## Visibilité
 
-## La visibilité
-
-- Les techniques de masquage du contenu, telles que l'opacité nulle, l'ordre d'indexation en « z » et le placement hors écran, **NE DOIVENT PAS** être utilisées exclusivement pour gérer la visibilité.
-- Tout ce qui est autre, que l'écran actuellement visible, **DOIT** être _vraiment_ invisible (particulièrement pertinent pour les apps à page unique avec plusieurs « _cartes_ ») :
+- Les techniques de masquage du contenu telles que l'opacité nulle, l'ordre z-index ou le placement hors écran ne doivent pas être utilisées exclusivement pour gérer la visibilité.
+- Tout ce qui n'est pas l'écran actuellement visible doit être _réellement_ invisible (particulièrement pertinent pour les applications monopage avec plusieurs _cartes_)&nbsp;:
   - Utilisez l'attribut `hidden` ou les propriétés de style `visibility` ou `display`.
-  - Sauf si cela est absolument inévitable, l'attribut `aria-hidden` **NE DOIT PAS** être utilisé.
+  - Sauf cas absolument inévitable, l'attribut `aria-hidden` ne doit pas être utilisé.
 
-## Le focus
+## Sélection
 
-- Tous les éléments activables **DOIVENT** être focusables :
-  - Les contrôles standard tels que les liens, les boutons et les champs de formulaire sont accessibles par défaut.
-  - Les contrôles non standard **DOIVENT** avoir un [rôle ARIA](/fr/docs/Web/Accessibility/ARIA/Roles) approprié qui leur est attribué, comme `button`, `link` ou `checkbox`.
+- Tous les éléments activables doivent pouvoir recevoir la sélection&nbsp;:
+  - Les contrôles standards comme les liens, boutons et champs de formulaire sont sélectionnables par défaut.
+  - Les contrôles non standards doivent avoir un [rôle ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) approprié, tel que `button`, `link` ou `checkbox`.
 
-- Le focus **DOIT** être traité dans un ordre logique et de manière cohérente.
+- La gestion de la sélection doit suivre un ordre logique et cohérent.
 
-## Les équivalents textuels
+## Équivalents textuels
 
-- Un équivalent textuel **DOIT** être fourni pour chaque élément non textuel non strictement présenté dans l'application.
-  - Utilisez _alt_ et _title_ lorsque cela est approprié (voir l'article de Steve Faulkner sur l'[Utilisation de l'attribut HTML title](https://www.tpgi.com/using-the-html-title-attribute-updated/)).
-  - Si les attributs ci-dessus ne sont pas applicables, utilisez les [États et propriétés ARIA](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) appropriés tels que `aria-label`, `aria-labelledby`, ou `aria-describedby`.
+- Un équivalent textuel doit être fourni pour chaque élément non textuel non strictement décoratif de l'application.
+  - Utilisez _alt_ et _title_ lorsque c'est pertinent ([Guide anglophone sur l'utilisation de l'attribut HTML title <sup>(angl.)</sup>](https://www.tpgi.com/using-the-html-title-attribute-updated/)).
+  - Si ces attributs ne sont pas applicables, utilisez les [états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) appropriés comme `aria-label`, `aria-labelledby` ou `aria-describedby`.
 
-- Les images de texte **DOIVENT** être évitées.
-- Tous les composants de l'interface utilisateur ayant un texte visible (ou une image de texte) comme étiquette **DOIVENT** avoir le même texte disponible dans le [nom](https://www.w3.org/TR/WCAG21/#dfn-name) programmatique du composant. [WCAG 2.1 : Étiquette dans le nom.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
-- Tous les contrôles de formulaire **DOIVENT** avoir des étiquettes (éléments [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)) pour le bénéfice des utilisateurs de lecteurs d'écran.
+- Les images de texte sont à proscrire.
+- Tous les composants d'interface utilisateur avec un texte visible (ou une image de texte) comme libellé doivent avoir ce même texte dans le [nom programmatique](https://w3c.github.io/wcag/guidelines/22/#dfn-name) du composant. [WCAG 2.1&nbsp;: Libellé dans le nom.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- Tous les contrôles de formulaire doivent avoir des libellés (éléments HTML {{HTMLElement("label")}}) pour les utilisateur·ice·s de lecteurs d'écran.
 
-## La gestion des états
+## Gestion des états
 
-- Les contrôles standard tels que les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour d'autres contrôles personnalisés, les changements d'état **DOIVENT** être fournis via [les états ARIA](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) tels que `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded` et `aria-pressed`.
+- Les contrôles standards comme les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour les autres contrôles personnalisés, les changements d'état doivent être fournis via les [états ARIA <sup>(angl.)</sup>](https://w3c.github.io/aria/#state_prop_def) tels que `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded` et `aria-pressed`.
 
-## L'orientation
+## Orientation
 
-- Le contenu **NE DOIT PAS** être limité à une seule orientation, comme le portrait ou le paysage, sauf si cela est essentiel. [WCAG 2.1 : Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
-  - Des exemples de cas où une orientation est essentielle sont une application pour un piano ou un chèque de banque.
+- Le contenu ne doit pas être limité à une seule orientation, comme portrait ou paysage, sauf si cela est essentiel. [WCAG 2.1&nbsp;: Orientation <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+  - Par exemple, une application de piano ou un chèque bancaire nécessite une orientation spécifique.
 
-## Directives générales
+## Bonnes pratiques générales
 
-- Un titre d'application **DOIT** être fourni.
-- Les titres **NE DOIVENT PAS** rompre la structure hiérarchique
+- Un titre d'application doit être fourni.
+- Les titres ne doivent pas rompre la structure hiérarchique
 
-  ```html-nolint
-  <h1>Titre de premier niveau</h1>
-    <h2>Titre secondaire</h2>
-    <h2>Un autre titre secondaire</h2>
-      <h3>Titre de bas niveau</h3>
+  ```html
+  <h1>Titre de niveau supérieur</h1>
+  <h2>Titre secondaire</h2>
+  <h2>Autre titre secondaire</h2>
+  <h3>Titre de niveau inférieur</h3>
   ```
 
-- L'[ARIA Landmark Roles](https://www.washington.edu/accessibility/web/landmarks/) **DOIT** être utilisé pour décrire une structure d'application ou de document, telle que `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
-- Pour les événements tactiles, au moins un des éléments suivants **DOIT** être vrai ([WCAG 2.1 : Annulation du pointeur](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)) :
-  - L'événement de descente **NE DOIT PAS** être utilisé pour déclencher une action.
-  - L'action est déclenchée par l'événement « up » et une option permettant d'interrompre l'action avant son achèvement est disponible ou une option permettant d'annuler l'action après son achèvement.
-  - L'événement de montée annulera toute action déclenchée par un événement de descente.
-  - Il est essentiel de déclencher l'action sur l'événement de descente. Par exemple, pour jouer à un jeu ou à une application de piano.
+- Les [rôles de repère ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) doivent être utilisés pour décrire la structure d'une application ou d'un document, tels que `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- Pour les événements tactiles, veillez à ce qui suit ([WCAG 2.1&nbsp;: Annulation du pointeur <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html))&nbsp;:
+  - L'événement d'appui ne doit pas être utilisé pour exécuter une partie de la fonction&nbsp;;
+  - À défaut, la _fin_ de la fonction doit se produire lors du relâchement, et un mécanisme doit permettre d'annuler l'action avant son achèvement ou de l'annuler après coup&nbsp;;
+  - À défaut, le relâchement doit permettre d'annuler toute action déclenchée lors de l'appui&nbsp;;
+  - Toutes les règles ci-dessus peuvent être enfreintes s'il est essentiel de déclencher l'action à l'appui, généralement pour simuler des expériences réelles ou fournir un retour en temps réel. Par exemple, commandes de jeu, claviers de piano ou claviers virtuels.
 
-- Les cibles tactiles **DOIVENT** être suffisamment grandes pour que l'utilisateur puisse interagir avec elles (voir [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) pour des directives utiles sur la taille des cibles tactiles).
+- Les cibles tactiles doivent être suffisamment grandes pour permettre l'interaction (voir les [BBC Mobile Accessibility Guidelines <sup>(angl.)</sup>](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size) pour des recommandations sur la taille des cibles).
+
+> [!NOTE]
+> La [version originale de ce document <sup>(angl.)</sup>](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) a été rédigée par [Yura Zenevich](https://yzen.github.io/).
