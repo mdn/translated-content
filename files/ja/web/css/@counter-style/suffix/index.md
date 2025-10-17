@@ -1,16 +1,16 @@
 ---
 title: suffix
 slug: Web/CSS/@counter-style/suffix
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`suffix`** は {{cssxref("@counter-style")}} ルールの記述子で、マーカーの表現に追加されるものを指定します。
 
 ## 構文
 
 ```css
-/* <symbol> values */
+/* <symbol> 値: 文字列、画像、識別子 */
 suffix: "";
 suffix: ") ";
 suffix: url(bullet.png);
@@ -18,8 +18,10 @@ suffix: url(bullet.png);
 
 ### 値
 
+**`suffix`** 記述子は、その値として単一の `<symbol>` を取ります。
+
 - `<symbol>`
-  - : マーカー表現に追加される記号を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} が指定できます。
+  - : マーカー表現に追加される `<symbol>` を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} が指定できます。
 
 ## 公式定義
 
@@ -27,14 +29,7 @@ suffix: url(bullet.png);
 
 ## 形式文法
 
-```
-<symbol>
-
-<symbol> =
-  <string>       |
-  <image>        |
-  <custom-ident>
-```
+{{csssyntax}}
 
 ## 例
 
@@ -47,7 +42,7 @@ suffix: url(bullet.png);
   <li>One</li>
   <li>Two</li>
   <li>Three</li>
-  <li>None of the above</li>
+  <li>該当なし</li>
 </ul>
 ```
 
@@ -67,7 +62,7 @@ suffix: url(bullet.png);
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_a_suffix_for_a_counter')}}
+{{ EmbedLiveSample('カウンターの接尾辞を設定')}}
 
 ## 仕様書
 
@@ -79,5 +74,8 @@ suffix: url(bullet.png);
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法
+- {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール

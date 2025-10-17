@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 **詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文の基本)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
 
 > [!NOTE]
@@ -501,7 +499,7 @@ input[type="password"]:required {
 - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール

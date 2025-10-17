@@ -3,8 +3,6 @@ title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 ---
 
-{{jsSidebar("Operators")}}
-
 `yield` 关键字用于暂停和恢复[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
 
 {{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}

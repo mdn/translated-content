@@ -3,8 +3,6 @@ title: 继承
 slug: Web/CSS/CSS_cascade/Inheritance
 ---
 
-{{CSSRef}}
-
 在 css 中，每个 [CSS 属性定义](/zh-CN/docs/Web/CSS/Reference)的概述都指出了这个属性是默认继承的 ("Inherited: Yes") 还是默认不继承的 ("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。
 
 ## 继承属性
@@ -86,5 +84,5 @@ font {
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

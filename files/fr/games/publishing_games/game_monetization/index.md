@@ -3,8 +3,6 @@ title: Monétisation du jeu
 slug: Games/Publishing_games/Game_monetization
 ---
 
-{{GamesSidebar}}
-
 Lorsque vous avez passé votre temps à créer un jeu, à le [distribuer](/fr/docs/Games/Publishing_games/Game_distribution) et à en faire la [promotion](/fr/docs/Games/Publishing_games/Game_promotion), vous devriez envisager d'en gagner de l'argent. Si votre travail est une entreprise sérieuse sur la voie de devenir un développeur de jeux indépendant capable de gagner sa vie, lisez la suite et voyez quelles sont vos options. La technologie est suffisamment mature; maintenant, il s'agit simplement de choisir la bonne approche.
 
 ## Jeux payants

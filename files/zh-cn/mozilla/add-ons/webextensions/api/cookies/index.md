@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 使扩展能够获取和设置 cookie，并在其更改时得到通知。
 
 ## 权限

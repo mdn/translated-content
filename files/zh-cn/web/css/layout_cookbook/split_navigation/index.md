@@ -3,8 +3,6 @@ title: 分离式导航菜单
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 ---
 
-{{CSSRef}}
-
 一种导航样式，其中一个或多个元素与其余导航项之间是分离的。
 
 ![分离为两组的项目](split-navigation.png)

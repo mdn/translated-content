@@ -1,16 +1,20 @@
 ---
 title: ::-moz-list-bullet
 slug: Web/CSS/::-moz-list-bullet
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}{{SeeCompatTable}}
 
-Le [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-list-bullet`** est [une extension non-standard de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) utilisé pour appliquer un style aux puces des éléments d'une liste non ordonnée (autrement dit, pour un élément [`<li>`](/fr/docs/Web/HTML/Element/li)) contenu dans un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-list-bullet`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le marqueur (généralement une puce) d'un élément de liste ({{htmlelement("li")}}) dans une liste non ordonnée ({{htmlelement("ul")}}).
 
 ## Syntaxe
 
 ```css
-li::-moz-list-bullet
+li::-moz-list-bullet {
+  /* ... */
+}
 ```
 
 ## Exemples
@@ -38,13 +42,17 @@ li::-moz-list-bullet
 
 #### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('mettre_en_forme_les_puces_de_liste')}}
 
 ## Spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Ce pseudo-élément ne fait partie d'aucun standard.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- [`:-moz-list-number`](/fr/docs/Web/CSS/::-moz-list-number)
-- [`::marker`](/fr/docs/Web/CSS/::marker)
+- {{cssxref("::-moz-list-number")}}
+- {{cssxref("::marker")}}

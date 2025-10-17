@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 返回当前扩展内运行的每个页面的 [Window](/zh-CN/docs/Web/API/Window) 对象数组。例如，这包括：
 
 - 后台页面（若定义了）

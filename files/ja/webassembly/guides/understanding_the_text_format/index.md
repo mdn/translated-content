@@ -199,7 +199,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
     i32.add))
 ```
 
-> **メモ:** `i32.const` は 32 ビット整数を定義してスタックにプッシュするだけです。 `i32` 以外の有効な型に変えて、 const の値を好きなものに変えることができます（ここでは `42` に設定しました）。
+> [!NOTE]
+> `i32.const` は 32 ビット整数を定義してスタックにプッシュするだけです。 `i32` 以外の有効な型に変えて、 const の値を好きなものに変えることができます（ここでは `42` に設定しました）。
 
 この例で、 `func` の直後に宣言された `(export "getAnswerPlus1")` セクションに気づくでしょう。これはこの関数をエクスポートするための宣言をして、さらにそれに名前をつけるために使用するショートカットです。
 
@@ -823,7 +824,8 @@ WebAssembly では、現在 4 種類の数値型があります。
 - 新しい型である `externref` は、文字列、DOM 参照、オブジェクトなど、あらゆる JavaScript の値を保持することができます。 WebAssembly の観点からは `externref` は不透明です。Wasm モジュールはこれらの値にアクセスして操作することができず、代わりに値を受け取って送り返すことだけができます。しかし、これは Wasm モジュールが JavaScript の関数や DOM API などを呼び出したり、ホスト環境との相互運用を容易にするために非常に有用です。`externref` は値型とテーブル要素に使用することができます。
 - JavaScript API 経由ではなく、Wasm モジュールが直接 [WebAssembly テーブル](#webassembly_テーブル)を操作できるようにするための新しい命令がいくつか追加されました。
 
-> **メモ:** [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) のドキュメントには、 `externref` を Rust で利用する方法について、いくつかの有用な情報が含まれています。
+> [!NOTE]
+> [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) のドキュメントには、 `externref` を Rust で利用する方法について、いくつかの有用な情報が含まれています。
 
 > [!NOTE]
 > ブラウザーの互換性情報については、[ホームページの `webassembly.reference-types`](/ja/docs/WebAssembly#webassembly.reference-types) を参照してください。
@@ -896,7 +898,8 @@ memory.buffer; // returns SharedArrayBuffer
 
 ミューテックスや条件変数など、より高度な機能を実装するために使用できる新しい Wasm 命令が多数追加されました。[ここにリストアップされています](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md#atomic-memory-accesses)。これらの命令は、 Firefox 80 の時点で共有でないメモリー上で許可されています。
 
-> **メモ:** [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) で、 Emscripten の新機能を利用する方法を紹介しています。
+> [!NOTE]
+> [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) で、 Emscripten の新機能を利用する方法を紹介しています。
 
 ## まとめ
 

@@ -5,7 +5,7 @@ slug: Web/CSS/padding-left
 
 {{CSSRef}}
 
-La propriété **`padding-left`** d'un élément correspond à l'espace nécessaire à la gauche d'un élément. La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu et la bordure. `padding-left` ne peut pas recevoir de valeurs négatives.
+La propriété **`padding-left`** d'un élément correspond à l'espace nécessaire à la gauche d'un élément. La [zone de remplissage](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) correspond à l'espace entre le contenu et la bordure. `padding-left` ne peut pas recevoir de valeurs négatives.
 
 {{InteractiveExample("CSS Demo: padding-left")}}
 
@@ -122,5 +122,5 @@ padding-left: unset;
 
 ## Voir aussi
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.

@@ -22,7 +22,8 @@ l10n:
 
 {{ListSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
-> **メモ:** `dir`、`lang`、`iarc_rating_id` の各メンバーは実装されていません。
+> [!NOTE]
+> `dir`、`lang`、`iarc_rating_id` の各メンバーは実装されていません。
 
 ## マニフェストの例
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 在计算机科学中，**枚举**类型是一种由一组有限的具名值组成的数据类型。
 
 ## HTML 枚举属性

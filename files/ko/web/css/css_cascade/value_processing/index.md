@@ -4,14 +4,13 @@ slug: Web/CSS/CSS_cascade/Value_processing
 original_slug: Web/CSS/initial_value
 ---
 
-{{cssref}}
-
 [CSS](/ko/docs/Web/CSS) 속성의 **초깃값**은 속성의 기본값으로, 속성 정의 표가 명시하고 있습니다. 초깃값의 사용처는 상속 여부에 따라 다릅니다.
 
 - [상속 속성](/ko/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)의 경우, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 없는 이상 초깃값은 **루트 요소에만** 쓰입니다.
 - [비상속 속성](/ko/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties)의 경우, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 없는 이상 초깃값은 **모든 요소**에 쓰입니다.
 
-> **참고:** {{cssxref("initial")}} 키워드를 사용해 명시적으로 초깃값을 지정할 수 있습니다.
+> [!NOTE]
+> {{cssxref("initial")}} 키워드를 사용해 명시적으로 초깃값을 지정할 수 있습니다.
 
 ## 명세
 
@@ -38,6 +37,6 @@ original_slug: Web/CSS/initial_value
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)
