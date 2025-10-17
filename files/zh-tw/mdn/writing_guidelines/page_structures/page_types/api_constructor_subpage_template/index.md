@@ -48,7 +48,7 @@ l10n:
 >
 > 這些宏由工具鏈自動新增（無需手動新增或移除）：
 >
-> - `\{{SeeCompatTable}}`——此宏會生成一個**這是實驗性技術**橫幅，表示該技術為[實驗性](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#實驗性)。
+> - `\{{SeeCompatTable}}`——此宏會生成一個**這是實驗性技術**橫幅，表示該技術為[實驗性質](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#實驗性質)。
 >   如果該技術是實驗性的，且在 Firefox 中透過偏好設定隱藏，你還應在 [Firefox 實驗功能](/zh-TW/docs/Mozilla/Firefox/Experimental_features) 頁面中為其填寫條目。
 > - `\{{Deprecated_Header}}`——此宏會生成一個 **已棄用**橫幅，表示該技術的使用已被[不建議](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#已棄用)。
 > - `\{{Non-standard_Header}}`——此宏會生成一個**非標準**橫幅，表示該功能不屬於任何正式規格。
@@ -57,7 +57,7 @@ l10n:
 >
 > - `\{{SecureContext_Header}}`——此宏會生成一個**安全上下文**橫幅，表示該技術僅在[安全上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中可用。如果該技術非安全上下文專用，則可移除此宏呼叫。如果是，則你還應在[受限於安全環境的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)頁面中為其新增條目。
 > - `\{{AvailableInWorkers}}`——此宏會生成一個 **Worker 可用**的註記，表示該技術在 [Worker 上下文](/zh-TW/docs/Web/API/Web_Workers_API)中可用。如果該技術僅在 window 上下文中可用，則可移除此宏呼叫。如果該技術也或僅在 Worker 上下文中可用，則你可能需要傳遞參數以指明其可用性（請參閱 [\\{{AvailableInWorkers}} 宏原始碼](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)了解所有可用值），並可能需在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#worker_中可用的_web_api) 頁面中為其新增條目。
-> - `\{{APIRef("GroupDataName")}}`——此宏會生成左側參考側邊欄，顯示與當前頁面相關的快速參考連結。例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。請參閱我們的[API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
+> - `\{{APIRef("GroupDataName")}}`——此宏會生成左側參考側邊欄，顯示與當前頁面相關的快速參考連結。例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。請參閱我們的 [API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
 > - 複製此頁面時，請記得移除 `\{{MDNSidebar}}` 宏。
 >
 > 請勿手動新增狀態標頭宏。請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#如何新增或更新功能狀態)了解如何將這些狀態新增至頁面中。
@@ -116,7 +116,7 @@ _使用此宏時，請移除 markdown 文件中的反引號與反斜線。_
 
 每個範例必須有一個 H3 標題，標明該範例的名稱。該標題應能描述範例所執行的操作。例如，「一個簡單的範例」並未說明任何內容，因此並非理想的標題。標題應保持簡潔。若需進一步說明，請在標題下方以段落形式補充說明。
 
-請參閱我們的[程式碼範例指南](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples)以獲取更多資訊。
+請參閱我們有關如何新增[程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples)的指南以獲取更多資訊。
 
 > [!NOTE]
 > 有時你可能會想連結到其他頁面上提供的範例。
