@@ -1,17 +1,15 @@
 ---
 title: MathML 要素リファレンス
+short-title: 要素
 slug: Web/MathML/Reference/Element
-original_slug: Web/MathML/Element
 l10n:
-  sourceCommit: 34c43aca36f776c824e698dfd07e3ece34cc6f00
+  sourceCommit: c263f06fa14ed56153e345006bb459c9df014b98
 ---
-
-{{MathMLRef}}
 
 これは MathML 要素のアルファベット順リストです。これらはすべて {{domxref("MathMLElement")}} クラスを実装しています。
 
 > [!NOTE]
-> [MathML](/ja/docs/Web/MathML) のメインページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) を参照仕様として使用しています。しかし、一部のブラウザーでまだ実装されている古い機能も文書化しています。 [MathML 4](https://w3c.github.io/mathml/)には、これらの機能やその他の機能の詳細が記載されています。
+> [MathML](/ja/docs/Web/MathML) のメインページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) を参照仕様として使用しています。しかし、一部のブラウザーでまだ実装されている古い機能も文書化しています。 [MathML 4](https://w3c.github.io/mathml/) には、これらの機能やその他の機能の詳細が記載されています。
 
 ## MathML 要素（アルファベット順）
 

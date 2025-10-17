@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6b772b874485e67bb8cf8eff8c1874deb2e66c3
 ---
 
-{{CSSRef}}
-
 CSS **`&` 중첩 선택자** 는 [CSS 중첩](/ko/docs/Web/CSS/CSS_nesting)을 사용할 때 부모와 자식 규칙 사이의 관계를 명시적으로 나타냅니다. 이는 중첩된 자식 규칙 선택자가 부모 요소를 기준으로 갖도록 합니다. `&` 중첩 선택자가 없다면 자식 규칙 선택자는 자식 요소를 선택하게 됩니다. 이 자식 규칙 선택자는 {{cssxref(":is", ":is()")}} 내부에 존재하는 것과 동일한 [특이성](/ko/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) 가중치를 가집니다.
 
 > [!NOTE]

@@ -3,8 +3,6 @@ title: CSS 기본 박스 모델 입문
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
-{{CSSRef}}
-
 문서의 레이아웃을 계산할 때, 브라우저의 렌더링 엔진은 표준 **CSS 기본 박스 모델**에 따라 각각의 요소를 사각형 박스로 표현합니다. CSS는 박스의 크기, 위치, 속성(색, 배경, 테두리 모양 등)을 결정합니다.
 
 하나의 박스는 네 부분(영역)으로 이루어집니다. 각 영역을 콘텐츠 영역, 안쪽 여백(패딩) 영역, 테두리 영역, 그리고 바깥 여백(마진) 영역이라고 부릅니다.
@@ -58,6 +56,6 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
     - [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제 값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

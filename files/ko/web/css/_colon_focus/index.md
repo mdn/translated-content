@@ -3,8 +3,6 @@ title: :focus
 slug: Web/CSS/:focus
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`:focus`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 양식의 입력 칸 등 포커스를 받은 요소를 나타냅니다. 보통 사용자가 요소를 클릭 또는 탭하거나, 키보드 <kbd>Tab</kbd> 키로 선택했을 때 발동합니다.
 
 ```css
@@ -14,7 +12,8 @@ input:focus {
 }
 ```
 
-> **참고:** `:focus`는 포커스를 받은 요소 자체에만 해당합니다. 자손이 포커스를 받았을 때의 요소를 선택해야 하면 {{CSSxRef(":focus-within")}}을 사용하세요.
+> [!NOTE]
+> `:focus`는 포커스를 받은 요소 자체에만 해당합니다. 자손이 포커스를 받았을 때의 요소를 선택해야 하면 {{CSSxRef(":focus-within")}}을 사용하세요.
 
 ## 구문
 

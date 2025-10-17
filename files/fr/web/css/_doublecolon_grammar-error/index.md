@@ -1,21 +1,17 @@
 ---
 title: ::grammar-error
 slug: Web/CSS/::grammar-error
+l10n:
+  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.
 
-Le pseudo-élément CSS **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.
-
-```css
-::grammar-error {
-  color: green;
-}
-```
+Le pseudo-élément `::grammar-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Propriétés autorisées
 
-Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle contenant `::grammar-error` :
+Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle contenant `::grammar-error`&nbsp;:
 
 - {{cssxref("background-color")}},
 - {{cssxref("caret-color")}},
@@ -30,30 +26,34 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 
 ```css
 ::grammar-error {
+  /* ... */
 }
 ```
 
 ## Exemples
 
-### CSS
+### Vérification grammaticale de base des documents
+
+Dans cet exemple, les navigateurs prenant en charge cette fonctionnalité devraient mettre en évidence toute erreur grammaticale signalée avec les styles indiqués.
+
+#### HTML
+
+```html
+<p contenteditable spellcheck="true">Mes amis vienent à la fête ce soir.</p>
+```
+
+#### CSS
 
 ```css
-p::grammar-error {
+::grammar-error {
+  text-decoration: underline red;
   color: red;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p>
-  Alice devina tout de suite qu’il chercher l’éventail et la paire de gants.
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","250","100")}}
+{{EmbedLiveSample('vérification_grammaticale_de_base_des_documents', '100%', 60)}}
 
 ## Spécifications
 
@@ -66,3 +66,4 @@ p::grammar-error {
 ## Voir aussi
 
 - {{cssxref("::spelling-error")}}
+- {{cssxref("text-decoration-line")}}

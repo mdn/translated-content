@@ -25,4 +25,4 @@ Afin que le serveur vérifie les en-têtes de la requête, un client doit envoye
 ## Voir aussi
 
 - [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)
-- [`417`](/fr/docs/Web/HTTP/Status/417)
+- [`417`](/fr/docs/Web/HTTP/Reference/Status/417)

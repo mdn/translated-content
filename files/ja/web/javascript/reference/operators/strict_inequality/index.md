@@ -1,32 +1,32 @@
 ---
-title: 厳密不等価 (!==)
+title: 厳密不等価演算子 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**厳密不等価演算子 (`!==`)** は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。
 
-厳密不等価演算子 (`!==`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。
-
-{{InteractiveExample("JavaScript デモ: Expressions - Strict inequality operator")}}
+{{InteractiveExample("JavaScript デモ: 厳密不等価演算子 (!==)")}}
 
 ```js interactive-example
 console.log(1 !== 1);
-// Expected output: false
+// 予想される結果: false
 
 console.log("hello" !== "hello");
-// Expected output: false
+// 予想される結果: false
 
 console.log("1" !== 1);
-// Expected output: true
+// 予想される結果: true
 
 console.log(0 !== false);
-// Expected output: true
+// 予想される結果: true
 ```
 
 ## 構文
 
-```js
-x !== y;
+```js-nolint
+x !== y
 ```
 
 ## 解説
@@ -52,37 +52,35 @@ x !== y;
 ### オペランドが同じ型である場合の比較
 
 ```js
-console.log("hello" !== "hello"); // false
-console.log("hello" !== "hola"); // true
+"hello" !== "hello"; // false
+"hello" !== "hola"; // true
 
-console.log(3 !== 3); // false
-console.log(3 !== 4); // true
+3 !== 3; // false
+3 !== 4; // true
 
-console.log(true !== true); // false
-console.log(true !== false); // true
+true !== true; // false
+true !== false; // true
 
-console.log(null !== null); // false
+null !== null; // false
 ```
 
 ### オペランドが異なる型である場合の比較
 
 ```js
-console.log("3" !== 3); // true
-
-console.log(true !== 1); // true
-
-console.log(null !== undefined); // true
+"3" !== 3; // true
+true !== 1; // true
+null !== undefined; // true
 ```
 
 ### オブジェクトの比較
 
 ```js
 const object1 = {
-  name: "hello",
+  key: "value",
 };
 
 const object2 = {
-  name: "hello",
+  key: "value",
 };
 
 console.log(object1 !== object2); // true
@@ -99,6 +97,6 @@ console.log(object1 !== object1); // false
 
 ## 関連情報
 
-- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Equality)
-- [不等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [等価演算子 (`==`)](/ja/docs/Web/JavaScript/Reference/Operators/Equality)
+- [不等価演算子 (`!=`)](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [厳密等価演算子 (`===`)](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)

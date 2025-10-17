@@ -242,7 +242,7 @@ margin-left: 3px;
 
 A、B、C のレイヤー化されたスタイルのいずれかが、`:root body p { color: black;}` のような、要素に一致する、より高い詳細度を持つセレクターを保有している場合、それは問題ではありません。これらの宣言は*オリジン*のために考慮から外されます。通常のレイヤー化されたスタイルは通常のレイヤー化されていないスタイルよりも優先順位が低くなっています。しかし、より具体的なセレクター `:root body p { color: black;}` が `unlayeredStyles.css` に得られた場合、_origin と importance_ はどちらも同じ優先順位なので、_詳細度_ はより具体的で黒い宣言が勝ると言う意味になります。
 
-レイヤーの優先順位は、`!important`として宣言されたスタイルでは逆転します。あるレイヤーで宣言された重要なスタイルは、レイヤーの外側で宣言された重要なスタイルよりも見なされます。最初に宣言されたレイヤー (A) の重要なスタイルは、レイヤー B で得られる重要な宣言に優先し、レイヤー C に優先し、レイヤー外のスタイルにある重要な宣言に優先します。
+レイヤーの優先順位は、`!important`として宣言されたスタイルでは逆転します。あるレイヤーで宣言された重要なスタイルは、レイヤーの外側で宣言されたスタイルよりも重要と見なされます。最初に宣言されたレイヤー (A) の重要なスタイルは、レイヤー B で得られる重要な宣言に優先し、レイヤー C に優先し、レイヤー外のスタイルにある重要な宣言に優先します。
 
 ### インラインスタイル
 
@@ -313,16 +313,16 @@ p {
   <tr><td rowspan="4">3</td><td>作成者 - 先に宣言されたレイヤー</td><td rowspan="4">通常</td></tr>
   <tr><td>作成者 - 後に宣言されたレイヤー</td></tr>
   <tr><td>作成者 - レイヤー化されていないスタイル</td></tr>
-  <tr><td>`style` によるインラインスタイル</td></tr>
+  <tr><td><code>style</code> によるインラインスタイル</td></tr>
   <tr><td>4</td><td>アニメーション</td><td></td></tr>
-  <tr><td rowspan="4">5</td><td>作成者 - レイヤー化されていないスタイル</td><td rowspan="4">`!important`</td></tr>
+  <tr><td rowspan="4">5</td><td>作成者 - レイヤー化されていないスタイル</td><td rowspan="4"><code>!important</code></td></tr>
   <tr><td>作成者 - 後に宣言されたレイヤー</td></tr>
   <tr><td>作成者 - 先に宣言されたレイヤー</td></tr>
-  <tr><td>`style` によるインラインスタイル</td></tr>
-  <tr><td rowspan="3">6</td><td>ユーザー - レイヤー化されていないスタイル</td><td rowspan="3"><code>!important</td></tr>
+  <tr><td><code>style</code> によるインラインスタイル</td></tr>
+  <tr><td rowspan="3">6</td><td>ユーザー - レイヤー化されていないスタイル</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>ユーザー - 後に宣言されたレイヤー</td></tr>
   <tr><td>ユーザー - 先に宣言されたスタイル</td></tr>
-  <tr><td rowspan="3">7</td><td>user-agent - レイヤー化されていないスタイル</td><td rowspan="3">`!important`</td></tr>
+  <tr><td rowspan="3">7</td><td>user-agent - レイヤー化されていないスタイル</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>ユーザーエージェント - 後に宣言されたレイヤー</td></tr>
   <tr><td>ユーザーエージェント - 先に宣言されたスタイル</td></tr>
   <tr><td>8</td><td>トランジション</td><td></td></tr>

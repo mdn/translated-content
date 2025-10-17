@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 20c7e7153b08f4f34d7112f87baac70feea21153
 ---
 
-{{GlossarySidebar}}
-
 **国际化**（通常缩写为“i18n”）是设计系统，以让产品或服务更容易适应各种地区、语言或文化的实践。
 
 与之互补的是{{glossary("localization", "本地化")}}，让系统适应一个特定的受众群体的行为。

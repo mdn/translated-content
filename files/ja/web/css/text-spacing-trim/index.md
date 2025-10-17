@@ -170,5 +170,5 @@ p {
 
 ## 関連情報
 
-- [`ic`](/ja/docs/Web/CSS/CSS_Values_and_Units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/CSS_Values_and_Units#root_font-relative_lengths) の単位
+- [`ic`](/ja/docs/Web/CSS/CSS_values_and_units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/CSS_values_and_units#root_font-relative_lengths) の単位
 - [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール

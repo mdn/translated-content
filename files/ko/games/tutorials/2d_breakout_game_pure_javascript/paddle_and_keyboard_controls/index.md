@@ -116,7 +116,8 @@ drawPaddle();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","395")}}
 
-> **참고:** **Exercise**: paddle의 움직임을 빠르거나 느리게, 혹은 사이즈를 변경해보세요.
+> [!NOTE]
+> **Exercise**: paddle의 움직임을 빠르거나 느리게, 혹은 사이즈를 변경해보세요.
 
 ## 다음 단계
 

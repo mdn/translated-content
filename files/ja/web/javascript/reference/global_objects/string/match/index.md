@@ -1,15 +1,14 @@
 ---
 title: String.prototype.match()
+short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`match()`** は {{jsxref("String")}} 値のメソッドで、この文字列の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に対する照合結果を受け取ります。
 
-{{InteractiveExample("JavaScript デモ: String.match()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.prototype.match()", "shorter")}}
 
 ```js interactive-example
 const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
@@ -17,7 +16,7 @@ const regex = /[A-Z]/g;
 const found = paragraph.match(regex);
 
 console.log(found);
-// Expected output: Array ["T", "I"]
+// 予想される結果: Array ["T", "I"]
 ```
 
 ## 構文
@@ -44,7 +43,7 @@ match(regexp)
 
 ## 解説
 
-`String.prototype.match` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `Symbol.match` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) から来ています。
+`String.prototype.match` の実装は、引数に対応する `Symbol.match` メソッドを、最初の引数として文字列を指定して呼び出すだけというもので、それ以外にも特に何も行いません。実際の実装は [`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) から来ています。
 
 - ある文字列が正規表現 {{jsxref("RegExp")}} に一致するかどうかを知る必要がある場合は、 {{jsxref("RegExp.prototype.test()")}} を使用してください。
 - 一番最初に一致したものだけが欲しい場合は、代わりに {{jsxref("RegExp.prototype.exec()")}} を使ったほうが良いかもしれません。
@@ -84,7 +83,7 @@ console.log(found);
 
 ```js
 const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const regexp = /[A-E]/gi;
+const regexp = /[a-e]/gi;
 const matches = str.match(regexp);
 
 console.log(matches);
@@ -134,17 +133,15 @@ str.match({
 
 ```js
 const str1 =
-  "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+  "All numbers except NaN satisfy <= Infinity and >= -Infinity in JavaScript.";
 const str2 =
   "My grandfather is 65 years old and My grandmother is 63 years old.";
 const str3 = "The contract was declared null and void.";
 str1.match("number"); // "number" は文字列です。 ["number"] を返します。
 str1.match(NaN); // NaN の型は数値です。 ["NaN"] を返します。
 str1.match(Infinity); // Infinity の方は数値です。 ["Infinity"] を返します。
-str1.match(+Infinity); // ["Infinity"] を返します
 str1.match(-Infinity); // ["-Infinity"] を返します
 str2.match(65); // ["65"] を返します
-str2.match(+65); // 正の符号が付いた数値です。 ["65"] を返します
 str3.match(null); // ["null"] を返します。
 ```
 
@@ -171,6 +168,7 @@ console.log("123".match("1\\.3")); // null
 ## 関連情報
 
 - [`String.prototype.match` のポリフィル (`core-js`) （`Symbol.match` 対応のような現代の動作の実装付き）](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - {{jsxref("String.prototype.matchAll()")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
