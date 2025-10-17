@@ -8,11 +8,11 @@ l10n:
 
 {{ APIRef("Web Animations") }}
 
-[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`Animation.id`** 属性用于获取或设置一个字符串，用来标识该动画。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`Animation.id`** 属性用于获取或设置一个用于标识动画的字符串。
 
 ## 值
 
-一个可用于标识该动画的字符串；如果动画没有设置 `id`，则为 `null`。
+一个可用于标识动画的字符串；如果动画没有 `id`，则为 `null`。
 
 ## 示例
 
