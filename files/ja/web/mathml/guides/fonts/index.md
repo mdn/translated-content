@@ -1,12 +1,10 @@
 ---
 title: MathML のためのフォント
+short-title: フォント
 slug: Web/MathML/Guides/Fonts
-original_slug: Web/MathML/Fonts
 l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
-
-{{MathMLRef}}
 
 適切な Unicode のカバー範囲と Open Font Format 機能を持つフォントは、優れた数式レンダリングに必須です。
 このページでは、ユーザーがそのような数式フォントをインストールして、ブラウザーで MathML を正しく表示する方法を説明します。
@@ -114,8 +112,7 @@ fc-cache -sf
 
 [MathML-fonts アドオン](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/)を使用する必要があります。
 
-> [!NOTE]
-> Noto Sans Math は数学記号の Unicode を十分にカバーしており、 [Google は数学レイアウト機能に対応する機能を追加する予定です](https://github.com/notofonts/math/issues/14#issuecomment-1161414446)。
+Noto Sans Math は数学記号と[数学レイアウト](https://github.com/notofonts/math/blob/main/documentation/building-math-fonts/index.md)について、 Unicode を十分にカバーしています。
 
 ### その他のシステム
 
@@ -127,7 +124,7 @@ fc-cache -sf
 
 ### アラビア数字のアルファベット記号
 
-現在、アラビア数字のアルファベット記号に適切な字体のフォントは、とても少数しか存在しません。これらの文字が必要になる可能性がある場合は、 _XITS_ フォントまたは [Amiri](https://www.amirifont.org/) フォントをインストールすることをお勧めします。
+現在、アラビア数字のアルファベット記号に適切な字体のフォントは、とても少数しか存在しません。これらの文字が必要になる可能性がある場合は、 _XITS_ フォントまたは [Amiri](https://aliftype.com/amiri/) フォントをインストールすることをお勧めします。
 
 ### 管理者権限なしでのインストール
 

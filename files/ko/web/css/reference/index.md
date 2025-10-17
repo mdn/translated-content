@@ -3,9 +3,7 @@ title: CSS 참고서
 slug: Web/CSS/Reference
 ---
 
-{{CSSRef}}
-
-**CSS 참고서**를 이용해 [알파벳 순서로 정리한](#키워드_색인) 모든 표준 [CSS](/ko/docs/Web/CSS) 속성, [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes), [의사 요소](/ko/docs/Web/CSS/Pseudo-elements), [CSS 자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)과 [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)을 찾아보세요. 또한 [유형별로 정리한 CSS 선택자](#선택자)와 [주요 CSS 개념](#개념)도 찾아볼 수 있습니다. 추가로 간단한 [DOM-CSS / CSSOM](#dom-css_cssom) 참조도 들어 있습니다.
+**CSS 참고서**를 이용해 [알파벳 순서로 정리한](#키워드_색인) 모든 표준 [CSS](/ko/docs/Web/CSS) 속성, [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes), [의사 요소](/ko/docs/Web/CSS/Pseudo-elements), [CSS 자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)과 [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)을 찾아보세요. 또한 [유형별로 정리한 CSS 선택자](#선택자)와 [주요 CSS 개념](#개념)도 찾아볼 수 있습니다. 추가로 간단한 [DOM-CSS / CSSOM](#dom-css_cssom) 참조도 들어 있습니다.
 
 ## 기본 규칙 구문
 
@@ -97,7 +95,8 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 - [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML이 포함하지 않은 객체를 나타냅니다.
 
-> **참고:** **같이 보기:** [Selectors Level 4 명세의 선택자 목록.](https://www.w3.org/TR/selectors/#overview)
+> [!NOTE]
+> **같이 보기:** [Selectors Level 4 명세의 선택자 목록.](https://www.w3.org/TR/selectors/#overview)
 
 ## 개념
 
@@ -111,7 +110,7 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 - [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
 - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
-- [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ### 값
 

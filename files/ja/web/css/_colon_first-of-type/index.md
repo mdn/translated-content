@@ -2,7 +2,7 @@
 title: :first-of-type
 slug: Web/CSS/:first-of-type
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最初の要素を表します。
@@ -25,15 +25,15 @@ dd:first-of-type {
 
 ```html interactive-example
 <dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
+  <dt>野菜:</dt>
+  <dd>1. トマト</dd>
+  <dd>2. キュウリ</dd>
+  <dd>3. キノコ</dd>
+  <dt>果物:</dt>
+  <dd>4. リンゴ</dd>
+  <dd>5. マンゴー</dd>
+  <dd>6. ナシ</dd>
+  <dd>7. オレンジ</dd>
 </dl>
 ```
 

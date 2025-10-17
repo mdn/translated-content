@@ -6,23 +6,23 @@ original_slug: Web/HTTP/Methods
 
 HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées _verbes HTTP_. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (_safe_), idempotente ou être mise en cache (_cacheable_)).
 
-- [`GET`](/fr/docs/Web/HTTP/Methods/GET)
+- [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET)
   - : La méthode `GET` demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
-- [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)
+- [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD)
   - : La méthode `HEAD` demande une réponse identique à une requête GET pour laquelle on aura omis le corps de la réponse (on a uniquement l'en-tête).
-- [`POST`](/fr/docs/Web/HTTP/Methods/POST)
+- [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST)
   - : La méthode `POST` est utilisée pour envoyer une entité vers la ressource indiquée. Cela entraîne généralement un changement d'état ou des effets de bord sur le serveur.
-- [`PUT`](/fr/docs/Web/HTTP/Methods/PUT)
+- [`PUT`](/fr/docs/Web/HTTP/Reference/Methods/PUT)
   - : La méthode `PUT` remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.
-- [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE)
+- [`DELETE`](/fr/docs/Web/HTTP/Reference/Methods/DELETE)
   - : La méthode `DELETE` supprime la ressource indiquée.
-- [`CONNECT`](/fr/docs/Web/HTTP/Methods/CONNECT)
+- [`CONNECT`](/fr/docs/Web/HTTP/Reference/Methods/CONNECT)
   - : La méthode `CONNECT` établit un tunnel vers le serveur identifié par la ressource cible.
-- [`OPTIONS`](/fr/docs/Web/HTTP/Methods/OPTIONS)
+- [`OPTIONS`](/fr/docs/Web/HTTP/Reference/Methods/OPTIONS)
   - : La méthode `OPTIONS` est utilisée pour décrire les options de communications avec la ressource visée.
-- [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE)
+- [`TRACE`](/fr/docs/Web/HTTP/Reference/Methods/TRACE)
   - : La méthode `TRACE` réalise un message de test aller/retour en suivant le chemin de la ressource visée.
-- [`PATCH`](/fr/docs/Web/HTTP/Methods/PATCH)
+- [`PATCH`](/fr/docs/Web/HTTP/Reference/Methods/PATCH)
   - : La méthode `PATCH` est utilisée pour appliquer des modifications partielles à une ressource.
 
 ## Spécifications
@@ -35,4 +35,4 @@ HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action qu
 
 ## Voir aussi
 
-- [Les en-têtes (_headers_) HTTP](/fr/docs/Web/HTTP/Headers)
+- [Les en-têtes (_headers_) HTTP](/fr/docs/Web/HTTP/Reference/Headers)

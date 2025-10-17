@@ -2,7 +2,7 @@
 title: font-feature-settings
 slug: Web/CSS/@font-face/font-feature-settings
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`font-feature-settings`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールで定義されたフォントに使用する初期設定を定義します。さらに、この記述子を使用して、 `@font-face` で定義されたフォントの合字、スモールキャップ、スワッシュなどの字体フォント機能を制御することができます。この記述子の値は、グローバルキーワード値を除いて {{cssxref("font-feature-settings")}} プロパティと同じです。
@@ -44,27 +44,27 @@ font-feature-settings: "swsh" 2;
 
 ## 例
 
-### @font-face アットルールを使用してすわっしゅ字体を有効化
+### @font-face アットルールを使用してスワッシュ字体を有効化
 
 この例では、タグ名 `swsh` と論理値 `1` が、 `@font-face` アットルールの `font-feature-settings` 記述子の値として使用されています。
 
 #### HTML
 
-```html live-sample___enabling_swash_glyphs_using_the_font-face_at-rule
+```html
 <p class="swash-off">Swash is off here</p>
 <p class="swash-on">Swash is on here</p>
 ```
 
 #### CSS
 
-```css live-sample___enabling_swash_glyphs_using_the_font-face_at-rule
+```css
 @font-face {
   font-family: MonteCarlo;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
 }
 @font-face {
   font-family: MonteCarlo2;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
   font-feature-settings: "swsh" 1;
 }
 p {
@@ -72,16 +72,16 @@ p {
   margin: 0.7rem 3rem;
 }
 .swash-off {
-  font-family: MonteCarlo;
+  font-family: MonteCarlo, cursive;
 }
 .swash-on {
-  font-family: MonteCarlo2;
+  font-family: MonteCarlo2, cursive;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Enabling swash glyphs using the @font-face rule", 0, 230)}}
+{{EmbedLiveSample("@font-face アットルールを使用してスワッシュ字体を有効化", 0, 230)}}
 
 1 行目は [MonteCarlo](https://github.com/googlefonts/monte-carlo) フォントの既定の装飾的なデザインを示し、 2 行目は既定の字体を[スワッシュ](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-swsh)字体に置き換えています。
 

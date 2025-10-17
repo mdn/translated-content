@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
 original_slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
 
 <table class="properties">
   <tbody>
@@ -82,4 +82,4 @@ Content-Security-Policy: sandbox allow-scripts;
 ## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements
+- [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements

@@ -1,12 +1,9 @@
 ---
 title: "<img>: 画像埋め込み要素"
 slug: Web/HTML/Reference/Elements/img
-original_slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: e3977ac28442db55a4e9b74d025ed776fb7c73af
+  sourceCommit: 493802c1d8ada608700ba664a45bbca5127b913c
 ---
-
-{{HTMLSidebar}}
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
 
@@ -16,7 +13,7 @@ l10n:
 <img
   class="fit-picture"
   src="/shared-assets/images/examples/grapefruit-slice.jpg"
-  alt="Grapefruit slice atop a pile of other slices" />
+  alt="グレープフルーツのスライスが他のスライス山盛りの上に載っている" />
 ```
 
 ```css interactive-example
@@ -27,7 +24,7 @@ l10n:
 
 上記の例では、 `<img>` 要素の使い方を示しています。
 
-- `src` 属性は**必須**で、埋め込みたい画像へのパスを入れます。
+- `src` 属性は、埋め込みたい画像へのパスを保持します。[`srcset`](/ja/docs/Web/API/HTMLImageElement/srcset) 属性が利用できる場合、`src` 属性は必須ではありません。ただし、`src` 属性または `srcset` 属性の少なくとも一方は指定しなければなりません。
 - `alt` 属性は、この画像のテキストによる代替情報を保持します。これは必須であり、アクセシビリティに**非常に役立つ**ものです。スクリーンリーダーは、この属性値をユーザーに読み上げるので、画像の意味が分かります。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
 
 他にも、様々な目的で指定できる属性がたくさんあります。
@@ -47,14 +44,14 @@ HTML 標準では、対応する画像形式を指定していないので、{{g
 ウェブで最もよく使われる画像ファイル形式は、以下の通りです。
 
 - [APNG (Animated Portable Network Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — 可逆性のあるアニメーションシーケンスに適しています（GIF はパフォーマンスが劣る）
-- [AVIF (AV1 Image File Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) — 高い性能により、画像とアニメーションの両方に適しています。
+- [AVIF (AV1 Image File Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) — 高い性能により、画像とアニメーションの両方に適しています。
 - [GIF (Graphics Interchange Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — シンプルな画像やアニメーションに適しています。
 - [JPEG (Joint Photographic Expert Group image)](/ja/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — 静止画の非可逆圧縮に適しています（現在最も普及しています）。
 - [PNG (Portable Network Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — 静止画の可逆圧縮に適しています（JPEG より若干画質が良い）。
 - [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
-- [WebP (Web Picture format)](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
+- [WebP (Web Picture format)](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) — 画像とアニメーションの両方に優れた選択です。
 
-[WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。
+[WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) や [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。
 
 SVG は、異なるサイズでも正確に描画する必要がある画像に推奨される形式であることに変わりはありません。
 
@@ -62,7 +59,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 画像の読み込みまたは描画の間にエラーが発生した場合で、かつ `onerror` イベントハンドラーが {{domxref("HTMLElement/error_event", "error")}} イベントを扱うよう設定されていた場合は、イベントハンドラーが呼び出されます。これは例えば次のように、様々な状況で発生します。
 
-- `src` 属性が空 (`""`) または `null` である。
+- `src` または `srcset` 属性が空 (`""`) または `null` である。
 - 指定された `src` の {{glossary("URL")}} が現在ユーザーがいるページの URL と同じである。
 - 指定された画像が何らかの理由で読み込みが妨害され、中止された。
 - 指定された画像のメタデータが、寸法を受け取ることができないなどの理由で読み込みが中止され、かつ `<img>` 要素の属性に寸法が指定されていなかった場合。
@@ -190,7 +187,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : リソースを読み込む際に、どのリファラーを使用するかを示す文字列です。
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade`: ある{{glossary("origin", "オリジン")}}へ{{glossary("TLS")}} ({{glossary("HTTPS")}}) を使用せずに移動した場合に、 {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
-    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{glossary("host", "ホスト名")}}、{{glossary("port", "ポート番号")}}のみとなります。
+    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}のみとなります。
     - `origin-when-cross-origin`: 異なるオリジンへの移動では、リファラーをスキーム、ホスト、ポートのみに制限します。同一のオリジンへの移動では、リファラーのフルパスを含めます。
     - `same-origin`: リファラーは{{glossary("Same-origin policy", "同じオリジン")}}に対しては送信されますが、オリジン間リクエストではリファラー情報が入りません。
     - `strict-origin`: プロトコルのセキュリティレベルが同等 (HTTPS→HTTPS) である場合は、リファラーとしてこの文書のオリジンが送信されますが、安全性の低い宛先 (HTTPS→HTTP) には送信されません。
@@ -198,13 +195,36 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     - `unsafe-url`: リファラーにはオリジンとパスを含めることを表します（ただし、フラグメント、パスワード、ユーザー名は含めません）。**この値は安全ではありません**。オリジンやパスの情報が TLS で保護されたリソースから安全でないオリジンへ漏えいするからです。
 
 - `sizes`
-  - : ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。それぞれのソースサイズの構成は以下のとおりです。
-    1. [メディア条件](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)。リスト内の最後のアイテムでは省略しなければなりません。
+  - : ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。
+
+    **ソースサイズ**は次のものから構成されます。
+    1. [メディア条件](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)で、リストの最後のアイテムでは省略されます。
     2. ソースサイズ値。
 
-    メディアの状態は*ビューポート*のプロパティで記述するものであり、*画像*のプロパティではありません。例えば、 `(max-height: 500px) 1000px` は、*ビューポート*の高さが 500px 以下であれば 1000px 幅のソースを使用することを提案します。
+    メディア条件は**ビューポート**の特性を記述するものであり、**画像**の特性ではありません。例えば、`(height <= 500px) 1000px` は、ビューポートの高さが 500px 以下の場合に幅 1000px の画像ソースを使用することを提案します。ソースサイズ記述子はレイアウト時に使用する画像の幅を指定しますため、メディア条件は通常（必ずしもそうとは限らないが） [width](/ja/docs/Web/CSS/@media/width) に基づいています。
 
     ソースサイズ値は、画像の表示サイズを指定するものです。{{glossary("User agent", "ユーザーエージェント")}}は `srcset` 属性で与えられたソースからひとつを選択するために、現在のソースサイズを使用します。そのとき、ソースは幅記述子 ('`w`') を使用して説明します。選択したソースサイズは画像の{{glossary("intrinsic size", "固有の寸法")}}（{{glossary("CSS")}} スタイルが適用されていない場合の、画像の表示サイズ）に影響します。`srcset` 属性がない場合、あるいは幅記述子 (`w`) を持つ値がない場合は、`sizes` 属性の効果はありません。
+
+    ソースサイズの値は、非負の任意の[長さ](/ja/docs/Web/CSS/length)でなければなりません。また、[数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions)以外の CSS 関数を使用してはなりません。単位は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)と同様に解釈されます。つまり、すべての相対長の単位は `<img>` 要素ではなく文書ルートを基準とします。例えば `em` 値は画像のフォントサイズではなく、ルートフォントサイズを基準とします。[パーセント値](/ja/docs/Web/CSS/percentage) は使用できません。
+
+    `auto` キーワードは、サイズの一覧全体または一覧の最初の項目を置き換えることができます。これは `loading="lazy"` と組み合わせてのみ有効であり、画像の[具体的なサイズ](/ja/docs/Web/CSS/image)に解決されます。画像の内在サイズは未確定であるため、ブラウザが既定の幅 300px を想定しないよう、`width` および `height` 属性（または CSS の同等プロパティ）も同時に指定してください。
+    `auto` に対応していないブラウザーとの後方互換性を高めるため、`sizes` 属性内で `auto` の後に代替サイズを記載することができます。
+
+    ```html
+    <img
+      loading="lazy"
+      width="200"
+      height="200"
+      sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+      srcset="
+        swing-200.jpg   200w,
+        swing-400.jpg   400w,
+        swing-800.jpg   800w,
+        swing-1600.jpg 1600w
+      "
+      src="swing-400.jpg"
+      alt="Kettlebell Swing" />
+    ```
 
 - `src`
   - : 画像の {{glossary("URL")}} です。 `<img>` 要素に必須です。 `srcset` に対応する{{glossary("Browser", "ブラウザー")}}では `src` を、画素密度記述子 `1x` の候補画像であるように扱います。ただし、この画素密度記述子が `srcset` で定義済みである、または `srcset` に '`w`' 記述子が含まれている場合を除きます。
@@ -226,7 +246,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - `width`
   - : 画像固有の幅をピクセル値で指定します。単位のない整数でなければなりません。
 - `usemap`
-  - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Reference/Elements/map)の部分的な {{glossary("URL")}} ('`#`' で始まる) です。
+  - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Reference/Elements/map)の部分的な（'`#` で始まる） {{glossary("URL")}} です。
 
     > [!NOTE]
     > この属性は、`<img>` 要素が {{htmlelement("a")}} または {{HTMLElement("button")}} 要素の子孫である場合に使用することはできません。
@@ -254,16 +274,16 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) です。
 
     > [!NOTE]
-    > この属性は、最新の {{glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段を使用してください。
+    > この属性は、[HTML 仕様書](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc)では古いものとみなされています。将来が不確実なので、代わりに {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段、たとえば [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) や [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を使用してください。
 
 - `name` {{deprecated_inline}}
   - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用してください。
 - `vspace` {{deprecated_inline}}
   - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 
-## CSS でのスタイル付け
+## CSS でのスタイル設定
 
-`<img>` は[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)です。 {{cssxref("display")}} の値が既定で `inline` ですが、既定の寸法は埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
+`<img>` は{{ glossary("replaced elements", "置換要素")}}です。 {{cssxref("display")}} の値が既定で `inline` ですが、既定の寸法は埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
 
 `<img>` にはベースラインがありません。つまり {{cssxref("vertical-align", "vertical-align: baseline")}} を伴うインライン整形コンテキスト内で使用したときに、画像の下端はコンテナーのベースラインに揃えられます。
 
@@ -289,7 +309,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 <img alt="海岸に立っているイワトビペンギン" src="penguin.jpg" />
 ```
 
-簡単なアクセシビリティのテストとして、`alt` 属性の内容を、その前後のテキストコンテンツと併せて読み、画像と同じ意味が伝わるかどうかを確認してください。例えば、画像の前に「旅行中、小さくてかわいい動物を見つけました。」という文がある場合、「悪い例」ではスクリーンリーダーによって「旅行中、小さくてかわいい動物を見つけました。画像」と読み上げられますが、これは意味をなしません。一方、「よい例」ではスクリーンリーダーによって「旅行中、小さくてかわいい動物を見つけました。海岸に立っているイワトビペンギン」と読み上げられ、意味をなします。<!-- 原文の "preceding textual content" を、日本語と英語の文構造の違いを意識し、「その前後のテキストコンテンツ」と意訳しています。 -->
+重要なアクセシビリティのテストとして、`alt` 属性の内容を、その前後のテキストコンテンツと併せて読み、画像と同じ意味が伝わるかどうかを確認してください。例えば、画像の前に「旅行中、小さくてかわいい動物を見つけました。」という文がある場合、「悪い例」ではスクリーンリーダーによって「旅行中、小さくてかわいい動物を見つけました。画像」と読み上げられますが、これは意味をなしません。一方、「よい例」ではスクリーンリーダーによって「旅行中、小さくてかわいい動物を見つけました。海岸に立っているイワトビペンギン」と読み上げられ、意味をなします。<!-- 原文の "preceding textual content" を、日本語と英語の文構造の違いを意識し、「その前後のテキストコンテンツ」と意訳しています。 -->
 
 例えば、アクションを起動するために使用される画像（{{htmlelement("a")}} や {{htmlelement("button")}} 要素内にネストされた画像）については、`alt` 属性値内に起動されるアクションを記述することを考えてください。例えば、`alt="右向き矢印"` の代わりに `alt="次のページ"` と記述できます。また、`title` 属性内に任意でさらに詳しい説明を追加することも検討できます。これは、ユーザーが要求した場合にスクリーンリーダーによって読み上げられる場合があります。
 
@@ -311,7 +331,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ### title 属性
 
-[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
+[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、スクリーンリーダーが説明を 2 回読み上げ、操作を混乱させる可能性があります。
 
 `title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Reference/Elements/figure) および [`figcaption`](/ja/docs/Web/HTML/Reference/Elements/figcaption) 要素と組み合わせて使用してください。
 
@@ -360,14 +380,14 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ### srcset および sizes 属性の使用
 
-`src` 属性は、 `srcset` に対応している{{glossary("User agent", "ユーザーエージェント")}}で '`w`' 記述子を使用している場合は無視されます。 `(max-width: 600px)` のメディア条件に一致すると、 200px の幅の画像 (200px にもっと近いもの) が読み込まれ、そうでなければ他の画像が読み込まれます。
+`src` 属性は、 `srcset` に対応している{{glossary("User agent", "ユーザーエージェント")}}で '`w`' 記述子を使用している場合は無視されます。 `(width <= 600px)` のメディア条件に一致すると、 200px の幅の画像（200px にもっと近いもの）が読み込まれ、そうでなければ他の画像が読み込まれます。
 
 ```html
 <img
   src="clock-demo-200px.png"
-  alt="時計"
+  alt="いま 12:45 です。"
   srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
-  sizes="(max-width: 600px) 200px, 50vw" />
+  sizes="(width <= 600px) 200px, 50vw" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
@@ -385,18 +405,28 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、
-        <a href="/ja/docs/Web/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、
-        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。要素が <code>usemap</code> 属性を持つ場合は、対話型コンテンツのカテゴリーの一角にもなります。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
+          >記述コンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#埋め込みコンテンツ"
+          >埋め込みコンテンツ</a
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >。要素が <code>usemap</code> 属性を持つ場合は、対話型コンテンツのカテゴリーの一角にもなります。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>なし。これは{{glossary("void element", "空要素")}}です。</td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>

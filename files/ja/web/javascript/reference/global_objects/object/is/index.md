@@ -1,11 +1,10 @@
 ---
 title: Object.is()
+short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
 
@@ -13,17 +12,17 @@ l10n:
 
 ```js interactive-example
 console.log(Object.is("1", 1));
-// Expected output: false
+// 予想される結果: false
 
 console.log(Object.is(NaN, NaN));
-// Expected output: true
+// 予想される結果: true
 
 console.log(Object.is(-0, 0));
-// Expected output: false
+// 予想される結果: false
 
 const obj = {};
 console.log(Object.is(obj, {}));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -105,4 +104,5 @@ Object.is(NaN, Number.NaN); // true
 ## 関連情報
 
 - [`Object.is` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims による `Object.is` のポリフィル](https://www.npmjs.com/package/object.is)
 - [等価性の比較と同一性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

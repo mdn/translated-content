@@ -127,7 +127,8 @@ collisionDetection();
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
 
-> **참고:** **연습하기: 벽돌이 부딪힐 때마다 색깔을 바꿔보세요.**
+> [!NOTE]
+> **연습하기: 벽돌이 부딪힐 때마다 색깔을 바꿔보세요.**
 
 ## 다음 단계
 

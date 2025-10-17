@@ -2,14 +2,12 @@
 title: ::after
 slug: Web/CSS/::after
 l10n:
-  sourceCommit: b7821748a66d5c581c17ddf62a74edf83638623e
+  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-{{CSSRef}}
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::after`** crée un pseudo-élément qui sera le dernier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
 
-En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu esthétique à un élément, en utilisant la propriété CSS [`content`](/fr/docs/Web/CSS/content). Par défaut, ce contenu est de type [en ligne (<i lang="en">inline</i> en anglais)](/fr/docs/Glossary/Inline-level_content).
-
-{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: ::after", "tabbed-standard")}}
 
 ```css interactive-example
 a::after {
@@ -30,22 +28,23 @@ a::after {
 
 ```html interactive-example
 <p>
-  The sailfish is named for its sail-like dorsal fin and is widely considered
-  the fastest fish in the ocean.
-  <a href="https://en.wikipedia.org/wiki/Sailfish"
-    >You can read more about it here</a
+  Le voilier tire son nom de sa nageoire dorsale en forme de voile et est
+  largement considéré comme le poisson le plus rapide de l'océan.
+  <a href="https://fr.wikipedia.org/wiki/Istiophorus"
+    >Vous pouvez en lire plus à ce sujet ici</a
   >.
 </p>
 
 <p>
-  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
-  Indo-Pacific Ocean and more recently in the western Atlantic.
-  <a href="" class="dead-link">You can read more about it here</a>.
+  Le poisson-lion rouge est un poisson scorpion prédateur qui vit sur les récifs
+  coralliens de l'océan Indo-Pacifique et plus récemment dans l'Atlantique
+  occidental.
+  <a href="" class="dead-link">Vous pouvez en lire plus à ce sujet ici</a>.
 </p>
 ```
 
 > [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Replaced_element)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<br>`](/fr/docs/Web/HTML/Element/br).
+> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
 
 ## Syntaxe
 
@@ -56,10 +55,24 @@ a::after {
 }
 ```
 
-Si la propriété [`content`](/fr/docs/Web/CSS/content) n'est pas indiquée, contient une valeur invalide, vaut `normal`, ou vaut `none`, le pseudo-élément `::after` ne sera pas rendu à l'écran. Il se comportera comme si `display: none` avait été appliqué.
+## Description
+
+Le pseudo-élément `::after` est un bloc en ligne (<i lang="en">inline box</i> en anglais) générée en tant qu'enfant immédiat de l'élément auquel il est associé, ou l'«&nbsp;élément d'origine&nbsp;». Il est souvent utilisé pour ajouter du contenu esthétique à un élément via la propriété {{CSSxRef("content")}}, comme des icônes, des guillemets ou d'autres décorations.
+
+Les pseudo-éléments `::after` ne peuvent pas être appliqués aux _{{ glossary("replaced elements", "éléments remplacés")}}_ tels que {{htmlelement("img")}}, dont le contenu est déterminé par des ressources externes et n'est pas affecté par les styles du document actuel.
+
+Un pseudo-élément `::after` avec une valeur {{cssxref("display")}} de `list-item` se comporte comme un élément de liste et peut donc générer un pseudo-élément {{cssxref("::marker")}}, tout comme un élément {{htmlelement("li")}} le fait.
+
+Si la propriété {{CSSxRef("content")}} n'est pas indiquée, contient une valeur invalide, vaut `normal`, ou vaut `none`, le pseudo-élément `::after` ne sera pas rendu à l'écran. Il se comportera comme si `display: none` avait été appliqué.
 
 > [!NOTE]
 > CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
+
+Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{cssxref("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
+
+## Accessibilité
+
+Utiliser un pseudo-élément `::after` afin d'ajouter du contenu est déconseillé, car ce dernier n'est pas accessible de façon fiable pour les lecteurs d'écrans.
 
 ## Exemples
 
@@ -82,22 +95,24 @@ Nous allons ici créer deux classes&nbsp;: une pour les paragraphes ennuyeux et 
 ```css
 .texte-interessant::after {
   content: "<- cela est intéressant";
-  color: green;
+  color: darkgreen;
+  font-weight: bolder;
 }
 
 .texte-ennuyeux::after {
   content: "<- un peu ennuyeux";
-  color: red;
+  color: darkviolet;
+  font-weight: bolder;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', 500, 150)}}
+{{EmbedLiveSample('utilisation_simple', 500, 150)}}
 
 ### Exemple décoratif
 
-On peut mettre en forme du texte ou des images avec la propriété [`content`](/fr/docs/Web/CSS/content) à peu près de quelque manière que nous le voulions&nbsp;:
+On peut mettre en forme du texte ou des images avec la propriété {{CSSxRef("content")}} à peu près de quelque manière que nous le voulions&nbsp;:
 
 #### HTML
 
@@ -122,7 +137,7 @@ On peut mettre en forme du texte ou des images avec la propriété [`content`](/
 
 #### Résultat
 
-{{EmbedLiveSample('', 450, 20)}}
+{{EmbedLiveSample('exemple_décoratif', 450, 20)}}
 
 ### Bulles d'information
 
@@ -136,9 +151,13 @@ On peut également aider les personnes qui naviguent au clavier avec cette techn
 <p>
   Voici l'exemple en action du code ci-dessus.<br />
   Nous avons un peu de
-  <span data-descr="collection de mots et de ponctuation">texte</span>
+  <span tabindex="0" data-description="collection de mots et de ponctuation"
+    >texte</span
+  >
   ici avec quelques
-  <span data-descr="petites fenêtres surgissantes qui se cachent aussi"
+  <span
+    tabindex="0"
+    data-description="petites fenêtres surgissantes qui se cachent aussi"
     >bulles d'information</span
   >
   .
@@ -148,16 +167,16 @@ On peut également aider les personnes qui naviguent au clavier avec cette techn
 #### CSS
 
 ```css
-span[data-descr] {
+span[data-description] {
   position: relative;
   text-decoration: underline;
-  color: #00f;
+  color: blue;
   cursor: help;
 }
 
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
-  content: attr(data-descr);
+span[data-description]:hover::after,
+span[data-description]:focus::after {
+  content: attr(data-description);
   position: absolute;
   left: 0;
   top: 24px;
@@ -166,7 +185,7 @@ span[data-descr]:focus::after {
   border-radius: 10px;
   background-color: #ffffcc;
   padding: 12px;
-  color: #000000;
+  color: black;
   font-size: 14px;
   z-index: 1;
 }
@@ -174,11 +193,57 @@ span[data-descr]:focus::after {
 
 #### Résultat
 
-{{EmbedLiveSample('', 450, 120)}}
+{{EmbedLiveSample('bulles_dinformation', 450, 120)}}
 
-## Accessibilité
+### Les pseudo-éléments imbriqués `::after::marker`
 
-Utiliser un pseudo-élément `::after` afin d'ajouter du contenu est déconseillé, car ce dernier n'est pas accessible de façon fiable pour les lecteurs d'écrans.
+Les [pseudo-éléments imbriqués](/fr/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) `::after::marker` sélectionnent la liste {{CSSxRef("::marker")}} d'un `::after` pseudo-élément qui est lui-même un élément de liste, c'est-à-dire qu'il a sa {{CSSxRef("display")}} propriété définie sur `list-item`.
+
+Dans cette présentation, nous générons des éléments de liste supplémentaires avant et après un menu de navigation en liste à l'aide de `::before` et `::after` (en les définissant sur `display: list-item` afin qu'ils se comportent comme des éléments de liste). Nous utilisons ensuite `ul::before::marker` et `ul::after::marker` pour donner à leurs marqueurs de liste une couleur différente.
+
+#### HTML
+
+```html
+<ul>
+  <li><a href="#">Introduction</a></li>
+  <li><a href="#">Débuter</a></li>
+  <li><a href="#">Comprendre les bases</a></li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul::before,
+ul::after {
+  display: list-item;
+  color: orange;
+}
+
+ul::before {
+  content: "Début";
+}
+
+ul::after {
+  content: "Fin";
+}
+
+ul::before::marker,
+ul::after::marker {
+  color: red;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('les_pseudo-éléments_imbriqués_aftermarker', 450, 200)}}
+
+Lorsqu'on utilise des pseudo-éléments imbriqués, les puces de liste des trois éléments de navigation sont générées car ce sont des éléments `<li>`, «&nbsp;Début&nbsp;» et «&nbsp;Fin&nbsp;» ont été insérés via des pseudo-éléments et `::marker` est utilisé pour styliser leurs puces.
 
 ## Spécifications
 
@@ -190,5 +255,5 @@ Utiliser un pseudo-élément `::after` afin d'ajouter du contenu est déconseill
 
 ## Voir aussi
 
-- [`::before`](/fr/docs/Web/CSS/::before)
-- [`content`](/fr/docs/Web/CSS/content)
+- {{CSSxRef("::before")}}
+- {{CSSxRef("content")}}

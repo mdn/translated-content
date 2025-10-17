@@ -51,7 +51,8 @@ Object.assign(target, ...sources);
 
 오류(대상 객체의 속성이 쓰기 불가한 상태 등)를 마주치면 {{jsxref("TypeError")}}가 발생합니다. 그러나 오류가 발생하기 전에 이미 추가/변경한 다른 속성의 값은 대상 객체에 유지됩니다.
 
-> **참고:** `Object.assign()`의 출처에 {{jsxref("null")}} 또는 {{jsxref("undefined")}}를 제공해도 예외는 발생하지 않습니다.
+> [!NOTE]
+> `Object.assign()`의 출처에 {{jsxref("null")}} 또는 {{jsxref("undefined")}}를 제공해도 예외는 발생하지 않습니다.
 
 ## 예제
 

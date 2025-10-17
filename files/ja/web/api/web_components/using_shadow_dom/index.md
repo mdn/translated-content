@@ -2,7 +2,7 @@
 title: シャドウ DOM の使用
 slug: Web/API/Web_components/Using_shadow_DOM
 l10n:
-  sourceCommit: 9d76a1d4601c8e0042732899a99b6fecde2c919d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -13,7 +13,7 @@ l10n:
 
 ## 高水準の視点
 
-この記事は、すでにあなたが [DOM (Document Object Model)](/ja/docs/Web/API/Document_Object_Model/Introduction) の概念を理解していることを想定しています。これはツリー上の構造で、接続されたノードがマークアップ文書（ウェブ文書の場合は通常 HTML 文書）に現れるさまざまな要素や文字列を表します。例として、以下のような HTML の断片を考えてみましょう。
+この記事は、すでにあなたが [DOM (Document Object Model)](/ja/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef) の概念を理解していることを想定しています。これはツリー上の構造で、接続されたノードがマークアップ文書（ウェブ文書の場合は通常 HTML 文書）に現れるさまざまな要素や文字列を表します。例として、以下のような HTML の断片を考えてみましょう。
 
 ```html
 <html lang="en-US">

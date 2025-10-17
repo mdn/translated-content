@@ -202,7 +202,7 @@ img {
 - **美术设计**：当你想为不同布局提供不同剪裁的图片——比如在桌面布局上显示完整的、横向图片，而在手机布局上显示一张剪裁过的、突出重点的纵向图片，可以用 {{htmlelement("picture")}} 元素来实现。
 - **分辨率切换**：当你想要为窄屏提供更小的图片时（因为小屏幕不需要像桌面端显示那么大的图片）；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 图片）或者 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes) 属性来实现。
 
-此时整个[多媒体与嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)，看看你学得怎样。希望你玩得开心！
+此时整个[多媒体与嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Splash_page)，看看你学得怎样。希望你玩得开心！
 
 ## 参见
 

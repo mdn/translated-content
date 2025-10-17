@@ -2,25 +2,23 @@
 title: 文字クラス
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 l10n:
-  sourceCommit: 012e9b4babec62ca26e87550a2e43e1eedad8f06
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 文字クラスは、文字や数字の区別など、文字の種類を区別します。
 
-{{InteractiveExample("JavaScript デモ: RegExp Character classes")}}
+{{InteractiveExample("JavaScript デモ: 正規表現の文字クラス")}}
 
 ```js interactive-example
 const chessStory = "He played the King in a8 and she moved her Queen in c2.";
 const regexpCoordinates = /\w\d/g;
 console.log(chessStory.match(regexpCoordinates));
-// Expected output: Array [ 'a8', 'c2']
+// 予想される結果: Array [ 'a8', 'c2']
 
 const moods = "happy 🙂, confused 😕, sad 😢";
 const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
 console.log(moods.match(regexpEmoticons));
-// Expected output: Array ['🙂', '😕', '😢']
+// 予想される結果: Array ['🙂', '😕', '😢']
 ```
 
 ## 種類
@@ -344,4 +342,4 @@ console.log("母音の数:", aliceExcerpt.match(regexpVowels).length);
 - [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [論理和: `|`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [Unicode 文字クラスエスケープ: `\p{...}`, `\P{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-- [Wildcard: `.`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
+- [ワイルドカード: `.`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
