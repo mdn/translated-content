@@ -35,7 +35,7 @@ new WritableStreamDefaultWriter(stream)
 
 ## 示例
 
-下面的示例展示了如何创建一个带有自定义接收器和由 API 提供的队列策略的 `WritableStream`。然后调用一个名为 `sendMessage()` 的函数，将新创建的流和一个字符串作为参数传入。在该函数内部，通过调用流的 `getWriter()` 方法获取一个 {{domxref("WritableStreamDefaultWriter")}} 实例。接着使用 `forEach()` 方法将字符串的每个片段写入流中。最后，`write()` 和 `close()` 方法会返回 Promise，用于处理数据块或整个流写入操作的成功或失败结果。
+下面的示例展示了如何创建一个带有自定义接收器和由 API 提供的队列策略的 `WritableStream`。然后调用一个名为 `sendMessage()` 的函数，将新创建的流和一个字符串作为参数传入。在该函数内部，通过调用流的 `getWriter()` 方法获取一个 {{domxref("WritableStreamDefaultWriter")}} 实例。接着使用 `forEach()` 方法将字符串的每个片段写入流中。最后，`write()` 和 `close()` 方法会返回 promise，用于处理数据块或整个流写入操作的成功或失败结果。
 
 ```js
 const list = document.querySelector("ul");
@@ -49,19 +49,19 @@ function sendMessage(message, writableStream) {
     defaultWriter.ready
       .then(() => defaultWriter.write(chunk))
       .then(() => {
-        console.log("数据块已写入接收器。");
+        console.log("分块已写入接收器。");
       })
       .catch((err) => {
-        console.log("数据块出错：", err);
+        console.log("分块出错：", err);
       });
   });
-  // 再次调用 ready，确保所有数据块在关闭 writer 之前都已写入。
+  // 再次调用 ready，确保所有分块在关闭 writer 之前都已写入。
   defaultWriter.ready
     .then(() => {
       defaultWriter.close();
     })
     .then(() => {
-      console.log("所有数据块已写入完成");
+      console.log("所有分块已写入完成");
     })
     .catch((err) => {
       console.log("流错误：", err);
@@ -81,7 +81,7 @@ const writableStream = new WritableStream(
         view[0] = chunk;
         const decoded = decoder.decode(view, { stream: true });
         const listItem = document.createElement("li");
-        listItem.textContent = `数据块解码结果：${decoded}`;
+        listItem.textContent = `分块解码结果：${decoded}`;
         list.appendChild(listItem);
         result += decoded;
         resolve();
@@ -99,10 +99,10 @@ const writableStream = new WritableStream(
   queuingStrategy,
 );
 
-sendMessage("你好，世界。", writableStream);
+sendMessage("Hello, world.", writableStream);
 ```
 
-完整代码示例可参见我们的[简单写入示例](https://mdn.github.io/dom-examples/streams/simple-writer/)。
+完整代码示例可参见我们的[简单 writer 示例](https://mdn.github.io/dom-examples/streams/simple-writer/)。
 
 ## 规范
 
