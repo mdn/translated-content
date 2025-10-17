@@ -20,7 +20,7 @@ Les WCAG sont globalement divisées en quatre principes&nbsp;: ce sont les grand
 Chacun des liens ci-dessous vous mènera vers des pages qui détaillent ces domaines, avec des conseils pratiques pour rédiger votre contenu web afin qu'il respecte les critères de succès définis dans les quatre grands principes des WCAG 2.
 
 - [Perceptible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)&nbsp;: Les utilisateur·ice·s doivent pouvoir percevoir le contenu d'une manière ou d'une autre, en utilisant un ou plusieurs de leurs sens.
-- [Opérable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)&nbsp;: Les utilisateur·ice·s doivent pouvoir contrôler les éléments de l'interface (par exemple, les boutons doivent être cliquables d'une manière ou d'une autre&nbsp;: souris, clavier, commande vocale, etc.).
+- [Utilisable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)&nbsp;: Les utilisateur·ice·s doivent pouvoir contrôler les éléments de l'interface (par exemple, les boutons doivent être cliquables d'une manière ou d'une autre&nbsp;: souris, clavier, commande vocale, etc.).
 - [Compréhensible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)&nbsp;: Le contenu doit être compréhensible pour ses utilisateur·ice·s.
 - [Robuste](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)&nbsp;: Le contenu doit être développé avec des standards Web largement adoptés, pour fonctionner sur différents navigateurs, maintenant et à l'avenir.
 
@@ -35,7 +35,7 @@ Cette documentation d'introduction vise à fournir des informations pratiques po
 ## Voir aussi
 
 - [WCAG&nbsp;: principe Perceptible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-- [WCAG&nbsp;: principe Opérable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+- [WCAG&nbsp;: principe Utilisable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
 - [WCAG&nbsp;: principe Compréhensible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
 - [WCAG&nbsp;: principe Robuste](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 - [Libellés et noms textuels WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names)

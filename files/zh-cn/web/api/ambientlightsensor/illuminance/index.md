@@ -1,26 +1,32 @@
 ---
-title: reading
+title: AmbientLightSensor：illuminance 属性
+short-title: illuminance
 slug: Web/API/AmbientLightSensor/illuminance
+l10n:
+  sourceCommit: 4ea748e5f025c2a00a8ca8babd7c505e73ad9def
 ---
 
-{{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-{{domxref("AmbientLightSensor")}} 接口的 read-only 属性 **reading** 返回一个访问 {{domxref('AmbientLightSensorReading')}} 的接口，包含当前的光亮级别。
+{{domxref("AmbientLightSensor")}} 接口的 **`illuminance`** 只读属性返回宿主设备周围环境光的当前光照强度，单位为 [lux（勒克斯）](https://zh.wikipedia.org/wiki/勒克斯)。
 
-## 语法
+## 值
 
-```plain
-var sensorReading = AmbientLightLevel.reading
-```
+一个 {{jsxref('Number')}}，表示当前的光照强度，单位为勒克斯（lux）。
 
-### 返回值
-
-{{domxref('AmbientLightSensorReading')}} 接口。
-
-## 用例
+## 示例
 
 ```js
-// TBD
+if ("AmbientLightSensor" in window) {
+  const sensor = new AmbientLightSensor();
+  sensor.addEventListener("reading", (event) => {
+    console.log("当前光照强度：", sensor.illuminance);
+  });
+  sensor.addEventListener("error", (event) => {
+    console.log(event.error.name, event.error.message);
+  });
+  sensor.start();
+}
 ```
 
 ## 规范

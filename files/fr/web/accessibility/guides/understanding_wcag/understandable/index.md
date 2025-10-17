@@ -380,6 +380,6 @@ Cette ligne directrice vise à aider les utilisateur·ice·s à saisir des infor
 
 - [WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
   1. [Perceptible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-  2. [Opérable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  2. [Utilisable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. Compréhensible
   4. [Robuste](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)

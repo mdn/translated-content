@@ -1,14 +1,17 @@
 ---
-title: WritableStreamDefaultWriter()
+title: WritableStreamDefaultWriter：WritableStreamDefaultWriter() 构造函数
+short-title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
+l10n:
+  sourceCommit: 1fdb14f1bc00789a1dc8bf347b08b5b94d717f0c
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
-**`WritableStreamDefaultWriter()`** 构造函数创建一个新的 {{domxref("WritableStreamDefaultWriter")}} 对象实例。
+**`WritableStreamDefaultWriter()`** 构造函数用于创建一个新的 {{domxref("WritableStreamDefaultWriter")}} 对象实例。
 
 > [!NOTE]
-> 你通常不需要手动创建，可以使用 {{domxref("WritableStream.getWriter()")}} 方法代替。
+> 通常情况下，你不会手动使用此构造函数；而是通过调用 {{domxref("WritableStream.getWriter()")}} 方法来获取。
 
 ## 语法
 
@@ -19,87 +22,87 @@ new WritableStreamDefaultWriter(stream)
 ### 参数
 
 - `stream`
-  - : 需要写入的 {{domxref("WritableStream")}}。
+  - : 要写入的 {{domxref("WritableStream")}} 对象。
 
 ### 返回值
 
-一个 {{domxref("WritableStreamDefaultWriter")}} 对象实例。
+一个 {{domxref("WritableStreamDefaultWriter")}} 对象的实例。
 
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 提供的 `stream` 并不是一个 {{domxref("WritableStream")}}，或者他已经被另一个 writer 锁定。
+  - : 当传入的 `stream` 值不是 {{domxref("WritableStream")}}，或者该流已被其他写入器锁定时，会抛出此异常。
 
 ## 示例
 
-下面的例子说明了这个接口的几个功能。它展示了使用自定义接收器和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
+下面的示例展示了如何创建一个带有自定义接收器和由 API 提供的队列策略的 `WritableStream`。然后调用一个名为 `sendMessage()` 的函数，将新创建的流和一个字符串作为参数传入。在该函数内部，通过调用流的 `getWriter()` 方法获取一个 {{domxref("WritableStreamDefaultWriter")}} 实例。接着使用 `forEach()` 方法将字符串的每个片段写入流中。最后，`write()` 和 `close()` 方法会返回 promise，用于处理数据块或整个流写入操作的成功或失败结果。
 
 ```js
 const list = document.querySelector("ul");
+
 function sendMessage(message, writableStream) {
-  // defaultWriter is of type WritableStreamDefaultWriter
+  // defaultWriter 的类型是 WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     defaultWriter.ready
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
-        return defaultWriter.write(chunk);
-      })
-      .then(() => {
-        console.log("Chunk written to sink.");
+        console.log("分块已写入接收器。");
       })
       .catch((err) => {
-        console.log("Chunk error:", err);
+        console.log("分块出错：", err);
       });
   });
-  // Call ready again to ensure that all chunks are written
-  //   before closing the writer.
+  // 再次调用 ready，确保所有分块在关闭 writer 之前都已写入。
   defaultWriter.ready
     .then(() => {
       defaultWriter.close();
     })
     .then(() => {
-      console.log("All chunks written");
+      console.log("所有分块已写入完成");
     })
     .catch((err) => {
-      console.log("Stream error:", err);
+      console.log("流错误：", err);
     });
 }
+
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
 const writableStream = new WritableStream(
   {
-    // Implement the sink
+    // 实现接收器
     write(chunk) {
       return new Promise((resolve, reject) => {
-        var buffer = new ArrayBuffer(1);
-        var view = new Uint8Array(buffer);
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
         view[0] = chunk;
-        var decoded = decoder.decode(view, { stream: true });
-        var listItem = document.createElement("li");
-        listItem.textContent = "Chunk decoded: " + decoded;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `分块解码结果：${decoded}`;
         list.appendChild(listItem);
         result += decoded;
         resolve();
       });
     },
     close() {
-      var listItem = document.createElement("li");
-      listItem.textContent = "[MESSAGE RECEIVED] " + result;
+      const listItem = document.createElement("li");
+      listItem.textContent = `[消息已接收] ${result}`;
       list.appendChild(listItem);
     },
     abort(err) {
-      console.log("Sink error:", err);
+      console.log("接收器出错：", err);
     },
   },
   queuingStrategy,
 );
+
 sendMessage("Hello, world.", writableStream);
 ```
 
-你可以在我们的[简单的 writer 示例](https://mdn.github.io/dom-examples/streams/simple-writer/)找到完整代码。
+完整代码示例可参见我们的[简单 writer 示例](https://mdn.github.io/dom-examples/streams/simple-writer/)。
 
 ## 规范
 
