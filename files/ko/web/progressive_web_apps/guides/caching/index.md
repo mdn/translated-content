@@ -210,5 +210,5 @@ PWA는 서비스 워커의 {{domxref("ServiceWorkerGlobalScope/activate_event", 
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
 - [저장소 할당량 및 제거 기준](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
-- [Strategies for service worker caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview) on developer.chrome.com (2021)
-- [The Offline Cookbook](https://web.dev/articles/offline-cookbook) on web.dev (2020)
+- developer.chrome.com의 [서비스 워커 캐싱 전략](https://developer.chrome.com/docs/workbox/caching-strategies-overview) (2021)
+- web.dev의 [오프라인 설명서](https://web.dev/articles/offline-cookbook) (2020)
