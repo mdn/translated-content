@@ -30,7 +30,7 @@ onmessage = (event) => { }
 
 ## 이벤트 속성
 
-_이 인터페이스는 부모인 {{domxref("Event")}}의 속성을 상속받습니다._
+이 인터페이스는 부모인 {{domxref("Event")}}의 속성을 상속받습니다.
 
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : 메시지 송신자로부터 보내진 데이터.
