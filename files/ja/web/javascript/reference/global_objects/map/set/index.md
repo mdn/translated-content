@@ -1,25 +1,24 @@
 ---
 title: Map.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。
+**`set()`** は {{jsxref("Map")}} インスタンスのメソッドで、指定されたキーと値を持つ要素をこの `Map` オブジェクトに追加したり、更新したりします。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.set()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+console.log(map.get("bar"));
+// 予想される結果: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+console.log(map.get("baz"));
+// 予想される結果: undefined
 ```
 
 ## 構文
@@ -44,7 +43,7 @@ set(key, value)
 ### set() の使用
 
 ```js
-let myMap = new Map();
+const myMap = new Map();
 
 // マップに新しい要素を追加する
 myMap.set("bar", "foo");

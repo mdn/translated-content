@@ -2,12 +2,12 @@
 title: outline-width
 slug: Web/CSS/outline-width
 l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`outline-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素轮廓的粗细。轮廓是绘制在元素周围的线，位于 {{cssxref("border")}} 之外。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`outline-width`** 设置元素轮廓的粗细。轮廓是绘制在元素周围的线，位于 {{cssxref("border")}} 之外。
 
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{InteractiveExample("CSS 演示：outline-width")}}
 
 ```css interactive-example-choice
 outline-width: 12px;
@@ -28,7 +28,7 @@ outline-width: thick;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    这是一个带有轮廓线框的盒子。
   </div>
 </section>
 ```

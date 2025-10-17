@@ -13,7 +13,7 @@ Un objet [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) 
 
 - Une chaîne vide si `networkState` est `EMPTY`&nbsp;;
 - Ou une des ressources répertoriées par l'objet [`HTMLSourceElement`](/fr/docs/Web/API/HTMLSourceElement) contenu dans l'élément média&nbsp;;
-- Ou la valeur de `src` si aucun élément [`<source>`](/fr/docs/Web/HTML/Element/source) n'est fourni.
+- Ou la valeur de `src` si aucun élément [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) n'est fourni.
 
 ## Exemples
 

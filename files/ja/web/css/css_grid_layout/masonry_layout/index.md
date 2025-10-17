@@ -2,7 +2,7 @@
 title: メイソンリーレイアウト
 slug: Web/CSS/CSS_grid_layout/Masonry_layout
 l10n:
-  sourceCommit: c6e02b5aa7c12f9e64f80a62f75ede8f5cb5ec21
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 {{SeeCompatTable}}
@@ -18,9 +18,13 @@ l10n:
 
 アイテムが行の新しい段に移されると、メイソンリー・アルゴリズムに従って表示されます。アイテムは最もスペースのある列に読み込まれ、厳密な行のトラックなしで、ぎっしりと詰まったレイアウトになります。
 
-```css hidden live-sample___block-axis
+```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
 * {
   box-sizing: border-box;
+}
+
+body {
+  font: 1.2em sans-serif;
 }
 
 .grid {
@@ -47,57 +51,46 @@ l10n:
 }
 ```
 
-```html live-sample___block-axis
+```html live-sample___block-axis live-sample___inline-axis
 <div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item" style="block-size: 2.2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
+```
+
+```js live-sample___block-axis live-sample___spanners live-sample___positioned
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "3.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.blockSize = itemSizes[i];
+}
 ```
 
 {{EmbedLiveSample("block-axis", "", "250px")}}
 
-また、アイテムを列にして読み込むメイソンリーレイアウトも可能です。
+アイテムを列に読み込む対応するレイアウトを作成することも可能です。
 
-```html hidden live-sample___inline-axis
-<div class="grid">
-  <div class="item" style="inline-size: 2em;"></div>
-  <div class="item" style="inline-size: 3em;"></div>
-  <div class="item" style="inline-size: 1.6em;"></div>
-  <div class="item" style="inline-size: 4em;"></div>
-  <div class="item" style="inline-size: 2.2em;"></div>
-  <div class="item" style="inline-size: 3em;"></div>
-  <div class="item" style="inline-size: 4.5em;"></div>
-  <div class="item" style="inline-size: 1em;"></div>
-  <div class="item" style="inline-size: 3.5em;"></div>
-  <div class="item" style="inline-size: 2.8em;"></div>
-</div>
-```
-
-```css hidden live-sample___inline-axis
-* {
-  box-sizing: border-box;
-}
-
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
+```js live-sample___inline-axis
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "2.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.inlineSize = itemSizes[i];
 }
 ```
 
@@ -110,7 +103,7 @@ l10n:
 }
 ```
 
-{{EmbedLiveSample("inline-axis", "", "350px")}}
+{{EmbedLiveSample("inline-axis", "", "450px")}}
 
 ## グリッド軸の制御
 
@@ -122,37 +115,17 @@ l10n:
 
 ```html live-sample___spanners
 <div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em; grid-column-end: span 2;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item" style="block-size: 2.2em; grid-column-end: span 2"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
-```
-
-```css hidden live-sample___spanners
-* {
-  box-sizing: border-box;
-}
-
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
-}
 ```
 
 ```css live-sample___spanners
@@ -162,49 +135,29 @@ l10n:
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-template-rows: masonry;
 }
+
+.span-2 {
+  grid-column-end: span 2;
+}
 ```
 
-{{EmbedLiveSample("spanners", "", "220px")}}
+{{EmbedLiveSample("spanners", "", "270px")}}
 
-この例では、柱の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、メイソンリーレイアウトが行われる前に配置されます。
+この例では、列の位置が決まっているアイテムが含まれています。配置が確定しているアイテムは、メイソンリーレイアウトが行われる前に配置されます。
 
 ```html-nolint live-sample___positioned
 <div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item positioned" style="block-size: 3.2em;">位置指定されています。</div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item positioned">位置指定されています。</div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
-```
-
-```css hidden live-sample___positioned
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font: 1.2em sans-serif;
-}
-
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
-}
 ```
 
 ```css live-sample___positioned
@@ -221,11 +174,15 @@ body {
 }
 ```
 
-{{EmbedLiveSample("positioned", "", "260px")}}
+{{EmbedLiveSample("positioned", "", "290px")}}
 
 ## メイソンリーレイアウトの代替
 
 [組積に対応していない](#ブラウザーの互換性)ブラウザーでは、代わりに通常のグリッドの自動配置が使用されます。
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 

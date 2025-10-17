@@ -47,7 +47,8 @@ iframeElem.src =
   "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
 ```
 
-> **참고:** `<iframe>`에 삽입된 문서가 {{domxref("window.credentialless")}} 속성을 쿼리 하여 무인증 컨텍스트에서 실행되고 있는지 테스트할 수 있습니다. 값이 `true` 이면 삽입된 `<iframe>`이 무인증 상태임을 의미합니다.
+> [!NOTE]
+> `<iframe>`에 삽입된 문서가 {{domxref("window.credentialless")}} 속성을 쿼리 하여 무인증 컨텍스트에서 실행되고 있는지 테스트할 수 있습니다. 값이 `true` 이면 삽입된 `<iframe>`이 무인증 상태임을 의미합니다.
 
 그 결과 무인증 `<iframe>` 내부의 문서는 새롭고 임시적인 컨텍스트를 사용하여 로드되며, 이러한 컨텍스트는 출처와 관련된 데이터(예: [쿠키](/ko/docs/Web/HTTP/Guides/Cookies)와 [localStorage](/ko/docs/Web/API/Window/localStorage))에 접근할 수 없습니다. 무인증 저장소는 최상위 문서 당 한 번씩 설정되는 nonce("한 번 사용된 번호") 값으로 수정된 저장소 키를 통해 개별적으로 분할됩니다. 따라서 하나의 무인증 `<iframe>`에서 설정된 쿠키는 동일한 최상위 문서 아래에 삽입된 다른 동일 출처의 무인증 `<iframe>`에서만 접근할 수 있습니다.
 

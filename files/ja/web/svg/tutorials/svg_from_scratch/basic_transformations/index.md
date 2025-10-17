@@ -1,14 +1,11 @@
 ---
 title: 基本的な座標変換
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
-original_slug: Web/SVG/Tutorial/Basic_Transformations
 l10n:
-  sourceCommit: 50d5e7cdb972c64a8f02a34a229bbc5ed7305c24
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Texts", "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking") }}
 
 これまで作成してきた美しい画像を変形させる準備ができました。しかし始めに、 {{SVGElement("g")}} 要素を正式に紹介しましょう。このヘルパーを用いると、要素の集合全体にプロパティを割り当てることができます。実際のところ、これが唯一の用途です。
 
@@ -32,12 +29,18 @@ l10n:
 たとえ属性で位置指定できても、要素を移動させる必要があるかもしれません。そのために `translate()` 座標変換が用意されています。
 
 ```html
-<svg width="40" height="50" style="background-color:#bff;">
+<svg width="40" height="50">
   <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
-この例では長方形を描画しますが、描画位置を (0,0) ではなく (30,40) に移します。
+```css hidden
+svg {
+  background-color: #bbffff;
+}
+```
+
+この例では矩形を描画しますが、描画位置を (0,0) ではなく (30,40) に移します。
 
 {{ EmbedLiveSample('Translation', '', '100') }}
 
@@ -62,7 +65,7 @@ l10n:
 座標変換は、空白で区切るだけで簡単に連結することができます。例えば、 `translate()` と `rotate()` はよく使用される座標変換です。
 
 ```html
-<svg width="40" height="50" style="background-color:#bff;">
+<svg width="40" height="50">
   <rect
     x="0"
     y="0"
@@ -70,6 +73,12 @@ l10n:
     height="10"
     transform="translate(30,40) rotate(45)" />
 </svg>
+```
+
+```css hidden
+svg {
+  background-color: #bbffff;
+}
 ```
 
 この例では、前の例と同じく小さな正方形を表示していますが、同時に 45 度回転させています。
@@ -93,7 +102,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Reference/Attribute/transform#行列)を参照してください。このプロパティに関する詳細情報は、[SVG 勧告](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)で得ることができます。
+[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Reference/Attribute/transform#行列)を参照してください。座標変換の詳細については、[CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)ガイドを調べてください。
 
 ## 座標系に与える効果
 
@@ -107,7 +116,7 @@ l10n:
 </svg>
 ```
 
-上記の例で、長方形のサイズは 100x100 ピクセルになります。`userSpaceOnUse` のような属性に依存している場合などに、より興味深い効果が発生します。
+上記の例で、矩形のサイズは 100x100 ピクセルになります。`userSpaceOnUse` のような属性に依存している場合などに、より興味深い効果が発生します。
 
 {{ EmbedLiveSample('Effects_on_Coordinate_Systems', '', '150') }}
 
@@ -123,8 +132,8 @@ HTML とは対照的に、SVG では他の `svg` 要素をシームレスに埋�
 </svg>
 ```
 
-上記の例は、基本的にはもうひとつ上の例と同じ効果をもたらすもので、すなわち長方形のサイズは rect 要素で指定したサイズの 2 倍になります。
+上記の例は、基本的にはもうひとつ上の例と同じ効果をもたらすもので、すなわち矩形のサイズは rect 要素で指定したサイズの 2 倍になります。
 
 {{ EmbedLiveSample('Embedding_SVG_in_SVG', '100', '150') }}
 
-{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Texts", "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking") }}

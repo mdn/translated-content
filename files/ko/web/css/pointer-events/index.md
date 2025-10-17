@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`pointer-events`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 포인터 이벤트의 [타겟](/ko/docs/Web/API/Event/target)이 될 수 있는 상황 (이 있다면) 을 설정합니다.
 
 {{InteractiveExample("CSS Demo: pointer-events")}}

@@ -1,11 +1,10 @@
 ---
 title: Promise.withResolvers()
+short-title: withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 l10n:
-  sourceCommit: 6af0c0d0b640e756765976ad854f4cc64c2f911c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Promise.withResolvers()`** 静的メソッドは、新しい {{jsxref("Promise")}} オブジェクトと、{{jsxref("Promise/Promise", "Promise()")}} コンストラクターの実行子に渡す 2 つの引数に対応する、解決または拒否の 2 つの関数を含むオブジェクトを返します。
 
@@ -104,6 +103,7 @@ resolve("hello");
 ## 関連情報
 
 - [`Promise.withResolvers` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#promisewithresolvers)
+- [es-shims による `Promise.withResolvers` のポリフィル](https://www.npmjs.com/package/promise.withresolvers)
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
 - {{jsxref("Promise")}}
 - [`Promise()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)

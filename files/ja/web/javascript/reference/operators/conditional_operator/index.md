@@ -1,15 +1,15 @@
 ---
-title: 条件 (三項) 演算子
+title: 条件（三項）演算子
 slug: Web/JavaScript/Reference/Operators/Conditional_operator
 l10n:
-  sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Operators")}}
+**条件（三項）演算子**は JavaScript では唯一の、 3 つのオペランドをとる演算子です。
+条件に続いて疑問符 (`?`)、そして条件が{{Glossary("truthy", "真値")}}であった場合に実行する式、コロン (`:`) が続き、条件が{{Glossary("falsy", "偽値")}}であった場合に実行する式が最後に来ます。
+この演算子は、 [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の代替としてよく用いられます。
 
-**条件 (三項) 演算子**は JavaScript では唯一の、3 つのオペランドをとる演算子です。条件に続いて疑問符 (`?`)、そして条件が{{Glossary("truthy", "真値")}}であった場合に実行する式、コロン (`:`) が続き、条件が{{Glossary("falsy", "偽値")}}であった場合に実行する式が最後に来ます。この演算子は、 [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の代替としてよく用いられます。
-
-{{InteractiveExample("JavaScript デモ: Expressions - Conditional operator")}}
+{{InteractiveExample("JavaScript デモ: 条件演算子")}}
 
 ```js interactive-example
 function getFee(isMember) {
@@ -17,13 +17,13 @@ function getFee(isMember) {
 }
 
 console.log(getFee(true));
-// Expected output: "$2.00"
+// 予想される結果: "$2.00"
 
 console.log(getFee(false));
-// Expected output: "$10.00"
+// 予想される結果: "$10.00"
 
 console.log(getFee(null));
-// Expected output: "$10.00"
+// 予想される結果: "$10.00"
 ```
 
 ## 構文
@@ -47,7 +47,7 @@ condition ? exprIfTrue : exprIfFalse
 
 ## 例
 
-### 単純な例
+### キホンテキナ例
 
 ```js
 const age = 26;
@@ -109,7 +109,7 @@ function example() {
 ## 関連情報
 
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [ヌル値合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [オプショナルチェーン (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)
+- [学習: コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)ガイド

@@ -1,22 +1,27 @@
 ---
 title: String.prototype.strike()
+short-title: strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-**`strike()`** メソッドは、文字列を {{HTMLElement("strike")}} 要素に埋め込んだ文字列 (`<strike>str</strike>`) を生成し、文字列が取り消されたテキストとして表示されるようにします。
+**`strike()`** は {{jsxref("String")}} 値のメソッドで、この文字列を {{HTMLElement("strike")}} 要素に埋め込んだ文字列 (`<strike>str</strike>`) を生成し、この文字列が取り消されたテキストとして表示されるようにします。
 
-> [!WARNING]
-> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+> [!NOTE]
+> [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`strike(` の場合、`<strike>` 要素自体が HTML 仕様から除去されたため、使用すべきではありません。ウェブ開発者は、削除されたコンテンツには {{HTMLElement("del")}}、正確でなくなった、または関連性がなくなったコンテンツには {{HTMLElement("s")}} を使用しましょう。
 
 ## 構文
 
 ```js-nolint
 strike()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -26,15 +31,30 @@ strike()
 
 ### strike() の使用
 
-以下の例では文字列のメソッドを使用して、文字列の形式を変更しています。
+以下のコードは、HTML 文字列を生成し、それで文書の本文を置き換えます。
 
 ```js
-const worldString = "Hello, world";
+const contentString = "Hello, world";
 
-console.log(worldString.blink()); // <blink>Hello, world</blink>
-console.log(worldString.bold()); // <b>Hello, world</b>
-console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike()); // <strike>Hello, world</strike>
+document.body.innerHTML = contentString.strike();
+```
+
+これにより、次の HTML が生成されます。
+
+```html
+<strike>Hello, world</strike>
+```
+
+> [!WARNING]
+> このマークアップは不正です。`strike` は有効な要素でなくなったためです。
+
+`strike()` を使用して HTML テキストを直接生成する代わりに、[`document.createElement()`](/ja/docs/Web/API/Document/createElement) などの DOM API を使用すべきです。例を示します。
+
+```js
+const contentString = "Hello, world";
+const elem = document.createElement("s");
+elem.innerText = contentString;
+document.body.appendChild(elem);
 ```
 
 ## 仕様書

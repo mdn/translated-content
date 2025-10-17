@@ -1,17 +1,17 @@
 ---
 title: CSS 値関数
-slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+slug: Web/CSS/CSS_values_and_units/CSS_value_functions
 l10n:
-  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/CSS_Values_and_Units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
+**CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/CSS_values_and_units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
 
 ## 構文
 
-```css
-selector {
-  property: function([argument]? [, argument]!);
+```plain
+セレクター {
+  プロパティ: 関数([引数]? [, 引数]!);
 }
 ```
 
@@ -25,7 +25,7 @@ selector {
 
 ## 座標変換関数
 
-CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) は、表示の座標変換を表します。 {{CSSxRef("transform")}} の値として使用されます。
+CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types) は、表示の座標変換を表します。 {{CSSxRef("transform")}} の値として使用されます。
 
 ### 移動関数
 
@@ -91,7 +91,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 数学関数は、 CSS の数値を数式として記述することができるものです。
 
-下記の各ページには、数学関数の構文、ブラウザー互換性データ、例などの詳細情報が格納されています。CSS 数学関数の全体的な紹介は、[CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)を参照してください。
+下記の各ページには、数学関数の構文、ブラウザー互換性データ、例などの詳細情報が格納されています。CSS 数学関数の全体的な紹介は、[CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)を参照してください。
 
 ### 基本演算
 
@@ -157,7 +157,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 ## フィルター関数
 
-{{CSSxRef("&lt;filter-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、入力画像の外見を変更することができるグラフィック効果を表します。 {{CSSxRef("filter")}} および {{CSSxRef("backdrop-filter")}} プロパティで使用されます。
+{{CSSxRef("&lt;filter-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、入力画像の外見を変更することができるグラフィック効果を表します。 {{CSSxRef("filter")}} および {{CSSxRef("backdrop-filter")}} プロパティで使用されます。
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : 画像のガウスぼかしを大きくします。
@@ -182,7 +182,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 ## 色関数
 
-{{CSSxRef("color_value","&lt;color&gt;")}} CSS [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)は、様々な色の表現を指定します。
+{{CSSxRef("color_value","&lt;color&gt;")}} CSS [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)は、様々な色の表現を指定します。
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : ある色を、赤、緑、青とアルファ（透明度）の成分で定義します。
@@ -202,6 +202,8 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
   - : 暗黙の sRGB 色空間ではなく、具体的な色空間を指定します。
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : 指定された色空間の 2 つの色値を、指定された量だけ混合します。
+- {{CSSxRef("color_value/contrast-color", "contrast-color()")}}
+  - : 指定された色に対して、色のコントラストが最大の色を返します。
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : 端末に依存しない方法で CMYK の色を定義します。
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
@@ -209,14 +211,14 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 ## 画像関数
 
-{{CSSxRef("&lt;image&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、画像やグラデーションのグラフィック表現を提供します。
+{{CSSxRef("&lt;image&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、画像やグラデーションのグラフィック表現を提供します。
 
 ### グラデーション関数
 
 - {{CSSxRef("gradient/linear-gradient","linear-gradient()")}}
   - : 線形グラデーションは、想像上の線に沿って徐々に色を変化させます。
 - {{CSSxRef("gradient/radial-gradient","radial-gradient()")}}
-  - : 放射グラデーションは、中心点（原点）から徐々に色を変化させていきます。
+  - : 放射グラデーションは、中心点（原点）から徐々に色を変化させます。
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
   - : 扇形グラデーションは、円を描くように徐々に色を変化させます。
 - {{CSSxRef("gradient/repeating-linear-gradient","repeating-linear-gradient()")}}
@@ -252,7 +254,7 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
 
 ## シェイプ関数
 
-{{CSSxRef("&lt;basic-shape&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、グラフィックの図形を表します。これは {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}} の各プロパティで使用されます。
+{{CSSxRef("&lt;basic-shape&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、グラフィックの図形を表します。これは {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("shape-outside")}} の各プロパティで使用されます。
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : 円を定義します。
@@ -281,6 +283,8 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
   - : HTML 要素で定義された属性を使用します。
 - {{CSSxRef("env", "env()")}}
   - : ユーザーエージェントが定義した環境変数の値です。
+- {{CSSxRef("if", "if()")}}
+  - : [スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries)、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)の結果に応じて、プロパティ値を条件付きで設定します。
 - {{cssxref("url_function", "url()")}}
   - : 値としてファイルを含めるために使用します。
 - {{CSSxRef("var", "var()")}}
@@ -316,7 +320,7 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 
 ## イージング関数
 
-{{CSSxRef("&lt;easing-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、数学的な関数を表します。これはトランジション及びアニメーションのプロパティに使用されます。
+{{CSSxRef("&lt;easing-function&gt;")}} は CSS の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、数学的な関数を表します。これはトランジション及びアニメーションのプロパティに使用されます。
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : 点間を直線的に補間するイージング関数です。
@@ -327,7 +331,7 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 
 ## アニメーション関数
 
-以下の関数は `animation-timeline` プロパティの値として使用します。これらの詳細については {{CSSxRef("animation-timeline")}} を参照してください。
+以下の関数は さまざまな {{CSSxRef("animation-timeline")}} プロパティの値として使用されます。
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
   - : 要素の {{cssxref("animation-timeline")}} に _無名スクロール進行タイムライン_ を設定します。
@@ -343,7 +347,16 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : 関連付けられたアンカー要素のサイズに対する長さを返します。
 
+## ツリーカウント関数
+
+次の関数は、ほとんどの CSS 値と同様にフラットツリーではなく、DOM ツリーに基づいて整数値を返します。
+
+- {{cssxref("sibling-index", "sibling-index()")}}
+  - : 選択した要素の兄弟要素の中でその要素の位置を反映する整数を返します。
+- {{cssxref("sibling-count", "sibling-count()")}}
+  - : 選択した要素を含む、兄弟要素の総数を反映する整数を返します。
+
 ## 関連情報
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

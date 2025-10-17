@@ -9,7 +9,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 
 ### HTML
 
-- L'attribut [`scoped`](/fr/docs/Web/HTML/Element/style#scoped) a été ajouté à l'élément {{HTMLElement("style")}}. Il permet d'inclure des styles qui sont isolés du reste du document. Ces styles peuvent être sélectionnés par le pseudo élément CSS {{cssxref(":scope")}} ajouté dans Firefox 20. ([bug Firefox 508725](https://bugzil.la/508725)).
+- L'attribut [`scoped`](/fr/docs/Web/HTML/Reference/Elements/style#scoped) a été ajouté à l'élément {{HTMLElement("style")}}. Il permet d'inclure des styles qui sont isolés du reste du document. Ces styles peuvent être sélectionnés par le pseudo élément CSS {{cssxref(":scope")}} ajouté dans Firefox 20. ([bug Firefox 508725](https://bugzil.la/508725)).
 - Le nouvel élément HTML {{HTMLElement("main")}} a été implémenté ([bug Firefox 820508](https://bugzil.la/820508)).
 
 ### JavaScript

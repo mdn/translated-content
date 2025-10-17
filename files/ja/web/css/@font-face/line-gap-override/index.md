@@ -2,7 +2,7 @@
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **`line-gap-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、そのフォントの line-gap の寸法を定義します。 line-gap の寸法は、フォントが推奨する line-gap または external leading です。
@@ -43,7 +43,7 @@ line-gap-override: 90%;
 
 @font-face {
   font-family: local-font;
-  src: local(Local Font);
+  src: local("Local Font");
   line-gap-override: 125%;
 }
 ```

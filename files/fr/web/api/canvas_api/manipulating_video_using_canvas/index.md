@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 {{DefaultAPISidebar("Canvas API")}}
 
-En combinant les possibilités de l'élément [`video`](/fr/docs/Web/HTML/Element/video) avec celles de l'élément [`canvas`](/fr/docs/Web/HTML/Element/canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
+En combinant les possibilités de l'élément [`video`](/fr/docs/Web/HTML/Reference/Elements/video) avec celles de l'élément [`canvas`](/fr/docs/Web/HTML/Reference/Elements/canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.
 
 [Voir l'exemple](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml).
 
@@ -51,7 +51,7 @@ Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :
 
 Les éléments clés à retenir sont :
 
-1. Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Element/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
+1. Ce document dispose de deux balises [`canvas`](/fr/docs/Web/HTML/Reference/Elements/canvas), avec les identifiants `c1` et `c2`&nbsp; l'élément `c1` est utilisé pour afficher l'image courante de la vidéo originale, pendant que `c2` est utilisé pour afficher la vidéo après application de l'effet d'incrustation&nbsp;; `c2` est préchargé avec la même image que celle qui sera utilisée pour le remplacement du fond vert.
 2. Le code JavaScript est importé dans le script nommé `main.js` ; Ce script utilise les fonctionnalités propres à la version 1.8, aussi cette version est précisée, à la ligne 22, quand le script est importé.
 3. Quand le document se charge, la méthode `processor.doLoad()`, dans le script `main.js`, est exécutée.
 
@@ -155,4 +155,4 @@ Cela se fait de façon répétée au fur et à mesure que la vidéo est lue, de 
 
 ## Voir aussi
 
-- [Using audio and video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using audio and video](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

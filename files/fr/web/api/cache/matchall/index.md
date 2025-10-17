@@ -29,7 +29,8 @@ cache.matchAll(request, { options }).then(function (response) {
 
 Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de toutes les requêtes qui matchent dans l'objet {{domxref("Cache")}}.
 
-> **Note :** {{domxref("Cache.match()")}} est quasiment identique à [`Cache.matchAll()`](/fr/docs/Web/API/Cache/matchAll), si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
+> [!NOTE]
+> {{domxref("Cache.match()")}} est quasiment identique à [`Cache.matchAll()`](/fr/docs/Web/API/Cache/matchAll), si ce n'est qu'elle est résolue en `response[0]` (la première réponse qui matche) plutôt que `response[]` (un tableau de toutes les réponses qui matchent).
 
 ## Exemples
 

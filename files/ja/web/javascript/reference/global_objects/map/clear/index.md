@@ -1,29 +1,28 @@
 ---
 title: Map.prototype.clear()
+short-title: clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`clear()`** メソッドは `Map` オブジェクトからすべての要素を削除します。
+**`clear()`** は {{jsxref("Map")}} インスタンスのメソッドで、このマップからすべての要素を削除します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.clear()")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+map.set("bar", "baz");
+map.set(1, "foo");
 
-console.log(map1.size);
-// Expected output: 2
+console.log(map.size);
+// 予想される結果: 2
 
-map1.clear();
+map.clear();
 
-console.log(map1.size);
-// Expected output: 0
+console.log(map.size);
+// 予想される結果: 0
 ```
 
 ## 構文
@@ -32,9 +31,13 @@ console.log(map1.size);
 clear()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-{{jsxref("undefined")}}.
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
