@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("DataView")}} 实例的 **`getFloat32()`** 方法从该 `DataView` 指定的字节偏移位置开始读取 4 个字节，并将其解释为一个 32 位浮点数。该方法没有对齐限制；多字节值可以从任意边界内的偏移位置读取。
+{{jsxref("DataView")}} 实例的 **`getFloat32()`** 方法从该 `DataView` 中指定的字节偏移位置开始读取 4 个字节，并将其解释为一个 32 位浮点数。该方法没有对齐限制；多字节值可以从任意边界内的偏移位置读取。
 
 {{InteractiveExample("JavaScript 演示：DataView.prototype.getFloat32()")}}
 
