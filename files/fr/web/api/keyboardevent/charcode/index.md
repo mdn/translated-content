@@ -60,7 +60,7 @@ Pour obtenir le code de la touche qu'il soit stocké dans `keyCode` ou `charCode
 
 Les caractères entrés via IME ne s'enregistrent pas sous `keyCode` ou `charCode`. Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
 
-Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'exemple dans [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/fr/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties) (en anglais) et regardez le tableau HTML résultant.
+Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'exemple dans [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/fr/docs/Web/API/Document_Object_Model#example_7:_displaying_event_object_properties) (en anglais) et regardez le tableau HTML résultant.
 
 ## Spécifications
 

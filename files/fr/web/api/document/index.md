@@ -5,7 +5,7 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-L'interface **`Document`** représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par [l'arbre du DOM](/fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
+L'interface **`Document`** représente n'importe quelle page web chargée dans le navigateur et sert de point d'entrée pour accéder au contenu de la page qui est formé par [l'arbre du DOM](/fr/docs/Web/API/Document_Object_Model).
 
 L'arbre du DOM inclut les éléments tels que [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) et [tous les autres](/fr/docs/Web/HTML/Reference/Elements) présents dans la page. Il fournit des fonctionnalités à l'ensemble du document et permet, par exemple, d'obtenir l'URL de la page et de créer de nouveaux éléments dans le document.
 
