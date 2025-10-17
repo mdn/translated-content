@@ -12,7 +12,7 @@ l10n:
 
 [`keydown`](/ja/docs/Web/API/Element/keydown_event) と `keyup` イベントは、どのキーが押されたかを示すコードを提供し、 `keypress` はどの文字が入力されたかを示します。例えば、小文字の "a" は `keydown` と `keyup` では 65 と報告され、 `keypress` では 97 と報告されます。大文字の "A" は、どのイベントでも 65 と報告されます。
 
-キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) がついた何らかの要素、および、{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("summary")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{HTMLElement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree)を {{domxref("Document")}} に達するまでバブリングします。
+キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) がついた何らかの要素、および、{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("summary")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{HTMLElement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [DOM ツリー](/ja/docs/conflicting/Web/API/Document_Object_Model#what_is_a_dom_tree)を {{domxref("Document")}} に達するまでバブリングします。
 
 イベントのターゲットは、異なるキーイベント間で変更されることがあります。例えば、 <kbd>Tab</kbd> キーを押したときの `keydown` のターゲットは、 `keyup` のターゲットとは異なるものになるでしょう。フォーカスが変更されるからです。
 
@@ -99,7 +99,8 @@ eventTarget.addEventListener("keyup", (event) => {
 });
 ```
 
-> **メモ:** `keydown` とは異なり、 `keyup` イベントには IME イベントのための即別な {{domxref("KeyboardEvent/keyCode", "keyCode")}} 値がありません。しかし、 `keydown` と同様に、 IME を開くための最初の文字を入力したときに、 `compositionstart` が `keyup` の後に発行されたり、 `compositionend` が `keyup` の前に発行されたりすることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。
+> [!NOTE]
+> `keydown` とは異なり、 `keyup` イベントには IME イベントのための即別な {{domxref("KeyboardEvent/keyCode", "keyCode")}} 値がありません。しかし、 `keydown` と同様に、 IME を開くための最初の文字を入力したときに、 `compositionstart` が `keyup` の後に発行されたり、 `compositionend` が `keyup` の前に発行されたりすることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。
 
 ## 仕様書
 

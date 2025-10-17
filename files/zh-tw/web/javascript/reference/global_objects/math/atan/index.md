@@ -2,10 +2,8 @@
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
-
-{{JSRef}}
 
 **`Math.atan()`** 靜態方法回傳數字的反正切值（單位為弧度），也就是說：
 

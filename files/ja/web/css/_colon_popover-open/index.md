@@ -2,10 +2,8 @@
 title: :popover-open
 slug: Web/CSS/:popover-open
 l10n:
-  sourceCommit: 83e726344918789d680b8dfee1af5afe8f208f1d
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}{{SeeCompatTable}}
 
 **`:popover-open`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{domxref("Popover API", "ポップオーバー", "", "nocode")}}要素（すなわち [`popover` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/popover)のあるもの）が表示中の状態であることを表します。これを使用して、ポップオーバー要素が表示中の場合だけスタイルを適用することができます。
 
@@ -36,7 +34,7 @@ l10n:
 }
 ```
 
-既定値のスタイルを上書きして、ビューポートの他の場所にポップオーバーが現れるようにするには、上記のスタイルを次のように上書きする必要があります。
+既定値のスタイルを上書きして、ビューポートの他の場所にポップオーバーが現れるようにするには、上記のスタイルを次のように上書きできます。
 
 ```css
 :popover-open {
@@ -61,3 +59,4 @@ l10n:
 ## 関連情報
 
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)
+- HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性

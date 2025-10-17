@@ -3,8 +3,6 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 ---
 
-{{CSSRef}}
-
 **`border-image-outset`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 테두리 상자와 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 거리를 설정합니다.
 
 `border-image-outset`으로 인해 요소 바깥에 그려지는 테두리로는 스크롤이 생기지 않으며 마우스 이벤트를 잡아낼 수도 없습니다.

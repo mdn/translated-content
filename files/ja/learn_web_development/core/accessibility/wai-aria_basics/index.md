@@ -813,7 +813,8 @@ function showQuote() {
 
 {{EmbedLiveSample("aria-live", "100", "180")}}
 
-> **メモ:** [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) プロパティは、ライブリージョンが更新された際に何が読み上げられるかを制御するのにとても役に立ちます。 例えば、追加や削除をされた内容だけを読み上げさせることもできます。
+> [!NOTE]
+> [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) プロパティは、ライブリージョンが更新された際に何が読み上げられるかを制御するのにとても役に立ちます。 例えば、追加や削除をされた内容だけを読み上げさせることもできます。
 
 ### キーボードでのアクセシビリティの拡張
 

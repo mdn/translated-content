@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7c6b02283df15120126fd174f91519c9a76d81c9
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 119 の変更点をまとめています。Firefox 119 は、2023 年 10 月 24 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -28,7 +26,7 @@ l10n:
 
 ### SVG
 
-- すべての SVG 要素で、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) の値を受け入れる [SVG 属性](/ja/docs/Web/SVG/Reference/Attribute) が [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/ja/docs/Web/CSS/length) [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) をサポートしました。これはフォントサイズ (`cap`、`rem` など) やビューポート (`vh`、`vw`、`vmin` など) に基づくサイズや、絶対的な長さ (`px`、`cm` など) で SVG 要素のサイズを決めることを可能にします。例: `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>` (詳しくは [Firefox bug 1287054](https://bugzil.la/1287054) をご覧ください)
+- すべての SVG 要素で、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) の値を受け入れる [SVG 属性](/ja/docs/Web/SVG/Reference/Attribute) が [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/ja/docs/Web/CSS/length) [CSS データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types) をサポートしました。これはフォントサイズ (`cap`、`rem` など) やビューポート (`vh`、`vw`、`vmin` など) に基づくサイズや、絶対的な長さ (`px`、`cm` など) で SVG 要素のサイズを決めることを可能にします。例: `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>` (詳しくは [Firefox bug 1287054](https://bugzil.la/1287054) をご覧ください)
 
 ### HTTP
 

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/audio
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Element/source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
+L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
 
 {{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
 
@@ -24,13 +24,13 @@ figure {
 }
 ```
 
-L'exemple qui précède illustre le fonctionnement simple d'un élément `<audio>`, à la façon de ce qui peut être fait pour une image avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) : on inclut un chemin vers la ressource grâce à l'attribut `src` et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc.
+L'exemple qui précède illustre le fonctionnement simple d'un élément `<audio>`, à la façon de ce qui peut être fait pour une image avec l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) : on inclut un chemin vers la ressource grâce à l'attribut `src` et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc.
 
 Le contenu présent à l'intérieur des balises `<audio></audio>` est affiché comme contenu alternatif lorsque le navigateur ne prend pas en charge l'élément.
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`autoplay`**
   - : Un attribut booléen : s'il est spécifié, l'audio commencera automatiquement la lecture dès qu'il pourra le faire, sans attendre la fin du téléchargement de l'ensemble du fichier audio.
@@ -41,13 +41,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`controls`**
   - : Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.
 - **`crossorigin`**
-  - : Cet attribut à valeur contrainte indique comment le CORS doit être utilisé afin de récupérer la ressource. [Les ressources utilisant le CORS](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans corrompre celui-ci. Les valeurs autorisées pour cet attribut sont :
+  - : Cet attribut à valeur contrainte indique comment le CORS doit être utilisé afin de récupérer la ressource. [Les ressources utilisant le CORS](/fr/docs/Web/HTML/How_to/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sans corrompre celui-ci. Les valeurs autorisées pour cet attribut sont :
     - `anonymous`
-      - : Une requête multi-origine est envoyée sans information d'authentification. Autrement dit, l'en-tête HTTP [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) est envoyé sans cookie, certificat X.509 ou sans authentification HTTP. Si le serveur ne fournit pas d'information d'authentification au site d'origine (sans indiquer l'en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)), la ressource sera corrompue (_tainted_) et son utilisation sera restreinte.
+      - : Une requête multi-origine est envoyée sans information d'authentification. Autrement dit, l'en-tête HTTP [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin) est envoyé sans cookie, certificat X.509 ou sans authentification HTTP. Si le serveur ne fournit pas d'information d'authentification au site d'origine (sans indiquer l'en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)), la ressource sera corrompue (_tainted_) et son utilisation sera restreinte.
     - `use-credentials`
       - : Une requête multi-origine est envoyée avec une information d'authentification (c'est-à-dire avec un en-tête HTTP `Origin:` qui contient un cookie, un certificat ou effectuant une authentification HTTP).
 
-    Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS et empêche ainsi d'utiliser la ressource dans un [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Si la valeur fournie est invalide, elle sera considérée comme `anonymous`. Voir [Paramétrage des attributs relatifs au CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus d'informations.
+    Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS et empêche ainsi d'utiliser la ressource dans un [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Si la valeur fournie est invalide, elle sera considérée comme `anonymous`. Voir [Paramétrage des attributs relatifs au CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
 
 - **`disableRemotePlayback`** {{experimental_inline}}
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir [cette proposition de spécification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
@@ -74,7 +74,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     > - La spécification n'oblige pas le navigateur à suivre la valeur de cet attribut ; il s'agit d'une simple indication.
 
 - **`src`**
-  - : L'URL du fichier audio à intégrer. Cet élément est soumis aux [contrôles d'accès HTTP](/fr/docs/Web/HTTP/CORS). Cet attribut est facultatif ; vous pouvez utiliser l'élément [`<source>`](/fr/docs/Web/HTML/Element/source) dans le bloc audio pour spécifier l'audio à intégrer.
+  - : L'URL du fichier audio à intégrer. Cet élément est soumis aux [contrôles d'accès HTTP](/fr/docs/Web/HTTP/Guides/CORS). Cet attribut est facultatif ; vous pouvez utiliser l'élément [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) dans le bloc audio pour spécifier l'audio à intégrer.
 
 ## Évènements
 
@@ -103,7 +103,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ## Notes d'utilisation
 
-Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/fr/docs/Web/Media/Formats/Containers) et [codecs audio](/fr/docs/Web/Media/Formats/Audio_codecs) ; vous pouvez fournir plusieurs sources à l'intérieur d'éléments [`<source>`](/fr/docs/Web/HTML/Element/source) imbriqués, et le navigateur utilisera alors le premier qu'il comprend :
+Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/fr/docs/Web/Media/Formats/Containers) et [codecs audio](/fr/docs/Web/Media/Formats/Audio_codecs) ; vous pouvez fournir plusieurs sources à l'intérieur d'éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) imbriqués, et le navigateur utilisera alors le premier qu'il comprend :
 
 ```html
 <audio controls>
@@ -116,7 +116,7 @@ Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/f
 </audio>
 ```
 
-Nous proposons un [guide substantiel et complet des types de fichiers médias](/fr/docs/Web/Media/Formats) et des [codecs audio qui peuvent être utilisés en leur sein](/fr/docs/Web/Media/Formats/Audio_codecs). Est également disponible [un guide des codecs supportés pour la vidéo](/fr/docs/Web/Media/Formats/Video_codecs).
+Nous proposons un [guide substantiel et complet des types de fichiers médias](/fr/docs/Web/Media/Guides/Formats) et des [codecs audio qui peuvent être utilisés en leur sein](/fr/docs/Web/Media/Formats/Audio_codecs). Est également disponible [un guide des codecs supportés pour la vidéo](/fr/docs/Web/Media/Formats/Video_codecs).
 
 Autres notes d'utilisation :
 
@@ -125,7 +125,7 @@ Autres notes d'utilisation :
 - Vous pouvez également utiliser l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API) pour générer et manipuler directement des flux audio à partir du code JavaScript plutôt que de diffuser des fichiers audio préexistants.
 - Les éléments `<audio>` ne peuvent pas avoir de sous-titres ou de légendes associés de la même manière que les éléments `<video>`. Voir [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) (en) par Ian Devlin pour des informations utiles et des solutions de contournement.
 
-Une bonne source générale d'informations sur l'utilisation de `<audio>` est le tutoriel sur le [contenu vidéo et audio](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+Une bonne source générale d'informations sur l'utilisation de `<audio>` est le tutoriel sur le [contenu vidéo et audio](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
 ### Mise en forme avec CSS
 
@@ -213,7 +213,7 @@ Les éléments audio contenant des dialogues parlés doivent fournir des sous-ti
 
 Si un service de sous-titre automatique est utilisé, il est nécessaire de vérifier le contenu généré afin de s'assurer qu'il correspond correctement à la source audio.
 
-L'élément `<audio>` ne prend pas directement en charge le WebVTT. Vous devrez trouver une bibliothèque ou un framework qui vous offre cette capacité, ou écrire le code pour afficher les sous-titres vous-même. Une option consiste à lire votre audio à l'aide d'un élément [`<video>`](/fr/docs/Web/HTML/Element/video), qui prend en charge WebVTT.
+L'élément `<audio>` ne prend pas directement en charge le WebVTT. Vous devrez trouver une bibliothèque ou un framework qui vous offre cette capacité, ou écrire le code pour afficher les sous-titres vous-même. Une option consiste à lire votre audio à l'aide d'un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), qui prend en charge WebVTT.
 
 En plus des dialogues parlés, les sous-titres et les transcriptions doivent également identifier la musique et les effets sonores qui communiquent des informations importantes. Cela inclut l'émotion et le ton. Par exemple, dans le WebVTT ci-dessous, notez l'utilisation de crochets pour donner un ton et un aperçu émotionnel au spectateur ; cela peut aider à établir l'ambiance autrement fournie par la musique, les sons non verbaux et les effets sonores cruciaux, et ainsi de suite.
 
@@ -247,7 +247,7 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
 - [Sous-titrage sur le web](/fr/docs/Glossary/Plugin)
 - [Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/) (en anglais)
-- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) (en anglais)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html) (en anglais)
 
@@ -362,7 +362,7 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
 
 - L'API [Web Audio](/fr/docs/Web/API/Web_Audio_API)
 - [`HTMLAudioElement`](/fr/docs/Web/API/HTMLAudioElement)
-- L'élément [`<source>`](/fr/docs/Web/HTML/Element/source)
-- L'élément [`<video>`](/fr/docs/Web/HTML/Element/video)
-- [Apprentissage : Contenu vidéo et audio](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- L'élément [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
+- L'élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
+- [Apprentissage : Contenu vidéo et audio](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Les bases de l'audio multi-navigateur](/fr/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

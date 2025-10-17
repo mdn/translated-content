@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 この記事では、開発者に影響を与える Firefox 65 の変更点について説明します。Firefox 65 は 2019 年 1 月 29 日に出荷されました。
 
 ## ウェブ開発者のための変更

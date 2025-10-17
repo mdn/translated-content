@@ -49,7 +49,8 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 
 各チャンネルと各サンプルフレームに対して、スクリプトノードの {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} イベントハンドラーが関連する `audioProcessingEvent` を使用し、入力バッファーの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
 
-> **メモ:** [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/script-processor-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/)したりすることができます。
+> [!NOTE]
+> [完全な例をライブで実行](https://mdn.github.io/webaudio-examples/script-processor-node/)したり、[ソースを表示](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/)したりすることができます。
 
 ```js
 const myScript = document.querySelector("script");

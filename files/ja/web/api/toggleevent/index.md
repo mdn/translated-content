@@ -13,7 +13,8 @@ l10n:
 
 {{InheritanceDiagram}}
 
-> **メモ:** `ToggleEvent` は `HTMLDetailsElement` の {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} イベントとは関係ありません。こちらは {{htmlelement("details")}} において、`open`/`closed` の状態が変化したときに発生します。こちらのイベントオブジェクトは一般的な {{domxref("Event")}} です。
+> [!NOTE]
+> `ToggleEvent` は `HTMLDetailsElement` の {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} イベントとは関係ありません。こちらは {{htmlelement("details")}} において、`open`/`closed` の状態が変化したときに発生します。こちらのイベントオブジェクトは一般的な {{domxref("Event")}} です。
 
 ## コンストラクター
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2b0dc5e25a67e7b75845c17797f95230e000bffd
 ---
 
-{{GlossarySidebar}}
-
 不正式地说，*站点*是一个网站（一组由同一域提供服务，并且由单一的组织提供维护的网页的集合）。
 
 浏览器有时需要去精确地区分不同的站点。例如，浏览器必须仅发送 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie 给同一站点，然后才能设置它们。

@@ -4,7 +4,7 @@ slug: Web/HTTP/Guides/Redirections
 original_slug: Web/HTTP/Redirections
 ---
 
-{{HTTPSidebar}}La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
+La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
 
 ## Principe
 
@@ -52,7 +52,7 @@ Les redirections HTTP ne sont pas les seuls moyens de définir des redirections.
 
 ### Redirections HTML
 
-Les redirections HTTP sont le moyen privilégié de créer des redirections, mais parfois le développeur Web n'a pas le contrôle du serveur ou ne peut pas le configurer. Pour ces cas spécifiques, les développeurs Web peuvent créer une page HTML avec un élément {{HTMLElement("meta")}} et son attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) avec la valeur `refresh`, positionné dans le {{HTMLElement("head")}} de la page. Lors de l'affichage de la page, le navigateur trouvera cet élément et ira à la page indiquée.
+Les redirections HTTP sont le moyen privilégié de créer des redirections, mais parfois le développeur Web n'a pas le contrôle du serveur ou ne peut pas le configurer. Pour ces cas spécifiques, les développeurs Web peuvent créer une page HTML avec un élément {{HTMLElement("meta")}} et son attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta#http-equiv) avec la valeur `refresh`, positionné dans le {{HTMLElement("head")}} de la page. Lors de l'affichage de la page, le navigateur trouvera cet élément et ira à la page indiquée.
 
 ```html
 <head>
@@ -60,7 +60,7 @@ Les redirections HTTP sont le moyen privilégié de créer des redirections, mai
 </head>
 ```
 
-L'attribut [`content`](/fr/docs/Web/HTML/Global_attributes#content) commence avec un nombre indiquant combien de secondes le navigateur doit attendre avant de rediriger vers l'URL fournie. Toujours le mettre à 0, pour une meilleure accessibilité.
+L'attribut [`content`](/fr/docs/Web/HTML/Reference/Global_attributes#content) commence avec un nombre indiquant combien de secondes le navigateur doit attendre avant de rediriger vers l'URL fournie. Toujours le mettre à 0, pour une meilleure accessibilité.
 
 Bien entendu, cette méthode ne fonctionne qu'avec des pages HTML (ou similaires) et ne peut être utilisée pour des images ou tout autre type de contenu.
 

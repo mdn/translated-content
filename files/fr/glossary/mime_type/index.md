@@ -19,4 +19,4 @@ Il répond au même objectif que les extensions de fichiers traditionnellement u
 
 - [Liste des types MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [Configurer correctement les types MIME sur un serveur](/fr/docs/Learn/Server-side/Configuring_server_MIME_types)
-- Détails sur l'utilisation des [types MIME](/fr/docs/Web/HTTP/MIME_types) dans un contexte Web.
+- Détails sur l'utilisation des [types MIME](/fr/docs/Web/HTTP/Guides/MIME_types) dans un contexte Web.

@@ -169,7 +169,7 @@ Puedes entonces acceder a elementos individuales en el arreglo mediante la notac
    > [!NOTE]
    > Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
 
-3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arrelog multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
+3. Ten en cuenta que un arreglo dentro de otro arreglo se llama arreglo multidimensional o matriz. Puedes acceder a los elementos de un arreglo que estén dentro de otro, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
 
    ```js
    random[2][2];

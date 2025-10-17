@@ -42,7 +42,8 @@ Si `deep` se establece a `false`, los elementos hijos no se clonan. Tampoco se c
 
 Si `deep` se evalúa a `true`, el subárbol completo (incluyendo texto que pueda estar en nodos {{domxref("Text")}} hijos) también se copian. En los nodos vacíos (por ejemplo, los elementos {{HTMLElement("img")}} y {{HTMLElement("input")}}) no importa si `deep` es `true` o `false`.
 
-> **Advertencia:** `cloneNode()` puede conducir a elementos con ID's duplicados en el documento.
+> [!WARNING]
+> `cloneNode()` puede conducir a elementos con ID's duplicados en el documento.
 
 Si el nodo original tiene un ID el elemento clonado se ubicará en el mismo documento, el ID del clon debería ser modificado para ser único. Los atributos name pueden necesitar ser modificados también, dependiendo de si se esperan nombres duplicados.
 

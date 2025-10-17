@@ -3,7 +3,7 @@ title: ::view-transition
 slug: Web/CSS/::view-transition
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡叠加层的根元素，它包含所有视图过渡且位于所有其他页面内容的顶部。
 
