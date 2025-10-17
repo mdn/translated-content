@@ -30,6 +30,7 @@
 /docs/zh-tw/  @mdn/zh-content
 
 # Issue templates
+/.github/ISSUE_TEMPLATE/                       @mdn/content-team
 /.github/ISSUE_TEMPLATE/page-report-es.yml     @mdn/es-content
 /.github/ISSUE_TEMPLATE/page-report-fr.yml     @mdn/fr-content
 /.github/ISSUE_TEMPLATE/page-report-ja.yml     @mdn/ja-content
