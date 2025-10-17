@@ -10,7 +10,7 @@ HTTP 的 **`If-Unmodified-Since`** {{Glossary("request header", "请求标头")}
 
 `If-Unmodified-Since` 标头通常用于以下情况：
 
-- 当与 {{HTTPMethod("POST")}} 等非{{Glossary("Safe/HTTP", "安全")}}方法结合使用时，此标头可用于实现[乐观并发控制](https://zh.wikipedia.org/wiki/乐观并发控制)例如某些 Wiki 系统的做法）：如果自上次获取以来存储的文档已被修改，则会拒绝修订请求，从而避免冲突。
+- 当与 {{HTTPMethod("POST")}} 等非{{Glossary("Safe/HTTP", "安全")}}方法结合使用时，此标头可用于实现[乐观并发控制](https://zh.wikipedia.org/wiki/乐观并发控制)（例如某些 Wiki 系统的做法）：如果自上次获取以来存储的文档已被修改，则会拒绝修订请求，从而避免冲突。
 - 当与 {{HTTPHeader("Range")}} 标头一起用于范围请求时，该标头可确保新请求的内容片段来自未被修改的文档。
 
 <table class="properties">
