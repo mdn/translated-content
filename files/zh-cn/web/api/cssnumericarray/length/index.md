@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-整型。它表示列表中 {{domxref("CSSNumericValue")}} 对象的数量。
+表示列表中 {{domxref("CSSNumericValue")}} 对象的数量的整型值。
 
 ## 示例
 
