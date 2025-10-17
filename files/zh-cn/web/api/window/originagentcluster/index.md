@@ -18,9 +18,9 @@ l10n:
 - 通过 {{domxref("Window.postMessage()")}} 向其他同站点跨源页面发送 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
 - 向其他同站点跨源页面发送 {{jsxref("SharedArrayBuffer")}} 或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象。
 
-要请求浏览器将此窗口分配给源键控代理集群，服务器必须发送 {{httpheader("Origin-Agent-Cluster")}} 响应头。
+要请求浏览器将此窗口分配给源键控代理集群，服务器必须发送 {{httpheader("Origin-Agent-Cluster")}} 响应标头。
 
-请注意，源键控代理集群特性仅在 {{glossary("Secure Context", "安全上下文")}} 中受支持。如果站点不是安全上下文，`window.originAgentCluster` 将始终返回 `false`。
+请注意，源键控代理集群特性仅在{{glossary("Secure Context", "安全上下文")}}中受支持。如果站点不是安全上下文，`window.originAgentCluster` 将始终返回 `false`。
 
 ## 规范
 
@@ -32,5 +32,5 @@ l10n:
 
 ## 参见
 
-- {{httpheader("Origin-Agent-Cluster")}} HTTP 响应头
-- [使用 Origin-Agent-Cluster 头请求性能隔离](https://web.developers.google.cn/articles/origin-agent-cluster)
+- {{httpheader("Origin-Agent-Cluster")}} HTTP 响应标头
+- [使用 Origin-Agent-Cluster 标头请求性能隔离](https://web.developers.google.cn/articles/origin-agent-cluster)
