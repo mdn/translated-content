@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 62ebcab471aceef4d843e57e310dae4ab1eda94a
 ---
 
-{{CSSRef}}
-
-**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
+**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
 
 ## 構文
 
-`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)で使用される数値の定数を定義します。
+`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)で使用される数値の定数を定義します。
 
 ### 値
 
@@ -45,7 +43,8 @@ l10n:
 
 これらのルールの適用例は、[無限大、NaN、ゼロによる除算](#無限大、nan、ゼロによる除算)の節で示します。
 
-> **メモ:** `infinity` を `calc()` の引数として使用する必要があることは稀ですが、ハードコードされた「マジックナンバー」を避けたり、特定の値が常に他の値よりも大きくなるようにするために使用することができます。
+> [!NOTE]
+> `infinity` を `calc()` の引数として使用する必要があることは稀ですが、ハードコードされた「マジックナンバー」を避けたり、特定の値が常に他の値よりも大きくなるようにするために使用することができます。
 > プロパティがそのデータ型に対して「可能な限り大きな値」を持つことを明白にする必要がある場合に有益なことがあります。
 
 ### 公式定義
@@ -54,7 +53,7 @@ l10n:
 
 ## 解説
 
-数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
+数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
 例えば、次のようになります。
 
 - `animation-name: pi;` は "pi" という名前のアニメーションを表し、数学定数の `pi` にはなりません。

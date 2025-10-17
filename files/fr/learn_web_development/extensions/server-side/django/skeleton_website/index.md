@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-Ce second article de la série [didactique Django](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...
+Ce second article de la série [didactique Django](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...
 
 <table class="standard-table">
   <tbody>
@@ -47,7 +47,7 @@ La création est aisée:
 3. Enregistrez la nouvelle application dans le projet.
 4. Liez les urls et chemins pour chaque application.
 
-Pour [le site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), le dossier du site web et celui du projet auront le même nom _locallibrary_. Une seule application _catalog_ sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :
+Pour [le site web "Bibliothèque locale"](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), le dossier du site web et celui du projet auront le même nom _locallibrary_. Une seule application _catalog_ sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :
 
 ```bash
 locallibrary/         # Website folder
@@ -63,7 +63,7 @@ La suite de ce chapitre est consacrée pas à pas aux étapes de création d'un 
 
 ## Créer le projet _locallibrary_
 
-Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
+Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
 
 ```bash
 mkdir django_projects
@@ -166,7 +166,7 @@ INSTALLED_APPS = [
 Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le nom (`CatalogConfig`) qui a été généré dans le fichier **/locallibrary/catalog/apps.py** quand l'application a été créée.
 
 > [!NOTE]
-> Nous verrons plus loin les autres paramètres de ce fichier(comme `MIDDLEWARE`). Cela permet la prise en charge par [Django administration site](/fr/docs/Learn/Server-side/Django/Admin_site) et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).
+> Nous verrons plus loin les autres paramètres de ce fichier(comme `MIDDLEWARE`). Cela permet la prise en charge par [Django administration site](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).
 
 ## Définir la base de données
 
@@ -374,7 +374,7 @@ Comme vous avez pu le constatez plus haut, une route pour l'administration du si
 
 Le squelette du site web est entièrement construit à ce stade. Désormais, vous allez pouvoir y ajouter des urls, des vues, des modèles de données, des gabarits et des formulaires.
 
-Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est opérationnel et nous allons passer à la partie codage et développement pour que le site produise ce qu'il est censé faire.
+Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) est opérationnel et nous allons passer à la partie codage et développement pour que le site produise ce qu'il est censé faire.
 
 ## Voir aussi
 

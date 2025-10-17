@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 28505c5b2d83732399d8ba96e4b32793580a7f13
 ---
 
-{{CSSRef}}
-
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。
 
 それぞれのボックスは 4 つの部品（または*領域*）から構成され、それぞれの縁について*コンテンツの縁 (content edge)*、_パディングの縁 (padding edge)_、_境界の縁 (border edge)_、_マージンの縁 (margin edge)_ が定義されています。
@@ -58,6 +56,6 @@ l10n:
     - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
     - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
     - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

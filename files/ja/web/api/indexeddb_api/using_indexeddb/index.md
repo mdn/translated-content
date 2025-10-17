@@ -2,7 +2,7 @@
 title: IndexedDB の使用
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -61,7 +61,7 @@ request.onsuccess = (event) => {
 };
 ```
 
-2 つの関数 `onsuccess()` と `onerror()` のどちらが呼び出されるのでしょう? すべてが成功すると成功イベント (すなわち `type` プロパティが `"success"` である DOM イベント) が、`request` を `target` として発生します。イベントが発生すると `request` の `onsuccess()` 関数が、success イベントを引数として呼び出されます。一方、何らかの問題がある場合はエラーイベント (すなわち `type` プロパティが `"error"` である DOM イベント) が `request` で発生します。これは、エラーイベントを引数として `onerror()` 関数を呼び出します。
+リクエストが成功した場合、{{domxref("IDBRequest.success_event", "success")}} イベントが発生し、`onsuccess` に代入された関数が呼び出されます。リクエストが失敗した場合、{{domxref("IDBRequest.error_event", "error")}} イベントが発生し、`onerror` に代入された関数が呼び出されます。
 
 IndexedDB API は必要なエラー処理を最小限にするよう設計されていますので、多くのエラーイベントを見ることはないでしょう (少なくとも、API に慣れていなければ)。しかしデータベースを開く場合は、エラーイベントが発生する一般的な状況があります。もっとも多いであろう問題は、データベースを作成する許可をユーザーがウェブアプリに与えなかったことです。IndexedDB の主要な設計目標のひとつが、オフラインで使用するために大量のデータを保存できるようにすることです。(各ブラウザーでどれだけの量のストレージを持てるかについては、[ブラウザーのストレージ制限と削除基準ページ内のどれだけのデータが格納できるか](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#どれだけのデータが格納できるか)をご覧ください)
 
@@ -255,7 +255,7 @@ request.onupgradeneeded = (event) => {
 };
 ```
 
-キージェネレーターについて詳しくは、["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept) をご覧ください。
+キージェネレーターについて詳しくは、仕様書の [Key generators](https://w3c.github.io/IndexedDB/#key-generator-construct) をご覧ください。
 
 ## データの追加、読み取り、削除
 
@@ -538,7 +538,7 @@ objectStore.openCursor(null, "prev").onsuccess = (event) => {
 };
 ```
 
-`"name"` インデックスは一意ではありませんので、`name` が同じ項目が複数存在する可能性があります。キーは常に一意でなければならないため、オブジェクトストアでこのような状況は発生できないことに注意してください。インデックスに対して反復処理を行う際に重複を取り除きたい場合は、方向の引数に `nextunique` (逆向きであれば `prevunique`) を指定します。`nextunique` または `prevunique` を使用すると、常にキーが最小の項目が返ります。
+"name" インデックスは一意ではありませんので、`name` が同じ項目が複数存在する可能性があります。キーは常に一意でなければならないため、オブジェクトストアでこのような状況は発生できないことに注意してください。インデックスに対して反復処理を行う際に重複を取り除きたい場合は、方向の引数に `nextunique` (逆向きであれば `prevunique`) を指定します。`nextunique` または `prevunique` を使用すると、常にキーが最小の項目が返ります。
 
 ```js
 index.openKeyCursor(null, "nextunique").onsuccess = (event) => {
@@ -574,7 +574,6 @@ openReq.onupgradeneeded = (event) => {
 openReq.onsuccess = (event) => {
   const db = event.target.result;
   useDatabase(db);
-  return;
 };
 
 function useDatabase(db) {
@@ -636,8 +635,8 @@ IndexedDB API を使用した完全な例があります。この例では、出
 ### リファレンス
 
 - [IndexedDB API リファレンス](/ja/docs/Web/API/IndexedDB_API)
-- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
-- IndexedDB [インターフェイスファイル](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) (Firefox のソースコード内)
+- [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
+- IndexedDB [インターフェイスファイル](https://searchfox.org/firefox-main/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) (Firefox のソースコード内)
 
 ### チュートリアルとガイド
 

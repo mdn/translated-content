@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`ruby-position`** は CSS のプロパティで、ベース要素に対するルビ要素の位置を定義します。要素の上方 (`over`)、下方 (`under`)、文字の間の右側 (`inter-character`) に配置できます。
 
 {{InteractiveExample("CSS デモ: ruby-position")}}

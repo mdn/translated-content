@@ -1,11 +1,9 @@
 ---
 title: CSS 数学関数の使用
-slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+slug: Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
-
-{{CSSRef}}
 
 **CSS 数学関数**を使用すると、要素の `height`, `animation-duration`, `font-size` などのプロパティ値を数式として書くことができます。
 
@@ -21,7 +19,7 @@ l10n:
 
 上記で記載した例を含め、多くの場合、 **CSS に直接組み込まれた数学関数を使用することができます**。 この解決策は、 JavaScript を使用するよりも実装が簡単で、ブラウザーでの実行も高速になることが多いです。
 
-全部で、開発者はこのスタイルシートで [24 種類近くの CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)の組み合わせを使用することができます。このガイドでは、より一般的に使用されている 4 つの例を挙げ、さらに高度なものを紹介します。
+全部で、開発者はこのスタイルシートで [24 種類近くの CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)の組み合わせを使用することができます。このガイドでは、より一般的に使用されている 4 つの例を挙げ、さらに高度なものを紹介します。
 
 ## `calc()`: 基本的な算術演算
 
@@ -316,11 +314,11 @@ div > code {
 
 DOM 要素のレイアウトやスタイル設定を行う際には、多くの場合は 4 つの基本的な数学関数である {{CSSxRef("calc", "calc()")}}、{{CSSxRef("min", "min()")}}、{{CSSxRef("max", "max()")}}、{{CSSxRef("clamp", "clamp()")}} で十分です。しかし、数学の学習素材や 3D の視覚化、 CSS アニメーションなど高度な用途では、次の関数を使う事も考えられます。
 
-- [段階値関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#段階値関数)
+- [段階値関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#段階値関数)
   - {{CSSxRef("round", "round()")}}: **指定した丸め方法で**値を計算する
   - {{CSSxRef("mod", "mod()")}}: 除算の**剰余**を**除数と同じ符号**で計算する
   - {{CSSxRef("rem", "rem()")}}: 除算の**剰余**を**被除数と同じ符号**で計算する
-- [三角関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#三角関数)
+- [三角関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#三角関数)
   - {{CSSxRef("sin", "sin()")}}: 数値の**正弦**（サイン） を計算する
   - {{CSSxRef("cos", "cos()")}}: 数値の**余弦**（コサイン）を計算する
   - {{CSSxRef("tan", "tan()")}}: 数値の**正接**（タンジェント）を計算する
@@ -328,13 +326,13 @@ DOM 要素のレイアウトやスタイル設定を行う際には、多くの�
   - {{CSSxRef("acos", "acos()")}}: 数値の**逆余弦**（アークコサイン）を計算する
   - {{CSSxRef("atan", "atan()")}}: 数値の**逆正接**（アークタンジェント）を計算する
   - {{CSSxRef("atan2", "atan2()")}}: 指定された 2 つの数値の**逆正接**（アークタンジェント）を計算する
-- [指数関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#指数関数)
+- [指数関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#指数関数)
   - {{CSSxRef("pow", "pow()")}}: ある数値と他の数値の**べき乗**を計算する
   - {{CSSxRef("sqrt", "sqrt()")}}: ある数値の**平方根**を計算する
   - {{CSSxRef("hypot", "hypot()")}}: 指定された数値群の**二乗の合計の平方根**を計算する
   - {{CSSxRef("log", "log()")}}: ある数値の**対数**を（既定の底として `e` を使用して）計算する
   - {{CSSxRef("exp", "exp()")}}: ある数値の **`e` のべき乗**を計算する
-- [符号関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#符号関連関数)
+- [符号関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#符号関連関数)
   - {{CSSxRef("abs", "abs()")}}: ある数値の**絶対値**を計算する
   - {{CSSxRef("sign", "sign()")}}: ある数値の**符号（正、負、ゼロ）** を計算する
 

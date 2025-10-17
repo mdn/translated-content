@@ -3,8 +3,6 @@ title: background-position-x
 slug: Web/CSS/background-position-x
 ---
 
-{{CSSRef}}
-
 ## 概要
 
 **`background-position-x`** CSS 属性设置水平方向的位置，与每个背景图片等位置层设置属性 {{cssxref("background-origin")}}相关。更多信息请查看{{cssxref("background-position")}}属性，这个用的比较普遍。

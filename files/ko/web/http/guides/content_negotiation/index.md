@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Content_negotiation
 original_slug: Web/HTTP/Content_negotiation
 ---
 
-{{HTTPSidebar}}
-
 [HTTP](/ko/docs/Glossary/HTTP)에서 콘텐츠 협상(Content negotiation)이란 동일한 URI에서 리소스의 서로 다른 버전을 제공하기 위해 사용하는 메커니즘으로, 사용자 에이전트가 사용자에게 제일 잘 맞는 것이 무엇인지(예를 들어, 문서의 언어, 이미지 포맷 혹은 컨텐츠 인코딩에 있어 어떤 것이 적절한지)를 명시할 수 있습니다.
 
 ## 콘텐츠 협상의 원칙

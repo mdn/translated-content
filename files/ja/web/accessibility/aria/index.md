@@ -57,7 +57,8 @@ function updateProgress(percentComplete) {
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **メモ:** `min` 属性は {{HTMLElement('progress')}} 要素では許可されません。その最小値は常に `0` です。
+> [!NOTE]
+> `min` 属性は {{HTMLElement('progress')}} 要素では許可されません。その最小値は常に `0` です。
 
 > [!NOTE]
 > HTML のランドマーク要素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} など）は、組み込みの暗黙の ARIA ロールを持っているので、それらを重複指定する必要はありません。

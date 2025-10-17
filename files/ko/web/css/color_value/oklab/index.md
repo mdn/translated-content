@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 802978f38824a4132b4f9b3d3c23fb6970beba74
 ---
 
-{{CSSRef}}
-
 **`oklab()`** 함수 표기법은 주어진 색상을 Oklab {{glossary("color space", "색 공간")}}으로 표현하는데, 이는 인간의 눈이 색을 인식하는 방식을 모방하려고 합니다.
 
 Oklab은 지각 기반 색 공간으로, 다음과 같은 작업에 유용합니다.

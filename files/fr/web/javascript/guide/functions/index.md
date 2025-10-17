@@ -333,7 +333,7 @@ En résumé :
 - La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
 
 > [!NOTE]
-> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
+> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Guide/Closures).
 
 L'exemple qui suit illustre l'imbrication de fonctions :
 
@@ -541,7 +541,8 @@ monConcat("; ", "éléphant", "girafe", "lion", "singe");
 monConcat(". ", "sauge", "basilic", "origan", "poivre", "échalotte");
 ```
 
-> **Note :** `arguments` est une variable « semblable » à un tableau. Mais ce n'est pas un tableau au sens strict. En effet, il possède un index numéroté ainsi qu'une propriété `length`. En revanche, il ne possède pas les méthodes classiques de manipulation des tableaux (Array).
+> [!NOTE]
+> `arguments` est une variable « semblable » à un tableau. Mais ce n'est pas un tableau au sens strict. En effet, il possède un index numéroté ainsi qu'une propriété `length`. En revanche, il ne possède pas les méthodes classiques de manipulation des tableaux (Array).
 
 Voir la page sur l'objet {{jsxref("Function")}} dans la référence JavaScript pour plus d'informations.
 
