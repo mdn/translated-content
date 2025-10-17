@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Properties and Values API")}}
 
-{{domxref("CSSPropertyRule")}} 接口的只读属性 **`inherits`** 返回由 {{cssxref("@property")}} 规则表示的自定义属性注册的继承标志，用于描述该属性是否默认继承的布尔值。
+{{domxref("CSSPropertyRule")}} 接口的只读属性 **`inherits`** 返回由 {{cssxref("@property")}} 规则表示的自定义属性注册的继承标志，即用于描述该属性是否默认继承的布尔值。
 
 ## 值
 
