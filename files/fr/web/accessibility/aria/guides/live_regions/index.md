@@ -118,7 +118,7 @@ Lorsque l'utilisateur·ice sélectionne une nouvelle planète, l'information dan
 
 Voici une capture d'écran de VoiceOver sur Mac annonçant la mise à jour (via les sous-titres) de la zone dynamique&nbsp;:
 
-![Capture d'écran de VoiceOver sur Mac annonçant la mise à jour d'une zone « live ». Les sous-titres sont affichés.](web_accessibility_aria_aria_live_regions.png)
+![Capture d'écran de VoiceOver sur Mac annonçant la mise à jour d'une zone «&nbsp;live&nbsp;». Les sous-titres sont affichés.](web_accessibility_aria_aria_live_regions.png)
 
 ## Rôles avec attributs de zone « live » implicites
 
@@ -168,7 +168,7 @@ Les éléments ayant les valeurs [`role="…"`](/fr/docs/Web/Accessibility/ARIA/
 
 ## Attributs supplémentaires pour les zones « live »
 
-Les zones dynamiques sont bien prises en charge. The Paciello Group a publié en 2014 des [informations sur l'état du support des zones « live » <sup>(angl.)</sup>](https://www.tpgi.com/screen-reader-support-aria-live-regions/). Paul J. Adam a étudié plus particulièrement le [support des attributs `aria-atomic` et `aria-relevant` <sup>(angl.)</sup>](https://pauljadam.com/demos/aria-atomic-relevant.html).
+Les zones dynamiques sont bien prises en charge. The Paciello Group a publié en 2014 des [informations sur l'état du support des zones «&nbsp;live&nbsp;» <sup>(angl.)</sup>](https://www.tpgi.com/screen-reader-support-aria-live-regions/). Paul J. Adam a étudié plus particulièrement le [support des attributs `aria-atomic` et `aria-relevant` <sup>(angl.)</sup>](https://pauljadam.com/demos/aria-atomic-relevant.html).
 
 1. **`aria-atomic`**&nbsp;: L'attribut `aria-atomic=BOOLÉEN` est utilisé pour définir si le lecteur d'écran doit ou non présenter la zone dynamique comme un ensemble, même si une partie seulement de la zone est modifiée — Les valeurs possibles sont `false`/`true`. La valeur par défaut est `false`.
 2. [**`aria-relevant`**](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
