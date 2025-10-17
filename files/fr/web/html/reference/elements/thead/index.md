@@ -118,7 +118,7 @@ td {
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs dépréciés ou obsolètes
 
@@ -176,7 +176,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Exemples
 
-Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'utilisation de l'élément `<thead>`.
+Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation de l'élément `<thead>`.
 
 ## Spécifications
 
@@ -189,15 +189,15 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples
 ## Voir aussi
 
 - Les autres éléments HTML liés aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Element/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Element/td)
-  - [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot)
-  - [`<th>`](/fr/docs/Web/HTML/Element/th)
-  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
+  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
+  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
+  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
+  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
+  - [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody)
+  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
+  - [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)
+  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
+  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
 - Les propriétés et pseudo-classes CSS particulièrement utiles pour mettre en forme l'élément `<thead>`&nbsp;:
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules de la colonne
   - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (par exemple le point ou la virgule)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`grid-template-columns`** CSS 속성은 {{glossary("grid column", "grid columns")}}의 열 이름과 트랙 크기 조정 함수들을 정의합니다.
 
 {{InteractiveExample("CSS Demo: grid-template-columns")}}
@@ -130,7 +128,8 @@ grid-template-columns: unset;
 
     만약 {{cssxref("minmax", "minmax()")}} notation 외부에서 사용된다면, `auto`는 위에 명시된것과 같이 최소, 최대값 사이의 범위를 나타냅니다. 이것은 대부분 `minmax(min-content,max-content)`와 유사하게 동작합니다.
 
-    > **참고:** `auto` 트랙 크기는 (그리고 오직 `auto` 트랙 크기만) {{cssxref("align-content")}} 과 {{cssxref("justify-content")}} 요소에 의해 확장될 수 있습니다. 그러므로 기본적으로 `auto`에 크기가 지정된 트랙은 그리드 컨테이너의 나머지 공간을 차지합니다.
+    > [!NOTE]
+    > `auto` 트랙 크기는 (그리고 오직 `auto` 트랙 크기만) {{cssxref("align-content")}} 과 {{cssxref("justify-content")}} 요소에 의해 확장될 수 있습니다. 그러므로 기본적으로 `auto`에 크기가 지정된 트랙은 그리드 컨테이너의 나머지 공간을 차지합니다.
 
 - `{{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - `max(minimum, min(limit, max-content))` 공식을 의미합니다. minimum이 `auto` 최소값(항상은 아니지만 주로 {{cssxref("min-content")}}의 최소값과 동일한), limit은 fit-content()의 인자로 전달되는 트랙 크기를 결정하는 함수입니다. 이 값은 주로 `minmax(auto, max-content)` 와 `minmax(auto, limit)`에서 작은 값으로 계산됩니다.

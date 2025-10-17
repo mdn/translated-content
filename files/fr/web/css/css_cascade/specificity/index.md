@@ -4,15 +4,14 @@ slug: Web/CSS/CSS_cascade/Specificity
 original_slug: Web/CSS/Specificity
 ---
 
-{{CSSRef}}
-
 La **spécificité** est le moyen par lequel les navigateurs décident quelles valeurs de propriété CSS d'un élément sont les plus pertinentes et seront appliquées. La spécificité est basée sur les règles, ciblant un élément, composées par différents types de [sélecteurs CSS](/fr/docs/Web/CSS/Reference#sélecteurs).
 
 ## Détermination de la spécificité
 
 La spécificité est l'importance donnée à une déclaration CSS, déterminée par le nombre de [types de sélecteur](#types_de_sélecteurs) dans le sélecteur correspondant. Lorsque plusieurs déclarations ont une même spécificité, la dernière déclaration trouvée dans la CSS est appliquée à l'élément. La spécificité ne s'applique que lorsque le même élément est ciblé par plusieurs déclarations. Selon les règles CSS, [les éléments ciblés directement](#éléments_ciblés_directement_vs_styles_hérités) seront toujours prioritaires par rapport aux règles héritées par un élément de leurs ancêtres.
 
-> **Note :** [la proximité des éléments](#ignorance_de_la_proximité_dans_l'arborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
+> [!NOTE]
+> [la proximité des éléments](#ignorance_de_la_proximité_dans_l'arborescence) dans l'arborescence du document n'a aucun effet sur la spécificité.
 
 ### Types de sélecteurs
 
@@ -24,13 +23,13 @@ Les types de sélecteurs de la liste suivante sont présentés dans l'ordre de s
 
 Sélecteur universel ({{CSSxRef("Universal_selectors", "*")}}), combinateurs ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/fr/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) et pseudo-classe de négation ({{CSSxRef(":not", ":not()")}}) n'ont aucun effet sur la spécificité (cependant, les sélecteurs déclarés _à l'intérieur de_ `:not()` ont un effet).
 
-Pour davantage d'informations, veuillez visiter&nbsp;: ["Spécificité" dans "Cascade et héritage"](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité_2), vous pouvez également visiter&nbsp;: <https://specifishity.com>
+Pour davantage d'informations, veuillez visiter&nbsp;: ["Spécificité" dans "Cascade et héritage"](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#spécificité_2), vous pouvez également visiter&nbsp;: <https://specifishity.com>
 
 Les styles ajoutés à un élément dans la balise HTML (ex.&nbsp;: `style="font-weight: bold;"`) sont prioritaires par rapport à tout style provenant d'une feuille de style externe et peuvent donc être considérés comme ayant la plus grande spécificité.
 
 ### L'exception !important
 
-Lorsqu'une règle `important` est utilisée dans une déclaration de style, cette déclaration est prioritaire par rapport à toute autre déclaration. Même si, techniquement, `!important` n'a rien à voir avec la spécificité, elle interagit directement avec elle. Cependant, utiliser `!important,` est une **mauvaise pratique** et devrait être évité car cela rend le débogage difficile en affectant le traitement naturel en [cascade](/fr/docs/Web/CSS/Cascade) dans vos feuilles de styles. Lorsque deux déclarations en conflit avec la règle `!important` sont appliquées au même élément, la déclaration avec la plus haute spécificité sera prise en compte.
+Lorsqu'une règle `important` est utilisée dans une déclaration de style, cette déclaration est prioritaire par rapport à toute autre déclaration. Même si, techniquement, `!important` n'a rien à voir avec la spécificité, elle interagit directement avec elle. Cependant, utiliser `!important,` est une **mauvaise pratique** et devrait être évité car cela rend le débogage difficile en affectant le traitement naturel en [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) dans vos feuilles de styles. Lorsque deux déclarations en conflit avec la règle `!important` sont appliquées au même élément, la déclaration avec la plus haute spécificité sera prise en compte.
 
 **Quelques règles de base&nbsp;:**
 
@@ -338,18 +337,18 @@ Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, m
 - Calculateur de spécificité&nbsp;: un site web interactif permettant de tester et comprendre vos propres règles CSS - <https://specificity.keegan.st/>
 - Spécificité des sélecteurs CSS3 - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/initial_value)
-    - [Calculées](/fr/docs/Web/CSS/computed_value)
-    - [Utilisées](/fr/docs/Web/CSS/used_value)
-    - [Effectives](/fr/docs/Web/CSS/actual_value)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

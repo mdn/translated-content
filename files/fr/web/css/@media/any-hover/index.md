@@ -1,22 +1,24 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`any-hover`** est une caractéristique média CSS qui permet de vérifier si un mécanisme de saisie/d'entrée permet à l'utilisateur de survoler les éléments.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`any-hover`** est utilisée pour tester si _n'importe quel_ mécanisme d'entrée disponible peut survoler un élément.
 
 ## Syntaxe
 
-La caractéristique `any-hover` est définie avec un mot-clé parmi ceux de la liste ci-après.
+La caractéristique `any-hover` se définit à l'aide d'un mot-clé choisi parmi la liste ci-dessous.
 
 - `none`
-  - : Parmi les mécanismes de saisi, aucun ne permet de survoler les éléments (ou il n'existe aucun dispositif de pointage).
+  - : Aucun des mécanismes d'entrée disponibles ne permet de survoler facilement, ou il n'existe pas de mécanisme de pointage.
 - `hover`
-  - : Un ou plusieurs mécanismes de saisie permettent de survoler le contenu simplement.
+  - : Un ou plusieurs mécanismes d'entrée disponibles permettent de survoler facilement des éléments.
 
 ## Exemples
+
+### Tester si les méthodes de saisie peuvent survoler
 
 ### HTML
 
@@ -36,7 +38,7 @@ La caractéristique `any-hover` est définie avec un mot-clé parmi ceux de la l
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("tester_si_les_méthodes_de_saisie_peuvent_survoler")}}
 
 ## Spécifications
 

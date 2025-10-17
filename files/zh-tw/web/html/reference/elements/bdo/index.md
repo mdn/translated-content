@@ -3,8 +3,6 @@ title: <bdo>：雙向文字覆蓋元素
 slug: Web/HTML/Reference/Elements/bdo
 ---
 
-{{HTMLSidebar}}
-
 **`<bdo>`** [HTML](/zh-TW/docs/Web/HTML) 元素覆蓋了文本的當前方向性，使其中的文本以不同的方向呈現。
 
 {{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}

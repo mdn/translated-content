@@ -1,69 +1,125 @@
 ---
 title: :first-child
 slug: Web/CSS/:first-child
+l10n:
+  sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-{{CSSRef}}
+**`:first-child`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中的第一個元素。
 
-`:first-child`是[CSS](/zh-TW/docs/Web/CSS)當中的一種[偽類別（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)，代表任何身為長子的元素（親元素的第一個子元素）。
+{{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
 
-## 語法
+```css interactive-example
+p {
+  font-weight: bold;
+}
 
-{{csssyntax}}
-
-## 範例
-
-### 範例 1
-
-#### HTML 內文
-
-```html
-<div>
-  <span>This span is limed!</span>
-  <span>This span is not. :(</span>
-</div>
-```
-
-#### CSS 內文
-
-```css
-span:first-child {
-  background-color: lime;
+li:first-child {
+  border: 2px solid orange;
 }
 ```
 
-呈現效果如下：
-
-{{EmbedLiveSample('範例_1',300,50)}}
-
-### 範例 2 - 使用 UL
-
-#### HTML 內文
-
-```html
+```html interactive-example
+<p>田徑冠軍：</p>
 <ul>
-  <li>List 1</li>
-  <li>List 2</li>
-  <li>List 3</li>
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
 </ul>
 ```
 
-#### CSS 內文
+## 語法
 
 ```css
-li {
-  color: red;
-}
-li:first-child {
-  color: green;
+:first-child {
+  /* ... */
 }
 ```
 
-呈現效果如下：
+## 範例
 
-{{EmbedLiveSample('範例_2_-_使用_UL',300,100)}}
+### 基本範例
 
-## 規格
+#### HTML
+
+```html
+<div>
+  <p>這段文字被選取了！</p>
+  <p>這段文字沒有被選取。</p>
+</div>
+
+<div>
+  <h2>這段文字沒有被選取：它不是一個 `p` 元素。</h2>
+  <p>這段文字沒有被選取。</p>
+</div>
+```
+
+#### CSS
+
+```css
+p:first-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('基本範例', 500, 200)}}
+
+### 為列表設定樣式
+
+#### HTML
+
+```html
+<ul>
+  <li>項目 1</li>
+  <li>項目 2</li>
+  <li>
+    項目 3
+    <ul>
+      <li>項目 3.1</li>
+      <li>項目 3.2</li>
+      <li>項目 3.3</li>
+    </ul>
+  </li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul li {
+  color: blue;
+}
+
+ul li:first-child {
+  color: red;
+  font-weight: bold;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('為列表設定樣式')}}
+
+## 規範
 
 {{Specifications}}
 
@@ -73,6 +129,7 @@ li:first-child {
 
 ## 參見
 
-- {{cssxref(":last-child")}}
-- {{cssxref(":nth-child")}}
-- {{cssxref(":last-of-type")}}
+- {{CSSxRef(":-moz-first-node")}}
+- {{CSSxRef(":first-of-type")}}
+- {{CSSxRef(":last-child")}}
+- {{CSSxRef(":nth-child", ":nth-child()")}}

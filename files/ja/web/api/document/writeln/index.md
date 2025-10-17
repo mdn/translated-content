@@ -8,7 +8,8 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-> **警告:** `document.writeln()` メソッドの使用は固く避けるべきです。
+> [!WARNING]
+> `document.writeln()` メソッドの使用は固く避けるべきです。
 >
 > [HTML 仕様書自体で次のように警告しています](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>)。
 >
@@ -41,7 +42,8 @@ document.writeln("<p>パスワードを入力してください:</p>");
 
 **document.writeln** は {{domxref("document.write")}} と同じですが、改行文字を追加します。
 
-> **メモ:** **document.writeln** は (**document.write** と同様に) XHTML 文書では動作しません (エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます)。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の MIME タイプで提供されたときに発生します。詳細は [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
+> [!NOTE]
+> **document.writeln** は (**document.write** と同様に) XHTML 文書では動作しません (エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます)。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の MIME タイプで提供されたときに発生します。詳細は [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
 
 ## 仕様書
 

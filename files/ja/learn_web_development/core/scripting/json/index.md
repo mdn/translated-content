@@ -213,7 +213,8 @@ JSON を取得するには、[フェッチ](/ja/docs/Web/API/Fetch_API)という
 - {{domxref("Window/fetch", "fetch()")}} 関数を使用してネットワーク要求を行い、{{domxref("Response")}} オブジェクトを返します。
 - レスポンスオブジェクトの {{domxref("Response/json", "json()")}} 関数を使用して、レスポンスを JSON で取得します。
 
-> **メモ:** `fetch()` API は**非同期**です。非同期関数については[次のモジュール](/ja/docs/Learn_web_development/Extensions/Async_JS)でたくさん学びますが、今は、フェッチ API を使用する関数名の前にキーワード {{jsxref("Statements/async_function", "async")}}、あらゆる非同期関数への呼び出し前にキーワード {{jsxref("Operators/await", "await")}} が必要だということだけ言っておきます。
+> [!NOTE]
+> `fetch()` API は**非同期**です。非同期関数については[次のモジュール](/ja/docs/Learn_web_development/Extensions/Async_JS)でたくさん学びますが、今は、フェッチ API を使用する関数名の前にキーワード {{jsxref("Statements/async_function", "async")}}、あらゆる非同期関数への呼び出し前にキーワード {{jsxref("Operators/await", "await")}} が必要だということだけ言っておきます。
 
 すべて完了すると、`superHeroes` 変数に JSON を基にした JavaScript オブジェクトが格納されます。最初のオブジェクトは `<header>` を正しいデータで満たし、2 つ目はチームの各ヒーローの情報カードを作成し、それを `<section>` に挿入しています。
 

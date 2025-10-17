@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 
 静的な **`Reflect.get()`** メソッドは、オブジェクト (`target[propertyKey]`) からプロパティを関数として取得するように動作します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.get()")}}
 
 ```js interactive-example
 const object1 = {

@@ -3,8 +3,6 @@ title: id
 slug: Web/HTML/Reference/Global_attributes/id
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`id`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)定义了一个全文档唯一的标识符（ID）。
 
 {{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}

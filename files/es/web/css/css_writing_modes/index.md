@@ -3,8 +3,6 @@ title: CSS Writing Modes
 slug: Web/CSS/CSS_writing_modes
 ---
 
-{{CSSRef}}
-
 **CSS Writing Modes** es un modulo CSS que define varios modos internacionales de escritura, como izquierda-derecha (e.g. usado por Latin y textos Indic), de derecha-zquierda (e.g. usado por textos Hebreos o Árabes), bidireccional (usado cuando se mezcla izquierda-derecha y derecha-izquierda) y vertical (e.g. usado por algunos textos Asiaticos).
 
 ## Referencia

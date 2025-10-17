@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{AddonSidebar}}
-
 此类型是代表 Web 请求中获取到的资源的上下文环境的字符串。
 
 在 webRequest API 中它可用于[过滤](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter)你希望监听的请求。例如：你可以选择只监听图像请求或脚本请求。
