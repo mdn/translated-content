@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Type
 original_slug: Web/HTTP/Headers/Content-Type
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Type`** 개체 헤더는 리소스의 {{Glossary("MIME type","media type")}}을 나타내기 위해 사용됩니다.
 
 응답 내에 있는 `Content-Type` 헤더는 클라이언트에게 반환된 컨텐츠의 컨텐츠 유형이 실제로 무엇인지를 알려줍니다. 브라우저들은 어떤 경우에는 MIME 스니핑을 해서 이 헤더의 값을 꼭 따르지는 않을 겁니다; 이를 막기 위해, {{HTTPHeader("X-Content-Type-Options")}} 헤더를 `nosniff`으로 설정할 수 있습니다.

@@ -1,13 +1,13 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété (plutôt qu'un [dégradé unique](/fr/docs/Web/CSS/gradient/conic-gradient)), avec des transitions de couleurs qui tournent autour d'un point central (plutôt que de [rayonner depuis le centre](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)).
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété. Elle permet d'avoir un motif répété qu'on pourrait décrire avec une seule itération grâce à [`conic-gradient`](/fr/docs/Web/CSS/gradient/conic-gradient) et les transitions de couleurs évoluent en cercle autour du centre (plutôt que d'évoluer sur l'axe qui s'étend depuis le centre, comme avec [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)).
-
-{{InteractiveExample("CSS Demo: repeating-conic-gradient()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: repeating-conic-gradient()")}}
 
 ```css interactive-example-choice
 background: repeating-conic-gradient(red 0%, yellow 15%, red 33%);
@@ -40,34 +40,51 @@ background: repeating-conic-gradient(
 /* Une étoile avec deux niveaux de bleu. Le dégradé
    est centré dans le quart supérieur gauche et tourné
    de 3 degrés, il n'y a donc pas de ligne horizontale */
-background: repeating-conic-gradient(
+repeating-conic-gradient(
   from 3deg at 25% 25%,
-  hsl(200, 100%, 50%) 0deg 15deg,
-  hsl(200, 100%, 60%) 10deg 30deg
-);
+  hsl(200 100% 50%) 0deg 15deg,
+  hsl(200 100% 60%) 10deg 30deg
+)
+
+/* Interpolation dans l'espace colorimétrique polaire
+   avec la méthode d'interpolation de teinte la plus longue */
+repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 
 ### Valeurs
 
-- [`<angle>`](/fr/docs/Web/CSS/angle)
+- {{CSSxRef("&lt;angle&gt;")}}
   - : Lorsque cet angle est précédé du mot-clé `from`, cela définit la rotation du dégradé dans le sens horaire.
 - `<position>`
-  - : Une position définie avec la même syntaxe que la propriété [`background-position`](/fr/docs/Web/CSS/background-position). Cette position définit le centre du dégradé. Lorsque cette valeur est absente, la valeur utilisée par défaut est `center`, ce qui indique que le dégradé est centré.
+  - : Une position définie avec la même syntaxe que la propriété {{CSSxRef("background-position")}}. Cette position définit le centre du dégradé. Lorsque cette valeur est absente, la valeur utilisée par défaut est `center`, ce qui indique que le dégradé est centré.
 - `<angular-color-stop>`
-  - : Une valeur [`<color>`](/fr/docs/Web/CSS/color_value) pour un arrêt de couleur, suivie par une ou plusieurs positions d'arrêt (données par un [`<angle>`](/fr/docs/Web/CSS/angle) le long de l'arc). La taille de l'arc répété pour le dégradé est donné par l'angle du dernier arrêt de couleur auquel on a soustrait l'angle du premier arrêt de couleur.
+  - : Une valeur {{CSSxRef("&lt;color&gt;")}} pour un arrêt de couleur, suivie par une ou plusieurs positions d'arrêt (données par un {{CSSxRef("&lt;angle&gt;")}} le long de l'arc). La taille de l'arc répété pour le dégradé est donné par l'angle du dernier arrêt de couleur auquel on a soustrait l'angle du premier arrêt de couleur.
 - `<color-hint>`
-  - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleurs adjacents. Cette indication indique l'emplacement où la couleur doit être la couleur intermédiaire entre les deux arrêts environnant. Si cette valeur est absente, la moitié de la transition entre les couleurs sera atteinte à la moitié de l'arc entre les deux arrêts.
+  - : Une indication d'{{Glossary("interpolation")}} qui définit la façon dont le dégradé progresse entre deux arrêts de couleurs adjacents. Cette indication indique l'emplacement où la couleur doit être la couleur intermédiaire entre les deux arrêts environnant. Si cette valeur est absente, la moitié de la transition entre les couleurs sera atteinte à la moitié de l'arc entre les deux arrêts.
 
 > [!NOTE]
-> Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour [les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour [les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 
-La syntaxe pour `repeating-conic-gradient()` est semblable à celle de [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient) et à celle de [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient). À l'instar du dégradé conique unitaire, les arrêts de couleur sont placés autour d'un arc. Comme pour les dégradés radiaux répétés, la taille de la portion répétée correspond au premier arrêt de couleur auquel on a soustrait l'angle du dernier arrêt de couleur.
+Parmi les exemples de dégradés coniques répétés, on trouve les motifs en étoile. Le résultat de la fonction `repeating-conic-gradient()` est un objet du type de données {{CSSxRef("&lt;gradient&gt;")}}, qui est un type particulier de {{CSSxRef("&lt;image&gt;")}}.
 
-![Comparaison des arrêts de couleur entre les dégradés coniques et radiaux, simples ou répétés.](repeatingconicgradient.png)
+Si ni le premier ni le dernier arrêt de couleur ne comporte un angle supérieur à 0deg ou inférieur à 360 degrés respectivement, le dégradé conique ne sera pas répété.
 
-Les dégradés ci-dessus sont définis avec un tiers de bleu, un tiers de rouge et un tiers de jaune.
+Comme tout autre dégradé, un dégradé conique répété [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description)&nbsp;: il n'a donc pas de taille naturelle ou préférée, ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique, ou à la taille définie pour `<image>` si elle diffère de celle de l'élément.
+
+Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des `<image>` sont acceptées. Pour cette raison, `repeating-conic-gradient()` ne fonctionnera pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
+
+> [!NOTE]
+> Pour créer un dégradé conique qui ne se répète pas, effectuez une rotation complète de 360 degrés pour le dégradé, ou utilisez la fonction {{cssxref("gradient/conic-gradient", "conic-gradient()")}}.
+
+### Comprendre les dégradés coniques répétés
+
+La syntaxe de `repeating-conic-gradient` est similaire à celle de {{cssxref("gradient/conic-gradient", "conic-gradient()")}} et de {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}. Comme pour le dégradé conique non répété, les arrêts de couleur sont placés autour d'un arc de dégradé. Comme pour le dégradé radial répété, la taille de la section répétée correspond à l'angle du dernier arrêt de couleur auquel on soustrait l'angle du premier arrêt de couleur.
+
+![Comparaison des arrêts de couleur pour les dégradés coniques et radiaux, répétés et non répétés](repeatingconicgradient.png)
+
+Les dégradés ci-dessus sont définis comme étant un tiers bleu, un tiers rouge et un tiers jaune.
 
 ```css
 repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
@@ -79,32 +96,30 @@ conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
 radial-gradient(red 33%, yellow 33% 66%, blue 66%);
 ```
 
-Pour un dégradé répété, on définit le premier et le dernier arrêt de couleur. Si les valeurs ne sont pas explicitement définies, elles correspondent respectivement aux angles `0` et `360deg`. Lorsque ces valeurs sont utilisées par défaut, l'arc qui est répété occupe 360 degrés et il n'y a donc pas de répétition.
+Pour qu'un dégradé conique répété se répète vraiment, il faut indiquer clairement où il commence et où il finit, c'est-à-dire le premier et le dernier arrêt de couleur. Si vous ne précisez rien, le dégradé commence à 0 et finit à 100% ou 360 degrés. Dans ce cas, le motif ne se répète pas, car il fait un tour complet.
 
-Comme le dégradé conique unitaire, les arrêts de couleur sont placés le long d'un arc de dégradé, la circonférence d'un cercle plutôt que le long d'une ligne qui est émise depuis le centre du dégradé. La transition entre les couleurs se fait autour du centre, en démarrant en haut s'il n'y a pas d'indication `from <angle>`, dans le sens des aiguilles d'une montre, pour l'angle indiqué, puis se répétant.
+Dans un dégradé conique, les arrêts de couleur sont placés tout autour d'un cercle, comme les heures sur une horloge. Les couleurs changent en tournant autour du centre, en partant du haut (sauf si vous utilisez `from <angle>` pour changer le point de départ), et avancent dans le sens des aiguilles d'une montre sur l'angle défini, puis recommencent.
 
-Un dégradé conique répété est défini en indiquant un angle de rotation, le centre du dégradé et une liste d'arrêts de couleur. Les arrêts de couleur sont définis avec un angle (type CSS [`<angle>`](/fr/docs/Web/CSS/angle)). Les unités qui permettent de déclarer un angle sont `deg` (pour les degrés), `grad` (pour les grades), `rad` (pour les radians) et `turn` (pour les tours). Un cercle se compose de 360 degrés, 400 grades, 2π radians et d'un tour. Les navigateurs qui implémentent les dégradés coniques répétés acceptent également les pourcentages (100% correspond à 360 degrés), mais ce type de valeur ne fait pas partie de la spécification.
+Pour créer un dégradé conique répété, il faut choisir un angle de rotation, un centre pour le dégradé, puis donner la liste des couleurs et leurs positions. Les positions des couleurs s'expriment avec un angle (par exemple `deg` pour degrés, `grad` pour grades, `rad` pour radians, ou `turn` pour tours). Un cercle complet fait 360 degrés, 400 grades, 2π radians ou 1 tour. Certains navigateurs acceptent aussi les pourcentages (100% = 360 degrés), mais ça ne fait pas partie de la spécification.
 
-La syntaxe de définition permet de placer le centre du dégradé à l'intérieur ou encore à l'extérieur de l'image. Les valeurs permettant de définir la position du centre s'écrivent comme la syntaxe à deux valeurs de [`background-position`](/fr/docs/Web/CSS/background-position).
+Vous pouvez placer le centre du dégradé où vous voulez dans l'image, ou même en dehors. Pour cela, on utilise la même façon d'écrire la position que pour {{cssxref('background-position')}} avec deux valeurs.
 
-#### Personnaliser des dégradés
+L'arc du dégradé correspond à une partie du cercle. 0 degré est en haut (comme midi sur une horloge). Les couleurs du dégradé dépendent des arrêts de couleur, de leurs points de départ et d'arrivée, et éventuellement d'autres arrêts entre les deux. Vous pouvez aussi ajouter des indices pour contrôler comment les couleurs se mélangent entre deux arrêts.
 
-En ajoutant des arrêts de couleur à l'arc du dégradé, il est possible de créer des dégradés sur mesure. La position d'un arrêt de couleur se définit via un [`<angle>`](/fr/docs/Web/CSS/angle). Si on n'indique pas de position pour un arrêt, celui-ci est placé à mi-parcours entre le précédent et le suivant. Si la position du premier ou du dernier arrêt ne sont pas définies, par défaut, ils seront placés à `0deg` et à `360deg` respectivement.
+#### Personnaliser les dégradés
 
-Attention, lorsque ces valeurs par défaut sont utilisées, l'arc occupe tout le cercle et le dégradé n'est donc pas répété. Si on déclare un angle différent de 0 ou 360 degrés pour le premier et le dernier arrêt, le dégradé se répètera selon cette valeur. Ainsi, si on ne déclare pas d'angle pour la première couleur et 10% pour le dernier arrêt de couleur, l'arc se répètera dix fois. Le point de départ correspond au premier arrêt de couleur déclaré et le dernier arrêt de couleur correspond au dernier angle déclaré.
-
-Les deux formulations suivantes sont donc équivalentes&nbsp;:
+En ajoutant plus d'arrêts de couleur avec des angles différents sur l'arc du dégradé, vous pouvez créer des transitions très personnalisées entre plusieurs couleurs. La position d'un arrêt de couleur peut être définie précisément avec un {{CSSxRef("&lt;angle&gt;")}}. Si vous ne précisez pas la position d'un arrêt, il sera placé à mi-chemin entre celui qui le précède et celui qui le suit. Comme pour les dégradés non répétés, si vous ne donnez pas d'angle au premier ou au dernier arrêt, ils seront placés à 0deg et 360deg. Si vous ne donnez pas d'angle à l'un ou l'autre, vous obtiendrez un dégradé conique non répété. Si vous donnez une valeur différente de 0 ou 360 degrés au premier ou au dernier arrêt, le dégradé se répétera selon cette valeur. Par exemple, si vous ne donnez pas d'angle au premier arrêt et que vous mettez 10% au dernier, l'arc se répétera 10 fois. Le point de départ est le premier arrêt déclaré, et le point d'arrivée est l'angle du dernier arrêt déclaré. Les deux dégradés suivants sont équivalents&nbsp;:
 
 ```css
 repeating-conic-gradient(red, orange, yellow, green, blue 50%);
 repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225deg)
 ```
 
-Par défaut, les couleurs évoluent progressivement entre chaque arrêt et le milieu de l'arc correspondra à la moyenne des couleurs. Il est possible de déplacer ce point intermédiaire en fournissant une indication quant à l'emplacement du milieu de la transition.
+Par défaut, les couleurs passent en douceur d'un arrêt à l'autre, et le milieu de la transition se trouve à mi-chemin entre les deux arrêts. Vous pouvez déplacer ce point de transition en ajoutant un indice de couleur, qui indique où le centre de la transition doit se situer.
 
-Si deux (voire plusieurs) couleurs sont au même emplacement, la transition sera une ligne brutale entre la première et la dernière couleur déclarées à cet emplacement.
+Si deux arrêts de couleur ou plus sont placés au même endroit, la transition sera une ligne franche entre la première et la dernière couleur déclarées à cet endroit.
 
-Bien qu'il soit possible de mélanger et de combiner différentes unités pour les angles, il est préférable d'éviter par souci de lisibilité et maintenabilité.
+Il est possible de mélanger différentes unités d'angle, mais il vaut mieux éviter&nbsp;: cela rend le code CSS difficile à lire.
 
 ### Syntaxe formelle
 
@@ -114,8 +129,8 @@ Bien qu'il soit possible de mélanger et de combiner différentes unités pour l
 
 Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Bien qu'il soit possible de créer des camemberts, damiers, etc. avec CSS, si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document, car CSS ne fournit pas de méthode native pour indiquer un texte alternatif.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
+- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Exemples
 
@@ -138,7 +153,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 220, 220)}}
+{{EmbedLiveSample("Étoile en noir et blanc", 220, 220)}}
 
 ### Dégradé désaxé
 
@@ -166,9 +181,61 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 220, 220)}}
+{{EmbedLiveSample("Dégradé désaxé", 220, 220)}}
 
-### D'autres exemples
+### Interpolation avec teinte
+
+```html hidden
+<div class="shorter"></div>
+<div class="longer"></div>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 45vw;
+  height: 80vh;
+}
+
+.shorter::before {
+  content: "teinte plus courte";
+  display: block;
+  margin-top: -1rem;
+}
+
+.longer::before {
+  content: "teinte plus longue";
+  display: block;
+  margin-top: -1rem;
+}
+```
+
+Dans cet exemple d'interpolation, on utilise le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) et la teinte (<i lang="en">hue</i>) est interpolée.
+
+```css
+.shorter {
+  background-image: repeating-conic-gradient(
+    in hsl shorter hue,
+    red,
+    blue 180deg
+  );
+}
+
+.longer {
+  background-image: repeating-conic-gradient(
+    in hsl longer hue,
+    red,
+    blue 180deg
+  );
+}
+```
+
+La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/hue-interpolation-method#shorter), c'est-à-dire que la couleur passe directement du rouge au bleu en empruntant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/hue-interpolation-method#longer), ce qui signifie que la couleur va du rouge au bleu en passant par les verts, les jaunes et les oranges, en empruntant l'arc le plus long.
+
+{{EmbedLiveSample("Interpolation avec teinte", 240, 200)}}
+
+### Autres exemples de `repeating-conic-gradient`
 
 Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
@@ -183,14 +250,11 @@ Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- Autres fonctions de dégradés&nbsp;: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{cssxref("&lt;image&gt;")}}
+- La fonction {{cssxref("image/image","image()")}}
+- La fonction {{cssxref("element", "element()")}}
+- La fonction {{cssxref("image/image-set","image-set()")}}
+- La fonction {{cssxref("cross-fade", "cross-fade()")}}

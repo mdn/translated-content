@@ -2606,21 +2606,11 @@
       "shyangs"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-04-22T07:31:11.966Z",
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T22:48:01.128Z",
     "contributors": [
       "jackblackevo",
-      "PJCHENder"
-    ]
-  },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:14.453Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jackblackevo",
-      "ethertank",
-      "Mgjbot",
-      "BobChao"
+      "Shiyou"
     ]
   },
   "Web/API/DragEvent": {
@@ -3774,7 +3764,7 @@
       "wildsky"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
       "Shiyou",
@@ -3867,6 +3857,16 @@
       "bensontobeicsc",
       "jackblackevo",
       "xuan0123"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:14.453Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jackblackevo",
+      "ethertank",
+      "Mgjbot",
+      "BobChao"
     ]
   },
   "Web/CSS/Descendant_combinator": {
@@ -4019,34 +4019,6 @@
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": [
       "yutzuch"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2019-11-28T04:54:28.795Z",
-    "contributors": [
-      "t7yang",
-      "fadeawaygod",
-      "wbamberg",
-      "Septem",
-      "fscholz",
-      "jackblackevo",
-      "Shiyou",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:48:01.128Z",
-    "contributors": [
-      "jackblackevo",
-      "Shiyou"
-    ]
-  },
-  "Web/Events/Event_handlers": {
-    "modified": "2020-05-13T00:05:39.122Z",
-    "contributors": [
-      "ginszme",
-      "jackblackevo"
     ]
   },
   "Web/HTML": {

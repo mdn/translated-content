@@ -49,7 +49,8 @@ insertAdjacentText(where, data)
 <!-- afterend -->
 ```
 
-> **メモ:** `beforebegin` および `afterend` の位置が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
+> [!NOTE]
+> `beforebegin` および `afterend` の位置が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
 
 ## 例
 

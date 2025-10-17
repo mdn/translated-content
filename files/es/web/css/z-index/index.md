@@ -3,8 +3,6 @@ title: z-index
 slug: Web/CSS/z-index
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS `z-index` indica el orden de un elemento [posicionado](/es/docs/Web/CSS/position) y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.

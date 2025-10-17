@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 Dans les protocoles client-serveur, comme HTTP, les sessions se composent de trois phases :
 
 1. Le client établit une connexion TCP (ou la connexion appropriée si la couche de transport n'est pas TCP).
@@ -18,7 +16,7 @@ Dans les protocoles client-serveur, comme HTTP, les sessions se composent de tro
 
 Dans les protocoles client-serveur, c'est le client qui établit la connexion. L'ouverture d'une connexion en HTTP signifie l'initiation d'une connexion dans la couche de transport sous-jacente, généralement TCP.
 
-Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le port 80. D'autres ports peuvent également être utilisés, comme 8000 ou 8080. L'URL d'une page à récupérer contient à la fois le nom de domaine et le numéro de port, Ce dernier peut être omis s'il en est à 80. Voir [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) pour plus de details.
+Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le port 80. D'autres ports peuvent également être utilisés, comme 8000 ou 8080. L'URL d'une page à récupérer contient à la fois le nom de domaine et le numéro de port, Ce dernier peut être omis s'il en est à 80. Voir [la référence sur les URL](/fr/docs/Web/URI) pour plus de details.
 
 > [!NOTE]
 > Le modèle client-serveur n'autorise pas le serveur à envoyer des données au client sans une demande explicite. Pour contourner ce problème, les développeurs Web utilisent plusieurs techniques: effectuer un ping sur le serveur périodiquement via le {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} API, en utilisant le HTML [WebSockets API](/fr/WebSockets), ou des protocoles similaires.
@@ -59,10 +57,10 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### Méthodes de demande
 
-HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
+HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Reference/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
 
 - La méthode {{HTTPMethod ("GET")}} demande une représentation de données de la ressource spécifiée. Les requêtes utilisant `GET` ne doivent que récupérer les données.
-- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/Learn/Forms).
+- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\).
 
 ## Structure d'une réponse du serveur
 
@@ -133,7 +131,7 @@ Content-Type: text/html
 
 ### Codes d'état de réponse
 
-[Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Status) indiquent si une requête HTTP spécifique a été effectuée avec succès. Les réponses sont regroupées en cinq classes: réponses d'information, réponses réussies, redirections, erreurs de client et erreurs de serveurs.
+[Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status) indiquent si une requête HTTP spécifique a été effectuée avec succès. Les réponses sont regroupées en cinq classes: réponses d'information, réponses réussies, redirections, erreurs de client et erreurs de serveurs.
 
 - {{HTTPStatus(200)}}: OK. La demande a réussi.
 - {{HTTPStatus(301)}}: Moved Permanently. Ce code de réponse signifie que l'URL de la ressource demandée a été modifiée.
@@ -141,7 +139,7 @@ Content-Type: text/html
 
 ## Voir aussi
 
-- [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) (en anglais)
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [Méthode de requête HTTP](/fr/docs/Web/HTTP/Methods)
-- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Status)
+- [Identifier des ressources sur le Web](/fr/docs/Web/URI)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+- [Méthode de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
+- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)

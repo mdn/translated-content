@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 165f04fc4a77b053850bf6c5243831e1b17a2433
 ---
 
-{{HTTPSidebar}}
-
 **사용자 에이전트** {{Glossary("request header", "요청 헤더")}}는 서버와 네트워크 피어가 요청하는 애플리케이션, 운영체제, 제조업체, {{Glossary("user agent", "사용자 에이전트")}} 요청 버전을 식별하는 독특한 문자열입니다.
 
 > [!WARNING]

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7e1956dbec8369ae5533be89e21cbce2d5a2ae1c
 ---
 
-{{CSSRef}}
-
 `&` 중첩 선택자의 {{cssxref('specificity')}} 는 연관되어 있는 선택자 목록 중 가장 큰 명시도를 가진 것을 사용하여 계산됩니다. 이는 {{cssxref(':is',':is()')}} 함수를 사용할 때 명시도가 계산되는 방식과 동일합니다.
 
 ```html

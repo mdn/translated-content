@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
-{{InteractiveExample("CSS Demo: break-after")}}
+{{InteractiveExample("CSS デモ: break-after")}}
 
 ```css interactive-example-choice
 break-after: auto;

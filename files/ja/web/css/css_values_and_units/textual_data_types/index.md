@@ -1,11 +1,9 @@
 ---
 title: テキストデータ型
-slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
+slug: Web/CSS/CSS_values_and_units/Textual_data_types
 l10n:
   sourceCommit: 83dd1960e946e82f2cf830ac5df5703df501f73b
 ---
-
-{{CSSRef}}
 
 CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。このガイドでは、テキストデータ型の概要を説明します。より詳細な情報については、それぞれの値の型のページを参照してください。
 
@@ -93,8 +91,8 @@ left | right | none | inline-start | inline-end
 
 ## 関連情報
 
-- [数値データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [数値データ型](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
+- [CSS データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS カスケードと警鐘](/ja/docs/Web/CSS/CSS_cascade)モジュール

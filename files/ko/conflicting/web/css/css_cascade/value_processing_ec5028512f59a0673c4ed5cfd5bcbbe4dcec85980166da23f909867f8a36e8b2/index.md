@@ -4,13 +4,12 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd
 original_slug: Web/CSS/used_value
 ---
 
-{{cssref}}
-
 [CSS](/ko/docs/Web/CSS) 속성의 **사용값**은 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)에 모든 계산을 수행한 후의 결과 값입니다.
 
 모든 CSS 속성은 {{glossary("user agent", "사용자 에이전트")}}가 계산을 끝낸 후 사용값을 가집니다. 크기({{cssxref("width")}}, {{cssxref("line-height")}} 등)는 픽셀 단위로 정해집니다. 단축 속성({{cssxref("background")}} 등)의 값은 그 구성요소({{cssxref("background-color")}}, {{cssxref("background-size")}} 등)와 {{cssxref("position")}}, {{cssxref("float")}}이 가질 값과 일치합니다.
 
-> **참고:** {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API는 [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)을 반환합니다. 결정값은 속성에 따라 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)일 수도, 사용값일 수도 있습니다.
+> [!NOTE]
+> {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API는 [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)을 반환합니다. 결정값은 속성에 따라 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)일 수도, 사용값일 수도 있습니다.
 
 ## 예제
 
@@ -120,6 +119,6 @@ CSS 2.0은 속성의 계산에서 마지막 단계로 [계산값](/ko/docs/confl
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

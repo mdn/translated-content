@@ -3,8 +3,6 @@ title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
 ---
 
-{{CSSRef}}
-
 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) `scroll-margin-block` 设置了元素的块向滚动外边距。
 
 {{InteractiveExample("CSS Demo: scroll-margin-block")}}

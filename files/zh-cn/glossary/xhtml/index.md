@@ -5,8 +5,6 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{GlossarySidebar}}
-
 **XHTML**（可扩展超文本标记语言）是曾经被用来描述按照 {{Glossary("XML")}} 语法规则编写的 [HTML](/zh-CN/docs/Web/HTML) 文档的术语。
 
 下面的例子显示了一个 HTML 文档和相应的“XHTML”文档，以及应当搭配使用的 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 标头。

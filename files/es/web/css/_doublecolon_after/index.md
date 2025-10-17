@@ -5,8 +5,6 @@ l10n:
   sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
-{{CSSRef}}
-
 En CSS, **`::after`** crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comúnmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}. Está en línea de forma predeterminada.
 
 {{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}

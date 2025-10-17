@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 66fa0acf565a240c390418f588d571d6e650514d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 133 の変更点をまとめています。Firefox 133 は、米国時間 [2024 年 11 月 26 日](https://whattrainisitnow.com/release/?version=133) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element) で [`interactive-widgets`](/ja/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
+- [`<meta>` の `viewport` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport) で [`interactive-widgets`](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
 
 ### CSS
 

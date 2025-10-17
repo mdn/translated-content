@@ -288,7 +288,8 @@ html {
 
 {{EmbedLiveSample("box-models", "", "400px")}}
 
-> **メモ:** [ここ](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
+> [!NOTE]
+> [ここ](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model)でこのタスクの解決策を見つけることができます。
 
 ### ブラウザーの開発者ツールを使用してボックスモデルを見る
 

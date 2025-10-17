@@ -3,8 +3,6 @@ title: CSS 过渡
 slug: Web/CSS/CSS_transitions
 ---
 
-{{CSSRef}}
-
 **CSS 过渡**这一 CSS 模块让你可以在特定的 CSS 属性值之间创建平缓过渡。可通过指定这些过渡的计时函数、时长和其他属性控制其行为。
 
 ## 参考

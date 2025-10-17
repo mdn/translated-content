@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a5c7f9bfb294da287c1877c5eeec69a42638be0e
 ---
 
-{{jsSidebar("Classes")}}
-
 **`constructor`** 是一种用于创建和初始化 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 对象实例的特殊方法。
 
 > [!NOTE]

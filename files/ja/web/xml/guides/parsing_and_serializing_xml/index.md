@@ -59,7 +59,8 @@ fetch("example.xml")
 
 文書が {{Glossary("HTML")}} である場合、上記のコードは {{domxref("Document")}} を返します。文書が XML である場合、返されるオブジェクトは `XMLDocument` になります。この 2 種類は基本的に同じですが、その違いは主に歴史的な部分であり、差別化にはいくつかの実用的な利点があります。
 
-> **メモ:** {{domxref("HTMLDocument")}} インターフェイスもありますが、独立した型であるとは限りません。独立した型として扱うブラウザーもありますが、単なる `Document` インターフェイスへのエイリアスとしているブラウザーもあります。
+> [!NOTE]
+> {{domxref("HTMLDocument")}} インターフェイスもありますが、独立した型であるとは限りません。独立した型として扱うブラウザーもありますが、単なる `Document` インターフェイスへのエイリアスとしているブラウザーもあります。
 
 ## XML 文書のシリアライズ
 
@@ -69,7 +70,7 @@ fetch("example.xml")
 
 ### DOM ツリーを文字列にシリアライズ
 
-まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)で説明された方法で DOM ツリーを作成します。もしくは、 {{ domxref("Window/fetch", "fetch()") }} で取得した DOM ツリーを用います。
+まず、[DOM ツリーの作成方法](/ja/docs/conflicting/Web/API/Document_Object_Model)で説明された方法で DOM ツリーを作成します。もしくは、 {{ domxref("Window/fetch", "fetch()") }} で取得した DOM ツリーを用います。
 
 DOM ツリー `doc` を XML 文字列にシリアライズするには、以下のように {{domxref("XMLSerializer.serializeToString()")}} を呼び出します。
 
