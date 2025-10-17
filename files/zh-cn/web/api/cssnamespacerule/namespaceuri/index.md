@@ -3,7 +3,7 @@ title: CSSNamespaceRule：namespaceURI 属性
 short-title: namespaceURI
 slug: Web/API/CSSNamespaceRule/namespaceURI
 l10n:
-  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
+  sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
 {{ APIRef("CSSOM") }}
@@ -19,7 +19,7 @@ l10n:
 样式表包含一个命名空间作为唯一规则。因此返回的第一个 {{domxref("CSSRule")}} 将是一个 `CSSNamespaceRule`。`namespaceURI` 属性的值将是 `http://www.w3.org/1999/xhtml`。
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace url("http://www.w3.org/1999/xhtml");
 ```
 
 ```js
