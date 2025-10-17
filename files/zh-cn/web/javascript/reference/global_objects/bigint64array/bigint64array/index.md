@@ -1,5 +1,5 @@
 ---
-title: BigInt64Array() constructor
+title: BigInt64Array() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
 l10n:
   sourceCommit: 01ff31c3d7c6818de4b0cdd3c130ab7ccc948856
@@ -20,16 +20,16 @@ new BigInt64Array(buffer, byteOffset)
 new BigInt64Array(buffer, byteOffset, length)
 ```
 
-> [! 说明]
+> [!NOTE]
 > `BigInt64Array()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 错误。
 
 ### 参数
 
-参见 [`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters)。
+参见 [`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#参数)。
 
 ### 异常
 
-参见 [`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions)。
+参见 [`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#异常)。
 
 ## 示例
 
@@ -75,7 +75,7 @@ console.log(bigint64FromIterable);
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays) 指南
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
