@@ -2,7 +2,7 @@
 title: BigInt64Array() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
 l10n:
-  sourceCommit: 01ff31c3d7c6818de4b0cdd3c130ab7ccc948856
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`BigInt64Array()`** 构造函数用于创建 {{jsxref("BigInt64Array")}} 对象。除非显式提供初始化数据，否则其内容会被初始化为 `0n`。
@@ -21,7 +21,7 @@ new BigInt64Array(buffer, byteOffset, length)
 ```
 
 > [!NOTE]
-> `BigInt64Array()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 关键字来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 错误。
+> `BigInt64Array()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来构造。如果尝试在没有使用 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}} 异常。
 
 ### 参数
 
@@ -36,27 +36,27 @@ new BigInt64Array(buffer, byteOffset, length)
 ### 创建 BigInt64Array 的不同方式
 
 ```js
-// From a length
+// 通过长度创建
 const bigint64 = new BigInt64Array(2);
 bigint64[0] = 42n;
 console.log(bigint64[0]); // 42n
 console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
-// From an array
+// 通过数组创建
 const x = new BigInt64Array([21n, 31n]);
 console.log(x[1]); // 31n
 
-// From another TypedArray
+// 通过另一个 TypedArray 创建
 const y = new BigInt64Array(x);
 console.log(y[0]); // 21n
 
-// From an ArrayBuffer
+// 通过 ArrayBuffer 创建
 const buffer = new ArrayBuffer(64);
 const z = new BigInt64Array(buffer, 8, 4);
 console.log(z.byteOffset); // 8
 
-// From an iterable
+// 通过可迭代对象创建
 const iterable = (function* () {
   yield* [1n, 2n, 3n];
 })();
