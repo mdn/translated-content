@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-{{domxref("ContactAddress")}} 接口的只读属性 **`sortingCode`** 返回包含邮政编码（例如法国使用的邮政编码）的字符串。
+{{domxref("ContactAddress")}} 接口的只读属性 **`sortingCode`** 返回包含类似法国使用的邮政编码的字符串。
 
 ## 值
 
