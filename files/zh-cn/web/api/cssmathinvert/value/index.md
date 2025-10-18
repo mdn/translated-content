@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-{{domxref("CSSMathInvert")}} 接口的只读属性 {{domxref("CSSMathInvert.value")}} 返回 {{domxref('CSSNumericValue')}} 对象。
+{{domxref("CSSMathInvert")}} 接口的只读属性 `CSSMathInvert.value` 返回 {{domxref('CSSNumericValue')}} 对象。
 
 ## 值
 
