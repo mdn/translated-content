@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 63249f6b1e89f42e172878c54a2f9674bee50904
 ---
 
-{{CSSRef}}
-
 **CSS 논리적 속성과 값** 모듈은 레이아웃을 물리적인 방향과 차원의 매핑이 아닌 논리적인 방식의 매핑으로 제어할 수 있는 논리적 속성들과 값으로 정의합니다. 논리적 속성은 해당하는 물리적 속성의 대응하는 방향 상대성을 정의합니다.
 
 문장의 시작 부분이 항상 왼쪽 부분인 것은 아닙니다. 다른 쓰기 체계는 다양한 방향성을 가지고 있습니다. 아래 예시들을 확인해 보세요.
@@ -24,7 +22,7 @@ l10n:
 
 **인라인 차원**은 문장 내의 흐름과 평행합니다. 즉, 가로 방향의 쓰기 모드에서는 수평 차원이고, 세로 방향의 쓰기 모드에서는 수직 차원입니다. 표준 영어 텍스트의 경우에는 수평 차원입니다.
 
-CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적 속성과 값 모듈은 많은 [값](/ko/docs/Web/CSS/CSS_Values_and_Units)과 [속성](/ko/docs/Glossary/Property/CSS)들에 대응하는 흐름 상대성을 정의합니다. 물리적 값 (`top`, `bottom`, `left`, `right`) 만 수용했던 속성들은 이제 흐름 상대적인 논리적 속성 (`block-start`, `block-end`, `inline-start`, `inline-end`) 들도 허용하게 됩니다.
+CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적 속성과 값 모듈은 많은 [값](/ko/docs/Web/CSS/CSS_values_and_units)과 [속성](/ko/docs/Glossary/Property/CSS)들에 대응하는 흐름 상대성을 정의합니다. 물리적 값 (`top`, `bottom`, `left`, `right`) 만 수용했던 속성들은 이제 흐름 상대적인 논리적 속성 (`block-start`, `block-end`, `inline-start`, `inline-end`) 들도 허용하게 됩니다.
 
 ## 참고서
 

@@ -1,12 +1,9 @@
 ---
 title: Using CSS math functions
-slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
-original_slug: Web/CSS/CSS_Functions/Using_CSS_math_functions
+slug: Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 l10n:
   sourceCommit: 8b70438172c589ea52ffb24714818da73d759537
 ---
-
-{{CSSRef}}
 
 **CSS 수학 함수들** 은 요소의 `height`, `animation-duration`, 또는 `font-size` 와 같은 속성 값을 수학적 표현식으로 작성하는 것을 가능하게 합니다.
 

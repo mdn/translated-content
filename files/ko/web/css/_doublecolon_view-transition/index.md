@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 모든 [뷰 전환](/ko/docs/Web/API/View_Transition_API) 스냅샷 그룹을 포함하고, 페이지의 모든 다른 콘텐츠 위에 위치하는 뷰 전환의 오버레이의 루트를 나타냅니다.
 

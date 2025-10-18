@@ -1,12 +1,10 @@
 ---
-title: itemid
+title: HTML itemid グローバル属性
+short-title: itemid
 slug: Web/HTML/Reference/Global_attributes/itemid
-original_slug: Web/HTML/Global_attributes/itemid
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`itemid`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、アイテムの固有でグローバルな識別子の形でマイクロデータを提供します。
 
@@ -14,7 +12,8 @@ l10n:
 
 `itemtype` のグローバル識別子の正確な意味は、それを特定する語彙の中で識別子の定義が提供されます。語彙は同じグローバル識別子を持つ複数のアイテムが共存できるかどうか、もしそうであれば、同じ識別子を持つアイテムがどのように扱われるかを定義します。
 
-> **メモ:** {{glossary("WHATWG")}} の定義では、 `itemid` が {{glossary("URL")}} でなければならないと指定しています。しかし、以下の例では {{glossary("URN")}} も使用されることを明らかに示しています。この矛盾はマイクロデータ仕様の不完全性を反映したものかもしれません。
+> [!NOTE]
+> {{glossary("WHATWG")}} の定義では、 `itemid` が {{glossary("URL")}} でなければならないと指定しています。しかし、以下の例では {{glossary("URN")}} も使用されることを明らかに示しています。この矛盾はマイクロデータ仕様の不完全性を反映したものかもしれません。
 
 ## 例
 
@@ -72,10 +71,6 @@ l10n:
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 

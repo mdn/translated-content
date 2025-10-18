@@ -1,11 +1,16 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
-**`device-width`** est une caractéristique média dépréciée dont la valeur représente la largeur de la surface de rendu de l'appareil d'affichage.
+> [!NOTE]
+> Pour interroger la largeur de la zone d'affichage, il faut utiliser la caractéristique média {{cssxref("@media/width", "width")}}.
+
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-width`** est utilisée pour tester la largeur de la surface de rendu d'un périphérique de sortie.
 
 ## Syntaxe
 
@@ -13,7 +18,7 @@ slug: Web/CSS/@media/device-width
 
 ## Exemples
 
-Ce code HTML applique une feuille de style pour pour les appareils plus étroits que 800 pixels.
+### Appliquer une feuille de style spécifique pour les appareils dont la largeur est inférieure à 800 pixels
 
 ```html
 <link
@@ -29,3 +34,8 @@ Ce code HTML applique une feuille de style pour pour les appareils plus étroits
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@media")}}

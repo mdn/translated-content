@@ -3,8 +3,6 @@ title: font-family
 slug: Web/CSS/font-family
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad `font-family` define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos.

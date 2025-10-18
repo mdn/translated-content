@@ -9,7 +9,7 @@ l10n:
 
 **`exec()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、指定された文字列の中でこの正規表現と一致するものを検索し、その結果の配列、または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.exec()")}}
 
 ```js interactive-example
 const regex1 = RegExp("foo*", "g");

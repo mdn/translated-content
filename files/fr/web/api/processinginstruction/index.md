@@ -17,7 +17,7 @@ Les instructions de traitement héritent des méthodes et propriétés de [`Node
 
 ### Attributs
 
-- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Web/API/Document_Object_Model/Whitespace) (_espace_) le séparant des `data` (_données_)
+- target (_cible_) (DOMString) (_chaîne de caractères_) - après le `<?` et avant un [whitespace](/fr/docs/Web/CSS/CSS_text/Whitespace) (_espace_) le séparant des `data` (_données_)
 - data (_données_) (DOMString) (_chaîne de caractères_) - premier caractère non espace après `target` et avant `?>`
 
 ### Spécification

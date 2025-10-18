@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`429 Too Many Requests`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
 リクエストの速度を落とすようにクライアントに依頼するこの仕組みは、一般に「{{glossary("rate limit", "速度制限")}}」と呼ばれています。
 

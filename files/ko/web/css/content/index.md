@@ -3,8 +3,6 @@ title: content
 slug: Web/CSS/content
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`content`** 속성은 생성한 값으로 요소를 대체합니다. `content` 속성으로 추가한 요소는 "익명 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)"입니다.
 
 ```css
@@ -269,7 +267,7 @@ li {
 
 ## 접근성 고려사항
 
-CSS로 생성한 콘텐츠는 [DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)이 포함하지 않고, [접근성 트리](/ko/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)에도 들어가지 않습니다. 따라서 특정 접근성 기술/브라우저 조합이 내용을 표현하지 않을 수 있습니다. 콘텐츠가 포함한 정보가 페이지의 목적을 이해하는 것에 중요하다면 주 문서로 포함하는 것이 좋습니다.
+CSS로 생성한 콘텐츠는 [DOM](/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)이 포함하지 않고, [접근성 트리](/ko/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)에도 들어가지 않습니다. 따라서 특정 접근성 기술/브라우저 조합이 내용을 표현하지 않을 수 있습니다. 콘텐츠가 포함한 정보가 페이지의 목적을 이해하는 것에 중요하다면 주 문서로 포함하는 것이 좋습니다.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Explanation of WCAG, Guideline 1.3 – MDN](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)

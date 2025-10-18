@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 
 **`DataView()`** コンストラクターは、 {{jsxref("DataView")}} オブジェクトを生成するために使用します。
 
-{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+{{InteractiveExample("JavaScript デモ: DataView Constructor")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

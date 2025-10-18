@@ -36,7 +36,8 @@ _このインターフェイスは {{domxref("EventTarget")}} からプロパテ
 
 _このインターフェイスは {{domxref("EventTarget")}} からもメソッドを継承しています。_
 
-> **メモ:** {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象クラスです。したがって、キューを追加または削除する場合は、`TextTrackCue` を継承するキューの種類のいずれかを入力することになります。
+> [!NOTE]
+> {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象クラスです。したがって、キューを追加または削除する場合は、`TextTrackCue` を継承するキューの種類のいずれかを入力することになります。
 
 - {{domxref("TextTrack.addCue()")}}
   - : ({{domxref("TextTrackCue")}} オブジェクトとして指定された) キューをトラックのキューのリストに追加します。

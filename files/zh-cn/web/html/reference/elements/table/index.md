@@ -3,8 +3,6 @@ title: <table>：表格元素
 slug: Web/HTML/Reference/Elements/table
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<table>`** 元素表示表格数据——即在一个由包含数据的行和列组成的二维表格中呈现的信息。
 
 {{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
@@ -242,12 +240,12 @@ tfoot td {
     <th>名</th>
   </tr>
   <tr>
-    <td>John</td>
     <td>Doe</td>
+    <td>John</td>
   </tr>
   <tr>
-    <td>Jane</td>
     <td>Doe</td>
+    <td>Jane</td>
   </tr>
 </table>
 

@@ -3,8 +3,6 @@ title: padding
 slug: Web/CSS/padding
 ---
 
-{{CSSRef}}
-
 **`padding`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 네 방향 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다. {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}의 단축 속성입니다.
 
 {{InteractiveExample("CSS Demo: padding")}}
@@ -54,7 +52,8 @@ padding: 0;
 
 요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.
 
-> **참고:** `padding`은 요소의 내부에 빈 공간을 추가합니다. 반면 {{cssxref("margin")}}은 요소의 **주위**에 빈 공간을 만듭니다.
+> [!NOTE]
+> `padding`은 요소의 내부에 빈 공간을 추가합니다. 반면 {{cssxref("margin")}}은 요소의 **주위**에 빈 공간을 만듭니다.
 
 ## 구문
 

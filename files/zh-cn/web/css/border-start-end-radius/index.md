@@ -3,8 +3,6 @@ title: border-start-end-radius
 slug: Web/CSS/border-start-end-radius
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-start-end-radius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-CN/docs/Web/CSS/text-orientation)和[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)的样式。
 
 {{InteractiveExample("CSS Demo: border-start-end-radius")}}

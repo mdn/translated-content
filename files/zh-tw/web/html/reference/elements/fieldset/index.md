@@ -3,8 +3,6 @@ title: <fieldset>：欄集元素
 slug: Web/HTML/Reference/Elements/fieldset
 ---
 
-{{HTMLSidebar}}
-
 **`<fieldset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於在網頁表單中將多個控件以及標籤（{{HTMLElement("label")}}）分組。
 
 {{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}

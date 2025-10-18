@@ -2,14 +2,12 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 l10n:
-  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
+  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-{{CSSRef}}
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-bottom-style`** 设置元素底部 {{cssxref("border")}} 的线条样式。
 
-**`border-bottom-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素底部 {{cssxref("border")}} 的线条样式。
-
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{InteractiveExample("CSS 演示：border-bottom-style")}}
 
 ```css interactive-example-choice
 border-bottom-style: none;
@@ -38,15 +36,15 @@ border-bottom-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    这是一个带有边框的盒子。
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -54,7 +52,7 @@ border-bottom-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 

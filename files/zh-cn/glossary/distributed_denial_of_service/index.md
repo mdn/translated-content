@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c13b7a059a543d02e4dbafce42813dad1244dcaa
 ---
 
-{{GlossarySidebar}}
-
 **分布式拒绝服务**（DDoS）是一种 {{Glossary("Denial of Service", "DoS")}} 攻击，其使用许多被感染的系统来攻击单个目标，以耗尽服务器资源并阻止合法用户。
 
 通常情况下，许多人使用机器人攻击高知名度的 Web {{Glossary("server", "服务器")}}，如银行或信用卡支付网关。DDoS 涉及计算机网络和 CPU 资源管理。

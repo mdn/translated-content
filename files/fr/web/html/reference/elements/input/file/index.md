@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Learn/Forms) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
+Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs//Learn*web_development/Extensions/Forms\) ou grâce à du code JavaScript [via l'API \_File*](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
@@ -32,7 +32,7 @@ label {
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
 
 > [!NOTE]
 >
@@ -68,7 +68,8 @@ Les fichiers Microsoft Word, par exemple, peuvent être identifiés de différen
 
 Une chaîne de caractères qui indique la caméra à utiliser pour capturer des photos et des vidéos si l'attribut `accept` indique que le fichier est de ce type. Lorsque `capture` vaut `"user"`, cela indique que la caméra qui fait face à l'utilisateur devrait être utilisée. Si l'attribut vaut `"environment"`, c'est la caméra qui est tournée vers l'extérieur devrait être utilisée. Si l'attribut est absent, l'agent utilisateur pourra décider de laquelle utiliser. Si la caméra souhaitée par l'attribut n'est pas disponible, l'agent utilisateur pourra utiliser une autre caméra de l'appareil.
 
-> **Note :** `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
+> [!NOTE]
+> `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
 
 ### `files`
 
@@ -140,7 +141,7 @@ Ce fragment de code HTML produira le résultat suivant :
 
 Quel que soit l'appareil ou le système d'exploitation de l'utilisateur, l'élément `<input type="file">` fournit un bouton qui ouvre un sélecteur de fichier permettant de choisir un fichier.
 
-Lorsque l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) est utilisé (comme dans l'exemple précédent), cela signifie que plusieurs fichiers peuvent être sélectionnés de façon simultanée. L'utilisateur doit alors pouvoir choisir plusieurs fichiers depuis le sélecteur de fichier (par exemple en maintenant la touche <kbd>Shift</kbd> ou <kbd>Control</kbd> puis en cliquant). Si on souhaite qu'un seul fichier puisse être envoyé, il suffit de ne pas utiliser l'attribut `multiple`.
+Lorsque l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est utilisé (comme dans l'exemple précédent), cela signifie que plusieurs fichiers peuvent être sélectionnés de façon simultanée. L'utilisateur doit alors pouvoir choisir plusieurs fichiers depuis le sélecteur de fichier (par exemple en maintenant la touche <kbd>Shift</kbd> ou <kbd>Control</kbd> puis en cliquant). Si on souhaite qu'un seul fichier puisse être envoyé, il suffit de ne pas utiliser l'attribut `multiple`.
 
 Lorsqu'on envoie le formulaire de l'exemple, le nom de chaque fichier sera ajouté aux paramètres de l'URL de la façon suivante : `?file=fichier1.txt&file=fichier2.txt`
 
@@ -155,7 +156,7 @@ Chaque objet `File` contient les informations suivantes :
 - `lastModifiedDate` : un objet {{domxref("Date")}} qui représente la date et l'heure à laquelle le fichier a été modifié pour la dernière fois.
 - `size` : un nombre qui représente la taille du fichier en octets.
 - `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossary/MIME_type) du fichier.
-- `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Element/input#webkitdirectory). _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
+- `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Reference/Elements/input#webkitdirectory). _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
 
 > [!NOTE]
 > Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. [bug Firefox 1384030](https://bugzil.la/1384030)).
@@ -164,7 +165,7 @@ Chaque objet `File` contient les informations suivantes :
 
 Il arrive souvent qu'on souhaite sélectionner certains types de fichiers. Par exemple, si on souhaite fournir une image de profil, on restreindra probablemnt les formats à ceux des formats d'image compatibles pour le Web comme [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG).
 
-Pour cela, on peut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#accept) afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
+Pour cela, on peut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Elements/input#accept) afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
 
 - `accept="image/png"` ou `accept=".png"` permettra de n'accepter que les fichiers PNG.
 - `accept="image/png, image/jpeg"` ou `accept=".png, .jpg, .jpeg"` permettra de n'accepter que les fichiers PNG ou JPEG.
