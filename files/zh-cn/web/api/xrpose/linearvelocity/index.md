@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef}}{{SecureContext_Header}}
 
-{{DOMxRef("XRPose")}} 接口的 `linearVelocity` 只读属性是描述相对于基础 {{DOMxRef("XRSpace")}} 的线速度（单位：米/秒）的 {{DOMxRef("DOMPointReadOnly")}}。
+{{DOMxRef("XRPose")}} 接口的 `linearVelocity` 只读属性是描述相对于基础 {{DOMxRef("XRSpace")}} 的线速度（以米/秒为单位）的 {{DOMxRef("DOMPointReadOnly")}}。
 
-## 取值
+## 值
 
-用于描述相对于基础 {{DOMxRef("XRSpace")}} 的线速度（单位：米/秒）的 {{DOMxRef("DOMPointReadOnly")}}。如果用户代理无法填充此值，则返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+用于描述相对于基础 {{DOMxRef("XRSpace")}} 的线速度（以米/秒为单位）的 {{DOMxRef("DOMPointReadOnly")}}。如果用户代理无法填充此值，则返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ## 规范
 
