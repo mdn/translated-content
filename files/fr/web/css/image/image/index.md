@@ -2,26 +2,41 @@
 title: image()
 slug: Web/CSS/image/image
 l10n:
-  sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
-
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une image (type [`<image>`](/fr/docs/Web/CSS/image)) à la façon de la fonction [`url()`](/fr/docs/Web/CSS/url_value) mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
 
 > [!NOTE]
-> Attention à ne pas confondre cette notation fonctionnelle CSS avec le constructeur du DOM [`Image()` pour `HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement/Image).
+> Attention à ne pas confondre cette notation fonctionnelle CSS avec {{DOMxRef("HTMLImageElement/Image", "<code>Image()</code>, constructeur de l'interface DOM <code>HTMLImageElement</code>", "", 1)}}.
 
 ## Syntaxe
 
-{{CSSSyntax}}
+```css-nolint
+/* Usage de base */
+image("image1.jpg");
+image(url("image2.jpg"));
 
-où&nbsp;:
+/* Images sensibles à la direction */
+image(ltr "image1.jpg");
+image(rtl "image1.jpg");
+
+/* Image de remplacement */
+image("image1.jpg", black);
+
+/* Fragments d'image */
+image("image1.jpg#xywh=40,0,20,20");
+
+/* Images de couleur unie */
+image(rgb(0 0 255 / 0.5)), url("bg-image.png");
+```
+
+### Valeurs
 
 - `image-tags` {{optional_inline}}
   - : La directionnalité de l'image, la valeur `ltr` pourra être utilisée afin d'indiquer que l'image est orientée de gauche à droite ou la valeur `rtl` pour indiquer une orientation de droite à gauche.
 - `image-src` {{optional_inline}}
-  - : Zéro, une ou plusieurs [URL](/fr/docs/Web/CSS/url_value) ou chaînes de caractères ([`<string>`](/fr/docs/Web/CSS/string)) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
+  - : Zéro, une ou plusieurs {{cssxref("url_value", "&lt;url&gt;")}} ou chaînes de caractères ({{CSSxRef("&lt;string&gt;")}}) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
 - `color` {{optional_inline}}
   - : Une couleur par défaut. Cette couleur sera utilisée par défaut si aucune image n'est trouvée ou prise en charge parmi les images fournies via `image-src`.
 
@@ -57,16 +72,20 @@ Si les deux derniers arguments sont utilisés et dans le cas où les images four
 
 Il est possible de ne pas définir d'image source et de ne passer qu'une couleur comme argument.
 
-À la différence de [`background-color`](/fr/docs/Web/CSS/background-color) dont la couleur sera placée derrière l'ensemble des images d'arrière-plan, on peut utiliser `image()` afin de placer des couleurs sur d'autres images (il s'agira le plus souvent de couleurs semi-transparentes dans ce cas).
+À la différence de {{CSSxRef("background-color")}} dont la couleur sera placée derrière l'ensemble des images d'arrière-plan, on peut utiliser `image()` afin de placer des couleurs sur d'autres images (il s'agira le plus souvent de couleurs semi-transparentes dans ce cas).
 
-La taille du rectangle de couleur appliqué peut être définie grâce à la propriété [`background-size`](/fr/docs/Web/CSS/background-size). Ce comportement diffère de `background-color` qui définit une couleur pour couvrir l'ensemble de l'élément. `image(color)` et `background-color` pourront tous les deux être déplacés grâce aux propriétés [`background-clip`](/fr/docs/Web/CSS/background-clip) et [`background-origin`](/fr/docs/Web/CSS/background-origin).
+La taille du rectangle de couleur appliqué peut être définie grâce à la propriété {{CSSxRef("background-size")}}. Ce comportement diffère de `background-color` qui définit une couleur pour couvrir l'ensemble de l'élément. `image(color)` et `background-color` pourront tous les deux être déplacés grâce aux propriétés {{CSSxRef("background-clip")}} et {{CSSxRef("background-origin")}}.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Accessibilité
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan, car les navigateurs n'extraient pas d'informations du contenu visuel des images. Si l'image contient des informations essentielles à la compréhension du document, il faudra décrire ces informations de façon sémantique dans le document afin, entre autres, que les outils d'assistance puissent transmettre les informations aux utilisateurs.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
+- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 Cette fonction peut aider à améliorer l'accessibilité en fournissant une couleur par défaut lorsque le chargement d'une image échoue. Bien qu'il faille toujours utiliser `background-color` comme défaut pour chaque image d'arrière-plan, la fonction CSS `image()` permet d'ajouter une couleur d'arrière-plan pour toute image dont le chargement échouerait (par exemple un fichier PNG/GIF/WebP avec de la transparence).
 
@@ -91,7 +110,7 @@ ul {
 
 Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"` ou qui héritent de cette direction depuis leur ancêtre), l'image pour la puce sera utilisée telle quelle. Les éléments de la liste avec `dir="rtl"` (que ce soit explicitement défini comme ici ou que cette direction provienne de la direction par défaut du document, par exemple un document en arabe ou en hébreu), l'image sera affichée à droite et sera renversée horizontalement (de la même façon qu'avec `transform: scaleX(-1)`). Le texte sera également affiché de gauche à droite.
 
-{{EmbedLiveSample("", "100%", 200)}}
+{{EmbedLiveSample("Utiliser des images prenant en compte la directionnalité", "100%", 200)}}
 
 ### Afficher une section de l'image
 
@@ -109,12 +128,12 @@ Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"
 
 Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un <i lang="en">sprite</i> mesurant 16 pixels de large et de haut et commençant à x=32 et y=64 sur l'image totale.
 
-{{EmbedLiveSample("", "100%", 100)}}
+{{EmbedLiveSample("Afficher une section de l'image", "100%", 100)}}
 
 ### Placer une couleur sur une image en arrière-plan
 
 ```css hidden
-.quarterlogo {
+.quarter-logo {
   height: 200px;
   width: 200px;
   border: 1px solid;
@@ -122,22 +141,22 @@ Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un 
 ```
 
 ```css
-.quarterlogo {
-  background-image: image(rgba(0, 0, 0, 0.25)), url("firefox.png");
+.quarter-logo {
+  background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }
 ```
 
 ```html
-<div class="quarterlogo">
+<div class="quarter-logo">
   Si pris en charge, un quart de ce div aura un logo assombri
 </div>
 ```
 
-Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété [`background-color`](/fr/docs/Web/CSS/background-color) à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et [`background-size`](/fr/docs/Web/CSS/background-size) (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
+Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété {{CSSxRef("background-color")}} à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et {{CSSxRef("background-size")}} (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
 
-{{EmbedLiveSample("","100%","220")}}
+{{EmbedLiveSample("Placer une couleur sur une image en arrière-plan","100%","220")}}
 
 ## Spécifications
 
@@ -145,15 +164,15 @@ Dans l'exemple précédent, on placera un masque noir semi-transparent sur le lo
 
 ## Compatibilité des navigateurs
 
-{{Compat}}
+Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`url()`](/fr/docs/Web/CSS/url_value)
-- [`clip-path`](/fr/docs/Web/CSS/clip-path)
-- [`-moz-image-rect()`](/fr/docs/Web/CSS/-moz-image-rect)
-- [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- Le module des [images CSS](/fr/docs/Web/CSS/CSS_images)
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- Le type de donnée {{cssxref("url_value", "&lt;url&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;gradient&gt;")}}
+- La propriété {{CSSxRef("clip-path")}}
+- La fonction {{CSSxRef("element", "element()")}}
+- La fonction {{CSSxRef("image/image-set", "image-set()")}}
+- La fonction {{CSSxRef("cross-fade", "cross-fade()")}}

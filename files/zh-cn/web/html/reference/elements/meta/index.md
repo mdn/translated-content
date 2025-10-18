@@ -3,8 +3,6 @@ title: <meta>：元数据元素
 slug: Web/HTML/Reference/Elements/meta
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<meta>`** 元素表示那些不能由其他 HTML 元相关（meta-related）元素表示的{{Glossary("Metadata","元数据")}}信息。如：{{HTMLElement("base")}}、{{HTMLElement("link")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}} 或 {{HTMLElement("title")}}。
 
 <table class="properties">
@@ -154,4 +152,3 @@ slug: Web/HTML/Reference/Elements/meta
 
 - [标准元数据名称](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name)
 - [学习：`<meta>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
-- [viewport 元标签](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)

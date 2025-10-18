@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Server
 original_slug: Web/HTTP/Headers/Server
 ---
 
-{{HTTPSidebar}}
-
 **`Server`** 헤더는 요청을 처리하기 위한 원(origin, 原) 서버의 소프트웨어 정보를 포함하고 있습니다.
 
 너무 길고 상세한 서버의 정보는 잠재적으로 내부 구현과 상세 정보를 이용하여 잠재적으로 공격을 받을 수 있기 때문에 피해야 합니다. 공격자들은 (약간) 쉽게 알려진 보안상의 문제점을 찾고 터트릴 수 있습니다.

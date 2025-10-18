@@ -1,11 +1,9 @@
 ---
 title: 数値データ型
-slug: Web/CSS/CSS_Values_and_Units/Numeric_data_types
+slug: Web/CSS/CSS_values_and_units/Numeric_data_types
 l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
-
-{{CSSRef}}
 
 CSS 宣言はすべて、プロパティと値のペアから成っています。値には、単一のキーワード、整数、関数、異なる型の組み合わせなど、プロパティに応じてさまざまなデータ型を含めることがあります。また、値には単位を持つものもあれば、持たないものもあります。数値データ型には {{cssxref("&lt;integer&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;dimension&gt;")}}、{{cssxref("&lt;percentage&gt;")}} の値があります。このガイドは数値データ型の概要です。より詳細な情報については、各値の型に対応するページを参照してください。
 
@@ -215,7 +213,7 @@ CSS では、以下のものを表すために寸法を使います。
 - {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
 
-[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は、 CSS でより複雑な型を表現したり、特殊な処理を呼び出すことができる値の型です。この構文は、関数名の直後に左括弧 `(` 、関数記法の引数、右括弧 `)` と続きます。関数は複数の引数を取ることができ、CSS のプロパティ値と同様の書式になります。
+[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)は、 CSS でより複雑な型を表現したり、特殊な処理を呼び出すことができる値の型です。この構文は、関数名の直後に左括弧 `(` 、関数記法の引数、右括弧 `)` と続きます。関数は複数の引数を取ることができ、CSS のプロパティ値と同様の書式になります。
 
 括弧内のホワイトスペースは許容されますが、任意です。(ただし、`min()`、`max()`、`minmax()`、`clamp()` 関数については、各ページ内の空白に関する注意事項を参照してください。)
 
@@ -227,7 +225,7 @@ CSS では、以下のものを表すために寸法を使います。
 
 ## 関連情報
 
-- [テキストデータ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [テキストデータ型](/ja/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
+- [CSS データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

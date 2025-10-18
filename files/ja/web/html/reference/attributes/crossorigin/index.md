@@ -52,7 +52,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Reference/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
+> [!NOTE]
+> `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Reference/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
 ### 例: `<script>` 要素の `crossorigin`
 

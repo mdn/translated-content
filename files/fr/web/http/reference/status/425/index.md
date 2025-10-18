@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Status/425
 original_slug: Web/HTTP/Status/425
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{SeeCompatTable}}
 
 Le code de réponse d'erreur HTTP **`425 Too Early`** signifie que le serveur refuse la requête qui a été récemment répétée par exemple de peur d'une attaque par rejeu.
 

@@ -180,7 +180,8 @@ html {
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
 
-> **참고:** **참조**: [여러분은 이곳에서 동 질문에 대한 답변을 확인할 수 있습니다.](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> [!NOTE]
+> **참조**: [여러분은 이곳에서 동 질문에 대한 답변을 확인할 수 있습니다.](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
 
 ### 브라우저 개발자도구를 사용해 박스 모델 보기
 
