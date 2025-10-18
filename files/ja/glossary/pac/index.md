@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-Proxy Auto-Configuration ファイル (**PAC ファイル**) は、`FindProxyForURL()` 関数を含むファイルです。ブラウザーはこの関数を使用して、どのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送信するか、または Web プロキシーサーバーを経由する必要があるかを判断します。
+Proxy Auto-Configuration ファイル (**PAC ファイル**) は、`FindProxyForURL()` 関数を含むファイルです。ブラウザーはこの関数を使用して、各リクエスト (HTTP, HTTPS, FTP 等) を直接接続先に送信するか、または Web プロキシーサーバーを経由する必要があるかを判断します。
 
 ```js
 function FindProxyForURL(url, host) {
