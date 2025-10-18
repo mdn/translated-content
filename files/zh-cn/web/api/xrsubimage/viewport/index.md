@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-{{domxref("XRSubImage")}} 接口的 **`viewport`** 只读属性表示渲染子图像时所使用的 {{domxref("XRViewport")}}。
+{{domxref("XRSubImage")}} 接口的 **`viewport`** 只读属性返回渲染子图像时所使用的 {{domxref("XRViewport")}}。
 
-## 取值
+## 值
 
 {{domxref("XRViewport")}}。
 
