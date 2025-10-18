@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{domxref("XRSession")}} 接口的只读 **`environmentBlendMode`** 属性用于标识计算机生成的图像是否以及在多大程度上叠加在真实世界之上。
+{{domxref("XRSession")}} 接口的只读 **`environmentBlendMode`** 属性用于表示计算机生成的图像是否以及在多大程度上叠加在真实世界之上。
 
 此属性用于区分完全沉浸式的 VR 会话和在真实世界透传图像之上（可能部分透明地）渲染的 AR 会话。
 
-## 取值
+## 值
 
 定义虚拟渲染内容是否以及如何叠加在真实世界图像之上的字符串。
 
