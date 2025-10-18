@@ -3,8 +3,6 @@ title: X-Forwarded-For
 slug: Web/HTTP/Reference/Headers/X-Forwarded-For
 ---
 
-{{HTTPSidebar}}
-
 **`X-Forwarded-For`**（XFF）標頭是辨識用戶端透過 HTTP 代理或負載平衡 IP 位置來源的，事實上的標準。如果流量是在伺服器與用戶端中間擷取，伺服器日誌就只會代理或負載平衡的 IP 位置。如果要檢查用戶端的 IP 的原始來源，就會去檢查 `X-Forwarded-For` 請求標頭。
 
 這個標頭用於除錯、分析、產生與位置相關的內容、透過設計也洩漏部分隱私資訊，例如用戶端的 IP 位置。因此在部署此標頭時，必須考慮到用戶的隱私。

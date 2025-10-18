@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol.asyncIterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.asyncIterator` を表します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)は、オブジェクトの非同期反復子を返すメソッドをこのシンボルで探します。オブジェクトが非同期反復可能であるためには、`[Symbol.asyncIterator]` キーを持つ必要があります。
 
-{{InteractiveExample("JavaScript Demo: Symbol.asyncIterator", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol.asyncIterator", "taller")}}
 
 ```js interactive-example
 const delayedResponses = {

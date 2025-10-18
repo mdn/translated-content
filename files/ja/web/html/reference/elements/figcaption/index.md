@@ -10,7 +10,7 @@ l10n:
 
 **`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;figcaption&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <figure>

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: e037be1b0e193183ecdad66b75d38862186a9eec
 ---
 
-{{CSSRef}}
+**`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)の一つです。
 
-**`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。
-
-{{InteractiveExample("CSS Demo: circle()")}}
+{{InteractiveExample("CSS デモ: circle()")}}
 
 ```css interactive-example-choice
 clip-path: circle(50px);

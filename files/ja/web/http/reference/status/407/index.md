@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`407 Proxy Authentication Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、ブラウザーとリクエストされたリソースにアクセスできるサーバーとの間にある{{Glossary("proxy server", "プロキシーサーバー")}}に有効な認証情報が不足しているため、リクエストが成功されていないことを示します。
 
 このレスポンスは、リクエストを正しく認証する方法に関する情報が含まれている {{HTTPHeader("Proxy-Authenticate")}} ヘッダーと共に送信されます。

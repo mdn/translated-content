@@ -345,7 +345,7 @@ console.log(it.next().value); // 2
 
 ### 클래스로 반복자 정의하기
 
-상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)으로도 수행할 수 있습니다.
+상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements)으로도 수행할 수 있습니다.
 
 ```js
 class SimpleClass {

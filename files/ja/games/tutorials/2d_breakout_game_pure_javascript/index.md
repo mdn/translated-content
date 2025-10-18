@@ -3,8 +3,6 @@ title: 純粋な JavaScript を使ったブロック崩しゲーム
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 このステップバイステップのチュートリアルでは、すべて JavaScript だけで書かれた、 HTML5 の {{htmlelement("canvas")}} で表示できる簡単な **MDN ブロック崩し**ゲームを作ります。</p>

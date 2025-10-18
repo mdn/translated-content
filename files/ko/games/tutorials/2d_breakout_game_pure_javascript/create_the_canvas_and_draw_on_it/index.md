@@ -5,8 +5,6 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기")}}
 
 이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
@@ -107,7 +105,8 @@ JSFiddle에서 라이브로 실행되는 전체 코드입니다.
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-> **참고:** **연습해보기**: 주어진 모양들의 크기와 색상을 변경해보세요.
+> [!NOTE]
+> **연습해보기**: 주어진 모양들의 크기와 색상을 변경해보세요.
 
 ## 다음 단계로
 

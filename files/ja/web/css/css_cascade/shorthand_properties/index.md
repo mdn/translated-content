@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 95edea913e7f0726243aff3f47b85cfd6f02d995
 ---
 
-{{CSSRef}}
-
 **一括指定プロパティ** (shorthand property) は、他のいくつかの CSS プロパティを一度に設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に (そして普通はもっと読みやすく) スタイルシートが書け、時間や労力を節約することができます。
 
 CSS 仕様書では、同じ主題に作用する共通のプロパティの定義をグループ化するために、一括指定プロパティを定義しています。例えば、 {{cssxref("background")}} プロパティは {{cssxref("background-color")}}、 {{cssxref("background-image")}}、 {{cssxref("background-repeat")}}、{{cssxref("background-position")}} の値を定義することができる一括指定プロパティです。同様に、フォントに関連したプロパティは一括指定の {{cssxref("font")}} を使用して定義することができ、ボックスの周囲のマージンは一括指定の {{cssxref("margin")}} を使用して定義することができます。
@@ -256,4 +254,4 @@ CSS の継承がどのように動作するかについての詳細について�
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
 - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値), [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値), [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値), [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

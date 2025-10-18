@@ -2,14 +2,12 @@
 title: position
 slug: Web/CSS/position
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
-{{CSSRef}}
+**`position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各物理的プロパティ、 {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} のフロー相対論理的プロパティが、配置された要素の最終的な位置を決めます。
 
-**`position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティが、配置された要素の最終的な位置を決めます。
-
-{{InteractiveExample("CSS Demo: position")}}
+{{InteractiveExample("CSS デモ: position")}}
 
 ```css interactive-example-choice
 position: static;
@@ -23,8 +21,8 @@ left: 40px;
 
 ```css interactive-example-choice
 position: absolute;
-top: 40px;
-left: 40px;
+inset-inline-start: 40px;
+inset-block-start: 40px;
 ```
 
 ```css interactive-example-choice
@@ -32,37 +30,28 @@ position: sticky;
 top: 20px;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div id="example-element-container">
     <p>
-      In this demo you can control the <code>position</code> property for the
-      yellow box.
+      このデモでは、黄色いボックスの <code>position</code> プロパティを制御することができます。
     </p>
     <div class="box"></div>
     <div class="box" id="example-element"></div>
     <div class="box"></div>
     <p class="clear">
-      To see the effect of <code>sticky</code> positioning, select the
-      <code>position: sticky</code> option and scroll this container.
+      <code>sticky</code> 配置の効果を確認するには、<code>position: sticky</code> オプションを選択し、このコンテナーをスクロールしてください。
     </p>
     <p>
-      The element will scroll along with its container, until it is at the top
-      of the container (or reaches the offset specified in <code>top</code>),
-      and will then stop scrolling, so it stays visible.
+      要素はコンテナーの上端（または <code>top</code> で指定されたオフセット）に到達するまでコンテナーと共にスクロールし、その後スクロールを停止して表示されたままになります。
     </p>
     <p>
-      The rest of this text is only supplied to make sure the container
-      overflows, so as to enable you to scroll it and see the effect.
+      このテキストの残りの部分は、コンテナーがオーバーフローするように意図的に追加されています。これにより、スクロールしてその効果を確認できるようになっています。
     </p>
     <hr />
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape-descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      銀河系の西の渦巻腕の、流行遅れな端っこにある、未踏の辺境の奥深くに、小さな見過ごされた黄色い太陽が一つある。
+      およそ 9200 万マイルの距離を周回する、まったく取るに足らない小さな青緑色の惑星がある。その惑星に住む類人猿から進化した生命体は驚くほど未発達で、今でもデジタル時計がなかなか良いアイデアだと思っている。
     </p>
   </div>
 </section>
@@ -75,7 +64,7 @@ section {
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   float: left;
   width: 65px;
@@ -156,9 +145,9 @@ position: unset;
 - **絶対位置指定要素** (absolutely positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `absolute` または `fixed` である要素です。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成します。
 - **粘着位置指定要素** (stickily positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `sticky` である要素です。これは[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)がフロールート (またはその中でスクロールするコンテナー) 内の指定されたしきい値 (例えば {{Cssxref("top")}} に設定された auto 以外の値など) を達するまでは相対的な配置として扱われ、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の反対の端が来るまでその位置に「粘着」するものとして扱われます。
 
-ほとんどの場合、絶対位置指定要素に {{Cssxref("height")}} および {{Cssxref("width")}} が `auto` が設定されると、内容に合うように大きさが調整されます。しかし、非[置換](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)要素で絶対位置指定要素は、 {{Cssxref("top")}} および {{Cssxref("bottom")}} を指定して {{Cssxref("height")}} を指定しない (つまり `auto` の) ままにすることで、利用できる垂直の空間を埋めることができます。同様に、 {{Cssxref("left")}} および {{Cssxref("right")}} を指定して {{Cssxref("width")}} を `auto` のままにすることで、利用できる水平の空間を埋めることができます。
+ほとんどの場合、絶対位置指定要素に {{Cssxref("height")}} および {{Cssxref("width")}} が `auto` が設定されると、内容に合うように大きさが調整されます。しかし、非[置換](/ja/docs/Glossary/Replaced_elements)要素で絶対位置指定要素は、 {{Cssxref("top")}} および {{Cssxref("bottom")}} を指定して {{Cssxref("height")}} を指定しない (つまり `auto` の) ままにすることで、利用できる垂直の空間を埋めることができます。同様に、 {{Cssxref("left")}} および {{Cssxref("right")}} を指定して {{Cssxref("width")}} を `auto` のままにすることで、利用できる水平の空間を埋めることができます。
 
-以下に記述された場合を除きます (絶対位置指定要素で利用できる空間を埋める場合)。
+以下に記述された場合を除きます（絶対位置指定要素で利用できる空間を埋める場合）。
 
 - `top` と `bottom` の両方を指定すると (`auto`ではなく)、 `top` が優先されます。
 - `left` と `right` の両方を指定すると、 {{Cssxref("direction")}} が `ltr` (英語、横書き日本語、など) の場合は `left` が優先され、 {{Cssxref("direction")}} が `rtl` (ペルシャ語、アラビア語、ヘブライ語、 など)の場合は `right` が優先されます。
@@ -190,7 +179,7 @@ position: unset;
 
 #### HTML
 
-```html live-sample___relative_positioning
+```html
 <div class="box" id="one">One</div>
 <div class="box" id="two">Two</div>
 <div class="box" id="three">Three</div>
@@ -199,7 +188,7 @@ position: unset;
 
 #### CSS
 
-```css live-sample___relative_positioning
+```css
 * {
   box-sizing: border-box;
 }
@@ -220,15 +209,15 @@ position: unset;
 }
 ```
 
-{{EmbedLiveSample('Relative_positioning', '', '200px')}}
+{{EmbedLiveSample('相対位置指定', '', '200px')}}
 
 ### 絶対位置指定
 
-相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先（に対して相対的に配置されます。配置された祖先がない場合は、 ICB （initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も参照）すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
+相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先（に対して相対的に配置されます。配置された祖先がない場合は、[初期包含ブロック](https://drafts.csswg.org/css-display/#initial-containing-block) (ICB)、すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
 
 #### HTML
 
-```html-nolint live-sample___absolute_positioning
+```html-nolint
 <h1>絶対位置指定</h1>
 
 <p>
@@ -245,13 +234,13 @@ position: unset;
 
 <p>
   インライン要素は、<span>この要素</span>と<span>この要素</span>が互いに同じ行に位置し、同じ行に空間がある場合には隣接するテキストノードが位置します。オーバーフローしたインライン要素は、可能な場合には新しい行に<span>このテキストを含む要素のように折り返されます</span>。またはそうでない場合には新しい行に移動します。この画像のようになります。
-  <img src="long.jpg" />
+  <img src="https://mdn.github.io/shared-assets/images/examples/long.jpg" />
 </p>
 ```
 
 #### CSS
 
-```css live-sample___absolute_positioning
+```css
 * {
   box-sizing: border-box;
 }
@@ -276,22 +265,22 @@ span {
 .positioned {
   position: absolute;
   background: yellow;
-  top: 30px;
-  left: 30px;
+  inset-block-start: 30px;
+  inset-inline-start: 30px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Absolute_positioning', '', '420px')}}
+{{EmbedLiveSample('絶対位置指定', '', '420px')}}
 
 ### 固定位置指定
 
-固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) を参照) に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`will-change`](/ja/docs/Web/CSS/will-change) プロパティに `transform` を設定すると、新しい包含ブロックが設定されます。
+固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外（[固定位置指定包含ブロック](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block) を参照）に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`will-change`](/ja/docs/Web/CSS/will-change) プロパティに `transform` を設定すると、新しい包含ブロックが設定されます。
 
 #### HTML
 
-```html live-sample___fixed_positioning
+```html
 <div class="outer">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
@@ -325,7 +314,7 @@ span {
 
 #### CSS
 
-```css live-sample___fixed_positioning
+```css
 * {
   box-sizing: border-box;
 }
@@ -354,7 +343,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Fixed_positioning', '', '300px')}}
+{{EmbedLiveSample('固定位置指定', '', '300px')}}
 
 ### 粘着位置指定
 
@@ -375,7 +364,7 @@ span {
 
 ##### HTML
 
-```html live-sample___list_with_sticky_headings
+```html
 <dl>
   <div>
     <dt>A</dt>
@@ -410,21 +399,21 @@ span {
 
 ##### CSS
 
-```css live-sample___list_with_sticky_headings
+```css
 * {
   box-sizing: border-box;
 }
 
 dl > div {
-  background: #fff;
-  padding: 24px 0 0 0;
+  background: white;
+  padding-top: 24px;
 }
 
 dt {
   background: #b8c1c8;
   border-bottom: 1px solid #989ea4;
   border-top: 1px solid #717d85;
-  color: #fff;
+  color: white;
   font:
     bold 18px/21px Helvetica,
     Arial,
@@ -442,18 +431,18 @@ dd {
     Arial,
     sans-serif;
   margin: 0;
-  padding: 0 0 0 12px;
+  padding-left: 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 ```
 
 ##### 結果
 
-{{EmbedLiveSample('List with sticky headings', '', '300px')}}
+{{EmbedLiveSample('粘着見出しのあるリスト', '', '300px')}}
 
 #### すべての内接境界を指定した粘着位置
 
@@ -461,7 +450,7 @@ dd + dd {
 
 ##### HTML
 
-```html-nolint live-sample___sticky_position_with_all_the_inset_boundaries_set
+```html-nolint
 スクロールバーを使用して、以下のテキスト内の正しい場所に電球 (💡) を配置してください。
 <div>
   <p>
@@ -483,14 +472,14 @@ dd + dd {
 
 ##### CSS
 
-```css hidden live-sample___sticky_position_with_all_the_inset_boundaries_set
+```css hidden
 div {
   width: 400px;
   height: 200px;
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: verdana;
+  font-family: Verdana;
   border: 1px solid;
 }
 
@@ -505,18 +494,19 @@ p {
 ```css
 .bulb {
   position: sticky;
-  inset: 50px 100px 50px 100px;
+  inset: 50px 100px;
 }
 
 div {
-  /* mark area defined by the inset boundaries using gray color */
-  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+  /* インセット境界線で定義された領域を灰色で塗りつぶす */
+  background: linear-gradient(#99999999, #99999999) 100px 50px / 192px 100px
+    no-repeat;
 }
 ```
 
 ##### 結果
 
-{{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
+{{EmbedLiveSample('すべての内接境界を指定した粘着位置', '', '300px')}}
 
 どちらの電球も正しい場所に置くと、相対位置が内接領域内に指定されていることがわかります。内接領域から移されると、その方向の内接境界に固定（粘着）されます。
 
@@ -530,4 +520,7 @@ div {
 
 ## 関連情報
 
+- {{glossary("Inset properties", "インセットプロパティ")}}
 - [CSS の学習: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [位置指定レイアウトにおけるインセットプロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning#例_位置指定レイアウトにおける_inset_プロパティ)
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール

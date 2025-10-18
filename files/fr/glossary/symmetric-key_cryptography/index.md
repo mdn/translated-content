@@ -18,5 +18,5 @@ La plupart des algorithmes par clé symétrique actuellement utilisés sont des 
 - [Glossaire](/fr/docs/Glossary)
   - [Chiffrement par bloc](/fr/docs/Glossary/Block_cipher_mode_of_operation)
   - [Cryptographie](/fr/docs/Glossary/Cryptography)
-  - [Fonction de hachage cryptographique](/fr/docs/Glossary/Cryptographic_hash_function)
+  - [Fonction de hachage cryptographique](/fr/docs/Glossary/Hash_function)
   - [Chiffrement par clé symétrique](/fr/docs/Glossary/Symmetric-key_cryptography)

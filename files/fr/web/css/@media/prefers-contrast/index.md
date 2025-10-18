@@ -1,20 +1,22 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-La [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#caractéristiques_média_media_features) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si l'utilisatrice ou l'utilisateur a configuré son système pour utiliser un contraste élevé (ou faible).
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web soit présenté avec un contraste plus faible ou plus élevé.
 
 ## Syntaxe
 
 - `no-preference`
-  - : Cette valeur indique qu'aucune préférence particulière n'a été exprimée. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
+  - : Indique qu'aucune préférence n'a été exprimée par l'utilisateur·ice dans le système. Cette valeur-clé est évaluée à faux dans un contexte booléen.
 - `more`
-  - : Cette valeur indique que le système a été configuré afin d'avoir un contraste plus élevé.
+  - : Indique que l'utilisateur·ice a signalé au système qu'il·elle préfère une interface avec un contraste plus élevé.
 - `less`
-  - : Cette valeur indique que le système a été configuré afin d'avoir un niveau de contraste plus faible.
+  - : Indique que l'utilisateur·ice a signalé au système qu'il·elle préfère une interface avec un contraste plus faible.
+- `custom`
+  - : Indique que l'utilisateur·ice a signalé au système l'utilisation d'un jeu de couleurs spécifique, et que le contraste impliqué par ces couleurs ne correspond ni à «&nbsp;more&nbsp;» ni à «&nbsp;less&nbsp;». Cette valeur correspond à la palette de couleurs définie par les utilisateur·ice·s de [`forced-colors: active`](/fr/docs/Web/CSS/@media/forced-colors).
 
 ## Préférences utilisateur
 
@@ -60,7 +62,4 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ## Voir aussi
 
-- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](<https://docs.microsoft.com/fr-fr/previous-versions/hh771830(v=vs.85)>)
 - La caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
-
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

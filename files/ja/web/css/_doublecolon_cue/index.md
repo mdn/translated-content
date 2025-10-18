@@ -3,8 +3,6 @@ title: ::cue
 slug: Web/CSS/::cue
 ---
 
-{{CSSRef}}
-
 **`::cue`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、選択された要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キューに一致します。これにより、 VTT トラック付きのメディアで[キャプションや他のキューをスタイル付けする](/ja/docs/Web/API/WebVTT_API#styling_webtt_cues)ことができます。
 
 ```css
@@ -14,7 +12,7 @@ slug: Web/CSS/::cue
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::cue", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::cue", "tabbed-shorter")}}
 
 ```css interactive-example
 video {

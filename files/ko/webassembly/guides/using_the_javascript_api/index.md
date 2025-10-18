@@ -138,7 +138,8 @@ memory.grow(1);
 
 1. `memory.wasm`을 이전과 같이 같은 폴더에 복사합니다.
 
-   > **참고:** [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)에서 모듈의 텍스트 표현을 볼 수 있습니다.
+   > [!NOTE]
+   > [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)에서 모듈의 텍스트 표현을 볼 수 있습니다.
 
 2. `memory.html` 샘플 파일로 돌아가서 이전처럼 wasm 모듈을 가져 와서 컴파일하고 인스턴스화합니다. - 스크립트의 맨 아래에 다음을 추가하세요.
 
@@ -170,7 +171,8 @@ Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaSc
 - 그것들은 자바 스크립트가 모듈 컴파일 이전에 또는 모듈 컴파일과 동시에 메모리의 초기 내용을 가져오고 생성 할 수 있도록합니다.
 - WebAssembly에서 동적 연결을 구현하는 데 중요한 구성 요소인 multiple module instances에서 단일 Memory 객체를 가져올 수 있습니다.
 
-> **참고:** [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)에서 완전히 동작하는 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html))
+> [!NOTE]
+> [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html)에서 완전히 동작하는 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html))
 
 ## 테이블 인스턴스
 
@@ -190,7 +192,8 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
 
 1. 새로운 디렉토리에 `table.wasm`을 복사하여 만듭니다.
 
-   > **참고:** [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)에서 모듈의 텍스트 표현(text representation)을 확인할 수 있습니다.
+   > [!NOTE]
+   > [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)에서 모듈의 텍스트 표현(text representation)을 확인할 수 있습니다.
 
 2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)를 같은 디렉토리에 복사하여 `table.html`라는 파일명으로 저장합니다.
 3. wasm 모듈을 fetch, compile, instantiate하기 전 다음의 코드를 HTML body아래의 {{htmlelement("script")}} 요소안에 넣습니다.
@@ -271,7 +274,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **참고:** [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)에서 라이브 예제를 확인하고 에서 [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html) 소스코드를 확인 할 수 있습니다.
+> [!NOTE]
+> [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)에서 라이브 예제를 확인하고 에서 [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html) 소스코드를 확인 할 수 있습니다.
 
 ## Multiplicity
 

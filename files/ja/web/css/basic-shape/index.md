@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 511208efe18c7a042bad9859dc797e944a1c16ed
 ---
 
-{{CSSRef}}
+**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
 
-**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
-
-{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
+{{InteractiveExample("CSS デモ: &lt;basic-shape&gt;")}}
 
 ```css interactive-example-choice
 clip-path: inset(22% 12% 15px 35px);
@@ -72,7 +70,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ### シェイプ関数
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)で定義されます。
+以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)で定義されます。
 
 - `{{cssxref("basic-shape/inset","inset()")}}`
   - : 内部の長方形を定義します。

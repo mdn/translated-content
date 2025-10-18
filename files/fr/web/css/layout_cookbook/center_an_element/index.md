@@ -17,7 +17,8 @@ Centrer un élément à la fois horizontalement et verticalement dans un autre �
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+> [!NOTE]
+> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 
 ## Choix effectués
 

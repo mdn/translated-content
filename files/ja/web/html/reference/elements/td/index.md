@@ -10,7 +10,7 @@ l10n:
 
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 
-{{InteractiveExample("HTML Demo: &lt;td&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;td&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

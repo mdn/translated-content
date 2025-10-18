@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`view-timeline-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインの名前を定義するために使用します。 `view-timeline` は主体要素に設定します。
 
@@ -33,7 +33,8 @@ view-timeline-name: --custom_name_for_timeline;
 - `<dashed-ident>`
   - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
 
-    > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
+    > [!NOTE]
+    > [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 

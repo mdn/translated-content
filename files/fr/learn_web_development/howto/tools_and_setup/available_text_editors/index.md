@@ -356,7 +356,7 @@ Voici un tableau de quelques éditeurs de texte connus :
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Getting_started)._
 
 ## Aller plus loin
 
