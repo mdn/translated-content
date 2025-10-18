@@ -10,7 +10,7 @@ l10n:
 
 {{DOMxRef("XRLightProbe")}} 接口的 **`probeSpace`** 只读属性返回用于跟踪光照估算所相对的位置和方向的 {{domxref("XRSpace")}}。
 
-## 取值
+## 值
 
 {{domxref("XRSpace")}} 对象。
 
