@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-{{domxref("CSSMathMax")}} 接口的只读属性 {{domxref("CSSMathMax.values")}} 返回包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。
+{{domxref("CSSMathMax")}} 接口的只读属性 `CSSMathMax.values` 返回包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。
 
 ## 值
 
