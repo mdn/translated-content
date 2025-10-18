@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c26709292444632dfbc4862f4b0b5f2adc5fff56
 ---
 
-{{AddonSidebar}}
-
 返回扩展的一组活跃的活动会话范围规则。
 
 ## 语法

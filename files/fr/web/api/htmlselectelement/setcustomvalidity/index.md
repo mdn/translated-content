@@ -27,4 +27,4 @@ ElmSelectionne.setCustomValidity(message);
 
 ## Voir aussi
 
-- [Validation du formulaire](/fr/docs/Web/HTML/Constraint_validation).
+- [Validation du formulaire](/fr/docs/Web/HTML/Guides/Constraint_validation).

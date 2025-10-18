@@ -5,11 +5,9 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`font-feature-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
 
-{{InteractiveExample("CSS Demo: font-feature-settings")}}
+{{InteractiveExample("CSS デモ: font-feature-settings")}}
 
 ```css interactive-example-choice
 font-feature-settings: normal;

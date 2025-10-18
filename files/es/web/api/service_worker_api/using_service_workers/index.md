@@ -144,9 +144,11 @@ self.addEventListener("install", (event) => {
 3. Si se rechaza la promesa, la instalación falla y el trabajador no hará nada. Esto está bien, ya que puedes corregir tu código y luego intentarlo de nuevo la próxima vez que se registre.
 4. Después de una instalación exitosa, el _service worker_ se activa. Esto no tiene mucho de un uso distinto la primera vez que se instala/activa tu _service worker_, pero significa más cuando se actualiza el _service worker_ (consulta la sección [Actualizar tu _service worker_](#actualizar_tu_service_worker) más adelante).
 
-> **Nota:** [localStorage](/es/docs/Web/API/Web_Storage_API) funciona de manera similar a la memoria caché del _service worker_, pero es síncrono, por lo que no está permitido en el _service worker_.
+> [!NOTE]
+> [localStorage](/es/docs/Web/API/Web_Storage_API) funciona de manera similar a la memoria caché del _service worker_, pero es síncrono, por lo que no está permitido en el _service worker_.
 
-> **Nota:** [IndexedDB](/es/docs/Web/API/IndexedDB_API) se puede usar dentro de un _service worker_ para el almacenamiento de datos si lo requieres.
+> [!NOTE]
+> [IndexedDB](/es/docs/Web/API/IndexedDB_API) se puede usar dentro de un _service worker_ para el almacenamiento de datos si lo requieres.
 
 ### Respuestas personalizadas a solicitudes
 

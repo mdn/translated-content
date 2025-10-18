@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **CDN**（内容分发网络）指的是一组分布在各个地区的服务器。这些服务器存储着数据的副本，因此服务器可以根据哪些服务器与用户距离最近，来满足数据的请求。CDN 可以提供快速服务，较少受高流量影响。
 
 CDN 被广泛用于传输样式表和 JavaScript 文件（例如 Bootstrap、jQuery 库等）的静态资源。对这些库文件使用 CDN 技术，有以下几点好处：

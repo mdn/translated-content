@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d1e0c2b95f6f77e775dcf532b5b6ddc30dbd5129
 ---
 
-{{GlossarySidebar}}
-
 **SDK**（**软件开发工具包**）是一组集成的工具，开发人员可以使用这些工具为特定框架、操作系统或其他平台创建软件。SDK 可能包括：
 
 - 编辑器

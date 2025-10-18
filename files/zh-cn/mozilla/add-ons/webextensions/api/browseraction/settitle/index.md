@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eec174a08a5003da32f53e694c45eda3377b4d18
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的标题。标题会显示在浏览器操作图标的工具提示中。你可以传入一个 `tabId` 或 `windowId` 作为可选参数——如果这样做，则标题仅为指定的标签页或窗口更改。没有特定标题的标签页或窗口将继承全局标题文本，该文本默认为清单（manifest）中指定的 [`default_title`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 或 [`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)。
 
 ## 语法

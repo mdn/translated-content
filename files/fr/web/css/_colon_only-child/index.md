@@ -1,71 +1,88 @@
 ---
 title: :only-child
 slug: Web/CSS/:only-child
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-child`** représente n'importe quel élément qui est le seul enfant de son élément parent. Elle permet d'obtenir le même effet que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mais avec une spécificité inférieure.
 
-```css
-/* Cible chaque élément <p> si celui-ci   */
-/* est le seul élément fils de son parent */
-p:only-child {
-  background-color: lime;
+{{InteractiveExample("Démonstration CSS&nbsp;: :only-child", "tabbed-shorter")}}
+
+```css interactive-example
+li:only-child {
+  color: fuchsia;
+}
+
+b:only-child {
+  text-decoration: underline;
 }
 ```
 
-> [!NOTE]
-> En CSS3, pour cibler l'élément, il fallait que celui-ci ait un élément parent. Cette restriction a été levée avec CSS4.
+```html interactive-example
+<p>Stars attendues&nbsp;:</p>
+<ol>
+  <li>Robert Downey, Jr.</li>
+</ol>
+
+<p>Stars encore à confirmer&nbsp;:</p>
+<ol>
+  <li>Scarlett Johansson</li>
+  <li>Samuel L. Jackson</li>
+  <li>Chris Pratt</li>
+</ol>
+
+<p>La cérémonie va se dérouler au <b>Théâtre Dolby</b>.</p>
+```
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:only-child {
+  /* ... */
+}
+```
 
 ## Exemples
 
 ### Exemple simple
 
-#### CSS
-
-```css
-span:only-child {
-  color: red;
-}
-```
-
 #### HTML
 
 ```html
 <div>
-  <span> Ce span est l'unique enfant de son parent </span>
+  <div>Je suis un enfant unique.</div>
 </div>
 
 <div>
-  <span> Ce span est l'un des deux enfants de son parent </span>
-  <span> Ce span est l'un des deux enfants de son parent </span>
+  <div>Je suis le 1er frère.</div>
+  <div>Je suis le 2ème frère.</div>
+  <div>
+    Je suis le 3ème frère,
+    <div>mais ceci est un enfant unique.</div>
+  </div>
 </div>
 ```
-
-#### Résultat
-
-{{EmbedLiveSample('Exemple_simple', '100%', 150)}}
-
-### Exemple avec une liste
 
 #### CSS
 
 ```css
-li li {
-  list-style-type: disc;
+div:only-child {
+  color: red;
 }
 
-li:only-child {
-  color: #6699ff;
-  font-style: italic;
-  list-style-type: square;
+div {
+  display: inline-block;
+  margin: 6px;
+  outline: 1px solid;
 }
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('Exemple_simple', '100%', 180)}}
+
+### Exemple avec une liste
 
 #### HTML
 
@@ -95,9 +112,22 @@ li:only-child {
 </ol>
 ```
 
+#### CSS
+
+```css
+li li {
+  list-style-type: disc;
+}
+
+li:only-child {
+  color: red;
+  list-style-type: square;
+}
+```
+
 #### Résultat
 
-{{EmbedLiveSample('Exemple_avec_une_liste', '100%', 150)}}
+{{EmbedLiveSample('Exemple_avec_une_liste', '100%', 180)}}
 
 ## Spécifications
 

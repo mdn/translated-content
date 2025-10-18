@@ -2,20 +2,22 @@
 title: ::-moz-focus-inner
 slug: Web/CSS/::-moz-focus-inner
 l10n:
-  sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{non-standard_header}}{{deprecated_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension spécifique à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le contour interne pour le focus sur les éléments [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset), et [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le contour interne pour le focus sur l'élément {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
 
 > [!NOTE]
 > Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'aura aucun effet.
 
 ## Syntaxe
 
-```
-::-moz-focus-inner
+```css
+::-moz-focus-inner {
+  /* ... */
+}
 ```
 
 ## Exemple
@@ -30,6 +32,9 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 
 ```css
 button::-moz-focus-inner,
+input[type="color"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner {
   padding-block-start: 0px;
   padding-inline-end: 2px;
@@ -45,18 +50,15 @@ input[type="submit"]::-moz-focus-inner {
 
 ## Spécifications
 
-Il s'agit d'un pseudo-élément spécifique, qui n'est spécifié dans aucun standard.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
+Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
 - [Les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions)
-- [`-moz-user-focus`](/fr/docs/Web/CSS/-moz-user-focus)
-- Les sélecteurs CSS associés
-  - [`:-moz-focusring`](/fr/docs/Web/CSS/:focus-visible)
-  - [`:focus`](/fr/docs/Web/CSS/:focus)
-  - [`:focus-visible`](/fr/docs/Web/CSS/:focus-visible)
-  - [`:focus-within`](/fr/docs/Web/CSS/:focus-within)
+- Propriétés CSS associées&nbsp;:
+  - {{cssxref("-moz-user-focus")}}
+
+- Les sélecteurs CSS associés&nbsp;:
+  - {{cssxref(":focus")}}
+  - {{cssxref(":focus-visible")}}
+  - {{cssxref(":focus-within")}}

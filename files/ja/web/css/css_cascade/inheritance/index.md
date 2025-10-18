@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 CSS において、**継承** (inheritance) はある要素のあるプロパティに値が指定されなかった場合の挙動を制御します。
 
 CSS プロパティは 2 種類に分類することができます。
@@ -110,5 +108,5 @@ em {
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
 - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール

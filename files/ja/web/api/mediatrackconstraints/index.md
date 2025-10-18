@@ -15,7 +15,8 @@ l10n:
 
 制約の仕組みについて詳しく知りたい場合は、[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)を参照してください。
 
-> **メモ:** `min` および `exact` 値は、{{domxref("MediaDevices.getDisplayMedia()")}} 呼び出しで使用される制約では許可されておらず、`TypeError` が発生します。ただし、これらは {{domxref("MediaStreamTrack.applyConstraints()")}} 呼び出しで使用される制約では許可されています。
+> [!NOTE]
+> `min` および `exact` 値は、{{domxref("MediaDevices.getDisplayMedia()")}} 呼び出しで使用される制約では許可されておらず、`TypeError` が発生します。ただし、これらは {{domxref("MediaStreamTrack.applyConstraints()")}} 呼び出しで使用される制約では許可されています。
 
 ### ConstrainBoolean
 
