@@ -1,19 +1,19 @@
 ---
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<angle-percentage>`** représente une valeur qui peut être soit un {{cssxref("angle")}} soit un {{cssxref("percentage")}}.
 
-Le type de donnée **`<angle-percentage>`** représente une valeur qui peut être une valeur de type {{cssxref("angle")}} ou une valeur de type {{cssxref("percentage")}}.
+Lorsque **`<angle-percentage>`** est accepté, le pourcentage est converti en une valeur angulaire et peut donc être utilisé dans une expression {{cssxref("calc", "calc()")}}.
 
 ## Syntaxe
 
-Voir la documentation des types {{cssxref("angle")}} et {{cssxref("percentage")}} pour plus de détails sur les syntaxes possibles avec chacun de ces types.
+Voir la documentation pour {{cssxref("angle")}} et {{cssxref("percentage")}} pour plus de détails sur les syntaxes autorisées par ce type.
 
-## Utilisation avec `calc()`
-
-Lorsqu'il est possible d'utiliser une valeur de type `<angle-percentage>` dans une déclaration, cela signifie que le pourcentage sera résolu avec une valeur angulaire et qu'il peut être utilisé dans une expression {{Cssxref("calc()")}}.
+{{csssyntax}}
 
 ## Spécifications
 
@@ -22,3 +22,9 @@ Lorsqu'il est possible d'utiliser une valeur de type `<angle-percentage>` dans u
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- Les fonctions CSS [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)

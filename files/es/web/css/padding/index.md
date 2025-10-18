@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3c09214457e67106a16594c333dbae8b2be67e6f
 ---
 
-{{CSSRef}}
-
 La [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) de [CSS](/es/docs/Web/CSS) **`padding`** establece el área de relleno en los cuatro lados de un elemento a la vez.
 
 {{InteractiveExample("CSS Demo: padding")}}

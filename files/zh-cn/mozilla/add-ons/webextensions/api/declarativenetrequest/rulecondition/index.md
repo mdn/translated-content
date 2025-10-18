@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("declarativeNetRequest.Rule")}} 的 `condition` 属性，用于决定规则是否匹配请求的条件细节。
 
 ## 类型

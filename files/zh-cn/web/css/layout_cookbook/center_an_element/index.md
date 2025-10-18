@@ -3,8 +3,6 @@ title: 居中一个元素
 slug: Web/CSS/Layout_cookbook/Center_an_element
 ---
 
-{{CSSRef}}
-
 在这份指南中你将了解到把一个盒子居中放置在另一个之中的方法。在弹性盒子模型（flexbox）出现之前，要做到同时垂直与水平居中是很困难的，而现在利用盒子对齐属性（Box Alignment）就很直截了当了。
 
 ![居中对齐在较大盒子内的元素](cookbook-center.png)

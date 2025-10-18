@@ -3,7 +3,7 @@ title: ::-webkit-slider-thumb
 slug: Web/CSS/::-webkit-slider-thumb
 ---
 
-admi{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

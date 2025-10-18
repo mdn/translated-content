@@ -10,7 +10,7 @@ l10n:
 
 **`<var>`** は [HTML](/ja/docs/Web/HTML) の要素で、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;var&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

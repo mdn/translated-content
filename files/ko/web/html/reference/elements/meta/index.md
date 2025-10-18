@@ -85,7 +85,8 @@ original_slug: Web/HTML/Element/meta
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
-> **참고:** [`name`](#name) 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, [`itemprop`](#itemprop) 특성을 [`name`](#name), [`http-equiv`](#http-equiv) 또는 [`charset`](#charset) 특성과 함께 설정할 수 없습니다.
+> [!NOTE]
+> [`name`](#name) 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, [`itemprop`](#itemprop) 특성을 [`name`](#name), [`http-equiv`](#http-equiv) 또는 [`charset`](#charset) 특성과 함께 설정할 수 없습니다.
 
 - `charset`
   - : 페이지의 문자 인코딩을 선언합니다. 이 특성이 존재할 경우, 그 값은 반드시 문자열 "`utf-8`"의 대소문자 구분 없는 {{glossary("ASCII")}} 표현이어야 합니다.

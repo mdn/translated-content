@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}
-
 **`:buffering`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、再生可能な要素（{{htmlelement("audio")}} や {{htmlelement("video")}} など）がメディアリソースをバッファリングしているときに、その要素が再生可能であることを表します。
 
 要素は、メディアデータの読み込みを試みているが、再生を開始または継続するのに十分なデータがまだ存在しないために再生を続けることができない場合、バッファリング中であるとみなされます。

@@ -3,8 +3,6 @@ title: :read-only
 slug: Web/CSS/:read-only
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:read-only`** de [CSS](/es/docs/Web/CSS) representa un elemento que ya no es editable por el usuario (como un [input](/es/docs/Web/HTML/Reference/Elements/input)).
 
 ```css

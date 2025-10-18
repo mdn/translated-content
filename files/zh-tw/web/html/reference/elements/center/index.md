@@ -3,7 +3,7 @@ title: <center>：中央對齊文字元素
 slug: Web/HTML/Reference/Elements/center
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<center>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)，它將其區塊級或內聯內容在其包含元素中水平居中顯示。通常，容器是 {{HTMLElement("body")}}，但不是必需的。
 

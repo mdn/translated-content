@@ -246,7 +246,8 @@ Este HTML se representará como un cuadro resaltado:
 #### Observaciones
 
 ```md
-> **Observación:** **Así es como se escribe una observación.**
+> [!CALLOUT]
+> **Así es como se escribe una observación.**
 >
 > Puede tener varios párrafos.
 ```

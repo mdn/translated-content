@@ -65,7 +65,8 @@ Si deseas ver todos los caracteres especiales que se pueden usar en expresiones 
 | `*`, `+`, `?`, `x{n}`, `x{n,}`, `x{n,m}`                                                                                     | [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)                                       |
 | `\p{UnicodeProperty}`, `\P{UnicodeProperty}`                                                                                 | [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) |
 
-> **Nota:** [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).
+> [!NOTE]
+> [También está disponible una hoja de referencia más grande](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (solo agregando partes de esos artículos individuales).
 
 ### Escapando
 

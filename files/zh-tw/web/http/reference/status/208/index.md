@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`208 Already Reported`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼用於 {{HTTPStatus("207", "207 Multi-Status")}} 回應中，以節省空間並避免衝突。此回應專門用於基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）的上下文中。
 
 如果多次使用不同的路徑請求相同的資源（例如，作為集合的一部分），則只有第一次請求會以 {{HTTPStatus("200")}} 回報。所有其他綁定的回應將以此 `208` 狀態碼回報，因此不會產生衝突，且回應會保持較短。

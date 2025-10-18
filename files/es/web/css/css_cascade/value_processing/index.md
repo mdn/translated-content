@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascade/Value_processing
 original_slug: Web/CSS/CSS_cascade/initial_value
 ---
 
-{{CSSRef}}
-
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen

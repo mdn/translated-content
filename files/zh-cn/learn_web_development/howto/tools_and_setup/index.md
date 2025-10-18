@@ -21,7 +21,5 @@ slug: Learn_web_development/Howto/Tools_and_setup
   - : 本文介绍如何使用 {{Glossary("FTP")}} 工具在线发布你的网站——这是一种常见的网站发布方法，以便其他人可以通过计算机访问网站。
 - [怎么使用 GitHub Pages?](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
   - : 本文提供了使用 GitHub 的 gh-pages 功能发布内容的基本指南。
-- [如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
-  - : 寻找一个托管网站的地方？以下是在 Google App Engine 上托管网站的分步指南。
 - [有哪些工具可用于调试和提高网站性能？](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : 这组文章向你展示了如何使用 Firefox 中的开发工具来调试和提高网站性能，使用工具检查内存使用情况、JavaScript 调用树、渲染的 DOM 节点数量等。

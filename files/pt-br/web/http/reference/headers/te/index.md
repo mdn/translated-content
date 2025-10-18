@@ -4,11 +4,10 @@ slug: Web/HTTP/Reference/Headers/TE
 original_slug: Web/HTTP/Headers/TE
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição **`TE`** especifica a codificação de transferência que o agente de usuário está propício a aceitar (você poderia informalmente chamar ele de `Accept-Transfer-Encoding`, o que seria mais intuitivo).
 
-> **Nota:** [Em HTTP/2 - o cabeçalho `TE` somente é aceito se o valor `trailers` é colocado.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
+> [!NOTE]
+> [Em HTTP/2 - o cabeçalho `TE` somente é aceito se o valor `trailers` é colocado.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
 
 Veja também o cabeçalho de resposta {{HTTPHeader("Transfer-Encoding")}} para maiores detalhes sobre codificações de transferência. Note que `chunked` é sempre aceito para receptores HTTP/1.1 e você não precisa especificar `"chunked"` usando o cabeçalho `TE`. Entretanto, ele é útil para configurar se o cliente está aceitando campos de rabeira (_trailer fields_) em uma codificação de transferência fragmentada usando os valores "_trailers_".
 

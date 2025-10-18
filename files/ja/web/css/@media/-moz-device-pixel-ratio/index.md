@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
+{{Non-standard_header}} {{Deprecated_header}}
 
 **`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
 
@@ -39,7 +39,8 @@ l10n:
   (min-resolution: 192dpi); /* dppx のフォールバック */
 ```
 
-> **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
+> [!NOTE]
+> `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
 
 ## 仕様書
 
