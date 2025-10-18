@@ -19,7 +19,7 @@ new CSSMathProduct(args)
 ### 参数
 
 - `args`
-  - : 值的列表。该列表将用于 {{domxref('CSSMathProduct')}} 对象，列表元素可以是双精度整数或 {{domxref('CSSNumericValue')}}。
+  - : 用于 {{domxref('CSSMathProduct')}} 对象的值（可以是双精度整数或 {{domxref('CSSNumericValue')}}）列表。
 
 ## 规范
 
