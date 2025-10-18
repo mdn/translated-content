@@ -1,8 +1,8 @@
 ---
-title: SDP
+title: SDP （セッション記述プロトコル）
 slug: Glossary/SDP
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
 **SDP** (Session Description {{glossary("Protocol")}}) is the standard describing a {{Glossary("P2P","peer-to-peer")}} connection. SDP contains the {{Glossary("codec")}}, source address, and timing information of audio and video.
