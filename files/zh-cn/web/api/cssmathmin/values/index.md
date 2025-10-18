@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-{{domxref("CSSMathMin")}} 接口的只读属性 {{domxref("CSSMathMin.values")}} 返回包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。
+{{domxref("CSSMathMin")}} 接口的只读属性 `CSSMathMin.values` 返回包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。
 
 ## 值
 
