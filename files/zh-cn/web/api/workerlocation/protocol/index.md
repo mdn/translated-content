@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("WorkerLocation")}} 对象的 **`protocol`** 属性返回该 Worker 所处位置的 {{domxref("URL.protocol", "protocol")}} 部分。
 
-## 取值
+## 值
 
 字符串。
 
