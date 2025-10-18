@@ -8,11 +8,11 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Service Workers API")}}{{AvailableInWorkers("worker")}}
 
-{{domxref("WorkerNavigator")}} 接口的只读属性 **`serviceWorker`** 返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，并通过该对象提供对 {{domxref("ServiceWorker")}} 的注册、移除、升级和通信的访问。
+{{domxref("WorkerNavigator")}} 接口的 **`serviceWorker`** 只读属性返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，并通过该对象提供对 {{domxref("ServiceWorker")}} 的注册、移除、升级和通信的访问。
 
 此功能在隐私模式下可能不可用。
 
-## 取值
+## 值
 
 {{domxref("ServiceWorkerContainer")}}。
 
