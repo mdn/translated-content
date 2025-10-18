@@ -1,5 +1,5 @@
 ---
-title: "Méthode de requête CONNECT"
+title: Méthode de requête CONNECT
 short-title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
 original_slug: Web/HTTP/Methods/CONNECT
