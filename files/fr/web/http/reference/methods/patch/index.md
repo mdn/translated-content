@@ -1,5 +1,5 @@
 ---
-title: "Méthode de requête PATCH"
+title: Méthode de requête PATCH
 short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
 original_slug: Web/HTTP/Methods/PATCH
