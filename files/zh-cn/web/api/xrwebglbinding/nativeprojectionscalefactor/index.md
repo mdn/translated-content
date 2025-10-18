@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-{{domxref("XRWebGLBinding")}} 接口的 **`nativeProjectionScaleFactor`** 只读属性表示一个缩放因子。投影层分辨率乘以该缩放因子后，即可得到 WebXR 设备帧缓冲区的原生分辨率。
+{{domxref("XRWebGLBinding")}} 接口的 **`nativeProjectionScaleFactor`** 只读属性返回一个缩放因子。当投影层分辨率乘以该缩放因子后，即可得到 WebXR 设备帧缓冲区的原生分辨率。
 
 详细细节请参见 {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor_static", "XRWebGLLayer.getNativeFramebufferScaleFactor()")}}。
 
-## 取值
+## 值
 
 表示设备原生帧缓冲区大小的缩放倍数的浮点数。
 
