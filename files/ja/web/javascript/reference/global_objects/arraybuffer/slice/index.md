@@ -9,7 +9,7 @@ l10n:
 
 **`slice()`** メソッドは新しい `ArrayBuffer` を返し、その中にこの `ArrayBuffer` の `begin` から `end` の手前までをコピーします。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.slice()")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.slice()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

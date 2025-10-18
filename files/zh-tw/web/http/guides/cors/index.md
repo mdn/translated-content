@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
 
-{{HTTPSidebar}}
-
 **跨來源資源共享**（{{Glossary("CORS")}}）是一種基於 {{Glossary("HTTP")}} 標頭的機制，允許伺服器指示瀏覽器允許從除其自身以外的任何{{glossary("origin", "來源")}}（域名、協定或通訊埠）加載資源。CORS 還依賴於瀏覽器向承載跨來源資源的伺服器發出「預檢」請求，以檢查伺服器是否允許實際請求。在預檢請求中，瀏覽器會發送標頭，指示將在實際請求中使用的 HTTP 方法和標頭。
 
 一個跨來源請求的範例：從 `https://domain-a.com` 提供的前端 JavaScript 代碼使用 {{domxref("fetch()")}} 請求 `https://domain-b.com/data.json`。

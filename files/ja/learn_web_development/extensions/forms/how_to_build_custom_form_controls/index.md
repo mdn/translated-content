@@ -1684,7 +1684,8 @@ window.addEventListener("load", () => {
 </div>
 ```
 
-> **メモ:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
+> [!NOTE]
+> `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
 
 ### `aria-selected` 属性
 

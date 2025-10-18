@@ -3,8 +3,6 @@ title: 一元减（-）
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
 
-{{jsSidebar("Operators")}}
-
 **一元减**（**`-`**）运算符在其操作数之前，并对其取反。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}

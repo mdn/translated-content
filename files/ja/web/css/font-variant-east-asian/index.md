@@ -5,11 +5,9 @@ l10n:
   sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
-
 **`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
 
-{{InteractiveExample("CSS Demo: font-variant-east-asian")}}
+{{InteractiveExample("CSS デモ: font-variant-east-asian")}}
 
 ```css interactive-example-choice
 font-variant-east-asian: normal;

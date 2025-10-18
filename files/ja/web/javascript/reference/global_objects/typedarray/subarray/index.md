@@ -9,7 +9,7 @@ l10n:
 
 **`subarray()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、同じ {{jsxref("ArrayBuffer")}} ストアにおいて、この型付き配列オブジェクトと同じ要素の型をもつ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.subarray()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

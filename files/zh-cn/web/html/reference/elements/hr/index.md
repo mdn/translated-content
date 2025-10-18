@@ -3,8 +3,6 @@ title: <hr>：主题分割（水平分割线）元素
 slug: Web/HTML/Reference/Elements/hr
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<hr>`** 元素表示段落级元素之间的主题转换（例如，一个故事中的场景的改变，或一个章节的主题的改变）。
 
 {{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}

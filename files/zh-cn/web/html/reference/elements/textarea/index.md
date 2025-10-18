@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
 
-{{HTMLSidebar}}
-
 **`<textarea>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个多行纯文本编辑控件，适用于允许用户输入大量自由格式文本的场景，例如评论或反馈表单。
 
 {{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}

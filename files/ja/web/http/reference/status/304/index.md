@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`304 Not Modified`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースを再送する必要がないことを示します。
 
 このレスポンスコードは、リクエストが[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)の {{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストに {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーが付いており、条件が 'false' と評価された時に送信されます。

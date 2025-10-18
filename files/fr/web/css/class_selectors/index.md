@@ -25,7 +25,7 @@ li.spacious.elegant {
 }
 ```
 
-L'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) est une liste de termes séparés par des espaces, il est nécessaire qu'un de ces termes corresponde exactement au nom utilisé dans le sélecteur pour que l'élément soit ciblé.
+L'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#class) est une liste de termes séparés par des espaces, il est nécessaire qu'un de ces termes corresponde exactement au nom utilisé dans le sélecteur pour que l'élément soit ciblé.
 
 ## Syntaxe
 
