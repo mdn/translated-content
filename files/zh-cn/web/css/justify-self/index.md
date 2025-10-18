@@ -3,7 +3,7 @@ title: justify-self
 slug: Web/CSS/justify-self
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
+[CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对齐方式。
 
 {{InteractiveExample("CSS Demo: justify-self")}}
 
