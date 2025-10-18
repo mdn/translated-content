@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
-{{CSSRef}}
-
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`normal` または `none`）、画像（および関連付けられた "alt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
 
 `content` プロパティを使用して挿入されたオブジェクトは、 **無名の{{ glossary("replaced elements", "置換要素")}}** になります。
 
-{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: content", "tabbed-shorter")}}
 
 ```css interactive-example
 .topic-games::before {
@@ -144,7 +142,7 @@ content: unset;
 
 ## アクセシビリティ
 
-CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model/Introduction) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
+CSS で生成されるコンテンツは、 [DOM](/ja/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
 
 挿入されたコンテンツが装飾的なものでない場合は、支援技術に情報が指定され、 CSS が無効の場合にも利用できることを確認してください。
 

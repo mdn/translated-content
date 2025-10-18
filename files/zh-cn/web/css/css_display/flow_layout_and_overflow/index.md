@@ -3,8 +3,6 @@ title: 流式布局和溢出
 slug: Web/CSS/CSS_display/Flow_layout_and_overflow
 ---
 
-{{CSSRef}}
-
 当容器中的内容超过可容纳的范围时，就会发生溢出情况。了解溢出的行为对于处理 CSS 中大小受限的任何元素都很重要。本指南解释了使用正常流时溢出是如何工作的。
 
 ## 什么是溢出？

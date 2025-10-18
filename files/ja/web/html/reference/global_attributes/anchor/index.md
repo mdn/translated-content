@@ -1,12 +1,12 @@
 ---
-title: anchor
+title: HTML anchor グローバル属性
+short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
-original_slug: Web/HTML/Global_attributes/anchor
 l10n:
-  sourceCommit: 926f83641b980fcda58914649748b0368eeca1cd
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{Non-standard_Header}}{{SeeCompatTable}}
 
 **`anchor`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、位置指定要素とアンカー要素を関連付けるために使用されます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) の値です。その後、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素の位置指定を行うことができます。
 
@@ -119,4 +119,3 @@ CSS を使用して、 `infobox` 要素をアンカー位置指定要素に変�
 - CSS の {{cssxref("anchor-name")}} プロパティ
 - CSS の　{{cssxref("position-anchor")}} プロパティ
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド

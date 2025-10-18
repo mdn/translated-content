@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `shape` は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の形状が矩形であるか丸いディスプレイであるかを区別するために使用することができます。
 

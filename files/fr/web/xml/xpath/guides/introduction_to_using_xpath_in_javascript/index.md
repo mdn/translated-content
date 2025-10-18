@@ -6,13 +6,13 @@ original_slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 
 {{XsltSidebar}}
 
-Ce document décrit l'interface pour utiliser [XPath](/fr/docs/Web/XPath) dans JavaScript, que ce soit en interne, dans les extensions et depuis les sites Web. Mozilla implémente une partie importante de [DOM 3 XPath (en)](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/). Cela signifie que les expressions XPath peuvent être utilisées sur des documents HTML et XML.
+Ce document décrit l'interface pour utiliser [XPath](/fr/docs/Web/XML/XPath) dans JavaScript, que ce soit en interne, dans les extensions et depuis les sites Web. Mozilla implémente une partie importante de [DOM 3 XPath (en)](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/). Cela signifie que les expressions XPath peuvent être utilisées sur des documents HTML et XML.
 
 La principale interface pour l'utilisation de XPath est la fonction [`evaluate()`](/fr/docs/Web/API/Document/evaluate) de l'objet [`document`](/fr/docs/Web/API/Document).
 
 ## document.evaluate()
 
-Cette méthode évalue les expressions [XPath](/fr/docs/Web/XPath) dans un document [XML](/fr/docs/Web/XML) (y compris les documents HTML), et retourne un objet [`XPathResult`](/fr/docs/Web/XPath/XPathResult), qui peut être un nœud unique ou un ensemble de nœuds. La documentation existante sur cette méthode se trouve à la page [`document.evaluate`](/fr/docs/Web/API/Document/evaluate) mais elle est plutôt succincte comparée à nos besoins actuels. Nous l'examinerons de façon plus complète dans la suite de ce document.
+Cette méthode évalue les expressions [XPath](/fr/docs/Web/XML/XPath) dans un document [XML](/fr/docs/Web/XML) (y compris les documents HTML), et retourne un objet [`XPathResult`](/fr/docs/Web/XPath/XPathResult), qui peut être un nœud unique ou un ensemble de nœuds. La documentation existante sur cette méthode se trouve à la page [`document.evaluate`](/fr/docs/Web/API/Document/evaluate) mais elle est plutôt succincte comparée à nos besoins actuels. Nous l'examinerons de façon plus complète dans la suite de ce document.
 
 ```js
 var xpathResult = document.evaluate(
@@ -88,7 +88,7 @@ On obtiendra la valeur de retour de l'expression en accédant respectivement aux
 
 ##### Exemple
 
-Cet exemple utilise l'expression XPath [`count(//p)`](/fr/docs/Web/XPath/Functions/count) pour obtenir le nombre d'éléments `<p>` présents dans le document HTML :
+Cet exemple utilise l'expression XPath [`count(//p)`](/fr/docs/Web/XML/XPath/Reference/Functions/count) pour obtenir le nombre d'éléments `<p>` présents dans le document HTML :
 
 ```js
 var paragraphCount = document.evaluate(
@@ -403,11 +403,11 @@ Une autre approche pour identifier les éléments par défaut dans un espace de 
 
 Si l'on souhaite avoir une certaine flexibilité dans les espaces de noms en ne nécessitant pas d'utiliser un préfixe spécifique lorsque l'on veut trouver un élément ou un attribut appartenant à un espace de noms, on doit utiliser des techniques spéciales.
 
-Tandis que l'on peut adapter la technique dans la section supérieure pour tester les éléments appartenant à un espace de noms sans regarder le préfix choisi (en utilisant [local-name()](/fr/docs/Web/XPath/Functions/local-name) combiné avec [namespace-uri()](/fr/docs/Web/XPath/Functions/namespace-uri) à la place de [name()](/fr/docs/Web/XPath/Functions/name)), un situation plus compliquée apparaît cependant, si l'on souhaite obtenir un élément avec un attribut appartenant à un espace de noms spécifique dans un prédicat (étant donnée l'absence des variables indépendantes de l'implémentation en XPath 1.0).
+Tandis que l'on peut adapter la technique dans la section supérieure pour tester les éléments appartenant à un espace de noms sans regarder le préfix choisi (en utilisant [local-name()](/fr/docs/Web/XML/XPath/Reference/Functions/local-name) combiné avec [namespace-uri()](/fr/docs/Web/XML/XPath/Reference/Functions/namespace-uri) à la place de [name()](/fr/docs/Web/XML/XPath/Reference/Functions/name)), un situation plus compliquée apparaît cependant, si l'on souhaite obtenir un élément avec un attribut appartenant à un espace de noms spécifique dans un prédicat (étant donnée l'absence des variables indépendantes de l'implémentation en XPath 1.0).
 
 Par exemple, on peut essayer (de manière incorrecte) d'obtenir un élément avec un attribut appartenant à un espace de noms de la manière suivante : `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-Cela pourrait récupérer des éléments par inadvertance si un de ces attributs existaient avec un nom local "`href`", mais que c'était un autre attribut qui avait le nom d'espace ciblé (XLink, à la place de [@href](/fr/docs/Web/XPath/Axes#attribute)).
+Cela pourrait récupérer des éléments par inadvertance si un de ces attributs existaient avec un nom local "`href`", mais que c'était un autre attribut qui avait le nom d'espace ciblé (XLink, à la place de [@href](/fr/docs/Web/XML/XPath/Reference/Axes#attribute)).
 
 Afin d'obtenir des éléments avec l'attribut XLink `@href` de manière précise (sans par ailleurs être obligé de définir des préfixes dans un résolveur de nom d'espaces), on procéder comme suit :
 
@@ -517,5 +517,5 @@ var thisitemEl = thislevel.iterateNext();
 
 ## Voir aussi
 
-- [XPath](/fr/docs/Web/XPath)
+- [XPath](/fr/docs/Web/XML/XPath)
 - [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) de _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ par G. Ken Holman

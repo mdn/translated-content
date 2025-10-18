@@ -48,6 +48,6 @@ de caractères"
 
 ## Voir aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
+- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)

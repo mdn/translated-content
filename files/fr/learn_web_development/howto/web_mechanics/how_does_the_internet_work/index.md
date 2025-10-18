@@ -93,6 +93,6 @@ Vous aurez peut-être constaté que lorsque nous naviguons sur le Web avec un na
 
 ## Étapes suivantes
 
-- [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche](/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
-- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Le fonctionnement du Web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [Comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
+- [Comprendre les noms de domaine](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

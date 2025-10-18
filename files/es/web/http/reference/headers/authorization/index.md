@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Authorization
 original_slug: Web/HTTP/Headers/Authorization
 ---
 
-{{HTTPSidebar}}
-
 La cabecera de petición **`Authorization`** contiene las credenciales para autenticar a un usuario en un servidor, usualmente luego de que el servidor haya respondido con un estado {{HTTPStatus("401")}} `Unauthorized` y la cabecera {{HTTPHeader("WWW-Authenticate")}}.
 
 | Tipo de cabecera                               | {{Glossary("Cabecera de respuesta")}} |

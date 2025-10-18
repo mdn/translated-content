@@ -3,8 +3,6 @@ title: CSS 容器查询
 slug: Web/CSS/CSS_containment/Container_queries
 ---
 
-{{CSSRef}}
-
 容器查询使你能够根据元素容器的大小应用样式。例如，如果容器在周围的上下文中可用的空间更少，你可以隐藏某些元素或使用较小的字体。容器查询是[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的另一种选择，后者根据视口大小或其他设备特征为元素应用样式。
 
 ![一个基于视口宽度（即浏览器的完整宽度）的媒体查询和一个基于容器上下文宽度（即容器元素的宽度）的容器查询](container-query.svg)

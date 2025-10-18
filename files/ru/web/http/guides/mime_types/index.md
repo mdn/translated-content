@@ -3,8 +3,6 @@ title: MIME types
 slug: Web/HTTP/Guides/MIME_types
 ---
 
-{{HTTPSidebar}}
-
 **Медиа тип** (так же известный как **Multipurpose Internet Mail Extensions** или **MIME тип)** является стандартом, который описывает природу и формат документа, файла или набора байтов. Он определён и стандартизирован в спецификации {{RFC(6838)}} .
 
 Организация [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) является ответственной за все официально признанные MIME типы, и вы можете найти самый последний и полный лист MIME типов на их странице [Медиа Типов](https://www.iana.org/assignments/media-types/media-types.xhtml).

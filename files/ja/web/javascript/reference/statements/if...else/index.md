@@ -9,7 +9,7 @@ l10n:
 
 **`if...else`** 文は、指定された条件が{{Glossary("truthy", "真値")}}ならば文を実行します。条件が{{Glossary("falsy", "偽値")}}なら、オプションの `else` 節にあるもう一方の文を実行します。
 
-{{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
+{{InteractiveExample("JavaScript デモ: Statement - If...Else")}}
 
 ```js interactive-example
 function testNum(a) {

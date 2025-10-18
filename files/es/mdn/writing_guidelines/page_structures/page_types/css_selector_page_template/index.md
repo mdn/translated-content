@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Elimine toda esta nota explicativa antes de publicar_
+> [!NOTE]
+> _Elimine toda esta nota explicativa antes de publicar_
 >
 > ---
 >
@@ -71,7 +72,7 @@ l10n:
 >
 > _Recuerde eliminar toda esta nota explicativa antes de publicar_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}
 
 El párrafo de resumen: comience nombrando el selector y diciendo lo que hace. Idealmente, esto debería consistir en 1 o 2 oraciones cortas.
 

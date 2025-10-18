@@ -2,14 +2,12 @@
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 l10n:
-  sourceCommit: 581b0f5068b7417e525abfe5c230e35cceca04df
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type {{cssxref("gradient")}}, un type spécifique d'[image](/fr/docs/Web/CSS/image).
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient), mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type [`<gradient>`](/fr/docs/Web/CSS/gradient), un type spécifique d'[image](/fr/docs/Web/CSS/image).
-
-{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: repeating-linear-gradient()")}}
 
 ```css interactive-example-choice
 background: repeating-linear-gradient(
@@ -46,30 +44,38 @@ La longueur du dégradé répété est la distance entre le premier et le dernie
 
 Comme les autres dégradés, un dégradé linéaire répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
 
-Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type [`<color>`](/fr/docs/Web/CSS/color_value)) CSS mais un type particulier d'image (type [`<image>`](/fr/docs/Web/CSS/image)). À ce titre, `repeating-linear-gradient()` ne fonctionnera pas pour [`background-color`](/fr/docs/Web/CSS/background-color) et les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color_value).
+Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où les `<image>` peuvent l'être. Pour cette raison, `repeating-linear-gradient()` ne fonctionne pas avec {{Cssxref("background-color")}} et les autres propriétés qui utilisent le type de données {{cssxref("&lt;color&gt;")}}.
 
 ## Syntaxe
 
 ```css
-/* Un dégradé répétitif sur un axe à 45 degrés,
-   débutant bleu et finissant rouge, répété 3 fois */
-repeating-linear-gradient(45deg, blue, red 33.3%);
+/* Un dégradé répété incliné à 45 degrés,
+   commençant par du bleu et finissant par du rouge, répété 3 fois */
+repeating-linear-gradient(45deg, blue, red 33.3%)
 
-/* Un dégradé répétitif allant du coin inférieur droit
-   au coin supérieur gauche débutant bleu et finissant rouge
-   et répété tous les 20 pixels */
-repeating-linear-gradient(to left top, blue, red 20px);
+/* Un dégradé répété allant du bas à droite vers le haut à gauche,
+   commençant par du bleu et finissant par du rouge, répété tous les 20px */
+repeating-linear-gradient(to left top, blue, red 20px)
 
-/* Un dégradé répétitif allant du bas vers le haut,
-   débutant bleu, étant vert après 40% et finissant rouge.
-   Ce dégradé ne se répète pas car le dernier arrêt de couleur
-   est par défaut à 100%. */
-repeating-linear-gradient(0deg, blue, green 40%, red);
+/* Un dégradé allant du bas vers le haut,
+   commençant par du bleu, devenant vert après 40%,
+   et finissant par du rouge. Ce dégradé ne se répète pas car
+   le dernier arrêt de couleur vaut par défaut 100% */
+repeating-linear-gradient(0deg, blue, green 40%, red)
 
-/* Un dégradé répété cinq fois, progressant de gauche à
-   droite, commençant en rouge, passant en vert puis à
-   nouveau en rouge */
-repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
+/* Un dégradé répété cinq fois, allant de la gauche vers la droite,
+   commençant par du rouge, devenant vert, puis revenant au rouge */
+repeating-linear-gradient(to right, red 0%, green 10%, red 20%)
+
+/* Interpolation dans l'espace colorimétrique rectangulaire */
+repeating-linear-gradient(in oklab, blue, red 50px)
+
+/* Interpolation dans l'espace colorimétrique polaire */
+repeating-linear-gradient(in hsl, blue, red 50px)
+
+/* Interpolation dans l'espace colorimétrique polaire
+  avec la méthode d'interpolation de teinte la plus longue */
+repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 ```
 
 ### Valeurs
@@ -79,19 +85,19 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 
     Les valeurs `to top`, `to bottom`, `to left`, and `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont converties en un angle correspondant.
 
-- [`<angle>`](/fr/docs/Web/CSS/angle)
+- {{cssxref("&lt;angle&gt;")}}
   - : L'angle indiquant la direction de la ligne du dégradé. Une valeur de `0deg` est équivalente à `to top`. Les valeurs d'angle vont croissant dans le sens horaire.
 - `<linear-color-stop>`
-  - : Un arrêt de couleur décrit par une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions optionnelles (une position étant donnée par un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur à `0` représente le début du dégradé. La valeur `100%` correspond à 100% de la taille de l'image, indiquant que le dégradé ne se répètera pas.
+  - : Un arrêt de couleur décrit par une valeur {{CSSxRef("&lt;color&gt;")}}, suivie d'une ou deux positions optionnelles (une position étant donnée par un pourcentage (type {{CSSxRef("&lt;percentage&gt;")}}) ou une longueur (type {{CSSxRef("&lt;length&gt;")}}) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur à `0` représente le début du dégradé. La valeur `100%` correspond à 100% de la taille de l'image, indiquant que le dégradé ne se répètera pas.
 - `<color-hint>`
   - : L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit à quel point, entre deux arrêts de couleur, la couleur du dégradé doit atteindre le point médian de la transition de couleur. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.
 
 > [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que [les arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -122,7 +128,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('', 120, 120)}}
+{{EmbedLiveSample('Bandes zébrées', 120, 120)}}
 
 ### Dix barres répétées horizontalement
 
@@ -144,12 +150,69 @@ body {
 }
 ```
 
-{{EmbedLiveSample('', 120, 120)}}
+{{EmbedLiveSample('Dix barres répétées horizontalement', 120, 120)}}
 
 Le dernier arrêt de couleur étant situé à 10% et le dégradé étant vertical, chaque dégradé unitaire occupe 10% de la hauteur totale, ce qui permet d'avoir 10 barres horizontales.
 
+### Interpolation dans l'espace colorimétrique rectangulaire
+
+```css hidden
+body {
+  width: 100vw;
+  height: 100vh;
+}
+```
+
+```css
+body {
+  background: repeating-linear-gradient(90deg in oklab, blue, red 100px);
+}
+```
+
+{{EmbedLiveSample("Interpolation dans l'espace colorimétrique rectangulaire", 120, 120)}}
+
+### Interpolation de la teinte
+
+```html hidden
+<div class="shorter">teinte plus courte</div>
+<div class="longer">teinte plus longue</div>
+```
+
+```css hidden
+div {
+  height: 50vh;
+  color: #333300;
+  font-weight: bolder;
+  padding-left: 1.5rem;
+}
+```
+
+Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/hue) est interpolée.
+
+```css
+.shorter {
+  background: repeating-linear-gradient(
+    90deg in hsl shorter hue,
+    red,
+    blue 300px
+  );
+}
+
+.longer {
+  background: repeating-linear-gradient(
+    90deg in hsl longer hue,
+    red,
+    blue 300px
+  );
+}
+```
+
+La boîte du haut utilise l'[interpolation plus courte](/fr/docs/Web/CSS/hue-interpolation-method#plus_courte), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte du bas utilise l'[interpolation plus longue](/fr/docs/Web/CSS/hue-interpolation-method#plus_longue), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus long, en traversant les verts, les jaunes et les oranges.
+
+{{EmbedLiveSample("Interpolation de la teinte", 120, 120)}}
+
 > [!NOTE]
-> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+> Voir [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -162,14 +225,11 @@ Le dernier arrêt de couleur étant situé à 10% et le dégradé étant vertica
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- Autres fonctions de dégradés&nbsp;: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{cssxref("&lt;image&gt;")}}
+- La fonction {{cssxref("image/image","image()")}}
+- La fonction {{cssxref("element", "element()")}}
+- La fonction {{cssxref("image/image-set","image-set()")}}
+- La fonction {{cssxref("cross-fade", "cross-fade()")}}

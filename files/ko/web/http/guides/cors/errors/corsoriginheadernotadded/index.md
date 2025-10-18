@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
 original_slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 ---
 
-{{HTTPSidebar}}
-
 ## 이유
 
 ```plain

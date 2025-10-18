@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/dd
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<dd>`** fournit la description, la définition ou la valeur du terme précédent ([`<dt>`](/fr/docs/Web/HTML/Element/dt)) dans une liste de description ([`<dl>`](/fr/docs/Web/HTML/Element/dl)).
+L'élément HTML **`<dd>`** fournit la description, la définition ou la valeur du terme précédent ([`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)) dans une liste de description ([`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl)).
 
 {{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
 
@@ -107,14 +107,14 @@ dd {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `nowrap` {{non-standard_inline}}
   - : Si la valeur de cet attribut est `yes`, il n'y aura pas de retour à la ligne si le texte de la définition dépasse la taille de la ligne. La valeur par défaut est `no`.
 
 ## Exemples
 
-Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Element/dl#examples).
+Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl#examples).
 
 ## Spécifications
 
@@ -126,5 +126,5 @@ Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/
 
 ## Voir aussi
 
-- L'élément [`<dl>`](/fr/docs/Web/HTML/Element/dl)
-- L'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt)
+- L'élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl)
+- L'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)

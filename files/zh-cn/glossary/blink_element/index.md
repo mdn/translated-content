@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c5c84b62f3f1fbd46f77c940fa0cbfff649c46a1
 ---
 
-{{GlossarySidebar}}
-
 **`<blink>` 元素**（blink 标签）是一个已过时的 HTML 特性，现代网页浏览器已不再支持该标签，MDN 也不再继续保留其文档信息。这一标签曾用于让文本内容持续闪烁（明灭交替）。
 
 `<blink>` 元素的用法如下：

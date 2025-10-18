@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 873e38320b7f7dbe0492f96a02e7e6503ac8c3b3
 ---
 
-{{AddonSidebar}}
-
 当用户删除一个建议的时候触发。如果 {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} 的属性 `deletable` 值为 `true` 时，该建议可以被删除。
 
 ## 语法

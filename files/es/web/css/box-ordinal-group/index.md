@@ -3,8 +3,6 @@ title: -moz-box-ordinal-group
 slug: Web/CSS/box-ordinal-group
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.
 

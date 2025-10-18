@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`507 Insufficient Storage`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、サーバーがリクエストを完全に完了するために十分な利用できるストレージ容量がないため、アクションが実行できなかったことを示します。
 
 このステータスコードは、 {{Glossary("WebDAV")}} (Web Distributed Authoring and Versioning) のコンテキストで最初に使用されましたが、他にもサーバーリソースが枯渇している状況を説明する用途で使用されている例があります。

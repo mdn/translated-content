@@ -5,13 +5,11 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`list-style-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムのマーカーとして使われる画像を設定します。
 
 ふつうは一括指定の {{ cssxref("list-style") }} を使ったほうが便利です。
 
-{{InteractiveExample("CSS Demo: list-style-image")}}
+{{InteractiveExample("CSS デモ: list-style-image")}}
 
 ```css interactive-example-choice
 list-style-image: url("/shared-assets/images/examples/rocket.svg");
