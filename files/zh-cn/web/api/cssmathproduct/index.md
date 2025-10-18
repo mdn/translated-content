@@ -11,7 +11,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## 构造器
+## 构造函数
 
 - {{domxref("CSSMathProduct.CSSMathProduct", "CSSMathProduct()")}} {{Experimental_Inline}}
   - : 创建一个新的 `CSSMathProduct` 对象。
@@ -23,11 +23,11 @@ l10n:
 
 ## 静态方法
 
-_该接口可能还会继承来自其父接口 {{domxref("CSSMathValue")}} 的方法。_
+_该接口可能还会继承其父接口 {{domxref("CSSMathValue")}} 的方法。_
 
 ## 实例方法
 
-_该接口可能还会继承来自其父接口 {{domxref("CSSMathValue")}} 的方法。_
+_该接口可能还会继承其父接口 {{domxref("CSSMathValue")}} 的方法。_
 
 ## 规范
 
