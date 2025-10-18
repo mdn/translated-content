@@ -1,8 +1,8 @@
 ---
 title: PAC
 slug: Glossary/PAC
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
 Proxy Auto-Configuration ファイル (**PAC ファイル**) は、`FindProxyForURL()` 関数を含むファイルです。ブラウザーはこの関数を使用して、各リクエスト (HTTP, HTTPS, FTP など) を直接接続先に送信するか、またはウェブプロキシーサーバーを経由する必要があるかを判断します。
