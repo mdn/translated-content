@@ -8,10 +8,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Node")}} 接口的 **`childNodes`** 只读属性返回一个实时的 {{domxref("NodeList")}}，其中包含给定元素的所有子{{domxref("Node","节点")}}，第一个子节点的索引为 `0`。子节点包括元素节点、文本节点和注释节点。
+{{domxref("Node")}} 接口的 **`childNodes`** 只读属性返回一个实时的 {{domxref("NodeList")}}，其中包含给定元素的所有子{{domxref("Node","节点", , 1)}}，第一个子节点的索引为 `0`。子节点包括元素节点、文本节点和注释节点。
 
 > [!NOTE]
-> The {{domxref("NodeList")}} 是实时的，这意味着每当有新的子节点被添加或移除时，其内容都会随之更新。
+> {{domxref("NodeList")}} 是实时的，这意味着每当有新的子节点被添加或移除时，其内容都会随之更新。
 >
 > 浏览器会在文档中插入文本节点，用于表示源标记中的空白字符。因此，例如通过 `Node.childNodes[0]` 获取的节点，可能指向的是一个空白文本节点，而不是作者原本想获取的实际元素节点。
 >
@@ -21,7 +21,7 @@ l10n:
 
 {{domxref("document")}} 对象本身有两个子节点：文档类型声明和根元素（通常称为 `documentElement`）。在 HTML 文档中，根元素即为 {{HTMLElement("html")}} 元素。
 
-需要注意的是，`childNodes` 包含*所有*子节点，包括文本节点和注释等非元素节点。如果只想获取元素节点的集合，请使用 {{domxref("Element.children")}} instead.
+需要注意的是，`childNodes` 包含*所有*子节点，包括文本节点和注释等非元素节点。如果只想获取元素节点的集合，请改用 {{domxref("Element.children")}}。
 
 ## 值
 
