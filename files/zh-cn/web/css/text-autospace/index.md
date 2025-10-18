@@ -83,6 +83,7 @@ text-autospace: unset;
 ```
 
 <!-- autocorrect-disable -->
+
 ```html
 <main>
   <figure class="no-autospace">
@@ -98,6 +99,7 @@ text-autospace: unset;
   </figure>
 </main>
 ```
+
 <!-- autocorrect-enable -->
 
 ```css
