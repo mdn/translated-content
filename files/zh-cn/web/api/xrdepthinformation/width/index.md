@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{DOMxRef("XRDepthInformation")}} 接口的只读 **`width`** 属性包含深度缓冲区的宽度（列数）。
+{{DOMxRef("XRDepthInformation")}} 接口的 **`width`** 只读属性包含深度缓冲区的宽度（列数）。
 
-## 取值
+## 值
 
 无符号长整型。
 
