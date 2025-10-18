@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{domxref("XRFrame")}} 接口的只读 **`trackedAnchor`** 属性返回包含当前帧中仍在跟踪的所有锚点的 {{domxref("XRAnchorSet")}} 对象。
+{{domxref("XRFrame")}} 接口的 **`trackedAnchor`** 只读属性返回包含当前帧中仍在跟踪的所有锚点的 {{domxref("XRAnchorSet")}} 对象。
 
-## 取值
+## 值
 
 {{domxref("XRAnchorSet")}} 对象。
 
