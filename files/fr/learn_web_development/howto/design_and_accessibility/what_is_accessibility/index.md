@@ -27,7 +27,7 @@ Que ce soit en raison de limitations physiques ou techniques, il peut arriver qu
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Getting_started)._
 
 ## Aller plus loin
 
@@ -78,5 +78,5 @@ Vous pouvez vous référer à :
 
 L'accessibilité peut avoir un impact tant sur le design d'un site que sur sa structure technique.
 
-- Pour le design, nous vous conseillons de lire [Concevoir un site pour tous les types d'utilisateurs](/fr/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users).
+- Pour le design, nous vous conseillons de lire [Concevoir un site pour tous les types d'utilisateurs](/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users).
 - Pour l'aspect technique, vous pourriez commencer par voir comment [intégrer des images dans des pages web](/fr/docs/Apprendre/HTML/Howto/Add_images_to_a_webpage).

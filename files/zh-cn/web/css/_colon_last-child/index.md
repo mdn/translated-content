@@ -3,8 +3,6 @@ title: :last-child
 slug: Web/CSS/:last-child
 ---
 
-{{CSSRef}}
-
 **`:last-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一组兄弟元素中的最后元素。
 
 {{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Want-Content-Digest
 original_slug: Web/HTTP/Headers/Want-Content-Digest
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Want-Digest`** é primordialmente usado em uma requisição HTTP, para pedir ao respondedor para prover uma digestão ({{Glossary("digest")}}) do recurso requisitado usando o cabeçalho de resposta [`Digest`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Digest).
 
 O cabeçalho contém identificadores para um ou mais algoritmos de digestão que o remetente deseja que o respondedor use para criar a digestão. O remetente pode usar [valores de qualidade](/pt-BR/docs/Glossary/Quality_values) para indicar sua preferência ordenando dentre as escolhas que ele oferece.

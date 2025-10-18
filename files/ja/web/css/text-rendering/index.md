@@ -3,8 +3,6 @@ title: text-rendering
 slug: Web/CSS/text-rendering
 ---
 
-{{CSSRef}}
-
 **`text-rendering`** は CSS のプロパティで、テキストを描画するときの最適化方法に関する情報をレンダリングエンジンに提供します。
 
 ブラウザーは速さ、読みやすさ、位置の正確さをトレードオフにします。
@@ -23,7 +21,8 @@ text-rendering: revert;
 text-rendering: unset;
 ```
 
-> **メモ:** `text-rendering` プロパティは SVG のプロパティであり、 CSS 標準では定義されていません。しかし、 Windows, MacOS, Linux の Gecko や WebKit のブラウザーでは、このプロパティを HTML や XML のコンテンツに適用することができます。
+> [!NOTE]
+> `text-rendering` プロパティは SVG のプロパティであり、 CSS 標準では定義されていません。しかし、 Windows, MacOS, Linux の Gecko や WebKit のブラウザーでは、このプロパティを HTML や XML のコンテンツに適用することができます。
 
 とても目に見えやすい効果は `optimizeLegibility` で、一部のフォント (例えば、 Microsoft の _Calibri_, _Candara_, _Constantia_, _Corbel_、または _DejaVu_ フォントファミリー) において 20px より小さい文字に合字 (ff, fi, fl, など) を適用します。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-right-width`** 用于设置元素右边框的宽度。
 
 {{InteractiveExample("CSS Demo: border-right-width")}}

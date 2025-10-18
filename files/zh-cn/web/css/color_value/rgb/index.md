@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`rgb()`** 函数标记根据 {{glossary("RGB", "sRGB")}} {{glossary("color space", "色彩空间")}}中颜色的红色、绿色和蓝色分量来表达颜色。可选的 alpha 分量代表了颜色的透明度。
 
 {{InteractiveExample("CSS Demo: rgb()")}}
@@ -366,6 +364,6 @@ div.rgba {
 ## 参见
 
 - {{CSSXref("&lt;color&gt;")}} 数据类型，以了解所有颜色标记的列表
-- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块

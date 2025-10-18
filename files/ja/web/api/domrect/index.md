@@ -2,10 +2,10 @@
 title: DOMRect
 slug: Web/API/DOMRect
 l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+  sourceCommit: dc82e604c805cd2eae887a371111e902c8c52241
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`DOMRect`** は矩形の大きさと位置を記述します。
 
@@ -24,13 +24,13 @@ l10n:
 
 _`DOMRect` は親である {{domxref("DOMRectReadOnly")}} からプロパティを継承しています。違いはそれらが読み取り専用でなくなることです。_
 
-- {{domxref("DOMRectReadOnly.x")}}
+- {{domxref("DOMRect.x")}}
   - : この `DOMRect` の原点（ふつうは矩形の左上隅）の X 座標です。
-- {{domxref("DOMRectReadOnly.y")}}
+- {{domxref("DOMRect.y")}}
   - : この `DOMRect` の原点（ふつうは矩形の左上隅）の Y 座標です。
-- {{domxref("DOMRectReadOnly.width")}}
+- {{domxref("DOMRect.width")}}
   - : この `DOMRect` の幅です。
-- {{domxref("DOMRectReadOnly.height")}}
+- {{domxref("DOMRect.height")}}
   - : この `DOMRect` の高さです。
 - {{domxref("DOMRectReadOnly.top")}}
   - : この `DOMRect` の上端の座標値を返します（ふつうは `y` と同じ、 `height` が負の数である場合は `y + height` と同じです）。

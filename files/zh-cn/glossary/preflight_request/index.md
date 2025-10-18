@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
 ---
 
-{{GlossarySidebar}}
-
 {{glossary("CORS")}} 预检请求用于检查服务器是否支持 CORS 协议，并且是否允许使用特定的方法和标头。
 
 它一般是用了以下几个 HTTP 请求标头的 {{HTTPMethod("OPTIONS")}} 请求：{{HTTPHeader("Access-Control-Request-Method")}} 和 {{HTTPHeader("Access-Control-Request-Headers")}}，以及可选的 {{HTTPHeader("Origin")}} 标头。

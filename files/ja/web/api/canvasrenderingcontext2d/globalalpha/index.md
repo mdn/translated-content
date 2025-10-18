@@ -10,7 +10,8 @@ l10n:
 
 **`CanvasRenderingContext2D.globalAlpha`** はキャンバス 2D API のプロパティで、図形や画像をキャンバスに描画する際に適用されるアルファ値（透明度）を設定します。
 
-> **メモ:** [キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)も参照してください。
+> [!NOTE]
+> [キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)も参照してください。
 
 ## 値
 

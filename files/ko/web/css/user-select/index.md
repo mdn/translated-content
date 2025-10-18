@@ -3,8 +3,6 @@ title: user-select
 slug: Web/CSS/user-select
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`user-select`** 속성은 사용자가 텍스트를 선택할 수 있는지 지정합니다.
 
 ```css

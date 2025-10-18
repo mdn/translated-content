@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## Motivo
 
 ```
@@ -30,7 +28,8 @@ Você também pode configurar um site para permitir que qualquer site o acesse u
 Access-Control-Allow-Origin: *
 ```
 
-> **Aviso:** **Advertência:** Usar o caractere curinga para permitir que todos os sites acessem uma API privada é uma péssima ideia para o que deve ser uma razão óbvia.
+> [!WARNING]
+> **Advertência:** Usar o caractere curinga para permitir que todos os sites acessem uma API privada é uma péssima ideia para o que deve ser uma razão óbvia.
 
 Por exemplo, no Apache, adicione uma linha como a seguinte à configuração do servidor (na seção `<Directory>`, `<Location>`, `<Files>` ou `<VirtualHost>` apropriada). A configuração é tipicamente encontrada em um arquivo `.conf` (`httpd.conf` e `apache.conf` são nomes comuns para estes), ou em um arquivo `.htaccess`.
 

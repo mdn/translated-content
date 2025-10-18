@@ -3,8 +3,6 @@ title: 可替换元素
 slug: Web/CSS/CSS_images/Replaced_element_properties
 ---
 
-{{CSSRef}}
-
 在 [CSS](/zh-CN/docs/Web/CSS) 中，**可替换元素**（**replaced element**）的展现效果不是由 CSS 来控制的。这些元素是一种外部对象，它们外观的渲染，是独立于 CSS 的。
 
 简单来说，它们的内容不受当前文档的样式的影响。CSS 可以影响可替换元素的位置，但不会影响到可替换元素自身的内容。某些可替换元素，例如 {{HTMLElement("iframe")}} 元素，可能具有自己的样式表，但它们不会继承父文档的样式。
@@ -67,5 +65,5 @@ CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算�
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

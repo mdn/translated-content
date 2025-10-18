@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a81d16fadbe5cbee1ad2f8d0ddccda846f4034c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 116 の変更点をまとめています。Firefox 116 は、2023 年 8 月 1 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Trailer
 original_slug: Web/HTTP/Headers/Trailer
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête **Trailer** permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages pour fournir des métadonnées supplémentaires qui peuvent être générées de manière dynamique pendant que le corps du message sera envoyé, il peut s'agir de la vérification de l'intégrité du message, une signature numérique, ou encore un statut après le traitement.
 
 > [!NOTE]

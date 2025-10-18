@@ -101,7 +101,8 @@ label {
 - `accept` {{deprecated_inline}}
   - : A comma-separated list of content types that the server accepts.
 
-    > **참고:** **사용시 주의:** 이 속성은 HTML5에서 제거되고 더 이상 사용되서는 안됩니다. 대신에, {{HTMLElement("input")}} 요소의 [`accept`](/ko/docs/Web/HTML/Element/input#accept) 속성을 사용하세요.
+    > [!NOTE]
+    > **사용시 주의:** 이 속성은 HTML5에서 제거되고 더 이상 사용되서는 안됩니다. 대신에, {{HTMLElement("input")}} 요소의 [`accept`](/ko/docs/Web/HTML/Element/input#accept) 속성을 사용하세요.
 
 - `accept-charset`
   - : 스페이스로 구분한, 서버가 허용하는 문자 인코딩의 목록. 브라우저는 목록을 순서대로 사용합니다. 기본값은 [페이지 인코딩](/ko/docs/Web/HTTP/Reference/Headers/Content-Encoding)과 같습니다.
