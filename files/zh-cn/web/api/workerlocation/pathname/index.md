@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("WorkerLocation")}} 对象的 **`pathname`** 属性返回该 Worker 所处位置的 {{domxref("URL.pathname", "pathname")}} 部分。
 
-## 取值
+## 值
 
 字符串。
 
