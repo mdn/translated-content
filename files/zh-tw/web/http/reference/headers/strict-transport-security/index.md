@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Strict-Transport-Security`** {{Glossary("response header", "回應標頭")}}（通常縮寫為 {{Glossary("HSTS")}}）告知瀏覽器該站點應僅使用 HTTPS 訪問，並且所有將來的 HTTP 訪問應自動升級為 HTTPS。
 
 > [!NOTE]

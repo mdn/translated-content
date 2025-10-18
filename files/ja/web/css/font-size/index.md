@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`font-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの大きさを定義します。フォントの大きさを変更すると、フォントの大きさに相対的な {{cssxref("&lt;length&gt;")}} の単位例えば `em`, `ex`, なども更新されます。
 
-{{InteractiveExample("CSS Demo: font-size")}}
+{{InteractiveExample("CSS デモ: font-size")}}
 
 ```css interactive-example-choice
 font-size: 1.2rem;

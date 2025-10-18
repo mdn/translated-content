@@ -5,11 +5,9 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
-
 **`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。
 
-{{InteractiveExample("CSS Demo: text-emphasis-style")}}
+{{InteractiveExample("CSS デモ: text-emphasis-style")}}
 
 ```css interactive-example-choice
 text-emphasis-style: none;

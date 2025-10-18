@@ -3,8 +3,6 @@ title: text-transform
 slug: Web/CSS/text-transform
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`text-transform`** especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.

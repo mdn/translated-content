@@ -3,8 +3,6 @@ title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) **`@font-feature-values`** permite a los autores usar un nombre común de {{cssxref("font-variant-alternates")}} para características activadas de distintas formas en OpenType. Permite simplificar el código CSS cuando se usan distintas fuentes.

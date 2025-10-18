@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置元素边框的宽度。
 
 {{InteractiveExample("CSS Demo: border-width")}}

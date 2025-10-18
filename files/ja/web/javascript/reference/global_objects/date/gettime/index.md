@@ -14,7 +14,7 @@ l10n:
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
 
-// Jan 1, 1970, 00:00:00.000 GMT あｋらの経過秒数
+// Jan 1, 1970, 00:00:00.000 GMT からの経過秒数
 console.log(moonLanding.getTime());
 // 予想される結果: -14182940000
 ```
@@ -66,7 +66,8 @@ end = new Date();
 console.log(`Operation took ${end.getTime() - start.getTime()} msec`);
 ```
 
-> **メモ:** {{domxref("Performance API", "パフォーマンス API", "", "nocode")}} の高解像度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} を使用すると、 {{jsxref("Date.now()")}} よりも信頼性が高く正確な経過時間を測定できます。
+> [!NOTE]
+> {{domxref("Performance API", "パフォーマンス API", "", "nocode")}} の高解像度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} を使用すると、 {{jsxref("Date.now()")}} よりも信頼性が高く正確な経過時間を測定できます。
 
 ## 仕様書
 

@@ -9,7 +9,7 @@ l10n:
 
 **`<article>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書、ページ、アプリケーション、サイトなどの中で自己完結しており、（集合したものの中で）個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
 
-{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;article&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <article class="forecast">

@@ -1,11 +1,10 @@
 ---
 title: <script type="importmap">
+short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`importmap`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性に設定すると、要素の本体がインポートマップであることを示します。
 
@@ -39,25 +38,25 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をインポートする場合は、 [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)と [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)のどちらであっても、インポートするモジュールを示す「モジュール指定子」があります。
 ブラウザーは、モジュールをインポートするために、この指定子を絶対的な URL に解決できなければなりません。
 
-例えば、以下の記述では、文書のベース URL からの相対パスであるモジュール指定子 `"./modules/shapes/square.js"` と絶対 URL であるモジュール指定子 `"https://example.com/shapes/circle.js"` から要素をインポートします。
+例えば、次の文は、絶対 URL であるモジュール指定子 `"https://example.com/shapes/circle.js"` および、文書のベース URL に対する相対パスであるモジュール指定子 `"./modules/shapes/square.js"` から要素をインポートします。
 
 ```js
-import { name as squareName, draw } from "./modules/shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./modules/shapes/square.js";
 ```
 
 インポートマップにより、開発者はモジュール指定子に（ほとんど）好きなテキストを指定することができます。対応表は、モジュール指定子が解決されたときにテキストを置き換える、対応する値を提供します。
 
 ### ベアモジュール
 
-下記のインポートマップは `imports` キーを定義しており、`square` と `circle` というプロパティを持つ「モジュール指定マップ」を持ちます。
+下記のインポートマップは `imports` キーを定義しており、`circle` と `square` というプロパティを持つ「モジュール指定マップ」を持ちます。
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js",
-      "circle": "https://example.com/shapes/circle.js"
+      "circle": "https://example.com/shapes/circle.js",
+      "square": "./modules/shapes/square.js"
     }
   }
 </script>
@@ -66,8 +65,8 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 このインポートマップを使えば、上記と同じモジュールをインポートすることができますが、モジュール指定子には「ベアモジュール」を使用します。
 
 ```js
-import { name as squareName, draw } from "square";
 import { name as circleName } from "circle";
+import { name as squareName, draw } from "square";
 ```
 
 ### パス接頭辞のマッピング

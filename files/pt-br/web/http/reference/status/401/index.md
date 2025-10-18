@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/401
 original_slug: Web/HTTP/Status/401
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta de status de erro do cliente HTTP **`401 Unauthorized`** indica que a solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino.
 
 Esse status é enviado com um cabeçalho {{HTTPHeader("WWW-Authenticate")}} que contém informações sobre como autorizar corretamente.

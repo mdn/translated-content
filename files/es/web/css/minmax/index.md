@@ -3,8 +3,6 @@ title: minmax()
 slug: Web/CSS/minmax
 ---
 
-{{CSSRef}}
-
 La función **`minmax()`** [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_grid_layout).
 
 ```css

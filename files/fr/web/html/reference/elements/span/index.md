@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/span
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<span>`** est un conteneur générique en ligne (_inline_) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Global_attributes#class) ou [`id`](/fr/docs/Web/HTML/Global_attributes#id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Global_attributes#lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément `<div>` est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est [un élément en ligne](/fr/docs/Glossary/Inline-level_content).
+L'élément HTML **`<span>`** est un conteneur générique en ligne (_inline_) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément `<div>` est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est [un élément en ligne](/fr/docs/Glossary/Inline-level_content).
 
 {{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
 
@@ -31,7 +31,7 @@ span.ingredient {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 

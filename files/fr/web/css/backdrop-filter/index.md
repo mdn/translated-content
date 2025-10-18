@@ -44,7 +44,7 @@ backdrop-filter: unset;
 - `none`
   - : Un mot-clé qui indique qu'aucun filtre n'est appliqué sur l'ombre portée.
 - `<filter-function-list>`
-  - : Une liste de fonctions de filtre (cf. [`<filter-function>`](/fr/docs/Web/CSS/filter-function)), séparées par des espaces et qui seront appliquées à l'ombre. On peut également utiliser [un filtre SVG](/fr/docs/Web/SVG/Element/filter).
+  - : Une liste de fonctions de filtre (cf. [`<filter-function>`](/fr/docs/Web/CSS/filter-function)), séparées par des espaces et qui seront appliquées à l'ombre. On peut également utiliser [un filtre SVG](/fr/docs/Web/SVG/Reference/Element/filter).
 
 ## Définition formelle
 

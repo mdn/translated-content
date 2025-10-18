@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expires
 original_slug: Web/HTTP/Headers/Expires
 ---
 
-{{HTTPSidebar}}
-
 Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
 
 Les dates invalides, telles que la valeur 0, représentent une date dans le passé et signifient que la ressource est expirée.

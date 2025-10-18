@@ -3,7 +3,7 @@ title: -webkit-tap-highlight-color
 slug: Web/CSS/-webkit-tap-highlight-color
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propriété **`-webkit-tap-highlight-color`** est une propriété non-standard qui permet de définir la couleur utilisée pour surligner le lien et indiquer qu'il a bien été activé/touché par l'utilisateur.
 
@@ -12,23 +12,40 @@ La propriété **`-webkit-tap-highlight-color`** est une propriété non-standar
 ```css
 -webkit-tap-highlight-color: red;
 -webkit-tap-highlight-color: transparent; /* pour retirer la mise en avant */
+
+/* Valeurs globales */
+-webkit-tap-highlight-color: inherit;
+-webkit-tap-highlight-color: initial;
+-webkit-tap-highlight-color: revert;
+-webkit-tap-highlight-color: revert-layer;
+-webkit-tap-highlight-color: unset;
 ```
 
 ### Valeurs
 
-- `<color>`
+- {{Cssxref("&lt;color&gt;")}}
   - : La couleur utilisée pour surligner le lien lorsqu'il est touché.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntaxRaw(`-webkit-tap-highlight-color = <color>`)}}
 
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Apple décrit cette propriété dans [le guide Safari pour le contenu web](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
-Cette propriété est prise en charge par WebKit/Safari, Blink/Chrome ainsi que par certaines versions d'Internet Explorer et Microsoft Edge.
+{{Compat}}
+
+## Voir aussi
+
+- [Extensions WebKit CSS](/fr/docs/Web/CSS/WebKit_Extensions)
+- Pseudo-classes CSS associées&nbsp;:
+  - [`:hover`](/fr/docs/Web/CSS/:hover)
+  - [`:active`](/fr/docs/Web/CSS/:active)
+  - [`:visited`](/fr/docs/Web/CSS/:visited)
