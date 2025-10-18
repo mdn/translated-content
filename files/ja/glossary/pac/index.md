@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-A Proxy Auto-Configuration file (**PAC file**) is a file which contains a function, `FindProxyForURL()`, which is used by the browser to determine whether requests (including HTTP, HTTPS, and FTP) should go directly to the destination or if they need to be forwarded through a web proxy server.
+Proxy Auto-Configuration ファイル (**PAC ファイル**) は、`FindProxyForURL()` 関数を含むファイルです。ブラウザーはこの関数を使用して、どのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送信するか、または Web プロキシーサーバーを経由する必要があるかを判断します。
 
 ```js
 function FindProxyForURL(url, host) {
@@ -15,7 +15,7 @@ function FindProxyForURL(url, host) {
 ret = FindProxyForURL(url, host);
 ```
 
-See [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for details about how these are used and how to create new ones.
+詳細な使用方法や PAC ファイルの作成方法については、[プロキシー自動構成ファイル (PAC)](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) を参照してください。
 
 ## See also
 
