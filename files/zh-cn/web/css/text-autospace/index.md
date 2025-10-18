@@ -79,9 +79,7 @@ text-autospace: unset;
     <option value="ideograph-numeric">ideograph-numeric</option>
   </select>
 </form>
-<div class="unsupported">
-  你的浏览器不支持 <code>text-autospace</code>。
-</div>
+<div class="unsupported">你的浏览器不支持 <code>text-autospace</code>。</div>
 ```
 
 ```html
