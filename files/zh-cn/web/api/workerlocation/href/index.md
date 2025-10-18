@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("WorkerLocation")}} 对象的 **`href`** 属性返回包含该 Worker 所处位置的序列化 {{domxref("URL")}} 的字符串。
 
-## 取值
+## 值
 
 字符串。
 
