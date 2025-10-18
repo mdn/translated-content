@@ -25,7 +25,7 @@ a=rtpmap:32 MPV/90000
 
 SDP は単独で使用されることはなく、 {{Glossary("RTP")}} や {{Glossary("RTSP")}} などのプロトコルによって使用されます。SDP は {{Glossary("WebRTC")}} の構成要素でもあり、セッションを記述する方法として SDP を利用しています。
 
-## See also
+## 関連情報
 
-- [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
-- [Session Description Protocol](https://en.wikipedia.org/wiki/Session_Description_Protocol) on Wikipedia
+- [WebRTC プロトコル](/ja/docs/Web/API/WebRTC_API/Protocols)
+- Wikipedia の [Session Description Protocol](https://ja.wikipedia.org/wiki/Session_Description_Protocol)
