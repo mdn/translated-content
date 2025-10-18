@@ -82,7 +82,7 @@ text-autospace: unset;
 <div class="unsupported">你的浏览器不支持 <code>text-autospace</code>。</div>
 ```
 
-```html
+```html no-lint
 <main>
   <figure class="no-autospace">
     <figcaption>
