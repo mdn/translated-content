@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("XRInputSourcesChangeEvent")}} 的 `session` 属性指定了输入源列表变更事件所应用的 {{domxref("XRSession")}}。
 
-## 取值
+## 值
 
 表示输入源列表变更所应用的 WebXR 会话的 {{domxref("XRSession")}}。
 
