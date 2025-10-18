@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebUSB API")}}{{SecureContext_Header}}{{AvailableInWorkers("worker")}}
 
-{{domxref("WorkerNavigator")}} 接口的只读属性 **`usb`** 返回当前文档的 {{domxref("USB")}} 对象，并通过该对象提供对 [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API) 功能的访问。
+{{domxref("WorkerNavigator")}} 接口的 **`usb`** 只读属性返回当前文档的 {{domxref("USB")}} 对象，并通过该对象提供对 [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API) 功能的访问。
 
-## 取值
+## 值
 
 {{domxref('USB')}} 对象。
 
