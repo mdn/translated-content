@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
-{{HTMLSidebar}}
-
 这篇 [HTML](/zh-CN/docs/Web/HTML) 参考描述了 HTML 中所有的**元素**和**属性**，包含适用于所有元素的**全局属性**。
 
 - [HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements)

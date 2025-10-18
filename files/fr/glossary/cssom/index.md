@@ -9,4 +9,4 @@ Le [**mod√®le d'objet CSS (ou <i lang="en">CSS object model</i> en anglais, abr√
 
 ## Voir aussi
 
-- [Remplir la page&nbsp;: comment fonctionnent les navigateurs](/fr/docs/Web/Performance/How_browsers_work)
+- [Remplir la page&nbsp;: comment fonctionnent les navigateurs](/fr/docs/Web/Performance/Guides/How_browsers_work)

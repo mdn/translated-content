@@ -3,8 +3,6 @@ title: <tbody>：表格主体元素
 slug: Web/HTML/Reference/Elements/tbody
 ---
 
-{{HTMLSidebar}}
-
 **`<tbody>`** [HTML](/zh-CN/docs/Web/HTML) 元素封装了一系列表格的行（{{HTMLElement("tr")}} 元素），代表了它们是表格（{{HTMLElement("table")}}）主要内容的组成部分。
 
 {{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}

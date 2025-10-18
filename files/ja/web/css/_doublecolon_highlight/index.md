@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}
-
 **`::highlight()`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、スタイルをカスタムハイライトに適用します。
 
 カスタムハイライトは、 {{domxref("Range")}} オブジェクトの集合であり、 {{domxref("HighlightRegistry")}} を使用してウェブページに登録されます。

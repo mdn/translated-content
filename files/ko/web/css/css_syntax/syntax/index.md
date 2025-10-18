@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_syntax/Syntax
 original_slug: Web/CSS/Syntax
 ---
 
-{{cssref}}
-
 종속형 스타일 시트([CSS](/ko/docs/Web/CSS)) 언어의 기본 목표는 브라우저 엔진이 색상, 위치 지정 또는 장식과 같은 특정 기능을 사용하여 페이지에 요소를 그릴 수 있도록 하는 것입니다. 이러한 목표 달성을 위해 만들어진 *CSS 구문*을 이루고 있는 기본 구성 요소는 다음과 같습니다.
 
 - **속성**(property)은 {{glossary("identifier", "식별자")}}, 즉 사람이 읽을 수 있는 *이름*이며 어떠한 CSS 기능을 구현할 것인지 결정합니다.
@@ -88,6 +86,6 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

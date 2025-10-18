@@ -3,7 +3,7 @@ title: 索引集合
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 本章介绍按索引值排序的数据集合。包括数组和类数组结构，如 {{jsxref("Array")}} 对象和 {{jsxref("TypedArray")}} 对象。
 

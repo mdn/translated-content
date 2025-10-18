@@ -3,8 +3,6 @@ title: Data URL
 slug: Web/URI/Reference/Schemes/data
 ---
 
-{{HTTPSidebar}}
-
 **Data URL**, URL имеющий приставку `data:`, делает возможным встраивание файлов небольшого размера прямо в документ.
 
 > [!NOTE]

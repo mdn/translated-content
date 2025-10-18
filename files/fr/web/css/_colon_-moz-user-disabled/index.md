@@ -3,20 +3,24 @@ title: :-moz-user-disabled
 slug: Web/CSS/:-moz-user-disabled
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
-La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-user-disabled` correspond aux éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) `:-moz-user-disabled` est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui correspond aux éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur·ice.
 
-Ce sélecteur est destiné principalement à une utilisation par les développeurs de thèmes.
+> [!NOTE]
+> Cette pseudo-classe est principalement destinée aux développeur·euse·s de thèmes.
 
 ## Syntaxe
 
 ```css
 :-moz-user-disabled {
+  /* ... */
 }
 ```
 
 ## Exemples
+
+### Mettre en forme les éléments désactivés par l'utilisateur
 
 ```css
 :-moz-user-disabled {
@@ -27,7 +31,7 @@ Ce sélecteur est destiné principalement à une utilisation par les développeu
 
 ## Spécifications
 
-Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
+Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 

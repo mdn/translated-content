@@ -3,8 +3,6 @@ title: HTML 属性：autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 ---
 
-{{HTMLSidebar}}
-
 HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","用户代理")}}是否有权限在填写表单字段值时提供自动帮助，并指导浏览器填写该字段的预期信息类型。
 
 可用于以文本或数字作为输入的 {{HTMLElement("input")}} 元素、{{HTMLElement("textarea")}} 元素、{{HTMLElement("select")}} 元素和 {{HTMLElement("form")}} 元素。

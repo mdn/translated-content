@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2d5005825db30faf5826e7681ec7ee526f5458b0
 ---
 
-{{CSSRef}}
-
 **`grayscale()`** は [CSS](/ja/docs/Web/CSS) の関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: grayscale()")}}
+{{InteractiveExample("CSS デモ: grayscale()")}}
 
 ```css interactive-example-choice
 filter: grayscale(0);

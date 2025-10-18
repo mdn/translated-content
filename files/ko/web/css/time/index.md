@@ -3,15 +3,14 @@ title: <time>
 slug: Web/CSS/time
 ---
 
-{{CSSRef}}
-
-**`<time>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 시간 값을 초나 밀리초 단위로 나타냅니다. {{cssxref("animation")}}, {{cssxref("transition")}}과 관련 속성에서 사용합니다.
+**`<time>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 시간 값을 초나 밀리초 단위로 나타냅니다. {{cssxref("animation")}}, {{cssxref("transition")}}과 관련 속성에서 사용합니다.
 
 ## 구문
 
 `<time>` 자료형은 {{cssxref("&lt;number&gt;")}}와, 그 뒤에 붙는 아래 단위 중 하나로 이루어져 있습니다. 선택 사항으로 하나의 `+` 또는 `-` 기호를 맨 앞에 붙일 수 있습니다. 다른 모든 수치와 마찬가지로 단위와 숫자 사이에는 공백이 없습니다.
 
-> **참고:** `0`은 단위와 상관 없이 언제나 동일하지만 시간 단위를 생략할 수 없습니다. 즉 `0`은 유효하지 않은 구문이며 `0s`나 `0ms`를 나타내지 않습니다.
+> [!NOTE]
+> `0`은 단위와 상관 없이 언제나 동일하지만 시간 단위를 생략할 수 없습니다. 즉 `0`은 유효하지 않은 구문이며 `0s`나 `0ms`를 나타내지 않습니다.
 
 ### 단위
 
@@ -20,7 +19,8 @@ slug: Web/CSS/time
 - **`ms`**
   - : 시간을 밀리초 단위로 나타냅니다. 예시: `0ms`, `150.25ms`, `-60000ms`.
 
-> **참고:** `s`와 `ms`의 변환은 `1s` = `1000ms`를 따릅니다.
+> [!NOTE]
+> `s`와 `ms`의 변환은 `1s` = `1000ms`를 따릅니다.
 
 ## 예제
 

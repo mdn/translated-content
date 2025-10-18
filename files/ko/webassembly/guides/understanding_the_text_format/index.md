@@ -201,7 +201,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
         i32.add))
 ```
 
-> **참고:** `i32.const`는 단지 32 비트 정수를 정의하고 그것을 스택에 푸시합니다. 사용할 수있는 다른 유형의 `i32`를 바꿀 수 있으며 원하는 값으로 const 값을 변경할 수 있습니다 (여기서는 값을 `42`로 설정했습니다).
+> [!NOTE]
+> `i32.const`는 단지 32 비트 정수를 정의하고 그것을 스택에 푸시합니다. 사용할 수있는 다른 유형의 `i32`를 바꿀 수 있으며 원하는 값으로 const 값을 변경할 수 있습니다 (여기서는 값을 `42`로 설정했습니다).
 
 In this example you'll notice an `(export "getAnswerPlus1")` section, declared just after the `func` statement in the second function — this is a shorthand way of declaring that we want to export this function, and defining the name we want to export it as.
 
@@ -477,7 +478,8 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 });
 ```
 
-> **참고:** [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
+> [!NOTE]
+> [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
 > [!NOTE]
 > Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
@@ -527,7 +529,8 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 4. 함수의 마지막 부분에서 값 0으로 상수를 만든 다음이 인덱스 0에서 `shared0func`라는 함수를 호출하고 `shared0.wat`의 `elem` 블록에 먼저 저장합니다.
 5. `shared0func` 가 호출되면 `shared1.wat`의 `i32.store` 명령을 사용하여 메모리에 저장된 `42`를 로드합니다.
 
-> **참고:** **Note**: 위의 표현식은 암시 적으로 스택의 값을 다시 표시하지만 명령 호출 내에서 명시 적으로 이를 선언 할 수 있습니다. 예를 들면 다음과 같습니다.: (i32.store (i32.const 0) (i32.const 42))
+> [!NOTE]
+> 위의 표현식은 암시 적으로 스택의 값을 다시 표시하지만 명령 호출 내에서 명시 적으로 이를 선언 할 수 있습니다. 예를 들면 다음과 같습니다.: (i32.store (i32.const 0) (i32.const 42))
 > (call_indirect (type $void_to_i32) (i32.const 0))
 
 어셈블리로 변환 한 후 다음 코드를 통해 JavaScript에서 `shared0.wasm`과 `shared1.wasm`을 사용합니다.
@@ -550,7 +553,8 @@ Promise.all([
 
 컴파일되는 각 모듈은 동일한 메모리 및 테이블 객체를 가져와 동일한 선형 메모리 및 테이블 "주소 공간"을 공유 할 수 있습니다.
 
-> **참고:** [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html)에서 예제를 확인할 수 있습니다.([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
+> [!NOTE]
+> [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html)에서 예제를 확인할 수 있습니다.([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
 
 ## Summary
 
