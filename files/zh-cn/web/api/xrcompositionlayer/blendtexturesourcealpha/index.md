@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("XRCompositionLayer")}} 接口的 **`blendTextureSourceAlpha`** 属性是用于启用该层纹理的 {{Glossary("Alpha", "alpha 通道")}}的布尔值。
 
-## 取值
+## 值
 
 `true` 表示启用 alpha 通道而 `false` 表示禁用的布尔值。
 
