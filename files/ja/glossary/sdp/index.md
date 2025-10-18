@@ -23,7 +23,7 @@ m=video 53000 RTP/AVP 32
 a=rtpmap:32 MPV/90000
 ```
 
-SDP は単独で使用されることはなく、 {{Glossary("RTP")}} や {{Glossary("RTSP")}} などのプロトコルによって使用されます。SDP は {{Glossary("WebRTC")}} の構成要素でもあり、セッションを記述する方法として SDP を利用しています。
+SDP は単独で使用されることはなく、 {{Glossary("RTP")}} や {{Glossary("RTSP")}} などのプロトコルによって使用されます。SDP は {{Glossary("WebRTC")}} の構成要素でもあり、セッションを記述する方法として SDP を利用されています。
 
 ## 関連情報
 
