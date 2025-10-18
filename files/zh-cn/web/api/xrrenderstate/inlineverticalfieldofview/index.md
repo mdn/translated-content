@@ -10,7 +10,7 @@ l10n:
 
 {{DOMxRef("XRRenderState")}} 接口的 **`inlineVerticalFieldOfView`** 只读属性返回 `"inline"` 会话的默认垂直视场，对于所有沉浸式会话则返回 `null`。
 
-## 取值
+## 值
 
 对于 `"inline"` 会话，是表示默认视场的 {{JSxRef("Number")}}；对于沉浸式会话，则为 `null`。
 
