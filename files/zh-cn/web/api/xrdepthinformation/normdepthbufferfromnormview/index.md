@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{DOMxRef("XRDepthInformation")}} 接口的只读属性 **`normDepthBufferFromNormView`** 包含在索引深度缓冲区时需要应用的 3D 几何变换。
+{{DOMxRef("XRDepthInformation")}} 接口的 **`normDepthBufferFromNormView`** 只读属性返回在索引深度缓冲区时需要应用的 3D 几何变换。
 
-## 取值
+## 值
 
 在索引深度缓冲区时需要应用的 {{domxref("XRRigidTransform")}}。该矩阵所表示的变换将坐标系从归一化视图坐标转换为归一化深度缓冲区坐标，然后可通过深度缓冲区的 `width` 和 `height` 缩放以获得绝对深度缓冲区坐标。
 
