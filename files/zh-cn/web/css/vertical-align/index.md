@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`vertical-align`** 属性用来指定行内（inline）、行内区块（inline-block）、表格单元格（table-cell）盒子的垂直对齐方式。
 
 {{InteractiveExample("CSS Demo: vertical-align")}}

@@ -44,7 +44,8 @@ document.body.innerHTML = contentString.big();
 <big>Hello, world</big>
 ```
 
-> **경고:** `big`은 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
+> [!WARNING]
+> `big`은 더 이상 유효한 요소가 아니기 때문에 이 마크업은 유효하지 않습니다.
 
 `big()`를 사용하여 HTML 텍스트를 직접 작성하는 대신 반드시 CSS를 사용해서 폰트를 조작해야 합니다. 예를 들어 {{domxref("HTMLElement/style", "element.style")}} 속성의 {{cssxref("font-size")}}를 사용하여 조작할 수 있습니다.
 

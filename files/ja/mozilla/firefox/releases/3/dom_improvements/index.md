@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3 では、特に、他のブラウザーによる独自 DOM 拡張 のサポートに関するものを含む、多くの [Document Object Model](/ja/docs/Web/API/Document_Object_Model) (DOM) 実装が追加されました。この記事は、これらの実装の一覧と詳細なドキュメントへのリンクを提供します。
 
 - Internet Explorer の [`clientTop`](/ja/docs/Web/API/Element/clientTop) と [`clientLeft`](/ja/docs/Web/API/Element/clientLeft) DOM 拡張がサポートされました。

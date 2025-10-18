@@ -75,7 +75,7 @@ Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les é
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
-- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 - **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.
@@ -166,7 +166,7 @@ En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe de
 {{ EmbedLiveSample('Définir_la_propriété_flex', '300', '200') }}
 
 > [!NOTE]
-> Ce n'est qu'une très brève introduction aux possibilités de Flexbox&nbsp;: pour en apprendre plus, voyez notre article sur [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+> Ce n'est qu'une très brève introduction aux possibilités de Flexbox&nbsp;: pour en apprendre plus, voyez notre article sur [Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 
 ## Disposition en trame
 
@@ -261,7 +261,7 @@ Une fois la trame créée, vous pouvez y placer explicitement les éléments au 
 {{ EmbedLiveSample('Placer_des_objets_sur_la_grille', '300', '330') }}
 
 > [!NOTE]
-> Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées&nbsp;; pour en savoir plus, voyez l'article [Disposition tramée](/fr/docs/Learn/CSS/CSS_layout/Grids).
+> Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées&nbsp;; pour en savoir plus, voyez l'article [Disposition tramée](/fr/docs/Learn_web_development/Core/CSS_layout/Grids).
 
 La suite de ce guide porte sur d'autres méthodes de mise en page. Elles ont moins d'importance pour la structure générale de la mise en page, mais peuvent tout de même vous aider à réaliser des tâches spécifiques. En comprenant la nature de chaque tâche de mise en page, vous découvrez rapidement, en regardant un composant particulier de votre design, que le type de mise en page le plus adapté est souvent évident.
 
@@ -328,7 +328,7 @@ p {
 {{ EmbedLiveSample('Flotteurs_boîtes_flottantes', '100%', 600) }}
 
 > [!NOTE]
-> Les boîtes flottantes sont précisément expliquées dans la leçon à propos des propriétés [float et clear](/fr/docs/Learn/CSS/CSS_layout/Floats). Précédant les techniques telles que Flexbox et les trames, les boîtes flottantes étaient utilisées comme méthode pour créer des dispositions en colonnes. Vous rencontrerez peut‑être encore ce méthodes sur le Web ; nous les expliciterons dans la leçon sur les [Méthodes de mise en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> Les boîtes flottantes sont précisément expliquées dans la leçon à propos des propriétés [float et clear](/fr/docs/Learn_web_development/Core/CSS_layout/Floats). Précédant les techniques telles que Flexbox et les trames, les boîtes flottantes étaient utilisées comme méthode pour créer des dispositions en colonnes. Vous rencontrerez peut‑être encore ce méthodes sur le Web ; nous les expliciterons dans la leçon sur les [Méthodes de mise en page traditionnelles](/fr/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods).
 
 ## Techniques de positionnement
 
@@ -479,7 +479,7 @@ p {
 
 {{ EmbedLiveSample('Positionnement_absolu', '100%', 300) }}
 
-C'est vraiment différent&nbsp;! L'élément positionné a maintenant complètement été séparé du reste de la mise en page et se situe au haut de celle-ci. Les deux autres paragraphes se trouvent maintenant ensemble comme si leur frère positionné n'existait pas. Les propriétés {{cssxref("top")}} et {{cssxref("left")}} ont des effets différents pour un positionnement absolu comparativement à un relatif. Dans ce cas les décalages ont été calculés à compter du haut et du côté gauche de la la page. Il est possible de modifier l'élément parent conteneur ; nous verrons cela dans la leçon sur le [positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning).
+C'est vraiment différent&nbsp;! L'élément positionné a maintenant complètement été séparé du reste de la mise en page et se situe au haut de celle-ci. Les deux autres paragraphes se trouvent maintenant ensemble comme si leur frère positionné n'existait pas. Les propriétés {{cssxref("top")}} et {{cssxref("left")}} ont des effets différents pour un positionnement absolu comparativement à un relatif. Dans ce cas les décalages ont été calculés à compter du haut et du côté gauche de la la page. Il est possible de modifier l'élément parent conteneur ; nous verrons cela dans la leçon sur le [positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning).
 
 ### Positionnement fixé
 
@@ -632,7 +632,7 @@ body {
 {{ EmbedLiveSample('Positionnement_collant', '100%', 200) }}
 
 > [!NOTE]
-> Pour plus de précisions à propos du positionnement, voir l'article [Positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning).
+> Pour plus de précisions à propos du positionnement, voir l'article [Positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning).
 
 ## Les tableaux CSS
 

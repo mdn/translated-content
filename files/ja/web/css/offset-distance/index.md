@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`offset-distance`** は CSS プロパティで、 {{CSSxRef("offset-path")}} 上の要素を配置する位置を指定します。
 
-{{InteractiveExample("CSS Demo: offset-distance")}}
+{{InteractiveExample("CSS デモ: offset-distance")}}
 
 ```css interactive-example-choice
 offset-distance: 0%;

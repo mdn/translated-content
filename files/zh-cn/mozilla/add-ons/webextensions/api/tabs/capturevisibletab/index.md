@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7409f4b5405bb4cb4ffa33a31c7900d08960061f
 ---
 
-{{AddonSidebar}}
-
 创建一个编码了给定标签页区域图像的数据 URL。你必须拥有 `<all_urls>` 或 `activeTab` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 > [!NOTE]

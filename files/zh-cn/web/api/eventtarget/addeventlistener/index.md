@@ -34,7 +34,7 @@ addEventListener(type, listener, useCapture);
 ### 参数
 
 - `type`
-  - : 表示监听[事件类型](/zh-CN/docs/Web/Events)的大小写敏感的字符串。
+  - : 表示监听[事件类型](/zh-CN/docs/Web/API/Document_Object_Model/Events)的大小写敏感的字符串。
 - `listener`
   - : 当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。`listener` 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)。有关回调本身的详细信息，请参阅[事件监听回调](#事件监听回调)
 - `options` {{optional_inline}}
@@ -763,5 +763,5 @@ window.addEventListener(
 ## 参见
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发自定义事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

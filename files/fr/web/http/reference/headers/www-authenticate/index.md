@@ -4,7 +4,6 @@ slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 original_slug: Web/HTTP/Headers/WWW-Authenticate
 ---
 
-{{HTTPSidebar}}
 L'entête HTTP de réponse **`WWW-Authenticate`** définit la méthode d'authentification qui doit être utilisé pour obtenir l'accès à une ressource.
 
 L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPStatus("401")}} `Unauthorized`.
@@ -31,7 +30,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Directives
 
 - \<type>
-  - : [Type d'authentification](/fr/docs/Web/HTTP/Authentication#authentication_schemes). Un type commun est ["Basic"](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Type d'authentification](/fr/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Un type commun est ["Basic"](/fr/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Une description de la zone protégée. Si aucun domaine n'est spécifié, les clients affichent souvent un nom de domaine formaté à la place.
 - charset=\<charset>
@@ -47,7 +46,7 @@ WWW-Authenticate: Basic
 WWW-Authenticate: Basic realm="Accès au site de staging", charset="UTF-8"
 ```
 
-Voir aussi [HTTP authentication](/fr/docs/Web/HTTP/Authentication) pour des exemples sur la configuration des serveurs Apache ou nginx pour protéger protéger votre site par mot de passe en utilisant l'authentification HTTP basic.
+Voir aussi [HTTP authentication](/fr/docs/Web/HTTP/Guides/Authentication) pour des exemples sur la configuration des serveurs Apache ou nginx pour protéger protéger votre site par mot de passe en utilisant l'authentification HTTP basic.
 
 ## Spécifications
 
@@ -59,7 +58,7 @@ Voir aussi [HTTP authentication](/fr/docs/Web/HTTP/Authentication) pour des exem
 
 ## Voir aussi
 
-- [HTTP authentication](/fr/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/fr/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

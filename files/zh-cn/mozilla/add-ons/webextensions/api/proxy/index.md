@@ -3,8 +3,6 @@ title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
 

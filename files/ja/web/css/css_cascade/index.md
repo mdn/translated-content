@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 **CSS カスケードと継承** (CSS cascading and inheritance) モジュールは、カスケードと継承によってプロパティに値を割り当てるルールを定義します。このモジュールは、すべての要素のすべてのプロパティの指定値を探すルールを指定します。
 
 CSS の基本設計原則の一つに、ルールのカスケードがあります。これにより、複数のスタイルシートが文書の表示に影響を与えることができます。 CSS のプロパティ値の宣言は、文書の表示方法を定義します。複数の宣言が、同じ要素とプロパティの組み合わせに異なる値を設定することができますが、どの CSS プロパティでも適用できる値は 1 つだけです。 CSS カスケードモジュールは、これらの競合をどのように解決するかを定義します。
@@ -80,7 +78,7 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
 - [要素に装着されたスタイル](/ja/docs/Web/HTML/Reference/Global_attributes/style)
 - [インラインスタイルとカスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade#インラインスタイル)
 - [@imports の条件付きルール](/ja/docs/Web/CSS/@import#条件付きで_css_ルールをインポート)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## 仕様書
 

@@ -7,7 +7,8 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 {{APIRef("UI Events")}}
 
-> **Nota:** **No utilize este método porque está obsoleto.**
+> [!NOTE]
+> **No utilize este método porque está obsoleto.**
 >
 > Usa constructores de eventos específicos, como {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}. La página [Creando y disparando eventos](/es/docs/Web/Events/Creating_and_triggering_events) da más información sobre cómo usarlos.
 

@@ -4,8 +4,6 @@ slug: conflicting/Web/HTTP/Headers
 original_slug: Web/HTTP/Headers/Accept-Charset
 ---
 
-{{HTTPSidebar}}
-
 > [!WARNING]
 > 이 헤더를 사용하지 마십시오. 브라우저는 이 헤더를 생략하고 서버는 이를 무시해야 합니다.
 

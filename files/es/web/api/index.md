@@ -23,4 +23,4 @@ Esta es una lista de todas las interfaces (es decir, tipos de objetos) que hay d
 
 ## Véase también
 
-- [Referencia de los eventos de la API web](/es/docs/Web/Events)
+- [Referencia de los eventos de la API web](/es/docs/Web/API/Document_Object_Model/Events)

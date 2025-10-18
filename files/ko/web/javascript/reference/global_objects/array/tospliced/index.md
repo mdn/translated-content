@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.toSpliced()
+short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 l10n:
   sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767

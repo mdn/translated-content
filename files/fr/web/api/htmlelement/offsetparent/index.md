@@ -7,7 +7,8 @@ slug: Web/API/HTMLElement/offsetParent
 
 La propriété en lecture seule **`HTMLElement.offsetParent`** fournit une référence vers le plus proche élément ancêtre positionné (plus proche selon la hiérarchie). S'il n'y a pas d'élément ancêtre positionné, c'est le plus proche ancêtre `td`, `th`, `table` qui sera renvoyé, ou `body` s'il n'y a non plus pas d'élément de tableau comme ancêtre.
 
-> **Note :** `offsetParent` renvoie `null` dans les situations suivantes&nbsp;:
+> [!NOTE]
+> `offsetParent` renvoie `null` dans les situations suivantes&nbsp;:
 >
 > - La propriété `display` de l'élément ou de son élément parent vaut `none`.
 > - La propriété `position` de l'élément vaut `fixed` (Firefox renverra `<body>`).

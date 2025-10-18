@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーの `speaker-selection` ディレクティブは、第三者のコンテキスト（{{htmlelement("iframe")}} に埋め込まれたものなど）に読み込まれた文書が、{{domxref("Storage Access API", "ストレージアクセス API", "", "nocode")}} を使用してパーティション化されていない Cookie へのアクセスを要求することを許可するかどうかを制御します。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 960a94a198ca60fb04fe63857ea61d7306465791
 ---
 
-{{CSSRef}}
-
 **CSS 生成コンテンツ** (CSS generated content) モジュールは、 CSS により要素のコンテンツを置き換えたり、コンテンツを文書に追加したりする方法を定義します。
 
 生成コンテンツは、コンテンツの置換に使用することができます。この場合、 DOM ノードのコンテンツは CSS `<image>` に置き換えられます。 CSS 生成コンテンツを使用すると、言語固有の引用符の生成、カスタムリストアイテム番号や箇条書きの生成、選択した擬似要素に無名置換要素としてコンテンツを生成して視覚的にコンテンツを追加することもできます。
@@ -153,7 +151,7 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
   - {{cssxref("::scroll-marker")}} 擬似要素
   - {{cssxref(":target-current")}} 擬似クラス
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
   - {{cssxref("attr", "attr()")}} 関数
   - {{cssxref("string")}} データ型
   - {{cssxref("image")}} データ型

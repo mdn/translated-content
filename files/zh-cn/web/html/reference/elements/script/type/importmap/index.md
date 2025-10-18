@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 85ee57ef02a1cc0d104d3db2c81a4a45cb71011b
 ---
 
-{{HTMLSidebar}}
-
 [`<script>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/script)的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type) 属性的 **`importmap`** 值表示元素的主体包含一个导入映射。
 
 导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。

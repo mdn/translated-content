@@ -5,7 +5,7 @@ l10n:
   sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}の中に生成され、スクロールコンテナーの子孫に生成された {{cssxref("::scroll-marker")}} 擬似要素をすべて含みます。
 

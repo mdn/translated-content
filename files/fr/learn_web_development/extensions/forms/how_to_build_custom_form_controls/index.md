@@ -6,7 +6,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}
 
-Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_form_styling) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
+Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
 
@@ -284,7 +284,7 @@ Pour les options, nous devons ajouter une classe `highlight` pour pouvoir identi
 }
 ```
 
-Donc, voici le résultat avec les trois états ([consultez le code source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1)):
+Donc, voici le résultat avec les trois états ([consultez le code source ici](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1)):
 
 #### État initial
 
@@ -731,7 +731,7 @@ window.addEventListener("load", function () {
 
 #### Sans JS
 
-Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#sans_js).
+Consultez le [code source complet ici](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#sans_js).
 
 ```html hidden
 <form class="no-widget">
@@ -771,7 +771,7 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
 #### Avec JS
 
-Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#avec_js).
+Consultez le [code source complet ici](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#avec_js).
 
 ```html hidden
 <form class="no-widget">
@@ -1086,7 +1086,7 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 
 #### Exemple en direct
 
-Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3).
+Consultez le [code source complet ici](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3).
 
 ```html hidden
 <form class="no-widget">
@@ -1420,7 +1420,7 @@ window.addEventListener("load", function () {
 
 Dans le code ci-dessus, il faut noter l'utilisation de la propriété [`tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex). Utiliser cette propriété est nécessaire pour être sûr que le widget natif n'obtiendra jamais le focus et que le widget personnalisé l'obtiendra quand l'utilisateur utilise le clavier ou la souris.
 
-Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)) :
+Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source ici](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4)) :
 
 ```html hidden
 <form class="no-widget">
@@ -1705,7 +1705,7 @@ Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Web/Acces
 
 ### L'attribut `role`
 
-L'attribut clé utilisé par [ARIA](/fr/docs/Web/Accessibility/ARIA) est l'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques). L'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
+L'attribut clé utilisé par [ARIA](/fr/docs/Web/Accessibility/ARIA) est l'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques). L'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques) accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
 
 Il faut aussi noter qu'ARIA définit les rôles appliqués par défaut aux balises HTML standard. Par exemple, l'élément {{HTMLElement("table")}} correspond au rôle `grid`, et l'élément {{HTMLElement("ul")}} correspond au rôle `list`. Comme nous utilisons un élément {{HTMLElement("ul")}}, nous voulons nous assurer que le rôle `listbox` de notre widget remplacera le rôle `list` de l'élément {{HTMLElement("ul")}}. À cette fin, nous utiliserons le rôle `presentation`. Ce rôle est conçu pour nous permettre d'indiquer qu'un élément n'a pas de signification particulière, et est utilisé uniquement pour présenter de l'information. Nous l'appliquerons à notre élément {{HTMLElement("ul")}}.
 
@@ -1756,7 +1756,7 @@ function updateValue(select, index) {
 }
 ```
 
-Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](https://www.apple.com/accessibility/voiceover/)). Consultez le [code complet source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) :
+Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](https://www.apple.com/accessibility/voiceover/)). Consultez le [code complet source ici](/fr/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5) :
 
 ```html hidden
 <form class="no-widget">

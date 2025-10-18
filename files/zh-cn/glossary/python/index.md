@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **Python** 是一个高级通用编程语言。它使用多范式方法。这意味着它支持程序化、面向对象和一些功能性编程结构。
 
 它是由 Guido van Rossum 创建的，作为 1985 年至 1990 年间的另一种语言（称为 ABC）的继任者，目前广泛应用于 web 开发、桌面应用程序、数据科学、DevOps 和自动化/生产力等领域。

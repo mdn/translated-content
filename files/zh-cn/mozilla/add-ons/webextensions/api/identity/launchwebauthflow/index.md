@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8ed4ae6a9a60693920043935d2531921ae9e483
 ---
 
-{{AddonSidebar}}
-
 执行 [OAuth2](https://oauth.net/2/) 流程的第一部分，包括用户身份验证和客户端授权。
 
 此函数的唯一必需参数是服务提供商的授权 URL，且它必须包含一些特定 URL 参数：[重定向 URL](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#获取重定向_url) 和扩展的[客户端 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/identity#注册你的扩展)。然后服务提供商将：
