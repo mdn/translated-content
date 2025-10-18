@@ -10,7 +10,7 @@ l10n:
 
 `XRFrame` 对象的 **`session`** 只读属性返回生成该帧的 {{domxref("XRSession")}} 对象。
 
-## 取值
+## 值
 
 表示此 `XRFrame` 所描述对象位置和方向的 WebXR 会话的 {{domxref("XRSession")}} 对象。
 
