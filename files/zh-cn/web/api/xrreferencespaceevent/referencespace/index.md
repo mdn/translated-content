@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-{{domxref("XRReferenceSpaceEvent")}} 的 **`referenceSpace`** 只读属性指定了作为事件发起者的参考空间。
+{{domxref("XRReferenceSpaceEvent")}} 的 **`referenceSpace`** 只读属性用于指定作为事件发起者的参考空间。
 
-## 取值
+## 值
 
 表示事件的来源的 {{domxref("XRReferenceSpace")}}。
 
