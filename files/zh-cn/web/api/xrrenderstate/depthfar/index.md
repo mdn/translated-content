@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{domxref("XRRenderState")}} 接口的 **`depthFar`** 只读属性返回远裁剪平面与观察者之间的距离（单位：米）。
+{{domxref("XRRenderState")}} 接口的 **`depthFar`** 只读属性返回远裁剪平面与观察者之间的距离（以米为单位）。
 
-## 取值
+## 值
 
 {{jsxref("Number")}}。
 
