@@ -66,8 +66,6 @@ img {
 
 Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
-- `accesskey`
-  - : Specifies a keyboard navigation accelerator for the element. Pressing ALT or a similar key in association with the specified character selects the form control correlated with that key sequence. Page designers are forewarned to avoid key sequences already bound to browsers. This attribute is global since HTML5.
 - `alt`
   - : С помощью этого атрибута задаётся альтернативный текст, описывающий изображение, если оно не доступно. Он должен быть сформулирован так, чтобы предоставить пользователю тот же выбор, что и изображение, которое отрисуется без альтернативного текста. В HTML4 данный атрибут обязателен, но так же может содержать и пустую строку (""). В HTML5 этот атрибут обязателен только при наличии атрибута **href**.
 - `coords`
