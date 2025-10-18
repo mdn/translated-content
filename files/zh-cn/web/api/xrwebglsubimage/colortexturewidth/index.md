@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-{{domxref("XRWebGLSubImage")}} 接口的 **`colorTextureWidth`** 只读属性是表示 GL 附件的像素宽度的数字。
+{{domxref("XRWebGLSubImage")}} 接口的 **`colorTextureWidth`** 只读属性返回表示 GL 附件的像素宽度的数字。
 
-## 取值
+## 值
 
 表示像素宽度的数字。
 
