@@ -17,7 +17,7 @@ ret = FindProxyForURL(url, host);
 
 詳細な使用方法や PAC ファイルの作成方法については、[プロキシー自動構成ファイル (PAC)](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) を参照してください。
 
-## See also
+## 関連情報
 
-- [PAC](https://en.wikipedia.org/wiki/Proxy_auto-config) on Wikipedia
-- [Proxy Auto-Configuration file](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) on MDN
+- Wikipedia 上の [PAC](https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E8%87%AA%E5%8B%95%E8%A8%AD%E5%AE%9A) 
+- MDN 上の [プロキシー自動構成ファイル (PAC)](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)
