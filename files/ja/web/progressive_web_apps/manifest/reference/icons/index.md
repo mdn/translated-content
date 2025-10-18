@@ -2,10 +2,8 @@
 title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `icons` はマニフェストのメンバーで、このウェブアプリケーションを表すアイコンを定義する 1 つ以上の画像を指定するために使用します。
 
@@ -107,7 +105,7 @@ l10n:
 ## パフォーマンスの考慮事項
 
 `type` プロパティを指定すると、対応していない形式の画像をブラウザーがより簡単に無視できるようになるため、パフォーマンスが大幅に向上します。
-`type` プロパティを指定しなかった場合、ブラウザーはよりリソースに集中した方法、たとえばファイルのシグネチャを [MIME スニッフィング](/ja/docs/Web/HTTP/Guides/MIME_types#mime_sniffing)などを使用する必要があるかもしれません。
+`type` プロパティを指定しなかった場合、ブラウザーはよりリソースに集中した方法、たとえばファイルのシグネチャを [MIME スニッフィング](/ja/docs/Web/HTTP/Guides/MIME_types#mime_スニッフィング)などを使用する必要があるかもしれません。
 
 少なくとも、 `type` プロパティを除外する場合は、アイコン画像に適切な、かつ曖昧さのないファイル拡張子を使用してください。
 

@@ -3,27 +3,28 @@ title: "data: URL"
 short-title: "data:"
 slug: Web/URI/Reference/Schemes/data
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
 
-**データ URL** は `data:` スキームが先頭についた URL で、小さなファイルをインラインで文書に埋め込むことができます。以前、 WHATWG で取り下げられるまでは「データ URI」と呼ばれていました。
+**data URL** は `data:` スキームが先頭についた URL で、小さなファイルをインラインで文書に埋め込むことができます。以前、 WHATWG で取り下げられるまでは "data URIs" と呼ばれていました。
 
 > [!NOTE]
 > 最近のブラウザーでは、データ URL はナビゲーションを担当する設定オブジェクトのオリジンを継承するのではなく、一意の不透明なオリジンとして扱われます。
 
 ## 構文
 
-データ URL は接頭辞 (`data:`)、データの種類を示す [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)、テキストではないデータである場合のオプションである `base64` トークン、データ自体の 4 つの部品で構成されます。
-
-```plain
+```url
 data:[<media-type>][;base64],<data>
 ```
 
-`media-type` は [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)で, 例えば `'image/jpeg'` で JPEG 画像を表します。省略時の既定値は `text/plain;charset=US-ASCII` です。
-
-データに [RFC 3986 で予約文字として定義されている文字](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)が含まれている場合、または空白文字、改行文字、その他の出力されない文字が含まれている場合は、それらの文字は{{Glossary("Percent-encoding", "パーセントエンコード")}}でエンコードする必要があります。
-
-データが文字ならば、そのまま埋め込めます (埋め込む文書タイプに応じて、適切な実体参照やエスケープを行なってください)。それ以外では `base64` を指定し、 base64 エンコードしたバイナリーデータを埋め込みます。 MIME タイプについての詳しい情報は[こちら](/ja/docs/Web/HTTP/Guides/MIME_types)や[こちら](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)にあります。
+- `data:`
+  - : この URL のスキームです。
+- `<media-type>` {{optional_inline}}
+  - : JPEG 画像ファイルの場合は image/jpeg など、データの型を示す [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)。省略した場合は、既定で `text/plain;charset=US-ASCII` になります。 [MIME タイプの構造の詳細な解説](/ja/docs/Web/HTTP/Guides/MIME_types)と、[ウェブ上の一般的な MIME タイプの表](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)を確認できます。
+- `;base64` {{optional_inline}}
+  - : データが base64 デコードされるべきであることを示します。[データの base64 形式へのエンコード](#データの_base64_形式へのエンコード)を参照してください。
+- `<data>`
+  - : データ自体。データに [RFC 3986 で予約文字として定義されている文字](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) が含まれている場合、または空白文字、改行文字、その他の非印刷文字が含まれている場合、それらの文字は{{Glossary("Percent-encoding", "パーセントエンコーディング")}}でエンコードする必要があります。データがテキストの場合は、そのテキストを埋め込むことができます（囲んでいる文書の型に応じて、適切なエンティティまたはエスケープを使用してください）。それ以外の場合は、 `base64` を指定して、base64 エンコードされたバイナリーデータを埋め込むことができます。
 
 例:
 
@@ -80,7 +81,7 @@ bash$ echo -n hello | base64
 
 この章では `data` の URL を作ったり使ったりするときに、よく起こる問題について述べます。
 
-```html
+```plain
 data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 
@@ -120,5 +121,5 @@ lots of text…
 - {{Glossary("Percent-encoding", "パーセントエンコーディング")}}
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- CSS {{CSSXref("url_value", "&lt;url&gt;")}}
+- CSS の {{CSSXref("url_value", "&lt;url&gt;")}}
 - {{Glossary("URI")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
 ---
 
-{{AddonSidebar}}
-
 为发出的 HTTP 请求（包括 `ws://` 和 `wss://` 的 websocket 请求）添加针对不同阶段的事件监听器。事件监听器接收有关请求的详细信息，并可以修改或取消请求。
 
 每个事件都会在请求的特定阶段触发。事件的顺序大概是这样的：

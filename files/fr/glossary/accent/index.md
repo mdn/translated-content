@@ -9,7 +9,7 @@ l10n:
 
 Une **accentuation** est une couleur généralement vive qui contraste avec les couleurs d'arrière-plan et de premier plan plus utilitaires d'un jeu de couleurs. Celles-ci sont présentes dans le style visuel de nombreuses plates-formes (mais pas toutes).
 
-Sur le Web, une accentuation est parfois utilisée dans les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) pour la partie active du contrôle, par exemple l'arrière-plan d'une [case cochée](/fr/docs/Web/HTML/Element/input/checkbox) (« _checkbox_ » en anglais).
+Sur le Web, une accentuation est parfois utilisée dans les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) pour la partie active du contrôle, par exemple l'arrière-plan d'une [case cochée](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) (« _checkbox_ » en anglais).
 
 ## Voir aussi
 

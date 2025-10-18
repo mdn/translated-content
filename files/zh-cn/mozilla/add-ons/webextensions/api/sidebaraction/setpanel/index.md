@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 设置侧边栏的面板：即定义此侧边栏内容的 HTML 文档。
 
 ## 面板类型

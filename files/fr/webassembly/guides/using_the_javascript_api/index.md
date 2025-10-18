@@ -6,10 +6,10 @@ original_slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-Si vous avez déjà [compilé un module depuis un autre langage en utilisant des outils comme Emscripten](/fr/docs/WebAssembly/C_to_Wasm), ou [chargé et éxecuté vous-même le code](/fr/docs/WebAssembly/Loading_and_running), l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.
+Si vous avez déjà [compilé un module depuis un autre langage en utilisant des outils comme Emscripten](/fr/docs/WebAssembly/Guides/C_to_Wasm), ou [chargé et éxecuté vous-même le code](/fr/docs/WebAssembly/Guides/Loading_and_running), l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.
 
 > [!NOTE]
-> Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez d'abord [WebAssembly concepts](/fr/docs/WebAssembly/Concepts).
+> Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez d'abord [WebAssembly concepts](/fr/docs/WebAssembly/Guides/Concepts).
 
 ## Quelques exemples simples
 
@@ -133,7 +133,7 @@ Si une valeur maximum a été fournie à la création de l'instance mémoire, le
 
 Note: En raison du caractère immuable de la longueur de byte d'un {{domxref("ArrayBuffer")}}, après une opération {{jsxref("Memory.prototype.grow()")}} réussie, le buffer getter retourne un nouvel objet ArrayBuffer (avec la nouvelle longeur de byte du buffer) et tous les objets ArrayBuffer précédents se retrouve en état "dissocié", ou déconnectés de l'espace mémoire dont ils étaient issus initialement.
 
-Tout comme les fonctions, les espaces mémoires linéaires peuvent être définis à l'intérieur du module, ou bien importés. De manière similaire aux fonctions, un module peut également exporter sa mémoire. Cela signifie que JavaScript peut accéder à la mémoire d'une instance WebAssembly soit en créant un nouveau `WebAssembly.Memory` afin de le passer en import à cette instance, soit en recevant un export Memory (via [`Instance.prototype.exports`](/fr/docs/WebAssembly/JavaScript_interface/Instance/exports)).
+Tout comme les fonctions, les espaces mémoires linéaires peuvent être définis à l'intérieur du module, ou bien importés. De manière similaire aux fonctions, un module peut également exporter sa mémoire. Cela signifie que JavaScript peut accéder à la mémoire d'une instance WebAssembly soit en créant un nouveau `WebAssembly.Memory` afin de le passer en import à cette instance, soit en recevant un export Memory (via [`Instance.prototype.exports`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports)).
 
 ### Exemple avancé pour l'utilisation mémoire
 
@@ -167,7 +167,7 @@ Essayons de clarifier les affirmations ci-dessus à l'aide d'un exemple plus abo
    console.log(sum);
    ```
 
-Note: vous pouvez remarquer que nous avons créé la vue {{domxref("Uint32Array")}} sur le champ buffer de l'objet Memory ([`Memory.prototype.buffer`](/fr/docs/WebAssembly/JavaScript_interface/Memory/buffer)), et pas sur l'objet Memory lui même.
+Note: vous pouvez remarquer que nous avons créé la vue {{domxref("Uint32Array")}} sur le champ buffer de l'objet Memory ([`Memory.prototype.buffer`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer)), et pas sur l'objet Memory lui même.
 
 Les imports Memory fonctionnent de la même manière que les imports fonctions, à la différence prés que les objets Memory véhiculent des valeurs au lieu de fonctions javascripts. Les imports Memory sont utiles pour deux raisons:
 
@@ -186,7 +186,7 @@ Les références de type fonction sont nécessaires afin de compiler des languag
 
 Lorsque l'appel à un pointeur sur fonction est nécessaire, le caller WebAssembly fournit l'index de la référence à appeler. La valeur de cet index est controlée par rapport au valeurs limites données à l'instantiation de la table (safety bounds checked), et cela avant que l'appel par référence à la fonction soit effectué. Autrement dit, les tables sont actuellement des primitives bas niveau utilisées pour compiler des fonctionnalités de language de programmation bas niveau, de manière sûre et portable.
 
-Les Tables peuvent être modifiées via [`Table.prototype.set()`](/fr/docs/WebAssembly/JavaScript_interface/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/fr/docs/WebAssembly/JavaScript_interface/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](http://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) in JavaScript, and to wasm modules.
+Les Tables peuvent être modifiées via [`Table.prototype.set()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](http://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get) in JavaScript, and to wasm modules.
 
 ### Un exemple de table
 
@@ -216,7 +216,7 @@ Envisageons un exemple basique d'utilisation d'une table — un module WebAssemb
    console.log(tbl.get(1)()); // 42
    ```
 
-Ce code accède à chaque fonction référencée contenue dans la table, et l' instancie afin d'imprimer sa valeur de retour dans la console — à noter que chaque référence de fonction est obtenue à l'aide de la méthode [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get), suivie d'une paire suplémentaire de parenthèses pour finaliser l'invocation de la fonction.
+Ce code accède à chaque fonction référencée contenue dans la table, et l' instancie afin d'imprimer sa valeur de retour dans la console — à noter que chaque référence de fonction est obtenue à l'aide de la méthode [`Table.prototype.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get), suivie d'une paire suplémentaire de parenthèses pour finaliser l'invocation de la fonction.
 
 **Note**: Vous pouvez retoruver la démo complète sur [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) (voir également [live](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
@@ -295,5 +295,5 @@ Cet article a couvert les bases de l'utilisation de l'API WebAssembly JavaScript
 ## Voir aussi
 
 - [webassembly.org](http://webassembly.org/)
-- [WebAssembly concepts](/fr/docs/WebAssembly/Concepts)
+- [WebAssembly concepts](/fr/docs/WebAssembly/Guides/Concepts)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)

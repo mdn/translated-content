@@ -3,8 +3,6 @@ title: 层叠与浮动
 slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 ---
 
-{{CSSRef}}
-
 ### 层叠与浮动
 
 对于浮动的块元素来说，层叠顺序变得有些不同。浮动块元素被放置于非定位块元素与定位块元素之间：

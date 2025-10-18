@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol.unscopables`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.unscopables` を表します。{{jsxref("Statements/with", "with")}} 文はスコープオブジェクト上で、その `with` 環境内でバインドから除外されるプロパティの集合を持つプロパティを、このシンボルで検索します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+{{InteractiveExample("JavaScript デモ: Symbol.unscopables")}}
 
 ```js interactive-example
 const object1 = {

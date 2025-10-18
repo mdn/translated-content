@@ -3,8 +3,6 @@ title: border-left
 slug: Web/CSS/border-left
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El `borde_izquierdo` es una propiedad rápida para poner el ancho, estilo y color del borde izquierdo de un elemento. Esta propiedad puede ser usada para poner los valores de uno o mas de : {{ Cssxref("border-left-width") }}, {{ Cssxref("border-left-style") }}, {{ Cssxref("border-left-color") }}. Valores omitidos son puestos a su valor inicial.

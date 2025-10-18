@@ -4,8 +4,6 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f
 original_slug: Web/CSS/computed_value
 ---
 
-{{cssref}}
-
 [CSS](/ko/docs/Web/CSS) 속성의 **계산값**은 상속 과정에서 부모가 자식에게 물려주는 값을 말합니다. 계산값은 [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)으로부터 다음 방법을 통해 구합니다.
 
 - 특수값인 {{cssxref("inherit")}}, {{cssxref("initial")}}, {{cssxref("unset")}}, {{cssxref("revert")}}를 처리하여.
@@ -15,7 +13,8 @@ original_slug: Web/CSS/computed_value
 
 그러나, `width`, `margin-right`, `text-index`, `top`과 같이, 백분율의 값을 알아내려면 레이아웃부터 계산해야 하는 속성의 백분율 지정값은 백분율 계산값이 됩니다. 추가로, `line-height` 속성의 단위 없는 값도 그대로 계산값이 됩니다. 이렇게 남겨진 상대적 계산값은 [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)을 구할 때 절댓값이 됩니다.
 
-> **참고:**{{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API는 [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)을 반환합니다. 결정값은 속성에 따라 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)일 수도, [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)일 수도 있습니다.
+> [!NOTE]
+> {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API는 [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)을 반환합니다. 결정값은 속성에 따라 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)일 수도, [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)일 수도 있습니다.
 
 ## 명세
 
@@ -44,6 +43,6 @@ original_slug: Web/CSS/computed_value
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

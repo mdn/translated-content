@@ -60,7 +60,7 @@ Après les 8 allers-retours, le navigateur est enfin en mesure de faire la deman
 
 ## Response
 
-Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/Methods) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
+Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/Reference/Methods) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
 
 ```html
 <!doctype html>
@@ -114,7 +114,7 @@ Nous décrivons cinq étapes dans le chemin de rendu critique, ou "[critical ren
 
 La première étape consiste à traiter le balisage HTML et à créer l'arborescence DOM. L'analyse HTML implique la création de jetons, [tokenization,](/fr/docs/Web/API/DOMTokenList) et la construction du DOM tree. Les jetons HTML incluent les balises de début et de fin, ainsi que les noms et les valeurs des attributs. Si le document est bien formé, son analyse est simple et rapide. L'analyseur analyse les entrées sous forme de jetons dans le document, créant ainsi le document tree.
 
-Le DOM tree décrit le contenu du document. L'élément [`<html>`](/fr/docs/Web/HTML/Element/html) est la première balise et le premier nœud racine de du document tree. L'arbre reflète les relations et les hiérarchies entre différentes balises. Les balises imbriquées dans d'autres balises sont des nœuds enfants. Plus le nombre de nœuds DOM est élevé, le plus de temps ca prends pour construire le DOM tree.
+Le DOM tree décrit le contenu du document. L'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) est la première balise et le premier nœud racine de du document tree. L'arbre reflète les relations et les hiérarchies entre différentes balises. Les balises imbriquées dans d'autres balises sont des nœuds enfants. Plus le nombre de nœuds DOM est élevé, le plus de temps ca prends pour construire le DOM tree.
 
 ![](dom.gif)
 
@@ -153,7 +153,7 @@ Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notam
 
 #### Construire l'arbre d'accessibilité
 
-Le navigateur crée également une arbre d'[accessibilité](/fr/docs/Learn/Accessibility) que les périphériques d'assistance utilisent pour analyser et interpréter le contenu. Le modèle d'objet d'accessibilité (AOM) est comme une version sémantique du DOM. Le navigateur met à jour l'arbre d'accessibilité lorsque le DOM est mis à jour. L'arbre d'accessibilité n'est pas modifiable par les technologies d'assistance elles-mêmes.
+Le navigateur crée également une arbre d'[accessibilité](/fr/docs/Learn_web_development/Core/Accessibility) que les périphériques d'assistance utilisent pour analyser et interpréter le contenu. Le modèle d'objet d'accessibilité (AOM) est comme une version sémantique du DOM. Le navigateur met à jour l'arbre d'accessibilité lorsque le DOM est mis à jour. L'arbre d'accessibilité n'est pas modifiable par les technologies d'assistance elles-mêmes.
 
 Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux [lecteurs d'écran](/fr/docs/Web/Accessibility/ARIA).
 
@@ -165,7 +165,7 @@ Les étapes de rendu incluent le style, la mise en page, la peinture et, dans ce
 
 La troisième étape du chemin de rendu critique consiste à combiner le DOM et CSSOM dans une arborescence de rendu. La construction de l'arbre de style calculé ou de l'arbre de rendu commence à la racine de l'arborescence DOM, en traversant chaque nœud visible.
 
-Les balises qui ne vont pas être affichées, telles que [`<head>`](/fr/docs/Web/HTML/Element/head) et ses enfants, ainsi que tous les nœuds avec `display: none`, tel que le `script { display: none;}` vous trouverez dans les feuilles de style de l'agent utilisateur, ne sont pas inclus dans l'arborescence de rendu car ils n'apparaîtront pas dans la sortie rendue. Les nœuds avec `visibility: hidden` appliqué sont inclus dans l'arborescence de rendu, car ils occupent de l'espace. Comme nous n'avons donné aucune directive pour remplacer la valeur par défaut de l'agent utilisateur, le noeud de `script` de notre exemple de code ci-dessus ne sera pas inclus dans l'arbre de rendu.
+Les balises qui ne vont pas être affichées, telles que [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) et ses enfants, ainsi que tous les nœuds avec `display: none`, tel que le `script { display: none;}` vous trouverez dans les feuilles de style de l'agent utilisateur, ne sont pas inclus dans l'arborescence de rendu car ils n'apparaîtront pas dans la sortie rendue. Les nœuds avec `visibility: hidden` appliqué sont inclus dans l'arborescence de rendu, car ils occupent de l'espace. Comme nous n'avons donné aucune directive pour remplacer la valeur par défaut de l'agent utilisateur, le noeud de `script` de notre exemple de code ci-dessus ne sera pas inclus dans l'arbre de rendu.
 
 Les règles CSSOM sont appliquées à chaque nœud visible. L'arborescence de rendu contient tous les nœuds visibles avec le contenu et les styles calculés - en faisant correspondre tous les styles pertinents à chaque nœud visible du DOM tree et en déterminant, en fonction de la cascade CSS, les styles calculés pour chaque nœud.
 
