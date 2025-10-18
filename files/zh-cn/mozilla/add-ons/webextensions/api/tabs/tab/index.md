@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a6313e45a6ae4c356325f06d0e7e8919bab251a8
 ---
 
-{{AddonSidebar}}
-
 **`tabs.Tab`** 类型包含有关标签页的信息。这提供了访问有关标签页内容、大小、特殊状态或限制等的信息。
 
 ## 类型

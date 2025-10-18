@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，其底层值为布尔值。
 
 此属性设置了[配置设置](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)中的 `browser.zoom.siteSpecific`，该配置控制缩放设置如何应用于站点和标签页。

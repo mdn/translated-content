@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
-{{cssref}}
-
 ### Apilamiento y float
 
 Para los bloques flotantes el orden de apilamiento es un poco diferente. Los bloques flotantes son colocados entre bloques no posicionados y bloques posicionados:

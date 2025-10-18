@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 这是表示要创建的通知类型的字符串。有四种通知类型：“basic”、“image”、“list”、“progress”。
 
 这将作为 {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}} 中的 `type` 属性的值传递给 {{WebExtAPIRef("notifications.create()")}} 和 {{WebExtAPIRef("notifications.update()")}}。

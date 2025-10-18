@@ -42,11 +42,11 @@ new Promise((resolveOuter) => {
 > [!NOTE]
 > 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
 
+`Promise` 本身没有用于取消的一级协议，但你可能可以直接取消底层的异步操作，通常使用 [`AbortController`](/zh-CN/docs/Web/API/AbortController)。
+
 ### Promise 的链式调用
 
-{{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 和 {{jsxref("Promise.prototype.finally()")}} 方法用于将进一步的操作与已敲定的 Promise 相关联。由于这些方法返回 Promise，因此它们可以被链式调用。
-
-`.then()` 方法最多接受两个参数；第一个参数是 Promise 兑现时的回调函数，第二个参数是 Promise 拒绝时的回调函数。每个 `.then()` 返回一个新生成的 Promise 对象，这个对象可被用于链式调用，例如：
+{{jsxref("Promise/then", "then()")}}、{{jsxref("Promise/catch", "catch()")}} 和 {{jsxref("Promise/finally", "finally()")}} 方法用于将进一步的操作与已敲定的 Promise 相关联。`.then()` 方法最多接受两个参数；第一个参数是 Promise 兑现时的回调函数，第二个参数是 Promise 拒绝时的回调函数。`.catch()` 和 `.finally()` 方法在内部调用 `.then()`，使错误处理更加简洁。例如，`.catch()` 实际上就是一个没有传递兑现处理器的 `.then()`。由于这些方法返回 Promise，因此它们可以被链式调用。例如：
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -61,9 +61,21 @@ myPromise
   .then(handleFulfilledC, handleRejectedC);
 ```
 
-即使 `.then()` 缺少返回 Promise 对象的回调函数，处理程序仍会继续到链的下一个链式调用。因此，在最终的 `.catch()` 之前，可以安全地省略每个链式调用中处理*已拒绝*状态的回调函数。
+我们将使用以下术语：_初始 Promise_ 是调用 `then` 的 Promise；_新 Promise_ 是 `then` 返回的 Promise。传递给 `then` 的两个回调分别称为*兑现处理器*和*拒绝处理器*。
 
-在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 兑现时的回调函数留出空位的 `.then()`。
+初始 Promise 的敲定状态决定了要执行哪个处理器。
+
+- 如果初始 Promise 被兑现，则使用兑现值调用兑现处理器。
+- 如果初始 Promise 被拒绝，则使用拒绝原因调用拒绝处理器。
+
+处理器的完成情况决定了新 Promise 的敲定状态。
+
+- 如果处理器返回一个 [thenable](#thenable) 值，新 Promise 将以与返回值相同的状态敲定。
+- 如果处理器返回一个非 thenable 值，新 Promise 将以返回值兑现。
+- 如果处理器抛出错误，新 Promise 将以抛出的错误拒绝。
+- 如果初始 Promise 没有附加相应的处理器，新 Promise 将敲定为与初始 Promise 相同的状态——也就是说，没有拒绝处理器的情况下，被拒绝的 Promise 会保持拒绝状态和相同的原因。
+
+例如，在上面的代码中，如果 `myPromise` 拒绝，将调用 `handleRejectedA`，如果 `handleRejectedA` 正常完成（不抛出错误或返回被拒绝的 Promise），第一个 `then` 返回的 Promise 将被兑现而不是保持拒绝状态。因此，如果必须立即处理错误，但我们希望在链中保持错误状态，我们必须在拒绝处理器中抛出某种类型的错误。另一方面，在没有迫切需要的情况下，我们可以将错误处理留到最终的 `.catch()` 处理器。
 
 ```js
 myPromise
@@ -73,7 +85,7 @@ myPromise
   .catch(handleRejectedAny);
 ```
 
-使用{{JSxRef("Functions/Arrow_functions", "箭头函数", "", 1)}}作为回调函数，实现 Promise 的链式调用的示例如下：
+使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)作为回调函数，实现 Promise 的链式调用的示例如下：
 
 ```js
 myPromise
@@ -92,21 +104,9 @@ myPromise
 > [!NOTE]
 > 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
 
-一个 Promise 的终止条件决定了链中下一个 Promise 的“已敲定”状态。“已兑现”状态表示 Promise 成功完成，而“已拒绝”状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
+JavaScript 维护一个[作业队列](/zh-CN/docs/Web/JavaScript/Reference/Execution_model)。每次，JavaScript 从队列中选择一个作业并执行到完成。作业由 `Promise()` 构造函数的执行器、传递给 `then` 的处理器或任何返回 Promise 的平台 API 定义。链中的 Promise 表示这些作业之间的依赖关系。当 Promise 敲定时，与其关联的相应处理器会被添加到作业队列的后面。
 
-链式调用中的 promise 们就像俄罗斯套娃一样，是嵌套起来的，但又像是一个栈，每个都必须从顶端被弹出。链式调用中的第一个 promise 是嵌套最深的一个，也将是第一个被弹出的。
-
-```plain
-(promise D, (promise C, (promise B, (promise A) ) ) )
-```
-
-当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与“promise B”相关的 `.then()` 返回了一个值为“promise X”的 `nextValue` 。那么嵌套的结果看起来就会是这样：
-
-```plain
-(promise D, (promise C, (promise X) ) )
-```
-
-一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向“已敲定”状态的过渡会导致两个实例的 `.then()` 都被调用。
+一个 Promise 可以参与多个链。对于以下代码，`promiseA` 的兑现将导致 `handleFulfilled1` 和 `handleFulfilled2` 都被添加到作业队列中。因为 `handleFulfilled1` 首先注册，所以它将首先被调用。
 
 ```js
 const promiseA = new Promise(myExecutorFunc);
@@ -114,7 +114,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-一个已经处于“已敲定”状态的 promise 也可以接收操作。在那种情况下，（如果没有问题的话）这个操作会被作为第一个异步操作被执行。注意，所有的 promise 都一定是异步的。因此，一个已经处于“已敲定”状态的 promise 中的操作只有 promise 链式调用的栈被清空且一个时间片段过去之后才会被执行。这种效果跟 `setTimeout(action, 10)` 特别相似。
+可以为已经敲定的 Promise 分配操作。在这种情况下，操作会立即添加到作业队列的后面，并在所有现有作业完成后执行。因此，已经"敲定"的 Promise 的操作只会在当前同步代码完成并且至少经过一个循环周期后才会发生。这保证了 Promise 操作是异步的。
 
 ```js
 const promiseA = new Promise((resolve, reject) => {
@@ -191,8 +191,10 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
   - : 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 - {{jsxref("Promise.resolve()")}}
   - : 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
-
-    通常，如果你不知道一个值是否是 Promise，那么最好使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 将其转换成 Promise 对象，并将返回值作为 Promise 来处理。
+- {{jsxref("Promise.try()")}}
+  - : 接受任意类型的回调函数（无论是返回值还是抛出异常，同步或异步），并将其结果包装在一个 `Promise` 中。
+- {{jsxref("Promise.withResolvers()")}}
+  - : 返回一个对象，该对象包含一个新的 `Promise` 对象和两个用于解决或拒绝它的函数，这两个函数对应于传递给 {{jsxref("Promise/Promise", "Promise()")}} 构造函数的执行器的两个参数。
 
 ## 实例属性
 
@@ -366,7 +368,66 @@ btn.addEventListener("click", testPromise);
 
 ### 使用 XHR 加载图像
 
-另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
+另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载图像的示例如下所示。每一步都有注释，可以让你详细了解 Promise 和 XHR 架构。
+
+```html hidden live-sample___promises
+<h1>Promise 示例</h1>
+```
+
+```js live-sample___promises
+function imgLoad(url) {
+  // 使用 Promise() 构造函数创建新的 promise；
+  // 它的参数是一个有两个参数的函数：resolve 和 reject
+  return new Promise((resolve, reject) => {
+    // 使用 XHR 加载图像
+    const request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.responseType = "blob";
+    // 当请求加载时，检查它是否成功
+    request.onload = () => {
+      if (request.status === 200) {
+        // 如果成功，通过传回请求响应来解决 promise
+        resolve(request.response);
+      } else {
+        // 如果失败，用错误消息拒绝 promise
+        reject(
+          Error(
+            `Image didn't load successfully; error code: + ${request.statusText}`,
+          ),
+        );
+      }
+    };
+    // 处理网络错误
+    request.onerror = () => reject(new Error("There was a network error."));
+    // 发送请求
+    request.send();
+  });
+}
+
+// 获取对 body 元素的引用，并创建一个新的图像对象
+const body = document.querySelector("body");
+const myImage = new Image();
+const imgUrl =
+  "https://mdn.github.io/shared-assets/images/examples/round-balloon.png";
+
+// 使用我们想要加载的 URL 调用函数，然后链式调用
+// promise then() 方法和两个回调
+imgLoad(imgUrl).then(
+  (response) => {
+    // 第一个在 promise 解决时运行，使用在 resolve() 方法中指定的 request.response。
+    const imageURL = URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  (error) => {
+    // 第二个在 promise 被拒绝时运行，
+    // 并记录用 reject() 方法指定的错误。
+    console.log(error);
+  },
+);
+```
+
+{{embedlivesample("promises", "", "240px")}}
 
 ### 追踪现有设置对象
 
@@ -449,4 +510,4 @@ btn.addEventListener("click", testPromise);
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ 规范](https://promisesaplus.com/)
 - [JavaScript Promise：简介](https://web.developers.google.cn/articles/promises)
-- [Domenic Denicola：回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- Domenic Denicola 的幻灯片演示（2011）：[回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3661f58cce5f12ee603d1140aa7fbdff4ad7821c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 132 の変更点をまとめています。Firefox 132 は、米国時間 [2024 年 10 月 29 日](https://whattrainisitnow.com/release/?version=132) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

@@ -39,7 +39,7 @@ Aucune.
 
 ## Instances de `Memory`
 
-Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/WebAssembly/JavaScript_interface/Memory) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
+Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
 
 ### Propriétés
 
@@ -87,5 +87,5 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

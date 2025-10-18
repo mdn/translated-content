@@ -3,8 +3,6 @@ title: 展开语法（...）
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 
-{{jsSidebar("Operators")}}
-
 **spread (`...`)** 语法允许迭代数组或字符串等可迭代字符串在预期有零个或更多参数（用于函数调用）或元素（用于数组字面量）的地方进行扩展。在对象字面量中，扩展语法枚举对象的属性，并将键值对添加到正在创建的对象中。
 
 展开语法看起来与剩余参数语法一模一样。在某种程度上，扩展语法与剩余参数语法正好相反。扩展语法是将数组“扩展”为元素，而其余语法是将多个元素收集起来，然后“浓缩”为一个元素。请参阅[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)和[剩余属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#剩余属性和剩余元素) 。

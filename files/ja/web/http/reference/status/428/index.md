@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`428 Precondition Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)にする必要があることを示します。
 
 通常、これは {{HTTPHeader("If-Match")}} のような必須の前提条件ヘッダーが**ない**ことを意味します。

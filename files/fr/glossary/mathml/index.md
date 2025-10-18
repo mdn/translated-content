@@ -13,5 +13,5 @@ l10n:
 
 - [MathML sur Wikipédia](https://fr.wikipedia.org/wiki/MathML)
 - [La section MathML sur MDN](/fr/docs/Web/MathML)
-- [L'édition de documents MathML](/fr/docs/Web/MathML/Authoring)
+- [L'édition de documents MathML](/fr/docs/Web/MathML/Guides/Authoring)
 - [Ce qu'est le MathML (en anglais)](https://www.w3.org/Math/whatIsMathML.html)

@@ -30,7 +30,7 @@ Les **fonctions** sont un autre concept essentiel de la programmation, qui perme
 
 En JavaScript, vous trouverez des fonctions partout. En fait, nous avons utilisé des fonctions depuis le début du cours ; nous n'en avons simplement pas beaucoup parlé. Toutefois, il est maintenant temps de parler des fonctions de manière explicite et d'explorer réellement leur syntaxe.
 
-Presque à chaque fois que vous utilisez une structure de JavaScript qui utilise une paire de parenthèses — `()` — et que vous n'utilisez **pas** une structure usuelle et intégrée du langage telle que les boucles [for](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while) ou [do...while](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), ou une déclaration [if...else](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), vous utilisez une fonction.
+Presque à chaque fois que vous utilisez une structure de JavaScript qui utilise une paire de parenthèses — `()` — et que vous n'utilisez **pas** une structure usuelle et intégrée du langage telle que les boucles [for](/fr/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop), [while](/fr/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while) ou [do...while](/fr/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while), ou une déclaration [if...else](/fr/docs/Learn_web_development/Core/Scripting/Conditionals#if_..._else_statements), vous utilisez une fonction.
 
 ## Les fonctions intégrées du navigateur
 
@@ -72,7 +72,7 @@ var myNumber = Math.random();
 
 Le langage JavaScript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand vous **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
 
-Gardez à l'esprit que certaines fonctions intégrées du navigateur ne font pas partie du noyau du langage JavaScript — certaines font partie des API du navigateur qui sont construites à partir du langage par défaut pour apporter encore plus de fonctionnalités (consultez cette [section antérieure de notre cours](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript) pour une description plus détaillée). Nous aborderons l'utilisation des API du navigateur plus en détail dans un module ultérieur.
+Gardez à l'esprit que certaines fonctions intégrées du navigateur ne font pas partie du noyau du langage JavaScript — certaines font partie des API du navigateur qui sont construites à partir du langage par défaut pour apporter encore plus de fonctionnalités (consultez cette [section antérieure de notre cours](/fr/docs/Learn_web_development/Core/Scripting/What_is_JavaScript) pour une description plus détaillée). Nous aborderons l'utilisation des API du navigateur plus en détail dans un module ultérieur.
 
 ## Fonctions versus méthodes
 
@@ -84,7 +84,7 @@ Vous n'aurez pas besoin d'apprendre les rouages des objets structurés du JavaSc
 
 ## Fonctions personnalisées
 
-Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()` qui ressemblait à ça :
+Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/docs/Learn_web_development/Core/Scripting/Loops) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()` qui ressemblait à ça :
 
 ```js
 function draw() {

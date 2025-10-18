@@ -1,55 +1,55 @@
 ---
 title: "@charset"
 slug: Web/CSS/@charset
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@charset`** spécifie l'encodage des caractères utilisé dans la feuille de style. Cette syntaxe est utile lorsque vous utilisez des caractères non-{{Glossary("ASCII")}} dans certaines propriétés CSS, comme {{ cssxref("content") }}. Bien que le premier caractère de `@charset` soit le symbole `@`, il ne s'agit pas d'une [règle at](/fr/docs/Web/CSS/CSS_syntax/At-rule). C'est une séquence d'octets spécifique qui ne peut être placée qu'au tout début d'une feuille de style. Aucun autre caractère, à l'exception du marqueur d'ordre des octets Unicode, n'est autorisé avant. Elle ne suit pas non plus les règles habituelles de syntaxe CSS, comme l'utilisation de guillemets ou d'espaces.
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@charset`** définit l'encodage des caractères utilisés dans la feuille de style. Cette règle doit être le premier élément de la feuille de style (aucun caractère ne doit être écrit avant). Cette règle ne fait pas partie des [instructions imbriquées](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_instructions_css) et ne peut donc pas être utilisée [à l'intérieur des groupes conditionnels](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe). Si plusieurs règles `@charset` sont définies, seule la première sera utilisée. Cette règle ne pourra pas être utilisée au sein d'un attribut `style` d'un élément HTML ou avec l'élément {{HTMLElement("style")}} car c'est l'encodage du document HTML qui est alors pris en compte.
+Si un `@charset` n'est pas reconnu comme déclaration d'encodage, il est analysé comme une règle @ normale. Le module de [syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax) déconseille ce comportement de repli, le définissant comme une règle héritée non reconnue à ignorer lors de la vérification grammaticale d'une feuille de style.
 
-```css
-@charset "utf-8";
-```
+Comme il existe plusieurs façons de définir l'encodage d'une feuille de style, le navigateur essaiera les méthodes suivantes dans l'ordre (et s'arrêtera dès qu'une méthode aboutit)&nbsp;:
 
-Cette règle @ s'avère notamment utile lorsqu'on utilise des caractères non-ASCII pour certaines propriétés CSS telles que {{cssxref("content")}}.
-
-Le moteur dispose de différentes méthodes pour déterminer l'encodage d'une feuille de style. Il utilisera ces méthodes dans l'ordre qui suit et s'arrêtera dès qu'un résultat sera obtenu (autrement dit, les règles qui suivent sont triées par priorité décroissante) :
-
-1. La valeur du caractère indiquant [l'ordre des octets Unicode](https://fr.wikipedia.org/wiki/Indicateur_d'ordre_des_octets) qui est placé au début du fichier (le BOM)
-2. La valeur fournie par l'attribut `charset` de l'en-tête HTTP `Content-Type` ou l'information équivalente dans le protocole utilisé pour servir la feuille de style.
-3. La règle @ CSS `@charset`.
-4. L'encodage défini dans le document appelant la ressource (l'attribut `charset` de l'élément {{HTMLElement("link")}}). Cette méthode est désormais obsolète et ne doit plus être utilisée.
-5. Dans tous les autres cas, on considère que le document est encodé en UTF-8
+1. La valeur du caractère [Indicateur d'ordre des octets](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets) placé au début du fichier.
+2. La valeur donnée par l'attribut `charset` de l'en-tête HTTP `Content-Type:` ou l'équivalent dans le protocole utilisé pour servir la feuille de style.
+3. La déclaration CSS `@charset`.
+4. Utiliser l'encodage défini par le document référent&nbsp;: l'attribut `charset` de l'élément {{ HTMLElement("link") }}. Cette méthode est obsolète et ne doit pas être utilisée.
+5. Supposer que le document est en UTF-8.
 
 ## Syntaxe
 
 ```css
-@charset <charset>;
+@charset "UTF-8";
+@charset "iso-8859-15";
 ```
 
-où
+### Paramètres
 
 - `charset`
-  - : Est une chaîne de caractères (une valeur CSS de type {{cssxref("&lt;string&gt;")}}) indiquant l'encodage qui doit être utilisé. Cette valeur doit correspondre à un nom d'encodage valide pour le Web tel que défini dans [le registre IANA](https://www.iana.org/assignments/character-sets/character-sets.xhtml) et doit être délimitée par des doubles quotes, précédée d'un blanc (U+0020) et suivie d'un point-virgule. Si plusieurs noms sont associés avec l'encodage, seul celui marqué avec _préféré_ (_preferred_) doit être utilisé.
+  - : Est une chaîne de caractères (une valeur CSS de type {{cssxref("&lt;string&gt;")}}) indiquant l'encodage qui doit être utilisé. Cette valeur doit correspondre à un nom d'encodage valide pour le Web tel que défini dans [le registre IANA <sup>(angl.)</sup>](https://www.iana.org/assignments/character-sets/character-sets.xhtml) et doit être délimitée par des doubles quotes, précédée d'un blanc (U+0020) et suivie d'un point-virgule. Si plusieurs noms sont associés avec l'encodage, seul celui marqué avec _préféré_ (_preferred_) doit être utilisé.
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+Notez que la règle `@charset` n'est pas analysée via la syntaxe, mais via une séquence d'octets spécifique de la forme suivante&nbsp;:
+
+```plain
+@charset "<charset>";
+```
 
 ## Exemples
 
-### Exemples valides
+### Déclarations de charset valides et invalides
 
-```css
+```css example-good
 @charset "UTF-8"; /* Valide, la feuille de style est encodée en Unicode UTF-8 */
-@charset "iso-8859-15"; /* Valide, la feuille de style est encodée en Latin-9 (langues d'Europe occidentale avec le symbole €) */
 ```
 
-### Exemples invalides
-
 ```css-nolint example-bad
+@charset 'iso-8859-15'; /* Invalide, guillemets incorrects utilisés */
+@charset  "UTF-8"; /* Invalide, plus d'un espace */
  @charset "UTF-8"; /* Invalide, il y a un caractère (un espace) avant la règle @ */
-@charset UTF-8; /* Invalide, sans ' ou ", le jeu de caractères n'est pas une chaîne CSS ({{cssxref("&lt;string&gt;")}}) */
+@charset UTF-8; /* Invalide, le jeu de caractères n'est pas une chaîne CSS ({{cssxref("&lt;string&gt;")}}) */
 ```
 
 ## Spécifications
@@ -59,3 +59,8 @@ où
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{Glossary("Character_set", "Jeu de caractères")}} dans le glossaire
+- {{Glossary("Unicode", "Unicode")}} dans le glossaire

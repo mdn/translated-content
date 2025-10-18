@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
-
 El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) de CSS **`::selection`** aplica estilos a la parte de un documento que ha sido resaltada por el usuario (como hacer clic y arrastrar el ratón sobre el texto).
 
 {{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}

@@ -1,94 +1,161 @@
 ---
-title: Contrôles DHTML personnalisés navigables au clavier
+title: Widgets JavaScript navigables au clavier
 slug: Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
 original_slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
+l10n:
+  sourceCommit: fc52eb81b630ca02c16addc346924295bdb5aaa8
 ---
 
-{{AccessibilitySidebar}}
+Les applications Web utilisent souvent JavaScript pour imiter des widgets de bureau tels que des menus, des vues arborescentes, des champs de texte enrichi et des panneaux à onglets. Ces widgets sont généralement composés d'éléments {{HTMLElement("div")}} et {{HTMLElement("span")}} qui, par nature, n'offrent pas la même navigation au clavier que leurs équivalents sur le bureau. Ce document décrit des techniques pour rendre les widgets JavaScript accessibles au clavier.
 
-### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
+## Utilisation de `tabindex`
 
-Un nombre croissant d'applications Web utilise [JavaScript](/fr/docs/Web/JavaScript) pour imiter des contrôles (
-_widgets_
-) applicatifs comme des menus, des vues arborescentes, des champs de texte enrichis et des panneaux à onglets. Les développeurs Web innovent constamment et les applications futures contiendront des éléments complexes et interactifs comme des feuilles de calcul, des calendriers, des graphes organisationnels et plus encore. Jusqu'à présent, les développeurs désirant rendre leurs contrôles basés sur des `<div>` et autres `<span>` stylés ne disposaient pas des techniques nécessaires. Pourtant, l'accessibilité au clavier fait partie des nécessités dont tout développeur Web devrait tenir compte.
+Par défaut, lorsque vous utilisez la touche <kbd>Tab</kbd> pour parcourir une page web, seuls les éléments interactifs (liens, contrôles de formulaire, etc.) reçoivent le focus. Grâce à l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes), vous pouvez rendre d'autres éléments focalisables. Avec la valeur `0`, l'élément devient focalisable au clavier et par script. Avec la valeur `-1`, l'élément est focalisable par script, mais n'entre pas dans l'ordre de tabulation du clavier.
 
-Prenons un exemple concret&nbsp;: la plupart des menus [DHTML](/fr/DHTML) ne se comportent pas comme des menus normaux en ce qui concerne l'accès au clavier. Même s'il y a moyen d'accéder au menu avec le clavier, une erreur courante est de placer chaque élément du menu dans l'ordre de tabulation (souvent réalisé implicitement en faisant de chaque choix du menu un élément `<a>`). En réalité, le comportement correct d'un menu est que le menu entier doit figurer une seule fois dans l'ordre de tabulation, et les flèches doivent être utilisées pour se déplacer de choix en choix au sein du menu. Ceci vaut également pour les autres contrôles de «&nbsp;navigation groupée&nbsp;» comme les vues arborescentes, tableaux et panneaux à onglets.
+L'ordre dans lequel les éléments reçoivent le focus au clavier correspond par défaut à l'ordre du code source. Dans des cas exceptionnels, vous pouvez redéfinir cet ordre en attribuant à `tabindex` une valeur positive.
 
-Il est à présent possible pour les auteurs HTML de faire les choses correctement. La manière de rendre ces contrôles compatibles avec les technologies d'assistance est détaillée dans&nbsp;: [ARIA : Applications riches Internet accessibles](/fr/ARIA/Applications_riches_Internet_accessibles).
+> [!WARNING]
+> Évitez d'utiliser des valeurs positives pour `tabindex`. Les éléments avec un `tabindex` positif sont placés avant les éléments interactifs par défaut de la page, ce qui oblige à définir et à maintenir des valeurs de `tabindex` pour tous les éléments focalisables dès que vous en utilisez une ou plusieurs positives.
 
-### La solution&nbsp;: modifier le comportement standard de `tabindex`
+Le tableau suivant décrit le comportement de `tabindex` dans les navigateurs modernes&nbsp;:
 
-Firefox 1.5 suit l'exemple de Microsoft Internet Explorer en étendant l'attribut `tabindex` pour permettre à n'importe quel élément d'obtenir ou non le focus. En suivant le [système d'IE pour `tabindex`](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/tabindex.asp), il devient possible de permettre aux contrôles [DHTML](/fr/DHTML), déjà accessibles au clavier dans IE, de l'être également dans Firefox 1.5. Les règles doivent subir quelques petites entorses afin de permettre aux auteurs de rendre leurs contrôles personnalisés accessibles.
+<table>
+  <thead>
+    <tr>
+      <th>Attribut <code>tabindex</code></th>
+      <th>Focalisable à la souris ou en JavaScript via <code>element.focus()</code></th>
+      <th>Navigation par tabulation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Non présent</td>
+      <td>Suit le comportement par défaut de l'élément (oui pour les contrôles de formulaire, liens, etc.).</td>
+      <td>Suit le comportement par défaut de l'élément.</td>
+    </tr>
+    <tr>
+      <td>Négatif (ex. <code>tabindex="-1"</code>)</td>
+      <td>Oui</td>
+      <td>Non&nbsp;: l'auteur·ice doit donner le focus à l'élément avec <a href="/fr/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> en réponse à une flèche ou une autre touche.</td>
+    </tr>
+    <tr>
+      <td>Zero (ex. <code>tabindex="0"</code>)</td>
+      <td>Oui</td>
+      <td>Dans l'ordre de tabulation selon la position de l'élément dans le document (notez que les éléments interactifs comme {{HTMLElement('a')}} ont ce comportement par défaut, ils n'ont pas besoin de l'attribut).</td>
+    </tr>
+    <tr>
+      <td>Positif (ex. <code>tabindex="33"</code>)</td>
+      <td>Oui</td>
+      <td>La valeur de <code>tabindex</code> détermine la position de l'élément dans l'ordre de tabulation&nbsp;: les valeurs plus petites placent l'élément plus tôt dans l'ordre que les valeurs plus grandes (par exemple, <code>tabindex="7"</code> sera avant <code>tabindex="11"</code>).</td>
+    </tr>
+  </tbody>
+</table>
 
-Le tableau qui suit décrit le nouveau comportement de `tabindex`&nbsp;:
+### Contrôles non natifs
 
-| Attribut `tabindex`                   | Focus disponible à la souris ou par JavaScript via `element.focus()`                                  | Navigable avec tabulation                                                                                                                                                                                                                           |
-| ------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| non présent                           | Suit le comportement par défaut de l'élément (oui pour les contrôles de formulaires, les liens, etc). | Suit le comportement par défaut de l'élément.                                                                                                                                                                                                       |
-| Négatif (par exemple `tabindex="-1"`) | Oui                                                                                                   | Non, l'auteur doit donner le focus avec `element.focus()` suite à l'utilisation des flèches ou d'autres touches.                                                                                                                                    |
-| Zéro (par exemple `tabindex="0"`)     | Oui                                                                                                   | Dans l'ordre de tabulation relativement à la position de l'élément dans le document.                                                                                                                                                                |
-| Positif (par exemple `tabindex="33"`) | Oui                                                                                                   | La valeur `tabindex` change manuellement lorsque cet élément est positionné dans l'ordre de tabulation. Ces éléments seront positionnés dans l'ordre de tabulation avant les éléments ayant `tabindex="0"` ou qui sont naturellement _tabulables_ . |
+Les éléments HTML natifs interactifs, comme {{HTMLElement("a")}}, {{HTMLElement("input")}} et {{HTMLElement("select")}}, sont déjà accessibles au clavier. Utiliser l'un de ces éléments est donc le moyen le plus rapide de rendre un composant accessible au clavier.
 
-### Utilisation du nouveau système
+Vous pouvez aussi rendre un {{HTMLElement("div")}} ou un {{HTMLElement("span")}} accessible au clavier en ajoutant un `tabindex` de `0`. Cela est particulièrement utile pour les composants qui utilisent des éléments interactifs qui n'existent pas en HTML.
 
-Pour rendre un contrôle simple navigable avec tabulation, la solution est d'utiliser `tabindex="0"` sur l'élément `<div>>` ou `<span>` le représentant. Vous pouvez consulter un exemple d'une [case à cocher basée sur un `<span>`](https://www.mozilla.org/access/dhtml/class/checkbox) accessible au clavier tant dans Firefox 1.5 que dans IE (bien que la règle `:before` pour l'image de la case à cocher ne fonctionne pas dans IE).
+### Groupement de contrôles
 
-Pour les contrôles de groupe (comme les menus, les panneaux à onglets, grilles ou vues arborescentes) l'élément parent doit avoir `tabindex="0"`, et chaque choix descendant (onglet/cellule/ligne) doit avoir `tabindex="-1"`. Un évènement `keydown` surveillant les flèches directionnelles peut ensuite utiliser `element.focus()` pour donner le focus au contrôle descendant approprié et lui donner un style lui donnant un aspect particulier montrant qu'il a le focus. Vous pouvez consulter un exemple d'une [vue arborescente DHTML](https://www.mozilla.org/access/dhtml/class/tree) accessible au clavier et aux lecteurs d'écran dans Firefox (
-_nightlies_
-). Le travail pour le faire fonctionner dans IE est encore en cours.
+Pour grouper des widgets tels que des menus, des listes d'onglets, des grilles ou des vues arborescentes, l'élément parent doit être dans l'ordre de tabulation (`tabindex="0"`), et chaque choix/onglet/case/ligne descendant·e doit être retiré·e de l'ordre de tabulation (`tabindex="-1"`). Les utilisateur·ice·s doivent pouvoir naviguer parmi les éléments descendants à l'aide des flèches du clavier. (Pour une description complète du support clavier attendu pour les widgets courants, consultez les [Bonnes pratiques d'implémentation WAI-ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/).)
 
-N'oubliez pas que ceci ne fait pas encore partie d'un standard W3C ou autre organisme officiel. Pour l'instant, il est nécessaire de faire quelques entorses aux règles afin d'obtenir une pleine accessibilité au clavier.
-
-### Astuces d'écriture
-
-#### Utilisation d'`onfocus` pour suivre le focus
-
-Les attributs de gestion d'évènements `onfocus` et `onblur` peuvent à présent être utilisés sur tous les éléments. Il n'y a pas d'interface [DOM](/fr/docs/Web/API/Document_Object_Model) standard pour obtenir l'élément ayant actuellement le focus dans le document, par conséquent il est nécessaire d'utiliser une variable [JavaScript](/fr/docs/Web/JavaScript) pour le suivre.
-
-Ne supposez pas que tous les changements de focus viendront des évènements clavier ou souris, car les technologies d'assistance, comme les lecteurs d'écran, peuvent donner le focus à n'importe quel élément pouvant en disposer et cela doit être traité élégamment par le contrôle JavaScript.
-
-#### Changement dynamique de la possibilité d'obtenir le focus à l'aide de la propriété `tabIndex`
-
-Ceci peut être utile à réaliser si un contrôle personnalisé devient actif ou inactif. Les contrôles inactifs ne doivent pas être dans l'ordre de tabulation. Cependant, il est typiquement possible de les atteindre avec les flèches s'ils font partie d'un contrôle de navigation groupé.
-
-#### Utilisation de `setTimeout` avec `element.focus()` pour donner le focus
-
-N'utilisez pas `createEvent()`, `initEvent()` et `dispatchEvent()` pour donner le focus à un élément, parce que les évènements DOM `focus` sont seulement considérés comme informels — générés par le système après que quelque chose ait reçu le focus, mais pas réellement pour donner le focus. Le retardateur est nécessaire, tant dans IE que dans Firefox 1.5, pour empêcher les scripts de faire des choses étranges et inattendues si l'utilisateur clique sur des boutons ou d'autres contrôles. Concrètement, le code pour donner le focus à un élément ressemblera à quelque chose comme ceci&nbsp;:
-
-```js
-setTimeout("gFocusItem.focus();", 0); // gFocusItem doit être une variable globale
-```
-
-#### Ne pas utiliser `:focus` ou des sélecteurs d'attribut pour styler le focus
-
-Il ne sera pas possible d'utiliser `:focus` ou des sélecteurs d'attribut pour styler l'élément ayant le focus, si vous voulez que cela apparaisse également dans IE. Changez plutôt le style dans un gestionnaire d'évènement `onfocus`. Par exemple, pour le traitement du focus d'un élément de menu, ajoutez `this.style.backgroundColor = "gray";`.
-
-#### Toujours dessiner le focus pour les éléments avec `tabindex="-1"` et qui reçoivent le focus par programmation
-
-IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de `1px` au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
-
-#### Utilisation de `onkeydown` pour les évènements clavier, plutôt que `onkeypress`
-
-IE ne déclenchera pas les évènements `keypress` pour les touches non alphanumériques.
-
-#### Empêcher les évènements clavier d'effectuer des fonctions du navigateur
-
-Si une touche comme une flèche directionnelle est utilisée, empêchez le navigateur d'utiliser cette touche pour faire quelque chose d'autre (comme faire défiler la page) en utilisant un code similaire à ce qui suit&nbsp;:
+L'exemple ci-dessous montre cette technique avec un menu imbriqué. Une fois que le focus clavier est sur l'élément {{HTMLElement("ul")}} conteneur, le·la développeur·euse JavaScript doit gérer le focus par programmation et répondre aux flèches du clavier. Pour des techniques de gestion du focus à l'intérieur des widgets, voir la section «&nbsp;Gestion du focus à l'intérieur des groupes&nbsp;» ci-dessous.
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();"></span>
+<ul id="mb1" tabindex="0">
+  <li id="mb1_menu1" tabindex="-1">
+    Police
+    <ul id="fontMenu" title="Police" tabindex="-1">
+      <li id="sans-serif" tabindex="-1">Sans empattement</li>
+      <li id="serif" tabindex="-1">Empattement</li>
+      <li id="monospace" tabindex="-1">Chasse fixe</li>
+      <li id="fantasy" tabindex="-1">Fantaisie</li>
+    </ul>
+  </li>
+  <li id="mb1_menu2" tabindex="-1">
+    Style
+    <ul id="styleMenu" title="Style" tabindex="-1">
+      <li id="italic" tabindex="-1">Italique</li>
+      <li id="bold" tabindex="-1">Gras</li>
+      <li id="underline" tabindex="-1">Souligné</li>
+    </ul>
+  </li>
+  <li id="mb1_menu3" tabindex="-1">
+    Justification
+    <ul id="justificationMenu" title="Justification" tabindex="-1">
+      <li id="left" tabindex="-1">Gauche</li>
+      <li id="center" tabindex="-1">Centré</li>
+      <li id="right" tabindex="-1">Droite</li>
+      <li id="justify" tabindex="-1">Justifier</li>
+    </ul>
+  </li>
+</ul>
 ```
 
-Si `handleKeyDown()` renvoie `false`, l'évènement sera consommé, empêchant le navigateur d'effectuer quelque action que ce soit, basée sur la touche pressée.
+#### Contrôles désactivés
 
-#### Utilisation d'évènements clavier pour permettre l'activation de l'élément
+Lorsqu'un contrôle personnalisé est désactivé, retirez-le de l'ordre de tabulation en définissant `tabindex="-1"`. Notez que les éléments désactivés à l'intérieur d'un widget groupé (comme les éléments de menu dans un menu) doivent rester accessibles à la navigation au clavier avec les flèches.
 
-Pour chaque gestionnaire d'évènement lié à la souris, un évènement clavier correspondant est nécessaire. Par exemple, si vous avez `onclick="faireQuelqueChose()"` vous aurez aussi besoin de `onkeydown="return event.keyCode != 13 || faireQuelqueChose();"` afin de permettre à la touche Entrée d'activer cet élément.
+## Gestion du focus à l'intérieur des groupes
 
-#### Utilisation de try/catch pour éviter les erreurs JavaScript
+Lorsque l'utilisateur·ice quitte un widget avec la touche Tab puis y revient, le focus doit revenir sur l'élément précis qui avait le focus (par exemple, l'élément d'arbre ou la cellule de grille). Deux techniques permettent d'obtenir ce comportement&nbsp;:
 
-Ce système n'est actuellement pas supporté par Opera, Safari et les versions anciennes de Mozilla (1.7 et précédentes). Comme certains navigateurs ne supportent pas les nouvelles possibilités comme la propriété `tabIndex` sur tous les éléments, utilisez try/catch aux endroits appropriés. Les contrôles doivent rester utilisables avec la souris sur les navigateurs ne supportant pas le système DHTML de navigation au clavier. Son support est déjà planifié pour Opera et Safari (via les spécifications du [WHATWG](http://whatwg.org/)).
+1. Déplacement programmatique du focus (Roving `tabindex`)&nbsp;: déplacement programmatique du focus
+2. `aria-activedescendant`&nbsp;: gestion d'un focus «&nbsp;virtuel&nbsp;»
 
-#### Ne pas se baser sur un comportement cohérent de la répétition d'une touche, pour l'instant
+### Technique 1 : Déplacement programmatique du focus (Roving `tabindex`)
 
-Malheureusement, `onkeydown` peut ou non être répété suivant le système d'exploitation utilisé. Consultez le [bug Firefox 91592](https://bugzil.la/91592) dans la base de données Bugzilla.
+Mettre le `tabindex` de l'élément sélectionné à «&nbsp;0&nbsp;» garantit que si l'utilisateur·ice quitte le widget puis y revient, l'élément sélectionné dans le groupe garde le focus. Il faut aussi remettre le `tabindex` de l'ancien élément sélectionné à «&nbsp;-1&nbsp;». Cette technique consiste à déplacer le focus par programmation lors des événements clavier et à mettre à jour le `tabindex` pour refléter l'élément actuellement sélectionné. Pour cela&nbsp;:
+
+Liez un gestionnaire d'événement «&nbsp;keydown&nbsp;» à chaque élément du groupe, et lorsque l'utilisateur·ice utilise une flèche pour se déplacer&nbsp;:
+
+1. appliquez le focus par programmation au nouvel élément,
+2. mettez à jour le `tabindex` de l'élément sélectionné à «&nbsp;0&nbsp;»,
+3. mettez à jour le `tabindex` de l'ancien élément sélectionné à «&nbsp;-1&nbsp;».
+
+### Technique 2 : `aria-activedescendant`
+
+Cette technique consiste à lier un seul gestionnaire d'événement au conteneur et à utiliser `aria-activedescendant` pour suivre un focus «&nbsp;virtuel&nbsp;». (Pour plus d'informations sur ARIA, regardez cette [vue d'ensemble des applications et widgets web accessibles](/fr/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets).)
+
+La propriété `aria-activedescendant` indique l'ID de l'élément descendant qui a actuellement le focus virtuel. Le gestionnaire d'événement sur le conteneur doit réagir aux événements clavier et souris en mettant à jour la valeur de `aria-activedescendant` et en s'assurant que l'élément courant est mis en forme de façon appropriée (par exemple, avec une bordure ou une couleur de fond).
+
+## Bonnes pratiques générales
+
+### Utilisation des événements de focus
+
+- Ne déclenchez pas l'événement [`focus`](/fr/docs/Web/API/Element/focus_event) pour envoyer le focus à un élément. Les événements de focus du DOM sont uniquement informatifs&nbsp;: ils sont générés par le système après qu'un élément a reçu le focus, mais ne servent pas à définir le focus. Utilisez plutôt `element.focus()`.
+- Écoutez les événements [`focus`](/fr/docs/Web/API/Element/focus_event) et [`blur`](/fr/docs/Web/API/Element/blur_event) pour suivre les changements de focus. N'imaginez pas que tous les changements de focus proviendront d'événements clavier ou souris&nbsp;: les technologies d'assistance comme les lecteurs d'écran peuvent placer le focus sur n'importe quel élément focalisable. Pour suivre le focus sur tout le document, utilisez [`document.activeElement`](/fr/docs/Web/API/Document/activeElement) pour obtenir l'élément actif, ou [`document.hasFocus`](/fr/docs/Web/API/Document/hasFocus) pour vérifier si le document courant a le focus.
+
+### Assurez-vous que clavier et souris produisent la même expérience
+
+Pour garantir une expérience utilisateur cohérente quel que soit le périphérique d'entrée, les gestionnaires d'événements clavier et souris doivent partager le même code lorsque c'est pertinent. Par exemple, le code qui met à jour le `tabindex` ou le style lors de la navigation avec les flèches doit aussi être utilisé par les gestionnaires de clic souris pour produire les mêmes changements.
+
+### Assurez-vous que le clavier permet d'activer l'élément
+
+Pour garantir que le clavier permet d'activer les éléments, tout gestionnaire lié à un événement souris doit aussi être lié à un événement clavier. Par exemple, pour que la touche <kbd>Entrée</kbd> active un élément, si vous avez un `onclick="doSomething()"`, liez aussi `doSomething()` à l'événement clavier&nbsp;: `onkeydown="event.code === 'Enter' && doSomething();"`.
+
+### Affichez toujours le focus pour les éléments `tabindex="-1"` et ceux recevant le focus par programmation
+
+Assurez-vous que les éléments sélectionnés affichent un anneau de focus. Cela peut se faire avec la propriété CSS {{cssxref("outline")}}, qui ne doit jamais être fixée inconditionnellement à `none`. Pour éviter d'afficher des anneaux de focus inutiles, utilisez le pseudo-élément {{cssxref(":focus-visible")}}.
+
+### Empêchez les événements clavier utilisés d'activer les fonctions du navigateur
+
+Si votre widget gère un événement clavier, empêchez le navigateur de le gérer aussi (par exemple, le défilement avec les flèches) en utilisant la valeur de retour de votre gestionnaire. Si votre gestionnaire retourne `false`, l'événement ne sera pas propagé au-delà de votre code.
+
+Par exemple&nbsp;:
+
+```html
+<span tabindex="-1">…</span>
+```
+
+```js
+span.onkeydown = handleKeyDown;
+```
+
+Si `handleKeyDown()` retourne `false`, l'événement sera consommé et le navigateur n'effectuera aucune action liée à la touche.
+
+### Ne comptez pas sur un comportement cohérent de la répétition des touches pour le moment
+
+Malheureusement, `onkeydown` peut ou non se répéter selon le navigateur et le système d'exploitation utilisés.

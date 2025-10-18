@@ -11,7 +11,7 @@ l10n:
 
 詳しくは、[`RegExp.prototype[Symbol.match]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) および {{jsxref("String.prototype.match()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.match", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol.match", "taller")}}
 
 ```js interactive-example
 const regexp1 = /foo/;

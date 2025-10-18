@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 048f6b1c75e22103ddb0304d67ee79d6d8a014f0
 ---
 
-{{GamesSidebar}}
-
 Esta página muestra las técnicas básicas esenciales para cualquiera que quiera desarrollar juego web usando tecnologías web abiertas.
 
 - [Utilizar scripts asíncronos para asm.js](/es/docs/Games/Techniques/Async_scripts)

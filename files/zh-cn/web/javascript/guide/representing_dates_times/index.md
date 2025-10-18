@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a4e9bce1e8bac1b845b32536e0e44f335233eab6
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
 > [!NOTE]
 > `Date` 对象现在被视作为历史遗留，应当避免在新代码中使用。我们不久后会在本页面更新现代的替代方案。

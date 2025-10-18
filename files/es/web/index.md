@@ -40,7 +40,7 @@ La web abierta ofrece increíbles oportunidades para los desarrolladores. Para a
   - : JavaScript es el lenguaje de programación nativo de la web.
 - [WebAssembly](/es/docs/WebAssembly)
   - : WebAssembly permite ejecutar en la web programas escritos en C, C++, Rust, Swift, C#, Go, etc.
-- [Eventos](/es/docs/Web/Events)
+- [Eventos](/es/docs/Web/API/Document_Object_Model/Events)
   - : Los eventos son aquello a lo que reaccionan las aplicaciones web; por ejemplo, cuando una página web termina de cargarse, o un usuario selecciona algo, pulsa una tecla, cambia el tamaño de una ventana, envía un formulario o pausa un video.
 - [HTTP](/es/docs/Web/HTTP)
   - : HTTP es el protocolo fundamental de Internet para obtener documentos, hojas de estilo, scripts, imágenes, videos, fuentes y otros recursos a través de la web, y para enviar datos de vuelta a los servidores web.

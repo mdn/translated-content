@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{HTTPSidebar}}
-
 **`If-None-Match`** HTTP 요청 헤더는 요청을 조건부로 만듭니다. {{HTTPMethod("GET")}} 및 {{HTTPMethod("HEAD")}} 메서드의 경우, 서버는 요청된 리소스에 주어진 값과 일치하는 {{HTTPHeader("ETag")}}가 없는 경우에만 {{HTTPStatus("200")}} 상태와 함께 요청된 리소스를 반환합니다. 다른 메서드의 경우, 최종적으로 존재하는 리소스의 {{HTTPHeader("ETag")}}가 나열된 값 중 어느 것과도 일치하지 않는 경우에만 요청이 처리됩니다.
 
 {{HTTPMethod("GET")}} 및 {{HTTPMethod("HEAD")}} 메서드에서 조건이 실패하면 서버는 HTTP 상태 코드 304(Not Modified)를 반환해야 합니다. 서버 측 변경 사항을 적용하는 메서드의 경우 상태 코드 412(Precondition Failed)가 사용됩니다. 304 응답을 생성하는 서버는 동일한 요청에 대해 200(OK) 응답으로 전송되는 다양한 헤더 필드(Cache-Control, Content-Location, Date, ETag, Expires 등) 중 하나를 생성해야 합니다.

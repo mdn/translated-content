@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/col
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<col>`** définit une colonne appartenant à un tableau et est utilisé afin de définir la sémantique commune à toutes ses cellules. On trouve généralement cet élément au sein d'un élément [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup).
+L'élément HTML **`<col>`** définit une colonne appartenant à un tableau et est utilisé afin de définir la sémantique commune à toutes ses cellules. On trouve généralement cet élément au sein d'un élément [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup).
 
 {{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
 
@@ -133,7 +133,7 @@ td {
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`span`**
   - : Cet attribut contient un nombre entier positif indiquant le nombre de colonnes consécutives que l'élément `<col>` couvre. S'il n'est pas présent, sa valeur par défaut est `1`.
@@ -149,14 +149,14 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
     - `right`, aligner le contenu à droite de la cellule
     - `justify`, insérer des espaces dans le contenu textuel afin que le contenu soit justifié dans la cellule
 
-    Si cet attribut n'est pas défini, sa valeur est héritée du [`align`](/fr/docs/Web/HTML/Element/colgroup#attr-align) de l'élément [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup) auquel appartient cet `<col>`. S'il n'y en a pas, la valeur `left` est supposée.
+    Si cet attribut n'est pas défini, sa valeur est héritée du [`align`](/fr/docs/Web/HTML/Reference/Elements/colgroup#attr-align) de l'élément [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup) auquel appartient cet `<col>`. S'il n'y en a pas, la valeur `left` est supposée.
 
     > [!NOTE]
     >
     > - Pour obtenir le même effet que les valeurs `left`, `center`, `right` ou `justify` :
-    >   - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
-    >   - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)`. Définissez `a` à zéro et `b` à la position de la colonne dans le tableau, par exemple `td:nth-child(2) { text-align : right ; }` pour aligner à droite la deuxième colonne.
-    >   - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
+    >   - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
+    >   - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)`. Définissez `a` à zéro et `b` à la position de la colonne dans le tableau, par exemple `td:nth-child(2) { text-align : right ; }` pour aligner à droite la deuxième colonne.
+    >   - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
 - **`bgcolor`** {{deprecated_inline}}
   - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/color_value#rgb_colors), préfixé par un « `#` ». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/color_value#color_keywords) prédéfinis peut également être utilisé.
@@ -176,16 +176,16 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
     > [!NOTE]
     >
-    > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
-    > - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)` où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `vertical-align` peut être utilisée.
-    > - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
+    > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
+    > - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)` où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `vertical-align` peut être utilisée.
+    > - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
 - **`width`** {{deprecated_inline}}
   - : Cet attribut spécifie une largeur par défaut pour chaque colonne du groupe de colonnes actuel. En plus des valeurs standard en pixels et en pourcentage, cet attribut peut prendre la forme spéciale `0*`, ce qui signifie que la largeur de chaque colonne du groupe doit être la largeur minimale nécessaire pour contenir le contenu de la colonne. Des largeurs relatives telles que `5*` peuvent également être utilisées.
 
 ## Exemples
 
-Veuillez consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples sur `<colgroup>`.
+Veuillez consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples sur `<colgroup>`.
 
 ## Spécifications
 

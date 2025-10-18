@@ -3,8 +3,6 @@ title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 报错消息
 
 ```plain

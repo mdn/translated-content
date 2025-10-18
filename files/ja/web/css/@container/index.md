@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
 ---
 
-{{CSSRef}}
-
 **`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
 この条件は、クエリーされたコンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変化したときに評価されます。

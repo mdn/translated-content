@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`226 IM Used`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、サーバーが {{HTTPMethod("GET")}} に対するレスポンスで{{Glossary("delta", "デルタ")}}を返したことを示します。
 これは、 HTTP デルタエンコーディングのコンテキストで使用されます。
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}
+{{Deprecated_header}}
 
 **`DNT`** (**D**o **N**ot
 **T**rack) リクエストヘッダーは、ユーザーのトラッキングの設定を示します。これにより、ユーザーはパーソナライズされたコンテンツではなく、プライバシーを優先するかどうかを指定できます。

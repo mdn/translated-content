@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_images/Replaced_element_properties
 original_slug: Web/CSS/Replaced_element
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS)의 **대체 요소**(replaced element)란 자신의 표현 결과가 CSS의 범위를 벗어나는 요소로서, CSS 서식 모델과는 분리된 외부 객체인 요소입니다.
 
 간단히 말해서, 대체 요소는 자신의 콘텐츠가 현재 문서 스타일의 영향을 받지 않는 요소라고 할 수 있습니다. CSS는 대체 요소의 위치에 영향을 줄 수 있지만 콘텐츠에는 미치지 못합니다. {{htmlelement("iframe")}} 등 일부 대체 요소는 자신만의 스타일 시트를 가질 수도 있지만, 부모 문서의 스타일을 상속하지는 않습니다.
@@ -63,6 +61,6 @@ CSS는 바깥 여백이나 일부 `auto` 값 계산 등 특정 상황에서 대�
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)
