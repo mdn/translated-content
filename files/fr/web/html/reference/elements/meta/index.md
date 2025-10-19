@@ -66,7 +66,7 @@ L'attribut `content="3;url=https://www.mozilla.org"` redirigera la page vers `ht
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_méta-données">Contenu de métadonnées</a>. Si l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#itemprop"><code>itemprop</code></a> est utilisé&nbsp;: du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a> ou du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé">contenu phrasé</a>.
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_méta-données">Contenu de métadonnées</a>. Si l'attribut <a href="/fr/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a> est utilisé&nbsp;: du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux">contenu de flux</a> ou du <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé">contenu phrasé</a>.
       </td>
     </tr>
     <tr>
