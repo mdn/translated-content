@@ -1,39 +1,68 @@
 ---
 title: "Attribut HTML : crossorigin"
+short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 original_slug: Web/HTML/Attributes/crossorigin
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'attribut **`crossorigin`** est valide sur les éléments {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}} et {{HTMLElement("video")}}. Il permet de gérer le [CORS](/fr/docs/Web/HTTP/Guides/CORS), c'est-à-dire la façon dont l'élément traite les requêtes inter-origines, et donc de configurer les requêtes CORS pour les données récupérées par l'élément. Selon l'élément, l'attribut peut être un attribut de configuration CORS.
 
-L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link), [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/Guides/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
+L'attribut de contenu `crossorigin` sur les éléments média est un attribut de configuration CORS.
 
-L'attribut de contenu `crossorigin` sur les éléments médias est un attribut de paramétrage CORS.
+Ces attributs sont {{Glossary("Enumerated", "énumérés")}} et acceptent les valeurs suivantes&nbsp;:
 
-Ces attributs sont énumérés, et ont les valeurs possibles suivantes :
+- `anonymous`
+  - : La requête utilise les en-têtes CORS et le drapeau credentials est positionné à `'same-origin'`. Il n'y a aucun échange de **données d'identification utilisateur** via les cookies, certificats TLS côté client ou authentification HTTP, sauf si la destination est la même origine.
+- `use-credentials`
+  - : La requête utilise les en-têtes CORS, le drapeau credentials est positionné à `'include'` et les **données d'identification utilisateur** sont toujours incluses.
+- `""`
+  - : Définir l'attribut sans valeur ou avec une valeur vide, comme `crossorigin` ou `crossorigin=""`, revient à utiliser `anonymous`.
 
-| Mot-clé           | Description                                                                                                                             |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `anonymous`       | Les requêtes CORS pour cet élément auront le marqueur d'authentification (_credentials flag_) avec la valeur `'same-origin'`.           |
-| `use-credentials` | Les requêtes CORS pour cet élément auront le marqueur d'authentification (_credentials flag_) avec la valeur `'include'`.               |
-| `""`              | Utiliser la chaîne vide (`crossorigin=""`) ou l'attribut seul (`crossorigin`) sera équivalent à l'utilisation de la valeur `anonymous`. |
+Un mot-clé invalide ou une chaîne vide sera traité comme le mot-clé `anonymous`.
 
-Par défaut (quand l'attribut n'est pas spécifié), le CORS n'est pas du tout utilisé. Le mot-clé « anonymous » signifie que, lorsqu'il n'y a pas la même origine, il n'y aura ni échange d**'informations d'authentification de l'utilisateur** via des cookies, ni des certificats TLS côté client ou des authentifications HTTP comme détaillé dans la [section terminologique de la spécification CORS](https://www.w3.org/TR/cors/#user-credentials).
+Par défaut (c'est-à-dire si l'attribut n'est pas spécifié), CORS n'est pas utilisé. L'agent utilisateur ne demandera pas d'accès complet à la ressource et, en cas de requête inter-origine, certaines limitations s'appliqueront selon le type d'élément concerné&nbsp;:
 
-Un mot-clé invalide ou une chaîne de caractères vide seront interprétés comme le mot-clé `anonymous`.
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <td class="header">Élément</td>
+      <td class="header">Restrictions</td>
+    </tr>
+    <tr>
+      <td><code>img</code>, <code>audio</code>, <code>video</code></td>
+      <td>
+        Si la ressource est placée dans un {{HTMLElement("canvas")}}, l'élément est marqué comme <a href="/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité"><em>pollué</em></a>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>script</code></td>
+      <td>
+        L'accès à la journalisation des erreurs via {{DOMxRef('Window.error_event', 'window.onerror')}} sera limité.
+      </td>
+    </tr>
+    <tr>
+      <td><code>link</code></td>
+      <td>
+        Une requête sans en-tête <code>crossorigin</code> approprié peut être ignorée.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 > [!NOTE]
-> Avant Firefox 83, l'attribut `crossorigin` n'était pas pris en charge pour `rel="icon"` ; il existe également [un bug sur Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> L'attribut `crossorigin` n'est pas pris en charge pour [`rel="icon"`](/fr/docs/Web/HTML/Reference/Attributes/rel#icon) dans les navigateurs basés sur Chromium. Voir le [ticket Chromium ouvert <sup>(angl.)</sup>](https://crbug.com/1121645).
 
 ## Exemples
 
 ### Utiliser `crossorigin` avec l'élément `script`
 
-On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.com/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur.
+On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.fr/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur.
 
 ```html
 <script
-  src="https://exemple.com/framework-exemple.js"
+  src="https://exemple.fr/framework-exemple.js"
   crossorigin="anonymous"></script>
 ```
 
@@ -56,4 +85,4 @@ La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manife
 ## Voir aussi
 
 - [Partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
-- [L'attribut HTML `rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
+- L'attribut HTML [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)
