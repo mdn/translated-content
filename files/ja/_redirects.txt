@@ -569,8 +569,8 @@
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Events	/ja/docs/Learn_web_development/Core/Scripting/Events
-/ja/docs/DOM/DOM_Reference/Examples	/ja/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b
-/ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+/ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
@@ -1528,7 +1528,7 @@
 /ja/docs/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options
 /ja/docs/HTTP_Pipelining_FAQ	/ja/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/Guides/CORS
-/ja/docs/How_to_create_a_DOM_tree	/ja/docs/conflicting/Web/API/Document_Object_Model
+/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/Guides/CSP
@@ -2814,7 +2814,7 @@
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Using_native_JSON	/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/API/XSLTProcessor
-/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/conflicting/Web/API/Document_Object_Model
+/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /ja/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /ja/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -2985,13 +2985,13 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/getSelection	/ja/docs/Web/API/Document/getSelection
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
-/ja/docs/Web/API/Document_Object_Model/Examples	/ja/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b
-/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/conflicting/Web/API/Document_Object_Model
-/ja/docs/Web/API/Document_Object_Model/Introduction	/ja/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+/ja/docs/Web/API/Document_Object_Model/Examples	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Introduction	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/ja/docs/conflicting/Web/API/Document_Object_Model
-/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/conflicting/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Whitespace	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
