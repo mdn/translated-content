@@ -1,6 +1,6 @@
 ---
 title: 캐싱
-slug: web/progressive_web_apps/guides/caching
+slug: Web/Progressive_web_apps/Guides/Caching
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
