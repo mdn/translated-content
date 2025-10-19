@@ -21,7 +21,8 @@ new Response(body, options)
 ### 매개변수
 
 - `body` {{optional_inline}}
-  - : 응답의 본문을 정의하는 객체입니다. 기본값은 `null`이며, 다음 중 하나일 수 있습니다.
+  - : 응답의 본문을 정의하는 객체입니다.
+    기본값은 `null`이며, 다음 중 하나일 수 있습니다.
     - {{domxref("Blob")}}
     - {{jsxref("ArrayBuffer")}}
     - {{jsxref("TypedArray")}}
@@ -35,11 +36,14 @@ new Response(body, options)
 - `options` {{optional_inline}}
   - : 응답에 적용할 사용자 정의 설정을 포함하는 옵션 객체이거나, 빈 객체(기본값)입니다. 가능한 옵션은 다음과 같습니다.
     - `status`
-      - : 응답의 상태 코드입니다. 기본값은 `200`입니다.
+      - : 응답의 상태 코드입니다.
+        기본값은 `200`입니다.
     - `statusText`
-      - : 상태 코드와 관련된 상태 메시지로, 예를 들어 `"OK"`와 같습니다. 기본값은 `""`입니다.
+      - : 상태 코드와 관련된 상태 메시지로, 예를 들어 `"OK"`와 같습니다.
+        기본값은 `""`입니다.
     - `headers`
-      - : 응답에 추가할 헤더를 정의합니다. {{domxref("Headers")}} 객체이거나, {{jsxref("String")}} 키/값 쌍의 객체 리터럴일 수 있습니다. [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers) 문서를 참조하세요. 기본값은 비어 있습니다.
+      - : 응답에 추가할 헤더를 정의합니다. {{domxref("Headers")}} 객체이거나, {{jsxref("String")}} 키/값 쌍의 객체 리터럴일 수 있습니다. [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers) 문서를 참조하세요.
+        기본값은 비어 있습니다.
 
 ## 예제
 
