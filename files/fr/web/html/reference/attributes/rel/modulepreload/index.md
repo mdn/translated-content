@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-Le mot-clé **`modulepreload`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément {{HTMLElement("link")}} offre un moyen déclaratif de précharger un [script de module](/fr/docs/Web/JavaScript/Guide/Modules), de l'analyser, de le compiler et de le stocker dans la carte des modules du document pour une exécution ultérieure.
+Le mot-clé **`modulepreload`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément HTML {{HTMLElement("link")}} offre un moyen déclaratif de précharger un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), de l'analyser, de le compiler et de le stocker dans la carte des modules du document pour une exécution ultérieure.
 
 Le préchargement permet de télécharger les modules et leurs dépendances dès le début, ce qui peut réduire significativement le temps total de téléchargement et de traitement.
 Cela permet aux pages de récupérer les modules en parallèle, au lieu de les charger séquentiellement à mesure que chaque module est traité et que ses dépendances sont découvertes.
