@@ -20,7 +20,7 @@ l10n:
 
 ## 实例方法
 
-_从其父类 {{domxref("EventTarget")}} 继承方法_。
+_从其接口 {{domxref("EventTarget")}} 继承方法_。
 
 ## 规范
 
