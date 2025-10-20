@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'attribut **`content`** spécifie la valeur d'un nom de métadonnée défini par l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML `<meta>`.
+L'attribut **`content`** définit la valeur d'un nom de métadonnée — défini par l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) — de l'élément HTML `<meta>`.
 Il prend une chaîne de caractères comme valeur, et la syntaxe attendue varie selon la valeur de `name` utilisée.
 
 ## Valeur
