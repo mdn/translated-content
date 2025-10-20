@@ -7,7 +7,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'attribut **`crossorigin`** est valide sur les éléments {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}} et {{HTMLElement("video")}}. Il permet de gérer le [CORS](/fr/docs/Web/HTTP/Guides/CORS), c'est-à-dire la façon dont l'élément traite les requêtes inter-origines, et donc de configurer les requêtes CORS pour les données récupérées par l'élément. Selon l'élément, l'attribut peut être un attribut de configuration CORS.
+L'attribut **`crossorigin`** est valide sur les éléments HTML {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}} et {{HTMLElement("video")}}. Il permet de gérer le [CORS](/fr/docs/Web/HTTP/Guides/CORS), c'est-à-dire la façon dont l'élément traite les requêtes inter-origines, et donc de configurer les requêtes CORS pour les données récupérées par l'élément. Selon l'élément, l'attribut peut être un attribut de configuration CORS.
 
 L'attribut de contenu `crossorigin` sur les éléments média est un attribut de configuration CORS.
 
@@ -22,7 +22,7 @@ Ces attributs sont {{Glossary("Enumerated", "énumérés")}} et acceptent les va
 
 Un mot-clé invalide ou une chaîne vide sera traité comme le mot-clé `anonymous`.
 
-Par défaut (c'est-à-dire si l'attribut n'est pas spécifié), CORS n'est pas utilisé. L'agent utilisateur ne demandera pas d'accès complet à la ressource et, en cas de requête inter-origine, certaines limitations s'appliqueront selon le type d'élément concerné&nbsp;:
+Par défaut (c'est-à-dire si l'attribut n'est pas défini), CORS n'est pas utilisé. L'agent utilisateur ne demandera pas d'accès complet à la ressource et, en cas de requête inter-origine, certaines limitations s'appliqueront selon le type d'élément concerné&nbsp;:
 
 <table class="no-markdown">
   <tbody>
