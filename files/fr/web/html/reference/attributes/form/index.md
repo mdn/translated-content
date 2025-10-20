@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6afda999d054c2ba12d13d129b13eb35952b4fbe
 ---
 
-L'attribut HTML **`form`** associe un élément lié à un formulaire à un élément {{HTMLElement("form")}} du même document. Cet attribut s'applique aux éléments {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+L'attribut **`form`** associe un élément lié à un formulaire à un élément HTML {{HTMLElement("form")}} du même document. Cet attribut s'applique aux éléments HTML {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 
 ## Valeurs
 
