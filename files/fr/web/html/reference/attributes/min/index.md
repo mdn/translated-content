@@ -7,7 +7,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'attribut **`min`** définit la valeur minimale acceptable et valide pour le champ de saisie qui contient cet attribut. Si la [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément est inférieure à cette valeur, le champ échoue à la [validation](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`.
+L'attribut **`min`** définit la valeur minimale acceptable et valide pour le champ de saisie qui contient cet attribut. Si la [valeur](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément est inférieure à cette valeur, le champ échoue lors de la [validation](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`.
 
 Certains types de saisie ont une valeur minimale par défaut. Si le champ n'a pas de minimum par défaut et qu'une valeur spécifiée pour `min` ne peut pas être convertie en nombre valide (ou si aucune valeur minimale n'est définie), le champ n'a pas de valeur minimale.
 
