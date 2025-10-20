@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}{{Non-standard_Header}}{{Deprecated_Header}}{{AvailableInWorkers("worker")}}
 
-**`WorkerGlobalScope.dump()`** 方法将消息记录到浏览器的标准输出（`stdout`）。如果浏览器是从终端启动的，则通过 `dump()` 输出的内容将显示在终端中。这与 {{domxref("Window.dump()")}} 相同，但适用于工作线程。
+**`WorkerGlobalScope.dump()`** 方法将消息记录到浏览器的标准输出（`stdout`）。如果浏览器是从终端启动的，则通过 `dump()` 输出的内容将显示在终端中。这与 {{domxref("Window.dump()")}} 相同，但适用于 worker。
 
 `dump()` 的输出*不会*发送到浏览器的开发者工具控制台。若要记录到开发者工具控制台，请使用 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)。
 
@@ -29,7 +29,7 @@ dump(message)
 
 ## 规范
 
-此功能不属于任何规范。
+此特性不属于任何规范。
 
 ## 浏览器兼容性
 
