@@ -131,8 +131,8 @@ Web 最常用的图像格式是：
 
     在对静态 `<img>` 元素使用 `decoding` 时，通常难以察觉明显效果。这些元素在加载图像文件（无论是从网络还是缓存获取）期间，最初往往会渲染为空白图像，随后仍会独立处理，因此内容更新的“同步性”并不显著。然而，解码期间渲染过程的阻塞现象虽通常微乎其微，但确实存在可测量的延迟——即便肉眼难以察觉。详见[图像解码属性实际作用解析](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/)（tunetheweb.com, 2023）。
 
-     使用不同的 `decoding` 类型，在通过 JavaScript 动态向 DOM 插入 `<img>` 元素时可能导致更明显的差异——更多细节请参阅 {{domxref("HTMLImageElement.decoding")}}。
-  
+    使用不同的 `decoding` 类型，在通过 JavaScript 动态向 DOM 插入 `<img>` 元素时可能导致更明显的差异——更多细节请参阅 {{domxref("HTMLImageElement.decoding")}}。
+
     允许的值为：
     - `sync`
       - : 在渲染其他 DOM 内容的同时同步解码图像，并将所有内容一并呈现。
