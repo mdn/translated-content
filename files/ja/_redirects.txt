@@ -298,7 +298,7 @@
 /ja/docs/CSS/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/CSS/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /ja/docs/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
-/ja/docs/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/ja/docs/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /ja/docs/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ja/docs/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
 /ja/docs/CSS/align-content	/ja/docs/Web/CSS/align-content
@@ -569,8 +569,8 @@
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Events	/ja/docs/Learn_web_development/Core/Scripting/Events
-/ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
-/ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
+/ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
@@ -1528,7 +1528,7 @@
 /ja/docs/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options
 /ja/docs/HTTP_Pipelining_FAQ	/ja/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/Guides/CORS
-/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/Guides/CSP
@@ -2047,7 +2047,6 @@
 /ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility	/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 /ja/docs/Learn/Common_questions/Design_for_all_types_of_users	/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 /ja/docs/Learn/Common_questions/HTML_features_for_accessibility	/ja/docs/Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility
-/ja/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ja/docs/Learn/Common_questions/How_does_the_Internet_work	/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /ja/docs/Learn/Common_questions/How_much_does_it_cost	/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -2055,7 +2054,6 @@
 /ja/docs/Learn/Common_questions/Tools_and_setup	/ja/docs/Learn_web_development/Howto/Tools_and_setup
 /ja/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /ja/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/ja/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/ja/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -2816,7 +2814,7 @@
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Using_native_JSON	/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/API/XSLTProcessor
-/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /ja/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /ja/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -2987,10 +2985,13 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/getSelection	/ja/docs/Web/API/Document/getSelection
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
-/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Examples	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Introduction	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Whitespace	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/CSS/CSS_text/Whitespace
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
@@ -4027,7 +4028,7 @@
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
-/ja/docs/Web/CSS/CSS_Functions	/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+/ja/docs/Web/CSS/CSS_Functions	/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
 /ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
@@ -4068,7 +4069,7 @@
 /ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/ja/docs/Web/CSS/CSS_shapes/From_box_values
 /ja/docs/Web/CSS/CSS_Text/Wrapping_Text	/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text
-/ja/docs/Web/CSS/CSS_Types	/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/ja/docs/Web/CSS/CSS_Types	/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
@@ -4171,7 +4172,7 @@
 /ja/docs/Web/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-/ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /ja/docs/Web/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
@@ -4774,6 +4775,7 @@
 /ja/docs/Web/HTML/Global_attributes/translate	/ja/docs/Web/HTML/Reference/Global_attributes/translate
 /ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy	/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 /ja/docs/Web/HTML/Global_attributes/writingsuggestions	/ja/docs/Web/HTML/Reference/Global_attributes/writingsuggestions
+/ja/docs/Web/HTML/Guides/Viewport_meta_element	/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/HTML/Guides/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Reference/Elements
@@ -4838,7 +4840,7 @@
 /ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/HTML/Reference/Elements/Heading_Elements
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Guides/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/ja/docs/Web/HTML/Viewport_meta_tag	/ja/docs/Web/HTML/Guides/Viewport_meta_element
+/ja/docs/Web/HTML/Viewport_meta_tag	/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport
 /ja/docs/Web/HTML/microformats	/ja/docs/Web/HTML/Guides/Microformats
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Reference/Attributes
 /ja/docs/Web/HTTP/Authentication	/ja/docs/Web/HTTP/Guides/Authentication

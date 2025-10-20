@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8e2465af7cac389b70e83d54eeb288448f2ae08d
 ---
 
-**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
+**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
 
 {{InteractiveExample("CSS デモ: repeating-conic-gradient()")}}
 

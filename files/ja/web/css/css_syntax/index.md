@@ -7,7 +7,7 @@ l10n:
 
 **CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
 
-このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
+このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
 
 ### アットルール
 
@@ -25,7 +25,7 @@ l10n:
 - [CSS コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
 - [CSS 宣言](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS 宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - [無効なもの](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
 - [スタイルルール](/ja/docs/Web/API/CSSStyleRule)
 
@@ -41,7 +41,7 @@ l10n:
 - [CSS 構文の概要: 宣言、ルールセット、文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
   - : CSS の全体的な構文、および宣言、宣言ブロック、ルールセット、文がスタイルルールを形成する方法について説明します。
 
-- [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - : CSS プロパティと関数の有効な値を定義するための正式な文法を、意味づけ制約とともに説明します。 CSS の成分値の型、結合子、乗算子を理解するためのガイドです。
 
 - [CSS のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
@@ -98,4 +98,4 @@ l10n:
 
 - [CSS アットルール関数](/ja/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
