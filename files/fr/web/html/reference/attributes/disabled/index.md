@@ -60,7 +60,7 @@ Firefox, contrairement aux autres navigateurs, va faire persister l'état désac
 
 ### Interactions entre attributs
 
-La différence entre `disabled` et {{HTMLElement("readonly")}} est que les contrôles en lecture seule peuvent toujours fonctionner et sont toujours sélectionnables, alors que les contrôles désactivés ne peuvent pas recevoir de sélection, ne sont pas soumis avec le formulaire et ne fonctionnent généralement pas comme contrôles tant qu'ils ne sont pas activés.
+La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) est que les contrôles en lecture seule peuvent toujours fonctionner et sont toujours sélectionnables, alors que les contrôles désactivés ne peuvent pas recevoir de sélection, ne sont pas soumis avec le formulaire et ne fonctionnent généralement pas comme contrôles tant qu'ils ne sont pas activés.
 
 Étant donné qu'un champ désactivé ne peut pas voir sa valeur modifiée, [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) n'a aucun effet sur les entrées dont l'attribut `disabled` est également spécifié. De plus, puisque les éléments deviennent immuables, la plupart des autres attributs, tels que [`pattern`](/fr/docs/Web/HTML/Reference/Attributes/pattern), n'ont aucun effet, tant que le contrôle n'est pas activé.
 
