@@ -3,7 +3,7 @@ title: XRPose：angularVelocity 属性
 short-title: angularVelocity
 slug: Web/API/XRPose/angularVelocity
 l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
 {{APIRef}}{{SecureContext_Header}}
