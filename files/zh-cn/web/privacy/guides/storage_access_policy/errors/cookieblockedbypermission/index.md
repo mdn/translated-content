@@ -1,5 +1,5 @@
 ---
-title: Blocked：自定义 Cookie 权限
+title: "Blocked: Custom cookie permission"
 slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedByPermission
 l10n:
   sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
@@ -12,7 +12,7 @@ l10n:
 Firefox：
 
 ```plain
-CookieBlockedByPermission=Request to access cookies or storage on "X" was blocked because of custom cookie permission.
+CookieBlockedByPermission=由于自定义 Cookie 权限，已拦截“X”对 Cookie 或存储空间的访问请求。
 ```
 
 ## 可采取的措施
@@ -24,4 +24,4 @@ CookieBlockedByPermission=Request to access cookies or storage on "X" was blocke
 
 ## 参见
 
-- [support.mozilla.org](https://support.mozilla.org/) 上的[内容拦截](https://support.mozilla.org/zh-CN/kb/content-blocking)
+- [support.mozilla.org](https://support.mozilla.org/) 上的[内容拦截](https://support.mozilla.org/zh-CN/kb/内容拦截)
