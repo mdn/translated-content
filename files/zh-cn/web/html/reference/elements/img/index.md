@@ -421,7 +421,7 @@ Web 最常用的图像格式是：
     </tr>
     <tr>
       <th scope="row">允许的内容</th>
-      <td>无；其为 {{Glossary("void element", "空元素")}}。</td>
+      <td>无；其为{{Glossary("void element", "空元素")}}。</td>
     </tr>
     <tr>
       <th scope="row">标签省略</th>
