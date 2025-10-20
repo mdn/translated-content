@@ -42,7 +42,7 @@ getInt16(byteOffset, littleEndian)
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 当设置的 `byteOffset` 导致读取超出视图（view）末尾时，会抛出此异常。
+  - : 当设置的 `byteOffset` 导致读取超出视图末尾时，会抛出此异常。
 
 ## 示例
 
