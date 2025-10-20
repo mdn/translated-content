@@ -3,7 +3,7 @@ title: "ARIA : rôle landmark"
 short-title: landmark
 slug: Web/Accessibility/ARIA/Reference/Roles/landmark_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le rôle `landmark` est une superclasse abstraite pour les valeurs de rôle ARIA pour les sections de contenu qui sont suffisamment importantes pour que les utilisateur·ice·s souhaitent probablement pouvoir y naviguer directement. Un repère (<i lang="en">landmark</i>) est une sous-section importante d'une page.
@@ -17,15 +17,26 @@ Un `landmark` est un rôle abstrait pour une section de contenu qui est suffisam
 
 Pour créer un rôle de repère, définissez l'objectif du contenu en utilisant un élément sémantique tel que `<section>`, `<nav>` ou `<main>`, ou en ajoutant un rôle ARIA qui est une sous-classe du rôle `landmark`, tel que [`role="banner"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role), [`role="complementary"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role) ou [`role="region"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/region_role). Ne pas utiliser `role="landmark"`.
 
+Chaque rôle de repère concret possède son élément HTML sémantique correspondant&nbsp;:
+
+| Rôle ARIA                                                                             | Élément HTML               |
+| ------------------------------------------------------------------------------------- | -------------------------- |
+| [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)               | {{HTMLElement('header')}}  |
+| [`complementary`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role) | {{HTMLElement('aside')}}   |
+| [`contentinfo`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)     | {{HTMLElement('footer')}}  |
+| [`form`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)                   | {{HTMLElement('form')}}    |
+| [`main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)                   | {{HTMLElement('main')}}    |
+| [`navigation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)       | {{HTMLElement('nav')}}     |
+| [`region`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)               | {{HTMLElement('section')}} |
+| [`search`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)               | {{HTMLElement('search')}}  |
+
 Une étiquette visible doit être fournie, référencée avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Si nécessaire, une étiquette brève et descriptive peut être fournie avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 Pour les utilisateur·ice·s de lecteurs d'écran, l'ajout de rôles de repère crée effectivement des «&nbsp;liens de saut&nbsp;» pour les utilisateur·ice·s de lecteurs d'écran, mais ne remplace pas la navigation dans la page car les rôles de repère ne sont pas exposés autrement.
 
 ## Bonnes pratiques
 
-N'utilisez pas `role="landmark"`. Utilisez HTML et des sous-classes de rôles de repère.
-
-Les repères garantissent que le contenu se trouve dans des zones navigables. Utilisez {{HTMLElement("main")}} pour [`role="main"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role), {{HTMLElement("header")}} pour [`role="banner"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role), {{HTMLElement("nav")}} pour [`role="navigation"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role) et {{HTMLElement("footer")}} pour [`role="contentinfo"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role). Il est également recommandé d'inclure le rôle de manière redondante avec l'élément sémantique associé. Il n'est pas recommandé d'utiliser des éléments non sémantiques, tels que {{HTMLElement("div")}}, en ajoutant de la sémantique avec des rôles de repère. Mais incluez l'un ou l'autre, ou les deux. Sinon, votre contenu ne sera plus aussi navigable pour les utilisateur·ice·s de lecteurs d'écran.
+N'utilisez pas `role="landmark"`&nbsp;: utilisez plutôt les rôles de repère de sous-classe appropriés, ou les éléments HTML sémantique si possible. Bien que cela ne soit plus nécessaire, il est considéré comme une bonne pratique d'inclure de façon redondante les rôles de repère de sous-classe avec l'élément sémantique associé pour les anciens navigateurs. Cela reste préférable à l'utilisation de rôles de repère sur des éléments non sémantiques, comme {{HTMLElement('div')}}&nbsp;; mais utilisez au moins l'un des rôles ou des éléments sémantiques pour créer des repères. Sinon, votre contenu sera moins navigable pour les utilisateur·ice·s de lecteurs d'écran.
 
 ## Spécifications
 
