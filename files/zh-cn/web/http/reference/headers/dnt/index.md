@@ -47,9 +47,9 @@ DNT: null
 
 ## 示例
 
-### Reading Do Not Track status from JavaScript
+### 从 JavaScript 读取请勿追踪状态
 
-The user's DNT preference can also be read from JavaScript using the {{domxref("Navigator.doNotTrack")}} property:
+可以通过 JavaScript 使用 {{domxref("Navigator.doNotTrack")}} 属性读取用户的 DNT（请勿追踪）偏好设置：
 
 ```js
 navigator.doNotTrack; // “0”、“1”或 null
