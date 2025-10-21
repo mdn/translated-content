@@ -1,5 +1,5 @@
 ---
-title: "ARIA : l'attribut aria-rowcount"
+title: "ARIA : attribut aria-rowcount"
 short-title: aria-rowcount
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount
 l10n:
