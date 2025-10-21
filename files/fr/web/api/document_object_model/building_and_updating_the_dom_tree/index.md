@@ -1,9 +1,9 @@
 ---
-title: Parcourir un tableau HTML avec JavaScript et les interfaces DOM
+title: Construire et mettre à jour l'arbre DOM
 slug: Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 original_slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 l10n:
-  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -186,7 +186,7 @@ document.querySelector("input").addEventListener("click", setBackground);
 
 ### Explications
 
-`getElementsByTagName(tagNameValue)` est une méthode disponible sur tout {{domxref("Element")}} DOM ou sur l'élément racine {{domxref("Document")}}. Elle retourne un tableau de tous les descendants de l'élément correspondant au nom de balise. Le premier élément de la liste est à la position `[0]` du tableau.
+`getElementsByTagName(tagNameValue)` est une méthode disponible sur tout {{DOMxRef("Element")}} DOM ou sur l'élément racine {{DOMxRef("Document")}}. Elle retourne un tableau de tous les descendants de l'élément correspondant au nom de balise. Le premier élément de la liste est à la position `[0]` du tableau.
 
 Voici les étapes réalisées&nbsp;:
 
@@ -204,7 +204,7 @@ Voici les étapes réalisées&nbsp;:
 
    ![Un élément paragraphe est ajouté comme nouveau frère à un paragraphe existant dans un arbre DOM](sample2a2.jpg)
 
-3. Enfin, on définit la couleur de fond sur rouge avec la propriété {{domxref("HTMLElement.style", "style")}} de l'objet {{domxref("HTMLParagraphElement", "paragraphe")}}&nbsp;:
+3. Enfin, on définit la couleur de fond sur rouge avec la propriété {{DOMxRef("HTMLElement.style", "style")}} de l'objet {{DOMxRef("HTMLParagraphElement", "paragraphe")}}&nbsp;:
 
    ```js
    secondParagraph.style.background = "red";
