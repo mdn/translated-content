@@ -16,7 +16,7 @@ Un certain nombre d'attributs HTML sont des {{Glossary("Boolean/HTML", "attribut
 Les attributs peuvent être _reflétés_ dans une propriété particulière de l'interface spécifique.
 
 Cela signifie que la valeur de l'attribut peut être lue ou modifiée directement en JavaScript via une propriété sur l'interface correspondante, et réciproquement.
-Les propriétés reflétées offrent une approche de programmation plus naturelle que l'obtention et la définition d'attributs à l'aide des méthodes {{domxref("Element.getAttribute()","getAttribute()")}} et {{domxref("Element.setAttribute()","setAttribute()")}} de l'interface {{domxref("Element")}}.
+Les propriétés reflétées offrent une approche de programmation plus naturelle que l'obtention et la définition d'attributs à l'aide des méthodes {{DOMxRef("Element.getAttribute()","getAttribute()")}} et {{DOMxRef("Element.setAttribute()","setAttribute()")}} de l'interface {{DOMxRef("Element")}}.
 
 Pour plus d'informations, voir [Réflexion des attributs](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes).
 
@@ -26,7 +26,7 @@ Pour plus d'informations, voir [Réflexion des attributs](/fr/docs/Web/API/Docum
 - [Réflexion des attributs](/fr/docs/Web/API/Document_Object_Model/Reflected_attributes)
 - Informations sur les [attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes) de HTML
 - Recommandation sur les attributs StartTag XML dans la [Recommandation XML du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/xml/#sec-starttags)
-- Termes du glossaire associés&nbsp;:
+- Termes associés du glossaire&nbsp;:
   - {{Glossary("Element", "Élément")}}
   - {{Glossary("Tag", "Balise")}}
   - {{Glossary("HTML")}}
