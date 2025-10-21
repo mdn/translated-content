@@ -56,7 +56,7 @@ Web 最常用的图像格式是：
 
 ## 图像加载错误
 
-如果在加载或渲染图像时发生错误，且设置了至少一个 [`onerror`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#onerror) 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
+如果在加载或渲染图像时发生错误，且设置了至少一个 `onerror` 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
 
 - `src` 属性的属性值为空（`""`）或者 `null`。
 - `src` 属性的 {{glossary("URL")}} 和用户正在浏览的页面的 URL 完全相同。
