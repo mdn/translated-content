@@ -73,5 +73,5 @@ navigator.doNotTrack; // “0”、“1”或 null
 - DNT 浏览器设置帮助：
   - [Firefox](https://support.mozilla.org/zh-CN/kb/如何停止让网站追踪我)
   - [Chrome](https://support.google.com/chrome/answer/2790761)
-- [GPC —— 全局隐私控制](https://globalprivacycontrol.org/)
-  - [在 Firefox 中启用 GPC](https://support.mozilla.org/en-US/kb/global-privacy-control?as=u&utm_source=inproduct)
+- [GPC——全局隐私控制](https://globalprivacycontrol.org/)
+  - [在 Firefox 中启用 GPC](https://support.mozilla.org/zh-CN/kb/全球隐私控制?as=u&utm_source=inproduct)
