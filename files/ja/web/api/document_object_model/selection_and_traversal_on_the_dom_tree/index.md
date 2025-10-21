@@ -1,6 +1,7 @@
 ---
 title: セレクターを使用した DOM 要素の特定
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
+original_slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 l10n:
   sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
