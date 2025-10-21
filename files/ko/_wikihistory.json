@@ -3858,7 +3858,7 @@
       "Channy"
     ]
   },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": [
       "jswisher",
