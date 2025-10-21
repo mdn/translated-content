@@ -14,7 +14,7 @@ l10n:
 }
 ```
 
-`:dir()` 伪类仅使用文本方向的*语义*值，即文档中定义的方向性。它不会考虑由 CSS 属性（例如 {{cssxref("direction")}} ）设置的*样式*方向。
+`:dir()` 伪类仅使用文本方向的*语义*值，即文档中定义的方向性。它不会考虑由 CSS 属性（例如 {{cssxref("direction")}}）设置的*样式*方向。
 
 > [!NOTE]
 > 请注意，`:dir()` 伪类的行为与 `[dir=…]` [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)并不相同。后者仅匹配具有 HTML [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir) 属性的元素，并会忽略那些虽然从父元素继承了方向但自身没有该属性的元素。（同样，`[dir=rtl]` 和 `[dir=ltr]` 也不会匹配 `auto` 值。）相比之下，`:dir()` 会匹配由{{glossary("user agent", "用户代理")}}计算得出的方向值，即使该值是继承而来的。
