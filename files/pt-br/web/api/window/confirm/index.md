@@ -2,8 +2,6 @@
 title: "Window: método confirm()"
 short-title: confirm()
 slug: Web/API/Window/confirm
-page-type: web-api-instance-method
-browser-compat: api.Window.confirm
 ---
 
 {{ApiRef("Window")}}
