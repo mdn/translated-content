@@ -1,6 +1,7 @@
 ---
 title: Localiser des éléments DOM avec les sélecteurs
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
+original_slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 l10n:
   sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---

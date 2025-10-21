@@ -1,6 +1,7 @@
 ---
 title: Parcourir un tableau HTML avec JavaScript et les interfaces DOM
-slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
+original_slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 l10n:
   sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
 ---
