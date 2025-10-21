@@ -633,6 +633,7 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
 /ko/docs/Web/API/Document_Object_Model/Examples	/ko/docs/conflicting/Web/API/Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/Introduction	/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/ko/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/ko/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
 /ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
