@@ -27,9 +27,7 @@ font-size: 2rem;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">
-    困惑轻吻我的脸颊，留下苦涩中带着甜蜜的滋味
-  </p>
+  <p id="example-element">困惑轻吻我的脸颊，留下苦涩中带着甜蜜的滋味</p>
 </section>
 ```
 
