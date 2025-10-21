@@ -1,46 +1,78 @@
 ---
-title: Window.confirm()
+title: "Window: método confirm()"
+short-title: confirm()
 slug: Web/API/Window/confirm
+page-type: web-api-instance-method
+browser-compat: api.Window.confirm
 ---
 
 {{ApiRef("Window")}}
 
-O método **`Window.confirm()`** mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.
+O método `window.confirm()` instrui o navegador a exibir uma caixa de diálogo com uma mensagem opcional e a aguardar até que o usuário confirme ou cancele a caixa de diálogo.
+
+Sob algumas condições — por exemplo, quando o usuário troca de abas — o navegador pode não exibir uma caixa de diálogo, ou pode não esperar que o usuário confirme ou cancele a caixa de diálogo.
 
 ## Sintaxe
 
-```
-resultado = window.confirm(mensagem);
-```
-
-- `mensagem` é a string opcional que será mostrada no diálogo.
-- `resultado` é um booleano indicando se OK ou cancelar foram selecionados (`true` indicará OK).
-
-## Exemplo
-
-```
-if (window.confirm("Você realmente quer sair?")) {
-  window.open("sair.html", "Obrigado pela visita!");
-}
+```js-nolint
+confirm()
+confirm(mensagem)
 ```
 
-Produzirá:
+### Parâmetros
 
-![firefox confirm](firefox_confirm_dialog.png)
+- `mensagem` {{optional_inline}}
+  - : Uma string que você deseja exibir na caixa de diálogo de confirmação.
+
+### Valor de retorno
+
+Um booleano que indica se OK (`true`) ou Cancelar (`false`) foi selecionado.
+Se um navegador estiver ignorando as caixas de diálogo na página, o valor retornado será sempre `false`.
+
+## Exemplos
+
+### Confirmando antes de uma ação
+
+O exemplo a seguir demonstra como verificar o valor de retorno de uma caixa de diálogo de confirmação.
+Quando o usuário clica no botão OK, chamamos {{domxref("window.open()")}}, e se o usuário clica em Cancelar, imprimimos um texto em um elemento {{htmlelement("pre")}}.
+
+```html live-sample___confirm
+<button id="windowButton">Abrir nova aba</button>
+<pre id="log"></pre>
+```
+
+```js live-sample___confirm
+const windowButton = document.querySelector("#windowButton");
+const log = document.querySelector("#log");
+
+windowButton.addEventListener("click", () => {
+  if (window.confirm("Você quer abrir uma nova aba?")) {
+    window.open("https://developer.mozilla.org/en-US/docs/Web/API/Window/open", "_blank");
+  } else {
+    log.innerText = "Que bom que você ficou!";
+  }
+});
+```
+
+{{EmbedLiveSample('confirmar', '100%', '80px', 'allow-modals allow-popups')}}
 
 ## Notas
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Caixas de diálogo são janelas modais - elas previnem o usuário de acessar o resto da interface da aplicação enquanto a caixa de diálogo não for fechada. Por esta razão, você não deve usar abusivamente nenhuma função que crie uma caixa de diálogo (ou uma janela modal). E independente disso, existem boas razões para [evitar o uso de caixas de diálogo para confirmações.](https://alistapart.com/article/neveruseawarning)
+As caixas de diálogo são janelas modais, impedindo a interação do usuário com o resto da interface do programa até que sejam fechadas.
+Por esse motivo, você não deve usar excessivamente nenhuma função que crie uma caixa de diálogo ou uma janela modal.
+Como alternativa, o elemento {{HTMLElement("dialog")}} pode ser usado para confirmações.
 
-Usuários do [Mozilla Chrome](/pt-BR/Chrome) (Ex.: Extensões do Firefox) devem utilizar métodos de `nsIPromptService`.
+## Especificações
 
-O argumento é opcional e não é requerido por especificações.
+{{Specifications}}
 
-## Especificação
+## Compatibilidade com navegadores
 
-Especificado em HTML5.
+{{Compat}}
 
-## Veja Também
+## Veja também
 
-- {{domxref("window.alert","alert")}}
-- {{domxref("window.prompt","prompt")}}
+- Elemento {{HTMLElement("dialog")}}
+- {{domxref("window.alert()")}}
+- {{domxref("window.prompt()")}}
+- [Nunca Use um Aviso Quando Você Quer Dizer Desfazer](https://alistapart.com/article/neveruseawarning/) em A List Apart (2017)
