@@ -1,6 +1,7 @@
 ---
 title: Herramienta para seleccionar color
-slug: Web/CSS/CSS_colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_format_converter
+original_slug: Web/CSS/CSS_colors/Color_picker_tool
 ---
 
 Esta herramienta facilita crear, ajustar, y experimentar con colores personalizados para uso web. Además permite facilmente convertir entre varios formatos de color soportados por CSS, incluyendo: HEXA, RGB y HSL. También soporta el control de alpha en los formatos RGB (rgba) y HSL (hsla).

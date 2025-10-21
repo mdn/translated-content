@@ -1,7 +1,7 @@
 ---
 title: Etiqueta meta del Viewport
-slug: Web/HTML/Guides/Viewport_meta_element
-original_slug: Web/HTML/Viewport_meta_tag
+slug: Web/HTML/Reference/Elements/meta/name/viewport
+original_slug: Web/HTML/Guides/Viewport_meta_element
 ---
 
 {{HTMLSidebar}}
