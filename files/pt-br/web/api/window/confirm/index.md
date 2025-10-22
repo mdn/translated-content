@@ -1,10 +1,10 @@
---- 
+---
 title: "Window: método confirm()"
 short-title: confirm()
 slug: Web/API/Window/confirm
 ---
 
-{{ApiRef("Window")}} 
+{{ApiRef("Window")}}
 
 O método `window.confirm()` instrui o navegador a exibir uma caixa de diálogo com uma mensagem opcional e a aguardar até que o usuário confirme ou cancele a caixa de diálogo.
 
@@ -32,7 +32,7 @@ Se um navegador estiver ignorando as caixas de diálogo na página, o valor reto
 ### Confirmando antes de uma ação
 
 O exemplo a seguir demonstra como verificar o valor de retorno de uma caixa de diálogo de confirmação.
-Quando o usuário clica no botão OK, chamamos {{domxref("window.open()")}}, e se o usuário clica em Cancelar, imprimimos um texto em um elemento {{htmlelement("pre")}}. 
+Quando o usuário clica no botão OK, chamamos {{domxref("window.open()")}}, e se o usuário clica em Cancelar, imprimimos um texto em um elemento {{htmlelement("pre")}}.
 
 ```html live-sample___confirm
 <button id="windowButton">Abrir nova aba</button>
@@ -45,14 +45,17 @@ const log = document.querySelector("#log");
 
 windowButton.addEventListener("click", () => {
   if (window.confirm("Você quer abrir uma nova aba?")) {
-    window.open("https://developer.mozilla.org/en-US/docs/Web/API/Window/open", "_blank");
+    window.open(
+      "https://developer.mozilla.org/en-US/docs/Web/API/Window/open",
+      "_blank",
+    );
   } else {
     log.innerText = "Que bom que você ficou!";
   }
 });
 ```
 
-{{EmbedLiveSample("confirmar", "100%", "80px", "allow-modals allow-popups")}} 
+{{EmbedLiveSample("confirmar", "100%", "80px", "allow-modals allow-popups")}}
 
 ## Notas
 

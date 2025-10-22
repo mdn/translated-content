@@ -6,3 +6,4 @@ _githistory.json
 mdn/content
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
