@@ -289,7 +289,9 @@ function listenForClicks() {
 function reportExecuteScriptError(error) {
   document.querySelector("#popup-content").classList.add("hidden");
   document.querySelector("#error-content").classList.remove("hidden");
-  console.error(`Error al ejecutar el script de contenido "beastify": ${error.message}`);
+  console.error(
+    `Error al ejecutar el script de contenido "beastify": ${error.message}`,
+  );
 }
 
 /**
