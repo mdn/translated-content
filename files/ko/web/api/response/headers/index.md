@@ -1,5 +1,5 @@
 ---
-title: "Response: headers property"
+title: "Response: headers 속성"
 short-title: headers
 slug: Web/API/Response/headers
 l10n:
@@ -8,7 +8,9 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`headers`** 읽기 전용 속성은 {{domxref("Response")}} 인터페이스의 속성으로, 해당 응답과 연관된 {{domxref("Headers")}} 객체를 포함합니다.
+**`headers`** 읽기 전용 속성은
+{{domxref("Response")}} 인터페이스의 속성으로, 해당 응답과 연관된 {{domxref("Headers")}}
+객체를 포함합니다.
 
 ## 값
 
@@ -44,7 +46,7 @@ fetch(myRequest)
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
 - [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
