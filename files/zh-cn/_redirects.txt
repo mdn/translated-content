@@ -1656,7 +1656,7 @@
 /zh-CN/docs/Tools/性能	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /zh-CN/docs/Tools/标尺	https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html
 /zh-CN/docs/Transforming_XML_with_XSLT	/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /zh-CN/docs/Updating_extensions_for_Firefox_3	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/CSS/CSS_fonts/WOFF
@@ -1765,6 +1765,8 @@
 /zh-CN/docs/Web/API/Document_Object_Model/Examples	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Introduction	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
+/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Whitespace	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
@@ -4099,7 +4101,7 @@
 /zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？	/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /zh-CN/docs/learn/探索浏览器开发者工具	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 /zh-CN/docs/为Firefox_3升级扩展	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
-/zh-CN/docs/使用Javascript和DOM_Interfaces来处理HTML	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/zh-CN/docs/使用Javascript和DOM_Interfaces来处理HTML	/zh-CN/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /zh-CN/docs/安全	/zh-CN/docs/Web/Security
 /zh-CN/docs/怪异模式和标准模式	/zh-CN/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /zh-CN/docs/首页	/zh-CN/docs/Web
