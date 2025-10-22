@@ -3,15 +3,13 @@ title: Perceptible
 slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable
 original_slug: Web/Accessibility/Understanding_WCAG/Perceivable
 l10n:
-  sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{AccessibilitySidebar}}
 
 Dans cet article, nous verrons des conseils pratiques pour écrire du contenu web qui respecte le principe de **perceptibilité** décrit dans les règles pour l'accessibilité des contenus web (WCAG) 2.0 et 2.1. Les états du contenu doivent pouvoir être perçus par les utilisatrices et utilisateurs d'une façon ou d'une autre en utilisant un de leurs sens.
 
 > [!NOTE]
-> Les définitions du W3C pour cette catégorie, les règles associées et les critères de réussite sont présentes sur la page [Principe 1&nbsp;: l'information et les composants de l'interface utilisateur doivent être présentés à l'utilisatrice ou à l'utilisateur de façon à ce qu'il puisse les percevoir](https://www.w3.org/Translations/WCAG21-fr/#perceivable).
+> Les définitions du W3C pour cette catégorie, les règles associées et les critères de réussite sont présentes sur la page [Principe 1&nbsp;: l'information et les composants de l'interface utilisateur doivent être présentés à l'utilisatrice ou à l'utilisateur de façon à ce qu'il puisse les percevoir <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#perceivable).
 
 ## Règle 1.1 — Des équivalents textuels doivent être fournis pour tout contenu non textuel
 
@@ -32,7 +30,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
         Toutes les images qui ont un contenu significatif devraient avoir un texte alternatif approprié.
       </td>
       <td>
-        <a href="/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles">Alternatives textuelles</a>
+        <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#alternatives_textuelles">Alternatives textuelles</a>
       </td>
     </tr>
     <tr>
@@ -41,7 +39,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
       </td>
       <td>
         <p>
-          Une description textuelle peut fonctionner, on peut aussi écrire un tableau de données accessible (voir <a href="/fr/docs/Learn/HTML/Tables/Advanced">Fonctionnalités avancées des tableaux HTML et accessibilité</a>). Voir <a href="/fr/docs/Learn/Accessibility/HTML#autres_mécanismes_alternatifs_de_texte">la section sur les autres mécanismes alternatifs au texte</a> pour un argument contre l'utilisation de <code>longdesc</code>.
+          Une description textuelle peut fonctionner, on peut aussi écrire un tableau de données accessible (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Table_accessibility">Fonctionnalités avancées des tableaux HTML et accessibilité</a>). Voir l'<a href="https://www.w3.org/TR/html-longdesc/">extension de description d'image (longdesc) du W3C <sup>(angl.)</sup></a> pour l'argumentation contre l'attribut <code>longdesc</code>.
         </p>
       </td>
     </tr>
@@ -51,7 +49,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
       </td>
       <td>
         <p>
-          Voir <a href="/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles">les alternatives textuelles</a> pour les options de légendes statiques, <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a>, <a href="/fr/docs/Learn/Accessibility/Multimedia#pistes_de_texte_vidéo">les pistes de texte vidéo</a>, et <a href="/fr/docs/Learn/Accessibility/Multimedia#autre_contenu_multimédia">les autres contenus multimédia</a> pour d'autres alternatives.
+          Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#alternatives_textuelles">les alternatives textuelles</a> pour les options de légendes statiques, <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a>, <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#pistes_de_texte_vidéo">les pistes de texte vidéo</a>, et <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#autre_contenu_multimédia">les autres contenus multimédia</a> pour d'autres alternatives.
         </p>
       </td>
     </tr>
@@ -60,7 +58,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
         Les contrôles qui forment l'interface utilisateur comme les éléments de formulaire et les boutons devraient disposer de libellés textuels qui décrivent leur objectif.
       </td>
       <td>
-        Pour les boutons, il s'agit de s'assurer que le texte du bouton décrit la fonction du bouton (par exemple, <code>&lt;button&gt;Téléverser l'image&lt;/button&gt;</code>). Pour plus d'informations sur les autres contrôles participant à l'interface utilisateur, voir <a href="/fr/docs/Learn/Accessibility/HTML#contrôles_de_linterface_utilisateur">les contrôles de l'interface utilisateur</a>.
+        Pour les boutons, il s'agit de s'assurer que le texte du bouton décrit la fonction du bouton (par exemple, <code>&lt;button&gt;Téléverser l'image&lt;/button&gt;</code>). Pour plus d'informations sur les autres contrôles participant à l'interface utilisateur, voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#contrôles_de_linterface_utilisateur">les contrôles de l'interface utilisateur</a>.
       </td>
     </tr>
     <tr>
@@ -69,7 +67,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
       </td>
       <td>
         <p>
-          Les images décoratives devraient être implémentées à l'aide des images d'arrière-plan CSS (voir <a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrières-plans en CSS</a>). Si vous devez inclure une image décorative avec <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>, fournissez un texte alternatif explicitement vide avec l'attribut <code>alt</code> (<code>alt=""</code>). Sinon, les lecteurs d'écran pourraient vocaliser le chemin du fichier, etc.
+          Les images décoratives devraient être implémentées à l'aide des images d'arrière-plan CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders">Arrières-plans en CSS</a>). Si vous devez inclure une image décorative avec {{htmlelement("img")}}, fournissez un texte alternatif explicitement vide avec l'attribut <code>alt</code> (<code>alt=""</code>). Sinon, les lecteurs d'écran pourraient vocaliser le chemin du fichier, etc.
         </p>
         <p>
           Si vous incluez des vidéos ou des sons en arrière-plan avec une lecture automatique, assurez-vous qu'ils soient aussi discrets que possible et qu'ils ne puissent pas être confondus avec le contenu essentiel de la page. Un contrôle pour les suspendre doit être disponible. Idéalement, on évitera simplement d'inclure ce type de contenu.
@@ -80,7 +78,7 @@ L'information principale à retenir ici est que le texte peut être converti sou
 </table>
 
 > [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles](https://www.w3.org/Translations/WCAG21-fr/#text-alternatives).
+> Voir aussi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#text-alternatives).
 
 ## Règle 1.2 — Fournir des alternatives textuelles aux médias temporels
 
@@ -98,17 +96,17 @@ Les médias temporels sont les médias qui ont une durée comme les fichiers aud
     <tr>
        <td>1.2.1 Fournir des alternatives au contenu pré-enregistré seulement audio ou seulement vidéo (A)</td>
        <td>Une transcription devrait être fournie pour les médias pré-enregistrés qui sont uniquement audio. Une transcription ou une description audio devrait être fournie pour les médias pré-enregistrés qui sont uniquement vidéo (par exemple, une vidéo muette).</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour des informations à ce sujet.</td>
+       <td>Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour des informations à ce sujet.</td>
     </tr>
     <tr>
        <td>1.2.2 Fournir des sous-titres pour les vidéos web (A)</td>
        <td>Des sous-titres devraient être fournis pour les vidéos web (par exemple celles qui utilisent l'élément HTML <code>&lt;video&gt;</code>). Cela rend la vidéo accessible aux personnes qui ne peuvent pas entendre le son de la vidéo.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#pistes_de_texte_vidéo">les pistes textuelles pour les vidéos</a> pour les sous-titres des vidéos HTML et <a href="/fr/docs/Learn/Accessibility/Multimedia#autre_contenu_multimédia">les autres contenus multimédias</a> pour les autres technologies. Voir aussi <a href="https://support.google.com/youtube/answer/2734796?hl=fr">Ajouter des sous-titres sur YouTube</a>.</td>
+       <td>Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#pistes_de_texte_vidéo">les pistes textuelles pour les vidéos</a> pour les sous-titres des vidéos HTML. Voir aussi <a href="https://support.google.com/youtube/answer/2734796?hl=fr">Ajouter des sous-titres sur YouTube</a>.</td>
     </tr>
     <tr>
        <td>1.2.3 Fournir des transcriptions textuelles ou une description audio pour les vidéos web (A)</td>
        <td>Des transcriptions textuelles ou des descriptions audio pour les vidéos web (par exemple celles qui utilisent l'élément HTML <code>&lt;video&gt;</code>) doivent être fournies afin que la vidéo soit accessible aux personnes qui ne peuvent pas voir la vidéo et/ou qui ne peuvent pas connaître le contenu à partir de la seule bande son.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour des informations à ce sujet.</td>
+       <td>Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour des informations à ce sujet.</td>
     </tr>
     <tr>
        <td>1.2.4 Fournir des sous-titres pour l'audio en direct (AA)</td>
@@ -133,18 +131,18 @@ Les médias temporels sont les médias qui ont une durée comme les fichiers aud
     <tr>
        <td>1.2.8 Fournir une alternative aux médias pré-enregistrés (AAA)</td>
        <td>Pour tous les contenus utilisant une vidéo, une transcription textuelle descriptive devrait être fournie, par exemple le script d'un film. Il s'agit de rendre accessible le contenu pour les personnes qui ne peuvent pas l'entendre.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour plus d'informations à ce sujet.</td>
+       <td>Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour plus d'informations à ce sujet.</td>
     </tr>
     <tr>
        <td>1.2.9 Fournir une transcription pour les diffusions audio en direct (AAA)</td>
        <td>Pour toute diffusion audio en direct, un texte descriptif devrait être fourni, tel qu'un script de la pièce ou les paroles de la chanson diffusée. Il s'agit de rendre accessible le contenu pour les personnes qui ne peuvent pas l'entendre.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour plus d'informations à ce sujet.</td>
+       <td>Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour plus d'informations à ce sujet.</td>
     </tr>
  </tbody>
 </table>
 
 > [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.2 sur les alternatives aux médias temporels](https://www.w3.org/Translations/WCAG21-fr/#time-based-media).
+> Voir aussi [la description du WCAG pour la règle 1.2 sur les alternatives aux médias temporels <sup>(angl.)</sup>](https://www.w3.org/Translations/WCAG21-fr/#time-based-media).
 
 ## Règle 1.3 — Créer du contenu pouvant être présenté de différentes façons
 
@@ -165,18 +163,20 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
         </p>
         <ul>
           <li>
-            Les libellés textuels et les éléments de formulaire auxquels ils correspondent. Cette association est construite de façon non-ambigüe avec l'élément <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a>, qui pourra être utilisé par les lecteurs d'écran.
+            Les libellés textuels et les éléments de formulaire auxquels ils correspondent. Cette association est construite de façon non-ambigüe avec l'élément {{htmlelement("label")}}, qui pourra être utilisé par les lecteurs d'écran.
           </li>
           <li>
             Inclure des textes alternatifs pour les images. Le contenu sous forme d'image devrait avoir un texte disponible qui décrit de façon claire le contenu de l'image et ce texte doit pouvoir être associé à l'image par un programme informatique (par exemple avec le texte porté par l'attribut <code>alt</code>), ou pouvoir facilement y être associé (la description est par exemple à côté de l'image). De cette façon, on peut connaître l'intégralité du contenu, même sans pouvoir voir l'image.
           </li>
           <li>
-            Pour les listes, si l'ordre des éléments est important, on utilisera une liste ordonnée (<a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>).
+            Pour les listes, si l'ordre des éléments est important, on utilisera une liste ordonnée ({{htmlelement("ol")}}).
           </li>
         </ul>
       </td>
       <td>
-        L'article <a href="/fr/docs/Learn/Accessibility/HTML">HTML&nbsp;: une bonne base pour l'accessibilité</a> contient de nombreuses informations à ce propos, on pourra notamment consulter <a href="/fr/docs/Learn/Accessibility/HTML#une_bonne_sémantique">une bonne sémantique</a>, <a href="/fr/docs/Learn/Accessibility/HTML#contrôles_de_linterface_utilisateur">les contrôles de l'interface utilisateur</a>, et <a href="/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles">les alternatives textuelles</a>.
+        L'article <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML">HTML&nbsp;: une bonne base pour l'accessibilité</a> contient de nombreuses informations à ce propos, on pourra notamment consulter <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#une_bonne_sémantique">une bonne sémantique</a>, <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#contrôles_de_linterface_utilisateur">les contrôles de l'interface utilisateur</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#utiliser_des_commandes_ui_sémantiques_si_possible">Utiliser des commandes d'interface utilisateur sémantiques si possible</a>, et
+        <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#alternatives_textuelles">les alternatives textuelles</a>.
       </td>
     </tr>
     <tr>
@@ -185,7 +185,7 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
         Un ordre de lecture pertinent et logique devrait pouvoir être déterminé facilement pour tout contenu, même si ce dernier est présenté visuellement de façon inhabituelle. L'ordre devrait être clair grâce à l'utilisation d'éléments sémantiques (titres, paragraphes, etc.), le CSS étant utilisé pour toute mise en forme.
       </td>
       <td>
-        Là encore, voir <a href="/fr/docs/Learn/Accessibility/HTML">HTML&nbsp;: une bonne base pour l'accessibilité</a>.
+        Là encore, voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/HTML">HTML&nbsp;: une bonne base pour l'accessibilité</a>.
       </td>
     </tr>
     <tr>
@@ -208,7 +208,7 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
             <p>Certaines personnes ne peuvent pas effectuer ce geste à l'écran, en raison d'un handicap ou parce que leur appareil ne dispose pas d'une interface tactile. Une méthode alternative doit être fournie, comme un raccourci clavier ou un bouton qui puisse être activé au clavier ou d'une autre façon.</p>
           </li>
         </ul>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Le fait de communiquer des instructions à la seule aide de couleurs est connexe, mais abordé dans une règle différente&nbsp;: 1.4.1.
           </p>
@@ -217,47 +217,41 @@ Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusie
       <td></td>
     </tr>
     <tr>
-      <td>
-        1.3.4 Orientation (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+      <td>1.3.4 Orientation (AA)</td>
       <td>
         La vue et l'utilisation du contenu n'est pas restreinte à une seule orientation, paysage ou portrait, à moins que cette orientation d'affichage soit essentielle.
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Comprendre l'orientation (en anglais)</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Comprendre l'orientation <sup>(angl.)</sup></a>
       </td>
     </tr>
     <tr>
+      <td>1.3.5 Identifier la finalité des champs (AA)</td>
       <td>
-        1.3.5 Identifier la finalité des champs (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
+        Se référer à la liste des <a href="https://w3c.github.io/wcag/guidelines/22/#input-purposes">53 types de champs <sup>(angl.)</sup></a> afin d'identifier la finalité d'un champ donné.
       </td>
       <td>
-        Se référer à la liste des <a href="https://www.w3.org/Translations/WCAG21-fr/#input-purposes">53 types de champs</a> afin d'identifier la finalité d'un champ donné.
-      </td>
-      <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">Comprendre la finalité d'un champ de saisie (en anglais)</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">Comprendre la finalité d'un champ de saisie <sup>(angl.)</sup></a>
       </td>
     </tr>
     <tr>
-      <td>
-        1.3.6 Identifier la fonction (AAA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+      <td>1.3.6 Identifier la fonction (AAA)</td>
       <td>
         Pour le contenu implémenté avec un langage à balises, la fonction d'un composant d'interface utilisateur, des icônes et des régions peut être déterminée par un programme informatique.
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html">Comprendre l'identification de la fonction (en anglais)</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html">Comprendre l'identification de la fonction <sup>(angl.)</sup></a>
       </td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure](https://www.w3.org/Translations/WCAG21-fr/#adaptable).
+> Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#adaptable).
 
 ## Règle 1.4 — Faciliter la perception visuelle et auditive du contenu, notamment en séparant le premier plan de l'arrière-plan
 
-Cette règle consiste à s'assurer que le contenu principal peut facilement se distinguer de l'arrière-plan et des autres décorations. Un exemple classique porte sur la couleur (tant sur le contraste entre les couleurs que sur l'utilisation de couleurs pour véhiculer des informations), mais cela s'applique à d'autres situations également.
+Cette règle consiste à s'assurer que le contenu principal peut facilement se distinguer de l'arrière-plan et des autres décorations. Un exemple classique porte sur la couleur (tant sur le [contraste des couleurs](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) que sur l'[utilisation de la couleur](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color) pour véhiculer des instructions), mais cela s'applique à d'autres situations également.
 
 <table class="standard-table">
   <thead>
@@ -272,7 +266,10 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
           La couleur ne devrait pas être utilisée seule pour véhiculer des informations. Ainsi, pour un formulaire, on ne marquera pas un champ obligatoire avec seulement une couleur (comme le rouge). En complément ou à la place, on pourra utiliser un astérisque avec un libellé «&nbsp;obligatoire&nbsp;», qui sera plus approprié.
       </td>
       <td>
-        Voir <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a> et <a href="/fr/docs/Learn/Forms/How_to_structure_a_web_form#étiquettes_multiples">Les étiquettes multiples</a>.
+        Voir
+        <a href="/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color"
+          >Utilisation de la couleur</a
+        >, <a href="/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a> et <a href="/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#étiquettes_multiples">Les étiquettes multiples</a>.
       </td>
     </tr>
     <tr>
@@ -281,7 +278,7 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
         Pour tout média audio dont la lecture dure plus de trois secondes, on fournira des contrôles accessibles afin de suspendre/reprendre la lecture et pour mettre en sourdine/ajuster le volume.
       </td>
       <td>
-        On utilisera des éléments <code>&lt;button&gt;</code> natifs afin de fournir des contrôles accessibles au clavier, comme montré dans <a href="/fr/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">Fondamentaux pour la mise en forme d'un lecteur vidéo</a>.
+        On utilisera des éléments <code>&lt;button&gt;</code> natifs afin de fournir des contrôles accessibles au clavier, comme montré dans <a href="/fr/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics">Fondamentaux pour la mise en forme d'un lecteur vidéo</a>.
       </td>
     </tr>
     <tr>
@@ -300,7 +297,10 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
         </ul>
       </td>
       <td>
-        Voir <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a>.
+        Voir
+        <a href="/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast"
+          >Contraste des couleurs</a
+        > et <a href="/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a>.
       </td>
     </tr>
     <tr>
@@ -331,7 +331,7 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
         </ul>
       </td>
       <td>
-        Voir <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a>.
+        Voir <a href="/fr/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a>.
       </td>
     </tr>
     <tr>
@@ -371,9 +371,7 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
       <td></td>
     </tr>
     <tr>
-      <td>
-        1.4.10 Redistribution (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+      <td>1.4.10 Redistribution (AA)</td>
       <td>
         <ul>
           <li>
@@ -388,24 +386,20 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
         </ul>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">Comprendre la redistribution (en anglais)</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">Comprendre la redistribution <sup>(angl.)</sup></a>
       </td>
     </tr>
     <tr>
-      <td>
-        1.4.11 Contraste du contenu non-textuel (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+      <td>1.4.11 Contraste du contenu non-textuel (AA)</td>
       <td>
         On doit avoir un ratio de contraste minimal de 3:1 entre les couleurs des éléments d'interface utilisateur et des objets graphiques.
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Comprendre le contraste du contenu non-textuel (en anglais)</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Comprendre le contraste du contenu non-textuel <sup>(angl.)</sup></a>
       </td>
     </tr>
     <tr>
-      <td>
-        1.4.12 Espacement du texte (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+      <td>1.4.12 Espacement du texte (AA)</td>
       <td>
         <p>
           Aucune perte de contenu ou de fonctionnalité ne doit avoir lieu lorsque les styles suivants sont appliqués&nbsp;:
@@ -426,12 +420,11 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
         </ul>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html">Comprendre l'espacement du texte (en anglais)</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html">Comprendre l'espacement du texte <sup>(angl.)</sup></a>
       </td>
     </tr>
     <tr>
-      <td>1.4.13 Contenu au survol ou au focus (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+      <td>1.4.13 Contenu au survol ou au focus (AA)</td>
       <td>
         <p>
           Bien que du contenu supplémentaire puisse apparaître et disparaître en fonction du survol et du focus au clavier, ce contenu doit respecter les trois critères suivants&nbsp;:
@@ -449,19 +442,19 @@ Cette règle consiste à s'assurer que le contenu principal peut facilement se d
         </ul>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">Comprendre le contenu au survol ou au focus</a>
+        <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">Comprendre le contenu au survol ou au focus <sup>(angl.)</sup></a>
       </td>
     </tr>
   </thead>
 </table>
 
 > [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.4 sur le contenu distinguable et la facilitation de la perception visuelle et auditive du contenu, notamment pour distinguer le premier-plan de l'arrière-plan](https://www.w3.org/Translations/WCAG21-fr/#distinguishable).
+> Voir aussi [la description du WCAG pour la règle 1.4 sur le contenu distinguable et la facilitation de la perception visuelle et auditive du contenu, notamment pour distinguer le premier-plan de l'arrière-plan <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#distinguishable).
 
 ## Voir aussi
 
 - [Comprendre les règles pour l'accessibilité des contenus web (WCAG)](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG)
   1. Perceptible
-  2. [Fonctionnel](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3. [Compréhensible](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4. [Robuste](/fr/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  2. [Utilisable](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  3. [Compréhensible](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  4. [Robuste](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) [CSS](/fr/docs/Web/CSS) **`cross-fade()`** peut être utilisée pour fusionner deux ou plusieurs images avec une transparence définie.
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`cross-fade()`** peut être utilisée pour fusionner deux ou plusieurs images avec une transparence définie.
 Elle peut être utilisée pour de nombreuses manipulations d'images de base, telles que la coloration d'une image avec une couleur unie ou la mise en évidence d'une zone particulière de la page en combinant une image avec un dégradé radial.
 
 ## Syntaxe

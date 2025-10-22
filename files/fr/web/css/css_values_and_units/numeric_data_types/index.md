@@ -1,6 +1,6 @@
 ---
 title: Types de données numériques
-slug: Web/CSS/CSS_Values_and_Units/Numeric_data_types
+slug: Web/CSS/CSS_values_and_units/Numeric_data_types
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -212,7 +212,7 @@ Le type {{cssxref("&lt;position&gt;")}} définit le positionnement 2D d'un objet
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("attr", "attr()")}}
 
-La [notation fonctionnelle](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) est un type de valeur qui peut représenter des types plus complexes ou invoquer un traitement spécial par CSS. La syntaxe commence par le nom de la fonction immédiatement suivi d'une parenthèse gauche `(` suivie de l'argument (ou des arguments) de la notation suivie d'une parenthèse droite `)`. Les fonctions peuvent prendre plusieurs arguments, qui sont formatés de manière similaire à une valeur de propriété CSS.
+La [notation fonctionnelle](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) est un type de valeur qui peut représenter des types plus complexes ou invoquer un traitement spécial par CSS. La syntaxe commence par le nom de la fonction immédiatement suivi d'une parenthèse gauche `(` suivie de l'argument (ou des arguments) de la notation suivie d'une parenthèse droite `)`. Les fonctions peuvent prendre plusieurs arguments, qui sont formatés de manière similaire à une valeur de propriété CSS.
 
 L'espace blanc est autorisé, mais optionnel à l'intérieur des parenthèses. (Mais voir les notes concernant l'espace blanc dans les pages pour les fonctions `min()`, `max()`, `minmax()`, et `clamp()`.)
 
@@ -226,7 +226,7 @@ La spécification définit également la fonction `toggle()`. Elle n'a pas encor
 
 ## Voir aussi
 
-- [Types de données textuelles](/fr/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
+- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -1,51 +1,61 @@
 ---
-title: Feuilles de style alternatives
+title: rel="alternate stylesheet"
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 original_slug: Web/CSS/Alternative_style_sheets
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{CSSRef}}
+La paire de mots-clés **`alternate stylesheet`**, lorsqu'elle est utilisée comme valeur pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}}, indique que la ressource cible est une _feuille de style alternative_. Définir des **feuilles de style alternatives** dans une page web permet aux utilisateur·ice·s de voir plusieurs versions d'une page selon leurs besoins ou préférences.
 
-En proposant **des feuilles de style alternatives**, une page web permet à ses utilisateurs de pouvoir choisir parmi différentes version d'une page selon leurs besoins ou leurs préférences.
+> [!NOTE]
+> Cette fonctionnalité n'est pas bien prise en charge dans les navigateurs sans extension. Pour proposer des présentations alternatives qui fonctionnent avec les préférences existantes de l'utilisateur·ice, voir les [fonctions média CSS](/fr/docs/Web/CSS/@media#fonctions_média) {{CSSxRef("@media/prefers-color-scheme","prefers-color-scheme")}} et {{CSSxRef("@media/prefers-contrast","prefers-contrast")}}.
 
-Firefox permet à l'utilisateur de sélectionner le style de la page en utilisant le menu « Affichage > Style de la page », Internet Explorer possède également cette fonctionnalité (depuis IE8), accesssible via « Affichage > Style de la page ». Pour Chrome, il est nécessaire d'utiliser une extension afin de pouvoir utiliser cette fonctionnalité. La page web peut également fournir un élément d'interface utilisateur afin de permettre à l'utilisateur de passer d'un style à un autre.
+Firefox permet aux utilisateur·ice·s de sélectionner des {{Glossary("stylesheet", "feuilles de style")}} alternatives via le sous-menu _Affichage &gt; Style de la page_, qui affiche les valeurs des attributs [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title). Les autres navigateurs nécessitent une extension pour activer cette fonctionnalité. La page web peut aussi fournir sa propre interface utilisateur pour permettre de changer de style.
 
-## Exemple d'application : définir des feuilles de style alternatives
+## Exemples
 
-Pour indiquer des feuilles de style alternatives, on utilisera un élément {{HTMLElement("link")}} avec les attributs `rel="stylesheet alternate"` et `title="..."`. Ainsi :
+### Définir des feuilles de style alternatives
+
+Les feuilles de style alternatives sont spécifiées à l'aide d'éléments {{HTMLElement("link")}} avec les attributs `rel="alternate stylesheet"` et `title="…"`. Par exemple&nbsp;:
 
 ```html
-<link href="reset.css" rel="stylesheet" type="text/css" />
+<link href="reset.css" rel="stylesheet" />
 
-<link
-  href="default.css"
-  rel="stylesheet"
-  type="text/css"
-  title="Style par défaut" />
-<link href="joli.css" rel="alternate stylesheet" type="text/css" title="Joli" />
-<link
-  href="basique.css"
-  rel="alternate stylesheet"
-  type="text/css"
-  title="Basique" />
+<link href="default.css" rel="stylesheet" title="Style par défaut" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fantaisie" />
+<link href="basic.css" rel="alternate stylesheet" title="Basique" />
 ```
 
-Dans cet exemple, les styles « Style par défaut », « Joli » et « Basique » seront listés dans le menu « Style de la page ». C'est le style par défaut (il n'y a pas de composante `alternate` pour l'attribut `rel`) qui sera sélectionné. Lorsque l'utilisateur choisit un autre style, la page est alors immédiatement affichée avec cette feuille de style.
+Dans cet exemple, les styles «&nbsp;Style par défaut&nbsp;», «&nbsp;Fantaisie&nbsp;» et «&nbsp;Basique&nbsp;» seront listés dans le sous-menu _Style de la page_ de Firefox, avec «&nbsp;Style par défaut&nbsp;» pré-sélectionné. Lorsque l'utilisateur·ice sélectionne un autre style, la page est immédiatement re-rendue avec cette feuille de style.
 
-Quel que soit la mise en forme choisie, les règles provenant de la feuille `reset.css` seront toujours appliquées.
+Quel que soit le style sélectionné, les règles de la feuille de style `reset.css` seront toujours appliquées.
+
+### Exemple interactif
+
+[Essayez un exemple fonctionnel ici <sup>(angl.)</sup>](https://mdn.github.io/css-examples/alt-style-sheets/).
 
 ## Détails
 
-Une feuille de style fera partie d'une de ces trois catégories :
+Toute feuille de style dans un document appartient à l'une des catégories suivantes&nbsp;:
 
-- **Persistante** (aucun `rel="alternate"`, aucun `title=""`) : la feuille de style s'applique au document quoi qu'il arrive
-- **Préférée** (aucun `rel="alternate"`, un attribut `title="..."` défini) : la feuille de style est appliquée par défaut mais est désactivée si une autre feuille de style est sélectionnée. **Il ne peut y avoir qu'une seule feuille de style préférée**. Si plusieurs feuilles de style sont fournies avec différentes valeurs pour l'attribut `title`, certaines seront ignorées.
-- **Alternative** (`rel="stylesheet alternate"`, un attribut `title="..."` défini) : la feuille de style est désactivée par défaut mais peut être sélectionnée.
+- **Persistante** (a `rel="stylesheet"`, pas de `title=""`)&nbsp;: toujours appliquée au document.
+- **Préférée** (a `rel="stylesheet"` avec un attribut `title="…"` spécifié)&nbsp;: appliquée par défaut, mais {{DOMxRef("StyleSheet.disabled", "désactivée", "", 1)}} si une feuille de style alternative est sélectionnée. **Il ne peut y avoir qu'une seule feuille de style préférée**, donc fournir des feuilles de style avec des attributs title différents fera que certaines seront ignorées.
+- **Alternative** (`rel="alternate stylesheet"` avec un attribut `title="…"` spécifié)&nbsp;: désactivée par défaut, peut être sélectionnée.
 
-Lorsqu'une feuille de style contient un attribut `title` sur l'élément {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} ou sur l'élément {{HTMLElement("style")}}, ce titre est l'une des options proposées à l'utilisateur. Les feuilles de style qui contiennent le même titre (`title` a la même valeur) s'appliqueront toutes pour ce choix. Enfin, les feuilles de style qui n'ont aucun attribut `title` seront toujours appliquées.
+Dans les cas où un menu de feuilles de style existe, lorsque les feuilles de style sont référencées avec un attribut `title` sur l'élément `{{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}}` ou {{HTMLElement("style")}}, le titre devient l'un des choix proposés à l'utilisateur·ice. Les feuilles de style liées avec le même [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) font partie du même choix. Les feuilles de style liées sans attribut `title` sont toujours appliquées.
 
-On utilisera `rel="stylesheet"` pour pointer vers la feuille de style par défaut et `rel="alternate stylesheet"` pour pointer vers les feuilles de style alternatives. Cela permet à l'agent utilisateur de savoir quelle feuille doit être appliquée par défaut ; c'est aussi cette valeur qui sera utilisée pour les navigateurs qui ne prennent pas en charge cette fonctionnalité.
+Utilisez `rel="stylesheet"` pour lier le style par défaut, et `rel="alternate stylesheet"` pour lier des feuilles de style alternatives. Cela indique au navigateur quel titre de feuille de style doit être sélectionné par défaut, et fait que cette sélection par défaut s'applique dans les navigateurs qui ne prennent pas en charge les feuilles de style alternatives.
 
 ## Spécifications
 
 {{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [CSS](/fr/docs/Web/CSS)
+- [Utiliser des informations de style dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

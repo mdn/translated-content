@@ -777,11 +777,11 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 関数を使用することで、同じロジックを何度も書く必要がなくなり、一度書いたコードを何度も再利用することができます。
 ほとんどのプログラミング言語は関数に対応しているだけでなく、一般的なタスクのための便利な組み込み関数が決まりますので、自分で一から書く必要はありません。
 
-CSS にも[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)があり、他の言語の関数と同じように動作します。
+CSS にも[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)があり、他の言語の関数と同じように動作します。
 実際、すでに CSS 関数としては、上記の[色](#色)の節で、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) と [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) 関数をすでに見てきました。
 
 色を適用する以外にも、 CSS で関数を使用して多数のことを行うことができます。
-例えば[座標変換関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#座標変換関数)はページ上の要素を移動したり、回転させたり、変倍したりする一般的な方法です。
+例えば[座標変換関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#座標変換関数)はページ上の要素を移動したり、回転させたり、変倍したりする一般的な方法です。
 何かを水平や垂直に移動させるには [`translate()`](/ja/docs/Web/CSS/transform-function/translate) を、何かを回転させるには [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate) を、何かを大きくしたり小さくしたりするには [`scale()`](/ja/docs/Web/CSS/transform-function/scale) を使うでしょう。
 
 ### 数学関数
@@ -790,7 +790,7 @@ CSS にも[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)が
 もしこれらの値を他の値に基づいて変化させたい場合は、いくつかの計算が必要になります。
 値のパーセント値を計算したり、数値を別の数値に追加したりして、その結果で CSS を更新します。
 
-CSS は[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)に対応しており、静的な数値に頼ったり JavaScript で計算したりする代わりに計算を行うことができます。
+CSS は[数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)に対応しており、静的な数値に頼ったり JavaScript で計算したりする代わりに計算を行うことができます。
 最も一般的な数学関数の一つは [`calc()`](/ja/docs/Web/CSS/calc) で、足し算、引き算、掛け算、割り算のような処理を行うことができます。
 
 例えば、ある要素の幅を親コンテナーの 20% に 100px を加えた値に設定したいとします。
@@ -820,8 +820,8 @@ CSS は[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#
 {{EmbedLiveSample("calc")}}
 
 他にも CSS で使用することができる数学関数はたくさんあります。[`min()`](/ja/docs/Web/CSS/min)、[`max()`](/ja/docs/Web/CSS/max)、[`clamp()`](/ja/docs/Web/CSS/clamp) などで、それぞれ設定した値の中から最小、最大、中間の値を選ぶことができます。
-また、[三角関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#三角関数)、たとえば [`sin()`](/ja/docs/Web/CSS/sin)、[`cos()`](/ja/docs/Web/CSS/cos)、[`tan()`](/ja/docs/Web/CSS/tan) あんどを使用して、この点を中心に要素を回転させる角度を計算したり、[色相角](/ja/docs/Web/CSS/hue)を引数として色を選んだりすることができます。
-[指数関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#指数関数)は、アニメーションやトランジションに使用することもでき、何かの移動や見てくれを非常に具体的に制御する必要がある場合に使用します。
+また、[三角関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#三角関数)、たとえば [`sin()`](/ja/docs/Web/CSS/sin)、[`cos()`](/ja/docs/Web/CSS/cos)、[`tan()`](/ja/docs/Web/CSS/tan) あんどを使用して、この点を中心に要素を回転させる角度を計算したり、[色相角](/ja/docs/Web/CSS/hue)を引数として色を選んだりすることができます。
+[指数関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#指数関数)は、アニメーションやトランジションに使用することもでき、何かの移動や見てくれを非常に具体的に制御する必要がある場合に使用します。
 
 CSS関数について知っておくことは有益なことです。普通の CSS で取得できる結果を得るために、カスタムコードを書いたり、繰り返しコードを書いたりせずに済むようになります。
 
@@ -831,7 +831,7 @@ CSS関数について知っておくことは有益なことです。普通の C
 
 ## まとめ
 
-ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
+ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
 
 覚えておくべき重要なことは、各プロパティには許可される値の定義されたリストがあり、各値にはサブ値が何であるかを説明する定義があるということです。詳細は MDN で調べることができます。例えば、[`<image>`](/ja/docs/Web/CSS/image) でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう。
 

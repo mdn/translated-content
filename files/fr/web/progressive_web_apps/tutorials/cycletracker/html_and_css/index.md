@@ -84,7 +84,7 @@ La balise racine [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) englobe t
 
 L'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) contient des informations à propos de l'application web, interprétables par une machine et qui ne sont pas visibles à l'exception de [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title) qui affiche le titre de la page dans l'onglet du navigateur.
 
-`<head>` contient toutes les [métadonnées](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Guides/Viewport_meta_element) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
+`<head>` contient toutes les [métadonnées](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
 
 ```html
 <head>
@@ -172,7 +172,7 @@ Pour assembler le tout, on ajoute deux paragraphes ([`<p>`](/fr/docs/Web/HTML/Re
 </form>
 ```
 
-Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs/conflicting/Learn_web_development/Extensions/Forms).
+Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs//Learn_web_development/Extensions/Forms\).
 
 ### Textes temporaires en dur
 
@@ -323,7 +323,7 @@ li:nth-of-type(even) {
 }
 ```
 
-Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/CSS_selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started).
+Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/CSS_selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started).
 
 Que vous utilisiez le CSS précédent tel quel, ou que vous ayez adapté cette mise en forme, voire que vous ayez écrit votre feuille de style à partir de 0, incluez ce contenu CSS dans un nouveau fichier et enregistrez-le avec le nom [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), dans le même répertoire que le fichier `index.html`.
 
