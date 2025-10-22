@@ -5,7 +5,7 @@ slug: Web/CSS/justify-self
 
 [CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对齐方式。
 
-{{InteractiveExample("CSS Demo: justify-self")}}
+{{InteractiveExample("CSS 演示：justify-self")}}
 
 ```css interactive-example-choice
 justify-self: stretch;
@@ -26,9 +26,9 @@ justify-self: end;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+    <div class="transition-all" id="example-element">一</div>
+    <div>二</div>
+    <div>三</div>
   </div>
 </section>
 ```
@@ -44,18 +44,18 @@ justify-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
 
 此属性的效果取决于我们所处的布局模式：
 
-- 在块级布局中，它对齐一个项目在其包含块的内联轴上。
-- 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）
-- 在表格布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables) 关于块、绝对定位以及表格布局中的对齐方式）
-- 在弹性布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)关于弹性布局中的对齐方式）
-- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
+- 在块级布局中，它将项目在其包含块的行向轴上对齐。
+- 对于绝对定位的元素，它将项目在其包含块的行向轴上对齐，同时考虑顶部、左侧、底部和右侧的偏移值。
+- 在表格布局中，这个属性被*忽略*。了解更多关于[区块、绝对定位以及表格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- 在弹性布局中，这个属性被*忽略*。了解更多关于[弹性布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- 在栅格布局中，它将项目在其网格区域内沿内联轴对齐。了解更多关于[栅格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout) 
 
 ## 语法
 
@@ -85,7 +85,7 @@ justify-self: last baseline;
 justify-self: safe center;
 justify-self: unsafe center;
 
-/* 全局关键字 */
+/* 全局值 */
 justify-self: inherit;
 justify-self: initial;
 justify-self: unset;
@@ -96,8 +96,8 @@ justify-self: unset;
 - 基本关键字： `normal`， `auto`，或者 `stretch`。
 - 基线对齐：`baseline` 关键字，加上可选的 `first` 或者 `last`。
 - 可定位对齐：
-  - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
-  - 加上可选的 `safe` 或者`unsafe`。
+  - `center`、`start`、`end`、`flex-start`、`flex-end`、`self-start`、`self-end`、`left` 或 `right`。
+  - 加上可选的 `safe` 或者 `unsafe`。
 
 ### 值
 
