@@ -120,7 +120,7 @@ Web 最常用的图像格式是：
 
     允许的值为：
     - `anonymous`
-      - : 发送忽略凭据的跨源请求（即，不携带 {{glossary("cookie")}}、[X.509 证书](https://datatracker.ietf.org/doc/html/rfc5280) 或 {{httpheader("Authorization")}} 请求标头）。
+      - : 发送忽略凭据的跨源请求（即，不携带 {{glossary("cookie")}}、[X.509 证书](https://datatracker.ietf.org/doc/html/rfc5280)或 {{httpheader("Authorization")}} 请求标头）。
     - `use-credentials`
       - : 发送携带凭据的跨源请求（比如 cookie、X.509 证书和 `Authorization` 请求标头）。如果服务器不选择与源站共享凭据（通过返回 `Access-Control-Allow-Credentials: true` 响应标头），则浏览器会将图像标记为被污染且限制对其图像数据的访问。
 
