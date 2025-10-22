@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`Iterator.from()`** 静态方法从迭代器或可迭代对象创建一个新的 {{jsxref("Iterator")}} 对象。
 
