@@ -55,7 +55,7 @@ justify-self: end;
 - 对于绝对定位的元素，它将项目在其包含块的行向轴上对齐，同时考虑顶部、左侧、底部和右侧的偏移值。
 - 在表格布局中，这个属性被*忽略*。了解更多关于[区块、绝对定位以及表格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
 - 在弹性布局中，这个属性被*忽略*。了解更多关于[弹性布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- 在栅格布局中，它将项目在其网格区域内沿内联轴对齐。了解更多关于[栅格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout) 
+- 在栅格布局中，它将项目在其网格区域内沿内联轴对齐。了解更多关于[栅格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
 
 ## 语法
 
