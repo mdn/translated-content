@@ -52,7 +52,7 @@ windowButton.addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample('confirmar', '100%', '80px', 'allow-modals allow-popups')}}
+{{EmbedLiveSample("confirmar", "100%", "80px", "allow-modals allow-popups")}}
 
 ## Notas
 
