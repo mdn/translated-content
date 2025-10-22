@@ -1,33 +1,30 @@
 ---
-title: Screen.height
+title: Screen：height 属性
+short-title: height
 slug: Web/API/Screen/height
+l10n:
+  sourceCommit: 896a41d7d9832367a1e24af567fb419e9d4182f8
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
-## 概述
+**`Screen.height`** 只读属性返回屏幕的高度，单位为 CSS 像素。
 
-返回屏幕的高度（单位：像素）。
+## 值
 
-## 语法
-
-```plain
-iHeight = window.screen.height
-```
+一个数字。
 
 ## 示例
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
-  // something is occupying some screen real estate!
+  // 有东西正在占用屏幕空间！
 }
 ```
 
 ## 备注
 
-注意，该属性返回的高度值并不是全部对浏览器窗口可用。小工具（Widgets），如任务栏或其他特殊的程序窗口，可能会减少浏览器窗口和其他应用程序能够利用的空间。
-
-当返回屏幕高度时，IE 会考虑缩放设置。只有当缩放比例为 100% 时，IE 才会返回真实的屏幕高度。
+请注意，并非此属性返回的所有高度都可供浏览器窗口本身使用。任务栏等操作系统组件，或与系统集成的特殊应用窗口（例如最小化后像额外工具栏一样显示的音乐播放器）等，可能会减少浏览器窗口和其他应用程序可用的屏幕空间。因此，`window.screen.height` 与 `window.screen.availHeight` 之间会存在差异。
 
 ## 规范
 
