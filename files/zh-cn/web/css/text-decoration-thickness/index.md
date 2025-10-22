@@ -121,14 +121,6 @@ text-decoration-thickness: unset;
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 规范
-
-{{Specifications}}
-
 > [!NOTE]
 > 此属性曾经称为 `text-decoration-width`，但在 2019 年更新为 `text-decoration-thickness`。
 
