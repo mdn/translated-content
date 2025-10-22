@@ -272,7 +272,7 @@ Web 最常用的图像格式是：
   - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id)。
 
     > [!NOTE]
-    > 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
+    > 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML 动态标准](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element)中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
 
 - `name` {{Deprecated_Inline}}
   - : 元素的名字。使用 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性代替此废弃属性。
@@ -335,7 +335,7 @@ Web 最常用的图像格式是：
 
 `title` 属性的值通常以工具提示形式呈现：当光标停留在图像上时会短暂显示。虽然这*可能*为用户提供额外信息，但切勿假设用户必定能看到它——用户可能仅使用键盘或触摸屏操作。若存在对用户特别重要或有价值的信息，请采用上述方法行内呈现，而非使用 `title`。
 
-- [HTML title 属性使用指南 – 更新版 | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+- [HTML title 属性使用指南——更新版 | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 
 ## 示例
 
