@@ -620,7 +620,7 @@
 /ja/docs/DOM/HTMLTitleElement	/ja/docs/Web/API/HTMLTitleElement
 /ja/docs/DOM/ImageData	/ja/docs/Web/API/ImageData
 /ja/docs/DOM/KeyboardEvent	/ja/docs/Web/API/KeyboardEvent
-/ja/docs/DOM/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/ja/docs/DOM/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /ja/docs/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
 /ja/docs/DOM/MediaQueryList	/ja/docs/Web/API/MediaQueryList
 /ja/docs/DOM/Mozilla_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
@@ -2794,7 +2794,7 @@
 /ja/docs/Transforming_XML_with_XSLT	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /ja/docs/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
 /ja/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/ja/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/ja/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/ja/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /ja/docs/Tutorials/Using_CSS_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Upcoming_Firefox_features_for_developers	/ja/docs/Mozilla/Firefox/Releases/4
 /ja/docs/Updating_extensions_for_Firefox_2	/ja/docs/Mozilla/Firefox/Releases/2/Updating_extensions
@@ -2988,8 +2988,10 @@
 /ja/docs/Web/API/Document_Object_Model/Examples	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Introduction	/ja/docs/Web/API/Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/ja/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Whitespace	/ja/docs/Web/CSS/CSS_text/Whitespace

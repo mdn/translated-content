@@ -22,7 +22,7 @@ querySelector(selectors)
 ### 引数
 
 - `selectors`
-  - : 文字列で、照合する 1 つ以上のセレクターを設定します。この文字列は妥当な CSS セレクターでなければなりません。そうでない場合は `SyntaxError` が発生します。セレクターとその管理の方法の詳細について、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)を参照してください。
+  - : 文字列で、照合する 1 つ以上のセレクターを設定します。この文字列は妥当な CSS セレクターでなければなりません。そうでない場合は `SyntaxError` が発生します。セレクターとその管理の方法の詳細について、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)を参照してください。
 
 > [!NOTE]
 > 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](#特殊文字のエスケープ)を参照してください。
@@ -105,7 +105,7 @@ const el = document.querySelector(
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
 - {{domxref("Element.querySelectorAll()")}}
