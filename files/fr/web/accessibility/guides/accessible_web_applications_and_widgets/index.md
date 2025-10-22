@@ -1,21 +1,22 @@
 ---
 title: Aperçu sur le développement des applications Web et des Widgets accessibles
+short-title: Applications et widgets Web accessibles
 slug: Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 original_slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+l10n:
+  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
 
-{{AccessibilitySidebar}}
-
-Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l'utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l'histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d'écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d'utilisateurs.
+La plupart des bibliothèques JavaScript proposent une collection de widgets côté client qui imitent le comportement des interfaces de bureau classiques. Des curseurs, barres de menus, listes de fichiers, etc., peuvent être créés avec JavaScript, CSS et HTML. Comme la spécification HTML4 ne fournit pas de balises intégrées pour décrire sémantiquement ces widgets, les développeur·euse·s utilisent généralement des éléments HTML génériques comme {{HTMLElement('div')}} et {{HTMLElement('span')}}. Cela donne un widget visuellement similaire à son équivalent de bureau, mais il manque souvent d'informations sémantiques dans le balisage pour être utilisable par une technologie d'assistance.
 
 ## Problématique
 
-La plupart des librairies JavaScript proposent des composants côté client qui miment le comportement familier des interfaces de bureaux classiques. Carrousels, barres de menu et d'autres composants peuvent être créés avec JavaScript, CSS et HTML. Mais du moment que les spécifications HTML 4 ne proposaient pas de tags pour décrire sémantiquement ce type de composants, les développeurs se contentaient d'éléments génériques tel que le tag `<div>` ou le tag `<span>`. Or, si d'apparence ces composants ressemblaient parfaitement à ceux spécifiques aux applications de bureau, on ne disposait pas d'informations sémantiques suffisantes pour les rendres accessibles aux technologies d'assistance. L'accès au contenu dynamique d'une page Web peut devenir problématique plus particulièrement pour les utilisateurs qui, pour une raison ou pour une autre ne peuvent pas voir l'écran. Les niveaux de stock, les indicateurs de progression... modifient le DOM de telle sorte que les technologies d'assistance n'y ont pas accès. C'est dans ce contexte que [ARIA](/fr/ARIA) entre en jeu.
+Le contenu dynamique d'une page web peut être particulièrement problématique pour les utilisateur·ice·s qui, pour diverses raisons, ne peuvent pas voir l'écran. Les flux boursiers, les mises à jour en direct de Twitter, les indicateurs de progression, etc., modifient le DOM d'une façon que les technologies d'assistance ne détectent pas toujours. C'est là qu'intervient l'[ARIA](/fr/docs/Web/Accessibility/ARIA).
 
-_Exemple 1: Code d_'_une tabulation sans informations ARIA. Il n'y a aucune information permettant de décrire la forme du widget et ses fonctions._
+_Exemple 1&nbsp;: Balisage d'un widget d'onglets sans étiquetage ARIA. Il n'y a aucune information dans le code pour décrire la forme et la fonction du widget._
 
 ```html
-<!-- This is a tabs widget. How would you know, looking only at the markup? -->
+<!-- Ceci est un widget d'onglets. Comment le sauriez-vous en regardant uniquement le balisage ? -->
 <ol>
   <li id="ch1Tab">
     <a href="#ch1Panel">Chapitre 1</a>
@@ -35,31 +36,34 @@ _Exemple 1: Code d_'_une tabulation sans informations ARIA. Il n'y a aucune info
 </div>
 ```
 
-_Example 2: Telles qu'elles sont représentées ci-dessous, les tabulations peuvent être reconnues en tant que tel par les utilisateurs. Or aucune information sémantique exploitable par une technologie d_'_assistance n_'_est présente._
-![Screenshot of the tabs widget](tabs_widget.png)
+_Exemple 2&nbsp;: Voici comment le widget d'onglets peut être stylisé visuellement. Les utilisateur·ice·s peuvent le reconnaître à l'œil, mais il n'y a aucune sémantique exploitable par une technologie d'assistance._
+
+![Capture d'écran du widget d'onglets](tabs_widget.png)
 
 ## ARIA
 
-[WAI-ARIAI](https://www.w3.org/WAI/standards-guidelines/aria/), les spécifications concernant les applications **internet "riches" et accessibles** sont publiées par l'iniative du [W3C sur l'accessibilité](https://www.w3.org/WAI/), et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d'interfaces utilisateurs les plus connus.
+**ARIA** permet aux développeur·euse·s de décrire leurs widgets plus précisément en ajoutant des attributs spéciaux au balisage. Conçue pour combler le fossé entre les balises HTML standard et les contrôles de type bureau des applications web dynamiques, ARIA fournit des rôles et des états qui décrivent le comportement de la plupart des widgets d'interface utilisateur connus.
 
 > [!WARNING]
-> Beaucoup d'entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu'utiliser ARIA**.
+> Beaucoup de ces fonctionnalités ont été ajoutées lorsque les navigateurs ne prenaient pas encore en charge les fonctionnalités HTML modernes. **Les développeur·euse·s doivent toujours privilégier l'utilisation de l'élément HTML sémantique approprié plutôt que d'utiliser ARIA**.
 
-Les spécifications ARIA distinguent 3 types d'attributs : rôles, états et propriétés. Les rôles sont utilisés pour les widgets ne faisant pas partie des spécifications HTML 4 comme des sliders, menus, barres, boites de dialogue... Les propriétés sont utilisées pour représenter les caractéristiques de ces widgets, elles décrivent les caractéristiques de ces widgets comme s'il sont déplaçables avec la souris, requièrent un élément ou ont un popup associés à eux. Les états, comme leur nom l'indique, servent à representer l'état actuel de ces éléments en informant les technologies d'assistance s'il est occupé, désactivé, sélectionné ou masqué.
+La spécification ARIA comprend trois types d'attributs&nbsp;: rôles, états et propriétés. Les rôles décrivent des widgets absents de HTML 4, comme les curseurs, barres de menus, onglets et boîtes de dialogue. Les propriétés décrivent les caractéristiques de ces widgets, par exemple s'ils sont déplaçables, s'ils ont un élément requis ou un menu contextuel. Les états décrivent l'état d'interaction d'un élément, indiquant à la technologie d'assistance s'il est occupé, désactivé, sélectionné ou masqué.
 
-Les attributs ARIA ont été conçus de façon à être interprétés directement par les navigateurs Web et interagir directement avec les APIs d'accessibilité natives des systèmes d'exploitation. Quand les spécifications ARIA sont implementées, les technologies d'assistance peuvent interagir avec les widgets JavaScript personnalisés de la même façon qu'ils interagissent avec leurs équivalents de bureau. Les technologies d'assistance peuvent ainsi fournir une expérience utilisateur homogène.
+Les attributs ARIA sont interprétés automatiquement par le navigateur et traduits vers les API d'accessibilité du système d'exploitation. Un élément avec `role="slider"` sera contrôlé comme un curseur natif du système.
 
-_Example 3 : L'exemple ci-dessous ajoute des attributs ARIA aux balises déjà présentes._
+Cela garantit une expérience utilisateur plus cohérente que dans la génération précédente d'applications web, car les utilisateur·ice·s de technologies d'assistance peuvent appliquer leurs connaissances des applications de bureau aux applications web.
+
+_Exemple 3&nbsp;: Balisage du widget d'onglets avec les attributs ARIA ajoutés._
 
 ```html
 <!-- Les tabulations sont bien définies  -->
 <!-- Des attributs ARIA ont été ajoutés pour lister les différentes tabulations. -->
 <ol role="tablist">
   <li id="ch1Tab" role="tab">
-    <a href="#ch1Panel">Chapter 1</a>
+    <a href="#ch1Panel">Chapitre 1</a>
   </li>
   <li id="ch2Tab" role="tab">
-    <a href="#ch2Panel">Chapter 2</a>
+    <a href="#ch2Panel">Chapitre 2</a>
   </li>
   <li id="quizTab" role="tab">
     <a href="#quizPanel">Quiz</a>
@@ -69,37 +73,37 @@ _Example 3 : L'exemple ci-dessous ajoute des attributs ARIA aux balises déjà p
 <div>
   <!-- Remarquez les attributs role and aria-labelledby servant à décrire les tabulations. -->
   <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
-    Chapter 1 content goes here
+    Contenu du Chapitre 1
   </div>
   <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
-    Chapter 2 content goes here
+    Contenu du Chapitre 2
   </div>
   <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
-    Contenu du Quiz;/div>
+    Contenu du Quiz
   </div>
 </div>
 ```
 
-Les versions récentes des navigateurs majeurs du marché fournissent un support ARIA Firefox, Chrome, Safari, Internet Explorer... De nombreuses technologies d'assistance libres d'accès tel que NVDA et Orca fournissent aussi un support ARIA. Le support de ces spécifications est aussi de plus en plus présent dans les balises des librairies JavaScript : JQuery UI, YUI, Google Closure et Dojo Dijit.
+ARIA est [largement prise en charge <sup>(angl.)</sup>](https://caniuse.com/#feat=wai-aria) par tous les principaux navigateurs et de nombreuses technologies d'assistance.
 
 ### Les changement représentationnels
 
 Les changements représentationnels incluent l'utilisation du CSS pour changer l'apparence du contenu (mettre une bordure rouge autour de données invalides, changer la couleur de fond d'une case à cocher), le faire apparaitre ou disparaitre.
 
-#### Les Changements d'états
+#### Les changements d'états
 
-Les attributs pour décrire l'état actuel d'un widget sont fournis, par exemple&nbsp;:
+ARIA fournit des attributs pour déclarer l'état actuel d'un widget d'interface. Exemples (liste non exhaustive)&nbsp;:
 
 - `aria-checked`
-  - : indique l'état d'une case à cocher ou d'un bouton radio,
+  - : Indique l'état d'une case à cocher ou d'un bouton radio.
 - `aria-disabled`
-  - : indique qu'un élément est visible, mais désactivé,
-- `aria-expanded`
-  - : indique qu'un élément est déroulé.
+  - : Indique qu'un élément est visible mais non modifiable ou non utilisable.
+- `aria-grabbed`
+  - : Indique l'état «&nbsp;attrapé&nbsp;» d'un objet lors d'une opération de glisser-déposer.
 
-La liste n'est pas exhaustive. Pour voir la liste complète, consulter [les spécifications des états et propriétés ARIA)](https://www.w3.org/TR/wai-aria-1.1/#introstates).
+(Pour la liste complète des états ARIA, consulter la [liste des états et propriétés ARIA <sup>(angl.)</sup>](https://w3c.github.io/aria/#introstates).)
 
-Les développeurs devraient se servir des états ARIA pour indiquer l'état des widgets et utiliser les sélecteurs d'attributs CSS pour en modifier l'apparence en fonction des changements d'états plutôt qu'au moyen d'un script qui modifierait des classes sur le widget.
+Les développeur·euse·s doivent utiliser les états ARIA pour indiquer l'état des éléments de widget et utiliser les sélecteurs d'attributs CSS pour modifier l'apparence visuelle selon les changements d'état (plutôt que de modifier une classe par script).
 
 #### Les changements de visibilité
 
@@ -109,7 +113,7 @@ Les parties pertinentes de l'exemple sont expliquées ci-dessous.Dans cet exempl
 
 ```html
 <div class="text">
-  <label id="tp1-label" for="first">First Name:</label>
+  <label id="tp1-label" for="first">Prénom&nbsp;:</label>
   <input
     type="text"
     id="first"
@@ -119,13 +123,12 @@ Les parties pertinentes de l'exemple sont expliquées ci-dessous.Dans cet exempl
     aria-describedby="tp1"
     aria-required="false" />
   <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
-    Your first name is optional
+    Votre prénom est facultatif
   </div>
 </div>
 ```
 
-Le CSS pour ce balisage est montré dans l'exemple 2b. Notez qu'il n'y a pas de nom de classe personnalisé utilisé, seul le statut de l'attribut **`aria-hidden`** à la ligne 1*.
-Exemple 2b. Un attribut basé sur le sélecteur indiquant l'état.*
+Le CSS pour ce balisage est montré ci-dessous. Notez qu'aucun nom de classe personnalisé n'est utilisé, seul le statut de l'attribut **`aria-hidden`** compte.
 
 ```css
 div.tooltip[aria-hidden="true"] {
@@ -133,9 +136,7 @@ div.tooltip[aria-hidden="true"] {
 }
 ```
 
-Le JavaScript à mettre à jour est la propriété **`aria-hidden`** du formulaire montré dans l'exemple 2c. Notez que le script met à jour seulement l'attribut **`aria-hidden`** à la (ligne 2) ; il n'y a pas besoin d'ajouter ou de supprimer un nom de classe personnalisé.
-
-_Exemple 2c. JavaScript pour mettre à jour l'attribut aria-checked._
+Le JavaScript permettant de mettre à jour la propriété **`aria-hidden`** du formulaire présenté ci-dessus est donné dans le code suivant. Notez que le script ne fait que mettre à jour l'attribut **`aria-hidden`**&nbsp;; il n'est pas nécessaire d'ajouter ou de retirer une classe personnalisée.
 
 ```js
 var showTip = function (el) {
@@ -145,66 +146,31 @@ var showTip = function (el) {
 
 ### Les changements de rôles
 
-ARIA permet aux développeurs de déclarer un rôle sémantique pour un élément qui produirait des sémantiques fausses. Par exemple, quand une liste non ordonnée est utilisée pour créer un menu, {{ HTMLElement("ul") }} devrait avoir un **`role`** de `menubar` et chaque {{ HTMLElement("li") }} devrait avoir un **`role`** de `menuitem`. Le **`role`** d'un élément ne doit pas changer. À la place, il faut supprimer l'élément original et le remplacer par un nouveau **`role`**.
+ARIA permet aux développeur·euse·s de déclarer un rôle sémantique pour un élément qui, autrement, n'aurait pas ou aurait une sémantique incorrecte. Le **`role`** d'un élément ne doit pas changer. Il faut plutôt supprimer l'élément d'origine et le remplacer par un élément avec le nouveau **`role`**.
 
-Considérons une zone d'écriture, soit une zone qui permet à l'utilisateur d'éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n'est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d'implémenter le mode "vue" avec un texte en lecture seule via l'élément {{ HTMLElement("input") }} et en configurant le **`role`** ARIA à `button`, puis passe au mode "édition" en rendant l'élément écrivable et en supprimant le **`role`** attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).
+Par exemple, considérons un widget d'_édition en ligne_&nbsp;: un composant qui permet à l'utilisateur·ice de modifier un texte directement, sans changer de contexte. Ce composant possède un mode «&nbsp;vue&nbsp;», dans lequel le texte n'est pas éditable mais peut être activé, et un mode «&nbsp;édition&nbsp;», dans lequel le texte peut être modifié. Un·e développeur·euse pourrait être tenté·e d'implémenter le mode «&nbsp;vue&nbsp;» en utilisant un élément texte {{ HTMLElement("input") }} en lecture seule et en lui attribuant le **`role`** ARIA `button`, puis de passer au mode «&nbsp;édition&nbsp;» en rendant l'élément éditable et en supprimant l'attribut **`role`** (puisque les éléments {{ HTMLElement("input") }} ont leur propre sémantique de rôle).
 
-Ne faites pas ça. À la place, il vaut mieux implémenter le mode "vue" avec un autre élément, comme {{ HTMLElement("div") }} ou {{ HTMLElement("span") }} avec un **`role`** de `button`, et le mode "édition" avec un élément texte {{ HTMLElement("input") }}.
+Ne faites pas cela. Il vaut mieux implémenter le mode «&nbsp;vue&nbsp;» avec un autre élément, comme un {{ HTMLElement("div") }} ou un {{ HTMLElement("span") }} avec un **`role`** de `button`, et le mode «&nbsp;édition&nbsp;» avec un élément texte {{ HTMLElement("input") }}.
 
 ## La navigation au clavier
 
-Souvent, les développeurs négligent la prise en charge du clavier lorsqu'ils créent des widgets personnalisés. Pour être accessible à une large gamme d'utilisateurs, toutes les fonctionnalités d'une application Web ou d'un widget doivent également pouvoir être contrôlées avec le clavier, sans nécessiter de souris. En pratique, cela implique généralement de suivre les conventions prises en charge par des widgets similaires sur le bureau, en tirant pleinement partie des touches <kbd>Tab</kbd>, <kbd>Entrée</kbd>, <kbd>Espace</kbd> et des flèches.
+Souvent, les développeur·euse·s négligent la prise en charge du clavier lorsqu'ils créent des widgets personnalisés. Pour être accessible à une large gamme d'utilisateur·ice·s, toutes les fonctionnalités d'une application Web ou d'un widget doivent également pouvoir être contrôlées avec le clavier, sans nécessiter de souris. En pratique, cela implique généralement de suivre les conventions adoptées par des widgets similaires sur le bureau, en tirant pleinement parti des touches <kbd>Tab</kbd>, <kbd>Entrée</kbd>, <kbd>Espace</kbd> et des flèches.
 
-Traditionnellement, la navigation au clavier sur le Web était limitée à la touche Tabulation. Un utilisateur appuie sur <kbd>Tab</kbd> pour faire la mise au point de chaque lien, bouton ou formulaire sur la page dans un ordre linéaire, en utilisant <kbd><kbd>Maj</kbd>+<kbd>Tab</kbd></kbd> pour revenir en arrière. C'est une forme unidimensionnelle de navigation en avant ou en arrière, un élément à la fois. Sur les pages assez denses, un utilisateur clavier doit souvent appuyer plusieurs fois sur la touche <kbd>Tab</kbd> avant d'accéder à la section requise. La mise en œuvre de conventions de clavier de type bureautique sur le Web peut considérablement accélérer la navigation pour de nombreux utilisateurs.
+Traditionnellement, la navigation au clavier sur le Web était limitée à la touche <kbd>Tab</kbd>. Un·e utilisateur·ice appuie sur <kbd>Tab</kbd> pour faire la mise au point de chaque lien, bouton ou formulaire sur la page dans un ordre linéaire, en utilisant <kbd><kbd>Maj</kbd>+<kbd>Tab</kbd></kbd> pour revenir en arrière. Il s'agit d'une navigation unidimensionnelle — en avant ou en arrière, un élément à la fois. Sur les pages denses, un·e utilisateur·ice au clavier doit souvent appuyer de nombreuses fois sur la touche <kbd>Tab</kbd> avant d'accéder à la section souhaitée. Mettre en œuvre des conventions de navigation de type bureau sur le Web peut considérablement accélérer la navigation pour de nombreux utilisateur·ice·s.
 
-Voici un résumé de la façon dont la navigation au clavier devrait fonctionner dans une application Web compatible ARIA :
+Voici un résumé de la façon dont la navigation au clavier devrait fonctionner dans une application Web compatible ARIA&nbsp;:
 
-- La touche
-
-  <kbd>Tab</kbd>
-
-  devrait fournir le focus au widget dans son ensemble. Par exemple, la tabulation d'une barre de menu devrait mettre l'accent sur le premier élément du menu.
-
-- Les touches fléchées devraient permettre la sélection ou la navigation dans le widget. Par exemple, en utilisant les touches
-
-  <kbd>←</kbd>
-
-  et
-
-  <kbd>→</kbd>
-
-  , vous devez déplacer le focus sur les éléments de menu précédent et suivant.
-
-- Lorsque le widget n'est pas à l'intérieur d'un formulaire, les touches
-
-  <kbd>Entrée</kbd>
-
-  et
-
-  <kbd>Espace</kbd>
-
-  permettent de sélectionner ou d'activer le contrôle.
-
-- Dans un formulaire, la touche
-
-  <kbd>Espace</kbd>
-
-  doit sélectionner ou activer le contrôle, tandis que la touche
-
-  <kbd>Entrée</kbd>
-
-  doit soumettre l'action par défaut du formulaire.
-
+- La touche <kbd>Tab</kbd> doit fournir le focus au widget dans son ensemble. Par exemple, la tabulation d'une barre de menu ne doit pas mettre le focus sur le premier élément du menu.
+- Les touches fléchées doivent permettre la sélection ou la navigation dans le widget. Par exemple, utiliser les touches fléchées gauche et droite doit déplacer le focus sur les éléments de menu précédent et suivant.
+- Lorsque le widget n'est pas à l'intérieur d'un formulaire, les touches <kbd>Entrée</kbd> et <kbd>Espace</kbd> doivent permettre de sélectionner ou d'activer le contrôle.
+- Dans un formulaire, la touche <kbd>Espace</kbd> doit sélectionner ou activer le contrôle, tandis que la touche <kbd>Entrée</kbd> doit soumettre l'action par défaut du formulaire.
 - En cas de doute, imitez le comportement standard du bureau du contrôle que vous créez.
 
-Ainsi, pour l'exemple de widget `Tabs` ci-dessus, l'utilisatrice ou l'utilisateur devrait être capable de naviguer dans le conteneur du widget (l'élément [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) dans notre balisage) en utilisant les touches <kbd>Tab</kbd> et <kbd>Maj</kbd>+<kbd>Tab</kbd>. Une fois que le focus du clavier est à l'intérieur du conteneur, les touches fléchées devraient permettre à l'utilisatrice ou l'utilisateur de naviguer entre chaque onglet (les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)). De là, les conventions varient d'une plateforme à l'autre. Sous Windows, l'onglet suivant doit être automatiquement activé lorsque l'utilisatrice ou l'utilisateur appuie sur les touches fléchées. Sous Mac OS X, on peut appuyer sur <kbd>Entrée</kbd> ou sur <kbd>Espace</kbd> pour activer l'onglet suivant. Un tutoriel en profondeur pour créer des [widgets navigables grâce à des contrôles JavaScript](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets) comme décrit ici montre comment avoir ce comportement en JS.
-
-Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici [DHTML style guide](http://dev.aol.com/dhtml_style_guide) est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html) qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.
+Ainsi, pour l'exemple de widget «&nbsp;Onglets&nbsp;» ci-dessus, l'utilisateur·ice doit pouvoir naviguer dans le conteneur du widget (l'élément {{HTMLElement('ol')}} dans notre balisage) à l'aide des touches <kbd>Tab</kbd> et <kbd>Maj</kbd>+<kbd>Tab</kbd>. Une fois que le focus du clavier est à l'intérieur du conteneur, les touches fléchées doivent permettre de naviguer entre chaque onglet (les éléments {{HTMLElement('li')}}). À partir de là, les conventions varient selon la plateforme. Sous Windows, l'onglet suivant doit être automatiquement activé lorsque l'utilisateur·ice appuie sur les touches fléchées. Sous macOS, il est possible d'appuyer sur <kbd>Entrée</kbd> ou <kbd>Espace</kbd> pour activer l'onglet suivant. Un tutoriel détaillé pour créer des [widgets JavaScript navigables au clavier](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets) décrit comment obtenir ce comportement en JavaScript.
 
 ## Voir aussi
 
 - [ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [Des applications WEB et la FAQ ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [WAI-ARIA Spécification](https://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
-- [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)
+- [Créer des widgets JavaScript navigables au clavier](/fr/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
+- [Spécification WAI-ARIA <sup>(angl.)</sup>](https://w3c.github.io/aria/)
+- [Bonnes pratiques d'implémentation WAI-ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/)

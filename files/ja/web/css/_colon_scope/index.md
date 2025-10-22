@@ -154,7 +154,7 @@ document.getElementById("results").textContent = Array.prototype.map
 
 - {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}

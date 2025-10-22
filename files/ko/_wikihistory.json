@@ -3858,37 +3858,11 @@
       "Channy"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2020-05-26T14:45:03.340Z",
-    "contributors": [
-      "alattalatta",
-      "chrisdavidmills",
-      "jswisher",
-      "jsx",
-      "Netaras"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2020-02-10T04:12:58.179Z",
-    "contributors": [
-      "sungik-choi",
-      "jswisher",
-      "cs09g",
-      "2circumflex",
-      "dakeshi"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": [
       "jswisher",
       "alattalatta"
-    ]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2020-03-10T10:48:51.010Z",
-    "contributors": [
-      "kimploo"
     ]
   },
   "Web/API/DragEvent": {
@@ -7220,25 +7194,6 @@
       "young-gratia"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units": {
-    "modified": "2020-11-29T04:33:10.671Z",
-    "contributors": [
-      "alanhchoi"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2020-08-06T04:37:09.952Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2020-08-14T12:47:43.592Z",
-    "contributors": [
-      "alattalatta",
-      "ChanMyeong"
-    ]
-  },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2019-03-23T22:32:22.661Z",
     "contributors": [
@@ -7873,6 +7828,25 @@
       "teoli",
       "fscholz",
       "sbnet21"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units": {
+    "modified": "2020-11-29T04:33:10.671Z",
+    "contributors": [
+      "alanhchoi"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2020-08-06T04:37:09.952Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
+    "modified": "2020-08-14T12:47:43.592Z",
+    "contributors": [
+      "alattalatta",
+      "ChanMyeong"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
@@ -16215,6 +16189,32 @@
     "contributors": [
       "wbamberg",
       "zziuni"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2020-05-26T14:45:03.340Z",
+    "contributors": [
+      "alattalatta",
+      "chrisdavidmills",
+      "jswisher",
+      "jsx",
+      "Netaras"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee": {
+    "modified": "2020-03-10T10:48:51.010Z",
+    "contributors": [
+      "kimploo"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef": {
+    "modified": "2020-02-10T04:12:58.179Z",
+    "contributors": [
+      "sungik-choi",
+      "jswisher",
+      "cs09g",
+      "2circumflex",
+      "dakeshi"
     ]
   },
   "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {

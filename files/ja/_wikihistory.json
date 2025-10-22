@@ -11277,46 +11277,7 @@
       "Yama"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-06-14T18:12:08.377Z",
-    "contributors": [
-      "mfuji09",
-      "khalid32",
-      "ethertank",
-      "Sto",
-      "Marsf",
-      "kohei.yoshino",
-      "Mgjbot"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2020-08-09T14:35:31.436Z",
-    "contributors": [
-      "mfuji09",
-      "dlwe",
-      "TheSakuMa",
-      "iPolyomino",
-      "pandaman64",
-      "miyataka",
-      "arunpandianp",
-      "ethertank",
-      "Taken",
-      "Yukoba",
-      "Ktjpn",
-      "Shimono",
-      "Kaorine",
-      "Mgjbot"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
-    "modified": "2020-09-27T08:56:01.656Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "RobinEgg"
-    ]
-  },
-  "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
+  "Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree": {
     "modified": "2020-08-22T02:39:04.971Z",
     "contributors": [
       "mfuji09",
@@ -11324,13 +11285,12 @@
       "Mgjbot"
     ]
   },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2020-10-05T13:58:00.928Z",
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
+    "modified": "2020-09-27T08:56:01.656Z",
     "contributors": [
       "mfuji09",
-      "wbamberg",
-      "kohei.yoshino",
-      "Mgjbot"
+      "ethertank",
+      "RobinEgg"
     ]
   },
   "Web/API/DragEvent": {
@@ -24266,40 +24226,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units": {
-    "modified": "2020-10-27T06:39:35.001Z",
-    "contributors": [
-      "MikuroXina",
-      "mfuji09",
-      "awazo"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
-    "modified": "2020-11-10T07:17:38.541Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2020-11-10T07:25:34.702Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2020-09-27T00:52:29.488Z",
-    "contributors": [
-      "mfuji09",
-      "Hakaato",
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "Guillaume-Heras",
-      "prayash",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2020-07-14T09:08:27.158Z",
     "contributors": [
@@ -25258,6 +25184,40 @@
       "ethertank",
       "teoli",
       "yyss"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units": {
+    "modified": "2020-10-27T06:39:35.001Z",
+    "contributors": [
+      "MikuroXina",
+      "mfuji09",
+      "awazo"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2020-11-10T07:25:34.702Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_value_functions": {
+    "modified": "2020-11-10T07:17:38.541Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
+    "modified": "2020-09-27T00:52:29.488Z",
+    "contributors": [
+      "mfuji09",
+      "Hakaato",
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "Guillaume-Heras",
+      "prayash",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
@@ -43890,6 +43850,15 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2020-10-05T13:58:00.928Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "kohei.yoshino",
+      "Mgjbot"
+    ]
+  },
   "conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03": {
     "modified": "2020-10-16T22:39:39.169Z",
     "contributors": [
@@ -43921,6 +43890,37 @@
       "mfuji09",
       "ethertank",
       "Marsf"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b": {
+    "modified": "2019-06-14T18:12:08.377Z",
+    "contributors": [
+      "mfuji09",
+      "khalid32",
+      "ethertank",
+      "Sto",
+      "Marsf",
+      "kohei.yoshino",
+      "Mgjbot"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef": {
+    "modified": "2020-08-09T14:35:31.436Z",
+    "contributors": [
+      "mfuji09",
+      "dlwe",
+      "TheSakuMa",
+      "iPolyomino",
+      "pandaman64",
+      "miyataka",
+      "arunpandianp",
+      "ethertank",
+      "Taken",
+      "Yukoba",
+      "Ktjpn",
+      "Shimono",
+      "Kaorine",
+      "Mgjbot"
     ]
   },
   "conflicting/Web/API/Element/clientHeight": {

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、定義された下限値と上限値の範囲内の値を、その範囲内に制限します。この関数は、最小値、推奨値、および最大許容値の 3 つの引数を取ります。
+**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、定義された下限値と上限値の範囲内の値を、その範囲内に制限します。この関数は、最小値、推奨値、および最大許容値の 3 つの引数を取ります。
 
 {{InteractiveExample("CSS デモ: clamp()")}}
 
