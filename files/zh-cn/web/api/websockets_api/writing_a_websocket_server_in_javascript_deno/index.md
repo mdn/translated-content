@@ -39,11 +39,11 @@ Deno.serve({
       console.log("CONNECTED");
     };
     socket.onmessage = (event) => {
-      console.log(`RECEIVED: ${event.data}`);
+      console.log(`收到：${event.data}`);
       socket.send("pong");
     };
-    socket.onclose = () => console.log("DISCONNECTED");
-    socket.onerror = (error) => console.error("ERROR:", error);
+    socket.onclose = () => console.log("断开连接");
+    socket.onerror = (error) => console.error("错误：", error);
 
     return response;
   },
@@ -67,8 +67,8 @@ for await (const conn of Deno.listen({ port: 80 })) {
 创建一个 `index.html` 文件。该文件将在脚本中建立连接后每隔五秒向服务器发送一个 ping 消息。它应该包含以下关键内容：
 
 ```html
-<h2>WebSocket Test</h2>
-<p>Sends a ping every five seconds</p>
+<h2>WebSocket 测试</h2>
+<p>每五秒发送一条 ping 消息</p>
 <div id="output"></div>
 ```
 
@@ -83,7 +83,7 @@ function writeToScreen(message) {
 }
 
 function sendMessage(message) {
-  writeToScreen(`SENT: ${message}`);
+  writeToScreen(`发送：${message}`);
   websocket.send(message);
 }
 
@@ -96,16 +96,16 @@ websocket.onopen = (e) => {
 };
 
 websocket.onclose = (e) => {
-  writeToScreen("DISCONNECTED");
+  writeToScreen("断开连接");
   clearInterval(pingInterval);
 };
 
 websocket.onmessage = (e) => {
-  writeToScreen(`RECEIVED: ${e.data}`);
+  writeToScreen(`收到：${e.data}`);
 };
 
 websocket.onerror = (e) => {
-  writeToScreen(`ERROR: ${e.data}`);
+  writeToScreen(`错误：${e.data}`);
 };
 ```
 
@@ -120,7 +120,7 @@ deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
 Deno 要求我们明确指定程序可以访问主机上哪些内容。
 
 - `--allow-net=0.0.0.0:80` 允许这个程序监听本机上的 80 端口。
-- `--allow-read=./index.html` 允许这个程序读取作为客户端的 `index.html` 文件。
+- `--allow-read=./index.html` 允许这个程序访问用于客户端的 `index.html` 文件。
 
 ## 参见
 
