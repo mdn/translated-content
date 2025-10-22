@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{jsxref("Map")}} 实例的 **`entries()`** 方法返回一个新的 *[map 迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)*对象，该对象包含了此 map 中的每个元素的 `[key, value]` 对，按插入顺序排列。
+{{jsxref("Map")}} 实例的 **`entries()`** 方法返回一个新的 [_map 迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象包含了此 map 中的每个元素的 `[key, value]` 对，按插入顺序排列。
 
 {{InteractiveExample("JavaScript 演示：Map.prototype.entries()")}}
 
