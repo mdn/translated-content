@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("History API")}}
 
-{{DOMxRef("History")}} 接口的 **`state`** 只读属性表示历史堆栈顶部的状态值。通过该属性，可以在无需等待 {{domxref("Window/popstate_event", "popstate")}} 事件的情况下查看当前状态。
+{{DOMxRef("History")}} 接口的 **`state`** 只读属性表示历史记录堆栈顶部的状态值。通过该属性，可以在无需等待 {{domxref("Window/popstate_event", "popstate")}} 事件的情况下查看当前状态。
 
 ## 值
 
-历史堆栈顶部的状态。在调用 {{domxref("History.pushState","pushState()")}} 或 {{domxref("History.replaceState","replaceState()")}} 方法之前，该值为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+历史记录堆栈顶部的状态。在调用 {{domxref("History.pushState","pushState()")}} 或 {{domxref("History.replaceState","replaceState()")}} 方法之前，该值为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ## 示例
 
