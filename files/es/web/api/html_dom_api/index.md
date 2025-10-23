@@ -16,7 +16,7 @@ Las áreas funcionales incluidas en la API DOM HTML son las siguientes:
 - Gestión de los medios conectados a los elementos HTML multimedia ({{HTMLElement("audio")}} y {{HTMLElement("video")}}).
 - Arrastrar y soltar contenido en páginas web.
 - Acceso al historial de navegación del navegador.
-- Interfaces de apoyo y conexión para otras API como [Web Components](/en-US/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, y {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
+- Interfaces de apoyo y conexión para otras API como [Web Components](/es/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, y {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
 
 ## Conceptos y uso de DOM HTML
 
