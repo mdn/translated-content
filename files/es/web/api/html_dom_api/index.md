@@ -214,7 +214,7 @@ Las interfaces multimedia proporcionan acceso HTML al contenido de los elementos
 
 ### Interfaces Drag and drop (arrastrar y soltar) 
 
-Estas interfaces son utilizadas por la API [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) para representar elementos individuales que pueden ser (o han sido) arrastrados, grupos de elementos que pueden ser (o han sido) arrastrados, y para manejar el proceso de arrastrar y soltar.
+Estas interfaces son utilizadas por la API [HTML Drag and Drop API](/es/docs/Web/API/HTML_Drag_and_Drop_API) para representar elementos individuales que pueden ser (o han sido) arrastrados, grupos de elementos que pueden ser (o han sido) arrastrados, y para manejar el proceso de arrastrar y soltar.
 
 - {{DOMxRef("DataTransfer")}}
 - {{DOMxRef("DataTransferItem")}}
