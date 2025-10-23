@@ -367,4 +367,4 @@ El código HTML del formulario tiene el siguiente aspecto:
 
 ### Guías
 
-- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
+- [DOM scripting introduction](/es/docs/Learn_web_development/Core/Scripting/DOM_scripting)
