@@ -453,7 +453,7 @@ web-ext run
 
 Ahora que ha creado una extensión de web más avanzada para Firefox:
 
-- [lea sobre la anatomía de una extensión](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [explore los ejemplos de extensiones](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [aprenda lo que necesite para desarrollar, probar y publicar su extensión](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [continúe con su experiencia de aprendizaje](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
+- [lea sobre la anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [explore los ejemplos de extensiones](/es/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [aprenda lo que necesite para desarrollar, probar y publicar su extensión](/es/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [continúe con su experiencia de aprendizaje](/es/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
