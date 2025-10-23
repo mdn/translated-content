@@ -51,14 +51,14 @@ Cet exemple renvoie la liste de tous les éléments {{HTMLElement("div")}} du do
 const matches = document.querySelectorAll("div.note, div.alert");
 ```
 
-Ici, nous obtenons une liste des éléments `<p>` dont l'élément parent immédiat est un {{DOMxRef("div")}} avec la classe `"highlighted"` et qui sont situés dans un conteneur dont l'identifiant est `"test"`.
+Ici, nous obtenons une liste des éléments `<p>` dont l'élément parent immédiat est un {{HTMLElement("div")}} avec la classe `"highlighted"` et qui sont situés dans un conteneur dont l'identifiant est `"test"`.
 
 ```js
 const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments {{DOMxRef("iframe")}} dans le document qui contient un attribut nommé `"data-src"`&nbsp;:
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments {{HTMLElement("iframe")}} dans le document qui contient un attribut nommé `"data-src"`&nbsp;:
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
