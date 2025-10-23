@@ -1,9 +1,11 @@
 ---
 title: Tu segunda extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+page-type: guide
+sidebar: addonsidebar
+l10n:
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 Si ya ha visto el artículo [tu primera extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension), ya posee una idea de como escribir una extensión. En este artículo se escribirá una extensión ligeramente más compleja para demostrar un par de cosas más de las APIs.
 
@@ -24,7 +26,7 @@ Para implementar esto, haremos lo siguiente:
 
 Se puede visualizar la estructura general de la extensión así:
 
-![](untitled-1.png)
+![El archivo manifest.json incluye íconos, acciones del navegador, incluyendo las ventanas emergentes, y recursos web accesibles. El recurso choose_beast de la ventana emergente llama al script beastify.js.](untitled-1.png)
 
 Esta es una extensión simple, pero muestra muchos de los principales conceptos de la API WebExtensions:
 
@@ -122,6 +124,12 @@ Crea una nueva carpeta llamada "popup" bajo la carpeta raíz de la extensión. E
 - **`choose_beast.html`** define el contenido del panel
 - **`choose_beast.css`** los estilos CSS para el contenido
 - **`choose_beast.js`** maneja las opciones del usuario ejecutando un script de contenido en la pestaña activa
+
+```bash
+mkdir popup
+cd popup
+touch choose_beast.html choose_beast.css choose_beast.js
+```
 
 #### choose_beast.html
 
@@ -290,7 +298,7 @@ function reportExecuteScriptError(error) {
   document.querySelector("#popup-content").classList.add("hidden");
   document.querySelector("#error-content").classList.remove("hidden");
   console.error(
-    `Error al ejecutar el script de contenido "beastify": ${error.message}`,
+    `Error al ejecutar el script de contenido "beastify: ${error.message}`,
   );
 }
 
@@ -305,17 +313,15 @@ browser.tabs
   .catch(reportExecuteScriptError);
 ```
 
-Empecemos por la linea 99. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.
+Empecemos por la linea 99. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o el usuario navegue hacia una página distinta.
 
-> [!NOTE]
-> Un motivo común por el cual el llamado a `browser.tabs.executeScript()` puede fallar, es porque no es posible ejecutar scripts de contenido en todas las páginas. Por ejemplo, en páginas de navegador privilegiadas como about:debugging o páginas del dominio [addons.mozilla.org](https://addons.mozilla.org/), no es posible hacerlo.
-
-Si la ejecución falla, `reportExecuteScriptError()` ocultará el `<div>` `"popup-content"`, mostrará el `<div>` `"error-content"`, y reportará el error en la consola.
+Un motivo común por el cual el llamdo a `browser.tabs.executeScript()` puede fallar es porque no se puede ejectuar scripts de contenido en todas las páginas. Por ejemplo, no se puede ejecutarlos en páginas de navegador privilegiadas como about:debugging o páginas del dominio [addons.mozilla.org](https://addons.mozilla.org/). Si falla, `reportExecuteScriptError()` ocultará el elemento `<div id="popup-content">`, mostrará el elemento `<div id="error-content"...` y reportará un error en la [consola](https://extensionworkshop.com/documentation/develop/debugging/).
 
 Si la ejecución del script de contenido es exitosa, se llamará a `listenForClicks()`, que atiende los eventos que se generan al cliquear en la ventana emergente.
 
-- Si el clic se produjo en el botón con `class="beast"`, se llama a `beastify()`.
-- Si el clic se produjo en el botón con `class="reset"`, se llama a `reset()`.
+- Si el clic no se produjo en un botón en la ventana, lo ignoramos y no hacemos nada.
+- Si el clic se produjo en el botón con `type="reset"`, se llama a `reset()`.
+- Si el clic se produjo en cualquier otro botón (es decir, los de los animales), se llama a `beastify()`.
 
 La función `beastify()` hace tres cosas:
 
@@ -382,7 +388,7 @@ Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y
 })();
 ```
 
-Lo primero que hace el script de contenido es revisar la variable global `window.hasRun`: si está inicializada termina su ejecución, sino, la inicializa y continúa. La razón por la que hacemos esto es porque cada vez que el usuario abre la ventana emergente, se vuelve a ejecutar el script de contenido en la pestaña activa, por lo que podríamos tener múltiples instancias del script ejecutandose en una sola pestaña. Si esto sucede, necesitamos asegurarnos de que sea sólo la primera instancia la que vaya a realizar cambios.
+Lo primero que hace el script de contenido es revisar la variable global `window.hasRun`: si está inicializada termina su ejecución, sino, la inicializa y continúa. La razón por la que hacemos esto es porque cada vez que el usuario abre la ventana emergente, se vuelve a ejecutar el script de contenido en la pestaña activa, por lo que podríamos tener múltiples instancias del script ejecutándose en una sola pestaña. Si esto sucede, necesitamos asegurarnos de que sea sólo la primera instancia la que vaya a realizar cambios.
 
 Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API [`browser.runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".
 
@@ -393,7 +399,7 @@ Luego, en la linea 40, donde el script de contenido atiende mensajes proveniente
 
 Finalmente, necesitamos incluir las imágenes de los animales.
 
-Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con su nombre apropiado. Usted puede obtener estas imágenes desde el [repositorio en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), o desde aquí:
+Cree una carpeta nueva llamada "beasts", y adicione tres imágenes en ella, con su nombre apropiado. Usted puede obtener estas imágenes desde el [repositorio en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), o desde aquí:
 
 ![Una rana.](frog.jpg)
 
@@ -444,3 +450,12 @@ Puede automatizar el paso de instalación temporal mediante la herramienta [web-
 cd beastify
 web-ext run
 ```
+
+## Que sigue?
+
+Ahora que ha creado una extensión de web más avanzada para Firefox:
+
+- [lea sobre la anatomía de una extensión](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [explore los ejemplos de extensiones](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [aprenda lo que necesite para desarrollar, probar y publicar su extensión](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [continúe con su experiencia de aprendizaje](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
