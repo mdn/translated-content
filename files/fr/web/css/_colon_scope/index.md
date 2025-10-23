@@ -152,7 +152,7 @@ La portée de `context` est l'élément avec l'attribut [`id`](/fr/docs/Web/HTML
 
 - La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@scope")}}
 - La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":root")}}
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} et {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}

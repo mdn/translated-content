@@ -88,7 +88,7 @@ Voir [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour 
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
 - [Sélecteurs d'attribut](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) dans la zone d'apprentissage MDN
 - [`element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)

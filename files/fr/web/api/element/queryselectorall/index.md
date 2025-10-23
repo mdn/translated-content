@@ -16,7 +16,7 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Paramètres
 
 - `selectors`
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
 
 > [!NOTE]
 > Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échappement des caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) pour plus d'informations.
@@ -130,7 +130,7 @@ inner.length; // 0
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
 - [Sélecteurs d'attribut](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) dans la zone d'apprentissage de MDN
 - [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector)

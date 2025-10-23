@@ -19,7 +19,7 @@ element = document.querySelector(sélecteurs);
 ### Paramètres
 
 - `selectors` (sélecteurs)
-  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur les sélecteurs et leur gestion.
+  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree) pour plus d'informations sur les sélecteurs et leur gestion.
 
 > [!NOTE]
 > Les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour plus d'informations.
@@ -92,7 +92,7 @@ var el = document.querySelector(
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("document.querySelectorAll()")}}&nbsp;;
 - {{domxref("element.querySelector()")}}&nbsp;;
 - {{domxref("element.querySelectorAll()")}}&nbsp;;

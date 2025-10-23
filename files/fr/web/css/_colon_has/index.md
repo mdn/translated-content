@@ -253,4 +253,4 @@ De même, dans le cas de la recherche négative, dans l'expression régulière `
 - [Structure du sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Liste des sélecteurs](/fr/docs/Web/CSS/Selector_list)
 - [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
