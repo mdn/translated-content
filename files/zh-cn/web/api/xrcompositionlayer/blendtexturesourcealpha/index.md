@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-`true` 表示启用 alpha 通道而 `false` 表示禁用的布尔值。
+布尔值。`true` 表示启用 alpha 通道，`false` 表示禁用 alpha 通道。
 
 ## 示例
 
