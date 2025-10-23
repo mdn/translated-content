@@ -3,8 +3,6 @@ title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 
-{{JSRef}}
-
 **`Object.getPrototypeOf()`** 静态方法返回指定对象的原型（即内部 `[[Prototype]]` 属性的值）。
 
 {{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
