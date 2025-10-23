@@ -3,7 +3,7 @@ title: "Accessibilité Web : crises et réactions physiques"
 short-title: Prévenir crises et réactions physiques
 slug: Web/Accessibility/Guides/Seizure_disorders
 l10n:
-  sourceCommit: 81715a83bdb5d71cdceaf32d1e40a3edfc986a12
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
 Cet article présente les concepts permettant de rendre le contenu Web accessible aux personnes souffrant de troubles vestibulaires, ainsi que les méthodes pour mesurer et prévenir les contenus susceptibles d'entraîner des crises ou d'autres réactions physiques.
@@ -362,7 +362,7 @@ Le rapport de contraste est défini dans [WCAG 2.2 <sup>(angl.)</sup>](https://w
 
 Il est préférable d'ajuster le contraste avant de publier sur le web. Pour les vidéos et GIFs animés, la suite Adobe est une excellente ressource pour les images traditionnelles. Pour les images, un outil en ligne est disponible&nbsp;: [Brightness and contrast online <sup>(angl.)</sup>](https://pinetools.com/brightness-contrast-image). Si vous créez des GIFs animés, commencez par un GIF à faible contraste.
 
-JavaScript permet aussi de réduire le contraste dynamiquement. Voici un exemple de code issu de la section [«&nbsp;Exemple&nbsp;: définir la couleur de fond d'un paragraphe&nbsp;»](/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree#setting_the_background_color_of_a_paragraph) du document MDN [Parcourir un tableau HTML avec JavaScript et les interfaces DOM](/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree). Notez que la couleur est décrite dans l'espace colorimétrique **RGB**.
+JavaScript permet aussi de réduire le contraste dynamiquement. Voici un exemple de code issu de la section [«&nbsp;Exemple&nbsp;: définir la couleur de fond d'un paragraphe&nbsp;»](/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree#définir_la_couleur_de_fond_dun_paragraphe) du document MDN [Construire et mettre à jour l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree). Notez que la couleur est décrite dans l'espace colorimétrique **RGB**.
 
 **Contenu HTML [(lien vers la page source)](/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree#html_2)**
 
