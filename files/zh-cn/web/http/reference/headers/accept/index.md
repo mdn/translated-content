@@ -59,7 +59,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 
 ### 使用默认的 Accept 请求标头
 
-使用命令行工具（例如 [curl](https://curl.se/) 个 [wget](https://www.gnu.org/software/wget/)）发起的 HTTP 请求，其默认的 `Accept` 值为 `*/*`：
+使用命令行工具（例如 [curl](https://curl.se/) 和 [wget](https://www.gnu.org/software/wget/)）发起的 HTTP 请求，其默认的 `Accept` 值为 `*/*`：
 
 ```http
 GET / HTTP/1.1
