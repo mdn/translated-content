@@ -10,7 +10,7 @@ La **API DOM HTML** está compuesta por las interfaces que definen la funcionali
 
 Las áreas funcionales incluidas en la API DOM HTML son las siguientes:
 
-- Acceso y control de elementos HTML  a través del {{Glossary("DOM")}}.
+- Acceso y control de elementos HTML a través del {{Glossary("DOM")}}.
 - Acceso y manipulación de los datos de un formulario.
 - Interactuar con el contenido de imágenes 2D y el contexto de un {{HTMLElement("canvas")}} HTML, por ejemplo, para dibujar sobre él.
 - Gestión de los medios conectados a los elementos HTML multimedia ({{HTMLElement("audio")}} y {{HTMLElement("video")}}).
