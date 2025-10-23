@@ -63,7 +63,7 @@ Cada nivel define un aspecto clave de la utilidad del elemento. Desde `Node`, el
 
 Hay elementos que comparten características comunes y, por lo tanto, tienen un tipo intermedio adicional. Por ejemplo, los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} presentan medios audiovisuales. Los tipos correspondientes, {{domxref("HTMLAudioElement")}} y {{domxref("HTMLVideoElement")}}, se basan ambos en el tipo común {{domxref("HTMLMediaElement")}}, que a su vez se basa en {{domxref("HTMLElement")}} y así sucesivamente. `HTMLMediaElement` define los métodos y propiedades comunes a los elementos de audio y vídeo.
 
-Estas interfaces de elementos constituyen la mayor parte de la API DOM HTML y son el tema central de este articulo. El artículo [DOM](/en-US/docs/Web/API/Document_Object_Model) ofrece una introducción general al DOM y sus conceptos.
+Estas interfaces de elementos constituyen la mayor parte de la API DOM HTML y son el tema central de este articulo. El artículo [DOM](/es/docs/Web/API/Document_Object_Model) ofrece una introducción general al DOM y sus conceptos.
 
 ## Público objetivo de DOM HTML
 
