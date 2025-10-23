@@ -1,8 +1,6 @@
 ---
 title: Tu segunda extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-page-type: guide
-sidebar: addonsidebar
 l10n:
   sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
