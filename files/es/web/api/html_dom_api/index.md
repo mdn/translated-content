@@ -1,8 +1,7 @@
 ---
 title: La API DOM HTML
 slug: Web/API/HTML_DOM_API
-l10n:
-  87440643d71bf81a5bf4b8fa21db9e3d56ead395
+l10n: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
 ---
 
 {{DefaultAPISidebar("HTML DOM")}}
