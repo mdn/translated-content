@@ -3,8 +3,6 @@ title: Date() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 ---
 
-{{JSRef}}
-
 **`Date()`** 构造函数可以创建一个 {{jsxref("Date")}} 实例或返回代表当前时间的字符串。
 
 {{InteractiveExample("JavaScript Demo: Date Constructor")}}

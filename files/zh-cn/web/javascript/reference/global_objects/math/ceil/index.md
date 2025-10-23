@@ -3,8 +3,6 @@ title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
 
-{{JSRef}}
-
 **`Math.ceil()`** 静态方法总是向上舍入，并返回大于等于给定数字的最小整数。
 
 {{InteractiveExample("JavaScript Demo: Math.ceil()")}}

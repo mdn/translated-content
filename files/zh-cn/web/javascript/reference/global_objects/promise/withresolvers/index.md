@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6af0c0d0b640e756765976ad854f4cc64c2f911c
 ---
 
-{{JSRef}}
-
 **`Promise.withResolvers()`** 静态方法返回一个对象，其包含一个新的 {{jsxref("Promise")}} 对象和两个函数，用于解决或拒绝它，对应于传入给 {{jsxref("Promise/Promise", "Promise()")}} 构造函数执行器的两个参数。
 
 ## 语法
