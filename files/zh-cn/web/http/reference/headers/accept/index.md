@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP 的 **`Accept`** {{Glossary("request header", "请求")}}和{{Glossary("response header", "响应标头")}}用于指示发送方能够理解的内容类型，这些类型以 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)的形式表示。在请求中，服务器会使用[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)机制，从客户端提议的内容类型中选择一种，并通过 {{HTTPHeader("Content-Type")}} 响应标头告知客户端所选择的类型。在响应中，该标头则用于指示服务器能够理解哪些内容类型，以便客户端在后续对同一资源的请求中使用合适的内容类型。
+HTTP **`Accept`** {{Glossary("request header", "请求")}}和{{Glossary("response header", "响应标头")}}用于指示发送方能够理解的内容类型，这些类型以 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)的形式表示。在请求中，服务器会使用[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)机制，从客户端提议的内容类型中选择一种，并通过 {{HTTPHeader("Content-Type")}} 响应标头告知客户端所选择的类型。在响应中，该标头则用于指示服务器能够理解哪些内容类型，以便客户端在后续对同一资源的请求中使用合适的内容类型。
 
 浏览器会根据请求的上下文自动为该标头设置所需的值。例如，当请求获取 CSS 样式表、图像、视频或脚本时，浏览器会使用不同的取值。
 
