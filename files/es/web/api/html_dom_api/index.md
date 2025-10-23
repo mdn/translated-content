@@ -31,7 +31,6 @@ Los nodos pueden ser estrictamente organizativos, proporcionando un medio para a
 Los nodos no tienen ningún concepto de incluir el contenido que realmente se muestra en el documento. Son recipientes vacíos. La noción fundamental de un nodo que puede representar contenido visual se introduce mediante la interfaz {{domxref("Element")}}. Una instancia de objeto `Element` representa un único elemento en un documento creado utilizando HTML o un vocabulario {{glossary("XML")}} como {{glossary("SVG")}}.
 
 Por ejemplo, consideremos un documento con dos elementos, uno de los cuales tiene dos elementos más anidados en su interior:
- 
 ![Structure of a document with elements inside a document in a window](dom-structure.svg)
 
 Si bien la interfaz del {{domxref("Document")}} se define como parte de la especificación {{DOMxRef("Document_Object_Model", "DOM", "", "1")}}, la especificación HTML la mejora significativamente para añadir información específica sobre el uso de DOM en el contexto de un navegador web, Así como para utilizarlo para representar documentos HTML específicamente.
