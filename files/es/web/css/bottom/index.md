@@ -5,11 +5,59 @@ l10n:
   sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-{{CSSRef}}
-
 La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/position). No tiene efecto en elementos no posicionados.
 
-{{EmbedInteractiveExample("pages/css/bottom.html")}}
+{{InteractiveExample("CSS Demo: bottom")}}
+
+```css interactive-example-choice
+bottom: 0;
+```
+
+```css interactive-example-choice
+bottom: 4em;
+```
+
+```css interactive-example-choice
+bottom: 10%;
+```
+
+```css interactive-example-choice
+bottom: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 El efecto de la propiedad `bottom` depende de cómo esté posicionado el elemento (es decir, del valor de la propiedad {{cssxref("position")}}):
 
@@ -47,18 +95,14 @@ bottom: unset;
 ### Valores
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : Una {{cssxref("&lt;length&gt;", "longitud")}} negativa, nula o positiva que representa:
-
     - para _elementos posicionados absolutamente_, la distancia hasta el borde inferior del bloque contenedor..
     - para _elementos posicionados relativamente_, la distancia que el elemento se mueve por encima de su posición normal..
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : Un {{cssxref("&lt;percentage&gt;", "porcentaje")}} de la altura del bloque contenedor.
 - `auto`
-
   - : Especifica que:
-
     - para _elementos posicionados absolutamente_, la posición del elemento esta basado en la propiedad {{Cssxref("top")}}, mientras que `height: auto` se trata como una altura según el contenido; o si `top` es también `auto`, el elemento se coloca donde debería ubicarse verticalmente si fuera un elemento estático.
     - para _elementos posicionados relativamente_, la distancia del elemento de su posición normal se basa en la propiedad {{Cssxref("top")}}; o si `top` tambièn es `auto`, el elemento no se mueve verticalmente.
 

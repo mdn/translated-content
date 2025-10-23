@@ -169,7 +169,7 @@ class Student extends Person {
 }
 ```
 
-このクラス宣言では、`#year` は [プライベートデータプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)です。`Student` オブジェクトを作成し、内部で `#year` を使用することができますが、オブジェクトの外のコードが `#year` にアクセスしようとすると、ブラウザーはエラーを報告します。
+このクラス宣言では、`#year` は [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)です。`Student` オブジェクトを作成し、内部で `#year` を使用することができますが、オブジェクトの外のコードが `#year` にアクセスしようとすると、ブラウザーはエラーを報告します。
 
 ```js
 const summers = new Student("Summers", 2);
@@ -181,13 +181,13 @@ summers.#year; // SyntaxError
 ```
 
 > [!NOTE]
-> Chrome コンソールで実行したコードは、クラスの外部にあるプライベートプロパティにアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
+> Chrome コンソールで実行したコードは、クラスの外部にあるプライベート要素にアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
 
-プライベートデータプロパティはクラス宣言で宣言する必要があり、その名前は `#` で始まります。
+プライベート要素はクラス宣言で宣言する必要があり、その名前は `#` で始まります。
 
 ### プライベートメソッド
 
-プライベートデータプロパティと同様に、プライベートメソッドも持つことができます。プライベートデータプロパティと同様に、その名前は `#` で始まり、オブジェクト自身のメソッドによってのみ呼び出すことができます。
+プライベートフィールドと同様に、プライベートメソッドも持つことができます。プライベートフィールドと同様に、その名前は `#` で始まり、オブジェクト自身のメソッドによってのみ呼び出すことができます。
 
 ```js
 class Example {
@@ -209,7 +209,7 @@ myExample.#somePrivateMethod(); // SyntaxError
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に行く前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: オブジェクト指向 JavaScript](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript) を参照してください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に行く前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: オブジェクト指向 JavaScript](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript) を参照してください。
 
 ## まとめ
 

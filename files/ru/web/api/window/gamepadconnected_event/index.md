@@ -9,7 +9,7 @@ l10n:
 
 Событие `gamepadconnected` возникает, когда браузер обнаруживает подключение геймпада или первое использование кнопки/стика.
 
-Событие не возникает, если оно запрещено заголовком {{httpheader("Permissions-Policy/gamepad", "gamepad")}} [Политики разрешений](/ru/docs/Web/HTTP/Permissions_Policy) документа.
+Событие не возникает, если оно запрещено заголовком {{httpheader("Permissions-Policy/gamepad", "gamepad")}} [Политики разрешений](/ru/docs/Web/HTTP/Guides/Permissions_Policy) документа.
 
 Это событие не является отменяемым и не всплывает.
 

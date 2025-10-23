@@ -235,7 +235,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 
 ## Активное изучение
 
-_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Getting_started)._
 
 ## Копай глубже
 
@@ -311,18 +311,16 @@ Installing a text editor is usually quite straightforward. The method varies bas
 When you install a new text editor, your OS will probably continue to open text files with its default editor until you change the _file association._ These instructions will help you specify that your OS should open files in your preferred editor when you double-click them:
 
 - Windows
-
   - [Windows 8](https://windows.microsoft.com/en-us/windows-8/choose-programs-windows-uses-default)
   - [Windows 7](https://windows.microsoft.com/en-us/windows/change-default-programs#1TC=windows-7)
   - [older systems](http://pcsupport.about.com/od/fixtheproblem/f/chdefprogram.htm)
 
 - [Mac OS X](http://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
-
   - [Ubuntu Unity](http://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](http://doc.opensuse.org/documentation/html/openSUSE_113/opensuse-kdeuser/cha.kde.cust.html#pro.kde.cust.system.fileass)
 
 ## Next steps
 
-Now that you have a good text editor, you could take some time to finalize [your basic working environment](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/ru/docs/Learn/Getting_started_with_the_web).
+Now that you have a good text editor, you could take some time to finalize [your basic working environment](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/ru/docs/Learn_web_development/Getting_started/Your_first_website).

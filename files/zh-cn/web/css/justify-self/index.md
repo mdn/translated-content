@@ -3,19 +3,59 @@ title: justify-self
 slug: Web/CSS/justify-self
 ---
 
-{{CSSRef}}
+[CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对齐方式。
 
-[CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
+{{InteractiveExample("CSS 演示：justify-self")}}
 
-{{EmbedInteractiveExample("pages/css/justify-self.html")}}
+```css interactive-example-choice
+justify-self: stretch;
+```
+
+```css interactive-example-choice
+justify-self: center;
+```
+
+```css interactive-example-choice
+justify-self: start;
+```
+
+```css interactive-example-choice
+justify-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">一</div>
+    <div>二</div>
+    <div>三</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 此属性的效果取决于我们所处的布局模式：
 
-- 在块级布局中，它对齐一个项目在其包含块的内联轴上。
-- 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）
-- 在表格布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables) 关于块、绝对定位以及表格布局中的对齐方式）
-- 在弹性布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)关于弹性布局中的对齐方式）
-- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
+- 在块级布局中，它将项目在其包含块的行向轴上对齐。
+- 对于绝对定位的元素，它将项目在其包含块的行向轴上对齐，同时考虑顶部、左侧、底部和右侧的偏移值。
+- 在表格布局中，这个属性被*忽略*。了解更多关于[区块、绝对定位以及表格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- 在弹性布局中，这个属性被*忽略*。了解更多关于[弹性布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- 在栅格布局中，它将项目在其网格区域内沿内联轴对齐。了解更多关于[栅格布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
 
 ## 语法
 
@@ -45,7 +85,7 @@ justify-self: last baseline;
 justify-self: safe center;
 justify-self: unsafe center;
 
-/* 全局关键字 */
+/* 全局值 */
 justify-self: inherit;
 justify-self: initial;
 justify-self: unset;
@@ -56,18 +96,15 @@ justify-self: unset;
 - 基本关键字： `normal`， `auto`，或者 `stretch`。
 - 基线对齐：`baseline` 关键字，加上可选的 `first` 或者 `last`。
 - 可定位对齐：
-
-  - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
-  - 加上可选的 `safe` 或者`unsafe`。
+  - `center`、`start`、`end`、`flex-start`、`flex-end`、`self-start`、`self-end`、`left` 或 `right`。
+  - 加上可选的 `safe` 或者 `unsafe`。
 
 ### 值
 
 - `auto`
   - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `normal`。
 - `normal`
-
   - : 这个效果取决于我们所处的布局模式：
-
     - 在块级布局中，这个关键字是 `start` 的同义词。
     - 在绝对定位的布局中，在可置换绝对定位的盒子中，这个关键字表现的与 `start` 相似，在其他绝对定位的盒子中，其表现得与 `stretch` 相似。
     - 在表格布局中，由于这个属性被忽略所以这个关键字没有作用。

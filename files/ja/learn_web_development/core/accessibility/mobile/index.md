@@ -2,10 +2,8 @@
 title: モバイルのアクセシビリティ
 slug: Learn_web_development/Core/Accessibility/Mobile
 l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
@@ -107,7 +105,6 @@ TalkBack を使用すると、端末上のどこに移動しても、グロー�
 1. ウェブブラウザーを開きます。
 2. URL バーをアクティブにします。
 3. Ebbc.co.uk のフロントページのように、見出しがたくさんあるウェブページを入力します。URL のテキストを入力するには、
-
    - URL バーが得られるまで左右にスワイプしてから、ダブルタップして URL バーを選択します。
    - 目的の文字が得られるまで仮想キーボードに指を置いたまま動かしてから、指を離して入力します。これを各文字について繰り返します。
    - 終わったら、 Enter キーを見つけて押します。
@@ -150,7 +147,6 @@ VoiceOver がオンになっているとき、ローターと呼ばれるナビ�
 
 1. ダイヤルを回すように、画面上で 2 本の指をひねります。あなたがさらにひねるにつれて、各オプションを読み上げるでしょう。あなたは行ったり来たりしてオプションを切り替えることができます。
 2. あなたが望むオプションを見つけたら、
-
    - 指を離して選択します。
    - それが（音量や話す速度のような）値を反復できるオプションである場合は、選択した項目の値を増減するために上下にスワイプすることができます。
 
@@ -163,7 +159,6 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 1. ウェブブラウザーを開きます。
 2. URL バーをアクティブにします。
 3. bbc.co.uk のフロントページのように、見出しがたくさんあるウェブページを入力します。URL のテキストを入力するには、
-
    - URL バーが得られるまで左右にスワイプしてダブルタップし、URL バーを選択します。
    - 各文字について、目的の文字が得られるまで仮想キーボードに指を置いたまま動かしてから、指を離して選択します。ダブルタップして入力します。
    - 終わったら、 Enter キーを見つけて押します。
@@ -171,7 +166,6 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 4. 左右にスワイプすると、ページ上の項目間を移動できます。項目をダブルタップして選択することができます（例えば、リンクをたどる）。
 5. デフォルトでは、選択されたローターオプションは話す速度です。現在は上下にスワイプして話す速度を上げ下げできます。
 6. 今、ダイヤルのように 2 本指で画面を回転させてローターを表示し、ローターのオプション間を移動します。利用可能なオプションの例をいくつか示します。
-
    - 話す速度: 話す速度を変更します。
    - コンテナー: ページ上のさまざまな意味論的コンテナー間を移動します。
    - 見出し: ページ上の見出し間を移動します。
@@ -218,7 +212,8 @@ panel.ontouchend = stopMove;
 
 マウスイベントとタッチイベントを一緒に使用する方法を示す簡単な例を示しました — [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) を参照してください（[この例もライブで見てください](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）。
 
-> **メモ:** [ゲーム制御機構の実装](/ja/docs/Games/Techniques/Control_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
+> [!NOTE]
+> [ゲーム制御機構の実装](/ja/docs/Games/Techniques/Control_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
 
 ## レスポンシブデザイン
 
@@ -226,8 +221,8 @@ panel.ontouchend = stopMove;
 
 特に、モバイルに関して対処する必要がある最も一般的な問題は次のとおりです。
 
-- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
-- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Web/HTML/Responsive_images)を使用してこれを扱えます。
+- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
+- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Web/HTML/Guides/Responsive_images)を使用してこれを扱えます。
 - 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、SVG ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。SVG はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)を参照）。
 
 > [!NOTE]
@@ -239,7 +234,7 @@ panel.ontouchend = stopMove;
 
 #### ズームを無効にしない
 
-[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmlelement("head")}} で端末の幅にあわせるにはこうします:
+[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmlelement("head")}} で端末の幅にあわせるにはこうします:
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />
@@ -266,7 +261,7 @@ panel.ontouchend = stopMove;
 - 番号 (`number`)、電話番号 (`tel`)、電子メール (`email`) の入力では、番号や電話番号を入力するための適切な仮想キーボードを表示します。
 - 日時 (`date`, `time`) の入力では、日時を選択するための適切なピッカーを表示します。
 
-デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。さまざまな入力タイプの検出に関する生の情報については[入力タイプ](http://diveinto.html5doctor.com/detect.html#input-types)（英語）を参照してください。また、より多くの情報については[機能検出の記事](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)をチェックしてください。
+デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。より詳しい情報については[機能検出の記事](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)をチェックしてください。
 
 ## まとめ
 

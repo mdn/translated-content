@@ -49,6 +49,6 @@ const decodedData = window.atob(encodedData); // 解码
 ## 参见
 
 - [`core-js`](https://github.com/zloirock/core-js) 提供了 [`atob` 的 polyfill](https://github.com/zloirock/core-js#base64-utility-methods)
-- [`data` URL](/zh-CN/docs/Web/URI/Schemes/data)
+- [`data` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}：相同的，但是是在 worker 作用域内的方法。
 - {{domxref("Window.btoa()")}}

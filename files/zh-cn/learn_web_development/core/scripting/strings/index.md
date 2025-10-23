@@ -1,12 +1,11 @@
 ---
 title: 文本处理——JavaScript 中的字符串
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
 l10n:
   sourceCommit: 3e77d220b829f7477da24af0fa4acf1a54f5dbc9
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 接下来，我们将把注意力转向字符串——也就是编程中所说的文本片段。在本文中，我们将了解在学习 JavaScript 时，你应该了解的关于字符串的所有常见内容，例如创建字符串、在字符串中转义引号和连接字符串。
 
@@ -132,7 +131,7 @@ function greet() {
 button.addEventListener("click", greet);
 ```
 
-{{EmbedLiveSample('上下文中的串联', '100%', 50)}}
+{{EmbedLiveSample('上下文中的串联', '100%', 50, , , , , 'allow-modals')}}
 
 这里我们使用了第 4 行中的 {{domxref("window.prompt()", "window.prompt()")}} 函数，它要求用户在弹出的对话框中回答一个问题然后将他们输入的文本存储在一个给定的变量中——在这个示例中是 `name` 变量。然后，我们将名称插入通用的问候消息中，并显示该字符串。
 

@@ -18,9 +18,7 @@ regexObj.compile(pattern, flags)
 - `pattern`
   - : 正则表达式的文本。
 - `flags`
-
   - : 如果指定，标志可以具有以下值的任意组合：
-
     - `g`
       - : 全局匹配
     - `i`

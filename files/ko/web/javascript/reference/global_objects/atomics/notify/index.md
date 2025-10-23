@@ -25,8 +25,7 @@ Atomics.notify(typedArray, index, count)
 - `index`
   - : 깨울 `typedArray`의 위치.
 - `count` {{optional_inline}}
-  - : 알림을 보낼 대기 중 에이전트의 숫자. 기본 값은 {{jsxref("Infinity",
-    "+Infinity")}}입니다.
+  - : 알림을 보낼 대기 중 에이전트의 숫자. 기본 값은 {{jsxref("Infinity", "+Infinity")}}입니다.
 
 ### 반환 값
 

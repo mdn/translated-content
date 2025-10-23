@@ -5,11 +5,35 @@ l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
-{{CSSRef}}
-
 **`column-fill`** [CSS](/zh-CN/docs/Web/CSS) 属性可控制元素内容分成列时的平衡方式。
 
-{{EmbedInteractiveExample("pages/css/column-fill.html")}}
+{{InteractiveExample("CSS Demo: column-fill")}}
+
+```css interactive-example-choice
+column-fill: auto;
+```
+
+```css interactive-example-choice
+column-fill: balance;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  height: 90%;
+  columns: 3;
+  text-align: left;
+}
+```
 
 ## 语法
 

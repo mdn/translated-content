@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 915c9519f3cca1c616c2f554d5ad9e1483bbb170
 ---
 
-{{jsSidebar("Objects")}}
-
 全局属性 **`NaN`** 是一个表示非数字的值。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
@@ -100,7 +98,7 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-有关 `NaN` 及其比较的更多信息，请参阅[相等性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
+有关 `NaN` 及其比较的更多信息，请参阅[相等性判断](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)。
 
 ### 明显不同的 NaN 值
 

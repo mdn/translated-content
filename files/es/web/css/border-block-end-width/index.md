@@ -3,11 +3,51 @@ title: border-block-end-width
 slug: Web/CSS/border-block-end-width
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propieda de [CSS](/es/docs/Web/CSS) **`border-block-end-width`** define el ancho del borde final lógico de bloque de un elemento, que se asigna al borde físico que depende del modo de escritura, direccionalidad, y orientación del texto del elemento. Esto corresponde a la propiedad {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, o {{cssxref("border-left-width")}} property dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-block-end-width.html")}}
+{{InteractiveExample("CSS Demo: border-block-end-width")}}
+
+```css interactive-example-choice
+border-block-end-width: thick;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-width: thick;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end-width: 4px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-width: 4px;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Sintaxis
 

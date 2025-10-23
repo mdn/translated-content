@@ -114,7 +114,7 @@ processor.doLoad();
 你还可通过在源 `<video>` 元素中采用 {{cssxref("filter-function/grayscale", "grayscale()")}} CSS 功能以达到同样的效果。
 
 > [!NOTE]
-> 由于存在潜在安全问题，如果你的视频和代码处在不同域，你需要在视频服务器上启用 [CORS（跨源资源共享）](/zh-CN/docs/Web/HTTP/CORS)。
+> 由于存在潜在安全问题，如果你的视频和代码处在不同域，你需要在视频服务器上启用 [CORS（跨源资源共享）](/zh-CN/docs/Web/HTTP/Guides/CORS)。
 
 ### 视频与 WebGL
 
@@ -299,7 +299,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('可编辑示例_2', 700, 450) }}
 
 > [!NOTE]
-> 除非你启用了 [CORS](/zh-CN/docs/Web/HTTP/CORS)，否则，为避免安全问题，你的视频应与你的代码处于同一个域中。
+> 除非你启用了 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS)，否则，为避免安全问题，你的视频应与你的代码处于同一个域中。
 
 #### 常用音频滤镜
 

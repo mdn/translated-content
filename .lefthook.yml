@@ -1,0 +1,39 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: Format non-markdown
+      glob: "*.{js,json,yml,yaml,css,html}"
+      run: yarn prettier --write --cache {staged_files}
+      stage_fixed: true
+
+    - name: Autocorrect zh-cn
+      glob: "{docs,files}/zh-cn/*.md"
+      run: yarn autocorrect --fix {staged_files}
+      stage_fixed: true
+
+    - name: Format markdown
+      glob: "*.md"
+      group:
+        parallel: true
+        jobs:
+          - name: Markdownlint
+            run: yarn markdownlint-cli2 --fix {staged_files}
+            stage_fixed: true
+          - name: Check URLs per locale
+            run: yarn node ./scripts/check-url-locale.js --fix {staged_files}
+            stage_fixed: true
+          - name: Prettier
+            run: yarn prettier --write --cache {staged_files}
+            stage_fixed: true
+
+post-merge:
+  only:
+    - ref: main
+  commands:
+    yarn-install:
+      run: yarn install
+
+# For condensed output
+output:
+  - summary
+  - failure

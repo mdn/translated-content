@@ -5,13 +5,72 @@ l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
-{{CSSRef}}
+[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
 
-[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
+形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
-形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
+{{InteractiveExample("CSS Demo: display")}}
 
-{{EmbedInteractiveExample("pages/css/display.html")}}
+```css interactive-example-choice
+display: block;
+```
+
+```css interactive-example-choice
+display: inline-block;
+```
+
+```css interactive-example-choice
+display: none;
+```
+
+```css interactive-example-choice
+display: flex;
+```
+
+```css interactive-example-choice
+display: grid;
+```
+
+```html interactive-example
+<p>
+  Apply different <code>display</code> values on the dashed orange-bordered
+  <code>div</code>, which contains three child elements.
+</p>
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Some text A.
+    <div id="example-element">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+    </div>
+    Some text B.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  background: #8888;
+}
+
+#example-element {
+  border: 3px dashed orange;
+}
+
+.child {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #ccccff;
+  border: 1px solid #ababab;
+  color: black;
+}
+```
 
 ## 语法
 
@@ -62,9 +121,7 @@ display: unset;
 ### 外部表现
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
-
   - : 这些关键字规定元素的外部显示类型，实际上就是其在流式布局中的角色：
-
     - `block`
       - : 该元素生成一个块级盒子，在正常的流中，该元素之前和之后产生换行。
     - `inline`
@@ -88,11 +145,8 @@ display: unset;
 ### 内部表现
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-
   - : 这些关键字规定了元素的内部显示类型，其定义了该内容布局时的格式上下文的类型（假设它是一个非替换元素）：
-
     - `flow`
-
       - : 该元素使用流式布局（块向和行向布局）来排布它的内容。
 
         如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个区块或者行级格式上下文，那么它将生成一个行级盒子。否则它将生成一个块容器盒。
@@ -128,9 +182,7 @@ display: unset;
 ### 内部
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
-
   - : 一些布局模型，例如 `table` 和 `ruby` 有一个复杂的内置结构，它们的子孙后代可以扮演几个不同的角色。本节定义的这些“内部”display 值，仅在特定的布局模式下有用。
-
     - `table-row-group`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("tbody")}} 元素。
     - `table-header-group`
@@ -159,9 +211,7 @@ display: unset;
 ### 盒
 
 - {{CSSxRef("&lt;display-box&gt;")}}
-
   - : 这些关键词定义一个元素到底是否产生 display 盒。
-
     - `contents`
       - : 这些元素自身不会产生特定的盒子。它们被伪盒子（pseudo-box）和子盒子取代。请注意，CSS Display Level 3 规范中定义了 `contents` 值如何影响“异常元素”——这些元素不是纯粹由 CSS 盒模型概念呈现的（例如替换元素）。更多的细节请参见[附录 B：display 的影响：异常元素的内容](https://drafts.csswg.org/css-display/#unbox)。
     - `none`
@@ -170,29 +220,23 @@ display: unset;
 ### 预组合
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
-
   - : CSS 2 为 `display` 属性使用单关键字的预组合的语法，对相同布局模式的块级和行级变体需要单独的关键字。
-
     - `inline-block`
-
       - : 该元素生成块级元素盒，如果它是一个单独的行级盒，它将和周围的内容一起流动（行为类似于替换元素）。
 
         它等同于 `inline flow-root`。
 
     - `inline-table`
-
       - : `inline-table` 值在 HTML 中没有直接的映射。它行为类似于 HTML 的 {{HTMLElement("table")}} 元素，但实际是一个行级盒，而不是一个块级盒子。table 盒内部是一个块级上下文。
 
         它等同于 `inline table`。
 
     - `inline-flex`
-
       - : 元素的行为类似于行级元素并且它的内容根据弹性盒模型布局。
 
         它等同于 `inline flex`。
 
     - `inline-grid`
-
       - : 元素的行为类似于行级元素并且它的内容根据网格盒模型布局。
 
         它等同于 `inline grid`。
@@ -308,7 +352,7 @@ display: unset;
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
+- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
 - [了解成功标准 1.3.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 形式定义

@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial
 
 [![](canvas_tut_examples.jpg)](/ru/docs/Web/API/Canvas_API){{DefaultAPISidebar("Canvas API")}}
 
-[**`<canvas>`**](/ru/docs/Web/HTML/Element/canvas) — это [HTML](/ru/docs/Web/HTML) элемент, использующийся для рисования графики средствами языков программирования (обычно это [JavaScript](/ru/docs/Glossary/JavaScript)). Он может, к примеру, использоваться для рисования графов, создания коллажей или простой анимации.
+[**`<canvas>`**](/ru/docs/Web/HTML/Reference/Elements/canvas) — это [HTML](/ru/docs/Web/HTML) элемент, использующийся для рисования графики средствами языков программирования (обычно это [JavaScript](/ru/docs/Glossary/JavaScript)). Он может, к примеру, использоваться для рисования графов, создания коллажей или простой анимации.
 Изображения в правой части статьи являются примерами использования `<canvas>.`
 Примеры их создания приводятся в этой статье.
 

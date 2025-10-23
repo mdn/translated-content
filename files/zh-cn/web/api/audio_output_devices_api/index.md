@@ -15,7 +15,7 @@ l10n:
 
 即使在权限策略允许的情况下，访问特定音频输出设备仍然需要明确的用户权限，因为用户可能处于不适合通过某些输出设备播放音频的位置。
 
-该 API 提供了 {{domxref("MediaDevices.selectAudioOutput()")}} 方法，允许用户从文档的 {{httpheader("Permissions-Policy")}} HTTP 标头的 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) 指令允许的音频输出设备中选择所需的音频输出。然后选择的设备会获得用户权限，允许使用 {{domxref("MediaDevices.enumerateDevices()")}} 枚举该设备，并使用 {{domxref("HTMLMediaElement.setSinkId()")}} 将其设置为音频输出设备。
+该 API 提供了 {{domxref("MediaDevices.selectAudioOutput()")}} 方法，允许用户从文档的 {{httpheader("Permissions-Policy")}} HTTP 标头的 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) 指令允许的音频输出设备中选择所需的音频输出。然后选择的设备会获得用户权限，允许使用 {{domxref("MediaDevices.enumerateDevices()")}} 枚举该设备，并使用 {{domxref("HTMLMediaElement.setSinkId()")}} 将其设置为音频输出设备。
 
 音频设备可能会任意连接和断开。希望对此类更改做出反应的应用程序可以侦听 {{domxref("MediaDevices/devicechange_event", "devicechange")}} 事件，并使用 {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} 来确定返回的设备中是否存在 `sinkId`。这可能会触发例如暂停或恢复播放等操作。
 
@@ -44,13 +44,11 @@ l10n:
 - 所有方法和属性只能在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
 
 - {{domxref("MediaDevices.selectAudioOutput()")}} 授予对所选设备用作音频输出的用户权限：
-
-  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的限制。
+  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的限制。
   - 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素交互，才能调用此方法。
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} 将允许的 ID 设置为音频输出：
-
-  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的限制。
+  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的限制。
   - 需要用户权限来设置非默认设备 ID。
     - 这可以通过在由 `MediaDevices.selectAudioOutput()` 启动的提示中选择来获得。
     - 如果已经使用 {{domxref("MediaDevices.getUserMedia()")}} 获得了使用相同组中媒体输入设备的权限，则用户还会隐式授予对应输出设备的权限。

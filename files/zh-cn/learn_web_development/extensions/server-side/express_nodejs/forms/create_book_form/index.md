@@ -1,7 +1,6 @@
 ---
 title: 创建书本表单
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form
-original_slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 ---
 
 此子文档显示如何定义页面/表单以创建 `Book` 对象。这比相同的作者 `Author` 或种类 `Genre` 页面稍微复杂一点，因为我们需要在我们的书本表单中，获取并显示可用的作者和种类记录。

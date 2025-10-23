@@ -7,7 +7,54 @@ slug: Web/CSS/border-bottom-style
 
 La propriété **`border-bottom-style`** définit le style de ligne utilisé pour mettre en forme la bordure en bas d'une boîte.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-style")}}
+
+```css interactive-example-choice
+border-bottom-style: none;
+```
+
+```css interactive-example-choice
+border-bottom-style: dotted;
+```
+
+```css interactive-example-choice
+border-bottom-style: dashed;
+```
+
+```css interactive-example-choice
+border-bottom-style: solid;
+```
+
+```css interactive-example-choice
+border-bottom-style: groove;
+```
+
+```css interactive-example-choice
+border-bottom-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
@@ -130,14 +177,12 @@ td {
 ## Voir aussi
 
 - Les autres propriétés liées au style des bordures&nbsp;:
-
   - [`border-left-style`](/fr/docs/Web/CSS/border-left-style)
   - [`border-right-style`](/fr/docs/Web/CSS/border-right-style)
   - [`border-top-style`](/fr/docs/Web/CSS/border-top-style)
   - [`border-style`](/fr/docs/Web/CSS/border-style).
 
 - Les autres propriétés liées à la bordure basse&nbsp;:
-
   - [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
   - [`border-bottom-color`](/fr/docs/Web/CSS/border-bottom-color)
   - [`border-bottom-width`](/fr/docs/Web/CSS/border-bottom-width).

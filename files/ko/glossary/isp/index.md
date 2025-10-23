@@ -11,5 +11,5 @@ l10n:
 
 ## 같이 보기
 
-- [인터넷 작동 원리](/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) (초보자를 위한 설명)
+- [인터넷 작동 원리](/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (초보자를 위한 설명)
 - 위키백과의 [인터넷 서비스 제공자](https://en.wikipedia.org/wiki/Internet_service_provider)

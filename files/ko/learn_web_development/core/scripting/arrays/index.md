@@ -158,7 +158,7 @@ original_slug: Learn/JavaScript/First_steps/Arrays
 
 ### 배열 항목의 접근과 수정
 
-그런 다음 [문자열의 문자에 접근했던 것](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
+그런 다음 [문자열의 문자에 접근했던 것](/ko/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
 
 1. 콘솔에 다음을 입력하세요:
 
@@ -326,10 +326,10 @@ var myArray = [
 앞에서 설명했던 예제로 돌아가 봅시다. 상품의 이름과 가격을 청구서에 출력하고, 가격의 합계를 내서 그것을 밑에 출력합니다. 아래의 수정 가능한 예제에, 숫자를 포함하고 있는 주석이 있습니다. 각 줄은 코드에 추가할 장소를 표시하고 있습니다. 그것들은 다음과 같습니다.
 
 1. 아래의 `// number 1` 주석은 몇 개의 문자열인데, 각 문자열은 상품의 이름과 가격을 포함하고 있고 콜론에 의해 분리되어 있습니다. 우리는 당신이 이것을 `products`라는 배열으로 바꾸고 이곳에 이것을 저장하기를 원합니다.
-2. `// number 2` 주석이 있는 같은 라인에서는 for 반복문이 시작됩니다. 이 라인에서 우리는 현재 `i <= 0`를 가지고 있는데, 이 조건 테스트(conditional test)는 "`i`가 더 이상 0보다 작거나 같지 않을 때 멈추시오"라고 말하고 있고, `i`는 0에서 시작하기 때문에, 이는 [for 반복문](/ko/docs/Learn/JavaScript/First_steps/A_first_splash#loops)이 즉시 멈추는 것을 유발하는 조건 테스트입니다. 우리는 당신이 이것을 `i`가 `products`배열의 길이(length)보다 더 이상 작지 않을 때 반복을 멈추게 하는 조건 테스트로 바꾸기를 원합니다.
-3. `// number 3` 주석 바로 아래에서 우리는 당신이 현재 배열의 원소를, 한 개는 단순히 이름을 포함하고 한 개는 단순히 가격을 포함하는 두 개의 원소로 분리하는 한 줄의 코드를 작성하기를 원합니다. 만약 당신이 이것을 어떻게 하는지 확실히 알지 못한다면, [유용한 문자열 메서드(Useful string methods)](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)를 도움을 위해 참고하거나, 더 나은 정보를 원한다면, 이 글의 [문자열과 배열 전환하기](#문자열과_배열_전환하기) 부분을 참고하세요.
-4. 상기 코드 라인의 부분으로써, 당신은 또한 가격을 문자열에서 숫자로 전환하기를 원할 것입니다. 만약 당신이 어떻게 이것을 하는지 기억하지 못한다면, [첫번째 문자열 문서](/ko/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings)를 살펴보세요.
-5. 만들어지고 0의 값이 주어진 `total`이라는 변수가 코드의 위쪽에 있습니다. 이 반복문 안에서 (`// number 4` 아래) 우리는 당신이 현재 상품의 가격을 반복문의 각 반복마다 총액(total)에 합하는 코드 한 줄을 추가해서, 코드의 끝에서 올바른 총액이 청구서에 인쇄되도록 하기를 원합니다. 당신은 이것을 하기 위해 [대입 연산자(assignment operator)](/ko/docs/Learn/JavaScript/First_steps/Math#assignment_operators)가 필요할지도 모릅니다.
+2. `// number 2` 주석이 있는 같은 라인에서는 for 반복문이 시작됩니다. 이 라인에서 우리는 현재 `i <= 0`를 가지고 있는데, 이 조건 테스트(conditional test)는 "`i`가 더 이상 0보다 작거나 같지 않을 때 멈추시오"라고 말하고 있고, `i`는 0에서 시작하기 때문에, 이는 [for 반복문](/ko/docs/Learn_web_development/Core/Scripting/A_first_splash#loops)이 즉시 멈추는 것을 유발하는 조건 테스트입니다. 우리는 당신이 이것을 `i`가 `products`배열의 길이(length)보다 더 이상 작지 않을 때 반복을 멈추게 하는 조건 테스트로 바꾸기를 원합니다.
+3. `// number 3` 주석 바로 아래에서 우리는 당신이 현재 배열의 원소를, 한 개는 단순히 이름을 포함하고 한 개는 단순히 가격을 포함하는 두 개의 원소로 분리하는 한 줄의 코드를 작성하기를 원합니다. 만약 당신이 이것을 어떻게 하는지 확실히 알지 못한다면, [유용한 문자열 메서드(Useful string methods)](/ko/docs/Learn_web_development/Core/Scripting/Useful_string_methods)를 도움을 위해 참고하거나, 더 나은 정보를 원한다면, 이 글의 [문자열과 배열 전환하기](#문자열과_배열_전환하기) 부분을 참고하세요.
+4. 상기 코드 라인의 부분으로써, 당신은 또한 가격을 문자열에서 숫자로 전환하기를 원할 것입니다. 만약 당신이 어떻게 이것을 하는지 기억하지 못한다면, [첫번째 문자열 문서](/ko/docs/Learn_web_development/Core/Scripting/Strings#numbers_versus_strings)를 살펴보세요.
+5. 만들어지고 0의 값이 주어진 `total`이라는 변수가 코드의 위쪽에 있습니다. 이 반복문 안에서 (`// number 4` 아래) 우리는 당신이 현재 상품의 가격을 반복문의 각 반복마다 총액(total)에 합하는 코드 한 줄을 추가해서, 코드의 끝에서 올바른 총액이 청구서에 인쇄되도록 하기를 원합니다. 당신은 이것을 하기 위해 [대입 연산자(assignment operator)](/ko/docs/Learn_web_development/Core/Scripting/Math#assignment_operators)가 필요할지도 모릅니다.
 6. `itemText` 변수가 "current item name — $current item price"와 같이 만들어지도록, 예를 들자면 각각의 경우에 "Shoes — $23.99" 처럼 만들어지도록 우리는 당신이 `// number 5` 바로 아래의 줄을 변경해서, 각각의 물품에 대한 올바른 정보가 청구서에 출력되도록 하기를 원합니다. 이것은, 당신에게 친숙할지도 모르는, 단지 단순한 문자열 연결(concatenation)입니다.
 
 ```html hidden

@@ -40,7 +40,8 @@ async function handleTransition() {
 }
 ```
 
-> **备注：** `isBackNavigation` 不是内置特性；它是一个理论上存在的函数，可以使用 [Navigation API](/zh-CN/docs/Web/API/Navigation_API) 或类似的特性实现。
+> [!NOTE]
+> `isBackNavigation` 不是内置特性；它是一个理论上存在的函数，可以使用 [Navigation API](/zh-CN/docs/Web/API/Navigation_API) 或类似的特性实现。
 
 ## 规范
 

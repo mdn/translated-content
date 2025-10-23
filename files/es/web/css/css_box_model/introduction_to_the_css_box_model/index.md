@@ -3,8 +3,6 @@ title: Introducción al modelo de caja básico de CSS
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
-{{CSSRef}}
-
 Al maquetar un documento, el motor de renderizado del navegador representa cada elemento como una caja rectangular, conforme al estándar del **modelo de caja básico de CSS**. CSS determina el tamaño, la posición y las propiedades (color, fondo, tamaño del borde, etc.) de estas cajas.
 
 Cada caja está compuesta de cuatro partes (o _áreas_), definidas por sus respectivos límites: _límite de contenido (content edge)_ , _límite de relleno (padding edge)_ , _límite de borde (border edge)_ y _límite de margen (margin edge)_ .
@@ -41,21 +39,21 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
 
 - [Diseño y el bloque contenedor](/es/docs/Web/CSS/Containing_block)
 - [Introducción a la cascada CSS](/es/docs/Web/CSS/Cascade)
-- [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Conceptos clave de CSS
-  - [Sintaxis CSS](/es/docs/Web/CSS/Syntax)
-  - [Reglas-At](/es/docs/Web/CSS/At-rule)
-  - [Comentarios](/es/docs/Web/CSS/Comments)
-  - [Especificidad](/es/docs/Web/CSS/Specificity)
-  - [Herencia](/es/docs/Web/CSS/Inheritance)
-  - [Modo de diseño](/es/docs/Web/CSS/Layout_mode)
+  - [Sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Reglas-At](/es/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Comentarios](/es/docs/Web/CSS/CSS_syntax/Comments)
+  - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Modo de diseño](/es/docs/Glossary/Layout_mode)
   - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
   - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valores
-    - [Valor inicial](/es/docs/Web/CSS/initial_value)
-    - [Valor calculado](/es/docs/Web/CSS/computed_value)
+    - [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
     - [Valor usado](/es/docs/Web/CSS/used_value)
-    - [Valor real](/es/docs/Web/CSS/actual_value)
-  - [Sintaxis de definición de valor](/es/docs/Web/CSS/Value_definition_syntax)
-  - [Propiedades abreviadas](/es/docs/Web/CSS/Shorthand_properties)
-  - [Elementos reemplazados](/es/docs/Web/CSS/Replaced_element)
+    - [Valor real](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+  - [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)

@@ -5,11 +5,39 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
+**`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-**`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+{{InteractiveExample("CSS デモ: opacity()")}}
 
-{{EmbedInteractiveExample("pages/css/function-opacity.html")}}
+```css interactive-example-choice
+filter: opacity(1);
+```
+
+```css interactive-example-choice
+filter: opacity(80%);
+```
+
+```css interactive-example-choice
+filter: opacity(50%);
+```
+
+```css interactive-example-choice
+filter: opacity(0.2);
+```
+
+```css interactive-example-choice
+filter: opacity(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 > [!NOTE]
 > この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。

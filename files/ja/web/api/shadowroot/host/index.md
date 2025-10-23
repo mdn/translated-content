@@ -36,7 +36,7 @@ let hostElem = shadow.host;
 
 ## 関連情報
 
-- HTML の [`part`](/ja/docs/Web/HTML/Global_attributes#part) および [`exportparts`](/ja/docs/Web/HTML/Global_attributes#exportparts) 属性
+- HTML の [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) および [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性
 - HTML の {{HTMLelement("template")}} および {{HTMLElement("slot")}} 要素
 - CSS の {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, {{CSSXref(":host-context", ":host-context()")}} 擬似クラス
 - CSS の {{CSSXref("::part")}} および {{CSSXref("::slotted")}} 擬似クラス

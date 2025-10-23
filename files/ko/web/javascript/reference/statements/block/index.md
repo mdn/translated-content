@@ -6,8 +6,7 @@ slug: Web/JavaScript/Reference/Statements/block
 {{jsSidebar("Statements")}}
 
 **블록문**(또는 다른 언어에서는 복합문)은 0개 이상의 구문을 묶을 때 사용합니다.
-블록은 한 쌍의 중괄호로 구성하며 선택적으로 {{jsxref("Statements/label", "레이블",
-  "", 1)}}을 붙일 수 있습니다.
+블록은 한 쌍의 중괄호로 구성하며 선택적으로 {{jsxref("Statements/label", "레이블", "", 1)}}을 붙일 수 있습니다.
 
 {{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
 

@@ -2,16 +2,56 @@
 title: vertical-align
 slug: Web/CSS/vertical-align
 l10n:
-  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
-
-{{CSSRef}}
 
 **`vertical-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インラインボックス、インラインブロック、表セルボックスの垂直方向の配置を設定します。
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS デモ: vertical-align")}}
 
-vertical-align は、2 つの場面で使用することができます。
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
+
+`vertical-align` は、2 つの場面で使用することができます。
 
 - その中の行ボックスの中で、インラインレベル要素のボックスの垂直方向の配置を決める場合。例えば、[テキストの行の中で画像の垂直位置を決める](#行ボックス内での垂直方向の配置)ために使用することができます。
 - [表のセルの内容](#表のセル内での垂直方向の配置)の垂直方向の配置を決める場合。
@@ -55,7 +95,7 @@ vertical-align: unset;
 以下の値は、親要素に対する垂直方向の配置方法を表します。
 
 - `baseline`
-  - : 要素のベースラインを親要素のベースラインに揃えます。一部の[置換要素](/ja/docs/Web/CSS/Replaced_element)、例えば {{HTMLElement("textarea")}} などのベースラインは HTML 仕様で未定義です。このため、このキーワードの挙動はブラウザーにより異なるかもしれません。
+  - : 要素のベースラインを親要素のベースラインに揃えます。一部の{{ glossary("replaced elements", "置換要素")}}、例えば {{HTMLElement("textarea")}} などのベースラインは HTML 仕様で未定義です。このため、このキーワードの挙動はブラウザーにより異なるかもしれません。
 - `sub`
   - : 要素のベースラインを親要素の subscript-baseline に揃えます。
 - `super`

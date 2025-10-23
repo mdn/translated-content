@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-**`PerformanceElementTiming`** インターフェイスは、開発者が [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性で記述した画像やテキストのノード要素の描画タイミング情報を保持します。
+**`PerformanceElementTiming`** インターフェイスは、開発者が [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性で記述した画像やテキストのノード要素の描画タイミング情報を保持します。
 
 ## 解説
 
@@ -17,11 +17,11 @@ API は以下の要素のタイミング情報に対応しています。
 
 - {{htmlelement("img")}} 要素
 - {{SVGElement("image")}} 要素（{{SVGElement("svg")}} 内）
-- [ポスター画像](/ja/docs/Web/HTML/Element/video#poster)（{{htmlelement("video")}} 要素）
+- [ポスター画像](/ja/docs/Web/HTML/Reference/Elements/video#poster)（{{htmlelement("video")}} 要素）
 - {{cssxref("background-image")}} がある要素
 - テキストノードのグループ、 {{htmlelement("p")}} など
 
-作者は要素に [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加することで、監視のためのフラグを立てます。
+作者は要素に [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加することで、監視のためのフラグを立てます。
 
 `PerformanceElementTiming` は {{domxref("PerformanceEntry")}} を継承しています。
 
@@ -45,9 +45,9 @@ API は以下の要素のタイミング情報に対応しています。
 - {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 情報を返す要素を表す {{domxref("Element")}} です。
 - {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) である文字列です。
+  - : 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) である文字列です。
 - {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 要素の [`elementtiming`](/ja/docs/Web/HTML/Attributes/for) 属性の値である文字列です。
+  - : 要素の [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/for) 属性の値である文字列です。
 - {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : ビューポート内の要素の矩形である {{domxref("DOMRectReadOnly")}} です。
 - {{domxref("PerformanceElementTiming.loadTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -70,7 +70,7 @@ API は以下の要素のタイミング情報に対応しています。
 
 ### 固有の要素のレンダリング時間の監視
 
-この例では、 [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加することで、 2 つの要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、 `buffered` フラグを使用してオブザーバー作成前のデータにアクセスしています。
+この例では、 [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加することで、 2 つの要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、 `buffered` フラグを使用してオブザーバー作成前のデータにアクセスしています。
 
 ```html
 <img src="image.jpg" elementtiming="big-image" />
@@ -98,4 +98,4 @@ observer.observe({ type: "element", buffered: true });
 
 ## 関連情報
 
-- [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) HTML 属性
+- [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) HTML 属性

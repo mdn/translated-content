@@ -1,10 +1,9 @@
 ---
 title: What’s in the head? Metadata in HTML
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不會顯示在瀏覽器上的部分。其中包含一些資訊，如頁面的標題({{htmlelement("title")}})、{{glossary("CSS")}} 的連結 (當你想利用 CSS 來妝點你的頁面 HTML 時，你會用到它們)、網頁圖示(favicon)的連結，以及 metadata (裡頭承載了有關於該 HTML 的資料，如作者、描述該文件的關鍵詞等)。在這一章節裡，我們會討論以上的內容，甚至更多，藉此替你打下標記網頁的根基。
 
@@ -67,7 +66,6 @@ HTML 的 head 就是 {{htmlelement("head")}} 元素裡面的內容 — 跟 {{htm
 ### 不要光是看：檢視一個簡單的範例
 
 1. 在開始這次主動學習之前，請你先到我們的 GitHub repo 中下載一份 [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)。要做到這件事情，你可以：
-
    1. 用你的文字編輯器開一個新檔案，並將原始碼複製到裡面，然後再儲存在一個合適的地方。
    2. 按下網頁上的 Raw 按鈕，它就會將原始碼以純文字的形式顯示在你瀏覽器的新分頁上。接著點按右鍵，將檔案儲存在你喜歡的地方。
 
@@ -214,25 +212,18 @@ There are lots of other icon types to consider these days as well. For example, 
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.
@@ -275,7 +266,7 @@ If done correctly, when you save your HTML and refresh your browser you'll see t
 
 ## 預設文件語言
 
-Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the [lang attribute](/zh-TW/docs/Web/HTML/Global_attributes/lang) to the opening HTML tag (as seen in the [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) and shown below.)
+Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the [lang attribute](/zh-TW/docs/Web/HTML/Reference/Global_attributes/lang) to the opening HTML tag (as seen in the [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) and shown below.)
 
 ```html
 <html lang="en-US">

@@ -15,7 +15,7 @@ l10n:
 
 リソースの先読みは、それが将来のナビゲーションで必要になる可能性の高さに基づいて行うべきです。ブラウザーは、アドレスバーの現在の URL のようないくつかのリソースについて、これを自動的に推測することができます。
 
-これは [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) を使用して行う言ことができます（[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) はナビゲーションのための文書の先読みだけを処理します）。
+これは [`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch) を使用して行う言ことができます（[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) はナビゲーションのための文書の先読みだけを処理します）。
 
 ```html
 <link rel="prefetch" href="next.html" />
@@ -25,7 +25,7 @@ l10n:
 
 開発者はさまざまな方法で、先読みすべきナビゲーションのヒントをブラウザーに提供することができます。
 
-[`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) の場合:
+[`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch) の場合:
 
 ```html
 <link rel="prefetch" href="next.html" />
@@ -46,11 +46,11 @@ l10n:
 </script>
 ```
 
-投機ルール API は、ナビゲーションのための文書の先読みを `<link rel="prefetch">` よりもうまく扱います。前者はそのために特別に設計されたのに対して、後者は多くの制限があります。詳細は [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) を参照してください。
+投機ルール API は、ナビゲーションのための文書の先読みを `<link rel="prefetch">` よりもうまく扱います。前者はそのために特別に設計されたのに対して、後者は多くの制限があります。詳細は [`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch) を参照してください。
 
 ### DNS 先読み
 
-[DNS 先読み](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch)は、事前にドメイン名を解決し、リクエスト時のドメイン検索にかかる時間を短縮することで、読み込む時間を短縮します。
+[DNS 先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch)は、事前にドメイン名を解決し、リクエスト時のドメイン検索にかかる時間を短縮することで、読み込む時間を短縮します。
 
 ```html
 <link rel="dns-prefetch" href="https://example.com/" />
@@ -58,6 +58,6 @@ l10n:
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
 - {{Glossary("prerender")}}
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

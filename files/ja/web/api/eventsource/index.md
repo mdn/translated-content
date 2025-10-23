@@ -9,15 +9,16 @@ l10n:
 
 **`EventSource`** インターフェイスは、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)のウェブコンテンツのインターフェイスです。
 
-`EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Learn/JavaScript/Building_blocks/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。
+`EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Learn_web_development/Core/Scripting/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。
 
 {{InheritanceDiagram}}
 
 コネクションが開かれた後、サーバーからの着信メッセージは、イベントという形式でコードに配信されます。着信メッセージにイベントフィールドがある場合、発生するイベント は、イベントフィールドの値と同じになります。イベントフィールドが存在しない場合、一般的な {{domxref("EventSource/message_event", "message")}} イベントが発行されます。
 
-[WebSocket](/ja/docs/Web/API/WebSockets_API) とは異なり、サーバー送信イベントは単一方向です。つまり、データメッセージはサーバーからクライアント（ユーザーのウェブブラウザーなど）に向けて、一方向に配信されます。これは、メッセージの形でクライアントからサーバーにデータを送る必要がない場合には良い選択です。例えば、 `EventSource` はソーシャルメディアの近況アップデートやニュースフィードのようなものを扱ったり、[クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)（[IndexedDB](/ja/docs/Web/API/IndexedDB_API) や [web storage](/ja/docs/Web/API/Web_Storage_API) など）の仕組みにデータを配信したりするアプローチに有用です。
+[WebSocket](/ja/docs/Web/API/WebSockets_API) とは異なり、サーバー送信イベントは単一方向です。つまり、データメッセージはサーバーからクライアント（ユーザーのウェブブラウザーなど）に向けて、一方向に配信されます。これは、メッセージの形でクライアントからサーバーにデータを送る必要がない場合には良い選択です。例えば、 `EventSource` はソーシャルメディアの近況アップデートやニュースフィードのようなものを扱ったり、[クライアント側ストレージ](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)（[IndexedDB](/ja/docs/Web/API/IndexedDB_API) や [web storage](/ja/docs/Web/API/Web_Storage_API) など）の仕組みにデータを配信したりするアプローチに有用です。
 
-> **警告:** **HTTP/2 上で使用されていない**場合、 SSE は開いている接続の最大数に制限を受けます。この制限はブラウザーごとにあり、とても低い数 (6) に設定されているため、さまざまなタブを開くために特別な痛みを伴うことがあります。この問題は、[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と表示されています。この制限はブラウザー＋ドメインごとなので、 `www.example1.com` への SSE 接続をすべてのタブで 6 つ、`www.example2.com.` への SSE 接続をさらに 6 つ開くことができることを意味しています（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) より）。 HTTP/2 を使用している場合、同時の _HTTP ストリーム_ の最大数はサーバーとクライアントの間で交渉されます（既定値は 100）。
+> [!WARNING]
+> **HTTP/2 上で使用されていない**場合、 SSE は開いている接続の最大数に制限を受けます。この制限はブラウザーごとにあり、とても低い数 (6) に設定されているため、さまざまなタブを開くために特別な痛みを伴うことがあります。この問題は、[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と表示されています。この制限はブラウザー＋ドメインごとなので、 `www.example1.com` への SSE 接続をすべてのタブで 6 つ、`www.example2.com.` への SSE 接続をさらに 6 つ開くことができることを意味しています（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) より）。 HTTP/2 を使用している場合、同時の _HTTP ストリーム_ の最大数はサーバーとクライアントの間で交渉されます（既定値は 100）。
 
 ## コンストラクター
 
@@ -33,7 +34,7 @@ _このインターフェイスは、親である {{domxref("EventTarget")}} か
 - {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : 文字列で、ソースの URL を表します。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
-  - : 論理値で、 `EventSource` オブジェクトがオリジン間 ([CORS](/ja/docs/Web/HTTP/CORS)) 資格情報を設定してインスタンス化されたか (`true`)、設定されずにインスタンス化されたか (`false`、既定値) を示します。
+  - : 論理値で、 `EventSource` オブジェクトがオリジン間 ([CORS](/ja/docs/Web/HTTP/Guides/CORS)) 資格情報を設定してインスタンス化されたか (`true`)、設定されずにインスタンス化されたか (`false`、既定値) を示します。
 
 ## メソッド
 

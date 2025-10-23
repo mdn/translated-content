@@ -5,11 +5,48 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
+**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置元素边框的宽度。
 
-**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)用于设置元素边框的宽度。
+{{InteractiveExample("CSS Demo: border-width")}}
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+```css interactive-example-choice
+border-width: thick;
+```
+
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 构成属性
 
@@ -59,9 +96,7 @@ border-width: unset;
 ### 值
 
 - `<line-width>`
-
   - : 定义边框的宽度，可以是明确的非负数 {{cssxref("&lt;length&gt;")}} 或关键字。如果是关键字，则必须是以下值之一：
-
     - `thin`
     - `medium`
     - `thick`

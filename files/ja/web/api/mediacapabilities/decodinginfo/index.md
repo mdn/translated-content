@@ -12,7 +12,7 @@ l10n:
 
 解決されたオブジェクトには、記述されているメディアのデコードに対応しているかどうか、また対応している場合は場合はデコードがスムーズかつ電力効率的に行われるかどうかを示す、3 つの論理値プロパティ `supported`, `smooth`, `powerefficient` が格納されています。
 
-このメソッドは、キーシステムでエンコードされたメディアをデコードするためのユーザーエージェントの能力を調べるためにも使用できますが、メインスレッドで安全なコンテキストで呼び出された場合のみです。
+このメソッドは、キーシステムでエンコードされたメディアをデコードするためのユーザーエージェントの能力を調べるためにも使用できますが、メインスレッドで保護されたコンテキストで呼び出された場合のみです。
 `configuration.keySystemConfiguration` プロパティに渡された構成が、データのデコードに対応している場合、解決されたプロミスには {{domxref("MediaKeySystemAccess")}} オブジェクトも含まれることがあります。これは、暗号化された再生を設定するために使用できる {{domxref("MediaKeys")}} オブジェクトを作成するために使用できます。
 
 > [!NOTE]
@@ -28,13 +28,9 @@ decodingInfo(configuration)
 ### 引数
 
 - `configuration`
-
   - : `type` プロパティと、適切な種類の構成を格納する `video` または `audio` プロパティ、および、オプションでキーシステムで暗号化されたメディアをデコードする際に使用する `keySystemConfiguration` を持つオブジェクトです。 <!-- 仕様書上の MediaDecodingConfiguration -->
-
     - `type`
-
       - : 検査対象のメディアの種類。これは 3 つの値のうちの 1 つを取ります。
-
         - `file`
           - : プレーンなファイル再生に使用することを意味する構成を表します。
         - `media-source`
@@ -43,10 +39,8 @@ decodingInfo(configuration)
           - : {{domxref("RTCPeerConnection")}} を使用して受信することを意味する構成を表します（`keySystemConfiguration` が設定されている場合は許可されません）。
 
     - `video`
-
       - : 動画メディアソースの構成オブジェクト。
         これは、以下のプロパティを持ちます。 <!-- 仕様書上の VideoConfiguration -->
-
         - `contentType`
           - : 有効な動画の MIME タイプ、および（オプションで）[`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)の入った文字列です。
         - `width`
@@ -59,10 +53,8 @@ decodingInfo(configuration)
           - : 動画再生の 1 秒を構成するフレーム数。
 
     - `audio`
-
       - : 音声メディアソースの構成オブジェクト。
         これは、以下のプロパティを持ちます。 <!-- 仕様書上の AudioConfiguration -->
-
         - `contentType`
           - : 有効な音声の MIME タイプ、および（オプションで）[`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)の入った文字列です。
         - `channels`
@@ -73,29 +65,24 @@ decodingInfo(configuration)
           - : 音声ファイルの 1 秒を構成する音声サンプルの数。
 
     - `keySystemConfiguration` {{optional_inline}}
-
       - : 暗号化されたメディアのキーシステム構成を指定するオブジェクトです。
 
-        > **メモ:** [`Navigator.requestMediaKeySystemAccess()`](/ja/docs/Web/API/Navigator/requestMediaKeySystemAccess) は `supportedConfigurations` 引数内と同じデータ型の一部を取ります。
+        > [!NOTE]
+        > [`Navigator.requestMediaKeySystemAccess()`](/ja/docs/Web/API/Navigator/requestMediaKeySystemAccess) は `supportedConfigurations` 引数内と同じデータ型の一部を取ります。
 
         指定された場合、[`type`](#type) は `media-source` または `file` である必要があります（`webrtc` は指定できません）。
         これには以下のプロパティがあります。<!-- 仕様書上の MediaCapabilitiesKeySystemConfiguration -->
-
         - `keySystem`
-
           - : メディアキーシステムを識別する文字俺つです。
             例えば `org.w3.clearkey` や `com.widevine.alpha` です。
 
         - `initDataType` {{optional_inline}}
-
           - : 初期データ形式のデータ型名を示す文字列です。例えば `"cenc"`、`"keyids"`、`"webm"` です。
             利用できる名前は、[Encrypted Media Extensions Initialization Data Format Registry](https://www.w3.org/TR/eme-initdata-registry/) で定義されているものです。
 
         - `distinctiveIdentifier` {{optional_inline}}
-
           - : 文字列で、この構成から作成されたオブジェクトに関連する操作に「一意な識別子」（または一意な恒久識別子）を使用してよいかどうかを示します。
             利用できる値は次の通りです。
-
             - `required`
               - : 返されるオブジェクトは、この機能に対応している必要があります。
             - `optional`
@@ -105,10 +92,8 @@ decodingInfo(configuration)
               - : 返されるオブジェクトは、この機能に対応または利用してはいけません。
 
         - `persistentState` {{optional_inline}}
-
           - : 文字列で、返されたオブジェクトがセッションデータなどの状態を維持できる必要があるかどうかを示します。
             利用可能な値は次の通りです。
-
             - `required`
               - : 返されるオブジェクトは、この機能に対応している必要があります。
             - `optional`
@@ -119,10 +104,8 @@ decodingInfo(configuration)
                 永続的な状態が許可されていない場合は、「一時的」なセッションのみを作成することができます。
 
         - `sessionTypes` {{optional_inline}}
-
           - : 文字列の配列で、対応している必要があるセッションの種類を示します。
             許可された値は次の通りです。
-
             - `temporary`
               - : セッションのライセンス、キー、またはセッションに関連の記録またはデータが維持されないセッションです。
                 アプリケーションは、このようなストレージを管理する必要はありません。
@@ -132,10 +115,8 @@ decodingInfo(configuration)
                 ライセンスとそれに関連するキーの記録は、ライセンスが破棄された場合でも維持され、ライセンスとキーがクライアントで使用できなくなくなったことを示す証明を示します。
 
         - `audio` {{optional_inline}}
-
           - : 上記の [`audio` 構成](#audio)に関連する音声キーシステムのトラック構成。
             設定した場合は、[`audio` 構成](#audio) も設定する必要があります。
-
             - `encryptionScheme`
               - : コンテンツの型に関連付けられた暗号化スキームです。例えば `cenc`, `cbcs`, `cbcs-1-9` です。
                 この値はアプリケーションで設定する必要があります（既定では `null` に設定されており、任意の暗号化方式を使用できることを示します）。
@@ -144,10 +125,8 @@ decodingInfo(configuration)
                 空文字列は、コンテンツタイプを復号しデコードする能力であれば何でも受け入れられることを示します。
 
         - `video` {{optional_inline}}
-
           - : 上記の [`video` 構成](#video)に関連する映像キーシステムのトラック構成。
             設定した場合は、[`video` 構成](#video) も設定する必要があります。
-
             - `encryptionScheme`
               - : コンテンツの型に関連付けられた暗号化スキームです。例えば `cenc`, `cbcs`, `cbcs-1-9` です。
                 この値はアプリケーションで設定する必要があります（既定では `null` に設定されており、任意の暗号化方式を使用できることを示します）。
@@ -174,11 +153,9 @@ decodingInfo(configuration)
 ### 例外
 
 - {{jsxref("TypeError")}}
-
   - : `decodingInfo()` メソッドに渡された `configuration` が不正な場合、つまり、型が映像または音声でない場合、`contentType` が有効なコーデック MIME タイプでない場合、メディアのデコード構成が `type`（ファイル、メディアソース、webrtc）の有効な値でない場合、またはメソッドに渡されたメディア構成に値の記載漏れなどその他のエラーがある場合に例外が発生します。
 
 - `InvalidStateError` {{domxref("DOMException")}}
-
   - : [`configuration.keySystemConfiguration`](#keysystemconfiguration) が定義されている場合で、このメソッドがワーカーから呼び出された場合。
 
 - `SecurityError` {{domxref("DOMException")}}
@@ -328,7 +305,7 @@ const encryptedMediaConfig = {
 ```
 
 前の例では、[プロミス連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)を使用して結果を待ちました。
-ここでは、[`async` と `await`](/ja/docs/Learn/JavaScript/Asynchronous/Promises#async_と_await) を使用して結果を待ち、その後ログ出力するように選べます。
+ここでは、[`async` と `await`](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises#async_と_await) を使用して結果を待ち、その後ログ出力するように選べます。
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

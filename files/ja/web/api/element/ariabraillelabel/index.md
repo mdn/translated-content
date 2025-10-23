@@ -8,10 +8,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`ariaBrailleLabel`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) 属性の値を反映し、要素の ARIA 点字ラベルを定義します。
+**`ariaBrailleLabel`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 属性の値を反映し、要素の ARIA 点字ラベルを定義します。
 
 この要素ラベルは、点字でコンテンツを表示できる支援技術によって使用されるかもしれませんが、点字固有のラベルが使い勝手を向上させる場合にのみ設定されるべきです。
-[`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) には、いつこのプロパティを設定すべきかについての追加情報があります。
+[`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) には、いつこのプロパティを設定すべきかについての追加情報があります。
 
 ## 値
 

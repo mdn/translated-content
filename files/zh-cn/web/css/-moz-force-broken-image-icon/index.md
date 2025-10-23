@@ -5,7 +5,7 @@ l10n:
   sourceCommit: db9ccd6c2746b3f34b0951d8e59ea1c581312d9d
 ---
 
-{{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 **`-moz-force-broken-image-icon`** 扩展 CSS 属性可用于强制显示损坏图像图标，即使损坏的图像具有 `alt` 属性。
 
@@ -14,7 +14,7 @@ l10n:
 ### 值
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : 值为 `1` 表示即使图像具有 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 属性，也会显示损坏的图像图标。当值为 `0` 时，图像将按常规显示，仅显示 `alt` 属性。
+  - : 值为 `1` 表示即使图像具有 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 属性，也会显示损坏的图像图标。当值为 `0` 时，图像将按常规显示，仅显示 `alt` 属性。
 
 > [!NOTE]
 > 即使将值设置为 `1`，`alt` 属性仍会显示，并与损坏的图像图标一起呈现。

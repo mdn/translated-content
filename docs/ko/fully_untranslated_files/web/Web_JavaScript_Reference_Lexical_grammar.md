@@ -552,7 +552,6 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
    ```
 
 3. A semicolon is inserted at the end, when a statement with restricted productions in the grammar is followed by a line terminator. These statements with "no LineTerminator here" rules are:
-
    - PostfixExpressions (`++` and `--`)
    - `continue`
    - `break`

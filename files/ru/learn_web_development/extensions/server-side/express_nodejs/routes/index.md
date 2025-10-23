@@ -5,15 +5,15 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
-В этом уроке мы настроим маршруты (код обработки URL) с "фиктивными" функциями-обработчиками для всех конечных точек ресурса, которые нам понадобятся на веб-сайте [LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). По завершении мы получим модульную структуру для нашего кода обработки маршрута, который будет расширен реальными функциями-обработчиками в следующих статьях. У нас также будет хорошее понимание того, как создавать модульные маршруты с помощью Express!
+В этом уроке мы настроим маршруты (код обработки URL) с "фиктивными" функциями-обработчиками для всех конечных точек ресурса, которые нам понадобятся на веб-сайте [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website). По завершении мы получим модульную структуру для нашего кода обработки маршрута, который будет расширен реальными функциями-обработчиками в следующих статьях. У нас также будет хорошее понимание того, как создавать модульные маршруты с помощью Express!
 
-| Предварительные знания: | Прочесть [введение в Express/Node](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction). Завершить предыдущие уроки (включая [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)). |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                   | Понять, как создать простые маршруты. Настроить конечные точки URL.                                                                                                                                                                               |
+| Предварительные знания: | Прочесть [введение в Express/Node](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction). Завершить предыдущие уроки (включая [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)). |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                   | Понять, как создать простые маршруты. Настроить конечные точки URL.                                                                                                                                                                                                                                     |
 
 ## Обзор
 
-В [последней статье](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose) мы определили модели _Mongoose_ для взаимодействия с базой данных, и использовали (автономный) скрипт, который создал некоторые исходные записи библиотеки. Теперь можно написать код, чтобы представить эту информацию пользователям. Первое, что нужно сделать, это решить, какие возможности для отображения информации мы хотим иметь на наших страницах, а затем определить соответствующие URL-адреса для получения этих ресурсов. Затем нужно будет создать маршруты (обработчики URL-адресов) и представления (шаблоны) для отображения этих страниц.
+В [последней статье](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose) мы определили модели _Mongoose_ для взаимодействия с базой данных, и использовали (автономный) скрипт, который создал некоторые исходные записи библиотеки. Теперь можно написать код, чтобы представить эту информацию пользователям. Первое, что нужно сделать, это решить, какие возможности для отображения информации мы хотим иметь на наших страницах, а затем определить соответствующие URL-адреса для получения этих ресурсов. Затем нужно будет создать маршруты (обработчики URL-адресов) и представления (шаблоны) для отображения этих страниц.
 
 Приведённая ниже диаграмма напоминает об основном потоке данных и об элементах, которые необходимо реализовать при обработке HTTP-запроса/ответа. Кроме представлений и маршрутов на диаграмме показаны "контроллеры" - функции, которые отделяют код для маршрутизации запросов от кода, который фактически обрабатывает запросы.
 
@@ -36,7 +36,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 Есть несколько способов создания маршрутов. В этом уроке мы используем промежуточные запросы `express.Router,` так как они позволяют группировать обработчики маршрутов для определённой части сайта и получать к ним доступ через общий префикс маршрута. Все маршруты, связанные с библиотекой, будут сохранены в модуле "catalog", и если мы добавим маршруты для обработки учётных записей пользователей или других функций, мы сможем сгруппировать их отдельно.
 
 > [!NOTE]
-> Маршруты приложения Express уже кратко рассматривались в [Express Introduction > Creating route handlers](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction#creating_route_handlers) (Введение -> Создание обработчиков маршрутов). Применение _Router_ обеспечивает лучшую поддержку модульности (как обсуждается в первой подсекции ниже), а в остальном очень похоже на определение маршрутов непосредственно в объекте приложения _Express_.
+> Маршруты приложения Express уже кратко рассматривались в [Express Introduction > Creating route handlers](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#creating_route_handlers) (Введение -> Создание обработчиков маршрутов). Применение _Router_ обеспечивает лучшую поддержку модульности (как обсуждается в первой подсекции ниже), а в остальном очень похоже на определение маршрутов непосредственно в объекте приложения _Express_.
 
 В оставшейся части этого раздела представлен обзор того, как Router может быть использован для определения маршрутов.
 
@@ -92,7 +92,7 @@ router.get("/about", function (req, res) {
 функции в цепочке промежуточных элементов.
 
 > [!NOTE]
-> Функции в Router - это промежуточный слой ([middleware](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware)) are [Express](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware), что означает, что они должны или завершить (ответить на) запрос reqили вызвать следующую (`next)` функцию в цепочке. В нашем случае запрос завершается вызовом `send()`, поэтому аргумент `next` не нужен (и поэтому не указан).
+> Функции в Router - это промежуточный слой ([middleware](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#using_middleware)) are [Express](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#using_middleware), что означает, что они должны или завершить (ответить на) запрос reqили вызвать следующую (`next)` функцию в цепочке. В нашем случае запрос завершается вызовом `send()`, поэтому аргумент `next` не нужен (и поэтому не указан).
 >
 > Выше у функции роутера только один колбэк-аргумент, но можно указать столько таких аргументов, сколько хотите, или указать массив колбэк-функций. каждая из функций - это элемент в цепочке промежуточного слоя, и они будут вызываться в порядке их добавления в цепочку (если предыдущая функция не завершит запрос).
 
@@ -609,7 +609,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- Если предварительно установлен [nodemon](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website), для запуска можно использовать:
+- Если предварительно установлен [nodemon](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website), для запуска можно использовать:
 
   ```
   // Windows
@@ -645,12 +645,12 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ## In this module
 
-- [Express/Node introduction](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/ru/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/ru/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express/Node introduction](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
 - [Express Tutorial Part 7: Deploying to production](/ru/docs/Learn/Server-side/Express_Nodejs/deployment)

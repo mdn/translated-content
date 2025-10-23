@@ -20,7 +20,7 @@ HTML では、画像、リンク、選択範囲の上での既定の動作を除
 
 上記以外の他の HTML 要素をドラッグできるようにするには、以下の 3 つのことをしなくてはなりません。
 
-1. ドラッグできるようにしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性の値を `"true"` に設定する。
+1. ドラッグできるようにしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性の値を `"true"` に設定する。
 2. {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントにリスナーを設定し、そのリスナーの中でドラッグデータを設定する。
 3. 上記で定義されたリスナーの中で[ドラッグデータを設定する](/ja/docs/Web/API/DataTransfer/setData)。
 
@@ -38,9 +38,9 @@ draggableElement.addEventListener("dragstart", (event) =>
 );
 ```
 
-[`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
+[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `"true"` に設定すると、その要素はドラッグできるようになります。この属性が設定されていない、あるいは `"false"` に設定されている場合、その要素をドラッグする事はできず、代わりにテキストが選択されるでしょう。
 
-[`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性に `false` を設定するという場合がほとんどでしょう。
+[`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性は画像やリンクを含めてあらゆる要素に設定できます。ただし、画像とリンクについてだけは既定値が `true`となっていますので、実際にこれらの要素で使う場合は、要素をドラッグできないようにするために [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性に `false` を設定するという場合がほとんどでしょう。
 
 > [!NOTE]
 > 要素がドラッグ可能になった場合、文字列やその要素に含まれている他の要素が、マウスによるクリックやドラッグなどの通常の操作では選択する事ができなくなることに注意してください。ユーザーが文字列を選択するには、通常の操作の代わりに、 <kbd>Alt</kbd> キーを押しながらマウスで選択するか、キーボードで操作を行う必要があります。
@@ -72,11 +72,11 @@ draggableElement.addEventListener("dragstart", (event) =>
 
 ドラッグが行われた際には、何をドラッグするのかを識別するためのデータをドラッグに関連付ける必要があります。例えば、テキストボックス内で選択されたテキストがドラッグされた場合、ドラッグデータアイテムに関連付けられたデータはテキストそのものです。同様に、ウェブページ上のリンクがドラッグされた場合、ドラッグデータにはリンクの URL が含まれます。
 
-{{domxref("DataTransfer","ドラッグデータ")}}には、データの型 (または形式) とデータの値の 2 つの情報が含まれています。形式は型の文字列 (テキストデータの場合は [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) など) で、値はテキストの文字列です。ドラッグの開始時に、型とデータを指定してデータを追加します。ドラッグ中、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのイベントリスナーでは、ドラッグされるデータのデータ型を使って、ドロップが許可されているかどうかをチェックします。たとえば、リンクを受け付けるドロップターゲットでは、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) というデータ型がチェックされます。ドロップイベントが発生すると、リスナーはドラッグされたデータを取得し、ドロップ位置に挿入します。
+{{domxref("DataTransfer","ドラッグデータ")}}には、データの型 (または形式) とデータの値の 2 つの情報が含まれています。形式は型の文字列 (テキストデータの場合は [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) など) で、値はテキストの文字列です。ドラッグの開始時に、型とデータを指定してデータを追加します。ドラッグ中、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのイベントリスナーでは、ドラッグされるデータのデータ型を使って、ドロップが許可されているかどうかをチェックします。たとえば、リンクを受け付けるドロップターゲットでは、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) というデータ型がチェックされます。ドロップイベントが発生すると、リスナーはドラッグされたデータを取得し、ドロップ位置に挿入します。
 
-{{domxref("DataTransfer","ドラッグデータ", "", 1)}}の {{domxref("DataTransfer.types","types")}} プロパティは、 [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) や [`image/jpeg`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image) のような MIME タイプの文字列のリストを返します。独自の型を作成することもできます。よく使用される型は、[推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)の記事に記載されています。
+{{domxref("DataTransfer","ドラッグデータ", "", 1)}}の {{domxref("DataTransfer.types","types")}} プロパティは、 [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) や [`image/jpeg`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#image) のような MIME タイプの文字列のリストを返します。独自の型を作成することもできます。よく使用される型は、[推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)の記事に記載されています。
 
-一つのドラッグ操作で、複数の異なる形式のデータを提供できます。この仕組みにより、独自の形式や、その形式のデータを受け取れない要素向けのフォールバック用の形式など、データをより適切な形式で引き渡すことができます。通常、最後のフォールバック先として使われる形式は、 [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) 型として表される普通のテキストデータです。このデータは元のテキストの単純な文字列となるでしょう。
+一つのドラッグ操作で、複数の異なる形式のデータを提供できます。この仕組みにより、独自の形式や、その形式のデータを受け取れない要素向けのフォールバック用の形式など、データをより適切な形式で引き渡すことができます。通常、最後のフォールバック先として使われる形式は、 [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) 型として表される普通のテキストデータです。このデータは元のテキストの単純な文字列となるでしょう。
 
 データを {{domxref("DragEvent.dataTransfer","dataTransfer")}} に設定するには、 {{domxref("DataTransfer.setData","setData()")}} メソッドを使います。このメソッドは、次の例のようにデータの型とデータの値の 2 つの引数を取ります。
 
@@ -84,7 +84,7 @@ draggableElement.addEventListener("dragstart", (event) =>
 event.dataTransfer.setData("text/plain", "ドラッグされたテキスト");
 ```
 
-この例では、データの値は「ドラッグされたテキスト」で、形式は [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) です。
+この例では、データの値は「ドラッグされたテキスト」で、形式は [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) です。
 
 データは複数の形式で提供できます。これを実現するには、異なる形式を指定して {{domxref("DataTransfer.setData","setData()")}} メソッドを複数回呼び出します。最も具体的な形式から、具体的でない形式に向けて呼び出します。
 
@@ -99,7 +99,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 また、他の型でもデータを提供することで、このような独自形式に対応していない他のアプリケーション向けにも、代替の形式でドラッグできるようになります。 `application/x.bookmark` 型はそのアプリケーションの中ではより使いやすく詳細な情報を提供できますが、他の型で渡されるデータは、単純な 1 つの URL もしくは文字列となります。
 
-なお、この例では [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) と [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) も同じデータを含んでいます。このようにすることが多いのですが、こうしなければならない訳ではありません。
+なお、この例では [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) と [`text/plain`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#text) も同じデータを含んでいます。このようにすることが多いのですが、こうしなければならない訳ではありません。
 
 同じ形式で 2 回データを登録すると、古いデータは新しいデータによって置き換えられますが、データの形式の登録の順番自体は古いデータを登録した時のままになります。
 
@@ -228,7 +228,7 @@ function doDragOver(event) {
 }
 ```
 
-この例では、型のリストの中に [text/uri-list](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 型があるかどうかを確認するために `contains` メソッドを使用しています。もし条件が真であれば、イベントはキャンセルされて、ドロップが許可されるでしょう。もしドラッグデータがリンクを含んでいなければ、イベントはキャンセルされず、その場所でのドロップも行われません。
+この例では、型のリストの中に [text/uri-list](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) 型があるかどうかを確認するために `contains` メソッドを使用しています。もし条件が真であれば、イベントはキャンセルされて、ドロップが許可されるでしょう。もしドラッグデータがリンクを含んでいなければ、イベントはキャンセルされず、その場所でのドロップも行われません。
 
 実際に行われる処理の種類をより適切に示すために、 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} や {{domxref("DataTransfer.dropEffect","dropEffect")}} プロパティのいずれか、あるいはその両方に値を指定したいと思う事もあるでしょう。当然ですが、イベントをキャンセルするのを忘れると、これらのプロパティの値を変えても何も起こりません。
 
@@ -238,7 +238,7 @@ function doDragOver(event) {
 
 実際の正確な表示のされ方はユーザーのプラットフォームに依存しますが、通常は例えば「コピー」に対しては「＋」記号が表示され、また、ドロップが許可されていない時は「ここにはドロップできません」という意味のアイコンが表示されるでしょう。多くの場合において、このポインターによるフィードバックは十分に役立ちます。
 
-より凝った視覚効果のために、例えばドロップが行われる位置に要素を挿入するなど、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの間に他の操作をすることもできます。この例なら、挿入される要素は、挿入箇所を示すマーカーあるいはドラッグされている要素が新しい位置に挿入された時の状態のプレビューなどとして利用できるでしょう。このような効果は、例えば [`<img>`](/ja/docs/Web/HTML/Element/img) 要素を生成して、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの処理中にドキュメント中に単に挿入するだけで実現できます。
+より凝った視覚効果のために、例えばドロップが行われる位置に要素を挿入するなど、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの間に他の操作をすることもできます。この例なら、挿入される要素は、挿入箇所を示すマーカーあるいはドラッグされている要素が新しい位置に挿入された時の状態のプレビューなどとして利用できるでしょう。このような効果は、例えば [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を生成して、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} イベントの処理中にドキュメント中に単に挿入するだけで実現できます。
 
 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントは、マウスポインターが現在指している要素において発行されます。挿入点のマーカーを {{domxref("HTMLElement/dragover_event", "dragover")}} イベントの発行に応じて移動させたいと思うのは自然な欲求でしょう。そのような場合には、他のマウスイベントでマウスポインターの位置を取得するために使われるのと同じ要領で、イベントの {{domxref("MouseEvent.clientX","clientX")}} と {{domxref("MouseEvent.clientY","clientY")}} プロパティを利用できます。
 
@@ -268,7 +268,7 @@ function onDrop(event) {
 
 ウェブページにおいては、ドロップを受け付けた場合、イベントの {{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出すべきです。これによって、ブラウザー内でのドロップ時の既定の挙動がキャンセルされます。例えば、リンクがウェブページにドロップされた場合、 Firefox はそのリンク先を読み込もうとします。イベントをキャンセルすることで、この動作は抑止されます。
 
-他の形式でデータを取得することもできます。データがリンクであった場合、そのデータは [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 型でも提供されているでしょう。その場合、リンクを内容に挿入することができます。
+他の形式でデータを取得することもできます。データがリンクであった場合、そのデータは [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) 型でも提供されているでしょう。その場合、リンクを内容に挿入することができます。
 
 ```js
 function doDrop(event) {
@@ -285,7 +285,7 @@ function doDrop(event) {
 }
 ```
 
-この例は、ドラッグされたデータからリンクを挿入します。名前から想像できる通り、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) 型は実際に複数の URL の改行区切りのリストを含んでいる場合があります。このコードでは、 [`split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使って文字列を行ごとに分割し、各行に繰り返し処理を行って、それぞれをリンクとして文書中に挿入しています。ナンバー記号 (`#`) で始まるものはコメントとして除外していることに注意してください。
+この例は、ドラッグされたデータからリンクを挿入します。名前から想像できる通り、 [`text/uri-list`](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#link) 型は実際に複数の URL の改行区切りのリストを含んでいる場合があります。このコードでは、 [`split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) を使って文字列を行ごとに分割し、各行に繰り返し処理を行って、それぞれをリンクとして文書中に挿入しています。ナンバー記号 (`#`) で始まるものはコメントとして除外していることに注意してください。
 
 単純な使い方として、リストの中の最初の有効な URL を取得するために、特別な型 `URL` も利用できます。
 
@@ -333,5 +333,5 @@ function doDrop(event) {
 
 - [HTML ドラッグ & ドロップ API (概要)](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [複数の項目のドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

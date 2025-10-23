@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Feature Policy")}}
 
-**`featurePolicy`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、特定の文書に適用される[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を見ることができる簡単な API を提供する {{domxref("FeaturePolicy")}} インターフェイスを返します。
+**`featurePolicy`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、特定の文書に適用される[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を見ることができる簡単な API を提供する {{domxref("FeaturePolicy")}} インターフェイスを返します。
 
 ## 値
 

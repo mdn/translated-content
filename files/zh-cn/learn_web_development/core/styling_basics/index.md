@@ -1,10 +1,7 @@
 ---
 title: CSS 构建
 slug: Learn_web_development/Core/Styling_basics
-original_slug: Learn/CSS/Building_blocks
 ---
-
-{{LearnSidebar}}
 
 这个模块承接[学习 CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)——即你对 (CSS) 语言和其语法已经足够熟悉、并且有了一些基本的使用经验，该是稍微深入点学习的时候了。这个模块着眼于级联和继承，所有可供使用的选择器类型，单位，尺寸，背景、边框样式，调试，等等等等。
 
@@ -29,9 +26,7 @@ original_slug: Learn/CSS/Building_blocks
 - [层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : 本节目标是帮你建立对——层叠、优先级和继承——这三个最基本的 CSS 概念的理解。这些概念控制着 CSS 如何应用于 HTML 以及应用时的优先顺序。
 - [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : 有各种类型的 CSS 选择器，以供我们精确选出要添加样式的元素。在本文及其子文章中，我们会详细过一遍不同类型的选择器，以此窥探 CSS 选择器的运行机理。子文章包括了：
-
     - [类型、类以及 ID 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
     - [属性选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
     - [伪类与伪元素](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
@@ -62,12 +57,8 @@ original_slug: Learn/CSS/Building_blocks
 
 想要测试一下你的 CSS 技能吗？下面这些评估将测试你对以上那些指南中的 CSS 技能的掌握。
 
-- [基本的 CSS 理解](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension)
-  - : 这项评估测试你对基本语法、选择器、特异性、盒子模型的掌握。
-- [设计漂亮的信头信笺](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper)
+- [设计漂亮的信头信笺](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : 如果你想留下良好的印象，用一张漂亮的信头信笺写一封信一定是个好的开始。在这一评估中，你将挑战创建这样一个漂亮的网络样板。
-- [一个炫酷的盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box)
-  - : 在这里，你将练习使用背景和边距来创建一个吸引眼球的盒子。
 
 ## 参见
 

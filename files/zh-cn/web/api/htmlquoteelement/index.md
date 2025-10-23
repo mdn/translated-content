@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLQuoteElement.cite")}}
-  - : 一个反映 [`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) HTML 属性的字符串，包含引用资源的 URL。
+  - : 一个反映 [`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite) HTML 属性的字符串，包含引用资源的 URL。
 
 ## 实例方法
 

@@ -224,7 +224,7 @@ student.year // error: 'year' is a private property of Student
 
 이 기사에서는 Java 및 C++와 같은 언어로 구현된 클래스 기반 객체 지향 프로그래밍의 기본 기능 중 일부를 설명했습니다.
 
-이전 두 기사에서 우리는 두 가지 핵심 JavaScript 기능인 [생성자](/ko/docs/Learn/JavaScript/Objects/Basics)와 [프로토타입](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)을 살펴보았습니다. 이러한 기능은 확실히 위에서 설명한 일부 OOP 개념과 어느 정도 관련이 있습니다.
+이전 두 기사에서 우리는 두 가지 핵심 JavaScript 기능인 [생성자](/ko/docs/Learn_web_development/Core/Scripting/Object_basics)와 [프로토타입](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)을 살펴보았습니다. 이러한 기능은 확실히 위에서 설명한 일부 OOP 개념과 어느 정도 관련이 있습니다.
 
 - JavaScript의 **생성자**는 객체에 포함된 모든 메서드를 포함하여 객체의 "모양"을 단일 위치에서 정의할 수 있도록 클래스 정의와 같은 것을 제공합니다. 그러나 여기에서도 프로토타입을 사용할 수 있습니다. 예를 들어 메서드가 생성자의 `prototype` 속성에 정의된 경우 해당 생성자를 사용하여 생성된 모든 객체는 프로토타입을 통해 해당 메서드를 가져오므로 생성자에서 정의할 필요가 없습니다.
 

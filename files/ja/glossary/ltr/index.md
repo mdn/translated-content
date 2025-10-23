@@ -14,18 +14,15 @@ LTR とは逆に、 {{Glossary("RTL")}} (Right To Left, 右書き) はアラビ�
 - [ローカリゼーションと国際化](/ja/docs/Web/Localization)
 
 - 関連用語:
-
   - {{Glossary("locale")}}
   - {{Glossary("LTR")}}
   - {{Glossary("RTL")}}
 
-- [HTML グローバル属性](/ja/docs/Web/HTML/Global_attributes)
-
-  - [`dir`](/ja/docs/Web/HTML/Global_attributes#dir)
-  - [`lang`](/ja/docs/Web/HTML/Global_attributes#lang)
+- [HTML グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+  - [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir)
+  - [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang)
 
 - [CSS](/ja/docs/Web/CSS)
-
   - {{cssxref(":dir()")}}
   - {{cssxref("direction")}}
   - {{cssxref("unicode-bidi")}}

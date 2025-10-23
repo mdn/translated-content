@@ -35,7 +35,7 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Sin retorno. Ejemplo: _styleObj_.setProperty('color', 'red', 'important')
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}
-  - : Solo soportado a través de getComputedStyle. Devuelve un {{ domxref("ROCSSPrimitiveValue") }} en Firefox ({{ domxref("CSSPrimitiveValue") }}, en otros, los cuales implementan [CSSValue](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSValue)), o nulo para [Propiedades taquigráficas](/es/docs/Web/CSS/Shorthand_properties). Ejemplo: _cssString_= window\.getComputedStyle(_elemento_, `null`).getPropertyCSSValue('color').cssText;
+  - : Solo soportado a través de getComputedStyle. Devuelve un {{ domxref("ROCSSPrimitiveValue") }} en Firefox ({{ domxref("CSSPrimitiveValue") }}, en otros, los cuales implementan [CSSValue](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSValue)), o nulo para [Propiedades taquigráficas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties). Ejemplo: _cssString_= window\.getComputedStyle(_elemento_, `null`).getPropertyCSSValue('color').cssText;
     Observación: Gecko 1.9 devuelve **null** a menos que se utilice [getComputedStyle()](/es/docs/Web/API/Window/getComputedStyle).
     Observación: Este método puede estar [desaconsejado por el W3C](https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html) , y no está presente en el último [borrador CSSOM](https://dev.w3.org/csswg/cssom/#cssstyledeclaration). No está soportado por IE e incluso aunque la función existe en Opera, llamarla lanza una excepción {{ domxref("DOMException") }} NOT_SUPPORTED_ERR.
 

@@ -3,7 +3,7 @@ title: ::-webkit-slider-thumb
 slug: Web/CSS/::-webkit-slider-thumb
 ---
 
-admi{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 
@@ -17,7 +17,6 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario y espe
 
 - {{cssxref("::-webkit-slider-runnable-track")}}
 - Psuedo-elementos similares en otros navegadores:
-
   - {{cssxref("::-moz-range-thumb")}}
   - {{cssxref("::-ms-thumb")}}
 

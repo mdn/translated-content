@@ -10,7 +10,7 @@ l10n:
 
 **`commandForElement`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、ボタンを通じて制御する要素を取得または設定します。
 
-これは JavaScript における HTML の [`commandfor`](/ja/docs/Web/HTML/Element/button#commandfor) 属性の同等物です。
+これは JavaScript における HTML の [`commandfor`](/ja/docs/Web/HTML/Reference/Elements/button#commandfor) 属性の同等物です。
 
 ## 値
 

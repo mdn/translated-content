@@ -2,7 +2,7 @@
 title: CSSContainerRule
 slug: Web/API/CSSContainerRule
 l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{ APIRef("CSSOM") }}
@@ -31,7 +31,7 @@ _固有のメソッドはありません。祖先である {{domxref("CSSConditi
 
 ### 無名のコンテナールール
 
-下記の例では、無名の {{cssxref("@container")}} ルールを定義し、関連する {{domxref("CSSContainerRule")}} のプロパティを表示します。
+下記の例では、無名の {{cssxref("@container")}} ルールを定義し、関連する `CSSContainerRule` のプロパティを表示します。
 CSS は `@container` の例[コンテナーの大きさに基づいたスタイルの設定](/ja/docs/Web/CSS/@container#コンテナーの大きさに基づいたスタイルの設定)と同じです。
 
 コードの最初の部分では、コンテナールールのプロパティをログ出力するためのリストと、プロパティの追加を簡単にするための JavaScript の `log()` メソッドを作成しています。
@@ -71,7 +71,7 @@ function log(result) {
 そして、 {{cssxref("@container")}} は、幅が 650px 未満の場合、新しい幅、フォントサイズ、背景色をカードに適用します。
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   /* インラインサイズに基づくコンテナーコンテキスト */
   .post {
     container-type: inline-size;
@@ -94,7 +94,7 @@ function log(result) {
 最後に、`containerName`、`containerQuery`、`conditionText`（継承）プロパティをログ出力します。
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // コンテナールールを表す CSSContainerRule
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
@@ -115,7 +115,7 @@ log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 
 ### 名前付きコンテナーのルール
 
-下記の例では、名前付き {{cssxref("@container")}} ルールを定義し、関連する {{domxref("CSSContainerRule")}} のプロパティを表示しています。
+下記の例では、名前付き {{cssxref("@container")}} ルールを定義し、関連する `CSSContainerRule` のプロパティを表示しています。
 CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
 
 ```html hidden
@@ -152,7 +152,7 @@ function log(result) {
 カードには既定のフォントサイズをがあり、最小幅が 700px を超える場合、 `sidebar` という名前の `@container` で上書きされます。
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   .post {
     container-type: inline-size;
     container-name: sidebar;
@@ -175,9 +175,9 @@ function log(result) {
 唯一の違いは、この例では 3 つの CSS ルールがあるので、関連する `CSSContainerRule` を取得するために `cssRules` の 3 つ目の項目を取得することです。
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
-const containerRule = exampleRules[1]; // コンテナールールを表す CSSContainerRule
+const containerRule = exampleRules[2]; // コンテナールールを表す CSSContainerRule
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
 log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
@@ -201,6 +201,6 @@ log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container-name")}}, {{cssxref("container-type")}}, {{cssxref("container")}} 一括指定プロパティ
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

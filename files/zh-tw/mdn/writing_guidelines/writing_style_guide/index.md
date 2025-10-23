@@ -39,7 +39,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 - [JavaScript/指南](/zh-TW/docs/Web/JavaScript/Guide) ——主內容表頁面
 - [JavaScript/指南/JavaScript 概述](/zh-TW/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函數](/zh-TW/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 請儘量避免將你的文章放在頂層，不然會拖慢網站的下載速度，降低網站導覽和搜索的效率。
 
@@ -233,7 +233,6 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 #### 在備註與括弧中
 
 - 常見的拉丁縮寫（ etc. 、 i.e. 、 e.g. ）可以在括號表達、或備註內使用。這些縮寫都要用半形句號（.）並緊隨著逗號或其他恰當的標點符號。
-
   - **正確**：Web browsers (e.g., Firefox) can be used ...
   - **不正確**：Web browsers e.g. Firefox can be used ...
   - **不正確**：Web browsers, e.g. Firefox, can be used ...
@@ -242,7 +241,6 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 #### 在行文中
 
 - 在普通行文中（也就是備註與括號以外的文字）請使用與該縮寫相等的文字表達。
-
   - **正確**: ... web browsers, and so on.
   - **不正確**: ... web browsers, etc.
   - **正確**: Web browsers such as Firefox can be used ...

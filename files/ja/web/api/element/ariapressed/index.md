@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaPressed`** は {{domxref("Element")}} インターフェイスのプロパティで、トグルボタンの現在の押下状態を示す [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性の値を反映します。
+**`ariaPressed`** は {{domxref("Element")}} インターフェイスのプロパティで、トグルボタンの現在の押下状態を示す [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性の値を反映します。
 
 > [!NOTE]
 > 可能であれば、HTML の {{htmlelement("input")}} 要素に `type="button"` を使用するか、{{htmlelement("button")}} 要素を使用すると、意味づけが組み込まれており、ARIA 属性を持つ必要がありません。
@@ -51,4 +51,4 @@ console.log(el.ariaPressed); // "true"
 
 ## 関連情報
 
-- [ARIA: button ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [ARIA: button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)

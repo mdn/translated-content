@@ -29,9 +29,7 @@ var sending = browser.tabs.sendMessage(
 - `message`
   - : `any`. Un objet qui peut être sérialisé en JSON.
 - `options`{{optional_inline}}
-
   - : `object`.
-
     - `frameId`{{optional_inline}}
       - : `integer`. Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
 
@@ -96,8 +94,6 @@ browser.runtime.onMessage.addListener((request) => {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

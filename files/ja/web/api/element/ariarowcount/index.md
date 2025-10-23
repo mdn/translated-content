@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaRowCount`** は {{domxref("Element")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッドの行の総数を定義する [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性の値を反映します。
+**`ariaRowCount`** は {{domxref("Element")}} インターフェイスのプロパティで、表、グリッド、ツリーグリッドの行の総数を定義する [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) 属性の値を反映します。
 
 ## 値
 
@@ -72,4 +72,4 @@ console.log(el.ariaRowCount); // 101
 
 {{Compat}}
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

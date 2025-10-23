@@ -2,10 +2,8 @@
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 l10n:
-  sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`unicode-range`** は CSS の記述子で、 {{cssxref("@font-face")}} を用いて定義されたフォントから使用される特定の文字範囲を設定し、現在のページで使用できるようにします。ページがこの範囲内の文字を使用しない場合、フォントはダウンロードされません。少なくとも 1 つの文字を使用すると、フォント全体がダウンロードされます。
 

@@ -1,10 +1,9 @@
 ---
 title: 出了什麼問題？JavaScript 疑難排解
 slug: Learn_web_development/Core/Scripting/What_went_wrong
-original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
 當你在練習撰寫上一節的「猜數字」遊戲時，你可能會發現它無法運作。不用擔心，本文將會把你從快被拔光的頭髮中拯救出來，並且給你一些小提示，讓你知道怎麼找出及修正 Javascript 的程式運行錯誤。
 
@@ -48,7 +47,6 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 
 1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
 2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
-
    - 一個紅色的「X」代表這是一個錯誤訊息。
    - 一條錯誤訊息提示你什麼東西出錯了：「TypeError: guessSubmit.addeventListener is not a function（TypeError: guessSubmit.addeventListener 並不是一個函式）」
    - 一個「Learn More」連結連向一個解釋這個錯誤並包含大量詳細資訊的 MDN 頁面。
@@ -73,7 +71,8 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 2. 現在試著輸入一個猜測並按下 Submit guess 按鈕，你會發現...另一個錯誤！![](variable-is-null.png)
 3. 這次的錯誤是「TypeError: lowOrHi is null（TypeError: lowOrHi 為 null）」，在第 78 行的位置。
 
-   > **備註：** [`Null`](/zh-TW/docs/Glossary/Null)是一個特別的值，代表著「空」、「什麼都沒有」。`lowOrHi`被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。
+   > [!NOTE]
+   > [`Null`](/zh-TW/docs/Glossary/Null)是一個特別的值，代表著「空」、「什麼都沒有」。`lowOrHi`被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。
 
    > [!NOTE]
    > 這個錯誤並沒有在頁面載入完成後就發生，因為這個錯誤發生在一個函式中（在`checkGuess() { ... }`區塊中）。在之後詳細介紹函式的文章中，你會學到在函式中的程式碼與在函式外的程式碼其實是執行在不同範疇中的。在我們的這個情況裡，有錯誤的程式碼在`checkGuess()`在 86 行被執行前都並沒有執行，也因此錯誤並沒有在頁面一載入就發生。
@@ -96,7 +95,8 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
    console.log(lowOrHi);
    ```
 
-   > **備註：** [`console.log()`](/zh-TW/docs/Web/API/console/log_static)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
+   > [!NOTE]
+   > [`console.log()`](/zh-TW/docs/Web/API/console/log_static)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
 
 7. 存檔並重整，你應該會在主控台中看到`console.log()`輸出的結果。![](console-log-output.png)在這個時間點，`lowOrHi`的值是`null`。所以很明顯的，第 48 行一定出了什麼問題。
 8. 讓我們思考一下發生了什麼問題。第 48 行呼叫了 [`document.querySelector()`](/zh-TW/docs/Web/API/Document/querySelector) 方法來透過 CSS 選擇器取得一個 HTML 元素參照。打開我們的網頁看看我們想要取得的段落元素：
@@ -254,6 +254,6 @@ function checkGuess( {
 ## 參見
 
 - 還有許多類型的錯誤未列在此頁，我們正在編輯一份參考資料好詳細解釋了它們的含義——可參閱[JavaScript error reference](/zh-TW/docs/Web/JavaScript/Reference/Errors)。
-- 如果你在閱讀本章節遇到了某些程式錯誤而且不知道如何修正，你可以尋求援助！可以至[Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)發問，或者到[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn)頻道提問。告訴我們你遇到什麼錯誤，我們會盡力幫助你。若能附上你的程式碼會更有幫助。
+- 如果你在閱讀本章節遇到了某些程式錯誤而且不知道如何修正，你可以尋求援助！在[溝通頻道](/zh-TW/docs/MDN/Community/Communication_channels)上尋求協助。告訴我們你遇到什麼錯誤，我們會盡力幫助你。若能附上你的程式碼會更有幫助。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

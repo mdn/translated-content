@@ -33,7 +33,7 @@ O evento **`submit`** é disparado quando é feita a submissão de um {{HtmlElem
 O evento `submit` é disparado quando a pessoa usuária clica em um botão ({{HtmlElement("button")}} ou {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) ou pressiona <kbd>Enter</kbd> enquanto está editando um campo (p. ex. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) em um formulário. O evento não é enviado ao formulário quando se chama o método {{domxref("HTMLFormElement.submit()", "form.submit()")}} diretamente.
 
 > [!NOTE]
-> Tentar submeter um formulário que não passa na [validação](/pt-BR/docs/Learn/Forms/Form_validation) dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}}. Nesse caso, a validação previne a submissão do formulário, impedindo que seja disparado o evento `submit`.
+> Tentar submeter um formulário que não passa na [validação](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation) dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}}. Nesse caso, a validação previne a submissão do formulário, impedindo que seja disparado o evento `submit`.
 
 ## Exemplos
 

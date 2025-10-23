@@ -41,5 +41,5 @@ l10n:
 
 ## 関連情報
 
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-- [ファイルとディレクトリー項目 API の Firefox での対応](/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)
+- [ファイルとディレクトリー項目 API の Firefox での対応](/ja/docs/Web/API/File_and_Directory_Entries_API)

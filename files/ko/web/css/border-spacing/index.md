@@ -3,15 +3,58 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`border-spacing`** 속성은 인접한 표 칸의 테두리 간격을 지정합니다. {{cssxref("border-collapse")}}가 `separate`여야 적용됩니다.
 
-{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
+{{InteractiveExample("CSS Demo: border-spacing")}}
+
+```css interactive-example-choice
+border-spacing: 0;
+```
+
+```css interactive-example-choice
+border-spacing: 5px;
+```
+
+```css interactive-example-choice
+border-spacing: 5px 1rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue;
+  padding: 0.75rem;
+}
+```
 
 `border-spacing` 값은 표 전체의 테두리에도 적용되므로, 표 테두리와 첫 번째 및 마지막 행/열에 속하는 칸 사이 거리는 (가로/세로) `border-spacing` 값과 표에 적용한 (상/우/하/좌) {{cssxref("padding")}} 값의 합이 됩니다.
 
-> **참고:** `border-spacing` 속성은 {{htmlelement("table")}}에서 이제 사용하지 않는 `cellspacing` 특성에 대응하지만, 추가로 두 번째 값을 지정해 가로와 세로 값을 각각 설정할 수 있다는 차이점이 있습니다.
+> [!NOTE]
+> `border-spacing` 속성은 {{htmlelement("table")}}에서 이제 사용하지 않는 `cellspacing` 특성에 대응하지만, 추가로 두 번째 값을 지정해 가로와 세로 값을 각각 설정할 수 있다는 차이점이 있습니다.
 
 ## 구문
 

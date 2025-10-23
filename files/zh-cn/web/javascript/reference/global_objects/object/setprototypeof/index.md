@@ -109,7 +109,7 @@ console.log(superMan.fly());
 console.log(superMan.speak());
 ```
 
-上面的类继承（使用 class）和伪类继承（使用带有 `prototype` 属性的构造函数）的相似性已在[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#使用不同的方法来创建对象和生成原型链)中提到。
+上面的类继承（使用 class）和伪类继承（使用带有 `prototype` 属性的构造函数）的相似性已在[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#使用不同的方法来创建对象和生成原型链)中提到。
 
 由于函数构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性是可写的，因此你可以将其重新分配为一个使用 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) 创建的新对象，以实现相同的继承链。但是，在使用 `create()` 时需要注意一些事项，例如记得重新添加 [`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性。
 
@@ -148,5 +148,5 @@ const superMan = new SuperHero();
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#使用不同的方法来创建对象和生成原型链)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#使用不同的方法来创建对象和生成原型链)
 - [ES-6 子类派生](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)

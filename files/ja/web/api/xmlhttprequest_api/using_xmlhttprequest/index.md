@@ -1,8 +1,8 @@
 ---
-title: XMLHttpRequest の使用
+title: XMLHttpRequest の使い方
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 l10n:
-  sourceCommit: fe468a9966c87cac081d3986b3332d0a51c4e2ee
+  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
@@ -17,7 +17,7 @@ HTTP リクエストを送るには、
 2. URL を開き、
 3. リクエストを送信します。
 
-トランザクションが完了すると、オブジェクトには結果の [HTTP ステータスコード](/ja/docs/Web/HTTP/Status)やレスポンスの本文などの有益な情報が格納されます。
+トランザクションが完了すると、 `XMLHttpRequest` オブジェクトには結果の [HTTP ステータスコード](/ja/docs/Web/HTTP/Reference/Status)やレスポンスの本文などの有益な情報が格納されます。
 
 ```js
 function reqListener() {
@@ -45,12 +45,13 @@ req.send();
 
 リモートの XML 文書のコンテンツを得るために `XMLHttpRequest` を使う場合、 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティが解釈済みの XML 文書を含む DOM オブジェクトとなります。これによって、操作や解析が難しくなる可能性があります。この XML 文書を解析するには主な 4 つの方法があります。
 
-1. 部分を指すために [XPath](/ja/docs/Web/XPath) を使う。
-2. 手動で [XML を解釈およびシリアライズして](/ja/docs/Web/XML/Parsing_and_serializing_XML)文字列やオブジェクトにする。
+1. 一部を指すために [XPath](/ja/docs/Web/XML/XPath) を使う。
+2. 手動で [XML を構文解析およびシリアライズして](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)文字列やオブジェクトにする。
 3. {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
 4. 事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML コードが少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 
-> **メモ:** `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)についての記事をお読みください。
+> [!NOTE]
+> `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)についての記事をお読みください。
 
 ### HTML 文書を含む responseText プロパティの処理
 
@@ -74,7 +75,7 @@ req.overrideMimeType("text/plain; charset=x-user-defined");
 
 しかし、もっと新しいテクニックも使用できます。 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性がいくつもの追加のコンテンツ型に対応するようになったので、バイナリーデータの送信や受信がずっと簡単になりました。
 
-例えばこのスニペットでは、 `responseType` に "`arraybuffer`" を使用して、生のバイナリーデータを格納できる {{jsxref("ArrayBuffer")}} オブジェクトにリモートコンテンツを取得しています。
+例えばこのスニペットでは、 `responseType` に `"arraybuffer"` を使用して、生のバイナリーデータを格納できる {{jsxref("ArrayBuffer")}} オブジェクトにリモートコンテンツを取得しています。
 
 ```js
 const req = new XMLHttpRequest();
@@ -88,17 +89,17 @@ req.responseType = "arraybuffer";
 req.send();
 ```
 
-その他の例は、[バイナリーデータの送信と受信](/ja/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data) ページを確認してください。
+その他の例は、[バイナリーデータの送受信](/ja/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data) ページを確認してください。
 
 ## 進捗の監視
 
 `XMLHttpRequest` は、リクエストが処理されている間に発生する様々なイベントを待受けする機能を提供しています。これには定期的な進捗の通知、エラーの通知、などが含まれます。
 
-`XMLHttpRequest` の転送を監視する DOM {{domxref("XMLHttpRequest/progress_event", "progress")}} イベントの対応は、 [progress events 仕様](https://xhr.spec.whatwg.org/#interface-progressevent)に従います。このイベントは {{domxref("ProgressEvent")}} インターフェイスを実装しています。進行中の転送の状態を特定するために監視することができる実際のイベントは、以下の通りです。
+`XMLHttpRequest` の転送を監視する DOM {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}} イベントの対応は、 [progress events 仕様（英語）](https://xhr.spec.whatwg.org/#interface-progressevent)に従います。このイベントは {{domxref("ProgressEvent")}} インターフェイスを実装しています。進行中の転送の状態を特定するために監視することができる実際のイベントは、以下の通りです。
 
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}
   - : 受取済みのデータ量が変化したとき。
-- {{domxref("XMLHttpRequest/load_event", "load")}}
+- {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}
   - : 転送が完了したとき。すべてのデータが `response` に入っています。
 
 ```js
@@ -136,7 +137,7 @@ function transferCanceled(evt) {
 }
 ```
 
-3-6 行目で `XMLHttpRequest` を使ってデータ転送を行うときに送られる色々なイベントへのためのイベントリスナーを追加しています。
+`XMLHttpRequest` を使ってデータ転送を行うときに送られる色々なイベントへのためのイベントリスナーを追加しています。
 
 > [!NOTE]
 > イベントリスナーはリクエストの `open()` を呼び出す前に追加する必要があります。そうしないと `progress` イベントは発生しません。
@@ -185,7 +186,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // ヘッダーのみが必要であれば HEAD を使用する
-  "yourpage.html",
+  "your-page.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -221,11 +222,11 @@ function ifHasChanged(URL, callback) {
 そしてテストします。
 
 ```js
-// Let's test the file "yourpage.html"
-ifHasChanged("yourpage.html", function (modified, visit) {
+// ファイル "yourpage.html" をテストする
+ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified,
+      modified,
     ).toLocaleString()}!`,
   );
 });
@@ -235,7 +236,7 @@ ifHasChanged("yourpage.html", function (modified, visit) {
 
 ## サイトをまたがる XMLHttpRequest
 
-現在のブラウザーは、[オリジン間リソース共有](/ja/docs/Web/HTTP/CORS) (Cross-Origin Resource Sharing, CORS) を実装することでサイト間リクエストに対応しています。サーバーがウェブアプリケーションのオリジンからのリクエストを許可するように構成されている場合のみ、 `XMLHttpRequest` は動作します。それ以外の場合は、 `INVALID_ACCESS_ERR` 例外が投げられます。
+現在のブラウザーは、[オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) (Cross-Origin Resource Sharing, CORS) を実装することでサイト間リクエストに対応しています。サーバーがウェブアプリケーションのオリジンからのリクエストを許可するように構成されている場合のみ、 `XMLHttpRequest` は動作します。それ以外の場合は、 `INVALID_ACCESS_ERR` 例外が投げられます。
 
 ## キャッシュをバイパスする
 
@@ -263,7 +264,7 @@ req.send(null);
 
 ### XMLHttpRequests の停止
 
-XMLHttpRequest が `status=0` および `statusText=null` を受信して終了すると、リクエストを実行することが許可されていないことを意味します。これは未送信 ([`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent)) 状態です。この原因の多くは、 XMLHttpRequest が `open()` の時に [`XMLHttpRequest` のオリジン](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (XMLHttpRequest が作成された場所) が変更されたことによるものです。これは例えば、 XMLHttpRequest を持ったページで onunload イベントが発生し、ウィンドウが閉じようとしている時に XMLHttpRequest が作成され、ウィンドウがフォーカスを失って他のウィンドウがフォーカスを得たときにリクエストの送信（言い換えれば `open()`）が行なわれた場合に発生することがあります。この問題を防ぐ最も効果的な方法は、新しいウィンドウの {{domxref("Element/DOMActivate_event", "DOMActivate")}} イベントのリスナーを、 {{domxref("Window/unload_event", "unload")}} イベントが発生したときに設定することです。
+XMLHttpRequest が `status=0` および `statusText=null` を受信して終了すると、リクエストを実行することが許可されていないことを意味します。これは未送信 ([`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent)) 状態です。この原因の多くは、 XMLHttpRequest が `open()` の時に `XMLHttpRequest` のオリジン（XMLHttpRequest が作成された場所）が変更されたことによるものです。これは例えば、 XMLHttpRequest を持ったページで onunload イベントが発生し、ウィンドウが閉じようとしている時に XMLHttpRequest が作成され、ウィンドウがフォーカスを失って他のウィンドウがフォーカスを得たときにリクエストの送信（言い換えれば `open()`）が行なわれた場合に発生することがあります。この問題を防ぐ最も効果的な方法は、新しいウィンドウの {{domxref("Element/DOMActivate_event", "DOMActivate")}} イベントのリスナーを、 {{domxref("Window/unload_event", "unload")}} イベントが発生したときに設定することです。
 
 ## 仕様書
 
@@ -275,8 +276,8 @@ XMLHttpRequest が `status=0` および `statusText=null` を受信して終了�
 
 ## 関連情報
 
-- [MDN の AJAX 入門](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [フェッチ API の使い方](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

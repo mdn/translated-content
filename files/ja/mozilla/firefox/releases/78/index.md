@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 78 の変更点をまとめています。Firefox 78 は、 2020 年 6 月 30 日にリリースされました。
 
 Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex engine, and abundant web platform updates](https://hacks.mozilla.org/2020/06/new-in-firefox-78/)」もご覧ください。
@@ -36,19 +34,16 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 
 - {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 擬似クラスをデフォルトで有効にしました ([Firefox バグ 1632646](https://bugzil.la/1632646))。
 - {{CSSxRef(":read-only")}} および {{CSSxRef(":read-write")}} 擬似クラスを、接頭辞なしでサポートしました ([Firefox バグ 312971](https://bugzil.la/312971))。
-
-  - また `:read-write` のスタイルが、無効化した [`<input>`](/ja/docs/Web/HTML/Element/input) および [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素に適用されないようになりました。これは [HTML 仕様書](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-write) に違反していました ([Firefox バグ 888884](https://bugzil.la/888884))。
+  - また `:read-write` のスタイルが、無効化した [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) および [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) 要素に適用されないようになりました。これは [HTML 仕様書](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-write) に違反していました ([Firefox バグ 888884](https://bugzil.la/888884))。
 
 ### JavaScript
 
 - [`Intl.ListFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) API をサポートしました ([Firefox バグ 1589095](https://bugzil.la/1589095))。
 - [`Intl.NumberFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) コンストラクターを、[Intl.NumberFormat Unified API Proposal](https://github.com/tc39/proposal-unified-intl-numberformat) で定義された新しいオプションをサポートするように拡張しました ([Firefox バグ 1633836](https://bugzil.la/1633836))。特に、以下のようなものがあります:
-
   - [指数表記のサポート](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#scientific_engineering_or_compact_notations)
   - [単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unit_formatting)、[通貨](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currency_formatting)、[符号表示](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#displaying_signs) の整形
 
 - {{JSxRef("RegExp")}} エンジンを [更新](https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/) して、ECMAScript 2018 で導入したすべての新機能をサポートしました:
-
   - [後読み言明](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) ([Firefox バグ 1225665](https://bugzil.la/1225665))
   - {{JSxRef("RegExp.prototype.dotAll")}} ([Firefox バグ 1361856](https://bugzil.la/1361856))
   - [Unicode プロパティエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) ([Firefox バグ 1361876](https://bugzil.la/1361876))
@@ -79,7 +74,7 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 ## アドオン開発者向けの変更点
 
 - {{WebExtAPIRef("browsingData.removeCache")}} および {{WebExtAPIRef("browsingData.removePluginData")}} が、ホスト名による削除をサポートしました ([Firefox バグ 1636784](https://bugzil.la/1636784))。
-- [`proxy.onRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) を使用するとき、タブやウィンドウの ID に基づいて制限するフィルターが正しく適用されるようになりました。これは、プロキシの機能をひとつのウィンドウだけに提供したいアドオンで役に立つでしょう。
+- [`proxy.onRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) を使用するとき、タブやウィンドウの ID に基づいて制限するフィルターが正しく適用されるようになりました。これは、プロキシーの機能をひとつのウィンドウだけに提供したいアドオンで役に立つでしょう。
 - "すべてのタブ" ドロップダウンから [コンテキストメニューでクリックするとき](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked)、適切なタブオブジェクトが渡されるようになりました。以前は、誤ってアクティブなタブが渡されていました。
 - [`downloads.download`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) に saveAs オプションをつけて使用したとき、最近使用したディレクトリーを記憶するようになりました。この情報は開発者が使用できませんでしたが、ユーザーにはとても便利でした。
 

@@ -7,10 +7,8 @@ system:
           - package.json
           - yarn.lock
           - .github/**
-          - .husky/**
           - .vscode/**
           - .*
-          - front-matter-config.json
 
 l10n-es:
   - changed-files:

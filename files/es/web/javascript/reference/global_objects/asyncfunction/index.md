@@ -25,8 +25,7 @@ new AsyncFunction(arg0, arg1, ...argN, functionBody);
 ### Parámetros
 
 - `arg1, arg2, ... argN`
-
-  - : Nombres a ser usados por la función como los nombres de los argumentos. Cada uno debe ser una cadena que corresponda a un identificador válido en JavaScript (cualquier [identificador](/es/docs/Glossary/Identifier), [parámetro rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), o [parámetro desestructurado](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), opcionalmente con un valor por defecto), o una lista de tales cadenas separadas por comas.
+  - : Nombres a ser usados por la función como los nombres de los argumentos. Cada uno debe ser una cadena que corresponda a un identificador válido en JavaScript (cualquier [identificador](/es/docs/Glossary/Identifier), [parámetro rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), o [parámetro desestructurado](/es/docs/Web/JavaScript/Reference/Operators/Destructuring), opcionalmente con un valor por defecto), o una lista de tales cadenas separadas por comas.
 
     Así mismo, los parámetros se procesan de la misma manera que las declaraciones de funciones, aceptando espacios y comentarios. Por ejemplo: `"x", "theValue = 42", "[a, b] /* numbers */"` — o `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` es también correcto, pero muy confuso para leer).
 
@@ -41,7 +40,7 @@ Todos los argumentos que son pasados a la función son tratados por los nombres 
 
 > [!NOTE]
 > Las {{jsxref("Statements/async_function", "async functions", "", 1)}} creadas con el constructor `AsyncFunction` no crean
-> [_closures_](/es/docs/Web/JavaScript/Closures) en sus contextos creados, siempre son creados en el contexto global.
+> [_closures_](/es/docs/Web/JavaScript/Guide/Closures) en sus contextos creados, siempre son creados en el contexto global.
 >
 > Cuando se ejecutan, solamente podran acceder a sus variables locales y globales, no a las variables de otros contextos en el cual
 > el constructor `AsyncFuction` fue llamado.

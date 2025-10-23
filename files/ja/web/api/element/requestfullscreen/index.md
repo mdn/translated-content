@@ -46,12 +46,10 @@ requestFullscreen(options)
 _`requestFullscreen()` プロシージャは、従来の例外を発生させるのではなく、返された `Promise` を拒否することでエラー状況を知らせます。拒絶ハンドラーは以下の例外値のいずれかを受け取ります。_
 
 - {{jsxref("TypeError")}}
-
   - : 例外 `TypeError` は以下のいずれかの状況で送出されることがあります。
-
     - その要素を含む文書が完全にアクティブでない、つまり、現在のアクティブ文書でない。
     - その要素が文書内に含まれていない。
-    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
+    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
     - 要素とその文書が同じノードである。
     - この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)であり、既に {{domxref("HTMLElement.showPopover()")}} で表示されている。
 
@@ -67,7 +65,7 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
 - 標準の HTML 要素または {{SVGElement("svg")}} または {{MathMLElement("math")}} のいずれかであること。
 - {{HTMLElement("dialog")}} 要素ではないこと。
-- 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
+- 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
 
 さらに、設定された権限ポリシーがこの機能の使用を許可している必要があります。
 
@@ -158,4 +156,4 @@ try {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

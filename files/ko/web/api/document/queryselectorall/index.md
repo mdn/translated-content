@@ -7,7 +7,8 @@ slug: Web/API/Document/querySelectorAll
 
 {{domxref("Document")}} 메소드 **`querySelectorAll()`** 는 지정된 셀렉터 그룹에 일치하는 다큐먼트의 엘리먼트 리스트를 나타내는 정적(살아 있지 않은) {{domxref("NodeList")}} 를 반환합니다.
 
-> **참고:** **노트:** 이 메소드는 {{domxref("ParentNode")}} 믹스인의 {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 메소드를 기반으로 구현되었습니다.
+> [!NOTE]
+> **노트:** 이 메소드는 {{domxref("ParentNode")}} 믹스인의 {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} 메소드를 기반으로 구현되었습니다.
 
 ## 구문
 
@@ -20,13 +21,15 @@ elementList = parentNode.querySelectorAll(selectors);
 - `selectors`
   - : 매칭할 하나 이상의 셀렉터를 포함하는 {{domxref("DOMString")}}. 이 스트링은 반드시 유효한 [CSS 셀렉터](/ko/docs/Web/CSS/CSS_selectors)여야 합니다; 그렇지 않을 경우, `SyntaxError` 예외가 발생합니다. 엘리먼트 식별을 위한 셀렉터 사용의 자세한 내용은 [셀렉터로 DOM 엘리먼트 찾기](/ko/docs/Gecko_DOM_Reference/Locating_DOM_elements_using_selectors) 문서를 확인하세요. 콤마를 사용해 분리하여 다중 셀렉터를 지정할수도 있습니다.
 
-> **참고:** **노트:** 표준 CSS 구문이 아닌 문자들은 역슬래시를 사용해 이스케이프해야 합니다. JavaScript가 역슬래시 이스케이핑을 사용한 이후로, 그러한 문자들을 사용하는 문자열 리터럴을 작성할 때 특별히 신경써야 합니다. 자세한 내용은 [이스케이프 표현](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84_%ED%91%9C%ED%98%84)을 확인하세요.
+> [!NOTE]
+> **노트:** 표준 CSS 구문이 아닌 문자들은 역슬래시를 사용해 이스케이프해야 합니다. JavaScript가 역슬래시 이스케이핑을 사용한 이후로, 그러한 문자들을 사용하는 문자열 리터럴을 작성할 때 특별히 신경써야 합니다. 자세한 내용은 [이스케이프 표현](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84_%ED%91%9C%ED%98%84)을 확인하세요.
 
 ### 반환 값
 
 지정한 셀렉터와 하나라도 일치하는 각 엘리먼트에 대한 하나의 {{domxref("Element")}} 를 포함하는 살아 있지 않은 {{domxref("NodeList")}}. 일치하는 것이 없는 경우에는 비어 있는 {{domxref("NodeList")}}.
 
-> **참고:** **노트:** 지정한 `selectors` 가 [CSS 가상 엘리먼트](/ko/docs/Web/CSS/Pseudo-elements)를 포함하면, 반환 리스트는 항상 비어있습니다.
+> [!NOTE]
+> **노트:** 지정한 `selectors` 가 [CSS 가상 엘리먼트](/ko/docs/Web/CSS/Pseudo-elements)를 포함하면, 반환 리스트는 항상 비어있습니다.
 
 ### 예외
 
@@ -129,7 +132,7 @@ inner.length; // 0
 
 - [셀렉터를 사용해 DOM 엘리먼트 찾기](/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - CSS 가이드의 [속성 셀렉터](/ko/docs/Web/CSS/Attribute_selectors)
-- MDN 학습 영역의 [속성 셀렉터](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- MDN 학습 영역의 [속성 셀렉터](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelector()")}} 와 {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} 와 {{domxref("DocumentFragment.querySelectorAll()")}}

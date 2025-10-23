@@ -17,12 +17,12 @@ var lastChance = SyncEvent.lastChance
 
 {{jsxref("Boolean")}} は、現在の試行の後にユーザーエージェントがこれ以上同期を試行しないかどうかを示します。
 
-## 仕様
+## 仕様書
 
 | 仕様                                                                                      |
 | ----------------------------------------------------------------------------------------- |
 | [Web Background Synchronization](https://wicg.github.io/background-sync/spec/#sync-event) |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}

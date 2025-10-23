@@ -33,49 +33,39 @@ onkeypress = (event) => {};
 _该接口还继承了其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果在发生此事件时按下 <kbd>Alt</kbd>（macOS 上的 <kbd>Option</kbd> 或 <kbd>⌥</kbd>）键，则返回 `true`。
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-
   - : 返回一个字符串，其中包含由事件表示的物理键的代码值。
 
     > [!WARNING]
     > 此方法忽略用户的键盘布局，因此，如果用户按下 QWERTY 键盘布局中“Y”位置（在主键盘区域上方的一行中间），即使用户使用 QWERTZ 键盘（这意味着用户期望“Z”，而且所有其他属性都指示为“Z”）或 Dvorak 键盘布局（其中用户期望“F”），此方法仍将始终返回“KeyY”。如果你想向用户显示正确的按键信息，则可以使用 {{domxref("Keyboard.getLayoutMap()")}} 方法。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果生成键事件时 <kbd>Ctrl</kbd> 键处于激活状态，则为 `true`。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
-
   - : 返回一个布尔值，如果事件在 `compositionstart` 之后、`compositionend` 之前触发，则为 `true`。
 
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-
   - : 返回一个字符串，表示由事件表示的键的键值。
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
-
   - : 返回一个表示键盘配置的区域设置的语言环境字符串。如果浏览器或设备不知道键盘的语言环境，则可能是空字符串。
 
     > [!NOTE]
     > 这并不描述正在输入的数据的区域设置。用户可能在使用一种键盘布局时在输入不同语言的文本。
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
-
   - : 返回一个数字，表示键在键盘或其他输入设备上的位置。标识位置的常量列表如上面的键盘位置部分所示。
 
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
-
   - : 如果在生成按键事件时 <kbd>Meta</kbd> 键（在 Mac 键盘上是 <kbd>⌘ Command</kbd> 键，在 Windows 键盘上是 Windows 键（<kbd>⊞</kbd>））处于活动状态，则返回一个布尔值，该布尔值为 `true`。
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
-
   - : 如果该按键被按住并且正在生成自动重复事件，则此函数返回一个布尔值 `true`。
 
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
-
   - : 如果在生成按键事件时 <kbd>Shift</kbd> 键处于激活状态，则返回一个布尔值，该布尔值为 `true`。
 
 ## 示例

@@ -1,10 +1,7 @@
 ---
 title: 网格
 slug: Learn_web_development/Core/CSS_layout/Grids
-original_slug: Learn/CSS/CSS_layout/Grids
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
@@ -177,7 +174,8 @@ body {
 
 {{ EmbedLiveSample('使用 fr 单位的灵活网格', '100%', 400) }}
 
-> **备注：** `fr`单位分配的是*可用*空间而非*所有*空间，所以如果某一格包含的内容变多了，那么整个可用空间就会减少，可用空间是不包括那些已经确定被占用的空间的。
+> [!NOTE]
+> `fr`单位分配的是*可用*空间而非*所有*空间，所以如果某一格包含的内容变多了，那么整个可用空间就会减少，可用空间是不包括那些已经确定被占用的空间的。
 
 ### 网格间隙
 
@@ -232,7 +230,8 @@ body {
 
 {{ EmbedLiveSample('网格间隙', '100%', 400) }}
 
-> **备注：** `gap`属性曾经有一个`grid-`前缀，不过后来的标准进行了修改，目的是让他们能够在不同的布局方法中都能起作用。尽管现在这个前缀不会影响语义，但为了代码的健壮性，你可以把两个属性都写上。
+> [!NOTE]
+> `gap`属性曾经有一个`grid-`前缀，不过后来的标准进行了修改，目的是让他们能够在不同的布局方法中都能起作用。尽管现在这个前缀不会影响语义，但为了代码的健壮性，你可以把两个属性都写上。
 
 ```css
 .container {
@@ -378,7 +377,7 @@ body {
 
 在定义完了网格之后，我们要把元素放入网格中。我们的网格有许多分隔线，第一条线的起始点与文档书写模式相关。在英文中，第一条列分隔线（即网格边缘线）在网格的最左边而第一条行分隔线在网格的最上面。而对于阿拉伯语，第一条列分隔线在网格的最右边，因为阿拉伯文是从右往左书写的。
 
-我们根据这些分隔线来放置元素，通过以下属性来指定从那条线开始到哪条线结束。
+我们根据这些分隔线来放置元素，通过以下属性来指定从哪条线开始到哪条线结束。
 
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
@@ -724,7 +723,7 @@ aside {
 
 ## 技能测试！
 
-你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grid_skills)。
+你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid)。
 
 ## 小结
 

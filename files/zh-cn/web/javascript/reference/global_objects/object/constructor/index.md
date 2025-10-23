@@ -182,7 +182,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // 跑起来没毛病
 ```
 
-请注意，当手动添加 `constructor` 属性时，将属性设置为[不可枚举](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)非常重要，这将确保 `constructor` 就不会在 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环中被访问——尽管通常情况下不会被访问。
+请注意，当手动添加 `constructor` 属性时，将属性设置为[不可枚举](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)非常重要，这将确保 `constructor` 就不会在 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环中被访问——尽管通常情况下不会被访问。
 
 如果上面的代码看起来太死板，你也可以考虑使用 [`Object.setPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 来操作原型链。
 

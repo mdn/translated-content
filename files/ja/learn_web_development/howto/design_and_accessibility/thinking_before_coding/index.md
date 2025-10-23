@@ -1,12 +1,9 @@
 ---
 title: ウェブサイトのデザインは何から始めればよいか
 slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
-original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事では、すべてのプロジェクトにおいて重要な最初のステップである、「そのプロジェクトで何を達成したいのか」を定義することについて述べます。
 
@@ -37,7 +34,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -48,7 +45,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 はじめに友人と 1 時間ディスカッションするのは良いことですが、不十分です。自分のアイディアを具現化するためにどのような道をたどらなければならないかを明確に把握するためには、座ってアイディアを体系化する必要があります。これを行うには、紙とペンと、少なくとも次の質問に答えるための時間が必要です。
 
 > [!NOTE]
-> プロジェクトのアイディア化を実行するための方法は無数にあります。ここにそれらすべてを提示することはできません (一冊の本では不十分です)。ここでは、プロフェッショナルが[プロジェクトの理念](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>)、[プロジェクト計画](https://en.wikipedia.org/wiki/Project_planning)、および[プロジェクト管理](https://en.wikipedia.org/wiki/Project_management)と呼ぶものを処理する簡単な方法を紹介します。
+> プロジェクトのアイディア化を実行するための方法は無数にあります。ここにそれらすべてを提示することはできません（一冊の本では不十分です）。ここでは、プロフェッショナルが[プロジェクトの理念](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>)、[プロジェクト計画](https://en.wikipedia.org/wiki/Project_planning)、および[プロジェクト管理](https://en.wikipedia.org/wiki/Project_management)と呼ぶものを処理する簡単な方法を紹介します。
 
 ### 本当にしたいことは何ですか？
 
@@ -176,4 +173,4 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 このように、「ウェブサイトを作りたい」という単純な思いつきから、長い ToDo リストが生まれ、それは考えれば考えるほど長くなっていきます。すぐに圧倒されてしまいそうですが、慌てないでください。すべての質問に答える必要はありませんし、リストにあることをすべて実行する必要もないのです。大切なのは、自分が何をしたいのか、どうすればそこに返されるのか、というビジョンを持っていることです。明確なビジョンが持てたなら、それをいつ、どのように実行するかを決める必要があります。大きな仕事を、実行可能な小さなステップに分解してください。そして、その小さな一歩が大きな成果につながるのです。
 
-この記事から、ウェブサイトを作成するための大まかな計画を立てることができるはずです。次の記事は、[インターネットの仕組み](/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)です。
+この記事から、ウェブサイトを作成するための大まかな計画を立てることができるはずです。次の記事は、[インターネットの仕組み](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)です。

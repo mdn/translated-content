@@ -30,7 +30,7 @@ setSinkId(sinkId)
 ### 例外
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)が音声出力の使用をブロックするために使用された場合に返されます。
+  - : [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が音声出力の使用をブロックするために使用された場合に返されます。
 - `NotFoundError` {{domxref("DOMException")}}
   - : `deviceId` がどの音声機器にも一致しない場合に返されます。
 - `AbortError` {{domxref("DOMException")}}
@@ -40,8 +40,8 @@ setSinkId(sinkId)
 
 この API にアクセスするには、以下の制約があります。
 
-- このメソッドは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)の中で呼び出すこと。
-- アクセスが [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)で制限されることがあります。
+- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)の中で呼び出すこと。
+- アクセスが [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)で制限されることがあります。
 - 既定以外の端末にアクセスするには、そのユーザー権限が要求されます。
   ユーザーは、{{domxref("MediaDevices.selectAudioOutput()")}} で表示されるプロンプトで、ID に関連付けられた端末を選択することで、その権限を付与します。
 

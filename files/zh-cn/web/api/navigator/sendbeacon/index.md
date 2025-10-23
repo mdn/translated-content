@@ -5,7 +5,7 @@ slug: Web/API/Navigator/sendBeacon
 
 {{APIRef("HTML DOM")}}
 
-**`navigator.sendBeacon()`** 方法可用于通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Methods/POST) 将少量数据 {{glossary("Asynchronous", "异步")}} 传输到 Web 服务器。
+**`navigator.sendBeacon()`** 方法可用于通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 将少量数据 {{glossary("Asynchronous", "异步")}} 传输到 Web 服务器。
 
 它主要用于将统计数据发送到 Web 服务器，同时避免了用传统技术（如：{{domxref("XMLHttpRequest","XMLHttpRequest")}}）发送分析数据的一些问题。
 
@@ -45,7 +45,7 @@ navigator.sendBeacon(url, data);
 - 数据异步传输。
 - 不影响下一导航的载入。
 
-数据是通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Methods/POST) 请求发送的。
+数据是通过 [HTTP POST](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 请求发送的。
 
 ### 在会话结束时发送统计数据
 

@@ -1,12 +1,9 @@
 ---
 title: 使用 HTML 构建 Web
 slug: Learn_web_development/Core/Structuring_content
-original_slug: Learn/HTML
 l10n:
   sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---
-
-{{LearnSidebar}}
 
 构建网站时，你应该了解 {{Glossary('HTML')}}——用于定义网页结构的基本技术。HTML 用于指定你的网页内容应被识别为段落、列表、标题、链接、图像、多媒体播放器、表单或是其他可用元素之一，甚至是你定义的新元素。
 

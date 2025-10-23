@@ -46,6 +46,6 @@ l10n:
 
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)
 - [フェッチのポリフィル](https://github.com/github/fetch)

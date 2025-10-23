@@ -24,7 +24,7 @@ Tu variable se convierte en una instancia del objeto cadena y, como resultado, t
 
 **Ahora, antes de que tu cerebro comience a derretirse, ¡no te preocupes!** Realmente no necesitas saber acerca de la mayoría de estos principios en tu viaje de aprendizaje. Pero hay algunos que posiblemente utilizarás con bastante frecuencia así como veremos aquí.
 
-Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (también puedes [abrir esta consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una ventana o pestaña por separado, o si prefieres usar la [consola de desarrolladores del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)).
+Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (o si prefieres, usa la [consola de desarrolladores del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)).
 
 ```html hidden
 <!doctype html>

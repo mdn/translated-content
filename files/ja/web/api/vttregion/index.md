@@ -44,7 +44,7 @@ const cue = new VTTCue(2, 3, "かっこいい文章を表示する");
 cue.region = region; // このキューはこの領域内にのみ描かれます。
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

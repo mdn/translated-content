@@ -20,9 +20,7 @@ request(type)
 ### 参数
 
 - `type` {{optional_inline}}
-
   - : 屏幕唤醒锁类型是一个字符串，用于指定屏幕唤醒锁的类型：
-
     - `screen`
       - : 阻止屏幕关闭，只有可见文档才能获取屏幕唤醒锁。
 
@@ -35,10 +33,8 @@ request(type)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-
   - : 当无法获取屏幕唤醒锁时抛出异常，可能有以下原因：
-
-    - 使用此功能被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+    - 使用此功能被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
     - 文档未完全激活。
     - 文档的可见性状态为 `hidden`。
     - {{Glossary("User Agent", "用户代理")}}无法获取平台的屏幕唤醒锁。例如设备电池电量过低。

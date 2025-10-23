@@ -9,16 +9,16 @@ slug: Learn_web_development/Extensions/Async_JS
 
 ## Необходимые знания
 
-Асинхронный JavaScript довольно сложная тема, и мы советуем пройти [Первые шаги в JavaScript](/ru/docs/Learn/JavaScript/First_steps) и [Блоки в JavaScript](/ru/docs/Learn/JavaScript/Building_blocks) прежде чем начать эту тему.
+Асинхронный JavaScript довольно сложная тема, и мы советуем пройти [Первые шаги в JavaScript](/ru/docs/conflicting/Learn_web_development/Core/Scripting) и [Блоки в JavaScript](/ru/docs/Learn_web_development/Core/Scripting) прежде чем начать эту тему.
 
 > [!NOTE]
 > Если вы работаете за компьютером/планшетом/другим устройством где у вас нет возможности создавать собственные файлы, вы можете попробовать(почти все) примеры кода в одном из веб-приложений, таких, как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com).
 
 ## Руководства
 
-- [Введение в асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Введение в асинхронный JavaScript](/ru/docs/Learn_web_development/Extensions/Async_JS/Introducing)
   - : В этой статье мы кратко расскажем о различиях между синхронным и асинхронным программированием, проблемах, связанных с синхронным JavaScript-ом, и взглянем на различные техники асинхронного программирования, с которыми вы столкнётесь. Покажем как эти техники помогают решать проблемы синхронного JavaScript.
-- [Обработка асинхронных операций с помощью Промисов](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Обработка асинхронных операций с помощью Промисов](/ru/docs/Learn_web_development/Extensions/Async_JS/Promises)
   - : Расскажем о промисах и том, как использовать API на их основе, а также объясним как работает функция с <code>async</code> и оператор <code>await</code>.
 - [Реализация API на основе Промисов](/ru/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
   - : Статья о том, как реализовать собственный API на основе промисов.

@@ -70,25 +70,25 @@ Overview: [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_
 - [Assignment](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
 - [Arithmetic operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
 - [Bitwise](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-- [Conditional (ternary) operator](</ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator>)
+- [Conditional (ternary) operator](</ko/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
 
 ## Numbers and dates
 
-Overview: [Numbers and dates](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates)
+Overview: [Numbers and dates](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Number literals](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
-- [`Number` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-- [`Math` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-- [`Date` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+- [Number literals](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
+- [`Number` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+- [`Math` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+- [`Date` object](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings#date_object)
 
 ## Text formatting
 
-Overview: [Text formatting](/ko/docs/Web/JavaScript/Guide/Text_formatting)
+Overview: [Text formatting](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [String literals](/ko/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
-- [`String` object](/ko/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
-- [Template literals](/ko/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
-- [Internationalization](/ko/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
+- [String literals](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#string_literals)
+- [`String` object](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#string_objects)
+- [Template literals](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#multi-line_template_literals)
+- [Internationalization](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#internationalization)
 - [Regular Expressions](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 
 ## Indexed collections

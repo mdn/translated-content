@@ -5,12 +5,62 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
-
-**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 4x4 の 3D 同次変換行列を定義します。
+**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 4x4 の 3D 同次変換行列を定義します。
 結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-matrix3d.html")}}
+{{InteractiveExample("CSS デモ: matrix3d()")}}
+
+```css interactive-example-choice
+transform: matrix3d(
+  -0.6,
+  1.34788,
+  0,
+  0,
+  -2.34788,
+  -0.6,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  10,
+  1
+);
+```
+
+```css interactive-example-choice
+transform: matrix3d(
+  0.5,
+  0,
+  -0.866025,
+  0,
+  0.595877,
+  1.2,
+  -1.03209,
+  0,
+  0.866025,
+  0,
+  0.5,
+  0,
+  25.9808,
+  0,
+  15,
+  1
+);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## 構文
 

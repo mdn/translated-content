@@ -20,4 +20,4 @@ l10n:
 ## 関連情報
 
 - {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
-- [グローバル属性 - `data-*`](/ja/docs/Web/HTML/Global_attributes/data-*)
+- [グローバル属性 - `data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)

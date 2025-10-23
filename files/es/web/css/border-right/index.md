@@ -3,11 +3,47 @@ title: border-right
 slug: Web/CSS/border-right
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`border-right`** es un a propiedad rápida para dar valores al {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}} y {{cssxref("border-right-color")}}. Estas propiedades establecen un [borde](/es/docs/Web/CSS/border)derecho del elemento.
 
-{{EmbedInteractiveExample("pages/css/border-right.html")}}
+{{InteractiveExample("CSS Demo: border-right")}}
+
+```css interactive-example-choice
+border-right: solid;
+```
+
+```css interactive-example-choice
+border-right: dashed red;
+```
+
+```css interactive-example-choice
+border-right: 1rem solid;
+```
+
+```css interactive-example-choice
+border-right: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Como con todas las propiedades rápidas, `border-right` siempre establece los valores de todas las propiedades que puede establecer, incluso si no están especificadas. Establece los no especificados a sus valores por defecto. Lo que significa que ...
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 术语 **DSL** 在不同语境中可以有不同的意思，可以指代：
 
 {{GlossaryDisambiguation}}

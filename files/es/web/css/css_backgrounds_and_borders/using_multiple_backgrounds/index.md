@@ -3,8 +3,6 @@ title: Usando múltiples fondos con CSS
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 ---
 
-{{CSSRef}}
-
 Con [CSS3](/es/docs/Web/CSS/CSS3), puedes aplicar **múltiple fondos** a los elementos. Estos se presentan uno encima del otro, poniendo el primer fondo definido hasta arriba, y el último, hasta abajo. Sólo el último fondo puede incluir color de fondo.
 
 Especificar fondos múltiples es fácil:

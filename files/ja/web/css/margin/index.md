@@ -2,14 +2,66 @@
 title: margin
 slug: Web/CSS/margin
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
 ---
-
-{{CSSRef}}
 
 **`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS デモ: margin")}}
+
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -36,6 +88,14 @@ margin: 1em auto 2em;
 /* 上 | 右 | 下 | 左 */
 margin: 2px 1em 0 auto;
 
+/* anchor-size() の値 */
+margin: 5% anchor-size(width);
+margin: calc(anchor-size(width) / 4) 1em 0
+  anchor-size(--myAnchor self-inline, 50px);
+
+/* キーワード値 */
+margin: auto;
+
 /* グローバル値 */
 margin: inherit;
 margin: initial;
@@ -55,8 +115,10 @@ margin: unset;
 
 - {{cssxref("length")}}
   - : マージンの寸法を固定値で表したものです。
+    - アンカー位置指定要素の場合、 {{cssxref("anchor-size()")}} 関数は、関連付けられたアンカー要素の幅または高さに対する相対的な {{cssxref("&lt;length&gt;")}} 値に解決されます（[アンカーサイズに基づいて要素のマージンを設定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)を参照してください）。
+
 - {{cssxref("percentage")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザーが適切なマージンを選択して使用します。例えば、要素を中央揃えするためにこの値を使用することもあります。
 
@@ -64,7 +126,7 @@ margin: unset;
 
 このプロパティを使用して、要素の全四辺のマージンを設定することができます。マージンは要素の周りに追加の領域を作成します。それに対して、 {{cssxref("padding")}} は要素*内部*に追加の領域を作成します。
 
-top および bottom のマージンは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} などの[置換要素](/ja/docs/Web/CSS/Replaced_element)ではないインライン要素には効果がありません。
+top および bottom のマージンは、[置換要素](/ja/docs/Glossary/Replaced_elements)ではないインライン要素（{{HTMLElement("span")}} や {{HTMLElement("code")}} など）には効果がありません。
 
 ### 水平方向の中央揃え
 
@@ -86,11 +148,11 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 ## 例
 
-### 簡単な例
+### 基本的な例
 
 #### HTML
 
-```html-nolint live-sample___simple_example
+```html-nolint live-sample___basic_example
 <div class="center">この要素は中央揃えされています。</div>
 
 <div class="outside">この要素はコンテナーの外側に配置されています。</div>
@@ -98,7 +160,7 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 #### CSS
 
-```css live-sample___simple_example
+```css live-sample___basic_example
 .center {
   margin: auto;
   background: lime;
@@ -112,7 +174,7 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 }
 ```
 
-{{ EmbedLiveSample('Simple_example','100%',120) }}
+{{ EmbedLiveSample('Basic_example','100%',120) }}
 
 ### その他の例
 

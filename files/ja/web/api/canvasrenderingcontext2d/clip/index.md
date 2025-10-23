@@ -34,10 +34,8 @@ clip(path, fillRule)
 ### 引数
 
 - `fillRule`
-
   - : この点がクリッピング領域の内側にあるか外側にあるかを決定するアルゴリズムです。
     可能な値は次の通りです。
-
     - `nonzero`
       - : [非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)。
         既定のルールです。

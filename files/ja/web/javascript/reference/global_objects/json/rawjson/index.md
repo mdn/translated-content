@@ -27,7 +27,7 @@ JSON.rawJSON(string)
 - `rawJSON`
   - : 提供された元の JSON の `string` です。
 
-さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を持ち、それ自身を生の JSON オブジェクトとしてマークします。これにより、 {{jsxref("JSON.stringify()")}} と {{jsxref("JSON.isRawJSON()")}} で識別できるようになります。
+さらに、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を持ち、それ自身を生の JSON オブジェクトとしてマークします。これにより、 {{jsxref("JSON.stringify()")}} と {{jsxref("JSON.isRawJSON()")}} で識別できるようになります。
 
 ### 例外
 
@@ -36,7 +36,7 @@ JSON.rawJSON(string)
 
 ## 解説
 
-生の JSON オブジェクトは、あらゆる種類の[プリミティブ](/ja/docs/Web/JavaScript/Data_structures#primitive_values)のような、不変で原子的なデータ構造と見なすことができます。これは通常のオブジェクトではなく、生の JSON テキスト以外のデータは持ちません。様々な理由で `JSON.stringify` 自身が生成できない形式にデータを「事前シリアライズ」するために使用します。最も典型的な使用する用途は、浮動小数点数の精度損失の問題です。例えば、次のような場合です。
+生の JSON オブジェクトは、あらゆる種類の[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_values)のような、不変で原子的なデータ構造と見なすことができます。これは通常のオブジェクトではなく、生の JSON テキスト以外のデータは持ちません。様々な理由で `JSON.stringify` 自身が生成できない形式にデータを「事前シリアライズ」するために使用します。最も典型的な使用する用途は、浮動小数点数の精度損失の問題です。例えば、次のような場合です。
 
 ```js
 JSON.stringify({ value: 12345678901234567890 });

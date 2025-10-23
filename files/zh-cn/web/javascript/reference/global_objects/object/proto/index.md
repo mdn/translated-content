@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 > [!NOTE]
 > 使用 `__proto__` 是有争议且不被鼓励的。它的存在和确切行为仅作为遗留特性被标准化，以确保 Web 兼容性，但它存在一些安全问题和隐患。为了更好的支持，请优先使用 {{JSxRef("Object.getPrototypeOf()")}}/{{JSxRef("Reflect.getPrototypeOf()")}} 和 {{JSxRef("Object.setPrototypeOf()")}}/{{JSxRef("Reflect.setPrototypeOf()")}}。
 
-{{jsxref("Object")}} 实例的 **`__proto__`** 访问器属性暴露了此对象的 [`[[Prototype]]`](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)（一个对象或 {{jsxref("Operators/null", "null")}}）。
+{{jsxref("Object")}} 实例的 **`__proto__`** 访问器属性暴露了此对象的 [`[[Prototype]]`](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)（一个对象或 {{jsxref("Operators/null", "null")}}）。
 
 `__proto__` 属性还可以在对象字面量定义中使用，作为创建对象时设置对象 `[[Prototype]]` 的一种替代方法，而不是使用 {{JSxRef("Object.create()")}}。请参见：[对象初始化/字面量语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。该语法已经标准化，并且在实现中得到了优化，与 `Object.prototype.__proto__` 相当不同。
 
@@ -32,7 +32,7 @@ obj.__proto__
 
 ## 描述
 
-`__proto__` 的 getter 函数暴露了一个对象内部的 `[[Prototype]]` 的值。对于使用对象字面量创建的对象，该值是 `Object.prototype`。对于使用数组字面量创建的对象，该值是 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。对于函数，该值是 {{JSxRef("Function.prototype")}}。你可以在[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中了解有关原型链的更多信息。
+`__proto__` 的 getter 函数暴露了一个对象内部的 `[[Prototype]]` 的值。对于使用对象字面量创建的对象，该值是 `Object.prototype`。对于使用数组字面量创建的对象，该值是 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。对于函数，该值是 {{JSxRef("Function.prototype")}}。你可以在[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中了解有关原型链的更多信息。
 
 `__proto__` 的 setter 允许修改一个对象的 `[[Prototype]]`。提供的值必须是一个对象或 {{JSxRef("Operators/null", "null")}}。提供任何其他值都不会产生任何作用。
 

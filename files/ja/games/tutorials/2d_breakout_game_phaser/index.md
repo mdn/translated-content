@@ -3,15 +3,13 @@ title: Phaser を使用した 2D ブロック崩しゲーム
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
 このステップバイステップのチュートリアルでは、シンプルなモバイル **MDN ブロック崩し**ゲーム を、 JavaScript で書き、 [Phaser](https://phaser.io/) フレームワークを使用して作成します。
 
 各ステップには、編集可能なライブサンプルがあるので、中間ステージがどのように見えるかを確認しながら遊ぶことができます。 Phaser フレームワークを使用して、画像のレンダリングと移動、衝突の検出、コントロールメカニズム、フレームワーク固有のヘルパー関数、アニメーションと調整、勝利と敗北状態などの基本的なゲームメカニズムを使用するための基本を学びます。
 
-この連載記事を最大限に活用するためには、すでに基礎から中級の [JavaScript](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics) の知識を持っている必要があります。このチュートリアルを動作させた後は、 Phaser を使って自身の簡単なウェブゲームを作ることができるはずです。
+この連載記事を最大限に活用するためには、すでに基礎から中級の [JavaScript](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) の知識を持っている必要があります。このチュートリアルを動作させた後は、 Phaser を使って自身の簡単なウェブゲームを作ることができるはずです。
 
 ![Phaser で作成したゲーム MDN ブロック崩しのゲーム画面。パドルを使用してボールを跳ね返し、ポイントとライフを維持しながら、レンガのフィールドを破壊することができます。](mdn-breakout-phaser.png)
 

@@ -29,8 +29,7 @@ getBattery()
 ### Исключения
 
 - `NotAllowedError` {{domxref("DOMException")}}
-
-  - : Использование этой функциональности заблокировано [Permissions Policy](/ru/docs/Web/HTTP/Permissions_Policy).
+  - : Использование этой функциональности заблокировано [Permissions Policy](/ru/docs/Web/HTTP/Guides/Permissions_Policy).
 
 - `SecurityError` {{domxref("DOMException")}}
   - : Агент пользователя не предоставляет информацию о батарее в небезопасном контексте, и этот метод был вызван из такого контекста.

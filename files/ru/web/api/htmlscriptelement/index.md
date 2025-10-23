@@ -7,7 +7,7 @@ slug: Web/API/HTMLScriptElement
 
 HTML-элементы {{HTMLElement("script")}} предоставляют **`HTMLScriptElement`** интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением `<script>` элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).
 
-JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие [`error`](/ru/docs/Web/API/HTMLElement/error_event); в противном случае, он получает событие [`success`](/ru/docs/Web/API/IDBRequest/success_event).
+JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/Guides/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие [`error`](/ru/docs/Web/API/HTMLElement/error_event); в противном случае, он получает событие [`success`](/ru/docs/Web/API/IDBRequest/success_event).
 
 {{InheritanceDiagram(600, 120)}}
 

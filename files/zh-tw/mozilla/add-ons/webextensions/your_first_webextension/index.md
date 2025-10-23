@@ -3,8 +3,6 @@ title: 你的第一個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
-{{AddonSidebar}}
-
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。
 
 範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/main/borderify>。
@@ -54,7 +52,8 @@ cd borderify
 - [深入理解 content script](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [深入理解 about match pattern](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **警告：** [某些情況下，你需要給附加元件指定 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
+> [!WARNING]
+> [某些情況下，你需要給附加元件指定 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
 >
 > ```json
 > "applications": {

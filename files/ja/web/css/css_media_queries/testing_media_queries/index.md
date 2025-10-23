@@ -2,10 +2,8 @@
 title: プログラムによるメディアクエリーの評価
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
 l10n:
-  sourceCommit: f7daf15512ea736498837b68bcc36d82d6a323f4
+  sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
-
-{{CSSRef}}
 
 {{Glossary("DOM")}} では、{{Glossary("media query", "メディアクエリー")}}の結果を {{domxref("MediaQueryList")}} インターフェイスおよびそのメソッドやプロパティを用いてプログラムから調べることができる機能を備えています。`MediaQueryList` オブジェクトを作成すると、[クエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果を確認したり、結果が変化したときに自動的に通知を受け取ったりすることができます。
 
@@ -74,6 +72,10 @@ function handleOrientationChange(evt) {
 ```js
 mediaQueryList.removeEventListener("change", handleOrientationChange);
 ```
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 

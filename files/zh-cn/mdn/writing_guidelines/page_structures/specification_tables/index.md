@@ -25,7 +25,7 @@ MDN 上的每一个参考页面都应该提供有关该 API 或技术定义的�
 browser-compat: css.property.text-align
 ```
 
-有些特性不在上述仓库中维护。在这些情况下，可以使用 `spec-urls` 键将规范信息添加到页面元数据中。例如，[`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性拥有以下页面元数据：
+有些特性不在上述仓库中维护。在这些情况下，可以使用 `spec-urls` 键将规范信息添加到页面元数据中。例如，[`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性拥有以下页面元数据：
 
 ```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic

@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLTableCellElement")}} 接口的 **`rowSpan`** 只读属性表示此单元格必须跨越的行数；这允许单元格在表格的多行之间占据空间。它反映 [`rowSpan`](/zh-CN/docs/Web/HTML/Element/td#rowSpan) 属性。
+{{domxref("HTMLTableCellElement")}} 接口的 **`rowSpan`** 只读属性表示此单元格必须跨越的行数；这允许单元格在表格的多行之间占据空间。它反映 [`rowSpan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#rowSpan) 属性。
 
 ## 值
 

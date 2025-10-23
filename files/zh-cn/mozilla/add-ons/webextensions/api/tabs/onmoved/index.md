@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当标签页在窗口内移动时触发。
 
 仅会触发一次移动事件，用以代表用户直接移动了的标签页。不会为其他响应移动的标签页触发移动事件。此事件不会在标签页在窗口之间移动时触发。对于这种情况，请参阅 {{WebExtAPIRef('tabs.onDetached')}}。
@@ -33,9 +31,7 @@ browser.tabs.onMoved.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。用户移动的标签页的 ID。
     - `moveInfo`
@@ -73,7 +69,7 @@ browser.tabs.onMoved.addListener(handleMoved);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onMoved) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onMoved) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -13,7 +13,7 @@ l10n:
 
 ## 歴史
 
-10 年以上前、[SMIL (Synchronized Multimedia Integration Language)](/ja/docs/Web/SVG/SVG_animation_with_SMIL) （「スマイル」と読む）は SVG にアニメーションをもたらしました。当時は、ブラウザーが気にしなければならない唯一のアニメーションエンジンでした。5 つのブラウザーのうち 4 つのブラウザーが SMIL に対応していましたが、SMIL は SVG 要素のアニメーションのみで、CSS を使用することができず、非常に複雑で、実装上の不整合につながることが多かったのです。10 年後、Safari チームは [CSS アニメーション](https://drafts.csswg.org/css-animations/)と [CSS トランジション](https://drafts.csswg.org/css-transitions/)の仕様を導入しました。
+10 年以上前、[SMIL (Synchronized Multimedia Integration Language)](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL) （「スマイル」と読む）は SVG にアニメーションをもたらしました。当時は、ブラウザーが気にしなければならない唯一のアニメーションエンジンでした。5 つのブラウザーのうち 4 つのブラウザーが SMIL に対応していましたが、SMIL は SVG 要素のアニメーションのみで、CSS を使用することができず、非常に複雑で、実装上の不整合につながることが多かったのです。10 年後、Safari チームは [CSS アニメーション](https://drafts.csswg.org/css-animations/)と [CSS トランジション](https://drafts.csswg.org/css-transitions/)の仕様を導入しました。
 
 Internet Explorer チームは、すべてのブラウザーでアニメーション機能を統合し、正規化するアニメーション API をリクエストしました。こうして、Mozilla Firefox と Google Chrome の開発者の間で、すべてを支配する単一のアニメーション仕様、ウェブアニメーション API を作成する取り組みが本格的に始まりました。これで、現在および将来的なアニメーション仕様のためのWAAPIを獲得し、これらの仕様が一貫性を保ち、うまく連携できるようになりました。また、現在利用できる仕様で、すべてのブラウザーが準拠することができる参照ポイントも提供します。
 

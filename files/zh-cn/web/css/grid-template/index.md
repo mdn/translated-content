@@ -3,11 +3,69 @@ title: grid-template
 slug: Web/CSS/grid-template
 ---
 
-{{CSSRef}}
-
 **`grid-template`**，CSS 属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。
 
-{{EmbedInteractiveExample("pages/css/grid-template.html")}}
+{{InteractiveExample("CSS Demo: grid-template")}}
+
+```css interactive-example-choice
+grid-template:
+  "a a a" 40px
+  "b c c" 40px
+  "b c c" 40px / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "b b a" auto
+  "b b c" 2ch
+  "b b c" 1em / 20% 20px 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "a a ." minmax(50px, auto)
+  "a a ." 80px
+  "b b c" auto / 2em 3em auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  grid-area: a;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-area: b;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-area: c;
+}
+```
 
 所简写属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}与{{cssxref("grid-template-areas")}}。
 
@@ -48,7 +106,6 @@ grid-template: unset;
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : 指定{{cssxref("grid-template-rows")}}与{{cssxref("grid-template-columns")}}之值，并设{{cssxref("grid-template-areas")}}为`none`。
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
-
   - : 设{{cssxref("grid-template-areas")}}为列得`<string>`、{{cssxref("grid-template-columns")}}为\<explicit-track-list>（默认为`none`）、{{cssxref("grid-template-rows")}}为`<track-size>`（默认为`auto`）并拼接尺寸前后所定义之行。
 
     注：轨道被用以与“ASCII art”（即字符画，此处指`<string>`）中行列逐一视觉对齐，故`<explicit-track-list>`中不允许{{cssxref("repeat()")}}。
@@ -125,7 +182,6 @@ footer {
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}
 - 网格布局指导：
-
   - _[CSS 网格中基于线的定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
   - _[网格定义的简写规则](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#网格定义的简写规则)_
 

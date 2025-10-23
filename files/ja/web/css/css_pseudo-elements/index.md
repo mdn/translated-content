@@ -2,10 +2,8 @@
 title: CSS 擬似要素
 slug: Web/CSS/CSS_pseudo-elements
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{CSSRef}}
 
 **CSS 擬似要素**モジュールは、文書ツリー内には直接存在しない抽象要素を定義します。擬似要素と呼ばれるこれらの抽象要素は、レンダーツリーの一部を表し、選択したりスタイル設定したりすることができます。擬似要素は、文書ツリーによって指定された以上の文書ツリーに関する抽象化をするために使用します。
 
@@ -23,11 +21,14 @@ l10n:
 - {{CSSXref("::first-letter")}}
 - {{CSSXref("::first-line")}}
 - {{CSSXref("::grammar-error")}}
+- {{CSSXref("::highlight()")}}
 - {{CSSXref("::marker")}}
 - {{CSSXref("::placeholder")}}
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
+
+この仕様では、 `::details-content` および `::search-text` 擬似要素、ならびに `::postfix` および `::prefix` サブ擬似要素も定義しています。これらは、現時点ではどのブラウザーでも対応していません。 {{CSSXref("::highlight()")}} 擬似要素は、このモジュールに記載されていますが、詳細は [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API) が定義しています。
 
 ### インターフェイス
 
@@ -42,15 +43,12 @@ l10n:
 ## ガイド
 
 - [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-
   - : すべての CSS 仕様と WebVTT で定義されている擬似要素のアルファベット順リスト。
 
-- [構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-
+- [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
   - : セレクターに関する CSS 構成要素の節の一部です。この記事では、擬似要素とは何か、擬似クラスとどのように組み合わせ、 `::before` および `::after` 擬似要素でコンテンツを生成するために使用できるかを定義します。
 
-- [擬似要素を使用した装飾的なボックスの作成](/ja/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
-
+- [擬似要素を使用した装飾的なボックスの作成](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
   - : 視覚効果のために `::before` と `::after` 擬似要素を使用して生成コンテンツをスタイル設定する例です。
 
 ## 関連する概念
@@ -58,23 +56,28 @@ l10n:
 - {{cssxref("::backdrop")}}
 
 - Web Video Text Tracks Format (WebVTT) キュー:
-
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
 
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+  - {{cssxref("::column")}}
 
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
+- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
 - [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
-
   - {{CSSXref("::part")}}
 
 - [CSS ビュー遷移](/ja/docs/Web/CSS/CSS_view_transitions)モジュール
-
   - {{cssxref("::view-transition")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
@@ -82,7 +85,6 @@ l10n:
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-
   - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
   - [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
   - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)
@@ -91,15 +93,14 @@ l10n:
   - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
   - [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
 
-- [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性（`<input>` 要素）
+- [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性（`<input>` 要素）
 - [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) セレクター
 
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)
-
   - {{cssxref("content")}} プロパティ
   - {{cssxref("quotes")}} プロパティ
 
-- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} プロパティ
 - {{DOMXref("KeyframeEffect.pseudoElement")}} プロパティ
@@ -111,8 +112,9 @@ l10n:
 
 ## 関連情報
 
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
 - [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
+- [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)

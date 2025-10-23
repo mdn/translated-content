@@ -11,7 +11,7 @@ slug: Glossary/XPath
 
 ### 技術リファレンス
 
-- [MDN の XPath 文書](/ja/docs/Web/XPath)
+- [MDN の XPath 文書](/ja/docs/Web/XML/XPath)
 - [XPath specification](https://www.w3.org/TR/xpath-30/)
 
 ### 一般知識

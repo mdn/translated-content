@@ -5,11 +5,60 @@ l10n:
   sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
-
 **`grid-auto-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
+{{InteractiveExample("CSS デモ: grid-auto-rows")}}
+
+```css interactive-example-choice
+grid-auto-rows: auto;
+```
+
+```css interactive-example-choice
+grid-auto-rows: 50px;
+```
+
+```css interactive-example-choice
+grid-auto-rows: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-rows: minmax(30px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  font-size: 22px;
+}
+
+#example-element div:last-child {
+  font-size: 13px;
+}
+```
 
 グリッドアイテムが {{cssxref("grid-template-rows")}} で明示的に大きさが指定されていない行に配置された場合、暗黙的に{{glossary("grid", "グリッド")}}トラックが作成され、そのアイテムを保持します。これには、範囲外の行に明示的に配置する場合と、自動配置アルゴリズムによって追加の行が作成される場合があります。
 
@@ -67,7 +116,6 @@ grid-auto-rows: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : グリッドコンテナーのブロック方向の寸法に対する相対値で、負ではない {{cssxref("percentage", "&lt;percentage&gt;")}} です。グリッドコンテナーのブロック方向の寸法が不定の場合は、パーセント値は `auto` のように扱われます。
 - {{cssxref("&lt;flex&gt;")}}
-
   - : `fr` の単位の付いた負の数ではない値で、トラックのフレックス係数を指定します。 `<flex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して分け合います。
 
     `minmax()` 記法の外で使用された場合は、最小値が自動として扱われます（つまり `minmax(auto, <flex>)`）。
@@ -81,7 +129,6 @@ grid-auto-rows: unset;
 - {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : `min(max-content, max(auto, argument))` という式を表します。この式は、トラックの寸法が `auto` の最小値よりも大きい場合に _argument_ で固定されることを除いて、`auto` と同様（すなわち `minmax(auto, max-content)`）に計算されます。
 - `auto`
-
   - : 最大値として使用された場合は、トラック内のアイテムのうち最大の {{cssxref("max-content")}} の寸法を表します。
 
     最小値として使用された場合は、そのトラック内のアイテムのうち最大の最小寸法を（各アイテムの {{cssxref("min-width")}}/{{cssxref("min-height")}} で指定された寸法）を表します。これは通常、常にとは限りませんが、 {{cssxref("min-content")}} の寸法です。

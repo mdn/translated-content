@@ -64,19 +64,19 @@ PWA に複数のページがある場合、すべてのページでこの方法�
 
 Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Microsoft Edge など）では、マニフェストに以下のメンバーが含まれていることが要求されます。
 
-- [`name`](/ja/docs/Web/Manifest/name) または [`short_name`](/ja/docs/Web/Manifest/short_name)
-- [`icons`](/ja/docs/Web/Manifest/icons) には 192px および 512px のアイコンが必要です。
-- [`start_url`](/ja/docs/Web/Manifest/start_url)
-- [`display`](/ja/docs/Web/Manifest/display) や [`display_override`](/ja/docs/Web/Manifest/display_override)
-- [`prefer-related-application`](/ja/docs/Web/Manifest/prefer_related_applications) は `false` または存在してはいけない
+- [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/name) または [`short_name`](/ja/docs/Web/Progressive_web_apps/Manifest/short_name)
+- [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/icons) には 192px および 512px のアイコンが必要です。
+- [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/start_url)
+- [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/display) や [`display_override`](/ja/docs/Web/Progressive_web_apps/Manifest/display_override)
+- [`prefer-related-application`](/ja/docs/Web/Progressive_web_apps/Manifest/prefer_related_applications) は `false` または存在してはいけない
 
-それぞれのメンバーの完全な説明は、[ウェブアプリマニフェストのリファレンスドキュメント](/ja/docs/Web/Manifest)を参照してください。
+それぞれのメンバーの完全な説明は、[ウェブアプリマニフェストのリファレンスドキュメント](/ja/docs/Web/Progressive_web_apps/Manifest)を参照してください。
 
 ### HTTPS、localhost、loopback のいずれかが必須
 
 PWA がインストール可能であるためには、`https` プロトコルを使用しているか、`localhost` または `127.0.0.1` を使用して、ローカル開発環境から提供しなければなりません。
 
-これは `file://` URL から読み込まれたリソースを安全であるとみなす[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)よりも厳しい要求です。
+これは `file://` URL から読み込まれたリソースを安全であるとみなす[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)よりも厳しい要求です。
 
 ## アプリストアからのインストール
 
@@ -104,7 +104,7 @@ PWA がインストール可能であるためには、`https` プロトコル�
 
 ユーザーがアイコンを選択すると、ブラウザーに PWA をインストールするかどうか依頼するプロンプトが表示され、受け入れると PWA がインストールされます。
 
-プロンプトには、 [`name`](/ja/docs/Web/Manifest/name) と [`icons`](/ja/docs/Web/Manifest/icons) マニフェストメンバーから導かれたPWAの名前とアイコンが表示されます。
+プロンプトには、 [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/name) と [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/icons) マニフェストメンバーから導かれたPWAの名前とアイコンが表示されます。
 
 ### ブラウザーの対応
 
@@ -141,7 +141,7 @@ PWA は、既定ではブラウザーが提供するUIに頼っていますが�
 
 ### インストールプロンプトのカスタマイズ
 
-既定では、インストールプロンプトには PWA の名前とアイコンが表示されます。マニフェストメンバーに [`description`](/ja/docs/Web/Manifest/description) と [`screenshots`](/ja/docs/Web/Manifest/screenshots) の値が指定された場合、 Android のみこれらの値がインストールプロンプトに表示され、ユーザーに PWA をインストールする余分なコンテキストと動機を与えます。
+既定では、インストールプロンプトには PWA の名前とアイコンが表示されます。マニフェストメンバーに [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/description) と [`screenshots`](/ja/docs/Web/Progressive_web_apps/Manifest/screenshots) の値が指定された場合、 Android のみこれらの値がインストールプロンプトに表示され、ユーザーに PWA をインストールする余分なコンテキストと動機を与えます。
 
 下記のスクリーンショットは、 Android で動作する Google Chrome で [PWAmp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) のインストールプロンプトがどのように表示されるかを示しています。
 
@@ -151,9 +151,9 @@ PWA は、既定ではブラウザーが提供するUIに頼っていますが�
 
 PWA がインストールされると、そのアイコンはユーザーがインストールしている他のアプリと一緒に端末に表示され、アイコンをクリックするとアプリが起動します。
 
-[`display`](/ja/docs/Web/Manifest/display) マニフェストメンバーを使用して、表示モード、すなわち起動したときに PWA がどのように現れるかを制御することができます。具体的には次のようになります。
+[`display`](/ja/docs/Web/Progressive_web_apps/Manifest/display) マニフェストメンバーを使用して、表示モード、すなわち起動したときに PWA がどのように現れるかを制御することができます。具体的には次のようになります。
 
 - `"standalone"` は、 PWA がブラウザーの UI 要素なしで、プラットフォーム固有のアプリケーションのように見えるようにすることを示します。
 - `"browser"` は、 PWA を通常のウェブサイトと同じように、新しいブラウザーのタブやウィンドウとして開くためのものであることを示します。
 
-ブラウザーが指定された表示モードに対応していない場合、 `display` はあらかじめ定義された順序に従って対応している表示モードで代用します。 [`display_override`](/ja/docs/Web/Manifest/display_override) を使用すると、代替シーケンスを再定義することができます。
+ブラウザーが指定された表示モードに対応していない場合、 `display` はあらかじめ定義された順序に従って対応している表示モードで代用します。 [`display_override`](/ja/docs/Web/Progressive_web_apps/Manifest/display_override) を使用すると、代替シーケンスを再定義することができます。

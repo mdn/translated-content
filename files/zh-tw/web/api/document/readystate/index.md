@@ -1,80 +1,92 @@
 ---
-title: Document.readyState
+title: Document：readyState 屬性
 slug: Web/API/Document/readyState
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
 
-{{ domxref("document") }} 的 **`Document.readyState`** 屬性描述文件的讀取狀態。
+**`Document.readyState`** 屬性描述{{domxref("document", "文件", "", 1)}}的載入狀態。當此屬性的值改變時，{{domxref("Document/readystatechange_event", "readystatechange")}} 事件會在 {{domxref("document")}} 物件上觸發。
 
-### 數值
+## 值
 
-文件的 **readyState** 數值如下：
+文件的 `readyState` 可以是以下之一：
 
-- loading
-  - : {{ domxref("document") }} 正在讀取中。
-- interactive
-  - : 文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event) 事件已經被觸發。
-- complete
-  - : 文件及子資源都完成讀取。這個狀態表示 [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件即將被觸發。
-
-當這個屬性的數值改變時， [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) 事件在 {{ domxref("document") }} 上觸發。
-
-## 表達式
-
-```js
-var string = document.readyState;
-```
+- `loading`
+  - : {{domxref("document", "文件", "", 1)}}仍在載入中。
+- `interactive`
+  - : 文件已完成載入並且已被解析，但子資源（例如腳本、圖片、樣式表和框架）仍在載入中。此狀態表示 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件即將觸發。
+- `complete`
+  - : 文件和所有子資源已完成載入。此狀態表示 {{domxref("Window/load_event", "load")}} 事件即將觸發。
 
 ## 範例
 
-### 不同的狀態
+### 不同的載入狀態
 
 ```js
 switch (document.readyState) {
   case "loading":
-    // 文件讀取中。
+    // 文件正在載入中。
     break;
-  case "interactive":
-    // 文件已經完成讀取。可以使用 DOM 元素。
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
+  case "interactive": {
+    // 文件已完成載入，我們可以存取 DOM 元素。
+    // 子資源（例如腳本、圖片、樣式表和框架）仍在載入中。
+    const span = document.createElement("span");
+    span.textContent = "一個 <span> 元素。";
     document.body.appendChild(span);
     break;
+  }
   case "complete":
-    // 頁面已經完成讀取。
+    // 頁面已完全載入。
     console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+      `第一條 CSS 規則是：${document.styleSheets[0].cssRules[0].cssText}`,
     );
     break;
 }
 ```
 
-### readystatechange 替代 DOMContentLoaded
+### 使用 readystatechange 作為 DOMContentLoaded 事件的替代方案
 
 ```js
-// alternative to DOMContentLoaded event
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
+// DOMContentLoaded 事件的替代方案
+document.onreadystatechange = () => {
+  if (document.readyState === "interactive") {
     initApplication();
   }
 };
 ```
 
-### readystatechange 替代 load
+### 使用 readystatechange 作為 load 事件的替代方案
 
 ```js
-// alternative to load event
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
+// load 事件的替代方案
+document.onreadystatechange = () => {
+  if (document.readyState === "complete") {
     initApplication();
   }
 };
+```
+
+### 使用 readystatechange 事件監聽器在 DOMContentLoaded 之前插入或修改 DOM
+
+```js
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "interactive") {
+    initLoader();
+  } else if (event.target.readyState === "complete") {
+    initApp();
+  }
+});
 ```
 
 ## 規範
 
 {{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
 
 ## 參見
 

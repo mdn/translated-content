@@ -1,10 +1,8 @@
 ---
 title: Svelte 中的动态行为：变量和属性
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在我们已经准备好了标记和样式，我们可以开始为 Svelte 待办清单应用程序开发所需的功能。在本篇文章中，我们将使用变量和属性使我们的应用程序动态化，允许我们新增和删除待办事项，标记它们为完成并通过状态过滤它们。

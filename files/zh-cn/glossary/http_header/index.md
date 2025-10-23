@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **HTTP 标头**是用于 HTTP 请求或响应的字段，它传递关于请求或者响应的额外上下文和元数据。例如，请求消息可以使用标头表明它首选的媒体格式，而响应可以使用标头表明返回主体的媒体格式。标头是不区分大小写，开始于行首，后面紧跟着一个 `':'` 和与之相关的值。字段值在一个换行符（CRLF）前或者整个消息的末尾结束。
 
 HTTP 和 Fetch 规范涉及许多标头类别，包括：
@@ -56,10 +54,9 @@ X-Cache-Info: cached
 
 ## 参见
 
-- [HTTP 标头列表](/zh-CN/docs/Web/HTTP/Headers)
+- [HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - HTTP 规范中[标头](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2)的语法
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("HTTP header", "HTTP 标头")}}
   - {{Glossary("Request header", "请求标头")}}
   - {{Glossary("Response header", "响应标头")}}

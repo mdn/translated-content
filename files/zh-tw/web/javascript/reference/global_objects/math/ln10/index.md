@@ -2,10 +2,8 @@
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
 l10n:
-  sourceCommit: 2ec170b6264d51a15be498ac99b8a30b3dadec15
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
-
-{{JSRef}}
 
 **`Math.LN10`** 靜態數據屬性表示 10 的自然對數值，約為 2.303。
 
@@ -17,7 +15,7 @@ function getNatLog10() {
 }
 
 console.log(getNatLog10());
-// Expected output: 2.302585092994046
+// 預期輸出：2.302585092994046
 ```
 
 ## 值

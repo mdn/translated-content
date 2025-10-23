@@ -7,9 +7,46 @@ l10n:
 
 {{CSSRef}}
 
-[Сокращённое свойтсов](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`outline`** ) устанавливает большинство свойств обводки в одном объявлении.
+[Сокращённое свойтсов](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`outline`** ) устанавливает большинство свойств обводки в одном объявлении.
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+{{InteractiveExample("CSS Demo: outline")}}
+
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgba(170, 50, 220, 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Составные свойства
 
@@ -42,7 +79,7 @@ outline: revert-layer;
 outline: unset;
 ```
 
-Свойство `outline` может быть задано одним, двум или тремя перечисленными ниже значений. Порядок следования значений не имеет значения. Как и в случае с другими сокращёнными свойствами, вместо пропущенных значений будет использоваться [первоначальное значение](/ru/docs/Web/CSS/initial_value).
+Свойство `outline` может быть задано одним, двум или тремя перечисленными ниже значений. Порядок следования значений не имеет значения. Как и в случае с другими сокращёнными свойствами, вместо пропущенных значений будет использоваться [первоначальное значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing).
 
 > [!NOTE]
 > Если стиль обводки не задан, он будет невидим для большого количества элементов. Всё потому, что обводка по умолчанию не стилизован (т.е. для его свойств задано значение `none`). Самое заветное исключение составляют элементы `input`, для которых браузеры определяют стандартный стиль.

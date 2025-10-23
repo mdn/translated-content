@@ -41,14 +41,14 @@ requestMIDIAccess(MIDIOptions)
 - `NotSupportedError` {{domxref("DOMException")}}
   - : システムが機能またはオプションに対応していないとき投げられます。
 - `SecurityError` {{domxref("DOMException")}}
-  - : ユーザーまたはシステムがアプリケーションによる要求されたオプションを持つ [MIDIAccess](/ja/docs/Web/API/MIDIAccess) オブジェクトの生成を拒否したか、ドキュメントがこの機能の使用を許可されていないとき (たとえば、[Permission Policy](/ja/docs/Web/HTTP/Permissions_Policy) で制限されているときや、ユーザーが以前に許可の要求を拒否しているとき) 投げられます。
+  - : ユーザーまたはシステムがアプリケーションによる要求されたオプションを持つ [MIDIAccess](/ja/docs/Web/API/MIDIAccess) オブジェクトの生成を拒否したか、ドキュメントがこの機能の使用を許可されていないとき (たとえば、[Permission Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) で制限されているときや、ユーザーが以前に許可の要求を拒否しているとき) 投げられます。
 
 ## セキュリティの要件
 
 この API へのアクセスは、以下の制約の対象です。
 
-- このメソッドは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出される必要があります。
-- アクセスは [`midi`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/ja/docs/Web/HTTP/Permissions_Policy) で制限される可能性があります。
+- このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出される必要があります。
+- アクセスは [`midi`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) で制限される可能性があります。
 - ユーザーがユーザーエージェント固有のメカニズムによりこの API を使用する許可を明示的に与えるか、以前に許可を与えている必要があります。なお、Permission Policy でアクセスが拒否された場合は、ユーザーがアクセスを許可することはできません。
 
 許可の状態は、[権限 API](/ja/docs/Web/API/Permissions_API) の [`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) メソッドに権限 `midi` および (省略可能な) `sysex` プロパティを設定した権限ディスクリプターを渡すことで取得できます。

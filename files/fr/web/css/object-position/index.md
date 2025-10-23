@@ -5,12 +5,46 @@ slug: Web/CSS/object-position
 
 {{CSSRef}}
 
-La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
+La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
 
 > [!NOTE]
 > Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit).
 
-{{EmbedInteractiveExample("pages/css/object-position.html")}}
+{{InteractiveExample("CSS Demo: object-position")}}
+
+```css interactive-example-choice
+object-position: 50% 50%;
+```
+
+```css interactive-example-choice
+object-position: right top;
+```
+
+```css interactive-example-choice
+object-position: left bottom;
+```
+
+```css interactive-example-choice
+object-position: 250px 125px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/moon.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 250px;
+  width: 250px;
+  object-fit: none;
+  border: 1px solid red;
+}
+```
 
 ## Syntaxe
 
@@ -44,7 +78,7 @@ object-position: unset;
 
 ### HTML
 
-Dans ce fragment HTML, on a deux éléments [`<img>`](/fr/docs/Web/HTML/Element/img), chacun affichant le logo de MDN.
+Dans ce fragment HTML, on a deux éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), chacun affichant le logo de MDN.
 
 ```html
 <img id="object-position-1" src="mdn.svg" alt="Logo MDN" />
@@ -91,7 +125,6 @@ La première image est positionnée avec son bord gauche situé à 10 pixels du 
 ## Voir aussi
 
 - Les autres propriétés CSS liées aux images&nbsp;:
-
   - [`object-fit`](/fr/docs/Web/CSS/object-fit)
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
   - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)

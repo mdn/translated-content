@@ -52,7 +52,6 @@ Encargandonos de los selectores y conjuntos de reglas proporcionados:
 
 - A continuación, nos gustaría que examinaras los cuatro selectores y calcularas la especificidad de cada uno. Escríbelas en algún lugar donde las puedas encontrar más tarde, como en un comentario en la parte superior de tu CSS.
 - Ahora es el momento de poner el selector correcto en el conjunto de reglas correcto! Tienes cuatro pares de selectores y reglas que coinciden en tus recursos de CSS. Hazlo ahora y agrégalos a tu archivo CSS. Necesitaras:
-
   - Asignar al contenedor principal de tarjetas un ancho/alto fijo (width/height), color de fondo sólido (background-color), borde (border) y radio de borde (border-radius), entre otras cosas.
   - Asigna al `header` un degradado (linear-gradient) de fondo que va de más oscuro a más claro, además de esquinas redondeadas que encajan con las esquinas redondeadas establecidas en el contenedor principal de tarjetas.
   - Asigna al pie de página un degradado (linear-gradient) de fondo que vaya de más claro a más oscuro, además de esquinas redondeadas que encajen con las esquinas redondeadas establecidas en el contenedor principal de tarjetas.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 873e38320b7f7dbe0492f96a02e7e6503ac8c3b3
 ---
 
-{{AddonSidebar}}
-
 当用户删除一个建议的时候触发。如果 {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} 的属性 `deletable` 值为 `true` 时，该建议可以被删除。
 
 ## 语法
@@ -52,4 +50,4 @@ browser.omnibox.onDeleteSuggestion.addListener(logDeletedSuggestion);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。
+> 此 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。

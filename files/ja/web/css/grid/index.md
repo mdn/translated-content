@@ -5,13 +5,62 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
-**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
+**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
 
 `grid` を使用すると、一方の軸を {{cssxref("grid-template-rows")}} または {{cssxref("grid-template-columns")}} を使用して設定し、もう一方の軸でどのように内容物を自動反復させるかを、暗黙のグリッドプロパティである {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}} で設定します。
 
-{{EmbedInteractiveExample("pages/css/grid.html")}}
+{{InteractiveExample("CSS デモ: grid")}}
+
+```css interactive-example-choice
+grid: auto-flow / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid: auto-flow dense / 40px 40px 1fr;
+```
+
+```css interactive-example-choice
+grid: repeat(3, 80px) / auto-flow;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-column: auto / span 3;
+  grid-row: auto / span 2;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-column: auto / span 2;
+}
+```
 
 > [!NOTE]
 > 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
@@ -66,13 +115,11 @@ grid: unset;
 - `<'grid-template'>`
   - : {{cssxref("grid-template")}} を定義し、これには {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}} が含まれます。
 - `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
-
   - : {{cssxref("grid-template-rows")}} プロパティを明示的に設定 (および {{cssxref("grid-template-columns")}} プロパティを `none` に設定) することで行トラックを設定し、 {{cssxref("grid-auto-columns")}} プロパティを設定 (および {{cssxref("grid-auto-rows")}} を `auto` に設定) することで列トラックの自動反復方法を設定します。 `dense` が設定されていれば、 {{cssxref("grid-auto-flow")}} も `column` に設定されます。
 
     ほかの `grid` のサブプロパティはすべて、初期値に初期化されます。
 
 - `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
-
   - : {{cssxref("grid-template-columns")}} プロパティを明示的に設定 (および {{cssxref("grid-template-rows")}} プロパティを `none` に設定) することで列トラックを設定し、 {{cssxref("grid-auto-rows")}} プロパティを設定 (および {{cssxref("grid-auto-columns")}} を `auto` に設定) することで行トラックの自動反復方法を設定します。 `dense` が設定されていれば、 {{cssxref("grid-auto-flow")}} も `column` に設定されます。
 
     ほかの `grid` のサブプロパティはすべて、初期値に初期化されます。

@@ -20,9 +20,7 @@ createPattern(image, repetition)
 ### 参数
 
 - `image`
-
   - : 用作图案图像的图像。可以是下列之一：
-
     - {{domxref("HTMLImageElement")}}（{{HTMLElement("img")}}）
     - {{domxref("SVGImageElement")}}（{{SVGElement("image")}}）
     - {{domxref("HTMLVideoElement")}}（{{HTMLElement("video")}}，通过使用视频捕获）
@@ -32,9 +30,7 @@ createPattern(image, repetition)
     - {{domxref("VideoFrame")}}
 
 - `repetition`
-
   - : 一个指示如何重复图案图像的字符串。可能的值包括：
-
     - `"repeat"`（两个方向都重复）
     - `"repeat-x"`（仅水平方向重复）
     - `"repeat-y"`（仅垂直方向重复）

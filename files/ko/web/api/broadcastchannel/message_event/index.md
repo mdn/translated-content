@@ -42,7 +42,7 @@ onmessage = (event) => { }
 
 ## 예제
 
-이 예제에서는 사용자가 버튼을 클릭했을 때 [`<textarea>`](/ko/docs/Web/HTML/Element/textarea)의 내용을 발신하는 "발신자" [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)과, 발신된 메시지를 수신하고 그 결과를 [`<div>`](/ko/docs/Web/HTML/Element/div) 요소에 기록하는 "수신자" iframe이 있습니다.
+이 예제에서는 사용자가 버튼을 클릭했을 때 [`<textarea>`](/ko/docs/Web/HTML/Element/textarea)의 내용을 발신하는 "발신자" [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)과, 발신된 메시지를 수신하고 그 결과를 [`<div>`](/ko/docs/Web/HTML/Reference/Elements/div) 요소에 기록하는 "수신자" iframe이 있습니다.
 
 ### 발신자
 

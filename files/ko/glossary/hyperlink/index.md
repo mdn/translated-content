@@ -12,8 +12,8 @@ l10n:
 ## 같이 보기
 
 - Wikipedia [Hyperlink](https://ko.wikipedia.org/wiki/%ED%95%98%EC%9D%B4%ED%8D%BC%EB%A7%81%ED%81%AC)
-- MDN 가이드 [하이퍼링크](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- MDN 가이드 [하이퍼링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - [Links in HTML Documents - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
 - [HTML a - hyperlink - W3C](https://w3c.github.io/html-reference/a.html)
-- [`<a>` on MDN](/ko/docs/Web/HTML/Element/a)
-- [`<link>` on MDN](/ko/docs/Web/HTML/Element/link)
+- [`<a>` on MDN](/ko/docs/Web/HTML/Reference/Elements/a)
+- [`<link>` on MDN](/ko/docs/Web/HTML/Reference/Elements/link)

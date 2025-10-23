@@ -1,46 +1,50 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
-
-Le type de donnée **`<filter-function>`** représente un effet graphique qui peut modifier l'apparence d'une image. Il est notamment utilisé avec les propriétés [`filter`](/fr/docs/Web/CSS/filter) et [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter).
+Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<filter-function>`** représente un effet graphique qui peut modifier l'apparence d'une image. Il est notamment utilisé avec les propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}}.
 
 ## Syntaxe
 
 Une valeur de type `<filter-function>` se construit avec l'une des fonctions listées ci-après. Chaque fonction utilise un argument et si celui-ci est invalide, aucun filtre n'est appliqué.
 
-- [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
-  - : Ajoute un flou sur l'image.
-- [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
+- {{cssxref("filter-function/blur", "blur()")}}
+  - : Floute l'image.
+- {{cssxref("filter-function/brightness", "brightness()")}}
   - : Rend l'image plus claire ou plus sombre.
-- [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
+- {{cssxref("filter-function/contrast", "contrast()")}}
   - : Augmente ou diminue le contraste de l'image.
-- [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
   - : Applique une ombre portée derrière l'image.
-- [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
   - : Convertit l'image en niveaux de gris.
-- [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
   - : Modifie la teinte globale de l'image.
-- [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
+- {{cssxref("filter-function/invert", "invert()")}}
   - : Inverse les couleurs de l'image.
-- [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
+- {{cssxref("filter-function/opacity", "opacity()")}}
   - : Rend l'image transparente.
-- [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
-  - : Sursature ou désature l'image.
-- [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
+- {{cssxref("filter-function/saturate", "saturate()")}}
+  - : Sature ou désature fortement l'image.
+- {{cssxref("filter-function/sepia", "sepia()")}}
   - : Convertit l'image en sépia.
+
+## Syntaxe formelle
+
+{{csssyntax}}
 
 ## Exemples
 
 ### Comparaison des fonctions de filtre
 
-Cet exemple fournit une image ainsi qu'un menu pour expérimenter les différentes fonctions de filtres avec un curseur pour faire varier la valeur du paramètre. En jouant sur le curseur et la fonction utilisée, l'image est mise à jour en temps réel, vous permettant de voir l'effet des différents filtres.
+Cet exemple fournit une image, un menu déroulant pour choisir entre les différents types de fonctions de filtre, et un curseur pour faire varier la valeur utilisée dans la fonction de filtre. La modification des contrôles met à jour l'effet de filtre en temps réel, ce qui permet d'observer l'effet de chaque filtre.
 
-#### HTML
+Le menu déroulant permet de sélectionner le nom de la fonction, et le curseur règle la valeur du paramètre pour cette fonction. Pour `drop-shadow`, la valeur est utilisée à la fois pour le décalage horizontal et vertical, et le rayon est fixé à la moitié de cette valeur.
 
-```html
+```html hidden live-sample___filter-functions
 <div></div>
 <ul>
   <li>
@@ -65,14 +69,13 @@ Cet exemple fournit une image ainsi qu'un menu pour expérimenter les différent
 </ul>
 ```
 
-#### CSS
-
-```css
+```css hidden live-sample___filter-functions
 div {
-  width: 300px;
-  height: 300px;
-  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
-    no-repeat center;
+  width: 100%;
+  height: 512px;
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 li {
@@ -97,9 +100,7 @@ select {
 }
 ```
 
-#### JavaScript
-
-```js
+```js hidden live-sample___filter-functions
 const selectElem = document.querySelector("select");
 const divElem = document.querySelector("div");
 const slider = document.querySelector("input");
@@ -116,67 +117,66 @@ slider.addEventListener("input", () => {
 });
 
 function setSlider(filter) {
-  if (filter === "blur") {
-    slider.value = 0;
-    slider.min = 0;
-    slider.max = 30;
-    slider.step = 1;
-    slider.setAttribute("data-unit", "px");
-  } else if (
-    filter === "brightness" ||
-    filter === "contrast" ||
-    filter === "saturate"
-  ) {
-    slider.value = 1;
-    slider.min = 0;
-    slider.max = 4;
-    slider.step = 0.05;
-    slider.setAttribute("data-unit", "");
-  } else if (filter === "drop-shadow") {
-    slider.value = 0;
-    slider.min = -20;
-    slider.max = 40;
-    slider.step = 1;
-    slider.setAttribute("data-unit", "px");
-  } else if (filter === "opacity") {
-    slider.value = 1;
-    slider.min = 0;
-    slider.max = 1;
-    slider.step = 0.01;
-    slider.setAttribute("data-unit", "");
-  } else if (
-    filter === "grayscale" ||
-    filter === "invert" ||
-    filter === "sepia"
-  ) {
-    slider.value = 0;
-    slider.min = 0;
-    slider.max = 1;
-    slider.step = 0.01;
-    slider.setAttribute("data-unit", "");
-  } else if (filter === "hue-rotate") {
-    slider.value = 0;
-    slider.min = 0;
-    slider.max = 360;
-    slider.step = 1;
-    slider.setAttribute("data-unit", "deg");
+  switch (filter) {
+    case "blur":
+      slider.value = 0;
+      slider.min = 0;
+      slider.max = 30;
+      slider.step = 1;
+      slider.setAttribute("data-unit", "px");
+      break;
+    case "brightness":
+    case "contrast":
+    case "saturate":
+      slider.value = 1;
+      slider.min = 0;
+      slider.max = 4;
+      slider.step = 0.05;
+      slider.setAttribute("data-unit", "");
+      break;
+    case "drop-shadow":
+      slider.value = 0;
+      slider.min = -20;
+      slider.max = 40;
+      slider.step = 1;
+      slider.setAttribute("data-unit", "px");
+      break;
+    case "opacity":
+      slider.value = 1;
+      slider.min = 0;
+      slider.max = 1;
+      slider.step = 0.01;
+      slider.setAttribute("data-unit", "");
+      break;
+    case "grayscale":
+    case "invert":
+    case "sepia":
+      slider.value = 0;
+      slider.min = 0;
+      slider.max = 1;
+      slider.step = 0.01;
+      slider.setAttribute("data-unit", "");
+      break;
+    case "hue-rotate":
+      slider.value = 0;
+      slider.min = 0;
+      slider.max = 360;
+      slider.step = 1;
+      slider.setAttribute("data-unit", "deg");
+      break;
+    default:
+      console.error("Jeu de filtre inconnu");
   }
 }
 
 function setDiv(filter) {
-  if (filter === "drop-shadow") {
-    divElem.style.filter = `${selectElem.value}(${Math.round(
-      slider.value,
-    )}${slider.getAttribute("data-unit")} ${Math.round(
-      slider.value,
-    )}${slider.getAttribute("data-unit")} ${Math.round(
-      Math.abs(slider.value / 2),
-    )}${slider.getAttribute("data-unit")})`;
-  } else {
-    divElem.style.filter = `${selectElem.value}(${
-      slider.value
-    }${slider.getAttribute("data-unit")}`;
-  }
+  const unit = slider.getAttribute("data-unit");
+  const offset = `${Math.round(slider.value)}${unit}`;
+  const radius = `${Math.round(Math.abs(slider.value / 2))}${unit}`;
+  divElem.style.filter =
+    filter === "drop-shadow"
+      ? `${selectElem.value}(${offset} ${offset} ${radius})`
+      : `${selectElem.value}(${slider.value}${unit})`;
 
   updateOutput();
   updateCurValue();
@@ -194,9 +194,7 @@ setSlider(selectElem.value);
 setDiv(selectElem.value);
 ```
 
-#### Résultat
-
-{{EmbedLiveSample('Comparaison_des_fonctions_de_filtre', '100%', 500)}}
+{{EmbedLiveSample("filter-functions", "", "700px")}}
 
 ## Spécifications
 
@@ -209,5 +207,5 @@ setDiv(selectElem.value);
 ## Voir aussi
 
 - Les propriétés qui utilisent ce type de donnée&nbsp;:
-  - [`filter`](/fr/docs/Web/CSS/filter)
-  - [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter)
+  - {{cssxref("filter")}}
+  - {{cssxref("backdrop-filter")}}

@@ -9,11 +9,39 @@ La propriété **`-moz-appearance`** est utilisée dans Gecko (Firefox) afin d'a
 
 La propriété **`-webkit-appearance`** est utilisée dans les navigateurs basés sur WebKit (c'est-à-dire Safari) et sur Blink (c'est-à-dire Chrome ou Opera) et permet d'avoir la même fonctionnalités. On notera que plusieurs navigateurs, non basés sur WebKit (Firefox et Edge par exemple), prennent en charge ce préfixe pour des raisons de compatibilité web.
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 Cette propriété était utilisée dans les feuilles de style XUL afin de mettre en forme des _widgets_ utilisant la mise en forme de la plateforme utilisée. Elle est également utilisée dans les implémentations XBL pour les _widgets_ livrés avec les logiciels Mozilla.
 
-> **Note :** _Cette propriété doit être utilisée avec beaucoup d'attention sur les sites web._ Son comportement peut varier d'un navigateur à l'autre bien que ces variations aient réduit avec le temps. Le mot-clé `none` peut avoir un comportement différent d'une plateforme à une autre et d'autres mots-clés ne sont pas pris en charge.
+> [!NOTE]
+> _Cette propriété doit être utilisée avec beaucoup d'attention sur les sites web._ Son comportement peut varier d'un navigateur à l'autre bien que ces variations aient réduit avec le temps. Le mot-clé `none` peut avoir un comportement différent d'une plateforme à une autre et d'autres mots-clés ne sont pas pris en charge.
 
 ## Syntaxe
 

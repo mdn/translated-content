@@ -9,7 +9,7 @@ l10n:
 
 **`Sensor`** は[センサー API 群](/ja/docs/Web/API/Sensor_APIs)のインターフェイスで、ほかのすべてのセンサーインターフェイスのベースクラスです。このインターフェイスを直接使うことはできません。ですが、このインターフェイスは継承するインターフェイスがアクセスするプロパティ・イベントハンドラー・メソッドを提供します。
 
-この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

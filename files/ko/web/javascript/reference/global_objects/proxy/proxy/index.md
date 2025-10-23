@@ -13,12 +13,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 new Proxy(target, handler);
 ```
 
-> **참고:** `Proxy()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 만들 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `Proxy()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 만들 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 
 - `target`
-
   - : `Proxy`로 래핑할 대상 객체입니다. 네이티브 배열, 함수 또는 다른 프록시를 포함한 모든 종류의 객체가 될 수 있습니다.
 
 - `handler`
@@ -47,8 +47,7 @@ new Proxy(target, handler);
   - : {{JSxRef("Operators/delete", "delete")}} 연산자에 대한 트랩.
 - {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
   - : 속성 값을 가져오기(get) 위한 트랩.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor",
-    "handler.getOwnPropertyDescriptor()")}}
+- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : {{JSxRef("Object.getOwnPropertyDescriptor")}}에 대한 트랩.
 - {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
   - : {{JSxRef("Object.getPrototypeOf")}}에 대한 트랩.
@@ -58,8 +57,7 @@ new Proxy(target, handler);
   - : {{JSxRef("Object.isExtensible")}}에 대한 트랩.
 - {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
   - : {{JSxRef("Object.getOwnPropertyNames")}}와 {{JSxRef("Object.getOwnPropertySymbols")}}에 대한 트랩
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions",
-    "handler.preventExtensions()")}}
+- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
   - : {{JSxRef("Object.preventExtensions")}}에 대한 트랩
 - {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
   - : 속성 값 설정(set)에 대한 트랩.

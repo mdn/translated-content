@@ -18,9 +18,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
 ### 参数
 
 - `underlyingSource` {{optional_inline}}
-
   - : 一个包含定义了构造流行为方法和属性的对象。`underlyingSource` 包括：
-
     - `start` (controller) {{optional_inline}}
       - : 这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个
         promise，表明成功或失败。传递给这个方法的 `controller` 是一个 {{domxref("ReadableStreamDefaultController")}} 或 {{domxref("ReadableByteStreamController")}}，具体取决于 `type` 属性的值。开发人员可以使用此方法在设立期间控制流。
@@ -35,9 +33,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
       - : 对于字节流，开发人员可以使用正整数值设置 `autoAllocateChunkSize` 以打开流的自动分配功能。启用此功能后，流实现将自动分配一个具有给定整数大小的 {{domxref("ArrayBuffer")}}，并调用底层源代码，就好像消费者正在使用 BYOB reader 一样。
 
 - `queuingStrategy` {{optional_inline}}
-
   - : 一个可选择定义流的队列策略的对象。这需要两个参数：
-
     - `highWaterMark`
       - : 非负整数 - 这定义了在应用背压之前可以包含在内部队列中的块的总数。
     - `size(chunk)`

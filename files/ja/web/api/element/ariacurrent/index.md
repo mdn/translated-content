@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaCurrent`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性の値を反映し、コンテナーや関連する要素の集合の中で現在の項目を表します。
+**`ariaCurrent`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性の値を反映し、コンテナーや関連する要素の集合の中で現在の項目を表します。
 
 ## 値
 

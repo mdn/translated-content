@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`value`** は {{domxref("HTMLDataElement")}} インターフェイスのプロパティで、HTML の [`value`](/ja/docs/Web/HTML/Element/data#value) 属性を反映する文字列を返します。
+**`value`** は {{domxref("HTMLDataElement")}} インターフェイスのプロパティで、HTML の [`value`](/ja/docs/Web/HTML/Reference/Elements/data#value) 属性を反映する文字列を返します。
 
 ## 値
 

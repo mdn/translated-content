@@ -28,9 +28,7 @@ var nouveauTableau = arr.filter(callback, thisArg);
 ### Paramètres
 
 - `callback`
-
   - : La fonction de test (ou _prédicat_) à appliquer à chaque élément du tableau. Cette fonction est appelée avec les arguments suivants :
-
     - `elementCourant`
       - : L'élément à traiter
     - `index`

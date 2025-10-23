@@ -1,10 +1,7 @@
 ---
 title: CSS 常见问题
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
-original_slug: Learn/CSS/Howto/CSS_FAQ
 ---
-
-{{LearnSidebar}}
 
 在本篇文章中，你会发现一些有关 CSS 的常见问题，这些问题及其解答可能会有助于你成为一名网站开发人员。
 

@@ -60,7 +60,7 @@ l10n:
 
 ## 示例
 
-这个例子展示了一个函数 `reader()`，它从[文件输入框](/zh-CN/docs/Web/HTML/Element/input/file)读取文件。它的工作原理是创建一个 {{domxref("FileReader")}} 对象并为 {{domxref("FileReader/load_event", "load")}} 事件创建一个侦听器，这样当读取文件时，`result` 被获取并传递给提供给 `reader()` 的回调函数。
+这个例子展示了一个函数 `reader()`，它从[文件输入框](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)读取文件。它的工作原理是创建一个 {{domxref("FileReader")}} 对象并为 {{domxref("FileReader/load_event", "load")}} 事件创建一个侦听器，这样当读取文件时，`result` 被获取并传递给提供给 `reader()` 的回调函数。
 
 内容作为原始文本数据进行处理。
 
@@ -86,7 +86,7 @@ document.querySelector("#image").addEventListener("change", (evt) => {
 });
 ```
 
-鉴于 {{domxref("FileReader")}} 的异步性质，你可以使用基于 Promise 的方法。下面是一个[文件输入框](/zh-CN/docs/Web/HTML/Element/input/file)的示例，其 `multiple` 属性返回一个 {{jsxref("Promise")}}。
+鉴于 {{domxref("FileReader")}} 的异步性质，你可以使用基于 Promise 的方法。下面是一个[文件输入框](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)的示例，其 `multiple` 属性返回一个 {{jsxref("Promise")}}。
 
 ```js
 // 给定这个 HTMLInputElement：

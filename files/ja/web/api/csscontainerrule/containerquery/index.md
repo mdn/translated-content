@@ -3,7 +3,7 @@ title: "CSSContainerRule: containerQuery プロパティ"
 short-title: containerQuery
 slug: Web/API/CSSContainerRule/containerQuery
 l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+  sourceCommit: f3c4fc42e8817d0b8f703cf83957c33cd5342019
 ---
 
 {{ APIRef("CSSOM") }}
@@ -65,7 +65,7 @@ function log(result) {
 そして、 {{cssxref("@container")}} は、幅が 650px 未満の場合、格納する要素 "card" に新しい幅、フォントサイズ、背景色を適用します。
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   /* インラインサイズに基づくコンテナーコンテキスト */
   .post {
     container-type: inline-size;
@@ -88,7 +88,7 @@ function log(result) {
 最後に、コンテナー名とクエリーのプロパティをログ出力します。
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
@@ -110,6 +110,6 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 
 ## 関連情報
 
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

@@ -1,5 +1,5 @@
 ---
-title: 同源政策 (Same-origin policy)
+title: 同源政策（Same-origin policy）
 slug: Web/Security/Same-origin_policy
 ---
 
@@ -9,19 +9,15 @@ slug: Web/Security/Same-origin_policy
 
 ## 同源定義
 
-所謂同源是指兩份網頁具備相同協定、埠號 (如果有指定) 以及主機位置，下表提供了一些例子展示那些來源和 `http://store.company.com/dir/page.html` 屬於同源:
+所謂同源是指兩份網頁具備相同協定、埠號（如果有指定）以及主機位置，下表提供了一些例子展示那些來源和 `http://store.company.com/dir/page.html` 屬於同源:
 
-| URL                                               | Outcome | Reason       |
-| ------------------------------------------------- | ------- | ------------ |
-| `http://store.company.com/dir2/other.html`        | 同源    |              |
-| `http://store.company.com/dir/inner/another.html` | 同源    |              |
-| `https://store.company.com/secure.html`           | 不同源  | 協定不同     |
-| `http://store.company.com:81/dir/etc.html`        | 不同源  | 埠號不同     |
-| `http://news.company.com/dir/other.html`          | 不同源  | 主機位置不同 |
-
-另外請參考 [file 來源定義: URL](/zh-TW/docs/Same-origin_policy_for_file:_URIs)。
-
-Cookie 的來源定義和上述不一樣。
+| URL                                               | 結果   | 原因         |
+| ------------------------------------------------- | ------ | ------------ |
+| `http://store.company.com/dir2/other.html`        | 同源   |              |
+| `http://store.company.com/dir/inner/another.html` | 同源   |              |
+| `https://store.company.com/secure.html`           | 不同源 | 協定不同     |
+| `http://store.company.com:81/dir/etc.html`        | 不同源 | 埠號不同     |
+| `http://news.company.com/dir/other.html`          | 不同源 | 主機位置不同 |
 
 ## 變更來源
 
@@ -42,7 +38,7 @@ document.domain = "company.com";
 
 同源政策控制了兩個不同網域來源互動，例如當使用{{domxref("XMLHttpRequest")}}。這些互動可分為以下三類:
 
-- 跨來源寫(Cross-origin writes)通常被允許，例如有連結、重新導向以及表單送出。少數某些 HTTP 請求需要[先導請求](/zh-TW/docs/Web/HTTP/CORS#.e5.85.88.e5.b0.8e.e8.ab.8b.e6.b1.82)。
+- 跨來源寫(Cross-origin writes)通常被允許，例如有連結、重新導向以及表單送出。少數某些 HTTP 請求需要[先導請求](/zh-TW/docs/Web/HTTP/Guides/CORS#.e5.85.88.e5.b0.8e.e8.ab.8b.e6.b1.82)。
 - 跨來源嵌入(Cross-origin embedding)通常被允許，例子請參照下方。
 - 跨來源讀取(Cross-origin read) 通常不被允許，不過通常可以藉由嵌入來繞道讀取，例如嵌入影像寬高讀取、嵌入程式碼或[嵌入資源](https://www.grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information)。
 
@@ -52,13 +48,13 @@ document.domain = "company.com";
 - CSS 的 `<link rel="stylesheet" href="...">`，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)>)、[Firefox](https://www.mozilla.org/security/advisories/mfsa2010-46/)、[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877)、[Safari](https://support.apple.com/zh-tw/104158)（請至 CVE-2010-0051），以及 [Opera](https://www.opera.com/support/kb/view/943/)。
 - {{htmlelement("img")}}的影像；支援格式有 PNG, JPEG, GIF, BMP, SVG 等等
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
-- [`<object>`](/zh-TW/docs/Web/HTML/Element/object), [`<embed>`](/zh-TW/docs/Web/HTML/Element/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
+- [`<object>`](/zh-TW/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/zh-TW/docs/Web/HTML/Reference/Elements/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
 - [`@font-face`](/zh-TW/docs/Web/CSS/@font-face) 的字型；有些瀏覽器允許跨來源字型，有些則不。
-- [`<frame>`](/zh-TW/docs/Web/HTML/Element/frame)以及[`<iframe>`](/zh-TW/docs/Web/HTML/Element/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options)標頭避免。
+- [`<frame>`](/zh-TW/docs/Web/HTML/Reference/Elements/frame)以及[`<iframe>`](/zh-TW/docs/Web/HTML/Reference/Elements/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/Web/HTTP/Reference/Headers/X-Frame-Options)標頭避免。
 
 ### 如何允許跨來源存取
 
-使用[CORS](/zh-TW/docs/Web/HTTP/CORS)允許跨來源存取
+使用[CORS](/zh-TW/docs/Web/HTTP/Guides/CORS)允許跨來源存取
 
 ### 如何阻擋跨來源存取
 
@@ -70,7 +66,9 @@ document.domain = "company.com";
 
 Javascript API 例如 [`iframe.contentWindow`](/zh-TW/docs/Web/API/HTMLIFrameElement)、{{domxref("window.parent")}}、{{domxref("window.open")}}，以及 {{domxref("window.opener")}}，允許文件之間直接互相參照，當兩份文件的來源不同，參照存取 [Window](https://html.spec.whatwg.org/multipage/browsers.html#security-window) 和 [Location](https://html.spec.whatwg.org/multipage/browsing-the-web.html#security-location) 物件將受到限制；一些瀏覽器比規範[准許存取更多屬性](https://bugzil.la/839867)。文件間的溝通也可以改用 {{domxref("window.postMessage")}} 來進行。
 
-## 延伸閱讀
+## 參見
 
-- [Same-origin policy for file: URIs](/zh-TW/docs/Same-origin_policy_for_file:_URIs)
-- [Same-Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same Origin Policy（W3C）](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same-origin policy（web.dev）](https://web.dev/articles/same-origin-policy)
+- {{httpheader("Cross-Origin-Resource-Policy")}}
+- {{httpheader("Cross-Origin-Embedder-Policy")}}

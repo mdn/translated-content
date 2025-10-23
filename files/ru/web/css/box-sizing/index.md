@@ -7,7 +7,56 @@ slug: Web/CSS/box-sizing
 
 [CSS](/ru/docs/Web/CSS) свойство **`box-sizing`** определяет как вычисляется общая ширина и высота элемента.
 
-{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
+{{InteractiveExample("CSS Demo: box-sizing")}}
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+```
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```css interactive-example-choice
+box-sizing: border-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-parent">
+    <p>Parent container</p>
+    <div class="transition-all" id="example-element">
+      <p>Child container</p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-parent {
+  width: 220px;
+  height: 200px;
+  border: solid 10px #ffc129;
+  margin: 0.8em;
+}
+
+#example-element {
+  height: 60px;
+  margin: 2em auto;
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+#example-element > p {
+  margin: 0;
+}
+```
 
 По умолчанию в [блоковой модели CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) ширина и высота, которую вы задаёте элементу применяется только для контента элемента. Если у элемента есть граница или внутренний отступ, то они добавляются к ширине и высоте, чтобы получить отображаемый на экране размер. Это значит, что когда вы выставляете ширину и высоту, вам придётся изменять значение, при добавлении границ и отступов. Например, если у вас есть четыре блока с `width: 25%;` , и у какого-нибудь из них есть граница или внутренний отступ слева или справа, то по умолчанию они не поместятся на одной строке.
 

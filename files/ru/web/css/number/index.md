@@ -5,7 +5,7 @@ slug: Web/CSS/number
 
 {{CSSRef}}
 
-**`<number>`** - [тип хранения данных](/ru/docs/Web/CSS/CSS_Types) в [CSS](/ru/docs/Web/CSS) представляющий собой число: либо целое, либо с дробной частью.
+**`<number>`** - [тип хранения данных](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) в [CSS](/ru/docs/Web/CSS) представляющий собой число: либо целое, либо с дробной частью.
 
 ## Синтаксис
 

@@ -21,7 +21,7 @@ l10n:
 
 このプロパティにアクセスするには、以下の制約があります。
 
-- このプロパティは、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
+- このプロパティは、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
 
 ## 仕様書
 

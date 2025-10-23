@@ -3,11 +3,47 @@ title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-end-color`** [CSS](/es/docs/Web/CSS) property defines the color of the logical inline-end border of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, y {{cssxref("border-right-color")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-inline-end-color.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end-color")}}
+
+```css interactive-example-choice
+border-inline-end-color: red;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end-color: #32a1ce;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end-color: rgb(170, 50, 220, 0.6);
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Sintaxis
 

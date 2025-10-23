@@ -3,8 +3,6 @@ title: "@color-profile"
 slug: Web/CSS/@color-profile
 ---
 
-{{CSSRef}}
-
 **`@color-profile`** は [CSS](/ja/docs/Web/CSS) の{{cssxref("at-rule", "アットルール", "", 1)}}で、色を指定するために後で使用する {{cssxref("color_value/color()", "color()")}} 関数で使用できるカラープロファイルを定義し名前を付けます。
 
 ## 構文
@@ -20,10 +18,8 @@ slug: Web/CSS/@color-profile
 - `src`
   - : カラープロファイル情報を取得するための URL を指定します。
 - `rendering-intent`
-
   - : カラープロファイルが複数のレンダリングインテントを含む場合、このプロファイルが定義されているよりも小さな色域に色をマッピングする方法を定義するために使用するものを選択します。
     使用する場合は、以下のキーワードのうちの一つでなければなりません。
-
     - `relative-colorimetric`
       - : メディア相対測色で、宛先メディアの色域内に入るソースカラーは、それぞれのメディアの白色点に対して変更しないことが求められます。宛先メディアの色域から外れたソースカラーは、さまざまな方法で色域境界上のカラーにマッピングされます。
     - `absolute-colorimetric`

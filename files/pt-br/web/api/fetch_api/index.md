@@ -51,7 +51,7 @@ Você pode criar um pedido e uma resposta diretamente usando os construtores {{d
 ## Veja também
 
 - [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch basic concepts](/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch)

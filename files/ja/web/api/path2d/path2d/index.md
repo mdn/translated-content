@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-**`Path2D()`** コンストラクターは、新たにインスタンス化した `Path2D` オブジェクトを返します。他のパスを引数に渡すこともできます（複製がつくられます）。また、[SVG パス](/ja/docs/Web/SVG/Tutorial/Paths)からなるデータを文字列で渡すこともできます。
+**`Path2D()`** コンストラクターは、新たにインスタンス化した `Path2D` オブジェクトを返します。他のパスを引数に渡すこともできます（複製がつくられます）。また、[SVG パス](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)からなるデータを文字列で渡すこともできます。
 
 ## 構文
 
@@ -23,7 +23,7 @@ new Path2D(d)
 - `path` {{optional_inline}}
   - : 他の`Path2D` オブジェクトを渡して呼び出すと、引数の `path` が複製されます。
 - `d` {{optional_inline}}
-  - : [SVG パス](/ja/docs/Web/SVG/Tutorial/Paths)を構成する文字列を渡して呼出すと、その内容のパスが新たにつくられます。
+  - : [SVG パス](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)を構成する文字列を渡して呼出すと、その内容のパスが新たにつくられます。
 
 ## 例
 
@@ -53,7 +53,7 @@ ctx.stroke(path2);
 
 ### SVG パスを使用する
 
-これは、[SVG パスデータ](/ja/docs/Web/SVG/Tutorial/Paths) を使用して `Path2D` のパスを作成する簡単なコードスニペットです。パスは点 (`M10 10`) に移ってから、水平に 80 ポイント右に移動し (`h 80`)、80 ポイント下がり (`v 80`)、80 ポイント左に移動し (`h -80`)、開始点に戻ります (`Z`)。
+これは、[SVG パスデータ](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) を使用して `Path2D` のパスを作成する簡単なコードスニペットです。パスは点 (`M10 10`) に移ってから、水平に 80 ポイント右に移動し (`h 80`)、80 ポイント下がり (`v 80`)、80 ポイント左に移動し (`h -80`)、開始点に戻ります (`Z`)。
 
 ```html hidden
 <canvas id="canvas"></canvas>

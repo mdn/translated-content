@@ -3,7 +3,7 @@ title: "CSSRule: type プロパティ"
 short-title: type
 slug: Web/API/CSSRule/type
 l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+  sourceCommit: 06dbf9ce9982a3053823c14298fd83fabc6d90d9
 ---
 
 {{APIRef("CSSOM")}}{{Deprecated_header}}
@@ -43,22 +43,16 @@ for (const rule of rules) {
   - : このルールは {{domxref("CSSCounterStyleRule")}} です。
 - `CSSRule.SUPPORTS_RULE` (`12`)
   - : このルールは {{domxref("CSSSupportsRule")}} です。
-- `CSSRule.DOCUMENT_RULE` (`13`)
-  - : このルールは {{domxref("CSSDocumentRule")}} です。
 - `CSSRule.FONT_FEATURE_VALUES_RULE` (`14`)
   - : このルールは {{domxref("CSSFontFeatureValuesRule")}} です。
-- `CSSRule.VIEWPORT_RULE` (`15`)
-  - : このルールは {{domxref("CSSViewportRule")}} です。
-- `CSSRule.REGION_STYLE_RULE` (`16`)
-  - : このルールは {{domxref("CSSRegionStyleRule")}} です。
 
-`CSSRule.UNKNOWN_RULE` (`0`) と `CSSRule.CHARSET_RULE` (`2`) は非推奨であり、受け取ることはできません。
+`CSSRule.UNKNOWN_RULE` (`0`), `CSSRule.CHARSET_RULE` (`2`), `CSSRule.DOCUMENT_RULE` (`13`), `CSSRule.VIEWPORT_RULE` (`14`), `CSSRule.REGION_STYLE_RULE` (`16`) の値は受け取ることはありません。
 
 ## 例
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].type);
+const rules = document.styleSheets[0].cssRules;
+console.log(rules[0].type);
 ```
 
 ## 仕様書

@@ -3,11 +3,48 @@ title: border-top-width
 slug: Web/CSS/border-top-width
 ---
 
-{{CSSRef}}
-
 css 属性 **`border-top-width`** 是用于设置盒模型的上边框的宽度
 
-{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
+{{InteractiveExample("CSS Demo: border-top-width")}}
+
+```css interactive-example-choice
+border-top-width: thick;
+```
+
+```css interactive-example-choice
+border-top-width: 2em;
+```
+
+```css interactive-example-choice
+border-top-width: 4px;
+```
+
+```css interactive-example-choice
+border-top-width: 2ex;
+```
+
+```css interactive-example-choice
+border-top-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -31,7 +68,6 @@ border-top-width: unset;
 ### Values
 
 - `<br-width>`
-
   - : 上边框的宽度属性的有效值要么是一个具体的非负数，要么是一个关键字。如果是关键字，必须是一下几种：
 
     | `thin`   |     | A thin border   |

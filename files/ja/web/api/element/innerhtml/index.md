@@ -17,7 +17,7 @@ l10n:
 DOM　ツリーをプロパティから読み込んでシリアライズした場合、{{glossary("shadow tree", "シャドウルート")}}は含まれません。シャドウルートを含む HTML 文字列を取得したい場合は、 {{domxref("Element.getHTML()")}} または {{domxref("ShadowRoot.getHTML()")}} メソッドを使用する必要があります。
 同様に、 `innerHTML` を使用して要素のコンテンツを設定する場合、 HTML 文字列はシャドウルートを含まない DOM 要素に解釈されます。
 
-ですから、例えば [`<template>`](/ja/docs/Web/HTML/Element/template) は、 [`shadowrootmode`](/ja/docs/Web/HTML/Element/template#shadowrootmode) 属性が指定されているかどうかにかかわらず、 {{domxref("HTMLTemplateElement")}} に解釈されます。
+ですから、例えば [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) は、 [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性が指定されているかどうかにかかわらず、 {{domxref("HTMLTemplateElement")}} に解釈されます。
 宣言的なシャドウルートが含まれた HTML 文字列から要素のコンテンツを設定するには、 {{domxref("Element.setHTMLUnsafe()")}} または {{domxref("ShadowRoot.setHTMLUnsafe()")}} を使用する必要があります。
 
 ## 値

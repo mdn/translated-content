@@ -225,7 +225,7 @@ Content-Security-Policy: script-src 'self'
 
 这个声明有一部分作用在于，禁止它内部包含的脚本代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 方法。然而，如果脚本代码创建了一个 worker，在 worker 上下文中执行的代码却是可以使用 `eval()` 的。
 
-为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身设置 [Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy) 响应标头。
+为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身设置 [Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) 响应标头。
 
 有一个例外情况，即 worker 脚本的源如果是一个全局性的唯一的标识符（例如，它的 URL 协议为 data 或 blob），worker 则会继承创建它的 document 或者 worker 的 CSP。
 

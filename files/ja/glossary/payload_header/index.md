@@ -15,8 +15,7 @@ l10n:
 
 ## 関連情報
 
-- [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
-
+- [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)
   - {{HTTPHeader("Content-Length")}}
   - {{HTTPHeader("Content-Range")}}
   - {{HTTPHeader("Trailer")}}

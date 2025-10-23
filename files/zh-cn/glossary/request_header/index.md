@@ -5,8 +5,6 @@ l10n:
   sourceCommit: beb5d4126bd1e5c838d0fa0eea3e996eb0a9e0b9
 ---
 
-{{GlossarySidebar}}
-
 **请求标头**是一种 {{glossary("HTTP header", "HTTP 标头")}}，可在 HTTP 请求中用于提供有关请求上下文的信息，以便服务器可以定制响应。例如，{{HTTPHeader("Accept", "Accept-*")}} 标头表示响应允许的条件和首选的格式。其他标头可以提供身份验证凭据（例如 {{HTTPHeader("Authorization")}}），控制缓存，或者获取有关用户代理（user agent）或 referrer 的信息等。
 
 根据规范，并非所有可以出现在请求中的标头都称为*请求标头*。例如，{{HTTPHeader("Content-Type")}} 标头被成为{{glossary("representation header", "表示标头")}}。
@@ -32,5 +30,5 @@ Cache-Control: max-age=0
 
 ## 参见
 
-- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Headers)
+- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - [RFC 9110，6.3 节：标头字段](https://httpwg.org/specs/rfc9110.html#header.fields)

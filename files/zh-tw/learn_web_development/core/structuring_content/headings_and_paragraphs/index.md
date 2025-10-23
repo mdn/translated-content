@@ -1,10 +1,9 @@
 ---
 title: 基本 HTML 文字
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 的其中一件核心工作，就是給出文件的結構和含義（又稱{{glossary("semantics")}}），以便瀏覽器正確顯示。本文章旨在說明 {{glossary("HTML")}} 可透過增加標題、章節、強調、建立清單等，建立結構化的頁面。
 

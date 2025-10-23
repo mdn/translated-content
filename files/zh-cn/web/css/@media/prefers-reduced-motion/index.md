@@ -3,8 +3,6 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
@@ -19,7 +17,6 @@ slug: Web/CSS/@media/prefers-reduced-motion
 在火狐中，满足以下条件则 `reduce` 会生效：
 
 - 在 GTK/Gnome 中，可以通过 _GNOME Tweaks_（在“通用”或“外观”菜单中，取决于具体版本）的配置，设置 `gtk-enable-animations` 的值为 `false`。
-
   - 可以在 [GTK 3 的配置文件](https://wiki.archlinux.org/index.php/GTK#Configuration)中的 `[Settings]` 模块下设置 `gtk-enable-animations = false`。
 
 - 在 Windows 10 中：设置 > 轻松获取 > 显示 > 在 Windows 中显示动画。
@@ -111,8 +108,8 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP 标头[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示)
+- [动画减弱媒体查询简介](https://css-tricks.com/introduction-reduced-motion-media-query/)（CSS-Tricks，2019）
+- [响应式动画设计](https://webkit.org/blog/7551/responsive-design-for-motion/)（WebKit 博客，2017）

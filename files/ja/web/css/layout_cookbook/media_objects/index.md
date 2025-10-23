@@ -3,8 +3,6 @@ title: "レシピ: メディアオブジェクト"
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
 
-{{CSSRef}}
-
 *メディアオブジェクト*は、ウェブ上のいたるところで見られるパターンです。 [Nicole Sullivan によって命名](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)され、一方の側に画像を、そして他方の側に説明的なテキストを有する Facebook の投稿やツイートのような 2 列のボックスを指します。
 
 ![](media-object.png)
@@ -56,7 +54,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 ## MDN の関連資料
 
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [fit-content](/ja/docs/Web/CSS/fit-content)
 - [grid-template-areas](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)

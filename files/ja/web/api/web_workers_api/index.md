@@ -2,58 +2,42 @@
 title: ウェブワーカー API
 slug: Web/API/Web_Workers_API
 l10n:
-  sourceCommit: 6fefcdd237a377af5c066dc2734c118feadbbef9
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}
 
 **ウェブワーカー** (Web Worker) とは、ウェブアプリケーションにおけるスクリプトの処理をメインとは別のスレッドに移し、バックグラウンドでの実行を可能にする仕組みのことです。時間のかかる処理を別のスレッドに移すことが出来るため、 UI を担当するメインスレッドの処理を中断・遅延させずに実行できるという利点があります。
 
-## ウェブワーカーの概念と使い方
+## 概念と使い方
 
 ワーカーオブジェクトはコンストラクター（{{DOMxRef("Worker.Worker", "Worker()")}} など）を用いて生成され、名前を持つ JavaScript ファイルを実行します。このファイルにはワーカースレッドで実行されるコードが書かれています。
 
-ワーカースレッドの中では、 [JavaScript](/ja/docs/Web/JavaScript) の標準の一連の関数（[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)、[`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)、[`Object`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)、[`JSON`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON)、など）に加え、任意のコードのほとんどを実行することができます。いくつかの例外があります。例えば、ワーカー内から直接 DOM を操作することはできません。また、 [`window`](/ja/docs/Web/API/Window) オブジェクトの既定のメソッドやプロパティには使用できないものがあります。実行できるコードについては、以下の[ワーカーグローバルコンテキストと関数](#ワーカーグローバルコンテキストと関数)や[利用可能な Web API](#利用可能な_web_api) を参照してください。
+ワーカースレッドの中では、 [JavaScript](/ja/docs/Web/JavaScript) の標準の一連の関数（{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("Object")}}、{{jsxref("JSON")}}、など）に加え、任意のコードのほとんどを実行することができます。いくつかの例外があります。例えば、ワーカー内から直接 DOM を操作することはできません。また、 {{domxref("Window")}} オブジェクトの既定のメソッドやプロパティには使用できないものがあります。実行できるコードについては、[対応している関数](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーのコンテキストと関数)や[対応している Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_api)を参照してください。
 
 ワーカーとメインスレッドとの間では、メッセージのシステムを通してデータがやり取りされます。両者は `postMessage()` メソッドを使ってメッセージを送信したり、受け取ったメッセージには `onmessage` イベントハンドラーで返信したりします（メッセージは{{domxref("Worker/message_event", "メッセージ")}}イベントの `data` 属性に格納されます）。なお、データは共有されるのではなく複製されます。
 
-ワーカーが親ページと同じ{{glossary("origin", "オリジン")}}内でホスティングされるのであれば、新しいワーカーをいくつも起動することができます。また、ワーカーはネットワーク I/O において [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使用しますが、 `XMLHttpRequest` における `responseXML` および `channel` 属性は必ず `null` を返す点が通常と異なります。
+ワーカーが親ページと同じ{{glossary("origin", "オリジン")}}内でホスティングされるのであれば、新しいワーカーをいくつも起動することができます。
+
+また、ワーカーは {{domxref("WorkerGlobalScope/fetch", "fetch()")}} または {{domxref("XMLHttpRequest")}} API を使用してネットワークリクエストを作成することができます（ただし、 `XMLHttpRequest` の {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性が常に `null` になることに注意してください）。
 
 ### ワーカーの種類
 
 ワーカーにはいくつもの種類があります。
 
-- 専用ワーカー (dedicated worker) は、単一のスクリプトで利用されるワーカーです。このコンテキストは {{DOMxRef("DedicatedWorkerGlobalScope")}} オブジェクトで表現されます。
-- {{DOMxRef("SharedWorker","共有ワーカー", "", 1)}} (shared worker) は、ワーカーと同じドメイン内にある限り、異なるウィンドウや iframe などで動作する複数のスクリプトで利用できるワーカーです。専用ワーカーよりも少し複雑で、スクリプトはアクティブなポートを介して通信する必要があります。
-- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)は、基本的に複数のウェブアプリケーション間やブラウザー、（利用可能なら）ネットワークの間でプロキシーサーバーとして動くものです。他にも、効果的なオフライン操作を実現したり、ネットワークリクエストを遮断してネットワークが利用できるかどうかで適切なアクションを取ったり、サーバーにある資産を更新したりすることなどを目的としています。また、プッシュ通知やバックグラウンド同期APIへのアクセスも可能になる予定です。
+- {{domxref("Worker", "専用ワーカー", "", "nocode")}} (dedicated worker) は、単一のスクリプトで利用されるワーカーです。このコンテキストは {{DOMxRef("DedicatedWorkerGlobalScope")}} オブジェクトで表現されます。
+- {{domxref("SharedWorker", "共有ワーカー", "", "nocode")}} (shared worker) は、ワーカーと同じドメイン内にある限り、異なるウィンドウや iframe などで動作する複数のスクリプトで利用できるワーカーです。専用ワーカーよりも少し複雑で、スクリプトはアクティブなポートを介して通信する必要があります。
+- {{domxref("Service Worker API", "サービスワーカー", "", "nocode")}} (service worker) は、基本的に複数のウェブアプリケーション間やブラウザー、（利用可能なら）ネットワークの間でプロキシーサーバーとして動くものです。他にも、効果的なオフライン操作を実現したり、ネットワークリクエストを遮断してネットワークが利用できるかどうかで適切なアクションを取ったり、サーバーにある資産を更新したりすることなどを目的としています。また、プッシュ通知やバックグラウンド同期APIへのアクセスも可能になる予定です。
 
-> **メモ:** [Web workers 仕様書](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)によれば、ワーカーのエラーイベントはバブリングすべきではありません（[Firefox バグ 1188141](https://bugzil.la/1188141) を参照。これは Firefox 42 で実装されました）。
+### ワーカーコンテキスト
 
-### ワーカーグローバルコンテキストと関数
-
-ワーカーは現在の {{DOMxRef("window")}} とは異なるグローバルなコンテキストで実行されます。 {{domxref("Window")}} はワーカーから直接利用できませんが、同じメソッドの多くは共有されるミックスイン (`WindowOrWorkerGlobalScope`) で定義され、各自の {{domxref("WorkerGlobalScope")}} から派生したコンテキストを通じてワーカーが利用できるようにします。
+{{domxref("Window")}} はワーカーから直接利用できませんが、同じメソッドの多くは共有されるミックスイン (`WindowOrWorkerGlobalScope`) で定義され、各自の {{domxref("WorkerGlobalScope")}} から派生したコンテキストを通じてワーカーが利用できるようにします。
 
 - {{domxref("DedicatedWorkerGlobalScope")}} （専用ワーカー向け）
 - {{domxref("SharedWorkerGlobalScope")}} （共有ワーカー向け）
 - {{domxref("ServiceWorkerGlobalScope")}} （[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)向け）
 
-すべてのワーカーとメインスレッドで共通の関数（`WindowOrWorkerGlobalScope` からのもの）には、{{domxref("atob", "atob()")}}、{{domxref("btoa", "btoa()")}}、{{domxref("clearInterval", "clearInterval()")}}、{{domxref("clearTimeout()")}}、{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}、{{domxref("setInterval()")}}、{{domxref("setTimeout()")}} などがあります。
-
-以下の関数はワーカーでのみ利用することができます。
-
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} （すべてのワーカー）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} （専用ワーカーのみ）
-
-### 利用可能な Web API
-
-> [!NOTE]
-> 掲載されている API が特定のバージョンのプラットフォームで対応している場合、一般的にウェブワーカーでも利用可能とみなされます。また、 <https://worker-playground.glitch.me/> を使用して特定のオブジェクト/関数の 対応をテストすることもできます。
-
-ワーカーで利用可能な Web APIは、{{domxref("Barcode_Detection_API","バーコード検出 API", "", 1)}}、{{domxref("Broadcast_Channel_API","放送チャンネル API", "", 1)}}、{{domxref("Cache", "キャッシュ API", "", 1)}}、{{domxref("Channel_Messaging_API", "チャンネルメッセージ API", "", 1)}}、{{domxref("Console API", "コンソール API", "", 1)}}, [ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}})、{{domxref("CustomEvent")}}、{{domxref("Encoding_API", "エンコーディング API", "", 1)}} ({{domxref("TextEncoder")}}、{{domxref("TextDecoder")}}、など）、{{domxref("Fetch_API", "フェッチ API", "", 1)}}、{{domxref("FileReader")}}、{{domxref("FileReaderSync")}} （ワーカーでのみ動作）、{{domxref("FormData")}}、{{domxref("ImageData")}}、{{domxref("IndexedDB_API", "IndexedDB")}}, [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "通知 API", "", 1)}}、{{domxref("Performance_API","パフォーマンス API", "", 1)}} （{{domxref("Performance")}}、{{domxref("PerformanceEntry")}}、{{domxref("PerformanceMeasure")}}、{{domxref("PerformanceMark")}}、{{domxref("PerformanceObserver")}}、{{domxref("PerformanceResourceTiming")}}、など)、{{jsxref("Promise")}}、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)、{{domxref("ServiceWorkerRegistration")}}、{{ domxref("URL_API","URL API", "", 1) }} （{{ domxref("URL")}} など)、[WebGL](/ja/docs/Web/API/WebGL_API) （{{domxref("OffscreenCanvas")}} による）、{{domxref("WebSocket")}}、{{domxref("XMLHttpRequest")}} です。
-
-ワーカーは他のワーカーを起動することができ、そのために {{domxref("Worker")}}、{{domxref("WorkerGlobalScope")}}、{{domxref("WorkerLocation")}}、{{domxref("WorkerNavigator")}} も利用可能です。
-
-## ウェブワーカーのインターフェイス
+## インターフェイス
 
 - {{DOMxRef("Worker")}}
   - : 実行しているワーカーのスレッドを表します。実行しているワーカーのコードへメッセージを送る際に用います。
@@ -89,4 +73,4 @@ l10n:
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("Worker")}} インターフェイス
 - {{domxref("SharedWorker")}} インターフェイス
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- {{domxref("Service Worker API", "サービスワーカー API", "", "nocode")}}

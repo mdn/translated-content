@@ -27,5 +27,5 @@ l10n:
 - {{domxref("HTMLButtonElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("button")}}
-- HTML の [`form`](/ja/docs/Web/HTML/Element/button#form) 属性
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/button#form) 属性
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)

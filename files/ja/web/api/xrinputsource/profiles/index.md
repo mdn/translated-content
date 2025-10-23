@@ -58,7 +58,7 @@ inputSource.profiles;
 // ['oculus-touch', 'generic-trigger-squeeze-thumbstick']
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

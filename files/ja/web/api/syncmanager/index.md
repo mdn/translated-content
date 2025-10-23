@@ -18,10 +18,10 @@ slug: Web/API/SyncManager
 - {{domxref("SyncManager.getTags")}}
   - : SyncManager 登録の為にデベロッパーが定義した識別子リストを返します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}

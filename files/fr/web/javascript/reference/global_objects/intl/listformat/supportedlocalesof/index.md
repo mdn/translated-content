@@ -18,9 +18,7 @@ Intl.ListFormat.supportedLocalesOf(locales[, options])
 - `locales`
   - : Une chaîne de caractères qui est une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations concernant la forme générale de l'argument `locales`, voir la page {{jsxref("Objets_globaux/Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
 - `options`{{optional_inline}}
-
   - : Paramètre facultatif. Un objet qui peut posséder les propriétés suivantes :
-
     - `localeMatcher`
       - : L'algorithme utilisé pour la correspondance entre chaînes de caractères. Les valeurs possibles sont `"lookup"` et `"best fit"`. La valeur par défaut est `"best fit"`. Pour plus d'informations, voir la page {{jsxref("Objets_globaux/Intl", "Intl", "#Choix_de_la_locale")}}.
 

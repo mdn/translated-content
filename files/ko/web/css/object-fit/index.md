@@ -3,13 +3,48 @@ title: object-fit
 slug: Web/CSS/object-fit
 ---
 
-{{CSSRef}}
-
-[CSS](/ko/docs/Web/CSS) **`object-fit`** 속성은 {{HTMLElement("img")}}나 {{HTMLElement("video")}} 요소와 같은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)의 콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정합니다.
+[CSS](/ko/docs/Web/CSS) **`object-fit`** 속성은 {{HTMLElement("img")}}나 {{HTMLElement("video")}} 요소와 같은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)의 콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정합니다.
 
 {{cssxref("object-position")}} 속성을 사용해 대체 요소 콘텐츠가 콘텐츠 박스 내에 위치할 지점을 바꿀 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 ## 구문
 

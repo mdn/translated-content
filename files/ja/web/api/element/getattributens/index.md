@@ -89,8 +89,7 @@ HTML 文書では名前空間に対応していないため、この属性は `t
 
 名前空間は XML 文書でのみ対応しています。 HTML 文書では、代わりに `getAttribute()` を使用する必要があります。
 
-`getAttributeNS()` は {{domxref("element.getAttribute()",
-  "getAttribute()")}} とは異なり、特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は Mozilla の架空の "specialspace" 名前空間に属しています。
+`getAttributeNS()` は {{domxref("element.getAttribute()", "getAttribute()")}} とは異なり、特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は Mozilla の架空の "specialspace" 名前空間に属しています。
 
 DOM4 より前の仕様では、このメソッドは属性が存在しない場合に null ではなく空文字列を返すように指定されていました。しかし、ほとんどのウェブブラウザーは null を返していました。 DOM4 以降は、仕様でも null を返すように指定されました。しかし、一部の古いウェブブラウザーは空文字列を返します。そのため、指定の要素に指定の属性が存在しない可能性があるなら、 `getAttributeNS` を呼ぶ前に {{domxref("element.hasAttributeNS()", "hasAttributeNS()")}} を使用して属性の存在を確かめる必要があります。
 

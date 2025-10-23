@@ -24,53 +24,53 @@ MDN 학습지의 목표는 여러분을 "전문가"로 만드는 것이 아니�
 
 - 처음에서 시작
   - : 처음부터 시작하시는 것이면
-    [웹과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web) 모듈부터 시작해보세요. 웹 개발의
+    [웹과 함께 시작하기](/ko/docs/Learn_web_development/Getting_started/Your_first_website) 모듈부터 시작해보세요. 웹 개발의
     실용적인 소개를 제공합니다.
 - 기본기를 넘어
   - : 이미 기본 지식은 알고 계시면, 다음 단계는 {{glossary("HTML")}}과 {{glossary("CSS")}}를 자세히 알아보는 것입니다.
-    [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 모듈에서 시작해서
-    [CSS 첫걸음](/ko/docs/Learn/CSS/First_steps) 모듈까지 배워보세요.
+    [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) 모듈에서 시작해서
+    [CSS 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics) 모듈까지 배워보세요.
 - 스크립트 다루기
   - : HTML과 CSS도 알고 계시거나, 아니면 주로 코드 작성에 관심을 두신다면 {{glossary("JavaScript")}}나 서버 개발을
     보시는게 좋습니다.
-    [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)과
-    [서버 사이드 첫걸음](/ko/docs/Learn/Server-side/First_steps) 모듈을 방문하세요.
+    [JavaScript 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Scripting)과
+    [서버 사이드 첫걸음](/ko/docs/Learn_web_development/Extensions/Server-side/First_steps) 모듈을 방문하세요.
 - 프레임워크와 도구
   - : "바닐라" HTML, CSS, JavaScript의 정수를 모두 배우셨으면
-    [클라이언트 사이드 웹 개발 도구](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools)를
+    [클라이언트 사이드 웹 개발 도구](/ko/docs/Learn_web_development/Extensions/Client-side_tools)를
     읽어보세요. 그 후에는
-    [클라이언트 사이드 JavaScript 프레임워크](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)와 [서버 사이드 웹 사이트 프로그래밍](/ko/docs/Learn/Server-side)도 한 번 고려해보세요.
+    [클라이언트 사이드 JavaScript 프레임워크](/ko/docs/Learn_web_development/Core/Frameworks_libraries)와 [서버 사이드 웹 사이트 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side)도 한 번 고려해보세요.
 
 > [!NOTE]
-> MDN [용어집](/ko/docs/Glossary)에서 각종 용어의 정의를 찾아보실 수 있습니다. 웹 개발에 관한 질문이 있으시면 [자주 하는 질문](/ko/docs/Learn/Common_questions) 문서도 확인해보세요.
+> MDN [용어집](/ko/docs/Glossary)에서 각종 용어의 정의를 찾아보실 수 있습니다. 웹 개발에 관한 질문이 있으시면 [자주 하는 질문](/ko/docs/Learn_web_development/Howto) 문서도 확인해보세요.
 
 ## 다루는 주제
 
 다음 목록은 MDN 학습지에서 다루는 모든 주제의 목록입니다.
 
-- [웹과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web)
+- [웹과 함께 시작하기](/ko/docs/Learn_web_development/Getting_started/Your_first_website)
   - : 초보자가 쉽게 따라할 수 있도록 웹 개발을 간단히 소개합니다.
-- [HTML — 웹의 구조 짜기](/ko/docs/Learn/HTML)
+- [HTML — 웹의 구조 짜기](/ko/docs/Learn_web_development/Core/Structuring_content)
   - : HTML은 웹 사이트의 콘텐츠를 구성하고, 각각의 의미나 목적을 정의하는 언어입니다.
-- [CSS — 웹 스타일링](/ko/docs/Learn/CSS)
+- [CSS — 웹 스타일링](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
   - : CSS는 웹 콘텐츠의 스타일과 레이아웃은 물론 애니메이션과 같은 추가 동작을 지정할 때 사용하는 언어입니다.
-- [JavaScript — 동적 클라이언트 사이드 스크립팅](/ko/docs/Learn/JavaScript)
+- [JavaScript — 동적 클라이언트 사이드 스크립팅](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)
   - : JavaScript는 동적 기능을 웹 페이지에 넣을 때 사용하는 스크립트 언어입니다. 이 주제는 JavaScript 코드의 작성과 이해에
     익숙해지기 위한 모든 기초를 다룹니다.
-- [웹 양식 — 사용자 데이터로 작업하기](/ko/docs/Learn/Forms)
+- [웹 양식 — 사용자 데이터로 작업하기](/ko/docs/Learn_web_development/Extensions/Forms)
   - : 웹 양식은 사용자와 상호작용을 하기 위한 강력한 도구입니다. 주로 사용자에게서 데이터를 받거나, 직접 조절할 수 있는
     사용자 인터페이스를 제공할 때 사용합니다. 이 주제에서는 양식의 구조와 스타일링, 그리고 상호작용까지 모든 것을
     다룹니다.
-- [접근성 — 모두를 위한 웹](/ko/docs/Learn/Accessibility)
+- [접근성 — 모두를 위한 웹](/ko/docs/Learn_web_development/Core/Accessibility)
   - : 접근성에서는 장애, 장비, 지역 및 기타 사람간의 차이점에 상관 없이 누구나 웹 콘텐츠에 접근할 수 있도록 구성하는
     방법을 다룹니다.
-- [웹 성능 — 빠르고 즉각 반응하는 웹 사이트](/ko/docs/Learn/Performance)
+- [웹 성능 — 빠르고 즉각 반응하는 웹 사이트](/ko/docs/Learn_web_development/Extensions/Performance)
   - : 웹 성능에서는 사용자의 인터넷 대역이나 화면 크기, 네트워크, 장비의 성능에 관계하지 않고 웹 어플리케이션의 다운로드는
     빠르게, 사용자 인터페이스의 반응은 즉각 일어나도록 만드는 기술을 다룹니다.
 - [도구와 테스트](/ko/docs/Learn/Tools_and_testing)
   - : 도구와 테스트에서는 크로스 브라우징 테스트, 린팅, 포맷팅, 변환 도구, 버전 관리, 배포, 클라이언트 사이드 JavaScript
     프레임워크를 다룹니다.
-- [서버 사이드 웹 사이트 프로그래밍](/ko/docs/Learn/Server-side)
+- [서버 사이드 웹 사이트 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side)
   - : 클라이언트 사이드 웹 개발에 집중하시더라도, 서버와 서버 사이드 코드의 작동 방식을 파악하는 것은 여전히 유용합니다.
     여기서는 서버의 일반적인 동작 방식과 함께, 두 개의 유명한 프레임워크인 Django(Python)와 Express (node.js)를 사용해
     서버 사이드 앱을 만드는 방법에 대한 상세한 자습서를 제공합니다.

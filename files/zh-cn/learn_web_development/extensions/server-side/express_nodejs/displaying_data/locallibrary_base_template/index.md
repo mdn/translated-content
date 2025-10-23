@@ -1,7 +1,6 @@
 ---
 title: 本地图书馆基础模板
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
 
 现在我们了解如何使用 Pug 拓展模板，让我们开始项目，创建一个基础模板。这个模板会有一个侧边栏，连结到本教程中将要创建的各个页面（例如，呈现并创建书本、种类、作者等等），以及一个主要内容区域，我们将在每个页面中进行覆写。

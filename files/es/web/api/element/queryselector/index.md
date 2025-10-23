@@ -16,7 +16,7 @@ elemento = elementoBase.querySelector(selectores);
 ### Parametros
 
 - `selectores`
-  - : Es el grupo de [selectores](/es/docs/Learn/CSS/Building_blocks/Selectors) que servirán para filtrar los elementos descendientes del {{domxref("Element")}} `elementoBase`; debe tener una sintáxis CSS válida o se producirá una excepción `SyntaxError`. Devuelve el primer elemento que encuentre que coincida con el grupo de selectores.
+  - : Es el grupo de [selectores](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que servirán para filtrar los elementos descendientes del {{domxref("Element")}} `elementoBase`; debe tener una sintáxis CSS válida o se producirá una excepción `SyntaxError`. Devuelve el primer elemento que encuentre que coincida con el grupo de selectores.
 
 ### Valor devuelto
 
@@ -96,7 +96,7 @@ Puedes ver más ejemplos sobre el formato apropiado para los `selectores` aquí 
 
 - [Localizando elementos DOM usando selectores](/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) en la guia de CSS
-- [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) en MDN Learning
+- [Selectores de atributo](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) en MDN Learning
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} y {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} y {{domxref("DocumentFragment.querySelectorAll()")}}

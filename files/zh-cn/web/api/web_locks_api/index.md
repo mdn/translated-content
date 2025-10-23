@@ -2,16 +2,16 @@
 title: Web Locks API
 slug: Web/API/Web_Locks_API
 l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+  sourceCommit: 8a5618d6a53a3716df0a24f36fec04235fd6e90e
 ---
 
 {{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-**Web Locks API** 允许在一个标签页或 worker 中运行的脚本异步获取锁，在执行工作时保持锁，最后释放锁。持有锁时，在同一源中执行的其他脚本都无法获取相同的锁，这允许在多个标签页或 worker 中运行的 Web 应用程序协调工作和资源的使用。
+**Web Locks API** 允许在一个标签页或 worker 中运行的脚本异步获取锁，在执行工作时持有锁，最后释放锁。持有锁时，在同一源中执行的其他脚本都无法获取相同的锁，这允许在多个标签页或 worker 中运行的 Web 应用程序协调工作和资源的使用。
 
 ## 概念和用法
 
-锁是一个抽象概念，代表一些潜在的共享资源，由 Web 应用程序选择的名称进行标识。例如，如果在多个标签页中运行的 Web 应用程序想要确保只有一个标签页在网络和索引数据库之间同步数据，则每个标签页都可以尝试获取“my_net_db_sync”锁，但只有一个标签页会成功（[领导者选举模式](https://en.wikipedia.org/wiki/Leader_election)。）
+锁是一个抽象概念，代表一些潜在的共享资源，由 Web 应用程序选择的名称进行标识。例如，如果在多个标签页中运行的 Web 应用程序想要确保只有一个标签页在网络和索引数据库之间同步数据，则每个标签页都可以尝试获取“my_net_db_sync”锁，但只有一个标签页会成功（[领导者选举模式](https://en.wikipedia.org/wiki/Leader_election)）。
 
 API 用法如下：
 
@@ -74,21 +74,17 @@ await do_something_else_without_lock();
 
 ### 进阶用法
 
-对于更复杂的情况，例如在任意时间内保持锁，回调可以返回一个脚本显式解决的 Promise：
+对于更复杂的情况，例如在任意时间内持有锁，回调可以返回一个脚本显式解决的 Promise：
 
 ```js
 // 捕获 Promise 控制函数：
-let resolve, reject;
-const p = new Promise((res, rej) => {
-  resolve = res;
-  reject = rej;
-});
+const { promise, resolve, reject } = Promise.withResolvers();
 
 // 请求锁：
 navigator.locks.request(
   "my_resource",
   // 锁已被获取。
-  (lock) => p, // 现在锁将被保持直到调用 resolve() 方法或 reject() 方法为止。
+  (lock) => promise, // 现在锁将被持有直到调用 resolve() 方法或 reject() 方法为止。
 );
 ```
 

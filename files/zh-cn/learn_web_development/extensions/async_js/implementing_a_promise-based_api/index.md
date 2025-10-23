@@ -1,10 +1,7 @@
 ---
 title: 如何实现基于 Promise 的 API
 slug: Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
-original_slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 

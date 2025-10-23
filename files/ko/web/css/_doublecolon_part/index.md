@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 5863b9e6635b304b96ef5f70937329e854957f73
 ---
 
-{{CSSRef}}
-
-**`::part`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) 는 [shadow tree](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내에서 일치하는 [`part`](/ko/docs/Web/HTML/Global_attributes#part) 특성을 가진 모든 요소를 나타냅니다.
+**`::part`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) 는 [shadow tree](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내에서 일치하는 [`part`](/ko/docs/Web/HTML/Reference/Global_attributes#part) 특성을 가진 모든 요소를 나타냅니다.
 
 ```css
 custom-element::part(foo) {
@@ -108,7 +106,7 @@ globalThis.customElements.define(
 
 ## 같이 보기
 
-- [`part`](/ko/docs/Web/HTML/Global_attributes#part) 특성
+- [`part`](/ko/docs/Web/HTML/Reference/Global_attributes#part) 특성
 - {{CSSxRef(":state",":state()")}} 의사 클래스 함수
-- [`exportparts`](/ko/docs/Web/HTML/Global_attributes#exportparts) 특성
+- [`exportparts`](/ko/docs/Web/HTML/Reference/Global_attributes#exportparts) 특성
 - [CSS shadow parts](/ko/docs/Web/CSS/CSS_shadow_parts) 모듈

@@ -21,7 +21,6 @@ for (const [key, value] of mySearchParams.entries()) {
 ## Construtor
 
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-
   - : Retorna uma instância do objeto `URLSearchParams`.
 
 ## Métodos

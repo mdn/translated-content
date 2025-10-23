@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`formEnctype`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このフォームが送信される場合のサーバーに送信されるコンテンツの {{Glossary("MIME_type", "MIME タイプ")}}です。これは、この `<button>` の [`formenctype`](/ja/docs/Web/HTML/Element/input#formenctype) 属性の値を反映します。
+**`formEnctype`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このフォームが送信される場合のサーバーに送信されるコンテンツの {{Glossary("MIME_type", "MIME タイプ")}}です。これは、この `<button>` の [`formenctype`](/ja/docs/Web/HTML/Reference/Elements/input#formenctype) 属性の値を反映します。
 
 この値は、フォームがこの送信ボタン経由で送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.enctype", "enctype")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。設定されていない場合、値は空文字列 (`""`) となります。
 
@@ -37,4 +37,4 @@ btnEl.formEnctype = "application/x-www-form-urlencoded";
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
 - {{domxref("HTMLFormElement.enctype")}}
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

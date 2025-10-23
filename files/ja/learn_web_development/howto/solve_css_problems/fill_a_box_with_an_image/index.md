@@ -11,7 +11,7 @@ l10n:
 
 ## object-fit の使用
 
-HTML の {{htmlelement("img")}} 要素を使ってページに画像を追加すると、画像は画像ファイルや HTML の [`width`](/ja/docs/Web/HTML/Element/img#width)、[`height`](/ja/docs/Web/HTML/Element/img#height) 属性から得たサイズとアスペクト比が使われます。時には、画像を配置した枠を完全に埋めるようにしたい場合があります。このような場合、まず、画像のアスペクト比がコンテナーと合わない場合にどうするかを決める必要があります。
+HTML の {{htmlelement("img")}} 要素を使ってページに画像を追加すると、画像は画像ファイルや HTML の [`width`](/ja/docs/Web/HTML/Reference/Elements/img#width)、[`height`](/ja/docs/Web/HTML/Reference/Elements/img#height) 属性から得たサイズとアスペクト比が使われます。時には、画像を配置した枠を完全に埋めるようにしたい場合があります。このような場合、まず、画像のアスペクト比がコンテナーと合わない場合にどうするかを決める必要があります。
 
 1. 画像は、アスペクト比を保ったまま完全に枠内に収まるようにし、大きすぎて収まらない辺はトリミングする。
 2. 画像はボックス内に収まるようにし、小さすぎる辺は背景が棒状に透けて見えるようにする。

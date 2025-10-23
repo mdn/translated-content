@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframeRule`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/Web/CSS/At-rule) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。
+**`CSSKeyframeRule`** インターフェイスは、指定されたキーフレームのスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/Web/CSS/CSS_syntax/At-rule) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。
 
 {{InheritanceDiagram}}
 

@@ -5,11 +5,35 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+{{InteractiveExample("CSS デモ: rotate()")}}
 
-{{EmbedInteractiveExample("pages/css/function-rotate.html")}}
+```css interactive-example-choice
+transform: rotate(0);
+```
+
+```css interactive-example-choice
+transform: rotate(90deg);
+```
+
+```css interactive-example-choice
+transform: rotate(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotate(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 要素が回転する中心となる特定の点 — 前述 — は、**変換原点**とも呼ばれます。既定では要素の中央ですが、 {{ cssxref("transform-origin") }} プロパティを使用して独自の座標変換原点を設定することができます。
 

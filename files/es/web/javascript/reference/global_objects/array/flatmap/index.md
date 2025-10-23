@@ -18,8 +18,6 @@ console.log(result);
 // Expected output: Array [1, 2, 2, 1]
 ```
 
-La fuente de este ejemplo interactivo, se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
-
 ## Sintaxis
 
 ```
@@ -31,11 +29,8 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Parámetros
 
 - `callback`
-
   - : Función que produce un elemento de la nueva matriz, tomando tres argumentos:
-
     - `currentValue`
-
       - : El elemento actual que se procesa en la matriz.
 
     - `index`{{optional_inline}}

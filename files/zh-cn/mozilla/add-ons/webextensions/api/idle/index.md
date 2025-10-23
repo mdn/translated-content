@@ -3,8 +3,6 @@ title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
 ---
 
-{{AddonSidebar}}
-
 找出用户系统何时处于空闲，锁定或活动状态。
 
 要使用此 API，你需要具有“空闲”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
@@ -33,7 +31,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.idle`](https://developer.chrome.google.cn/docs/extensions/reference/api/idle) API。本文档源自 Chromium 代码中的 [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json)。
+> 此 API 基于 Chromium 的 [`chrome.idle`](https://developer.chrome.google.cn/docs/extensions/reference/api/idle) API。该文档衍生自 Chromium 代码中的 [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Memory/grow
 
 {{WebAssemblySidebar}}
 
-**`grow()`** は [`Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) オブジェクトのプロトタイプメソッドで、指定した WebAssembly ページの数だけメモリーインスタンスの大きさを拡張します。
+**`grow()`** は [`Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトのプロトタイプメソッドで、指定した WebAssembly ページの数だけメモリーインスタンスの大きさを拡張します。
 
 ## 構文
 
@@ -55,5 +55,5 @@ console.log(memory.buffer.byteLength / bytesPerPage); // "2"
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

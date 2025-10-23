@@ -17,5 +17,5 @@ typeof null === "object";
 
 ### Техническая информация
 
-- [Типы данных JavaScript и структуры данных](/ru/docs/Web/JavaScript/Data_structures)
+- [Типы данных JavaScript и структуры данных](/ru/docs/Web/JavaScript/Guide/Data_structures)
 - Глобальный объект в JavaScript: {{jsxref("null")}}

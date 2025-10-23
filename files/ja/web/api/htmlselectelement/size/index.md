@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`size`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、一度に表示されるべきオプションの数、つまり行数を指定します。これは、この {{htmlelement("select")}} 要素の [`size`](/ja/docs/Web/HTML/Element/select#size) 属性を反映します。省略された場合、値は `0` です。
+**`size`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、一度に表示されるべきオプションの数、つまり行数を指定します。これは、この {{htmlelement("select")}} 要素の [`size`](/ja/docs/Web/HTML/Reference/Elements/select#size) 属性を反映します。省略された場合、値は `0` です。
 
 > [!NOTE]
 > 既定では、`<select>` は {{DOMxRef("HTMLSelectElement.multiple", "multiple")}} が true の場合は 4 つの行が表示されます。それ以外の場合は単一の行を表示します。`size` プロパティの既定値は `0` です。

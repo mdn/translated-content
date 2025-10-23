@@ -14,7 +14,7 @@ element = document.querySelector(selectores);
 Donde:
 
 - `element` es un objeto de tipo [element](/es/docs/Web/API/Element).
-- `selectores` es una cadena de caracteres que contiene uno o más [selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) separados por coma.
+- `selectores` es una cadena de caracteres que contiene uno o más [selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) separados por coma.
 
 ## Ejemplo
 

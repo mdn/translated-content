@@ -5,11 +5,49 @@ l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
-{{CSSRef}}
-
 **`text-decoration-line`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下線や上線など、要素内の文字列に使われる装飾の種類を設定します。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
+{{InteractiveExample("CSS デモ: text-decoration-line")}}
+
+```css interactive-example-choice
+text-decoration-line: none;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline;
+```
+
+```css interactive-example-choice
+text-decoration-line: overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: line-through;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline line-through;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 複数の line-decoration に関するプロパティを一度に設定するときは、代わりに一括指定の {{cssxref("text-decoration")}} プロパティを使用したほうが便利かもしれません。
 

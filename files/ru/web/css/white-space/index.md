@@ -3,7 +3,63 @@ title: white-space
 slug: Web/CSS/white-space
 ---
 
-{{CSSRef}}Свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.{{EmbedInteractiveExample("pages/css/white-space.html")}}
+{{CSSRef}}
+
+[CSS](/ru/docs/Web/CSS)-свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.
+
+{{InteractiveExample("CSS Demo: white-space")}}
+
+```css interactive-example-choice
+white-space: normal;
+```
+
+```css interactive-example-choice
+white-space: pre;
+```
+
+```css interactive-example-choice
+white-space: pre-wrap;
+```
+
+```css interactive-example-choice
+white-space: pre-line;
+```
+
+```css interactive-example-choice
+white-space: wrap;
+```
+
+```css interactive-example-choice
+white-space: collapse;
+```
+
+```css interactive-example-choice
+white-space: preserve nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <p>
+      В самом деле, что было бы с нами, если бы вместо общеудобного правила: чин
+      чина почитай, ввелось в употребление другое, например: ум ума почитай?
+      Какие возникли бы споры! и слуги с кого бы начинали кушанье подавать?
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 16rem;
+}
+
+#example-element p {
+  border: 1px solid #c5c5c5;
+  padding: 0.75rem;
+  text-align: left;
+}
+```
 
 > [!NOTE]
 > Для управления переносами _внутри слов_ используйте {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}} или {{CSSxRef("hyphens")}}.

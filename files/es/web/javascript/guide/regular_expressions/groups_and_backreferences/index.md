@@ -7,7 +7,22 @@ slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 
 Los grupos y rangos indican grupos y rangos de caracteres de expresión.
 
-{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+
+```js interactive-example
+// Groups
+const imageDescription = "This image has a resolution of 1440×900 pixels.";
+const regexpSize = /([0-9]+)×([0-9]+)/;
+const match = imageDescription.match(regexpSize);
+console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+// Expected output: "Width: 1440 / Height: 900."
+
+// Backreferences
+const findDuplicates = "foo foo bar";
+const regex = /\b(\w+)\s+\1\b/g;
+console.log(findDuplicates.match(regex));
+// Expected output: Array ["foo foo"]
+```
 
 ## Tipos
 
@@ -81,7 +96,6 @@ Para obtener información sobre la compatibilidad del navegador, consulta la {{J
 ## Ve también
 
 - {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-
   - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
   - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
   - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}

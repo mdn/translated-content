@@ -7,14 +7,14 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
 
-Reporting API 为 web 应用程序提供了一种通用的报告机制，用于根据各种平台特性以一致的方式提供报告（例如[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)、[权限策略](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)或特性弃用报告）。
+Reporting API 为 web 应用程序提供了一种通用的报告机制，用于根据各种平台特性以一致的方式提供报告（例如[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)、[权限策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)或特性弃用报告）。
 
 ## 概念和用法
 
 web 平台上有一些不同的特性和问题，当 web 开发人员试图修复错误或以其他方式改进他们的网站时，它们会生成有用的信息。这些信息可以包括：
 
-- [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)违规。
-- [权限策略](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)违规。
+- [内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)违规。
+- [权限策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)违规。
 - 弃用特性的使用（当使用一些即将在 web 浏览器中弃用的特性时）。
 - 发生崩溃。
 - 发生用户代理干预（当浏览器阻止你的代码尝试做的事情，因为它被认为是一个安全风险，或者只是简单的让人厌烦，比如自动播放音频）。
@@ -52,7 +52,7 @@ Reporting API 的目的是提供一致的报告机制，该机制可用于以 Ja
 ## 接口
 
 - {{domxref("CSPViolationReportBody")}}
-  - : 包含违反[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)的详细信息。
+  - : 包含违反[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)的详细信息。
 - {{domxref("DeprecationReportBody")}}
   - : 包含网站正在使用的已弃用的 web 平台特性的详细信息。
 - {{domxref("InterventionReportBody")}}
@@ -115,5 +115,5 @@ Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](ht
 
 ## 参见
 
-- [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)
-- [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)
+- [内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)
+- [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)

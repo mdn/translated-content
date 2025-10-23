@@ -18,7 +18,7 @@ l10n:
 
 ### `loadTime` をログ出力
 
-この例では {{HTMLElement("img")}} 要素に [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録されます。オブザーバーが作成される前のデータにアクセスするには `buffered` フラグを使用します。 `entry.loadTime` を呼び出すと、画像要素の読み込み時間を返します。
+この例では {{HTMLElement("img")}} 要素に [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録されます。オブザーバーが作成される前のデータにアクセスするには `buffered` フラグを使用します。 `entry.loadTime` を呼び出すと、画像要素の読み込み時間を返します。
 
 ```html
 <img

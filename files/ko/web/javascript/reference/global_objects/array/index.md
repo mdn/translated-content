@@ -7,20 +7,20 @@ l10n:
 
 {{JSRef}}
 
-다른 프로그래밍 언어의 배열과 마찬가지로, **`Array`** 객체는 [여러 항목의 컬렉션을 단일 변수 이름 아래 저장할 수 있고](/ko/docs/Learn/JavaScript/First_steps/Arrays), [일반적인 배열 연산을 수행하기](#예제) 위한 멤버가 있습니다.
+다른 프로그래밍 언어의 배열과 마찬가지로, **`Array`** 객체는 [여러 항목의 컬렉션을 단일 변수 이름 아래 저장할 수 있고](/ko/docs/Learn_web_development/Core/Scripting/Arrays), [일반적인 배열 연산을 수행하기](#예제) 위한 멤버가 있습니다.
 
 ## 설명
 
 JavaScript에서 배열은 [원시 값](/ko/docs/Glossary/Primitive)이 아니라 다음과 같은 핵심적인 특성을 가진 `Array` 객체입니다.
 
-- **JavaScript 배열은 크기를 조정이 가능하고, 다양한 [데이터 형식](/ko/docs/Web/JavaScript/Data_structures)을 혼합하여 저장할 수 있습니다**. (이러한 특성이 바람직하지 않은 경우라면, [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)을 대신 사용하세요.)
+- **JavaScript 배열은 크기를 조정이 가능하고, 다양한 [데이터 형식](/ko/docs/Web/JavaScript/Guide/Data_structures)을 혼합하여 저장할 수 있습니다**. (이러한 특성이 바람직하지 않은 경우라면, [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)을 대신 사용하세요.)
 - **JavaScript 배열은 연관 배열이 아니므로** 임의의 문자열을 인덱스로 사용하여 배열 요소에 접근할 수 없습니다. 하지만, 음수가 아닌 정수(또는 해당 수의 문자열 형식)를 인덱스로 사용하여 접근해야 합니다.
 - <strong>JavaScript 배열은 [0 인덱스](https://en.wikipedia.org/wiki/Zero-based_numbering)</strong>입니다. 배열의 첫 번째 요소는 인덱스 `0`, 두 번째 요소는 인덱스 `1`, 마지막 요소는 배열의 {{jsxref("Array/length", "length")}} 속성 값에서 1을 뺀 값에 위치합니다.
 - **JavaScript [배열 복사 연산](#배열_복사하기)은 얕은 복사본을 생성합니다**. (모든 JavaScript 객체의 모든 표준 내장 복사 연산은 [깊은 복사본](/ko/docs/Glossary/Deep_copy)이 아닌 얕은 복사본을 생성합니다).
 
 ### 배열 인덱스
 
-`Array` 객체는 ([연관 배열](https://en.wikipedia.org/wiki/Associative_array)에서처럼) 임의의 문자열을 요소 인덱스로 사용할 수 없으며 음수가 아닌 정수(또는 해당 수의 문자열 형식)를 사용해야 합니다. 정수가 아닌 것을 통해 배열의 요소를 설정하거나 접근하려고 하면, 배열 목록 자체에서 요소를 설정하거나 검색하는 것이 아니라 해당 배열의 [객체 속성 컬렉션](/ko/docs/Web/JavaScript/Data_structures#속성)과 연결된 변수를 설정하거나 접근하게 됩니다. 배열의 객체 속성과 배열의 요소 목록은 별개이며, 배열의 [순회 및 수정 연산](/ko/docs/Web/JavaScript/Guide/Indexed_collections#배열_메서드)은 이렇게 이름 붙여진 속성에 적용할 수 없습니다.
+`Array` 객체는 ([연관 배열](https://en.wikipedia.org/wiki/Associative_array)에서처럼) 임의의 문자열을 요소 인덱스로 사용할 수 없으며 음수가 아닌 정수(또는 해당 수의 문자열 형식)를 사용해야 합니다. 정수가 아닌 것을 통해 배열의 요소를 설정하거나 접근하려고 하면, 배열 목록 자체에서 요소를 설정하거나 검색하는 것이 아니라 해당 배열의 [객체 속성 컬렉션](/ko/docs/Web/JavaScript/Guide/Data_structures#속성)과 연결된 변수를 설정하거나 접근하게 됩니다. 배열의 객체 속성과 배열의 요소 목록은 별개이며, 배열의 [순회 및 수정 연산](/ko/docs/Web/JavaScript/Guide/Indexed_collections#배열_메서드)은 이렇게 이름 붙여진 속성에 적용할 수 없습니다.
 
 배열 요소는 `toString`이 속성인 것과 같은 방식으로 객체 속성입니다(하지만, 정확히 말하자면 `toString()`은 메서드입니다). 그럼에도 불구하고 다음과 같이 배열의 요소에 접근하려고 하면 속성 이름이 유효하지 않기 때문에 구문 오류가 발생합니다.
 
@@ -130,7 +130,7 @@ console.log(fruits.length); // 2
 
 어떤 메서드는 메서드가 호출된 배열을 변경하며, 이 경우 반환값은 메서드에 따라 다릅니다. 때로는 같은 배열에 대한 참조를 반환하고, 때로는 새 배열의 길이를 반환합니다.
 
-다음 메서드는 [`this.constructor[Symbol.species]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)에 접근하여 사용할 생성자를 결정하고 새 배열을 생성합니다.
+다음 메서드는 [`this.constructor[Symbol.species]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)에 접근하여 사용할 생성자를 결정하고 새 배열을 생성합니다.
 
 - {{jsxref("Array/concat", "concat()")}}
 - {{jsxref("Array/filter", "filter()")}}
@@ -372,7 +372,7 @@ f("a", "b"); // 'a+b'
   - : 배열의 각 인덱스의 값을 포함하는 새 [배열 순회자](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) 객체를 반환합니다.
 - {{jsxref("Array.prototype.with()")}}
   - : 원래 배열을 수정하지 않고, 지정된 인덱스의 요소를 지정된 값으로 바꾼 새 배열을 반환합니다.
-- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : 기본적으로 [`values()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 메서드의 별칭입니다.
 
 ## 예제
@@ -380,7 +380,7 @@ f("a", "b"); // 'a+b'
 이 구획은 JavaScript에서 흔히 사용되는 배열 연산에 대한 몇 가지 예제를 제공합니다.
 
 > [!NOTE]
-> 배열의 기초가 아직 익숙하지 않다면, 먼저 [JavaScript 첫걸음: 배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)을 읽어보세요. 이곳은 [배열이 무엇인지](/ko/docs/Learn/JavaScript/First_steps/Arrays#배열이란) 설명하고 일반적인 배열 연산에 대한 다른 예제를 포함하고 있습니다.
+> 배열의 기초가 아직 익숙하지 않다면, 먼저 [JavaScript 첫걸음: 배열](/ko/docs/Learn_web_development/Core/Scripting/Arrays)을 읽어보세요. 이곳은 [배열이 무엇인지](/ko/docs/Learn_web_development/Core/Scripting/Arrays#배열이란) 설명하고 일반적인 배열 연산에 대한 다른 예제를 포함하고 있습니다.
 
 ### 배열 만들기
 
@@ -486,7 +486,8 @@ console.log(removedItem);
 // Orange
 ```
 
-> **참고:** `pop()`은 배열에서 마지막 항목을 제거하는 데에만 사용할 수 있습니다. 배열의 끝에서 여러 항목을 제거하려면 다음 예제를 참조하세요.
+> [!NOTE]
+> `pop()`은 배열에서 마지막 항목을 제거하는 데에만 사용할 수 있습니다. 배열의 끝에서 여러 항목을 제거하려면 다음 예제를 참조하세요.
 
 ### 배열의 끝에서 여러 항목 제거하기
 
@@ -529,7 +530,8 @@ console.log(removedItem);
 // Apple
 ```
 
-> **참고:** `shift()`는 배열에서 첫 번째 항목을 제거하는 데에만 사용할 수 있습니다. 배열의 시작 부분에서 여러 항목을 제거하려면 다음 예제를 참조하세요.
+> [!NOTE]
+> `shift()`는 배열에서 첫 번째 항목을 제거하는 데에만 사용할 수 있습니다. 배열의 시작 부분에서 여러 항목을 제거하려면 다음 예제를 참조하세요.
 
 ### 배열의 시작 부분에서 여러 항목 제거하기
 
@@ -682,7 +684,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 [`structuredClone()`](/ko/docs/Web/API/Window/structuredClone) 메서드를 사용하여 깊은 복사본을 만들 수도 있는데, 이 메서드는 소스의 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 단순히 복제하는 것이 아니라 새 복사본으로 전송할 수 있다는 장점이 있습니다.
 
-마지막으로, 기존 배열을 새 변수에 할당해도 배열이나 그 요소의 복사본이 생성되지 않는다는 점을 이해하는 것이 중요합니다. 대신 새 변수는 기존 배열에 대한 참조 또는 별칭일 뿐이며, 기존 배열의 이름과 새 변수 이름은 완전히 동일한 객체에 대한 두 개의 이름일 뿐입니다(따라서 항상 [엄격하게 동일](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#를_사용하는_엄격한_동등)한 것으로 평가됩니다). 따라서 기존 배열의 값이나 새 변수의 값을 조금이라도 변경하면, 다른 변수도 변경됩니다.
+마지막으로, 기존 배열을 새 변수에 할당해도 배열이나 그 요소의 복사본이 생성되지 않는다는 점을 이해하는 것이 중요합니다. 대신 새 변수는 기존 배열에 대한 참조 또는 별칭일 뿐이며, 기존 배열의 이름과 새 변수 이름은 완전히 동일한 객체에 대한 두 개의 이름일 뿐입니다(따라서 항상 [엄격하게 동일](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#를_사용하는_엄격한_동등)한 것으로 평가됩니다). 따라서 기존 배열의 값이나 새 변수의 값을 조금이라도 변경하면, 다른 변수도 변경됩니다.
 
 ```js
 const fruits = ["Strawberry", "Mango"];

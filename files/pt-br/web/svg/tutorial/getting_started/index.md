@@ -5,7 +5,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 {{SVGRef}}
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ## Um Exemplo Simples
 
@@ -33,7 +33,6 @@ Copie o código e salve-o como demo1.svg. Em seguida, abra-o no Firefox. Você o
 O processo de renderização inclui o seguinte:
 
 1. Começamos com o elemento raiz do `svg`:
-
    - A declaração doctype conhecida em (X)HTML deve ser deixada de lado porque a validação SVG baseada em DTD leva a mais problemas do que resolve.
    - Antes do SVG 2, para identificar a versão do SVG para outros tipos de validação, os atributos `version`e `baseProfile `deveriam sempre ser usados. Ambos os atributos `version`e `baseProfile`estão obsoletos no SVG 2.
    - Como um dialeto XML, o SVG deve sempre vincular os namespaces corretamente (no atributo xmlns). Consulte a página [Curso intensivo de namespaces](/pt-BR/docs/Web/SVG/Namespaces_Crash_Course) para obter mais informações.
@@ -46,7 +45,6 @@ O processo de renderização inclui o seguinte:
 
 - A primeira coisa a levar em conta é a ordem de representação dos elementos. A regra globalmente válida para arquivos SVG é que os elementos subsequentes sejam renderizados sobre os anteriores. Quanto mais baixo for um elemento, mais visível ele será.
 - Na web, os arquivos SVG podem ser exibidos diretamente no navegador ou incorporados em arquivos HTML usando vários métodos:
-
   - Se o HTML for XHTML e entregue como application/xhtml+xml, o SVG poderá ser incorporado diretamente na fonte XML.
   - O SVG também pode ser incorporado diretamente no HTML.
   - Pode ser usado com o elemento [`<img>`](/pt-BR/docs/Web/HTML/Element/img)

@@ -5,11 +5,51 @@ l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e
 ---
 
-{{CSSRef}}
+**`place-self`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 와 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 개별 요소를 정렬합니다 (예시. {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성). 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
 
-**`place-self`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 와 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 개별 요소를 정렬합니다 (예시. {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성). 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
+{{InteractiveExample("CSS Demo: place-self")}}
 
-{{EmbedInteractiveExample("pages/css/place-self.html")}}
+```css interactive-example-choice
+place-self: stretch center;
+```
+
+```css interactive-example-choice
+place-self: center start;
+```
+
+```css interactive-example-choice
+place-self: start end;
+```
+
+```css interactive-example-choice
+place-self: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 구성 속성
 
@@ -53,9 +93,7 @@ place-self: unset;
 - `auto`
   - : 부모 속성의 {{cssxref("align-items")}} 값으로 계산됩니다.
 - `normal`
-
   - : 이 키워드의 효과는 우리가 만든 레이아웃 모드에 따라 달라집니다.
-
     - 절대 위치로 지정된 레이아웃의 경우, 이 키워드는 대체된 절대 위치 박스에서 `start` 처럼 동작하고, 다른 모든 절대 위치 박스에서는 `stretch` 처럼 동작합니다.
     - 플렉스 요소들에서, 이 키워드는 `stretch` 처럼 동작합니다.
     - 그리드 요소들에서, 이 키워드는 `stretch` 와 비슷한 동작을 하지만, {{glossary("aspect ratio")}} 박스 형태 혹은 고유한 크기를 가진 박스에서는 `start` 처럼 동작합니다.
@@ -72,7 +110,6 @@ place-self: unset;
 - `center`
   - : 플렉스 요소의 마진 박스가 교차 축의 선 중앙에 위치합니다. 만일 요소의 교차 크기가 플렉스 컨테이너보다 큰 경우, 요소는 양쪽 방향으로 균등하게 넘칩니다.
 - `baseline`, `first baseline`. `last baseline`
-
   - : 첫번째 혹은 마지막 기준선 정렬에 참여를 지정합니다. 박스의 첫번째 혹은 마지막 기준선 세트의 정렬 기준선을 해당 기준선을 공유하는 그룹의 모든 박스의 공유 첫번째 혹은 마지막 기준선 세트에 있는 기준선과 맞추어 정렬합니다.
     `first baseline` 의 대체 정렬은 `start` 이며, `last baseline` 의 대체 정렬은 `end` 입니다.
 

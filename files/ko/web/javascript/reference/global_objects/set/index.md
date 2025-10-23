@@ -2,7 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+  sourceCommit: 6ba4f3b350be482ba22726f31bbcf8ad3c92a9c6
 ---
 
 {{JSRef}}
@@ -17,7 +17,7 @@ l10n:
 
 ### 값 동등성
 
-값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다.
+값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다. 또한 객체 키의 경우 동일성은 객체의 식별성(참조)에 기반합니다. 즉, 객체는 값이 아니라 참조로 비교됩니다. 예시는 [Set 객체 사용하기](#set-객체-사용하기)를 참고하세요.
 
 ### 성능
 
@@ -105,7 +105,7 @@ console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
 
 > [!NOTE]
-> 유사 Set 프로토콜은 요소를 생성하기 위해 [`[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
+> 유사 Set 프로토콜은 요소를 생성하기 위해 [`[Symbol.iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
 
 [배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)은 `has()` 메서드나 `size` 속성이 없고 `keys()` 메서드가 요소 대신 인덱스를 생성하기 때문에 유사 Set이 아닙니다. {{jsxref("WeakSet")}} 객체 역시 `keys()` 메서드가 없기 때문에 유사 Set이 아닙니다.
 
@@ -127,7 +127,7 @@ interface GPUSupportedFeatures {
 
 유사 `Set` 객체는 읽기 전용이거나 읽기-쓰기 가능합니다(위의 IDL에서 `readonly` 키워드 참조).
 
-- 읽기 전용 `Set` 유사 객체에는 [`size`](#set.prototype.size) 속성과 메서드 [`entries()`](#set.prototype.entries), [`forEach()`](#set. prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`@@iterator`](#set.prototypeiterator)가 있습니다.
+- 읽기 전용 `Set` 유사 객체에는 [`size`](#set.prototype.size) 속성과 메서드 [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), [`Symbol.iterator()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)가 있습니다.
 - 쓰기 가능한 `Set` 유사 객체에는 추가적으로 [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), [`add()`](#set.prototype.add) 메서드가 있습니다.
 
 메서드와 속성은 항목의 유형에 대한 제한을 제외하고는 `Set`의 동등한 개체처럼 동일한 동작을 합니다.
@@ -150,7 +150,7 @@ interface GPUSupportedFeatures {
 
 ## 정적 속성
 
-- {{jsxref("Set/@@species", "Set[@@species]")}}
+- [`Set[Symbol.species]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : 파생 객체를 생성하는 데 사용되는 생성자 함수입니다.
 
 ## 인스턴스 속성
@@ -161,14 +161,14 @@ interface GPUSupportedFeatures {
   - : 인스턴스 객체를 생성한 생성자 함수입니다. `Set` 인스턴스의 경우 초기 값은 {{jsxref("Set/Set", "Set")}} 생성자입니다.
 - {{jsxref("Set.prototype.size")}}
   - : `Set` 객체에 있는 값의 수를 반환합니다.
-- `Set.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Set"` 입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.
+- `Set.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Set"` 입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용합니다.
 
 ## 인스턴스 메서드
 
 - {{jsxref("Set.prototype.add()")}}
-  - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
   - : `Set` 객체에 같은 값이 있지 않다면 해당 `Set` 객체에 특정 값을 가진 새로운 요소를 삽입합니다.
+
 - {{jsxref("Set.prototype.clear()")}}
   - : `Set` 객체에서 모든 요소를 제거합니다.
 - {{jsxref("Set.prototype.delete()")}}
@@ -197,7 +197,7 @@ interface GPUSupportedFeatures {
   - : 하나의 Set을 받아 이 Set과 주어진 Set 모두 혹은 하나만 속해있는 요소가 들어있는 새로운 Set을 반환합니다.
 - {{jsxref("Set.prototype.values()")}}
   - : `Set`객체 내의 각 요소의 값을 삽입 순서대로 yield하는 새로운 반복자 객체를 리턴합니다.
-- [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`[Symbol.iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : `Set` 객체 내의 각 요소를 삽입 순서대로 yield하는 새로운 반복자 객체를 반환합니다.
 
 ## 예제
@@ -403,7 +403,8 @@ console.assert(set.size === array.length);
 
 ## 같이 보기
 
-- [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [`core-js`의 `Set` 폴리필](https://github.com/zloirock/core-js#set)
+- [`es-shims`의 `Set` 폴리필](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

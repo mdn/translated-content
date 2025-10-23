@@ -21,9 +21,7 @@ browser.bookmarks.getChildren(
 - `id`
   - : 取得したい子要素を持つフォルダー ID を指定する {{jsxref("string")}} です。
 - `callback`
-
   - : 子ノードのリストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
-
     - `results`
       - : 各要素が 1 つの子ノードを表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。要素の順序は、UI に表示されているのと同じ順番です。現在、セパレータの有無は結果に含まれません。指定したノードに子要素が含まれていなかった場合、`results` は空配列となります。
 
@@ -79,7 +77,7 @@ function toggleBookmark(folderNode, title, url) {
 そうではなかった場合、新しいブックマークを作成するために {{WebExtAPIRef("bookmarks.create()")}} が呼び出します。この際、引数 `folderNode` で与えられていたフォルダー ID を新しい親フォルダーの ID に指定し、合わせて `title` と `url` も指定します。
 
 > [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

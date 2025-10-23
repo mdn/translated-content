@@ -3,8 +3,6 @@ title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
-{{CSSRef}}
-
 **`:fullscreen`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于全屏模式的所有元素。如果有多个元素被放置在全屏模式下，则此选择器将匹配所有这些元素。
 
 ## 语法
@@ -73,4 +71,4 @@ CSS 中实现这一功能的关键在于两条规则。第一条规则用于在�
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API：{{ domxref("Element.requestFullscreen()") }}、{{ domxref("Document.exitFullscreen()") }} 和 {{ domxref("Document.fullscreenElement") }}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

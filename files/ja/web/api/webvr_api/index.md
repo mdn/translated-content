@@ -33,13 +33,14 @@ WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift
 
 また WebVR 1.1 では、 {{DOMxRef("Window")}} オブジェクトに多数のイベントが追加され、 JavaScript が表示状態の変化に対応できるようになっています。
 
-> **メモ:** [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)と [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)の記事で、この API の使用方法がもっとわかります。
+> [!NOTE]
+> [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)と [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)の記事で、この API の使用方法がもっとわかります。
 
 ### API の可用性
 
 ウェブ標準として承認されることのなかった WebVR API は、標準化プロセスの終了に向けて順調に進んでいる [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に取って代わられて非推奨となりました。そのため、既存のコードを更新して、代わりに新しい API を使用するようにしてください。一般的には、移行はあまり苦痛のないものになるはずです。
 
-さらに、端末やブラウザーによっては、 WebVR は HTTPS 接続を介して安全なコンテキストを使用してページをロードする必要があります。ページが完全に安全でない場合、 WebVR のメソッドや機能は利用できません。これは、 {{domxref("Navigator")}} の {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} メソッドが `NULL` であるかどうかを確認することで簡単にテストできます。
+さらに、端末やブラウザーによっては、 WebVR は HTTPS 接続を介して保護されたコンテキストを使用してページをロードする必要があります。ページが完全に安全でない場合、 WebVR のメソッドや機能は利用できません。これは、 {{domxref("Navigator")}} の {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} メソッドが `NULL` であるかどうかを確認することで簡単にテストできます。
 
 ```js
 if (!navigator.getVRDisplays) {
@@ -53,7 +54,8 @@ if (!navigator.getVRDisplays) {
 
 多くの WebVR ハードウェアは、ヘッドセットと一緒に使用するコントローラーをセットアップします。これらは[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) を介して WebVR アプリで使用することができ、特に[ゲームパッド拡張 API](/ja/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) は、コントローラーの[コントローラーのポーズ](/ja/docs/Web/API/GamepadPose)や[触覚アクチュエーター](/ja/docs/Web/API/GamepadHapticActuator)などにアクセスするための API 機能を追加します。
 
-> **メモ:** [VR コントローラーの WebVR での使用](/ja/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR)の記事では、 WebVR アプリでの VR コントローラーの使い方の基本を解説しています。
+> [!NOTE]
+> [VR コントローラーの WebVR での使用](/ja/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR)の記事では、 WebVR アプリでの VR コントローラーの使い方の基本を解説しています。
 
 ## WebVR インターフェイス
 

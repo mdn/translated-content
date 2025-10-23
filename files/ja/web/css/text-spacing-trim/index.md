@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2b26cc6e576d23f68fdf992767da81de9707965e
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`text-spacing-trim`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語/日本語/韓国語 (CJK) の約物文字（句読点や括弧など）について、隣接する文字との間、およびテキスト行の先頭または末尾に設定する内部空間（カーニング）を制御します。
 
@@ -29,20 +29,18 @@ text-spacing-trim: unset;
 ### 値
 
 - `<spacing-trim>`
-
   - : さまざまな空間調整オプションを定義します。利用できる値は次のとおりです。
-
     - `normal`
       - : 各行の先頭にある CJK 全角の開始用約物文字を全角幅に設定します。各行の末尾にある CJK 全角の終端用約物文字を全角幅に設定し、または、その文字が前の行に収まりきらない場合は半角幅に設定します。約物文字間の[空間の折り畳み](#全角幅の約物の折り畳み)をします。
     - `space-all`
-      - : すべての CJK 全角薬物文字を全角幅に設定します。
+      - : すべての CJK 全角約物文字を全角幅に設定します。
     - `space-first`
       - : `normal` と同様に動作しますが、 CJK 全角の開始用約物文字がテキストのブロックコンテナー内で最初の行の先頭、および改行文字などの明示的な改行の後に続くすべての行の先頭に来た場合には全角幅に設定します。
     - `trim-start`
-
       - : `normal` と同様に動作しますが、 CJK 全角の開始用約物文字が各行の先頭に来た場合には半角幅で設定します。
 
-    > **メモ:** [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
+    > [!NOTE]
+    > [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
 
 ## 解説
 
@@ -53,7 +51,7 @@ text-spacing-trim: unset;
 `text-spacing-trim` を使用すると、隣接する文字間の過剰な空間（カーニング）や、テキスト行の先頭や末尾の空間を調整することができます。一般的に言えば、次の通りです。
 
 - 全角の約物文字が全角幅に設定された場合、内部の空間が両側に設定され、それは漢字の横幅と一致します。
-- 全角の薬物文字が半角幅に設定された場合、内部の空間は片方のみに設定され、もう一方の端は先頭（開始用約物文字の場合）または末尾（終端用約物文字の場合）に寄せられます。半角幅の文字は、ふつう漢字の幅の半分になります。
+- 全角の約物文字が半角幅に設定された場合、内部の空間は片方のみに設定され、もう一方の端は先頭（開始用約物文字の場合）または末尾（終端用約物文字の場合）に寄せられます。半角幅の文字は、ふつう漢字の幅の半分になります。
 
 > [!NOTE]
 > 過剰なカーニングのリスクを避けるため、フォントは OpenType Alternate Half Widths (`halt`) 機能、 Contextual Half-width Spacing (`chws`) 機能、またはその両方を持っていなければなりません。フォントがどちらの機能も持っていない場合、 `text-spacing-trim` は無効になります。
@@ -172,5 +170,5 @@ p {
 
 ## 関連情報
 
-- [`ic`](/ja/docs/Web/CSS/CSS_Values_and_Units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/CSS_Values_and_Units#root_font-relative_lengths) の単位
+- [`ic`](/ja/docs/Web/CSS/CSS_values_and_units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/CSS_values_and_units#root_font-relative_lengths) の単位
 - [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール

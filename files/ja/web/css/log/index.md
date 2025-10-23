@@ -2,12 +2,10 @@
 title: log()
 slug: Web/CSS/log
 l10n:
-  sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`log()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions) は、数値の対数を返す指数関数です。
+**`log()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、数値の対数を返す指数関数です。
 
 [対数](https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0)は、べき乗の逆演算です。これは、第 1 引数として渡された数を得るために、固定された底をどれだけべき乗しなければならないかを示す数値です。
 
@@ -27,7 +25,6 @@ width: calc(100px * log(625, 5)); /* 400px */
 `log(value [, base]?)` 関数は、引数として 2 つのカンマ区切りの計算式を受け取ります。
 
 - `value`
-
   - 0 以上の {{cssxref("&lt;number&gt;")}} に解決される計算式で、対数を取る値です。
 
 - `base`
@@ -47,7 +44,7 @@ width: calc(100px * log(625, 5)); /* 400px */
 
 ### 対数スケールでの `log()` 関数の使用
 
-この例では、[対数スケール](https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB) を用いてデータ値を視覚化するために、`log()` 関数をどのように使用できるかを示しています。この例では、それぞれの横棒の幅は、底 10 の対数スケール上のデータ値に対応しています。各要素において、それぞれの値は `--value` という名前の [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) に割り当てられ、`.bar` クラスによってその幅が計算されています。
+この例では、[対数スケール](https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB) を用いてデータ値を視覚化するために、`log()` 関数をどのように使用できるかを示しています。この例では、それぞれの横棒の幅は、底 10 の対数スケール上のデータ値に対応しています。各要素において、それぞれの値は `--value` という名前の [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) に割り当てられ、`.bar` クラスによってその幅が計算されています。
 
 #### HTML
 

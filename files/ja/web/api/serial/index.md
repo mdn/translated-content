@@ -14,7 +14,6 @@ l10n:
 ## インスタンスメソッド
 
 - {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
-
   - : ユーザーが選んだデバイスを表す {{domxref("SerialPort")}} のインスタンスで解決するか、デバイスが選択されなかった場合は拒否される {{jsxref("Promise")}} を返します。
 
     このメソッドは、ユーザーによる有効化に伴って呼ぶ必要があります。

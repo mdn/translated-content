@@ -250,7 +250,7 @@ Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la c
 
 Si pruebas nuestro ejemplo de estructura más moderna con un lector de pantalla, verás que el marcado de diseño ya no se interpone ni confunde la lectura del contenido. También es mucho más ágil y más pequeño en términos de tamaño de código, lo que significa que el código es más fácil de mantener y menos ancho de banda para que el usuario lo descargue (especialmente para aquellos con conexiones lentas).
 
-Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Element#seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
+Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Reference/Elements#seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
 
 > [!NOTE]
 > Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
@@ -337,7 +337,7 @@ Volver a agregar estas ventajas requiere un poco de trabajo (puedes ver un ejemp
 <div data-message="Esto es del tercer botón" tabindex="0">¡Y aquí!</div>
 ```
 
-Básicamente, el atributo [`tabindex`](/es/docs/Web/HTML/Global_attributes#tabindex) está destinado principalmente a permitir que los elementos tabulables tengan un orden de tabulación personalizado (especificado en orden numérico positivo), en lugar de simplemente tabularlos en su orden de origen predeterminado. Casi siempre es una mala idea, ya que puede causar una gran confusión. Úsalo solo si realmente lo necesitas; por ejemplo, si el diseño muestra las cosas en un orden visual muy diferente al código fuente, y deseas que las cosas funcionen de manera más lógica. Hay otras dos opciones para `tabindex`:
+Básicamente, el atributo [`tabindex`](/es/docs/Web/HTML/Reference/Global_attributes#tabindex) está destinado principalmente a permitir que los elementos tabulables tengan un orden de tabulación personalizado (especificado en orden numérico positivo), en lugar de simplemente tabularlos en su orden de origen predeterminado. Casi siempre es una mala idea, ya que puede causar una gran confusión. Úsalo solo si realmente lo necesitas; por ejemplo, si el diseño muestra las cosas en un orden visual muy diferente al código fuente, y deseas que las cosas funcionen de manera más lógica. Hay otras dos opciones para `tabindex`:
 
 - `tabindex = "0"`: como se indicó anteriormente, este valor permite que los elementos que normalmente no se pueden tabular se conviertan en tabulables. Este es el valor más útil de `tabindex`.
 - `tabindex = "- 1"`: esto permite que los elementos que normalmente no se pueden tabular reciban el foco mediante programación, p. ej. a través de JavaScript o como destino de enlaces.
@@ -384,7 +384,7 @@ y esto es un mal texto de enlace:
 ```
 
 > [!NOTE]
-> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links). También encontrarás buenos y malos ejemplos en [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:
 
@@ -451,7 +451,7 @@ Ahora echa un vistazo a nuestro [ejemplo de tabla de bandas punk](https://github
 Consulte nuestro artículo sobre funciones avanzadas y accesibilidad de tablas HTML para obtener más detalles sobre las tablas de datos accesibles.
 
 > [!NOTE]
-> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced) para ver más detalles sobre tablas de datos accesibles.
+> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) para ver más detalles sobre tablas de datos accesibles.
 
 ## Alternativas de texto
 
@@ -491,7 +491,7 @@ Esto resalta la importancia de no solo usar nombres de archivo significativos en
 Una cosa a considerar es si tus imágenes tienen significado dentro del contenido, o si son puramente para decoración visual, por lo que no tienen significado. Si son decorativas, es mejor incluirlas en la página como imágenes de fondo CSS.
 
 > [!NOTE]
-> Lee [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) y [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
+> Lee [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images) y [Responsive images](/es/docs/Web/HTML/Guides/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
 
 Si deseas proporcionar información contextual adicional, deberías colocarla en el texto que rodea la imagen o dentro de un atributo `title`, como se muestra a continuación. En este caso, la mayoría de los lectores de pantalla leerán el texto alternativo, el atributo del título y el nombre del archivo. Además, los navegadores muestran el texto del título como información cuando se pasa por encima con el ratón.
 
@@ -507,7 +507,8 @@ Echemos otro vistazo al cuarto método:
 
 En este caso, no estamos usando el atributo `alt` en absoluto; en cambio, hemos presentado nuestra descripción de la imagen como un párrafo de texto normal, le hemos dado un `id` y luego usamos el atributo `aria-labelledby` para referirnos a ese `id`, que hace que los lectores de pantalla usen ese párrafo como texto alternativo o etiqueta para esa imagen. Esto es especialmente útil si desea utilizar el mismo texto como etiqueta para varias imágenes, algo que no es posible con `alt`.
 
-> **Nota:** `aria-labelledby` es parte de la especificación [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite a los desarrolladores añadir semántica extra a su marcado para mejorar su accesibilidad para lectores de pantalla cuando sea necesario. Para aprender más sobre cómo funciona, lee nuestro artículo [WAI-ARIA Basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics).
+> [!NOTE]
+> `aria-labelledby` es parte de la especificación [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/), que permite a los desarrolladores añadir semántica extra a su marcado para mejorar su accesibilidad para lectores de pantalla cuando sea necesario. Para aprender más sobre cómo funciona, lee nuestro artículo [WAI-ARIA Basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics).
 
 ### Otros mecanismos de texto alternativo
 
@@ -558,7 +559,7 @@ Los enlaces (el elemento `<a>` con un atributo `href`), según cómo se utilicen
 
 De forma predeterminada, los enlaces son visualmente diferentes de otros textos tanto en el color como en la decoración del texto, con enlaces azules y subrayados de forma predeterminada, morados y subrayados si se visitan, y con un anillo de enfoque cuando reciben el foco del teclado.
 
-El color no debe usarse como el único método para distinguir los enlaces del contenido que no enlaza. El color del texto del enlace, como todo el texto, debe ser significativamente diferente del color de fondo ([un contraste de 4.5:1](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). Además, los enlaces deben ser visualmente significativamente diferentes del texto sin enlaces. Con un requisito de contraste mínimo de 3:1 entre el texto del enlace y el texto circundante y entre los estados predeterminado, visitado y de enfoque / activo, y un contraste de 4:5 entre todos esos colores de estado y el color de fondo.
+El color no debe usarse como el único método para distinguir los enlaces del contenido que no enlaza. El color del texto del enlace, como todo el texto, debe ser significativamente diferente del color de fondo ([un contraste de 4.5:1](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)). Además, los enlaces deben ser visualmente significativamente diferentes del texto sin enlaces. Con un requisito de contraste mínimo de 3:1 entre el texto del enlace y el texto circundante y entre los estados predeterminado, visitado y de enfoque / activo, y un contraste de 4:5 entre todos esos colores de estado y el color de fondo.
 
 ### Eventos onclick
 
@@ -588,7 +589,7 @@ Las personas con problemas de baja visión, que navegan con la ayuda de tecnolog
 >
 ```
 
-Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una [descripción alternativa](/es/docs/Web/HTML/Element/img#alt).
+Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una [descripción alternativa](/es/docs/Web/HTML/Reference/Elements/img#alt).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways)

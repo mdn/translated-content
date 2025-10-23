@@ -3,11 +3,12 @@ title: ::-moz-range-track
 slug: Web/CSS/::-moz-range-track
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
-> **メモ:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
+> [!NOTE]
+> `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
 
 ## 構文
 
@@ -48,12 +49,10 @@ input[type="range"]::-moz-range-track {
 ## 関連情報
 
 - Gecko で使われる他の range 型の入力の他の部品をスタイル付けする擬似要素:
-
   - {{cssxref("::-moz-range-thumb")}} は溝をスライドするインジケーターを表します。
   - {{cssxref("::-moz-range-progress")}} はトラックの下の部分を表します。
 
 - 他のブラウザーで使われる同様の擬似要素:
-
   - {{cssxref("::-webkit-slider-runnable-track")}} WebKit および Blink (Safari, Chrome, Opera) が対応している擬似要素
   - {{cssxref("::-ms-track")}} Internet Explorer および Edge が対応している擬似要素
 

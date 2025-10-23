@@ -103,7 +103,7 @@ In the displayed output below, the selected URL will correspond with whether you
 
 {{EmbedLiveSample("Пример", 640, 320)}}
 
-For additional examples, see our guide to [responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+For additional examples, see our guide to [responsive images](/ru/docs/Web/HTML/Guides/Responsive_images).
 
 ## Спецификации
 
@@ -115,6 +115,6 @@ For additional examples, see our guide to [responsive images](/ru/docs/Learn/HTM
 
 ## Смотрите также
 
-- [Images in HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Images in HTML](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Responsive images](/ru/docs/Web/HTML/Guides/Responsive_images)
 - [Image file type and format guide](/ru/docs/Web/Media/Formats/Image_types)

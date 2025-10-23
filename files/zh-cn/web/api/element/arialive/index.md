@@ -5,7 +5,7 @@ slug: Web/API/Element/ariaLive
 
 {{DefaultAPISidebar("DOM")}}
 
-{{domxref("Element")}} 接口的 **`ariaLive`** 属性反映了 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性的值，该属性表示一个元素将被更新，并描述了用户代理、辅助技术和用户可以从[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)中期望的更新类型。
+{{domxref("Element")}} 接口的 **`ariaLive`** 属性反映了 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性的值，该属性表示一个元素将被更新，并描述了用户代理、辅助技术和用户可以从[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)中期望的更新类型。
 
 ## 值
 
@@ -20,7 +20,7 @@ slug: Web/API/Element/ariaLive
 
 ## 示例
 
-在此示例中，ID 为 `planetInfo` 的元素上的 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性设置为 `"polite"`。然后我们将值更新为 `"assertive"`。
+在此示例中，ID 为 `planetInfo` 的元素上的 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性设置为 `"polite"`。然后我们将值更新为 `"assertive"`。
 
 ```html
 <div role="region" id="planetInfo" aria-live="polite">

@@ -1,10 +1,9 @@
 ---
 title: 非同步的 JavaScript 介紹
 slug: Learn_web_development/Extensions/Async_JS/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。
 
@@ -45,7 +44,6 @@ btn.addEventListener("click", () => {
 
 1. 我們先取得已經在 DOM 裡面的 {{htmlelement("button")}} 元素的參考。
 2. 我們加入一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件監聽器，因此當按鈕被點擊時：
-
    1. 彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
    2. 當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
    3. 給予一段文字內容。
@@ -126,7 +124,7 @@ function displayImage(blob) {
 loadAsset("coffee.jpg", "blob", displayImage);
 ```
 
-在這裡我們新增一個 `displayImage()` 函式，將 blob 做為一個參數傳進去函式來產生物件網址，然後建立一個可以用網址來顯示的影像，並將這個網址附加在 document 的 `<body>` 標籤內。然而，我們再新增一個 `loadAsset()` 函式，將回呼作為參數並伴隨抓取資源的網址以及內容型式傳進去函式。它使用 `XMLHttpRequest` （通常縮寫成「 XHR 」）根據網址去抓取資源，並將回傳結果傳送到回呼去做一些事情。在這個例子回呼正在等待 XHR 完成下載資源（使用 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequest/load_event) 事件處理器）後，再將資源傳遞給回呼。
+在這裡我們新增一個 `displayImage()` 函式，將 blob 做為一個參數傳進去函式來產生物件網址，然後建立一個可以用網址來顯示的影像，並將這個網址附加在 document 的 `<body>` 標籤內。然而，我們再新增一個 `loadAsset()` 函式，將回呼作為參數並伴隨抓取資源的網址以及內容型式傳進去函式。它使用 `XMLHttpRequest` （通常縮寫成「 XHR 」）根據網址去抓取資源，並將回傳結果傳送到回呼去做一些事情。在這個例子回呼正在等待 XHR 完成下載資源（使用 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/load_event) 事件處理器）後，再將資源傳遞給回呼。
 
 回呼是多樣性的——它不只可以讓你控制執行函式的呼叫順序以及在不同函式間傳遞的參數，還可以讓你根據情況將資料傳遞到不同的函式。所以你可以根據下載的回傳結果採取不同的處理方式，例如 `processJSON()` ， `displayText()` 等等。
 

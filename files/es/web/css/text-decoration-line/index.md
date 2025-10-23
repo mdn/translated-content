@@ -5,11 +5,49 @@ l10n:
   sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
 ---
 
-{{CSSRef}}
-
 La propiedad **`text-decoration-line`** de [CSS](/es/docs/Web/CSS) establece el tipo de decoración que se utiliza en el texto de un elemento, como un subrayado o un sobrerayado.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-line")}}
+
+```css interactive-example-choice
+text-decoration-line: none;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline;
+```
+
+```css interactive-example-choice
+text-decoration-line: overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: line-through;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline line-through;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 Al configurar varias propiedades de decoración de línea a la vez, puede ser más conveniente usar la propiedad abreviada {{cssxref("text-decoration")}} en su lugar.
 

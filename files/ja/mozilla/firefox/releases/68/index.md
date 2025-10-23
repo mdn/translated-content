@@ -3,8 +3,6 @@ title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされました。このページでは、開発者に影響する Firefox 68 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -76,12 +74,11 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
 
 #### 廃止
 
-- [`<meta http-equiv="set-cookie">`](/ja/docs/Web/HTML/Element/meta) のサポートを廃止しました ([Firefox バグ 1457503](https://bugzil.la/1457503))。
+- [`<meta http-equiv="set-cookie">`](/ja/docs/Web/HTML/Reference/Elements/meta) のサポートを廃止しました ([Firefox バグ 1457503](https://bugzil.la/1457503))。
 
 ### CSS
 
 - [CSS Scroll Snapping](/ja/docs/Web/CSS/CSS_scroll_snap) を、最新バージョンの仕様書に更新しました ([Firefox バグ 1312163](https://bugzil.la/1312163)) および ([Firefox バグ 1544136](https://bugzil.la/1544136))。変更点は以下のとおりです:
-
   - `scroll-padding` 関係のプロパティ ([Firefox バグ 1373832](https://bugzil.la/1373832))
   - `scroll-margin` 関係のプロパティ ([Firefox バグ 1373833](https://bugzil.la/1373833))
   - {{CSSxRef("scroll-snap-align")}} ([Firefox バグ 1373835](https://bugzil.la/1373835))
@@ -142,10 +139,10 @@ _変更なし。_
 - Web Audio API の {{domxref("MediaStreamTrackAudioSourceNode")}} インターフェイスと {{domxref("AudioContext.createMediaStreamTrackSource()")}} メソッドをサポートしました ([Firefox バグ 1324548](https://bugzil.la/1324548))。
 - {{domxref("RTCDataChannel.negotiated")}} を実装しました ([Firefox バグ 1529695](https://bugzil.la/1529695))。
 - ストリームの "最初の音声トラック" の ID が辞書順で最初に来るトラックであると定義する現行の仕様書に準拠するよう、{{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} コンストラクターを更新しました ([Firefox バグ 1324548](https://bugzil.la/1324548))。
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} は安全でないコンテキストから使用できなくなりました。使用を試みると `NotAllowedError` 例外が発生します。安全なコンテキストは HTTPS を使用して読み込むもの、`file:///` スキームを使用して示すもの、`localhost` から読み込むものです。今のところ、必要であれば設定項目 `media.getusermedia.insecure.enabled` を `true` に設定すると、`getUserMedia()` を安全でないコンテキストから呼び出すことを再有効化できます ([Firefox バグ 1335740](https://bugzil.la/1335740))。
+- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} は保護されていないコンテキストから使用できなくなりました。使用を試みると `NotAllowedError` 例外が発生します。保護されたコンテキストは HTTPS を使用して読み込むもの、`file:///` スキームを使用して示すもの、`localhost` から読み込むものです。今のところ、必要であれば設定項目 `media.getusermedia.insecure.enabled` を `true` に設定すると、`getUserMedia()` を保護されていないコンテキストから呼び出すことを再有効化できます ([Firefox バグ 1335740](https://bugzil.la/1335740))。
 
   > [!NOTE]
-  > 将来、Firefox は {{domxref("navigator.mediaDevices")}} プロパティも安全でないコンテキストで廃止して、{{domxref("MediaDevices")}} API へのアクセスを完全に遮断する予定です。**これは Nightly ビルドですでに実施しています。**
+  > 将来、Firefox は {{domxref("navigator.mediaDevices")}} プロパティも保護されていないコンテキストで廃止して、{{domxref("MediaDevices")}} API へのアクセスを完全に遮断する予定です。**これは Nightly ビルドですでに実施しています。**
 
 #### 廃止
 

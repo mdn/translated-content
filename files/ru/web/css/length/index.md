@@ -5,7 +5,7 @@ slug: Web/CSS/length
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Types) `<length>` представляет единицу длины. Длина может быть использована в таких свойствах CSS как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, и {{Cssxref("text-shadow")}}.
+[CSS](/ru/docs/Web/CSS) [тип данных](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) `<length>` представляет единицу длины. Длина может быть использована в таких свойствах CSS как {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, и {{Cssxref("text-shadow")}}.
 
 > [!NOTE]
 > Хоть значения {{cssxref("&lt;percentage&gt;")}} также определяют размеры и могут использоваться в некоторых свойствах, принимающих значения типа `<length>`, они не являются `<length>` значениями.

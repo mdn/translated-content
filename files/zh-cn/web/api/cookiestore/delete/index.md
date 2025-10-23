@@ -2,7 +2,7 @@
 title: CookieStore：delete() 方法
 slug: Web/API/CookieStore/delete
 l10n:
-  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
@@ -26,9 +26,7 @@ delete(options)
 或
 
 - `options` {{optional_inline}}
-
   - : 一个包括以下属性的对象：
-
     - `name`
       - : 记录 cookie 名称的字符串。
     - `domain` {{Optional_Inline}}
@@ -36,7 +34,7 @@ delete(options)
     - `path` {{Optional_Inline}}
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `partitioned` {{Optional_Inline}}
-      - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+      - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 
 ### 返回值
 
@@ -54,7 +52,7 @@ delete(options)
 在此示例中，通过将 cookie 名称传递给 `delete()` 方法来删除 cookie。
 
 ```js
-const result = cookieStore.delete("cookie1");
+const result = await cookieStore.delete("cookie1");
 
 console.log(result);
 ```

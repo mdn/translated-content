@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Counter Styles")}}
 
-**`CSSCounterStyleRule`** インターフェイスは {{CSSxRef("@counter-style")}} [アットルール](/ja/docs/Web/CSS/At-rule)を表します。
+**`CSSCounterStyleRule`** インターフェイスは {{CSSxRef("@counter-style")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
 
 {{InheritanceDiagram}}
 

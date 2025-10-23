@@ -3,11 +3,46 @@ title: outline
 slug: Web/CSS/outline
 ---
 
-{{CSSRef}}
+La propiedad [CSS](/es/docs/Web/CSS) **`outline`** es una [forma reducida](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer una o más de las propiedades individuales de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} y {{cssxref("outline-color")}} en una sola declaración. En la mayoría de los casos el uso de este atajo es preferible y más conveniente.
 
-La propiedad [CSS](/es/docs/Web/CSS) **`outline`** es una [forma reducida](/es/docs/Web/CSS/Shorthand_properties) para establecer una o más de las propiedades individuales de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} y {{cssxref("outline-color")}} en una sola declaración. En la mayoría de los casos el uso de este atajo es preferible y más conveniente.
+{{InteractiveExample("CSS Demo: outline")}}
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgba(170, 50, 220, 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Al igual que con todas las propiedades abreviadas, cualquier subvalor omitido se establecerá en su valor inicial.
 

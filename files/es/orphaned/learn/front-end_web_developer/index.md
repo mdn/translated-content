@@ -27,13 +27,13 @@ Puedes trabajar en las secciones en orden, pero cada una también es autónoma. 
 
 No necesitas conocimientos previos para empezar este curso. Todo lo que necesitas es una computadora que pueda ejecutar navegadores web modernos, una conexión a Internet y la voluntad de aprender.
 
-Si no estás seguro de si el desarrollo de la interfaz de usuario web es para ti, y/o deseas una breve introducción antes de comenzar un curso más largo y completo, consulta una [Introducción a la Web](/es/docs/Learn/Getting_started_with_the_web).
+Si no estás seguro de si el desarrollo de la interfaz de usuario web es para ti, y/o deseas una breve introducción antes de comenzar un curso más largo y completo, consulta una [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website).
 
 ## Cómo obtener ayuda
 
 Hemos tratado de hacer que el desarrollo de la interfaz de usuario web sea lo más cómodo posible, pero probablemente todavía quedes encallado porque no entiendes algo o porque algún código simplemente no funciona.
 
-No entres en pánico. Todos hemos encallado, sin importar que seamos desarrolladores web principiantes o profesionales. El artículo [Aprender y obtener ayuda](/es/docs/Learn/Learning_and_getting_help) te brinda una serie de consejos para buscar información y ayudarte a ti mismo. Si aún estás atascado, no dudes en publicar una pregunta en nuestro [Foro de discusión](https://discourse.mozilla.org/c/mdn/learn/).
+No entres en pánico. Todos hemos encallado, sin importar que seamos desarrolladores web principiantes o profesionales. El artículo [Aprender y obtener ayuda](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) te brinda una serie de consejos para buscar información y ayudarte a ti mismo. Si aún estás atascado, no dudes en publicar una pregunta en nuestro [Foro de discusión](https://discourse.mozilla.org/c/mdn/learn/).
 
 Empecemos. ¡Diviértete!
 
@@ -53,9 +53,9 @@ No hay evaluaciones en esta parte del curso. Pero asegúrate de no saltarla. Es 
 
 #### Guías
 
-- [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software): configuración básica de las herramientas (lectura de 15 minutos)
-- [Información básica sobre la web y los estándares web](/es/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards) (lectura de 45 minutos)
-- [Aprender y obtener ayuda](/es/docs/Learn/Learning_and_getting_help) (lectura de 45 minutos)
+- [Instalación de software básico](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software): configuración básica de las herramientas (lectura de 15 minutos)
+- [Información básica sobre la web y los estándares web](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model) (lectura de 45 minutos)
+- [Aprender y obtener ayuda](/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) (lectura de 45 minutos)
 
 ### Semántica y estructura con HTML
 
@@ -71,9 +71,9 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Módulos
 
-- [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) (15 a 20 horas de lectura/ejercicios)
-- [Multimedia e inserción](/es/docs/Learn/HTML/Multimedia_and_embedding) (15 a 20 horas de lectura/ejercicios)
-- [tablas HTML](/es/docs/Learn/HTML/Tables) (5 a 10 horas de lectura/ejercicios)
+- [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) (15 a 20 horas de lectura/ejercicios)
+- [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) (15 a 20 horas de lectura/ejercicios)
+- [tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics) (5 a 10 horas de lectura/ejercicios)
 
 ### Estilo y diseño con CSS
 
@@ -81,7 +81,7 @@ Tiempo para completar: 90 a 120 horas
 
 #### Prerrequisitos
 
-Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender CSS. Primero deberías estudiar [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) por lo menos.
+Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender CSS. Primero deberías estudiar [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) por lo menos.
 
 #### ¿Cómo sabré que estoy listo para seguir adelante?
 
@@ -89,10 +89,10 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Módulos
 
-- [Primeros pasos de CSS](/es/docs/Learn/CSS/First_steps) (10 a 15 horas de lectura/ejercicios)
-- [Bloques de construcción de CSS](/es/docs/Learn/CSS/Building_blocks) (35 a 45 horas de lectura/ejercicios)
-- [Diseño de texto](/es/docs/Learn/CSS/Styling_text) (15 a 20 horas de lectura/ejercicios)
-- [Diseño CSS](/es/docs/Learn/CSS/CSS_layout) (30 a 40 horas de lectura/ejercicios)
+- [Primeros pasos de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) (10 a 15 horas de lectura/ejercicios)
+- [Bloques de construcción de CSS](/es/docs/Learn_web_development/Core/Styling_basics) (35 a 45 horas de lectura/ejercicios)
+- [Diseño de texto](/es/docs/Learn_web_development/Core/Text_styling) (15 a 20 horas de lectura/ejercicios)
+- [Diseño CSS](/es/docs/Learn_web_development/Core/CSS_layout) (30 a 40 horas de lectura/ejercicios)
 
 #### Recursos adicionales
 
@@ -104,7 +104,7 @@ Tiempo para completar: 135 a 185 horas
 
 #### Prerrequisitos
 
-Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender JavaScript. Primero deberías estudiar [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) por lo menos.
+Es recomendable que tengas conocimientos básicos de HTML antes de comenzar a aprender JavaScript. Primero deberías estudiar [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) por lo menos.
 
 #### ¿Cómo sabré que estoy listo para seguir adelante?
 
@@ -112,11 +112,11 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Módulos
 
-- [Primeros pasos en JavaScript](/es/docs/Learn/JavaScript/First_steps) (30 a 40 horas de lectura/ejercicios)
-- [Bloques de construcción de JavaScript](/es/docs/Learn/JavaScript/Building_blocks) (25 a 35 horas de lectura/ejercicios)
-- [Introducción a los objetos JavaScript](/es/docs/Learn/JavaScript/Objects) (25 a 35 horas de lectura/ejercicios)
-- [API web del lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs) (30 a 40 horas de lectura/ejercicios)
-- [JavaScript asincrónico](/es/docs/Learn/JavaScript/Asynchronous) (25 a 35 horas de lectura/ejercicios)
+- [Primeros pasos en JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) (30 a 40 horas de lectura/ejercicios)
+- [Bloques de construcción de JavaScript](/es/docs/Learn_web_development/Core/Scripting) (25 a 35 horas de lectura/ejercicios)
+- [Introducción a los objetos JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) (25 a 35 horas de lectura/ejercicios)
+- [API web del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_APIs) (30 a 40 horas de lectura/ejercicios)
+- [JavaScript asincrónico](/es/docs/Learn_web_development/Extensions/Async_JS) (25 a 35 horas de lectura/ejercicios)
 
 ### Formularios web — Trabajar con datos del usuario
 
@@ -132,7 +132,7 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Módulos
 
-- [Formularios web](/es/docs/Learn/Forms) (40 a 50 horas)
+- [Formularios web](/es/docs/Learn_web_development/Extensions/Forms) (40 a 50 horas)
 
 ### Hacer que la web funcione para todos
 
@@ -148,8 +148,8 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Módulos
 
-- [Pruebas en varios navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) (25 a 30 horas de lectura/ejercicios)
-- [Accesibilidad](/es/docs/Learn/Accessibility) (20 a 25 horas de lectura/ejercicios)
+- [Pruebas en varios navegadores](/es/docs/Learn_web_development/Extensions/Testing) (25 a 30 horas de lectura/ejercicios)
+- [Accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) (20 a 25 horas de lectura/ejercicios)
 
 ### Herramientas modernas
 
@@ -165,6 +165,6 @@ No hay artículos de evaluación específicos en este conjunto de módulos. Los 
 
 #### Módulos
 
-- [Git y GitHub](/es/docs/Learn/Tools_and_testing/GitHub) (lectura de 5 horas)
-- [Comprender las herramientas de desarrollo web del lado del cliente](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools) (lectura de 20 a 25 horas)
-- [Comprender los marcos de JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) (30 a 60 horas de lectura/ejercicios)
+- [Git y GitHub](/es/docs/Learn_web_development/Core/Version_control) (lectura de 5 horas)
+- [Comprender las herramientas de desarrollo web del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_tools) (lectura de 20 a 25 horas)
+- [Comprender los marcos de JavaScript de lado del cliente](/es/docs/Learn_web_development/Core/Frameworks_libraries) (30 a 60 horas de lectura/ejercicios)

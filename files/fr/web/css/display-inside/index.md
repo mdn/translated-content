@@ -1,37 +1,36 @@
 ---
-title: display-inside
+title: <display-inside>
 slug: Web/CSS/display-inside
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-Ces mots-clés définissent le type d'affichage ({{CSSxRef("display")}}) pour l'intérieur de l'élément. Ce type servira à la disposition du contenu de l'élément (si ce contenu n'est pas un élément remplacé). Ces mots-clés sont des valeurs de la propriété `display` et peuvent, historiquement être utilisé seul, ou plus récemment (cf. la spécification de niveau 3), être utilisé en combinaison avec un mot-clé {{CSSxRef("&lt;display-outside&gt;")}}.
+Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<display-inside>`** définit le type d'affichage ({{CSSxRef("display")}}) pour l'intérieur de l'élément. Ce type servira à la disposition du contenu de l'élément (si ce contenu n'est pas un élément remplacé). Ces mots-clés sont des valeurs de la propriété `display` et peuvent, historiquement être utilisé seul, ou plus récemment (cf. la spécification de niveau 3), être utilisé en combinaison avec un mot-clé {{CSSxRef("&lt;display-outside&gt;")}}.
 
 ## Syntaxe
 
-Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
+Valeurs valides pour `<display-inside>`&nbsp;:
 
-- `flow` {{Experimental_Inline}}
+- `flow`
+  - : L'élément dispose son contenu en utilisant la mise en forme de flux (mise en forme bloc et en ligne).
 
-  - : L'élément organise son contenu en utilisant la disposition en flux (disposition bloc/en ligne ou « _block and inline layout_ » en anglais).
+    Si son type d'affichage externe est `inline` et qu'il participe à un contexte de formatage bloc ou en ligne, il génère une boîte en ligne. Sinon, il génère une boîte conteneur de bloc.
 
-    Si le type d'affichage extérieur est `inline` ou `run-in` et que l'élément participe à un contexte de formatage bloc ou en ligne, il génèrera une boîte en ligne. Sinon, il génèrera un conteneur de bloc.
+    Selon la valeur d'autres propriétés (comme {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) et selon qu'il participe lui-même à un contexte de formatage bloc ou en ligne, il établit soit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) pour son contenu, soit il intègre son contenu dans le contexte de formatage parent.
 
-    Selon la valeur d'autres propriétés (telles que {{CSSxRef("position")}}, {{CSSxRef("float")}}, ou {{CSSxRef("overflow")}}) et selon que l'élément partcipe à un contexte de mise en forme de bloc ou en ligne, l'élément crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) pour son contenu ou intègre son contenu dans le contexte parent.
-
-- `flow-root` {{Experimental_Inline}}
-  - : L'élément génère un bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context), définissant ainsi une nouvelle racine pour le formatage.
+- `flow-root`
+  - : L'élément génère une boîte de type bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context), définissant la racine du formatage.
 - `table`
-  - : L'élément se comporte comme un élément HTML {{HTMLElement("table")}}. Il définit une boîte de bloc.
+  - : Ces éléments se comportent comme les éléments HTML {{HTMLElement("table")}}. Ils définissent une boîte de niveau bloc.
 - `flex`
-  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
+  - : L'élément se comporte comme un élément de type bloc et dispose son contenu selon le [modèle flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout).
 - `grid`
-  - : L'élément se comporte comme un élément de bloc et dispose son contenu selon [le modèle des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
-- `ruby` {{Experimental_Inline}}
-  - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme un élément HTML {{HTMLElement("ruby")}}.
+  - : L'élément se comporte comme un élément de type bloc et dispose son contenu selon le [modèle de grille](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
+- `ruby`
+  - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
 
 > [!NOTE]
-> Les navigateurs qui prennent en charge la syntaxe avec deux valeurs peuvent n'utiliser que `<display-inside>` lorsque c'est cohérent. Ainsi, avec `display: flex` ou `display: grid`, la valeur utilisée de `<display-outside>` sera nécessairement `block`. On a ainsi le résultat attendu car on doit avoir `display: grid` avec un conteneur qui soit un bloc.
+> Les navigateurs qui prennent en charge la syntaxe à deux valeurs, lorsqu'ils ne trouvent que la valeur interne (par exemple avec `display: flex` ou `display: grid`), définissent automatiquement la valeur externe à `block`. Cela donne le comportement attendu&nbsp;: par exemple, si vous indiquez `display: grid`, la boîte créée sur le conteneur de grille sera une boîte de niveau bloc.
 
 ### Syntaxe formelle
 
@@ -41,11 +40,20 @@ Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
 
 Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root` et crée donc un nouveau contexte de formatage de bloc qui contient l'élément flottant.
 
+### HTML
+
+```html
+<div class="box">
+  <div class="float">Je suis une boîte flottante&nbsp;!</div>
+  <p>Je suis un contenu à l'intérieur du conteneur.</p>
+</div>
+```
+
 ### CSS
 
 ```css
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
   display: flow-root;
 }
@@ -60,18 +68,13 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
 }
 ```
 
-### HTML
-
-```html
-<div class="box">
-  <div class="float">I am a floated box!</div>
-  <p>I am content inside the container.</p>
-</div>
-```
-
 ### Résultat
 
 {{EmbedLiveSample("Exemples", "100%", 180)}}
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -79,8 +82,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
 
 ## Voir aussi
 
-- {{CSSxRef("display")}}
-
+- Les types de données de la propriété {{CSSxRef("display")}}&nbsp;:
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

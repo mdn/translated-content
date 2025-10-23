@@ -3,11 +3,46 @@ title: border-inline-start
 slug: Web/CSS/border-inline-start
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-start`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-start`** es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.
 
-{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}
+{{InteractiveExample("CSS Demo: border-inline-start")}}
+
+```css interactive-example-choice
+border-inline-start: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-start: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-start: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Sintaxis
 

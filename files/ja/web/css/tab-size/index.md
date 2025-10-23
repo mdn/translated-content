@@ -5,11 +5,37 @@ l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
-
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
 
-{{EmbedInteractiveExample("pages/css/tab-size.html")}}
+{{InteractiveExample("CSS デモ: tab-size")}}
+
+```css interactive-example-choice
+tab-size: 10px;
+```
+
+```css interactive-example-choice
+tab-size: 16px;
+```
+
+```css interactive-example-choice
+tab-size: 24px;
+```
+
+```css interactive-example-choice
+tab-size: 4;
+```
+
+```html interactive-example
+<section id="default-example">
+  <pre id="example-element">  123</pre>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid;
+}
+```
 
 ## 構文
 

@@ -29,7 +29,7 @@ onerror = (event) => {};
 
 このイベントは {{domxref("IDBDatabase")}} にバブリングします。`event.target` プロパティは、バブリング元の {{domxref('IDBTransaction')}} オブジェクトへの参照です。
 
-詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)を参照してください。
+詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/Learn_web_development/Core/Scripting/Events#イベントのバブリングとキャプチャリング)を参照してください。
 
 ## 例
 

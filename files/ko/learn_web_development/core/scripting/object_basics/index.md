@@ -254,7 +254,7 @@ greeting: function() {
 }
 ```
 
-아마도 "this" 가 뭔지 의아하실 것입니다. `this` 키워드는 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킵니다. 위의 예제에서 `this` 는 `person` 객체와 동일합니다. 그럼 왜 직접 `person` 객체를 쓰지 않은걸까요? 앞으로 보게될 [입문자를 위한 객체 지향 JavaScript](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript) 문서에서 우리가 생성자를 공부하게 될 때, 혹은 그것 말고도 기타 등등의 상황에서 `this` 는 매우 유용하게 사용됩니다. 이 this 라는 녀석은 객체 멤버의 컨텍스트가 바뀌는 경우에도 언제나 정확한 값을 사용하게 해줍니다(예를 들어, 두개의 다른 `person` 객체가 각각 다른 이름으로 인스턴스로 생성된 상태에서 인사말을 출력하기 위해 객체의 name 을 참조해야 한다고 생각해보세요).
+아마도 "this" 가 뭔지 의아하실 것입니다. `this` 키워드는 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킵니다. 위의 예제에서 `this` 는 `person` 객체와 동일합니다. 그럼 왜 직접 `person` 객체를 쓰지 않은걸까요? 앞으로 보게될 [입문자를 위한 객체 지향 JavaScript](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript) 문서에서 우리가 생성자를 공부하게 될 때, 혹은 그것 말고도 기타 등등의 상황에서 `this` 는 매우 유용하게 사용됩니다. 이 this 라는 녀석은 객체 멤버의 컨텍스트가 바뀌는 경우에도 언제나 정확한 값을 사용하게 해줍니다(예를 들어, 두개의 다른 `person` 객체가 각각 다른 이름으로 인스턴스로 생성된 상태에서 인사말을 출력하기 위해 객체의 name 을 참조해야 한다고 생각해보세요).
 
 간략화된 person 객체를 가지고 설명을 좀 해보겠습니다.
 

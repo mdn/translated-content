@@ -5,11 +5,61 @@ l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
-
 **`white-space`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置如何处理元素内的{{Glossary("whitespace", "空白字符")}}。
 
-{{EmbedInteractiveExample("pages/css/white-space.html")}}
+{{InteractiveExample("CSS Demo: white-space")}}
+
+```css interactive-example-choice
+white-space: normal;
+```
+
+```css interactive-example-choice
+white-space: pre;
+```
+
+```css interactive-example-choice
+white-space: pre-wrap;
+```
+
+```css interactive-example-choice
+white-space: pre-line;
+```
+
+```css interactive-example-choice
+white-space: wrap;
+```
+
+```css interactive-example-choice
+white-space: collapse;
+```
+
+```css interactive-example-choice
+white-space: preserve nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <p>
+      But ere she from the church-door stepped She smiled and told us why: 'It
+      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
+      smiled, and passed it off Ere from the door she stept—
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 16rem;
+}
+
+#example-element p {
+  border: 1px solid #c5c5c5;
+  padding: 0.75rem;
+  text-align: left;
+}
+```
 
 这个属性指定了两件事：
 
@@ -57,9 +107,7 @@ white-space: unset;
 - `pre-line`
   - : 连续的空白符会被[合并](#合并空白字符)。在遇到换行符或 {{HTMLElement("br")}} 元素时，或者根据填充行框盒子的需要换行。
 - `break-spaces`
-
   - : 与 `pre-wrap` 的行为相同，除了：
-
     - 任何保留的空白序列总是占用空间，包括行末的。
     - 每个保留的空白字符后（包括空白字符之间）都可以被截断。
     - 这样保留的空间占用空间而不会挂起，从而影响盒子的固有尺寸（{{cssxref("min-content")}} 尺寸和 {{cssxref("max-content")}} 尺寸）。
@@ -131,7 +179,8 @@ white-space: unset;
 
 默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line` 值，每个制表符都会被转化为一个空格（U+0020）字符。
 
-> **备注：** **空格**和**其他空白分隔符**之间存在区别。定义如下：
+> [!NOTE]
+> **空格**和**其他空白分隔符**之间存在区别。定义如下：
 >
 > - 空格
 >   - : 空格（U+0020）、制表符（U+0009）和分段符（例如换行）

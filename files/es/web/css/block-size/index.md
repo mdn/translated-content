@@ -3,11 +3,49 @@ title: block-size
 slug: Web/CSS/block-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`block-size`** [CSS](/es/docs/Web/CSS) define el tamaño horizontal o vertical de los elementos en bloque, dependiendo de los modos de escritura. estos corresponden ya sea a la propiedad {{cssxref("width")}} o la propiedad {{cssxref("height")}}, dependiendo de los valores de {{cssxref("writing-mode")}}.
 
-{{EmbedInteractiveExample("pages/css/block-size.html")}}
+{{InteractiveExample("CSS Demo: block-size")}}
+
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the block-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Resumen
 

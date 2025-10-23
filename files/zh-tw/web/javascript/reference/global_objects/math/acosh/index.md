@@ -2,10 +2,8 @@
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
-
-{{JSRef}}
 
 **`Math.acosh()`** 靜態方法回傳數字的反雙曲餘弦值。也就是說，
 
@@ -17,16 +15,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.acosh(0.999999999999));
-// Expected output: NaN
+// 預期輸出：NaN
 
 console.log(Math.acosh(1));
-// Expected output: 0
+// 預期輸出：0
 
 console.log(Math.acosh(2));
-// Expected output: 1.3169578969248166
+// 預期輸出：1.3169578969248166
 
 console.log(Math.acosh(2.5));
-// Expected output: 1.566799236972411
+// 預期輸出：1.566799236972411
 ```
 
 ## 語法
@@ -70,6 +68,7 @@ Math.acosh(Infinity); // Infinity
 ## 參見
 
 - [`core-js` 中 `Math.acosh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.acosh` 的 es-shims polyfill](https://www.npmjs.com/package/math.acosh)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

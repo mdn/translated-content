@@ -26,9 +26,10 @@ l10n:
 
 例えば、この例では `loop` プロパティを `true` に設定し、トラックがループして再生されるようにしています。
 
-ユーザーは、`loopStart` と `loopEnd` プロパティを[範囲コントロール](/ja/docs/Web/HTML/Element/input/range)を使用して設定することができます。
+ユーザーは、`loopStart` と `loopEnd` プロパティを[範囲コントロール](/ja/docs/Web/HTML/Reference/Elements/input/range)を使用して設定することができます。
 
-> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop))ことができます。
+> [!NOTE]
+> [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop))ことができます。
 
 ```js
 let audioCtx;

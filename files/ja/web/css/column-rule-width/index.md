@@ -2,14 +2,44 @@
 title: column-rule-width
 slug: Web/CSS/column-rule-width
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
 
-{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}
+{{InteractiveExample("CSS デモ: column-rule-width")}}
+
+```css interactive-example-choice
+column-rule-width: thin;
+```
+
+```css interactive-example-choice
+column-rule-width: medium;
+```
+
+```css interactive-example-choice
+column-rule-width: thick;
+```
+
+```css interactive-example-choice
+column-rule-width: 12px;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 ## 構文
 
@@ -54,7 +84,7 @@ column-rule-width: unset;
 
 ```html-nolint live-sample___setting_a_thick_column_rule
 <p>
-  これは 3 つ段に分割されたテキストの束です。 <code>column-rule-style</code> プロパティは、段と段の間に引かれる線の太さを変更するために使用されます。すばらしいと思いませんか？
+  これは 3 段に分割されたテキストの束です。 `column-rule-width`プロパティは、段と段の間に引かれる線の太さを変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 

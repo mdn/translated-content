@@ -3,15 +3,13 @@ title: Famoso juego 2D usando JavaScript puro
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it")}}
 
 En este tutorial paso a paso creamos un juego de la MDN, sencillo y muy famoso, escrito íntegramente en JavaScript puro. Todos los elementos gráficos aparecerán dentro de la etiqueta {{htmlelement("canvas")}} de HTML5.
 
 Cada paso tiene ejemplos editables y listos para ejecutar, para que puedas ver qué aspecto debería tener el ejercicio en cada momento. Apenderás a utilizar el elemento {{htmlelement("canvas")}} para implementar mecánicas de juego fundamentales como la representación de imágenes, el movimiento, la detección de colisiones, los mecanismos de control y el final del juego ganando o perdiendo.
 
-Para aprovechar al máximo esta serie de artículos necesitas tener ya un conocimiento básico o intermedio de [JavaScript](/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Cuando termines este tutorial serás capaz de construir tus propios juegos Web.
+Para aprovechar al máximo esta serie de artículos necesitas tener ya un conocimiento básico o intermedio de [JavaScript](/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). Cuando termines este tutorial serás capaz de construir tus propios juegos Web.
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 

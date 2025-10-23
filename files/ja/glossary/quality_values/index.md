@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**品質値**、もしくは q 値や q ファクターは、値の優先順位をカンマ区切りのリストで記述するために使用されます。これはいくつかの [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)と HTML で許される特別な構文です。
+**品質値**、もしくは q 値や q ファクターは、値の優先順位をカンマ区切りのリストで記述するために使用されます。これはいくつかの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)と HTML で許される特別な構文です。
 
 値の重要性は接尾辞 `';q='` の直後に `0` と `1` の間の値が含まれ、最大 3 つの 10 進数で最高の優先度を示します。存在しない場合、既定値は `1` です。
 
@@ -43,5 +43,5 @@ text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 
 ## 詳細情報
 
-- 構文上で q 値を使用する [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers): {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Want-Digest")}}
+- 構文上で q 値を使用する [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers): {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Want-Digest")}}
 - [Header field definitions.](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)

@@ -2,7 +2,7 @@
 title: SnapEvent
 slug: Web/API/SnapEvent
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: 49bbddc34034e59a63c0b2cda79e45c94ea9daa9
 ---
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}

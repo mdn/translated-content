@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} の `cookie` プロパティで、文書に関連付けられた[クッキー](/ja/docs/Web/HTTP/Cookies)を読み書きすることができます。
+{{domxref("Document")}} の `cookie` プロパティで、文書に関連付けられた[クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を読み書きすることができます。
 これは実際のクッキーの値に対するゲッターとセッターとして動作します。
 
 ## 構文
@@ -31,7 +31,6 @@ document.cookie = newCookie;
 上記のコードで、 `newCookie` は `key=value` の形式の文字列であり、クッキーを設定したり更新したりします。なお、この方法を使用して一度に設定・更新できるクッキーは、一つだけです。次のことも考慮してください。
 
 - オプションとして次に挙げる値を設定することができます。 key と value のペアの後にセミコロンで区切って設定することで、クッキーを設定・更新することができます。
-
   - `;domain=ドメイン` (例えば、 `example.com` または `subdomain.example.com`): クッキーが送信されるホストです。
     指定されなければ、これは現在の文書の場所のホスト部分を既定とし、クッキーはサブドメインでは利用できません。
     ドメインが指定されれば、サブドメインも常に含まれます。
@@ -46,17 +45,15 @@ document.cookie = newCookie;
     > [!WARNING]
     > ユーザーのプライバシーを考慮するのであれば、ブラウザーの有効期限の管理に頼るのではなく、ウェブアプリの実装で指定した期間の経過後にクッキーを無効化することが重要です。
     > 多くのブラウザーはユーザーがクッキーを無期限に設定することができますが、これは安全ではありません。
-
     - 値の形式について知りたい方は、 {{jsxref("Date.toUTCString()")}} をご覧ください。
 
   - `;max-age=max-age-in-seconds`: クッキーの秒単位の最大寿命です（例えば、1 年であれば `60*60*24*365` または 31536000）。
 
   - `;partitioned`: クッキーが分離されたストレージを使用して格納されることを示します。詳細は [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
 
-  - `;path=パス`: このクッキーの `Path` 属性の値です（詳しくは、[クッキーの送信先の定義](/ja/docs/Web/HTTP/Cookies#cookie_の送信先の定義)を参照してください）。
+  - `;path=パス`: このクッキーの `Path` 属性の値です（詳しくは、[クッキーの送信先の定義](/ja/docs/Web/HTTP/Guides/Cookies#cookie_の送信先の定義)を参照してください）。
 
-  - `;samesite`: {{httpheader("Set-Cookie")}} ヘッダーの `SameSite` 属性は、クッキーがいつ送られるかを指定するためにサーバーによって設定されることがあります。利用可能な値は `lax`、`strict`、`none` です（[`SameSite` によるサードパーティクッキーの制御](/ja/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)も参照してください）。
-
+  - `;samesite`: {{httpheader("Set-Cookie")}} ヘッダーの `SameSite` 属性は、クッキーがいつ送られるかを指定するためにサーバーによって設定されることがあります。利用可能な値は `lax`、`strict`、`none` です（[`SameSite` によるサードパーティクッキーの制御](/ja/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)も参照してください）。
     - `lax` 値はすべての同一サイトリクエストと最上位のナビゲーション GET リクエストにクッキーを送信します。
       ユーザー追跡にはこれで十分ですが、多くの[クロスサイトリクエストフォージェリー](/ja/docs/Glossary/CSRF) (CSRF) 攻撃を防ぐことができます。
       これは現行ブラウザーでの既定値です。
@@ -68,7 +65,6 @@ document.cookie = newCookie;
 
 - クッキーの値の文字列に {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} を使用すると、文字列に (クッキーの値で許可されない) コンマ、セミコロン、ホワイトスペースを使用していないことを確認できます。
 - ユーザーエージェントの実装によっては、以下のクッキーの接頭辞に対応しています。
-
   - `__Secure-` ブラウザーに、セキュアなチャネルを通してリクエストが送信された場合にのみクッキーを含めるよう指示します。
   - `__Host-` ブラウザーに、安全なオリジンからのクッキーのみを使用することに加え、クッキーのスコープをサーバーから渡された path 属性に限定します。
     サーバーが path 属性を省略した場合は、リクエストの URI の「ディレクトリー」が使用されます。
@@ -355,7 +351,7 @@ Accept: */*
 
 ## 関連情報
 
-- [HTTP Cookie](/ja/docs/Web/HTTP/Cookies)
+- [HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies)
 - [DOM ストレージ](/ja/docs/Web/API/Web_Storage_API)
 - [`URL.pathname`](/ja/docs/Web/API/URL/pathname)
 - {{jsxref("Date.toUTCString()")}}

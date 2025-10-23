@@ -9,7 +9,7 @@ slug: Web/CSS/@charset
 
 A regra `@charset` especifica a codificação de caracteres utilizada na folha de estilo. Deve ser o primeiro elemento na folha de estilo e não ser precedida de qualquer caráter; uma vez que não é uma declaração aninhada, ele não pode ser usado dentro de um grupo condicional de regras. Se vários `@charset` são definidos, apenas o primeiro é usado, e não pode ser usado dentro de um atributo de estilo em um elemento HTML ou dentro do elemento {{ HTMLElement("style") }}, onde o conjunto de caracteres da página HTML é relevante.
 
-Esta regra at ([at-rule](/pt-BR/docs/Web/CSS/At-rule)) é útil quando se usa caracteres não ASCII em algumas propriedades CSS, como conteúdo.
+Esta regra at ([at-rule](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule)) é útil quando se usa caracteres não ASCII em algumas propriedades CSS, como conteúdo.
 
 Como existem várias maneiras de definir a codificação de caracteres em uma folha de estilo, o navegador vai tentar os seguintes métodos na seguinte ordem (e parar assim que um produzir um resultado):
 

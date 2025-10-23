@@ -34,19 +34,14 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
 ### 예외
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : 다음의 조건 아래서 발생됩니다:
-
     - _name_ 이 빈 문자열입니다.
     - 주어진 _name_ 아래의 생성자가 이미 등록되었습니다. 같은 이름을 두 번 등록하는 것은 허용되지 않습니다.
 
 - `TypeError` {{domxref("DOMException")}}
-
   - : 다음의 조건 아래서 발생됩니다:
-
     - _processorCtor_ 이 호출 가능한 생성자가 아닙니다.
-    - 생성자의 {{domxref("AudioWorkletProcessor.parameterDescriptors",
-        "parameterDescriptors")}} 속성이 존재하고 {{domxref("AudioParamDescriptor")}} 기반의 객체의 배열을 반환하지 않습니다.
+    - 생성자의 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 속성이 존재하고 {{domxref("AudioParamDescriptor")}} 기반의 객체의 배열을 반환하지 않습니다.
 
 ## 예제
 

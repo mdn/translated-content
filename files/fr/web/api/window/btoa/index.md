@@ -77,6 +77,6 @@ Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des
 ## Voir aussi
 
 - [Base64 encoding and decoding](/fr/docs/Glossary/Base64)
-- [Les URL de `données`](/fr/docs/Web/URI/Schemes/data)
+- [Les URL de `données`](/fr/docs/Web/URI/Reference/Schemes/data)
 - [`atob()`](/fr/docs/Web/API/Window/atob)
 - [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

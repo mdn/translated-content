@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7e649ddc14198ca9e55ac2ccfabc36a23bd16bb4
 ---
 
-{{CSSRef}}
-
 **CSS 座標変換** (CSS transforms) は、 CSS でスタイル付けされた要素をどのように二次元または三次元空間に座標変換するかを定義します。
 
 ## CSS 座標変換の動作
@@ -75,9 +73,9 @@ l10n:
 
 - [CSS 座標変換の利用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : CSS でスタイル付けされた要素をどのように座標変換するかについての手順を追ったチュートリアルです。
-- [座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : CSS オブジェクトモデルでピクセル位置を定義する方法を説明します。
-- [パフォーマンスの基礎: CSS 座標変換の使用](/ja/docs/Web/Performance/Fundamentals#css_変換を使用する)
+- [パフォーマンスの基礎: CSS 座標変換の使用](/ja/docs/Web/Performance/Guides/Fundamentals#css_変換を使用する)
   - : ウェブパフォーマンスの基礎について、 CSS 座標変換がどのようにパフォーマンスを向上させることができるかを含め、概説します。
 - [ウェブの行列演算](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : オブジェクトの座標変換を行列で表す方法を説明しています。
@@ -111,10 +109,10 @@ l10n:
   - [補間](/ja/docs/Glossary/Interpolation)
   - [重ね合わせコンテキスト](/ja/docs/Glossary/Stacking_context)
 - [SVG](/ja/docs/Web/SVG) の概念:
-  - [`<animate>`](/ja/docs/Web/SVG/Element/animate) 要素
-  - [`<animateTransform>`](/ja/docs/Web/SVG/Element/animateTransform) 要素
-  - [`<set>`](/ja/docs/Web/SVG/Element/set) 要素
-  - [`transform`](/ja/docs/Web/SVG/Attribute/transform) 要素
+  - [`<animate>`](/ja/docs/Web/SVG/Reference/Element/animate) 要素
+  - [`<animateTransform>`](/ja/docs/Web/SVG/Reference/Element/animateTransform) 要素
+  - [`<set>`](/ja/docs/Web/SVG/Reference/Element/set) 要素
+  - [`transform`](/ja/docs/Web/SVG/Reference/Attribute/transform) 要素
 
 ## 仕様書
 
@@ -122,6 +120,6 @@ l10n:
 
 ## 関連情報
 
-- [基本的な SVG 座標変換](/ja/docs/Web/SVG/Tutorial/Basic_Transformations)のチュートリアル
+- [基本的な SVG 座標変換](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)のチュートリアル
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
 - [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール

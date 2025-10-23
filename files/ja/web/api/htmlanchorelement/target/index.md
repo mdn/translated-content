@@ -10,14 +10,14 @@ l10n:
 
 **`target`** は {{domxref("HTMLAnchorElement")}} インターフェイスのプロパティで、リンク先のリソースを表示する場所を示す文字列です。
 
-これは {{HTMLElement("a")}} 要素の [`target`](/ja/docs/Web/HTML/Element/a#target) 属性を反映します。
+これは {{HTMLElement("a")}} 要素の [`target`](/ja/docs/Web/HTML/Reference/Elements/a#target) 属性を反映します。
 
 ## 値
 
 対象とするものを表す文字列。その値は次のいずれかになります。
 
 - {{HTMLElement("frame")}} の名前。
-- 次の[特定の値によるキーワード](/ja/docs/Web/HTML/Element/a#target)、`_blank`, `_self`, `_parent`, `_top` のいずれか。
+- 次の[特定の値によるキーワード](/ja/docs/Web/HTML/Reference/Elements/a#target)、`_blank`, `_self`, `_parent`, `_top` のいずれか。
 
 ## 例
 

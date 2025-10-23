@@ -20,9 +20,9 @@ original_slug: Learn/Server-side
 
 「Web の動作原理」を理解する必要があります。最初に次のトピックを読むのをお勧めします:
 
-- [ウェブサーバーとは](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- [ウェブサーバーにファイルをアップロードする方法](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [ウェブサーバーとは](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [ウェブサーバーにファイルをアップロードする方法](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
 
 基本的な理解があれば、この節のモジュールに進む準備ができているでしょう。
 
@@ -30,14 +30,14 @@ original_slug: Learn/Server-side
 
 このトピックは次のモジュールがあります。最初のモジュールから始めるべきで、次に続くモジュールのどれかに進んで、そこでウェブフレームワークを使ってとても有名な 2 つのサーバーサイド言語を使う方法が示されます。
 
-- [サーバーサイドウェブサイトプログラミングの最初の一歩](/ja/docs/Learn/Server-side/First_steps)
+- [サーバーサイドウェブサイトプログラミングの最初の一歩](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps)
   - : このモジュールではサーバー技術の無知な人向けに、サーバーサイドウェブプログラミングについての情報を提供します。それにはサーバーサイドプログラミングについての基本的な質問 — "それは何なのか", "クライアントサイドプログラミングと何が違うのか", "なぜ便利なのか" — や、サーバーサイドウェブフレームワークの概要や、あなたのサイトに最も合うものを選ぶ方法のガイドが含まれます。最後にウェブサーバーセキュリティの入門セクションがあります。
-- [Djangoウェブフレームワーク (Python)](/ja/docs/Learn/Server-side/Django)
+- [Djangoウェブフレームワーク (Python)](/ja/docs/Learn_web_development/Extensions/Server-side/Django)
   - : Django は Python で書かれた、極めて人気のある、完全な機能のあるサーバーサイドフレームワークです。このモジュールではなぜ Django がこうも良いウェブサーバーフレームワークであるのかや、開発環境のセットアップ方法や、これを使ってよくあるタスクを行う方法を説明します。
-- [Expressウェブフレームワーク (Node.js/JavaScript)](/ja/docs/Learn/Server-side/Express_Nodejs)
+- [Expressウェブフレームワーク (Node.js/JavaScript)](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
   - : Express は JavaScript で書かれて node.js の実行環境でホストされる、人気のあるウェブフレームワークです。このモジュールではこのフレームワークの主な利点や、開発環境のセットアップ方法や、よくある Web 開発・デプロイのタスクを行う方法を説明します。
 
 ## 関連情報
 
-- [フレームワークなしの Node サーバー](/ja/docs/Learn/Server-side/Node_server_without_framework)
+- [フレームワークなしの Node サーバー](/ja/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework)
   - : この記事では、フレームワークを使用せずに、Node.js だけで構築された単純な静的ファイルサーバーを紹介します。

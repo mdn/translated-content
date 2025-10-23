@@ -37,7 +37,6 @@ var isActivelyProcessing = audioWorkletProcessor.process(
 ### 매개변수
 
 - `inputs`
-
   - : 노드에 연결된 _inputs_ 의 배열인데, 이것의 각각의 원소는 결국 _channel_ 들의 배열입니다. 각 _channel_ 은 128개의 샘플을 포함하고 있는 {{jsxref("Float32Array")}}입니다. 예를 들자면, `inputs[n][m][i]` 는 _n_ 번째 입력, 그 입력의 _m_ 번째 채널, 그 채널의 _i_ 번째 샘플에 접근할 것입니다.
 
     각 샘플 값은 `[-1 .. 1]` 의 범위 내에 있습니다.
@@ -49,7 +48,6 @@ var isActivelyProcessing = audioWorkletProcessor.process(
 - `outputs`
   - : 구조적으로 `inputs` 매개변수와 유사한 _outputs_ 의 배열. 이것은 `process()` 메서드의 실행 중에 채워지도록 의도되었습니다. 각 출력 채널은 기본적으로 0으로 채워집니다 — 출력 배열이 수정되지 않는 한 프로세서는 무음을 출력할 것입니다.
 - `parameters`
-
   - : 문자열 키와 {{jsxref("Float32Array")}} 값들을 포함하고 있는 객체. {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter를 사용해 정의된 각각의 사용자 정의 {{domxref("AudioParam")}}에 대해, 이 객체의 키는 그 {{domxref("AudioParam")}}의 `name` 이고, 그 값은 {{jsxref("Float32Array")}}입니다. 배열의 값들은 예정된 자동화 이벤트를 고려함으로써 계산됩니다.
 
     만약 이 매개변수의 자동화 비율이[`"a-rate"`](/ko/docs/Web/API/AudioParam#a-rate)라면, 배열은 128개의 값 — 현재 오디오 블럭에 있는 각 프레임에 대해 하나 — 을 포함할 것입니다. 만약 현재 블럭에 의해 표현된 시간 중에 발생한 자동화가 없다면, 128개의 동일한 값 대신 배열은 모든 블럭에 대해 변함없는 하나의 값을 포함할 것입니다.

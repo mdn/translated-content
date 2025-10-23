@@ -40,7 +40,8 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
    );
    ```
 
-   > **备注：** `offset` 的值必须是在 **\[0.0, 1.0]** 这个区间内，且须升序排列。
+   > [!NOTE]
+   > `offset` 的值必须是在 **\[0.0, 1.0]** 这个区间内，且须升序排列。
 
    并非所有的关键帧都需要设置 `offset`。没有指定 `offset` 的关键帧将与相邻的关键帧均匀间隔。
 

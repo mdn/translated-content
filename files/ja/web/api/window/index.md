@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
 {{APIRef("DOM")}}
@@ -25,15 +25,13 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 
 オブジェクトであるプロパティ（例えば、組み込み要素のプロトタイプを上書きするためのもの）は、後述の個別セクションに記載しています。
 
-- {{domxref("Window.caches")}} {{ReadOnlyInline}}
+- {{domxref("Window.caches")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在のコンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトを返します。このオブジェクトはオフラインで使用する資産を格納したり、リクエストに対して独自のレスポンスを生成したりするような機能が利用できます。
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : {{domxref("Window.navigator")}} の別名です。
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
   - : このプロパティは、現在のウィンドウが閉じているかどうかを示します。
-- {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : ブラウザーのデバッグコンソールへアクセスするための console オブジェクトへの参照を返します。
-- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 現在の文書コンテキストの {{domxref("CookieStore")}} オブジェクトへの参照を返します。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 現在の文書が 無信頼の {{htmlelement("iframe")}} 内で読み込まれたかどうかを示す論理値を返します。詳しくは[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
@@ -66,9 +64,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : ブラウザーウィンドウのコンテンツ領域の幅を取得し、もしあれば、垂直スクロールバーを含みます。
 - {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
-  - : コンテキストが、安全なコンテキストを必要とする機能を使用することができるかどうかを表します。
+  - : コンテキストが、保護されたコンテキストを必要とする機能を使用することができるかどうかを表します。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) が、[`launch_handler`](/ja/docs/Web/Manifest/launch_handler) の `client_mode` が `focus-existing`、`navigate-new`、`navigate-existing` のいずれかで起動された場合、`launchQueue`　は {{domxref("LaunchQueue")}} クラスへのアクセスを提供し、PWA にカスタム起動ナビゲーション処理を実装することができます。
+  - : [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) が、[`launch_handler`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) の `client_mode` が `focus-existing`、`navigate-new`、`navigate-existing` のいずれかで起動された場合、 `launchQueue` は {{domxref("LaunchQueue")}} クラスへのアクセスを提供し、 PWA にカスタム起動ナビゲーション処理を実装することができます。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : ウィンドウ内のフレームの数を返します。 {{domxref("window.frames")}} も参照してください。
 - {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
@@ -86,14 +84,14 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.name")}}
   - : ウィンドウ名を取得 / 設定します。
 - {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 現在の `window` に関連付けられた {{domxref("Navigation")}} オブジェクトを返します。{{domxref("Navigation API")}} のエントリーポイントです。
+  - : 現在の `window` に関連付けられた {{domxref("Navigation")}} オブジェクトを返します。[ナビゲーション API](/ja/docs/Web/API/Navigation_API) のエントリーポイントです。
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : navigator オブジェクトへの参照を返します。
 - {{domxref("Window.opener")}}
   - : 現在のウィンドウを開いたウィンドウへの参照を返します。
 - {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : グローバルオブジェクトのオリジンを、文字列としてシリアライズして返します。
-- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}}
   - : このウィンドウがオリジンキーエージェントクラスターに属している場合は `true` を返します。
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : ブラウザーウィンドウの外側の高さを取得します。
@@ -158,8 +156,6 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : 外部の検索プロバイダーをブラウザーに追加するための関数を持つオブジェクトを返します。
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 端末の自然な方向に対するビューポートの方向を度単位（90 度単位で増加）で返します。
-- {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : サイドバーの window オブジェクトへの参照を返します。
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
   - : ブラウザー下部のステータスバーのテキストを取得 / 設定します。
 
@@ -179,20 +175,22 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : {{domxref("Window.requestAnimationFrame")}} によって過去にスケジューリングされたコールバックをキャンセルできます。
 - {{domxref("Window.cancelIdleCallback()")}}
   - : {{domxref("Window.requestIdleCallback")}} によって過去にスケジューリングされたコールバックをキャンセルできます。
-- {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : {{domxref("setInterval()")}} で繰り返し実行されるよう設定された命令をキャンセルします。
-- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : {{domxref("setTimeout()")}} で遅延実行するよう設定した命令をキャンセルします。
+- {{domxref("Window.clearInterval()")}}
+  - : {{domxref("Window.setInterval()")}} で繰り返し実行されるよう設定された命令をキャンセルします。
+- {{domxref("Window.clearTimeout()")}}
+  - : {{domxref("Window.setTimeout()")}} で遅延実行するよう設定した命令をキャンセルします。
 - {{domxref("Window.close()")}}
   - : 現在のウィンドウを閉じます。
 - {{domxref("Window.confirm()")}}
   - : ユーザーの応答が必要なメッセージを持つダイアログを表示します。
-- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
   - : さまざまな画像ソースを受け入れ、{{domxref("ImageBitmap")}} に解決される {{jsxref("Promise")}} を返します。任意で、始点 _(sx, sy)_ から幅 sw、高さ sh の長方形でソースを切り抜くことができます。
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : コンソールにメッセージを出力します。
-- {{domxref("fetch", "Window.fetch()")}}
+- {{domxref("Window.fetch()")}}
   - : ネットワークからリソースを取り込む処理を開始します。
+- {{domxref("Window.fetchLater()")}} {{experimental_inline}}
+  - : 遅延フェッチを作成します。これは、このページから移動したとき （ページが破棄されたり、 [bfcache](/ja/docs/Glossary/bfcache) に入ったとき）、または指定された `activateAfter` タイムアウト後に、いずれか早い方で送信されます。
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : ウィンドウ内で指定された文字列を検索します。
 - {{domxref("Window.focus()")}}
@@ -221,9 +219,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : ユーザーが入力ダイアログに入力したテキストを返します。
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : ローカルで利用できるフォントフェイスを表す {{domxref("FontData")}} オブジェクトの配列で履行された {{jsxref("Promise")}} を返します。
-- {{domxref("queueMicrotask", "Window.queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
   - : ブラウザーのイベントループに制御を返す前に、安全な時点で実行されるマイクロタスクをキューに入れます。
-- {{domxref("reportError", "Window.reportError()")}}
+- {{domxref("Window.reportError()")}}
   - : 処理されない例外をエミュレートして、スクリプトのエラーを報告します。
 - {{domxref("Window.requestAnimationFrame()")}}
   - : アニメーションが進行中であることをブラウザーに伝えて、次のアニメーションフレームのためにウィンドウの再描画を予定するよう要求します。
@@ -243,9 +241,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : 文書を指定したページ数分、スクロールします。
 - {{domxref("Window.scrollTo()")}}
   - : 文書内の特定の位置に、ウィンドウをスクロールします。
-- {{domxref("setInterval", "Window.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
   - : ミリ秒単位で指定した時間が経過するたびに関数を実行するようスケジューリングします。
-- {{domxref("setTimeout()", "Window.setTimeout()")}}
+- {{domxref("Window.setTimeout()")}}
   - : 指定した時間が経過したら関数を実行するようスケジューリングします。
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : ユーザーがディレクトリーを選択できるディレクトリーピッカーを表示します。
@@ -257,23 +255,17 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : コンテンツに応じてウィンドウのサイズを調整します。
 - {{domxref("Window.stop()")}}
   - : ウィンドウの読み込み処理を停止します。
-- {{domxref("structuredClone", "Window.structuredClone()")}}
+- {{domxref("Window.structuredClone()")}}
   - : 指定された値の[ディープクローン](/ja/docs/Glossary/Deep_copy)を、[構造化クローンアルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて作成します。
-- {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
-  - : 現在の chrome ウィンドウ (UI) のコマンドの状態を更新します。
 
 ### 非推奨のメソッド
 
-- {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : ウィンドウの履歴をひとつ戻ります。このメソッドは廃止されました。代わりに {{domxref("History.back", "window.history.back()")}} を使用してください。
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
-  - : 特定のタイプのイベントをすべてキャプチャするよう、ウィンドウに登録します。
+  - : 特定の種類のイベントをすべてキャプチャするよう、ウィンドウに登録します。
 - {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : `setImmediate` で設定した繰り返し処理をキャンセルします。
-- {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 履歴でひとつ先の文書に移動します。このメソッドは廃止されました。代わりに {{domxref("History.forward", "history.forward()")}} を使用してください。
+  - : `setImmediate()` で設定した繰り返し処理をキャンセルします。
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
-  - : 特定のタイプのイベントのキャプチャを解放します。
+  - : 特定の種類のイベントのキャプチャを解放します。
 - {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : ウェブサイトやアプリが自分自身で使用するためにサンドボックス化されたファイルシステムにアクセスすることができます。
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -350,8 +342,12 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
   - : URL のフラグメント識別子 (URL の中で `#` 記号で始まり、それに続く部分) が変化したときに発生します。
 - {{domxref("Window/pagehide_event", "pagehide")}}
   - : ブラウザーが現在の文書を非表示にして、その場所にセッションの履歴とは異なる文書を表示するよう切り替えているときに送信されます。これはたとえば、ユーザーが「戻る」ボタンをクリックしたとき、または「進む」ボタンをクリックしてセッション履歴を先に進めたときに発生します。
+- {{domxref("Window.pagereveal_event", "pagereveal")}}
+  - : ネットワークから新しい文書を読み込んだとき、または文書をアクティブにしたとき（[バック/フォワードキャッシュ](/ja/docs/Glossary/bfcache) (bfcache) または[事前レンダリング](/ja/docs/Glossary/Prerender)から）に、文書が最初にレンダリングされるときに発行されます。
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : ページが最初に読み込まれたときだけでなく、ユーザーが同じタブ内で別のページに移動した後にページに戻ったときなど、ナビゲーションタスクのためにブラウザーが文書を表示するときに送信されます。
+- {{domxref("Window.pageswap_event", "pageswap")}}
+  - : ナビゲーションにより文書がアンロードされようとしたときに発行されます。
 - {{domxref("Window/popstate_event", "popstate")}}
   - : アクティブな履歴項目が変化したときに発生します。
 
@@ -392,6 +388,13 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : JavaScript の {{jsxref("Promise")}} が拒否されたものの、拒否を処理するハンドラーがないときに送られます。
 
+### スクロールイベント
+
+- {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : スクロール操作の終わりに、新しいスクロールスナップターゲットが選択されたときに、スクロールコンテナーで発行されます。
+- {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : 新しいスクロールスナップターゲットが待機しているとブラウザーが判断したときに、スクロールコンテナーで発行されます。つまり、現在のスクロール操作が終わると選択されます。
+
 ### 非推奨のイベント
 
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
@@ -407,9 +410,127 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : VR 機器の表示状態が変化したとき（表示から非表示、または非表示から非表示になったとき）に発行されます。
 
+### バブリングするイベント
+
+バブリングするイベントすべてが `Window` オブジェクトに到達するわけではありません。 `Window` オブジェクトで待ち受けすることができるのは、以下のイベントだけです。
+
+- `abort`
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
+- {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}}
+- `cancel`
+- {{domxref("HTMLMediaElement/canplay_event", "canplay")}}
+- {{domxref("HTMLMediaElement/canplaythrough_event", "canplaythrough")}}
+- {{domxref("HTMLElement/change_event", "change")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("HTMLDialogElement/close_event", "close")}}
+- {{domxref("HTMLCanvasElement/contextlost_event", "contextlost")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("HTMLCanvasElement/contextrestored_event", "contextrestored")}}
+- {{domxref("Element/copy_event", "copy")}}
+- {{domxref("HTMLTrackElement/cuechange_event", "cuechange")}}
+- {{domxref("Element/cut_event", "cut")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("HTMLElement/drag_event", "drag")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
+- {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
+- {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
+- {{domxref("HTMLMediaElement/ended_event", "ended")}}
+- {{domxref("HTMLFormElement/formdata_event", "formdata")}}
+- {{domxref("Element/input_event", "input")}}
+- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}}
+- {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}}
+- {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/paste_event", "paste")}}
+- {{domxref("HTMLMediaElement/pause_event", "pause")}}
+- {{domxref("HTMLMediaElement/play_event", "play")}}
+- {{domxref("HTMLMediaElement/playing_event", "playing")}}
+- {{domxref("HTMLMediaElement/progress_event", "progress")}}
+- {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}}
+- {{domxref("HTMLFormElement/reset_event", "reset")}}
+- {{domxref("Element/scrollend_event", "scrollend")}}
+- {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
+- {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
+- {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
+- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
+- {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
+- {{domxref("HTMLFormElement/submit_event", "submit")}}
+- {{domxref("HTMLMediaElement/suspend_event", "suspend")}}
+- {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}}
+- {{domxref("HTMLElement/toggle_event", "toggle")}}
+- {{domxref("HTMLMediaElement/volumechange_event", "volumechange")}}
+- {{domxref("HTMLMediaElement/waiting_event", "waiting")}}
+- {{domxref("Element/wheel_event", "wheel")}}
+
 ## インターフェイス
 
 [DOM リファレンス](/ja/docs/Web/API/Document_Object_Model)をご覧ください。
+
+## Window でのイベントの待ち受け
+
+HTML 要素には、イベントを待ち受ける 3 つの方法があります。
+
+- {{domxref("EventTarget.addEventListener")}} メソッドを用いて、イベントリスナーを要素へ追加する。
+- JavaScript で、要素の `onイベント名` プロパティにイベントハンドラーを代入する。
+- HTML で、 `on` の接頭辞の付いた属性を要素へ追加する。
+
+Window オブジェクトのイベントを待ち受けするには、一般的には最初の 2 つの方法しか使用できません。これは、 Window には対応する HTML 要素がないためです。ただし、2 番目または 3 番目の方法を使用して、 `Window` の文書が持つ {{HTMLElement("body")}} （または非推奨の {{HTMLElement("frameset")}}）要素にリスナーを追加できる、特定のイベントグループがあります。これらのイベントは次のとおりです。
+
+- `afterprint`
+- `beforeprint`
+- `beforeunload`
+- `blur`
+- `error`
+- `focus`
+- `hashchange`
+- `languagechange`
+- `load`
+- `message`
+- `messageerror`
+- `offline`
+- `online`
+- `pagehide`
+- `pagereveal`
+- `pageshow`
+- `pageswap`
+- `popstate`
+- `rejectionhandled`
+- `resize`
+- `scroll`
+- `storage`
+- `unhandledrejection`
+- `unload`
+
+つまり、次の 2 つは厳密に同等です。
+
+```js
+window.onresize = (e) => console.log(e.currentTarget);
+document.body.onresize = (e) => console.log(e.currentTarget);
+```
+
+```html
+<body onresize="console.log(event.currentTarget)"></body>
+```
+
+3 つのケースすべてで、`Window` オブジェクトが `currentTarget` としてログ出力されています。
 
 ## 仕様書
 

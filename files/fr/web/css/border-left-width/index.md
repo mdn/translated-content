@@ -7,7 +7,46 @@ slug: Web/CSS/border-left-width
 
 La propriété **`border-left-width`** définit l'épaisseur de la bordure pour le côté gauche d'un élément.
 
-{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
+{{InteractiveExample("CSS Demo: border-left-width")}}
+
+```css interactive-example-choice
+border-left-width: thick;
+```
+
+```css interactive-example-choice
+border-left-width: 2em;
+```
+
+```css interactive-example-choice
+border-left-width: 4px;
+```
+
+```css interactive-example-choice
+border-left-width: 2ex;
+```
+
+```css interactive-example-choice
+border-left-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntaxe
 
@@ -32,9 +71,7 @@ border-left-width: unset;
 ### Valeurs
 
 - `<br-width>`
-
   - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté gauche de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
-
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
@@ -96,14 +133,12 @@ border-left-width: unset;
 ## Voir aussi
 
 - Les autres propriétés liées à la largeur de la bordure :
-
   - {{cssxref("border-right-width")}},
   - {{cssxref("border-top-width")}},
   - {{cssxref("border-bottom-width")}},
   - {{cssxref("border-width")}}
 
 - Les autres propriétés CSS liées à la bordure du côté gauche :
-
   - {{cssxref("border")}},
   - {{cssxref("border-left")}},
   - {{cssxref("border-left-style")}},

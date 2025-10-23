@@ -2,10 +2,8 @@
 title: 構文の節
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 l10n:
-  sourceCommit: 07578e7d8231894eb9eb463ac47effa83aa2bb23
+  sourceCommit: 593fbf22e45cc0bf399aae1cf921af86885dd364
 ---
-
-{{MDNSidebar}}
 
 MDN リファレンスページの構文の節には、機能が持つ正確な構文を定義する構文ボックスがあります（例えば、どのような引数が受け入れられるか、どれがオプションかなど）。この記事では、リファレンス記事の構文ボックスの書き方を説明します。
 
@@ -51,7 +49,7 @@ slice(start, end)
 
 #### 構文ブロック
 
-構文ブロックは、次のように始めてください（{{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} ページを参照）。
+構文ブロックは、次のように始めてください（{{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} ページを参照）。
 
 ```js-nolint
 new IntersectionObserver(callback, options)
@@ -106,7 +104,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 形式文法記法（[BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form) を使用したもの）は構文の節で使用すべきではありません。代わりに[前述](#複数行/オプション引数)のような複数行の書式に展開したものを使用してください。
 
-形式的な記法により、複雑な構文を簡潔に記述することができますが、多くの開発者には馴染みがなく、特定のプログラミング言語で有効な構文と\_矛盾する可能性があります。例えば、「`[ ]`」は「オプション引数」と JavaScript の配列 ({{jsxref("Array")}}) の両方の意味があります。これは以下の {{jsxref("Array.prototype.slice()")}} の形式文法で見ることができます。
+形式的な記法により、複雑な構文を簡潔に記述することができますが、多くの開発者には馴染みがなく、特定のプログラミング言語で有効な構文と\_矛盾する可能性があります。例えば、 `[ ]` は「オプション引数」と JavaScript の配列 ({{jsxref("Array")}}) の両方の意味があります。これは以下の {{jsxref("Array.prototype.slice()")}} の形式文法で見ることができます。
 
 ```js-nolint
 arr.slice([begin[, end]])
@@ -203,7 +201,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
 #### 例外の項
 
-最後に、「例外」の項を設置して、コンストラクターやメソッドの呼び出し時に問題が発生した場合にどの例外が発生するかを説明してください。発生する原因としては、引数名の綴りが間違っていたり、間違ったデータ型の値が与えられたり、呼び出された環境に問題があったり (例えば、安全なコンテキストで実行する機能を安全でないコンテキストで実行しようとした場合など)、その他の理由であったりする場合などです。
+最後に、「例外」の項を設置して、コンストラクターやメソッドの呼び出し時に問題が発生した場合にどの例外が発生するかを説明してください。発生する原因としては、引数名の綴りが間違っていたり、間違ったデータ型の値が与えられたり、呼び出された環境に問題があったり (例えば、保護されたコンテキストで実行する機能を保護されていないコンテキストで実行しようとした場合など)、その他の理由であったりする場合などです。
 
 メソッドで発生する例外を特定するには、仕様を十分に精査する必要があります。機能がどのように動作するかについて、仕様書の一つ一つの説明を調べると、一般に例外とそれが発生する状況の確実な一覧を得ることができます。
 
@@ -240,7 +238,7 @@ CSS プロパティページには「構文」の節があり、ふつうはペ�
 
 構文の節の中には、次のような内容が見られるでしょう。
 
-#### 説明文は任意
+#### 任意の説明文
 
 CSS プロパティによってはそれ自体が説明的であり、それ以上の説明が本当に必要ない場合があります (例えば {{CSSxRef("color")}})。一方、より複雑で、複数の値などを含む構文の順序の説明が必要なものもあります ({{CSSxRef("animation")}} を参照)。そのような場合、項が始まる前に追加の説明を加えることができます。
 
@@ -250,11 +248,10 @@ CSS プロパティによってはそれ自体が説明的であり、それ以�
 
 #### 形式文法
 
-最後の項、「形式文法」は [MDN data リポジトリー](https://github.com/mdn/data)の CSS ディレクトリーにあるデータから自動的に生成されます。タイトルの下で `CSSSyntax` マクロ呼び出しを記述するだけで、残りのことはマクロがやってくれます。
+最後の節「形式文法」は、 `\{{CSSSyntax}}` マクロを使用して自動的に生成されます。このマクロは、[@webref/css npm パッケージ](https://www.npmjs.com/package/@webref/css)を使用して CSS 仕様書からデータを取得します。文書内の形式文法を記載するには、次のようにします。
 
-唯一の問題は、必要なデータが存在することを確認することです。 [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) ファイルに、文書化しているプロパティの項目が含まれている必要があり、 [types.json](https://github.com/mdn/data/blob/main/css/types.json) ファイルには、プロパティの値で使用されるすべての値の型の項目が含まれている必要があります。
-
-これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
+1. `## 形式文法` のように見出しを追加します。
+2. この見出しのちょおっかに `\{{CSSSyntax}}` マクロを追加します。
 
 ### セレクター
 
@@ -296,7 +293,7 @@ If-None-Match: *
 
 ### HTTP リクエストメソッド
 
-リクエストメソッドの構文は実に単純で、構文ブロックを設置し、 "Syntax Box" スタイルを用いてスタイル付けし、どのようにメソッドの構文を構成するかを示すだけです。 [GET メソッド](/ja/docs/Web/HTTP/Methods/GET)の構文は次のようになります。
+リクエストメソッドの構文は実に単純で、構文ブロックを設置し、 "Syntax Box" スタイルを用いてスタイル付けし、どのようにメソッドの構文を構成するかを示すだけです。 [GET メソッド](/ja/docs/Web/HTTP/Reference/Methods/GET)の構文は次のようになります。
 
 ```http
 GET /index.html

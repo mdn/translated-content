@@ -7,11 +7,11 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 
 Получив базовые знания, теперь мы более подробно рассмотрим элементы, используемые для придания структуры и значения различным частям форм.
 
-| Уровень подготовки: | Основы компьютерной грамотности, и базовые [знания HTML](/ru/docs/Learn/HTML/Introduction_to_HTML).                            |
+| Уровень подготовки: | Основы компьютерной грамотности, и базовые [знания HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content). |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Цель:               | Разобраться как структурировать HTML формы и задавать им семантику для того, чтобы они были удобны и доступны в использовании. |
 
-Гибкость HTML форм делает их одной из самых сложных структур в [HTML](/ru/docs/Learn/HTML); вы можете создать любую форму, используя элементы и атрибуты форм. Использование правильной структуры, при создании HTML форм, поможет гарантировать их удобство и [доступность](/ru/docs/Learn/Accessibility).
+Гибкость HTML форм делает их одной из самых сложных структур в [HTML](/ru/docs/Learn_web_development/Core/Structuring_content); вы можете создать любую форму, используя элементы и атрибуты форм. Использование правильной структуры, при создании HTML форм, поможет гарантировать их удобство и [доступность](/ru/docs/Learn_web_development/Core/Accessibility).
 
 ## Элемент \<form>
 
@@ -296,18 +296,18 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 ## В этом разделе
 
 - [Ваша первая HTML форма](/ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма)
-- [Как структурировать HTML-формы](/ru/docs/Learn/Forms/How_to_structure_a_web_form)
+- [Как структурировать HTML-формы](/ru/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [Стандартные виджеты форм](/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм)
 - [The HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types)
 - [Other form controls](/ru/docs/Learn/Forms/Other_form_controls)
-- [Стили HTML-форм](/ru/docs/Learn/Forms/Styling_web_forms)
+- [Стили HTML-форм](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced form styling](/ru/docs/Learn/Forms/Advanced_form_styling)
 - [UI pseudo-classes](/ru/docs/Learn/Forms/UI_pseudo-classes)
-- [Проверка данных формы](/ru/docs/Learn/Forms/Form_validation)
-- [Отправка данных формы](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Проверка данных формы](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Отправка данных формы](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
 ### Дополнительные темы
 
-- [Как создавать пользовательские виджеты форм](/ru/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/ru/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Как создавать пользовательские виджеты форм](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
 - [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

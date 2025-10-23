@@ -1,12 +1,9 @@
 ---
 title: 你的网站会是什么样子？
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 l10n:
   sourceCommit: 14f7331883bfa16ca5c0e3cd3b19d412e1b412fd
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -46,7 +43,7 @@ _你的网站会是什么样子_？讨论的是你编写代码之前不得不为
 
 ### 主题颜色
 
-使用[色彩选择工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)挑选心仪的颜色。当选中某种颜色时，会显示一个六位神秘代码，类似于 `#660066`。它是一个*十六进制数*，用于表示颜色。将其复制并暂存。
+使用[色彩选择工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter)挑选心仪的颜色。当选中某种颜色时，会显示一个六位神秘代码，类似于 `#660066`。它是一个*十六进制数*，用于表示颜色。将其复制并暂存。
 
 ![MDN 文档网站上的色彩选择工具，包含 RGB、HSL、HEX 格式](color-picker.png)
 

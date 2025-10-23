@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ca83d829b875709ef9bf0b5ae5cefef911c9c1a
 ---
 
-{{CSSRef}}
-
 **CSS スコープ**モジュールは、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の[スコープ](https://css.oddbird.net/scope/)機構を中心に、 CSS のスコープとカプセル化の機構を定義します。
 
 CSS スタイルには、グローバルスコープと、{{Glossary("shadow tree", "シャドウツリー")}}のスコープがあります。グローバルスコープのスタイルは、セレクターに一致するノードツリー内のすべての要素に適用され、そのツリー内のカスタム要素も含まれますが、各カスタム要素を構成するシャドウツリーには適用されません。セレクターとそれに関連するスタイル定義は、スコープ間で滲み出ることはありません。
@@ -30,19 +28,15 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 ## ガイド
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
-
   - : 再利用可能なウェブコンポーネント（他のコードから機能をカプセル化したカスタム要素）を作成するために使用するさまざまな技術を紹介します。
 
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
-
   - : 要素へのシャドウ DOM の適用、シャドウ DOM ツリーへの追加、スタイル設定など、シャドウ DOM の基礎を記載します。
 
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-
   - : {{htmlelement("template")}} と {{htmlelement("slot")}} 要素を用いて再利用可能な HTML 構造を定義し、ウェブコンポーネントの内部でその構造を使用します。
 
 - [カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)
-
   - : 機能をカプセル化するカスタム要素を作成するために使用する JavaScript API、Custom Elements API の紹介です。
 
 ## 関連概念
@@ -52,7 +46,7 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 
 - HTML {{HTMLElement("template")}} 要素
 - HTML {{HTMLElement("slot")}} 要素
-- HTML [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性
+- HTML [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 
 - {{Glossary("Shadow tree", "シャドウツリー")}} （用語集の用語）
 - {{Glossary("DOM")}} （用語集の用語）

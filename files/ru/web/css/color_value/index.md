@@ -5,7 +5,7 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.
+Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.
 
 В `<color>` может быть определена любым из следующих способов can.
 
@@ -32,7 +32,6 @@ slug: Web/CSS/color_value
 - В отличие от HTML, CSS будет полностью игнорировать неизвестные ключевые слова.
 - Ключевые слова цвета все представляют собой простые, сплошные цвета, без прозрачности.
 - Несколько ключевых слов являются псевдонимами друг для друга:
-
   - `aqua` / `cyan`
   - `fuchsia` / `magenta`
   - `darkgray` / `darkgrey`
@@ -1239,7 +1238,6 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 - \-moz-dragtargetzone
 
   \-moz-EvenTreeRow
-
   - : цвет фона для чётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте-moz-поле. Смотрите также `-moz-OddTreeRow`.
 
 - \-moz-Field
@@ -1276,7 +1274,6 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
   \-moz-mac-menutextselect
 
   \-moz-MenuHover
-
   - : Цвет фона для зависших пунктов меню. Часто похожи на `Highlight`. Следует использовать с `moz-MenuHoverText` или `-moz-MenuBarHoverText` при наведении цвет текста переднего плана.
 
 - \-moz-MenuHoverText
@@ -1317,7 +1314,7 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
 ## Соображения доступности
 
-Некоторые люди с трудом различают цвета. Рекомендация [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) настоятельно рекомендует не использовать цвет в качестве единственного средства передачи определённого сообщения, действия или результата. Дополнительную информацию см. В [разделе цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast).
+Некоторые люди с трудом различают цвета. Рекомендация [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) настоятельно рекомендует не использовать цвет в качестве единственного средства передачи определённого сообщения, действия или результата. Дополнительную информацию см. В [разделе цвет и цветовой контраст](/ru/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast).
 
 ## Спецификации
 

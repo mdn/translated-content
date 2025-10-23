@@ -88,5 +88,5 @@ l10n:
 
 그래서 이젠, 당신은 링크가 있는 웹페이지들을 설정하고 싶을 것이다!
 
-- 더 많은 이론적인 배경을 배우기 위해, [URLs 과 구조](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)를 배울 것이다. 왜냐하면 모든 링크는 URL을 가리키기 때문이다.
-- 좀 더 실용적인 것을 원하나요? [HTML 도입](/ko/docs/Learn/HTML/Introduction_to_HTML) 중 [하이퍼 링크 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 모듈은 링크를 구현하는 법에 대한 상세한 내용을 설명한다.
+- 더 많은 이론적인 배경을 배우기 위해, [URLs 과 구조](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)를 배울 것이다. 왜냐하면 모든 링크는 URL을 가리키기 때문이다.
+- 좀 더 실용적인 것을 원하나요? [HTML 도입](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) 중 [하이퍼 링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 모듈은 링크를 구현하는 법에 대한 상세한 내용을 설명한다.

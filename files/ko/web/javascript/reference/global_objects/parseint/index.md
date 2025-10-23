@@ -40,10 +40,10 @@ parseInt(string, radix);
 - `string`
   - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
 - `radix` {{optional_inline}}
-
   - : `string`의 진수를 나타내는 `2`부터 `36`까지의 정수입니다. 주의하세요. 기본 값이 `10`이 **아닙니다!** `Number` 자료형이 아닌 경우 `Number`로 변환합니다.
 
-    > **경고:** `radix`를 생략할 경우 발생하는 일에 대해서는 [아래 설명](#설명)에서 자세히 알아볼 수 있습니다.
+    > [!WARNING]
+    > `radix`를 생략할 경우 발생하는 일에 대해서는 [아래 설명](#설명)에서 자세히 알아볼 수 있습니다.
 
 ### 반환 값
 
@@ -79,7 +79,8 @@ parseInt(string, radix);
 
 숫자를 특정 진수의 문자열 리터럴로 변환하려면 `number.toString(radix)`를 사용하세요.
 
-> **경고:** `parseInt`는 {{jsxref("BigInt")}} 구문을 {{jsxref("Number")}}로 반환하므로 정확도를 잃습니다. 마지막 `n` 문자를 무시하기 때문입니다.
+> [!WARNING]
+> `parseInt`는 {{jsxref("BigInt")}} 구문을 {{jsxref("Number")}}로 반환하므로 정확도를 잃습니다. 마지막 `n` 문자를 무시하기 때문입니다.
 
 ### 진수 없는 8진수 해석
 

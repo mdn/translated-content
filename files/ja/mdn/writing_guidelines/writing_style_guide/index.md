@@ -1,11 +1,10 @@
 ---
 title: 執筆スタイルガイド
+short-title: スタイルガイド
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
-
-{{MDNSidebar}}
 
 この執筆スタイルガイドは、MDN Web Docs でコンテンツをどのように書き、整理し、綴り、形式を整えるべきかを記述したものです。
 
@@ -90,7 +89,7 @@ l10n:
   > {{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドは、 [Canvas 2D API](/ja/docs/Web/API/Canvas_API) の一部で、指定された文字列の文字の輪郭を、指定された X 座標と Y 座標で示された位置に描画します。
   > テキストは、コンテキストの現在の {{domxref("CanvasRenderingContext2D.font", "font")}} を使用して描画され、 {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}} の各プロパティに従って揃えられます。
   >
-  > 詳細とさらなる例については、図形の描画ページの[テキスト](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text)の節や、このテーマに関するメインの記事、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を参照してください。
+  > 詳細とさらなる例については、図形の描画ページの[テキスト](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text)の節や、このテーマに関するメインの記事、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を参照してください。
 
 ### 差別的でない言葉
 
@@ -142,7 +141,6 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   例えば、あるインターフェイスに `width` と `height` というプロパティがある場合、この 2 つのプロパティを文書化した 2 つのページでは、いくつかの単語を入れ替えたり、同じ例を使用するだけで、驚くほど似たような文章になりがちです。これでは、検索エンジンはどちらがどちらかわからなくなり、ページランクを共有することになり、結果的にどちらも見つけるのが難しくなってしまいます。
 
   そこで、すべてのページが自身のコンテンツを保有することが重要です。ここでは、そのためのヒントをいくつかご紹介します。
-
   - **より固有な概念を説明する**。意外と違いがあるかもしれない使用例を考えてみます。例えば、 `width` と `height` のケースでは、水平方向の空間と垂直方向の空間がどのように異なる使い方をされているかを考え、適切な概念についての議論を行います。例えば、幅についてはサイドバーを設置するための空間として、高さについては縦方向のスクロールやフッターなどのために使用することを考えます。また、アクセシビリティの問題についての情報を盛り込むことも、有用かつ重要なアイデアです。
   - **異なる例を使用する**。各ページにまったく異なる例を使ってください。このような場合の例は、本文よりもさらに似通っていることが多いものです。というのも、例はそもそも似たようなメソッドやプロパティの両方（またはすべて）を使用していることがあり、再利用する際に実質的な変更を必要としないからです。そのため、例を捨てて新しい例を書くか、少なくとも複数の例を用意し、そのうちのいくつかは異なる例文してください。
   - **例に説明文を追加する**。それぞれの例について説明を加えてください。トピックの複雑さと対象読者を考慮して、適切なレベルの詳細で、例が何をするのかという概要と、どのように機能するのかという説明の両方を含める必要があります。
@@ -152,14 +150,13 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 - **このページが短すぎないようにする**。ページの内容が小さすぎると（SEO 用語で「薄いページ」と呼ばれます）、検索エンジンは正確なカタログ化が困難です。短すぎるコンテンツページは探すのが大変です。 MDN Web Docs のページは、可能な限り 300 語前後よりも短くしないでください。人為的にページを膨らませるのではなく、可能な限りこのガイドラインを最小の目安となる長さとして扱ってください。
 
   このページでは、不要なテキストでごちゃごちゃさせることなく、適切に検索できるような十分なコンテンツを保有するページを作成するための基本的なガイドラインをご紹介します。
-
   - **スタブを避ける**。明らかに記事がスタブであったり、内容が不足している場合は、追加してください。 MDN Web Docs では、完全な「スタブ」ページは避けるようにしていますが、存在します。しかし、コンテンツの大部分が欠けているページはたくさんあります。
   - **ページの構成を見なおす**。ページがその[ページの種類](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)に応じて適切に構成されているか確認してください。すべての節が存在し、適切なコンテンツがあることを調べてください。
   - **完全性を確保する**。すべての節が完全で、最新の情報が含まれていることを確認してください。すべての引数がリストアップされ、説明されているか。例外がカバーされていることを確認してください（これは特にコンテンツが欠けていることが多い場所です)。
   - **すべての概念が完全に具体化されていることを確認する**。すべての項目が詳細に説明されているかどうか。簡単な説明をするのは簡単ですが、すべてのニュアンスが含まれているかどうかを確認してください。特別なケースはありますか？読者が知っておくべき既知の制限はありますか？
-  - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
+  - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。
   - **使用例を説明する**。説明されている機能について、特に一般的な使用例がある場合は、それについて話してください。一般的な開発上の問題を解決するために文書化された方法を読者が理解すると仮定するのではなく、実際にその利用例についての節を追加し、例とその例がどのように機能するかを説明するテキストを追加してください。
-  - **画像情報を追加する**。すべての画像や図に適切な [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
+  - **画像情報を追加する**。すべての画像や図に適切な [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
 
     > [!NOTE]
     > 検索エンジンのランキングを操作するために、キーワードを入れすぎたり、関係のないキーワードを使ったりすることは、良い慣習ではありません。このような行為は発見されやすく、罰せられる傾向にあります。
@@ -188,24 +185,20 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 略語とは、長い単語を短くしたもので、頭字語とは、フレーズの各単語の最初の文字を使用して作成された新しい単語です。この章では、略語と頭字語のガイドラインについて記述します。
 
 - **略語の展開**: ある用語についてページ内で初めて言及する場合は、ユーザーにとって馴染みがないと思われる略語を展開しましょう。判断が付かない場合は、用語を展開してください。記事や、用語の説明をする[用語集](/ja/docs/Glossary)の項目へのリンクを貼りましょう。
-
   - **正**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
   - **誤**: "XUL is Mozilla's XML-based language..."
 
 - **大文字とピリオド**: 頭字語と略語については、全て大文字とし、ピリオドは使用しないでください。組織の略称もこれに含まれます。 "US" や "UN" などです。
-
   - **正**: XUL
   - **誤**: X.U.L.; Xul
 
 - **ラテン語の略語**: よく使われるラテン語の略語 (etc., i.e., e.g.) は括弧や注釈の中で使用できます。これらの略語にはピリオドを使用し、カンマや適切な区切り文字を続けてください。
-
   - **正**: Web browsers (e.g., Firefox) can be used ...
   - **誤**: Web browsers e.g. Firefox can be used ...
   - **誤**: Web browsers, e.g. Firefox, can be used ...
   - **誤**: Web browsers, (eg: Firefox) can be used ...
 
   通常の文では（つまり注釈や括弧の外で）、英語における同等の表現を使用してください。
-
   - **正**: ... web browsers, and so on.
   - **誤**: ... web browsers, etc.
 
@@ -230,12 +223,10 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   > 使用するあなたが正しく使用することを肝に銘じてください。例えば、 "e.g." と "i.e." の取り違えはよくある間違いです。
 
 - **頭字語と略語の複数形**: 頭字語と略語の複数形については、_s_ を末尾に付加するだけにしてください。アポストロフィは使用しないでください。絶対に。お願いします。
-
   - **正**: CD-ROMs
   - **誤**: CD-ROM's
 
 - **"Versus", "vs.", "v."**: 短縮形を使用する場合、"vs." の方が "v." よりも望ましく、見出しに使用することができます。それ以外の本文中では、綴り字の形式である "versus" を使用し てください。
-
   - **正**: this vs. that
   - **誤**: this v. that
   - **誤**: this versus that
@@ -266,27 +257,22 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 ### 数字と数詞
 
 - **カンマ**: 通常の文では、 5 桁以上の数字にだけカンマを使用してください。
-
   - **正**: 4000; 54,000
   - **誤**: 4,000; 54000
 
 - **日付**: 日付については（コード中の日付は関係ありません）、 "January 1, 1990" のような形を使用してください。
-
   - **正**: February 24, 1906
   - **誤**: February 24th, 1906; 24 February, 1906; 24/02/1906
 
   YYYY/MM/DD の形を使っても構いません。
-
   - **正**: 1906/02/24
   - **誤**: 02/24/1906; 24/02/1906; 02/24/06
 
 - **年代**: "1990s" の形を使って下さい。アポストロフィは使わないでください。
-
   - **正**: 1920s
   - **誤**: 1920's
 
 - **数詞の複数形**: "s" を付加してください。アポストロフィは使わないでください。
-
   - **正**: 486s
   - **誤**: 486's
 
@@ -309,7 +295,6 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 以下の一覧は、カンマの使用規則に注意する必要がある一般的な状況を説明しています。
 
 - **導入節の後**: 導入節は従属節で、通常、文頭に現れます。導入節の後にカンマを使用し、次の独立節と区切ってください。
-
   - 例 1:
     - **正**: "In this example, you will see how to use a comma."
     - **誤**: "In this example you will see how to use a comma."
@@ -321,17 +306,14 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
     - **誤**: "On mobile platforms you tend to get a numeric keypad for entering data."
 
 - **接続詞の前**: シリアルカンマ（「オックスフォードカンマ」とも呼ばれる）は、 3 つ以上の項目が連続する場合に、接続詞の前に現れるカンマのことです。MDN Web Docs では、シリアルカンマを使用してください。また、リストの各項目はカンマで区切ってください。
-
   - **正**: "I will travel on trains, planes, and automobiles."
   - **誤**: "I will travel on trains, planes and automobiles."
 
   項目が 2 つだけのリストでは、 "and" と "or" の前にカンマを使用しないでください。
-
   - **正**: "My dog is cute and smart."
   - **誤**: "My dog is cute, and smart."
 
   接続詞 "and", "but", "or" が独立した 2 つの節をつなぐ場合は、その前にカンマを使用してください。ただし、接続詞によって文が非常に長くなったり、複雑になったりする場合は、 2 つの文として書き直すことを検討してください。
-
   - 例 1:
     - **正**: "You can perform this step, but you need to pay attention to the file setting."
     - **誤**: "You can perform this step but you need to pay attention to the file setting."
@@ -340,22 +322,18 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
     - **誤**: "My father is strict, but loving."
 
 - **"that" と "which" の前**: 制限節は文の意味にとって不可欠であり、残りの文から設定するためのカンマは必要ありません。制限節は通常 that で始まり、カンマを入れる必要はありません。
-
   - **正**: "We have put together a course that includes all the essential information you need to work towards your goal."
   - **誤**: "We have put together a course, that includes all the essential information you need to work towards your goal."
 
   非制限節は追加情報を提供するもので、文の意味にとって不可欠なものではありません。非制限節は通常 which で始まり、その前にカンマが必要です。
-
   - **正**: "You write a policy, which is an allowed list of origins for each feature."
   - **誤**: "You write a policy which is an allowed list of origins for each feature."
 
 - **"such as" の前**: "such as" が非制限節の一部で、残りの文が独立節の場合、"such as" の前にカンマを使用してください。
-
   - **正**: "The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them."
   - **誤**: "The Array object has methods for manipulating arrays in various ways such as joining, reversing, and sorting them."
 
   以下の例では、"such as" にカンマを使用しない場合について説明しています。ここでは、"such as" を含む節が文の意味にとって不可欠となっています。
-
   - **正**: "Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
   - **誤**: "Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
 
@@ -371,29 +349,36 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 アメリカ英語の綴りを使用してください。
 
 一般的には、 [Dictionary.com](https://www.dictionary.com/) の最初の項目を使用しますが、その項目が変種の綴りとして記載されていたり、主にアメリカ以外の英語の形で使用されている場合を除きます。
-例えば、 ["behavior" を検索](https://www.dictionary.com/browse/behaviour)すると、 "Chiefly British" という言葉の後に、アメリカの標準形である "[behavior](https://www.dictionary.com/browse/behavior)" へのリンクが表示されます。変形スペルは使わないようにしましょう。
+例えば、 ["behaviour" を検索](https://www.dictionary.com/browse/behaviour)すると、 "Chiefly British" という言葉の後に、アメリカの標準形である ["behavior"](https://www.dictionary.com/browse/behavior) へのリンクが表示されます。変形スペルは使わないようにしましょう。
+
+<!-- cSpell:ignore localise behaviour colour -->
 
 - **正**: localize, behavior, color
 - **誤**: localise, behaviour, colour
+
+スペルミスを検出するために [cSpell](https://cspell.org/) がインストールされています。これは毎週実行され、リポジトリー内の[スペルミスのレポート](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle)を作成します。次のコマンドで、ローカルで実行することもできます。
+
+```bash
+npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
+```
+
+[`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries) リポジトリーでは、既定の辞書には含まれない承認済みの単語をコンテナーに格納した複数の単語リストを管理しています。 これらのリストには、有効であるものの、スペルチェッカーによって報告された単語を追加できます。 [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) を参照すると、各辞書に何が含まれているか、およびスペルチェック構成の詳細がわかります。
 
 ### 用語
 
 以下は、特定の専門用語を使用する際の推奨事項です。
 
 - **HTML 要素**: HTML や XML の要素を参照する場合は、「タグ」ではなく「要素」という用語を使用してください。さらに、要素は角括弧 "<>" で囲み、逆引用符 ( \`) を使用してスタイル設定してください。例えば、逆引用符の中で \<input\> を使用すると、期待通りの `<input>` としてスタイル設定されます。
-
   - **正**: `<span>` 要素
   - **語**: span タグ
 
   MDN では、 HTML 要素を示すのに [`HTMLElement` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references)を使うこともできます。これは、要素のスタイル設定、角括弧 "<>"、参照ページへのリンクを追加します。
-
   - **逆引用符の使用**: `<span>`
   - **マクロの使用**: {{HTMLElement("span")}} （Markdown 内のソース: `\{{HTMLElement("span")}}`）
 
 - **parameter と argument**: MDN で推奨する用語は **parameter** です。一貫性のためにできるだけ "argument" の用語は使用しないでください。
 
 - **ユーザーインターフェイス操作**: 一連の作業を記述する際には、命令調でインターフェイスでの操作を指示してください。ユーザーインターフェイスの要素をラベルと種類ではっきりと指定してください。
-
   - **正**: "Click the Edit button."
   - **誤**: "Click Edit."
 
@@ -430,7 +415,7 @@ MDN Web Docs のページには、1 つ以上のサンプルコードを含め�
 - 大きなサンプルコードを作成している場合、それを小さな論理的な部分に分割して、個別に記述できるようにすることが理にかなっている場合があります。
 - [ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)を追加する際、サンプルを含む領域の {{HTMLElement("pre")}} ブロックは、サンプルを実行する前にすべて連結されることを知っておくと役に立ちます。 HTML、CSS、JavaScript の一部または全部を複数の部分に分割し、それぞれに説明や見出しなどを任意に設定することができます。これにより、コードの文書化が非常に強力かつ柔軟になります。
 
-MDN Web Docs のサンプルコードをどのようにスタイルまたは整形するかについては、[サンプルコードのスタイル設定のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。<!--リンク修正予定-->
+MDN Web Docs のサンプルコードをどのようにスタイルまたは整形するかについては、[サンプルコードのスタイル設定のガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。<!--リンク修正予定-->
 
 ### 相互参照（リンク）
 
@@ -441,7 +426,7 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 次のように、ページの節にリンクする場合も同様のスタイル設定を行ってください。
 
-- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Memory_management#javascript_での割り当て)の節を参照してください。
+- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Guide/Memory_management#javascript_での割り当て)の節を参照してください。
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
@@ -461,6 +446,8 @@ MDN で、リファレンスページにリンクするもう一つの方法は�
 
 MDN Web Docs では、特定の状況下において外部リンクを許可しています。MDN Web Docs で外部リンクを載せてよいかどうか判断するには、この節で記述されているガイドラインを使用してください。外部リンクを追加するためのプルリクエストは、ここで記述するガイドラインを満たしていない場合、拒否されます。
 
+MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)コンテンツに外部リンクを追加することを検討している場合は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)も併せてお読みください。
+
 一般的に、外部リンクを追加することを検討している場合、以下のようなリスクが最小限であることを確認する必要があります。
 
 - リンク切れまたは古くなったリンク
@@ -472,14 +459,12 @@ MDN Web Docs では、特定の状況下において外部リンクを許可し�
 > 外部リンクを追加する前に、MDN Web Docs 内のコンテンツを相互参照することを検討してください。内部リンクはメンテナンスが簡単で、MDN Web Docs の全体が読者にとってより価値のあるものになります。
 
 - **良質な外部リンク**: 良い外部リンクは、関連性があり、持続性があり、広く信頼されているリソースに読者を連れて行きます。以下のような外部コンテンツへのリンクを設定することをお勧めします。
-
   - 固有の、または不可欠なもの（例: IETF の RFC など）
   - 帰属表示、引用、謝辞のために必要なもの（例: クリエイティブ・コモンズの帰属表示の一部など）
   - MDN Web Docs 自体にそのようなコンテンツを組み込むよりも、トピックのために保守される可能性が高い（例: ベンダーのリリースノート）
   - MDN Web Docs 自体のように、オープンソースまたはコミュニティ主導であること。
 
 - **不適切な外部リンク**: 関連性、保守性、アクセシビリティに欠け、読者にとって障害となるようなリンクは避けましょう。以下のような外部コンテンツへのリンクは避けてください。
-
   - 一般的なもの、固有性がないもの（例: 関連文書ではなく、ベンダーのホームページなど）
   - 一時的なもの、またはメンテナンスされていないもの（例: 一度限りのお知らせなど）
   - 自分へのリンクまたは自己宣伝（例: MDN Web Docs から作者自身の作品を削除した場合）
@@ -504,7 +489,7 @@ URL 短縮ツール（TinyURL や Bitly など）は、長いリンクを小さ�
 ### 見出しレベル
 
 新しい段落で新しい節を開始するとき、ヘッダーを追加する必要があります。
-markdown の見出しレベルをスキップすることなく、小さい順に使用してください。 `##`, 次に `###`, そして次に `###` という具合にです。これらはそれぞれ [HTML 見出しタグ](/ja/docs/Web/HTML/Element/Heading_Elements)の `<h2>`、`<h3>`、`<h4>` タグに翻訳されます。
+markdown の見出しレベルをスキップすることなく、小さい順に使用してください。 `##`, 次に `###`, そして次に `###` という具合にです。これらはそれぞれ [HTML 見出しタグ](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)の `<h2>`、`<h3>`、`<h4>` タグに翻訳されます。
 
 `#` はページタイトルとして予約されているため、`##` が許可される最も高いレベルです。
 3 レベルより上のヘッダーを追加しないことをお勧めします。もし、4 レベル目のヘッダーを追加する必要性を感じたら、この記事をいくつかの小さな記事に分割し、ランディングページを設けることを検討してください。あるいは、4 レベル目のヘッダーレベルを避けるために、情報を箇条書きで表示することができないか確認してください。
@@ -575,16 +560,16 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 MDN Web Docs のほとんどのガイド、リファレンスページ、そして用語集ページには、記事の終わりに _関連情報_ 節があります。この節には MDN 内の関連トピックへの [相互参照](#相互参照（リンク）)があり、時には関連する外部記事へのリンクもあります。例えば、この例は `@layer` ページの[関連情報の節](/ja/docs/Web/CSS/@layer#関連情報)です。
 
-一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、MDNの[ウェブ開発を学習する](/ja/docs/Learn)領域では、関連情報の節は[定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)形式に続きます。
+一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、 MDN の[ウェブ開発を学習する](/ja/docs/Learn_web_development)の章では、関連情報の節は[定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)形式に従います。
 
 MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加または更新する際は、以下のガイドラインに注意してください。
 
 #### リンクテキスト
 
-- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
-  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Attributes)
-- リンクテキストは大文字小文字は、リンク先のページタイトルやセクションタイトルと異なっていても、文の大文字小文字を使用してください。ページや節のタイトルで使用している用途が正しくない可能性があります。例えば、 [Quirks Mode](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) ページへのリンクテキストを正しい大文字小文字で書くと、次のようになります。
-  - **正**: [Quirks mode](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
+  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
+- リンクテキストは大文字小文字は、リンク先のページタイトルやセクションタイトルと異なっていても、文の大文字小文字を使用してください。ページや節のタイトルで使用している用途が正しくない可能性があります。例えば、 [Quirks Mode](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) ページへのリンクテキストを正しい大文字小文字で書くと、次のようになります。
+  - **正**: [Quirks mode](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは MDN Web Docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
 - MDN では、[リファレンスページへのリンク](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)の節で説明されているように、オプションでマクロを使用することができます。マクロを使用すると、次の例に示すように、リンクテキストのキーワードにコード形式が追加されます。
 - リンクリストアイテムの先頭に冠詞 ("A", "An", "The") は必要ありません。リストアイテムの終わりには句読点は要求されません。
@@ -621,7 +606,7 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 - [JavaScript/Guide](/ja/docs/Web/JavaScript/Guide) – メインの目次となるページ
 - [JavaScript/Guide/JavaScript Overview](/ja/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/ja/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 記事を階層の一番上に置くと、サイトの動作が遅くなり、検索やサイトのナビゲーションが効かなくなるので、なるべく避けましょう。
 
@@ -630,8 +615,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 ページの上部に表示されるページタイトルは、ページの URL の `<locale>/docs/` に続く部分であるページの「スラッグ」と異なるものにすることができます。スラッグを定義する際には、以下のガイドラインを念頭に置いてください。
 
 - スラッグは短くしましょう。新しいレベルの階層を作成する場合、スラッグの中の新しいレベルの成分は 1 語か 2 語だけにします。
-- スラッグでは、複数の単語からなる成分にはアンダースコアを使用します。例えば、`/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started` では `Getting_started` を使用します。
-- スラッグでも、それぞれの成分の大文字小文字を使い分けるにあたって、前述の例の `Getting_started` のように文スタイルの大文字化を使用してください。
+- スラッグでは、複数の単語からなる成分にはアンダースコアを使用してください。例えば、 `Basic_HTML_syntax` が`/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax` で使用されています。
+- スラッグでも、それぞれの成分の大文字小文字を使い分けるにあたって、前述の例の `Basic_HTML_syntax` のように文スタイルの大文字化を使用してください。
 
 ### タイトル
 
@@ -640,7 +625,6 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 タイトルを書く際には、以下のガイドラインに従ってください。
 
 - **タイトルの大文字小文字の使用**: ページタイトルセクションの見出しには、文スタイルの大文字化（文頭と固有名詞の始めの 1 字だけを大文字にする）を用いてください。一般的な見出しスタイルの大文字化は用いません。
-
   - **正**: "A new method for creating JavaScript rollovers"
   - **誤**: "A New Method for Creating JavaScript Rollovers"
 
@@ -649,7 +633,6 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 - **全般的なガイドライン**: 何を文書化し、その内容をどのように構成するかを決めることは、文章を書く上での最初のステップの1つです。目次を書くことで、情報をどのように並べるかを決めることができます。簡単な概念から始めて、より複雑で高度な概念に応じる。概念的な情報を最初に取り上げ、次に行動的なトピックに移ってください。
 
   ページや節、項のタイトルを書くときは、以下のガイドラインを念頭に置いてください。
-
   - **高いところから低いところへ**。[見出しレベル](#見出しレベル)の節で述べたように、レベルを飛ばすことなく、上位の `##` から下位の `##` へと進んでください。より広い入門的なタイトルにはより高いレベルの見出しを使用し、より低いレベルの見出しに進むにつれて、より具体的なタイトルを使用するようにしてください。
   - **論理的にグループ化する**。関連するすべての項が、より高いレベルの見出しの下に論理的にまとめられていることを確認してください。この作業では、各セクションのタイトルに名前を付けると便利です。
   - **タイトルを短くする**。タイトルを短くすると、テキストや目次で拾いやすくなります。
@@ -662,17 +645,17 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 ## 関連情報
 
-- [サンプルコードを書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
-- [HTML コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [CSS コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [JavaScript コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [シェルプロンプトコードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [サンプルコードを書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)
+- [HTML コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [CSS コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [JavaScript コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [シェルプロンプトコードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## その他の情報
 
 ### おすすめのスタイルガイド
 
-ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
+ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://learn.microsoft.com/ja/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
 
 ### 言語、文法、綴り
 

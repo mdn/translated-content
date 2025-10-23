@@ -89,7 +89,6 @@ IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计
 该错误的解决方案：
 
 - 仅适用于 IE 9：
-
   - 设置 {{cssxref("background-color")}}`: rgba(0,0,0,0)`
   - 设置 {{cssxref("opacity")}}`: 0` 以及为 {{cssxref("background-color")}} 设置一个明确的、除 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 以外的值。
 

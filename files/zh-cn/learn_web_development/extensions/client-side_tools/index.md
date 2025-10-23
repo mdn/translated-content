@@ -1,12 +1,9 @@
 ---
 title: 理解客户端 web 开发工具
 slug: Learn_web_development/Extensions/Client-side_tools
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools
 l10n:
   sourceCommit: b771ad01e0774fe112fde3a3e6467eb18176997e
 ---
-
-{{LearnSidebar}}
 
 客户端工具可能让人望而生畏，不过这个系列的文章主要目的在于展示一些最常见的客户端工具的用途，阐明可以被你链接使用的工具，如何使用包管理器安装这些工具，以及如何使用命令行操控它们。我们将以一个完整的工具链示例收尾，示例会向你展示如何变得更具生产力。
 

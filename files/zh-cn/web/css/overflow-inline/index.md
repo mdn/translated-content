@@ -3,11 +3,10 @@ title: overflow-inline
 slug: Web/CSS/overflow-inline
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-inline`** 设置了当内容溢出盒的行首和行末侧时所显示的内容。可以不显示，或者显示滚动条或溢出内容。
 
-> **备注：**`overflow-inline` 属性根据文档的书写模式对应于 {{CSSXref("overflow-y")}} 或 {{CSSXref("overflow-x")}}。
+> [!NOTE]
+> `overflow-inline` 属性根据文档的书写模式对应于 {{CSSXref("overflow-y")}} 或 {{CSSXref("overflow-x")}}。
 
 ## 语法
 

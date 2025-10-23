@@ -19,9 +19,7 @@ drawArrays(mode, first, count)
 ### 매개변수
 
 - `mode`
-
   - : 렌더링할 기본 그래픽 형상의 타입을 지정하는 {{domxref("WebGL_API/Types", "GLenum")}} 입니다. 가능한 값은 다음과 같습니다.
-
     - `gl.POINTS`: 한 점을 그립니다.
     - `gl.LINE_STRIP`: 다음 정점까지 직선을 그립니다.
     - `gl.LINE_LOOP`: 다음 정점까지 직선을 그리고, 마지막 정점을 처음 정점에 연결합니다.
@@ -65,12 +63,9 @@ gl.drawArrays(gl.POINTS, 0, 8);
 ## 같이 보기
 
 - {{domxref("WebGLRenderingContext.drawElements()")}}
-- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()",
-    "ext.drawArraysInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()",
-    "ext.drawElementsInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()",
-    "ext.vertexAttribDivisorANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
 - {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
 - {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
 - {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}

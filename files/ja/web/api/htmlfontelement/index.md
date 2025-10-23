@@ -16,11 +16,11 @@ font 要素のドキュメントオブジェクトモデル（DOM）表現を実
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLFontElement.color")}} {{Deprecated_Inline}}
-  - : HTML 属性 [`color`](/ja/docs/Web/HTML/Element/font#color) を反映した文字列で、名前付き色または 16 進数の #RRGGBB 形式で指定した色を格納します。
+  - : HTML 属性 [`color`](/ja/docs/Web/HTML/Reference/Elements/font#color) を反映した文字列で、名前付き色または 16 進数の #RRGGBB 形式で指定した色を格納します。
 - {{domxref("HTMLFontElement.face")}} {{Deprecated_Inline}}
-  - : HTML の [`face`](/ja/docs/Web/HTML/Element/font#face) 属性を反映した文字列で、1 つ以上のフォント名のカンマ区切りリストを格納します。
+  - : HTML の [`face`](/ja/docs/Web/HTML/Reference/Elements/font#face) 属性を反映した文字列で、1 つ以上のフォント名のカンマ区切りリストを格納します。
 - {{domxref("HTMLFontElement.size")}} {{Deprecated_Inline}}
-  - : HTML の [`size`](/ja/docs/Web/HTML/Element/font#size) 属性を反映した文字列で、1 から 7 までのフォントサイズか、例えば -2 や +1 のような既定値 3 からの相対値が入ります。
+  - : HTML の [`size`](/ja/docs/Web/HTML/Reference/Elements/font#size) 属性を反映した文字列で、1 から 7 までのフォントサイズか、例えば -2 や +1 のような既定値 3 からの相対値が入ります。
 
 ## インスタンスメソッド
 

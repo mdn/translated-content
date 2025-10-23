@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 
 **`byteLength`** アクセサープロパティは、このビューの {{jsxref("ArrayBuffer")}} または {{jsxref("SharedArrayBuffer")}} の先頭から長さを (バイト単位で) 表します。
 
-{{InteractiveExample("JavaScript Demo: DataView.byteLength")}}
+{{InteractiveExample("JavaScript デモ: DataView.byteLength")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

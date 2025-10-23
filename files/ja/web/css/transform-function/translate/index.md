@@ -5,11 +5,51 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+{{InteractiveExample("CSS デモ: translate()")}}
 
-{{EmbedInteractiveExample("pages/css/function-translate.html")}}
+```css interactive-example-choice
+transform: translate(0);
+```
+
+```css interactive-example-choice
+transform: translate(42px, 18px);
+```
+
+```css interactive-example-choice
+transform: translate(-2.1rem, -2ex);
+```
+
+```css interactive-example-choice
+transform: translate(3ch, 3mm);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 この変換は、二次元ベクトルであることが特徴です。それぞれの方向にどれだけ要素が移動するかの座標を定義します。
 

@@ -5,11 +5,49 @@ l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
-{{CSSRef}}
-
 **`box-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のフレームの周囲にシャドウ効果を追加します。カンマで区切ることで、複数の効果を設定することができます。ボックスの影は要素からの相対的な X および Y のオフセット、ぼかしと拡散の半径、色で記述します。
 
-{{EmbedInteractiveExample("pages/css/box-shadow.html")}}
+{{InteractiveExample("CSS デモ: box-shadow")}}
+
+```css interactive-example-choice
+box-shadow: 10px 5px 5px red;
+```
+
+```css interactive-example-choice
+box-shadow: 60px -16px teal;
+```
+
+```css interactive-example-choice
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+```
+
+```css interactive-example-choice
+box-shadow: inset 5em 1em gold;
+```
+
+```css interactive-example-choice
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>This is a box with a box-shadow around it.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  margin: 20px auto;
+  padding: 0;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: center;
+}
+```
 
 `box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
 
@@ -53,7 +91,6 @@ box-shadow: unset;
 単一の box-shadow は次のものを使用して指定します。
 
 - 2 ～ 4 つの {{cssxref("length")}} 値
-
   - 値が 2 つだけ与えられた場合、 `<offset-x>` および `<offset-y>` として解釈されます。
   - 3 つ目の値が与えられた場合、 `<blur-radius>` として解釈されます。
   - 4 つ目の値が与えられた場合、 `<spread-radius>` として解釈されます。
@@ -66,20 +103,16 @@ box-shadow: unset;
 ### 値
 
 - `<color>` {{optional_inline}}
-
   - : 影の色を指定します。可能なキーワード及び記述方法については {{cssxref("&lt;color&gt;")}} の値を参照してください。
     値が指定されなかった場合、親要素で定義された {{cssxref("color")}} プロパティの値が使用されます。
 
 - `<length>`
-
   - : 影をずらす距離を指定します。この引数は 2 つ、 3 つ、 4 つの値を受け入れます。 3 つ目と 4 つ目の値はオプションです。これらは以下のように解釈されます。
-
     - 2 つの値を指定した場合、 `<offset-x>` （水平方向のオフセット）と `<offset-y>` （垂直方向のオフセット）として解釈されます。 `<offset-x>` が負の値の場合は要素の左側に影を配置します。 `<offset-y>` が負の値の場合は影を要素の上に配置します。\
       指定しない場合、省略された長さには `0` の値が使用されます。もし `<offset-x>` と `<offset-y>` の両方が `0` に設定されると、影は要素の後ろに配置されます（もし `<blur-radius>` や `<spread-radius>` が設定されていれば、ぼかし効果が発生するかもしれません）。
     - 3 つの値を指定した場合、 3 つ目の値は `<blur-radius>` と解釈されます。この値が大きいほどよりぼかしが大きくなり、影が大きく明るくなります。負の値は指定できません。指定しない場合は `0` に設定されます（すなわち、影の輪郭が鮮明になります）。この仕様には、ぼかし半径をどのように計算するかの正確なアルゴリズムは記載されていませんが、以下のように詳しく説明されています。
 
     > …影の辺が長くまっすぐな場合、影の辺に垂直で中心にあるぼかし距離の長さの色遷移を作成し、影の内側の半径の端点で完全な影の色からその外側の端点で完全に透明になるまでの範囲の色遷移を作成する必要があります。
-
     - 4 つの値を指定した場合、 4 番目の値は `<spread-radius>` と解釈されます。正の値を指定すると影は展開され大きくなり、負の値を指定すると影は縮小します。指定しない場合は `0` に設定します（つまり、影は要素と同じ大きさになります）。
 
 - `inset` {{optional_inline}}

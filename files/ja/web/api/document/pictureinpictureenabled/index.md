@@ -10,7 +10,7 @@ l10n:
 
 **`pictureInPictureEnabled`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、ピクチャインピクチャモードが利用できるかどうかを示します。
 
-ピクチャインピクチャモードは、[権限ポリシー](/ja/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture)で指定されていない限り、既定では利用できます。
+ピクチャインピクチャモードは、[権限ポリシー](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture)で指定されていない限り、既定では利用できます。
 
 このプロパティは読み取り専用ですが、変更しても例外は発生しません（厳格モードであっても）。セッターは何もせず、無視されます。
 

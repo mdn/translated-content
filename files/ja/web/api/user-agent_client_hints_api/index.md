@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
-ユーザーエージェントクライアントヒント API (User-Agent Client Hints API) は、[クライアントヒント](/ja/docs/Web/HTTP/Client_hints)を拡張し、 User-Agent レスポンスおよびリクエストヘッダー、および JavaScript API によってブラウザーとプラットフォーム情報を公開する方法を提供します。
+ユーザーエージェントクライアントヒント API (User-Agent Client Hints API) は、[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)を拡張し、 User-Agent レスポンスおよびリクエストヘッダー、および JavaScript API によってブラウザーとプラットフォーム情報を公開する方法を提供します。
 
 ## 概念と使い方
 

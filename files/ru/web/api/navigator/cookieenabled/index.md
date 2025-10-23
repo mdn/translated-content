@@ -17,7 +17,7 @@ l10n:
 > Когда в браузере включена блокировка [сторонних файлов cookie](/ru/docs/Web/Privacy/Third-party_cookies) и `navigator.cookieEnabled` вызывается внутри стороннего `<iframe>`, оно вернёт `true` в Safari и IE (хотя попытка установить файл cookie не удастся). В Firefox и браузерах, основанных на Chromium, вернёт `false`.
 
 > [!NOTE]
-> Веб-браузеры могут блокировать установку определенных файлов cookie в некоторых случаях. Например, браузеры на базе Chrome, а также некоторые экспериментальные версии Firefox не позволяют создавать файлы cookie с атрибутом [`SameSite=None`](/ru/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value), если они не создаются по протоколу HTTPS и с атрибутом `Secure`.
+> Веб-браузеры могут блокировать установку определенных файлов cookie в некоторых случаях. Например, браузеры на базе Chrome, а также некоторые экспериментальные версии Firefox не позволяют создавать файлы cookie с атрибутом [`SameSite=None`](/ru/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value), если они не создаются по протоколу HTTPS и с атрибутом `Secure`.
 
 ## Пример
 

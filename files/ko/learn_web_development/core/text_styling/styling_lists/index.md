@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-[목록](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
+[목록](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -202,7 +202,7 @@ ul {
 }
 ```
 
-그러나 이 속성은 글머리 기호의 위치, 크기 등을 제어하는 ​​측면에서 약간 제한됩니다. [스타일 지정 상자](/ko/docs/Learn/CSS/Building_blocks) 모듈에서 자세히 알아볼 {{cssxref("background")}} 속성 계열을 사용하는 것이 좋습니다. 지금은 맛보기가 있습니다!
+그러나 이 속성은 글머리 기호의 위치, 크기 등을 제어하는 ​​측면에서 약간 제한됩니다. [스타일 지정 상자](/ko/docs/Learn_web_development/Core/Styling_basics) 모듈에서 자세히 알아볼 {{cssxref("background")}} 속성 계열을 사용하는 것이 좋습니다. 지금은 맛보기가 있습니다!
 
 완성된 예제에서는 정렬되지 않은 목록의 스타일을 다음과 같이 지정했습니다.(위에서 이미 본 것 위에)
 
@@ -263,7 +263,7 @@ ul {
 
 ### start
 
-[`start`](/ko/docs/Web/HTML/Element/ol#start) 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
+[`start`](/ko/docs/Web/HTML/Reference/Elements/ol#start) 속성을 사용하면 1이 아닌 숫자부터 카운트하는 목록을 시작할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4">
@@ -282,7 +282,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/ko/docs/Web/HTML/Element/ol#reversed) 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
+[`reversed`](/ko/docs/Web/HTML/Reference/Elements/ol#reversed) 속성은 목록을 위로 카운트하는 대신 카운트 다운을 시작합니다. 예시는 다음과 같습니다.
 
 ```html
 <ol start="4" reversed>
@@ -304,7 +304,7 @@ ul {
 
 ### value
 
-[`value`](/ko/docs/Web/HTML/Element/ol#value) 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
+[`value`](/ko/docs/Web/HTML/Reference/Elements/ol#value) 속성을 사용하면 목록 항목을 특정 숫자 값으로 설정할 수 있습니다. 예시는 다음과 같습니다.
 
 ```html
 <ol>

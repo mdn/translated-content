@@ -79,7 +79,6 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 - [Proxy.create](/es/docs/Archive/Web/Old_Proxy_API) y [Proxy.createFunction](/es/docs/Archive/Web/Old_Proxy_API) están en desuso. En su lugar usa {{jsxref("Proxy")}}.
 - Las siguientes trampas están obsoletas:
-
   - `hasOwn` ([bug 980565](https://bugzilla.mozilla.org/show_bug.cgi?id=980565), Firefox 33).
   - `getEnumerablePropertyKeys` ([bug 783829](https://bugzilla.mozilla.org/show_bug.cgi?id=783829), Firefox 37)
   - `getOwnPropertyNames` ([bug 1007334](https://bugzilla.mozilla.org/show_bug.cgi?id=1007334), Firefox 33)

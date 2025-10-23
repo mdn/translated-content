@@ -7,7 +7,66 @@ slug: Web/CSS/table-layout
 
 La propriété **`table-layout`** définit l'algorithme utilisé pour disposer les cellules, lignes et colonnes d'un tableau.
 
-{{EmbedInteractiveExample("pages/css/table-layout.html")}}
+{{InteractiveExample("CSS Demo: table-layout")}}
+
+```css interactive-example-choice
+table-layout: auto;
+width: 150px;
+```
+
+```css interactive-example-choice
+table-layout: fixed;
+width: 150px;
+```
+
+```css interactive-example-choice
+table-layout: auto;
+width: 100%;
+```
+
+```css interactive-example-choice
+table-layout: fixed;
+width: 100%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Lion</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <td>Norwegian Lemming</td>
+      <td>Europe</td>
+    </tr>
+    <tr>
+      <td>Seal</td>
+      <td>Antarctica</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>Asia</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  border: 1px solid #139;
+}
+
+th,
+td {
+  border: 2px solid #a19;
+  padding: 0.25rem 0.5rem;
+}
+```
 
 ## Syntaxe
 
@@ -27,7 +86,6 @@ table-layout: unset;
 - {{cssxref("auto")}}
   - : Un algorithme automatique, utilisé communément par la plupart des navigateurs, est utilisé pour gérer la disposition du tableau. La largeur du tableau et de ses cellules dépendent de leur contenu.
 - `fixed`
-
   - : La largeur du tableau et celles des colonnes sont définies grâce aux largeurs des éléments `table` et `col` ou grâce à la largeur (explicite) de la première ligne de cellules. Les cellules des lignes suivantes n'affectent pas la largeur des colonnes.
 
     Avec cette méthode « fixée », tout le tableau peut être rendu dès que la première ligne a été téléchargée et analysée. Cela permet d'accélérer le temps de rendu par rapport à la valeur `auto`. En revanche, le contenu des lignes (en dehors de la première), peut ne pas rentrer dans les colonnes avec la largeur calculée. Les cellules dont le contenu est trop large utiliseront la propriété {{cssxref("overflow")}} pour déterminer comment gérer le dépassement.

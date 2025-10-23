@@ -25,7 +25,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_codin
 
 ## Активное Обучение
 
-_На данный момент этот раздел ещё не готов. Вы можете помочь сообществу разработчиков, вступив в [Please, consider contributing](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_На данный момент этот раздел ещё не готов. Вы можете помочь сообществу разработчиков, вступив в [Please, consider contributing](/ru/docs/MDN/Community/Getting_started)._
 
 ## Более глубокое погружение
 

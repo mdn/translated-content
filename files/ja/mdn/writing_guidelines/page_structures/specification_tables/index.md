@@ -2,10 +2,8 @@
 title: 仕様書一覧表
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 MDN 上のすべてのリファレンスページでは、 API または技術が定義されている仕様書に関する情報を提供するようにしてください。この記事ではこれらの表の外見を示し、構築方法を説明します。
 
@@ -33,7 +31,7 @@ browser-compat: css.property.text-align
 
 一部の機能は上記のリポジトリーで管理されていません。
 このような用途では、 `spec-urls` キーを使用してページのフロントマターに仕様情報を追加することができます。
-例えば、 [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性はフロントマターキーがあります。
+例えば、 [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性はフロントマターキーがあります。
 
 ```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic

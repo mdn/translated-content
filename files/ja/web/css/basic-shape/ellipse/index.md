@@ -5,11 +5,43 @@ l10n:
   sourceCommit: 3a1ad1fcf1a399211b333eed524fe9df13bdb62b
 ---
 
-{{CSSRef}}
+**`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)の一つです。
 
-**`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。
+{{InteractiveExample("CSS デモ: ellipse()")}}
 
-{{EmbedInteractiveExample("pages/css/function-ellipse.html")}}
+```css interactive-example-choice
+clip-path: ellipse(20px 50px);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(4rem 50% at right center);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(closest-side closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(closest-side farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 
@@ -23,9 +55,7 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ### 値
 
 - `<shape-radius>`
-
   - : 2 つの半径で、x および y をその順で指定します。{{cssxref("length")}}、{{cssxref("percentage")}}、または `closest-side` および `farthest-side` の値の何れかです。
-
     - `closest-side`
       - : シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。楕円の場合は、半径の軸で最も近い辺となります。
     - `farthest-side`

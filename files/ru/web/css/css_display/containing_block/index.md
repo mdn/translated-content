@@ -31,18 +31,15 @@ slug: Web/CSS/CSS_display/Containing_block
 Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:
 
 1. Если свойство `position` имеет значение **`static`**, **`relative`**, или **`sticky`**, то содержащий блок задаётся краем _content бокса_ ближайшего предка, который:
-
    - либо является **блочным контейнером** (block container), например, если его свойство display имеет значение inline-block, block или list-item.
    - либо **устанавливает контекст форматирования** (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).
 
 2. Если свойство **`position`** имеет значение **`absolute`**, то содержащий блок задаётся краем _padding бокса_ ближайшего предка, у которого свойство **`position`** имеет значение отличное от `static` (`fixed`, `absolute`, `relative` или `sticky`).
 3. Если свойство **`position`** имеет значение **`fixed`**, то содержащий блок задаётся:
-
    - в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});
    - в случае страничного медиа (paged media) областью страницы.
 
 4. Если свойство **`position`** имеет значение **`absolute`** или **`fixed`**, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
-
    1. Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от `none`.
    2. Свойство {{cssxref("will-change")}} имеет значение `transform` или `perspective`.
    3. Свойство {{cssxref("filter")}} имеет значение отличное от `none` или `will-change` value of `filter` (работает только в Firefox).
@@ -254,21 +251,21 @@ p {
 ## Смотрите также
 
 - Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - The {{cssxref("all")}} property resets all CSS declarations to a given known state

@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaAtomic`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性の値を反映します。これは、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性によって定義された変更通知に基づいて、支援技術が変更された領域をすべて表示するか、部分的に表示するかを示します。
+**`ariaAtomic`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性の値を反映します。これは、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性によって定義された変更通知に基づいて、支援技術が変更された領域をすべて表示するか、部分的に表示するかを示します。
 
 ## 値
 

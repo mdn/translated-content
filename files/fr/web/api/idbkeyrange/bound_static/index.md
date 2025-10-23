@@ -35,9 +35,7 @@ Un objet {{domxref("IDBKeyRange")}} qui représente l'intervalle de clé.
 ### Exceptions
 
 - `DataError`
-
   - : Cette exception {{domxref("DOMException")}} est levée si :
-
     - Une des limites passé n'est pas valide.
     - La limite inférieur est supèrieur à la limite supérieur.
     - Les limites correspondent et l'intervalle est ouvert.

@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Recuerde eliminar este bloque de notas antes de publicar._
+> [!NOTE]
+> _Recuerde eliminar este bloque de notas antes de publicar._
 >
 > ---
 >
@@ -38,7 +39,6 @@ l10n:
 > - **page-type**
 >   - : El valor `page-type` para las páginas de destino del módulo CSS es `css-module` (solo para contenido en ingles).
 > - **spec-urls**
->
 >   - : El valor `spec-urls` es una URL de la especificación. En caso de que haya más de una versión de la especificación que sea relevante, preséntelas en una lista con viñetas. Por ejemplo, el valor de la clave `spec-urls` para la página de inicio del módulo [filter effects](/es/docs/Web/CSS/CSS_filter_effects) es (solo para contenido en ingles):
 >
 >     ```plain

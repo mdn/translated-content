@@ -5,11 +5,43 @@ l10n:
   sourceCommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
 ---
 
-{{CSSRef}}
-
 **`line-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
 
-{{EmbedInteractiveExample("pages/css/line-break.html")}}
+{{InteractiveExample("CSS デモ: line-break")}}
+
+```css interactive-example-choice
+line-break: auto;
+```
+
+```css interactive-example-choice
+line-break: anywhere;
+```
+
+```css interactive-example-choice
+line-break: normal;
+```
+
+```css interactive-example-choice
+line-break: loose;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    この喫茶店は、いつでもコーヒーの香りを漂わせています。<br />彼女はこの喫茶店で働いて、着々と実力をつけていきました。<br />今では知る人ぞ知る、名人です。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-family: "Yu Gothic", YuGothic, Meiryo, "ＭＳ ゴシック", sans-serif;
+  border: 2px dashed #999;
+  text-align: left;
+  width: 240px;
+  font-size: 16px;
+}
+```
 
 ## 構文
 

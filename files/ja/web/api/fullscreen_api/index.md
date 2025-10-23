@@ -44,7 +44,6 @@ _{{DOMxRef("Document")}} インターフェイスはこのインターフェイ�
 ### 廃止されたプロパティ
 
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-
   - : 論理値で、文書に現在全画面モードで表示されている要素があるのであれば `true`、 それ以外は `false` を返します。
 
     > [!NOTE]
@@ -61,7 +60,7 @@ _全画面 API は 2 つのイベントを定義しており、全画面モー�
 
 ## アクセス制御
 
-全画面モードが利用可能であるかは、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を使用して制御することができます。全画面モードの機能は `"fullscreen"` の文字列によって識別され、既定の許可リストの値は `"self"` であり、最上位の文書コンテキストでは全画面モードが許可されており、最上位文書と同じオリジンから読み込まれた内側の閲覧コンテキストも同様です。
+全画面モードが利用可能であるかは、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を使用して制御することができます。全画面モードの機能は `"fullscreen"` の文字列によって識別され、既定の許可リストの値は `"self"` であり、最上位の文書コンテキストでは全画面モードが許可されており、最上位文書と同じオリジンから読み込まれた内側の閲覧コンテキストも同様です。
 
 ## 使用上のメモ
 
@@ -127,4 +126,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

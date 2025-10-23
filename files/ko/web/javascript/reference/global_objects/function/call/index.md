@@ -38,7 +38,8 @@ console.log(new Food("cheese", 5).name);
 - `thisArg`
   - : _`func`_ 호출에 제공되는 `this`의 값.
 
-> **참고:** `this`는 메소드에 의해 보이는 실제값이 아닐 수 있음을 주의하세요: 메소드가 {{jsxref("Functions_and_function_scope/Strict_mode", "비엄격 모드", "", 1)}} 코드 내 함수인 경우, {{jsxref("Global_Objects/null", "null")}} 및 {{jsxref("Global_Objects/undefined", "undefined")}}는 전역 객체로 대체되고 원시값은 객체로 변환됩니다. `arg1, arg2, ...` 객체를 위한 인수.
+> [!NOTE]
+> `this`는 메소드에 의해 보이는 실제값이 아닐 수 있음을 주의하세요: 메소드가 {{jsxref("Functions_and_function_scope/Strict_mode", "비엄격 모드", "", 1)}} 코드 내 함수인 경우, {{jsxref("Global_Objects/null", "null")}} 및 {{jsxref("Global_Objects/undefined", "undefined")}}는 전역 객체로 대체되고 원시값은 객체로 변환됩니다. `arg1, arg2, ...` 객체를 위한 인수.
 
 ### 반환값(Return Value)
 
@@ -84,7 +85,8 @@ var fun = new Toy("robot", 40);
 
 이 예제에서는 익명 함수를 만들고 배열 내 모든 객체에서 이를 호출하기 위해 `call`을 사용합니다. 여기서 익명 함수의 주목적은 배열 내 객체의 정확한 인덱스를 출력할 수 있는 모든 객체에 print 함수를 추가하는 것 입니다.
 
-> **참고:** `this` 값으로 객체 전달이 반드시 필요하지는 않지만, 해당 예제에서는 설명의 목적으로 사용했습니다.
+> [!NOTE]
+> `this` 값으로 객체 전달이 반드시 필요하지는 않지만, 해당 예제에서는 설명의 목적으로 사용했습니다.
 
 ```js
 var animals = [
@@ -162,4 +164,4 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [객체 지향 JavaScript 소개](/ko/docs/Learn/JavaScript/Objects)
+- [객체 지향 JavaScript 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

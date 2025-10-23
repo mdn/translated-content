@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`loading`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}に [iframe](/ja/docs/Web/HTML/Element/iframe) をページ読み込み時に即座に読み込むか、必要な時にのみ読み込むかを指定するヒントを提供する文字列です。
+**`loading`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}に [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe) をページ読み込み時に即座に読み込むか、必要な時にのみ読み込むかを指定するヒントを提供する文字列です。
 
 これは、文書内のコンテンツの読み込みを最適化するために使用することができます。ページが読み込まれたときに表示されている iframe は、すぐに（熱心に）ダウンロードすることができます。一方、最初のページ読み込み時に画面外にある可能性が高い iframe は、遅延してダウンロードすることができます。つまり、ウィンドウの{{Glossary("visual viewport", "視覚的ビューポート")}}に表示される直前にダウンロードすることができます。
 
@@ -67,6 +67,6 @@ frameDiv.appendChild(iframe);
 ## 関連情報
 
 - {{HTMLElement("iframe")}} 要素
-- [ウェブパフォーマンス](/ja/docs/Learn/Performance) （MDN 学習領域）
-- [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) （MDN ウェブパフォーマンスガイド）
+- [ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance) （MDN 学習領域）
+- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) （MDN ウェブパフォーマンスガイド）
 - [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) (web.dev)

@@ -23,7 +23,8 @@ fetch(url).then((response) => {
 
 より複雑な操作では、 {{domxref("Cache.put","Cache.put()")}} を直接使用する必要があります。
 
-> **メモ:** `add()` は、前にキャッシュに保存された、リクエストに一致するキー/値の組を上書きます。
+> [!NOTE]
+> `add()` は、前にキャッシュに保存された、リクエストに一致するキー/値の組を上書きます。
 
 ## 構文
 
@@ -34,7 +35,6 @@ add(request)
 ### 引数
 
 - `request`
-
   - : キャッシュに加えるリクエスト。 {{domxref("Request")}} オブジェクトか URL を指定できる。
 
     この引数は {{domxref("Request.Request()", "Request()")}} コンストラクターの引数として使用されるので、 URL はそのコンストラクターと同じルールに従います。すなわち、URL はベース URL からの相対パスです。ベース URL は、ウィンドウコンテキストでは文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} が該当します。
@@ -46,7 +46,6 @@ add(request)
 ### 例外
 
 - {{jsxref("TypeError")}}
-
   - : URL スキームが `http` でも `https` でもない場合。
 
     レスポンスステータスが 200 番台（つまり、成功レスポンス）ではありません。これはリクエストが成功を返さない場合や、リクエストがオリジン間の CORS ではないリクエスト (_cross-origin no-cors_ request) の場合も発生します（この場合、ステータスが常に 0 と報告されます）。

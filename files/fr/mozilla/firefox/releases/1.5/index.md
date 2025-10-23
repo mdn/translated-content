@@ -3,8 +3,6 @@ title: Firefox 1.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/1.5
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 1.5, basé sur le moteur [Gecko](/fr/Gecko) 1.8, améliore son support des standards déjà de premier ordre et fournit de nouvelles opportunités de créer la prochaine génération d'applications Web. Firefox 1.5 propose un support amélioré de CSS2 et CSS3, des API pour des graphiques 2D scriptables et programmables grâce à [SVG](/fr/docs/Web/SVG) 1.1 et `<canvas>`, les évènements [XForms](/fr/XForms) et XML, ainsi que de nombreuses améliorations du DHTML, du JavaScript et du DOM.
 
 ## Outils pour développeurs

@@ -8,9 +8,9 @@ original_slug: Learn/JavaScript/Building_blocks/Return_values
 
 Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.
 
-| Prerequisites: | Basic computer literacy, a basic understanding of HTML and CSS, [JavaScript first steps](/es/docs/Learn/JavaScript/First_steps), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objective:     | To understand function return values, and how to make use of them.                                                                                                                                                           |
+| Prerequisites: | Basic computer literacy, a basic understanding of HTML and CSS, [JavaScript first steps](/es/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objective:     | To understand function return values, and how to make use of them.                                                                                                                                                                               |
 
 ## ¿Qué son los valores de retorno?
 
@@ -145,7 +145,7 @@ This exercise has brought up a couple of important points besides being a study 
 
 So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/docs/Learn#contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/docs/Learn_web_development#contact_us) to ask for help.
 
 ## See also
 

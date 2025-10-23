@@ -1,12 +1,9 @@
 ---
 title: 使用 JavaScript 发送表单
 slug: Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
-original_slug: Learn/Forms/Sending_forms_through_JavaScript
 l10n:
   sourceCommit: 4414bc297a05373570250fe1fb154eab197f29ca
 ---
-
-{{LearnSidebar}}
 
 当用户提交 HTML 表单（如通过点击{{glossary("Submit_button", "提交按钮")}}）时，浏览器会发出 [HTTP](/zh-CN/docs/Web/HTTP) 请求，来发送表单中的数据。但是，web 应用有时会使用 JavaScript API（如 {{domxref("Window/fetch", "fetch()")}}），以编程方式将数据发送到期望提交表单的端点，而不是采用这种声明式方法。本文将解释为什么这是一个重要的用例，并说明如何实现它。
 

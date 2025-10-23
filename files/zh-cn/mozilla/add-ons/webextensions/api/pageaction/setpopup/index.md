@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 设置当用户点击页面操作图标时打开的弹窗的 HTML 文档。
 
 ## 语法
@@ -20,13 +18,10 @@ browser.pageAction.setPopup(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId`
       - : `integer`。要设置弹窗的标签页 ID。
     - `popup`
-
       - : `string` 或 `null`。指向要在弹窗中显示的 HTML 页面的 URL。
 
         如果传入了一个空字符串（`""`），则弹窗将被禁用且扩展将收到 {{WebExtAPIRef("pageAction.onClicked")}} 事件。
@@ -63,7 +58,7 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#method-setPopup) API。本文衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.pageAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/pageAction#method-setPopup) API。该文档衍生自 Chromium 代码中的 [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

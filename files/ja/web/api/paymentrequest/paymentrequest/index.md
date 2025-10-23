@@ -20,20 +20,15 @@ new PaymentRequest(methodData, details, options)
 ### 引数
 
 - `methodData`
-
   - : 販売者ウェブサイトが受け入れる決済手段の識別子と、関連する決済手段固有のデータを格納する配列です。配列の各項目には以下のフィールドが含まれます。
-
     - `supportedMethods`
-
       - : 文字列で、[決済手段識別子](/ja/docs/Web/API/Payment_Request_API/Concepts#決済手段識別情報)が入ります。これは URL、または[標準化された決済手段識別子](/ja/docs/Web/API/Payment_Request_API/Concepts#決済手段識別子の標準化)のいずれかです。`data` フィールドの値と構造は、`supportedMethods` フィールドの値によって異なります。
 
     - `data`
       - : 対応している決済手段が必要とするかもしれないオプション情報を提供する JSON シリアライズ可能なオブジェクトです。これは `supportedMethods` で示す決済ハンドラーが期待する種類に適合していなければなりません。開発者は、データオブジェクトの期待される形について、決済手段の管理者に相談する必要があります。`supportedMethods` が `secure-payment-confirmation` の場合、`data` は {{domxref("SecurePaymentConfirmationRequest")}} 辞書に適合する必要があります。
 
 - `details`
-
   - : リクエストされたトランザクションに関する情報を提供する。この引数には以下のフィールドが含まれます。
-
     - `total`
       - : 決済リクエストのための合計金額です。
     - `id` {{optional_inline}}
@@ -43,9 +38,7 @@ new PaymentRequest(methodData, details, options)
     - `shippingOptions`
       - : ユーザーが選ぶことのできる配送オプションです。この配列が空の場合、販売者は現在の配送先住所に配送できないことを示す。既定値の配送オプションは、この配列で示すことができます。
     - `modifiers`
-
       - : 特定の決済手段に対する変更仕様です。例 えば、決済のための合計金額を決済手段に基づいて調整することです。このパラメーターには、以下のフィールドが格納されます。
-
         - `additionalDisplayItems`
           - : `details.displayItems` プロパティに追加する項目の配列です。このプロパティは、`details.modifiers.total` で異なる金額を示す割引または割増料金の行を追加するために一般的に使用されます。
         - `data`
@@ -54,9 +47,7 @@ new PaymentRequest(methodData, details, options)
           - : details.total の値を上書きする、決済リクエストのための合計金額です。これは通常、`details.modifiers.additionalItems` がリクエストに割引や購入を追加するときに使用します。
 
 - `options` {{optional_inline}}
-
   - : ユーザーエージェントの動作を制御するオプションを設定することができます。この引数には、以下のフィールドが含まれます。
-
     - `requestPayerName`
       - : ユーザーエージェントが支払者の名前を収集し、決済リクエストと一緒に送信するかどうかを示す論理値です。既定値は `false` です。
     - `requestPayerEmail`
@@ -76,7 +67,7 @@ new PaymentRequest(methodData, details, options)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされている。
+  - : この機能を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされている。
 
 ## 例
 

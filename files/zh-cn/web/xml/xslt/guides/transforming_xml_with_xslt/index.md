@@ -1,7 +1,6 @@
 ---
 title: 使用 XSLT 转换 XML
 slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-original_slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
 内容和表示分离是 [XML](/zh-CN/docs/Web/XML) 的一个关键设计特性。XML 文档的结构被设计成反映和阐明内容本身的各方面之间的重要关系，而不受需要提供有关此数据最终应该如何呈现的任何指示的障碍。这种智能的结构尤为重要，特别是在越来越多的数据在通过网络连接的高度异构的机器之间自动化传输的趋势下。

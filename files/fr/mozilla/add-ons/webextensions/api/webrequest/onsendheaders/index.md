@@ -35,18 +35,14 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`details`](#details) ci-dessous.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous ne pouvez passer qu'une seule valeur ici :
-
     - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet détails transmis à l'auditeur
 
 ## Objets supplémentaires
@@ -60,7 +56,6 @@ Les événements ont trois fonctions :
 - `method`
   - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
 - `originUrl`
-
   - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
     L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
@@ -68,17 +63,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy
@@ -96,7 +87,7 @@ Les événements ont trois fonctions :
 - `requestId`
   - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
 - `requestHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes HTTP qui sont envoyés avec cette demande.
 - `tabId`
   - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
 - `timeStamp`
@@ -141,8 +132,6 @@ browser.webRequest.onSendHeaders.addListener(
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

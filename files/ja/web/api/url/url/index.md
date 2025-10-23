@@ -3,7 +3,7 @@ title: "URL: URL() コンストラクター"
 short-title: URL()
 slug: Web/API/URL/URL
 l10n:
-  sourceCommit: 5a7fae1cc8df27d50c9365511a714f3c2fa4bfc1
+  sourceCommit: 870c21b730828c20ce7059dbd358eec8bed1a4c5
 ---
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}
@@ -26,7 +26,6 @@ new URL(url, base)
     `url` が相対参照である場合、`base` は必須であり、最終的な URL を解決するために使用されます。
     `url` が絶対 URL である場合、指定された `base` は結果の URL を作成するためには使用されません。
 - `base` {{optional_inline}}
-
   - : 文字列で、`url` が相対参照の場合に使用するベース URL を表します。
     指定されなかった場合、既定値は `undefined` です。
 
@@ -48,7 +47,8 @@ new URL(url, base)
 
 コンストラクターを使用する例をいくつか示します。
 
-> **メモ:** [相対参照の URL への解決](/ja/docs/Web/API/URL_API/Resolving_relative_references)では、さまざまな `url` と `base` 値が最終的な絶対 URL に解決される方法を説明するさらなる例が提供されています。
+> [!NOTE]
+> [相対参照の URL への解決](/ja/docs/Web/API/URL_API/Resolving_relative_references)では、さまざまな `url` と `base` 値が最終的な絶対 URL に解決される方法を説明するさらなる例が提供されています。
 
 ```js-nolint
 // ベース URL:

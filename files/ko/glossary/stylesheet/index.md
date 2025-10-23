@@ -13,5 +13,5 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 첫 걸음](/ko/docs/Learn/CSS/First_steps)
+- [CSS 첫 걸음](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics)
 - 위키백과의 [스타일시트](<https://en.wikipedia.org/wiki/Style_sheet_(web_development)>)

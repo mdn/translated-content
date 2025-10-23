@@ -20,11 +20,9 @@ mutationObserver.observe(target[, options])
 - `target`
   - : DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。
 - `options`
-
   - : 此对象的配置项描述了 DOM 的哪些变化应该报告给 `MutationObserver` 的 `callback`。当调用 {{domxref("MutationObserver.observe", "observe()")}} 时，`childList`、`attributes` 和 `characterData` 中，必须有一个参数为 `true`。否则会抛出 `TypeError` 异常。
 
     `options` 的属性如下：
-
     - `subtree` {{optional_inline}}
       - : 当为 `true` 时，将会监听以 `target` 为根节点的整个子树。包括子树中所有节点的属性，而不仅仅是针对 `target`。默认值为 `false`。
     - `childList` {{optional_inline}}
@@ -47,9 +45,7 @@ mutationObserver.observe(target[, options])
 ### 异常
 
 - `TypeError`
-
   - : 以下任一情况都会抛出异常：
-
     - 配置选项使得实际上不会监视任何内容（例如，如果 {{domxref("MutationObserverInit.childList")}}，{{domxref("MutationObserverInit.attributes")}} 和 {{domxref("MutationObserverInit.characterData")}} 都为 `false`）。
     - `attributes` 选项为 `false`（表示不监视属性更改）但是`attributeOldValue` 为 `true` 并且/或者 `attributeFilter` 配置存在。
     - {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} 选项为 `true` 但是 {{domxref("MutationObserverInit.characterData")}} 为 `false`（表示不跟踪字符更改）。

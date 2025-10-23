@@ -181,7 +181,7 @@ div:nth-of-type(2) {
 
 ## 간단한 레거시 격자 프레임워크 생성하기
 
-레거시 프레임 워크의 대부분은 격자처럼 보이는 것을 만들기 위해한 열을 다른 열 옆에 부동시키기 위해 {{cssxref("float")}} 속성의 동작을 이용합니다. 부동을 포함한 격자 생성 과정을 통해 이 방법이 어떻게 작동하는지 여러분에게 보여주고, 여러분이 [부동 및 해제](/ko/docs/Learn/CSS/CSS_layout/Floats) 단원에서 배운 것을 바탕으로 능력을 배가하기 위해 더 발전된 개념을 도입합니다.
+레거시 프레임 워크의 대부분은 격자처럼 보이는 것을 만들기 위해한 열을 다른 열 옆에 부동시키기 위해 {{cssxref("float")}} 속성의 동작을 이용합니다. 부동을 포함한 격자 생성 과정을 통해 이 방법이 어떻게 작동하는지 여러분에게 보여주고, 여러분이 [부동 및 해제](/ko/docs/Learn_web_development/Core/CSS_layout/Floats) 단원에서 배운 것을 바탕으로 능력을 배가하기 위해 더 발전된 개념을 도입합니다.
 
 격자 프레임워크를 생성할 수 있는 가장 편리하게 유형은 고정 너비입니다. 즉, 우리는 우리가 목표로 하는 디자인의 총 너비, 우리가 원하는 열의 수, 배수로의 너비 및 열의 너비를 계산할 필요가 있습니다. 대신 브라우저 너비에 따라 커지고 축소되는 열이 있는 격자상에 디자인을 배치하기로 한다면 열 무리에 대한 백분율 너비와 열 사이 배수로 너비를 계산해야 할 겁니다.
 
@@ -222,7 +222,7 @@ div:nth-of-type(2) {
 
 ![](simple-grid-finished.png)
 
-{{htmlelement("style")}} 요소에는 외곽(래퍼) 컨테이너에 980픽셀의 너비를 부여하는 아래와 같은 코드를 추가하고 오른쪽에 패딩으로는 20픽셀 우측을 추가합니다. 이로써 열 및 배수로의 총 너비를 위해 960픽셀이 주어집니다. 이 경우, 사이트의 모든 요소에 {{cssxref("box-sizing")}}을 `border-box`로 설정했기 때문에 패딩은 총 콘텐츠 너비에서 제외할 수 있습니다(자세한 설명은 [상자 모델의 전면 변경](/ko/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely)을 참조하세요).
+{{htmlelement("style")}} 요소에는 외곽(래퍼) 컨테이너에 980픽셀의 너비를 부여하는 아래와 같은 코드를 추가하고 오른쪽에 패딩으로는 20픽셀 우측을 추가합니다. 이로써 열 및 배수로의 총 너비를 위해 960픽셀이 주어집니다. 이 경우, 사이트의 모든 요소에 {{cssxref("box-sizing")}}을 `border-box`로 설정했기 때문에 패딩은 총 콘텐츠 너비에서 제외할 수 있습니다(자세한 설명은 [상자 모델의 전면 변경](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model#changing_the_box_model_completely)을 참조하세요).
 
 ```css
 * {
@@ -266,7 +266,8 @@ body {
 
 이제 단일 열 무리 형태의 상단 행은 격자처럼 깔끔하게 배치됩니다.
 
-> **참고:** **주석**: 각 열에 밝은 빨간색 색상을 부여하여 각 공간이 얼마나 많은지 정확하게 볼 수 있습니다.
+> [!NOTE]
+> **주석**: 각 열에 밝은 빨간색 색상을 부여하여 각 공간이 얼마나 많은지 정확하게 볼 수 있습니다.
 
 두 개 이상의 열을 하나로 합치길 원하는 레이아웃 컨테이너에 대해선 해당 컨테이너에 {{cssxref("width")}} 값을 필요한(합치기 할) 열 갯수에 맞춰(아울러 열 사이 배수구 숫자까지 포함해) 조정하기 위해 특별한 클래스를 부여할 필요가 있습니다. 우리는 컨테이너 무리가 2열에서 12열까지 (원하는 열 갯수만큼) 하나로 합칠 수 있도록 추가 클래스를 만들 필요가 있습니다. 각 열의 너비는 (하나로 합쳐질) 해당 열 갯수의 열 너비와 배수구 너비를 합산한 결과입니다. 여기서 배수구 숫자는 항상 열 갯수에서 하나가 빠집니다.
 
@@ -313,7 +314,8 @@ body {
 
 이러한 클래스를 생성해 놓았다면 격자에 서로 다른 너비의 열 무리를 배치할 수 있습니다. 페이지를 저장하고 브라우저에 불러들여 효과를 확인하십시오.
 
-> **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)과 비교해보세요. ([라이브로도 보세요](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
+> [!NOTE]
+> **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)과 비교해보세요. ([라이브로도 보세요](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
 
 당신의 요소 무리에 적용한 클래스를 수정하거나 일부 컨테이너를 추가 및 제거해보며 당신이 어떻게 레이아웃에 변경을 가할 수 있는지 확인하십시오 예를 들어 두 번째 행을 이렇게 만들 수 있습니다.
 
@@ -428,7 +430,8 @@ body {
 
 이제 코드를 저장하고 브라우저에 내용을 불러들이면 뷰포트 너비를 변경해보십시오. 열 너비가 멋지게 조정되는 것을 볼 수 있어야 합니다.
 
-> **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)과 비교해보세요. ([라이브로도 보세요](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
+> [!NOTE]
+> **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)과 비교해보세요. ([라이브로도 보세요](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
 
 ### calc() 함수를 사용한 편리한 계산법
 
@@ -557,7 +560,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 
 ## 플렉스박스 격자?
 
-[플렉스박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox)에 대한 이전 기사를 읽으면 플렉스박스가 격자 시스템을 생성하는 데 이상적인 해결책이라고 생각할 수 있습니다. 이용할 수 있는 플렉스박스 기반 격자 시스템이 많이 있으며, 플렉스박스는 상기한 내용에서 격자를 만들 때 이미 발견한 많은 문제를 해결할 수 있습니다.
+[플렉스박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox)에 대한 이전 기사를 읽으면 플렉스박스가 격자 시스템을 생성하는 데 이상적인 해결책이라고 생각할 수 있습니다. 이용할 수 있는 플렉스박스 기반 격자 시스템이 많이 있으며, 플렉스박스는 상기한 내용에서 격자를 만들 때 이미 발견한 많은 문제를 해결할 수 있습니다.
 
 그러나 플렉스박스는 격자 시스템처럼 디자인되지 않았으며 그런 식의 시스템으로 사용할 때 일련의 새로운 도전 과제를 던져줍니다. 간단한 예로 위에서 사용한 것과 동일한 예제 마크업을 채택해 아래의 CSS를 사용하여 `wrapper`와 `row` 및 `col` 클래스를 사용하여 스타일링할 수 있습니다.
 
@@ -622,7 +625,8 @@ body {
 
 Skeleton에는 격자 시스템 이외에도 많은 내용이 포함되어 있습니다. 타이포그래피를 위한 CSS 및 착수점으로 사용할 수 있는 다른 페이지 요소도 포함되어 있습니다. 하지만 지금은 이들을 기본값으로 남겨둘 겁이다. 우리가 정말로 관심을 갖고 있는 것은 격자입니다.
 
-> **참고:** [Normalize](/ko/docs/Web)는 니콜라스 겔러거가 작성한 정말로 유용한 소형 CSS 라이브러리로, 자동으로 몇 가지 유용한 기본 레이아웃의 수정을 수행하고, 기본 요소 스타일링을 브라우저를 막론하고 보다 일관되게 만들어 줍니다.
+> [!NOTE]
+> [Normalize](/ko/docs/Web)는 니콜라스 겔러거가 작성한 정말로 유용한 소형 CSS 라이브러리로, 자동으로 몇 가지 유용한 기본 레이아웃의 수정을 수행하고, 기본 요소 스타일링을 브라우저를 막론하고 보다 일관되게 만들어 줍니다.
 
 우리는 이전 예와 비슷한 HTML을 사용할 것입니다. 다음을 여려분의 HTML 바디에 추가하십시요.
 

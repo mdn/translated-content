@@ -13,6 +13,6 @@ l10n:
 
 ## 関連情報
 
-- [ウェブの性能について知る](/ja/docs/Learn/Performance)
+- [ウェブの性能について知る](/ja/docs/Learn_web_development/Extensions/Performance)
 - 関連用語項目:
   - {{Glossary("Perceived performance", "知覚パフォーマンス")}}

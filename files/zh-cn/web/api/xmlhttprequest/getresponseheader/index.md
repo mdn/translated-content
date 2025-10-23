@@ -51,7 +51,7 @@ client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
 ## 参见
 
 - 如何使用 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)
+- [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
 - 设置请求标头：{{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

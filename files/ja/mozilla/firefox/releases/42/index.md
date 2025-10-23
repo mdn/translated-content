@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.mozilla.org/firefox/developer/) Firefox 42 は、米国時間 2015 年 11 月 3 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点一覧
@@ -31,7 +29,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("img")}} ([Firefox バグ 1166910](https://bugzil.la/1166910))、{{htmlElement("iframe")}} ([Firefox バグ 1175736](https://bugzil.la/1175736))、{{HTMLElement("a")}} および {{HTMLElement("area")}} ([Firefox バグ 1174913](https://bugzil.la/1174913)) 要素の [`referrer`](/ja/docs/Web/HTML/Element/input#referrer) 属性を実験的にサポートしました。`network.http.enablePerElementReferrer` の既定値が `false` であるため、デフォルトでは効力がありません。
+- {{HTMLElement("img")}} ([Firefox バグ 1166910](https://bugzil.la/1166910))、{{htmlElement("iframe")}} ([Firefox バグ 1175736](https://bugzil.la/1175736))、{{HTMLElement("a")}} および {{HTMLElement("area")}} ([Firefox バグ 1174913](https://bugzil.la/1174913)) 要素の [`referrer`](/ja/docs/Web/HTML/Reference/Elements/input#referrer) 属性を実験的にサポートしました。`network.http.enablePerElementReferrer` の既定値が `false` であるため、デフォルトでは効力がありません。
 
 ### JavaScript
 
@@ -43,10 +41,9 @@ l10n:
 
 #### DOM & HTML DOM
 
-- [`id`](/ja/docs/Web/HTML/Element/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
+- [`id`](/ja/docs/Web/HTML/Reference/Elements/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
 - {{domxref('MouseEvent.offsetX')}} および {{domxref('MouseEvent.offsetY')}} を追加しました ([Firefox バグ 69787](https://bugzil.la/69787))。
 - {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリーのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
-
   - {{domxref("HTMLInputElement.directory")}}
   - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
   - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
@@ -120,7 +117,7 @@ _変更なし。_
 
 ## ネットワーク
 
-- CSP の [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#upgrade-insecure-requests) ディレクティブを実装しました ([Firefox バグ 1139297](https://bugzil.la/1139297))。
+- CSP の [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#upgrade-insecure-requests) ディレクティブを実装しました ([Firefox バグ 1139297](https://bugzil.la/1139297))。
 
 ## セキュリティ
 

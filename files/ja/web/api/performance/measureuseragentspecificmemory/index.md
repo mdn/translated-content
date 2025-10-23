@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-ブラウザーはオブジェクトが作成されると自動的にメモリーを確保し、オブジェクトに到達できなくなるとメモリーを解放します（ガベージコレクション）。このガベージコレクション (GC) は、特定のメモリーがまだ必要かどうかを判断する一般的な問題が不可能であるため、近似的なものです（[JavaScript のメモリー管理](/ja/docs/Web/JavaScript/Memory_management)も参照）。ウェブ開発者は、オブジェクトがガベージコレクションされ、メモリーがリークせず、メモリー使用量が時間経過に伴って不必要に増加し、ウェブアプリケーションの動作が遅くなったり応答しなくなったりしないようにする必要があります。メモリーリークは通常、イベントリスナーの登録を解除し忘れたり、ワーカーを閉じなかったり、配列にオブジェクトを蓄積したりすることで発生します。
+ブラウザーはオブジェクトが作成されると自動的にメモリーを確保し、オブジェクトに到達できなくなるとメモリーを解放します（ガベージコレクション）。このガベージコレクション (GC) は、特定のメモリーがまだ必要かどうかを判断する一般的な問題が不可能であるため、近似的なものです（[JavaScript のメモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)も参照）。ウェブ開発者は、オブジェクトがガベージコレクションされ、メモリーがリークせず、メモリー使用量が時間経過に伴って不必要に増加し、ウェブアプリケーションの動作が遅くなったり応答しなくなったりしないようにする必要があります。メモリーリークは通常、イベントリスナーの登録を解除し忘れたり、ワーカーを閉じなかったり、配列にオブジェクトを蓄積したりすることで発生します。
 
 `measureUserAgentSpecificMemory()` API は、メモリー使用量データを集約して、メモリーリークを探すのに役立ちます。メモリーの回帰検出や A/B テスト機能のメモリーへの影響を評価するために使用することができます。このメソッドを単一のメソッドで呼び出すよりも、定期的に呼び出してセッションの再生時間中にメモリー使用量がどのように変化するかを追跡する方がよいでしょう。
 
@@ -99,12 +99,12 @@ None.
 
 ## セキュリティ要件
 
-ウェブサイトが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
+ウェブサイトが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
 
 サイトをオリジン間分離するためには、 2 つのヘッダーを設定する必要があります。
 
-- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) で `same-origin` を値として指定したもの（攻撃からオリジンを保護）
-- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) で `require-corp` または `credentialless` を値として指定したもの（オリジンから被害者を保護）
+- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) で `same-origin` を値として指定したもの（攻撃からオリジンを保護）
+- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) で `require-corp` または `credentialless` を値として指定したもの（オリジンから被害者を保護）
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
@@ -153,5 +153,5 @@ if (crossOriginIsolated) {
 
 ## 関連情報
 
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
 - [Monitor your web page's total memory usage with measureUserAgentSpecificMemory() - web.dev](https://web.dev/articles/monitor-total-page-memory-usage)

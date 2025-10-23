@@ -19,7 +19,6 @@ next(value)
 ### 参数
 
 - `value` {{optional_inline}}
-
   - : 要传给生成器的值。
 
     该值将作为 `yield` 表达式的结果。例如，在 `variable = yield expression` 中，传入给 `.next()` 函数的值将被分配给 `variable`。
