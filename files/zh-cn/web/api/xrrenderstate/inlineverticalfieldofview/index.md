@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-对于 `"inline"` 会话，是表示默认视场的 {{JSxRef("Number")}}；对于沉浸式会话，则为 `null`。
+对于 `"inline"` 会话，为表示默认视场的 {{JSxRef("Number")}}；对于沉浸式会话，则为 `null`。
 
 ## 规范
 
