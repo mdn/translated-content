@@ -320,7 +320,7 @@ nameField.addEventListener("input", (event) => {
 
 Este código utiliza el método {{domxref("Document.getElementById", "getElementById()")}} de la interfaz {{domxref("Document")}} para obtener el objeto DOM que representa los elementos {{HTMLElement("input")}} que tienen ID `userName` y `sendButton`. Con ellos, podemos acceder a las propiedades y métodos que proporcionan información sobre estos elementos y permiten controlarlos.
 
-El objeto {{domxref("HTMLInputElement")}} Para la propiedad {{domxref("HTMLInputElement.disabled", "disabled")}} del botón  "Enviar" se establece en `true` (verdadero), lo que inhabilita el botón "Enviar" para que no se pueda hacer clic en el. Además, el campo de entrada del nombre de usuario se convierte en el foco activo, al llamar al método {{domxref("HTMLElement/focus", "focus()")}} que hereda de {{domxref("HTMLElement")}}.
+El objeto {{domxref("HTMLInputElement")}} Para la propiedad {{domxref("HTMLInputElement.disabled", "disabled")}} del botón "Enviar" se establece en `true` (verdadero), lo que inhabilita el botón "Enviar" para que no se pueda hacer clic en el. Además, el campo de entrada del nombre de usuario se convierte en el foco activo, al llamar al método {{domxref("HTMLElement/focus", "focus()")}} que hereda de {{domxref("HTMLElement")}}.
 
 A continuación, se llama a {{domxref("EventTarget.addEventListener", "addEventListener()")}} para añadir un manejador para el evento `input` al campo de entrada del nombre de usuario. Este código comprueba la longitud del valor actual del campo de entrada; si es cero, el botón "Enviar" se desactiva, si aún no lo está. De lo contrario, el código se asegura de que el botón esté activado.
 
