@@ -236,7 +236,7 @@ Las interfaces de la API de historial te permiten acceder a información sobre e
 
 ### Interfaces de Componentes Web
 
-Estas interfaces son utilizadas por la [Web Components API](/en-US/docs/Web/API/Web_components) Para crear y gestionar los [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) disponibles.
+Estas interfaces son utilizadas por la [Web Components API](/es/docs/Web/API/Web_components) Para crear y gestionar los [custom elements](/es/docs/Web/API/Web_components/Using_custom_elements) disponibles.
 
 - {{DOMxRef("CustomElementRegistry")}}
 
