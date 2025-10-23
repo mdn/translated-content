@@ -70,4 +70,4 @@ Object.getPrototypeOf("foo");
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- John Resig（2008）撰写的 [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
+- John Resig 撰写的 [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)（2008）
