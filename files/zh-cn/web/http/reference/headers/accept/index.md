@@ -71,7 +71,7 @@ Accept: */*
 浏览器在进行页面导航请求时，通常会使用如下的 `Accept` 请求标头值：
 
 ```http
-GET /en-US/ HTTP/2
+GET /zh-CN/ HTTP/2
 Host: developer.mozilla.org
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 …
