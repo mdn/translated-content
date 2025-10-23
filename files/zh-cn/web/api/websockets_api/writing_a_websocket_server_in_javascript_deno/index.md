@@ -21,7 +21,7 @@ Deno 是一个支持即时编译和缓存 TypeScript 的 JavaScript 运行时。
 
 ### 服务器
 
-创建一个 `main.js` 文件。这个文件将启动一个简单的 HTTP 服务器，该服务器同时展示客户端 HTML 页面。
+创建一个 `main.js` 文件。这个文件将包含用于简单的 HTTP 服务器（其同时向客户端提供 HTML）的代码。
 
 ```js
 Deno.serve({
@@ -32,7 +32,7 @@ Deno.serve({
       const file = await Deno.open("./index.html", { read: true });
       return new Response(file.readable);
     }
-    // 如果是 WebSocket 请求，我们需要使用 Deno.upgradeWebSocket 帮忙处理。
+    // 如果是 WebSocket 升级请求，我们需要使用 Deno.upgradeWebSocket 辅助函数。
     const { socket, response } = Deno.upgradeWebSocket(request);
 
     socket.onopen = () => {
