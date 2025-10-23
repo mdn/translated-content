@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4ec412012be0b083ebcae4a56b425f49901143f2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-thickness`** 用于设置元素中文本所使用的装饰线（如 line-through、underline 或 overline）的笔触厚度。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-thickness`** 用于设置元素中文本所使用的装饰线（如 line-through、underline 或 overline）的笔触粗细。
 
 {{InteractiveExample("CSS 演示：text-decoration-thickness")}}
 
@@ -63,11 +63,11 @@ text-decoration-thickness: unset;
 ### 值
 
 - `auto`
-  - : 由浏览器为文本装饰线选择合适的厚度。
+  - : 由浏览器为文本装饰线选择合适的粗细。
 - `from-font`
-  - : 如果字体文件中包含了首选的厚度值，则使用字体文件的厚度值。如果字体文件中没有包含首选的厚度值，则效果和设置为 `auto` 一样，由浏览器选择合适的厚度值。
+  - : 如果字体文件中包含了首选的粗细值，则使用字体文件的粗细值。如果字体文件中没有包含首选的粗细值，则效果和设置为 `auto` 一样，由浏览器选择合适的粗细值。
 - `<length>`
-  - : 将文本装饰线的厚度设置为一个 {{cssxref('length')}} 类型的值，覆盖掉字体文件建议的值或浏览器默认的值。
+  - : 将文本装饰线的粗细设置为一个 {{cssxref('length')}} 类型的值，覆盖掉字体文件建议的值或浏览器默认的值。
 - `<percentage>`
   - : 指定文本装饰线的粗细，其值为当前字体中 **1em** 的 {{cssxref('percentage')}}。百分比值作为相对值继承，因此会随字体变化而缩放。浏览器必须使用至少 1 个设备像素。对于该属性的特定应用场景，其厚度在整个应用的盒子内保持恒定，即使盒子内存在字号不同的子元素亦然。
 
@@ -81,7 +81,7 @@ text-decoration-thickness: unset;
 
 ## 示例
 
-### 厚度变化
+### 粗细变化
 
 #### HTML
 
@@ -115,7 +115,7 @@ text-decoration-thickness: unset;
 
 #### 结果
 
-{{ EmbedLiveSample('厚度变化') }}
+{{ EmbedLiveSample('粗细变化') }}
 
 ## 规范
 
