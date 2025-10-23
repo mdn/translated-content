@@ -105,7 +105,7 @@ Accept: application/json
 ## 参见
 
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)
-- [默认 Accept 值列表](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)
+- [Accept 默认值列表](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)
 - [列入 CORS 白名单的请求标头的限制](/zh-CN/docs/Glossary/CORS-safelisted_request_header#附加限制)
 - 表示内容协商结果的消息标头：{{HTTPHeader("Content-Type")}}
 - 其他相似标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}
