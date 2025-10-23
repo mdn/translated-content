@@ -2,13 +2,12 @@
 title: Node：lookupPrefix() 方法
 slug: Web/API/Node/lookupPrefix
 l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+  sourceCommit: f9c2ae293074c49f1ed2b86913ef24b0042e0047
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Node")}} 接口的 **`lookupPrefix()`** 方法返回一个字符串，其中包含给定命名空间 URI 的前缀（如果存在），
-，如果不存在则返回 `null`。如果可能存在多个前缀，则返回第一个前缀。
+{{domxref("Node")}} 接口的 **`lookupPrefix()`** 方法返回一个字符串，其中包含给定命名空间 URI 的前缀（如果存在），如果不存在则返回 `null`。如果可能存在多个前缀，则返回第一个前缀。
 
 ## 语法
 
@@ -19,56 +18,82 @@ lookupPrefix(namespace)
 ### 参数
 
 - `namespace`
-  - : 一个字符串，包含需要查找的命名空间。
+  - : 一个字符串，包含需要查找的命名空间。空字符串等价于 `null`，且都会导致函数返回 `null`。
     > [!NOTE]
     > 此参数不是可选的，但是可以设置为 `null`。
 
 ### 返回值
 
-包含相应前缀的字符串，如果没有找到，则返回 `null`。如果 `namespace` 为空或空字符串，则 `lookupPrefix()` 返回 `null`。
+包含相应前缀的字符串，如果没有找到，则返回 `null`。如果 `namespace` 为 null 或空字符串，则 `lookupPrefix()` 返回 `null`。
 
 如果节点是 {{domxref("DocumentType")}} 或 {{domxref("DocumentFragment")}}，`lookupPrefix()` 总是返回 `null`。
 
 ## 示例
 
+> [!NOTE]
+> 此示例在 HTML 文档中运行，其中 `xmlns:` 属性会被忽略（`xmlns:xlink` 除外）。Firefox 将所有元素的命名空间 URI 设置为 `null`，而 Chrome 和 Safari 会正确设置 HTML、SVG 和 MathML 元素的默认命名空间 URI。若需进行更具意义的测试，可打开独立的 [SVG](/zh-CN/docs/Web/SVG) 文档并在其上下文中执行脚本。
+
 ```html
-<code>http://www.w3.org/2000/svg</code> 在 &lt;output&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<code>http://www.w3.org/XML/1998/namespace</code> 在 &lt;output&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<code>http://www.w3.org/TR/html4/</code> 在 &lt;output&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<code>https://www.w3.org/1999/xlink</code> 在 &lt;output&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<code>http://www.w3.org/2000/svg</code> 在 &lt;svg&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<code>https://www.w3.org/1999/xlink</code> 在 &lt;svg&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<code>http://www.w3.org/XML/1998/namespace</code> 在 &lt;svg&gt;
-元素上的前缀：<output>未经测试</output>。<br />
-<svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
-<button>点击这里查看结果</button>
+<div class="hidden">
+  <div>测试 HTML 元素</div>
+  <svg>
+    <text>测试 SVG 元素</text>
+  </svg>
+  <svg xmlns:xlink="http://www.w3.org/1999/xlink" id="with-xlink">
+    <text>含有 xlink 的测试 SVG 函数</text>
+  </svg>
+  <math>测试 MathML 元素</math>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th><code>namespaceURI</code></th>
+      <th><code>&lt;div&gt;</code></th>
+      <th><code>&lt;svg&gt;</code></th>
+      <th><code>&lt;svg xmlns:xlink&gt;</code></th>
+      <th><code>&lt;math&gt;</code></th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 ```js
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector("output");
-  const aSvgElt = document.querySelector("svg");
+const htmlElt = document.querySelector("div");
+const svgElt = document.querySelector("svg");
+const svgEltXLink = document.querySelector("#with-xlink");
+const mathElt = document.querySelector("math");
 
-  const result = document.getElementsByTagName("output");
-  result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
-  result[1].value = aHtmlElt.lookupPrefix(
-    "http://www.w3.org/XML/1998/namespace",
-  ); // false
-  result[2].value = aHtmlElt.lookupPrefix("http://www.w3.org/TR/html4/"); // true
-  result[3].value = aHtmlElt.lookupPrefix("https://www.w3.org/1999/xlink"); // false
-  result[4].value = aSvgElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
-  result[5].value = aSvgElt.lookupPrefix("https://www.w3.org/1999/xlink"); // true
-  result[6].value = aSvgElt.lookupPrefix(
-    "http://www.w3.org/XML/1998/namespace",
-  ); // false
-});
+const tbody = document.querySelector("tbody");
+
+for (const uri of [
+  "http://www.w3.org/2000/xmlns/",
+  "http://www.w3.org/XML/1998/namespace",
+  "http://www.w3.org/1999/xhtml",
+  "http://www.w3.org/2000/svg",
+  "http://www.w3.org/1999/xlink",
+  "http://www.w3.org/1998/Math/MathML",
+  "",
+  null,
+]) {
+  const row = document.createElement("tr");
+  tbody.appendChild(row);
+  row.appendChild(document.createElement("td")).textContent =
+    JSON.stringify(uri);
+  for (const el of [htmlElt, svgElt, svgEltXLink, mathElt]) {
+    console.log(el, uri, el.lookupPrefix(uri));
+    row.appendChild(document.createElement("td")).textContent = String(
+      el.lookupPrefix(uri),
+    );
+  }
+}
 ```
 
 {{ EmbedLiveSample('示例','100%',190) }}
