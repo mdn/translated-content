@@ -28,6 +28,6 @@ Ces éléments fournissent des champs ou des zones de saisie de texte et utilise
 - [`<input type="search">`](/fr/docs/Web/HTML/Reference/Elements/input/search)
 - [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/fr/docs/Web/HTML/Reference/Elements/input/time) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local)
 - [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number), [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range)
-- [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email), [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel) et [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url)
+- [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email), [`<input type="tel">`](/fr/docs/Web/HTML/Reference/Elements/input/tel) et [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url)
 - {{HTMLElement("textarea")}}
 - Tout élément avec son attribut défini [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable)
