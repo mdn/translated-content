@@ -407,7 +407,7 @@ Cree una carpeta nueva llamada "beasts", y adicione tres imágenes en ella, con 
 
 ## Probándolo
 
-Primero, compruebe nuevamente que tiene todos los archivos necesarios en el lugar adecuado:
+Primero, comprueba nuevamente que tienes todos los archivos necesarios en el lugar adecuado:
 
 ```plain
 beastify/
