@@ -11,7 +11,7 @@ Le navigateur applique les déclarations de style CSS aux éléments concernés 
 
 CSS est l'une des trois technologies qui constituent le noyau du web, avec {{Glossary("HTML")}} et {{Glossary("JavaScript")}}. Ce langage est principalement utilisé pour appliquer un style aux {{Glossary("Element","éléments HTML")}}, mais peut aussi être utilisé avec d'autres langages de balisage tels que {{Glossary("SVG")}} ou encore {{Glossary("XML")}}.
 
-Une règle CSS est un ensemble de {{Glossary("CSS Property","propriétés")}} associé à un {{Glossary("CSS selector" ,"sélecteur")}}. Voici un exemple dans lequel chaque paragraphe HTML apparaîtra en jaune sur fond noir :
+Une règle CSS est un ensemble de {{Glossary("Property/CSS", "propriétés")}} associé à un {{Glossary("CSS selector", "sélecteur")}}. Voici un exemple dans lequel chaque paragraphe HTML apparaîtra en jaune sur fond noir&nbsp;:
 
 ```css
 /* Le sélecteur "p" indique que tous les paragraphes dans le document seront affectés par la règle */
@@ -26,7 +26,7 @@ p {
 }
 ```
 
-Le principe de « cascade » fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector","sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.
+Le principe de «&nbsp;cascade&nbsp;» fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector", "sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.
 
 ## Voir aussi
 
