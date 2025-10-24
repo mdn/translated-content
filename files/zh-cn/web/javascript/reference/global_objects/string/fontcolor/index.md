@@ -3,7 +3,7 @@ title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`fontcolor()`** 方法会创建一个 {{HTMLElement("font")}} 元素字符串，其中嵌入了调用字符串（`<font color="...">str</font>`），从而导致该字符串以指定的字体颜色显示。
 

@@ -16,4 +16,4 @@ Le temps entre le moment où le contenu est affiché sur la page et le moment o�
 ## Voir aussi
 
 - [`requestIdleCallback()`](/fr/docs/Web/API/Window/requestIdleCallback)
-- [Chargement fainéant (<i lang="en">lazy loading</i>)](/fr/docs/Web/Performance/Lazy_loading)
+- [Chargement fainéant (<i lang="en">lazy loading</i>)](/fr/docs/Web/Performance/Guides/Lazy_loading)

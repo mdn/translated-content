@@ -17,27 +17,27 @@ Bien qu'on puisse ajouter des nœuds enfants à un élément vide par le biais d
 
 Voici la liste des éléments vides en HTML&nbsp;:
 
-- [`<area>`](/fr/docs/Web/HTML/Element/area)
-- [`<base>`](/fr/docs/Web/HTML/Element/base)
-- [`<br>`](/fr/docs/Web/HTML/Element/br)
-- [`<col>`](/fr/docs/Web/HTML/Element/col)
-- [`<embed>`](/fr/docs/Web/HTML/Element/embed)
-- [`<hr>`](/fr/docs/Web/HTML/Element/hr)
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- [`<link>`](/fr/docs/Web/HTML/Element/link)
-- [`<meta>`](/fr/docs/Web/HTML/Element/meta)
-- [`<param>`](/fr/docs/Web/HTML/Element/param)
-- [`<source>`](/fr/docs/Web/HTML/Element/source)
-- [`<track>`](/fr/docs/Web/HTML/Element/track)
-- [`<wbr>`](/fr/docs/Web/HTML/Element/wbr)
+- [`<area>`](/fr/docs/Web/HTML/Reference/Elements/area)
+- [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base)
+- [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br)
+- [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
+- [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed)
+- [`<hr>`](/fr/docs/Web/HTML/Reference/Elements/hr)
+- [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img)
+- [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
+- [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link)
+- [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta)
+- [`<param>`](/fr/docs/Web/HTML/Reference/Elements/param)
+- [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
+- [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track)
+- [`<wbr>`](/fr/docs/Web/HTML/Reference/Elements/wbr)
 
 ## Balises auto-fermantes
 
 > [!NOTE]
 > Les balises auto-fermantes (`<tag />`) n'existent pas en HTML.
 
-Si une barre oblique `/` de fin est présente dans la balise ouvrante d'un élément HTML, les analyseurs syntaxiques HTML ignoreront ce caractère. Il est important de se rappeler cette distinction pour les éléments (comme [`<script>`](/fr/docs/Web/HTML/Element/script) ou [`<ul>`](/fr/docs/Web/HTML/Element/ul)) qui doivent avoir une balise fermante. Pour ces éléments, ajouter une barre oblique à la fin de la balise ouvrante ne suffira pas à fermer l'élément.
+Si une barre oblique `/` de fin est présente dans la balise ouvrante d'un élément HTML, les analyseurs syntaxiques HTML ignoreront ce caractère. Il est important de se rappeler cette distinction pour les éléments (comme [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) ou [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)) qui doivent avoir une balise fermante. Pour ces éléments, ajouter une barre oblique à la fin de la balise ouvrante ne suffira pas à fermer l'élément.
 
 Toutefois, certains outils de formatage de code ajouteront une barre oblique de fin aux éléments vides afin de les rendre compatibles avec XHTML et d'améliorer la lisibilité. Ainsi, certains outils de formatage convertiront `<input type="text">` en `<input type="text" />`.
 
@@ -50,4 +50,4 @@ Pour SVG et MathML, les éléments qui ne peuvent pas avoir de nœud enfant peuv
 
 ## Voir aussi
 
-- [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)

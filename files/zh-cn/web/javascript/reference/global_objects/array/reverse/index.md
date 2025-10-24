@@ -3,8 +3,6 @@ title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
 
-{{JSRef}}
-
 **`reverse()`** 方法[_就地_](https://zh.wikipedia.org/wiki/原地算法)反转数组中的元素，并返回同一数组的引用。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将被翻转，变为与之前相反的方向。
 
 要在不改变原始数组的情况下反转数组中的元素，使用 {{jsxref("Array/toReversed", "toReversed()")}}。

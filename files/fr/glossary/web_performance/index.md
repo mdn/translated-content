@@ -9,5 +9,5 @@ La **performance web** est le temps objectif entre le moment où une demande de 
 
 ## Voir aussi
 
-- [En savoir plus sur les performances web](/fr/docs/Learn/Performance)
+- [En savoir plus sur les performances web](/fr/docs/Learn_web_development/Extensions/Performance)
 - [Performances perçues (glossaire)](/fr/docs/Glossary/Perceived_performance)

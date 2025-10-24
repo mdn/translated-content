@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 088b56a895d22b6df854a9f26400af7d399f289f
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 **`forEach()`** 方法与 {{jsxref("Array.prototype.forEach()")}} 类似：它对迭代器生成的每个元素执行一次提供的函数。
 

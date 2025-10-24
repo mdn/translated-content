@@ -9,9 +9,9 @@ original_slug: Web/HTTP/Headers/Permissions-Policy
 > [!WARNING]
 > Cet en-tête a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.
 
-L'en-tête HTTP **`Feature-Policy`** fournit un mécanisme pour permettre ou interdire l'utilisation de fonctionnalités du navigateur pour le document courant et le contenu que ce dernier embarquerait via des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+L'en-tête HTTP **`Feature-Policy`** fournit un mécanisme pour permettre ou interdire l'utilisation de fonctionnalités du navigateur pour le document courant et le contenu que ce dernier embarquerait via des éléments [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
 
-Pour plus d'informations, voir l'article principal sur [les règles de gestion des fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Permissions_Policy).
+Pour plus d'informations, voir l'article principal sur [les règles de gestion des fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Guides/Permissions_Policy).
 
 <table class="properties">
   <tbody>
@@ -38,7 +38,7 @@ Feature-Policy: <directive> <allowlist>
   - : Une liste d'autorisation contenant des origines, décrites par une ou plusieurs des valeurs suivantes, et séparées par des espaces&nbsp;:
     - `*`&nbsp;: La fonctionnalité est autorisée pour ce document ainsi que l'ensemble des contextes de navigation imbriqués (via les éléments `<iframe>`) quelles que soient leurs origines.
     - `'self'`&nbsp;: La fonctionnalité sera autorisée dans ce document et pour tous les contextes de navigation imbriqués de la même origine. La fonctionnalité n'est pas autorisée pour les contextes de navigation d'autres origines.
-    - `'src'`&nbsp;: Pour l'attribut `allow` d'une <i lang="en">iframe</i> uniquement. La fonctionnalité sera autorisée pour cette <i lang="en">iframe</i> uniquement si le document qui y est chargé provient de la même origine que celle indiquée par l'attribut [`src`](/fr/docs/Web/HTML/Element/iframe#attributs) de l'élément HTML.
+    - `'src'`&nbsp;: Pour l'attribut `allow` d'une <i lang="en">iframe</i> uniquement. La fonctionnalité sera autorisée pour cette <i lang="en">iframe</i> uniquement si le document qui y est chargé provient de la même origine que celle indiquée par l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/iframe#attributs) de l'élément HTML.
 
       > [!NOTE]
       > L'origine `'src'` est uniquement utilisée pour la liste `allow` d'une <i lang="en">iframe</i>. Pour ces éléments, il s'agit de la valeur par défaut pour `allowlist`.
@@ -52,12 +52,12 @@ Feature-Policy: <directive> <allowlist>
 
 ## Directives
 
-- [`accelerometer`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer)
+- [`accelerometer`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer)
   - : Contrôle si le document courant est autorisé à recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
 - [`ambient-light-sensor`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor)
   - : Contrôle si le document courant est autorisé à recueillir des informations à propos de la luminosité ambiante de l'appareil au moyen de l'interface [`AmbientLightSensor`](/fr/docs/Web/API/AmbientLightSensor).
 - [`autoplay`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/autoplay)
-  - : Contrôle si le document courant est autorisé à jouer automatiquement des médias chargés au moyen de l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Quand cette fonctionnalité est désactivée et qu'il n'y a pas eu d'action de la part de l'utilisatrice ou l'utilisateur, la promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) retournée par [`HTMLMediaElement.play()`](/fr/docs/Web/API/HTMLMediaElement/play) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException). L'attribut `autoplay` sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video) sera ignoré.
+  - : Contrôle si le document courant est autorisé à jouer automatiquement des médias chargés au moyen de l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Quand cette fonctionnalité est désactivée et qu'il n'y a pas eu d'action de la part de l'utilisatrice ou l'utilisateur, la promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) retournée par [`HTMLMediaElement.play()`](/fr/docs/Web/API/HTMLMediaElement/play) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException). L'attribut `autoplay` sur les éléments [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) sera ignoré.
 - [`battery`](/fr/docs/Web/HTTP/Headers/Feature-Policy/battery)
   - : Contrôle si l'utilisation de l'[API Battery Status](/fr/docs/Web/API/Battery_Status_API) est autorisé. Quand cette fonctionnalité est désactivée, la promesse retournée par [`Navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException) [`NotAllowedError`](/fr/docs/Web/API/DOMException#notallowederror).
 - [`camera`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/camera)
@@ -69,7 +69,7 @@ Feature-Policy: <directive> <allowlist>
 - [`encrypted-media`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media)
   - : Contrôle si le document courant est autorisé à utiliser l'[API Encrypted Media Extensions](/fr/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Quand cette directive est désactivée, la promesse retournée par [`Navigator.requestMediaKeySystemAccess()`](/fr/docs/Web/API/Navigator/requestMediaKeySystemAccess) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException).
 - [`execution-while-not-rendered`](/fr/docs/Web/HTTP/Headers/Feature-Policy/execution-while-not-rendered)
-  - : Contrôle si les tâches des cadres doivent être exécutées s'ils ne seront pas rendus à l'écran (par exemple si un élément `<iframe>` est masqué via l'attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes/hidden) ou `display: none`).
+  - : Contrôle si les tâches des cadres doivent être exécutées s'ils ne seront pas rendus à l'écran (par exemple si un élément `<iframe>` est masqué via l'attribut [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) ou `display: none`).
 - [`execution-while-out-of-viewport`](/fr/docs/Web/HTTP/Headers/Feature-Policy/execution-while-out-of-viewport)
   - : Contrôle si les tâches des cadres doivent être exécutées quand ils sont en dehors de la zone d'affichage.
 - [`fullscreen`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen)
@@ -80,9 +80,9 @@ Feature-Policy: <directive> <allowlist>
   - : Contrôle si le document courant est autorisé à utiliser l'interface [`Geolocation`](/fr/docs/Web/API/Geolocation). Quand cette directive est désactivée, les appels à [`getCurrentPosition()`](/fr/docs/Web/API/Geolocation/getCurrentPosition) et [`watchPosition()`](/fr/docs/Web/API/Geolocation/watchPosition) causeront un appel de leurs fonctions de rappel avec une exception [`PositionError`](/fr/docs/Web/API/GeolocationPositionError) dont le code est `PERMISSION_DENIED`.
 - [`gyroscope`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/gyroscope)
   - : Contrôle si le document courant est autorisé à recueillir des informations à propos de l'orientation de l'appareil au moyen de l'interface [`Gyroscope`](/fr/docs/Web/API/Gyroscope).
-- [`layout-animations`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
+- [`layout-animations`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
   - : Contrôle si le document courant est autorisé à afficher des animations de mise en page.
-- [`legacy-image-formats`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
+- [`legacy-image-formats`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
   - : Contrôle si le document courant est autorisé à afficher des images dans des formats historiques.
 - [`magnetometer`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/magnetometer)
   - : Contrôle si le document courant est autorisé à recueillir des informations à propos de l'orientation au moyen de l'interface [`Magnetometer`](/fr/docs/Web/API/Magnetometer).
@@ -92,7 +92,7 @@ Feature-Policy: <directive> <allowlist>
   - : Contrôle si le document courant est autorisé à utiliser l'[API Web MIDI](/fr/docs/Web/API/Web_MIDI_API). Quand cette fonctionnalité est désactivée, la promesse retournée par [`Navigator.requestMIDIAccess()`](/fr/docs/Web/API/Navigator/requestMIDIAccess) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException).
 - [`navigation-override`](/fr/docs/Web/HTTP/Headers/Feature-Policy/navigation-override)
   - : Contrôle la disponibilité des mécanismes qui permettent à la page de prendre le contrôle sur le comportement de la [navigation spatiale](https://www.w3.org/TR/css-nav/), ou de l'annuler complètement.
-- [`oversized-images`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
+- [`oversized-images`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
   - : Contrôle si le document courant est autorisé à télécharger et afficher des images lourdes.
 - [`payment`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/payment)
   - : Contrôle si le document courant est autorisé à utiliser l'[API Payment Request](/fr/docs/Web/API/Payment_Request_API). Quand cette directive est désactivée, le constructeur [`PaymentRequest()`](/fr/docs/Web/API/PaymentRequest) lèvera une exception [`DOMException`](/fr/docs/Web/API/DOMException) [`SecurityError`](/fr/docs/Web/API/DOMException#securityerror).
@@ -102,11 +102,11 @@ Feature-Policy: <directive> <allowlist>
   - : Contrôle si le document courant est autorisé à utiliser l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API) afin de récupérer des informations d'authentification avec clé publique (par exemple avec [`navigator.credentials.get({publicKey: ..., ...})`](/fr/docs/Web/API/CredentialsContainer/get)) déjà enregistrées.
 - [`speaker-selection`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection)
   - : Contrôle si le document courant est autorisé à utiliser l'[API Audio Output Devices](/fr/docs/Web/API/Audio_Output_Devices_API) afin d'énumérer et de sélectionner les haut-parleurs.
-- [`sync-xhr`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
+- [`sync-xhr`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
   - : Contrôle si le document courant est autorisé à réaliser des requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
-- [`unoptimized-images`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) {{experimental_inline}}{{Non-standard_Inline}}
+- [`unoptimized-images`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) {{experimental_inline}}{{Non-standard_Inline}}
   - : Contrôle si le document courant est autorisé à télécharger et à afficher des images qui ne sont pas optimisées.
-- [`unsized-media`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) {{experimental_inline}}{{Non-standard_Inline}}
+- [`unsized-media`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) {{experimental_inline}}{{Non-standard_Inline}}
   - : Contrôle si le document courant est autorisé à modifier la taille des éléments média après que la disposition initiale a été terminée.
 - [`usb`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/usb)
   - : Contrôle si le document courant est autorisé à utiliser l'[API WebUSB](https://wicg.github.io/webusb/).
@@ -137,9 +137,9 @@ En spécifiant la valeur `'none'` pour liste des origines, les fonctionnalités 
 
 ## Voir aussi
 
-- [Gestion des fonctionnalités](/fr/docs/Web/HTTP/Permissions_Policy)
+- [Gestion des fonctionnalités](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Utiliser la gestion des fonctionnalités](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - [`Document.featurePolicy`](/fr/docs/Web/API/Document/featurePolicy) and [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy)
 - [<i lang="en">Feature-Policy Tester</i> (une extension pour les outils de développement Chrome)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`Referrer-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy)

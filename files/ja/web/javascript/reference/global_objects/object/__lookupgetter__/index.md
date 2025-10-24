@@ -1,11 +1,12 @@
 ---
 title: Object.prototype.__lookupGetter__()
+short-title: __lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 l10n:
-  sourceCommit: fd326b574aadcd78924a5a223f15e289e45a7f1d
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > この機能は非推奨となり、 {{jsxref("Object.getOwnPropertyDescriptor()")}} API に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 **CSS positioned layout**은 요소를 페이지에 배치하는 방법을 정의하는 CSS 모듈입니다.
 
 ## 참고서

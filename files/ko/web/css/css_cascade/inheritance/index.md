@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascade/Inheritance
 original_slug: Web/CSS/Inheritance
 ---
 
-{{cssref}}
-
 MDN 내 각 [CSS 속성(property) 정의](/ko/docs/Web/CSS/Reference) 페이지의 요약절은 그 속성이 기본(default)으로 상속되는지("Inherited: Yes") 혹은 상속되지 않는지("Inherited: no") 쓰여 있습니다. 이 상속 여부는 요소의 속성에 어떤 값이 지정되지 않을 때 일어나는 일을 제어합니다.
 
 ## 상속되는 속성
@@ -73,7 +71,7 @@ p {
     - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)
 

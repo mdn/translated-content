@@ -38,4 +38,4 @@ A noter que les restrictions précédentes sont spécifiques à l'usage de SVG e
 
 ## Voir aussi
 
-- [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)
+- [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML)

@@ -511,6 +511,7 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
+/zh-TW/docs/Web/API/Document_Object_Model/Examples	/zh-TW/docs/Web/API/Document_Object_Model
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/CSS/CSS_text/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/Web/API/Event
@@ -553,6 +554,8 @@
 /zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+/zh-TW/docs/Web/CSS/CSS_colors/Color_picker	/zh-TW/docs/Web/CSS/CSS_colors/Color_format_converter
+/zh-TW/docs/Web/CSS/CSS_colors/Color_picker_tool	/zh-TW/docs/Web/CSS/CSS_colors/Color_format_converter
 /zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 /zh-TW/docs/Web/CSS/CSS_一般問題	/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_grid_layout

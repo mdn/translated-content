@@ -18,7 +18,7 @@ Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 
 ## Quel est le problème&nbsp;?
 
-L'origine de la demande ne correspond à aucune des origines autorisées par l'en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin). Cette erreur peut également se produire si la réponse contient plus d'un en-tête `Access-Control-Allow-Origin`.
+L'origine de la demande ne correspond à aucune des origines autorisées par l'en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin). Cette erreur peut également se produire si la réponse contient plus d'un en-tête `Access-Control-Allow-Origin`.
 
 Si vous contrôlez le serveur auquel votre code accède via une requête CORS, assurez-vous qu'il soit configuré pour mentionner votre origine dans son en-tête `Access-Control-Allow-Origin`, et qu'un seul en-tête de ce type est fourni dans les réponses et qu'il contient une seule origine.
 
@@ -36,7 +36,7 @@ add_header 'Access-Control-Allow-Origin' 'origin'
 
 ## Voir aussi
 
-- [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/CORS/Errors)
+- [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/Guides/CORS/Errors)
 - Glossaire&nbsp;: [CORS](/fr/docs/Glossary/CORS)
-- [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
+- [Introduction au CORS](/fr/docs/Web/HTTP/Guides/CORS)
 - [Activer CORS&nbsp;: je souhaite activer la prise en charge du CORS sur mon serveur (en anglais)](https://enable-cors.org/server.html)

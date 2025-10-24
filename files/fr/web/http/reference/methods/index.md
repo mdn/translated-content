@@ -1,29 +1,51 @@
 ---
 title: Méthodes de requête HTTP
+short-title: Méthodes de requête
 slug: Web/HTTP/Reference/Methods
 original_slug: Web/HTTP/Methods
 ---
 
-HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées _verbes HTTP_. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (_safe_), idempotente ou être mise en cache (_cacheable_)).
+<abbr title="Hypertext Transfer Protocol">HTTP</abbr> définit un ensemble de **méthodes de requête** pour indiquer le but de la requête et ce qui est attendu en cas de succès.
+Bien qu'elles puissent aussi être des noms, ces méthodes de requête sont parfois appelées _verbes HTTP_.
+Chaque méthode possède sa propre sémantique, mais certaines caractéristiques sont partagées entre plusieurs méthodes&nbsp;: les méthodes de requête peuvent être {{Glossary("Safe/HTTP", "sûre")}}, {{Glossary("idempotent", "idempotente")}} ou {{Glossary("cacheable", "cachable")}}.
 
-- [`GET`](/fr/docs/Web/HTTP/Methods/GET)
-  - : La méthode `GET` demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
-- [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)
-  - : La méthode `HEAD` demande une réponse identique à une requête GET pour laquelle on aura omis le corps de la réponse (on a uniquement l'en-tête).
-- [`POST`](/fr/docs/Web/HTTP/Methods/POST)
-  - : La méthode `POST` est utilisée pour envoyer une entité vers la ressource indiquée. Cela entraîne généralement un changement d'état ou des effets de bord sur le serveur.
-- [`PUT`](/fr/docs/Web/HTTP/Methods/PUT)
-  - : La méthode `PUT` remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.
-- [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE)
-  - : La méthode `DELETE` supprime la ressource indiquée.
-- [`CONNECT`](/fr/docs/Web/HTTP/Methods/CONNECT)
+- {{HTTPMethod("GET")}}
+  - : La méthode `GET` demande une représentation de la ressource spécifiée.
+    Les requêtes utilisant `GET` doivent uniquement récupérer des données et ne doivent pas contenir de {{Glossary("HTTP Content", "contenu")}} de requête.
+- {{HTTPMethod("HEAD")}}
+  - : La méthode `HEAD` demande une réponse identique à une requête `GET`, mais sans le corps de la réponse.
+- {{HTTPMethod("POST")}}
+  - : La méthode `POST` soumet une entité à la ressource spécifiée, provoquant souvent un changement d'état ou des effets secondaires sur le serveur.
+- {{HTTPMethod("PUT")}}
+  - : La méthode `PUT` remplace toutes les représentations actuelles de la ressource cible par le {{Glossary("HTTP Content", "contenu")}} de la requête.
+- {{HTTPMethod("DELETE")}}
+  - : La méthode `DELETE` supprime la ressource spécifiée.
+- {{HTTPMethod("CONNECT")}}
   - : La méthode `CONNECT` établit un tunnel vers le serveur identifié par la ressource cible.
-- [`OPTIONS`](/fr/docs/Web/HTTP/Methods/OPTIONS)
-  - : La méthode `OPTIONS` est utilisée pour décrire les options de communications avec la ressource visée.
-- [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE)
-  - : La méthode `TRACE` réalise un message de test aller/retour en suivant le chemin de la ressource visée.
-- [`PATCH`](/fr/docs/Web/HTTP/Methods/PATCH)
-  - : La méthode `PATCH` est utilisée pour appliquer des modifications partielles à une ressource.
+- {{HTTPMethod("OPTIONS")}}
+  - : La méthode `OPTIONS` décrit les options de communication pour la ressource cible.
+- {{HTTPMethod("TRACE")}}
+  - : La méthode `TRACE` effectue un test de boucle de message le long du chemin vers la ressource cible.
+- {{HTTPMethod("PATCH")}}
+  - : La méthode `PATCH` applique des modifications partielles à une ressource.
+
+## Méthodes sûres, idempotentes et cachables
+
+Le tableau suivant liste les méthodes de requête HTTP et leur catégorisation en termes de sûreté, de possibilité de mise en cache et d'idempotence.
+
+| Méthode                   | Sûre | Idempotente | Cachable         |
+| ------------------------- | ---- | ----------- | ---------------- |
+| {{HTTPMethod("GET")}}     | Oui  | Oui         | Oui              |
+| {{HTTPMethod("HEAD")}}    | Oui  | Oui         | Oui              |
+| {{HTTPMethod("OPTIONS")}} | Oui  | Oui         | Non              |
+| {{HTTPMethod("TRACE")}}   | Oui  | Oui         | Non              |
+| {{HTTPMethod("PUT")}}     | Non  | Oui         | Non              |
+| {{HTTPMethod("DELETE")}}  | Non  | Oui         | Non              |
+| {{HTTPMethod("POST")}}    | Non  | Non         | Conditionnelle\* |
+| {{HTTPMethod("PATCH")}}   | Non  | Non         | Conditionnelle\* |
+| {{HTTPMethod("CONNECT")}} | Non  | Non         | Non              |
+
+\* `POST` et `PATCH` sont cachables lorsque les réponses incluent explicitement des informations de [fraîcheur](/fr/docs/Web/HTTP/Guides/Caching) et un en-tête {{HTTPHeader("Content-Location")}} correspondant.
 
 ## Spécifications
 
@@ -35,4 +57,5 @@ HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action qu
 
 ## Voir aussi
 
-- [Les en-têtes (_headers_) HTTP](/fr/docs/Web/HTTP/Headers)
+- [Codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)

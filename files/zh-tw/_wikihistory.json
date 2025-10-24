@@ -2613,13 +2613,6 @@
       "Shiyou"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-04-22T07:31:11.966Z",
-    "contributors": [
-      "jackblackevo",
-      "PJCHENder"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-02-27T01:36:51.610Z",
     "contributors": [
@@ -3771,7 +3764,7 @@
       "wildsky"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
       "Shiyou",
