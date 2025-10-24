@@ -1,28 +1,27 @@
 ---
 title: Object.getOwnPropertyDescriptors()
+short-title: getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`Object.getOwnPropertyDescriptors()`** 静的メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
+**`Object.getOwnPropertyDescriptors()`** は静的メソッドで、指定したオブジェクトのすべてのプロパティ記述子を返します。
 
 {{InteractiveExample("JavaScript デモ: Object.getOwnPropertyDescriptors()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-const descriptors1 = Object.getOwnPropertyDescriptors(object1);
+const descriptors = Object.getOwnPropertyDescriptors(object);
 
-console.log(descriptors1.property1.writable);
-// Expected output: true
+console.log(descriptors.foo.writable);
+// 予想される結果: true
 
-console.log(descriptors1.property1.value);
-// Expected output: 42
+console.log(descriptors.foo.value);
+// 予想される結果: 42
 ```
 
 ## 構文
@@ -98,5 +97,6 @@ subclass.prototype = Object.create(superclass.prototype, {
 ## 関連情報
 
 - [`Object.getOwnPropertyDescriptors` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims による `Object.getOwnPropertyDescriptors` のポリフィル](https://www.npmjs.com/package/object.getownpropertydescriptors)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}

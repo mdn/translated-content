@@ -52,7 +52,7 @@ Le paramètre `nom_attribut` est généralement sensible à la casse, mais ne l'
 
 ### Récupération de nonces
 
-Pour des raisons de sécurité, les _nonces_ [CSP](/fr/docs/Web/HTTP/CSP) des sources autres que des scripts, telles que les feuilles de style CSS, et les appels `.getAttribute("nonce")` sont interdits.
+Pour des raisons de sécurité, les _nonces_ [CSP](/fr/docs/Web/HTTP/Guides/CSP) des sources autres que des scripts, telles que les feuilles de style CSS, et les appels `.getAttribute("nonce")` sont interdits.
 
 ```js example-bad
 let nonce = script.getAttribute("nonce");

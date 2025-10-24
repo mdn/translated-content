@@ -3,13 +3,53 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 ---
 
-## 概述
+CSS **`transition-timing-function`** 属性设置如何计算受[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)影响的 CSS 属性的中间值。
 
-CSS 属性受到 [transition effect](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)的影响，会产生不断变化的中间值，而 [CSS](/zh-CN/docs/Web/CSS) `transition-timing-function` 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个 transition 变化过程中，变化速度可以不断改变。
+{{InteractiveExample("CSS 演示：transition-timing-function")}}
 
-这条加速度曲线被{{cssxref("&lt;timing-function&gt;")}}所定义，之后作用到每个 CSS 属性的过渡。
+```css interactive-example-choice
+transition-timing-function: linear;
+```
 
-你可以规定多个 timing function，通过使用 {{ cssxref("transition-property") }}属性，可以根据主列表 (transition property 的列表) 给每个 CSS 属性应用相应的 timing function.如果 timing function 的个数比主列表中数量少，缺少的值被设置为初始值（ease） 。如果 timing function 比主列表要多，timing function 函数列表会被截断至合适的大小。这两种情况下声明的 CSS 属性都是有效的。
+```css interactive-example-choice
+transition-timing-function: ease-in;
+```
+
+```css interactive-example-choice
+transition-timing-function: steps(6, end);
+```
+
+```css interactive-example-choice
+transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">悬停以查看<br />过渡。</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #990099;
+  color: white;
+  margin-right: 40%;
+}
+```
+
+这条加速度曲线被 {{cssxref("&lt;easing-function&gt;")}} 所定义，之后作用到每个 CSS 属性的过渡。
+
+你可以规定多个缓动函数，通过使用 {{cssxref("transition-property")}} 属性，可以根据主列表（`transition-property` 的列表）给每个 CSS 属性应用相应的缓动函数。如果缓动函数的个数比主列表中数量少，缺少的值被设置为初始值（ease） 。如果缓动函数比主列表要多，缓动函数函数列表会被截断至合适的大小。这两种情况下声明的 CSS 属性都是有效的。
 
 ## 语法
 
@@ -49,7 +89,7 @@ transition-timing-function: unset;
 ### 值
 
 - `<timing-function>`
-  - : 通过{{ cssxref("transition-property") }}中定义被过渡属性，每个 {{cssxref("&lt;timing-function&gt;")}}的值代表与这个属性相对应的 timing function.
+  - : 通过 {{cssxref("transition-property")}} 中定义被过渡属性，每个 {{cssxref("&lt;easing-function&gt;")}} 的值代表与这个属性相对应的缓动函数。
 
 ## 形式定义
 

@@ -3,8 +3,6 @@ title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`toExponential()`** 方法返回一个以指数表示法表示该数字的字符串。
 
 {{InteractiveExample("JavaScript Demo: Number.toExponential()")}}

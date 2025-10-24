@@ -3,8 +3,6 @@ title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
 
-{{JSRef}}
-
 **`Intl.DateTimeFormat`** 对象能使日期和时间在特定的语言环境下格式化。
 
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}

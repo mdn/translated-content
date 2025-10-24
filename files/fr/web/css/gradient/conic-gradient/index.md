@@ -1,13 +1,13 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** crée une image composée d'un dégradé dont les transitions de couleur tournent autour d'un point central (plutôt que de rayonner à partir du centre). Les dégradés coniques sont utilisés, par exemple, pour les graphiques en camembert et les {{glossary("color wheel", "roues chromatiques")}}. Le résultat de la fonction `conic-gradient()` est un objet du type de donnée {{CSSxRef("&lt;gradient&gt;")}}, qui est une forme particulière de {{CSSxRef("&lt;image&gt;")}}.
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** permet de créer une image constituée d'un dégradé radial pour lequel les transitions entre les couleurs ont lieu autour d'un centre plutôt que depuis le centre. Un dégradé conique pourra par exemple de dessiner un graphique en camembert. Le résultat de la fonction `conic-gradient()` est un objet du type de données [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type particulier d'[`<image>`](/fr/docs/Web/CSS/image).
-
-{{InteractiveExample("CSS Demo: conic-gradient()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: conic-gradient()")}}
 
 ```css interactive-example-choice
 background: conic-gradient(red, orange, yellow, green, blue);
@@ -54,54 +54,61 @@ background: conic-gradient(
 ## Syntaxe
 
 ```css
+/* Un dégradé avec une seule couleur rouge */
+conic-gradient(red)
+
 /* Un dégradé conique tourné de 45 degrés, commençant
    en bleu et finissant en rouge */
-conic-gradient(from 45deg, blue, red);
+conic-gradient(from 45deg, blue, red)
 
 /* Une boîte bleue-violette, le dégradé va du bleu
    vers le rouge mais seul le quart inférieur droit
    est visible comme le centre du dégradé est placé
    au coin supérieur gauche */
-conic-gradient(from 90deg at 0 0, blue, red);
+conic-gradient(from 90deg at 0 0, blue, red)
+
+/* Interpolation dans l'espace colorimétrique polaire
+  avec la méthode d'interpolation de teinte la plus longue */
+conic-gradient(in hsl longer hue, red, blue, green, red)
 
 /* Une roue de couleurs */
-background: conic-gradient(
-    hsl(360, 100%, 50%),
-    hsl(315, 100%, 50%),
-    hsl(270, 100%, 50%),
-    hsl(225, 100%, 50%),
-    hsl(180, 100%, 50%),
-    hsl(135, 100%, 50%),
-    hsl(90, 100%, 50%),
-    hsl(45, 100%, 50%),
-    hsl(0, 100%, 50%)
-);
+conic-gradient(
+  hsl(360 100% 50%),
+  hsl(315 100% 50%),
+  hsl(270 100% 50%),
+  hsl(225 100% 50%),
+  hsl(180 100% 50%),
+  hsl(135 100% 50%),
+  hsl(90 100% 50%),
+  hsl(45 100% 50%),
+  hsl(0 100% 50%)
+)
 ```
 
 ### Valeurs
 
-- [`<angle>`](/fr/docs/Web/CSS/angle)
+- {{CSSxRef("&lt;angle&gt;")}}
   - : Précédé du mot-clé `from`, cet angle définit la rotation du dégradé dans le sens horaire.
 - `<position>`
-  - : Définit la position du centre du dégradé en utilisant la même forme que la propriété [`background-position`](/fr/docs/Web/CSS/background-position) (pour la longueur, l'ordre et les mots-clés). Lorsque cette valeur est absente, la valeur par défaut est `center`, et le centre du dégradé est alors situé au centre de la boîte.
+  - : Définit la position du centre du dégradé en utilisant la même forme que la propriété {{CSSxRef("background-position")}} (pour la longueur, l'ordre et les mots-clés). Lorsque cette valeur est absente, la valeur par défaut est `center`, et le centre du dégradé est alors situé au centre de la boîte.
 - `<angular-color-stop>`
-  - : Une valeur pour un arrêt de couleur, de type [`<color>`](/fr/docs/Web/CSS/color_value), suivie par une ou deux positions d'arrêt, optionnelles, fournies par un [`<angle>`](/fr/docs/Web/CSS/angle) le long de l'arc du dégradé.
+  - : Une valeur pour un arrêt de couleur, de type {{CSSxRef("&lt;color&gt;")}}, suivie par une ou deux positions d'arrêt, optionnelles, fournies par un {{CSSxRef("&lt;angle&gt;")}} le long de l'arc du dégradé.
 - `<color-hint>`
-  - : Une indication d'[interpolation](/fr/docs/Glossary/Interpolation) qui définit la façon dont le dégradé progresse entre deux arrêts de couleur adjacents. La longueur définit le point auquel la couleur du dégradé doit être la couleur intermédiaire entre les deux couleurs d'arrêt. Si cette valeur est absente, la valeur intermédiaire est située à mi-parcours entre les deux arrêts de couleur.
+  - : Une indication d'{{Glossary("interpolation")}} qui définit la façon dont le dégradé progresse entre deux arrêts de couleur adjacents. La longueur définit le point auquel la couleur du dégradé doit être la couleur intermédiaire entre les deux couleurs d'arrêt. Si cette valeur est absente, la valeur intermédiaire est située à mi-parcours entre les deux arrêts de couleur.
 
 > [!NOTE]
-> Le rendu des arrêts de couleurs des dégradés CSS suit les mêmes règles que les [arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des arrêts de couleur dans les dégradés coniques suit les mêmes règles que pour les [arrêts de couleur dans les dégradés linéaires](/fr/docs/Web/CSS/gradient/linear-gradient#composition_dun_dégradé_linéaire).
 
 ## Description
 
 À l'instar des autres dégradés, les dégradés coniques ne possèdent pas [de dimensions intrinsèques](/fr/docs/Web/CSS/image#description) (ils n'ont pas de taille préférentielle ou de ratio)&nbsp;: la taille réelle correspondra à la taille de l'élément auquel le dégradé s'applique ou à la taille de l'image si celle-ci a une taille différente de l'élément.
 
-Pour créer un dégradé conique qui se répète afin de couvrir 360° (un tour complet), on utilisera plutôt la notation fonctionnelle [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient).
+Pour créer un dégradé conique qui se répète afin de couvrir 360° (un tour complet), on utilisera plutôt la notation fonctionnelle {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}.
 
-Les dégradés (`<gradient>`) sont un type d'image (`<image>`) et ne peuvent être utilisés qu'aux endroits où les images peuvent être utilisées. Aussi, `conic-gradient()` ne fonctionnera pas pour la propriété [`background-color`](/fr/docs/Web/CSS/background-color) ou pour les autres propriétés qui utilisent les données de type [`<color>`](/fr/docs/Web/CSS/color_value).
+Les dégradés (`<gradient>`) sont un type d'image (`<image>`) et ne peuvent être utilisés qu'aux endroits où les images peuvent être utilisées. Aussi, `conic-gradient()` ne fonctionnera pas pour la propriété {{CSSxRef("background-color")}} ou pour les autres propriétés qui utilisent les données de type {{CSSxRef("&lt;color&gt;")}}.
 
 > [!NOTE]
-> Un tel dégradé est appelé conique car, vu du dessus, la répartition des couleurs fait apparaître un cône.
+> Pourquoi parle-t-on de dégradé «&nbsp;conique&nbsp;»&nbsp;? Si les arrêts de couleur sont beaucoup plus clairs d'un côté que de l'autre, le résultat peut ressembler à un cône vu du dessus.
 
 ### Composition d'un dégradé conique
 
@@ -111,7 +118,7 @@ Un dégradé conique est semblable à un dégradé radial mais les transitions d
 
 Un dégradé conique est défini en indiquant un angle de rotation, le centre du dégradé puis en indiquant une liste de points d'arrêt de couleur. À la différence des dégradés linéaires et des dégradés radiaux pour lesquels les points d'arrêt de couleur sont placés avec une [longueur](/fr/docs/Web/CSS/length), les points d'arrêt de couleur d'un dégradé conique sont placés à l'aide d'un [angle](/fr/docs/Web/CSS/angle). Les unités utilisables pour les angles sont `deg` (pour les degrés), `rad` (pour les radians), `grad` (pour les grades) et `turn` (pour les tours). Un cercle se divise en 360 degrés, 400 grades, 2π radians et un tour. Les navigateurs qui prennent en charge les dégradés coniques acceptent également les valeurs exprimées en pourcentage (100% correspondant à 360 degrés), mais cela ne fait pas partie de la spécification.
 
-Comme pour les dégradés radiaux, la syntaxe pour les dégradés coniques permet de situer le centre du dégradé à n'importe quel endroit de l'image ou de l'élément, même en dehors. La position s'exprime avec deux valeurs, de façon semblable à la syntaxe de [`background-position`](/fr/docs/Web/CSS/background-position).
+Comme pour les dégradés radiaux, la syntaxe pour les dégradés coniques permet de situer le centre du dégradé à n'importe quel endroit de l'image ou de l'élément, même en dehors. La position s'exprime avec deux valeurs, de façon semblable à la syntaxe de {{CSSxRef("background-position")}}.
 
 L'arc du dégradé représente le périmètre du dégradé. Le _point de départ_ du dégradé est situé en haut de l'axe vertical. Ensuite le dégradé évolue à partir de cet angle. Les couleurs du dégradé sont déterminées grâce aux points d'arrêt de couleur angulaires, aux points de départ et aux points d'arrivée et éventuellement aux points d'arrêt intermédiaires. Les transitions entre les couleurs peuvent être modifiées grâce à des indications entre les différents points d'arrêt.
 
@@ -160,8 +167,8 @@ On voit avec l'exemple précédent qu'il est aussi possible de mélanger différ
 
 Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Aussi, bien qu'il soit possible de créer des camemberts graphiques, des damiers ou d'autres effets grâce aux dégradés coniques, les images construites en CSS ne sont pas accessibles. Les images créées avec des dégradés coniques ne sont donc pas accessibles non plus. Si l'image contient des informations essentielles à la compréhension du document, mieux vaudra la décrire de façon sémantique dans le document afin que ce dernier soit correctement accessible.
 
-- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Explications MDN pour le WCAG et la règle 1.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.1_—_des_équivalents_textuels_doivent_être_fournis_pour_tout_contenu_non_textuel)
+- [Comprendre les critères de réussite 1.1.1 - Guide de compréhension WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Exemples
 
@@ -184,7 +191,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{EmbedLiveSample("Dégradé à 40°", 120, 120)}}
 
 ### Dégradé avec un centre décalé
 
@@ -205,9 +212,9 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{EmbedLiveSample("Dégradé avec un centre décalé", 120, 120)}}
 
-### Camembert
+### Dégradé en camembert
 
 Dans cet exemple, on utilise des arrêts de couleurs à plusieurs positions avec des couleurs adjacentes partageant un même arrêt, afin de créer des ruptures brutes.
 
@@ -229,7 +236,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{EmbedLiveSample("Dégradé en camembert", 120, 120)}}
 
 ### Damier
 
@@ -257,7 +264,51 @@ div {
 }
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{EmbedLiveSample("Damier", 120, 120)}}
+
+### Interpolation de teinte
+
+```html hidden
+<div class="shorter"></div>
+<div class="longer"></div>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 45vw;
+  height: 80vh;
+}
+
+.shorter::before {
+  content: "teinte plus courte";
+  display: block;
+  margin-top: -1rem;
+}
+
+.longer::before {
+  content: "teinte plus longue";
+  display: block;
+  margin-top: -1rem;
+}
+```
+
+Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/hue) est interpolée.
+
+```css
+.shorter {
+  background-image: conic-gradient(in hsl shorter hue, red, blue);
+}
+
+.longer {
+  background-image: conic-gradient(in hsl longer hue, red, blue);
+}
+```
+
+La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/hue-interpolation-method#plus_courte), c'est-à-dire que la couleur passe directement du rouge au bleu en empruntant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/hue-interpolation-method#plus_longue), c'est-à-dire que la couleur va du rouge au bleu en empruntant l'arc le plus long, en passant par les verts, les jaunes et les oranges.
+
+{{EmbedLiveSample("Interpolation de teinte", 240, 200)}}
 
 ### D'autres exemples d'utilisation de `conic-gradient()`
 
@@ -273,15 +324,12 @@ Voir la page [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
-  - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`image()`](/fr/docs/Web/CSS/image/image)
-- [`element()`](/fr/docs/Web/CSS/element)
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set)
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)
+- [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- Autres fonctions de dégradé&nbsp;: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{cssxref("&lt;image&gt;")}}
+- La fonction {{cssxref("image/image","image()")}}
+- La fonction {{cssxref("element", "element()")}}
+- La fonction {{cssxref("image/image-set","image-set()")}}
+- La fonction {{cssxref("cross-fade", "cross-fade()")}}

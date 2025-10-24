@@ -205,7 +205,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
    }
    ```
 
-   이제 추가 설명은 충븐하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
+   이제 추가 설명은 충분하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
 
    ```js
    let promise2 = promise.then((response) => response.blob());
@@ -230,7 +230,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
    여기서 우리는 두 번째 Promise가 fulfills일 때 반횐된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
 
-If you save the HTML file you've just created and load it in your browser, you'll see that the image is displayed in the page as expected. Good work!
+방금 만든 HTML 파일을 저장하고 브라우저에서 불러오면, 이미지가 예상대로 페이지에 표시되는 것을 볼 수 있습니다. 잘 하셨습니다!
 
 > [!NOTE]
 > You will probably notice that these examples are somewhat contrived. You could just do away with the whole `fetch()` and `blob()` chain, and just create an `<img>` element and set its `src` attribute value to the URL of the image file, `coffee.jpg`. We did, however, pick this example because it demonstrates promises in a nice simple fashion, rather than for its real-world appropriateness.
@@ -276,7 +276,8 @@ fetch("coffee.jpg")
 
 fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 executor 함수가 가진 파라미터로 전달 된다는 것을 꼭 기억하세요.
 
-> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
+> [!NOTE]
+> `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
 
 ## Promise terminology recap
 
@@ -460,7 +461,8 @@ function fetchAndDecode(url, type) {
 
 이 로그는 각 fetch시도가 완료되면 콘솔에 메시지를 출력하여 사용자에게 알려줍니다.
 
-> **참고:** `then()`/`catch()`/`finally()` is the async equivalent to `try`/`catch`/`finally` in sync code.
+> [!NOTE]
+> `then()`/`catch()`/`finally()` is the async equivalent to `try`/`catch`/`finally` in sync code.
 
 ## Building your own custom promises
 
@@ -581,13 +583,13 @@ function promisifyRequest(request) {
 
 ## Conclusion
 
-Promises are a good way to build asynchronous applications when we don't know the return value of a function or how long it will take to return. They make it easier to express and reason about sequences of asynchronous operations without deeply nested callbacks, and they support a style of error handling that is similar to the synchronous `try...catch` statement.
+Promise는 함수의 반환 값을 예측할 수 없거나 완료되기까지 시간이 걸리는 비동기 애플리케이션을 구축할 때 유용한 방법입니다. Promise를 사용하면 깊게 중첩된 콜백(callback) 없이도 연속적인 비동기 작업을 더 쉽게 표현하고 이해할 수 있으며, 동기 코드의 `try...catch` 문과 유사한 방식의 오류 처리를 지원합니다.
 
-Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
+Promise는 모든 최신 브라우저의 최신 버전에서 작동합니다. Promise 지원에 문제가 되는 곳은 Opera Mini와 IE11 및 그 이전 버전뿐입니다.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across further features and techniques.
+이 글에서는 Promise의 모든 기능을 다루지는 않았고, 가장 흥미롭고 유용한 것들만 살펴보았습니다. Promise에 대해 더 깊이 배우다 보면, 더 많은 기능과 기법들을 접하게 될 것입니다.
 
-Most modern Web APIs are promise-based, so you'll need to understand promises to get the most out of them. Among those APIs are [WebRTC](/ko/docs/Web/API/WebRTC_API), [Web Audio API](/ko/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/ko/docs/Web/API/Media_Capture_and_Streams_API), and many more. Promises will be more and more important as time goes on, so learning to use and understand them is an important step in learning modern JavaScript.
+대부분의 최신 웹 API는 Promise 기반이므로, 이를 최대한 활용하려면 Promise를 이해해야 합니다. 이러한 API에는 [WebRTC](/ko/docs/Web/API/WebRTC_API), [Web Audio API](/ko/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/ko/docs/Web/API/Media_Capture_and_Streams_API), 등이 있으며, 이 밖에도 많이 있습니다. Promise는 앞으로 점점 더 중요해질 것이므로, Promise의 사용법과 동작 원리를 배우는 것은 최신 JavaScript 학습의 중요한 과정입니다.
 
 ## See also
 

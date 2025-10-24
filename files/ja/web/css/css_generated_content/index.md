@@ -151,7 +151,7 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
   - {{cssxref("::scroll-marker")}} 擬似要素
   - {{cssxref(":target-current")}} 擬似クラス
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
   - {{cssxref("attr", "attr()")}} 関数
   - {{cssxref("string")}} データ型
   - {{cssxref("image")}} データ型

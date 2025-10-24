@@ -2,17 +2,15 @@
 title: "<input>: HTML 入力要素"
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
 ---
-
-{{HTMLSidebar}}
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
 
 {{InteractiveExample("HTML デモ: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="name">Name (4 to 8 characters):</label>
+<label for="name">名前（4 ～ 8 文字）:</label>
 
 <input
   type="text"
@@ -376,7 +374,7 @@ label {
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。詳しい情報はグローバル属性 [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) のページを参照してください。
 
 - [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
-  - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、`email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#values) を参照してください。
+  - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、`email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#値) を参照してください。
 
     `autocomplete` 属性は `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, `password` で有効です。この属性は数値またはテキストデータを返さない入力型では効果がなく、`checkbox`, `radio`, `file` とすべてのボタン型を除いたすべての入力型で有効になります。
 
@@ -432,7 +430,7 @@ label {
     > [!NOTE]
     > 仕様書で要件とはされていませんが、Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
 
-- `form`
+- [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
   - : 文字列で、入力欄が関連づけられた {{HTMLElement("form")}} 要素（つまり、**フォームオーナー**）を指定します。存在する場合、この文字列値は同一文書内の `<form>` 要素の [`id`](#id) と一致している必要があります。この属性が指定されない場合は、`<input>` 要素は直近の内包するフォームに（もしあれば）関連付けられます。
 
     `form` 属性によって、入力欄を文書内のどこに置いても、文書内の他の場所にあるフォームと関連付けることができます。
@@ -473,9 +471,9 @@ label {
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後10時から午前4時までの自国の範囲を指定することができます。
 
 - [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength)
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（UTF-16 コード単位で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（{{glossary("UTF-16", "UTF-16 コード単位")}}で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。`min` 属性の値が数値でない場合は、要素に最小値は設定されません。
@@ -485,9 +483,9 @@ label {
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの自国の範囲を指定することができます。
 
 - [`minlength`](/ja/docs/Web/HTML/Reference/Attributes/minlength)
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字列長 (UTF-16 コード単位で計測) を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字列長（{{glossary("UTF-16", "UTF-16 コード単位")}}で計測）を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が {{glossary("UTF-16", "UTF-16 コード単位")}}で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
   - : 論理属性の `multiple` は、設定されている場合、email 入力欄ではユーザーがウィジェット内でカンマ区切りで複数のメールアドレスを入力できること、また `file` 入力欄では複数のファイルを選択することができることを意味します。{{HTMLElement("input/email", "email")}} および {{HTMLElement("input/file", "file")}} 入力型を参照してください。
@@ -572,20 +570,18 @@ label {
   - : `image` 入力ボタンにのみ有効で、`src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。ステップベースからの整数倍のステップ数である値のみが有効です。ステップベースは、指定されている場合は [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)、指定されていない場合は [`value`](#value)、どちらも指定されていない場合は `0` となります（ただし、`week` は例外で、既定のステップベースは −259,200,000, これは週 `1970-W01` の先頭を示します）。
 
     明示的に指定しない場合は次のようになります。
     - `step` の既定値は、`number` と `range` の場合は 1 です。
     - 日付や時刻の入力型では、型ごとにふさわしい `step` の既定値があります。[`date`](/ja/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/ja/docs/Web/HTML/Reference/Elements/input/time#step)、[`week`](/ja/docs/Web/HTML/Reference/Elements/input/week#step) の個別のページを参照してください。
 
-    値は、正の整数または浮動小数点実数、または特殊な値 `any` のいずれかでなければなりません。これは、刻みが考慮されず、あらゆる値が許容されることを意味します（[`min`](#min) や [`max`](#max) などの他の制約がない場合）。
-
-    `any` が明示的に設定されていない場合、`number`、日付/時刻、`range` の各入力型の有効な値は、刻みの基数と等しくなります。すなわち [`min`](#min) の値と、そこから step 値単位で増加させたもの（指定されている場合は [`max`](#max) まで）です。
+    値は、正の整数または浮動小数点実数、または特殊な値 `any` のいずれかでなければなりません。これは、ステップが考慮されず、あらゆる値が許容されることを意味します（[`min`](/ja/docs/Web/HTML/Reference/Attributes/min) や [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) などの他の制約がない場合）。
 
     例えば、`<input type="number" min="10" step="2">` とすると、`10` 以上の偶数の整数であればすべて有効となります。`<input type="number">` のように省略された場合は、整数であれば何でも有効ですが、浮動小数点実数 (`4.2` など) は `step` の既定値が `1` なので有効ではありません。`4.2` を有効にするためには、`step` に `any`、0.1、0.2 に設定するか、`min` の値を `.2` で終わる数に（例えば `<input type="number" min="-5.2">` に）設定する必要があります。
 
     > [!NOTE]
-    > ユーザーが入力したデータが刻みの設定に従っていない場合、その値は制約検証で無効とみなされ、`:invalid` 擬似クラスに一致するようになります。
+    > ユーザーが入力したデータがステップの設定に従っていない場合、その値は制約検証で無効とみなされ、`:invalid` 擬似クラスに一致するようになります。
 
     詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
@@ -748,7 +744,7 @@ label {
     <tr>
       <td>{{Cssxref(":checked")}}</td>
       <td>
-        {{HTMLElement("input/checkbox", "checkbox")}} や {{HTMLElement("input/radio", "radio")}} の入力型のうち、現在チェックされている (また {{HTMLElement("select")}} の {{HTMLElement("option")}} のうち現在選択されているもの) に一致します。
+        {{HTMLElement("input/checkbox", "checkbox")}} や {{HTMLElement("input/radio", "radio")}} の入力型のうち、現在チェックされている（また {{HTMLElement("select")}} の {{HTMLElement("option")}} のうち現在選択されているもの）に一致します。
       </td>
     </tr>
     <tr>
@@ -870,14 +866,6 @@ input[pattern] {
 
 {{cssxref("::first-line")}} 擬似要素に適用できる CSS プロパティのサブセットのみが、セレクターに `::placeholder` を使用した規則で使用することができます。
 
-### appearance
-
-{{cssxref("appearance")}} プロパティは、（ほぼ）あらゆる要素をオペレーティングシステムのテーマに基づいたプラットフォームのネイティブのスタイルで表示したり、`none` の値でプラットフォームのネイティブのスタイルを削除したりすることができます。
-
-`<div>` に `div {appearance: radio;}` を設定してラジオボタンのように見せたり、`[type="radio"] {appearance: checkbox;}` でチェックボックスのように見せたりすることができますが、やらないでください。
-
-`appearance: none` を設定するとプラットフォームのネイティブの境界が削除されますが、機能は削除されません。
-
 ### caret-color
 
 テキスト入力関連要素に特有のプロパティとして、CSS の {{cssxref("caret-color")}} プロパティがあり、テキスト入力欄のキャレットを描くのに使用する色を設定することができます。
@@ -897,7 +885,7 @@ input.custom {
   font:
     16px "Helvetica",
     "Arial",
-    "sans-serif";
+    sans-serif;
 }
 ```
 
@@ -1173,7 +1161,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 
 ### 大きさ
 
-フォーム入力欄のような対話型要素は、簡単に有効化できるだけの大きさを持たせてください。これにより、手足の不自由な人や、スタイラスや指のような精度の低い入力方法を使用している人など、様々な人にとって有用です。対話型の大きさとしては、44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) を最小値とすることが推奨されています。
+フォーム入力欄のような対話型要素は、簡単に有効化できるだけの大きさを持たせてください。これにより、手足の不自由な人や、スタイラスや指のような精度の低い入力方法を使用している人など、様々な人にとって有用です。対話型の大きさとしては、44×44 [CSS ピクセル](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels) を最小値とすることが推奨されています。
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -1295,7 +1283,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
           </li>
           <li>
             <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>:
-            <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+            <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
           </li>
         </ul>
       </td>
@@ -1359,14 +1347,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 
 ## 関連情報
 
-- [フォームの制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
+- CSS の {{cssxref("appearance")}} プロパティ
 - [初めての HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)
 - [HTML フォームを構成する方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [ネイティブのフォームウィジェット](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [独自のフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [フォームの制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [HTML フォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

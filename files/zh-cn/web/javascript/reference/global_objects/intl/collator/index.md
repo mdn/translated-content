@@ -3,8 +3,6 @@ title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
 
-{{JSRef}}
-
 **`Intl.Collator`** 对象用于语言敏感的字符串比较。
 
 {{InteractiveExample("JavaScript Demo: Intl.Collator")}}

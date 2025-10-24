@@ -8,7 +8,8 @@ original_slug: Web/SVG/Attribute/stroke-width
 
 L'attribut **`stroke-width`** définit l'épaisseur du contour à appliquer à une forme SVG.
 
-> **Note :** `stroke-width` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!NOTE]
+> `stroke-width` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
 
 Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
 
