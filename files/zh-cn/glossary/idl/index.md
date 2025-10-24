@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d7828f5d7479c27cc7eaeed6cce0c02a9142555c
 ---
 
-{{GlossarySidebar}}
-
 **接口描述语言**（**IDL**）是一种用于指定独立于任何特定编程语言的对象接口的通用语言。
 
 ## 内容属性与接口描述语言属性
@@ -26,5 +24,5 @@ l10n:
 ## 参见
 
 - 维基百科上的[接口描述语言](https://zh.wikipedia.org/wiki/接口描述语言)
-- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Reference/Attributes)
 - [接口定义语言](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)

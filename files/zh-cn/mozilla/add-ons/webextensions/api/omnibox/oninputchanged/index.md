@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 与你的扩展已经开始交互（在用户在地址栏中输入了扩展的关键词以及一个空格）的情况下，当用户的输入变化时触发。
 
 这是你会向地址栏的下拉菜单中填入推荐的事件。事件监听器会传递：
@@ -125,4 +123,4 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。
+> 此 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。

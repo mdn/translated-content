@@ -257,7 +257,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("Manipuladores de eventos", 600, 120)}}
 
-Isso é exatamente como os [manipuladores de eventos que encontramos em um módulo anterior](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events), exceto que, em vez de o evento ser uma ação do usuário, como o usuário clicar um botão, o evento é uma mudança no estado de algum objeto.
+Isso é exatamente como os [manipuladores de eventos que encontramos em um módulo anterior](/pt-BR/docs/Learn_web_development/Core/Scripting/Events), exceto que, em vez de o evento ser uma ação do usuário, como o usuário clicar um botão, o evento é uma mudança no estado de algum objeto.
 
 ## Callback
 

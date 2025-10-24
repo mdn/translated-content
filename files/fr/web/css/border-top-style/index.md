@@ -7,7 +7,54 @@ slug: Web/CSS/border-top-style
 
 La propriété **`border-top-style`** définit le style de ligne utilisé pour mettre en forme la bordure en haut d'une boîte.
 
-{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
+{{InteractiveExample("CSS Demo: border-top-style")}}
+
+```css interactive-example-choice
+border-top-style: none;
+```
+
+```css interactive-example-choice
+border-top-style: dotted;
+```
+
+```css interactive-example-choice
+border-top-style: dashed;
+```
+
+```css interactive-example-choice
+border-top-style: solid;
+```
+
+```css interactive-example-choice
+border-top-style: groove;
+```
+
+```css interactive-example-choice
+border-top-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.

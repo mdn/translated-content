@@ -3,8 +3,6 @@ title: MIME 类型（IANA 媒体类型）
 slug: Web/HTTP/Guides/MIME_types
 ---
 
-{{HTTPSidebar}}
-
 **媒体类型**（也通常称为**多用途互联网邮件扩展**或 **MIME** 类型）是一种标准，用来表示文档、文件或一组数据的性质和格式。它在 IETF 的 {{RFC(6838)}} 中进行了定义和标准化。
 
 [互联网号码分配局（IANA）](https://www.iana.org/)负责跟踪所有官方 MIME 类型，你可以在[媒体类型](https://www.iana.org/assignments/media-types/media-types.xhtml)页面中找到最新的完整列表。
@@ -86,7 +84,8 @@ HTTP 不会特殊处理多部分文档：信息会被传输到浏览器（如果
 
 这是文本文件的默认值。即使它其实意味着*未知的文本文件*，但浏览器认为是可以直接展示的。
 
-> **备注：** `text/plain` 并不意味“任何种类的文本数据”。如果浏览器期待的是某种特定的文本数据，很可能不会将其视为匹配。具体来说，如果从声明 CSS 文件的 {{HTMLElement("link")}} 元素中下载了一个 `text/plain` 文件，那么如果提供的是 `text/plain` 类型，就不会将其识别为有效的 CSS 文件。CSS MIME 类型需要使用 `text/css`。
+> [!NOTE]
+> `text/plain` 并不意味“任何种类的文本数据”。如果浏览器期待的是某种特定的文本数据，很可能不会将其视为匹配。具体来说，如果从声明 CSS 文件的 {{HTMLElement("link")}} 元素中下载了一个 `text/plain` 文件，那么如果提供的是 `text/plain` 类型，就不会将其识别为有效的 CSS 文件。CSS MIME 类型需要使用 `text/css`。
 
 ### text/css
 

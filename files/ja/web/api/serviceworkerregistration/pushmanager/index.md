@@ -30,13 +30,13 @@ navigator.serviceWorker
       (pushSubscription) => {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
-        // アプリケーションサーバが必要としているプッシュサブスクリプションの
+        // アプリケーションサーバーが必要としているプッシュサブスクリプションの
         // 詳細はここから使用できます。たとえば、XMLHttpRequest を使用して
         // これを送信できます。
       },
       (error) => {
         // 開発中は、コンソールにエラーを表示するのに役立ちます。
-        // 本番環境では、アプリケーションサーバにエラー情報を送信
+        // 本番環境では、アプリケーションサーバーにエラー情報を送信
         // するためにも 役立ちます。
         console.error(error);
       },

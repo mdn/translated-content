@@ -2,10 +2,8 @@
 title: 507 Insufficient Storage
 slug: Web/HTTP/Reference/Status/507
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`507 Insufficient Storage`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器無法執行某個動作，因為它沒有足夠的可用儲存空間以成功完成該請求。
 

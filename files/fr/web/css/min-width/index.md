@@ -5,11 +5,44 @@ l10n:
   sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir inférieure à la valeur spécifiée par `min-width`.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir inférieure à la valeur spécifiée par `min-width`.
+{{InteractiveExample("CSS Demo: min-width")}}
 
-{{EmbedInteractiveExample("pages/css/min-width.html")}}
+```css interactive-example-choice
+min-width: 150px;
+```
+
+```css interactive-example-choice
+min-width: 20em;
+```
+
+```css interactive-example-choice
+min-width: 75%;
+```
+
+```css interactive-example-choice
+min-width: 40ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the minimum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à [`max-width`](/fr/docs/Web/CSS/max-width) ou à [`width`](/fr/docs/Web/CSS/width).
 
@@ -106,4 +139,4 @@ p {
 - [`max-width`](/fr/docs/Web/CSS/max-width)
 - [`min-height`](/fr/docs/Web/CSS/min-height)
 - [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

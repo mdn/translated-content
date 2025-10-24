@@ -21,9 +21,7 @@ new GainNode(context, options)
 - `context`
   - : {{domxref("BaseAudioContext")}} (たとえば {{domxref("AudioContext")}}) への参照です。
 - `options` {{optional_inline}}
-
   - : 以下のオプションが指定できます。
-
     - `gain`
       - : 適用するゲインです。このパラメーターは a-rate で、公称の範囲は (-∞,+∞) です。デフォルト値は `1` です。
     - `channelCount`

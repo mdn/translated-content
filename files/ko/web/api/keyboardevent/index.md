@@ -7,7 +7,8 @@ slug: Web/API/KeyboardEvent
 
 **`KeyboardEvent`** 객체는 키보드와 사용자의 상호 작용을 나타냅니다. 각 이벤트는 사용자와 키보드의 키(또는 보조 키를 같이 눌렀을 때의 결합)를 나타냅니다. 이벤트 타입 ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}} 또는 {{domxref("Element/keyup_event", "keyup")}})은 키보드에서 어떤 행동이 일어났는지 식별합니다.
 
-> **참고:** `KeyboardEvent` 이벤트는 로우 레벨에서 사용자가 키보드의 키와 어떤 상호 작용을 했는지를 식별할 뿐이며, 그 상호 작용에 대한 맥락적 의미는 담고 있지 않습니다. 텍스트 입력이 필요할 때는 {{domxref("Element/input_event", "input")}} 를 대신 사용하세요. 사용자가 태블릿으로 손글씨를 쓰거나, 태블릿으로 그래픽 텍스트를 입력하는 등의 대체 방법을 사용하는 경우에는 키보드 이벤트가 실행되지 않을 수 있습니다.
+> [!NOTE]
+> `KeyboardEvent` 이벤트는 로우 레벨에서 사용자가 키보드의 키와 어떤 상호 작용을 했는지를 식별할 뿐이며, 그 상호 작용에 대한 맥락적 의미는 담고 있지 않습니다. 텍스트 입력이 필요할 때는 {{domxref("Element/input_event", "input")}} 를 대신 사용하세요. 사용자가 태블릿으로 손글씨를 쓰거나, 태블릿으로 그래픽 텍스트를 입력하는 등의 대체 방법을 사용하는 경우에는 키보드 이벤트가 실행되지 않을 수 있습니다.
 
 {{InheritanceDiagram}}
 
@@ -92,49 +93,39 @@ slug: Web/API/KeyboardEvent
 _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}}의 속성을 상속받습니다._
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
-
   - : 키 이벤트가 일어났을 때 <kbd>Alt</kbd> (macOS의 <kbd>Option</kbd> 또는 <kbd>⌥</kbd>) 키가 활성화되어 있다면 `true` 를 반환합니다.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-
   - : 이벤트가 일어난 키의 물리적인 코드 값을 문자열로 반환합니다.
 
     > [!WARNING]
     > 이는 사용자의 키보드 레이아웃을 무시하므로, 사용자가 QWERTY 키보드의 "Y" 위치의 키를 누르면, 사용자가 QWERTZ 키보드(사용자는 "Y" 대신 "Z"값을 기대함) 또는 Dvorak 키보드(사용자는 "Y" 대신 "F"값을 기대함)를 사용하더라도 항상 "KeyY" 값을 리턴합니다. 만약 사용자에게 맞는 키 값을 보여주길 원한다면, {{domxref("Keyboard.getLayoutMap()")}}를 사용하세요.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
-
   - : 키 이벤트가 일어났을 때 <kbd>Ctrl</kbd> 키가 활성화되어 있다면 `true` 를 반환합니다.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
-
   - : 키 이벤트가 `compositionstart`이후에 그리고 `compositionend` 이전에 발생했다면 `true` 를 반환합니다.
 
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-
   - : 이벤트가 일어난 키의 키 값을 나타내는 문자열을 반환합니다.
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
-
   - : 키보드가 구성된 로케일을 나타내는 로케일 문자열을 반환합니다. 브라우저나 기기가 키보드의 로케일을 알 수 없는 경우에는 빈 문자열일 수도 있습니다.
 
     > [!NOTE]
     > 이 속성은 입력되는 데이터의 로케일을 설명하지 않습니다. 사용자는 다른 언어로 텍스트를 적으면서도 하나의 키보드 레이아웃을 사용할 수 있습니다.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
-
   - : 키보드 또는 기타 입력 장치의 키의 위치를 나타내는 {{jsxref("Number")}}를 반환합니다. 위치를 식별하는 상수 값 목록은 [Keyboard locations](#keyboard_locations) 에서 확인할 수 있습니다.
 
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
-
   - : 키 이벤트가 일어났을 때 <kbd>Meta</kbd>키 (Mac 키보드의 <kbd>⌘ Command</kbd> 키, Windows 키보드의 Windows 키 (<kbd>⊞</kbd>))가 활성화되어 있다면 `true`를 반환합니다.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
-
   - : 키를 자동으로 반복되도록 누르고 있다면 `true`를 반환합니다.
 
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
-
   - : 키 이벤트가 일어났을 때 <kbd>Shift</kbd>키가 활성화되어 있다면 `true`를 반환합니다.
 
 ## 메서드
@@ -142,7 +133,6 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}}의 메서드를 상속받습니다._
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
-
   - : 이벤트가 발생했을 때 <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, 또는 <kbd>Meta</kbd> 등의 보조 키가 눌렸는지를 나타내는 부울 값을 반환합니다.
 
 ## 더 이상 사용하지 않는 메서드
@@ -155,21 +145,18 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 ## 더 이상 사용하지 않는 속성
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
-
   - : 키의 문자 값을 나타내는 문자열을 반환합니다. 키가 인쇄 가능한 문자일 경우, 이 값은 해당 문자를 포함하는 비어 있지 않은 유니코드 값입니다. 키가 인쇄 불가능한 문자일 경우, 이 값은 빈 문자열입니다.
 
     > [!NOTE]
     > 키를 여러 문자를 삽입하는 매크로로 사용하는 경우, 이 특성의 값은 첫 번째 문자가 아니라 전체 문자열입니다.
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
-
   - : 키의 유니코드 숫자를 나타내는 {{jsxref("Number")}}를 리턴합니다. 이 속성은 `keypress` 이벤트에서만 사용됩니다. `char` 특성이 여러 개의 문자를 포함하고 있는 키의 경우, 이 값은 첫 번째 문자의 유니코드 값입니다. Firefox 26에서는 인쇄 가능한 문자의 코드를 반환합니다.
 
     > [!WARNING]
     > 이 특성은 더 이상 사용되지 않습니다. 가능하다면, 대신 {{domxref("KeyboardEvent.key")}} 특성을 사용하세요.
 
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
-
   - : 누른 키의 수정되지 않은 값을 식별하는 시스템 및 구현 종속 숫자 코드를 나타내는 {{jsxref("Number")}}를 반환합니다.
 
     > [!WARNING]
@@ -180,7 +167,6 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
   - : 이 속성은 {{domxref("KeyboardEvent.location")}}의 비표준이고 사용되지 않는 별칭입니다. 이 속성은 이전 버전의 DOM Level 3 이벤트의 일부였습니다.
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}
-
   - : 누른 키의 수정되지 않은 값을 식별하는 시스템 및 구현 종속 숫자 코드를 나타내는 {{jsxref("Number")}}를 반환합니다. 보통은 `keyCode`와 같습니다.
 
     > [!WARNING]

@@ -24,7 +24,7 @@ slug: Web/API/WebSockets_API
 
 ## 관련 주제
 
-- [AJAX](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/ko/docs/Web/JavaScript)
+- [AJAX](/ko/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/ko/docs/Web/JavaScript)
 
 ## 같이 보기
 

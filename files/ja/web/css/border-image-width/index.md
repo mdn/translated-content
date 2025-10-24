@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`border-image-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-image-width")}}
+{{InteractiveExample("CSS デモ: border-image-width")}}
 
 ```css interactive-example-choice
 border-image-width: 30px;
@@ -155,4 +153,4 @@ p {
 ## 関連情報
 
 - [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

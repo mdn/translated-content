@@ -5,8 +5,6 @@ l10n:
   sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
 
-{{LearnSidebar}}
-
 现在，你应该已经掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让你在网页中嵌入各种类型内容的元素：{{htmlelement("iframe")}}、{{htmlelement("embed")}} 和 {{htmlelement("object")}} 元素。`<iframe>` 用于嵌入其他网页，另外两个元素则用于嵌入外部资源，例如 PDF 文件。
 
 <table>
@@ -232,13 +230,13 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 - [`border: none`](/zh-CN/docs/Web/CSS/border)
   - : 如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 如果设置，则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 将 `<iframe>` 置于全屏模式（稍微超出本文的范围）。
-- [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src)
+- [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#src)
   - : 该属性与 {{htmlelement("video")}}/{{htmlelement("img")}} 中的同名属性一样，包含指向要嵌入的文档的 URL。
-- [`width`](/zh-CN/docs/Web/HTML/Element/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#height)
+- [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#height)
   - : 这些属性指定 iframe 的宽度和高度。
-- [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)
+- [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox)
   - : 该属性比起支持其他 `<iframe>` 特性，需要更新的浏览器才能工作（例如 IE 10 及更高版本），该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
 
 > [!NOTE]
@@ -250,7 +248,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 浏览器制造商和 Web 开发人员已经深刻认识到，如果 Web 上的恶意人士（通常称为**黑客**，或者更准确地说，**破解者**）试图发起攻击，或者欺骗人们做一些他们不想做的事情，比如泄露敏感信息（如用户名和密码），那么 iframe 是常见目标（正式术语：**攻击向量**）。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，以使 `<iframe>` 更安全，并且还有一些最佳实践需要考虑——我们将在下面介绍其中一些。
 
-> **备注：** [点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
+> [!NOTE]
+> [点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
 
 一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过点击劫持来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
 
@@ -271,7 +270,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 要想为网站启用 HTTPS，你需要安装特殊的安全证书。许多托管提供商提供了支持 HTTPS 的托管服务，无需你自己进行任何设置即可安装证书。但是，如果你*确实*需要自己动手为网站设置 HTTPS 支持，[Let's Encrypt](https://letsencrypt.org/) 提供了工具和说明，可以自动创建和安装所需的证书，并支持包括 Apache Web 服务器、Nginx 和其他常用的 Web 服务器。Let's Encrypt 的工具旨在使该过程尽可能简单，因此强烈建议使用它或其他可用的方法来启用你的网站的 HTTPS。
 
-> **备注：** [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
+> [!NOTE]
+> [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
 
 #### 始终使用 `sandbox` 属性
 
@@ -279,7 +279,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 未沙盒化的内容可以执行 JavaScript、提交表单、弹出窗口等。默认情况下，你应该使用没有参数的 `sandbox` 属性来强制执行所有可用的限制，如我们前面的示例所示。
 
-如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
+如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
 
 > [!NOTE]
 > 如果攻击者可以欺骗人们直接访问恶意内容（在 `iframe` 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的{{glossary("domain", "域")}}向你的主站点提供的。
@@ -312,25 +312,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>嵌入内容的 {{glossary("URL")}}</td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         嵌入内容的<em>准确</em>{{glossary("MIME type", '媒体类型')}}
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         由插件控制的盒子高度和宽度（以 CSS 像素为单位）
       </td>
       <td>
-         <a href="/zh-CN/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="/zh-CN/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>
@@ -358,7 +358,7 @@ PDF 是纸质文件与数字文件之间重要的转换桥梁，但它[在无障
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。
+你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。
 
 ## 总结
 

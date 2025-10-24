@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
-
 La propiedad **`text-align`** de [CSS](/es/docs/Web/CSS) establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como {{cssxref("vertical-align")}} pero en dirección horizontal.
 
 {{InteractiveExample("CSS Demo: text-align")}}
@@ -114,7 +112,7 @@ La propiedad `text-align` se especifica de una de las siguientes maneras:
 
 El espaciado incoherente entre palabras que crea el texto justificado puede ser problemático para personas con problemas cognitivos como la dislexia.
 
-- [MDN Comprender las WCAG, Explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+- [MDN Comprender las WCAG, Explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
 - [Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Definición formal

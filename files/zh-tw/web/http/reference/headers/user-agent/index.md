@@ -1,11 +1,9 @@
 ---
-title: User-Agent
+title: User-Agent 標頭
 slug: Web/HTTP/Reference/Headers/User-Agent
 l10n:
-  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **User-Agent** {{Glossary("request header", "請求標頭")}}是一個讓伺服器和網路對等端識別發起請求的{{Glossary("user agent", "使用者代理")}}的應用程式、操作系統、供應商和/或版本的特徵字串。
 
@@ -19,7 +17,7 @@ HTTP **User-Agent** {{Glossary("request header", "請求標頭")}}是一個讓�
       <td>{{Glossary("Request header", "請求標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>

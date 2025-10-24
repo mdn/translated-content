@@ -3,8 +3,6 @@ title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 ---
 
-{{FirefoxSidebar}}
-
 Эта статья содержит информацию об изменениях в Firefox 68, которые касаются разработчиков. Firefox 68 был выпущен 9 июля 2019.
 
 ## Изменения для веб разработчиков
@@ -78,12 +76,11 @@ slug: Mozilla/Firefox/Releases/68
 
 #### Удалённые
 
-- [`<meta http-equiv="set-cookie">`](/ru/docs/Web/HTML/Element/meta) больше не поддерживается ([Firefox bug 1457503](https://bugzil.la/1457503)).
+- [`<meta http-equiv="set-cookie">`](/ru/docs/Web/HTML/Reference/Elements/meta) больше не поддерживается ([Firefox bug 1457503](https://bugzil.la/1457503)).
 
 ### CSS
 
 - [CSS Scroll Snapping](/ru/docs/Web/CSS/CSS_Scroll_Snap) был обновлён до последней версии спецификации ([Firefox bug 1312163](https://bugzil.la/1312163)) и ([Firefox bug 1544136](https://bugzil.la/1544136)):
-
   - Свойство `scroll-padding` ([Firefox bug 1373832](https://bugzil.la/1373832))
   - Свойство `scroll-margin` ([Firefox bug 1373833](https://bugzil.la/1373833))
   - {{CSSxRef("scroll-snap-align")}} ([Firefox bug 1373835](https://bugzil.la/1373835))

@@ -67,7 +67,7 @@ As mentioned before, PWAs don't depend on a single API, but rather using various
 
 The key ingredient required for PWAs is [service worker](/pt-BR/docs/Web/API/Service_Worker_API) support. Thankfully service workers are [now supported on all major browsers](https://jakearchibald.github.io/isserviceworkerready/) on desktop and mobile.
 
-Other features such as [Web App Manifest](/pt-BR/docs/Web/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
+Other features such as [Web App Manifest](/pt-BR/docs/Web/Progressive_web_apps/Manifest), [Push](/pt-BR/docs/Web/API/Push_API), [Notifications](/pt-BR/docs/Web/API/Notifications_API), and [Add to Home Screen](/pt-BR/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) functionality have wide support too. Currently Safari has limited support for Web App Manifest and Add to Home Screen and no support for web push notifications. However, other major browsers support all these features.
 
 Some of these APIs are experimental, with the documentation still in draft, but seeing success stories like those of Flipkart and AliExpress should convince you to try and implement some of the PWA features in your web app already.
 

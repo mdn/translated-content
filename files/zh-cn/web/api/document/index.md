@@ -5,9 +5,9 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-**`Document`** 接口表示任何在浏览器中载入的网页，并作为网页内容的入口，也就是 [DOM 树](/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)。
+**`Document`** 接口表示任何在浏览器中载入的网页，并作为网页内容的入口，也就是 [DOM 树](/zh-CN/docs/Web/API/Document_Object_Model)。
 
-DOM 树包含了像 {{HTMLElement("body")}}、{{HTMLElement("table")}} 这样的元素，以及[大量其他元素](/zh-CN/docs/Web/HTML/Element)。它向网页文档本身提供了全局操作功能，能解决如何获取页面的 URL，如何在文档中创建一个新的元素这样的问题。
+DOM 树包含了像 {{HTMLElement("body")}}、{{HTMLElement("table")}} 这样的元素，以及[大量其他元素](/zh-CN/docs/Web/HTML/Reference/Elements)。它向网页文档本身提供了全局操作功能，能解决如何获取页面的 URL，如何在文档中创建一个新的元素这样的问题。
 
 {{inheritanceDiagram}}
 
@@ -317,15 +317,6 @@ HTML 文档的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，�
   - : 在动画迭代完成时触发。
 - {{DOMxRef("Document/animationstart_event", "animationstart")}}
   - : 在动画开始时触发。
-
-### 剪切板事件
-
-- {{DOMxRef("Document/copy_event", "copy")}}
-  - : 在用户通过浏览器的用户界面使用复制操作时触发。
-- {{DOMxRef("Document/cut_event", "cut")}}
-  - : 在用户通过浏览器的用户界面使用剪切操作时触发。
-- {{DOMxRef("Document/paste_event", "paste")}}
-  - : 在用户通过浏览器的用户界面使用粘贴操作时触发。
 
 ### 拖放事件
 

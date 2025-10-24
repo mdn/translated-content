@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 30a5a8d5c29feab27ec268c272a945702282994e
 ---
 
-{{CSSRef}}
-
 **CSS 颜色**模块定义了颜色、颜色类型、颜色混合、不透明度，以及如何将这些颜色和效果应用到 HTML 内容中。
 
 虽然此模块仅包含两个 CSS 属性，即 {{cssxref("color")}} 和 {{cssxref("opacity")}}，但有超过 20 个 CSS 和 SVG 属性、CSS 图像、At 规则以及 @media 规则依赖于这两个属性。
@@ -17,7 +15,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-通过[颜色选择器](/zh-CN/docs/Web/HTML/Element/input/color)选择颜色，并通过[滑块](/zh-CN/docs/Web/HTML/Element/input/range)选择透明度以更新 RGB、HEX、HSL 和 HWB 值。当选择新的颜色或不透明度值时，背景颜色和滑块会分别通过 CSS 属性 {{cssxref("background-color")}} 和 {{cssxref("accent-color")}} 进行更新。
+通过[颜色选择器](/zh-CN/docs/Web/HTML/Reference/Elements/input/color)选择颜色，并通过[滑块](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)选择透明度以更新 RGB、HEX、HSL 和 HWB 值。当选择新的颜色或不透明度值时，背景颜色和滑块会分别通过 CSS 属性 {{cssxref("background-color")}} 和 {{cssxref("accent-color")}} 进行更新。
 
 要查看此颜色语法转换器的代码，请[在 GitHub 上查看源代码](https://github.com/mdn/css-examples/blob/main/modules/colors.html)。
 
@@ -108,12 +106,12 @@ l10n:
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - 属于其他规范的 SVG 颜色属性：
-  - [`fill`](/zh-CN/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/zh-CN/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/zh-CN/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/zh-CN/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/zh-CN/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/zh-CN/docs/Web/SVG/Attribute/color) 属性
+  - [`fill`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/zh-CN/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/zh-CN/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色环")}}术语
 - {{glossary("Interpolation", "插值")}}术语
 - [`@font-palette-values`](/zh-CN/docs/Web/CSS/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/@font-palette-values/override-colors) 描述符
@@ -130,5 +128,5 @@ l10n:
 - [CSS 颜色调整](/zh-CN/docs/Web/CSS/CSS_color_adjustment)模块和 {{cssxref("print-color-adjust")}} 属性。
 - [CSS 图像](/zh-CN/docs/Web/CSS/CSS_images)模块，其中定义了 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 图像。
 - [`VideoColorSpace`](/zh-CN/docs/Web/API/VideoColorSpace) 接口
-- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Element/feColorMatrix) SVG 元素
+- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Reference/Element/feColorMatrix) SVG 元素
 - [Canvas API：应用样式及颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色彩)

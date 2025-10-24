@@ -3,11 +3,9 @@ title: direction
 slug: Web/CSS/direction
 ---
 
-{{CSSRef}}
-
 **`direction`** は CSS のプロパティで、テキスト、表の列、水平方向のはみ出しの方向を設定します。右書きの言語（ヘブライ語やアラビア語など）では `rtl` を、左書きの言語（英語やそれ以外の多くの言語）では `ltr` を使います。
 
-{{InteractiveExample("CSS Demo: direction")}}
+{{InteractiveExample("CSS デモ: direction")}}
 
 ```css interactive-example-choice
 direction: ltr;
@@ -45,7 +43,7 @@ direction: rtl;
 }
 ```
 
-なお、テキストの方向はふつうは文書内で（例えば [HTML の `dir` 属性](/ja/docs/Web/HTML/Global_attributes/dir) で）定義するものであり、 `direction` プロパティ直接使用して行うものではありません。
+なお、テキストの方向はふつうは文書内で（例えば [HTML の `dir` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/dir) で）定義するものであり、 `direction` プロパティ直接使用して行うものではありません。
 
 このプロパティは、基本的な文章の方向と、 {{Cssxref("unicode-bidi")}} プロパティで作られた埋め込み (embeddings) の方向を設定します。また、テキストやブロックレベル要素の既定の文字揃えや、表の行内にセルが流し込まれる方向を決めます。
 
@@ -121,4 +119,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) グローバル属性
+- HTML の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) グローバル属性

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 **`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-top-style")}}
+{{InteractiveExample("CSS デモ: border-top-style")}}
 
 ```css interactive-example-choice
 border-top-style: none;

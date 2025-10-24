@@ -10,7 +10,7 @@ l10n:
 
 다음은 웹사이트의 미적 요소, 페이지 구조, 접근성 기술 등에 관련된 질문들을 다룬 구획입니다.
 
-- [웹사이트 디자인을 어떻게 시작하나요?](/ko/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding)
+- [웹사이트 디자인을 어떻게 시작하나요?](/ko/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding)
   - : 이 글에서는 모든 프로젝트에서 가장 중요한 첫 번째 단계인 '무엇을 달성하고 싶은지 정의하는 것'에 대해 다룹니다.
 - [일반적인 웹 레이아웃에는 무엇이 포함되나요?](/ko/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)
   - : 웹사이트의 페이지를 디자인할 때, 가장 일반적인 레이아웃을 파악하는 것이 좋습니다. 이 글에서는 일반적인 웹 레이아웃을 살펴보고 각 레이아웃을 구성하는 요소들을 설명합니다.

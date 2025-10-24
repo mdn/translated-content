@@ -23,7 +23,7 @@ Available input mechanisms depend on the capabilities of the device running the 
 
 - Some devices provide touchscreen displays: the Web Platform offers [touch events](/ru/docs/Web/API/Touch_events) to interpret finger activity on touch-based user interfaces.
 - For devices providing a mouse/touchpad as a pointing method, the [Pointer Lock API](/ru/docs/Web/API/Pointer_Lock_API) helps you in implementing a first person 3D game or other applications requiring full control of the pointing device. And the [Fullscreen API](/ru/docs/Web/API/Fullscreen_API) helps you in displaying your app in fullscreen mode.
-- Using features such as [contentEditable](/ru/docs/Web/HTML/Global_attributes/contenteditable) elements you can implement fast rich-text editors and with [Drag\&Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
+- Using features such as [contentEditable](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements you can implement fast rich-text editors and with [Drag\&Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API) let users moving elements inside your app. When screen orientation matters for your application, through the [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) you can read the screen orientation state and perform other actions.
 - You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate web sites and apps, and locking them out of your functionality is a bad idea.
 
 The following is a set of recommendations and best practices for using such tools in Open Web Apps.
@@ -42,11 +42,11 @@ window.addEventListener("keyup", handleKeyUp, true);
 where `handleKeyDown` and `handleKeyUp` are the functions implementing the controls about the `keydown` and `keyup` events.
 
 > [!NOTE]
-> Have a look at the [Events reference](/ru/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
+> Have a look at the [Events reference](/ru/docs/Web/API/Document_Object_Model/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
 
 #### Mouse
 
-The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/ru/docs/Web/API/Element/click_event), [`dblclick`](/ru/docs/Web/API/Element/dblclick_event), [`mouseup`](/ru/docs/Web/API/Element/mouseup_event), and [`mousedown`](/ru/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/ru/docs/Web/Events).
+The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/ru/docs/Web/API/Element/click_event), [`dblclick`](/ru/docs/Web/API/Element/dblclick_event), [`mouseup`](/ru/docs/Web/API/Element/mouseup_event), and [`mousedown`](/ru/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/ru/docs/Web/API/Document_Object_Model/Events).
 
 When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below).
 
@@ -135,7 +135,7 @@ Here is an example that allows a section of content to be dragged.
 
 in which we:
 
-- Set the [`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
+- Set the [`draggable`](/ru/docs/Web/HTML/Reference/Global_attributes#draggable) attribute to true on the element that you wish to make draggable
 - Add a listener for the [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener
 
 > [!NOTE]
@@ -143,14 +143,14 @@ in which we:
 
 #### contentEditable
 
-In open web apps any DOM element can be made directly editable using the [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable) attribute.
+In open web apps any DOM element can be made directly editable using the [`contenteditable`](/ru/docs/Web/HTML/Reference/Global_attributes#contenteditable) attribute.
 
 ```html
 <div contenteditable="true">This text can be edited by the user.</div>
 ```
 
 > [!NOTE]
-> Compatibility information, examples and other resources can be found in the [Content Editable guide](/ru/docs/Web/HTML/Global_attributes/contenteditable).
+> Compatibility information, examples and other resources can be found in the [Content Editable guide](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ## Examples
 
@@ -178,6 +178,6 @@ In open web apps any DOM element can be made directly editable using the [`conte
 - [Screen Orientation API](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Fullscreen API](/ru/docs/Web/API/Fullscreen_API)
 - [Drag & Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Content Editable](/ru/docs/Web/HTML/Global_attributes/contenteditable)
+- [Content Editable](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable)
 - [Keyboard events in Firefox OS TV](/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
 - [Implementing TV remote control navigation](/ru/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

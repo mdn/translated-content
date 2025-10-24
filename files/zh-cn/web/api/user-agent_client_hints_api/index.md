@@ -2,7 +2,7 @@
 title: 用户代理客户端提示 API
 slug: Web/API/User-Agent_Client_Hints_API
 l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}

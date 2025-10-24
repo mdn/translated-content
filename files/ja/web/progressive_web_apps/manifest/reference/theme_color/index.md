@@ -2,10 +2,8 @@
 title: theme_color
 slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `theme_color` メンバーは、ウェブアプリケーションのユーザーインターフェイスの既定色を指定するために使用します。
 この色は、ツールバー、アドレスバー、ステータスバーなど、さまざまなブラウザー UI 要素に適用されます。
@@ -27,13 +25,12 @@ l10n:
 ### 値
 
 - `theme_color`
-
   - : 有効な[色値](/ja/docs/Web/CSS/color_value)を指定する文字列。
 
     > [!NOTE]
     > ブラウザーは、コンテキストに応じて、色のアルファ成分を無視することがあります。
     > ほとんどの環境では、`theme_color` を透明にすることはできません。
-    > 異なるプラットフォームやブラウザで一貫した動作を確保するため、完全に不透明な色（アルファ値 1 または 100%）を使用することをお勧めします。
+    > 異なるプラットフォームやブラウザーで一貫した動作を確保するため、完全に不透明な色（アルファ値 1 または 100%）を使用することをお勧めします。
 
 ## 解説
 
@@ -44,7 +41,7 @@ l10n:
 `theme_color` に対応しているブラウザーでは、マニフェストファイルで指定された値が、マニフェストが適用されるすべてのページにわたって、ウェブアプリの既定のテーマ色として使用されます。
 この既定値は、次の方法で上書きすることができます。
 
-- [`theme-color`](/ja/docs/Web/HTML/Element/meta/name/theme-color) の値を HTML の `<meta>` 要素の `name` 属性に使用すると、ウェブページのテーマ色を、アプリに対して指定したマニフェストの `theme_color` とは異なる色に指定することができます。 これによって、アプリ内の個々のページに異なるテーマ色を設定することができます。
+- [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color) の値を HTML の `<meta>` 要素の `name` 属性に使用すると、ウェブページのテーマ色を、アプリに対して指定したマニフェストの `theme_color` とは異なる色に指定することができます。 これによって、アプリ内の個々のページに異なるテーマ色を設定することができます。
 
   ```html
   <meta name="theme-color" content="#9370DB" />
@@ -96,7 +93,7 @@ body {
 
 ```json
 {
-  "theme_color": "rgb(66, 133, 244)"
+  "theme_color": "rgb(66 133 244)"
 }
 ```
 

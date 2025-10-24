@@ -13,7 +13,23 @@ Ao incluir uma abreviação ou acrônimo, forneça uma expansão completa do ter
 
 O atributo opcional [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) pode fornecer uma expansão para a abreviação ou acrônimo quando uma expansão completa não estiver presente. Isso fornece uma dica para os agentes da pessoa usuária sobre como anunciar/exibir o conteúdo enquanto informa a todas as pessoas usuárias o que a abreviação significa. Se presente, `title` deve conter esta descrição completa e nada mais.
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 ## Atributos
 
@@ -203,4 +219,4 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
 
 ## Veja também
 
-- [Usando o elemento `<abbr>`](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abreviações)
+- [Usando o elemento `<abbr>`](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abreviações)

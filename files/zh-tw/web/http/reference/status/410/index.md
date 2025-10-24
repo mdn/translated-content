@@ -2,10 +2,8 @@
 title: 410 Gone
 slug: Web/HTTP/Reference/Status/410
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`410 Gone`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示目標資源在原始伺服器上已不再可用，且此狀況可能是永久性的。410 回應是預設可快取的。
 

@@ -19,7 +19,7 @@ elementList = baseElement.querySelectorAll(selectors);
 
 - `elementList —` результирующий список объектов типа [element](/ru/docs/Web/API/Element) (результаты).
 - `baseElement —` [элемент](/ru/docs/Web/API/Element), над которым выполняется функция.
-- `selectors —` [текст селектора](/ru/docs/Learn/CSS/Building_blocks/Selectors) для выбора нужных элементов.
+- `selectors —` [текст селектора](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) для выбора нужных элементов.
 
 ## Примеры
 

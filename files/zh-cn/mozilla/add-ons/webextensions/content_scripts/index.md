@@ -3,8 +3,6 @@ title: 内容脚本
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
-{{AddonSidebar}}
-
 Content script 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{HTMLElement("script")}} 加载的一个脚本，{{HTMLElement("script")}} 加载的脚本是网页的一部分）。
 
 后台脚本可以访问所有 WebExtension JavaScript APIS，但是他们不能直接访问网页的内容，所以如果你需要 Content Scripts 来做到这点。
@@ -21,7 +19,7 @@ Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它�
 你可以通过两种方法之一在一个页面加载 Content script：
 
 - **声明式**: 在你的 manifest.json 中使用 content_scripts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 Content Script。
-- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
+- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
 
 在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。
 
@@ -267,7 +265,6 @@ document.body.addEventListener("click", function () {
 
 - 监听 content script 的所有连接企图。
 - 当收到连接请求后：
-
   - 存贮 Port 对象至 `portFromCS`
   - 使用 portFromCS 发送一个消息到 content script
   - 开始监听消息并记录它们。

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/tab_role
 original_slug: Web/Accessibility/ARIA/Roles/tab_role
 ---
 
-ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のインタラクティブな要素を示し、アクティブ化されると、関連するタブパネル ([`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)) を表示します。
+ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のインタラクティブな要素を示し、アクティブ化されると、関連するタブパネル ([`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)) を表示します。
 
 ```html
 <button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">
@@ -212,4 +212,4 @@ function changeTabs(e) {
 
 TBD
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

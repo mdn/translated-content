@@ -21,9 +21,7 @@ browser.tabs.get(
 - `tabId`
   - : `integer`.
 - `callback`
-
   - : `function`. Функция принимает следующие аргументы:
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}.
 

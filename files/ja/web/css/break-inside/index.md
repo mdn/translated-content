@@ -1,28 +1,13 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`break-inside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの途中で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
-```css
-/* キーワード値 */
-break-inside: auto;
-break-inside: avoid;
-break-inside: avoid-page;
-break-inside: avoid-column;
-break-inside: avoid-region;
-
-/* グローバル値 */
-break-inside: inherit;
-break-inside: initial;
-break-inside: revert;
-break-inside: unset;
-```
-
-{{InteractiveExample("CSS Demo: break-inside")}}
+{{InteractiveExample("CSS デモ: break-inside")}}
 
 ```css interactive-example-choice
 break-inside: auto;
@@ -32,18 +17,17 @@ break-inside: auto;
 break-inside: avoid;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div>
     <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
+      このプロパティの効果は、文書が印刷される時、または印刷のプレビューが表示された時に確認できます。
     </p>
-    <button id="print-btn">Show Print Preview</button>
+    <button id="print-btn">印刷プレビューを表示</button>
     <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">Content with 'break-inside'</div>
-      <div class="box">Content after the property</div>
+      <div class="box">プロパティの前のコンテンツ</div>
+      <div class="box" id="example-element">'break-inside' の付いたコンテンツ</div>
+      <div class="box">プロパティの後のコンテンツ</div>
     </div>
   </div>
 </section>
@@ -101,6 +85,24 @@ btn.addEventListener("click", () => {
 });
 ```
 
+## 構文
+
+```css
+/* キーワード値 */
+break-inside: auto;
+break-inside: avoid;
+break-inside: avoid-page;
+break-inside: avoid-column;
+break-inside: avoid-region;
+
+/* グローバル値 */
+break-inside: inherit;
+break-inside: initial;
+break-inside: revert;
+break-inside: revert-layer;
+break-inside: unset;
+```
+
 区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の {{cssxref("break-after")}} の値、次の要素の {{cssxref("break-before")}} の値、包含要素の `break-inside` の値です。
 
 区切られるかどうかを判断するために、以下の規則が適用されます。
@@ -109,10 +111,6 @@ btn.addEventListener("click", () => {
 2. 考慮される三つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
 
 強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
-
-## 構文
-
-`break-inside` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
 ### 値
 
@@ -124,7 +122,7 @@ btn.addEventListener("click", () => {
   - : 主ボックスの途中の改ページを禁止します。
 - `avoid-column`
   - : 主ボックスの途中の段区切りを禁止します。
-- `avoid-region` {{experimental_inline}}
+- `avoid-region`
   - : 主ボックスの途中の領域区切りを禁止します。
 
 ## 改ページの別名
@@ -244,7 +242,7 @@ article {
 
 ## 仕様書
 
-{{Specifications("css.properties.break-inside.multicol_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -252,5 +250,5 @@ article {
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

@@ -5,7 +5,7 @@ slug: Web/CSS/max-width
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
+Свойство [CSS](/ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
 
 {{InteractiveExample("CSS Demo: max-width")}}
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`nonce`** は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、特定の読み取りを続行できるかどうかを決定するために[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)で使用される一度だけの暗号化番号を返します。
+**`nonce`** は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、特定の読み取りを続行できるかどうかを決定するために[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)で使用される一度だけの暗号化番号を返します。
 
 後の実装では、 `nonce` 属性を持つ要素はスクリプトにのみ公開します（CSS 属性セレクターのようなサイドチャネルには公開しません）。
 
@@ -42,6 +42,6 @@ script[nonce~="whatever"] {
 
 ## 関連情報
 
-- [`nonce` グローバル属性](/ja/docs/Web/HTML/Global_attributes/nonce)
-- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)
+- [`nonce` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/nonce)
+- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
 - CSP: {{CSP("script-src")}}

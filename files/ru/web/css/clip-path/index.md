@@ -115,7 +115,6 @@ clip-path: unset;
 - `<clip-source>`
   - : {{cssxref("url", "url()")}} указывающий на [SVG](/ru/docs/Web/SVG)-элемент {{SVGElement("clipPath")}} .
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : Форма, размер и расположение которой определяется значением `<geometry-box>`. Если геометрия не указана, то в качестве блока будет использоваться `border-box`. Может определяться одной из следующих функций:
     - {{cssxref("basic-shape/inset","inset()")}}
       - : Определяет внутренний прямоугольник.
@@ -129,7 +128,6 @@ clip-path: unset;
       - : Определяет фигуру, используя объявление SVG фигуры и правило заполнения.
 
 - `<geometry-box>`
-
   - : При использовании в сочетании с `<basic-shape>` это значение определяет блок для базовой области. При самостоятельном использовании определяет границы указанного блока, включая формирование углов (например, {{cssxref("border-radius")}}). Геометрия может быть определена с помощью одного из следующих значений:
     - `margin-box`
       - : Использует [margin box](/ru/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) для определения блока.
@@ -150,7 +148,7 @@ clip-path: unset;
   - : Область не создается.
 
 > [!NOTE]
-> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
+> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
 
 ## Формальное определение
 
@@ -683,7 +681,7 @@ clipPathSelect.addEventListener("change", (evt) => {
 ## Смотрите также
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - CSS-свойства:
   - {{cssxref("mask")}}
   - {{cssxref("filter")}}

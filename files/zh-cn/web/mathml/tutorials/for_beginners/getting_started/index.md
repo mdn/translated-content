@@ -3,7 +3,7 @@ title: MathML 使用入门
 slug: Web/MathML/Tutorials/For_beginners/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}
 
 在本文中，我们将使用一个简单的 HTML 文档，了解如何在其中添加 MathML 公式，并顺便介绍一些元素。
 
@@ -203,4 +203,4 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 - [`math-style` 属性](/zh-CN/docs/Web/CSS/math-style)
 - [`math-depth` 属性](/zh-CN/docs/Web/CSS/math-depth)
 
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}

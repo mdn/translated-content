@@ -2,14 +2,12 @@
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
 
-{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+{{InteractiveExample("CSS デモ: animation-iteration-count")}}
 
 ```css interactive-example-choice
 animation-iteration-count: 0;
@@ -25,8 +23,8 @@ animation-iteration-count: 1.5;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a count to start!</div>
+  <div>アニメーション<span id="playstatus"></span></div>
+  <div id="example-element">回数を選択すると始まります！</div>
 </section>
 ```
 
@@ -78,7 +76,7 @@ window.addEventListener("load", () => {
   const status = document.getElementById("playstatus");
 
   function update() {
-    status.textContent = "delaying";
+    status.textContent = "待機中";
     el.className = "";
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
@@ -88,11 +86,11 @@ window.addEventListener("load", () => {
   }
 
   el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+    status.textContent = "再生中";
   });
 
   el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+    status.textContent = "完了";
   });
 
   const observer = new MutationObserver(() => {
@@ -137,12 +135,14 @@ animation-iteration-count: unset;
 
 - `infinite`
   - : アニメーションは無制限に繰り返されます。
-- `{{cssxref("&lt;number&gt;")}}`
+- {{cssxref("&lt;number&gt;")}}
   - : アニメーションが繰り返される回数です。既定値は `1` です。アニメーション周期の一部を再生したい場合は、非整数の値を指定できます。例えば、 `0.5` はアニメーション周期の半分を再生します。負の数は無効です。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、 `animation-iteration-count` を指定すると、進行タイムラインの進行に伴ってその回数だけアニメーションが繰り返されます。もし `animation-iteration-count` が指定されなかった場合、アニメーションは一度しか発生しません。 `infinite` はスクロール駆動のアニメーションには有効な値ですが、アニメーションはうまく動作しません。
+> [!NOTE]
+> [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、 `animation-iteration-count` を指定すると、進行タイムラインの進行に伴ってその回数だけアニメーションが繰り返されます。もし `animation-iteration-count` が指定されなかった場合、アニメーションは一度しか発生しません。 `infinite` はスクロール駆動のアニメーションには有効な値ですが、アニメーションはうまく動作しません。
 
 ## 公式定義
 

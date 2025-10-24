@@ -52,13 +52,11 @@ slug: Web/API/Notification
 - {{domxref("Notification.image")}} {{readonlyinline}}
   - : URL изображения, которое должно быть изображено в уведомлении, указывается в опциях как параметр конструктора.
 - {{domxref("Notification.renotify")}} {{readonlyinline}}
-
   - : Определяет, должен ли пользователь снова быть уведомлен, если новое уведомление заменяет предыдущее.
 
 - {{domxref("Notification.requireInteraction")}} {{readonlyinline}}
   - : [Булево значение](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Boolean), отражающее, останется ли уведомление активным до тех пор, пока пользователь вручную не кликнет или не закроет его, в противоположность автоматическому закрытию со временем.
 - {{domxref("Notification.silent")}} {{readonlyinline}}
-
   - : Указывает, должно ли уведомление не сопровождаться звуковым или вибро сигналом, независимо от настроек устройства.
 
 - {{domxref("Notification.timestamp")}} {{readonlyinline}}
@@ -106,7 +104,7 @@ slug: Web/API/Notification
 
 ### Методы экземпляра
 
-Следующие методы доступны только для экземпляров объекта `Notification`, либо через его [`прототип`](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). Объект `Notification` также наследует методы интерфейса {{domxref("EventTarget")}}.
+Следующие методы доступны только для экземпляров объекта `Notification`, либо через его [`прототип`](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). Объект `Notification` также наследует методы интерфейса {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Программно закрывает уведомление.

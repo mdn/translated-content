@@ -82,13 +82,14 @@ overflow 가 발생했을 때, CSS 가 기본적으로 어떻게 동작하는지
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-{{cssxref("overflow-x")}} 를 사용하여 x 축을 스크롤할 수도 있지만, 긴 단어를 처리하는 데 권장되는 방법은 아닙니다! 작은 박스에서 긴 단어를 처리해야 하는 경우 {{cssxref("word-break")}} 또는 {{cssxref("overflow-wrap")}} 속성을 볼 수 있습니다. 또한 [CSS 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) 에서 설명하는 일부 방법을 사용하면 다양한 양의 콘텐츠에 더 잘 맞는 박스를 만들 수 있습니다.
+{{cssxref("overflow-x")}} 를 사용하여 x 축을 스크롤할 수도 있지만, 긴 단어를 처리하는 데 권장되는 방법은 아닙니다! 작은 박스에서 긴 단어를 처리해야 하는 경우 {{cssxref("word-break")}} 또는 {{cssxref("overflow-wrap")}} 속성을 볼 수 있습니다. 또한 [CSS 항목 크기 조정](/ko/docs/Learn_web_development/Core/Styling_basics/Sizing) 에서 설명하는 일부 방법을 사용하면 다양한 양의 콘텐츠에 더 잘 맞는 박스를 만들 수 있습니다.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 
 `scroll` 과 마찬가지로 스크롤 막대를 유발할 내용이 충분한 지 여부에 따라 스크롤 크기에 스크롤 막대가 나타납니다.
 
-> **참고:** `overflow` 속성을 사용하여 두 개의 값을 전달하여 x 와 y 스크롤을 지정할 수 있습니다. 두 개의 키워드가 지정되면, 첫 번째 키워드는 `overflow-x` 에 적용되고 두 번째 키워드는 `overflow-y` 에 적용됩니다. 그렇지 않으면 `overflow-x` 및 `overflow-y` 가 모두 같은 값으로 설정됩니다. 예를 들어, `overflow: scroll hidden` 은 `overflow-x` 를 `scroll` 로, `overflow-y` 를 `hidden` 으로 설정합니다.
+> [!NOTE]
+> `overflow` 속성을 사용하여 두 개의 값을 전달하여 x 와 y 스크롤을 지정할 수 있습니다. 두 개의 키워드가 지정되면, 첫 번째 키워드는 `overflow-x` 에 적용되고 두 번째 키워드는 `overflow-y` 에 적용됩니다. 그렇지 않으면 `overflow-x` 및 `overflow-y` 가 모두 같은 값으로 설정됩니다. 예를 들어, `overflow: scroll hidden` 은 `overflow-x` 를 `scroll` 로, `overflow-y` 를 `hidden` 으로 설정합니다.
 
 박스에 넣을 수 있는 것보다 많은 내용이 있는 경우 스크롤 막대만 표시하려면, `overflow: auto` 를 사용하십시오. 이 경우 스크롤 막대를 표시할 지 여부를 결정하는 것은 브라우저에게 맡겨져 있습니다. 데스크톱 브라우저는 일반적으로 overflow 를 유발할 수 있는 충분한 콘텐츠가 있는 경우에만 그렇게 합니다.
 
@@ -102,7 +103,7 @@ CSS 에는 **Block Formatting Context** (BFC) 의 개념이 있습니다. 이것
 
 ## 웹 디자인에서 원치 않는 overflow
 
-최신 레이아웃 방법 ([CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout) 강의에 설명되어 있음) 은 overflow 를 매우 잘 관리합니다. 우리가 웹에 얼마나 많은 콘텐츠를 가지고 있는지 예측할 수 없다는 사실에 대처하도록 설계되었습니다. 그러나 과거에는 개발자들이 종종 고정된 높이를 사용하여 서로 관계가 없는 박스의 하단을 정렬하려고 했습니다. 이것은 깨지기 쉬웠으며, legacy 응용 프로그램에서 때때로 내용이 페이지의 다른 내용과 겹치는 박스가 나타날 수 있습니다. 이러한 현상이 나타나면 overflow 가 발생한다는 것을 알수 있습니다. 박스 크기 고정에 의존하지 않도록 레이아웃을 리팩터링 하는것이 이상적입니다.
+최신 레이아웃 방법 ([CSS 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout) 강의에 설명되어 있음) 은 overflow 를 매우 잘 관리합니다. 우리가 웹에 얼마나 많은 콘텐츠를 가지고 있는지 예측할 수 없다는 사실에 대처하도록 설계되었습니다. 그러나 과거에는 개발자들이 종종 고정된 높이를 사용하여 서로 관계가 없는 박스의 하단을 정렬하려고 했습니다. 이것은 깨지기 쉬웠으며, legacy 응용 프로그램에서 때때로 내용이 페이지의 다른 내용과 겹치는 박스가 나타날 수 있습니다. 이러한 현상이 나타나면 overflow 가 발생한다는 것을 알수 있습니다. 박스 크기 고정에 의존하지 않도록 레이아웃을 리팩터링 하는것이 이상적입니다.
 
 사이트를 개발할 때는 항상 overflow 문제를 염두에 두어야 합니다. 많은 양의 콘텐츠로 디자인을 테스트하고 텍스트의 글꼴 크기를 늘리면 CSS 가 강력한 방식으로 대처할 수 있는지 확인해야 합니다. 내용을 숨기거나 스크롤 막대를 추가하기 위해 overflow 값을 변경하는 것은 스크롤 박스를 원할 때와 같은 몇 가지 특별한 경우에만 예약할 수 있습니다.
 

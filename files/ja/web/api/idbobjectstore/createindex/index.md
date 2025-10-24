@@ -29,7 +29,6 @@ createIndex(indexName, keyPath, options)
 - `keyPath`
   - : インデックスで使用するキーパスです。なお、空の `keyPath` でインデックスを作成することも、`keyPath` としてシーケンス (配列) を渡すこともできます。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持ちうるオブジェクトです。
     - `unique`
       - : `true` に設定した場合、このインデックスは単一のキーについて重複した値を許可しません。デフォルトは `false` です。

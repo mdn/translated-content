@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
-
 **`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き（通常または逆方向）を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
 
-{{InteractiveExample("CSS Demo: flex-direction")}}
+{{InteractiveExample("CSS デモ: flex-direction")}}
 
 ```css interactive-example-choice
 flex-direction: row;
@@ -52,7 +50,7 @@ flex-direction: column-reverse;
 }
 ```
 
-なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
+なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
 
 ## 構文
 
@@ -96,7 +94,7 @@ flex-direction: unset;
 
 - [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## 公式定義

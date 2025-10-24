@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 ---
 
-{{CSSRef}}
-
 « [CSS](/es/docs/Web/CSS) « [Understanding CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.
@@ -23,11 +21,8 @@ De manera que un menú de tercer nivel va a ser apilado bajo los menus de segund
 Para entender mejor la situación, esta es la jerarquía del contexto de apilamiento:
 
 - contexto de apilamiento raíz
-
   - NIVEL #1
-
     - NIVEL #2 (z-index: 1)
-
       - NIVEL #3
       - ...
       - NIVEL #3
@@ -154,12 +149,12 @@ Este problema puede ser evitado al remover la superposición entre menus de dife
 
 ### También puedes ver
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Reglas de apilamiento por defecto
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
-- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
-- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : Notas sobre el contexto de apilamiento
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
+- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
+- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
+- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Notas sobre el contexto de apilamiento
+- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
+- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
 
 ### Información del documento original
 

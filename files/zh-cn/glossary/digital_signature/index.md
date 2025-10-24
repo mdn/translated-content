@@ -2,16 +2,14 @@
 title: 数字签名
 slug: Glossary/Digital_signature
 l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+  sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
-
-{{GlossarySidebar}}
 
 **数字签名**是用于{{glossary("authentication", "认证")}}文档或消息的对象。
 
 数字签名通常基于{{glossary("public-key cryptography", "非对称密钥密码")}}。其中，创建一个具有这样的属性的密钥对：如果某个输入使用一个密钥加密，那么只能使用另一个密钥解密，反之亦然。
 
-密钥对的创建者将其中一个密钥公开，另一个密钥保密。要签署文档，密钥对的所有者创建文档的{{glossary("hash", "散列值")}}，并使用私钥对其进行加密。
+密钥对的创建者将其中一个密钥公开，另一个密钥保密。要签署文档，密钥对的所有者创建文档的{{glossary("hash function", "散列值")}}，并使用私钥对其进行加密。
 
 文档和签名被发送给验证者，验证者对文档进行散列运算，检索公钥，并解密签名：如果签名与散列值匹配，则签名可以通过验证，验证者可以确信它是由具有私钥访问权限的实体创建的。
 
@@ -26,5 +24,5 @@ l10n:
 
 - 相关术语：
   - {{glossary("Digital certificate", "数字证书")}}
-  - {{glossary("Hash", "散列")}}
+  - {{glossary("Hash function", "散列函数")}}
   - {{glossary("Public-key cryptography", "非对称密钥密码")}}

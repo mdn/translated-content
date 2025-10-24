@@ -23,6 +23,6 @@ var lastChance = SyncEvent.lastChance
 | ----------------------------------------------------------------------------------------- |
 | [Web Background Synchronization](https://wicg.github.io/background-sync/spec/#sync-event) |
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}

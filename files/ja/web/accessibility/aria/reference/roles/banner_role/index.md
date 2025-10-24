@@ -83,4 +83,4 @@ TBD
 - HTML {{htmlelement("header")}} 要素
 - [WC3 Landmarks Example](https://w3c.github.io/aria-practices/examples/landmarks/banner.html)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

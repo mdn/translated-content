@@ -2,10 +2,8 @@
 title: 422 Unprocessable Content
 slug: Web/HTTP/Reference/Status/422
 l10n:
-  sourceCommit: 6d4fc564c9428eb242470b2bdf4f7db22d91612f
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`422 Unprocessable Content`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求內容的內容類型，且請求內容的語法正確，但無法處理其中包含的指示。
 

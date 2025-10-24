@@ -26,7 +26,7 @@ document.linkColor = color
 
 `document.linkColor`在 [DOM Level 2 HTML 中已被废弃](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
 
-替代方案是在链接元素上 [HTML anchor (\<a>)](/zh-CN/docs/Web/HTML/Element/a) 使用 css {{ Cssxref("color") }} 属性，(比如`a {color:red;}`) 或者 [`:link`](https://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes) 伪类 ,(比如`:link {color:red;}`).
+替代方案是在链接元素上 [HTML anchor (\<a>)](/zh-CN/docs/Web/HTML/Reference/Elements/a) 使用 css {{ Cssxref("color") }} 属性，(比如`a {color:red;}`) 或者 [`:link`](https://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes) 伪类 ,(比如`:link {color:red;}`).
 
 另一种方法是使用 `document.body.link`, 该属也在[HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link)中被废弃。
 

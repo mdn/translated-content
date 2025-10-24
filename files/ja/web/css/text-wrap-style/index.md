@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2a3911def06e1850e2b76907b3a42c688ee7a2bc
 ---
 
-{{CSSRef}}
-
 **`text-wrap-style`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
-{{InteractiveExample("CSS Demo: text-wrap-style")}}
+{{InteractiveExample("CSS デモ: text-wrap-style")}}
 
 ```css interactive-example-choice
 text-wrap-style: auto;
@@ -85,7 +83,8 @@ text-wrap-style: unset;
 - `stable`
   - : テキストは、ユーザーがコンテンツを編集している際に、編集している行の前の行が固定され、テキスト全体が再配置されるのではなく、そのように折り返されます。
 
-> **メモ:** [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールでは、 `avoid-orphans` 値を `text-wrap-style` プロパティに定義すると、最終行が過度に短くなることを避け、改行の決定を行う際にユーザーエージェントが複数の行を考慮することを期待しています。この値は、現時点ではどのブラウザーでも対応していません。
+> [!NOTE]
+> [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールでは、 `avoid-orphans` 値を `text-wrap-style` プロパティに定義すると、最終行が過度に短くなることを避け、改行の決定を行う際にユーザーエージェントが複数の行を考慮することを期待しています。この値は、現時点ではどのブラウザーでも対応していません。
 
 ## 解説
 
@@ -97,7 +96,7 @@ text-wrap-style: unset;
 
 テキストの長い区間では、`text-wrap-style: pretty` を使用することができます。 `pretty` はパフォーマンスにマイナスの効果があるので、速度よりもレイアウトが重要な場合にのみ、長いテキストブロックに使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手が改善されます。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前の行が安定したままであることを確実にします。
+`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手が改善されます。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前の行が安定したままであることを確実にします。
 
 ## 公式定義
 

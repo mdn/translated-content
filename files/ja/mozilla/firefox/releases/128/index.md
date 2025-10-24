@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 95beef16ce880c41315c2e8b9d3e54c17c660124
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 128 の変更点をまとめています。Firefox 128 は、米国時間 [2024 年 7 月 9 日](https://whattrainisitnow.com/release/?version=128) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- `<base>` 要素の [`target`](/ja/docs/Web/HTML/Element/base#target) で ASCII の改行、タブ、`<` の文字が禁止されて、それらが存在する場合は値を `_blank` に変更します。これは、閉じていない `target` 属性を使用するダングリングマークアップインジェクション攻撃を防止します ([Firefox bug 1835157](https://bugzil.la/1835157))。
+- `<base>` 要素の [`target`](/ja/docs/Web/HTML/Reference/Elements/base#target) で ASCII の改行、タブ、`<` の文字が禁止されて、それらが存在する場合は値を `_blank` に変更します。これは、閉じていない `target` 属性を使用するダングリングマークアップインジェクション攻撃を防止します ([Firefox bug 1835157](https://bugzil.la/1835157))。
 
 ### CSS
 
@@ -28,7 +26,6 @@ l10n:
 
 - サイズ変更可能な {{jsxref("ArrayBuffer")}} と拡張可能な {{jsxref("SharedArrayBuffer")}} をサポートしました。新しいバッファーを割り当ててデータをコピーする必要なく、バッファーのサイズを変更できます ([Firefox bug 1884150](https://bugzil.la/1884150))。
   関連するメソッドやプロパティは以下のとおりです:
-
   - {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して {{jsxref("SharedArrayBuffer")}} を拡張します。
     バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` 引数で設定します。
     {{jsxref("SharedArrayBuffer.prototype.growable")}} および {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーが拡張可能であるか、および許可される最大サイズを表します。
@@ -38,8 +35,8 @@ l10n:
 
 ### HTTP
 
-- [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Headers/Accept) ヘッダーに `image/svg+xml` MIME タイプを含むようになりました ([Firefox bug 1711622](https://bugzil.la/1711622))。
-- HTTP [`Priority`](/ja/docs/Web/HTTP/Headers/Priority) リクエストヘッダーおよびレスポンスヘッダーを含む、{{rfc("9218", "Extensible Prioritization Scheme for HTTP")}} をサポートしました。これは、コネクションで送信するリソースに対して想定する相対的な優先度と、ヘッダーが送信された後に優先度を変更できる HTTP/2 および HTTP/3 の `PRIORITY_UPDATE` をクライアントが示すことを可能にします ([Firefox bug 1865040](https://bugzil.la/1865040))。
+- [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Reference/Headers/Accept) ヘッダーに `image/svg+xml` MIME タイプを含むようになりました ([Firefox bug 1711622](https://bugzil.la/1711622))。
+- HTTP [`Priority`](/ja/docs/Web/HTTP/Reference/Headers/Priority) リクエストヘッダーおよびレスポンスヘッダーを含む、{{rfc("9218", "Extensible Prioritization Scheme for HTTP")}} をサポートしました。これは、コネクションで送信するリソースに対して想定する相対的な優先度と、ヘッダーが送信された後に優先度を変更できる HTTP/2 および HTTP/3 の `PRIORITY_UPDATE` をクライアントが示すことを可能にします ([Firefox bug 1865040](https://bugzil.la/1865040))。
 
 ### API
 
@@ -96,12 +93,11 @@ l10n:
 以下の機能は Firefox 128 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。[実験的機能](/ja/docs/Mozilla/Firefox/Experimental_features) のページで、さらに多くの機能を確認できます。
 
 - **既定および画像のリクエストで `image/jxl` MIME タイプを Accept ヘッダーに追加:** `image.jxl.enabled`.
-
-  - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox bug 1711622](https://bugzil.la/1711622))。
+  - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox bug 1711622](https://bugzil.la/1711622))。
 
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`。
 
-  [CHIPS](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), または "partitioned cookies" は、開発者が `Set-Cookie` HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分離された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分離された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1898253](https://bugzil.la/1898253))。
+  [CHIPS](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), または "partitioned cookies" は、開発者が `Set-Cookie` HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分離された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分離された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1898253](https://bugzil.la/1898253))。
 
 ## 過去のバージョン
 

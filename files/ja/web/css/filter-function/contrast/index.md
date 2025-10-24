@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
+**`contrast()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、入力画像のコントラストを調整します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-**`contrast()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像のコントラストを調整します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
-
-{{InteractiveExample("CSS Demo: contrast()")}}
+{{InteractiveExample("CSS デモ: contrast()")}}
 
 ```css interactive-example-choice
 filter: contrast(1);
@@ -147,7 +145,7 @@ p {
 
 ### url() と SVG の contrast フィルター
 
-SVG の {{SVGElement("filter")}} 要素を使用して、カスタムフィルター効果を定義し、それを [`id`](/ja/docs/Web/HTML/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。 次のものが指定されたとします。
+SVG の {{SVGElement("filter")}} 要素を使用して、カスタムフィルター効果を定義し、それを [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。 次のものが指定されたとします。
 
 ```svg
   <filter id="contrast">

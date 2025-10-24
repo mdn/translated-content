@@ -5,12 +5,10 @@ l10n:
   sourceCommit: 8dd227b90abeed60434970aff3da9776d1f24d67
 ---
 
-{{CSSRef}}
-
 **`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
-これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。
+これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)の座標空間を変更します。
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{InteractiveExample("CSS デモ: transform")}}
 
 ```css interactive-example-choice
 transform: matrix(1, 2, 3, 4, 5, 6);
@@ -46,11 +44,11 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。
-この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
+このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)が作成されます。
+この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)として扱われます。
 
 > [!WARNING]
-> 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
+> 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Reference/Elements/col)、[表の列グループボックス](/ja/docs/Web/HTML/Reference/Elements/colgroup)を除くすべての要素です。
 
 ## 構文
 
@@ -111,7 +109,7 @@ transform: unset;
 
 詳しくは以下の文書を参照してください。
 
-- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.3_—_発作と身体的反応_発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください)
+- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.3_—_発作と身体的反応_発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## 公式定義

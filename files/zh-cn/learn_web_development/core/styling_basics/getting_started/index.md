@@ -3,8 +3,6 @@ title: 让我们开始 CSS 的学习之旅
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
 在这篇文章中，我们将会拿一个简单的 HTML 文档做例子，并且在里面使用 CSS 样式，期待你能在此过程中学会更多有关 CSS 的实战性知识。
@@ -125,7 +123,7 @@ li {
 
 目前为止，我们通过 HTML 元素名规定样式。如果你愿意所有元素都一个样，也不是不可以，但大多数情况下，我估计你都不愿意。我知道你想干啥，你想用这种方式样式化这一片元素，又想用那种方式样式化那一片元素，真贪心。不过没关系，你可以给 HTML 元素加个类名（class），再选中那个类名，这样就可以了，大家基本上都这么用。
 
-举个例子吧，咱们把 [class 属性](/zh-CN/docs/Web/HTML/Global_attributes/class)加到表里面第二个对象。你的列表看起来应该是这样的：
+举个例子吧，咱们把 [class 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)加到表里面第二个对象。你的列表看起来应该是这样的：
 
 ```html
 <ul>
@@ -202,7 +200,7 @@ h1 + p {
 
 ## 根据状态确定样式
 
-在这篇教程中我们最后要看的一种修改样式的方法就是根据标签的状态确定样式。一个直观的例子就是当我们修改链接的样式时。当我们修改一个链接的样式时我们需要定位（针对） [`<a>`](/zh-CN/docs/Web/HTML/Element/a) （锚）标签。取决于是否是未访问的、访问过的、被鼠标悬停的、被键盘定位的，亦或是正在被点击当中的状态，这个标签有着不同的状态。你可以使用 CSS 去定位或者说针对这些不同的状态进行修饰——下面的 CSS 代码使得没有被访问的链接颜色变为粉色、访问过的链接变为绿色。
+在这篇教程中我们最后要看的一种修改样式的方法就是根据标签的状态确定样式。一个直观的例子就是当我们修改链接的样式时。当我们修改一个链接的样式时我们需要定位（针对） [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a) （锚）标签。取决于是否是未访问的、访问过的、被鼠标悬停的、被键盘定位的，亦或是正在被点击当中的状态，这个标签有着不同的状态。你可以使用 CSS 去定位或者说针对这些不同的状态进行修饰——下面的 CSS 代码使得没有被访问的链接颜色变为粉色、访问过的链接变为绿色。
 
 ```css
 a:link {

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 511208efe18c7a042bad9859dc797e944a1c16ed
 ---
 
-{{CSSRef}}
+**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
 
-**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
-
-{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+{{InteractiveExample("CSS デモ: &lt;basic-shape&gt;")}}
 
 ```css interactive-example-choice
 clip-path: inset(22% 12% 15px 35px);
@@ -72,10 +70,9 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ### シェイプ関数
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)で定義されます。
+以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)で定義されます。
 
 - `{{cssxref("basic-shape/inset","inset()")}}`
-
   - : 内部の長方形を定義します。
 
     ```css
@@ -89,7 +86,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     内部の矩形で 2 つの距離の組み合わせが、その軸の長さを超えていた場合（たとえば左右の距離がそれぞれ 75% に設定された場合など）は、何も領域を囲まないシェイプを定義します。この仕様書によれば、これは空の浮動領域を生成します。
 
 - `{{cssxref("basic-shape/rect","rect()")}}`
-
   - : 参照ボックスの上端と左端から指定した距離を用いて矩形を定義します。
 
     ```css
@@ -101,7 +97,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
 
 - `{{cssxref("basic-shape/xywh","xywh()")}}`
-
   - : 参照ボックスの上端と左端からの指定された距離と、指定された矩形の幅と高さを用いて矩形を定義します。
 
     ```css
@@ -111,7 +106,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 [`border-radius`](/ja/docs/Web/CSS/border-radius) 一括指定の構文を使用して定義します。
 
 - `{{cssxref("basic-shape/circle","circle()")}}`
-
   - : 半径と位置を使用して円を定義します。
 
     ```css
@@ -123,7 +117,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     引数 {{cssxref("&lt;position&gt;")}} は円の中心を定義します。省略時は既定で中央になります。
 
 - `{{cssxref("basic-shape/ellipse","ellipse()")}}`
-
   - : 2 つの半径と位置を使用して楕円を定義します。
 
     ```css
@@ -135,7 +128,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     引数 position は楕円の中心を定義します。省略時は既定で中央になります。
 
 - `{{cssxref("basic-shape/polygon","polygon()")}}`
-
   - : SVG の {{SVGAttr("fill-rule")}} と一連の頂点を使用して多角形を定義します。
 
     ```css
@@ -147,8 +139,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     リスト内にある引数の組は、 _xi_ および _yi_ すなわち多角形の i 番目の頂点の X 座標と Y 座標を表します。
 
 - `{{cssxref("path","path()")}}`
-
-  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Attribute/d)を使用してシェイプを定義します。
+  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Reference/Attribute/d)を使用してシェイプを定義します。
 
     ```css
     path( [ <fill-rule>, ]? <string> )
@@ -156,7 +147,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
     省略可能な `<fill-rule>` は多角形の内部を決めるために使用される塗りつぶし規則 ({{SVGAttr("fill-rule")}}) を表します。指定可能な値は `nonzero` と `evenodd` です。省略時の既定値は `nonzero` です。
 
-    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Attribute/d)です。
+    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Reference/Attribute/d)です。
 
 上記で定義されていない引数は、以下のように定義されています。
 

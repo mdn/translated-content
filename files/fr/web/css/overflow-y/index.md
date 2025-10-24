@@ -9,7 +9,47 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-y`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte. Cette propriété peut aussi être définie par la propriété raccourcie [`overflow`](/fr/docs/Web/CSS/overflow).
 
-{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
+{{InteractiveExample("CSS Demo: overflow-y")}}
+
+```css interactive-example-choice
+overflow-y: visible;
+```
+
+```css interactive-example-choice
+overflow-y: hidden;
+```
+
+```css interactive-example-choice
+overflow-y: clip;
+```
+
+```css interactive-example-choice
+overflow-y: scroll;
+```
+
+```css interactive-example-choice
+overflow-y: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## Syntaxe
 
@@ -157,4 +197,4 @@ div {
 - [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
 - [`white-space`](/fr/docs/Web/CSS/white-space)
 - [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
-- [Apprendre le débordement de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

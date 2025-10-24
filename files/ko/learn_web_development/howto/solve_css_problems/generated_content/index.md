@@ -126,4 +126,4 @@ p:before {
 
 ## 다음에는?
 
-Stylesheet에 내용물을 추가 하는 일반 방법으로 리스트로 표기하는 방법이 있다. 다음장에는 [specify style for 리스트 elements를 위한 스타일 표기법에 대해 알아보자.](/ko/docs/Learn/CSS/Styling_text/Styling_lists)
+Stylesheet에 내용물을 추가 하는 일반 방법으로 리스트로 표기하는 방법이 있다. 다음장에는 [specify style for 리스트 elements를 위한 스타일 표기법에 대해 알아보자.](/ko/docs/Learn_web_development/Core/Text_styling/Styling_lists)

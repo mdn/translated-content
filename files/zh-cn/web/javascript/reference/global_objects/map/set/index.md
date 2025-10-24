@@ -3,8 +3,6 @@ title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
 
-{{JSRef}}
-
 {{jsxref("Map")}} 实例的 **`set()`** 方法会向 `Map` 对象添加或更新一个指定的键值对。
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}

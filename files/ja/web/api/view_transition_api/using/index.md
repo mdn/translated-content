@@ -20,7 +20,6 @@ l10n:
      > アクティブなビュー遷移は、関連する {{domxref("ViewTransition")}} インスタンスを保有しています（例えば、同一文書内 (SPA) の遷移の場合、`startViewTransition()` によって返されます）。`ViewTransition` オブジェクトには、いくつかのプロミスが含まれており、ビュー遷移プロセスのさまざまな段階に到達した際に、それに対応するコードを実行することができます。 詳しくは、[JavaScript によるビュー遷移の制御](#javascript_によるビュー遷移の制御)を参照してください。
 2. 現在の（古いページ）ビューでは、API は {{cssxref("view-transition-name")}} が宣言された要素のスナップショットを取得します。
 3. ビューの変更が発生します。
-
    - 同一文書内 (SPA) の遷移の場合、`startViewTransition()` に渡したコールバックが呼び出され、DOM の変更を行います。
 
      コールバックが正常に実行された場合、{{domxref("ViewTransition.updateCallbackDone")}} プロミスが履行され、DOM の更新に対応できます。
@@ -49,7 +48,8 @@ l10n:
       └─ ::view-transition-new(root)
 ```
 
-> **メモ:** {{cssxref("::view-transition-group")}} のサブツリーは、キャプチャされたそれぞれの `view-transition-name` ごとに作成されます。
+> [!NOTE]
+> {{cssxref("::view-transition-group")}} のサブツリーは、キャプチャされたそれぞれの `view-transition-name` ごとに作成されます。
 
 同一文書内 (SPA) の遷移の場合、擬似要素ツリーは文書内で利用できます。異なる文書間 (MPA) の遷移の場合、擬似要素ツリーは出力先文書でのみ利用できます。
 
@@ -216,7 +216,8 @@ figcaption {
 
 2 つ目の疑似要素を設定することで、`<figcaption>` だけに別個のビュー遷移スタイル設定を適用することができます。 異なる古いビューと新しいビューは、それぞれ別個に処理されます。
 
-> **メモ:** `view-transition-name` の値は、`none` を除いて何らかの値にすることができます。`none` の値は、特定の要素がビュー遷移に参加しないということを意味しています。
+> [!NOTE]
+> `view-transition-name` の値は、`none` を除いて何らかの値にすることができます。`none` の値は、特定の要素がビュー遷移に参加しないということを意味しています。
 >
 > `view-transition-name` の値も固有のものでなければなりません。 レンダリングされた要素が同時に同じ `view-transition-name` を保有している場合、{{domxref("ViewTransition.ready")}} が拒否され、遷移がスキップされます。
 
@@ -284,7 +285,8 @@ figcaption {
 
 これはうまく動作します。既定では、`::view-transition-group` が、古いビューと新しいビューの間でスムーズに変倍しながら、`width` と `height` を移行させるからです。どちらの状態でも `height` を固定して設定するだけで、うまくいくようになりました。
 
-> **メモ:** [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) には、他にもいくつかのカスタマイズ例があります。
+> [!NOTE]
+> [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) には、他にもいくつかのカスタマイズ例があります。
 
 ## JavaScript によるビュー遷移の制御
 
@@ -294,7 +296,6 @@ figcaption {
 
 1. 同一文書内 (SPA) の遷移の場合、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが遷移に関連付けられた `ViewTransition` を返します。
 2. 文書間 (MPA) の遷移の場合は、次のようになります。
-
    - ナビゲーションにより文書がアンロードされようとするときに、{{domxref("Window.pageswap_event", "pageswap")}} イベントが発行されます。イベントオブジェクト ({{domxref("PageSwapEvent")}}) は、`ViewTransition` に{{domxref("PageSwapEvent.viewTransition")}} プロパティからアクセスできるほか、ナビゲーションの種類と現在の文書および移動先文書の履歴項目を含む {{domxref("NavigationActivation")}} にも {{domxref("PageSwapEvent.activation")}} からアクセスできます。
      > [!NOTE]
      > ナビゲーションのリダイレクトチェーンのどこかにオリジンをまたいだ URL がある場合、`activation` プロパティは `null` を返します。
@@ -424,7 +425,8 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-> **メモ:** `view-transition-name` の値は、それぞれの場合でスナップショットが取得された後に除去します。 設定したままにしておくと、ナビゲーションの際に [bfcache](/ja/docs/Glossary/bfcache) に保存されるページの状態に保存されてしまいます。 その後、戻るボタンが押されると、ナビゲーション前のページの `pagereveal` イベントハンドラーが、異なる要素に対して同じ `view-transition-name` の値を設定しようと試みます。 複数の要素に同じ `view-transition-name` 設定されている場合、ビュー遷移はスキップされます。
+> [!NOTE]
+> `view-transition-name` の値は、それぞれの場合でスナップショットが取得された後に除去します。 設定したままにしておくと、ナビゲーションの際に [bfcache](/ja/docs/Glossary/bfcache) に保存されるページの状態に保存されてしまいます。 その後、戻るボタンが押されると、ナビゲーション前のページの `pagereveal` イベントハンドラーが、異なる要素に対して同じ `view-transition-name` の値を設定しようと試みます。 複数の要素に同じ `view-transition-name` 設定されている場合、ビュー遷移はスキップされます。
 
 {{domxref("Window.pagereveal_event", "pagereveal")}} イベントのリスナーは、以下のようにします。これは、`pageswap` イベントリスナーと似た方法で動作しますが、新しいページのページ要素に対して "to" アニメーションをカスタマイズしていることに留意してください。
 
@@ -487,9 +489,9 @@ window.addEventListener("pagereveal", async (e) => {
 2. 重要なスクリプトが読み込まれ、実行されます。
 3. ユーザーが最初にページを表示した際に目にする HTML は解釈できるので、一貫した表示が可能です。
 
-スタイルは既定ではレンダーブロックされ、スクリプトは [`blocking="render"`](/ja/docs/Web/HTML/Element/script#blocking) 属性を使用してレンダーブロックすることができます。
+スタイルは既定ではレンダーブロックされ、スクリプトは [`blocking="render"`](/ja/docs/Web/HTML/Reference/Elements/script#blocking) 属性を使用してレンダーブロックすることができます。
 
-遷移アニメーションが実行される前に、初期の HTML が確実に解析され、常に一貫したレンダリングが行われることを保証するには、[`<link rel="expect">`](/ja/docs/Web/HTML/Attributes/rel#expect) を使用することができます。この要素には、以下の属性を含めることができます。
+遷移アニメーションが実行される前に、初期の HTML が確実に解析され、常に一貫したレンダリングが行われることを保証するには、[`<link rel="expect">`](/ja/docs/Web/HTML/Reference/Attributes/rel#expect) を使用することができます。この要素には、以下の属性を含めることができます。
 
 - `rel="expect"` は、この `<link>` 要素を使用して、ページ上の HTML をレンダーブロックすることを示します。
 - `href="#element-id"` は、レンダーブロックしたい要素の ID を示します。
@@ -526,7 +528,7 @@ window.addEventListener("pagereveal", async (e) => {
 
 その結果、リードコンテンツである `<div>` が解釈できるまで、文書内のレンダリングがブロックされ、一貫したビュー遷移を保証できます。
 
-また、 [`media`](/ja/docs/Web/HTML/Element/link#media) 属性を `<link rel="expect">` 要素に指定することもできます。例えば、画面が狭い端末でページを読み込んだ際には、広い画面の端末で読み込む場合よりも、コンテンツのレンダリングをブロックしたい場合があるかもしれません。これは理にかなっています。モバイル端末では、デスクトップの場合よりも、ページが最初に読み込まれた際にはコンテンツが少なく表示されるからです。
+また、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を `<link rel="expect">` 要素に指定することもできます。例えば、画面が狭い端末でページを読み込んだ際には、広い画面の端末で読み込む場合よりも、コンテンツのレンダリングをブロックしたい場合があるかもしれません。これは理にかなっています。モバイル端末では、デスクトップの場合よりも、ページが最初に読み込まれた際にはコンテンツが少なく表示されるからです。
 
 これは、次の HTML で実現できます。
 

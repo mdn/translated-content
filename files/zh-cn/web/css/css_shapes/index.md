@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
 
-{{CSSRef}}
-
 **CSS 形状**（CSS shape）模块用于描述几何形状。它还定义了 CSS 属性，以使用这些形状来控制元素浮动区域；区域可被用于排除或指定元素的内容区域。
 
 规范定义了几种创建形状的方法。内容可以包裹形状或在形状内而不是遵循元素盒子的默认矩形形状。
@@ -17,7 +15,7 @@ l10n:
 
 以下示例显示了一个向左浮动的图像，并应用了值为 `circle(50%)` 的 `shape-outside` 属性。这将创建一个圆形，使得包裹浮动的内容会包裹着这个形状。这将改变包裹文本的行框的长度。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+{{EmbedLiveSample("circle", "", "300px")}}
 
 ## 参考
 

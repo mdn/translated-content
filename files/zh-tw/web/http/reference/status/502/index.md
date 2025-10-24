@@ -2,10 +2,8 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 l10n:
-  sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`502 Bad Gateway`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示充當閘道器或{{Glossary("Proxy_server", "代理")}}的伺服器從上游伺服器接收到無效回應。
 

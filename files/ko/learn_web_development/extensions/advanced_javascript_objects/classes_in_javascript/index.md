@@ -229,7 +229,7 @@ JavaScript 라이브러리를 쓰면 간단합니다 — 상속 기능을 사용
 
 ## 더 연습하기
 
-[OOP theory section](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), 에서는 개념적으로 Person을 상속받고 Teacher보다 덜 공손한 `greeting()` 메소드를 재정의한 `Student` 클래스를 정의했었습니다. 해당 절에서 `Student`의 인삿말이 어땠는지 확인해 보시고 `Person()`을 상속받는 `Student()` 생성자를 구현해 보세요. `greeting()` 함수도 재정의 해 보시구요.
+[OOP theory section](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), 에서는 개념적으로 Person을 상속받고 Teacher보다 덜 공손한 `greeting()` 메소드를 재정의한 `Student` 클래스를 정의했었습니다. 해당 절에서 `Student`의 인삿말이 어땠는지 확인해 보시고 `Person()`을 상속받는 `Student()` 생성자를 구현해 보세요. `greeting()` 함수도 재정의 해 보시구요.
 
 > [!NOTE]
 > 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) 을 확인해 보세요.([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)도 보시구요).

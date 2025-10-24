@@ -109,7 +109,7 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 
 第一步是处理 HTML 标记并构造 DOM 树。HTML 解析涉及到[符号化](/zh-CN/docs/Web/API/DOMTokenList)和树的构造。HTML 标记包括开始和结束标记，以及属性名和值。如果文档格式良好，则解析它会简单而快速。解析器将标记化的输入解析到文档中，构建文档树。
 
-DOM 树描述了文档的内容。[`<html>`](/zh-CN/docs/Web/HTML/Element/html) 元素是第一个标签也是文档树的根节点。树反映了不同标记之间的关系和层次结构。嵌套在其他标记中的标记是子节点。DOM 节点的数量越多，构建 DOM 树所需的时间就越长。
+DOM 树描述了文档的内容。[`<html>`](/zh-CN/docs/Web/HTML/Reference/Elements/html) 元素是第一个标签也是文档树的根节点。树反映了不同标记之间的关系和层次结构。嵌套在其他标记中的标记是子节点。DOM 节点的数量越多，构建 DOM 树所需的时间就越长。
 
 ![我们示例代码的 DOM 树，显示了所有节点（包括文本节点）。](dom.gif)
 
@@ -160,7 +160,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 关键呈现路径的第三步是将 DOM 和 CSSOM 组合成渲染树。计算样式树或渲染树的构建从 DOM 树的根开始，遍历每个可见节点。
 
-不会被显示的元素，如 [`<head>`](/zh-CN/docs/Web/HTML/Element/head) 元素及其子元素，以及任何带有 `display: none` 的节点，如用户代理样式表中的 `script { display: none; }`，都不会包含在渲染树中，因为它们不会出现在渲染输出中。应用了 `visibility: hidden` 的节点会包含在渲染树中，因为它们会占用空间。由于我们没有给出任何指令来覆盖用户代理默认值，因此上述代码示例中的 `script` 节点不会包含在渲染树中。
+不会被显示的元素，如 [`<head>`](/zh-CN/docs/Web/HTML/Reference/Elements/head) 元素及其子元素，以及任何带有 `display: none` 的节点，如用户代理样式表中的 `script { display: none; }`，都不会包含在渲染树中，因为它们不会出现在渲染输出中。应用了 `visibility: hidden` 的节点会包含在渲染树中，因为它们会占用空间。由于我们没有给出任何指令来覆盖用户代理默认值，因此上述代码示例中的 `script` 节点不会包含在渲染树中。
 
 每个可见节点都应用了 CSSOM 规则。渲染树包含所有可见节点的内容和计算样式，将所有相关样式与 DOM 树中的每个可见节点匹配起来，并根据 [CSS 级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)，确定每个节点的计算样式。
 
@@ -180,7 +180,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 为了确保平滑滚动和动画效果，包括计算样式、回流和绘制等占用主线程的所有操作，必须在不超过 16.67 毫秒的时间内完成。在 2048 x 1536 分辨率下，iPad 需要将超过 314.5 万个像素绘制到屏幕上。这是非常多的像素，必须要非常快速地绘制出来。为了确保重绘能够比初始绘制更快地完成，绘制到屏幕的操作通常被分解成几个图层。如果发生这种情况，浏览器则需要进行合成。
 
-绘制可以将布局树中的元素分解为多个层。将内容提升到 GPU 上的层（而不是 CPU 上的主线程）可以提高绘制和重新绘制性能。有一些特定的属性和元素可以实例化一个层，包括 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)，任何 CSS 属性为 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 、3D [`transform`](/zh-CN/docs/Web/CSS/transform)、[`will-change`](/zh-CN/docs/Web/CSS/will-change) 的元素，还有一些其他元素。这些节点将与子节点一起绘制到它们自己的层上，除非子节点由于上述一个（或多个）原因需要自己的层。
+绘制可以将布局树中的元素分解为多个层。将内容提升到 GPU 上的层（而不是 CPU 上的主线程）可以提高绘制和重新绘制性能。有一些特定的属性和元素可以实例化一个层，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas)，任何 CSS 属性为 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 、3D [`transform`](/zh-CN/docs/Web/CSS/transform)、[`will-change`](/zh-CN/docs/Web/CSS/will-change) 的元素，还有一些其他元素。这些节点将与子节点一起绘制到它们自己的层上，除非子节点由于上述一个（或多个）原因需要自己的层。
 
 分层确实可以提高性能，但在内存管理方面成本较高，因此不应作为 Web 性能优化策略的过度使用。
 

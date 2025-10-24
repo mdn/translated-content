@@ -48,14 +48,15 @@ l10n:
 
 ![fetch를 사용하여 페이지 업데이트](fetch-update.svg)
 
-여기서 주요 API는 [Fetch API](/ko/docs/Web/API/Fetch_API)입니다. 이를 통해 페이지에서 실행되는 JavaScript가 특정 리소스를 검색하기 위해 서버에 [HTTP](/ko/docs/Web/HTTP) 요청을 할 수 있습니다. 서버가 이를 제공하면 JavaScript는 일반적으로 [DOM 조작 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)를 사용하여 페이지를 업데이트하기 위한 데이터를 사용할 수 있습니다. 요청되는 데이터는 구조화된 데이터를 전송하는 데 적합한 형식인 [JSON](/ko/docs/Learn/JavaScript/Objects/JSON)인 경우가 많지만, HTML이거나 텍스트일 수도 있습니다.
+여기서 주요 API는 [Fetch API](/ko/docs/Web/API/Fetch_API)입니다. 이를 통해 페이지에서 실행되는 JavaScript가 특정 리소스를 검색하기 위해 서버에 [HTTP](/ko/docs/Web/HTTP) 요청을 할 수 있습니다. 서버가 이를 제공하면 JavaScript는 일반적으로 [DOM 조작 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)를 사용하여 페이지를 업데이트하기 위한 데이터를 사용할 수 있습니다. 요청되는 데이터는 구조화된 데이터를 전송하는 데 적합한 형식인 [JSON](/ko/docs/Learn_web_development/Core/Scripting/JSON)인 경우가 많지만, HTML이거나 텍스트일 수도 있습니다.
 
 이는 Amazon, YouTube, eBay 등과 같은 데이터 기반 사이트에서 흔히 볼 수 있는 패턴입니다.
 
 - 페이지 업데이트 속도가 훨씬 빨라지고 페이지가 새로 고쳐질 때까지 기다릴 필요가 없어 사이트가 더 빠르고 반응이 좋습니다.
 - 매 업데이트마다 더 적은 데이터가 다운로드되며, 이는 대역폭 낭비를 줄여줍니다. 이것은 광대역 연결의 데스크톱에서는 큰 문제가 아닐 수도 있지만, 모바일 장치와 유비쿼터스 빠른 인터넷 서비스가 없는 국가에서는 주요 문제입니다.
 
-> **참고:** 초기에 이 일반적인 기법은 XML 데이터를 요청하는 경향이 있었기 때문에 [Asynchronous](/ko/docs/Glossary/Asynchronous) JavaScript와 XML([Ajax](/ko/docs/Glossary/AJAX))로 알려졌습니다. 요즘에는 보통 그렇지 않지만(JSON을 요청하는 경우가 더 많을 것입니다), 결과는 여전히 똑같으며, 여전히 "Ajax"라는 용어가 이 기법을 설명하는 데 자주 사용됩니다.
+> [!NOTE]
+> 초기에 이 일반적인 기법은 XML 데이터를 요청하는 경향이 있었기 때문에 [Asynchronous](/ko/docs/Glossary/Asynchronous) JavaScript와 XML([Ajax](/ko/docs/Glossary/AJAX))로 알려졌습니다. 요즘에는 보통 그렇지 않지만(JSON을 요청하는 경우가 더 많을 것입니다), 결과는 여전히 똑같으며, 여전히 "Ajax"라는 용어가 이 기법을 설명하는 데 자주 사용됩니다.
 
 속도를 더 높이기 위해 일부 사이트는 사용자가 처음 요청할 때 에셋과 데이터를 사용자 컴퓨터에 저장하기도 하는데, 이는 페이지가 처음 로드될 때마다 새로운 복사본을 다운로드하는 대신 다음 방문 시 로컬 버전을 사용한다는 것을 의미합니다. 콘텐츠는 업데이트가 된 경우에만 서버에서 다시 로드됩니다.
 
@@ -133,7 +134,7 @@ fetch(url)
 
 먼저, Fetch API의 진입점은 {{domxref("Window", "fetch()")}}라는 글로벌 함수로, URL을 매개변수로 사용합니다(사용자 지정 설정에는 다른 선택적인 매개변수가 필요하지만 여기서는 사용하지 않습니다).
 
-다음으로 `fetch()`는 {{jsxref("Promise")}}를 반환하는 비동기 API입니다. 그것이 무엇인지 모른다면 [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous) 모듈을 읽으세요. 특히 [promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)에 대한 문서를 읽고 여기로 오세요. 그 문서는 `fetch()` API에 대해서도 이야기하고 있습니다!
+다음으로 `fetch()`는 {{jsxref("Promise")}}를 반환하는 비동기 API입니다. 그것이 무엇인지 모른다면 [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS) 모듈을 읽으세요. 특히 [promises](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises)에 대한 문서를 읽고 여기로 오세요. 그 문서는 `fetch()` API에 대해서도 이야기하고 있습니다!
 
 그래서 `fetch()`는 promise를 반환하기 때문에 함수를 반환된 promise의 {{jsxref("Promise/then", "then()")}} 메서드에 전달합니다. 이 메서드는 HTTP 요청이 서버로부터 응답을 받았을 때 호출됩니다. 핸들러에서 요청이 성공했는지 확인하고 성공하지 않은 경우 오류를 던집니다. 그렇지 않으면 {{domxref("Response/text", "response.text()")}}를 호출하여 응답 본문을 텍스트로 가져옵니다.
 
@@ -152,7 +153,7 @@ verseChoose.value = "Verse 1";
 
 최신 브라우저는 로컬 파일에서 예제를 실행하기만 하면 HTTP 요청을 실행하지 않습니다. 이는 보안 제한 때문입니다(보안에 대한 자세한 내용은 [웹 사이트 보안](/ko/docs/Learn/Server-side/First_steps/Website_security)을 참고하세요.).
 
-이를 해결하려면 로컬 웹 서버를 통해 예제를 실행하여 테스트해야 합니다. 이 방법을 알아보려면 [로컬 검증 서버 설정 가이드](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)를 참고하세요.
+이를 해결하려면 로컬 웹 서버를 통해 예제를 실행하여 테스트해야 합니다. 이 방법을 알아보려면 [로컬 검증 서버 설정 가이드](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)를 참고하세요.
 
 ### The can store
 
@@ -184,8 +185,8 @@ fetch("products.json")
 
 이 함수 내부는 다음과 같습니다.
 
-- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
-- 응답 시 {{domxref("Response.json","json()")}}를 호출합니다. 그러면 [JSON 객체](/ko/docs/Learn/JavaScript/Objects/JSON)로 데이터를 가져옵니다. 우리는 `response.json()`가 반환한 promise를 반환합니다.
+- 서버가 오류(예: [404 Not Found](/ko/docs/Web/HTTP/Reference/Status/404))를 반환하지 않았는지 확인하십시오. 오류가 발생하면 예외를 발생시킵니다.
+- 응답 시 {{domxref("Response.json","json()")}}를 호출합니다. 그러면 [JSON 객체](/ko/docs/Learn_web_development/Core/Scripting/JSON)로 데이터를 가져옵니다. 우리는 `response.json()`가 반환한 promise를 반환합니다.
 
 다음으로 반환된 promise의 `then()` 메서드에 함수를 전달합니다. 이 함수는 응답 데이터를 JSON으로 포함하는 객체를 받고, 이를 `initialize()` 함수에 전달합니다. 사용자 인터페이스에 모든 제품을 표시하는 프로세스를 시작하는 함수입니다.
 
@@ -261,8 +262,8 @@ Fetch API가 이보다 더 개선된 것이라고 생각하기를 바랍니다. 
 
 - [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [JSON data 사용하기](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [HTTP 개요](/ko/docs/Web/HTTP/Overview)
-- [Server-side 웹 사이트 프로그래밍](/ko/docs/Learn/Server-side)
+- [JSON data 사용하기](/ko/docs/Learn_web_development/Core/Scripting/JSON)
+- [HTTP 개요](/ko/docs/Web/HTTP/Guides/Overview)
+- [Server-side 웹 사이트 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

@@ -68,9 +68,7 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 - {{domxref('CSSKeywordValue')}}
   - : 用于创建一个表示 CSS 关键字和其他标识符的对象的接口。当在需要字符串的地方使用时，它将返回 `CSSKeyword.value` 的值。
 - {{domxref('CSSMathValue')}}
-
   - : 表示比单个值和单位更复杂的数值的子类树，包括：
-
     - {{domxref('CSSMathInvert')}}——代表 CSS {{cssxref("calc","calc()")}} 值，被用作 `calc(1 / <value>)`。
     - {{domxref('CSSMathMax')}}——代表 CSS {{cssxref("max","max()")}} 函数。
     - {{domxref('CSSMathMin')}}——代表 CSS {{cssxref("min","min()")}} 函数。
@@ -79,9 +77,7 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
     - {{domxref('CSSMathSum')}}——表示在 {{domxref('CSSNumericValue')}} 上调用 {{domxref('CSSNumericValue.add','add()')}}、{{domxref('CSSNumericValue.sub','sub()')}} 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 得到的结果。
 
 - {{domxref('CSSNumericValue')}}
-
   - : 表示所有数值可以执行的操作的接口，包括：
-
     - {{domxref('CSSNumericValue.add')}}——`CSSNumericValue` 加上提供的数字。
     - {{domxref('CSSNumericValue.sub')}}——`CSSNumericValue` 减去提供的数字。
     - {{domxref('CSSNumericValue.mul')}}——`CSSNumericValue` 乘上提供的数字。

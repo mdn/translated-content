@@ -1,6 +1,9 @@
 ---
-title: Screen.unlockOrientation()
+title: "Screen: unlockOrientation() メソッド"
+short-title: unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
+l10n:
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
@@ -15,8 +18,8 @@ slug: Web/API/Screen/unlockOrientation
 
 ## 構文
 
-```js
-unlockOrientation();
+```js-nolint
+unlockOrientation()
 ```
 
 ### 引数
@@ -30,7 +33,7 @@ unlockOrientation();
 ## 例
 
 ```js
-var unlockOrientation =
+const unlockOrientation =
   screen.unlockOrientation ||
   screen.mozUnlockOrientation ||
   screen.msUnlockOrientation ||
@@ -47,7 +50,7 @@ if (unlockOrientation()) {
 
 この機能は、どの仕様書にも含まれていません。標準化される予定はありません。
 
-代わりに {{domxref("ScreenOrientation.lock()")}} を使用してください。
+代わりに {{domxref("ScreenOrientation.unlock()")}} を使用してください。
 
 ## ブラウザーの互換性
 

@@ -2,10 +2,8 @@
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Reference/Status/415
 l10n:
-  sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息的{{Glossary("HTTP Content", "內容")}}格式是不受支援的。
 

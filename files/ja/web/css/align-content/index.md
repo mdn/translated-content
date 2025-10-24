@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 8b4e6b773d03959d5a5b2d02200243c4714079b9
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
 
-{{InteractiveExample("CSS Demo: align-content")}}
+{{InteractiveExample("CSS デモ: align-content")}}
 
 ```css interactive-example-choice
 align-content: start;
@@ -113,7 +111,6 @@ align-content: unset;
   - : 各アイテムは、フレックスコンテナーに依存して、交差軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
     これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
 - `baseline`, `first baseline`, `last baseline`
-
   - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
 
     ![ベースラインは、ほとんどの文字がその上に「配置」される線で、ディセンダーがその下に伸びる線です。](410px-typography_line_terms.svg.png)
@@ -133,7 +130,8 @@ align-content: unset;
 - `unsafe`
   - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
 
-> **メモ:** `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
+> [!NOTE]
+> `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
 
 ## 公式定義
 
@@ -293,6 +291,6 @@ function updatePage() {
 - CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
-- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
 - [ブロックレベルコンテンツ](/ja/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

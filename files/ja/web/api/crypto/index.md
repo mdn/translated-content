@@ -51,4 +51,4 @@ _このインターフェイスは、 {{domxref("Crypto/getRandomValues", "Rando
 - [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
 - [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
 - [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
-- [Strict-Transport-Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)

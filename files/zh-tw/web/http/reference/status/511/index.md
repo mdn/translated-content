@@ -2,10 +2,8 @@
 title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`511 Network Authentication Required`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示用戶端需要進行驗證以獲得網路訪問權限。此狀態不是由原始伺服器產生，而是由攔截流量的{{Glossary("Proxy_server", "代理伺服器")}}發送，以控制對網路的訪問。
 

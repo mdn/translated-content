@@ -3,8 +3,6 @@ title: 旧式浏览器中的 HTML 表单
 slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
 ---
 
-{{LearnSidebar}}
-
 所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
 
 可悲的是，处理这些传统浏览器的问题是工作的一部分。幸运的是，有一些技巧可以帮助你解决旧式浏览器导致的大多数问题。如果浏览器不支持某种 HTML {{htmlelement('input')}} 类型，它不会停止工作，而只是回退为默认的 `type=text` 类型。
@@ -23,7 +21,7 @@ slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
 
 #### HTML input 类型
 
-HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是高度可预测的。如果一个浏览器不能理解 {{HTMLElement("input")}}元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，它将会后退到`text`一样的行为。
+HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是高度可预测的。如果一个浏览器不能理解 {{HTMLElement("input")}}元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，它将会后退到`text`一样的行为。
 
 ```html
 <label for="myColor">
@@ -61,7 +59,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 
 有两种在 HTML 表单中定义按钮的方式：
 
-- [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值为 `button`、`submit`、`reset` 或 `image` 的 {{HTMLElement("input")}} 元素
+- [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值为 `button`、`submit`、`reset` 或 `image` 的 {{HTMLElement("input")}} 元素
 - {{HTMLElement("button")}} 元素
 
 ##### {{HTMLElement("input")}}
@@ -100,8 +98,8 @@ input[type="button"] {
 
 {{HTMLElement("button")}} 元素曾经受到两个问题的影响，现在已经得到解决：
 
-- 在旧版本的 Internet Explorer 中，存在一个错误，当点击 {{HTMLElement("button")}} 元素时，会发送该元素开始和结束标签之间的 HTML 内容，而不是 [`value`](/zh-CN/docs/Web/HTML/Element/button#value) 属性中的值。仅在需要发送该值时才会出现问题，例如当数据处理取决于用户点击的按钮时。
-- 某些非常旧的浏览器不使用 `submit` 作为 [`type`](/zh-CN/docs/Web/HTML/Element/button#type) 属性的默认值。即使在现代浏览器中得到了解决，也推荐总是设置 {{HTMLElement("button")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Element/button#type) 属性。
+- 在旧版本的 Internet Explorer 中，存在一个错误，当点击 {{HTMLElement("button")}} 元素时，会发送该元素开始和结束标签之间的 HTML 内容，而不是 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/button#value) 属性中的值。仅在需要发送该值时才会出现问题，例如当数据处理取决于用户点击的按钮时。
+- 某些非常旧的浏览器不使用 `submit` 作为 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/button#type) 属性的默认值。即使在现代浏览器中得到了解决，也推荐总是设置 {{HTMLElement("button")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/button#type) 属性。
 
 ```html
 <!-- 某些情形下，点击按钮将发送 "<em>Do A</em>" 而不是值"A" -->

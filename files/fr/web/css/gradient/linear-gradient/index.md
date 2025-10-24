@@ -1,25 +1,74 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/image)).
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/image)).
+{{InteractiveExample("Démonstration CSS&nbsp;: linear-gradient()")}}
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(
+  to left,
+  #333333,
+  #333333 50%,
+  #eeeeee 75%,
+  #333333 75%
+);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgb(255 0 0 / 0.8), transparent 70.71%),
+  linear-gradient(127deg, rgb(0 255 0 / 0.8), transparent 70.71%),
+  linear-gradient(336deg, rgb(0 0 255 / 0.8), transparent 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntaxe
 
 ```css
-/* Un dégradé incliné de 45 degrés,
-   commençant en bleu et finissant en rouge. */
-linear-gradient(45deg, blue, red);
+/* Un dégradé avec une seule couleur rouge */
+linear-gradient(red)
 
-/* Un dégradé commençant en bas à droite et
-   allant jusqu'au coin supérieur gauche,
-   commençant en bleu et finissant en rouge. */
-linear-gradient(to left top, blue, red);
+/* Un dégradé incliné à 45 degrés,
+   commençant en bleu et finissant en rouge */
+linear-gradient(45deg, blue, red)
+
+/* Un dégradé allant du coin inférieur droit au coin supérieur gauche,
+   commençant en bleu et finissant en rouge */
+linear-gradient(to left top, blue, red)
+
+/* Interpolation dans l'espace colorimétrique rectangulaire */
+linear-gradient(in oklab, blue, red)
+
+/* Interpolation dans l'espace colorimétrique polaire */
+linear-gradient(in hsl, blue, red)
+
+/* Interpolation dans l'espace colorimétrique polaire
+   avec la méthode d'interpolation de teinte la plus longue */
+linear-gradient(in hsl longer hue, blue, red)
 
 /* Un arrêt de couleur : un dégradé allant de bas
    en haut, commençant en bleu, devenant vert à 40%
@@ -44,28 +93,27 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### Values
 
 - `<side-or-corner>`
-
   - : La position du point de départ de la ligne selon laquelle évolue le dégradé. Si elle est indiquée, elle se compose du mot `to` et peut contenir jusqu'à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` ou `right` pour indiquer respectivement gauche ou droite), et le second indiquant le côté vertical (`top` ou `bottom` pour indiquer respectivement haut ou bas). L'ordre des deux mots-clés n'a pas d'importance. Si aucun n'est utilisé, la valeur par défaut sera `to bottom`.
 
     Les valeurs `to top`, `to bottom`, `to left`, et `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont traduites en un angle.
 
-- [`<angle>`](/fr/docs/Web/CSS/angle)
+- {{CSSxRef("&lt;angle&gt;")}}
   - : L'angle de la ligne du dégradé. Une valeur de `0deg` sera équivalente à `to top`&nbsp;; les valeurs plus élevées évoluant dans le sens horaire.
 - `<linear-color-stop>`
-  - : Un arrêt de couleur indiqué par une valeur [`<color>`](/fr/docs/Web/CSS/color) suivie d'une ou deux positions d'arrêt (chacune étant indiquée comme un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une longueur ([`<length>`](/fr/docs/Web/CSS/length)) le long de l'axe du dégradé).
+  - : Un arrêt de couleur indiqué par une valeur {{CSSxRef("&lt;color&gt;")}} suivie d'une ou deux positions d'arrêt (chacune étant indiquée comme un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou une longueur ({{CSSxRef("&lt;length&gt;")}}) le long de l'axe du dégradé).
 - `<color-hint>`
-  - : Une indication d'interpolation qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
+  - : Une indication d'{{glossary("interpolation")}} qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
 
 > [!NOTE]
-> Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 
 Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique.
 
-Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>).
+Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}.
 
-Étant donné que le type `<gradient>` est un sous-type du type `<image>`, on peut utiliser des dégradés à tout endroit où on peut utiliser une image. C'est également pour cette raison que `linear-gradient()` ne fonctionnera pas pour la propriété [`background-color`](/fr/docs/Web/CSS/background-color) et pour les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color).
+Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des {{CSSxRef("&lt;image&gt;")}} sont acceptées. Pour cette raison, `linear-gradient()` ne fonctionnera pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
 
 ### Composition d'un dégradé linéaire
 
@@ -187,14 +235,8 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- Les autres fonctions de dégradés&nbsp;:
-  - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
-  - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
-  - [`repeating-radial-gradient()`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
-  - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
-  - [`repeating-conic-gradient()`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
-- [`<image>`](/fr/docs/Web/CSS/image)
-- [`element()`](</fr/docs/Web/CSS/element()>)
-- [`image()`](</fr/docs/Web/CSS/image/image()>)
-- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-- [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)
+- Les autres fonctions de dégradés&nbsp;: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- Le module d'[images CSS](/fr/docs/Web/CSS/CSS_images)

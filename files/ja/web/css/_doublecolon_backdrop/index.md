@@ -3,11 +3,9 @@ title: ::backdrop
 slug: Web/CSS/::backdrop
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、何らかの要素が全画面モード ({{glossary("top layer")}}) で表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。
 
-{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::backdrop", "tabbed-shorter")}}
 
 ```css interactive-example
 button {
@@ -151,5 +149,5 @@ closeButton.addEventListener("click", () => {
 - {{cssxref(":fullscreen")}} 疑似クラス
 - {{HTMLElement("dialog")}} HTML 要素
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) HTML グローバル属性
+- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) HTML グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

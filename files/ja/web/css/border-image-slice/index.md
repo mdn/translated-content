@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 9416f9b9db835dc3cc9a4f628d3bd34cdf494bc1
 ---
 
-{{CSSRef}}
-
 **`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/border-image)の部品を構成します。
 
-{{InteractiveExample("CSS Demo: border-image-slice")}}
+{{InteractiveExample("CSS デモ: border-image-slice")}}
 
 ```css interactive-example-choice
 border-image-slice: 30;
@@ -173,7 +171,7 @@ div > div {
   height: 200px;
   border-width: 30px;
   border-style: solid;
-  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
+  border-image: url(/shared-assets/images/examples/border-diamonds.png);
   border-image-slice: 30;
   border-image-repeat: round;
 }
@@ -220,4 +218,4 @@ sliceSlider.addEventListener("input", () => {
 
 ## 関連情報
 
-- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
-{{LearnSidebar}}
-
 作者详情页面需要呈现指定作者（`Author`）的信息，使用（自动生成的）`_id` 字段值进行标识，接着是这个作者的所有书本（`Book`）对象的列表。
 
 ## 控制器

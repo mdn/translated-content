@@ -33,7 +33,7 @@ dataview.setUint16(positionOctet, valeur [, littleEndian])
 - `valeur`
   - : La valeur à enregistrer
 - `littleEndian`
-  - : {{optional_inline}} Indique si la donnée sur 32 bits est enregistrée {{Glossary("Endianness", "dans l'ordre des octets de poids faibles")}}. Si ce paramètre vaut `false` ou `undefined`, l'ordre sera celui des octets de poids forts.
+  - : {{optional_inline}} Indique si la donnée sur 16 bits est enregistrée {{Glossary("Endianness", "dans l'ordre des octets de poids faibles")}}. Si ce paramètre vaut `false` ou `undefined`, l'ordre sera celui des octets de poids forts.
 
 ### Valeur de retour
 
@@ -46,7 +46,7 @@ dataview.setUint16(positionOctet, valeur [, littleEndian])
 
 ## Exemples
 
-### Utilisation de la méthode `setUint1`
+### Utilisation de la méthode `setUint16`
 
 ```js
 var buffer = new ArrayBuffer(8);

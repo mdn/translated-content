@@ -123,6 +123,6 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
 
 ## 요약
 
-이제 속성 선택자가 완료되었으므로, 다음 문서로 이동하여 [의사 클래스와 의사 요소 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)에 대해 읽어볼 수 있습니다.
+이제 속성 선택자가 완료되었으므로, 다음 문서로 이동하여 [의사 클래스와 의사 요소 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)에 대해 읽어볼 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

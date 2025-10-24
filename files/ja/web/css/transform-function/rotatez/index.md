@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`rotateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素の形を変化させずに Z 軸の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`rotateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素の形を変化させずに Z 軸の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
-
-{{InteractiveExample("CSS Demo: rotateZ()")}}
+{{InteractiveExample("CSS デモ: rotateZ()")}}
 
 ```css interactive-example-choice
 transform: rotateZ(0);
@@ -39,7 +37,8 @@ transform: rotateZ(3.142rad);
 
 回転軸は、 {{ cssxref("transform-origin") }} CSS プロパティで定義される原点を通ります。
 
-> **メモ:** `rotateZ(a)` は `rotate(a)` または `rotate3d(0, 0, 1, a)` と等価です。
+> [!NOTE]
+> `rotateZ(a)` は `rotate(a)` または `rotate3d(0, 0, 1, a)` と等価です。
 
 > [!NOTE]
 > 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。

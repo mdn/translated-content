@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 **`getAllCookieStores()`** 方法返回所有 cookie 存储的列表。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -48,7 +46,7 @@ browser.cookies.getAllCookieStores().then(logStores);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#method-getAllCookieStores) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#method-getAllCookieStores) API。该文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

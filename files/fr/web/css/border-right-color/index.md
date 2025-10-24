@@ -7,7 +7,46 @@ slug: Web/CSS/border-right-color
 
 La propriété **`border-right-color`** définit la couleur utilisée pour la bordure droite d'un élément. Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-right")}}.
 
-{{EmbedInteractiveExample("pages/css/border-right-color.html")}}
+{{InteractiveExample("CSS Demo: border-right-color")}}
+
+```css interactive-example-choice
+border-right-color: red;
+```
+
+```css interactive-example-choice
+border-right-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-right-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-right-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-right-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntaxe
 
@@ -81,18 +120,15 @@ border-right-color: unset;
 ## Voir aussi
 
 - Les propriétés raccourcies liées aux bordures
-
   - {{cssxref("border")}},
   - {{cssxref("border-right")}},
   - {{cssxref("border-color")}}.
 
 - Les propriétés de couleur pour les autres bordures :
-
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-bottom-color")}},
   - {{cssxref("border-left-color")}}.
 
 - Les autres propriétés liées à la bordure droite :
-
   - {{cssxref("border-right-style")}},
   - {{cssxref("border-right-width")}}.

@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Elimina toda esta nota explicativa antes de publicar_
+> [!NOTE]
+> _Elimina toda esta nota explicativa antes de publicar_
 >
 > ---
 >
@@ -30,16 +31,15 @@ l10n:
 > ```
 >
 > - **title**
->   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_. Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
+>   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_. Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
 > - **slug**
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
+>     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
 > - **page-type**
 >   - : Para cabeceras HTTP, debe ser `http-header`. Para otros valores HTTP de `page-type`, consulte la [sección HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) de la documentación para el metadato `page-type`.
 > - **status**
 >   - : Banderas que describen el estado de esta característica. Puede contener uno o más de los siguiente valores: `experimental`, `deprecated`, `non-standard` Este valor no debe configurarse manualmente: se configura automáticamente en función de los valores de los datos de compatibilidad del navegador para la característica. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 > - **browser-compat**
->
 >   - : Reemplaza el valor de marcador de posición `path.to.feature.NameOfTheHeader` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar la sección de compatibilidad (reemplazando la macro `\{{Compat}}`).
 >
@@ -60,17 +60,13 @@ l10n:
 >   Si no lo está, puedes eliminar la llamada a la macro.
 > - `\{{Non-standard_Header}}` — esto genera un banner de no estándar que indica que la función no forma parte de ninguna especificación.
 >
->   Debe actualizar o eliminar las siguientes macros de acuerdo con los siguientes consejos:
->
-> - `\{{httpsidebar}}` — esto genera el menú lateral de HTTP que debe aparecer en cada página de referencia HTTP. Recuerde eliminar la macro {{MDNSidebar}} cuando copie esta página.
->
 >   No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
 >
 > Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Comienza el contenido en la página con un párrafo introductorio — comienza nombrando la cabecera http y diciendo qué hace.
 Idealmente, esto debería ser una o dos oraciones cortas.

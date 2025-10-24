@@ -58,7 +58,7 @@ l10n:
 
    在此示例中，无障碍名称为“黄色”。
 
-2. `aria-labelledby` 属性的值采用由空格分隔的 ID 引用列表，这意味着你可以将多个元素合并为单个无障碍名称。你可以包含元素自身的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 来引用其自身的内容。
+2. `aria-labelledby` 属性的值采用由空格分隔的 ID 引用列表，这意味着你可以将多个元素合并为单个无障碍名称。你可以包含元素自身的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 来引用其自身的内容。
 
    ```html
    <h2 id="attr" class="article-title">你需要了解的 13 个 ARIA 属性</h2>
@@ -72,7 +72,7 @@ l10n:
 
 3. `aria-labelledby` 属性值的顺序很重要。当 `aria-labelledby` 引用多个元素时，每个引用的元素的内容将按照它们在 `aria-labelledby` 值中的引用顺序进行组合。如果我们写成了 `aria-labelledby="attr rm13">`，无障碍名称将会是“你需要了解的 13 个 ARIA 属性 阅读更多”。
 4. `aria-labelledby` 属性会忽略其值中重复的 `id`。如果一个元素被多次引用，只有第一个引用会被处理。`aria-labelledby="attr attr rm13 rm13"> `将被视为 `aria-labelledby="attr rm13">`。
-5. `aria-labelledby` 属性的值可以包括不可见元素的内容。虽然你应该为辅助技术用户提供与所有其他用户相同的内容，但你可以在计算的名称字符串中包含具有 HTML [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes#hidden) 属性、CSS [`display: none`](/zh-CN/docs/Web/CSS/display) 和 CSS [`visibility: hidden`](/zh-CN/docs/Web/CSS/visibility) 的元素的内容。
+5. `aria-labelledby` 属性的值可以包括不可见元素的内容。虽然你应该为辅助技术用户提供与所有其他用户相同的内容，但你可以在计算的名称字符串中包含具有 HTML [`hidden`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#hidden) 属性、CSS [`display: none`](/zh-CN/docs/Web/CSS/display) 和 CSS [`visibility: hidden`](/zh-CN/docs/Web/CSS/visibility) 的元素的内容。
 6. `aria-labelledby` 属性会合并输入元素的值。如果值引用了一个 `<input>`，则表单控件的当前值将包含在计算的名称字符串中，并在值更新时改变。
 7. `aria-labelledby` 属性不能被链式使用。如果具有 `aria-labelledby` 的元素引用了另一个也具有 `aria-labelledby` 的元素，那么被引用元素上的 `aria-labelledby` 属性将被忽略。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27ae7e9c347490290a7327a48842575d333b2f31
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 107 の変更点をまとめています。Firefox 107 は、2022 年 11 月 15 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -17,7 +15,7 @@ l10n:
 
 ### MathML
 
-- [`<ms>`](/ja/docs/Web/MathML/Element/ms) MathML 要素で、独自の始めと終わりの引用符を示すための非推奨属性であった `lquote` および `rquote` 属性を無効にしました。
+- [`<ms>`](/ja/docs/Web/MathML/Reference/Element/ms) MathML 要素で、独自の始めと終わりの引用符を示すための非推奨属性であった `lquote` および `rquote` 属性を無効にしました。
   この動作は `mathml.ms_lquote_rquote_attributes.disabled` で設定しており、既定値を `true` にしました ([Firefox バグ 1793387](https://bugzil.la/1793387))。
 
 ### CSS

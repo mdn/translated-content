@@ -27,7 +27,7 @@ Una vez examinados los conceptos básicos, vamos a ver más en detalle los eleme
   </tbody>
 </table>
 
-La flexibilidad que presentan los formularios los convierte en una de las estructuras más complejas en [HTML](/es/docs/Learn/HTML), puesto que puedes crear cualquier tipo de formulario básico a partir de los elementos y atributos destinados a esta función. El uso de una estructura correcta al crear un formulario HTML te ayudará a garantizar que el formulario presente las características de usabilidad y [accesibilidad](/es/docs/Learn/Accessibility) adecuadas.
+La flexibilidad que presentan los formularios los convierte en una de las estructuras más complejas en [HTML](/es/docs/Learn_web_development/Core/Structuring_content), puesto que puedes crear cualquier tipo de formulario básico a partir de los elementos y atributos destinados a esta función. El uso de una estructura correcta al crear un formulario HTML te ayudará a garantizar que el formulario presente las características de usabilidad y [accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) adecuadas.
 
 ## El elemento \<form>
 
@@ -162,7 +162,7 @@ Consideremos este ejemplo:
 
 {{EmbedLiveSample("Etiquetas_múltiples", 120, 120)}}
 
-El párrafo de la parte superior establece una regla para los elementos que son obligatorios. La regla ha de incluirse _antes_ de usarse para que tanto los usuarios videntes como los usuarios que utilizan tecnologías de asistencia y lectores de pantalla, sepan lo que significa antes de encontrar un elemento obligatorio. Pero si bien esto ayuda a informar a los usuarios de lo que significa un asterisco, no es posible confiar plenamente en ello. Cuando un lector de pantalla se encuentre con un asterisco pronunciará «estrella». Cuando un usuario vidente pase el ratón por encima, debería aparecer una etiqueta de «obligatorio», lo cual se logra con el uso del atributo `title`. Pero los títulos que se leen en voz alta dependen de la configuración del lector de pantalla, por lo que es más fiable incluir también el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label), que los lectores de pantalla siempre leen.
+El párrafo de la parte superior establece una regla para los elementos que son obligatorios. La regla ha de incluirse _antes_ de usarse para que tanto los usuarios videntes como los usuarios que utilizan tecnologías de asistencia y lectores de pantalla, sepan lo que significa antes de encontrar un elemento obligatorio. Pero si bien esto ayuda a informar a los usuarios de lo que significa un asterisco, no es posible confiar plenamente en ello. Cuando un lector de pantalla se encuentre con un asterisco pronunciará «estrella». Cuando un usuario vidente pase el ratón por encima, debería aparecer una etiqueta de «obligatorio», lo cual se logra con el uso del atributo `title`. Pero los títulos que se leen en voz alta dependen de la configuración del lector de pantalla, por lo que es más fiable incluir también el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label), que los lectores de pantalla siempre leen.
 
 Las variantes anteriores aumentan en efectividad a medida que se avanza por ellas:
 
@@ -188,7 +188,7 @@ Depende de ti, sobre todo, encontrar un estilo de codificación cómodo que dé 
 
 ### Aprendizaje activo: construir una estructura de formulario
 
-Pongamos en práctica estas ideas y creemos un formulario un poco más complicado: un formulario de pago. Este formulario contendrá una serie de tipos de control que quizás aún no comprendas. No te preocupes por esto por ahora; en el artículo siguiente descubrirás cómo funcionan ([Los controles básicos de formulario originales](/es/docs/Learn/Forms/Basic_native_form_controls)). Por ahora, lee con detenimiento las descripciones y sigue las instrucciones, y empieza a formarte una idea de qué elementos de delimitación se utilizan para estructurar el formulario y por qué.
+Pongamos en práctica estas ideas y creemos un formulario un poco más complicado: un formulario de pago. Este formulario contendrá una serie de tipos de control que quizás aún no comprendas. No te preocupes por esto por ahora; en el artículo siguiente descubrirás cómo funcionan ([Los controles básicos de formulario originales](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). Por ahora, lee con detenimiento las descripciones y sigue las instrucciones, y empieza a formarte una idea de qué elementos de delimitación se utilizan para estructurar el formulario y por qué.
 
 1. Para comenzar, haz una copia local de nuestro [archivo de plantilla en blanco](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) y el [CSS de nuestro formulario de pago](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) en un nuevo directorio de tu ordenador.
 2. Añade dentro del elemento HTML {{htmlelement ("head")}} la línea siguiente para aplicar el CSS al HTML:
@@ -265,7 +265,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
    </section>
    ```
 
-6. La segunda `<section>` de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento `<p>`. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento `<input>` de tipo `tel`, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo `number`, no queremos una interfaz de usuario con control de número. El último es un elemento `<input>` de tipo `date`, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo [Tipos de entrada HTML5](/es/docs/Learn/Forms/HTML5_input_types).
+6. La segunda `<section>` de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento `<p>`. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento `<input>` de tipo `tel`, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo `number`, no queremos una interfaz de usuario con control de número. El último es un elemento `<input>` de tipo `date`, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo [Tipos de entrada HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
 
    Introduce los datos siguientes a continuación de la sección anterior:
 
@@ -327,7 +327,7 @@ Ahora tienes todos los conocimientos necesarios para estructurar adecuadamente t
 ### Temas avanzados
 
 - [Enviar formularios con JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Cómo crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
 - [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls) según su código propietario

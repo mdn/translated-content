@@ -3,8 +3,6 @@ title: Firefox 中的实验性特性
 slug: Mozilla/Firefox/Experimental_features
 ---
 
-{{FirefoxSidebar}}
-
 本页列出了 Firefox 的实验性和部分实现的特性，包括针对提议的或前沿的网络平台标准的特性，以及这些特性的版本信息、是否“默认”激活这些特性，以及可用于激活或停用这些特性的偏好设置。这样，就可以在特性发布前对其进行测试。
 
 新特性首先出现在 [Firefox Nightly](https://www.mozilla.org/zh-CN/firefox/channel/desktop/) 版本中，通常默认启用。它们随后会引入到 [Firefox 浏览器开发者版](https://www.mozilla.org/zh-CN/firefox/developer/)，并最终引入到发布版本中。在发布版中默认启用某项特性后，该特性就不再被视为实验性特性，应从主题中删除。
@@ -58,7 +56,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 ### 切换密码显示
 
-HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Element/input/password)）包含一个“眼睛”图标，可通过切换来显示或遮盖密码文本（[Firefox bug 502258](https://bugzil.la/502258)）。
+HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/password)）包含一个“眼睛”图标，可通过切换来显示或遮盖密码文本（[Firefox bug 502258](https://bugzil.la/502258)）。
 
 <table>
   <thead>
@@ -1609,8 +1607,8 @@ CSS 更新包括：
 
 以下 HTML 全局属性得到了支持：
 
-- [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget)
-- [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/button#popovertargetaction)
+- [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
+- [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
 参见 [Firefox bug 1823757](https://bugzil.la/1823757) 以获取更多细节。
 

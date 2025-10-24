@@ -41,4 +41,4 @@ Content-Length: 128
 
 ### 技術リファレンス
 
-- [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
+- [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)

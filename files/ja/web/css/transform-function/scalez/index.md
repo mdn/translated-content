@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
-
-{{InteractiveExample("CSS Demo: scaleZ()")}}
+{{InteractiveExample("CSS デモ: scaleZ()")}}
 
 ```css interactive-example-choice
 transform: scaleZ(1);
@@ -101,7 +99,8 @@ transform: scaleZ(-1.4);
 
 上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
-> **メモ:** `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
+> [!NOTE]
+> `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
 
 ## 構文
 

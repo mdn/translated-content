@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`backface-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{InteractiveExample("CSS デモ: backface-visibility")}}
 
 ```css interactive-example-choice
 backface-visibility: visible;
@@ -171,7 +169,7 @@ backface-visibility: unset;
   backface-visibility: hidden;
 }
 
-/* コンテナ div、立方体 div、面の一般的な設定 */
+/* コンテナー div、立方体 div、面の一般的な設定 */
 .container {
   width: 150px;
   height: 150px;

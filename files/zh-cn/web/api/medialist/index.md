@@ -7,7 +7,8 @@ slug: Web/API/MediaList
 
 **`MediaList`** 接口表示样式表的媒体查询，例如使用了 `media` 属性的{{htmlelement("link")}} 元素。
 
-> **备注：** `MediaList` 是一个实时列表；使用以下属性或方法更新列表会立刻更新文档的表现。
+> [!NOTE]
+> `MediaList` 是一个实时列表；使用以下属性或方法更新列表会立刻更新文档的表现。
 
 ## 属性
 

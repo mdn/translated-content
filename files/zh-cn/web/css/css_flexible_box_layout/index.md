@@ -3,15 +3,40 @@ title: CSS 弹性盒子布局
 slug: Web/CSS/CSS_flexible_box_layout
 ---
 
-{{CSSRef}}
-
 **CSS 弹性盒子布局**是 CSS 的模块之一，定义了一种针对用户界面设计而优化的 CSS 盒子模型。在弹性布局模型中，弹性容器的子元素可以在任何方向上排布，也可以“弹性伸缩”其尺寸，既可以增加尺寸以填满未使用的空间，也可以收缩尺寸以避免父元素溢出。子元素的水平对齐和垂直对齐都能很方便的进行操控。通过嵌套这些框（水平框在垂直框内，或垂直框在水平框内）可以在两个维度上构建布局。
 
 ## 基本例子
 
 在以下示例中，已将容器设置为 `display: flex` ，这意味着三个子项成为弹性项。`justify-content` 的值已设置为 `space-between` ，以便在主轴上均匀地分隔项目。在每个项目之间放置等量的空间，左侧和右侧项目与 Flex 容器的边缘齐平。你还能看到项目在十字轴上拉伸，因为 `align-items` 的默认值为 `stretch`。这些项目伸展到 Flex 容器的高度，使它们看起来都像最高的项目一样高。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 500)}}
+```html live-sample___simple-example
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___simple-example
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  justify-content: space-between;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+}
+```
+
+{{EmbedLiveSample("simple-example")}}
 
 ## 参考
 

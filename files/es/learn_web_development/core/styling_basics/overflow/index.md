@@ -77,7 +77,7 @@ En el ejemplo anterior solo necesitamos desplazarnos en el eje `y`, sin embargo,
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-También puedes desplazarte por el eje _x_ usando {{cssxref ("overflow-x")}}, aunque esta no es una forma recomendada para manejar palabras largas. Si necesitas lidiar con una palabra larga en una caja pequeña, puedes consultar las propiedades {{cssxref ("word-break")}} o {{cssxref ("overflow-wrap")}}. Además, algunos de los métodos expuestos en el artículo [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) pueden ayudarte a crear cuadros que se adapten mejor a cantidades variables de contenido.
+También puedes desplazarte por el eje _x_ usando {{cssxref ("overflow-x")}}, aunque esta no es una forma recomendada para manejar palabras largas. Si necesitas lidiar con una palabra larga en una caja pequeña, puedes consultar las propiedades {{cssxref ("word-break")}} o {{cssxref ("overflow-wrap")}}. Además, algunos de los métodos expuestos en el artículo [Elementos de dimensionado en CSS](/es/docs/Learn_web_development/Core/Styling_basics/Sizing) pueden ayudarte a crear cuadros que se adapten mejor a cantidades variables de contenido.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 
@@ -98,7 +98,7 @@ En CSS hay un concepto conocido como **block formatting context** o BFC (_contex
 
 ## Desbordamiento no deseado en diseño web
 
-Los métodos de diseño modernos (explicados en el módulo [Diseñar con el CSS](/es/docs/Learn/CSS/CSS_layout)) gestionan muy bien el desbordamiento. Han sido diseñados para hacer frente al hecho de que tendemos a no poder predecir cuánto contenido habrá en la web. Sin embargo, en el pasado, los desarrolladores a menudo usaban alturas fijas para tratar de alinear los fondos de cajas que en realidad no tenían relación entre sí. Este método era frágil y, en una aplicación heredada, ocasionalmente puede aparecer una caja en que el contenido se superpone a otro contenido de la página. Si ves esto, sabrás que se trata de desbordamiento. Lo ideal sería volver a calcular el diseño para no tener que confiar tamaños de caja fijos.
+Los métodos de diseño modernos (explicados en el módulo [Diseñar con el CSS](/es/docs/Learn_web_development/Core/CSS_layout)) gestionan muy bien el desbordamiento. Han sido diseñados para hacer frente al hecho de que tendemos a no poder predecir cuánto contenido habrá en la web. Sin embargo, en el pasado, los desarrolladores a menudo usaban alturas fijas para tratar de alinear los fondos de cajas que en realidad no tenían relación entre sí. Este método era frágil y, en una aplicación heredada, ocasionalmente puede aparecer una caja en que el contenido se superpone a otro contenido de la página. Si ves esto, sabrás que se trata de desbordamiento. Lo ideal sería volver a calcular el diseño para no tener que confiar tamaños de caja fijos.
 
 Al desarrollar un sitio web, siempre debes tener en cuenta los problemas de desbordamiento. Debes probar diseños con cantidades grandes y pequeñas de contenido, aumentar el tamaño de letra... y asegurarte de que tu CSS puede hacerle frente sin ningún problema. Es probable que cambiar el valor de `overflow` para ocultar contenido o añadir barras de desplazamiento sea algo que debas reservar solo para unos pocos casos especiales, en que realmente desees una caja con barra de desplazamiento, por ejemplo.
 

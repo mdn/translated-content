@@ -3,8 +3,6 @@ title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `PATCH` 请求方法**用于对资源进行部分修改。
 
 `PATCH` 有点类似于 {{Glossary("CRUD")}} 中的“更新”概念（一般来说，HTTP 与 {{Glossary("CRUD")}} 不同，两者不应混淆）。

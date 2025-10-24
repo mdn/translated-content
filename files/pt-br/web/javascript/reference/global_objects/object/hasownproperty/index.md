@@ -120,8 +120,8 @@ Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Veja Também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -5,14 +5,12 @@ l10n:
   sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
-{{CSSRef}}
-
 **`text-wrap`** は CSS の一括指定プロパティで、要素の中のテキストを折り返す方法を制御します。様々な値により、次のことを制御します。
 
 - 組版の改善、例えば見出しの行の長さのバランスの改善。
 - テキストの折り返しを完全にオフにする方法。
 
-{{InteractiveExample("CSS Demo: text-wrap")}}
+{{InteractiveExample("CSS デモ: text-wrap")}}
 
 ```css interactive-example-choice
 text-wrap: wrap;
@@ -112,7 +110,7 @@ text-wrap: unset;
 
 テキストの長い節には `text-wrap: pretty` を使用することができます。 `pretty` はパフォーマンスに悪影響を与えるので、長いテキストブロックの場合は、速度よりもレイアウトを重視する場合にのみ使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
+`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
 
 ## 公式定義
 

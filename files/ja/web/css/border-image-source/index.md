@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
-{{CSSRef}}
-
 **`border-image-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)に使われる元の画像を設定します。
 
-{{InteractiveExample("CSS Demo: border-image-source")}}
+{{InteractiveExample("CSS デモ: border-image-source")}}
 
 ```css interactive-example-choice
 border-image-source: url("/shared-assets/images/examples/border-diamonds.png");

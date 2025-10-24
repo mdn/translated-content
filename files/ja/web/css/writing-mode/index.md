@@ -3,11 +3,9 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 ---
 
-{{CSSRef}}
-
 **`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は `html` 要素) に設定してください。
 
-{{InteractiveExample("CSS Demo: writing-mode")}}
+{{InteractiveExample("CSS デモ: writing-mode")}}
 
 ```css interactive-example-choice
 writing-mode: horizontal-tb;
@@ -243,7 +241,7 @@ th {
 
 ## 関連情報
 
-- SVG の [`writing-mode`](/ja/docs/Web/SVG/Attribute/writing-mode) 属性
+- SVG の [`writing-mode`](/ja/docs/Web/SVG/Reference/Attribute/writing-mode) 属性
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

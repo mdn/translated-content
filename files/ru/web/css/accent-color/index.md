@@ -56,9 +56,9 @@ accent-color: hsl(250, 100%, 34%);
 Браузеры, которые поддерживают `accent-color`, в настоящее время применяют его к следующим HTML-элементам:
 
 - [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox)
-- [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio)
-- [`<input type="range">`](/ru/docs/Web/HTML/Element/input/range)
-- [`<progress>`](/ru/docs/Web/HTML/Element/progress)
+- [`<input type="radio">`](/ru/docs/Web/HTML/Reference/Elements/input/radio)
+- [`<input type="range">`](/ru/docs/Web/HTML/Reference/Elements/input/range)
+- [`<progress>`](/ru/docs/Web/HTML/Reference/Elements/progress)
 
 Во всех пользовательских агентах есть акцентный цвет для обеспечения читаемости и контрастности. Этот цвет используется не в каждом элементе управления пользовательского интерфейса и не в каждом состоянии элемента. `accent-color` применяется только к тем элементам управления и только в тех состояниях, где он применим.
 

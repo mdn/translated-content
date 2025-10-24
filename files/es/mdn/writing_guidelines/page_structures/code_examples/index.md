@@ -10,7 +10,7 @@ l10n:
 En MDN, encontrarás numerosos ejemplos de código insertados en las páginas para demostrar el uso de las características de la plataforma web. Este artículo discute los diferentes mecanismos disponibles para agregar ejemplos de código a las páginas, junto con cuáles debes usar y cuándo.
 
 > [!NOTE]
-> Si buscas consejos sobre el estilo y el formato del código tal como aparece en un artículo de MDN, en lugar de las diferentes formas de incluir código, consulta nuestra [Guía de estilo de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> Si buscas consejos sobre el estilo y el formato del código tal como aparece en un artículo de MDN, en lugar de las diferentes formas de incluir código, consulta nuestra [Guía de estilo de código](/es/docs/MDN/Writing_guidelines/Code_style_guide).
 
 ## ¿Qué tipos de ejemplos de código están disponibles?
 
@@ -103,5 +103,5 @@ Esto se ve así cuando se renderiza:
 
 ### Consejos para usar muestras en vivo de GitHub
 
-- Obviamente, primero debes obtener un ejemplo de código adecuado en la [organización GitHub de MDN](https://github.com/mdn/). Esto debe hacerse utilizando Git. Si no estás familiarizado con Git, consulta nuestro artículo [¿Cómo uso GitHub Pages?](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) y [Preparación para agregar los datos](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para usos más avanzados.
-- Tu ejemplo de código debe ser adecuado para mostrar lo que estás tratando de demostrar; debe contener un ejemplo simple que haga una cosa bien, no debe contener contenido ofensivo y debe seguir las [pautas de ejemplos de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) de MDN.
+- Obviamente, primero debes obtener un ejemplo de código adecuado en la [organización GitHub de MDN](https://github.com/mdn/). Esto debe hacerse utilizando Git. Si no estás familiarizado con Git, consulta nuestro artículo [¿Cómo uso GitHub Pages?](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) y [Preparación para agregar los datos](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para usos más avanzados.
+- Tu ejemplo de código debe ser adecuado para mostrar lo que estás tratando de demostrar; debe contener un ejemplo simple que haga una cosa bien, no debe contener contenido ofensivo y debe seguir las [pautas de ejemplos de código](/es/docs/MDN/Writing_guidelines/Code_style_guide) de MDN.

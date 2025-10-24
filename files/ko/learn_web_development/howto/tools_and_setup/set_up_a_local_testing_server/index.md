@@ -37,7 +37,7 @@ l10n:
 
 일부 예제는 로컬 파일과 같은 방식으로 열면 동작하지 않습니다. 여기에는 여러 가지 원인이 있을 수 있으며, 대부분은 다음과 같습니다.
 
-- **비동기 요청인 경우**. 일부 브라우저(크롬을 포함하는)에서는 로컬 파일의 예제를 실행할 경우에 비동기 요청([서버로부터 데이터 가져오기 - Fetching data from the server](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)를 참고)이 작동하지 않을 것입니다. 이는 보안 제한(웹 보안과 관련된 자세한 내용은 [웹사이트 보안- Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)을 참고하세요) 때문입니다.
+- **비동기 요청인 경우**. 일부 브라우저(크롬을 포함하는)에서는 로컬 파일의 예제를 실행할 경우에 비동기 요청([서버로부터 데이터 가져오기 - Fetching data from the server](/ko/docs/Learn_web_development/Core/Scripting/Network_requests)를 참고)이 작동하지 않을 것입니다. 이는 보안 제한(웹 보안과 관련된 자세한 내용은 [웹사이트 보안- Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)을 참고하세요) 때문입니다.
 - **서버측 언어인 경우**. 서버측 언어(PHP나 Python과 같은)는 코드를 해석하고 결과를 내보낼 수 있는 특별한 서버가 필요합니다.
 - **다른 파일을 포함하는 경우**. 브라우저는 일반적으로 `file://` 스키마를 사용하여 리소스를 로드하는 요청을 교차 출처 요청으로 처리합니다.
   따라서 다른 로컬 파일을 포함하는 로컬 파일을 불러올 경우, 이는 {{Glossary("CORS")}} 오류를 유발할 수 있습니다.
@@ -97,7 +97,7 @@ Node.js의 [`http-server`](https://www.npmjs.com/package/http-server) 모듈은 
    py -3 -V
    ```
 
-2. Python이 설치되어 있지 않으면, [설치 가이드](https://www.python.org/downloads/)를 참고하여 설치하세요. (더 자세한 설명은 [Django 튜토리얼](/ko/docs/Learn/Server-side/Django/development_environment#installing_python_3)에서도 확인할 수 있습니다). 설치가 완료되면 위 명령어를 다시 실행하여 설치가 성공했는지 확인합니다.
+2. Python이 설치되어 있지 않으면, [설치 가이드](https://www.python.org/downloads/)를 참고하여 설치하세요. (더 자세한 설명은 [Django 튜토리얼](/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3)에서도 확인할 수 있습니다). 설치가 완료되면 위 명령어를 다시 실행하여 설치가 성공했는지 확인합니다.
 
 3. Python이 설정되었다면, `cd` 명령어를 사용하여 테스트할 웹사이트 코드가 있는 폴더로 이동합니다.
 
@@ -126,8 +126,8 @@ Python, PHP, JavaScript 같은 서버 측 언어를 사용하는 경우, 서버 
 
 웹 프레임워크를 사용하는 경우, 일반적으로 프레임워크 자체에서 개발 서버를 제공합니다. 예를 들어, 다음 언어/프레임워크는 개발 서버를 함께 제공합니다.
 
-- Python 웹 프레임워크, 예: [Django](/ko/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), 그리고 [Pyramid](https://trypyramid.com/)
-- Node/JavaScript 프레임워크, 예: [Express Web Framework (Node.js/JavaScript)](/ko/docs/Learn/Server-side/Express_Nodejs)
+- Python 웹 프레임워크, 예: [Django](/ko/docs/Learn_web_development/Extensions/Server-side/Django), [Flask](https://flask.palletsprojects.com/), 그리고 [Pyramid](https://trypyramid.com/)
+- Node/JavaScript 프레임워크, 예: [Express Web Framework (Node.js/JavaScript)](/ko/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - PHP는 [자체 내장 개발 서버](https://www.php.net/manual/en/features.commandline.webserver.php)를 가지고 있습니다.
 
   ```bash

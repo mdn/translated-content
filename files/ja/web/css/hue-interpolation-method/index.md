@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
-**`<hue-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{CSSXref("&lt;hue&gt;")}} 値間の補間に用いるアルゴリズムを表します。
+**`<hue-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 {{CSSXref("&lt;hue&gt;")}} 値間の補間に用いるアルゴリズムを表します。
 補間方法は、色相環に基づいて 2 つの色相値の中間点を探す方法を指定します。
 これは {{CSSXref("&lt;color-interpolation-method&gt;")}} データ型の成分として使用します。
 
@@ -34,9 +32,7 @@ decreasing hue
 色相角 `θ1` と `θ2` のペアは範囲 `[0deg, 360deg)` に正規化され、 `θ1` から `θ2` への補間時にどの円弧を使用するかを決定するアルゴリズムが 4 つあります。
 
 - `shorter`
-
   - : 短い方の弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。両方の円弧の長さが同じ場合は次のようになります。
-
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
@@ -45,14 +41,11 @@ decreasing hue
     | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
-
   - : 長い方の弧を使用します。 2 つの角が一致した場合は次のようになります。
-
     - `θ1 ≤ θ2`の場合、弧は時計回りの方向で全周となります。
     - `θ1 > θ2` の場合、弧は反時計回りの方向で全周となります。
 
     両方の弧の長さが同じである場合は次のようになります。
-
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
@@ -61,7 +54,6 @@ decreasing hue
     | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
-
   - : 時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
@@ -69,7 +61,6 @@ decreasing hue
     | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
-
   - : 反時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |

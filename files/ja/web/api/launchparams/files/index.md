@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
-**`files`** は {{domxref("LaunchParams")}} インターフェイスの読み取り専用プロパティで、 [`POST`](/ja/docs/Web/HTTP/Methods/POST) メソッドで起動ナビゲーションとともに渡されるすべてのファイルを表す {{domxref("FileSystemHandle")}} オブジェクトの配列を返します。
+**`files`** は {{domxref("LaunchParams")}} インターフェイスの読み取り専用プロパティで、 [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) メソッドで起動ナビゲーションとともに渡されるすべてのファイルを表す {{domxref("FileSystemHandle")}} オブジェクトの配列を返します。
 
 ## 値
 

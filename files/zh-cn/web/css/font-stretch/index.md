@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7b029638cf0f82b3e70a3e7c242db001d198c047
 ---
 
-{{CSSRef}}
-
 **`font-stretch`** [CSS](/zh-CN/docs/Web/CSS) 属性可从字体中选择正常、压缩或扩展的字体外观。
 
 {{InteractiveExample("CSS Demo: font-stretch")}}
@@ -100,7 +98,6 @@ font-stretch: unset;
 - `semi-expanded`、`expanded`、`extra-expanded` 和 `ultra-expanded`
   - : 指定比普通字体更扩展的字体，其中 `ultra-expanded` 为扩展程度最大的字体。
 - `<percentage>`
-
   - : 介于 50% 和 200% 之间的 {{cssxref("&lt;percentage&gt;")}} 值（包含两侧）。此属性不允许使用负值。
 
 ### 关键字到数值的映射
@@ -265,7 +262,8 @@ td {
 
 {{Specifications}}
 
-> **备注：** `font-stretch` 属性最初是在 CSS 2 中定义的，但在 CSS 2.1 中由于缺乏浏览器实现而被取消。在 CSS 3 中，该属性被重新定义。
+> [!NOTE]
+> `font-stretch` 属性最初是在 CSS 2 中定义的，但在 CSS 2.1 中由于缺乏浏览器实现而被取消。在 CSS 3 中，该属性被重新定义。
 
 ## 浏览器兼容性
 

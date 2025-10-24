@@ -37,7 +37,7 @@ var w4 = window.self;
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

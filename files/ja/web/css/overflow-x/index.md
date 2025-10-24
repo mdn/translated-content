@@ -2,14 +2,12 @@
 title: overflow-x
 slug: Web/CSS/overflow-x
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`overflow-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素のコンテンツが左右の端からあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。このプロパティは、[`overflow`](/ja/docs/Web/CSS/overflow) 一括指定プロパティを使用して設定することもできます。
 
-{{InteractiveExample("CSS Demo: overflow-x")}}
+{{InteractiveExample("CSS デモ: overflow-x")}}
 
 ```css interactive-example-choice
 overflow-x: visible;
@@ -167,4 +165,4 @@ overflow-x: unset;
 
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

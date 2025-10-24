@@ -3,8 +3,6 @@ title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 79 の変更点をまとめています。Firefox 79 は、2020 年 7 月 28 日にリリースされました。
 
 Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new tooling, and platform updates](https://hacks.mozilla.org/2020/07/firefox-79/)」もご覧ください。
@@ -27,7 +25,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### その他のツール
 
-- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) の調査やデバッグの機能を提供します。
+- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) の調査やデバッグの機能を提供します。
 - ネットワークモニターのメッセージタブを、[応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) に統合しました ([Firefox バグ 1636421](https://bugzil.la/1636421))。
 - アクセシビリティインスペクターが、タブにアクセスすると自動的に有効化します。明示的に有効化することが不要になりました ([Firefox バグ 1602075](https://bugzil.la/1602075))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling_responsive_design_mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([Firefox バグ 1621781](https://bugzil.la/1621781))。
@@ -35,8 +33,8 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 ### HTML
 
-- [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
-- [`<a>`](/ja/docs/Web/HTML/Element/a) および [`<area>`](/ja/docs/Web/HTML/Element/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
+- [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
+- [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
 
 ### CSS
 
@@ -65,16 +63,14 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} を、post-Spectre-safe な方法で再び有効化しました。クロスオリジン分離のサイトで使用できます ([Firefox バグ 1619649](https://bugzil.la/1619649))。
-
   - サイトをクロスオリジン分離にするには、新たに {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) および {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) ヘッダーを設定することが必要です。
 
 - {{jsxref("Promise.any()")}} が使用可能になりました ([Firefox バグ 1599769](https://bugzil.la/1599769))。
 - {{jsxref("WeakRef")}} オブジェクトを実装しました ([Firefox バグ 1639246](https://bugzil.la/1639246))。
-- [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
-
-  - [Logical nullish assignment (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
-  - [Logical AND assignment (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
-  - [Logical OR assignment (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [論理代入演算子](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
+  - [論理ヌル代入演算子 (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+  - [論理積代入演算子 (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+  - [論理和代入演算子 (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 
 - {{jsxref("Atomics")}} オブジェクトが、共有されていないメモリーでも動作するようになりました ([Firefox バグ 1630706](https://bugzil.la/1630706))。
 - [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) で、`dateStyle` および `timeStyle` オプションをサポートしました ([Firefox バグ 1557718](https://bugzil.la/1557718))。
@@ -101,9 +97,9 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 ### WebAssembly
 
-- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
-- [WebAssembly の Reference types](/ja/docs/WebAssembly/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
-- [WebAssembly の Threads](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
+- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
+- [WebAssembly の Reference types](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
+- [WebAssembly の Threads](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
 
 ## アドオン開発者向けの変更点
 

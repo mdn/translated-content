@@ -49,4 +49,4 @@ console.log(el.ariaModal); // "false"
 
 ## 関連情報
 
-- [ARIA: dialog ロール](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [ARIA: dialog ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)

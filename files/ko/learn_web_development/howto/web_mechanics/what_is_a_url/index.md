@@ -105,7 +105,7 @@ URL의 첫 번째 부분은 브라우저가 리소스를 요청하는 데 사용
 
 어떤 URL이든 브라우저의 주소 표시줄에 직접 입력면 리소스에 액세스할 수 있습니다. 그러나 이것은 빙산의 일각에 불과합니다!
 
-[다음에 설명할](/ko/docs/Learn/HTML/Introduction_to_HTML) HTML 언어는 URL을 광범위하게 사용합니다.
+[다음에 설명할](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) HTML 언어는 URL을 광범위하게 사용합니다.
 
 - {{HTMLElement("a")}} 요소를 사용하여 다른 문서에 대한 링크를 생성합니다.
 - {{HTMLElement("link")}} 또는 {{HTMLElement("script")}}와 같은 다양한 요소를 통해 문서와 관련 리소스를 연결합니다.
@@ -113,7 +113,7 @@ URL의 첫 번째 부분은 브라우저가 리소스를 요청하는 데 사용
 - {{HTMLElement("iframe")}} 요소로 다른 HTML 문서를 표시합니다.
 
 > [!NOTE]
-> 페이지의 일부로 로드할 리소스의 URL을 지정할 땐(예: `<script>`, `<audio>`, `<img>`, `<video>`등을 사용할 때) 몇 가지 예외가 있지만(주목할 만한 것 중 하나는 `data:`입니다. [데이터 URL](/ko/docs/Web/URI/Schemes/data) 참조) 일반적으로 HTTP와 HTTPS URL만 사용해야 합니다. 예를 들어 FTP 사용은 안전하지 않으며 최신 브라우저에서 더 이상 지원되지 않습니다.
+> 페이지의 일부로 로드할 리소스의 URL을 지정할 땐(예: `<script>`, `<audio>`, `<img>`, `<video>`등을 사용할 때) 몇 가지 예외가 있지만(주목할 만한 것 중 하나는 `data:`입니다. [데이터 URL](/ko/docs/Web/URI/Reference/Schemes/data) 참조) 일반적으로 HTTP와 HTTPS URL만 사용해야 합니다. 예를 들어 FTP 사용은 안전하지 않으며 최신 브라우저에서 더 이상 지원되지 않습니다.
 
 {{Glossary("CSS")}} 또는 {{Glossary("JavaScript")}}와 같은 다른 기술은 URL을 광범위하게 사용하며 이것은 실제로 웹의 핵심입니다.
 
@@ -197,4 +197,4 @@ URL이 HTML 페이지와 같은 문서 내에서 사용되는 경우, 상황이 
 
 ## 같이 보기
 
-[데이터 URL](/ko/docs/Web/URI/Schemes/data): `data:` 스키마가 접두사로 붙은 URL은 콘텐츠 작성자가 문서에 작은 파일을 인라인으로 포함할 수 있도록 합니다.
+[데이터 URL](/ko/docs/Web/URI/Reference/Schemes/data): `data:` 스키마가 접두사로 붙은 URL은 콘텐츠 작성자가 문서에 작은 파일을 인라인으로 포함할 수 있도록 합니다.

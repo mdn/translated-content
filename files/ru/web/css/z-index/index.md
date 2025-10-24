@@ -122,7 +122,7 @@ z-index: 7;
 
 Для позиционированного элемента (т.е. если у него задано свойство `position` со значением, отличающимся от `static`) свойство `z-index` отвечает за:
 
-1. Порядок наложения в текущем [контексте наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+1. Порядок наложения в текущем [контексте наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 2. Возможность создания локального контекста наложения.
 
 ## Синтаксис

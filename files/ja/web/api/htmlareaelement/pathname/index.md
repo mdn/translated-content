@@ -1,13 +1,16 @@
 ---
 title: "HTMLAreaElement: pathname プロパティ"
+short-title: pathname
 slug: Web/API/HTMLAreaElement/pathname
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスが入った文字列（または、パスがない場合は空の文字列）です。
+**`HTMLAreaElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスから、クエリー文字列またはフラグメントを除外したもの入った文字列（または、パスがない場合は空文字列）です。
+
+パス名は設定時に{{Glossary("Percent-encoding", "パーセントエンコード")}}されますが、読み取り時にはパーセントデコードされません。
 
 ## 値
 

@@ -2,10 +2,8 @@
 title: 508 Loop Detected
 slug: Web/HTTP/Reference/Status/508
 l10n:
-  sourceCommit: e626fb706bfef0d496f0a209554f80a2d9313c0c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`508 Loop Detected`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示整個操作失敗，因為在處理帶有 `Depth: infinity` 的請求時遇到了無限迴圈。
 

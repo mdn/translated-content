@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-{{CSSRef}}
-
 要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
 
 ユーザーエージェント（ブラウザーなど）が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは 4 つの領域に分かれます。
@@ -34,7 +32,6 @@ l10n:
 2. `position` プロパティが **`absolute`** の場合、包含ブロックは `position` の値が `static` 以外 (`fixed`, `absolute`, `relative`, `sticky`) の直近の祖先要素における<em>パディングボックス</em>の辺によって構成されます。
 3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("Viewport", "ビューポート")}} （連続的なメディアの場合）またはページ領域（ページメディアの場合）によって確立されます。
 4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素におけるパディングボックスの辺によって構成されることがあります。
-
    - {{cssxref("filter")}}、{{cssxref("backdrop-filter")}}、{{cssxref("transform")}}、{{cssxref("perspective")}} の値が `none` 以外である。
    - {{cssxref("contain")}} の値が `layout`、`paint`、`strict`、`content` のいずれかである。（例 `contain: paint;`）
    - {{cssxref("container-type")}} の値が `normal` 以外である。
@@ -54,7 +51,8 @@ l10n:
 1. {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} の各プロパティは、包含ブロックの `height` からパーセント値を計算します。
 2. {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} の各プロパティは、包含ブロックの `width` からパーセント値を計算します。
 
-> **メモ:** **ブロックコンテナー**（インラインブロック、ブロック、リストアイテムなどの要素など）は、インライン整形コンテキストに参加するインラインレベルボックスのみ、またはブロック整形コンテキストに参加するブロックレベルボックスのみを含みます。要素がブロックコンテナーとなるのは、ブロックレベルボックスまたはインラインレベルボックスを包含する場合のみです。
+> [!NOTE]
+> **ブロックコンテナー**（インラインブロック、ブロック、リストアイテムなどの要素など）は、インライン整形コンテキストに参加するインラインレベルボックスのみ、またはブロック整形コンテキストに参加するブロックレベルボックスのみを含みます。要素がブロックコンテナーとなるのは、ブロックレベルボックスまたはインラインレベルボックスを包含する場合のみです。
 
 ## いくつかの例
 
@@ -260,11 +258,11 @@ p {
 - [学習: CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - {{glossary("Intrinsic Size", "内在サイズ")}}

@@ -3,8 +3,6 @@ title: CSS 注释
 slug: Web/CSS/CSS_syntax/Comments
 ---
 
-{{CSSRef}}
-
 CSS 注释用于为代码添加额外的解释，或者用于阻止浏览器解析特定区域内的 CSS 代码。注释对文档布局没有影响。
 
 ## 语法
@@ -47,26 +45,6 @@ span {
 
 ## 参见
 
-- CSS 重要概念：
-
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - 值
-
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
-
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax)模块
+- [语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)指南
+- [CSS 错误处理](/zh-CN/docs/Web/CSS_syntax/Error_handling)

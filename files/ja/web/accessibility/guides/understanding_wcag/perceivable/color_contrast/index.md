@@ -118,16 +118,12 @@ div {
 ## 関連する WCAG 達成基準
 
 - [1.4.3 最低限のコントラスト (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
-
   - : 背景と前景のコンテンツの間の色のコントラストは、読みやすさを確実なものとするための最低限のレベルであるべきです。
-
     - テキストとその背景のコントラスト比は少なくとも 4.5:1 であるべきです。
     - 見出し（またはそれよりも大きい）テキストの比は、少なくとも 3:1 であるべきです。 大きいテキストは、少なくとも 18 ポイント、または 14 ポイントの太字として定義されます。
 
 - [1.4.6 強調されたテキスト (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
-
   - : これは、基準 1.4.3 に従い、その上に構築されます。
-
     - テキストとその背景のコントラスト比は少なくとも 7:1 であるべきです。
     - 見出し（またはそれよりも大きい）テキストの比は少なくとも 4.5:1 であるべきです。
 
@@ -136,6 +132,6 @@ div {
 
 ## 関連情報
 
-- [色とそのコントラスト](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト)
-- [複数のラベル](/ja/docs/Learn/Forms/How_to_structure_a_web_form#複数のラベル)
+- [色とそのコントラスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト)
+- [複数のラベル](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#複数のラベル)
 - [Understanding Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)（英語）

@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Models
 
 803{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-이 문서에서는 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트의 모델을 어떻게 정의할지 보여줄 것입니다. 모델이라는 것이 무엇인지, 어떻게 선언하는지, 그리고 주된 필드 타입들에 대해서 설명합니다. 그리고 모델의 데이터에 접근할 수 있는 몇몇 방법에 대해서 간단히 보여줄 것입니다.
+이 문서에서는 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트의 모델을 어떻게 정의할지 보여줄 것입니다. 모델이라는 것이 무엇인지, 어떻게 선언하는지, 그리고 주된 필드 타입들에 대해서 설명합니다. 그리고 모델의 데이터에 접근할 수 있는 몇몇 방법에 대해서 간단히 보여줄 것입니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -29,7 +29,7 @@ original_slug: Learn/Server-side/Django/Models
 
 장고 웹 어플리케이션들은 모델이라는 파이썬 객체를 통해 데이터에 접속하고 관리합니다. 모델은 저장된 데이터의 구조를 정의합니다. 그것엔 필드 타입, 그리고 데이터의 최대 크기, 기본값, 선택 리스트 옵션, 문서를 위한 도움 텍스트, 폼을 위한 라벨 텍스트 등등이 있습니다. 모델의 정의는 기초 데이터베이스에 대해 독립적입니다 — 프로젝트 설정의 일부로 여러 옵션 중 하나를 선택할 수 있습니다. 사용할 데이터베이스를 정했다면 데이터베이스에 직접적으로 말할 필요가 없습니다 — 그저 모델 구조와 기타 코드를 작성하면, 장고가 데이터베이스와 소통하는 모든 더러운 작업을 대신해줍니다.
 
-이 튜토리얼은 [LocalLibrary website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 예제에서 어떻게 모델을 정의하고 그것에 접근하는지에 대해 보여줍니다.
+이 튜토리얼은 [LocalLibrary website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 예제에서 어떻게 모델을 정의하고 그것에 접근하는지에 대해 보여줍니다.
 
 ## LocalLibrary models 디자인하기
 
@@ -49,7 +49,8 @@ original_slug: Learn/Server-side/Django/Models
 
 ![LocalLibrary Model UML](local_library_model_uml.png)
 
-> **참고:** **주의**: 다음 섹션은 모델이 어떻게 정의되고 사용되는지에 대한 초보적인 설명입니다. 읽으면서 위 다이어그램의 각각의 모델들을 어떻게 구성할 지 생각해 보십시오.
+> [!NOTE]
+> **주의**: 다음 섹션은 모델이 어떻게 정의되고 사용되는지에 대한 초보적인 설명입니다. 읽으면서 위 다이어그램의 각각의 모델들을 어떻게 구성할 지 생각해 보십시오.
 
 ## 모델 입문서
 
@@ -182,7 +183,8 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **참고:** **주의**: 모델의 개별적인 레코드들을 보여주기 위해서 `/myapplication/mymodelname/2` 와 같은 URL을 사용한다고 가정한다면("2"는 특정한 레코드를 위한 `id` 입니다), 응답과 id를 "모델 디테일 뷰(model detail view)"에 전달하기 위해 (레코드를 표시하기 위한 작업을 할) URL 매퍼를 만들 필요가 있습니다 . 위의 `reverse()` 함수는 알맞은 포맷의 URL을 생성하기 위해서 URL 매퍼를(위 경우에선 'model-detail-view'라고 명명됨) "반전" 시킬 수 있습니다.
+> [!NOTE]
+> **주의**: 모델의 개별적인 레코드들을 보여주기 위해서 `/myapplication/mymodelname/2` 와 같은 URL을 사용한다고 가정한다면("2"는 특정한 레코드를 위한 `id` 입니다), 응답과 id를 "모델 디테일 뷰(model detail view)"에 전달하기 위해 (레코드를 표시하기 위한 작업을 할) URL 매퍼를 만들 필요가 있습니다 . 위의 `reverse()` 함수는 알맞은 포맷의 URL을 생성하기 위해서 URL 매퍼를(위 경우에선 'model-detail-view'라고 명명됨) "반전" 시킬 수 있습니다.
 >
 > 물론 이것이 작동하기 위해선 URL 매핑, 뷰, 그리고 탬플릿을 작성해야 합니다!
 
@@ -248,7 +250,8 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **참고:** **주의**: 밑줄(\_\_)을 사용하여 원하는 만큼 다양한 레벨의 관계(`ForeignKey`/`ManyToManyField`)를 탐색할 수 있습니다. 예를 들어서 추가적인 "cover" 관계를 사용하여 정의된 다른 타입의 `Book`은 다음과 같은 매개 변수 이름을 가질겁니다 :`type__cover__name__exact='hard'.`
+> [!NOTE]
+> **주의**: 밑줄(\_\_)을 사용하여 원하는 만큼 다양한 레벨의 관계(`ForeignKey`/`ManyToManyField`)를 탐색할 수 있습니다. 예를 들어서 추가적인 "cover" 관계를 사용하여 정의된 다른 타입의 `Book`은 다음과 같은 매개 변수 이름을 가질겁니다 :`type__cover__name__exact='hard'.`
 
 관련된 모델의 역방향 검색, 필터 변경, 값의 더 작은 집합 반환하기 등 쿼리로 할 수 있는 일들은 더욱 많이 있습니다. 더 많은 정보를 보려면 [Making queries](https://docs.djangoproject.com/en/2.0/topics/db/queries/) (장고 문서)를 참고하세요.
 
@@ -364,7 +367,8 @@ class BookInstance(models.Model):
 
 모델 `__str__()` 은 그것의 고유한 id 그리고 연관된 `Book`의 제목을 조합하여 `BookInstance` 객체를 나타냅니다.
 
-> **참고:** **주의**: 조금의 파이썬:
+> [!NOTE]
+> **주의**: 조금의 파이썬:
 >
 > - 파이썬 3.6에서부터 문자열 보간 구문을 쓸 수 있습니다 (f-strings로 잘 알려진): `f'{self.id} ({self.book.title})'`.
 > - 이 튜토리얼의 옛 버전에서는 [formatted string](https://www.python.org/dev/peps/pep-3101/) 구문을 사용했고, 이것 또한 파이썬 안에 문자열을 형식화(formatting)하는 유효한 방법입니다 (예 : `'{0} ({1})'.format(self.id,self.book.title)`).

@@ -2,10 +2,8 @@
 title: 413 Content Too Large
 slug: Web/HTTP/Reference/Status/413
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`413 Content Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
 
@@ -21,7 +19,7 @@ HTTP **`413 Content Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Re
 
 ### 超過檔案上傳限制
 
-以下範例展示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) 元素包含影像檔案並透過 `method="post"` 送出表單時，用戶端可能發送的請求：
+以下範例展示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/file) 元素包含影像檔案並透過 `method="post"` 送出表單時，用戶端可能發送的請求：
 
 ```http
 POST /upload HTTP/1.1

@@ -2,14 +2,12 @@
 title: :visited
 slug: Web/CSS/:visited
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:visited`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが訪問したことがあるリンクに適用されます。プライバシー上の理由から、このセレクターを使用して変更できるスタイルはとても限定されています。 `:visited` 擬似クラスは `href` 属性を持つ {{htmlelement("a")}} と {{htmlelement("area")}} 要素にのみ適用されます。
 
-{{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :visited", "tabbed-shorter")}}
 
 ```css interactive-example
 p {
@@ -23,7 +21,7 @@ a:visited {
 ```
 
 ```html interactive-example
-<p>Pages that you might have visited:</p>
+<p>訪問した可能性のページのリスト:</p>
 <ul>
   <li>
     <a href="https://developer.mozilla.org">MDN Web Docs</a>
@@ -32,13 +30,13 @@ a:visited {
     <a href="https://www.youtube.com/">YouTube</a>
   </li>
 </ul>
-<p>Pages unlikely to be in your history:</p>
+<p>履歴にない可能性が高いページ:</p>
 <ul>
   <li>
-    <a href="https://developer.mozilla.org/missing-1">Random MDN page</a>
+    <a href="https://developer.mozilla.org/missing-1">ランダムな MDN ページ</a>
   </li>
   <li>
-    <a href="https://example.com/missing-1">Random Example page</a>
+    <a href="https://example.com/missing-1">ランダムな例のページ</a>
   </li>
 </ul>
 ```
@@ -47,16 +45,17 @@ a:visited {
 
 ## プライバシー上の制約
 
-プライバシー上の理由から、ブラウザ―はこの擬似クラスを使って適用できるスタイルに厳しい制限をかけています。使い方は以下の通りです。
+プライバシー上の理由から、ブラウザーはこの擬似クラスを使って適用できるスタイルに厳しい制限をかけています。使い方は以下の通りです。
 
 - 利用できる CSS プロパティは、 {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("column-rule-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("text-decoration-color") }}, {{ cssxref("text-emphasis-color") }} です。
 - 利用できる SVG 属性は {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} です。
 - 利用できるスタイルでもアルファチャンネルは無視されます。要素の `:visited` でない状態のアルファ成分が代わりに使用されます。Firefox でアルファ成分が `0` の場合、`:visited` で設定したスタイルは完全に無視されます。
 - これらのスタイルはエンドユーザーに対する表示色を変更できるようになっていますが、 {{domxref("window.getComputedStyle")}} メソッドは嘘をつき、 `:visited` 状態ではない色の値を返します。
-- [`<link>`](/ja/docs/Web/HTML/Element/link) 要素は `:visited` に一致することはありません。
+- [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素は `:visited` に一致することはありません。
+- CSS セレクターを介して要素と照合する DOM メソッド（[`querySelector()`](/ja/docs/Web/API/Document/querySelector) や [`querySelectorAll()`](/ja/docs/Web/API/Document/querySelectorAll) など）は、文書内に訪問済みのリンクがある場合でも、常に「空」の結果を返します。前述のメソッドの場合、これはそれぞれ `null` または空の [`NodeList`](/ja/docs/Web/API/NodeList) になります。
 
 > [!NOTE]
-> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)を参照してください。
+> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)を参照してください。
 
 ## 構文
 
@@ -108,5 +107,5 @@ a:visited {
 
 ## 関連情報
 
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
 - リンク関連の擬似クラス: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

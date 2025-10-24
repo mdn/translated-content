@@ -20,9 +20,7 @@ getEntries()
 ### 参数
 
 - PerformanceEntryFilterOptions {{optional_inline}}
-
   - : `PerformanceEntryFilterOptions` 是一个带有以下键值的字典：
-
     - `"name"`, performance entry. 的名字
     - `"entryType"`, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。
     - `"initiatorType"`, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。

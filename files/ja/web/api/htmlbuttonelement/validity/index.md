@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-次の例は、 `<button>` に {{domxref("ValidityState/customError", "customError")}} が設定されている場合、不正な状態にあることを示しています。この状態では、`validityState` の `validity` プロパティは `false` ですが、{{domxref("HTMLButtonElement/checkValidity", "checkValidity()")}} は、ボタンの {{domxref("HTMLButtonElement/type", "type")}} が `"submit"` でない場合、[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象ではないため、`true` を返します。
+次の例は、 `<button>` に {{domxref("ValidityState/customError", "customError")}} が設定されている場合、不正な状態にあることを示しています。この状態では、`validityState` の `validity` プロパティは `false` ですが、{{domxref("HTMLButtonElement/checkValidity", "checkValidity()")}} は、ボタンの {{domxref("HTMLButtonElement/type", "type")}} が `"submit"` でない場合、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)の対象ではないため、`true` を返します。
 
 ```js
 const button = document.getElementById("myButton");
@@ -40,5 +40,5 @@ console.log(button.checkValidity()); // ボタンの種類が "submit" の場合
 - {{domxref("HTMLButtonElement.checkValidity()")}}
 - {{HTMLElement("button")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

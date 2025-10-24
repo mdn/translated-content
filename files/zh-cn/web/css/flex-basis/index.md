@@ -3,8 +3,6 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
 
 {{InteractiveExample("CSS Demo: flex-basis")}}
@@ -80,7 +78,6 @@ flex-basis: unset;
 - `<'width'>`
   - : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
 - `content`
-
   - : 基于 flex 的元素的内容自动调整大小。
 
 ### 规范

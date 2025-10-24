@@ -27,7 +27,6 @@ getData(format);
 ### 注意事項
 
 - データの利用可能性
-
   - [HTML5 Drag and Drop 仕様書](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode)では、「ドラッグデータストアモード」が規定されています。
     これは、 **`DataTransfer.getData()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
 
@@ -97,6 +96,6 @@ function drop(dropevent) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

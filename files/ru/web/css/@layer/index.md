@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/At-rule) **`@layer`** используется для объявления каскадного слоя, а также позволяет задать приоритеты при наличии нескольких каскадных слоёв.
+[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/CSS_syntax/At-rule) **`@layer`** используется для объявления каскадного слоя, а также позволяет задать приоритеты при наличии нескольких каскадных слоёв.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -227,6 +227,6 @@ p {
 - [`!important`](/ru/docs/Web/CSS/important)
 - [`revert-layer`](/ru/docs/Web/CSS/revert-layer)
 - [Введение в каскадность CSS](/ru/docs/Web/CSS/Cascade)
-- [Каскад, специфичность и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Каскад, специфичность и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Cascade layers](/ru/docs/Learn/CSS/Building_blocks/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) на bram.us

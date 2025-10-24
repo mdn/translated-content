@@ -25,9 +25,7 @@ new File(fileBits, fileName, options)
 - `fileName`
   - : 文字列で、ファイル名またはファイルへのパスを表します。
 - `options` {{optional_inline}}
-
   - : ファイルのオプション属性を含むオプションオブジェクト。利用可能なオプションは以下の通りです。
-
     - `type` {{optional_inline}}
       - : ファイルの中に入るコンテンツの MIME タイプを表す文字列です。既定値は `""` です。
     - `endings` {{optional_inline}}

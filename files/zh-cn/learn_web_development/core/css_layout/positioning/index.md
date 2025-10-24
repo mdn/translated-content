@@ -3,8 +3,6 @@ title: 定位
 slug: Learn_web_development/Core/CSS_layout/Positioning
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 定位允许你从正常的文档流布局中取出元素，并使它们具有不同的行为，例如放在另一个元素的上面，或者始终保持在浏览器视窗内的同一位置。本文解释的是定位 ({{cssxref("position")}}) 的各种不同值，以及如何使用它们。
@@ -67,7 +65,9 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
   the same line. Overflowing inline elements will
   <span>wrap onto a new line if possible (like this one containing text)</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -175,7 +175,9 @@ left: 30px;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -247,7 +249,9 @@ position: absolute;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -330,7 +334,9 @@ position: relative;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -421,7 +427,9 @@ z-index: 1;
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -529,7 +537,9 @@ p:nth-of-type(1) {
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -739,7 +749,7 @@ body {
 
 ## 技能测试！
 
-这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Position_skills)。
+这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position)。
 
 ## 总结
 

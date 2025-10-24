@@ -37,19 +37,20 @@ Proteger dados do usuário é uma parte essencial de qualquer projeto de website
 
 O tópico [Website security](/pt-BR/docs/Web/Security) fornece uma visão geral do que a segurança de website siginifica para o projeto server-side e algumas das ameaças mais comuns contra as quais você deve se proteger. Uma das mensagens chave nesse artigo é que quase todos os ataques são bem sucedidos quando a aplicação web confia nos dados do navegador.
 
-> **Aviso:** **Importante:** A lição mais importante que você pode aprender sobre segurança de website é **nunca confiar nos dados do navegador**. Isso inclui dados de requisição GET em parâmetros de URL, dados `POST`, cabeçalhos HTTP e cookies, arquivos enviados por usuários, etc. Sempre verifique e "desinfete" todos os dados recebidos. Sempre assuma o pior.
+> [!WARNING]
+> **Importante:** A lição mais importante que você pode aprender sobre segurança de website é **nunca confiar nos dados do navegador**. Isso inclui dados de requisição GET em parâmetros de URL, dados `POST`, cabeçalhos HTTP e cookies, arquivos enviados por usuários, etc. Sempre verifique e "desinfete" todos os dados recebidos. Sempre assuma o pior.
 
 A boa notícia para usuários Django é que muitas das ameaças mais comuns são tratadas pelo framework! O artigo [Segurança no Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs) explica os recursos de segurança e como proteger um website desenvolvido pelo Django.
 
 ## Ameaças/proteções comuns
 
-Em vez de duplicar a documentação do Django aqui, neste artigo demonstraremos apenas alguns dos recursos de segurança no contexto do nosso tutorial Django da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+Em vez de duplicar a documentação do Django aqui, neste artigo demonstraremos apenas alguns dos recursos de segurança no contexto do nosso tutorial Django da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website).
 
 ### Cross site scripting (XSS)
 
 XSS é um termo utilizado para descrever uma classe de ataques que permitem um invasor injetar scripts no lado cliente, através do website, no navegador de outros usuários. Issi geralmente é conseguido armazenando scripts maliciosos no banco de dados onde eles podem ser recuperado e exibidos para outros usuários, ou fazendo com que usuários cliquem em um link que fará com que o JavaScript do invasor seja executado pelo navegador do usuário.
 
-O sistema de _templates_ do Django protege você da maioria dos ataques XSS [escapando de caracteres específicos](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) que são "perigosos" em HTML. Podemos demonstrar isso tentando injetar algum JavaScript em nosso website LocalLibrary usando o _form_ Create-author que configuramos em [Django Tutorial Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms).
+O sistema de _templates_ do Django protege você da maioria dos ataques XSS [escapando de caracteres específicos](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) que são "perigosos" em HTML. Podemos demonstrar isso tentando injetar algum JavaScript em nosso website LocalLibrary usando o _form_ Create-author que configuramos em [Django Tutorial Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms).
 
 1. Inicie o website usando o servidor de desenvolvimento (`python3 manage.py runserver`).
 2. Abra o site em seu navegador local e faça login em sua conta de superusuário.

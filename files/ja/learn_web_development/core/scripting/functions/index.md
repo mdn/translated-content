@@ -466,11 +466,12 @@ function greeting() {
 > [!NOTE]
 > 同じスコープルールはループ（`for() { }` など）と条件ブロック（`if() { }` など）には適用されません。それらはとてもよく似ていますが、同じものではありません。混乱しないように注意してください。
 
-> **メモ:** [ReferenceError: "x" is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined) というエラーは、遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。
+> [!NOTE]
+> [ReferenceError: "x" is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined) というエラーは、遭遇する最も一般的なエラーの 1 つです。このエラーが発生し、問題の変数が定義されていると確信できる場合は、変数のスコープを確認してください。
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
 
 ## まとめ
 

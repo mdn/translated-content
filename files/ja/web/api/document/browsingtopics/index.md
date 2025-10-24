@@ -18,7 +18,8 @@ l10n:
 
 詳しくは[トピック API の使用](/ja/docs/Web/API/Topics_API/Using)を参照してください。
 
-> **メモ:** `browsingTopics()` は他の[トピック API を有効にする機能](/ja/docs/Web/API/Topics_API/Using#トピック_api_を有効にする_api_機能)のように HTTP ヘッダーに頼ってトピックを送信したり、トピックを監視対象としてマークしたりすることはしませんが、パフォーマンスは少し落ちます。HTTP ヘッダーを使用する機能を使用し、ヘッダーを変更できない場合にのみ `browsingTopics()` で代替することをお勧めします。
+> [!NOTE]
+> `browsingTopics()` は他の[トピック API を有効にする機能](/ja/docs/Web/API/Topics_API/Using#トピック_api_を有効にする_api_機能)のように HTTP ヘッダーに頼ってトピックを送信したり、トピックを監視対象としてマークしたりすることはしませんが、パフォーマンスは少し落ちます。HTTP ヘッダーを使用する機能を使用し、ヘッダーを変更できない場合にのみ `browsingTopics()` で代替することをお勧めします。
 
 ## 構文
 
@@ -65,7 +66,7 @@ browsingTopics(options)
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 以下の場合に発生します。
-    - [トピック API](/ja/docs/Web/API/Topics_API)の使用が {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によって不許可になっていた場合。
+    - [トピック API](/ja/docs/Web/API/Topics_API)の使用が {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって不許可になっていた場合。
     - 呼び出されたウェブサイトに、成功した[プライバシーサンドボックスの登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)にに含まれるトピック API がない場合。
 
 ## 例

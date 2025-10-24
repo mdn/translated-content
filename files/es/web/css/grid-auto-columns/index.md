@@ -3,8 +3,6 @@ title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
 ---
 
-{{CSSRef}}
-
 La propiedad de css **`grid-auto-columns`** especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.
 
 {{InteractiveExample("CSS Demo: grid-auto-columns")}}
@@ -62,8 +60,6 @@ grid-auto-columns: minmax(10px, auto);
 }
 ```
 
-La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
-
 Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.
 
 ## Sintaxis
@@ -119,7 +115,6 @@ grid-auto-columns: unset;
 - `<percentage>`
   - : Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}} en relación con el tamaño del bloque del contenedor de la grilla. Si el tamaño de bloque del contenedor de cuadrícula es indefinido, el valor porcentual se trata como automático.
 - `<flex>`
-
   - : Es una dimensión -valor- no negativa con la unidad `fr` especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como `<flex>` tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor `fr`-.
 
     Si aparece en una función `minmax()` implica un mínimo automático (ejemplo: `minmax(auto, <flex>)`).
@@ -133,7 +128,6 @@ grid-auto-columns: unset;
 - `fit-content(argument)`
   - : Representa la fórmula `min(max-content, max(auto, argument))`, que se calcula similar a `auto` (por ejemplo: `minmax(auto, max-content)`), excepto que el _track size_ o espacio entre celdas es mayor que el auto mínimo.
 - `auto`
-
   - : Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.
 
     > [!NOTE]

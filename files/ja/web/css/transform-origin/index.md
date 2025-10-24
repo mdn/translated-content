@@ -5,11 +5,9 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
 
-{{InteractiveExample("CSS Demo: transform-origin")}}
+{{InteractiveExample("CSS デモ: transform-origin")}}
 
 ```css interactive-example-choice
 transform-origin: center;
@@ -206,23 +204,20 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/initial_value)にリセットされます。
+`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)にリセットされます。
 
 単一の {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} が定義された場合、これは水平方向のオフセットを表します。
 
 2 つ以上の値が定義され、どちらもの値もキーワードでない場合、または使われているキーワードが `center` だけであった場合、最初の値は水平方向のオフセットであり、二番目の値は垂直方向のオフセットです。
 
 - 値 1 つの構文:
-
   - 値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `left`, `center`, `right`, `top`, `bottom` のいずれかでなければなりません。
 
 - 値 2 つの構文:
-
   - 一方の値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, またはキーワードの `left`, `center`, `right` のいずれかでなければなりません。
   - もう一方の値は、 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, またはキーワードの `top`, `center`, `bottom` のいずれかでなければなりません。
 
 - 値 3 つの構文:
-
   - 1 番目と 2 番目の値は、値 2 つの構文と同じです。
   - 3 番目の値は {{cssxref("&lt;length&gt;")}} でなければなりません。これは常に Z オフセットを表します。
 
@@ -255,7 +250,8 @@ transform-origin: unset;
 
 {{CSSInfo}}
 
-> **メモ:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG の transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
+> [!NOTE]
+> `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Reference/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG の transform-origin](/ja/docs/Web/SVG/Reference/Attribute/transform-origin) 属性を参照してください。
 
 ## 形式文法
 

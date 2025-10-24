@@ -3,8 +3,6 @@ title: Firefox 3 Dom Improvements
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
 ---
 
-{{FirefoxSidebar}}
-
 ### Firefox 3 對 DOM 的改善
 
 Firefox 3 對 DOM 做了一些改善，改善重點之一就是加強對於「其他瀏覽器對 DOM 所增加的延伸規格」的支援。

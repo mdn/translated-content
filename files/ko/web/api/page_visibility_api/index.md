@@ -28,7 +28,8 @@ Page Visibility API의 몇 가지 사용 사례를 살펴보겠습니다.
 
 개발자는 지금까지 이를 감지하기 위해 불완전한 프록시를 사용해 왔습니다. 예를 들어 창에서 {{domxref("Window/blur_event", "blur")}} 및 {{domxref("Window/focus_event", "focus")}} 이벤트를 감시하면 페이지가 활성 페이지가 아닌 경우를 파악하는 데는 도움이 되지만, 페이지가 실제로 사용자에게 숨겨져 있다는 것을 알려주지는 않습니다. Page Visibility API는 이 문제를 해결합니다.
 
-> **참고:** {{domxref("Window.blur_event", "onblur")}} 및 {{domxref("Window.focus_event", "onfocus")}}는 사용자가 창을 전환했는지 여부를 알려주지만, 반드시 숨겨지는 것은 아닙니다. 사용자가 탭을 전환하거나 탭이 포함된 브라우저 창을 최소화할 때만 페이지가 숨겨집니다.
+> [!NOTE]
+> {{domxref("Window.blur_event", "onblur")}} 및 {{domxref("Window.focus_event", "onfocus")}}는 사용자가 창을 전환했는지 여부를 알려주지만, 반드시 숨겨지는 것은 아닙니다. 사용자가 탭을 전환하거나 탭이 포함된 브라우저 창을 최소화할 때만 페이지가 숨겨집니다.
 
 ### 백그라운드 페이지 성능을 지원하는 정책
 
@@ -58,9 +59,7 @@ Page Visibility API는 {{domxref("Document")}} 인터페이스에 다음과 같�
 - {{domxref("Document.hidden")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : 페이지가 사용자에게 숨겨진 것으로 간주되는 상태이면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
-
   - : 문서의 현재 가시성 상태를 나타내는 문자열입니다. 가능한 값은 다음과 같습니다.
-
     - `visible`
       - : 페이지 콘텐츠가 적어도 부분적으로 표시될 수 있습니다. 실제로는 페이지가 최소화되지 않은 창으로 활성화된 탭임을 의미합니다.
     - `hidden`

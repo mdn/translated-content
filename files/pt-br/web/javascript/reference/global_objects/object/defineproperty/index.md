@@ -453,7 +453,7 @@ O Internet Explorer 8 implementa o método `Object.defineProperty()` para uso [a
 
 ## Veja também
 
-- [Enumerabilidade and posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade and posse de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a29769d6d10261f771321eb60f3990029c160924
 ---
 
-{{GlossarySidebar}}
-
 程序设计中，**语义**指的是一段代码的含义。例如，“运行这行 JavaScript 代码会产生怎样的影响？”、“这个 HTML 的元素有什么作用，扮演了什么样的角色”（而不只是“它看上去像是什么？”）
 
 ## JavaScript 中的语义
@@ -49,7 +47,7 @@ HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的�
 
 ## 语义化元素
 
-这里是大约 100 个语义化[元素](/zh-CN/docs/Web/HTML/Element)中的一些：
+这里是大约 100 个语义化[元素](/zh-CN/docs/Web/HTML/Reference/Elements)中的一些：
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -67,9 +65,8 @@ HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的�
 
 ## 参见
 
-- MDN 上的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element#inline_text_semantics)
-- MDN 上的[使用 HTML 章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements#使用要点)
+- MDN 上的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements#inline_text_semantics)
+- MDN 上的[使用 HTML 章节和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements#使用要点)
 - 维基百科上的[计算机科学中语义的意义](https://en.wikipedia.org/wiki/Semantics#Computer_science)
 - 相关术语：
-
   - {{Glossary("SEO")}}

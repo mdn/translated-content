@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
@@ -23,24 +21,20 @@ browser.userScripts.onBeforeScript.hasListener(listener)
 事件包含三个函数：
 
 - `addListener(listener)`
-  - : 向此事件添加一个监听器。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
   - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到此事件。如果正在监听，则返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
 ### 参数
 
 - `listener`
-
   - : 当事件发生时要调用的函数。该函数接收以下参数：
-
     - `script`
-
       - : 一个表示与网页匹配的用户脚本的对象。其属性和方法如下：
-
         - `defineGlobals`
           - : 一个方法，用于导出一个包含全局属性和用户脚本沙盒中可用方法的对象。必须同步调用此方法，以确保用户脚本尚未执行。
         - `export`

@@ -54,6 +54,6 @@ promise.allSettled(iterable);
 
 - [Promises](/ru/docs/Archive/Add-ons/Techniques/Promises)
 - [Использование промисов](/ru/docs/Web/JavaScript/Guide/Using_promises)
-- [Graceful asynchronous programming with promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with promises](/ru/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

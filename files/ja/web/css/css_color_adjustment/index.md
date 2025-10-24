@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
-{{CSSRef}}
-
 **CSS 色調整**モジュールは、モデルを提供し、「ダークモード」、コントラスト調整、その他の配色設定などのユーザーの環境設定を処理するために、ユーザーエージェントによる自動色調整を制御します。
 
 このモジュールは {{CSSxRef("@media")}} の {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}、{{cssxref("@media/prefers-contrast", "prefers-contrast")}}、{{cssxref("@media/forced-colors", "forced-colors")}} 特性とともに、ブラウザーに色を自動的に調整させる方法とタイミングを定義します。
@@ -36,13 +34,13 @@ l10n:
   - {{cssxref("color")}}
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
-  - [`fill`](/ja/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Attribute/lighting-color)
+  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
-  - [`stop-color`](/ja/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Attribute/stroke)
+  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-shadow")}}

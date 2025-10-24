@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 _万维网_（World Wide Web），一般被称为 **WWW**、**W3** 或 **Web**，是通过{{Glossary("Internet", "互联网")}}访问公共网页的互连系统。Web 与互联网不一样：Web 是建立在互联网之上的许多应用程序之一。
 
 Tim Berners-Lee 提出了被称为万维网的架构。他在 1990 年在 CERN 物理研究实验室的计算机上创建了第一个 Web {{Glossary("server", "服务器")}}、Web {{Glossary("Browser", "浏览器")}}和网页。1991 年，他在 alt.hypertext 新闻组上宣布了他的创作，那一刻标志着 Web 的首次公开。
@@ -23,6 +21,6 @@ Tim Berners-Lee 在发明 Web 之后不久就创建了 {{Glossary("W3C")}}（万
 
 ## 参见
 
-- [学习 Web](/zh-CN/docs/Learn)
+- [学习 Web](/zh-CN/docs/Learn_web_development)
 - 维基百科上的[万维网](https://zh.wikipedia.org/wiki/万维网)
 - [W3C 网站](https://www.w3.org/)

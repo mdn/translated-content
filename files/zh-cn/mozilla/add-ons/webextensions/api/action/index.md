@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 用于读取和修改使用 [`action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器工具栏按钮的属性，以及监听按钮的点击事件。
 
 > [!NOTE]
@@ -79,7 +77,7 @@ l10n:
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action) API。该文档衍生自 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action) API。该文档衍生自 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

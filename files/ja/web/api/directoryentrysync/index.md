@@ -300,4 +300,4 @@ removeRecursively()
 ## 関連情報
 
 - [ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルおよびディレクトリー項目 API 入門](/ja/docs/Web/API/File_System_API)

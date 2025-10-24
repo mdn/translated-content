@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLInputElement.disabled`** は [`disabled`](/ja/docs/Web/HTML/Element/input#disabled) という HTML の属性を反映した論理値で、このコントロールが無効であるかどうかを表します。無効である場合、クリックを受け付けません。無効化された要素は使用できず、クリックもできません。
+**`HTMLInputElement.disabled`** は [`disabled`](/ja/docs/Web/HTML/Reference/Elements/input#disabled) という HTML の属性を反映した論理値で、このコントロールが無効であるかどうかを表します。無効である場合、クリックを受け付けません。無効化された要素は使用できず、クリックもできません。
 
 ## 値
 

@@ -5,7 +5,6 @@ l10n:
   sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility","Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们完成了应用程序的开发，将其组织为组件，并讨论了一些处理响应式、处理 DOM 节点以及暴露组件功能的高级技术。在本文中，我们将展示另一种在 Svelte 中处理状态管理的方式：[store](https://learn.svelte.dev/tutorial/writable-stores)。store 是全局数据存储库，用于保存值。组件可以订阅 store 并在其值发生变化时接收通知。
@@ -419,7 +418,8 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
    <Todos bind:todos />
    ```
 
-   > **备注：** `<Todos bind:todos />` 只是 `<Todos bind:todos={todos} />` 的简写形式。
+   > [!NOTE]
+   > `<Todos bind:todos />` 只是 `<Todos bind:todos={todos} />` 的简写形式。
 
 3. 返回到你的应用程序，尝试添加一些待办事项，然后转到开发者工具的 Web 控制台。你会看到，我们对待办事项进行的每个修改都会通过 `bind` 指令反映在 `App.svelte` 中定义的 `todos` 数组中。
 

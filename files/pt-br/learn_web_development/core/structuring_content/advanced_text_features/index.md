@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-Existem muitos outros elementos em HTML para formatação de texto, que não tratamos no artigo de [Fundamentos do texto em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Os elementos descritos neste artigo são menos conhecidos, mas ainda são úteis para conhecer (e isso ainda não é uma lista completa de todos os elementos). Aqui, você aprenderá a marcar citações, listas de descrição, código de computador e outros textos relacionados, subscrito e sobrescrito, informações de contato e muito mais.
+Existem muitos outros elementos em HTML para formatação de texto, que não tratamos no artigo de [Fundamentos do texto em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Os elementos descritos neste artigo são menos conhecidos, mas ainda são úteis para conhecer (e isso ainda não é uma lista completa de todos os elementos). Aqui, você aprenderá a marcar citações, listas de descrição, código de computador e outros textos relacionados, subscrito e sobrescrito, informações de contato e muito mais.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -82,7 +82,6 @@ Os estilos padrões do navegador exibirão as listas com as descrições indenta
 Observe que é permitido ter um único termo com múltiplas descrições, por exemplo:
 
 - aparte
-
   - : No drama, onde um personagem compartilha um comentário apenas com o público para efeito humorístico ou dramático. Isso geralmente é um sentimento, pensamento ou parte de informação de fundo adicional.
 
     Por escrito, uma seção de conteúdo que está relacionada ao tópico atual, mas não se encaixa diretamente no fluxo principal de conteúdo, então é apresentado próximo (muitas vezes em uma caixa ao lado).

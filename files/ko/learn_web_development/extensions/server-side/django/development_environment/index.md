@@ -51,7 +51,8 @@ original_slug: Learn/Server-side/Django/development_environment
 
 이러한 각각의 옵션들은 모두 조금씩 다른 구성과 설치가 필요합니다. 이어지는 세부 내용에서 몇 가지 선택 사항을 설명합니다. 이하 글에서는 몇 가지 운영체제에서 장고를 설치 및 설정하는 방법을 보여주고, 나머지 튜토리얼에서는 모두 이 설정을 가정해서 진행됩니다.
 
-> **참고:** **주의**: 공식 장고 문서에서 다른 설치 옵션을 찾을 수 있습니다. 링크 : [appropriate documents below](#furtherreading).
+> [!NOTE]
+> **주의**: 공식 장고 문서에서 다른 설치 옵션을 찾을 수 있습니다. 링크 : [appropriate documents below](#furtherreading).
 
 #### 어떤 운영체제가 지원되나요?
 
@@ -65,7 +66,8 @@ original_slug: Learn/Server-side/Django/development_environment
 
 필요에 따라 Python 3.4 혹은 그 이후의 버전이 사용될 수 있습니다. (파이썬 3.4는 차후에 지원이 안될 수도 있습니다)
 
-> **참고:** **주의**: 파이썬 2.7은 장고 2.0에서 사용할 수 없습니다. (장고 1.11.x 버전에서 마지막으로 파이썬 2.7을 지원했습니다)
+> [!NOTE]
+> **주의**: 파이썬 2.7은 장고 2.0에서 사용할 수 없습니다. (장고 1.11.x 버전에서 마지막으로 파이썬 2.7을 지원했습니다)
 
 #### 장고는 어디서 다운로드할 수 있나요?
 
@@ -83,13 +85,15 @@ original_slug: Learn/Server-side/Django/development_environment
 
 이 글에서(그리고 이 모듈의 거의 모든 부분에서) 우리는 데이터를 파일로 저장하는 SQLite 데이터베이스를 사용할 것 입니다. SQLite는 가벼운 데이터베이스로 사용하기에 적합하며 높은 수준의 동시성을 지원하지 않습니다. 그렇지만 주로 읽기 전용인 응용 프로그램을 위해서는 아주 좋은 선택입니다.
 
-> **참고:** **주의**: 장고는 _django-admin과 같이 웹사이트를 만드는 표준 도구를 사용하면_ SQLite가 기본 값으로 설정되어 있습니다. 이는 추가적인 설정이 필요하지 않으므로 시작하기에 좋습니다.
+> [!NOTE]
+> **주의**: 장고는 _django-admin과 같이 웹사이트를 만드는 표준 도구를 사용하면_ SQLite가 기본 값으로 설정되어 있습니다. 이는 추가적인 설정이 필요하지 않으므로 시작하기에 좋습니다.
 
 #### 시스템 전체에 설치할까요, 파이썬 가상환경에 설치할까요?
 
 파이썬 3를 설치하면 모든 파이썬 3 코드가 공유하는 하나의 글로벌 환경이 만들어집니다. 그 환경에 원하는 어떤 파이썬 패키지라도 설치할 수 있지만, 각 패키지의 하나의 버전만 설치할 수 있습니다.
 
-> **참고:** **주의**: 글로벌 환경에 설치된 파이썬 응용 프로그램들은 서로 충돌할 가능성이 있습니다. (예: 같은 패키지의 다른 버전일 경우)
+> [!NOTE]
+> **주의**: 글로벌 환경에 설치된 파이썬 응용 프로그램들은 서로 충돌할 가능성이 있습니다. (예: 같은 패키지의 다른 버전일 경우)
 
 만약 장고를 기본/전역 환경에 설치한다면 컴퓨터에서 하나의 장고 버전만을 대상으로 지정할 수 있습니다. 이것은 당신이 옛날 버전으로 작동하는 웹사이트를 관리하면서 최신 버전의 장고를 이용한 새로운 웹사이트를 만들고 싶을 때 문제가 됩니다.
 
@@ -103,7 +107,8 @@ original_slug: Learn/Server-side/Django/development_environment
 
 이번 섹션에서는 현재 당신의 파이썬 버전이 무엇인지 확인하고, 필요에 따라 운영체제(Ubuntu Linux 16.04, macOS X, and Windows 10)별로 새로운 버전 설치 방법을 간단하게 설명합니다.
 
-> **참고:** **주의**: 플랫폼에 따라 운영 체제의 자체 패키지 관리자 또는 다른 메커니즘을 통해 Python / pip를 설치할 수도 있습니다. 대부분의 플랫폼의 경우 <https://www.python.org/downloads/>에서 필요한 설치 파일을 다운로드하여 적절한 플랫폼 별 방법을 사용하여 설치할 수 있습니다.
+> [!NOTE]
+> **주의**: 플랫폼에 따라 운영 체제의 자체 패키지 관리자 또는 다른 메커니즘을 통해 Python / pip를 설치할 수도 있습니다. 대부분의 플랫폼의 경우 <https://www.python.org/downloads/>에서 필요한 설치 파일을 다운로드하여 적절한 플랫폼 별 방법을 사용하여 설치할 수 있습니다.
 
 ### 우분투 16.04
 
@@ -132,7 +137,6 @@ python3 -V
 당신은 [python.org](https://www.python.org/)에서 파이썬3를(pip3 도구도 함께) 쉽게 설치할 수 있습니다:
 
 1. 필요한 설치 파일을 다운로드하세요:
-
    1. <https://www.python.org/downloads/> 로 가세요.
    2. **Download Python 3.7.0** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
 
@@ -156,7 +160,6 @@ pip3 list
 윈도우는 파이썬을 기본적으로 포함하고 있지 않지만, [python.org](https://www.python.org/)에서(pip3 도구와 함께) 쉽게 설치할 수 있습니다:
 
 1. 필요한 설치 파일을 다운로드하세요:
-
    1. <https://www.python.org/downloads/> 로 가세요
    2. **Download Python 3.7.1** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
 
@@ -175,7 +178,8 @@ py -3 -V
 pip3 list
 ```
 
-> **참고:** **주의**: 설치 파일은 위 코드들이 실행되기 위한 모든 것을 설치해줄 것입니다. 만약 파이썬을 찾을 수 없다는 메시지가 나오면, 파이썬을 당신의 시스템 경로에 추가하는 것을 깜빡했을 수가 있습니다. 당신은 설치 파일을 다시 실행해서 'Modify'를 선택 후 두 번째 페이지에 있는 "Add Python to environment variables" 박스에 체크함으로써 시스템 경로에 파이썬을 추가할 수 있습니다.
+> [!NOTE]
+> **주의**: 설치 파일은 위 코드들이 실행되기 위한 모든 것을 설치해줄 것입니다. 만약 파이썬을 찾을 수 없다는 메시지가 나오면, 파이썬을 당신의 시스템 경로에 추가하는 것을 깜빡했을 수가 있습니다. 당신은 설치 파일을 다시 실행해서 'Modify'를 선택 후 두 번째 페이지에 있는 "Add Python to environment variables" 박스에 체크함으로써 시스템 경로에 파이썬을 추가할 수 있습니다.
 
 ## 파이썬 가상 환경에서 장고 사용하기
 
@@ -203,7 +207,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **참고:**: `VIRTUALENVWRAPPER_PYTHON` 와 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 변수는 파이썬3의 일반적인 설치 위치를 가리킵니다. 그리고 `source /usr/local/bin/virtualenvwrapper.sh` 는 `virtualenvwrapper.sh` 스크립트의 일반적인 위치를 가리킵니다. 만약 테스트 중에 virtualenv가 작동하지 않는다면, 확인해야 할 일 중 하나는 파이썬과 스크립트가 알맞은 위치에 있는지 입니다(그리고 스타트업 파일을 그에 맞게 바꾸세요).
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 와 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 변수는 파이썬3의 일반적인 설치 위치를 가리킵니다. 그리고 `source /usr/local/bin/virtualenvwrapper.sh` 는 `virtualenvwrapper.sh` 스크립트의 일반적인 위치를 가리킵니다. 만약 테스트 중에 virtualenv가 작동하지 않는다면, 확인해야 할 일 중 하나는 파이썬과 스크립트가 알맞은 위치에 있는지 입니다(그리고 스타트업 파일을 그에 맞게 바꾸세요).
 >
 > `which virtualenvwrapper.sh` 와 `which python3`커맨드를 사용해서 당신의 시스템에 알맞은 위치를 찾을 수 있습니다.
 
@@ -245,7 +250,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **참고:** **참고사항**: `VIRTUALENVWRAPPER_PYTHON` 변수는 파이썬3의 일반적인 설치 위치를 가리키며, `source /usr/local/bin/virtualenvwrapper.sh`는 `virtualenvwrapper.sh`스크립트의 일반적인 위치를 가리킵니다. 당신이 테스트할 때 _virtualenv_ 가 동작하지 않는다면, 한가지 체크해볼 것은 파이썬과 해당 스크립트가 위에서 가리키는 위치에 있는지 여부입니다( 다르다면 startup 파일을 적절하게 수정해야 합니다).
+> [!NOTE]
+> **참고사항**: `VIRTUALENVWRAPPER_PYTHON` 변수는 파이썬3의 일반적인 설치 위치를 가리키며, `source /usr/local/bin/virtualenvwrapper.sh`는 `virtualenvwrapper.sh`스크립트의 일반적인 위치를 가리킵니다. 당신이 테스트할 때 _virtualenv_ 가 동작하지 않는다면, 한가지 체크해볼 것은 파이썬과 해당 스크립트가 위에서 가리키는 위치에 있는지 여부입니다( 다르다면 startup 파일을 적절하게 수정해야 합니다).
 >
 > 예를 들어, 맥OS상의 어떤 시스템의 설치 테스트에서는 startup 파일에 아래와 같은 코드를 추가할 필요가 있었습니다 :
 >
@@ -308,7 +314,8 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 이제 당신은 가상환경내에 있으며 장고를 설치하고 개발을 시작할 수 있습니다.
 
-> **참고:** **주의**: 이 시점부터 이 기사 (정확히는 이 모듈)에서 실행되는 모든 명령은 위에서 우리가 설정한 파이썬 가상환경내에서 실행되는 것으로 간주합니다.
+> [!NOTE]
+> **주의**: 이 시점부터 이 기사 (정확히는 이 모듈)에서 실행되는 모든 명령은 위에서 우리가 설정한 파이썬 가상환경내에서 실행되는 것으로 간주합니다.
 
 ### 가상 환경 사용하기
 
@@ -339,7 +346,8 @@ py -3 -m django --version
  2.0
 ```
 
-> **참고:** **주의**: 위의 윈도우 명령이 django 모듈이 존재하는지 보여주지 않으면, 아래 명령을 시도해보세요:
+> [!NOTE]
+> **주의**: 위의 윈도우 명령이 django 모듈이 존재하는지 보여주지 않으면, 아래 명령을 시도해보세요:
 >
 > ```
 > py -m django --version
@@ -347,7 +355,8 @@ py -3 -m django --version
 >
 > 당신의 설치 방법에 따라 변할수도 있긴 하지만, 윈도우에서는 파이썬 3 스트립트는 `py -3`을 명령앞에 붙여야 실행됩니다. 명령 실행에 문제가 있으면 `-3`옵션을 빼 보세요. 리눅스/맥OS X 에서는 `python3`명령입니다.
 
-> **경고:** **중요사항**: 이 **모듈** 의 나머지부분에서는 파이썬 3를 실행하는 명령으로 리눅스 명령 (`python3`) 을 사용합니다. 당신이 윈도우에서 진행중이라면 단지 명령 앞부분을 `py -3`로 변경하면 됩니다.
+> [!WARNING]
+> **중요사항**: 이 **모듈** 의 나머지부분에서는 파이썬 3를 실행하는 명령으로 리눅스 명령 (`python3`) 을 사용합니다. 당신이 윈도우에서 진행중이라면 단지 명령 앞부분을 `py -3`로 변경하면 됩니다.
 
 ## 설치한 것 확인하기
 
@@ -382,7 +391,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **참고:** **주의**: 위 명령은 Linux/macOS X 명령을 보여준다. 지금 시점에서는 "15 unapplied migration(s)" 의 경고 문구는 무시해도 됩니다 !
+> [!NOTE]
+> **주의**: 위 명령은 Linux/macOS X 명령을 보여준다. 지금 시점에서는 "15 unapplied migration(s)" 의 경고 문구는 무시해도 됩니다 !
 
 일단 서버가 실행중이면 당신 시스템의 웹 브라우저로 아래 URL에 가서 만들어진 사이트를 볼 수 있습니다: `http://127.0.0.1:8000/`. 방문한 사이트에서 아래와 같은 모습이 보여야 합니다:
 

@@ -3,7 +3,7 @@ title: "HTMLMediaElement: playbackRate プロパティ"
 short-title: playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
 l10n:
-  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
+  sourceCommit: ed9ebd794add41de1f2e759502b73e8650afe56b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,7 +24,7 @@ l10n:
 
 ```js
 const obj = document.createElement("video");
-console.log(obj.playbackRate); // Expected Output: 1
+console.log(obj.playbackRate); // 予想される結果: 1
 ```
 
 ## 仕様書
@@ -38,5 +38,5 @@ console.log(obj.playbackRate); // Expected Output: 1
 ## 関連情報
 
 - {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.playbackRate` プロパティを定義しているインターフェイス
-- 負の `playbackRate` に対応するバグ報告（[Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1468019) および [Blink](https://issues.chromium.org/issues/40410591)（Chrome など））
+- 負の `playbackRate` に対応するバグ報告（[Firefox](https://bugzil.la/1468019) および [Blink](https://crbug.com/40410591)（Chrome など）
 - The Web Hypertext Application Technology Working Group (WHATWG) [issue to require support for negative `playbackRate`](https://github.com/whatwg/html/issues/3754)

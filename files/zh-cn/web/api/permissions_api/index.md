@@ -2,7 +2,7 @@
 title: 权限 API
 slug: Web/API/Permissions_API
 l10n:
-  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}

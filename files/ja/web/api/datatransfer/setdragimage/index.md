@@ -20,7 +20,6 @@ setDragImage(imgElement, xOffset, yOffset);
 ### 引数
 
 - `imgElement`
-
   - : ドラッグのフィードバック画像に使用する画像 {{domxref("Element")}} 要素です。
 
     もし {{domxref("Element")}} が img 要素であれば、ドラッグデータストアのビットマップを （その要素に固有のサイズで）その要素の画像に設定します。そうでなければ、ドラッグデータストアのビットマップを、与えられた要素から生成された画像に設定します（そのための正確なメカニズムは現在のところ指定されていません）。
@@ -109,6 +108,6 @@ function drop_handler(ev) {
 
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

@@ -3,9 +3,7 @@ title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
 ---
 
-{{CSSRef}}
-
-El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Element/input/file).
+El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Reference/Elements/input/file).
 
 {{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 
@@ -86,7 +84,7 @@ input[type="file"]::file-selector-button:hover {
 
 Ejemplo con respaldo para navegadores antiguos que admiten los prefijos `-webkit` y `-ms`. Tenga en cuenta que, como selector, deberá escribir el bloque de código completo dos veces, ya que un selector no reconocido invalida toda la lista.
 
-Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal, coincide con las reglas de la hoja de estilo del [_User-Agent_](/es/docs/Web/HTTP/Headers/User-Agent). En particular, las fuentes y los colores no heredarán necesariamente del elemento `input`.
+Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal, coincide con las reglas de la hoja de estilo del [_User-Agent_](/es/docs/Web/HTTP/Reference/Headers/User-Agent). En particular, las fuentes y los colores no heredarán necesariamente del elemento `input`.
 
 ### Ejemeplo con respaldo
 
@@ -167,4 +165,4 @@ input[type="file"]::file-selector-button:hover {
 - [Extensiones CSS de Microsoft](/es/docs/Web/CSS/Microsoft_Extensions)
 - [API de entradas de archivos y directorios](/es/docs/Web/API/File_and_Directory_Entries_API)
 - [Compatibilidad con la API de entradas de archivos y directorios en Firefox](/es/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
-- [`<input type="file">`](/es/docs/Web/HTML/Element/input/file)
+- [`<input type="file">`](/es/docs/Web/HTML/Reference/Elements/input/file)

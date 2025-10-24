@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}}
+**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
-**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
-
-{{InteractiveExample("CSS Demo: background")}}
+{{InteractiveExample("CSS デモ: background")}}
 
 ```css interactive-example-choice
 background: green;
@@ -90,7 +88,6 @@ background: unset;
 それぞれのレイヤーの構文は以下の通りです。
 
 - それぞれのレイヤーは、以下の値をそれぞれ 0 ～ 1 回含めることができます。
-
   - `<attachment>`
   - `<bg-image>`
   - `<position>`
@@ -138,7 +135,7 @@ background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要であり、スクリーンリーダーはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 例

@@ -3,8 +3,6 @@ title: 使用 CSS 过渡
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
-{{CSSRef}}
-
 **CSS 过渡**提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的，而不是立即生效的过程。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS 过渡后该元素的颜色将按照一定的曲线速率从白色变化为黑色。这个过程可以自定义。
 
 通常将两个状态之间的过渡称为**隐式过渡**，因为开始与结束之间的状态由浏览器决定。
@@ -17,7 +15,8 @@ CSS 过渡可以决定哪些属性发生动画效果（通过[_明确地列出�
 
 Web 作者可以定义哪一属性需以何种方式用于动画，由此允许创造复杂的过渡。然而因为为某些属性赋予动画无意义，所以这些属性[无动画性](/zh-CN/docs/Web/CSS/CSS_animated_properties)。
 
-> **备注：** `auto` 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，实现了这个需求；然而另外一些用户代理，比如基于 WebKit 的，没有这么严格限制。在 `auto` 上使用动画，取决于浏览器及其版本，可能会导致非预期结果，应当避免使用。
+> [!NOTE]
+> `auto` 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，实现了这个需求；然而另外一些用户代理，比如基于 WebKit 的，没有这么严格限制。在 `auto` 上使用动画，取决于浏览器及其版本，可能会导致非预期结果，应当避免使用。
 
 ## 定义过渡
 
@@ -235,7 +234,67 @@ document.addEventListener(
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}
+```html live-sample___js-transitions
+<p>Click anywhere to move the ball</p>
+<div id="foo" class="ball"></div>
+
+<script>
+  // Make the ball move to a certain position:
+  const f = document.getElementById("foo");
+  document.addEventListener(
+    "click",
+    (ev) => {
+      f.style.transform = `translateY(${ev.clientY - 25}px)`;
+      f.style.transform += `translateX(${ev.clientX - 25}px)`;
+    },
+    false,
+  );
+</script>
+```
+
+```css hidden live-sample___js-transitions
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1.2em / 1.5 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-top: 3em;
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 660px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+```
+
+```css live-sample___js-transitions
+.ball {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+```
+
+{{EmbedLiveSample("js-transitions", "", "400px")}}
 
 ### 检测渐变的开始和完成
 

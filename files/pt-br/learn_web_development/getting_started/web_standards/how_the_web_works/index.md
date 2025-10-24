@@ -36,7 +36,6 @@ Além do cliente e do servidor, também precisamos dizer oi para:
 - **DNS**: Servidor de Nome de Domínio (_Domain Name Servers_) são como um catálogo de endereços para sites. Quando você digita um endereço web no seu navegador, o navegador procura no servidor de DNS para localizar o endereço real do site, antes que ele possa recuperar o site. O navegador precisa encontrar em qual servidor web a página está hospedada para que ele possa mandar mensagens HTTP ao lugar certo (veja abaixo). Isso é como pesquisar o endereço da loja para que você possa entrar em contato.
 - **HTTP**: Protocolo de Transferência de Hypertexto (_Hypertext Transfer Protocol_) é um {{Glossary("Protocol" , "protocolo de aplicação")}} que define uma linguagem para clientes e servidores se comunicarem entre si. É como a linguagem que você usa para encomendar seus produtos.
 - **Arquivos componentes**: um website é feito de muitos arquivos diferentes, que são como as diferentes partes dos produtos que você comprou na loja. Esses arquivos são divididos em dois tipos principais:
-
   - **Arquivos de Código**: os sites são feitos principalmente de HTML, CSS e JavaScript, embora você possa conhecer outras tecnologias mais tarde.
   - **Recursos**: esse é o nome coletivo para todas as outras coisas que compõem um site, como imagens, música, vídeos, documentos do Word e PDFs.
 
@@ -63,7 +62,7 @@ Anteriormente, usamos o termo "pacotes" para descrever o formato no qual os dado
 
 ## Veja também
 
-- [Como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Como a Internet funciona](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — uma Aplicação a Nível de Protocolo](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Vamos Começar!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Códigos de resposta](https://dev.opera.com/articles/http-response-codes/)

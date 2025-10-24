@@ -36,4 +36,4 @@ Na referência do JavaScript você poderá encontrar os seguintes seções :
 
 - [Recursos e funcionalidades obsoletas](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Gramática Léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Tipos e estruturas de dados](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [Tipos e estruturas de dados](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)

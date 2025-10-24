@@ -2,10 +2,10 @@
 title: "Permissions-Policy: fullscreen"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 l10n:
-  sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `fullscreen` 指令控制当前文档是否允许使用 {{domxref('Element.requestFullscreen()')}}。
 

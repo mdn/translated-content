@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作徽章的背景颜色。
 
 > [!NOTE]
@@ -25,9 +23,7 @@ browser.action.getBadgeBackgroundColor(
 ### 参数
 
 - `details`
-
   - : 一个拥有下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取徽章背景颜色的标签页。
     - `windowId` {{optional_inline}}
@@ -65,7 +61,7 @@ browser.action.getBadgeBackgroundColor({}).then(onGot, onFailure);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-getBadgeBackgroundColor) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-getBadgeBackgroundColor) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

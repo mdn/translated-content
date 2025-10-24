@@ -7,7 +7,42 @@ slug: Web/CSS/word-break
 
 A propriedade CSS **`word-break`** é usada para especificar se o navegador deve inserir ou não quebras de linha onde, normalmente, o texto vazaria de seu container.
 
-{{EmbedInteractiveExample("pages/css/word-break.html")}}
+{{InteractiveExample("CSS Demo: word-break")}}
+
+```css interactive-example-choice
+word-break: normal;
+```
+
+```css interactive-example-choice
+word-break: break-all;
+```
+
+```css interactive-example-choice
+word-break: keep-all;
+```
+
+```css interactive-example-choice
+word-break: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Honorificabilitudinitatibus califragilisticexpialidocious
+    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+    グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  padding: 20px;
+  text-align: start;
+  border: solid 1px darkgray;
+}
+```
 
 > [!NOTE]
 > comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.

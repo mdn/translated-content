@@ -5,13 +5,11 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
-
 **`text-decoration-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{ cssxref("text-decoration-line") }} でテキストに追加された装飾の色を設定します。
 
 色はプロパティ値のスコープにある装飾、すなわち下線、上線、打消し線、それにスペルミスに印をつけるために使われるような波線などに適用されます。
 
-{{InteractiveExample("CSS Demo: text-decoration-color")}}
+{{InteractiveExample("CSS デモ: text-decoration-color")}}
 
 ```css interactive-example-choice
 text-decoration-color: red;
@@ -85,7 +83,7 @@ text-decoration-color: unset;
 色だけで意味を伝えるべきではありません。例えば、テキストの色と text-decoration-color の変更だけでは、リンクにフォーカスがあることを示すのに十分ではありません。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## 公式定義

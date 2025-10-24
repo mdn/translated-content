@@ -7,7 +7,91 @@ slug: Web/CSS/transform-function/rotate3d
 
 La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-{{EmbedInteractiveExample("pages/css/rotate3d.html")}}
+{{InteractiveExample("CSS Demo: rotate3d()")}}
+
+```css interactive-example-choice
+transform: rotate3d(0);
+```
+
+```css interactive-example-choice
+transform: rotate3d(1, 1, 1, 45deg);
+```
+
+```css interactive-example-choice
+transform: rotate3d(2, -1, -1, -0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotate3d(0, 1, 0.5, 3.142rad);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté qui définissent l'axe de rotation. Cet axe est défini par un vecteur `[x, y, z]` et passe par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)). Si le vecteur n'est pas normalisé (autrement dit, si la somme des carrés de ses trois composantes ne vaut pas 1), il sera normalisé par le moteur. Un vecteur qui ne peut être normalisé (par exemple le vecteur nul `[0, 0, 0]`) empêchera la rotation d'être appliquée mais la propriété CSS restera valide.
 

@@ -15,8 +15,7 @@ l10n:
 
 ## 같이 보기
 
-- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Headers)
-
+- [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Reference/Headers)
   - {{HTTPHeader("Content-Length")}}
   - {{HTTPHeader("Content-Range")}}
   - {{HTTPHeader("Trailer")}}

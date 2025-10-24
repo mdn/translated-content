@@ -3,8 +3,6 @@ title: 协议升级机制
 slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
 ---
 
-{{HTTPSidebar}}
-
 [HTTP/1.1 协议](/zh-CN/docs/Web/HTTP)提供了一种使用 {{HTTPHeader("Upgrade")}} 标头字段的特殊机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。
 
 这个机制是可选的；它并不能强制协议的更改（通常来说这一机制总是由客户端发起的）。如果它们支持新协议，实现甚至可以不利用 upgrade，在实践中，这种机制主要用于引导 WebSocket 连接。
@@ -138,14 +136,13 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，那么将通过以下流程计算此标头的值：首先取密钥的值，然后将该值与“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”进行拼接，再取拼接后的字符串的 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希。最后对得出的 20 字节的值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
+  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，那么将通过以下流程计算此标头的值：首先取密钥的值，然后将该值与“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”进行拼接，再取拼接后的字符串的 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 散列。最后对得出的 20 字节的值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
 
 ## 参见
 
 - [WebSocket API](/zh-CN/docs/Web/API/WebSocket)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - 规范和 RFC：
-
   - {{RFC(7230)}}
   - {{RFC(6455)}}
   - {{RFC(7540)}}

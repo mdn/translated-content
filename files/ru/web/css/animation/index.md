@@ -5,7 +5,7 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
+[CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
 
 {{InteractiveExample("CSS Demo: animation")}}
 

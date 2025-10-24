@@ -19,9 +19,7 @@ scan(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `signal`
       - : {{DOMxRef("AbortSignal")}} で、これによってこの `scan()` 操作をキャンセルすることができます。
 

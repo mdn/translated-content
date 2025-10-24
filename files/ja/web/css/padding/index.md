@@ -5,11 +5,9 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
 
-**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
-
-{{InteractiveExample("CSS Demo: padding")}}
+{{InteractiveExample("CSS デモ: padding")}}
 
 ```css interactive-example-choice
 padding: 1em;
@@ -103,7 +101,7 @@ padding: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 

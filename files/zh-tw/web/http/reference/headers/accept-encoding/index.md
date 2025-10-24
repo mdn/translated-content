@@ -1,11 +1,9 @@
 ---
-title: Accept-Encoding
+title: Accept-Encoding 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 l10n:
-  sourceCommit: f341bd4728d3448faf6b9fc3b45980c35c067f25
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Accept-Encoding`** {{glossary("request header", "請求")}}和{{glossary("response header", "回應標頭")}}表示發送方可以理解的內容編碼（通常是壓縮演算法）。在請求中，伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)從用戶端的編碼提案中選擇一個，並使用 {{HTTPHeader("Content-Encoding")}} 回應標頭通知用戶端選擇。在回應中，它提供有關伺服器可以理解的內容編碼的訊息，以便在後續對資源的請求中使用該編碼。例如，如果對資源的請求（例如 {{HTTPMethod("PUT")}}）使用了不支援的編碼，則 `Accept-Encoding` 會包含在 {{HTTPStatus("415", "415 Unsupported Media Type")}} 回應中。
 
@@ -26,7 +24,7 @@ HTTP **`Accept-Encoding`** {{glossary("request header", "請求")}}和{{glossary
       <td>{{Glossary("Request header", "請求標頭")}}、{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>是</td>
     </tr>
   </tbody>
@@ -40,6 +38,8 @@ Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
 Accept-Encoding: zstd
+Accept-Encoding: dcb
+Accept-Encoding: dcz
 Accept-Encoding: identity
 Accept-Encoding: *
 
@@ -50,15 +50,19 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ## 指令
 
 - `gzip`
-  - : 使用 [Lempel-Ziv 編碼](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77)（LZ77）和 32 位元的 CRC 的壓縮格式。
+  - : 使用 [Lempel-Ziv 編碼](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）和 32 位元的 CRC 的壓縮格式。
 - `compress`
-  - : 使用 [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW)（LZW）演算法的壓縮格式。
+  - : 使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）演算法的壓縮格式。
 - `deflate`
-  - : 使用具有 [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) 壓縮演算法的 [zlib](https://en.wikipedia.org/wiki/Zlib) 結構的壓縮格式。
+  - : 使用具有 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 壓縮演算法的 [zlib](https://zh.wikipedia.org/wiki/Zlib) 結構的壓縮格式。
 - `br`
-  - : 使用 [Brotli](https://en.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
+  - : 使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
 - `zstd`
-  - : 使用 [Zstandard](https://en.wikipedia.org/wiki/Zstd) 演算法的壓縮格式。
+  - : 使用 [Zstandard](https://zh.wikipedia.org/wiki/Zstandard) 演算法的壓縮格式。
+- `dcb` {{experimental_inline}}
+  - : 使用 [Dictionary-Compressed Brotli](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl) 演算法的壓縮格式。參見[壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)。
+- `dcz` {{experimental_inline}}
+  - : 使用 [Dictionary-Compressed Zstandard](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan) 演算法的壓縮格式。參見[壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)。
 - `identity`
   - : 表示恆等函數（即無修改或壓縮）。即使省略，此值始終被視為可接受的。
 - `*`（萬用字元）
@@ -103,3 +107,4 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - {{Glossary("Brotli compression", "Brotli 壓縮")}}
 - {{Glossary("GZip compression", "GZip 壓縮")}}
 - {{Glossary("Zstandard compression", "Zstandard 壓縮")}}
+- [壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)

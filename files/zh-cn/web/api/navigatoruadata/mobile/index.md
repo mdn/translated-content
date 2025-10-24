@@ -2,7 +2,7 @@
 title: NavigatorUAData：mobile 属性
 slug: Web/API/NavigatorUAData/mobile
 l10n:
-  sourceCommit: ea68d8f5b27af9c11247dc7d8115c0cfa6bffd1b
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}

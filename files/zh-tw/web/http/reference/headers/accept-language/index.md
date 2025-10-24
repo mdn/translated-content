@@ -1,11 +1,9 @@
 ---
-title: Accept-Language
+title: Accept-Language 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Language
 l10n:
-  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Accept-Language`** {{Glossary("request header", "請求標頭")}}表示用戶端偏好的自然語言和地區設置。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)來選擇其中一個提議，並在回應標頭 {{HTTPHeader("Content-Language")}} 中告知用戶端所選擇的語言。瀏覽器根據其活動的用戶界面語言設置此標頭的所需值。用戶也可以通過瀏覽器設定配置其他偏好的語言。
 
@@ -22,7 +20,7 @@ HTTP **`Accept-Language`** {{Glossary("request header", "請求標頭")}}表示�
       <td>{{Glossary("Request header", "請求標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
     <tr>

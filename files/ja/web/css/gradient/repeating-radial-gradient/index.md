@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
+**`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
 
-**`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
-
-{{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
+{{InteractiveExample("CSS デモ: repeating-radial-gradient()")}}
 
 ```css interactive-example-choice
 background: repeating-radial-gradient(#e66465, #9198e5 20%);
@@ -69,7 +67,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 - `<shape>`
   - : グラデーションの形状です。 `circle` (グラデーションの形状が一定の半径の円の意味) か `ellipse` (軸に沿った楕円の意味) のいずれかです。指定されなかった場合、既定値は `ellipse` です。
 - `<extent-keyword>`
-
   - : 終端の形状の大きさを指定するキーワードです。利用可能な値は次の通りです。
 
     | キーワード        | 説明                                                                                                                                              |

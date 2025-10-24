@@ -2,10 +2,8 @@
 title: 409 Conflict
 slug: Web/HTTP/Reference/Status/409
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`409 Conflict`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示請求與目標資源的當前狀態存在衝突。
 

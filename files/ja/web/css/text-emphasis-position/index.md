@@ -5,11 +5,9 @@ l10n:
   sourceCommit: a7482281c4570bb7f932dce381f510d87ddf9924
 ---
 
-{{CSSRef}}
+**`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Reference/Elements/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
 
-**`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Element/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
-
-{{InteractiveExample("CSS Demo: text-emphasis-position")}}
+{{InteractiveExample("CSS デモ: text-emphasis-position")}}
 
 ```css interactive-example-choice
 text-emphasis-position: auto;
@@ -166,7 +164,8 @@ text-emphasis-position: unset;
   </tbody>
 </table>
 
-> **メモ:** {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
+> [!NOTE]
+> {{cssxref("text-emphasis")}} 一括指定プロパティを使用して、 `text-emphasis-position` を設定することはできず、また初期化されることもありません。
 
 ## 公式定義
 

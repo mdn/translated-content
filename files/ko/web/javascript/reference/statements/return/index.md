@@ -116,7 +116,7 @@ counter();
 
 ### 함수 반환하기
 
-[클로저](/ko/docs/Web/JavaScript/Closures)에 대해서도 더 알아보세요.
+[클로저](/ko/docs/Web/JavaScript/Guide/Closures)에 대해서도 더 알아보세요.
 
 ```js
 function magic(x) {
@@ -140,4 +140,4 @@ answer(1337); // 56154
 ## 같이 보기
 
 - [함수](/ko/docs/Web/JavaScript/Reference/Functions)
-- [클로저](/ko/docs/Web/JavaScript/Closures)
+- [클로저](/ko/docs/Web/JavaScript/Guide/Closures)

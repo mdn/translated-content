@@ -2,10 +2,8 @@
 title: 424 Failed Dependency
 slug: Web/HTTP/Reference/Status/424
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`424 Failed Dependency`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示無法對資源執行方法，因為所請求的操作依賴於另一個操作，而該操作失敗了。
 

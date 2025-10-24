@@ -72,10 +72,11 @@ write(markup)
 </script>
 ```
 
-> **备注：** `document.write()` 和 {{domxref("document.writeln")}} 在 XHTML 文档中无法正常工作（你会在控制台收到“Operation is not supported”（`NS_ERROR_DOM_NOT_SUPPORTED_ERR`）的错误）。当以 .xhtml 文件扩展名打开本地文件或任何使用 application/xhtml+xml {{Glossary("MIME type", "MIME 类型")}}的文档时，就会出现这种情况。更多详细信息，请参阅 [W3C XHTML 常见问题解答](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
+> [!NOTE]
+> `document.write()` 和 {{domxref("document.writeln")}} 在 XHTML 文档中无法正常工作（你会在控制台收到“Operation is not supported”（`NS_ERROR_DOM_NOT_SUPPORTED_ERR`）的错误）。当以 .xhtml 文件扩展名打开本地文件或任何使用 application/xhtml+xml {{Glossary("MIME type", "MIME 类型")}}的文档时，就会出现这种情况。更多详细信息，请参阅 [W3C XHTML 常见问题解答](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
 
 > [!NOTE]
-> 在[延迟](/zh-CN/docs/Web/HTML/Element/script#defer)或[异步](/zh-CN/docs/Web/HTML/Element/script#async)脚本中使用 `document.write()` 将被忽略，并且你会在错误控制台中收到类似于“A call to `document.write()` from an asynchronously-loaded external script was ignored”的消息。
+> 在[延迟](/zh-CN/docs/Web/HTML/Reference/Elements/script#defer)或[异步](/zh-CN/docs/Web/HTML/Reference/Elements/script#async)脚本中使用 `document.write()` 将被忽略，并且你会在错误控制台中收到类似于“A call to `document.write()` from an asynchronously-loaded external script was ignored”的消息。
 
 > [!NOTE]
 > 仅在 Edge 中，在 {{HTMLElement("iframe")}} 中多次调用 `document.write()` 会导致错误“SCRIPT70: Permission denied”。

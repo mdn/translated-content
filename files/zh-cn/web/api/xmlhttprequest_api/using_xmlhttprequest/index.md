@@ -27,7 +27,8 @@ oReq.send();
 > [!NOTE]
 > 由于对用户体验的负面影响，从 Gecko 30.0 版本开始，在主线程上的同步请求已经被弃用。
 
-> **备注：** `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
+> [!NOTE]
+> `XMLHttpRequest` 构造函数并不仅限于 XML 文档。它之所以使用“XML”开头是因为在它诞生之时，原先用于异步数据交换的主要格式便是 XML。
 
 ## 处理响应
 
@@ -38,14 +39,15 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
 1. 使用 [XPath](/zh-CN/docs/Web/XML/XPath) 定位到文档的指定部分。
-2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 为字符串或对象。
+2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Guides/Parsing_and_serializing_XML) 为字符串或对象。
 3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
 > [!NOTE]
 > 在 W3C [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
-> **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
+> [!NOTE]
+> `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
 
 ### 解析和操作包含 HTML 文档的 responseText 属性
 
@@ -91,7 +93,7 @@ oReq.send();
 
 支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](https://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
 
-- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
+- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/progress_event)
   - : 检索的数据量发生了变化。
 - [`load`](/zh-CN/docs/Web/API/Window/load_event)
   - : 传输完成，所有数据保存在 `response` 中。

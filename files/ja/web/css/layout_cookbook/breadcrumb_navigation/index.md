@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14924a9cc3dddbce37565d152cbb30134d314308
 ---
 
-{{CSSRef}}
-
 パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{glossary("breadcrumb", "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
 
 ![リンクを区切り文字を付けてインラインで表示](breadcrumb-navigation.png)
@@ -40,7 +38,7 @@ l10n:
 
 ## アクセシビリティの考慮
 
-[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかを支援技術のユーザーが理解できるようにしてください。 詳細については関連リンクを参照してください。
+[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかを支援技術のユーザーが理解できるようにしてください。 詳細については関連リンクを参照してください。
 
 `content` で追加した矢印 `→` は、スクリーンリーダーや点字ディスプレイにも公開されるので注意してください。
 

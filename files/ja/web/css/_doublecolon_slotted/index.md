@@ -5,13 +5,11 @@ l10n:
   sourceCommit: cebbd9095ac12557c55157355181672027fffc14
 ---
 
-{{CSSRef}}
-
 **`::slotted()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)をご覧ください)。
 
 これは[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
 
-{{InteractiveExample("CSS Demo: ::slotted()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::slotted()", "tabbed-shorter")}}
 
 ```css interactive-example
 /* This CSS is being applied inside the shadow DOM. */
@@ -181,7 +179,7 @@ customElements.define(
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
 - [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
-- HTML [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性
+- HTML [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 - HTML {{HTMLElement("slot")}} 要素
 - HTML {{HTMLElement("template")}} 要素
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

@@ -29,7 +29,7 @@ getGamepads()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によって、この機能の使用がブロックされた場合。
+  - : [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、この機能の使用がブロックされた場合。
 
 ## 例
 

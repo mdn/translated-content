@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/dataset
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.
+La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Reference/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.
 
 > [!NOTE]
 > La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
@@ -19,23 +19,19 @@ Un attribut HTML `data-*` et la propriété du DOM
 - En JavaScript
   - : Le nom de la propriété est le même que celui de l'attribut auquel on a retiré le préfixe `data-`, et on retire les tirets (`-`) en mettant les lettres qui suivent en majuscules afin d'obtenir une <i lang="en">camelCase</i>.
 
-En plus des informations présentées ci-après, vous pourrez trouver un guide sur l'utilisation des attributs de données HTML dans l'article [_Utiliser les attributs de données_](/fr/docs/Learn/HTML/Howto/Use_data_attributes).
+En plus des informations présentées ci-après, vous pourrez trouver un guide sur l'utilisation des attributs de données HTML dans l'article [_Utiliser les attributs de données_](/fr/docs/Web/HTML/How_to/Use_data_attributes).
 
 ### Conversion des noms
 
 - Conversion du format HTML avec les tirets au format JavaScript `camelCase`
-
   - : Le nom d'un attribut de données est transformé en clé d'un élément [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) en suivant l'algorithme suivant&nbsp;:
-
     1. Toutes les lettres ASCII majuscules (`A` à `Z`) sont converties en minuscules&nbsp;;
     2. Le préfixe `data-` est retiré (tiret complet)&nbsp;;
     3. Pour tout tiret (`U+002D`) suivi d'une lettre ASCII minuscule (`a` à `z`), on retire le tiret et on convertit la lettre en majuscule&nbsp;;
     4. Les autres caractères (y compris les autres tirets) sont laissés inchangés.
 
 - Conversion du format JavaScript `camelCase` au format HTML avec les tirets
-
   - : La transformation symétrique, permettant de passer d'une clé de propriété à un nom d'attribut, se fait avec l'algorithme suivant&nbsp;:
-
     1. **Vérification :** Avant toute transformation, un tiret _ne doit pas_ être immédiatement suivi d'une lettre ASCII en minuscule (`a` à `z`)&nbsp;;
     2. Le préfixe `data-` est ajouté&nbsp;;
     3. On ajoute un tiret devant chaque lettre ASCII majuscule (`A` à `Z`), et on convertit la lettre en minuscule&nbsp;;
@@ -105,6 +101,6 @@ if ("unAttrDonnee" in el.dataset === false) {
 
 ## Voir aussi
 
-- L'ensemble d'attributs globaux HTML [`data-*`](/fr/docs/Web/HTML/Global_attributes/data-*).
-- [Utiliser les attributs de données](/fr/docs/Learn/HTML/Howto/Use_data_attributes)
+- L'ensemble d'attributs globaux HTML [`data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*).
+- [Utiliser les attributs de données](/fr/docs/Web/HTML/How_to/Use_data_attributes)
 - [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute) et [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)

@@ -3,8 +3,6 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 ---
 
-{{CSSRef}}
-
 **`writing-mode`** 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置该属性时，应在根元素上设置它（对于 HTML 文档，应该在 `html` 元素上设置）
 
 {{InteractiveExample("CSS Demo: writing-mode")}}
@@ -232,7 +230,7 @@ th {
 
 ## 参见
 
-- SVG [`writing-mode`](/zh-CN/docs/Web/SVG/Attribute/writing-mode) 属性
+- SVG [`writing-mode`](/zh-CN/docs/Web/SVG/Reference/Attribute/writing-mode) 属性
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

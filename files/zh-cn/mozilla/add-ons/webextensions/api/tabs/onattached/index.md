@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当标签页附加到窗口时触发，例如因为它在窗口之间移动。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.tabs.onAttached.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。附加到新窗口的标签页的 ID。
     - `attachInfo`
@@ -69,7 +65,7 @@ browser.tabs.onAttached.addListener(handleAttached);
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onAttached) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onAttached) API。该文档衍生自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

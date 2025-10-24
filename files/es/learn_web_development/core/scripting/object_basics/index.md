@@ -8,9 +8,9 @@ original_slug: Learn/JavaScript/Objects/Basics
 
 En éste artículo, veremos fundamentos de sintaxis de los objetos de JavaScript y revisaremos algunas características de JavaScript que ya hemos analizado anteriormente en el curso, reiterando el hecho de que muchas de las funciones con las que ya has tratado de hecho son objetos.
 
-| Prerrequisitos: | Conocimientos básicos de informática, conocimientos básicos de HTML y CSS, familiaridad con los principios básicos de JavaScript (consulta [Primeros pasos](/es/docs/Learn/JavaScript/First_steps) y [Bloques de construcción](/es/docs/Learn/JavaScript/Building_blocks)). |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:       | Para comprender la teoría básica detrás de la programación orientada a objetos, cómo esto se relaciona con JavaScript ("la mayoría de las cosas son objetos") y cómo empezar a trabajar con objetos de JavaScript.                                                          |
+| Prerrequisitos: | Conocimientos básicos de informática, conocimientos básicos de HTML y CSS, familiaridad con los principios básicos de JavaScript (consulta [Primeros pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Bloques de construcción](/es/docs/Learn_web_development/Core/Scripting)). |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:       | Para comprender la teoría básica detrás de la programación orientada a objetos, cómo esto se relaciona con JavaScript ("la mayoría de las cosas son objetos") y cómo empezar a trabajar con objetos de JavaScript.                                                                                  |
 
 ## Conceptos básicos de objeto
 

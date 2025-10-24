@@ -31,4 +31,4 @@ input:read-write {
 ## Смотрите также
 
 - [`:read-only`](/ru/docs/Web/CSS/:read-only)
-- HTML атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes/contenteditable)
+- HTML атрибут [`contenteditable`](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable)

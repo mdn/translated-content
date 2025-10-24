@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の背後にあるすべてに適用されるため、要素またはその背景が透明または部分的に透明である必要があります。
 
-{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+{{InteractiveExample("CSS デモ: backdrop-filter()")}}
 
 ```css interactive-example-choice
 backdrop-filter: blur(10px);
@@ -89,7 +87,7 @@ backdrop-filter: unset;
 - `none`
   - : 背後にフィルターを適用しません。
 - `<filter-function-list>`
-  - : 背景に適用する {{cssxref("&lt;filter-function&gt;")}} または [SVG フィルター](/ja/docs/Web/SVG/Element/filter)の空白区切りのリストです。CSS の `<filter-function>` には {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, {{CSSxRef("filter-function/sepia", "sepia()")}} があります。
+  - : 背景に適用する {{cssxref("&lt;filter-function&gt;")}} または [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の空白区切りのリストです。CSS の `<filter-function>` には {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, {{CSSxRef("filter-function/sepia", "sepia()")}} があります。
 
 ## 公式定義
 

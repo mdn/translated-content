@@ -1,13 +1,13 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{CSSRef}}
 
 **`offset-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("offset-path")}} に沿って実際に移動している要素のボックス内の点を指定します。
 
-{{InteractiveExample("CSS Demo: offset-anchor")}}
+{{InteractiveExample("CSS デモ: offset-anchor")}}
 
 ```css interactive-example-choice
 offset-anchor: auto;
@@ -122,6 +122,7 @@ offset-anchor: right 3em bottom 10px;
 offset-anchor: inherit;
 offset-anchor: initial;
 offset-anchor: revert;
+offset-anchor: revert-layer;
 offset-anchor: unset;
 ```
 
@@ -130,7 +131,7 @@ offset-anchor: unset;
 - `auto`
   - : `offset-anchor` には要素の {{cssxref("transform-origin")}} と同じ値が与えられます。ただし、 {{cssxref("offset-path")}} が `none` の場合は {{cssxref("offset-position")}} から値が取得されます。
 - `<position>`
-  - : {{cssxref("&lt;position&gt;")}} は x/y 座標を定義し、要素のボックスの端から相対的に項目を配置するために使用されます。これは、 1 つから 4 つの値を用いて定義することができます。詳細については、{{cssxref("&lt;position&gt;")}} と {{cssxref("background-position")}} のリファレンスページを参照してください。 3 つの値を持つ position構 文は、`background(-position)`を除いて、`<position>`のどのような使い方でも機能しないことに注意してください。
+  - : {{cssxref("&lt;position&gt;")}} は x/y 座標を定義し、要素のボックスの端から相対的に項目を配置するために使用されます。これは、 1 つから 4 つの値を用いて定義することができます。詳細については、{{cssxref("&lt;position&gt;")}} と {{cssxref("background-position")}} のリファレンスページを参照してください。 3 つの値を持つ position 構文は、`background(-position)`を除いて、`<position>`のどのような使い方でも機能しないことに注意してください。
 
 ## 公式定義
 
@@ -229,4 +230,4 @@ section {
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
-- [SVG `<path>`](/ja/docs/Web/SVG/Tutorial/Paths)
+- [SVG `<path>`](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

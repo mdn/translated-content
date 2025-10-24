@@ -5,7 +5,7 @@ slug: Web/CSS/grid-template
 
 {{CSSRef}}
 
-[Сокращённое CSS-свойство](/ru/docs/Web/CSS/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
+[Сокращённое CSS-свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 
@@ -115,7 +115,6 @@ grid-template: unset;
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : Задаёт указанные значения для {{cssxref("grid-template-rows")}} и {{cssxref("grid-template-columns")}}, а для свойства {{cssxref("grid-template-areas")}} ― значение `none`.
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
-
   - : Перечисленные строки задают свойство {{cssxref("grid-template-areas")}}, значения после каждой строки устанавливают размеры грид-полос для свойства {{cssxref("grid-template-rows")}} (либо `auto` в случае их отсутствия), объединяя именованные грид-линии, расположенные до и после каждого размера, далее определяется {{cssxref("grid-template-columns")}} значениями, расположенными после слеша (либо `none` в случае их отсутствия).
 
 **Примечание:** при перечислении грид-полос нельзя использовать функцию {{cssxref("repeat()")}}, поскольку предполагается, что ряды и колонки будут располагаться вместе другом с другом в стиле "ASCII-рисунков".

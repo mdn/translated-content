@@ -3,8 +3,6 @@ title: float
 slug: Web/CSS/float
 ---
 
-{{CSSRef}}
-
 La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#absolute_positioning)).
 
 {{InteractiveExample("CSS Demo: float")}}
@@ -57,8 +55,6 @@ float: inline-end;
   width: 40%;
 }
 ```
-
-La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si deseas contribuír a los ejemplos interactivos del proyecto, por favor clonar <https://github.com/mdn/interactive-examples> y enviarnos una solicitud de extracción -pull request-.
 
 Un elemento **flotante** es un elemento en el que el {{ Cssxref("computed value", "valor calculado") }} de `float` _no_ es igual a `none`.
 

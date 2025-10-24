@@ -3,12 +3,12 @@ title: "Window: open() メソッド"
 short-title: open()
 slug: Web/API/Window/open
 l10n:
-  sourceCommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef}}
 
-**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 [iframe](/ja/docs/Web/HTML/Element/iframe)、タブ) に読み込みます。
+**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe)、タブ) に読み込みます。
 
 ## 構文
 
@@ -22,55 +22,58 @@ open(url, target, windowFeatures)
 ### 引数
 
 - `url` {{optional_inline}}
-
   - : 文字列で、読み込むリソースの URL を示します。これは HTML ページ、画像ファイル、その他のブラウザーが対応しているリソースのパスまたは URL にすることができます。空文字列 (`""`) がこの時期数に指定されると、対象の閲覧コンテキストに空のページが開きます。
 
 - `target` {{optional_inline}}
+  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Reference/Elements/a#target)である `_self`、`_blank`（既定値）、`_parent`、`_top`、`_unfencedTop` も利用することができます。 `_unfencedTop` は[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)でのみ関連します。
 
-  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Element/a#target)である `_self`、`_blank`、`_parent`、`_top` も利用することができます。
-
-    この名前は [`<a>`](/ja/docs/Web/HTML/Element/a#target) や [`<form>`](/ja/docs/Web/HTML/Element/form#target) 要素の `target` 属性として使うことができます。
+    この名前は [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) や [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) 要素の `target` 属性として使うことができます。
 
 - `windowFeatures` {{optional_inline}}
+  - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。論理値は、`name`、`name=yes`、`name=true`、`name=n` （`n` は 0 以外の整数） のいずれかを使用して true に設定できます。これらの機能には、ウィンドウの既定のサイズと位置、最小ポップアップウィンドウを開くかどうかなどのオプションが含まれます。次のオプションに対応しています。
+    - `attributionsrc` {{experimental_inline}}
+      - : ブラウザーに、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを `open()` 呼び出しとともに送信するように指示します。この呼び出しは、ユーザーの操作から 5 秒以内に、[一時的な有効化](/ja/docs/Glossary/Transient_activation)（つまり、 `click` などのユーザー操作イベントハンドラー内）で行わなければなりません。サーバー側では、このヘッダーは、帰属ソースの登録を完了するために、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を起動するために使用されます。
 
-  - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。これらの特性には、ウィンドウの既定値や位置、最小限のポップアップウィンドウを開くかどうか、などのオプションが記載されます。以下のようなオプションに対応しています。
+        さらに、 `open()` メソッドが完了すると、関連付けられたソースデータ （{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定されたもの） を格納するために、ブラウザーも開始されます。
+
+        詳しくは[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+
+        > [!NOTE]
+        > `open()` の呼び出しは、帰属トリガーの登録のために使用することはできません。
 
     - `popup`
+      - : 既定では、`window.open` は新しいタブでページを開きます。 `popup` を true に設定すると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。 `popup` が存在し、false に設定されている場合でも、新しいタブは開かれます。
 
-      - : この特性を有効にすると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。
+        開いたウィンドウの UI 機能を制御するために使用されていた、いくつかの古い機能があります。現行のブラウザーでは、これらの機能はポップアップを要求する効果しかありません。`popup` が指定されておらず、`windowFeatures` に `noopener`、`noreferrer`、`attributionsrc` 以外の機能（認識されない機能も含む）のいずれかが含まれてる場合、次の条件のいずれかが当てはまる場合、ウィンドウはポップアップとして開かれます。
+        - `location` と `toolbar` がともに false であるか存在しない
+        - `menubar` が false であるか存在しない
+        - `resizable` が false である
+        - `scrollbars` が false であるか存在しない
+        - `status` が false であるか存在しない
 
-        もし `popup` が有効でなく、ウィンドウ機能が宣言されていない場合、新しい閲覧コンテキストはタブになります。
-
-        > **メモ:** `windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
-
-        この機能を有効にするには、 `popup` を指定して値を指定しないか、 `yes`、`1`、`true` のいずれかに設定します。
-
-        例: `popup=yes`, `popup=1`, `popup=true`, `popup` は同じ結果になります。
+        それ以外の場合は、ウィンドウはタブとして開かれます。
 
     - `width` または `innerWidth`
-
       - : スクロールバーを含むコンテンツ領域の幅を指定します。必要最小値は 100 です。
 
     - `height` または `innerHeight`
-
       - : スクロールバーを含むコンテンツ領域の高さを指定します。必要最小値は 100 です。
 
     - `left` または `screenX`
-
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の左側からの距離をピクセル単位で指定します。
 
     - `top` または `screenY`
-
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の上側からの距離をピクセル単位で指定します。
 
     - `noopener`
-
       - : この特性が設定されている場合、新しいウィンドウは [`Window.opener`](/ja/docs/Web/API/Window/opener) を介して元のウィンドウにアクセスすることはできず、 `null` を返します。
 
         `noopener` を使用した場合、 `_top`, `_self`, `_parent` 以外の空でないターゲット名は、新しい閲覧コンテキストを開くかどうかの判断において、 `_blank` と同様に扱われます。
 
     - `noreferrer`
-      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) を参照してください。
+      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Reference/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) を参照してください。
+
+    [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値は、空文字列 (`""`) と同様に扱われます。
 
 > [!NOTE]
 > 要求する位置 (`top`, `left`)、要求する寸法 (`width`, `height`) の値が `windowFeatures` で指定された場合、ブラウザーのポップアップ全体がユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に配置することはできません。
@@ -78,6 +81,8 @@ open(url, target, windowFeatures)
 ### 返値
 
 ブラウザーが新しい閲覧コンテキストを開くことができた場合は、 [`WindowProxy`](/ja/docs/Glossary/WindowProxy) オブジェクトを返します。返される参照は、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)のセキュリティ要件に準拠する限り、新しいコンテキストのプロパティとメソッドにアクセスするために使用することができます。
+
+HTTP の {{httpheader("Cross-Origin-Opener-Policy")}} ヘッダーが使用されており、文書ポリシーによって文書が新しい{{glossary("Browsing context","閲覧コンテキストグループ")}}で開かれる場合、開かれたウィンドウへの参照は切断され、返されるオブジェクトは開かれたウィンドウが閉じられていることを示します（{{domxref("Window.closed","closed")}} は `true` です）。
 
 ブラウザーが新しい閲覧コンテキストを開くために失敗した場合、例えばブラウザーのポップアップブロッカーによってブロックされた場合などには `null` が返されます。
 
@@ -167,7 +172,8 @@ link.addEventListener(
 
 上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.preventDefault()` の目的は、リンクの既定値のアクションを取り消すことです。`click` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで JavaScript のサポートが無効または存在しない場合、 `click` のイベントリスナーは無視され、ブラウザーは `"WikipediaWindowName"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"WikipediaWindowName"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"WikipediaWindowName"` という名前を付けます。
 
-> **メモ:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Element/a#target) または [`<form>`](/ja/docs/Web/HTML/Element/form#target) を参照してください。
+> [!NOTE]
+> `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) または [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) を参照してください。
 
 ### 既存のウィンドウを再利用して `target="_blank"` を防止する
 
@@ -264,7 +270,7 @@ console.log(sameOriginContext.origin);
 - 最近のブラウザーは、ポップアップブロック機能を備えています。
 - 最近のブラウザーはタブブラウジングを提供しており、タブブラウジングのユーザーはほとんどの状況で新しいウィンドウを開くよりも新しいタブを開くことを好みます。
 - ユーザーは、ブラウザーに組み込まれた機能や拡張機能を使用して、リンクを新しいウィンドウで開くか、同じウィンドウで開くか、新しいタブで開くか、同じタブで開くか、バックグラウンドで開くかを選ぶことができます。 `window.open()` を使用し、特定の方法で開くことを強制すると、ユーザーを混乱させ、その習慣を無視することになります。
-- ポップアップにはメニューツールバーがありませんが、新しいタブはブラウザーウィンドウのユーザーインターフェースを使用します。したがって、多くのユーザーはインターフェースが安定しているため、タブブラウジングを好みます。
+- ポップアップにはメニューツールバーがありませんが、新しいタブはブラウザーウィンドウのユーザーインターフェイスを使用します。したがって、多くのユーザーはインターフェイスが安定しているため、タブブラウジングを好みます。
 
 ### window.open() を HTML のインラインで使用しない
 
@@ -272,7 +278,7 @@ console.log(sameOriginContext.origin);
 
 これらの偽の `href` 値は、リンクをコピー/ドラッグしたり、新しいタブ/ウィンドウでリンクを開いたり、ブックマークしたり、 JavaScript の読み込み中、エラー、無効のときに、予期しない動作を発生させます。また、画面の内側から読み取るリーダーなどの支援技術に対しても、誤った意味を伝えてしまいます。
 
-必要であれば、代わりに [`<button>`](/ja/docs/Web/HTML/Element/button) 要素を使用してください。一般的に、_本当の URL へのナビゲーションのためにのみリンクを使用する必要があります_。
+必要であれば、代わりに [`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素を使用してください。一般的に、_本当の URL へのナビゲーションのためにのみリンクを使用する必要があります_。
 
 ### 副ウィンドウに案内するリンクを常に識別できるようにする
 
@@ -289,7 +295,7 @@ console.log(sameOriginContext.origin);
 極端なコンテキストの変化が起こる前に、明示的に識別することができれば、ユーザーは先に進むかどうかを判断でき、変化に備えることができます。ユーザーは混乱したり方向感覚を失ったりしないだけでなく、経験豊富なユーザーであれば、そうしたリンクを開く方法（新しいウィンドウで開くかどうか、同じウィンドウ、新しいタブ、「バックグラウンド」かどうか）を適切に判断することができます。
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
+- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
 - [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -304,11 +310,11 @@ console.log(sameOriginContext.origin);
 ## 関連情報
 
 - `target` 属性のドキュメント:
-  - [`<a>`](/ja/docs/Web/HTML/Element/a#target)
-  - [`<form>`](/ja/docs/Web/HTML/Element/form#target)
+  - [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target)
+  - [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target)
 - [`window.close()`](/ja/docs/Web/API/Window/close)
 - [`window.closed`](/ja/docs/Web/API/Window/closed)
 - [`window.focus()`](/ja/docs/Web/API/Window/focus)
 - [`window.opener`](/ja/docs/Web/API/Window/opener)
-- [`rel="opener"`](/ja/docs/Web/HTML/Attributes/rel#opener) および [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel#noopener)
+- [`rel="opener"`](/ja/docs/Web/HTML/Reference/Attributes/rel#opener) および [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel#noopener)
 - [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)

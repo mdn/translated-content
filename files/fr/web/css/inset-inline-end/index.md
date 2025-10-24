@@ -88,7 +88,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("top")}}
   - {{cssxref("right")}}
   - {{cssxref("bottom")}}
@@ -98,7 +97,6 @@ div {
 - {{cssxref("direction")}}
 - {{cssxref("text-orientation")}}
 - Les propriétés qui définissent les autres décalages :
-
   - {{cssxref("inset-block-start")}},
   - {{cssxref("inset-block-end")}},
   - {{cssxref("inset-inline-start")}}

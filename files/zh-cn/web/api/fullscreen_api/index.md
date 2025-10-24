@@ -2,7 +2,7 @@
 title: 全屏 API
 slug: Web/API/Fullscreen_API
 l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -39,7 +39,6 @@ _全屏 API 没有自己的接口。相反，它通过增强多个其他接口�
 ### 过时属性
 
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-
   - : 一个布尔值，如果文档有一个当前正在以全屏模式显示的元素，则为 `true`；否则返回 `false`。
 
     > [!NOTE]
@@ -120,4 +119,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}、{{CSSxRef("::backdrop")}}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

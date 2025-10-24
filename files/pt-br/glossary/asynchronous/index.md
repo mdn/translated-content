@@ -15,5 +15,5 @@ Também pode ser usado para descrever um ambiente de comunicação programática
 
 ### Referência técnica
 
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area)
+- [Fetching data from the server](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests) (Learning Area)
 - {{glossary("Sincrono")}}

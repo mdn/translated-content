@@ -3,11 +3,9 @@ title: var()
 slug: Web/CSS/var
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
 
-{{InteractiveExample("CSS Demo: var()")}}
+{{InteractiveExample("CSS デモ: var()")}}
 
 ```css interactive-example-choice
 border-color: var(--color-a);
@@ -43,7 +41,7 @@ border-color: var(--color-c);
 }
 ```
 
-`var()` 関数は、プロパティ名、セレクター、またはプロパティ値以外のところでは使用できません。 (使用してしまうと、無効な構文が生成されるか、もしくはその変数に接続していない値が生成されてしまいます。)
+`var()` 関数は、プロパティ名やセレクターなど、プロパティ値以外では使用できません。 (使用してしまうと、無効な構文が生成されるか、もしくはその変数に接続していない値が生成されてしまいます。)
 
 ## 構文
 
@@ -108,4 +106,4 @@ body {
 ## 関連情報
 
 - {{cssxref("env()","env(…)")}} – ユーザーエージェントによって制御される読み取り専用環境変数
-- [CSS 変数の利用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS 変数の利用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

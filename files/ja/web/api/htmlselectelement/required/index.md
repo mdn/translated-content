@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`required`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、フォームを送信する前に、ユーザーが空ではない文字列値を持つオプションを選択しなければならないことを指定します。これは、{{htmlelement("select")}} 要素の [`required`](/ja/docs/Web/HTML/Element/select#required) 属性を反映したものです。
+**`required`** は {{DOMxRef("HTMLSelectElement")}} インターフェイスのプロパティで、フォームを送信する前に、ユーザーが空ではない文字列値を持つオプションを選択しなければならないことを指定します。これは、{{htmlelement("select")}} 要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/select#required) 属性を反映したものです。
 
 ## 値
 

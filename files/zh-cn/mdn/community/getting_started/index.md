@@ -31,7 +31,7 @@ slug: MDN/Community/Getting_started
 ### 额外的阅读和学习资料
 
 - [开源项目基本礼节](/zh-CN/docs/MDN/Community/Open_source_etiquette)：如果你还没有为开源项目贡献过，我们鼓励你首先阅读这篇文档。
-- [学习 Web 开发](/zh-CN/docs/Learn)：如果你不熟悉 HTML、CSS、JavaScript，我们为你准备了丰富的内容来帮助你入门。
+- [学习 Web 开发](/zh-CN/docs/Learn_web_development)：如果你不熟悉 HTML、CSS、JavaScript，我们为你准备了丰富的内容来帮助你入门。
 - [协作处理拉取请求](https://docs.github.com/cn/pull-requests/collaborating-with-pull-requests)
 
 某些写作相关的贡献机会需要对英语有一定的理解。也就是说，至善者，善之敌。即使你的语法不够好，也不用担心！我们有团队致力于完善 MDN 上的内容。此外，有人会在一旁确保内容的整洁和行文的正确性。

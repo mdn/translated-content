@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
-{{CSSRef}}
-
 **`fit-content`** 关键字相当于 {{cssxref("fit-content_function", "fit-content(stretch)")}}。在实际应用中，这意味着盒子会使用可用空间，但绝不会超过 {{cssxref("max-content")}}。
 
 当用作 {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("min-width")}}、{{cssxref("min-height")}}、{{cssxref("max-width")}} 和 {{cssxref("max-height")}} 的布局盒子尺寸时，最大和最小尺寸指的是内容尺寸。
@@ -49,7 +47,7 @@ block-size: fit-content;
 }
 
 .item {
-  width: -moz-fit-content;
+  width: fit-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;

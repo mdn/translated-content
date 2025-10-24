@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的标题。标题显示在鼠标悬停在浏览器操作图标上时的提示框中。你可以传入 `tabId` 或 `windowId` 作为可选参数——如果这样做，则仅针对指定的标签页或窗口更改标题。没有特定标题的标签页或窗口会继承全局标题文本，其默认为清单中指定的 [`default_title`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 或 [`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)。
 
 > [!NOTE]
@@ -23,17 +21,13 @@ browser.action.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`，包含新的标题的对象，可选地包含要设置的标签页或窗口的 id。
-
     - `title`
-
       - : `string` 或 `null`，当鼠标移动到浏览器操作上时需要显示的字符串。
 
         若 `title` 是空字符串，那么使用的标题将是扩展名，但是 {{WebExtAPIRef("action.getTitle")}} 仍然会提供空字符串。
 
         若 `title` 是 `null`：
-
         - 若指定了 `tabId`，并且标签页设置了特定的标题，那么标签页将继承其所属窗口的标题。
         - 若指定了 `windowId`，并且窗口设置了特定的标题，那么窗口将继承全局标题。
         - 否则，全局标题将重置为清单标题。
@@ -74,7 +68,7 @@ browser.action.onClicked.addListener(() => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setTitle) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setTitle) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

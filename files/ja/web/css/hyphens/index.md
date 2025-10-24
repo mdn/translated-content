@@ -2,14 +2,12 @@
 title: hyphens
 slug: Web/CSS/hyphens
 l10n:
-  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
+  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
-
-{{CSSRef}}
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
 
-{{InteractiveExample("CSS Demo: hyphens")}}
+{{InteractiveExample("CSS デモ: hyphens")}}
 
 ```css interactive-example-choice
 hyphens: none;
@@ -31,7 +29,7 @@ hyphens: auto;
 
 ```css interactive-example
 #example-element {
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   font-size: 1.5rem;
   text-align: left;
   width: 7rem;
@@ -41,7 +39,7 @@ hyphens: auto;
 > [!NOTE]
 > 上記のデモでは、 "An extra­ordinarily long English word!" に非表示の `&shy;` （ソフトハイフン）の文字が含まれており、 `An extra&shy;­ordinarily long English word!` のようになっています。この文字は `hyphens: manual;` が指定された場合にハイフンを挿入することができる位置を示しています。
 
-ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性を使用する必要があります。
+ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性を使用する必要があります。
 
 > [!NOTE]
 > どのようにハイフネーションを行うかの規則は仕様書で明確に定義されていないため、厳密なハイフネーションの方式はブラウザーにより異なります。
@@ -75,9 +73,11 @@ hyphens: unset;
 - `auto`
   - : ブラウザーは自身が選択した規則に従って、ハイフネーションを行うのに適切な位置で自動的に単語を分割します。しかし、改行候補位置 ([改行候補位置の提案](#改行候補位置の提案)を参照) があれば、自動的な改行位置の選択を上書きします。
 
-> **メモ:** `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
+> [!NOTE]
+> `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
 
-> **メモ:** [`word-break: break-all`](/ja/docs/Web/CSS/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
+> [!NOTE]
+> [`word-break: break-all`](/ja/docs/Web/CSS/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
 
 ## 改行候補位置の提案
 
@@ -89,7 +89,7 @@ hyphens: unset;
   - : 不可視の「ソフト」ハイフン ("**s**oft" **hy**phen) です。この文字は表示されませんが、ブラウザーが必要に応じて単語を分割できる位置を示します。 HTML では、 `&shy;` を使用してソフトハイフンを挿入することができます。
 
 > [!NOTE]
-> HTML の [`<wbr>`](/ja/docs/Web/HTML/Element/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
+> HTML の [`<wbr>`](/ja/docs/Web/HTML/Reference/Elements/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
 
 ## 公式定義
 
@@ -153,6 +153,6 @@ dd.auto {
 ## 関連情報
 
 - {{Cssxref("content")}}
-- {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
+- {{cssxref("overflow-wrap")}} （以前の `word-wrap`）
 - {{cssxref("word-break")}}
 - [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

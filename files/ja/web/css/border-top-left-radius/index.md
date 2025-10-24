@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 **`border-top-left-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティは、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の左上の角を丸くします。
 
-{{InteractiveExample("CSS Demo: border-top-left-radius")}}
+{{InteractiveExample("CSS デモ: border-top-left-radius")}}
 
 ```css interactive-example-choice
 border-top-left-radius: 80px 80px;
@@ -57,7 +55,7 @@ background-clip: content-box;
 背景は、画像または単色ですが、丸みがあっても境界で切り取られます。切り取られる正確な位置は、 {{cssxref("background-clip")}} プロパティの値で定義されます。
 
 > [!NOTE]
-> このプロパティの値が `border-top-left-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)によって初期値にリセットされます。
+> このプロパティの値が `border-top-left-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)によって初期値にリセットされます。
 
 ## 構文
 

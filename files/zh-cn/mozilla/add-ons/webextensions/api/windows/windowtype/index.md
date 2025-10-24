@@ -1,29 +1,29 @@
 ---
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
+l10n:
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
-
-{{AddonSidebar}}
 
 浏览器窗口的类型。
 
-## Type
+## 类型
 
-类型的值是字符串类型。可能的值如下：
+该类型的取值是 `string`，可能取值包括：
 
 - `"normal"`
 - `"popup"`
 - `"panel"`
 - `"devtools"`
 
-## 浏览器适配
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowType) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

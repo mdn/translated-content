@@ -92,8 +92,7 @@ filter: 'all' | 'active' | 'done' = 'all';
 - [Введение в клиентские фреймворки](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 - [Основные функции фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
-
-  - [Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Начало работы с React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - [Начало создания приложения списка дел с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [Компоненты React-приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [Интерактивность React: события и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
@@ -102,7 +101,6 @@ filter: 'all' | 'active' | 'done' = 'all';
   - [Ресурсы по React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
-
   - [Начало работы с Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
   - [Структура Ember-приложения и компоненты](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
   - [Интерактивность Ember: события, классы и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
@@ -111,7 +109,6 @@ filter: 'all' | 'active' | 'done' = 'all';
   - [Ресурсы по Ember и устранение неполадок](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
-
   - [Начало работы с Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - [Создание вашего первого компонента Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - [Отрисовка списка Vue-компонентов](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
@@ -123,7 +120,6 @@ filter: 'all' | 'active' | 'done' = 'all';
   - [Ресурсы по Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
-
   - [Начало работы со Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
   - [Начинаем приложение списка дел c использованием Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - [Динамическое поведение в Svelte: работа с переменными и пропсами](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
@@ -134,10 +130,9 @@ filter: 'all' | 'active' | 'done' = 'all';
   - [Развёртывание и следующие шаги](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
 
 - Angular
-
-  - [Начало работы с Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Стилизация Angular-приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Создание компонента элемента (item component)](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Фильтрация списка дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Сборка Angular-приложений и другие ресурсы](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
+  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
+  - [Стилизация Angular-приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
+  - [Создание компонента элемента (item component)](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
+  - [Фильтрация списка дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
+  - [Сборка Angular-приложений и другие ресурсы](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)

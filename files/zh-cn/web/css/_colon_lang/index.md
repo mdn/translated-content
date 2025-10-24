@@ -3,8 +3,6 @@ title: :lang()
 slug: Web/CSS/:lang
 ---
 
-{{CSSRef}}
-
 **`:lang()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素语言来匹配页面元素。
 
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
@@ -28,7 +26,7 @@ slug: Web/CSS/:lang
 ```
 
 > [!NOTE]
-> 在 HTML 中，语言是通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 标头）。对于其他文档类型，也可能存在其他用于确定语言的方法。
+> 在 HTML 中，语言是通过 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 标头）。对于其他文档类型，也可能存在其他用于确定语言的方法。
 
 ## 语法
 
@@ -92,6 +90,6 @@ slug: Web/CSS/:lang
 ## 参见
 
 - 语言相关伪类：{{ cssxref(":lang") }}、{{ cssxref(":dir") }}
-- HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性
-- HTML [`translate`](/zh-CN/docs/Web/HTML/Global_attributes#translate) 属性
+- HTML [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性
+- HTML [`translate`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#translate) 属性
 - {{RFC(5646, "用于标识语言的标签（也称为 BCP 47）")}}

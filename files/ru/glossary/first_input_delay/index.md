@@ -12,4 +12,4 @@ slug: Glossary/First_input_delay
 ## Смотрите также
 
 - [requestIdleCallback](/ru/docs/Web/API/Window/requestIdleCallback)
-- [lazy loading](/ru/docs/Web/Performance/Lazy_loading)
+- [lazy loading](/ru/docs/Web/Performance/Guides/Lazy_loading)

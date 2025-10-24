@@ -2,10 +2,8 @@
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Reference/Status/407
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`407 Proxy Authentication Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示請求不成功，因為網站缺少對於位於用戶端與可訪問所請求資源的伺服器之間的{{Glossary("proxy server", "代理伺服器")}}的有效認證憑證。
 

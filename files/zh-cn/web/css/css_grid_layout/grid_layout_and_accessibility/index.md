@@ -3,8 +3,6 @@ title: CSS 网格布局和无障碍
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 ---
 
-{{CSSRef}}
-
 我们这些做 web 开发多年的人和比我们更早入行的人，可能都觉得 CSS 网格有一点像曾经用过的“表格布局”。在 web 设计的早期，构建页面布局的方式是使用 HTML 表格，通过把设计分割成表格的单元格来创建布局。这比后来的“CSS 定位”的优势在于，可以利用表格显示能力提供的对齐和全高度的列。最大的负面影响在于它将设计和 HTML 标记绑在一起，经常会造成无障碍的问题。为了将设计摆到表格中，内容被打散了，如果用屏幕阅读器去读它，读出来的内容就是毫无意义的。
 
 在转向 CSS 布局时，我们经常说 CSS 把内容标记与内容表现分离了。最终的目标是，我们可以创建一个语义和结构良好的文档，然后应用 CSS 来创建我们想要的布局。[CSS Zen Garden](http://www.csszengarden.com/) 等网站展示了这种能力，[CSS Zen Garden](http://www.csszengarden.com/) 提供的挑战是，对于一个具有固定标记的 HTML 页面，却能用 CSS 来创建各种独特的设计。
@@ -17,7 +15,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 
 [CSS 网格布局规范](https://drafts.csswg.org/css-grid/#order-accessibility)包括一个涵盖重新排序和无障碍的部分。该部分详细介绍了当使用网格布局对内容进行可视化重新排序时，规范期望浏览器执行的操作。
 
-> 网格布局赋予了 web 开发者重新排列文档内容的强大能力，但是，这并不能取代 HTML 源代码中自身的排序。order 属性和网格定位不影响非可视媒体（例如语音）的排序。同样，可视化地重新排列网格项目不会影响顺序导航模式的默认遍历顺序（例如通过 TAB 键循环选取链接，参见 [tabindex](/zh-CN/docs/Web/HTML/Global_attributes/tabindex) HTML5）。
+> 网格布局赋予了 web 开发者重新排列文档内容的强大能力，但是，这并不能取代 HTML 源代码中自身的排序。order 属性和网格定位不影响非可视媒体（例如语音）的排序。同样，可视化地重新排列网格项目不会影响顺序导航模式的默认遍历顺序（例如通过 TAB 键循环选取链接，参见 [tabindex](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) HTML5）。
 
 虽然使用网格布局对内容进行了可视化重新排列，但是在通过屏幕阅读器或其他文本到语音的用户代理读取内容时，并不会改变项目的排列方式。另外，重新排序不会改变 tab 键顺序，这意味着使用键盘进行导航的用户，通过按 TAB 键来引导阅读顺序，但由于下一个项目是在源代码的下一行，而这个项目正好被重新排序过，那他就会从网站的顶部一下子跳转到网站的底部。
 

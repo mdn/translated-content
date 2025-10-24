@@ -8,11 +8,11 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`autocomplete`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、ブラウザーによってコントロールの値が自動的に補完できるかどうかを示します。これは、{{htmlelement("input")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を反映します。
+**`autocomplete`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、ブラウザーによってコントロールの値が自動的に補完できるかどうかを示します。これは、{{htmlelement("input")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性を反映します。
 
 ## 値
 
-文字列です。`autocomplete` 属性の値 (`"on"`, `"off"`, [`<token-list>`](/ja/docs/Web/HTML/Attributes/autocomplete#token_list_tokens))、または指定されていない場合は空文字列 `""` です。
+文字列です。`autocomplete` 属性の値 (`"on"`, `"off"`, [`<token-list>`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens))、または指定されていない場合は空文字列 `""` です。
 
 ## 例
 
@@ -33,6 +33,6 @@ console.log(inputElement.autocomplete);
 
 - {{HTMLElement("input")}}
 - {{DOMxRef("HTMLInputElement.value")}}
-- HTML の [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性
-- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性
+- HTML の [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性
+- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性
 - [自動補完の無効化](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)

@@ -157,7 +157,6 @@ Mac では、"Ctrl" は"Command" と翻訳され、実際の "Ctrl"が必要な�
 - **modifier** (ファンクションキー以外では必須)。これは次のいずれかです: "Ctrl", "Alt", "Command", "MacCtrl".
 - **secondary modifier** (オプション)。指定する場合は"Shift"でなければなりません。
 - **key** (必須)。これは次のいずれかです:
-
   - A-Z の範囲の文字
   - 0-9 の範囲の数字
   - ファンクションキー F1-F12

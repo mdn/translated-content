@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の {{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
+**`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の {{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
 
 ## 値
 
@@ -28,7 +28,6 @@ l10n:
 - `strict-origin-when-cross-origin` (default)
   - : これは、ポリシーが指定されていない場合のユーザーエージェントの既定の動作です。同一オリジンリクエストを行う場合は完全な URL を送信し、プロトコルのセキュリティレベルが変わらない場合はオリジンのみを送信し（例: HTTPS→HTTPS）、セキュリティレベルの低い宛先にはヘッダーを送信しません（例: HTTPS→HTTP）。
 - `unsafe-url`
-
   - : 同一オリジンまたはオリジン間リクエストを実行するときに、完全な URL を送信します。
 
     > [!NOTE]

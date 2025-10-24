@@ -2,10 +2,10 @@
 title: "Permissions-Policy: web-share"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/web-share
 l10n:
-  sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader('Permissions-Policy')}} 标头的 `web-share` 指令控制当前文档是否允许使用 Web Share API 的 {{domxref("Navigator.share","Navigator.share()")}} 方法将文本、链接、图像和其他内容分享到用户选择的任意目标。
 

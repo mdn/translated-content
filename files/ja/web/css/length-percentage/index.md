@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
-**`<length-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("length")}} または {{Cssxref("percentage")}} が取りうる値を表します。
+**`<length-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 {{Cssxref("length")}} または {{Cssxref("percentage")}} が取りうる値を表します。
 
 ## 構文
 
@@ -78,4 +76,4 @@ width: calc(100% - 200px);
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;length&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)

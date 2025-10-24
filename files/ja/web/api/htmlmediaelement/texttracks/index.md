@@ -10,7 +10,7 @@ l10n:
 
 **`textTracks`** は {{DOMxRef("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、メディア要素のテキストトラックを表す {{DOMxRef("TextTrackList")}} オブジェクトをすべて、テキストトラックのリストと同じ順序で掲載しているオブジェクトを返します。
 
-`addtrack` と `removetrack` イベントを使用すると、[`<audio>`](/ja/docs/Web/HTML/Element/audio) や [`<video>`](/ja/docs/Web/HTML/Element/video) 要素へのトラックの追加や削除を検出することができます。しかし、これらのイベントはメディア要素自体に直接送られるわけではありません。代わりに、要素に追加されたトラックの種類に対応する [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) のトラックリストオブジェクトに送られます。
+`addtrack` と `removetrack` イベントを使用すると、[`<audio>`](/ja/docs/Web/HTML/Reference/Elements/audio) や [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素へのトラックの追加や削除を検出することができます。しかし、これらのイベントはメディア要素自体に直接送られるわけではありません。代わりに、要素に追加されたトラックの種類に対応する [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) のトラックリストオブジェクトに送られます。
 
 返されたリストは生きています。つまり、メディア要素にトラックが追加されたり削除されたりすると、リストのコンテンツは動的に変更されます。一度リストへの参照を保有すると、新しいテキストトラックが追加されたり、既存のものが削除されたりしたときにそれを検出するために、変更を監視することができます。
 
@@ -24,7 +24,7 @@ l10n:
 
 ## 例
 
-[`<video>`](/ja/docs/Web/HTML/Element/video) に子要素としていくつかの [`<track>`](/ja/docs/Web/HTML/Element/track) が含まれているものから始めましょう。
+[`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) に子要素としていくつかの [`<track>`](/ja/docs/Web/HTML/Reference/Elements/track) が含まれているものから始めましょう。
 
 ```html
 <video controls poster="/images/sample.gif">

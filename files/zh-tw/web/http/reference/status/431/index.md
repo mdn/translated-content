@@ -2,10 +2,8 @@
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Reference/Status/431
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`431 Request Header Fields Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕處理請求，因為請求的 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)過長。可以在減小請求標頭的大小後重新提交請求。
 

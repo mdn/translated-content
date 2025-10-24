@@ -7,7 +7,54 @@ slug: Web/CSS/grid-column-end
 
 La propriété **`grid-column-end`** définit la position de la fin d'un élément de la grille dans une zone donnée ou sur un fragment de colonne donné.
 
-{{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
+{{InteractiveExample("CSS Demo: grid-column-end")}}
+
+```css interactive-example-choice
+grid-column-end: auto;
+```
+
+```css interactive-example-choice
+grid-column-end: 3;
+```
+
+```css interactive-example-choice
+grid-column-end: -1;
+```
+
+```css interactive-example-choice
+grid-column-end: span 3;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Syntaxe
 
@@ -38,7 +85,6 @@ grid-column-end: unset;
 - `auto`
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'objet sur la grille. Par défaut, la taille du fragment allouée vaut `1` s'il n'y a pas d'autres contraintes.
 - `<custom-ident>`
-
   - : S'il existe une ligne nommée '\<custom-ident>-end', cela placera l'élément sur la première ligne correspondante..
 
     > [!NOTE]
@@ -47,13 +93,11 @@ grid-column-end: unset;
     Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
 - `<integer> && <custom-ident>?`
-
   - : Contribue au placement de l'élément sur la n-ième ligne. Si une valeur négative est fournie, les lignes correspondantes sont comptées depuis la dernière. Si un nom est fourni pour \<custom-ident>, seules les lignes avec ce nom sont comptées. S'il n'y a pas suffisamment de lignes avec ce nom, on considère que toutes les lignes sont intitulées avec ce nom afin de trouver une position.
 
     Un entier nul ne peut pas être utilisé (la règle est invalide).
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que la fin de la colonne pour l'élément de la grille soit placé à n lignes du bord situé au début.
 
     Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.

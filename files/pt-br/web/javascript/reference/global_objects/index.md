@@ -11,7 +11,7 @@ Este capítulo documenta todos os objetos nativos do JavaScript padrão, assim c
 
 O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de **objeto global**. Aqui, objetos globais se referem aos **objetos no escopo global** (somente se o modo estrito/_strict mode_ do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O **objeto global** pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global **consiste em** propriedades do objeto global, incluindo propriedades herdadas, se houver.
 
-Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/Web/API/Document_Object_Model) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/Web/API/Document_Object_Model) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Objetos padrão (por categoria)
 

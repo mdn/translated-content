@@ -1,13 +1,13 @@
 ---
 title: border-inline-start
 slug: Web/CSS/border-inline-start
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+**`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
 
-**`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
-
-{{InteractiveExample("CSS Demo: border-inline-start")}}
+{{InteractiveExample("CSS デモ: border-inline-start")}}
 
 ```css interactive-example-choice
 border-inline-start: solid;
@@ -28,7 +28,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -63,6 +63,7 @@ border-inline-start: medium dashed green;
 border-inline-start: inherit;
 border-inline-start: initial;
 border-inline-start: revert;
+border-inline-start: revert-layer;
 border-inline-start: unset;
 ```
 
@@ -78,8 +79,8 @@ border-inline-start: unset;
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
 - `<'border-style'>`
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
@@ -89,13 +90,13 @@ border-inline-start: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -114,7 +115,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("例", 140, 140)}}
 
 ## 仕様書
 
@@ -126,5 +127,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のうちの 1 つに対応づけられます。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

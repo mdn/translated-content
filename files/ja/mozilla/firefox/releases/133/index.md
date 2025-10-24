@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 66fa0acf565a240c390418f588d571d6e650514d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 133 の変更点をまとめています。Firefox 133 は、米国時間 [2024 年 11 月 26 日](https://whattrainisitnow.com/release/?version=133) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Viewport_meta_tag) で [`interactive-widgets`](/ja/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
+- [`<meta>` の `viewport` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport) で [`interactive-widgets`](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
 
 ### CSS
 
@@ -24,7 +22,6 @@ l10n:
 - {{jsxref("Uint8Array")}} で、{{glossary("base64")}} や 16 進数表記でエンコードされた文字列とバイト配列の間の変換を容易にするメソッドをサポートしました ([Firefox bug 1917885](https://bugzil.la/1917885)、[Firefox bug 1862220](https://bugzil.la/1862220))。
 
   新しいメソッドは以下のとおりです:
-
   - {{jsxref("Uint8Array.fromBase64()")}} および {{jsxref("Uint8Array.fromHex()")}} 静的メソッド。それぞれ、base64 や 16 進数表記でエンコードされた文字列から新しい `Uint8Array` オブジェクトを構築します。
   - {{jsxref("Uint8Array.prototype.setFromBase64()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} インスタンスメソッド。base64 や 16 進数表記でエンコードされた文字列からバイト値を、既存の `Uint8Array` オブジェクトに追加します。
   - {{jsxref("Uint8Array.prototype.toBase64()")}}、{{jsxref("Uint8Array.prototype.toHex()")}} インスタンスメソッド。`Uint8Array` オブジェクトにあるデータから、base64 や 16 進数表記でエンコードされた文字列を返します。
@@ -38,11 +35,11 @@ l10n:
 - {{domxref('Window.fetch','fetch()')}} グローバルメソッドおよび [`Request()` コンストラクター](/ja/docs/Web/API/Request/Request#options) で [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) 初期化オプションをサポートしました。また、{{domxref("Request.keepalive")}} プロパティもサポートしました。`keepalive` を `true` に設定すると、リクエストが完了する前にリクエストを開始したページがアンロードされても、ブラウザーが関連するリクエストを中止することを防げます。
   たとえばユーザーが別のページへ移動したりページを閉じたりしても、セッションの最後に分析情報を送信するためにこの機能を利用できるでしょう。
 
-  `keepalive` を伴って `fetch()` を使用することは、同じ目的で {{domxref("Navigator.sendBeacon()")}} を使用するよりも、[`POST`](/ja/docs/Web/HTTP/Methods/POST) 以外の HTTP メソッドを利用できる、リクエストのプロパティをカスタマイズできる、読み込みの {{jsxref("Promise")}} のフルフィルメントを通してサーバーのレスポンスにアクセスできるといった長所があります。これは [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でも使用できます ([Firefox bug 1906952](https://bugzil.la/1906952)、[Firefox bug 1923044](https://bugzil.la/1923044)).
+  `keepalive` を伴って `fetch()` を使用することは、同じ目的で {{domxref("Navigator.sendBeacon()")}} を使用するよりも、[`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) 以外の HTTP メソッドを利用できる、リクエストのプロパティをカスタマイズできる、読み込みの {{jsxref("Promise")}} のフルフィルメントを通してサーバーのレスポンスにアクセスできるといった長所があります。これは [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でも使用できます ([Firefox bug 1906952](https://bugzil.la/1906952)、[Firefox bug 1923044](https://bugzil.la/1923044)).
 
 - {{htmlelement("audio")}}/{{htmlelement("video")}} 要素に、`waitingforkey` イベントのインラインイベントハンドラーを設定するための [`onwaitingforkey`](/ja/docs/Web/API/HTMLMediaElement/waitingforkey_event) コンテンツ属性を指定可能になりました ([Firefox bug 1925952](https://bugzil.la/1925952))。
 - {{domxref("WorkerNavigator.serviceWorker")}} を通してすべてのワーカーコンテキストに {{domxref("ServiceWorkerContainer")}} を公開しました。現在のオリジンに関連する {{domxref("ServiceWorkerRegistration","service worker registrations","","nocode")}} を、ワーカーが調査および管理できます。以前はメインスレッドに限り、{{domxref("Navigator.serviceWorker")}} を通して `ServiceWorkerContainer` を使用可能でした ([Firefox bug 1113522](https://bugzil.la/1113522))。
-- 仕様書に合わせて、`PerformanceNavigationTiming` の [`name`](/ja/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) プロパティが [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments) を除外するようになりました。この種類の {{domxref("PerformanceResourceTiming")}} オブジェクトは、{{domxref("PerformanceEntry/entryType", "entryType")}} が `navigation` であるエントリーに対して {{domxref("Performance.getEntries()")}} によって返されます ([Firefox bug 1919565](https://bugzil.la/1919565))。
+- 仕様書に合わせて、`PerformanceNavigationTiming` の [`name`](/ja/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) プロパティが [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments) を除外するようになりました。この種類の {{domxref("PerformanceResourceTiming")}} オブジェクトは、{{domxref("PerformanceEntry/entryType", "entryType")}} が `navigation` であるエントリーに対して {{domxref("Performance.getEntries()")}} によって返されます ([Firefox bug 1919565](https://bugzil.la/1919565))。
 
 #### 廃止
 
@@ -76,7 +73,7 @@ l10n:
 
 - **contenteditable の値 plaintext-only:** `dom.element.contenteditable.plaintext-only.enabled`。
 
-  [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素が編集可能であるがリッチテキスト形式が無効であり、貼り付けられたテキストの書式が自動的に除去されることを示します ([Firefox bug 1922723](https://bugzil.la/1922723))。
+  [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素が編集可能であるがリッチテキスト形式が無効であり、貼り付けられたテキストの書式が自動的に除去されることを示します ([Firefox bug 1922723](https://bugzil.la/1922723))。
 
 - **:has-slotted CSS 擬似クラス:** `layout.css.has-slotted-selector.enabled`。
 

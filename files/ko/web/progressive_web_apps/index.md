@@ -28,8 +28,8 @@ PWA는 발견 가능, 설치 가능, 연결 가능해야 하고, 네트워크에
 - [Application Shell 구조를 사용한 웹 앱 즉시 로딩](https://developers.google.com/web/updates/2015/11/app-shell) — App Shell 코딩 패턴을 사용해 빠르게 로딩되는 앱을 생성하는 가이드.
 - [Push API 사용](/ko/docs/Web/API/Push_API) — Web Push API의 기초에 대해 배우기.
 - [Notifications API 사용](/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API) — 웹 알림 요약.
-- [반응형 디자인 블록 구축](/ko/docs/Learn/CSS/CSS_layout/Responsive_Design) — 반응형 디자인 기초, 최신 앱 레이아웃 필수 주제 배우기.
-- [모바일 우선](/ko/docs/Learn/CSS/CSS_layout/Responsive_Design) — 반응형 어플리케이션 레이아웃을 생성할 때, 보통 기본적으로 모바일 레이아웃을 생성하고, 더 넓은 상단 레이아웃을 구축하는 것이 좋습니다.
+- [반응형 디자인 블록 구축](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) — 반응형 디자인 기초, 최신 앱 레이아웃 필수 주제 배우기.
+- [모바일 우선](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) — 반응형 어플리케이션 레이아웃을 생성할 때, 보통 기본적으로 모바일 레이아웃을 생성하고, 더 넓은 상단 레이아웃을 구축하는 것이 좋습니다.
 - [홈 화면에 추가 가이드](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) — 앱을 홈 화면에 추가하여 얻을 수 있는 이점에 대해 배우기.
 
 ## 도구

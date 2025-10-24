@@ -81,5 +81,5 @@ API доступа к файлам и директориям имитирует 
 
 ## Смотрите также
 
-- [Introduction to the File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/ru/docs/Web/API/File_System_API)
 - [File and Directory Entries API support in Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

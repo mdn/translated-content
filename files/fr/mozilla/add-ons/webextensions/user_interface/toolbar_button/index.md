@@ -11,7 +11,7 @@ Une action du navigateur est un bouton que vous pouvez ajouter à la barre d'out
 
 Il existe deux façons de spécifier une action du navigateur : avec une [fenêtre contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups), ou sans fenêtre contextuelle.
 
-Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de [`browserAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
+Si vous ne spécifiez pas de popup, alors lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que vous pouvez écouter à l'aide de [`browserAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);

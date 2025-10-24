@@ -5,14 +5,15 @@ l10n:
   sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-**`scroll()`** は [CSS 関数](/ja/docs/Web/CSS/CSS_Functions)で、 {{cssxref("animation-timeline")}} と共に使用することができます。 {{cssxref("animation-timeline")}} はスクロール可能な要素 (_scroller_) とスクロールバーの軸を示し、現在の要素をアニメーションさせるための無名スクロール進行タイムラインを提供します。スクロール進行タイムラインは、スクローラーを上下（または左右）にスクロールすることで進行します。スクロール範囲内の位置は進行のパーセント値に変換されます。先頭は 0% で、末尾は 100% です。
+**`scroll()`** は [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 {{cssxref("animation-timeline")}} と共に使用することができます。 {{cssxref("animation-timeline")}} はスクロール可能な要素 (_scroller_) とスクロールバーの軸を示し、現在の要素をアニメーションさせるための無名スクロール進行タイムラインを提供します。スクロール進行タイムラインは、スクローラーを上下（または左右）にスクロールすることで進行します。スクロール範囲内の位置は進行のパーセント値に変換されます。先頭は 0% で、末尾は 100% です。
 
 > [!NOTE]
 > 示された軸がスクロールバーを持たない場合、アニメーションタイムラインは非アクティブになります（進行がゼロになります）。
 
-> **メモ:** `scroll()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ScrollTimeline")}} の固有のインスタンスが対応付けられます。
+> [!NOTE]
+> `scroll()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ScrollTimeline")}} の固有のインスタンスが対応付けられます。
 
 ## 構文
 
@@ -40,9 +41,7 @@ animation-timeline: scroll(x self);
 ### 引数
 
 - スクローラー
-
   - : スクロール進行タイムラインを提供するスクローラー要素を示す値には、以下のいずれかを指定します。
-
     - `nearest`
       - : どちらかの軸にスクロールバーを持つ、現在の要素の最も近い祖先。これが既定値です。
     - `root`
@@ -51,9 +50,7 @@ animation-timeline: scroll(x self);
       - : 現在の要素自身です。
 
 - 軸
-
   - : スクロールバー軸の値は以下のいずれかになります。
-
     - `block`
       - : スクロールコンテナーのブロック軸にあるスクロールバーで、行内のテキストの流れに垂直な方向の軸です。標準的な英語のような横書きモードでは `y` と同じになり、縦書きモードでは `x` と同じになります。これが既定値です。
     - `inline`

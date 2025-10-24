@@ -5,11 +5,9 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`padding-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における左側の幅を設定します。
 
-{{InteractiveExample("CSS Demo: padding-left")}}
+{{InteractiveExample("CSS デモ: padding-left")}}
 
 ```css interactive-example-choice
 padding-left: 1.5em;
@@ -56,7 +54,8 @@ padding-left: 0;
 
 要素のパディング領域とは、コンテンツと境界との間の領域のことです。
 
-> **メモ:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
+> [!NOTE]
+> {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
 ## 構文
 
@@ -84,7 +83,7 @@ padding-left: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で表したものです。負の数であってはいけません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 

@@ -28,9 +28,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, { insert: true });
 - `tabId` {{optional_inline}}
   - : `integer.` L'`ID` de l'onglet qui succédera au dernier onglet du tableau `tabIds`. Si cet `ID` est invalide ou {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, le dernier onglet n'aura pas de successeur. Par défaut {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}
-
   - : `object`.
-
     - `append` {{optional_inline}}
       - : `boolean`. Détermine s'il faut déplacer les onglets dans les `tabIds` avant ou après `tabId` dans la succession. Si `false`, les onglets sont déplacés avant `tabId`, si `true`, les onglets sont déplacés après `tabId`. Par défaut à `false`.
     - `insert` {{optional_inline}}

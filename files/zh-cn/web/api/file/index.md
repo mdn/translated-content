@@ -2,7 +2,7 @@
 title: File
 slug: Web/API/File
 l10n:
-  sourceCommit: 58d79e9c2206e0a604cd4d7f6fba5181262af420
+  sourceCommit: 0a24354d9ac0cac0b9c6f47de27cbf758c9f32f4
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}

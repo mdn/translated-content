@@ -29,7 +29,6 @@ l10n:
 - {{domxref("TouchEvent.touches","touches")}} - 現在画面上にあるすべてのタッチ点のリストです。
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - ターゲット DOM 要素上のタッチ点のリストです。
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - 関連するイベント種別に依存する項目を持つタッチ点のリストです。
-
   - {{domxref("Element/touchstart_event", "touchstart")}} イベントにおいては、現在のイベントでアクティブになったタッチ点のリストです。
   - {{domxref("Element/touchmove_event", "touchmove")}} イベントにおいては、前回のイベント以降に変更されたタッチ点のリストです。
   - {{domxref("Element/touchend_event", "touchend")}} イベントにおいては、表面から除去されたタッチ点のリスト（つまり、表面に触れなくなった指に対応するタッチ点の集合）です。
@@ -119,7 +118,7 @@ function process_touchmove(ev) {
 
 ## 実装と展開状況
 
-[タッチイベントのブラウザ互換性データ](/ja/docs/Web/API/Touch_events#ブラウザーの互換性)によると、モバイルブラウザーのタッチイベント対応は相対的に広く、デスクトップブラウザーの対応は遅れていますが、追加実装は進行中です。
+[タッチイベントのブラウザー互換性データ](/ja/docs/Web/API/Touch_events#ブラウザーの互換性)によると、モバイルブラウザーのタッチイベント対応は相対的に広く、デスクトップブラウザーの対応は遅れていますが、追加実装は進行中です。
 
 タッチ点の[タッチ領域](/ja/docs/Web/API/Touch#タッチ領域) - ユーザーとタッチ面の接触の領域 - に関するいくつかの新しい機能が標準化されつつあります。新しい機能には、タッチ点とタッチ面の接触面積を最も近く囲む楕円の半径 _X_ と _Y_ が含まれています。また、タッチ点の回転角度（記述されている楕円を何度回転させ、接触領域に配置するか）も標準化され、タッチ点にかかる圧力も標準化されています。
 

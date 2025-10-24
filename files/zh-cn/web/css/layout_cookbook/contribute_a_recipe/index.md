@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0ea79e9c21f720ad71d1a0e8a524e13bd7af6895
 ---
 
-{{CSSRef}}
-
 如果你愿意为布局手册贡献示例，那么本页将通过阐释步骤指导你发布示例。
 
 ## 好的方案是怎样的？
@@ -18,7 +16,6 @@ l10n:
 - 一个实时示例，存储在 [CSS 示例 GitHub 存储库](https://github.com/mdn/css-examples)之中。
 - 这份示例的可供下载版本，同样也存储在 CSS 示例仓库之中。
 - 在本站 [CSS 布局手册](/zh-CN/docs/Web/CSS/Layout_cookbook)中的页面应包含以下组成部分：
-
   1. 介绍
   2. 要求
   3. 方案

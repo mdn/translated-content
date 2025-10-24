@@ -58,7 +58,7 @@ for (const [prop, val] of defaultComputedStyles) {
 }
 ```
 
-`computedStyleMap()` メソッドは {{domxref('StylePropertyMapReadOnly')}} オブジェクトを返し、この [`size`](/ja/docs/Web/API/StylePropertyMapReadOnly/size) プロパティはマップ内にいくつプロパティを持つかを示します。スタイルマップを反復処理し、それぞれのプロパティと値に対して [`<dt>`](/ja/docs/Web/HTML/Element/dt) と [`<dd>`](/ja/docs/Web/HTML/Element/dd) をそれぞれ作成します。
+`computedStyleMap()` メソッドは {{domxref('StylePropertyMapReadOnly')}} オブジェクトを返し、この [`size`](/ja/docs/Web/API/StylePropertyMapReadOnly/size) プロパティはマップ内にいくつプロパティを持つかを示します。スタイルマップを反復処理し、それぞれのプロパティと値に対して [`<dt>`](/ja/docs/Web/HTML/Reference/Elements/dt) と [`<dd>`](/ja/docs/Web/HTML/Reference/Elements/dd) をそれぞれ作成します。
 
 #### 結果
 
@@ -325,7 +325,7 @@ const allComputedStyles = document.querySelector("button").computedStyleMap();
 
 ### CSSUnparsedValue
 
-{{domxref('CSSUnparsedValue')}} は[カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)を表しています。
+{{domxref('CSSUnparsedValue')}} は[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を表しています。
 
 ```js
 // CSSUnparsedValue
@@ -346,7 +346,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-[`<button>`](/ja/docs/Web/HTML/Element/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
+[`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
 
 この `width` を `get()` すると、[`CSSMathSum`](/ja/docs/Web/API/CSSMathSum) が返されます。 {{domxref('CSSMathSum.values')}} は {{domxref('CSSNumericArray')}} で、 2 つの `CSSUnitValues` があります。
 

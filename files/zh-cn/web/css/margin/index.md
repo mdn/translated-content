@@ -3,8 +3,6 @@ title: margin
 slug: Web/CSS/margin
 ---
 
-{{CSSRef}}
-
 **`margin`** 属性为给定元素设置所有四个（上右下左）方向的外边距属性。也就是 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
 {{InteractiveExample("CSS Demo: margin")}}
@@ -63,10 +61,14 @@ margin: 0;
 }
 ```
 
-上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/Replaced_element)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
+## 组成属性
 
-> [!NOTE]
-> 外边距控制的是元素外部空出的空间。相反，{{cssxref("padding")}} 操作元素*内部*空出的空间。
+此属性是以下 CSS 属性的简写：
+
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
 
 ## 语法
 
@@ -192,5 +194,5 @@ margin: auto; /* 上边和下边：无外边距 */
 
 - [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
-- 逻辑相关的属性：{{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}，和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
+- 逻辑相关的属性：{{cssxref("margin-block-start")}}、{{cssxref("margin-block-end")}}、{{cssxref("margin-inline-start")}} 和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}

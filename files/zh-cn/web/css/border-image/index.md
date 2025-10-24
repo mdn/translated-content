@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
-{{CSSRef}}
-
 **`border-image`** [CSS](/zh-CN/docs/Web/CSS) 属性在给定元素的周围绘制图像，取代元素的常规[边框](/zh-CN/docs/Web/CSS/border)。
 
 {{InteractiveExample("CSS Demo: border-image")}}
@@ -96,7 +94,7 @@ border-image: unset;
 `border-image` 属性可以用下面列出的 1 到 5 个值中的任意值指定。
 
 > [!NOTE]
-> 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
+> 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
 
 ### 值
 

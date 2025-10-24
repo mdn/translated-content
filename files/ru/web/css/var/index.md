@@ -108,4 +108,4 @@ body {
 ## Смотрите также
 
 - {{cssxref("env()","env(…)")}} – доступные только для чтения переменные среды, контролируемые браузером
-- [Использование CSS-переменных](/ru/docs/Web/CSS/Using_CSS_custom_properties)
+- [Использование CSS-переменных](/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

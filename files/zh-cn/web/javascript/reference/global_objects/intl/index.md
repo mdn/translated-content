@@ -3,8 +3,6 @@ title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 
-{{JSRef}}
-
 **`Intl`** 对象是 ECMAScript 国际化 API 的一个命名空间，它提供了精确的字符串对比、数字格式化，和日期时间格式化。{{jsxref("Collator")}}，{{jsxref("NumberFormat")}} 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是 `Intl` 对象的属性。本页文档内容包括了这些属性，以及国际化使用的构造器和其他语言的方法等常见的功能。
 
 ## 属性
@@ -74,7 +72,6 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
 
 - 介绍：[The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - 构造函数
-
   - {{jsxref("Collator", "Intl.Collator")}}
   - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
   - {{jsxref("ListFormat", "Intl.ListFormat")}}
@@ -83,7 +80,6 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
   - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 
 - 方法
-
   - {{jsxref("String.prototype.localeCompare()")}}
   - {{jsxref("Number.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleString()")}}

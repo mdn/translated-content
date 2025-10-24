@@ -33,7 +33,7 @@ Com o que você aprendeu nas últimas lições, você deve perceber que pode for
 Você pode trabalhar com editor ao vivo abaixo, ou pode fazer o [download do ponto de partida](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) para trabalhar em seu próprio editor de texto. Esta é uma única página de HTML, além do ponto de partida no head do documento. Se preferir, você pode transferir este CSS para um arquivo separado quando criar o exemplo no seu computador. Ou ainda, você pode utilizar uma ferramenta online como por exemplo, o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar estas tarefas..
 
 > [!NOTE]
-> Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn/CSS/First_steps/Styling_a_biography_page#assessment_or_further_help) no final da página.
+> Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page#assessment_or_further_help) no final da página.
 
 ## Trabalhando com CSS
 
@@ -72,7 +72,6 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 
 1. Coloque seu trabalho num editor de texto compartilhado online tal como o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/).
 2. Escreva um post perguntando por avaliação e/ou ajuda em [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
-
    - Um título descritivo, tal como "Avaliação desejada para primeiros passos em CSS".
    - Detalhes do que você já tentou, e o que gostaria que ós fizéssemos, p.e. se você está emperrado e precisa de ajuda, ou se deseja uma avalição.
    - Um link para o exemplo que você deseja ser avaliadao ou precisa de ajuda, em um editor online compartilhado (como mencionado no passo 1 acima). Esta é uma boa prática a se desenvolver — é muito difícil ajudar alguém com um problema de computação se não é possível ver o código dessa pessoa.
@@ -80,6 +79,6 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 
 ## O que vem a seguir?
 
-Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/Learn/CSS/Building_blocks), iremos dar uma olhada com mais profundidade em várias áreas chave.
+Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333), iremos dar uma olhada com mais profundidade em várias áreas chave.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

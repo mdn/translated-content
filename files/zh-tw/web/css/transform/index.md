@@ -3,8 +3,6 @@ title: transform
 slug: Web/CSS/transform
 ---
 
-{{CSSRef}}
-
 **`transform`** [CSS](/zh-TW/docs/Web/CSS) 屬性可以讓你修改 CSS 可視化格式模型（visual formatting model）的空間維度。使用此屬性，元素可以被平移、旋轉、縮放和傾斜。
 
 {{InteractiveExample("CSS Demo: transform")}}
@@ -46,7 +44,7 @@ transform: scale(0.5) translate(-100%, -100%);
 如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
 
 > [!WARNING]
-> 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Element/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Element/colgroup)。
+> 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Reference/Elements/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup)。
 
 ## 語法
 

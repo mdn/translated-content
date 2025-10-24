@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
 **ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動ボックスが他の要素と相互作用する領域です。
 
 ブロック整形コンテキストは、以下のうちの少なくとも一つから生成されます。
@@ -231,9 +229,9 @@ section {
 - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

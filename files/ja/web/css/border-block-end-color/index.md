@@ -1,13 +1,13 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`border-block-end-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの終端側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-block-end-color")}}
+{{InteractiveExample("CSS デモ: border-block-end-color")}}
 
 ```css interactive-example-choice
 border-block-end-color: red;
@@ -32,7 +32,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -59,6 +59,7 @@ border-block-end-color: #f5f6f7;
 border-block-end-color: inherit;
 border-block-end-color: initial;
 border-block-end-color: revert;
+border-block-end-color: revert-layer;
 border-block-end-color: unset;
 ```
 
@@ -66,12 +67,12 @@ border-block-end-color: unset;
 
 ### 値
 
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -79,13 +80,13 @@ border-block-end-color: unset;
 
 ## 例
 
-<h3 id="Border_color_with_vertical_text">垂直テキストの境界線の色</h3>
+### 垂直テキストの境界線の色
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -107,7 +108,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_color_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("垂直テキストの境界線の色", 140, 140)}}
 
 ## 仕様書
 
@@ -119,5 +120,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} のうちの一つに対応づけられます
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

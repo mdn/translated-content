@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
-
-{{InteractiveExample("CSS Demo: matrix()")}}
+{{InteractiveExample("CSS デモ: matrix()")}}
 
 ```css interactive-example-choice
 transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
@@ -37,7 +35,8 @@ transform: matrix(0.1, 1, -0.3, 1, 0, 0);
 </section>
 ```
 
-> **メモ:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
+> [!NOTE]
+> `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
 
 ## 構文
 

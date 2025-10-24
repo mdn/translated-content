@@ -17,9 +17,7 @@ focus(options);
 ### Paramètres
 
 - `options` {{optional_inline}}
-
   - : Un objet optionnel qui fournit les options permettant de contrôler les aspects du focus. Cet objet peut contenir les propriétés suivantes&nbsp;:
-
     - `preventScroll` {{optional_inline}}
       - : Un booléen qui indique si le navigateur devrait défiler jusqu'à ce que l'élément qui a reçu le focus soit visible. S'il vaut `false` (la valeur par défaut), le navigateur défilera jusqu'à ce que l'élément soit visible après lui avoir donné le focus. Si `preventScroll` vaut `true`, aucun défilement n'aura lieu.
 
@@ -115,7 +113,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 - Si `HTMLElement.focus()` est appelé depuis un gestionnaire d'évènement pour `mousedown`, il faut appeler `event.preventDefault()` pour empêcher le focus de quitter l'élément
   `HTMLElement`.
-- Le comportement du focus par rapport aux fonctionnalités HTML comme [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex) ou [le <i lang="en">shadow dom</i>](/fr/docs/Glossary/Shadow_tree), qui était auparavant trop peu spécifié, a été mis à jour en octobre 2019. Voir [le blog WHATWG](https://blog.whatwg.org/focusing-on-focus) pour plus d'informations.
+- Le comportement du focus par rapport aux fonctionnalités HTML comme [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-tabindex) ou [le <i lang="en">shadow dom</i>](/fr/docs/Glossary/Shadow_tree), qui était auparavant trop peu spécifié, a été mis à jour en octobre 2019. Voir [le blog WHATWG](https://blog.whatwg.org/focusing-on-focus) pour plus d'informations.
 
 ## Compatibilité des navigateurs
 

@@ -3,8 +3,6 @@ title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
 
-{{CSSRef}}
-
 El descriptor `font-display` determina cómo se muestra una fuente basándose en cuándo está descargada y lista para usarse.
 
 ## La visualización de las fuentes
@@ -54,8 +52,8 @@ font-display: optional;
 @font-face {
   font-family: ExampleFont;
   src:
-    url(/path/to/fonts/examplefont.woff) format("woff"),
-    url(/path/to/fonts/examplefont.eot) format("eot");
+    url("/path/to/fonts/example-font.woff") format("woff"),
+    url("/path/to/fonts/example-font.eot") format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

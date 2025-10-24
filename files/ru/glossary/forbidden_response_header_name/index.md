@@ -5,7 +5,7 @@ slug: Glossary/Forbidden_response_header_name
 
 {{GlossarySidebar}}
 
-Запрещённое имя заголовка ответа это имя [HTTP заголовка](/ru/docs/Web/HTTP/Headers) (`Set-Cookie` или `Set-Cookie2`), который не может быть изменён программно.
+Запрещённое имя заголовка ответа это имя [HTTP заголовка](/ru/docs/Web/HTTP/Reference/Headers) (`Set-Cookie` или `Set-Cookie2`), который не может быть изменён программно.
 
 ## Смотрите также
 

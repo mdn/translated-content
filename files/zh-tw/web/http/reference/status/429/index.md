@@ -2,10 +2,8 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
 l10n:
-  sourceCommit: 332bbd7d5079f418175e68a13db8c38f4636cee9
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`429 Too Many Requests`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示用戶端在一定時間內發送了太多請求。要求用戶端降低請求頻率的這種機制通常被稱為「{{glossary("rate limit", "速率限制")}}」。
 

@@ -3,8 +3,6 @@ title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
-
 在常规的 HTTP 应答中，**`Content-Disposition`** 响应标头指示回复的内容该以何种形式展示，是以*内联*的形式（即网页或者页面的一部分），还是以*附件*的形式下载并保存到本地。
 
 在 `multipart/form-data` 类型的应答消息体中，**`Content-Disposition`** 通用标头可以被用在 multipart 消息体的子部分中，用来给出其对应字段的相关信息。各个子部分由在 {{HTTPHeader("Content-Type")}} 中定义的*边界*（boundary）分隔。用在消息体自身则无实际意义。
@@ -40,7 +38,7 @@ Content-Disposition: attachment; filename="filename.jpg"
 ```
 
 > [!NOTE]
-> 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Element/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
+> 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
 
 ### 作为多部分主体的标头
 
@@ -54,8 +52,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### 指令
 
 - `name`
-
-  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
+  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple) 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
 
     如果 `name` 参数的值为 `'_charset_'`，意味着这个子部分表示的不是一个 HTML 字段，而是在未明确指定字符集信息的情况下各部分使用的默认字符集。
 
@@ -64,7 +61,8 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 - `filename\*`
   - : `filename` 和 `filename*` 两个参数的唯一区别在于，`filename*` 采用了 [RFC 5987](https://tools.ietf.org/html/rfc5987) 中规定的编码方式。当 `filename` 和 `filename*` 同时出现的时候，应该优先采用 `filename*`，假如二者都支持的话。
 
-> **警告：** `filename` 参数后面的字符串应该始终用引号包裹。但由于兼容性原因，许多浏览器会尝试解析不带引号的带有空格的文件名。
+> [!WARNING]
+> `filename` 参数后面的字符串应该始终用引号包裹。但由于兼容性原因，许多浏览器会尝试解析不带引号的带有空格的文件名。
 
 ## 示例
 
@@ -110,7 +108,7 @@ value2
 ## 兼容性说明
 
 - 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5 可以更好地处理 `Content-Disposition` HTTP 响应标头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见 [Firefox bug 588781](https://bugzil.la/588781)。
-- Firefox 82（及更高版本）和 Chrome 优先考虑 HTML [\<a> 元素](/zh-CN/docs/Web/HTML/Element/a)的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)）。早期的 Firefox 版本优先考虑标头，并会内联显示内容。
+- Firefox 82（及更高版本）和 Chrome 优先考虑 HTML [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)）。早期的 Firefox 版本优先考虑标头，并会内联显示内容。
 
 ## 参见
 

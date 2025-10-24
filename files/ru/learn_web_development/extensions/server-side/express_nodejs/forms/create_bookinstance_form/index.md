@@ -162,5 +162,5 @@ The view structure and behaviour is almost the same as for the **book_form.pug**
 
 ## Next steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms).
-- Proceed to the next subarticle of part 6: [Delete Author form](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form).
+- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
+- Proceed to the next subarticle of part 6: [Delete Author form](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form).

@@ -9,9 +9,63 @@ La propriété **`margin`** définit la taille des marges sur les quatre côtés
 
 Il est possible d'utiliser des valeurs négatives pour chacun des côtés.
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
 
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/Replaced_element) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
+
+Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
 
 > [!NOTE]
 > Les marges créent un espace supplémentaire à l'extérieur de l'élément. Le _« remplissage »_ ({{cssxref("padding")}}) permet quant à lui de créer un espace supplémentaire à l'intérieur de l'élément.
@@ -138,5 +192,5 @@ Les marges haute et basse des éléments sont parfois fusionnées en une seule m
 ## Voir aussi
 
 - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Le modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}

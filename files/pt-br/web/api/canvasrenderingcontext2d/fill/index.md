@@ -18,10 +18,8 @@ void ctx.fill(path, fillRule);
 ### Parâmetros
 
 - `fillRule`
-
   - : O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.
     Possíveis valores:
-
     - `nonzero`
       - : A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
     - `evenodd`

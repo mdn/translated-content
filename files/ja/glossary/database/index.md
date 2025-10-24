@@ -14,6 +14,5 @@ slug: Glossary/Database
 ブラウザー上で動く {{glossary("IndexedDB")}} と呼ばれる独自データベースシステムもあります。
 
 1. [データベース](https://ja.wikipedia.org/wiki/データベース) (Wikipedia)
-
    1. {{Glossary("IndexedDB")}}
    2. {{Glossary("SQL")}}

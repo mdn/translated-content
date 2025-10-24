@@ -2,10 +2,8 @@
 title: 411 Length Required
 slug: Web/HTTP/Reference/Status/411
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`411 Length Required`** [用戶錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶錯誤回應)狀態碼表示伺服器拒絕接受沒有定義 {{HTTPHeader("Content-Length")}} 標頭的請求。
 

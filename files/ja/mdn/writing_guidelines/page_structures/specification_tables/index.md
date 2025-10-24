@@ -31,7 +31,7 @@ browser-compat: css.property.text-align
 
 一部の機能は上記のリポジトリーで管理されていません。
 このような用途では、 `spec-urls` キーを使用してページのフロントマターに仕様情報を追加することができます。
-例えば、 [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性はフロントマターキーがあります。
+例えば、 [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性はフロントマターキーがあります。
 
 ```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic

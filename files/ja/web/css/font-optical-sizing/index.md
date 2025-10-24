@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
 
-{{InteractiveExample("CSS Demo: font-optical-sizing")}}
+{{InteractiveExample("CSS デモ: font-optical-sizing")}}
 
 ```css interactive-example-choice
 font-optical-sizing: auto;
@@ -137,4 +135,4 @@ p {
 
 - {{cssxref("font-size")}}
 - {{cssxref("font-size-adjust")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

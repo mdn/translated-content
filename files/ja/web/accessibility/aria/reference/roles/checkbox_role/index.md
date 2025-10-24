@@ -16,7 +16,7 @@ original_slug: Web/Accessibility/ARIA/Roles/checkbox_role
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA を追加する代わりにネイティブなものを使用することです。 次のように、代わりに [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) のネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)を使用してください。 これは、必要なすべての機能をネイティブに提供します。
+ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA を追加する代わりにネイティブなものを使用することです。 次のように、代わりに [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) のネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)を使用してください。 これは、必要なすべての機能をネイティブに提供します。
 
 ```html
 <input type="checkbox" id="chk1-label" />
@@ -25,7 +25,7 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 
 ## 説明
 
-ネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)のフォームコントロールは、2 つのチェックされた (checked) 状態（「チェックされた」または「チェックされていない」）のみを持つことができ、不確定な ([indeterminate](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)) 状態は JavaScript を介して設定可能です。 同様に、`role="checkbox"` を持つ要素は、`aria-checked` 属性を介して、`true`、`false`、または `mixed` の 3 つの状態を公開できます。
+ネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)のフォームコントロールは、2 つのチェックされた (checked) 状態（「チェックされた」または「チェックされていない」）のみを持つことができ、不確定な ([indeterminate](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes)) 状態は JavaScript を介して設定可能です。 同様に、`role="checkbox"` を持つ要素は、`aria-checked` 属性を介して、`true`、`false`、または `mixed` の 3 つの状態を公開できます。
 
 チェックボックスはインタラクティブなコントロールであるため、フォーカス可能でキーボードからアクセスできる必要があります。 ロールがフォーカス不可能な要素に適用される場合は、`tabindex` 属性を使用してこれを変更します。 チェックボックスをアクティブ化するために必要なキーボードショートカットは、<kbd>Space</kbd> キーです。
 
@@ -34,7 +34,6 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
 - aria-checked
-
   - : `aria-checked` の値は、チェックボックスの状態を定義します。 この属性には、次の 3 つの値のいずれかがあります。
 
     `true`
@@ -60,7 +59,6 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 - onclick
   - : マウスクリックを処理して、`aria-checked` 属性の値を変更することでチェックボックスの状態を変更し、チェックボックスの外観を変更することで、視力のあるユーザーにチェックされているかどうかを見せます。
 - onKeyPress
-
   - : ユーザーが&#x20;
 
     <kbd>Space</kbd>
@@ -139,16 +137,16 @@ function changeCheckbox(event) {
 
 ## ベストプラクティス
 
-ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA のロール、ステート、またはプロパティを追加してアクセス可能にする代わりに、ネイティブなものを使用することです。 そのため、JavaScript と ARIA でチェックボックスの機能を再作成するのではなく、フォームコントロールを使用してネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)を使用することをお勧めします。
+ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA のロール、ステート、またはプロパティを追加してアクセス可能にする代わりに、ネイティブなものを使用することです。 そのため、JavaScript と ARIA でチェックボックスの機能を再作成するのではなく、フォームコントロールを使用してネイティブな [HTML チェックボックス](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)を使用することをお勧めします。
 
 ## 関連情報
 
-- [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
-- [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [ARIA: menuitem ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
-- [ARIA: menuitemcheckbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
-- [ARIA: menuitemradio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)
+- [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [ARIA: menuitem ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [ARIA: menuitemcheckbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [ARIA: menuitemradio ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

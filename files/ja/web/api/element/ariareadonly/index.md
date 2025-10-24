@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaReadOnly`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が編集不可であるが、それ以外は操作可能であることを示す [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性の値を反映します。
+**`ariaReadOnly`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が編集不可であるが、それ以外は操作可能であることを示す [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) 属性の値を反映します。
 
 > [!NOTE]
 > 可能であれば、HTML の {{htmlelement("input")}} 要素の `type="text"` と {{htmlelement("textarea")}} を使用してください。これらは意味づけがあり、ARIA 属性を必要としません。
@@ -54,4 +54,4 @@ console.log(el.ariaReadOnly); // "false"
 
 ## 関連情報
 
-- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [ARIA: textbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)

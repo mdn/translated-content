@@ -28,7 +28,7 @@ HTML은 보통 `.htm`이나 `.html` 확장자로 저장해 {{Glossary("server", 
 ## 같이 보기
 
 - 위키백과 [HTML](https://ko.wikipedia.org/wiki/HTML)
-- [HTML 자습서](/ko/docs/Learn/HTML)
+- [HTML 자습서](/ko/docs/Learn_web_development/Core/Structuring_content)
 - [The web course on codecademy.com](https://www.codecademy.com/learn/learn-html)
 - [MDN의 HTML 문서](/ko/docs/Web/HTML)
 - [HTML 명세](https://html.spec.whatwg.org/multipage/)

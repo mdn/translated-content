@@ -23,6 +23,6 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 
 ## 関連情報
 
-- [Learn the Web](/ja/docs/Learn)
+- [Learn the Web](/ja/docs/Learn_web_development)
 - [World Wide Web](https://ja.wikipedia.org/wiki/World_Wide_Web)（ウィキペディア）
 - [W3C のウェブサイト](https://www.w3.org/)

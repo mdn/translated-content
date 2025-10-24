@@ -142,7 +142,6 @@ python3 -V
 Python 3 は [python.org](https://www.python.org/) から（_pip3_ ツールとともに）簡単にインストールできます。
 
 1. 必要なインストーラーをダウンロードします。
-
    1. <https://www.python.org/downloads/macos/> へ移動します。
    2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
       （執筆時点では、これは Python 3.11.8 です）。
@@ -162,7 +161,6 @@ pip3 list
 Windows には既定で Python は含まれていませんが、[python.org](https://www.python.org/) から pip3 ツールと一緒に簡単にインストールできます。
 
 1. 必要なインストーラーをダウンロードします。
-
    1. <https://www.python.org/downloads/windows/> へ移動します。
    2. Django 5.0 が動作する最新の[対応しているバージョン](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django)の安定版リリースをダウンロードしてください。
       （執筆時点では、これは Python 3.11.8 です）。
@@ -238,7 +236,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **メモ:** `VIRTUALENVWRAPPER_PYTHON` および `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 変数は、Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` および `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 変数は、Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > システムでの正しい場所は、`which virtualenvwrapper.sh` と `which python3` というコマンドを使って見つけることができます。
 
@@ -281,7 +280,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **メモ:** `VIRTUALENVWRAPPER_PYTHON` 変数は Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、 Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 変数は Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、 Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > たとえば、macOS での 1 つのインストールテストでは、スタートアップファイルに次の行が必要になりました:
 >
@@ -424,7 +424,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 
 最初に GitHub で無料アカウントを作成します。
 無料アカウントではプライベートリポジトリーを作成することはできませんが、_public_ リポジトリー ("repos") を好きなだけ作成することができます。
-次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
+次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
 
 手順は次の通りです。
 
@@ -432,7 +432,6 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 2. ログインしたら、上のツールバーの **+** リンクをクリックし、**New repository** を選択します。
 3. このフォームのフィールドをすべて埋めてください。
    これらは必須ではありませんが、強く推奨します。
-
    - リポジトリーの名前を"django_local_library" と入力します。
    - 新しいリポジトリーの説明を "Local Library website written in Django" と入力します。
    - リポジトリーは "Public" を選択します (既定)。

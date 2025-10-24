@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLDataElement.value")}}
-  - : 一个反映 [`value`](/zh-CN/docs/Web/HTML/Element/data#value) HTML 属性的字符串，包含元素值的机器可读形式。
+  - : 一个反映 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/data#value) HTML 属性的字符串，包含元素值的机器可读形式。
 
 ## 实例方法
 

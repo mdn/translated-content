@@ -2,7 +2,7 @@
 title: Accessible name (アクセシブル名)
 slug: Glossary/Accessible_name
 l10n:
-  sourceCommit: d9c3dac231bb6cbc138d761dbe0ad2f9a38b864f
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
 {{GlossarySidebar}}
@@ -19,15 +19,27 @@ l10n:
 
 要素によっては、アクセシブル名は要素の属性から決まります。例えば {{HTMLElement("img")}} の場合は `alt` 属性です。 `<img src="grape.jpg" alt="banana"/>` と指定された場合、画像のアクセシブル名は "banana" です。
 
-可視コンテンツと要素、または複数のテキストノードと要素の関連付けを作成するには、 [`aria-labeledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性を使用します。アクセシブル名を必要とする UI 要素に関連付ける可視テキストがない場合、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用します。 {{HTMLElement("code")}}、{{HTMLElement("del")}}、{{HTMLElement("mark")}} のようなインラインテキストをマークアップする要素には、名前を追加すべきではありません。
+可視コンテンツと要素、または複数のテキストノードと要素の関連付けを作成するには、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性を使用します。アクセシブル名を必要とする UI 要素に関連付ける可視テキストがない場合、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用します。 {{HTMLElement("code")}}、{{HTMLElement("del")}}、{{HTMLElement("mark")}} のようなインラインテキストをマークアップする要素には、名前を追加すべきではありません。
 
 テキストコンテンツの節など、多くの要素にはアクセシブル名は必要ありません。コントロールはすべてアクセシブル名を持つべきです。情報を伝え、純粋に表示するものではない画像もすべてそうです。
 
-支援技術は、要素のロールとともにアクセシブル名であるアクセシビリティ名プロパティをユーザーに提供します。多くの要素はアクセシブル名を必要としませんが、いくつかのコンテンツ[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)は、アクセシブル名を持つ恩恵を受けることができます。例えば、 [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) は、ユーザーが [`tab`](/ja/docs/Web/Accessibility/ARIA/Roles/tab_role) ロールを持つ関連要素をアクティブにした後に現れるコンテンツの節です。このロールは {{HTMLElement("div")}} 要素のように、必要な名前が付いていない要素に設定することができます。 `tab` はコントロールであり、アクセシビリティ名を持たなければなりません。 `tabpanel` は `tab` の子要素（コンテンツ節）です。 `aria-labelledby` を `tabpanel`に追加するのが最善の手法です。
+支援技術は、要素のロールとともにアクセシブル名であるアクセシビリティ名プロパティをユーザーに提供します。多くの要素はアクセシブル名を必要としませんが、指定した[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)を持つ要素のコンテンツを上書きしたり補足したりするためには、アクセシブル名を提供する必要があります。例えば、 [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) は、ユーザーが [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) ロールを持つ関連要素をアクティブにした後に現れるコンテンツの節です。このロールは {{HTMLElement("div")}} 要素のように、必要な名前が付いていない要素に設定することができます。 `tab` はコントロールであり、アクセシビリティ名を持たなければなりません。 `tabpanel` は `tab` の子要素（コンテンツ節）です。 `aria-labelledby` を `tabpanel`に追加するのが最善の手法です。
 
 ## 関連情報
 
-- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA 属性](/ja/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
+- [ARIA 属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - [アクセシビリティ](/ja/docs/Web/Accessibility)
-- [アクセシビリティを学ぶ](/ja/docs/Learn/Accessibility)
+- [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
+- [アクセシビリティ](/ja/docs/Web/Accessibility)
+- [アクセシビリティを学ぶ](/ja/docs/Learn_web_development/Core/Accessibility)
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [ARIA](/ja/docs/Web/Accessibility/ARIA)
+- [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
+- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
+- 関連する用語:
+  - {{Glossary("Accessibility", "アクセシビリティ")}}
+  - {{Glossary("Accessibility tree", "アクセシビリティツリー")}}
+  - {{Glossary("Accessible description", "アクセシブル説明")}}
+  - {{Glossary("ARIA")}}

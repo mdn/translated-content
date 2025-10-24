@@ -3,7 +3,7 @@ title: 查找并解决 JavaScript 代码的错误
 slug: Learn_web_development/Core/Scripting/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
 上一节中你创建了“猜数字”游戏，但它可能没有正常工作。别担心，本节将为你提供一些简单的提示，来帮助你查找并修复 JavaScript 程序中的错误，从而让你远离困扰。
 
@@ -50,7 +50,6 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
    ![不是函数](屏幕快照_2018-10-17_20.27.08.png)
 
 2. 这个错误很容易跟踪，浏览器为你提供了几条有用的信息（截图来自 Firefox，其他浏览器也提供类似信息）。从左到右依次为：
-
    - 红色“!”表示这是一个错误。
    - 一条出错信息，表示问题出在哪儿：“TypeError：**guessSubmit**.addeventListener is not a function”（类型错误：**guessSubmit**.addeventListener 不是函数）
    - 点击 \[详细了解] 将跳转到一个 MDN 页面，其中包含了此类错误超详细的解释。
@@ -75,7 +74,8 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 2. 现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](屏幕快照_2018-10-17_21.56.00.png)
 3. 此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
 
-   > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
+   > [!NOTE]
+   > [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
 
    > [!NOTE]
    > 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
@@ -98,7 +98,8 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
    console.log(lowOrHi);
    ```
 
-   > **备注：** [`console.log()`](/zh-CN/docs/Web/API/console/log_static) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
+   > [!NOTE]
+   > [`console.log()`](/zh-CN/docs/Web/API/console/log_static) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
 
 7. 保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](屏幕快照_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
 8. 我们来思考问题有哪些可能。第 48 行使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector) 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
@@ -235,7 +236,7 @@ function checkGuess( {
 
 ## 参见
 
-- 许多错误不能一一的在这里列出来，我们正在编写一个参考文档来详细说明它们的含义。请参阅 [JavaScript 出错信息参考](/zh-CN/docs/Web/JavaScript/Reference/Errors).
-- 如果你在阅读了本文之后遇到了一些错误但不知如何解决，你能够得到别人的帮助！可以到 [学习区](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或者 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 聊天室来提问。告诉我们你遇到的错误是什么，我们会尽量帮助你。附加一段你的代码也是很有用的。
+- 许多错误不能一一的在这里列出来，我们正在编写一个参考文档来详细说明它们的含义。请参阅 [JavaScript 错误信息参考](/zh-CN/docs/Web/JavaScript/Reference/Errors).
+- 如果你在阅读了本文之后遇到了一些错误但不知如何解决，你可以寻求别人的帮助！可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)之一寻求帮助。告诉我们你遇到的错误是什么，我们会尽量帮助你。附加一段你的代码也是很有用的。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

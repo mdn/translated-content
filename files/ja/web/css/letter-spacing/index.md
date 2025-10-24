@@ -2,14 +2,12 @@
 title: letter-spacing
 slug: Web/CSS/letter-spacing
 l10n:
-  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`letter-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの水平方向の字間のスペースに関する挙動を設定します。この値はテキストを描画する際に文字間の自然な空間に追加されます。 `letter-spacing` が正の値であった場合は、文字と文字の間が開き、 `letter-spacing` が負の値であった場合は、文字と文字が互いに近づきます。
 
-{{InteractiveExample("CSS Demo: letter-spacing")}}
+{{InteractiveExample("CSS デモ: letter-spacing")}}
 
 ```css interactive-example-choice
 letter-spacing: normal;
@@ -46,7 +44,7 @@ letter-spacing: -1px;
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 ```
 
@@ -74,7 +72,7 @@ letter-spacing: unset;
 - `normal`
   - : 現在のフォントでの通常の字間になります。 `0` の値とは異なり、この値は{{glossary("user agent", "ユーザーエージェント")}}が文字列を両端揃えするために字間を変えることを許可します。
 - {{cssxref("&lt;length&gt;")}}
-  - : 既定の字間に*加える*字間のスペースを指定します。負の値も指定可能ですが、実装に依存した制限があるかもしれません。ユーザーエージェントは文字列を両端揃えするために、字間スペースをさらに増減させることはありません。
+  - : 既定の字間に加える字間のスペースを指定します。負の値も指定可能ですが、実装に依存した制限があるかもしれません。ユーザーエージェントは文字列を両端揃えするために、字間スペースをさらに増減させることはありません。
 
 ## アクセシビリティ
 
@@ -82,7 +80,7 @@ letter-spacing: unset;
 
 フォントの文字幅は種類ごとに異なるため、読みやすい letter-spacing もそれぞれ異なります。すべてのフォントで読みやすさを提供してくれる単一の設定値というものはありません。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 国際化の考慮
@@ -149,3 +147,4 @@ letter-spacing: unset;
 
 - {{cssxref("font-kerning")}}
 - {{cssxref("word-spacing")}}
+- SVG の {{SVGAttr("letter-spacing")}} 属性

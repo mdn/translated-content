@@ -2,10 +2,10 @@
 title: "Permissions-Policy: picture-in-picture"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP {{HTTPHeader("Permissions-Policy")}} 标头 `picture-in-picture` 指令控制是否允许当前文档以{{domxref("Picture-in-Picture API", "画中画", "", "nocode")}}模式播放视频。
 

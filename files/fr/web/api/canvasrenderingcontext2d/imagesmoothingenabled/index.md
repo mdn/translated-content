@@ -42,8 +42,7 @@ ctx.font = "16px sans-serif";
 ctx.textAlign = "center";
 
 const img = new Image();
-img.src =
-  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
+img.src = "/shared-assets/images/examples/big-star.png";
 img.onload = function () {
   const w = img.width,
     h = img.height;

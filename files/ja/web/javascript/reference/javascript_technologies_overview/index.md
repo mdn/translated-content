@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/JavaScript_technologies_overview
 
 ## JavaScript: コア言語 (ECMAScript)
 
-JavaScript の中核となる言語は [ECMAScript](/ja/docs/Web/JavaScript/JavaScript_technologies_overview) という名前の言語として ECMA TC39 委員会で標準化されています。
+JavaScript の中核となる言語は [ECMAScript](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) という名前の言語として ECMA TC39 委員会で標準化されています。
 
 このコア言語はまた、[node.js](https://nodejs.org/) といったブラウザー以外の環境でも使用されています。
 

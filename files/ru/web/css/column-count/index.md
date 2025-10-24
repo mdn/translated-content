@@ -106,5 +106,5 @@ column-count: unset;
 
 ## Смотрите также
 
-- [Multiple-column Layout](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
+- [Multiple-column Layout](/ru/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
 - [Basic Concepts of Multicol](/ru/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

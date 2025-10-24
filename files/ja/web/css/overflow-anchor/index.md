@@ -1,15 +1,15 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+**`overflow-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロール固定の動作をオプトアウトする方法を提供します。
 
-**`overflow-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロールアンカリングの動作をオプトアウトする方法を提供します。
+スクロール固定の動作は、対応しているすべてのブラウザーで既定で有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロール固定によって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
 
-スクロールアンカリングの動作は、対応しているすべてのブラウザーで既定で有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロールアンカリングによって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
-
-{{InteractiveExample("CSS Demo: overflow-anchor")}}
+{{InteractiveExample("CSS デモ: overflow-anchor")}}
 
 ```css interactive-example-choice
 overflow-anchor: auto;
@@ -22,8 +22,8 @@ overflow-anchor: none;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="whole-content-wrapper">
-    <button id="playback" type="button">Start lottery</button>
-    <p>Magic numbers for today are:</p>
+    <button id="playback" type="button">抽選を始める</button>
+    <p>本日のマジックナンバー:</p>
     <div id="example-element"></div>
   </div>
 </section>
@@ -82,18 +82,18 @@ window.addEventListener("load", () => {
     const magicNumber = Math.floor(Math.random() * 10000);
     example.insertAdjacentHTML(
       "afterbegin",
-      `<div class="new-content-container">New Magic Number: ${magicNumber}</div>`,
+      `<div class="new-content-container">新しいマジックナンバー: ${magicNumber}</div>`,
     );
   }
 
   button.addEventListener("click", () => {
     if (example.classList.contains("running")) {
       example.classList.remove("running");
-      button.textContent = "Start lottery";
+      button.textContent = "抽選を始める";
       clearInterval(intervalId);
     } else {
       example.classList.add("running");
-      button.textContent = "Stop lottery";
+      button.textContent = "抽選を止める";
       setInitialState();
       intervalId = setInterval(addContent, 1000);
     }
@@ -112,6 +112,7 @@ overflow-anchor: none;
 overflow-anchor: inherit;
 overflow-anchor: initial;
 overflow-anchor: revert;
+overflow-anchor: revert-layer;
 overflow-anchor: unset;
 ```
 
@@ -132,9 +133,9 @@ overflow-anchor: unset;
 
 ## 例
 
-### スクロールアンカリングを抑止
+### スクロール固定を抑止
 
-文書内でスクロールアンカリングを抑止する場合は、 `overflow-anchor` プロパティを使用してください。
+文書内でスクロール固定を抑止する場合は、 `overflow-anchor` プロパティを使用してください。
 
 ```css
 * {
@@ -152,4 +153,4 @@ overflow-anchor: unset;
 
 ## 関連情報
 
-- [スクロールアンカリングの紹介](/ja/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [スクロール固定のガイド](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)

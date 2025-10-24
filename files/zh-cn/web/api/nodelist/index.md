@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 `NodeList` 对象是节点的集合，通常是由属性，如{{domxref("Node.childNodes")}} 和 方法，如{{domxref("document.querySelectorAll")}} 返回的。
 
-> **备注：** `NodeList` **不是一个数组**，是一个类似数组的对象 (_Like Array Object_)。虽然 `NodeList` 不是一个数组，但是可以使用 `forEach()` 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。
+> [!NOTE]
+> `NodeList` **不是一个数组**，是一个类似数组的对象 (_Like Array Object_)。虽然 `NodeList` 不是一个数组，但是可以使用 `forEach()` 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。
 >
 > 不过，有些浏览器较为过时，没有实现 `NodeList.forEach()` 和 `Array.from()`。你可以用 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 来规避这一问题。请查看[该例](#example)。
 
@@ -77,7 +78,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 ## 英文原版中已删除的内容
 
-> 译者注：也许它已独立成了一篇单独的技术文章。如果有找到这样的文章，请将其链接添加至本页末的“参见”处，并删除本节内容。如果没有“参见”，请添加它为二级标题（`<h2>`），`<h2>` 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性为“See_also”或“参见”。
+> 译者注：也许它已独立成了一篇单独的技术文章。如果有找到这样的文章，请将其链接添加至本页末的“参见”处，并删除本节内容。如果没有“参见”，请添加它为二级标题（`<h2>`），`<h2>` 的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性为“See_also”或“参见”。
 
 ### 为什么 NodeList 不是数组？
 

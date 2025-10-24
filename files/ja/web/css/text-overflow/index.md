@@ -2,14 +2,12 @@
 title: text-overflow
 slug: Web/CSS/text-overflow
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
 
-{{InteractiveExample("CSS Demo: text-overflow")}}
+{{InteractiveExample("CSS デモ: text-overflow")}}
 
 ```css interactive-example-choice
 text-overflow: clip;
@@ -72,6 +70,7 @@ text-overflow: ellipsis " [..]";
 text-overflow: inherit;
 text-overflow: initial;
 text-overflow: revert;
+text-overflow: revert-layer;
 text-overflow: unset;
 ```
 

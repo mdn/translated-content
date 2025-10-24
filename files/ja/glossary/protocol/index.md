@@ -17,5 +17,5 @@ slug: Glossary/Protocol
 ## 関連情報
 
 - {{glossary("TCP")}}
-- [HTTP 概要](/ja/docs/Web/HTTP/Overview)
+- [HTTP 概要](/ja/docs/Web/HTTP/Guides/Overview)
 - {{glossary("Packet")}}

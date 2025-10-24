@@ -3,13 +3,13 @@ title: 2D игра на Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
 
 В этом пошаговом руководстве мы создадим простую мобильную игру **MDN Breakout** с помощью JavaScript и фреймворка [Phaser](https://phaser.io/).
 
 Каждый шаг будет сопровождаться настраиваемым и живым примером для того, чтобы вы могли видеть, что должно получиться на промежуточных этапах создания. Вы узнаете основы для работы с фреймворком Phaser: рендер и движение картинок, определение столкновения, управление, встроенные вспомогательные функции, анимации и отрисовка кадров, изменение игровой статистки.
 
-Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
+Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 

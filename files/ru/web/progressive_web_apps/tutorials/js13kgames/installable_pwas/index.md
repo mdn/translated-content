@@ -71,7 +71,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 - `theme_color`: Основной цвет для интерфейса, используемый операционной системой
 - `background_color`: Цвет для фона, используемый при установке и на заставке
 
-Минимальные требования к манифесту - `name` и хотя бы один значок (с `src`, `size` и `type`). Поля `description`, `short_name`, и `start_url` являются рекомендуемыми. Вы можете использовать даже больше полей, чем указано выше — не забудьте проверить ссылку на [Web App Manifest reference](/ru/docs/Web/Manifest).
+Минимальные требования к манифесту - `name` и хотя бы один значок (с `src`, `size` и `type`). Поля `description`, `short_name`, и `start_url` являются рекомендуемыми. Вы можете использовать даже больше полей, чем указано выше — не забудьте проверить ссылку на [Web App Manifest reference](/ru/docs/Web/Progressive_web_apps/Manifest).
 
 ## Добавить на домашний экран
 

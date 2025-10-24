@@ -31,7 +31,7 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
 
 ## HTML head란?
 
-[HTML document we covered in the previous article](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)을 다시 봅시다.
+[HTML document we covered in the previous article](/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document)을 다시 봅시다.
 
 ```html
 <!doctype html>
@@ -67,7 +67,6 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 ### 능동적 학습: 간단한 예제 살펴보기
 
 1. 능동적인 학습을 시작하기 위해서, GitHub repo에가서 [title-example.html 페이지](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)의 복사본을 다운로드 하십시오. 다음 중 하나를 하면 됩니다:
-
    1. 복사 붙여넣기를 새로운 텍스트 편집기에서 실행하고 당신이 알 만한 경로에 저장하십시오.
    2. 페이지에서 "Raw"버튼을 누르면, 새창에 Raw code가 나타납니다. 그런 다음 브라우저 메뉴에서 _File > Save Page As..._ 로 원하는 곳에 저장하십시오
 
@@ -217,25 +216,18 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 주석은 각 아이콘의 용도를 설명한다. 웹사이트가 iPad의 홈 화면에 저장 될 때 사용할 고해상도 아이콘을 제공하는 것 등을 포함한다.
@@ -278,7 +270,7 @@ HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것
 
 ## 문서의 기본 언어 설정
 
-마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
+마지막으로, 페이지의 언어를 설정 할 수도 있다. 이 작업은 [lang attribute](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 을 여는 HTML 태그에 추가하여 수행 할 수 있다. ([meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) 과 아래 참조)
 
 ```html
 <html lang="en-US"></html>

@@ -3,8 +3,6 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 `font-size-adjust` CSS 属性定义字体大小应取决于小写字母，而不是大写字母。在字体较小时，字体的可读性主要由小写字母的大小决定，通过此选项即可进行调整。
@@ -39,7 +37,6 @@ font-size-adjust: inherit;
 - `none`
   - : 仅根据{{ Cssxref("font-size") }}属性决定字体大小。
 - `<number>`
-
   - : 根据使小写字母大小（根据字体的 x-height--西文字体设计中的基线与主线的距离--决定）为该值乘以{{ Cssxref("font-size") }}的结果定义字体。
 
     数字应为{{ Cssxref("font-family") }}的首选字体的尺寸比（x-height 和字体大小的比）。这意味着当首选字体可用时，不论浏览器是否支持 font-size-adjust，都会显示文字为{{ Cssxref("font-size") }}的大小。

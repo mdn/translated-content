@@ -5,11 +5,9 @@ l10n:
   sourceCommit: e48b828fa5386202eb60303cde48eeea8f79203c
 ---
 
-{{CSSRef}}
-
 **`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z 順を定義します。 z-index がより大きな要素はより小さな要素の上に重なります。
 
-{{InteractiveExample("CSS Demo: z-index")}}
+{{InteractiveExample("CSS デモ: z-index")}}
 
 ```css interactive-example-choice
 z-index: auto;
@@ -124,7 +122,7 @@ z-index: 7;
 
 位置指定されたボックス（つまり、`position` が `static` 以外のもの）では、`z-index` プロパティが以下のことを定義します。
 
-1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)におけるボックスの重ね合わせレベル
+1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)におけるボックスの重ね合わせレベル
 2. ボックスがローカルな重ね合わせコンテキストを作るかどうか
 
 ## 構文

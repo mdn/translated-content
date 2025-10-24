@@ -3,8 +3,6 @@ title: 优先级
 slug: Web/CSS/CSS_cascade/Specificity
 ---
 
-{{CSSRef}}
-
 浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/docs/Web/CSS/Reference#选择器)组成的匹配规则。
 
 ## 优先级是如何计算的？
@@ -344,25 +342,22 @@ h1 {
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - CSS3 选择器优先级 - <http://www.w3.org/TR/selectors/#specificity>
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
-
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

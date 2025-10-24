@@ -34,7 +34,7 @@ Com uma API baseada em promises, a função assíncrona inicia a operação e re
 > Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
 >
 > 1. abra o navegador e visite <https://example.org>
-> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
+> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
 > 3. quando mostrarmos um exemplo, copie-o dentro do console. Você vai ter que recarregar a página cada vez que você começar um novo exemplo, caso contrário o console irá reclamar que você redeclarou a função `fetchPromise`.
 
 Neste exemplo, vamos baixar o seguinte arquivo JSON <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> e registrar algumas informações sobre ele.
@@ -72,7 +72,7 @@ Requisição iniciada…
 Resposta recebida: 200
 ```
 
-Note que `Requisição iniciada…` foi exibido antes de recebermos a resposta. Diferente de uma função síncrona, `fetch()` retorna enquanto a requisição ainda está ocorrendo, permitindo que nosso programa permaneça ágil. A resposta mostra o [status code](/pt-BR/docs/Web/HTTP/Status) `200` (OK), que significa que nossa requisição obteve sucesso.
+Note que `Requisição iniciada…` foi exibido antes de recebermos a resposta. Diferente de uma função síncrona, `fetch()` retorna enquanto a requisição ainda está ocorrendo, permitindo que nosso programa permaneça ágil. A resposta mostra o [status code](/pt-BR/docs/Web/HTTP/Reference/Status) `200` (OK), que significa que nossa requisição obteve sucesso.
 
 Esse exemplo provavelmente se parece muito com o exemplo do último artigo, onde adicionamos manipuladores de eventos ao objeto {{domxref("XMLHttpRequest")}}. Em vez disso, passamos um manipulador dentro do método `then()` da promise retornada.
 
@@ -180,7 +180,7 @@ Primeiro, uma promise pode estar em um dos três estados:
 - **fulfilled**: a função assíncrona foi concluída com sucesso. Quando uma promise é _fulfilled_, seu manipulador `then()` é chamado.
 - **rejected**: a função assíncrona falhou. Quando uma promise é _rejected_, seu manipulador `catch()` é chamado.
 
-Observe que o significado de "sucesso" ou "falha" aqui depende da API em questão: por exemplo, `fetch()` considera uma solicitação que foi concluída com sucesso se o servidor retornar um erro como [404 Not Found](/pt-BR/docs/Web/HTTP/Status/404), mas não se um erro de rede impediu o envio da solicitação.
+Observe que o significado de "sucesso" ou "falha" aqui depende da API em questão: por exemplo, `fetch()` considera uma solicitação que foi concluída com sucesso se o servidor retornar um erro como [404 Not Found](/pt-BR/docs/Web/HTTP/Reference/Status/404), mas não se um erro de rede impediu o envio da solicitação.
 
 Às vezes, usamos o termo **settled** para cobrir tanto **fulfilled** quanto **rejected**.
 

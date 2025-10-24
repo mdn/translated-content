@@ -3,8 +3,6 @@ title: 浏览器的同源策略
 slug: Web/Security/Same-origin_policy
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
-
 **同源策略**是一个重要的安全策略，它用于限制一个{{Glossary("origin","源")}}的文档或者它加载的脚本如何能与另一个源的资源进行交互。
 
 它能帮助阻隔恶意文档，减少可能被攻击的媒介。例如，它可以防止互联网上的恶意网站在浏览器中运行 JS 脚本，从第三方网络邮件服务（用户已登录）或公司内网（因没有公共 IP 地址而受到保护，不会被攻击者直接访问）读取数据，并将这些数据转发给攻击者。
@@ -54,7 +52,7 @@ document.domain = "company.com";
 
 端口号是由浏览器另行检查的。任何对 `document.domain` 的赋值操作，包括 `document.domain = document.domain` 都会导致端口号被覆盖为 `null` 。因此 `company.com:8080` **不能**仅通过设置 `document.domain = "company.com"` 来与 `company.com` 通信。必须在它们双方中都进行赋值，以确保端口号都为 `null` 。
 
-该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在 [Document.domain 的错误章节](/zh-CN/docs/Web/API/Document/domain#异常)找到。
+该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在 [Document.domain 的错误章节](/zh-CN/docs/Web/API/Document/domain#异常)找到。
 
 > [!NOTE]
 > 使用 `document.domain` 来允许子域安全访问其父域时，需要在父域和子域中设置 `document.domain` 为*相同*的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。

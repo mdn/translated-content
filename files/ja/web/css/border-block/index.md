@@ -1,13 +1,13 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
 
-The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
-
-{{InteractiveExample("CSS Demo: border-block")}}
+{{InteractiveExample("CSS デモ: border-block")}}
 
 ```css interactive-example-choice
 border-block: solid;
@@ -25,10 +25,10 @@ writing-mode: horizontal-tb;
 direction: rtl;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -67,6 +67,7 @@ border-block: medium dashed blue;
 border-block: inherit;
 border-block: initial;
 border-block: revert;
+border-block: revert-layer;
 border-block: unset;
 ```
 
@@ -78,8 +79,8 @@ border-block: unset;
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
 - `<'border-style'>`
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界線の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
@@ -91,13 +92,13 @@ border-block: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">縦書きテキストの境界</h3>
+### 縦書きテキストの境界
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -118,7 +119,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界", 140, 140)}}
 
 ## 仕様書
 
@@ -130,5 +131,6 @@ div {
 
 ## 関連情報
 
-- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の何れかに対応づけられます。
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のいずれかに対応づけられます。
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

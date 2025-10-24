@@ -2,10 +2,8 @@
 title: 428 Precondition Required
 slug: Web/HTTP/Reference/Status/428
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`428 Precondition Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器要求請求是[有條件的](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)。
 

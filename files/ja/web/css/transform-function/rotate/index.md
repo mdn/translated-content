@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-**`rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の特定の点を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
-
-{{InteractiveExample("CSS Demo: rotate()")}}
+{{InteractiveExample("CSS デモ: rotate()")}}
 
 ```css interactive-example-choice
 transform: rotate(0);

@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
+**`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
 
-**`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
-
-{{InteractiveExample("CSS Demo: translateZ()")}}
+{{InteractiveExample("CSS デモ: translateZ()")}}
 
 ```css interactive-example-choice
 transform: translateZ(0);
@@ -101,7 +99,8 @@ transform: translateZ(-3ch);
 
 上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (3D 空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を 3D 空間に配置) を立方体に設定しました。
 
-> **メモ:** `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。
+> [!NOTE]
+> `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。
 
 ## 構文
 
@@ -185,7 +184,7 @@ div {
 ```
 
 ここで重要なのは "moved" というクラスで、その機能を見てみましょう。まず、
-[`perspective()`](</ja/docs/Web/CSS/transform-function/perspective()>) 関数は、 z=0 の位置にある平面 (要するに画面の表面) の相対位置に閲覧者を位置付けます。 `500px` という値は、ユーザーが z=0 にある画像の 500 ピクセル「前」にいることを意味します。
+[`perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 関数は、 z=0 の位置にある平面 (要するに画面の表面) の相対位置に閲覧者を位置付けます。 `500px` という値は、ユーザーが z=0 にある画像の 500 ピクセル「前」にいることを意味します。
 
 次に、`translateZ()` 関数は、要素を画面からユーザーの方に「外向きに」200 ピクセル移動します。 これは、二次元のディスプレイ上で見たときに要素を大きく見せる、または VR ヘッドセットや他の三次元ディスプレイ機器を使用して見たときに要素をより近く見せるという効果があります。
 

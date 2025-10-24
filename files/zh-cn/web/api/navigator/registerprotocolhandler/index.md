@@ -13,7 +13,7 @@ l10n:
 
 要注册协议处理器，网站在调用 `registerProtocolHandler()` 时传入要注册的协议和模板 URL。
 
-在用户激活使用来注册的协议的链接时，浏览器会将激活链接的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 插入到处理器注册时提供的 URL 模板中，并将当前页面导航到生成的 URL。
+在用户激活使用来注册的协议的链接时，浏览器会将激活链接的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 插入到处理器注册时提供的 URL 模板中，并将当前页面导航到生成的 URL。
 
 浏览器可能会要求用户确认是否允许页面处理该协议，无论是在注册协议时还是在用户激活链接时。
 
@@ -26,17 +26,14 @@ registerProtocolHandler(scheme, url)
 ### 参数
 
 - `scheme`
-
   - : 一个包含站点希望处理的协议的方案字符串。
 
     其可能是一个自定义方案，此时方案的名称：
-
     - 以 `web+` 开始
     - 在 `web+` 前缀之后至少包含一个字母
     - 仅包含小写的 {{Glossary("ASCII")}} 字母。
 
     否则，方案必须是以下值之一：
-
     - `bitcoin`
     - `ftp`
     - `ftps`
@@ -63,7 +60,6 @@ registerProtocolHandler(scheme, url)
     - `xmpp`
 
 - `url`
-
   - : 一个包含处理器 URL 的字符串。该 URL 必须包含 `%s`（作为占位符），其会被将要处理且[经过转义的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) URL 所替换。
 
     处理器 URL 必须使用 `https` 方案，并且必须与尝试注册处理器的网页具有相同的{{glossary("origin", "来源")}}。
@@ -75,9 +71,7 @@ registerProtocolHandler(scheme, url)
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-
   - : 用户代理阻止了注册。这可能是由于：
-
     - 注册方案（协议）无效，例如是浏览器自身所处理的方案（`https:`、`about:` 等）。
     - 处理器 URL 的{{Glossary("origin", "来源")}}与调用该 API 的页面的来源不匹配。
     - 处理器 URL 的方案不是 `https`。

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`style`** は {{domxref("MathMLElement")}} インターフェイスの読み取り専用プロパティで、要素のインラインスタイルを生きた {{domxref("CSSStyleDeclaration")}} オブジェクトの形で返します。これには、要素のインラインの [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性で定義されている属性にのみ値が割り当てられている、その要素のすべてのスタイルプロパティのリストが含まれます。
+**`style`** は {{domxref("MathMLElement")}} インターフェイスの読み取り専用プロパティで、要素のインラインスタイルを生きた {{domxref("CSSStyleDeclaration")}} オブジェクトの形で返します。これには、要素のインラインの [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性で定義されている属性にのみ値が割り当てられている、その要素のすべてのスタイルプロパティのリストが含まれます。
 
 一括指定プロパティは展開されます。`border-top: 1px solid black` を設定すると、個別指定プロパティ ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-width")}}) が代わりに設定されます。
 

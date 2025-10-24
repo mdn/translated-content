@@ -5,11 +5,9 @@ l10n:
   sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
 ---
 
-{{CSSRef}}
-
 **`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値で初期化します。要素の数値から 1 までカウントアップするカウンター、および要素の数値から 1 までカウントダウンするカウンターを作成することができます。
 
-{{InteractiveExample("CSS Demo: counter-reset")}}
+{{InteractiveExample("CSS デモ: counter-reset")}}
 
 ```css interactive-example-choice
 counter-reset: none;
@@ -109,7 +107,8 @@ counter-reset: unset;
 
 `counter-reset` プロパティは、通常のカウンターと、対応しているブラウザーでは逆行カウンターの両方を生成することができます。通常のカウンターと逆行カウンターを、空白で区切って複数作成することができます。カウンターは、単独の名前、または空白で区切られた名前と値の組み合わせとすることができます。
 
-> **警告:** [`counter-reset` と `counter-set` プロパティには違い](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters#difference_between_counter-set_and_counter-reset)があります。 `counter-reset` を使用してカウンターを作成した後、 {{cssxref("counter-set")}} プロパティを使用してその値を調整することができます。 `counter-reset` プロパティは名前とは裏腹にカウンターの作成と初期化に使用され、一方、 `counter-set` プロパティは既存のカウンターの値をリセットするために使用されるため、これは直感に反しています。
+> [!WARNING]
+> [`counter-reset` と `counter-set` プロパティには違い](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters#difference_between_counter-set_and_counter-reset)があります。 `counter-reset` を使用してカウンターを作成した後、 {{cssxref("counter-set")}} プロパティを使用してその値を調整することができます。 `counter-reset` プロパティは名前とは裏腹にカウンターの作成と初期化に使用され、一方、 `counter-set` プロパティは既存のカウンターの値をリセットするために使用されるため、これは直感に反しています。
 
 より高い詳細度を持つセレクターで `counter-increment: none` を設定すると、より低い詳細度を持つセレクターで設定された名前付きカウンターの作成が上書きされます。
 
@@ -184,7 +183,7 @@ ol {
 
 {{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
-`counter-reset` を使用して、暗黙的な `list-item` カウンターをすべての `ol` で `3` から数え始めるように設定します。そうすると、最初のアイテムは 4、2 つ目は 5 というように番号が振られます。これは、 HTML で [`<ol start="4">`](/ja/docs/Web/HTML/Element/ol#start) と書くのと同じような効果です。
+`counter-reset` を使用して、暗黙的な `list-item` カウンターをすべての `ol` で `3` から数え始めるように設定します。そうすると、最初のアイテムは 4、2 つ目は 5 というように番号が振られます。これは、 HTML で [`<ol start="4">`](/ja/docs/Web/HTML/Reference/Elements/ol#start) と書くのと同じような効果です。
 
 ### 逆行カウンターの使用
 

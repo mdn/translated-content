@@ -5,11 +5,9 @@ l10n:
   sourceCommit: b90786a572bd01af9063ac5e515850c6bb5ddb89
 ---
 
-{{CSSRef}}
-
 **`background-position-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における垂直の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
 
-{{InteractiveExample("CSS Demo: background-position-y")}}
+{{InteractiveExample("CSS デモ: background-position-y")}}
 
 ```css interactive-example-choice
 background-position-y: top;
@@ -45,8 +43,6 @@ background-position-y: bottom 32px;
   height: 100%;
 }
 ```
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 このプロパティの値は、その後で一括指定の {{cssxref("background")}} または {{cssxref("background-position")}} プロパティが定義されると上書きされます。
 

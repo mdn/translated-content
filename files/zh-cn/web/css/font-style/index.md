@@ -3,8 +3,6 @@ title: font-style
 slug: Web/CSS/font-style
 ---
 
-{{CSSRef}}
-
 **`font-style`** CSS 属性允许你选择 {{cssxref("font-family")}} 字体下的 `italic` 或 `oblique` 样式。
 
 {{InteractiveExample("CSS Demo: font-style")}}
@@ -75,7 +73,6 @@ font-style: unset;
 - `italic`
   - : 选择斜体，如果当前字体没有可用的斜体版本，会选用倾斜体（`oblique` ）替代。
 - `oblique`
-
   - : 选择倾斜体，如果当前字体没有可用的倾斜体版本，会选用斜体（`italic` ）替代。If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of `-90deg` to `90deg` inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.
 
     In general, for a requested angle of 14 degrees or greater, larger angles are prefered; otherwise, smaller angles are preferred (see the spec's [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) for the precise algorithm).

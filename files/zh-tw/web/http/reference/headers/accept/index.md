@@ -1,11 +1,9 @@
 ---
-title: Accept
+title: Accept 標頭
 slug: Web/HTTP/Reference/Headers/Accept
 l10n:
-  sourceCommit: f341bd4728d3448faf6b9fc3b45980c35c067f25
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Accept`** {{Glossary("request header", "請求標頭")}}和{{Glossary("response header", "回應標頭")}}表示發送者能夠理解的內容類型，以 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)表示。在請求中，伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)選擇其中一個提案，並使用 {{HTTPHeader("Content-Type")}} 回應標頭通知用戶選擇的內容類型。在回應中，它提供伺服器能夠理解的內容類型訊息，以便在後續對資源的請求中使用該內容類型。
 
@@ -17,7 +15,7 @@ HTTP **`Accept`** {{Glossary("request header", "請求標頭")}}和{{Glossary("r
       <th scope="row">標頭類型</th>
       <td>{{Glossary("Request header", "請求標頭")}}、{{Glossary("Response header", "回應標頭")}}</tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
     <tr>

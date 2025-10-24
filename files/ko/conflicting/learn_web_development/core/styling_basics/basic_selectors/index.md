@@ -57,7 +57,7 @@ l10n:
 
 ### 범용 선택자를 사용하여 선택자를 더 쉽게 읽을 수 있도록 만들기
 
-범용 선택자의 한 가지 용도는 선택자를 더 읽기 쉽게 만들고 수행하는 작업의 측면에서 더 명확하게 만드는 것입니다. 예를 들어, 직계 자식을 포함하여 부모의 첫 번째 자식인 `<article>` 요소의 자손 요소를 선택하고 굵게 표시하려면, {{cssxref(":first-child")}} 의사 클래스를 사용할 수 있습니다. 이것에 대해서는 `<article>` 요소 선택자와 함께 하위 선택자로 [의사 클래스와 의사 요소](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)에 대한 강의에서 자세히 알아볼 것입니다.
+범용 선택자의 한 가지 용도는 선택자를 더 읽기 쉽게 만들고 수행하는 작업의 측면에서 더 명확하게 만드는 것입니다. 예를 들어, 직계 자식을 포함하여 부모의 첫 번째 자식인 `<article>` 요소의 자손 요소를 선택하고 굵게 표시하려면, {{cssxref(":first-child")}} 의사 클래스를 사용할 수 있습니다. 이것에 대해서는 `<article>` 요소 선택자와 함께 하위 선택자로 [의사 클래스와 의사 요소](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)에 대한 강의에서 자세히 알아볼 것입니다.
 
 ```css
 article :first-child {
@@ -115,6 +115,6 @@ ID 선택자는 점 문자가 아닌 `#`으로 시작하지만, 클래스 선택
 
 ## 요약
 
-유형, 클래스 및 ID 선택자를 마무리합니다. 계속해서 [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)를 살펴봄으로써 선택자를 자세히 탐구해봅시다.
+유형, 클래스 및 ID 선택자를 마무리합니다. 계속해서 [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)를 살펴봄으로써 선택자를 자세히 탐구해봅시다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

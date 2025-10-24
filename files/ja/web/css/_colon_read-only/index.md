@@ -3,8 +3,6 @@ title: :read-only
 slug: Web/CSS/:read-only
 ---
 
-{{CSSRef}}
-
 **`:read-only`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できない要素 (`input` や `textarea` など) を表します。
 
 ```css
@@ -18,7 +16,7 @@ p:read-only {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :read-only", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :read-only", "tabbed-shorter")}}
 
 ```css interactive-example
 label,
@@ -87,7 +85,7 @@ textarea:read-write {
 
 ### フォーム以外の読み取り専用コントロールのスタイル付け
 
-このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に [`readonly`](/ja/docs/Web/HTML/Element/input#readonly) が設定されているものだけを選択するのではありません。ユーザーが編集できない*あらゆる*要素を選択します。
+このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に [`readonly`](/ja/docs/Web/HTML/Reference/Elements/input#readonly) が設定されているものだけを選択するのではありません。ユーザーが編集できない*あらゆる*要素を選択します。
 
 ```html
 <p contenteditable>この段落は編集可能です。読み書き可です。</p>
@@ -125,4 +123,4 @@ p:read-write {
 ## 関連情報
 
 - {{cssxref(":read-write")}}
-- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性

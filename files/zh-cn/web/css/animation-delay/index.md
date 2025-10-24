@@ -3,8 +3,6 @@ title: animation-delay
 slug: Web/CSS/animation-delay
 ---
 
-{{CSSRef}}
-
 **`animation-delay`** [CSS](/zh-CN/docs/Web/CSS) 属性指定从应用动画到元素开始执行动画之前等待的时间量。动画可以稍后开始、立即从开头开始或立即开始并在动画中途播放。
 
 {{InteractiveExample("CSS Demo: animation-delay")}}
@@ -132,7 +130,6 @@ animation-delay: unset;
 ### 值
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : 动画应该开始的时间偏移量，从应用动画到元素的时刻开始计算。可以用秒（`s`）或毫秒（`ms`）指定。单位是必需的。
 
     正值表示动画应在指定的时间量过去后开始。默认值为 `0s`，表示动画应立即开始。

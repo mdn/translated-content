@@ -87,7 +87,7 @@ Em muitos casos, as coisas são como são em um OSP por uma razão. Você deve l
 
 ## Leia o manual
 
-Bons OSPs sempre irão disponibilizar a documentação do contribuidor. Em nossos projetos no GitHub, geralmente está em um arquivo CONTRIBUTING.md no repositório, ou, as vezes, em um arquivo README.md no projeto. Sendo um projeto de documentação, o conteúdo do MDN tem um [README](https://github.com/mdn/content/blob/main/README.md) e um bom conjunto de docs de contribuidor no site em si (veja [Contribuindo para o MDN](/pt-BR/docs/MDN/Community/Contributing)).
+Bons OSPs sempre irão disponibilizar a documentação do contribuidor. Em nossos projetos no GitHub, geralmente está em um arquivo CONTRIBUTING.md no repositório, ou, as vezes, em um arquivo README.md no projeto. Sendo um projeto de documentação, o conteúdo do MDN tem um [README](https://github.com/mdn/content/blob/main/README.md) e um bom conjunto de docs de contribuidor no site em si (veja [Contribuindo para o MDN](/pt-BR/docs/conflicting/MDN/Community)).
 
 Não tenha medo de pedir ajuda, mas SEMPRE tente achar a resposta antes de perguntar. Desta forma você vai construir seu conhecimento do projeto e se tornar mais independente, e não sobrecarregue desnecessariamente os outros colaboradores.
 
@@ -95,7 +95,7 @@ Naturalmente, os docs não serão sempre perfeitos. Se for difícil encontrar um
 
 ## Descubra onde perguntar
 
-Sempre descubra onde é o melhor lugar para perguntar. Bons OSPs sempre irão deixar isso claro em seus docs (veja [peça ajuda no MDN](/pt-BR/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)). Se você tiver dúvidas gerais, então use estes canais. Não crie uma issue no GitHub apenas para fazer uma pergunta, já que isso gera ruídos no projeto (veja "Faça progresso, não ruído" abaixo).
+Sempre descubra onde é o melhor lugar para perguntar. Bons OSPs sempre irão deixar isso claro em seus docs (veja [peça ajuda no MDN](/pt-BR/docs/MDN/Community/Getting_started#step_4_ask_for_help)). Se você tiver dúvidas gerais, então use estes canais. Não crie uma issue no GitHub apenas para fazer uma pergunta, já que isso gera ruídos no projeto (veja "Faça progresso, não ruído" abaixo).
 
 ## Faça progresso, não ruído
 

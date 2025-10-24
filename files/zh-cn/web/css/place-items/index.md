@@ -3,8 +3,6 @@ title: place-items
 slug: Web/CSS/place-items
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，它允许你在相关的布局（如[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）中可以同时沿着块级和内联方向对齐元素（例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性）。如果未提供第二个值，则第一个值作为第二个值的默认值。
 
 {{InteractiveExample("CSS Demo: place-items")}}
@@ -95,9 +93,7 @@ place-items: unset;
 - `auto`
   - : `auto` 实际的值继承父自元素的 `justify-items` 值，除非该元素没有父元素或是用了绝对定位。在这些示例中，`auto` 表示 `normal` 。
 - `normal`
-
   - : `normal` 的效果取决于我们使用哪种布局方式：
-
     - 在块级布局中，`normal` 和 `start` 一样。
     - 在绝对定位布局中，关键字在*被替换的*绝对定位元素上的行为类似于 `start`，在*所有其他*绝对定位的元素上表现类似 `stretch`。
     - 在表格单元格布局中，此关键字没有意义，因为该属性*被忽略*。

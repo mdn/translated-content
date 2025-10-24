@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaSelected`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性の値を反映し、選択状態を持つ要素の現在の "selected" 状態を示します。
+**`ariaSelected`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) 属性の値を反映し、選択状態を持つ要素の現在の "selected" 状態を示します。
 
 ## 値
 
@@ -48,4 +48,4 @@ console.log(el.ariaSelected); // false
 
 ## 関連情報
 
-- [ARIA: tab ロール](/ja/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [ARIA: tab ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)

@@ -12,7 +12,7 @@ l10n:
 
 これは、通常、要素が選択されたときに表示されるピッカーと同じものですが、ボタンを押すなど、ユーザーの操作で起動させることができます。
 
-ブラウザーがよく実装しているのは、`"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, `"file"` の型の入力欄です。これは {{htmlelement("datalist")}} 要素や [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性からの項目を表示することもできます。
+ブラウザーがよく実装しているのは、`"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, `"file"` の型の入力欄です。これは {{htmlelement("datalist")}} 要素や [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性からの項目を表示することもできます。
 
 もっと一般的に言えば、このメソッドは、ピッカーを持つプラットフォーム上のあらゆる入力要素にピッカーを表示するのが理想的です。
 
@@ -59,7 +59,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 この例は、この機能を `color` と `file` の入力ピッカーに使用する方法を示しています。
 
-> **メモ:** `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
+> [!NOTE]
+> `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
 > ライブ例がオリジン間フレームで実行され、[`SecurityError`](#securityerror)を発生させてしまうため、ここでは示せません。
 
 #### HTML
@@ -101,7 +102,7 @@ document.querySelectorAll("button").forEach((button) => {
 
 ### データリスト入力における showPicker()
 
-`showPicker()`は、[`<datalist>`](/ja/docs/Web/HTML/Element/datalist) で定義されている選択肢のリストに対してピッカーを起動することができます。
+`showPicker()`は、[`<datalist>`](/ja/docs/Web/HTML/Reference/Elements/datalist) で定義されている選択肢のリストに対してピッカーを起動することができます。
 
 まず `<datalist>` を HTML で定義します。いくつものインターネットブラウザー、それを使用する `text` 型の入力、そしてボタンから構成されています。
 
@@ -135,7 +136,7 @@ button.addEventListener("click", () => {
 
 ### 自動補完における showPicker()
 
-`showPicker()` は [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) のある入力欄に対するピッカーを起動することができます。
+`showPicker()` は [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) のある入力欄に対するピッカーを起動することができます。
 
 ここでは、自動補完の選択肢の "name" を取る入力を定義しています。
 
@@ -172,4 +173,4 @@ button.addEventListener("click", () => {
 - {{ domxref("HTMLInputElement") }}
 - {{ domxref("HTMLSelectElement.showPicker()") }}
 - {{htmlelement("datalist")}}
-- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)

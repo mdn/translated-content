@@ -1,41 +1,51 @@
 ---
 title: Atomics.wait()
+short-title: wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`Atomics.wait()`** 静的メソッドは、共有メモリー位置に指定された値が含まれていることを確認し、含まれている場合は、覚醒通知またはタイムアウトを待つために休眠します。メモリー位置が指定された値と一致しない場合は `"not-equal"`、 {{jsxref("Atomics.notify()")}} によって覚醒した場合は `"ok"`、タイムアウトが切れた場合は `"timed-out"` という文字列を返します。
 
-**`Atomics.wait()`** は静的なメソッドで、 {{jsxref("Int32Array")}} 中の指定された位置に指定された値が保存されているかどうかを検証し、検証できるまでスリープ、もしくはタイムアウトします。返値は "`ok`", "`not-equal`", "`timed-out`" のいずれかです。
+`Atomics.wait()` と {{jsxref("Atomics.notify()")}} は、共有メモリー内の値に基づいてスレッドの同期ができるようにするために一緒に使用されます。スレッドは、同期値が変更された場合、すぐに処理を続行することも、同期ポイントに到達したときに別のスレッドからの通知を待つこともできます。
 
-> [!NOTE]
-> この操作は共有された {{jsxref("Int32Array")}} に対してのみ可能で、またメインスレッドでは実行できません。
+このメソッドは、{{jsxref("SharedArrayBuffer")}} のビューである {{jsxref("Int32Array")}} または {{jsxref("BigInt64Array")}} でのみ動作します。これはブロッキング操作であり、メインスレッドでは使用できません。このメソッドの非ブロック、非同期バージョンについては、{{jsxref("Atomics.waitAsync()")}} をご覧ください。
 
 ## 構文
 
-```js
-Atomics.wait(typedArray, index, value);
-Atomics.wait(typedArray, index, value, timeout);
+```js-nolint
+Atomics.wait(typedArray, index, value)
+Atomics.wait(typedArray, index, value, timeout)
 ```
 
 ### 引数
 
 - `typedArray`
-  - : 共有された {{jsxref("Int32Array")}}。
+  - : {{jsxref("SharedArrayBuffer")}} のビューである {{jsxref("Int32Array")}} または {{jsxref("BigInt64Array")}}
 - `index`
   - : 待つ対象となる `typedArray` の中の位置。
 - `value`
-  - : 期待される値。
+  - : 検査で期待される値。
 - `timeout` {{optional_inline}}
-  - : ミリ秒で表した待ち時間。時間が指定されなかった場合は {{jsxref("Infinity")}}。
+  - : 待機時間（ミリ秒単位）。{{jsxref("NaN")}}（および `NaN` に変換される値、たとえば `undefined`）は {{jsxref("Infinity")}} になります。負の値は `0` になります。
 
 ### 返値
 
-文字列で、 "ok", "not-equal", or "timed-out" のいずれか。
+文字列で、 `"not-equal"`, `"ok"`, `"timed-out"` のいずれかです。
+
+- 初期値 `value` が `index` に格納されている値と等しくない場合、`"not-equal"` が即座に返されます。
+- `Atomics.notify()` の呼び出しによって目覚めた場合、**期待される値が変更されているかどうかに関係なく**、`"ok"` が返されます。
+- `Atomics.notify()` によって目覚めなかった場合、スリープ待機が指定した `timeout` を超えたときに `"timed-out"` が返されます。
 
 ### 例外
 
-- typedArray が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- index が typedArray の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : 次のいずれかの場合に発生します。
+    - `typedArray` が、 {{jsxref("SharedArrayBuffer")}} のビューである {{jsxref("Int32Array")}} または {{jsxref("BigInt64Array")}} でない場合。
+    - 現在のスレッドをブロックできない場合（例えば、メインスレッドであるため）。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 例
 
@@ -48,7 +58,9 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-読み手のスレッドはスリープし、 0 番目の値が 0 であることを期待して待ちます。これが成立している間、処理は進みません。しかし、書き手のスレッドが新しい値を格納した場合、書き手のスレッドによって通知され、新しい値 (123) が返ります。
+読み取りスレッドは、指定された `value` が指定された `index` に格納されている値と一致するため、位置 0 で休眠して待機しています。
+書き込みスレッドが、指定された `typedArray` の位置 0 で `Atomics.notify()` を呼び出すまで、読み取りスレッドは移動しません。
+覚醒した後、位置 0 の値が書き込みスレッドによって変更されていない場合、読み取りスレッドは休眠状態に**戻らず**、処理を続行することに注意してください。
 
 ```js
 Atomics.wait(int32, 0, 0);
@@ -74,4 +86,5 @@ Atomics.notify(int32, 0, 1);
 ## 関連情報
 
 - {{jsxref("Atomics")}}
+- {{jsxref("Atomics.waitAsync()")}}
 - {{jsxref("Atomics.notify()")}}

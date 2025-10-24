@@ -20,7 +20,7 @@ l10n:
 - `pattern`
   - : 正規表現リテラルで使用することができるあらゆるものから成るパターンで、[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を含みます。
 - `name`
-  - : グループの名前です。有効な[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)である必要があります。
+  - : グループの名前です。有効な[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)である必要があります。
 
 ## 解説
 

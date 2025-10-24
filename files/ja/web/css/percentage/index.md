@@ -5,9 +5,7 @@ l10n:
   sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
-{{CSSRef}}
-
-**`<percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、パーセント値による割合を表します。要素の親オブジェクトからの相対的な寸法を定義するためによく使われます。 {{CSSxRef("width")}}、 {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}、 {{CSSxRef("font-size")}} など、たくさんのプロパティでパーセント値を使うことができます。
+**`<percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、パーセント値による割合を表します。要素の親オブジェクトからの相対的な寸法を定義するためによく使われます。 {{CSSxRef("width")}}、 {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}、 {{CSSxRef("font-size")}} など、たくさんのプロパティでパーセント値を使うことができます。
 
 > [!NOTE]
 > 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値 ({{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など) にのみアクセスできます。
@@ -64,4 +62,4 @@ l10n:
 ## 関連情報
 
 - {{cssxref("&lt;length-percentage&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)

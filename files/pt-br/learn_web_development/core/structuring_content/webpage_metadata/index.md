@@ -41,7 +41,7 @@ O {{glossary("Head", "head")}} de um documento HTML é a parte que não é exibi
 
 ## O que há no cabeçalho HTML?
 
-Vamos rever o simples [Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomia_de_um_elemento_html)
+Vamos rever o simples [Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomia_de_um_elemento_html)
 
 ```html
 <!doctype html>
@@ -65,7 +65,7 @@ O cabeçalho HTML é o conteúdo do elemento {{htmlelement("head")}} — ao cont
 </head>
 ```
 
-Em páginas maiores, o cabeçalho pode ter mais conteúdo. Tente acessar um dos seus sites favoritos e use as [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para verificar o conteúdo do cabeçalho. Nosso objetivo aqui não é mostrar a você como usar tudo o que é possível pôr no cabeçalho, mas te ensinar a usar as coisas mais obvias que você vai querer incluir no cabeçalho, e lhe dar alguma familiaridade. Vamos começar.
+Em páginas maiores, o cabeçalho pode ter mais conteúdo. Tente acessar um dos seus sites favoritos e use as [ferramentas de desenvolvimento](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) para verificar o conteúdo do cabeçalho. Nosso objetivo aqui não é mostrar a você como usar tudo o que é possível pôr no cabeçalho, mas te ensinar a usar as coisas mais obvias que você vai querer incluir no cabeçalho, e lhe dar alguma familiaridade. Vamos começar.
 
 ## Adicionando um título
 
@@ -77,7 +77,6 @@ Nós já vimos o elemento {{htmlelement("title")}} em ação — ele pode ser us
 ### Aprendizado ativo: observando um exemplo simples
 
 1. Para começar esta aprendizagem ativa, gostaríamos que você fosse ao nosso depósito GitHub e baixasse uma cópia do nossa página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Para fazer isso:
-
    1. Copie e cole o código em um novo arquivo de texto no seu editor e salve-o com o nome de index.html em um lugar de fácil acesso.
    2. Pressione o botão "Raw" na página do GitHub, que faz com que o código bruto apareça (possivelmente em uma nova guia do navegador). Em seguida, escolha o menu _Arquivo do navegador> Salvar página como ..._ e escolha um local adequado para salvar o arquivo.
 
@@ -227,25 +226,18 @@ Há muitos outros tipos de ícones para considerar nestes dias também. Por exem
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone com tela retina de alta resolução: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- iPad de primeira e segunda geração: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- iPhone não-Retina, iPod Touch e dispositivos Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- favicon básico -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 Os comentários explicam onde cada ícone é usado - esses elementos cobrem coisas como fornecer um ícone de alta resolução agradável para usar quando o site é salvo na tela inicial do iPad.
@@ -253,7 +245,7 @@ Os comentários explicam onde cada ícone é usado - esses elementos cobrem cois
 Não se preocupe muito com a implementação de todos esses tipos de ícone agora — este é um recurso bastante avançado, e você não precisará ter conhecimento disso para avançar no curso. O objetivo principal aqui é permitir que você saiba o que são essas coisas, no caso de você encontrá-las enquanto navega no código-fonte dos outros sites.
 
 > [!NOTE]
-> Se o seu site usa uma Política de Segurança de Conteúdo (CSP) para aumentar sua segurança, a política se aplica ao favicon. Se você encontrar problemas com o favicon não carregando, verifique se a diretiva [`img-src`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) do cabeçalho [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) não está impedindo o acesso a ele.
+> Se o seu site usa uma Política de Segurança de Conteúdo (CSP) para aumentar sua segurança, a política se aplica ao favicon. Se você encontrar problemas com o favicon não carregando, verifique se a diretiva [`img-src`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) do cabeçalho [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) não está impedindo o acesso a ele.
 
 ## Aplicando CSS e JavaScript ao HTML
 

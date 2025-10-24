@@ -2,7 +2,7 @@
 title: Navigator：share() 方法
 slug: Web/API/Navigator/share
 l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
@@ -22,13 +22,11 @@ share(data)
 ### 参数
 
 - `data` {{optional_inline}}
-
   - : 包含要共享的数据的对象。
 
     用户代理未知的属性将被忽略；共享数据仅根据用户代理可识别的属性进行评估。所有属性都是可选的，但必须至少指定一个已知的数据属性。
 
     可能的值有：
-
     - `url` {{optional_inline}}
       - : 表示要共享的 URL 的字符串。
     - `text` {{optional_inline}}

@@ -1,11 +1,9 @@
 ---
-title: Age
+title: Age 標頭
 slug: Web/HTTP/Reference/Headers/Age
 l10n:
-  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Age`** {{Glossary("response header", "回應標頭")}}表示物件在代理快取中的時間（以秒為單位）。
 
@@ -18,7 +16,7 @@ HTTP **`Age`** {{Glossary("response header", "回應標頭")}}表示物件在代
       <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>

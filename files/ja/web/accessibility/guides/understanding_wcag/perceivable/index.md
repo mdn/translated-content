@@ -1,17 +1,14 @@
 ---
 title: 知覚可能
 slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable
 l10n:
-  sourceCommit: 3a004b55441ee5ac51bd34be5f3b7c6ce693ed6d
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{AccessibilitySidebar}}
 
 この記事では、ウェブコンテンツアクセシビリティガイドライン (WCAG) 2.0 および 2.1 の**知覚可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 知覚可能とは、ユーザーが自分の感覚の 1 つ以上を使用して何らかの方法でそれを知覚できなければならないということです。
 
 > [!NOTE]
-> 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
+> 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://w3c.github.io/wcag/guidelines/22/#perceivable)（英語）を参照してください。
 
 ## ガイドライン 1.1 — 非テキストコンテンツのための代替テキストの提供
 
@@ -32,20 +29,20 @@ l10n:
         意味のある内容を伝える全ての画像は、適切な代替テキストを与えられるべきです。
       </td>
       <td>
-        <a href="/ja/docs/Learn/Accessibility/HTML#代替テキスト"
+        <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト"
           >代替テキスト。</a
         >
       </td>
     </tr>
     <tr>
       <td>
-        複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセス可能な代替手段を用意するべきです。 <code>longdesc</code> 属性ではなく通常のリンクを使用してください。
+        複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセシブルな代替手段を用意するべきです。 <code>longdesc</code> 属性ではなく通常のリンクを使用してください。
       </td>
       <td>
         <p>
-          テキストの説明や、アクセス可能なデータ表がうまくいくかもしれません（<a
-            href="/ja/docs/Learn/HTML/Tables/Advanced"
-            >HTML 表の高度な機能とアクセシビリティ</a
+          テキストの説明や、アクセシブルなデータ表がうまくいくかもしれません（<a
+            href="/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility"
+            >HTML 表のアクセシビリティ</a
           >を参照）。 <code>longdesc</code> 反対論については、 W3C の<a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>も参照してください。
         </p>
       </td>
@@ -57,13 +54,13 @@ l10n:
       <td>
         <p>
           静的キャプションの選択肢については<a
-            href="/ja/docs/Learn/Accessibility/HTML#代替テキスト"
+            href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト"
             >代替テキスト</a
           >を、その他の選択肢については<a
-            href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト"
+            href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#音声トランスクリプト"
             >音声トランスクリプト</a
           >、
-          <a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック"
+          <a href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#映像のテキストトラック"
             >映像のテキストトラック</a
           >を参照してください。
         </p>
@@ -77,9 +74,8 @@ l10n:
       <td>
         ボタンは簡単です —
         ボタンのテキストがボタンの機能を説明していることを確認してください（例えば、<code>&#x3C;button>画像のアップロード&#x3C;/button></code>）。
-        他の UI コントロールの詳細については、<a
-          href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
-          >UI コントロール</a
+        他の UI コントロールの詳細については、<a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+          >可能な限り意味づけされた UI コントロールを使用する</a
         >を参照してください。
       </td>
     </tr>
@@ -90,8 +86,8 @@ l10n:
       <td>
         <p>
           装飾画像は CSS 背景画像を使用して実装する必要があります（<a
-            href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
-            >背景</a
+            href="/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders"
+            >背景と境界</a
           >を参照）。 {{htmlelement("img")}}
           要素を介して画像を含める必要がある場合は、空白の
           alt（<code>alt=""</code>）を付けます。
@@ -108,7 +104,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 1.1: 代替テキスト](https://www.w3.org/TR/WCAG21/#text-alternatives)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.1: 代替テキスト](https://w3c.github.io/wcag/guidelines/22/#text-alternatives)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.2 — 時間ベースのメディアのための代替テキストの提供
 
@@ -126,16 +123,16 @@ l10n:
     <tr>
        <td>1.2.1 記録済みの音声のみおよび動画のみのコンテンツに代わるものを提供する (A)</td>
        <td>トランスクリプトは、録音済みの音声のみのメディアに提供するべきで、トランスクリプトまたは音声解説は、録画済みの動画のみのメディア（すなわち、サイレントビデオ）に提供するべきです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a>を参照してください。 音声解説のチュートリアルはまだありません。</td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a>を参照してください。 音声解説のチュートリアルはまだありません。</td>
     </tr>
     <tr>
        <td>1.2.2 ウェブベースの動画にキャプションを付ける (A)</td>
        <td>ウェブ上に表示される動画（例えば、HTML 動画）には、キャプションを付けるべきです。 これは、動画の音声部分が聞こえない人々のためのものです。</td>
-       <td>HTML 動画のキャプションについては<a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック">映像のテキストトラックs</a>を参照してください。 <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a>（YouTube、英語）も参照してください。</td>
+       <td>HTML 動画のキャプションについては<a href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#映像のテキストトラック">映像のテキストトラック</a>を参照してください。 <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a>（YouTube、英語）も参照してください。</td>
     <tr>
        <td>1.2.3 ウェブベースの動画にテキストトランスクリプトまたは音声解説を提供する (A)</td>
        <td>ウェブ上に提示される動画（例えば、HTML 動画）のためのテキストトランスクリプトまたは音声解説を提供するべきです。 これは、動画の視覚的な部分を見ることができず、音声だけではコンテンツ全体を把握できない人々のためのものです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 音声解説のチュートリアルはまだありません。</td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 音声解説のチュートリアルはまだありません。</td>
     </tr>
     <tr>
        <td>1.2.4 生音声にキャプションを付ける (AA)</td>
@@ -160,17 +157,18 @@ l10n:
     <tr>
        <td>1.2.8 記録済みメディアの代替を提供する (AAA)</td>
        <td>動画を特徴とする全てのコンテンツには、わかりやすいテキストトランスクリプトを提供する必要があります。 例えば、見ている映画のスクリプトなどです。 これは、コンテンツを聴くことができない聴覚障碍者のためのものです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 </td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 </td>
     </tr>
     <tr>
        <td> 1.2.9 生音声用のトランスクリプトを提供する (AAA)</td>
        <td>放送されている生音声のコンテンツのために、例えば、あなたが聞いている演劇やミュージカルのスクリプトのような説明文を提供するべきです。 これは、コンテンツを聴くことができない聴覚障碍者のためのものです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 </td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn_web_development/Core/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 </td>
     </tr>
  </tbody>
 </table>
 
-> **メモ:** [ガイドライン 1.2: タイムベースト・メディア: タイムベースト・メディアに代わるものを提供する](https://www.w3.org/TR/WCAG21/#time-based-media)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.2: タイムベースト・メディア: タイムベースト・メディアに代わるものを提供する](https://w3c.github.io/wcag/guidelines/22/#time-based-media)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.3 — さまざまな方法で提示できるコンテンツの作成
 
@@ -211,14 +209,14 @@ l10n:
       </td>
       <td>
         <p>
-          <a href="/ja/docs/Learn/Accessibility/HTML"
-            >HTML: アクセシビリティの基礎</a
-          >全体には、これに関する情報が満載されていますが、特に<a
-            href="/ja/docs/Learn/Accessibility/HTML#良いセマンティクス"
+          <a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML"
+            >HTML: アクセシビリティの良き基本</a
+          >には、これに関する情報が満載されていますが、特に<a
+            href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#良いセマンティクス"
             >良いセマンティクス</a
-          >、<a href="/ja/docs/Learn/Accessibility/HTML#ui_コントロール"
-            >UI コントロール</a
-          >、<a href="/ja/docs/Learn/Accessibility/HTML#代替テキスト"
+          >、<a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う"
+          >可能な限り意味づけされた UI コントロールを使用する</a
+          >、<a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト"
             >代替テキスト</a
           >を参照するべきです。
         </p>
@@ -231,8 +229,8 @@ l10n:
         マークアップに関係なく、CSS を使用して独特なレイアウトスタイルを作成することで、正しい意味論的要素（見出し、段落など）を使用して順序を明確にするべきです。
       </td>
       <td>
-        繰り返しますが、<a href="/ja/docs/Learn/Accessibility/HTML"
-          >HTML: アクセシビリティの基礎</a
+        繰り返しますが、<a href="/ja/docs/Learn_web_development/Core/Accessibility/HTML"
+          >HTML: アクセシビリティの良き基本</a
         >を参照してください。
       </td>
     </tr>
@@ -273,9 +271,6 @@ l10n:
     <tr>
       <td>
         1.3.4 方向 (AA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         特定のディスプレイの向きが重要でない限り、コンテンツの表示と操作はポートレートやランドスケープなどの単一のディスプレイの向きに制限されません。
@@ -291,13 +286,10 @@ l10n:
     <tr>
       <td>
         1.3.5 入力の目的の識別 (AA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         <p>
-          <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
+          <a href="https://w3c.github.io/wcag/guidelines/22/#input-purposes"
             >53 個の入力フィールド</a
           >（英語）のリストに従って、プログラム的にフィールドの目的を識別してください。
         </p>
@@ -312,9 +304,6 @@ l10n:
     <tr>
       <td>
         1.3.6 目的の識別 (AAA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         マークアップ言語を使用して実装されたコンテンツでは、ユーザーインターフェイス・コンポーネント、アイコン、およびリージョンの目的はプログラム的に決定できます。
@@ -329,11 +318,12 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** [ガイドライン 1.3: 適応可能: 情報や構造を失うことなくさまざまな方法で提示できるコンテンツを作成する](https://www.w3.org/TR/WCAG21/#adaptable)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.3: 適応可能: 情報や構造を失うことなくさまざまな方法で提示できるコンテンツを作成する](https://w3c.github.io/wcag/guidelines/22/#adaptable)（英語）に関する WCAG の説明も参照してください。
 
 ## ガイドライン 1.4: 前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする
 
-このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色（[色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)と指示を伝えるための[色の使い方](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color)の両方が）ですが、他の状況でも適用されます。
+このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色（[色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)と指示を伝えるための[色の使い方](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color)の両方）ですが、他の状況でも適用されます。
 
 <table class="standard-table">
   <thead>
@@ -351,15 +341,15 @@ l10n:
         </p>
       </td>
       <td>
-        <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color"
+        <a href="/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color"
           >色の使用</a
         >、
         <a
-          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
+          href="/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
         >、
         <a
-          href="/ja/docs/Learn/Forms/How_to_structure_a_web_form#複数のラベル"
+          href="/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#複数のラベル"
           >複数のラベル</a
         >を参照してください。
       </td>
@@ -367,15 +357,15 @@ l10n:
     <tr>
       <td>1.4.2 音声コントロール (A)</td>
       <td>
-        3 秒以上再生される音声の場合は、音声や動画の再生と一時停止、および音量のミュートや調整を行うためのアクセス可能なコントロールを用意する必要があります。
+        3 秒以上再生される音声の場合は、音声や動画の再生と一時停止、および音量のミュートや調整を行うためのアクセシブルなコントロールを用意する必要があります。
       </td>
       <td>
         <a
-          href="/ja/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
+          href="/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics"
           >動画プレーヤーのスタイル設定の基本</a
         >に示すように、ネイティブの
         <code>&lt;button&gt;</code>
-        を使用してアクセス可能なキーボードコントロールを提供します。
+        を使用してアクセシブルなキーボードコントロールを提供します。
       </td>
     </tr>
     <tr>
@@ -394,10 +384,10 @@ l10n:
         </ul>
       </td>
       <td>
-        <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast"
+        <a href="/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast"
           >色のコントラスト</a
         >と<a
-          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
+          href="/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
         >を参照してください。
       </td>
@@ -406,7 +396,7 @@ l10n:
       <td>1.4.4 テキストのサイズ変更 (AA)</td>
       <td>
         テキストサイズが倍になったときに、ページが読みやすく使えるべきです。
-        つまり、デザインはレスポンシブであるべきで、テキストサイズを大きくしてもコンテンツにアクセス可能であることを意味します。
+        つまり、デザインはレスポンシブであるべきで、テキストサイズを大きくしてもコンテンツにアクセシブルであることを意味します。
       </td>
       <td></td>
     </tr>
@@ -433,7 +423,7 @@ l10n:
       </td>
       <td>
         <a
-          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
+          href="/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
         >を参照してください。
       </td>
@@ -460,10 +450,12 @@ l10n:
             >）。
           </li>
           <li>
-            行の高さは、段落内ではテキストサイズの 1.5 倍以上（例えば、 <code>line-height: 1.5;</code>）、段落間ではテキストサイズの 2.25 倍以上（例えば、 <code>padding: 2.25rem;</code>）にするするべきです。
+            行の高さは、段落内ではテキストサイズの 1.5 倍以上（例えば、 <code>line-height: 1.5;</code>）、段落間ではテキストサイズの 2.25 倍以上（例えば、 <code
+              >padding: 2.25rem;</code
+            >）にするするべきです。
           </li>
           <li>
-            テキストサイズが2倍になったときに、コンテンツのスクロールが必要になるべきではありません。
+            テキストサイズが 2 倍になったときに、コンテンツのスクロールが必要になるべきではありません。
           </li>
         </ul>
       </td>
@@ -479,20 +471,17 @@ l10n:
     <tr>
       <td>
         1.4.10 リフロー (AA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         <ul>
           <li>
-            左書きの言語（英語など）や右書きの言語（アラビア語など）では、水平スクロールをしないでください。
+            左書きの言語（英語など）や右書きの言語（アラビア語など）では、水平スクロールをさせないでください。
           </li>
           <li>
-            縦書きの言語（日本語など）では、垂直スクロールをしないでください。
+            縦書きの言語（日本語など）では、垂直スクロールをさせないでください。
           </li>
           <li>
-            使用法や意味のために 2 次元レイアウトを必要とするコンテンツの部分を除きます（大きなデータ表など）。
+            用途や意味に応じて、 2 次元レイアウトを必要とするコンテンツの部分を除きます（大きなデータ表など）。
           </li>
         </ul>
       </td>
@@ -505,9 +494,6 @@ l10n:
     <tr>
       <td>
         1.4.11 テキスト以外のコントラスト (AA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         ユーザーインターフェイスコンポーネントとグラフィックオブジェクトの最低限のカラーコントラスト比は 3:1 です。
@@ -522,13 +508,10 @@ l10n:
     <tr>
       <td>
         1.4.12 テキストの間隔 (AA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         <p>
-          次のスタイルを適用しても、コンテンツや機能が失われることはありません。
+          次のスタイルを適用しても、コンテンツや機能が失われることがありません。
         </p>
         <ul>
           <li>
@@ -552,9 +535,6 @@ l10n:
     <tr>
       <td>
         1.4.13 ホバーまたはフォーカスにおけるコンテンツ (AA)
-        <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-          >2.1 で追加</a
-        >（英語）
       </td>
       <td>
         <p>
@@ -581,13 +561,13 @@ l10n:
   </thead>
 </table>
 
-> **メモ:** [ガイドライン 1.4: 識別可能: 背景から前景を分離するなど、ユーザーがコンテンツを見やすく、聞き取りやすくする](https://www.w3.org/TR/WCAG21/#distinguishable)（英語）に関する WCAG の説明も参照してください。
+> [!NOTE]
+> [ガイドライン 1.4: 識別可能: 背景から前景を分離するなど、ユーザーがコンテンツを見やすく、聞き取りやすくする](https://w3c.github.io/wcag/guidelines/22/#distinguishable)（英語）に関する WCAG の説明も参照してください。
 
 ## 関連情報
 
-- [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
-
+- [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
   1. 知覚可能
-  2. [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3. [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4. [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  2. [操作可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  3. [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  4. [堅牢](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)

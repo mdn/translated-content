@@ -22,9 +22,9 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 #### 関連するロール
 
-- [option](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [option](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
   - : 1 つ以上のネストされたオプションが必要です。 選択された全てのオプションでは、`aria-selected` が `true` に設定されています。 選択されていない全てのオプションでは、`aria-selected` が (訳注: 省略されるか) `false` に設定されています。 オプションが選択可能でない場合は、`aria-selected` を省略します (訳注: オプションでは、aria-selected のデフォルトは、false であり、変更できないことを示すなら、aria-disabled や aria-readonly があります) 。
-- [list](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [list](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
   - : リスト項目 (`listitem`) 要素を含むセクション。
 
 #### ステートとプロパティ
@@ -52,12 +52,10 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 ### キーボードインタラクション
 
 - 単一選択リストボックスがフォーカスを受け取ったとき、
-
   - リストボックスがフォーカスを受け取る前にどのオプションも選択されていなかった場合、最初のオプションがフォーカスを受け取ります。 任意で、最初のオプションを自動選択することもできます。
   - リストボックスがフォーカスを受け取る前にオプションが選択されていた場合、フォーカスは選択されているオプションに設定されます。
 
 - 複数選択リストボックスがフォーカスを受け取ったとき、
-
   - リストボックスがフォーカスを受け取る前にどのオプションも選択されていなかった場合、フォーカスは最初のオプションに設定され、選択状態の自動変更は行われません。
   - リストボックスがフォーカスを受け取る前に 1 つ以上のオプションが選択されていた場合、フォーカスはリストの中で最初に選択されているオプションに設定されます。
 
@@ -78,7 +76,6 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
   &#x20;(任意): 最後のオプションにフォーカスを移動します。 任意で、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。 5 つ以上のオプションがあるリストでは、このキーをサポートすることを強くお勧めします。
 
 - 先行入力は、全てのリストボックス、特に 7 つ以上のオプションがあるリストボックスに対してお勧めします。
-
   - 文字を入力: フォーカスは、入力された文字で始まる名前を持つ次の項目に移動します。
   - 複数の文字をすばやく続けて入力: フォーカスは、入力された文字列で始まる名前を持つ次の項目に移動します。
 
@@ -91,9 +88,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
   <kbd>Ctrl</kbd>
 
   &#x20;などの修飾キーを押し続けなくてもよい推奨モデルや、選択状態が失われるのを避けるためにナビゲート中に修飾キーを押し続ける必要のある代替モデルがあります。
-
   - 推奨選択モデル — 修飾キーを押し続ける必要はありません。
-
     - <kbd>スペース</kbd>
 
       : フォーカスされたオプションの選択状態を変更します。
@@ -198,7 +193,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 - リストがフォーカスされていない場合、作成者は選択に異なるスタイリングを使用することをお勧めします。 例えば、アクティブでない選択は、より明るい背景色で表示されることが多いです。
 - リストボックスが別のウィジェットの一部でない場合は、`aria-labelledby` プロパティが設定されているべきです。
 - 1 つ以上のエントリーがリストボックスの DOM の子でない場合、追加の `aria-*` プロパティを設定する必要があります ([ARIA のベストプラクティス](https://www.w3.org/TR/wai-aria-practices/#listbox_div) (英語) を参照) 。
-- リストボックスを展開 ([expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)) する正当な理由がある場合は、コンボボックス ([`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)) ロールの方がより適切かもしれません。
+- リストボックスを展開 ([expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)) する正当な理由がある場合は、コンボボックス ([`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)) ロールの方がより適切かもしれません。
 
 ## 仕様書
 
@@ -210,14 +205,14 @@ TBD
 
 ## 関連情報
 
-- [HTML `<select>` 要素](/ja/docs/Web/HTML/Element/select)
-- [HTML `<label>` 要素](/ja/docs/Web/HTML/Element/label)
-- [HTML `<option>` 要素](/ja/docs/Web/HTML/Element/option)
-- [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
-- [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [HTML `<select>` 要素](/ja/docs/Web/HTML/Reference/Elements/select)
+- [HTML `<label>` 要素](/ja/docs/Web/HTML/Reference/Elements/label)
+- [HTML `<option>` 要素](/ja/docs/Web/HTML/Reference/Elements/option)
+- [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
+- [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [ARIA のベストプラクティス — リストボックス](https://www.w3.org/TR/wai-aria-practices/#Listbox) (英語)
 - [ARIA のロールモデル — リストボックス](https://www.w3.org/TR/wai-aria-1.1/#listbox) (英語)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

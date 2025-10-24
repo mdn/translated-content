@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
 ---
 
-{{CSSRef}}
-
 **`:scope`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示作为选择器要匹配的作为参考点或作用域的元素。
 
 ```css
@@ -151,7 +149,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 #### 结果
 
-`context` 的作用域是 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 为 `context` 的元素。所选元素是此上下文的直接子元素——`element-1` 和 `element-2`——但不包括它们的后代。
+`context` 的作用域是 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 为 `context` 的元素。所选元素是此上下文的直接子元素——`element-1` 和 `element-2`——但不包括它们的后代。
 
 {{EmbedLiveSample('在 JavaScript 中使用 :scope')}}
 
@@ -167,7 +165,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 - {{cssxref("@scope")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
 - {{cssxref(":root")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
-- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [DOM 树节点的选择和遍历](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} 和 {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} 和 {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} 和 {{domxref("DocumentFragment.querySelectorAll()")}}

@@ -3,8 +3,6 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 ---
 
-{{CSSRef}}
-
 **`font-variant-alternates`** CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。
 
 ```css
@@ -51,7 +49,6 @@ font-variant-alternates: unset;
 - `swash()`
   - : 此函数启用斜字体。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `swsh` 和 `cswh`，例如`swsh 2` 和`cswh 2`。
 - `ornaments()`
-
   - : 此函数可启用装饰物，例如 [fleurons](http://en.wikipedia.org/wiki/Fleuron_%28typography%29) 与其他 dingbat 字形。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `ornm`，例如 `ornm 2`。
 
     > [!NOTE]

@@ -11,7 +11,7 @@ l10n:
 **`keepalive`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストの `keepalive` 設定（`true` または `false`）が含まれており、これは、リクエストが完全に完了する前にそのリクエストを開始したページが読み込まれなくなった場合に、関連するリクエストをブラウザーが維持するかどうかを示します。
 
 これにより、例えば、ユーザーがページから離れたり閉じたりした場合でも、 {{domxref('Window.fetch','fetch()')}} リクエストによってセッションの終わりに分析データを送信することができます。
-これは、同じ目的で {{domxref("Navigator.sendBeacon()")}} を使用するよりも、 [`POST`](/ja/docs/Web/HTTP/Methods/POST) 以外の HTTP メソッドを使用できる、リクエストプロパティをカスタマイズできる、フェッチのプロミス ({{jsxref("Promise")}}) が履行されるサーバーレスポンスにアクセスできる、といった利点があります。
+これは、同じ目的で {{domxref("Navigator.sendBeacon()")}} を使用するよりも、 [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) 以外の HTTP メソッドを使用できる、リクエストプロパティをカスタマイズできる、フェッチのプロミス ({{jsxref("Promise")}}) が履行されるサーバーレスポンスにアクセスできる、といった利点があります。
 [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)でも利用できます。
 
 ## 値
@@ -44,5 +44,5 @@ let myKeepAlive = myRequest.keepalive; // true
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

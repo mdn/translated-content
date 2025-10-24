@@ -15,7 +15,7 @@ l10n:
 
 **反復可能プロトコル** (iterable protocol) によって、 JavaScript のオブジェクトは反復動作を定義またはカスタマイズすることができます。例えば、 {{jsxref("Statements/for...of", "for...of")}} 構造の中でどの値がループに使われるかです。一部の組み込み型は既定の反復動作を持つ[組み込み反復可能オブジェクト](#組み込み反復可能オブジェクト)で、これには {{jsxref("Array")}} や {{jsxref("Map")}} がありますが、他の型 ({{jsxref("Object")}} など) はそうではありません。
 
-**反復可能**であるために、オブジェクトは **`[Symbol.iterator]()`** メソッドを実装する必要があります。これはつまり、オブジェクト（または、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上のオブジェクトの一つ）が `[Symbol.iterator]` キー（{{jsxref("Symbol.iterator")}} 定数にて利用可）のプロパティを持つ必要があります。
+**反復可能**であるために、オブジェクトは **`[Symbol.iterator]()`** メソッドを実装する必要があります。これはつまり、オブジェクト（または、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上のオブジェクトの一つ）が `[Symbol.iterator]` キー（{{jsxref("Symbol.iterator")}} 定数にて利用可）のプロパティを持つ必要があります。
 
 - `[Symbol.iterator]()`
   - : [イテレータープロトコル](#イテレータープロトコル)に準拠するオブジェクトを返す、引数なしの関数。
@@ -39,7 +39,6 @@ l10n:
 イテレータープロトコルのすべてのメソッド（`next()`、`return()`、`throw()`）は、`IteratorResult` インターフェイスを実装したオブジェクトを返すことが期待されています。このオブジェクトは以下のプロパティを持つ必要があります。
 
 - `done` {{optional_inline}}
-
   - : イテレーターがシーケンス内の次の値を生成できるとき `false` の値になります。（これは `done` プロパティが指定されていない場合も同じです。）
 
     イテレーターが反復シーケンスを終了した場合、`true` の値になります。この場合、`value` は任意でイテレーターの返値を指定します。
@@ -173,7 +172,7 @@ new WeakSet(
 
 ### 反復可能オブジェクトを期待する構文
 
-一部の文や式は反復可能オブジェクトを期待します。例えば、 {{jsxref("Statements/for...of", "for...of")}} ループ、[配列と引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}}、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)などです。
+一部の文や式は反復可能オブジェクトを期待します。例えば、 {{jsxref("Statements/for...of", "for...of")}} ループ、[配列と引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}}、[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)などです。
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -195,7 +194,7 @@ console.log(gen().next()); // { value: "a", done: false }
 console.log(a); // "a"
 ```
 
-組み込み API がイテレーターを反復処理していて、最後の結果の `done` が `false` （イテレーターがさらに値を生成できる状態）だが、それ以上の値は必要ない場合、`return` メソッドが存在すれば、それが呼び出されますこれは例えば、`for...of` ループの中で `break` や `return` に遭遇した場合や、配列の分割代入ですべての識別子が既に結合されている場合などに発生します。
+組み込み API がイテレーターを反復処理していて、最後の結果の `done` が `false` （イテレーターがさらに値を生成できる状態）だが、それ以上の値は必要ない場合、`return` メソッドが存在すれば、それが呼び出されますこれは例えば、`for...of` ループの中で `break` や `return` に遭遇した場合や、配列の構造分解ですべての識別子が既に結合されている場合などに発生します。
 
 ```js
 const obj = {
@@ -413,7 +412,7 @@ console.log(it.next().value); // 2
 
 ### クラスで反復可能プロトコルを定義
 
-状態のカプセル化は、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)でも行うことができます。
+状態のカプセル化は、[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)でも行うことができます。
 
 ```js
 class SimpleClass {

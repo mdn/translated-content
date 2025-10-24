@@ -3,8 +3,6 @@ title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
-{{CSSRef}}
-
 ## 요약(Summary)
 
 [CSS](/en-US/CSS) [at-rule](/en-US/CSS/At-rule) 인 `@font-face` 를 사용하여 웹페이지의 텍스트에 온라인폰트(online fonts)를 적용할 수 있다. `@font-face` 를 사용하여 웹페이지 제작자가 원하는 폰트를 사용할 수 있게함으로써, 컴퓨터에 설치된 폰트만을 사용해야했던 제약이 없어지게되었다. `@font-face` at-rule 은 CSS의 top-level에서 뿐 아니라, [CSS conditional-group at-rule](/en-US/CSS/At-rule#conditional_group_rules) 안에서도 사용될 수도 있다.
@@ -73,7 +71,7 @@ slug: Web/CSS/@font-face
 
 ## 주의사항(Notes)
 
-- Gecko에서는, 동일 도메인 제한(same domain restriction)을 피하기 위해 [HTTP access controls](/ko/docs/Web/HTTP/CORS) 을 사용하지 않는한, 웹폰트(web fonts)의 사용시에는 동일 도메인 제한이 적용된다(폰트 파일은 폰트가 사용되는 페이지와 동일한 도메인상에 존재해야 함).
+- Gecko에서는, 동일 도메인 제한(same domain restriction)을 피하기 위해 [HTTP access controls](/ko/docs/Web/HTTP/Guides/CORS) 을 사용하지 않는한, 웹폰트(web fonts)의 사용시에는 동일 도메인 제한이 적용된다(폰트 파일은 폰트가 사용되는 페이지와 동일한 도메인상에 존재해야 함).
 - > **참고:** **주의사항:** TrueType, OpenType, Web Open File(WOFF) 폰트에 대한 MIME타입이 정의되지 않았기 때문에, 파일에 적용될 MIME 타입에 대해서는 고려하지 않아도 된다.
 - Gecko에서는 웹폰트(web font)가 사용된 페이지를 표시할 때는 웹폰트가 다운로드 되는 동안 사용자의 컴퓨터에 이미 설치되어 있어 즉시 사용가능한 폰트(CSS fallback font)를 사용하여 텍스트를 표시한다. 각각의 웹폰트의 다운로드가 완료되면 Gecko는 해당 텍스트의 폰트를 교체한다. 이러한 과정은 사용자가 웹페이지 내의 텍스트를 좀 더 빨리 읽게끔 도와준다.
 

@@ -20,9 +20,7 @@ insertRule(rule, index)
 ### 参数
 
 - `rule`
-
   - : 一个包含了将要插入的规则的 {{domxref("DOMString")}}。规则字符串必须包含的内容取决于它的类型：
-
     - **[rule-set](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句) 类型**（普通带有选择器的规则），需要[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)和样式声明；
     - **[at-rule](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等），需要 at-identifier 和规则内容。
 

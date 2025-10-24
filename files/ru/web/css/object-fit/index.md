@@ -5,7 +5,7 @@ slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-Свойство **`object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Element/img) или [`<video>`](/ru/docs/Web/HTML/Element/video), должно заполнять контейнер относительно его высоты и ширины.
+Свойство **`object-fit`** определяет, как содержимое заменяемого элемента, такого как [`<img>`](/ru/docs/Web/HTML/Reference/Elements/img) или [`<video>`](/ru/docs/Web/HTML/Reference/Elements/video), должно заполнять контейнер относительно его высоты и ширины.
 
 {{InteractiveExample("CSS Demo: object-fit")}}
 

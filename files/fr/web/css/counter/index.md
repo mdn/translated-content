@@ -29,7 +29,7 @@ Un [compteur](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) CSS n'a au
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Un nom identifiant le compteur (sensible à la casse). C'est le même nom qui pourra être utilisé avec {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer avec deux tirets et ne peut pas être l'un des mots-clés `none`, `unset`, `initial` ou `inherit`.
 - `<counter-style>`
-  - : Un nom de style de compteur ou une fonction [`symbols()`](</fr/docs/Web/CSS/symbols()>). Le nom d'un style de compteur peut indiquer un compteur [alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien](/fr/docs/Web/CSS/list-style-type#valeurs) ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/CSS_counter_styles). Si cette valeur n'est pas fournie, le style par défaut est décimal.
+  - : Un nom de style de compteur ou une fonction [`symbols()`](/fr/docs/Web/CSS/symbols). Le nom d'un style de compteur peut indiquer un compteur [alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien](/fr/docs/Web/CSS/list-style-type#valeurs) ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/CSS_counter_styles). Si cette valeur n'est pas fournie, le style par défaut est décimal.
 - `none`
   - : Représente la chaîne de caractère vide.
 
@@ -117,4 +117,4 @@ li::after {
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- La fonction CSS [`counters()`](</fr/docs/Web/CSS/counters()>)
+- La fonction CSS [`counters()`](/fr/docs/Web/CSS/counters)

@@ -21,7 +21,7 @@ get(index);
 
 ### 返値
 
-関数参照を返します。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)、wasm 関数を内在する JavaScript ラッパーです。</p>
+関数参照を返します。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)、wasm 関数を内在する JavaScript ラッパーです。</p>
 
 ### 例外
 
@@ -55,5 +55,5 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

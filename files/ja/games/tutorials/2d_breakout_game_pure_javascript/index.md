@@ -3,15 +3,13 @@ title: 純粋な JavaScript を使ったブロック崩しゲーム
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 このステップバイステップのチュートリアルでは、すべて JavaScript だけで書かれた、 HTML5 の {{htmlelement("canvas")}} で表示できる簡単な **MDN ブロック崩し**ゲームを作ります。</p>
 
 各ステップには編集可能なライブサンプルがあるので、中間ステージがどのように見えるかを確認しながらプレイすることができます。画像のレンダリングと移動、衝突検出、制御機構、勝敗状態などの基本的なゲーム メカニックを使用するための {{htmlelement("canvas")}} 要素の基本的な使用方法を学びます。
 
-このシリーズのほとんどの記事は理解するために初歩または中級レベルの [JavaScript](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics) の知識を必要とします。このチュートリアルを一通りこなすことで簡単なウェブゲームを作れるようになるでしょう。
+このシリーズのほとんどの記事は理解するために初歩または中級レベルの [JavaScript](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) の知識を必要とします。このチュートリアルを一通りこなすことで簡単なウェブゲームを作れるようになるでしょう。
 
 ![パドルを使用してボールを弾き、スコアとライフをキープしながらレンガのフィールドを破壊していくゲーム「MDN Breakout」のゲーム画面。](mdn-breakout-gameplay.png)
 

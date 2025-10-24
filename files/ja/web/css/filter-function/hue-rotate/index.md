@@ -5,13 +5,12 @@ l10n:
   sourceCommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
 ---
 
-{{CSSRef}}
+**`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-**`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+> [!NOTE]
+> `hue-rotate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
 
-> **メモ:** `hue-rotate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
-
-{{InteractiveExample("CSS Demo: hue-rotate()")}}
+{{InteractiveExample("CSS デモ: hue-rotate()")}}
 
 ```css interactive-example-choice
 filter: hue-rotate(0);
@@ -141,7 +140,7 @@ p {
 
 ### url() と SVG の hue-rotate フィルターで
 
-SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feColorMatrix")}} プリミティブの `hueRotate` 型は、同様の効果を提供します。次のものが指定されたとします。
+SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feColorMatrix")}} プリミティブの `hueRotate` 型は、同様の効果を提供します。次のものが指定されたとします。
 
 ```svg
 <filter id="filterID">

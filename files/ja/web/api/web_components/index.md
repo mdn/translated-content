@@ -2,7 +2,7 @@
 title: ウェブコンポーネント
 slug: Web/API/Web_components
 l10n:
-  sourceCommit: 839b5e82a117678948392e77b81d64a7f6d03811
+  sourceCommit: 56f5609d323467cd08eeaddc57e4490a02be1889
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -48,9 +48,7 @@ l10n:
 - {{domxref("Window.customElements")}}
   - : `CustomElementRegistry` オブジェクトへの参照を返します。
 - [ライフサイクルコールバック](/ja/docs/Web/API/Web_components/Using_custom_elements#カスタム要素のライフサイクルコールバック)
-
   - : カスタム要素のクラス定義の中で定義された特別なコールバック関数で、挙動に影響を与えます。
-
     - `connectedCallback()`
       - : カスタム要素が文書の DOM に初めて接続したときに呼び出されます。
     - `disconnectedCallback()`
@@ -60,19 +58,15 @@ l10n:
     - `attributeChangedCallback()`
       - : カスタム要素の属性のひとつが追加、削除、もしくは変更されたときに呼び出されます。
 
-- カスタム組み込み要素を作成するための拡張機能
-
+- カスタマイズされた組み込み要素を作成するための拡張機能
   - : 以下の拡張機能が定義されています。
-
-    - [`is`](/ja/docs/Web/HTML/Global_attributes#is) グローバル HTML 属性
-      - : 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
+    - [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) グローバル HTML 属性
+      - : 標準の HTML 要素が、カスタマイズされた組み込み要素のように振る舞うべきかを指定できます。
     - {{domxref("Document.createElement()")}} メソッドの "is" オプション
-      - : カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
+      - : カスタマイズされた組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
 
 - CSS の擬似クラス
-
   - : カスタム要素に関連する擬似クラスです。
-
     - {{cssxref(":defined")}}
       - : 組み込み要素と `CustomElementRegistry.define()` で定義されるカスタム要素を含む、あらゆる定義済みの要素に一致します。
     - {{cssxref(":host")}}
@@ -86,34 +80,26 @@ l10n:
         より正確に言えば、指定した状態が要素の {{domxref("CustomStateSet")}} に存在する無名カスタム要素と一致します。
 
 - CSS 擬似要素
-
   - : カスタム要素に関連する擬似要素です。
-
     - {{cssxref("::part")}}
-      - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つものを表します。
+      - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つものを表します。
 
 ### シャドウ DOM
 
 - {{domxref("ShadowRoot")}}
   - : シャドウ DOM サブツリーのルートノードを表します。
 - {{domxref("Element")}} の拡張
-
   - : シャドウ DOM に関する `Element` インターフェイスの拡張です。
-
     - {{domxref("Element.attachShadow()")}} メソッドは、シャドウ DOM ツリーを指定された要素に取り付けます。
     - {{domxref("Element.shadowRoot")}} プロパティは、指定された要素に取り付けられたシャドウルートを返します。取り付けられているシャドウルートがない場合は `null` を返します。
 
 - 関連する {{domxref("Node")}} への追加
-
   - : シャドウ DOM に関する `Node` インターフェイスへの追加事項です。
-
     - {{domxref("Node.getRootNode()")}} メソッドは、そのコンテキストオブジェクトのルートを返します。存在する場合はシャドウルートを含みます。
     - {{domxref("Node.isConnected")}} プロパティは論理値を返し、そのノードがそのコンテキストオブジェクト（通常の DOM であれば {{domxref("Document")}} オブジェクト、シャドウ DOM であれば {{domxref("ShadowRoot")}}）に接続されているかどうかを示します。
 
 - {{domxref("Event")}} の拡張
-
   - : シャドウ DOM に関する `Event` インターフェイスの拡張です。
-
     - {{domxref("Event.composed")}}
       - : このイベントがシャドウ DOM 境界を超えて標準 DOM にまで伝播する場合は `true`、そうでなければ `false` を返します。
     - {{domxref("Event.composedPath")}}
@@ -125,23 +111,19 @@ l10n:
   - : HTML の断片を含みますが、最初に文書を読み込んだときにはレンダリングされず、実行時に　JavaScript を使って表示することができます。関連する DOM インターフェイスは {{domxref("HTMLTemplateElement")}} です。
 - {{htmlelement("slot")}}
   - : ウェブコンポーネント内のプレースホルダーで、独自のマークアップで埋めることができます。これにより、別の DOM ツリーを生成し、それらを一緒に表示することができます。関連する DOM インターフェイスは {{domxref("HTMLSlotElement")}} です。
-- [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) グローバル HTML 属性
+- [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) グローバル HTML 属性
   - : シャドウ DOM のシャドウツリーにあるスロットを要素に割り当てます。
 - {{domxref("Element.assignedSlot")}}
   - : 読み取り専用の属性で、この要素が挿入される {{htmlelement("slot")}} の参照を返します。
 - {{domxref("Text.assignedSlot")}}
   - : 読み取り専用の属性で、このテキストノードが挿入される {{htmlelement("slot")}} の参照を返します。
 - {{domxref("Element")}} の拡張
-
   - : スロットに関する `Element` インターフェイスの拡張です。
-
     - {{domxref("Element.slot")}}
       - : この要素に取り付けられたシャドウ DOM スロットの名前を返します。
 
 - CSS 擬似要素
-
   - : スロットに特化した擬似要素です。
-
     - {{cssxref("::slotted")}}
       - : スロットに挿入されたコンテンツに一致します。
 

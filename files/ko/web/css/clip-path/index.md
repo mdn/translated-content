@@ -3,8 +3,6 @@ title: clip-path
 slug: Web/CSS/clip-path
 ---
 
-{{CSSRef}}
-
 **`clip-path`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 클리핑 범위를 지정합니다. 클리핑 범위 안의 부분은 보여지고, 바깥은 숨겨집니다.
 
 {{InteractiveExample("CSS Demo: clip-path")}}
@@ -132,7 +130,8 @@ clip-path: unset;
 - `none`
   - : 클리핑 패스를 생성하지 않습니다.
 
-> **참고:** {{cssxref("opacity")}}가 1이 아닌 값일 때와 마찬가지로, **`none`** 외의 계산값은 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)을 생성합니다.
+> [!NOTE]
+> {{cssxref("opacity")}}가 1이 아닌 값일 때와 마찬가지로, **`none`** 외의 계산값은 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다.
 
 ### 형식 구문
 
@@ -664,6 +663,5 @@ clipPathSelect.addEventListener("change", (evt) => {
 - CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [Applying SVG effects to HTML content](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - SVG attributes:
-
   - {{SVGAttr("clip-path")}}
   - {{SVGAttr("clip-rule")}}

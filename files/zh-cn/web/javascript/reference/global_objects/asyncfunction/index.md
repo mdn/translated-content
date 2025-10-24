@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`AsyncFunction`** 对象为[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)提供方法。在 JavaScript 中，每个异步函数实际上都是一个 `AsyncFunction` 对象。
 
 注意，`AsyncFunction` *不是*全局对象。它可以通过以下代码获取：
@@ -33,7 +31,8 @@ _同时也从它的父类 {{jsxref("Function")}} 继承实例属性_。
 - `AsyncFunction.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncFunction"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
-> **备注：** `AsyncFunction` 实例并没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
+> [!NOTE]
+> `AsyncFunction` 实例并没有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。
 
 ## 实例方法
 

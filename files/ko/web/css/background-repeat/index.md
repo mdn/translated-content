@@ -3,8 +3,6 @@ title: background-repeat
 slug: Web/CSS/background-repeat
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`background-repeat`** 속성은 배경 이미지의 반복 방법을 지정합니다. 가로축 및 세로축을 따라 반복할 수 있고, 아예 반복하지 않을 수도 있습니다.
 
 {{InteractiveExample("CSS Demo: background-repeat")}}
@@ -75,7 +73,6 @@ background-repeat: unset;
 ### 값
 
 - `<repeat-style>`
-
   - : 한 개 값 구문은 두 개 값 구문의 단축 형태입니다.
 
     <table class="standard-table">
@@ -219,7 +216,8 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(star-solid.gif), url(favicon32.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

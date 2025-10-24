@@ -3,8 +3,6 @@ title: Firefox 81 for developers
 slug: Mozilla/Firefox/Releases/81
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 81 の変更点をまとめています。Firefox 81 は 2020 年 9 月 22 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -18,11 +16,11 @@ slug: Mozilla/Firefox/Releases/81
 
 ### HTML
 
-- サンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素で、自動ダウンロードをブロックするようになりました ([Firefox バグ 1558394](https://bugzil.la/1558394))。
+- サンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素で、自動ダウンロードをブロックするようになりました ([Firefox バグ 1558394](https://bugzil.la/1558394))。
 
 #### 廃止
 
-- 非標準の `mozallowfullscreen` 属性を、[`<iframe>`](/ja/docs/Web/HTML/Element/iframe) から削除しました。代わりに `allow="fullscreen"` を検討してください ([Firefox バグ 1657599](https://bugzil.la/1657599))。
+- 非標準の `mozallowfullscreen` 属性を、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) から削除しました。代わりに `allow="fullscreen"` を検討してください ([Firefox バグ 1657599](https://bugzil.la/1657599))。
 
 ### CSS
 
@@ -39,8 +37,8 @@ _変更なし。_
 
 ### HTTP
 
-- Firefox で、空白を含むクォートされていないファイル名を持つ非標準の [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) ヘッダーを受け入れるようになりました ([Firefox バグ 1440677](https://bugzil.la/1440677))。
-- Firefox で HTTP [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ヘッダーの [`web-share`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) ディレクティブをサポートしました。これは、[Web Share API](/ja/docs/Web/API/Navigator/share) へのアクセスを信頼されたオリジンに制限するために使用できます。現時点で Firefox は Web Share API 自体をサポートしていないことに注意してください ([Firefox バグ 1653199](https://bugzil.la/1653199))。
+- Firefox で、空白を含むクォートされていないファイル名を持つ非標準の [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) ヘッダーを受け入れるようになりました ([Firefox バグ 1440677](https://bugzil.la/1440677))。
+- Firefox で HTTP [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ヘッダーの [`web-share`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) ディレクティブをサポートしました。これは、[Web Share API](/ja/docs/Web/API/Navigator/share) へのアクセスを信頼されたオリジンに制限するために使用できます。現時点で Firefox は Web Share API 自体をサポートしていないことに注意してください ([Firefox バグ 1653199](https://bugzil.la/1653199))。
 
 ### API
 

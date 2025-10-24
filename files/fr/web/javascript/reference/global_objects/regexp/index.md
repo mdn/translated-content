@@ -54,7 +54,7 @@ Plusieurs des propriétés de `RegExp` ont un nom long et un nom court (semblabl
 
 ## Propriétés statiques
 
-- [`get RegExp[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species)
+- [`get RegExp[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
   - : La fonction de construction qui est utilisée pour créer des objets dérivés.
 
 ## Propriétés des instances
@@ -90,15 +90,15 @@ Plusieurs des propriétés de `RegExp` ont un nom long et un nom court (semblabl
   - : Teste la présence d'une correspondance sur la chaîne de caractères passée en argument.
 - [`RegExp.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString)
   - : Renvoie une chaîne de caractères représentant l'objet. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`RegExp.prototype[@@match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[@@match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
   - : Recherche une correspondance sur la chaîne de caractères donnée en argument et renvoie le résultat de la correspondance.
-- [`RegExp.prototype[@@matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[@@matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
   - : Renvoie l'ensemble des correspondances entre l'expression rationnelle et la chaîne de caractères passée en argument.
-- [`RegExp.prototype[@@replace]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[@@replace]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
   - : Remplace les correspondances trouvées sur la chaîne de caractères passée en argument par une nouvelle sous-chaîne.
-- [`RegExp.prototype[@@search]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@search]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
   - : Recherche une correspondance sur la chaîne de caractères donnée en argument et renvoie l'indice à partir duquel le motif a été trouvé dans la chaîne.
-- [`RegExp.prototype[@@split]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[@@split]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
   - : Découpe une chaîne de caractères donnée en argument en un tableau.
 
 ## Exemples

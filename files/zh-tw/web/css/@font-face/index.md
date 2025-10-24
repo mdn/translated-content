@@ -2,10 +2,8 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{CSSRef}}
 
 **`@font-face`** [CSS](/zh-TW/docs/Web/CSS) [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)用來指定一個自定義的字型，用於顯示文本；該字型可以從遠端伺服器加載，或者使用者本地安裝的字型。
 

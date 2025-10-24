@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
 ---
 
-{{CSSRef}}
+**`border-style`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
 
-**`border-style`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
-
-{{InteractiveExample("CSS Demo: border-style")}}
+{{InteractiveExample("CSS デモ: border-style")}}
 
 ```css interactive-example-choice
 border-style: none;
@@ -111,9 +109,7 @@ border-style: unset;
 ### 値
 
 - `<line-style>`
-
   - : 境界のスタイルを記述します。以下の値を使用することができます。
-
     - `none`
       - : `hidden` キーワードと同様に、境界線を表示しません。 {{cssxref("background-image")}} を設定している場合を除き、プロパティで別に指定していても {{cssxref("border-width")}} の同じ辺の計算値は `0` になります。テーブルのセルで境界線が collasped 形式である場合は、 `none` 値はもっとも低い優先度になります。ほかに競合する境界線が設定されている場合も、そちらが表示されます。
     - `hidden`

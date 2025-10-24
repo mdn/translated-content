@@ -3,15 +3,13 @@ title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 73 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
 - ウェブコンソールの文字列検索や正規表現検索で、['-' を前につけて否定することが可能になりました](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering_and_searching) ([Firefox バグ 1291192](https://bugzil.la/1291192))。
 
 ### HTML

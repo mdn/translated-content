@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
-{{CSSRef}}
-
 **`grid-auto-flow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
 
-{{InteractiveExample("CSS Demo: grid-auto-flow")}}
+{{InteractiveExample("CSS デモ: grid-auto-flow")}}
 
 ```css interactive-example-choice
 grid-auto-flow: row;
@@ -61,7 +59,8 @@ grid-auto-flow: row dense;
 }
 ```
 
-> **メモ:** `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
+> [!NOTE]
+> `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
 > 詳細は [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) をご覧ください。
 
 ## 構文
@@ -94,7 +93,6 @@ grid-auto-flow: unset;
 - `column`
   - : アイテムは、各列を順番に埋めていき、必要に応じて新しい列を追加していくことで配置されます。
 - `dense`
-
   - : "dense" パッキングアルゴリズムは、小さいアイテムが後で出てきた場合、グリッドの早い段階で穴を埋めようとします。そのため、より大きなアイテムが残した穴を埋めるために、アイテムが順番通りに表示されないことがあります。
 
     これを省略すると、 "sparse" アルゴリズムが使用され、配置アルゴリズムはアイテムを配置するときにグリッド内を「前に進む」だけで、穴を埋めるために後ろに戻ることはありません。これにより、自動配置されたアイテムはすべて「順番通り」に表示され、たとえ後から配置したアイテムで埋められるはずの穴が残っていたとしても、確実に埋められるようになります。

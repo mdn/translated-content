@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
+**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
 
-**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
-
-{{InteractiveExample("CSS Demo: caret-color")}}
+{{InteractiveExample("CSS デモ: caret-color")}}
 
 ```css interactive-example-choice
 caret-color: red;
@@ -65,7 +63,6 @@ caret-color: unset;
 ### 値
 
 - `auto`
-
   - : ユーザーエージェントはキャレットの適切な色を選択します。これは一般的に {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} ですが、視認性や周囲のコンテンツとのコントラストを高めるために、ユーザーエージェントが `currentcolor`、背景色、影の色、その他の要因を考慮して、別な色を選択することがあります。
 
     > [!NOTE]
@@ -129,7 +126,7 @@ p.custom {
 ## 関連情報
 
 - {{HTMLElement("input")}} 要素
-- 要素のテキストを編集可能にする HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性
+- 要素のテキストを編集可能にする HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性
 - [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - {{cssxref("&lt;color&gt;")}} データ型
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}

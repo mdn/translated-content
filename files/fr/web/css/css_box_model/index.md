@@ -50,11 +50,11 @@ slug: Web/CSS/CSS_box_model
 
 ## Guides
 
-- [Une introduction au modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Une introduction au modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Cet article explique un des concepts clé de CSS : le modèle de boîte. Il définit notamment les notions de marge, de remplissage (_padding_) ainsi que les différentes zones qui forment une boîte.
 - [Maîtriser la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : Dans certains cas, deux marges adjacentes sont fusionnées en une seule. Cet article explique quand cela se produit et comment contrôler ce comportement.
-- [Le modèle de mise en forme visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+- [Le modèle de mise en forme visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - : Cet article explique le modèle de mise en forme visuel.
 
 ## Spécifications

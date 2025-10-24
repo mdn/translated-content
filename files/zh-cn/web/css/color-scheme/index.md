@@ -3,8 +3,6 @@ title: color-scheme
 slug: Web/CSS/color-scheme
 ---
 
-{{CSSRef}}
-
 **`color-scheme`** CSS 属性允许元素指示它可以舒适地呈现哪些颜色方案。
 
 操作系统颜色方案的常见选择为“亮色”和“暗色”，或“日间模式”和“夜间模式”。当用户选择其中一种颜色方案时，操作系统会对用户界面进行调整，包括表单控件、滚动条和 CSS 系统颜色的使用值。
@@ -64,7 +62,6 @@ color-scheme: unset;
 - `dark`
   - : 表示可以使用操作系统深色配色方案渲染元素。
 - `only`
-
   - : 禁止用户代理覆盖元素的颜色方案。
 
     可以使用 `color-scheme: only light;` 应用于特定的元素或 `:root`，以关闭由 Chrome 的[自动深色主题](https://developer.chrome.google.cn/blog/auto-dark-theme#per-element-opt-out)引起的颜色覆盖。

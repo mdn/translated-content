@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLTableColElement")}} 接口的 **`span`** 只读属性表示 {{htmlelement("col")}} 或 {{htmlelement("colgroup")}} 必须横跨的列数；这使得该列占据表中多列的空间。它反映 [`span`](/zh-CN/docs/Web/HTML/Element/col#span) 属性。
+{{domxref("HTMLTableColElement")}} 接口的 **`span`** 只读属性表示 {{htmlelement("col")}} 或 {{htmlelement("colgroup")}} 必须横跨的列数；这使得该列占据表中多列的空间。它反映 [`span`](/zh-CN/docs/Web/HTML/Reference/Elements/col#span) 属性。
 
 ## 值
 

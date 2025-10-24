@@ -3,8 +3,6 @@ title: 我该怎样开始设计我的网站？
 slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 这篇文章介绍了所有项目最重要的第一步：确定你想要做什么
 
 <table>
@@ -34,7 +32,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_codin
 
 ## 自主学习
 
-_暂时还没有相关内容，[请考虑贡献一篇](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
+_暂时还没有相关内容，[请考虑贡献一篇](/zh-CN/docs/MDN/Community/Getting_started)。_
 
 ## 深入探索
 

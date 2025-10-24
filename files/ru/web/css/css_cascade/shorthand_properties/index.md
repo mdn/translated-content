@@ -24,7 +24,6 @@ Even if they are very convenient to use, there are a few edge cases to keep in m
 
 2. Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
 3. Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
-
    1. Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
 
       | ![border1.png](/files/3646/border1.png) | _The 1-value syntax_: `border-width: 1em` — The unique value represents all edges                                                                                                                                                                                                                               |
@@ -118,21 +117,21 @@ margin: 10px 5px 10px 5px;
 ## Смотрите также
 
 - Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - Shorthand properties: {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("text-decoration")}}, {{cssxref("transition")}}

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 **`-moz-force-broken-image-icon`** は拡張 CSS プロパティで、壊れた画像に `alt` 属性が付いていても、壊れた画像のアイコンを強制的に表示することができます。
 
@@ -14,7 +14,7 @@ l10n:
 ### 値
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : プロパティの値に `1` を指定した場合、その画像に [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性があったとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `alt` 属性のみが表示されます。
+  - : プロパティの値に `1` を指定した場合、その画像に [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性があったとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `alt` 属性のみが表示されます。
 
 > [!NOTE]
 > プロパティの値に `1` を指定した場合もなお、 `alt` 属性は壊れた画像アイコンの隣に同時に表示されます。
@@ -51,7 +51,8 @@ img {
 
 {{EmbedLiveSample('Examples','125','125')}}
 
-> **メモ:** `-moz-force-broken-image-icon` の値に `1` を指定した場合、その画像に width と height を明示的に指定しない限り、壊れた画像アイコンは表示されず、 `alt` 属性も非表示になります。
+> [!NOTE]
+> `-moz-force-broken-image-icon` の値に `1` を指定した場合、その画像に width と height を明示的に指定しない限り、壊れた画像アイコンは表示されず、 `alt` 属性も非表示になります。
 
 ## メモ
 

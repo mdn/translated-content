@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
+**`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
 
-**`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
-
-{{InteractiveExample("CSS Demo: flex-flow")}}
+{{InteractiveExample("CSS デモ: flex-flow")}}
 
 ```css interactive-example-choice
 flex-flow: row wrap;

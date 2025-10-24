@@ -39,7 +39,7 @@ Um objeto `Map` itera seus elementos na order da inserção - um loop {{jsxref("
 
 ### Igualdade de chaves
 
-- A igualdade de chaves é baseada no algoritimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality).
+- A igualdade de chaves é baseada no algoritimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
 
 - O {{jsxref("NaN")}} é considerado o mesmo que o `NaN` (apesar de `NaN !== NaN`) e todos os outros valores são considerados de acordo com a semântica do operador `===`.
 

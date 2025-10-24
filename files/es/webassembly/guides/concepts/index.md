@@ -131,5 +131,5 @@ This article has given you an explanation of what WebAssembly is, why it is so u
 
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
-- [Loading and running WebAssembly code](/es/docs/WebAssembly/Loading_and_running) — find out how to load your own WebAssembly module into a web page.
+- [Loading and running WebAssembly code](/es/docs/WebAssembly/Guides/Loading_and_running) — find out how to load your own WebAssembly module into a web page.
 - [Using the WebAssembly JavaScript API](/es/docs/WebAssembly/Using_the_JavaScript_API) — find out how to use the other major features of the WebAssembly JavaScript API.

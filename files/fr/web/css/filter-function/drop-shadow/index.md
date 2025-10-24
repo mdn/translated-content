@@ -1,51 +1,136 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
+l10n:
+  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
-La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
+{{InteractiveExample("Démonstration CSS&nbsp;: drop-shadow()")}}
 
-{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
+```css interactive-example-choice
+filter: drop-shadow(30px 10px 4px #4444dd);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 0 0.75rem crimson);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné avec une couleur donnée et fusionné sous l'image.
 
 > [!NOTE]
-> Cette fonction s'apparente à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow). La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
+> Cette fonction s'apparente à la propriété {{Cssxref("box-shadow")}}. La propriété `box-shadow` permet de créer une ombre rectangulaire sous _la boîte entière_ d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de _l'image même_.
 
 ## Syntaxe
 
 ```css
-drop-shadow(decalage-x decalage-y rayon-flou couleur)
+/* Deux valeurs de longueur */
+/* drop-shadow( <length> <length> ) */
+drop-shadow(5px 5px)
+
+/* Trois valeurs de longueur */
+/* drop-shadow( <length> <length> <length> ) */
+drop-shadow(5px 5px 15px)
+
+/* Deux valeurs de longueur et une couleur */
+/* drop-shadow( <length> <length> <color> ) */
+drop-shadow(5px 5px red)
+
+/* Trois valeurs de longueur et une couleur */
+/* drop-shadow( <length> <length> <length> <color> ) */
+drop-shadow(5px 5px 15px red)
+
+/* L'ordre des valeurs couleur et longueur peut être inversé */
+/* drop-shadow( <color> <length> <length> <length> ) */
+drop-shadow(#ee2233 0.5rem 0.5rem 1rem)
+
+/* Empiler plusieurs ombres en passant plusieurs drop-shadow en tant que
+   filtre */
+drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ```
 
-La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (tel que défini dans la documentation de [`box-shadow`](/fr/docs/Web/CSS/box-shadow)), mais pour lequel le mot-clé `inset` et le paramètre `spread` ne sont pas acceptés.
+La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (tel que défini dans la documentation de {{Cssxref("box-shadow")}}), mais pour lequel le mot-clé `inset` et le paramètre `spread` ne sont pas acceptés.
 
 ### Paramètres
 
-- `decalage-x` `decalage-y` (required)
-  - : Deux valeurs de longueur ( type [`<length>`](/fr/docs/Web/CSS/length)) qui déterminent le décalage de l'ombre. `decalage-x` indique la distance horizontale, les valeurs négatives décalant l'ombre vers la gauche de l'élément. `decalage-y` indique la distance verticale, les valeurs négatives décalant l'ombre vers le haut de l'élément. Si les deux valeurs sont `0`, l'ombre est placée directement sous l'élément.
-- `rayon-flou` (optional)
-  - : Le rayon de flou de l'ombre, indiqué comme une longueur (type [`<length>`](/fr/docs/Web/CSS/length)). Plus la valeur est grande, plus l'ombre sera grande et floue. Si cette valeur n'est pas fournie, elle prendra 0 comme valeur par défaut, ce qui créera une ombre au contour net. Les valeurs négatives ne sont pas autorisées.
-- `couleur` (optional)
-  - : La couleur de l'ombre, indiquée sous la forme d'une valeur de type [`<color>`](/fr/docs/Web/CSS/color_value). Si cette valeur n'est pas fournie, c'est la couleur indiquée par la propriété [`color`](/fr/docs/Web/CSS/color) qui est utilisée.
+- `<color>` {{optional_inline}}
+  - : Définit la couleur de l'ombre. Si elle n'est pas précisée, la valeur de la propriété {{cssxref("color")}} définie sur l'élément parent est utilisée.
+
+- `<length>`
+  - : Définit la longueur de décalage de l'ombre. Ce paramètre accepte deux ou trois valeurs. Si deux valeurs sont précisées, elles correspondent à `<offset-x>` (décalage horizontal) et `<offset-y>` (décalage vertical). Une valeur négative pour `<offset-x>` place l'ombre à gauche de l'élément. Une valeur négative pour `<offset-y>` place l'ombre au-dessus de l'élément. Si une valeur n'est pas précisée, `0` est utilisé par défaut. Si une troisième valeur est précisée, elle correspond à `<standard-deviation>`, c'est-à-dire l'écart type utilisé pour la fonction de [flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien). Plus la valeur de `<standard-deviation>` est grande, plus l'ombre sera grande et floue. Les valeurs négatives pour `<standard-deviation>` ne sont pas autorisées.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
-### Définir une ombre portée avec des décalages et un rayon de flou exprimés en pixels
+### Définir une ombre portée
 
-```css
-/* Une ombre noire avec un rayon de flou de 10px */
-drop-shadow(16px 16px 10px black)
+```html
+<div>drop-shadow(16px 16px)</div>
+<div>drop-shadow(16px 16px red)</div>
+<div>drop-shadow(red 1rem 1rem 10px)</div>
+<div>drop-shadow(-16px -16px red)</div>
+<div>
+  drop-shadow(1px 1px red) drop-shadow(1px -1px red) drop-shadow(-1px 1px red)
+  drop-shadow(-1px -1px red)
+</div>
 ```
 
-### Définir une ombre portée avec des décalages et un rayon de flou en rem
-
 ```css
-/* Une ombre rougeâtre avec un rayon de flou de 1rem */
-drop-shadow(.5rem .5rem 1rem #e23)
+div {
+  display: inline-block;
+  margin: 0 0.5rem 2rem 1rem;
+  padding: 0.5rem;
+  height: 100px;
+  width: 190px;
+  vertical-align: top;
+  background-color: #222222;
+
+  color: lime;
+}
+
+div:nth-child(1) {
+  filter: drop-shadow(16px 16px);
+}
+
+div:nth-child(2) {
+  filter: drop-shadow(16px 16px red);
+}
+
+div:nth-child(3) {
+  filter: drop-shadow(red 1rem 1rem 10px);
+}
+
+div:nth-child(4) {
+  filter: drop-shadow(-16px -16px red);
+}
+
+div:nth-child(5) {
+  filter: drop-shadow(1px 1px red) drop-shadow(1px -1px red)
+    drop-shadow(-1px 1px red) drop-shadow(-1px -1px red);
+}
 ```
+
+{{EmbedLiveSample("Définir une ombre portée", "100%", "300px")}}
+
+En l'absence de valeur `<color>` dans la fonction `drop-shadow()` du premier bloc, l'ombre utilise la valeur de la propriété `color` de l'élément (`lime`). Les deuxième et troisième ombres illustrent que l'ordre des valeurs de longueur et de couleur peut être inversé. La troisième ombre montre l'effet de flou lorsqu'une troisième valeur `<length>` est précisée. La quatrième ombre utilise des décalages négatifs, ce qui déplace l'ombre vers la gauche et le haut. Le cinquième exemple montre comment appliquer plusieurs ombres portées à un même élément.
 
 ## Spécifications
 
@@ -57,14 +142,19 @@ drop-shadow(.5rem .5rem 1rem #e23)
 
 ## Voir aussi
 
-- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
-  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
-  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
-  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
-  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
-  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
-  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
-  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
-  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
-- La propriété CSS [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
+- Les fonctions {{cssxref("&lt;filter-function&gt;")}}&nbsp;:
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}
+- La propriété {{cssxref("filter")}}
+- La propriété {{cssxref("backdrop-filter")}}
+- La propriété {{cssxref("box-shadow")}}
+- La propriété {{cssxref("text-shadow")}}
+- [Introduction aux ombres portées sur le texte](/fr/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- Le module des [effets de filtre CSS](/fr/docs/Web/CSS/CSS_filter_effects)

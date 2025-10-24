@@ -9,7 +9,51 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-block-end`** définit la fin logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte.
 
-{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}
+{{InteractiveExample("CSS Demo: padding-block-end")}}
+
+```css interactive-example-choice
+padding-block-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-block-end: 5em;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-end: 5em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Syntaxe
 
@@ -36,7 +80,7 @@ padding-block-end: unset;
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille du remplissage exprimée en pourcentage, relatif à la taille du [bloc englobant](/fr/docs/Web/CSS/Containing_block) sur l'axe en ligne (physiquement, cela correspond à la largeur pour les sens d'écriture horizontaux (voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode))). Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée en pourcentage, relatif à la taille du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (physiquement, cela correspond à la largeur pour les sens d'écriture horizontaux (voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode))). Cette valeur ne peut être négative.
 
 ## Description
 

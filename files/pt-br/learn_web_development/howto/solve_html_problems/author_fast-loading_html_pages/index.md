@@ -60,7 +60,7 @@ Quaisquer elementos dinâmicos que requeiram que a página complete seu carregam
 
 ### Reduza o número de scripts _inline_
 
-Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
+Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
 
 ### Use CSS moderno e marcação validada
 
@@ -123,7 +123,6 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 - `html`
 
 - `head`
-
   - `link`...
     Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 
@@ -134,7 +133,6 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 - `body`
 - Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
-
   - `script`...
     Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.
 

@@ -3,8 +3,6 @@ title: 布局和包含块
 slug: Web/CSS/CSS_display/Containing_block
 ---
 
-{{CSSRef}}
-
 一个元素的尺寸和位置经常受其**包含块**（containing block）的影响。大多数情况下，包含块就是这个元素最近的祖先[块元素](/zh-CN/docs/Glossary/Block-level_content)的[内容区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内容区域)，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。
 
 当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：
@@ -32,7 +30,6 @@ slug: Web/CSS/CSS_display/Containing_block
 2. 如果 position 属性为 **`absolute`** ，包含块就是由它的最近的 position 的值不是 `static` （也就是值为`fixed`, `absolute`, `relative` 或 `sticky`）的祖先元素的内边距区的边缘组成。
 3. 如果 position 属性是 **`fixed`**，在连续媒体的情况下 (continuous media) 包含块是 {{glossary("viewport")}} ,在分页媒体 (paged media) 下的情况下包含块是分页区域 (page area)。
 4. 如果 position 属性是 **`absolute`** 或 **`fixed`**，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
-
    1. {{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 `none`
    2. {{cssxref("will-change")}} 的值是 `transform` 或 `perspective`
    3. {{cssxref("filter")}} 的值不是 `none` 或 `will-change` 的值是 `filter`（只在 Firefox 下生效）。
@@ -42,7 +39,8 @@ slug: Web/CSS/CSS_display/Containing_block
 > [!NOTE]
 > 根元素（{{HTMLElement("html")}}）所在的包含块是一个被称为**初始包含块**的矩形。它具有视口（对于连续媒体）或页面区域（对于分页媒体）的尺寸。
 
-> **备注：** `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
+> [!NOTE]
+> `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
 
 ## 根据包含块计算百分值
 
@@ -68,7 +66,7 @@ slug: Web/CSS/CSS_display/Containing_block
 
 下面的示例，只有 CSS 不同。
 
-### Example 1
+### 示例 1
 
 这个示例中，P 标签设置为静态定位，所以它的包含块为 `<section>` ，因为距离最近的父节点即是她的包含块。
 
@@ -101,9 +99,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_1','100%','300')}}
+{{EmbedLiveSample('示例 1','100%','300')}}
 
-### Example 2
+### 示例 2
 
 在这个示例中，P 标签的包含块为 `<body>` 元素，因为 `<section>` 不再是一个块容器，所以并没有形成一个格式上下文。
 
@@ -132,11 +130,11 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_2','100%','300')}}
+{{EmbedLiveSample('示例 2','100%','300')}}
 
-### Example 3
+### 示例 3
 
-这个示例中，P 元素的包含块是 `<section`>，因为 `<section>` 的 `position` 为 `absolute` 。P 元素的百分值会受其包含块的 `padding` 所影响。不过，如果包含块的 {{cssxref("box-sizing")}} 值设置为 `border-box` ，就没有这个问题。
+这个示例中，P 元素的包含块是 `<section>`，因为 `<section>` 的 `position` 为 `absolute` 。P 元素的百分值会受其包含块的 `padding` 所影响。不过，如果包含块的 {{cssxref("box-sizing")}} 值设置为 `border-box` ，就没有这个问题。
 
 ```html hidden
 <body>
@@ -171,9 +169,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_3','100%','300')}}
+{{EmbedLiveSample('示例 3','100%','300')}}
 
-### Example 4
+### 示例 4
 
 这个示例中，P 元素的 `position` 为 `fixed`，所以它的包含块就是初始包含块（在屏幕上，也就是 viewport）。这样的话，P 元素的尺寸大小，将会随着浏览器窗框大小的变化，而变化。
 
@@ -208,9 +206,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_4','100%','300')}}
+{{EmbedLiveSample('示例 4','100%','300')}}
 
-### Example 5
+### 示例 5
 
 这个示例中，P 元素的 `position` 为 `absolute`，所以它的包含块是 `<section>`，也就是距离它最近的一个 `transform` 值不为 none 的父元素。
 
@@ -246,32 +244,30 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_5','100%','300')}}
+{{EmbedLiveSample('示例 5','100%','300')}}
 
 ## 参见
 
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
-
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+  - {{glossary("Replaced elements", "可替换元素")}}
 
 - {{cssxref("all")}} 属性可将所有 CSS 声明重置为它所指定的状态

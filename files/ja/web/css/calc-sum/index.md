@@ -5,20 +5,16 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
-**`<calc-sum>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、任意の [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)を用いて計算を行う式を表します。この式は、2つの値の間の加算と減算の基本的な算術処理を実行します。
+**`<calc-sum>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、任意の [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)を用いて計算を行う式を表します。この式は、2つの値の間の加算と減算の基本的な算術処理を実行します。
 
 ## 構文
 
-`<calc-sum>` 型は 2 つの数値とその間の以下の[算術演算子](/ja/docs/Learn/JavaScript/First_steps/Math#算術演算子)のいずれかを定義します。
+`<calc-sum>` 型は 2 つの数値とその間の以下の[算術演算子](/ja/docs/Learn_web_development/Core/Scripting/Math#算術演算子)のいずれかを定義します。
 
 - `+`
-
   - : 2 つの数値を足し合わせます。
 
 - `-`
-
   - : 右の数値を左から減算します。
 
 ### 公式定義

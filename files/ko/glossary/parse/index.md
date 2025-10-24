@@ -9,7 +9,7 @@ l10n:
 
 구문분석(Parsing)이란 프로그램을 분석하고 런타임 환경이 실제로 실행할 수 있는 내부 형식(예, 브라우저 내부의 {{glossary("JavaScript")}} 엔진)으로 변환하는 것을 의미합니다.
 
-[브라우저는 HTML을 구문분석](/ko/docs/Learn/HTML) 하는 것을 통해 {{glossary('DOM')}} 트리로 만듭니다. HTML 구문분석에는 [토큰화](/ko/docs/Web/API/DOMTokenList) 및 트리 구성이 포함됩니다. HTML 토큰에는 시작 태그와 끝 태그는 물론 속성 이름과 값도 포함됩니다. 문서의 형식이 올바른 경우, 구문 분석이 간단하고 빠릅니다. 구문분석기는 토큰화된 입력을 문서로 구문 분석하여 트리를 구축합니다.
+[브라우저는 HTML을 구문분석](/ko/docs/Learn_web_development/Core/Structuring_content) 하는 것을 통해 {{glossary('DOM')}} 트리로 만듭니다. HTML 구문분석에는 [토큰화](/ko/docs/Web/API/DOMTokenList) 및 트리 구성이 포함됩니다. HTML 토큰에는 시작 태그와 끝 태그는 물론 속성 이름과 값도 포함됩니다. 문서의 형식이 올바른 경우, 구문 분석이 간단하고 빠릅니다. 구문분석기는 토큰화된 입력을 문서로 구문 분석하여 트리를 구축합니다.
 
 HTML 구문분석기가 이미지와 같은 논블록킹 리소스를 찾으면, 브라우저는 해당 리소스를 요청하고 구문분석을 계속합니다. CSS 파일이 발견되면 구문분석을 계속할 수 있지만, 특히 [`async`](/ko/docs/Web/JavaScript/Reference/Statements/async_function) 또는 `defer` 속성이 없는 `<script>` 태그의 경우에는 렌더링을 차단하고 HTML 구문 분석을 일시 중지합니다.
 

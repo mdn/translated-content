@@ -42,7 +42,7 @@ server-sent events의 사용법을 배우기 위해서는 [server-sent events �
 
 ### 관련 주제
 
-- [서버로부터 데이터 페칭하기](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [서버로부터 데이터 페칭하기](/ko/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/ko/docs/Web/JavaScript)
 - [WebSockets](/ko/docs/Web/API/WebSockets_API)
 

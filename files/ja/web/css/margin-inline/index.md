@@ -2,14 +2,12 @@
 title: margin-inline
 slug: Web/CSS/margin-inline
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
+The **`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
-The **`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
-
-{{InteractiveExample("CSS Demo: margin-inline")}}
+{{InteractiveExample("CSS デモ: margin-inline")}}
 
 ```css interactive-example-choice
 margin-inline: 5% 10%;
@@ -65,8 +63,8 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`margin-inline-start`](/ja/docs/Web/CSS/margin-inline-start)
-- [`margin-inline-end`](/ja/docs/Web/CSS/margin-inline-end)
+- {{cssxref("margin-inline-start")}}
+- {{cssxref("margin-inline-end")}}
 
 ## 構文
 
@@ -76,6 +74,8 @@ margin-inline: 10px 20px; /* 絶対的な長さ */
 margin-inline: 1em 2em; /* テキストの大きさに対する相対値 */
 margin-inline: 5% 2%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 margin-inline: 10px; /* 先頭と末尾の両方を設定 */
+margin-inline: anchor-size(width);
+margin-inline: calc(anchor-size(self-block) / 5) auto;
 
 /* キーワード値 */
 margin-inline: auto;

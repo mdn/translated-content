@@ -140,7 +140,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 
 ## ライブリージョン属性を含むロール
 
-次の [`role="…"`](/ja/docs/Web/Accessibility/ARIA/Roles) 値を持つ要素は、既定ではライブリージョンのように振る舞います。
+次の [`role="…"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 値を持つ要素は、既定ではライブリージョンのように振る舞います。
 
 <table style="width: 100%;">
  <thead>
@@ -189,7 +189,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 ライブリージョンはとてもよくサポートされています。The Paciello Group は、2014年に、[ライブリージョンのサポート状況についての情報](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014) を投稿しました。Paul Jadam は特に [`aira-atomic` と `aria-relevant` のサポート](https://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
 
 1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、既定は `false` です。
-2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 
    : `aria-relevant=[LIST_OF_CHANGES]` はどういった類の変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` から一つ以上で、 `additions text` が既定です。
 
@@ -280,4 +280,4 @@ ARIA ライブプロパティの内訳:
 
 ## 関連情報
 
-- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)

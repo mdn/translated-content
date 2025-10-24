@@ -3,8 +3,6 @@ title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef}}
-
 **`String`** 对象用于表示和操作字符序列。
 
 ## 描述
@@ -265,13 +263,11 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - {{jsxref("String.prototype.substring()")}}
   - : 返回一个新字符串，其中包含来自（或之间）指定索引（或多个索引）的调用字符串的字符。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
-
   - : 字符串中的字符将转换为小写，同时尊重当前语言环境。
 
     对于大多数语言，这将返回与 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 相同的结果。
 
 - {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
-
   - : 字符串中的字符将转换为大写，同时尊重当前语言环境。
 
     对于大多数语言，这将返回与 {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} 相同的结果。
@@ -303,7 +299,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 > 它们的用途有限，因为它们基于非常古老的 HTML 标准并且仅提供当前可用的 HTML 标记和属性的一个子集。现在已经为它们创建了已弃用或非标准的标记。此外，它们在没有任何验证或清理的情况下进行简单的字符串连接，这使得它们在使用 [`innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 直接插入时成为潜在的安全威胁。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
-  - : [`<a name="name">`](/zh-CN/docs/Web/HTML/Element/a#name)（超文本目标）
+  - : [`<a name="name">`](/zh-CN/docs/Web/HTML/Reference/Elements/a#name)（超文本目标）
 - {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
@@ -313,13 +309,13 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
-  - : [`<font color="color">`](/zh-CN/docs/Web/HTML/Element/font#color)
+  - : [`<font color="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
-  - : [`<font size="size">`](/zh-CN/docs/Web/HTML/Element/font#size)
+  - : [`<font size="size">`](/zh-CN/docs/Web/HTML/Reference/Elements/font#size)
 - {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
-  - : [`<a href="url">`](/zh-CN/docs/Web/HTML/Element/a#href)（链接 URL）
+  - : [`<a href="url">`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href)（链接 URL）
 - {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}

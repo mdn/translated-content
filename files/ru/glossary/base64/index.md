@@ -20,7 +20,7 @@ slug: Glossary/Base64
 
 ## Документация
 
-- [`data` URIs](/ru/docs/Web/URI/Schemes/data)
+- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
   - : `data` URIs, описанные в [RFC 2397](https://tools.ietf.org/html/rfc2397), позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
 - [Base64](https://en.wikipedia.org/wiki/Base64)
   - : Wikipedia article about Base64 encoding.
@@ -33,9 +33,7 @@ slug: Glossary/Base64
 - [URIScheme](/ru/docs/URIScheme)
   - : List of Mozilla supported URI schemes
 - [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
-
   - : In this article is published a library of ours whose aims are:
-
     - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes — [`ArrayBufferView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) interface,
     - creating a collection of methods for such string-like objects (since now: `stringView`s) which work **strictly on array of numbers** rather than on immutable JavaScript strings,
     - working with other Unicode encodings, different from default JavaScript's UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString)s,

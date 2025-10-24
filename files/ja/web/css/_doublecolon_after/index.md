@@ -3,8 +3,6 @@ title: ::after (:after)
 slug: Web/CSS/::after
 ---
 
-{{CSSRef}}
-
 CSS において **`::after`** は、選択した要素の最後の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。
 
 ```css
@@ -14,7 +12,7 @@ a::after {
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: ::after", "tabbed-standard")}}
 
 ```css interactive-example
 a::after {
@@ -49,7 +47,8 @@ a::after {
 </p>
 ```
 
-> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Replaced_element)には適用されません。
+> [!NOTE]
+> `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
 
 ## 構文
 
@@ -121,9 +120,9 @@ a::after {
 
 ### ツールチップ
 
-この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
+この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
 
-また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、CSS の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::before` と `::after` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [details および summary](/ja/docs/Web/HTML/Element/details) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
+また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、CSS の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::before` と `::after` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [details および summary](/ja/docs/Web/HTML/Reference/Elements/details) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
 
 #### HTML
 

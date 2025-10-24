@@ -15,7 +15,7 @@ Storage Access API は、ユーザーのブラウザーがすべてのサード�
 
 この例では、埋め込まれたクロスオリジン {{htmlelement("iframe")}} が、サードパーティのクッキーをブロックするストレージアクセスポリシーの下でユーザーのクッキーにアクセスする方法を示します。
 
-まず、`<iframe>` がサンドボックス化されている場合、次のように、埋め込まれたウェブサイトは `allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Element/iframe#attr-sandbox)を追加して、ストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
+まず、`<iframe>` がサンドボックス化されている場合、次のように、埋め込まれたウェブサイトは `allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Reference/Elements/iframe#attr-sandbox)を追加して、ストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
 
 ```html
 <iframe

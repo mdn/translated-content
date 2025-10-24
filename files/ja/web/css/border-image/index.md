@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/border)を置き換えます。
 
-{{InteractiveExample("CSS Demo: border-image")}}
+{{InteractiveExample("CSS デモ: border-image")}}
 
 ```css interactive-example-choice
 border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
@@ -95,7 +93,8 @@ border-image: unset;
 
 `border-image` プロパティは以下に挙げた 1 つから 5 つの値で指定します。
 
-> **メモ:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/computed_value) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
+> [!NOTE]
+> {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
 
 ### 値
 
@@ -114,7 +113,7 @@ border-image: unset;
 
 支援技術は境界画像を解釈することができません。画像にページ全体の目的を理解するために重要な情報が含まれている場合は、文書内に意味的に記述したほうがいいでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 公式定義

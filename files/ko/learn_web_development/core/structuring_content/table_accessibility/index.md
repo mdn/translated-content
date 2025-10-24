@@ -48,13 +48,14 @@ l10n:
 
 캡션은 `<table>` 태그 바로 아래에 위치합니다.
 
-> **참고:** [`summary`](/ko/docs/Web/HTML/Element/table#summary) 속성은 `<table>` 요소에도 사용할 수 있습니다. 이는 스크린 리더에 의해 읽힙니다. 하지만 `summary`는 더 이상 사용되지 않고, 시각 장애인이 아닌 사용자에게는 보이지 않기 때문에 `<caption>` 요소를 사용하는 것을 권장합니다.
+> [!NOTE]
+> [`summary`](/ko/docs/Web/HTML/Element/table#summary) 속성은 `<table>` 요소에도 사용할 수 있습니다. 이는 스크린 리더에 의해 읽힙니다. 하지만 `summary`는 더 이상 사용되지 않고, 시각 장애인이 아닌 사용자에게는 보이지 않기 때문에 `<caption>` 요소를 사용하는 것을 권장합니다.
 
 ### 능동적으로 학습하기: 캡션 추가하기
 
 이전 기사에서 처음 만났던 예제를 다시 살펴보면서 이를 실습해 보겠습니다.
 
-1. [HTML 테이블 기초](/ko/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col)의 끝에서 만났던 언어 교사의 학교 시간표를 열거나, [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) 파일을 로컬로 복사하세요.
+1. [HTML 테이블 기초](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#active_learning_colgroup_and_col)의 끝에서 만났던 언어 교사의 학교 시간표를 열거나, [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) 파일을 로컬로 복사하세요.
 2. 테이블에 맞는 적절한 캡션을 추가하세요.
 3. 코드를 저장하고 브라우저에서 열어보세요.
 
@@ -73,7 +74,8 @@ l10n:
 - `<tfoot>` 요소는 테이블의 푸터가 되는 부분을 감싸야 합니다. 이는 예를 들어 이전 행의 항목들을 합산한 마지막 행일 수 있습니다. 테이블 푸터를 테이블의 맨 아래에 포함시킬 수도 있고, 테이블 헤더 바로 아래에 포함시킬 수도 있습니다. (브라우저는 테이블의 맨 아래에 렌더링합니다.)
 - `<tbody>` 요소는 테이블 헤더나 푸터에 포함되지 않는 테이블의 다른 부분을 감싸야 합니다. 이는 테이블 헤더 아래에 표시되거나 때로는 푸터에 표시될 수 있습니다.
 
-> **참고:** `<tbody>`는 항상 테이블에 포함되어 있습니다. 코드에서 명시적으로 지정하지 않으면 암시적으로 포함됩니다. 이를 확인하기 위해 `<tbody>`를 포함하지 않는 이전 예제를 열고 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에서 HTML 코드를 확인하세요. 브라우저가 이 요소를 자동으로 추가했을 것입니다. 이것을 왜 포함해야 하는지 궁금할 것입니다. 하지만 이 요소를 포함하는 것이 테이블 구조와 스타일링을 더 잘 제어할 수 있기 때문에 포함하는 것이 좋습니다.
+> [!NOTE]
+> `<tbody>`는 항상 테이블에 포함되어 있습니다. 코드에서 명시적으로 지정하지 않으면 암시적으로 포함됩니다. 이를 확인하기 위해 `<tbody>`를 포함하지 않는 이전 예제를 열고 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에서 HTML 코드를 확인하세요. 브라우저가 이 요소를 자동으로 추가했을 것입니다. 이것을 왜 포함해야 하는지 궁금할 것입니다. 하지만 이 요소를 포함하는 것이 테이블 구조와 스타일링을 더 잘 제어할 수 있기 때문에 포함하는 것이 좋습니다.
 
 ### 능동적으로 학습하기: 테이블 구조 추가하기
 
@@ -100,7 +102,7 @@ l10n:
 7. 저장하고 새로 고침하면 결과를 확인할 수 있습니다. `<tbody>`와 `<tfoot>` 요소가 없었다면, 동일한 스타일링을 적용하기 위해 훨씬 복잡한 선택자와 규칙을 작성해야 했을 것입니다.
 
 > [!NOTE]
-> 당신이 아직 CSS를 완전히 이해한 것으로 예상하지 않습니다. CSS 학습을 통해 더 많은 것을 배우게 될 것입니다. ([CSS 소개](/ko/docs/Learn/CSS/First_steps)는 시작하기에 좋은 장소입니다. 또한 [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)에 관한 문서도 있습니다.)
+> 당신이 아직 CSS를 완전히 이해한 것으로 예상하지 않습니다. CSS 학습을 통해 더 많은 것을 배우게 될 것입니다. ([CSS 소개](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics)는 시작하기에 좋은 장소입니다. 또한 [테이블 스타일링](/ko/docs/Learn_web_development/Core/Styling_basics/Tables)에 관한 문서도 있습니다.)
 
 완성된 테이블은 다음과 같아야 합니다.
 
@@ -226,7 +228,8 @@ th {
 
 그러나 시각적 연관성을 만들 수 없는 경우는 어떻게 해야 할까요? 그런 경우에는 어떻게 테이블을 읽어야 할까요? 시각 장애가 있는 사람들은 종종 웹 페이지의 정보를 읽어주는 스크린 리더를 사용합니다. 이것은 일반 텍스트를 읽을 때는 문제가 되지 않지만, 테이블을 해석하는 것은 시각 장애가 있는 사람에게는 꽤 어려운 일입니다. 그러나 적절한 마크업을 사용하면 시각적 연관성을 프로그램적 연관성으로 대체할 수 있습니다.
 
-> **참고:** [2017년 WHO 데이터](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)에 따르면 시각 장애가 있는 사람은 약 2억 5천 3백만 명입니다.
+> [!NOTE]
+> [2017년 WHO 데이터](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)에 따르면 시각 장애가 있는 사람은 약 2억 5천 3백만 명입니다.
 
 기사의 이 부분에서는 테이블을 가능한 한 접근성 있게 만드는 데 필요한 기술을 제공합니다.
 
@@ -234,7 +237,7 @@ th {
 
 스크린 리더는 모든 헤더를 식별하고 헤더와 관련된 셀 사이의 프로그램적 연관성을 만들어 사용합니다. 열과 행 헤더의 조합은 각 셀의 데이터를 식별하고 해석하여 시각 장애가 있는 사용자가 시각적으로 사용자가 하는 것과 유사하게 테이블을 해석할 수 있습니다.
 
-우리는 이미 이전 기사에서 헤더를 다루었습니다. [\<th> 요소로 헤더 추가하기](/ko/docs/Learn/HTML/Tables/Basics#adding_headers_with_th_elements)를 참고하세요.
+우리는 이미 이전 기사에서 헤더를 다루었습니다. [\<th> 요소로 헤더 추가하기](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#adding_headers_with_th_elements)를 참고하세요.
 
 ### scope 속성
 
@@ -270,7 +273,7 @@ th {
 
 ### id 및 headers 속성
 
-`scope`를 사용하는 대신 [`id`](/ko/docs/Web/HTML/Global_attributes#id)와 [`headers`](/ko/docs/Web/HTML/Element/td#headers) 속성을 사용하여 헤더와 셀 사이의 연관성을 만들 수 있습니다. 사용 방법은 다음과 같습니다.
+`scope`를 사용하는 대신 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id)와 [`headers`](/ko/docs/Web/HTML/Element/td#headers) 속성을 사용하여 헤더와 셀 사이의 연관성을 만들 수 있습니다. 사용 방법은 다음과 같습니다.
 
 1. 고유한 `id`를 각 `<th>` 요소에 추가합니다.
 2. 각 `<td>` 요소에 `headers` 속성을 추가합니다. 각 `headers` 속성은 해당 셀의 헤더로 작동하는 모든 `<th>` 요소의 `id` 목록을 공백으로 구분하여 포함해야 합니다.
@@ -316,10 +319,10 @@ th {
 
 ## 요약
 
-HTML에서 테이블에 대해 알아야 할 몇 가지 다른 것들이 있지만, 지금은 이것만 알면 됩니다. 다음으로, [HTML 테이블 평가](/ko/docs/Learn/HTML/Tables/Structuring_planet_data)로 테스트해 보세요. 즐거운 시간 되세요!
+HTML에서 테이블에 대해 알아야 할 몇 가지 다른 것들이 있지만, 지금은 이것만 알면 됩니다. 다음으로, [HTML 테이블 평가](/ko/docs/Learn_web_development/Core/Structuring_content/Planet_data_table)로 테스트해 보세요. 즐거운 시간 되세요!
 
-만약 당신이 이미 CSS를 배우고 평가에서 잘했다면, HTML 테이블에 스타일을 입히는 것에 대해 배울 수 있습니다. [테이블 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)을 참고하세요.
+만약 당신이 이미 CSS를 배우고 평가에서 잘했다면, HTML 테이블에 스타일을 입히는 것에 대해 배울 수 있습니다. [테이블 스타일링](/ko/docs/Learn_web_development/Core/Styling_basics/Tables)을 참고하세요.
 
-만약 CSS를 배우고 싶다면, [CSS 학습 영역](/ko/docs/Learn/CSS)을 확인하세요!
+만약 CSS를 배우고 싶다면, [CSS 학습 영역](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)을 확인하세요!
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

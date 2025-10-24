@@ -2,14 +2,12 @@
 title: column-rule-style
 slug: Web/CSS/column-rule-style
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
-
-{{CSSRef}}
 
 **`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{InteractiveExample("CSS デモ: column-rule-style")}}
 
 ```css interactive-example-choice
 column-rule-style: none;
@@ -32,14 +30,10 @@ column-rule-style: ridge;
 column-rule-color: #88f;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    ロンドン。ミカエル学期の終わり、リンカーンズ・イン・ホールに大法官が座っています。容赦のない 11 月の天候。街は、まるで地球から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
   </p>
 </section>
 ```

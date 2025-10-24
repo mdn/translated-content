@@ -7,12 +7,70 @@ slug: Web/CSS/list-style-position
 
 La propriété **`list-style-position`** permet de définir la position du marqueur (cf. [`::marker`](/fr/docs/Web/CSS/::marker)) de liste par rapport à la boîte principale.
 
-{{EmbedInteractiveExample("pages/css/list-style-position.html")}}
+{{InteractiveExample("CSS Demo: list-style-position")}}
+
+```css interactive-example-choice
+list-style-position: inside;
+```
+
+```css interactive-example-choice
+list-style-position: outside;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all" id="example-element">
+      <li>Apollo 11: First Human Landing</li>
+      <li>City in Space: The International Space Station</li>
+      <li>Great Observatory: The Hubble Space Telescope</li>
+      <li>Everlasting Mars Rovers</li>
+    </ul>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
 
 Pour définir cette propriété, on pourra aussi utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style).
 
 > [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
+> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
 
 Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec `list-style-position: inside`. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir [le bug 36854 de Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=36854) pour plus d'informations.
 

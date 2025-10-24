@@ -7,7 +7,8 @@ slug: Web/API/Event/bubbles
 
 {{domxref("Event")}} 인터페이스의 **`bubbles`** 읽기 전용 속성은 이벤트가 DOM 트리를 타고 위쪽으로 버블링되는지 나타냅니다.
 
-> **참고:** [이벤트 버블링과 캡처](/ko/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)에서 버블링에 대한 자세한 정보를 알아보세요.
+> [!NOTE]
+> [이벤트 버블링과 캡처](/ko/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture)에서 버블링에 대한 자세한 정보를 알아보세요.
 
 ## 값
 

@@ -50,7 +50,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 可以使用 `<link rel="preload">`、[CSS font-display 属性](/zh-CN/docs/Web/CSS/@font-face/font-display)和[字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来覆盖默认行为并预加载网络字体资源。
 
-参见 [Link 元素](/zh-CN/docs/Web/HTML/Element/link)。
+参见 [Link 元素](/zh-CN/docs/Web/HTML/Reference/Elements/link)。
 
 ### 图片和 iframe
 
@@ -58,7 +58,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 #### Loading 属性
 
-{{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/img#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
+{{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Reference/Elements/img#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />
