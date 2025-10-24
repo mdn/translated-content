@@ -1,11 +1,10 @@
 ---
 title: Number.parseInt()
+short-title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Number.parseInt()`** は静的メソッドで、文字列の引数を解釈し、指定された基数の整数値を返します。
 
@@ -21,10 +20,10 @@ function roughScale(x, base) {
 }
 
 console.log(roughScale(" 0xF", 16));
-// Expected output: 1500
+// 予想される結果: 1500
 
 console.log(roughScale("321", 2));
-// Expected output: 0
+// 予想される結果: 0
 ```
 
 ## 構文
@@ -72,5 +71,6 @@ Number.parseInt === parseInt; // true
 ## 関連情報
 
 - [`Number.parseInt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims による `Number.parseInt` のポリフィル](https://www.npmjs.com/package/number.parseInt)
 - {{jsxref("Number")}}
 - {{jsxref("parseInt()")}}

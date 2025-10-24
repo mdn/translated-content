@@ -1,35 +1,40 @@
 ---
 title: "Attribut HTML : required"
+short-title: required
 slug: Web/HTML/Reference/Attributes/required
 original_slug: Web/HTML/Attributes/required
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'attribut {{Glossary("Boolean/HTML", "booléen")}} **`required`**, s'il est présent, indique que l'utilisateur·ice doit définir une valeur avant que le formulaire propriétaire puisse être envoyé.
 
-L'attribut booléen **`required`**, s'il est présent, indique que l'utilisateur doit spécifier une valeur pour l'entrée avant que le formulaire propriétaire puisse être soumis. L'attribut `required` est pris en charge pour les éléments [`text`](/fr/docs/Web/HTML/Element/input/text), [`search`](/fr/docs/Web/HTML/Element/input/search), [`url`](/fr/docs/Web/HTML/Element/input/url), [`tel`](/fr/docs/Web/HTML/Element/input/tel), [`email`](/fr/docs/Web/HTML/Element/input/email), [`password`](/fr/docs/Web/HTML/Element/input/password), [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](< /fr/docs/Web/HTML/Element/input/month>), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number), [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox), [`radio`](/fr/docs/Web/HTML/Element/input/radio), les éléments [`file`](/fr/docs/Web/HTML/Element/input/file), [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) de contrôle de formulaire. Si elle est présente sur l'un de ces types de saisie et éléments, la pseudo-classe [`:required`](/fr/docs/Web/CSS/:required) s'appliquera. Si l'attribut n'est pas inclus, la pseudo-classe [`:optional`](/fr/docs/Web/CSS/:optional) s'appliquera.
+L'attribut `required` est pris en charge par les types `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}`, de l'élément HTML {{HTMLElement("input")}}, ainsi que les éléments HTML de contrôle de formulaire {{HTMLElement("select")}} et {{HTMLElement("textarea")}}. Si l'attribut est présent sur l'un de ces types ou éléments, la pseudo-classe CSS {{CSSxRef(':required')}} correspondra. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(':optional')}} correspondra.
 
-L'attribut n'est pas pris en charge ou n'est pas pertinent pour [`range`](/fr/docs/Web/HTML/Element/input/range) et [`color`](/fr/docs/Web/HTML/Element/input/color), car les deux ont des valeurs par défaut. Il n'est pas non plus pris en charge sur [`hidden`](/fr/docs/Web/HTML/Element/input/hidden) car on ne peut pas s'attendre à ce qu'un utilisateur remplisse un formulaire qui est caché. Il n'est pas non plus supporté sur aucun des types de boutons, y compris `image`.
+L'attribut n'est pas pris en charge ou pertinent pour les types {{HTMLElement("input/range","range")}} et {{HTMLElement("input/color","color")}}, car les deux ont des valeurs par défaut. Le type `color` a pour valeur par défaut `#000000`. Le type `range` a pour valeur par défaut le point médian entre `min` et `max` — avec `min` et `max` par défaut à 0 et 100 respectivement dans la plupart des navigateurs si non déclarés. `required` n'est pas non plus pris en charge sur le type {{HTMLElement("input/hidden","hidden")}} — il n'est pas attendu que l'utilisateur·ice remplisse un champ de formulaire caché. Enfin, `required` n'est pas pris en charge sur les types de bouton, y compris {{HTMLElement("input/image","image")}}.
 
-Notez que `color` et `range` ne supportent pas `required`, mais le type `color` est par défaut `#000000`, et `range` prend par défaut le point médian entre `min` et `max` — avec `min` et `max` prenant par défaut les valeurs 0 et 100 respectivement dans la plupart des navigateurs s'ils ne sont pas déclarés — donc a toujours une valeur.
+Dans le cas d'un groupe de boutons {{HTMLElement("input/radio","radio")}} portant le même nom, si un seul bouton radio du groupe possède l'attribut `required`, un bouton radio du groupe doit être sélectionné, même si ce n'est pas forcément celui sur lequel l'attribut est appliqué. Pour faciliter la maintenance du code, il est recommandé d'inclure l'attribut `required` sur chaque bouton radio du groupe portant le même nom, ou sur aucun.
 
-Dans le cas d'un groupe de boutons [`radio`](/fr/docs/Web/HTML/Element/input/radio) de même nom, si un seul bouton radio dans le groupe a l'attribut `required`, un bouton radio dans ce groupe doit être vérifié, bien que ce ne soit pas nécessairement celui où l'attribut est appliqué. Ainsi, pour améliorer la maintenance du code, il est recommandé d'inclure l'attribut `required` dans chaque bouton radio de même nom dans le groupe, ou bien dans aucun.
-
-Dans le cas d'un même groupe nommé de types d'entrée [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox), seules les cases à cocher avec l'attribut `required` sont obligatoires.
+Dans le cas d'un groupe de cases à cocher {{HTMLElement("input/checkbox","checkbox")}} portant le même nom, seules les cases à cocher avec l'attribut `required` sont requises.
 
 > [!NOTE]
-> Le réglage `aria-required="true"` indique à un lecteur d'écran qu'un élément (n'importe lequel) est requis, mais n'a aucune incidence sur le caractère facultatif de l'élément.
+> Définir [`aria-required="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) indique à un lecteur d'écran qu'un élément (n'importe lequel) est requis, mais n'a aucun impact sur le caractère optionnel de l'élément.
 
-## Interactions entre attributs
+### Interactions entre attributs
 
-Comme un champ en lecture seule ne peut pas avoir de valeur, `required` n'a aucun effet sur les entrées dont l'attribut [`readonly`](readonly) est également spécifié.
+Comme un champ en lecture seule ne peut pas être modifié, `required` n'a aucun effet sur les entrées pour lesquelles l'attribut [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) est également défini.
 
-## Utilisabilité
+### Utilisabilité
 
-Lorsque vous incluez l'attribut `required`, fournissez une indication visible à proximité du contrôle informant l'utilisateur que les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select) ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) sont obligatoires. En outre, ciblez les contrôles de formulaire requis avec la pseudo-classe [`:required`](/fr/docs/Web/CSS/:required), en les stylisant de manière à indiquer qu'ils sont requis. Cela améliore la convivialité pour les utilisateurs voyants. Les technologies d'assistance doivent informer l'utilisateur que le contrôle de formulaire est obligatoire sur la base de l'attribut required, mais l'ajout de `aria-required="true"` ne fait pas de mal, au cas où la combinaison navigateur / lecteur d'écran ne prendrait pas encore en charge `required`.
+Lorsque vous incluez l'attribut `required`, fournissez une indication visible près du contrôle informant l'utilisateur·ice que {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} est requis. De plus, ciblez les contrôles de formulaire requis avec la pseudo-classe {{CSSxRef(':required')}}, en les stylisant de manière à indiquer qu'ils sont requis. Cela améliore l'utilisabilité pour les utilisateur·ice·s voyants. La technologie d'assistance doit informer l'utilisateur·ice que le contrôle de formulaire est obligatoire en fonction de l'attribut required, mais ajouter `aria-required="true"` ne nuit pas, au cas où la combinaison navigateur / lecteur d'écran ne prendrait pas encore en charge `required`.
 
-## Validation des contraintes
+### Validation des contraintes
 
-Si l'élément est requis et que la valeur de l'élément est la chaîne vide, alors l'élément souffre de [`valueMissing`](/fr/docs/Web/API/ValidityState/valueMissing) et l'élément correspondra à la pseudo classe [`:invalid`](/fr/docs/Web/CSS/:invalid).
+Si l'élément est requis et que sa valeur est une chaîne de caractères (<i lang="en">string</i> en anglais) vide, alors l'élément présente {{DOMxRef('ValidityState.valueMissing','valueMissing')}} et l'élément correspondra à la pseudo-classe {{CSSxRef(':invalid')}}.
+
+## Problèmes d'accessibilité
+
+Fournissez une indication à l'utilisateur·ice pour l'informer que le contrôle de formulaire est requis. Assurez-vous que le message soit multi-facette, par exemple par le texte, la couleur, des marques et l'attribut, afin que tous·tes les utilisateur·ice·s comprennent les exigences, qu'ils·elles soient daltonien·ne·s, présentent des différences cognitives ou utilisent un lecteur d'écran.
 
 ## Exemple
 
@@ -42,7 +47,7 @@ Si l'élément est requis et que la valeur de l'élément est la chaîne vide, a
     <label>Normal</label>
   </div>
   <div class="group">
-    <input type="text" required="required" />
+    <input type="text" required />
     <label>Requis</label>
   </div>
   <input type="submit" />
@@ -51,11 +56,7 @@ Si l'élément est requis et que la valeur de l'élément est la chaîne vide, a
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple')}}
-
-## Accessibilité
-
-Fournissez une indication aux utilisateurs pour les informer que le contrôle de formulaire est requis. Veillez à ce que le message soit multiforme (texte, couleur, marquage, attribut, etc.) afin que tous les utilisateurs comprennent les exigences, qu'ils soient daltoniens, qu'ils présentent des différences cognitives ou qu'ils utilisent un lecteur d'écran.
+{{EmbedLiveSample('Example')}}
 
 ## Spécifications
 
@@ -67,7 +68,7 @@ Fournissez une indication aux utilisateurs pour les informer que le contrôle de
 
 ## Voir aussi
 
-- La propriété [`validityState.valueMissing`](/fr/docs/Web/API/validityState/valueMissing)
-- Les pseudo-classes [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
-- L'élément [`<select>`](/fr/docs/Web/HTML/Element/select)
+- La propriété Javascript {{DOMxRef('validityState.valueMissing')}}
+- Les pseudo-classes CSS {{CSSxRef(':required')}} et {{CSSxRef(':optional')}}
+- L'élément HTML {{HTMLElement('input')}}
+- L'élément HTML {{HTMLElement('select')}}

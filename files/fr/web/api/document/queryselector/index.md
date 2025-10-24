@@ -1,86 +1,153 @@
 ---
-title: document.querySelector
+title: "Document : méthode querySelector()"
+short-title: querySelector()
 slug: Web/API/Document/querySelector
+l10n:
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.
+La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
 
-> [!NOTE]
-> La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.
+La correspondance se fait par un parcours en profondeur (pré‑ordre) des nœuds du document, en commençant par le premier élément du balisage et en parcourant ensuite les nœuds dans l'ordre séquentiel.
+
+Si le sélecteur correspond à un ID utilisé par erreur plusieurs fois dans le document, le premier élément portant cet ID est retourné.
+
+Les [pseudo‑éléments CSS](/fr/docs/Web/CSS/Pseudo-elements) ne retournent jamais d'éléments.
 
 ## Syntaxe
 
-```js
-element = document.querySelector(sélecteurs);
+```js-nolint
+querySelector(selectors)
 ```
 
 ### Paramètres
 
-- `selectors` (sélecteurs)
-  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur les sélecteurs et leur gestion.
+- `selectors`
+  - : Une chaîne de caractères qui contient un ou plusieurs sélecteurs à comparer. La chaîne de caractères doit être composée de sélecteurs CSS valides&nbsp;; sinon une exception `SyntaxError` est levée.
 
-> [!NOTE]
-> Les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour plus d'informations.
+    Notez que la spécification HTML n'exige pas que les valeurs d'attribut soient des identifiants CSS valides. Si la valeur d'un attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) n'est pas un identifiant CSS valide, vous devez l'échapper avant de l'utiliser dans un sélecteur, soit en appelant {{DOMxRef("CSS.escape_static", "CSS.escape()")}} sur la valeur, soit en utilisant l'une des techniques décrites dans [Échapper les caractères](/fr/docs/Web/CSS/ident#échapper_les_caractères). Voir [Échapper des caractères spéciaux](#échapper_des_caractères_spéciaux) pour un exemple.
 
-### Valeur retournée
+### Valeur de retour
 
-Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
+Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
 
-Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{domxref("Document.querySelectorAll", "querySelectorAll()")}} à la place.
+Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 
 ### Exception
 
-- `SYNTAX_ERR`
-  - : La syntaxe des sélecteurs spécifiés est invalide.
-
-## Notes d'utilisation
-
-Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.
-
-Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](https://www.w3.org/TR/selectors-api/#grammar) (en).
-
-### Échapper des caractères spéciaux
-
-Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper _deux fois_ (une pour la chaîne de caractères JavaScript et une autre fois pour `querySelector`)&nbsp;:
-
-```html
-<div id="machin\bidule"></div>
-<div id="machin:bidule"></div>
-
-<script>
-  console.log("#machin\bidule"); // "#machinidule" (\b est le caractère de contrôle retour arrière)
-  document.querySelector("#machin\bidule"); // ne correspond à rien
-
-  console.log("#machin\\bidule"); // "#machin\bidule"
-  console.log("#machin\\\\bidule"); // "#machin\\bidule"
-  document.querySelector("#machin\\\\bidule"); // correspond au premier div
-
-  document.querySelector("#machin:bidule"); // ne correspond à rien
-  document.querySelector("#machin\\:bidule"); // correspond au second div
-</script>
-```
+- `SyntaxError` {{DOMxRef("DOMException")}}
+  - : Signale que la syntaxe du _sélecteur_ défini est invalide.
 
 ## Exemples
 
 ### Trouver le premier élément correspondant à une classe
 
-Dans cet exemple, le premier élément dans le document qui contient la classe "`maclasse`" est retourné&nbsp;:
+Dans cet exemple, le premier élément dans le document qui contient la classe `maclasse` est retourné&nbsp;:
 
 ```js
-var el = document.querySelector(".maclasse");
+const el = document.querySelector(".maclasse");
 ```
 
 ### Un sélecteur plus complexe
 
-Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné :
+Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné&nbsp;:
 
 ```js
-var el = document.querySelector(
+const el = document.querySelector(
   "div.panneau-utilisateur.principal input[name='identifiant']",
 );
 ```
+
+### Négation
+
+Comme toutes les chaînes de sélecteurs CSS sont valides, vous pouvez aussi nier des sélecteurs&nbsp;:
+
+```js
+const el = document.querySelector(
+  "div.user-panel:not(.main) input[name='login']",
+);
+```
+
+Cela sélectionne un input dont le parent est un div avec la classe `user-panel` mais pas la classe `main`.
+
+### Échapper les valeurs d'attribut
+
+Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) qui n'est pas un [identifiant CSS](/fr/docs/Web/CSS/ident) valide, il faut échapper la valeur de l'attribut avant de l'utiliser dans `querySelector()`.
+
+#### HTML
+
+Dans le code suivant, un {{HTMLElement("div")}} a un `id` de `"this?element"`, qui n'est pas un identifiant CSS valide, parce que le caractère `"?"` n'est pas autorisé dans les identifiants CSS.
+
+Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour consigner les erreurs.
+
+```html
+<div id="this?element"></div>
+
+<button id="no-escape">Aucun échappement</button>
+<button id="css-escape">CSS.escape()</button>
+<button id="manual-escape">Échappement manuel</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+div {
+  background-color: blue;
+  margin: 1rem 0;
+  height: 100px;
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+Les trois boutons, lorsqu'on clique dessus, essaient tous de sélectionner le `<div>`, puis définissent sa couleur de fond sur une valeur aléatoire.
+
+- Le premier bouton utilise directement la valeur `this?element`.
+- Le deuxième bouton échappe la valeur en utilisant {{DOMxRef("CSS.escape_static", "CSS.escape()")}}.
+- Le troisième bouton échappe explicitement le caractère `?` à l'aide d'une barre oblique inverse. Notez qu'il faut aussi échapper la barre oblique inverse elle‑même, en utilisant une autre barre oblique inverse, par exemple&nbsp;: `\\?`.
+
+```js
+const log = document.querySelector("#log");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+  log.textContent = "";
+
+  try {
+    const element = document.querySelector(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    element.style.backgroundColor = randomColor;
+  } catch (e) {
+    log.textContent = e;
+  }
+}
+
+document.querySelector("#no-escape").addEventListener("click", () => {
+  setBackgroundColor("this?element");
+});
+
+document.querySelector("#css-escape").addEventListener("click", () => {
+  setBackgroundColor(CSS.escape("this?element"));
+});
+
+document.querySelector("#manual-escape").addEventListener("click", () => {
+  setBackgroundColor("this\\?element");
+});
+```
+
+#### Résultat
+
+Cliquer sur le premier bouton génère une erreur, tandis que les deuxième et troisième boutons fonctionnent correctement.
+
+{{EmbedLiveSample("Échapper les valeurs d'attribut", "", 200)}}
 
 ## Spécifications
 
@@ -92,8 +159,7 @@ var el = document.querySelector(
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- {{domxref("document.querySelectorAll()")}}&nbsp;;
-- {{domxref("element.querySelector()")}}&nbsp;;
-- {{domxref("element.querySelectorAll()")}}&nbsp;;
-- [Extraits de code pour `querySelector`](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector)
+- [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+- La méthode {{DOMxRef("Element.querySelector()")}}
+- La méthode {{DOMxRef("Document.querySelectorAll()")}}
+- La méthode {{DOMxRef("Element.querySelectorAll()")}}

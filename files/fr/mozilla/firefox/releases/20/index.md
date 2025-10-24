@@ -9,8 +9,8 @@ Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changeme
 
 ### HTML
 
-- Le support de l'attribut [`download`](/fr/docs/Web/HTML/Element/a#download) sur les éléments {{HTMLElement("a")}} et {{HTMLElement("area")}} a été ajouté ([bug Firefox 676619](https://bugzil.la/676619)).
-- La valeur `auto` pour [l'attribut global](/fr/docs/Web/HTML/Global_attributes) [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) a été implémenté ([bug Firefox 548206](https://bugzil.la/548206)).
+- Le support de l'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#download) sur les éléments {{HTMLElement("a")}} et {{HTMLElement("area")}} a été ajouté ([bug Firefox 676619](https://bugzil.la/676619)).
+- La valeur `auto` pour [l'attribut global](/fr/docs/Web/HTML/Reference/Global_attributes) [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) a été implémenté ([bug Firefox 548206](https://bugzil.la/548206)).
 
 ### JavaScript
 

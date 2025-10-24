@@ -1,25 +1,24 @@
 ---
 title: Object.getOwnPropertyNames()
+short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`Object.getOwnPropertyNames()`** 静的メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を（シンボルを使用したものを除き、列挙不可能なプロパティを含んで）返します。
+**`Object.getOwnPropertyNames()`** は静的メソッドで、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を（シンボルを使用したものを除き、列挙不可能なプロパティを含んで）返します。
 
 {{InteractiveExample("JavaScript デモ: Object.getOwnPropertyNames()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: 1,
   b: 2,
   c: 3,
 };
 
-console.log(Object.getOwnPropertyNames(object1));
-// Expected output: Array ["a", "b", "c"]
+console.log(Object.getOwnPropertyNames(object));
+// 予想される結果: Array ["a", "b", "c"]
 ```
 
 ## 構文
@@ -114,11 +113,11 @@ console.log(Object.getOwnPropertyNames(new ChildClass()));
 
 ```js
 const target = myObject;
-const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumAndNonEnum = Object.getOwnPropertyNames(target);
 const enumOnly = new Set(Object.keys(target));
-const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
+const nonEnumOnly = enumAndNonEnum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenumOnly);
+console.log(nonEnumOnly);
 ```
 
 ## 仕様書

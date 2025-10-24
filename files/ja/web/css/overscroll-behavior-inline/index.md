@@ -2,16 +2,18 @@
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 l10n:
-  sourceCommit: bb7e3c7303746408072ddf4cc646e28d7e14214a
+  sourceCommit: 4ec412012be0b083ebcae4a56b425f49901143f2
 ---
 
-**`overscroll-behavior-inline`** は CSS のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
+**`overscroll-behavior-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
 
 全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。
 
+## 構文
+
 ```css
 /* キーワード値 */
-overscroll-behavior-inline: auto; /* default */
+overscroll-behavior-inline: auto; /* 既定値 */
 overscroll-behavior-inline: contain;
 overscroll-behavior-inline: none;
 
@@ -23,18 +25,16 @@ overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
-## 構文
-
-`overscroll-behavior-inline` プロパティは、次の値の一覧のうち一つのキーワードで指定します。
+`overscroll-behavior-inline` プロパティは、次の値の一覧から選択した一つのキーワードで指定します。
 
 ### 値
 
 - `auto`
-  - : スクロールの末端における既定の振る舞いが通常通りに発生します。
+  - : 既定のスクロールオーバーフロー動作が、通常通り発生します。
 - `contain`
-  - : この値が設定された要素の内部では、スクロールの末端における既定の振る舞いが見られますが、隣接するスクロール領域に対するスクロール連鎖はありません。例えば、基底となる要素はスクロールしません。
+  - : この値が設定された要素内では、既定のスクロールオーバーフロー動作（「跳ね返り」効果など）が見られます。ただし、隣接するスクロール領域での{{Glossary("Scroll_chaining", "スクロール連鎖")}}は発生せず、背後に配置された要素はスクロールしません。 `contain` の値では、垂直方向の引いて更新のジェスチャーや、水平方向のスワイプ操作を含む、ブラウザーのネイティブナビゲーションが無効になります。
 - `none`
-  - : 隣接するスクロール領域に対するスクロール連鎖はなく、スクロールの末端における既定の振る舞いが抑制されます。
+  - : 隣接するスクロール領域へのスクロールの連鎖は発生せず、既定のスクロールオーバーフロー動作が抑止されます。
 
 ## 公式定義
 
@@ -48,7 +48,7 @@ overscroll-behavior-inline: unset;
 
 ### インライン方向のオーバースクロールの抑止
 
-このデモでは、一方がもう一方の中にある二つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、内容は広い幅を持ち、水平にスクロールします。
+このデモでは、一方がもう一方の中にある 2 つのブロックレベルボックスがあります。外側のボックスは広い {{cssxref("width")}} を持っているので、ページは水平にスクロールします。内側のボックスは width (と {{cssxref("height")}}) が小さく、ビューポート内にきちんと収まりますが、コンテンツは広い幅を持つため、水平にスクロールします。
 
 既定では、内側のボックスがスクロールして境界に達すると、ページ全体がスクロールし始めますが、これはおそらく望ましくない動きです。インライン方向でこれが発生することを防ぐために、内側のボックスに `overscroll-behavior-inline: contain` を設定しました。
 
@@ -77,9 +77,9 @@ main {
   background-color: white;
   background-image: repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 19px,
-    rgba(0, 0, 0, 0.5) 20px
+    transparent 0px,
+    transparent 19px,
+    rgb(0 0 0 / 50%) 20px
   );
 }
 
@@ -99,15 +99,15 @@ div > div {
   background-color: yellow;
   background-image: repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 19px,
-    rgba(0, 0, 0, 0.5) 20px
+    transparent 0px,
+    transparent 19px,
+    rgb(0 0 0 / 50%) 20px
   );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgb(255 0 0 / 50%);
   margin: 0;
   width: 360px;
   position: relative;
@@ -130,4 +130,8 @@ p {
 
 ## 関連情報
 
-- [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ（英語）](https://developer.chrome.com/blog/overscroll-behavior/#demo)
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-x")}}
+- {{cssxref("overscroll-behavior-y")}}
+- {{cssxref("overscroll-behavior-block")}}
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール

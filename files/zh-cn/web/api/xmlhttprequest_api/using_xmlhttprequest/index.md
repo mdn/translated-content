@@ -93,7 +93,7 @@ oReq.send();
 
 支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](https://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
 
-- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
+- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/progress_event)
   - : 检索的数据量发生了变化。
 - [`load`](/zh-CN/docs/Web/API/Window/load_event)
   - : 传输完成，所有数据保存在 `response` 中。

@@ -103,6 +103,6 @@ Dans l'exemple qui suit, le premier sélecteur cible l'élément dont la valeur 
 
 ## Résumé
 
-Maintenant que nous avons vu les sélecteurs d'attribut, nous allons poursuivre avec [les sélecteurs de pseudo-classe et de pseudo-élément](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements).
+Maintenant que nous avons vu les sélecteurs d'attribut, nous allons poursuivre avec [les sélecteurs de pseudo-classe et de pseudo-élément](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

@@ -25,15 +25,15 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 - Le support des propriétés [`defaultMuted`](/fr/docs/Web/API/HTMLMediaElement), [`loop`](/fr/docs/Web/API/HTMLMediaElement) et [`muted`](/fr/docs/Web/API/HTMLMediaElement) de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) a été ajouté.
 - L'appel {{domxref("document.mozCancelFullScreen()")}} restaure à présent l'élément précédemment en plein-écran, si un autre élément était en mode plein-écran lorsque la méthode {{domxref("element.mozRequestFullScreen()")}} a été appelée.
 - La méthode {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} ne supporte plus une forme sans argument. Cela n'est pas beaucoup utilisé et il est peu probable que ça fasse partie de la norme.
-- Les images SVG peuvent à présent être dessinées dans un canvas sans [entacher le canvas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+- Les images SVG peuvent à présent être dessinées dans un canvas sans [entacher le canvas](/fr/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 - La propriété non-standard `countryCode` de l'interface `GeoPositionAddress` a été supprimée, voir `nsIDOMGeoPositionAddress`.
-- [Les évènements Server-sent](/fr/docs/Web/API/Server-sent_events) supportent désormais [CORS](/fr/docs/Web/HTTP/CORS).
+- [Les évènements Server-sent](/fr/docs/Web/API/Server-sent_events) supportent désormais [CORS](/fr/docs/Web/HTTP/Guides/CORS).
 - Dans le passé, lorsque l'utilisateur suivait un lien, les valeurs définies sur l'objet {{domxref("window.navigator")}} été retenus par la nouvelle page. Maintenant un nouvel objet `navigator` est crée pour la nouvelle page. Cela rend le comportement de Firefox identique aux autres navigateurs.
 
 ### CSS
 
 - La propriété [`text-size-adjust`](/fr/docs/Web/CSS/text-size-adjust) est à présent supportée.
-- Les [Règles Conditionnelles](/fr/docs/CSS/CSS3#Conditional_Rules) [CSS3](/fr/docs/CSS/CSS3) sont à présent mieux supportées : les déclarations imbriquées peuvent désormais être ajoutées à [@media](/fr/docs/Web/CSS/@media), [@-moz-document](/fr/docs/Web/CSS/@document). (Voir [CSS Syntax](/fr/docs/Web/CSS/Syntax) et [CSS at-rules](/fr/docs/Web/CSS/At-rule)).
+- Les [Règles Conditionnelles](/fr/docs/CSS/CSS3#Conditional_Rules) [CSS3](/fr/docs/CSS/CSS3) sont à présent mieux supportées : les déclarations imbriquées peuvent désormais être ajoutées à [@media](/fr/docs/Web/CSS/@media), [@-moz-document](/fr/docs/Web/CSS/@document). (Voir [CSS Syntax](/fr/docs/Web/CSS/CSS_syntax/Syntax) et [CSS at-rules](/fr/docs/Web/CSS/CSS_syntax/At-rule)).
 
 ### SVG
 

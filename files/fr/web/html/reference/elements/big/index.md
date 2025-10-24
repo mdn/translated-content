@@ -16,7 +16,7 @@ L'élément HTML **`<big>`** (gros) augmente d'une taille la police du texte de 
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/docs/Web/HTML/Global_attributes) communs à tous les éléments.
+Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) communs à tous les éléments.
 
 ## Exemples
 
@@ -84,5 +84,5 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 ## Voir aussi
 
 - CSS : [`font-size`](/fr/docs/Web/CSS/font-size), [`font`](/fr/docs/Web/CSS/font)
-- HTML : [`<small>`](/fr/docs/Web/HTML/Element/small), [`<font>`](/fr/docs/Web/HTML/Element/font), [`<style>`](/fr/docs/Web/HTML/Element/style)
+- HTML : [`<small>`](/fr/docs/Web/HTML/Reference/Elements/small), [`<font>`](/fr/docs/Web/HTML/Reference/Elements/font), [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)
 - Spécification HTML 4.01 sur [la mise en forme utilisant les polices](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

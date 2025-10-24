@@ -40,7 +40,8 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 - {{domxref("OfflineAudioContext.resume()")}}
   - : 이전에 연기된 오디오 컨텍스트에서의 시간 진행을 재개합니다.
 
-> **참고:** `resume()` 메서드는 여전히 사용 가능합니다 — 이것은 이제 {{domxref("BaseAudioContext")}} 인터페이스에 정의되었고 ({{domxref("AudioContext.resume")}}을 참조하세요) 따라서 {{domxref("AudioContext")}}와 {{domxref("OfflineAudioContext")}} 인터페이스 모두에서 접근 가능합니다.
+> [!NOTE]
+> `resume()` 메서드는 여전히 사용 가능합니다 — 이것은 이제 {{domxref("BaseAudioContext")}} 인터페이스에 정의되었고 ({{domxref("AudioContext.resume")}}을 참조하세요) 따라서 {{domxref("AudioContext")}}와 {{domxref("OfflineAudioContext")}} 인터페이스 모두에서 접근 가능합니다.
 
 ## 이벤트
 
