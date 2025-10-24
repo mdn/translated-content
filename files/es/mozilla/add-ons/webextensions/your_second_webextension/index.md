@@ -47,7 +47,7 @@ cd beastify
 
 ### manifest.json
 
-Ahora cree un archivo llamado "manifest.json", y agregue el siguiente contenido:
+Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
 
 ```json
 {
