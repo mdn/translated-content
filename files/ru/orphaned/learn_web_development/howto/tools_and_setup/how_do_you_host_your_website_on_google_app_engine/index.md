@@ -1,6 +1,7 @@
 ---
 title: Как разместить свой сайт в Google App Engine
-slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+slug: orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+original_slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
