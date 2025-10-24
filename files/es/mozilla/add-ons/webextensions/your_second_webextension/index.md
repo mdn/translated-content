@@ -96,7 +96,7 @@ Nota que todas las rutas dadas son relativas a manifest.json.
 
 La extensión debería tener un ícono. Este será mostrado junto a la lista de complementos en el Administrador de Complementos (puede visitar la URL "about:addons" para abrirlo). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".
 
-Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjunto de íconos Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set), que es utilizado bajo el término de su propia [licencia](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjunto de íconos Aha-Soft's Free Retina](https://www.aha-soft.com/free-icons/free-retina-icon-set/), que es utilizado bajo el término de su propia licencia.
 
 Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones, y si usted hace esto, deberá especificarlo como la propiedad `96` del objeto `icons` en el manifest.json:
 
@@ -159,7 +159,7 @@ El archivo HTML luce así:
 </html>
 ```
 
-Tenemos un elemento `<div>` con un ID `"popup-content"` que contiene un elemento para cada elección de animal. Además, tenemos otro `<div>` con un ID `"error-content"` y una clase `"hidden"`, que usaremos en el caso de que surja algún problema al inicializar la ventana emergente.
+Tenemos un elemento [`<div>`](/es/docs/Web/HTML/Reference/Elements/div) con un ID `"popup-content"` que contiene un elemento para cada elección de animal. Además, tenemos otro `<div>` con un ID `"error-content"` y una clase `"hidden"`, que usaremos en el caso de que surja algún problema al inicializar la ventana emergente.
 
 Note que referenciamos los archivos CSS y JS en el HTML como se hace con una página web.
 
@@ -455,7 +455,7 @@ web-ext run
 
 Ahora que ha creado una extensión de web más avanzada para Firefox:
 
-- [lea sobre la anatomía de una extensión](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [explore los ejemplos de extensiones](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [aprenda lo que necesite para desarrollar, probar y publicar su extensión](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [continúe con su experiencia de aprendizaje](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
+- [lea sobre la anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [explore los ejemplos de extensiones](/es/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [aprenda lo que necesite para desarrollar, probar y publicar su extensión](/es/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [continúe con su experiencia de aprendizaje](/es/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).
