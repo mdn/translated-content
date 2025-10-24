@@ -38,7 +38,7 @@ Puede encontrar el [código fuente completo de la extensión en GitHub](https://
 
 ## Escribiendo la extensión
 
-Cree una carpeta nueva y navega hacia ella:
+Crea una carpeta nueva y navega hacia ella:
 
 ```bash
 mkdir beastify
