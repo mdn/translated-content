@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-En {{Glossary("cryptography", "cryptographie")}}, un **chiffre** est un algorithme qui permet de {{Glossary("encryption", "chiffrer")}} du {{Glossary("cleartext", "texte brut")}} dans le but de le rendre illisible et de le {{Glossary("decryption", "déchiffrer")}} par la suite.
+En {{Glossary("cryptography", "cryptographie")}}, un **chiffre** est un algorithme qui permet de {{Glossary("encryption", "chiffrer")}} du {{Glossary("Plaintext", "texte brut")}} dans le but de le rendre illisible et de le {{Glossary("decryption", "déchiffrer")}} par la suite.
 
 Les chiffres étaient communs bien avant l'âge de l'informatique (par exemple, [le chiffrement par substitution](https://fr.wikipedia.org/wiki/Chiffrement_par_substitution), [le chiffrement par transposition](https://fr.wikipedia.org/wiki/Chiffrement_par_transposition) ou le chiffrement par permutation), mais aucun d'entre eux n'était cryptologiquement sûr à l'exception du [masque jetable](https://fr.wikipedia.org/wiki/Masque_jetable).
 
