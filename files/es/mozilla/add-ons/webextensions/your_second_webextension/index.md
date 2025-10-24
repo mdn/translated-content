@@ -96,7 +96,7 @@ La extensión debería tener un ícono. Este será mostrado junto a la lista de 
 
 Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjunto de íconos Aha-Soft's Free Retina](https://www.aha-soft.com/free-icons/free-retina-icon-set/), que es utilizado bajo el término de su propia licencia.
 
-Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones, y si usted hace esto, deberá especificarlo como la propiedad `96` del objeto `icons` en el manifest.json:
+Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones, y si haces esto, deberás especificarlo como la propiedad `96` del objeto `icons` en el manifest.json:
 
 ```json
 "icons": {
