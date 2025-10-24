@@ -92,7 +92,7 @@ Nota que todas las rutas dadas son relativas a manifest.json.
 
 ### El ícono
 
-La extensión debería tener un ícono. Este será mostrado junto a la lista de complementos en el Administrador de Complementos (puede visitar la URL "about:addons" para abrirlo). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".
+La extensión debería tener un ícono. Este será mostrado junto a la lista de complementos en el Administrador de Complementos (puedes visitar la URL "about:addons" para abrirlo). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".
 
 Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjunto de íconos Aha-Soft's Free Retina](https://www.aha-soft.com/free-icons/free-retina-icon-set/), que es utilizado bajo el término de su propia licencia.
 
