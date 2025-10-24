@@ -1,6 +1,6 @@
 ---
 title: 使用 JavaScript 和 DOM 接口遍历 HTML 表格
-slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 ---
 
 {{DefaultAPISidebar("DOM")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
-
 **`Atomics.waitAsync()`** 静态方法异步等待共享内存的特定位置并返回一个 {{jsxref("Promise")}}。
 
 与 {{jsxref("Atomics.wait()")}} 不同，`waitAsync` 是非阻塞的且可用于主线程。
