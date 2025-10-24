@@ -33,7 +33,7 @@ div.avertissement {
 }
 ```
 
-Les sélecteurs ici sont `"p"` (qui applique la couleur verte au texte à l'intérieur de tout élément {{HTMLElement("p")}}), `"div.warning"` (qui fait ressembler tout élément {{HTMLElement("div")}} avec la [classe](/fr/docs/Web/HTML/Attributs_globaux/class) `"warning"` à une boîte d'avertissement), et `"#customized"`, qui définit la police de base de l'élément avec l'ID `"customized"` à Lucida Grande de 16 pixels de haut ou à l'une des polices de secours.
+Les sélecteurs ici sont `"p"` (qui applique la couleur verte au texte à l'intérieur de tout élément {{HTMLElement("p")}}), `"div.warning"` (qui fait ressembler tout élément {{HTMLElement("div")}} avec la [classe](/fr/docs/Web/HTML/Reference/Global_attributes/class) `"warning"` à une boîte d'avertissement), et `"#customized"`, qui définit la police de base de l'élément avec l'ID `"customized"` à Lucida Grande de 16 pixels de haut ou à l'une des polices de secours.
 
 Nous pouvons ensuite appliquer ce CSS à du HTML, comme&nbsp;:
 
