@@ -34,7 +34,7 @@ Esta es una extensión simple, pero muestra muchos de los principales conceptos 
 - Comunicar entre los scripts de contenido y el resto de la extensión
 - Empaquetar recursos con la extensión que pueden ser usados por las páginas web
 
-Puede encontrar el [código fuente completo de la extensión en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
+Puedes encontrar el [código fuente completo de la extensión en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
 
 ## Escribiendo la extensión
 
