@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-En {{Glossary("Cryptography", "cryptographie")}}, le **déchiffrement** est la conversion d'un {{Glossary("ciphertext", "cryptogramme")}} en {{Glossary("cleartexte", "texte brut")}}.
+En {{Glossary("Cryptography", "cryptographie")}}, le **déchiffrement** est la conversion d'un {{Glossary("ciphertext", "cryptogramme")}} en {{Glossary("Plaintext", "texte brut")}}.
 
 Le déchiffrement est une primitive cryptographique : il transforme un cryptogramme en texte brut via l'utilisation d'un algorithme cryptographique appelé {{Glossary("cipher", "chiffre")}}. À l'instar du chiffrement, le déchiffrement est effectué par l'utilisation d'un algorithme spécifique et d'un code secret appelé {{Glossary("key", "clé")}}. Comme l'algorithme est souvent public, la clé doit rester secrète si le chiffrement reste sécurisé.
 
