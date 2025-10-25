@@ -1,5 +1,5 @@
 ---
-title: "Attribut <script> type"
+title: Attribut <script> type
 slug: Web/HTML/Reference/Elements/script/type
 original_slug: Web/HTML/Element/script/type
 l10n:
