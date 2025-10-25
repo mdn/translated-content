@@ -52,7 +52,7 @@ Les en-têtes interdits sont l'un des suivants&nbsp;:
 > L'en-tête {{HTTPHeader("User-Agent")}} était auparavant interdit, mais ne l'est plus. Cependant, Chrome ignore toujours silencieusement cet en-tête dans les requêtes Fetch (voir [Chromium bug 571722](https://crbug.com/571722)).
 
 > [!NOTE]
-> Bien que l'en-tête {{HTTPHeader("Referer")}} soit listé comme interdit [dans la spécification](https://fetch.spec.whatwg.org/#forbidden-request-header), l'agent utilisateur n'en garde pas le contrôle total et l'en-tête peut être modifié par programmation. Par exemple, lors de l'utilisation de [`fetch()`](/fr/docs/Web/API/Window/fetch), l'en-tête {{HTTPHeader("Referer")}} peut être modifié par programmation via l'option [`referrer`](/fr/docs/Web/API/RequestInit#referrer).
+> Bien que l'en-tête {{HTTPHeader("Referer")}} soit listé comme interdit [dans la spécification <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/#forbidden-request-header), l'agent utilisateur n'en garde pas le contrôle total et l'en-tête peut être modifié par programmation. Par exemple, lors de l'utilisation de [`fetch()`](/fr/docs/Web/API/Window/fetch), l'en-tête {{HTTPHeader("Referer")}} peut être modifié par programmation via l'option [`referrer`](/fr/docs/Web/API/RequestInit#referrer).
 
 ## Voir aussi
 
