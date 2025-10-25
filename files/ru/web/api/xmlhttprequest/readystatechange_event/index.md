@@ -8,7 +8,7 @@ slug: Web/API/XMLHttpRequest/readystatechange_event
 [`Обработчик события (EventHandler)`](/ru/docs/Web/Events/Event_handlers), который вызывается всякий раз, когда изменяется состояние свойства `readyState`. Свойство **`XMLHttpRequest.onreadystatechange`** содержит обработчик события, вызываемый когда происходит событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event), всякий раз когда свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} запроса {{domxref("XMLHttpRequest")}} изменяется. Колбэк-функция запускается из потока пользовательского интерфейса.
 
 > [!WARNING]
-> **Внимание:** Не должно использоваться при синхронных запросах и из исходного кода (native code).
+> Не должно использоваться при синхронных запросах и из исходного кода (native code).
 
 Событие `readystatechange` не произойдёт если запрос `XMLHttpRequest` отменён методом [abort()](/ru/docs/Web/API/XMLHttpRequest/abort).
 
