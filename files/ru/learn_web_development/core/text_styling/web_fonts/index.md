@@ -1,8 +1,6 @@
 ---
 title: Веб-шрифты
 slug: Learn_web_development/Core/Text_styling/Web_fonts
-l10n:
-  sourceCommit: 074785cea106179cb3305637055ab0a009ca74f2
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
