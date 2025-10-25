@@ -4,13 +4,11 @@ slug: Learn_web_development/Core/Text_styling
 original_slug: Learn/CSS/Styling_text
 ---
 
-{{LearnSidebar}}
-
 Une fois acquises les bases du langage CSS, la prochaine étape pour vous est la mise en forme de texte, une des choses les plus commune mais essentielle du CSS. Nous étudierons ici les principes de base de la mise en forme de texte : choix de polices de caractères, gras ou italique, interlignes et espacement de caractères, ajouter des ombres et autres fonctionnalités. Nous terminerons le module en détaillant l'intégration de polices personnalisées à votre page, ainsi que la mise en forme de listes et de liens.
 
 ## Prérequis
 
-Avant de commencer ce module, vous devez déjà être familiarisé avec les bases de HTML proposées dans [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content), et être à l'aise avec les fondamentaux de CSS étudiés dans [Introduction à CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics_beefded63afe2ba224c92b0dbe0482e175dee799d9c2519eae043aaa448c950f).
+Avant de commencer ce module, vous devez déjà être familiarisé avec les bases de HTML proposées dans [Introduction à HTML](/fr/docs/Learn_web_development/Core/Structuring_content), et être à l'aise avec les fondamentaux de CSS étudiés dans [Introduction à CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started).
 
 > [!NOTE]
 > Si vous travaillez sur un ordinateur/tablette/autre appereil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de codage en ligne tels que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).

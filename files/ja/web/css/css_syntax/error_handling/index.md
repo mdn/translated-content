@@ -200,4 +200,4 @@ body {
 
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
 - [構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
-- [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)

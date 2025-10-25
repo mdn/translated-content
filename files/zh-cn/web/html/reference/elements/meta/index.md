@@ -152,4 +152,3 @@ slug: Web/HTML/Reference/Elements/meta
 
 - [标准元数据名称](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name)
 - [学习：`<meta>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
-- [viewport 元标签](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)

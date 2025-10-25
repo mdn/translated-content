@@ -87,5 +87,5 @@ if (!Element.prototype.matches) {
 
 ## Voir aussi
 
-- [La syntaxe des sélecteurs](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [La syntaxe des sélecteurs](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.

@@ -3,10 +3,6 @@ title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
 
-{{JSRef}}
-
-## 概要
-
 **`TypedArray.BYTES_PER_ELEMENT`** 属性代表了强类型数组中每个元素所占用的字节数。
 
 {{js_property_attributes(0,0,0)}}

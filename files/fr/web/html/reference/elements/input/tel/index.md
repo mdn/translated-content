@@ -543,7 +543,7 @@ input:valid + span:after {
 
 ## Voir aussi
 
-- [Le guide sur les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Le guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [Les formulaires et l'accessibilité](/fr/docs/Web/Accessibility/ARIA)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
   - [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text)

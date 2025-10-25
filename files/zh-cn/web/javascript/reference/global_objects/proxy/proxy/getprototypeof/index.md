@@ -3,8 +3,6 @@ title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
 
-{{JSRef}}
-
 **`handler.getPrototypeOf()`** 是一个代理（Proxy）方法，当读取代理对象的原型时，该方法就会被调用。
 
 {{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}

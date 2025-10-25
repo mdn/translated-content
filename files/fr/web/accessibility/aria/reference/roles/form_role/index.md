@@ -3,7 +3,7 @@ title: "ARIA : rôle form"
 short-title: form
 slug: Web/Accessibility/ARIA/Reference/Roles/form_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le rôle `form` peut être utilisé pour identifier un groupe d'éléments sur une page qui fournissent une fonctionnalité équivalente à celle d'un formulaire HTML. Le formulaire n'est pas exposé en tant que région de repère à moins qu'il n'ait un [nom accessible](/fr/docs/Glossary/Accessible_name).
@@ -17,7 +17,7 @@ Le rôle `form` peut être utilisé pour identifier un groupe d'éléments sur u
 Ceci est un formulaire qui collecte et enregistre les informations de contact d'un·e utilisateur·ice.
 
 > [!WARNING]
-> Utilisez un élément HTML {{htmlelement("form")}} pour contenir vos contrôles de formulaire, plutôt que le rôle ARIA `form`, à moins que vous n'ayez une très bonne raison.
+> Utilisez un élément HTML {{HTMLElement("form")}} pour contenir vos contrôles de formulaire, plutôt que le rôle ARIA `form`, à moins que vous n'ayez une très bonne raison.
 > L'élément HTML `<form>` est suffisant pour indiquer aux technologies d'assistance qu'il s'agit d'un formulaire.
 
 ## Description
@@ -42,7 +42,7 @@ Aucune interaction au clavier spécifique à ce rôle.
 ### Fonctionnalités JavaScript requises
 
 - `onsubmit`
-  - : Le gestionnaire d'événements onSubmit gère l'événement déclenché lorsque le formulaire est soumis. Tout ce qui n'est pas un `<form>` ne peut pas être soumis, vous devrez donc utiliser JavaScript pour créer un mécanisme de soumission de données alternatif, par exemple avec {{domxref("Window/fetch", "fetch()")}}.
+  - : Le gestionnaire d'événements onSubmit gère l'événement déclenché lorsque le formulaire est soumis. Tout ce qui n'est pas un `<form>` ne peut pas être soumis, vous devrez donc utiliser JavaScript pour créer un mécanisme de soumission de données alternatif, par exemple avec {{DOMxRef("Window/fetch", "fetch()")}}.
 
 ## Exemples
 
@@ -115,7 +115,7 @@ Les lecteurs d'écran annonceront le type de rôle que le repère a. De ce fait,
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement('form')}} communiquera automatiquement qu'une section a un rôle de `form`. Si possible, préférez l'utiliser à la place.
+L'utilisation de l'élément {{HTMLElement('form')}} communiquera automatiquement que l'élément a un rôle de formulaire (`form`). Si possible, privilégiez l'utilisation de l'élément sémantique `<form>` plutôt que le rôle `form`.
 
 ## Spécifications
 

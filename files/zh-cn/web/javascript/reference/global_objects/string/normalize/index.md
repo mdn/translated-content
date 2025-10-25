@@ -3,8 +3,6 @@ title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`normalize()`** 方法返回该字符串的 Unicode 标准化形式。
 
 {{InteractiveExample("JavaScript Demo: String.normalize()", "taller")}}

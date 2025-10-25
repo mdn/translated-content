@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
+**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
 
 > [!NOTE]
 > 虽然 {{cssxref("&lt;percentage&gt;")}} 值可以在接受 `<length>` 值的某些相同属性中使用，但它们本身不是 `<length>` 值。具体请参阅 {{cssxref("&lt;length-percentage&gt;")}}。
@@ -300,5 +300,5 @@ inputElem.addEventListener("change", () => {
 ## 参见
 
 - [CSS 值和单位教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块
+- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)模块
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)
