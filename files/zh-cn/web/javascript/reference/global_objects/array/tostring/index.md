@@ -3,8 +3,6 @@ title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
 
-{{JSRef}}
-
 **`toString()`** 方法返回一个字符串，表示指定的数组及其元素。
 
 {{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}

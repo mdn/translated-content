@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
-
 {{jsxref("Date")}} 实例的 **`setUTCMinutes()`** 方法根据世界协调时来设置该日期的分钟数。
 
 {{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}

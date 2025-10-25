@@ -3,8 +3,6 @@ title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`lastIndexOf()`** 方法搜索该字符串并返回指定子字符串最后一次出现的索引。它可以接受一个可选的起始位置参数，并返回指定子字符串在小于或等于指定数字的索引中的最后一次出现的位置。
 
 {{InteractiveExample("JavaScript Demo: String.lastIndexOf()", "shorter")}}

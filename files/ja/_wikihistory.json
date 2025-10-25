@@ -11277,20 +11277,20 @@
       "Yama"
     ]
   },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
-    "modified": "2020-09-27T08:56:01.656Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "RobinEgg"
-    ]
-  },
-  "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
+  "Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree": {
     "modified": "2020-08-22T02:39:04.971Z",
     "contributors": [
       "mfuji09",
       "kohei.yoshino",
       "Mgjbot"
+    ]
+  },
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
+    "modified": "2020-09-27T08:56:01.656Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "RobinEgg"
     ]
   },
   "Web/API/DragEvent": {

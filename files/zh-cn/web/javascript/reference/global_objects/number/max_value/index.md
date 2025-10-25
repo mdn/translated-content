@@ -3,8 +3,6 @@ title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
 
-{{JSRef}}
-
 **`Number.MAX_VALUE`** 静态数据属性表示在 JavaScript 中可表示的最大数值。
 
 {{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}

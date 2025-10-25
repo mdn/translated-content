@@ -3,8 +3,6 @@ title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
 
-{{JSRef}}
-
 内置的 **`Symbol.isConcatSpreadable`** 符号用于配置某对象作为 {{jsxref("Array.prototype.concat()")}} 方法的参数时是否展开其数组元素。
 
 {{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}

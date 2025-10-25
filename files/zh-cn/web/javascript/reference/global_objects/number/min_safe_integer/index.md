@@ -3,8 +3,6 @@ title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
 
-{{JSRef}}
-
 **`Number.MIN_SAFE_INTEGER`** 静态数据属性代表在 JavaScript 中最小的安全整数 -(2<sup>53</sup> - 1)。
 
 要表示比这小的整数，请考虑使用 {{jsxref("BigInt")}}。

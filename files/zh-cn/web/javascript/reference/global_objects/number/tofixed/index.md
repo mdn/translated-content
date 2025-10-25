@@ -3,8 +3,6 @@ title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`toFixed()`** 方法使用定点表示法来格式化该数值。
 
 {{InteractiveExample("JavaScript Demo: Number.toFixed()")}}

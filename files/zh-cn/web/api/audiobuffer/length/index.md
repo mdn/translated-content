@@ -1,45 +1,38 @@
 ---
-title: AudioBuffer.length
+title: AudioBuffer：length 属性
+short-title: length
 slug: Web/API/AudioBuffer/length
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
 
-The `length` property of the {{ domxref("AudioBuffer") }} interface returns an integer representing the length, in sample-frames, of the PCM data stored in the buffer.
+{{ domxref("AudioBuffer") }} 接口的 **`length`** 属性返回一个表示缓冲区中存储的 PCM 数据的长度的整数（以采样帧数为单位）。
 
-{{ domxref("AudioBuffer") }} 的 length 属性接口返回整数，该整数代表采样帧中，存贮在缓冲区中的 PCM 数据的长度
+## 值
 
-## 语法
+一个整数。
 
-```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.length;
-```
-
-### 值
-
-浮点数
-
-## 例子
+## 示例
 
 ```js
-// Stereo
-var channels = 2;
+// 立体声
+const channels = 2;
 
-// Create an empty two second stereo buffer at the
-// sample rate of the AudioContext
-var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+// 以 AudioContext 的采样率创建一个 2 秒的空白立体声缓冲区
+const frameCount = audioCtx.sampleRate * 2.0;
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function () {
-  // Fill the buffer with white noise;
-  // just random values between -1.0 and 1.0
-  for (var channel = 0; channel < channels; channel++) {
-    // This gives us the actual ArrayBuffer that contains the data
-    var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i < frameCount; i++) {
-      // Math.random() is in [0; 1.0]
-      // audio needs to be in [-1.0; 1.0]
+button.onclick = () => {
+  // 用白噪声填充缓冲区；
+  // 即介于 -1.0 和 1.0 之间的随机值
+  for (let channel = 0; channel < channels; channel++) {
+    // 获取实际包含音频数据的
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() 的取值范围是 [0; 1.0]
+      // 音频数据的取值范围应为 [-1.0; 1.0]
       nowBuffering[i] = Math.random() * 2 - 1;
     }
   }
@@ -56,6 +49,6 @@ button.onclick = function () {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

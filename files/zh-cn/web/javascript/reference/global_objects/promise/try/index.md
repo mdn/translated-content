@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
 ---
 
-{{JSRef}}
-
 **`Promise.try()`** 静态方法接受一个任意类型的回调函数（无论其是同步或异步，返回结果或抛出异常），并将其结果封装成一个 {{jsxref("Promise")}}。
 
 ## 语法

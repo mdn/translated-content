@@ -3,8 +3,6 @@ title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
 
-{{JSRef}}
-
 **`slice()`** 方法将一个类型化数组的一部分浅拷贝到一个新的类型化数组对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}} 相同的算法。_TypedArray_ 指[类型化数组的类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)中的一员。
 
 {{InteractiveExample("JavaScript Demo: TypedArray.slice()")}}

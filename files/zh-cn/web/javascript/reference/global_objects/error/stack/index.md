@@ -3,7 +3,7 @@ title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 {{jsxref("Error")}}对象作为一个非标准的栈属性提供了一种函数追踪方式。无论这个函数被被调用，处于什么模式，来自于哪一行或者哪个文件，有着什么样的参数。这个栈产生于最近一次调用最早的那次调用，返回原始的全局作用域调用
 

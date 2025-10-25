@@ -3,8 +3,6 @@ title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 
-{{JSRef}}
-
 **`Math.pow()`** 函数返回基数（`base`）的指数（`exponent`）次幂，即 `base^exponent`。
 
 {{InteractiveExample("JavaScript Demo: Math.pow()")}}

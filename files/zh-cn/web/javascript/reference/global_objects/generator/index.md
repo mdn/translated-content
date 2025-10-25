@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}
-
 **`Generator`** 对象由{{jsxref("Statements/function*", "生成器函数", "", 1)}}返回并且它符合[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。
 
 `Generator` 是隐藏类 {{jsxref("Iterator")}} 的子类。

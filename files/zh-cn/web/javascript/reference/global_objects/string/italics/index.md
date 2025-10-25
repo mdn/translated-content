@@ -3,7 +3,7 @@ title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`italics()`** 方法会创建一个 {{HTMLElement("i")}} 元素字符串，其中嵌入了调用的字符串（`<i>str</i>`），从而使该字符串以斜体显示。
 

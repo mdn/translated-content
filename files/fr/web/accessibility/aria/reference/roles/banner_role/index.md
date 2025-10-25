@@ -4,12 +4,12 @@ short-title: banner
 slug: Web/Accessibility/ARIA/Reference/Roles/banner_role
 original_slug: Web/Accessibility/ARIA/Roles/banner_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le rôle `banner` sert à définir un en-tête global du site, qui comprend généralement un logo, le nom de l'entreprise, une fonction de recherche et éventuellement la navigation globale ou un slogan. Il est généralement situé en haut de la page.
 
-Par défaut, l'élément HTML {{htmlelement("header")}} a une signification identique à celle du repère `banner`, sauf s'il est un descendant de {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}} ou {{htmlelement("section")}}, auquel cas {{htmlelement("header")}} expose un rôle [`generic`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) et non l'équivalent de la bannière du site.
+Par défaut, l'élément HTML {{HTMLElement("header")}} a une signification identique à celle du repère `banner`, sauf s'il est un descendant de {{HTMLElement("aside")}}, {{HTMLElement("article")}}, {{HTMLElement("main")}}, {{HTMLElement("nav")}} ou {{HTMLElement("section")}}, auquel cas {{HTMLElement("header")}} expose un rôle [`generic`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) et non l'équivalent de la bannière du site.
 
 ### Description
 
@@ -64,6 +64,8 @@ Nous aurions également pu écrire ce qui précède avec l'élément HTML `heade
 ```
 
 ## Bonnes pratiques
+
+L'utilisation de l'élément HTML {{HTMLElement('header')}} communique automatiquement que l'élément a le rôle de `banner`. Si possible, privilégiez l'utilisation de l'élément sémantique `<header>` plutôt que le rôle `banner`.
 
 Il est préférable d'utiliser l'élément `header` et de s'assurer qu'il n'est pas un descendant d'une sous-section de la page. Cependant, il arrive parfois que vous n'ayez pas accès au HTML sous-jacent. Dans ce cas, vous pouvez ajouter le rôle de `banner` à l'élément de la page qui doit être exposé comme une `banner` avec JavaScript. Identifier la bannière de la page de cette manière contribuera à améliorer l'accessibilité du site.
 

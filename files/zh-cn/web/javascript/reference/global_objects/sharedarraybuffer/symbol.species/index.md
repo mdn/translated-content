@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
-{{JSRef}}
-
 **`SharedArrayBuffer[Symbol.species]`** 静态访问器属性返回用于构造 `SharedArrayBuffer` 方法返回值的构造函数。
 
 > [!WARNING]

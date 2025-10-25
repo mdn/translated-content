@@ -3,8 +3,6 @@ title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
 
-{{JSRef}}
-
 本对象代表了一个关于 {{jsxref("Global_Objects/eval", "eval()")}} 全局函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然存在，以保持兼容性。
 
 `EvalError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。

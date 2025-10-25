@@ -45,7 +45,7 @@ p {
 
 - **三值语法**：`border-width: 1em 2em 3em`，第一个值表示 top；第二个值表示水平方向的，即 left 和 right；第三个值表示 bottom：![Box edges with three-value syntax](border3.png)
 
-- **四值语法**：`border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 2、3、4 点钟方向。
+- **四值语法**：`border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 3、6、9 点钟方向。
 
 #### 盒子角
 

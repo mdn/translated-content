@@ -3,7 +3,7 @@ title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`link()`** 方法创建一个 {{HTMLElement("a")}} 元素字符串，其中嵌入了调用的字符串（`<a href="...">str</a>`），用作指向另一个 URL 的超文本链接。
 

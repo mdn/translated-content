@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`Array.isArray()`** 静态方法用于确定传递的值是否是一个{{jsxref("Array", "数组", "", 1)}}。
 
 {{InteractiveExample("JavaScript Demo: Array.isArray()")}}

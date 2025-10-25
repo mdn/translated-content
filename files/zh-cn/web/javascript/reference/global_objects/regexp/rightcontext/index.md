@@ -3,7 +3,7 @@ title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 **rightContext** 非标准属性是正则表达式的静态和只读属性，含有最新匹配的右侧子串。 `RegExp.$'` 是这个属性的别名。
 

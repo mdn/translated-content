@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b1f371983ebac0233e12adbde67a1d8c4f54563c
 ---
 
-{{JSRef}}
-
 **`JSON`** 命名空间对象包含用于解析 [JavaScript 对象表示法](https://json.org/)（{{glossary("JSON")}}）和将值转换为 JSON 字符串的静态方法。
 
 ## 描述

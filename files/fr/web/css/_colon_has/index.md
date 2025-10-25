@@ -2,10 +2,10 @@
 title: :has()
 slug: Web/CSS/:has
 l10n:
-  sourceCommit: b36d73c88991881d21d7c258ad17330c292ce149
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{cssxref(":scope")}}, de l'élément).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{CSSxRef(":scope")}}, de l'élément).
 
 ```css
 /* Sélectionne un titre h1 avec un
@@ -253,4 +253,4 @@ De même, dans le cas de la recherche négative, dans l'expression régulière `
 - [Structure du sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Liste des sélecteurs](/fr/docs/Web/CSS/Selector_list)
 - [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

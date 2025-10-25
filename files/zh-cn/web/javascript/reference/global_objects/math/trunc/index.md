@@ -3,8 +3,6 @@ title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
 
-{{JSRef}}
-
 **`Math.trunc()`** 方法会将数字的小数部分去掉，只保留整数部分。
 
 ## 语法

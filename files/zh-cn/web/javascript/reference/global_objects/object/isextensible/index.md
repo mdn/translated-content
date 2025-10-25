@@ -3,8 +3,6 @@ title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 
-{{JSRef}}
-
 **`Object.isExtensible()`** 静态方法判断一个对象是否是可扩展的（是否可以在它上面添加新的属性）。
 
 {{InteractiveExample("JavaScript Demo: Object.isExtensible()")}}

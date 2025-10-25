@@ -3,8 +3,6 @@ title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
 
-{{JSRef}}
-
 **`Array.of()`** 静态方法通过可变数量的参数创建一个新的 `Array` 实例，而不考虑参数的数量或类型。
 
 {{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}

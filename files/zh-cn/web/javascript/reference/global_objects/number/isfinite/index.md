@@ -3,8 +3,6 @@ title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
 
-{{JSRef}}
-
 **`Number.isFinite()`** 静态方法判断传入值是否是一个有限数——也就是说，它检查给定值是一个数字，且该数字既不是正的 {{jsxref("Infinity")}}，也不是负的 `Infinity` 或 {{jsxref("NaN")}}。
 
 {{InteractiveExample("JavaScript Demo: Number.isFinite()")}}

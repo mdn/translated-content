@@ -3,8 +3,6 @@ title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
 
-{{JSRef}}
-
 **`Number.NaN`** 静态数据属性表示非数字值，等同于 {{jsxref("NaN")}}。有关 `NaN` 的行为的更多信息，请参阅[全局属性的描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)。
 
 {{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}

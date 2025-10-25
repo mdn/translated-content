@@ -3,8 +3,6 @@ title: WeakRef() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 ---
 
-{{JSRef}}
-
 **`WeakRef()`** 会创建一个 {{jsxref("WeakRef")}} 对象，它是对于目标对象的弱引用。
 
 ## 语法

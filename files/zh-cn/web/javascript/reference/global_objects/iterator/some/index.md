@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ec01fee8dfda3fe7dfa8fec41ce278b907c5abd2
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{jsxref("Iterator")}} 实例的 **`some()`** 方法与 {{jsxref("Array.prototype.some()")}} 类似：它测试迭代器中是否至少有一个生成的元素通过提供的函数实现的测试。它返回一个布尔值。
 

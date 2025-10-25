@@ -3,8 +3,6 @@ title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
 
-{{JSRef}}
-
 **`Uint8Array`** 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。
 
 ## 语法格式

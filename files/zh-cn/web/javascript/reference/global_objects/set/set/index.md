@@ -3,8 +3,6 @@ title: Set() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
-{{JSRef}}
-
 **`Set()`** 构造函数创建 {{jsxref("Set")}} 对象。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}

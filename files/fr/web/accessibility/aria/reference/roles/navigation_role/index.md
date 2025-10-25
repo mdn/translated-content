@@ -3,7 +3,7 @@ title: "ARIA : rôle navigation"
 short-title: navigation
 slug: Web/Accessibility/ARIA/Reference/Roles/navigation_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le rôle `navigation` sert à identifier les principaux groupes de liens utilisés pour naviguer dans le contenu d'un site web ou d'une page.
@@ -61,7 +61,7 @@ Les [rôles de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôle
 
 ### Préférez HTML
 
-L'utilisation de l'élément {{HTMLElement('nav')}} indique automatiquement qu'une section a le rôle `navigation`. Utilisez-le dès que possible.
+L'utilisation de l'élément {{HTMLElement('nav')}} indique automatiquement que l'élément a le rôle `navigation`. Si possible, préférez utiliser l'élément sémantique `<nav>` à la place du rôle `navigation`.
 
 ### Étiqueter les repères
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
-{{JSRef}}
-
 **`Math.SQRT2`** 是一个静态数据属性，表示 2 的平方根，约等于 1.414。
 
 {{InteractiveExample("JavaScript Demo: Math.SQRT2", "shorter")}}

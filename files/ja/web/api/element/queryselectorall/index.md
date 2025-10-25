@@ -273,7 +273,7 @@ document.querySelector("#manual-escape").addEventListener("click", () => {
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
 - MDN 学習エリアの[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelector()")}}

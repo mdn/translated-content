@@ -3,8 +3,6 @@ title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`toString()`** 方法返回表示该数字值的字符串。
 
 {{InteractiveExample("JavaScript Demo: Number.toString()")}}

@@ -149,7 +149,7 @@ Les mots-clés et les types de données mentionnés ci-dessus sont décrits plus
 
 ## Accessibilité
 
-Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
+Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
 
 - [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink <sup>(angl.)</sup>](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)

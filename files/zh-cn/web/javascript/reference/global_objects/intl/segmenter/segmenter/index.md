@@ -3,8 +3,6 @@ title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 ---
 
-{{JSRef}}
-
 **`Intl.Segmenter()`** 构造函数会创建一个 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 对象，该对象支持语言敏感的文本分割。
 
 {{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 509fde687ed349da8017a546f9cf094163f24844
 ---
 
-{{JSRef}}
-
 {{jsxref("SharedArrayBuffer")}} 实例的 **`grow()`** 方法将 `SharedArrayBuffer` 增大到以字节为单位的指定大小。
 
 ## 语法

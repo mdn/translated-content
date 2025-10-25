@@ -3,8 +3,6 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 
-{{JSRef}}
-
 **`RangeError`** 对象表示一个特定值不在所允许的范围或者集合中的错误。
 
 ## 描述

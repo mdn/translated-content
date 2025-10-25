@@ -3,7 +3,7 @@ title: "ARIA : rôle region"
 short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le rôle **`region`** sert à identifier les zones d'un document jugées importantes par l'auteur·ice. Il s'agit d'un repère générique permettant d'aider à la navigation lorsqu'aucun autre rôle de repère n'est approprié.
@@ -50,7 +50,7 @@ N'utilisez le rôle `region` que si aucun autre élément de sectionnement de co
 
 ### Privilégier le HTML
 
-L'utilisation de l'élément {{HTMLElement('section')}} communique automatiquement qu'une section possède le rôle `region` si elle a un nom accessible. Privilégiez autant que possible {{HTMLElement('section)}}.
+L'utilisation de l'élément HTML {{HTMLElement('section')}} communique automatiquement que l'élément possède le rôle `region` s'il a un nom accessible. Si possible, préférez utiliser l'élément sémantique `<section>` à la place du rôle `region`.
 
 ### Labelliser les repères
 

@@ -3,7 +3,7 @@ title: "ARIA : rôle complementary"
 short-title: complementary
 slug: Web/Accessibility/ARIA/Reference/Roles/complementary_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le [rôle de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) `complementary` est utilisé pour désigner une section de soutien qui se rapporte au contenu principal, mais qui peut se suffire à elle-même lorsqu'elle est séparée. Ces sections sont souvent présentées sous forme de barres latérales ou de boîtes d'appel. Si possible, utilisez l'[élément HTML \<aside>](/fr/docs/Web/HTML/Reference/Elements/aside) à la place.
@@ -67,7 +67,7 @@ Le rôle `complementary` est [un rôle de repère](/fr/docs/Web/Accessibility/AR
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement('aside')}} communiquera automatiquement qu'une section a un rôle de `complementary`. Si possible, préférez l'utiliser à la place.
+L'utilisation de l'élément {{HTMLElement('aside')}} communiquera automatiquement que l'élément a un rôle complémentaire (`complementary`). Si possible, privilégiez l'utilisation de l'élément sémantique `<aside>` plutôt que le rôle `complementary`.
 
 ### Étiquetage des repères
 

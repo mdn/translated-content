@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 静态方法 **`JSON.parse()`** 用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。可以提供一个可选的 _reviver_ 函数，用于在返回结果对象之前对其进行转换。
 
 {{InteractiveExample("JavaScript 示例：JSON.parse()")}}

@@ -3,8 +3,6 @@ title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 
-{{JSRef}}
-
 **`WeakSet`** 是可被垃圾回收的值的集合，包括对象和[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)。`WeakSet` 中的值只能出现一次。它在 `WeakSet` 的集合中是唯一的。
 
 ## 描述

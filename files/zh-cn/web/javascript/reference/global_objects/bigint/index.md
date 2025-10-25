@@ -3,8 +3,6 @@ title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 
-{{JSRef}}
-
 **`BigInt`** 是一种内置对象，它提供了一种方法来表示大于 `2^53 - 1` 的整数。这原本是 Javascript 中可以用 {{JSxRef("Number")}} 表示的最大数字。**`BigInt`** 可以表示任意大的整数。
 
 ## 描述

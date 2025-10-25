@@ -2,7 +2,7 @@
 title: <image>
 slug: Web/SVG/Reference/Element/image
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: bec7ef59277e752985de0ee963c86f6e8e4b3400
 ---
 
 The **`<image>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG 文書内に画像を含めます。これは{{glossary("raster image", "ラスター画像")}}ファイルや他の SVG ファイルを表示することができます。
@@ -44,6 +44,17 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 - {{SVGAttr("decoding")}}
   - : 画像を同期的にデコードするか非同期的にデコードするかをブラウザーに指示します。
     _値の型_: `async | sync | auto`; _既定値_: `auto`; _アニメーション_: **可**
+- {{SVGAttr("fetchpriority")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Provides a hint of the relative priority to use when fetching an external image.
+    Allowed values:
+    - `high`
+      - : この外部画像を他の外部リソースと比較して、高い優先度で取得します。
+    - `low`
+      - : この外部画像を他の外部リソースと比較して、低い優先度で取得します。
+    - `auto`
+      - : 取得の優先度について、指定を行いません。
+        これは値がない場合や不正な値が設定されたときに使用されます。
+        これが既定値です。
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
   - : 画像ファイルの URL を指定します。
     _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
@@ -75,3 +86,7 @@ SVG 内における PNG 画像の基本的な描画:
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{SVGAttr("fetchpriority")}} 属性

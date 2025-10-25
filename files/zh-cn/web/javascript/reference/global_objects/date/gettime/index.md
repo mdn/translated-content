@@ -3,8 +3,6 @@ title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
-{{JSRef}}
-
 **`getTime()`** 方法返回一个时间的格林威治时间数值。
 
 你可以使用这个方法把一个日期时间赋值给另一个{{jsxref("Date")}} 对象。这个方法的功能和 {{jsxref("Date.valueof", "valueOf()")}} 方法一样。

@@ -3,8 +3,6 @@ title: Array[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 ---
 
-{{JSRef}}
-
 **`Array[Symbol.species]`** 静态访问器属性返回构造函数，构造函数用于构造数组方法返回值。
 
 > [!WARNING]

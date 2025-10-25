@@ -1185,7 +1185,7 @@
 /fr/docs/EXSLT:str:split	/fr/docs/Web/XML/EXSLT/Reference/str/split
 /fr/docs/EXSLT:str:tokenize	/fr/docs/Web/XML/EXSLT/Reference/str/tokenize
 /fr/docs/Examiner,_modifier,_et_espionner_des_variables	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
-/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript	/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript	/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /fr/docs/Extension_Firefox_Checky_(externe)	https://addons.mozilla.org/extensions/moreinfo.php?id=165
 /fr/docs/Extension_Firefox_EditCSS_(externe)	https://addons.mozilla.org/extensions/moreinfo.php?id=179
 /fr/docs/FAQ_sur_le_préchargement_des_liens	/fr/docs/Glossary/Prefetch
@@ -3900,10 +3900,12 @@
 /fr/docs/Web/API/Document_Object_Model/Examples	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/API/Document_Object_Model/Introduction	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/Learn_web_development/Core/Scripting/Events
-/fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs	/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+/fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs	/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
+/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /fr/docs/Web/API/Document_Object_Model/Preface	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/API/Document_Object_Model/Préface	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/fr/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/fr/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /fr/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/API/Document_Object_Model/Whitespace	/fr/docs/Web/CSS/CSS_text/Whitespace
 /fr/docs/Web/API/Document_Object_Model/document	/fr/docs/Web/API/Document

@@ -12582,6 +12582,15 @@
       "Fredchat"
     ]
   },
+  "Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree": {
+    "modified": "2019-03-23T23:47:28.003Z",
+    "contributors": [
+      "loella16",
+      "BenoitL",
+      "Mgjbot",
+      "Planche"
+    ]
+  },
   "Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-03T05:30:03.906Z",
     "contributors": [
@@ -12594,19 +12603,10 @@
       "AlainRinder"
     ]
   },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-03-18T21:39:30.176Z",
     "contributors": [
       "loella16"
-    ]
-  },
-  "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
-    "modified": "2019-03-23T23:47:28.003Z",
-    "contributors": [
-      "loella16",
-      "BenoitL",
-      "Mgjbot",
-      "Planche"
     ]
   },
   "Web/API/Element": {

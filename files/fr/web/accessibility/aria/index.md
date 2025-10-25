@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cab1109a0c225299a9fb2b3402bcd4a1931b8ab7
 ---
 
-<i lang="en">Accessible Rich Internet Applications</i> **(<abbr>ARIA</abbr>)** (qu'on pourrait traduire par «&nbsp;applications internet riches et accessibles&nbsp;») est un ensemble de [rôles](/fr/docs/Web/Accessibility/ARIA/Roles) et d'[attributs](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) d'attributs qui définissent comment rendre le contenu et les applications web accessibles (notamment ceux développés avec JavaScript) pour les personnes avec des handicaps.
+<i lang="en">Accessible Rich Internet Applications</i> **(<abbr>ARIA</abbr>)** (qu'on pourrait traduire par «&nbsp;applications internet riches et accessibles&nbsp;») est un ensemble de [rôles](/fr/docs/Web/Accessibility/ARIA/Reference/Roles) et d'[attributs](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) d'attributs qui définissent comment rendre le contenu et les applications web accessibles (notamment ceux développés avec JavaScript) pour les personnes avec des handicaps.
 
 ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas. Ainsi, ARIA permet de rendre accessible les widgets JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.
 

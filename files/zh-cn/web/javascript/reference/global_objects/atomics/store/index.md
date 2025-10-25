@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
-
 **`Atomics.store()`** 静态方法将给定的值存储在数组中的指定位置，并返回该值。
 
 {{InteractiveExample("JavaScript Demo: Atomics.store()")}}

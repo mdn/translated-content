@@ -3,8 +3,6 @@ title: Map[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
 ---
 
-{{JSRef}}
-
 **`Map[Symbol.species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Map` 对象。
 
 ## 语法

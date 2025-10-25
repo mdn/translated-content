@@ -3,8 +3,6 @@ title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 
-{{JSRef}}
-
 **`Reflect.construct()`** 方法的行为有点像 [`new` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造函数，相当于运行 `new target(...args)`.
 
 ## 语法

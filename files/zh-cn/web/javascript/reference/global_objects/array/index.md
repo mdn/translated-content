@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c4a47058862708136e2818a5d3d21c4a1645d89a
 ---
 
-{{JSRef}}
-
 与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述

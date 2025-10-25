@@ -3,8 +3,6 @@ title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
 
-{{JSRef}}
-
 **`push()`** 方法将指定的元素添加到数组的末尾，并返回新的数组长度。
 
 {{InteractiveExample("JavaScript Demo: Array.push()")}}

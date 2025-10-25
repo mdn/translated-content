@@ -3,8 +3,6 @@ title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 
-{{JSRef}}
-
 **`search()`** 方法用于在 {{jsxref("String")}} 对象中执行正则表达式的搜索，寻找匹配项。
 
 {{InteractiveExample("JavaScript Demo: String.search()")}}

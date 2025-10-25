@@ -3,7 +3,7 @@ title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`bold()`** 方法创建一个 {{HTMLElement("b")}} 元素字符串，其中嵌入了调用的字符串（`<b>str</b>`），这会导致该字符串以粗体显示。
 

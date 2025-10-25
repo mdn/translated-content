@@ -3,7 +3,7 @@ title: "ARIA : rôle search"
 short-title: search
 slug: Web/Accessibility/ARIA/Reference/Roles/search_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
 ---
 
 Le rôle `search` est utilisé pour identifier la fonctionnalité de recherche&nbsp;; la section de la page utilisée pour rechercher dans la page, le site ou la collection de sites.
@@ -38,7 +38,9 @@ Les [rôles de point de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles
 
 ### Préférer HTML
 
-L'utilisation de l'élément {{HTMLElement('form')}} en conjonction avec une déclaration de `role="search"` fournira le plus grand soutien.
+L'utilisation de l'élément HTML {{HTMLElement('search')}} communique automatiquement que l'élément a le rôle de `search`. Si possible, privilégiez l'utilisation de l'élément sémantique `<search>` plutôt que le rôle `search`.
+
+Si votre `<input>` de type `search` est déjà contenu dans un élément {{HTMLElement("form")}}, envelopper le formulaire dans un autre élément `<search>` peut être un balisage inutile. Dans ce cas, l'utilisation de `role="search"` sur l'élément `<form>` lui-même est acceptable.
 
 ### Étiquetage des points de repère
 

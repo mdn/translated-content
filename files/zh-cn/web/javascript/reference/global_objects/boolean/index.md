@@ -3,8 +3,6 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 
-{{JSRef}}
-
 **`Boolean`** 对象是一个布尔值的对象包装器。
 
 ## 描述

@@ -3,7 +3,7 @@ title: Function.prototype.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
 
-{{JSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!NOTE]
 > 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，访问函数的 `caller` 属性会抛出错误——该 API 已被移除且没有替代品。这是为了防止代码能够“遍历堆栈”，这既存在安全风险，也严重限制了内联和尾调用优化等优化的可能性。如需更多解释，请阅读 [arguments.callee 的弃用原因](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee#描述)。

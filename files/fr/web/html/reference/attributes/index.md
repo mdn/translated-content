@@ -1,12 +1,13 @@
 ---
 title: Référence des attributs HTML
+short-title: Attributs
 slug: Web/HTML/Reference/Attributes
 original_slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
+  sourceCommit: baa785abec7bc852b909f1c827510731ada5ff4f
 ---
 
-Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
+Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
 
 ## Liste des attributs
 
@@ -23,11 +24,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/accept"><code>accept</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("form")}}, {{HTMLElement("input")}}</td>
       <td>
         La liste des types acceptés par le serveur. Généralement, il s'agit de
         types de fichier.
@@ -39,9 +36,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>accept-charset</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("form")}}</td>
       <td>La liste des jeux de caractères pris en charge.</td>
     </tr>
     <tr>
@@ -55,16 +50,14 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
       <td>
         Cet attribut permet de définir un raccourci clavier pour activer un
-        élément ou lui passer le focus.
+        élément ou lui donner la sélection.
       </td>
     </tr>
     <tr>
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/form#action"><code>action</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("form")}}</td>
       <td>
         L'URI d'un programme qui traite les informations envoyées par le
         formulaire.
@@ -72,30 +65,16 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <code>align</code> {{deprecated_inline}}
+        <code>align</code> {{Deprecated_Inline}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/caption"
-          ><code>&lt;caption&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/col"><code>&lt;col&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/colgroup"
-          ><code>&lt;colgroup&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/hr"><code>&lt;hr&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"><code>&lt;iframe&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/table"><code>&lt;table&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/tbody"><code>&lt;tbody&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/td"><code>&lt;td&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/tfoot"><code>&lt;tfoot&gt;</code></a>
-        , <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/thead"><code>&lt;thead&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/tr"><code>&lt;tr&gt;</code></a>
+        {{HTMLElement("caption")}}, {{HTMLElement("col")}},
+        {{HTMLElement("colgroup")}},
+        {{HTMLElement("hr")}}, {{HTMLElement("iframe")}},
+        {{HTMLElement("img")}}, {{HTMLElement("table")}},
+        {{HTMLElement("tbody")}}, {{HTMLElement("td")}},
+        {{HTMLElement("tfoot")}}, {{HTMLElement("th")}},
+        {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
       </td>
       <td>Cet attribut définit l'alignement horizontal de l'élément.</td>
     </tr>
@@ -105,11 +84,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>allow</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"
-          ><code>&lt;iframe&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("iframe")}}</td>
       <td>
         Cet attribut définit les règles des fonctionnalités pour cette
         <em>iframe</em>.
@@ -117,13 +92,18 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/alt"><code>alt</code></a>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input/color#alpha">alpha</a></code>
+      </td>
+      <td>{{HTMLElement("input")}}</td>
+      <td>Permet à l'utilisateur·ice de sélectionner l'opacité d'une couleur sur un champ <code>type="color"</code>.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>alt</code>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
+        {{HTMLElement("area")}},
+        {{HTMLElement("img")}}, {{HTMLElement("input")}}
       </td>
       <td>
         Un texte alternatif à afficher lorsque l'élément ne peut pas être
@@ -134,9 +114,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <code><a href="/fr/docs/Web/HTML/Reference/Elements/link#as">as</a></code>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("link")}}</td>
       <td>Spécifie le type de contenu chargé par le lien.</td>
     </tr>
     <tr>
@@ -145,11 +123,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>async</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"
-          ><code>&lt;script&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("script")}}</td>
       <td>
         Cet attribut indique que le script devrait être exécuté de façon
         asynchrone.
@@ -176,18 +150,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        <p>
-          <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Reference/Elements/select"
-            ><code>&lt;select&gt;</code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-            ><code>&lt;textarea&gt;</code></a
-          >
-        </p>
+        {{HTMLElement("form")}}, {{HTMLElement("input")}},
+        {{HTMLElement("select")}},
+        {{HTMLElement("textarea")}}
       </td>
       <td>
         Cet attribut indique que ces contrôles ou que ce formulaire peuvent être
@@ -195,16 +160,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/autoplay"
-          ><code>autoplay</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
-      </td>
+      <td><code>autoplay</code></td>
+      <td>{{HTMLElement("audio")}}, {{HTMLElement("video")}}</td>
       <td>
         Cet attribut indique que l'élément audio ou vidéo doit être lancé dès
         que possible.
@@ -213,22 +170,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     <tr>
       <td><code>background</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/body"><code>&lt;body&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/table"><code>&lt;table&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/td"><code>&lt;td&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a>
+        {{HTMLElement("body")}}, {{HTMLElement("table")}},
+        {{HTMLElement("td")}}, {{HTMLElement("th")}}
       </td>
       <td>
         <p>Définit l'URL vers un fichier qui est une image.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Bien que les navigateurs et les clients
             <em>e-mails</em> prennent en charge cet attribut, cet attribut est
             obsolète. On utilisera plutôt la propriété
-            <a href="/fr/docs/Web/CSS/background-image"
-              ><code>background-image</code></a
-            >.
+            {{CSSxRef("background-image")}}.
           </p>
         </div>
       </td>
@@ -236,33 +188,21 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     <tr>
       <td><code>bgcolor</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/body"><code>&lt;body&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/col"><code>&lt;col&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/colgroup"
-          ><code>&lt;colgroup&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/marquee"
-          ><code>&lt;marquee&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/table"><code>&lt;table&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/tbody"><code>&lt;tbody&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/tfoot"><code>&lt;tfoot&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/td"><code>&lt;td&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/tr"><code>&lt;tr&gt;</code></a>
+        {{HTMLElement("body")}}, {{HTMLElement("col")}},
+        {{HTMLElement("colgroup")}},
+        {{HTMLElement("marquee")}},
+        {{HTMLElement("table")}},
+        {{HTMLElement("tbody")}},
+        {{HTMLElement("tfoot")}}, {{HTMLElement("td")}},
+        {{HTMLElement("th")}}, {{HTMLElement("tr")}}
       </td>
       <td>
         <p>Cet attribut indique la couleur d'arrière-plan pour l'élément.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/background-color"
-              ><code>background-color</code></a
-            >.
+            {{CSSxRef("background-color")}}.
           </p>
         </div>
       </td>
@@ -270,20 +210,16 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     <tr>
       <td><code>border</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"><code>&lt;object&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/table"><code>&lt;table&gt;</code></a>
+        {{HTMLElement("img")}}, {{HTMLElement("object")}},
+        {{HTMLElement("table")}}
       </td>
       <td>
         <p>Cet attribut indique la largeur de la bordure.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/border"><code>border</code></a
-            >.
+            {{CSSxRef("border")}}.
           </p>
         </div>
       </td>
@@ -292,9 +228,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <code><a href="/fr/docs/Web/HTML/Reference/Attributes/capture">capture</a></code>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("input")}}</td>
       <td>
         À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
       </td>
@@ -303,10 +237,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/meta#charset"><code>charset</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meta"><code>&lt;meta&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("meta")}}</td>
       <td>
         Cet attribut déclare l'encodage de caractères utilisé pour la page ou le
         script.
@@ -316,24 +247,18 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/input#checked"><code>checked</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("input")}}</td>
       <td>
         Cet attribut indique si l'élément doit être vérifié au chargement de la
         page.
       </td>
     </tr>
     <tr>
+      <td><code>cite</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/cite"><code>cite</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/blockquote"
-          ><code>&lt;blockquote&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/del"><code>&lt;del&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/ins"><code>&lt;ins&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/q"><code>&lt;q&gt;</code></a>
+        {{HTMLElement("blockquote")}},
+        {{HTMLElement("del")}}, {{HTMLElement("ins")}},
+        {{HTMLElement("q")}}
       </td>
       <td>
         Cet attribut est une URI qui pointe vers la source de la citation ou de
@@ -357,24 +282,27 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td><code>color</code></td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/font"><code>&lt;font&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/hr"><code>&lt;hr&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("font")}}, {{HTMLElement("hr")}}</td>
       <td>
         <p>
           Cet attribut définit la couleur du texte grâce à un nom de couleur ou
           grâce à un code hexadécimal dans le format #RRGGBB.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/color"><code>color</code></a
-            >.
+            {{CSSxRef("color")}}.
           </p>
         </div>
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace">colorspace</a></code>
+      </td>
+      <td>{{HTMLElement("input")}}</td>
+      <td>Définit l'{{Glossary("Color_space", "espace colorimétrique")}} utilisé par un champ <code>type="color"</code>.</td>
     </tr>
     <tr>
       <td>
@@ -382,24 +310,15 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>cols</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("textarea")}}</td>
       <td>
         Cet attribut définit le nombre de colonnes pour le texte contenu dans
         un<code> textarea</code>.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/colspan"><code>colspan</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/td"><code>&lt;td&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a>
-      </td>
+      <td><code>colspan</code></td>
+      <td>{{HTMLElement("td")}}, {{HTMLElement("th")}}</td>
       <td>
         Cet attribut définit le nombre de colonnes sur lequel une cellule doit
         s'étendre.
@@ -407,16 +326,14 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meta#content"
+        <a href="/fr/docs/Web/HTML/Reference/Attributes/content"
           ><code>content</code></a
         >
       </td>
+      <td>{{HTMLElement("meta")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meta"><code>&lt;meta&gt;</code></a>
-      </td>
-      <td>
-        Une valeur associée avec <code>http-equiv</code> ou
-        <code>name</code> selon le contexte.
+        Une valeur associée avec <code>http-equiv</code> ou <code>name</code>
+        selon le contexte.
       </td>
     </tr>
     <tr>
@@ -431,19 +348,11 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>Cet attribut indique si le contenu de l'élément peut être édité.</td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/controls"
-          ><code>controls</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
-      </td>
+      <td><code>controls</code></td>
+      <td>{{HTMLElement("audio")}}, {{HTMLElement("video")}}</td>
       <td>
         Cet attribut indique si le navigateur doit afficher les contrôles de
-        lecture du média pour l'utilisateur.
+        lecture du média pour l'utilisateur·ice.
       </td>
     </tr>
     <tr>
@@ -452,9 +361,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>coords</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("area")}}</td>
       <td>
         Un ensemble de valeurs qui définit les coordonnées de la zone d'intérêt.
       </td>
@@ -466,26 +373,18 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"><code>&lt;script&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
+        {{HTMLElement("audio")}}, {{HTMLElement("img")}},
+        {{HTMLElement("link")}}, {{HTMLElement("script")}},
+        {{HTMLElement("video")}}
       </td>
       <td>Cet attribut gère les requêtes de différentes origines.</td>
     </tr>
     <tr>
       <td>
         <a href="/fr/docs/Web/API/HTMLIFrameElement/csp"><code>csp</code></a>
-        {{experimental_inline}}
+        {{Experimental_Inline}}
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"
-          ><code>&lt;iframe&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("iframe")}}</td>
       <td>
         Cet attribut définit la politique de sécurité de contenu que le document
         intégré doit respecter.
@@ -497,11 +396,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>data</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"
-          ><code>&lt;object&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("object")}}</td>
       <td>Cet attribut définit l'URL de la ressource.</td>
     </tr>
     <tr>
@@ -519,15 +414,10 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
+      <td><code>datetime</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/datetime"
-          ><code>datetime</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/del"><code>&lt;del&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/ins"><code>&lt;ins&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/time"><code>&lt;time&gt;</code></a>
+        {{HTMLElement("del")}}, {{HTMLElement("ins")}},
+        {{HTMLElement("time")}}
       </td>
       <td>Cet attribut indique la date et l'heure associées à l'élément.</td>
     </tr>
@@ -537,9 +427,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>decoding</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("img")}}</td>
       <td>Cet attribut indique la méthode préférée pour décoder l'image.</td>
     </tr>
     <tr>
@@ -548,12 +436,10 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>default</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/track"><code>&lt;track&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("track")}}</td>
       <td>
         Cet attribut indique que la piste devrait être activée sauf si les
-        préférences de l'utilisateur indiquent un autre choix.
+        préférences de l'utilisateur·ice indiquent un autre choix.
       </td>
     </tr>
     <tr>
@@ -562,11 +448,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>defer</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"
-          ><code>&lt;script&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("script")}}</td>
       <td>
         Cet attribut indique que le script doit être exécuté une fois que la
         page a été analysée.
@@ -588,13 +470,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/dirname"><code>dirname</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("textarea")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -604,38 +480,18 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"><code>&lt;button&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/fieldset"
-          ><code>&lt;fieldset&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/optgroup"
-          ><code>&lt;optgroup&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/option"><code>&lt;option&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/select"><code>&lt;select&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
+        {{HTMLElement("button")}}, {{HTMLElement("fieldset")}},
+        {{HTMLElement("input")}}, {{HTMLElement("optgroup")}},
+        {{HTMLElement("option")}}, {{HTMLElement("select")}},
+        {{HTMLElement("textarea")}}
       </td>
       <td>
-        Cet attribut indique si l'utilisateur peut interagir avec l'élément.
+        Cet attribut indique si l'utilisateur·ice peut interagir avec l'élément.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/download"
-          ><code>download</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a>
-      </td>
+      <td><code>download</code></td>
+      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
       <td>
         Cet attribut indique si l'hyperlien est utilisé afin de télécharger une
         ressource.
@@ -659,9 +515,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>enctype</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("form")}}</td>
       <td>
         Cet attribut définit le type de contenu des données de formulaire
         envoyées lorsque la méthode utilisée est <code>POST</code>.
@@ -674,12 +528,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
-        >
+        {{HTMLElement("textarea")}},
+        <a href="/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         L'attribut <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code
@@ -691,15 +541,24 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/for"><code>for</code></a>
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/elementtiming">elementtiming</a></code>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/label"><code>&lt;label&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/output"
-          ><code>&lt;output&gt;</code></a
-        >
+        {{HTMLElement("img")}},
+        les éléments {{SVGElement("image")}} à l'intérieur d'un {{SVGElement("svg")}},
+        les images d'affiche de {{HTMLElement("video")}} éléments,
+        les éléments qui ont un {{CSSxRef("background-image")}},
+        et les éléments contenant des nœuds de texte, tels qu'un {{HTMLElement("p")}}
       </td>
+      <td>
+        Indique qu'un élément est marqué pour le suivi par des objets {{DOMxRef("PerformanceObserver")}} utilisant le type <code>"element"</code>. Pour plus de détails, voir l'interface {{DOMxRef("PerformanceElementTiming")}}.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/HTML/Reference/Attributes/for"><code>for</code></a>
+      </td>
+      <td>{{HTMLElement("label")}}, {{HTMLElement("output")}}</td>
       <td>
         Cet attribut décrit l'élément auquel se rapporte l'élément courant.
       </td>
@@ -709,145 +568,69 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <a href="/fr/docs/Web/HTML/Reference/Attributes/form"><code>form</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"><code>&lt;button&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/fieldset"
-          ><code>&lt;fieldset&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/label"><code>&lt;label&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"><code>&lt;object&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/output"><code>&lt;output&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/progress"
-          ><code>&lt;progress&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/select"><code>&lt;select&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
+        {{HTMLElement("button")}}, {{HTMLElement("fieldset")}},
+        {{HTMLElement("input")}}, {{HTMLElement("object")}},
+        {{HTMLElement("output")}}, {{HTMLElement("select")}},
+        {{HTMLElement("textarea")}}
       </td>
       <td>Cet attribut indique le formulaire auquel l'élément se rapporte.</td>
     </tr>
     <tr>
+      <td><code>formaction</code></td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("button")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/formaction"
-          ><code>formaction</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"
-          ><code>&lt;button&gt;</code></a
-        >
-      </td>
-      <td>
-        Cet attribut est l'URI du programme qui traite les données pour ces
-        champs du formulaire. Il prend le pas sur l'attribut
-        <code>action</code> défini pour
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a
-        >.
+        Indique l'action de l'élément, en remplaçant l'action définie dans
+        un élément HTML {{HTMLElement("form")}}.
       </td>
     </tr>
     <tr>
+      <td><code>formenctype</code></td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("button")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/formenctype"
-          ><code>formenctype</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"
-          ><code>&lt;button&gt;</code></a
-        >
-      </td>
-      <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut indique l'encodage utilisé pour l'envoi des données. Si cet
-        attribut est indiqué, il surcharge l'attribut <code>enctype</code> du
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a> auquel est
-        rattaché le bouton/champ.
+        Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
+        cet attribut définit le type d'encodage à utiliser lors de l'envoi du formulaire. Si
+        cet attribut est spécifié, il remplace l'attribut
+        <code>enctype</code> du propriétaire du formulaire
+        <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
     </tr>
     <tr>
+      <td><code>formmethod</code></td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("button")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/formmethod"
-          ><code>formmethod</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"
-          ><code>&lt;button&gt;</code></a
-        >
-      </td>
-      <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut indique la méthode HTTP pour envoyer les données
+        Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
+        cet attribut définit la méthode d'envoi à utiliser lors de la soumission du formulaire
         (<code>GET</code>, <code>POST</code>, etc.). Si cet attribut est
-        indiqué, il surcharge l'attribut <code>method</code> du formulaire
-        auquel est rattaché le bouton/champ.
+        spécifié, il remplace l'attribut <code>method</code> du propriétaire du
+        <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
     </tr>
     <tr>
+      <td><code>formnovalidate</code></td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("button")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/formnovalidate"
-          ><code>formnovalidate</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"
-          ><code>&lt;button&gt;</code></a
-        >
-      </td>
-      <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut booléen indique que le formulaire ne doit pas être validé à
-        l'envoi. Si cet attribut est indiqué, il surcharge l'attribut
-        <code>novalidate</code> du formulaire auquel est rattaché le
-        bouton/champ.
+        Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
+        cet attribut booléen indique que le formulaire ne doit pas être validé
+        lors de son envoi. Si cet attribut est spécifié, il remplace l'attribut
+        <code>novalidate</code> du propriétaire du
+        <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
     </tr>
     <tr>
+      <td><code>formtarget</code></td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("button")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/formtarget"
-          ><code>formtarget</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"
-          ><code>&lt;button&gt;</code></a
-        >
-      </td>
-      <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut indique le contexte de navigation (onglet, fenêtre ou
-        <em>iframe</em>) dans lequel afficher la réponse après l'envoi du
-        formulaire. Si cet attribut est indiqué, il surcharge l'attribut
-        <code>target</code> du formulaire auquel est rattaché le bouton/champ.
+        Si le bouton ou le champ est un {{Glossary("submit button", "bouton d'envoi")}} (par exemple <code>type="submit"</code>),
+        cet attribut définit le contexte de navigation (par exemple&nbsp;: onglet, fenêtre,
+        ou cadre intégré) dans lequel afficher la réponse reçue après
+        l'envoi du formulaire. Si cet attribut est spécifié, il remplace l'attribut
+        <code>target</code> du propriétaire du
+        <a href="/fr/docs/Web/HTML/Reference/Elements/form">formulaire</a>.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/headers"><code>headers</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/td"><code>&lt;td&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a>
-      </td>
+      <td><code>headers</code></td>
+      <td>{{HTMLElement("td")}}, {{HTMLElement("th")}}</td>
       <td>
         Les identifiants des éléments <code>&lt;th&gt;</code> qui s'appliquent à
         cet élément.
@@ -856,18 +639,10 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     <tr>
       <td><code>height</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/canvas"><code>&lt;canvas&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/embed"><code>&lt;embed&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"><code>&lt;iframe&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"><code>&lt;object&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
+        {{HTMLElement("canvas")}}, {{HTMLElement("embed")}},
+        {{HTMLElement("iframe")}}, {{HTMLElement("img")}},
+        {{HTMLElement("input")}}, {{HTMLElement("object")}},
+        {{HTMLElement("video")}}
       </td>
       <td>
         <p>
@@ -875,14 +650,12 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           l'élément. Pour les autres éléments, on utilisera la propriété CSS
           <a href="/fr/docs/Web/CSS/height"><code>height</code></a>.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Pour certains éléments comme
-            <a href="/fr/docs/Web/HTML/Reference/Elements/div"><code>&lt;div&gt;</code></a
-            >,cet attribut est un reliquat et ne devrait plus être utilisé.
-            C'est la propriété CSS
-            <a href="/fr/docs/Web/CSS/height"><code>height</code></a> qui est la
-            méthode standard pour définir la hauteur d'un élément.
+            {{HTMLElement("div")}}, cet attribut est un reliquat et ne devrait
+            plus être utilisé. C'est la propriété CSS {{CSSxRef("height")}} qui
+            est la méthode standard pour définir la hauteur d'un élément.
           </p>
         </div>
       </td>
@@ -907,34 +680,20 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>high</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("meter")}}</td>
       <td>Cet attribut indique la borne inférieure de l'intervalle haut.</td>
     </tr>
     <tr>
+      <td><code>href</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/href"><code>href</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/base"><code>&lt;base&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a>
+        {{HTMLElement("a")}}, {{HTMLElement("area")}},
+        {{HTMLElement("base")}}, {{HTMLElement("link")}}
       </td>
       <td>L'URL de la ressource liée.</td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/hreflang"
-          ><code>hreflang</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a>
-      </td>
+      <td><code>hreflang</code></td>
+      <td>{{HTMLElement("a")}}, {{HTMLElement("link")}}</td>
       <td>Cet attribut indique la langue utilisée pour la ressource liée.</td>
     </tr>
     <tr>
@@ -943,12 +702,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>http-equiv</code></a
         >
       </td>
+      <td>{{HTMLElement("meta")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meta"><code>&lt;meta&gt;</code></a>
-      </td>
-      <td>
-        Définit une directive
-        <a href="/fr/docs/Web/HTTP/Headers/Pragma">Pragma</a>.
+        Définit une directive Pragma.
       </td>
     </tr>
     <tr>
@@ -970,34 +726,13 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>integrity</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"
-          ><code>&lt;script&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("link")}}, {{HTMLElement("script")}}</td>
       <td>
         <p>
-          Une fonctionnalité relative à la sécurité qui permet aux navigateurs
-          de vérifier les fichiers qu'ils récupèrent.
+          Définit une valeur
+          <a href="/fr/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
+          qui permet aux navigateurs de vérifier ce qu'ils récupèrent.
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img#intrinsicsize"
-          ><code>intrinsicsize</code></a
-        >
-        {{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a>
-      </td>
-      <td>
-        Cet attribut indique au navigateur qu'il faut ignorer la taille
-        intrinsèque de l'image et qu'il faut utiliser la taille indiquée avec
-        les attributs.
       </td>
     </tr>
     <tr>
@@ -1007,16 +742,12 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
-        >
+        {{HTMLElement("textarea")}},
+        <a href="/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         Cet attribut fournit une indication sur le type de donnée qui pourrait
-        être saisi par l'utilisateur lors de l'édition du formulaire ou de
+        être saisi par l'utilisateur·ice lors de l'édition du formulaire ou de
         l'élément. Cet attribut peut être utilisé sur les contrôles de
         formulaires ou sur les éléments qui sont éditables (par exemple avec
         l'attribut <code>contenteditable</code>).
@@ -1028,9 +759,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>ismap</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("img")}}</td>
       <td>
         Cet attribut indique que l'image contribue à une mosaïque d'images
         interactive côté serveur.
@@ -1053,25 +782,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>kind</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/track"><code>&lt;track&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("track")}}</td>
       <td>Cet attribut définit le type de piste textuelle.</td>
     </tr>
     <tr>
+      <td><code>label</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/label"><code>label</code></a>
+        {{HTMLElement("optgroup")}}, {{HTMLElement("option")}},
+        {{HTMLElement("track")}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/optgroup"
-          ><code>&lt;optgroup&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/option"><code>&lt;option&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/track"><code>&lt;track&gt;</code></a>
-      </td>
-      <td>
-        Cet attribut définit un titre, lisible par un utilisateur, pour
+        Cet attribut définit un titre, lisible par un utilisateur·ice, pour
         l'élément.
       </td>
     </tr>
@@ -1088,14 +809,21 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/script#language"
           ><code>language</code></a
-        >
+        > {{Deprecated_Inline}}
+      </td>
+      <td>{{HTMLElement("script")}}</td>
+      <td>Cet attribut définit le langage de script utilisé dans l'élément.</td>
+    </tr>
+    <tr>
+      <td><code>loading</code></td>
+      <td>
+        {{HTMLElement("img")}}, {{HTMLElement("iframe")}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"
-          ><code>&lt;script&gt;</code></a
-        >
+        Indique si l'élément doit être chargé de façon différée
+        (<code>loading="lazy"</code>) ou chargé immédiatement
+        (<code>loading="eager"</code>).
       </td>
-      <td>Cet attribut définit le langage de script utilisé dans l'élément.</td>
     </tr>
     <tr>
       <td>
@@ -1103,25 +831,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>list</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("input")}}</td>
       <td>
         Cet attribut constitue une liste d'options prédéfinie qui est suggérée à
-        l'utilisateur.
+        l'utilisateur·ice.
       </td>
     </tr>
     <tr>
+      <td><code>loop</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/loop"><code>loop</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/marquee"
-          ><code>&lt;marquee&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
+        {{HTMLElement("audio")}}, {{HTMLElement("marquee")}},
+        {{HTMLElement("video")}}
       </td>
       <td>
         Cet attribut indique si le média courant doit recommencer au début une
@@ -1132,9 +852,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/meter#low"><code>low</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("meter")}}</td>
       <td>Cet attribut indique la borne supérieure de l'intervalle bas.</td>
     </tr>
     <tr>
@@ -1142,13 +860,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <a href="/fr/docs/Web/HTML/Reference/Attributes/max"><code>max</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/progress"
-          ><code>&lt;progress&gt;</code></a
-        >
+        {{HTMLElement("input")}}, {{HTMLElement("meter")}},
+        {{HTMLElement("progress")}}
       </td>
       <td>Cet attribut indique la valeur maximale autorisée.</td>
     </tr>
@@ -1158,13 +871,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>maxlength</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("textarea")}}</td>
       <td>
         Cet attribut définit le nombre maximal de caractères autorisé dans
         l'élément.
@@ -1176,30 +883,18 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>minlength</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("textarea")}}</td>
       <td>
         Cet attribut définit le nombre minimal de caractères qui doivent être
         saisis dans l'élément.
       </td>
     </tr>
     <tr>
+      <td><code>media</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/media"><code>media</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/source"><code>&lt;source&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/style"><code>&lt;style&gt;</code></a>
+        {{HTMLElement("a")}}, {{HTMLElement("area")}},
+        {{HTMLElement("link")}}, {{HTMLElement("source")}},
+        {{HTMLElement("style")}}
       </td>
       <td>
         Cet attribut est indication à propos du type de média pour la ressource
@@ -1212,9 +907,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>method</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("form")}}</td>
       <td>
         Cet attribut définit la méthode <a href="/fr/docs/Web/HTTP">HTTP</a> à
         utiliser pour l'envoi des données du formulaire (<code>GET</code> par
@@ -1225,11 +918,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/min"><code>min</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("meter")}}</td>
       <td>Cet attribut indique la valeur minimale autorisée.</td>
     </tr>
     <tr>
@@ -1238,59 +927,29 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>multiple</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/select"
-          ><code>&lt;select&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("select")}}</td>
       <td>
         Cet attribut indique si plusieurs valeurs peuvent être saisies pour des
         entrées de type <code>email</code> ou <code>file</code>.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/muted"><code>muted</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
-      </td>
+      <td><code>muted</code></td>
+      <td>{{HTMLElement("audio")}}, {{HTMLElement("video")}}</td>
       <td>
         Cet attribut indique si le son de la vidéo doit être coupé lorsque la
         page est chargée initialement.
       </td>
     </tr>
     <tr>
+      <td><code>name</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/name"><code>name</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"><code>&lt;button&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/fieldset"
-          ><code>&lt;fieldset&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"><code>&lt;iframe&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"><code>&lt;object&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/output"><code>&lt;output&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/select"><code>&lt;select&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/map"><code>&lt;map&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/meta"><code>&lt;meta&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/param"><code>&lt;param&gt;</code></a>
+        {{HTMLElement("button")}}, {{HTMLElement("form")}},
+        {{HTMLElement("fieldset")}}, {{HTMLElement("iframe")}},
+        {{HTMLElement("input")}}, {{HTMLElement("object")}},
+        {{HTMLElement("output")}}, {{HTMLElement("select")}},
+        {{HTMLElement("textarea")}}, {{HTMLElement("map")}},
+        {{HTMLElement("meta")}}, {{HTMLElement("param")}}
       </td>
       <td>
         Le nom de l'élément qui peut être utilisé par le serveur pour identifier
@@ -1303,25 +962,15 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>novalidate</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("form")}}</td>
       <td>
         Cet attribut indique que les données du formulaire ne doivent pas être
         validées lors de l'envoi.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/details#open"
-          ><code>open</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/details"
-          ><code>&lt;details&gt;</code></a
-        >
-      </td>
+      <td><code>open</code></td>
+      <td>{{HTMLElement("details")}}, {{HTMLElement("dialog")}}</td>
       <td>
         Cet attribut indique si les détails seront affichés lors du chargement
         de la page.
@@ -1333,18 +982,14 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>optimum</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("meter")}}</td>
       <td>Cet attribut indique la valeur numérique optimale.</td>
     </tr>
     <tr>
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/pattern"><code>pattern</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("input")}}</td>
       <td>
         Cet attribut définit une expression rationnelle contre laquelle valider
         la valeur de l'élément.
@@ -1354,11 +999,11 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/a#ping"><code>ping</code></a>
       </td>
+      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a>
+        L'attribut <code>ping</code> définit une liste d'URL séparées par des
+        espaces à notifier si un·e utilisateur·ice suit le lien hypertexte.
       </td>
-      <td></td>
     </tr>
     <tr>
       <td>
@@ -1366,15 +1011,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>placeholder</code></a
         >
       </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("textarea")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
-      <td>
-        Cet attribut fournit une indication à l'utilisateur sur ce qu'il peut
+        Cet attribut fournit une indication à l'utilisateur·ice sur ce qu'il peut
         saisir dans le champ.
       </td>
     </tr>
@@ -1382,11 +1021,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <code><a href="/fr/docs/Web/HTML/Reference/Elements/video#playsinline">playsinline</a></code>
       </td>
+      <td>{{HTMLElement("video")}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
-      </td>
-      <td>
-        Un attribut booléen indiquant que la vidéo doit être lue « en ligne »&nbsp;;
+        Un attribut booléen indiquant que la vidéo doit être lue «&nbsp;en ligne&nbsp;»&nbsp;;
         c'est-à-dire dans la zone de lecture de l'élément. Notez que l'absence
         de cet attribut n'implique pas que la vidéo sera toujours lue en plein écran.
       </td>
@@ -1397,23 +1034,15 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>poster</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("video")}}</td>
       <td>
         Cet attribut est une URL qui indique l'image à afficher tant que
-        l'utilisateur n'a pas lancé la vidéo ou déplacé le curseur.
+        l'utilisateur·ice n'a pas lancé la vidéo ou déplacé le curseur.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/preload"><code>preload</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
-      </td>
+      <td><code>preload</code></td>
+      <td>{{HTMLElement("audio")}}, {{HTMLElement("video")}}</td>
       <td>
         Cet attribut indique si toute ou partie, voire aucune partie de la
         ressource doit être téléchargée en avance.
@@ -1421,36 +1050,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/readonly"
-          ><code>readonly</code></a
-        >
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/readonly">readonly</a></code>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("textarea")}}</td>
       <td>Cet attribut indique si l'élément peut être édité.</td>
     </tr>
     <tr>
+      <td><code>referrerpolicy</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/referralpolicy"
-          ><code>referrerpolicy</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"><code>&lt;iframe&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"
-          ><code>&lt;script&gt;</code></a
-        >
+        {{HTMLElement("a")}}, {{HTMLElement("area")}},
+        {{HTMLElement("iframe")}}, {{HTMLElement("img")}},
+        {{HTMLElement("link")}}, {{HTMLElement("script")}}
       </td>
       <td>
         Définit le référent (<em>referrer</em>) envoyé lors de la récupération
@@ -1462,9 +1072,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <a href="/fr/docs/Web/HTML/Reference/Attributes/rel"><code>rel</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a>
+        {{HTMLElement("a")}}, {{HTMLElement("area")}},
+        {{HTMLElement("link")}}
       </td>
       <td>
         Cet attribut définit la relation entre l'objet cible et l'objet du lien.
@@ -1477,13 +1086,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/select"><code>&lt;select&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
+        {{HTMLElement("input")}}, {{HTMLElement("select")}},
+        {{HTMLElement("textarea")}}
       </td>
       <td>
         Cet attribut indique si l'élément doit obligatoirement être renseigné
@@ -1496,9 +1100,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>reversed</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/ol"><code>&lt;ol&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("ol")}}</td>
       <td>
         Cet attribut indique si la liste doit être affichée dans un ordre
         décroissant plutôt que dans un ordre croissant.
@@ -1506,10 +1108,13 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles">role</a></code>
       </td>
       <td><a href="/fr/docs/Web/HTML/Reference/Global_attributes">Attribut universel</a></td>
-      <td>Définit un rôle explicite pour un élément destiné à être utilisé par les technologies d'assistance.</td>
+      <td>
+        Définit un rôle explicite pour un élément destiné à être utilisé par les
+        technologies d'assistance.
+      </td>
     </tr>
     <tr>
       <td>
@@ -1517,21 +1122,12 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>rows</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("textarea")}}</td>
       <td>Cet attribut définit le nombre de lignes pour la zone de texte.</td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/rowspan"><code>rowspan</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/td"><code>&lt;td&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a>
-      </td>
+      <td><code>rowspan</code></td>
+      <td>{{HTMLElement("td")}}, {{HTMLElement("th")}}</td>
       <td>
         Cet attribut définit le nombre de lignes sur lesquelles une cellule doit
         s'étendre.
@@ -1543,11 +1139,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>sandbox</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"
-          ><code>&lt;iframe&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("iframe")}}</td>
       <td>
         Empêche un élément chargé dans une <em>iframe</em> d'utiliser certaines
         fonctionnalités (envoyer des formulaires ou ouvrir de nouvelles fenêtres
@@ -1558,21 +1150,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/th#scope"><code>scope</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/th"><code>&lt;th&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("th")}}</td>
       <td>Définit les cellules sur lesquelles porte la cellule d'en-tête.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/style#scoped"
-          ><code>scoped</code></a
-        >{{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/style"><code>&lt;style&gt;</code></a>
-      </td>
-      <td></td>
     </tr>
     <tr>
       <td>
@@ -1580,37 +1159,22 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>selected</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/option"
-          ><code>&lt;option&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("option")}}</td>
       <td>
         Cet attribut définit la valeur qui sera sélectionnée au chargement de la
         page.
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/shape"><code>shape</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a>
-      </td>
+      <td><code>shape</code></td>
+      <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
       <td></td>
     </tr>
     <tr>
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/size"><code>size</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/select"
-          ><code>&lt;select&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("input")}}, {{HTMLElement("select")}}</td>
       <td>
         Cet attribut définit la largeur de l'élément en pixels, si l'attribut
         <code>type</code> de l'élément vaut <code>text</code> ou
@@ -1618,16 +1182,10 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
+      <td><code>sizes</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/sizes"><code>sizes</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/source"
-          ><code>&lt;source&gt;</code></a
-        >
+        {{HTMLElement("link")}}, {{HTMLElement("img")}},
+        {{HTMLElement("source")}}
       </td>
       <td></td>
     </tr>
@@ -1644,16 +1202,8 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/span"><code>span</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/col"><code>&lt;col&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/colgroup"
-          ><code>&lt;colgroup&gt;</code></a
-        >
-      </td>
+      <td><code>span</code></td>
+      <td>{{HTMLElement("col")}}, {{HTMLElement("colgroup")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -1671,26 +1221,13 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
+      <td><code>src</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/src"><code>src</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/audio"><code>&lt;audio&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/embed"><code>&lt;embed&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"><code>&lt;iframe&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"><code>&lt;script&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/source"><code>&lt;source&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/track"><code>&lt;track&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
+        {{HTMLElement("audio")}}, {{HTMLElement("embed")}},
+        {{HTMLElement("iframe")}}, {{HTMLElement("img")}},
+        {{HTMLElement("input")}}, {{HTMLElement("script")}},
+        {{HTMLElement("source")}}, {{HTMLElement("track")}},
+        {{HTMLElement("video")}}
       </td>
       <td>Cet attribut indique l'URL du contenu embarqué.</td>
     </tr>
@@ -1700,11 +1237,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>srcdoc</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"
-          ><code>&lt;iframe&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("iframe")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -1713,31 +1246,19 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>srclang</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/track"><code>&lt;track&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("track")}}</td>
       <td></td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/srcset"><code>srcset</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/source"
-          ><code>&lt;source&gt;</code></a
-        >
-      </td>
+      <td><code>srcset</code></td>
+      <td>{{HTMLElement("img")}}, {{HTMLElement("source")}}</td>
       <td>Une ou plusieurs images candidates adaptatives.</td>
     </tr>
     <tr>
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/ol#start"><code>start</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/ol"><code>&lt;ol&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("ol")}}</td>
       <td>
         Cet attribut définit le premier nombre de la liste si celui-ci est
         différent de 1.
@@ -1747,9 +1268,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Attributes/step"><code>step</code></a>
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("input")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -1772,11 +1291,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Reference/Elements/table#summary"
           ><code>summary</code></a
-        >{{deprecated_inline}}
+        > {{Deprecated_Inline}}
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/table"><code>&lt;table&gt;</code></a>
-      </td>
+      <td>{{HTMLElement("table")}}</td>
       <td></td>
     </tr>
     <tr>
@@ -1794,14 +1311,10 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
+      <td><code>target</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/target"><code>target</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/a"><code>&lt;a&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/area"><code>&lt;area&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/base"><code>&lt;base&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a>
+        {{HTMLElement("a")}}, {{HTMLElement("area")}},
+        {{HTMLElement("base")}}, {{HTMLElement("form")}}
       </td>
       <td>
         Spécifie où ouvrir le document lié (dans le cas d'un élément
@@ -1839,68 +1352,31 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
+      <td><code>type</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/type"><code>type</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"><code>&lt;button&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/embed"><code>&lt;embed&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"><code>&lt;object&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/ol"><code>&lt;ol&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/script"><code>&lt;script&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/source"><code>&lt;source&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/style"><code>&lt;style&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/menu"><code>&lt;menu&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/link"><code>&lt;link&gt;</code></a>
+        {{HTMLElement("button")}}, {{HTMLElement("input")}},
+        {{HTMLElement("embed")}}, {{HTMLElement("object")}},
+        {{HTMLElement("ol")}}, {{HTMLElement("script")}},
+        {{HTMLElement("source")}}, {{HTMLElement("style")}},
+        {{HTMLElement("menu")}}, {{HTMLElement("link")}}
       </td>
       <td>Cet attribut définit le type de l'élément.</td>
     </tr>
     <tr>
+      <td><code>usemap</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/usemap"><code>usemap</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"
-          ><code>&lt;object&gt;</code></a
-        >
+        {{HTMLElement("img")}}, {{HTMLElement("input")}},
+        {{HTMLElement("object")}}
       </td>
       <td></td>
     </tr>
     <tr>
+      <td><code>value</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/value"><code>value</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/button"><code>&lt;button&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/data"><code>&lt;data&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/li"><code>&lt;li&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/meter"><code>&lt;meter&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/option"><code>&lt;option&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/progress"
-          ><code>&lt;progress&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/param"><code>&lt;param&gt;</code></a>
+        {{HTMLElement("button")}}, {{HTMLElement("data")}},
+        {{HTMLElement("input")}}, {{HTMLElement("li")}},
+        {{HTMLElement("meter")}}, {{HTMLElement("option")}},
+        {{HTMLElement("progress")}}, {{HTMLElement("param")}}
       </td>
       <td>
         Cet attribut définit la valeur par défaut qui sera affichée dans
@@ -1908,31 +1384,20 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       </td>
     </tr>
     <tr>
+      <td><code>width</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Attributes/width"><code>width</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/canvas"><code>&lt;canvas&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/embed"><code>&lt;embed&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/iframe"><code>&lt;iframe&gt;</code></a
-        >, <a href="/fr/docs/Web/HTML/Reference/Elements/img"><code>&lt;img&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&lt;input&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/object"><code>&lt;object&gt;</code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/video"><code>&lt;video&gt;</code></a>
+        {{HTMLElement("canvas")}}, {{HTMLElement("embed")}},
+        {{HTMLElement("iframe")}}, {{HTMLElement("img")}},
+        {{HTMLElement("input")}}, {{HTMLElement("object")}},
+        {{HTMLElement("video")}}
       </td>
       <td>
         Pour ces éléments, cet attribut définit la largeur occupée sur l'écran.
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note :</strong> Pour tous les autres éléments, comme
-            <a href="/fr/docs/Web/HTML/Reference/Elements/div"><code>&lt;div&gt;</code></a
-            >, il faut utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/width"><code>width</code></a> afin de
+            {{HTMLElement("div")}}, il faut utiliser la propriété CSS standard
+            {{CSSxRef("width")}} afin de
             définir la largeur.
           </p>
         </div>
@@ -1944,11 +1409,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
           ><code>wrap</code></a
         >
       </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
-          ><code>&lt;textarea&gt;</code></a
-        >
-      </td>
+      <td>{{HTMLElement("textarea")}}</td>
       <td>
         Cet attribut indique l'utilisation du retour automatique à la ligne pour
         le texte de l'élément.
@@ -1961,19 +1422,19 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
 
 En HTML, la plupart des attributs ont deux aspects&nbsp;: l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
 
-L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
+L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes {{DOMxRef("element.setAttribute()")}} et {{DOMxRef("element.getAttribute()")}}. L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément {{HTMLElement("input")}} à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
 
 L'attribut IDL est également connu sous la forme d'une propriété JavaScript. Ce sont les attributs qu'on peut obtenir ou modifier via JavaScript sous la forme `élément.toto`. L'attribut IDL utilisera toujours la valeur de l'attribut de contenu sous-jacent, éventuellement en la modifiant pour renvoyer une valeur ou pour la modifier. Autrement dit, les attributs IDL, reflètent les attributs de contenu.
 
-La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
+La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments {{HTMLElement("input")}} vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
 
 Les attributs IDL ne sont pas toujours des chaînes de caractères. `input.maxlength` est un nombre par exemple (un entier long signé pour être précis). Lorsqu'on manipule des attributs IDL on utilisera toujours le type défini pour l'interface. Ainsi, `input.maxlength` renverra toujours un nombre et si on souhaite le définir, il faudra le faire avec un nombre, si on passe une valeur d'un autre type, cette valeur sera convertie grâce aux mécanismes de conversion habituels de JavaScript.
 
-Les attributs IDL peuvent [refléter d'autres types](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) tels que les unsigned long, les URL, les booléens, etc. Malheureusement, il n'existe pas de règles claires et la façon dont les attributs IDL se comportent en conjonction avec leurs attributs de contenu correspondants, cela dépend de l'attribut. La plupart du temps, il suivra [les règles énoncées dans la spécification](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), mais parfois, il ne le fera pas. Les spécifications HTML essaient de rendre cela aussi convivial que possible pour les développeurs, mais pour diverses raisons (principalement historiques), certains attributs se comportent bizarrement (`select.size`, par exemple) et vous devriez lire les spécifications pour comprendre comment ils se comportent exactement.
+Les attributs IDL peuvent [refléter d'autres types <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/urls-and-fetching.html) tels que les unsigned long, les URL, les booléens, etc. Malheureusement, il n'existe pas de règles claires et la façon dont les attributs IDL se comportent en conjonction avec leurs attributs de contenu correspondants, cela dépend de l'attribut. La plupart du temps, il suivra [les règles énoncées dans la spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/urls-and-fetching.html), mais parfois, il ne le fera pas. Les spécifications HTML essaient de rendre cela aussi convivial que possible pour les développeurs, mais pour diverses raisons (principalement historiques), certains attributs se comportent bizarrement (`select.size`, par exemple) et vous devriez lire les spécifications pour comprendre comment ils se comportent exactement.
 
 ## Attributs booléens
 
-Certains attributs de contenu (ex. `required`, `readonly`, `disabled`) sont des [attributs booléens](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). Si un attribut booléen est présent, sa valeur correspondra à _vrai_ (_true_), s'il est absent, sa valeur correspondra à _faux_ (_false_).
+Certains attributs de contenu (ex. `required`, `readonly`, `disabled`) sont des [attributs booléens <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes). Si un attribut booléen est présent, sa valeur correspondra à _vrai_ (_true_), s'il est absent, sa valeur correspondra à _faux_ (_false_).
 
 HTML5 définit des restrictions sur les valeurs autorisées des attributs booléens&nbsp;: Si l'attribut est présent, sa valeur doit être soit la chaîne vide (équivalente, l'attribut peut avoir une valeur non attribuée), soit une valeur qui est une correspondance ASCII insensible à la casse pour le nom canonique de l'attribut, sans espace avant ou après. Les exemples suivants sont des façons valides de baliser un attribut booléen&nbsp;:
 
@@ -1995,7 +1456,7 @@ Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas
 > [!WARNING]
 > L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
 
-En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être spécifiée comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être spécifiée comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
 
 Tous les attributs du gestionnaire d'événements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'événements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
 

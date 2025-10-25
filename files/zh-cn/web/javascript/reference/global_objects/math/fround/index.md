@@ -3,10 +3,6 @@ title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.fround()`** 可以将任意的数字转换为离它最近的[单精度浮点数](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)形式的数字。
 
 ## 语法

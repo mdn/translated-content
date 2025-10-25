@@ -165,7 +165,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 - {{cssxref("@scope")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
 - {{cssxref(":root")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
-- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [DOM 树节点的选择和遍历](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} 和 {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} 和 {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} 和 {{domxref("DocumentFragment.querySelectorAll()")}}

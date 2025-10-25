@@ -39,7 +39,7 @@ alert(paragraphs[0].nodeName);
 
 ### DOM ツリーとは
 
-**DOM ツリー**は一種の[ツリー構造](https://ja.wikipedia.org/wiki/木構造_(データ構造))で、ノードが HTML または XML 文書のコンテンツを表します。それぞれの HTML または XML 文書は固有の DOM ツリーの表現を持っています。例えば、以下の文書を見てください。
+**DOM ツリー**は一種の[ツリー構造](<https://ja.wikipedia.org/wiki/木構造_(データ構造)>)で、ノードが HTML または XML 文書のコンテンツを表します。それぞれの HTML または XML 文書は固有の DOM ツリーの表現を持っています。例えば、以下の文書を見てください。
 
 ```html
 <html lang="en">

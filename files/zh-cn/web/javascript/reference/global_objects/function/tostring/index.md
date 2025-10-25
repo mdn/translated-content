@@ -3,8 +3,6 @@ title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
 
-{{JSRef}}
-
 {{jsxref("Function")}} 实例的 **`toString()`** 方法返回一个表示该函数源码的字符串。
 
 {{InteractiveExample("JavaScript Demo: Function.toString()")}}

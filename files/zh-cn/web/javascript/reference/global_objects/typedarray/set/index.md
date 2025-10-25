@@ -3,8 +3,6 @@ title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
 
-{{JSRef}}
-
 **`set()`** 方法用于从指定数组中读取值，并将其存储在类型化数组中。
 
 ## 语法

@@ -3,8 +3,6 @@ title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
-{{JSRef}}
-
 **`Object`** 是 JavaScript 的一种[数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)。它用于存储各种键值集合和更复杂的实体。可以通过 {{jsxref("Object.prototype.Object", "Object()")}} 构造函数或者使用[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的方式创建对象。
 
 ## 描述

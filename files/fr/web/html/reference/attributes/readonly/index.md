@@ -1,67 +1,128 @@
 ---
 title: "Attribut HTML : readonly"
+short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 original_slug: Web/HTML/Attributes/readonly
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur·ice ne peut pas modifier le contrôle.
 
-L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur ne peut pas modifier le contrôle. Si l'attribut `readonly` est spécifié sur un élément de saisie, comme l'utilisateur ne peut pas modifier la saisie, l'élément ne participe pas à la validation des contraintes.
+{{InteractiveExample("Démonstration HTML&nbsp;: readonly", "tabbed-shorter")}}
 
-L'attribut `readonly` est pris en charge par les types [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text), [`search`](/fr/docs/Web/HTML/Reference/Elements/input/search), [`url`](/fr/docs/Web/HTML/Reference/Elements/input/url), [`tel`](/fr/docs/Web/HTML/Reference/Elements/input/tel), [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email), [`password`](/fr/docs/Web/HTML/Reference/Elements/input/password), [`date`](/fr/docs/Web/HTML/Reference/Elements/input/date), [`mois`](/fr/docs/Web/HTML/Reference/Elements/input/month), [`week`](/fr/docs/Web/HTML/Reference/Elements/input/week), [`time`](/fr/docs/Web/HTML/Reference/Elements/input/time), [`datetime-local`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local), et [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number) de [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et les éléments de contrôle de formulaire [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea). S'il est présent sur l'un de ces types de saisie et éléments, la pseudo-classe [`:read-only`](/fr/docs/Web/CSS/:read-only) correspondra. Si l'attribut n'est pas inclus, la pseudo-classe [`:read-write`](/fr/docs/Web/CSS/:read-write) correspondra.
+```html interactive-example
+<label for="firstName">Prénom&nbsp;:</label>
+<input id="firstName" name="firstName" type="text" value="Adam" />
 
-L'attribut n'est pas pris en charge ou pertinent pour [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) ou les types d'entrée qui ne sont déjà pas mutables, comme [`checkbox`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) et [`radio`](/fr/docs/Web/HTML/Reference/Elements/input/radio) ou ne peuvent pas, par définition, commencer par une valeur, comme le type d'entrée [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file). [`range`](/fr/docs/Web/HTML/Reference/Elements/input/range) et [`color`](/fr/docs/Web/HTML/Reference/Elements/input/color), car tous deux ont des valeurs par défaut. Il n'est pas non plus pris en charge sur [`hidden`](/fr/docs/Web/HTML/Reference/Elements/input/hidden), car on ne peut pas s'attendre à ce qu'un utilisateur remplisse un formulaire qui est caché. Il n'est pas non plus supporté sur des types de boutons, y compris `image`.
+<label for="age">Âge&nbsp;:</label>
+<input id="age" name="age" type="number" value="42" readonly />
 
-> [!NOTE]
-> Seuls les contrôles de texte peuvent être rendus en lecture seule, car pour les autres contrôles (comme les cases à cocher et les boutons), il n'y a pas de distinction utile entre être en lecture seule et être désactivé, donc l'attribut `readonly` ne s'applique pas.
+<label for="hobbies">Hobbies&nbsp;:</label>
+<textarea id="hobbies" name="hobbies" readonly>Baseball</textarea>
+```
 
-Lorsqu'une entrée possède l'attribut `readonly`, la pseudo-classe [`:read-only`](/fr/docs/Web/CSS/:read-only) s'y applique également. Inversement, les entrées qui prennent en charge l'attribut `readonly` mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe [`:read-write`](/fr/docs/Web/CSS/:read-write).
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:read-only,
+textarea:read-only {
+  background-color: silver;
+}
+```
+
+## Vue d'ensemble
+
+Si l'attribut `readonly` est défini sur un élément de saisie, parce que l'utilisateur·ice ne peut pas modifier la saisie, l'élément ne participe pas à la validation des contraintes.
+
+L'attribut `readonly` est pris en charge par les contrôles de formulaire textuels, notamment&nbsp;:
+
+- Les éléments {{HTMLElement("input")}} de type&nbsp;:
+  - `{{HTMLElement("input/text","text")}}`
+  - `{{HTMLElement("input/search","search")}}`
+  - `{{HTMLElement("input/tel","tel")}}`
+  - `{{HTMLElement("input/url","url")}}`
+  - `{{HTMLElement("input/email","email")}}`
+  - `{{HTMLElement("input/password","password")}}`
+  - `{{HTMLElement("input/date","date")}}`
+  - `{{HTMLElement("input/month","month")}}`
+  - `{{HTMLElement("input/week","week")}}`
+  - `{{HTMLElement("input/time","time")}}`
+  - `{{HTMLElement("input/datetime-local","datetime-local")}}`
+  - `{{HTMLElement("input/number","number")}}`
+- {{HTMLElement("textarea")}}
+
+L'attribut n'est pas pertinent pour tous les autres éléments, y compris {{HTMLElement("select")}} et {{HTMLElement("button")}}. Il ne s'applique pas non plus aux éléments de saisie non textuels, notamment&nbsp;:
+
+- `{{HTMLElement("input/hidden","hidden")}}`
+- `{{HTMLElement("input/range","range")}}`
+- `{{HTMLElement("input/color","color")}}`
+- `{{HTMLElement("input/checkbox","checkbox")}}`
+- `{{HTMLElement("input/radio","radio")}}`
+- `{{HTMLElement("input/file","file")}}`
+- `{{HTMLElement("input/submit","submit")}}`
+- `{{HTMLElement("input/image","image")}}`
+- `{{HTMLElement("input/reset","reset")}}`
+- `{{HTMLElement("input/button","button")}}`
+
+Les éléments qui prennent en charge l'attribut `readonly` mais ne l'ont pas défini correspondent à la pseudo-classe {{CSSxRef(":read-write")}}. Tous les autres éléments correspondent à la pseudo-classe {{CSSxRef(":read-only")}}.
 
 ### Interactions entre attributs
 
-La différence entre [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) et `readonly` est que les contrôles en lecture seule peuvent toujours fonctionner et sont toujours focusables, alors que les contrôles désactivés ne peuvent pas recevoir de focus et ne sont pas soumis avec le formulaire et ne fonctionnent généralement pas comme contrôles jusqu'à ce qu'ils soient activés.
+La différence entre [`disabled`](/fr/docs/Web/HTML/Reference/Attributes/disabled) et `readonly` est que les contrôles en lecture seule peuvent toujours fonctionner et être sélectionnés, tandis que les contrôles désactivés ne peuvent pas être sélectionnés, ne sont pas envoyés avec le formulaire et ne fonctionnent généralement pas tant qu'ils ne sont pas activés.
 
-Comme un champ en lecture seule ne peut pas voir sa valeur modifiée par une interaction avec l'utilisateur, [`required`](required) n'a aucun effet sur les entrées pour lesquelles l'attribut `readonly` est également spécifié.
+Comme un champ en lecture seule ne peut pas voir sa valeur modifiée par une interaction utilisateur, [`required`](/fr/docs/Web/HTML/Reference/Attributes/required) n'a aucun effet sur les entrées pour lesquelles l'attribut `readonly` est également définit.
 
-Le seul moyen de modifier dynamiquement la valeur de l'attribut readonly est d'utiliser un script.
+La seule façon de modifier dynamiquement la valeur de l'attribut readonly est via un script.
 
 > [!NOTE]
 > L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est spécifié.
 
+### Utilisabilité
+
+Les navigateurs affichent l'attribut `readonly`.
+
 ### Validation des contraintes
 
-Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être mise à jour par l'utilisateur et ne participe pas à la validation des contraintes.
+Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être mise à jour par l'utilisateur·ice et ne participe pas à la validation des contraintes.
 
-## Exemples
+## Exemple
 
 ### HTML
 
 ```html
 <div class="group">
-  <input type="textbox" value="Some value" readonly="readonly" />
-  <label>Textbox</label>
+  <input type="text" value="Une valeur" readonly="readonly" id="text" />
+  <label for="text">Zone de texte</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly" />
-  <label>Date</label>
+  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
+  <label for="date">Date</label>
 </div>
 <div class="group">
-  <input type="email" value="Some value" readonly="readonly" />
-  <label>Email</label>
+  <input
+    type="email"
+    value="exemple@domaine.fr"
+    readonly="readonly"
+    id="email" />
+  <label for="email">Courriel</label>
 </div>
 <div class="group">
-  <input type="password" value="Some value" readonly="readonly" />
-  <label>Password</label>
+  <input type="password" value="MotDePasse123" readonly="readonly" id="pwd" />
+  <label for="pwd">Mot de passe</label>
 </div>
 <div class="group">
-  <textarea readonly="readonly">Some value</textarea>
-  <label>Message</label>
+  <textarea readonly="readonly" id="ta">Un message</textarea>
+  <label for="ta">Message</label>
 </div>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample('Exemple')}}
 
 ## Spécifications
 
@@ -73,6 +134,6 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ## Voir aussi
 
-- Les pseudo-classses [`:read-only`](/fr/docs/Web/CSS/:read-only) et [`:read-write`](/fr/docs/Web/CSS/:read-write)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
-- L'élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)
+- Les pseudo-classses {{CSSxRef(':read-only')}} et {{CSSxRef(':read-write')}}
+- L'élément {{HTMLElement('input')}}
+- L'élément {{HTMLElement('select')}}

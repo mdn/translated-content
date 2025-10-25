@@ -3,8 +3,6 @@ title: WeakMap() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
 
-{{JSRef}}
-
 **`WeakMap()`** 构造函数创建 {{jsxref("WeakMap")}} 对象。
 
 ## 语法

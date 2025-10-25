@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
-
 **`GeneratorFunction`** 对象为[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)提供了方法。在 JavaScript 中，每个生成器函数实际上都是一个 `GeneratorFunction` 对象。
 
 请注意，`GeneratorFunction` *不是*全局对象。可以通过以下代码来获取它：

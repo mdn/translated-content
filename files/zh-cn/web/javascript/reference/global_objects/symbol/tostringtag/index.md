@@ -3,8 +3,6 @@ title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 
-{{JSRef}}
-
 **`Symbol.toStringTag`** 内置通用（well-known）symbol 是一个字符串值属性，用于创建对象的默认字符串描述。它由 {{jsxref("Object.prototype.toString()")}} 方法内部访问。
 
 {{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}

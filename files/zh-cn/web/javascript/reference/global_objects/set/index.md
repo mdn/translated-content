@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9575097ee96531811fb8af7dd5f5e103cacf653d
 ---
 
-{{JSRef}}
-
 **`Set`** 对象允许你存储任何类型（无论是{{Glossary("Primitive", "原始值")}}还是对象引用）的唯一值。
 
 ## 描述

@@ -3,8 +3,6 @@ title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 
-{{JSRef}}
-
 **`JSON.stringify()`** 方法将一个 JavaScript 对象或值转换为 JSON 字符串，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。
 
 {{InteractiveExample("JavaScript Demo: JSON.stringify()")}}

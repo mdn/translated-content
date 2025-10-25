@@ -3,7 +3,7 @@ title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 {{jsxref("Function")}} 实例的 **`displayName`** 可选属性指定函数的显示名称。
 
