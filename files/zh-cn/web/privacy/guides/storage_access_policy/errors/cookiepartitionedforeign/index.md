@@ -1,5 +1,5 @@
 ---
-title: Partitioned：所有第三方存储访问请求
+title: "Partitioned: All third-party storage access requests"
 slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookiePartitionedForeign
 l10n:
   sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
@@ -12,9 +12,7 @@ l10n:
 Firefox：
 
 ```plain
-CookiePartitionedForeign=Partitioned cookie
-or storage access was provided to "<URL>" because it is loaded in the
-third-party context and storage partitioning is enabled.
+CookiePartitionedForeign=由于“X”加载自第三方上下文，并已开启动态状态分区功能，已授权该网站访问分区的 Cookie 或存储空间。
 ```
 
 ## 可采取的措施
