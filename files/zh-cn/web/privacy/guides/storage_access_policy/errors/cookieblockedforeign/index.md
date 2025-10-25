@@ -1,8 +1,8 @@
 ---
-title: Blocked：所有第三方存储访问请求
+title: "Blocked: All third-party storage access requests"
 slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedForeign
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 04a955e882cfcf4aaa1b19b68b9813a6afcfe540
 ---
 
 由于请求来自第三方（不同源）且内容拦截已启用，访问 Cookie 或存储的请求已被阻止。
@@ -12,20 +12,16 @@ l10n:
 Firefox：
 
 ```plain
-CookieBlockedForeign=Request to access cookies or storage on "X" was blocked because we are blocking all third-party storage access requests and content blocking is enabled.
+CookieBlockedForeign=由于我们正拦截所有第三方对存储空间的访问请求，且内容拦截已开启，已拦截“X”对 Cookie 或存储空间的访问请求。
 ```
 
 ## 可采取的措施
 
-可通过以下方式更改或移除权限：
-
-- 前往*首选项 > 内容拦截*，然后
-- 使用*管理例外*…按钮添加例外
-- 选择*自定义*内容拦截并取消勾选 _Cookie_ 复选框
+你可以前往*设置 > 隐私与安全 > 增强型跟踪保护*，并使用*管理例外*…按钮添加例外，从而修改或删除权限。
 
 如果被阻止的资源不需要身份验证，你可以通过向相关元素添加 `crossorigin="anonymous"` 属性来修复警告消息。
 
 ## 参见
 
-- [support.mozilla.org](https://support.mozilla.org/) 上的[内容拦截](https://support.mozilla.org/zh-CN/kb/content-blocking)
+- [support.mozilla.org](https://support.mozilla.org/) 上的 [Firefox 桌面版的增强跟踪保护](<https://support.mozilla.org/zh-CN/kb/Firefox 桌面版的增强跟踪保护>)
 - [`crossorigin` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
