@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-L'**en-tête** est la partie d'un document {{Glossary("HTML")}} qui contient les {{Glossary("métadonnée","métadonnées")}} qui le concernent, comme son auteur, sa description et des liens vers des fichiers {{Glossary("CSS")}} ou {{Glossary("JavaScript")}} qui s'appliquent au HTML.
+L'**en-tête** est la partie d'un document {{Glossary("HTML")}} qui contient les {{Glossary("metadata","métadonnées")}} qui le concernent, comme son auteur, sa description et des liens vers des fichiers {{Glossary("CSS")}} ou {{Glossary("JavaScript")}} qui s'appliquent au HTML.
 
 ## Voir aussi
 
