@@ -27,5 +27,5 @@ Firefox：
 
 ## 参见
 
-- [support.mozilla.org](https://support.mozilla.org/) 上的 [Firefox 桌面版的增强型跟踪保护](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)
+- [support.mozilla.org](https://support.mozilla.org/) 上的 [Firefox 桌面版的增强型跟踪保护](<https://support.mozilla.org/zh-CN/kb/Firefox 桌面版的增强跟踪保护>)
 - [`crossorigin` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
