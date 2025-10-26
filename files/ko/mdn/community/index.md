@@ -21,7 +21,6 @@ MDN Web Docs에 기여할 수 있는 방법 목록은 다음과 같습니다.
 - [알려진 플랫폼 문제 해결하기](https://github.com/mdn/yari/issues)
 - [브라우저 호환성 데이터를 최신 상태로 유지하기](https://github.com/mdn/browser-compat-data)
 
-
 - [시작하기](/ko/docs/MDN/Community/Getting_started)
   - : 이 섹션에서는 기여를 시작하는 방법과 우리가 받아들이는 기여 유형을 설명합니다.
     누구나 기여할 수 있으며, 기여하는 각 개인은 수백만 명의 독자들에게 영향을 미칩니다.
