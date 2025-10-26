@@ -23,7 +23,7 @@ Après ceci, nous vous fournirons quelques tutoriels couvrant les notions fondam
 
 Vous devez vraiment connaitre les bases des principaux langages du web ([HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et particulièrement [JavaScript](/fr/docs/Learn_web_development/Core/Scripting)) avant d'essayer de vous lancer dans l'apprentissage des frameworks côté client.
 
-Votre code n'en sera que plus qualitatif et plus professionnel, et vous serez en mesure de résoudre vos problèmes avec plus de confiance si vous comprenez les fonctionnalités fondamentales du web sur lesquelles les frameworks s'appuient.
+Votre code n'en sera que sera de meilleure qualité et plus professionnel, et vous serez en mesure de résoudre vos problèmes avec plus de confiance si vous comprenez les fonctionnalités fondamentales du web sur lesquelles les frameworks s'appuient.
 
 ### Vous voulez devenir développeur web front-end ?
 
