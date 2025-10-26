@@ -3,8 +3,6 @@ title: Utiliser les requêtes de fonctionnalité (feature queries)
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
-{{CSSRef}}
-
 **Les requêtes de fonctionnalité (ou _feature queries_)** sont créées à l'aide de la règle [`@supports`](/fr/docs/Web/CSS/@supports) et permettent aux développeurs web de tester la prise en charge d'une fonctionnalité donnée par le navigateur puis de fournir le code CSS qui sera appliqué selon le résultat de ce test. Dans ce guide, nous verrons comment gérer l'amélioration progressive grâce à l'aide des requêtes de fonctionnalité.
 
 ## Syntaxe
@@ -109,5 +107,5 @@ Les requêtes de fonctionnalité permettent d'utiliser des fonctionnalités réc
 
 - La règle [@supports](/fr/docs/Web/CSS/@supports)
 - [Apprendre les dispositions en CSS et la prise en charge des anciens navigateurs](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/conflicting/Web/CSS/CSS_grid_layout)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Utiliser les requêtes de fonctionnalités en CSS (billet du blog Hacks en anglais)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

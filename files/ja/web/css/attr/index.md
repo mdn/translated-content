@@ -8,7 +8,7 @@ l10n:
 > [!NOTE]
 > `attr()` 関数はどの CSS プロパティでも使用することができますが、 {{CSSxRef("content")}} 以外のプロパティでの対応は実験的です。
 
-**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、選択した要素の属性の値を取得し、それをプロパティ値で使用するために使用されます。これは、 {{cssxref("var", "var()")}} 関数が独自のプロパティ値を置き換える方法と似ています。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
+**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、選択した要素の属性の値を取得し、それをプロパティ値で使用するために使用されます。これは、 {{cssxref("var", "var()")}} 関数が独自のプロパティ値を置き換える方法と似ています。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
 
 {{InteractiveExample("CSS デモ: attr()", "tabbed-shorter")}}
 
@@ -80,7 +80,7 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
         > このキーワードは、元々は Chromium ブラウザーで `string` という名前で対応されていました。下位互換性を確保するため、しばらくは両方のキーワードが対応されます。
 
     - `type()`
-      - : `type()` 関数は、値を構文解析する [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) を指定する `<syntax>` を引数として取ります。 `<syntax>` は {{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;color&gt;")}}、{{CSSxRef("&lt;custom-ident&gt;")}}、{{CSSxRef("&lt;image&gt;")}}、{{CSSxRef("&lt;integer&gt;")}}、{{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;length-percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;resolution&gt;")}}、{{CSSxRef("&lt;string&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;transform-function&gt;")}}、またはこれらの組み合わせです。
+      - : `type()` 関数は、値を構文解析する [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types) を指定する `<syntax>` を引数として取ります。 `<syntax>` は {{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;color&gt;")}}、{{CSSxRef("&lt;custom-ident&gt;")}}、{{CSSxRef("&lt;image&gt;")}}、{{CSSxRef("&lt;integer&gt;")}}、{{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;length-percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;resolution&gt;")}}、{{CSSxRef("&lt;string&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;transform-function&gt;")}}、またはこれらの組み合わせです。
 
         ```css
         attr(id type(<custom-ident>), none)
@@ -103,7 +103,7 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
         ```
 
     - `<attr-unit>`
-      - : `<attr-unit>` 識別子は、数値が持つべき単位（ある場合）を指定します。これは、`%` 文字（パーセント値）、または [CSS の距離単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#distance_units) （`px`、`rem`、`deg`、`s` など）です。
+      - : `<attr-unit>` 識別子は、数値が持つべき単位（ある場合）を指定します。これは、`%` 文字（パーセント値）、または [CSS の距離単位](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#distance_units) （`px`、`rem`、`deg`、`s` など）です。
 
         ```css
         attr(data-size rem)

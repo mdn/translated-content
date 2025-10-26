@@ -229,7 +229,8 @@ Neste caso, usamos `'<int:pk>'` para capturar o ID do livro, que deve ser uma se
 > [!NOTE]
 > Como discutido anteriormente, nosso URL correspondente é realmente `catalog/book/<digits>` (porque estamos no aplicativo de **catalog**, `/catalog/` é assumido).
 
-> **Aviso:** **Importante**: A view de detalhes genérica class-based _espera_ receber um parâmetro chamado **pk**. Se você estiver escrevendo sua própria função view, poderá usar o nome de qualquer parâmetro que desejar, ou mesmo transmitir as informações em um argumento sem nome.
+> [!WARNING]
+> **Importante**: A view de detalhes genérica class-based _espera_ receber um parâmetro chamado **pk**. Se você estiver escrevendo sua própria função view, poderá usar o nome de qualquer parâmetro que desejar, ou mesmo transmitir as informações em um argumento sem nome.
 
 #### Correspondência avançada de caminhos/iniciador de expressão regular
 

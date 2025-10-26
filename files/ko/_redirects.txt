@@ -631,10 +631,14 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
+/ko/docs/Web/API/Document_Object_Model/Examples	/ko/docs/conflicting/Web/API/Document_Object_Model
+/ko/docs/Web/API/Document_Object_Model/Introduction	/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/ko/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
-/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
-/ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
+/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/ko/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
+/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee
+/ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef
+/ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/conflicting/Web/API/Document_Object_Model
 /ko/docs/Web/API/Element.clientHeight	/ko/docs/Web/API/Element/clientHeight
 /ko/docs/Web/API/Element/accessKey	/ko/docs/Web/API/HTMLElement/accessKey
 /ko/docs/Web/API/Element/childNodes	/ko/docs/Web/API/Node/childNodes
@@ -773,7 +777,7 @@
 /ko/docs/Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃	/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 /ko/docs/Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_쓰기_모드	/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes
 /ko/docs/Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_오버플로	/ko/docs/Web/CSS/CSS_display/Flow_layout_and_overflow
-/ko/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/ko/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
+/ko/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions	/ko/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions
 /ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치	/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /ko/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines	/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /ko/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid	/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
@@ -800,7 +804,7 @@
 /ko/docs/Web/CSS/CSS_Ruby	/ko/docs/Web/CSS/CSS_ruby_layout
 /ko/docs/Web/CSS/CSS_Scroll_Snap_Points	/ko/docs/Web/CSS/CSS_scroll_snap
 /ko/docs/Web/CSS/CSS_Scrollbars	/ko/docs/Web/CSS/CSS_scrollbars_styling
-/ko/docs/Web/CSS/CSS_Types	/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/ko/docs/Web/CSS/CSS_Types	/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_basic_user_interface
 /ko/docs/Web/CSS/CSS_Variables	/ko/docs/Web/CSS/CSS_cascading_variables
 /ko/docs/Web/CSS/CSS_charsets	/ko/docs/Web/CSS/CSS_syntax
@@ -820,7 +824,7 @@
 /ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements	/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 /ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index	/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index	/ko/docs/Web/CSS/CSS_positioned_layout/Using_z-index
-/ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
+/ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_values_and_units
 /ko/docs/Web/CSS/Comments	/ko/docs/Web/CSS/CSS_syntax/Comments
 /ko/docs/Web/CSS/Compositing_and_Blending	/ko/docs/Web/CSS/CSS_compositing_and_blending
 /ko/docs/Web/CSS/Containing_block	/ko/docs/Web/CSS/CSS_display/Containing_block
@@ -857,7 +861,7 @@
 /ko/docs/Web/CSS/Using_CSS_custom_properties	/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /ko/docs/Web/CSS/Using_CSS_transforms	/ko/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ko/docs/Web/CSS/Using_CSS_variables	/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
-/ko/docs/Web/CSS/Value_definition_syntax	/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/ko/docs/Web/CSS/Value_definition_syntax	/ko/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /ko/docs/Web/CSS/calc()	/ko/docs/Web/CSS/calc
 /ko/docs/Web/CSS/computed_value	/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e
 /ko/docs/Web/CSS/currentcolor	/ko/docs/Web/CSS/color_value#currentColor_키워드
@@ -1077,6 +1081,7 @@
 /ko/docs/Web/HTML/Global_attributes/title	/ko/docs/Web/HTML/Reference/Global_attributes/title
 /ko/docs/Web/HTML/Global_attributes/translate	/ko/docs/Web/HTML/Reference/Global_attributes/translate
 /ko/docs/Web/HTML/Global_attributes/클래스	/ko/docs/Web/HTML/Reference/Global_attributes/class
+/ko/docs/Web/HTML/Guides/Viewport_meta_element	/ko/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Reference/Elements
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn_web_development/Extensions/Forms
 /ko/docs/Web/HTML/Index	/ko/docs/Web/HTML
@@ -1086,7 +1091,7 @@
 /ko/docs/Web/HTML/Link_types/preload	/ko/docs/Web/HTML/Reference/Attributes/rel/preload
 /ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode	/ko/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /ko/docs/Web/HTML/Responsive_images	/ko/docs/Web/HTML/Guides/Responsive_images
-/ko/docs/Web/HTML/Viewport_meta_tag	/ko/docs/Web/HTML/Guides/Viewport_meta_element
+/ko/docs/Web/HTML/Viewport_meta_tag	/ko/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/Guides/CORS
 /ko/docs/Web/HTTP/Access_control_CORS/Errors	/ko/docs/Web/HTTP/Guides/CORS/Errors
 /ko/docs/Web/HTTP/Access_control_CORS/Errors/CORSDidNotSucceed	/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed

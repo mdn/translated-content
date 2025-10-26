@@ -230,4 +230,4 @@ CSS における類似の構成は `.abc:has(+ .xyz)` です。これは、次�
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

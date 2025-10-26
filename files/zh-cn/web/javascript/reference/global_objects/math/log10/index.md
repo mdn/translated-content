@@ -3,10 +3,6 @@ title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.log10()`** 函数返回一个数字以 10 为底的对数。
 
 ## 语法

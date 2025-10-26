@@ -2,16 +2,14 @@
 title: Gouttières
 slug: Glossary/Gutters
 l10n:
-  sourceCommit: 8d83c05362120cbba32c165a6b1f76e73ccc9674
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-**Les gouttières** sont l'espace entre [les pistes de contenu](/fr/docs/Glossary/Grid_Tracks). Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) en utilisant les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) ou [`gap`](/fr/docs/Web/CSS/gap).
+**Les gouttières** sont l'espace entre {{Glossary("grid_tracks", "les pistes de contenu")}}. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) en utilisant les propriétés {{CSSxRef("column-gap")}}, {{CSSxRef("row-gap")}} ou {{CSSxRef("gap")}}.
 
 ## Exemple
 
-Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et entre les pistes de lignes.
+Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 lignes, avec `20px` d'écart entre les pistes de colonnes et entre les pistes de lignes.
 
 ```css hidden
 * {
@@ -53,7 +51,7 @@ Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, av
 </div>
 ```
 
-{{EmbedLiveSample('', '300', '280')}}
+{{EmbedLiveSample("Exemple", 300, 280)}}
 
 En ce qui concerne la taille de la grille, les espaces agissent comme s'ils étaient une piste de grille normale, mais rien ne peut y être placé. L'espace agit comme si la ligne de la grille à cet endroit avait gagné en taille, de sorte que tout élément de la grille placé après cette ligne commence à la fin de l'espace.
 
@@ -61,9 +59,9 @@ Les propriétés `row-gap` et `column-gap` ne sont pas les seules à pouvoir ent
 
 ## Voir aussi
 
-- [Les grilles CSS&nbsp;: concept de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- Les pages de la référence CSS pour les propriétés associées
-  - [`column-gap`](/fr/docs/Web/CSS/column-gap)
-  - [`row-gap`](/fr/docs/Web/CSS/row-gap)
-  - [`gap`](/fr/docs/Web/CSS/gap)
-- [Définition des gouttières dans la spécification des grilles CSS (en anglais)](https://drafts.csswg.org/css-grid/#gutters)
+- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- Référence CSS pour les propriétés associées&nbsp;:
+  - {{CSSxRef("column-gap")}}
+  - {{CSSxRef("row-gap")}}
+  - {{CSSxRef("gap")}}
+- [Définition des gouttières dans la spécification des grilles CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-grid/#gutters)

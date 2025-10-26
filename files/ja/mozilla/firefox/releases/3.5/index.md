@@ -80,7 +80,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : Firefox 3.5 ではウェブアプリケーションでの簡単なマルチスレッドサポートを可能にする Web Workers をサポートします。
 - [位置情報の使用](/ja/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 では Geolocation API をサポートします。これによりウェブアプリケーションはユーザーの現在位置についての情報を提供するプロバイダがインストールされ有効化されていれば、その情報を保持することができます。
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
   - : Selectors API により与えられた選択ルールにマッチする要素を指定するために文書を検索できます。
 - [マウスジェスチャイベント](/ja/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 はトラックパッドスワイプのようなマウスジェスチャイベントをサポートします。
