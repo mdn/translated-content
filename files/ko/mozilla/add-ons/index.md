@@ -23,7 +23,6 @@ l10n:
 
 Firefox용 WebExtensions API를 사용하여 작성된 확장 프로그램은 브라우저 간 호환성을 위해 설계되었습니다. 대부분의 경우 변경 사항이 거의 또는 전혀 없이 Chrome, Edge, Opera에서 실행됩니다. 또한 다중 프로세스 Firefox와도 완전히 호환됩니다. [Firefox 및 다른 브라우저에서 현재 지원되는 API](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)를 확인할 수 있습니다.
 
-
 ### 확장 프로그램 워크샵
 
 [Firefox 확장 프로그램 워크샵](https://extensionworkshop.com/)은 Firefox용 확장 프로그램을 개발하고 사용자에게 간단하면서도 강력한 브라우징 경험 사용자 지정 방법을 제공하는 데 도움을 줄 수 있습니다. 다음 내용을 찾을 수 있습니다:
