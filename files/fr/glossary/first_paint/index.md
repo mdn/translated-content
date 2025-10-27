@@ -1,14 +1,16 @@
 ---
-title: Premier rendu
+title: First Paint (FP)
 slug: Glossary/First_paint
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Le **premier rendu** (ou <i lang="en">**first paint**</i> en anglais), qui fait partie de l'[API <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming), correspond au temps entre la navigation et le moment où le navigateur affiche les premiers pixels à l'écran, rendant à l'écran tout ce qui est visuellement différent de ce qui y était présent avant la navigation. Cet indicateur répond à la question «&nbsp;Est-ce que quelque chose est bien en train de se passer&nbsp;?&nbsp;».
+Le **premier rendu** (ou <i lang="en">first paint</i> en anglais) correspond au temps entre la navigation et le moment où le navigateur affiche les premiers pixels à l'écran, rendant à l'écran tout ce qui est visuellement différent de la [couleur d'arrière-plan](/fr/docs/Web/CSS/background-color) par défaut du [body](/fr/docs/Web/API/Document/body). C'est le premier moment clé du chargement de la page et il répond à la question&nbsp;: «&nbsp;Le navigateur a-t-il commencé à afficher la page&nbsp;?&nbsp;»
 
 ## Voir aussi
 
-- [Premier affichage significatif (ou <i lang="en">first meaningful paint</i> en anglais)](/fr/docs/Glossary/First_meaningful_paint)
-- [Premier affichage de contenu (ou <i lang="en">first contentful paint</i> en anglais)](/fr/docs/Glossary/First_contentful_paint)
-- [L'API <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming) {{deprecated_inline}}
+- [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("First Contentful Paint", "Premier rendu de contenu")}}
+  - {{Glossary("Largest Contentful Paint", "Plus grand rendu de contenu")}}
+  - {{Glossary("First Meaningful Paint", "Premier rendu significatif")}}

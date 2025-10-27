@@ -35,9 +35,9 @@
 /ru/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ru/docs/Core_JavaScript_1.5_Reference:Global_Objects:Boolean	/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ru/docs/DOM/DOM_Reference	/ru/docs/Web/API/Document_Object_Model
-/ru/docs/DOM/DOM_Reference/Examples	/ru/docs/Web/API/Document_Object_Model/Examples
-/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
-/ru/docs/DOM/DOM_Reference/Введение	/ru/docs/Web/API/Document_Object_Model/Introduction
+/ru/docs/DOM/DOM_Reference/Examples	/ru/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b
+/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
+/ru/docs/DOM/DOM_Reference/Введение	/ru/docs/conflicting/Web/API/Document_Object_Model
 /ru/docs/DOM/HTMLTableElement	/ru/docs/Web/API/HTMLTableElement
 /ru/docs/DOM/Node.compareDocumentPosition	/ru/docs/Web/API/Node/compareDocumentPosition
 /ru/docs/DOM/Node.lastChild	/ru/docs/Web/API/Node/lastChild
@@ -255,13 +255,13 @@
 /ru/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users	/ru/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 /ru/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding	/ru/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /ru/docs/Learn/Common_questions/Design_for_all_types_of_users	/ru/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
-/ru/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+/ru/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/ru/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ru/docs/Learn/Common_questions/How_does_the_Internet_work	/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /ru/docs/Learn/Common_questions/How_much_does_it_cost	/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /ru/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/ru/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /ru/docs/Learn/Common_questions/Thinking_before_coding	/ru/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /ru/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/ru/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
-/ru/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+/ru/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/ru/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ru/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /ru/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/ru/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /ru/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -500,6 +500,7 @@
 /ru/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension	/ru/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9
 /ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ru/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ru/docs/Web/HTML/How_to/Use_data_attributes
+/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/ru/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
 /ru/docs/MDN/At_ten	https://developer.mozilla.org/ru/about#our_journey
 /ru/docs/MDN/Community/Contributing/Getting_started	/ru/docs/MDN/Community/Getting_started
@@ -613,6 +614,9 @@
 /ru/docs/Web/API/Document/registerElement	/ru/docs/Web/API/CustomElementRegistry/define
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
+/ru/docs/Web/API/Document_Object_Model/Examples	/ru/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b
+/ru/docs/Web/API/Document_Object_Model/Introduction	/ru/docs/conflicting/Web/API/Document_Object_Model
+/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
 /ru/docs/Web/API/EffectTiming	/ru/docs/Web/API/KeyframeEffect/KeyframeEffect
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
@@ -808,7 +812,7 @@
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /ru/docs/Web/CSS/CSS_Ruby	/ru/docs/Web/CSS/CSS_ruby_layout
-/ru/docs/Web/CSS/CSS_Types	/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/ru/docs/Web/CSS/CSS_Types	/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_animations/Tips	/ru/docs/Web/API/Web_Animations_API/Tips
