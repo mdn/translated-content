@@ -260,6 +260,6 @@ table.summary = "note: increased border";
 ## Другие статьи
 
 - [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
-- [Введение в DOM](/ru/docs/Web/API/Document_Object_Model/Introduction)
+- [Введение в DOM](/ru/docs/conflicting/Web/API/Document_Object_Model)
 - [События и DOM (Events and the DOM)](/ru/docs/DOM/DOM_Reference/Events)
-- [Примеры (Examples)](/ru/docs/Web/API/Document_Object_Model/Examples)
+- [Примеры (Examples)](/ru/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b)
