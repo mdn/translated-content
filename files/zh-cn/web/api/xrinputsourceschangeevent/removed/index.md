@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-{{domxref("XRInputSourcesChangeEvent")}} 的 `removed` 只读属性返回包含零个或多个 {{domxref("XRInputSource")}} 对象的数组（Array），每个对象代表一个已从 {{domxref("XRSession")}} 中移除的输入源。
+{{domxref("XRInputSourcesChangeEvent")}} 的 `removed` 只读属性返回包含零个或多个 {{domxref("XRInputSource")}} 对象的数组，每个对象代表一个已从 {{domxref("XRSession")}} 中移除的输入源。
 
 ## 值
 
