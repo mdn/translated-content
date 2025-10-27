@@ -19,7 +19,6 @@ WebDriver の[コマンド](/ja/docs/Web/WebDriver/Reference/Commands)は、送�
 - `stacktrace`
   - : エラーが発生した時点での、有効なスタックフレームのスタックトレースレポートです。
 - `data` （オプション）
-
   - : 実装によって定義される任意のデータであり、ユーザーに提示すると有用な場合があります。
 
     多くのドライバーでは、[予期しないアラートが開いた](/ja/docs/Web/API/Window/alert)エラーが発生した場合、[ユーザープロンプト](/ja/docs/Web/API/Window/alert)のテキストが含まれます。
