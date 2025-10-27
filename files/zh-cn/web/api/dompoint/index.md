@@ -22,7 +22,7 @@ l10n:
 
 ## 实例属性
 
-_`DOMPoint` 还继承自父接口 {{domxref("DOMPointReadOnly")}} 的属性。_
+_`DOMPoint` 还继承父接口 {{domxref("DOMPointReadOnly")}} 的属性。_
 
 - {{domxref("DOMPoint.x")}}
   - : `DOMPoint` 的 `x` 坐标。
@@ -35,7 +35,7 @@ _`DOMPoint` 还继承自父接口 {{domxref("DOMPointReadOnly")}} 的属性。_
 
 ## 实例方法
 
-_`DOMPoint` 继承自父接口 {{domxref("DOMPointReadOnly")}} 的实例方法。_
+_`DOMPoint` 继承父接口 {{domxref("DOMPointReadOnly")}} 的实例方法。_
 
 ## 静态方法
 
