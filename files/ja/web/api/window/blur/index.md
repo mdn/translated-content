@@ -3,7 +3,7 @@ title: Window.blur()
 slug: Web/API/Window/blur
 ---
 
-{{APIRef}}
+{{ ApiRef() }} {{Deprecated_Header}}
 
 ウィンドウからフォーカスを外します。
 
