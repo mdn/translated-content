@@ -5,7 +5,8 @@ slug: Web/API/AbortController/signal
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-> **Примечание:**Это свойство только для чтения.
+> [!NOTE]
+> Это свойство только для чтения.
 
 Свойство **`signal`** интерфейса {{domxref("AbortController")}} возвращает экземпляр объекта {{domxref("AbortSignal")}}, который может быть использован для связи/прерывания DOM запроса по желанию.
 

@@ -2,19 +2,22 @@
 title: Moteur de rendu
 slug: Glossary/Engine/Rendering
 original_slug: Glossary/Rendering_engine
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Les **moteurs de rendu** (également appelés moteurs de mise en page ou moteurs de rendu web) font partie d'un {{Glossary("Browser", "navigateur web")}} qui transforme le {{Glossary("HTML")}}, le {{Glossary("CSS")}} et d'autres ressources d'une page web en une représentation visuelle à l'écran.
 
-Un **moteur de rendu** est un logiciel qui trace du texte et des images à l'écran. Le moteur dessine du texte structuré à partir d'un document (souvent du {{glossary("HTML")}}), et le met en page correctement en se basant sur les déclarations de styles données (souvent indiquées dans des {{glossary("CSS")}}). Exemples de moteurs d'affichage : {{glossary("Blink")}}, {{glossary("Gecko")}}, Edge, {{glossary("WebKit")}}.
+Parmi les moteurs de rendu courants, on trouve&nbsp;:
 
-## Pour en savoir plus
+- {{Glossary("Blink")}}
+- {{Glossary("Gecko")}}
+- {{Glossary("WebKit")}}
+- {{Glossary("Trident")}}
 
-### Culture générale
+## Voir aussi
 
-- [Moteur de rendu HTML](https://fr.wikipedia.org/wiki/Moteur_de_rendu_HTML) sur Wikipédia
-
-### Référence technique
-
-- [Documentation Gecko](/fr/docs/Gecko)
-- [Venkatraman.R - Behind Browsers (Part 1, Basics)](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
+- [Moteur de rendu web](https://fr.wikipedia.org/wiki/Moteur_de_rendu_web) sur Wikipédia
+- Termes du glossaire associés&nbsp;:
+  - {{Glossary("Engine", "Moteur")}}
+  - {{Glossary("Browser", "Navigateur")}}

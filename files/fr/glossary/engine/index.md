@@ -1,14 +1,10 @@
 ---
 title: Moteur
 slug: Glossary/Engine
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Le terme **moteur** peut avoir plusieurs sens selon le contexte. Il peut désigner&nbsp;:
 
-Le moteur {{glossary("JavaScript")}} est un interpréteur qui analyse et exécute un programme JavaScript.
-
-## Plus d'informations
-
-### Culture générale
-
-- [Moteur JavaScript](https://fr.wikipedia.org/wiki/Moteur_JavaScript) sur Wikipédia
+{{GlossaryDisambiguation}}

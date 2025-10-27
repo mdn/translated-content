@@ -5,7 +5,8 @@ slug: Web/CSS/:is
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Примечание:** `:matches()` был переименован в `:is()` в [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
+> [!NOTE]
+> `:matches()` был переименован в `:is()` в [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
 **`:is()`** это функция [псевдокласс CSS](/ru/docs/Web/CSS) принимающая список селекторов как аргумент, и выбирает любой элемент, который может быть выбран одним из селекторов в этом списке. Это полезно при переписи огромных селекторов в более компактную форму.
 

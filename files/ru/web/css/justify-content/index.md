@@ -133,7 +133,8 @@ justify-content: unset;
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
-> **Примечание:** `stretch` не поддерживается гибкими контейнерами (flexbox).
+> [!NOTE]
+> `stretch` не поддерживается гибкими контейнерами (flexbox).
 
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.

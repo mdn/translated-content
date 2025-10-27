@@ -25,7 +25,8 @@ var timeoutID = window.setTimeout(code [, delay]);
 
 Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#аргументы_колбэк-функции)).
 
-> **Предупреждение:** **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
+> [!WARNING]
+> **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
 
 ## Пример
 

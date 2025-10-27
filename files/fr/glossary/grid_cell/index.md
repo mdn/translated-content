@@ -2,16 +2,14 @@
 title: Cellule de grille
 slug: Glossary/Grid_Cell
 l10n:
-  sourceCommit: 27e8f6c17e93b026d6083ca333ed0d4ff6360d3e
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Dans une [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout), une **cellule de grille** est la plus petite unité de la grille. C'est l'espace créé entre 4 intersections de [lignes de grille](/fr/docs/Glossary/Grid_Lines). D'une certaine façon, une cellule de grille est assimilable à une cellule de tableau.
+Dans une [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout), une **cellule de grille** est la plus petite unité de la grille. C'est l'espace créé entre 4 intersections de {{Glossary("grid lines", "lignes de grille")}}. D'une certaine façon, une cellule de grille est assimilable à une cellule de tableau.
 
 ![Un diagramme mettant en avant une cellule de grille en bleu turquoise en haut à gauche d'une grille de 3 colonnes par 2 lignes.](1_grid_cell.png)
 
-Si vous ne placez pas d'éléments à l'aide de l'une des méthodes de placement de grille, les enfants directs du conteneur de grille seront placés individuellement dans chaque cellule de la grille par l'algorithme de placement automatique. Des [pistes de ligne ou de colonne](/fr/docs/Glossary/Grid_Tracks) supplémentaires seront créées afin d'obtenir suffisamment de cellules pour contenir tous les éléments.
+Si vous ne placez pas d'éléments à l'aide de l'une des méthodes de placement de grille, les enfants directs du conteneur de grille seront placés individuellement dans chaque cellule de la grille par l'algorithme de placement automatique. Des {{Glossary("grid tracks", "pistes de ligne ou de colonne")}} supplémentaires seront créées afin d'obtenir suffisamment de cellules pour contenir tous les éléments.
 
 ## Exemple
 
@@ -55,14 +53,14 @@ Dans l'exemple, nous avons créé une grille de trois colonnes. Les cinq éléme
 </div>
 ```
 
-{{EmbedLiveSample('', '300', '280')}}
+{{EmbedLiveSample('Exemple', '300', '280')}}
 
 ## Voir aussi
 
 - Les propriétés CSS portant sur les cellules de grille&nbsp;:
-  - [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns)
-  - [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows)
-  - [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows)
-  - [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns)
+  - {{CSSxRef("grid-template-columns")}}
+  - {{CSSxRef("grid-template-rows")}}
+  - {{CSSxRef("grid-auto-rows")}}
+  - {{CSSxRef("grid-auto-columns")}}
 - [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Définition des cellules de grille dans la spécification CSS (en anglais)](https://drafts.csswg.org/css-grid/#grid-track-concept)
+- [Définition des cellules de grille dans la spécification CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-grid/#grid-track-concept)

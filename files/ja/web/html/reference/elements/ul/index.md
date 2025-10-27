@@ -1,12 +1,9 @@
 ---
 title: "<ul>: 順序なしリスト要素"
 slug: Web/HTML/Reference/Elements/ul
-original_slug: Web/HTML/Element/ul
 l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`<ul>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
@@ -39,12 +36,8 @@ li li {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `compact` {{Deprecated_inline}}
-  - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
-
-    > [!WARNING]
-    > この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
-
+- `compact` {{Deprecated_inline}} {{non-standard_inline}}
+  - : この論理属性は、リストをコンパクトなスタイルで表示することを指示します。この属性の解釈はブラウザーによって異なります。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、CSS の {{cssxref("line-height")}} プロパティに値 `80%` を指定します。
 - `type` {{Deprecated_inline}}
   - : リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
     - `circle`
@@ -66,7 +59,7 @@ li li {
 
 ## 例
 
-### シンプルな例
+### 基本的な例
 
 ```html
 <ul>
@@ -76,9 +69,9 @@ li li {
 </ul>
 ```
 
-次のように出力されます。
+#### 結果
 
-{{EmbedLiveSample("Simple_example", 400, 120)}}
+{{EmbedLiveSample("基本的な例", 400, 120)}}
 
 ### 入れ子になったリスト
 
@@ -142,16 +135,16 @@ li li {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >。また、 <code>&#x3C;ul></code> 要素の子に少なくとも 1 個
         {{HTMLElement("li")}} 要素を包含する場合は、<a
-          href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >。
       </td>
@@ -171,7 +164,7 @@ li li {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>

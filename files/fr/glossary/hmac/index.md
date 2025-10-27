@@ -3,18 +3,13 @@ title: HMAC
 slug: Glossary/HMAC
 ---
 
-{{GlossarySidebar}}
+Le **code d'authentification de message basé sur un hachage** (_HMAC_) est un mécanisme utilisé pour authentifier des messages de façon {{Glossary("cryptography", "cryptographique")}}.
 
-HMAC est un protocole utilisé pour les messages d'authentification {{Glossary("Cryptography","cryptographiquement")}}. Il peut utiliser toutes sortes de {{Glossary("Cryptographic hash function","fonctions de hachage cryptographique")}}, et sa force dépend de la fonction sous-jacente (SHA1 ou MD5 par exemple) et du choix de la clé secrète. Avec une telle combinaison, l'{{Glossary("Algorithm","algorithme")}} de vérification HMAC est alors repéré avec un nom composé comme HMAC-SHA1.
+Il peut utiliser n'importe quel type de {{Glossary("Hash function", "fonction de hachage cryptographique")}}. Sa robustesse dépend de la fonction de hachage sous-jacente et de la clé secrète choisie. Avec une telle combinaison, l'algorithme de vérification HMAC {{Glossary("Algorithm", "algorithme")}} est alors désigné par un nom composé, tel que HMAC-SHA2.
 
-HMAC est utilisé pour s'assurer de l'intégrité et de l'authenticité.
+HMAC est utilisé pour garantir à la fois l'intégrité et l'authentification.
 
 ## Voir aussi
 
-### Culture générale
-
 - [HMAC](https://fr.wikipedia.org/wiki/HMAC) sur Wikipédia
-
-### Référence technique
-
-- [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt) sur IETF
+- [RFC 2104 <sup>(angl.)</sup>](https://www.ietf.org/rfc/rfc2104.txt) sur IETF

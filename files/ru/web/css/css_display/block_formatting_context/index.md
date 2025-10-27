@@ -85,7 +85,8 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 Задание значения `flow-root` имеет смысл тогда, когда вы понимаете, что вы создаёте что-то, что будет действовать так же, как действует корневой `root` элемент (`<html>` в браузерах) в том плане, что он создаёт новый контекст для компоновки потока внутри него.
 
-> **Примечание:** `display: flow-root;` [не поддерживается](https://caniuse.com/#search=flow-root) в Safari.
+> [!NOTE]
+> `display: flow-root;` [не поддерживается](https://caniuse.com/#search=flow-root) в Safari.
 
 ### Схлопывание границ margin
 

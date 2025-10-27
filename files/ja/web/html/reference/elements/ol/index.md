@@ -1,12 +1,9 @@
 ---
 title: "<ol>: 順序付きリスト要素"
 slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
@@ -14,11 +11,11 @@ l10n:
 
 ```html interactive-example
 <ol>
-  <li>Mix flour, baking powder, sugar, and salt.</li>
-  <li>In another bowl, mix eggs, milk, and oil.</li>
-  <li>Stir both mixtures together.</li>
-  <li>Fill muffin tray 3/4 full.</li>
-  <li>Bake for 20 minutes.</li>
+  <li>小麦粉、ベーキングパウダー、砂糖、塩をよく混ぜ合わせます。</li>
+  <li>別のボウルに、卵、牛乳、油を混ぜ合わせます。</li>
+  <li>両方の混合物を一緒に混ぜ合わせてください。</li>
+  <li>マフィンの型に 4 分の 3 まで満たしてください。</li>
+  <li>20 分間焼きます。</li>
 </ol>
 ```
 
@@ -35,6 +32,8 @@ li {
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)も受け付けます。
 
+- `compact` {{Deprecated_inline}} {{non-standard_inline}}
+  - : この論理属性は、リストをコンパクトなスタイルで表示することを指示します。この属性の解釈はブラウザーによって異なります。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、CSS の {{cssxref("line-height")}} プロパティに値 `80%` を指定します。
 - `reversed`
   - : 論理属性で、リストの項目が逆順で指定されていることを指定します。項目は大きい方から小さい方へ番号付けされます。
 - `start`
@@ -56,19 +55,19 @@ li {
 
 ふつう、順序付きリストの項目は、先頭に数字や文字などの[マーカー](/ja/docs/Web/CSS/::marker)が表示されます。
 
-`<ol>` 要素と {{HTMLElement("ul")}} 要素は、必要なだけ深く入れ子にすることができ、 `<ol>` と `<ul>` を好きなだけ変更することもできます。
+`<ol>` 要素と {{HTMLElement("ul")}} 要素（または同義語である {{HTMLElement("menu")}}）は、必要なだけ深く入れ子にすることができ、 `<ol>` と `<ul>` （または `<menu>`）を好きなだけ変更することもできます。
 
-`<ol>` と {{HTMLElement("ul")}} は、どちらも項目のリストを表します。両者の違いは、 `<ol>` 要素では順序に意味があることです。例えば次のようなものです。
+`<ol>` と {{HTMLElement("ul")}} は、どちらも項目のリストを表します。両者の違いは、`<ol>` 要素では順序に意味があることです。例えば次のようなものです。
 
 - レシピの手順
 - 道順
 - 栄養成分表示ラベルにおける成分の降順の一覧
 
-どちらのリストを使用するか判断するには、リスト項目の順序を変更してみてください。意味が変わるようであれば `<ol>` 要素を使用してください。そうでない場合は、 {{HTMLElement("ul")}} 要素を使用することができます。
+どちらのリストを使用するか判断するには、リスト項目の順序を変更してみてください。意味が変わるようであれば `<ol>` 要素を使用してください。そうでない場合は、 {{HTMLElement("ul")}} 要素か、リストがメニューであれば {{HTMLElement("menu")}} を使用することができます。
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
 ```html
 <ol>
@@ -81,7 +80,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("基本的な例", 400, 100)}}
 
 ### ローマ数字の使用
 
@@ -165,10 +164,12 @@ li {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。また、<code>&#x3C;ol></code> 要素の子が少なくとも 1 個の {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>。また、<code>&#x3C;ol></code> 要素の子が少なくとも 1 個の {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。
       </td>
     </tr>
     <tr>
@@ -184,24 +185,28 @@ li {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role">list</a></code>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role">group</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role">menu</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role">none</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role">presentation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role">tablist</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role">tree</a></code>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>
@@ -225,5 +230,5 @@ li {
 - `<ol>` 要素のスタイル付けに役立つ CSS プロパティ:
   - {{CSSxRef("list-style")}} プロパティは、序数の表示方法を選ぶのに便利です。
   - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
-  - {{CSSxRef("line-height")}} プロパティは、非推奨の [`compact`](#compact) 属性をシミュレートするのに役立ちます。
+  - {{CSSxRef("line-height")}} プロパティは、非推奨の `compact` 属性をシミュレートするのに役立ちます。
   - {{CSSxRef("margin")}} プロパティは、リストの字下げを制御するのに役立ちます。

@@ -21,7 +21,8 @@ l10n:
 
 Дополнительные заголовки можно добавить с помощью {{HTTPHeader("Access-Control-Expose-Headers")}}.
 
-> **Примечание:** {{HTTPHeader("Content-Length")}} не входил в исходный набор безопасных заголовков [[ref](https://github.com/whatwg/fetch/pull/626)]
+> [!NOTE]
+> {{HTTPHeader("Content-Length")}} не входил в исходный набор безопасных заголовков [[ref](https://github.com/whatwg/fetch/pull/626)]
 
 ## Примеры
 

@@ -56,7 +56,8 @@ cd borderify
 
 - [Узнать больше о шаблонах совпадения](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **Предупреждение:** [В некоторых случаях вам нужно указать ID для вашего дополнения](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Если это необходимо, то добавьте ключ [`browser_specific_settings`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) в файл `manifest.json` и установите свойство `gecko.id`:
+> [!WARNING]
+> [В некоторых случаях вам нужно указать ID для вашего дополнения](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id). Если это необходимо, то добавьте ключ [`browser_specific_settings`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) в файл `manifest.json` и установите свойство `gecko.id`:
 >
 > ```json
 > "browser_specific_settings": {

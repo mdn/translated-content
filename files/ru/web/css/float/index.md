@@ -32,7 +32,8 @@ CSS-свойство `float` указывает, что текущий элем�
 | `inline-flex`        | `inline-flex`, `float` не оказывает влияния на такие элементы |
 | _other_              | _не меняются_                                                 |
 
-> **Примечание:**If you're referring to this property from JavaScript as a member of the {{domxref("element.style")}} object, you must spell it as `cssFloat`. Also note that Internet Explorer versions 8 and older spelled this `styleFloat`. This is an exception to the rule that the name of the DOM member is the camel-case name of the dash-separated CSS name (and is due to the fact that "float" is a reserved word in JavaScript, as with the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
+> [!NOTE]
+> If you're referring to this property from JavaScript as a member of the {{domxref("element.style")}} object, you must spell it as `cssFloat`. Also note that Internet Explorer versions 8 and older spelled this `styleFloat`. This is an exception to the rule that the name of the DOM member is the camel-case name of the dash-separated CSS name (and is due to the fact that "float" is a reserved word in JavaScript, as with the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
 
 ## Syntax
 

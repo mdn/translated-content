@@ -1,26 +1,24 @@
 ---
 title: Éléments flexibles
 slug: Glossary/Flex_Item
+l10n:
+  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
 ---
 
-{{GlossarySidebar}}
-
-Les enfants directs d'un {{glossary("Flex Container","conteneur flexible")}} (éléments définis avec `display: flex` ou `display: inline-flex`) deviennent des **éléments flexibles** (_flex items_).
+Les enfants directs d'un {{Glossary("Flex Container","conteneur flexible")}} (éléments définis avec `display: flex` ou `display: inline-flex`) deviennent des **éléments flexibles** (_flex items_).
 
 Des passages continus de texte à l'intérieur des conteneurs flexibles deviendront également des éléments flexibles.
 
+### Propriété CSS associées
+
+- {{CSSxRef("align-self")}}
+- {{CSSxRef("flex-basis")}}
+- {{CSSxRef("flex-grow")}}
+- {{CSSxRef("flex-shrink")}}
+- {{CSSxRef("order")}}
+
 ## Voir aussi
 
-### Références de la propriété
-
-- {{cssxref("align-self")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("order")}}
-
-### En lire plus
-
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- [Concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Ordonnancement des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)

@@ -49,7 +49,8 @@ HTML drag-and-drop использует {{domxref("Event","модель собы
 
 Ключевое отличие интерфейсов {{domxref("DataTransfer")}} и {{domxref("DataTransferItem")}} заключается в том, что первый использует синхронный метод доступа к данным о перетаскиваемых объектах {{domxref("DataTransfer.getData","getData()")}}, а второй – асинхронный метод {{domxref("DataTransferItem.getAsString","getAsString()")}}.
 
-> **Примечание:** {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе [Поддержка](#interoperability) .
+> [!NOTE]
+> {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе [Поддержка](#interoperability) .
 
 ### Специфичные для Gecko интерфейсы
 
