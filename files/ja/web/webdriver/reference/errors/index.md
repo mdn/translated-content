@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 81715a83bdb5d71cdceaf32d1e40a3edfc986a12
 ---
 
-WebDriver の[コマンド](/ja/docs/Web/WebDriver/Reference/Commands)は、送信された際にエラー[レスポンス](/ja/docs/Web/WebDriver/Reference/Response)を受け取る可能性があります。このエラーは、4xx または 5xx の範囲の [HTTP ステータスコード](/en-US/docs/Web/HTTP/Reference/Status) を含む [HTTP レスポンス](/en-US/docs/Web/HTTP) と、エラーの詳細を保持する JSON の本体によって表されます。
+WebDriver の[コマンド](/ja/docs/Web/WebDriver/Reference/Commands)は、送信された際にエラー[レスポンス](/ja/docs/Web/WebDriver/Reference/Response)を受け取る可能性があります。このエラーは、4xx または 5xx の範囲の [HTTP ステータスコード](/ja/docs/Web/HTTP/Reference/Status) を含む [HTTP レスポンス](/ja/docs/Web/HTTP) と、エラーの詳細を保持する JSON の本体によって表されます。
 
 ## 本体
 
