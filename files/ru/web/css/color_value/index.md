@@ -13,7 +13,8 @@ slug: Web/CSS/color_value
 - Использование [кубической системы координат RGB](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations)![Цветовая модель представлена виде куба](https://en.wikipedia.org/wiki/RGB_color_model#/media/File:RGB_color_solid_cube.png)
 - Использование [цилиндрической системы координат HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (через функциональные обозначения `hsl()` и `hsla()`)
 
-> **Примечание:**В этой статье подробно описывается тип данных \<color>. Дополнительные сведения об использовании цвета в HTML см. В разделе применение цвета к [элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color).
+> [!NOTE]
+> В этой статье подробно описывается тип данных \<color>. Дополнительные сведения об использовании цвета в HTML см. В разделе применение цвета к [элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color).
 
 ## Синтаксис
 
