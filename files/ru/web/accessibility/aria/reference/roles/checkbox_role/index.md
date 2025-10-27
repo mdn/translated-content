@@ -4,7 +4,6 @@ short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 ---
 
-
 Роль `checkbox` предназначена для интерактивных элементов управления с состоянием "отмечен/не отмечен". Элементы с `role="checkbox"` должны также включать атрибут [`aria-checked`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked), чтобы передавать состояние флажка вспомогательным технологиям.
 
 
