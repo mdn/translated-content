@@ -3,7 +3,7 @@ title: Element：hasAttributes() 方法
 short-title: hasAttributes()
 slug: Web/API/Element/hasAttributes
 l10n:
-  sourceCommit: https://github.com/mdn/content/commit/990ab6637bb4d44f059597262cbf3c51abae79eb
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
 {{ApiRef("DOM")}}
