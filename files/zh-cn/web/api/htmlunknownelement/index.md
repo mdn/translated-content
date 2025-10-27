@@ -13,11 +13,11 @@ l10n:
 
 ## 实例属性
 
-_无特定属性；继承自父接口，{{DOMxRef("HTMLElement")}}。_
+_无特定属性；继承父接口 {{DOMxRef("HTMLElement")}} 的属性。_
 
 ## 实例方法
 
-_无特定方法；继承自父接口，{{DOMxRef("HTMLElement")}}。_
+_无特定方法；继承父接口 {{DOMxRef("HTMLElement")}} 的方法。_
 
 ## 规范
 
