@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{DOMxRef("XRDepthInformation")}} 接口的 **`height`** 只读属性返回深度缓冲区的高度（行数）。
+{{DOMxRef("XRDepthInformation")}} 接口的 **`height`** *只读属性*返回深度缓冲区的高度（行数）。
 
 ## 值
 
