@@ -3707,15 +3707,6 @@
       "Waterdark"
     ]
   },
-  "Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
-    "modified": "2020-12-06T08:00:45.465Z",
-    "contributors": [
-      "valandis",
-      "zloypatrik88",
-      "Glazir",
-      "slychai85"
-    ]
-  },
   "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
     "modified": "2020-07-16T22:35:46.080Z",
     "contributors": [
@@ -5986,33 +5977,7 @@
       "teoli"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-09-25T18:36:16.946Z",
-    "contributors": [
-      "Problemon",
-      "paxarpp",
-      "Bargamut"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2019-10-02T12:18:01.287Z",
-    "contributors": [
-      "shmel3",
-      "newbornfrontender",
-      "GraceAredel",
-      "hardsoncore",
-      "Flaeron",
-      "paxarpp",
-      "rapaich",
-      "miirinjej",
-      "tavira",
-      "sersalex",
-      "tvitcom",
-      "Y-Taras",
-      "Azijkes"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-03-23T22:13:41.294Z",
     "contributors": [
       "tavira"
@@ -11288,12 +11253,6 @@
       "surrsoft"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2019-03-18T21:45:05.678Z",
-    "contributors": [
-      "TViglesGoom"
-    ]
-  },
   "Web/CSS/CSS_animations": {
     "modified": "2019-03-23T22:43:47.167Z",
     "contributors": [
@@ -11817,6 +11776,12 @@
       "TicTacVengria",
       "agoge",
       "BychekRU"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2019-03-18T21:45:05.678Z",
+    "contributors": [
+      "TViglesGoom"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
@@ -21966,6 +21931,32 @@
       "VyacheslavLobanov"
     ]
   },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-10-02T12:18:01.287Z",
+    "contributors": [
+      "shmel3",
+      "newbornfrontender",
+      "GraceAredel",
+      "hardsoncore",
+      "Flaeron",
+      "paxarpp",
+      "rapaich",
+      "miirinjej",
+      "tavira",
+      "sersalex",
+      "tvitcom",
+      "Y-Taras",
+      "Azijkes"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b": {
+    "modified": "2019-09-25T18:36:16.946Z",
+    "contributors": [
+      "Problemon",
+      "paxarpp",
+      "Bargamut"
+    ]
+  },
   "conflicting/Web/CSS/CSS_cascade/Value_processing": {
     "modified": "2019-03-23T22:46:29.428Z",
     "contributors": [
@@ -22008,6 +21999,15 @@
       "redishko",
       "PavelG94",
       "Prographer"
+    ]
+  },
+  "orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
+    "modified": "2020-12-06T08:00:45.465Z",
+    "contributors": [
+      "valandis",
+      "zloypatrik88",
+      "Glazir",
+      "slychai85"
     ]
   }
 }

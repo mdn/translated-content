@@ -175,7 +175,7 @@ Si l'une des informations ci-dessus n'est pas présente, vous devez demander à 
 > [!WARNING]
 > Cette partie ne concerne que la communauté francophone, et peut ne pas être appliquée de la même manière dans les autres langues.
 >
-> Cela concerne des étiquetages gérés dans le [tableau de projet](https://github.com/orgs/mdn/projects/44/views/1) par l'équipe `@mdn/yari-content-fr`.
+> Cela concerne des étiquetages gérés dans le [tableau de projet](https://github.com/orgs/mdn/projects/44/views/1) par l'équipe `@mdn/fr-content`.
 
 Pour chaque bogue, nous définissons un niveau de priorité en fonction de la gravité du problème afin d'aider les personnes qui souhaitent travailler sur les problèmes ou domaines les plus importants.
 
