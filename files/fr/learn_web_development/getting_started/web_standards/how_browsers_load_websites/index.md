@@ -37,7 +37,7 @@ Pour résumer l'[aperçu des technologies web](/fr/docs/Learn_web_development/Ge
 - Fichiers HTML, qui spécifient le contenu de la page web et sa structure.
 - Fichiers CSS, qui spécifient les informations de style et de mise en page.
 - Fichiers JavaScript, qui spécifient le comportement des parties interactives de la page web.
-- Ressources médias comme des images, vidéos, fichiers audio, [PDF](/fr/docs/Glossaire/PDF) et [SVG](/fr/docs/Glossaire/SVG), qui sont intégrés dans les pages web ou affichés par le navigateur.
+- Ressources médias comme des images, vidéos, fichiers audio, {{Glossary("PDF")}} et {{Glossary("SVG")}}, qui sont intégrés dans les pages web ou affichés par le navigateur.
 - D'autres types de fichiers que le navigateur ne peut pas gérer nativement et qu'il confie donc à une application appropriée sur l'appareil pour les afficher, par exemple des documents Word ou Pages, des présentations PowerPoint et des fichiers Open Office.
 
 ## Rendu de la page web
