@@ -29,7 +29,7 @@ l10n:
 - {{domxref("Response.redirected")}} {{ReadOnlyInline}}
   - : 응답이 리디렉션의 결과인지 (즉, URL 목록이 두 개 이상의 항목을 지녔는지) 나타냅니다.
 - {{domxref("Response.status")}} {{ReadOnlyInline}}
-  - : 응답의 상태 코드입니다. 성공 시 `200`입니다.
+  - : 응답의 상태 코드입니다. (성공 시 `200`입니다.)
 - {{domxref("Response.statusText")}} {{ReadOnlyInline}}
   - : 상태 코드에 해당하는 상태 메시지입니다. (예시: `200`이면 `OK`)
 - {{domxref("Response.type")}} {{ReadOnlyInline}}
@@ -43,6 +43,8 @@ l10n:
   - : 네트워크 오류와 연관된 새로운 `Response` 객체를 반환합니다.
 - {{domxref("Response.redirect_static", "Response.redirect()")}}
   - : 다른 URL을 가리키는 새로운 응답을 생성합니다.
+- {{domxref("Response.json_static", "Response.json()")}}
+  - : 제공된 JSON 인코딩 데이터를 반환하기 위한 새로운 `Response` 객체를 반환합니다.
 
 ## 인스턴스 메서드
 
@@ -50,6 +52,8 @@ l10n:
   - : 응답 본문의 {{jsxref("ArrayBuffer")}} 표현으로 이행하는 프로미스를 반환합니다.
 - {{domxref("Response.blob()")}}
   - : 응답 본문의 {{domxref("Blob")}} 표현으로 이행하는 프로미스를 반환합니다.
+- {{domxref("Response.bytes()")}}
+  - : 응답 본문의 {{jsxref("Uint8Array")}} 표현으로 이행하는 프로미스를 반환합니다.
 - {{domxref("Response.clone()")}}
   - : `Response` 객체의 복사본을 생성합니다.
 - {{domxref("Response.formData()")}}
@@ -83,24 +87,26 @@ fetch("flowers.jpg")
 const response = new Response();
 ```
 
-### AJAX 호출
+### PHP 호출
 
 여기서는 JSON 문자열을 생성하는 PHP 프로그램 파일을 호출하고, 간단한 오류 처리와 함께 결과를 JSON 값으로서 출력합니다.
 
 ```js
-// AJAX 호출을 위한 함수
-const doAjax = async () => {
-  const response = await fetch("Ajax.php"); // Response 객체 생성
+// PHP를 사용해 JSON을 가져오는 함수
+const getJSON = async () => {
+  // Response 객체 생성
+  const response = await fetch("getJSON.php");
   if (response.ok) {
-    const jsonValue = await response.json(); // 응답 봄문에서 JSON 값 가져오기
-    return Promise.resolve(jsonValue);
-  } else {
-    return Promise.reject("*** PHP file not found");
+    // 응답 본문에서 JSON 값 가져오기
+    return response.json();
   }
+  throw new Error("*** PHP file not found");
 };
 
-// 위 함수 호출 후 결과 값 또는 오류 메시지를 콘솔에 기록
-doAjax().then(console.log).catch(console.log);
+// 함수를 호출하고 결과 또는 오류 메시지를 콘솔에 출력
+getJSON()
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 ```
 
 ## 명세서
