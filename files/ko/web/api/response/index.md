@@ -39,9 +39,9 @@ l10n:
 
 ## 정적 메서드
 
-- {{domxref("Response.error()")}}
+- {{domxref("Response.error_static", "Response.error()")}}
   - : 네트워크 오류와 연관된 새로운 `Response` 객체를 반환합니다.
-- {{domxref("Response.redirect()")}}
+- {{domxref("Response.redirect_static", "Response.redirect()")}}
   - : 다른 URL을 가리키는 새로운 응답을 생성합니다.
 
 ## 인스턴스 메서드
@@ -65,7 +65,7 @@ l10n:
 
 저희의 [기본 `fetch()` 예제](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch)([미리보기](https://mdn.github.io/dom-examples/fetch/basic-fetch/))에서는 간단한 `fetch()` 호출을 통해 이미지를 취득해서 {{htmlelement("img")}} 요소에 표시합니다. `fetch()` 호출은 취득 연산과 연관된 `Response`로 이행하는 프로미스를 반환합니다.
 
-우리는 이미지를 요청하고 있기 때문에, `Response.blob()`을 실행하여 응답에 올바른 MIME 타입을 부여해야 한다는 걸 보실 겁니다.
+우리는 이미지를 요청하고 있기 때문에, `{{domxref("Response.blob()")}}`을 실행하여 응답에 올바른 MIME 타입을 부여해야 한다는 걸 보실 겁니다.
 
 ```js
 const image = document.querySelector(".my-image");
