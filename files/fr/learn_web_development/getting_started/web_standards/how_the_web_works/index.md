@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d0079996a0621722f0a9f45f29ff60c27f1cf4c
 ---
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 _Comment fonctionne le Web_ fournit une description générale de ce qui se passe lorsque vous utilisez un navigateur web pour accéder à une page web, en expliquant la «&nbsp;magie&nbsp;» qui s'opère en coulisses pour transmettre le code pertinent à votre ordinateur afin que le navigateur l'assemble en quelque chose que vous pouvez consulter.
 
