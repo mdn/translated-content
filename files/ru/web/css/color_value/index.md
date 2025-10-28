@@ -5,7 +5,7 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.
+Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_values_and_units/CSS_data_types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.
 
 В `<color>` может быть определена любым из следующих способов can.
 
@@ -13,7 +13,8 @@ slug: Web/CSS/color_value
 - Использование [кубической системы координат RGB](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations)![Цветовая модель представлена виде куба](https://en.wikipedia.org/wiki/RGB_color_model#/media/File:RGB_color_solid_cube.png)
 - Использование [цилиндрической системы координат HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (через функциональные обозначения `hsl()` и `hsla()`)
 
-> **Примечание:**В этой статье подробно описывается тип данных \<color>. Дополнительные сведения об использовании цвета в HTML см. В разделе применение цвета к [элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color).
+> [!NOTE]
+> В этой статье подробно описывается тип данных \<color>. Дополнительные сведения об использовании цвета в HTML см. В разделе применение цвета к [элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color).
 
 ## Синтаксис
 
