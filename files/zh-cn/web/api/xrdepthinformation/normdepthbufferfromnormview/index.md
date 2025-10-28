@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{DOMxRef("XRDepthInformation")}} 接口的 **`normDepthBufferFromNormView`** 只读属性返回在索引深度缓冲区时需要应用的 3D 几何变换。
+{{DOMxRef("XRDepthInformation")}} 接口的 **`normDepthBufferFromNormView`** *只读属性*返回在索引深度缓冲区时需要应用的 3D 几何变换。
 
 ## 值
 
