@@ -57,7 +57,7 @@ slug: Learn_web_development/Howto
 - [Как использовать GitHub Pages?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
   - : В этой статье представлено базовое руководство по публикации контента с использованием функции **gh-pages** сайта GitHub.
 
-- [Как разместить сайт в Интернете при помощи платформы Google App Engine?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
+- [Как разместить сайт в Интернете при помощи платформы Google App Engine?](/ru/docs/orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
   - : Ищете место для размещения вашего сайта? Здесь представлено пошаговое руководство по размещению вашего сайта с помощью платформы Google App Engine.
 
 - [Какие существуют инструменты для отладки сайта и увеличения его производительности?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
