@@ -15,7 +15,7 @@ event.stopPropagation();
 
 ## Пример
 
-См. Пример 5: [Event Propagation](/ru/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation) для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.
+См. Пример 5: [Event Propagation](/ru/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b#example_5:_event_propagation) для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.
 
 ## Спецификации
 
