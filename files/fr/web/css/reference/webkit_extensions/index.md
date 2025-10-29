@@ -1,9 +1,8 @@
 ---
 title: Extensions CSS préfixées par le vendeur WebKit (-webkit-)
 slug: Web/CSS/Reference/Webkit_extensions
-original_slug: Web/CSS/WebKit_Extensions
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 1f6d5b39a5883789ece6b570227648113c7021a1
 ---
 
 Un {{glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
@@ -183,6 +182,6 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 
 ## Voir aussi
 
-- [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Mozilla_Extensions)
+- [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_Extensions)
 - L'entrée du glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
 - [La mise en forme des contrôles de formulaires sur le Trac WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls)

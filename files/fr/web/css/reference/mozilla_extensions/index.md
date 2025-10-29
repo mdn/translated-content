@@ -1,9 +1,8 @@
 ---
 title: Extensions CSS préfixées par le vendeur Firefox (-moz-)
 slug: Web/CSS/Reference/Mozilla_extensions
-original_slug: Web/CSS/Mozilla_Extensions
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 1f6d5b39a5883789ece6b570227648113c7021a1
 ---
 
 Un {{glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
@@ -290,5 +289,5 @@ Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/list-style-type#compat
 
 ## Voir aussi
 
-- [Extensions CSS préfixées par le vendeur WebKit (-webkit-)](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions CSS préfixées par le vendeur WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/WebKit_Extensions)
 - L'entrée du glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
