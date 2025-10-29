@@ -1,6 +1,6 @@
 ---
 title: Webkit CSS 扩展
-slug: Web/CSS/WebKit_Extensions
+slug: Web/CSS/Reference/Webkit_extensions
 ---
 
 基于 WebKit 或 Blink 的应用，例如 Safari 和 Chrome，支持一些特殊的 **[CSS](/zh-CN/docs/Web/CSS) WebKit 扩展**。这些扩展通常带有 `-webkit-` 前缀。大多数 `-webkit-` 前缀的属性通常也能够与 `-apple-` 前缀使用。少部分是有 `-epub-` 前缀的。
@@ -519,4 +519,4 @@ slug: Web/CSS/WebKit_Extensions
 ## 参见
 
 - [在 WebKit Trac 上设计表单控件的样式](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
-- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
+- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)
