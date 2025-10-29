@@ -1,6 +1,7 @@
 ---
 title: 具有 Mozilla 厂商前缀的 CSS 扩展
-slug: Web/CSS/Mozilla_Extensions
+slug: Web/CSS/Reference/Mozilla_extensions
+original_slug: Web/CSS/Mozilla_Extensions
 l10n:
   sourceCommit: d36cd679498a75dccf51685d8e178994a0df585e
 ---
