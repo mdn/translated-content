@@ -2,8 +2,6 @@
 title: "ARIA: свойство aria-hidden"
 short-title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
-spec-urls: https://w3c.github.io/aria/#aria-hidden
-sidebar: accessibilitysidebar
 ---
 
 `aria-hidden` — состояние, которое указывает, доступен ли элемент для API доступности.
