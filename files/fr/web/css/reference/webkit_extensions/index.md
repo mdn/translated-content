@@ -1,6 +1,7 @@
 ---
 title: Extensions CSS préfixées par le vendeur WebKit (-webkit-)
-slug: Web/CSS/WebKit_Extensions
+slug: Web/CSS/Reference/Webkit_extensions
+original_slug: Web/CSS/WebKit_Extensions
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

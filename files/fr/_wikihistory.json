@@ -22806,19 +22806,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/Mozilla_Extensions": {
-    "modified": "2019-04-06T13:09:25.625Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "Ilphrin",
-      "louuis",
-      "teoli",
-      "Fredchat",
-      "Goofy"
-    ]
-  },
   "Web/CSS/Next-sibling_combinator": {
     "modified": "2020-10-15T21:46:19.453Z",
     "contributors": [
@@ -22882,6 +22869,29 @@
       "Nathymig"
     ]
   },
+  "Web/CSS/Reference/Mozilla_extensions": {
+    "modified": "2019-04-06T13:09:25.625Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "Ilphrin",
+      "louuis",
+      "teoli",
+      "Fredchat",
+      "Goofy"
+    ]
+  },
+  "Web/CSS/Reference/Webkit_extensions": {
+    "modified": "2019-10-07T02:42:25.089Z",
+    "contributors": [
+      "Lo_h",
+      "SphinxKnight",
+      "ExE-Boss",
+      "Goofy",
+      "louuis"
+    ]
+  },
   "Web/CSS/Selector_list": {
     "modified": "2020-10-15T22:24:05.333Z",
     "contributors": [
@@ -22920,16 +22930,6 @@
       "SphinxKnight",
       "teoli",
       "FredB"
-    ]
-  },
-  "Web/CSS/WebKit_Extensions": {
-    "modified": "2019-10-07T02:42:25.089Z",
-    "contributors": [
-      "Lo_h",
-      "SphinxKnight",
-      "ExE-Boss",
-      "Goofy",
-      "louuis"
     ]
   },
   "Web/CSS/align-content": {
