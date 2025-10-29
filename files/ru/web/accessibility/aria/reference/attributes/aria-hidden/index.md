@@ -84,9 +84,9 @@ slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 
 ## Смотрите также
 
-*   [`aria-disabled`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-*   [`aria-modal`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
-*   [`aria-expanded`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-*   HTML-атрибут [`hidden`](/ru/docs/Web/HTML/Reference/Global_attributes/hidden)
-*   CSS-свойство {{CSSXref('display')}}
-*   CSS-свойство {{CSSXref('visibility')}}
+- [`aria-disabled`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
+- [`aria-modal`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- [`aria-expanded`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- HTML-атрибут [`hidden`](/ru/docs/Web/HTML/Reference/Global_attributes/hidden)
+- CSS-свойство {{CSSXref('display')}}
+- CSS-свойство {{CSSXref('visibility')}}
