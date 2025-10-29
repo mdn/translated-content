@@ -69,10 +69,10 @@ slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 
 ## Связанные интерфейсы
 
-*   {{domxref("Element.ariaHidden")}}
-    *   Свойство [`ariaHidden`](/ru/docs/Web/API/Element/ariaHidden), часть интерфейса {{domxref("Element")}}, отражает значение атрибута `aria-hidden`, которое указывает, доступен ли элемент для API доступности.
-*   {{domxref("ElementInternals.ariaHidden")}}
-    *   Свойство [`ariaHidden`](/ru/docs/Web/API/ElementInternals/ariaHidden), часть интерфейса {{domxref("ElementInternals")}}, отражает значение атрибута `aria-hidden`.
+- {{domxref("Element.ariaHidden")}}
+  - Свойство [`ariaHidden`](/ru/docs/Web/API/Element/ariaHidden), часть интерфейса {{domxref("Element")}}, отражает значение атрибута `aria-hidden`, которое указывает, доступен ли элемент для API доступности.
+- {{domxref("ElementInternals.ariaHidden")}}
+  - Свойство [`ariaHidden`](/ru/docs/Web/API/ElementInternals/ariaHidden), часть интерфейса {{domxref("ElementInternals")}}, отражает значение атрибута `aria-hidden`.
 
 ## Связанные роли
 
