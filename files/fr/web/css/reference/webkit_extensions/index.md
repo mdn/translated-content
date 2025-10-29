@@ -182,6 +182,6 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 
 ## Voir aussi
 
-- [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_Extensions)
+- [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - L'entrée du glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
 - [La mise en forme des contrôles de formulaires sur le Trac WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
