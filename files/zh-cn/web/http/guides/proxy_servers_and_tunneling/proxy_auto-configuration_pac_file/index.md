@@ -1,24 +1,24 @@
 ---
-title: 代理自动配置文件（PAC）文件
+title: 代理自动配置（PAC）文件
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 l10n:
   sourceCommit: f8ccc0ae0f29d206eea0666fd5081bf41810116d
 ---
 
-**代理自动配置**（PAC）文件是一个用来决定 Web 浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个 Web 代理服务器的 JavaScript 函数。PAC 文件中的 JavaScript 函数通常是这样定义的：
+**代理自动配置**（**PAC**）文件是一个用来决定 Web 浏览请求（HTTP、HTTPS 和 FTP）应当直连目标地址，还是被转发给一个 Web 代理服务器的 JavaScript 函数。PAC 文件中的 JavaScript 函数通常是这样定义的：
 
 ## 语法
 
 ```js
 function FindProxyForURL(url, host) {
-  // ...
+  // ……
 }
 ```
 
 ### 参数
 
 - `url`
-  - : 要访问的 URL。`https://` URL 中的路径和查询部分已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过将 `PacHttpsUrlStrippingEnabled` 设置为 `false` 来禁用这种行为，或者以 `--unsafe-pac-url` 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 `network.proxy.autoconfig_url.include_path`。
+  - : 要访问的 URL。`https://` URL 中的路径和查询部分已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过将 `PacHttpsUrlStrippingEnabled` 设置为 `false` 来禁用这种行为，或者以 `--unsafe-pac-url` 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但这是有意改变行为以匹配 HTTPS）；在 Firefox 浏览器中，对应的选项是 `network.proxy.autoconfig_url.include_path`。
 - `host`
   - : 从 URL 中提取得到的主机名。这只是为了方便；它与 `://` 之后到第一个 `:` 或 `/` 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 URL 中提取。
 
@@ -50,7 +50,7 @@ function FindProxyForURL(url, host) {
 - `SOCKS4 host:port`、`SOCKS5 host:port`
   - : 应使用指定的 SOCKS 服务器（具有指定的 SOCK 版本）
 
-如果有多个使用分号分隔的配置，将使用最左边的配置，除非 Firefox 无法与指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。
+如果有多个使用分号分隔的配置，将使用最左边的配置，除非 Firefox 无法与指定的代理服务器建立连接。在这种情况下，将使用下一个配置，依此类推。
 
 30 分钟后，浏览器将自动重试之前没有响应的代理。下一次尝试则将在一小时后开始，每次尝试后间隔会增加 30 分钟。
 
@@ -65,11 +65,11 @@ function FindProxyForURL(url, host) {
 - `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
   - : 如果主代理出现问题，则使用 SOCKS 连接。
 
-自动配置文件应当被保存为一个以 .pac 作为文件拓展名的文件：`proxy.pac`。
+自动配置文件应当被保存为一个以 .pac 作为文件扩展名的文件：`proxy.pac`。
 
 其 MIME 类型应被设置为：`application/x-ns-proxy-autoconfig`。
 
-接下来，你应当配置你的服务器，让文件拓展名 .pac 映射到如上所示的 MIME 类型。
+接下来，你应当配置你的服务器，让文件扩展名 .pac 映射到如上所示的 MIME 类型。
 
 > [!NOTE]
 >
@@ -108,7 +108,7 @@ function FindProxyForURL(url, host) {
   - `ProxyConfig.bindings` {{Deprecated_Inline}}
 
 > [!NOTE]
-> pactester（[pacparser](https://github.com/pacparser/pacparser) 的一部分）可以用于测试以下语法示例。
+> pactester（属于 [pacparser](https://github.com/pacparser/pacparser) 组件）可以用于测试以下语法示例。
 >
 > - PAC 文件保存为 `proxy.pac`
 > - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org`（传入 `host` 参数 `www.mozilla.org`、`url` 参数 `https://www.mozilla.org`）
@@ -231,8 +231,6 @@ isInNet(host, pattern, mask)
 
 仅在 host 属于由 pattern 和 mask 指定的 IP 地址段时返回真。
 
-Pattern and mask specification is done the same way as for SOCKS configuration.
-
 模式和掩码规范与 SOCKS 配置相同。
 
 #### 示例
@@ -342,7 +340,7 @@ shExpMatch(str, shExp)
 - str
   - : 任何要比较的字符串（如 URL 或主机名）。
 - shexp
-  - : 要用来对比的 shell 表达式。
+  - : 要用来比对的 shell 表达式。
 
 如果字符串匹配指定的 shell glob 表达式则返回 `true`。
 
@@ -368,7 +366,7 @@ weekdayRange(wd1, wd2, gmt)
 ```
 
 > [!NOTE]
-> （Firefox 49 之前版本）如果希望函数将这些参数作为范围进行求值，则 wd1 必须小于 wd2。请参阅下面的警告。
+> （Firefox 49 之前版本）如果希望函数将这些参数作为范围进计算，则 wd1 必须小于 wd2。请参阅下面的警告。
 
 #### 参数
 
@@ -384,7 +382,7 @@ weekdayRange(wd1, wd2, gmt)
 如果同时定义了 **wd1** 和 **wd2**，则在当前星期位于这两个*有序*星期之间时，条件为真。包含边界，_但边界是有序的_。如果指定了 `"GMT"` 参数，则时间将采用 GMT 时间。否则，将使用本地时区。
 
 > [!WARNING]
-> 在 Firefox 49 之前，`weekdayRange("SUN", "SAT")` 的计算结果始终为 `true`。现在，`weekdayRange("WED", "SUN")` 仅当当前日期为星期三或星期日时才计算结果为 `true`。
+> 在 Firefox 49 之前，`weekdayRange("SUN", "SAT")` 的计算结果始终为 `true`。现在，`weekdayRange("WED", "SUN")` 仅在当前日期为星期三或星期日时才计算结果为 `true`。
 
 #### 示例
 
