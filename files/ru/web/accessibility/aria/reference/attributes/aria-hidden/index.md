@@ -37,9 +37,9 @@ slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 
 `aria-hidden="true"` не нужно добавлять, когда:
 
-*   Присутствует HTML-атрибут [`hidden`](/ru/docs/Web/HTML/Reference/Global_attributes/hidden).
-*   Элемент или его предок скрыт с помощью [`display: none`](/ru/docs/Web/CSS/display).
-*   Элемент или его предок скрыт с помощью [`visibility: hidden`](/ru/docs/Web/CSS/visibility).
+- Присутствует HTML-атрибут [`hidden`](/ru/docs/Web/HTML/Reference/Global_attributes/hidden).
+- Элемент или его предок скрыт с помощью [`display: none`](/ru/docs/Web/CSS/display).
+- Элемент или его предок скрыт с помощью [`visibility: hidden`](/ru/docs/Web/CSS/visibility).
 
 Во всех трёх случаях добавлять атрибут необязательно, потому что элемент уже удалён из дерева доступности. Визуальное скрытие элементов с помощью `display` или `visibility` скрывает контент как с экрана, так и от вспомогательных технологий.
 
