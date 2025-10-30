@@ -22714,6 +22714,88 @@
       "FredB"
     ]
   },
+  "Web/CSS/How_to/Layout_cookbook": {
+    "modified": "2019-04-06T12:59:27.445Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation": {
+    "modified": "2020-10-15T22:10:26.639Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Card": {
+    "modified": "2020-10-15T22:10:32.076Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Center_an_element": {
+    "modified": "2020-10-15T22:10:07.676Z",
+    "contributors": [
+      "SphinxKnight",
+      "jaouedjackson",
+      "mouffy"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Column_layouts": {
+    "modified": "2020-10-15T22:10:25.136Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe": {
+    "modified": "2019-04-06T12:58:12.249Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template": {
+    "modified": "2020-10-15T22:10:21.166Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Grid_wrapper": {
+    "modified": "2020-10-15T22:11:37.851Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/List_group_with_badges": {
+    "modified": "2020-10-15T22:10:18.617Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Media_objects": {
+    "modified": "2020-10-15T22:10:31.768Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Pagination": {
+    "modified": "2020-10-15T22:10:27.609Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Split_navigation": {
+    "modified": "2020-10-15T22:10:27.669Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Sticky_footers": {
+    "modified": "2020-10-15T22:10:28.813Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-10-15T21:04:23.373Z",
     "contributors": [
@@ -22722,88 +22804,6 @@
       "louuis",
       "FredB",
       "tregagnon"
-    ]
-  },
-  "Web/CSS/Layout_cookbook": {
-    "modified": "2019-04-06T12:59:27.445Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Breadcrumb_Navigation": {
-    "modified": "2020-10-15T22:10:26.639Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Card": {
-    "modified": "2020-10-15T22:10:32.076Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Center_an_element": {
-    "modified": "2020-10-15T22:10:07.676Z",
-    "contributors": [
-      "SphinxKnight",
-      "jaouedjackson",
-      "mouffy"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Column_layouts": {
-    "modified": "2020-10-15T22:10:25.136Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Contribute_a_recipe": {
-    "modified": "2019-04-06T12:58:12.249Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template": {
-    "modified": "2020-10-15T22:10:21.166Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Grid_wrapper": {
-    "modified": "2020-10-15T22:11:37.851Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/List_group_with_badges": {
-    "modified": "2020-10-15T22:10:18.617Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Media_objects": {
-    "modified": "2020-10-15T22:10:31.768Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Pagination": {
-    "modified": "2020-10-15T22:10:27.609Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Split_Navigation": {
-    "modified": "2020-10-15T22:10:27.669Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Sticky_footers": {
-    "modified": "2020-10-15T22:10:28.813Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/CSS/Next-sibling_combinator": {

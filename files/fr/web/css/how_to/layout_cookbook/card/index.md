@@ -1,6 +1,7 @@
 ---
 title: Carte
-slug: Web/CSS/Layout_cookbook/Card
+slug: Web/CSS/How_to/Layout_cookbook/Card
+original_slug: Web/CSS/Layout_cookbook/Card
 ---
 
 {{CSSRef}}

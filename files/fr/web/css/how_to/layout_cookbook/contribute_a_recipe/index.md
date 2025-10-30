@@ -1,6 +1,7 @@
 ---
 title: Contribuer à une recette
-slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
+slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
+original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 ---
 
 {{CSSRef}}

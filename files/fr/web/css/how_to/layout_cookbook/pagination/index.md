@@ -1,6 +1,7 @@
 ---
 title: Pagination
-slug: Web/CSS/Layout_cookbook/Pagination
+slug: Web/CSS/How_to/Layout_cookbook/Pagination
+original_slug: Web/CSS/Layout_cookbook/Pagination
 ---
 
 {{CSSRef}}

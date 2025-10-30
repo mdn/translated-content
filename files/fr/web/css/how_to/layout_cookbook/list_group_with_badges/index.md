@@ -1,6 +1,7 @@
 ---
 title: Liste de groupes avec indicateurs
-slug: Web/CSS/Layout_cookbook/List_group_with_badges
+slug: Web/CSS/How_to/Layout_cookbook/List_group_with_badges
+original_slug: Web/CSS/Layout_cookbook/List_group_with_badges
 ---
 
 {{CSSRef}}

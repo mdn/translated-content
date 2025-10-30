@@ -1,6 +1,7 @@
 ---
 title: Centrer un élément
-slug: Web/CSS/Layout_cookbook/Center_an_element
+slug: Web/CSS/How_to/Layout_cookbook/Center_an_element
+original_slug: Web/CSS/Layout_cookbook/Center_an_element
 ---
 
 {{CSSRef}}
