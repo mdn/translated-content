@@ -1,88 +1,236 @@
 ---
 title: Disposition en colonnes
 slug: Web/CSS/How_to/Layout_cookbook/Column_layouts
-original_slug: Web/CSS/Layout_cookbook/Column_layouts
+l10n:
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
-{{CSSRef}}
+Il vous faudra souvent créer une mise en page comportant plusieurs colonnes, et CSS offre plusieurs moyens d'y parvenir. Le choix entre les dispositions [à plusieurs colonnes](/fr/docs/Web/CSS/CSS_multicol_layout), [flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout) ou [grille](/fr/docs/Web/CSS/CSS_grid_layout) dépendra de l'objectif visé&nbsp;; dans cette recette nous explorons ces options.
 
-Vous aurez souvent à créer des dispositions organisées en colonnes. CSS fournit différentes méthodes pour parvenir à de telles dispositions. Les grilles CSS ou les boîtes flexibles ou encore les dispositions multi-colonnes peuvent être utilisées et choisir l'une de ces méthodes dépend de ce que l'on veut obtenir. Dans ce guide, nous verrons ces différentes options.
+![Trois styles de mise en page comportant deux colonnes dans le conteneur.](cookbook-multiple-columns.png)
 
-![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
+## Exigences
 
-## Prérequis
+Voici quelques modèles de mise en page que vous pouvez vouloir obtenir avec des colonnes&nbsp;:
 
-Il existe plusieurs « motifs » qu'on peut vouloir réaliser avec des colonnes :
+- [Un flux de contenu continu divisé en colonnes façon journal](#un_flux_de_contenu_continu_—_mise_en_page_multi-colonnes).
+- [Une seule rangée d'éléments disposés en colonnes, avec toutes les hauteurs égales](#une_seule_rangée_déléments_avec_des_hauteurs_égales_—_flexbox).
+- [Plusieurs rangées de colonnes alignées par ligne et par colonne](#aligner_des_éléments_en_lignes_et_colonnes_—_mise_en_page_en_grille).
 
-- Un fil continu qui se divise en colonne, à la façon d'un journal papier.
-- Une seule ligne d'éléments divisée en colonnes qui ont la même hauteur.
-- Plusieurs lignes et colonnes qui sont alignées.
+## Recettes
 
-## Les « recettes »
+Il faut choisir des méthodes de mise en page différentes selon l'objectif à atteindre.
 
-Selon le scénario souhaité, on utilisera différentes méthodes de disposition.
+### Un flux de contenu continu — mise en page multi-colonnes
 
-### Un fil continu de contenu - Disposition multi-colonnes
+Si vous créez des colonnes avec la mise en page multi-colonnes, votre texte reste un flux continu qui remplit chaque colonne à tour de rôle. Les colonnes ont toutes la même taille et il n'est pas possible de cibler une colonne individuelle ni le contenu d'une colonne individuelle.
 
-En créant des colonnes avec une disposition multi-colonne, le texte pourra former un flux continu qui remplira chacune des colonnes à la suite des autres. Les colonnes auront toutes la même taille et il ne sera pas possible de cibler une colonne en particulier ou le contenu d'une colonne en particulier.
+Vous pouvez contrôler l'écart entre les colonnes avec les propriétés {{CSSxRef("column-gap")}} ou {{CSSxRef("gap")}}, et ajouter une règle entre les colonnes avec {{CSSxRef("column-rule")}}.
 
-L'espacement entre les colonnes peut être géré avec la propriété {{cssxref("column-gap")}} et il est possible d'ajouter une ligne de délimitation grâce à {{cssxref("column-rule")}}.
+Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci‑dessous pour modifier l'exemple dans le MDN Playground&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
+```html live-sample___multi-column-layout-example
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach.
+  </p>
+</div>
+```
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
+```css live-sample___multi-column-layout-example
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px;
+  font: 1.2em sans-serif;
 
-On utilisera une disposition multi-colonnes lorsque :
+  column-width: 10em;
+  column-rule: 1px solid rgb(75 70 74);
+}
+```
 
-- On souhaite organiser le texte à la façon d'un journal imprimé
-- On a un ensemble de petits éléments qu'on souhaite fragmenter en colonnes
-- Il n'est pas nécessaire de cibler une colonne en particulier pour des raisons de mise en forme.
+{{EmbedLiveSample("multi-column-layout-example", "", 350)}}
 
-### Une seule ligne fragmentée en cellules de même taille — Utilisation des boîtes flexibles
+Dans cet exemple, nous utilisons la propriété {{CSSxRef("column-width")}} pour fixer une largeur minimale que doivent avoir les colonnes avant que le navigateur n'ajoute une colonne supplémentaire. La propriété raccourcie {{CSSxRef("columns")}} permet de définir `column-width` et {{CSSxRef("column-count")}}, l'une ou l'autre pouvant fixer le nombre maximal de colonnes autorisées.
 
-Les boîtes flexibles peuvent être utilisées afin de diviser du contenu en colonnes grâce à la propriété {{cssxref("flex-direction")}} utilisée avec la valeur `row`. Toutefois, une boîte flexible cible les éléments à l'intérieur du conteneur flexible et placera chaque enfant direct dans une nouvelle colonne. On a donc un comportement différent de celui vu précédemment avec les multi-colonnes.
+Quand utiliser le multi-colonne&nbsp;:
 
-À l'heure actuelle, il n'existe pas de méthode qui permette de créer une ligne entre les objets flexibles et la prise en charge des navigateurs pour les propriétés {{cssxref("column-gap")}} et {{cssxref("row-gap")}} est limitée. Pour créer un espace entre les éléments, il faudra donc utiliser une marge.
+- Lorsque vous souhaitez afficher votre texte en colonnes façon journal.
+- Lorsque vous avez un ensemble de petits éléments à répartir en colonnes.
+- Lorsque vous n'avez pas besoin de cibler les boîtes de colonnes individuelles pour la mise en forme.
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
+### Une seule rangée d'éléments avec des hauteurs égales — flexbox
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
+Flexbox peut être utilisé pour répartir du contenu en colonnes en réglant {{CSSxRef("display", "display: flex;")}} pour transformer un élément parent en conteneur flex. Ajouter cette seule propriété transforme tous les enfants (éléments enfants, pseudo-éléments et nœuds texte) en éléments flex alignés sur une seule ligne. Définir la propriété raccourcie {{CSSxRef("flex")}} avec une seule valeur numérique répartit également tout l'espace disponible, ce qui rend généralement tous les éléments flex de la même taille tant qu'aucun n'a de contenu qui empêche le retour à la ligne et force une taille plus grande.
 
-Les boîtes flexibles peuvent également être utilisées afin de créer des dispositions où les objets flexibles « passent à la ligne » en utilisant la propriété {{cssxref("flex-wrap")}} et la valeur `wrap` sur le conteneur. Les nouvelles lignes répartiront l'espace pour cette ligne uniquement, il n'y aura pas d'alignement d'une ligne à l'autre (comme on peut le voir dans l'exemple qui suit). C'est pour cette raison qu'on décrit les boîtes flexibles comme étant une méthode de disposition sur une seul dimension : cette méthode permet de contrôler la disposition en ligne ou en colonne mais pas de gérer les deux à la fois.
+On peut utiliser des marges ou la propriété `gap` pour créer des espaces entre les éléments, mais il n'existe actuellement aucune propriété CSS qui ajoute des règles entre les éléments flex.
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
+```html live-sample___columns-flexbox-example
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
 
-On utilisera les boîtes flexibles pour :
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
 
-- Organiser des lignes ou colonnes d'objets indépendantes
-- Aligner les objets sur l'axe orthogonal au sens de lecture
-- Les cas où l'alignement d'une ligne sur l'autre n'est pas important
+```css live-sample___columns-flexbox-example
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px 10px;
+  font: 1.2em sans-serif;
 
-### Aligner des objets en lignes et colonnes — Utilisation d'une grille
+  display: flex;
+}
 
-Si on souhaite organiser des objets sur des lignes et sur des colonnes, alors on choisira une grille CSS. La disposition à l'aide d'une grille permet d'organiser les éléments fils d'un contener de la même façon que les boîtes flexibles mais on peut également aligner les lignes et les colonnes. Aussi, si les boîtes flexibles sont une méthode unidimensionnelle, les grilles CSS permettent de jouer sur les deux dimensions.
+.container > * {
+  padding: 10px;
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
+  margin: 0 10px;
+  flex: 1;
+}
+```
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
+{{EmbedLiveSample("columns-flexbox-example", "", 400)}}
 
-On utiliser les grilles CSS lorsque :
+Pour créer une mise en page avec des éléments flex qui passent sur de nouvelles lignes, réglez la propriété {{CSSxRef("flex-wrap")}} du conteneur sur `wrap`. Notez que chaque ligne flex répartit l'espace pour cette ligne uniquement. Les éléments d'une ligne ne s'aligneront pas nécessairement avec ceux d'autres lignes, comme le montre l'exemple ci‑dessous. C'est pourquoi flexbox est qualifié d'unidimensionnel&nbsp;: il est conçu pour contrôler la mise en page en ligne ou en colonne, mais pas les deux à la fois.
 
-- On a des éléments/objets à organiser sur plusieurs lignes et colonnes
-- On souhaite pouvoir aligner les éléments sur les deux axes
+```html live-sample___columns-flexbox-wrapping-example
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
 
-## Compatibilité des navigateurs
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
 
-{{Compat}}
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___columns-flexbox-wrapping-example
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px 10px;
+  width: 500px;
+  font: 1.2em sans-serif;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container > * {
+  padding: 10px;
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+
+  margin: 0 10px;
+  flex: 1 1 200px;
+}
+```
+
+{{EmbedLiveSample("columns-flexbox-wrapping-example", "", 450)}}
+
+Quand utiliser flexbox&nbsp;:
+
+- Pour une seule rangée ou une seule colonne d'éléments.
+- Lorsque vous souhaitez aligner les éléments sur l'axe secondaire après leur mise en page.
+- Lorsque vous acceptez que les éléments renvoyés à la ligne partagent l'espace uniquement sur leur ligne et ne s'alignent pas avec les éléments d'autres lignes.
+
+### Aligner des éléments en lignes et colonnes — mise en page en grille
+
+Si vous voulez une grille bidimensionnelle où les éléments s'alignent en _lignes_ et en _colonnes_, choisissez la mise en page CSS Grid. De la même manière que flexbox fonctionne sur les enfants directs du conteneur flex, la grille fonctionne sur les enfants directs du conteneur de grille. Il suffit de régler {{CSSxRef("display", "display: grid;")}} sur le conteneur. Les propriétés définies sur ce conteneur — comme {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}} — définissent la répartition des éléments sur les lignes et les colonnes.
+
+Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci‑dessous pour modifier l'exemple dans le MDN Playground&nbsp;:
+
+```html live-sample___grid-layout-example
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens.
+  </p>
+
+  <p>
+    Nori grape silver beet broccoli kombu beet greens fava bean potato quandong
+    celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens
+    parsnip.
+  </p>
+</div>
+```
+
+```css live-sample___grid-layout-example
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 500px;
+  font: 1.2em sans-serif;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.container > * {
+  padding: 10px;
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  margin: 0;
+}
+```
+
+{{EmbedLiveSample("grid-layout-example", "", 450)}}
+
+Quand utiliser la grille&nbsp;:
+
+- Pour plusieurs rangées ou colonnes d'éléments.
+- Lorsque vous voulez pouvoir aligner les éléments sur les axes de bloc et en ligne.
+- Lorsque vous souhaitez que les éléments s'alignent en lignes et en colonnes.
 
 ## Voir aussi
 
 - [Guide pour les dispositions multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout)
-- [Guide pour les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Guide pour les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout)
 - [Guide pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
