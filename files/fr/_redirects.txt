@@ -414,7 +414,7 @@
 /fr/docs/CSS/Pseudo-classes	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
 /fr/docs/CSS/Reference	/fr/docs/Web/CSS/Reference
-/fr/docs/CSS/Reference/Mozilla_Extensions	/fr/docs/Web/CSS/Mozilla_Extensions
+/fr/docs/CSS/Reference/Mozilla_Extensions	/fr/docs/Web/CSS/Reference/Mozilla_extensions
 /fr/docs/CSS/Reference/Sélecteurs_d'ID	/fr/docs/Web/CSS/ID_selectors
 /fr/docs/CSS/Reference/Sélecteurs_d'attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/CSS/Règles_@	/fr/docs/Web/CSS/CSS_syntax/At-rule
@@ -4713,8 +4713,8 @@
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordonner_éléments_flexibles	/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox	/fr/docs/Glossary/Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Utilisation_des_flexbox_en_CSS	/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/fr/docs/Web/CSS/Extensions_Mozilla	/fr/docs/Web/CSS/Mozilla_Extensions
-/fr/docs/Web/CSS/Extensions_WebKit	/fr/docs/Web/CSS/WebKit_Extensions
+/fr/docs/Web/CSS/Extensions_Mozilla	/fr/docs/Web/CSS/Reference/Mozilla_extensions
+/fr/docs/Web/CSS/Extensions_WebKit	/fr/docs/Web/CSS/Reference/Webkit_extensions
 /fr/docs/Web/CSS/FAQ	/fr/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /fr/docs/Web/CSS/Feuilles_de_style_alternatives	/fr/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 /fr/docs/Web/CSS/Filter_Effects	/fr/docs/Web/CSS/CSS_filter_effects
@@ -4723,7 +4723,7 @@
 /fr/docs/Web/CSS/Fusion_des_marges	/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
 /fr/docs/Web/CSS/General_sibling_combinator	/fr/docs/Web/CSS/Subsequent-sibling_combinator
 /fr/docs/Web/CSS/Héritage	/fr/docs/Web/CSS/CSS_cascade/Inheritance
-/fr/docs/Web/CSS/Implémentation_des_Brouillons_CSS	/fr/docs/Web/CSS/Mozilla_Extensions
+/fr/docs/Web/CSS/Implémentation_des_Brouillons_CSS	/fr/docs/Web/CSS/Reference/Mozilla_extensions
 /fr/docs/Web/CSS/Inheritance	/fr/docs/Web/CSS/CSS_cascade/Inheritance
 /fr/docs/Web/CSS/Inline_formatting_context	/fr/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context
 /fr/docs/Web/CSS/Jeux_de_caractères_CSS	/fr/docs/Web/CSS/CSS_syntax
@@ -4754,6 +4754,7 @@
 /fr/docs/Web/CSS/Modèle_de_boîte_CSS/Modèle_de_boîte	/fr/docs/Learn_web_development/Core/Styling_basics/Box_model
 /fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle	/fr/docs/Web/CSS/CSS_display/Visual_formatting_model
 /fr/docs/Web/CSS/Motion_Path	/fr/docs/Web/CSS/CSS_motion_path
+/fr/docs/Web/CSS/Mozilla_Extensions	/fr/docs/Web/CSS/Reference/Mozilla_extensions
 /fr/docs/Web/CSS/Média	/fr/docs/Web/CSS/@media
 /fr/docs/Web/CSS/Média/Visuel	/fr/docs/Web/CSS/@media
 /fr/docs/Web/CSS/Média_Paginé	/fr/docs/Web/CSS/CSS_paged_media
@@ -4764,12 +4765,10 @@
 /fr/docs/Web/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /fr/docs/Web/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
 /fr/docs/Web/CSS/Redimensionnement_arrière-plans_SVG	/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
-/fr/docs/Web/CSS/Reference/Extensions_Mozilla	/fr/docs/Web/CSS/Mozilla_Extensions
-/fr/docs/Web/CSS/Reference/Extensions_WebKit	/fr/docs/Web/CSS/WebKit_Extensions
-/fr/docs/Web/CSS/Reference/Mozilla_Extensions	/fr/docs/Web/CSS/Mozilla_Extensions
+/fr/docs/Web/CSS/Reference/Extensions_Mozilla	/fr/docs/Web/CSS/Reference/Mozilla_extensions
+/fr/docs/Web/CSS/Reference/Extensions_WebKit	/fr/docs/Web/CSS/Reference/Webkit_extensions
 /fr/docs/Web/CSS/Reference/Sélecteurs_d'ID	/fr/docs/Web/CSS/ID_selectors
 /fr/docs/Web/CSS/Reference/Sélecteurs_d'attribut	/fr/docs/Web/CSS/Attribute_selectors
-/fr/docs/Web/CSS/Reference/Webkit_Extensions	/fr/docs/Web/CSS/WebKit_Extensions
 /fr/docs/Web/CSS/Reference/background-blend-mode	/fr/docs/Web/CSS/background-blend-mode
 /fr/docs/Web/CSS/Reference/line-break	/fr/docs/Web/CSS/line-break
 /fr/docs/Web/CSS/Reference/mix-blend-mode	/fr/docs/Web/CSS/mix-blend-mode
@@ -4811,6 +4810,7 @@
 /fr/docs/Web/CSS/Value_definition_syntax	/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /fr/docs/Web/CSS/Viewport_concepts	/fr/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /fr/docs/Web/CSS/Visual_formatting_model	/fr/docs/Web/CSS/CSS_display/Visual_formatting_model
+/fr/docs/Web/CSS/WebKit_Extensions	/fr/docs/Web/CSS/Reference/Webkit_extensions
 /fr/docs/Web/CSS/_image	/fr/docs/Web/CSS/image/image
 /fr/docs/Web/CSS/align-tracks	/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /fr/docs/Web/CSS/attr()	/fr/docs/Web/CSS/attr
