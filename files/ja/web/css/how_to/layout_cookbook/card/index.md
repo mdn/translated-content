@@ -1,6 +1,7 @@
 ---
 title: カード
-slug: Web/CSS/Layout_cookbook/Card
+slug: Web/CSS/How_to/Layout_cookbook/Card
+original_slug: Web/CSS/Layout_cookbook/Card
 ---
 
 このパターンは、オプションでフッターが付く「カード」部品のリストです。

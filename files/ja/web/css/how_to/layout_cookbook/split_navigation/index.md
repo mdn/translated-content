@@ -1,6 +1,7 @@
 ---
 title: ナビゲーションの分割
-slug: Web/CSS/Layout_cookbook/Split_Navigation
+slug: Web/CSS/How_to/Layout_cookbook/Split_navigation
+original_slug: Web/CSS/Layout_cookbook/Split_Navigation
 ---
 
 1 つ以上の要素が他のナビゲーション項目から分離されているナビゲーションのパターンです。

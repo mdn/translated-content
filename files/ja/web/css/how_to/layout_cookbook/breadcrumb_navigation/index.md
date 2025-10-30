@@ -1,6 +1,7 @@
 ---
 title: パンくずナビゲーション
-slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+slug: Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+original_slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 l10n:
   sourceCommit: 14924a9cc3dddbce37565d152cbb30134d314308
 ---
