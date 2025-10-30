@@ -44,7 +44,7 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Extensions WebKit CSS](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions WebKit CSS](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - Pseudo-classes CSS associées&nbsp;:
   - [`:hover`](/fr/docs/Web/CSS/:hover)
   - [`:active`](/fr/docs/Web/CSS/:active)

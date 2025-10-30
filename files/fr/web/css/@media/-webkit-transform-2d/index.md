@@ -10,7 +10,7 @@ l10n:
 > [!NOTE]
 > Tous les navigateurs prennent en charge la propriété [`transform`](/fr/docs/Web/CSS/transform#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transform-2d`. Aucun navigateur ne prend en charge `transform` sans préfixe ou extension `2d` comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/@supports).
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-2d`** est une [extension WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui vaut `true` si les transformations CSS 2D {{cssxref("transform")}} préfixées et les requêtes média non standard préfixées sont prises en charge.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-2d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 2D {{cssxref("transform")}} préfixées et les requêtes média non standard préfixées sont prises en charge.
 
 Apple propose [une description dans la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 

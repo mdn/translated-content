@@ -6,6 +6,8 @@ name: System file changes
 
 on:
   pull_request_target:
+    branches:
+      - main
     paths:
       - ".github/**"
       - package.json

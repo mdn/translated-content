@@ -5,7 +5,7 @@ slug: Web/CSS/:-moz-handler-blocked
 
 {{Non-standard_header}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-handler-blocked`** est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été bloqué par l'utilisateur·ice.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-handler-blocked`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été bloqué par l'utilisateur·ice.
 
 > [!NOTE]
 > Cette pseudo-classe est principalement destinée aux développeur·euse·s de thèmes.

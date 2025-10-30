@@ -57,5 +57,5 @@ Cette propriété ne fait partie d'aucun standard. Elle est décrite dans [la r�
 
 ## Voir aussi
 
-- [Extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions CSS WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - [-webkit-touch-callout dans la documentation Apple <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)
