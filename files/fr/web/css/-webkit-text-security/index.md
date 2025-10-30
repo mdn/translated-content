@@ -59,4 +59,4 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions CSS WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions)
