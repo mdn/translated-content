@@ -1,63 +1,188 @@
 ---
 title: Objets avec média
 slug: Web/CSS/How_to/Layout_cookbook/Media_objects
-original_slug: Web/CSS/Layout_cookbook/Media_objects
+l10n:
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
-Le motif _Media Object_ (qu'on peut traduire en « objet avec média ») est un motif qu'on rencontre fréquemment sur le Web. [Intitulé ainsi par Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/), cela fait référence à une boîte organisée en deux colonnes dont l'une contient une image d'un côté et un texte descriptif de l'autre (par exemple l'image de profil de quelqu'un à gauche et un billet à droite).
+Le motif _Media Object_ («&nbsp;objet média&nbsp;») est un modèle que l'on retrouve partout sur le Web. Il s'agit d'une boîte à deux colonnes avec une image d'un côté et un texte descriptif de l'autre, par exemple dans une publication sur un réseau social.
 
-![](media-object.png)
+![Exemple d'objet média avec une image de profil à gauche et un texte lorem ipsum à droite occupant 80 % de l'espace](media-object.png)
 
-## Spécifications sommaires
+## Exigences
 
-Voici ce qu'on souhaite obtenir :
+Le motif objet média doit présenter tout ou partie des caractéristiques suivantes&nbsp;:
 
-- Un empilement des deux zones sur mobile et deux colonnes sur ordinateur
-- L'image peut être à gauche ou à droite
-- L'image peut être petite ou grande
-- Les objets avec média peuvent être imbriqués
-- L'objet avec média devrait dégager l'espace pour le contenu, quel que soit le côté le plus grand.
+- Empilé sur mobile, deux colonnes sur ordinateur.
+- L'image peut être à gauche ou à droite.
+- L'image peut être petite ou grande.
+- Les objets média peuvent être imbriqués.
+- L'objet média doit gérer le contenu quel que soit le côté le plus haut.
 
 ## Recette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
+Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci-dessous pour modifier l'exemple dans le MDN Playground&nbsp;:
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html).
+```html live-sample___media-objects-example
+<div class="media">
+  <div class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+      alt="Ballons" />
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+  <div class="footer">Un pied de page optionnel peut être ajouté ici.</div>
+</div>
+
+<div class="media">
+  <div class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/sharp-account_box-24px.svg"
+      width="80px"
+      alt="Compte" />
+  </div>
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+  <div class="footer"></div>
+</div>
+```
+
+```html hidden live-sample___media-objects-example
+<div class="media media-flip">
+  <div class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+      alt="Ballons" />
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+  <div class="footer">Un pied de page optionnel peut être ajouté ici.</div>
+</div>
+
+<div class="media">
+  <a class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+      alt="Ballons" />
+  </a>
+
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+
+  <div class="footer"></div>
+
+  <div class="media">
+    <a class="img">
+      <img
+        src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+        alt="Ballons" />
+    </a>
+
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+        vitae ligula sit amet maximus.
+      </p>
+    </div>
+
+    <div class="footer"></div>
+  </div>
+</div>
+```
+
+```css live-sample___media-objects-example
+body {
+  font: 1.2em sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+@media (width >= 500px) {
+  .media {
+    display: grid;
+    grid-template-columns: fit-content(200px) 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "image content"
+      "image footer";
+    grid-gap: 20px;
+    margin-bottom: 4em;
+  }
+
+  .media-flip {
+    grid-template-columns: 1fr fit-content(250px);
+    grid-template-areas:
+      "content image"
+      "footer image";
+  }
+
+  .img {
+    grid-area: image;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
+```
+
+{{EmbedLiveSample("media-objects-example", "", 1500)}}
 
 ## Choix effectués
 
-On a ici choisi d'utiliser [une grille](/fr/docs/Web/CSS/CSS_grid_layout) pour réaliser cet objet. cela permet de contrôler les deux dimensions lorsqu'on en a besoin. Ainsi, si on a besoin d'un pied de page avec un contenu au dessus, le pied de page peut être poussé sous l'objet.
+J'ai choisi d'utiliser la [mise en page par grille](/fr/docs/Web/CSS/CSS_grid_layout) pour l'objet média, car elle permet de contrôler la disposition sur deux axes lorsque c'est nécessaire. Ainsi, lorsqu'il y a un pied de page avec un contenu court au-dessus, le pied de page peut être repoussé en bas de l'objet média.
 
-La grille permet également d'utiliser {{cssxref("fit-content")}} pour la piste contenant l'image. En utilisant `fit-content` avec une taille maximale de 200 pixels, lorsqu'on a une petite image (une icône), la piste est réduite à la taille de cette image. Si l'image est plus grande, la piste ne sera pas plus large que 200 pixels, de plus, l'image ayant {{cssxref("max-width ")}} avec 100%, elle sera redimensionnée afin de pouvoir tenir dans la colonne.
+Une autre raison d'utiliser la grille est de pouvoir utiliser {{CSSxRef("fit-content")}} pour la taille de la piste de l'image. En utilisant `fit-content` avec une taille maximale de 200 pixels, lorsqu'on a une petite image comme l'icône, la piste ne prend que la taille de cette image — la taille `max-content`. Si l'image est plus grande, la piste s'arrête à 200 pixels et comme l'image a un {{CSSxRef("max-width")}} de 100 % appliqué, elle est réduite pour continuer à tenir dans la colonne.
 
-En utilisant {{cssxref("grid-template-areas")}} pour dessiner la disposition, on peut voir le motif dans la feuille de style CSS. La grille est définie lorsqu'on a `max-width` qui vaut au moins 500 pixels et on a donc un empilement pour les plus petits écrans.
+En utilisant {{CSSxRef("grid-template-areas")}} pour réaliser la disposition, on visualise le motif dans le CSS. Je définis la grille dès que la zone d'affichage (<i lang="en">viewport</i> en anglais) atteint 500 pixels de large, donc sur les petits appareils, l'objet média s'empile.
 
-En ajoutant une classe `media-flip`, on fournit une disposition alternative qui permet de changer le côté sur lequel l'image est affichée.
+Une option pour ce motif est de l'inverser pour placer l'image de l'autre côté&nbsp;: cela se fait en ajoutant la classe `media-flip`, qui définit un modèle de grille inversé et provoque le miroir de la disposition.
 
-Lorsqu'on imbrique un objet dans un autre, il faut le placer dans la deuxième piste en mode normal et sur la première lorsqu'on choisit d'inverser le côté de l'image.
-
-## Méthodes alternatives
-
-Il existe différentes méthodes alternatives permettant d'obtenir ce résultat selon les navigateurs que vous souhaitez prendre en charge. Une méthode assez générique consiste à placer l'image en flottante à gauche et d'ajouter un dégagement sur la boîte afin qu'elle contienne bien tous les éléments flottants.
-
-{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
-
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html).
-
-Une fois que les éléments flottants sont des éléments de grille, les dégagements ne s'appliquent plus et il n'est donc pas nécessaire de retirer quoi que ce soit sur les dégagements.
-
-En revanche, il faudra retirer les marges appliquées aux objets et les largeurs superflues pour la grille (la propriété {{cssxref("gap")}} permet de contrôler l'espace entre et les pistes gèrent le reste du dimensionnement).
-
-## Compatibilité des navigateurs
-
-{{Compat}}
+Quand on imbrique un objet média dans un autre, il faut le placer dans la deuxième piste dans la disposition normale, et dans la première piste quand le motif est inversé.
 
 ## Voir aussi
 
-- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [L'amélioration progressive et les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Utiliser les zones nommées des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [`fit-content`](/fr/docs/Web/CSS/fit-content)
-- [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas)
+- La propriété {{CSSxRef("fit-content")}}
+- [Utiliser les zones de grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Mise en page par grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)
