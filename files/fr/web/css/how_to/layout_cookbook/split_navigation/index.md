@@ -1,38 +1,65 @@
 ---
 title: Navigation segmentée
 slug: Web/CSS/How_to/Layout_cookbook/Split_navigation
-original_slug: Web/CSS/Layout_cookbook/Split_Navigation
+l10n:
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
-{{CSSRef}}
+La **navigation segmentée** est un motif de navigation où un ou plusieurs éléments sont séparés du reste des éléments de navigation.
 
-Une barre de navigation divisée consiste en un ou plusieurs éléments de navigation séparés des autres éléments de navigation.
+![Éléments séparés en deux groupes.](split-navigation.png)
 
-![Items separated into two groups.](split-navigation.png)
+## Exigences
 
-## Spécifications sommaires
+Un motif courant de navigation consiste à éloigner un élément des autres. On peut utiliser flexbox pour obtenir ce résultat, sans avoir besoin de créer deux conteneurs flex distincts.
 
-Une telle barre de navigation consiste généralement à avoir un élément écarté des autres. Pour cela, on va pouvoir utiliser les boîtes flexibles sans avoir besoin de deux conteneurs flexibles.
+## Recette
 
-## Exemple appliqué
+Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci-dessous pour modifier l'exemple dans le MDN Playground&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
+```html live-sample___split-navigation-example
+<nav>
+  <ul class="main-nav">
+    <li><a href="">À propos</a></li>
+    <li><a href="">Produits</a></li>
+    <li><a href="">Notre équipe</a></li>
+    <li class="push"><a href="">Contact</a></li>
+  </ul>
+</nav>
+```
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html).
+```css live-sample___split-navigation-example
+.main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 1.2em sans-serif;
+
+  display: flex;
+}
+
+.main-nav a {
+  padding: 0.5em 1em;
+  display: block;
+}
+
+.push {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("split-navigation-example")}}
 
 ## Choix effectués
 
-Ce composant utilise les marges automatiques et les boîtes flexibles pour séparer l'élément voulu.
+Ce motif combine les marges automatiques avec flexbox pour séparer les éléments.
 
-Une marge automatique absorbe tout l'espace disponible sur la direction à laquelle elle est appliquée. C'est comme cela qu'on peut centrer un bloc avec des marges automatiques, de chaque côté du bloc, la marge essaye de consommer le plus d'espace possible et _pousse_ le bloc au milieu.
+Une marge automatique absorbe tout l'espace disponible dans la direction où elle est appliquée. C'est ainsi que le centrage d'un bloc avec des marges automatiques fonctionne — vous avez une marge de chaque côté du bloc qui tente de prendre tout l'espace, ce qui pousse le bloc au centre.
 
-Dans notre exemple, c'est la marge à gauche du dernier élément qui est automatique et qui consomme l'espace, poussant ainsi l'élément sur la droite. Pour déplacer la séparation, on peut appliquer la classe `push` à n'importe quel élément de la liste.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
+Dans ce cas, la marge automatique à gauche prend tout l'espace disponible et pousse l'élément vers la droite. Vous pouvez appliquer la classe `push` à n'importe quel élément de la liste.
 
 ## Voir aussi
 
-- [Le module de spécification _CSS Flexible Box Layout_](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Mise en page flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- La propriété {{CSSxRef("display")}}
+- La propriété {{CSSxRef("margin")}}
