@@ -7,9 +7,7 @@ l10n:
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-**`DOMPoint`** 对象表示坐标系统中的一个二维或三维点；它包含最多三个维度的坐标值以及一个可选的透视值。
-
-`DOMPoint` 基于 {{domxref("DOMPointReadOnly")}}，但允许修改其属性的值。
+**`DOMPoint`** 对象表示坐标系统中的一个二维或三维点；它包含最多三个维度的坐标值以及一个可选的透视值。`DOMPoint` 基于 {{domxref("DOMPointReadOnly")}}，但允许修改其属性的值。
 
 一般而言，`x` 的正值表示位于原点右侧的位置，`y` 的正值表示位于原点下方，而 `z` 的正值表示从屏幕向外（即朝向用户）的方向。
 
@@ -39,7 +37,7 @@ _`DOMPoint` 继承父接口 {{domxref("DOMPointReadOnly")}} 的实例方法。_
 
 ## 静态方法
 
-_`DOMPoint` 还可能继承自父接口 {{domxref("DOMPointReadOnly")}} 的静态方法。_
+_`DOMPoint` 还可能继承父接口 {{domxref("DOMPointReadOnly")}} 的静态方法。_
 
 - {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
   - : 根据一个已有的点（或包含相应属性的对象）创建一个新的可变 `DOMPoint` 对象，并使用该点的属性值进行初始化。
