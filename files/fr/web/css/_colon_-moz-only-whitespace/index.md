@@ -8,7 +8,7 @@ slug: Web/CSS/:-moz-only-whitespace
 > [!NOTE]
 > Dans la spécification [CSS4 Selectors <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-only-whitespace`** est un [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-only-whitespace`** est un [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
 
 ## Syntaxe
 

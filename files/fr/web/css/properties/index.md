@@ -597,6 +597,6 @@ Les propriétés non standard ou préfixées par le navigateur comprennent les s
 
 - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
 - [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
-- [Extensions CSS de Mozilla (-moz-)](/fr/docs/Web/CSS/Mozilla_Extensions)
-- [Extensions CSS de WebKit (-webkit-)](/fr/docs/Web/CSS/WebKit_Extensions)
+- [Extensions CSS de Mozilla (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
+- [Extensions CSS de WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "Préfixe vendeur")}}
