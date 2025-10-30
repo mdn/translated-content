@@ -1,40 +1,144 @@
 ---
 title: Centrer un élément
 slug: Web/CSS/How_to/Layout_cookbook/Center_an_element
-original_slug: Web/CSS/Layout_cookbook/Center_an_element
+l10n:
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
-{{CSSRef}}
+Dans cette recette, vous verrez comment centrer une boîte à l'intérieur d'une autre en utilisant [flexbox](#utiliser_flexbox) et [grid](#utiliser_grid), en centrant le contenu à la fois horizontalement et verticalement.
 
-Comment centrer une boîte dans une autre boîte ? Centrer à la fois horizontalement et verticalement était difficile avant l'arrivée des boîtes flexibles (_flexbox_), mais c'est désormais beaucoup plus simple grâce aux propriétés du module de spécification _Box Alignment_.
+![Un élément centré dans une boîte plus grande](cookbook-center.png)
 
-![an element centered inside a larger box](cookbook-center.png)
+## Exigences
 
-## Spécifications sommaires
-
-Centrer un élément à la fois horizontalement et verticalement dans un autre élément.
+Placer un élément au centre d'une autre boîte, horizontalement et verticalement.
 
 ## Recette
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code ci‑dessous pour modifier l'exemple dans le MDN Playground&nbsp;:
 
-> [!NOTE]
-> [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
+```html live-sample___center-example
+<div class="container">
+  <div class="item">Je suis centré&nbsp;!</div>
+</div>
+```
 
-## Choix effectués
+```css live-sample___center-example
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+}
 
-Pour centrer une boîte dans une autre, on a donné au contenant une propriété `display: flex`.
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  font: 1.2em sans-serif;
 
-Ensuite, on a paramétré {{cssxref("align-items")}} avec la valeur `center` pour centrer la boîte verticalement, et {{cssxref("justify-content")}} avec la valeur `center` pour centrer horizontalement.
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
 
-À l'avenir, nous pourrons peut-être centrer les éléments sans avoir à transformer le parent en contenant flexible, puisque les propriétés de Box Alignment utilisées ici sont aussi faites pour s'appliquer à une disposition en bloc classique.
-Cependant, sa prise en charge dans ce cas (disposition en bloc) est actuellement limitée ; l'utilisation de Flexbox pour centrer est donc, pour le moment, la technique la plus robuste.
+{{EmbedLiveSample("center-example", "", 250)}}
 
-## Compatibilité des navigateurs
+## Utiliser `flexbox`
 
-{{Compat}}
+Pour centrer une boîte à l'intérieur d'une autre, commencez par transformer la boîte englobante en [conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#le_conteneur_flexible) en réglant sa propriété {{CSSxRef("display")}} sur `flex`. Ensuite, définissez {{CSSxRef("align-items")}} sur `center` pour le centrage vertical (sur l'axe de bloc) et {{CSSxRef("justify-content")}} sur `center` pour le centrage horizontal (sur l'axe en ligne). C'est tout ce qu'il faut pour centrer une boîte à l'intérieur d'une autre&nbsp;!
+
+### HTML
+
+```html
+<div class="container">
+  <div class="item">Je suis centré&nbsp;!</div>
+</div>
+```
+
+### CSS
+
+```css
+div {
+  border: solid 3px;
+  padding: 1em;
+  max-width: 75%;
+}
+
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+}
+
+.container {
+  height: 8em;
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  font: 1.2em sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+Nous donnons une hauteur au conteneur afin de montrer que l'élément intérieur est effectivement centré verticalement dans le conteneur.
+
+### Résultat
+
+{{EmbedLiveSample("Utiliser `flexbox`", "", 200)}}
+
+Au lieu d'appliquer `align-items: center;` au conteneur, vous pouvez aussi centrer verticalement l'élément intérieur en définissant {{CSSxRef("align-self")}} sur `center` pour cet élément.
+
+## Utiliser `grid`
+
+Une autre méthode pour centrer une boîte à l'intérieur d'une autre consiste à transformer d'abord la boîte englobante en [conteneur de grille](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#le_conteneur_de_grille) puis à régler sa propriété {{CSSxRef("place-items")}} sur `center` afin d'aligner ses éléments à la fois sur l'axe de bloc et sur l'axe en ligne.
+
+### HTML
+
+```html
+<div class="container">
+  <div class="item">Je suis centré&nbsp;!</div>
+</div>
+```
+
+### CSS
+
+```css
+div {
+  border: solid 3px;
+  padding: 1em;
+  max-width: 75%;
+}
+
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+}
+
+.container {
+  height: 8em;
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  font: 1.2em sans-serif;
+
+  display: grid;
+  place-items: center;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample("Utiliser `grid`", "", 200)}}
+
+Au lieu d'appliquer `place-items: center;` au conteneur, vous pouvez obtenir le même centrage en appliquant {{CSSxRef("place-content", "place-content: center;")}} sur le conteneur ou en appliquant soit {{CSSxRef("place-self", "place-self: center")}} soit {{CSSxRef("margin", "margin: auto;")}} sur l'élément intérieur.
 
 ## Voir aussi
 
 - [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS Box alignment guide](/fr/docs/Web/CSS/CSS_box_alignment)
+- [Guide d'alignement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_alignment)
