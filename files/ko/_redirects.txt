@@ -840,6 +840,7 @@
 /ko/docs/Web/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ko/docs/Web/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ko/docs/Web/CSS/Inheritance	/ko/docs/Web/CSS/CSS_cascade/Inheritance
+/ko/docs/Web/CSS/Layout_cookbook/Center_an_element	/ko/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element
 /ko/docs/Web/CSS/Layout_mode	/ko/docs/Glossary/Layout_mode
 /ko/docs/Web/CSS/Media_Queries	/ko/docs/Web/CSS/CSS_media_queries
 /ko/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility

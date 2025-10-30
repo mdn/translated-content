@@ -1,6 +1,6 @@
 ---
 title: 具有 Mozilla 厂商前缀的 CSS 扩展
-slug: Web/CSS/Mozilla_Extensions
+slug: Web/CSS/Reference/Mozilla_extensions
 l10n:
   sourceCommit: d36cd679498a75dccf51685d8e178994a0df585e
 ---
@@ -507,4 +507,4 @@ Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属
 ## 参见
 
 - [厂商前缀](/zh-CN/docs/Glossary/Vendor_Prefix)术语表条目
-- [具有 WebKit 厂商前缀的 CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [具有 WebKit 厂商前缀的 CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)
