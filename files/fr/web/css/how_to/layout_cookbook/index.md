@@ -1,31 +1,45 @@
 ---
-title: CSS Layout cookbook
+title: Livre de recettes CSS
 slug: Web/CSS/How_to/Layout_cookbook
-original_slug: Web/CSS/Layout_cookbook
+l10n:
+  sourceCommit: f3bf4e2bd456159093d3820253be9f266ace070a
 ---
 
-{{CSSRef}}
-
-Le livre de recettes CSS vise à illustrer différents motifs qu'on retrouve fréquemment sur le Web et qu'on pourrait souhaiter implémenter pour son propre site. En plus de fournir du code qui peut servir de point de départ, ces recettes mettent en avant les différents outils et dispositions qui peuvent être utilisées et les choix à effectuer lors du développement.
+Le livre de recettes CSS vise à rassembler des recettes pour les motifs de mise en page courants, que vous pourriez avoir besoin d'implémenter sur vos propres sites. En plus de fournir du code que vous pouvez utiliser comme point de départ dans vos projets, ces recettes mettent en avant les différentes façons d'utiliser les spécifications de mise en page, ainsi que les choix que vous pouvez faire en tant que développeur·euse.
 
 > [!NOTE]
-> Si vous débutez en CSS, nous vous conseillons de consulter [notre module sur l'apprentissage de la disposition en CSS](/fr/docs/Learn_web_development/Core/CSS_layout). Ce guide vous fournira les informations de base pour comprendre le fonctionnement de chacune de ces recettes.
+> Si vous débutez avec la mise en forme CSS, vous pouvez d'abord consulter notre [module d'apprentissage de la mise en page CSS](/fr/docs/Learn_web_development/Core/CSS_layout), qui vous donnera les bases nécessaires pour profiter pleinement des recettes proposées ici.
 
-## Les recettes
+## Recettes
 
-| Recette                                                                                                  | Description                                                                                                                                                              | Méthodes de disposition utilisées                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Objets avec média](/fr/docs/Web/CSS/Layout_cookbook/Media_objects)                                      | Une boîte constituée de deux colonnes avec une image d'un côté et un texte descriptif de l'autre (par exemple un tweet ou une publication Facebook intégrée à une page). | [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout), {{cssxref("float")}} pour une méthode de recours, dimensionnement avec {{cssxref("fit-content")}}                       |
-| [Colonnes](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts)                                              | Comment choisir entre une disposition multi-colonnes, les boites flexibles (flexbox) ou les grilles CSS pour organiser des colonnes de contenu.                          | [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout), [Disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout), [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) |
-| [Centrer un élément](/fr/docs/Web/CSS/Layout_cookbook/Center_an_element)                                 | Comment centrer un élément horizontalement et verticalement.                                                                                                             | [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout), [Alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment)                                                         |
-| [Bas de page adhérant](/fr/docs/Web/CSS/Layout_cookbook/Sticky_footers)                                  | Créer un pied de page qui se situe en bas du conteneur ou de la zone d'affichage (_viewport_) lorsque le contenu est plus petit que la zone ou le conteneur.             | [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout), [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout)                                                                     |
-| [Navigation segmentée](/fr/docs/Web/CSS/Layout_cookbook/Split_Navigation)                                | Un motif de navigation où certains liens sont séparés des autres.                                                                                                        | [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout), {{cssxref("margin")}}                                                                                               |
-| [Navigation avec un fil d'Ariane (_breadcrumb_)](/fr/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation) | Créer une liste de liens qui permette au visiteur de naviguer selon la hiérarchie des pages.                                                                             | [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout)                                                                                                                      |
-| [Liste de groupes avec indicateurs](/fr/docs/Web/CSS/Layout_cookbook/List_group_with_badges)             | Afficher une liste d'éléments avec chacun un indicateur numérique.                                                                                                       | [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout), [Alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment)                                                         |
-| [Pagination](/fr/docs/Web/CSS/Layout_cookbook/Pagination)                                                | Comment créer des liens pour différentes pages, ordonnées, de contenu (les résultats d'une recherche par exemple).                                                       | [Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout), [Alignement des boîtes](/fr/docs/Web/CSS/CSS_box_alignment)                                                         |
-| [Carte](/fr/docs/Web/CSS/Layout_cookbook/Card)                                                           | Un composant sous forme de carte. L'assemblage de tels composants formera une grille de cartes.                                                                          | [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)                                                                                                                          |
-| [Envelopper une grille (_grid wrapper_)](/fr/docs/Web/CSS/Layout_cookbook/Grid_wrapper)                  | Comment aligner certains éléments au centre d'une grille et permettre à d'autres d'être alignés sur les bords.                                                           | [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)                                                                                                                          |
+| Recette                                | Description                                                                                                                             | Méthodes de mise en page                                                                                   |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| [Objets média][media-objects]          | Une boîte à deux colonnes avec une image d'un côté et un texte descriptif de l'autre, par exemple une publication sur un réseau social. | [Grille CSS][css-grid], solution de repli {{CSSxRef("float")}}, dimensionnement {{CSSxRef("fit-content")}} |
+| [Colonnes][columns]                    | Quand choisir la mise en colonnes, flexbox ou grille pour vos colonnes.                                                                 | [Grille CSS][css-grid], [Colonnes multiples][multicol], [Flexbox][flexbox]                                 |
+| [Centrer un élément][center]           | Comment centrer un élément horizontalement et verticalement.                                                                            | [Flexbox][flexbox], [Alignement des boîtes][box-alignment]                                                 |
+| [Pied de page collant][sticky-footers] | Créer un pied de page qui reste en bas du conteneur ou de la zone d'affichage lorsque le contenu est court.                             | [Grille CSS][css-grid], [Flexbox][flexbox]                                                                 |
+| [Navigation séparée][split-navigation] | Un motif de navigation où certains liens sont visuellement séparés des autres.                                                          | [Flexbox][flexbox], {{CSSxRef("margin")}}                                                                  |
+| [Fil d'Ariane][breadcrumb]             | Créer une liste de liens permettant à l'utilisateur·ice de remonter dans la hiérarchie de la page.                                      | [Flexbox][flexbox]                                                                                         |
+| [Liste avec indicateurs][list-badges]  | Une liste d'éléments avec un indicateur affichant un nombre.                                                                            | [Flexbox][flexbox], [Alignement des boîtes][box-alignment]                                                 |
+| [Pagination][pagination]               | Liens vers des pages de contenu (par exemple des résultats de recherche).                                                               | [Flexbox][flexbox], [Alignement des boîtes][box-alignment]                                                 |
+| [Carte][card]                          | Un composant carte, affiché dans une grille de cartes.                                                                                  | [Grille CSS][css-grid]                                                                                     |
+| [Grille englobante][grid-wrapper]      | Pour aligner le contenu d'une grille dans un conteneur central tout en permettant à certains éléments de sortir du cadre.               | [Grille CSS][css-grid]                                                                                     |
 
-## Contribuer en créant une recette
+[media-objects]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Media_objects
+[columns]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts
+[center]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element
+[sticky-footers]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Sticky_footers
+[split-navigation]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Split_navigation
+[breadcrumb]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+[list-badges]: /fr/docs/Web/CSS/How_to/Layout_cookbook/List_group_with_badges
+[pagination]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Pagination
+[card]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Card
+[grid-wrapper]: /fr/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+[css-grid]: /fr/docs/Web/CSS/CSS_grid_layout
+[multicol]: /fr/docs/Web/CSS/CSS_multicol_layout
+[flexbox]: /fr/docs/Web/CSS/CSS_flexible_box_layout
+[box-alignment]: /fr/docs/Web/CSS/CSS_box_alignment
 
-MDN est un wiki auquel vous pouvez contribuer, y compris en ajoutant une recette à celles-ci ! [Voir cette page](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe) pour un modèle ainsi que les règles à suivre pour créer votre propre exemple.
+## Contribuer une recette
+
+Comme pour tout MDN, nous serions ravi·e·s que vous contribuiez en proposant une recette au même format que celles présentées ci-dessus. Consultez le [guide pour ajouter une recette au livre de recettes de mise en page](/fr/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe) pour obtenir un modèle et des conseils pour rédiger votre propre exemple.
