@@ -1,6 +1,7 @@
 ---
 title: ページ付け
-slug: Web/CSS/Layout_cookbook/Pagination
+slug: Web/CSS/How_to/Layout_cookbook/Pagination
+original_slug: Web/CSS/Layout_cookbook/Pagination
 l10n:
   sourceCommit: e6f3d674aff436f22b7a4e5bb59a02161492d1ef
 ---

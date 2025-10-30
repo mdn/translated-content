@@ -1,6 +1,7 @@
 ---
 title: 張りつくフッター
-slug: Web/CSS/Layout_cookbook/Sticky_footers
+slug: Web/CSS/How_to/Layout_cookbook/Sticky_footers
+original_slug: Web/CSS/Layout_cookbook/Sticky_footers
 ---
 
 張りつくフッターのパターンは、コンテンツがビューポートの高さより短い場合に、ページのフッターがビューポートの下部に「張りつく」パターンです。 このレシピでこれを作成するためのいくつかのテクニックを見ていきます。

@@ -1,6 +1,7 @@
 ---
 title: 料理帳テンプレート
-slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 ---
 
 > [!CALLOUT]

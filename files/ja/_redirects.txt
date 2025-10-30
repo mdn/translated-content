@@ -229,7 +229,7 @@
 /ja/docs/CSS/Background_Backup	/ja/docs/Web/CSS/background
 /ja/docs/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
-/ja/docs/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
+/ja/docs/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Reference/Mozilla_extensions
 /ja/docs/CSS/CSS_animated_properties	/ja/docs/Web/CSS/CSS_animated_properties
 /ja/docs/CSS/CSS_animations	/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /ja/docs/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
@@ -534,8 +534,8 @@
 /ja/docs/CSS:initial_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing
 /ja/docs/CSS:min-width	/ja/docs/Web/CSS/min-width
 /ja/docs/CSS_Reference	/ja/docs/Web/CSS/Reference
-/ja/docs/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
-/ja/docs/CSS_Reference:Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
+/ja/docs/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Reference/Mozilla_extensions
+/ja/docs/CSS_Reference:Mozilla_Extensions	/ja/docs/Web/CSS/Reference/Mozilla_extensions
 /ja/docs/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
 /ja/docs/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Canvas	/ja/docs/Web/API/Canvas_API
@@ -4062,7 +4062,7 @@
 /ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /ja/docs/Web/CSS/CSS_Properties_Reference	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
-/ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
+/ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Reference/Mozilla_extensions
 /ja/docs/Web/CSS/CSS_Ruby	/ja/docs/Web/CSS/CSS_ruby_layout
 /ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/ja/docs/Web/CSS/CSS_scroll_snap
 /ja/docs/Web/CSS/CSS_Scroll_Snap_Points	/ja/docs/Web/CSS/CSS_scroll_snap
@@ -4131,6 +4131,19 @@
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/Web/CSS/Inheritance	/ja/docs/Web/CSS/CSS_cascade/Inheritance
+/ja/docs/Web/CSS/Layout_cookbook	/ja/docs/Web/CSS/How_to/Layout_cookbook
+/ja/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation	/ja/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
+/ja/docs/Web/CSS/Layout_cookbook/Card	/ja/docs/Web/CSS/How_to/Layout_cookbook/Card
+/ja/docs/Web/CSS/Layout_cookbook/Center_an_element	/ja/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element
+/ja/docs/Web/CSS/Layout_cookbook/Column_layouts	/ja/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts
+/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe	/ja/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
+/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template	/ja/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+/ja/docs/Web/CSS/Layout_cookbook/Grid_wrapper	/ja/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper
+/ja/docs/Web/CSS/Layout_cookbook/List_group_with_badges	/ja/docs/Web/CSS/How_to/Layout_cookbook/List_group_with_badges
+/ja/docs/Web/CSS/Layout_cookbook/Media_objects	/ja/docs/Web/CSS/How_to/Layout_cookbook/Media_objects
+/ja/docs/Web/CSS/Layout_cookbook/Pagination	/ja/docs/Web/CSS/How_to/Layout_cookbook/Pagination
+/ja/docs/Web/CSS/Layout_cookbook/Split_Navigation	/ja/docs/Web/CSS/How_to/Layout_cookbook/Split_navigation
+/ja/docs/Web/CSS/Layout_cookbook/Sticky_footers	/ja/docs/Web/CSS/How_to/Layout_cookbook/Sticky_footers
 /ja/docs/Web/CSS/Layout_mode	/ja/docs/Glossary/Layout_mode
 /ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
@@ -4140,6 +4153,7 @@
 /ja/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility	/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 /ja/docs/Web/CSS/Media_Queries/Using_media_queries	/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_motion_path
+/ja/docs/Web/CSS/Mozilla_Extensions	/ja/docs/Web/CSS/Reference/Mozilla_extensions
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Paged_Media	/ja/docs/Web/CSS/CSS_paged_media
 /ja/docs/Web/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
@@ -4149,7 +4163,6 @@
 /ja/docs/Web/CSS/Reference/@viewport/orientation	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/user-zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/Web/CSS
-/ja/docs/Web/CSS/Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/Web/CSS/Replaced_element	/ja/docs/Web/CSS/CSS_images/Replaced_element_properties
 /ja/docs/Web/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /ja/docs/Web/CSS/Scaling_of_SVG_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
@@ -4177,6 +4190,7 @@
 /ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /ja/docs/Web/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
+/ja/docs/Web/CSS/WebKit_Extensions	/ja/docs/Web/CSS/Reference/Webkit_extensions
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
 /ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
