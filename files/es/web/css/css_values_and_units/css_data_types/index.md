@@ -1,7 +1,6 @@
 ---
 title: Tipos de datos básicos de CSS
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
-original_slug: Web/CSS/CSS_Types
+slug: Web/CSS/CSS_values_and_units/CSS_data_types
 ---
 
 Los **tipos de datos básicos de CSS** definen los valores típicos (incluidas las palabras clave y las unidades) aceptados por las propiedades y funciones de CSS. Son un tipo especial de [valor de componente](https://www.w3.org/TR/css3-values/#component-types).
