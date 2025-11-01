@@ -1,9 +1,9 @@
 ---
 title: CSS プロパティ
+short-title: プロパティ
 slug: Web/CSS/Reference/Properties
-original_slug: Web/CSS/Properties
 l10n:
-  sourceCommit: 09877330004e55244a9e8eee2ca04a750970f72d
+  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
 ---
 
 [CSS](/ja/docs/Web/CSS) **プロパティ**は、 [CSS 宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言)で使用される引数で、選択した要素の特定の側面をスタイル設定するために使用します。
@@ -41,7 +41,7 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 ### その他
 
-- [カスタムプロパティ (`--*`): CSS 変数](/ja/docs/Web/CSS/--*)
+- [カスタムプロパティ (`--*`): CSS 変数](/ja/docs/Web/CSS/Reference/Properties/--*)
 
 ### A
 
@@ -571,7 +571,6 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 - {{CSSxRef("-moz-float-edge")}}
 - {{CSSxRef("-moz-force-broken-image-icon")}}
-- {{CSSxRef("-moz-image-region")}}
 - {{CSSxRef("-moz-orient")}}
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}
@@ -602,6 +601,6 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-- [Firefox (-moz-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
-- [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
+- [Firefox (-moz-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)
+- [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "ベンダー接頭辞")}}
