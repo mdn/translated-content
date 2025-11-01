@@ -3882,26 +3882,19 @@
       "iigmir"
     ]
   },
-  "Web/CSS/Type_selectors": {
-    "modified": "2020-10-15T22:16:41.850Z",
-    "contributors": [
-      "a1178961372",
-      "YvonneYu"
-    ]
-  },
-  "Web/CSS/animation-fill-mode": {
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
     "modified": "2019-03-18T21:42:33.553Z",
     "contributors": [
       "yoonasy"
     ]
   },
-  "Web/CSS/background-attachment": {
+  "Web/CSS/Reference/Properties/background-attachment": {
     "modified": "2020-10-15T22:23:27.829Z",
     "contributors": [
       "ayugioh2003"
     ]
   },
-  "Web/CSS/background-color": {
+  "Web/CSS/Reference/Properties/background-color": {
     "modified": "2020-10-15T21:39:17.646Z",
     "contributors": [
       "SphinxKnight",
@@ -3910,7 +3903,7 @@
       "Shiyou"
     ]
   },
-  "Web/CSS/border-image": {
+  "Web/CSS/Reference/Properties/border-image": {
     "modified": "2019-03-24T00:08:26.325Z",
     "contributors": [
       "wbamberg",
@@ -3918,7 +3911,7 @@
       "Kennyluck"
     ]
   },
-  "Web/CSS/box-shadow": {
+  "Web/CSS/Reference/Properties/box-shadow": {
     "modified": "2020-09-11T09:09:21.899Z",
     "contributors": [
       "slivenred",
@@ -3928,7 +3921,7 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/box-sizing": {
+  "Web/CSS/Reference/Properties/box-sizing": {
     "modified": "2020-10-15T21:47:19.062Z",
     "contributors": [
       "chih-hsi-chen",
@@ -3941,31 +3934,31 @@
       "YuCheng"
     ]
   },
-  "Web/CSS/clip": {
+  "Web/CSS/Reference/Properties/clip": {
     "modified": "2019-03-23T22:33:08.119Z",
     "contributors": [
       "Jerry-Hong"
     ]
   },
-  "Web/CSS/grid-template": {
+  "Web/CSS/Reference/Properties/grid-template": {
     "modified": "2020-10-15T22:30:52.332Z",
     "contributors": [
       "blueanger31"
     ]
   },
-  "Web/CSS/height": {
+  "Web/CSS/Reference/Properties/height": {
     "modified": "2019-03-23T22:21:15.320Z",
     "contributors": [
       "yvonne6344"
     ]
   },
-  "Web/CSS/ruby-position": {
+  "Web/CSS/Reference/Properties/ruby-position": {
     "modified": "2020-10-15T21:51:03.131Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/CSS/transform": {
+  "Web/CSS/Reference/Properties/transform": {
     "modified": "2020-10-15T21:38:21.566Z",
     "contributors": [
       "allchangechallenge",
@@ -3977,48 +3970,55 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/transform-function/translate3d": {
-    "modified": "2020-11-30T13:00:00.920Z",
-    "contributors": [
-      "chrisdavidmills",
-      "iigmir"
-    ]
-  },
-  "Web/CSS/transform-origin": {
+  "Web/CSS/Reference/Properties/transform-origin": {
     "modified": "2020-10-15T22:05:18.550Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition": {
+  "Web/CSS/Reference/Properties/transition": {
     "modified": "2020-10-15T22:08:09.027Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition-duration": {
+  "Web/CSS/Reference/Properties/transition-duration": {
     "modified": "2020-10-15T22:08:04.691Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition-timing-function": {
+  "Web/CSS/Reference/Properties/transition-timing-function": {
     "modified": "2020-10-15T22:02:01.243Z",
     "contributors": [
       "flyinglimao"
     ]
   },
-  "Web/CSS/white-space": {
+  "Web/CSS/Reference/Properties/white-space": {
     "modified": "2019-03-23T22:06:04.997Z",
     "contributors": [
       "ymcheung",
       "leannechen"
     ]
   },
-  "Web/CSS/width": {
+  "Web/CSS/Reference/Properties/width": {
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": [
       "yutzuch"
+    ]
+  },
+  "Web/CSS/Type_selectors": {
+    "modified": "2020-10-15T22:16:41.850Z",
+    "contributors": [
+      "a1178961372",
+      "YvonneYu"
+    ]
+  },
+  "Web/CSS/transform-function/translate3d": {
+    "modified": "2020-11-30T13:00:00.920Z",
+    "contributors": [
+      "chrisdavidmills",
+      "iigmir"
     ]
   },
   "Web/HTML": {
