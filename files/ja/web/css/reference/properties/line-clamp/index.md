@@ -1,9 +1,8 @@
 ---
 title: line-clamp
 slug: Web/CSS/Reference/Properties/line-clamp
-original_slug: Web/CSS/line-clamp
 l10n:
-  sourceCommit: 58f017d3bc8f78a9469055f1a7f7f3f5befa4447
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`line-clamp`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{Glossary("block", "ブロック")}}のコンテンツを指定した行数に制限することができます。
