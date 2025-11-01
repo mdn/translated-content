@@ -10,7 +10,7 @@ l10n:
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`animation`](/ja/docs/Web/CSS/animation#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-animation` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `animation` に対応しているブラウザーはありません。代わりに、 [`@supports (animation)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
 
-**`-webkit-animation`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
+**`-webkit-animation`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
 
