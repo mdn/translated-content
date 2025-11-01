@@ -1,6 +1,7 @@
 ---
 title: justify-content
-slug: Web/CSS/justify-content
+slug: Web/CSS/Reference/Properties/justify-content
+original_slug: Web/CSS/justify-content
 l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---

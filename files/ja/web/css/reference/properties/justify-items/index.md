@@ -1,6 +1,7 @@
 ---
 title: justify-items
-slug: Web/CSS/justify-items
+slug: Web/CSS/Reference/Properties/justify-items
+original_slug: Web/CSS/justify-items
 l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
