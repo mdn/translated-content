@@ -137,6 +137,6 @@ input[type="file"]::file-selector-button:hover {
 
 ## 参见
 
-- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)

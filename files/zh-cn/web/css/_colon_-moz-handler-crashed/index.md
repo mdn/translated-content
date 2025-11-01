@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:-moz-handler-crashed`** 是一个用于匹配那些因负责绘制它们的插件崩溃而无法显示的元素的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:-moz-handler-crashed`** 是一个用于匹配那些因负责绘制它们的插件崩溃而无法显示的元素的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
 
 > [!NOTE]
 > 这个选择器主要是供主题开发者使用的。

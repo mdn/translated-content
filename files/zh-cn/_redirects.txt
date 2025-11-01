@@ -24,7 +24,7 @@
 /zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/CSS/Attribute_selectors	/zh-CN/docs/Web/CSS/Attribute_selectors
 /zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
-/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
+/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/Reference/Webkit_extensions
 /zh-CN/docs/CSS/CSS_animated_properties	/zh-CN/docs/Web/CSS/CSS_animated_properties
 /zh-CN/docs/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
 /zh-CN/docs/CSS/CSS_values_syntax	/zh-CN/docs/Web/CSS
@@ -83,7 +83,7 @@
 /zh-CN/docs/CSS/display	/zh-CN/docs/Web/CSS/display
 /zh-CN/docs/CSS/flex-grow	/zh-CN/docs/Web/CSS/flex-grow
 /zh-CN/docs/CSS/float	/zh-CN/docs/Web/CSS/float
-/zh-CN/docs/CSS/float/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
+/zh-CN/docs/CSS/float/Webkit_Extensions	/zh-CN/docs/Web/CSS/Reference/Webkit_extensions
 /zh-CN/docs/CSS/font-smooth	/zh-CN/docs/Web/CSS/font-smooth
 /zh-CN/docs/CSS/height	/zh-CN/docs/Web/CSS/height
 /zh-CN/docs/CSS/image-orientation	/zh-CN/docs/Web/CSS/image-orientation
@@ -2594,9 +2594,9 @@
 /zh-CN/docs/Web/CSS/Media_Queries	/zh-CN/docs/Web/CSS/CSS_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/zh-CN/docs/Web/CSS/Mozilla_Extensions	/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions
 /zh-CN/docs/Web/CSS/Paged_Media	/zh-CN/docs/Web/CSS/CSS_paged_media
 /zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
-/zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
 /zh-CN/docs/Web/CSS/Replaced_element	/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties
@@ -2616,6 +2616,7 @@
 /zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /zh-CN/docs/Web/CSS/Viewport_concepts	/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /zh-CN/docs/Web/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
+/zh-CN/docs/Web/CSS/WebKit_Extensions	/zh-CN/docs/Web/CSS/Reference/Webkit_extensions
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值
 /zh-CN/docs/Web/CSS/attr()	/zh-CN/docs/Web/CSS/attr
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model

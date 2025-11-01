@@ -382,7 +382,7 @@ Le billet d'Aaron Anderson, [<i lang="en">History of the browser user-agent stri
 
 ### Gestion des préfixes en JavaScript
 
-Dans l'article précédent, nous avons discuté longuement de [la gestion des préfixes navigateur en CSS](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#gestion_des_préfixes_css). Pendant un temps, les préfixes étaient également utilisés pour les implémentations de nouvelles fonctionnalités en JavaScript (les préfixes pour JavaScript étaient écrits en [<i lang="en">camel case</i>](/fr/docs/Glossary/Camel_case) et non [avec des tirets](/fr/docs/Glossary/kebab_case) comme CSS). Par exemple, si un nouvel objet, avec le nom standard `Object`, était implémenté&nbsp;:
+Dans l'article précédent, nous avons discuté longuement de [la gestion des préfixes navigateur en CSS](/fr/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#gestion_des_préfixes_css). Pendant un temps, les préfixes étaient également utilisés pour les implémentations de nouvelles fonctionnalités en JavaScript (les préfixes pour JavaScript étaient écrits en [<i lang="en">camel case</i>](/fr/docs/Glossary/Camel_case) et non [avec des tirets](/fr/docs/Glossary/Kebab_case) comme CSS). Par exemple, si un nouvel objet, avec le nom standard `Object`, était implémenté&nbsp;:
 
 - Firefox aurait utilisé `mozObject`
 - Chrome, Opera, et Safari auraient utilisé `webkitObject`

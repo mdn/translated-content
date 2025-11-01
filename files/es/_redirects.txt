@@ -2197,7 +2197,6 @@
 /es/docs/Web/CSS/grid-gap	/es/docs/Web/CSS/gap
 /es/docs/Web/CSS/ime-mode	/es/docs/orphaned/Web/CSS/ime-mode
 /es/docs/Web/CSS/initial_value	/es/docs/Web/CSS/CSS_cascade/Value_processing
-/es/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
 /es/docs/Web/CSS/min()	/es/docs/Web/CSS/min
 /es/docs/Web/CSS/minmax()	/es/docs/Web/CSS/minmax
 /es/docs/Web/CSS/none	/es/docs/Web/CSS/float

@@ -286,5 +286,5 @@ Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_
 - Le module de [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - L'interface {{domxref("CSSMediaRule")}}
-- [Extensions CSS préfixées pour Firefox (-moz-)](/fr/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Extensions CSS préfixées pour WebKit (-webkit-)](/fr/docs/Web/CSS/WebKit_Extensions#media_features)
+- [Extensions CSS préfixées pour Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
+- [Extensions CSS préfixées pour WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions#media_features)

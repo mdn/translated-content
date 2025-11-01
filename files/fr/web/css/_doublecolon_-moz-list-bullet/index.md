@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}{{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-list-bullet`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le marqueur (généralement une puce) d'un élément de liste ({{htmlelement("li")}}) dans une liste non ordonnée ({{htmlelement("ul")}}).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-list-bullet`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le marqueur (généralement une puce) d'un élément de liste ({{htmlelement("li")}}) dans une liste non ordonnée ({{htmlelement("ul")}}).
 
 ## Syntaxe
 

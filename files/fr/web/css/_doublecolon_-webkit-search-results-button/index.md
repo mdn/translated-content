@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-search-results-button`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui représente le bouton affiché sur le bord gauche d'un élément {{HTMLElement("input")}} de type `type="search"` qui affiche un menu proposant les dernières recherches effectuées à l'utilisateur. Ce bouton et ce pseudo-élément ne sont pas standards et sont uniquement pris en charge par WebKit/Blink. Le bouton des résultats de recherche est uniquement affiché pour les éléments {{HTMLElement("input")}} qui possèdent [un attribut `results`](/fr/docs/Web/HTML/Reference/Elements/input#results).
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-search-results-button`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui représente le bouton affiché sur le bord gauche d'un élément {{HTMLElement("input")}} de type `type="search"` qui affiche un menu proposant les dernières recherches effectuées à l'utilisateur. Ce bouton et ce pseudo-élément ne sont pas standards et sont uniquement pris en charge par WebKit/Blink. Le bouton des résultats de recherche est uniquement affiché pour les éléments {{HTMLElement("input")}} qui possèdent [un attribut `results`](/fr/docs/Web/HTML/Reference/Elements/input#results).
 
 ## Syntaxe
 

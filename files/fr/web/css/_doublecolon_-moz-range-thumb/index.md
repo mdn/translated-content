@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-thumb`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range` et qui permet de modifier la valeur numérique associée.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-thumb`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le curseur qui se déplace le long de la piste dans un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) de type `range` et qui permet de modifier la valeur numérique associée.
 
 > [!NOTE]
 > Utiliser `::-moz-range-thumb` avec un autre élément que `<input type="range">` n'aura aucun effet.

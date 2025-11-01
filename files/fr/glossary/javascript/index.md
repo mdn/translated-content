@@ -2,10 +2,10 @@
 title: JavaScript
 slug: Glossary/JavaScript
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 6722199b4d63fad3c33db1146af380fc98b6c202
 ---
 
-JavaScript (ou <abbr title="JavaScript">JS</abbr> en abrégé) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server", "serveur")}}, depuis l'arrivée de {{Glossary("Node.js")}}, {{Glossary("Deno")}} et [Bun](https://bun.sh/).
+JavaScript (ou <abbr title="JavaScript">JS</abbr> en abrégé) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server", "serveur")}}, depuis l'arrivée de {{Glossary("Node.js")}}, {{Glossary("Deno")}} et [Bun](https://bun.com/).
 
 Il ne faut pas confondre JavaScript avec [le langage de programmation Java](<https://fr.wikipedia.org/wiki/Java_(langage)>). «&nbsp;_Java_&nbsp;» et «&nbsp;_JavaScript_&nbsp;» sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
 
@@ -13,7 +13,7 @@ JavaScript est principalement utilisé dans le navigateur, permettant aux dével
 
 ## Origines et Histore
 
-D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
+D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{Glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
 
 En novembre 1996, Netscape commence à collaborer avec Ecma International pour faire de JavaScript une norme industrielle. Depuis, le JavaScript standardisé porte le nom d'ECMAScript et est spécifié sous ECMA-262. La norme est constamment mise à jour et implémentée (une _norme vivante_).
 

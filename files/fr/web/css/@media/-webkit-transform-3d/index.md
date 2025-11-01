@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-3d`** est une [extension WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui vaut `true` si les transformations CSS 3D {{cssxref("transform")}} préfixées sont prises en charge.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-3d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 3D {{cssxref("transform")}} préfixées sont prises en charge.
 
 > [!NOTE]
 > Cette caractéristique média est actuellement [prise en charge par la plupart des navigateurs](#compatibilité_des_navigateurs). Si possible, utilisez plutôt une requête de fonctionnalité {{cssxref("@supports")}}.

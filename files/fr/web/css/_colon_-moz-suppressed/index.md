@@ -5,7 +5,7 @@ slug: Web/CSS/:-moz-suppressed
 
 {{Non-standard_header}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-suppressed`** est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui permet de sélectionner les images qui n'ont pas été chargées car le chargement des images depuis ce site a été bloqué.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-suppressed`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui permet de sélectionner les images qui n'ont pas été chargées car le chargement des images depuis ce site a été bloqué.
 
 > [!NOTE]
 > Cette pseudo-classe est principalement destinée aux développeur·euse·s de thèmes.

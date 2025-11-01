@@ -238,7 +238,7 @@ Ces propriétés, appelées _propriétés préfixées_, sont des extensions au s
 
 Il n'est pas recommandé d'utilier ces propriétés pour des sites web en production. Si cela reste nécessaire, il est conseillé de prévoir une stratégie au cas où ces propriétés préfixées soient retirées. En effet, elles peuvent être modifiées voire supprimées lorsque le standard évolue.
 
-Pour plus d'informations [sur les extensions CSS de Mozilla, vous pouvez consulter la page associée](/fr/docs/Web/CSS/Mozilla_Extensions).
+Pour plus d'informations [sur les extensions CSS de Mozilla, vous pouvez consulter la page associée](/fr/docs/Web/CSS/Reference/Mozilla_extensions).
 
 ## Quel est l'impact de `z-index` sur le positionnement des éléments ?
 

@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-progress-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui représente l'ensemble de la barre d'un élément {{HTMLElement("progress")}}. Normalement, celui-ci n'est visible que pour la partie de la barre qui n'est pas remplie car, par défaut, il est affiché sous le pseudo-élément {{cssxref("::-webkit-progress-value")}}. C'est un pseudo-élément fils du pseudo-élément {{cssxref("::-webkit-progress-inner-element")}} et c'est le pseudo-élément parent du pseudo-élément {{cssxref("::-webkit-progress-value")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-progress-bar`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui représente l'ensemble de la barre d'un élément {{HTMLElement("progress")}}. Normalement, celui-ci n'est visible que pour la partie de la barre qui n'est pas remplie car, par défaut, il est affiché sous le pseudo-élément {{cssxref("::-webkit-progress-value")}}. C'est un pseudo-élément fils du pseudo-élément {{cssxref("::-webkit-progress-inner-element")}} et c'est le pseudo-élément parent du pseudo-élément {{cssxref("::-webkit-progress-value")}}.
 
 > [!NOTE]
 > Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("appearance")}} vaille `none` sur l'élément `<progress>`.

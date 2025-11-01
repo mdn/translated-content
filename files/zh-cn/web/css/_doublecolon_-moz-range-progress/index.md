@@ -5,7 +5,7 @@ slug: Web/CSS/::-moz-range-progress
 
 {{Non-standard_header}}
 
-The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
+The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
 
 > [!NOTE]
 > 在 `<input type="range">`上应用`::-moz-range-progress` 不会匹配任何元素，也不会有任何效果。

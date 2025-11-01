@@ -1,0 +1,87 @@
+---
+title: -webkit-text-stroke-color
+slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
+original_slug: Web/CSS/-webkit-text-stroke-color
+---
+
+La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.
+
+## Syntaxe
+
+```css
+/* Valeurs de couleur */
+/* Type <color>       */
+-webkit-text-stroke-color: red;
+-webkit-text-stroke-color: #e08ab4;
+-webkit-text-stroke-color: rgb(200, 100, 0);
+
+/* Valeurs globales */
+-webkit-text-stroke-color: inherit;
+-webkit-text-stroke-color: initial;
+-webkit-text-stroke-color: revert;
+-webkit-text-stroke-color: revert-layer;
+-webkit-text-stroke-color: unset;
+```
+
+### Valeurs
+
+- `<color>`
+  - : La couleur du contour pour les lettres.
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{csssyntax}}
+
+## Exemples
+
+### Varier la couleur du trait
+
+#### HTML
+
+```html
+<p>Texte avec un contour</p>
+<input type="color" value="#ff0000" />
+```
+
+#### CSS
+
+```css
+p {
+  margin: 0;
+  font-size: 4em;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ff0000;
+  /* Cette valeur peut être modifiée */
+}
+```
+
+```js hidden
+const colorPicker = document.querySelector("input");
+colorPicker.addEventListener("change", (evt) => {
+  document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
+});
+```
+
+#### Résultat
+
+{{EmbedLiveSample("varier_la_couleur_du_trait", "500px", "100px")}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité <sup>(angl.)</sup>](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [L'article de CSS-Tricks à propos de cette fonctionnalité <sup>(angl.)</sup>](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-fill-color")}}
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke")}}
