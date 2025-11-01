@@ -1,6 +1,7 @@
 ---
 title: resize
-slug: Web/CSS/resize
+slug: Web/CSS/Reference/Properties/resize
+original_slug: Web/CSS/resize
 l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---

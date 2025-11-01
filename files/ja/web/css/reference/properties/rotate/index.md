@@ -1,6 +1,7 @@
 ---
 title: rotate
-slug: Web/CSS/rotate
+slug: Web/CSS/Reference/Properties/rotate
+original_slug: Web/CSS/rotate
 l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---

@@ -1,6 +1,7 @@
 ---
 title: r
-slug: Web/CSS/r
+slug: Web/CSS/Reference/Properties/r
+original_slug: Web/CSS/r
 l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---

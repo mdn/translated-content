@@ -1,6 +1,7 @@
 ---
 title: quotes
-slug: Web/CSS/quotes
+slug: Web/CSS/Reference/Properties/quotes
+original_slug: Web/CSS/quotes
 l10n:
   sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
 ---

@@ -1,6 +1,7 @@
 ---
 title: right
-slug: Web/CSS/right
+slug: Web/CSS/Reference/Properties/right
+original_slug: Web/CSS/right
 l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---

@@ -1,6 +1,7 @@
 ---
 title: ruby-align
-slug: Web/CSS/ruby-align
+slug: Web/CSS/Reference/Properties/ruby-align
+original_slug: Web/CSS/ruby-align
 l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---

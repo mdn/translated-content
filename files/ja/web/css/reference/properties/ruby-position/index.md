@@ -1,6 +1,7 @@
 ---
 title: ruby-position
-slug: Web/CSS/ruby-position
+slug: Web/CSS/Reference/Properties/ruby-position
+original_slug: Web/CSS/ruby-position
 l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---

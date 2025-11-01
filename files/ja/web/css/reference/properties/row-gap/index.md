@@ -1,6 +1,7 @@
 ---
 title: row-gap
-slug: Web/CSS/row-gap
+slug: Web/CSS/Reference/Properties/row-gap
+original_slug: Web/CSS/row-gap
 l10n:
   sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
