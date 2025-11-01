@@ -1,6 +1,7 @@
 ---
 title: image-orientation
-slug: Web/CSS/image-orientation
+slug: Web/CSS/Reference/Properties/image-orientation
+original_slug: Web/CSS/image-orientation
 l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---

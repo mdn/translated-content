@@ -1,6 +1,7 @@
 ---
 title: inset
-slug: Web/CSS/inset
+slug: Web/CSS/Reference/Properties/inset
+original_slug: Web/CSS/inset
 l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---

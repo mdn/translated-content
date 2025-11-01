@@ -1,6 +1,7 @@
 ---
 title: inset-inline-start
-slug: Web/CSS/inset-inline-start
+slug: Web/CSS/Reference/Properties/inset-inline-start
+original_slug: Web/CSS/inset-inline-start
 l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---

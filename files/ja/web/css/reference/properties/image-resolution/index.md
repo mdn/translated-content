@@ -1,6 +1,7 @@
 ---
 title: image-resolution
-slug: Web/CSS/image-resolution
+slug: Web/CSS/Reference/Properties/image-resolution
+original_slug: Web/CSS/image-resolution
 l10n:
   sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
 ---

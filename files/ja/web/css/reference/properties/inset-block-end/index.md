@@ -1,6 +1,7 @@
 ---
 title: inset-block-end
-slug: Web/CSS/inset-block-end
+slug: Web/CSS/Reference/Properties/inset-block-end
+original_slug: Web/CSS/inset-block-end
 l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---

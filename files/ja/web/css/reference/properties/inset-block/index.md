@@ -1,30 +1,35 @@
 ---
-title: inset-inline
-slug: Web/CSS/inset-inline
+title: inset-block
+slug: Web/CSS/Reference/Properties/inset-block
+original_slug: Web/CSS/inset-block
 l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`inset-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるインライン方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
 
 この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
-{{InteractiveExample("CSS デモ: inset-inline")}}
+{{InteractiveExample("CSS デモ: inset-block")}}
 
 ```css interactive-example-choice
-inset-inline: 5% 10%;
+inset-block: 10px 20px;
 writing-mode: horizontal-tb;
 ```
 
 ```css interactive-example-choice
-inset-inline: 10px 40px;
+inset-block: 20px 40px;
 writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-inset-inline: 5% 10%;
+inset-block: 5% 20%;
 writing-mode: horizontal-tb;
-direction: rtl;
+```
+
+```css interactive-example-choice
+inset-block: 1rem auto;
+writing-mode: vertical-lr;
 ```
 
 ```html-nolint interactive-example
@@ -59,38 +64,38 @@ direction: rtl;
 
 ## 構成要素のプロパティ
 
-このプロパティは、以下の CSS プロパティの一括指定です。
+このプロパティは以下の CSS プロパティの一括指定です。
 
-- {{cssxref("inset-inline-end")}}
-- {{cssxref("inset-inline-start")}}
+- {{cssxref("inset-block-end")}}
+- {{cssxref("inset-block-start")}}
 
 ## 構文
 
 ```css
 /* <length> 値 */
-inset-inline: 3px 10px;
-inset-inline: 2.4em 3em;
-inset-inline: 10px; /* 値が先頭と末尾の両方に適用される */
-inset-inline: auto calc(anchor(self-start) + 20px);
-inset-inline: 400px anchor-size(--myAnchor height, 100px);
+inset-block: 3px 10px;
+inset-block: 2.4em 3em;
+inset-block: 10px; /* 値が先頭と末尾の両方に適用される */
+inset-block: auto anchor(start);
+inset-block: 10em anchor-size(--myAnchor height, 10%);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
-inset-inline: 10% 5%;
+inset-block: 10% 5%;
 
 /* キーワード値 */
-inset-inline: auto;
+inset-block: auto;
 
 /* グローバル値 */
-inset-inline: inherit;
-inset-inline: initial;
-inset-inline: revert;
-inset-inline: revert-layer;
-inset-inline: unset;
+inset-block: inherit;
+inset-block: initial;
+inset-block: revert;
+inset-block: revert-layer;
+inset-block: unset;
 ```
 
 ### 値
 
-`inset-inline` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
+`inset-block` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -102,7 +107,7 @@ inset-inline: unset;
 
 ## 例
 
-### インライン方向の先頭と末尾のオフセットの設定
+### ブロック方向の先頭と末尾のオフセットの設定
 
 #### HTML
 
@@ -124,14 +129,14 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   position: relative;
-  inset-inline: 20px 50px;
+  inset-block: 20px 50px;
   background-color: #c8c800;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("インライン方向の先頭と末尾のオフセットの設定", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の先頭と末尾のオフセットの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -145,5 +150,5 @@ div {
 
 - 対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
 - 対応する物理的な一括指定: {{cssxref("inset")}}
-- 対応するブロック方向の一括指定: {{cssxref("inset-block")}}
+- 対応するインライン方向の一括指定: {{cssxref("inset-inline")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

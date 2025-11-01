@@ -1,6 +1,7 @@
 ---
 title: interpolate-size
-slug: Web/CSS/interpolate-size
+slug: Web/CSS/Reference/Properties/interpolate-size
+original_slug: Web/CSS/interpolate-size
 l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---

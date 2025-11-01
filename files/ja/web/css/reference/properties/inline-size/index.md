@@ -1,6 +1,7 @@
 ---
 title: inline-size
-slug: Web/CSS/inline-size
+slug: Web/CSS/Reference/Properties/inline-size
+original_slug: Web/CSS/inline-size
 l10n:
   sourceCommit: 883491d47f6b764563aa825d9d56f83fb80c6fb9
 ---

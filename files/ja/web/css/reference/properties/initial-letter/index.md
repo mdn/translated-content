@@ -1,6 +1,7 @@
 ---
 title: initial-letter
-slug: Web/CSS/initial-letter
+slug: Web/CSS/Reference/Properties/initial-letter
+original_slug: Web/CSS/initial-letter
 l10n:
   sourceCommit: 33cd63a518c57caded1b43ff9fff071230a2397a
 ---
