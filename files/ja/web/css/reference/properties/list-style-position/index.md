@@ -1,6 +1,7 @@
 ---
 title: list-style-position
-slug: Web/CSS/list-style-position
+slug: Web/CSS/Reference/Properties/list-style-position
+original_slug: Web/CSS/list-style-position
 l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---

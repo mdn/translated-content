@@ -1,6 +1,7 @@
 ---
 title: line-break
-slug: Web/CSS/line-break
+slug: Web/CSS/Reference/Properties/line-break
+original_slug: Web/CSS/line-break
 l10n:
   sourceCommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
 ---

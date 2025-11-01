@@ -1,6 +1,7 @@
 ---
 title: line-clamp
-slug: Web/CSS/line-clamp
+slug: Web/CSS/Reference/Properties/line-clamp
+original_slug: Web/CSS/line-clamp
 l10n:
   sourceCommit: 58f017d3bc8f78a9469055f1a7f7f3f5befa4447
 ---

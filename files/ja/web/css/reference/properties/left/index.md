@@ -1,6 +1,7 @@
 ---
 title: left
-slug: Web/CSS/left
+slug: Web/CSS/Reference/Properties/left
+original_slug: Web/CSS/left
 l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---

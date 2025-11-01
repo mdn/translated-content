@@ -1,6 +1,7 @@
 ---
 title: line-height
-slug: Web/CSS/line-height
+slug: Web/CSS/Reference/Properties/line-height
+original_slug: Web/CSS/line-height
 l10n:
   sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
 ---

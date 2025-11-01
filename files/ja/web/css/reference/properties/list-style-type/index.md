@@ -1,6 +1,7 @@
 ---
 title: list-style-type
-slug: Web/CSS/list-style-type
+slug: Web/CSS/Reference/Properties/list-style-type
+original_slug: Web/CSS/list-style-type
 l10n:
   sourceCommit: 3b080cf77c3f906b5b965961412b6c51b5871e08
 ---

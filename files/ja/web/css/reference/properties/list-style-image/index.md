@@ -1,6 +1,7 @@
 ---
 title: list-style-image
-slug: Web/CSS/list-style-image
+slug: Web/CSS/Reference/Properties/list-style-image
+original_slug: Web/CSS/list-style-image
 l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
