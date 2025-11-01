@@ -1,8 +1,9 @@
 ---
 title: CSS リファレンス
+short-title: リファレンス
 slug: Web/CSS/Reference
 l10n:
-  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
@@ -135,7 +136,7 @@ div.menu-bar li:hover > ul {
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{glossary("Replaced elements", "置換要素")}}
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
@@ -147,6 +148,11 @@ div.menu-bar li:hover > ul {
 - {{DOMxRef("HTMLElement.style")}}
 - {{DOMxRef("Element.className")}}
 - {{DOMxRef("Element.classList")}}
+- {{DOMxRef("StyleSheetList")}}
+- {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSRule")}}
+- {{DOMxRef("CSSStyleRule")}}
+- {{DOMxRef("CSSStyleDeclaration")}}
 
 ### 重要なメソッド
 
@@ -155,9 +161,9 @@ div.menu-bar li:hover > ul {
 
 ## 関連情報
 
-- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) (`-moz-` 接頭辞付き)
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) (ほとんどが `-webkit-` 接頭辞付き)
+- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions) (`-moz-` 接頭辞付き)
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions) (ほとんどが `-webkit-` 接頭辞付き)
 
 ## 外部リンク
 
-- [CSS 索引 (w3.org)](https://www.w3.org/TR/CSS/#indices)
+- [CSS 索引 (w3.org)](https://www.w3.org/TR/css/#indices)
