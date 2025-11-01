@@ -5,7 +5,7 @@ slug: Web/CSS/:-moz-broken
 
 {{Non-standard_header}}
 
-**`:-moz-broken`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) であり、壊れた画像リンクを表している要素に一致します。
+**`:-moz-broken`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions) であり、壊れた画像リンクを表している要素に一致します。
 
 > [!NOTE]
 > このセレクターは、主にテーマ開発者が使用することを意図しているものです。
