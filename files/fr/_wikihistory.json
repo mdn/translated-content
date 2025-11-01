@@ -20074,31 +20074,6 @@
       "TestUser"
     ]
   },
-  "Web/CSS/--*": {
-    "modified": "2020-10-15T21:43:41.268Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177",
-      "Sagiliste",
-      "xdelatour"
-    ]
-  },
-  "Web/CSS/-moz-float-edge": {
-    "modified": "2019-04-05T07:27:19.851Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-moz-force-broken-image-icon": {
-    "modified": "2019-04-05T07:26:56.277Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "louuis"
-    ]
-  },
   "Web/CSS/-moz-image-rect": {
     "modified": "2020-10-15T21:37:22.128Z",
     "contributors": [
@@ -20106,135 +20081,6 @@
       "mrstork",
       "teoli",
       "pixoux"
-    ]
-  },
-  "Web/CSS/-moz-orient": {
-    "modified": "2020-10-15T21:28:10.504Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "louuis"
-    ]
-  },
-  "Web/CSS/-moz-user-focus": {
-    "modified": "2020-10-15T21:48:29.475Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-moz-user-input": {
-    "modified": "2020-10-15T21:18:06.870Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/-webkit-border-before": {
-    "modified": "2020-10-15T21:48:29.989Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-webkit-box-reflect": {
-    "modified": "2020-10-15T21:48:31.768Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-webkit-mask-box-image": {
-    "modified": "2020-10-15T21:33:47.333Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Sebastianz",
-      "mrstork",
-      "lbelavoir"
-    ]
-  },
-  "Web/CSS/-webkit-mask-composite": {
-    "modified": "2020-10-15T21:48:30.437Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-webkit-mask-position-x": {
-    "modified": "2020-10-15T21:48:29.056Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-webkit-mask-position-y": {
-    "modified": "2020-10-15T21:48:27.575Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-webkit-mask-repeat-x": {
-    "modified": "2020-10-15T21:48:28.359Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/-webkit-mask-repeat-y": {
-    "modified": "2020-10-15T21:48:28.259Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/-webkit-tap-highlight-color": {
-    "modified": "2019-04-26T02:53:32.938Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/-webkit-text-fill-color": {
-    "modified": "2020-10-15T21:43:41.928Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "Web/CSS/-webkit-text-security": {
-    "modified": "2019-05-23T08:23:14.321Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/-webkit-text-stroke": {
-    "modified": "2020-11-09T04:48:47.938Z",
-    "contributors": [
-      "sideshowbarker",
-      "codingdudecom",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/-webkit-text-stroke-color": {
-    "modified": "2020-10-15T21:48:27.834Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/-webkit-text-stroke-width": {
-    "modified": "2020-10-15T21:48:26.220Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/-webkit-touch-callout": {
-    "modified": "2020-10-15T21:37:55.730Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
     ]
   },
   "Web/CSS/:-moz-broken": {
@@ -22714,6 +22560,88 @@
       "FredB"
     ]
   },
+  "Web/CSS/How_to/Layout_cookbook": {
+    "modified": "2019-04-06T12:59:27.445Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation": {
+    "modified": "2020-10-15T22:10:26.639Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Card": {
+    "modified": "2020-10-15T22:10:32.076Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Center_an_element": {
+    "modified": "2020-10-15T22:10:07.676Z",
+    "contributors": [
+      "SphinxKnight",
+      "jaouedjackson",
+      "mouffy"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Column_layouts": {
+    "modified": "2020-10-15T22:10:25.136Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe": {
+    "modified": "2019-04-06T12:58:12.249Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template": {
+    "modified": "2020-10-15T22:10:21.166Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Grid_wrapper": {
+    "modified": "2020-10-15T22:11:37.851Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/List_group_with_badges": {
+    "modified": "2020-10-15T22:10:18.617Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Media_objects": {
+    "modified": "2020-10-15T22:10:31.768Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Pagination": {
+    "modified": "2020-10-15T22:10:27.609Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Split_navigation": {
+    "modified": "2020-10-15T22:10:27.669Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/How_to/Layout_cookbook/Sticky_footers": {
+    "modified": "2020-10-15T22:10:28.813Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
   "Web/CSS/ID_selectors": {
     "modified": "2020-10-15T21:04:23.373Z",
     "contributors": [
@@ -22722,88 +22650,6 @@
       "louuis",
       "FredB",
       "tregagnon"
-    ]
-  },
-  "Web/CSS/Layout_cookbook": {
-    "modified": "2019-04-06T12:59:27.445Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Breadcrumb_Navigation": {
-    "modified": "2020-10-15T22:10:26.639Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Card": {
-    "modified": "2020-10-15T22:10:32.076Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Center_an_element": {
-    "modified": "2020-10-15T22:10:07.676Z",
-    "contributors": [
-      "SphinxKnight",
-      "jaouedjackson",
-      "mouffy"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Column_layouts": {
-    "modified": "2020-10-15T22:10:25.136Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Contribute_a_recipe": {
-    "modified": "2019-04-06T12:58:12.249Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template": {
-    "modified": "2020-10-15T22:10:21.166Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Grid_wrapper": {
-    "modified": "2020-10-15T22:11:37.851Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/List_group_with_badges": {
-    "modified": "2020-10-15T22:10:18.617Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Media_objects": {
-    "modified": "2020-10-15T22:10:31.768Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Pagination": {
-    "modified": "2020-10-15T22:10:27.609Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Split_Navigation": {
-    "modified": "2020-10-15T22:10:27.669Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/Layout_cookbook/Sticky_footers": {
-    "modified": "2020-10-15T22:10:28.813Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/CSS/Next-sibling_combinator": {
@@ -22882,6 +22728,3673 @@
       "Goofy"
     ]
   },
+  "Web/CSS/Reference/Properties/--*": {
+    "modified": "2020-10-15T21:43:41.268Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177",
+      "Sagiliste",
+      "xdelatour"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-moz-float-edge": {
+    "modified": "2019-04-05T07:27:19.851Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-moz-force-broken-image-icon": {
+    "modified": "2019-04-05T07:26:56.277Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "louuis"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-moz-orient": {
+    "modified": "2020-10-15T21:28:10.504Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "louuis"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-moz-user-focus": {
+    "modified": "2020-10-15T21:48:29.475Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-moz-user-input": {
+    "modified": "2020-10-15T21:18:06.870Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-border-before": {
+    "modified": "2020-10-15T21:48:29.989Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-box-reflect": {
+    "modified": "2020-10-15T21:48:31.768Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-mask-box-image": {
+    "modified": "2020-10-15T21:33:47.333Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Sebastianz",
+      "mrstork",
+      "lbelavoir"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-mask-composite": {
+    "modified": "2020-10-15T21:48:30.437Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-mask-position-x": {
+    "modified": "2020-10-15T21:48:29.056Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-mask-position-y": {
+    "modified": "2020-10-15T21:48:27.575Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-mask-repeat-x": {
+    "modified": "2020-10-15T21:48:28.359Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-mask-repeat-y": {
+    "modified": "2020-10-15T21:48:28.259Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-tap-highlight-color": {
+    "modified": "2019-04-26T02:53:32.938Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-text-fill-color": {
+    "modified": "2020-10-15T21:43:41.928Z",
+    "contributors": [
+      "SphinxKnight",
+      "xdelatour"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-text-security": {
+    "modified": "2019-05-23T08:23:14.321Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-text-stroke": {
+    "modified": "2020-11-09T04:48:47.938Z",
+    "contributors": [
+      "sideshowbarker",
+      "codingdudecom",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-text-stroke-color": {
+    "modified": "2020-10-15T21:48:27.834Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-text-stroke-width": {
+    "modified": "2020-10-15T21:48:26.220Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/-webkit-touch-callout": {
+    "modified": "2020-10-15T21:37:55.730Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/align-content": {
+    "modified": "2020-10-15T21:30:37.361Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "JackNUMBER",
+      "fscholz",
+      "Sebastianz",
+      "Goofy",
+      "Dexter_Deter"
+    ]
+  },
+  "Web/CSS/Reference/Properties/align-items": {
+    "modified": "2020-10-15T21:39:37.167Z",
+    "contributors": [
+      "SphinxKnight",
+      "rolf39"
+    ]
+  },
+  "Web/CSS/Reference/Properties/align-self": {
+    "modified": "2020-10-15T21:45:37.829Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/all": {
+    "modified": "2020-10-15T21:45:31.166Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation": {
+    "modified": "2020-10-15T21:08:29.411Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "teoli",
+      "Sebastianz",
+      "gudoy",
+      "tregagnon",
+      "Delapouite",
+      "FredB",
+      "trevorh"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-delay": {
+    "modified": "2020-10-15T21:08:26.081Z",
+    "contributors": [
+      "SphinxKnight",
+      "Mr21",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-direction": {
+    "modified": "2020-10-15T21:04:49.473Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-duration": {
+    "modified": "2020-10-15T21:09:29.304Z",
+    "contributors": [
+      "lhapaipai",
+      "SphinxKnight",
+      "teoli",
+      "Sebastianz",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
+    "modified": "2020-10-15T21:08:35.038Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-iteration-count": {
+    "modified": "2020-10-15T21:08:37.214Z",
+    "contributors": [
+      "lhapaipai",
+      "SphinxKnight",
+      "verdy_p",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-name": {
+    "modified": "2020-10-15T21:08:32.798Z",
+    "contributors": [
+      "SphinxKnight",
+      "Ramzi2892",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-play-state": {
+    "modified": "2020-10-15T21:08:35.700Z",
+    "contributors": [
+      "SphinxKnight",
+      "ThreadElric",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-timing-function": {
+    "modified": "2020-10-15T21:08:36.973Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "teoli",
+      "Sebastianz",
+      "coets",
+      "FredB",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/appearance": {
+    "modified": "2020-10-15T21:15:48.651Z",
+    "contributors": [
+      "escattone",
+      "SphinxKnight",
+      "ExE-Boss",
+      "wbamberg",
+      "AymDev",
+      "teoli",
+      "wakka27",
+      "ksad",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/backdrop-filter": {
+    "modified": "2020-10-15T21:45:16.620Z",
+    "contributors": [
+      "SphinxKnight",
+      "Colisan"
+    ]
+  },
+  "Web/CSS/Reference/Properties/backface-visibility": {
+    "modified": "2020-10-15T21:08:31.865Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "ethertank",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background": {
+    "modified": "2020-10-15T21:08:39.389Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "FredB",
+      "teoli",
+      "tregagnon",
+      "Yuichiro",
+      "BenoitL",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-attachment": {
+    "modified": "2020-10-15T21:08:33.405Z",
+    "contributors": [
+      "SphinxKnight",
+      "kustolovic",
+      "teoli",
+      "ShamsGolap",
+      "FredB",
+      "tregagnon",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-blend-mode": {
+    "modified": "2020-10-15T21:30:51.492Z",
+    "contributors": [
+      "SphinxKnight",
+      "LukyVj",
+      "mrstork",
+      "Sebastianz",
+      "J.DMB",
+      "YoruNoHikage"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-clip": {
+    "modified": "2020-10-15T21:09:30.832Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-color": {
+    "modified": "2020-10-15T21:08:20.811Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Sebastianz",
+      "ksad",
+      "FredB",
+      "tregagnon",
+      "Yuichiro",
+      "Fredchat",
+      "Mgjbot",
+      "Nathymig",
+      "Boly38",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-image": {
+    "modified": "2020-10-15T21:08:35.762Z",
+    "contributors": [
+      "SphinxKnight",
+      "jgil83000",
+      "Tactless7",
+      "wizAmit",
+      "magikmanu",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "tregagnon",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-origin": {
+    "modified": "2020-10-15T21:09:26.607Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-position": {
+    "modified": "2020-10-15T21:08:28.344Z",
+    "contributors": [
+      "SphinxKnight",
+      "kantoche",
+      "Goofy",
+      "mrstork",
+      "teoli",
+      "enogael",
+      "FredB",
+      "tregagnon",
+      "Mgjbot",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-position-x": {
+    "modified": "2020-10-15T21:45:43.001Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-position-y": {
+    "modified": "2020-10-15T21:45:41.534Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-repeat": {
+    "modified": "2020-10-15T21:08:24.169Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "technolabtips",
+      "louuis",
+      "teoli",
+      "FredB",
+      "tregagnon",
+      "Nathymig",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-size": {
+    "modified": "2020-10-15T21:08:32.072Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "claudepache",
+      "tregagnon"
+    ]
+  },
+  "Web/CSS/Reference/Properties/block-size": {
+    "modified": "2020-10-15T21:45:10.040Z",
+    "contributors": [
+      "SphinxKnight",
+      "amazingphilippe"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border": {
+    "modified": "2020-10-15T21:08:26.155Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "vava",
+      "teoli",
+      "ksad",
+      "FredB",
+      "tregagnon",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block": {
+    "modified": "2020-10-15T22:10:54.566Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-color": {
+    "modified": "2020-10-15T22:10:56.045Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-end": {
+    "modified": "2020-10-15T21:45:11.203Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-end-color": {
+    "modified": "2020-10-15T21:45:08.326Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-end-style": {
+    "modified": "2020-10-15T21:45:07.749Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-end-width": {
+    "modified": "2020-10-15T21:45:07.994Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-start": {
+    "modified": "2020-10-15T21:45:09.987Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-start-color": {
+    "modified": "2020-10-15T21:45:06.536Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-start-style": {
+    "modified": "2020-10-15T21:45:07.141Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-start-width": {
+    "modified": "2020-10-15T21:45:08.997Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-style": {
+    "modified": "2020-10-15T22:11:05.093Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-block-width": {
+    "modified": "2020-10-15T22:11:02.717Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom": {
+    "modified": "2020-10-15T21:12:33.513Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "Golmote",
+      "ksad",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-color": {
+    "modified": "2020-10-15T21:08:17.967Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "ksad",
+      "FredB",
+      "tregagnon",
+      "Yuichiro",
+      "Nathymig",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-left-radius": {
+    "modified": "2020-10-15T21:09:26.046Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "Sebastianz",
+      "teoli",
+      "ksad",
+      "FredB",
+      "Yuichiro",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-right-radius": {
+    "modified": "2020-10-15T21:09:24.108Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "Sebastianz",
+      "teoli",
+      "ksad",
+      "FredB",
+      "Yuichiro",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-style": {
+    "modified": "2020-10-15T21:12:44.728Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-width": {
+    "modified": "2020-10-15T21:10:09.492Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-collapse": {
+    "modified": "2020-10-15T21:16:01.217Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-color": {
+    "modified": "2020-10-15T21:12:51.249Z",
+    "contributors": [
+      "SphinxKnight",
+      "begmans",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-end-end-radius": {
+    "modified": "2020-10-15T22:13:15.093Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-end-start-radius": {
+    "modified": "2020-10-15T22:13:15.935Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image": {
+    "modified": "2020-10-15T21:19:08.857Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "pl6025",
+      "FredB",
+      "PetiPandaRou",
+      "openjck",
+      "Jeremie"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-outset": {
+    "modified": "2020-10-15T21:45:07.479Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-repeat": {
+    "modified": "2020-10-15T21:45:07.940Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-slice": {
+    "modified": "2020-10-15T21:45:08.549Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-source": {
+    "modified": "2020-10-15T21:20:04.870Z",
+    "contributors": [
+      "SphinxKnight",
+      "wizAmit",
+      "teoli",
+      "FredB",
+      "PetiPandaRou"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-width": {
+    "modified": "2020-10-15T21:20:03.679Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "PetiPandaRou"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline": {
+    "modified": "2020-10-15T22:10:55.949Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-color": {
+    "modified": "2020-10-15T22:10:55.459Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-end": {
+    "modified": "2020-10-15T21:45:09.637Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-end-color": {
+    "modified": "2020-10-15T21:45:06.629Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-end-style": {
+    "modified": "2020-10-15T21:45:06.083Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-end-width": {
+    "modified": "2020-10-15T21:45:06.227Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-start": {
+    "modified": "2020-10-15T21:45:09.428Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-start-color": {
+    "modified": "2020-10-15T21:45:05.240Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-start-style": {
+    "modified": "2020-10-15T21:45:06.115Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-start-width": {
+    "modified": "2020-10-15T21:45:04.477Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-style": {
+    "modified": "2020-10-15T22:10:57.659Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-inline-width": {
+    "modified": "2020-10-15T22:11:00.439Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left": {
+    "modified": "2020-10-15T21:12:37.709Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-color": {
+    "modified": "2020-10-15T21:12:49.527Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-style": {
+    "modified": "2020-10-15T21:12:37.629Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-width": {
+    "modified": "2020-10-15T21:12:47.533Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-radius": {
+    "modified": "2020-10-15T21:28:07.970Z",
+    "contributors": [
+      "SphinxKnight",
+      "someone",
+      "Prinz_Rana",
+      "teoli",
+      "Qu3tzalify"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right": {
+    "modified": "2020-10-15T21:12:26.680Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-color": {
+    "modified": "2020-10-15T21:12:46.785Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-style": {
+    "modified": "2020-10-15T21:12:38.190Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-width": {
+    "modified": "2020-10-15T21:12:51.216Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-spacing": {
+    "modified": "2020-10-15T21:16:01.215Z",
+    "contributors": [
+      "SphinxKnight",
+      "edspeedy",
+      "L2o",
+      "teoli",
+      "Chealer",
+      "simonrenoult",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-start-end-radius": {
+    "modified": "2020-10-15T22:13:16.127Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-start-start-radius": {
+    "modified": "2020-10-15T22:13:16.075Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-style": {
+    "modified": "2020-10-15T21:12:31.333Z",
+    "contributors": [
+      "SphinxKnight",
+      "begmans",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top": {
+    "modified": "2020-10-15T21:12:31.816Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-color": {
+    "modified": "2020-10-15T21:12:47.503Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-left-radius": {
+    "modified": "2020-10-15T21:09:14.310Z",
+    "contributors": [
+      "SphinxKnight",
+      "Titouan",
+      "Sebastianz",
+      "teoli",
+      "ksad",
+      "FredB",
+      "Yuichiro",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-right-radius": {
+    "modified": "2020-10-15T21:09:22.219Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "ksad",
+      "FredB",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-style": {
+    "modified": "2020-10-15T21:12:48.569Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-width": {
+    "modified": "2020-10-15T21:12:47.537Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-width": {
+    "modified": "2020-10-15T21:10:07.340Z",
+    "contributors": [
+      "SphinxKnight",
+      "Hinato15",
+      "teoli",
+      "FredB",
+      "Yuichiro",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/bottom": {
+    "modified": "2020-10-15T21:16:33.323Z",
+    "contributors": [
+      "SphinxKnight",
+      "WhiteMoll",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "Elodouwen"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-align": {
+    "modified": "2020-10-15T21:18:10.666Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-decoration-break": {
+    "modified": "2020-10-15T21:39:24.954Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-direction": {
+    "modified": "2020-10-15T21:18:11.464Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-flex": {
+    "modified": "2020-10-15T21:18:07.577Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-flex-group": {
+    "modified": "2020-10-15T21:45:38.209Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-lines": {
+    "modified": "2020-10-15T21:45:33.444Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-ordinal-group": {
+    "modified": "2020-10-15T21:45:25.640Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-orient": {
+    "modified": "2020-10-15T21:16:50.386Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-pack": {
+    "modified": "2020-10-15T21:18:09.298Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-shadow": {
+    "modified": "2020-10-15T21:09:23.643Z",
+    "contributors": [
+      "SphinxKnight",
+      "Bidjit",
+      "teoli",
+      "skinnyfoetusboy",
+      "Goofy",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-sizing": {
+    "modified": "2020-10-15T21:24:49.409Z",
+    "contributors": [
+      "tristantheb",
+      "SphinxKnight",
+      "Mr21",
+      "pldz",
+      "lehollandaisvolant",
+      "Sebastianz",
+      "teoli",
+      "jsilvestre",
+      "tregagnon",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/break-after": {
+    "modified": "2020-10-15T21:44:47.797Z",
+    "contributors": [
+      "SphinxKnight",
+      "edspeedy"
+    ]
+  },
+  "Web/CSS/Reference/Properties/break-before": {
+    "modified": "2020-10-15T21:44:48.986Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/break-inside": {
+    "modified": "2020-10-15T21:44:48.451Z",
+    "contributors": [
+      "bershanskiy",
+      "SphinxKnight",
+      "edspeedy"
+    ]
+  },
+  "Web/CSS/Reference/Properties/caption-side": {
+    "modified": "2020-10-15T21:15:41.669Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "Sheppy",
+      "teoli",
+      "FredB",
+      "BenoitL",
+      "*.Har(d)t"
+    ]
+  },
+  "Web/CSS/Reference/Properties/caret-color": {
+    "modified": "2020-10-15T21:51:25.881Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clear": {
+    "modified": "2020-10-15T21:18:05.718Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "J.DMB",
+      "louuis",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clip": {
+    "modified": "2020-10-15T21:15:46.162Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Valacar",
+      "Elethiomel",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clip-path": {
+    "modified": "2020-10-15T21:26:12.097Z",
+    "contributors": [
+      "brunostasse",
+      "SphinxKnight",
+      "guv3n",
+      "teoli",
+      "Philippe_Lambotte"
+    ]
+  },
+  "Web/CSS/Reference/Properties/color": {
+    "modified": "2020-10-15T21:15:41.703Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "louuis",
+      "Golmote",
+      "FredB",
+      "philippe97",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-count": {
+    "modified": "2020-10-15T21:20:32.539Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-fill": {
+    "modified": "2020-10-15T21:20:32.258Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Munto",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Delapouite"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-gap": {
+    "modified": "2020-10-15T21:20:34.750Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-rule": {
+    "modified": "2020-10-15T21:20:34.908Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-rule-color": {
+    "modified": "2020-10-15T21:20:38.875Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-rule-style": {
+    "modified": "2020-10-15T21:20:38.835Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-rule-width": {
+    "modified": "2020-10-15T21:20:37.812Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-span": {
+    "modified": "2020-10-15T21:20:33.008Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "louuis",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/column-width": {
+    "modified": "2020-10-15T21:20:31.296Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/columns": {
+    "modified": "2020-10-15T21:20:34.997Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "louuis",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/contain": {
+    "modified": "2020-10-15T21:47:58.553Z",
+    "contributors": [
+      "SphinxKnight",
+      "ebrehault",
+      "vdesdoigts"
+    ]
+  },
+  "Web/CSS/Reference/Properties/content": {
+    "modified": "2020-10-15T21:09:16.938Z",
+    "contributors": [
+      "SphinxKnight",
+      "HerveRenault",
+      "teoli",
+      "Sebastianz",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/counter-increment": {
+    "modified": "2020-10-15T21:17:58.093Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Fredchat",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/counter-reset": {
+    "modified": "2020-10-15T21:14:15.574Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "fscholz",
+      "Fredchat",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/counter-set": {
+    "modified": "2020-10-15T22:20:18.195Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/cursor": {
+    "modified": "2020-10-15T21:12:05.631Z",
+    "contributors": [
+      "SphinxKnight",
+      "Grahack",
+      "mrstork",
+      "Sebastianz",
+      "teoli",
+      "Golmote",
+      "FredB",
+      "loranger",
+      "Julien.stuby",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "Sheppy"
+    ]
+  },
+  "Web/CSS/Reference/Properties/direction": {
+    "modified": "2020-10-15T21:16:36.245Z",
+    "contributors": [
+      "SphinxKnight",
+      "ncoden",
+      "Sebastianz",
+      "teoli",
+      "ksad",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/display": {
+    "modified": "2020-10-15T21:15:53.886Z",
+    "contributors": [
+      "johannpinson",
+      "SphinxKnight",
+      "cdjoubert",
+      "NemoNobobyPersonne",
+      "Baptistou",
+      "jwhitlock",
+      "friendofweb",
+      "ThibautMln",
+      "jean-pierre.gay",
+      "renoirb",
+      "Sebastianz",
+      "teoli",
+      "Golmote",
+      "FredB",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/empty-cells": {
+    "modified": "2020-10-15T21:09:02.588Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/filter": {
+    "modified": "2020-10-15T21:21:38.971Z",
+    "contributors": [
+      "escattone",
+      "SphinxKnight",
+      "aziaziazi",
+      "Sebastianz",
+      "Prinz_Rana",
+      "teoli",
+      "emersion",
+      "wakka27",
+      "flexbox",
+      "FredB",
+      "thenew"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex": {
+    "modified": "2020-10-15T21:19:44.037Z",
+    "contributors": [
+      "julienw",
+      "Thyme1152",
+      "SphinxKnight",
+      "Hartesic",
+      "sylvainpolletvillard",
+      "fscholz",
+      "Sebastianz",
+      "Mahan91",
+      "teoli",
+      "Golmote",
+      "FredB",
+      "Delapouite",
+      "lalop",
+      "rd6137"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-basis": {
+    "modified": "2020-10-15T21:44:13.576Z",
+    "contributors": [
+      "SphinxKnight",
+      "JonathanMM",
+      "kristofbc"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-direction": {
+    "modified": "2020-10-15T21:26:06.082Z",
+    "contributors": [
+      "SphinxKnight",
+      "robiseb",
+      "Goofy",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "Golmote",
+      "PifyZ"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-flow": {
+    "modified": "2020-10-15T21:40:46.682Z",
+    "contributors": [
+      "SphinxKnight",
+      "jmpp"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-grow": {
+    "modified": "2020-10-15T21:29:35.886Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "mondayking"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-shrink": {
+    "modified": "2020-10-15T21:44:15.655Z",
+    "contributors": [
+      "SphinxKnight",
+      "hvanhonacker",
+      "tifabien"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-wrap": {
+    "modified": "2020-10-15T21:42:48.548Z",
+    "contributors": [
+      "SphinxKnight",
+      "lhapaipai",
+      "YoruNoHikage",
+      "stephaniehobson",
+      "ss-bb"
+    ]
+  },
+  "Web/CSS/Reference/Properties/float": {
+    "modified": "2020-10-15T21:14:08.559Z",
+    "contributors": [
+      "SphinxKnight",
+      "tnga",
+      "fscholz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Nathymig",
+      "Elethiomel",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font": {
+    "modified": "2020-10-15T21:15:25.017Z",
+    "contributors": [
+      "yvisherve",
+      "SphinxKnight",
+      "edspeedy",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-family": {
+    "modified": "2020-10-15T21:16:01.425Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-feature-settings": {
+    "modified": "2020-10-15T21:19:34.721Z",
+    "contributors": [
+      "SphinxKnight",
+      "Krenair",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-kerning": {
+    "modified": "2020-10-15T21:38:55.741Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "B_M"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-language-override": {
+    "modified": "2020-10-15T21:44:15.835Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-optical-sizing": {
+    "modified": "2020-10-15T22:05:43.637Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-size": {
+    "modified": "2020-10-15T21:16:35.611Z",
+    "contributors": [
+      "yaaax",
+      "JNa0",
+      "SphinxKnight",
+      "Kocal",
+      "Bringdal",
+      "fscholz",
+      "teoli",
+      "Fredchat",
+      "louuis",
+      "FredB",
+      "anthony.gaidot",
+      "Mgjbot",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-size-adjust": {
+    "modified": "2020-10-15T21:15:30.021Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-smooth": {
+    "modified": "2020-10-15T21:44:12.301Z",
+    "contributors": [
+      "SphinxKnight",
+      "Kerumen"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-stretch": {
+    "modified": "2020-11-30T11:20:47.071Z",
+    "contributors": [
+      "Moyogo",
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "GrCOTE7",
+      "FredB",
+      "Valacar",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-style": {
+    "modified": "2020-10-15T21:15:34.339Z",
+    "contributors": [
+      "n3wborn",
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Domif",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-synthesis": {
+    "modified": "2020-10-30T07:13:04.039Z",
+    "contributors": [
+      "JNa0",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant": {
+    "modified": "2020-10-15T21:15:18.085Z",
+    "contributors": [
+      "SphinxKnight",
+      "B_M",
+      "fscholz",
+      "Gibus",
+      "Sebastianz",
+      "Igro",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant-alternates": {
+    "modified": "2020-10-15T21:44:15.520Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant-caps": {
+    "modified": "2020-10-29T08:39:50.937Z",
+    "contributors": [
+      "JNa0",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant-east-asian": {
+    "modified": "2020-10-15T21:44:08.241Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant-ligatures": {
+    "modified": "2020-10-15T21:39:41.117Z",
+    "contributors": [
+      "SphinxKnight",
+      "nfriedli"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant-numeric": {
+    "modified": "2020-10-15T21:44:06.991Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variant-position": {
+    "modified": "2020-10-15T21:43:55.206Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-variation-settings": {
+    "modified": "2020-10-15T21:52:12.257Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-weight": {
+    "modified": "2020-10-15T21:15:14.602Z",
+    "contributors": [
+      "SphinxKnight",
+      "ygarbage",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "tregagnon",
+      "FredB",
+      "Mgjbot",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/gap": {
+    "modified": "2020-10-15T22:05:45.614Z",
+    "contributors": [
+      "JNa0",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid": {
+    "modified": "2020-10-15T21:43:57.613Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-area": {
+    "modified": "2020-10-15T21:43:57.849Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-auto-columns": {
+    "modified": "2020-10-15T21:43:52.496Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-auto-flow": {
+    "modified": "2020-10-15T21:45:27.360Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-auto-rows": {
+    "modified": "2020-10-15T21:43:57.525Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-column": {
+    "modified": "2020-10-15T21:44:00.007Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-column-end": {
+    "modified": "2020-10-15T21:43:52.597Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-column-start": {
+    "modified": "2020-10-15T21:43:52.983Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-row": {
+    "modified": "2020-10-15T21:43:47.449Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-row-end": {
+    "modified": "2020-10-15T21:43:54.687Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-row-start": {
+    "modified": "2020-10-15T21:43:46.372Z",
+    "contributors": [
+      "SphinxKnight",
+      "Goofy"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-template": {
+    "modified": "2020-10-15T21:43:56.133Z",
+    "contributors": [
+      "SphinxKnight",
+      "BenJ-R"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-template-areas": {
+    "modified": "2020-10-15T21:43:51.408Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-template-columns": {
+    "modified": "2020-10-15T21:43:47.170Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/grid-template-rows": {
+    "modified": "2020-10-15T21:43:51.505Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/hanging-punctuation": {
+    "modified": "2020-10-15T21:54:18.228Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/height": {
+    "modified": "2020-10-15T21:15:21.230Z",
+    "contributors": [
+      "SphinxKnight",
+      "MaxEvron",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "dabus",
+      "FredB",
+      "Mgjbot",
+      "Aurelgadjo",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/hyphens": {
+    "modified": "2020-10-15T21:09:12.598Z",
+    "contributors": [
+      "SphinxKnight",
+      "Menkid",
+      "Sebastianz",
+      "SJW",
+      "teoli",
+      "MorganeH",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/image-orientation": {
+    "modified": "2020-10-15T21:19:41.469Z",
+    "contributors": [
+      "SphinxKnight",
+      "prayash",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/image-rendering": {
+    "modified": "2020-10-15T21:19:37.197Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "piouPiouM",
+      "teoli",
+      "FredB",
+      "DavidWalsh"
+    ]
+  },
+  "Web/CSS/Reference/Properties/initial-letter": {
+    "modified": "2020-10-15T21:43:46.301Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inline-size": {
+    "modified": "2020-10-15T21:43:58.068Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset": {
+    "modified": "2020-10-15T22:10:58.848Z",
+    "contributors": [
+      "Yukulele.",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset-block": {
+    "modified": "2020-10-15T22:11:00.485Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset-block-end": {
+    "modified": "2020-10-15T21:43:23.981Z",
+    "contributors": [
+      "SphinxKnight",
+      "rachelandrew"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset-block-start": {
+    "modified": "2020-10-15T21:43:23.193Z",
+    "contributors": [
+      "SphinxKnight",
+      "rachelandrew"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset-inline": {
+    "modified": "2020-10-15T22:11:01.666Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset-inline-end": {
+    "modified": "2020-10-15T21:43:21.489Z",
+    "contributors": [
+      "SphinxKnight",
+      "rachelandrew"
+    ]
+  },
+  "Web/CSS/Reference/Properties/inset-inline-start": {
+    "modified": "2020-10-15T21:43:20.633Z",
+    "contributors": [
+      "SphinxKnight",
+      "rachelandrew"
+    ]
+  },
+  "Web/CSS/Reference/Properties/isolation": {
+    "modified": "2020-10-15T21:43:45.017Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/justify-content": {
+    "modified": "2020-10-15T21:41:40.322Z",
+    "contributors": [
+      "NemoNobobyPersonne",
+      "SphinxKnight",
+      "YoannR.",
+      "ChristopheBoucaut"
+    ]
+  },
+  "Web/CSS/Reference/Properties/justify-items": {
+    "modified": "2020-10-15T21:52:49.461Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/justify-self": {
+    "modified": "2020-10-15T21:52:50.877Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/left": {
+    "modified": "2020-10-15T21:14:12.510Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "tregagnon",
+      "tcit"
+    ]
+  },
+  "Web/CSS/Reference/Properties/letter-spacing": {
+    "modified": "2020-10-15T21:08:58.951Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "hugo42",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-break": {
+    "modified": "2020-10-15T21:37:07.983Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "Yvain"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-clamp": {
+    "modified": "2020-10-15T22:18:53.977Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-height": {
+    "modified": "2020-10-15T21:15:28.749Z",
+    "contributors": [
+      "SphinxKnight",
+      "gharel",
+      "Nashella",
+      "teoli",
+      "Sebastianz",
+      "Hell_Carlito",
+      "jadecrea",
+      "Havano",
+      "remjie",
+      "Fredchat",
+      "FredB",
+      "BenoitL"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-height-step": {
+    "modified": "2020-10-15T21:56:21.204Z",
+    "contributors": [
+      "SphinxKnight",
+      "kodliber"
+    ]
+  },
+  "Web/CSS/Reference/Properties/list-style": {
+    "modified": "2020-10-15T21:15:56.797Z",
+    "contributors": [
+      "SphinxKnight",
+      "malenki",
+      "Sebastianz",
+      "louuis",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/list-style-image": {
+    "modified": "2020-10-15T21:15:55.198Z",
+    "contributors": [
+      "SphinxKnight",
+      "Hinato15",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/list-style-position": {
+    "modified": "2020-10-15T21:16:01.140Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "fscholz",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/list-style-type": {
+    "modified": "2020-10-15T21:16:00.197Z",
+    "contributors": [
+      "SphinxKnight",
+      "GregMorel",
+      "fscholz",
+      "Goofy",
+      "teoli",
+      "Sebastianz",
+      "FredB",
+      "Mgjbot",
+      "ethertank",
+      "Fredchat",
+      "Kyodev",
+      "VincentN"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin": {
+    "modified": "2020-10-15T21:10:35.628Z",
+    "contributors": [
+      "nathsou",
+      "SphinxKnight",
+      "guirip",
+      "mrstork",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner",
+      "tcit"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-block": {
+    "modified": "2020-10-15T22:10:58.480Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-block-end": {
+    "modified": "2020-10-15T21:43:50.805Z",
+    "contributors": [
+      "SphinxKnight",
+      "Goofy"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-block-start": {
+    "modified": "2020-10-15T21:43:45.525Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-bottom": {
+    "modified": "2020-10-15T21:10:36.296Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-inline": {
+    "modified": "2020-10-15T22:11:03.669Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-inline-end": {
+    "modified": "2020-10-15T21:18:24.194Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "J.DMB",
+      "louuis",
+      "FredB",
+      "VincentN",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-inline-start": {
+    "modified": "2020-10-15T21:18:22.766Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "louuis",
+      "FredB",
+      "VincentN",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-left": {
+    "modified": "2020-10-15T21:10:37.744Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-right": {
+    "modified": "2020-10-15T21:10:35.139Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-top": {
+    "modified": "2020-10-15T21:10:41.432Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-trim": {
+    "modified": "2020-10-15T22:11:07.350Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask": {
+    "modified": "2020-10-15T21:43:53.941Z",
+    "contributors": [
+      "SphinxKnight",
+      "LTerrier"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border": {
+    "modified": "2019-04-07T09:00:35.499Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border-mode": {
+    "modified": "2019-04-07T09:04:43.048Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border-outset": {
+    "modified": "2019-04-06T16:09:39.252Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border-repeat": {
+    "modified": "2019-04-06T16:09:31.479Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border-slice": {
+    "modified": "2019-04-06T16:09:23.034Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border-source": {
+    "modified": "2019-04-06T16:08:52.761Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-border-width": {
+    "modified": "2019-04-06T16:08:41.957Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-clip": {
+    "modified": "2020-10-15T21:44:07.704Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-composite": {
+    "modified": "2020-10-15T21:44:09.144Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-image": {
+    "modified": "2020-10-15T21:45:26.294Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-mode": {
+    "modified": "2020-10-15T21:45:26.649Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-origin": {
+    "modified": "2020-10-15T21:45:26.109Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-position": {
+    "modified": "2020-10-15T21:45:24.708Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-repeat": {
+    "modified": "2020-10-15T21:45:24.759Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-size": {
+    "modified": "2020-10-15T21:45:21.752Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask-type": {
+    "modified": "2020-10-15T21:43:42.404Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-block-size": {
+    "modified": "2020-10-15T21:43:44.853Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-height": {
+    "modified": "2020-10-15T21:15:55.797Z",
+    "contributors": [
+      "ldvc",
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-inline-size": {
+    "modified": "2020-10-15T21:43:33.488Z",
+    "contributors": [
+      "SphinxKnight",
+      "xdelatour"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-width": {
+    "modified": "2020-10-15T21:16:38.615Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-block-size": {
+    "modified": "2020-10-15T21:43:26.727Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-height": {
+    "modified": "2020-10-15T21:16:02.253Z",
+    "contributors": [
+      "Derek",
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Grsmto",
+      "Delapouite",
+      "tregagnon",
+      "Mgjbot",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-inline-size": {
+    "modified": "2020-10-15T21:43:22.753Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-width": {
+    "modified": "2020-10-15T21:16:36.385Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mix-blend-mode": {
+    "modified": "2020-10-15T21:37:54.397Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "LukyVj",
+      "Sebastianz",
+      "Hell_Carlito"
+    ]
+  },
+  "Web/CSS/Reference/Properties/object-fit": {
+    "modified": "2020-10-15T21:40:35.077Z",
+    "contributors": [
+      "uniuc",
+      "SphinxKnight",
+      "LauJi",
+      "PifyZ"
+    ]
+  },
+  "Web/CSS/Reference/Properties/object-position": {
+    "modified": "2020-10-15T21:43:24.887Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/offset": {
+    "modified": "2020-10-15T21:43:23.702Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/offset-anchor": {
+    "modified": "2020-10-15T22:24:05.493Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/offset-distance": {
+    "modified": "2020-10-15T21:43:21.224Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/offset-path": {
+    "modified": "2020-10-15T21:43:23.613Z",
+    "contributors": [
+      "SphinxKnight",
+      "a-mt"
+    ]
+  },
+  "Web/CSS/Reference/Properties/offset-position": {
+    "modified": "2020-10-15T22:34:44.413Z",
+    "contributors": [
+      "cdoublev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/offset-rotate": {
+    "modified": "2020-10-15T21:43:21.156Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/opacity": {
+    "modified": "2020-10-15T21:09:09.094Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/order": {
+    "modified": "2020-10-15T21:43:22.198Z",
+    "contributors": [
+      "cdoublev",
+      "SphinxKnight",
+      "tzilliox"
+    ]
+  },
+  "Web/CSS/Reference/Properties/orphans": {
+    "modified": "2020-10-15T21:09:04.253Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "djacquel"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline": {
+    "modified": "2020-10-15T21:09:11.603Z",
+    "contributors": [
+      "erwanjugand",
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "wakka27",
+      "FredB",
+      "Blackhole",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-color": {
+    "modified": "2020-10-15T21:08:56.862Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-offset": {
+    "modified": "2020-10-15T21:08:49.087Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "Manumanu",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-style": {
+    "modified": "2020-10-15T21:09:08.315Z",
+    "contributors": [
+      "johannpinson",
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-width": {
+    "modified": "2020-10-15T21:09:11.670Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow": {
+    "modified": "2020-10-15T21:08:56.186Z",
+    "contributors": [
+      "SphinxKnight",
+      "fdnhkj",
+      "mapiki",
+      "matsumonkie",
+      "Sebastianz",
+      "scaillerie",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-anchor": {
+    "modified": "2020-10-15T22:10:01.845Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-block": {
+    "modified": "2020-10-15T22:17:59.313Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-inline": {
+    "modified": "2020-10-15T22:17:57.651Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-wrap": {
+    "modified": "2020-10-15T21:20:31.219Z",
+    "contributors": [
+      "SphinxKnight",
+      "anisometropie",
+      "patrickfournier",
+      "fscholz",
+      "Sebastianz",
+      "PofMagicfingers",
+      "teoli",
+      "BiAiB",
+      "philippe97",
+      "FredB",
+      "Delapouite"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-x": {
+    "modified": "2020-10-15T21:21:34.563Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "tregagnon",
+      "Delapouite",
+      "Igro"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-y": {
+    "modified": "2020-10-15T21:21:35.151Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "enogael",
+      "FredB",
+      "tregagnon",
+      "Delapouite",
+      "Igro"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overscroll-behavior": {
+    "modified": "2020-10-15T22:01:11.932Z",
+    "contributors": [
+      "SphinxKnight",
+      "brunostasse"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overscroll-behavior-x": {
+    "modified": "2020-10-15T22:01:15.043Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overscroll-behavior-y": {
+    "modified": "2020-10-15T22:01:11.740Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding": {
+    "modified": "2020-10-15T21:10:34.387Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-block": {
+    "modified": "2020-10-15T22:11:17.883Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-block-end": {
+    "modified": "2020-10-15T21:43:04.401Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-block-start": {
+    "modified": "2020-10-15T21:43:04.242Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-bottom": {
+    "modified": "2020-10-15T21:10:37.788Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-inline": {
+    "modified": "2020-10-15T22:11:15.316Z",
+    "contributors": [
+      "Loliwe",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-inline-end": {
+    "modified": "2020-10-15T21:18:26.917Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "FredB",
+      "VincentN",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-inline-start": {
+    "modified": "2020-10-15T21:18:27.911Z",
+    "contributors": [
+      "SphinxKnight",
+      "AmauryH",
+      "teoli",
+      "FredB",
+      "VincentN",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-left": {
+    "modified": "2020-10-15T21:10:35.530Z",
+    "contributors": [
+      "SphinxKnight",
+      "warso",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-right": {
+    "modified": "2020-10-15T21:10:31.706Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-top": {
+    "modified": "2020-10-15T21:10:29.837Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/page-break-after": {
+    "modified": "2020-10-15T21:31:45.771Z",
+    "contributors": [
+      "SphinxKnight",
+      "ncoden",
+      "Sebastianz",
+      "gmichard",
+      "ilaborie"
+    ]
+  },
+  "Web/CSS/Reference/Properties/page-break-before": {
+    "modified": "2020-10-15T21:43:02.913Z",
+    "contributors": [
+      "jibe0123",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/page-break-inside": {
+    "modified": "2020-10-15T21:43:05.193Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/paint-order": {
+    "modified": "2020-10-15T22:02:33.903Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/perspective": {
+    "modified": "2020-10-15T21:19:38.260Z",
+    "contributors": [
+      "SphinxKnight",
+      "eviouchka",
+      "pierretusseau",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "pl6025",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/perspective-origin": {
+    "modified": "2020-10-15T21:20:18.754Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/place-content": {
+    "modified": "2020-10-15T21:52:51.184Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/place-items": {
+    "modified": "2020-10-15T21:52:53.357Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/place-self": {
+    "modified": "2020-10-15T21:52:50.692Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/pointer-events": {
+    "modified": "2020-10-15T21:22:42.114Z",
+    "contributors": [
+      "SphinxKnight",
+      "flexbox",
+      "teoli",
+      "SiegfriedEhret",
+      "avetisk"
+    ]
+  },
+  "Web/CSS/Reference/Properties/position": {
+    "modified": "2020-10-15T21:16:08.130Z",
+    "contributors": [
+      "SphinxKnight",
+      "Loliwe",
+      "Machou",
+      "adaedra",
+      "fscholz",
+      "Sebastianz",
+      "cconcolato",
+      "FredB",
+      "teoli",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/print-color-adjust": {
+    "modified": "2020-10-15T21:28:10.335Z",
+    "contributors": [
+      "SphinxKnight",
+      "CuteRabbit",
+      "louuis"
+    ]
+  },
+  "Web/CSS/Reference/Properties/quotes": {
+    "modified": "2020-10-15T21:08:51.774Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/resize": {
+    "modified": "2020-10-15T21:19:06.332Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/right": {
+    "modified": "2020-10-15T21:08:54.080Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Delapouite"
+    ]
+  },
+  "Web/CSS/Reference/Properties/rotate": {
+    "modified": "2020-10-15T22:02:45.073Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/row-gap": {
+    "modified": "2020-10-15T22:05:44.066Z",
+    "contributors": [
+      "SphinxKnight",
+      "JNa0"
+    ]
+  },
+  "Web/CSS/Reference/Properties/ruby-align": {
+    "modified": "2020-10-15T21:43:02.784Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/ruby-position": {
+    "modified": "2020-10-15T21:42:41.711Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scale": {
+    "modified": "2020-10-15T22:02:41.753Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-behavior": {
+    "modified": "2020-10-15T21:42:38.519Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin": {
+    "modified": "2020-10-15T22:11:29.331Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-block": {
+    "modified": "2020-10-15T22:11:26.331Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-block-end": {
+    "modified": "2020-10-15T22:11:24.840Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-block-start": {
+    "modified": "2020-10-15T22:11:27.968Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-bottom": {
+    "modified": "2020-10-15T22:11:27.109Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-inline": {
+    "modified": "2020-10-15T22:11:27.758Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-inline-end": {
+    "modified": "2020-10-15T22:11:29.215Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-inline-start": {
+    "modified": "2020-10-15T22:11:31.365Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-left": {
+    "modified": "2020-10-15T22:11:32.305Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-right": {
+    "modified": "2020-10-15T22:11:31.609Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-margin-top": {
+    "modified": "2020-10-15T22:11:25.637Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding": {
+    "modified": "2020-10-15T22:11:29.445Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-block": {
+    "modified": "2020-10-15T22:11:28.191Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-block-end": {
+    "modified": "2020-10-15T22:11:29.968Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-block-start": {
+    "modified": "2020-10-15T22:11:29.801Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-bottom": {
+    "modified": "2020-10-15T22:11:30.415Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-inline": {
+    "modified": "2020-10-15T22:11:26.827Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-inline-end": {
+    "modified": "2020-10-15T22:11:26.380Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-inline-start": {
+    "modified": "2020-10-15T22:11:30.209Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-left": {
+    "modified": "2020-10-15T22:11:32.055Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-right": {
+    "modified": "2020-10-15T22:11:31.603Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-padding-top": {
+    "modified": "2020-10-15T22:11:27.462Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-snap-align": {
+    "modified": "2020-10-15T22:11:32.358Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-snap-stop": {
+    "modified": "2020-10-15T22:10:03.086Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scroll-snap-type": {
+    "modified": "2020-10-15T21:42:50.969Z",
+    "contributors": [
+      "SphinxKnight",
+      "jide"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scrollbar-color": {
+    "modified": "2020-10-15T22:10:04.861Z",
+    "contributors": [
+      "SphinxKnight",
+      "lp177"
+    ]
+  },
+  "Web/CSS/Reference/Properties/scrollbar-width": {
+    "modified": "2020-10-15T22:10:07.959Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/shape-image-threshold": {
+    "modified": "2020-10-15T21:42:37.534Z",
+    "contributors": [
+      "SphinxKnight",
+      "Zefling"
+    ]
+  },
+  "Web/CSS/Reference/Properties/shape-margin": {
+    "modified": "2020-10-15T21:42:48.010Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/shape-outside": {
+    "modified": "2020-10-15T21:33:45.682Z",
+    "contributors": [
+      "SphinxKnight",
+      "HTeuMeuLeu",
+      "teoli",
+      "Sebastianz",
+      "lbelavoir"
+    ]
+  },
+  "Web/CSS/Reference/Properties/tab-size": {
+    "modified": "2020-10-15T21:19:02.503Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/table-layout": {
+    "modified": "2020-10-15T21:19:02.718Z",
+    "contributors": [
+      "SphinxKnight",
+      "bsitruk",
+      "emmanuelclement",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "b_b",
+      "FredB",
+      "ethertank"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-align": {
+    "modified": "2020-10-15T21:15:12.893Z",
+    "contributors": [
+      "n3wborn",
+      "SphinxKnight",
+      "SpaVec",
+      "NicolasGoudry",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-align-last": {
+    "modified": "2020-10-15T21:19:07.972Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "fvignals",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-combine-upright": {
+    "modified": "2020-10-15T21:42:38.110Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration": {
+    "modified": "2020-10-15T21:17:58.514Z",
+    "contributors": [
+      "Maxi-MenuBestOfPlus",
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "316k",
+      "FredB",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration-color": {
+    "modified": "2020-10-15T21:08:48.730Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "fscholz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration-line": {
+    "modified": "2020-10-15T21:19:04.173Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration-skip": {
+    "modified": "2020-10-15T21:47:35.040Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration-skip-ink": {
+    "modified": "2020-10-15T21:59:08.170Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration-style": {
+    "modified": "2020-10-15T21:19:03.614Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration-thickness": {
+    "modified": "2020-10-15T22:24:05.293Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-emphasis": {
+    "modified": "2020-10-15T21:43:05.328Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-emphasis-color": {
+    "modified": "2020-10-15T21:41:37.102Z",
+    "contributors": [
+      "SphinxKnight",
+      "webdif"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-emphasis-position": {
+    "modified": "2020-10-15T21:41:37.345Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-emphasis-style": {
+    "modified": "2020-10-15T21:41:36.302Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-indent": {
+    "modified": "2020-10-15T21:08:57.783Z",
+    "contributors": [
+      "SphinxKnight",
+      "neurone12000",
+      "Prinz_Rana",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-justify": {
+    "modified": "2020-10-15T21:53:58.739Z",
+    "contributors": [
+      "SphinxKnight",
+      "Deraw-",
+      "Joel-Costamagna"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-orientation": {
+    "modified": "2020-10-15T21:41:37.989Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-overflow": {
+    "modified": "2020-10-15T21:09:08.503Z",
+    "contributors": [
+      "Ryanfarrah25",
+      "SphinxKnight",
+      "dackmin",
+      "Guillaume-Heras",
+      "Sebastianz",
+      "PifyZ",
+      "LukyVj",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-rendering": {
+    "modified": "2020-10-15T21:08:21.121Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "webdif",
+      "teoli",
+      "FredB",
+      "hsablonniere",
+      "Manu1400"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-shadow": {
+    "modified": "2020-10-15T21:11:21.315Z",
+    "contributors": [
+      "SphinxKnight",
+      "NemoNobobyPersonne",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "BadFox",
+      "BenoitL"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-size-adjust": {
+    "modified": "2020-10-15T21:41:38.977Z",
+    "contributors": [
+      "SphinxKnight",
+      "Goofy"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-transform": {
+    "modified": "2020-10-15T21:08:51.025Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "sylozof",
+      "teoli",
+      "FredB",
+      "Matouche"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-underline-offset": {
+    "modified": "2020-10-15T22:21:50.660Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-underline-position": {
+    "modified": "2020-10-15T21:21:32.888Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/top": {
+    "modified": "2020-10-15T21:19:40.106Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ethertank",
+      "DavidWalsh"
+    ]
+  },
+  "Web/CSS/Reference/Properties/touch-action": {
+    "modified": "2020-10-15T21:41:20.063Z",
+    "contributors": [
+      "daformat",
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transform": {
+    "modified": "2020-10-15T21:19:05.910Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "Sebastianz",
+      "Sheppy",
+      "teoli",
+      "FredB",
+      "lmorchard"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transform-box": {
+    "modified": "2020-10-15T21:41:17.907Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transform-origin": {
+    "modified": "2020-10-15T21:19:06.049Z",
+    "contributors": [
+      "tristantheb",
+      "SphinxKnight",
+      "Prinz_Rana",
+      "Sebastianz",
+      "antograssiot",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transform-style": {
+    "modified": "2020-10-15T21:19:45.597Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition": {
+    "modified": "2020-10-15T21:20:31.652Z",
+    "contributors": [
+      "SphinxKnight",
+      "ovaxio",
+      "sztan",
+      "fscholz",
+      "Sebastianz",
+      "J.DMB",
+      "louuis",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition-delay": {
+    "modified": "2020-10-15T21:19:58.171Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition-duration": {
+    "modified": "2020-10-15T21:20:14.863Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition-property": {
+    "modified": "2020-10-15T21:20:09.909Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "gudoy",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition-timing-function": {
+    "modified": "2020-10-15T21:20:09.412Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/translate": {
+    "modified": "2020-10-15T22:02:43.081Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Properties/unicode-bidi": {
+    "modified": "2020-10-15T21:10:25.144Z",
+    "contributors": [
+      "SphinxKnight",
+      "trouba",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "ThePrisoner"
+    ]
+  },
+  "Web/CSS/Reference/Properties/user-modify": {
+    "modified": "2020-10-15T21:43:01.040Z",
+    "contributors": [
+      "SphinxKnight",
+      "NicolasT"
+    ]
+  },
+  "Web/CSS/Reference/Properties/user-select": {
+    "modified": "2020-10-15T21:28:08.010Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Fredchat",
+      "teoli",
+      "louuis"
+    ]
+  },
+  "Web/CSS/Reference/Properties/vertical-align": {
+    "modified": "2020-10-15T21:17:57.980Z",
+    "contributors": [
+      "SphinxKnight",
+      "vlakoff",
+      "Loliwe",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/visibility": {
+    "modified": "2020-10-15T21:18:07.321Z",
+    "contributors": [
+      "patrickfournier",
+      "SphinxKnight",
+      "Sebastianz",
+      "Hell_Carlito",
+      "vava",
+      "teoli",
+      "tregagnon",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
+    ]
+  },
+  "Web/CSS/Reference/Properties/white-space": {
+    "modified": "2020-10-15T21:19:07.297Z",
+    "contributors": [
+      "SphinxKnight",
+      "nykola",
+      "fscholz",
+      "teoli",
+      "claudepache",
+      "FredB",
+      "nonos"
+    ]
+  },
+  "Web/CSS/Reference/Properties/widows": {
+    "modified": "2020-10-15T21:19:18.585Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/width": {
+    "modified": "2020-10-15T21:16:34.721Z",
+    "contributors": [
+      "cdoublev",
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "Mgjbot",
+      "BenoitL",
+      "Fredchat",
+      "Kyodev"
+    ]
+  },
+  "Web/CSS/Reference/Properties/will-change": {
+    "modified": "2020-10-15T21:38:00.394Z",
+    "contributors": [
+      "cdoublev",
+      "Marc.V",
+      "SphinxKnight",
+      "Sebastianz",
+      "PRASS95"
+    ]
+  },
+  "Web/CSS/Reference/Properties/word-break": {
+    "modified": "2020-10-15T21:20:32.265Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sylfare",
+      "PifyZ",
+      "teoli",
+      "fscholz",
+      "Sebastianz",
+      "louuis",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/word-spacing": {
+    "modified": "2020-10-15T21:09:07.377Z",
+    "contributors": [
+      "SphinxKnight",
+      "Prinz_Rana",
+      "fscholz",
+      "Sebastianz",
+      "teoli",
+      "Goofy",
+      "louuis",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/writing-mode": {
+    "modified": "2020-10-15T21:23:45.445Z",
+    "contributors": [
+      "SphinxKnight",
+      "YoruNoHikage",
+      "L2o",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "Web/CSS/Reference/Properties/z-index": {
+    "modified": "2020-10-15T21:08:18.747Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sebastianz",
+      "teoli",
+      "FredB",
+      "tregagnon",
+      "Fredchat",
+      "Kyodev",
+      "Lapinkiller"
+    ]
+  },
+  "Web/CSS/Reference/Properties/zoom": {
+    "modified": "2020-10-15T21:45:23.245Z",
+    "contributors": [
+      "SphinxKnight",
+      "BenMorel",
+      "JayPanoz"
+    ]
+  },
   "Web/CSS/Reference/Webkit_extensions": {
     "modified": "2019-10-07T02:42:25.089Z",
     "contributors": [
@@ -22932,37 +26445,6 @@
       "FredB"
     ]
   },
-  "Web/CSS/align-content": {
-    "modified": "2020-10-15T21:30:37.361Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "JackNUMBER",
-      "fscholz",
-      "Sebastianz",
-      "Goofy",
-      "Dexter_Deter"
-    ]
-  },
-  "Web/CSS/align-items": {
-    "modified": "2020-10-15T21:39:37.167Z",
-    "contributors": [
-      "SphinxKnight",
-      "rolf39"
-    ]
-  },
-  "Web/CSS/align-self": {
-    "modified": "2020-10-15T21:45:37.829Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/all": {
-    "modified": "2020-10-15T21:45:31.166Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/alpha-value": {
     "modified": "2019-10-29T08:59:32.213Z",
     "contributors": [
@@ -22988,124 +26470,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/animation": {
-    "modified": "2020-10-15T21:08:29.411Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "teoli",
-      "Sebastianz",
-      "gudoy",
-      "tregagnon",
-      "Delapouite",
-      "FredB",
-      "trevorh"
-    ]
-  },
-  "Web/CSS/animation-delay": {
-    "modified": "2020-10-15T21:08:26.081Z",
-    "contributors": [
-      "SphinxKnight",
-      "Mr21",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/animation-direction": {
-    "modified": "2020-10-15T21:04:49.473Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/animation-duration": {
-    "modified": "2020-10-15T21:09:29.304Z",
-    "contributors": [
-      "lhapaipai",
-      "SphinxKnight",
-      "teoli",
-      "Sebastianz",
-      "FredB"
-    ]
-  },
-  "Web/CSS/animation-fill-mode": {
-    "modified": "2020-10-15T21:08:35.038Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/animation-iteration-count": {
-    "modified": "2020-10-15T21:08:37.214Z",
-    "contributors": [
-      "lhapaipai",
-      "SphinxKnight",
-      "verdy_p",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/animation-name": {
-    "modified": "2020-10-15T21:08:32.798Z",
-    "contributors": [
-      "SphinxKnight",
-      "Ramzi2892",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/animation-play-state": {
-    "modified": "2020-10-15T21:08:35.700Z",
-    "contributors": [
-      "SphinxKnight",
-      "ThreadElric",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/animation-timing-function": {
-    "modified": "2020-10-15T21:08:36.973Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "teoli",
-      "Sebastianz",
-      "coets",
-      "FredB",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/appearance": {
-    "modified": "2020-10-15T21:15:48.651Z",
-    "contributors": [
-      "escattone",
-      "SphinxKnight",
-      "ExE-Boss",
-      "wbamberg",
-      "AymDev",
-      "teoli",
-      "wakka27",
-      "ksad",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
   "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:39.350Z",
     "contributors": [
@@ -23121,177 +26485,6 @@
       "philippe97"
     ]
   },
-  "Web/CSS/backdrop-filter": {
-    "modified": "2020-10-15T21:45:16.620Z",
-    "contributors": [
-      "SphinxKnight",
-      "Colisan"
-    ]
-  },
-  "Web/CSS/backface-visibility": {
-    "modified": "2020-10-15T21:08:31.865Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "ethertank",
-      "tregagnon"
-    ]
-  },
-  "Web/CSS/background": {
-    "modified": "2020-10-15T21:08:39.389Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "FredB",
-      "teoli",
-      "tregagnon",
-      "Yuichiro",
-      "BenoitL",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/background-attachment": {
-    "modified": "2020-10-15T21:08:33.405Z",
-    "contributors": [
-      "SphinxKnight",
-      "kustolovic",
-      "teoli",
-      "ShamsGolap",
-      "FredB",
-      "tregagnon",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/background-blend-mode": {
-    "modified": "2020-10-15T21:30:51.492Z",
-    "contributors": [
-      "SphinxKnight",
-      "LukyVj",
-      "mrstork",
-      "Sebastianz",
-      "J.DMB",
-      "YoruNoHikage"
-    ]
-  },
-  "Web/CSS/background-clip": {
-    "modified": "2020-10-15T21:09:30.832Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/background-color": {
-    "modified": "2020-10-15T21:08:20.811Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Sebastianz",
-      "ksad",
-      "FredB",
-      "tregagnon",
-      "Yuichiro",
-      "Fredchat",
-      "Mgjbot",
-      "Nathymig",
-      "Boly38",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/background-image": {
-    "modified": "2020-10-15T21:08:35.762Z",
-    "contributors": [
-      "SphinxKnight",
-      "jgil83000",
-      "Tactless7",
-      "wizAmit",
-      "magikmanu",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "tregagnon",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/background-origin": {
-    "modified": "2020-10-15T21:09:26.607Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/background-position": {
-    "modified": "2020-10-15T21:08:28.344Z",
-    "contributors": [
-      "SphinxKnight",
-      "kantoche",
-      "Goofy",
-      "mrstork",
-      "teoli",
-      "enogael",
-      "FredB",
-      "tregagnon",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/background-position-x": {
-    "modified": "2020-10-15T21:45:43.001Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/background-position-y": {
-    "modified": "2020-10-15T21:45:41.534Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/background-repeat": {
-    "modified": "2020-10-15T21:08:24.169Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "technolabtips",
-      "louuis",
-      "teoli",
-      "FredB",
-      "tregagnon",
-      "Nathymig",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/background-size": {
-    "modified": "2020-10-15T21:08:32.072Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "claudepache",
-      "tregagnon"
-    ]
-  },
   "Web/CSS/basic-shape": {
     "modified": "2020-10-15T21:46:24.284Z",
     "contributors": [
@@ -23305,716 +26498,6 @@
       "Nolwennig",
       "GeoffreyC.",
       "fscholz"
-    ]
-  },
-  "Web/CSS/block-size": {
-    "modified": "2020-10-15T21:45:10.040Z",
-    "contributors": [
-      "SphinxKnight",
-      "amazingphilippe"
-    ]
-  },
-  "Web/CSS/border": {
-    "modified": "2020-10-15T21:08:26.155Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "vava",
-      "teoli",
-      "ksad",
-      "FredB",
-      "tregagnon",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/border-block": {
-    "modified": "2020-10-15T22:10:54.566Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-block-color": {
-    "modified": "2020-10-15T22:10:56.045Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-block-end": {
-    "modified": "2020-10-15T21:45:11.203Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-end-color": {
-    "modified": "2020-10-15T21:45:08.326Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-end-style": {
-    "modified": "2020-10-15T21:45:07.749Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-end-width": {
-    "modified": "2020-10-15T21:45:07.994Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-start": {
-    "modified": "2020-10-15T21:45:09.987Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-start-color": {
-    "modified": "2020-10-15T21:45:06.536Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-start-style": {
-    "modified": "2020-10-15T21:45:07.141Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-start-width": {
-    "modified": "2020-10-15T21:45:08.997Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/border-block-style": {
-    "modified": "2020-10-15T22:11:05.093Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-block-width": {
-    "modified": "2020-10-15T22:11:02.717Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-bottom": {
-    "modified": "2020-10-15T21:12:33.513Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "Golmote",
-      "ksad",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-bottom-color": {
-    "modified": "2020-10-15T21:08:17.967Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "ksad",
-      "FredB",
-      "tregagnon",
-      "Yuichiro",
-      "Nathymig",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-bottom-left-radius": {
-    "modified": "2020-10-15T21:09:26.046Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "Sebastianz",
-      "teoli",
-      "ksad",
-      "FredB",
-      "Yuichiro",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-bottom-right-radius": {
-    "modified": "2020-10-15T21:09:24.108Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "Sebastianz",
-      "teoli",
-      "ksad",
-      "FredB",
-      "Yuichiro",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-bottom-style": {
-    "modified": "2020-10-15T21:12:44.728Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-bottom-width": {
-    "modified": "2020-10-15T21:10:09.492Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-collapse": {
-    "modified": "2020-10-15T21:16:01.217Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-color": {
-    "modified": "2020-10-15T21:12:51.249Z",
-    "contributors": [
-      "SphinxKnight",
-      "begmans",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/border-end-end-radius": {
-    "modified": "2020-10-15T22:13:15.093Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-end-start-radius": {
-    "modified": "2020-10-15T22:13:15.935Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-image": {
-    "modified": "2020-10-15T21:19:08.857Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "pl6025",
-      "FredB",
-      "PetiPandaRou",
-      "openjck",
-      "Jeremie"
-    ]
-  },
-  "Web/CSS/border-image-outset": {
-    "modified": "2020-10-15T21:45:07.479Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-image-repeat": {
-    "modified": "2020-10-15T21:45:07.940Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-image-slice": {
-    "modified": "2020-10-15T21:45:08.549Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-image-source": {
-    "modified": "2020-10-15T21:20:04.870Z",
-    "contributors": [
-      "SphinxKnight",
-      "wizAmit",
-      "teoli",
-      "FredB",
-      "PetiPandaRou"
-    ]
-  },
-  "Web/CSS/border-image-width": {
-    "modified": "2020-10-15T21:20:03.679Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "PetiPandaRou"
-    ]
-  },
-  "Web/CSS/border-inline": {
-    "modified": "2020-10-15T22:10:55.949Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-color": {
-    "modified": "2020-10-15T22:10:55.459Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-end": {
-    "modified": "2020-10-15T21:45:09.637Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-end-color": {
-    "modified": "2020-10-15T21:45:06.629Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-end-style": {
-    "modified": "2020-10-15T21:45:06.083Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-end-width": {
-    "modified": "2020-10-15T21:45:06.227Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-start": {
-    "modified": "2020-10-15T21:45:09.428Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-start-color": {
-    "modified": "2020-10-15T21:45:05.240Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-start-style": {
-    "modified": "2020-10-15T21:45:06.115Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-start-width": {
-    "modified": "2020-10-15T21:45:04.477Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-style": {
-    "modified": "2020-10-15T22:10:57.659Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-inline-width": {
-    "modified": "2020-10-15T22:11:00.439Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-left": {
-    "modified": "2020-10-15T21:12:37.709Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-left-color": {
-    "modified": "2020-10-15T21:12:49.527Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-left-style": {
-    "modified": "2020-10-15T21:12:37.629Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-left-width": {
-    "modified": "2020-10-15T21:12:47.533Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-radius": {
-    "modified": "2020-10-15T21:28:07.970Z",
-    "contributors": [
-      "SphinxKnight",
-      "someone",
-      "Prinz_Rana",
-      "teoli",
-      "Qu3tzalify"
-    ]
-  },
-  "Web/CSS/border-right": {
-    "modified": "2020-10-15T21:12:26.680Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-right-color": {
-    "modified": "2020-10-15T21:12:46.785Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-right-style": {
-    "modified": "2020-10-15T21:12:38.190Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-right-width": {
-    "modified": "2020-10-15T21:12:51.216Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-spacing": {
-    "modified": "2020-10-15T21:16:01.215Z",
-    "contributors": [
-      "SphinxKnight",
-      "edspeedy",
-      "L2o",
-      "teoli",
-      "Chealer",
-      "simonrenoult",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-start-end-radius": {
-    "modified": "2020-10-15T22:13:16.127Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-start-start-radius": {
-    "modified": "2020-10-15T22:13:16.075Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/border-style": {
-    "modified": "2020-10-15T21:12:31.333Z",
-    "contributors": [
-      "SphinxKnight",
-      "begmans",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/border-top": {
-    "modified": "2020-10-15T21:12:31.816Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/border-top-color": {
-    "modified": "2020-10-15T21:12:47.503Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-top-left-radius": {
-    "modified": "2020-10-15T21:09:14.310Z",
-    "contributors": [
-      "SphinxKnight",
-      "Titouan",
-      "Sebastianz",
-      "teoli",
-      "ksad",
-      "FredB",
-      "Yuichiro",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-top-right-radius": {
-    "modified": "2020-10-15T21:09:22.219Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "ksad",
-      "FredB",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-top-style": {
-    "modified": "2020-10-15T21:12:48.569Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-top-width": {
-    "modified": "2020-10-15T21:12:47.537Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/border-width": {
-    "modified": "2020-10-15T21:10:07.340Z",
-    "contributors": [
-      "SphinxKnight",
-      "Hinato15",
-      "teoli",
-      "FredB",
-      "Yuichiro",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/bottom": {
-    "modified": "2020-10-15T21:16:33.323Z",
-    "contributors": [
-      "SphinxKnight",
-      "WhiteMoll",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "Elodouwen"
-    ]
-  },
-  "Web/CSS/box-align": {
-    "modified": "2020-10-15T21:18:10.666Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/box-decoration-break": {
-    "modified": "2020-10-15T21:39:24.954Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/box-direction": {
-    "modified": "2020-10-15T21:18:11.464Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/box-flex": {
-    "modified": "2020-10-15T21:18:07.577Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/box-flex-group": {
-    "modified": "2020-10-15T21:45:38.209Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/box-lines": {
-    "modified": "2020-10-15T21:45:33.444Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/box-ordinal-group": {
-    "modified": "2020-10-15T21:45:25.640Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/CSS/box-orient": {
-    "modified": "2020-10-15T21:16:50.386Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/box-pack": {
-    "modified": "2020-10-15T21:18:09.298Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/box-shadow": {
-    "modified": "2020-10-15T21:09:23.643Z",
-    "contributors": [
-      "SphinxKnight",
-      "Bidjit",
-      "teoli",
-      "skinnyfoetusboy",
-      "Goofy",
-      "FredB"
-    ]
-  },
-  "Web/CSS/box-sizing": {
-    "modified": "2020-10-15T21:24:49.409Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "Mr21",
-      "pldz",
-      "lehollandaisvolant",
-      "Sebastianz",
-      "teoli",
-      "jsilvestre",
-      "tregagnon",
-      "FredB"
-    ]
-  },
-  "Web/CSS/break-after": {
-    "modified": "2020-10-15T21:44:47.797Z",
-    "contributors": [
-      "SphinxKnight",
-      "edspeedy"
-    ]
-  },
-  "Web/CSS/break-before": {
-    "modified": "2020-10-15T21:44:48.986Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/break-inside": {
-    "modified": "2020-10-15T21:44:48.451Z",
-    "contributors": [
-      "bershanskiy",
-      "SphinxKnight",
-      "edspeedy"
     ]
   },
   "Web/CSS/calc": {
@@ -24034,85 +26517,11 @@
       "FredB"
     ]
   },
-  "Web/CSS/caption-side": {
-    "modified": "2020-10-15T21:15:41.669Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "Sheppy",
-      "teoli",
-      "FredB",
-      "BenoitL",
-      "*.Har(d)t"
-    ]
-  },
-  "Web/CSS/caret-color": {
-    "modified": "2020-10-15T21:51:25.881Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/clamp": {
     "modified": "2020-11-05T09:58:32.959Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/clear": {
-    "modified": "2020-10-15T21:18:05.718Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "J.DMB",
-      "louuis",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/clip": {
-    "modified": "2020-10-15T21:15:46.162Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Valacar",
-      "Elethiomel",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/clip-path": {
-    "modified": "2020-10-15T21:26:12.097Z",
-    "contributors": [
-      "brunostasse",
-      "SphinxKnight",
-      "guv3n",
-      "teoli",
-      "Philippe_Lambotte"
-    ]
-  },
-  "Web/CSS/color": {
-    "modified": "2020-10-15T21:15:41.703Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "louuis",
-      "Golmote",
-      "FredB",
-      "philippe97",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
     ]
   },
   "Web/CSS/color_value": {
@@ -24129,161 +26538,10 @@
       "BenoitL"
     ]
   },
-  "Web/CSS/column-count": {
-    "modified": "2020-10-15T21:20:32.539Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-fill": {
-    "modified": "2020-10-15T21:20:32.258Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Munto",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Delapouite"
-    ]
-  },
-  "Web/CSS/column-gap": {
-    "modified": "2020-10-15T21:20:34.750Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-rule": {
-    "modified": "2020-10-15T21:20:34.908Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-rule-color": {
-    "modified": "2020-10-15T21:20:38.875Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-rule-style": {
-    "modified": "2020-10-15T21:20:38.835Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-rule-width": {
-    "modified": "2020-10-15T21:20:37.812Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-span": {
-    "modified": "2020-10-15T21:20:33.008Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "louuis",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/column-width": {
-    "modified": "2020-10-15T21:20:31.296Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/columns": {
-    "modified": "2020-10-15T21:20:34.997Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "louuis",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/contain": {
-    "modified": "2020-10-15T21:47:58.553Z",
-    "contributors": [
-      "SphinxKnight",
-      "ebrehault",
-      "vdesdoigts"
-    ]
-  },
-  "Web/CSS/content": {
-    "modified": "2020-10-15T21:09:16.938Z",
-    "contributors": [
-      "SphinxKnight",
-      "HerveRenault",
-      "teoli",
-      "Sebastianz",
-      "FredB"
-    ]
-  },
   "Web/CSS/counter": {
     "modified": "2020-11-09T07:18:11.964Z",
     "contributors": [
       "chrisdavidmills",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/counter-increment": {
-    "modified": "2020-10-15T21:17:58.093Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Fredchat",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/counter-reset": {
-    "modified": "2020-10-15T21:14:15.574Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "fscholz",
-      "Fredchat",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/counter-set": {
-    "modified": "2020-10-15T22:20:18.195Z",
-    "contributors": [
       "SphinxKnight"
     ]
   },
@@ -24301,24 +26559,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/cursor": {
-    "modified": "2020-10-15T21:12:05.631Z",
-    "contributors": [
-      "SphinxKnight",
-      "Grahack",
-      "mrstork",
-      "Sebastianz",
-      "teoli",
-      "Golmote",
-      "FredB",
-      "loranger",
-      "Julien.stuby",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/custom-ident": {
     "modified": "2019-08-05T13:45:05.582Z",
     "contributors": [
@@ -24332,44 +26572,6 @@
     "modified": "2020-10-15T22:14:27.905Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/direction": {
-    "modified": "2020-10-15T21:16:36.245Z",
-    "contributors": [
-      "SphinxKnight",
-      "ncoden",
-      "Sebastianz",
-      "teoli",
-      "ksad",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/display": {
-    "modified": "2020-10-15T21:15:53.886Z",
-    "contributors": [
-      "johannpinson",
-      "SphinxKnight",
-      "cdjoubert",
-      "NemoNobobyPersonne",
-      "Baptistou",
-      "jwhitlock",
-      "friendofweb",
-      "ThibautMln",
-      "jean-pierre.gay",
-      "renoirb",
-      "Sebastianz",
-      "teoli",
-      "Golmote",
-      "FredB",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat",
-      "Kyodev"
     ]
   },
   "Web/CSS/display-box": {
@@ -24421,37 +26623,11 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/empty-cells": {
-    "modified": "2020-10-15T21:09:02.588Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
   "Web/CSS/env": {
     "modified": "2020-11-10T11:09:42.633Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/filter": {
-    "modified": "2020-10-15T21:21:38.971Z",
-    "contributors": [
-      "escattone",
-      "SphinxKnight",
-      "aziaziazi",
-      "Sebastianz",
-      "Prinz_Rana",
-      "teoli",
-      "emersion",
-      "wakka27",
-      "flexbox",
-      "FredB",
-      "thenew"
     ]
   },
   "Web/CSS/filter-function": {
@@ -24537,306 +26713,11 @@
       "lp177"
     ]
   },
-  "Web/CSS/flex": {
-    "modified": "2020-10-15T21:19:44.037Z",
-    "contributors": [
-      "julienw",
-      "Thyme1152",
-      "SphinxKnight",
-      "Hartesic",
-      "sylvainpolletvillard",
-      "fscholz",
-      "Sebastianz",
-      "Mahan91",
-      "teoli",
-      "Golmote",
-      "FredB",
-      "Delapouite",
-      "lalop",
-      "rd6137"
-    ]
-  },
-  "Web/CSS/flex-basis": {
-    "modified": "2020-10-15T21:44:13.576Z",
-    "contributors": [
-      "SphinxKnight",
-      "JonathanMM",
-      "kristofbc"
-    ]
-  },
-  "Web/CSS/flex-direction": {
-    "modified": "2020-10-15T21:26:06.082Z",
-    "contributors": [
-      "SphinxKnight",
-      "robiseb",
-      "Goofy",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "Golmote",
-      "PifyZ"
-    ]
-  },
-  "Web/CSS/flex-flow": {
-    "modified": "2020-10-15T21:40:46.682Z",
-    "contributors": [
-      "SphinxKnight",
-      "jmpp"
-    ]
-  },
-  "Web/CSS/flex-grow": {
-    "modified": "2020-10-15T21:29:35.886Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "mondayking"
-    ]
-  },
-  "Web/CSS/flex-shrink": {
-    "modified": "2020-10-15T21:44:15.655Z",
-    "contributors": [
-      "SphinxKnight",
-      "hvanhonacker",
-      "tifabien"
-    ]
-  },
-  "Web/CSS/flex-wrap": {
-    "modified": "2020-10-15T21:42:48.548Z",
-    "contributors": [
-      "SphinxKnight",
-      "lhapaipai",
-      "YoruNoHikage",
-      "stephaniehobson",
-      "ss-bb"
-    ]
-  },
   "Web/CSS/flex_value": {
     "modified": "2020-10-15T21:50:03.779Z",
     "contributors": [
       "SphinxKnight",
       "xdelatour"
-    ]
-  },
-  "Web/CSS/float": {
-    "modified": "2020-10-15T21:14:08.559Z",
-    "contributors": [
-      "SphinxKnight",
-      "tnga",
-      "fscholz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Nathymig",
-      "Elethiomel",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/font": {
-    "modified": "2020-10-15T21:15:25.017Z",
-    "contributors": [
-      "yvisherve",
-      "SphinxKnight",
-      "edspeedy",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/font-family": {
-    "modified": "2020-10-15T21:16:01.425Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/font-feature-settings": {
-    "modified": "2020-10-15T21:19:34.721Z",
-    "contributors": [
-      "SphinxKnight",
-      "Krenair",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/font-kerning": {
-    "modified": "2020-10-15T21:38:55.741Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "B_M"
-    ]
-  },
-  "Web/CSS/font-language-override": {
-    "modified": "2020-10-15T21:44:15.835Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-optical-sizing": {
-    "modified": "2020-10-15T22:05:43.637Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-size": {
-    "modified": "2020-10-15T21:16:35.611Z",
-    "contributors": [
-      "yaaax",
-      "JNa0",
-      "SphinxKnight",
-      "Kocal",
-      "Bringdal",
-      "fscholz",
-      "teoli",
-      "Fredchat",
-      "louuis",
-      "FredB",
-      "anthony.gaidot",
-      "Mgjbot",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/font-size-adjust": {
-    "modified": "2020-10-15T21:15:30.021Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/font-smooth": {
-    "modified": "2020-10-15T21:44:12.301Z",
-    "contributors": [
-      "SphinxKnight",
-      "Kerumen"
-    ]
-  },
-  "Web/CSS/font-stretch": {
-    "modified": "2020-11-30T11:20:47.071Z",
-    "contributors": [
-      "Moyogo",
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "GrCOTE7",
-      "FredB",
-      "Valacar",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/font-style": {
-    "modified": "2020-10-15T21:15:34.339Z",
-    "contributors": [
-      "n3wborn",
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Domif",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/font-synthesis": {
-    "modified": "2020-10-30T07:13:04.039Z",
-    "contributors": [
-      "JNa0",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-variant": {
-    "modified": "2020-10-15T21:15:18.085Z",
-    "contributors": [
-      "SphinxKnight",
-      "B_M",
-      "fscholz",
-      "Gibus",
-      "Sebastianz",
-      "Igro",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/font-variant-alternates": {
-    "modified": "2020-10-15T21:44:15.520Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-variant-caps": {
-    "modified": "2020-10-29T08:39:50.937Z",
-    "contributors": [
-      "JNa0",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-variant-east-asian": {
-    "modified": "2020-10-15T21:44:08.241Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-variant-ligatures": {
-    "modified": "2020-10-15T21:39:41.117Z",
-    "contributors": [
-      "SphinxKnight",
-      "nfriedli"
-    ]
-  },
-  "Web/CSS/font-variant-numeric": {
-    "modified": "2020-10-15T21:44:06.991Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-variant-position": {
-    "modified": "2020-10-15T21:43:55.206Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-variation-settings": {
-    "modified": "2020-10-15T21:52:12.257Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/font-weight": {
-    "modified": "2020-10-15T21:15:14.602Z",
-    "contributors": [
-      "SphinxKnight",
-      "ygarbage",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "tregagnon",
-      "FredB",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
     ]
   },
   "Web/CSS/frequency": {
@@ -24857,142 +26738,10 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/gap": {
-    "modified": "2020-10-15T22:05:45.614Z",
-    "contributors": [
-      "JNa0",
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/gradient": {
     "modified": "2020-10-15T21:46:27.099Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid": {
-    "modified": "2020-10-15T21:43:57.613Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-area": {
-    "modified": "2020-10-15T21:43:57.849Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-auto-columns": {
-    "modified": "2020-10-15T21:43:52.496Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-auto-flow": {
-    "modified": "2020-10-15T21:45:27.360Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-auto-rows": {
-    "modified": "2020-10-15T21:43:57.525Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-column": {
-    "modified": "2020-10-15T21:44:00.007Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-column-end": {
-    "modified": "2020-10-15T21:43:52.597Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-column-start": {
-    "modified": "2020-10-15T21:43:52.983Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-row": {
-    "modified": "2020-10-15T21:43:47.449Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-row-end": {
-    "modified": "2020-10-15T21:43:54.687Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-row-start": {
-    "modified": "2020-10-15T21:43:46.372Z",
-    "contributors": [
-      "SphinxKnight",
-      "Goofy"
-    ]
-  },
-  "Web/CSS/grid-template": {
-    "modified": "2020-10-15T21:43:56.133Z",
-    "contributors": [
-      "SphinxKnight",
-      "BenJ-R"
-    ]
-  },
-  "Web/CSS/grid-template-areas": {
-    "modified": "2020-10-15T21:43:51.408Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-template-columns": {
-    "modified": "2020-10-15T21:43:47.170Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/grid-template-rows": {
-    "modified": "2020-10-15T21:43:51.505Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/hanging-punctuation": {
-    "modified": "2020-10-15T21:54:18.228Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/height": {
-    "modified": "2020-10-15T21:15:21.230Z",
-    "contributors": [
-      "SphinxKnight",
-      "MaxEvron",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "dabus",
-      "FredB",
-      "Mgjbot",
-      "Aurelgadjo",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/hyphens": {
-    "modified": "2020-10-15T21:09:12.598Z",
-    "contributors": [
-      "SphinxKnight",
-      "Menkid",
-      "Sebastianz",
-      "SJW",
-      "teoli",
-      "MorganeH",
-      "FredB"
     ]
   },
   "Web/CSS/image": {
@@ -25006,27 +26755,6 @@
       "teoli",
       "FredB",
       "Goofy"
-    ]
-  },
-  "Web/CSS/image-orientation": {
-    "modified": "2020-10-15T21:19:41.469Z",
-    "contributors": [
-      "SphinxKnight",
-      "prayash",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/image-rendering": {
-    "modified": "2020-10-15T21:19:37.197Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "piouPiouM",
-      "teoli",
-      "FredB",
-      "DavidWalsh"
     ]
   },
   "Web/CSS/inherit": {
@@ -25054,65 +26782,6 @@
       "Kyodev"
     ]
   },
-  "Web/CSS/initial-letter": {
-    "modified": "2020-10-15T21:43:46.301Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/inline-size": {
-    "modified": "2020-10-15T21:43:58.068Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/inset": {
-    "modified": "2020-10-15T22:10:58.848Z",
-    "contributors": [
-      "Yukulele.",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/inset-block": {
-    "modified": "2020-10-15T22:11:00.485Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/inset-block-end": {
-    "modified": "2020-10-15T21:43:23.981Z",
-    "contributors": [
-      "SphinxKnight",
-      "rachelandrew"
-    ]
-  },
-  "Web/CSS/inset-block-start": {
-    "modified": "2020-10-15T21:43:23.193Z",
-    "contributors": [
-      "SphinxKnight",
-      "rachelandrew"
-    ]
-  },
-  "Web/CSS/inset-inline": {
-    "modified": "2020-10-15T22:11:01.666Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/inset-inline-end": {
-    "modified": "2020-10-15T21:43:21.489Z",
-    "contributors": [
-      "SphinxKnight",
-      "rachelandrew"
-    ]
-  },
-  "Web/CSS/inset-inline-start": {
-    "modified": "2020-10-15T21:43:20.633Z",
-    "contributors": [
-      "SphinxKnight",
-      "rachelandrew"
-    ]
-  },
   "Web/CSS/integer": {
     "modified": "2020-10-15T21:04:03.191Z",
     "contributors": [
@@ -25123,42 +26792,6 @@
       "FredB",
       "tregagnon",
       "Goofy"
-    ]
-  },
-  "Web/CSS/isolation": {
-    "modified": "2020-10-15T21:43:45.017Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/justify-content": {
-    "modified": "2020-10-15T21:41:40.322Z",
-    "contributors": [
-      "NemoNobobyPersonne",
-      "SphinxKnight",
-      "YoannR.",
-      "ChristopheBoucaut"
-    ]
-  },
-  "Web/CSS/justify-items": {
-    "modified": "2020-10-15T21:52:49.461Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/justify-self": {
-    "modified": "2020-10-15T21:52:50.877Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/left": {
-    "modified": "2020-10-15T21:14:12.510Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "tregagnon",
-      "tcit"
     ]
   },
   "Web/CSS/length": {
@@ -25185,379 +26818,11 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/letter-spacing": {
-    "modified": "2020-10-15T21:08:58.951Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "hugo42",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/line-break": {
-    "modified": "2020-10-15T21:37:07.983Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "Yvain"
-    ]
-  },
-  "Web/CSS/line-clamp": {
-    "modified": "2020-10-15T22:18:53.977Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/line-height": {
-    "modified": "2020-10-15T21:15:28.749Z",
-    "contributors": [
-      "SphinxKnight",
-      "gharel",
-      "Nashella",
-      "teoli",
-      "Sebastianz",
-      "Hell_Carlito",
-      "jadecrea",
-      "Havano",
-      "remjie",
-      "Fredchat",
-      "FredB",
-      "BenoitL"
-    ]
-  },
-  "Web/CSS/line-height-step": {
-    "modified": "2020-10-15T21:56:21.204Z",
-    "contributors": [
-      "SphinxKnight",
-      "kodliber"
-    ]
-  },
-  "Web/CSS/list-style": {
-    "modified": "2020-10-15T21:15:56.797Z",
-    "contributors": [
-      "SphinxKnight",
-      "malenki",
-      "Sebastianz",
-      "louuis",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/list-style-image": {
-    "modified": "2020-10-15T21:15:55.198Z",
-    "contributors": [
-      "SphinxKnight",
-      "Hinato15",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/list-style-position": {
-    "modified": "2020-10-15T21:16:01.140Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "fscholz",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/list-style-type": {
-    "modified": "2020-10-15T21:16:00.197Z",
-    "contributors": [
-      "SphinxKnight",
-      "GregMorel",
-      "fscholz",
-      "Goofy",
-      "teoli",
-      "Sebastianz",
-      "FredB",
-      "Mgjbot",
-      "ethertank",
-      "Fredchat",
-      "Kyodev",
-      "VincentN"
-    ]
-  },
-  "Web/CSS/margin": {
-    "modified": "2020-10-15T21:10:35.628Z",
-    "contributors": [
-      "nathsou",
-      "SphinxKnight",
-      "guirip",
-      "mrstork",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner",
-      "tcit"
-    ]
-  },
-  "Web/CSS/margin-block": {
-    "modified": "2020-10-15T22:10:58.480Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/margin-block-end": {
-    "modified": "2020-10-15T21:43:50.805Z",
-    "contributors": [
-      "SphinxKnight",
-      "Goofy"
-    ]
-  },
-  "Web/CSS/margin-block-start": {
-    "modified": "2020-10-15T21:43:45.525Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/margin-bottom": {
-    "modified": "2020-10-15T21:10:36.296Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/margin-inline": {
-    "modified": "2020-10-15T22:11:03.669Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/margin-inline-end": {
-    "modified": "2020-10-15T21:18:24.194Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "J.DMB",
-      "louuis",
-      "FredB",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/margin-inline-start": {
-    "modified": "2020-10-15T21:18:22.766Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "louuis",
-      "FredB",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/margin-left": {
-    "modified": "2020-10-15T21:10:37.744Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/margin-right": {
-    "modified": "2020-10-15T21:10:35.139Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/margin-top": {
-    "modified": "2020-10-15T21:10:41.432Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/margin-trim": {
-    "modified": "2020-10-15T22:11:07.350Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask": {
-    "modified": "2020-10-15T21:43:53.941Z",
-    "contributors": [
-      "SphinxKnight",
-      "LTerrier"
-    ]
-  },
-  "Web/CSS/mask-border": {
-    "modified": "2019-04-07T09:00:35.499Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-border-mode": {
-    "modified": "2019-04-07T09:04:43.048Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-border-outset": {
-    "modified": "2019-04-06T16:09:39.252Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-border-repeat": {
-    "modified": "2019-04-06T16:09:31.479Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-border-slice": {
-    "modified": "2019-04-06T16:09:23.034Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-border-source": {
-    "modified": "2019-04-06T16:08:52.761Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-border-width": {
-    "modified": "2019-04-06T16:08:41.957Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/mask-clip": {
-    "modified": "2020-10-15T21:44:07.704Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-composite": {
-    "modified": "2020-10-15T21:44:09.144Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-image": {
-    "modified": "2020-10-15T21:45:26.294Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-mode": {
-    "modified": "2020-10-15T21:45:26.649Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-origin": {
-    "modified": "2020-10-15T21:45:26.109Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-position": {
-    "modified": "2020-10-15T21:45:24.708Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-repeat": {
-    "modified": "2020-10-15T21:45:24.759Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-size": {
-    "modified": "2020-10-15T21:45:21.752Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/mask-type": {
-    "modified": "2020-10-15T21:43:42.404Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/max": {
     "modified": "2020-11-16T09:02:34.879Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/max-block-size": {
-    "modified": "2020-10-15T21:43:44.853Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/max-height": {
-    "modified": "2020-10-15T21:15:55.797Z",
-    "contributors": [
-      "ldvc",
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/max-inline-size": {
-    "modified": "2020-10-15T21:43:33.488Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
-  "Web/CSS/max-width": {
-    "modified": "2020-10-15T21:16:38.615Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat"
     ]
   },
   "Web/CSS/min": {
@@ -25567,45 +26832,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/min-block-size": {
-    "modified": "2020-10-15T21:43:26.727Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/min-height": {
-    "modified": "2020-10-15T21:16:02.253Z",
-    "contributors": [
-      "Derek",
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Grsmto",
-      "Delapouite",
-      "tregagnon",
-      "Mgjbot",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/min-inline-size": {
-    "modified": "2020-10-15T21:43:22.753Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/min-width": {
-    "modified": "2020-10-15T21:16:36.385Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
   "Web/CSS/minmax": {
     "modified": "2020-11-16T09:06:07.004Z",
     "contributors": [
@@ -25613,16 +26839,6 @@
       "SphinxKnight",
       "HerveRenault",
       "lp177"
-    ]
-  },
-  "Web/CSS/mix-blend-mode": {
-    "modified": "2020-10-15T21:37:54.397Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "LukyVj",
-      "Sebastianz",
-      "Hell_Carlito"
     ]
   },
   "Web/CSS/number": {
@@ -25638,371 +26854,6 @@
       "BenoitL"
     ]
   },
-  "Web/CSS/object-fit": {
-    "modified": "2020-10-15T21:40:35.077Z",
-    "contributors": [
-      "uniuc",
-      "SphinxKnight",
-      "LauJi",
-      "PifyZ"
-    ]
-  },
-  "Web/CSS/object-position": {
-    "modified": "2020-10-15T21:43:24.887Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/offset": {
-    "modified": "2020-10-15T21:43:23.702Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/offset-anchor": {
-    "modified": "2020-10-15T22:24:05.493Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/offset-distance": {
-    "modified": "2020-10-15T21:43:21.224Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/offset-path": {
-    "modified": "2020-10-15T21:43:23.613Z",
-    "contributors": [
-      "SphinxKnight",
-      "a-mt"
-    ]
-  },
-  "Web/CSS/offset-position": {
-    "modified": "2020-10-15T22:34:44.413Z",
-    "contributors": [
-      "cdoublev"
-    ]
-  },
-  "Web/CSS/offset-rotate": {
-    "modified": "2020-10-15T21:43:21.156Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/opacity": {
-    "modified": "2020-10-15T21:09:09.094Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/order": {
-    "modified": "2020-10-15T21:43:22.198Z",
-    "contributors": [
-      "cdoublev",
-      "SphinxKnight",
-      "tzilliox"
-    ]
-  },
-  "Web/CSS/orphans": {
-    "modified": "2020-10-15T21:09:04.253Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "djacquel"
-    ]
-  },
-  "Web/CSS/outline": {
-    "modified": "2020-10-15T21:09:11.603Z",
-    "contributors": [
-      "erwanjugand",
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "wakka27",
-      "FredB",
-      "Blackhole",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/outline-color": {
-    "modified": "2020-10-15T21:08:56.862Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/outline-offset": {
-    "modified": "2020-10-15T21:08:49.087Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "Manumanu",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/outline-style": {
-    "modified": "2020-10-15T21:09:08.315Z",
-    "contributors": [
-      "johannpinson",
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/outline-width": {
-    "modified": "2020-10-15T21:09:11.670Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/overflow": {
-    "modified": "2020-10-15T21:08:56.186Z",
-    "contributors": [
-      "SphinxKnight",
-      "fdnhkj",
-      "mapiki",
-      "matsumonkie",
-      "Sebastianz",
-      "scaillerie",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/overflow-anchor": {
-    "modified": "2020-10-15T22:10:01.845Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/overflow-block": {
-    "modified": "2020-10-15T22:17:59.313Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/overflow-inline": {
-    "modified": "2020-10-15T22:17:57.651Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/overflow-wrap": {
-    "modified": "2020-10-15T21:20:31.219Z",
-    "contributors": [
-      "SphinxKnight",
-      "anisometropie",
-      "patrickfournier",
-      "fscholz",
-      "Sebastianz",
-      "PofMagicfingers",
-      "teoli",
-      "BiAiB",
-      "philippe97",
-      "FredB",
-      "Delapouite"
-    ]
-  },
-  "Web/CSS/overflow-x": {
-    "modified": "2020-10-15T21:21:34.563Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "tregagnon",
-      "Delapouite",
-      "Igro"
-    ]
-  },
-  "Web/CSS/overflow-y": {
-    "modified": "2020-10-15T21:21:35.151Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "enogael",
-      "FredB",
-      "tregagnon",
-      "Delapouite",
-      "Igro"
-    ]
-  },
-  "Web/CSS/overscroll-behavior": {
-    "modified": "2020-10-15T22:01:11.932Z",
-    "contributors": [
-      "SphinxKnight",
-      "brunostasse"
-    ]
-  },
-  "Web/CSS/overscroll-behavior-x": {
-    "modified": "2020-10-15T22:01:15.043Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/overscroll-behavior-y": {
-    "modified": "2020-10-15T22:01:11.740Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/padding": {
-    "modified": "2020-10-15T21:10:34.387Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/padding-block": {
-    "modified": "2020-10-15T22:11:17.883Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/padding-block-end": {
-    "modified": "2020-10-15T21:43:04.401Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/padding-block-start": {
-    "modified": "2020-10-15T21:43:04.242Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/padding-bottom": {
-    "modified": "2020-10-15T21:10:37.788Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/padding-inline": {
-    "modified": "2020-10-15T22:11:15.316Z",
-    "contributors": [
-      "Loliwe",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/padding-inline-end": {
-    "modified": "2020-10-15T21:18:26.917Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "FredB",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/padding-inline-start": {
-    "modified": "2020-10-15T21:18:27.911Z",
-    "contributors": [
-      "SphinxKnight",
-      "AmauryH",
-      "teoli",
-      "FredB",
-      "VincentN",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/padding-left": {
-    "modified": "2020-10-15T21:10:35.530Z",
-    "contributors": [
-      "SphinxKnight",
-      "warso",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/padding-right": {
-    "modified": "2020-10-15T21:10:31.706Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/padding-top": {
-    "modified": "2020-10-15T21:10:29.837Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
-  "Web/CSS/page-break-after": {
-    "modified": "2020-10-15T21:31:45.771Z",
-    "contributors": [
-      "SphinxKnight",
-      "ncoden",
-      "Sebastianz",
-      "gmichard",
-      "ilaborie"
-    ]
-  },
-  "Web/CSS/page-break-before": {
-    "modified": "2020-10-15T21:43:02.913Z",
-    "contributors": [
-      "jibe0123",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/page-break-inside": {
-    "modified": "2020-10-15T21:43:05.193Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/paint-order": {
-    "modified": "2020-10-15T22:02:33.903Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/percentage": {
     "modified": "2020-10-15T21:15:29.581Z",
     "contributors": [
@@ -26016,95 +26867,10 @@
       "BenoitL"
     ]
   },
-  "Web/CSS/perspective": {
-    "modified": "2020-10-15T21:19:38.260Z",
-    "contributors": [
-      "SphinxKnight",
-      "eviouchka",
-      "pierretusseau",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "pl6025",
-      "FredB"
-    ]
-  },
-  "Web/CSS/perspective-origin": {
-    "modified": "2020-10-15T21:20:18.754Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/place-content": {
-    "modified": "2020-10-15T21:52:51.184Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/place-items": {
-    "modified": "2020-10-15T21:52:53.357Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/place-self": {
-    "modified": "2020-10-15T21:52:50.692Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/pointer-events": {
-    "modified": "2020-10-15T21:22:42.114Z",
-    "contributors": [
-      "SphinxKnight",
-      "flexbox",
-      "teoli",
-      "SiegfriedEhret",
-      "avetisk"
-    ]
-  },
-  "Web/CSS/position": {
-    "modified": "2020-10-15T21:16:08.130Z",
-    "contributors": [
-      "SphinxKnight",
-      "Loliwe",
-      "Machou",
-      "adaedra",
-      "fscholz",
-      "Sebastianz",
-      "cconcolato",
-      "FredB",
-      "teoli",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
   "Web/CSS/position_value": {
     "modified": "2020-10-15T21:46:27.417Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/print-color-adjust": {
-    "modified": "2020-10-15T21:28:10.335Z",
-    "contributors": [
-      "SphinxKnight",
-      "CuteRabbit",
-      "louuis"
-    ]
-  },
-  "Web/CSS/quotes": {
-    "modified": "2020-10-15T21:08:51.774Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB"
     ]
   },
   "Web/CSS/ratio": {
@@ -26121,15 +26887,6 @@
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/resize": {
-    "modified": "2020-10-15T21:19:06.332Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB"
     ]
   },
   "Web/CSS/resolution": {
@@ -26152,246 +26909,10 @@
       "Zefling"
     ]
   },
-  "Web/CSS/right": {
-    "modified": "2020-10-15T21:08:54.080Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Delapouite"
-    ]
-  },
-  "Web/CSS/rotate": {
-    "modified": "2020-10-15T22:02:45.073Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/row-gap": {
-    "modified": "2020-10-15T22:05:44.066Z",
-    "contributors": [
-      "SphinxKnight",
-      "JNa0"
-    ]
-  },
-  "Web/CSS/ruby-align": {
-    "modified": "2020-10-15T21:43:02.784Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/ruby-position": {
-    "modified": "2020-10-15T21:42:41.711Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scale": {
-    "modified": "2020-10-15T22:02:41.753Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-behavior": {
-    "modified": "2020-10-15T21:42:38.519Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin": {
-    "modified": "2020-10-15T22:11:29.331Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-block": {
-    "modified": "2020-10-15T22:11:26.331Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-block-end": {
-    "modified": "2020-10-15T22:11:24.840Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-block-start": {
-    "modified": "2020-10-15T22:11:27.968Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-bottom": {
-    "modified": "2020-10-15T22:11:27.109Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-inline": {
-    "modified": "2020-10-15T22:11:27.758Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-inline-end": {
-    "modified": "2020-10-15T22:11:29.215Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-inline-start": {
-    "modified": "2020-10-15T22:11:31.365Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-left": {
-    "modified": "2020-10-15T22:11:32.305Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-right": {
-    "modified": "2020-10-15T22:11:31.609Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-margin-top": {
-    "modified": "2020-10-15T22:11:25.637Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding": {
-    "modified": "2020-10-15T22:11:29.445Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-block": {
-    "modified": "2020-10-15T22:11:28.191Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-block-end": {
-    "modified": "2020-10-15T22:11:29.968Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-block-start": {
-    "modified": "2020-10-15T22:11:29.801Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-bottom": {
-    "modified": "2020-10-15T22:11:30.415Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-inline": {
-    "modified": "2020-10-15T22:11:26.827Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-inline-end": {
-    "modified": "2020-10-15T22:11:26.380Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-inline-start": {
-    "modified": "2020-10-15T22:11:30.209Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-left": {
-    "modified": "2020-10-15T22:11:32.055Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-right": {
-    "modified": "2020-10-15T22:11:31.603Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-padding-top": {
-    "modified": "2020-10-15T22:11:27.462Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-snap-align": {
-    "modified": "2020-10-15T22:11:32.358Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-snap-stop": {
-    "modified": "2020-10-15T22:10:03.086Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/scroll-snap-type": {
-    "modified": "2020-10-15T21:42:50.969Z",
-    "contributors": [
-      "SphinxKnight",
-      "jide"
-    ]
-  },
-  "Web/CSS/scrollbar-color": {
-    "modified": "2020-10-15T22:10:04.861Z",
-    "contributors": [
-      "SphinxKnight",
-      "lp177"
-    ]
-  },
-  "Web/CSS/scrollbar-width": {
-    "modified": "2020-10-15T22:10:07.959Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/shape": {
     "modified": "2020-10-15T21:46:30.260Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/shape-image-threshold": {
-    "modified": "2020-10-15T21:42:37.534Z",
-    "contributors": [
-      "SphinxKnight",
-      "Zefling"
-    ]
-  },
-  "Web/CSS/shape-margin": {
-    "modified": "2020-10-15T21:42:48.010Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/shape-outside": {
-    "modified": "2020-10-15T21:33:45.682Z",
-    "contributors": [
-      "SphinxKnight",
-      "HTeuMeuLeu",
-      "teoli",
-      "Sebastianz",
-      "lbelavoir"
     ]
   },
   "Web/CSS/string": {
@@ -26411,246 +26932,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/tab-size": {
-    "modified": "2020-10-15T21:19:02.503Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/table-layout": {
-    "modified": "2020-10-15T21:19:02.718Z",
-    "contributors": [
-      "SphinxKnight",
-      "bsitruk",
-      "emmanuelclement",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "b_b",
-      "FredB",
-      "ethertank"
-    ]
-  },
-  "Web/CSS/text-align": {
-    "modified": "2020-10-15T21:15:12.893Z",
-    "contributors": [
-      "n3wborn",
-      "SphinxKnight",
-      "SpaVec",
-      "NicolasGoudry",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/text-align-last": {
-    "modified": "2020-10-15T21:19:07.972Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "fvignals",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/text-combine-upright": {
-    "modified": "2020-10-15T21:42:38.110Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-decoration": {
-    "modified": "2020-10-15T21:17:58.514Z",
-    "contributors": [
-      "Maxi-MenuBestOfPlus",
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "316k",
-      "FredB",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/text-decoration-color": {
-    "modified": "2020-10-15T21:08:48.730Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/text-decoration-line": {
-    "modified": "2020-10-15T21:19:04.173Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/text-decoration-skip": {
-    "modified": "2020-10-15T21:47:35.040Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-decoration-skip-ink": {
-    "modified": "2020-10-15T21:59:08.170Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-decoration-style": {
-    "modified": "2020-10-15T21:19:03.614Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/text-decoration-thickness": {
-    "modified": "2020-10-15T22:24:05.293Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-emphasis": {
-    "modified": "2020-10-15T21:43:05.328Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-emphasis-color": {
-    "modified": "2020-10-15T21:41:37.102Z",
-    "contributors": [
-      "SphinxKnight",
-      "webdif"
-    ]
-  },
-  "Web/CSS/text-emphasis-position": {
-    "modified": "2020-10-15T21:41:37.345Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-emphasis-style": {
-    "modified": "2020-10-15T21:41:36.302Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-indent": {
-    "modified": "2020-10-15T21:08:57.783Z",
-    "contributors": [
-      "SphinxKnight",
-      "neurone12000",
-      "Prinz_Rana",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/text-justify": {
-    "modified": "2020-10-15T21:53:58.739Z",
-    "contributors": [
-      "SphinxKnight",
-      "Deraw-",
-      "Joel-Costamagna"
-    ]
-  },
-  "Web/CSS/text-orientation": {
-    "modified": "2020-10-15T21:41:37.989Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-overflow": {
-    "modified": "2020-10-15T21:09:08.503Z",
-    "contributors": [
-      "Ryanfarrah25",
-      "SphinxKnight",
-      "dackmin",
-      "Guillaume-Heras",
-      "Sebastianz",
-      "PifyZ",
-      "LukyVj",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/text-rendering": {
-    "modified": "2020-10-15T21:08:21.121Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "webdif",
-      "teoli",
-      "FredB",
-      "hsablonniere",
-      "Manu1400"
-    ]
-  },
-  "Web/CSS/text-shadow": {
-    "modified": "2020-10-15T21:11:21.315Z",
-    "contributors": [
-      "SphinxKnight",
-      "NemoNobobyPersonne",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "BadFox",
-      "BenoitL"
-    ]
-  },
-  "Web/CSS/text-size-adjust": {
-    "modified": "2020-10-15T21:41:38.977Z",
-    "contributors": [
-      "SphinxKnight",
-      "Goofy"
-    ]
-  },
-  "Web/CSS/text-transform": {
-    "modified": "2020-10-15T21:08:51.025Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "sylozof",
-      "teoli",
-      "FredB",
-      "Matouche"
-    ]
-  },
-  "Web/CSS/text-underline-offset": {
-    "modified": "2020-10-15T22:21:50.660Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/text-underline-position": {
-    "modified": "2020-10-15T21:21:32.888Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
   "Web/CSS/time": {
     "modified": "2020-10-15T21:04:47.409Z",
     "contributors": [
@@ -26665,43 +26946,6 @@
   },
   "Web/CSS/time-percentage": {
     "modified": "2020-10-15T22:14:23.852Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/top": {
-    "modified": "2020-10-15T21:19:40.106Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ethertank",
-      "DavidWalsh"
-    ]
-  },
-  "Web/CSS/touch-action": {
-    "modified": "2020-10-15T21:41:20.063Z",
-    "contributors": [
-      "daformat",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/transform": {
-    "modified": "2020-10-15T21:19:05.910Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "Sebastianz",
-      "Sheppy",
-      "teoli",
-      "FredB",
-      "lmorchard"
-    ]
-  },
-  "Web/CSS/transform-box": {
-    "modified": "2020-10-15T21:41:17.907Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -26874,103 +27118,6 @@
       "mrstork"
     ]
   },
-  "Web/CSS/transform-origin": {
-    "modified": "2020-10-15T21:19:06.049Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "Prinz_Rana",
-      "Sebastianz",
-      "antograssiot",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/transform-style": {
-    "modified": "2020-10-15T21:19:45.597Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/transition": {
-    "modified": "2020-10-15T21:20:31.652Z",
-    "contributors": [
-      "SphinxKnight",
-      "ovaxio",
-      "sztan",
-      "fscholz",
-      "Sebastianz",
-      "J.DMB",
-      "louuis",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/transition-delay": {
-    "modified": "2020-10-15T21:19:58.171Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/transition-duration": {
-    "modified": "2020-10-15T21:20:14.863Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/transition-property": {
-    "modified": "2020-10-15T21:20:09.909Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "gudoy",
-      "FredB"
-    ]
-  },
-  "Web/CSS/transition-timing-function": {
-    "modified": "2020-10-15T21:20:09.412Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/translate": {
-    "modified": "2020-10-15T22:02:43.081Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/unicode-bidi": {
-    "modified": "2020-10-15T21:10:25.144Z",
-    "contributors": [
-      "SphinxKnight",
-      "trouba",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "ThePrisoner"
-    ]
-  },
   "Web/CSS/unset": {
     "modified": "2020-10-15T21:40:50.115Z",
     "contributors": [
@@ -26983,157 +27130,10 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/user-modify": {
-    "modified": "2020-10-15T21:43:01.040Z",
-    "contributors": [
-      "SphinxKnight",
-      "NicolasT"
-    ]
-  },
-  "Web/CSS/user-select": {
-    "modified": "2020-10-15T21:28:08.010Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Fredchat",
-      "teoli",
-      "louuis"
-    ]
-  },
   "Web/CSS/var": {
     "modified": "2020-10-15T21:42:32.805Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/vertical-align": {
-    "modified": "2020-10-15T21:17:57.980Z",
-    "contributors": [
-      "SphinxKnight",
-      "vlakoff",
-      "Loliwe",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/visibility": {
-    "modified": "2020-10-15T21:18:07.321Z",
-    "contributors": [
-      "patrickfournier",
-      "SphinxKnight",
-      "Sebastianz",
-      "Hell_Carlito",
-      "vava",
-      "teoli",
-      "tregagnon",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
-    ]
-  },
-  "Web/CSS/white-space": {
-    "modified": "2020-10-15T21:19:07.297Z",
-    "contributors": [
-      "SphinxKnight",
-      "nykola",
-      "fscholz",
-      "teoli",
-      "claudepache",
-      "FredB",
-      "nonos"
-    ]
-  },
-  "Web/CSS/widows": {
-    "modified": "2020-10-15T21:19:18.585Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/width": {
-    "modified": "2020-10-15T21:16:34.721Z",
-    "contributors": [
-      "cdoublev",
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "Mgjbot",
-      "BenoitL",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
-  "Web/CSS/will-change": {
-    "modified": "2020-10-15T21:38:00.394Z",
-    "contributors": [
-      "cdoublev",
-      "Marc.V",
-      "SphinxKnight",
-      "Sebastianz",
-      "PRASS95"
-    ]
-  },
-  "Web/CSS/word-break": {
-    "modified": "2020-10-15T21:20:32.265Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sylfare",
-      "PifyZ",
-      "teoli",
-      "fscholz",
-      "Sebastianz",
-      "louuis",
-      "FredB"
-    ]
-  },
-  "Web/CSS/word-spacing": {
-    "modified": "2020-10-15T21:09:07.377Z",
-    "contributors": [
-      "SphinxKnight",
-      "Prinz_Rana",
-      "fscholz",
-      "Sebastianz",
-      "teoli",
-      "Goofy",
-      "louuis",
-      "FredB"
-    ]
-  },
-  "Web/CSS/writing-mode": {
-    "modified": "2020-10-15T21:23:45.445Z",
-    "contributors": [
-      "SphinxKnight",
-      "YoruNoHikage",
-      "L2o",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/z-index": {
-    "modified": "2020-10-15T21:08:18.747Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sebastianz",
-      "teoli",
-      "FredB",
-      "tregagnon",
-      "Fredchat",
-      "Kyodev",
-      "Lapinkiller"
-    ]
-  },
-  "Web/CSS/zoom": {
-    "modified": "2020-10-15T21:45:23.245Z",
-    "contributors": [
-      "SphinxKnight",
-      "BenMorel",
-      "JayPanoz"
     ]
   },
   "Web/HTML": {
