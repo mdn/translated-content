@@ -52,7 +52,7 @@ l10n:
 
 - [実用的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
   - : この記事では、位置指定でどのようなことができるかを説明するために、実際に使用されるいくつかの例を作成する方法を示します。
-- [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)
+- [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)
   - : CSSレイアウトの料理帳は、一般的なレイアウトパターンのレシピをまとめることを目的としています。自分のプロジェクトの出発点として使用することができるコードを提供するだけでなく、これらのレシピは、レイアウト仕様を使用するさまざまな方法と、開発者として行うことができる選択を強調します。
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}

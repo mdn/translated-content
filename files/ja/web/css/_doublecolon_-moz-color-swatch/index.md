@@ -5,7 +5,7 @@ slug: Web/CSS/::-moz-color-swatch
 
 {{Non-standard_header}}
 
-**`::-moz-color-swatch`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)であり、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)で、 {{HTMLElement("input")}} の `type="color"` で選択された色を表します。
+**`::-moz-color-swatch`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)であり、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)で、 {{HTMLElement("input")}} の `type="color"` で選択された色を表します。
 
 > [!NOTE]
 > `::-moz-color-swatch` を `<input type="color">` 以外に何も一致せず、何も効果がありません。

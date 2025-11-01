@@ -155,8 +155,8 @@ div.menu-bar li:hover > ul {
 
 ## 関連情報
 
-- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions) (`-moz-` 接頭辞付き)
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions) (ほとんどが `-webkit-` 接頭辞付き)
+- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) (`-moz-` 接頭辞付き)
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) (ほとんどが `-webkit-` 接頭辞付き)
 
 ## 外部リンク
 

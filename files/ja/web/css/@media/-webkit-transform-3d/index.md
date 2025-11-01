@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-**`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
+**`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [WebKit 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 > [!NOTE]
 > このメディア特性は現在、[大部分のブラウザーで対応しています](#ブラウザーの互換性)が、可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。

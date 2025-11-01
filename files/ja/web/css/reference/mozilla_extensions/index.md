@@ -539,4 +539,4 @@ Firefox などの Mozilla アプリケーションは、いくつもの特別な
 
 - [Chrome 専用 CSS リファレンス](/ja/docs/Mozilla/Gecko/Chrome/CSS)
 - [CSS の Microsoft 拡張](/ja/docs/Web/CSS/Microsoft_Extensions)
-- [CSS の WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
+- [CSS の WebKit 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
