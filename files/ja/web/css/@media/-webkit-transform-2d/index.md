@@ -10,7 +10,7 @@ l10n:
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`transform`](/ja/docs/Web/CSS/transform#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-transform-2d` メディア特性に対応しています。メディアクエリーとして接頭辞や `2d` なしの `transform` に対応しているブラウザーはありません代わりに、 [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
 
-**`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [WebKit 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞付きの CSS の 2D {{cssxref("transform")}} に対応していれば値が `true` になります。
+**`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [WebKit 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS の 2D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
 

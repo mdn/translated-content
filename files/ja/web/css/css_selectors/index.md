@@ -87,7 +87,7 @@ CSS セレクターモジュールでは、[列結合子](/ja/docs/Web/CSS/Colum
 - {{CSSXref(":visited")}}
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
-- [`:-webkit-` 擬似クラス](/ja/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
+- [`:-webkit-` 擬似クラス](/ja/docs/Web/CSS/WebKit_Extensions#pseudo-classes)
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
 - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)
 - [ID セレクター](/ja/docs/Web/CSS/ID_selectors)

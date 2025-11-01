@@ -288,5 +288,5 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("CSSMediaRule")}} インターフェイス
-- [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Reference/Mozilla_extensions#メディア特性)
-- [WebKit 拡張メディア特性](/ja/docs/Web/CSS/Reference/Webkit_extensions#メディア特性)
+- [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#メディア特性)
+- [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#メディア特性)

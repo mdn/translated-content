@@ -16,7 +16,7 @@ original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 
 1. ライブサンプル（live example）は、[CSS Examples GitHub リポジトリー](https://github.com/mdn/css-examples)に保存します。
 2. その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
-3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)内のページの詳細は次のとおりです。
+3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
    1. 要件 (Requirements)
    2. レシピ (Recipe)
    3. 行った選択 (Choices made)
@@ -47,7 +47,7 @@ head の中には 2 つのスタイルのブロックがあります。 1 つ目
 
 head の中の 2 番目のブロックからの `editable` クラスの CSS も、`playable-css` クラスの `textarea` にコピーする必要があります。
 
-単純な例は [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) で、これは[要素を中央に配置](/ja/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element)のページに埋め込まれています。これを使用して、さまざまな細部を正しく追加する方法を確認できます。
+単純な例は [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) で、これは[要素を中央に配置](/ja/docs/Web/CSS/Layout_cookbook/Center_an_element)のページに埋め込まれています。これを使用して、さまざまな細部を正しく追加する方法を確認できます。
 
 リポジトリーをフォークした場合、私たちの CSS と JavaScript ファイルを例と一緒に持っているのであれば、ブラウザーでライブサンプルを開くと、ページに含まれている時と全く同じように動くのが分かるでしょう。
 
@@ -67,7 +67,7 @@ head の中の 2 番目のブロックからの `editable` クラスの CSS も�
 
 ### 5. ページを作成する
 
-例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
+例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
 
 テンプレートは各セクションの一部になるべきものを説明し、より多くの助けを得るために他の料理帳の例を参照することができます。 これらのページのいずれかの編集ボタンをクリックすると、互換性データを埋め込むために使用されるマクロやライブサンプルなどが表示されます。
 
@@ -77,5 +77,5 @@ MDN Wiki の使用に関する一般的なガイダンスが必要な場合は�
 
 ## 関連情報
 
-- [料理帳ページのテンプレート](/ja/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
+- [料理帳ページのテンプレート](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
 - [CSS Examples リポジトリー](https://github.com/mdn/css-examples)
