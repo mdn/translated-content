@@ -44,3 +44,5 @@ Additionally, you can communicate with a specific localization team using their 
 
 [main communication]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels
 [localization communication]: https://developer.mozilla.org/docs/MDN/Community/Contributing/Translated_content
+
+
