@@ -339,5 +339,5 @@ l10n:
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
-- [Mozilla 拡張のメディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#メディア特性)
-- [WebKit 拡張のメディア特性](/ja/docs/Web/CSS/WebKit_Extensions#メディア特性)
+- [Mozilla 拡張のメディア特性](/ja/docs/Web/CSS/Reference/Mozilla_extensions#メディア特性)
+- [WebKit 拡張のメディア特性](/ja/docs/Web/CSS/Reference/Webkit_extensions#メディア特性)
