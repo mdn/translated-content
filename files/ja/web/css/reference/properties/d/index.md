@@ -1,6 +1,7 @@
 ---
 title: d
-slug: Web/CSS/d
+slug: Web/CSS/Reference/Properties/d
+original_slug: Web/CSS/d
 l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---

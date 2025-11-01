@@ -1,6 +1,7 @@
 ---
 title: display
-slug: Web/CSS/display
+slug: Web/CSS/Reference/Properties/display
+original_slug: Web/CSS/display
 l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---

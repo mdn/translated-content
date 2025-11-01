@@ -1,6 +1,7 @@
 ---
 title: dominant-baseline
-slug: Web/CSS/dominant-baseline
+slug: Web/CSS/Reference/Properties/dominant-baseline
+original_slug: Web/CSS/dominant-baseline
 l10n:
   sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
