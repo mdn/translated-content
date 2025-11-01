@@ -4157,6 +4157,7 @@
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Paged_Media	/ja/docs/Web/CSS/CSS_paged_media
 /ja/docs/Web/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
+/ja/docs/Web/CSS/Properties	/ja/docs/Web/CSS/Reference/Properties
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS
