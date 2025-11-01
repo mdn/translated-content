@@ -1,6 +1,7 @@
 ---
 title: hyphenate-character
-slug: Web/CSS/hyphenate-character
+slug: Web/CSS/Reference/Properties/hyphenate-character
+original_slug: Web/CSS/hyphenate-character
 l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---

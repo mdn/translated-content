@@ -1,6 +1,7 @@
 ---
 title: hyphens
-slug: Web/CSS/hyphens
+slug: Web/CSS/Reference/Properties/hyphens
+original_slug: Web/CSS/hyphens
 l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---

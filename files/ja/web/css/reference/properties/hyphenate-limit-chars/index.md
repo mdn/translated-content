@@ -1,6 +1,7 @@
 ---
 title: hyphenate-limit-chars
-slug: Web/CSS/hyphenate-limit-chars
+slug: Web/CSS/Reference/Properties/hyphenate-limit-chars
+original_slug: Web/CSS/hyphenate-limit-chars
 l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---

@@ -1,6 +1,7 @@
 ---
 title: height
-slug: Web/CSS/height
+slug: Web/CSS/Reference/Properties/height
+original_slug: Web/CSS/height
 l10n:
   sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
