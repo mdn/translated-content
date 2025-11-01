@@ -601,6 +601,6 @@ CSS 仕様書で定義されている標準のプロパティには、以下の�
 
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-- [Firefox (-moz-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
-- [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
+- [Firefox (-moz-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)
+- [WebKit (-webkit-) ベンダー接頭辞付き CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "ベンダー接頭辞")}}
