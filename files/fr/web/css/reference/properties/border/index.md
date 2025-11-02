@@ -55,7 +55,7 @@ Comme pour toutes les propriétés raccourcie, si une valeur est absente pour la
 
 ### Différences entre les bordures et les contours (_outlines_)
 
-Les bordures et [contours](/fr/docs/Web/CSS/outline) sont similaires mais quelques différences les distinguent :
+Les bordures et [contours](/fr/docs/Web/CSS/Reference/Properties/outline) sont similaires mais quelques différences les distinguent :
 
 - Les contours n'occupent pas d'espace sur l'élément : ils sont dessinés en dehors du contenu de l'élément
 - Selon la spécification, les contours ne sont pas nécessairement rectangulaires.

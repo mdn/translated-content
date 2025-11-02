@@ -42,13 +42,13 @@ Pour résumer ce que nous avons vu dans l'article précédent, nous avons&nbsp;:
 - [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file)
 - [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) et [`<meter>`](/fr/docs/Web/HTML/Reference/Elements/meter)
 
-Pour commencer, abordons la propriété [`appearance`](/fr/docs/Web/CSS/appearance) qui s'avère plutôt utile pour simplifier la mise en forme de l'ensemble des éléments listés ci-avant.
+Pour commencer, abordons la propriété [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) qui s'avère plutôt utile pour simplifier la mise en forme de l'ensemble des éléments listés ci-avant.
 
 ## `appearance`&nbsp;: contrôler la mise en forme liée au système d'exploitation
 
 Dans l'article précédent, nous avons vu que la mise en forme des contrôles de formulaire provenait historiquement du système d'exploitation sous-jacent, ce qui explique en partie la difficulté à personnaliser l'aspect de ces contrôles.
 
-La propriété [`appearance`](/fr/docs/Web/CSS/appearance) a été créée comme une méthode pour contrôler les styles provenant du système d'exploitation et qui étaient appliqués aux contrôles de formulaire. Malheureusement, le comportement de cette propriété avec les implémentations initiales variait grandement d'un navigateur à l'autre, elle n'était donc que peu utilisable. Les implémentations plus récentes sont plus cohérentes et les différents navigateurs (que ce soit ceux basés sur Chromium comme Chrome, Opera, et Edge&nbsp;; Safari&nbsp;; et Firefox) prennent en charge la version préfixée avec `-webkit-` (`-webkit-appearance`).
+La propriété [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) a été créée comme une méthode pour contrôler les styles provenant du système d'exploitation et qui étaient appliqués aux contrôles de formulaire. Malheureusement, le comportement de cette propriété avec les implémentations initiales variait grandement d'un navigateur à l'autre, elle n'était donc que peu utilisable. Les implémentations plus récentes sont plus cohérentes et les différents navigateurs (que ce soit ceux basés sur Chromium comme Chrome, Opera, et Edge&nbsp;; Safari&nbsp;; et Firefox) prennent en charge la version préfixée avec `-webkit-` (`-webkit-appearance`).
 
 Si on consulte la page de référence, on verra que `-webkit-appearance` peut prendre de nombreuses valeurs différentes. Toutefois, la valeur la plus utile et celle que vous utiliserez probablement est `none`. Cela empêche, autant que possible, l'utilisation des styles provenant du système, vous permettant ainsi de construire vos propres styles avec CSS.
 
@@ -158,7 +158,7 @@ Les différents navigateurs gèrent cela différemment, et souvent avec un résu
 
 #### Utiliser `appearance: none` sur les boutons radio et les cases à cocher
 
-Comme nous l'avons vu, il est possible de retirer l'apparence par défaut d'une case à cocher ou d'un bouton radio avec [`appearance`](/fr/docs/Web/CSS/appearance)`:none;`. Prenons cet exemple en HTML:
+Comme nous l'avons vu, il est possible de retirer l'apparence par défaut d'une case à cocher ou d'un bouton radio avec [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance)`:none;`. Prenons cet exemple en HTML:
 
 ```html
 <form>
@@ -247,7 +247,7 @@ Voici quelques autres exemples pour vous donner d'autres idées&nbsp;
 - [Mise en forme de boutons radio](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)&nbsp;: avec une mise en forme personnalisée pour des boutons radio
 - [Exemple d'interrupteur](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)&nbsp;: une case à cocher mise en forme afin de ressembler à un interrupteur.
 
-Si vous consultez ces exemples dans un navigateur qui ne prend pas en charge [`appearance`](/fr/docs/Web/CSS/appearance), votre conception ne sera pas visible, mais les éléments ressembleront à des cases à cocher et seront utilisables.
+Si vous consultez ces exemples dans un navigateur qui ne prend pas en charge [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance), votre conception ne sera pas visible, mais les éléments ressembleront à des cases à cocher et seront utilisables.
 
 > [!NOTE]
 > Bien qu'Internet Explorer ne prenne pas en charge `appearance`, `input[type=checkbox]::-ms-check` permet de cibler les cases à cocher dans IE. Cette technique fonctionne également pour les boutons radio malgré le nom `-ms-check`.
@@ -414,7 +414,7 @@ On utilise alors du contenu généré afin de créer une flèche qui pointe vers
 }
 ```
 
-Le deuxième problème rencontré est l'absence de contrôle sur la boîte de choix qui apparaît lorsqu'on clique sur le sélecteur. Vous pourrez voir que les options de choix n'héritent pas de la police de leur parent. Il est également impossible de définir de façon cohérente l'espacement et les couleurs. Ainsi, Firefox appliquera [`color`](/fr/docs/Web/CSS/color) et [`background-color`](/fr/docs/Web/CSS/background-color) sur [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option), mais Chrome ne le fera pas. Aucun n'appliquera d'espacement (par exemple celui-ci créé avec [`padding`](/fr/docs/Web/CSS/padding)). Il en va de même pour la liste de suggestion pour l'autocomplétion qui apparaît sur une liste de données.
+Le deuxième problème rencontré est l'absence de contrôle sur la boîte de choix qui apparaît lorsqu'on clique sur le sélecteur. Vous pourrez voir que les options de choix n'héritent pas de la police de leur parent. Il est également impossible de définir de façon cohérente l'espacement et les couleurs. Ainsi, Firefox appliquera [`color`](/fr/docs/Web/CSS/Reference/Properties/color) et [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) sur [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option), mais Chrome ne le fera pas. Aucun n'appliquera d'espacement (par exemple celui-ci créé avec [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)). Il en va de même pour la liste de suggestion pour l'autocomplétion qui apparaît sur une liste de données.
 
 Si vous avez besoin de contrôler complètement la mise en forme, il vous faudra utiliser une bibliothèque tierce ou construire votre propre contrôle. Une autre alternative pour l'élément `<select>` consiste à utiliser l'attribut `multiple` qui fait apparaître l'ensemble des options sur la page, contournant ainsi le problème&nbsp;:
 

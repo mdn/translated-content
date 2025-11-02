@@ -111,7 +111,7 @@ Ces valeurs alignent l'élément verticalement, relativement à son élément pa
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : Aligne la ligne de base de l'élément à la hauteur de la ligne de base de l'élément parent à laquelle on ajoute la hauteur donnée. Les valeurs négatives sont autorisées.
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/line-height). Les valeurs négatives sont autorisées.
+  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height). Les valeurs négatives sont autorisées.
 
 #### Valeurs relatives à la ligne
 
@@ -300,8 +300,8 @@ td {
 ## Voir aussi
 
 - [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#centrer_des_%c3%a9l%c3%a9ments)
-- [`line-height`](/fr/docs/Web/CSS/line-height)
-- [`text-align`](/fr/docs/Web/CSS/text-align)
-- [`margin`](/fr/docs/Web/CSS/margin)
+- [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height)
+- [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)
+- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
 - [Comprendre `vertical-align` ou comment (ne pas) centrer des éléments verticalement (en anglais)](http://phrogz.net/css/vertical-align/index.html)
 - [Tout ce qu'il y a à savoir sur `vertical-align` (en anglais)](https://christopheraue.net/design/vertical-align)

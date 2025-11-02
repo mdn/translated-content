@@ -41,7 +41,7 @@ Les axes en ligne et de bloc dépendent du mode d'écriture (pour l'anglais, ils
 
 ## Description
 
-Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne. Cette propriété CSS s'appliquera uniquement aux éléments HTML pour lesquels la propriété CSS [`display`](/fr/docs/Web/CSS/display) vaut `box` ou `inline-box`.
+Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne. Cette propriété CSS s'appliquera uniquement aux éléments HTML pour lesquels la propriété CSS [`display`](/fr/docs/Web/CSS/Reference/Properties/display) vaut `box` ou `inline-box`.
 
 ## Définition formelle
 
@@ -95,7 +95,7 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [`box-direction`](/fr/docs/Web/CSS/box-direction)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
-- [`box-align`](/fr/docs/Web/CSS/box-align)
-- [`flex-direction`](/fr/docs/Web/CSS/flex-direction)
+- [`box-direction`](/fr/docs/Web/CSS/Reference/Properties/box-direction)
+- [`box-pack`](/fr/docs/Web/CSS/Reference/Properties/box-pack)
+- [`box-align`](/fr/docs/Web/CSS/Reference/Properties/box-align)
+- [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction)

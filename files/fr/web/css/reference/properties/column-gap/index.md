@@ -196,6 +196,6 @@ column-gap: unset;
 
 ## Voir aussi
 
-- Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/row-gap), [`gap`](/fr/docs/Web/CSS/gap)
+- Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
 - Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_gouttières)_
 - Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_

@@ -90,7 +90,7 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 - `<length>`
   - : Une valeur de longueur (cf. type [`<length>`](/fr/docs/Web/CSS/length)) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
 - `<number>`
-  - : Une valeur numérique (cf. type [`<number>`](/fr/docs/Web/CSS/number)) qui sera multipliée par la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) afin de déterminer la longueur de l'espace duquel dépasser.
+  - : Une valeur numérique (cf. type [`<number>`](/fr/docs/Web/CSS/number)) qui sera multipliée par la valeur calculée de [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) afin de déterminer la longueur de l'espace duquel dépasser.
 
 ## Définition formelle
 

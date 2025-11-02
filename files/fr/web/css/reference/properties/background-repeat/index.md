@@ -117,11 +117,11 @@ background-repeat: unset;
     - `repeat`
       - : L'image est répétée autant de fois que nécessaire pour recouvrir la zone dédiée à l'arrière-plan. La dernière image sera rognée si nécessaire.
     - `space`
-      - : L'image est répétée autant que possible sans rognage. La première et la dernière image sont accolées aux bords de l'élément et des espaces sont repartis de façon égale entre les images. La propriété [`background-position`](/fr/docs/Web/CSS/background-position) est ignorée sauf s'il n'y a qu'une seule image qui puisse être affichée sans être rognée. Le seul cas où `space` est utilisé et qu'une image est rognée se produit lorsque l'image est trop grande pour être affichée.
+      - : L'image est répétée autant que possible sans rognage. La première et la dernière image sont accolées aux bords de l'élément et des espaces sont repartis de façon égale entre les images. La propriété [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) est ignorée sauf s'il n'y a qu'une seule image qui puisse être affichée sans être rognée. Le seul cas où `space` est utilisé et qu'une image est rognée se produit lorsque l'image est trop grande pour être affichée.
     - `round`
       - : L'image est répétée autant que possible et est étirée si nécessaire afin qu'il n'y ait ni rognage ni espace restant. Dès qu'il y a la place d'ajouter une image, les autres sont compressées pour lui laisser la place. Ainsi, une image avec une largeur originale de 260px, répétée trois fois, pourra être étirée pour que chaque exemplaire mesure 300 pixels de large, lorsqu'une autre image sera ajoutée, elles seront compressées sur 225 pixels.
     - `no-repeat`
-      - : Il n'y a aucune répétition de l'image (dès lors, il est possible que toute la zone ne soit pas recouverte par cette image). La position de l'image est définie grâce à la propriété [`background-position`](/fr/docs/Web/CSS/background-position).
+      - : Il n'y a aucune répétition de l'image (dès lors, il est possible que toute la zone ne soit pas recouverte par cette image). La position de l'image est définie grâce à la propriété [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position).
 
 ## Définition formelle
 

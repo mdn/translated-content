@@ -114,5 +114,5 @@ html {
 
 ## Voir aussi
 
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode),
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode),
+- [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)

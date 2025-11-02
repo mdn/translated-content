@@ -51,7 +51,7 @@ Le module des valeurs et unités CSS introduit également les fonctions `calc-mi
 
 - [`<angle-percentage>`](/fr/docs/Web/CSS/angle-percentage)
 - [`<angle>`](/fr/docs/Web/CSS/angle)
-- [`<animation-timeline>`](/fr/docs/Web/CSS/animation-timeline)
+- [`<animation-timeline>`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`<attr-name>`](/fr/docs/Web/CSS/attr#attr-name)
 - [`<attr-type>`](/fr/docs/Web/CSS/attr#attr-type)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
@@ -68,7 +68,7 @@ Le module des valeurs et unités CSS introduit également les fonctions `calc-mi
 - [`<length>`](/fr/docs/Web/CSS/length)
 - [`<number>`](/fr/docs/Web/CSS/number)
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-- [`<position>`](/fr/docs/Web/CSS/position)
+- [`<position>`](/fr/docs/Web/CSS/Reference/Properties/position)
 - [`<ratio>`](/fr/docs/Web/CSS/ratio)
 - [`<resolution>`](/fr/docs/Web/CSS/resolution)
 - [`<rounding-strategy>`](/fr/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)

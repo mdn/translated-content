@@ -6,7 +6,7 @@ original_slug: Web/CSS/mask-border-slice
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété CSS **`mask-border-slice`** permet de découper l'image source, fournie par {{cssxref("mask-border-source")}}, en différentes régions. Ces régions sont utilisées pour former les composants du [masque de la bordure](/fr/docs/Web/CSS/mask-border).
+La propriété CSS **`mask-border-slice`** permet de découper l'image source, fournie par {{cssxref("mask-border-source")}}, en différentes régions. Ces régions sont utilisées pour former les composants du [masque de la bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border).
 
 Cette découpe permet d'obtenir neuf régions au total : quatre pour les coins, quatre pour les côtés et une région pour le centre. Cette découpe est effectuée selon 4 lignes qui sont écartées d'une certaine distance des bords de l'image.
 
@@ -15,7 +15,7 @@ Cette découpe permet d'obtenir neuf régions au total : quatre pour les coins, 
 Le diagramme ci-avant illustre l'emplacement de chaque région.
 
 - Les zones de 1 à 4 sont les zones aux coins. Chacune sera utilisée une seule fois pour construire les coins de l'image du masque.
-- Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/mask-border-repeat) afin que le masque de bordule final aient les mêmes dimensions que l'élément.
+- Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/Reference/Properties/mask-border-repeat) afin que le masque de bordule final aient les mêmes dimensions que l'élément.
 - La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
 
 Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.

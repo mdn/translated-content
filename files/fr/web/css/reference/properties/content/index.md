@@ -242,7 +242,7 @@ q::after {
 
 {{EmbedLiveSample('citations', '100%', 200)}}
 
-Notez que le [type de guillemets générés](/fr/docs/Web/CSS/quotes#auto_quotes) est basé sur la langue. Les navigateurs ajoutent des guillemets ouvrants et fermants avant et après les éléments {{HTMLElement("q")}} par défaut, de sorte que les guillemets dans cet exemple apparaîtraient sans qu'ils soient explicitement définis. Ils auraient pu être désactivés en définissant les valeurs de propriété `content` respectives sur `no-open-quote` et `no-close-quote`, ou en les définissant toutes deux sur `none`. Ils peuvent également être désactivés en définissant la propriété {{cssxref("quotes")}} sur `none` à la place.
+Notez que le [type de guillemets générés](/fr/docs/Web/CSS/Reference/Properties/quotes#auto_quotes) est basé sur la langue. Les navigateurs ajoutent des guillemets ouvrants et fermants avant et après les éléments {{HTMLElement("q")}} par défaut, de sorte que les guillemets dans cet exemple apparaîtraient sans qu'ils soient explicitement définis. Ils auraient pu être désactivés en définissant les valeurs de propriété `content` respectives sur `no-open-quote` et `no-close-quote`, ou en les définissant toutes deux sur `none`. Ils peuvent également être désactivés en définissant la propriété {{cssxref("quotes")}} sur `none` à la place.
 
 ### Ajouter du texte aux compteurs d'éléments de liste
 

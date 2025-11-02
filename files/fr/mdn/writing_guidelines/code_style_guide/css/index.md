@@ -51,7 +51,7 @@ Pour un contrôle maximal des CSS sur toutes les plates-formes, beaucoup de gens
 
 ### Syntaxe formelle et pseudo-code
 
-La syntaxe formelle fait partie intégrante de la documentation CSS sur MDN (voir par exemple la section [Syntaxe formelle](/fr/docs/Web/CSS/background-image#syntaxe_formelle) de la page de la propriété `background-image`). Comme de nombreux développeur·euse·s sont familiers avec cette présentation, il est acceptable d'écrire du pseudo-code dans un style proche de la syntaxe formelle dans les descriptions et exemples. Cependant, tout code qui n'est pas du CSS syntaxiquement valide ne doit pas être marqué comme CSS. Les erreurs de syntaxe dans les blocs de code `css` rendent le code inanalysable par les vérificateurs statiques, troublent les lecteurs qui s'attendent à du CSS valide, et peuvent même entraîner une coloration syntaxique incohérente. Marquez alors votre bloc comme `plain`, ou utilisez la macro `CSSSyntaxRaw` pour afficher la syntaxe formelle complète.
+La syntaxe formelle fait partie intégrante de la documentation CSS sur MDN (voir par exemple la section [Syntaxe formelle](/fr/docs/Web/CSS/Reference/Properties/background-image#syntaxe_formelle) de la page de la propriété `background-image`). Comme de nombreux développeur·euse·s sont familiers avec cette présentation, il est acceptable d'écrire du pseudo-code dans un style proche de la syntaxe formelle dans les descriptions et exemples. Cependant, tout code qui n'est pas du CSS syntaxiquement valide ne doit pas être marqué comme CSS. Les erreurs de syntaxe dans les blocs de code `css` rendent le code inanalysable par les vérificateurs statiques, troublent les lecteurs qui s'attendent à du CSS valide, et peuvent même entraîner une coloration syntaxique incohérente. Marquez alors votre bloc comme `plain`, ou utilisez la macro `CSSSyntaxRaw` pour afficher la syntaxe formelle complète.
 
 N'écrivez pas de descriptions comme ceci (ce n'est pas une vraie syntaxe formelle, juste du pseudo-CSS avec des espaces réservés)&nbsp;:
 
@@ -346,7 +346,7 @@ h3 {
 
 ### Définir les familles de polices
 
-Lorsque vous indiquez une famille de polices, ajoutez toujours un [nom de famille générique](/fr/docs/Web/CSS/font-family#generic-name) en dernier recours. Cela garantit que si la police spécifiée n'est pas disponible, le navigateur affichera une police de remplacement plus appropriée. Les [polices sûres pour le Web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) sont exemptées de cette règle.
+Lorsque vous indiquez une famille de polices, ajoutez toujours un [nom de famille générique](/fr/docs/Web/CSS/Reference/Properties/font-family#generic-name) en dernier recours. Cela garantit que si la police spécifiée n'est pas disponible, le navigateur affichera une police de remplacement plus appropriée. Les [polices sûres pour le Web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) sont exemptées de cette règle.
 
 ```css example-bad
 body {
