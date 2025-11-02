@@ -3,8 +3,6 @@ title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 
-{{JSRef}}
-
 **`Intl.ListFormat`** 是一个语言相关的列表格式化构造器。
 
 {{InteractiveExample("JavaScript Demo: Intl.ListFormat")}}

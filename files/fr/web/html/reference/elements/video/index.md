@@ -296,7 +296,7 @@ Quelques notes d'utilisation&nbsp;:
 
 - Si l'attribut `controls` n'est pas indiqué, la vidéo n'incluera pas les contrôles par défaut du navigateur et il est nécessaire de fournir ses propres contrôles en utilisant JavaScript et l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Voir l'article [créer un lecteur vidéo multi-navigateurs](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) pour plus de détails.
 - L'API `HTMLMediaElement` déclenche de nombreux [évènements](/fr/docs/Web/API/HTMLMediaElement#events) qui permettent d'avoir un contrôle précis sur l'audio et la vidéo.
-- La propriété [`object-position`](/fr/docs/Web/CSS/object-position) permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
+- La propriété [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
 - Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
 - Vous pouvez lire des fichiers audio à l'aide d'un élément `<video>`. Cela peut être utile si, par exemple, vous devez effectuer un audio avec une transcription [WebVTT](/fr/docs/Web/API/WebVTT_API), puisque l'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) n'autorise pas les transcriptions à l'aide de WebVTT.
 - Pour tester le contenu similaire sur les navigateurs qui prennent en charge l'élément, vous pouvez remplacer `<video>` par un élément inexistant comme `<notavideo>` (_pas une vidéo_, en français).
@@ -305,7 +305,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
 ### Mise en forme avec CSS
 
-L'élément `<video>` est un élément remplacé et, pour cet élément, la valeur initiale de [`display`](/fr/docs/Web/CSS/display) est `inline` mais la hauteur et la largeur du cadre sont définies par les caractéristiques de la vidéo embarquée.
+L'élément `<video>` est un élément remplacé et, pour cet élément, la valeur initiale de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) est `inline` mais la hauteur et la largeur du cadre sont définies par les caractéristiques de la vidéo embarquée.
 
 On peut changer la valeur de `display` en `block` afin de simplifier le positionnement et le dimensionnement. L'article [Bases de la mise en forme d'un lecteur vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics) fournit différentes techniques de mise en forme.
 
@@ -561,7 +561,7 @@ Certains types de fichiers médias vous permettent de fournir des informations p
   - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Guides/Formats/Video_codecs)
   - [Guide des codecs audio du Web](/fr/docs/Web/Media/Guides/Formats/Audio_codecs)
 
-- Les propriétés CSS permettant de positionner/redimensionner le contenu&nbsp;: [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- Les propriétés CSS permettant de positionner/redimensionner le contenu&nbsp;: [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
 - L'élément [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio)
 - [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipuler l'élément `<video>` avec `<canvas>`](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)

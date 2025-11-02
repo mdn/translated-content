@@ -5,7 +5,7 @@ slug: Web/CSS/:-moz-window-inactive
 
 {{Non-standard_header}}
 
-**`:-moz-window-inactive`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)匹配处于非活动窗口中的任何元素。
+**`:-moz-window-inactive`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)匹配处于非活动窗口中的任何元素。
 
 `:-moz-window-inactive` 也适用于 HTML 文档中的内容。
 
@@ -62,7 +62,7 @@ slug: Web/CSS/:-moz-window-inactive
 
 ## 参见
 
-- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
+- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)
 - 相关的 CSS 选择器：
   - [`:active`](/zh-CN/docs/Web/CSS/:active)
 

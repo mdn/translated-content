@@ -3,8 +3,6 @@ title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
 
-{{JSRef}}
-
 **`WeakRef`** 对象允许你保留对另一个对象的弱引用，但不会阻止垃圾回收（GC）清理被弱引用的对象。
 
 ## 描述

@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}{{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-progress-bar`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la barre de progression à l'intérieur d'un élément {{HTMLElement("progress")}}. (La barre représente la progression accomplie.)
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-progress-bar`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente la barre de progression à l'intérieur d'un élément {{HTMLElement("progress")}}. (La barre représente la progression accomplie.)
 
 Si vous souhaitez sélectionner la partie non terminée de {{HTMLElement("progress")}} dans Mozilla, veuillez sélectionner directement l'élément {{HTMLElement("progress")}}.
 

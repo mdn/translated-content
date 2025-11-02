@@ -484,7 +484,7 @@ div {
 
 Cet exemple met en forme trois éléments {{htmlelement("div")}} avec différentes couleurs d'arrière-plan. Celui du milieu reçoit la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircie et assombrie de cette `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/--*) `--base-color` est passée dans une fonction `oklch()`, et les couleurs de sortie ont leur canal de clarté modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a `0.15` (15%) ajouté au canal de clarté, et la couleur assombrie a `0.15` (15%) soustrait du canal de clarté.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `oklch()`, et les couleurs de sortie ont leur canal de clarté modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a `0.15` (15%) ajouté au canal de clarté, et la couleur assombrie a `0.15` (15%) soustrait du canal de clarté.
 
 ```html hidden
 <div id="container">

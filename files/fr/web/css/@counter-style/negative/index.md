@@ -42,7 +42,7 @@ Le descripteur `negative` est pertinent dans deux cas&nbsp;: si les styles de co
 
 ### Rendu des compteurs négatifs
 
-Cet exemple [étend](/fr/docs/Web/CSS/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
+Cet exemple [étend](/fr/docs/Web/CSS/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
 
 #### HTML
 

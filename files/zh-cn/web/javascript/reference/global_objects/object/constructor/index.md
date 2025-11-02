@@ -3,8 +3,6 @@ title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
 
-{{JSRef}}
-
 {{jsxref("Object")}} 实例的 **`constructor`** 数据属性返回一个引用，指向创建该实例对象的构造函数。注意，此属性的值是对*函数本身*的引用，而不是一个包含函数名称的字符串。
 
 > [!NOTE]

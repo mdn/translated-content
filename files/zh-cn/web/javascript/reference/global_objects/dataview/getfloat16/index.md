@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb442649a7e91a177a582a3e9c6e1a95a9e8dda5
 ---
 
-{{JSRef}}
-
 {{jsxref("DataView")}} 实例的 **`getFloat16()`** 方法从相对于当前 `DataView` 的起始位置偏移指定个字节处读取 2 个字节，并将其解释为 16 位浮点数。如果没有对齐约束；则可以从边界内的任意偏移位置处获取多字节值。
 
 {{InteractiveExample("JavaScript Demo: DataView.getFloat16()")}}

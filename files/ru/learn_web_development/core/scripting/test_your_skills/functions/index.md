@@ -29,7 +29,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions1.html", '100%', 400)}}
 
-> **Примечание:** [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html) для работы в собственном редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions1-download.html) для работы в собственном редакторе или в онлайн-редакторе.
 
 ## Функции 2
 
@@ -47,7 +48,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 400)}}
 
-> **Примечание:** [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html) для работы в собственном редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions2-download.html) для работы в собственном редакторе или в онлайн-редакторе.
 
 ## Функции 3
 
@@ -61,7 +63,8 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions3.html", '100%', 400)}}
 
-> **Примечание:** [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) для работы в собственном редакторе или в онлайн-редакторе.
+> [!NOTE]
+> [Загрузите файл с исходным кодом для этой задачи](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) для работы в собственном редакторе или в онлайн-редакторе.
 
 ## Анализ или дальнейшая помощь
 
