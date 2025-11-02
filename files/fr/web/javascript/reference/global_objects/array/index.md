@@ -871,7 +871,7 @@ testSideEffect((arr, index) => arr.splice(index, 0, "new"));
 // e1 continue d'être visité car il est continuellement décalé vers l'arrière
 ```
 
-La suppression de _n_ éléments à des indices non encore visités fait qu'ils ne seront plus visités. Comme le tableau a rétréci, les _n_ dernières itérations visiteront des indices hors limites. Si la méthode ignore les indices inexistants (voir [méthodes de tableau et trous] (#array*methods_and_empty_slots)), les \_n* dernières itérations seront ignorées&nbsp;; sinon, elles recevront `undefined`&nbsp;:
+La suppression de _n_ éléments à des indices non encore visités fait qu'ils ne seront plus visités. Comme le tableau a rétréci, les _n_ dernières itérations visiteront des indices hors limites. Si la méthode ignore les indices inexistants (voir [méthodes de tableau et trous](#méthodes_de_tableau_et_emplacements_vides)), les \_n\* dernières itérations seront ignorées&nbsp;; sinon, elles recevront `undefined`&nbsp;:
 
 ```js
 testSideEffect((arr, index) => {
