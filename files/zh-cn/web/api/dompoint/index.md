@@ -16,7 +16,7 @@ l10n:
 ## 构造函数
 
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
-  - : 根据一个或多个坐标分量值（以及可选的透视值 `w`）创建并返回一个新的 `DOMPoint` 对象。你也可以通过调用 {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} 静态方法，使用现有的 `DOMPoint`、`DOMPointReadOnly` 或具有相同属性的对象来创建一个新的点。
+  - : 根据零个或多个坐标分量值（以及可选的透视值 `w`）创建并返回一个新的 `DOMPoint` 对象。你也可以通过调用 {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} 静态方法，使用现有的 `DOMPoint`、`DOMPointReadOnly` 或具有相同属性的对象来创建一个新的点。
 
 ## 实例属性
 
