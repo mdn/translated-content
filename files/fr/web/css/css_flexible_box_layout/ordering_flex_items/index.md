@@ -11,7 +11,7 @@ Les méthodes de disposition telles que les boîtes flexibles (<i lang="en">flex
 
 ## Inverser l'affichage des éléments
 
-La propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) peut être utilisée avec quatre valeurs&nbsp;:
+La propriété [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) peut être utilisée avec quatre valeurs&nbsp;:
 
 - `row`
 - `column`
@@ -55,7 +55,7 @@ De la même façon, changer la valeur de `flex-direction` ne modifie pas l'ordre
 
 ## La propriété `order`
 
-En plus de cette inversion, il est également possible de cibler des éléments en particulier et de modifier leur ordre visuel grâce à la propriété [`order`](/fr/docs/Web/CSS/order).
+En plus de cette inversion, il est également possible de cibler des éléments en particulier et de modifier leur ordre visuel grâce à la propriété [`order`](/fr/docs/Web/CSS/Reference/Properties/order).
 
 La propriété `order` permet de disposer les éléments au sein de _groupes ordinaux_. Cela signifie que chaque élément reçoit un entier qui représente le numéro d'un groupe. Les éléments sont ensuite placés visuellement dans l'ordre qui correspond à cet entier, les éléments avec les numéros les plus petits étant placés en premiers. Si plusieurs éléments possèdent le même coefficient, les éléments de ce groupe sont alors ordonnés en suivant l'ordre du document source entre eux.
 

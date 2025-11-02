@@ -122,7 +122,7 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre annonçable via la propriété CSS [`content`](/fr/docs/Web/CSS/content) et grâce aux pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after).
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre annonçable via la propriété CSS [`content`](/fr/docs/Web/CSS/Reference/Properties/content) et grâce aux pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after).
 
 ```css
 del::before,

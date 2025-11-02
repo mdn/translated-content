@@ -7,7 +7,7 @@ l10n:
 
 {{non-standard_header}}{{deprecated_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente le contour interne pour le focus sur l'élément {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le contour interne pour le focus sur l'élément {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
 
 > [!NOTE]
 > Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'aura aucun effet.
@@ -54,7 +54,7 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions)
+- [Les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - Propriétés CSS associées&nbsp;:
   - {{cssxref("-moz-user-focus")}}
 

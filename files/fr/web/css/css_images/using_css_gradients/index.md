@@ -766,7 +766,7 @@ div {
 
 ### Répéter plusieurs dégradés linéaires
 
-Comme les dégradés linéaires et radiaux, il est possible de déclarer plusieurs dégradés, situés les uns sur les autres. Cela n'a d'intérêt que si les dégradés sont partiellement transparents afin de pouvoir voir les couches formées par les autres dégradés. Pour voir les différents dégradés, il est aussi possible d'utiliser des tailles d'arrière-plan différentes ([`background-size`](/fr/docs/Web/CSS/background-size)) et avec des positions ([`background-position`](/fr/docs/Web/CSS/background-position)) différentes pour chaque image de dégradé. Dans l'exemple qui suit, on utilise la transparence.
+Comme les dégradés linéaires et radiaux, il est possible de déclarer plusieurs dégradés, situés les uns sur les autres. Cela n'a d'intérêt que si les dégradés sont partiellement transparents afin de pouvoir voir les couches formées par les autres dégradés. Pour voir les différents dégradés, il est aussi possible d'utiliser des tailles d'arrière-plan différentes ([`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)) et avec des positions ([`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)) différentes pour chaque image de dégradé. Dans l'exemple qui suit, on utilise la transparence.
 
 Ici, les lignes de dégradé mesurent 300px, 230px, et 300px de long.
 
@@ -1002,8 +1002,8 @@ div {
   - [`<image>`](/fr/docs/Web/CSS/image)
 
 - Certaines propriétés CSS qui permettent d'utiliser des dégradés&nbsp;:
-  - [`background`](/fr/docs/Web/CSS/background)
-  - [`background-image`](/fr/docs/Web/CSS/background-image)
+  - [`background`](/fr/docs/Web/CSS/Reference/Properties/background)
+  - [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)
 
 - [Une bibliothèque de motifs de dégradés CSS, créée par Lea Verou](https://lea.verou.me/css3patterns/)
 - [Une bibliothèque de motifs de dégragés, par Estelle Weyl](https://standardista.com/cssgradients/)
