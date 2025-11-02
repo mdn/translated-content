@@ -211,7 +211,7 @@ elem.audioTrackList.onremovetrack = function (event) {
 
 如果使用自动标题服务，人工检查生成内容是很重要的，这确保了标题能够准确的描述源音频。
 
-`<audio>` 元素不直接支持 WebVTT。你必须寻找一个框架来为你提供这种能力，或者自己写代码来展示标题。一个选择是使用 {{HTMLElement("video")}} 元素，它是一定支持 WebVTT 的。
+`<audio>` 元素不直接支持 WebVTT。你必须寻找一个库或框架来为你提供这种能力，或者自己写代码来展示标题。一个选择是使用 {{HTMLElement("video")}} 元素，它是一定支持 WebVTT 的。
 
 进阶的来讲，语音的副标题和转录文字应该同时描述音乐与音效，因为它们也是音频的重要信息，包含了情绪与音调。举例子，在下面的 WebVTT 中，中括号里提供了关于音调与情绪的信息给观看者；通过这种方式（给出音乐，语言之外的声音，以及另一些至关重要的声音的描述）能够帮助建立起音频的氛围。
 
@@ -236,13 +236,12 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
   <source src="myAudio.mp3" type="audio/mpeg" />
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    Your browser doesn't support HTML5 audio. Here is a
-    <a href="myAudio.mp4">link to download the audio</a> instead.
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
 
-- [MDN Subtitles and closed caption — Plugins](/zh-CN/docs/Glossary/Plugin)
 - [Web Video Text Tracks Format (WebVTT)](/zh-CN/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.2_%E2%80%94_Providing_text_alternatives_for_time-based_media)
