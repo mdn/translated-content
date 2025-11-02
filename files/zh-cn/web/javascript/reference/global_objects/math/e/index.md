@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
-
 **`Math.E`** 静态数据属性表示欧拉数，即自然对数的底数 e，其值约为 2.718。
 
 {{InteractiveExample("JavaScript Demo: Math.E")}}

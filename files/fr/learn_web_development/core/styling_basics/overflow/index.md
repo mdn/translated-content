@@ -39,7 +39,7 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
 
 ## Qu'est-ce qu'un débordement ?
 
-Nous savons déjà qu'en CSS tout fonctionne par boîte, et que nous pouvons définir la taille de ces boîtes en leur donnant les valeurs [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height) (ou [`inline-size`](/fr/docs/Web/CSS/inline-size) et [`block-size`](/fr/docs/Web/CSS/block-size)). Un dépassement correspond à ce qui se produit lorsqu'il y a trop de contenu dans une boîte et que ce contenu ne s'y intègre pas confortablement. CSS propose différents outils pour gérer ce phénomène, c'est un concept utile à comprendre à ce stade. Vous allez rencontrer des cas de dépassement fréquemment en codant du CSS, particulièrement quand vous irez plus loin dans la mise en page avec CSS.
+Nous savons déjà qu'en CSS tout fonctionne par boîte, et que nous pouvons définir la taille de ces boîtes en leur donnant les valeurs [`width`](/fr/docs/Web/CSS/Reference/Properties/width) et [`height`](/fr/docs/Web/CSS/Reference/Properties/height) (ou [`inline-size`](/fr/docs/Web/CSS/Reference/Properties/inline-size) et [`block-size`](/fr/docs/Web/CSS/Reference/Properties/block-size)). Un dépassement correspond à ce qui se produit lorsqu'il y a trop de contenu dans une boîte et que ce contenu ne s'y intègre pas confortablement. CSS propose différents outils pour gérer ce phénomène, c'est un concept utile à comprendre à ce stade. Vous allez rencontrer des cas de dépassement fréquemment en codant du CSS, particulièrement quand vous irez plus loin dans la mise en page avec CSS.
 
 ## CSS essaie d'éviter les pertes de données
 
@@ -63,7 +63,7 @@ Dans les deux prochaines leçons, nous examinerons différentes façons de contr
 
 ## La propriété overflow
 
-La propriété [`overflow`](/fr/docs/Web/CSS/overflow) est la façon dont vous prenez le contrôle du débordement d'un élément et dîtes au navigateur comment vous voulez qu'il se comporte. La valeur par défaut est `visible`, c'est pourquoi, par défaut, nous pouvons voir notre contenu quand il déborde.
+La propriété [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow) est la façon dont vous prenez le contrôle du débordement d'un élément et dîtes au navigateur comment vous voulez qu'il se comporte. La valeur par défaut est `visible`, c'est pourquoi, par défaut, nous pouvons voir notre contenu quand il déborde.
 
 Si vous souhaitez recadrer le contenu qui déborde, vous pouvez définir `overflow: hidden` pour votre boîte. Cela fera exactement ce qui est indiqué — cacher le débordement. Vous ne devez donc le faire que si la disparition du contenu ne pose pas de problème.
 
@@ -75,11 +75,11 @@ Peut-être préféreriez-vous ajouter des barres de défilement lorsque le conte
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}
 
-Dans l'exemple ci-dessus nous n'avons besoin de faire défiler que l'axe `y`, cependant nous avons des barres de défilement sur les deux axes. Vous pourriez utiliser à la place la propriété [`overflow-y`](/fr/docs/Web/CSS/overflow-y), qui définit `overflow-y: scroll` afin de faire défiler uniquement sur l'axe `y`.
+Dans l'exemple ci-dessus nous n'avons besoin de faire défiler que l'axe `y`, cependant nous avons des barres de défilement sur les deux axes. Vous pourriez utiliser à la place la propriété [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y), qui définit `overflow-y: scroll` afin de faire défiler uniquement sur l'axe `y`.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-Vous pourriez également faire défiler sur l'axe x en utilisant [`overflow-x`](/fr/docs/Web/CSS/overflow-x), bien que ce ne soit pas une méthode recommandée pour gérer les longs mots ! Si vous avez besoin de gérer un long mot dans une petite boîte alors vous pourriez vous tourner vers les propriétés [`word-break`](/fr/docs/Web/CSS/word-break) ou [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap). En complément, certaines méthodes présentées dans le cours [Définir la taille des éléments en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing) peuvent vous aider à créer des boîtes qui s'adapteront mieux à des quantités variables de contenu.
+Vous pourriez également faire défiler sur l'axe x en utilisant [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x), bien que ce ne soit pas une méthode recommandée pour gérer les longs mots ! Si vous avez besoin de gérer un long mot dans une petite boîte alors vous pourriez vous tourner vers les propriétés [`word-break`](/fr/docs/Web/CSS/Reference/Properties/word-break) ou [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap). En complément, certaines méthodes présentées dans le cours [Définir la taille des éléments en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing) peuvent vous aider à créer des boîtes qui s'adapteront mieux à des quantités variables de contenu.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 

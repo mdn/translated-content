@@ -90,5 +90,5 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Extensions CSS de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions)
+- [Extensions CSS de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - L'API [Glisser-déposer HTML](/fr/docs/Web/API/HTML_Drag_and_Drop_API)

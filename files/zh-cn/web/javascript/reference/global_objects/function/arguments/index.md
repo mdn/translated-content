@@ -3,7 +3,7 @@ title: Function.prototype.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 > [!NOTE]
 > {{jsxref("Function")}} 对象的 `arguments` 属性已被弃用。访问 `arguments` 对象的推荐方式是在函数内部引用可用的 {{jsxref("Functions/arguments", "arguments")}} 变量。

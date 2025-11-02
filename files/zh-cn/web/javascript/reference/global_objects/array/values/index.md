@@ -3,8 +3,6 @@ title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 
-{{JSRef}}
-
 **`values()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象迭代数组中每个元素的值。
 
 {{InteractiveExample("JavaScript Demo: Array.values()")}}

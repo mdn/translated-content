@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 243dd73fe136031badaef52c3e6133b21bcf7a07
 ---
 
-**`<position>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 2 次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}}, {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}}, {{cssxref("transform-origin")}} で使用されています。
+**`<position>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 2 次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}}, {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}}, {{cssxref("transform-origin")}} で使用されています。
 
 > [!NOTE]
 > `<position>` 値で記述される最終的な位置は、要素ボックスの中である必要はありません。
@@ -82,7 +82,7 @@ bottom top
 
 ## 関連情報
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
 - [CSS 値と単位の紹介](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}

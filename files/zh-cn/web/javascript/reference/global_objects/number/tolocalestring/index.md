@@ -3,8 +3,6 @@ title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`toLocaleString()`** 方法返回这个数字特定于语言环境的表示字符串。在具有 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 支持的实现中，此方法仅仅简单调用了 `Intl.NumberFormat`。
 
 当格式化大量数字时，最好创建一个 {{jsxref("Intl.NumberFormat")}} 对象，并使用其提供的 {{jsxref("Intl/NumberFormat/format", "format()")}} 方法。

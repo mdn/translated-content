@@ -268,7 +268,7 @@ dt::after {
 
 Cet élément ne doit pas être utilisé (de même que les éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)), dans le seul but de créer une indentation sur la page. Bien que cela fonctionne parfaitement, c'est une pratique déconseillée qui mêle mise en forme et sémantique. Cela modifie le rôle que doivent avoir les listes de définitions.
 
-Pour changer l'indentation de la définition d'un terme, il faut utiliser la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin).
+Pour changer l'indentation de la définition d'un terme, il faut utiliser la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin).
 
 ## Accessibilité
 

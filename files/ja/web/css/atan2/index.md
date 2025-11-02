@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`atan2()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 `-infinity` から `infinity` までの 2 つの値の逆タンジェントを返す三角関数です。この関数は 2 つの引数を受け入れ、`-180deg` から `180deg` までの {{cssxref("&lt;angle&gt;")}} を表すラジアン数を返します。
+**`atan2()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 `-infinity` から `infinity` までの 2 つの値の逆タンジェントを返す三角関数です。この関数は 2 つの引数を受け入れ、`-180deg` から `180deg` までの {{cssxref("&lt;angle&gt;")}} を表すラジアン数を返します。
 
 ## 構文
 

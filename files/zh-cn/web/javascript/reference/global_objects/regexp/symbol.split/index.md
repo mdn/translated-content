@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2c0f972d873ea2db5163dbcb12987847124751ad
 ---
 
-{{JSRef}}
-
 **`[Symbol.split]()`** 是 {{jsxref("RegExp")}} 实例的方法，它指定了当正则表达式作为分隔符传入 [`String.prototype.split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 时，字符串应如何被分割。
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.split]()")}}

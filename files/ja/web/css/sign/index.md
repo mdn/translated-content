@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`sign()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 1 つの計算式を指定し、引数の数値が負の場合は `-1`、 引数の数値が正の値の場合は `+1`、引数の数値が 0⁺ の場合は `0⁺`、引数の数値が 0⁻ の場合は `0⁻` を返します。
+**`sign()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 1 つの計算式を指定し、引数の数値が負の場合は `-1`、 引数の数値が正の値の場合は `+1`、引数の数値が 0⁺ の場合は `0⁺`、引数の数値が 0⁻ の場合は `0⁻` を返します。
 
 > [!NOTE]
 > {{CSSxRef("abs")}} は引数の絶対値を返しますが、 `sign()` は引数の符号を返します。

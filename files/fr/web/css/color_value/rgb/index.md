@@ -231,7 +231,7 @@ body {
 
 Cet exemple met en forme trois éléments {{htmlelement("div")}} avec différentes couleurs d'arrière-plan. Celui de gauche reçoit la `--base-color` non modifiée, tandis que les deux autres reçoivent des variantes de cette `--base-color` qui retirent progressivement du rouge et ajoutent du bleu.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/--*) `--base-color` est passée dans une fonction `rgb()`, et la couleur de sortie a ses canaux rouge et bleu modifiés pour obtenir l'effet désiré via des fonctions `calc()`, tandis que le canal vert reste inchangé.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `rgb()`, et la couleur de sortie a ses canaux rouge et bleu modifiés pour obtenir l'effet désiré via des fonctions `calc()`, tandis que le canal vert reste inchangé.
 
 ```html hidden
 <div id="container">

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
-{{JSRef}}
-
 {{jsxref("Date")}} 实例的 **`valueOf()`** 方法用于返回自[纪元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)（即协调世界时 1970 年 1 月 1 日零点）以来的毫秒数。
 
 {{InteractiveExample("JavaScript Demo: Date.prototype.valueOf()")}}

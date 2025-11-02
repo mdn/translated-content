@@ -2,10 +2,22 @@
 title: <animate>
 slug: Web/SVG/Reference/Element/animate
 l10n:
-  sourceCommit: d8fbe1ea30dcc8fd707048a804f5070a729b57a7
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<animate>`** は [SVG](/ja/docs/Web/SVG) の要素で、時間の経過に応じて要素の属性を変化させる方法を提供します。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+この要素にはグローバル属性のみがあります。
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGAnimateElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -32,10 +44,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## 使用上のメモ
-
-この要素は {{domxref("SVGAnimateElement")}} インターフェイスを実装しています。
 
 ## アクセシビリティの考慮
 
