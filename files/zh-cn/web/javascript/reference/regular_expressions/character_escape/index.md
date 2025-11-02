@@ -43,11 +43,11 @@ l10n:
 - `\xHH`
   - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数必须恰好为两位长度。
 - `\uHHHH`
-  - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数必须恰好为四位长度。在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式)中，两个此类转义序列可用于表示代理对。（在非 Unicode 感知模式下，它们始终表示两个独立字符。）
+  - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数必须恰好为四位长度。在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)中，两个此类转义序列可用于表示代理对。（在非 Unicode 感知模式下，它们始终表示两个独立字符。）
 - `\u{HHH}`
-  - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数长度可为 1 至 6 位。（仅限于 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式)。）
+  - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数长度可为 1 至 6 位。（仅限于 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)。）
 
-在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式)下，不符合上述规则的转义序列将变为*一致转义序列*：它们表示反斜杠后跟的字符。例如，`\a` 表示字符 `a`。这种行为限制了在不引发向后兼容性问题的情况下引入新转义序列的能力，因此在 Unicode 感知模式下被禁止。
+在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下，不符合上述规则的转义序列将变为*一致转义序列*：它们表示反斜杠后跟的字符。例如，`\a` 表示字符 `a`。这种行为限制了在不引发向后兼容性问题的情况下引入新转义序列的能力，因此在 Unicode 感知模式下被禁止。
 
 在非 Unicode 感知模式下，若无法将 `]`、`{` 和 `}` 解析为字符类结束符或量词分隔符，则允许其[解释为字面字符](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)。此为[为 web 兼容性而保留的过时语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖此特性。
 
@@ -90,6 +90,6 @@ console.log(pattern.test(string)); // true
 - [字符类转义：`\d`、`\D`、`\w`、`\W`、`\s`、`\S`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [字面字符：`a`、`b`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
 - [Unicode 字符类转义：`\p{...}`、`\P{...}`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-- [反向引用：\1`、`\2`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+- [反向引用：`\1`、`\2`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
 - [具名反向引用：`\k<name>`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
 - [单词边界断言：`\b`、`\B`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
