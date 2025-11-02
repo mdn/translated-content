@@ -136,7 +136,7 @@ img {
 ## Voir aussi
 
 - D'autres propriétés CSS utilisées avec les images&nbsp;:
-  - [`object-fit`](/fr/docs/Web/CSS/object-fit)
-  - [`object-position`](/fr/docs/Web/CSS/object-position)
-  - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
-  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
+  - [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
+  - [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position)
+  - [`image-orientation`](/fr/docs/Web/CSS/Reference/Properties/image-orientation)
+  - [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)

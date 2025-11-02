@@ -121,4 +121,4 @@ body {
 
 ## Voir aussi
 
-- [`filter`](/fr/docs/Web/CSS/filter)
+- [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter)

@@ -171,5 +171,5 @@ row-gap: unset;
 
 ## Voir aussi
 
-- Les autres propriétés relatives aux gouttières&nbsp;: [`column-gap`](/fr/docs/Web/CSS/column-gap), [`gap`](/fr/docs/Web/CSS/gap)
+- Les autres propriétés relatives aux gouttières&nbsp;: [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap), [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
 - Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_goutti%c3%a8res)_

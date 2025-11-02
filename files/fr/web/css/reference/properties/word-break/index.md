@@ -71,10 +71,10 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 - `keep-all`
   - : La césure est interdite pour les textes en chinois, japonais et coréen. Pour les autres types de texte, le comportement est le même que `normal`.
 - `break-word`{{deprecated_inline}}
-  - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap).
+  - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap).
 
 > [!NOTE]
-> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
+> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
 
 ## Définition formelle
 
@@ -162,6 +162,6 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 
 ## Voir aussi
 
-- [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)
-- [`hyphens`](/fr/docs/Web/CSS/hyphens)
+- [`overflow-wrap`](/fr/docs/Web/CSS/Reference/Properties/overflow-wrap)
+- [`hyphens`](/fr/docs/Web/CSS/Reference/Properties/hyphens)
 - [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

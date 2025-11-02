@@ -109,7 +109,7 @@ Dans la prochaine section, nous verrons un meilleur exemple pour indiquer les ch
 
 Dans les articles précédents, nous avons vu l'utilisation [de contenu généré](/fr/docs/Web/CSS/CSS_generated_content). C'est un bon moment pour y revenir en détails.
 
-L'idée consiste ici à utiliser les pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after) avec la propriété [`content`](/fr/docs/Web/CSS/content) afin de faire apparaître du contenu avant ou après l'élément concerné. Le fragment de contenu n'est pas ajouté au DOM, il fait partie du style du document, et il est donc invisible pour les outils d'assistance comme les lecteurs d'écran. S'agissant d'un pseudo-élément, il peut être ciblé par des règles de mise en forme comme tout autre nœud du DOM.
+L'idée consiste ici à utiliser les pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after) avec la propriété [`content`](/fr/docs/Web/CSS/Reference/Properties/content) afin de faire apparaître du contenu avant ou après l'élément concerné. Le fragment de contenu n'est pas ajouté au DOM, il fait partie du style du document, et il est donc invisible pour les outils d'assistance comme les lecteurs d'écran. S'agissant d'un pseudo-élément, il peut être ciblé par des règles de mise en forme comme tout autre nœud du DOM.
 
 Il s'agit d'un outil bien utile lorsqu'on veut ajouter un indicateur visuel à un élément, comme un libellé ou une icône, mais qu'il importe peu que ce contenu soit vu des outils d'assistance. Dans [l'exemple sur les boutons radio sur mesure](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), on utilise du contenu généré afin de gérer le placement et l'animation du cercle interne lorsqu'un bouton radio est sélectionné&nbsp;:
 
@@ -531,7 +531,7 @@ Vous pouvez voir le résultat ici&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-On construit la mise en forme du cercle interne du bouton radio avec le pseudo-élément auquel on applique une [transformation](/fr/docs/Web/CSS/transform) `scale(0)`. On utilise ensuite une [transition](/fr/docs/Web/CSS/transition) pour l'animer et le faire apparaître lorsque le bouton radio est sélectionné/coché. L'avantage d'une transformation plutôt que de jouer sur une transition avec [`width`](/fr/docs/Web/CSS/width)/[`height`](/fr/docs/Web/CSS/height) est qu'on peut utiliser [`transform-origin`](/fr/docs/Web/CSS/transform-origin) pour que la croissance parte du centre du cercle plutôt que depuis le coin.
+On construit la mise en forme du cercle interne du bouton radio avec le pseudo-élément auquel on applique une [transformation](/fr/docs/Web/CSS/Reference/Properties/transform) `scale(0)`. On utilise ensuite une [transition](/fr/docs/Web/CSS/Reference/Properties/transition) pour l'animer et le faire apparaître lorsque le bouton radio est sélectionné/coché. L'avantage d'une transformation plutôt que de jouer sur une transition avec [`width`](/fr/docs/Web/CSS/Reference/Properties/width)/[`height`](/fr/docs/Web/CSS/Reference/Properties/height) est qu'on peut utiliser [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin) pour que la croissance parte du centre du cercle plutôt que depuis le coin.
 
 ### `:default` et `:indeterminate`
 

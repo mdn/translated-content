@@ -75,7 +75,7 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [`box-orient`](/fr/docs/Web/CSS/box-orient)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
-- [`box-align`](/fr/docs/Web/CSS/box-align)
-- [`flex-direction`](/fr/docs/Web/CSS/flex-direction)
+- [`box-orient`](/fr/docs/Web/CSS/Reference/Properties/box-orient)
+- [`box-pack`](/fr/docs/Web/CSS/Reference/Properties/box-pack)
+- [`box-align`](/fr/docs/Web/CSS/Reference/Properties/box-align)
+- [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction)

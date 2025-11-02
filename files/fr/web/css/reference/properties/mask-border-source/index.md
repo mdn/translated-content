@@ -6,7 +6,7 @@ original_slug: Web/CSS/mask-border-source
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété CSS **`mask-border-source`** définit l'image à utiliser pour créer [le masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.
+La propriété CSS **`mask-border-source`** définit l'image à utiliser pour créer [le masque de bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border) d'un élément.
 
 C'est la propriété {{cssxref("mask-border-slice")}} qui est utilisée afin de découper l'image en tranches/régions ensuite appliquées dynamiquement pour créer le masque final.
 

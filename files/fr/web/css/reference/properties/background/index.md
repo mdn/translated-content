@@ -52,19 +52,19 @@ background:
 
 Cette propriété permet de définir une ou plusieurs valeurs pour&nbsp;:
 
-- [`background-attachment`](/fr/docs/Web/CSS/background-attachment)
-- [`background-clip`](/fr/docs/Web/CSS/background-clip)
-- [`background-color`](/fr/docs/Web/CSS/background-color)
-- [`background-image`](/fr/docs/Web/CSS/background-image)
-- [`background-origin`](/fr/docs/Web/CSS/background-origin)
-- [`background-position`](/fr/docs/Web/CSS/background-position)
-- [`background-repeat`](/fr/docs/Web/CSS/background-repeat)
-- [`background-size`](/fr/docs/Web/CSS/background-size)
+- [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment)
+- [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip)
+- [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)
+- [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)
+- [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin)
+- [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)
+- [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)
+- [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)
 
 Lorsqu'on utilise la propriété raccourcie `background`, les valeurs fournies sont appliquées et pour les valeurs absentes, la propriété réinitialisera les propriétés détaillées avec leurs valeurs initiales.
 
 > [!NOTE]
-> La propriété [`background-color`](/fr/docs/Web/CSS/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
+> La propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) ne peut être définie que sur le dernier arrière-plan, car il n'y a qu'une seule couleur d'arrière-plan pour un élément.
 
 ## Syntaxe
 
@@ -99,25 +99,25 @@ La propriété `background` permet de définir une ou plusieurs couches d'arriè
   - `<repeat-style>`
 
 - Une valeur `<bg-size>` qui peut uniquement être utilisée directement après une valeur `<position>` suivie d'une barre oblique (par exemple `center/80%`)
-- Une valeur `<box>` présente zéro, une voire deux fois. Si elle n'est présente qu'une fois, cette valeur sera utilisée pour définir [`background-origin`](/fr/docs/Web/CSS/background-origin) et [`background-clip`](/fr/docs/Web/CSS/background-clip). Si elle est présente à deux reprises, la première occurrence sera utilisée pour définir [`background-origin`](/fr/docs/Web/CSS/background-origin) et la seconde définira [`background-clip`](/fr/docs/Web/CSS/background-clip).
+- Une valeur `<box>` présente zéro, une voire deux fois. Si elle n'est présente qu'une fois, cette valeur sera utilisée pour définir [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin) et [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip). Si elle est présente à deux reprises, la première occurrence sera utilisée pour définir [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin) et la seconde définira [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip).
 - Une valeur `<background-color>` qui peut uniquement être incluse pour la dernière couche qui est définie.
 
 ### Valeurs
 
 - `<attachment>`
-  - : Voir [`background-attachment`](/fr/docs/Web/CSS/background-attachment)
+  - : Voir [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment)
 - `<box>`
-  - : Voir [`background-clip`](/fr/docs/Web/CSS/background-clip) et [`background-origin`](/fr/docs/Web/CSS/background-origin)
+  - : Voir [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip) et [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin)
 - `<background-color>`
-  - : Voir [`background-color`](/fr/docs/Web/CSS/background-color)
+  - : Voir [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)
 - `<bg-image>`
-  - : Voir [`background-image`](/fr/docs/Web/CSS/background-image)
+  - : Voir [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)
 - `<position>`
-  - : Voir [`background-position`](/fr/docs/Web/CSS/background-position)
+  - : Voir [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)
 - `<repeat-style>`
-  - : Voir [`background-repeat`](/fr/docs/Web/CSS/background-repeat)
+  - : Voir [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)
 - `<bg-size>`
-  - : Voir [`background-size`](/fr/docs/Web/CSS/background-size).
+  - : Voir [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size).
 
 ## Accessibilité
 
@@ -173,6 +173,6 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 
 ## Voir aussi
 
-- [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
+- [`box-decoration-break`](/fr/docs/Web/CSS/Reference/Properties/box-decoration-break)
 - [Les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

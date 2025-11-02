@@ -186,5 +186,5 @@ Bien que l'extension de `pointer-events` au contenu HTML soit incluse dans les p
 - L'attribut SVG [`pointer-events`](/fr/docs/Web/SVG/Attribute/pointer-events)
 - L'attribut SVG [`visibility`](/fr/docs/Web/SVG/Attribute/visibility)
 - [Spécification WebKit pour étendre la propriété `pointer-events` (en anglais)](https://webkit.org/specs/PointerEventsProperty.html) au contenu (X)HTML
-- La propriété [`user-select`](/fr/docs/Web/CSS/user-select) qui contrôle lorsque l'utilisateur peut sélectionner du texte
+- La propriété [`user-select`](/fr/docs/Web/CSS/Reference/Properties/user-select) qui contrôle lorsque l'utilisateur peut sélectionner du texte
 - [La page du wiki de Mozilla pour recenser les cas d'usage nécessitant l'extension des valeurs implémentées pour HTML](https://wiki.mozilla.org/SVG:pointer-events)

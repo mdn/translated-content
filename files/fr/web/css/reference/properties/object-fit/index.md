@@ -50,7 +50,7 @@ object-fit: scale-down;
 Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
 
 > [!NOTE]
-> Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
+> Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position).
 
 ## Syntaxe
 
@@ -185,10 +185,10 @@ img {
 
 ## Voir aussi
 
-- [`background-size`](/fr/docs/Web/CSS/background-size)
+- [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)
 
 - Les autres propriétés CSS liées aux images&nbsp;:
-  - [`object-position`](/fr/docs/Web/CSS/object-position)
-  - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
-  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
+  - [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position)
+  - [`image-orientation`](/fr/docs/Web/CSS/Reference/Properties/image-orientation)
+  - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering)
+  - [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)

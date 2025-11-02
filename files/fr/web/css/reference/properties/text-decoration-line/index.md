@@ -84,7 +84,7 @@ Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces
 - `line-through`
   - : Une ligne est dessinée au milieu de chaque ligne de texte.
 - `blink` {{deprecated_inline}}
-  - : Le texte clignote. Les agents utilisateurs conformes peuvent ne pas suivre cette directive. Cette valeur est dépréciée et il est conseillé d'utiliser les [animations CSS](/fr/docs/Web/CSS/animation) pour obtenir un effet similaire.
+  - : Le texte clignote. Les agents utilisateurs conformes peuvent ne pas suivre cette directive. Cette valeur est dépréciée et il est conseillé d'utiliser les [animations CSS](/fr/docs/Web/CSS/Reference/Properties/animation) pour obtenir un effet similaire.
 
 ## Définition formelle
 

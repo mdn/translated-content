@@ -53,7 +53,7 @@ Les options de configuration fournies par l'agent utilisateur auront la priorit�
 
 ### Préserver un contraste faible
 
-Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/CSS/background-image) avec [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient) pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
+Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) avec [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient) pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
 
 #### CSS
 
@@ -102,13 +102,13 @@ Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/
 
 - [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - Les autres propriétés relatives aux couleurs&nbsp;:
-  - [`color`](/fr/docs/Web/CSS/color)
-  - [`background-color`](/fr/docs/Web/CSS/background-color)
-  - [`border-color`](/fr/docs/Web/CSS/border-color)
-  - [`outline-color`](/fr/docs/Web/CSS/outline-color)
-  - [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color)
-  - [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color)
-  - [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
-  - [`caret-color`](/fr/docs/Web/CSS/caret-color)
-  - [`column-rule-color`](/fr/docs/Web/CSS/column-rule-color)
-- [`background-image`](/fr/docs/Web/CSS/background-image)
+  - [`color`](/fr/docs/Web/CSS/Reference/Properties/color)
+  - [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)
+  - [`border-color`](/fr/docs/Web/CSS/Reference/Properties/border-color)
+  - [`outline-color`](/fr/docs/Web/CSS/Reference/Properties/outline-color)
+  - [`text-decoration-color`](/fr/docs/Web/CSS/Reference/Properties/text-decoration-color)
+  - [`text-emphasis-color`](/fr/docs/Web/CSS/Reference/Properties/text-emphasis-color)
+  - [`text-shadow`](/fr/docs/Web/CSS/Reference/Properties/text-shadow)
+  - [`caret-color`](/fr/docs/Web/CSS/Reference/Properties/caret-color)
+  - [`column-rule-color`](/fr/docs/Web/CSS/Reference/Properties/column-rule-color)
+- [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)

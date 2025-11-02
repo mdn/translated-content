@@ -132,7 +132,7 @@ Cette propriété ne fait partie d'aucun standard
 
 ## Voir aussi
 
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-- [`box-orient`](/fr/docs/Web/CSS/box-orient)
-- [`box-direction`](/fr/docs/Web/CSS/box-direction)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
+- [`align-items`](/fr/docs/Web/CSS/Reference/Properties/align-items)
+- [`box-orient`](/fr/docs/Web/CSS/Reference/Properties/box-orient)
+- [`box-direction`](/fr/docs/Web/CSS/Reference/Properties/box-direction)
+- [`box-pack`](/fr/docs/Web/CSS/Reference/Properties/box-pack)

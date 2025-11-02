@@ -82,7 +82,7 @@ border-left-style: revert;
 border-left-style: unset;
 ```
 
-La propriété `border-left-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
+La propriété `border-left-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
 ## Définition formelle
 
@@ -177,6 +177,6 @@ td {
 
 ## Voir aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-right-style`](/fr/docs/Web/CSS/border-right-style), [`border-top-style`](/fr/docs/Web/CSS/border-top-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/border-style).
+- Les autres propriétés liées au style des bordures&nbsp;: [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
-- Les autres propriétés liées à la bordure gauche&nbsp;: [`border-left`](/fr/docs/Web/CSS/border-left), [`border-left-color`](/fr/docs/Web/CSS/border-left-color), [`border-left-width`](/fr/docs/Web/CSS/border-left-width).
+- Les autres propriétés liées à la bordure gauche&nbsp;: [`border-left`](/fr/docs/Web/CSS/Reference/Properties/border-left), [`border-left-color`](/fr/docs/Web/CSS/Reference/Properties/border-left-color), [`border-left-width`](/fr/docs/Web/CSS/Reference/Properties/border-left-width).

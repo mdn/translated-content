@@ -10,7 +10,7 @@ l10n:
 
 La [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** définit un nom qui peut être utilisé pour identifier l'élément source d'une chronologie de défilement, ainsi que l'axe de défilement qui fournit la chronologie.
 
-Le nom ainsi déclaré peut être utilisé dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline) afin d'indiquer l'élément (et donc la barre de défilement) utilisé pour contrôler l'avancement de l'animation. On notera que si l'élément n'affiche pas de barre de défilement dans l'axe indiqué, aucune chronologie ne sera créée.
+Le nom ainsi déclaré peut être utilisé dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline) afin d'indiquer l'élément (et donc la barre de défilement) utilisé pour contrôler l'avancement de l'animation. On notera que si l'élément n'affiche pas de barre de défilement dans l'axe indiqué, aucune chronologie ne sera créée.
 
 La propriété `scroll-timeline` est équivalente à l'utilisation des propriétés [`scroll-timeline-name`](/fr/docs/Web/CSS/scroll-timeline-name) et [`scroll-timeline-axis`](/fr/docs/Web/CSS/scroll-timeline-axis) dans une seule déclaration.
 
@@ -54,7 +54,7 @@ Les valeurs autorisées pour `<scroll-timeline-name>` sont&nbsp;:
 - `none`
   - : La chronologie n'a pas de nom associé.
 - `<custom-ident>`
-  - : Un identifiant personnalisé qui peut être utilisé pour faire référence à la chronologie de défilement dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline). Les valeurs possibles sont décrites sur la page du type [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident).
+  - : Un identifiant personnalisé qui peut être utilisé pour faire référence à la chronologie de défilement dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline). Les valeurs possibles sont décrites sur la page du type [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident).
 
 La valeur `<scroll-timeline-axis>` indique la barre de défilement de l'axe donné, pour l'élément identifié par `<scroll-timeline-name>`, qui fournit la chronologie de défilement. Les valeurs autorisées sont&nbsp;:
 
@@ -156,4 +156,4 @@ Faites défiler la barre verticale afin d'observer l'animation.
 
 ## Voir aussi
 
-- [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline)

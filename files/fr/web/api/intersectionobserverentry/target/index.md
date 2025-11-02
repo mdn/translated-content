@@ -15,7 +15,7 @@ La propriété `target` de `IntersectionObserverEntry` indique [l'élément](/fr
 
 ## Exemples
 
-Dans cet exemple simple, chaque élément ciblé voit son [opacité](/fr/docs/Web/CSS/opacity) paramétrée avec la valeur de [`intersectionRatio`](/fr/docs/Web/API/IntersectionObserverEntry/intersectionRatio).
+Dans cet exemple simple, chaque élément ciblé voit son [opacité](/fr/docs/Web/CSS/Reference/Properties/opacity) paramétrée avec la valeur de [`intersectionRatio`](/fr/docs/Web/API/IntersectionObserverEntry/intersectionRatio).
 
 ```js
 function intersectionCallback(entries) {

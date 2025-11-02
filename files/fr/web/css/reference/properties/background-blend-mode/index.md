@@ -43,7 +43,7 @@ background-blend-mode: difference;
 }
 ```
 
-Les modes de fusions (<i lang="en">blending modes</i>) doivent être définis dans le même ordre que les images sont définies avec [`background-image`](/fr/docs/Web/CSS/background-image). Si la liste des modes de fusion et la liste des images d'arrière-plan ne sont pas de la même longueur, la première liste sera répétée ou tronquée pour que les longueurs soient égales.
+Les modes de fusions (<i lang="en">blending modes</i>) doivent être définis dans le même ordre que les images sont définies avec [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image). Si la liste des modes de fusion et la liste des images d'arrière-plan ne sont pas de la même longueur, la première liste sera répétée ou tronquée pour que les longueurs soient égales.
 
 ## Syntaxe
 
@@ -137,4 +137,4 @@ console.log(document.getElementById("div"));
 ## Voir aussi
 
 - [`<blend-mode>`](/fr/docs/Web/CSS/blend-mode)
-- [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode)
+- [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)

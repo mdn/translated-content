@@ -32,7 +32,7 @@ animation-composition: unset;
 ```
 
 > [!NOTE]
-> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Valeurs
 

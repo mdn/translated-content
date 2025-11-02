@@ -50,7 +50,7 @@ box-shadow:
 }
 ```
 
-Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (_z order_) pour plusieurs ombres sera le même [que pour les ombres texte](/fr/docs/Web/CSS/text-shadow) (la première ombre est sur le dessus).
+Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (_z order_) pour plusieurs ombres sera le même [que pour les ombres texte](/fr/docs/Web/CSS/Reference/Properties/text-shadow) (la première ombre est sur le dessus).
 
 [Le générateur de `box-shadow`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) est un outil interactif qui permet de générer des valeurs pour `box-shadow`.
 

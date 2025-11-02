@@ -90,7 +90,7 @@ Les requêtes média peuvent aider au <i lang="en">responsive design</i>, mais e
 
 Les sites adaptatifs sont construits sur la base d'une grille flexible, pour éviter de cibler toutes les tailles d'appareils possibles et d'essayer d'avoir des dispositions parfaitement alignées au pixel près dans tous les cas.
 
-En utilisant une grille flexible, on peut modifier une partie de la mise en page ou ajouter un point d'arrêt et modifier la disposition à partir du moment où le contenu est mal agencé. Par exemple, afin de s'assurer que les lignes ne deviennent trop longues et difficilement lisibles lorsque la largeur s'accroît, on peut utiliser [`columns`](/fr/docs/Web/CSS/columns), et si une boîte devient alors trop étroite, avec deux mots par ligne, on peut alors placer un point d'arrêt.
+En utilisant une grille flexible, on peut modifier une partie de la mise en page ou ajouter un point d'arrêt et modifier la disposition à partir du moment où le contenu est mal agencé. Par exemple, afin de s'assurer que les lignes ne deviennent trop longues et difficilement lisibles lorsque la largeur s'accroît, on peut utiliser [`columns`](/fr/docs/Web/CSS/Reference/Properties/columns), et si une boîte devient alors trop étroite, avec deux mots par ligne, on peut alors placer un point d'arrêt.
 
 Plusieurs méthodes de disposition comme [la disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), et [les grilles CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) sont adaptatives par défaut. Ces méthodes permettent de créer plus simplement une grille flexible.
 
@@ -112,7 +112,7 @@ Si on utilise la propriété `column-width` à la place, on indiquera une largeu
 }
 ```
 
-La propriété raccourcie [`columns`](/fr/docs/Web/CSS/columns) permet d'indiquer un nombre maximum de colonne et une largeur minimale de colonne. Ces propriétés permettent de s'assurer que les lignes ne deviennent pas trop longues sur un écran large, ou trop étroite dans le cas contraire.
+La propriété raccourcie [`columns`](/fr/docs/Web/CSS/Reference/Properties/columns) permet d'indiquer un nombre maximum de colonne et une largeur minimale de colonne. Ces propriétés permettent de s'assurer que les lignes ne deviennent pas trop longues sur un écran large, ou trop étroite dans le cas contraire.
 
 ### Boîtes flexibles
 
@@ -131,7 +131,7 @@ Dans l'exemple qui suit, les éléments flexibles prendront le même espace dans
 ```
 
 > [!NOTE]
-> Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
 
 ### Grilles CSS
 
@@ -172,7 +172,7 @@ L'élément `<picture>` permet de fournir plusieurs tailles d'images à l'aide d
 Quelques conseils complémentaires&nbsp;:
 
 - Assurez vous d'utiliser un format d'image approprié pour les images de votre site (comme PNG ou JPG), et d'optimiser la taille des fichiers à l'aide d'un éditeur graphique avant de publier les images sur votre site web.
-- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
+- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/Reference/Properties/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
 - Il est possible d'utiliser des requêtes média grâce à l'attribut `media` des éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) dans les éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)/[`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) afin de servir des fichiers pertinents selon l'appareil utilisé.
 
 ## Typographie adaptative

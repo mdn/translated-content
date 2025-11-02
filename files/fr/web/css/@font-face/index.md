@@ -31,11 +31,11 @@ La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@f
 - {{cssxref("@font-face/font-family", "font-family")}}
   - : Ce descripteur définit un nom qui sera utilisé pour désigner cette police dans les différentes règles associées.
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-  - : Une valeur [`font-stretch`](/fr/docs/Web/CSS/font-stretch). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-stretch: 50% 200%;`.
+  - : Une valeur [`font-stretch`](/fr/docs/Web/CSS/Reference/Properties/font-stretch). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-stretch: 50% 200%;`.
 - {{cssxref("@font-face/font-style", "font-style")}}
-  - : Une valeur [`font-style`](/fr/docs/Web/CSS/font-style). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-style: oblique 20deg 50deg;`.
+  - : Une valeur [`font-style`](/fr/docs/Web/CSS/Reference/Properties/font-style). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-style: oblique 20deg 50deg;`.
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-  - : Une valeur [`font-weight`](/fr/docs/Web/CSS/font-weight). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-weight: 100 400;`.
+  - : Une valeur [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-weight: 100 400;`.
 - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
