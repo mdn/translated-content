@@ -257,7 +257,8 @@ div {
 > [!NOTE]
 > Рабочий пример можно найти на GitHub по адресу [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html).)
 
-> **Примечание:** `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
+> [!NOTE]
+> `<input type="number">` (и другие типы, такие как `range` и `date`) могут также принимать атрибут [`step`](/ru/docs/Web/HTML/Attributes/step), который задаёт шаг увеличения или уменьшения значения при использовании кнопок вверх и вниз. В примере выше мы явно не указывали атрибут `step`, поэтому он получает значение по умолчанию, равное `1`. Это значит, что дробные числа, такие как 3.2, будут не валидными.
 
 ### Полный пример
 
@@ -436,7 +437,8 @@ email.addEventListener("input", function (event) {
 
 {{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
-> **Примечание:**: Данный пример можно найти на GitHub по адресу [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html).)
+> [!NOTE]
+> Данный пример можно найти на GitHub по адресу [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (отдельно можно найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html).)
 
 #### Более подробный пример
 

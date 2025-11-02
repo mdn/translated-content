@@ -44,7 +44,7 @@ La spécification sur les modes d'écriture définit les différentes valeurs qu
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/writing-modes.html", '100%', 360)}}
 
-Actuellement, seul Firefox prend en charge `sideways-rl` et `sideways-lr`. Il existe également certains problèmes relatifs à `writing-mode` et aux boîtes flexibles. Pour plus d'informations, vous pouvez consulter [les informations de compatibilité pour la propriété `writing-mode`](/fr/docs/Web/CSS/writing-mode#compatibilité_des_navigateurs). Toutefois, si vous souhaitez utiliser les modes d'écritures pour votre site/application, il est fortement conseillé de tester les résultats obtenus, ne serait-ce que parce que cela peut fortement nuire à la lisibilité !
+Actuellement, seul Firefox prend en charge `sideways-rl` et `sideways-lr`. Il existe également certains problèmes relatifs à `writing-mode` et aux boîtes flexibles. Pour plus d'informations, vous pouvez consulter [les informations de compatibilité pour la propriété `writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode#compatibilité_des_navigateurs). Toutefois, si vous souhaitez utiliser les modes d'écritures pour votre site/application, il est fortement conseillé de tester les résultats obtenus, ne serait-ce que parce que cela peut fortement nuire à la lisibilité !
 
 On notera que la propriété `writing-mode` CSS ne doit pas être utilisée pour modifier le mode d'écriture d'un document entier. Cela doit être fait avec HTML en ajoutant un attribut `dir` et `lang` sur l'élément `html` afin d'indiquer la direction du texte par défaut et la langue du document. Ainsi, le document serait correctement affiché, même si le CSS n'était pas chargé.
 

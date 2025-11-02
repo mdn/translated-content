@@ -1,28 +1,21 @@
 ---
 title: CORS
 slug: Glossary/CORS
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-CORS (Partage de ressource cross-origin) est un mécanisme qui consiste à transmettre des [entêtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) qui déterminent s'il faut ou non bloquer les requêtes à des ressources restreintes sur une page web qui se trouve sur un domaine externe au domaine dont la ressource est originaire.
+**CORS** (Partage de ressource cross-origin) est un mécanisme qui consiste à transmettre des {{Glossary("HTTP_header", "entêtes HTTP")}}, qui déterminent s'il faut ou non bloquer les requêtes à des ressources restreintes sur une page web qui se trouve sur un domaine externe au domaine dont la ressource est originaire.
 
 La [politique de sécurité de même origine](/fr/docs/Web/Security/Same-origin_policy) interdit les requêtes d'origines différentes par défaut et ce pour des raisons de sécurité.
 CORS permet de contourner cette limitation en permettant au serveur d'avoir le contrôle sur les ressources partagés et offre un mécanisme sécurisé pour permettre l'échange de données qui ne partagent pas le même domaine d'origine (d'où le terme "_cross-origin_").
 
-## Voir aussi
-
-### Culture générale
-
-- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS) sur MDN
-- [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) sur Wikipédia (anglais)
-
-### En-têtes liés au CORS
+## En-têtes CORS
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : Indique le ou les domaines pour lesquels la ressource peut être partagée.
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
-  - : Indique si la réponse peut ou non être exposée si le flag est à "_true_".
+  - : Indique si la réponse peut ou non être exposée si le flag est à `true`.
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : Utilisé en réponse à une requête de pré-vérification pour indiquer quels sont les en-têtes qui peuvent être utilisés dans la requête courante.
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
@@ -34,10 +27,14 @@ CORS permet de contourner cette limitation en permettant au serveur d'avoir le c
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : Utilisé lors de l'émission d'une demande de contrôle en amont, pour indiquer au serveur quels en-têtes HTTP seront utilisés lors de la demande.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Utilisé lors de l'émission d'une demande de contrôle en amont permettant au serveur de savoir quelle méthode HTTP sera utilisée lors de la création de la requête.
+  - : Utilisé lors de l'émission d'une demande de contrôle en amont permettant au serveur de savoir quelle [méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) sera utilisée lors de la création de la requête.
 - {{HTTPHeader("Origin")}}
   - : Indique quelle est l'origine d'une récupération.
+- {{HTTPHeader("Timing-Allow-Origin")}}
+  - : Indique les origines qui sont autorisées à voir les valeurs des attributs récupérés via les fonctionnalités de l'[API de chronométrage des ressources](/fr/docs/Web/API/Performance_API/Resource_timing), qui seraient autrement signalées comme zéro en raison des restrictions cross-origin.
 
-### Référence technique
+## Voir aussi
 
-- [Spécification fetch](https://fetch.spec.whatwg.org/#http-cors-protocol)
+- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
+- [Cross-origin resource sharing](https://fr.wikipedia.org/wiki/Cross-origin_resource_sharing) sur Wikipédia
+- [Spécification fetch <sup>(angl.)</sup>](https://fetch.spec.whatwg.org/#http-cors-protocol)

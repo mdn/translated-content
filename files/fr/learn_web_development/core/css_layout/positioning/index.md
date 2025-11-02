@@ -81,7 +81,7 @@ Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement d
 
 ### Présentation de `top`, `bottom`, `left` et `right`
 
-{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à [`position`](/fr/docs/Web/CSS/position) pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans le CSS&nbsp;:
+{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à [`position`](/fr/docs/Web/CSS/Reference/Properties/position) pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans le CSS&nbsp;:
 
 ```css
 top: 30px;
@@ -663,7 +663,7 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 </dl>
 ```
 
-Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
+Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) avec une valeur [`top`](/fr/docs/Web/CSS/Reference/Properties/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
 
 ```css
 dt {
@@ -687,7 +687,7 @@ body {
 
 {{EmbedLiveSample('index_déroulant', '100%', 200)}}
 
-Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/position) de ses ancêtres.
+Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/Reference/Properties/position) de ses ancêtres.
 
 > [!NOTE]
 > À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).

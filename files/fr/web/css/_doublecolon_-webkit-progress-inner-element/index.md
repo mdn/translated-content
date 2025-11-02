@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-progress-inner-element`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui représente le cadre extérieur de l'élément {{HTMLElement("progress")}}. C'est un pseudo-élément parent du pseudo-élément {{cssxref("::-webkit-progress-bar")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-progress-inner-element`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui représente le cadre extérieur de l'élément {{HTMLElement("progress")}}. C'est un pseudo-élément parent du pseudo-élément {{cssxref("::-webkit-progress-bar")}}.
 
 > [!NOTE]
 > Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("appearance")}} vaille `none` sur l'élément `<progress>`.

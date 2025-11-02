@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}{{SeeCompatTable}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-last-node`** est une [extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-last-node`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).
 
 > [!NOTE]
 > Tout blanc qui serait à la fin d'un élément est ignoré pour la détermination de `:-moz-last-node`.

@@ -166,8 +166,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
-    > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
-    > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
+    > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur l'élément
+    > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
 
 - `axis` {{deprecated_inline}}
   - : Cet attribut contient une liste de chaînes de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.
@@ -178,13 +178,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `bgcolor` {{Non-standard_inline}}
   - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
 
-    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 
 - `char` {{deprecated_inline}}
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
     > [!NOTE]
-    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
 
 - `charoff` {{deprecated_inline}}
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère défini par l'attribut `char` à appliquer au contenu des cellules.
@@ -196,7 +196,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Cet attribut est utilisé afin de définir une hauteur recommandée pour la cellule.
 
     > [!NOTE]
-    > Cet attribut est désormais obsolète. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/height) à la place.
+    > Cet attribut est désormais obsolète. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/Reference/Properties/height) à la place.
 
 - `valign` {{Deprecated_inline}}
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles pour cet attribut sont&nbsp;:
@@ -210,13 +210,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
       - : Place le texte au plus haut de la cellule.
 
     > [!NOTE]
-    > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) doit être utilisée à la place.
 
 - `width` {{deprecated_inline}}
   - : Cet attribut est utilisé afin de définir une largeur de cellule recommandée. Un espace supplémentaire peut être ajouté via les propriétés [`cellspacing`](/fr/docs/Web/API/HTMLTableElement/cellSpacing) et [`cellpadding`](/fr/docs/Web/API/HTMLTableElement/cellPadding) et en modifiant la largeur de l'élément [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col). Si la largeur de la colonne est trop étroite pour afficher une cellule donnée correctement, elle sera élargie lors de l'affichage.
 
     > [!NOTE]
-    > Cet attribut est désormais obsolète et il faut donc éviter de l'utiliser. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/width) à la place.
+    > Cet attribut est désormais obsolète et il faut donc éviter de l'utiliser. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/Reference/Properties/width) à la place.
 
 ## Exemples
 

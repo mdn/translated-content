@@ -189,7 +189,7 @@ En utilisant du HTML sémantique, cela pourrait s'écrire ainsi&nbsp;:
 
 En utilisant {{HTMLElement('input')}}, on obtient un widget de saisie de plage déjà stylisé, avec sélection clavier, styles de sélection, interactions clavier et mise à jour automatique de la valeur lors de l'interaction utilisateur·ice. Il reste à utiliser du JavaScript pour modifier `aria-valuetext` et la valeur de l'élément {{HTMLElement('output')}}.
 
-Il existe plusieurs façons de rendre un champ de saisie de plage vertical. Dans cet exemple, nous avons utilisé les [transformations CSS](/fr/docs/Web/CSS/transform).
+Il existe plusieurs façons de rendre un champ de saisie de plage vertical. Dans cet exemple, nous avons utilisé les [transformations CSS](/fr/docs/Web/CSS/Reference/Properties/transform).
 
 ## Bonnes pratiques
 

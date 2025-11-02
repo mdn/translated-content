@@ -11,7 +11,7 @@ La fonction **`scaleY()`** modifie l'ordonnée de chaque sommet de l'élément a
 
 `scaleY(sy)` est une notation raccourcie équivalente à `scale(1, sy)` ou à `scale3d(1, sy, 1)`.
 
-`scaleY(-1)` définit une symétrie axiale selon un axe horizontal, passant par l'origine du repère (cette origine est définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
+`scaleY(-1)` définit une symétrie axiale selon un axe horizontal, passant par l'origine du repère (cette origine est définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)).
 
 ## Syntaxe
 
@@ -128,6 +128,6 @@ div {
 
 - [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
 - [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)
