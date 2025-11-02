@@ -1,13 +1,17 @@
 ---
-title: Array.prototype.findIndex()
+title: "Array : méthode findIndex()"
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`findIndex()`** des instances de {{JSxRef("Array")}} retourne l'indice du premier élément d'un tableau qui satisfait la fonction de test fournie.
+Si aucun élément ne satisfait la fonction de test, -1 est retourné.
 
-La méthode **`findIndex()`** renvoie l'**index** du **premier élément** du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1.
+Voir aussi la méthode {{JSxRef("Array/find", "find()")}}, qui retourne le premier élément qui satisfait la fonction de test (et non son indice).
 
-{{InteractiveExample("JavaScript Demo: Array.findIndex()")}}
+{{InteractiveExample("Démonstrations JavaScript&nbsp;: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];
@@ -15,134 +19,112 @@ const array1 = [5, 12, 8, 130, 44];
 const isLargeNumber = (element) => element > 13;
 
 console.log(array1.findIndex(isLargeNumber));
-// Expected output: 3
+// Résultat attendu : 3
 ```
-
-Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **valeur** (et non l'index) d'un des éléments trouvés.
 
 ## Syntaxe
 
-```js
-arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
+```js-nolint
+findIndex(callbackFn)
+findIndex(callbackFn, thisArg)
 ```
 
 ### Paramètres
 
-- `callback`
-  - : Une fonction à exécuter sur chaque valeur du tableau jusqu'à ce que celle-ci renvoie `true`. Cette fonction prend trois arguments :
-    - `élément`
-      - : L'élément du tableau qui doit être traité.
-    - `index`{{optional_inline}}
-      - : L'index de l'élément du tableau en cours de traitement.
-    - `tableau`{{optional_inline}}
-      - : Le tableau sur lequel a été appelé `findIndex`.
-
-- `argumentThis`{{optional_inline}}
-  - : L'objet à utiliser comme contexte `this` lorsque le `callback` est exécuté.
+- `callbackFn`
+  - : Une fonction à exécuter pour chaque élément du tableau. Elle doit retourner une valeur [vraie](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément correspondant a été trouvé, et une valeur [fausse](/fr/docs/Glossary/Falsy) sinon. La fonction est appelée avec les arguments suivants&nbsp;:
+    - `element`
+      - : L'élément actuellement traité dans le tableau.
+    - `index`
+      - : L'indice de l'élément actuellement traité dans le tableau.
+    - `array`
+      - : Le tableau sur lequel la méthode `findIndex()` a été appelée.
+- `thisArg` {{Optional_Inline}}
+  - : Une valeur à utiliser comme `this` lors de l'exécution de `callbackFn`. Voir [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives).
 
 ### Valeur de retour
 
-Un index d'un élément du tableau qui réussit le test décrit, -1 sinon.
+Un index d'un élément du tableau qui réussit le test décrit, `-1` sinon.
 
 ## Description
 
-La méthode `findIndex` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau (le tableau est parcouru entre les index `0` et `length-1` compris) jusqu'à ce que `callback` renvoie une valeur vraie.
+La méthode `findIndex()` est une [méthode itérative](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives). Elle appelle la fonction `callbackFn` fournie une fois pour chaque élément du tableau, dans l'ordre croissant des indices, jusqu'à ce que `callbackFn` retourne une [valeur vraie](/fr/docs/Glossary/Truthy). `findIndex()` retourne alors l'indice de cet élément et arrête l'itération. Si `callbackFn` ne retourne jamais de valeur vraie, `findIndex()` retourne `-1`. Consultez la section [méthodes itératives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_itératives) pour plus d'informations sur le fonctionnement général de ces méthodes.
 
-S'il existe un tel élément, `findIndex` renverra immédiatement l'index de l'élément concerné. Sinon, `findIndex` renverra -1. À la différence des autres méthodes liées aux tableaux comme `some()`, `callback` est également appelée pour les index du tableau pour lesquels aucun élément n'est défini.
+`callbackFn` est appelée pour chaque indice du tableau, pas seulement ceux qui ont une valeur assignée. Les cases vides dans les [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme si leur valeur était `undefined`.
 
-`callback` possède trois arguments : la valeur de l'élément, l'index de l'élément et l'objet Array qui est parcouru
-
-Si l'argument `argumentThis` est fourni à la méthode `findIndex`, il sera utilisé comme « contexte » [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour chaque appel de `callback`. S'il n'est pas fourni, {{jsxref("undefined")}} sera utilisé.
-
-`findIndex` ne modifie pas le tableau sur laquelle elle est appelée. Les éléments qui seront traités par `findIndex` sont « récoltés » avant le premier appel de `callback`. Tout élément qui sera ajouté au tableau après l'appel de `findIndex` ne sera pas utilisé avec `callback`. Si un élément existant, pas encore visité, est modifié par `callback`, la valeur qui sera passé au `callback` pour cet élément modifié sera celle que `findIndex` utilise lorsqu'elle utilise l'index de l'élément en question. Les éléments supprimés sont bien parcourus.
+La méthode `findIndex()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clé entière.
 
 ## Exemples
 
 ### Trouver l'index d'un nombre premier dans un tableau
 
-L'exemple qui suit illustre comment trouver l'index d'un élément qui est un nombre premier dans un tableau (ou qui renvoie -1 s'il n'y a pas de nombre premier).
+L'exemple suivant retourne l'indice du premier élément du tableau qui est un nombre premier, ou `-1` s'il n'y en a pas.
 
 ```js
-function estPremier(élément, index, array) {
-  var début = 2;
-  while (début <= Math.sqrt(élément)) {
-    if (élément % début < 1) {
+function estPremier(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let facteur = 3; facteur * facteur <= n; facteur += 2) {
+    if (n % facteur === 0) {
       return false;
-    } else {
-      début++;
     }
   }
-  return élément > 1;
+  return true;
 }
 
-console.log([4, 6, 8, 12].findIndex(estPremier)); // -1, aucun trouvé
-console.log([4, 6, 7, 12].findIndex(estPremier)); // 2
+console.log([4, 6, 8, 9, 12].findIndex(estPremier)); // -1, aucun trouvé
+console.log([4, 6, 7, 9, 12].findIndex(estPremier)); // 2 (array[2] vaut 7)
 ```
 
-### Trouver un index avec une fonction fléchée
+> [!NOTE]
+> L'implémentation de `estPremier()` est uniquement destinée à la démonstration. Pour une utilisation réelle, il est préférable d'utiliser un algorithme fortement mémoïsé, comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne), afin d'éviter des calculs répétés.
 
-Dans cet exemple, on utilise [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) pour trouver l'index d'un élément :
+### Utiliser le troisième argument de `callbackFn`
 
-```js
-const fruits = ["pomme", "banane", "melon", "fraise", "raisin"];
-
-const index = fruits.findIndex((fruit) => fruit === "fraise");
-console.log(index); // 3
-console.log(fruits[index]); // fraise
-```
-
-## Prothèse d'émulation (_polyfill_)
+L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives, puis `findIndex()` pour trouver le premier élément qui est inférieur à ses voisins.
 
 ```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.findindex
-if (!Array.prototype.findIndex) {
-  Object.defineProperty(Array.prototype, "findIndex", {
-    value: function (predicate) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
-
-      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== "function") {
-        throw new TypeError("predicate must be a function");
-      }
-
-      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
-      var thisArg = arguments[1];
-
-      // 5. Let k be 0.
-      var k = 0;
-
-      // 6. Repeat, while k < len
-      while (k < len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kValue be ? Get(O, Pk).
-        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
-        // d. If testResult is true, return k.
-        var kValue = o[k];
-        if (predicate.call(thisArg, kValue, k, o)) {
-          return k;
-        }
-        // e. Increase k by 1.
-        k++;
-      }
-
-      // 7. Return -1.
-      return -1;
-    },
-    configurable: true,
-    writable: true,
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const premierCreux = numbers
+  .filter((num) => num > 0)
+  .findIndex((num, idx, arr) => {
+    // Sans l'argument arr, il n'y a aucun moyen simple d'accéder
+    // au tableau intermédiaire sans le stocker dans une variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
   });
-}
+console.log(premierCreux); // 1
 ```
 
-S'il est vraiment nécessaire de prendre en charge les moteurs JavaScript qui ne prennent pas en charge {{jsxref("Object.defineProperty()")}}, mieux vaut ne pas ajouter de prothèse aux méthodes d'`Array.prototype` car on ne peut pas les rendre non-énumérables.
+### Utiliser `findIndex()` sur des tableaux creux
+
+Vous pouvez rechercher `undefined` dans un tableau creux et obtenir l'indice d'une case vide.
+
+```js
+console.log([1, , 3].findIndex((x) => x === undefined)); // 1
+```
+
+### Appeler `findIndex()` sur des objets qui ne sont pas des tableaux
+
+La méthode `findIndex()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
+
+```js
+const arrayLike = {
+  length: 3,
+  "-1": 0.1, // ignoré par findIndex() car -1 < 0
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+); // 1
+```
 
 ## Spécifications
 
@@ -154,5 +136,13 @@ S'il est vraiment nécessaire de prendre en charge les moteurs JavaScript qui ne
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.find()")}}
+- La méthode {{JSxRef("Array.prototype.findLast()")}}
+- La méthode {{JSxRef("Array.prototype.findLastIndex()")}}
+- La méthode {{JSxRef("Array.prototype.indexOf()")}}
+- La méthode {{JSxRef("Array.prototype.lastIndexOf()")}}
+- La méthode {{JSxRef("TypedArray.prototype.findIndex()")}}
+- [Prothèse d'émulation core-js pour `Array.prototype.findIndex` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims pour `Array.prototype.findIndex` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.findindex)
