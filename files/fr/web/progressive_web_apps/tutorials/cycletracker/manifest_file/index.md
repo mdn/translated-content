@@ -76,7 +76,7 @@ Il existe également un champ [`orientation`](/fr/docs/Web/Manifest/orientation)
 - [`theme_color`](/fr/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : [La couleur par défaut des éléments d'interface du système d'exploitation ou du navigateur](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) comme la barre d'état sur certains mobiles et la barre du titre d'application sur les systèmes d'exploitation de bureau.
 - [`background_color`](/fr/docs/Web/Manifest/background_color)
-  - : Une couleur de substitution qui peut être affichée [comme arrière-plan de l'application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) jusqu'à ce que le CSS soit chargé. Pour créer une transition fluide entre le lancement de l'application et la fin du chargement, mieux vaudra utiliser [la couleur](/fr/docs/Web/CSS/color_value) déclarée pour [l'arrière-plan (propriété CSS `background-color`)](/fr/docs/Web/CSS/background-color) de l'application.
+  - : Une couleur de substitution qui peut être affichée [comme arrière-plan de l'application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) jusqu'à ce que le CSS soit chargé. Pour créer une transition fluide entre le lancement de l'application et la fin du chargement, mieux vaudra utiliser [la couleur](/fr/docs/Web/CSS/color_value) déclarée pour [l'arrière-plan (propriété CSS `background-color`)](/fr/docs/Web/CSS/Reference/Properties/background-color) de l'application.
 
 ### Tâche
 

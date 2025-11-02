@@ -64,5 +64,5 @@ l10n:
 
 ## 参见
 
-- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)
 - [Apple 开发者文档中的 -webkit-touch-callout](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

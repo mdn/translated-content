@@ -89,7 +89,7 @@ Cet exemple montre le mélange de deux couleurs, le rouge `#a71e14` à différen
 
 #### CSS
 
-La fonction `color-mix()` est utilisée pour ajouter des pourcentages croissants de `red`, déclaré à l'aide d'une [propriété personnalisée](/fr/docs/Web/CSS/--*) nommée `--base`, définie sur la racine CSS {{cssxref(":root")}}. Le 6<sup>e</sup> élément HTML {{htmlelement("li")}} n'inclut pas de pourcentage, ce qui crée une couleur de sortie deux fois moins opaque que la couleur `--base`. Un fond à rayures est appliqué au {{htmlelement("ul")}} pour rendre la transparence visible.
+La fonction `color-mix()` est utilisée pour ajouter des pourcentages croissants de `red`, déclaré à l'aide d'une [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) nommée `--base`, définie sur la racine CSS {{cssxref(":root")}}. Le 6<sup>e</sup> élément HTML {{htmlelement("li")}} n'inclut pas de pourcentage, ce qui crée une couleur de sortie deux fois moins opaque que la couleur `--base`. Un fond à rayures est appliqué au {{htmlelement("ul")}} pour rendre la transparence visible.
 
 ```css hidden
 ul {
@@ -204,7 +204,7 @@ Pour plus d'informations, voir {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
 La méthode d'interpolation `shorter hue` emprunte le chemin le plus court sur le cercle chromatique, tandis que la méthode `longer hue` suit le chemin le plus long. Avec `increasing hue`, le parcours commence par des valeurs croissantes. Avec `decreasing hue`, la valeur diminue. Nous mélangeons deux valeurs {{cssxref("named-color")}} pour créer une série de couleurs intermédiaires `lch()` qui diffèrent selon le chemin emprunté sur le cercle chromatique. Les couleurs mélangées incluent `red`, `blue` et `yellow` avec des valeurs de teinte LCH d'environ 41deg, 301deg et 100deg respectivement.
 
-Pour éviter la redondance du code, nous avons utilisé des [propriétés personnalisées CSS](/fr/docs/Web/CSS/--*) pour les deux couleurs et pour la méthode d'interpolation, en définissant des valeurs différentes sur chaque élément HTML {{htmlelement("ul")}}.
+Pour éviter la redondance du code, nous avons utilisé des [propriétés personnalisées CSS](/fr/docs/Web/CSS/Reference/Properties/--*) pour les deux couleurs et pour la méthode d'interpolation, en définissant des valeurs différentes sur chaque élément HTML {{htmlelement("ul")}}.
 
 ```css hidden
 body {

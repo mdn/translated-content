@@ -241,5 +241,5 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 - [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - 在 JavaScript 中，可以通过 CSS 对象模型接口 {{domxref("CSSMediaRule")}} 访问 `@media`。
-- [扩展的 Mozilla 媒体特性](/zh-CN/docs/Web/CSS/Mozilla_Extensions#媒体特性)
-- [扩展的 WebKit 媒体特性](/zh-CN/docs/Web/CSS/WebKit_Extensions#媒体特性)
+- [扩展的 Mozilla 媒体特性](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions#媒体特性)
+- [扩展的 WebKit 媒体特性](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions#媒体特性)

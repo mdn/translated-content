@@ -50,10 +50,10 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 
 ### CSS
 
-- La propriété [`font-stretch`](/fr/docs/Web/CSS/font-stretch) est à présent supportée.
-- La propriété [`columns`](/fr/docs/Web/CSS/columns) est à présent supportée, avec le préfixe `-moz`. C'est un raccourci des propriétés suivantes : [`column-width`](/fr/docs/Web/CSS/column-width) et [`column-count`](/fr/docs/Web/CSS/column-count).
+- La propriété [`font-stretch`](/fr/docs/Web/CSS/Reference/Properties/font-stretch) est à présent supportée.
+- La propriété [`columns`](/fr/docs/Web/CSS/Reference/Properties/columns) est à présent supportée, avec le préfixe `-moz`. C'est un raccourci des propriétés suivantes : [`column-width`](/fr/docs/Web/CSS/Reference/Properties/column-width) et [`column-count`](/fr/docs/Web/CSS/Reference/Properties/column-count).
 - Quand une feuille de style incluse à l'aide de l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) a été entièrement chargée et analysée (mais pas encore appliquée au document), l'[`load` event](/fr/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) est désormais déclenché. En outre, si une erreur survient durant le traitement d'une feuille de style, l'événement `error` est déclenché.
-- Vous pouvez à présent spécifier les paramètres de débordement pour les bords, à la fois à gauche et à droite, du contenu en utilisant une nouvelle syntaxe de deux valeurs pour [`text-overflow`](/fr/docs/Web/CSS/text-overflow).
+- Vous pouvez à présent spécifier les paramètres de débordement pour les bords, à la fois à gauche et à droite, du contenu en utilisant une nouvelle syntaxe de deux valeurs pour [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow).
 
 ### DOM
 

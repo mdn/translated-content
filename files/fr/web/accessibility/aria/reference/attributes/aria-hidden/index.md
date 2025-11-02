@@ -40,8 +40,8 @@ En apparence, `aria-hidden="true"` et les rôles `presentation` et son synonyme 
 `aria-hidden="true"` ne doit pas être ajouté lorsque&nbsp;:
 
 - L'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden) est présent
-- L'élément ou son ancêtre est masqué avec [`display: none`](/fr/docs/Web/CSS/display)
-- L'élément ou son ancêtre est masqué avec [`visibility: hidden`](/fr/docs/Web/CSS/visibility)
+- L'élément ou son ancêtre est masqué avec [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display)
+- L'élément ou son ancêtre est masqué avec [`visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/visibility)
 
 Dans ces trois scénarios, l'attribut est inutile car l'élément a déjà été retiré de l'arbre d'accessibilité. Masquer visuellement les éléments avec `display` ou `visibility` masque le contenu à l'écran et aux technologies d'assistance.
 

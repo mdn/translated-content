@@ -21,7 +21,7 @@ Les autres valeurs de palette qui suivent ne s'appliquent qu'à la famille de po
 ### Valeurs
 
 - `<family-name>`
-  - : Définit le nom de la [famille de police](/fr/docs/Web/CSS/font-family).
+  - : Définit le nom de la [famille de police](/fr/docs/Web/CSS/Reference/Properties/font-family).
 
 ## Définition formelle
 

@@ -211,7 +211,7 @@ Avec les GIFs animés, assurez-vous que l'animation est inactive jusqu'à ce que
 
 Comme pour les GIFs animés, l'utilisateur·ice doit appuyer sur un bouton ou cocher une case pour démarrer l'animation. Il existe de nombreuses façons de procéder, comme NE PAS ajouter l'attribut [`autoplay`](/fr/docs/Web/API/HTMLMediaElement/autoplay) à `<video controls>`, ou définir {{CSSxRef('animation-play-state')}} sur `paused` comme état initial. Pour voir un exemple puissant de la façon dont cela fonctionne, consultez l'article de Kirupa&nbsp;: [«&nbsp;Activer ou désactiver les animations&nbsp;» <sup>(angl.)</sup>](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa utilise `animation-play-state` en combinaison avec {{CSSxRef('transition')}}, {{CSSxRef('transform')}} et [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour créer une expérience très accessible sous le contrôle de l'utilisateur·ice.
 
-[`animation-play-state`](/fr/docs/Web/CSS/animation-play-state) est une propriété CSS qui définit si une animation est en cours ou en pause.
+[`animation-play-state`](/fr/docs/Web/CSS/Reference/Properties/animation-play-state) est une propriété CSS qui définit si une animation est en cours ou en pause.
 
 ```css
 div {

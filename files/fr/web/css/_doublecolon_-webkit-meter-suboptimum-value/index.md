@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-suboptimum-value`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui donne une couleur jaune à l'élément {{HTMLElement("meter")}} lorsque la valeur de l'attribut est en dehors de l'intervalle haut des valeurs.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-suboptimum-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui donne une couleur jaune à l'élément {{HTMLElement("meter")}} lorsque la valeur de l'attribut est en dehors de l'intervalle haut des valeurs.
 
 Jaune est la couleur par défaut.
 
