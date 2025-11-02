@@ -193,7 +193,7 @@ Utilisez uniquement {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLEl
 </table>
 ```
 
-Ci-dessus, la façon sémantique d'écrire un tableau. Les rôles ARIA ne sont nécessaires que si la sémantique native du tableau, et donc des lignes, est supprimée, par exemple via la propriété [display: flex ou grid](/fr/docs/Web/CSS/display#accessibilité).
+Ci-dessus, la façon sémantique d'écrire un tableau. Les rôles ARIA ne sont nécessaires que si la sémantique native du tableau, et donc des lignes, est supprimée, par exemple via la propriété [display: flex ou grid](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité).
 
 ### Bénéfices supplémentaires
 

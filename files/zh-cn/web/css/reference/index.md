@@ -155,8 +155,8 @@ div.menu-bar li:hover > ul {
 
 ## 参见
 
-- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)（以 `-moz` 前缀）
-- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)（大多数时候以 `-webkit` 前缀）
+- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)（以 `-moz` 前缀）
+- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)（大多数时候以 `-webkit` 前缀）
 - [Microsoft CSS 扩展](/zh-CN/docs/Web/CSS/Microsoft_CSS_extensions)（以 `-ms` 前缀）
 
 ## 外部链接

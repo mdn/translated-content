@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-color-swatch`** est [une extension de Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-color-swatch`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
 
 > [!NOTE]
 > Utiliser `::-moz-color-swatch` sur tout autre élément qu'un `<input type="color">` n'aura aucun effet.

@@ -71,6 +71,6 @@ window.requestAnimationFrame =
 
 ## 参见
 
-- [`-moz-` 浏览器引擎前缀 CSS 拓展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
-- [`-webkit-` 浏览器引擎前缀 CSS 拓展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [`-moz-` 浏览器引擎前缀 CSS 拓展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)
+- [`-webkit-` 浏览器引擎前缀 CSS 拓展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)
 - 维基百科[浏览器引擎前缀](https://zh.wikipedia.org/wiki/CSS濾器#前缀_滤镜)

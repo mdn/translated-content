@@ -30,7 +30,7 @@ Avant de commencer ce module, vous devriez déjà :
 Ces articles fourniront des instructions sur les outils et techniques de mise en page fondamentaux disponibles dans CSS. À la fin des leçons, un exercice vous permettra de vérifier la compréhension des méthodes de mise en page en créant votre propre page web.
 
 - [Introduction à la mise en page en CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
-  - : Cet article récapitule quelques-unes des fonctionnalités de mise en page CSS que nous avons déjà abordées dans les modules précédents — telles que les diverses valeurs de [`display`](/fr/docs/Web/CSS/display) — et présente certains des concepts que nous couvrirons dans de ce module.
+  - : Cet article récapitule quelques-unes des fonctionnalités de mise en page CSS que nous avons déjà abordées dans les modules précédents — telles que les diverses valeurs de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) — et présente certains des concepts que nous couvrirons dans de ce module.
 - [Flux normal des éléments](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : Les éléments se placent d'eux‑même sur les pages web selon un _flux normal_ sauf à ce que nous modifions la disposition avec CSS. Cet article explique les fondamentaux du flux normal pour permettre de comprendre comment le modifier.
 - [Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox)
@@ -38,9 +38,9 @@ Ces articles fourniront des instructions sur les outils et techniques de mise en
 - [Grilles](/fr/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : Les grilles CSS permettent de composer un document avec une mise en page bidimensionnelle. Elles permettent de disposer le contenu en lignes et en colonnes, et possèdent de nombreuses fonctionnalités qui simplifient la construction de mises en page complexes. Cet article vous fournira l'ensemble des informations pour commencer avec la mise en page via les grilles CSS.
 - [Le flottement](/fr/docs/Learn_web_development/Core/CSS_layout/Floats)
-  - : À l'origine destinée aux images flottantes à l'intérieur de blocs de texte, la propriété [`float`](/fr/docs/Web/CSS/float) fut pendant un moment l'un des outils les plus utilisés pour créer des mises en page sur plusieurs colonnes sur des pages web. Avec l'avènement de flexbox et des grilles, cette propriété retrouve son usage initial. Nous verrons ce qu'il en est dans cet article.
+  - : À l'origine destinée aux images flottantes à l'intérieur de blocs de texte, la propriété [`float`](/fr/docs/Web/CSS/Reference/Properties/float) fut pendant un moment l'un des outils les plus utilisés pour créer des mises en page sur plusieurs colonnes sur des pages web. Avec l'avènement de flexbox et des grilles, cette propriété retrouve son usage initial. Nous verrons ce qu'il en est dans cet article.
 - [Le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)
-  - : Le positionnement vous permet d'extraire des éléments du flux de mise en page normal du document et de les faire se comporter différemment, par exemple en se mettant l'un sur l'autre ou en les positionnant toujours au même endroit dans la fenêtre du navigateur. Cet article indique les différentes valeurs pour la propriété CSS [`position`](/fr/docs/Web/CSS/position) et comment les utiliser.
+  - : Le positionnement vous permet d'extraire des éléments du flux de mise en page normal du document et de les faire se comporter différemment, par exemple en se mettant l'un sur l'autre ou en les positionnant toujours au même endroit dans la fenêtre du navigateur. Cet article indique les différentes valeurs pour la propriété CSS [`position`](/fr/docs/Web/CSS/Reference/Properties/position) et comment les utiliser.
 - [Disposition en colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : Ce type de disposition permet d'organiser le contenu en colonnes, comme dans un journal papier. Cet article explique comment utiliser cette fonctionnalité.
 - [_Responsive design_](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

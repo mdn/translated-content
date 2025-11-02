@@ -5,7 +5,7 @@ slug: Web/CSS/-moz-image-rect
 
 {{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une image pour un arrière-plan (contrairement à [`background-image`](/fr/docs/Web/CSS/background-image)). On peut ainsi utiliser une image qui regroupe plusieurs _sprites_ à différentes fins, ce qui permet de diminuer le nombre de transfert réseau.
+La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une image pour un arrière-plan (contrairement à [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)). On peut ainsi utiliser une image qui regroupe plusieurs _sprites_ à différentes fins, ce qui permet de diminuer le nombre de transfert réseau.
 
 ## Syntaxe
 
@@ -28,7 +28,7 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 
 ## Description
 
-Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/Web/CSS/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
+Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/Web/CSS/Reference/Properties/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
 
 La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/shape#syntaxe) qui génère une valeur de type [`<shape>`](/fr/docs/Web/CSS/shape). Les quatre valeurs indiquées font chacune référence au coin supérieur gauche de l'image.
 
@@ -113,7 +113,7 @@ function rotate() {
 }
 ```
 
-Dans ce script, on utilise la méthode [`window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle) afin de récupérer le style de chaque élément et on le décale à l'élément suivant. On notera qu'avant de commencer ce «&nbsp;défilement&nbsp;», on sauvegarde une version du style de la dernière boîte. En copiant simplement les valeurs de [`background-image`](/fr/docs/Web/CSS/background-image) d'un élément à l'autre lors du clic, on obtient l'effet souhaité.
+Dans ce script, on utilise la méthode [`window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle) afin de récupérer le style de chaque élément et on le décale à l'élément suivant. On notera qu'avant de commencer ce «&nbsp;défilement&nbsp;», on sauvegarde une version du style de la dernière boîte. En copiant simplement les valeurs de [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) d'un élément à l'autre lors du clic, on obtient l'effet souhaité.
 
 ### Résultat
 
@@ -129,5 +129,5 @@ Cette fonction ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Les extensions spécifiques à Mozilla pour CSS extensions](/fr/docs/Web/CSS/Mozilla_Extensions)
+- [Les extensions spécifiques à Mozilla pour CSS extensions](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - [Le module de spécification CSS sur les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)

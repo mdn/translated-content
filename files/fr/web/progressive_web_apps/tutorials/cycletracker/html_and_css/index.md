@@ -84,7 +84,7 @@ La balise racine [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) englobe t
 
 L'élément [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) contient des informations à propos de l'application web, interprétables par une machine et qui ne sont pas visibles à l'exception de [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title) qui affiche le titre de la page dans l'onglet du navigateur.
 
-`<head>` contient toutes les [métadonnées](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Guides/Viewport_meta_element) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
+`<head>` contient toutes les [métadonnées](/fr/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Reference/Elements/meta/name/viewport) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Reference/Elements/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
 
 ```html
 <head>
@@ -246,7 +246,7 @@ Si vous comprenez chacune de ces lignes, n'hésitez pas à copier les règles pr
 
 ### Explications du CSS
 
-On utilise la propriété [`background-color`](/fr/docs/Web/CSS/background-color) pour créer un arrière-plan vert clair (`#efe`) sur le corps du document (`body`). Pour la liste non-ordonnée, l'ensemble des champs et la légende, on utilise un arrière-plan blanc (`#fff`) et une fine bordure grâce à la propriété [`border`](/fr/docs/Web/CSS/border). On surcharge la valeur de `background-color` pour la légende et les éléments de la liste en utilisant un vert plus foncé (`#cfc`).
+On utilise la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) pour créer un arrière-plan vert clair (`#efe`) sur le corps du document (`body`). Pour la liste non-ordonnée, l'ensemble des champs et la légende, on utilise un arrière-plan blanc (`#fff`) et une fine bordure grâce à la propriété [`border`](/fr/docs/Web/CSS/Reference/Properties/border). On surcharge la valeur de `background-color` pour la légende et les éléments de la liste en utilisant un vert plus foncé (`#cfc`).
 
 On utilise [le sélecteur](/fr/docs/Web/CSS/CSS_selectors) de pseudo-classe [`:nth-of-type(even)`](/fr/docs/Web/CSS/:nth-of-type) pour cibler chaque élément pair de la liste et lui affecter [`inherit`](/fr/docs/Web/CSS/inherit) pour qu'il ait la couleur d'arrière-plan de son parent. Ici, cela signifie que les éléments pairs de la liste auront un arrière-plan blanc (`#fff`), comme celui de la liste.
 
@@ -269,7 +269,7 @@ li:nth-of-type(even) {
 }
 ```
 
-Pour que la liste et ses éléments non-ordonnés ne ressemblent pas à une liste, on retire le remplissage (<i lang="en">padding</i>) en indiquant [`padding: 0`](/fr/docs/Web/CSS/padding) sur l'élément `ul`, puis on retire les puces avec [`list-style-type: none`](/fr/docs/Web/CSS/list-style-type).
+Pour que la liste et ses éléments non-ordonnés ne ressemblent pas à une liste, on retire le remplissage (<i lang="en">padding</i>) en indiquant [`padding: 0`](/fr/docs/Web/CSS/Reference/Properties/padding) sur l'élément `ul`, puis on retire les puces avec [`list-style-type: none`](/fr/docs/Web/CSS/Reference/Properties/list-style-type).
 
 ```css
 ul {
@@ -280,7 +280,7 @@ li {
 }
 ```
 
-On ajoute un peu d'espace en fixant la marge ([`margin`](/fr/docs/Web/CSS/margin)) du corps en utilisant [les unités relatives à la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/CSS/length#longueurs_liées_au_viewport) `vw` et `vh`. Ainsi, l'espace laissé autour de l'application sera proportionnel à la taille de la zone d'affichage. On ajoute également un peu de remplissage aux éléments `li` et `legend`. Enfin, pour améliorer l'alignement des données sur les cycles antérieurs, on applique [`font-family: monospace`](/fr/docs/Web/CSS/font-family) sur les éléments `ul` de la section des résultats. Avec une police à chasse fixe, chaque caractère aura ainsi la même largeur.
+On ajoute un peu d'espace en fixant la marge ([`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)) du corps en utilisant [les unités relatives à la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/CSS/length#longueurs_liées_au_viewport) `vw` et `vh`. Ainsi, l'espace laissé autour de l'application sera proportionnel à la taille de la zone d'affichage. On ajoute également un peu de remplissage aux éléments `li` et `legend`. Enfin, pour améliorer l'alignement des données sur les cycles antérieurs, on applique [`font-family: monospace`](/fr/docs/Web/CSS/Reference/Properties/font-family) sur les éléments `ul` de la section des résultats. Avec une police à chasse fixe, chaque caractère aura ainsi la même largeur.
 
 ```css
 body {

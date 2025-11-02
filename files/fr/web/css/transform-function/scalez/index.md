@@ -97,7 +97,7 @@ transform: scaleZ(-1.4);
 
 `scaleZ(sz)` est une notation raccourcie équivalente à `scale3d(1, 1, sz)`.
 
-`scaleZ(-1)` définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
+`scaleZ(-1)` définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)).
 
 Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée afin de créer un espace en trois dimensions et `transform-style: preserve-3d` permet de positionner les éléments enfants dans cet espace 3D.
 
@@ -204,6 +204,6 @@ div {
 
 - [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
 - [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY)
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)

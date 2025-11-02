@@ -1,12 +1,15 @@
 ---
-title: PUT
+title: Méthode de requête PUT
+short-title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
 original_slug: Web/HTTP/Methods/PUT
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-La **méthode HTTP PUT** crée une nouvelle ressource ou remplace une représentation de la ressource ciblée par le contenu de la requête.
+La méthode HTTP **`PUT`** crée une nouvelle ressource ou remplace la représentation de la ressource cible par le {{Glossary("HTTP Content", "contenu")}} de la requête.
 
-La différence entre `PUT` et [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST) tient au fait que `PUT` est une méthode idempotente. Une requête PUT, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet _de bord_). À l'inverse, des requêtes POST successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.
+La différence entre `PUT` et {{HTTPMethod("POST")}} est que `PUT` est {{Glossary("idempotent", "idempotente")}}&nbsp;: l'appeler une fois ou plusieurs fois successivement ne change rien (il n'y a pas d'effets secondaires).
 
 <table class="properties">
   <tbody>
@@ -15,28 +18,24 @@ La différence entre `PUT` et [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST)
       <td>Oui</td>
     </tr>
     <tr>
-      <th scope="row">Une réponse de succès a un corps</th>
+      <th scope="row">La réponse de succès a un corps</th>
       <td>Non</td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/safe">Sûre</a></th>
+      <th scope="row">{{Glossary("Safe/HTTP", "Sûre")}}</th>
       <td>Non</td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/Idempotent">Idempotente</a>
-      </th>
+      <th scope="row">{{Glossary("Idempotent", "Idempotente")}}</th>
       <td>Oui</td>
     </tr>
     <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/cacheable">Peut être mise en cache</a>
-      </th>
+      <th scope="row">{{Glossary("Cacheable", "Mis en cache")}}</th>
       <td>Non</td>
     </tr>
     <tr>
       <th scope="row">
-        Autorisée dans les <a href="/fr/docs/Learn/Forms">formulaires HTML</a>
+        Autorisée dans <a href="/fr/docs/Learn_web_development/Extensions/Forms">les formulaires HTML</a>
       </th>
       <td>Non</td>
     </tr>
@@ -45,37 +44,44 @@ La différence entre `PUT` et [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST)
 
 ## Syntaxe
 
-```html
-PUT /new.html HTTP/1.1
+```http
+PUT <request-target>["?"<query>] HTTP/1.1
 ```
+
+- `<request-target>`
+  - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie dans l'en-tête {{HTTPHeader("Host")}}.
+    Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) dans les requêtes vers un serveur d'origine, et d'une URL absolue dans les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.exemple.fr/chemin/vers/fichier.html`).
+- `<query>` {{Optional_Inline}}
+  - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`.
+    Souvent utilisé pour transmettre des informations sous la forme de paires `clé=valeur`.
 
 ## Exemple
 
-### Requête
+### Création réussie d'une ressource
 
-```
-PUT /new.html HTTP/1.1
-Host: example.com
+La requête `PUT` suivante demande la création d'une ressource à l'adresse `exemple.fr/nouveau.html` avec le contenu `<p>Nouveau fichier</p>`&nbsp;:
+
+```http
+PUT /nouveau.html HTTP/1.1
+Host: exemple.fr
 Content-type: text/html
 Content-length: 16
 
 <p>Nouveau fichier</p>
 ```
 
-### Réponses
+Si la ressource cible **ne possède pas** de représentation courante et que la requête `PUT` en crée une avec succès, le serveur d'origine doit envoyer une réponse {{HTTPStatus("201", "201 Created")}}&nbsp;:
 
-Si la ressource ciblée ne possède pas de représentation courante et que la requête `PUT` en crée une avec succès, alors le serveur d'origine doit informer l'agent utilisateur en envoyant une réponse [`201`](/fr/docs/Web/HTTP/Reference/Status/201) (`Created`).
-
-```
+```http
 HTTP/1.1 201 Created
-Content-Location: /new.html
+Content-Location: /nouveau.html
 ```
 
-Si la ressource ciblée a déjà une représentation et que cette représentation est modifiée avec succès, conformément à l'état de la représentation jointe, alors le serveur d'origine doit envoyer une réponse, que ce soit [`200`](/fr/docs/Web/HTTP/Reference/Status/200) (`OK`) ou [`204`](/fr/docs/Web/HTTP/Reference/Status/204) (`No Content`), pour indiquer la réussite de la requête.
+Si la ressource cible **possède déjà** une représentation et que celle-ci est modifiée avec succès selon l'état transmis dans la requête, le serveur d'origine doit envoyer soit une réponse {{HTTPStatus("200", "200 OK")}}, soit une réponse {{HTTPStatus("204", "204 No Content")}} pour indiquer la réussite de la requête&nbsp;:
 
-```
+```http
 HTTP/1.1 204 No Content
-Content-Location: /existing.html
+Content-Location: /existant.html
 ```
 
 ## Spécifications
@@ -84,9 +90,12 @@ Content-Location: /existing.html
 
 ## Compatibilité des navigateurs
 
-{{Compat}}
+Le navigateur n'utilise pas la méthode `PUT` pour les actions initiées par l'utilisateur·ice, donc la «&nbsp;compatibilité navigateur&nbsp;» ne s'applique pas.
+Les développeur·euse·s peuvent définir cette méthode de requête avec {{DOMxRef("Window.fetch", "fetch()")}}.
 
 ## Voir aussi
 
-- [`201`](/fr/docs/Web/HTTP/Reference/Status/201)
-- [`204`](/fr/docs/Web/HTTP/Reference/Status/204)
+- [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
+- [Codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+- Les statuts de réponse {{HTTPStatus("201", "201 Created")}}, {{HTTPStatus("204", "204 No Content")}}

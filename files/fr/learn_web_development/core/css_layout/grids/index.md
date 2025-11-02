@@ -51,7 +51,7 @@ La vidéo suivante fournit une belle explication visuelle de l'utilisation de «
 
 Pour débuter, téléchargez et ouvrez [le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) dans l'éditeur de texte et dans le navigateur (vous pouvez également le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). Vous y verrez un exemple constitué d'un conteneur avec quelques enfants. Par défaut, ils sont présentés suivant le cours normal&nbsp;: les boîtes s'affichent donc accolées les unes au-dessous des autres. Nous travaillerons avec ce fichier dans la première partie de la leçon&nbsp;; nous y introduirons des changements et observerons les modifications induites dans le comportement du maillage.
 
-Pour définir un tramage, on affecte la valeur `grid` à la propriété [`display`](/fr/docs/Web/CSS/display). De la même manière qu'avec Flexbox, nous basculons ainsi en disposition en quadrillage&nbsp;; tous les enfants directs du conteneur deviennent des éléments de la maille. Ajoutez ceci à la CSS du fichier&nbsp;:
+Pour définir un tramage, on affecte la valeur `grid` à la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display). De la même manière qu'avec Flexbox, nous basculons ainsi en disposition en quadrillage&nbsp;; tous les enfants directs du conteneur deviennent des éléments de la maille. Ajoutez ceci à la CSS du fichier&nbsp;:
 
 ```css
 .container {
@@ -172,7 +172,7 @@ body {
 
 ### Espaces entre pistes
 
-Pour créer des «&nbsp;gouttières&nbsp;» entre chaînes et trames, nous nous servons des propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`row-gap`](/fr/docs/Web/CSS/row-gap) pour, respectivement, les espacements entre colonnes et entre lignes&nbsp;; la propriété [`gap`](/fr/docs/Web/CSS/gap) définit les deux d'un coup.
+Pour créer des «&nbsp;gouttières&nbsp;» entre chaînes et trames, nous nous servons des propriétés [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) et [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap) pour, respectivement, les espacements entre colonnes et entre lignes&nbsp;; la propriété [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap) définit les deux d'un coup.
 
 ```css
 .container {
@@ -247,7 +247,7 @@ Nous obtenons trois chaînes de `1fr` de large, comme précédemment. La premiè
 
 Nous n'avons jusqu'à présent défini que des chaînes en colonnes, mais on peut aussi les créer en lignes pour recevoir les contenus. C'est un exemple de trame explicite (la chaîne) vs implicite (la trame). La chaîne explicite est celle créée avec `grid-template-columns` ou `grid-template-rows`. La trame implicite est créée lorsque l'on met du contenu dans ce quadrillage — comme dans les rangées de nos exemples. La chaîne explicite et la trame implicite sont analogues aux axes principal et croisé de Flexbox.
 
-Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns). Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que les rangées créées ont maintenant 100 pixels de haut.
+Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns). Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que les rangées créées ont maintenant 100 pixels de haut.
 
 ```css hidden
 body {
@@ -364,15 +364,15 @@ Nous passons maintenant de la création du quadrillage à la mise en place des c
 
 Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes&nbsp;:
 
-- [`grid-column-start`](/fr/docs/Web/CSS/grid-column-start)
-- [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end)
-- [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start)
-- [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end)
+- [`grid-column-start`](/fr/docs/Web/CSS/Reference/Properties/grid-column-start)
+- [`grid-column-end`](/fr/docs/Web/CSS/Reference/Properties/grid-column-end)
+- [`grid-row-start`](/fr/docs/Web/CSS/Reference/Properties/grid-row-start)
+- [`grid-row-end`](/fr/docs/Web/CSS/Reference/Properties/grid-row-end)
 
 Ces propriétés acceptent toutes un numéro de ligne comme valeur. Vous pouvez également utiliser les formes abrégées de ces propriétés&nbsp;:
 
-- [`grid-column`](/fr/docs/Web/CSS/grid-column)
-- [`grid-row`](/fr/docs/Web/CSS/grid-row)
+- [`grid-column`](/fr/docs/Web/CSS/Reference/Properties/grid-column)
+- [`grid-row`](/fr/docs/Web/CSS/Reference/Properties/grid-row)
 
 Cela vous permet de définir les rangées de départ et de fin simultanément, en les séparant avec une barre oblique `/`.
 
@@ -496,7 +496,7 @@ aside {
 
 ## Placer avec grid-template-areas
 
-Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) en donnant un nom au divers éléments du design.
+Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-template-areas) en donnant un nom au divers éléments du design.
 
 Supprimez le placement sur les lignes du dernier exemple (ou bien rechargez le fichier pour avoir un nouveau point de départ) et ajoutez ceci à la CSS.
 

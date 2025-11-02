@@ -13,22 +13,22 @@ Dans l'exemple précédent, [Ajout de z-index](/fr/docs/Web/CSS/CSS_positioned_l
 Un contexte d'empilement est formé dans le document par n'importe quel élément qui répond à l'un de ces critères&nbsp;:
 
 - L'élément racine du document (HTML)
-- Un élément pour lequel [`position`](/fr/docs/Web/CSS/position) vaut `absolute` ou `relative` et pour lequel [`z-index`](/fr/docs/Web/CSS/z-index) est différente de `auto`
-- Un élément pour lequel [`position`](/fr/docs/Web/CSS/position) vaut `fixed` ou `sticky` (`sticky` s'applique pour les navigateurs sur mobile mais pas aux anciens navigateurs de bureau)
-- Un élément qui est le fils d'un conteneur flexible ([`flexbox`](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)) pour lequel [`z-index`](/fr/docs/Web/CSS/z-index) est différente de `auto`
-- Un élément qui est le fils d'un conteneur en grille ([`grid`](/fr/docs/Web/CSS/grid)) pour lequel [`z-index`](/fr/docs/Web/CSS/z-index) est différente de `auto`
-- Un élément pour lequel [`opacity`](/fr/docs/Web/CSS/opacity) est inférieure à 1 (cf. [la spécification](https://www.w3.org/TR/css3-color/#transparency))
-- Un élément pour lequel [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode) est différente de `normal`
+- Un élément pour lequel [`position`](/fr/docs/Web/CSS/Reference/Properties/position) vaut `absolute` ou `relative` et pour lequel [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) est différente de `auto`
+- Un élément pour lequel [`position`](/fr/docs/Web/CSS/Reference/Properties/position) vaut `fixed` ou `sticky` (`sticky` s'applique pour les navigateurs sur mobile mais pas aux anciens navigateurs de bureau)
+- Un élément qui est le fils d'un conteneur flexible ([`flexbox`](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)) pour lequel [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) est différente de `auto`
+- Un élément qui est le fils d'un conteneur en grille ([`grid`](/fr/docs/Web/CSS/Reference/Properties/grid)) pour lequel [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) est différente de `auto`
+- Un élément pour lequel [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity) est inférieure à 1 (cf. [la spécification](https://www.w3.org/TR/css3-color/#transparency))
+- Un élément pour lequel [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode) est différente de `normal`
 - Un élément pour lequel n'importe laquelle de ces propriétés est différente de `none` :
-  - [`transform`](/fr/docs/Web/CSS/transform)
-  - [`filter`](/fr/docs/Web/CSS/filter)
-  - [`perspective`](/fr/docs/Web/CSS/perspective)
-  - [`clip-path`](/fr/docs/Web/CSS/clip-path)
-  - [`mask`](/fr/docs/Web/CSS/mask) / [`mask-image`](/fr/docs/Web/CSS/mask-image) / [`mask-border`](/fr/docs/Web/CSS/mask-border)
+  - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
+  - [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter)
+  - [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective)
+  - [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path)
+  - [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask) / [`mask-image`](/fr/docs/Web/CSS/Reference/Properties/mask-image) / [`mask-border`](/fr/docs/Web/CSS/Reference/Properties/mask-border)
 
-- Un élément pour lequel [`isolation`](/fr/docs/Web/CSS/isolation) vaut `isolate`
-- Un élément pour lequel la valeur de la propriété [`will-change`](/fr/docs/Web/CSS/will-change) concerne une propriété qui créerait un contexte d'empilement avec une valeur non-initiale (voir [ce billet en anglais](https://dev.opera.com/articles/css-will-change-property/)).
-- Un élément pour lequel la valeur de la propriété [`contain`](/fr/docs/Web/CSS/contain) est `layout`, `paint` ou une valeur composite contenant un de ces mots-clés (par exemple `contain: strict` ou `contain: content`).
+- Un élément pour lequel [`isolation`](/fr/docs/Web/CSS/Reference/Properties/isolation) vaut `isolate`
+- Un élément pour lequel la valeur de la propriété [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change) concerne une propriété qui créerait un contexte d'empilement avec une valeur non-initiale (voir [ce billet en anglais](https://dev.opera.com/articles/css-will-change-property/)).
+- Un élément pour lequel la valeur de la propriété [`contain`](/fr/docs/Web/CSS/Reference/Properties/contain) est `layout`, `paint` ou une valeur composite contenant un de ces mots-clés (par exemple `contain: strict` ou `contain: content`).
 
 Sans contexte d'empilement, les éléments enfants sont empilés selon les règles vues avant. Les valeurs des `z-index` pour les contextes d'empilement des éléments enfants ont uniquement un sens pour l'élément parent. Les contextes d'empilement sont traités de façon atomique, comme une seule unité, dans le contexte de l'élément parent.
 

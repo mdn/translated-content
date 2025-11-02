@@ -2,7 +2,7 @@
 title: :scope
 slug: Web/CSS/:scope
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
@@ -16,9 +16,9 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 
 Le ou les éléments auxquels correspond `:scope` dépendent du contexte dans lequel il est utilisé&nbsp;:
 
-- Lorsqu'il est utilisé au niveau racine d'une feuille de style, `:scope` équivaut à {{cssxref(":root")}}, qui, dans un document HTML standard, correspond à l'élément {{htmlelement("html")}}.
-- Lorsqu'il est utilisé à l'intérieur d'un bloc {{cssxref("@scope")}}, `:scope` correspond à la racine de la portée définie du bloc. Il permet d'appliquer des styles à la racine de la portée à partir du bloc `@scope` lui-même.
-- Lorsqu'il est utilisé dans un appel API DOM, tel que {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}} ou {{domxref("Element.closest()", "closest()")}} — `:scope` correspond à l'élément sur lequel la méthode a été appelée.
+- Lorsqu'il est utilisé au niveau racine d'une feuille de style, `:scope` équivaut à {{CSSxRef(":root")}}, qui, dans un document HTML standard, correspond à l'élément {{HTMLElement("html")}}.
+- Lorsqu'il est utilisé à l'intérieur d'un bloc {{CSSxRef("@scope")}}, `:scope` correspond à la racine de la portée définie du bloc. Il permet d'appliquer des styles à la racine de la portée à partir du bloc `@scope` lui-même.
+- Lorsqu'il est utilisé dans un appel API DOM, tel que {{DOMxRef("Element.querySelector", "querySelector()")}}, {{DOMxRef("Element.querySelectorAll", "querySelectorAll()")}}, {{DOMxRef("Element.matches", "matches()")}} ou {{DOMxRef("Element.closest()", "closest()")}} — `:scope` correspond à l'élément sur lequel la méthode a été appelée.
 
 ## Syntaxe
 
@@ -44,7 +44,7 @@ Cet exemple montre que `:scope` est équivalent à `:root` lorsqu'il est utilis�
 
 ### Utiliser `:scope` pour mettre en forme la racine de la portée dans un bloc `@scope`
 
-Dans cet exemple, nous utilisons deux blocs `@scope` séparés pour faire correspondre les liens à l'intérieur des éléments avec une classe `.light-scheme` et `.dark-scheme` respectivement. Notez comment `:scope` est utilisé pour sélectionner et fournir un style aux racines de portée elles-mêmes. Dans cet exemple, les racines de portée sont les éléments {{htmlelement("div")}} qui ont les classes appliquées.
+Dans cet exemple, nous utilisons deux blocs `@scope` séparés pour faire correspondre les liens à l'intérieur des éléments avec une classe `.light-scheme` et `.dark-scheme` respectivement. Notez comment `:scope` est utilisé pour sélectionner et fournir un style aux racines de portée elles-mêmes. Dans cet exemple, les racines de portée sont les éléments {{HTMLElement("div")}} qui ont les classes appliquées.
 
 #### HTML
 
@@ -103,7 +103,7 @@ div {
 
 ### Utiliser `:scope` dans JavaScript
 
-Cet exemple démontre l'utilisation de la pseudo-classe `:scope` dans JavaScript. Cela peut être utile si vous devez obtenir un descendant direct d'un {{domxref("Element")}} déjà récupéré.
+Cet exemple démontre l'utilisation de la pseudo-classe `:scope` dans JavaScript. Cela peut être utile si vous devez obtenir un descendant direct d'un {{DOMxRef("Element")}} déjà récupéré.
 
 #### HTML
 
@@ -150,9 +150,9 @@ La portée de `context` est l'élément avec l'attribut [`id`](/fr/docs/Web/HTML
 
 ## Voir aussi
 
-- La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@scope")}}
-- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":root")}}
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- {{domxref("Element.querySelector()")}} et {{domxref("Element.querySelectorAll()")}}
-- {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}
-- {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}
+- La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{CSSxRef("@scope")}}
+- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{CSSxRef(":root")}}
+- [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+- {{DOMxRef("Element.querySelector()")}} et {{DOMxRef("Element.querySelectorAll()")}}
+- {{DOMxRef("Document.querySelector()")}} et {{DOMxRef("Document.querySelectorAll()")}}
+- {{DOMxRef("DocumentFragment.querySelector()")}} et {{DOMxRef("DocumentFragment.querySelectorAll()")}}

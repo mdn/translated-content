@@ -3,8 +3,6 @@ title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
 
-{{JSRef}}
-
 **`Number.parseFloat()`** 静态方法解析参数并返回浮点数。如果无法从参数中解析出一个数字，则返回 {{jsxref("NaN")}}。
 
 {{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}

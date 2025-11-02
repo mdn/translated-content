@@ -69,7 +69,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 
 #### Autres changements HTML
 
-- L'élément [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS [`resize`](/fr/docs/Web/CSS/resize).
+- L'élément [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS [`resize`](/fr/docs/Web/CSS/Reference/Properties/resize).
 - `canvas.getContext` et `canvas.toDataURL` ne lancent plus d'exceptions lorsqu'ils sont appelés avec des arguments non reconnus.
 - L'élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) supporte maintenant la méthode spécifique à Mozilla, `mozGetAsFile()`, qui permet d'obtenir un fichier basé sur l'image d'un contenu canvas. Voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) pour les détails.
 - `canvas2dcontext.lineCap` et `canvas2dcontext.lineJoin` ne lancent plus d'exceptions lorsqu'ils sont réglés avec une valeur non reconnue.
@@ -89,7 +89,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - Groupement de sélecteurs
   - : Le support de [`:-moz-any`](/fr/docs/Web/CSS/:is) pour grouper les sélecteurs et factoriser des combinateurs.
 - Support subrectangle pour background-image
-  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/background-image).
+  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
 - Propriétés CSS tactile
   - : Le support des propriétés tactiles a été ajouté. Plus de détails plus tard.
 - [Utilisation arbitraires d'élements comme fond](/fr/docs/Web/CSS/element)
@@ -344,9 +344,9 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 
 #### Divers changements CSS
 
-- La propriété [`text-shadow`](/fr/docs/Web/CSS/text-shadow) plafonne désormais son rayon de flou à 300px, pour des raisons de bon sens et de performances.
-- La propriété [`overflow`](/fr/docs/Web/CSS/overflow) ne s'applique plus au groupe d'éléments de tableaux (`<thead>`, `<tbody>`, and `<tfoot>`).
-- La propriété [`-moz-appearance`](/fr/docs/Web/CSS/appearance) supporte désormais la valeur `-moz-win-borderless-glass`, qui s'applique à un élément Aero sans bordure.
+- La propriété [`text-shadow`](/fr/docs/Web/CSS/Reference/Properties/text-shadow) plafonne désormais son rayon de flou à 300px, pour des raisons de bon sens et de performances.
+- La propriété [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow) ne s'applique plus au groupe d'éléments de tableaux (`<thead>`, `<tbody>`, and `<tfoot>`).
+- La propriété [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) supporte désormais la valeur `-moz-win-borderless-glass`, qui s'applique à un élément Aero sans bordure.
 - La fonctionnalité de média [`-moz-device-pixel-ratio`](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) a été ajoutée, permettant l'utilisation de pixels de l'appareil par ratio de pixels CSS qui sera utilisé dans les [Media Queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 - La manipulation des [unités CSS](/fr/docs/Web/CSS/length) dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.
 
@@ -362,7 +362,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - [Animation SVG avec SMIL](/fr/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Les animations SVG avec SMIL sont désomais supportées.
 - Utilisation de SVG comme image ou arrière-plan CSS
-  - : Vous pouvez maintenant utilisez SVG avec l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), ainsi qu'avec CSS [`background-image`](/fr/docs/Web/CSS/background-image).
+  - : Vous pouvez maintenant utilisez SVG avec l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), ainsi qu'avec CSS [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
 - Attribut Media `buffered`
   - : L'attribut `buffered` sur les éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) and [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) est maintenant supporté, vous permettant de déterminer quel fichier multimédia a été tamponné. L'interface DOM [`TimeRanges`](/fr/docs/Web/API/TimeRanges) a été mise en place pour ce support.
 - Attribut Media `preload`
