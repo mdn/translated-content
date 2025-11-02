@@ -8,9 +8,9 @@ l10n:
 {{Non-standard_header}}{{Deprecated_Header}}
 
 > [!NOTE]
-> Tous les navigateurs prennent en charge la propriété [`animation`](/fr/docs/Web/CSS/animation#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-animation`. Aucun navigateur ne prend en charge `animation` sans préfixe comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/@supports).
+> Tous les navigateurs prennent en charge la propriété [`animation`](/fr/docs/Web/CSS/Reference/Properties/animation#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-animation`. Aucun navigateur ne prend en charge `animation` sans préfixe comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/@supports).
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-animation`** est une [extension WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui vaut `true` si les animations CSS {{cssxref("animation")}} préfixées sont prises en charge.
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-animation`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les animations CSS {{cssxref("animation")}} préfixées sont prises en charge.
 
 Apple propose [une description dans la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 

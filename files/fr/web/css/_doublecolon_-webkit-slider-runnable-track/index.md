@@ -7,7 +7,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-slider-runnable-track`** est une [extension de WebKit](/fr/docs/Web/CSS/WebKit_Extensions) qui représente la piste utilisée par un élément {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-slider-runnable-track`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui représente la piste utilisée par un élément {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}.
 
 ## Syntaxe
 

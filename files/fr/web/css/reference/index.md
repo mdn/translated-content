@@ -154,6 +154,6 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 
 ## Voir aussi
 
-- [Extensions spécifiques de Mozilla à CSS](/fr/docs/Web/CSS/Mozilla_Extensions) (préfixées avec `-moz-`)
-- [Extensions spécifiques de WebKit à CSS](/fr/docs/Web/CSS/WebKit_Extensions) (préfixées pour la plupart avec `-webkit-`)
+- [Extensions spécifiques de Mozilla à CSS](/fr/docs/Web/CSS/Reference/Mozilla_extensions) (préfixées avec `-moz-`)
+- [Extensions spécifiques de WebKit à CSS](/fr/docs/Web/CSS/Reference/Webkit_extensions) (préfixées pour la plupart avec `-webkit-`)
 - [Extensions spécifiques de Microsoft à CSS](/fr/docs/Web/CSS/Microsoft_Extensions) (préfixées pour la plupart avec `-ms-`)

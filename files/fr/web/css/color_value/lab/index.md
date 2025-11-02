@@ -413,7 +413,7 @@ div {
 
 Cet exemple met en forme trois éléments HTML {{HTMLElement("div")}} avec différentes couleurs d'arrière-plan. Celui du milieu reçoit la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircie et assombrie de cette `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/--*) `--base-color` est passée dans une fonction `lab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `lab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
 
 ```html hidden
 <div id="container">

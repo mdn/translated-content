@@ -11,7 +11,7 @@ La fonction **`scaleX()`** permet de modifier l'abscisse de chaque sommet de l'�
 
 `scaleX(sx)` est une notation raccourcie équivalente à `scale(sx, 1)` ou à `scale3d(sx, 1, 1)`.
 
-`scaleX(-1)` définit une symétrie axiale par rapport à un axe vertical passant par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
+`scaleX(-1)` définit une symétrie axiale par rapport à un axe vertical passant par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)).
 
 ## Syntaxe
 
@@ -159,6 +159,6 @@ div {
 
 - [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY)
 - [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)

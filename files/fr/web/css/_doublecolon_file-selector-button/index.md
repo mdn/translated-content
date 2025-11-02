@@ -141,6 +141,6 @@ input[type="file"]::file-selector-button:hover {
 
 ## Voir aussi
 
-- Les [extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)
+- Les [extensions CSS WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - L'[API d'entrées de fichiers et de répertoires](/fr/docs/Web/API/File_and_Directory_Entries_API)
 - [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file)

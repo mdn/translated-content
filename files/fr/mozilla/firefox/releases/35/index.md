@@ -48,12 +48,12 @@ Liens:
 
 ### CSS
 
-- La proprieté [`mask-type`](/fr/docs/Web/CSS/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
-- La propieté [`filter`](/fr/docs/Web/CSS/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
+- La proprieté [`mask-type`](/fr/docs/Web/CSS/Reference/Properties/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
+- La propieté [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
 - La fonction [`@font-face`](/fr/docs/Web/CSS/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
 - La notation fonctionnelle [`symbol()`](</fr/docs/Web/CSS/symbol()>) est maintenant supportée([bug 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168)).
 - L'API CSS Font Loading a été implémentée ([bug 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497)).
-- En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).
+- En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).
 - La propriété accessor `element.style["css-property-name"]` a maintenant été ajoutée pour correspondre aux autres navigateurs ([bug 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension')).
 
 ### HTML
@@ -95,7 +95,7 @@ Liens:
 
 ### MathML
 
-- La fonction `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
+- La fonction `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/Reference/Properties/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
 
 ### SVG
 

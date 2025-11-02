@@ -154,7 +154,7 @@ ul::scroll-button(right) {
 }
 ```
 
-Il n'est pas nécessaire de définir de [texte alternatif](/fr/docs/Web/CSS/content#texte_alternatif_string_counter) pour les icônes de `content`, car le navigateur fournit automatiquement des {{glossary("accessible name","noms accessibles")}} appropriés.
+Il n'est pas nécessaire de définir de [texte alternatif](/fr/docs/Web/CSS/Reference/Properties/content#texte_alternatif_string_counter) pour les icônes de `content`, car le navigateur fournit automatiquement des {{glossary("accessible name","noms accessibles")}} appropriés.
 
 #### Résultat
 

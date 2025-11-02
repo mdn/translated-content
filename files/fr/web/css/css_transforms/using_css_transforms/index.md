@@ -14,11 +14,11 @@ Elles sont implémentées en utilisant un ensemble de propriétés CSS qui perme
 
 ## Propriétés des transformations CSS
 
-Deux propriétés majeures sont utilisées pour définir les transformations CSS&nbsp;: [`transform`](/fr/docs/Web/CSS/transform) et [`transform-origin`](/fr/docs/Web/CSS/transform-origin).
+Deux propriétés majeures sont utilisées pour définir les transformations CSS&nbsp;: [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform) et [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin).
 
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)
   - : Spécifie la position de l'origine. Par défaut, celle-ci est au centre de l'élément et peut être déplacée. Elle est utilisée par de nombreuses transformations, comme les rotations, les homothéties ou l'inclinaison, qui nécessitent un point spécifique comme paramètre.
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
   - : Spécifie la transformation à appliquer à l'élément. Il s'agit d'une liste de transformations séparées par des espaces, qui sont appliquées les unes après les autres, avec une opération de composition. Les transformations qui sont composées entre elles sont appliquées dans l'ordre, de droite à gauche.
 
 ## Exemples
@@ -59,11 +59,11 @@ Réaliser des transformations CSS dans l'espace en trois dimensions est un petit
 
 ### La perspective
 
-Le premier élément à définir est la _perspective_. Cela se fait grâce à la propriété [`perspective`](/fr/docs/Web/CSS/perspective). La perspective est ce qui donne l'impression de troisième dimension. Plus les éléments sont loin de l'observateur, plus ils seront petits.
+Le premier élément à définir est la _perspective_. Cela se fait grâce à la propriété [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective). La perspective est ce qui donne l'impression de troisième dimension. Plus les éléments sont loin de l'observateur, plus ils seront petits.
 
 #### Définir la perspective
 
-Cet exemple illustre un cube avec une perspective placée à différentes positions. La vitesse à laquelle le cube se réduit en profondeur est définie avec la propriété [`perspective`](/fr/docs/Web/CSS/perspective). Plus cette valeur est petite, plus la perspective est profonde.
+Cet exemple illustre un cube avec une perspective placée à différentes positions. La vitesse à laquelle le cube se réduit en profondeur est définie avec la propriété [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective). Plus cette valeur est petite, plus la perspective est profonde.
 
 ##### HTML
 
@@ -234,7 +234,7 @@ td {
 
 {{EmbedLiveSample('', 660, 710)}}
 
-Le deuxième élément qu'il faut configurer est la position de la personne qui observe le contenu. Cela se fait grâce à la propriété [`perspective-origin`](/fr/docs/Web/CSS/perspective-origin). Par défaut, la perspective est centrée sur l'axe d'observation, ce qui n'est pas toujours pertinent.
+Le deuxième élément qu'il faut configurer est la position de la personne qui observe le contenu. Cela se fait grâce à la propriété [`perspective-origin`](/fr/docs/Web/CSS/Reference/Properties/perspective-origin). Par défaut, la perspective est centrée sur l'axe d'observation, ce qui n'est pas toujours pertinent.
 
 #### Modifier l'origine de la perspective
 
