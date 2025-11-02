@@ -28,7 +28,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Get changed files
         id: check
@@ -76,15 +78,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout (content)
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         if: steps.check.outputs.HAS_FILES == 'true'
         with:
           repository: mdn/content
           path: mdn/content
+          persist-credentials: false
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: mdn/content/.nvmrc
           cache: yarn
@@ -166,15 +169,11 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
-      - name: Merge static assets with built documents
+      - name: Show final disk usage size of build
         if: steps.check.outputs.HAS_MD_FILES == 'true'
-        run: |
-          # Exclude the .map files, as they're used for debugging JS and CSS.
-          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
-          # Show the final disk usage size of the build.
-          du -sh $BUILD_OUT_ROOT
+        run: du -sh $BUILD_OUT_ROOT
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         with:
           name: build

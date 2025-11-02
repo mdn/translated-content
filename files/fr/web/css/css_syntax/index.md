@@ -7,7 +7,7 @@ l10n:
 
 Le module **Syntaxe CSS** décrit, en termes généraux, la structure et la syntaxe des feuilles de style en cascade, ou CSS. Il définit CSS comme le langage de description du rendu de documents structurés (tels que HTML et XML), sur le web et ailleurs.
 
-Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), [fonctions](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) ou [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Au contraire, il précise comment toutes ces fonctionnalités doivent être définies et comment les agents utilisateurs doivent analyser le CSS.
+Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [fonctions](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) ou [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Au contraire, il précise comment toutes ces fonctionnalités doivent être définies et comment les agents utilisateurs doivent analyser le CSS.
 
 ## Règles @
 
@@ -25,7 +25,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 - [Commentaires CSS](/fr/docs/Web/CSS/CSS_syntax/Comments)
 - [Déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [Bloc de déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [Fonction CSS](/fr/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [Fonction CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - [Gestion d'erreur](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
 - [Règle de style](/fr/docs/Web/API/CSSStyleRule)
 
@@ -41,7 +41,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 - [Introduction à la syntaxe CSS&nbsp;: déclarations, ensembles de règles et instructions](/fr/docs/Web/CSS/CSS_syntax/Syntax)
   - : Présente la syntaxe générale de CSS et explique comment les déclarations, blocs de déclaration, ensembles de règles et instructions forment les règles de style.
 
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - : Explique la grammaire formelle pour définir les valeurs valides des propriétés et fonctions CSS, ainsi que les contraintes sémantiques. Un guide pour comprendre les types de valeurs composants CSS, les combinateurs et les multiplicateurs.
 
 - [Gestion des erreurs CSS](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
@@ -69,7 +69,7 @@ Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)&nbsp;:
 
 Le module des [propriétés personnalisées CSS pour les variables en cascade](/fr/docs/Web/CSS/CSS_cascading_variables)&nbsp;:
 
-- [Propriété personnalisée (`--*`)](/fr/docs/Web/CSS/--*)
+- [Propriété personnalisée (`--*`)](/fr/docs/Web/CSS/Reference/Properties/--*)
 - Fonction {{cssxref("var")}}
 
 Le module des [règles conditionnelles CSS](/fr/docs/Web/CSS/CSS_conditional_rules)&nbsp;:
@@ -98,4 +98,4 @@ La spécification [WHATWG](/fr/docs/Glossary/WHATWG)&nbsp;:
 
 - Les [fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - Le module de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
-- Le module de [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- Le module de [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)

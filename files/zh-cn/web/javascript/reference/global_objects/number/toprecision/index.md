@@ -3,8 +3,6 @@ title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
 
-{{JSRef}}
-
 {{jsxref("Number")}} 值的 **`toPrecision()`** 方法返回一个以指定精度表示该数字的字符串。
 
 {{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}

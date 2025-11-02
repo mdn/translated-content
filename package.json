@@ -35,13 +35,13 @@
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
-    "ora": "^8.2.0",
+    "ora": "^9.0.0",
     "prettier": "3.6.2",
     "unist-util-visit": "^5.0.0",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "lefthook": "^1.13.6"
+    "lefthook": "^2.0.2"
   },
   "packageManager": "yarn@1.22.22"
 }

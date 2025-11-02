@@ -24,7 +24,7 @@
 /zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/CSS/Attribute_selectors	/zh-CN/docs/Web/CSS/Attribute_selectors
 /zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
-/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
+/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/Reference/Webkit_extensions
 /zh-CN/docs/CSS/CSS_animated_properties	/zh-CN/docs/Web/CSS/CSS_animated_properties
 /zh-CN/docs/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
 /zh-CN/docs/CSS/CSS_values_syntax	/zh-CN/docs/Web/CSS
@@ -53,7 +53,7 @@
 /zh-CN/docs/CSS/Understanding_z-index/Stacking_without_z-index	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /zh-CN/docs/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /zh-CN/docs/CSS/Universal_selectors	/zh-CN/docs/Web/CSS/Universal_selectors
-/zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /zh-CN/docs/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing
 /zh-CN/docs/CSS/animation-direction	/zh-CN/docs/Web/CSS/animation-direction
@@ -83,7 +83,7 @@
 /zh-CN/docs/CSS/display	/zh-CN/docs/Web/CSS/display
 /zh-CN/docs/CSS/flex-grow	/zh-CN/docs/Web/CSS/flex-grow
 /zh-CN/docs/CSS/float	/zh-CN/docs/Web/CSS/float
-/zh-CN/docs/CSS/float/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
+/zh-CN/docs/CSS/float/Webkit_Extensions	/zh-CN/docs/Web/CSS/Reference/Webkit_extensions
 /zh-CN/docs/CSS/font-smooth	/zh-CN/docs/Web/CSS/font-smooth
 /zh-CN/docs/CSS/height	/zh-CN/docs/Web/CSS/height
 /zh-CN/docs/CSS/image-orientation	/zh-CN/docs/Web/CSS/image-orientation
@@ -1144,7 +1144,6 @@
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /zh-CN/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility	/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-/zh-CN/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /zh-CN/docs/Learn/Common_questions/How_much_does_it_cost	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /zh-CN/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -1152,7 +1151,6 @@
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 /zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
@@ -1329,7 +1327,7 @@
 /zh-CN/docs/Learn/Performance/Measuring_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance
 /zh-CN/docs/Learn/Performance/Multimedia	/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia
 /zh-CN/docs/Learn/Performance/Perceived_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance
-/zh-CN/docs/Learn/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
+/zh-CN/docs/Learn/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
 /zh-CN/docs/Learn/Performance/What_is_web_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /zh-CN/docs/Learn/Performance/business_case_for_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
 /zh-CN/docs/Learn/Performance/video	/zh-CN/docs/Learn_web_development/Extensions/Performance/video
@@ -1450,6 +1448,7 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
+/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics	/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
@@ -1657,7 +1656,7 @@
 /zh-CN/docs/Tools/性能	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
 /zh-CN/docs/Tools/标尺	https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html
 /zh-CN/docs/Transforming_XML_with_XSLT	/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
-/zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/zh-CN/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /zh-CN/docs/Updating_extensions_for_Firefox_3	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /zh-CN/docs/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/CSS/CSS_fonts/WOFF
@@ -1763,8 +1762,13 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
-/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Examples	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Introduction	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors	/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree
+/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/zh-CN/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model	/zh-CN/docs/Web/API/Document_Object_Model
+/zh-CN/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/zh-CN/docs/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Document_Object_Model/Whitespace	/zh-CN/docs/Web/CSS/CSS_text/Whitespace
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
@@ -1976,6 +1980,7 @@
 /zh-CN/docs/Web/API/HTMLMetaElement/charset	/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
+/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types	/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/Web/API/History_API/Working_with_the_History_API
 /zh-CN/docs/Web/API/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
@@ -2443,7 +2448,8 @@
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label
 /zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
-/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+/zh-CN/docs/Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
+/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs
 /zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels	/zh-CN/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /zh-CN/docs/Web/Accessibility/ARIA/Roles	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles
 /zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role	/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role
@@ -2510,7 +2516,7 @@
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外	/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow
-/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
+/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
@@ -2544,7 +2550,7 @@
 /zh-CN/docs/Web/CSS/CSS_Scrollbars	/zh-CN/docs/Web/CSS/CSS_scrollbars_styling
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors
 /zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes
-/zh-CN/docs/Web/CSS/CSS_Types	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
+/zh-CN/docs/Web/CSS/CSS_Types	/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types
 /zh-CN/docs/Web/CSS/CSS_animations/Tips	/zh-CN/docs/Web/API/Web_Animations_API/Tips
 /zh-CN/docs/Web/CSS/CSS_cascade/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值
 /zh-CN/docs/Web/CSS/CSS_cascade/computed_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值
@@ -2588,9 +2594,9 @@
 /zh-CN/docs/Web/CSS/Media_Queries	/zh-CN/docs/Web/CSS/CSS_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/zh-CN/docs/Web/CSS/Mozilla_Extensions	/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions
 /zh-CN/docs/Web/CSS/Paged_Media	/zh-CN/docs/Web/CSS/CSS_paged_media
 /zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
-/zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
 /zh-CN/docs/Web/CSS/Replaced_element	/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties
@@ -2607,9 +2613,10 @@
 /zh-CN/docs/Web/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /zh-CN/docs/Web/CSS/Using_CSS_custom_properties	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Using_CSS_variables	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
-/zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax
 /zh-CN/docs/Web/CSS/Viewport_concepts	/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /zh-CN/docs/Web/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
+/zh-CN/docs/Web/CSS/WebKit_Extensions	/zh-CN/docs/Web/CSS/Reference/Webkit_extensions
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值
 /zh-CN/docs/Web/CSS/attr()	/zh-CN/docs/Web/CSS/attr
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
@@ -2653,8 +2660,7 @@
 /zh-CN/docs/Web/CSS/transform-function/scaleX()	/zh-CN/docs/Web/CSS/transform-function/scaleX
 /zh-CN/docs/Web/CSS/transform-function/skew()	/zh-CN/docs/Web/CSS/transform-function/skew
 /zh-CN/docs/Web/CSS/transform-function/skewX()	/zh-CN/docs/Web/CSS/transform-function/skewX
-/zh-CN/docs/Web/CSS/transform-function/skewY	/zh-CN/docs/Web/CSS/transform-function/skewX
-/zh-CN/docs/Web/CSS/transform-function/skewY()	/zh-CN/docs/Web/CSS/transform-function/skewX
+/zh-CN/docs/Web/CSS/transform-function/skewY()	/zh-CN/docs/Web/CSS/transform-function/skewY
 /zh-CN/docs/Web/CSS/transform-function/translate()	/zh-CN/docs/Web/CSS/transform-function/translate
 /zh-CN/docs/Web/CSS/transform-function/translate3d()	/zh-CN/docs/Web/CSS/transform-function/translate3d
 /zh-CN/docs/Web/CSS/transform-function/translateX()	/zh-CN/docs/Web/CSS/transform-function/translateX
@@ -3087,6 +3093,7 @@
 /zh-CN/docs/Web/HTML/Global_attributes/translate	/zh-CN/docs/Web/HTML/Reference/Global_attributes/translate
 /zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy	/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey
+/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element	/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content
 /zh-CN/docs/Web/HTML/Inline_elements	/zh-CN/docs/Glossary/Inline-level_content
@@ -3098,7 +3105,7 @@
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode	/zh-CN/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /zh-CN/docs/Web/HTML/Responsive_images	/zh-CN/docs/Web/HTML/Guides/Responsive_images
-/zh-CN/docs/Web/HTML/Viewport_meta_tag	/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element
+/zh-CN/docs/Web/HTML/Viewport_meta_tag	/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/viewport
 /zh-CN/docs/Web/HTML/microformats	/zh-CN/docs/Web/HTML/Guides/Microformats
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Reference/Global_attributes
 /zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Glossary/Inline-level_content
@@ -4095,7 +4102,7 @@
 /zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？	/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /zh-CN/docs/learn/探索浏览器开发者工具	/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 /zh-CN/docs/为Firefox_3升级扩展	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
-/zh-CN/docs/使用Javascript和DOM_Interfaces来处理HTML	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+/zh-CN/docs/使用Javascript和DOM_Interfaces来处理HTML	/zh-CN/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree
 /zh-CN/docs/安全	/zh-CN/docs/Web/Security
 /zh-CN/docs/怪异模式和标准模式	/zh-CN/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /zh-CN/docs/首页	/zh-CN/docs/Web

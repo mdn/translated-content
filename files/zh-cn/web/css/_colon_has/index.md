@@ -197,4 +197,4 @@ h3 {
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - [CSS 组合符](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [DOM 树节点的选择和遍历](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

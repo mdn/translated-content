@@ -12,7 +12,8 @@ Dans le premier exemple, [« empilement sans `z-index` »](/fr/docs/Web/CSS/CSS_
 
 Cette propriété, dont l'attribut est une valeur entière (positive ou négative), représente la position de l'élément le long de l'axe Z. Pour se représenter cette notion, on peut imaginer que la page possède plusieurs couches, les unes au dessus des autres. Chaque couche est numérotée. Un couche avec une grande valeur de `z-index` est affichée par dessus toutes celles dont la valeur est inférieure à la sienne.
 
-> **Attention :** `z-index` a un effet sur les éléments uniquement si ceux-ci sont [positionnés](/fr/docs/Web/CSS/position).
+> [!WARNING]
+> `z-index` a un effet sur les éléments uniquement si ceux-ci sont [positionnés](/fr/docs/Web/CSS/Reference/Properties/position).
 
 - _Bas : couche la plus lointaine de l'observateur_
 - …

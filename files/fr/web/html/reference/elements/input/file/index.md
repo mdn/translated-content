@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
+Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs//Learn*web_development/Extensions/Forms\) ou grâce à du code JavaScript [via l'API \_File*](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
@@ -68,7 +68,8 @@ Les fichiers Microsoft Word, par exemple, peuvent être identifiés de différen
 
 Une chaîne de caractères qui indique la caméra à utiliser pour capturer des photos et des vidéos si l'attribut `accept` indique que le fichier est de ce type. Lorsque `capture` vaut `"user"`, cela indique que la caméra qui fait face à l'utilisateur devrait être utilisée. Si l'attribut vaut `"environment"`, c'est la caméra qui est tournée vers l'extérieur devrait être utilisée. Si l'attribut est absent, l'agent utilisateur pourra décider de laquelle utiliser. Si la caméra souhaitée par l'attribut n'est pas disponible, l'agent utilisateur pourra utiliser une autre caméra de l'appareil.
 
-> **Note :** `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
+> [!NOTE]
+> `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
 
 ### `files`
 
@@ -325,7 +326,7 @@ input.style.opacity = 0;
 ```
 
 > [!NOTE]
-> La propriété [`opacity`](/fr/docs/Web/CSS/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/visibility) ou [`display: none`](/fr/docs/Web/CSS/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
+> La propriété [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/visibility) ou [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
 
 Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrirons juste après.
 

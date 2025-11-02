@@ -215,7 +215,7 @@ Elles incluent {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} et {{HTTPHeader("Se
 
 ## Accessibilité
 
-Pour une meilleure accessibilité, notamment pour les personnes qui ajustent la taille du texte d'un site, il convient d'utiliser l'unité [`em`](/fr/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) lorsqu'une valeur de type {{cssxref("&lt;length&gt;")}} est nécessaire pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Pour une meilleure accessibilité, notamment pour les personnes qui ajustent la taille du texte d'un site, il convient d'utiliser l'unité [`em`](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) lorsqu'une valeur de type {{cssxref("&lt;length&gt;")}} est nécessaire pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 Les unités [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) et [`px`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) sont toutes les deux valides, mais [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) s'adapte mieux si l'utilisateur·ice modifie la taille du texte du navigateur.
 
@@ -286,5 +286,5 @@ Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_
 - Le module de [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - L'interface {{domxref("CSSMediaRule")}}
-- [Extensions CSS préfixées pour Firefox (-moz-)](/fr/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Extensions CSS préfixées pour WebKit (-webkit-)](/fr/docs/Web/CSS/WebKit_Extensions#media_features)
+- [Extensions CSS préfixées pour Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
+- [Extensions CSS préfixées pour WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions#media_features)

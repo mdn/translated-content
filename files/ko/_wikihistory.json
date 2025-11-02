@@ -3858,37 +3858,11 @@
       "Channy"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2020-05-26T14:45:03.340Z",
-    "contributors": [
-      "alattalatta",
-      "chrisdavidmills",
-      "jswisher",
-      "jsx",
-      "Netaras"
-    ]
-  },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2020-02-10T04:12:58.179Z",
-    "contributors": [
-      "sungik-choi",
-      "jswisher",
-      "cs09g",
-      "2circumflex",
-      "dakeshi"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-05-29T17:36:17.250Z",
     "contributors": [
       "jswisher",
       "alattalatta"
-    ]
-  },
-  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
-    "modified": "2020-03-10T10:48:51.010Z",
-    "contributors": [
-      "kimploo"
     ]
   },
   "Web/API/DragEvent": {
@@ -7220,25 +7194,6 @@
       "young-gratia"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units": {
-    "modified": "2020-11-29T04:33:10.671Z",
-    "contributors": [
-      "alanhchoi"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2020-08-06T04:37:09.952Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
-    "modified": "2020-08-14T12:47:43.592Z",
-    "contributors": [
-      "alattalatta",
-      "ChanMyeong"
-    ]
-  },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2019-03-23T22:32:22.661Z",
     "contributors": [
@@ -7875,6 +7830,25 @@
       "sbnet21"
     ]
   },
+  "Web/CSS/CSS_values_and_units": {
+    "modified": "2020-11-29T04:33:10.671Z",
+    "contributors": [
+      "alanhchoi"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2020-08-06T04:37:09.952Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/Value_definition_syntax": {
+    "modified": "2020-08-14T12:47:43.592Z",
+    "contributors": [
+      "alattalatta",
+      "ChanMyeong"
+    ]
+  },
   "Web/CSS/CSS_writing_modes": {
     "modified": "2019-04-24T12:41:55.322Z",
     "contributors": [
@@ -7948,6 +7922,798 @@
       "Pastelgrim"
     ]
   },
+  "Web/CSS/Reference/Properties/align-content": {
+    "modified": "2020-10-15T22:09:15.263Z",
+    "contributors": [
+      "alattalatta",
+      "qvil",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/all": {
+    "modified": "2020-10-15T22:32:31.638Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation": {
+    "modified": "2020-10-15T21:21:11.163Z",
+    "contributors": [
+      "alattalatta",
+      "JJapShe",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-delay": {
+    "modified": "2020-10-15T21:54:53.073Z",
+    "contributors": [
+      "alattalatta",
+      "JJapShe",
+      "gobyoungil"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-direction": {
+    "modified": "2019-03-23T22:11:02.480Z",
+    "contributors": [
+      "JJapShe",
+      "gobyoungil"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-duration": {
+    "modified": "2019-03-23T22:10:47.889Z",
+    "contributors": [
+      "JJapShe"
+    ]
+  },
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
+    "modified": "2019-03-23T22:09:41.257Z",
+    "contributors": [
+      "JJapShe"
+    ]
+  },
+  "Web/CSS/Reference/Properties/backdrop-filter": {
+    "modified": "2020-10-15T22:32:42.698Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/backface-visibility": {
+    "modified": "2020-10-15T22:32:52.334Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background": {
+    "modified": "2020-10-15T21:12:39.561Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "SphinxKnight",
+      "hoony",
+      "Yuichiro",
+      "Pastelgrim"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-attachment": {
+    "modified": "2020-10-15T22:32:54.714Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-clip": {
+    "modified": "2020-10-15T22:26:03.561Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-color": {
+    "modified": "2020-10-15T21:20:19.568Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "teoli",
+      "SphinxKnight",
+      "fscholz",
+      "jaemin_jo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-image": {
+    "modified": "2020-10-15T21:20:20.479Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "teoli",
+      "SphinxKnight",
+      "fscholz",
+      "jaemin_jo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-origin": {
+    "modified": "2020-10-15T22:32:47.629Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/background-repeat": {
+    "modified": "2020-10-15T22:26:01.543Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border": {
+    "modified": "2020-10-15T22:10:27.959Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom": {
+    "modified": "2020-10-15T22:18:08.650Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-color": {
+    "modified": "2020-10-15T22:17:59.886Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-style": {
+    "modified": "2020-10-15T22:16:16.852Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-bottom-width": {
+    "modified": "2020-10-15T22:16:03.984Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-collapse": {
+    "modified": "2020-10-15T21:47:33.161Z",
+    "contributors": [
+      "alattalatta",
+      "wbamberg",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-color": {
+    "modified": "2020-10-15T22:10:26.965Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image": {
+    "modified": "2020-10-15T22:15:54.372Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-outset": {
+    "modified": "2020-10-15T22:15:54.055Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-repeat": {
+    "modified": "2020-10-15T22:16:03.730Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-slice": {
+    "modified": "2020-10-15T22:15:32.458Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-source": {
+    "modified": "2020-10-15T22:15:59.508Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-image-width": {
+    "modified": "2020-10-15T22:15:53.843Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left": {
+    "modified": "2020-10-15T22:18:07.361Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-color": {
+    "modified": "2020-10-15T22:17:54.423Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-style": {
+    "modified": "2020-10-15T22:16:15.619Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-left-width": {
+    "modified": "2020-10-15T22:16:04.408Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-radius": {
+    "modified": "2020-10-15T21:20:45.447Z",
+    "contributors": [
+      "alattalatta",
+      "Rav",
+      "Sebastianz",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right": {
+    "modified": "2020-10-15T22:18:04.205Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-color": {
+    "modified": "2020-10-15T22:17:54.896Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-style": {
+    "modified": "2020-10-15T22:16:16.865Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-right-width": {
+    "modified": "2020-10-15T22:16:06.914Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-spacing": {
+    "modified": "2020-10-15T21:47:58.573Z",
+    "contributors": [
+      "alattalatta",
+      "wbamberg",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-style": {
+    "modified": "2020-10-15T21:59:05.590Z",
+    "contributors": [
+      "alattalatta",
+      "flavono123"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top": {
+    "modified": "2020-10-15T22:18:08.761Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-color": {
+    "modified": "2020-10-15T22:18:01.555Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-style": {
+    "modified": "2020-10-15T22:16:17.811Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-top-width": {
+    "modified": "2020-10-15T22:16:04.734Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/border-width": {
+    "modified": "2020-10-15T22:15:52.859Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/box-sizing": {
+    "modified": "2020-10-15T21:33:10.536Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "epicsaga",
+      "dochoul"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clear": {
+    "modified": "2020-10-15T21:47:42.826Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clip": {
+    "modified": "2020-10-15T21:37:53.434Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "wjsskanyo"
+    ]
+  },
+  "Web/CSS/Reference/Properties/clip-path": {
+    "modified": "2020-10-15T22:25:44.725Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/color": {
+    "modified": "2020-10-15T22:10:33.905Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/contain": {
+    "modified": "2020-10-15T22:32:50.422Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/content": {
+    "modified": "2020-10-15T22:26:10.769Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/cursor": {
+    "modified": "2020-10-15T21:27:31.761Z",
+    "contributors": [
+      "alattalatta",
+      "mrstork",
+      "Sebastianz",
+      "teoli",
+      "claudepache"
+    ]
+  },
+  "Web/CSS/Reference/Properties/filter": {
+    "modified": "2020-10-15T21:40:35.758Z",
+    "contributors": [
+      "alattalatta",
+      "EatChangmyeong",
+      "chatoo2412",
+      "AshtonYoon",
+      "Sebastianz",
+      "hoony"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex": {
+    "modified": "2020-10-15T22:09:18.729Z",
+    "contributors": [
+      "alattalatta",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-basis": {
+    "modified": "2020-10-15T22:09:16.564Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-direction": {
+    "modified": "2020-10-15T22:09:14.650Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-flow": {
+    "modified": "2020-10-15T22:09:17.941Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-grow": {
+    "modified": "2020-10-15T22:09:15.124Z",
+    "contributors": [
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-shrink": {
+    "modified": "2020-10-15T22:09:11.292Z",
+    "contributors": [
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/flex-wrap": {
+    "modified": "2020-10-15T22:09:11.421Z",
+    "contributors": [
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/float": {
+    "modified": "2020-10-15T21:44:47.428Z",
+    "contributors": [
+      "alattalatta",
+      "Netaras"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font": {
+    "modified": "2020-10-15T22:11:39.217Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-feature-settings": {
+    "modified": "2020-11-04T06:31:19.905Z",
+    "contributors": [
+      "hyunwoong.kang"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-size": {
+    "modified": "2020-10-15T21:48:25.426Z",
+    "contributors": [
+      "Anonymous",
+      "alattalatta",
+      "Hanjae-Jea"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-synthesis": {
+    "modified": "2020-10-15T22:32:51.283Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/font-weight": {
+    "modified": "2019-03-23T22:40:06.260Z",
+    "contributors": [
+      "naduhy2",
+      "jisoon",
+      "maytree"
+    ]
+  },
+  "Web/CSS/Reference/Properties/gap": {
+    "modified": "2020-10-15T22:26:03.670Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/height": {
+    "modified": "2020-10-15T21:47:39.134Z",
+    "contributors": [
+      "alattalatta",
+      "DeadIntegral"
+    ]
+  },
+  "Web/CSS/Reference/Properties/hyphens": {
+    "modified": "2020-10-15T22:32:51.304Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/image-rendering": {
+    "modified": "2020-10-15T21:40:19.155Z",
+    "contributors": [
+      "alattalatta",
+      "Hmmim"
+    ]
+  },
+  "Web/CSS/Reference/Properties/isolation": {
+    "modified": "2020-10-15T22:25:56.295Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/letter-spacing": {
+    "modified": "2020-10-15T22:18:00.636Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-break": {
+    "modified": "2020-10-15T22:32:46.075Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/line-clamp": {
+    "modified": "2020-10-15T22:25:56.637Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin": {
+    "modified": "2020-10-15T21:55:14.551Z",
+    "contributors": [
+      "alattalatta",
+      "kidkkr"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-bottom": {
+    "modified": "2020-10-15T22:14:17.582Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-left": {
+    "modified": "2020-10-15T22:14:20.259Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-right": {
+    "modified": "2020-10-15T22:14:17.893Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/margin-top": {
+    "modified": "2020-10-15T21:45:27.749Z",
+    "contributors": [
+      "alattalatta",
+      "Jinhyuk"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mask": {
+    "modified": "2020-10-15T21:53:40.995Z",
+    "contributors": [
+      "alattalatta",
+      "hoony"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-height": {
+    "modified": "2020-10-15T22:15:32.957Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/max-width": {
+    "modified": "2020-10-15T22:05:31.476Z",
+    "contributors": [
+      "alattalatta",
+      "MyeonghwanCho"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-height": {
+    "modified": "2020-10-15T22:15:30.962Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/min-width": {
+    "modified": "2020-10-15T22:05:30.663Z",
+    "contributors": [
+      "alattalatta",
+      "MyeonghwanCho"
+    ]
+  },
+  "Web/CSS/Reference/Properties/mix-blend-mode": {
+    "modified": "2020-10-15T21:49:53.526Z",
+    "contributors": [
+      "alattalatta",
+      "dragmove"
+    ]
+  },
+  "Web/CSS/Reference/Properties/object-fit": {
+    "modified": "2020-10-15T22:32:41.251Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/object-position": {
+    "modified": "2020-10-15T22:26:30.597Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/opacity": {
+    "modified": "2020-10-15T22:11:31.577Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/order": {
+    "modified": "2020-10-15T22:09:17.253Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok",
+      "dbwodlf3"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline": {
+    "modified": "2020-10-15T22:33:02.884Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-style": {
+    "modified": "2020-10-15T22:33:03.744Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/outline-width": {
+    "modified": "2020-10-15T22:33:06.385Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow": {
+    "modified": "2020-10-15T21:53:39.024Z",
+    "contributors": [
+      "alattalatta",
+      "LeeJunyeol",
+      "nugurejeil"
+    ]
+  },
+  "Web/CSS/Reference/Properties/overflow-wrap": {
+    "modified": "2020-10-15T21:48:38.411Z",
+    "contributors": [
+      "Kaben",
+      "joshua1988"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding": {
+    "modified": "2020-10-15T22:14:23.019Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-bottom": {
+    "modified": "2020-10-15T22:15:32.533Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-left": {
+    "modified": "2020-10-15T22:15:30.214Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-right": {
+    "modified": "2020-10-15T22:15:32.316Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/padding-top": {
+    "modified": "2020-10-15T22:14:26.029Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/paint-order": {
+    "modified": "2020-10-15T22:32:44.393Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/pointer-events": {
+    "modified": "2020-10-15T22:11:48.556Z",
+    "contributors": [
+      "alattalatta",
+      "limjungmok"
+    ]
+  },
+  "Web/CSS/Reference/Properties/position": {
+    "modified": "2020-10-15T21:55:47.858Z",
+    "contributors": [
+      "alattalatta",
+      "EatChangmyeong",
+      "huusz"
+    ]
+  },
+  "Web/CSS/Reference/Properties/tab-size": {
+    "modified": "2020-10-15T21:37:17.868Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "hyeonseok"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-align": {
+    "modified": "2020-10-15T22:27:00.842Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/text-decoration": {
+    "modified": "2020-10-15T22:18:03.446Z",
+    "contributors": [
+      "limkukhyun",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transform": {
+    "modified": "2020-10-15T21:20:53.479Z",
+    "contributors": [
+      "alattalatta",
+      "Sebastianz",
+      "fscholz",
+      "teoli",
+      "mirinae312"
+    ]
+  },
+  "Web/CSS/Reference/Properties/transition": {
+    "modified": "2019-03-23T22:28:21.926Z",
+    "contributors": [
+      "fasdgoc"
+    ]
+  },
+  "Web/CSS/Reference/Properties/user-select": {
+    "modified": "2020-10-15T22:33:14.947Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/vertical-align": {
+    "modified": "2020-10-15T21:55:16.951Z",
+    "contributors": [
+      "alattalatta",
+      "kidkkr"
+    ]
+  },
+  "Web/CSS/Reference/Properties/visibility": {
+    "modified": "2020-10-15T22:15:38.851Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/white-space": {
+    "modified": "2020-10-15T21:52:50.149Z",
+    "contributors": [
+      "alattalatta",
+      "maytree"
+    ]
+  },
+  "Web/CSS/Reference/Properties/width": {
+    "modified": "2020-10-15T22:11:19.772Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/will-change": {
+    "modified": "2019-03-23T22:34:40.134Z",
+    "contributors": [
+      "stitchworkingonthecode"
+    ]
+  },
+  "Web/CSS/Reference/Properties/word-break": {
+    "modified": "2020-10-15T22:15:08.918Z",
+    "contributors": [
+      "alattalatta",
+      "compctive"
+    ]
+  },
+  "Web/CSS/Reference/Properties/word-spacing": {
+    "modified": "2020-10-15T22:33:03.458Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/Reference/Properties/z-index": {
+    "modified": "2020-10-15T21:20:31.595Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "jaemin_jo"
+    ]
+  },
   "Web/CSS/Selector_list": {
     "modified": "2020-10-15T22:28:27.701Z",
     "contributors": [
@@ -7993,20 +8759,6 @@
       "Netaras"
     ]
   },
-  "Web/CSS/align-content": {
-    "modified": "2020-10-15T22:09:15.263Z",
-    "contributors": [
-      "alattalatta",
-      "qvil",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/all": {
-    "modified": "2020-10-15T22:32:31.638Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/angle": {
     "modified": "2020-10-15T22:10:53.294Z",
     "contributors": [
@@ -8015,111 +8767,6 @@
   },
   "Web/CSS/angle-percentage": {
     "modified": "2020-10-15T22:17:18.525Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/animation": {
-    "modified": "2020-10-15T21:21:11.163Z",
-    "contributors": [
-      "alattalatta",
-      "JJapShe",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "Web/CSS/animation-delay": {
-    "modified": "2020-10-15T21:54:53.073Z",
-    "contributors": [
-      "alattalatta",
-      "JJapShe",
-      "gobyoungil"
-    ]
-  },
-  "Web/CSS/animation-direction": {
-    "modified": "2019-03-23T22:11:02.480Z",
-    "contributors": [
-      "JJapShe",
-      "gobyoungil"
-    ]
-  },
-  "Web/CSS/animation-duration": {
-    "modified": "2019-03-23T22:10:47.889Z",
-    "contributors": [
-      "JJapShe"
-    ]
-  },
-  "Web/CSS/animation-fill-mode": {
-    "modified": "2019-03-23T22:09:41.257Z",
-    "contributors": [
-      "JJapShe"
-    ]
-  },
-  "Web/CSS/backdrop-filter": {
-    "modified": "2020-10-15T22:32:42.698Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/backface-visibility": {
-    "modified": "2020-10-15T22:32:52.334Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background": {
-    "modified": "2020-10-15T21:12:39.561Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "SphinxKnight",
-      "hoony",
-      "Yuichiro",
-      "Pastelgrim"
-    ]
-  },
-  "Web/CSS/background-attachment": {
-    "modified": "2020-10-15T22:32:54.714Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background-clip": {
-    "modified": "2020-10-15T22:26:03.561Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background-color": {
-    "modified": "2020-10-15T21:20:19.568Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "teoli",
-      "SphinxKnight",
-      "fscholz",
-      "jaemin_jo"
-    ]
-  },
-  "Web/CSS/background-image": {
-    "modified": "2020-10-15T21:20:20.479Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "teoli",
-      "SphinxKnight",
-      "fscholz",
-      "jaemin_jo"
-    ]
-  },
-  "Web/CSS/background-origin": {
-    "modified": "2020-10-15T22:32:47.629Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/background-repeat": {
-    "modified": "2020-10-15T22:26:01.543Z",
     "contributors": [
       "alattalatta"
     ]
@@ -8143,189 +8790,6 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/border": {
-    "modified": "2020-10-15T22:10:27.959Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom": {
-    "modified": "2020-10-15T22:18:08.650Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom-color": {
-    "modified": "2020-10-15T22:17:59.886Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom-style": {
-    "modified": "2020-10-15T22:16:16.852Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-bottom-width": {
-    "modified": "2020-10-15T22:16:03.984Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-collapse": {
-    "modified": "2020-10-15T21:47:33.161Z",
-    "contributors": [
-      "alattalatta",
-      "wbamberg",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/border-color": {
-    "modified": "2020-10-15T22:10:26.965Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image": {
-    "modified": "2020-10-15T22:15:54.372Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-outset": {
-    "modified": "2020-10-15T22:15:54.055Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-repeat": {
-    "modified": "2020-10-15T22:16:03.730Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-slice": {
-    "modified": "2020-10-15T22:15:32.458Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-source": {
-    "modified": "2020-10-15T22:15:59.508Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-image-width": {
-    "modified": "2020-10-15T22:15:53.843Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left": {
-    "modified": "2020-10-15T22:18:07.361Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left-color": {
-    "modified": "2020-10-15T22:17:54.423Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left-style": {
-    "modified": "2020-10-15T22:16:15.619Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-left-width": {
-    "modified": "2020-10-15T22:16:04.408Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-radius": {
-    "modified": "2020-10-15T21:20:45.447Z",
-    "contributors": [
-      "alattalatta",
-      "Rav",
-      "Sebastianz",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "Web/CSS/border-right": {
-    "modified": "2020-10-15T22:18:04.205Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-right-color": {
-    "modified": "2020-10-15T22:17:54.896Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-right-style": {
-    "modified": "2020-10-15T22:16:16.865Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-right-width": {
-    "modified": "2020-10-15T22:16:06.914Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-spacing": {
-    "modified": "2020-10-15T21:47:58.573Z",
-    "contributors": [
-      "alattalatta",
-      "wbamberg",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/border-style": {
-    "modified": "2020-10-15T21:59:05.590Z",
-    "contributors": [
-      "alattalatta",
-      "flavono123"
-    ]
-  },
-  "Web/CSS/border-top": {
-    "modified": "2020-10-15T22:18:08.761Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-top-color": {
-    "modified": "2020-10-15T22:18:01.555Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-top-style": {
-    "modified": "2020-10-15T22:16:17.811Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-top-width": {
-    "modified": "2020-10-15T22:16:04.734Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/border-width": {
-    "modified": "2020-10-15T22:15:52.859Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/box-shadow": {
     "modified": "2020-10-15T21:21:04.554Z",
     "contributors": [
@@ -8334,15 +8798,6 @@
       "teoli",
       "hibiya",
       "mirinae312"
-    ]
-  },
-  "Web/CSS/box-sizing": {
-    "modified": "2020-10-15T21:33:10.536Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "epicsaga",
-      "dochoul"
     ]
   },
   "Web/CSS/calc": {
@@ -8356,59 +8811,10 @@
       "."
     ]
   },
-  "Web/CSS/clear": {
-    "modified": "2020-10-15T21:47:42.826Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/clip": {
-    "modified": "2020-10-15T21:37:53.434Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "wjsskanyo"
-    ]
-  },
-  "Web/CSS/clip-path": {
-    "modified": "2020-10-15T22:25:44.725Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/color": {
-    "modified": "2020-10-15T22:10:33.905Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/color_value": {
     "modified": "2020-10-15T22:10:31.590Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/contain": {
-    "modified": "2020-10-15T22:32:50.422Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/content": {
-    "modified": "2020-10-15T22:26:10.769Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/cursor": {
-    "modified": "2020-10-15T21:27:31.761Z",
-    "contributors": [
-      "alattalatta",
-      "mrstork",
-      "Sebastianz",
-      "teoli",
-      "claudepache"
     ]
   },
   "Web/CSS/display": {
@@ -8422,17 +8828,6 @@
     "modified": "2020-11-29T06:46:46.662Z",
     "contributors": [
       "alanhchoi"
-    ]
-  },
-  "Web/CSS/filter": {
-    "modified": "2020-10-15T21:40:35.758Z",
-    "contributors": [
-      "alattalatta",
-      "EatChangmyeong",
-      "chatoo2412",
-      "AshtonYoon",
-      "Sebastianz",
-      "hoony"
     ]
   },
   "Web/CSS/filter-function": {
@@ -8462,71 +8857,6 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/flex": {
-    "modified": "2020-10-15T22:09:18.729Z",
-    "contributors": [
-      "alattalatta",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-basis": {
-    "modified": "2020-10-15T22:09:16.564Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-direction": {
-    "modified": "2020-10-15T22:09:14.650Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-flow": {
-    "modified": "2020-10-15T22:09:17.941Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-grow": {
-    "modified": "2020-10-15T22:09:15.124Z",
-    "contributors": [
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-shrink": {
-    "modified": "2020-10-15T22:09:11.292Z",
-    "contributors": [
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/flex-wrap": {
-    "modified": "2020-10-15T22:09:11.421Z",
-    "contributors": [
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/float": {
-    "modified": "2020-10-15T21:44:47.428Z",
-    "contributors": [
-      "alattalatta",
-      "Netaras"
-    ]
-  },
-  "Web/CSS/font": {
-    "modified": "2020-10-15T22:11:39.217Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/font-family": {
     "modified": "2020-10-15T21:48:51.338Z",
     "contributors": [
@@ -8534,42 +8864,8 @@
       "naduhy2"
     ]
   },
-  "Web/CSS/font-feature-settings": {
-    "modified": "2020-11-04T06:31:19.905Z",
-    "contributors": [
-      "hyunwoong.kang"
-    ]
-  },
-  "Web/CSS/font-size": {
-    "modified": "2020-10-15T21:48:25.426Z",
-    "contributors": [
-      "Anonymous",
-      "alattalatta",
-      "Hanjae-Jea"
-    ]
-  },
-  "Web/CSS/font-synthesis": {
-    "modified": "2020-10-15T22:32:51.283Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/font-weight": {
-    "modified": "2019-03-23T22:40:06.260Z",
-    "contributors": [
-      "naduhy2",
-      "jisoon",
-      "maytree"
-    ]
-  },
   "Web/CSS/frequency": {
     "modified": "2020-10-15T22:17:20.180Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/gap": {
-    "modified": "2020-10-15T22:26:03.670Z",
     "contributors": [
       "alattalatta"
     ]
@@ -8592,30 +8888,10 @@
       "dbwodlf3"
     ]
   },
-  "Web/CSS/height": {
-    "modified": "2020-10-15T21:47:39.134Z",
-    "contributors": [
-      "alattalatta",
-      "DeadIntegral"
-    ]
-  },
-  "Web/CSS/hyphens": {
-    "modified": "2020-10-15T22:32:51.304Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/image": {
     "modified": "2020-10-15T22:15:55.155Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/image-rendering": {
-    "modified": "2020-10-15T21:40:19.155Z",
-    "contributors": [
-      "alattalatta",
-      "Hmmim"
     ]
   },
   "Web/CSS/inherit": {
@@ -8638,12 +8914,6 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/isolation": {
-    "modified": "2020-10-15T22:25:56.295Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/length": {
     "modified": "2020-10-15T22:10:30.645Z",
     "contributors": [
@@ -8656,193 +8926,8 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/letter-spacing": {
-    "modified": "2020-10-15T22:18:00.636Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/line-break": {
-    "modified": "2020-10-15T22:32:46.075Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/line-clamp": {
-    "modified": "2020-10-15T22:25:56.637Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin": {
-    "modified": "2020-10-15T21:55:14.551Z",
-    "contributors": [
-      "alattalatta",
-      "kidkkr"
-    ]
-  },
-  "Web/CSS/margin-bottom": {
-    "modified": "2020-10-15T22:14:17.582Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin-left": {
-    "modified": "2020-10-15T22:14:20.259Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin-right": {
-    "modified": "2020-10-15T22:14:17.893Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/margin-top": {
-    "modified": "2020-10-15T21:45:27.749Z",
-    "contributors": [
-      "alattalatta",
-      "Jinhyuk"
-    ]
-  },
-  "Web/CSS/mask": {
-    "modified": "2020-10-15T21:53:40.995Z",
-    "contributors": [
-      "alattalatta",
-      "hoony"
-    ]
-  },
-  "Web/CSS/max-height": {
-    "modified": "2020-10-15T22:15:32.957Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/max-width": {
-    "modified": "2020-10-15T22:05:31.476Z",
-    "contributors": [
-      "alattalatta",
-      "MyeonghwanCho"
-    ]
-  },
-  "Web/CSS/min-height": {
-    "modified": "2020-10-15T22:15:30.962Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/min-width": {
-    "modified": "2020-10-15T22:05:30.663Z",
-    "contributors": [
-      "alattalatta",
-      "MyeonghwanCho"
-    ]
-  },
-  "Web/CSS/mix-blend-mode": {
-    "modified": "2020-10-15T21:49:53.526Z",
-    "contributors": [
-      "alattalatta",
-      "dragmove"
-    ]
-  },
   "Web/CSS/number": {
     "modified": "2020-10-15T22:10:27.997Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/object-fit": {
-    "modified": "2020-10-15T22:32:41.251Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/object-position": {
-    "modified": "2020-10-15T22:26:30.597Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/opacity": {
-    "modified": "2020-10-15T22:11:31.577Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/order": {
-    "modified": "2020-10-15T22:09:17.253Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok",
-      "dbwodlf3"
-    ]
-  },
-  "Web/CSS/outline": {
-    "modified": "2020-10-15T22:33:02.884Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/outline-style": {
-    "modified": "2020-10-15T22:33:03.744Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/outline-width": {
-    "modified": "2020-10-15T22:33:06.385Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/overflow": {
-    "modified": "2020-10-15T21:53:39.024Z",
-    "contributors": [
-      "alattalatta",
-      "LeeJunyeol",
-      "nugurejeil"
-    ]
-  },
-  "Web/CSS/overflow-wrap": {
-    "modified": "2020-10-15T21:48:38.411Z",
-    "contributors": [
-      "Kaben",
-      "joshua1988"
-    ]
-  },
-  "Web/CSS/padding": {
-    "modified": "2020-10-15T22:14:23.019Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-bottom": {
-    "modified": "2020-10-15T22:15:32.533Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-left": {
-    "modified": "2020-10-15T22:15:30.214Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-right": {
-    "modified": "2020-10-15T22:15:32.316Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/padding-top": {
-    "modified": "2020-10-15T22:14:26.029Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/paint-order": {
-    "modified": "2020-10-15T22:32:44.393Z",
     "contributors": [
       "alattalatta"
     ]
@@ -8851,21 +8936,6 @@
     "modified": "2020-10-15T22:10:31.553Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/pointer-events": {
-    "modified": "2020-10-15T22:11:48.556Z",
-    "contributors": [
-      "alattalatta",
-      "limjungmok"
-    ]
-  },
-  "Web/CSS/position": {
-    "modified": "2020-10-15T21:55:47.858Z",
-    "contributors": [
-      "alattalatta",
-      "EatChangmyeong",
-      "huusz"
     ]
   },
   "Web/CSS/position_value": {
@@ -8878,27 +8948,6 @@
     "modified": "2020-10-15T22:32:20.027Z",
     "contributors": [
       "oinochoe"
-    ]
-  },
-  "Web/CSS/tab-size": {
-    "modified": "2020-10-15T21:37:17.868Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "hyeonseok"
-    ]
-  },
-  "Web/CSS/text-align": {
-    "modified": "2020-10-15T22:27:00.842Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/text-decoration": {
-    "modified": "2020-10-15T22:18:03.446Z",
-    "contributors": [
-      "limkukhyun",
-      "alattalatta"
     ]
   },
   "Web/CSS/text-shadow": {
@@ -8915,16 +8964,6 @@
     "modified": "2020-10-15T22:14:17.158Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/transform": {
-    "modified": "2020-10-15T21:20:53.479Z",
-    "contributors": [
-      "alattalatta",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "mirinae312"
     ]
   },
   "Web/CSS/transform-function": {
@@ -8948,12 +8987,6 @@
       "genzuby"
     ]
   },
-  "Web/CSS/transition": {
-    "modified": "2019-03-23T22:28:21.926Z",
-    "contributors": [
-      "fasdgoc"
-    ]
-  },
   "Web/CSS/transition-delay": {
     "modified": "2019-03-23T22:28:17.012Z",
     "contributors": [
@@ -8973,70 +9006,11 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/user-select": {
-    "modified": "2020-10-15T22:33:14.947Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/CSS/var": {
     "modified": "2020-11-04T09:10:36.975Z",
     "contributors": [
       "chrisdavidmills",
       "alattalatta"
-    ]
-  },
-  "Web/CSS/vertical-align": {
-    "modified": "2020-10-15T21:55:16.951Z",
-    "contributors": [
-      "alattalatta",
-      "kidkkr"
-    ]
-  },
-  "Web/CSS/visibility": {
-    "modified": "2020-10-15T22:15:38.851Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/white-space": {
-    "modified": "2020-10-15T21:52:50.149Z",
-    "contributors": [
-      "alattalatta",
-      "maytree"
-    ]
-  },
-  "Web/CSS/width": {
-    "modified": "2020-10-15T22:11:19.772Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/will-change": {
-    "modified": "2019-03-23T22:34:40.134Z",
-    "contributors": [
-      "stitchworkingonthecode"
-    ]
-  },
-  "Web/CSS/word-break": {
-    "modified": "2020-10-15T22:15:08.918Z",
-    "contributors": [
-      "alattalatta",
-      "compctive"
-    ]
-  },
-  "Web/CSS/word-spacing": {
-    "modified": "2020-10-15T22:33:03.458Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/CSS/z-index": {
-    "modified": "2020-10-15T21:20:31.595Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "jaemin_jo"
     ]
   },
   "Web/Events": {
@@ -16215,6 +16189,32 @@
     "contributors": [
       "wbamberg",
       "zziuni"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2020-05-26T14:45:03.340Z",
+    "contributors": [
+      "alattalatta",
+      "chrisdavidmills",
+      "jswisher",
+      "jsx",
+      "Netaras"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_73827e330a6d9b2a25fe17acee5f6c48ee67e6f83a44f672e71afbaf429d69ee": {
+    "modified": "2020-03-10T10:48:51.010Z",
+    "contributors": [
+      "kimploo"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef": {
+    "modified": "2020-02-10T04:12:58.179Z",
+    "contributors": [
+      "sungik-choi",
+      "jswisher",
+      "cs09g",
+      "2circumflex",
+      "dakeshi"
     ]
   },
   "conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b": {

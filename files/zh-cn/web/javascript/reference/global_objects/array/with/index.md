@@ -3,8 +3,6 @@ title: Array.prototype.with()
 slug: Web/JavaScript/Reference/Global_Objects/Array/with
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`with()`** 方法是使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)修改指定索引值的[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它会返回一个新数组，其指定索引处的值会被新值替换。
 
 ## 语法

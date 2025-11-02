@@ -3,8 +3,6 @@ title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
 
-{{JSRef}}
-
 **`Object.seal()`** 静态方法*密封*一个对象。密封一个对象会[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)并且使得现有属性不可配置。密封对象有一组固定的属性：不能添加新属性、不能删除现有属性或更改其可枚举性和可配置性、不能重新分配其原型。只要现有属性的值是可写的，它们仍然可以更改。`seal()` 返回传入的同一对象。
 
 {{InteractiveExample("JavaScript Demo: Object.seal()")}}

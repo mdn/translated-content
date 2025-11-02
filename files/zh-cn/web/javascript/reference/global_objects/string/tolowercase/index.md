@@ -3,8 +3,6 @@ title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`toLowerCase()`** 方法将该字符串转换为小写形式。
 
 {{InteractiveExample("JavaScript Demo: String.toLowerCase()", "shorter")}}

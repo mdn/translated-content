@@ -51,7 +51,8 @@ transform: translateX(3ch);
 }
 ```
 
-> **Note :** `translateX(tx)` est équivalent à `translate(tx, 0)` ou `translate3d(tx, 0, 0)`.
+> [!NOTE]
+> `translateX(tx)` est équivalent à `translate(tx, 0)` ou `translate3d(tx, 0, 0)`.
 
 ## Syntaxe
 
@@ -64,7 +65,7 @@ transform: translateX(50%);
 ### Valeurs
 
 - `<length-percentage>`
-  - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
+  - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
 
 <table class="standard-table">
   <thead>
@@ -193,5 +194,5 @@ div {
 
 - [`translate()`](/fr/docs/Web/CSS/transform-function/translate)
 - [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY)
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
