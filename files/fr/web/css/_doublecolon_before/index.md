@@ -55,7 +55,7 @@ Les pseudo-éléments `::before` ne peuvent pas être appliqués aux _{{ glossar
 
 Un pseudo-élément `::before` avec une valeur {{cssxref("display")}} de `list-item` se comporte comme un élément de liste et peut donc générer un pseudo-élément {{cssxref("::marker")}}, tout comme un élément {{htmlelement("li")}} le fait.
 
-Si la propriété [`content`](/fr/docs/Web/CSS/content) n'est pas spécifiée, a une valeur invalide, ou a `normal` ou `none` comme valeur, alors le pseudo-élément `::before` n'est pas rendu. Il se comporte comme si `display: none` était défini.
+Si la propriété [`content`](/fr/docs/Web/CSS/Reference/Properties/content) n'est pas spécifiée, a une valeur invalide, ou a `normal` ou `none` comme valeur, alors le pseudo-élément `::before` n'est pas rendu. Il se comporte comme si `display: none` était défini.
 
 > [!NOTE]
 > La spécification [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) a introduit la notation à double deux-points `::before` pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent également la notation à un seul deux-points `:before`, introduite dans CSS2.

@@ -1,17 +1,15 @@
 ---
 title: JSON
 slug: Glossary/JSON
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Le **JSON** (pour <i lang="en">JavaScript Object Notation</i> en anglais) est un format d'échange de données. Bien que n'étant pas un sous-ensemble strict, JSON ressemble fortement à un sous-ensemble de la syntaxe de {{Glossary("JavaScript")}}. Bien que de nombreux langages de programmation prennent en charge JSON, il est particulièrement utile pour les applications basées sur JavaScript, y compris les sites web et les extensions de navigateur.
 
-**JSON** (_JavaScript Object Notation_) est un format d'échange de données. Bien qu'il n'en soit pas un sous-ensemble au sens strict, JSON ressemble fortement à un sous-ensemble de la syntaxe {{Glossary("JavaScript")}}. Le format JSON est accepté par de nombreux langages de programmation, mais il s'avère particulièrement utile pour les applications basées sur JavaScript comme les sites web et les extensions des navigateurs.
-
-JSON permet de représenter des nombres, des booléens, des chaînes de caractères, la valeur `null`, des tableaux (séquences ordonnées de valeurs) et des objets (correspondances chaînes-valeurs) composés de ces valeurs (ou d'autres tableaux ou objets). Il ne permet pas, nativement, de représenter des données plus complexes comme des fonctions, des expressions rationnelles ou des dates. (Les objets Date sont traduits vers une chaîne de caractères selon un format ISO, cela permet pour certains cas, d'assurer le transport de ces données.) Si vous avez besoin de représenter des valeurs d'autres types de données, vous pouvez les transformer lors de la conversion en chaîne de caractères ou avant de les reconvertir en objets JavaScript.
-
-Tout comme XML, JSON permet de conserver des données hiérarchiques, ce qui n'est pas le cas avec le format CSV traditionnel. De nombreux outils permettent de convertir des données entre ces formats comme ce [convertisseur JSON vers CSV](https://json-csv.com) ou bien [celui-ci](https://jsontoexcel.com/).
+JSON peut représenter des nombres, des booléens, des chaînes de caractères, `null`, des tableaux (séquences ordonnées de valeurs) et des objets (associations chaîne-valeur) composés de ces valeurs (ou d'autres tableaux et objets). JSON ne représente pas nativement des types de données plus complexes comme les fonctions, les expressions régulières, les dates, etc. (Les objets Date sont par défaut sérialisés en une chaîne contenant la date au format ISO, donc l'information n'est pas complètement perdue.) Si vous avez besoin que JSON représente d'autres types de données, transformez les valeurs lors de la sérialisation ou avant la désérialisation.
 
 ## Voir aussi
 
+- [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [JSON](https://fr.wikipedia.org/wiki/JSON) sur Wikipédia
-- [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) sur MDN

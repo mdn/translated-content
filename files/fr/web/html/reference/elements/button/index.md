@@ -179,7 +179,7 @@ Les éléments interactifs tels que les boutons doivent fournir une surface suff
 
 Lorsque plusieurs contenus interactifs (y compris les boutons) sont placés les uns à côté des autres, il est nécessaire de les espacer suffisamment pour minimiser le risque d'activer le mauvais contenu lors de la navigation.
 
-Un tel espacement peut être obtenu grâce à la propriété CSS [`margin`](/fr/docs/Web/CSS/margin).
+Un tel espacement peut être obtenu grâce à la propriété CSS [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin).
 
 - [Les tremblements de la main et le problème du bouton géant — Axess Lab (en anglais)](https://axesslab.com/hand-tremors/)
 

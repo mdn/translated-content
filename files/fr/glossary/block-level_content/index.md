@@ -11,7 +11,7 @@ Dans une mise en page en bloc, les boîtes sont disposées les unes après les a
 Un élément de niveau bloc commence toujours sur une nouvelle ligne. En mode d'écriture horizontal, comme l'anglais ou l'arabe, il occupe tout l'espace horizontal de son élément parent (contenant) et un espace vertical égal à la hauteur de son contenu, créant ainsi un «&nbsp;bloc&nbsp;».
 
 > [!NOTE]
-> Le comportement ci-dessus de la mise en page en bloc change si le {{CSSxRef("writing-mode")}} du bloc conteneur est défini sur une valeur autre que [la valeur par défaut](/fr/docs/Web/CSS/writing-mode#définition_formelle).
+> Le comportement ci-dessus de la mise en page en bloc change si le {{CSSxRef("writing-mode")}} du bloc conteneur est défini sur une valeur autre que [la valeur par défaut](/fr/docs/Web/CSS/Reference/Properties/writing-mode#définition_formelle).
 
 > [!NOTE]
 > Les éléments HTML (pour <i lang="en">HyperText Markup Language</i> en anglais) étaient historiquement classés comme éléments «&nbsp;de niveau bloc&nbsp;» ou «&nbsp;en ligne&nbsp;». Cette caractéristique de présentation est désormais spécifiée par CSS.
