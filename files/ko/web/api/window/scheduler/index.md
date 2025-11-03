@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("Window")}} 인터페이스의 읽기 전용 속성인 **`scheduler`** 는 [우선순위 기반 작업 스케줄링 API](/ko/docs/Web/API/Prioritized_Task_Scheduling_API)를 사용하기 위한 진입점입니다.
 
-이는 작업의 우선 순위를 스케줄링하는 데에 사용되는 {{domxref('Scheduler.postTask', 'postTask()')}} 와 {{domxref('Scheduler.yield()', 'yield()')}} 메서드를 포함한 객체 인스턴스를 반환합니다.
+이는 작업의 우선 순위를 스케줄링하는 데에 사용되는 {{domxref('Scheduler.postTask', 'postTask()')}} 와 {{domxref('Scheduler.yield()', 'yield()')}} 메서드를 포함한 {{domxref("Scheduler")}} 객체 인스턴스를 반환합니다.
 
 ## 값
 
