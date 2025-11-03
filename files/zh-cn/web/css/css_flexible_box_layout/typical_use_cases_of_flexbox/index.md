@@ -113,7 +113,7 @@ nav li {
 
 另一种在主轴上对齐元素的方式就是使用自动外边距。这使得导航栏中一组元素左对齐而另一组元素右对齐的设计模式成为可能。这里我们使用在[使用自动的外边距在主轴上对齐](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#使用自动的外边距在主轴上对齐)这篇文章中介绍的自动外边距技术。
 
-元素在主轴上按照弹性盒子的初始行为 `flex-start` 进行对齐。使用 [`gap`](/zh-CN/docs/Web/CSS/gap) 属性以在元素之间创建间隔。同时我们为最后需要右对齐的元素添加自动左边距以对齐它们。你可以将那个类转移到其他元素上以改变分割作用的位置。
+元素在主轴上按照弹性盒子的初始行为 `flex-start` 进行对齐。使用 [`gap`](/zh-CN/docs/Web/CSS/Reference/Properties/gap) 属性以在元素之间创建间隔。同时我们为最后需要右对齐的元素添加自动左边距以对齐它们。你可以将那个类转移到其他元素上以改变分割作用的位置。
 
 ```html live-sample___split-navigation
 <nav>

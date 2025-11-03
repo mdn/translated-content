@@ -44,8 +44,8 @@ l10n:
 
 `@page` at 规则只能包含[页面描述符](#页面描述符)和[边距 at 规则](#边距_at_规则)。以下描述符至少已在一个浏览器中实现：
 
-- [`margin`](/zh-CN/docs/Web/CSS/margin)
-  - : 指定页边距。也可使用部分页边距属性 [`margin-top`](/zh-CN/docs/Web/CSS/margin-top)、[`margin-right`](/zh-CN/docs/Web/CSS/margin-right)、[`margin-bottom`](/zh-CN/docs/Web/CSS/margin-bottom) 和 [`margin-left`](/zh-CN/docs/Web/CSS/margin-left)。
+- [`margin`](/zh-CN/docs/Web/CSS/Reference/Properties/margin)
+  - : 指定页边距。也可使用部分页边距属性 [`margin-top`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-top)、[`margin-right`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-right)、[`margin-bottom`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-bottom) 和 [`margin-left`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-left)。
 - [`page-orientation`](/zh-CN/docs/Web/CSS/@page/page-orientation)
   - : 指定文档在页面上的方向，允许它进行正常的布局和格式化或者也可以将其向左或向右旋转。
 - [`size`](/zh-CN/docs/Web/CSS/@page/size)
@@ -282,7 +282,7 @@ l10n:
 
 可使用 {{Cssxref("page")}} 属性应用命名页面。这样，用户就可以创建不同的页面配置，用于打印布局。
 
-在 [`page`](/zh-CN/docs/Web/CSS/page#示例) 示例中可以找到这方面的例子。
+在 [`page`](/zh-CN/docs/Web/CSS/Reference/Properties/page#示例) 示例中可以找到这方面的例子。
 
 ## 示例
 

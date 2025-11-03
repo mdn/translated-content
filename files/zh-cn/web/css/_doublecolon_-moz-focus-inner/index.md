@@ -60,7 +60,7 @@ input[type="submit"]::-moz-focus-inner {
 
 - [Mozilla CSS 拓展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)
 - 相关 CSS 属性：
-  - [`-moz-user-focus`](/zh-CN/docs/Web/CSS/-moz-user-focus)
+  - [`-moz-user-focus`](/zh-CN/docs/Web/CSS/Reference/Properties/-moz-user-focus)
 
 - 相关 CSS 选择器：
   - [`:focus`](/zh-CN/docs/Web/CSS/:focus)

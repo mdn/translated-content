@@ -24,7 +24,7 @@ slug: Web/CSS/:root
 
 ### 声明全局 CSS 变量
 
-在声明全局 [CSS 变量](/zh-CN/docs/Web/CSS/--*)时 **`:root`** 会很有用：
+在声明全局 [CSS 变量](/zh-CN/docs/Web/CSS/Reference/Properties/--*)时 **`:root`** 会很有用：
 
 ```css
 :root {

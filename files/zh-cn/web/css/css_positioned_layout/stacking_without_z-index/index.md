@@ -11,7 +11,7 @@ l10n:
 2. 后代非定位元素，按在 HTML 中出现的顺序排列。
 3. 后代定位元素，按在 HTML 中出现的顺序排列。
 
-请参阅[定位类型](/zh-CN/docs/Web/CSS/position#定位类型)以了解定位元素和非定位元素的解释。
+请参阅[定位类型](/zh-CN/docs/Web/CSS/Reference/Properties/position#定位类型)以了解定位元素和非定位元素的解释。
 
 请记住，当 {{cssxref("order")}} 属性在 {{cssxref("flex")}} 容器内改变渲染顺序（_基于 HTML 中的出现顺序_）时，它也会影响层叠上下文的顺序。
 

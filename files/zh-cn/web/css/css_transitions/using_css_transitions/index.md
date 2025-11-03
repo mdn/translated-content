@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 
 ![CSS 过渡告诉浏览器绘制初始和最终状态之间的中间状态，向用户展示一个平滑的过渡](transitionsprinciple.png)
 
-CSS 过渡可以决定哪些属性发生动画效果（通过[_明确地列出这些属性_](/zh-CN/docs/Web/CSS/transition-property)），何时开始（通过设置[_延时_](/zh-CN/docs/Web/CSS/transition-delay)），持续多久（通过设置[_时长_](/zh-CN/docs/Web/CSS/transition-duration)）以及如何动画（通过定义[_缓动函数_](/zh-CN/docs/Web/CSS/transition-timing-function)，比如线性或先快后慢）。
+CSS 过渡可以决定哪些属性发生动画效果（通过[_明确地列出这些属性_](/zh-CN/docs/Web/CSS/Reference/Properties/transition-property)），何时开始（通过设置[_延时_](/zh-CN/docs/Web/CSS/Reference/Properties/transition-delay)），持续多久（通过设置[_时长_](/zh-CN/docs/Web/CSS/Reference/Properties/transition-duration)）以及如何动画（通过定义[_缓动函数_](/zh-CN/docs/Web/CSS/Reference/Properties/transition-timing-function)，比如线性或先快后慢）。
 
 ## 哪些 CSS 属性可用于过渡？
 
