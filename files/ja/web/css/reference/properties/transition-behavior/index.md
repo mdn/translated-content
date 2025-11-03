@@ -1,9 +1,8 @@
 ---
 title: transition-behavior
 slug: Web/CSS/Reference/Properties/transition-behavior
-original_slug: Web/CSS/transition-behavior
 l10n:
-  sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
@@ -101,7 +100,7 @@ transition-behavior: unset;
 
 ```css hidden
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 [popover] {

@@ -1,9 +1,8 @@
 ---
 title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
-original_slug: Web/CSS/background-origin
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
@@ -27,7 +26,7 @@ background-repeat: no-repeat;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+  <div id="example-element">これは要素のコンテンツです。</div>
 </section>
 ```
 
@@ -37,7 +36,7 @@ background-repeat: no-repeat;
   color: #d73611;
   text-shadow: 2px 2px black;
   padding: 20px;
-  border: 10px dashed #333;
+  border: 10px dashed #333333;
   font-size: 2em;
   font-weight: bold;
 }
@@ -68,7 +67,7 @@ background-origin: unset;
 - `border-box`
   - : 背景は境界ボックスからの相対位置になります。
 - `padding-box`
-  - : 背景はパディングボックスからの相対位置になります。
+  - : 背景はパディングボックスからの相対位置になります。デフォルト値です。
 - `content-box`
   - : 背景はコンテンツボックスからの相対位置になります。
 
@@ -107,7 +106,7 @@ background-origin: unset;
 ```css
 div {
   background-image:
-    url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
+    url("logo.jpg"), url("main-back.png"); /* 背景に 2 つの画像を適用 */
   background-position:
     top right,
     0px 0px;
@@ -122,7 +121,7 @@ div {
 ```css
 .box {
   margin: 10px 0;
-  color: #fff;
+  color: white;
   background:
     linear-gradient(
       90deg,
@@ -130,7 +129,7 @@ div {
       rgb(253 29 29 / 60%) 60%,
       rgb(252 176 69 / 100%) 100%
     ),
-    radial-gradient(circle, rgb(255 255 255 / 100%) 0%, rgb(0 0 0 / 100%) 28%);
+    radial-gradient(circle, white 0%, black 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;
