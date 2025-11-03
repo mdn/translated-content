@@ -1,5 +1,5 @@
 ---
-title: Array.prototype.reduce()
+title: "Array : méthode reduce()"
 short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 l10n:
