@@ -66,11 +66,11 @@ transition: all 1s ease-out;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior) {{experimental_inline}}
-- [`transition-delay`](/ja/docs/Web/CSS/transition-delay)
-- [`transition-duration`](/ja/docs/Web/CSS/transition-duration)
-- [`transition-property`](/ja/docs/Web/CSS/transition-property)
-- [`transition-timing-function`](/ja/docs/Web/CSS/transition-timing-function)
+- [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) {{experimental_inline}}
+- [`transition-delay`](/ja/docs/Web/CSS/Reference/Properties/transition-delay)
+- [`transition-duration`](/ja/docs/Web/CSS/Reference/Properties/transition-duration)
+- [`transition-property`](/ja/docs/Web/CSS/Reference/Properties/transition-property)
+- [`transition-timing-function`](/ja/docs/Web/CSS/Reference/Properties/transition-timing-function)
 
 ## 構文
 

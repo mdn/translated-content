@@ -74,8 +74,8 @@ scroll-margin-block: 2em;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-margin-block-end`](/ja/docs/Web/CSS/scroll-margin-block-end)
-- [`scroll-margin-block-start`](/ja/docs/Web/CSS/scroll-margin-block-start)
+- [`scroll-margin-block-end`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-block-end)
+- [`scroll-margin-block-start`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-block-start)
 
 ## 構文
 

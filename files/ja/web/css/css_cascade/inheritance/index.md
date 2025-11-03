@@ -18,7 +18,7 @@ CSS プロパティは 2 種類に分類することができます。
 
 要素の**継承プロパティ**に値が指定されなかった場合、要素はその親要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)を取得します。文書のルート要素だけは、プロパティの概要で与えられた[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を取得します。
 
-継承プロパティの一般例として [`color`](/ja/docs/Web/CSS/color) プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
+継承プロパティの一般例として [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
 
 ```css
 p {
@@ -32,7 +32,7 @@ p {
 
 {{EmbedLiveSample("Inherited properties","",40)}}
 
-「強調されたテキスト」という文字列は、 `em` 要素が `p` 要素から [`color`](/ja/docs/Web/CSS/color) プロパティの値を継承する為、プロパティの初期値 (※祖先要素の何れにも color プロパティが指定されていない場合に使用される文字色) ではなく、継承値の緑色となります。
+「強調されたテキスト」という文字列は、 `em` 要素が `p` 要素から [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティの値を継承する為、プロパティの初期値 (※祖先要素の何れにも color プロパティが指定されていない場合に使用される文字色) ではなく、継承値の緑色となります。
 
 ## 非継承プロパティ
 
@@ -58,7 +58,7 @@ p {
 
 [`inherit`](/ja/docs/Web/CSS/inherit) のキーワードで、明示的に継承することを指定することができます。これはこれは継承プロパティでも非継承プロパティでも動作します。
 
-すべてのプロパティに値を適用する [`all`](/ja/docs/Web/CSS/all) 一括指定プロパティを使用することで、すべてのプロパティの継承を制御することができます。例えば、
+すべてのプロパティに値を適用する [`all`](/ja/docs/Web/CSS/Reference/Properties/all) 一括指定プロパティを使用することで、すべてのプロパティの継承を制御することができます。例えば、
 
 ```css
 p {
@@ -68,11 +68,11 @@ p {
 }
 ```
 
-これは、 [`font`](/ja/docs/Web/CSS/font) プロパティのスタイルを、ユーザーのスタイルシートがなければユーザーエージェントの既定値に、あればその値に戻します。それからフォントの寸法を倍にして、 [`font-weight`](/ja/docs/Web/CSS/font-weight) に `"bold"` を適用します。
+これは、 [`font`](/ja/docs/Web/CSS/Reference/Properties/font) プロパティのスタイルを、ユーザーのスタイルシートがなければユーザーエージェントの既定値に、あればその値に戻します。それからフォントの寸法を倍にして、 [`font-weight`](/ja/docs/Web/CSS/Reference/Properties/font-weight) に `"bold"` を適用します。
 
 ### 継承のオーバーライドの一例
 
-前回の [`border`](/ja/docs/Web/CSS/border) を使用した例で、 `inherit` で継承を明示的に設定すると次のようになります。
+前回の [`border`](/ja/docs/Web/CSS/Reference/Properties/border) を使用した例で、 `inherit` で継承を明示的に設定すると次のようになります。
 
 ```css
 p {

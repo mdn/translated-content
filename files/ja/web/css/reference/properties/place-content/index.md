@@ -62,8 +62,8 @@ place-content: end;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`align-content`](/ja/docs/Web/CSS/align-content)
-- [`justify-content`](/ja/docs/Web/CSS/justify-content)
+- [`align-content`](/ja/docs/Web/CSS/Reference/Properties/align-content)
+- [`justify-content`](/ja/docs/Web/CSS/Reference/Properties/justify-content)
 
 ## 構文
 

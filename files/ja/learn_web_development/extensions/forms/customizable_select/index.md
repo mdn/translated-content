@@ -347,7 +347,7 @@ option::checkmark {
   - : ポップオーバーが非表示から表示に変わるとき、`overlay` の値が `none` から `auto` に変わり、トップレイヤーに昇格し、非表示になったときに再び戻って削除されます。これはトランジションが完了するまでトップレイヤーからのポップオーバーの削除が延期され、トランジションが確実に見えるように、アニメーションする必要があります。
 
 > [!NOTE]
-> [`allow-discrete`](/ja/docs/Web/CSS/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
+> [`allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
 
 次に、`::picker(select):popover-open` で表示状態のピッカーを選択し、`opacity` を `1` にします。これがトランジションの終了状態です。
 

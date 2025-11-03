@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
-**`ray()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、アニメーションする要素がたどることができる [`offset-path`](/ja/docs/Web/CSS/offset-path) の線分を定義します。この線分は「光線」と呼ばれます。光線は {{cssxref("offset-position")}} から始まり、指定された角度の方向に伸びます。光線の長さは、サイズを指定し、 `contain` キーワードを使用することで制約することができます。
+**`ray()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、アニメーションする要素がたどることができる [`offset-path`](/ja/docs/Web/CSS/Reference/Properties/offset-path) の線分を定義します。この線分は「光線」と呼ばれます。光線は {{cssxref("offset-position")}} から始まり、指定された角度の方向に伸びます。光線の長さは、サイズを指定し、 `contain` キーワードを使用することで制約することができます。
 
 ## 構文
 
@@ -52,7 +52,7 @@ offset-path: ray(45deg);
 
 `ray()` は 2D 空間で作用するため、要素の初期位置と方向の両方を考慮することが重要です。 `ray()` 関数を要素の `offset-path` 値として適用する場合、これらの要素を次のように制御できます。
 
-- 要素は最初に、要素の [`offset-anchor`](/ja/docs/Web/CSS/offset-anchor) の点を要素のオフセット開始位置に移動することで位置指定されます。既定では、光線の開始位置は {{cssxref("offset-position")}} 値によって決定されます。 `offset-position` が明示的に `normal` として指定されている場合（または省略され、 `normal` が既定値として使用されている場合）、要素は、その包含ブロックの `center` （または `50% 50%`）に位置します。 `offset-position: auto` を指定すると、開始位置は要素の位置の 左上隅（または `0 0`）に設定されます。
+- 要素は最初に、要素の [`offset-anchor`](/ja/docs/Web/CSS/Reference/Properties/offset-anchor) の点を要素のオフセット開始位置に移動することで位置指定されます。既定では、光線の開始位置は {{cssxref("offset-position")}} 値によって決定されます。 `offset-position` が明示的に `normal` として指定されている場合（または省略され、 `normal` が既定値として使用されている場合）、要素は、その包含ブロックの `center` （または `50% 50%`）に位置します。 `offset-position: auto` を指定すると、開始位置は要素の位置の 左上隅（または `0 0`）に設定されます。
 - 要素は、その[インライン軸](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout#the_two_axes_of_a_grid_layout)（テキストの流れる方向）が `ray()` で指定された角度と一致するように、最初に回転します。例えば、 `ray()` の角度を `0deg` （Y 軸の上向き）に設定すると、要素のインライン軸は、光線の角度と一致するように垂直に回転します。要素は、パス全体を通してこの回転を維持します。この動作をカスタマイズするには、 {{cssxref("offset-rotate")}} プロパティを使用します。このプロパティを使用すると、要素の回転角度や方向を個別に指定でき、パスに沿った外観をより正確に制御できます。例えば、 `offset-rotate: 0deg` を設定すると、 `ray()` によって適用された回転がすべて解除され、要素のインライン軸がテキストの流れる方向に再び整列されます。
 
 ## 形式文法
@@ -188,7 +188,7 @@ pre {
 </div>
 ```
 
-{{cssxref("transform-origin")}} と同様に、既定のアンカー点は要素の中心にあります。このアンカー点は、 [`offset-anchor`](/ja/docs/Web/CSS/offset-anchor) プロパティを使用して変更することができます。
+{{cssxref("transform-origin")}} と同様に、既定のアンカー点は要素の中心にあります。このアンカー点は、 [`offset-anchor`](/ja/docs/Web/CSS/Reference/Properties/offset-anchor) プロパティを使用して変更することができます。
 
 この例では、さまざまな `offset-path: ray()` 値が、 `1` から `5` までの番号が付けられたボックスに適用されています。各ボックスの「包含ブロック」は破線の境界線で示されています。左上隅の淡いボックスは、 `offset-position` および `offset-path` が適用されていない各ボックスの既定の位置を示しており、並べて比較することができます。各ボックスの上部は、光線の開始点と向きの違いを示すために、実線の境界線で強調表示されています。光線の開始点に配置されたボックスは、指定された光線の角度の方向に整列します。 {{cssxref("offset-position")}} が指定されていない場合、光線の既定のオフセット開始位置は、ボックスの包含ブロックの中心 （または `50% 50%`） になります。
 
@@ -200,7 +200,7 @@ pre {
 
 - `box2` では、光線の角度がどのように作用するかを表示させるために、より大きな正の値である `150deg` を光線に適用しています。左上隅から、指定した角度 `150deg` に達するまで、ボックスは時計回りに回転します。
 
-- `box2` と `box3` の `offset-path` 値は同じです。 `box3` では、 [`offset-rotate`](/ja/docs/Web/CSS/offset-rotate) の `0deg` も要素に適用されています。その結果、要素は光線の経路全体に沿ってこの特定の角度で回転したままになり、要素は経路の方向に回転することはありません。 `box3` で、光線の経路は `150deg` ですが、 `offset-rotate` により、ボックスの方向は経路に沿って変化しないことに注意してください。また、 `box3` の `offset-path` プロパティは開始位置の `<position>` を指定していないため、光線の開始位置は要素の `offset-position` から導出されます。この場合、 `top 20% left 40%` となります。
+- `box2` と `box3` の `offset-path` 値は同じです。 `box3` では、 [`offset-rotate`](/ja/docs/Web/CSS/Reference/Properties/offset-rotate) の `0deg` も要素に適用されています。その結果、要素は光線の経路全体に沿ってこの特定の角度で回転したままになり、要素は経路の方向に回転することはありません。 `box3` で、光線の経路は `150deg` ですが、 `offset-rotate` により、ボックスの方向は経路に沿って変化しないことに注意してください。また、 `box3` の `offset-path` プロパティは開始位置の `<position>` を指定していないため、光線の開始位置は要素の `offset-position` から導出されます。この場合、 `top 20% left 40%` となります。
 
 - `box4` の `offset-position` は、包含ブロックの左上隅 (`0 0`) に設定されているため、要素のアンカーポイントとオフセットの開始位置が一致します。この開始位置にある要素には、光線角度 `0deg` が適用されます。
 
@@ -336,6 +336,6 @@ offset-rotate: 0deg;
 
 ## 関連情報
 
-- [`offset-distance`](/ja/docs/Web/CSS/offset-distance)
-- [`offset-path`](/ja/docs/Web/CSS/offset-path)
-- [`offset-rotate`](/ja/docs/Web/CSS/offset-rotate)
+- [`offset-distance`](/ja/docs/Web/CSS/Reference/Properties/offset-distance)
+- [`offset-path`](/ja/docs/Web/CSS/Reference/Properties/offset-path)
+- [`offset-rotate`](/ja/docs/Web/CSS/Reference/Properties/offset-rotate)

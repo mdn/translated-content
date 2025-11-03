@@ -49,9 +49,9 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-inline-start-color`](/ja/docs/Web/CSS/border-inline-start-color)
-- [`border-inline-start-style`](/ja/docs/Web/CSS/border-inline-start-style)
-- [`border-inline-start-width`](/ja/docs/Web/CSS/border-inline-start-width)
+- [`border-inline-start-color`](/ja/docs/Web/CSS/Reference/Properties/border-inline-start-color)
+- [`border-inline-start-style`](/ja/docs/Web/CSS/Reference/Properties/border-inline-start-style)
+- [`border-inline-start-width`](/ja/docs/Web/CSS/Reference/Properties/border-inline-start-width)
 
 ## 構文
 

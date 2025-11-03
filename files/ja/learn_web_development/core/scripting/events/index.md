@@ -108,7 +108,7 @@ btn.addEventListener("click", () => {
 HTML の {{HTMLElement("button")}} 要素は、ユーザーがそれをクリックすると `click` イベントを発行します。イベントリスナーを追加するために、その要素に対して `addEventListener()` メソッドを呼び出します。このメソッドは 2 つの引数を取ります。
 
 - 文字列 `"click"` で、クリックイベントを待ち受けしたいことを示します。ボタンは他にもたくさんのイベントを発行することができます。例えば、ユーザーがマウスをボタンの上に移動させたときに [`"mouseover"`](/ja/docs/Web/API/Element/mouseover_event) を発行したり、ユーザーがキーを押してボタンにフォーカスが当たったときに [`"keydown"`](/ja/docs/Web/API/Element/keydown_event) を発行したりすることができます。
-- イベント発生時に呼び出す関数です。この場合、定義されているこの無名関数はランダムな RGB の色を生成し、その色の [`background-color`](/ja/docs/Web/CSS/background-color) を [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) に設定します。
+- イベント発生時に呼び出す関数です。この場合、定義されているこの無名関数はランダムな RGB の色を生成し、その色の [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) を [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) に設定します。
 
 別個の名前付き関数を作成し、`addEventListener()` の 2 つ目の引数でそれを参照することもできます。
 

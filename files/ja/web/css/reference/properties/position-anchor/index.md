@@ -59,7 +59,7 @@ position-anchor: unset;
 
 ## 例
 
-`anchor-name` の基本使用法については[基本的な使い方](/ja/docs/Web/CSS/anchor-name#基本的な使い方)を、追加の [`position-anchor` の例](/ja/docs/Web/CSS/anchor-name#例)については、それぞれの記事を参照してください。
+`anchor-name` の基本使用法については[基本的な使い方](/ja/docs/Web/CSS/Reference/Properties/anchor-name#基本的な使い方)を、追加の [`position-anchor` の例](/ja/docs/Web/CSS/Reference/Properties/anchor-name#例)については、それぞれの記事を参照してください。
 
 ### スライダーのつまみをアンカーとして使用
 

@@ -73,10 +73,10 @@ grid-area: 2 / 1 / 2 / 4;
 
 このプロパティは下記の CSS プロパティの一括指定です。
 
-- [`grid-row-start`](/ja/docs/Web/CSS/grid-row-start)
-- [`grid-column-start`](/ja/docs/Web/CSS/grid-column-start)
-- [`grid-row-end`](/ja/docs/Web/CSS/grid-row-end)
-- [`grid-column-end`](/ja/docs/Web/CSS/grid-column-end)
+- [`grid-row-start`](/ja/docs/Web/CSS/Reference/Properties/grid-row-start)
+- [`grid-column-start`](/ja/docs/Web/CSS/Reference/Properties/grid-column-start)
+- [`grid-row-end`](/ja/docs/Web/CSS/Reference/Properties/grid-row-end)
+- [`grid-column-end`](/ja/docs/Web/CSS/Reference/Properties/grid-column-end)
 
 ## 構文
 

@@ -10,7 +10,7 @@ l10n:
 
 ## 方向を使用して要素を回転
 
-[方向に関するデータ](/ja/docs/Web/API/Window/deviceorientation_event) を [3D 座標変換](/ja/docs/Web/CSS/transform) に変換する最も簡単な方法は、基本的に `alpha`、`gamma`、`beta` の値を `rotateZ`、`rotateX`、`rotateY` の値として使用することです。
+[方向に関するデータ](/ja/docs/Web/API/Window/deviceorientation_event) を [3D 座標変換](/ja/docs/Web/CSS/Reference/Properties/transform) に変換する最も簡単な方法は、基本的に `alpha`、`gamma`、`beta` の値を `rotateZ`、`rotateX`、`rotateY` の値として使用することです。
 
 ただし、[端末方向の座標系](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)は、 [CSS 座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)とは異なる形で記述されていることに留意する必要があります。すなわち、前者は[右手](https://ja.wikipedia.org/wiki/右手の法則)で Y 軸が正の値で上向き、後者は Y 軸が正の値で下向きの左手座標系です。さらに、端末方向の角度の回転は常に Z - X' - Y'' の順序で行われるべきですが、これはいくつかの [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms) の順序とは一致しません。このような違いが、現実的な結果をもたらします。
 

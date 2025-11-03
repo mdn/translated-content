@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`font-weight`** は CSS の {{cssxref("@font-face")}} 記述子で、作成者は、{{cssxref("@font-face")}} アットルールで指定したフォントに対して、単一のフォントの太さ、またはフォントの太さの範囲を指定することができます。これは、CSS ルールで目的の[フォントの太さ](/ja/docs/Web/CSS/font-weight)が設定されたときに、ブラウザーが適切なフォントを選択するために使用されます。
+**`font-weight`** は CSS の {{cssxref("@font-face")}} 記述子で、作成者は、{{cssxref("@font-face")}} アットルールで指定したフォントに対して、単一のフォントの太さ、またはフォントの太さの範囲を指定することができます。これは、CSS ルールで目的の[フォントの太さ](/ja/docs/Web/CSS/Reference/Properties/font-weight)が設定されたときに、ブラウザーが適切なフォントを選択するために使用されます。
 
 通常、開発者は、単一のフォントファミリーのフォントをさまざまな太さで使うことを望むでしょう。従来の、あるいは「静的」フォントでは、単一のフォントファイルには、特定の太さとスタイルを持つフォントファミリーの文字が含まれています。例えば、 "Helvetica bold italic" などです。 `font-weight` プロパティが特定のウェイトを呼び出すときに、ライト、レギュラー、ボールド、またはエクストラボールドのフォントを表示できるようにするには、同じファミリーに対して複数の {{cssxref("@font-face")}} アットルールを定義します（すべて同じ {{cssxref("@font-face/font-family", "font-family")}} 記述子の値を持つ）を、それぞれの太さまたは太さの範囲ごとに 1 つずつ定義します。
 
@@ -70,7 +70,7 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 
 ## アクセシビリティ
 
-弱視の人は、 `font-weight` の値が `100` (Thin/Hairline) または `200` (Extra Light) の場合、特にフォントの[コントラスト比が低い場合](/ja/docs/Web/CSS/color#アクセシビリティ)は、テキストを読むのが難しくなることがあります。
+弱視の人は、 `font-weight` の値が `100` (Thin/Hairline) または `200` (Extra Light) の場合、特にフォントの[コントラスト比が低い場合](/ja/docs/Web/CSS/Reference/Properties/color#アクセシビリティ)は、テキストを読むのが難しくなることがあります。
 
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)

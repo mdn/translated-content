@@ -153,7 +153,7 @@ ul::scroll-button(right) {
 }
 ```
 
-ブラウザーが自動的に適切な{{glossary("accessible name", "アクセシブル名")}}を指定するため、コンテンツ上のアイコンに[代替テキスト](/ja/docs/Web/CSS/content#代替テキスト_string_counter)を設定する必要はありません。
+ブラウザーが自動的に適切な{{glossary("accessible name", "アクセシブル名")}}を指定するため、コンテンツ上のアイコンに[代替テキスト](/ja/docs/Web/CSS/Reference/Properties/content#代替テキスト_string_counter)を設定する必要はありません。
 
 #### 結果
 

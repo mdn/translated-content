@@ -133,7 +133,7 @@ top および bottom のマージンは、[置換要素](/ja/docs/Glossary/Repla
 
 `margin: 0 auto;` を設定すると、親要素内で要素を水平方向に中央揃えすることができます。
 
-要素を水平方向に中央揃えにする一般的な方法としては、コンテナー内で `display: flex;` および [`justify-content: center;`](/ja/docs/Web/CSS/justify-content) を設定する方法があります。これにより、[フレックスアイテムの子要素が中央揃え](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)になります。
+要素を水平方向に中央揃えにする一般的な方法としては、コンテナー内で `display: flex;` および [`justify-content: center;`](/ja/docs/Web/CSS/Reference/Properties/justify-content) を設定する方法があります。これにより、[フレックスアイテムの子要素が中央揃え](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)になります。
 
 ### マージンの相殺
 

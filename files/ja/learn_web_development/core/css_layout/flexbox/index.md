@@ -76,9 +76,9 @@ section {
 
 ここで何が起こっているのかを復習しましょう。要素に {{cssxref("display")}} を `flex` の値で追加すると、その要素はフレックスコンテナーになります。コンテナーは、ページの他の部分と相互作用するという点で、[ブロックレベルのコンテンツ](/ja/docs/Glossary/Block-level_content)として表示されます。要素がフレックスコンテナーに変換されると、その子要素はフレックスアイテムに変換されます。
 
-コンテナーをインラインにするには、このコンテナー自体がページ内でどのようにレイアウトされるかを指定する[外側の `display` 値](/ja/docs/Web/CSS/display#outside)（例: `display: inline flex`）を使用することができます。
+コンテナーをインラインにするには、このコンテナー自体がページ内でどのようにレイアウトされるかを指定する[外側の `display` 値](/ja/docs/Web/CSS/Reference/Properties/display#outside)（例: `display: inline flex`）を使用することができます。
 古い値である `inline-flex` は、コンテナーをインラインとして表示します。
-このチュートリアルでは、コンテナーの中身がどのように振る舞うかに焦点を当てますが、インラインレイアウトとブロックレイアウトの効果の違いを見たければ、 `display` プロパティページの [値の比較](/ja/docs/Web/CSS/display#display_値の比較)で見ることができます。
+このチュートリアルでは、コンテナーの中身がどのように振る舞うかに焦点を当てますが、インラインレイアウトとブロックレイアウトの効果の違いを見たければ、 `display` プロパティページの [値の比較](/ja/docs/Web/CSS/Reference/Properties/display#display_値の比較)で見ることができます。
 
 次の節では、フレックスアイテムとは何か、フレックスコンテナーの中にすると要素の中で何が起こるかについて詳しく説明します。
 
@@ -254,7 +254,7 @@ button:first-child {
 - 上記で使用した値、`space-around` は便利です。 両端に少しの空間を残して、すべてのアイテムを主軸に沿って均等に配置します。
 - もう 1 つの値、`space-between` があります。 これは、両端に空間を残さないという点を除けば、`space-around` にとてもよく似ています。
 
-[`justify-items`](/ja/docs/Web/CSS/justify-items) プロパティはフレックスボックスレイアウトでは無視されます。
+[`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) プロパティはフレックスボックスレイアウトでは無視されます。
 
 続ける前に、これらの値を使用してそれらがどのように機能するかを確認することをお勧めします。
 

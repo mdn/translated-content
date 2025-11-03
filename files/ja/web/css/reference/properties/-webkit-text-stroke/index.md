@@ -25,8 +25,8 @@ text-stroke: 4px navy;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`-webkit-text-stroke-color`](/ja/docs/Web/CSS/-webkit-text-stroke-color)
-- [`-webkit-text-stroke-width`](/ja/docs/Web/CSS/-webkit-text-stroke-width)
+- [`-webkit-text-stroke-color`](/ja/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-color)
+- [`-webkit-text-stroke-width`](/ja/docs/Web/CSS/Reference/Properties/-webkit-text-stroke-width)
 
 ## 構文
 

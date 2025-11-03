@@ -92,10 +92,10 @@ content-visibility: unset;
 
 この動作は、望みどおりに出現・消滅アニメーションを生成する場合、例えば、 `content-visibility: hidden` で DOM から何かコンテンツを除去したいが、すぐに消えてしまうのではなく、（フェードアウトのように）スムーズに遷移させたい場合に有益です。
 
-`content-visibility` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。これにより、 `content-visibility` のトランジションが有効になります。
+`content-visibility` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。これにより、 `content-visibility` のトランジションが有効になります。
 
 > [!NOTE]
-> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
+> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
 ## 公式定義
 
@@ -230,7 +230,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### CSS
 
-CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframes` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
+CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframes` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/Reference/Properties/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
 
 ```css
 div {
@@ -319,6 +319,6 @@ function showHide() {
 ## 関連情報
 
 - [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
-- [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size)
+- [`contain-intrinsic-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-size)
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)

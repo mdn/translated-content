@@ -53,9 +53,9 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-color`](/ja/docs/Web/CSS/border-block-color)
-- [`border-block-style`](/ja/docs/Web/CSS/border-block-style)
-- [`border-block-width`](/ja/docs/Web/CSS/border-block-width)
+- [`border-block-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-color)
+- [`border-block-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-style)
+- [`border-block-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-width)
 
 ## 構文
 

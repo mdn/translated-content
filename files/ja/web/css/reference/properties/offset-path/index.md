@@ -123,7 +123,7 @@ offset-path: unset;
 `offset-path` プロパティは、 `<offset-path>` 値、 [`<coord-box>`](/ja/docs/Web/CSS/box-edge#値) 値、またはその両方、あるいは `none` キーワードを値として導きます。 `<offset-path>` 値は {{cssxref("ray","ray()")}} 関数、 {{cssxref("url_value", "&lt;url&gt;")}} 値、または [`<basic-shape>`](/ja/docs/Web/CSS/basic-shape) 値です。
 
 - `none`
-  - : 要素がオフセットパスをたどらないことを指定します。値 `none` は、要素が[オフセット変換](/ja/docs/Web/CSS/offset)を持たないことと同じです。この場合、要素の動きは、オフセットパスではなく、 {{cssxref("top")}} や {{cssxref("left")}} などの既定の位置プロパティによって決まります。これは既定値です。
+  - : 要素がオフセットパスをたどらないことを指定します。値 `none` は、要素が[オフセット変換](/ja/docs/Web/CSS/Reference/Properties/offset)を持たないことと同じです。この場合、要素の動きは、オフセットパスではなく、 {{cssxref("top")}} や {{cssxref("left")}} などの既定の位置プロパティによって決まります。これは既定値です。
 
 - `<offset-path>`
   - : `ray()` 関数、 `<url>` 値、または `<basic-shape>` 値で、幾何学的オフセットのパスを指定します。省略した場合、 `<coord-box>` 値のパス形状は `inset(0 round X)` となります。ここで `X` は、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)を確立する要素の {{cssxref("border-radius")}} の値です。

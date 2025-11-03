@@ -10,12 +10,12 @@ l10n:
 
 **`scroll-timeline-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインの名前を定義するために使用します。 `scroll-timeline-name` はタイムラインを提供するスクローラーに設定します。
 
-この名前はその後、 [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
+この名前はその後、 [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) 宣言で参照され、スクロールアクションを通してアニメーションの進行を使用するコンテナーの要素を示します。
 
 > [!NOTE]
 > 要素が軸方向の寸法においてそのコンテナーをオーバーフローしない場合、またはオーバーフローが非表示またはクリップされる場合、タイムラインは作成されません。
 
-{{cssxref("scroll-timeline-axis")}} および `scroll-timeline-name` プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+{{cssxref("scroll-timeline-axis")}} および `scroll-timeline-name` プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -31,7 +31,7 @@ scroll-timeline-name: --custom_name_for_timeline;
 - `none`
   - : このタイムラインには名前がありません。
 - `<dashed-ident>`
-  - : Aスクロール進行タイムラインの名前を定義する任意のカスタム識別子で、 [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
+  - : Aスクロール進行タイムラインの名前を定義する任意のカスタム識別子で、 [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) プロパティで参照することができます。
 
     > [!NOTE]
     > [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
@@ -64,7 +64,7 @@ scroll-timeline-name: --custom_name_for_timeline;
 
 #### CSS
 
-コンテナー用の CSS では、`--squareTimeline` という名前のスクロールタイムラインのソースとして、`scroll-timeline-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/Web/CSS/scroll-timeline-axis)は定義しません。
+コンテナー用の CSS では、`--squareTimeline` という名前のスクロールタイムラインのソースとして、`scroll-timeline-name` プロパティを使用して設定します。既定で縦軸を使用するので、[スクロールバー軸](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-axis)は定義しません。
 
 コンテナーの高さは `300px` に設定し、コンテナーがはみ出した場合は垂直スクロールバーを作成するように設定します（下記の `stretcher` 要素の CSS `height` ルールはコンテンツをコンテナーからはみ出させます）。
 
@@ -127,7 +127,7 @@ scroll-timeline-name: --custom_name_for_timeline;
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-axis)
 - {{cssxref("timeline-scope")}}
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

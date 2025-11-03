@@ -53,9 +53,9 @@ direction: rtl;
 
 このプロパティは下記の CSS プロパティの一括指定です。
 
-- [`border-inline-color`](/ja/docs/Web/CSS/border-inline-color)
-- [`border-inline-style`](/ja/docs/Web/CSS/border-inline-style)
-- [`border-inline-width`](/ja/docs/Web/CSS/border-inline-width)
+- [`border-inline-color`](/ja/docs/Web/CSS/Reference/Properties/border-inline-color)
+- [`border-inline-style`](/ja/docs/Web/CSS/Reference/Properties/border-inline-style)
+- [`border-inline-width`](/ja/docs/Web/CSS/Reference/Properties/border-inline-width)
 
 ## 構文
 

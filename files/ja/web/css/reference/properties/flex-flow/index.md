@@ -59,8 +59,8 @@ flex-flow: column wrap;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`flex-direction`](/ja/docs/Web/CSS/flex-direction)
-- [`flex-wrap`](/ja/docs/Web/CSS/flex-wrap)
+- [`flex-direction`](/ja/docs/Web/CSS/Reference/Properties/flex-direction)
+- [`flex-wrap`](/ja/docs/Web/CSS/Reference/Properties/flex-wrap)
 
 ## 構文
 

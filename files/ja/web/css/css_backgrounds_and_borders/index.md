@@ -175,9 +175,9 @@ div:first-of-type {
 - {{cssxref("text-shadow")}} プロパティ
 
 - {{cssxref("url_value", "&lt;url&gt;")}} データ型
-- [`<color>`](/ja/docs/Web/CSS/color) データ型
+- [`<color>`](/ja/docs/Web/CSS/Reference/Properties/color) データ型
 - [`<image>`](/ja/docs/Web/CSS/image) データ型
-- [`<position>`](/ja/docs/Web/CSS/position) データ型
+- [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position) データ型
 
 - [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) キーワード
 

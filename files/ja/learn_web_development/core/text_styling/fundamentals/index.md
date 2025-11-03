@@ -421,7 +421,7 @@ text-shadow: 4px 4px 5px red;
 1. 元のテキストからの影の水平方向のオフセット。これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができますが、最も一般的には `px` を使用します。この値は含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット。基本的に水平方向のオフセットと同じようにふるまいますが、影を左右ではなく上下に移動する点が異なります。 この値は含める必要があります。
 3. ぼかし半径。値が大きいほど、影はより広く拡散されます。 この値が含まれていない場合、既定値は 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/color) プロパティから導かれます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティから導かれます。
 
 #### 複数の影
 

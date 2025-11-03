@@ -84,7 +84,7 @@ container-type: unset;
 
 - コンテナーのコンテンツが部分的にスクロールされているかどうか。
 - コンテナーがスクロールスナップコンテナーにスナップされているスナップターゲットであるかどうか。
-- コンテナーが [`position: sticky`](/ja/docs/Web/CSS/display) によって位置指定され、{{glossary("scroll container", "スクロールコンテナー")}}の境界に貼り付いているかどうか。
+- コンテナーが [`position: sticky`](/ja/docs/Web/CSS/Reference/Properties/display) によって位置指定され、{{glossary("scroll container", "スクロールコンテナー")}}の境界に貼り付いているかどうか。
 
 最初のケースでは、クエリーの対象となるコンテナーはスクロールコンテナーそのものです。他の 2 件の場合、クエリーの対象となるコンテナーは、親スクロールコンテナーのスクロール位置の影響を受ける要素です。
 

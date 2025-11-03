@@ -39,7 +39,7 @@ em {
 
 {{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
 
-この例では `initial` キーワードにより、`em` 要素の `color` 値は、仕様書で定義されている [`color`](/ja/docs/Web/CSS/color#公式定義) の初期値に戻されます。
+この例では `initial` キーワードにより、`em` 要素の `color` 値は、仕様書で定義されている [`color`](/ja/docs/Web/CSS/Reference/Properties/color#公式定義) の初期値に戻されます。
 
 ## 仕様書
 

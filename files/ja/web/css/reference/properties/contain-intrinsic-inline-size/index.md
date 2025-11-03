@@ -9,7 +9,7 @@ l10n:
 **`contain-intrinsic-inline-size`** は [CSS](/ja/docs/Web/CSS) の[論理プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)で、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の対象となっている場合に、ブラウザーがレイアウトに使用することができる要素のインラインサイズを定義します。
 
 インラインサイズとは、行内のテキストの流れに対して並列方向の要素のサイズのことです。
-標準的な英語のような横書きの[書字方向](/ja/docs/Web/CSS/writing-mode)では、インラインサイズは水平方向（幅）です。縦書きの場合、インラインサイズは垂直方向です。
+標準的な英語のような横書きの[書字方向](/ja/docs/Web/CSS/Reference/Properties/writing-mode)では、インラインサイズは水平方向（幅）です。縦書きの場合、インラインサイズは垂直方向です。
 
 ## 構文
 
@@ -46,14 +46,14 @@ contain-intrinsic-inline-size: unset;
 
 ## 解説
 
-このプロパティは、[`contain: size`](/ja/docs/Web/CSS/contain) や [`content-visibility`](/ja/docs/Web/CSS/content-visibility) のような、サイズ拘束を発生させる要素に沿ったプロパティとして一般的に適用されます。
+このプロパティは、[`contain: size`](/ja/docs/Web/CSS/Reference/Properties/contain) や [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) のような、サイズ拘束を発生させる要素に沿ったプロパティとして一般的に適用されます。
 
 サイズ拘束により、ユーザーエージェントは、要素が固定サイズであるかのようにレイアウトすることができます。これは、実際のサイズを決定するために子要素の再描画を避けることによって、不必要なリフローを防ぎます（それによって、ユーザー体験を向上させます）。
 既定では、サイズ拘束は要素をコンテンツを持たないものとして扱い、コンテンツに幅や高さがないのと同じ方法でレイアウトを崩すことができます。
 `contain-intrinsic-inline-size` プロパティにより、レイアウトのインラインサイズとして使用する適切な値を指定することができます。
 
 `auto <length>` 値は、要素が（子要素とともに）「通常レンダリング」される場合に要素のインラインサイズを格納し、要素がコンテンツを持っていない場合に指定した値の代わりに使用することができます。
-これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/content-visibility) を持つ画面外の要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
+これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を持つ画面外の要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
 子要素がレンダリングされる場合、記憶された値は使用されません（サイズ拘束が有効な場合、`<length>` が使用されます）。
 
 ## 公式定義
@@ -76,7 +76,7 @@ contain-intrinsic-inline-size: unset;
 </div>
 ```
 
-下記の CSS では、`contained_element` の [`content-visibility`](/ja/docs/Web/CSS/content-visibility) を `auto` に設定するので、要素が非表示になるとサイズが拘束されます。
+下記の CSS では、`contained_element` の [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を `auto` に設定するので、要素が非表示になるとサイズが拘束されます。
 サイズ拘束されるときに使用する内在ブロックサイズとインラインサイズは、それぞれ `contain-intrinsic-block-size` と `contain-intrinsic-inline-size` を使用して同時に設定します。
 
 ```css

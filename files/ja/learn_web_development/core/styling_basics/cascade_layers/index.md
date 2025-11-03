@@ -70,7 +70,7 @@ CSS の C は "Cascading" （カスケード）の略です。スタイルが連
 
 それぞれのプロパティについて、「勝つ」宣言は、重さ（普通か重要か）に応じて、オリジンから優先されるものです。レイヤーを無視して、最も高い優先順位を持つオリジンからの値が取得されます。勝利したオリジンが要素に対して複数のプロパティ宣言を保有する場合、それらの競合するプロパティ値のセレクターの[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が比較されます。異なるオリジンからのセレクターの間で詳細度が比較されることはありません。
 
-下記の例には、2 つのリンクがあります。最初のリンクは作成者スタイルが適用されていないため、ユーザーエージェントスタイルのみが適用されます（ユーザースタイルがある場合は、そのスタイルも）。2 つ目は、作成者スタイルシート内のセレクターの詳細度が [`0-0-0`](/ja/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories) であるにもかかわらず、作成者スタイルによって [`text-decoration`](/ja/docs/Web/CSS/text-decoration) と [`color`](/ja/docs/Web/CSS/color) が設定されています。作成者スタイルが「勝つ」理由は、異なるオリジンからの競合スタイルがある場合、優先順位のないオリジンの詳細度に関係なく、優先順位のあるオリジンからのルールが適用されるからです。
+下記の例には、2 つのリンクがあります。最初のリンクは作成者スタイルが適用されていないため、ユーザーエージェントスタイルのみが適用されます（ユーザースタイルがある場合は、そのスタイルも）。2 つ目は、作成者スタイルシート内のセレクターの詳細度が [`0-0-0`](/ja/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories) であるにもかかわらず、作成者スタイルによって [`text-decoration`](/ja/docs/Web/CSS/Reference/Properties/text-decoration) と [`color`](/ja/docs/Web/CSS/Reference/Properties/color) が設定されています。作成者スタイルが「勝つ」理由は、異なるオリジンからの競合スタイルがある場合、優先順位のないオリジンの詳細度に関係なく、優先順位のあるオリジンからのルールが適用されるからです。
 
 ```html live-sample___basic-cascade
 <p><a href="https://example.org">ユーザーエージェントスタイル</a></p>

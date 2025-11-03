@@ -56,8 +56,8 @@ place-self: end center;
 
 根のプロパティは以下の CSS プロパティの一括指定です。
 
-- [`align-self`](/ja/docs/Web/CSS/align-self)
-- [`justify-self`](/ja/docs/Web/CSS/justify-self)
+- [`align-self`](/ja/docs/Web/CSS/Reference/Properties/align-self)
+- [`justify-self`](/ja/docs/Web/CSS/Reference/Properties/justify-self)
 
 ## 構文
 
@@ -130,7 +130,7 @@ place-self: unset;
 
 ### 簡単なデモ
 
-以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには [`justify-items`](/ja/docs/Web/CSS/justify-items) および [`align-items`](/ja/docs/Web/CSS/align-items) の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
+以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには [`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) および [`align-items`](/ja/docs/Web/CSS/Reference/Properties/align-items) の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
 2 番目、3 番目、4 番目のグリッドアイテムは、別々な `place-self` の値を指定し、これらが既定の配置をオーバーライドする様子を表示します。これらの値はグリッドアイテムの幅や高さを内容物の幅や高さに設定し、セルごとにブロック方向とインライン方向の両方で異なる位置に配置しています。
 
