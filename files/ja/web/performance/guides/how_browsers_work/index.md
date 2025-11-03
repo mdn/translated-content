@@ -181,7 +181,7 @@ AOM が構築されるまで、[スクリーンリーダー](/ja/docs/Web/Access
 
 スムーズなスクロールとアニメーションを実現するために、スタイルの計算や再フロー、描画などメインスレッドを占有するすべての処理は、16.67ms 未満で完了する必要があります。2048 x 1536 の解像度を持つ iPad には 3,145,000 を超えるピクセルがあります。これだけの大量のピクセルを高速に描画しなければいけません。2 回目以降の描画を最初の描画より高速にするため、一般的には画面への描画を複数のレイヤーに分解します。この場合には合成が必要になります。
 
-描画は描画ツリー内の要素をレイヤーに分解します。コンテンツを GPU (CPU 上のメインスレッドの代わりになる) 上のレイヤーに昇格させることで、描画と再描画のパフォーマンスを向上します。 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) や [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) など、レイヤーを生成する特定のプロパティと要素があります。 [`opacity`](/ja/docs/Web/CSS/opacity)、3D の [`transform`](/ja/docs/Web/CSS/transform)、[`will-change`](/ja/docs/Web/CSS/will-change)、その他いくつかの CSS プロパティを持つ要素も同様です。これらのノードは、その子孫が上記の理由でそれ自身のレイヤーを必要とするのでなければ、子孫と一緒に自身のレイヤー上に描画されます。
+描画は描画ツリー内の要素をレイヤーに分解します。コンテンツを GPU (CPU 上のメインスレッドの代わりになる) 上のレイヤーに昇格させることで、描画と再描画のパフォーマンスを向上します。 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) や [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) など、レイヤーを生成する特定のプロパティと要素があります。 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity)、3D の [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform)、[`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change)、その他いくつかの CSS プロパティを持つ要素も同様です。これらのノードは、その子孫が上記の理由でそれ自身のレイヤーを必要とするのでなければ、子孫と一緒に自身のレイヤー上に描画されます。
 
 レイヤーはパフォーマンスを改善しますが、メモリー管理の面ではコストのかかる処理です。そのため、ウェブのパフォーマンス最適化戦略の中で濫用するべきものではありません。
 

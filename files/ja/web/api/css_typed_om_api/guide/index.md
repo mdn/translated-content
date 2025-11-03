@@ -66,7 +66,7 @@ for (const [prop, val] of defaultComputedStyles) {
 
 {{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
 
-リンクの既定の CSS プロパティがいくつもあることが分かりましたか？ JavaScript の 2 行目を更新して、 {{htmlelement("a")}} ではなく {{htmlelement("p")}} を選択するようにしてみてください。 [`margin-top`](/ja/docs/Web/CSS/margin-top) と [`margin-bottom`](/ja/docs/Web/CSS/margin-bottom) の既定の計算値の違いに気が付くでしょう。
+リンクの既定の CSS プロパティがいくつもあることが分かりましたか？ JavaScript の 2 行目を更新して、 {{htmlelement("a")}} ではなく {{htmlelement("p")}} を選択するようにしてみてください。 [`margin-top`](/ja/docs/Web/CSS/Reference/Properties/margin-top) と [`margin-bottom`](/ja/docs/Web/CSS/Reference/Properties/margin-bottom) の既定の計算値の違いに気が付くでしょう。
 
 ### .get() メソッド / カスタムプロパティ
 
@@ -227,7 +227,7 @@ for (const value of ofInterest) {
 - [`<image>`](/ja/docs/Web/CSS/image) は {{domxref('CSSImageValue')}} を返します。
 - [`<color>`](/ja/docs/Web/CSS/color_value) は {{domxref('CSSStyleValue')}} を返します。
 - {{cssxref('transform')}} は `CSSTransformValue` を返します。
-- [カスタムプロパティ](/ja/docs/Web/CSS/--*)は {{domxref('CSSUnparsedValue')}} を返します。
+- [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)は {{domxref('CSSUnparsedValue')}} を返します。
 
 `CSSUnitValue` や `CSSKeywordValue` を使って、他のオブジェクトを作成することもできます。
 

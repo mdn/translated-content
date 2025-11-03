@@ -314,7 +314,7 @@ RGB は CRT を使用することを反映したハードウェア指向のも�
 
 - [アクセシビリティ](/ja/docs/Web/Accessibility)
 - [アクセシビリティの学習経路](/ja/docs/Learn_web_development/Core/Accessibility)
-- CSS の [`color`](/ja/docs/Web/CSS/color) プロパティ
+- CSS の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティ
 - [`<color>`](/ja/docs/Web/CSS/color_value) データ型
 - [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014

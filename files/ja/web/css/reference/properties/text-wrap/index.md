@@ -65,8 +65,8 @@ text-wrap: stable;
 
 このプロパティは、以下の CSS プロパティの一括指定です。
 
-- [`text-wrap-mode`](/ja/docs/Web/CSS/text-wrap-mode)
-- [`text-wrap-style`](/ja/docs/Web/CSS/text-wrap-style)
+- [`text-wrap-mode`](/ja/docs/Web/CSS/Reference/Properties/text-wrap-mode)
+- [`text-wrap-style`](/ja/docs/Web/CSS/Reference/Properties/text-wrap-style)
 
 ## 構文
 
@@ -97,7 +97,7 @@ text-wrap: unset;
 - `balance`
   - : テキストは、各行の文字数を均等にする方法で折り返し、レイアウトの品質と読みやすさを向上させます。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（Chromium では 6 行以下、Firefox では 10 行以下）のテキストブロックにのみ対応しています。
 - `pretty`
-  - : `wrap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/orphans)の数を最小に保つ必要がある場合など）。
+  - : `wrap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/Reference/Properties/orphans)の数を最小に保つ必要がある場合など）。
 - `stable`
   - : `wrap` と同じ動作になりますが、ユーザーがコンテンツを編集しているときに、テキストブロック全体が折り返されるのではなく、編集中の行よりも前の行が静止します。
 

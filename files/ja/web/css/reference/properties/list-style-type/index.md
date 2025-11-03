@@ -266,7 +266,7 @@ Mozilla (Firefox) は、いくつかの定義済みの型に `-moz-` 接頭辞�
 
 ## アクセシビリティ
 
-Safari は、 `list-style-type` の値が `none` である場合、順序付きまたは順序なしのリストをアクセシビリティツリー内のリストとして認識しません。この問題は、リストの開始タグに `role="list"` を追加することで解決できます。この問題と潜在的な回避策についての詳細は、 [`list-style`](/ja/docs/Web/CSS/list-style#アクセシビリティ)を参照してください。
+Safari は、 `list-style-type` の値が `none` である場合、順序付きまたは順序なしのリストをアクセシビリティツリー内のリストとして認識しません。この問題は、リストの開始タグに `role="list"` を追加することで解決できます。この問題と潜在的な回避策についての詳細は、 [`list-style`](/ja/docs/Web/CSS/Reference/Properties/list-style#アクセシビリティ)を参照してください。
 
 ## 公式定義
 

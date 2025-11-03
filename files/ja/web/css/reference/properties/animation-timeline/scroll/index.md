@@ -153,4 +153,4 @@ animation-timeline: scroll(x self);
 
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)

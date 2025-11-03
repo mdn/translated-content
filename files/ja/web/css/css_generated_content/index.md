@@ -98,7 +98,7 @@ div::before {
 
 {{EmbedLiveSample("generated_content", "", "400px")}}
 
-このサンプルの HTML は、空の {{HTMLElement("body")}} 内に 1 つの空の {{HTMLElement("div")}} があるだけです。雪だるまは、[CSS 画像](/ja/docs/Web/CSS/CSS_images)、[CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)を使用して作成されています。ニンジンの鼻は、生成コンテンツを使用して追加されています。これは、 {{cssxref("::before")}} 擬似要素に、幅の広いオレンジ色の[左境界線](/ja/docs/Web/CSS/border-left)が付いた空のボックスを追加したものです。テキストも生成コンテンツです。 {{cssxref("::after")}} 擬似要素に {{cssxref("content")}} プロパティを適用して、"only one &lt;div>" が生成されています。
+このサンプルの HTML は、空の {{HTMLElement("body")}} 内に 1 つの空の {{HTMLElement("div")}} があるだけです。雪だるまは、[CSS 画像](/ja/docs/Web/CSS/CSS_images)、[CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)を使用して作成されています。ニンジンの鼻は、生成コンテンツを使用して追加されています。これは、 {{cssxref("::before")}} 擬似要素に、幅の広いオレンジ色の[左境界線](/ja/docs/Web/CSS/Reference/Properties/border-left)が付いた空のボックスを追加したものです。テキストも生成コンテンツです。 {{cssxref("::after")}} 擬似要素に {{cssxref("content")}} プロパティを適用して、"only one &lt;div>" が生成されています。
 
 上記の例で "Play" をクリックすると、 MDN Playground でコードを表示または編集できます。
 
@@ -114,16 +114,16 @@ div::before {
 
 ### 関数
 
-CSS 生成コンテンツモジュールでは、まだ実装されていない 6 つの CSS 関数が導入されています。 `content()`, `string()`, `leader()`, および 3 つの [`<target>`](/ja/docs/Web/CSS/content#target) 関数である `target-counter()`, `target-counters()`, `target-text()` です。
+CSS 生成コンテンツモジュールでは、まだ実装されていない 6 つの CSS 関数が導入されています。 `content()`, `string()`, `leader()`, および 3 つの [`<target>`](/ja/docs/Web/CSS/Reference/Properties/content#target) 関数である `target-counter()`, `target-counters()`, `target-text()` です。
 
 ### データ型
 
-- [`<content-list>`](/ja/docs/Web/CSS/content)
+- [`<content-list>`](/ja/docs/Web/CSS/Reference/Properties/content)
 - `<content-replacement>` （{{cssxref("image")}} を参照）
 - {{cssxref("image")}}
-- [`<counter>`](/ja/docs/Web/CSS/content#counter)
-- [`<quote>`](/ja/docs/Web/CSS/content#quote)
-- [`<target>`](/ja/docs/Web/CSS/content#target)
+- [`<counter>`](/ja/docs/Web/CSS/Reference/Properties/content#counter)
+- [`<quote>`](/ja/docs/Web/CSS/Reference/Properties/content#quote)
+- [`<target>`](/ja/docs/Web/CSS/Reference/Properties/content#target)
 
 ## ガイド
 

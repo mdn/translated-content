@@ -21,7 +21,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - `<length-percentage [0,∞]>`
   - : 矩形の幅と高さを、非負の {{cssxref("&lt;length-percentage&gt;")}} 値で指定します。最小値は 0 であり、最大値に制限はありません。
 - `round <'border-radius'>`
-  - : CSS の [`border-radius`](/ja/docs/Web/CSS/border-radius) の一括指定プロパティと同じ構文を用いて、矩形の角の丸めの半径を指定します。この引数はオプションです。
+  - : CSS の [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) の一括指定プロパティと同じ構文を用いて、矩形の角の丸めの半径を指定します。この引数はオプションです。
 
 ## 例
 

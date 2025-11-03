@@ -115,7 +115,7 @@ appearance: checkbox;
 
 ### 接頭辞付きの標準外の値
 
-標準化以前、接頭辞付きプロパティである **`-moz-appearance`** および **`-webkit-appearance`** により、要素をボタンやチェックボックスなどのウィジェットとして示すことができるようになりました。古いスタイルシートでは、以下の標準外の値が使用されていることがあります。最も一般的なのは、シャドウ DOM 要素の[接頭辞付き擬似要素](/ja/docs/Web/CSS/WebKit_Extensions#擬似要素)の値としてです。
+標準化以前、接頭辞付きプロパティである **`-moz-appearance`** および **`-webkit-appearance`** により、要素をボタンやチェックボックスなどのウィジェットとして示すことができるようになりました。古いスタイルシートでは、以下の標準外の値が使用されていることがあります。最も一般的なのは、シャドウ DOM 要素の[接頭辞付き擬似要素](/ja/docs/Web/CSS/Reference/Webkit_extensions#擬似要素)の値としてです。
 
 <details>
 <summary>標準外の値</summary>

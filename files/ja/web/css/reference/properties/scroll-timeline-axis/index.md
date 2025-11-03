@@ -13,7 +13,7 @@ l10n:
 > [!NOTE]
 > スクローラー要素が軸方向のコンテナーをはみ出さないか、はみ出した部分が隠されているかクリップされている場合、スクロール進行タイムラインは作成されません。
 
-`scroll-timeline-axis` および {{cssxref("scroll-timeline-name")}} プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+`scroll-timeline-axis` および {{cssxref("scroll-timeline-name")}} プロパティは [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -140,7 +140,7 @@ body {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

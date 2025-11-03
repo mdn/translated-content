@@ -25,7 +25,7 @@ CSS フィルター効果モジュールの以下の 2 つのフィルタープ�
 
 ## フィルター関数
 
-CSS フィルター効果モジュールは、 10 個の [`<filter-function>`](/ja/docs/Web/CSS/filter#functions) 関数を提供するとともに、 `url()` 参照を使用して適用する SVG フィルターを使用して、無限に近い配列効果を定義する機能も提供します。
+CSS フィルター効果モジュールは、 10 個の [`<filter-function>`](/ja/docs/Web/CSS/Reference/Properties/filter#functions) 関数を提供するとともに、 `url()` 参照を使用して適用する SVG フィルターを使用して、無限に近い配列効果を定義する機能も提供します。
 
 次の表には、 10 個のフィルター関数と、それらの値の型、該当する場合は最小有効値、効果を作成する最大値、および[補間](/ja/docs/Glossary/Interpolation)に使用される初期値が掲載されています。
 

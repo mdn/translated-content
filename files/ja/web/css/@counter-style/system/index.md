@@ -338,7 +338,7 @@ ol {
 
 ### extends の例
 
-この例では、いくつかのネイティブの {{CSSXref("list-style-type")}} カウンター値の 1 つである [`lower-alpha`](/ja/docs/Web/CSS/list-style-type#lower-alpha) のアルゴリズム、記号、およびその他のプロパティを使用していますが、ピリオド (`'.'`) を削除し、`(a)` および `(b)` のように文字を括弧で囲むことで拡張しています。
+この例では、いくつかのネイティブの {{CSSXref("list-style-type")}} カウンター値の 1 つである [`lower-alpha`](/ja/docs/Web/CSS/Reference/Properties/list-style-type#lower-alpha) のアルゴリズム、記号、およびその他のプロパティを使用していますが、ピリオド (`'.'`) を削除し、`(a)` および `(b)` のように文字を括弧で囲むことで拡張しています。
 
 #### HTML
 

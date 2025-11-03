@@ -12,8 +12,8 @@ l10n:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`contain-intrinsic-width`](/ja/docs/Web/CSS/contain-intrinsic-width)
-- [`contain-intrinsic-height`](/ja/docs/Web/CSS/contain-intrinsic-height)
+- [`contain-intrinsic-width`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-width)
+- [`contain-intrinsic-height`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-height)
 
 ## 構文
 
@@ -62,14 +62,14 @@ contain-intrinsic-size: unset;
 
 ## 解説
 
-このプロパティは、[`contain: size`](/ja/docs/Web/CSS/contain) や [`content-visibility`](/ja/docs/Web/CSS/content-visibility) のような、サイズ格納を発生させる要素の横に並んだプロパティとして一般的に適用されます。
+このプロパティは、[`contain: size`](/ja/docs/Web/CSS/Reference/Properties/contain) や [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) のような、サイズ格納を発生させる要素の横に並んだプロパティとして一般的に適用されます。
 
 サイズ拘束は、ユーザーエージェントが要素をあたかも固定されたサイズを持っているかのようにレイアウトできるようにし、実際のサイズを決定するために子要素の再描画を避けることによって不必要なリフローを防ぎます（それによって使い勝手を向上させます）。
 既定では、サイズ拘束は要素をコンテンツがないものとして扱い、コンテンツに幅や高さがない場合と同様にレイアウトを折りたたむ可能性があります。
 `contain-intrinsic-size` プロパティを使用すると、レイアウトに使用するサイズとして適切な値を指定することができます。
 
 `auto <length>` 値では、要素が（子要素とともに）「通常レンダリングされる」場合の要素のサイズを指定することができ、要素がコンテンツをスキップするときに代わりに指定した長さを使用できるようにします。
-これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/content-visibility) を持つオフスクリーン要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
+これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を持つオフスクリーン要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
 子要素がレンダリングされる場合、記憶された値は使用されません（サイズの格納が有効な場合、`<length>`は使用されません）。
 
 グリッドレイアウトや段組みレイアウトでは、明示的にサイズを指定すると、暗黙的なコンテンツベースの高さとは異なる扱いを受けます。

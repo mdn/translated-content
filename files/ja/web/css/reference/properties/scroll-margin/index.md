@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど [`margin`](/ja/docs/Web/CSS/margin) プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
+**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど [`margin`](/ja/docs/Web/CSS/Reference/Properties/margin) プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
 
 {{InteractiveExample("CSS デモ: scroll-margin")}}
 
@@ -74,10 +74,10 @@ scroll-margin: 2em;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-margin-bottom`](/ja/docs/Web/CSS/scroll-margin-bottom)
-- [`scroll-margin-left`](/ja/docs/Web/CSS/scroll-margin-left)
-- [`scroll-margin-right`](/ja/docs/Web/CSS/scroll-margin-right)
-- [`scroll-margin-top`](/ja/docs/Web/CSS/scroll-margin-top)
+- [`scroll-margin-bottom`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-bottom)
+- [`scroll-margin-left`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-left)
+- [`scroll-margin-right`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-right)
+- [`scroll-margin-top`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-top)
 
 ## 構文
 

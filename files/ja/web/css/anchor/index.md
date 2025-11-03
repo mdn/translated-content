@@ -39,10 +39,10 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 引数は次の通りです。
 
 - `<anchor-name>` {{optional_inline}}
-  - : この要素の端に相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値です。これは `<dashed-ident>` 値です。省略された場合は、その要素の**既定のアンカー**で、これはその要素の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されているもの、またはその要素に関連付けられた HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が使用されます。
+  - : この要素の端に相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値です。これは `<dashed-ident>` 値です。省略された場合は、その要素の**既定のアンカー**で、これはその要素の [`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されているもの、またはその要素に関連付けられた HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が使用されます。
 
     > [!NOTE]
-    > `<anchor-name>` を `anchor()` 関数内で指定しても、要素とアンカーを関連付けることはできず、そのアンカーに対する要素の位置指定のみとなります。関連付けを作成するには、CSS の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティまたは HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が必要です。
+    > `<anchor-name>` を `anchor()` 関数内で指定しても、要素とアンカーを関連付けることはできず、そのアンカーに対する要素の位置指定のみとなります。関連付けを作成するには、CSS の [`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティまたは HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が必要です。
 
 - `<anchor-side>`
   - : アンカーの辺、または要素が位置指定された `start` の辺からの相対距離を指定します。 `anchor()` を設定する際に、インセットプロパティと[互換性](#インセットプロパティと_anchor-side_の値の互換性)のない物理値または論理値が使用された場合、代替値が使用されます。 有効な値としては、次のものがあります。
@@ -155,7 +155,7 @@ CSS の{{glossary("inset properties", "インセットプロパティ")}}のう�
 
 同じ要素上の異なる `<anchor-name>` 値を異なるインセットプロパティの `anchor()` 関数内に指定することで、複数のアンカーに対して要素を相対的に配置することができます（下記の[複数のアンカーに対して相対的に配置された要素](#複数のアンカーに対して相対的に配置された要素)を参照）。 これは、位置指定された要素の角でサイズ変更に使用できるドラッグハンドルを作成するなど、有用な機能を作成するために使用できます。
 
-位置指定要素は、複数のアンカー要素に対して相対的に位置づけることができますが、その要素は、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティ（または HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性）で定義された単一のアンカーと関連付けられたものとなります。これは、ページがスクロールした際に、その要素がスクロールするアンカーです。また、要素が[条件付きで非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)になるタイミングを制御するために使用することもできます。
+位置指定要素は、複数のアンカー要素に対して相対的に位置づけることができますが、その要素は、[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティ（または HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性）で定義された単一のアンカーと関連付けられたものとなります。これは、ページがスクロールした際に、その要素がスクロールするアンカーです。また、要素が[条件付きで非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)になるタイミングを制御するために使用することもできます。
 
 ## 形式文法
 

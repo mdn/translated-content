@@ -145,7 +145,7 @@ body {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
-- [`view-timeline`](/ja/docs/Web/CSS/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
+- [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

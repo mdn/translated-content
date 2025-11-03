@@ -47,7 +47,7 @@ l10n:
 
   ([Firefox bug 1322186](https://bugzil.la/1322186))
 
-- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
+- 要素で有効な CSS [zoom](/ja/docs/Web/CSS/Reference/Properties/zoom) を取得する、読み取り専用の {{domxref("Element.currentCSSZoom")}} プロパティをサポートしました ([Firefox bug 1880189](https://bugzil.la/1880189))。
 
 #### DOM
 

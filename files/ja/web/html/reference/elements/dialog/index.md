@@ -398,7 +398,7 @@ closeBtns.forEach((btn) => {
 
 ### アニメーションするダイアログ
 
-`<dialog>` 要素は、非表示時には [`display: none;`](/ja/docs/Web/CSS/display) 表示時には `display: block;` と設定され、{{glossary("top layer","最上位レイヤー")}}および[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#アクセシビリティツリーの構築)から削除されたり、追加されたりします。したがって、 `<dialog>` 要素をアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション化する必要があります。[対応ブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` プロパティを[離散的なアニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)で変化させてアニメーション化します。具体的には、ブラウザーは `none` と他の `display` 値を交互に切り替えることで、アニメーション化されたコンテンツがアニメーションの全期間にわたって表示されるようにします。
+`<dialog>` 要素は、非表示時には [`display: none;`](/ja/docs/Web/CSS/Reference/Properties/display) 表示時には `display: block;` と設定され、{{glossary("top layer","最上位レイヤー")}}および[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#アクセシビリティツリーの構築)から削除されたり、追加されたりします。したがって、 `<dialog>` 要素をアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション化する必要があります。[対応ブラウザー](/ja/docs/Web/CSS/Reference/Properties/display#ブラウザーの互換性)では、`display` プロパティを[離散的なアニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)で変化させてアニメーション化します。具体的には、ブラウザーは `none` と他の `display` 値を交互に切り替えることで、アニメーション化されたコンテンツがアニメーションの全期間にわたって表示されるようにします。
 
 例えば、
 
@@ -406,7 +406,7 @@ closeBtns.forEach((btn) => {
 - `display` の `block`（または他の可視の `display` 値）から `none` へのアニメーションでは、アニメーション再生時間の `100%` の時点で値が `none` に切り替わるため、全体を通して表示されます。
 
 > [!NOTE]
-> [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
+> [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
 
 #### dialog 要素のトランジション
 
@@ -414,9 +414,9 @@ CSS トランジションで `<dialog>` をアニメーションさせる場合�
 
 - [`@starting-style`](/ja/docs/Web/CSS/@starting-style) アットルール
   - : `<dialog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。既定では、CSS トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`display` の型が `none` から別の型に変更された場合には発生しません。
-- [`display`](/ja/docs/Web/CSS/display) プロパティ
+- [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティ
   - : トランジションのリストに `display` を追加すると、トランジションの再生時間中、`<dialog>` が `display: block`（またはダイアログが開いている状態として設定されている他の可視 `display` 値）のままになり、他にもトランジションが確実に表示されます。
-- [`overlay`](/ja/docs/Web/CSS/overlay) プロパティ
+- [`overlay`](/ja/docs/Web/CSS/Reference/Properties/overlay) プロパティ
   - : トランジションのリストに `overlay` が含まれていると、最上位レイヤーから `<dialog>` が確実に除去されるまでトランジションが完了するまで遅延され、トランジションが確実に表示されるようになります。
 - {{cssxref("transition-behavior")}} プロパティ
   - : `transition-behavior: allow-discrete` を `display` と `overlay` トランジション（または {{cssxref("transition")}} 一括指定）に設定すると、既定ではアニメーションできないこれら2つのプロパティで離散トランジションが有効になります。

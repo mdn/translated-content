@@ -43,7 +43,7 @@ l10n:
 - [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} および {{HTMLElement("meter")}}
 
-最初に [`appearance`](/ja/docs/Web/CSS/appearance) プロパティについて説明します。これは上記のすべてをよりスタイル付けできるようにするためにかなり有用なプロパティです。
+最初に [`appearance`](/ja/docs/Web/CSS/Reference/Properties/appearance) プロパティについて説明します。これは上記のすべてをよりスタイル付けできるようにするためにかなり有用なプロパティです。
 
 ## appearance: OS レベルのスタイル制御
 

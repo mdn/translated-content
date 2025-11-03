@@ -249,7 +249,7 @@ div {
 
 ### スタイル拘束
 
-スタイルの拘束は[カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)と[引用符](/ja/docs/Web/CSS/quotes)を拘束される要素にスコープします。
+スタイルの拘束は[カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)と[引用符](/ja/docs/Web/CSS/Reference/Properties/quotes)を拘束される要素にスコープします。
 CSS カウンターの場合、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティは、要素が文書のルートにあるかのように要素にスコープされます。
 
 #### 拘束とカウンター
@@ -288,7 +288,7 @@ li::before {
 
 #### 拘束と引用符
 
-CSS の引用符も同様に、[`content`](/ja/docs/Web/CSS/content) の引用符関連の値が要素にスコープされます。
+CSS の引用符も同様に、[`content`](/ja/docs/Web/CSS/Reference/Properties/content) の引用符関連の値が要素にスコープされます。
 
 ```html
 <!-- スタイル拘束付き -->

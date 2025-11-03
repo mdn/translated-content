@@ -11,7 +11,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 - プログレスバーを表す HTML5 の [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素がサポートされました。
 - メディア要素にテキストトラックを追加する HTML5 の [`<track>`](/ja/docs/Web/HTML/Reference/Elements/track) 要素について、そのパース処理部分が実装されました。要素そのものは実装されていませんが、DOM に現れるようにはなります。
-- [`border-radius`](/ja/docs/Web/CSS/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) についても、適切に角が丸められるようになりました。
+- [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) についても、適切に角が丸められるようになりました。
 - [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素の [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) テキストフィールドが XUL の `maxwidth` プロパティをサポートしなくなりました。これは意図的なものではなく、また HTML 仕様違反でもあります。要素の最大幅を設定するには、[`size`](/ja/docs/Web/HTML/Reference/Elements/input#attr-size) 属性を利用します。
 - [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) の [`CanvasRenderingContext2d`](/ja/docs/Web/API/CanvasRenderingContext2D 'このインターフェイスのオブジェクトを取得するには、以下のようにのgetContext()の引数に"2d"を指定して呼び出します。') プロパティ `fillStyle` と `strokeStyle` はこれまで、妥当な色の指定の後に続く余計なものを無視する処理をしていましたが、適切にエラーとして処理されるように修正されました。たとえば、"red blue" を指定したとき、これまでは "red" と扱われていましたが、これからは指定そのものが無視されます。
 - [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素の width と height を適切に 0px と指定できるようになりました。これまではそう指定しても 300px にされていました。
@@ -20,15 +20,15 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 ### CSS
 
-- [`-moz-text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
+- [`-moz-text-decoration-color`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-color)
   - : このプロパティは `text-decoration` で指定する `underline`, `overline`, `strikethrough` などの色を指定します。
-- [`-moz-text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
+- [`-moz-text-decoration-line`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-line)
   - : このプロパティは `text-decoration` の種類を指定します。
-- [`-moz-text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
+- [`-moz-text-decoration-style`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-style)
   - : このプロパティは `text-decoration` で指定する `underline`, `overline`, `strikethrough` などのスタイルを指定します。スタイルには `solid`, `double`, `dotted`, `dashed`, `wavy` などがあります。
-- [`-moz-hyphens`](/ja/docs/Web/CSS/hyphens)
+- [`-moz-hyphens`](/ja/docs/Web/CSS/Reference/Properties/hyphens)
   - : このプロパティは行送りが発生する際、単語のハイフネーションを制御するプロパティです。
-- [`-moz-orient`](/ja/docs/Web/CSS/-moz-orient)
+- [`-moz-orient`](/ja/docs/Web/CSS/Reference/Properties/-moz-orient)
   - : 現在は Mozilla 固有のプロパティで、いくつかの要素 ([`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素など) の縦横の向きを制御します。
 - [`::-moz-progress-bar`](/ja/docs/Web/CSS/::-moz-progress-bar)
   - : Mozilla 固有の擬似要素で、[`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素において、完了した部分のスタイルづけを行うためのものです。

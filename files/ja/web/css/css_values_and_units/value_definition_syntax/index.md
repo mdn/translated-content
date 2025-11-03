@@ -281,7 +281,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 ## 範囲の角括弧記法 (`[min,max]`)
 
-特定の範囲内の数値を受け入れることができる型もあります。例えば、 [`column-count`](/ja/docs/Web/CSS/column-count) プロパティは、正の値 1 から無限大までの整数値を受け入れることができます。対応する構文は次のようになります。
+特定の範囲内の数値を受け入れることができる型もあります。例えば、 [`column-count`](/ja/docs/Web/CSS/Reference/Properties/column-count) プロパティは、正の値 1 から無限大までの整数値を受け入れることができます。対応する構文は次のようになります。
 
 {{CSSSyntaxRaw(`example = <integer [1,∞]>`)}}
 

@@ -90,7 +90,7 @@ mask-position: unset;
 
 #### パーセント値
 
-{{cssxref("&lt;percentage&gt;")}} 値は、コンテナーの幅に対するマスクの水平位置の値を、左端を基準として表します。ただし、オフセットはマスクの端からボックスの端までの距離ではありません。マスク画像の寸法は[コンテナーの寸法から差し引かれます](/ja/docs/Web/CSS/background-position#regarding_percentages)、そしてその結果の値のパーセント値が、ボックスの左端からの直接のオフセットとして使用されます。これは、 [`background-position` のパーセント値](/ja/docs/Web/CSS/background-position#regarding_percentages)と同じです。
+{{cssxref("&lt;percentage&gt;")}} 値は、コンテナーの幅に対するマスクの水平位置の値を、左端を基準として表します。ただし、オフセットはマスクの端からボックスの端までの距離ではありません。マスク画像の寸法は[コンテナーの寸法から差し引かれます](/ja/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages)、そしてその結果の値のパーセント値が、ボックスの左端からの直接のオフセットとして使用されます。これは、 [`background-position` のパーセント値](/ja/docs/Web/CSS/Reference/Properties/background-position#regarding_percentages)と同じです。
 
 算出式は次のとおりです。
 

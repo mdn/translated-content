@@ -54,8 +54,8 @@ overflow: auto;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`overflow-x`](/ja/docs/Web/CSS/overflow-x)
-- [`overflow-y`](/ja/docs/Web/CSS/overflow-y)
+- [`overflow-x`](/ja/docs/Web/CSS/Reference/Properties/overflow-x)
+- [`overflow-y`](/ja/docs/Web/CSS/Reference/Properties/overflow-y)
 
 ## 構文
 
@@ -85,7 +85,7 @@ overflow: unset;
 - `hidden`
   - : 溢れたコンテンツは要素のパディングボックスで切り取られます。スクロールバーはなく、切り取られたコンテンツは見えなくなります（つまり、切り取られたコンテンツは非表示になります）が、コンテンツはまだ存在しています。ユーザーエージェントはスクロールバーを追加せず、また、タッチスクリーンでのドラッグやマウスのスクロールホイールなどの操作によって、ユーザーが切り取られた領域の外にあるコンテンツを表示することもできません。コンテンツはプログラムによってスクロールさせることができ（例えば、アンカーテキストへのリンク、非表示でありながらフォーカス可能な要素へのタブ操作、{{domxref("Element.scrollLeft", "scrollLeft")}} プロパティの値や {{domxref("Element.scrollTo", "scrollTo()")}} メソッドの設定など）、この場合、要素ボックスはスクロールコンテナーとなります。
 - `clip`
-  - : 溢れたコンテンツは、[`overflow-clip-margin`](/ja/docs/Web/CSS/overflow-clip-margin) プロパティを使用して定義された要素のはみ出しクリップ辺で切り取られます。その結果、コンテンツは要素のパディングボックスを `overflow-clip-margin` の {{cssxref("&lt;length&gt;")}} 値分、または設定されていない場合は `0px` 分はみ出します。切り取られた領域の外側に溢れたコンテンツは表示されず、ユーザーエージェントはスクロールバーを追加せず、プログラムによるスクロールも行われません。新しい[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)は作成されません。整形コンテキストを確立するには、`overflow: clip` を {{cssxref("display", "display: flow-root", "#flow-root")}} とともに使用してください。この要素ボックスはスクロールコンテナーにはなりません。
+  - : 溢れたコンテンツは、[`overflow-clip-margin`](/ja/docs/Web/CSS/Reference/Properties/overflow-clip-margin) プロパティを使用して定義された要素のはみ出しクリップ辺で切り取られます。その結果、コンテンツは要素のパディングボックスを `overflow-clip-margin` の {{cssxref("&lt;length&gt;")}} 値分、または設定されていない場合は `0px` 分はみ出します。切り取られた領域の外側に溢れたコンテンツは表示されず、ユーザーエージェントはスクロールバーを追加せず、プログラムによるスクロールも行われません。新しい[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)は作成されません。整形コンテキストを確立するには、`overflow: clip` を {{cssxref("display", "display: flow-root", "#flow-root")}} とともに使用してください。この要素ボックスはスクロールコンテナーにはなりません。
 - `scroll`
   - : 溢れたコンテンツは要素のパディングボックスで切り取られ、スクロールバーを使用してスクロールさせることで、溢れたコンテンツを表示することができます。ユーザーエージェントは、コンテンツが溢れているか否かに関わらずスクロールバーを表示します。そのため、このキーワードを使用すると、コンテンツが変化するたびにスクロールバーが表示されたり非表示になったりすることを防ぐことができます。ただし、印刷時には溢れたコンテンツが印刷される場合があります。要素ボックスはスクロールコンテナーになります。
 - `auto`

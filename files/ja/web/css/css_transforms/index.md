@@ -13,9 +13,9 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/modules/transforms.html", '100%', 900)}}
 
-また、 `perspective` スライダーを使って、立方体のコンテナーの [`perspective`](/ja/docs/Web/CSS/perspective) プロパティを変更することができます。
+また、 `perspective` スライダーを使って、立方体のコンテナーの [`perspective`](/ja/docs/Web/CSS/Reference/Properties/perspective) プロパティを変更することができます。
 
-[`perspective-origin`](/ja/docs/Web/CSS/perspective-origin) スライダーは、ビューの消点を決定するために、閲覧者が3D空間のどこを見ているかを決定します。この消点は小さな赤い点で示されます。これらのスライダーを変更することで、立方体自体を動かすことなく、頭を上下左右に動かして立方体のさまざまな部分を見ることができると想像してください。
+[`perspective-origin`](/ja/docs/Web/CSS/Reference/Properties/perspective-origin) スライダーは、ビューの消点を決定するために、閲覧者が3D空間のどこを見ているかを決定します。この消点は小さな赤い点で示されます。これらのスライダーを変更することで、立方体自体を動かすことなく、頭を上下左右に動かして立方体のさまざまな部分を見ることができると想像してください。
 
 `backface-visibility` チェックボックスは、立方体の裏面を `visible` （表示）に設定するか、`hidden` （非表示）に設定するかを決定します。
 
@@ -83,21 +83,21 @@ l10n:
 ## 関連する概念
 
 - CSS プロパティ:
-  - [`animation`](/ja/docs/Web/CSS/animation)
-  - [`background-position`](/ja/docs/Web/CSS/background-position)
-  - [`clip`](/ja/docs/Web/CSS/clip)
-  - [`clip-path`](/ja/docs/Web/CSS/clip-path)
-  - [`contain`](/ja/docs/Web/CSS/contain)
-  - [`content-visibility`](/ja/docs/Web/CSS/content-visibility)
-  - [`isolation`](/ja/docs/Web/CSS/isolation)
-  - [`mask`](/ja/docs/Web/CSS/mask)
-  - [`mask-border-source`](/ja/docs/Web/CSS/mask-border-source)
-  - [`mask-image`](/ja/docs/Web/CSS/mask-image)
-  - [`mix-blend-mode`](/ja/docs/Web/CSS/mix-blend-mode)
-  - [`opacity`](/ja/docs/Web/CSS/opacity)
-  - [`overflow`](/ja/docs/Web/CSS/overflow)
-  - [`transition`](/ja/docs/Web/CSS/transition)
-  - [`visibility`](/ja/docs/Web/CSS/visibility)
+  - [`animation`](/ja/docs/Web/CSS/Reference/Properties/animation)
+  - [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position)
+  - [`clip`](/ja/docs/Web/CSS/Reference/Properties/clip)
+  - [`clip-path`](/ja/docs/Web/CSS/Reference/Properties/clip-path)
+  - [`contain`](/ja/docs/Web/CSS/Reference/Properties/contain)
+  - [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility)
+  - [`isolation`](/ja/docs/Web/CSS/Reference/Properties/isolation)
+  - [`mask`](/ja/docs/Web/CSS/Reference/Properties/mask)
+  - [`mask-border-source`](/ja/docs/Web/CSS/Reference/Properties/mask-border-source)
+  - [`mask-image`](/ja/docs/Web/CSS/Reference/Properties/mask-image)
+  - [`mix-blend-mode`](/ja/docs/Web/CSS/Reference/Properties/mix-blend-mode)
+  - [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity)
+  - [`overflow`](/ja/docs/Web/CSS/Reference/Properties/overflow)
+  - [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition)
+  - [`visibility`](/ja/docs/Web/CSS/Reference/Properties/visibility)
 - データ型:
   - [`<angle>`](/ja/docs/Web/CSS/angle)
   - [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)

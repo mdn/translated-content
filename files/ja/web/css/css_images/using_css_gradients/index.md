@@ -772,7 +772,7 @@ div {
 
 ### 複数の反復線形グラデーション
 
-通常の線形グラデーションや放射グラデーションと同様に、複数のグラデーションを重ねて表示することができます。これは、グラデーションの一部を透明にして、透明部分から後続のグラデーションが見えるようにしたり、各グラデーション画像に異なる [background-size](/ja/docs/Web/CSS/background-size) や、オプションで異なる [background-position](/ja/docs/Web/CSS/background-position) のプロパティ値を含める場合にのみ意味を持ちます。透過性を利用しています。
+通常の線形グラデーションや放射グラデーションと同様に、複数のグラデーションを重ねて表示することができます。これは、グラデーションの一部を透明にして、透明部分から後続のグラデーションが見えるようにしたり、各グラデーション画像に異なる [background-size](/ja/docs/Web/CSS/Reference/Properties/background-size) や、オプションで異なる [background-position](/ja/docs/Web/CSS/Reference/Properties/background-position) のプロパティ値を含める場合にのみ意味を持ちます。透過性を利用しています。
 
 この例では、グラデーション線の長さは 300px、230px、300px です。
 
