@@ -31,7 +31,7 @@ _このインターフェイスには、親である {{DOMxRef("Event")}} から
 
 ### 基本的な例
 
-```html
+```html-nolint
 <button commandfor="mypopover" command="show-popover">ポップオーバーを表示</button>
 
 <div popover id="mypopover" role="[適切な ARIA ロールを宣言]">
