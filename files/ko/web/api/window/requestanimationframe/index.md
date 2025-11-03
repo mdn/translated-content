@@ -24,7 +24,7 @@ l10n:
 requestAnimationFrame(callback);
 ```
 
-### 파라미터
+### 매개변수
 
 - `callback`
   - : 다음 리페인트 시점에 애니메이션을 업데이트하기 위해 호출할 함수입니다.
