@@ -109,7 +109,7 @@ MDN Web Docs에 부적절한 주제의 예시입니다.
 - 문서에 MDN 웹 문서에 부적절한 콘텐츠가 포함된 경우
 - MDN 웹 문서의 섹션이 오픈 웹 기술에 초점을 맞추지 않고 유지 관리 부담이 되는 경우
 
-문서를 삭제하는 방법에 대한 자세한 정보는 [페이지 생성, 이동 및 삭제]((/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)) 가이드를 참조하세요.
+문서를 삭제하는 방법에 대한 자세한 정보는 [페이지 생성, 이동 및 삭제](<(/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)>) 가이드를 참조하세요.
 
 ## MDN 웹 문서에서 허용되는 문서 유형
 
