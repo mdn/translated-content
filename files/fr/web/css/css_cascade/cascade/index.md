@@ -75,7 +75,7 @@ La cascade progresse dans l'ordre croissant des précédences, les animations on
 >
 > Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important)).
 >
-> Les valeurs des propriétés définies dans une transition ([`transition`](/fr/docs/Web/CSS/transition)) l'emportent sur toutes les autres valeurs, y compris celles marquées avec `!important`.
+> Les valeurs des propriétés définies dans une transition ([`transition`](/fr/docs/Web/CSS/Reference/Properties/transition)) l'emportent sur toutes les autres valeurs, y compris celles marquées avec `!important`.
 
 L'algorithme de la cascade est appliqué _avant_ l'algorithme de la spécificité. Cela signifie que si `:root p { color: red;}` est déclaré dans une feuille de style de l'utilisatrice ou de l'utilisateur (ligne 2 du tableau) et si une règle moins spécifique, `p {color: blue;}`, est présente dans la feuille de style du site (ligne 3 du tableau), les paragraphes seront bleus.
 
@@ -454,7 +454,7 @@ Dans cet exemple, on a trois déclarations d'animation intitulées `nomRepete`. 
 
 ## Réinitialiser les styles
 
-Après que le contenu a fini de modifier les styles, on peut être dans une situation où il faut les restaurer à un état connu. Cela peut se produire avec des animations, des modifications de thème et ainsi de suite. La propriété CSS [`all`](/fr/docs/Web/CSS/all) vous permet de remettre (presque) tout ce qui concerne CSS à un état connu.
+Après que le contenu a fini de modifier les styles, on peut être dans une situation où il faut les restaurer à un état connu. Cela peut se produire avec des animations, des modifications de thème et ainsi de suite. La propriété CSS [`all`](/fr/docs/Web/CSS/Reference/Properties/all) vous permet de remettre (presque) tout ce qui concerne CSS à un état connu.
 
 `all` vous permet de restaurer immédiatement toutes les propriétés&nbsp;:
 

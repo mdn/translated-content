@@ -81,13 +81,13 @@ padding-block-end: unset;
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille du remplissage exprimée en pourcentage, relatif à la taille du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (physiquement, cela correspond à la largeur pour les sens d'écriture horizontaux (voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode))). Cette valeur ne peut être négative.
+  - : La taille du remplissage exprimée en pourcentage, relatif à la taille du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (physiquement, cela correspond à la largeur pour les sens d'écriture horizontaux (voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode))). Cette valeur ne peut être négative.
 
 ## Description
 
-La propriété `padding-block-end` est définie dans la spécification comme prenant les mêmes valeurs que [`padding-top`](/fr/docs/Web/CSS/padding-top). Toutefois, il s'agit d'une propriété logique qui correspond à la propriété [`padding-top`](/fr/docs/Web/CSS/padding-top), [`padding-right`](/fr/docs/Web/CSS/padding-right), [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom) ou [`padding-left`](/fr/docs/Web/CSS/padding-left) selon les valeurs qui sont utilisées pour [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+La propriété `padding-block-end` est définie dans la spécification comme prenant les mêmes valeurs que [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top). Toutefois, il s'agit d'une propriété logique qui correspond à la propriété [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top), [`padding-right`](/fr/docs/Web/CSS/Reference/Properties/padding-right), [`padding-bottom`](/fr/docs/Web/CSS/Reference/Properties/padding-bottom) ou [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left) selon les valeurs qui sont utilisées pour [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) et [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation).
 
-Elle est à rapprocher des propriétés [`padding-block-start`](/fr/docs/Web/CSS/padding-block-start), [`padding-inline-start`](/fr/docs/Web/CSS/padding-inline-start) et [`padding-inline-end`](/fr/docs/Web/CSS/padding-inline-end) qui définissent les autres écarts de remplissage logiques d'un élément.
+Elle est à rapprocher des propriétés [`padding-block-start`](/fr/docs/Web/CSS/Reference/Properties/padding-block-start), [`padding-inline-start`](/fr/docs/Web/CSS/Reference/Properties/padding-inline-start) et [`padding-inline-end`](/fr/docs/Web/CSS/Reference/Properties/padding-inline-end) qui définissent les autres écarts de remplissage logiques d'un élément.
 
 ## Définition formelle
 
@@ -141,10 +141,10 @@ div {
 
 - [Les propriétés et valeurs logiques en CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
 - Les propriétés physiques correspondantes&nbsp;:
-  - [`padding-top`](/fr/docs/Web/CSS/padding-top)
-  - [`padding-right`](/fr/docs/Web/CSS/padding-right)
-  - [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)
-  - [`padding-left`](/fr/docs/Web/CSS/padding-left)
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
-- [`direction`](/fr/docs/Web/CSS/direction)
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+  - [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top)
+  - [`padding-right`](/fr/docs/Web/CSS/Reference/Properties/padding-right)
+  - [`padding-bottom`](/fr/docs/Web/CSS/Reference/Properties/padding-bottom)
+  - [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)
+- [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction)
+- [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)

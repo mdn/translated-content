@@ -57,7 +57,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 - {{CSSxRef("&lt;angle&gt;")}}
   - : `from` キーワードに続いて角度を指定することで、時計回りのグラデーションの位置を定義します。
 - `<position>`
-  - : [`background-position`](/ja/docs/Web/CSS/background-position) プロパティと同じ長さ、順番、キーワード値を使用して、グラデーションの中心の位置を定義します。省略すると、既定値は`center`、すなわちグラデーションに配置されます。
+  - : [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティと同じ長さ、順番、キーワード値を使用して、グラデーションの中心の位置を定義します。省略すると、既定値は`center`、すなわちグラデーションに配置されます。
 - `<angular-color-stop>`
   - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{CSSxRef("&lt;angle&gt;")}}) が続きます。最後の色経由点から最初の色経由点までの角度が反復グラデーションの大きさを定義します。
 - `<color-hint>`

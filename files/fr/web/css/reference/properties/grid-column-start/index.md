@@ -279,10 +279,10 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 
 ## Voir aussi
 
-- [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end)
-- [`grid-column`](/fr/docs/Web/CSS/grid-column)
-- [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start)
-- [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end)
-- [`grid-row`](/fr/docs/Web/CSS/grid-row)
+- [`grid-column-end`](/fr/docs/Web/CSS/Reference/Properties/grid-column-end)
+- [`grid-column`](/fr/docs/Web/CSS/Reference/Properties/grid-column)
+- [`grid-row-start`](/fr/docs/Web/CSS/Reference/Properties/grid-row-start)
+- [`grid-row-end`](/fr/docs/Web/CSS/Reference/Properties/grid-row-end)
+- [`grid-row`](/fr/docs/Web/CSS/Reference/Properties/grid-row)
 - [Guide&nbsp;: le placement sur les lignes d'une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Tutoriel vidéo en anglais sur le placement sur les lignes](https://gridbyexample.com/video/series-line-based-placement/)

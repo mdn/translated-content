@@ -5,7 +5,7 @@ slug: Web/API/CSS_Properties_and_Values_API
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}
 
-{{SeeCompatTable}} L'**API Propriétés et valeurs CSS** — qui fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs) — sert à définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/--*), ce qui permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
+{{SeeCompatTable}} L'**API Propriétés et valeurs CSS** — qui fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs) — sert à définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), ce qui permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
 
 ## Interfaces
 
@@ -16,7 +16,7 @@ slug: Web/API/CSS_Properties_and_Values_API
 
 ## Exemples
 
-L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/fr/docs/Web/JavaScript) pour typer une [propriété CSS personnalisée](/fr/docs/Web/CSS/--*), `--ma-couleur` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
+L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/fr/docs/Web/JavaScript) pour typer une [propriété CSS personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*), `--ma-couleur` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
 
 ```js
 window.CSS.registerProperty({

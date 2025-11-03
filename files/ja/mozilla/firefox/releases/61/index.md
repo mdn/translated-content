@@ -63,7 +63,7 @@ _変更なし。_
 - {{cssxref("column-gap")}} のパーセンテージ値を、[CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout) でサポートしました ([Firefox バグ 1398537](https://bugzil.la/1398537))。
 - CSS の {{cssxref(":host")}} 擬似クラスをサポートしました。これは、shadow DOM 内のカスタム要素を選択します ([Firefox バグ 992245](https://bugzil.la/992245))。
 - {{cssxref("overflow")}} が 2 値構文を受け入れるようになりました ([Firefox バグ 1453148](https://bugzil.la/1453148))。
-- 内容物によってサイズが決まる Flex アイテムは、`fit-content` ではなく `max-content` を使用してサイズが決まるようになりました ([Firefox バグ 1282821](https://bugzil.la/1282821))。これらの値について、詳しくは [`width` の値の定義](/ja/docs/Web/CSS/width#values) をご覧ください。
+- 内容物によってサイズが決まる Flex アイテムは、`fit-content` ではなく `max-content` を使用してサイズが決まるようになりました ([Firefox バグ 1282821](https://bugzil.la/1282821))。これらの値について、詳しくは [`width` の値の定義](/ja/docs/Web/CSS/Reference/Properties/width#values) をご覧ください。
 - {{cssxref("font-weight")}}、{{cssxref("font-stretch")}}、{{cssxref("font-style")}} で、[CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) で定義された追加の値をサポートしました ([Firefox バグ 1436048](https://bugzil.la/1436048)):
   - {{cssxref("font-weight")}} は、1 から 1000 の間 (両端の値を含む) の浮動小数点数を受け入れます。
   - {{cssxref("font-stretch")}} は、パーセンテージ値を受け入れます。

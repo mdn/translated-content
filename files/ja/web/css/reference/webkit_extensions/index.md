@@ -435,8 +435,8 @@ Safari や Chrome のような WebKit または blink ベースのアプリケ�
 - `-webkit-color-correction`
 - `-webkit-flow-from`
 - `-webkit-flow-into`
-- `-webkit-grid-columns` ([`grid-column`](/ja/docs/Web/CSS/grid-column) を参照)
-- `-webkit-grid-rows` ([`grid-row`](/ja/docs/Web/CSS/grid-row) を参照)
+- `-webkit-grid-columns` ([`grid-column`](/ja/docs/Web/CSS/Reference/Properties/grid-column) を参照)
+- `-webkit-grid-rows` ([`grid-row`](/ja/docs/Web/CSS/Reference/Properties/grid-row) を参照)
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set` (`{{CSSxRef("image/image-set()", "image-set")}} を参照)
 - `-webkit-mask-attachment`
@@ -447,7 +447,7 @@ Safari や Chrome のような WebKit または blink ベースのアプリケ�
 - `-webkit-region-break-inside`
 - `-webkit-region-fragment`
 - `-webkit-shape-inside`
-- [-webkit-touch-callout](/ja/docs/Web/CSS/-webkit-touch-callout) (`touch-action` を参照)
+- [-webkit-touch-callout](/ja/docs/Web/CSS/Reference/Properties/-webkit-touch-callout) (`touch-action` を参照)
 - `background-origin-x` (接頭辞なし)
 - `background-origin-y` (接頭辞なし)
 
@@ -525,4 +525,4 @@ Safari や Chrome のような WebKit または blink ベースのアプリケ�
 
 - [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)
 - [Microsoft CSS 拡張](/ja/docs/Web/CSS/Microsoft_Extensions)
-- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
+- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)

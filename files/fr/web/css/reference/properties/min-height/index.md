@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/min-height
 original_slug: Web/CSS/min-height
 ---
 
-La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`height`](/fr/docs/Web/CSS/height) devienne inférieure à `min-height`.
+La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`height`](/fr/docs/Web/CSS/Reference/Properties/height) devienne inférieure à `min-height`.
 
 {{InteractiveExample("CSS Demo: min-height")}}
 
@@ -44,7 +44,7 @@ min-height: 10px;
 }
 ```
 
-La valeur de la propriété `min-height` surcharge celles de [`max-height`](/fr/docs/Web/CSS/max-height) et [`height`](/fr/docs/Web/CSS/height) lorsque `min-height` est supérieure.
+La valeur de la propriété `min-height` surcharge celles de [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height) et [`height`](/fr/docs/Web/CSS/Reference/Properties/height) lorsque `min-height` est supérieure.
 
 ## Syntaxe
 
@@ -116,5 +116,5 @@ form {
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
-- [`height`](/fr/docs/Web/CSS/height), [`max-height`](/fr/docs/Web/CSS/max-height)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
+- [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height)

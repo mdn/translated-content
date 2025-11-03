@@ -59,7 +59,7 @@ h1 {
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-[`writing-mode`](/ja/docs/Web/CSS/writing-mode) プロパティの 3 つの可能な値は次のとおりです。
+[`writing-mode`](/ja/docs/Web/CSS/Reference/Properties/writing-mode) プロパティの 3 つの可能な値は次のとおりです。
 
 - `horizontal-tb`: 上から下の方向へブロックが流れます。文は横書きになります。
 - `vertical-rl`: 右から左の方向へブロックが流れます。文は縦書きになります。

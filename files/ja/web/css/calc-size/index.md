@@ -9,7 +9,7 @@ l10n:
 
 **`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、`auto`、 [`fit-content`](/ja/docs/Web/CSS/fit-content)、[`max-content`](/ja/docs/Web/CSS/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
 
-`calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/interpolate-size) が自動的に適用されます。
+`calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/Reference/Properties/interpolate-size) が自動的に適用されます。
 
 ただし、 `interpolate-size` は継承されるため、要素に適用すると、その要素とその子要素に適用されているすべてのプロパティの、内在サイズのキーワードの補間処理が可能になります。そのため、内在サイズのアニメーションを有効にするには、`interpolate-size` を使用することをお勧めします。内在サイズのアニメーションを有効にするために `calc-size()` を使用するのは、計算も必要な場合のみにしてください。
 
@@ -464,7 +464,7 @@ widthAdjustBtn.addEventListener("click", () => {
 
 ### 関数 `calc-size()` 内で関数を使用する
 
-前述のように、`calc-size()` 内で別の関数を使用することができます。この例では、 [`field-sizing: content`](/ja/docs/Web/CSS/field-sizing) を {{htmlelement("input")}} 要素に設定して、入力コンテンツと同じ幅にし、[`max()`](/ja/docs/Web/CSS/max) 関数を使用して、`<input>` が最小サイズ以上であることを確実に保持し、入力テキストがそのサイズより広くなった場合にのみ伸長を開始するようにします。これは、 `fit-content` に `20px` を加算して設定することで実現しています。
+前述のように、`calc-size()` 内で別の関数を使用することができます。この例では、 [`field-sizing: content`](/ja/docs/Web/CSS/Reference/Properties/field-sizing) を {{htmlelement("input")}} 要素に設定して、入力コンテンツと同じ幅にし、[`max()`](/ja/docs/Web/CSS/max) 関数を使用して、`<input>` が最小サイズ以上であることを確実に保持し、入力テキストがそのサイズより広くなった場合にのみ伸長を開始するようにします。これは、 `fit-content` に `20px` を加算して設定することで実現しています。
 
 #### HTML
 

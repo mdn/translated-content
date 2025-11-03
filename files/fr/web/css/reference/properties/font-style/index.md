@@ -6,7 +6,7 @@ original_slug: Web/CSS/font-style
 
 {{CSSRef}}
 
-La propriété **`font-style`** permet de sélectionner une fonte italique (`italic`) ou oblique (`oblique`) parmi celles listées par [`font-family`](/fr/docs/Web/CSS/font-family).
+La propriété **`font-style`** permet de sélectionner une fonte italique (`italic`) ou oblique (`oblique`) parmi celles listées par [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family).
 
 {{InteractiveExample("CSS Demo: font-style")}}
 
@@ -51,7 +51,7 @@ section {
 }
 ```
 
-La forme **italique** est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme **oblique** quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absentes (le moteur penche alors les glyphes de la forme normale) — pour plus d'informations sur l'activation de cette synthèse, voir la propriété [`font-synthesis`](/fr/docs/Web/CSS/font-synthesis).
+La forme **italique** est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme **oblique** quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absentes (le moteur penche alors les glyphes de la forme normale) — pour plus d'informations sur l'activation de cette synthèse, voir la propriété [`font-synthesis`](/fr/docs/Web/CSS/Reference/Properties/font-synthesis).
 
 ## Syntaxe
 
@@ -75,7 +75,7 @@ La propriété `font-style` s'utilise avec un mot-clé parmi ceux qui suivent. S
 ### Valeurs
 
 - `normal`
-  - : Sélectionne une police qualifiée de `normal` parmi celles de [`font-family`](/fr/docs/Web/CSS/font-family).
+  - : Sélectionne une police qualifiée de `normal` parmi celles de [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family).
 - `italic`
   - : Sélectionne une police qualifiée d'`italic`. S'il n'y a pas de version italique, une version `oblique` sera sélectionnée à la place. Si aucune version n'est disponible, le style de police est synthétisé.
 - `oblique`
@@ -90,7 +90,7 @@ La propriété `font-style` s'utilise avec un mot-clé parmi ceux qui suivent. S
 
 Les polices variables permettent d'obtenir un contrôle fin sur la pente appliquée à la fonte. Pour cela, on pourra utiliser une police variable et `font-style` avec le mot-clé `oblique` suivi d'une valeur d'angle.
 
-Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir [`font-variation-settings`](/fr/docs/Web/CSS/font-variation-settings).
+Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir [`font-variation-settings`](/fr/docs/Web/CSS/Reference/Properties/font-variation-settings).
 
 > [!NOTE]
 > Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe _CSS Fonts Level 4_ qui permet d'utiliser `font-style: oblique` suivi d'un angle. Le code de démarrage utilise `font-style: oblique 23deg;` — modifiez la valeur `<angle>` pour changer la pente du texte.
@@ -152,5 +152,5 @@ L'utilisation de grandes portions de textes avec `font-style: italic` peut rendr
 
 ## Voir aussi
 
-- [`font-weight`](/fr/docs/Web/CSS/font-weight)
+- [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight)
 - [Initiation à la mise en forme du texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

@@ -13,7 +13,7 @@ l10n:
 
 ### 色
 
-[`color`](/ja/docs/Web/CSS/color#formal_definition) は継承プロパティです。
+[`color`](/ja/docs/Web/CSS/Reference/Properties/color#formal_definition) は継承プロパティです。
 
 #### HTML
 
@@ -53,7 +53,7 @@ p {
 
 ### 境界線
 
-[`border`](/ja/docs/Web/CSS/border#formal_definition) は非継承プロパティです。
+[`border`](/ja/docs/Web/CSS/Reference/Properties/border#formal_definition) は非継承プロパティです。
 
 #### HTML
 

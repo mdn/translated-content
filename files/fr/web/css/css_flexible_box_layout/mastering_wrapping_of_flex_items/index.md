@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef}}
 
-Les boîtes flexibles ont été conçues comme une méthode de disposition unidimensionnelle. Autrement dit, elles permettent de disposer des éléments en lignes ou en colonnes mais pas en lignes et en colonnes en même temps. Il existe toutefois la possibilité de passer des éléments flexibles à la ligne pour créer de nouvelles lignes horizontales si [`flex-direction`](/fr/docs/Web/CSS/flex-direction) vaut `row` ou de nouvelles colonnes si `flex-direction` vaut `column`. Dans ce guide, nous verrons comment cela fonctionne, les cas pour lesquels cela a été prévu et les situations qui nécessitent plutôt d'utiliser [une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout).
+Les boîtes flexibles ont été conçues comme une méthode de disposition unidimensionnelle. Autrement dit, elles permettent de disposer des éléments en lignes ou en colonnes mais pas en lignes et en colonnes en même temps. Il existe toutefois la possibilité de passer des éléments flexibles à la ligne pour créer de nouvelles lignes horizontales si [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) vaut `row` ou de nouvelles colonnes si `flex-direction` vaut `column`. Dans ce guide, nous verrons comment cela fonctionne, les cas pour lesquels cela a été prévu et les situations qui nécessitent plutôt d'utiliser [une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout).
 
 ## Créer des passages à la ligne
 
-La valeur initiale de la propriété [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap) est `nowrap`. Cela signifie que si on a un ensemble d'éléments flexibles trop larges pour tenir dans le conteneur, ces éléments dépasseront. Si on souhaite que ces éléments créent une nouvelle ligne lorsque la largeur du conteneur est dépassée, on peut ajouter la propriété `flex-wrap` avec la valeur `wrap`, ou utiliser la propriété raccourcie [`flex-flow`](/fr/docs/Web/CSS/flex-flow) avec les valeurs `row wrap` ou `column wrap`.
+La valeur initiale de la propriété [`flex-wrap`](/fr/docs/Web/CSS/Reference/Properties/flex-wrap) est `nowrap`. Cela signifie que si on a un ensemble d'éléments flexibles trop larges pour tenir dans le conteneur, ces éléments dépasseront. Si on souhaite que ces éléments créent une nouvelle ligne lorsque la largeur du conteneur est dépassée, on peut ajouter la propriété `flex-wrap` avec la valeur `wrap`, ou utiliser la propriété raccourcie [`flex-flow`](/fr/docs/Web/CSS/Reference/Properties/flex-flow) avec les valeurs `row wrap` ou `column wrap`.
 
 Les éléments passeront alors à la ligne dans le conteneur. Dans l'exemple qui suit, on dispose de 10 éléments pour lesquels `flex-basis` vaut `160px` et qui peuvent grandir/rétrécir. Une fois que la première ligne est composée de suffisamment d'éléments et qu'il n'y a plus d'espace suffisant pour placer un autre objet de 160 pixels, une nouvelle ligne flexible est créée dans laquelle on place les éléments suivants et ainsi de suite. Les éléments pouvant grandir, ils s'étireront sur plus de 160 pixels afin de remplir chaque ligne complètement. S'il n'y a qu'un seul élément sur la dernière ligne, cet élément s'étirera pour remplir toute la ligne.
 
@@ -53,7 +53,7 @@ Si on souhaite que les éléments flexibles s'alignent le long de l'axe secondai
 
 ## Créer des gouttières entre les éléments
 
-Pour créer des espaces ou des gouttières entre les éléments flexibles, utilisez la propriété [`gap`](/fr/docs/Web/CSS/gap).
+Pour créer des espaces ou des gouttières entre les éléments flexibles, utilisez la propriété [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap).
 
 La propriété `gap` en CSS est une abréviation pour `row-gap` et `column-gap`, spécifiant la taille des gouttières, c'est-à-dire l'espace entre les lignes et les colonnes dans les mises en page de type grille, boîtes flexibles et multi-colonnes.
 
@@ -65,7 +65,7 @@ Pour voir comment la propriété `gap` diffère de `margin` dans les deux axes, 
 
 ## L'impact de `visibility: collapse`
 
-La spécification sur les boîtes flexibles détaille la façon dont un élément flexible est replié lorsqu'on lui applique `visibility: collapse` (voir la documentation de [`visibility`](/fr/docs/Web/CSS/visibility)). La spécification décrit le comportement standard comme suit&nbsp;:
+La spécification sur les boîtes flexibles détaille la façon dont un élément flexible est replié lorsqu'on lui applique `visibility: collapse` (voir la documentation de [`visibility`](/fr/docs/Web/CSS/Reference/Properties/visibility)). La spécification décrit le comportement standard comme suit&nbsp;:
 
 > "Indiquer `visibility: collapse` sur un élément flexible le transforme en un élément flexible replié et produit un effet similaire à l'application de `visibility: collapse` sur une ligne ou colonne de tableau. L'élément flexible replié est intégralement retiré du rendu mais laisse une toise qui permet de conserver la taille de la ligne flexible selon l'axe secondaire. Ainsi, si un conteneur flexible ne possède qu'une ligne flexible, replier ou déplier des éléments flexibles pourra modifier la dimension principale du conteneur mais n'aura aucun effet sur l'axe secondaire et empêchera ainsi le reste de la page d'osciller. Le passage à la ligne est réappliqué après le repliage des éléments et il se peut donc que la dimension secondaire d'un conteneur flexible sur plusieurs lignes puisse évoluer." — [Éléments repliés (spécification en anglais)](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
 

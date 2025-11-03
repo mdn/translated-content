@@ -34,7 +34,7 @@ mask-origin: revert;
 mask-origin: unset;
 ```
 
-Pour les éléments qui sont affichés avec une unique boîte, cette propriété définit la zone de positionnement du masque. Autrement dit, cette propriété indique l'origine de la position pour l'image définie via [`mask-image`](/fr/docs/Web/CSS/mask-image). Pour les éléments qui sont affichés comme plusieurs boîtes (les boîtes en lignes ou plusieurs lignes ou plusieurs boîtes sur plusieurs pages), elle définit les boîtes sur lesquelles [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break) agira pour déterminer la zone de positionnement du masque.
+Pour les éléments qui sont affichés avec une unique boîte, cette propriété définit la zone de positionnement du masque. Autrement dit, cette propriété indique l'origine de la position pour l'image définie via [`mask-image`](/fr/docs/Web/CSS/Reference/Properties/mask-image). Pour les éléments qui sont affichés comme plusieurs boîtes (les boîtes en lignes ou plusieurs lignes ou plusieurs boîtes sur plusieurs pages), elle définit les boîtes sur lesquelles [`box-decoration-break`](/fr/docs/Web/CSS/Reference/Properties/box-decoration-break) agira pour déterminer la zone de positionnement du masque.
 
 ## Syntaxe
 

@@ -13,7 +13,7 @@ l10n:
 > [!NOTE]
 > スクローラーの軸方向の寸法がコンテナーをあふれていない場合、またはあふれた部分が非表示またはクリッピングされている場合、タイムラインは作成されません。
 
-`view-timeline-axis` および {{cssxref("view-timeline-name")}} の各プロパティは、 [`view-timeline`](/ja/docs/Web/CSS/view-timeline) 一括指定プロパティを使用して設定することもできます。
+`view-timeline-axis` および {{cssxref("view-timeline-name")}} の各プロパティは、 [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -175,7 +175,7 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/ja/docs/Web/CSS/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name)
+- [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

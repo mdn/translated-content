@@ -141,7 +141,7 @@ Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut p
 
 ### `size`
 
-L'attribut `size` est un nombre positif qui indique le nombre de caractères affichés à l'écran et qui définit donc la largeur du champ. La valeur par défaut de cet attribut est 20. Étant donné que la largeur des caractères peut varier cet attribut ne permet de définir une largeur exacte mais approximative — le champ affiché peut être plus étroit ou plus large que la taille (`size`) spécifiée en fonction des caractères saisis et des paramètres de police ([`font`](/fr/docs/Web/CSS/font)) utilisés.
+L'attribut `size` est un nombre positif qui indique le nombre de caractères affichés à l'écran et qui définit donc la largeur du champ. La valeur par défaut de cet attribut est 20. Étant donné que la largeur des caractères peut varier cet attribut ne permet de définir une largeur exacte mais approximative — le champ affiché peut être plus étroit ou plus large que la taille (`size`) spécifiée en fonction des caractères saisis et des paramètres de police ([`font`](/fr/docs/Web/CSS/Reference/Properties/font)) utilisés.
 
 Cet attribut _ne_ définit _pas_ la limite du nombre de caractères saisissables dans le champ mais uniquement, et approximativement, le nombre de caractères qui peuvent être affichés à l'écran simultanément. Pour fixer une taille maximale sur la valeur du champ, on utilisera plutôt l'attribut [`maxlength`](#maxlength).
 

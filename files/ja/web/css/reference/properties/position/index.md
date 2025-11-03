@@ -135,7 +135,7 @@ position: unset;
     この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。
 
     > [!NOTE]
-    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
+    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/Reference/Properties/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
 
 ## 解説
 
@@ -277,7 +277,7 @@ span {
 
 ### 固定位置指定
 
-固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外（[固定位置指定包含ブロック](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block) を参照）に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`will-change`](/ja/docs/Web/CSS/will-change) プロパティに `transform` を設定すると、新しい包含ブロックが設定されます。
+固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外（[固定位置指定包含ブロック](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block) を参照）に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティに `transform` を設定すると、新しい包含ブロックが設定されます。
 
 #### HTML
 

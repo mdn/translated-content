@@ -173,7 +173,7 @@ Le support de la version préfixée est généralement abandonné par la suite, 
 
 **Propriété&nbsp;:** {{CSSxRef("image-rendering")}}
 
-- `-moz-crisp-edges` {{deprecated_inline}}&nbsp;: Utilisez [`crisp-edges`](/fr/docs/Web/CSS/image-rendering#crisp-edges).
+- `-moz-crisp-edges` {{deprecated_inline}}&nbsp;: Utilisez [`crisp-edges`](/fr/docs/Web/CSS/Reference/Properties/image-rendering#crisp-edges).
 
 ### &lt;length&gt;
 
@@ -186,7 +186,7 @@ Le support de la version préfixée est généralement abandonné par la suite, 
 **Propriété&nbsp;:** {{CSSxRef("list-style-type")}}
 
 De nombreuses valeurs avec préfixe de fournisseur pour `list-style-type` sont désormais prises en charge en tant que valeurs standard sans préfixe `-moz-`, sauf pour celles de la liste suivante.
-Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/list-style-type#compatibilité_des_navigateurs) pour plus de détails.
+Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/Reference/Properties/list-style-type#compatibilité_des_navigateurs) pour plus de détails.
 
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`
@@ -211,7 +211,7 @@ Voir la [Compatibilité des navigateurs](/fr/docs/Web/CSS/list-style-type#compat
 - `-moz-min-content`&nbsp;: Voir {{CSSxRef("min-content")}}.
 - `-moz-fit-content`&nbsp;: Voir {{CSSxRef("fit-content")}}.
 - `-moz-max-content`&nbsp;: Voir {{CSSxRef("max-content")}}.
-- `-moz-available`&nbsp;: Voir [`stretch`](/fr/docs/Web/CSS/width#stretch).
+- `-moz-available`&nbsp;: Voir [`stretch`](/fr/docs/Web/CSS/Reference/Properties/width#stretch).
 
 ## Pseudo-classes
 

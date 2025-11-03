@@ -105,7 +105,7 @@ article p:first-child::first-line {
 
 ## Générer du contenu avec ::before et ::after
 
-Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété [`content`](/fr/docs/Web/CSS/content) pour insérer du contenu dans votre document en utilisant le CSS.
+Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété [`content`](/fr/docs/Web/CSS/Reference/Properties/content) pour insérer du contenu dans votre document en utilisant le CSS.
 
 Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément `::before` en `::after` et voir le texte inséré à la fin de l'élément au lieu du début.
 

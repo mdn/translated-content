@@ -43,7 +43,7 @@ l10n:
 你可以使用 {{cssxref("initial")}} 关键字明确指定初始值。
 
 > [!NOTE]
-> 初始值可在每个 CSS 属性参考页面的形式语法部分找到。例如，[`font-size` 的初始值为 `medium`](/zh-CN/docs/Web/CSS/font-size#形式定义)。初始值不应与浏览器样式表指定的值相混淆。
+> 初始值可在每个 CSS 属性参考页面的形式语法部分找到。例如，[`font-size` 的初始值为 `medium`](/zh-CN/docs/Web/CSS/Reference/Properties/font-size#形式定义)。初始值不应与浏览器样式表指定的值相混淆。
 
 ### 指定值
 

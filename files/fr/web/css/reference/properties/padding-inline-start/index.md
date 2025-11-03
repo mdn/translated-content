@@ -78,9 +78,9 @@ padding-inline-start: unset;
 
 ## Description
 
-Selon sa définition dans la spécification, la propriété `padding-inline-start` peut prendre les mêmes valeurs que la propriété [`padding-top`](/fr/docs/Web/CSS/padding-top). Toutefois, elle peut en réalité correspondre à la propriété physique [`padding-top`](/fr/docs/Web/CSS/padding-top), [`padding-right`](/fr/docs/Web/CSS/padding-right) ou [`padding-left`](/fr/docs/Web/CSS/padding-left) selon les valeurs définies pour [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+Selon sa définition dans la spécification, la propriété `padding-inline-start` peut prendre les mêmes valeurs que la propriété [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top). Toutefois, elle peut en réalité correspondre à la propriété physique [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top), [`padding-right`](/fr/docs/Web/CSS/Reference/Properties/padding-right) ou [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left) selon les valeurs définies pour [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) et [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation).
 
-Les autres parties du remplissage sont définies grâce aux propriétés [`padding-block-start`](/fr/docs/Web/CSS/padding-block-start), [`padding-block-end`](/fr/docs/Web/CSS/padding-block-end) et [`padding-inline-end`](/fr/docs/Web/CSS/padding-inline-end).
+Les autres parties du remplissage sont définies grâce aux propriétés [`padding-block-start`](/fr/docs/Web/CSS/Reference/Properties/padding-block-start), [`padding-block-end`](/fr/docs/Web/CSS/Reference/Properties/padding-block-end) et [`padding-inline-end`](/fr/docs/Web/CSS/Reference/Properties/padding-inline-end).
 
 ## Définition formelle
 
@@ -133,11 +133,11 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes&nbsp;:
-  - [`padding-top`](/fr/docs/Web/CSS/padding-top)
-  - [`padding-right`](/fr/docs/Web/CSS/padding-right)
-  - [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)
-  - [`padding-left`](/fr/docs/Web/CSS/padding-left)
+  - [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top)
+  - [`padding-right`](/fr/docs/Web/CSS/Reference/Properties/padding-right)
+  - [`padding-bottom`](/fr/docs/Web/CSS/Reference/Properties/padding-bottom)
+  - [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left)
 
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
-- [`direction`](/fr/docs/Web/CSS/direction)
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)
+- [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction)
+- [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)

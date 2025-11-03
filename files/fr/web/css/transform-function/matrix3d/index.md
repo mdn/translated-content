@@ -185,6 +185,6 @@ body {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

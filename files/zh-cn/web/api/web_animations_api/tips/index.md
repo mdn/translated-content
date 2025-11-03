@@ -121,9 +121,9 @@ function playAnimation() {
 
 ## 动画的层叠上下文
 
-在播放 CSS 动画时，动画的属性会表现得好像它们被包含在 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性声明中一样。任何会创建层叠上下文的属性，如果被标记为 `will-change`，则会使元素接收一个新的层叠上下文。
+在播放 CSS 动画时，动画的属性会表现得好像它们被包含在 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性声明中一样。任何会创建层叠上下文的属性，如果被标记为 `will-change`，则会使元素接收一个新的层叠上下文。
 
-对于 [`animation-fill-mode: forwards`](/zh-CN/docs/Web/CSS/animation-fill-mode#forwards)（以及 `both`），动画属性在动画结束后仍保持其最终关键帧的状态。所以属性会保持 `will-change` 状态，因此如果在动画期间创建了新的层叠上下文，并且在动画结束后仍然存在，则目标元素在动画结束后保留层叠上下文。
+对于 [`animation-fill-mode: forwards`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards)（以及 `both`），动画属性在动画结束后仍保持其最终关键帧的状态。所以属性会保持 `will-change` 状态，因此如果在动画期间创建了新的层叠上下文，并且在动画结束后仍然存在，则目标元素在动画结束后保留层叠上下文。
 
 ## 参见
 

@@ -29,7 +29,7 @@ new TransitionEvent(type, options)
         既定値は `""` です。
     - `elapsedTime` {{optional_inline}}
       - : アニメーションが一時停止していた時間を除き、このイベントが発行されたときにアニメーションが実行されている時間を秒単位で表す数値です。
-        `"animationstart"` イベントでは、 `elapsedTime` はふつう `0.0` ですが、 [`animation-delay`](/ja/docs/Web/CSS/animation-delay) が負の値である場合は、 `elapsedTime` が `(-1 * delay)` であるイベントが発行されます。
+        `"animationstart"` イベントでは、 `elapsedTime` はふつう `0.0` ですが、 [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay) が負の値である場合は、 `elapsedTime` が `(-1 * delay)` であるイベントが発行されます。
         既定値は `0.0` です。
     - `pseudoElement` {{optional_inline}}
       - : 文字列で、既定値は `"::"` です。アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。

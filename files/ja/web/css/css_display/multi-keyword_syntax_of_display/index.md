@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-[CSS 表示方法モジュール](/ja/docs/Web/CSS/CSS_display)は、 CSS の [`display`](/ja/docs/Web/CSS/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
+[CSS 表示方法モジュール](/ja/docs/Web/CSS/CSS_display)は、 CSS の [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
 
 > [!NOTE]
 > 複数キーワード構文は、「2 値構文」または「複数値構文」とも呼ばれています。

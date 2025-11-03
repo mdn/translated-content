@@ -139,7 +139,7 @@ input[type="file"]::file-selector-button:hover {
 
 ## 関連情報
 
-- [WebKit の CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
+- [WebKit の CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
 - [ファイルとディレクトリー項目 API の Firefox における対応](/ja/docs/Web/API/File_and_Directory_Entries_API)
 - [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)

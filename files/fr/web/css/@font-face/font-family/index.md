@@ -7,7 +7,7 @@ l10n:
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** définit la famille de polices pour une police spécifiée dans une [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}}.
 
-La valeur est utilisée pour la correspondance de noms contre un `@font-face` particulier lors du style des éléments utilisant la propriété [`font-family`](/fr/docs/Web/CSS/font-family).
+La valeur est utilisée pour la correspondance de noms contre un `@font-face` particulier lors du style des éléments utilisant la propriété [`font-family`](/fr/docs/Web/CSS/Reference/Properties/font-family).
 N'importe quel nom peut être utilisé, et cela remplace tout nom spécifié dans les données de police sous-jacentes.
 
 ## Syntaxe

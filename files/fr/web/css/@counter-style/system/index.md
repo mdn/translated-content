@@ -338,7 +338,7 @@ ol {
 
 ### Extension d'un compteur
 
-Cet exemple utilise l'algorithme, les symboles et autres propriétés de [`lower-alpha`](/fr/docs/Web/CSS/list-style-type#lower-alpha), l'une des nombreuses valeurs natives de {{CSSXref("list-style-type")}}, mais l'étend en supprimant le point (`'.'`) après la représentation du compteur et en entourant les caractères de parenthèses, comme `(a)` et `(b)`.
+Cet exemple utilise l'algorithme, les symboles et autres propriétés de [`lower-alpha`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#lower-alpha), l'une des nombreuses valeurs natives de {{CSSXref("list-style-type")}}, mais l'étend en supprimant le point (`'.'`) après la représentation du compteur et en entourant les caractères de parenthèses, comme `(a)` et `(b)`.
 
 #### HTML
 

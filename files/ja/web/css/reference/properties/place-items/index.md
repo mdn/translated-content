@@ -58,8 +58,8 @@ place-items: end center;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`align-items`](/ja/docs/Web/CSS/align-items)
-- [`justify-items`](/ja/docs/Web/CSS/justify-items)
+- [`align-items`](/ja/docs/Web/CSS/Reference/Properties/align-items)
+- [`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items)
 
 ## 構文
 

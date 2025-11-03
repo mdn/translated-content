@@ -262,7 +262,7 @@ Mozilla (Firefox), Blink (Chrome et Opera) et WebKit (Safari) fournissent certai
 
 ## Accessibilité
 
-Le lecteur d'écran [VoiceOver](https://help.apple.com/voiceover/info/guide/) n'annonce pas, incorrectement, les listes non ordonnées lorsque `list-style-type: none` leur est appliqué. Pour pallier ce problème, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
+Le lecteur d'écran [VoiceOver](https://help.apple.com/voiceover/info/guide/) n'annonce pas, incorrectement, les listes non ordonnées lorsque `list-style-type: none` leur est appliqué. Pour pallier ce problème, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/Reference/Properties/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
 
 ```css
 ul {
@@ -797,6 +797,6 @@ container.addEventListener("change", (event) => {
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style)
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
+- [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style)
+- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
+- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)

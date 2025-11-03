@@ -69,7 +69,7 @@ Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)&nbsp;:
 
 Le module des [propriétés personnalisées CSS pour les variables en cascade](/fr/docs/Web/CSS/CSS_cascading_variables)&nbsp;:
 
-- [Propriété personnalisée (`--*`)](/fr/docs/Web/CSS/--*)
+- [Propriété personnalisée (`--*`)](/fr/docs/Web/CSS/Reference/Properties/--*)
 - Fonction {{cssxref("var")}}
 
 Le module des [règles conditionnelles CSS](/fr/docs/Web/CSS/CSS_conditional_rules)&nbsp;:

@@ -154,7 +154,7 @@ Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un 
 </div>
 ```
 
-Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété {{CSSxRef("background-color")}} à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et {{CSSxRef("background-size")}} (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
+Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété {{CSSxRef("background-color")}} à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et {{CSSxRef("background-size")}} (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
 
 {{EmbedLiveSample("Placer une couleur sur une image en arrière-plan","100%","220")}}
 

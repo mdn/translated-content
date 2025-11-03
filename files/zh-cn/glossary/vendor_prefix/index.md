@@ -30,7 +30,7 @@ Web 开发者一直在生产环境的网站上使用这些实验性代码，这�
 transition: all 4s ease;
 ```
 
-如果你在代码库中遇到上面的代码，你可以安全地删除除最后一行之外的所有内容。所有浏览器都已支持不带浏览器引擎前缀的[过渡](/zh-CN/docs/Web/CSS/transition#浏览器兼容性)：
+如果你在代码库中遇到上面的代码，你可以安全地删除除最后一行之外的所有内容。所有浏览器都已支持不带浏览器引擎前缀的[过渡](/zh-CN/docs/Web/CSS/Reference/Properties/transition#浏览器兼容性)：
 
 ```css
 transition: all 4s ease;

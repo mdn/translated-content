@@ -11,12 +11,12 @@ l10n:
 **`view-timeline-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインの名前を定義するために使用します。 `view-timeline` は主体要素に設定します。
 
 既定では、主体要素がスクローラーの一方の端に初めて表示されるとタイムラインは 0% になり、反対側の端に達すると 100% になります。
-この名前は [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
+この名前は [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
 
 > [!NOTE]
 > 要素が軸方向の寸法でそのコンテナーをはみ出さない場合、またははみ出した部分が隠されているかクリップされている場合、タイムラインは作成されません。
 
-{{cssxref("view-timeline-axis")}} および `view-timeline-name` プロパティは [`view-timeline`](/ja/docs/Web/CSS/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
+{{cssxref("view-timeline-axis")}} および `view-timeline-name` プロパティは [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -32,7 +32,7 @@ view-timeline-name: --custom_name_for_timeline;
 - `none`
   - : タイムラインには名前がありません。
 - `<dashed-ident>`
-  - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
+  - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) プロパティで参照することができます。
 
     > [!NOTE]
     > [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
@@ -167,7 +167,7 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/ja/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/ja/docs/Web/CSS/view-timeline-axis)
+- [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

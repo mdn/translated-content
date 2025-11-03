@@ -116,7 +116,7 @@ input:optional {
 
 これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
 
-これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
+これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/Reference/Properties/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
 
 これは、すべてのユーザーのアクセシビリティを保証するため代替のインジケーターも利用できる場合に、ラベルやアイコンのような視覚的なインジケーターを要素に追加したい場合に実に有益です。たとえば、[カスタムラジオボタンの例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)では、ラジオボタンが選択されたときにカスタムラジオボタンの内側の円の配置とアニメーションを処理するために生成コンテンツを使用しています。
 
@@ -479,7 +479,7 @@ textarea:read-write {
 
 チェックされたときは、 {{cssxref(":checked")}} 擬似クラスで照合できます。
 
-これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
+これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/Reference/Properties/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
 
 おさらいですが、 [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) の例の `:checked` コードは以下のようになっています。
 
@@ -507,7 +507,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-基本的には、ラジオボタンの「内側の円」のスタイルを `::before` 擬似要素を使用して構築しますが、それに `scale(0)` を [`transform`](/ja/docs/Web/CSS/transform) を設定します。次に、 [`transition`](/ja/docs/Web/CSS/transition) を使用して、ラジオが選択/チェックされたときにラベルの生成コンテンツがうまくアニメーションして表示されるようにしています。 [`width`](/ja/docs/Web/CSS/width)/[`height`](/ja/docs/Web/CSS/height) を遷移させるのではなく、座標変換を使用することの利点は、円の角から伸びるように見えるのではなく、円の中心から伸びるようにするために [`transform-origin`](/ja/docs/Web/CSS/transform-origin) を使用することができ、かつボックスモデルプロパティ値を更新しないため、ジャンプする動作がないことです。
+基本的には、ラジオボタンの「内側の円」のスタイルを `::before` 擬似要素を使用して構築しますが、それに `scale(0)` を [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) を設定します。次に、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) を使用して、ラジオが選択/チェックされたときにラベルの生成コンテンツがうまくアニメーションして表示されるようにしています。 [`width`](/ja/docs/Web/CSS/Reference/Properties/width)/[`height`](/ja/docs/Web/CSS/Reference/Properties/height) を遷移させるのではなく、座標変換を使用することの利点は、円の角から伸びるように見えるのではなく、円の中心から伸びるようにするために [`transform-origin`](/ja/docs/Web/CSS/Reference/Properties/transform-origin) を使用することができ、かつボックスモデルプロパティ値を更新しないため、ジャンプする動作がないことです。
 
 ### :default と :indeterminate
 

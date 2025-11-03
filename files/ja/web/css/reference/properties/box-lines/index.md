@@ -65,7 +65,7 @@ div {
 }
 ```
 
-現在のフレックスボックスで同等のものは [`flex-wrap`](/ja/docs/Web/CSS/flex-wrap) です。
+現在のフレックスボックスで同等のものは [`flex-wrap`](/ja/docs/Web/CSS/Reference/Properties/flex-wrap) です。
 
 ## 仕様書
 

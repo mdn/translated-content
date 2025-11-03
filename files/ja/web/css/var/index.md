@@ -3,7 +3,7 @@ title: var()
 slug: Web/CSS/var
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
+[CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
 
 {{InteractiveExample("CSS デモ: var()")}}
 

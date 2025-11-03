@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e48b828fa5386202eb60303cde48eeea8f79203c
 ---
 
-**`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z 順を定義します。 z-index がより大きな要素はより小さな要素の上に重なります。
+**`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/Reference/Properties/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z 順を定義します。 z-index がより大きな要素はより小さな要素の上に重なります。
 
 {{InteractiveExample("CSS デモ: z-index")}}
 

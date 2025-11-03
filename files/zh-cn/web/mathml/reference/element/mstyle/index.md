@@ -33,7 +33,7 @@ l10n:
 
 ### 映射到 CSS 的属性
 
-以下示例使用[全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes) `displaystyle` 和 `mathcolor` 分别覆盖 `<munder>` 和 `<munderover>` 子元素的 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 和 [`color`](/zh-CN/docs/Web/CSS/color)：
+以下示例使用[全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes) `displaystyle` 和 `mathcolor` 分别覆盖 `<munder>` 和 `<munderover>` 子元素的 [`math-style`](/zh-CN/docs/Web/CSS/Reference/Properties/math-style) 和 [`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color)：
 
 ```html
 <math display="block">
@@ -59,7 +59,7 @@ l10n:
 
 ### 旧版附加符号属性
 
-以下示例显示一个公式，其中 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 `128pt`。它包含了嵌套的上标中放置的数字，以及带有旧属性 `scriptsizemultiplier` 和 `scriptminsize` 的 `<mstyle>` 元素。每当进入上标时，`font-size` 就会乘以 `0.5`，只要这不会使其小于 `16pt`。
+以下示例显示一个公式，其中 [`font-size`](/zh-CN/docs/Web/CSS/Reference/Properties/font-size) 设置为 `128pt`。它包含了嵌套的上标中放置的数字，以及带有旧属性 `scriptsizemultiplier` 和 `scriptminsize` 的 `<mstyle>` 元素。每当进入上标时，`font-size` 就会乘以 `0.5`，只要这不会使其小于 `16pt`。
 
 ```html
 <math display="block" style="font-size: 128pt">

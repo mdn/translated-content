@@ -18,7 +18,7 @@ CSS 屬性可以分為兩種類型：
 
 當元素上未指定**繼承屬性**的值時，該元素會取得其父元素上該屬性的[計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)。只有文件的根元素會取得屬性摘要中給定的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
 
-繼承屬性的一個典型範例是 [`color`](/zh-TW/docs/Web/CSS/color) 屬性。請看以下樣式規則和標記：
+繼承屬性的一個典型範例是 [`color`](/zh-TW/docs/Web/CSS/Reference/Properties/color) 屬性。請看以下樣式規則和標記：
 
 ```css
 p {
@@ -32,7 +32,7 @@ p {
 
 {{EmbedLiveSample("繼承屬性","",40)}}
 
-「強調文字」這幾個字會顯示為綠色，因為 `em` 元素從 `p` 元素繼承了 [`color`](/zh-TW/docs/Web/CSS/color) 屬性的值。它*不會*取得該屬性的初始值（也就是當頁面未指定顏色時，根元素所使用的顏色）。
+「強調文字」這幾個字會顯示為綠色，因為 `em` 元素從 `p` 元素繼承了 [`color`](/zh-TW/docs/Web/CSS/Reference/Properties/color) 屬性的值。它*不會*取得該屬性的初始值（也就是當頁面未指定顏色時，根元素所使用的顏色）。
 
 ## 非繼承屬性
 
@@ -52,13 +52,13 @@ p {
 
 {{EmbedLiveSample("非繼承屬性","",40)}}
 
-「強調文字」這幾個字不會有另一個邊框（因為 [`border-style`](/zh-TW/docs/Web/CSS/border-style) 的初始值是 `none`）。
+「強調文字」這幾個字不會有另一個邊框（因為 [`border-style`](/zh-TW/docs/Web/CSS/Reference/Properties/border-style) 的初始值是 `none`）。
 
 ## 備註
 
 [`inherit`](/zh-TW/docs/Web/CSS/inherit) 關鍵字允許作者明確指定繼承。它對繼承和非繼承屬性都有效。
 
-你可以使用 [`all`](/zh-TW/docs/Web/CSS/all) 簡寫屬性一次控制所有屬性的繼承，它會將其值應用於所有屬性。例如：
+你可以使用 [`all`](/zh-TW/docs/Web/CSS/Reference/Properties/all) 簡寫屬性一次控制所有屬性的繼承，它會將其值應用於所有屬性。例如：
 
 ```css
 p {
@@ -68,11 +68,11 @@ p {
 }
 ```
 
-這會將段落的 [`font`](/zh-TW/docs/Web/CSS/font) 屬性樣式還原為使用者代理程式的預設值，除非存在使用者樣式表，在這種情況下會改用使用者樣式表。然後它會將字體大小加倍，並應用 `"bold"` 的 [`font-weight`](/zh-TW/docs/Web/CSS/font-weight)。
+這會將段落的 [`font`](/zh-TW/docs/Web/CSS/Reference/Properties/font) 屬性樣式還原為使用者代理程式的預設值，除非存在使用者樣式表，在這種情況下會改用使用者樣式表。然後它會將字體大小加倍，並應用 `"bold"` 的 [`font-weight`](/zh-TW/docs/Web/CSS/Reference/Properties/font-weight)。
 
 ### 覆寫繼承範例
 
-使用我們先前關於 [`border`](/zh-TW/docs/Web/CSS/border) 的範例，如果我們用 `inherit` 明確設定繼承，我們會得到以下結果：
+使用我們先前關於 [`border`](/zh-TW/docs/Web/CSS/Reference/Properties/border) 的範例，如果我們用 `inherit` 明確設定繼承，我們會得到以下結果：
 
 ```css
 p {

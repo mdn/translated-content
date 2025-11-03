@@ -14,7 +14,7 @@ CSS フォント読み込み API は、フォントリソースを動的に読�
 
 ## 概念と使用方法
 
-CSSスタイルシートでは、カスタムフォントを使用することができます。 [`@font-face`](/ja/docs/Web/CSS/@font-face) ルールでダウンロードするフォントを指定し、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティで要素に適用します。
+CSSスタイルシートでは、カスタムフォントを使用することができます。 [`@font-face`](/ja/docs/Web/CSS/@font-face) ルールでダウンロードするフォントを指定し、 [`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family) プロパティで要素に適用します。
 フォントがダウンロードされるこの点は、ユーザーエージェントによって制御されます。
 ほとんどのエージェントは、フォントが最初に必要になったときだけ取得して読み込むため、知覚できるほどの遅延が生じることがあります。
 

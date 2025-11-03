@@ -101,7 +101,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 {{cssxref('scroll-timeline')}} 一括指定プロパティを使用する場合、プロパティ値の順序は {{cssxref('scroll-timeline-name')}} の後に {{cssxref('scroll-timeline-axis')}} を指定する必要があります。
 個別指定プロパティと一括指定プロパティは、設定で両方利用できます。
-あるいは、 [`scroll()`](/ja/docs/Web/CSS/animation-timeline/scroll) 関数記法を {{cssxref('animation-timeline')}} で使用して、親要素のスクロールバー軸をタイムラインに使用することを指定することもできます。
+あるいは、 [`scroll()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) 関数記法を {{cssxref('animation-timeline')}} で使用して、親要素のスクロールバー軸をタイムラインに使用することを指定することもできます。
 
 詳細については、[Firefox バグ 1807685](https://bugzil.la/1807685)、[Firefox バグ 1804573](https://bugzil.la/1804573)、[Firefox バグ 1809005](https://bugzil.la/1809005)、[Firefox バグ 1676791](https://bugzil.la/1676791), [Firefox バグ 1754897](https://bugzil.la/1754897)、[Firefox バグ 1817303](https://bugzil.la/1817303)、[Firefox バグ 1737918](https://bugzil.la/1737918) を参照してください。
 
@@ -133,7 +133,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### font-variant-emoji プロパティ
 
-CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji) プロパティを使用すると、絵文字の表示の既定のスタイルを設定できます。
+CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji) プロパティを使用すると、絵文字の表示の既定のスタイルを設定できます。
 詳細については、[Firefox バグ 1461589](https://bugzil.la/1461589) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -178,7 +178,7 @@ CSS の [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors) メディ�
 
 ### 名前付きビュー進行タイムラインプロパティ
 
-CSS の [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) プロパティを使用すると、特定の要素に名前を付け、その要素の親要素であるスクロール要素がビュー進行タイムラインのソースであることを識別することができます。
+CSS の [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name) プロパティを使用すると、特定の要素に名前を付け、その要素の親要素であるスクロール要素がビュー進行タイムラインのソースであることを識別することができます。
 この名前は `animation-timeline` に代入することができ、これにより、関連付けられた要素は、その祖先のスクロールバーの表示領域内を移動する際にアニメーションします。
 詳しくは [Firefox バグ 1737920](https://bugzil.la/1737920) を参照してください。
 
@@ -194,7 +194,7 @@ CSS の [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) プロパテ
 
 ### 無名ビュー進行タイムライン関数
 
-CSS の [`view()`](/ja/docs/Web/CSS/animation-timeline/view) 関数を使用すると、要素の `animation-timeline` をビュー進行タイムラインとして指定することができます。これにより、要素は、その親スクロールバーの表示領域内を移動するにつれてアニメーションします。
+CSS の [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view) 関数を使用すると、要素の `animation-timeline` をビュー進行タイムラインとして指定することができます。これにより、要素は、その親スクロールバーの表示領域内を移動するにつれてアニメーションします。
 この関数は、アニメーションのタイムラインを提供する親要素の軸と、アニメーションの開始位置および開始する可視領域内のインセットを定義します。
 詳しくは ([Firefox バグ 1808410](https://bugzil.la/1808410)) を参照してください。
 

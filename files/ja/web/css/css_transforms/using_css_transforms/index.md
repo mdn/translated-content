@@ -532,7 +532,7 @@ section {
 
 ## 関連情報
 
-- [CSS の `transform` プロパティ](/ja/docs/Web/CSS/transform)および [CSS `<transform-function>` データ型](/ja/docs/Web/CSS/transform-function)
+- [CSS の `transform` プロパティ](/ja/docs/Web/CSS/Reference/Properties/transform)および [CSS `<transform-function>` データ型](/ja/docs/Web/CSS/transform-function)
 - 独立した座標変換プロパティ: {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} （`skew` プロパティはありません）
 - [端末の向きと 3D 座標変換の併用](/ja/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (David DeSandro によるブログ記事)

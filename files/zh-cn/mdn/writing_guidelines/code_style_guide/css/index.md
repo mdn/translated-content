@@ -119,7 +119,7 @@ h3 {
   animation: 3s ease-in 1s 2 reverse both paused slidein;
   ```
 
-  在该示例中，第一个可以解析为 [`<time>`](/zh-CN/docs/Web/CSS/time) 的值会被赋值给 [`animation-duration`](/zh-CN/docs/Web/CSS/animation-duration) 属性，第二个可以解析为时间的值会被赋值给 [`animation-delay`](/zh-CN/docs/Web/CSS/animation-delay)。（更多信息请参阅 [animation 语法](/zh-CN/docs/Web/CSS/animation#语法)的详细内容。）
+  在该示例中，第一个可以解析为 [`<time>`](/zh-CN/docs/Web/CSS/time) 的值会被赋值给 [`animation-duration`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-duration) 属性，第二个可以解析为时间的值会被赋值给 [`animation-delay`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-delay)。（更多信息请参阅 [animation 语法](/zh-CN/docs/Web/CSS/Reference/Properties/animation#语法)的详细内容。）
 
 ## 移动优先的媒体查询
 

@@ -86,5 +86,5 @@ font-synthesis-style: unset;
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) shorthand, [font-synthesis-small-caps](/ja/docs/Web/CSS/font-synthesis-small-caps), [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
+- [font-synthesis](/ja/docs/Web/CSS/Reference/Properties/font-synthesis) shorthand, [font-synthesis-small-caps](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-small-caps), [font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight)
 - {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}

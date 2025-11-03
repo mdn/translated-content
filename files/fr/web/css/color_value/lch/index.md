@@ -484,7 +484,7 @@ div {
 
 Cet exemple stylise trois éléments {{htmlelement("div")}} avec différentes couleurs de fond, démontrant l'utilisation des couleurs relatives pour changer la luminosité d'une couleur en utilisant la fonction de couleur `lch()`. Le `<div>` du milieu conserve la `--base-color` d'origine, tandis que les `<div>` de gauche et de droite reçoivent des variantes éclaircies et assombries de la `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/--*) `--base-color` est passée dans une fonction `lch()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `lch()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
 
 ```html hidden
 <div id="container">

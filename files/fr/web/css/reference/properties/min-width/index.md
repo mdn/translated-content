@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir inférieure à la valeur spécifiée par `min-width`.
+La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir inférieure à la valeur spécifiée par `min-width`.
 
 {{InteractiveExample("CSS Demo: min-width")}}
 
@@ -45,7 +45,7 @@ min-width: 40ch;
 }
 ```
 
-La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à [`max-width`](/fr/docs/Web/CSS/max-width) ou à [`width`](/fr/docs/Web/CSS/width).
+La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) ou à [`width`](/fr/docs/Web/CSS/Reference/Properties/width).
 
 ## Syntaxe
 
@@ -136,8 +136,8 @@ p {
 
 ## Voir aussi
 
-- [`width`](/fr/docs/Web/CSS/width)
-- [`max-width`](/fr/docs/Web/CSS/max-width)
-- [`min-height`](/fr/docs/Web/CSS/min-height)
-- [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
+- [`width`](/fr/docs/Web/CSS/Reference/Properties/width)
+- [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width)
+- [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height)
+- [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
 - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

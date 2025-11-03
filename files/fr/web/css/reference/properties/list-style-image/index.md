@@ -8,7 +8,7 @@ original_slug: Web/CSS/list-style-image
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Reference/Elements/li).
 
-On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style).
+On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style).
 
 {{InteractiveExample("CSS Demo: list-style-image")}}
 
@@ -72,7 +72,7 @@ hr {
 ```
 
 > [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
+> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/Reference/Properties/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
 
 ## Syntaxe
 
@@ -98,7 +98,7 @@ list-style-image: unset;
 - [`<image>`](/fr/docs/Web/CSS/image)
   - : Une valeur représentant une image valide, qui sera utilisée comme puce.
 - `none`
-  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec [`list-style-type`](/fr/docs/Web/CSS/list-style-type) sera utilisé à la place.
+  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) sera utilisé à la place.
 
 ## Définition formelle
 

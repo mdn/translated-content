@@ -294,7 +294,7 @@ div {
 
 Cet exemple applique trois couleurs de fond différentes à des éléments {{htmlelement("div")}}. Celui du milieu utilise la couleur `--base-color` telle quelle, tandis que les deux autres utilisent des variantes éclaircies et assombries de cette couleur, définies avec des couleurs relatives.
 
-Les variantes sont définies en passant la propriété personnalisée [--base-color](/fr/docs/Web/CSS/--*) à la fonction `color()`, puis en modifiant les canaux `g` et `b` via `calc()`. La couleur éclaircie ajoute 15% à ces canaux, la couleur assombrie en retire 15%.
+Les variantes sont définies en passant la propriété personnalisée [--base-color](/fr/docs/Web/CSS/Reference/Properties/--*) à la fonction `color()`, puis en modifiant les canaux `g` et `b` via `calc()`. La couleur éclaircie ajoute 15% à ces canaux, la couleur assombrie en retire 15%.
 
 ```html hidden
 <div id="container">

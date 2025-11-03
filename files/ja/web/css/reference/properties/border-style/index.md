@@ -61,10 +61,10 @@ body {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-style`](/ja/docs/Web/CSS/border-bottom-style)
-- [`border-left-style`](/ja/docs/Web/CSS/border-left-style)
-- [`border-right-style`](/ja/docs/Web/CSS/border-right-style)
-- [`border-top-style`](/ja/docs/Web/CSS/border-top-style)
+- [`border-bottom-style`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-style)
+- [`border-left-style`](/ja/docs/Web/CSS/Reference/Properties/border-left-style)
+- [`border-right-style`](/ja/docs/Web/CSS/Reference/Properties/border-right-style)
+- [`border-top-style`](/ja/docs/Web/CSS/Reference/Properties/border-top-style)
 
 ## 構文
 

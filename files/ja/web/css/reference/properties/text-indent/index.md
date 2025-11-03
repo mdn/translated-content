@@ -247,11 +247,11 @@ p {
 
 - [CSS を使用した HTML のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics)
 - 関連する CSS プロパティ:
-  - [`text-justify`](/ja/docs/Web/CSS/text-justify)
-  - [`text-orientation`](/ja/docs/Web/CSS/text-orientation)
-  - [`text-overflow`](/ja/docs/Web/CSS/text-overflow)
-  - [`text-rendering`](/ja/docs/Web/CSS/text-rendering)
-  - [`text-transform`](/ja/docs/Web/CSS/text-transform)
+  - [`text-justify`](/ja/docs/Web/CSS/Reference/Properties/text-justify)
+  - [`text-orientation`](/ja/docs/Web/CSS/Reference/Properties/text-orientation)
+  - [`text-overflow`](/ja/docs/Web/CSS/Reference/Properties/text-overflow)
+  - [`text-rendering`](/ja/docs/Web/CSS/Reference/Properties/text-rendering)
+  - [`text-transform`](/ja/docs/Web/CSS/Reference/Properties/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
 - [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) CSS モジュール

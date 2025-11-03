@@ -82,7 +82,7 @@ border-top-style: revert;
 border-top-style: unset;
 ```
 
-La propriété `border-top-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
+La propriété `border-top-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
 ## Définition formelle
 
@@ -177,6 +177,6 @@ td {
 
 ## Voir aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-left-style`](/fr/docs/Web/CSS/border-left-style), [`border-right-style`](/fr/docs/Web/CSS/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/border-style).
+- Les autres propriétés liées au style des bordures&nbsp;: [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style), [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
-- Les autres propriétés liées à la bordure haute&nbsp;: [`border-top`](/fr/docs/Web/CSS/border-top), [`border-top-color`](/fr/docs/Web/CSS/border-top-color), [`border-top-width`](/fr/docs/Web/CSS/border-top-width).
+- Les autres propriétés liées à la bordure haute&nbsp;: [`border-top`](/fr/docs/Web/CSS/Reference/Properties/border-top), [`border-top-color`](/fr/docs/Web/CSS/Reference/Properties/border-top-color), [`border-top-width`](/fr/docs/Web/CSS/Reference/Properties/border-top-width).

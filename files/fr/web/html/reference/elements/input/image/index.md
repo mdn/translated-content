@@ -194,7 +194,7 @@ Prenons un exemple simple qui utilise les différentes fonctionnalités essentie
 
 - L'attribut [`src`](#src) est utilisé afin d'indiquer le chemin vers l'image à afficher sur le bouton.
 - L'attribut [`alt`](#alt) permet de fournir un texte alternatif afin que les personnes qui utilisent un outil de lecture d'écran puissent avoir une meilleure idée du rôle du bouton. Ce texte sera également affiché si l'image ne peut être affichée pour quelque raison que ce soit (par exemple si le chemin contient une coquille). Si possible, on utilisera un texte qui correspond au libellé qui aurait été choisi si le bouton avait été un bouton d'envoi texte classique.
-- Les attributs [`width`](#width) et [`height`](#height) indiquent respectivement la largeur et la hauteur, exprimées en pixels, selon lesquelles afficher l'image. Le bouton aura la même taille que l'image. S'il faut que la zone couverte par le bouton soit plus grande que l'image, on utilisera du CSS (par exemple la propriété [`padding`](/fr/docs/Web/CSS/padding)). Si une seule dimension est indiquée, la seconde est automatiquement ajustée pour que l'image conserve ses proportions originales.
+- Les attributs [`width`](#width) et [`height`](#height) indiquent respectivement la largeur et la hauteur, exprimées en pixels, selon lesquelles afficher l'image. Le bouton aura la même taille que l'image. S'il faut que la zone couverte par le bouton soit plus grande que l'image, on utilisera du CSS (par exemple la propriété [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)). Si une seule dimension est indiquée, la seconde est automatiquement ajustée pour que l'image conserve ses proportions originales.
 
 ### Surcharger le comportement par défaut du formulaire
 
@@ -220,7 +220,7 @@ Dans l'exemple qui précède, on pourrait implémenter, coté serveur, une logiq
 
 ### Ajuster la position et l'algorithme de redimensionnement de l'image
 
-La propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) permet d'ajuster la position de l'image au sein du cadre fourni par l'élément `<input>` et la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) contrôle la façon dont la taille de l'image est ajustée afin de tenir dans le cadre. On peut donc définir un cadre pour l'image avec les attributs `width` et `height` afin de réserver de l'espace sur la page puis ajuster l'emplacement de l'image et son éventuel redimensionnement au sein de cet espace.
+La propriété CSS [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) permet d'ajuster la position de l'image au sein du cadre fourni par l'élément `<input>` et la propriété [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) contrôle la façon dont la taille de l'image est ajustée afin de tenir dans le cadre. On peut donc définir un cadre pour l'image avec les attributs `width` et `height` afin de réserver de l'espace sur la page puis ajuster l'emplacement de l'image et son éventuel redimensionnement au sein de cet espace.
 
 ## Exemples
 
@@ -275,7 +275,7 @@ label {
 
 ### Ajuster la position et le redimensionnement de l'image
 
-Dans ce nouvel exemple, on adapte l'exemple précédent afin d'avoir plus de place pour l'image et on ajuste la taille et la position de l'image à l'aide des propriétés [`object-fit`](/fr/docs/Web/CSS/object-fit) et [`object-position`](/fr/docs/Web/CSS/object-position).
+Dans ce nouvel exemple, on adapte l'exemple précédent afin d'avoir plus de place pour l'image et on ajuste la taille et la position de l'image à l'aide des propriétés [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit) et [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position).
 
 #### HTML
 
@@ -340,5 +340,5 @@ Ici, `object-position` est configuré afin que l'image soit dessinée au coin su
 ## Voir aussi
 
 - L'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface DOM qu'il implémente&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- Les propriétés CSS pour le positionnement et le dimensionnement de l'image dans le cadre de l'élément `<input>`&nbsp;: [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- Les propriétés CSS pour le positionnement et le dimensionnement de l'image dans le cadre de l'élément `<input>`&nbsp;: [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
 - [Compatibilité des propriétés CSS pour les contrôles de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)

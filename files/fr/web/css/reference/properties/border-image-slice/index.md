@@ -6,7 +6,7 @@ original_slug: Web/CSS/border-image-slice
 
 {{CSSRef}}
 
-La propriété **`border-image-slice`** permet de découper l'image fournie via la propriété [`border-image-source`](/fr/docs/Web/CSS/border-image-source) en régions. Ces régions sont alors utilisées pour composer [l'image de bordure](/fr/docs/Web/CSS/border-image) d'un élément.
+La propriété **`border-image-slice`** permet de découper l'image fournie via la propriété [`border-image-source`](/fr/docs/Web/CSS/Reference/Properties/border-image-source) en régions. Ces régions sont alors utilisées pour composer [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.
 
 {{InteractiveExample("CSS Demo: border-image-slice")}}
 
@@ -58,10 +58,10 @@ Ce découpage crée neuf régions&nbsp;: quatre pour les coins, quatre pour les 
 Le diagramme ci-avant illustre l'emplacement de chaque région.
 
 - Les zones 1 à 4 sont les coins. Chacun est utilisé une fois pour former les coins de l'image de bordure finale.
-- Les zones 5 à 8 sont les bords. Ils sont [répétés, redimensionnés ou modifiés autrement](/fr/docs/Web/CSS/border-image-repeat) dans la bordure finale afin que celle-ci corresponde aux dimensions de l'élément.
+- Les zones 5 à 8 sont les bords. Ils sont [répétés, redimensionnés ou modifiés autrement](/fr/docs/Web/CSS/Reference/Properties/border-image-repeat) dans la bordure finale afin que celle-ci corresponde aux dimensions de l'élément.
 - La zone 9 est la zone centrale et n'est pas utilisée par défaut. Elle est utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
 
-Les propriétés [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat), [`border-image-width`](/fr/docs/Web/CSS/border-image-width), [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset) définissent la façon dont ces images seront utilisées.
+Les propriétés [`border-image-repeat`](/fr/docs/Web/CSS/Reference/Properties/border-image-repeat), [`border-image-width`](/fr/docs/Web/CSS/Reference/Properties/border-image-width), [`border-image-outset`](/fr/docs/Web/CSS/Reference/Properties/border-image-outset) définissent la façon dont ces images seront utilisées.
 
 ## Syntaxe
 
@@ -104,7 +104,7 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
   - : Représente un décalage par rapport au bord comme pourcentage par rapport à la taille de l'image source&nbsp;: c'est la largeur de l'image qui sert de référence pour les décalages horizontaux et la hauteur de l'image qui sert de référence pour les décalages verticaux.
 - `fill`
-  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
+  - : La région au centre de l'image est conservée et celle-ci est affichée comme image d'arrière-plan mais empilée _sous_ l'arrière-plan fourni par [`background`](/fr/docs/Web/CSS/Reference/Properties/background). La largeur et la hauteur sont dimensionnées afin de correspondre aux tailles des régions haute et gauche.
 
 ## Définition formelle
 
@@ -122,7 +122,7 @@ Dans l'exemple suivant, on utilise un simple élément `<div>` avec une image de
 
 ![Des losanges de plusieurs couleurs](border-diamonds.png)
 
-Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour [`border-width`](/fr/docs/Web/CSS/border-width) et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
+Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
 
 ```css
 border-width: 30px;

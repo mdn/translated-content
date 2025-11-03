@@ -156,8 +156,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > [!NOTE]
     > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
-    > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
-    > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).
+    > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur l'élément
+    > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) (non implémenté à date).
 
 - `axis` {{deprecated_inline}}
   - : Cet attribut contient une liste de chaînes de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.
@@ -165,7 +165,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `bgcolor` {{Non-standard_inline}}
   - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
 
-    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 
 - `char` {{deprecated_inline}}
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
@@ -174,7 +174,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère défini par l'attribut `char` à appliquer au contenu des cellules.
 
 - `height` {{deprecated_inline}}
-  - : Cet attribut définit une hauteur de cellule recommandée. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/height).
+  - : Cet attribut définit une hauteur de cellule recommandée. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/Reference/Properties/height).
 
 - `scope` {{deprecated_inline}}
   - : Cet attribut à valeurs énumérées définit les cellules qui sont liées à l'en-tête défini par l'élément [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th). À utiliser uniquement avec l'élément `<th>` pour définir la ligne ou la colonne pour laquelle il est son en-tête.
@@ -190,10 +190,10 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    On utilisera plutôt la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) à la place.
+    On utilisera plutôt la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) à la place.
 
 - `width` {{deprecated_inline}}
-  - : Cet attribut est utilisé afin de définir la largeur recommandée pour une cellule. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/width) à la place.
+  - : Cet attribut est utilisé afin de définir la largeur recommandée pour une cellule. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/Reference/Properties/width) à la place.
 
 ## Exemples
 

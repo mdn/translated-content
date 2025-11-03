@@ -10,7 +10,7 @@ l10n:
 
 **`CanvasRenderingContext2D.fontVariantCaps`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、描画するテキストの大文字化を変更します。
 
-これは、 CSS の [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps) プロパティに相当します。
+これは、 CSS の [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps) プロパティに相当します。
 
 ## 値
 
@@ -37,7 +37,7 @@ l10n:
 
 このプロパティを使用して、フォントの大文字化値を取得したり設定したりすることができます。
 
-なお、これらのいくつかにはアクセシビリティ上の問題があり、相当する [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps#accessibility_concerns) のトピックで概説されています。
+なお、これらのいくつかにはアクセシビリティ上の問題があり、相当する [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps#accessibility_concerns) のトピックで概説されています。
 
 ## 例
 

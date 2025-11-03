@@ -55,7 +55,7 @@ La [requête média `forced-colors`](/fr/docs/Web/CSS/@media/forced-colors) dét
 À noter&nbsp;: avec `aria-disabled`, il faut toujours prévoir le style visuel pour signaler l'état désactivé, notamment en mode contraste élevé sous Windows.
 
 > [!NOTE]
-> Si vous utilisez [`pointer-events: none;`](/fr/docs/Web/CSS/pointer-events) pour rendre un élément non cliquable, pensez à désactiver aussi l'interactivité côté JavaScript. `pointer-events: none;` bloque les clics souris, mais n'empêche pas l'activation clavier.
+> Si vous utilisez [`pointer-events: none;`](/fr/docs/Web/CSS/Reference/Properties/pointer-events) pour rendre un élément non cliquable, pensez à désactiver aussi l'interactivité côté JavaScript. `pointer-events: none;` bloque les clics souris, mais n'empêche pas l'activation clavier.
 
 ```js
 function onClick(event) {

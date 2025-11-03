@@ -1,9 +1,8 @@
 ---
 title: justify-items
 slug: Web/CSS/Reference/Properties/justify-items
-original_slug: Web/CSS/justify-items
 l10n:
-  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 [CSS](/ja/docs/Web/CSS) の **`justify-items`** プロパティは、ボックスのすべてのアイテムに既定の {{CSSxRef("justify-self")}} を定義し、それぞれのボックスの調整を適切な軸に沿って、既定の方法で行ないます。
@@ -49,7 +48,7 @@ justify-items: end;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -58,9 +57,9 @@ justify-items: end;
 
 - ブロックレベルレイアウトでは、包含ブロック内のアイテムをインライン軸で配置します。
 - 絶対位置指定の要素では、 top, left, bottom, right の各オフセット値を反映して、包含ブロック内のアイテムをインライン軸で配置します。
-- 表のセルレイアウトでは、このプロパティは*無視されます* (絶対配置及び表レイアウトのブロック内の配置については[こちら](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables))
-- フレックスボックスレイアウトでは、このプロパティは*無視されます* (フレックスボックス内での配置については[こちら](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox))
-- グリッドレイアウトでは、グリッド領域内のアイテムをインライン軸に配置します (グリッドレイアウト内での配置については[こちら](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout))
+- 表のセルレイアウトでは、このプロパティは無視されます（[ブロック、絶対配置、表レイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)を参照）
+- フレックスボックスレイアウトでは、このプロパティは無視されます（[フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)を参照）
+- グリッドレイアウトでは、グリッド領域内のアイテムに、インライン方向の整列を設定します（[グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)を参照）
 
 ## 構文
 
@@ -115,10 +114,10 @@ justify-items: unset;
 - `normal`
   - : このキーワードの効果は、現在のレイアウトモードに依存します。
     - ブロックレベルレイアウトでは、このキーワードは `start` の別名です。
-    - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
-    - 表のセルレイアウトでは、このキーワードは意味を持たず、*無視*されます。
-    - フレックスボックスレイアウトでは、このキーワードは意味を持たず、*無視*されます。
-    - グリッドレイアウトでは、このキーワードは `stretch` のうちの一つと似た動作をしますが、アスペクト比や固有の寸法を持つボックスは `start` のように振舞います。
+    - 絶対位置のレイアウトでは、このキーワードは置換ボックスには `start` のように動作し、その他の絶対位置指定ボックスには `stretch` のように動作します。
+    - 表のセルレイアウトでは、このキーワードは意味を持たず、無視されます。
+    - フレックスボックスレイアウトでは、このキーワードは意味を持たず、無視されます。
+    - グリッドレイアウトでは、このキーワードは `stretch` のうちの一つと似た動作をしますが、アスペクト比や固有のサイズを持つボックスは `start` のように動作します。
 - `start`
   - : アイテムは適切な軸で配置コンテナーの先頭側に向かって、互いに接するように詰められます。
 - `end`
@@ -141,13 +140,13 @@ justify-items: unset;
   - : first-baseline または last-baseline 配置への参加を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
     `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `stretch`
-  - : アイテムの寸法の合計が配置コンテナーの寸法より小さい場合に、寸法が `auto` であるすべてのアイテムは (比例的にではなく) 均等に引き伸ばされます。ただし、 {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (あるいは同等の機能) による制限は尊重します。これにより、寸法の合計が配置コンテナーを主軸に沿って完全に埋めるようになります。
+  - : アイテムのサイズの合計が配置コンテナーのサイズより小さい場合に、サイズが `auto` であるすべてのアイテムは（比例的にではなく）均等に引き伸ばされます。ただし、 {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} （あるいは同等の機能）による制限は尊重します。これにより、サイズの合計が配置コンテナーを主軸に沿って完全に埋めるようになります。
 - `anchor-center`
   - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 - `safe`
-  - : アイテムの寸法が配置コンテナーをあふれた場合、アイテムは配置モードが `start` であったかのように配置されます。
+  - : アイテムのサイズが配置コンテナーをあふれた場合、アイテムは配置モードが `start` であったかのように配置されます。
 - `unsafe`
-  - : アイテムのと配置コンテナーの寸法の関係にかかわらず、指定した値を尊重します。
+  - : アイテムのと配置コンテナーのサイズの関係にかかわらず、指定した値を尊重します。
 - `legacy`
   - : 値がボックスの子孫に継承されるようにします。なお、子孫が `justify-self: auto` の値を持っている場合、 `legacy` キーワードは子孫からは考慮されず、関連付けられた `left`, `right`, `center` の値のみが継承されます。
 
@@ -161,11 +160,11 @@ justify-items: unset;
 
 ## 例
 
-### 単純なデモ
+### 基本的なデモ
 
-次の例では、シンプルな 2 x 2 のグリッドレイアウトを示します。初期状態では、グリッドコンテナーには `justify-items` の値として `stretch` (既定値) が与えられており、グリッドアイテムはそのセルの幅全体に広がっています。
+この例では、 2 x 2 のグリッドレイアウトを示します。初期状態では、グリッドコンテナーには `justify-items` の値として `stretch` （既定値）が設定されており、グリッドアイテムはそのセルの幅全体に広がっています。
 
-しかし、グリッドコンテナーの上にマウスカーソルを置いたり、タブを押したりすると、グリッドアイテムには `justify-items` の値である `center` が与えられ、グリッドアイテムの幅はコンテンツの幅と同じだけ広がり、セルの中心に整列します。
+しかし、グリッドコンテナーの上にマウスカーソルを置いたり、タブを押したりすると、グリッドアイテムには `justify-items` の値である `center` が設定され、グリッドアイテムの幅はコンテンツの幅と同じだけ広がり、セルの中心に整列します。
 
 #### HTML
 
@@ -182,7 +181,7 @@ justify-items: unset;
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -218,7 +217,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 200)}}
 
 ## 仕様書
 
@@ -233,5 +232,5 @@ span {
 - {{CSSxRef("justify-self")}}
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("place-items")}} 一括指定
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール

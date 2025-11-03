@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-**`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
+**`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/Reference/Properties/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
 
 {{InteractiveExample("CSS デモ: clear")}}
 
@@ -72,7 +72,7 @@ clear: both;
 解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)内の先行する浮動要素です。
 
 > [!NOTE]
-> 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/display#flow-root) に設定してください。
+> 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/Reference/Properties/display#flow-root) に設定してください。
 >
 > ```css
 > #container {

@@ -196,7 +196,7 @@ HTML のこの最初のブロックでは、異なる `zoom` 値を持つ `selec
 
 #### CSS
 
-この CSS の最初のブロックでは、[カスタムプロパティ](/ja/docs/Web/CSS/--*)を使って `--zoom-level` の開始値を設定し、それをコンテンツブロックの `zoom` の値として使っています。
+この CSS の最初のブロックでは、[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)を使って `--zoom-level` の開始値を設定し、それをコンテンツブロックの `zoom` の値として使っています。
 
 ```css
 html {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
 ---
 
-La propriété CSS **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/position#positionnement_absolu)).
+La propriété CSS **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/Reference/Properties/position#positionnement_absolu)).
 
 {{InteractiveExample("CSS Demo: float")}}
 
@@ -61,7 +61,7 @@ float: inline-end;
 
 Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de `float` est différente de `none`.
 
-`float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/display) dans certains cas&nbsp;:
+`float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) dans certains cas&nbsp;:
 
 | [Valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) | [Valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) |
 | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
@@ -184,7 +184,7 @@ div {
 
 ## Dégager des éléments du flottement
 
-Parfois, on veut forcer le déplacement d'un élément sous les éléments flottants. On peut, par exemple, vouloir que les paragraphes soient adjacents aux éléments flottants mais que les titres soient sur leur propre ligne. Voir la documentation de [`clear`](/fr/docs/Web/CSS/clear) pour plus d'exemples.
+Parfois, on veut forcer le déplacement d'un élément sous les éléments flottants. On peut, par exemple, vouloir que les paragraphes soient adjacents aux éléments flottants mais que les titres soient sur leur propre ligne. Voir la documentation de [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) pour plus d'exemples.
 
 ## Spécifications
 
@@ -197,4 +197,4 @@ Parfois, on veut forcer le déplacement d'un élément sous les éléments flott
 ## Voir aussi
 
 - [Le contexte de formatage des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- La propriété [`clear`](/fr/docs/Web/CSS/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant
+- La propriété [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant

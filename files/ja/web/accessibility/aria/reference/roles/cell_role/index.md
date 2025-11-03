@@ -125,7 +125,7 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 
 ## ベストプラクティス
 
-データ表構造には、{{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, などのみを使用してください。 CSS などを使用して、表のネイティブな意味論を削除しなくてはならない場合は、 ARIA ロールを追加してアクセシビリティを確保できます。 ARIA の表 (`table`) ロールの関連するユースケースは、[display: grid など、CSS の display プロパティ](/ja/docs/Web/CSS/display#accessibility_concerns)によって表のネイティブな意味論が上書きされる場合です。 この場合、ARIA の表 (`table`) ロールを使用して意味論を戻すことができます。
+データ表構造には、{{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, などのみを使用してください。 CSS などを使用して、表のネイティブな意味論を削除しなくてはならない場合は、 ARIA ロールを追加してアクセシビリティを確保できます。 ARIA の表 (`table`) ロールの関連するユースケースは、[display: grid など、CSS の display プロパティ](/ja/docs/Web/CSS/Reference/Properties/display#accessibility_concerns)によって表のネイティブな意味論が上書きされる場合です。 この場合、ARIA の表 (`table`) ロールを使用して意味論を戻すことができます。
 
 ```html
 <table
@@ -167,7 +167,7 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 </table>
 ```
 
-上記は、表を作成する意味論的な方法です。 表のネイティブな意味論、つまり表の行が、[display プロパティ](/ja/docs/Web/CSS/display#accessibility_concerns)などを介して変更されていない場合、ARIA ロールは必要ありません。
+上記は、表を作成する意味論的な方法です。 表のネイティブな意味論、つまり表の行が、[display プロパティ](/ja/docs/Web/CSS/Reference/Properties/display#accessibility_concerns)などを介して変更されていない場合、ARIA ロールは必要ありません。
 
 ### 追加された利点
 

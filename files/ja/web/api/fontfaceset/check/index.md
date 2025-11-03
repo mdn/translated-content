@@ -20,7 +20,7 @@ check(font, text)
 ### 引数
 
 - `font`
-  - : CSS の [`font`](/ja/docs/Web/CSS/font) プロパティの構文を使用するフォント指定、例えば `"italic bold 16px Roboto"` です。
+  - : CSS の [`font`](/ja/docs/Web/CSS/Reference/Properties/font) プロパティの構文を使用するフォント指定、例えば `"italic bold 16px Roboto"` です。
 - `text`
   - : Unicode 範囲がテキスト中の文字の少なくとも 1 つを含んでいるフォントフェイスに限定します。これは[個々のグリフが網羅されているかどうかは調べません](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html)。
 

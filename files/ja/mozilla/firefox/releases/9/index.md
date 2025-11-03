@@ -19,10 +19,10 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 ### CSS
 
-- [`font-stretch`](/ja/docs/Web/CSS/font-stretch) プロパティがサポートされました。
-- [`columns`](/ja/docs/Web/CSS/columns) プロパティが [-moz](/ja/docs/Glossary/Vendor_Prefix) 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/column-width) と [`column-count`](/ja/docs/Web/CSS/column-count) をまとめて記述する短縮形プロパティです。
+- [`font-stretch`](/ja/docs/Web/CSS/Reference/Properties/font-stretch) プロパティがサポートされました。
+- [`columns`](/ja/docs/Web/CSS/Reference/Properties/columns) プロパティが [-moz](/ja/docs/Glossary/Vendor_Prefix) 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/Reference/Properties/column-width) と [`column-count`](/ja/docs/Web/CSS/Reference/Properties/column-count) をまとめて記述する短縮形プロパティです。
 - [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
-- [`text-overflow`](/ja/docs/Web/CSS/text-overflow) 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
+- [`text-overflow`](/ja/docs/Web/CSS/Reference/Properties/text-overflow) 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
 
 ### DOM
 

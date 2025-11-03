@@ -25,22 +25,22 @@ L'axe en ligne correspond à l'axe selon lequel les mots d'une phrase sont écri
 
 ![Une situation où l'axe en ligne est horizontal.](inline_axis.png)
 
-Pour aligner des éléments selon l'axe en ligne, on utilisera les propriétés commençant par `justify-`&nbsp;: [`justify-content`](/fr/docs/Web/CSS/justify-content), [`justify-items`](/fr/docs/Web/CSS/justify-items) et [`justify-self`](/fr/docs/Web/CSS/justify-self).
+Pour aligner des éléments selon l'axe en ligne, on utilisera les propriétés commençant par `justify-`&nbsp;: [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content), [`justify-items`](/fr/docs/Web/CSS/Reference/Properties/justify-items) et [`justify-self`](/fr/docs/Web/CSS/Reference/Properties/justify-self).
 
 L'axe de bloc est orthogonal à l'axe en ligne et évolue dans le sens où les blocs sont affichés sur la page (en français, par exemple, les paragraphes sont disposés de haut en bas en suivant l'axe de bloc).
 
-Pour aligner des éléments sur l'axe de bloc, on utilisera les propriétés commençant par `align-`&nbsp;: [`align-content`](/fr/docs/Web/CSS/align-content), [`align-items`](/fr/docs/Web/CSS/align-items) et [`align-self`](/fr/docs/Web/CSS/align-self).
+Pour aligner des éléments sur l'axe de bloc, on utilisera les propriétés commençant par `align-`&nbsp;: [`align-content`](/fr/docs/Web/CSS/Reference/Properties/align-content), [`align-items`](/fr/docs/Web/CSS/Reference/Properties/align-items) et [`align-self`](/fr/docs/Web/CSS/Reference/Properties/align-self).
 
 ![Une situation où l'axe de bloc est vertical.](block_axis.png)
 
 ## Alignement individuel
 
-- [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- [`align-self`](/fr/docs/Web/CSS/align-self)
-- [`place-self`](/fr/docs/Web/CSS/place-self)
-- [`justify-items`](/fr/docs/Web/CSS/justify-items)
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-- [`place-items`](/fr/docs/Web/CSS/place-items)
+- [`justify-self`](/fr/docs/Web/CSS/Reference/Properties/justify-self)
+- [`align-self`](/fr/docs/Web/CSS/Reference/Properties/align-self)
+- [`place-self`](/fr/docs/Web/CSS/Reference/Properties/place-self)
+- [`justify-items`](/fr/docs/Web/CSS/Reference/Properties/justify-items)
+- [`align-items`](/fr/docs/Web/CSS/Reference/Properties/align-items)
+- [`place-items`](/fr/docs/Web/CSS/Reference/Properties/place-items)
 
 Ces propriétés permettent d'aligner individuellement chacun des éléments au sein de leur zone de grille. Les propriétés `align-items` et `justify-items` sont appliquées au conteneur de grille et définissent `align-self` et `justify-self` pour l'ensemble des sujets d'alignement. Cela signifie qu'on peut indiquer un alignement global au niveau du conteneur puis surcharger cette règle au cas par cas si besoin en utilisant `align-self` ou `justify-self` sur les éléments souhaités.
 
@@ -48,19 +48,19 @@ Les valeurs initiales pour `align-self` et `justify-self` sont `stretch`. Aussi,
 
 ## Alignement du contenu
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`place-content`](/fr/docs/Web/CSS/place-content)
+- [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content)
+- [`align-content`](/fr/docs/Web/CSS/Reference/Properties/align-content)
+- [`place-content`](/fr/docs/Web/CSS/Reference/Properties/place-content)
 
 Ces propriétés indiquent comment aligner les pistes de la grille lorsqu'il reste de l'espace à répartir. Ce scénario se produit uniquement si la somme des tailles des pistes est inférieure à la taille du conteneur de grille.
 
 ## Gouttières et versions historiques des propriétés préfixées
 
-- [`row-gap`](/fr/docs/Web/CSS/row-gap)
-- [`column-gap`](/fr/docs/Web/CSS/column-gap)
-- [`gap`](/fr/docs/Web/CSS/gap)
+- [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap)
+- [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap)
+- [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
 
-La spécification sur les grilles contenait initialement les définitions des propriétés [`grid-row-gap`](/fr/docs/Web/CSS/row-gap), [`grid-column-gap`](/fr/docs/Web/CSS/column-gap) et [`grid-gap`](/fr/docs/Web/CSS/gap). Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <i lang="en">Box Alignment</i> et ont respectivement été renommées en [`row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`gap`](/fr/docs/Web/CSS/gap). Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.
+La spécification sur les grilles contenait initialement les définitions des propriétés [`grid-row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), [`grid-column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) et [`grid-gap`](/fr/docs/Web/CSS/Reference/Properties/gap). Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <i lang="en">Box Alignment</i> et ont respectivement été renommées en [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) et [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap). Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.
 
 Les propriétés sans préfixe `grid-` ont été implémentées plus tard par les navigateurs. Afin d'assurer une meilleure compatibilité, vous pouvez doubler les propriétés afin d'utiliser les deux versions.
 
@@ -68,18 +68,18 @@ Les propriétés sans préfixe `grid-` ont été implémentées plus tard par le
 
 ### Propriétés CSS
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`place-content`](/fr/docs/Web/CSS/place-content)
-- [`justify-items`](/fr/docs/Web/CSS/justify-items)
-- [`align-items`](/fr/docs/Web/CSS/align-items)
-- [`place-items`](/fr/docs/Web/CSS/place-items)
-- [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- [`align-self`](/fr/docs/Web/CSS/align-self)
-- [`place-self`](/fr/docs/Web/CSS/place-self)
-- [`row-gap`](/fr/docs/Web/CSS/row-gap)
-- [`column-gap`](/fr/docs/Web/CSS/column-gap)
-- [`gap`](/fr/docs/Web/CSS/gap)
+- [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content)
+- [`align-content`](/fr/docs/Web/CSS/Reference/Properties/align-content)
+- [`place-content`](/fr/docs/Web/CSS/Reference/Properties/place-content)
+- [`justify-items`](/fr/docs/Web/CSS/Reference/Properties/justify-items)
+- [`align-items`](/fr/docs/Web/CSS/Reference/Properties/align-items)
+- [`place-items`](/fr/docs/Web/CSS/Reference/Properties/place-items)
+- [`justify-self`](/fr/docs/Web/CSS/Reference/Properties/justify-self)
+- [`align-self`](/fr/docs/Web/CSS/Reference/Properties/align-self)
+- [`place-self`](/fr/docs/Web/CSS/Reference/Properties/place-self)
+- [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap)
+- [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap)
+- [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
 
 ### Termes du glossaire
 

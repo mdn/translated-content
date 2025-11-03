@@ -1,9 +1,8 @@
 ---
 title: box-sizing
 slug: Web/CSS/Reference/Properties/box-sizing
-original_slug: Web/CSS/box-sizing
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。
@@ -32,9 +31,9 @@ padding: 5px;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element-parent">
-    <p>Parent container</p>
+    <p>親コンテナー</p>
     <div class="transition-all" id="example-element">
-      <p>Child container</p>
+      <p>子コンテナー</p>
     </div>
   </div>
 </section>
@@ -51,7 +50,7 @@ padding: 5px;
 #example-element {
   height: 60px;
   margin: 2em auto;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
 }
 
 #example-element > p {
@@ -92,12 +91,12 @@ box-sizing: unset;
 - `content-box`
   - : これは、 CSS 標準で規定されている初期値および既定値です。 {{Cssxref("width")}} および {{Cssxref("height")}} プロパティの寸法は、コンテンツ領域のみを含むものとなり、パディング、境界、マージン領域は含みません。例えば `.box {width: 350px; border: 10px solid black;}` とすると 370px の幅のボックスを描画します。
 
-    この場合、それぞれの要素の寸法は、_幅 = コンテンツの幅_、*高さ = コンテンツの高さ*として計算されます。 (境界やパディングは計算に含まれません。)
+    この場合、それぞれの要素の寸法は、幅 = コンテンツの幅、高さ = コンテンツの高さ、として計算されます。（境界やパディングは計算に含まれません。）
 
 - `border-box`
   - : {{Cssxref("width")}} および {{Cssxref("height")}} プロパティは、コンテンツ、パディング、境界の各領域を含みますが、マージンは含みません。なお、パディングと境界はボックスの内側に置かれることに注意してください。例えば `.box {width: 350px; border: 10px solid black;}` とすると、ボックスの幅が 350px、コンテンツ領域の幅が 330px として描画されます。コンテンツボックスは負の値にできず 0 に丸められますので、`border-box` を使用して要素を非表示にすることはできません。
 
-    この場合、それぞれの要素の寸法は、_幅 = 境界 + パディング + コンテンツの幅_、*高さ = 境界 + パディング + コンテンツの高さ*として計算されます。
+    この場合、それぞれの要素の寸法は、幅 = 境界 + パディング + コンテンツの幅、高さ = 境界 + パディング + コンテンツの高さ、として計算されます。
 
 ## 公式定義
 
@@ -109,16 +108,16 @@ box-sizing: unset;
 
 ## 例
 
-<h3 id="Box_sizes_with_content-box_and_border-box">content-box と border-box のボックスサイズ</h3>
+### content-box と border-box のボックスサイズ
 
-この例では、2つの `box-sizing` の値が、それ以外の条件が同じ要素のレンダリングの大きさをどのように変えるかを示します。
+この例では、2 つの `box-sizing` の値が、それ以外の条件が同じ要素のレンダリングの大きさをどのように変えるかを示します。
 
 #### HTML
 
 ```html
-<div class="content-box">Content box</div>
+<div class="content-box">content-box</div>
 <br />
-<div class="border-box">Border box</div>
+<div class="border-box">border-box</div>
 ```
 
 #### CSS

@@ -9,7 +9,7 @@ original_slug: Web/CSS/object-position
 La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
 
 > [!NOTE]
-> Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit).
+> Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
 
 {{InteractiveExample("CSS Demo: object-position")}}
 
@@ -126,7 +126,7 @@ La première image est positionnée avec son bord gauche situé à 10 pixels du 
 ## Voir aussi
 
 - Les autres propriétés CSS liées aux images&nbsp;:
-  - [`object-fit`](/fr/docs/Web/CSS/object-fit)
-  - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
-  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
+  - [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
+  - [`image-orientation`](/fr/docs/Web/CSS/Reference/Properties/image-orientation)
+  - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering)
+  - [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)

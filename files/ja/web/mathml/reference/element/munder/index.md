@@ -15,7 +15,7 @@ MathML の `<munder>` 要素は式の下にアクセントや範囲を付ける�
     `false` （既定値）の場合、この要素はベース式の下の*範囲*になります。
 - align {{deprecated_inline}}
   - : 下に付ける文字の配置です。指定可能な値は `left`, `center`, `right` です。
-    この属性は非推奨であり、将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/text-align) を使用してください。
+    この属性は非推奨であり、将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) を使用してください。
 - class, id, style
   - : [スタイルシート](/ja/docs/Web/CSS)を使用するために提供されています。
 - `displaystyle`

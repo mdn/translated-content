@@ -22,7 +22,7 @@ CSS では、マスクを使用して、要素の表示領域と非表示領域�
 
 マスクは、 CSS グラデーション、ラスター画像 (PNG など)、および SVG {{svgelement("mask")}} 要素を使用して定義することができます。このガイドでは、[不透明度と透過率](#不透明度と透過率)、[輝度](#アルファ透過度と輝度)、および[マスクと CSS クリップ](#svg_の_mask_をマスクソースとする)について説明しながら、さまざまなマスク画像の種類を紹介します。
 
-それぞれのマスクレイヤーは、基準ボックスに対して [位置指定](/ja/docs/Web/CSS/mask-position)された {{cssxref("mask-image")}} で構成されます。マスク画像は、[サイズ](/ja/docs/Web/CSS/mask-size)を指定したり、[反復](/ja/docs/Web/CSS/mask-repeat)したり、[クリップ](/ja/docs/Web/CSS/mask-clip)したりすることができます。複数のマスク画像が宣言されている場合、[マスクレイヤーの合成](/ja/docs/Web/CSS/mask-composite)または結合の方法を設定することができます。これについては、[マスクプロパティガイド] (/ja/docs/Web/CSS/CSS_masking/CSS_mask_properties)で説明しています。
+それぞれのマスクレイヤーは、基準ボックスに対して [位置指定](/ja/docs/Web/CSS/Reference/Properties/mask-position)された {{cssxref("mask-image")}} で構成されます。マスク画像は、[サイズ](/ja/docs/Web/CSS/Reference/Properties/mask-size)を指定したり、[反復](/ja/docs/Web/CSS/Reference/Properties/mask-repeat)したり、[クリップ](/ja/docs/Web/CSS/Reference/Properties/mask-clip)したりすることができます。複数のマスク画像が宣言されている場合、[マスクレイヤーの合成](/ja/docs/Web/CSS/Reference/Properties/mask-composite)または結合の方法を設定することができます。これについては、[マスクプロパティガイド] (/ja/docs/Web/CSS/CSS_masking/CSS_mask_properties)で説明しています。
 
 > [!NOTE]
 > すべての例では、マスクが適用される基盤要素として次の画像を使用します。

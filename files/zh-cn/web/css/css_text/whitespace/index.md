@@ -287,7 +287,7 @@ ul {
 }
 ```
 
-如果你确实需要依赖于 `inline-block`，你可以将列表的 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 0。这只有在你的区块不是用 em 确定大小（em 基于 `font-size`，所以区块大小最终也会是 0）的情况下才有效。rem 在这里是更好的选择：
+如果你确实需要依赖于 `inline-block`，你可以将列表的 [`font-size`](/zh-CN/docs/Web/CSS/Reference/Properties/font-size) 设置为 0。这只有在你的区块不是用 em 确定大小（em 基于 `font-size`，所以区块大小最终也会是 0）的情况下才有效。rem 在这里是更好的选择：
 
 ```css
 ul {

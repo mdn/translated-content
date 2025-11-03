@@ -113,13 +113,13 @@ justify-content: unset;
   - : 各アイテムは、主軸方向で配置コンテナーの中央に向けて互いに寄せて配置されます。
 
 - `left`
-  - : アイテムは配置コンテナーの左端に向かって同じ高さに詰められます。プロパティの水平軸がインライン軸と平行でない場合、例えば [`flex-direction: column;`](/ja/docs/Web/CSS/flex-direction) が設定されている場合、この値は `start` のように動作します。
+  - : アイテムは配置コンテナーの左端に向かって同じ高さに詰められます。プロパティの水平軸がインライン軸と平行でない場合、例えば [`flex-direction: column;`](/ja/docs/Web/CSS/Reference/Properties/flex-direction) が設定されている場合、この値は `start` のように動作します。
 
 - `right`
   - : アイテムは、適切な軸で配置コンテナーの右端に向かって、互いに同じ高さに詰められます。このプロパティの軸が（グリッドコンテナーの）インライン軸や（フレックスボックスコンテナーの）主軸と平行でない場合、この値は `start` のように動作します。
 
 - `normal`
-  - : `stretch` として動作します。ただし、[`column-width`](/ja/docs/Web/CSS/column-width) が `auto` でない段組みコンテナーの場合、段はコンテナーいっぱいに引き延ばされるのではなく、指定した `column-width` の幅を取ります。フレックスコンテナーでは `stretch` は `start` として動作するので、`normal` も `start` として動作します。
+  - : `stretch` として動作します。ただし、[`column-width`](/ja/docs/Web/CSS/Reference/Properties/column-width) が `auto` でない段組みコンテナーの場合、段はコンテナーいっぱいに引き延ばされるのではなく、指定した `column-width` の幅を取ります。フレックスコンテナーでは `stretch` は `start` として動作するので、`normal` も `start` として動作します。
 
 - `space-between`
   - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。

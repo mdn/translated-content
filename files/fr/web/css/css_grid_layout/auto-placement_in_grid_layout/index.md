@@ -106,7 +106,7 @@ Il est toutefois possible de contrôler la taille de ces lignes grâce à la pro
 
 ### Dimensionner les lignes avec `minmax()`
 
-On peut utiliser la fonction [`minmax()`](/fr/docs/Web/CSS/minmax) pour la valeur de [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.
+On peut utiliser la fonction [`minmax()`](/fr/docs/Web/CSS/minmax) pour la valeur de [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows) afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.
 
 ```css hidden
 * {
@@ -202,7 +202,7 @@ On peut aussi passer en argument une liste de pistes qui se répèteront. Dans l
 
 ### Utiliser le placement automatique avec les colonnes
 
-On peut également paramétrer la grille pour que les objets soient placés automatiquement en suivant les colonnes de la grille. Pour obtenir ce résultat, on utilisera la propriété [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow) avec la valeur `column`. Dans ce cas, la grille ajoutera les objets dans les lignes verticales définies avec [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows). Lorsqu'une colonne sera pleine, les prochains objets seront placés dans la colonne explicite suivante ou dans une colonne implicite créée automatiquement s'il n'y a plus assez de colonnes explicites. La taille des pistes pour les colonnes implicites peut être définie avec [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns), cette dernière fonctionne de façon analogue à [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows).
+On peut également paramétrer la grille pour que les objets soient placés automatiquement en suivant les colonnes de la grille. Pour obtenir ce résultat, on utilisera la propriété [`grid-auto-flow`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow) avec la valeur `column`. Dans ce cas, la grille ajoutera les objets dans les lignes verticales définies avec [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows). Lorsqu'une colonne sera pleine, les prochains objets seront placés dans la colonne explicite suivante ou dans une colonne implicite créée automatiquement s'il n'y a plus assez de colonnes explicites. La taille des pistes pour les colonnes implicites peut être définie avec [`grid-auto-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns), cette dernière fonctionne de façon analogue à [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows).
 
 Dans le prochain exemple, on crée une grille avec trois lignes qui mesurent chacune 200 pixels de haut. On utilise le placement automatique en colonne. La première colonne qui sera créée mesurera 300 pixels de large, ensuite on aura une colonne de 100 pixels de large et ainsi de suite jusqu'à ce que tous les éléments puissent être placés.
 
@@ -321,7 +321,7 @@ La grille commencera par placer les éléments pour lesquels on a défini une po
 
 ### Gérer les éléments qui s'étalent sur plusieurs pistes
 
-On peut utiliser les propriétés de placement tout en tirant parti du placement automatique. Dans le prochain exemple, on complète la disposition en indiquant que les éléments 1, 5 et 9 (4n+1) doivent occuper deux pistes, pour les colonnes et pour les lignes. Pour obtenir ce résultat, on utilise les propriétés [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end) et [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end) avec la valeur `span 2`. La ligne de début sera déterminée automatiquement et la ligne de fin sera deux pistes plus loin.
+On peut utiliser les propriétés de placement tout en tirant parti du placement automatique. Dans le prochain exemple, on complète la disposition en indiquant que les éléments 1, 5 et 9 (4n+1) doivent occuper deux pistes, pour les colonnes et pour les lignes. Pour obtenir ce résultat, on utilise les propriétés [`grid-column-end`](/fr/docs/Web/CSS/Reference/Properties/grid-column-end) et [`grid-row-end`](/fr/docs/Web/CSS/Reference/Properties/grid-row-end) avec la valeur `span 2`. La ligne de début sera déterminée automatiquement et la ligne de fin sera deux pistes plus loin.
 
 On peut voir comment cela laisse des espaces dans la grille, car lorsqu'un élément placé automatiquement n'a pas suffisamment de place sur une piste, une nouvelle ligne sera créée jusqu'à ce que l'élément ait la place.
 
@@ -389,7 +389,7 @@ On peut voir comment cela laisse des espaces dans la grille, car lorsqu'un élé
 
 En dehors des éléments placés explicitement, la grille place les éléments automatiques en respectant l'ordre du DOM. C'est généralement le résultat qu'on souhaite lorsqu'on met en forme un document comme un formulaire (on ne voudrait pas que les libellés et les champs soient mélangés pour combler certains trous). Toutefois, on dispose parfois des éléments pour lesquels l'ordre logique n'a pas d'importance et où on veut obtenir une disposition plus dense, sans vide entre les différents éléments.
 
-Pour cela, sur le conteneur, on ajoute la propriété [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow) avec la valeur `dense`. C'est la même propriété qu'on utilise pour modifier l'ordre du flux avec `column`. On peut aussi obtenir une disposition dense, rangée par colonne en utilisant les deux valeurs pour la propriété&nbsp;: `grid-auto-flow: column dense`.
+Pour cela, sur le conteneur, on ajoute la propriété [`grid-auto-flow`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow) avec la valeur `dense`. C'est la même propriété qu'on utilise pour modifier l'ordre du flux avec `column`. On peut aussi obtenir une disposition dense, rangée par colonne en utilisant les deux valeurs pour la propriété&nbsp;: `grid-auto-flow: column dense`.
 
 Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés, quitte à ne pas respecter l'ordre du DOM. Cela ne modifiera pas l'ordre logique des éléments. Par exemple, l'ordre de la navigation au clavier suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans [un article sur l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility). Pour résumer, il faut faire attention quand on détache l'ordre visuel de l'ordre d'affichage.
 

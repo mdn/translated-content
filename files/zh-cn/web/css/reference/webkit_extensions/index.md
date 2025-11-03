@@ -426,8 +426,8 @@ slug: Web/CSS/Reference/Webkit_extensions
 - `-webkit-color-correction`
 - `-webkit-flow-from`
 - `-webkit-flow-into`
-- `-webkit-grid-columns`（参见 [`grid-column`](/zh-CN/docs/Web/CSS/grid-column)）
-- `-webkit-grid-rows`（参见 [`grid-row`](/zh-CN/docs/Web/CSS/grid-row)）
+- `-webkit-grid-columns`（参见 [`grid-column`](/zh-CN/docs/Web/CSS/Reference/Properties/grid-column)）
+- `-webkit-grid-rows`（参见 [`grid-row`](/zh-CN/docs/Web/CSS/Reference/Properties/grid-row)）
 - `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set`（参见 {{CSSxRef("image/image-set", "image-set")}}）
@@ -442,7 +442,7 @@ slug: Web/CSS/Reference/Webkit_extensions
 - `-webkit-region-break-inside`
 - `-webkit-region-fragment`
 - `-webkit-shape-inside`
-- [-webkit-touch-callout](/zh-CN/docs/Web/CSS/-webkit-touch-callout)（参见 `touch-action`）
+- [-webkit-touch-callout](/zh-CN/docs/Web/CSS/Reference/Properties/-webkit-touch-callout)（参见 `touch-action`）
 - `background-origin-x`（无前缀！）
 - `background-origin-y`（无前缀！）
 

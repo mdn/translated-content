@@ -48,7 +48,7 @@ l10n:
 
 - [`<angle-percentage>`](/zh-CN/docs/Web/CSS/angle-percentage)
 - [`<angle>`](/zh-CN/docs/Web/CSS/angle)
-- [`<animation-timeline>`](/zh-CN/docs/Web/CSS/animation-timeline)
+- [`<animation-timeline>`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`<attr-name>`](/zh-CN/docs/Web/CSS/attr#attr-name)
 - [`<attr-type>`](/zh-CN/docs/Web/CSS/attr#attr-type)
 - {{CSSxRef("&lt;calc-keyword&gt;")}}（`e`、`pi`、`infinity`、{{glossary("NaN")}}）
@@ -67,7 +67,7 @@ l10n:
 - [`<length>`](/zh-CN/docs/Web/CSS/length)
 - [`<number>`](/zh-CN/docs/Web/CSS/number)
 - [`<percentage>`](/zh-CN/docs/Web/CSS/percentage)
-- [`<position>`](/zh-CN/docs/Web/CSS/position)
+- [`<position>`](/zh-CN/docs/Web/CSS/Reference/Properties/position)
 - [`<ratio>`](/zh-CN/docs/Web/CSS/ratio)
 - [`<resolution>`](/zh-CN/docs/Web/CSS/resolution)
 - [`<rounding-strategy>`](/zh-CN/docs/Web/CSS/round#rounding-strategy)（`down`、`up`、`to-zero`）
@@ -77,7 +77,7 @@ l10n:
 - [`<time>`](/zh-CN/docs/Web/CSS/time)
 - [`<url>`](/zh-CN/docs/Web/CSS/url_value)
 - [`<url-modifier>`](/zh-CN/docs/Web/CSS/url_function#url-modifier)
-- [`<view-timeline-name>`](/zh-CN/docs/Web/CSS/view-timeline-name)
+- [`<view-timeline-name>`](/zh-CN/docs/Web/CSS/Reference/Properties/view-timeline-name)
 
 #### 单位
 

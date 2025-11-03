@@ -316,16 +316,16 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/Web/CSS/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
+この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
 
 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) で `display` をアニメーションさせる場合、開始する `display` の値を明示的なキーフレームで指定する必要があります（例えば `0%` や `from` を使用します）。例えば、 [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 `display` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 2 つの追加の機能が必要になります。
 
 - [`@starting-style`](/ja/docs/Web/CSS/@starting-style) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 CSS トランジションは要素の最初のスタイル更新時や、 `display` の型が `none` から他の型へ変更された時には発生しません。
-- [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) は、 {{cssxref("transition-property")}} 宣言（または一括指定の {{cssxref("transition")}}）で `display` のトランジションを有効にするために設定する必要があります。
+- [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) は、 {{cssxref("transition-property")}} 宣言（または一括指定の {{cssxref("transition")}}）で `display` のトランジションを有効にするために設定する必要があります。
 
-`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior#例) のページを参照してください。
+`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#例) のページを参照してください。
 
 ## アクセシビリティ
 

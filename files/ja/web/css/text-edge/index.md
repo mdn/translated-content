@@ -48,7 +48,7 @@ l10n:
 
 ## 例
 
-See [`text-box-edge` examples](/ja/docs/Web/CSS/text-box-edge#examples)
+See [`text-box-edge` examples](/ja/docs/Web/CSS/Reference/Properties/text-box-edge#examples)
 
 ## 仕様書
 

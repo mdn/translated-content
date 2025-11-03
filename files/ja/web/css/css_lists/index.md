@@ -36,7 +36,7 @@ l10n:
 
 ### データ型
 
-- [`<counter>`](/ja/docs/Web/CSS/content#counter)
+- [`<counter>`](/ja/docs/Web/CSS/Reference/Properties/content#counter)
 - [`<counter-name>`](/ja/docs/Web/CSS/counter#counter-name)
 - [`<counter-style>`](/ja/docs/Web/CSS/counter#counter-style)
 

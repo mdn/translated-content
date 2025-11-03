@@ -198,7 +198,7 @@ Une **page de référence CSS** liste toutes les syntaxes disponibles pour une f
 
 #### Exemples
 
-- [Propriété `background-color`](/fr/docs/Web/CSS/background-color)
+- [Propriété `background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)
 - [Pseudo-classe `:hover`](/fr/docs/Web/CSS/:hover)
 - [Règle @media](/fr/docs/Web/CSS/@media)
 

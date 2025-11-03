@@ -7,7 +7,7 @@ l10n:
 
 **`round()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、選択した丸め方法に基づいて、丸めた数値を返します。
 
-作成者は、丸める値、間隔、あるいはその両方に[カスタム CSS プロパティ](/ja/docs/Web/CSS/--*) (例: `--my-property`) を使用すべきです。これらの値が既知の場合は、`round()` 関数を使用するのは冗長です。
+作成者は、丸める値、間隔、あるいはその両方に[カスタム CSS プロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) (例: `--my-property`) を使用すべきです。これらの値が既知の場合は、`round()` 関数を使用するのは冗長です。
 
 ## 構文
 
@@ -100,7 +100,7 @@ body {
 ```
 
 すべてのボックスに適用される CSS を下記に示します。
-丸め間隔に使用する、`--rounding-interval` という名前付き[カスタム CSS プロパティ](/ja/docs/Web/CSS/--*)を適用していることに注意してください。
+丸め間隔に使用する、`--rounding-interval` という名前付き[カスタム CSS プロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)を適用していることに注意してください。
 
 ```css
 div.box {

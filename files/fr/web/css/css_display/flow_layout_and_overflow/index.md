@@ -14,7 +14,7 @@ Pour créer un exemple de dépassement, prenons un élément avec une hauteur et
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow.html", '100%', 700)}}
 
-Le contenu « arrive » dans la boîte puis remplit celle-ci et ensuite, il dépasse en affichant du contenu en dehors de la boîte éventuellement en dessous du contenu environnant. Pour contrôler le comportement du dépassement, on pourra utiliser la propriété [`overflow`](/fr/docs/Web/CSS/overflow). La valeur initiale de cette propriété est `visible` et c'est pour cela qu'on voit le contenu dépasser.
+Le contenu « arrive » dans la boîte puis remplit celle-ci et ensuite, il dépasse en affichant du contenu en dehors de la boîte éventuellement en dessous du contenu environnant. Pour contrôler le comportement du dépassement, on pourra utiliser la propriété [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow). La valeur initiale de cette propriété est `visible` et c'est pour cela qu'on voit le contenu dépasser.
 
 ## Contrôler le dépassement
 
@@ -35,7 +35,7 @@ Comme nous l'avons vu plus tôt, toute valeur qui est différente de `visible` c
 > [!NOTE]
 > Dans [le brouillon du module de spécification _Overflow_ de niveau 3](https://www.w3.org/TR/css-overflow-3/), une valeur est ajoutée : `overflow: clip`. Cette valeur agira comme `overflow: hidden` mais ne permettra de faire défiler le contenu à l'aide de code. La boîte ne pourra pas défiler. De plus, cette valeur ne crée pas de contexte de formatage de bloc.
 
-Pour être tout à fait précis, la propriété `overflow` est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) pour les propriétés [`overflow-x`](/fr/docs/Web/CSS/overflow-x) et [`overflow-y`](/fr/docs/Web/CSS/overflow-y). Si on fournit une valeur, celle-ci sera utilisée pour les deux axes. On peut aussi fournir deux valeurs, auquel cas la première sera utilisée pour `overflow-x` et la seconde pour `overflow-y`. Dans l'exemple qui suit, seule `overflow-y: scroll` est utilisée et la barre de défilement horizontale superflue n'est pas ajoutée.
+Pour être tout à fait précis, la propriété `overflow` est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) pour les propriétés [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x) et [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y). Si on fournit une valeur, celle-ci sera utilisée pour les deux axes. On peut aussi fournir deux valeurs, auquel cas la première sera utilisée pour `overflow-x` et la seconde pour `overflow-y`. Dans l'exemple qui suit, seule `overflow-y: scroll` est utilisée et la barre de défilement horizontale superflue n'est pas ajoutée.
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow-y.html", '100%', 700)}}
 
@@ -51,7 +51,7 @@ Dans la spécification de niveau 3 sur le dépassement, certaines propriétés a
 
 ### Dépassement sur l'axe en ligne
 
-La propriété [`text-overflow`](/fr/docs/Web/CSS/text-overflow) indique comment afficher le texte qui dépasse sur l'axe en ligne. La valeur `clip` qui coupe le contenu qui dépasse, c'est la valeur initiale et le comportement par défaut. La valeur `ellipsis` permet d'afficher une ellipse qui peut être adaptée en fonction de la langue ou du mode d'écriture utilisé.
+La propriété [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow) indique comment afficher le texte qui dépasse sur l'axe en ligne. La valeur `clip` qui coupe le contenu qui dépasse, c'est la valeur initiale et le comportement par défaut. La valeur `ellipsis` permet d'afficher une ellipse qui peut être adaptée en fonction de la langue ou du mode d'écriture utilisé.
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/text-overflow.html", '100%', 500)}}
 

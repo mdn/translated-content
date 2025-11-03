@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
 ---
 
-**`mask-border-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("mask-border-source")}} で設定された画像を複数の領域に分割します。これらの領域は要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の部品を構成するために使用されます。
+**`mask-border-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("mask-border-source")}} で設定された画像を複数の領域に分割します。これらの領域は要素の[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)の部品を構成するために使用されます。
 
 ## 構文
 
@@ -61,7 +61,7 @@ mask-border-slice: unset;
 上の図は、それぞれの領域の位置を説明しています。
 
 - 1-4 の領域は角の領域です。それぞれが 1 回ずつ使用され、最終的な境界画像の中で四隅を形成します。
-- 5-8 の領域は辺の領域です。これらは最終的な境界画像の中で、要素の寸法に合わせて[反復、拡縮、その他の加工](/ja/docs/Web/CSS/mask-border-repeat)が行われます。
+- 5-8 の領域は辺の領域です。これらは最終的な境界画像の中で、要素の寸法に合わせて[反復、拡縮、その他の加工](/ja/docs/Web/CSS/Reference/Properties/mask-border-repeat)が行われます。
 - 9 の領域は中央領域です。既定では描画されませんが、キーワード `fill` が設定されていれば背景画像のように使用されます。
 
 {{cssxref("mask-border-repeat")}}、{{cssxref("mask-border-width")}}、{{cssxref("mask-border-outset")}} の各プロパティは、最終的な境界画像を構成するためにこれらの領域が使用される方法を指定します。
@@ -91,7 +91,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 ```
 
 > [!NOTE]
-> [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> [`mask-border`](/ja/docs/Web/CSS/Reference/Properties/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 > [!NOTE]
 > fill キーワードは、要素の内容を表示したい場合には設定する必要があります。

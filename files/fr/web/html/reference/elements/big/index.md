@@ -41,7 +41,7 @@ Dans cet exemple, on utilise l'élément obsolète `<big>` afin d'augmenter la t
 
 ### Utilisation de la propriété CSS `font-size`
 
-Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size) pour augmenter la taille de la police d'un niveau.
+Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size) pour augmenter la taille de la police d'un niveau.
 
 #### CSS
 
@@ -83,6 +83,6 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 
 ## Voir aussi
 
-- CSS : [`font-size`](/fr/docs/Web/CSS/font-size), [`font`](/fr/docs/Web/CSS/font)
+- CSS : [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size), [`font`](/fr/docs/Web/CSS/Reference/Properties/font)
 - HTML : [`<small>`](/fr/docs/Web/HTML/Reference/Elements/small), [`<font>`](/fr/docs/Web/HTML/Reference/Elements/font), [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)
 - Spécification HTML 4.01 sur [la mise en forme utilisant les polices](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

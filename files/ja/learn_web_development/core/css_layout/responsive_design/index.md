@@ -260,7 +260,7 @@ video {
 その他の有用なコツです。
 
 - ウェブサイトの画像には常に適切な画像形式（PNG や JPG など）を使用し、ウェブサイトに掲載する前にグラフィックエディターを使ってファイルサイズを最適化してください。
-- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
+- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/Reference/Properties/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
 - {{htmlelement("video")}}/{{htmlelement("audio")}} 要素の中にある {{htmlelement("source")}} 要素の media 属性内では、メディアクエリーを使用することができ、様々な端末に最適な映像/音声ファイルを提供することができます。
 
 ## レスポンシブ書体

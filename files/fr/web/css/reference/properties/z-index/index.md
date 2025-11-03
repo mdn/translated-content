@@ -6,7 +6,7 @@ original_slug: Web/CSS/z-index
 
 {{CSSRef}}
 
-La propriété **`z-index`** définit le «&nbsp;_z-order_&nbsp;» (NdT&nbsp;: «&nbsp;ordre z&nbsp;» n'est pas usité) d'un élément [positionné](/fr/docs/Web/CSS/position) et de ses éléments enfants ou de ses éléments flexibles. Lorsque des éléments se chevauchent, le _z-order_ détermine l'ordre des différentes couches que formeront les éléments. Généralement, un élément couvrira un autre élément si sa valeur de `z-index` est supérieure à celle du deuxième élément.
+La propriété **`z-index`** définit le «&nbsp;_z-order_&nbsp;» (NdT&nbsp;: «&nbsp;ordre z&nbsp;» n'est pas usité) d'un élément [positionné](/fr/docs/Web/CSS/Reference/Properties/position) et de ses éléments enfants ou de ses éléments flexibles. Lorsque des éléments se chevauchent, le _z-order_ détermine l'ordre des différentes couches que formeront les éléments. Généralement, un élément couvrira un autre élément si sa valeur de `z-index` est supérieure à celle du deuxième élément.
 
 {{InteractiveExample("CSS Demo: z-index")}}
 
@@ -226,5 +226,5 @@ La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâc
 
 ## Voir aussi
 
-- La propriété CSS [`position`](/fr/docs/Web/CSS/position)
+- La propriété CSS [`position`](/fr/docs/Web/CSS/Reference/Properties/position)
 - [Comprendre le fonctionnement de `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

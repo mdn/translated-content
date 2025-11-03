@@ -64,7 +64,7 @@ Chaque élément est une boîte avec un contenu, un arrière-plan et une bordure
 
 Tout élément peut avoir une bordure autour de lui. Une bordure de base est une ligne tracée autour des bords du contenu de l'élément. Voir [Le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) pour comprendre la relation entre les éléments et leurs bordures, et l'article [Mettre en forme les bordures avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) pour en savoir plus sur la mise en forme des bordures.
 
-Vous pouvez utiliser la propriété raccourcie {{cssxref("border")}}, qui permet de configurer toute la bordure en une fois (y compris la [largeur](/fr/docs/Web/CSS/border-width), le [style](/fr/docs/Web/CSS/border-style) — plein, pointillé, etc.).
+Vous pouvez utiliser la propriété raccourcie {{cssxref("border")}}, qui permet de configurer toute la bordure en une fois (y compris la [largeur](/fr/docs/Web/CSS/Reference/Properties/border-width), le [style](/fr/docs/Web/CSS/Reference/Properties/border-style) — plein, pointillé, etc.).
 
 - {{cssxref("border-color")}} (version courte)
   - : Spécifie une couleur unique pour chaque côté de la bordure de l'élément.

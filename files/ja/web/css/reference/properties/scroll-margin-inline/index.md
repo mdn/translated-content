@@ -81,8 +81,8 @@ scroll-margin-inline: 0px 3em;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-margin-inline-end`](/ja/docs/Web/CSS/scroll-margin-inline-end)
-- [`scroll-margin-inline-start`](/ja/docs/Web/CSS/scroll-margin-inline-start)
+- [`scroll-margin-inline-end`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-inline-end)
+- [`scroll-margin-inline-start`](/ja/docs/Web/CSS/Reference/Properties/scroll-margin-inline-start)
 
 ## 構文
 

@@ -6,7 +6,7 @@ l10n:
 ---
 
 **CSS プロパティと値 API** (CSS properties and values API) モジュールは、モジュールは、新しい CSS プロパティを登録するための方法を定義し、プロパティのデータ型、継承動作、そしてオプションとして初期値を定義します。
-この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
+この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
 CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/CSS/CSS_properties_and_values_API/Houdini) の傘下にあります。
 
 カスタムプロパティを使用すると、プロジェクト全体で値を再利用できるため、複雑なスタイルシートや繰り返しの多いスタイルシートを簡素化できます。
@@ -15,7 +15,7 @@ CSS プロパティと値 API はこのモジュールを拡張し、このモ�
 
 登録が CSS であれ JavaScript であれ、カスタムプロパティにメタデータを設定することで、ブラウザーがコンテキストに応じて使用できる期待されるデータ型を提供し、初期値を定義し、継承を制御することができます。
 
-CSS プロパティと値 API のカスタムプロパティの登録は、より基本的な CSS のカスケード変数によるカスタムプロパティ宣言よりも堅牢であり、特に値のトランジションやアニメーションに関しては、ブラウザーがこの種のカスタム値の間を補間することができるため、[二重ダッシュ構文(`--`)](/ja/docs/Web/CSS/--*) を使用するプロパティが文字列置換のように動作するのに比べて、より堅牢です。
+CSS プロパティと値 API のカスタムプロパティの登録は、より基本的な CSS のカスケード変数によるカスタムプロパティ宣言よりも堅牢であり、特に値のトランジションやアニメーションに関しては、ブラウザーがこの種のカスタム値の間を補間することができるため、[二重ダッシュ構文(`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用するプロパティが文字列置換のように動作するのに比べて、より堅牢です。
 
 ## プロパティと値の API の動作
 
@@ -57,8 +57,8 @@ CSS.registerProperty({
 
 {{EmbedLiveSample("",600,120)}}
 
-このボックスは[背景](/ja/docs/Web/CSS/background) が `--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/named-color) までの[線形グラデーション](/ja/docs/Web/CSS/gradient/linear-gradient)で構成されています。
-最初、 `--stop-color` の値は `cornflowerblue` に設定されていますが、ボックスにカーソルを合わせると、 2 秒かけて `--stop-color` の[トランジション](/ja/docs/Web/CSS/transition) が `aquamarine` まで遷移します（`linear-gradient(to right, aquamarine, lavenderblush)`）。
+このボックスは[背景](/ja/docs/Web/CSS/Reference/Properties/background) が `--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/named-color) までの[線形グラデーション](/ja/docs/Web/CSS/gradient/linear-gradient)で構成されています。
+最初、 `--stop-color` の値は `cornflowerblue` に設定されていますが、ボックスにカーソルを合わせると、 2 秒かけて `--stop-color` の[トランジション](/ja/docs/Web/CSS/Reference/Properties/transition) が `aquamarine` まで遷移します（`linear-gradient(to right, aquamarine, lavenderblush)`）。
 
 ## リファレンス
 

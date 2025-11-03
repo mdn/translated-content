@@ -218,7 +218,7 @@ Cette fonctionnalité affiche les caractères de contrôle (catégorie Unicode C
 
 ### Propriété initial-letter
 
-La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/initial-letter) fait partie du module de spécification [CSS3 Inline](https://drafts.csswg.org/css-inline/) et permet d'indiquer l'élévation (entre autres) des lettres initiales. Voir [le bug 1223880](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) pour plus de détails.
+La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/Reference/Properties/initial-letter) fait partie du module de spécification [CSS3 Inline](https://drafts.csswg.org/css-inline/) et permet d'indiquer l'élévation (entre autres) des lettres initiales. Voir [le bug 1223880](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -258,7 +258,7 @@ La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/initial-letter) fait part
 
 ### Propriété aspect-ratio
 
-La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/aspect-ratio) est décrite dans le module de spécification [CSS4 Sizing](https://drafts.csswg.org/css-sizing-4/) et permet de créer des boîtes qui respectent des proportions (_aspect ratio_ en anglais) données. Voir [le bug 1639963](https://bugzilla.mozilla.org/show_bug.cgi?id=1639963) et [le bug 1646096](https://bugzilla.mozilla.org/show_bug.cgi?id=1646096) pour plus de détails.
+La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/Reference/Properties/aspect-ratio) est décrite dans le module de spécification [CSS4 Sizing](https://drafts.csswg.org/css-sizing-4/) et permet de créer des boîtes qui respectent des proportions (_aspect ratio_ en anglais) données. Voir [le bug 1639963](https://bugzilla.mozilla.org/show_bug.cgi?id=1639963) et [le bug 1646096](https://bugzilla.mozilla.org/show_bug.cgi?id=1646096) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -378,7 +378,7 @@ Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`numb
 
 ### Propriété backdrop-filter
 
-La propriété [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter) permet d'appliquer des effets de filtre à la zone située derrière un élément. Voir [le bug 1178765](https://bugzilla.mozilla.org/show_bug.cgi?id=1178765) pour plus de détails.
+La propriété [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdrop-filter) permet d'appliquer des effets de filtre à la zone située derrière un élément. Voir [le bug 1178765](https://bugzilla.mozilla.org/show_bug.cgi?id=1178765) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -502,7 +502,7 @@ La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-
 
 ### Propriété math-style
 
-La propriété [`math-style`](/fr/docs/Web/CSS/math-style) indique si les équations MathML doivent être affichées avec une hauteur normale ou compacte. Voir [le bug 1665975](https://bugzilla.mozilla.org/show_bug.cgi?id=1665975) pour plus de détails.
+La propriété [`math-style`](/fr/docs/Web/CSS/Reference/Properties/math-style) indique si les équations MathML doivent être affichées avec une hauteur normale ou compacte. Voir [le bug 1665975](https://bugzilla.mozilla.org/show_bug.cgi?id=1665975) pour plus de détails.
 
 <table class="standard-table">
   <thead>

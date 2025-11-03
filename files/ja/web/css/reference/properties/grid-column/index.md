@@ -61,8 +61,8 @@ grid-column: 1 / span 2;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-column-end`](/ja/docs/Web/CSS/grid-column-end)
-- [`grid-column-start`](/ja/docs/Web/CSS/grid-column-start)
+- [`grid-column-end`](/ja/docs/Web/CSS/Reference/Properties/grid-column-end)
+- [`grid-column-start`](/ja/docs/Web/CSS/Reference/Properties/grid-column-start)
 
 ## 構文
 

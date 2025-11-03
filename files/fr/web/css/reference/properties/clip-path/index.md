@@ -237,7 +237,7 @@ A la suite, le chemin défini avec la fonction `shape()` grandit avec l'élémen
 
 {{EmbedLiveSample("shapes2", "", "230")}}
 
-Parce que la fonction `shape()` permet d'utiliser des valeurs {{cssxref("percentage")}} (et [des propriétés personnalisées](/fr/docs/Web/CSS/--*) aussi), elle est plus robuste.
+Parce que la fonction `shape()` permet d'utiliser des valeurs {{cssxref("percentage")}} (et [des propriétés personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*) aussi), elle est plus robuste.
 
 Nous allons le démontrer en augmentant la taille de l'élément sous-jacent&nbsp;:
 

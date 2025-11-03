@@ -10,7 +10,7 @@ l10n:
 
 `getSubStringLength()` は {{domxref("SVGTextContentElement")}} インターフェイスのメソッドで、これは、要素内のテキストの部分の書式化されたテキストの進む距離の計算値を表します。
 
-このメソッドは、サブストリング内のグリフの幅と、CSS の [`letter-spacing`](/ja/docs/Web/CSS/letter-spacing) および [`word-spacing`](/ja/docs/Web/CSS/word-spacing) プロパティによって挿入された追加の間隔のみを考慮します。 [`x`](/ja/docs/Web/CSS/x) 属性によって視覚的に調整された間隔は無視されます。
+このメソッドは、サブストリング内のグリフの幅と、CSS の [`letter-spacing`](/ja/docs/Web/CSS/Reference/Properties/letter-spacing) および [`word-spacing`](/ja/docs/Web/CSS/Reference/Properties/word-spacing) プロパティによって挿入された追加の間隔のみを考慮します。 [`x`](/ja/docs/Web/CSS/x) 属性によって視覚的に調整された間隔は無視されます。
 
 ## 構文
 

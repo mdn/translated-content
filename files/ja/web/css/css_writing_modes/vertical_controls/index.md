@@ -23,7 +23,7 @@ l10n:
 - `writing-mode: vertical-lr` は、ブロックフロー方向が左から右になる縦書きのフォームコントロールを作成します。つまり、折り返しや複数行のテキストを含むコントロールでは、次の行がその前の行の右側に現れるということです。
 - `writing-mode: vertical-rl` は、ブロックフロー方向が右から左になる縦書きのフォームコントロールを作成します。つまり、折り返しや複数行のテキストを含むコントロールでは、次の行がその前の行の左側に現れるということです。
 
-[座標変換](/ja/docs/Web/CSS/transform)を使用してコントロールを 90 度回転させることもできますが、コントロールを独自のレイヤーで持つことになり、他のコンテンツが重なってしまうなど、予期せぬレイアウト上の副作用が発生する可能性があります。 `writing-mode` を使用することで、より信頼性の高いソリューションが得られます。
+[座標変換](/ja/docs/Web/CSS/Reference/Properties/transform)を使用してコントロールを 90 度回転させることもできますが、コントロールを独自のレイヤーで持つことになり、他のコンテンツが重なってしまうなど、予期せぬレイアウト上の副作用が発生する可能性があります。 `writing-mode` を使用することで、より信頼性の高いソリューションが得られます。
 
 > [!NOTE]
 > {{cssxref("writing-mode")}} プロパティは十分に実装されているものの、 `writing-mode` を使用して縦書きのフォームコントロールを作成することは、 2024 年になってようやくすべてのブラウザーで対応されました。
@@ -112,7 +112,7 @@ progress {
 
 `writing-mode` および `direction` 属性で縦書きのフォームコントロールを作成できない古いブラウザーでは、利用できる選択肢は限られています。以下のコードは、 `<input type="range">` にのみ適用でき、テキストは下から上に流れるようになります。 `<meter>` および `<progress>` 要素には効果はありません。
 
-- Safari と Chrome の旧バージョンでは、標準外の [`appearance: slider-vertical`](/ja/docs/Web/CSS/appearance) プロパティを使用することができます。
+- Safari と Chrome の旧バージョンでは、標準外の [`appearance: slider-vertical`](/ja/docs/Web/CSS/Reference/Properties/appearance) プロパティを使用することができます。
 - Firefox の旧バージョンでは、標準外の `orient="vertical"` 属性を `<input type="range">` 要素自体に追加することができます。
 
 この例の HTML には、 [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) のスライダーのみがあります。古いバージョンの Firefoxで 垂直方向に表示されるように `orient="vertical"` が追加されています。

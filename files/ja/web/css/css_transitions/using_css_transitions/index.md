@@ -11,7 +11,7 @@ l10n:
 
 ![CSS トランジションは、初期状態と最終状態の間にある中間状態を描画することで、ユーザーにスムーズな遷移を見せるものです。](transitionsprinciple.png)
 
-CSS トランジションでは、どのプロパティをアニメーションさせるか（[_明示的に列挙する_](/ja/docs/Web/CSS/transition-property)ことで）、いつアニメーションを始めるか（[_delay_](/ja/docs/Web/CSS/transition-delay) を設定することで）、どれくらいの時間でトランジションさせるか（[_duration_](/ja/docs/Web/CSS/transition-duration) を設定することで）、どのようにトランジションさせるか、例えば、直線的に実行するか、始めはすばやく、終わりはゆっくりと実行するか（[_イージング関数_](/ja/docs/Web/CSS/transition-duration)を定義することで）を決めることができます。
+CSS トランジションでは、どのプロパティをアニメーションさせるか（[_明示的に列挙する_](/ja/docs/Web/CSS/Reference/Properties/transition-property)ことで）、いつアニメーションを始めるか（[_delay_](/ja/docs/Web/CSS/Reference/Properties/transition-delay) を設定することで）、どれくらいの時間でトランジションさせるか（[_duration_](/ja/docs/Web/CSS/Reference/Properties/transition-duration) を設定することで）、どのようにトランジションさせるか、例えば、直線的に実行するか、始めはすばやく、終わりはゆっくりと実行するか（[_イージング関数_](/ja/docs/Web/CSS/Reference/Properties/transition-duration)を定義することで）を決めることができます。
 
 ## どの CSS プロパティがトランジション可能か
 
@@ -185,7 +185,7 @@ a:focus {
 
 ### display と content-visibility のトランジション
 
-この例では、 [`display`](/ja/docs/Web/CSS/display) と [`content-visibility`](/ja/docs/Web/CSS/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
+この例では、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display) と [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
 
 対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/CSS_animated_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で切り替えるという意味になります。
 
@@ -196,7 +196,7 @@ a:focus {
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-これらのプロパティをトランジションさせる場合は、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
+これらのプロパティをトランジションさせる場合は、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
 
 `display` をトランジションさせる場合、その要素が最初のスタイル更新を受けたときに、そのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために [`@starting-style`](/ja/docs/Web/CSS/@starting-style) が必要です。これは予期しない動作を避けるために必要です。既定では、CSS のトランジションは、要素が最初に DOM に現れたとき、つまり `display` が `none` から他の状態に変わったときを含め、要素の最初のスタイル更新では発生しません。 `content-visibility` のアニメーションは `@starting-style` ブロックで開始値を指定する必要はありません。これは `content-visibility` が `display` のように DOM から要素を隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 

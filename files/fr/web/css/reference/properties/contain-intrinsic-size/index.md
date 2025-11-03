@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** contrôle la taille naturelle d'un élément spécifié par [`content-visibility`](/fr/docs/Web/CSS/content-visibility).
+La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** contrôle la taille naturelle d'un élément spécifié par [`content-visibility`](/fr/docs/Web/CSS/Reference/Properties/content-visibility).
 
 ## Syntaxe
 

@@ -84,7 +84,7 @@ La capacité à redimensionner un élément `<textarea>` se contrôle grâce à 
 - `block` et `inline`
   - : Ces valeurs logiques permettent le redimensionnement selon la direction de bloc ou la direction de ligne (qui varie selon la directionnalité du texte, voir [Gérer les différentes directions du texte](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions) pour en savoir plus).
 
-Vous pouvez manipuler l'exemple interactif situé en haut de la page de référence pour [`resize`](/fr/docs/Web/CSS/resize) afin de voir comment ces valeurs fonctionnent.
+Vous pouvez manipuler l'exemple interactif situé en haut de la page de référence pour [`resize`](/fr/docs/Web/CSS/Reference/Properties/resize) afin de voir comment ces valeurs fonctionnent.
 
 ## Contrôles de listes déroulantes
 

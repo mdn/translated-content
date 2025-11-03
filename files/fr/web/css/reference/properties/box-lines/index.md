@@ -30,7 +30,7 @@ Si les éléments fils d'une boîte horizontale ne rentrent pas dans une ligne a
 
 On aura un fonctionnement analogue avec une disposition verticale.
 
-Une fois que le nombre de rangées a été calculé, les éléments pour lesquels [`box-flex`](/fr/docs/Web/CSS/box-flex) a une valeur calculée différentes de `0` seront étirés afin de remplir les espaces restants sur les lignes. Ces étirements sont calculés de façon indépendante selon chaque ligne (notamment pour [`box-flex`](/fr/docs/Web/CSS/box-flex) et [`box-flex-group`](/fr/docs/Web/CSS/box-flex-group)). Il en va de même pour le regroupement des éléments sur une ligne avec la propriété [`box-pack`](/fr/docs/Web/CSS/box-pack).
+Une fois que le nombre de rangées a été calculé, les éléments pour lesquels [`box-flex`](/fr/docs/Web/CSS/Reference/Properties/box-flex) a une valeur calculée différentes de `0` seront étirés afin de remplir les espaces restants sur les lignes. Ces étirements sont calculés de façon indépendante selon chaque ligne (notamment pour [`box-flex`](/fr/docs/Web/CSS/Reference/Properties/box-flex) et [`box-flex-group`](/fr/docs/Web/CSS/Reference/Properties/box-flex-group)). Il en va de même pour le regroupement des éléments sur une ligne avec la propriété [`box-pack`](/fr/docs/Web/CSS/Reference/Properties/box-pack).
 
 ## Syntaxe
 
@@ -65,7 +65,7 @@ div {
 }
 ```
 
-La propriété équivalente qui la remplace est [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap).
+La propriété équivalente qui la remplace est [`flex-wrap`](/fr/docs/Web/CSS/Reference/Properties/flex-wrap).
 
 ## Spécifications
 
@@ -77,6 +77,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [`box-flex`](/fr/docs/Web/CSS/box-flex)
-- [`box-flex-group`](/fr/docs/Web/CSS/box-flex-group)
-- [`box-pack`](/fr/docs/Web/CSS/box-pack)
+- [`box-flex`](/fr/docs/Web/CSS/Reference/Properties/box-flex)
+- [`box-flex-group`](/fr/docs/Web/CSS/Reference/Properties/box-flex-group)
+- [`box-pack`](/fr/docs/Web/CSS/Reference/Properties/box-pack)

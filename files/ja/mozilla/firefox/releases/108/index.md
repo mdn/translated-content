@@ -22,7 +22,7 @@ l10n:
 - 設定項目 `layout.css.container-queries.enabled` で、コンテナークエリーの長さの単位をサポートしました。
   この設定を `true` にすると、クエリーコンテナーの寸法に比例する長さの単位である`cqw`、`cqh`、`cqi`、`cqb`、`cqmin`、`cqmax` を使用できます。
   これらの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1744231](https://bugzil.la/1744231))。
-- 設定項目 `layout.css.font-variant-emoji.enabled` で、[`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji) プロパティをサポートしました。設定項目の既定値は `false` です。このプロパティで、絵文字を表示するときの既定の表現スタイルを設定できます ([Firefox バグ 1461589](https://bugzil.la/1461589))。
+- 設定項目 `layout.css.font-variant-emoji.enabled` で、[`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji) プロパティをサポートしました。設定項目の既定値は `false` です。このプロパティで、絵文字を表示するときの既定の表現スタイルを設定できます ([Firefox バグ 1461589](https://bugzil.la/1461589))。
 
 ### JavaScript
 

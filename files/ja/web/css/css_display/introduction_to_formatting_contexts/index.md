@@ -20,7 +20,7 @@ l10n:
 新しい BFC は以下のような場面で生成されます。
 
 - {{cssxref("float")}} を使用して浮動状態になった要素
-- [絶対位置指定](/ja/docs/Web/CSS/position#types_of_positioning)の要素
+- [絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#types_of_positioning)の要素
 - {{cssxref("display", "display: inline-block", "#inline-block")}} の要素
 - 表のセル、または `display: table-cell` が指定された要素で、 `display: table-*` プロパティを使用して生成された無名の表のセルを含む
 - テーブルのキャプション、または `display: table-caption` が付いた要素

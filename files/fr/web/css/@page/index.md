@@ -44,8 +44,8 @@ La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@p
 
 La règle `@page` ne peut contenir que des descripteurs de page et des [règles de marge](#règles_de_marge). Les descripteurs suivants ont été implémentés par au moins un navigateur&nbsp;:
 
-- [`margin`](/fr/docs/Web/CSS/margin)
-  - : Définit les marges de la page. Les propriétés individuelles [`margin-top`](/fr/docs/Web/CSS/margin-top), [`margin-right`](/fr/docs/Web/CSS/margin-right), [`margin-bottom`](/fr/docs/Web/CSS/margin-bottom) et [`margin-left`](/fr/docs/Web/CSS/margin-left) peuvent aussi être utilisées.
+- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
+  - : Définit les marges de la page. Les propriétés individuelles [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top), [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right), [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) et [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) peuvent aussi être utilisées.
 - [`page-orientation`](/fr/docs/Web/CSS/@page/page-orientation)
   - : Définit l'orientation de la page. Cela n'affecte pas la mise en page&nbsp;: la rotation est appliquée après la mise en page sur le support de sortie.
 - [`size`](/fr/docs/Web/CSS/@page/size)

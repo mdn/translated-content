@@ -5,7 +5,7 @@ slug: Web/CSS/::-moz-list-bullet
 
 {{Non-standard_header}}
 
-**`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。
+**`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。
 
 ## 構文
 

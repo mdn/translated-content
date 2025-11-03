@@ -9,9 +9,9 @@ l10n:
 {{CSSRef}}{{Deprecated_Header}}
 
 > [!WARNING]
-> Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
+> Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) à la place.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (c'est-à-dire qui ont [`position:absolute`](/fr/docs/Web/CSS/position) ou [`position:fixed`](/fr/docs/Web/CSS/position)).
+La propriété [CSS](/fr/docs/Web/CSS) **`clip`** définit la portion visible d'un élément. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (c'est-à-dire qui ont [`position:absolute`](/fr/docs/Web/CSS/Reference/Properties/position) ou [`position:fixed`](/fr/docs/Web/CSS/Reference/Properties/position)).
 
 ```css
 /* Valeur avec un mot-clé */
@@ -113,12 +113,12 @@ clip: unset;
 
 ## Voir aussi
 
-- Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
+- Cette propriété est dépréciée, on utilisera [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) à la place.
 - Les propriétés CSS connexes&nbsp;:
-  - [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
-  - [`white-space`](/fr/docs/Web/CSS/white-space)
-  - [`overflow-x`](/fr/docs/Web/CSS/overflow-x)
-  - [`overflow-y`](/fr/docs/Web/CSS/overflow-y)
-  - [`overflow`](/fr/docs/Web/CSS/overflow)
-  - [`display`](/fr/docs/Web/CSS/display)
-  - [`position`](/fr/docs/Web/CSS/position)
+  - [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
+  - [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
+  - [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x)
+  - [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y)
+  - [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow)
+  - [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
+  - [`position`](/fr/docs/Web/CSS/Reference/Properties/position)

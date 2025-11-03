@@ -53,9 +53,9 @@ writing-mode: vertical-lr;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-start-color`](/ja/docs/Web/CSS/border-block-start-color)
-- [`border-block-start-style`](/ja/docs/Web/CSS/border-block-start-style)
-- [`border-block-start-width`](/ja/docs/Web/CSS/border-block-start-width)
+- [`border-block-start-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-color)
+- [`border-block-start-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-style)
+- [`border-block-start-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-width)
 
 ## 構文
 

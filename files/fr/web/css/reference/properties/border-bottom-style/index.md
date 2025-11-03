@@ -82,7 +82,7 @@ border-bottom-style: revert;
 border-bottom-style: unset;
 ```
 
-La propriété `border-bottom-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
+La propriété `border-bottom-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
 ## Définition formelle
 
@@ -178,12 +178,12 @@ td {
 ## Voir aussi
 
 - Les autres propriétés liées au style des bordures&nbsp;:
-  - [`border-left-style`](/fr/docs/Web/CSS/border-left-style)
-  - [`border-right-style`](/fr/docs/Web/CSS/border-right-style)
-  - [`border-top-style`](/fr/docs/Web/CSS/border-top-style)
-  - [`border-style`](/fr/docs/Web/CSS/border-style).
+  - [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style)
+  - [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style)
+  - [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style)
+  - [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
 - Les autres propriétés liées à la bordure basse&nbsp;:
-  - [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
-  - [`border-bottom-color`](/fr/docs/Web/CSS/border-bottom-color)
-  - [`border-bottom-width`](/fr/docs/Web/CSS/border-bottom-width).
+  - [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom)
+  - [`border-bottom-color`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-color)
+  - [`border-bottom-width`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-width).

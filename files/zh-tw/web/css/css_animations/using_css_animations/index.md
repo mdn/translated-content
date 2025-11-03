@@ -31,7 +31,7 @@ l10n:
 - {{cssxref("animation-fill-mode")}}
   - : 指定動畫在執行前後如何將樣式應用於其目標。
     > [!NOTE]
-    > 在動畫的 [forwards](/zh-TW/docs/Web/CSS/animation-fill-mode#forwards) 填充模式下，加上動畫的屬性行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
+    > 在動畫的 [forwards](/zh-TW/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) 填充模式下，加上動畫的屬性行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/Reference/Properties/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
 - {{cssxref("animation-iteration-count")}}
   - : 指定動畫應重複的次數。
 - {{cssxref("animation-name")}}
@@ -390,7 +390,7 @@ function listener(event) {
 
 ### 為 display 與 content-visibility 加上動畫
 
-這個範例展示了 [`display`](/zh-TW/docs/Web/CSS/display) 和 [`content-visibility`](/zh-TW/docs/Web/CSS/content-visibility) 如何加上動畫。這種行為對於建立進入／離開動畫很有用，例如你想要用 `display: none` 從 DOM 中移除一個容器，但希望它能用 [`opacity`](/zh-TW/docs/Web/CSS/opacity) 平滑地淡出，而不是立即消失。
+這個範例展示了 [`display`](/zh-TW/docs/Web/CSS/Reference/Properties/display) 和 [`content-visibility`](/zh-TW/docs/Web/CSS/Reference/Properties/content-visibility) 如何加上動畫。這種行為對於建立進入／離開動畫很有用，例如你想要用 `display: none` 從 DOM 中移除一個容器，但希望它能用 [`opacity`](/zh-TW/docs/Web/CSS/Reference/Properties/opacity) 平滑地淡出，而不是立即消失。
 
 支援的瀏覽器會使用[離散動畫類型](/zh-TW/docs/Web/CSS/CSS_animated_properties#離散)的變體來為 `display` 和 `content-visibility` 加上動畫。這通常意味著屬性將在兩個值之間動畫的中途（50%）翻轉。
 

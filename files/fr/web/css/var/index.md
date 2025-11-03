@@ -5,7 +5,7 @@ slug: Web/CSS/var
 
 {{CSSRef}}
 
-La fonction **`var()`** peut être utilisée à la place d'une valeur pour n'importe quelle propriété d'un élément. Elle permet d'insérer la valeur d'[une propriété personnalisée (custom property)](/fr/docs/Web/CSS/--*).
+La fonction **`var()`** peut être utilisée à la place d'une valeur pour n'importe quelle propriété d'un élément. Elle permet d'insérer la valeur d'[une propriété personnalisée (custom property)](/fr/docs/Web/CSS/Reference/Properties/--*).
 
 ```css
 var(--header-color, blue);

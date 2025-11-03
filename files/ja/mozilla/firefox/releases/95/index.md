@@ -17,7 +17,7 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
 ### CSS
 
-- CSS の [`cursor`](/ja/docs/Web/CSS/cursor) プロパティを、Android 版 Firefox でサポートしました。
+- CSS の [`cursor`](/ja/docs/Web/CSS/Reference/Properties/cursor) プロパティを、Android 版 Firefox でサポートしました。
   マウスを使用する Android ユーザーは、どの要素がクリックできるかを見分けやすくなります ([Firefox バグ 1672609](https://bugzil.la/1672609))。
 
 ### JavaScript

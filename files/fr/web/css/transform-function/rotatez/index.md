@@ -35,7 +35,7 @@ transform: rotateZ(3.142rad);
 </section>
 ```
 
-L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin).
+L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin).
 
 `rotateZ(a)` est une notation raccourcie équivalente à `rotate3D(0, 0, 1, a)`.
 
@@ -140,5 +140,5 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

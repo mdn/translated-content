@@ -76,8 +76,8 @@ scroll-padding 系のプロパティは、スクロールポートの*最適表�
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-padding-block-end`](/ja/docs/Web/CSS/scroll-padding-block-end)
-- [`scroll-padding-block-start`](/ja/docs/Web/CSS/scroll-padding-block-start)
+- [`scroll-padding-block-end`](/ja/docs/Web/CSS/Reference/Properties/scroll-padding-block-end)
+- [`scroll-padding-block-start`](/ja/docs/Web/CSS/Reference/Properties/scroll-padding-block-start)
 
 ## 構文
 

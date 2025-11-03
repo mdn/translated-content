@@ -717,7 +717,7 @@ li {
 
 ## 位置
 
-[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
+[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/Reference/Properties/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
 
 一个典型的位置值由两个值组成。第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
 

@@ -39,7 +39,7 @@ Cet exemple applique une couleur d'arrière-plan différente à un élément {{h
 </div>
 ```
 
-La pseudo-classe `:fullscreen` est utilisée pour remplacer la [`background-color`](/fr/docs/Web/CSS/background-color) de l'élément `<div>` lorsqu'il est en mode plein écran.
+La pseudo-classe `:fullscreen` est utilisée pour remplacer la [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) de l'élément `<div>` lorsqu'il est en mode plein écran.
 
 ```css
 .element {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
-**`stroke-dashoffset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素に関連付けられた[破線配列](/ja/docs/Web/CSS/stroke-dasharray)の描画開始点のオフセットを定義します。指定された場合、要素の {{SVGAttr("stroke-dashoffset")}} 属性を上書きします。
+**`stroke-dashoffset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素に関連付けられた[破線配列](/ja/docs/Web/CSS/Reference/Properties/stroke-dasharray)の描画開始点のオフセットを定義します。指定された場合、要素の {{SVGAttr("stroke-dashoffset")}} 属性を上書きします。
 
 このプロパティは、あらゆる SVG 図形またはテキストコンテンツ要素（完全な一覧は {{SVGAttr("stroke-dashoffset")}} を参照）に適用されますが、継承プロパティであるため、{{SVGElement("g")}} などの要素に適用された場合、子孫要素のストロークにも意図した効果が及びます。
 

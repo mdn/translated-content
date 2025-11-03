@@ -59,7 +59,7 @@ Si `TEXTE-INJECTÉ` est un texte écrit de gauche à droite, aucun problème. En
 
 Si on connaît d'avance la direction de `TEXTE-INJECTÉ`, on peut corriger le problème en enveloppant `TEXTE-INJECTÉ` dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) avec un attribut [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) décrivant la bonne direction. Cependant, si on ne connaît pas la direction à l'avance (`TEXTE-INJECTÉ` provenant d'une base de données ou étant saisi par un utilisateur), on utilisera `<bdi>` afin d'empêcher la direction de `TEXTE-INJECTÉ` d'avoir un impact sur le texte environnant.
 
-Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
+Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/Reference/Properties/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
 
 Utiliser `<span dir="auto">` aura le même effet qu'utiliser `<bdi>` mais la sémantique portée sera moindre.
 
@@ -220,4 +220,4 @@ body {
 - [Le balisage en ligne et texte bidirectionnel en HTML (W3C)](https://www.w3.org/International/articles/inline-bidi-markup/) (en anglais)
 - [Les bases de l'algorithme bidirectionnel Unicode (W3C)](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) (en anglais)
 - Un élément HTML connexe : [`<bdo>`](/fr/docs/Web/HTML/Reference/Elements/bdo)
-- Les propriétés CSS [`direction`](/fr/docs/Web/CSS/direction) et [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)
+- Les propriétés CSS [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) et [`unicode-bidi`](/fr/docs/Web/CSS/Reference/Properties/unicode-bidi)

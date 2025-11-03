@@ -43,7 +43,7 @@ l10n:
 - [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}
 
-我们先来谈谈 [`appearance`](/zh-CN/docs/Web/CSS/appearance) 属性，它对于使上述所有内容更具风格化相当有用。
+我们先来谈谈 [`appearance`](/zh-CN/docs/Web/CSS/Reference/Properties/appearance) 属性，它对于使上述所有内容更具风格化相当有用。
 
 ## appearance：控制操作系统层面的样式化
 

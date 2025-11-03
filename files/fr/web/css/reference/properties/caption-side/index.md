@@ -6,7 +6,7 @@ original_slug: Web/CSS/caption-side
 
 {{CSSRef}}
 
-La propriété **`caption-side`** permet de choisir l'emplacement de la légende d'un tableau (représentée par l'élément [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption) du tableau). Les valeurs sont relatives au mode d'écriture (cf. [`writing-mode`](/fr/docs/Web/CSS/writing-mode)) du tableau.
+La propriété **`caption-side`** permet de choisir l'emplacement de la légende d'un tableau (représentée par l'élément [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption) du tableau). Les valeurs sont relatives au mode d'écriture (cf. [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)) du tableau.
 
 {{InteractiveExample("CSS Demo: caption-side")}}
 

@@ -52,11 +52,11 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 ```
 
-Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
+Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
 
-Voir la page [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns) pour plus d'informations sur les mots-clés `max-content` et `auto`.
+Voir la page [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) pour plus d'informations sur les mots-clés `max-content` et `auto`.
 
-La fonction `fit-content()` peut également être utilisée pour définir la taille d'une boîte avec [`width`](/fr/docs/Web/CSS/width), [`height`](/fr/docs/Web/CSS/height), [`min-width`](/fr/docs/Web/CSS/min-width), [`min-height`](/fr/docs/Web/CSS/min-height), [`max-width`](/fr/docs/Web/CSS/max-width) et [`max-height`](/fr/docs/Web/CSS/max-height) où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.
+La fonction `fit-content()` peut également être utilisée pour définir la taille d'une boîte avec [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width), [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height), [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) et [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height) où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.
 
 ## Syntaxe
 
@@ -131,13 +131,13 @@ fit-content(40%)
 
 - Les mots-clés pour le dimensionnement&nbsp;: [`min-content`](/fr/docs/Web/CSS/min-content), [`max-content`](/fr/docs/Web/CSS/max-content)
 - Les propriétés correspondantes des grilles CSS&nbsp;:
-  - [`grid-template`](/fr/docs/Web/CSS/grid-template)
-  - [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows)
-  - [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns)
-  - [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas)
-  - [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns)
-  - [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows)
-  - [`grid-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow)
+  - [`grid-template`](/fr/docs/Web/CSS/Reference/Properties/grid-template)
+  - [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows)
+  - [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns)
+  - [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-template-areas)
+  - [`grid-auto-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns)
+  - [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows)
+  - [`grid-auto-flow`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow)
 - Les guides à propos de la disposition en grille
   - [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
   - [Les propriétés raccourcies pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)

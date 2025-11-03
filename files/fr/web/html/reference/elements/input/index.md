@@ -729,7 +729,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
 
 #### Exemple d'utilisation des pseudo-classes
 
-On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/color) et [`font-weight`](/fr/docs/Web/CSS/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
+On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/Reference/Properties/color) et [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
 
 ```html hidden
 <input id="checkboxInput" type="checkbox" />
@@ -777,7 +777,7 @@ Seul le sous-ensemble des propriétés CSS qui s'appliquent au pseudo-élément 
 
 ### `appearance`
 
-La propriété [`appearance`](/fr/docs/Web/CSS/appearance) permet d'afficher presque tous les éléments en utilisant le style natif fourni par le thème du système d'exploitation, ou de retirer ce style natif si on utilise la valeur `none`.
+La propriété [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) permet d'afficher presque tous les éléments en utilisant le style natif fourni par le thème du système d'exploitation, ou de retirer ce style natif si on utilise la valeur `none`.
 
 En théorie, on peut donc faire ressembler un élément `<div>` à un bouton radio grâce à `div {appearance: radio;}` ou faire ressembler un bouton radio à une case à cocher avec `[type="radio"] {appearance: checkbox;}`. En réalité, il s'agit de mauvaises pratiques, à éviter donc.
 
@@ -785,7 +785,7 @@ Utiliser `appearance: none` permettra de retirer les bordures liées à la plate
 
 ### `caret-color`
 
-[`caret-color`](/fr/docs/Web/CSS/caret-color) est une propriété qui s'applique aux éléments permettant de saisir du texte et qui permet de personnaliser la couleur du curseur de saisie&nbsp;:
+[`caret-color`](/fr/docs/Web/CSS/Reference/Properties/caret-color) est une propriété qui s'applique aux éléments permettant de saisir du texte et qui permet de personnaliser la couleur du curseur de saisie&nbsp;:
 
 #### HTML
 
@@ -812,7 +812,7 @@ input.custom {
 
 ### `object-position` et `object-fit`
 
-Dans certains cas (le plus souvent pour les champs non-texte et les interfaces spécialisées), l'élément `<input>` est un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties). Lorsque c'est le cas, la taille et la position de l'élément au sein de son cadre peuvent être ajustées grâce aux propriétés CSS [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit).
+Dans certains cas (le plus souvent pour les champs non-texte et les interfaces spécialisées), l'élément `<input>` est un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties). Lorsque c'est le cas, la taille et la position de l'élément au sein de son cadre peuvent être ajustées grâce aux propriétés CSS [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
 
 ### Mise en forme
 

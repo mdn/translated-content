@@ -5,15 +5,15 @@ l10n:
   sourceCommit: c9fc9aa7a65c5109e64c0f7b6d9e732dd812973f
 ---
 
-Les marges [haute](/fr/docs/Web/CSS/margin-top) et [basse](/fr/docs/Web/CSS/margin-bottom) des blocs sont parfois combinées (fusionnées) en une seule marge dont la taille est la plus grande des marges individuelles (ou simplement l'une d'elles si elles sont égales), un comportement appelé **fusion des marges**. Notez que les marges des éléments [flottants](/fr/docs/Web/CSS/float) et [absolument positionnés](/fr/docs/Web/CSS/position#types_de_positionnement) ne fusionnent jamais.
+Les marges [haute](/fr/docs/Web/CSS/Reference/Properties/margin-top) et [basse](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) des blocs sont parfois combinées (fusionnées) en une seule marge dont la taille est la plus grande des marges individuelles (ou simplement l'une d'elles si elles sont égales), un comportement appelé **fusion des marges**. Notez que les marges des éléments [flottants](/fr/docs/Web/CSS/Reference/Properties/float) et [absolument positionnés](/fr/docs/Web/CSS/Reference/Properties/position#types_de_positionnement) ne fusionnent jamais.
 
 La fusion des marges se produit dans trois cas principaux&nbsp;:
 
 - Parents adjacents
-  - : Les marges de frères et sœurs adjacents sont fusionnées (sauf lorsque le second doit être [écarté](/fr/docs/Web/CSS/clear) des flottants).
+  - : Les marges de frères et sœurs adjacents sont fusionnées (sauf lorsque le second doit être [écarté](/fr/docs/Web/CSS/Reference/Properties/clear) des flottants).
 - Aucun contenu ne sépare le parent et les descendants
   - : Les marges verticales entre un bloc parent et ses descendants peuvent fusionner. Cela se produit lorsqu'il n'y a aucun contenu séparateur entre eux. Plus précisément, cela arrive dans deux cas principaux&nbsp;:
-    - La {{cssxref("margin-top")}} d'un parent fusionne avec la {{cssxref("margin-top")}} de son premier descendant en flux, sauf si le parent possède une {{cssxref("border-top")}}, une {{cssxref("padding-top")}}, contient du contenu en ligne (comme du texte), ou si une _[clearance](/fr/docs/Web/CSS/clear)_ est appliquée.
+    - La {{cssxref("margin-top")}} d'un parent fusionne avec la {{cssxref("margin-top")}} de son premier descendant en flux, sauf si le parent possède une {{cssxref("border-top")}}, une {{cssxref("padding-top")}}, contient du contenu en ligne (comme du texte), ou si une _[clearance](/fr/docs/Web/CSS/Reference/Properties/clear)_ est appliquée.
     - La {{cssxref("margin-bottom")}} d'un parent fusionne avec la {{cssxref("margin-bottom")}} de son dernier descendant en flux, sauf si le parent a une {{cssxref("height")}} ou {{cssxref("min-height")}} définie, une {{cssxref("border-bottom")}}, ou une {{cssxref("padding-bottom")}}.
 
     Dans les deux cas, créer un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) sur le parent empêche aussi ses marges de fusionner avec celles de ses enfants.

@@ -12,7 +12,7 @@ l10n:
 ### CSS
 
 - [@starting-style](/ja/docs/Web/CSS/@starting-style) CSS アットルールをサポートしました。これは要素が最初にスタイルの更新を受けたときに、トランジションさせたい要素に設定されたプロパティの開始値を定義できます。現在、`display: none;` からアニメーションすることはできません ([Firefox bug 1834876](https://bugzil.la/1834876)、[Firefox bug 1834877](https://bugzil.la/1834877))。
-- {{CSSXRef("transition-behavior")}} CSS プロパティをサポートしました。これは値に [`allow-descrete`](/ja/docs/Web/CSS/transition-behavior#allow-discrete) を設定することで、{{CSSXRef("display")}} や {{CSSXRef("overlay")}} のような離散的なプロパティをトランジション可能にするかを指定できます ([Firefox bug 1901645](https://bugzil.la/1901645))。
+- {{CSSXRef("transition-behavior")}} CSS プロパティをサポートしました。これは値に [`allow-descrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) を設定することで、{{CSSXRef("display")}} や {{CSSXRef("overlay")}} のような離散的なプロパティをトランジション可能にするかを指定できます ([Firefox bug 1901645](https://bugzil.la/1901645))。
 - `-webkit-font-feature-settings` を、標準の {{cssxref("font-feature-settings")}} プロパティの別名として実装しました ([Firefox bug 1595620](https://bugzil.la/1595620))。
 
 ### JavaScript

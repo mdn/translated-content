@@ -719,7 +719,7 @@ RGB の例を HSL の色に更新すると次のようになります。
 
 ## 位置
 
-[`<position>`](/ja/docs/Web/CSS/position_value) データ型は 2 次元の座標を表しており、背景画像のような項目（[`background-position`](/ja/docs/Web/CSS/background-position) にて）の位置を決めるのに使われます。これは `top`, `left`, `bottom`, `right`, `center` のようなキーワードを取って、ボックスの上や左の隅からオフセットさせる長さの値とともに、2 次元のボックスの特定の境界にアイテムを揃えます。
+[`<position>`](/ja/docs/Web/CSS/position_value) データ型は 2 次元の座標を表しており、背景画像のような項目（[`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) にて）の位置を決めるのに使われます。これは `top`, `left`, `bottom`, `right`, `center` のようなキーワードを取って、ボックスの上や左の隅からオフセットさせる長さの値とともに、2 次元のボックスの特定の境界にアイテムを揃えます。
 
 典型的な位置の値は 2 つの値を持ち — 最初は水平位置を、2 つ目は垂直位置をセットします。1 つの軸だけの値を指定する場合、もう 1 つは既定で `center` となります。
 

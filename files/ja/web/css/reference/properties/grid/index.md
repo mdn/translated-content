@@ -70,12 +70,12 @@ grid: repeat(3, 80px) / auto-flow;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-auto-columns`](/ja/docs/Web/CSS/grid-auto-columns)
-- [`grid-auto-flow`](/ja/docs/Web/CSS/grid-auto-flow)
-- [`grid-auto-rows`](/ja/docs/Web/CSS/grid-auto-rows)
-- [`grid-template-areas`](/ja/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows)
+- [`grid-auto-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-columns)
+- [`grid-auto-flow`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-flow)
+- [`grid-auto-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-rows)
+- [`grid-template-areas`](/ja/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## 構文
 

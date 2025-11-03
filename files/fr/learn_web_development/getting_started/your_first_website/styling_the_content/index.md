@@ -52,7 +52,7 @@ Cela s'affiche ainsi tout seul&nbsp;:
 
 {{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-Si on ajoute un peu de CSS, on peut changer l'apparence du HTML. L'extrait suivant sélectionne l'élément {{htmlelement("p")}} et lui donne une [police](/fr/docs/Web/CSS/font-family) différente et un texte de couleur ({{cssxref("color")}}) rouge. Il sélectionne ensuite tous les éléments {{htmlelement("li")}} et leur donne une couleur de remplissage ({{cssxref("background-color")}}) vert-jaune, une bordure ({{cssxref("border")}}) noire pleine de 1 pixel, et une [marge inférieure](/fr/docs/Web/CSS/margin-bottom) de 5 pixels&nbsp;:
+Si on ajoute un peu de CSS, on peut changer l'apparence du HTML. L'extrait suivant sélectionne l'élément {{htmlelement("p")}} et lui donne une [police](/fr/docs/Web/CSS/Reference/Properties/font-family) différente et un texte de couleur ({{cssxref("color")}}) rouge. Il sélectionne ensuite tous les éléments {{htmlelement("li")}} et leur donne une couleur de remplissage ({{cssxref("background-color")}}) vert-jaune, une bordure ({{cssxref("border")}}) noire pleine de 1 pixel, et une [marge inférieure](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) de 5 pixels&nbsp;:
 
 ```css live-sample___basic-css
 p {

@@ -14,19 +14,19 @@ Le [module de spécification CSS sur l'alignement des boîtes (<i lang="en">Box 
 
 ## `align-content` et `justify-content`
 
-La propriété [`justify-content`](/fr/docs/Web/CSS/justify-content) ne s'applique pas aux conteneurs en bloc ou aux cellules de tableau.
+La propriété [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content) ne s'applique pas aux conteneurs en bloc ou aux cellules de tableau.
 
-La propriété [`align-content`](/fr/docs/Web/CSS/align-content) s'applique sur l'axe de bloc afin d'aligner le contenu de la boîte dans le conteneur. Si une méthode de distribution telle que `space-between`, `space-around` ou `space-evenly` est utilisée, c'est la méthode de recours qui sera utilisée, car tout le contenu est considéré comme [un seul sujet d'alignement](/fr/docs/Glossary/Alignment_Subject).
+La propriété [`align-content`](/fr/docs/Web/CSS/Reference/Properties/align-content) s'applique sur l'axe de bloc afin d'aligner le contenu de la boîte dans le conteneur. Si une méthode de distribution telle que `space-between`, `space-around` ou `space-evenly` est utilisée, c'est la méthode de recours qui sera utilisée, car tout le contenu est considéré comme [un seul sujet d'alignement](/fr/docs/Glossary/Alignment_Subject).
 
 ## `justify-self`
 
-La propriété [`justify-self`](/fr/docs/Web/CSS/justify-self) est utilisée afin d'aligner un objet au sein de son bloc englobant selon l'axe en ligne.
+La propriété [`justify-self`](/fr/docs/Web/CSS/Reference/Properties/justify-self) est utilisée afin d'aligner un objet au sein de son bloc englobant selon l'axe en ligne.
 
 Cette propriété ne s'applique pas aux éléments flottants ou aux cellules de tableau.
 
 ## `align-self`
 
-La propriété [`align-self`](/fr/docs/Web/CSS/align-self) ne s'applique pas aux boîtes de bloc (y compris pour les éléments flottants), car il y a plus d'un objet sur l'axe de bloc. Elle ne s'applique pas non plus aux cellules des tableaux.
+La propriété [`align-self`](/fr/docs/Web/CSS/Reference/Properties/align-self) ne s'applique pas aux boîtes de bloc (y compris pour les éléments flottants), car il y a plus d'un objet sur l'axe de bloc. Elle ne s'applique pas non plus aux cellules des tableaux.
 
 ### Éléments positionnés de façon absolue
 
@@ -36,7 +36,7 @@ Le conteneur d'alignement correspond au bloc positionné en prenant en compte le
 
 À l'heure actuelle, les navigateurs n'implémentent pas l'alignement des boîtes pour la disposition en bloc. Il faut donc, pour le moment, utiliser les méthodes existantes ou placer un élément dans un conteneur flexible afin de tirer parti des fonctionnalités d'alignement des boîtes flexibles.
 
-Avant l'apparition des boîtes flexibles (<i lang="en">flexbox</i>), l'alignement horizontal était généralement obtenu avec des marges automatiques. En effet, [`margin`](/fr/docs/Web/CSS/margin) avec `auto` absorbera tout l'espace disponible sur la dimension souhaitée et avec une marge droite et une marge gauche automatiques, le bloc sera placé au centre&nbsp;:
+Avant l'apparition des boîtes flexibles (<i lang="en">flexbox</i>), l'alignement horizontal était généralement obtenu avec des marges automatiques. En effet, [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) avec `auto` absorbera tout l'espace disponible sur la dimension souhaitée et avec une marge droite et une marge gauche automatiques, le bloc sera placé au centre&nbsp;:
 
 ```css
 .container {
@@ -46,7 +46,7 @@ Avant l'apparition des boîtes flexibles (<i lang="en">flexbox</i>), l'alignemen
 }
 ```
 
-Dans une disposition en tableau, il faut accéder à la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) afin d'aligner le contenu d'une cellule dans celle-ci.
+Dans une disposition en tableau, il faut accéder à la propriété [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) afin d'aligner le contenu d'une cellule dans celle-ci.
 
 Pour de nombreux scénarios, transformer le conteneur de bloc en élément flexible fournira les options d'alignement souhaitées. Dans l'exemple qui suit, on dispose d'un conteneur avec un seul élément et ce conteneur a été transformé en élément flexible afin d'utiliser les propriétés d'alignement.
 
@@ -56,10 +56,10 @@ Pour de nombreux scénarios, transformer le conteneur de bloc en élément flexi
 
 ### Propriétés CSS
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
-- [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`justify-self`](/fr/docs/Web/CSS/justify-self)
-- [`align-self`](/fr/docs/Web/CSS/align-self)
+- [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content)
+- [`align-content`](/fr/docs/Web/CSS/Reference/Properties/align-content)
+- [`justify-self`](/fr/docs/Web/CSS/Reference/Properties/justify-self)
+- [`align-self`](/fr/docs/Web/CSS/Reference/Properties/align-self)
 
 ### Termes du glossaire
 

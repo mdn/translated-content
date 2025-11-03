@@ -74,9 +74,9 @@ grid-template:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-template-areas`](/ja/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows)
+- [`grid-template-areas`](/ja/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## 構文
 

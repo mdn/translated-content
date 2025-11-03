@@ -93,7 +93,7 @@ input {
 
 これらの色見本では、 {{cssxref("background-color")}} は {{cssxref("color_value/hsl", "hsl()")}} の {{cssxref("&lt;color&gt;")}} 関数を使用して、 `hsl(var(--hue) 50% 50%)` のように設定します。
 `calc(var(--hue) + 10)`, `calc(var(--hue) + 20)` などのように、色相 ({{cssxref("hue")}}) の値を 10 度ずつ増加します。
-スライダーの値が 0 から 360 まで変化すると、 `--hue` [カスタムプロパティ](/ja/docs/Web/CSS/--*) の値が {{cssxref("calc")}} を使用して更新され、グリッド内の各ボックスの背景色も更新されます。
+スライダーの値が 0 から 360 まで変化すると、 `--hue` [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) の値が {{cssxref("calc")}} を使用して更新され、グリッド内の各ボックスの背景色も更新されます。
 
 ## リファレンス
 

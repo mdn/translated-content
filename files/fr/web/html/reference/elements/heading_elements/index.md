@@ -56,7 +56,7 @@ Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/
 ## Notes d'utilisation
 
 - Les informations de titre peuvent être utilisées par les agents utilisateur afin de construire automatiquement la table des matières d'un document.
-- Il ne faut pas utiliser des éléments de titre pour ajuster la taille du texte. Pour cela, on utilisera la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size).
+- Il ne faut pas utiliser des éléments de titre pour ajuster la taille du texte. Pour cela, on utilisera la propriété CSS [`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size).
 - Il ne faut pas sauter de niveaux entre les titres&nbsp;: on commencera toujours par `<h1>`, suivi `<h2>` et ainsi de suite.
 
 ### Éviter d'avoir plusieurs éléments `<h1>` sur une page

@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_positioned_layout/Using_z-index
 
 该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成“层叠”，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。
 
-**注意！z-index 只对指定了** [positioned](/zh-CN/docs/Web/CSS/position)**属性的元素有效。**
+**注意！z-index 只对指定了** [positioned](/zh-CN/docs/Web/CSS/Reference/Properties/position)**属性的元素有效。**
 
 - _底层：距离观察者最远_
 - ...

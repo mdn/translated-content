@@ -59,8 +59,8 @@ CSS スクロール駆動アニメーションでは、`<timeline-range-name>` �
 
 無名スクロール進行タイムラインと無名ビュー進行タイムラインを定義するための {{cssxref("animation-timeline")}} プロパティの可能な値（つまり、明示的に名前付きで `scroll-timeline-*` プロパティと `view-timeline-*` プロパティを使用して定義するのではなく、ブラウザーによって暗黙的に定義されます）。
 
-- [`scroll()`](/ja/docs/Web/CSS/animation-timeline/scroll)
-- [`view()`](/ja/docs/Web/CSS/animation-timeline/view)
+- [`scroll()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
+- [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view)
 
 ### JavaScript 機能
 

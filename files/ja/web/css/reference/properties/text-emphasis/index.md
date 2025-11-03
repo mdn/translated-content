@@ -53,8 +53,8 @@ p {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`text-emphasis-color`](/ja/docs/Web/CSS/text-emphasis-color)
-- [`text-emphasis-style`](/ja/docs/Web/CSS/text-emphasis-style)
+- [`text-emphasis-color`](/ja/docs/Web/CSS/Reference/Properties/text-emphasis-color)
+- [`text-emphasis-style`](/ja/docs/Web/CSS/Reference/Properties/text-emphasis-style)
 
 ## 構文
 

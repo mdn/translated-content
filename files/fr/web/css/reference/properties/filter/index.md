@@ -138,7 +138,7 @@ Lorsque la valeur de la propriété `filter` contient plusieurs fonctions, les f
     ```
 
 - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
-  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
+  - : Applique une ombre portée suivant les contours de l'image. Son paramètre suit la même syntaxe que celle de la propriété [`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow) (définie dans le module [Arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)), sauf que le mot-clé `inset` et le paramètre `spread` ne sont pas autorisés. Tous les filtres appliqués après `drop-shadow()` sont appliqués à l'ombre portée également.
 
     ```css
     filter: drop-shadow(16px 16px 10px black);
@@ -276,8 +276,8 @@ Les filtres sont appliqués dans l'ordre, c'est pour cela que les ombres portée
 
 ## Voir aussi
 
-- La propriété CSS [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter)
-- [La composition et les modes de fusion en CSS](/fr/docs/Web/CSS/CSS_compositing_and_blending) avec les propriétés CSS [`background-blend-mode`](/fr/docs/Web/CSS/background-blend-mode) et [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode)
-- La propriété CSS [`mask`](/fr/docs/Web/CSS/mask)
+- La propriété CSS [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdrop-filter)
+- [La composition et les modes de fusion en CSS](/fr/docs/Web/CSS/CSS_compositing_and_blending) avec les propriétés CSS [`background-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/background-blend-mode) et [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)
+- La propriété CSS [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask)
 - [SVG](/fr/docs/Web/SVG) et notamment l'élément [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter) et l'attribut [`filter`](/fr/docs/Web/SVG/Attribute/filter)
 - [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

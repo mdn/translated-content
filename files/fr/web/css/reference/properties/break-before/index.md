@@ -38,7 +38,7 @@ break-before: revert;
 break-before: unset;
 ```
 
-Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) est influencé par trois propriétés&nbsp;: la valeur de [`break-after`](/fr/docs/Web/CSS/break-after) de l'élément précédent, la valeur de `break-before` de l'élément suivant et la valeur de [`break-inside`](/fr/docs/Web/CSS/break-inside) de l'élément englobant.
+Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) est influencé par trois propriétés&nbsp;: la valeur de [`break-after`](/fr/docs/Web/CSS/Reference/Properties/break-after) de l'élément précédent, la valeur de `break-before` de l'élément suivant et la valeur de [`break-inside`](/fr/docs/Web/CSS/Reference/Properties/break-inside) de l'élément englobant.
 
 Pour déterminer si on a une rupture, on applique les règles suivantes&nbsp;:
 
@@ -95,7 +95,7 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
 
 ## Alias/synonymes pour les ruptures de page
 
-Pour des raisons de compatibilité, la propriété historique [`page-break-before`](/fr/docs/Web/CSS/page-break-before) devrait être considérée par les navigateurs comme un synonyme de `break-before`. Cela permet aux sites utilisant `page-break-before` de continuer à fonctionner comme précédemment. Voici un sous-ensemble des valeurs avec leurs alias&nbsp;:
+Pour des raisons de compatibilité, la propriété historique [`page-break-before`](/fr/docs/Web/CSS/Reference/Properties/page-break-before) devrait être considérée par les navigateurs comme un synonyme de `break-before`. Cela permet aux sites utilisant `page-break-before` de continuer à fonctionner comme précédemment. Voici un sous-ensemble des valeurs avec leurs alias&nbsp;:
 
 | `page-break-before` | `break-before` |
 | ------------------- | -------------- |

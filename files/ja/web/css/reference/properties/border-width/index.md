@@ -53,10 +53,10 @@ border-width: 0 4px 8px 12px;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-width`](/ja/docs/Web/CSS/border-bottom-width)
-- [`border-left-width`](/ja/docs/Web/CSS/border-left-width)
-- [`border-right-width`](/ja/docs/Web/CSS/border-right-width)
-- [`border-top-width`](/ja/docs/Web/CSS/border-top-width)
+- [`border-bottom-width`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-width)
+- [`border-left-width`](/ja/docs/Web/CSS/Reference/Properties/border-left-width)
+- [`border-right-width`](/ja/docs/Web/CSS/Reference/Properties/border-right-width)
+- [`border-top-width`](/ja/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## 構文
 

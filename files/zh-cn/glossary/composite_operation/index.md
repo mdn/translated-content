@@ -18,5 +18,5 @@ l10n:
 
 ## 参见
 
-- [`animation-composition`](/zh-CN/docs/Web/CSS/animation-composition)
+- [`animation-composition`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-composition)
 - [`KeyframeEffect.composite`](/zh-CN/docs/Web/API/KeyframeEffect/composite)

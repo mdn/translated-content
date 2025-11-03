@@ -326,7 +326,7 @@ input.style.opacity = 0;
 ```
 
 > [!NOTE]
-> La propriété [`opacity`](/fr/docs/Web/CSS/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/visibility) ou [`display: none`](/fr/docs/Web/CSS/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
+> La propriété [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity) est utilisée pour masquer l'élément `<input>` plutôt que [`visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/visibility) ou [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display). En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
 
 Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrirons juste après.
 

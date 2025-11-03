@@ -67,7 +67,7 @@ Le type de donnée `<basic-shape>` permet de créer des formes de base, incluant
 Les paramètres communs à certaines fonctions de forme de base incluent&nbsp;:
 
 - `round <'border-radius'>`
-  - : Définit les coins arrondis pour les [rectangles par décalage du conteneur](#syntaxe_pour_les_rectangles_par_décalage_du_conteneur), [rectangles par distance](#syntaxe_pour_les_rectangles_par_distance) et [rectangles à dimensions](#syntaxe_pour_les_rectangles_à_dimensions) en utilisant la même syntaxe que la propriété abrégée CSS [`border-radius`](/fr/docs/Web/CSS/border-radius).
+  - : Définit les coins arrondis pour les [rectangles par décalage du conteneur](#syntaxe_pour_les_rectangles_par_décalage_du_conteneur), [rectangles par distance](#syntaxe_pour_les_rectangles_par_distance) et [rectangles à dimensions](#syntaxe_pour_les_rectangles_à_dimensions) en utilisant la même syntaxe que la propriété abrégée CSS [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius).
 
 - `<shape-radius>`
   - : Définit le rayon pour un [cercle](#syntaxe_pour_les_cercles) ou une [ellipse](#syntaxe_pour_les_ellipses). Les valeurs valides incluent {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (valeur par défaut) et `farthest-side`. Les valeurs négatives sont invalides.
@@ -177,7 +177,7 @@ Les valeurs dans une fonction `<basic-shape>` sont calculées comme spécifié, 
 
 - Pour toute valeur omise, sa valeur par défaut est utilisée.
 - Une valeur {{cssxref("position_value", "&lt;position&gt;")}} dans `circle()` ou `ellipse()` est calculée comme une paire de coordonnées de décalages depuis le coin supérieur gauche de la boîte de référence&nbsp;: le premier décalage est horizontal, le second est vertical. Chaque décalage est spécifié comme une valeur {{cssxref("length-percentage")}}.
-- Une valeur [`<border-radius>`](/fr/docs/Web/CSS/border-radius) dans `inset()` est développée en une liste de huit valeurs, chacune étant soit une {{cssxref("length")}} soit une {{cssxref("percentage")}}.
+- Une valeur [`<border-radius>`](/fr/docs/Web/CSS/Reference/Properties/border-radius) dans `inset()` est développée en une liste de huit valeurs, chacune étant soit une {{cssxref("length")}} soit une {{cssxref("percentage")}}.
 - Les fonctions {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}} et {{cssxref("basic-shape/xywh","xywh()")}} sont calculées comme la fonction `inset()` équivalente.
 
 ### Interpolation des formes de base

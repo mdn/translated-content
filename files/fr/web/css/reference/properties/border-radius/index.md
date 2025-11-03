@@ -55,9 +55,9 @@ border-radius: 50% 20% / 10% 40%;
 }
 ```
 
-La courbure de la bordure s'applique à l'arrière-plan (défini avec la propriété [`background`](/fr/docs/Web/CSS/background)) même si l'élément n'a aucune bordure. Le rognage de l'arrière-plan s'applique sur la boîte définie par [`background-clip`](/fr/docs/Web/CSS/background-clip).
+La courbure de la bordure s'applique à l'arrière-plan (défini avec la propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background)) même si l'élément n'a aucune bordure. Le rognage de l'arrière-plan s'applique sur la boîte définie par [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip).
 
-La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque [`border-collapse`](/fr/docs/Web/CSS/border-collapse) vaut `collapse`.
+La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque [`border-collapse`](/fr/docs/Web/CSS/Reference/Properties/border-collapse) vaut `collapse`.
 
 > [!NOTE]
 > Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
@@ -66,10 +66,10 @@ La propriété `border-radius` ne s'applique pas aux éléments de tableaux lors
 
 Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir&nbsp;:
 
-- [`border-top-left-radius`](/fr/docs/Web/CSS/border-top-left-radius),
-- [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius),
-- [`border-bottom-right-radius`](/fr/docs/Web/CSS/border-bottom-right-radius),
-- [`border-bottom-left-radius`](/fr/docs/Web/CSS/border-bottom-left-radius).
+- [`border-top-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-left-radius),
+- [`border-top-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-right-radius),
+- [`border-bottom-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-right-radius),
+- [`border-bottom-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-left-radius).
 
 ## Syntaxe
 
@@ -334,12 +334,12 @@ pre#example-7 {
 
 - Les propriétés CSS relatives à `border-radius`&nbsp;:
   - Les propriétés physiques&nbsp;:
-    - [`border-top-left-radius`](/fr/docs/Web/CSS/border-top-left-radius),
-    - [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius),
-    - [`border-bottom-right-radius`](/fr/docs/Web/CSS/border-bottom-right-radius),
-    - [`border-bottom-left-radius`](/fr/docs/Web/CSS/border-bottom-left-radius)
+    - [`border-top-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-left-radius),
+    - [`border-top-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-top-right-radius),
+    - [`border-bottom-right-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-right-radius),
+    - [`border-bottom-left-radius`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)
   - Les propriétés logiques&nbsp;:
-    - [`border-start-start-radius`](/fr/docs/Web/CSS/border-start-start-radius),
-    - [`border-start-end-radius`](/fr/docs/Web/CSS/border-start-end-radius),
-    - [`border-end-start-radius`](/fr/docs/Web/CSS/border-end-start-radius),
-    - [`border-end-end-radius`](/fr/docs/Web/CSS/border-end-end-radius)
+    - [`border-start-start-radius`](/fr/docs/Web/CSS/Reference/Properties/border-start-start-radius),
+    - [`border-start-end-radius`](/fr/docs/Web/CSS/Reference/Properties/border-start-end-radius),
+    - [`border-end-start-radius`](/fr/docs/Web/CSS/Reference/Properties/border-end-start-radius),
+    - [`border-end-end-radius`](/fr/docs/Web/CSS/Reference/Properties/border-end-end-radius)

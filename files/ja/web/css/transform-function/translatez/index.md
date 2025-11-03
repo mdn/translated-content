@@ -97,7 +97,7 @@ transform: translateZ(-3ch);
 
 この変換は、 {{cssxref("&lt;length&gt;")}} によって定義され、要素または要素がどれだけ内側または外側に移動するかを指定します。
 
-上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (3D 空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を 3D 空間に配置) を立方体に設定しました。
+上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/Reference/Properties/perspective) (3D 空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/Reference/Properties/transform-style) (立方体の 6 つの面である子を 3D 空間に配置) を立方体に設定しました。
 
 > [!NOTE]
 > `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。

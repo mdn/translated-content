@@ -104,7 +104,7 @@ custom-element:defined::before {
 }
 ```
 
-Nous avons également utilisé le pseudo-élément [`::before`](/fr/docs/Web/CSS/::before) pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le [`content`](/fr/docs/Web/CSS/content) sur une chaîne vide.
+Nous avons également utilisé le pseudo-élément [`::before`](/fr/docs/Web/CSS/::before) pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le [`content`](/fr/docs/Web/CSS/Reference/Properties/content) sur une chaîne vide.
 
 #### JavaScript
 

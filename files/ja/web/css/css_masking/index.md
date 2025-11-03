@@ -44,7 +44,7 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
 
 ### データ型
 
-- [`<geometry-box>`](/ja/docs/Web/CSS/clip-path#geometry-box)
+- [`<geometry-box>`](/ja/docs/Web/CSS/Reference/Properties/clip-path#geometry-box)
 
 ### 関数
 
@@ -85,12 +85,12 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
   - {{cssxref("border-image-slice")}}
   - {{cssxref("border-image-source")}}
   - {{cssxref("border-image-width")}}
-  - [`<repeat-style>`](/ja/docs/Web/CSS/background-repeat#values) データ型
+  - [`<repeat-style>`](/ja/docs/Web/CSS/Reference/Properties/background-repeat#values) データ型
 
 - [CSS shapes](/ja/docs/Web/CSS/CSS_shapes)モジュール
   - {{cssxref("&lt;basic-shape&gt;")}} データ型
   - {{cssxref("basic-shape/polygon","polygon()")}} 関数
-  - [`<shape-box>`](/ja/docs/Web/CSS/shape-outside#shape-box) データ型
+  - [`<shape-box>`](/ja/docs/Web/CSS/Reference/Properties/shape-outside#shape-box) データ型
 
 ## 仕様書
 

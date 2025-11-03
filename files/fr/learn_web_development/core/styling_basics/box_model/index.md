@@ -45,8 +45,8 @@ Si une boîte est définie en bloc, elle suivra alors les règles suivantes :
 
 - La boîte s'étend en largeur pour remplir totalement l'espace offert par son conteneur. Dans la plupart des cas, la boîte devient alors aussi large que son conteneur, occupant 100% de l'espace disponible.
 - La boîte occupe sa propre nouvelle ligne et crée un retour à la ligne, faisant ainsi passer les éléments suivants à la ligne d'après.
-- Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/height)) sont toujours respectées.
-- Les propriétés [`padding`](/fr/docs/Web/CSS/padding), [`margin`](/fr/docs/Web/CSS/margin) et [`border`](/fr/docs/Web/CSS/border) — correspondantes respectivement aux écarts de
+- Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/Reference/Properties/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/Reference/Properties/height)) sont toujours respectées.
+- Les propriétés [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding), [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) et [`border`](/fr/docs/Web/CSS/Reference/Properties/border) — correspondantes respectivement aux écarts de
 
   <i lang="en">padding</i>
 
@@ -57,7 +57,7 @@ Si une boîte est définie en bloc, elle suivra alors les règles suivantes :
 Si une boîte est positionnée en ligne, alors :
 
 - La boîte ne crée pas de retour à la ligne, les autres éléments se suivent donc en ligne.
-- Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/height)) ne s'appliquent pas.
+- Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/Reference/Properties/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/Reference/Properties/height)) ne s'appliquent pas.
 - Le
 
   <i lang="en">padding</i>
@@ -72,7 +72,7 @@ Si une boîte est positionnée en ligne, alors :
 
 Les éléments `<a>`, utilisés pour les liens, ou encore `<span>`, `<em>` et `<strong>` sont tous des éléments qui s'affichent "en ligne" par défaut.
 
-Le type de boîte appliqué à un élément est défini par la valeur de la propriété [`display`](/fr/docs/Web/CSS/display) tel que `block` ou `inline`, et se réfère à la valeur extérieure de positionnement (ou "_display_" en anglais).
+Le type de boîte appliqué à un élément est défini par la valeur de la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) tel que `block` ou `inline`, et se réfère à la valeur extérieure de positionnement (ou "_display_" en anglais).
 
 ## Aparté : les positionnements intérieurs et extérieurs
 
@@ -121,18 +121,18 @@ Le modèle de boîte que nous allons voir s'applique totalement aux boîtes en b
 
 Lorsque l'on crée une boîte en bloc, on se retrouve avec les composants suivant :
 
-- **La boîte de contenu**&nbsp;: Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height).
+- **La boîte de contenu**&nbsp;: Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/Reference/Properties/width) et [`height`](/fr/docs/Web/CSS/Reference/Properties/height).
 - **La boîte de <i lang="en">padding</i>** **(marge intérieure)**&nbsp;: Le
 
   <i lang="en">padding</i>
 
-  (ou remplissage en français) est une zone vierge qui se présente comme un espacement encadrant le contenu; sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`padding`](/fr/docs/Web/CSS/padding) et ses autres propriétés connexes.
+  (ou remplissage en français) est une zone vierge qui se présente comme un espacement encadrant le contenu; sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding) et ses autres propriétés connexes.
 
 - **La boîte de bordure**&nbsp;: La bordure englobe le contenu et le
 
   <i lang="en">padding</i>
 
-  pour former une bordure. Sa taille et son style sont paramétrés par la propriété [`border`](/fr/docs/Web/CSS/border) et ses propriétés sous-jacentes.
+  pour former une bordure. Sa taille et son style sont paramétrés par la propriété [`border`](/fr/docs/Web/CSS/Reference/Properties/border) et ses propriétés sous-jacentes.
 
 - **La boîte de marge**&nbsp;: La marge est la couche la plus à l'extérieur, englobant le contenu, le
 
@@ -142,7 +142,7 @@ Lorsque l'on crée une boîte en bloc, on se retrouve avec les composants suivan
 
   <i lang="en">padding</i>
 
-  , il s'agit d'une zone vierge d'espacement mais qui est cette fois située à l'extérieur de l'élément, séparant l'élément des autres éléments de la page. sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`margin`](/fr/docs/Web/CSS/margin) et ses autres propriétés connexes.
+  , il s'agit d'une zone vierge d'espacement mais qui est cette fois située à l'extérieur de l'élément, séparant l'élément des autres éléments de la page. sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) et ses autres propriétés connexes.
 
 Le schéma ci-dessous montre la structure de ces différentes couches:
 
@@ -220,7 +220,7 @@ Les [outils de développement](/fr/docs/Learn_web_development/Howto/Tools_and_se
 
 ## Marges, remplissages (paddings), et bordures
 
-Nous avons déjà rencontré ensemble les propriétés [`margin`](/fr/docs/Web/CSS/margin), [`padding`](/fr/docs/Web/CSS/padding) et [`border`](/fr/docs/Web/CSS/border), ainsi que leurs effets dans les exemples précédents. Mais ces propriétés sont des **raccourcis** qui nous permettent de définir ces règles pour les quatre côtés de la boîte d'un seul coup. Ces raccourcis ont donc aussi leurs propriétés équivalentes permettant de régler séparément chaque côté pour plus de personalisation.
+Nous avons déjà rencontré ensemble les propriétés [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin), [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding) et [`border`](/fr/docs/Web/CSS/Reference/Properties/border), ainsi que leurs effets dans les exemples précédents. Mais ces propriétés sont des **raccourcis** qui nous permettent de définir ces règles pour les quatre côtés de la boîte d'un seul coup. Ces raccourcis ont donc aussi leurs propriétés équivalentes permettant de régler séparément chaque côté pour plus de personalisation.
 
 Regardons de plus près ces nouvelles propriétés.
 
@@ -228,12 +228,12 @@ Regardons de plus près ces nouvelles propriétés.
 
 La marge est une zone d'espacement invisible qui encadre votre boîte (une marge extérieure). La marge repousse les éléments alentours de la boîte. On peut de plus lui donner une valeur numérique positive ou bien même négative ! Lorsque cette valeur est négative, cela peut cependant engendrer des superpositions entre votre boîte et d'autres éléments. Que vous utilisiez le modèle alternatif ou standard, la marge est toujours décomptée en surplus de la taille totale de la boîte et est ajoutée après que celle-ci a été calculée.
 
-On peut fixer les quatre marges d'une boîte d'un seul coup à l'aide de la propriété [`margin`](/fr/docs/Web/CSS/margin), ou bien régler chaque côté individuellement avec les propriétés équivalentes suivantes :
+On peut fixer les quatre marges d'une boîte d'un seul coup à l'aide de la propriété [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin), ou bien régler chaque côté individuellement avec les propriétés équivalentes suivantes :
 
-- [`margin-top`](/fr/docs/Web/CSS/margin-top)
-- [`margin-right`](/fr/docs/Web/CSS/margin-right)
-- [`margin-bottom`](/fr/docs/Web/CSS/margin-bottom)
-- [`margin-left`](/fr/docs/Web/CSS/margin-left)
+- [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top)
+- [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right)
+- [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom)
+- [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left)
 
 **Dans l'exemple ci-dessous, tentez donc de modifier les valeurs de `margin` pour voir comment la boîte est repoussée et évolue à cause des espaces créés ou supprimés (si la marge est négative) par vos soins.**
 
@@ -261,31 +261,31 @@ Vous pouvez naturellement fixer la forme taille et couleur des quatre côtés en
 
 Pour régler ces propriétés individuellement pour chacun des côtés, vous pouvez utiliser :
 
-- [`border-top`](/fr/docs/Web/CSS/border-top)
-- [`border-right`](/fr/docs/Web/CSS/border-right)
-- [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
-- [`border-left`](/fr/docs/Web/CSS/border-left)
+- [`border-top`](/fr/docs/Web/CSS/Reference/Properties/border-top)
+- [`border-right`](/fr/docs/Web/CSS/Reference/Properties/border-right)
+- [`border-bottom`](/fr/docs/Web/CSS/Reference/Properties/border-bottom)
+- [`border-left`](/fr/docs/Web/CSS/Reference/Properties/border-left)
 
 Pour modifier la taille, le style ou la couleur de tous les côtés en même temps, utilisez les propriétés suivantes :
 
-- [`border-width`](/fr/docs/Web/CSS/border-width)
-- [`border-style`](/fr/docs/Web/CSS/border-style)
-- [`border-color`](/fr/docs/Web/CSS/border-color)
+- [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width)
+- [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style)
+- [`border-color`](/fr/docs/Web/CSS/Reference/Properties/border-color)
 
 Pour modifier la taille, le style ou la couleur d'un seul coté à la fois, vous pouvez faire l'usage de ces propriétés :
 
-- [`border-top-width`](/fr/docs/Web/CSS/border-top-width)
-- [`border-top-style`](/fr/docs/Web/CSS/border-top-style)
-- [`border-top-color`](/fr/docs/Web/CSS/border-top-color)
-- [`border-right-width`](/fr/docs/Web/CSS/border-right-width)
-- [`border-right-style`](/fr/docs/Web/CSS/border-right-style)
-- [`border-right-color`](/fr/docs/Web/CSS/border-right-color)
-- [`border-bottom-width`](/fr/docs/Web/CSS/border-bottom-width)
-- [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style)
-- [`border-bottom-color`](/fr/docs/Web/CSS/border-bottom-color)
-- [`border-left-width`](/fr/docs/Web/CSS/border-left-width)
-- [`border-left-style`](/fr/docs/Web/CSS/border-left-style)
-- [`border-left-color`](/fr/docs/Web/CSS/border-left-color)
+- [`border-top-width`](/fr/docs/Web/CSS/Reference/Properties/border-top-width)
+- [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style)
+- [`border-top-color`](/fr/docs/Web/CSS/Reference/Properties/border-top-color)
+- [`border-right-width`](/fr/docs/Web/CSS/Reference/Properties/border-right-width)
+- [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style)
+- [`border-right-color`](/fr/docs/Web/CSS/Reference/Properties/border-right-color)
+- [`border-bottom-width`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-width)
+- [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style)
+- [`border-bottom-color`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-color)
+- [`border-left-width`](/fr/docs/Web/CSS/Reference/Properties/border-left-width)
+- [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style)
+- [`border-left-color`](/fr/docs/Web/CSS/Reference/Properties/border-left-color)
 
 **Dans l'exemple ci-dessous, nous avons utilisé différentes propriétés, qu'elles soient des raccourcis ou bien les propriétés précises, pour créer une bordure. Amusez-vous à modifier les valeurs de ces différentes propriétés pour vérifier que vous comprenez bien comment elles s'organisent. Les pages MDN pour les propriétés des bordures (données ci-dessus) documentent les différents styles que vous pouvez appliquer à vos pages. N'hésitez pas à les consulter.**
 
@@ -295,12 +295,12 @@ Pour modifier la taille, le style ou la couleur d'un seul coté à la fois, vous
 
 Le <i lang="en">padding</i> (ou remplissage) se situe entre la bordure et le contenu. Contrairement aux marges, on ne peut attribuer une valeur numérique négative à un <i lang="en">padding</i>, la valeur ne peut être que 0 ou bien une valeur positive. Si vous avez défini un arrière-plan à votre élément, celui-ci continuera de s'afficher dans la <i lang="en">padding</i>, et c'est pourquoi cette propriété est souvent utilisée pour repousser le contenu de la bordure.
 
-On peut une fois de plus configurer le <i lang="en">padding</i> pour tous les côtés à la fois à l'aide de la propriété [`padding`](/fr/docs/Web/CSS/padding), ou bien chaque côté indépendament des autres en utilisant les variantes plus précises suivantes :
+On peut une fois de plus configurer le <i lang="en">padding</i> pour tous les côtés à la fois à l'aide de la propriété [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding), ou bien chaque côté indépendament des autres en utilisant les variantes plus précises suivantes :
 
-- [`padding-top`](/fr/docs/Web/CSS/padding-top)
-- [`padding-right`](/fr/docs/Web/CSS/padding-right)
-- [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)
-- [`padding-left`](/fr/docs/Web/CSS/padding-left)
+- [`padding-top`](/fr/docs/Web/CSS/Reference/Properties/padding-top)
+- [`padding-right`](/fr/docs/Web/CSS/Reference/Properties/padding-right)
+- [`padding-bottom`](/fr/docs/Web/CSS/Reference/Properties/padding-bottom)
+- [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left)
 
 **Si vous modifiez les valeurs du <i lang="en">padding</i> sur la classe `.box` de l'exemple ci-dessous, vous pouvez observer comment l'emplacement du texte est impacté par les marges intérieures.**
 

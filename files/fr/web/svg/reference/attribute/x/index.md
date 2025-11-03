@@ -851,7 +851,7 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg), `x` définit l'abscisse 
 
 ## `<text>`
 
-Pour [`<text>`](/fr/docs/Web/SVG/Reference/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<text>`](/fr/docs/Web/SVG/Reference/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -920,7 +920,7 @@ line {
 > [!WARNING]
 > Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 
@@ -944,7 +944,7 @@ S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe 
 
 ## `<tspan>`
 
-Pour [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+Pour [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 

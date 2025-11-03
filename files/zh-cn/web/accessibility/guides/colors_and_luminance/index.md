@@ -314,7 +314,7 @@ _不止一个“红色”可以被认为是“饱和”的红色_。例如，颜
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [无障碍学习路径](/zh-CN/docs/Learn_web_development/Core/Accessibility)
-- CSS [`color`](/zh-CN/docs/Web/CSS/color) 属性
+- CSS [`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color) 属性
 - [`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型
 - [癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) 《科学美国人》作者：Susana Martinez-Conde，Stephen L. Macknik，2014 年 11 月 1 日

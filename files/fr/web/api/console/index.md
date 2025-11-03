@@ -177,24 +177,24 @@ console.log(
 
 Les propriétés qui peuvent être utilisées avec cette syntaxe sont (au moins pour Firefox)&nbsp;:
 
-- [`background`](/fr/docs/Web/CSS/background) et les propriétés détaillées correspondantes
-- [`border`](/fr/docs/Web/CSS/border) et les propriétés détaillées correspondantes
-- [`border-radius`](/fr/docs/Web/CSS/border-radius)
-- [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
-- [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
-- [`clear`](/fr/docs/Web/CSS/clear) et [`float`](/fr/docs/Web/CSS/float)
-- [`color`](/fr/docs/Web/CSS/color)
-- [`cursor`](/fr/docs/Web/CSS/cursor)
-- [`display`](/fr/docs/Web/CSS/display)
-- [`font`](/fr/docs/Web/CSS/font) et les propriétés détaillées correspondantes
-- [`line-height`](/fr/docs/Web/CSS/line-height)
-- [`margin`](/fr/docs/Web/CSS/margin)
-- [`outline`](/fr/docs/Web/CSS/outline) et les propriétés détaillées correspondantes
-- [`padding`](/fr/docs/Web/CSS/padding)
-- Les propriétés `text-*` comme [`text-transform`](/fr/docs/Web/CSS/text-transform)
-- [`white-space`](/fr/docs/Web/CSS/white-space)
-- [`word-spacing`](/fr/docs/Web/CSS/word-spacing) et [`word-break`](/fr/docs/Web/CSS/word-break)
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
+- [`background`](/fr/docs/Web/CSS/Reference/Properties/background) et les propriétés détaillées correspondantes
+- [`border`](/fr/docs/Web/CSS/Reference/Properties/border) et les propriétés détaillées correspondantes
+- [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius)
+- [`box-decoration-break`](/fr/docs/Web/CSS/Reference/Properties/box-decoration-break)
+- [`box-shadow`](/fr/docs/Web/CSS/Reference/Properties/box-shadow)
+- [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) et [`float`](/fr/docs/Web/CSS/Reference/Properties/float)
+- [`color`](/fr/docs/Web/CSS/Reference/Properties/color)
+- [`cursor`](/fr/docs/Web/CSS/Reference/Properties/cursor)
+- [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
+- [`font`](/fr/docs/Web/CSS/Reference/Properties/font) et les propriétés détaillées correspondantes
+- [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height)
+- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
+- [`outline`](/fr/docs/Web/CSS/Reference/Properties/outline) et les propriétés détaillées correspondantes
+- [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding)
+- Les propriétés `text-*` comme [`text-transform`](/fr/docs/Web/CSS/Reference/Properties/text-transform)
+- [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
+- [`word-spacing`](/fr/docs/Web/CSS/Reference/Properties/word-spacing) et [`word-break`](/fr/docs/Web/CSS/Reference/Properties/word-break)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)
 
 > [!NOTE]
 > Le message de la console se comporte par défaut comme un élément en ligne. Pour observer des effets avec `padding`, `margin` ou autre, il faut modifier son affichage, par exemple avec `display: inline-block`.

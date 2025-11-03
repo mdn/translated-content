@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-position`** permet de définir la position initiale, relative à l'origine définie par [`background-origin`](/fr/docs/Web/CSS/background-origin), pour chaque image d'arrière-plan.
+La propriété [CSS](/fr/docs/Web/CSS) **`background-position`** permet de définir la position initiale, relative à l'origine définie par [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin), pour chaque image d'arrière-plan.
 
 {{InteractiveExample("CSS Demo: background-position")}}
 
@@ -95,7 +95,7 @@ La propriété `background-position` peut être définie grâce à une ou plusie
 ### Valeurs
 
 - `<position>`
-  - : Une valeur [`<position>`](/fr/docs/Web/CSS/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première représente la position horizontale et la seconde la position verticale. Si une seule valeur est indiquée, la deuxième sera `center` par défaut. Si trois ou quatre valeurs sont utilisées, les valeurs de longueur-pourcentage sont des décalages relatifs au(x) mot(s)-clé(s) précédent(s).
+  - : Une valeur [`<position>`](/fr/docs/Web/CSS/Reference/Properties/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première représente la position horizontale et la seconde la position verticale. Si une seule valeur est indiquée, la deuxième sera `center` par défaut. Si trois ou quatre valeurs sont utilisées, les valeurs de longueur-pourcentage sont des décalages relatifs au(x) mot(s)-clé(s) précédent(s).
 
     **Définition avec une valeur&nbsp;:** la valeur peut être&nbsp;:
     - Le mot-clé `center` qui centre l'image.
@@ -227,8 +227,8 @@ L'ordre est le même entre background-image et -position.
 ## Voir aussi
 
 - [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [`background-position-x`](/fr/docs/Web/CSS/background-position-x)
-- [`background-position-y`](/fr/docs/Web/CSS/background-position-y)
+- [`background-position-x`](/fr/docs/Web/CSS/Reference/Properties/background-position-x)
+- [`background-position-y`](/fr/docs/Web/CSS/Reference/Properties/background-position-y)
 - [`background-position-inline`](/fr/docs/Web/CSS/background-position-inline)
 - [`background-position-block`](/fr/docs/Web/CSS/background-position-block)
-- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)
+- [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)

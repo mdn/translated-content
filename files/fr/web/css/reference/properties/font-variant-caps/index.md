@@ -151,10 +151,10 @@ De larges sections de texte avec une valeur `font-variant` de `all-small-caps` o
 
 ## Voir aussi
 
-- [`font-variant`](/fr/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates)
+- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
 - [`font-variant-emoji`](/fr/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/fr/docs/Web/CSS/font-variant-position)
+- [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
+- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- [`font-variant-position`](/fr/docs/Web/CSS/Reference/Properties/font-variant-position)

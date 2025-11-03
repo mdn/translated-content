@@ -11,7 +11,7 @@ l10n:
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'une boîte sur les bords en ligne (ceux parallèles au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.
 
 > [!NOTE]
-> La propriété `overflow-inline` correspond à [`overflow-y`](/fr/docs/Web/CSS/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/overflow-x) selon le mode d'écriture du document.
+> La propriété `overflow-inline` correspond à [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x) selon le mode d'écriture du document.
 
 ## Syntaxe
 
@@ -134,15 +134,15 @@ div {
 ## Voir aussi
 
 - Les propriétés CSS associées&nbsp;:
-  - [`clip`](/fr/docs/Web/CSS/clip)
-  - [`display`](/fr/docs/Web/CSS/display)
-  - [`overflow`](/fr/docs/Web/CSS/overflow)
-  - [`overflow-block`](/fr/docs/Web/CSS/overflow-block)
+  - [`clip`](/fr/docs/Web/CSS/Reference/Properties/clip)
+  - [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
+  - [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow)
+  - [`overflow-block`](/fr/docs/Web/CSS/Reference/Properties/overflow-block)
   - [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin)
-  - [`overflow-x`](/fr/docs/Web/CSS/overflow-x)
-  - [`overflow-y`](/fr/docs/Web/CSS/overflow-y)
-  - [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
-  - [`white-space`](/fr/docs/Web/CSS/white-space)
+  - [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x)
+  - [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y)
+  - [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
+  - [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
 - [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
 - [Les propriétés logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)

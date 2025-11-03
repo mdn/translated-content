@@ -26,7 +26,7 @@ Comme pour tous les autres éléments HTML, on peut utiliser [les attributs univ
   - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
 
     > [!WARNING]
-    > Cet attribut ne doit pas être utilisé, car il a été déprécié. L'élément [`<dir>`](/fr/docs/Web/HTML/Reference/Elements/dir) doit être mis en forme en utilisant [CSS](/fr/docs/Web/CSS). Pour obtenir un effect visuel similaire à l'attribut `compact`, la propriété CSS [`line-height`](/fr/docs/Web/CSS/line-height) peut être utilisé avec la valeur `80%`.
+    > Cet attribut ne doit pas être utilisé, car il a été déprécié. L'élément [`<dir>`](/fr/docs/Web/HTML/Reference/Elements/dir) doit être mis en forme en utilisant [CSS](/fr/docs/Web/CSS). Pour obtenir un effect visuel similaire à l'attribut `compact`, la propriété CSS [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height) peut être utilisé avec la valeur `80%`.
 
 ## Spécifications
 
@@ -40,7 +40,7 @@ Ne fait pas partie des spécifications actuelles.
 
 - Les autres éléments HTML utilisés pour les listes : [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol), [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul), [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li), and [`<menu>`](/fr/docs/Web/HTML/Reference/Elements/menu);
 - Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<dir>` :
-  - La propriété [`list-style`](/fr/docs/Web/CSS/list-style) est utile pour choisir l'apparence des puces.
+  - La propriété [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style) est utile pour choisir l'apparence des puces.
   - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
-  - La propriété [`line-height`](/fr/docs/Web/CSS/line-height) est utile pour reproduire l'attribut déprécié [`compact`](#attr-compact).
-  - La propriété [`margin`](/fr/docs/Web/CSS/margin) est utile pour contrôler l'indentation de la liste.
+  - La propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height) est utile pour reproduire l'attribut déprécié [`compact`](#attr-compact).
+  - La propriété [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) est utile pour contrôler l'indentation de la liste.

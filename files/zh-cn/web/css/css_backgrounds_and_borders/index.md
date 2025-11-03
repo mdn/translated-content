@@ -174,9 +174,9 @@ div:first-of-type {
 - {{cssxref("text-shadow")}} 属性
 
 - {{cssxref("url_value", "&lt;url&gt;")}} CSS 类型
-- [`<color>`](/zh-CN/docs/Web/CSS/color) 数据类型
+- [`<color>`](/zh-CN/docs/Web/CSS/Reference/Properties/color) 数据类型
 - [`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型
-- [`<position>`](/zh-CN/docs/Web/CSS/position) 数据类型
+- [`<position>`](/zh-CN/docs/Web/CSS/Reference/Properties/position) 数据类型
 
 - [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 关键字
 

@@ -66,10 +66,10 @@ border-radius: 50% 20% / 10% 40%;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-top-left-radius`](/ja/docs/Web/CSS/border-top-left-radius)
-- [`border-top-right-radius`](/ja/docs/Web/CSS/border-top-right-radius)
-- [`border-bottom-right-radius`](/ja/docs/Web/CSS/border-bottom-right-radius)
-- [`border-bottom-left-radius`](/ja/docs/Web/CSS/border-bottom-left-radius)
+- [`border-top-left-radius`](/ja/docs/Web/CSS/Reference/Properties/border-top-left-radius)
+- [`border-top-right-radius`](/ja/docs/Web/CSS/Reference/Properties/border-top-right-radius)
+- [`border-bottom-right-radius`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-right-radius)
+- [`border-bottom-left-radius`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)
 
 ## 構文
 

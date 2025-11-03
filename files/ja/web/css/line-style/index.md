@@ -245,7 +245,7 @@ p + p {
 
 #### CSS
 
-それぞれの `<div>` の 4 辺には異なる `<line-style>` 値があり、それぞれのリストアイテムは異なる {{cssxref("color_value", "&lt;color>")}} 値になっています。宣言された CSS をインラインで表示するために、[生成コンテンツ](/ja/docs/Web/CSS/content)を使用しています。
+それぞれの `<div>` の 4 辺には異なる `<line-style>` 値があり、それぞれのリストアイテムは異なる {{cssxref("color_value", "&lt;color>")}} 値になっています。宣言された CSS をインラインで表示するために、[生成コンテンツ](/ja/docs/Web/CSS/Reference/Properties/content)を使用しています。
 
 ```css hidden
 section {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 82586e39bd8df5ffabdec58ee3361ed97856f870
 ---
 
-**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/mask-border)のブレンドモードを指定します。
+**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)のブレンドモードを指定します。
 
 ## 構文
 

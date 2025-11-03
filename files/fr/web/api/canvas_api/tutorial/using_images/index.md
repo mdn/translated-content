@@ -244,7 +244,7 @@ function draw() {
 }
 ```
 
-Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/display) qui vaut `none`.
+Nous avons pris une approche différente pour charger les images cette fois. Au lieu de les charger en créant de nouveaux objets [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), nous les avons incluses comme balises [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) directement dans notre source HTML et avons récupéré les images depuis ceux-ci. Les images sont masquées via la propriété CSS [`display`](/fr/docs/Web/CSS/Reference/Properties/display) qui vaut `none`.
 
 {{EmbedLiveSample("Exemple_encadrer_une_image", 160, 160, "canvas_drawimage2.jpg")}}
 

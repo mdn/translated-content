@@ -8,7 +8,7 @@ l10n:
 {{Deprecated_header}} {{Non-standard_header}}
 
 > [!NOTE]
-> Tous les navigateurs prennent en charge la propriété [`transition`](/fr/docs/Web/CSS/transition#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transition`. Aucun navigateur ne prend en charge `transition` sans préfixe comme requête média (certains navigateurs prennent en charge {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/@supports).
+> Tous les navigateurs prennent en charge la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transition`. Aucun navigateur ne prend en charge `transition` sans préfixe comme requête média (certains navigateurs prennent en charge {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/@supports).
 
 La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne non standard [CSS](/fr/docs/Web/CSS) **`-webkit-transition`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si le contexte de navigation prend en charge les [transitions CSS](/fr/docs/Web/CSS/CSS_transitions).
 

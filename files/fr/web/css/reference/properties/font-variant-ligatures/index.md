@@ -228,8 +228,8 @@ p {
 
 ## Voir aussi
 
-- [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant`](/fr/docs/Web/CSS/font-variant)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates)
+- [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
+- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)

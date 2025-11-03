@@ -72,7 +72,7 @@ nav ul {
 </div>
 ```
 
-On utilise [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) afin de créer la disposition. On nomme les zones en dehors des différentes requêtes média. Les zones sont nommées grâce à la propriété [`grid-area`](/fr/docs/Web/CSS/grid-area).
+On utilise [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-template-areas) afin de créer la disposition. On nomme les zones en dehors des différentes requêtes média. Les zones sont nommées grâce à la propriété [`grid-area`](/fr/docs/Web/CSS/Reference/Properties/grid-area).
 
 ```css
 .main-head {
@@ -130,7 +130,7 @@ Après cette disposition par défaut pour les appareils mobiles, on peut ajouter
 }
 ```
 
-On peut voir la disposition organisée dans la valeur pour la propriété [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas). L'en-tête `header` s'étale sur deux colonnes et le bloc `nav` également. Sur la troisième ligne, on a la barre latérale (`sidebar`) à côté du contenu (`content`). Sur la quatrième ligne, on a le bloc pour la publicité (`ad`) qui apparaît sous la barre latérale et enfin le pied de page qui apparaît sous le contenu. On utilise une boîte flexible pour la barre de navigation afin de l'étaler sur une ligne homogène.
+On peut voir la disposition organisée dans la valeur pour la propriété [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-template-areas). L'en-tête `header` s'étale sur deux colonnes et le bloc `nav` également. Sur la troisième ligne, on a la barre latérale (`sidebar`) à côté du contenu (`content`). Sur la quatrième ligne, on a le bloc pour la publicité (`ad`) qui apparaît sous la barre latérale et enfin le pied de page qui apparaît sous le contenu. On utilise une boîte flexible pour la barre de navigation afin de l'étaler sur une ligne homogène.
 
 Enfin, on ajoute une autre requête média pour la disposition avec trois colonnes&nbsp;:
 
@@ -238,7 +238,7 @@ Il y a certainement certaines différences fondamentales avec les systèmes que 
 
 ## Construire une disposition avec ce système à 12 colonnes
 
-Pour voir comment cette méthode fonctionne en pratique, nous allons créer le même plan que celui que nous avons vu avec les zones nommées et [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) mais en utilisant désormais ce système à 12 colonnes. Commençons avec la même structure que celle utilisée plus haut avec les zones nommées&nbsp;:
+Pour voir comment cette méthode fonctionne en pratique, nous allons créer le même plan que celui que nous avons vu avec les zones nommées et [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-template-areas) mais en utilisant désormais ce système à 12 colonnes. Commençons avec la même structure que celle utilisée plus haut avec les zones nommées&nbsp;:
 
 ```css hidden
 * {
@@ -504,11 +504,11 @@ Voici un exemple où l'utilisation des boîtes flexibles est pertinente par rapp
 
 ## Empêcher les espaces avec `dense`
 
-Le résultat est plutôt abouti, mais on a parfois des cartes qui ont beaucoup plus de contenu. Si on veut que celles-ci soient plus larges (pour éviter qu'elles soient trop hautes), on peut les étaler sur deux pistes. Pour cela, on a utilisé la classe `wide` sur l'objet avec plus de contenu et on ajoute une règle [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end) avec la valeur `span 2`. Désormais, lorsque la grille devra placer un élément de ce type, elle lui affectera deux colonnes. Cela signifie aussi que pour certaines tailles d'affichage, on aura un trou dans la grille lorsqu'il n'y aura pas suffisamment d'espace pour placer un objet sur deux colonnes&nbsp;:
+Le résultat est plutôt abouti, mais on a parfois des cartes qui ont beaucoup plus de contenu. Si on veut que celles-ci soient plus larges (pour éviter qu'elles soient trop hautes), on peut les étaler sur deux pistes. Pour cela, on a utilisé la classe `wide` sur l'objet avec plus de contenu et on ajoute une règle [`grid-column-end`](/fr/docs/Web/CSS/Reference/Properties/grid-column-end) avec la valeur `span 2`. Désormais, lorsque la grille devra placer un élément de ce type, elle lui affectera deux colonnes. Cela signifie aussi que pour certaines tailles d'affichage, on aura un trou dans la grille lorsqu'il n'y aura pas suffisamment d'espace pour placer un objet sur deux colonnes&nbsp;:
 
 ![La disposition crée des trous, car il n'y a pas d'espace pour disposer un élément qui s'étale sur deux pistes.](11-grid-auto-flow-sparse.png)
 
-Si on veut éviter ces trous, on peut utiliser la règle [`grid-auto-flow: dense`](/fr/docs/Web/CSS/grid-auto-flow) sur le conteneur de la grille. Attention à l'utilisation de cette valeur&nbsp;: l'ordre logique n'est plus respecté. Aussi, il faut _uniquement_ utiliser cette valeur lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille. Cette méthode entraîne [certains problèmes d'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#un_ré-ordonnancement_visuel_et_non_logique) dont il faut avoir conscience.
+Si on veut éviter ces trous, on peut utiliser la règle [`grid-auto-flow: dense`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow) sur le conteneur de la grille. Attention à l'utilisation de cette valeur&nbsp;: l'ordre logique n'est plus respecté. Aussi, il faut _uniquement_ utiliser cette valeur lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille. Cette méthode entraîne [certains problèmes d'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#un_ré-ordonnancement_visuel_et_non_logique) dont il faut avoir conscience.
 
 ```html hidden
 <ul class="listing">

@@ -101,7 +101,7 @@ transform: perspective(6.5cm);
 }
 ```
 
-La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés [`perspective`](/fr/docs/Web/CSS/perspective) et [`perspective-origin`](/fr/docs/Web/CSS/perspective-origin) s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
+La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective) et [`perspective-origin`](/fr/docs/Web/CSS/Reference/Properties/perspective-origin) s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
 
 ## Syntaxe
 
@@ -244,5 +244,5 @@ p + div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

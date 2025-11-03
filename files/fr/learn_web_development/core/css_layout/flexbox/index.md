@@ -108,7 +108,7 @@ Qu'avons‑nous&nbsp;? Un élément [`<header>`](/fr/docs/Web/HTML/Reference/Ele
 
 ## Détermination des éléments à disposer en boîtes flexibles
 
-Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) (qui devient un conteneur flex)&nbsp;:
+Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) (qui devient un conteneur flex)&nbsp;:
 
 ```html hidden live-sample___flexbox_1
 <header>
@@ -170,9 +170,9 @@ Cette unique déclaration donne tout ce dont nous avons besoin&nbsp;: incroyable
 
 Récapitulons ce qui se passe ici&nbsp;: ajouter une valeur `flex` à l'attribut {{cssxref("display")}} d'un élément en fait un conteneur flex. Le conteneur est affiché comme un {{Glossary("Block-level_content", "contenu de type bloc")}} en ce qui concerne son interaction avec le reste de la page. Quand l'élément devient un conteneur flex, ses enfants deviennent (et sont disposés comme) des éléments flexibles.
 
-Vous pouvez rendre le conteneur en ligne en utilisant une [valeur de `display` externe](/fr/docs/Web/CSS/display#outside) (par exemple, `display: inline flex`), ce qui affecte la façon dont le conteneur lui-même est disposé dans la page.
+Vous pouvez rendre le conteneur en ligne en utilisant une [valeur de `display` externe](/fr/docs/Web/CSS/Reference/Properties/display#outside) (par exemple, `display: inline flex`), ce qui affecte la façon dont le conteneur lui-même est disposé dans la page.
 La valeur héritée `inline-flex` affiche également le conteneur en ligne.
-Nous allons nous concentrer sur le comportement du contenu dans ce tutoriel, mais si vous souhaitez voir l'effet d'une disposition en ligne par rapport à une disposition en bloc, consultez la [comparaison des valeurs](/fr/docs/Web/CSS/display#comparaison_des_valeurs_de_display) sur la page de la propriété `display`.
+Nous allons nous concentrer sur le comportement du contenu dans ce tutoriel, mais si vous souhaitez voir l'effet d'une disposition en ligne par rapport à une disposition en bloc, consultez la [comparaison des valeurs](/fr/docs/Web/CSS/Reference/Properties/display#comparaison_des_valeurs_de_display) sur la page de la propriété `display`.
 
 Les prochaines sections expliquent plus en détail ce que sont les éléments flex et ce qui se passe à l'intérieur d'un élément lorsque vous en faites un conteneur flex.
 
@@ -191,7 +191,7 @@ Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouv
 
 ## Colonnes ou lignes ?
 
-Flexbox dispose de la propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) pour indiquer la direction de l'axe principal (direction dans laquelle les enfants flexibles sont disposés). Cette propriété est égale par défaut à `row`&nbsp;: ils sont donc disposés en ligne, dans le sens de lecture de la langue par défaut du navigateur (de gauche à droite, dans le cas d'un navigateur français).
+Flexbox dispose de la propriété [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) pour indiquer la direction de l'axe principal (direction dans laquelle les enfants flexibles sont disposés). Cette propriété est égale par défaut à `row`&nbsp;: ils sont donc disposés en ligne, dans le sens de lecture de la langue par défaut du navigateur (de gauche à droite, dans le cas d'un navigateur français).
 
 Ajoutez la déclaration suivante dans la règle CSS pour l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)&nbsp;:
 
@@ -342,7 +342,7 @@ Mais nous pouvons aller plus loin ici. Pour commencer, essayez de changer la val
 
 ## Forme abrégée `flex-flow`
 
-Notez maintenant qu'il y a une forme abrégée pour [`flex-direction`](/fr/docs/Web/CSS/flex-direction) et [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap) — [`flex-flow`](/fr/docs/Web/CSS/flex-flow). Ainsi, par exemple, vous pouvez remplacer&nbsp;:
+Notez maintenant qu'il y a une forme abrégée pour [`flex-direction`](/fr/docs/Web/CSS/Reference/Properties/flex-direction) et [`flex-wrap`](/fr/docs/Web/CSS/Reference/Properties/flex-wrap) — [`flex-flow`](/fr/docs/Web/CSS/Reference/Properties/flex-flow). Ainsi, par exemple, vous pouvez remplacer&nbsp;:
 
 ```css
 flex-direction: row;

@@ -6,7 +6,7 @@ original_slug: Web/CSS/background-origin
 
 {{CSSRef}}
 
-La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
+La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
 
 {{InteractiveExample("CSS Demo: background-origin")}}
 
@@ -43,10 +43,10 @@ background-repeat: no-repeat;
 }
 ```
 
-Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`.
+Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment) vaut `fixed`.
 
 > [!NOTE]
-> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
+> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/Reference/Properties/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
 ## Syntaxe
 
@@ -161,4 +161,4 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 
 ## Voir aussi
 
-- [`background-clip`](/fr/docs/Web/CSS/background-clip)
+- [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip)

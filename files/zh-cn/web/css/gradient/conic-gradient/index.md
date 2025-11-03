@@ -77,7 +77,7 @@ background: conic-gradient(
 - {{CSSxRef("&lt;angle&gt;")}}
   - : 在 `from` 关键字之前，以角度作为其值，定义顺时针方向的渐变旋转。
 - `<position>`
-  - : 使用与 [background-position](/zh-CN/docs/Web/CSS/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。如果省略，默认值是 `center`，表示渐变是居中的。
+  - : 使用与 [background-position](/zh-CN/docs/Web/CSS/Reference/Properties/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。如果省略，默认值是 `center`，表示渐变是居中的。
 - `<angular-color-stop>`
   - : 色标（color stop）的 {{CSSxRef("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿着渐变圆周轴的 {{CSSxRef("&lt;angle&gt;")}}）。
 - `<color-hint>`

@@ -61,8 +61,8 @@ grid-row: 1 / span 2;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-row-end`](/ja/docs/Web/CSS/grid-row-end)
-- [`grid-row-start`](/ja/docs/Web/CSS/grid-row-start)
+- [`grid-row-end`](/ja/docs/Web/CSS/Reference/Properties/grid-row-end)
+- [`grid-row-start`](/ja/docs/Web/CSS/Reference/Properties/grid-row-start)
 
 ## 構文
 

@@ -245,7 +245,7 @@ input:checked + label::before {
 
 ### 函数
 
-- [`scroll()`](/zh-CN/docs/Web/CSS/animation-timeline/scroll)
+- [`scroll()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
 
 ### 事件
 

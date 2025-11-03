@@ -124,7 +124,7 @@ p {
 
 ### 対話的な `text-box-edge` 値の比較
 
-完全な対話型の `text-box-edge` の例については、[text-box-trim ページ](/ja/docs/Web/CSS/text-box-trim#interactive_text-box-trim_and_text-box-edge_value_comparison)をご覧ください。
+完全な対話型の `text-box-edge` の例については、[text-box-trim ページ](/ja/docs/Web/CSS/Reference/Properties/text-box-trim#interactive_text-box-trim_and_text-box-edge_value_comparison)をご覧ください。
 
 ## 仕様書
 

@@ -21,7 +21,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - `<length-percentage [0,∞]>`
   - : Définit des valeurs {{cssxref("&lt;length-percentage&gt;")}} non négatives pour la largeur et la hauteur du rectangle. La valeur minimale peut être zéro, la valeur maximale n'a pas de limite.
 - `round <'border-radius'>`
-  - : Définit le rayon des coins arrondis du rectangle en utilisant la même syntaxe que la propriété abrégée CSS [`border-radius`](/fr/docs/Web/CSS/border-radius). Ce paramètre est optionnel.
+  - : Définit le rayon des coins arrondis du rectangle en utilisant la même syntaxe que la propriété abrégée CSS [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius). Ce paramètre est optionnel.
 
 ## Syntaxe formelle
 

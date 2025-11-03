@@ -153,7 +153,7 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | 偶数                        | `100%` または `to` |
     | `alternate-reverse`   | 奇数                        | `0%` または `from` |
 
-    アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/will-change) プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
+    アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
 
 - `backwards`
   - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。

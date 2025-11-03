@@ -18,7 +18,7 @@ l10n:
 - {{cssxref('@page')}}
   - {{cssxref('@page/page-orientation', 'page-orientation')}} 記述子
   - {{cssxref('@page/size', 'size')}} 記述子
-  - [マージン記述子](/ja/docs/Web/CSS/margin)
+  - [マージン記述子](/ja/docs/Web/CSS/Reference/Properties/margin)
 - [マージンのアットルール](/ja/docs/Web/CSS/@page#マージンのアットルール)
 
 > [!NOTE]

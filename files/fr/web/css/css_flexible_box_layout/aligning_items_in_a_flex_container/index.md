@@ -21,15 +21,15 @@ Vous pouvez étudier le code de l'exemple suivant et modifier la taille du conte
 
 Voici les propriétés que nous étudierons dans ce guide&nbsp;:
 
-- [`justify-content`](/fr/docs/Web/CSS/justify-content)
+- [`justify-content`](/fr/docs/Web/CSS/Reference/Properties/justify-content)
   - : Contrôle l'alignement de tous les objets sur l'axe principal.
-- [`align-items`](/fr/docs/Web/CSS/align-items)
+- [`align-items`](/fr/docs/Web/CSS/Reference/Properties/align-items)
   - : Contrôle l'alignement de tous les objets sur l'axe secondaire.
-- [`align-self`](/fr/docs/Web/CSS/align-self)
+- [`align-self`](/fr/docs/Web/CSS/Reference/Properties/align-self)
   - : Contrôle l'alignement d'un objet flexible donné le long de l'axe secondaire.
-- [`align-content`](/fr/docs/Web/CSS/align-content)
+- [`align-content`](/fr/docs/Web/CSS/Reference/Properties/align-content)
   - : Contrôle l'espace entre les lignes flexibles sur l'axe secondaire.
-- [`gap`](/fr/docs/Web/CSS/gap), [`column-gap`](/fr/docs/Web/CSS/column-gap), et [`row-gap`](/fr/docs/Web/CSS/row-gap)
+- [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap), [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap), et [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap)
   - : Utilisées pour créer des espaces ou des gouttières entre les éléments flexibles.
 
 Nous verrons également comment les marges automatiques peuvent être utilisées dans l'alignement des boîtes flexibles.
@@ -186,7 +186,7 @@ Dans l'exemple qui suit, on a plusieurs éléments flexibles organisés sur une 
 
 ## Créer des espaces entre les éléments
 
-Pour créer un espace entre des éléments flexibles, utilisez les propriétés [`gap`](/fr/docs/Web/CSS/gap), [`column-gap`](/fr/docs/Web/CSS/column-gap), et [`row-gap`](/fr/docs/Web/CSS/row-gap). La propriété [`column-gap`](/fr/docs/Web/CSS/column-gap) crée des espaces entre les éléments d'une ligne. La propriété [`row-gap`](/fr/docs/Web/CSS/row-gap) crée des espaces entre les lignes flex, lorsque le paramètre [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap) est défini sur `wrap`. La propriété [`gap`](/fr/docs/Web/CSS/gap) est une abréviation qui définit les deux ensembles.
+Pour créer un espace entre des éléments flexibles, utilisez les propriétés [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap), [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap), et [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap). La propriété [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) crée des espaces entre les éléments d'une ligne. La propriété [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap) crée des espaces entre les lignes flex, lorsque le paramètre [`flex-wrap`](/fr/docs/Web/CSS/Reference/Properties/flex-wrap) est défini sur `wrap`. La propriété [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap) est une abréviation qui définit les deux ensembles.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 

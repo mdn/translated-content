@@ -6,7 +6,7 @@ original_slug: Web/CSS/border-block-style
 
 {{CSSRef}}
 
-La propriété **`border-block-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe de bloc. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+La propriété **`border-block-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe de bloc. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) et [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation).
 
 {{InteractiveExample("CSS Demo: border-block-style")}}
 
@@ -46,7 +46,7 @@ direction: rtl;
 }
 ```
 
-Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété [`border-inline-style`](/fr/docs/Web/CSS/border-inline-style) qui définit [`border-inline-start-style`](/fr/docs/Web/CSS/border-inline-start-style) et [`border-inline-end-style`](/fr/docs/Web/CSS/border-inline-end-style).
+Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété [`border-inline-style`](/fr/docs/Web/CSS/Reference/Properties/border-inline-style) qui définit [`border-inline-start-style`](/fr/docs/Web/CSS/Reference/Properties/border-inline-start-style) et [`border-inline-end-style`](/fr/docs/Web/CSS/Reference/Properties/border-inline-end-style).
 
 ## Syntaxe
 
@@ -66,7 +66,7 @@ border-block-style: unset;
 ### Valeur
 
 - `<'border-style'>`
-  - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/border-style).
+  - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
 
 ## Définition formelle
 
@@ -116,6 +116,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques qui correspondent à cette propriété logique&nbsp;: [`border-top-style`](/fr/docs/Web/CSS/border-top-style), [`border-right-style`](/fr/docs/Web/CSS/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-left-style`](/fr/docs/Web/CSS/border-left-style).
+- Les propriétés physiques qui correspondent à cette propriété logique&nbsp;: [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style), [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style).
 
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction), [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction), [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)

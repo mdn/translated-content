@@ -56,15 +56,15 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 
 このプロパティは以下のプロパティの一括指定です。
 
-- [`animation-delay`](/ja/docs/Web/CSS/animation-delay)
-- [`animation-direction`](/ja/docs/Web/CSS/animation-direction)
-- [`animation-duration`](/ja/docs/Web/CSS/animation-duration)
-- [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode)
-- [`animation-iteration-count`](/ja/docs/Web/CSS/animation-iteration-count)
-- [`animation-name`](/ja/docs/Web/CSS/animation-name)
-- [`animation-play-state`](/ja/docs/Web/CSS/animation-play-state)
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`animation-timing-function`](/ja/docs/Web/CSS/animation-timing-function)
+- [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay)
+- [`animation-direction`](/ja/docs/Web/CSS/Reference/Properties/animation-direction)
+- [`animation-duration`](/ja/docs/Web/CSS/Reference/Properties/animation-duration)
+- [`animation-fill-mode`](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode)
+- [`animation-iteration-count`](/ja/docs/Web/CSS/Reference/Properties/animation-iteration-count)
+- [`animation-name`](/ja/docs/Web/CSS/Reference/Properties/animation-name)
+- [`animation-play-state`](/ja/docs/Web/CSS/Reference/Properties/animation-play-state)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`animation-timing-function`](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function)
 
 ## 構文
 
@@ -123,7 +123,7 @@ animation:
 
 `animation-duration` 値が `animation` 一括指定プロパティにおいて除外された場合、このプロパティの値は `0s` が既定値となります。この場合、アニメーションは発生しますが（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントは発行されますが）、アニメーションは表示されません。
 
-`animation-fill-mode` の値が [forwards](/ja/docs/Web/CSS/animation-fill-mode#forwards) の場合、アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/will-change) プロパティの値に記載されているかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションの完了後も、対象要素は重ね合わせコンテキストを保持します。
+`animation-fill-mode` の値が [forwards](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) の場合、アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティの値に記載されているかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションの完了後も、対象要素は重ね合わせコンテキストを保持します。
 
 ## アクセシビリティ
 

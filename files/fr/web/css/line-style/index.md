@@ -207,7 +207,7 @@ Cet exemple illustre le choix du style de ligne et de la couleur. Avec certaines
 
 #### CSS
 
-Les quatre côtés de chaque `<div>` ont une valeur `<line-style>` différente, et chaque élément de la liste utilise une valeur {{cssxref("color_value", "&lt;color>")}} différente. Nous utilisons le [contenu généré](/fr/docs/Web/CSS/content) pour afficher le CSS déclaré en ligne.
+Les quatre côtés de chaque `<div>` ont une valeur `<line-style>` différente, et chaque élément de la liste utilise une valeur {{cssxref("color_value", "&lt;color>")}} différente. Nous utilisons le [contenu généré](/fr/docs/Web/CSS/Reference/Properties/content) pour afficher le CSS déclaré en ligne.
 
 ```css hidden live-sample___line_style_colors
 body {

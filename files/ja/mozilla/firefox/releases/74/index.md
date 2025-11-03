@@ -21,8 +21,8 @@ _変更なし。_
 
 ### CSS
 
-- [`text-underline-position`](/ja/docs/Web/CSS/text-underline-position) をデフォルトで有効にしました ([Firefox バグ 1606997](https://bugzil.la/1606997))。
-- [`text-underline-offset`](/ja/docs/Web/CSS/text-underline-offset) および [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness) プロパティがパーセンテージの値を受け入れるようになりました ([Firefox バグ 1607534](https://bugzil.la/1607534))。
+- [`text-underline-position`](/ja/docs/Web/CSS/Reference/Properties/text-underline-position) をデフォルトで有効にしました ([Firefox バグ 1606997](https://bugzil.la/1606997))。
+- [`text-underline-offset`](/ja/docs/Web/CSS/Reference/Properties/text-underline-offset) および [`text-decoration-thickness`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-thickness) プロパティがパーセンテージの値を受け入れるようになりました ([Firefox バグ 1607534](https://bugzil.la/1607534))。
 - {{cssxref("outline-style")}} プロパティの値 `auto` をデフォルトで有効にしました ([Firefox バグ 1031664](https://bugzil.la/1031664))。
 
 #### 廃止

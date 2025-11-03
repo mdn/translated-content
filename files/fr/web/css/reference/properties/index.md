@@ -38,7 +38,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 
 ### Divers
 
-- [Propriétés personnalisées (`- *`)&nbsp;: les variables CSS](/fr/docs/Web/CSS/--*)
+- [Propriétés personnalisées (`- *`)&nbsp;: les variables CSS](/fr/docs/Web/CSS/Reference/Properties/--*)
 
 ### A
 

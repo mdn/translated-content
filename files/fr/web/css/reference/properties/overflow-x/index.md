@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-x`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu. Cette propriété peut aussi être définie par la propriété raccourcie [`overflow`](/fr/docs/Web/CSS/overflow).
+La propriété [CSS](/fr/docs/Web/CSS) **`overflow-x`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu. Cette propriété peut aussi être définie par la propriété raccourcie [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow).
 
 {{InteractiveExample("CSS Demo: overflow-x")}}
 
@@ -71,7 +71,7 @@ overflow-x: unset;
 
 La propriété `overflow-x` est définie avec une valeur de type [`<overflow>`](/fr/docs/Web/CSS/overflow_value) (voir les valeurs ci-après).
 
-Si [`overflow-y`](/fr/docs/Web/CSS/overflow-y) vaut `hidden`, `scroll` ou `auto` et que cette propriété vaut `visible` (la valeur par défaut), la valeur calculée sera implicitement `auto`.
+Si [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) vaut `hidden`, `scroll` ou `auto` et que cette propriété vaut `visible` (la valeur par défaut), la valeur calculée sera implicitement `auto`.
 
 ### Valeurs
 
@@ -80,7 +80,7 @@ Si [`overflow-y`](/fr/docs/Web/CSS/overflow-y) vaut `hidden`, `scroll` ou `auto`
 - `hidden`
   - : Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage (<i lang="en">padding box</i>) et aucun ascenseur horizontal n'est affiché.
 - `clip`
-  - : Le contenu qui dépasse est rogné sur _le bord de la limite de dépassement_ définie avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin). Ainsi, le contenu dépasse de la boîte de remplissage de l'élément d'autant que la longueur fournie par `overflow-clip-margin` ou de `0px` si cette dernière n'est pas définie. Contrairement à `hidden`, `clip` interdit tout défilement, y compris celui qui proviendrait d'un script. Aucun contexte de formatage supplémentaire n'est créé. Pour établir un contexte de formatage, il faudra utiliser `overflow: clip` avec [`display: flow-root`](/fr/docs/Web/CSS/display#flow-root). La boîte de l'élément n'est pas un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
+  - : Le contenu qui dépasse est rogné sur _le bord de la limite de dépassement_ définie avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin). Ainsi, le contenu dépasse de la boîte de remplissage de l'élément d'autant que la longueur fournie par `overflow-clip-margin` ou de `0px` si cette dernière n'est pas définie. Contrairement à `hidden`, `clip` interdit tout défilement, y compris celui qui proviendrait d'un script. Aucun contexte de formatage supplémentaire n'est créé. Pour établir un contexte de formatage, il faudra utiliser `overflow: clip` avec [`display: flow-root`](/fr/docs/Web/CSS/Reference/Properties/display#flow-root). La boîte de l'élément n'est pas un [conteneur de défilement](/fr/docs/Glossary/Scroll_container).
 - `scroll`
   - : Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.
 - `auto`
@@ -164,9 +164,9 @@ div {
 
 ## Voir aussi
 
-- [`clip`](/fr/docs/Web/CSS/clip)
-- [`display`](/fr/docs/Web/CSS/display)
-- [`text-overflow`](/fr/docs/Web/CSS/text-overflow)
-- [`white-space`](/fr/docs/Web/CSS/white-space)
+- [`clip`](/fr/docs/Web/CSS/Reference/Properties/clip)
+- [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
+- [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
+- [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
 - [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
 - [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

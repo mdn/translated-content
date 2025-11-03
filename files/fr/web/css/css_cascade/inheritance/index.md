@@ -17,7 +17,7 @@ Voyez sur [les pages des différentes propriétés CSS dans la référence](/fr/
 
 Lorsqu'aucune valeur n'a été fournie pour une **propriété héritée** sur un élément, celle-ci utilise [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de la propriété sur l'élément parent. Seul l'élément racine du document récupère [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) indiquée dans le résumé de la propriété.
 
-Un exemple caractéristique de propriété héritée est la propriété [`color`](/fr/docs/Web/CSS/color). Prenons la règle et le fragment de document suivants&nbsp;:
+Un exemple caractéristique de propriété héritée est la propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color). Prenons la règle et le fragment de document suivants&nbsp;:
 
 ```css
 p {
@@ -31,13 +31,13 @@ p {
 
 {{EmbedLiveSample("")}}
 
-Les mots «&nbsp;du texte en emphase&nbsp;» apparaissent en vert, car l'élément `<em>` a hérité de la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) de l'élément `<p>`. Il _n'utilise pas_ la valeur initiale de la propriété (ici, il s'agirait de la couleur utilisée pour l'élément racine lorsque la page n'indique pas de couleur).
+Les mots «&nbsp;du texte en emphase&nbsp;» apparaissent en vert, car l'élément `<em>` a hérité de la valeur de la propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color) de l'élément `<p>`. Il _n'utilise pas_ la valeur initiale de la propriété (ici, il s'agirait de la couleur utilisée pour l'élément racine lorsque la page n'indique pas de couleur).
 
 ## Propriétés non-héritées
 
 Lorsqu'aucune valeur n'est fournie pour une **propriété non-héritée** sur un élément, celle-ci utilise [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) (indiquée dans le résumé de la propriété).
 
-Un exemple caractéristique de propriété non-héritée est la propriété [`border`](/fr/docs/Web/CSS/border). Prenons la règle et le fragment de document suivants&nbsp;:
+Un exemple caractéristique de propriété non-héritée est la propriété [`border`](/fr/docs/Web/CSS/Reference/Properties/border). Prenons la règle et le fragment de document suivants&nbsp;:
 
 ```css
 p {
@@ -51,13 +51,13 @@ p {
 
 {{EmbedLiveSample("")}}
 
-Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure _en plus_ (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/border-style) est `none`).
+Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure _en plus_ (car la valeur initiale de [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style) est `none`).
 
 ## Notes
 
 Le mot-clé [`inherit`](/fr/docs/Web/CSS/inherit) permet d'indiquer explicitement l'héritage et fonctionne sur les propriétés héritées comme sur les propriétés non-héritées.
 
-Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourcie [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
+Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourcie [`all`](/fr/docs/Web/CSS/Reference/Properties/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
 
 ```css
 p {
@@ -67,11 +67,11 @@ p {
 }
 ```
 
-Cela réinitialisera le style des paragraphes pour la propriété [`font`](/fr/docs/Web/CSS/font) avec la valeur par défaut de l'agent utilisateur (à moins qu'une feuille de style de l'utilisatrice ou de l'utilisateur existe et indique une police, qui sera alors utilisée). Ensuite, la taille de la police est doublée et on applique un niveau de graisse [`font-weight`](/fr/docs/Web/CSS/font-weight) à `bold` pour mettre en gras.
+Cela réinitialisera le style des paragraphes pour la propriété [`font`](/fr/docs/Web/CSS/Reference/Properties/font) avec la valeur par défaut de l'agent utilisateur (à moins qu'une feuille de style de l'utilisatrice ou de l'utilisateur existe et indique une police, qui sera alors utilisée). Ensuite, la taille de la police est doublée et on applique un niveau de graisse [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight) à `bold` pour mettre en gras.
 
 ### Surcharger l'héritage, un exemple
 
-Si on reprend l'exemple précédent avec [`border`](/fr/docs/Web/CSS/border) et qu'on impose l'héritage explicitement avec `inherit`, voici ce qu'on obtient&nbsp;:
+Si on reprend l'exemple précédent avec [`border`](/fr/docs/Web/CSS/Reference/Properties/border) et qu'on impose l'héritage explicitement avec `inherit`, voici ce qu'on obtient&nbsp;:
 
 ```css
 p {

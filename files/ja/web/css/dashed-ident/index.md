@@ -60,7 +60,7 @@ h6 {
 
 ### @font-palette-values での使用
 
-`<dashed-ident>` を [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールで使用する場合、先にアットルールを宣言してから、 [font-palette](/ja/docs/Web/CSS/font-palette) プロパティの値として使用します。
+`<dashed-ident>` を [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールで使用する場合、先にアットルールを宣言してから、 [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) プロパティの値として使用します。
 
 ```css
 @font-palette-values --my-palette {

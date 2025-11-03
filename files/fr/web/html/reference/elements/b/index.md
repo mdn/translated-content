@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/b
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un contenu qui n'a pas, pour autant, d'importance significative. Anciennement utilisé pour mettre le texte en gras. Cet élément ne doit pas être utilisé pour mettre en forme des éléments, c'est la propriété CSS [`font-weight`](/fr/docs/Web/CSS/font-weight) qu'il faut utiliser. Si l'élément est d'une importance particulière, on utilisera l'élément HTML [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong).
+L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un contenu qui n'a pas, pour autant, d'importance significative. Anciennement utilisé pour mettre le texte en gras. Cet élément ne doit pas être utilisé pour mettre en forme des éléments, c'est la propriété CSS [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight) qu'il faut utiliser. Si l'élément est d'une importance particulière, on utilisera l'élément HTML [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong).
 
 {{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
 
@@ -101,7 +101,7 @@ Seuls [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) 
 - De la même façon, ne balisez pas les titres en utilisant l'élément `<b>`. Pour cet usage, utilisez les balises [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) à [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). De plus, les feuilles de style peuvent changer le style par défaut de ces éléments. Ils ne seront pas _forcément_ affichés en gras.
 - C'est généralement une bonne pratique d'utiliser l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class) sur l'élément `<b>` lorsqu'on souhaite transporter des informations sémantiques supplémentaires. Cela facilitera le développement des styles à appliquer sur le document, sans avoir à modifier le code HTML.
 - Historiquement, l'élément `<b>` a été pensé pour rendre du texte avec une police grasse. Les éléments à seul but stylistique ont été dépréciés avec HTML 4. Ainsi, le sens de l'élément `<b>` a évolué.
-- S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/font-weight) avec une valeur `bold` est à privilégier.
+- S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight) avec une valeur `bold` est à privilégier.
 
 ## Exemples
 

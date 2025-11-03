@@ -19,7 +19,7 @@ Le type de données `<length>` consiste en un nombre ({{cssxref("&lt;number&gt;"
 
 La [valeur définie](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) d'une longueur (_longueur définie_) est représentée par sa quantité et son unité. La [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée) d'une longueur (_longueur calculée_) est la longueur spécifiée résolue en une longueur absolue, et son unité n'est pas distinguée.
 
-Les unités `<length>` peuvent être relatives ou absolues. Les longueurs relatives représentent une mesure en fonction d'une autre distance. Selon l'unité, cette distance peut être la taille d'un caractère spécifique, la [hauteur de ligne](/fr/docs/Web/CSS/line-height), ou la taille de la {{Glossary("viewport", "zone d'affichage")}}. Les feuilles de style qui utilisent des unités de longueur relatives peuvent plus facilement s'adapter d'un environnement de sortie à un autre.
+Les unités `<length>` peuvent être relatives ou absolues. Les longueurs relatives représentent une mesure en fonction d'une autre distance. Selon l'unité, cette distance peut être la taille d'un caractère spécifique, la [hauteur de ligne](/fr/docs/Web/CSS/Reference/Properties/line-height), ou la taille de la {{Glossary("viewport", "zone d'affichage")}}. Les feuilles de style qui utilisent des unités de longueur relatives peuvent plus facilement s'adapter d'un environnement de sortie à un autre.
 
 > [!NOTE]
 > Les éléments enfants n'héritent pas des valeurs relatives telles que spécifiées pour leur parent&nbsp;; ils héritent des valeurs calculées.

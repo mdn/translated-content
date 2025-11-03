@@ -60,7 +60,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 - {{cssxref("overflow-block")}} および {{cssxref("overflow-inline")}} プロパティを実装しました ([Firefox バグ 1470695](https://bugzil.la/1470695))。
 - CSS Feature Queries ({{cssxref("@supports")}}) で `selector()` メソッドを使用して、セレクターをサポートしているかをテストできるようになりました ([Firefox バグ 1513643](https://bugzil.la/1513643))。
 - 対象の要素でユーザーがテキストを選択できるかを指定する {{cssxref("user-select")}} プロパティの接頭辞を外しました ([Firefox バグ 1492739](https://bugzil.la/1492739))。
-- リトアニア語のロケール固有の大文字・小文字規則を実装しました ([Firefox バグ 1322992](https://bugzil.la/1322992))。[こちらの例をご覧ください](/ja/docs/Web/CSS/text-transform#lowercase_lithuanian)。
+- リトアニア語のロケール固有の大文字・小文字規則を実装しました ([Firefox バグ 1322992](https://bugzil.la/1322992))。[こちらの例をご覧ください](/ja/docs/Web/CSS/Reference/Properties/text-transform#lowercase_lithuanian)。
 - CSS Text の {{cssxref("line-break")}} プロパティを実装しました ([Firefox バグ 1011369](https://bugzil.la/1011369)) および ([Firefox バグ 1531715](https://bugzil.la/1531715))。
 - 要素とその内容物が DOM ツリーのほかの部分からおおむね独立していることを開発者が定義できる {{cssxref("contain")}} プロパティを実装しました ([Firefox バグ 1487493](https://bugzil.la/1487493))。
 

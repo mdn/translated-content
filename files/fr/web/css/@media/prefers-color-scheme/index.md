@@ -10,7 +10,7 @@ L'utilisateur·ice indique sa préférence via un réglage du système d'exploit
 
 ## Éléments embarqués
 
-Pour les SVG et les iframes, `prefers-color-scheme` permet de définir un style CSS pour le SVG ou l'iframe en fonction du [`color-scheme`](/fr/docs/Web/CSS/color-scheme) de l'élément parent dans la page web.
+Pour les SVG et les iframes, `prefers-color-scheme` permet de définir un style CSS pour le SVG ou l'iframe en fonction du [`color-scheme`](/fr/docs/Web/CSS/Reference/Properties/color-scheme) de l'élément parent dans la page web.
 Les SVG doivent être utilisés en tant qu'éléments embarqués (c'est-à-dire `<img src="circle.svg" alt="circle" />`) et non [intégrés en HTML](/fr/docs/Web/SVG/Guides/SVG_in_HTML#basic_example).
 Un exemple d'utilisation de `prefers-color-scheme` dans des SVG se trouve dans la section [Héritage du schéma de couleurs dans les éléments embarqués](#héritage_du_schéma_de_couleurs_dans_les_éléments_embarqués).
 

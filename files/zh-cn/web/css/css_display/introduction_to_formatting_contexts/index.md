@@ -21,7 +21,7 @@ l10n:
 在以下情况下会创建一个新的 BFC：
 
 - 通过 {{cssxref("float")}} 使其浮动的元素
-- [绝对定位](/zh-CN/docs/Web/CSS/position#定位类型)的元素
+- [绝对定位](/zh-CN/docs/Web/CSS/Reference/Properties/position#定位类型)的元素
 - 具有 {{cssxref("display", "display: inline-block", "#inline-block")}} 的元素
 - 表格单元格或使用 `display: table-cell` 的元素，包括使用 `display: table-*` 属性创建出的匿名表格单元格
 - 表格标题或使用 `display: table-caption` 的元素

@@ -44,7 +44,7 @@ La [référence CSS](/fr/docs/Web/CSS/Reference) est une ressource exhaustive po
 
 ## Recettes CSS
 
-Le [cookbook de mise en page CSS](/fr/docs/Web/CSS/Layout_cookbook) vise à rassembler des recettes pour les schémas de mise en page courants, utiles à implémenter sur vos sites. En plus de fournir du code à utiliser comme point de départ dans vos projets, ces recettes mettent en avant les différentes façons d'utiliser les spécifications de mise en page et les choix que vous pouvez faire en tant que développeur·euse.
+Le [cookbook de mise en page CSS](/fr/docs/Web/CSS/How_to/Layout_cookbook) vise à rassembler des recettes pour les schémas de mise en page courants, utiles à implémenter sur vos sites. En plus de fournir du code à utiliser comme point de départ dans vos projets, ces recettes mettent en avant les différentes façons d'utiliser les spécifications de mise en page et les choix que vous pouvez faire en tant que développeur·euse.
 
 ## Outils pour le développement CSS
 

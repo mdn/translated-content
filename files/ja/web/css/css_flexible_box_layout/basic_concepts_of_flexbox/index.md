@@ -428,13 +428,13 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 ### justify-items
 
-[`justify-items`](/ja/docs/Web/CSS/justify-items) プロパティは、フレックスボックスレイアウトでは無視されます。
+[`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) プロパティは、フレックスボックスレイアウトでは無視されます。
 
 ### place-items と place-content
 
-[`place-items`](/ja/docs/Web/CSS/place-items) プロパティは `align-items` と `justify-items` の一括指定プロパティです。フレックスコンテナーに設定すると、配置は設定されますが位置ぞろえは設定されず、 `justify-items` はフレックスボックスでは無視されます。
+[`place-items`](/ja/docs/Web/CSS/Reference/Properties/place-items) プロパティは `align-items` と `justify-items` の一括指定プロパティです。フレックスコンテナーに設定すると、配置は設定されますが位置ぞろえは設定されず、 `justify-items` はフレックスボックスでは無視されます。
 
-別な一括指定プロパティとして [`place-content`](/ja/docs/Web/CSS/place-content) があり、これは {{cssxref("align-content")}} プロパティと `justify-content` プロパティを定義します。 `align-content` プロパティは折り返しのあるフレックスコンテナーにのみ効果があり、[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)で解説しています。
+別な一括指定プロパティとして [`place-content`](/ja/docs/Web/CSS/Reference/Properties/place-content) があり、これは {{cssxref("align-content")}} プロパティと `justify-content` プロパティを定義します。 `align-content` プロパティは折り返しのあるフレックスコンテナーにのみ効果があり、[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)で解説しています。
 
 ## 次のステップ
 

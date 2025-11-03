@@ -92,7 +92,7 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : La taille de la marge, exprimée comme une valeur fixe.
 - [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/writing-mode)).
+  - : La taille de la marge exprimée avec un pourcentage relatif à la dimension du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) sur l'axe en ligne (qui correspond à la largeur pour une langue écrite horizontalement, voir [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)).
 - `auto`
   - : Un mot-clé qui indique que la marge gauche s'adapte à l'espace restant. Cet espace est principalement défini par le mode de disposition utilisé. Si `margin-left` et `margin-right` valent toutes les deux `auto`, m'espace calculé sera réparti de façon équitable. Le tableau suivant précise les différents cas&nbsp;:
 
@@ -226,15 +226,15 @@ Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en lig
 ## Voir aussi
 
 - Les autres propriétés physiques pour les marges&nbsp;:
-  - [`margin-top`](/fr/docs/Web/CSS/margin-top)
-  - [`margin-right`](/fr/docs/Web/CSS/margin-right)
-  - [`margin-bottom`](/fr/docs/Web/CSS/margin-bottom)
-  - La propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin) qui synthétise les 4
+  - [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top)
+  - [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right)
+  - [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom)
+  - La propriété raccourcie [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) qui synthétise les 4
 - Les propriétés logiques pour les marges&nbsp;:
-  - [`margin-block-start`](/fr/docs/Web/CSS/margin-block-start)
-  - [`margin-block-end`](/fr/docs/Web/CSS/margin-block-end)
-  - [`margin-inline-start`](/fr/docs/Web/CSS/margin-inline-start)
-  - [`margin-inline-end`](/fr/docs/Web/CSS/margin-inline-end)
+  - [`margin-block-start`](/fr/docs/Web/CSS/Reference/Properties/margin-block-start)
+  - [`margin-block-end`](/fr/docs/Web/CSS/Reference/Properties/margin-block-end)
+  - [`margin-inline-start`](/fr/docs/Web/CSS/Reference/Properties/margin-inline-start)
+  - [`margin-inline-end`](/fr/docs/Web/CSS/Reference/Properties/margin-inline-end)
   - Les propriétés raccourcies pour les deux axes&nbsp;:
-    - [`margin-block`](/fr/docs/Web/CSS/margin-block)
-    - [`margin-inline`](/fr/docs/Web/CSS/margin-inline)
+    - [`margin-block`](/fr/docs/Web/CSS/Reference/Properties/margin-block)
+    - [`margin-inline`](/fr/docs/Web/CSS/Reference/Properties/margin-inline)

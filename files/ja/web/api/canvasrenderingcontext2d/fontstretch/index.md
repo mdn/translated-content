@@ -10,7 +10,7 @@ l10n:
 
 **`CanvasRenderingContext2D.fontStretch`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画するときにフォントをどのように拡張・縮小できるかを指定します。
 
-このプロパティは、キーワードと共に使用する場合、 CSS の [`font-stretch`](/ja/docs/Web/CSS/font-stretch) プロパティに相当します（パーセント値には対応していません）。
+このプロパティは、キーワードと共に使用する場合、 CSS の [`font-stretch`](/ja/docs/Web/CSS/Reference/Properties/font-stretch) プロパティに相当します（パーセント値には対応していません）。
 
 ## 値
 

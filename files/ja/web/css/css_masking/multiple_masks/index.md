@@ -15,7 +15,7 @@ CSS マスクは、 1 つ以上のマスクレイヤーで構成されます。�
 
 CSS マスクは、すべての HTML 要素およびほとんどの SVG 要素に適用できます。マスクは、1 つ以上の合成マスクレイヤーで構成できます。複数のレイヤーは、{{cssxref("mask")}} 一括指定プロパティまたは {{cssxref("mask-image")}} プロパティでカンマ区切りで定義します。値が `none` に設定されている場合でも、レイヤーとしてカウントされます。
 
-それぞれのマスクレイヤーは、マスクの基準ボックスを基準にして位置決めされる [マスク画像](/ja/docs/Web/CSS/mask-image) を含めることができます。画像のサイズ変更、繰り返し、クリップが可能です。複数のマスク画像を含める場合、マスクレイヤーの合成や結合の方法を定義することができます。（これらの機能については、このガイドで簡単に紹介しています。詳細と例については、[マスクプロパティガイド](/ja/docs/Web/CSS/CSS_masking/Mask_properties)を参照してください。）
+それぞれのマスクレイヤーは、マスクの基準ボックスを基準にして位置決めされる [マスク画像](/ja/docs/Web/CSS/Reference/Properties/mask-image) を含めることができます。画像のサイズ変更、繰り返し、クリップが可能です。複数のマスク画像を含める場合、マスクレイヤーの合成や結合の方法を定義することができます。（これらの機能については、このガイドで簡単に紹介しています。詳細と例については、[マスクプロパティガイド](/ja/docs/Web/CSS/CSS_masking/Mask_properties)を参照してください。）
 
 ### 複数のマスクレイヤーの構文
 
@@ -129,7 +129,7 @@ mask: 100px 100px no-repeat;
 
 - {{cssxref("mask-mode")}}: それぞれのマスクレイヤーのモードを `alpha` または `luminance` のいずれかに設定します。または、値を `match-source` に設定して、ソースのモードを既定値にします。既定は `match-source` です。
 
-- {{cssxref("mask-position")}}: {{cssxref("background-position")}} プロパティと同様に [`background-position` の `<position>` 構文](/ja/docs/Web/CSS/background-position#position)に従う構文を持ち、`mask-origin` プロパティで定義されたマスクレイヤーの基準ボックスを基準として、マスク画像の初期位置を相対的に設定します。1 つ、2 つ、または 4 つの {{cssxref("&lt;position&gt;")}} 値が指定できます。既定の `0% 0%` は、マスクの左上隅をマスクの基準ボックスの左上隅に配置します。
+- {{cssxref("mask-position")}}: {{cssxref("background-position")}} プロパティと同様に [`background-position` の `<position>` 構文](/ja/docs/Web/CSS/Reference/Properties/background-position#position)に従う構文を持ち、`mask-origin` プロパティで定義されたマスクレイヤーの基準ボックスを基準として、マスク画像の初期位置を相対的に設定します。1 つ、2 つ、または 4 つの {{cssxref("&lt;position&gt;")}} 値が指定できます。既定の `0% 0%` は、マスクの左上隅をマスクの基準ボックスの左上隅に配置します。
 
 - {{cssxref("mask-origin")}}: {{cssxref("background-origin")}} プロパティと同様に、マスク画像が配置されるマスクの基準ボックス領域である「マスクの位置指定領域」を指定します。例えば、`mask-position` が `top left` の場合、このプロパティは、それが境界線の外縁、パディングの外縁、またはコンテンツの外縁のどれを基準とするかを定義します。
 

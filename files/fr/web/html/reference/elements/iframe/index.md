@@ -182,7 +182,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
 - `align` {{deprecated_inline}}
   - : Cet attribut obsolète permettait de définir l'alignement de l'_iframe_ par rapport à son contexte englobant.
 - `frameborder` {{deprecated_inline}}
-  - : Lorsqu'il vaut 1 (la valeur par défaut), cet attribut indique au navigateur de définir une bordure entre ce cadre et tout autre cadre. Lorsqu'il vaut 0, aucune bordure n'est dessinée. Plutôt que cet attribut, on utilisera la propriété CSS [`border`](/fr/docs/Web/CSS/border) pour dessiner la bordure autour d'une iframe.
+  - : Lorsqu'il vaut 1 (la valeur par défaut), cet attribut indique au navigateur de définir une bordure entre ce cadre et tout autre cadre. Lorsqu'il vaut 0, aucune bordure n'est dessinée. Plutôt que cet attribut, on utilisera la propriété CSS [`border`](/fr/docs/Web/CSS/Reference/Properties/border) pour dessiner la bordure autour d'une iframe.
 - `longdesc` {{deprecated_inline}}
   - : Un URI vers une description détaillée du cadre. En raison d'un mauvais usage, cet attribut n'est pas utile pour les navigateurs non-visuels.
 - `marginheight` {{deprecated_inline}}
@@ -212,7 +212,7 @@ Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [l
 
 ## Positionnement et redimensionnement
 
-En tant qu'[élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties), la position, l'alignement et le redimensionnement du document embarqué via `<iframe>` peuvent être ajustés via les propriétés [`object-position`](/fr/docs/Web/CSS/object-position) et [`object-fit`](/fr/docs/Web/CSS/object-fit).
+En tant qu'[élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties), la position, l'alignement et le redimensionnement du document embarqué via `<iframe>` peuvent être ajustés via les propriétés [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
 
 ## Exemples
 

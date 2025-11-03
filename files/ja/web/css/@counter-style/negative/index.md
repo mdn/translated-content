@@ -42,7 +42,7 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 
 ### 負のカウンターを描画する
 
-この例では、[`decimal`](/ja/docs/Web/CSS/list-style-type#decimal) リストスタイルを[拡張](/ja/docs/Web/CSS/@counter-style/system#extends)しています。 `negative` 記述子は、負のカウンター値の前後に `(-` および `)` を追加するために使用されます。
+この例では、[`decimal`](/ja/docs/Web/CSS/Reference/Properties/list-style-type#decimal) リストスタイルを[拡張](/ja/docs/Web/CSS/@counter-style/system#extends)しています。 `negative` 記述子は、負のカウンター値の前後に `(-` および `)` を追加するために使用されます。
 
 #### HTML
 

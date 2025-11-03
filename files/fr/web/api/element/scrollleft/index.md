@@ -7,7 +7,7 @@ slug: Web/API/Element/scrollLeft
 
 La propriété **`Element.scrollLeft`** permet de lire ou de modifier le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche.
 
-Si la propriété [`direction`](/fr/docs/Web/CSS/direction) de l'élément vaut `rtl` (pour une écriture de droite à gauche), `scrollLeft` est à `0` lorsque la barre de défilement est à la position la plus à droite possible (ce qui correspond au début du contenu à faire défiler) et elle devient de plus en plus négative lors du défilement vers la fin du contenu.
+Si la propriété [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) de l'élément vaut `rtl` (pour une écriture de droite à gauche), `scrollLeft` est à `0` lorsque la barre de défilement est à la position la plus à droite possible (ce qui correspond au début du contenu à faire défiler) et elle devient de plus en plus négative lors du défilement vers la fin du contenu.
 
 Cette propriété peut être définie avec n'importe quelle valeur entière. Toutefois&nbsp;:
 

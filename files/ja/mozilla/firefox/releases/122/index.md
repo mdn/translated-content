@@ -18,7 +18,7 @@ l10n:
 
 - CSS の {{cssxref("offset-position")}} プロパティをデフォルトで有効にしました。これは、パスにおける要素の初期位置を定義します ([Firefox bug 1598152](https://bugzil.la/1598152))。
 
-- [`<basic-shape>`](/ja/docs/Web/CSS/offset-path#basic-shape)、[`<coord-box>`](/ja/docs/Web/CSS/offset-path#coord-box)、[`url()`](/ja/docs/Web/CSS/offset-path#url) といった、CSS の {{cssxref("offset-path")}} を定義するためのさまざまな方法をデフォルトで有効にしました ([Firefox bug 1598159](https://bugzil.la/1598159))。
+- [`<basic-shape>`](/ja/docs/Web/CSS/Reference/Properties/offset-path#basic-shape)、[`<coord-box>`](/ja/docs/Web/CSS/Reference/Properties/offset-path#coord-box)、[`url()`](/ja/docs/Web/CSS/Reference/Properties/offset-path#url) といった、CSS の {{cssxref("offset-path")}} を定義するためのさまざまな方法をデフォルトで有効にしました ([Firefox bug 1598159](https://bugzil.la/1598159))。
 
 - CSS の {{cssxref("ray")}} 関数をデフォルトで有効にしました。この関数を使用して、{{cssxref("offset-position")}} から始まって指定した角度の方向へ伸びる線分として {{cssxref("offset-path")}} を定義できます ([Firefox bug 1598151](https://bugzil.la/1598151))。
 
@@ -48,7 +48,7 @@ l10n:
 
 #### 廃止
 
-- CSS の [`-moz-user-focus`](/ja/docs/Web/CSS/-moz-user-focus) プロパティのサポートを廃止しました ([Firefox bug 1871745](https://bugzil.la/1871745) および [Firefox bug 1868552](https://bugzil.la/1868552))。
+- CSS の [`-moz-user-focus`](/ja/docs/Web/CSS/Reference/Properties/-moz-user-focus) プロパティのサポートを廃止しました ([Firefox bug 1871745](https://bugzil.la/1871745) および [Firefox bug 1868552](https://bugzil.la/1868552))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
