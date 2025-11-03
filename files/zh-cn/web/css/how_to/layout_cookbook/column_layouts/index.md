@@ -1,7 +1,6 @@
 ---
 title: 列布局
 slug: Web/CSS/How_to/Layout_cookbook/Column_layouts
-original_slug: Web/CSS/Layout_cookbook/Column_layouts
 l10n:
   sourceCommit: d4a09bb1d0d466e0f31d1c15d1bc0d908b5d70ea
 ---

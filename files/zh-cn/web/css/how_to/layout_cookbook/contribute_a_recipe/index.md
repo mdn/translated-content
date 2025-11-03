@@ -1,7 +1,6 @@
 ---
 title: 贡献方案
 slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe
-original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 l10n:
   sourceCommit: 0ea79e9c21f720ad71d1a0e8a524e13bd7af6895
 ---
@@ -77,7 +76,7 @@ l10n:
 
 ### 5. 创建你的页面
 
-在你的示例 PR 合并后，在[布局手册目录](https://github.com/mdn/content/tree/main/files/zh-CN/web/css/layout_cookbook)中创建一个新页面的拉取请求。使用我们的[手册页面模板](https://github.com/mdn/content/blob/main/files/zh-CN/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1)。模板解释了每个部分的要求，你可以参考其他手册示例获取更多帮助。
+在你的示例 PR 合并后，在[布局手册目录](https://github.com/mdn/translated-content/tree/main/files/zh-CN/web/css/how_to/layout_cookbook)中创建一个新页面的拉取请求。使用我们的[手册页面模板](https://github.com/mdn/translated-content/blob/main/files/zh-cn/web/css/how_to/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1)。模板解释了每个部分的要求，你可以参考其他手册示例获取更多帮助。
 
 请记得在主页面[布局手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)上添加指向你新方案的链接。
 

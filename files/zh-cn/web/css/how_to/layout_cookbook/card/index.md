@@ -1,7 +1,6 @@
 ---
 title: 卡片
 slug: Web/CSS/How_to/Layout_cookbook/Card
-original_slug: Web/CSS/Layout_cookbook/Card
 ---
 
 这个模式是带有可选页脚的“卡片”组件列表。

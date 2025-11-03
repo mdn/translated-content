@@ -1,7 +1,6 @@
 ---
 title: 手册模版
 slug: Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template
-original_slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 l10n:
   sourceCommit: d4a09bb1d0d466e0f31d1c15d1bc0d908b5d70ea
 ---
