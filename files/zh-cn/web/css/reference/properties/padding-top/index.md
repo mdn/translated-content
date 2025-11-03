@@ -1,7 +1,6 @@
 ---
 title: padding-top
 slug: Web/CSS/Reference/Properties/padding-top
-original_slug: Web/CSS/padding-top
 l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---

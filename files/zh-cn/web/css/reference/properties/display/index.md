@@ -1,7 +1,6 @@
 ---
 title: display
 slug: Web/CSS/Reference/Properties/display
-original_slug: Web/CSS/display
 l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
@@ -321,16 +320,16 @@ display: unset;
 - 当将 `display` 动画设置为从 `none` 到 `block`（或另一个可见的 `display` 值）时，该值将在动画持续时间的 `0%` 处切换到 `block`，从而使其始终可见。
 - 当将 `display` 动画设置为从 `block`（或另一个可见的 `display` 值）到 `none`时，该值将在动画持续时间的 `100%` 处切换到 `none`，从而使其始终可见。
 
-此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 将其淡出（而不是立即消失）。
+此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity) 将其淡出（而不是立即消失）。
 
 在使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
 
 在使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)为 `display` 设置动画时，需要两个额外的附加条件：
 
 - [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style) 提供了要从第一次显示动画元素时开始过渡的属性的起始值。这是避免意外行为所必需的。默认情况下，CSS 过渡不会在元素的第一次样式更新时触发，也不会在 `display` 类型从 `none` 更改为另一种类型时触发。
-- [`transition-behavior: allow-discrete`](/zh-CN/docs/Web/CSS/transition-behavior) 需要在 {{cssxref("transition-property")}} 声明上设置，已启用 `display` 过渡。
+- [`transition-behavior: allow-discrete`](/zh-CN/docs/Web/CSS/Reference/Properties/transition-behavior) 需要在 {{cssxref("transition-property")}} 声明上设置，已启用 `display` 过渡。
 
-有关 `display` 属性过渡的更多示例，请参见 [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style#示例) 和 [`transition-behavior`](/zh-CN/docs/Web/CSS/transition-behavior#示例)。
+有关 `display` 属性过渡的更多示例，请参见 [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style#示例) 和 [`transition-behavior`](/zh-CN/docs/Web/CSS/Reference/Properties/transition-behavior#示例)。
 
 ## 无障碍考虑
 

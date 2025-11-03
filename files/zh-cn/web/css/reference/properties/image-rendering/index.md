@@ -1,7 +1,6 @@
 ---
 title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
-original_slug: Web/CSS/image-rendering
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。

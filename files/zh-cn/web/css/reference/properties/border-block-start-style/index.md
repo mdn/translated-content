@@ -1,7 +1,6 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/Reference/Properties/border-block-start-style
-original_slug: Web/CSS/border-block-start-style
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-start-style`** 定义了元素的逻辑块首的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-style")}}、{{CSSXref("border-right-style")}}、{{CSSXref("border-bottom-style")}} 或 {{CSSXref("border-left-style")}} 属性。

@@ -1,7 +1,6 @@
 ---
 title: padding-block-start
 slug: Web/CSS/Reference/Properties/padding-block-start
-original_slug: Web/CSS/padding-block-start
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-block-start`** 定义了元素的逻辑块首内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。

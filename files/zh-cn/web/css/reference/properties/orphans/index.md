@@ -1,7 +1,6 @@
 ---
 title: orphans
 slug: Web/CSS/Reference/Properties/orphans
-original_slug: Web/CSS/orphans
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

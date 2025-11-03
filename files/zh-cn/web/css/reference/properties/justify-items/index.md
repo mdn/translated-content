@@ -1,7 +1,6 @@
 ---
 title: justify-items
 slug: Web/CSS/Reference/Properties/justify-items
-original_slug: Web/CSS/justify-items
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ，可以使这些项目以默认方式沿适当轴线对齐到每个盒子。

@@ -727,7 +727,7 @@ div {
 
 ### 多个线性渐变
 
-和常规的线性和径向渐变类似，你可以包含多个渐变，一个在另一个的顶部。这只有在渐变部分透明时有效，以允许的后续的渐变穿透透明区域显示，或者你为每个渐变图像指定不同的 [background-size](/zh-CN/docs/Web/CSS/background-size)，还可以有不同的 [background-position](/zh-CN/docs/Web/CSS/background-position) 属性值。我们使用透明。
+和常规的线性和径向渐变类似，你可以包含多个渐变，一个在另一个的顶部。这只有在渐变部分透明时有效，以允许的后续的渐变穿透透明区域显示，或者你为每个渐变图像指定不同的 [background-size](/zh-CN/docs/Web/CSS/Reference/Properties/background-size)，还可以有不同的 [background-position](/zh-CN/docs/Web/CSS/Reference/Properties/background-position) 属性值。我们使用透明。
 
 在这个例子中，渐变线的长度为 300px、230px 和 300px。
 

@@ -1,7 +1,6 @@
 ---
 title: align-items
 slug: Web/CSS/Reference/Properties/align-items
-original_slug: Web/CSS/align-items
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **`align-items`** 属性设置了所有直接子元素的 {{cssxref("align-self")}} 值作为一个组。在 Flexbox 中，它控制子元素在{{glossary("Cross Axis", "交叉轴")}}上的对齐。在 Grid 布局中，它控制了子元素在其{{glossary("Grid Areas", "网格区域")}}内的块向轴上的对齐。

@@ -1,7 +1,6 @@
 ---
 title: white-space
 slug: Web/CSS/Reference/Properties/white-space
-original_slug: Web/CSS/white-space
 l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
@@ -178,7 +177,7 @@ white-space: unset;
   </tbody>
 </table>
 
-默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line` 值，每个制表符都会被转化为一个空格（U+0020）字符。
+默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/Reference/Properties/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line` 值，每个制表符都会被转化为一个空格（U+0020）字符。
 
 > [!NOTE]
 > **空格**和**其他空白分隔符**之间存在区别。定义如下：
@@ -192,7 +191,7 @@ white-space: unset;
 
 ## 合并空白字符
 
-{{cssxref("white-space-collapse")}} 属性的页面解释了[浏览器合并空白字符的算法](/zh-CN/docs/Web/CSS/white-space-collapse#合并空白字符)。
+{{cssxref("white-space-collapse")}} 属性的页面解释了[浏览器合并空白字符的算法](/zh-CN/docs/Web/CSS/Reference/Properties/white-space-collapse#合并空白字符)。
 
 ## 形式定义
 
@@ -365,4 +364,4 @@ text {
 ## 参见
 
 - 定义单词如何在*其内部*被截断的属性：{{CSSxRef("overflow-wrap")}}、{{CSSxRef("word-break")}}、{{CSSxRef("hyphens")}}
-- [`tab-size`](/zh-CN/docs/Web/CSS/tab-size)
+- [`tab-size`](/zh-CN/docs/Web/CSS/Reference/Properties/tab-size)

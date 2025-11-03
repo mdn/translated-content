@@ -1,7 +1,6 @@
 ---
 title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
-original_slug: Web/CSS/-webkit-tap-highlight-color
 ---
 
 {{ Non-standard_header() }}

@@ -1,7 +1,6 @@
 ---
 title: overscroll-behavior-x
 slug: Web/CSS/Reference/Properties/overscroll-behavior-x
-original_slug: Web/CSS/overscroll-behavior-x
 ---
 
 **`overscroll-behavior-x`** 这个 CSS 属性用来控制当滚动到区域的水平边界时的浏览器行为。

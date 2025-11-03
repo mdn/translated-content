@@ -1,7 +1,6 @@
 ---
 title: border-top-width
 slug: Web/CSS/Reference/Properties/border-top-width
-original_slug: Web/CSS/border-top-width
 ---
 
 css 属性 **`border-top-width`** 是用于设置盒模型的上边框的宽度

@@ -1,7 +1,6 @@
 ---
 title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
-original_slug: Web/CSS/font-variant
 ---
 
 **font-variant** 属性是{{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-east-asian")}}等属性的简写。你也可以使用简写 {{cssxref("font")}} 设定`font-variant`在 CSS Level 2 (Revision 1) 中的值（即`normal` 或 `small-caps`）。

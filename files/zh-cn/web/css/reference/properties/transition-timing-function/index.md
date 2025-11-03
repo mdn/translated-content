@@ -1,7 +1,6 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
-original_slug: Web/CSS/transition-timing-function
 ---
 
 CSS **`transition-timing-function`** 属性设置如何计算受[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)影响的 CSS 属性的中间值。

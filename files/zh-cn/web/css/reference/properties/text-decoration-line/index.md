@@ -1,7 +1,6 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/Reference/Properties/text-decoration-line
-original_slug: Web/CSS/text-decoration-line
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-line`** 用于设置元素中的文本的修饰类型。当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
@@ -39,7 +38,7 @@ text-decoration-line: unset;
 - `line-through`
   - : 有一条贯穿文本中间的修饰线。
 - `blink {{deprecated_inline}}`
-  - : 文本闪烁（文本交替处于显示与隐藏状态）。客户代理都一致没有实现文本闪烁效果。考虑到为了支持使用 [CSS 动画](/zh-CN/docs/Web/CSS/animation)，该值也**不宜使用**。
+  - : 文本闪烁（文本交替处于显示与隐藏状态）。客户代理都一致没有实现文本闪烁效果。考虑到为了支持使用 [CSS 动画](/zh-CN/docs/Web/CSS/Reference/Properties/animation)，该值也**不宜使用**。
 
 ### 形式语法
 

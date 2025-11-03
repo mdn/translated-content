@@ -1,7 +1,6 @@
 ---
 title: backface-visibility
 slug: Web/CSS/Reference/Properties/backface-visibility
-original_slug: Web/CSS/backface-visibility
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。

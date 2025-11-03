@@ -1,7 +1,6 @@
 ---
 title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
-original_slug: Web/CSS/column-rule-color
 ---
 
 **`column-rule-color`** [CSS](/zh-CN/docs/Web/CSS) 属性设置在多列布局中列与列之间绘制的线的颜色。

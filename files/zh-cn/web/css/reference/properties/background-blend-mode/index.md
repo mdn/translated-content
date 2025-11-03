@@ -1,7 +1,6 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/Reference/Properties/background-blend-mode
-original_slug: Web/CSS/background-blend-mode
 ---
 
 ## 概述

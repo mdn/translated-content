@@ -1,7 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/Reference/Properties/max-width
-original_slug: Web/CSS/max-width
 l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---

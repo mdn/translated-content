@@ -1,12 +1,11 @@
 ---
 title: overflow-x
 slug: Web/CSS/Reference/Properties/overflow-x
-original_slug: Web/CSS/overflow-x
 l10n:
   sourceCommit: f89df1bb60b0d71d3e41bf5b1c0d8cb4eac45a27
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-x`** 设置当内容溢出块级元素的左右两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 简写属性来设置该属性。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-x`** 设置当内容溢出块级元素的左右两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/Reference/Properties/overflow) 简写属性来设置该属性。
 
 {{InteractiveExample("CSS Demo: overflow-x")}}
 
@@ -78,7 +77,7 @@ overflow-x: unset;
 - `hidden`
   - : 如有必要，溢出的内容会被截断以从水平方向适应元素的边距框，不会显示滚动条。
 - `clip`
-  - : 在*溢出截断边缘*（使用 [`overflow-clip-margin`](/zh-CN/docs/Web/CSS/overflow-clip-margin) 属性定义）上的溢出内容会被截断。即，距元素内边距框指定宽度（为 `overflow-clip-margin` 的 {{cssxref("&lt;length&gt;")}} 值，若未设置则为 `0px`）范围内的内容会溢出。`clip` 和 `hidden` 的区别是 `clip` 关键字还禁止所有滚动，包括程序性滚动（programmatic scrolling）。其不会创建新的格式化上下文。如果要创建新的格式化上下文，请将 `overflow: clip` 与 {{cssxref("display", "display: flow-root", "#flow-root")}} 一起使用。元素盒子不是滚动容器。
+  - : 在*溢出截断边缘*（使用 [`overflow-clip-margin`](/zh-CN/docs/Web/CSS/Reference/Properties/overflow-clip-margin) 属性定义）上的溢出内容会被截断。即，距元素内边距框指定宽度（为 `overflow-clip-margin` 的 {{cssxref("&lt;length&gt;")}} 值，若未设置则为 `0px`）范围内的内容会溢出。`clip` 和 `hidden` 的区别是 `clip` 关键字还禁止所有滚动，包括程序性滚动（programmatic scrolling）。其不会创建新的格式化上下文。如果要创建新的格式化上下文，请将 `overflow: clip` 与 {{cssxref("display", "display: flow-root", "#flow-root")}} 一起使用。元素盒子不是滚动容器。
 - `scroll`
   - : 如有必要，溢出的内容会被截断以从水平方向适应元素的边距框。无论内容是否发生溢出，浏览器总是显示滚动条。（这可以避免滚动条的显示与消失所导致的元素尺寸不确定的问题。）而打印机可能会打印溢出的内容。
 - `auto`

@@ -1,12 +1,11 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
-original_slug: Web/CSS/mask-border-mode
 ---
 
-该[CSS](/zh-CN/docs/Web/CSS)属性指定使用的混合模式[面具边界](/zh-CN/docs/Web/CSS/mask-border)。**`mask-border-mode`**
+[CSS](/zh-CN/docs/Web/CSS) **`mask-border-mode`** 属性指定使用的混合模式[遮罩边界](/zh-CN/docs/Web/CSS/Reference/Properties/mask-border)。
 
-## Syntax
+## 语法
 
 ```css
 /* Keyword values */
@@ -22,9 +21,9 @@ mask-border-mode: unset;
 ### 值
 
 - `luminance`
-  - : 掩模边界图像的亮度值用作掩模值。
+  - : 遮罩边界图像的亮度值用作遮罩值。
 - `alpha`
-  - : 掩模边界图像的亮度值用作掩模值。
+  - : 遮罩边界图像的亮度值用作遮罩值。
 
 ## 形式定义
 

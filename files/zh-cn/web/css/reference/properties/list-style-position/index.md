@@ -1,7 +1,6 @@
 ---
 title: list-style-position
 slug: Web/CSS/Reference/Properties/list-style-position
-original_slug: Web/CSS/list-style-position
 ---
 
 **`list-style-position`** 属性指定标记框在主体块框中的位置。

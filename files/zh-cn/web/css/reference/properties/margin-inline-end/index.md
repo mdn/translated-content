@@ -1,7 +1,6 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/Reference/Properties/margin-inline-end
-original_slug: Web/CSS/margin-inline-end
 ---
 
 **`margin-inline-end`** [CSS](/zh-CN/docs/Web/CSS) 属性定义元素的逻辑行末外边距，根据元素的书写模式、行内方向和文本朝向映射为实体外边距。换句话说，它根据 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性的值对应于 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 或 {{cssxref("margin-left")}} 属性。

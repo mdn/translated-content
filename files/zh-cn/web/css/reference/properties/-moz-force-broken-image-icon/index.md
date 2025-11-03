@@ -1,7 +1,6 @@
 ---
 title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
-original_slug: Web/CSS/-moz-force-broken-image-icon
 l10n:
   sourceCommit: db9ccd6c2746b3f34b0951d8e59ea1c581312d9d
 ---

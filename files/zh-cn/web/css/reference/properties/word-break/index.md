@@ -1,7 +1,6 @@
 ---
 title: word-break
 slug: Web/CSS/Reference/Properties/word-break
-original_slug: Web/CSS/word-break
 ---
 
 CSS 属性 `word-break` 指定了怎样在单词内断行。

@@ -1,7 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/Reference/Properties/perspective
-original_slug: Web/CSS/perspective
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective`** 指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。z>0 的三维元素比正常大，而 z<0 时则比正常小，大小程度由该属性的值决定。

@@ -1,7 +1,6 @@
 ---
 title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
-original_slug: Web/CSS/animation-delay
 ---
 
 **`animation-delay`** [CSS](/zh-CN/docs/Web/CSS) 属性指定从应用动画到元素开始执行动画之前等待的时间量。动画可以稍后开始、立即从开头开始或立即开始并在动画中途播放。

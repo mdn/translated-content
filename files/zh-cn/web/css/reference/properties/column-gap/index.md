@@ -1,7 +1,6 @@
 ---
 title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
-original_slug: Web/CSS/column-gap
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **`column-gap`** 属性用来设置元素列之间的间隔（{{glossary("gutters","gutter")}}）大小。

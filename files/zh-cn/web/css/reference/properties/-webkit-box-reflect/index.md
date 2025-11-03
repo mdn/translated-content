@@ -1,7 +1,6 @@
 ---
 title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
-original_slug: Web/CSS/-webkit-box-reflect
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

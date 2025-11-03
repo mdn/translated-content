@@ -1,7 +1,6 @@
 ---
 title: border-radius
 slug: Web/CSS/Reference/Properties/border-radius
-original_slug: Web/CSS/border-radius
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。

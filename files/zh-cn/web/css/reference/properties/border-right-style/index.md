@@ -1,7 +1,6 @@
 ---
 title: border-right-style
 slug: Web/CSS/Reference/Properties/border-right-style
-original_slug: Web/CSS/border-right-style
 ---
 
 **`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/Web/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.

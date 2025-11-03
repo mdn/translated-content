@@ -1,7 +1,6 @@
 ---
 title: margin-block-start
 slug: Web/CSS/Reference/Properties/margin-block-start
-original_slug: Web/CSS/margin-block-start
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-start`** 定义了元素的逻辑块首外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。

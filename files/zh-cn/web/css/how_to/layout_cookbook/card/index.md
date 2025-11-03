@@ -48,7 +48,7 @@ original_slug: Web/CSS/Layout_cookbook/Card
 
 对于整体布局，你可以使用 flexbox，然而这将导致卡片在最后的 flex 行上伸展，因为那里的卡片数量少于上面的行。另外，你可以使用 [CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)——这将导致卡片顺着列铺开，可能会导致问题。
 
-请参阅[多列布局方案](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)以了解这些布局方法的演示。
+请参阅[多列布局方案](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)以了解这些布局方法的演示。
 
 ## 无障碍考虑
 

@@ -1,7 +1,6 @@
 ---
 title: inset-block-start
 slug: Web/CSS/Reference/Properties/inset-block-start
-original_slug: Web/CSS/inset-block-start
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`inset-block-start`** 定义了元素的块首偏移，并根据元素的书写模式、行内方向和文本朝向对应至实体偏移。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 或 {{CSSXref("left")}} 属性。

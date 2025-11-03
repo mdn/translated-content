@@ -1,7 +1,6 @@
 ---
 title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
-original_slug: Web/CSS/animation-play-state
 ---
 
 **`animation-play-state`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是运行还是暂停。

@@ -1,7 +1,6 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/Reference/Properties/padding-inline-end
-original_slug: Web/CSS/padding-inline-end
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-inline-end`** 定义了元素的逻辑行末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。

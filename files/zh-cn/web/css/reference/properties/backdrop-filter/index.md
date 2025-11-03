@@ -1,7 +1,6 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/Reference/Properties/backdrop-filter
-original_slug: Web/CSS/backdrop-filter
 l10n:
   sourceCommit: 4030a3382d2f2ee9a2aa6232c1fbb5724a27cc8b
 ---

@@ -1,7 +1,6 @@
 ---
 title: font-synthesis
 slug: Web/CSS/Reference/Properties/font-synthesis
-original_slug: Web/CSS/font-synthesis
 ---
 
 **`font-synthesis`** CSS 属性控制浏览器可以合成（synthesize）哪些缺失的字体，粗体或斜体。

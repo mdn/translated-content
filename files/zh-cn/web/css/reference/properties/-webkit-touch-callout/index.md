@@ -1,7 +1,6 @@
 ---
 title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
-original_slug: Web/CSS/-webkit-touch-callout
 l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---

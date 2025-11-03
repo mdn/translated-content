@@ -1,7 +1,6 @@
 ---
 title: flex
 slug: Web/CSS/Reference/Properties/flex
-original_slug: Web/CSS/flex
 ---
 
 `flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。

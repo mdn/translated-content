@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
-original_slug: Web/CSS/scroll-snap-stop
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`scroll-snap-stop`** 定义了滚动容器是否可“越过”吸附位置。

@@ -1,7 +1,6 @@
 ---
 title: font-language-override
 slug: Web/CSS/Reference/Properties/font-language-override
-original_slug: Web/CSS/font-language-override
 ---
 
 **font-language-override** CSS 属性控制在指定的语言中使用特定的字形。

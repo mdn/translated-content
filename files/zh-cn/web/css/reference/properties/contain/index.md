@@ -1,7 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/Reference/Properties/contain
-original_slug: Web/CSS/contain
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 DOM 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 DOM 子树而非整个页面使性能受益。局限也可用于限制 CSS 计数器和引号的作用域。
@@ -237,7 +236,7 @@ div {
 
 ### 样式局限
 
-样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
+样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/Reference/Properties/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
 
 #### 局限与计数器
 

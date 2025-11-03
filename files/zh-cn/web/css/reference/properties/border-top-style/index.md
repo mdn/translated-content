@@ -1,7 +1,6 @@
 ---
 title: border-top-style
 slug: Web/CSS/Reference/Properties/border-top-style
-original_slug: Web/CSS/border-top-style
 ---
 
 **`border-top-style`** [CSS](/zh-CN/docs/Web/CSS) 设置元素上边框的 {{cssxref("border")}}.

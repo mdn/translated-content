@@ -1,7 +1,6 @@
 ---
 title: cursor
 slug: Web/CSS/Reference/Properties/cursor
-original_slug: Web/CSS/cursor
 ---
 
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
@@ -78,7 +77,7 @@ cursor: initial;
 cursor: unset;
 ```
 
-cursor 属性为零个或多个[\<url>](/zh-CN/docs/Web/CSS/cursor#%3Curl%3E)值，它们之间用逗号分隔，最后必填一个关键字值。每个\<url>指向一个图像文件。浏览器将尝试加载指定的第一个图像，如果无法加载则返回下一个图像，如果无法加载图像或未指定图像，则使用关键字值代表的指针类型。
+cursor 属性为零个或多个[\<url>](/zh-CN/docs/Web/CSS/Reference/Properties/cursor#%3Curl%3E)值，它们之间用逗号分隔，最后必填一个关键字值。每个\<url>指向一个图像文件。浏览器将尝试加载指定的第一个图像，如果无法加载则返回下一个图像，如果无法加载图像或未指定图像，则使用关键字值代表的指针类型。
 
 每个\<url>后面都可选跟一对空格分隔的数字\<x>\<y>表示偏移。它们用来设置指针的热点 (即自定义图标的实际点击位置)，位置相对于图标的左上角。
 

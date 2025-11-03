@@ -220,7 +220,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Refer
 
 ### content-visibility: auto 值
 
-如果内容[不与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)，[`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 允许跳过渲染。（详见 [Firefox bug 1798485](https://bugzil.la/1798485)）。
+如果内容[不与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)，[`content-visibility`](/zh-CN/docs/Web/CSS/Reference/Properties/content-visibility) CSS 属性值 `auto` 允许跳过渲染。（详见 [Firefox bug 1798485](https://bugzil.la/1798485)）。
 
 <table>
   <thead>
@@ -472,7 +472,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 使用 {{cssxref('scroll-timeline')}} 速记属性时，属性值的顺序必须是 {{cssxref('scroll-timeline-name')}} 后跟 {{cssxref('scroll-timeline-axis')}}。完整属性和速记属性均可在首选项后面使用。
 
-也可以使用 [`scroll()`](/zh-CN/docs/Web/CSS/animation-timeline/scroll) 函数标记和 {{cssxref('animation-timeline')}} 来表示时间轴将使用祖先元素中的滚动条轴。
+也可以使用 [`scroll()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) 函数标记和 {{cssxref('animation-timeline')}} 来表示时间轴将使用祖先元素中的滚动条轴。
 
 有关详细信息，请参阅 [Firefox bug 1807685](https://bugzil.la/1807685)、[Firefox bug 1804573](https://bugzil.la/1804573)、[Firefox bug 1809005](https://bugzil.la/1809005)、[Firefox bug 1676791](https://bugzil.la/1676791)、[Firefox bug 1754897](https://bugzil.la/1754897) 和 [Firefox bug 1737918](https://bugzil.la/1737918)。
 
@@ -634,7 +634,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 
 ### font-variant-emoji
 
-通过 CSS [`font-variant-emoji`](/zh-CN/docs/Web/CSS/font-variant-emoji) 属性，你可以设置显示表情符号的默认显示样式。详情请参见（[Firefox bug 1461589](https://bugzil.la/1461589)）。
+通过 CSS [`font-variant-emoji`](/zh-CN/docs/Web/CSS/Reference/Properties/font-variant-emoji) 属性，你可以设置显示表情符号的默认显示样式。详情请参见（[Firefox bug 1461589](https://bugzil.la/1461589)）。
 
 <table>
   <thead>
@@ -795,7 +795,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 
 ### 具名观看进度时间线属性
 
-通过 CSS [`view-timeline-name`](/zh-CN/docs/Web/CSS/view-timeline-name) 属性，你可以为特定元素赋予一个名称，表明其祖先滚动元素是视图进度时间轴的来源。然后，可以将该名称分配给 `animation-timeline`，当相关元素在其祖先滚动器的可见区域内移动时，`animation-timeline` 就会为其制作动画。详情请参见（[Firefox bug 1737920](https://bugzil.la/1737920)）。
+通过 CSS [`view-timeline-name`](/zh-CN/docs/Web/CSS/Reference/Properties/view-timeline-name) 属性，你可以为特定元素赋予一个名称，表明其祖先滚动元素是视图进度时间轴的来源。然后，可以将该名称分配给 `animation-timeline`，当相关元素在其祖先滚动器的可见区域内移动时，`animation-timeline` 就会为其制作动画。详情请参见（[Firefox bug 1737920](https://bugzil.la/1737920)）。
 
 <table>
   <thead>
@@ -835,7 +835,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 
 ### 匿名观看进度时间线属性
 
-通过 CSS [`view()`](/zh-CN/docs/Web/CSS/animation-timeline/view) 函数，可以指定元素的 `animation-timeline` 为视图进度时间轴，当元素在其父元素滚动条的可见区域内移动时，该时间轴将为其制作动画。该函数定义了提供时间轴的父元素的轴，以及动画开始和开始的可见区域的嵌入区。详情请参见（[Firefox bug 1808410](https://bugzil.la/1808410)）。
+通过 CSS [`view()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/view) 函数，可以指定元素的 `animation-timeline` 为视图进度时间轴，当元素在其父元素滚动条的可见区域内移动时，该时间轴将为其制作动画。该函数定义了提供时间轴的父元素的轴，以及动画开始和开始的可见区域的嵌入区。详情请参见（[Firefox bug 1808410](https://bugzil.la/1808410)）。
 
 <table>
   <thead>

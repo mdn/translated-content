@@ -1,12 +1,11 @@
 ---
 title: border-top
 slug: Web/CSS/Reference/Properties/border-top
-original_slug: Web/CSS/border-top
 l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`border-top`** 用于设置元素上[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`border-top`** 用于设置元素上[边框](/zh-CN/docs/Web/CSS/Reference/Properties/border)的所有属性。
 
 {{InteractiveExample("CSS 演示：border-top")}}
 
@@ -68,9 +67,9 @@ border-top: none thick green;
 
 此属性是以下 CSS 属性的简写形式：
 
-- [`border-top-color`](/zh-CN/docs/Web/CSS/border-top-color)
-- [`border-top-style`](/zh-CN/docs/Web/CSS/border-top-style)
-- [`border-top-width`](/zh-CN/docs/Web/CSS/border-top-width)
+- [`border-top-color`](/zh-CN/docs/Web/CSS/Reference/Properties/border-top-color)
+- [`border-top-style`](/zh-CN/docs/Web/CSS/Reference/Properties/border-top-style)
+- [`border-top-width`](/zh-CN/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## 语法
 
@@ -143,6 +142,6 @@ div {
 
 ## 参见
 
-- [`border`](/zh-CN/docs/Web/CSS/border)
-- [`border-block`](/zh-CN/docs/Web/CSS/border-block)
-- [`outline`](/zh-CN/docs/Web/CSS/outline)
+- [`border`](/zh-CN/docs/Web/CSS/Reference/Properties/border)
+- [`border-block`](/zh-CN/docs/Web/CSS/Reference/Properties/border-block)
+- [`outline`](/zh-CN/docs/Web/CSS/Reference/Properties/outline)

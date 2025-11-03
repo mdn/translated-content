@@ -1,7 +1,6 @@
 ---
 title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
-original_slug: Web/CSS/shape-margin
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`shape-margin`** 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。

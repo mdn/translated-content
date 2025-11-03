@@ -1,7 +1,6 @@
 ---
 title: contain-intrinsic-inline-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-inline-size
-original_slug: Web/CSS/contain-intrinsic-inline-size
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) [逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values) **`contain-intrinsic-inline-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素行向尺寸。

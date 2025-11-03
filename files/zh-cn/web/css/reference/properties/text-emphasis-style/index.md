@@ -1,7 +1,6 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/Reference/Properties/text-emphasis-style
-original_slug: Web/CSS/text-emphasis-style
 l10n:
   sourceCommit: 5a0e89bad2e2bbbd32ce22b0c2bb419ae3b7c962
 ---

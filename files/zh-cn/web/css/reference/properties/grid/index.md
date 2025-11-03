@@ -1,7 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/Reference/Properties/grid
-original_slug: Web/CSS/grid
 ---
 
 **`grid`** 是一个 CSS 简写属性，可以用来设置以下属性：

@@ -1,7 +1,6 @@
 ---
 title: marker-end
 slug: Web/CSS/Reference/Properties/marker-end
-original_slug: Web/CSS/marker-end
 l10n:
   sourceCommit: 4ec412012be0b083ebcae4a56b425f49901143f2
 ---

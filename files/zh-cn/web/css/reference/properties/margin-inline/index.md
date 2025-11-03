@@ -1,7 +1,6 @@
 ---
 title: margin-inline
 slug: Web/CSS/Reference/Properties/margin-inline
-original_slug: Web/CSS/margin-inline
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`margin-inline`** 定义了元素的逻辑行首和行末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。

@@ -1,7 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/Reference/Properties/quotes
-original_slug: Web/CSS/quotes
 ---
 
 **`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式

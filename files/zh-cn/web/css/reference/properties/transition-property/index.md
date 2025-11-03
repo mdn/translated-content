@@ -1,7 +1,6 @@
 ---
 title: transition-property
 slug: Web/CSS/Reference/Properties/transition-property
-original_slug: Web/CSS/transition-property
 ---
 
 **`transition-property`** 指定应用过渡属性的名称。

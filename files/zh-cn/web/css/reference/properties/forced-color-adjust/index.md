@@ -1,7 +1,6 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/Reference/Properties/forced-color-adjust
-original_slug: Web/CSS/forced-color-adjust
 l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---

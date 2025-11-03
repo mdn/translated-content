@@ -1,7 +1,6 @@
 ---
 title: view-transition-name
 slug: Web/CSS/Reference/Properties/view-transition-name
-original_slug: Web/CSS/view-transition-name
 l10n:
   sourceCommit: 3a95c239db50c88fdde48daacb6c279006a422b9
 ---

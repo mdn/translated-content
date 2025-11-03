@@ -29,7 +29,7 @@ l10n:
 
 ## 示例
 
-使用 CSS `text-align` 替代，{{cssxref("text-align")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/text-align#表格对齐)。
+使用 CSS `text-align` 替代，{{cssxref("text-align")}} 页面有一个[示例](/zh-CN/docs/Web/CSS/Reference/Properties/text-align#表格对齐)。
 
 ## 规范
 

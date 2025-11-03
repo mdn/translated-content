@@ -1,7 +1,6 @@
 ---
 title: break-inside
 slug: Web/CSS/Reference/Properties/break-inside
-original_slug: Web/CSS/break-inside
 l10n:
   sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
 ---

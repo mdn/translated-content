@@ -1,10 +1,9 @@
 ---
 title: mask-border-width
 slug: Web/CSS/Reference/Properties/mask-border-width
-original_slug: Web/CSS/mask-border-width
 ---
 
-**`mask-border-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的 [mask border](/zh-CN/docs/Web/CSS/mask-border)的宽度
+**`mask-border-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的 [mask border](/zh-CN/docs/Web/CSS/Reference/Properties/mask-border)的宽度
 
 ## 语法
 
@@ -50,7 +49,7 @@ mask-border-width: unset;
 - \<number>
   - : mask 边框宽度为元素`border-width`的倍数。不能为负数。
 - `auto`
-  - : 使`mask-border`的宽度等于相应[`mask-border-slice`](/zh-CN/docs/Web/CSS/mask-border-slice)的固有宽度或高度（以适用者为准），如果图像没有所需的固有尺寸，则使用相应的边框宽度。
+  - : 使`mask-border`的宽度等于相应[`mask-border-slice`](/zh-CN/docs/Web/CSS/Reference/Properties/mask-border-slice)的固有宽度或高度（以适用者为准），如果图像没有所需的固有尺寸，则使用相应的边框宽度。
 
 ### Formal syntax
 

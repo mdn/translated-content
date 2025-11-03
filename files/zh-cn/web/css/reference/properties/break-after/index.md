@@ -1,7 +1,6 @@
 ---
 title: break-after
 slug: Web/CSS/Reference/Properties/break-after
-original_slug: Web/CSS/break-after
 ---
 
 **`break-after`** [CSS](/zh-CN/docs/Web/CSS) 属性描述在生成的盒子之后的页面，列或区域中断行为（换句话说，如何以及是否中断）。如果没有生成的盒子，则该属性将被忽略。

@@ -1,7 +1,6 @@
 ---
 title: color-scheme
 slug: Web/CSS/Reference/Properties/color-scheme
-original_slug: Web/CSS/color-scheme
 ---
 
 **`color-scheme`** CSS 属性允许元素指示它可以舒适地呈现哪些颜色方案。

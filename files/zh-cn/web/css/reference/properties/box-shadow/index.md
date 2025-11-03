@@ -1,7 +1,6 @@
 ---
 title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
-original_slug: Web/CSS/box-shadow
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **`box-shadow`** 属性用于在元素的框架上添加阴影效果。你可以在同一个元素上设置多个阴影效果，并用逗号将他们分隔开。该属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色。
@@ -48,7 +47,7 @@ box-shadow:
 }
 ```
 
-你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/docs/Web/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
+你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/docs/Web/CSS/Reference/Properties/text-shadow) 规则相同 (第一个阴影在最上面)。
 
 [Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
 

@@ -1,7 +1,6 @@
 ---
 title: text-size-adjust
 slug: Web/CSS/Reference/Properties/text-size-adjust
-original_slug: Web/CSS/text-size-adjust
 ---
 
 {{SeeCompatTable}}

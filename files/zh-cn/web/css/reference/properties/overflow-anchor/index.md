@@ -1,7 +1,6 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
-original_slug: Web/CSS/overflow-anchor
 ---
 
 **`overflow-anchor`** [CSS](/zh-CN/docs/Web/CSS) 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。

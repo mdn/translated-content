@@ -1,7 +1,6 @@
 ---
 title: place-content
 slug: Web/CSS/Reference/Properties/place-content
-original_slug: Web/CSS/place-content
 ---
 
 **`place-content`** 属性是{{CSSxRef("align-content")}} 和 {{CSSxRef("justify-content")}}的简写。使用这两个属性的值可以用于任何的布局情况。

@@ -1,7 +1,6 @@
 ---
 title: tab-size
 slug: Web/CSS/Reference/Properties/tab-size
-original_slug: Web/CSS/tab-size
 ---
 
 **`tab-size`** CSS 属性用于自定义制表符（U+0009）的宽度。

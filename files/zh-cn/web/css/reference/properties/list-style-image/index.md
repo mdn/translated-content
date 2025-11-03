@@ -1,10 +1,7 @@
 ---
 title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
-original_slug: Web/CSS/list-style-image
 ---
-
-## 概要
 
 **`list-style-image`** 属性用来指定一个能用来作为列表元素标记的图片。
 

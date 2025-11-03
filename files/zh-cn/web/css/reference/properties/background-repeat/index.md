@@ -1,7 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
-original_slug: Web/CSS/background-repeat
 ---
 
 **`background-repeat`** [CSS](/zh-CN/docs/Web/CSS) 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。

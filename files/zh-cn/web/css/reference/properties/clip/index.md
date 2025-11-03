@@ -1,12 +1,9 @@
 ---
 title: clip
 slug: Web/CSS/Reference/Properties/clip
-original_slug: Web/CSS/clip
 ---
 
 {{deprecated_header}}
-
-## 概述
 
 `clip` 属性定义了元素的哪一部分是可见的。`clip` 属性只适用于 {{ cssxref("position","position:absolute") }} 的元素。
 

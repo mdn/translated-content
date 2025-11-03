@@ -1,7 +1,6 @@
 ---
 title: corner-top-right-shape
 slug: Web/CSS/Reference/Properties/corner-top-right-shape
-original_slug: Web/CSS/corner-top-right-shape
 l10n:
   sourceCommit: 2a64c5583a2c61c729ffe1ee1e7709a5898f57b0
 ---

@@ -1,7 +1,6 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/Reference/Properties/border-top-right-radius
-original_slug: Web/CSS/border-top-right-radius
 ---
 
 `border-top-right-radius` 属性设置元素的右上角弧形，这个圆弧可能是一个椭圆，或者其中一个值是 0 的话，就是没有圆弧，换句话就是说拐角是方形的。

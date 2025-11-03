@@ -1,7 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/Reference/Properties/font-family
-original_slug: Web/CSS/font-family
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -58,7 +57,7 @@ section {
 
 应当至少在使用的 `font-family` 列表中添加一个通用的字体族名，，因为无法保证任何指定字体都可用。这可以让浏览器在必要时选择可接受的备用字体。
 
-`font-family` 属性指定的是一个优先级从高到低的字体列表。字体的选定*不是*在发现用户计算机上安装的列表中的第一个字体时停止。相反，对字体的选择是*逐字*进行的。也就是说即使某个字符周围都在某个字体中可以显示，但该字符在当前的字体文件中没有适合的图形，那么会继续尝试列表中靠后的字体。当一个字体只在某些特定的[样式](/zh-CN/docs/Web/CSS/font-style)、[变体](/zh-CN/docs/Web/CSS/font-variant)或[大小](/zh-CN/docs/Web/CSS/font-size)下有效时，这些属性的值也可能对字体族的选择造成影响。
+`font-family` 属性指定的是一个优先级从高到低的字体列表。字体的选定*不是*在发现用户计算机上安装的列表中的第一个字体时停止。相反，对字体的选择是*逐字*进行的。也就是说即使某个字符周围都在某个字体中可以显示，但该字符在当前的字体文件中没有适合的图形，那么会继续尝试列表中靠后的字体。当一个字体只在某些特定的[样式](/zh-CN/docs/Web/CSS/Reference/Properties/font-style)、[变体](/zh-CN/docs/Web/CSS/Reference/Properties/font-variant)或[大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)下有效时，这些属性的值也可能对字体族的选择造成影响。
 
 ## 语法
 

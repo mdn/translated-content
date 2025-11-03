@@ -1,7 +1,6 @@
 ---
 title: columns
 slug: Web/CSS/Reference/Properties/columns
-original_slug: Web/CSS/columns
 ---
 
 CSS 属性 **`columns`** 用来设置元素的列宽和列数。

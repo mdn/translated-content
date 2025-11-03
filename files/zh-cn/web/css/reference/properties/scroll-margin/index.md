@@ -1,7 +1,6 @@
 ---
 title: scroll-margin
 slug: Web/CSS/Reference/Properties/scroll-margin
-original_slug: Web/CSS/scroll-margin
 ---
 
 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-margin`** 同时设置元素的所有滚动外边距，其赋值方式较为类似 {{CSSXref("margin")}} 属性为元素外边距赋值的方式。

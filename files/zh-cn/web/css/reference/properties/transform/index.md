@@ -1,7 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/Reference/Properties/transform
-original_slug: Web/CSS/transform
 l10n:
   sourceCommit: 4940889b79f76552b95e092d48012cb6603a324b
 ---

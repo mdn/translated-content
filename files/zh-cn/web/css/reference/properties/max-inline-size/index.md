@@ -1,7 +1,6 @@
 ---
 title: max-inline-size
 slug: Web/CSS/Reference/Properties/max-inline-size
-original_slug: Web/CSS/max-inline-size
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`max-inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向最大尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("max-width")}} 或 {{CSSXref("max-height")}} 属性。

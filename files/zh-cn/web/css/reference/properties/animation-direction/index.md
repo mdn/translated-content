@@ -1,7 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/Reference/Properties/animation-direction
-original_slug: Web/CSS/animation-direction
 ---
 
 **`animation-direction`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是应正向播放、反向播放还是在正向和反向之间交替播放。

@@ -1,7 +1,6 @@
 ---
 title: padding-right
 slug: Web/CSS/Reference/Properties/padding-right
-original_slug: Web/CSS/padding-right
 l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---

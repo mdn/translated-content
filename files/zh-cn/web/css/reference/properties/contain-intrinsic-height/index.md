@@ -1,7 +1,6 @@
 ---
 title: contain-intrinsic-height
 slug: Web/CSS/Reference/Properties/contain-intrinsic-height
-original_slug: Web/CSS/contain-intrinsic-height
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`contain-intrinsic-length`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素高度。

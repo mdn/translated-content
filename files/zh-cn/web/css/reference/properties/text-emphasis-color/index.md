@@ -1,7 +1,6 @@
 ---
 title: text-emphasis-color
 slug: Web/CSS/Reference/Properties/text-emphasis-color
-original_slug: Web/CSS/text-emphasis-color
 l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---

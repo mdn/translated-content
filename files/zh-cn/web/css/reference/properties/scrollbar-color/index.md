@@ -1,7 +1,6 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
-original_slug: Web/CSS/scrollbar-color
 l10n:
   sourceCommit: c2a472faa513c29e43c014c76803fbb042c0a86b
 ---

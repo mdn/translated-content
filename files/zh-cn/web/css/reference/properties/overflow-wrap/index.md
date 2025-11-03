@@ -1,7 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/Reference/Properties/overflow-wrap
-original_slug: Web/CSS/overflow-wrap
 ---
 
 {{InteractiveExample("CSS Demo: overflow-wrap")}}

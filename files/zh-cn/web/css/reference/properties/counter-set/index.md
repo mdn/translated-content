@@ -1,7 +1,6 @@
 ---
 title: counter-set
 slug: Web/CSS/Reference/Properties/counter-set
-original_slug: Web/CSS/counter-set
 ---
 
 **`counter-set`** [CSS](/zh-CN/docs/Web/CSS) 属性将 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)设置为给定值。它会操作现有计数器的值，并且只有在元素上没有给定名称的计数器时才会创建新计数器。

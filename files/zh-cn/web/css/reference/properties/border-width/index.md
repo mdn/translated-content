@@ -1,7 +1,6 @@
 ---
 title: border-width
 slug: Web/CSS/Reference/Properties/border-width
-original_slug: Web/CSS/border-width
 l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
@@ -53,10 +52,10 @@ border-width: 0 4px 8px 12px;
 
 此属性是以下 CSS 属性的简写：
 
-- [`border-bottom-width`](/zh-CN/docs/Web/CSS/border-bottom-width)
-- [`border-left-width`](/zh-CN/docs/Web/CSS/border-left-width)
-- [`border-right-width`](/zh-CN/docs/Web/CSS/border-right-width)
-- [`border-top-width`](/zh-CN/docs/Web/CSS/border-top-width)
+- [`border-bottom-width`](/zh-CN/docs/Web/CSS/Reference/Properties/border-bottom-width)
+- [`border-left-width`](/zh-CN/docs/Web/CSS/Reference/Properties/border-left-width)
+- [`border-right-width`](/zh-CN/docs/Web/CSS/Reference/Properties/border-right-width)
+- [`border-top-width`](/zh-CN/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## 语法
 

@@ -1,7 +1,6 @@
 ---
 title: text-justify
 slug: Web/CSS/Reference/Properties/text-justify
-original_slug: Web/CSS/text-justify
 ---
 
 CSS 属性 **`text-justify`** 定义的是当文本的 {{cssxref("text-align")}} 属性被设置为 `:justify` 时的齐行方法。

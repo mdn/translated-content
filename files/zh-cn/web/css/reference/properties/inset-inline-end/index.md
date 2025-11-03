@@ -1,7 +1,6 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/Reference/Properties/inset-inline-end
-original_slug: Web/CSS/inset-inline-end
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`inset-inline-end`** 定义了元素的逻辑行末偏移，并根据元素的书写模式、行内方向和文本朝向对应至实体偏移。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 或 {{CSSXref("left")}} 属性。

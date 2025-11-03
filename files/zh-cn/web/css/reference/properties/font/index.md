@@ -1,7 +1,6 @@
 ---
 title: font
 slug: Web/CSS/Reference/Properties/font
-original_slug: Web/CSS/font
 l10n:
   sourceCommit: 3fd4e2ff8c4da3b4ff7be34eeda4dd0cbbfc1a15
 ---

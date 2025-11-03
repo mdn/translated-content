@@ -1,7 +1,6 @@
 ---
 title: overscroll-behavior-y
 slug: Web/CSS/Reference/Properties/overscroll-behavior-y
-original_slug: Web/CSS/overscroll-behavior-y
 ---
 
 **`overscroll-behavior-y`** CSS 属性设置浏览器在到达滚动区域的垂直边界时的行为。

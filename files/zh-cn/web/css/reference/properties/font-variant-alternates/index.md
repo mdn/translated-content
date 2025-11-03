@@ -1,7 +1,6 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
-original_slug: Web/CSS/font-variant-alternates
 ---
 
 **`font-variant-alternates`** CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。

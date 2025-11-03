@@ -1,7 +1,6 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
-original_slug: Web/CSS/overscroll-behavior
 ---
 
 **`overscroll-behavior`** CSS 属性是 {{cssxref("overscroll-behavior-x")}} 和 {{cssxref("overscroll-behavior-y")}} 属性的合并写法，让你可以控制浏览器过度滚动时的表现——也就是滚动到边界。

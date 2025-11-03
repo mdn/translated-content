@@ -1,7 +1,6 @@
 ---
 title: left
 slug: Web/CSS/Reference/Properties/left
-original_slug: Web/CSS/left
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **`left`**属性定义了定位元素的左外边距边界与其包含块左边界之间的偏移，非定位元素设置此属性无效。

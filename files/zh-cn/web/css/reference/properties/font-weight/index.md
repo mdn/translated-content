@@ -1,10 +1,7 @@
 ---
 title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
-original_slug: Web/CSS/font-weight
 ---
-
-## 概述
 
 {{Cssxref("font-weight")}} [CSS](/zh-CN/docs/Web/CSS) 属性指定了字体的粗细程度。一些字体只提供 `normal` 和 `bold` 两种值。
 

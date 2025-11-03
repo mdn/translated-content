@@ -1,7 +1,6 @@
 ---
 title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
-original_slug: Web/CSS/text-decoration
 l10n:
   sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
 ---
@@ -52,10 +51,10 @@ p {
 
 该属性是以下 CSS 属性的简写：
 
-- [`text-decoration-color`](/zh-CN/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/zh-CN/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/zh-CN/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/zh-CN/docs/Web/CSS/text-decoration-thickness)
+- [`text-decoration-color`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-color)
+- [`text-decoration-line`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-line)
+- [`text-decoration-style`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-style)
+- [`text-decoration-thickness`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
 
 ## 语法
 

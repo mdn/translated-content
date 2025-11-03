@@ -1,12 +1,11 @@
 ---
 title: border-image-source
 slug: Web/CSS/Reference/Properties/border-image-source
-original_slug: Web/CSS/border-image-source
 l10n:
   sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
-**`border-image-source`** [CSS](/zh-CN/docs/Web/CSS) 属性设置用以创建元素[边框图像](/zh-CN/docs/Web/CSS/border-image)的源图像。
+**`border-image-source`** [CSS](/zh-CN/docs/Web/CSS) 属性设置用以创建元素[边框图像](/zh-CN/docs/Web/CSS/Reference/Properties/border-image)的源图像。
 
 {{InteractiveExample("CSS Demo: border-image-source")}}
 

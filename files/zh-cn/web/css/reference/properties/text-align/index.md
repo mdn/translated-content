@@ -1,7 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/Reference/Properties/text-align
-original_slug: Web/CSS/text-align
 l10n:
   sourceCommit: eeabc0774ceb0b7447febce6f9743b903815b95b
 ---

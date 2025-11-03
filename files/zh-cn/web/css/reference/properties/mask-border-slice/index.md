@@ -1,12 +1,11 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/Reference/Properties/mask-border-slice
-original_slug: Web/CSS/mask-border-slice
 l10n:
   sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-**`mask-border-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将 {{cssxref("mask-border-source")}} 设置的图像划分为多个区域。这些区域用于构成元素的[遮罩边框](/zh-CN/docs/Web/CSS/mask-border)部分。
+**`mask-border-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将 {{cssxref("mask-border-source")}} 设置的图像划分为多个区域。这些区域用于构成元素的[遮罩边框](/zh-CN/docs/Web/CSS/Reference/Properties/mask-border)部分。
 
 ## 语法
 
@@ -59,7 +58,7 @@ mask-border-slice: unset;
 ![由 border-image 或 border-image-slice 属性定义的九个区域](border-image-slice.png)
 
 - 1-4 区为边角区域。每个区域只使用一次，以形成最终边框图像的边角。
-- 5-8 区为边缘区域。这些区域会在最终边框图像中进行[重复、缩放或其他修改](/zh-CN/docs/Web/CSS/mask-border-repeat)，以匹配元素的尺寸。
+- 5-8 区为边缘区域。这些区域会在最终边框图像中进行[重复、缩放或其他修改](/zh-CN/docs/Web/CSS/Reference/Properties/mask-border-repeat)，以匹配元素的尺寸。
 - 区域 9 是中间区域。默认情况下它被丢弃，但如果设置了关键字 `fill`，它就会像背景图片一样被使用。
 
 {{cssxref("mask-border-repeat")}}、{{cssxref("mask-border-width")}} 和 {{cssxref("mask-border-outset")}} 属性决定了这些区域如何用于形成最终的蒙版边框。
@@ -89,7 +88,7 @@ mask-border-slice: 30 fill;
 ```
 
 > [!NOTE]
-> [`mask-border`](/zh-CN/docs/Web/CSS/mask-border) 页面提供了一个有效的示例（使用 Chromium 支持的过期前缀边框蒙版属性），因此你可以大致了解效果。
+> [`mask-border`](/zh-CN/docs/Web/CSS/Reference/Properties/mask-border) 页面提供了一个有效的示例（使用 Chromium 支持的过期前缀边框蒙版属性），因此你可以大致了解效果。
 
 > [!NOTE]
 > 如果希望元素的内容可见，则必须包含 fill 关键字。

@@ -73,7 +73,7 @@ threeColumnArticles.forEach((article) => {
 
 ## CSS 访问
 
-注意，即使 data 属性为纯 HTML 属性，也同样能被 [CSS](/zh-CN/docs/Web/CSS) 访问。比如可以通过 CSS 的[生成内容](/zh-CN/docs/Web/CSS/content)使用函数 [`attr()`](/zh-CN/docs/Web/CSS/attr) 来显示文章父数据的内容：
+注意，即使 data 属性为纯 HTML 属性，也同样能被 [CSS](/zh-CN/docs/Web/CSS) 访问。比如可以通过 CSS 的[生成内容](/zh-CN/docs/Web/CSS/Reference/Properties/content)使用函数 [`attr()`](/zh-CN/docs/Web/CSS/attr) 来显示文章父数据的内容：
 
 ```css
 article::before {

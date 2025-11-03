@@ -1,7 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/Reference/Properties/object-position
-original_slug: Web/CSS/object-position
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`**）在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。

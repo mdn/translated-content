@@ -1,10 +1,7 @@
 ---
 title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
-original_slug: Web/CSS/flex-wrap
 ---
-
-## 概述
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`flex-wrap`** 属性指定 flex 元素单行显示还是多行显示。如果允许换行，这个属性允许你控制行的堆叠方向。
 

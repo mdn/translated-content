@@ -1,7 +1,6 @@
 ---
 title: border-block-color
 slug: Web/CSS/Reference/Properties/border-block-color
-original_slug: Web/CSS/border-block-color
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-color`** 定义了元素的逻辑块向的边框颜色，并根据元素的书写模式、行内方向和文本朝向对应至实体边框颜色。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-color")}} 和 {{CSSXref("border-bottom-color")}}，或者 {{CSSXref("border-right-color")}} 和 {{CSSXref("border-left-color")}} 属性。

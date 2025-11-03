@@ -1,7 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/Reference/Properties/mask
-original_slug: Web/CSS/mask
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`mask`** 允许使用者通过遮罩或者裁切特定区域的图片的方式来隐藏一个元素的部分或者全部可见区域。

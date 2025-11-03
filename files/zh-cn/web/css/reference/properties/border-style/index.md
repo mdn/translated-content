@@ -1,10 +1,7 @@
 ---
 title: border-style
 slug: Web/CSS/Reference/Properties/border-style
-original_slug: Web/CSS/border-style
 ---
-
-## 概述
 
 `border-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用来设定元素所有边框的样式。
 

@@ -1,7 +1,6 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/Reference/Properties/text-decoration-color
-original_slug: Web/CSS/text-decoration-color
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-color`** 用于设置文本修饰线的颜色，文本修饰线是通过 {{ cssxref("text-decoration-line") }} 属性指定的。

@@ -1,7 +1,6 @@
 ---
 title: background-position
 slug: Web/CSS/Reference/Properties/background-position
-original_slug: Web/CSS/background-position
 ---
 
 **`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。

@@ -1,7 +1,6 @@
 ---
 title: margin-left
 slug: Web/CSS/Reference/Properties/margin-left
-original_slug: Web/CSS/margin-left
 l10n:
   sourceCommit: 27977f96015d1b74e743fa3762672894e087bd3d
 ---

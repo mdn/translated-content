@@ -1,7 +1,6 @@
 ---
 title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
-original_slug: Web/CSS/-moz-float-edge
 l10n:
   sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---

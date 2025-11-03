@@ -1,7 +1,6 @@
 ---
 title: border-right-width
 slug: Web/CSS/Reference/Properties/border-right-width
-original_slug: Web/CSS/border-right-width
 l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---

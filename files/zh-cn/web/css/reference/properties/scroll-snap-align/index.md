@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/Reference/Properties/scroll-snap-align
-original_slug: Web/CSS/scroll-snap-align
 ---
 
 **`scroll-snap-align`** 属性将盒子的吸附位置指定为其吸附区域（作为对齐对象）在其吸附容器的吸附口（作为对齐容器）中的对齐方式。其两值分别指定了在块向轴盒行向轴上的吸附对齐方式。若仅指定一值，则第二值默认为同一值。

@@ -1,7 +1,6 @@
 ---
 title: hyphens
 slug: Web/CSS/Reference/Properties/hyphens
-original_slug: Web/CSS/hyphens
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`hyphens`** 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。

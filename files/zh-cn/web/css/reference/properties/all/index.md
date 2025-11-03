@@ -1,7 +1,6 @@
 ---
 title: all
 slug: Web/CSS/Reference/Properties/all
-original_slug: Web/CSS/all
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -184,7 +183,7 @@ blockquote {
 
 {{EmbedLiveSample("B. all: initial", "200", "125")}}
 
-将 `blockquote` 规则中的 `all` 属性设置为 `initial` 后，{{HTMLElement("blockquote")}} 元素不再使用浏览器默认样式：它现在是*行级*元素（初始值），其 [`background-color`](/zh-CN/docs/Web/CSS/background-color#形式定义)是 `transparent`（初始值）、[`font-size`](/zh-CN/docs/Web/CSS/font-size#形式定义) 为 `medium`，[`color`](/zh-CN/docs/Web/CSS/color#形式定义) 为 `black`（初始值）。
+将 `blockquote` 规则中的 `all` 属性设置为 `initial` 后，{{HTMLElement("blockquote")}} 元素不再使用浏览器默认样式：它现在是*行级*元素（初始值），其 [`background-color`](/zh-CN/docs/Web/CSS/Reference/Properties/background-color#形式定义)是 `transparent`（初始值）、[`font-size`](/zh-CN/docs/Web/CSS/Reference/Properties/font-size#形式定义) 为 `medium`，[`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color#形式定义) 为 `black`（初始值）。
 
 #### C. `all: inherit`
 
@@ -236,7 +235,7 @@ blockquote {
 
 {{EmbedLiveSample("d._all_unset", "200", "125")}}
 
-当 `unset` 值应用于 `blockquote` 规则中的 `all` 属性时，{{HTMLElement("blockquote")}} 元素不会使用浏览器的默认样式。因为 [`background-color`](/zh-CN/docs/Web/CSS/background-color#形式定义) 是一个非继承属性，而 [`font-size`](/zh-CN/docs/Web/CSS/font-size#形式定义) 和 [`color`](/zh-CN/docs/Web/CSS/color#形式定义)是继承属性。`<blockquote>` 元素现在是*行级*元素（初始值），它的 {{cssxref("background-color")}} 是 `transparent`（初始值），但它的 {{cssxref("font-size")}} 仍然是 `small`（继承值），它的 {{cssxref("color")}} 是 `blue`（继承值）。
+当 `unset` 值应用于 `blockquote` 规则中的 `all` 属性时，{{HTMLElement("blockquote")}} 元素不会使用浏览器的默认样式。因为 [`background-color`](/zh-CN/docs/Web/CSS/Reference/Properties/background-color#形式定义) 是一个非继承属性，而 [`font-size`](/zh-CN/docs/Web/CSS/Reference/Properties/font-size#形式定义) 和 [`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color#形式定义)是继承属性。`<blockquote>` 元素现在是*行级*元素（初始值），它的 {{cssxref("background-color")}} 是 `transparent`（初始值），但它的 {{cssxref("font-size")}} 仍然是 `small`（继承值），它的 {{cssxref("color")}} 是 `blue`（继承值）。
 
 #### E. `all: revert`
 

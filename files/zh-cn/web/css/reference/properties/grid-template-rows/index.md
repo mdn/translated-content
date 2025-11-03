@@ -1,7 +1,6 @@
 ---
 title: grid-template-rows
 slug: Web/CSS/Reference/Properties/grid-template-rows
-original_slug: Web/CSS/grid-template-rows
 ---
 
 `grid-template-rows` 该属性是基于 {{glossary("grid rows", "网格行")}} 的维度，去定义网格线的名称和网格轨道的尺寸大小。

@@ -1,7 +1,6 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/Reference/Properties/mask-border-repeat
-original_slug: Web/CSS/mask-border-repeat
 ---
 
 **`mask-border-repeat`** [CSS](/zh-CN/docs/Web/CSS) 属性设置如何调整源图像的边缘区域以适应元素遮罩边框的尺寸。
@@ -29,7 +28,7 @@ mask-border-repeat: unset;
 - 指定一个值时，它会在**四个边**应用相同的行为。
 - 指定**两个**值时，第一个应用于**顶部和底部**，第二个应用于**左侧和右侧**。
 
-### Values
+### 值
 
 - `stretch`
   - : 拉伸源图像的边缘区域以填充每个边界之间的间隙。
@@ -40,7 +39,7 @@ mask-border-repeat: unset;
 - `space`
   - : 源图像的边缘区域被平铺（重复）以填充每个边框之间的间隙。平铺图形之间将分配额外的空间，以实现适当的贴合。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 

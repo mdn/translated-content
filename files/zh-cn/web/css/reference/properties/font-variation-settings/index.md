@@ -1,7 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
-original_slug: Web/CSS/font-variation-settings
 l10n:
   sourceCommit: 418b3ebf6464716649125199385c39d86c944973
 ---

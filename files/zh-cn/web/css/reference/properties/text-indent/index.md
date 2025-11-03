@@ -1,7 +1,6 @@
 ---
 title: text-indent
 slug: Web/CSS/Reference/Properties/text-indent
-original_slug: Web/CSS/text-indent
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
@@ -226,11 +225,11 @@ p {
 
 - [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - 相关 CSS 属性：
-  - [`text-justify`](/zh-CN/docs/Web/CSS/text-justify)
-  - [`text-orientation`](/zh-CN/docs/Web/CSS/text-orientation)
-  - [`text-overflow`](/zh-CN/docs/Web/CSS/text-overflow)
-  - [`text-rendering`](/zh-CN/docs/Web/CSS/text-rendering)
-  - [`text-transform`](/zh-CN/docs/Web/CSS/text-transform)
+  - [`text-justify`](/zh-CN/docs/Web/CSS/Reference/Properties/text-justify)
+  - [`text-orientation`](/zh-CN/docs/Web/CSS/Reference/Properties/text-orientation)
+  - [`text-overflow`](/zh-CN/docs/Web/CSS/Reference/Properties/text-overflow)
+  - [`text-rendering`](/zh-CN/docs/Web/CSS/Reference/Properties/text-rendering)
+  - [`text-transform`](/zh-CN/docs/Web/CSS/Reference/Properties/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
 - [CSS 文本装饰](/zh-CN/docs/Web/CSS/CSS_text_decoration) CSS 模块

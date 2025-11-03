@@ -1,12 +1,9 @@
 ---
 title: border-spacing
 slug: Web/CSS/Reference/Properties/border-spacing
-original_slug: Web/CSS/border-spacing
 ---
 
-## 概述
-
-`border-spacing` 属性指定相邻单元格边框之间的距离（只适用于 [边框分离模式](/zh-CN/docs/Web/CSS/border-collapse) ）。相当于 HTML 中的 `cellspacing` 属性，但是第二个可选的值可以用来设置不同于水平间距的垂直间距。
+`border-spacing` 属性指定相邻单元格边框之间的距离（只适用于 [边框分离模式](/zh-CN/docs/Web/CSS/Reference/Properties/border-collapse) ）。相当于 HTML 中的 `cellspacing` 属性，但是第二个可选的值可以用来设置不同于水平间距的垂直间距。
 
 `border-spacing` 值也适用于表格的外层边框上，即表格的边框和第一行的、第一列的、最后一行的、最后一列的单元格之间的间距是由表格相应的（水平的或垂直的）边框间距（border-spacing）和相应的（上，右，下或左）内边距之和。
 

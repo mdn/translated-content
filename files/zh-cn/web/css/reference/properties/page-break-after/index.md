@@ -1,7 +1,6 @@
 ---
 title: page-break-after
 slug: Web/CSS/Reference/Properties/page-break-after
-original_slug: Web/CSS/page-break-after
 ---
 
 **`page-break-after`** CSS 属性调整当前元素之后的分页符。
@@ -87,5 +86,5 @@ div.footnotes {
 
 ## See also
 
-- [`page-break-before`](/zh-CN/docs/CSS/page-break-before), [`page-break-inside`](/zh-CN/docs/CSS/page-break-inside)
-- [`orphans`](/zh-CN/docs/CSS/orphans), [`widows`](/zh-CN/docs/CSS/widows)
+- [`page-break-before`](/zh-CN/docs/Web/CSS/Reference/Properties/page-break-before), [`page-break-inside`](/zh-CN/docs/Web/CSS/Reference/Properties/page-break-inside)
+- [`orphans`](/zh-CN/docs/Web/CSS/Reference/Properties/orphans), [`widows`](/zh-CN/docs/Web/CSS/Reference/Properties/widows)

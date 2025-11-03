@@ -1,7 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/Reference/Properties/transform-origin
-original_slug: Web/CSS/transform-origin
 ---
 
 **`transform-origin`** CSS 属性让你更改一个元素变形的原点。

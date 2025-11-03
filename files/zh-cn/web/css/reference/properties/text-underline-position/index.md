@@ -1,7 +1,6 @@
 ---
 title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
-original_slug: Web/CSS/text-underline-position
 ---
 
 当 {{cssxref("text-decoration")}}属性的值设置为 `underline` 之后，可以用 **`text-underline-position`** 属性为其设置下划线的位置。

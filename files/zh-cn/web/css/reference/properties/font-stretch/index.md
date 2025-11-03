@@ -1,7 +1,6 @@
 ---
 title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
-original_slug: Web/CSS/font-stretch
 l10n:
   sourceCommit: 7b029638cf0f82b3e70a3e7c242db001d198c047
 ---

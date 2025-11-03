@@ -1,10 +1,9 @@
 ---
 title: border-image-width
 slug: Web/CSS/Reference/Properties/border-image-width
-original_slug: Web/CSS/border-image-width
 ---
 
-[CSS](/zh-CN/docs/Web/CSS)属性 **`border-image-width`** 指定了 [边界图像 (border image](/zh-CN/docs/Web/CSS/border-image)) 的宽度
+[CSS](/zh-CN/docs/Web/CSS)属性 **`border-image-width`** 指定了 [边界图像 (border image](/zh-CN/docs/Web/CSS/Reference/Properties/border-image)) 的宽度
 
 {{InteractiveExample("CSS Demo: border-image-width")}}
 

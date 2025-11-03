@@ -1,7 +1,6 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/Reference/Properties/padding-inline-start
-original_slug: Web/CSS/padding-inline-start
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-inline-start`** 定义了元素的逻辑行首内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。

@@ -1,7 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
-original_slug: Web/CSS/vertical-align
 l10n:
   sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---

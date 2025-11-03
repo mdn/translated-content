@@ -1,7 +1,6 @@
 ---
 title: border-collapse
 slug: Web/CSS/Reference/Properties/border-collapse
-original_slug: Web/CSS/border-collapse
 ---
 
 **`border-collapse`** [CSS](/zh-CN/docs/Web/CSS) 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。

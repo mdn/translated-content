@@ -1,7 +1,6 @@
 ---
 title: appearance
 slug: Web/CSS/Reference/Properties/appearance
-original_slug: Web/CSS/appearance
 ---
 
 **`appearance`** CSS 属性用于控制 UI 控件的基于操作系统主题的原生外观。

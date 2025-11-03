@@ -1,7 +1,6 @@
 ---
 title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
-original_slug: Web/CSS/font-kerning
 ---
 
 **`font-kerning`** CSS 属性设置是否使用字体中储存的字距信息。

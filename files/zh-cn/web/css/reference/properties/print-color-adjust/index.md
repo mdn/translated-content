@@ -1,7 +1,6 @@
 ---
 title: print-color-adjust
 slug: Web/CSS/Reference/Properties/print-color-adjust
-original_slug: Web/CSS/print-color-adjust
 l10n:
   sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---

@@ -1,7 +1,6 @@
 ---
 title: border-bottom-style
 slug: Web/CSS/Reference/Properties/border-bottom-style
-original_slug: Web/CSS/border-bottom-style
 l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---

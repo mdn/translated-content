@@ -1,7 +1,6 @@
 ---
 title: transform-style
 slug: Web/CSS/Reference/Properties/transform-style
-original_slug: Web/CSS/transform-style
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`transform-style`** 设置元素的子元素是位于 3D 空间中还是平面中。

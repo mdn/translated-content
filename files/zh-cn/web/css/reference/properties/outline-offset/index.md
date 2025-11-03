@@ -1,12 +1,11 @@
 ---
 title: outline-offset
 slug: Web/CSS/Reference/Properties/outline-offset
-original_slug: Web/CSS/outline-offset
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`outline-offset`** 设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`outline-offset`** 设置[轮廓](/zh-CN/docs/Web/CSS/Reference/Properties/outline)与元素边缘或边框之间的间距。
 
 {{InteractiveExample("CSS 演示：outline-offset")}}
 

@@ -1,7 +1,6 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
-original_slug: Web/CSS/font-variant-ligatures
 ---
 
 **`font-variant-ligatures`** 属性控制着其所应用元素文本的 {{Glossary("ligature", "ligatures")}} 与 {{Glossary("contextual forms")}} 。会使文字最终的表现形式更加统一。

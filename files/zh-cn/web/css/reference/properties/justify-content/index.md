@@ -1,7 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/Reference/Properties/justify-content
-original_slug: Web/CSS/justify-content
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **`justify-content`** 属性定义浏览器如何沿着弹性容器的{{Glossary("Main Axis", "主轴")}}和网格容器的行向轴分配内容元素之间和周围的空间。

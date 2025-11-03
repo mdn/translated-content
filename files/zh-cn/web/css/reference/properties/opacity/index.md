@@ -1,7 +1,6 @@
 ---
 title: opacity
 slug: Web/CSS/Reference/Properties/opacity
-original_slug: Web/CSS/opacity
 ---
 
 opacity 属性指定了一个元素的**不透明度**。换言之，opacity 属性指定了一个元素后面的背景的被覆盖程度。

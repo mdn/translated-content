@@ -1,7 +1,6 @@
 ---
 title: position
 slug: Web/CSS/Reference/Properties/position
-original_slug: Web/CSS/position
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -132,7 +131,7 @@ position: unset;
     该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。
 
     > [!NOTE]
-    > 至少有一个 [inset](/zh-CN/docs/Web/CSS/inset) 属性（{{cssxref("top")}}、{{cssxref("inset-block-start")}}、{{cssxref("right")}}、{{cssxref("inset-inline-end")}} 等）需要设置为非 `auto` 值。如果某个轴的两个 `inset` 属性都设置为 `auto`，则该轴上的 `sticky` 值将表现为 `relative`。
+    > 至少有一个 [inset](/zh-CN/docs/Web/CSS/Reference/Properties/inset) 属性（{{cssxref("top")}}、{{cssxref("inset-block-start")}}、{{cssxref("right")}}、{{cssxref("inset-inline-end")}} 等）需要设置为非 `auto` 值。如果某个轴的两个 `inset` 属性都设置为 `auto`，则该轴上的 `sticky` 值将表现为 `relative`。
 
 ## 描述
 
@@ -274,7 +273,7 @@ span {
 
 ### 固定定位
 
-固定定位与绝对定位类似，但元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)是*视口*建立的初始包含块，除非任何祖先的 `transform`、`perspective` 或 `filter` 属性设置为除 `none` 以外的其他属性（请参阅[固定定位包含块](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block)），这样就会使该祖先取代元素[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。这可以用来创建一个“浮动”元素，无论滚动与否，它都会保持在同一位置。在下面的示例中，盒子“一”被固定在距离页面顶部 80 像素和左侧 10 像素的位置。即使滚动后，它也会保持在相对于视口的同一位置。此外，当 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性设置为 `transform` 时，会建立一个新的包含块。
+固定定位与绝对定位类似，但元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)是*视口*建立的初始包含块，除非任何祖先的 `transform`、`perspective` 或 `filter` 属性设置为除 `none` 以外的其他属性（请参阅[固定定位包含块](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block)），这样就会使该祖先取代元素[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。这可以用来创建一个“浮动”元素，无论滚动与否，它都会保持在同一位置。在下面的示例中，盒子“一”被固定在距离页面顶部 80 像素和左侧 10 像素的位置。即使滚动后，它也会保持在相对于视口的同一位置。此外，当 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性设置为 `transform` 时，会建立一个新的包含块。
 
 #### HTML
 

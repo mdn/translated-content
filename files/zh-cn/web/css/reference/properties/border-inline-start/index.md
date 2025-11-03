@@ -1,7 +1,6 @@
 ---
 title: border-inline-start
 slug: Web/CSS/Reference/Properties/border-inline-start
-original_slug: Web/CSS/border-inline-start
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-start`** 为[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑行首边框的各属性值。

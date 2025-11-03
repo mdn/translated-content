@@ -1,7 +1,6 @@
 ---
 title: text-align-last
 slug: Web/CSS/Reference/Properties/text-align-last
-original_slug: Web/CSS/text-align-last
 ---
 
 CSS 属性 **`text-align-last`** 指定一行或者块中的最后一行在被强制换行之前的对齐规则。

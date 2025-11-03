@@ -1,7 +1,6 @@
 ---
 title: gap
 slug: Web/CSS/Reference/Properties/gap
-original_slug: Web/CSS/gap
 l10n:
   sourceCommit: 50171049701b814d205e8750d9049593ddd29143
 ---

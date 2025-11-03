@@ -1,7 +1,6 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
-original_slug: Web/CSS/animation-timing-function
 ---
 
 **`animation-timing-function`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画在每个周期的持续时间内如何进行。

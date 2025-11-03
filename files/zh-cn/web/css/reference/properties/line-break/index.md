@@ -1,7 +1,6 @@
 ---
 title: line-break
 slug: Web/CSS/Reference/Properties/line-break
-original_slug: Web/CSS/line-break
 ---
 
 设置 CSS 属性 **`line-break`** 可以用来处理如何断开（break lines）带有标点符号的中文、日文或韩文（CJK）文本的行。

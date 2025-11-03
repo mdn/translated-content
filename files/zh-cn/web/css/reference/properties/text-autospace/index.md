@@ -1,7 +1,6 @@
 ---
 title: text-autospace
 slug: Web/CSS/Reference/Properties/text-autospace
-original_slug: Web/CSS/text-autospace
 l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---

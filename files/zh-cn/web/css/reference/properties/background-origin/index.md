@@ -1,10 +1,7 @@
 ---
 title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
-original_slug: Web/CSS/background-origin
 ---
-
-## 摘要
 
 `background-origin` 规定了指定背景图片{{cssxref("background-image")}} 属性的原点位置的背景相对区域。
 

@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
-original_slug: Web/CSS/scroll-snap-type
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`scroll-snap-type`** 设置了在有滚动容器的情形下吸附至吸附点的严格程度。

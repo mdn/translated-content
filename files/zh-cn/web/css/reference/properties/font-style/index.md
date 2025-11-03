@@ -1,7 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/Reference/Properties/font-style
-original_slug: Web/CSS/font-style
 ---
 
 **`font-style`** CSS 属性允许你选择 {{cssxref("font-family")}} 字体下的 `italic` 或 `oblique` 样式。

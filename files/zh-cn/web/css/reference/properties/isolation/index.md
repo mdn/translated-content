@@ -1,7 +1,6 @@
 ---
 title: isolation
 slug: Web/CSS/Reference/Properties/isolation
-original_slug: Web/CSS/isolation
 l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---

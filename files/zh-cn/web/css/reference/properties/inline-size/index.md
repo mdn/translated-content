@@ -1,7 +1,6 @@
 ---
 title: inline-size
 slug: Web/CSS/Reference/Properties/inline-size
-original_slug: Web/CSS/inline-size
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("width")}} 或 {{CSSXref("height")}} 属性。

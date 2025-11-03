@@ -1,7 +1,6 @@
 ---
 title: border-top-color
 slug: Web/CSS/Reference/Properties/border-top-color
-original_slug: Web/CSS/border-top-color
 ---
 
 **`border-top-color`** 属性用以设置某元素顶部 {{cssxref("border")}}的颜色。通常，用{{cssxref("border-color")}} 或 {{cssxref("border-top")}} 设置该颜色更为便捷可取。

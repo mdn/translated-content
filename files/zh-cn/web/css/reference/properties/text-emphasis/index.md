@@ -1,7 +1,6 @@
 ---
 title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
-original_slug: Web/CSS/text-emphasis
 l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
@@ -53,8 +52,8 @@ p {
 
 此属性是以下 CSS 属性的简写：
 
-- [`text-emphasis-color`](/zh-CN/docs/Web/CSS/text-emphasis-color)
-- [`text-emphasis-style`](/zh-CN/docs/Web/CSS/text-emphasis-style)
+- [`text-emphasis-color`](/zh-CN/docs/Web/CSS/Reference/Properties/text-emphasis-color)
+- [`text-emphasis-style`](/zh-CN/docs/Web/CSS/Reference/Properties/text-emphasis-style)
 
 ## 语法
 

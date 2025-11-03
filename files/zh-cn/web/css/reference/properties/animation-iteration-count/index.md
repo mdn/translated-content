@@ -1,7 +1,6 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
-original_slug: Web/CSS/animation-iteration-count
 ---
 
 **`animation-iteration-count`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画序列在停止前应播放的次数

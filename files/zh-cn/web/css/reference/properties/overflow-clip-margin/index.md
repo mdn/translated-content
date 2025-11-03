@@ -1,12 +1,11 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/Reference/Properties/overflow-clip-margin
-original_slug: Web/CSS/overflow-clip-margin
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-clip-margin`** 用于确定当元素设置了 [`overflow: clip`](/zh-CN/docs/Web/CSS/overflow) 时，其内容在被裁剪前可以绘制到边界之外的距离。由该属性定义的边界称为盒子的*溢出裁剪边缘*。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-clip-margin`** 用于确定当元素设置了 [`overflow: clip`](/zh-CN/docs/Web/CSS/Reference/Properties/overflow) 时，其内容在被裁剪前可以绘制到边界之外的距离。由该属性定义的边界称为盒子的*溢出裁剪边缘*。
 
 ## 语法
 

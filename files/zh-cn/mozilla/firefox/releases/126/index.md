@@ -47,7 +47,7 @@ l10n:
 
   （[Firefox bug 1322186](https://bugzil.la/1322186)）。
 
-- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
+- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
 
 #### DOM
 

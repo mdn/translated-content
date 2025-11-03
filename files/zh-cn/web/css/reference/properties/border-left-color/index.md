@@ -1,7 +1,6 @@
 ---
 title: border-left-color
 slug: Web/CSS/Reference/Properties/border-left-color
-original_slug: Web/CSS/border-left-color
 ---
 
 **`border-left-color`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 更加方便和普遍。

@@ -1,7 +1,6 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/Reference/Properties/border-bottom-left-radius
-original_slug: Web/CSS/border-bottom-left-radius
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

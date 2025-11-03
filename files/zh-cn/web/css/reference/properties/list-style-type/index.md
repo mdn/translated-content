@@ -1,7 +1,6 @@
 ---
 title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
-original_slug: Web/CSS/list-style-type
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 `list-style-type` 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。
@@ -118,9 +117,9 @@ list-style-type: unset;
 
 list-style-type 的属性值可以是以下任意一项：
 
-- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type#%3Ccustom-ident%3E) value
-- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type#symbols()>) value
-- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type#%3Cstring%3E) value
+- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/Reference/Properties/list-style-type#%3Ccustom-ident%3E) value
+- a [`symbols()`](</zh-CN/docs/Web/CSS/Reference/Properties/list-style-type#symbols()>) value
+- a [`<string>`](/zh-CN/docs/Web/CSS/Reference/Properties/list-style-type#%3Cstring%3E) value
 - the keyword [`none`](#none).
 
 ### 取值
@@ -265,7 +264,7 @@ ol.shortcut {
 
 ## Accessibility concerns
 
-The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type`value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/zh-CN/docs/Web/CSS/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
+The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type`value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/zh-CN/docs/Web/CSS/Reference/Properties/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
 
 ```css
 ul {

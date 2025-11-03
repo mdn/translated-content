@@ -1,7 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/Reference/Properties/background-color
-original_slug: Web/CSS/background-color
 l10n:
   sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
@@ -94,7 +93,7 @@ background-color: unset;
 
 有一点很重要，要确保文本颜色与文本所在背景之间的对比度足够高，以便低视力的人群能够阅读页面内容。
 
-颜色的对比度是通过比较文本和背景颜色值的亮度确定的。要符合当前的 [Web 内容无障碍指南（WCAG）](https://www.w3.org/WAI/intro/wcag)，文本至少要有 4.5:1 的比例，大文本（比如标题）至少要有 3:1 的比例。具有[加粗](/zh-CN/docs/Web/CSS/font-weight)和至少 18.66px 大小，或者具有至少 24px 大小的文本称为大文本。
+颜色的对比度是通过比较文本和背景颜色值的亮度确定的。要符合当前的 [Web 内容无障碍指南（WCAG）](https://www.w3.org/WAI/intro/wcag)，文本至少要有 4.5:1 的比例，大文本（比如标题）至少要有 3:1 的比例。具有[加粗](/zh-CN/docs/Web/CSS/Reference/Properties/font-weight)和至少 18.66px 大小，或者具有至少 24px 大小的文本称为大文本。
 
 - [WebAIM：颜色对比度检查器](https://webaim.org/resources/contrastchecker/)
 - [MDN 理解 WCAG，指南 1.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)

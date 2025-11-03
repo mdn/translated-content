@@ -1,7 +1,6 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/Reference/Properties/scroll-padding-inline
-original_slug: Web/CSS/scroll-padding-inline
 ---
 
 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding-inline`** 设置了元素的行向滚动内边距。

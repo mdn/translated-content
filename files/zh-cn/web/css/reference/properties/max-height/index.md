@@ -1,7 +1,6 @@
 ---
 title: max-height
 slug: Web/CSS/Reference/Properties/max-height
-original_slug: Web/CSS/max-height
 l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---

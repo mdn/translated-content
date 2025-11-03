@@ -1,7 +1,6 @@
 ---
 title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
-original_slug: Web/CSS/column-fill
 l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---

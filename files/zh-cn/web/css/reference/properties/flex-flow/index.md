@@ -1,10 +1,7 @@
 ---
 title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
-original_slug: Web/CSS/flex-flow
 ---
-
-## 概述
 
 [CSS](/zh-CN/docs/Web/CSS) **`flex-flow`** 属性是 flex-direction 和 flex-wrap 的简写。
 
@@ -41,7 +38,7 @@ flex-flow: unset;
 
 ### 取值
 
-更多取值信息请查看 [`flex-direction`](/zh-CN/docs/Web/CSS/flex-direction) 和 [`flex-wrap`](/zh-CN/docs/Web/CSS/flex-wrap)
+更多取值信息请查看 [`flex-direction`](/zh-CN/docs/Web/CSS/Reference/Properties/flex-direction) 和 [`flex-wrap`](/zh-CN/docs/Web/CSS/Reference/Properties/flex-wrap)
 
 ## 示例
 

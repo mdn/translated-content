@@ -1,7 +1,6 @@
 ---
 title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
-original_slug: Web/CSS/content-visibility
 ---
 
 {{SeeCompatTable}}

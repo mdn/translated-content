@@ -1,7 +1,6 @@
 ---
 title: 自定义属性（--*）：CSS 变量
 slug: Web/CSS/Reference/Properties/--*
-original_slug: Web/CSS/--*
 ---
 
 带有前缀 `--` 的属性名，比如 `--example--name`，表示的是带有值的自定义属性，其可以通过 {{cssxref("var", "var()")}} 函数在全文档范围内复用的。

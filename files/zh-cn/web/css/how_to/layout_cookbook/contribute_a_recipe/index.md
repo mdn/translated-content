@@ -16,7 +16,7 @@ l10n:
 
 - 一个实时示例，存储在 [CSS 示例 GitHub 存储库](https://github.com/mdn/css-examples)之中。
 - 这份示例的可供下载版本，同样也存储在 CSS 示例仓库之中。
-- 在本站 [CSS 布局手册](/zh-CN/docs/Web/CSS/Layout_cookbook)中的页面应包含以下组成部分：
+- 在本站 [CSS 布局手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)中的页面应包含以下组成部分：
   1. 介绍
   2. 要求
   3. 方案
@@ -44,7 +44,7 @@ l10n:
 
 ### 2. 创建实时示例
 
-手册页面上的实时示例，例如[居中元素](/zh-CN/docs/Web/CSS/Layout_cookbook/Center_an_element)的示例，以及 MDN 上的其他示例，允许读者尝试代码并更改相关部分，而不会被所有代码淹没。你的方案将通过一个或多个示例进行演示。
+手册页面上的实时示例，例如[居中元素](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element)的示例，以及 MDN 上的其他示例，允许读者尝试代码并更改相关部分，而不会被所有代码淹没。你的方案将通过一个或多个示例进行演示。
 
 分叉 [CSS 示例仓库](https://github.com/mdn/css-examples)，然后查看 `css-cookbook` 文件夹。有一个 [cookbook-template.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/cookbook-template.html) 文件。复制此文件并以此为起点。将其保存在 `css-cookbook` 目录中，并为你的模式选择一个有意义的名称。模板包含注释，指导你在适当的地方添加各个部分。
 
@@ -55,7 +55,7 @@ l10n:
 - 你需要在两个地方添加组件的 HTML：首先是在带有类 `preview` 的部分，然后是在带有类 `playable-html` 的 `<textarea>` 内。
 - 可编辑的 CSS 也必须从第二个 `<head>` 块复制到 `playable-css` 部分。
 
-一个简单的可用示例是 [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html)，它嵌入在[居中元素](/zh-CN/docs/Web/CSS/Layout_cookbook/Center_an_element)页面上。你可以使用它来查看如何正确添加各个部分。
+一个简单的可用示例是 [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html)，它嵌入在[居中元素](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element)页面上。你可以使用它来查看如何正确添加各个部分。
 
 如果你已经分叉了仓库并将我们的 CSS 和 JavaScript 文件与示例一起合并，在浏览器中打开你的实时示例应该会显示所有内容，就像在 MDN 页面上显示的那样。
 
@@ -79,11 +79,11 @@ l10n:
 
 在你的示例 PR 合并后，在[布局手册目录](https://github.com/mdn/content/tree/main/files/zh-CN/web/css/layout_cookbook)中创建一个新页面的拉取请求。使用我们的[手册页面模板](https://github.com/mdn/content/blob/main/files/zh-CN/web/css/layout_cookbook/contribute_a_recipe/cookbook_template/index.md?plain=1)。模板解释了每个部分的要求，你可以参考其他手册示例获取更多帮助。
 
-请记得在主页面[布局手册](/zh-CN/docs/Web/CSS/Layout_cookbook)上添加指向你新方案的链接。
+请记得在主页面[布局手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)上添加指向你新方案的链接。
 
 如果你有任何问题或希望有人查看你的页面，请通过我们的任何[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)与我们联系。
 
 ## 参见
 
-- [手册页面模板](/zh-CN/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
+- [手册页面模板](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
 - [CSS 示例仓库](https://github.com/mdn/css-examples)

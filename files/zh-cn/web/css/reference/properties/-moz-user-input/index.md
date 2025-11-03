@@ -1,7 +1,6 @@
 ---
 title: -moz-user-input
 slug: Web/CSS/Reference/Properties/-moz-user-input
-original_slug: Web/CSS/-moz-user-input
 ---
 
 {{Non-standard_header}}

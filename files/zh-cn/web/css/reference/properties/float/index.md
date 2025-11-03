@@ -1,10 +1,9 @@
 ---
 title: float
 slug: Web/CSS/Reference/Properties/float
-original_slug: Web/CSS/float
 ---
 
-`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，但是仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/position#absolute_positioning)相反）。
+`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，但是仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/Reference/Properties/position#absolute_positioning)相反）。
 
 {{InteractiveExample("CSS Demo: float")}}
 

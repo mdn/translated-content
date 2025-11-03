@@ -1,7 +1,6 @@
 ---
 title: margin-block-end
 slug: Web/CSS/Reference/Properties/margin-block-end
-original_slug: Web/CSS/margin-block-end
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-end`** 定义了元素的逻辑块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。

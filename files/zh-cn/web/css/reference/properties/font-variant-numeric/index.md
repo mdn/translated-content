@@ -1,7 +1,6 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
-original_slug: Web/CSS/font-variant-numeric
 ---
 
 **`font-variant-numeric`** CSS 属性控制数字、分数和序号标记的替代字形的使用。

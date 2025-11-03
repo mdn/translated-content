@@ -1,7 +1,6 @@
 ---
 title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
-original_slug: Web/CSS/column-rule-width
 l10n:
   sourceCommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
 ---

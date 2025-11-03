@@ -1,10 +1,7 @@
 ---
 title: border-image-outset
 slug: Web/CSS/Reference/Properties/border-image-outset
-original_slug: Web/CSS/border-image-outset
 ---
-
-## 概述
 
 `border-image-outset` 属性定义边框图像可超出边框盒的大小。
 
