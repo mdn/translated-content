@@ -1,9 +1,8 @@
 ---
 title: border-block
 slug: Web/CSS/Reference/Properties/border-block
-original_slug: Web/CSS/border-block
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
@@ -36,8 +35,8 @@ direction: rtl;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;

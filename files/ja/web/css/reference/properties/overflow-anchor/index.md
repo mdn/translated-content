@@ -1,9 +1,8 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
-original_slug: Web/CSS/overflow-anchor
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`overflow-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、コンテンツの移動を最小化するためにスクロール位置を調整する、ブラウザーのスクロール固定の動作をオプトアウトする方法を提供します。
@@ -67,38 +66,36 @@ overflow-anchor: none;
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
-  let intervalId;
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
+let intervalId;
 
-  function setInitialState() {
-    example.innerHTML = "";
-    Array.from({ length: 10 }, (_, i) => i).forEach(addContent);
-    example.scrollTop = example.scrollHeight;
+function setInitialState() {
+  example.innerHTML = "";
+  Array.from({ length: 10 }, (_, i) => i).forEach(addContent);
+  example.scrollTop = example.scrollHeight;
+}
+
+function addContent() {
+  console.log("adding content");
+  const magicNumber = Math.floor(Math.random() * 10000);
+  example.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="new-content-container">新しいマジックナンバー: ${magicNumber}</div>`,
+  );
+}
+
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "抽選を始める";
+    clearInterval(intervalId);
+  } else {
+    example.classList.add("running");
+    button.textContent = "抽選を止める";
+    setInitialState();
+    intervalId = setInterval(addContent, 1000);
   }
-
-  function addContent() {
-    console.log("adding content");
-    const magicNumber = Math.floor(Math.random() * 10000);
-    example.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="new-content-container">新しいマジックナンバー: ${magicNumber}</div>`,
-    );
-  }
-
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "抽選を始める";
-      clearInterval(intervalId);
-    } else {
-      example.classList.add("running");
-      button.textContent = "抽選を止める";
-      setInitialState();
-      intervalId = setInterval(addContent, 1000);
-    }
-  });
 });
 ```
 
@@ -154,4 +151,5 @@ overflow-anchor: unset;
 
 ## 関連情報
 
-- [スクロール固定のガイド](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [スクロールアンカリングの紹介](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [CSS スクロール固定](/ja/docs/Web/CSS/CSS_scroll_anchoring)モジュール
