@@ -1,5 +1,5 @@
 ---
-title: "Window: requestAnimationFrame() method"
+title: "Window: requestAnimationFrame() 메서드"
 slug: Web/API/Window/requestAnimationFrame
 l10n:
   sourceCommit: 67da7a675ed556b89179318dec20a2910f5f4649
@@ -48,7 +48,7 @@ requestAnimationFrame(callback);
 
 ## 예시
 
-이 예제에서는 요소가 2초(2000밀리초) 동안 애니메이션됩니다. 요소는 오른쪽으로 0.1px/ms(밀리초당 0.1픽셀) 의 속도로 이동하므로, 애니메이션이 시작된 이후 경과한 시간(밀리초 단위)에 따라 요소의 상대적 위치(CSS 픽셀 단위)는 `0.1 _ elapsed`로 계산할 수 있습니다. 요소의 최종 위치는 처음 위치에서 오른쪽으로 200px(`0.1 \_ 2000`) 이동한 지점입니다.
+이 예제에서는 요소가 2초(2000밀리초) 동안 애니메이션됩니다. 요소는 오른쪽으로 0.1px/ms(밀리초당 0.1픽셀) 의 속도로 이동하므로, 애니메이션이 시작된 이후 경과한 시간(밀리초 단위)에 따라 요소의 상대적 위치(CSS 픽셀 단위)는 `0.1 * elapsed`로 계산할 수 있습니다. 요소의 최종 위치는 처음 위치에서 오른쪽으로 200px(`0.1 * 2000`) 이동한 지점입니다.
 
 ```js
 const element = document.getElementById("some-element-you-want-to-animate");
@@ -122,7 +122,7 @@ function animate() {
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
