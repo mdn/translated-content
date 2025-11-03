@@ -1,7 +1,6 @@
 ---
 title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
-original_slug: Web/CSS/background-attachment
 l10n:
   sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
 ---

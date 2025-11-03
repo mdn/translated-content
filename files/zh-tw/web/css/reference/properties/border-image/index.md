@@ -1,12 +1,11 @@
 ---
 title: border-image
 slug: Web/CSS/Reference/Properties/border-image
-original_slug: Web/CSS/border-image
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-image`** [CSS](/zh-TW/docs/Web/CSS) 屬性會在給定元素的周圍繪製一個圖片。它會取代元素的一般[邊框](/zh-TW/docs/Web/CSS/border)。
+**`border-image`** [CSS](/zh-TW/docs/Web/CSS) 屬性會在給定元素的周圍繪製一個圖片。它會取代元素的一般[邊框](/zh-TW/docs/Web/CSS/Reference/Properties/border)。
 
 {{InteractiveExample("CSS Demo: border-image")}}
 
@@ -63,11 +62,11 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 
 此屬性是以下 CSS 屬性的簡寫：
 
-- [`border-image-outset`](/zh-TW/docs/Web/CSS/border-image-outset)
-- [`border-image-repeat`](/zh-TW/docs/Web/CSS/border-image-repeat)
-- [`border-image-slice`](/zh-TW/docs/Web/CSS/border-image-slice)
-- [`border-image-source`](/zh-TW/docs/Web/CSS/border-image-source)
-- [`border-image-width`](/zh-TW/docs/Web/CSS/border-image-width)
+- [`border-image-outset`](/zh-TW/docs/Web/CSS/Reference/Properties/border-image-outset)
+- [`border-image-repeat`](/zh-TW/docs/Web/CSS/Reference/Properties/border-image-repeat)
+- [`border-image-slice`](/zh-TW/docs/Web/CSS/Reference/Properties/border-image-slice)
+- [`border-image-source`](/zh-TW/docs/Web/CSS/Reference/Properties/border-image-source)
+- [`border-image-width`](/zh-TW/docs/Web/CSS/Reference/Properties/border-image-width)
 
 ## 語法
 

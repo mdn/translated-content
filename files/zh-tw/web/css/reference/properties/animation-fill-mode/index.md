@@ -1,7 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
-original_slug: Web/CSS/animation-fill-mode
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -153,7 +152,7 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | 偶數                        | `100%` 或 `to`       |
     | `alternate-reverse`   | 奇數                        | `0%` 或 `from`       |
 
-    動畫屬性的行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
+    動畫屬性的行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/Reference/Properties/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
 
 - `backwards`
   - : 動畫一旦應用到目標上，就會立即套用第一個相關[關鍵格](/zh-TW/docs/Web/CSS/@keyframes)中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的關鍵格取決於 {{cssxref("animation-direction")}} 的值：

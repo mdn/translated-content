@@ -1,7 +1,6 @@
 ---
 title: border-color
 slug: Web/CSS/Reference/Properties/border-color
-original_slug: Web/CSS/border-color
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -57,10 +56,10 @@ border-color: red yellow green transparent;
 
 此屬性是以下 CSS 屬性的簡寫：
 
-- [`border-bottom-color`](/zh-TW/docs/Web/CSS/border-bottom-color)
-- [`border-left-color`](/zh-TW/docs/Web/CSS/border-left-color)
-- [`border-right-color`](/zh-TW/docs/Web/CSS/border-right-color)
-- [`border-top-color`](/zh-TW/docs/Web/CSS/border-top-color)
+- [`border-bottom-color`](/zh-TW/docs/Web/CSS/Reference/Properties/border-bottom-color)
+- [`border-left-color`](/zh-TW/docs/Web/CSS/Reference/Properties/border-left-color)
+- [`border-right-color`](/zh-TW/docs/Web/CSS/Reference/Properties/border-right-color)
+- [`border-top-color`](/zh-TW/docs/Web/CSS/Reference/Properties/border-top-color)
 
 ## 語法
 

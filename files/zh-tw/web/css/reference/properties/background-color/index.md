@@ -1,7 +1,6 @@
 ---
 title: background-color
 slug: Web/CSS/Reference/Properties/background-color
-original_slug: Web/CSS/background-color
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -94,7 +93,7 @@ background-color: unset;
 
 確保背景顏色與其上方文字顏色之間的對比度足夠高，這點非常重要，如此一來視力不佳的使用者才能閱讀頁面內容。
 
-顏色對比度是透過比較文字和背景顏色值的亮度來決定的。為了符合目前的 [Web 內容無障礙指南（WCAG）](https://www.w3.org/WAI/standards-guidelines/wcag/)，文字內容需要 4.5:1 的對比度，而像標題這樣較大的文字則需要 3:1 的對比度。大文字的定義為 18.66px 且[粗體](/zh-TW/docs/Web/CSS/font-weight)或更大，或 24px 或更大。
+顏色對比度是透過比較文字和背景顏色值的亮度來決定的。為了符合目前的 [Web 內容無障礙指南（WCAG）](https://www.w3.org/WAI/standards-guidelines/wcag/)，文字內容需要 4.5:1 的對比度，而像標題這樣較大的文字則需要 3:1 的對比度。大文字的定義為 18.66px 且[粗體](/zh-TW/docs/Web/CSS/Reference/Properties/font-weight)或更大，或 24px 或更大。
 
 - [WebAIM：顏色對比度檢查器](https://webaim.org/resources/contrastchecker/)
 - [MDN 理解 WCAG，指南 1.4 解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)

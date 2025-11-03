@@ -1,7 +1,6 @@
 ---
 title: height
 slug: Web/CSS/Reference/Properties/height
-original_slug: Web/CSS/height
 ---
 
 ## 概要

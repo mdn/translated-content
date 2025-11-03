@@ -1,7 +1,6 @@
 ---
 title: ruby-position
 slug: Web/CSS/Reference/Properties/ruby-position
-original_slug: Web/CSS/ruby-position
 ---
 
 {{SeeCompatTable}}

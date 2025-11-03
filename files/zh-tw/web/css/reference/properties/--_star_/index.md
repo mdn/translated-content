@@ -1,7 +1,6 @@
 ---
 title: 自訂屬性（--*）：CSS 變數
 slug: Web/CSS/Reference/Properties/--*
-original_slug: Web/CSS/--*
 l10n:
   sourceCommit: 8dac6c62fc3cee2de82960d4dd9d9be16a3a1761
 ---

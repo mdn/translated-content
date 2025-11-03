@@ -1,7 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/Reference/Properties/transition-duration
-original_slug: Web/CSS/transition-duration
 ---
 
 **`transition-duration`** [CSS](/zh-TW/docs/Web/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。

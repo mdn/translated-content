@@ -1,7 +1,6 @@
 ---
 title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
-original_slug: Web/CSS/box-shadow
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -50,7 +49,7 @@ box-shadow:
 }
 ```
 
-`box-shadow` 屬性讓你能為幾乎任何元素的框架投下陰影。如果在帶有盒狀陰影的元素上指定了 {{cssxref("border-radius")}}，盒狀陰影會呈現相同的圓角。多個盒狀陰影的 Z 軸順序與多個[文字陰影](/zh-TW/docs/Web/CSS/text-shadow)相同（第一個指定的陰影在最上面）。
+`box-shadow` 屬性讓你能為幾乎任何元素的框架投下陰影。如果在帶有盒狀陰影的元素上指定了 {{cssxref("border-radius")}}，盒狀陰影會呈現相同的圓角。多個盒狀陰影的 Z 軸順序與多個[文字陰影](/zh-TW/docs/Web/CSS/Reference/Properties/text-shadow)相同（第一個指定的陰影在最上面）。
 
 [盒狀陰影產生器](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)是一個互動式工具，讓你可以產生 `box-shadow`。
 

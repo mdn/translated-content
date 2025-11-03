@@ -52,4 +52,4 @@ slug: Learn_web_development/Howto/Solve_CSS_problems
 - [使用 CSS 生成內容](/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
 > [!NOTE]
-> 我們有一本針對 [CSS 布局解法](/zh-TW/docs/Web/CSS/Layout_cookbook)的食譜，內有可正常執行的範例與常見布局任務說明。
+> 我們有一本針對 [CSS 布局解法](/zh-TW/docs/Web/CSS/How_to/Layout_cookbook)的食譜，內有可正常執行的範例與常見布局任務說明。

@@ -1,12 +1,11 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
-original_slug: Web/CSS/border-bottom-color
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-bottom-color`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定元素底部[邊框](/zh-TW/docs/Web/CSS/border)的顏色。它也可以使用 CSS 簡寫屬性 {{cssxref("border-color")}} 或 {{cssxref("border-bottom")}} 來設定。
+**`border-bottom-color`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定元素底部[邊框](/zh-TW/docs/Web/CSS/Reference/Properties/border)的顏色。它也可以使用 CSS 簡寫屬性 {{cssxref("border-color")}} 或 {{cssxref("border-bottom")}} 來設定。
 
 {{InteractiveExample("CSS Demo: border-bottom-color")}}
 

@@ -1,12 +1,11 @@
 ---
 title: border-top-color
 slug: Web/CSS/Reference/Properties/border-top-color
-original_slug: Web/CSS/border-top-color
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-top-color`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定元素頂部[邊框](/zh-TW/docs/Web/CSS/border)的顏色。它也可以透過簡寫 CSS 屬性 {{cssxref("border-color")}} 或 {{cssxref("border-top")}} 來設定。
+**`border-top-color`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定元素頂部[邊框](/zh-TW/docs/Web/CSS/Reference/Properties/border)的顏色。它也可以透過簡寫 CSS 屬性 {{cssxref("border-color")}} 或 {{cssxref("border-top")}} 來設定。
 
 {{InteractiveExample("CSS Demo: border-top-color")}}
 

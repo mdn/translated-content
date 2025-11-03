@@ -1,7 +1,6 @@
 ---
 title: white-space
 slug: Web/CSS/Reference/Properties/white-space
-original_slug: Web/CSS/white-space
 ---
 
 此 CSS **`white-space`** 屬性決定如何處理元素內的空白字元。
