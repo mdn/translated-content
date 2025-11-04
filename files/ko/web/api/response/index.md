@@ -2,7 +2,7 @@
 title: Response
 slug: Web/API/Response
 l10n:
-  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Fetch API")}}
@@ -67,7 +67,8 @@ l10n:
 
 ### 이미지 취득하기
 
-저희의 [기본 `fetch()` 예제](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch)([미리보기](https://mdn.github.io/dom-examples/fetch/basic-fetch/))에서는 간단한 `fetch()` 호출을 통해 이미지를 취득해서 {{htmlelement("img")}} 요소에 표시합니다. `fetch()` 호출은 취득 연산과 연관된 `Response`로 이행하는 프로미스를 반환합니다.
+저희의 [기본 `fetch()` 예제](https://github.com/mdn/dom-examples/tree/main/fetch/basic-fetch)([미리보기](https://mdn.github.io/dom-examples/fetch/basic-fetch/))에서는 간단한 `fetch()` 호출을 통해 이미지를 취득해서 {{htmlelement("img")}} 요소에 표시합니다.
+`fetch()` 호출은 취득 연산과 연관된 `Response`로 이행하는 프로미스를 반환합니다.
 
 우리는 이미지를 요청하고 있기 때문에, {{domxref("Response.blob()", "Response.blob")}}을 실행하여 응답에 올바른 MIME 타입을 부여해야 한다는 걸 보실 겁니다.
 
