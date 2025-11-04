@@ -1,7 +1,6 @@
 ---
 title: 後代組合器
 slug: Web/CSS/Reference/Selectors/Descendant_combinator
-original_slug: Web/CSS/Descendant_combinator
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -74,4 +73,4 @@ li li {
 
 ## 參見
 
-- [子組合器](/zh-TW/docs/Web/CSS/Child_combinator)
+- [子組合器](/zh-TW/docs/Web/CSS/Reference/Selectors/Child_combinator)

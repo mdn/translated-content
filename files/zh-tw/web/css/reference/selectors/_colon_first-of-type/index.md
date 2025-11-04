@@ -1,12 +1,11 @@
 ---
 title: :first-of-type
 slug: Web/CSS/Reference/Selectors/:first-of-type
-original_slug: Web/CSS/:first-of-type
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:first-of-type`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中，其類型（標籤名稱）的第一個元素。
+**`:first-of-type`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes)代表一群兄弟元素中，其類型（標籤名稱）的第一個元素。
 
 {{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
 
@@ -73,7 +72,7 @@ p:first-of-type {
 
 ### 巢狀元素
 
-此範例展示了如何選取巢狀元素。請注意，當沒有撰寫類型選擇器時，會隱含[通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors)（`*`）。
+此範例展示了如何選取巢狀元素。請注意，當沒有撰寫類型選擇器時，會隱含[通用選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Universal_selectors)（`*`）。
 
 #### HTML
 

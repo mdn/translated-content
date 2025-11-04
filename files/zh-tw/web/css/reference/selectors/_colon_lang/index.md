@@ -1,12 +1,11 @@
 ---
 title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
-original_slug: Web/CSS/:lang
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:lang()`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)會根據元素被判定的語言來匹配元素。
+**`:lang()`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes)會根據元素被判定的語言來匹配元素。
 
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
 
@@ -51,7 +50,7 @@ l10n:
 
 ### 匹配指定語言的子元素
 
-在此範例中，`:lang()` 偽類應用於父元素，並使用[子組合器](/zh-TW/docs/Web/CSS/Child_combinator)來設定其內的引號元素（{{htmlElement("q")}}）樣式。請注意，這並非唯一的方法，最佳方法取決於文件類型。另請注意，{{glossary("Unicode")}} 值用於指定一些特殊引號字元。
+在此範例中，`:lang()` 偽類應用於父元素，並使用[子組合器](/zh-TW/docs/Web/CSS/Reference/Selectors/Child_combinator)來設定其內的引號元素（{{htmlElement("q")}}）樣式。請注意，這並非唯一的方法，最佳方法取決於文件類型。另請注意，{{glossary("Unicode")}} 值用於指定一些特殊引號字元。
 
 #### HTML
 
