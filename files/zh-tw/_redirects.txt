@@ -552,6 +552,11 @@
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/--*	/zh-TW/docs/Web/CSS/Reference/Properties/--*
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/Reference/Properties/border-image
+/zh-TW/docs/Web/CSS/::first-letter	/zh-TW/docs/Web/CSS/Reference/Selectors/::first-letter
+/zh-TW/docs/Web/CSS/:first-child	/zh-TW/docs/Web/CSS/Reference/Selectors/:first-child
+/zh-TW/docs/Web/CSS/:first-of-type	/zh-TW/docs/Web/CSS/Reference/Selectors/:first-of-type
+/zh-TW/docs/Web/CSS/:lang	/zh-TW/docs/Web/CSS/Reference/Selectors/:lang
+/zh-TW/docs/Web/CSS/:target	/zh-TW/docs/Web/CSS/Reference/Selectors/:target
 /zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
@@ -561,11 +566,14 @@
 /zh-TW/docs/Web/CSS/CSS_一般問題	/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_grid_layout
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
-/zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
+/zh-TW/docs/Web/CSS/Descendant_combinator	/zh-TW/docs/Web/CSS/Reference/Selectors/Descendant_combinator
+/zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Reference/Selectors/Descendant_combinator
 /zh-TW/docs/Web/CSS/Inheritance	/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance
+/zh-TW/docs/Web/CSS/Pseudo-classes	/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 /zh-TW/docs/Web/CSS/Replaced_element	/zh-TW/docs/Web/CSS/CSS_images/Replaced_element_properties
 /zh-TW/docs/Web/CSS/Shorthand_properties	/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /zh-TW/docs/Web/CSS/Syntax	/zh-TW/docs/Web/CSS/CSS_syntax/Syntax
+/zh-TW/docs/Web/CSS/Type_selectors	/zh-TW/docs/Web/CSS/Reference/Selectors/Type_selectors
 /zh-TW/docs/Web/CSS/animation-fill-mode	/zh-TW/docs/Web/CSS/Reference/Properties/animation-fill-mode
 /zh-TW/docs/Web/CSS/background-attachment	/zh-TW/docs/Web/CSS/Reference/Properties/background-attachment
 /zh-TW/docs/Web/CSS/background-color	/zh-TW/docs/Web/CSS/Reference/Properties/background-color

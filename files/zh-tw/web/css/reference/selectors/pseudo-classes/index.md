@@ -1,6 +1,7 @@
 ---
 title: 虛擬類別
-slug: Web/CSS/Pseudo-classes
+slug: Web/CSS/Reference/Selectors/Pseudo-classes
+original_slug: Web/CSS/Pseudo-classes
 ---
 
 CSS **虛擬類別**（pseudo-class）的元素，在特殊狀態下被選取的話，會作為關鍵字被加到選擇器裡面。例如 {{ Cssxref(":hover") }} 會讓用戶的滑鼠停在某個元素的時候，套用指定選擇器的樣式。

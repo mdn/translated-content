@@ -1,6 +1,7 @@
 ---
 title: :first-child
-slug: Web/CSS/:first-child
+slug: Web/CSS/Reference/Selectors/:first-child
+original_slug: Web/CSS/:first-child
 l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
