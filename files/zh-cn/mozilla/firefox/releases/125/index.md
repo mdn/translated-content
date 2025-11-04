@@ -33,8 +33,8 @@ l10n:
   - [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement) 的 [`popover`](/zh-CN/docs/Web/API/HTMLElement/popover) 属性，[`hidePopover()`](/zh-CN/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/zh-CN/docs/Web/API/HTMLElement/showPopover) 和 [`togglePopover()`](/zh-CN/docs/Web/API/HTMLElement/togglePopover) 方法，[`beforetoggle`](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event) 和 [`toggle_event`](/zh-CN/docs/Web/API/HTMLElement/toggle_event) 事件（类型为 [`ToggleEvent`](/zh-CN/docs/Web/API/ToggleEvent)）。
 
   已支持以下用于弹出框的 CSS 伪类和元素：
-  - [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已被扩展以支持弹出框
+  - [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open)
+  - [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) 已被扩展以支持弹出框
 
   已支持以下 HTML 全局属性：
   - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)

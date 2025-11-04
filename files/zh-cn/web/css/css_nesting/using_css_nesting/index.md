@@ -13,11 +13,11 @@ CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的
 
 ## 子选择器
 
-你可以使用 CSS 嵌套来创建一个父级的子选择器，这可以用来选择特定父元素的子元素。可以选择使用[`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)来实现。
+你可以使用 CSS 嵌套来创建一个父级的子选择器，这可以用来选择特定父元素的子元素。可以选择使用[`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Nesting_selector)来实现。
 
 有几个特定环境可以使得 `&` 嵌套选择器变得很必要或者有用：
 
-- 在连接选择器时，如[组合选择器](#组合选择器)或[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)。
+- 在连接选择器时，如[组合选择器](#组合选择器)或[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)。
 - 为了向后兼容。
 - 作为一个辅助阅读的标志。当你看到 `&` 时，你就知道这里用到 CSS 嵌套了。
 
@@ -152,7 +152,7 @@ label {
 
 #### 嵌套邻接兄弟选择器
 
-在这个示例中，我们使用 CSS 嵌套，将每个 `<h2>` 后的第一个段落使用[邻接兄弟选择器（`+`）](/zh-CN/docs/Web/CSS/Next-sibling_combinator)选中。
+在这个示例中，我们使用 CSS 嵌套，将每个 `<h2>` 后的第一个段落使用[邻接兄弟选择器（`+`）](/zh-CN/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)选中。
 
 ##### HTML
 
@@ -400,9 +400,9 @@ h2 {
 ```
 
 > [!WARNING]
-> 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
+> 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Type_selectors)。允许拼接会使得这个规则无效。
 
-在[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)中，类型选择器必须是第一位。`&Element`（一个[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)）会使得这个选择器和整个样式块无效。因为类型选择器必须是第一位，所以这个组合选择器必须写成 `Element&`。
+在[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)中，类型选择器必须是第一位。`&Element`（一个[类型选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Type_selectors)）会使得这个选择器和整个样式块无效。因为类型选择器必须是第一位，所以这个组合选择器必须写成 `Element&`。
 
 ```css
 .my-class {
@@ -438,6 +438,6 @@ element.my-class {
 ## 参见
 
 - [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
-- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
+- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [嵌套 at 规则](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)

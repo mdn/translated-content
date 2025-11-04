@@ -95,7 +95,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ### 浏览器不支持新特性
 
-这是一个常见的问题，特别是当你需要支持旧版浏览器或者使用某些浏览器尚未完全实现的功能时。总体而言，大多数核心的 HTML 和 CSS 功能（如基本的 HTML 元素、CSS 基本颜色和文本样式）适用于你需要支持的所有浏览器；当你开始使用较新的 HTML、CSS 和 API 时，可能会出现更多问题。MDN 显示了每个特性的浏览器兼容性数据；例如，请参阅 `:has()` 伪类的[浏览器支持表格](/zh-CN/docs/Web/CSS/:has#浏览器兼容性)。
+这是一个常见的问题，特别是当你需要支持旧版浏览器或者使用某些浏览器尚未完全实现的功能时。总体而言，大多数核心的 HTML 和 CSS 功能（如基本的 HTML 元素、CSS 基本颜色和文本样式）适用于你需要支持的所有浏览器；当你开始使用较新的 HTML、CSS 和 API 时，可能会出现更多问题。MDN 显示了每个特性的浏览器兼容性数据；例如，请参阅 `:has()` 伪类的[浏览器支持表格](/zh-CN/docs/Web/CSS/Reference/Selectors/:has#浏览器兼容性)。
 
 一旦你确定了将要使用但不被普遍支持的技术列表，最好研究一下它们在哪些浏览器中受支持，以及相关的有用技巧。请参阅下面的[寻求帮助](#寻找帮助)。
 
@@ -200,7 +200,7 @@ button:active {
 
 当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
 
-在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/:not)。
+在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在[可容错选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list#可容错选择器列表)中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)。
 
 我们注意到，利用浏览器的开发者工具来检查目标元素的样式设置，以及审查 DOM 检查器所提供的 DOM 树面包屑路径，通常能有效帮助我们判断所用选择器是否恰当。
 

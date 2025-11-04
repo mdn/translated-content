@@ -81,7 +81,7 @@ article::before {
 }
 ```
 
-你也同样可以在 CSS 中使用[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)根据数据来改变样式：
+你也同样可以在 CSS 中使用[属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)根据数据来改变样式：
 
 ```css
 article[data-columns="3"] {

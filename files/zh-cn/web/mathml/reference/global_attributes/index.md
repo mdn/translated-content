@@ -17,7 +17,7 @@ l10n:
 ## 全局属性列表
 
 - [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 元素类的一个空格分隔列表。类允许 CSS 和 JavaScript 通过[类选择器](/zh-CN/docs/Web/CSS/Class_selectors)或诸如方法 {{DOMxRef("Document.getElementsByClassName()")}} 这样的函数来选择和访问特定元素。
+  - : 元素类的一个空格分隔列表。类允许 CSS 和 JavaScript 通过[类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Class_selectors)或诸如方法 {{DOMxRef("Document.getElementsByClassName()")}} 这样的函数来选择和访问特定元素。
 - [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : 形成自定义数据属性类别的属性，允许专有信息在 [MathML](/zh-CN/docs/Web/MathML) 及其 {{glossary("DOM")}} 表示之间进行交换，可能会被脚本使用。所有这些自定义数据都可以通过属性设置的元素的 {{DOMxRef("MathMLElement")}} 接口访问。{{DOMxRef("HTMLElement.dataset")}} 属性提供来对这些属性的访问。
 - [`dir`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/dir)

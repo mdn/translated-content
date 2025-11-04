@@ -78,7 +78,7 @@ l10n:
 
 - **Popover API**：`dom.element.popover.enabled`。
 
-  现在支持通过 HTML 属性或 JavaScript API 来在页面内容上方显示弹出窗口，包括使用 CSS [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open) 伪类设置样式，以及对 [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 伪元素的扩展支持。有关更多详细信息，请参见 [Popover API](/zh-CN/docs/Web/API/Popover_API) 参考文档。（[Firefox bug 1823757](https://bugzil.la/1823757)）
+  现在支持通过 HTML 属性或 JavaScript API 来在页面内容上方显示弹出窗口，包括使用 CSS [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open) 伪类设置样式，以及对 [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) 伪元素的扩展支持。有关更多详细信息，请参见 [Popover API](/zh-CN/docs/Web/API/Popover_API) 参考文档。（[Firefox bug 1823757](https://bugzil.la/1823757)）
 
 - **剪切板读写**：`dom.events.asyncClipboard.clipboardItem`、`dom.events.asyncClipboard.readText` 和 `dom.events.asyncClipboard.writeText`。
 
