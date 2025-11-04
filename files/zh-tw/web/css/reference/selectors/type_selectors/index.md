@@ -1,9 +1,9 @@
 ---
-title: 元素選擇器
-slug: Web/CSS/Type_selectors
+title: 型態選擇器
+slug: Web/CSS/Reference/Selectors/Type_selectors
 ---
 
-**CSS 元素選擇器 （也稱 型態選擇器）**依照 Node 節點名稱選取匹配的 Element 元素。換句話說，此選擇器選取在 Document 文件內所有指定該型態的元素。
+CSS **型態選擇器**依照節點名稱選取匹配的元素。換句話說，此選擇器選取在文件內所有指定該型態的元素。
 
 ```css
 /* 全部的 <a> 元素。*/
@@ -14,7 +14,7 @@ a {
 
 ## 語法
 
-```plain
+```css
 element { style properties }
 ```
 
@@ -36,7 +36,7 @@ span {
 <span>Here's a span with more text.</span>
 ```
 
-### Result
+### 結果
 
 {{EmbedLiveSample('範例', '100%', 150)}}
 
@@ -44,6 +44,6 @@ span {
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
