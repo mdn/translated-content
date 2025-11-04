@@ -1,53 +1,58 @@
 ---
-title: Array.prototype.slice()
+title: "Array : méthode slice()"
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`slice()`** des instances {{JSxRef("Array")}} retourne un {{Glossary("Shallow_copy", "copie superficielle")}} d'une portion d'un tableau sous la forme d'un nouvel objet tableau sélectionné de `start` à `end` (`end` non incluse), où `start` et `end` représentent l'indice des éléments dans ce tableau. Le tableau d'origine ne sera pas modifié.
 
-La méthode **`slice()`** renvoie un objet tableau, contenant une copie superficielle (_shallow copy_) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.
-
-{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.slice()", "taller")}}
 
 ```js interactive-example
 const animals = ["ant", "bison", "camel", "duck", "elephant"];
 
 console.log(animals.slice(2));
-// Expected output: Array ["camel", "duck", "elephant"]
+// Résultat attendu : Array ["camel", "duck", "elephant"]
 
 console.log(animals.slice(2, 4));
-// Expected output: Array ["camel", "duck"]
+// Résultat attendu : Array ["camel", "duck"]
 
 console.log(animals.slice(1, 5));
-// Expected output: Array ["bison", "camel", "duck", "elephant"]
+// Résultat attendu : Array ["bison", "camel", "duck", "elephant"]
 
 console.log(animals.slice(-2));
-// Expected output: Array ["duck", "elephant"]
+// Résultat attendu : Array ["duck", "elephant"]
 
 console.log(animals.slice(2, -1));
-// Expected output: Array ["camel", "duck"]
+// Résultat attendu : Array ["camel", "duck"]
 
 console.log(animals.slice());
-// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+// Résultat attendu : Array ["ant", "bison", "camel", "duck", "elephant"]
 ```
 
 ## Syntaxe
 
-```js
-arr.slice();
-arr.slice(début);
-arr.slice(début, fin);
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ### Paramètres
 
-- `début` {{optional_inline}}
-  - : Indice (à partir de zéro) depuis lequel commencer l'extraction. S'il s'agit d'un indice négatif, `début` indique un décalage depuis la fin de la séquence. Par exemple, `slice(-2)` extrait les avant-dernier et dernier éléments dans la séquence.
-
-    Si `début` est absent, `slice()` commencera depuis 0. Si `début` est supérieur à la taille du tableau, c'est un tableau vide qui sera renvoyé.
-
-- `fin` {{optional_inline}}
-  - : Indice (à partir de zéro) auquel arrêter l'extraction. `slice()` extrait jusqu'à cet indice, mais pas l'élément situé en `fin` lui-même. `slice(1,4)` extrait du deuxième au quatrième élément (les éléments d'indices 1, 2 et 3). S'il s'agit d'un indice négatif, `fin` indique un décalage depuis la fin de la séquence. `slice(2,-1)` extrait du troisième à l'avant-dernier élément dans la séquence. Si `fin` n'est pas fourni, `slice()` extraira jusqu'à la fin de la séquence (`arr.length`). Si `fin` est supérieur à la longueur de la séquence, `slice()` fera une extraction jusqu'à la fin de la séquence.
+- `start` {{Optional_Inline}}
+  - : L'indice (compté à partir de zéro) à partir duquel commencer l'extraction, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+    - Un indice négatif compte depuis la fin du tableau — si `-array.length <= start < 0`, on utilise `start + array.length`.
+    - Si `start < -array.length` ou si `start` est omis, `0` est utilisé.
+    - Si `start >= array.length`, un tableau vide est retourné.
+- `end` {{Optional_Inline}}
+  - : L'indice (compté à partir de zéro) jusqu'auquel extraire le fragment, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `slice()` extrait jusqu'à, mais sans inclure, `end`.
+    - Un indice négatif compte depuis la fin du tableau — si `-array.length <= end < 0`, on utilise `end + array.length`.
+    - Si `end < -array.length`, `0` est utilisé.
+    - Si `end >= array.length` ou si `end` est omis ou vaut `undefined`, `array.length` est utilisé, ce qui entraîne l'extraction de tous les éléments jusqu'à la fin.
+    - Si `end` implique une position antérieure ou égale à celle que `start` implique, un tableau vide est retourné.
 
 ### Valeur de retour
 
@@ -55,16 +60,15 @@ Un nouveau tableau contenant les éléments extraits.
 
 ## Description
 
-`slice()` ne modifie pas le tableau original, mais renvoie une nouvelle copie du tableau (_shallow copy_ — copie superficielle) dont les éléments sont des copies des éléments extraits du tableau original. Les éléments du tableau original sont copiés dans le nouveau tableau de la manière suivante&nbsp;:
+La méthode `slice()` est une [méthode de copie](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle n'altère pas `this` mais retourne plutôt une [copie superficielle](/fr/docs/Glossary/Shallow_copy) contenant certains des mêmes éléments que le tableau d'origine.
 
-- Pour les références à des objets (et non les objets eux-mêmes), `slice()` copie ces références dans le nouveau tableau. Tant l'original que le nouveau tableau font référence au même objet. Si un objet référencé est modifié, ces changements sont visibles tant pour le nouveau que pour l'ancien tableau.
-- Pour les chaines de caractères, les nombres et les booléens, `slice()` copie ces chaines de caractères, ces nombres et ces valeurs booléennes dans le nouveau tableau. Les modifications sur ces chaînes, nombres ou booléens dans l'un des tableaux n'affectent pas l'autre tableau (NB : lorsque l'on parle de chaine de caractères, de nombre ou de booléen ici, on parle exclusivement de leur _type primitif_, pas des _objets_ {{jsxref("String")}}, {{jsxref("Number")}} ou {{jsxref("Boolean")}} — voir par exemple [différences entre objet String et type primitif pour les chaines de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#les_différences_entre_les_objets_string_et_le_type_primitif_pour_les_chaînes_de_caractères)).
+La méthode `slice()` préserve les emplacements vides. Si la portion découpée constitue un tableau creux ([tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux)), le tableau retourné est également creux.
 
-Si un nouvel élément est ajouté à l'un ou l'autre tableau, le second n'est pas affecté.
+La méthode `slice()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle suppose uniquement que la valeur de `this` possède une propriété `length` et des propriétés dont les clés sont des entiers.
 
 ## Exemples
 
-### Renvoyer un fragment d'un tableau existant
+### Retourner un fragment d'un tableau existant
 
 ```js
 var fruits = ["Banane", "Orange", "Citron", "Pomme", "Mangue"];
@@ -74,68 +78,144 @@ var agrumes = fruits.slice(1, 3);
 // agrumes vaut --> ["Orange", "Citron"]
 ```
 
-### Utiliser `slice()`
+Dans cet exemple, `slice(1, 3)` extrait les éléments à partir de l'indice `1` jusqu'à, mais sans inclure, l'indice `3`, ce qui donne un nouveau tableau `['Orange', 'Citron']`.
 
-Dans l'exemple qui suit, `slice()` crée un nouveau tableau, `nouvelleVoiture`, à partir de `maVoiture`. Chacun d'entre eux contient une référence à l'objet `maHonda`. Lorsque la couleur de `maHonda` est changée en bordeaux, les deux tableaux reflètent ce changement.
+### Omettre le paramètre `end`
 
 ```js
-// Avec slice, crée nouvelleVoiture depuis maVoiture
-var maHonda = { couleur&nbsp;: "rouge", roues&nbsp;: 4, moteur&nbsp;: { cylindres&nbsp;: 4, capacité&nbsp;: 2.2 } };
-var maVoiture = [maHonda, 2, "excellente condition", "achetée en 1997"];
-var nouvelleVoiture = maVoiture.slice(0, 2);
+const fruits = ["Pomme", "Banane", "Orange", "Mangue", "Ananas"];
 
-// Affiche les valeurs de maVoiture, nouvelleVoiture et la couleur de maHonda
-// référencées depuis chacun des tableaux.
-console.log("maVoiture = " + JSON.stringify(maVoiture));
-console.log("nouvelleVoiture = " + JSON.stringify(nouvelleVoiture));
-console.log("maVoiture[0].couleur = " + maVoiture[0].couleur);
-console.log("nouvelleVoiture[0].couleur = " + nouvelleVoiture[0].couleur);
+const tropical = fruits.slice(2);
+console.log(tropical); // ['Orange', 'Mangue', 'Ananas']
+```
 
-// Change la couleur de maHonda.
-maHonda.couleur = "bordeaux";
-console.log("La nouvelle couleur de ma Honda est " + maHonda.couleur);
+Dans cet exemple, `slice(2)` extrait les éléments à partir de l'indice `2` jusqu'à la fin du tableau.
 
-// Affiche la couleur de maHonda référencées depuis les deux tableaux.
-console.log("maVoiture[0].couleur = " + maVoiture[0].couleur);
-console.log("nouvelleVoiture[0].couleur = " + nouvelleVoiture[0].couleur);
+### Utiliser des indices négatifs
+
+```js
+const fruits = ["Pomme", "Banane", "Orange", "Mangue", "Ananas"];
+
+const lastTwo = fruits.slice(-2);
+console.log(lastTwo); // ['Mangue', 'Ananas']
+```
+
+Dans cet exemple, `slice(-2)` extrait les deux derniers éléments du tableau. Lorsqu'on utilise un indice négatif avec la méthode `slice`, les indices négatifs sont comptés depuis la fin du tableau&nbsp;: `-1` désigne le dernier élément, `-2` le précédent, etc. L'indice négatif `-2` est inclus car il représente le point de départ de l'extraction.
+
+```plain
+|     |     |     |     |     |
+|  S  |  L  |  I  |  C  |  E  |
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
+
+<--- lecture depuis la fin
+```
+
+### Utiliser un indice de départ positif et un indice de fin négatif
+
+```js
+const fruits = ["Pomme", "Banane", "Orange", "Mangue", "Ananas"];
+
+// Utiliser un indice de départ positif et un indice de fin négatif
+const sliceExample = fruits.slice(1, -1);
+console.log(sliceExample); // ['Banane', 'Orange', 'Mangue']
+```
+
+Dans cet exemple, `slice(1, -1)` commence l'extraction à l'indice `1` et s'arrête avant l'élément situé à l'indice `-1` (le dernier élément). Cela donne un nouveau tableau `['Banana', 'Orange', 'Mango']`. La méthode `slice` exclut toujours l'élément situé à l'indice final spécifié, qu'il soit positif ou négatif.
+
+```plain
+lecture depuis le début --->
+
+   0     1     2     3     4
+|     |     |     |     |     |
+|  S  |  L  |  I  |  C  |  E  |
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
+
+<--- lecture depuis la fin
+```
+
+### Utiliser `slice()` avec des tableaux d'objets
+
+Dans l'exemple suivant, `slice` crée un nouveau tableau, `newCar`, à partir de `myCar`. Les deux contiennent une référence à l'objet `myHonda`. Lorsque la couleur de `myHonda` est changée en "purple", les deux tableaux reflètent cette modification.
+
+```js
+// Avec slice, créer newCar depuis myCar
+const myHonda = {
+  color: "rouge",
+  wheels: 4,
+  engine: { cylinders: 4, size: 2.2 },
+};
+const myCar = [myHonda, 2, "excellente condition", "achetée en 1997"];
+const newCar = myCar.slice(0, 2);
+
+console.log("myCar =", myCar);
+console.log("newCar =", newCar);
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
+
+// Changer la couleur de myHonda.
+myHonda.color = "bordeaux";
+console.log("La nouvelle couleur de ma Honda est", myHonda.color);
+
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
 ```
 
 Ce script affichera&nbsp;:
 
-```js
-maVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2,
-             "excellente condition", "achetée en 1997"]
-nouvelleVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2]
-maVoiture[0].couleur = rouge
-nouvelleVoiture[0].couleur = rouge
+```plain
+myCar = [
+  { color: 'rouge', wheels: 4, engine: { cylinders: 4, size: 2.2 } },
+  2,
+  'excellente condition',
+  'achetée en 1997'
+]
+newCar = [ { color: 'rouge', wheels: 4, engine: { cylinders: 4, size: 2.2 } }, 2 ]
+myCar[0].color = rouge
+newCar[0].color = rouge
 La nouvelle couleur de ma Honda est bordeaux
-maVoiture[0].couleur = bordeaux
-nouvelleVoiture[0].couleur = bordeaux
+myCar[0].color = bordeaux
+newCar[0].color = bordeaux
 ```
 
-## Utilisation avec les objets similaires aux tableaux
+### Appeler `slice()` sur des objets qui ne sont pas des tableaux
 
-La méthode `slice()` peut aussi être appelée pour convertir des objets/collections similaires à des tableaux, en un nouveau tableau. L'objet {{jsxref("Fonctions/arguments", "arguments")}} d'une fonction est un exemple d'objet similaire à un tableau.
+La méthode `slice()` lit la propriété `length` de `this`. Elle lit ensuite les propriétés dont les clés sont des entiers de `start` à `end` et les définit sur un nouveau tableau créé.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments, 0);
-}
-
-var list1 = list(1, 2, 3); // [1, 2, 3]
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 33, // ignoré par slice() car length vaut 3
+};
+console.log(Array.prototype.slice.call(arrayLike, 1, 3));
+// [ 3, 4 ]
 ```
 
-Il est possible de lier avec la fonction `call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
+### Utiliser `slice()` pour convertir des objets semblables à des tableaux en tableaux
+
+La méthode `slice()` est souvent utilisée avec {{JSxRef("Function/bind", "bind()")}} et {{JSxRef("Function/call", "call()")}} pour créer une méthode utilitaire qui convertit un objet semblable à un tableau en un tableau.
 
 ```js
-var unboundSlice = Array.prototype.slice;
-var slice = Function.prototype.call.bind(unboundSlice);
+// slice() est appelé en passant `this` comme premier argument
+const slice = Function.prototype.call.bind(Array.prototype.slice);
 
 function list() {
-  return slice(arguments, 0);
+  return slice(arguments);
 }
 
-var list1 = list(1, 2, 3); // [1, 2, 3]
+const listResult = list(1, 2, 3); // [1, 2, 3]
+```
+
+### Utiliser `slice()` sur des tableaux creux
+
+Le tableau retourné par `slice()` peut être creux si le tableau source est creux.
+
+```js
+console.log([1, 2, , 4, 5].slice(1, 4)); // [2, vide, 4]
 ```
 
 ## Spécifications
@@ -148,6 +228,13 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Voir aussi
 
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.pop()")}}
+- La méthode {{JSxRef("Array.prototype.shift()")}}
+- La méthode {{JSxRef("Array.prototype.concat()")}}
+- La méthode {{JSxRef("Array.prototype.splice()")}}
+- La méthode {{JSxRef("TypedArray.prototype.slice()")}}
+- La méthode {{JSxRef("String.prototype.slice()")}}
+- [Prothèse d'émulation de `Array.prototype.slice` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)
+- [Prothèse d'émulation es-shims de `Array.prototype.slice` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.slice)
