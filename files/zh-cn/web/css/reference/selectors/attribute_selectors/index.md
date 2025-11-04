@@ -1,7 +1,6 @@
 ---
 title: 属性选择器
 slug: Web/CSS/Reference/Selectors/Attribute_selectors
-original_slug: Web/CSS/Attribute_selectors
 ---
 
 CSS **属性选择器**匹配那些具有特定属性或属性值的元素。

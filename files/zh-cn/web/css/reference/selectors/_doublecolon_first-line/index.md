@@ -1,10 +1,9 @@
 ---
 title: ::first-line (:first-line)
 slug: Web/CSS/Reference/Selectors/::first-line
-original_slug: Web/CSS/::first-line
 ---
 
-**`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)在[区块容器](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#区块容器)的第一行应用样式。
+**`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)在[区块容器](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#区块容器)的第一行应用样式。
 
 和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的 html 元素。
 

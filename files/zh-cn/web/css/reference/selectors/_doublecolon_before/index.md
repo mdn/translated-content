@@ -1,12 +1,11 @@
 ---
 title: ::before
 slug: Web/CSS/Reference/Selectors/::before
-original_slug: Web/CSS/::before
 l10n:
   sourceCommit: 9479d8f616977486f1cbe972266ad56904b714e9
 ---
 
-CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认是行级的。
+CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认是行级的。
 
 {{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
 
@@ -54,7 +53,7 @@ a::before {
 如果 [`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content) 属性没有明确指定，或者有一个无效值，或者其值为 `normal` 或 `none`，则 `::before` 伪元素不会被渲染。它的行为就好像设置了 `display: none` 一样。
 
 > [!NOTE]
-> [Selectors 第 3 版](https://drafts.csswg.org/selectors-3/#gen-content)引入了双冒号标记法 `::before`，以将[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)区别开。浏览器也接受由 CSS2 引入的 `:before` 写法。
+> [Selectors 第 3 版](https://drafts.csswg.org/selectors-3/#gen-content)引入了双冒号标记法 `::before`，以将[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)区别开。浏览器也接受由 CSS2 引入的 `:before` 写法。
 
 ## 示例
 

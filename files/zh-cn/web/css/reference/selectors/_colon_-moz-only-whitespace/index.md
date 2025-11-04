@@ -1,12 +1,11 @@
 ---
 title: :blank
 slug: Web/CSS/Reference/Selectors/:-moz-only-whitespace
-original_slug: Web/CSS/:-moz-only-whitespace
 ---
 
 {{SeeCompatTable}}
 
-**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) 用于匹配如下节点
+**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 用于匹配如下节点
 
 1. 没有子节点;
 

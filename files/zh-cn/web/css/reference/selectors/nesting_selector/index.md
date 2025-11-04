@@ -1,7 +1,6 @@
 ---
 title: "& 嵌套选择器"
 slug: Web/CSS/Reference/Selectors/Nesting_selector
-original_slug: Web/CSS/Nesting_selector
 l10n:
   sourceCommit: c6b772b874485e67bb8cf8eff8c1874deb2e66c3
 ---
@@ -11,7 +10,7 @@ CSS **`&` 嵌套选择器**明确指示在使用 [CSS 嵌套](/zh-CN/docs/Web/CS
 > [!NOTE]
 > *子规则*不等于*子元素选择器*。子规则可以根据 `&` 嵌套选择器的使用与否来选择父元素或子元素。
 
-如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/:scope)。
+如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/Reference/Selectors/:scope)。
 
 ## 语法
 
@@ -49,7 +48,7 @@ parentRule {
 }
 ```
 
-当嵌套规则需要被附加（无空格）到父规则上时，例如当使用[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)，或者创建[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)时，`&` 嵌套选择器必须紧贴在子选择器之前。
+当嵌套规则需要被附加（无空格）到父规则上时，例如当使用[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)，或者创建[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)时，`&` 嵌套选择器必须紧贴在子选择器之前。
 
 考虑以下示例。我们想要为一个元素添加样式，一些是需要永久应用的，而另一些嵌套样式则仅当鼠标悬停时才被应用。如果不添加 `&` 嵌套选择器，浏览器会添加空格，最终我们得到的将是一个匹配*任意被悬停的子元素*的选择器。当然，这才不是我们想要的结果。
 
@@ -205,7 +204,7 @@ parentRule {
 
 ### 在嵌套规则外使用 `&`
 
-如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/:scope)。
+如果不在一个嵌套规则里使用，则 `&` 嵌套选择器将代表其[根作用域](/zh-CN/docs/Web/CSS/Reference/Selectors/:scope)。
 
 ```html
 <p>在结果框上方悬停以更改文档的背景颜色。</p>

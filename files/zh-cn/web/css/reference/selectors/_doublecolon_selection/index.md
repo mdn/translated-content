@@ -1,7 +1,6 @@
 ---
 title: ::selection
 slug: Web/CSS/Reference/Selectors/::selection
-original_slug: Web/CSS/::selection
 ---
 
 **`::selection`** CSS 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。

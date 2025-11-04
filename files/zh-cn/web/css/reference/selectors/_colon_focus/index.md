@@ -1,10 +1,9 @@
 ---
 title: :focus
 slug: Web/CSS/Reference/Selectors/:focus
-original_slug: Web/CSS/:focus
 ---
 
-**`:focus`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示获得焦点的元素（如表单输入）。当用户点击或轻触一个元素或使用键盘的 <kbd>Tab</kbd> 键选择它时，它会被触发。
+**`:focus`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)表示获得焦点的元素（如表单输入）。当用户点击或轻触一个元素或使用键盘的 <kbd>Tab</kbd> 键选择它时，它会被触发。
 
 {{InteractiveExample("CSS Demo: :focus", "tabbed-shorter")}}
 

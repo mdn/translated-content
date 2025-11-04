@@ -1,7 +1,6 @@
 ---
 title: 接续兄弟组合器
 slug: Web/CSS/Reference/Selectors/Next-sibling_combinator
-original_slug: Web/CSS/Next-sibling_combinator
 ---
 
 **接续兄弟选择器**（`+`）介于两个选择器之间，当第二个元素*紧跟在*第一个元素之后，并且两个元素都是属于同一个父{{DOMxRef("element", "元素", "", 1)}}的子元素，则第二个元素将被选中。
@@ -53,4 +52,4 @@ li:first-of-type + li {
 
 ## 参见
 
-- [后续兄弟组合器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator)
+- [后续兄弟组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

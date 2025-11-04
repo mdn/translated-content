@@ -1,10 +1,9 @@
 ---
 title: :target
 slug: Web/CSS/Reference/Selectors/:target
-original_slug: Web/CSS/:target
 ---
 
-**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 与当前 URL 片段匹配。
+**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 与当前 URL 片段匹配。
 
 ```css
 /* 选择一个 ID 与当前 URL 片段匹配的元素*/

@@ -1,10 +1,9 @@
 ---
 title: :invalid
 slug: Web/CSS/Reference/Selectors/:invalid
-original_slug: Web/CSS/:invalid
 ---
 
-**`:invalid`** 是 [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes)，用来选择任何未通过[验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)的 {{HTMLElement("form")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}} 或其他{{HTMLElement("form", "表单")}}元素。
+**`:invalid`** 是 [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)，用来选择任何未通过[验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)的 {{HTMLElement("form")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}} 或其他{{HTMLElement("form", "表单")}}元素。
 
 {{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
 
@@ -116,7 +115,7 @@ input:required:invalid {
 
 ### 展示分阶段的表单部分
 
-在这个例子中，我们使用 `:invalid` 以及[后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator)（`~`）来分阶段地展示一个表单，使得表单最初只显示第一个完成的项目，当用户完成每一个项目时，表单会显示下一个项目。当整个表单完成后，用户可以提交它。
+在这个例子中，我们使用 `:invalid` 以及[后续兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)（`~`）来分阶段地展示一个表单，使得表单最初只显示第一个完成的项目，当用户完成每一个项目时，表单会显示下一个项目。当整个表单完成后，用户可以提交它。
 
 #### HTML
 

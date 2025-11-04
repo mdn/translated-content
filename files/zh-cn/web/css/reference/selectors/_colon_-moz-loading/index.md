@@ -1,14 +1,13 @@
 ---
 title: :-moz-loading
 slug: Web/CSS/Reference/Selectors/:-moz-loading
-original_slug: Web/CSS/:-moz-loading
 l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
 {{Non-standard_header}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:-moz-loading`** 是一个用于匹配那些尚未开始加载、无法显示的元素（例如还未开始加载的图像）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。需要注意的是，*正在加载中的图像*并不会被此伪类匹配。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:-moz-loading`** 是一个用于匹配那些尚未开始加载、无法显示的元素（例如还未开始加载的图像）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。需要注意的是，*正在加载中的图像*并不会被此伪类匹配。
 
 > [!NOTE]
 > 这个选择器主要是供主题开发者使用的。

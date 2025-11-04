@@ -1,12 +1,11 @@
 ---
 title: :popover-open
 slug: Web/CSS/Reference/Selectors/:popover-open
-original_slug: Web/CSS/:popover-open
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:popover-open`** 用于表示一个处于显示状态的 {{domxref("Popover API", "popover", "", "nocode")}} 元素（即带有 [`popover` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover)的元素）。你可以使用它来仅在弹出框元素显示时应用样式。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:popover-open`** 用于表示一个处于显示状态的 {{domxref("Popover API", "popover", "", "nocode")}} 元素（即带有 [`popover` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover)的元素）。你可以使用它来仅在弹出框元素显示时应用样式。
 
 ## 语法
 

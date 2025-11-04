@@ -1,10 +1,9 @@
 ---
 title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
-original_slug: Web/CSS/:lang
 ---
 
-**`:lang()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素语言来匹配页面元素。
+**`:lang()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)基于元素语言来匹配页面元素。
 
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
 
@@ -46,7 +45,7 @@ original_slug: Web/CSS/:lang
 
 ## 示例
 
-在这个例子中，`:lang()` 伪类使用[子组合器](/zh-CN/docs/Web/CSS/Child_combinator)来匹配引用元素 ({{htmlElement("q")}}) 的父元素。需要注意的是，此处演示的方法并不是唯一的，最好的方法需要依据文档类型来确定。还需要注意的是，{{glossary("Unicode")}} 值用于指定一些特殊字符的引用。
+在这个例子中，`:lang()` 伪类使用[子组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Child_combinator)来匹配引用元素 ({{htmlElement("q")}}) 的父元素。需要注意的是，此处演示的方法并不是唯一的，最好的方法需要依据文档类型来确定。还需要注意的是，{{glossary("Unicode")}} 值用于指定一些特殊字符的引用。
 
 ### HTML
 

@@ -89,16 +89,16 @@ article p:first-child {
 
 所有的伪类以同样的方式实现。它们选中你的文档中处于某种状态的那部分，表现得就像是你已经向你的 HTML 加入类一样。看下 MDN 上的另外几个示例：
 
-- [`:last-child`](/zh-CN/docs/Web/CSS/:last-child)
-- [`:only-child`](/zh-CN/docs/Web/CSS/:only-child)
-- [`:invalid`](/zh-CN/docs/Web/CSS/:invalid)
+- [`:last-child`](/zh-CN/docs/Web/CSS/Reference/Selectors/:last-child)
+- [`:only-child`](/zh-CN/docs/Web/CSS/Reference/Selectors/:only-child)
+- [`:invalid`](/zh-CN/docs/Web/CSS/Reference/Selectors/:invalid)
 
 ### 用户行为伪类
 
 一些伪类只会在用户以某种方式和文档交互的时候应用。这些**用户行为伪类**，有时叫做**动态伪类**，表现得就像是一个类在用户和元素交互的时候加到了元素上一样。案例包括：
 
-- [`:hover`](/zh-CN/docs/Web/CSS/:hover)——上面提到过，只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。
-- [`:focus`](/zh-CN/docs/Web/CSS/:focus)——只会在用户使用键盘控制，选定元素的时候激活。
+- [`:hover`](/zh-CN/docs/Web/CSS/Reference/Selectors/:hover)——上面提到过，只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。
+- [`:focus`](/zh-CN/docs/Web/CSS/Reference/Selectors/:focus)——只会在用户使用键盘控制，选定元素的时候激活。
 
 ```html live-sample___hover
 <p><a href="">悬停在我上方</a></p>
@@ -234,7 +234,7 @@ article p:first-child::first-line {
 
 ## 参见
 
-- [伪类参考](/zh-CN/docs/Web/CSS/Pseudo-classes)
-- [伪元素参考](/zh-CN/docs/Web/CSS/Pseudo-elements)
+- [伪类参考](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [伪元素参考](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

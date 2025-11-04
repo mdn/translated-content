@@ -1,12 +1,11 @@
 ---
 title: :-moz-drag-over
 slug: Web/CSS/Reference/Selectors/:-moz-drag-over
-original_slug: Web/CSS/:-moz-drag-over
 ---
 
 {{Non-standard_header}}
 
-**`:-moz-drag-over`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)，用于在调用 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件时匹配一个元素。
+**`:-moz-drag-over`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)，用于在调用 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件时匹配一个元素。
 
 ## 语法
 

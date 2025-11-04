@@ -1,7 +1,6 @@
 ---
 title: ::-webkit-progress-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-inner-element
-original_slug: Web/CSS/::-webkit-progress-inner-element
 ---
 
 {{Non-standard_header}}

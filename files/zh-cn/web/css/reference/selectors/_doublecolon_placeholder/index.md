@@ -1,12 +1,11 @@
 ---
 title: ::placeholder
 slug: Web/CSS/Reference/Selectors/::placeholder
-original_slug: Web/CSS/::placeholder
 l10n:
   sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) **`::placeholder`** 表示 {{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中的[占位文本](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder)。
+[CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::placeholder`** 表示 {{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中的[占位文本](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder)。
 
 {{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
 

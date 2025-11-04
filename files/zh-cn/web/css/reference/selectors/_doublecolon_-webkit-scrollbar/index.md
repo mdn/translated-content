@@ -1,7 +1,6 @@
 ---
 title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
-original_slug: Web/CSS/::-webkit-scrollbar
 ---
 
 {{Non-standard_Header}}

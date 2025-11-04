@@ -1,10 +1,9 @@
 ---
 title: :where()
 slug: Web/CSS/Reference/Selectors/:where
-original_slug: Web/CSS/:where
 ---
 
-**`:where()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数接受[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。
+**`:where()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)函数接受[选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。
 
 ```css
 /* Selects any paragraph inside a header, main
@@ -161,5 +160,5 @@ footer a {
 ## 参见
 
 - {{CSSxRef(":is", ":is()")}}
-- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
+- [选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Web component](/zh-CN/docs/Web/API/Web_components)

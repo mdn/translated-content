@@ -1,13 +1,12 @@
 ---
 title: ID 选择器
 slug: Web/CSS/Reference/Selectors/ID_selectors
-original_slug: Web/CSS/ID_selectors
 ---
 
 CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性中的内容匹配元素。为了使该元素被选中，它的 `id` 属性必须与选择器中给出的值完全匹配。
 
 ```css
-/* id 为 "demo" 的元素会被选中 */
+/* id 为“demo”的元素会被选中 */
 #demo {
   border: red 2px solid;
 }
@@ -16,13 +15,17 @@ CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/
 ## 语法
 
 ```css
-#id 属性值 { 样式声明 }
+#id_value {
+  /* … */
+}
 ```
 
-它与下面的{{Cssxref("Attribute_selectors", "属性选择器")}}语句语法上等价（但优先级并不等价）：
+它与下面的[属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)语句语法上等价（但优先级并不等价）：
 
 ```css
-[id=id 属性值] { 样式声明 }
+[id="id_value"] {
+  /* … */
+}
 ```
 
 ## 示例

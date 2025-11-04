@@ -1,7 +1,6 @@
 ---
 title: 列组合器
 slug: Web/CSS/Reference/Selectors/Column_combinator
-original_slug: Web/CSS/Column_combinator
 l10n:
   sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---

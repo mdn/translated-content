@@ -1,10 +1,9 @@
 ---
 title: :nth-last-of-type
 slug: Web/CSS/Reference/Selectors/:nth-last-of-type
-original_slug: Web/CSS/:nth-last-of-type
 ---
 
-**`:nth-last-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素在相同类型（标签名）的兄弟元素中相对最后一个元素的位置来匹配元素。
+**`:nth-last-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)基于元素在相同类型（标签名）的兄弟元素中相对最后一个元素的位置来匹配元素。
 
 {{InteractiveExample("CSS Demo: :nth-last-of-type", "tabbed-shorter")}}
 

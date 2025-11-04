@@ -1,7 +1,6 @@
 ---
 title: 子组合器
 slug: Web/CSS/Reference/Selectors/Child_combinator
-original_slug: Web/CSS/Child_combinator
 ---
 
 **子组合器**（`>`）被放在两个 CSS 选择器之间。它只匹配那些被第二个选择器匹配的元素，这些元素是被第一个选择器匹配的元素的直接子元素。
@@ -13,7 +12,7 @@ ul.my-things > li {
 }
 ```
 
-被第二个选择器匹配的元素必须是被第一个选择器匹配的元素的直接子元素。这比[后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)更严格，后者匹配所有被第二个选择器匹配的元素，这些元素存在被第一个选择器匹配的祖先元素，无论在 DOM 上有多少“跳”。
+被第二个选择器匹配的元素必须是被第一个选择器匹配的元素的直接子元素。这比[后代组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Descendant_combinator)更严格，后者匹配所有被第二个选择器匹配的元素，这些元素存在被第一个选择器匹配的祖先元素，无论在 DOM 上有多少“跳”。
 
 ## 语法
 
@@ -61,4 +60,4 @@ div > span {
 
 ## 参见
 
-- [后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)
+- [后代组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Descendant_combinator)

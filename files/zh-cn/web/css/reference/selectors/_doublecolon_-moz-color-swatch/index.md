@@ -1,14 +1,13 @@
 ---
 title: ::-moz-color-swatch
 slug: Web/CSS/Reference/Selectors/::-moz-color-swatch
-original_slug: Web/CSS/::-moz-color-swatch
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
 {{Non-standard_header}}
 
-**`::-moz-color-swatch`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示在 `type="color"` 的 {{HTMLElement("input")}} 中选择的颜色的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
+**`::-moz-color-swatch`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)是用于表示在 `type="color"` 的 {{HTMLElement("input")}} 中选择的颜色的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
 
 > [!NOTE]
 > 除了 `<input type="color">` 以外，使用 `::-moz-color-swatch` 不会匹配任何内容，也没有任何效果。

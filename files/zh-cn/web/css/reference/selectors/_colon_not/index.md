@@ -1,10 +1,9 @@
 ---
 title: :not()
 slug: Web/CSS/Reference/Selectors/:not
-original_slug: Web/CSS/:not
 ---
 
-**`:not()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为*反选伪类*（_negation pseudo-class_）。
+**`:not()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为*反选伪类*（_negation pseudo-class_）。
 
 {{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
 
@@ -40,7 +39,7 @@ p > :not(strong, b.important) {
 
 ## 语法
 
-`:not()` 伪类可以将一个或多个以逗号分隔的选择器列表作为其参数。选择器中不得包含另一个否定选择器或[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
+`:not()` 伪类可以将一个或多个以逗号分隔的选择器列表作为其参数。选择器中不得包含另一个否定选择器或[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。
 
 ```css-nolint
 :not(<complex-selector-list>) {
@@ -54,11 +53,11 @@ p > :not(strong, b.important) {
 
 - 可以使用此伪类编写无用的选择器。例如，`:not(*)` 匹配任何不是元素的元素，这显然是荒谬的，所以这个附加的规则将永远不被应用。
 - 可以利用这个伪类提高规则的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。例如，`#foo:not(#bar)` 和 `#foo` 都将匹配相同的元素，但是具有两个 `id` 的选择器具有更高的优先级。
-- `:not()` 伪类的优先级将由其逗号分割的参数中优先级最高的选择器指定；提供与 [`:not(:is(argument))`](/zh-CN/docs/Web/CSS/:is) 相同的优先级。
+- `:not()` 伪类的优先级将由其逗号分割的参数中优先级最高的选择器指定；提供与 [`:not(:is(argument))`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is) 相同的优先级。
 - `:not(.foo)` 将匹配任何非 `.foo` 的元素，_包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}_。
-- 这个选择器将匹配任意“不是一个 X”的元素。当与[后代选择器](/zh-CN/docs/Web/CSS/Descendant_combinator)一起使用，这可能令人惊讶，因为有多种路径可以选择一个目标元素。例如，`body :not(table) a` 仍将应用 {{HTMLElement("table")}} 中的链接，因为 {{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} 等都可以匹配选择器 `:not(table)` 部分。
+- 这个选择器将匹配任意“不是一个 X”的元素。当与[后代选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Descendant_combinator)一起使用，这可能令人惊讶，因为有多种路径可以选择一个目标元素。例如，`body :not(table) a` 仍将应用 {{HTMLElement("table")}} 中的链接，因为 {{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} 等都可以匹配选择器 `:not(table)` 部分。
 - 你可以同时否定多个选择器。例如：`:not(.foo, .bar)` 等同于 `:not(.foo):not(.bar)`。
-- 如果传递给 `:not()` 伪类的选择器无效或者浏览器不支持，则整个规则都将是无效的。克服这种行为的有效方式是使用：[`:is`](/zh-CN/docs/Web/CSS/:is) 伪类，它接受一个可容错选择器列表。例如 `:not(.foo, :invalid-pseudo-class)` 将使整个规则无效，但是 `:not(:is(.foo, :invalid-pseudo-class))` 将匹配任何（_包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}_）不是 `.foo` 的元素。
+- 如果传递给 `:not()` 伪类的选择器无效或者浏览器不支持，则整个规则都将是无效的。克服这种行为的有效方式是使用：[`:is`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is) 伪类，它接受一个可容错选择器列表。例如 `:not(.foo, :invalid-pseudo-class)` 将使整个规则无效，但是 `:not(:is(.foo, :invalid-pseudo-class))` 将匹配任何（_包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}_）不是 `.foo` 的元素。
 
 ## 示例
 
@@ -173,7 +172,7 @@ div:not(:is(.foo, .bar)) {
 
 ## 参见
 
-- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [伪类和伪元素](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - 其他功能性 CSS 伪类包括：
   - {{cssxref(":has", ":has()")}}

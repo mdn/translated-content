@@ -1,10 +1,9 @@
 ---
 title: :is()
 slug: Web/CSS/Reference/Selectors/:is
-original_slug: Web/CSS/:is
 ---
 
-**`:is()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数以选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
+**`:is()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)函数以选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
 
 > [!NOTE]
 > 最初该选择器被命名为 `:matches()`（以及 `:any()`），但在 [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) 中被重命名为 `:is()`。
@@ -58,7 +57,7 @@ ol {
 
 ### :is() 和 :where() 的区别
 
-两者之间的区别在于，`:is()` 会计入整个选择器的优先级（它采用其最具体参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/:where) 的优先级为 0。这可以通过 [`:where()` 参考页面上的示例](/zh-CN/docs/Web/CSS/:where#示例)来演示。
+两者之间的区别在于，`:is()` 会计入整个选择器的优先级（它采用其最具体参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where) 的优先级为 0。这可以通过 [`:where()` 参考页面上的示例](/zh-CN/docs/Web/CSS/Reference/Selectors/:where#示例)来演示。
 
 ### 可容错选择器解析
 
@@ -258,5 +257,5 @@ some-element::after {
 ## 参见
 
 - {{CSSxRef(":where", ":where()")}}——类似于 `:is()`，但是其[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)为 0。
-- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
+- [选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Web 组件](/zh-CN/docs/Web/API/Web_components)

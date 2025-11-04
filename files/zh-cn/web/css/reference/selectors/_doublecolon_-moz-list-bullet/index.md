@@ -1,14 +1,13 @@
 ---
 title: ::-moz-list-bullet
 slug: Web/CSS/Reference/Selectors/::-moz-list-bullet
-original_slug: Web/CSS/::-moz-list-bullet
 l10n:
   sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
 {{Non-standard_header}}
 
-**`::-moz-list-bullet`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示无序列表（{{htmlelement("ul")}}）中的列表项（{{htmlelement("li")}}）的标记（通常是项目符号）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
+**`::-moz-list-bullet`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)是用于表示无序列表（{{htmlelement("ul")}}）中的列表项（{{htmlelement("li")}}）的标记（通常是项目符号）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
 
 ## 语法
 

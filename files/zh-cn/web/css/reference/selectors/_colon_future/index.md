@@ -1,12 +1,11 @@
 ---
 title: :future
 slug: Web/CSS/Reference/Selectors/:future
-original_slug: Web/CSS/:future
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) **`:future`** [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器是一种时间维度伪类，用于匹配那些完全出现在匹配 {{cssxref(":current")}} 元素之后的元素。例如，在通过 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 显示字幕的视频中。
+[CSS](/zh-CN/docs/Web/CSS) **`:future`** [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)选择器是一种时间维度伪类，用于匹配那些完全出现在匹配 {{cssxref(":current")}} 元素之后的元素。例如，在通过 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 显示字幕的视频中。
 
 ```css
 :future(p, span) {

@@ -1,12 +1,11 @@
 ---
 title: :nth-child()
 slug: Web/CSS/Reference/Selectors/:nth-child
-original_slug: Web/CSS/:nth-child
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) **`:nth-child()`** [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)根据元素在父元素的子元素列表中的索引来选择元素。换言之，`:nth-child()` 选择器根据父元素内的所有兄弟元素的位置来选择子元素。
+[CSS](/zh-CN/docs/Web/CSS) **`:nth-child()`** [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)根据元素在父元素的子元素列表中的索引来选择元素。换言之，`:nth-child()` 选择器根据父元素内的所有兄弟元素的位置来选择子元素。
 
 {{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
 
@@ -515,5 +514,5 @@ tbody tr :nth-child(3) {
 - {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
 - {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
 - {{ Cssxref(":has", ":has()") }}：用于选择父元素的伪类
-- [树结构的伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#树结构的伪类)
+- [树结构的伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes#树结构的伪类)
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块

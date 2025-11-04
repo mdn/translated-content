@@ -1,10 +1,9 @@
 ---
 title: :optional
 slug: Web/CSS/Reference/Selectors/:optional
-original_slug: Web/CSS/:optional
 ---
 
-**`:optional`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何未设置 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
+**`:optional`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)表示任何未设置 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
 
 {{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
 

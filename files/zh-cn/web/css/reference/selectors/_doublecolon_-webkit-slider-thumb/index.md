@@ -1,14 +1,13 @@
 ---
 title: ::-webkit-slider-thumb
 slug: Web/CSS/Reference/Selectors/::-webkit-slider-thumb
-original_slug: Web/CSS/::-webkit-slider-thumb
 l10n:
   sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
 ---
 
 {{SeeCompatTable}}
 
-**`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 `type="range"` 的 {{HTMLElement("input")}} 元素的滑块按钮，用户可以拖动按钮来改变其数值。
+**`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)代表 `type="range"` 的 {{HTMLElement("input")}} 元素的滑块按钮，用户可以拖动按钮来改变其数值。
 
 ## 语法
 

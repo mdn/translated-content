@@ -1,7 +1,6 @@
 ---
 title: :blank
 slug: Web/CSS/Reference/Selectors/:blank
-original_slug: Web/CSS/:blank
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
@@ -13,7 +12,7 @@ l10n:
 >
 > 详见 [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967)。
 
-**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器选择用户输入为空的输入框，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}}。
+**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)选择器选择用户输入为空的输入框，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}}。
 
 ## 语法
 

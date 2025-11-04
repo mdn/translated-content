@@ -1,7 +1,6 @@
 ---
 title: 后续兄弟选择器
 slug: Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
-original_slug: Web/CSS/Subsequent-sibling_combinator
 ---
 
 **后续兄弟选择器**（`~`）将两个选择器分开，并匹配第二个选择器的*所有迭代元素*，位置无须紧邻于第一个元素，只须有相同的父级{{Glossary("element", "元素")}}。
@@ -58,4 +57,4 @@ p ~ span {
 
 ## 参见
 
-- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator)
+- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)

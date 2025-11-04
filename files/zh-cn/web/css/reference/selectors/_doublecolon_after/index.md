@@ -1,12 +1,11 @@
 ---
 title: ::after
 slug: Web/CSS/Reference/Selectors/::after
-original_slug: Web/CSS/::after
 l10n:
   sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
-在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
+在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
 
 {{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
 
@@ -58,7 +57,7 @@ a::after {
 如果未指定 [`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content) 属性、属性值无效或属性值为 `normal` 或 `none`，则不会渲染 `::after` 伪元素。其行为与设置了 `display: none` 相同。
 
 > [!NOTE]
-> CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持较早引入的 `:after`。
+> CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)的。同时为了向后兼容，浏览器也支持较早引入的 `:after`。
 
 ## 示例
 

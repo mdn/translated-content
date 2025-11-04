@@ -1,12 +1,11 @@
 ---
 title: ::view-transition
 slug: Web/CSS/Reference/Selectors/::view-transition
-original_slug: Web/CSS/::view-transition
 ---
 
 {{SeeCompatTable}}
 
-**`::view-transition`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡叠加层的根元素，它包含所有视图过渡且位于所有其他页面内容的顶部。
+**`::view-transition`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)表示视图过渡叠加层的根元素，它包含所有视图过渡且位于所有其他页面内容的顶部。
 
 在视图过渡期间，`::view-transition` 包含在相关的伪元素树中，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述。它是该树的顶级节点，并且有一个或多个 {{cssxref("::view-transition-group")}} 子节点。
 

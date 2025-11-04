@@ -1,12 +1,11 @@
 ---
 title: ::first-letter
 slug: Web/CSS/Reference/Selectors/::first-letter
-original_slug: Web/CSS/::first-letter
 l10n:
   sourceCommit: 190e65c92aa1d1be81106fd431f49230f98b8224
 ---
 
-**`::first-letter`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)将样式应用于[区块容器](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#区块容器)第一行的第一个字母，但仅当其前面没有其他内容（例如图像或行内表格）时才有效。
+**`::first-letter`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)将样式应用于[区块容器](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#区块容器)第一行的第一个字母，但仅当其前面没有其他内容（例如图像或行内表格）时才有效。
 
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 
@@ -38,7 +37,7 @@ p::first-letter {
 - {{ cssxref("::before") }} 伪元素和 {{ cssxref("content") }} 属性的组合可能会在元素开头注入一些文本。在这种情况下，`::first-letter` 将匹配生成内容的第一个字母。
 
 > [!NOTE]
-> CSS 引入了 `::first-letter` 符号（带两个冒号），以区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。为了向后兼容，浏览器也接受早先引入的 `:first-letter`。
+> CSS 引入了 `::first-letter` 符号（带两个冒号），以区分[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。为了向后兼容，浏览器也接受早先引入的 `:first-letter`。
 >
 > 浏览器对荷兰语中 `IJ` 等数字字符的支持较差。请查看下面的兼容性表，以了解当前的支持情况。
 

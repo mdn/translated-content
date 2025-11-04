@@ -1,7 +1,6 @@
 ---
 title: :focus-visible
 slug: Web/CSS/Reference/Selectors/:focus-visible
-original_slug: Web/CSS/:focus-visible
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -62,7 +61,7 @@ select:focus-visible {
 
 `:focus` 伪类总是与当前焦点元素匹配。`focus-visible` 伪类也会匹配被聚焦的元素，但只有在用户需要知道当前焦点在哪里时才会匹配。由于 `:focus-visible` 伪类会在需要时匹配焦点元素，因此使用 `:focus-visible`（而不是 `:focus` 伪类）可以让作者改变焦点指示器的外观，而无需改变焦点指示器的显示时间。
 
-当使用 [`:focus`](/zh-CN/docs/Web/CSS/:focus) 伪类时，它总是指向当前聚焦的元素。这意味着，当用户使用指向设备时，聚焦元素周围会出现一个可见的焦点环，有些人认为这很碍眼。`:focus-visible` 伪类尊重用户代理的选择性焦点指示行为，同时还允许对焦点指示器进行自定义。
+当使用 [`:focus`](/zh-CN/docs/Web/CSS/Reference/Selectors/:focus) 伪类时，它总是指向当前聚焦的元素。这意味着，当用户使用指向设备时，聚焦元素周围会出现一个可见的焦点环，有些人认为这很碍眼。`:focus-visible` 伪类尊重用户代理的选择性焦点指示行为，同时还允许对焦点指示器进行自定义。
 
 ## 无障碍
 

@@ -324,9 +324,9 @@ h2 {
 - **元素**：选择器中包含元素、伪元素选择器则个位得一分。
 
 > [!NOTE]
-> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/:where)）不会影响优先级。
+> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where)）不会影响优先级。
 
-否定（[`:not()`](/zh-CN/docs/Web/CSS/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
+否定（[`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
 
 下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/CSS_selectors)找到每个选择器的详细信息。
 

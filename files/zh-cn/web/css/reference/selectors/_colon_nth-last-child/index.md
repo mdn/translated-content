@@ -1,10 +1,9 @@
 ---
 title: :nth-last-child
 slug: Web/CSS/Reference/Selectors/:nth-last-child
-original_slug: Web/CSS/:nth-last-child
 ---
 
-**`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 从兄弟节点中从后往前匹配处于某些位置的元素
+**`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 从兄弟节点中从后往前匹配处于某些位置的元素
 
 ```css
 /* 在所有兄弟节点中，从后往前
@@ -113,7 +112,7 @@ tr:nth-last-child(2) {
 
 ### Quantity query
 
-数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator).的功能来实现的
+数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator).的功能来实现的
 
 #### HTML
 

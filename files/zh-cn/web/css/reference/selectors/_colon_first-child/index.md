@@ -1,10 +1,9 @@
 ---
 title: :first-child
 slug: Web/CSS/Reference/Selectors/:first-child
-original_slug: Web/CSS/:first-child
 ---
 
-**`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示在一组兄弟元素中的第一个元素。
+**`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)表示在一组兄弟元素中的第一个元素。
 
 {{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
 

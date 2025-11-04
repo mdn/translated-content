@@ -1,10 +1,7 @@
 ---
 title: 通配选择器
 slug: Web/CSS/Reference/Selectors/Universal_selectors
-original_slug: Web/CSS/Universal_selectors
 ---
-
-## 概述
 
 在 CSS 中，一个星号 (`*`) 就是一个通配选择器。它可以匹配任意类型的 HTML 元素。在配合其他简单选择器的时候，省略掉通配选择器会有同样的效果。比如，`*.warning` 和`.warning` 的效果完全相同。
 

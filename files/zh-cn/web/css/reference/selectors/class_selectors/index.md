@@ -1,7 +1,6 @@
 ---
 title: 类选择器
 slug: Web/CSS/Reference/Selectors/Class_selectors
-original_slug: Web/CSS/Class_selectors
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **类选择器**根据 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 属性的内容匹配元素。

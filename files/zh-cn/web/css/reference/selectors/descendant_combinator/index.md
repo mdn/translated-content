@@ -1,13 +1,12 @@
 ---
 title: 后代选择器
 slug: Web/CSS/Reference/Selectors/Descendant_combinator
-original_slug: Web/CSS/Descendant_combinator
 ---
 
-**后代组合器**（通常用单个空格（" "）字符表示）组合了两个选择器，如果第二个选择器匹配的元素具有与第一个选择器匹配的祖先（父母，父母的父母，父母的父母的父母等）元素，则它们将被选择。利用后代组合器的选择器称为*后代选择器*。
+**后代组合器**（通常用单个空格（" "）字符表示）组合了两个选择器，如果第二个选择器匹配的元素具有与第一个选择器匹配的祖先（父母、父母的父母，父母的父母的父母等）元素，则它们将被选择。利用后代组合器的选择器称为*后代选择器*。
 
 ```css
-/* List items that are descendants of the "my-things" list */
+/* 列出“my-things”列表的子项 */
 ul.my-things li {
   margin: 2em;
 }
@@ -17,13 +16,13 @@ ul.my-things li {
 
 ## 语法
 
-```plain
+```css
 selector1 selector2 {
-  /* property declarations */
+  /* 属性声明 */
 }
 ```
 
-## Examples
+## 示例
 
 ### CSS
 
@@ -42,25 +41,25 @@ li li {
 ```html
 <ul>
   <li>
-    <div>Item 1</div>
+    <div>项目 1</div>
     <ul>
-      <li>Subitem A</li>
-      <li>Subitem B</li>
+      <li>子项 A</li>
+      <li>子项 B</li>
     </ul>
   </li>
   <li>
-    <div>Item 2</div>
+    <div>项目 2</div>
     <ul>
-      <li>Subitem A</li>
-      <li>Subitem B</li>
+      <li>子项 A</li>
+      <li>子项 B</li>
     </ul>
   </li>
 </ul>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", "100%", 160)}}
+{{EmbedLiveSample("示例", "100%", 160)}}
 
 ## 规范
 
@@ -70,6 +69,6 @@ li li {
 
 {{Compat}}
 
-## 相关
+## 参见
 
-- [Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)
+- [子组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Child_combinator)

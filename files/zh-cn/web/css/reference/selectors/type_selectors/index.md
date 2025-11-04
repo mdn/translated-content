@@ -1,7 +1,6 @@
 ---
 title: 类型选择器
 slug: Web/CSS/Reference/Selectors/Type_selectors
-original_slug: Web/CSS/Type_selectors
 ---
 
 CSS **类型选择器**通过节点名称匹配元素。换句话说，它选择一个文件中所有给定类型的元素。

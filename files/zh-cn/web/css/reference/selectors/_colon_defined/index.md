@@ -1,10 +1,9 @@
 ---
 title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
-original_slug: Web/CSS/:defined
 ---
 
-**`:defined`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。
+**`:defined`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。
 
 ```css
 /* 选择所有已定义的元素 */

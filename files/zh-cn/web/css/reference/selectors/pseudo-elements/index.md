@@ -1,7 +1,6 @@
 ---
 title: 伪元素
 slug: Web/CSS/Reference/Selectors/Pseudo-elements
-original_slug: Web/CSS/Pseudo-elements
 ---
 
 伪元素是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。下例中的 {{CSSxRef("::first-line")}} 伪元素可改变段落首行文字的样式。
@@ -127,4 +126,4 @@ T
 
 ## 参见
 
-- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

@@ -36,7 +36,7 @@ _同样继承来自父级 {{domxref("Event")}} 的属性_。
 - {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : 一个 `float` 类型的数值，表示在事件触发时过渡已经运行的时间，以秒为单位。该值不受 {{cssxref("transition-delay")}} 属性的影响。
 - {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 一个以 `::` 开始的字符串，包含运行动画效果的[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)名称。如果过渡效果并不是在伪元素上运行的，则该值是空字符串 `''`。
+  - : 一个以 `::` 开始的字符串，包含运行动画效果的[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)名称。如果过渡效果并不是在伪元素上运行的，则该值是空字符串 `''`。
 
 ## 示例
 

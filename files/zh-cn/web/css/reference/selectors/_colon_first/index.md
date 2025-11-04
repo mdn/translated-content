@@ -1,10 +1,9 @@
 ---
 title: :first
 slug: Web/CSS/Reference/Selectors/:first
-original_slug: Web/CSS/:first
 ---
 
-**`:first`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)与 {{cssxref("@page")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)一起使用。表示打印文档的第一页。（有关节点的第一个元素，请参阅 {{cssxref(":first-child")}}。）
+**`:first`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)与 {{cssxref("@page")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)一起使用。表示打印文档的第一页。（有关节点的第一个元素，请参阅 {{cssxref(":first-child")}}。）
 
 ```css
 /* 打印时选择第一页 */

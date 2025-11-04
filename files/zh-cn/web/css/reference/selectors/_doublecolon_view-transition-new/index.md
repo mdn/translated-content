@@ -1,12 +1,11 @@
 ---
 title: ::view-transition-new
 slug: Web/CSS/Reference/Selectors/::view-transition-new
-original_slug: Web/CSS/::view-transition-new
 ---
 
 {{SeeCompatTable}}
 
-**`::view-transition-new`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡的新视图状态——即过渡后新视图的实时表示。
+**`::view-transition-new`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)表示视图过渡的新视图状态——即过渡后新视图的实时表示。
 
 在视图过渡期间，`::view-transition-new` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition-image-pair")}} 的子节点，并且它不会有任何子节点。
 

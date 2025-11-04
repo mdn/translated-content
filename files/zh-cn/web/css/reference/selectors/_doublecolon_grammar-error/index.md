@@ -1,7 +1,6 @@
 ---
 title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
-original_slug: Web/CSS/::grammar-error
 ---
 
 {{SeeCompatTable}}
@@ -18,14 +17,14 @@ original_slug: Web/CSS/::grammar-error
 - {{cssxref("outline")}} and its longhands
 - {{cssxref("text-decoration")}} and its associated properties
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{cssxref("::spelling-error")}}

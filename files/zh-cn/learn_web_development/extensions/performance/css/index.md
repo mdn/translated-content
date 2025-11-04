@@ -82,7 +82,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
   将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)，以后需要时就很容易覆盖样式。
 
-- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
+- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
 
   ```css
   /* 选择 <body> 元素内的所有元素 */

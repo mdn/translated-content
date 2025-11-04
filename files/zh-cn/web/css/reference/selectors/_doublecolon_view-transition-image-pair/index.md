@@ -1,12 +1,11 @@
 ---
 title: ::view-transition-image-pair
 slug: Web/CSS/Reference/Selectors/::view-transition-image-pair
-original_slug: Web/CSS/::view-transition-image-pair
 ---
 
 {{SeeCompatTable}}
 
-**`::view-transition-image-pair`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示一个视图过渡的旧视图状态和新视图状态的容器——即过渡前和过渡后的状态。
+**`::view-transition-image-pair`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)表示一个视图过渡的旧视图状态和新视图状态的容器——即过渡前和过渡后的状态。
 
 在视图过渡期间，`::view-transition-image-pair` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition-group")}} 的子节点。并且可以有一个 {{cssxref("::view-transition-new")}} 或一个 {{cssxref("::view-transition-old")}} 子节点，亦或是两者都有。
 

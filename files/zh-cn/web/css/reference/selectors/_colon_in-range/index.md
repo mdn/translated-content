@@ -1,10 +1,9 @@
 ---
 title: :in-range
 slug: Web/CSS/Reference/Selectors/:in-range
-original_slug: Web/CSS/:in-range
 ---
 
-**`in-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 限定的范围之内。
+**`in-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)代表一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 限定的范围之内。
 
 {{InteractiveExample("CSS Demo: :in-range", "tabbed-shorter")}}
 
@@ -110,7 +109,7 @@ input:out-of-range + label::after {
 {{EmbedLiveSample('示例', 600, 140)}}
 
 > [!NOTE]
-> 内容为空的 `<input>` 不算作超出范围，因此不会被 `:out-of-range` 伪类选择器应用。虽然目前 [`:blank`](/zh-CN/docs/Web/CSS/:blank) 伪类可用于选择空白输入，但该伪类仍处于实验性阶段且得到的支持有限。建议你使用 `required` 属性和 [`:invalid`](/zh-CN/docs/Web/CSS/:invalid) 伪类来提供更为通用的逻辑和样式以使输入变为必填项（`:invalid` 伪类将为空白*和*超出范围的输入提供样式）。
+> 内容为空的 `<input>` 不算作超出范围，因此不会被 `:out-of-range` 伪类选择器应用。虽然目前 [`:blank`](/zh-CN/docs/Web/CSS/Reference/Selectors/:blank) 伪类可用于选择空白输入，但该伪类仍处于实验性阶段且得到的支持有限。建议你使用 `required` 属性和 [`:invalid`](/zh-CN/docs/Web/CSS/Reference/Selectors/:invalid) 伪类来提供更为通用的逻辑和样式以使输入变为必填项（`:invalid` 伪类将为空白*和*超出范围的输入提供样式）。
 
 ## 规范
 

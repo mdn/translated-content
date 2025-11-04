@@ -1,12 +1,11 @@
 ---
 title: ::slotted()
 slug: Web/CSS/Reference/Selectors/::slotted
-original_slug: Web/CSS/::slotted
 l10n:
   sourceCommit: cebbd9095ac12557c55157355181672027fffc14
 ---
 
-**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)用于选定那些被放在 HTML 模板中的元素（更多请查看[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)）。
+**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)用于选定那些被放在 HTML 模板中的元素（更多请查看[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)）。
 
 这个伪元素选择器仅仅适用于[影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)。请注意它只会选择实际的元素节点，而不包括文本节点。
 

@@ -1,7 +1,6 @@
 ---
 title: 选择器列表
 slug: Web/CSS/Reference/Selectors/Selector_list
-original_slug: Web/CSS/Selector_list
 ---
 
 CSS **选择器列表**（`,`）选择所有匹配的节点。选择器列表是以逗号分隔的多个选择器所组成的列表。
@@ -134,7 +133,7 @@ h2:has(+ p, > ul::after, + ul.red) {
 }
 ```
 
-上面，紧跟在 `<p>` 或 `<ul class="red">` 之后的 `h2` 将会是斜体。虽然 [`:has()`](/zh-CN/docs/Web/CSS/:has) 可容错相对选择器列表参数中的伪元素是无效的，但因为列表是可容错的，它不会“中断”选择器。
+上面，紧跟在 `<p>` 或 `<ul class="red">` 之后的 `h2` 将会是斜体。虽然 [`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has) 可容错相对选择器列表参数中的伪元素是无效的，但因为列表是可容错的，它不会“中断”选择器。
 
 ## 规范
 
@@ -146,5 +145,5 @@ h2:has(+ p, > ul::after, + ul.red) {
 
 ## 参见
 
-- 伪类 [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not) 和 [`:has()`](/zh-CN/docs/Web/CSS/:has) 接受可容错选择器列表。
+- 伪类 [`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)、[`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where)、[`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not) 和 [`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has) 接受可容错选择器列表。
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)

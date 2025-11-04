@@ -1,12 +1,11 @@
 ---
 title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
-original_slug: Web/CSS/:scope
 l10n:
   sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
 ---
 
-**`:scope`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示作为选择器要匹配的作为参考点或作用域的元素。
+**`:scope`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)表示作为选择器要匹配的作为参考点或作用域的元素。
 
 ```css
 /* 选择一个限制作用域的元素 */
@@ -165,7 +164,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 ## 参见
 
 - {{cssxref("@scope")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-- {{cssxref(":root")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- {{cssxref(":root")}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [DOM 树节点的选择和遍历](/zh-CN/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} 和 {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} 和 {{domxref("Document.querySelectorAll()")}}

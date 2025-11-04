@@ -1,10 +1,9 @@
 ---
 title: :link
 slug: Web/CSS/Reference/Selectors/:link
-original_slug: Web/CSS/:link
 ---
 
-**`:link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示尚未被访问的元素，匹配每个具有 `href` 属性的未访问的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。
+**`:link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)表示尚未被访问的元素，匹配每个具有 `href` 属性的未访问的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。
 
 {{InteractiveExample("CSS Demo: :link", "tabbed-shorter")}}
 
@@ -40,7 +39,7 @@ a:link {
 </ul>
 ```
 
-由 `:link` 和 [`:visited`](/zh-CN/docs/Web/CSS/:visited) 伪类定义的样式可以被任何具有相同优先级的后续用户动作伪类（例如 {{cssxref(":hover")}} 或 {{cssxref(":active")}}）覆盖。为了适当地为链接设置样式，请按照 *LVHA 顺序*将 `:link` 规则放置在所有其他与链接相关的规则之前，顺序为 `:link`—`:visited`—`:hover`—`:active`。`:visited` 伪类和 `:link` 伪类是互斥的。
+由 `:link` 和 [`:visited`](/zh-CN/docs/Web/CSS/Reference/Selectors/:visited) 伪类定义的样式可以被任何具有相同优先级的后续用户动作伪类（例如 {{cssxref(":hover")}} 或 {{cssxref(":active")}}）覆盖。为了适当地为链接设置样式，请按照 *LVHA 顺序*将 `:link` 规则放置在所有其他与链接相关的规则之前，顺序为 `:link`—`:visited`—`:hover`—`:active`。`:visited` 伪类和 `:link` 伪类是互斥的。
 
 > [!NOTE]
 > 使用 {{cssxref(":any-link")}} 来选择一个元素，无论它是否已被访问。

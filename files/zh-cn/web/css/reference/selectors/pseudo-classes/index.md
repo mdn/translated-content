@@ -1,7 +1,6 @@
 ---
 title: 伪类
 slug: Web/CSS/Reference/Selectors/Pseudo-classes
-original_slug: Web/CSS/Pseudo-classes
 ---
 
 [CSS](/zh-CN/docs/Web/CSS) **_伪类_**是添加到选择器的关键字，用于指定所选元素的特殊状态。例如，伪类 {{CSSxRef(":hover")}} 可以用于选择一个按钮，当用户的指针悬停在按钮上时，设置此按钮的样式。
@@ -18,7 +17,7 @@ button:hover {
 伪类让你可以将样式应用于元素，不仅与文档树内容有关，也与外部因素有关——如与导航历史有关的（例如，{{CSSxRef(":visited")}}）、与其内容的状态有关的（如某些表单元素上的 {{CSSxRef(":checked")}}）或者与鼠标位置有关的（如 {{CSSxRef(":hover")}}，它可以让你知道鼠标是否在一个元素上）。
 
 > [!NOTE]
-> 相较于伪类，[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)可用于设置元素*特定部分*的样式。
+> 相较于伪类，[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)可用于设置元素*特定部分*的样式。
 
 ## 元素显示状态伪类
 
@@ -79,15 +78,15 @@ TBD
 
 ## 函数式伪类
 
-这些伪类接受[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)作为参数。
+这些伪类接受[可容错选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list#可容错选择器列表)作为参数。
 
-- [`:is()`](/zh-CN/docs/Web/CSS/:is)
+- [`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)
   - : 匹配与提供的列表中的任何选择器匹配的任何元素。
-- [`:not()`](/zh-CN/docs/Web/CSS/:not)
+- [`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)
   - : 表示其参数中未表示的任何元素。
-- [`:where()`](/zh-CN/docs/Web/CSS/:where)
+- [`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where)
   - : 优先级调整伪类匹配与提供的列表中的任何选择器匹配的任何元素，但不添加任何优先级权重。
-- [`:has()`](/zh-CN/docs/Web/CSS/:has)
+- [`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has)
   - : 该关系伪类表示与任何一个与锚定的元素的相对选择器相匹配（如果有的话）的元素。
 
 ## 语法
@@ -232,4 +231,4 @@ W
 
 ## 参见
 
-- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
+- [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

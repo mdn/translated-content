@@ -1,10 +1,9 @@
 ---
 title: :root
 slug: Web/CSS/Reference/Selectors/:root
-original_slug: Web/CSS/:root
 ---
 
-**`:root`** 这个 CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配文档树的根元素。对于 HTML 来说，**`:root`** 表示 {{HTMLElement("html")}} 元素，除了[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)更高之外，与 `html` 选择器相同。
+**`:root`** 这个 CSS [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)匹配文档树的根元素。对于 HTML 来说，**`:root`** 表示 {{HTMLElement("html")}} 元素，除了[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)更高之外，与 `html` 选择器相同。
 
 ```css
 /* 选择文档的根元素（HTML 中的 <html>） */

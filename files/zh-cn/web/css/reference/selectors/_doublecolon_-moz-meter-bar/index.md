@@ -1,7 +1,6 @@
 ---
 title: ::-moz-meter-bar
 slug: Web/CSS/Reference/Selectors/::-moz-meter-bar
-original_slug: Web/CSS/::-moz-meter-bar
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

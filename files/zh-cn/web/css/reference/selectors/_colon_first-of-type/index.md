@@ -1,10 +1,9 @@
 ---
 title: :first-of-type
 slug: Web/CSS/Reference/Selectors/:first-of-type
-original_slug: Web/CSS/:first-of-type
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** 表示一组兄弟元素中其类型的第一个元素。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:first-of-type`** 表示一组兄弟元素中其类型的第一个元素。
 
 {{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
 
@@ -71,7 +70,7 @@ p:first-of-type {
 
 ### 嵌套元素
 
-下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-CN/docs/Web/CSS/Universal_selectors)（`*`）是默认应用的。
+下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)（`*`）是默认应用的。
 
 #### HTML
 
