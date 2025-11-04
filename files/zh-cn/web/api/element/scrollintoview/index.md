@@ -53,7 +53,7 @@ scrollIntoView(options)
 
     - `inline` {{optional_inline}}
       - : 定义元素在可滚动祖先容器内的水平对齐方式。其取值可为以下任一选项：
-        - `start`: 将元素左边缘与可滚动容器左侧对齐，使元素在可见区域水平方向上显示于起始位置。
+        - `start`：将元素左边缘与可滚动容器左侧对齐，使元素在可见区域水平方向上显示于起始位置。
         - `center`：将元素水平居中对齐于可滚动容器中央，使其位于可见区域正中。
         - `end`：将元素右边缘与可滚动容器右侧对齐，使元素水平方向位于可见区域末端。
         - `nearest`：将元素水平方向滚动至最近边缘。若元素更靠近滚动容器左侧，则向左对齐；若更靠近右侧，则向右对齐。此方式可最小化滚动距离。
@@ -85,7 +85,7 @@ element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 
 ```html
 <body>
-  <header class="navbar">Navbar</header>
+  <header class="navbar">导航栏</header>
   <main class="content">
     <button id="go-to-bottom">去底部</button>
     <button id="go-to-top">去顶部</button>
