@@ -9,7 +9,7 @@ CSS **虛擬類別**（pseudo-class）的元素，在特殊狀態下被選取的
 
 ## 語法
 
-```plain
+```css
 selector:pseudo-class {
   property: value;
 }
