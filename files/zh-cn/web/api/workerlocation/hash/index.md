@@ -18,7 +18,7 @@ l10n:
 
 ```js
 // 在位于页面 https://developer.mozilla.org/zh-CN/docs/Web/API/WorkerLocation/hash#示例 上的 Web Worker 中
-const result = location.hash; // 返回“#示例”
+const result = location.hash; // 返回“#%E7%A4%BA%E4%BE%8B”
 ```
 
 ## 规范
