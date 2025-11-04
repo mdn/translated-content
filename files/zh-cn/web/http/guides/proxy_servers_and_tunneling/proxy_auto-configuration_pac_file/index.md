@@ -366,7 +366,7 @@ weekdayRange(wd1, wd2, gmt)
 ```
 
 > [!NOTE]
-> （Firefox 49 之前版本）如果希望函数将这些参数作为范围进计算，则 wd1 必须小于 wd2。请参阅下面的警告。
+> （Firefox 49 之前版本）如果希望函数将这些参数作为范围进行计算，则 wd1 必须小于 wd2。请参阅下面的警告。
 
 #### 参数
 
@@ -470,7 +470,7 @@ timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)
 ```
 
 > [!NOTE]
-> （Firefox 49 之前版本）如果你希望函数将这些参数作为范围进行计算，则范畴“hour1、min1、sec1”必须小于范畴“hour2、min2、sec2”。请参阅下方警告。
+> （Firefox 49 之前版本）如果你希望函数将这些参数作为范围进行计算，则范围“hour1、min1、sec1”必须小于范围“hour2、min2、sec2”。请参阅下方警告。
 
 #### 参数
 
