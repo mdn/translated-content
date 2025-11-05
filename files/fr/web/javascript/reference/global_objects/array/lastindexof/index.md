@@ -68,8 +68,8 @@ tableau.lastIndexOf(2, -1); // 3
 Vous ne pouvez pas utiliser `lastIndexOf()` pour rechercher la valeur `NaN`.
 
 ```js
-const array = [NaN];
-array.lastIndexOf(NaN); // -1
+const tableau = [NaN];
+tableau.lastIndexOf(NaN); // -1
 ```
 
 ### Trouver toutes les occurrences d'un élément
