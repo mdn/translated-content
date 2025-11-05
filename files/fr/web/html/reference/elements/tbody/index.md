@@ -386,5 +386,5 @@ tbody > tr > th {
   - [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)
   - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
 - Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tbody>`&nbsp;:
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de paramétrer l'alignement des cellules d'une colonne
+  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) qui permet de paramétrer l'alignement des cellules d'une colonne
   - La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui permet d'aligner le contenu des cellules par rapport à un même caractère (par exemple «&nbsp;.&nbsp;»)

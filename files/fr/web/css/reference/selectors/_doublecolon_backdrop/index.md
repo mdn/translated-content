@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::backdrop`** est une boîte de la taille de la {{Glossary("viewport", "zone d'affichage")}}, qui est rendue immédiatement sous tout élément présenté dans la {{glossary("top layer", "couche supérieure")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::backdrop`** est une boîte de la taille de la {{Glossary("viewport", "zone d'affichage")}}, qui est rendue immédiatement sous tout élément présenté dans la {{glossary("top layer", "couche supérieure")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::backdrop", "tabbed-shorter")}}
 

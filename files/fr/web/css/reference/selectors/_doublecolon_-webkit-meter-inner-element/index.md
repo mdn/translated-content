@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-inner-element`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de sélectionner et appliquer des styles à l'élément conteneur externe d'un élément {{htmlelement("meter")}}. C'est une balise supplémentaire pour afficher l'élément `<meter>` en lecture seule.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-inner-element`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de sélectionner et appliquer des styles à l'élément conteneur externe d'un élément {{htmlelement("meter")}}. C'est une balise supplémentaire pour afficher l'élément `<meter>` en lecture seule.
 
 ## Syntaxe
 

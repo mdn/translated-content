@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-meter-bar`** représente la jauge de mesure dans un élément {{HTMLElement("meter")}}. Il est utilisé pour sélectionner et appliquer des styles à la jauge à l'intérieur d'un élément de mesure.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-meter-bar`** représente la jauge de mesure dans un élément {{HTMLElement("meter")}}. Il est utilisé pour sélectionner et appliquer des styles à la jauge à l'intérieur d'un élément de mesure.
 
 ## Syntaxe
 

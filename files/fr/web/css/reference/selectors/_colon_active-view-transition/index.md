@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 90e5b796c5741c209aaa674e9ff86d4d7c8e0427
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active-view-transition`** correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_et_utilisation) est en cours (_active_) et cesse de correspondre une fois la transition terminée.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active-view-transition`** correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_et_utilisation) est en cours (_active_) et cesse de correspondre une fois la transition terminée.
 
 ## Syntaxe
 

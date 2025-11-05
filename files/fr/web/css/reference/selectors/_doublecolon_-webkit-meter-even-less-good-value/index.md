@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-even-less-good-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui met en forme l'élément {{HTMLElement("meter")}} lorsque les attributs `value` et `optimum` se situent en dehors de la plage basse-haute, mais dans des zones opposées. À titre d'illustration, cela s'applique lorsque `value` < `low` < `high` < `optimum` ou `value` > `high` > `low` > `optimum`.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-even-less-good-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui met en forme l'élément {{HTMLElement("meter")}} lorsque les attributs `value` et `optimum` se situent en dehors de la plage basse-haute, mais dans des zones opposées. À titre d'illustration, cela s'applique lorsque `value` < `low` < `high` < `optimum` ou `value` > `high` > `low` > `optimum`.
 
 Rouge est la couleur par défaut.
 

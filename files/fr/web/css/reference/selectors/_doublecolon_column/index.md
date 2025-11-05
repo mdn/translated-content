@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::column`** représente les colonnes individuelles générées lorsqu'un conteneur est configuré pour afficher son contenu dans plusieurs colonnes via une [mise en page CSS multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout). Le pseudo-élément `::column` permet d'appliquer des styles qui n'affectent pas la mise en page à ces fragments générés.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::column`** représente les colonnes individuelles générées lorsqu'un conteneur est configuré pour afficher son contenu dans plusieurs colonnes via une [mise en page CSS multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout). Le pseudo-élément `::column` permet d'appliquer des styles qui n'affectent pas la mise en page à ces fragments générés.
 
 ## Syntaxe
 

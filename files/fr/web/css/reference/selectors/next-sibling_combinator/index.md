@@ -58,4 +58,4 @@ li:first-of-type + li {
 
 ## Voir aussi
 
-- [Les combinateur de voisins généraux](/fr/docs/Web/CSS/Subsequent-sibling_combinator)
+- [Les combinateur de voisins généraux](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

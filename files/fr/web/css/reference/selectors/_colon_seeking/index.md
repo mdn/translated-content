@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:seeking`** représente un élément qui est lisible, tel que {{htmlelement("audio")}} ou {{htmlelement("video")}}, lorsque l'élément lisible recherche une position de lecture dans la ressource multimédia.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:seeking`** représente un élément qui est lisible, tel que {{htmlelement("audio")}} ou {{htmlelement("video")}}, lorsque l'élément lisible recherche une position de lecture dans la ressource multimédia.
 Une ressource est considérée comme étant en cours de recherche si l'utilisateur·ice a demandé la lecture d'une position spécifique dans la ressource multimédia, mais que l'élément multimédia n'a pas encore atteint cette position.
 
 La recherche est différente de {{cssxref(":buffering")}} en ce sens que l'élément multimédia ne charge pas actuellement de données, mais passe plutôt à une nouvelle position dans la ressource multimédia.

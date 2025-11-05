@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-new()`** représente l'état de vue «&nbsp;<i lang="en">new</i>&nbsp;» d'une transition de vue — une représentation instantanée en direct de l'état après la transition.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-new()`** représente l'état de vue «&nbsp;<i lang="en">new</i>&nbsp;» d'une transition de vue — une représentation instantanée en direct de l'état après la transition.
 
 Lors d'une transition de vue, `::view-transition-new()` est inclus dans l'arbre des pseudo-éléments associés comme expliqué dans [L'arbre des pseudo-éléments de transition de vue](/fr/docs/Web/API/View_Transition_API/Using#larbre_des_pseudo-éléments_de_transition_de_vue). Il est seulement un enfant d'un {{cssxref("::view-transition-image-pair()")}}, et n'a jamais d'enfants.
 
@@ -58,7 +58,7 @@ Le style par défaut suivant est inclus dans la feuille de style de l'agent util
 ### Paramètres
 
 - `*`
-  - : Le [sélecteur universel (`*`)](/fr/docs/Web/CSS/Universal_selectors)&nbsp;; sélectionne tous les groupes de transition de vue sur une page.
+  - : Le [sélecteur universel (`*`)](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)&nbsp;; sélectionne tous les groupes de transition de vue sur une page.
 - `root`
   - : Fait correspondre le pseudo-élément au groupe de transition de vue par défaut `root` créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non affecté à son propre groupe de capture d'écran de transition de vue spécifique via la propriété `view-transition-name`.
 - `<pt-name-selector>`

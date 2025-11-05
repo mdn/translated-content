@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
 
 {{InteractiveExample("DémonstrationCSS&nbsp;: :autofill", "tabbed-shorter")}}
 
@@ -61,7 +61,7 @@ input:is(:-webkit-autofill, :autofill) {
 ## Exemples
 
 L'exemple suivant démontre l'utilisation de la pseudo-classe `:autofill` pour changer la bordure d'un champ de texte qui a été complété automatiquement par le navigateur.
-Pour garantir que nous ne créons pas une [liste de sélecteurs invalide](/fr/docs/Web/CSS/Selector_list#invalid_selector_list), à la fois `:-webkit-autofill` et `:autofill` sont associés à l'aide d'une liste de sélecteurs tolérante avec {{cssxref(":is()")}}.
+Pour garantir que nous ne créons pas une [liste de sélecteurs invalide](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#invalid_selector_list), à la fois `:-webkit-autofill` et `:autofill` sont associés à l'aide d'une liste de sélecteurs tolérante avec {{cssxref(":is()")}}.
 
 ```css
 input {

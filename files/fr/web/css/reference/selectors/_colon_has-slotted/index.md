@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has-slotted`** correspond lorsque le contenu d'un élément {{HTMLElement(`slot`)}} n'est pas vide ou n'utilise pas la valeur par défaut (voir [Utilisation des modèles et des slots](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has-slotted`** correspond lorsque le contenu d'un élément {{HTMLElement(`slot`)}} n'est pas vide ou n'utilise pas la valeur par défaut (voir [Utilisation des modèles et des slots](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
 
 > [!NOTE]
 > Même un seul nœud de texte blanc suffit pour que `:has-slotted` s'applique.

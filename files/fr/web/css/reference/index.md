@@ -3,7 +3,7 @@ title: Référence CSS
 slug: Web/CSS/Reference
 ---
 
-Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
+Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
 
 ## Syntaxe de règle basique
 
@@ -62,37 +62,37 @@ Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/CSS_se
 
 Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteurs les plus élémentaires qui sont fréquemment combinés pour créer d'autres sélecteurs plus complexes.
 
-- [Sélecteur de type](/fr/docs/Web/CSS/Type_selectors) `nomElement`
-- [Sélecteur de classe](/fr/docs/Web/CSS/Class_selectors) `.nomClasse`
-- [Sélecteur d'identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomID`
-- [Sélecteur universel](/fr/docs/Web/CSS/Universal_selectors) **`*`**, `ns|*`, **`*|*`**, **`|*`**
-- [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
+- [Sélecteur de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors) `nomElement`
+- [Sélecteur de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) `.nomClasse`
+- [Sélecteur d'identifiant](/fr/docs/Web/CSS/Reference/Selectors/ID_selectors) `#nomID`
+- [Sélecteur universel](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors) **`*`**, `ns|*`, **`*|*`**, **`|*`**
+- [Sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=valeur]`
 
 ### Sélecteur de groupe
 
-- [Sélecteur de conjonction](/fr/docs/Web/CSS/Selector_list) `A, B`
+- [Sélecteur de conjonction](/fr/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
   - : Indique que les éléments des sélecteurs `A` et `B` doivent être sélectionnés. Il s'agit d'une méthode de groupement pour sélectionner des éléments selon plusieurs critères.
 
 ### [Combinateurs](/fr/docs/Web/CSS/CSS_selectors#les_combinateurs)
 
 Les combinateurs sont des sélecteurs qui établissent une relation entre deux sélecteurs ou plus, tel que "A est un enfant de B" ou "A est adjacent à B".
 
-- [Combinateur de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator) `A + B`
+- [Combinateur de voisin direct](/fr/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit immédiatement celui sélectionné par `A`.
-- [Combinateur de voisin général](/fr/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+- [Combinateur de voisin général](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit celui sélectionné par `A`, mais pas nécessairement immédiatement après lui.
-- [Combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
+- [Combinateur d'enfant](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
   - : Indique que l'élément sélectionné par `B` est un enfant direct de l'élément sélectionné par `A`.
-- [Combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator) `A B`
+- [Combinateur de descendant](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
   - : Indique que l'élément sélectionné par `B` est un descendant de l'élément sélectionné par `A`, mais n'en est pas nécessairement un enfant direct.
-- [Combinateur de colonne](/fr/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
+- [Combinateur de colonne](/fr/docs/Web/CSS/Reference/Selectors/Column_combinator) `A || B` {{Experimental_Inline}}
   - : Indique que l'élément sélectionné par `B` est situé dans la colonne de table indiquée par `A`. Les éléments qui s'étendent sur des colonnes multiples sont considérés comme étant membres de chacune de ces colonnes.
 
 ### Pseudo
 
-- [Pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) `:`
+- [Pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
   - : Définit un état spécial pour le ou les éléments ciblés.
-- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) `::`
+- [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`
   - : Représente des entités qui ne sont pas incluses en HTML.
 
 > [!CALLOUT]

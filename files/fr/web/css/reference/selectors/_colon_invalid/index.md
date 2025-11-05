@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur·ice à identifier et à corriger les erreurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur·ice à identifier et à corriger les erreurs.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :invalid", "tabbed-shorter")}}
 

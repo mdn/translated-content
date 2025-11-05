@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::first-line", "tabbed-shorter")}}
 
@@ -32,7 +32,7 @@ p::first-line {
 Les effets de `::first-line` sont limités par la longueur et le contenu de la première ligne de texte dans l'élément. La longueur de la première ligne dépend de nombreux facteurs, notamment la largeur de l'élément, la largeur du document et la taille de la police du texte. `::first-line` n'a aucun effet lorsque le premier enfant de l'élément, qui serait la première partie de la première ligne, est un élément de bloc en ligne, tel qu'un tableau en ligne.
 
 > [!NOTE]
-> Le standard [Sélecteurs de Niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-3/#first-line) a introduit la notation à double deux-points (`::`) pour distinguer les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) à deux points simples (`:`). Les navigateurs acceptent à la fois `::first-line` et `:first-line`, qui a été introduit dans CSS2.
+> Le standard [Sélecteurs de Niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-3/#first-line) a introduit la notation à double deux-points (`::`) pour distinguer les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) à deux points simples (`:`). Les navigateurs acceptent à la fois `::first-line` et `:first-line`, qui a été introduit dans CSS2.
 
 Aux fins de {{CSSXref("background")}}, le pseudo-élément `::first-line` est comme un élément de niveau en ligne, ce qui signifie que dans une première ligne justifiée à gauche, l'arrière-plan peut ne pas s'étendre jusqu'à la marge droite.
 

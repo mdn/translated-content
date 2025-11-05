@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-slider-thumb`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui représente le curseur que peut déplacer l'utilisateur le long de la piste d'un élément {{HTMLElement("input")}} de type "`range"` afin de modifier la valeur numérique associée.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-slider-thumb`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui représente le curseur que peut déplacer l'utilisateur le long de la piste d'un élément {{HTMLElement("input")}} de type "`range"` afin de modifier la valeur numérique associée.
 
 ## Syntaxe
 

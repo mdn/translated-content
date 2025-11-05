@@ -30,7 +30,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : Indique qu'un élément est sélectionné au chargement de la page, ou dès que l'élément HTML {{HTMLElement("dialog")}} auquel il appartient est affiché. Cet attribut est un booléen, initialement à false.
 - [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class)
-  - : Une liste de classes séparées par des espaces pour l'élément. Les classes permettent au CSS et à JavaScript de sélectionner et d'accéder à des éléments spécifiques via les [sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) ou des fonctions comme la méthode {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : Une liste de classes séparées par des espaces pour l'élément. Les classes permettent au CSS et à JavaScript de sélectionner et d'accéder à des éléments spécifiques via les [sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) ou des fonctions comme la méthode {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : Un attribut {{Glossary("Enumerated", "énuméré")}} qui indique si l'élément est éditable par l'utilisateur·ice. Si c'est le cas, le navigateur modifie son interface pour permettre l'édition. L'attribut doit prendre l'une des valeurs suivantes&nbsp;:
     - `true` ou la chaîne de caractères vide, ce qui indique que l'élément est éditable&nbsp;;

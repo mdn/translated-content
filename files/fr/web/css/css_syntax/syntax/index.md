@@ -40,7 +40,7 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
 Si les feuilles de style ne pouvaient appliquer qu'une déclaration à chaque élément d'une page Web, elles seraient plutôt inutiles. Le véritable objectif est d'appliquer différentes déclarations à différentes parties du document.
 
-Le CSS permet cela en associant des conditions à des blocs de déclarations. Chaque bloc de déclaration (valide) est précédé d'un ou plusieurs [**sélecteurs**](/fr/docs/Web/CSS/CSS_selectors) séparés par des virgules, qui sont des conditions sélectionnant certains éléments de la page. Un [<i lang="en">groupe de sélecteurs</i>](/fr/docs/Web/CSS/Selector_list) et un bloc de déclarations associé, ensemble, forment ce qu'on appelle une **règle** (en anglais, le terme formel est <i lang="en">ruleset</i>, mais <i lang="en">rule</i> est également usité).
+Le CSS permet cela en associant des conditions à des blocs de déclarations. Chaque bloc de déclaration (valide) est précédé d'un ou plusieurs [**sélecteurs**](/fr/docs/Web/CSS/CSS_selectors) séparés par des virgules, qui sont des conditions sélectionnant certains éléments de la page. Un [<i lang="en">groupe de sélecteurs</i>](/fr/docs/Web/CSS/Reference/Selectors/Selector_list) et un bloc de déclarations associé, ensemble, forment ce qu'on appelle une **règle** (en anglais, le terme formel est <i lang="en">ruleset</i>, mais <i lang="en">rule</i> est également usité).
 
 Une règle CSS est visualisé dans le diagramme ci-dessous.
 

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::checkmark`** cible la coche (<i lang="en">checkmark</i>) placée à l'intérieur de l'élément {{htmlelement("option")}} actuellement sélectionné d'un [élément de sélection personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select). Il peut être utilisé pour fournir une indication visuelle de l'option sélectionnée.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::checkmark`** cible la coche (<i lang="en">checkmark</i>) placée à l'intérieur de l'élément {{htmlelement("option")}} actuellement sélectionné d'un [élément de sélection personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select). Il peut être utilisé pour fournir une indication visuelle de l'option sélectionnée.
 
 {{InteractiveExample("Démonstration CSS &nbsp;: ::checkmark")}}
 

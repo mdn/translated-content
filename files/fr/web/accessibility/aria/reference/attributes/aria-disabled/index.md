@@ -31,7 +31,7 @@ Un autre cas d'usage de `aria-disabled` plutôt que l'attribut HTML `disabled` c
 <div role="button" aria-disabled="true" tabindex="-1">Modifier</div>
 ```
 
-Comme pour la désactivation fonctionnelle, il faut aussi adapter le style. Contrairement à l'attribut HTML `disabled`, qui applique les styles `:disabled` du navigateur, `aria-disabled="true"` n'applique aucun style par défaut. On peut styliser l'élément avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
+Comme pour la désactivation fonctionnelle, il faut aussi adapter le style. Contrairement à l'attribut HTML `disabled`, qui applique les styles `:disabled` du navigateur, `aria-disabled="true"` n'applique aucun style par défaut. On peut styliser l'élément avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[aria-disabled="true"]`.
 
 ```css
 [aria-disabled="true"] {

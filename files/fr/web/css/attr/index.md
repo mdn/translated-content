@@ -5,7 +5,7 @@ slug: Web/CSS/attr
 
 {{CSSRef}}
 
-La fonction **`attr()`** est utilisée afin de récupérer la valeur d'un attribut d'un élément pour l'utiliser dans la feuille de style. Cette fonction peut également être utilisée sur [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) auquel cas c'est la valeur correspondant à l'élément source qui est renvoyée.
+La fonction **`attr()`** est utilisée afin de récupérer la valeur d'un attribut d'un élément pour l'utiliser dans la feuille de style. Cette fonction peut également être utilisée sur [les pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) auquel cas c'est la valeur correspondant à l'élément source qui est renvoyée.
 
 ```css
 /* Utilisation simple */
@@ -357,6 +357,6 @@ body,
 
 ## Voir aussi
 
-- [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors)
+- [Sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - [Attributs HTML `data-*`](/fr/docs/Web/HTML/Reference/Global_attributes/data-*)
 - [Attributs SVG `data-*`](/fr/docs/Web/SVG/Attribute/data-*)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:past`** est une pseudo-classe temporelle qui correspondra à tout élément apparaissant entièrement avant un élément correspondant à {{cssxref(":current")}}. Par exemple, dans une vidéo avec des sous-titres affichés par [WebVTT](/fr/docs/Web/API/WebVTT_API).
+Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:past`** est une pseudo-classe temporelle qui correspondra à tout élément apparaissant entièrement avant un élément correspondant à {{cssxref(":current")}}. Par exemple, dans une vidéo avec des sous-titres affichés par [WebVTT](/fr/docs/Web/API/WebVTT_API).
 
 ```css
 :past(p, span) {

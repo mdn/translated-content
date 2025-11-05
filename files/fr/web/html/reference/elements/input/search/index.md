@@ -300,7 +300,7 @@ Les éléments `<input>` de type `search` possèdent les mêmes fonctionnalités
 
 ### Une note sur la mise en forme
 
-Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) permettent de mettre en forme les éléments d'un formulaire en fonction de la validité de leur contenu. Dans cette section, nous utiliserons la feuille de style suivante afin de placer une coche à côté des champs valides et une croix à côté des champs invalides.
+Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) permettent de mettre en forme les éléments d'un formulaire en fonction de la validité de leur contenu. Dans cette section, nous utiliserons la feuille de style suivante afin de placer une coche à côté des champs valides et une croix à côté des champs invalides.
 
 ```css
 input:invalid ~ span:after {

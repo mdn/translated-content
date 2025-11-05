@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-image-pair()`** représente un conteneur pour les états de vue «&nbsp;<i lang="en">old</i>&nbsp;» et «&nbsp;<i lang="en">new</i>&nbsp;» d'une [transition de vue](/fr/docs/Web/API/View_Transition_API) — avant et après la transition.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-image-pair()`** représente un conteneur pour les états de vue «&nbsp;<i lang="en">old</i>&nbsp;» et «&nbsp;<i lang="en">new</i>&nbsp;» d'une [transition de vue](/fr/docs/Web/API/View_Transition_API) — avant et après la transition.
 
 Durant une transition de vue, `::view-transition-image-pair()` est inclus dans l'arbre des pseudo-éléments associés comme expliqué dans [L'arbre des pseudo-éléments de transition de vue](/fr/docs/Web/API/View_Transition_API/Using#larbre_des_pseudo-éléments_de_transition_de_vue). Il est seulement un enfant d'un {{cssxref("::view-transition-group()")}}. En termes d'enfants, il peut avoir un {{cssxref("::view-transition-new()")}} ou un {{cssxref("::view-transition-old()")}}, ou les deux.
 
@@ -36,7 +36,7 @@ Durant une transition de vue, `::view-transition-image-pair()` a {{cssxref("isol
 ### Parameters
 
 - `*`
-  - : Le [sélecteur universel (`*`)](/fr/docs/Web/CSS/Universal_selectors)&nbsp;; sélectionne tous les groupes de transition de vue sur une page.
+  - : Le [sélecteur universel (`*`)](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)&nbsp;; sélectionne tous les groupes de transition de vue sur une page.
 - `root`
   - : Fait correspondre le pseudo-élément au groupe de capture d'instantané de transition de vue `root` par défaut créé par l'agent utilisateur pour contenir la transition de vue pour l'ensemble de la page. Ce groupe inclut tout élément non assigné à son propre groupe d'instantané de transition de vue spécifique via la propriété {{cssxref("view-transition-name")}}.
 - `<pt-name-selector>`

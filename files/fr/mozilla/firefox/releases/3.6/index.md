@@ -59,8 +59,8 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
 - [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
 - Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) table fonctionnent beaucoup mieux.
-- Ajout de [`:-moz-locale-dir(ltr)`](/fr/docs/Web/CSS/:-moz-locale-dir_ltr) et [`:-moz-locale-dir(rtl)`](/fr/docs/Web/CSS/:-moz-locale-dir_rtl) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
-- Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) `checkbox` dont l'attribut `indeterminate` est `true`.
+- Ajout de [`:-moz-locale-dir(ltr)`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_ltr) et [`:-moz-locale-dir(rtl)`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_rtl) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
+- Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/Reference/Selectors/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) `checkbox` dont l'attribut `indeterminate` est `true`.
 - Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.
 
 ### HTML

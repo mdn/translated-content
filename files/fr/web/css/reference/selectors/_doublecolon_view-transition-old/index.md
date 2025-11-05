@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-old()`** représente l'état de vue «&nbsp;<i lang="en">old</i>&nbsp;» d'une transition de vue — une représentation instantanée de l'état avant la transition.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-old()`** représente l'état de vue «&nbsp;<i lang="en">old</i>&nbsp;» d'une transition de vue — une représentation instantanée de l'état avant la transition.
 
 Lors d'une transition de vue, `::view-transition-old()` est inclus dans l'arbre des pseudo-éléments associés comme expliqué dans [L'arbre des pseudo-éléments de transition de vue](/fr/docs/Web/API/View_Transition_API/Using#larbre_des_pseudo-éléments_de_transition_de_vue), à condition qu'il y ait un état de vue «&nbsp;<i lang="en">old</i>&nbsp;» à représenter. Il est seulement un enfant d'un {{cssxref("::view-transition-image-pair()")}}, et n'a jamais d'enfants.
 

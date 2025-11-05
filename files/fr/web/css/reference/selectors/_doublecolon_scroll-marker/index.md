@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker`** peut être généré à l'intérieur de n'importe quel élément et représente son marqueur de défilement. Il est placé dans le {{cssxref("::scroll-marker-group")}} de l'ancêtre du {{glossary("scroll container","conteneur de défilement")}} le plus proche. Un marqueur de défilement se comporte comme une ancre (élément {{htmlelement("a")}}) dont la cible de défilement est l'élément d'origine du marqueur — et fait défiler le conteneur de défilement jusqu'à cet élément lorsqu'il est activé.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker`** peut être généré à l'intérieur de n'importe quel élément et représente son marqueur de défilement. Il est placé dans le {{cssxref("::scroll-marker-group")}} de l'ancêtre du {{glossary("scroll container","conteneur de défilement")}} le plus proche. Un marqueur de défilement se comporte comme une ancre (élément {{htmlelement("a")}}) dont la cible de défilement est l'élément d'origine du marqueur — et fait défiler le conteneur de défilement jusqu'à cet élément lorsqu'il est activé.
 
 ## Syntaxe
 

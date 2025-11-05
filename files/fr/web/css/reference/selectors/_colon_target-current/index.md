@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-current`** sélectionne le **marqueur de défilement actif** — le pseudo-élément {{cssxref("::scroll-marker")}} d'un {{cssxref("scroll-marker-group")}} qui est actuellement défilé. Ce [sélecteur](/fr/docs/Web/CSS/CSS_selectors) peut être utilisé pour styliser la position de navigation active au sein d'un [groupe de marqueurs de défilement](/fr/docs/Web/CSS/::scroll-marker-group#description).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-current`** sélectionne le **marqueur de défilement actif** — le pseudo-élément {{cssxref("::scroll-marker")}} d'un {{cssxref("scroll-marker-group")}} qui est actuellement défilé. Ce [sélecteur](/fr/docs/Web/CSS/CSS_selectors) peut être utilisé pour styliser la position de navigation active au sein d'un [groupe de marqueurs de défilement](/fr/docs/Web/CSS/Reference/Selectors/::scroll-marker-group#description).
 
 > [!NOTE]
 > La pseudo-classe `:target-current` n'est valide que sur les pseudo-éléments `::scroll-marker`.

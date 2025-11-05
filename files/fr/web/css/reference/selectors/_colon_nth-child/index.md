@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :nth-child", "tabbed-shorter")}}
 
@@ -120,7 +120,7 @@ Dans ce deuxième cas, le sélecteur cible les éléments d'une liste s'ils font
 - `p:nth-child(n)`
   - : Cible tous les éléments `<p>` d'un groupe de voisins. Cela sélectionne les mêmes éléments que le sélecteur simple `p` (mais avec une spécificité supérieure).
 - `p:nth-child(1)` ou `p:nth-child(0n+1)`
-  - : Cible tout élément `<p>` qui est le premier élément d'un group de voisin. Cette forme est équivalente au sélecteur [`:first-child`](/fr/docs/Web/CSS/:first-child) (et possède la même spécificité).
+  - : Cible tout élément `<p>` qui est le premier élément d'un group de voisin. Cette forme est équivalente au sélecteur [`:first-child`](/fr/docs/Web/CSS/Reference/Selectors/:first-child) (et possède la même spécificité).
 - `p:nth-child(n+8):nth-child(-n+15)`
   - : Cible du huitième jusqu'au quinzième élément `<p>` d'un groupe de voisins.
 
@@ -519,8 +519,8 @@ tbody tr :nth-child(3) {
 
 ## Voir aussi
 
-- [`:nth-of-type()`](/fr/docs/Web/CSS/:nth-of-type)
-- [`:nth-last-child()`](/fr/docs/Web/CSS/:nth-last-child)
-- La pseudo-classe [`:has()`](/fr/docs/Web/CSS/:has) qui cible l'élément parent
-- [Les pseudo-classes relatives à l'arborescence](/fr/docs/Web/CSS/Pseudo-classes#pseudo-classes_relatives_%C3%A0_larborescence)
+- [`:nth-of-type()`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type)
+- [`:nth-last-child()`](/fr/docs/Web/CSS/Reference/Selectors/:nth-last-child)
+- La pseudo-classe [`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has) qui cible l'élément parent
+- [Les pseudo-classes relatives à l'arborescence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes#pseudo-classes_relatives_%C3%A0_larborescence)
 - Le module relatif [aux sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)

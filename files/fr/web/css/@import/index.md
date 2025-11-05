@@ -112,7 +112,7 @@ Notez que si vous n'avez qu'une seule déclaration, il n'est pas nécessaire de 
 
 Les exemples ci-dessus montrent des conditions de prise en charge utilisant la syntaxe de déclaration de base.
 Vous pouvez aussi spécifier des fonctions CSS dans `supports()`, et cela sera évalué à `true` si elles sont prises en charge et peuvent être évaluées par l'agent utilisateur.
-Par exemple, le code ci-dessous montre une règle `@import` conditionnée à la fois par le [combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator) (`selector()`) et la fonction `font-tech()`&nbsp;:
+Par exemple, le code ci-dessous montre une règle `@import` conditionnée à la fois par le [combinateur d'enfant](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator) (`selector()`) et la fonction `font-tech()`&nbsp;:
 
 ```css
 @import "whatever.css"

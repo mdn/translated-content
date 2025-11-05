@@ -52,7 +52,7 @@ Par exemple, `em` est relative à la taille de police sur l'élément et `ex` es
 
 #### Longueurs relatives à la police racine
 
-Les longueurs relatives à la police racine spécifient une longueur par rapport à l'[élément racine](/fr/docs/Web/CSS/:root) de l'élément, tel que {{HTMLElement("HTML")}} ou {{SVGElement("SVG")}}.
+Les longueurs relatives à la police racine spécifient une longueur par rapport à l'[élément racine](/fr/docs/Web/CSS/Reference/Selectors/:root) de l'élément, tel que {{HTMLElement("HTML")}} ou {{SVGElement("SVG")}}.
 Par exemple, `rem` est relative à la taille de police sur l'élément racine et `rex` est la hauteur x de la police de l'élément racine.
 
 | Unité  | Relative à                                                                                                                                                                   |

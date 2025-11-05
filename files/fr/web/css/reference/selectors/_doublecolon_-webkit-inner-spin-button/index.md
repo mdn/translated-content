@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-inner-spin-button`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément {{HTMLElement("input/number", '&lt;input type="number"&gt;')}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-inner-spin-button`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme la partie intérieure de la roulette qui permet de choisir la valeur d'un élément {{HTMLElement("input/number", '&lt;input type="number"&gt;')}}.
 
 ## Syntaxe
 

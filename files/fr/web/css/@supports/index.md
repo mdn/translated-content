@@ -74,7 +74,7 @@ L'exemple suivant retourne vrai si le navigateur prend en charge l'expression `t
 ### Syntaxe fonctionnelle
 
 Cette fonction évalue si le navigateur prend en charge la syntaxe de sélecteur définie.
-L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge le [combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator)&nbsp;:
+L'exemple suivant retourne vrai et applique le style CSS si le navigateur prend en charge le [combinateur d'enfant](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator)&nbsp;:
 
 ```css
 @supports selector(h2 > p) {

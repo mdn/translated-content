@@ -131,7 +131,7 @@ h2:has(+ p, + ul.red) {
 }
 ```
 
-Dans l'exemple ci-dessus, le style italique sera appliqué à tout titre `h2` immédiatement suivi d'un paragraphe `<p>` ou d'une liste `<ul class="red">`. À noter&nbsp;: les pseudo-éléments et le sélecteur `:has()` ne sont pas valides à l'intérieur de la liste de sélecteurs relatifs de [`:has()`](/fr/docs/Web/CSS/:has).
+Dans l'exemple ci-dessus, le style italique sera appliqué à tout titre `h2` immédiatement suivi d'un paragraphe `<p>` ou d'une liste `<ul class="red">`. À noter&nbsp;: les pseudo-éléments et le sélecteur `:has()` ne sont pas valides à l'intérieur de la liste de sélecteurs relatifs de [`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has).
 
 ## Spécifications
 

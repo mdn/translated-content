@@ -25,7 +25,7 @@ _Cette interface hérite également des propriétés de son parent [`Event`](/fr
 - [`TransitionEvent.elapsedTime`](/fr/docs/Web/API/TransitionEvent/elapsedTime) {{ReadOnlyInline}}
   - : Un nombre flottant (`float`) indiquant la durée (exprimée en secondes) depuis laquelle la transition est lancée, lorsque cet évènement a été déclenché. Cette valeur n'est pas impactée par la propriété [`transition-delay`](/fr/docs/Web/CSS/Reference/Properties/transition-delay).
 - [`TransitionEvent.pseudoElement`](/fr/docs/Web/API/TransitionEvent/pseudoElement) {{ReadOnlyInline}}
-  - : Une chaîne de caractères, commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) sur lequel s'exécute l'animation. Si la transition ne porte pas sur un pseudo-élément, mais sur un élément, cette propriété vaudra la chaîne vide (`''`).
+  - : Une chaîne de caractères, commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) sur lequel s'exécute l'animation. Si la transition ne porte pas sur un pseudo-élément, mais sur un élément, cette propriété vaudra la chaîne vide (`''`).
 
 ## Évènements de type `TransitionEvent`
 

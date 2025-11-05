@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-within`** correspond à un élément si celui-ci ou l'un de ses descendants est sélectionné. En d'autres termes, elle représente un élément qui est lui-même correspondant à la pseudo-classe {{cssxref(":focus")}} ou qui a un descendant correspondant à `:focus`. (Cela inclut les descendants dans le [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-within`** correspond à un élément si celui-ci ou l'un de ses descendants est sélectionné. En d'autres termes, elle représente un élément qui est lui-même correspondant à la pseudo-classe {{cssxref(":focus")}} ou qui a un descendant correspondant à `:focus`. (Cela inclut les descendants dans le [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :focus-within", "tabbed-shorter")}}
 

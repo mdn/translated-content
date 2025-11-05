@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
 
 ```css
 /* Cette règle cible tout élément défini */
@@ -105,7 +105,7 @@ custom-element:defined::before {
 }
 ```
 
-Nous avons également utilisé le pseudo-élément [`::before`](/fr/docs/Web/CSS/::before) pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le [`content`](/fr/docs/Web/CSS/Reference/Properties/content) sur une chaîne vide.
+Nous avons également utilisé le pseudo-élément [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) pour afficher un message superposé «&nbsp;Chargement...&nbsp;» jusqu'à ce que l'élément soit défini. Une fois défini, il est supprimé en définissant le [`content`](/fr/docs/Web/CSS/Reference/Properties/content) sur une chaîne vide.
 
 #### JavaScript
 

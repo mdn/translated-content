@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e006f2c1533c7942e5a5569f6c0e9a419ea98f46
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::before`** crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::before`** crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::before", "tabbed-standard")}}
 
@@ -59,7 +59,7 @@ Un pseudo-élément `::before` avec une valeur {{cssxref("display")}} de `list-i
 Si la propriété [`content`](/fr/docs/Web/CSS/Reference/Properties/content) n'est pas spécifiée, a une valeur invalide, ou a `normal` ou `none` comme valeur, alors le pseudo-élément `::before` n'est pas rendu. Il se comporte comme si `display: none` était défini.
 
 > [!NOTE]
-> La spécification [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) a introduit la notation à double deux-points `::before` pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent également la notation à un seul deux-points `:before`, introduite dans CSS2.
+> La spécification [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) a introduit la notation à double deux-points `::before` pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Les navigateurs acceptent également la notation à un seul deux-points `:before`, introduite dans CSS2.
 
 Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{cssxref("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
 
@@ -240,7 +240,7 @@ li[aria-current="step"]::before {
 
 ### Les pseudo-éléments imbriqués `::before::marker`
 
-Le [pseudo-élément imbriqué](/fr/docs/Web/CSS/Pseudo-elements#pseudo-éléments_imbriqués) `::before::marker` sélectionne le marqueur de liste {{CSSxRef("::marker")}} d'un pseudo-élément `::before` qui est lui-même un élément de liste, c'est-à-dire qu'il a sa propriété {{CSSxRef("display")}} définie sur `list-item`.
+Le [pseudo-élément imbriqué](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#pseudo-éléments_imbriqués) `::before::marker` sélectionne le marqueur de liste {{CSSxRef("::marker")}} d'un pseudo-élément `::before` qui est lui-même un élément de liste, c'est-à-dire qu'il a sa propriété {{CSSxRef("display")}} définie sur `list-item`.
 
 Dans cette démo, nous générons des [éléments de liste](/fr/docs/Web/HTML/Reference/Elements/li) supplémentaires avant et après un menu de navigation en liste à l'aide de `::before` et `::after` (en les définissant sur `display: list-item` afin qu'ils se comportent comme des éléments de liste). Nous utilisons ensuite `ul::before::marker` et `ul::after::marker` pour donner à leurs marqueurs de liste une couleur différente.
 

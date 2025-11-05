@@ -20,7 +20,7 @@ Une pseudo-classe consiste en un deux-points (`:`) suivi du nom de la pseudo-cla
 Les pseudo-classes vous permettent d'appliquer un style à un élément non seulement par rapport au contenu de l'arbre de documents, mais aussi par rapport à des facteurs externes tels que l'historique du navigateur ({{CSSxRef(":visited")}}, par exemple), l'état de son contenu (comme {{CSSxRef(":checked")}} sur certains éléments de formulaire) ou la position de la souris (comme {{CSSxRef(":hover")}}, qui vous indique si la souris est au-dessus d'un élément ou non).
 
 > [!NOTE]
-> Contrairement aux pseudo-classes, les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) peuvent être utilisés pour styliser une _partie spécifique_ d'un élément.
+> Contrairement aux pseudo-classes, les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) peuvent être utilisés pour styliser une _partie spécifique_ d'un élément.
 
 ## Pseudo-classes élémentaires
 
@@ -209,7 +209,7 @@ Ces pseudo-classes nécessitent une interaction de l'utilisateur·ice pour s'app
 
 ## Pseudo-classes fonctionnelles
 
-Ces pseudo-classes acceptent une [liste de sélecteurs](/fr/docs/Web/CSS/Selector_list) ou une [liste de sélecteurs indulgente](/fr/docs/Web/CSS/Selector_list#liste_de_sélecteurs_indulgente) comme paramètre.
+Ces pseudo-classes acceptent une [liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list) ou une [liste de sélecteurs indulgente](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_indulgente) comme paramètre.
 
 - {{CSSxRef(":is", ":is()")}}
   - : La pseudo-classe matches-any correspond à tout élément qui correspond à l'un des sélecteurs de la liste fournie. La liste est tolérante.
@@ -403,4 +403,4 @@ W
 
 ## Voir aussi
 
-- Les [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
+- Les [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

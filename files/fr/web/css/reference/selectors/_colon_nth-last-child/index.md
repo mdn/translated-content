@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :nth-last-child", "tabbed-shorter")}}
 
@@ -158,7 +158,7 @@ tr:nth-last-child(2) {
 
 ### Requêtes de quantité
 
-La mise en forme _quantity query_ des éléments dépend du nombre d'entre eux. Dans cet exemple, les éléments de liste deviennent rouges lorsqu'il y en a au moins trois dans une liste donnée. Cela est accompli en combinant les capacités de la pseudo-classe `nth-last-child` et du [combinator de frère suivant](/fr/docs/Web/CSS/Subsequent-sibling_combinator).
+La mise en forme _quantity query_ des éléments dépend du nombre d'entre eux. Dans cet exemple, les éléments de liste deviennent rouges lorsqu'il y en a au moins trois dans une liste donnée. Cela est accompli en combinant les capacités de la pseudo-classe `nth-last-child` et du [combinator de frère suivant](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator).
 
 #### HTML
 

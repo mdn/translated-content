@@ -128,7 +128,7 @@ Passons à la manipulation :
 
 ## Les pseudo-éléments
 
-Lorsqu'on met en forme une boîte, on aurait parfois envie d'avoir plus de boîtes pour composer une mise en forme plus complexe et plus belle. La plupart du temps, cela peut nous amener à polluer le DOM en ajoutant des éléments HTML supplémentaires, uniquement pour la mise en forme. Bien que ce soit parfois nécessaire, c'est considéré comme une mauvaise pratique. Pour éviter cela, on peut utiliser [les pseudo-éléments CSS](/fr/docs/Web/CSS/Pseudo-elements).
+Lorsqu'on met en forme une boîte, on aurait parfois envie d'avoir plus de boîtes pour composer une mise en forme plus complexe et plus belle. La plupart du temps, cela peut nous amener à polluer le DOM en ajoutant des éléments HTML supplémentaires, uniquement pour la mise en forme. Bien que ce soit parfois nécessaire, c'est considéré comme une mauvaise pratique. Pour éviter cela, on peut utiliser [les pseudo-éléments CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### Un nuage
 

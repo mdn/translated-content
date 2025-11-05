@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host()`** permet de sélectionner l'hôte du DOM sombre (<i lang="en">shadow DOM</i>) contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host()`** permet de sélectionner l'hôte du DOM sombre (<i lang="en">shadow DOM</i>) contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.
 
 Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser {{cssxref(":host-context()")}}.
 

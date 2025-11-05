@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:heading()`** représente tous les [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui correspondent à une valeur calculée à l'aide de la notation `An+B`. Cela vous permet de mettre en forme des éléments à des niveaux de titre spécifiques en même temps, plutôt que de les correspondre et de les mettre en forme individuellement.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:heading()`** représente tous les [éléments de titre](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) qui correspondent à une valeur calculée à l'aide de la notation `An+B`. Cela vous permet de mettre en forme des éléments à des niveaux de titre spécifiques en même temps, plutôt que de les correspondre et de les mettre en forme individuellement.
 
 > [!NOTE]
 > La fonction `:heading()` a la même [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) qu'un sélecteur de classe, c'est-à-dire `0-1-0`. Ainsi, `:heading()` aurait une spécificité de `0-1-0`, et `section:heading()` aurait une spécificité de `0-1-1`.

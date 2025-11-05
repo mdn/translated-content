@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker-group`** est généré à l'intérieur d'un {{glossary("scroll container","conteneur de défilement")}} et contient tout pseudo-élément {{cssxref("::scroll-marker")}} généré sur les descendants de ce conteneur.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-marker-group`** est généré à l'intérieur d'un {{glossary("scroll container","conteneur de défilement")}} et contient tout pseudo-élément {{cssxref("::scroll-marker")}} généré sur les descendants de ce conteneur.
 
 ## Syntaxe
 
