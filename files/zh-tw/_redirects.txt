@@ -8,7 +8,7 @@
 /zh-TW/docs/AJAX:上手篇	/zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests
 /zh-TW/docs/CSS	/zh-TW/docs/Web/CSS
 /zh-TW/docs/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/Reference/Properties/border-image
-/zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/@font-face
+/zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/Reference/At-rules/@font-face
 /zh-TW/docs/CSS/border-image	/zh-TW/docs/Web/CSS/Reference/Properties/border-image
 /zh-TW/docs/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/Reference/Properties/border-image
 /zh-TW/docs/CSS_一般問題	/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
@@ -557,6 +557,9 @@
 /zh-TW/docs/Web/CSS/:first-of-type	/zh-TW/docs/Web/CSS/Reference/Selectors/:first-of-type
 /zh-TW/docs/Web/CSS/:lang	/zh-TW/docs/Web/CSS/Reference/Selectors/:lang
 /zh-TW/docs/Web/CSS/:target	/zh-TW/docs/Web/CSS/Reference/Selectors/:target
+/zh-TW/docs/Web/CSS/@font-face	/zh-TW/docs/Web/CSS/Reference/At-rules/@font-face
+/zh-TW/docs/Web/CSS/@media/height	/zh-TW/docs/Web/CSS/Reference/At-rules/@media/height
+/zh-TW/docs/Web/CSS/@namespace	/zh-TW/docs/Web/CSS/Reference/At-rules/@namespace
 /zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox

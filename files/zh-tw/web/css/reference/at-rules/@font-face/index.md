@@ -1,6 +1,7 @@
 ---
 title: "@font-face"
-slug: Web/CSS/@font-face
+slug: Web/CSS/Reference/At-rules/@font-face
+original_slug: Web/CSS/@font-face
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---

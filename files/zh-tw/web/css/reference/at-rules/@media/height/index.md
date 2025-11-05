@@ -1,6 +1,7 @@
 ---
 title: height
-slug: Web/CSS/@media/height
+slug: Web/CSS/Reference/At-rules/@media/height
+original_slug: Web/CSS/@media/height
 l10n:
   sourceCommit: 421deed53984505909884b3b290002b228d29e7b
 ---
