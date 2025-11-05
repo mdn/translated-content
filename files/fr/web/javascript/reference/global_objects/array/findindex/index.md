@@ -88,8 +88,8 @@ console.log([4, 6, 7, 9, 12].findIndex(estPremier)); // 2 (array[2] vaut 7)
 L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives, puis `findIndex()` pour trouver le premier élément qui est inférieur à ses voisins.
 
 ```js
-const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
-const premierCreux = numbers
+const nombres = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const premierCreux = nombres
   .filter((num) => num > 0)
   .findIndex((num, idx, arr) => {
     // Sans l'argument arr, il n'y a aucun moyen simple d'accéder
