@@ -90,7 +90,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-format` 型:
 
-- [`<font-format>`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`<font-format>`](/ja/docs/Web/CSS/@supports#font-format)
 
 `font-stretch` 型:
 
@@ -98,9 +98,9 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-tech` 型:
 
-- [`<color-font-tech>`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
-- [`<font-features-tech>`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
-- [`<font-tech>`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`<color-font-tech>`](/ja/docs/Web/CSS/@supports#font-tech)
+- [`<font-features-tech>`](/ja/docs/Web/CSS/@supports#font-tech)
+- [`<font-tech>`](/ja/docs/Web/CSS/@supports#font-tech)
 
 `font-variant` 型:
 

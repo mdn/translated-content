@@ -1,6 +1,6 @@
 ---
 title: inherits
-slug: Web/CSS/Reference/At-rules/@property/inherits
+slug: Web/CSS/@property/inherits
 l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---

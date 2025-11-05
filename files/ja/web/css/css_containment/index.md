@@ -54,7 +54,7 @@ l10n:
 
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
   - {{cssxref("@media")}} アットルール
-  - [CSS 論理演算子](/ja/docs/Web/CSS/Reference/At-rules/@media#論理演算子) (`not`, `or`, `and`)
+  - [CSS 論理演算子](/ja/docs/Web/CSS/@media#論理演算子) (`not`, `or`, `and`)
 
 - [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
   - {{cssxref("@starting-style")}} アットルール

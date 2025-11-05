@@ -136,7 +136,7 @@ HTML と CSS のコンテンツでは、適切なプリミティブを使用す�
 
 一部のライブラリーの `animate()` 関数は、おそらく現在、パフォーマンスが悪い数多くの技術 (例えば {{domxref("Window.setTimeout", "setTimeout()")}} や `top`/`left` による位置指定) を使用しています。代わりに [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を使用してください。多くの場合、実際には [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)を使って実現することができます。ブラウザーはこれらの効果を最適化するように設計されており、 GPU を使用してプロセッサーのパフォーマンスへの影響を最小限に抑えながらスムーズに処理することができるため、うまく機能します。もう一つの利点は、標準化された構文を使って、アプリの他のルック＆フィールと一緒に CSS でこれらの効果を定義できることです。
 
-CSS アニメーションでは、 [キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)を使って効果を細かく制御することができます。また、アニメーション処理中に発生するイベントを監視して、アニメーション処理中の特定のポイントで実行する必要のある他のタスクを処理することもできます。これらのアニメーションは、 {{cssxref(":hover")}}, {{cssxref(":focus")}}, {{cssxref(":target")}} を使ったり、親要素に動的にクラスを追加したり削除したりすることで、簡単に起動することができます。
+CSS アニメーションでは、 [キーフレーム](/ja/docs/Web/CSS/@keyframes)を使って効果を細かく制御することができます。また、アニメーション処理中に発生するイベントを監視して、アニメーション処理中の特定のポイントで実行する必要のある他のタスクを処理することもできます。これらのアニメーションは、 {{cssxref(":hover")}}, {{cssxref(":focus")}}, {{cssxref(":target")}} を使ったり、親要素に動的にクラスを追加したり削除したりすることで、簡単に起動することができます。
 
 アニメーションをその場で作成したり、 [JavaScript](/ja/docs/Web/JavaScript) で修正したりしたい場合は、 James Long 氏が [CSS-animations.js](https://github.com/jlongster/css-animations.js/) というシンプルなライブラリーを作成していますので、そちらをご利用ください。
 

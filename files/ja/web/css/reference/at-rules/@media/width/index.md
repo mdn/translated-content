@@ -1,11 +1,11 @@
 ---
 title: width
-slug: Web/CSS/Reference/At-rules/@media/width
+slug: Web/CSS/@media/width
 l10n:
   sourceCommit: 421deed53984505909884b3b290002b228d29e7b
 ---
 
-**`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅（または[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの幅）を検査するために使用することができます。
+**`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅（または[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの幅）を検査するために使用することができます。
 
 ## 構文
 
@@ -59,4 +59,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
+- [@media](/ja/docs/Web/CSS/@media)

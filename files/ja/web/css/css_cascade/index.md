@@ -71,13 +71,13 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
   - : CSS の最も基本的な概念であるカスケード、詳細度、継承は、 CSS を HTML に適用する方法や競合を解決する方法を制御します。
 
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : [カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer) の紹介です。 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)の基本概念の上に構築された、より高度な機能です。
+  - : [カスケードレイヤー](/ja/docs/Web/CSS/@layer) の紹介です。 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)の基本概念の上に構築された、より高度な機能です。
 
 ## 関連概念
 
 - [要素に装着されたスタイル](/ja/docs/Web/HTML/Reference/Global_attributes/style)
 - [インラインスタイルとカスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade#インラインスタイル)
-- [@imports の条件付きルール](/ja/docs/Web/CSS/Reference/At-rules/@import#条件付きで_css_ルールをインポート)
+- [@imports の条件付きルール](/ja/docs/Web/CSS/@import#条件付きで_css_ルールをインポート)
 - [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 ## 仕様書

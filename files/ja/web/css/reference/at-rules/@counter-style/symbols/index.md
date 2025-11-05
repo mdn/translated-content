@@ -1,6 +1,6 @@
 ---
 title: symbols
-slug: Web/CSS/Reference/At-rules/@counter-style/symbols
+slug: Web/CSS/@counter-style/symbols
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

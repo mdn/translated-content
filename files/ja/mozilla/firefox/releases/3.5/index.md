@@ -20,7 +20,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しくサポートされる CSS の機能
 
-- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/Reference/At-rules/@font-face)
+- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。

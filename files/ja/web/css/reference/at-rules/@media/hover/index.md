@@ -1,11 +1,11 @@
 ---
 title: hover
-slug: Web/CSS/Reference/At-rules/@media/hover
+slug: Web/CSS/@media/hover
 l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-**`hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、*第一の*入力機構で要素の上でホバーする（かざす）ことができるかどうかを検査するために使用することができます。
+**`hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、*第一の*入力機構で要素の上でホバーする（かざす）ことができるかどうかを検査するために使用することができます。
 
 ## 構文
 
@@ -57,4 +57,4 @@ a:hover {
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
+- [@media](/ja/docs/Web/CSS/@media)

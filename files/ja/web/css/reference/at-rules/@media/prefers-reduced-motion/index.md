@@ -1,6 +1,6 @@
 ---
 title: prefers-reduced-motion
-slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
+slug: Web/CSS/@media/prefers-reduced-motion
 l10n:
   sourceCommit: d8fbe1ea30dcc8fd707048a804f5070a729b57a7
 ---
@@ -8,7 +8,7 @@ l10n:
 > [!WARNING]
 > このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末のモーション軽減機能を有効にしてください。
 
-**`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。この設定は、ユーザーがモーションベースのアニメーションを削除、縮小、または置き換えるインターフェイスを推奨していることを、端末のブラウザーに伝えるために使用します。
+**`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。この設定は、ユーザーがモーションベースのアニメーションを削除、縮小、または置き換えるインターフェイスを推奨していることを、端末のブラウザーに伝えるために使用します。
 
 このようなアニメーションは、[前庭運動障碍](https://www.a11yproject.com/posts/understanding-vestibular-disorders/)のある人に不快感を引き起こす可能性があります。大きなオブジェクトを拡大縮小したりパンなどしたりするアニメーションは、前庭運動を引き起こす可能性があります。
 

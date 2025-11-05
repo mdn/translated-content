@@ -1,6 +1,6 @@
 ---
 title: size
-slug: Web/CSS/Reference/At-rules/@page/size
+slug: Web/CSS/@page/size
 l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---

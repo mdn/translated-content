@@ -119,7 +119,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### @scope アットルール
 
-[@scope](/ja/docs/Web/CSS/Reference/At-rules/@scope) は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 CSS セレクターの詳細度を過度に上げることなく、特定の子要素を選択することができます（[Firefox バグ 1886441](https://bugzil.la/1886441)）。
+[@scope](/ja/docs/Web/CSS/@scope) は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 CSS セレクターの詳細度を過度に上げることなく、特定の子要素を選択することができます（[Firefox バグ 1886441](https://bugzil.la/1886441)）。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -148,7 +148,7 @@ CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-varian
 
 ### prefers-reduced-transparency メディア特性
 
-CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) メディア機能を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
+CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced-transparency) メディア機能を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
 詳細については、[Firefox バグ 1736914](https://bugzil.la/1736914) をご覧ください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -163,7 +163,7 @@ CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/Reference/At-rules/@me
 
 ### inverted-colors メディア特性
 
-CSS の [`inverted-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/inverted-colors) メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
+CSS の [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors) メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
 詳しくは [Firefox バグ 1794628](https://bugzil.la/1794628) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |

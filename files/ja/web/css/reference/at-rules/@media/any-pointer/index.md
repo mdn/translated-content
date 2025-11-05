@@ -1,14 +1,14 @@
 ---
 title: any-pointer
-slug: Web/CSS/Reference/At-rules/@media/any-pointer
+slug: Web/CSS/@media/any-pointer
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-**`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
+**`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。
 
 > [!NOTE]
-> *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) を使用してください。
+> *第一の*ポインティングデバイスの正確性を調べたい場合は、代わりに [`pointer`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
 
 ## 構文
 
@@ -74,4 +74,4 @@ input[type="checkbox"]:checked {
 
 ## 関連情報
 
-- [`pointer` メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer)
+- [`pointer` メディア特性](/ja/docs/Web/CSS/@media/pointer)

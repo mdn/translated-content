@@ -133,5 +133,5 @@ p {
 - [`font-variant-ligatures`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
 - [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
 - [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
-- [`@font-feature-values`](/ja/docs/Web/CSS/Reference/At-rules/@font-feature-values)
+- [`@font-feature-values`](/ja/docs/Web/CSS/@font-feature-values)
 - [`font-feature-settings`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings)

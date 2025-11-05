@@ -1,11 +1,11 @@
 ---
 title: resolution
-slug: Web/CSS/Reference/At-rules/@media/resolution
+slug: Web/CSS/@media/resolution
 l10n:
   sourceCommit: a18eaa8478fb9da1de8052cb2a18b00be00cdca0
 ---
 
-**`resolution`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力端末のピクセル解像度を検査するために使用することができます。
+**`resolution`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末のピクセル解像度を検査するために使用することができます。
 
 ## 構文
 

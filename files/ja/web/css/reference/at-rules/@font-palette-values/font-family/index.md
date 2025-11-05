@@ -1,11 +1,11 @@
 ---
 title: font-family
-slug: Web/CSS/Reference/At-rules/@font-palette-values/font-family
+slug: Web/CSS/@font-palette-values/font-family
 l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-[@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) の[記述子](/ja/docs/Glossary/CSS_Descriptor)である **`font-family`** は、どのフォントファミリーのパレット値を適用するかを指定するために使用します。これは、 CSS の [font-family](/ja/docs/Web/CSS/Reference/Properties/font-family)を設定するときに使用する値と正確に一致する必要があります。
+[@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) の[記述子](/ja/docs/Glossary/CSS_Descriptor)である **`font-family`** は、どのフォントファミリーのパレット値を適用するかを指定するために使用します。これは、 CSS の [font-family](/ja/docs/Web/CSS/Reference/Properties/font-family)を設定するときに使用する値と正確に一致する必要があります。
 
 ## 構文
 
@@ -16,7 +16,7 @@ l10n:
 }
 ```
 
-続く他のパレット値は、指定したフォントファミリーにのみ適用されます。他のフォントファミリーの [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) は、同じ [&lt;dashed-ident&gt;s](/ja/docs/Web/CSS/dashed-ident) を用いることで作成することができます。これは、複数のカラーフォントを持っていて、それぞれに同じ識別子を使用することができる、ということを意味しています。
+続く他のパレット値は、指定したフォントファミリーにのみ適用されます。他のフォントファミリーの [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) は、同じ [&lt;dashed-ident&gt;s](/ja/docs/Web/CSS/dashed-ident) を用いることで作成することができます。これは、複数のカラーフォントを持っていて、それぞれに同じ識別子を使用することができる、ということを意味しています。
 
 ### 値
 
@@ -35,7 +35,7 @@ l10n:
 
 ### 一致するファミリー名の使用
 
-この例では、 `font-family` 記述子が [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールで使用される場合、 `font-family` には宣言時と同じ値が使用されます。
+この例では、 `font-family` 記述子が [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールで使用される場合、 `font-family` には宣言時と同じ値が使用されます。
 
 #### HTML
 
@@ -70,7 +70,7 @@ h2.extra-spicy {
 
 ### 複数のフォントファミリーに対して同じパレット識別子を使用
 
-この例では、 2 つの [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールが 2 つのフォントファミリーに設定されていますが、どちらのアットルールも同じ dashed-ident 識別子である `--Dark Mode` を使用しています。これは、複数の要素（この場合 `h1` と `h2`）に対して同時に [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) プロパティを設定するのに役立ちます。これは、サイトのブランディングに一致するようにフォントの色を更新したいときに有益なことができます。
+この例では、 2 つの [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールが 2 つのフォントファミリーに設定されていますが、どちらのアットルールも同じ dashed-ident 識別子である `--Dark Mode` を使用しています。これは、複数の要素（この場合 `h1` と `h2`）に対して同時に [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) プロパティを設定するのに役立ちます。これは、サイトのブランディングに一致するようにフォントの色を更新したいときに有益なことができます。
 
 ```css
 @font-palette-values --Dark-Mode {

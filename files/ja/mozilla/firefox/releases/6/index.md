@@ -35,7 +35,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 #### その他の変更
 
-- [`@-moz-document`](/ja/docs/Web/CSS/Reference/At-rules/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
+- [`@-moz-document`](/ja/docs/Web/CSS/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
 - `aural` 媒体グループのために持っていたコードを削除したため、[`azimuth`](/ja/docs/Web/CSS/azimuth) CSS プロパティのサポートが廃止されました。このプロパティはちゃんと実装されていなかったため、パッチを当て続けるのではなく未完成の実装を省くほうが理にかなっていると考えました。
 - これまで、[`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
 - [`:indeterminate`](/ja/docs/Web/CSS/Reference/Selectors/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。

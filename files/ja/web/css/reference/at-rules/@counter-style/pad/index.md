@@ -1,6 +1,6 @@
 ---
 title: pad
-slug: Web/CSS/Reference/At-rules/@counter-style/pad
+slug: Web/CSS/@counter-style/pad
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -21,7 +21,7 @@ pad: "+" 5;
 - {{cssxref("integer")}}
   - : すべてのマーカー表現が到達しなければならない最小の長さを指定します。値は負ではない必要があります。 `pad` 記述子の場合、この値は「パッド長」とも呼ばれます。
 
-- [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
+- [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#symbol)
   - : `<integer>` で定義された最小長さに到達しなかった場合に、パディングに使用する記号を指定します。`pad` 記述子の場合、この値は「パディング記号」とも呼ばれます。
 
 ## 解説

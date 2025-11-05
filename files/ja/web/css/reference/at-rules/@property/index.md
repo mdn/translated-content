@@ -1,6 +1,6 @@
 ---
 title: "@property"
-slug: Web/CSS/Reference/At-rules/@property
+slug: Web/CSS/@property
 l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---

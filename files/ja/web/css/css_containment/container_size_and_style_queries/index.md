@@ -18,7 +18,7 @@ l10n:
 コンテナークエリーには、コンテナーサイズクエリーとコンテナースタイルクエリーの 2 種類があります。
 
 - **コンテナーサイズクエリー**
-  - : サイズクエリーによって、コンテナー要素の現在の[サイズ](/ja/docs/Web/CSS/Reference/At-rules/@container#記述子)に基づいて要素にスタイルを適用することができます。このコンテナー要素は、明示的に _サイズクエリーコンテナー_ として宣言しておく必要があります。
+  - : サイズクエリーによって、コンテナー要素の現在の[サイズ](/ja/docs/Web/CSS/@container#記述子)に基づいて要素にスタイルを適用することができます。このコンテナー要素は、明示的に _サイズクエリーコンテナー_ として宣言しておく必要があります。
 
 - **コンテナースタイルクエリー**
   - : スタイル クエリーを使用すると、コンテナー要素のスタイル機能に基づいて要素にスタイルを適用できます。空でない要素がスタイルクエリーコンテナーになることができます。現在、スタイルクエリーが対応しているスタイル特性は、 CSS の[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)だけです。この場合、クエリーは、格納する要素のカスタムプロパティの計算値において真か偽を返します。コンテナースタイルクエリーが完全に対応していると、例えば、コンテナーが `display: inline flex` であったり、背景色が非透明である場合など、任意のプロパティ、宣言、計算値に基づいて、要素の子孫にスタイルを適用できるようになります。
@@ -52,7 +52,7 @@ l10n:
 
 サイズクエリーコンテナーを宣言すると、[抑制](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)が追加されます。これはパフォーマンス上必要なことです。DOM 内のすべての要素のサイズを常に問い合わせることは、パフォーマンスと使い勝手に悪影響を及ぼします。さらに、子孫のスタイルがコンテナー要素のサイズを変更した場合、無限ループが発生する可能性があります。
 
-コンテナーサイズクエリーでは、 `<container-condition>` に 1 つ以上の `<size-query>` を記述します。各サイズクエリーはサイズ特性の名前、比較演算子、値を記載します。問い合わせ可能なサイズ特性は `width`、`height`、`inline-size`、`block-size`、`aspect-ratio`、`orientation` に制限されています。 1 つ以上の `<size-query>` を組み合わせた論理値と構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) のサイズ特性クエリーと同じです。
+コンテナーサイズクエリーでは、 `<container-condition>` に 1 つ以上の `<size-query>` を記述します。各サイズクエリーはサイズ特性の名前、比較演算子、値を記載します。問い合わせ可能なサイズ特性は `width`、`height`、`inline-size`、`block-size`、`aspect-ratio`、`orientation` に制限されています。 1 つ以上の `<size-query>` を組み合わせた論理値と構文は、 [`@media`](/ja/docs/Web/CSS/@media) のサイズ特性クエリーと同じです。
 
 ```css
 form {
@@ -190,7 +190,7 @@ CSS 変数が CSS カスタムプロパティ値の割り当てによって導�
 
 ##### 登録済みプロパティ
 
-登録済みのカスタムプロパティの動作は異なります。明示的に {{cssxref("@property")}} アットルールで定義された場合、または {{domxref('CSS/registerProperty_static', 'CSS.registerProperty()')}} で JavaScript を介して定義された場合、スタイルクエリー `style(--theme-color)` は、要素の `--theme-color` に対する計算値が、そのカスタムプロパティの元の定義で設定された [`initial-value`](/ja/docs/Web/CSS/Reference/At-rules/@property/initial-value) と異なる場合にのみ、要素に対して真を返します。
+登録済みのカスタムプロパティの動作は異なります。明示的に {{cssxref("@property")}} アットルールで定義された場合、または {{domxref('CSS/registerProperty_static', 'CSS.registerProperty()')}} で JavaScript を介して定義された場合、スタイルクエリー `style(--theme-color)` は、要素の `--theme-color` に対する計算値が、そのカスタムプロパティの元の定義で設定された [`initial-value`](/ja/docs/Web/CSS/@property/initial-value) と異なる場合にのみ、要素に対して真を返します。
 
 ```css
 @property --theme-color {

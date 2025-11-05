@@ -181,7 +181,7 @@ p {
 
 ## 関連情報
 
-- [`@namespace`](/ja/docs/Web/CSS/Reference/At-rules/@namespace)
+- [`@namespace`](/ja/docs/Web/CSS/@namespace)
 - [`Document.createElementNS()`](/ja/docs/Web/API/Document/createElementNS) メソッド
 - [`Element.namespaceURI`](/ja/docs/Web/API/Element/namespaceURI) プロパティ
 - [CSS 要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)

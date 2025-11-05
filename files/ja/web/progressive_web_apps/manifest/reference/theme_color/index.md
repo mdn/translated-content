@@ -63,7 +63,7 @@ l10n:
 これらの上書きメソッドは、特定のページやユーザー環境設定に合わせてアプリの外観を柔軟に指定できるようにし、全体的なユーザー体験を向上させます。
 
 また、ブラウザーはユーザーの環境設定に基づいて適用されたテーマカラーを調整する場合もあります。
-ユーザーが環境設定でライトモードまたはダークモードにしている場合、ブラウザーはマニフェストの `theme_color` の値を上書きして、アプリの CSS で定義された任意の [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーに対応する場合があります。
+ユーザーが環境設定でライトモードまたはダークモードにしている場合、ブラウザーはマニフェストの `theme_color` の値を上書きして、アプリの CSS で定義された任意の [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーに対応する場合があります。
 
 ```css
 body {

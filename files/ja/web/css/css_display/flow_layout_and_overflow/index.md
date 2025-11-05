@@ -206,7 +206,7 @@ body {
 
 ## フローに相対的なプロパティ
 
-[書字方向とフローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)のガイドでは、 `block-size` と `inline-size` のプロパティについて説明しました。これらは、画面の物理的な寸法にレイアウトを合わせるよりも、さまざまな書字方向で作業する際に意味をなすものです。 [CSS オーバーフローモジュール](/ja/docs/Web/CSS/CSS_overflow)には、 overflow 用のフロー相対プロパティとして、 [`overflow-block`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-block) と [`overflow-inline`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-inline) も含んでいます。これらは、 `overflow-x` と `overflow-y` に対応しますが、対応付けは文書内の書字方向によって異なります。
+[書字方向とフローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)のガイドでは、 `block-size` と `inline-size` のプロパティについて説明しました。これらは、画面の物理的な寸法にレイアウトを合わせるよりも、さまざまな書字方向で作業する際に意味をなすものです。 [CSS オーバーフローモジュール](/ja/docs/Web/CSS/CSS_overflow)には、 overflow 用のフロー相対プロパティとして、 [`overflow-block`](/ja/docs/Web/CSS/@media/overflow-block) と [`overflow-inline`](/ja/docs/Web/CSS/@media/overflow-inline) も含んでいます。これらは、 `overflow-x` と `overflow-y` に対応しますが、対応付けは文書内の書字方向によって異なります。
 
 ## オーバーフローの指示
 

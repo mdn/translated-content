@@ -7,11 +7,11 @@ l10n:
 
 **機能クエリー** は、ユーザーエージェントが CSS プロパティやプロパティ値など、1 つ以上の CSS 機能に対応しているかどうかを検査する条件付きグループルールです。機能クエリーは、ウェブ開発者にある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法を提供します。このガイドでは、機能クエリーを使用してプログレッシブエンハンスメントを実装する方法を学びます。
 
-機能クエリーは、 CSS の [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルール（または [`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) アットルール内の `supports()` 関数）を使用して作成されます。
+機能クエリーは、 CSS の [`@supports`](/ja/docs/Web/CSS/@supports) アットルール（または [`@import`](/ja/docs/Web/CSS/@import) アットルール内の `supports()` 関数）を使用して作成されます。
 
 ## 構文
 
-CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュールの一部で、ここにはメディアクエリーの [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
+CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュールの一部で、ここにはメディアクエリーの [`@media`](/ja/docs/Web/CSS/@media) アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
 
 機能クエリーは、`@supports` アットルールと、その後に続く対応条件、または `@import` アットルール宣言内の `supports()` 関数と宣言引数で構成されます。
 
@@ -196,7 +196,7 @@ body {
 
 ## その他の機能クエリーのオプション
 
-機能クエリーは、プロパティと値のペアに制限されません。機能クエリーに [`font-tech()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-tech)、[`font-format()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-format)、[`selector()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#function_syntax) 関数を含めることで、それぞれユーザーエージェントが指定したフォント技術、フォント形式、セレクター構文に対応しているかどうかによって、 CSS を選択的に適用することができます。
+機能クエリーは、プロパティと値のペアに制限されません。機能クエリーに [`font-tech()`](/ja/docs/Web/CSS/@supports#font-tech)、[`font-format()`](/ja/docs/Web/CSS/@supports#font-format)、[`selector()`](/ja/docs/Web/CSS/@supports#function_syntax) 関数を含めることで、それぞれユーザーエージェントが指定したフォント技術、フォント形式、セレクター構文に対応しているかどうかによって、 CSS を選択的に適用することができます。
 
 例えば、`selector()` 関数を使用すると、ベンダー接頭辞が付いた擬似要素に対応するブラウザー用にスタイルシートをインポートすることができます。
 

@@ -1,6 +1,6 @@
 ---
 title: additive-symbols
-slug: Web/CSS/Reference/At-rules/@counter-style/additive-symbols
+slug: Web/CSS/@counter-style/additive-symbols
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -40,7 +40,7 @@ additive-symbols:
 - {{cssxref("integer")}}
   - : タプルの関連付けられた記号値の整数の加重を指定する非負の整数値。
 
-- [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
+- [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#symbol)
   - : タプルの関連付けられた `<integer>` 加重値で定義される加重値に使用するカウンター記号を指定します。
 
 > [!NOTE]

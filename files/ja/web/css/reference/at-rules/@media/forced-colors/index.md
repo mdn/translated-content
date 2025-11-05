@@ -1,11 +1,11 @@
 ---
 title: forced-colors
-slug: Web/CSS/Reference/At-rules/@media/forced-colors
+slug: Web/CSS/@media/forced-colors
 l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
+**`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
 
 ## 構文
 
@@ -16,7 +16,7 @@ l10n:
 - `none`
   - : 強制カラーモードは有効ではありません。ページの色が限られたパレットに強制されていません。
 - `active`
-  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
+  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
 
 ## 使用上の注意
 
@@ -119,6 +119,6 @@ l10n:
 
 ## 関連情報
 
-- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
+- [@media](/ja/docs/Web/CSS/@media)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
 - {{cssxref("forced-color-adjust")}}

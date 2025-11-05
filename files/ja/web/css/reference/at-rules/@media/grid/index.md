@@ -1,11 +1,11 @@
 ---
 title: grid
-slug: Web/CSS/Reference/At-rules/@media/grid
+slug: Web/CSS/@media/grid
 l10n:
   sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
-**`grid`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。
+**`grid`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。
 
 現在のパソコンやスマートフォンの大部分は、ビットマップベースの画面を持っています。グリッドベースの画面とは、例えばテキストのみの端末や、固定フォントのみで表示する基本的な電話などです。
 
@@ -68,4 +68,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
+- [@media](/ja/docs/Web/CSS/@media)

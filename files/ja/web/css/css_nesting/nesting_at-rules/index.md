@@ -97,7 +97,7 @@ l10n:
 
 ### カスケードレイヤーの入れ子 (`@layer`)
 
-[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)は[子レイヤーを作成](/ja/docs/Web/CSS/Reference/At-rules/@layer#nesting_layers)するために入れ子にすることができます。これらは `.` （ドット）で接続します。
+[カスケードレイヤー](/ja/docs/Web/CSS/@layer)は[子レイヤーを作成](/ja/docs/Web/CSS/@layer#nesting_layers)するために入れ子にすることができます。これらは `.` （ドット）で接続します。
 
 #### 親＆子レイヤーの定義
 

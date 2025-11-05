@@ -1,6 +1,6 @@
 ---
 title: base-palette
-slug: Web/CSS/Reference/At-rules/@font-palette-values/base-palette
+slug: Web/CSS/@font-palette-values/base-palette
 l10n:
   sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
 ---

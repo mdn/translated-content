@@ -1,6 +1,6 @@
 ---
 title: device-height
-slug: Web/CSS/Reference/At-rules/@media/device-height
+slug: Web/CSS/@media/device-height
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
@@ -8,9 +8,9 @@ l10n:
 {{deprecated_header}}
 
 > [!NOTE]
-> ビューポートの高さを問い合わせる場合、開発者は代わりに [`height`](/ja/docs/Web/CSS/Reference/At-rules/@media/height) メディア特性を使用してください。
+> ビューポートの高さを問い合わせる場合、開発者は代わりに [`height`](/ja/docs/Web/CSS/@media/height) メディア特性を使用してください。
 
-**`device-height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器の描画面の高さを調べるために使用することができます。
+**`device-height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器の描画面の高さを調べるために使用することができます。
 
 ## 構文
 
@@ -38,4 +38,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
+- [@media](/ja/docs/Web/CSS/@media)

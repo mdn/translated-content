@@ -1,6 +1,6 @@
 ---
 title: line-gap-override
-slug: Web/CSS/Reference/At-rules/@font-face/line-gap-override
+slug: Web/CSS/@font-face/line-gap-override
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

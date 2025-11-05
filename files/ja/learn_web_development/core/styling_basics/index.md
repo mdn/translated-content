@@ -66,7 +66,7 @@ CSS （カスケーディングスタイルシート）は、ウェブページ�
 - [ボックスの高度な効果](/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
   - : この記事では、 CSS の問題をデバッグする方法について説明し、すべての現代のブラウザーに搭載されている開発者ツールが、何が起こっているのかを探す手助けをしてくれることを紹介します。
 - [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : このレッスンでは、 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)という基本的な概念の上に構築された、より高度な機能である[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)を紹介することを目的としています。
+  - : このレッスンでは、 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)という基本的な概念の上に構築された、より高度な機能である[カスケードレイヤー](/ja/docs/Web/CSS/@layer)を紹介することを目的としています。
 - [さまざまな方向のテキストの扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
   - : 近年、 CSS は、コンテンツのさまざまな方向に対応するために進化してきました。右から左に記述するコンテンツだけなく、上から下に記述するコンテンツ（日本語など）にも対応しています。これらのさまざまな方向は、書字方向と呼ばれます。学習を進め、レイアウト作業を始めるにあたり、書字方向を理解することは非常に役立つでしょう。そのため、この記事では書字方向について紹介します。
 - [CSS の整理](/ja/docs/Learn_web_development/Core/Styling_basics/Organizing)

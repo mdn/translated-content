@@ -46,7 +46,7 @@ l10n:
 - {{cssxref("@counter-style")}}
   - : 独自のカウンタースタイルを定義し、定義済みのリストスタイルを拡張します ([CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)).
 - {{cssxref("@container")}}
-  - : コンテナーが [`<container-condition>`](/ja/docs/Web/CSS/Reference/At-rules/@container#container-condition) を満たす場合にそのコンテンツを適用する条件付きグループルール（[CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)）。
+  - : コンテナーが [`<container-condition>`](/ja/docs/Web/CSS/@container#container-condition) を満たす場合にそのコンテンツを適用する条件付きグループルール（[CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)）。
 - {{cssxref("@font-face")}}
   - : ローカルおよび外部フォントリソースの場所、および、宣言された {{cssxref("font-family")}} とともにそれらのリソースが使用される場合のスタイル特性を定義します（[CSS フォント](/ja/docs/Web/CSS/CSS_fonts)）。
 - {{cssxref("@font-feature-values")}} （および `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset`, `@character-variant`）

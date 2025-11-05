@@ -95,7 +95,7 @@ if ("virtualKeyboard" in navigator) {
 }
 ```
 
-スタイルについては、 CSS で機能検出を行うこともできます。 [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルールを使用し、機能がないことを調べたい場合は `not` キーワードを組み合わます。
+スタイルについては、 CSS で機能検出を行うこともできます。 [`@supports`](/ja/docs/Web/CSS/@supports) アットルールを使用し、機能がないことを調べたい場合は `not` キーワードを組み合わます。
 CSS での使用方法については、[機能クエリーの使い方](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)を参照してください。
 
 ```css

@@ -129,7 +129,7 @@ animation:
 
 点滅を伴うアニメーションは、注意欠陥障害 (ADHD) のような認知障害を持つ人々に問題を起こす可能性があります。加えて、特定の種類の動きが、前庭障害、てんかん、片頭痛、痙攣感受性などの引き金になることもあります。
 
-アニメーションを停止したり無効にしたりする仕組みを、できれば[動きを縮小するメディアクエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)を使用して、アニメーションを削減した操作の設定を表明したユーザーの希望を叶えるように作成することができます。
+アニメーションを停止したり無効にしたりする仕組みを、できれば[動きを縮小するメディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)を使用して、アニメーションを削減した操作の設定を表明したユーザーの希望を叶えるように作成することができます。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)

@@ -276,7 +276,7 @@ input:checked + label::before {
 
 - CSS の {{cssxref("will-change")}} プロパティ
 - [`<easing-function>`](/ja/docs/Web/CSS/easing-function) データ型
-- [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディアクエリー
+- [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディアクエリー
 - {{glossary("Bezier curve", "ベジェ曲線")}}
 
 ## 仕様書

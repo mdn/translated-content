@@ -1,6 +1,6 @@
 ---
 title: "@supports"
-slug: Web/CSS/Reference/At-rules/@supports
+slug: Web/CSS/@supports
 l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
