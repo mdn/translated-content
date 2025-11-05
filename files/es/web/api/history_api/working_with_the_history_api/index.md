@@ -34,7 +34,6 @@ Aunque esto es ideal para muchos sitios web, puede tener algunas desventajas:
 
 - Puede resultar ineficaz cargar toda la página cada vez, cuando solo es necesario actualizar una parte de ella.
 - Es difícil mantener el estado de la aplicación al navegar por las páginas.
- 
 Por estas razones, un patrón popular para las aplicaciones web es la {{Glossary("SPA", "single-page application")}} (SPA). Cuando un usuario hace clic en un enlace, la SPA realiza los siguientes pasos:
 
 1. Evita el comportamiento predeterminado de cargar una nueva página.
