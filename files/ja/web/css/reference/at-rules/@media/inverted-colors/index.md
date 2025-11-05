@@ -1,11 +1,11 @@
 ---
 title: inverted-colors
-slug: Web/CSS/@media/inverted-colors
+slug: Web/CSS/Reference/At-rules/@media/inverted-colors
 l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-**`inverted-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}またはその基盤となる OS が、すべての色を反転しているかどうかを検査するために使用することができます。
+**`inverted-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}またはその基盤となる OS が、すべての色を反転しているかどうかを検査するために使用することができます。
 
 色の反転は、影がハイライトに変わるなど、コンテンツの読み取り性を低下させるような不快な副作用をもたらす場合があります。このメディア機能を使用すると、反転が発生しているかどうかを検出し、ユーザーの環境設定を尊重しながら、それに応じてコンテンツのスタイルを設定することができます。
 
@@ -79,6 +79,6 @@ p {
 
 ## 関連情報
 
-- [@media](/ja/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)

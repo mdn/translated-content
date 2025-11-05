@@ -1,11 +1,11 @@
 ---
 title: height
-slug: Web/CSS/@media/height
+slug: Web/CSS/Reference/At-rules/@media/height
 l10n:
   sourceCommit: 421deed53984505909884b3b290002b228d29e7b
 ---
 
-**`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ（または[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)ではページボックスの高さ）に基づいてスタイルを適用するために使用することができます。
+**`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ（または[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)ではページボックスの高さ）に基づいてスタイルを適用するために使用することができます。
 
 ## 構文
 
@@ -59,4 +59,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

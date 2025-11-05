@@ -1,6 +1,6 @@
 ---
 title: font-style
-slug: Web/CSS/@font-face/font-style
+slug: Web/CSS/Reference/At-rules/@font-face/font-style
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---

@@ -1,6 +1,6 @@
 ---
 title: prefers-reduced-data
-slug: Web/CSS/@media/prefers-reduced-data
+slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-data
 l10n:
   sourceCommit: b64538dc77e9a6181b882bd54bdbb307c1430ba8
 ---
@@ -10,7 +10,7 @@ l10n:
 > [!NOTE]
 > この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
 
-**`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
+**`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
 
 ## 構文
 

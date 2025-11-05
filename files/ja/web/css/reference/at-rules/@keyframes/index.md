@@ -1,6 +1,6 @@
 ---
 title: "@keyframes"
-slug: Web/CSS/@keyframes
+slug: Web/CSS/Reference/At-rules/@keyframes
 l10n:
   sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---

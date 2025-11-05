@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Font Loading API")}}
 
-`check()` は {{domxref("FontFaceSet")}} のメソッドで、まだ完全に読み込まれていない `FontFaceSet` 内のフォントを使用しようとせずに、指定されたフォント指定を使ってテキストをレンダリングすることができれば `true` を返します。すなわち、[フォントスワップ](/ja/docs/Web/CSS/@font-face/font-display#フォント表示の過程)を発生させることなく、フォント指定を使用することができます。
+`check()` は {{domxref("FontFaceSet")}} のメソッドで、まだ完全に読み込まれていない `FontFaceSet` 内のフォントを使用しようとせずに、指定されたフォント指定を使ってテキストをレンダリングすることができれば `true` を返します。すなわち、[フォントスワップ](/ja/docs/Web/CSS/Reference/At-rules/@font-face/font-display#フォント表示の過程)を発生させることなく、フォント指定を使用することができます。
 
 ## 構文
 

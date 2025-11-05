@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-CSS では、 CSS ルールのプロパティの値がそのプロパティの基盤値であり、[キーフレーム](/ja/docs/Web/CSS/@keyframes)の同じプロパティの値がそのプロパティの効果値です。
+CSS では、 CSS ルールのプロパティの値がそのプロパティの基盤値であり、[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)の同じプロパティの値がそのプロパティの効果値です。
 
 合成演算 (_composite operation_) は、効果値と基盤値とを結合して、最終的なキーフレームの効果値を生成するために使用する固有の演算です。合成演算には 3 種類があります。
 

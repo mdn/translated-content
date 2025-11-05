@@ -1,6 +1,6 @@
 ---
 title: fallback
-slug: Web/CSS/@counter-style/fallback
+slug: Web/CSS/Reference/At-rules/@counter-style/fallback
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -19,7 +19,7 @@ fallback: custom-gangnam-style;
 
 この記述子は、単一の `<counter-style-name>` をその値として取ります。
 
-- [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name)
+- [`<counter-style-name>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name)
   - : 代替として使用するカウンタースタイルの名前を提供します。これは、大文字と小文字を区別する独自の CSS カウンタースタイル（引用符は不要）の `<custom-ident>`、または大文字と小文字を区別しない {{cssxref("list-style-type")}} プロパティの値（`decimal`、`disc` といった具合に）のどちらかです。
 
 省略した場合、カウンターの代替は既定で `decimal` です。

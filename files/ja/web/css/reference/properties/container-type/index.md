@@ -45,7 +45,7 @@ container-type: unset;
     インラインサイズ抑制が要素に適用されます。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ抑制)することができます （[CSS コンテナーの使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)を参照してください）。
 
 - `normal`
-  - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
+  - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
 
 - `scroll-state`
   - : コンテナーのスクロール状態クエリー用のクエリコンテナーを設定します。この場合、要素のサイズは単独で計算されず、抑制は適用されません。
