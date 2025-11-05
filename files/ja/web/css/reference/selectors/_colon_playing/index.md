@@ -6,7 +6,7 @@ original_slug: Web/CSS/:playing
 
 {{SeeCompatTable}}
 
-**`:playing`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)セレクターで、「再生中」または「停止中」の状態を持つ音声、動画、その他のリソースの要素が「再生中」である場合に一致する、リソース状態擬似クラスです。
+**`:playing`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、「再生中」または「停止中」の状態を持つ音声、動画、その他のリソースの要素が「再生中」である場合に一致する、リソース状態擬似クラスです。
 
 バッファリング状態にある場合や、ユーザーの操作以外で停止している状態の場合も、リソースが再生中として扱われます。
 

@@ -72,4 +72,4 @@ li li {
 
 ## 関連情報
 
-- [子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)
+- [子結合子](/ja/docs/Web/CSS/Child_combinator)

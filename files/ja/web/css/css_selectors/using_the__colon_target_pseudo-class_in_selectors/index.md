@@ -10,9 +10,9 @@ URL が [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fr
 
 ## ターゲットの選択
 
-{{cssxref(":target")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)は、 URL フラグメント識別子を使用して識別される文書の対象要素のスタイル設定に使用されます。例えば、 `https://developer.mozilla.org/ja/docs/Web/CSS#reference` という URL はフラグメント識別子 `#reference` を含んでいます。 HTML では、 `id` および `name` 属性が名前空間を共用しているので、識別子はどちらかの値として見つかります。したがって、この例の URL は、その文書内で id `reference` を持つ要素を参照します。
+{{cssxref(":target")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、 URL フラグメント識別子を使用して識別される文書の対象要素のスタイル設定に使用されます。例えば、 `https://developer.mozilla.org/ja/docs/Web/CSS#reference` という URL はフラグメント識別子 `#reference` を含んでいます。 HTML では、 `id` および `name` 属性が名前空間を共用しているので、識別子はどちらかの値として見つかります。したがって、この例の URL は、その文書内で id `reference` を持つ要素を参照します。
 
-URL の対象である `h2` 要素にスタイルを設定し、他の種類の要素には対象スタイルを取得する効果を与えないようにするには、[型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)とともに `:target` 擬似クラスを使用します。
+URL の対象である `h2` 要素にスタイルを設定し、他の種類の要素には対象スタイルを取得する効果を与えないようにするには、[型セレクター](/ja/docs/Web/CSS/Type_selectors)とともに `:target` 擬似クラスを使用します。
 
 ```css
 h2:target {

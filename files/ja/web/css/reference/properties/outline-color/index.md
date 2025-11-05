@@ -80,7 +80,7 @@ outline-color: unset;
 
 ## アクセシビリティ
 
-独自の[フォーカススタイル](/ja/docs/Web/CSS/Reference/Selectors/:focus)を作成するときに、ふつう {{cssxref("outline")}} プロパティを調整します。輪郭線の色を変更するのであれば、輪郭線と、それが配置される部分の背景のコントラスト比が、弱視の人でも知覚できるよう高くなっているか確認することが重要です。
+独自の[フォーカススタイル](/ja/docs/Web/CSS/:focus)を作成するときに、ふつう {{cssxref("outline")}} プロパティを調整します。輪郭線の色を変更するのであれば、輪郭線と、それが配置される部分の背景のコントラスト比が、弱視の人でも知覚できるよう高くなっているか確認することが重要です。
 
 色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/Reference/Properties/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
 

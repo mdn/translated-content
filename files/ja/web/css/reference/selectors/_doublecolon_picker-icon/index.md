@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::picker-icon`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、アイコンが関連付けられたフォームコントロール内のピッカーアイコンを対象とします。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の場合、 `<select>` 要素に示される矢印アイコン（閉じられた状態では下向きを指す）を選択します。
+**`::picker-icon`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、アイコンが関連付けられたフォームコントロール内のピッカーアイコンを対象とします。[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の場合、 `<select>` 要素に示される矢印アイコン（閉じられた状態では下向きを指す）を選択します。
 
 ## 構文
 

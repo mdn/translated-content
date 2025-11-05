@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
 
-**`:modal`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modal` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
+**`:modal`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modal` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
 
 {{InteractiveExample("CSS デモ: :modal", "tabbed-shorter")}}
 
@@ -65,7 +65,7 @@ showNumber.addEventListener("click", () => {
 ページの他の部分をユーザーが操作できないようにし、 `:modal` 擬似クラスによって選択される要素の例としては、例えば以下のようなものが含まれます。
 
 - [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素が `showModal()` API で開かれたとき。
-- `requestFullscreen()` API で開かれたときに [`:fullscreen`](/ja/docs/Web/CSS/Reference/Selectors/:fullscreen) 擬似クラスで選択される要素。
+- `requestFullscreen()` API で開かれたときに [`:fullscreen`](/ja/docs/Web/CSS/:fullscreen) 擬似クラスで選択される要素。
 
 ## 例
 
@@ -159,4 +159,4 @@ favDialog.addEventListener("close", () => {
 
 - [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
 - 他の要素表示状態擬似クラス: {{CSSxRef(":fullscreen")}} および {{CSSxRef(":picture-in-picture")}}
-- [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)の一覧
+- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)の一覧

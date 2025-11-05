@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-**`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
+**`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
 
 {{InteractiveExample("CSS デモ: :last-of-type", "tabbed-shorter")}}
 
@@ -73,7 +73,7 @@ p:last-of-type {
 
 ### 入れ子になった要素
 
-この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors) (`*`) が暗黙に含まれます。
+この例は、入れ子になった要素を対象に含める方法を示します。なお、要素型セレクターが書かれていない場合は、[全称セレクター](/ja/docs/Web/CSS/Universal_selectors) (`*`) が暗黙に含まれます。
 
 #### HTML
 

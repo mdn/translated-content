@@ -8,11 +8,11 @@ l10n:
 
 CSS セレクターは、ツリー構造内の要素または要素の特定のパターンを表します。「セレクター」という用語は、[単純セレクター](#単純セレクター)、[複合セレクター](#複合セレクター)、[複雑セレクター](#複雑セレクター)を参照することができます。has()`擬似クラスに引数として記載する場合、これらのセレクターは[相対セレクター](#relative_selector)と呼ばれ、1つ以上のアンカー要素からの相対的な要素を表します。
 
-これらのセレクターはカンマ区切りの[セレクターリスト](#selector_list)で結合することができます。[非寛容セレクター](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#valid_and_invalid_selector_lists)リストに含まれるセレクターが無効な場合、セレクターリスト全体が無効になります。
+これらのセレクターはカンマ区切りの[セレクターリスト](#selector_list)で結合することができます。[非寛容セレクター](/ja/docs/Web/CSS/Selector_list#valid_and_invalid_selector_lists)リストに含まれるセレクターが無効な場合、セレクターリスト全体が無効になります。
 
 ### 単純セレクター
 
-**単純セレクター**とは、単一の型セレクター、属性セレクター、擬似クラスなどの単一の成分を持つセレクターのことで、他のセレクター成分や結合子と組み合わせたり含んだりすることがないものです。指定された要素が単純セレクターに一致すると言うのは、その単純セレクターが要素を正確に説明している場合です。単一の[基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含むセレクターは単純セレクターです。
+**単純セレクター**とは、単一の型セレクター、属性セレクター、擬似クラスなどの単一の成分を持つセレクターのことで、他のセレクター成分や結合子と組み合わせたり含んだりすることがないものです。指定された要素が単純セレクターに一致すると言うのは、その単純セレクターが要素を正確に説明している場合です。単一の[基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)、[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含むセレクターは単純セレクターです。
 
 ```css
 #myId {
@@ -34,11 +34,11 @@ a#selected {
 }
 ```
 
-複合セレクターでは、[型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors) または[全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)がセレクターの並びの先頭に来なければなりません。型セレクターまたは全称セレクターを入力することができるのは 1 つだけです。ホワイトスペースは[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)を表しますので、複合セレクターを構成する単純セレクターの間にホワイトスペースを入れてはいけません。
+複合セレクターでは、[型セレクター](/ja/docs/Web/CSS/Type_selectors) または[全称セレクター](/ja/docs/Web/CSS/Universal_selectors)がセレクターの並びの先頭に来なければなりません。型セレクターまたは全称セレクターを入力することができるのは 1 つだけです。ホワイトスペースは[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)を表しますので、複合セレクターを構成する単純セレクターの間にホワイトスペースを入れてはいけません。
 
 ### 複雑セレクター
 
-**複雑セレクター**は、ホワイトスペースの[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)を含む、結合子で区切られた 1 つ以上の単純セレクターや複合セレクターの並びです。
+**複雑セレクター**は、ホワイトスペースの[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)を含む、結合子で区切られた 1 つ以上の単純セレクターや複合セレクターの並びです。
 
 複雑セレクターは、一連の要素に対する一連の同時条件を表します。
 
@@ -54,7 +54,7 @@ a#selected > .icon {
 
 ### セレクターリスト
 
-[**セレクターリスト**](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)は、単純、複合、複雑セレクターのカンマ区切りのリストです。指定された要素がセレクターリストに一致するとき、その要素はセレクターリストに一致すると言われます。
+[**セレクターリスト**](/ja/docs/Web/CSS/Selector_list)は、単純、複合、複雑セレクターのカンマ区切りのリストです。指定された要素がセレクターリストに一致するとき、その要素はセレクターリストに一致すると言われます。
 
 ```css
 #main,
@@ -62,7 +62,7 @@ article.heading {
 }
 ```
 
-[非寛容セレクター](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#セレクターリストの有効、無効について)リストのセレクターが無効な場合、セレクターリスト全体が無効になります。
+[非寛容セレクター](/ja/docs/Web/CSS/Selector_list#セレクターリストの有効、無効について)リストのセレクターが無効な場合、セレクターリスト全体が無効になります。
 
 ```css
 #main,
@@ -72,11 +72,11 @@ article.heading {
 }
 ```
 
-{{cssxref(":is", ":is()")}} と {{cssxref(":where", ":where()")}} 擬似クラスは、[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)を構築するために使用することができます。
+{{cssxref(":is", ":is()")}} と {{cssxref(":where", ":where()")}} 擬似クラスは、[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容なセレクターリスト)を構築するために使用することができます。
 
 ### 相対セレクター
 
-**相対セレクター**は、結合子で始まる 1 つ以上のアンカー要素からの相対的な要素を表すセレクターです。明示的な結合子で始まらない相対セレクターは、暗黙の[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)を持ちます。
+**相対セレクター**は、結合子で始まる 1 つ以上のアンカー要素からの相対的な要素を表すセレクターです。明示的な結合子で始まらない相対セレクターは、暗黙の[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)を持ちます。
 
 相対セレクターは、セレクターリストでは使用できません。むしろ、 {{cssxref(":has", ":has()")}} 擬似クラスなどの特定のコンテキスト内で受け入れられます。
 
@@ -98,7 +98,7 @@ dt:has(+ img) ~ dd {
 ## 関連情報
 
 - [CSS セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)
+- [寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容なセレクターリスト)
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール

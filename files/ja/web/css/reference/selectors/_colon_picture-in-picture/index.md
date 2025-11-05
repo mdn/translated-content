@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:picture-in-picture
 original_slug: Web/CSS/:picture-in-picture
 ---
 
-**`:picture-in-picture`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、現在ピクチャインピクチャモードの要素に一致します。
+**`:picture-in-picture`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在ピクチャインピクチャモードの要素に一致します。
 
 ## 構文
 

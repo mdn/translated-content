@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-**`:link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、まだ訪問されていない要素を表します。 {{HTMLElement("a")}} または {{HTMLElement("area")}} など、 `href` 属性を持つ未訪問のすべての要素を選択します。
+**`:link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、まだ訪問されていない要素を表します。 {{HTMLElement("a")}} または {{HTMLElement("area")}} など、 `href` 属性を持つ未訪問のすべての要素を選択します。
 
 {{InteractiveExample("CSS デモ: :link", "tabbed-shorter")}}
 
@@ -42,7 +42,7 @@ a:link {
 </ul>
 ```
 
-`:link` および [`:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited) 擬似クラスによって定義されたスタイルは、以降のユーザー操作の擬似クラス（{{cssxref(":hover")}} または {{cssxref(":active")}}）によって上書きされる可能性があります。適切にリンクにスタイルを適用するには、 `:link` ルールを他のすべてのリンク関連ルールの前に置き、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるようにしてください。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
+`:link` および [`:visited`](/ja/docs/Web/CSS/:visited) 擬似クラスによって定義されたスタイルは、以降のユーザー操作の擬似クラス（{{cssxref(":hover")}} または {{cssxref(":active")}}）によって上書きされる可能性があります。適切にリンクにスタイルを適用するには、 `:link` ルールを他のすべてのリンク関連ルールの前に置き、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるようにしてください。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
 
 > [!NOTE]
 > 訪問済みかどうかにかかわらず要素を選択するには、 {{cssxref(":any-link")}} を使用してください。

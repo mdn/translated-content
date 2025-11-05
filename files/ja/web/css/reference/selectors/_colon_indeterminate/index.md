@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:indeterminate
 original_slug: Web/CSS/:indeterminate
 ---
 
-**`:indeterminate`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)セレクターで、未確定の状態にあるフォーム要素を表します。例えばチェックボックスで HTML の [`indeterminate`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性が `true` に設定されたもの、ラジオボタンでグループ内がすべて選択されていないもの、 {{HTMLElement("progress")}} 要素で中間の状態などです。
+**`:indeterminate`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、未確定の状態にあるフォーム要素を表します。例えばチェックボックスで HTML の [`indeterminate`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性が `true` に設定されたもの、ラジオボタンでグループ内がすべて選択されていないもの、 {{HTMLElement("progress")}} 要素で中間の状態などです。
 
 ```css
 /* 未確定の状態にある <input> をすべて選択 */

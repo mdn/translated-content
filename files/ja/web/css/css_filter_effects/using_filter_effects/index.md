@@ -56,7 +56,7 @@ CSS フィルター効果モジュールは、 10 個の [`<filter-function>`](/
 
 下のセピア調の画像にカーソルを当てると、フルカラーの画像が即座に表示されます。
 
-画像をセピア調にするには、 `filter` プロパティの値として [`sepia()`](/ja/docs/Web/CSS/filter-function/sepia) フィルター関数を指定します。 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) および [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) の時には、 `filter: none` を設定することでィルターが除去されます。
+画像をセピア調にするには、 `filter` プロパティの値として [`sepia()`](/ja/docs/Web/CSS/filter-function/sepia) フィルター関数を指定します。 [`:hover`](/ja/docs/Web/CSS/:hover) および [`:focus`](/ja/docs/Web/CSS/:focus) の時には、 `filter: none` を設定することでィルターが除去されます。
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />

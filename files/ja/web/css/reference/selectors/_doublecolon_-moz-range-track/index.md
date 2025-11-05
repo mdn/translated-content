@@ -6,7 +6,7 @@ original_slug: Web/CSS/::-moz-range-track
 
 {{Non-standard_header}}
 
-**`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
+**`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
 > [!NOTE]
 > `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。

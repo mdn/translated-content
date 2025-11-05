@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書内のターゲット要素を選択します。文書が読み込まれたとき、ターゲット要素は文書の [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して導出されます。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書内のターゲット要素を選択します。文書が読み込まれたとき、ターゲット要素は文書の [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して導出されます。
 
 ```css
 /* 文書のターゲット要素を選択 */

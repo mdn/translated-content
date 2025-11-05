@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---
 
-**`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。
+**`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。
 
 {{InteractiveExample("CSS デモ: :first-child", "tabbed-shorter")}}
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:read-only
 original_slug: Web/CSS/:read-only
 ---
 
-**`:read-only`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーが編集できない要素 (`input` や `textarea` など) を表します。
+**`:read-only`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できない要素 (`input` や `textarea` など) を表します。
 
 ```css
 input:read-only,

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:has()`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この擬似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
+**`:has()`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この擬似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
 
 ```css
 /* h1 見出し要素の直後に段落要素がある場合、
@@ -26,7 +26,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 擬似クラス自体がブラウザーでサポートされていない場合、`:has()` が [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is) や [`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where) のような寛容なセレクターリストの中にない限り、セレクターブロック全体が失敗します。
+`:has()` 擬似クラス自体がブラウザーでサポートされていない場合、`:has()` が [`:is()`](/ja/docs/Web/CSS/:is) や [`:where()`](/ja/docs/Web/CSS/:where) のような寛容なセレクターリストの中にない限り、セレクターブロック全体が失敗します。
 
 `:has()` 擬似クラスは他の `:has()` の中に入れ子にすることはできません。
 
@@ -100,7 +100,7 @@ h1:has(+ h2) {
 
 {{EmbedLiveSample('With_the_sibling_combinator', 600, 150)}}
 
-この例では、比較のために 2 つの類似したテキストを並べて示しています。左は `h1` 見出しの後に段落が続くもので、右は `h1` 見出しの後に `h2` 見出しが続き、段落が続くものです。右の例では、`:has()` は、`h2` 要素（[次兄弟結合子 `+`](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) で示される）が直後に続く `h1` 要素をセレクターとして選択するのに役立ち、この CSS ルールでは、その `h1` 要素の後の間隔を狭めています。`:has()` 擬似クラスがなければ、CSS セレクターを使って異なる型の先行兄弟や親要素を選択することはできません。
+この例では、比較のために 2 つの類似したテキストを並べて示しています。左は `h1` 見出しの後に段落が続くもので、右は `h1` 見出しの後に `h2` 見出しが続き、段落が続くものです。右の例では、`:has()` は、`h2` 要素（[次兄弟結合子 `+`](/ja/docs/Web/CSS/Next-sibling_combinator) で示される）が直後に続く `h1` 要素をセレクターとして選択するのに役立ち、この CSS ルールでは、その `h1` 要素の後の間隔を狭めています。`:has()` 擬似クラスがなければ、CSS セレクターを使って異なる型の先行兄弟や親要素を選択することはできません。
 
 ### :is() 擬似クラスとの組み合わせ
 
@@ -175,7 +175,7 @@ h3 {
 
 {{EmbedLiveSample('With_the_:is()_pseudo-class', 600, 170)}}
 
-ここでは、最初の [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is) 擬似クラスは、リスト内の見出し要素のいずれかを選択するために使用されます。2 番目の `:is()` 擬似クラスは、`:has()` の引数として次兄弟セレクターのリストを渡すために使用されます。`:has()` 擬似クラスは、 `h1`, `h2`, `h3` 要素の直後に（[`+`](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) で示すように） `h2`, `h3`, `h4` 要素が来るものを選択するのに役立ち、この CSS ルールでは、そのような `h1`, `h2`, `h3` 要素の後の間隔を狭めています。
+ここでは、最初の [`:is()`](/ja/docs/Web/CSS/:is) 擬似クラスは、リスト内の見出し要素のいずれかを選択するために使用されます。2 番目の `:is()` 擬似クラスは、`:has()` の引数として次兄弟セレクターのリストを渡すために使用されます。`:has()` 擬似クラスは、 `h1`, `h2`, `h3` 要素の直後に（[`+`](/ja/docs/Web/CSS/Next-sibling_combinator) で示すように） `h2`, `h3`, `h4` 要素が来るものを選択するのに役立ち、この CSS ルールでは、そのような `h1`, `h2`, `h3` 要素の後の間隔を狭めています。
 
 なお、このセレクターはこのように書くこともできます。
 
@@ -226,9 +226,9 @@ CSS における類似の構成は `.abc:has(+ .xyz)` です。これは、次�
 
 ## 関連情報
 
-- [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is), [`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where), [`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not)
+- [`:is()`](/ja/docs/Web/CSS/:is), [`:where()`](/ja/docs/Web/CSS/:where), [`:not()`](/ja/docs/Web/CSS/:not)
 - [CSS セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)
+- [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
 - [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

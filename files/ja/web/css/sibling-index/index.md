@@ -2,20 +2,14 @@
 title: sibling-index()
 slug: Web/CSS/sibling-index
 l10n:
-  sourceCommit: a4059d2f0a26110e764e16545b6f83b076e5ac24
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 {{SeeCompatTable}}
 
-**`sibling-index()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 DOM ツリー内におけるすべての兄弟要素に対する、現在の要素の相対的な位置を表す整数を返します。返される値は、親要素内のすべての兄弟要素の中で、コンテキストの子要素の位置のインデックス番号です。最初の子は `1`、最後の子は {{domxref("Element.children")}} の `length` を返します。
+**`sibling-index()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 DOM ツリー内におけるすべての兄弟要素に対する、現在の要素の相対的な位置を表す整数を返します。返される値は、親要素内のすべての兄弟要素の中で、コンテキストの子要素の位置のインデックス番号です。最初の子供は `1`、最後の子供は {{domxref("Element.children")}}.length を返します。
 
-> [!NOTE]
-> {{CSSxRef(":nth-child()")}} 擬似クラスと同様に、`sibling-index()` は 0 からではなく 1 から始まります。
-
-> [!NOTE]
-> {{CSSxRef("counter()")}} 関数は同様の結果を `<string>` で返す（これは[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)により適しています）のに対し、 `sibling-index()` は `<integer>` で返します（これは計算に使用することができます）。
-
-{{InteractiveExample("CSS デモ: sibling-index()")}}
+{{InteractiveExample("CSS Demo: sibling-index()")}}
 
 ```css interactive-example-choice
 --width: calc(sibling-index() * 30px);
@@ -71,10 +65,15 @@ l10n:
 }
 ```
 
+> [!NOTE]
+> {{CSSxRef(":nth-child()")}} 擬似クラスと同様、 `sibling-index()` は 1 から始まります。 0 ではありません。
+
 ## 構文
 
-```css-nolint
-sibling-index()
+```css
+li {
+  width: calc(sibling-index() * 100px);
+}
 ```
 
 ### 引数
@@ -114,6 +113,43 @@ li {
 #### 結果
 
 {{EmbedLiveSample("動的なリストの幅", "300", "100")}}
+
+### 順序付きリスト
+
+この例では、{{htmlelement("ol")}} 要素を使用せずに、 `sibling-index()` を使用して順序付きリストを作成する方法を示しています。コンテキストには常に最も意味づけの明確な要素を使用してください。この例は、HTML を変更できない場合に CSS で何ができるかを示すために掲載しています。
+
+#### HTML
+
+{{htmlelement("nav")}} コンテナーと、いくつかの子要素 {{htmlelement("div")}} 要素が含まれています。
+
+```html
+<nav arial-label="Ordered list">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</nav>
+```
+
+#### CSS
+
+{{CSSxRef("::before")}} 擬似要素を使用して、それぞれの {{htmlelement("div")}} 要素の前に兄弟インデックスを表示し、{{CSSxRef("content")}} を関数 `sibling-index()` が返す整数に設定することで、番号付きリストとして視覚的に現れるようにします。
+
+```css
+div {
+  --list-index: sibling-index();
+  display: flex;
+  gap: 1ch;
+}
+
+div::before {
+  content: var(--list-index);
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("順序付きリスト", "300", "100")}}
 
 ### 連続アニメーション
 
@@ -177,4 +213,3 @@ li {
 ## 関連情報
 
 - {{CSSxRef("sibling-count", "sibling-count()")}}
-- {{CSSxRef("counter", "counter()")}}

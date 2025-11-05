@@ -6,7 +6,7 @@ original_slug: Web/CSS/::spelling-error
 
 {{SeeCompatTable}}
 
-**`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。
+**`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。
 
 ## 利用できるプロパティ
 

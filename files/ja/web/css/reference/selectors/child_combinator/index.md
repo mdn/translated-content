@@ -15,7 +15,7 @@ ul.my-things > li {
 }
 ```
 
-2 つ目のセレクターに一致する要素は、 1 つ目のセレクターに一致する要素の直接の子要素でなければなりません。これは、[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)が 1 つ目のセレクターに一致する要素が祖先が存在する 2 つ目のセレクターに一致するすべての要素に一致するのに比べて厳密です。
+2 つ目のセレクターに一致する要素は、 1 つ目のセレクターに一致する要素の直接の子要素でなければなりません。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)が 1 つ目のセレクターに一致する要素が祖先が存在する 2 つ目のセレクターに一致するすべての要素に一致するのに比べて厳密です。
 
 ## 構文
 
@@ -64,4 +64,4 @@ div > span {
 
 ## 関連情報
 
-- [子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)
+- [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)

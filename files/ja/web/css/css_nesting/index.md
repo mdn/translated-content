@@ -15,7 +15,7 @@ CSS 入れ子は、 CSS スタイルシートの可読性、モジュール性�
 
 ### セレクター
 
-- [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
+- [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
 
 ## ガイド
 
@@ -29,7 +29,7 @@ CSS 入れ子は、 CSS スタイルシートの可読性、モジュール性�
 ## 関連概念
 
 - [セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
 - [CSS プリプロセッサー](/ja/docs/Glossary/CSS_preprocessor)
 
 ## 仕様書

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::checkmark`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている {{htmlelement("option")}} 要素内に配置されたチェックマークを対象とします。選択されているオプションを視覚的に示すために使用することができます。
+**`::checkmark`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の現在選択されている {{htmlelement("option")}} 要素内に配置されたチェックマークを対象とします。選択されているオプションを視覚的に示すために使用することができます。
 
 {{InteractiveExample("CSS デモ: ::checkmark")}}
 

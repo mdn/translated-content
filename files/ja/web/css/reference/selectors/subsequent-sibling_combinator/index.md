@@ -104,4 +104,4 @@ p ~ span {
 
 ## 関連情報
 
-- [次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)
+- [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)

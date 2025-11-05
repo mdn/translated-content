@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:popover-open`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{domxref("Popover API", "ポップオーバー", "", "nocode")}}要素（すなわち [`popover` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/popover)のあるもの）が表示中の状態であることを表します。これを使用して、ポップオーバー要素が表示中の場合だけスタイルを適用することができます。
+**`:popover-open`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{domxref("Popover API", "ポップオーバー", "", "nocode")}}要素（すなわち [`popover` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/popover)のあるもの）が表示中の状態であることを表します。これを使用して、ポップオーバー要素が表示中の場合だけスタイルを適用することができます。
 
 ## 構文
 

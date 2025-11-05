@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:nth-last-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中で指定された型の要素を、最後から数えた位置に基づいて選択します。
+**`:nth-last-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で指定された型の要素を、最後から数えた位置に基づいて選択します。
 
 {{InteractiveExample("CSS デモ: :nth-last-of-type", "tabbed-shorter")}}
 

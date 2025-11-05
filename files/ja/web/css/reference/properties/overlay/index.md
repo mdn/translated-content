@@ -125,7 +125,7 @@ html {
 }
 ```
 
-アニメーションさせたい 2 つのプロパティは [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) です。これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態（`[popover]` で選択）を設定し、終了状態にはポップオーバーの開くための状態（[`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスで選択）を設定します。そして、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを設定するには、この 2 つの間でアニメーションします。
+アニメーションさせたい 2 つのプロパティは [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) です。これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態（`[popover]` で選択）を設定し、終了状態にはポップオーバーの開くための状態（[`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスで選択）を設定します。そして、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを設定するには、この 2 つの間でアニメーションします。
 
 アニメーションする要素は、表示されているときは[最上位レイヤー](/ja/docs/Glossary/Top_layer)に昇格し、非表示のときは最上位レイヤーから除去されるので、 `overlay` がトランジションする要素のリストに追加されます。これにより、最上位レイヤーからの要素の除去はアニメーションが終わるまで確実に延期されます。このような単純なアニメーションでは大きな違いはありませんが、より複雑なケースではこれを行わないと、要素がオーバーレイからすばやく除去されてしまい、アニメーションがスムーズでなくなったり、効果的でなくなったりすることがあります。また、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) の一括指定には、離散的なトランジションを有効にする値も設定されていることに注意してください。
 
@@ -134,7 +134,7 @@ html {
 - アニメーションの開始状態を [`@starting-style`](/ja/docs/Web/CSS/@starting-style) アットルール内に設定します。これは予期しない動作を避けるために必要です。既定では、要素の最初のスタイルが更新されたときや、 `display` 型が `none` から別の型に変更されたときには、トランジションは発生しません。 `@starting-style` では、既定で設定されていることを特定の制御された方法で上書きすることができます。これがなければ、出現アニメーションは発生せず、ポップオーバーはただ現れるだけです。
 - `display` もトランジションする要素のリストに追加されているので、アニメーションする要素は出現アニメーションと消滅アニメーションの両方を通して表示されます（`display: block` に設定します）。これがなければ、消滅アニメーションでは表示されません。結果的に、ポップオーバーはただ消えてしまいます。この場合も、アニメーションが発生するためには `transition-behavior: allow-discrete` が必要です。
 
-また、開いた時にポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) にトランジションを記載して、暗くなるアニメーションを提供していることに注意してください。ポップオーバーを開くための背景を選択するには `[popover]:popover-open::backdrop` が必要です。
+また、開いた時にポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) にトランジションを記載して、暗くなるアニメーションを提供していることに注意してください。ポップオーバーを開くための背景を選択するには `[popover]:popover-open::backdrop` が必要です。
 
 #### 結果
 

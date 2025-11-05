@@ -42,7 +42,7 @@ l10n:
 
 ## ガイド
 
-- [CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
   - : すべての CSS 仕様と WebVTT で定義されている擬似要素のアルファベット順リスト。
 
 - [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
@@ -85,16 +85,16 @@ l10n:
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-  - [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+  - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
   - [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
-  - [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)
-  - [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)
-  - [型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)
-  - [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-  - [全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)
+  - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)
+  - [ID セレクター](/ja/docs/Web/CSS/ID_selectors)
+  - [型セレクター](/ja/docs/Web/CSS/Type_selectors)
+  - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
+  - [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
 
 - [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性（`<input>` 要素）
-- [`:placeholder-shown`](/ja/docs/Web/CSS/Reference/Selectors/:placeholder-shown) セレクター
+- [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) セレクター
 
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)
   - {{cssxref("content")}} プロパティ

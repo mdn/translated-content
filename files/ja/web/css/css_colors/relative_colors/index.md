@@ -387,7 +387,7 @@ rgb(from red r g b / alpha)
 
 下記では、パレットの色を設定する CSS のみを掲載しています。 各ケースにおいて、子セレクターを使用して、選んだパレットのためにそれぞれの子要素の `<div>` に正しい {{cssxref("background-color")}} を適用していることに注意してください。 要素の種類よりも、ソース順における `<div>` の位置指定を重視しています。そのため、 {{cssxref(":nth-child")}} を使用して対象要素を指定しています。
 
-最後のルールでは、[一般兄弟セレクター (`~`)](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) を使用して、それぞれのパレット型で使用されていない `<div>` 要素を対象とし、レンダリングされないように [`display: none`](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) を設定しています。
+最後のルールでは、[一般兄弟セレクター (`~`)](/ja/docs/Web/CSS/Subsequent-sibling_combinator) を使用して、それぞれのパレット型で使用されていない `<div>` 要素を対象とし、レンダリングされないように [`display: none`](/ja/docs/Web/CSS/Subsequent-sibling_combinator) を設定しています。
 
 色自体には、`--base-color`、およびその `--base-color` から派生した相対色が設定されます。 相対色には [`lch()`](/ja/docs/Web/CSS/color_value/lch) 関数を使用します。元の色として `--base-color` を渡し、必要に応じて明度または色相チャンネルを調整した出力色を定義します。
 

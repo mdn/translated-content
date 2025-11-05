@@ -6,7 +6,7 @@ original_slug: Web/CSS/::-moz-progress-bar
 
 {{Non-standard_header}}
 
-**`::-moz-progress-bar`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 {{HTMLElement("progress")}} 要素の中のプログレスバーを表します。 (バーは進捗した量を表します。)
+**`::-moz-progress-bar`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 {{HTMLElement("progress")}} 要素の中のプログレスバーを表します。 (バーは進捗した量を表します。)
 
 {{HTMLElement("progress")}} のまだ終了していない部分を Mozilla で選択したい場合は、 {{HTMLElement("progress")}} で直接選択してください。
 

@@ -136,7 +136,7 @@ h2:has(+ p, > ul::after, + ul.red) {
 }
 ```
 
-この例だと `<p>` か `<ul class="red">` がすぐ後にある `h2` は斜体になります。寛容な相対セレクターリスト [`:has()`](/ja/docs/Web/CSS/Reference/Selectors/:has) の中で擬似要素は無効ですが、リストが寛容なのでセレクターを壊すことはありません。
+この例だと `<p>` か `<ul class="red">` がすぐ後にある `h2` は斜体になります。寛容な相対セレクターリスト [`:has()`](/ja/docs/Web/CSS/:has) の中で擬似要素は無効ですが、リストが寛容なのでセレクターを壊すことはありません。
 
 ## 仕様書
 
@@ -148,5 +148,5 @@ h2:has(+ p, > ul::after, + ul.red) {
 
 ## 関連情報
 
-- 擬似クラス [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is)、[`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where)、[`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not)、[`:has()`](/ja/docs/Web/CSS/Reference/Selectors/:has) は、寛容なセレクターリストを受け付けます。
+- 擬似クラス [`:is()`](/ja/docs/Web/CSS/:is)、[`:where()`](/ja/docs/Web/CSS/:where)、[`:not()`](/ja/docs/Web/CSS/:not)、[`:has()`](/ja/docs/Web/CSS/:has) は、寛容なセレクターリストを受け付けます。
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)

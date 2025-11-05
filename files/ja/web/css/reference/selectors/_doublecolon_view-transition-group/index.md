@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::view-transition-group`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、単一のビュー遷移グループを表します。
+**`::view-transition-group`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、単一のビュー遷移グループを表します。
 
 ビュー遷移の間、 `::view-transition-group` はは、[ビュー遷移プロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス) で説明されているように、関連する擬似要素ツリーに含まれています。これは{{cssxref("::view-transition")}}の唯一の子であり、{{cssxref("::view-transition-image-pair")}}を子として持ちます。
 

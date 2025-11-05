@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:root
 original_slug: Web/CSS/:root
 ---
 
-**`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が高いことを除けば `html` セレクターと同等です。
+**`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が高いことを除けば `html` セレクターと同等です。
 
 ```css
 /* 文書のルート要素（HTML の場合は <html>）を選択 */

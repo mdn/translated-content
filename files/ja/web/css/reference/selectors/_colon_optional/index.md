@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:optional
 original_slug: Web/CSS/:optional
 ---
 
-**`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
+**`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
 
 ```css
 /* 任意の <input> をすべて選択 */

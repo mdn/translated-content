@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-**`:-moz-drag-over`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが呼び出された時に要素に一致します。
+**`:-moz-drag-over`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが呼び出された時に要素に一致します。
 
 ## 構文
 

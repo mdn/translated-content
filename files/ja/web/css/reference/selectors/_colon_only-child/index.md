@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:only-child
 original_slug: Web/CSS/:only-child
 ---
 
-**`:only-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素がない要素を表します。 `:first-child:last-child` または `:nth-child(1):nth-last-child(1)` と同じですが、詳細度はより低くなります。
+**`:only-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素がない要素を表します。 `:first-child:last-child` または `:nth-child(1):nth-last-child(1)` と同じですが、詳細度はより低くなります。
 
 ```css
 /* 親の唯一の子である <p> 要素をすべて選択 */

@@ -22,7 +22,7 @@ l10n:
 
 カウンターを使用するには、最初に必ず {{cssxref("counter-reset")}} プロパティで値を初期化する必要があります。
 カウンター値は、 {{cssxref("counter-increment")}} プロパティを使用して増減させることができ、 {{cssxref("counter-set")}} プロパティを使用して特定の値に直接設定することができます。
-カウンターの現在の値は、 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができ、通常は[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の {{CSSxRef("content")}} プロパティ内に表示されます。
+カウンターの現在の値は、 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができ、通常は[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の {{CSSxRef("content")}} プロパティ内に表示されます。
 
 カウンターは、ボックスを生成する要素でのみ、設定したり、リセットしたり、進めたりすることができます。
 例えば、要素が `display: none` に設定されている場合、その要素に対するカウンター操作は無視されます。

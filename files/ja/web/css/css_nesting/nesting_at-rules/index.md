@@ -144,6 +144,6 @@ l10n:
 ## 関連情報
 
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
-- [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
+- [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
 - [CSS 入れ子の使用](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)

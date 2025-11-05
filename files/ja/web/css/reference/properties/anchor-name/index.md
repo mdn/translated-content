@@ -48,7 +48,7 @@ anchor-name: unset;
 
 アンカー要素が非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} による）や、アンカー要素が別の要素の {{cssxref("content-visibility", "content-visibility: hidden")}} 設定により[スキップされたコンテンツ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)の一部となっている場合、位置指定された要素をアンカー要素に関連付けられたりすることはできません。
 
-`anchor-name` プロパティは、 主ボックスを生成するすべての要素で使用することができます。これは、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（{{cssxref("::before")}} や {{cssxref("::after")}} を使用して生成されたコンテンツを含む）や、[`range` 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)のつまみ ({{cssxref("::-webkit-slider-thumb")}}) などの UI 機能もアンカー要素になり得るということです。擬似要素は、特に指定がない限り、擬似要素の親要素と同じ要素に暗黙的にアンカーされます。
+`anchor-name` プロパティは、 主ボックスを生成するすべての要素で使用することができます。これは、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)（{{cssxref("::before")}} や {{cssxref("::after")}} を使用して生成されたコンテンツを含む）や、[`range` 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)のつまみ ({{cssxref("::-webkit-slider-thumb")}}) などの UI 機能もアンカー要素になり得るということです。擬似要素は、特に指定がない限り、擬似要素の親要素と同じ要素に暗黙的にアンカーされます。
 
 アンカー機能と使い方についての詳しい情報は、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイドを参照してください。
 

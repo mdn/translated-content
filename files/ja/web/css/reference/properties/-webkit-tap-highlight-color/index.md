@@ -41,6 +41,6 @@ original_slug: Web/CSS/-webkit-tap-highlight-color
 
 - [WebKit CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - 関連する CSS 擬似クラス:
-  - [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover)
-  - [`:active`](/ja/docs/Web/CSS/Reference/Selectors/:active)
-  - [`:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited)
+  - [`:hover`](/ja/docs/Web/CSS/:hover)
+  - [`:active`](/ja/docs/Web/CSS/:active)
+  - [`:visited`](/ja/docs/Web/CSS/:visited)

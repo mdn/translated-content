@@ -6,7 +6,7 @@ original_slug: Web/CSS/::-webkit-progress-value
 
 {{Non-standard_header}}
 
-**`::-webkit-progress-value`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 擬似要素の子要素です。
+**`::-webkit-progress-value`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 擬似要素の子要素です。
 
 > [!NOTE]
 > `::-webkit-progress-value` を有効にするには {{cssxref("-webkit-appearance")}} を `<progress>` 要素で `none` に設定する必要があります。

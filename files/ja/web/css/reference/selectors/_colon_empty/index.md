@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:empty`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列（ホワイトスペースを含む）です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
+**`:empty`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列（ホワイトスペースを含む）です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
 
 {{InteractiveExample("CSS デモ: :empty", "tabbed-shorter")}}
 

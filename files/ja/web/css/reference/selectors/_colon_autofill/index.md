@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-**`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
+**`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
 
 {{InteractiveExample("CSS デモ: :autofill", "tabbed-shorter")}}
 
@@ -58,7 +58,7 @@ input:is(:-webkit-autofill, :autofill) {
 ## 例
 
 次の例は、 `:autofill` 擬似クラスを使用して、ブラウザーによって自動補完されたテキストフィールドの境界線を変更することを示しています。
-[無効なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#無効なセレクターリスト)を作成しないように、 `:-webkit-autofill` と `:autofill` は、 {{cssxref(":is()")}} を含む寛容なセレクターリストを使用して照合されます。
+[無効なセレクターリスト](/ja/docs/Web/CSS/Selector_list#無効なセレクターリスト)を作成しないように、 `:-webkit-autofill` と `:autofill` は、 {{cssxref(":is()")}} を含む寛容なセレクターリストを使用して照合されます。
 
 ```css
 input {

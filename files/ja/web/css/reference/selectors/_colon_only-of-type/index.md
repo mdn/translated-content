@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:only-of-type
 original_slug: Web/CSS/:only-of-type
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`:only-of-type`** [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)は、同じ型の兄弟要素がない要素を表します。
+[CSS](/ja/docs/Web/CSS) の **`:only-of-type`** [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、同じ型の兄弟要素がない要素を表します。
 
 ```
 /* <p> が親の中にある唯一の <p> 出逢った場合に選択 */

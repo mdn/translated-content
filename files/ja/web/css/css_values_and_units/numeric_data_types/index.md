@@ -52,7 +52,7 @@ CSS では、以下のものを表すために寸法を使います。
 
 #### ルートフォント相対長
 
-ルートフォント相対長は、要素の[ルート要素](/ja/docs/Web/CSS/Reference/Selectors/:root)である祖先、例えば {{HTMLElement("html")}} や {{SVGElement("svg")}} などに関連した長さを指定します。
+ルートフォント相対長は、要素の[ルート要素](/ja/docs/Web/CSS/:root)である祖先、例えば {{HTMLElement("html")}} や {{SVGElement("svg")}} などに関連した長さを指定します。
 例えば、 `rem` はルート要素のフォントサイズに対する相対値であり、 `rex` はルート要素のフォントの x 高です。
 
 | 単位   | 相対値の基準                                                                                         |
