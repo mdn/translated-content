@@ -1,5 +1,5 @@
 ---
-title: "Array : méthode of()"
+title: "Array : méthode statique of()"
 short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
