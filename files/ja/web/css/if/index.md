@@ -309,7 +309,7 @@ border: 3px solid
 
 例えば、この宣言では、`if()` を使用して、さまざまな条件に応じて `color` プロパティの値を設定しています。外側の `if()` 関数は、カスタムプロパティ `--scheme` が `ice` と `fire` のどちらに設定されているかによって、具体的な値を返します（どちらの条件も真を返さない場合は、 `else` 値 `black` が返されます）。
 
-ただし、2 つの `<value>` も `if()` 関数です。これらの内部 `if()` 関数は、ユーザーが暗い色スキームを推奨している場合（[`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーを使用して決定）、明るい色の値を返し、そうでない場合は暗い色の値を返します。
+ただし、2 つの `<value>` も `if()` 関数です。これらの内部 `if()` 関数は、ユーザーが暗い色スキームを推奨している場合（[`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーを使用して決定）、明るい色の値を返し、そうでない場合は暗い色の値を返します。
 
 ```css-nolint
 color: if(
@@ -359,7 +359,7 @@ width: calc(if(
 
 #### CSS
 
-CSS では、最初に `<section>` 要素を対象とし、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) でレイアウトし、2 つの子要素 `<article>` 要素の間に {{cssxref("gap")}} を設定します。次に、 [`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation) メディアクエリー `<if-test>` を含む `if()` 関数を使用して、文書が横向きの場合に {{cssxref("flex-direction")}} プロパティの値を `row` に、縦向きの場合に `column` に設定します。これにより、広い画面では `article` 要素が横に並んだレイアウトになり、狭い画面では上下に並んだレイアウトになります。
+CSS では、最初に `<section>` 要素を対象とし、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) でレイアウトし、2 つの子要素 `<article>` 要素の間に {{cssxref("gap")}} を設定します。次に、 [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディアクエリー `<if-test>` を含む `if()` 関数を使用して、文書が横向きの場合に {{cssxref("flex-direction")}} プロパティの値を `row` に、縦向きの場合に `column` に設定します。これにより、広い画面では `article` 要素が横に並んだレイアウトになり、狭い画面では上下に並んだレイアウトになります。
 
 ```css hidden live-sample___basic
 html {

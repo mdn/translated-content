@@ -92,7 +92,7 @@ all: revert-layer;
     - [ユーザーオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザースタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーエージェントレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作成者レベルまたはユーザーレベルのルールが指定されていないかのように計算されます。
     - [ユーザーエージェントオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザーエージェントスタイルシート)では、 `revert` の値は `unset` と同様に動作します。
 - {{cssxref("revert-layer")}}
-  - : その要素のすべてのプロパティを、直前の[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)が存在すれば、そこまでカスケードをロールバックすることを指定します。 他にカスケードレイヤーが存在しない場合、要素のプロパティは、現在のレイヤーに一致するルールが存在する場合はそのルール、または直前の[スタイルオリジン](/ja/docs/Glossary/Style_origin)にロールバックします。
+  - : その要素のすべてのプロパティを、直前の[カスケードレイヤー](/ja/docs/Web/CSS/@layer)が存在すれば、そこまでカスケードをロールバックすることを指定します。 他にカスケードレイヤーが存在しない場合、要素のプロパティは、現在のレイヤーに一致するルールが存在する場合はそのルール、または直前の[スタイルオリジン](/ja/docs/Glossary/Style_origin)にロールバックします。
 
 ## 公式定義
 

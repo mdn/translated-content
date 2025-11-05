@@ -259,8 +259,8 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 - `WebKitCSSMatrix` インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。
 - 以下のメディアクエリー特性を実装しました:
   - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
-  - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
-  - [`-webkit-transform-3d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
+  - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
+  - [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

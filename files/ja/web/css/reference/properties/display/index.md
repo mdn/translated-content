@@ -322,10 +322,10 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 `display` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 2 つの追加の機能が必要になります。
 
-- [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 CSS トランジションは要素の最初のスタイル更新時や、 `display` の型が `none` から他の型へ変更された時には発生しません。
+- [`@starting-style`](/ja/docs/Web/CSS/@starting-style) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 CSS トランジションは要素の最初のスタイル更新時や、 `display` の型が `none` から他の型へ変更された時には発生しません。
 - [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) は、 {{cssxref("transition-property")}} 宣言（または一括指定の {{cssxref("transition")}}）で `display` のトランジションを有効にするために設定する必要があります。
 
-`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#例) のページを参照してください。
+`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#例) のページを参照してください。
 
 ## アクセシビリティ
 

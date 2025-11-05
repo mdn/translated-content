@@ -11,7 +11,7 @@ CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/CS
 
 カスタムプロパティを使用すると、プロジェクト全体で値を再利用できるため、複雑なスタイルシートや繰り返しの多いスタイルシートを簡素化できます。
 基本的なカスタムプロパティは、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュールで定義されています。
-CSS プロパティと値 API はこのモジュールを拡張し、このモジュールを拡張し、 CSS で [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルールを使用したり、 JavaScript で {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
+CSS プロパティと値 API はこのモジュールを拡張し、このモジュールを拡張し、 CSS で [`@property`](/ja/docs/Web/CSS/@property) アットルールを使用したり、 JavaScript で {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} メソッドを使用したりして、カスタムプロパティにメタデータを追加できるようにします。
 
 登録が CSS であれ JavaScript であれ、カスタムプロパティにメタデータを設定することで、ブラウザーがコンテキストに応じて使用できる期待されるデータ型を提供し、初期値を定義し、継承を制御することができます。
 
@@ -65,11 +65,11 @@ CSS.registerProperty({
 ### アットルール
 
 - {{cssxref("@property")}}
-  - [syntax](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
-    - [`+` and `#`](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 量化子
-    - [`|`](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 結合子
-  - [inherits](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
-  - [initial-value](/ja/docs/Web/CSS/Reference/At-rules/@property#descriptors) 記述子
+  - [syntax](/ja/docs/Web/CSS/@property#descriptors) 記述子
+    - [`+` and `#`](/ja/docs/Web/CSS/@property#descriptors) 量化子
+    - [`|`](/ja/docs/Web/CSS/@property#descriptors) 結合子
+  - [inherits](/ja/docs/Web/CSS/@property#descriptors) 記述子
+  - [initial-value](/ja/docs/Web/CSS/@property#descriptors) 記述子
 
 ### インターフェイスと API
 

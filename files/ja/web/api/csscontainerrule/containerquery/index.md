@@ -29,7 +29,7 @@ l10n:
 ## 例
 
 下記の例では、無名の {{cssxref("@container")}} ルールを定義し、関連する {{domxref("CSSContainerRule")}} のプロパティを表示します。
-CSS は `@container` の例[コンテナーの大きさに基づいたスタイルの設定](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナーの大きさに基づいたスタイルの設定)と同じです。
+CSS は `@container` の例[コンテナーの大きさに基づいたスタイルの設定](/ja/docs/Web/CSS/@container#コンテナーの大きさに基づいたスタイルの設定)と同じです。
 
 ```html hidden
 <div id="log">

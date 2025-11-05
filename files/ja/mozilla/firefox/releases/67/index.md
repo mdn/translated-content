@@ -49,7 +49,7 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
 
 - {{cssxref("revert")}} キーワードを実装しました ([Firefox バグ 1215878](https://bugzil.la/1215878))。
 - {{cssxref("word-break")}} プロパティの値 `break-word` をサポートしました ([Firefox バグ 1296042](https://bugzil.la/1296042))。
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディア特性をサポートしました ([Firefox バグ 1494034](https://bugzil.la/1494034))。
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性をサポートしました ([Firefox バグ 1494034](https://bugzil.la/1494034))。
 - 巨大なカーソルを使用するマルウェアの可能性を軽減するため、サイズが 32px より大きい独自 {{cssxref("cursor")}} は許可しません ([Firefox バグ 1445844](https://bugzil.la/1445844))。
 
 #### 廃止

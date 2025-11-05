@@ -20,7 +20,7 @@ l10n:
   ([Firefox bug 1352753](https://bugzil.la/1352753)、[Firefox bug 1813497](https://bugzil.la/1813497)、[Firefox bug 1818819](https://bugzil.la/1818819)、[Firefox bug 1824526](https://bugzil.la/1824526))
 - [`:nth-child of <selector>` 構文](/ja/docs/Web/CSS/Reference/Selectors/:nth-child#the_of_selector_syntax) で、定義したセレクターにも一致する、`An+B` 規則に基づく子要素のグループを対象にできるようになりました。
   詳しくは ([Firefox bug 1808229](https://bugzil.la/1808229)) をご覧ください。
-- [`scripting`](/ja/docs/Web/CSS/Reference/At-rules/@media/scripting) メディア特性をサポートしました。詳しくは ([Firefox bug 1166581](https://bugzil.la/1166581)) をご覧ください。
+- [`scripting`](/ja/docs/Web/CSS/@media/scripting) メディア特性をサポートしました。詳しくは ([Firefox bug 1166581](https://bugzil.la/1166581)) をご覧ください。
 - [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティで、`<gradient>`、`image-set()`、`url()` を含むすべての画像型をサポートしました。詳しくは ([Firefox bug 1684958](https://bugzil.la/1684958)) をご覧ください。現在は、`::before` および `::after` 擬似セレクターを伴うと `<gradient>` が描画されない不具合があります。詳しくは ([Firefox bug 1832901](https://bugzil.la/1832901)) をご覧ください。
 
 ### JavaScript

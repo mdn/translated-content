@@ -49,7 +49,7 @@ forced-color-adjust: unset;
 
 下記の例では、最初のボックスはユーザーが設定した配色を使用します。例えば、 Windows の高コントラストモードの黒スキームでは、背景が黒、文字が白になります。 2 つ目のボックスは `.box` クラスに設定されたサイトの色を保持します。
 
-[`forced-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) メディア特性を使用すると、強制カラーモードの最適化を `forced-color-adjust` プロパティと一緒に追加することができます。
+[`forced-colors`](/ja/docs/Web/CSS/@media/forced-colors) メディア特性を使用すると、強制カラーモードの最適化を `forced-color-adjust` プロパティと一緒に追加することができます。
 
 #### CSS
 

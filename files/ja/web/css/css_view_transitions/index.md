@@ -19,7 +19,7 @@ l10n:
 ### アットルールと記述子
 
 - {{cssxref("@view-transition")}}
-  - [`navigation`](/ja/docs/Web/CSS/Reference/At-rules/@view-transition#navigation) 記述子
+  - [`navigation`](/ja/docs/Web/CSS/@view-transition#navigation) 記述子
 
 ### セレクターと擬似要素
 

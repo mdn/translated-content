@@ -62,7 +62,7 @@ svg|a:active {
 {{EmbedLiveSample('Example', 100, 100)}}
 
 > [!WARNING]
-> この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Reference/Elements/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` ルール](/ja/docs/Web/CSS/Reference/At-rules/@namespace)で二つを区別してみてください。
+> この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Reference/Elements/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` ルール](/ja/docs/Web/CSS/@namespace)で二つを区別してみてください。
 
 ## 属性
 

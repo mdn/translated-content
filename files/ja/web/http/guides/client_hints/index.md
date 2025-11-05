@@ -127,7 +127,7 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ### ユーザー環境設定メディア特性クライアントヒント
 
-ユーザー環境設定メディア特性クライアントヒントは、配色や動きの縮小などの [CSS メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#media_features)に対するユーザーエージェントの環境設定に基づいて、サーバーがレスポンスを変更することができるようにします。
+ユーザー環境設定メディア特性クライアントヒントは、配色や動きの縮小などの [CSS メディア特性](/ja/docs/Web/CSS/@media#media_features)に対するユーザーエージェントの環境設定に基づいて、サーバーがレスポンスを変更することができるようにします。
 ヘッダーには {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} などがあります。
 
 ### 端末クライアントヒント

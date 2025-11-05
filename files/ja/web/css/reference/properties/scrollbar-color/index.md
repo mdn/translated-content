@@ -55,7 +55,7 @@ scrollbar-color: unset;
     </table>
 
 > [!NOTE]
-> [`@media (forced-colors: active)`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
+> [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
 
 ## アクセシビリティ
 

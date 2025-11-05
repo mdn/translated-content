@@ -198,7 +198,7 @@ a:focus {
 
 これらのプロパティをトランジションさせる場合は、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
 
-`display` をトランジションさせる場合、その要素が最初のスタイル更新を受けたときに、そのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) が必要です。これは予期しない動作を避けるために必要です。既定では、CSS のトランジションは、要素が最初に DOM に現れたとき、つまり `display` が `none` から他の状態に変わったときを含め、要素の最初のスタイル更新では発生しません。 `content-visibility` のアニメーションは `@starting-style` ブロックで開始値を指定する必要はありません。これは `content-visibility` が `display` のように DOM から要素を隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
+`display` をトランジションさせる場合、その要素が最初のスタイル更新を受けたときに、そのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために [`@starting-style`](/ja/docs/Web/CSS/@starting-style) が必要です。これは予期しない動作を避けるために必要です。既定では、CSS のトランジションは、要素が最初に DOM に現れたとき、つまり `display` が `none` から他の状態に変わったときを含め、要素の最初のスタイル更新では発生しません。 `content-visibility` のアニメーションは `@starting-style` ブロックで開始値を指定する必要はありません。これは `content-visibility` が `display` のように DOM から要素を隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
 #### HTML
 

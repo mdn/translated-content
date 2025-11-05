@@ -52,8 +52,8 @@ l10n:
 
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
   - {{cssxref("@counter-style")}} アットルール
-  - [`<counter-style-name>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) データ型
-  - [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#値) データ型
+  - [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name) データ型
+  - [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#値) データ型
   - {{cssxref("symbols", "symbols()")}} 関数
 
 - {{HTMLElement("ol")}} の `start`、`reversed`、`type` 属性

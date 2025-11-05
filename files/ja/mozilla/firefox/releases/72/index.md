@@ -26,7 +26,7 @@ Firefox 72 は、米国時間 2020 年 1 月 7 日にリリースされました
 
 [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html):
 
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディア特性のさまざまな値の [シミュレーターを有効化する設定](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) が可能になりました ([Firefox バグ 1550804](https://bugzil.la/1550804))。
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性のさまざまな値の [シミュレーターを有効化する設定](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-color-scheme-preference) が可能になりました ([Firefox バグ 1550804](https://bugzil.la/1550804))。
 
 #### 廃止
 
