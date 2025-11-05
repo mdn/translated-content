@@ -151,7 +151,7 @@ Cet exemple inclut un élément positionné explicitement sur certaines colonnes
   <div class="item"></div>
   <div class="item"></div>
   <div class="item"></div>
-  <div class="item positioned">positioned.</div>
+  <div class="item positioned">positionné.</div>
   <div class="item"></div>
   <div class="item"></div>
   <div class="item"></div>
