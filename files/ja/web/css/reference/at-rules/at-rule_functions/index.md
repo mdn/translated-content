@@ -1,7 +1,8 @@
 ---
 title: CSS アットルール関数
 short-title: アットルール関数
-slug: Web/CSS/CSS_syntax/At-rule_functions
+slug: Web/CSS/Reference/At-rules/At-rule_functions
+original_slug: Web/CSS/CSS_syntax/At-rule_functions
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
