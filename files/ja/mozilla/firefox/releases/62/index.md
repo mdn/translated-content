@@ -44,7 +44,7 @@ _変更なし。_
 
 #### 廃止
 
-- `-moz-box` および `-moz-inline-box` を除く、[XUL の `display` の値](/ja/docs/Web/CSS/display#xul_values) を、XUL 以外のドキュメントでは廃止しました ([Firefox バグ 1288572](https://bugzil.la/1288572))。
+- `-moz-box` および `-moz-inline-box` を除く、[XUL の `display` の値](/ja/docs/Web/CSS/Reference/Properties/display#xul_values) を、XUL 以外のドキュメントでは廃止しました ([Firefox バグ 1288572](https://bugzil.la/1288572))。
 
 ### SVG
 

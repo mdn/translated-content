@@ -51,7 +51,7 @@ Pour un contrôle maximal des CSS sur toutes les plates-formes, beaucoup de gens
 
 ### Syntaxe formelle et pseudo-code
 
-La syntaxe formelle fait partie intégrante de la documentation CSS sur MDN (voir par exemple la section [Syntaxe formelle](/fr/docs/Web/CSS/background-image#syntaxe_formelle) de la page de la propriété `background-image`). Comme de nombreux développeur·euse·s sont familiers avec cette présentation, il est acceptable d'écrire du pseudo-code dans un style proche de la syntaxe formelle dans les descriptions et exemples. Cependant, tout code qui n'est pas du CSS syntaxiquement valide ne doit pas être marqué comme CSS. Les erreurs de syntaxe dans les blocs de code `css` rendent le code inanalysable par les vérificateurs statiques, troublent les lecteurs qui s'attendent à du CSS valide, et peuvent même entraîner une coloration syntaxique incohérente. Marquez alors votre bloc comme `plain`, ou utilisez la macro `CSSSyntaxRaw` pour afficher la syntaxe formelle complète.
+La syntaxe formelle fait partie intégrante de la documentation CSS sur MDN (voir par exemple la section [Syntaxe formelle](/fr/docs/Web/CSS/Reference/Properties/background-image#syntaxe_formelle) de la page de la propriété `background-image`). Comme de nombreux développeur·euse·s sont familiers avec cette présentation, il est acceptable d'écrire du pseudo-code dans un style proche de la syntaxe formelle dans les descriptions et exemples. Cependant, tout code qui n'est pas du CSS syntaxiquement valide ne doit pas être marqué comme CSS. Les erreurs de syntaxe dans les blocs de code `css` rendent le code inanalysable par les vérificateurs statiques, troublent les lecteurs qui s'attendent à du CSS valide, et peuvent même entraîner une coloration syntaxique incohérente. Marquez alors votre bloc comme `plain`, ou utilisez la macro `CSSSyntaxRaw` pour afficher la syntaxe formelle complète.
 
 N'écrivez pas de descriptions comme ceci (ce n'est pas une vraie syntaxe formelle, juste du pseudo-CSS avec des espaces réservés)&nbsp;:
 
@@ -149,7 +149,7 @@ En revanche, si votre règle `@keyframes` contient plus que les frames de début
 
 ### Gestion de la spécificité
 
-Si possible, évitez les surprises liées à l'augmentation ou la diminution de la spécificité, comme l'utilisation excessive de la pseudo-classe [`:where()`](/fr/docs/Web/CSS/:where) ou la duplication de sélecteurs. Privilégiez plutôt les techniques suivantes pour gérer la spécificité&nbsp;:
+Si possible, évitez les surprises liées à l'augmentation ou la diminution de la spécificité, comme l'utilisation excessive de la pseudo-classe [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) ou la duplication de sélecteurs. Privilégiez plutôt les techniques suivantes pour gérer la spécificité&nbsp;:
 
 - Modifier l'ordre des déclarations pour tirer parti de la cascade
 - Réorganiser les propriétés dans chaque déclaration afin qu'elles ne se surchargent pas mutuellement
@@ -255,7 +255,7 @@ Les lignes vides entre les propriétés doivent être utilisées avec parcimonie
 
 ### Utiliser les sélecteurs de classe
 
-En général, privilégiez les [sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (et utilisez `class` au lieu de `id` dans votre HTML). Ils sont composables&nbsp;: plusieurs éléments peuvent utiliser la même classe, et la même classe peut être utilisée pour plusieurs éléments.
+En général, privilégiez les [sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) (et utilisez `class` au lieu de `id` dans votre HTML). Ils sont composables&nbsp;: plusieurs éléments peuvent utiliser la même classe, et la même classe peut être utilisée pour plusieurs éléments.
 
 ```css example-good
 .footnote {
@@ -273,7 +273,7 @@ Utilisez les classes pour la mise en forme, et réservez les ID à des usages no
 
 ### Anciens sélecteurs de pseudo-éléments
 
-Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` peuvent aussi s'écrire avec un seul deux-points (comme `:before`). Évitez la syntaxe à un seul deux-points car elle est déconseillée et pourrait être confondue avec une [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) (`:hover`) par les lecteurs.
+Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` peuvent aussi s'écrire avec un seul deux-points (comme `:before`). Évitez la syntaxe à un seul deux-points car elle est déconseillée et pourrait être confondue avec une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) par les lecteurs.
 
 ### Listes de sélecteurs complexes
 
@@ -346,7 +346,7 @@ h3 {
 
 ### Définir les familles de polices
 
-Lorsque vous indiquez une famille de polices, ajoutez toujours un [nom de famille générique](/fr/docs/Web/CSS/font-family#generic-name) en dernier recours. Cela garantit que si la police spécifiée n'est pas disponible, le navigateur affichera une police de remplacement plus appropriée. Les [polices sûres pour le Web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) sont exemptées de cette règle.
+Lorsque vous indiquez une famille de polices, ajoutez toujours un [nom de famille générique](/fr/docs/Web/CSS/Reference/Properties/font-family#generic-name) en dernier recours. Cela garantit que si la police spécifiée n'est pas disponible, le navigateur affichera une police de remplacement plus appropriée. Les [polices sûres pour le Web](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#polices_sûres_pour_le_web) sont exemptées de cette règle.
 
 ```css example-bad
 body {

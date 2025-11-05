@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`initial-value`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@property")}} définit la valeur initiale pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/--*) enregistrée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`initial-value`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@property")}} définit la valeur initiale pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée.
 Ce descripteur est obligatoire sauf si la valeur du descripteur {{cssxref("@property/syntax", "syntax")}} est la syntaxe universelle (`*`).
 S'il est requis mais absent ou invalide, la règle `@property` entière est ignorée.
 

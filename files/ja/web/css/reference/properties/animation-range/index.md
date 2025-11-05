@@ -14,8 +14,8 @@ l10n:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`animation-range-start`](/ja/docs/Web/CSS/animation-range-start)
-- [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end)
+- [`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`animation-range-end`](/ja/docs/Web/CSS/Reference/Properties/animation-range-end)
 
 ## 構文
 
@@ -52,7 +52,7 @@ animation-range: entry 10% 90%;
 
 ### 値
 
-[`animation-range-start`](/ja/docs/Web/CSS/animation-range-start) や [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end) を表す 1 つまたは 2 つの値です。これらの値は以下のいずれかになります。
+[`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start) や [`animation-range-end`](/ja/docs/Web/CSS/Reference/Properties/animation-range-end) を表す 1 つまたは 2 つの値です。これらの値は以下のいずれかになります。
 
 - `normal`
   - : `animation-range-start` の場合はタイムラインの始まり、 `animation-range-end` の場合はタイムラインの終わりを表します。これが既定値です。
@@ -223,9 +223,9 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
-- [`animation-range-end`](/ja/docs/Web/CSS/animation-range-end), [`animation-range-start`](/ja/docs/Web/CSS/animation-range-start)
-- [`scroll-timeline`](/ja/docs/Web/CSS/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
+- [`animation-range-end`](/ja/docs/Web/CSS/Reference/Properties/animation-range-end), [`animation-range-start`](/ja/docs/Web/CSS/Reference/Properties/animation-range-start)
+- [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-axis), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline-inset`](/ja/docs/Web/CSS/view-timeline-inset)
+- [`view-timeline-inset`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-inset)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)

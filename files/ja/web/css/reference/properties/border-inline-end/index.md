@@ -49,9 +49,9 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-inline-end-color`](/ja/docs/Web/CSS/border-inline-end-color)
-- [`border-inline-end-style`](/ja/docs/Web/CSS/border-inline-end-style)
-- [`border-inline-end-width`](/ja/docs/Web/CSS/border-inline-end-width)
+- [`border-inline-end-color`](/ja/docs/Web/CSS/Reference/Properties/border-inline-end-color)
+- [`border-inline-end-style`](/ja/docs/Web/CSS/Reference/Properties/border-inline-end-style)
+- [`border-inline-end-width`](/ja/docs/Web/CSS/Reference/Properties/border-inline-end-width)
 
 ## 構文
 

@@ -194,7 +194,7 @@ hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 
 
 Cet exemple met en forme trois éléments HTML {{HTMLElement("div")}} avec des couleurs d'arrière-plan différentes. Celui du milieu reçoit la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircie et assombrie de cette `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/--*) `--base-color` est passée dans une fonction `hwb()`, et les couleurs de sortie ont leurs canaux blanc et noir modifiés pour obtenir l'effet souhaité via une fonction `calc()`. La couleur éclaircie a 30% ajoutés au canal blanc, et la couleur assombrie a 30% ajoutés au canal noir.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `hwb()`, et les couleurs de sortie ont leurs canaux blanc et noir modifiés pour obtenir l'effet souhaité via une fonction `calc()`. La couleur éclaircie a 30% ajoutés au canal blanc, et la couleur assombrie a 30% ajoutés au canal noir.
 
 ```html hidden
 <div id="container">

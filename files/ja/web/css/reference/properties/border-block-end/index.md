@@ -53,9 +53,9 @@ writing-mode: vertical-lr;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-end-color`](/ja/docs/Web/CSS/border-block-end-color)
-- [`border-block-end-style`](/ja/docs/Web/CSS/border-block-end-style)
-- [`border-block-end-width`](/ja/docs/Web/CSS/border-block-end-width)
+- [`border-block-end-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-end-color)
+- [`border-block-end-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-end-style)
+- [`border-block-end-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-end-width)
 
 ## 構文
 

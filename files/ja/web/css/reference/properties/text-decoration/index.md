@@ -52,10 +52,10 @@ p {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness)
+- [`text-decoration-color`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-color)
+- [`text-decoration-line`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-line)
+- [`text-decoration-style`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-style)
+- [`text-decoration-thickness`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
 
 ## 構文
 

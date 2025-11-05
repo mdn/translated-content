@@ -20,7 +20,7 @@ new CSSVariableReferenceValue(variable, fallback)
 ### 参数
 
 - `variable`
-  - : 一个[自定义属性名称](/zh-CN/docs/Web/CSS/--*)。
+  - : 一个[自定义属性名称](/zh-CN/docs/Web/CSS/Reference/Properties/--*)。
 - `fallback` {{optional_inline}}
   - : 一个[自定义属性回退值](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties#自定义属性回退值)。
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/list-style
 
 {{CSSRef}}
 
-La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/list-style-position).
+La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position).
 
 {{InteractiveExample("CSS Demo: list-style")}}
 
@@ -86,15 +86,15 @@ hr {
 ```
 
 > [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
+> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/Reference/Properties/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
 
 ## Propriétés détaillées correspondantes
 
 Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
 
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
+- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
+- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)
+- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
 
 ## Syntaxe
 
@@ -124,16 +124,16 @@ list-style: revert;
 list-style: unset;
 ```
 
-Cette propriété raccourcie peut prendre un, deux ou trois mots-clés, dans n'importe quel ordre. Si [`list-style-type`](/fr/docs/Web/CSS/list-style-type) et [`list-style-image`](/fr/docs/Web/CSS/list-style-image) sont tous les deux définis, `list-style-type` sera utilisé si l'image est indisponible.
+Cette propriété raccourcie peut prendre un, deux ou trois mots-clés, dans n'importe quel ordre. Si [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) et [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) sont tous les deux définis, `list-style-type` sera utilisé si l'image est indisponible.
 
 ### Valeurs
 
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-  - : Voir [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-  - : Voir [`list-style-image`](/fr/docs/Web/CSS/list-style-image).
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-  - : Voir [`list-style-position`](/fr/docs/Web/CSS/list-style-position).
+- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
+  - : Voir [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type).
+- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
+  - : Voir [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image).
+- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)
+  - : Voir [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position).
 - `none`
   - : Aucun style n'est utilisé.
 
@@ -143,7 +143,7 @@ Safari ne reconnait pas les listes non ordonnées lorsque `list-style: none` leu
 
 La solution la plus directe est d'affecter `role="list"` à l'élément `<ul>` dans votre code HTML. Cela rajoute les valeurs sémantiques de la liste sans impacter le design.
 
-Pour pallier ce problème en utilisant uniquement les styles CSS, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
+Pour pallier ce problème en utilisant uniquement les styles CSS, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/Reference/Properties/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
 
 ```css
 ul {
@@ -233,6 +233,6 @@ Liste 2
 
 ## Voir aussi
 
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
+- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)
+- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
+- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)

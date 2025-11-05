@@ -79,7 +79,7 @@ CSS の `if()` 関数は、CSS プロパティの値に条件付き論理を提�
 
 1. `<if-condition>` 式は、関数に現れる順に評価されます。
 2. 最初の `true` と評価される `<if-condition>` は、関連付けられた `<value>` を返します。
-3. `<if-condition>` が `true` と評価されない場合、関数は {{glossary("guaranteed_invalid_value", "&lt;guaranteed-invalid&gt:")}} を返します。これは、[カスタムプロパティ](/ja/docs/Web/CSS/--*) や {{cssxref("anchor()")}} 関数など、代替値を持つ値文で `if()` 関数が使用されている場合、不正または `false` として動作します。
+3. `<if-condition>` が `true` と評価されない場合、関数は {{glossary("guaranteed_invalid_value", "&lt;guaranteed-invalid&gt:")}} を返します。これは、[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) や {{cssxref("anchor()")}} 関数など、代替値を持つ値文で `if()` 関数が使用されている場合、不正または `false` として動作します。
 
 例を示します。
 
@@ -93,7 +93,7 @@ div {
 }
 ```
 
-この場合、`--scheme` [カスタムプロパティ](/ja/docs/Web/CSS/--*) が `ice` と`fire` のどちらに設定されているかによって、{{htmlelement("div")}} 要素の {{cssxref("background-image")}} として異なる {{cssxref("gradient/linear-gradient", "linear-gradient()")}} を設定しています。 `--scheme` が存在しない場合、または存在しても他の値に設定されている場合は、 `else` の値が適用され、 `background-image` プロパティは `none` に設定されます。
+この場合、`--scheme` [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) が `ice` と`fire` のどちらに設定されているかによって、{{htmlelement("div")}} 要素の {{cssxref("background-image")}} として異なる {{cssxref("gradient/linear-gradient", "linear-gradient()")}} を設定しています。 `--scheme` が存在しない場合、または存在しても他の値に設定されている場合は、 `else` の値が適用され、 `background-image` プロパティは `none` に設定されます。
 
 > [!NOTE]
 > それぞれの条件は、関連付けられた値とコロンで区切り、それぞれの `<if-condition> : <value>` ペアはセミコロンで区切る必要が あります。最後の `<if-condition> : <value>` ペアでは、セミコロンはオプションです。

@@ -38,7 +38,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 
 ### Divers
 
-- [Propriétés personnalisées (`- *`)&nbsp;: les variables CSS](/fr/docs/Web/CSS/--*)
+- [Propriétés personnalisées (`- *`)&nbsp;: les variables CSS](/fr/docs/Web/CSS/Reference/Properties/--*)
 
 ### A
 
@@ -597,7 +597,7 @@ Les propriétés non standard ou préfixées par le navigateur comprennent les s
 ## Voir aussi
 
 - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Extensions CSS de Mozilla (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - [Extensions CSS de WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "Préfixe vendeur")}}

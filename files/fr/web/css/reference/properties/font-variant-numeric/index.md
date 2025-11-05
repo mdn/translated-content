@@ -141,8 +141,8 @@ La valeur de cette propriété peut être définie selon deux formes&nbsp;:
 
 ## Voir aussi
 
-- [`font-variant-alternates`](/fr/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant`](/fr/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates)
+- [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
+- [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
+- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)

@@ -13,7 +13,7 @@ l10n:
 
 如果指定的選擇器匹配了在文件中被錯誤多次使用的 ID，則回傳具有該 ID 的第一個元素。
 
-[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)永遠不會回傳任何元素。
+[CSS 偽元素](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-elements)永遠不會回傳任何元素。
 
 ## 語法
 

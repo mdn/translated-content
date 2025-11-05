@@ -66,7 +66,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 对于每个属性，“获胜”的声明是来自基于权重（普通或重要）具有优先权的来源的声明。暂时忽略层，来自具有最高优先权的来源的值将被应用。如果获胜来源对于一个元素有多个属性声明，那么将比较这些竞争属性值的选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。不同来源之间的选择器从不比较优先级。
 
-在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
+在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
 
 ```html live-sample___basic-cascade
 <p><a href="https://example.org">User agent styles</a></p>

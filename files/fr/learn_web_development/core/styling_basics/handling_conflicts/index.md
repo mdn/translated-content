@@ -64,10 +64,10 @@ Ainsi, si on définit des valeurs pour les propriétés `color` et `font-family`
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 650)}}
 
-L'héritage ne concerne pas toutes les propriétés. Ainsi, si on fixe [`width`](/fr/docs/Web/CSS/width) à `50%` sur un élément, cela ne signifie pas que tous ses descendants auront une largeur égale à 50% de celle de leur parent. Si c'était le cas, CSS serait inutilement complexe.
+L'héritage ne concerne pas toutes les propriétés. Ainsi, si on fixe [`width`](/fr/docs/Web/CSS/Reference/Properties/width) à `50%` sur un élément, cela ne signifie pas que tous ses descendants auront une largeur égale à 50% de celle de leur parent. Si c'était le cas, CSS serait inutilement complexe.
 
 > [!NOTE]
-> Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/color#définition_formelle) comme exemple.
+> Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle) comme exemple.
 
 ## Comprendre l'héritage
 
@@ -112,7 +112,7 @@ Dans notre exemple&nbsp;:
 
 ### Réinitialiser les valeurs de toutes les propriétés
 
-La propriété CSS raccourcie [`all`](/fr/docs/Web/CSS/all) peut être utilisée afin d'appliquer une valeur d'héritage à (presque) toutes les propriétés. Cette propriété peut utiliser l'une des 5 valeurs d'héritage vues avant (`inherit`, `initial`, `revert`, `revert-layer`, ou `unset`). Il s'agit d'une méthode pratique pour annuler les modifications appliquées à des mises en forme et revenir à un point de départ connu avant d'appliquer d'autres modifications.
+La propriété CSS raccourcie [`all`](/fr/docs/Web/CSS/Reference/Properties/all) peut être utilisée afin d'appliquer une valeur d'héritage à (presque) toutes les propriétés. Cette propriété peut utiliser l'une des 5 valeurs d'héritage vues avant (`inherit`, `initial`, `revert`, `revert-layer`, ou `unset`). Il s'agit d'une méthode pratique pour annuler les modifications appliquées à des mises en forme et revenir à un point de départ connu avant d'appliquer d'autres modifications.
 
 Dans l'exemple qui suit, on a deux blocs de citation. Le premier est mis en forme avec une règle qui cible l'élément. Le second est mis en forme via une classe appliquée à l'élément et qui définit la propriété `all` avec la valeur `unset`.
 
@@ -162,9 +162,9 @@ La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, 
   - : On marque un point dans cette colonne pour chaque sélecteur d'élément ou de pseudo-élément contenu dans le sélecteur composite.
 
 > [!NOTE]
-> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
+> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
 
-Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
+Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/Reference/Selectors/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
 
 Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators).
 
@@ -208,7 +208,7 @@ Prenons un exemple où nous avons deux paragraphes, dont un qui porte un identif
 
 Voyons ce qui se passe ici (vous pouvez retirer certaines des propriétés et observer ce qui se produit si vous ne comprenez pas de prime abord)&nbsp;:
 
-1. Vous pouvez voir que les valeurs de [`color`](/fr/docs/Web/CSS/color) et [`padding`](/fr/docs/Web/CSS/padding) ont été appliquées avec la troisième règle mais que ce n'est pas le cas de [`background-color`](/fr/docs/Web/CSS/background-color). Pourquoi ça&nbsp;? Les trois déclarations devraient s'appliquer, car elles arrivent après dans l'ordre du code source, l'emportant ainsi sur les règles précédentes.
+1. Vous pouvez voir que les valeurs de [`color`](/fr/docs/Web/CSS/Reference/Properties/color) et [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding) ont été appliquées avec la troisième règle mais que ce n'est pas le cas de [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color). Pourquoi ça&nbsp;? Les trois déclarations devraient s'appliquer, car elles arrivent après dans l'ordre du code source, l'emportant ainsi sur les règles précédentes.
 2. Toutefois, ce sont les règles précédentes qui l'emportent avec les sélecteurs de classe qui ont une spécificité supérieure aux sélecteurs d'éléments.
 3. Les deux éléments ont une [classe](/fr/docs/Web/HTML/Reference/Global_attributes#class) `better`, et le second porte en plus [l'identifiant](/fr/docs/Web/HTML/Reference/Global_attributes#id) `winning`. Comme les identifiants ont une spécificité _toujours supérieure_ à celle des classes (on peut uniquement avoir un seul élément avec un identifiant donné sur une page, mais de nombreux éléments peuvent se partager une même classe), l'arrière-plan rouge et la bordure noire de 1 pixel devraient s'appliquer au second élément et le premier devrait avoir un arrière-plan gris sans bordure, tel qu'indiqué par la classe.
 4. En réalité, le second élément récupère bien l'arrière-plan rouge, mais pas la bordure&nbsp;? Pourquoi&nbsp;? C'est l'effet du marqueur `!important` dans la deuxième règle. Ajouter `!important` après `border: none` signifie que cette déclaration l'emportera sur toutes les valeurs de `border` des règles précédentes, même si le sélecteur d'identifiant possède une spécificité supérieure.

@@ -143,7 +143,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - `Secure` 属性がついた Cookie は、HTTPS プロトコル上の暗号化されたリクエストでのみサーバーに送信されます。安全でない HTTP では決して送信されないため、{{Glossary("MitM", "中間者攻撃の")}}攻撃者が簡単にアクセスすることはできません。（URL に `http:` のついた）安全でないサイトは、 `Secure` 属性を使用して Cookie を設定することができません。ただし、`Secure` によって Cookie 内の機密情報へのアクセスをすべて防げると思ってはいけません。例えば、クライアントのハードディスクへアクセスすることで（また、`HttpOnly` 属性が設定されていない場合は JavaScript から）読み取られる可能性があります。
 
-- `HttpOnly` 属性を持つ Cookie は、 JavaScript の {{domxref("Document.cookie")}} API にはアクセスできません。サーバーに送信されるだけです。例えば、サーバー側のセッションを持続させる Cookie は JavaScript が利用する必要はないので、`HttpOnly` 属性をつけるべきです。この予防策は、クロスサイトスクリプティング（[XSS](/ja/docs/Web//Security/Attacks/XSS)）攻撃を緩和するのに役立ちます。
+- `HttpOnly` 属性を持つ Cookie は、 JavaScript の {{domxref("Document.cookie")}} API にはアクセスできません。サーバーに送信されるだけです。例えば、サーバー側のセッションを持続させる Cookie は JavaScript が利用する必要はないので、`HttpOnly` 属性をつけるべきです。この予防策は、クロスサイトスクリプティング（[XSS](/ja/docs/Web/Security/Attacks/XSS)）攻撃を緩和するのに役立ちます。
 
 > [!NOTE]
 > アプリケーションによっては、機密情報を直接 Cookie に格納するのではなく、サーバーが照合する不透明な識別子を使用したり、[JSON Web Tokens](https://www.jwt.io/) などの代替の認証/機密性メカニズムを調べたりしたほうがいいかもしれません。

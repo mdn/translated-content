@@ -57,10 +57,10 @@ border-color: red yellow green transparent;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-color`](/ja/docs/Web/CSS/border-bottom-color)
-- [`border-left-color`](/ja/docs/Web/CSS/border-left-color)
-- [`border-right-color`](/ja/docs/Web/CSS/border-right-color)
-- [`border-top-color`](/ja/docs/Web/CSS/border-top-color)
+- [`border-bottom-color`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-color)
+- [`border-left-color`](/ja/docs/Web/CSS/Reference/Properties/border-left-color)
+- [`border-right-color`](/ja/docs/Web/CSS/Reference/Properties/border-right-color)
+- [`border-top-color`](/ja/docs/Web/CSS/Reference/Properties/border-top-color)
 
 ## 構文
 

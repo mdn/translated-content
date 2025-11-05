@@ -8,9 +8,9 @@ l10n:
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** indique le nom d'une ou plusieurs règles @ [`@scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline) décrivant les animations de défilement à appliquer à l'élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** indique le nom d'une ou plusieurs règles @ [`@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline) décrivant les animations de défilement à appliquer à l'élément.
 
-Il est généralement plus pratique d'utiliser la propriété raccourcie [`animation`](/fr/docs/Web/CSS/animation) afin de définir l'ensemble des propriétés relatives à une animation en une fois.
+Il est généralement plus pratique d'utiliser la propriété raccourcie [`animation`](/fr/docs/Web/CSS/Reference/Properties/animation) afin de définir l'ensemble des propriétés relatives à une animation en une fois.
 
 ## Syntaxe
 
@@ -43,7 +43,7 @@ animation-timeline: unset;
 - `none`
   - : L'animation n'est associée à aucune chronologie.
 - `<timeline-name>`
-  - : Un [identifiant (`custom-ident`)](/fr/docs/Web/CSS/custom-ident) ou une chaîne de caractères identifiant la chronologie de défilement, déclarée via une règle [`@scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline). Si deux chronologies de défilement (ou plus) partagent le même nom, c'est la dernière déclarée au sein de la cascade qui sera utilisée. Si aucune chronologie de défilement correspondante n'est trouvée, l'animation ne sera pas associée à une chronologie.
+  - : Un [identifiant (`custom-ident`)](/fr/docs/Web/CSS/custom-ident) ou une chaîne de caractères identifiant la chronologie de défilement, déclarée via une règle [`@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline). Si deux chronologies de défilement (ou plus) partagent le même nom, c'est la dernière déclarée au sein de la cascade qui sera utilisée. Si aucune chronologie de défilement correspondante n'est trouvée, l'animation ne sera pas associée à une chronologie.
 
 ## Définition formelle
 
@@ -118,4 +118,4 @@ Faites défiler le cadre pour observer l'animation.
 ## Voir aussi
 
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [La règle @ `@scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline)
+- [La règle @ `@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline)

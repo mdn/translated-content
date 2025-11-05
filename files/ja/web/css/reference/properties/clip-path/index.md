@@ -226,7 +226,7 @@ div:last-of-type {
 
 {{EmbedLiveSample("shapes2", "", "230")}}
 
-`shape()` 関数は {{cssxref("percentage")}} 値（および[カスタムプロパティ](/ja/docs/Web/CSS/--*)）が使用できるため、より堅牢です。
+`shape()` 関数は {{cssxref("percentage")}} 値（および[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)）が使用できるため、より堅牢です。
 
 基盤となる要素のサイズを大きくして、これを示します。
 

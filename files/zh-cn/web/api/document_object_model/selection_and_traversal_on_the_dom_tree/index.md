@@ -23,11 +23,11 @@ Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_select
 
 ## 选择器
 
-选择器方法接受若干[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)来决定应该返回什么元素或哪些元素。这包括[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)，所以你可以在一个查询中分组多个选择器。
+选择器方法接受若干[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)来决定应该返回什么元素或哪些元素。这包括[选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list)，所以你可以在一个查询中分组多个选择器。
 
-为了保护用户的隐私，一些[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)不被支持或表现得不同。例如，{{cssxref(":visited")}} 将不返回任何匹配，{{cssxref(":link")}} 则被视为 {{cssxref(":any-link")}}。
+为了保护用户的隐私，一些[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)不被支持或表现得不同。例如，{{cssxref(":visited")}} 将不返回任何匹配，{{cssxref(":link")}} 则被视为 {{cssxref(":any-link")}}。
 
-只有元素可以被选择，故不支持[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)。
+只有元素可以被选择，故不支持[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)。
 
 ## 示例
 

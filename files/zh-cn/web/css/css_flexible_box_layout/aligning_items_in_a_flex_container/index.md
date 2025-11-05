@@ -301,7 +301,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 > [!NOTE]
 > `space-evenly` 没有在 flexbox 特性中定义，而是后来添加到 Box Alignment 的特性的属性。浏览器的支持没有 flexbox 特性好。
 
-查看 [`justify-content` 在 MDN 的文档](/zh-CN/docs/Web/CSS/justify-content) 获取属性值的浏览器支持的更多详细说明。
+查看 [`justify-content` 在 MDN 的文档](/zh-CN/docs/Web/CSS/Reference/Properties/justify-content) 获取属性值的浏览器支持的更多详细说明。
 
 ## 对齐主轴内容
 

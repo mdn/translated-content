@@ -86,7 +86,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-feature-settings` 型:
 
-- [`<feature-tag-value>`](/ja/docs/Web/CSS/font-feature-settings#values)
+- [`<feature-tag-value>`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings#values)
 
 `font-format` 型:
 
@@ -94,7 +94,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-stretch` 型:
 
-- [`<font-stretch-css3>`](/ja/docs/Web/CSS/font-stretch#values)
+- [`<font-stretch-css3>`](/ja/docs/Web/CSS/Reference/Properties/font-stretch#values)
 
 `font-tech` 型:
 
@@ -104,26 +104,26 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-variant` 型:
 
-- [`<font-variant-css2>`](/ja/docs/Web/CSS/font-variant)
-- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/font-variant#values)
-- [`<east-asian-width-values>`](/ja/docs/Web/CSS/font-variant#values)
+- [`<font-variant-css2>`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
+- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#values)
+- [`<east-asian-width-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#values)
 
 `font-variant-ligatures` 型:
 
-- [`<common-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
+- [`<common-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<contextual-alt-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<historical-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
 
 `font-variant-numeric` 型:
 
-- [`<numeric-figure-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
+- [`<numeric-figure-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
 
 `font-weight` 型:
 
-- [`<font-weight-absolute>`](/ja/docs/Web/CSS/font-weight#values)
+- [`<font-weight-absolute>`](/ja/docs/Web/CSS/Reference/Properties/font-weight#values)
 
 ### インターフェイス
 

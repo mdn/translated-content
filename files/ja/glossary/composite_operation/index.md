@@ -20,5 +20,5 @@ CSS では、 CSS ルールのプロパティの値がそのプロパティの�
 
 ## 関連情報
 
-- [`animation-composition`](/ja/docs/Web/CSS/animation-composition)
+- [`animation-composition`](/ja/docs/Web/CSS/Reference/Properties/animation-composition)
 - [`KeyframeEffect.composite`](/ja/docs/Web/API/KeyframeEffect/composite)

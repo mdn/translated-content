@@ -60,7 +60,7 @@ h1 {
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-[`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode) 属性的三种可能的值分别是：
+[`writing-mode`](/zh-CN/docs/Web/CSS/Reference/Properties/writing-mode) 属性的三种可能的值分别是：
 
 - `horizontal-tb`: 区块流向从上至下。对应的文本方向是横向的。
 - `vertical-rl`: 区块流向从右向左。对应的文本方向是纵向的。

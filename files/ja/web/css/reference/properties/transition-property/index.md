@@ -101,7 +101,7 @@ transition-property: unset;
 
 ### 基本的な例
 
-ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/background-color) です。
+ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) です。
 
 #### HTML
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/text-shadow
 
 {{CSSRef}}
 
-La propriété **`text-shadow`** ajoute des ombres au texte. Elle accepte une liste d'ombres à appliquer au texte et aux [décorations](/fr/docs/Web/CSS/text-decoration) de l'élément. Chaque ombre est décrite par une certaine combinaison de décalages X et Y de l'élément, de rayon de flou et de couleur.
+La propriété **`text-shadow`** ajoute des ombres au texte. Elle accepte une liste d'ombres à appliquer au texte et aux [décorations](/fr/docs/Web/CSS/Reference/Properties/text-decoration) de l'élément. Chaque ombre est décrite par une certaine combinaison de décalages X et Y de l'élément, de rayon de flou et de couleur.
 
 {{InteractiveExample("CSS Demo: text-shadow")}}
 
@@ -85,7 +85,7 @@ Chaque ombre est spécifiée par deux ou trois valeurs `<length>`, suivies d'une
 
 Lorsque plus d'une ombre est indiquée, les ombres sont appliquées d'avant en arrière, avec la première ombre spécifiée sur le dessus.
 
-Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
+Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
 
 ### Valeurs
 

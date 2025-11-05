@@ -50,7 +50,7 @@ box-shadow:
 }
 ```
 
-`box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
+`box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/Reference/Properties/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
 
 [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
 

@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_Houdini
 
 ## 基本的な例
 
-通常の [CSS カスタムプロパティ](/ja/docs/Web/CSS/--*)は、プロパティの名前と値から成ります。したがって、 `--background-color` というカスタムプロパティを生成し、色の値を取るようにするとします。この値は、 CSS 内で色の値であるかのように扱われます。
+通常の [CSS カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)は、プロパティの名前と値から成ります。したがって、 `--background-color` というカスタムプロパティを生成し、色の値を取るようにするとします。この値は、 CSS 内で色の値であるかのように扱われます。
 
 ```css
 :root {

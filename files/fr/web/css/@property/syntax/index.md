@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`syntax`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@property")}} définit les types de valeurs autorisées pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/--*) enregistrée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`syntax`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@property")}} définit les types de valeurs autorisées pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée.
 Il contrôle la façon dont la valeur spécifiée de la propriété est traitée pour obtenir la [valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée).
 Ce descripteur est obligatoire&nbsp;: s'il est absent ou invalide, la règle `@property` entière est ignorée.
 

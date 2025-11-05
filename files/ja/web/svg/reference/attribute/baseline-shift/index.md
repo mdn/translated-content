@@ -11,7 +11,7 @@ l10n:
 > プレゼンテーション属性であるため、 `baseline-shift` には対応する CSS プロパティ {{cssxref("baseline-shift")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 > [!NOTE]
-> このプロパティは非推奨になる予定であり、代わりに [`vertical-align`](/ja/docs/Web/CSS/vertical-align) を使用する事が推奨されています。
+> このプロパティは非推奨になる予定であり、代わりに [`vertical-align`](/ja/docs/Web/CSS/Reference/Properties/vertical-align) を使用する事が推奨されています。
 
 この属性は以下の SVG 要素で使用できます。
 

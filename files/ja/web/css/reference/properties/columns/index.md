@@ -45,8 +45,8 @@ columns: 3;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`column-count`](/ja/docs/Web/CSS/column-count)
-- [`column-width`](/ja/docs/Web/CSS/column-width)
+- [`column-count`](/ja/docs/Web/CSS/Reference/Properties/column-count)
+- [`column-width`](/ja/docs/Web/CSS/Reference/Properties/column-width)
 
 ## 構文
 

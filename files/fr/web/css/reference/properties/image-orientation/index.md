@@ -33,7 +33,7 @@ image-orientation: unset;
 
 Cette propriété n'est pas conçue pour appliquer une rotation arbitraire sur une image. Elle permet uniquement de corriger une orientation erronée.
 
-Pour tout autre usage, on utilisera la propriété [`transform`](/fr/docs/Web/CSS/transform) avec le mot-clé `rotate` afin d'indiquer une rotation. Ces autres usages incluent les modifications volontaires de l'orientation de l'image ou les changements nécessaires à l'impression portrait/paysage.
+Pour tout autre usage, on utilisera la propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform) avec le mot-clé `rotate` afin d'indiquer une rotation. Ces autres usages incluent les modifications volontaires de l'orientation de l'image ou les changements nécessaires à l'impression portrait/paysage.
 
 Lorsqu'elle est utilisée avec d'autres propriétés CSS (comme [`transform-function`](/fr/docs/Web/CSS/transform-function)), la rotation fournie par `image-orientation` est appliquée avant toute autre transformation.
 
@@ -112,9 +112,9 @@ document.addEventListener("change", (evt) => {
 ## Voir aussi
 
 - Les autres propriétés CSS associées aux images&nbsp;:
-  - [`object-fit`](/fr/docs/Web/CSS/object-fit)
-  - [`object-position`](/fr/docs/Web/CSS/object-position)
-  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
-  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
-- [`transform`](/fr/docs/Web/CSS/transform)
-- [`rotate`](/fr/docs/Web/CSS/rotate)
+  - [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
+  - [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position)
+  - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering)
+  - [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
+- [`rotate`](/fr/docs/Web/CSS/Reference/Properties/rotate)

@@ -183,7 +183,7 @@ blockquote {
 
 {{EmbedLiveSample("b._all_initial", "200", "125")}}
 
-`blockquote` ルールで `all` プロパティを `initial` に設定すると、{{HTMLElement("blockquote")}} 要素はブラウザー既定のスタイル設定を使用しなくなります。これでインライン要素になり（初期値）、 [`background-color`](/ja/docs/Web/CSS/background-color#公式定義) は `transparent` （初期値）に、 [`font-size`](/ja/docs/Web/CSS/font-size#公式定義) は `medium` に、 [`color`](/ja/docs/Web/CSS/color#公式定義) は `black` （初期値）になります。
+`blockquote` ルールで `all` プロパティを `initial` に設定すると、{{HTMLElement("blockquote")}} 要素はブラウザー既定のスタイル設定を使用しなくなります。これでインライン要素になり（初期値）、 [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color#公式定義) は `transparent` （初期値）に、 [`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#公式定義) は `medium` に、 [`color`](/ja/docs/Web/CSS/Reference/Properties/color#公式定義) は `black` （初期値）になります。
 
 #### C. `all: inherit`
 
@@ -235,7 +235,7 @@ blockquote {
 
 {{EmbedLiveSample("d._all_unset", "200", "125")}}
 
-`blockquote` ルールの `all` プロパティに `unset` 値を用いた場合、 {{HTMLElement("blockquote")}} 要素はブラウザー既定値のスタイル設定を使用しません。なぜなら、 [`background-color`](/ja/docs/Web/CSS/background-color#formal_definition) は継承されないプロパティであり、[`font-size`](/ja/docs/Web/CSS/font-size#formal_definition) と [`color`](/ja/docs/Web/CSS/color#formal_definition) は継承されるプロパティだからです、 `<blockquote>` 要素はこれでインライン要素（初期値）、 {{cssxref("background-color")}} は `transparent` （初期値）となりますが、 {{cssxref("font-size")}} は `small` （継承値）、 {{cssxref("color")}} は `blue` （継承値）のままです。
+`blockquote` ルールの `all` プロパティに `unset` 値を用いた場合、 {{HTMLElement("blockquote")}} 要素はブラウザー既定値のスタイル設定を使用しません。なぜなら、 [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color#formal_definition) は継承されないプロパティであり、[`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#formal_definition) と [`color`](/ja/docs/Web/CSS/Reference/Properties/color#formal_definition) は継承されるプロパティだからです、 `<blockquote>` 要素はこれでインライン要素（初期値）、 {{cssxref("background-color")}} は `transparent` （初期値）となりますが、 {{cssxref("font-size")}} は `small` （継承値）、 {{cssxref("color")}} は `blue` （継承値）のままです。
 
 #### E. `all: revert`
 

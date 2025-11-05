@@ -48,7 +48,7 @@ original_slug: Web/CSS/Layout_cookbook/Card
 
 全体的なレイアウトのためにフレックスボックスを使うことができますが、この場合は最終的なフレックス業の上でカードが伸縮するでしょう。あるいは、[CSS 段組み](/ja/docs/Web/CSS/CSS_multicol_layout)を使用することもできます。これにより、カードが段の上にレイアウトされることになりますが、これは問題になる場合もあれば、そうでない場合もあります。
 
-これらの各レイアウト方法のデモについては、[欄のレシピ](/ja/docs/Web/CSS/Layout_cookbook/Column_layouts)を参照してください。
+これらの各レイアウト方法のデモについては、[欄のレシピ](/ja/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)を参照してください。
 
 ## アクセシビリティの考慮
 

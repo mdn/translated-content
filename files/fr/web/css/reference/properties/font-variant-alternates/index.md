@@ -117,9 +117,9 @@ Ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [`font-variant`](/fr/docs/Web/CSS/font-variant)
-- [`font-variant-caps`](/fr/docs/Web/CSS/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/font-variant-numeric)
+- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
+- [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
+- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
 - [`@font-feature-values`](/fr/docs/Web/CSS/@font-feature-values)

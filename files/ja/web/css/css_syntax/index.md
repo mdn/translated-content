@@ -69,7 +69,7 @@ l10n:
 
 [変数のカスケードのための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール:
 
-- [カスタムプロパティ (`--*`)](/ja/docs/Web/CSS/--*)
+- [カスタムプロパティ (`--*`)](/ja/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("var")}} 関数
 
 [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules) モジュール:

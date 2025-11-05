@@ -55,7 +55,7 @@ HTML の `disabled` 属性ではなく `aria-disabled` 属性を使用するも�
 ネイティブの HTML 属性ではなく `aria-disabled` を使用する場合、もう一つ留意すべきことは、 ARIA 属性は Windows 高コントラストモードにおいて、要素が無効であることを視覚的に伝えるためには、必要な手動スタイル設定が要求されるということです。
 
 > [!NOTE]
-> CSS の [`pointer-events: none;`](/ja/docs/Web/CSS/pointer-events) を使用して要素をクリックできないようにしている場合は、 JavaScript による対話も無効にしてください。 `pointer-events: none;` はマウスクリックを防ぎますが、キーボードから要素をアクティブにすることを防ぐことはできません。
+> CSS の [`pointer-events: none;`](/ja/docs/Web/CSS/Reference/Properties/pointer-events) を使用して要素をクリックできないようにしている場合は、 JavaScript による対話も無効にしてください。 `pointer-events: none;` はマウスクリックを防ぎますが、キーボードから要素をアクティブにすることを防ぐことはできません。
 
 ```js
 function onClick(event) {

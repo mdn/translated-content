@@ -6,13 +6,13 @@ original_slug: Web/CSS/max-block-size
 
 {{CSSRef}}
 
-La propriété **`max-block-size`** définit la taille maximale d'un élément selon l'axe perpendiculaire (l'axe de bloc) au sens d'écriture indiqué par [`writing-mode`](/fr/docs/Web/CSS/writing-mode). Elle correspond à la propriété [`max-width`](/fr/docs/Web/CSS/max-width) ou [`max-height`](/fr/docs/Web/CSS/max-height) selon la valeur utilisée pour [`writing-mode`](/fr/docs/Web/CSS/writing-mode). Si le mode d'écriture est orienté verticalement, `max-block-size` fait référence à la hauteur maximale de l'élément, sinon elle fait référence à la largeur maximale de l'élément.
+La propriété **`max-block-size`** définit la taille maximale d'un élément selon l'axe perpendiculaire (l'axe de bloc) au sens d'écriture indiqué par [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode). Elle correspond à la propriété [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) ou [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height) selon la valeur utilisée pour [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode). Si le mode d'écriture est orienté verticalement, `max-block-size` fait référence à la hauteur maximale de l'élément, sinon elle fait référence à la largeur maximale de l'élément.
 
-La propriété [`max-inline-size`](/fr/docs/Web/CSS/max-inline-size) peut être utilisée pour l'effet analogue selon l'axe en ligne (c'est-à-dire l'axe qui suit le sens d'écriture).
+La propriété [`max-inline-size`](/fr/docs/Web/CSS/Reference/Properties/max-inline-size) peut être utilisée pour l'effet analogue selon l'axe en ligne (c'est-à-dire l'axe qui suit le sens d'écriture).
 
 Cette propriété permet, contrairement à `max-height` et `max-width`, de définir une taille maximale qui tient compte de la direction d'écriture utilisée pour le texte du contenu.
 
-Cette propriété est une propriété _logique_ qui doit remplacer les propriétés _physiques_ correspondantes (`max-height` ou `max-width`) si on souhaite que la disposition tienne compte du mode d'écriture de la page (que celui-ci soit horizontal ou vertical). Vous pouvez consulter [ces exemples](/fr/docs/Web/CSS/writing-mode#exemple) pour en savoir plus.
+Cette propriété est une propriété _logique_ qui doit remplacer les propriétés _physiques_ correspondantes (`max-height` ou `max-width`) si on souhaite que la disposition tienne compte du mode d'écriture de la page (que celui-ci soit horizontal ou vertical). Vous pouvez consulter [ces exemples](/fr/docs/Web/CSS/Reference/Properties/writing-mode#exemple) pour en savoir plus.
 
 {{InteractiveExample("CSS Demo: max-block-size")}}
 
@@ -83,7 +83,7 @@ max-block-size: unset;
 
 ### Valeurs
 
-La propriété `max-block-size` peut prendre les mêmes valeurs que les propriétés [`max-width`](/fr/docs/Web/CSS/max-width) ou [`max-height`](/fr/docs/Web/CSS/max-height).
+La propriété `max-block-size` peut prendre les mêmes valeurs que les propriétés [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) ou [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height).
 
 - [`<length>`](/fr/docs/Web/CSS/length)
   - : Définit la valeur de `max-block-size` avec une longueur absolue.
@@ -102,10 +102,10 @@ La propriété `max-block-size` peut prendre les mêmes valeurs que les proprié
 
 La valeur de `writing-mode` détermine la propriété physique correspondant à `max-block-size`&nbsp;:
 
-| Valeur pour `writing-mode`                                                                                                                                            | Propriété physique équivalente à `max-block-size` |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | [`max-height`](/fr/docs/Web/CSS/max-height)       |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/max-width)         |
+| Valeur pour `writing-mode`                                                                                                                                            | Propriété physique équivalente à `max-block-size`                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height) |
+| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width)   |
 
 > [!NOTE]
 > Les valeurs `sideways-lr` et `sideways-rl` pour `writing-mode` ont été retirées du module de spécification CSS sur les modes d'écriture de niveau 3 en fin de processus et pourraient être réintroduites dans la spécification de niveau 4.
@@ -131,7 +131,7 @@ Excepté cette différence sur le mode d'écriture, les boîtes sont identiques,
 
 #### HTML
 
-Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dont le mode d'écriture sera défini avec la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
+Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dont le mode d'écriture sera défini avec la propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
 
 ```html
 <p>Writing mode <code>horizontal-tb</code> (the default):</p>
@@ -155,7 +155,7 @@ Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Reference/
 
 Le CSS définit trois classes. D'abord `standard-box`, qui est appliquée aux deux boîtes. Celle-ci fournit la mise en forme de base avec les tailles de bloc minimales et maximales, la taille de la police et ainsi de suite.
 
-On a ensuite les classes `horizontal` et `vertical`, qui ajoutent la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) à la boîte avec la valeur `horizontal-tb` ou `vertical-rl` selon la classe utilisée.
+On a ensuite les classes `horizontal` et `vertical`, qui ajoutent la propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) à la boîte avec la valeur `horizontal-tb` ou `vertical-rl` selon la classe utilisée.
 
 ```css
 .standard-box {
@@ -195,7 +195,7 @@ On a ensuite les classes `horizontal` et `vertical`, qui ajoutent la propriété
 ## Voir aussi
 
 - Les propriétés physiques correspondantes&nbsp;:
-  - [`max-width`](/fr/docs/Web/CSS/max-width)
-  - [`max-height`](/fr/docs/Web/CSS/max-height)
-- La propriété logique correspondant à l'axe en ligne&nbsp;: [`max-inline-size`](/fr/docs/Web/CSS/max-inline-size)
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
+  - [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width)
+  - [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height)
+- La propriété logique correspondant à l'axe en ligne&nbsp;: [`max-inline-size`](/fr/docs/Web/CSS/Reference/Properties/max-inline-size)
+- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)

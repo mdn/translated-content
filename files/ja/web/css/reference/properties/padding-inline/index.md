@@ -54,8 +54,8 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`padding-inline-end`](/ja/docs/Web/CSS/padding-inline-end)
-- [`padding-inline-start`](/ja/docs/Web/CSS/padding-inline-start)
+- [`padding-inline-end`](/ja/docs/Web/CSS/Reference/Properties/padding-inline-end)
+- [`padding-inline-start`](/ja/docs/Web/CSS/Reference/Properties/padding-inline-start)
 
 ## 構文
 

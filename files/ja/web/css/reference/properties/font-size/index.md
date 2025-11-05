@@ -97,7 +97,7 @@ font-size: unset;
 
 - `math`
   - : math 要素の `font-size` プロパティの計算値を、親要素の `font-size` から相対的に決定する際に、[変倍ルール](https://w3c.github.io/mathml-core/#the-math-script-level-property)が適用されます。
-    詳細は、[math-depth](/ja/docs/Web/CSS/math-depth) プロパティを参照してください。
+    詳細は、[math-depth](/ja/docs/Web/CSS/Reference/Properties/math-depth) プロパティを参照してください。
 
 ## 解説
 

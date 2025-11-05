@@ -123,7 +123,7 @@ p {
 
 この例では、どちらの段落にも太い下線を引いています。横書きのテキストでは `text-underline-position: under;` を使用して、下線をすべてのディセンダーの下に引いています。
 
-[`writing-mode`](/ja/docs/Web/CSS/writing-mode) を縦書きに設定した場合、必要に応じて `left` または `right` を使用して、傍線をテキストの左と右のどちらに引くか決めることができます。
+[`writing-mode`](/ja/docs/Web/CSS/Reference/Properties/writing-mode) を縦書きに設定した場合、必要に応じて `left` または `right` を使用して、傍線をテキストの左と右のどちらに引くか決めることができます。
 
 ライブサンプルはこのようになります。
 

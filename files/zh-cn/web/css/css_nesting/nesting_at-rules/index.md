@@ -144,7 +144,7 @@ At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以�
 ## 参见
 
 - [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
-- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
+- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
 - [嵌套容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#嵌套查询)

@@ -46,7 +46,7 @@ background-size: 200px 100px;
 ```
 
 > [!NOTE]
-> L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété [`background-color`](/fr/docs/Web/CSS/background-color). De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.
+> L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color). De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.
 
 ## Syntaxe
 
@@ -89,12 +89,12 @@ La propriété `background-size` peut être définie de différentes façons&nbs
 - Avec une seule valeur qui indique la largeur de l'image (la hauteur vaut alors [`auto`](#auto) par défaut)
 - Avec deux valeurs dont la première représente la largeur et la seconde la hauteur. Chaque valeur peut être une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou encore [`auto`](#auto).
 
-Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/background-image)).
+Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)).
 
 ### Valeurs
 
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit la plus grande possible et que l'image conserve ses proportions. L'image est contrainte dans le conteneur. Les zones éventuellement vides sont remplies avec la couleur d'arrière-plan (définie grâce à [`background-color`](/fr/docs/Web/CSS/background-color)). Par défaut, l'image est centrée sauf si [`background-position`](/fr/docs/Web/CSS/background-position) a été modifiée.
+  - : Un mot-clé qui redimensionne l'image afin qu'elle soit la plus grande possible et que l'image conserve ses proportions. L'image est contrainte dans le conteneur. Les zones éventuellement vides sont remplies avec la couleur d'arrière-plan (définie grâce à [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)). Par défaut, l'image est centrée sauf si [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) a été modifiée.
 - `cover`
   - : Un mot-clé dont le comportement est opposé à celui de `contain`. L'image est redimensionnée pour être aussi grande que possible et pour conserver ses proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes (il n'y a aucun espace libre sur lequel on verrait la couleur d'arrière-plan).
 - `auto`
@@ -102,7 +102,7 @@ Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on
 - `<length>`
   - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
 - `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
 
 ### Dimensions intrinsèques et proportions
 
@@ -212,4 +212,4 @@ Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/CSS_background
 
 - [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
 - [Redimensionner les arrière-plans SVG](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
-- [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)

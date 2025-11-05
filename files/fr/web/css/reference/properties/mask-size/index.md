@@ -44,7 +44,7 @@ mask-size: unset;
 ```
 
 > [!NOTE]
-> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie [`mask`](/fr/docs/Web/CSS/mask) et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
+> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask) et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
 
 ## Syntaxe
 
@@ -66,11 +66,11 @@ Chaque valeur peut être une longueur (`<length>`), un pourcentage (`<percentage
 - `<length>`
   - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image avec la longueur indiquée dans l'axe correspondant. Les longueurs négatives ne sont pas autorisées.
 - `<percentage>`
-  - : Une valeur de pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par [`mask-origin`](/fr/docs/Web/CSS/mask-origin) par rapport à la taille de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (<i lang="en">padding</i>) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par [`mask-origin`](/fr/docs/Web/CSS/Reference/Properties/mask-origin) par rapport à la taille de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (<i lang="en">padding</i>) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
 - `auto`
   - : Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le conteneur. Par défaut, l'image est centrée sauf si [`mask-position`](/fr/docs/Web/CSS/mask-position) indique un autre paramètre.
+  - : Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le conteneur. Par défaut, l'image est centrée sauf si [`mask-position`](/fr/docs/Web/CSS/Reference/Properties/mask-position) indique un autre paramètre.
 - `cover`
   - : Un mot-clé qui se comporte à l'inverse de `contain`. L'image est agrandie autant que possible et ses proportions sont conservées et elle couvre toute la surface du conteneur, si les dimensions du conteneur sont différentes, l'image est rognée sur les côtés (haut et bas ou droite et gauche).
 

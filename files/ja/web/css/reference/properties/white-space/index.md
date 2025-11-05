@@ -178,7 +178,7 @@ white-space: unset;
   </tbody>
 </table>
 
-タブの既定値は 8 文字で、 [`tab-size`](/ja/docs/Web/CSS/tab-size) プロパティを使用して設定できます。`normal`、`nowrap`、`pre-line` の値の場合、すべてのタブは空白文字 (U+0020) 文字に変換されます。
+タブの既定値は 8 文字で、 [`tab-size`](/ja/docs/Web/CSS/Reference/Properties/tab-size) プロパティを使用して設定できます。`normal`、`nowrap`、`pre-line` の値の場合、すべてのタブは空白文字 (U+0020) 文字に変換されます。
 
 > [!NOTE]
 > **空白**と**その他の空白区切り**には違いがあります。以下のように定義されています。
@@ -192,7 +192,7 @@ white-space: unset;
 
 ## ホワイトスペースの統合
 
-{{cssxref("white-space-collapse")}} プロパティのページにおいて、[ブラウザーのホワイトスペースの統合アリゴリズム](/ja/docs/Web/CSS/white-space-collapse#ホワイトスペースの統合)を説明しています。
+{{cssxref("white-space-collapse")}} プロパティのページにおいて、[ブラウザーのホワイトスペースの統合アリゴリズム](/ja/docs/Web/CSS/Reference/Properties/white-space-collapse#ホワイトスペースの統合)を説明しています。
 
 ## 公式定義
 
@@ -365,4 +365,4 @@ text {
 ## 関連情報
 
 - 内部での折り返しを定義するプロパティ: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
-- [`tab-size`](/ja/docs/Web/CSS/tab-size)
+- [`tab-size`](/ja/docs/Web/CSS/Reference/Properties/tab-size)

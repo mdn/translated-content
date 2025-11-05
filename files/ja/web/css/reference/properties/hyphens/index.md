@@ -78,7 +78,7 @@ hyphens: unset;
 > `auto` を設定したときの動作は、正しくタグ付けされた言語に依存して、適切なハイフネーション規則が選択されます。選択した言語で自動的なハイフネーションが適用されるようにすることを保証するために、 HTML の `lang` 属性を必ず指定してください。
 
 > [!NOTE]
-> [`word-break: break-all`](/ja/docs/Web/CSS/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
+> [`word-break: break-all`](/ja/docs/Web/CSS/Reference/Properties/word-break#break-all) を適用すると、と、単語がハイフネーションポイントで区切られていても、ハイフンはまったく表示されません。
 
 ## 改行候補位置の提案
 
