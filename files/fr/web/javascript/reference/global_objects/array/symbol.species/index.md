@@ -1,5 +1,5 @@
 ---
-title: "Array : accesseur [Symbol.species]"
+title: "Array : accesseur statique [Symbol.species]"
 short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 l10n:
