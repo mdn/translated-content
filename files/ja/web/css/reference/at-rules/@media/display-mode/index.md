@@ -1,11 +1,11 @@
 ---
 title: display-mode
-slug: Web/CSS/@media/display-mode
+slug: Web/CSS/Reference/At-rules/@media/display-mode
 l10n:
   sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-**`display-mode`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ウェブアプリが通常のブラウザータブで表示されているか、スタンドアロンアプリや全画面モードなどの別の方法で表示されているかを検査することができます。
+**`display-mode`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ウェブアプリが通常のブラウザータブで表示されているか、スタンドアロンアプリや全画面モードなどの別の方法で表示されているかを検査することができます。
 
 例えば、
 
@@ -80,4 +80,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

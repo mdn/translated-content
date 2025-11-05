@@ -27,7 +27,7 @@ l10n:
   - : 指定した URL からスタイルシートファイルをインポートします。
 - {{CSSxRef("@import", "@import supports()")}}
   - : ブラウザーの対応状況に基づいてスタイルシートファイルをインポートします。
-- [`@import layer()`](/ja/docs/Web/CSS/@import/layer_function)
+- [`@import layer()`](/ja/docs/Web/CSS/Reference/At-rules/@import/layer_function)
   - : 指定されたカスケードレイヤーの中にスタイルシートファイルをインポートします。
 
 ## @supports 関数

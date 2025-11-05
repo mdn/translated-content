@@ -1,6 +1,6 @@
 ---
 title: "@starting-style"
-slug: Web/CSS/@starting-style
+slug: Web/CSS/Reference/At-rules/@starting-style
 l10n:
   sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
 ---

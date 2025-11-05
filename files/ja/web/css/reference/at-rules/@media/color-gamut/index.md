@@ -1,11 +1,11 @@
 ---
 title: color-gamut
-slug: Web/CSS/@media/color-gamut
+slug: Web/CSS/Reference/At-rules/@media/color-gamut
 l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-**`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している{{glossary("gamut", "色域")}}のおおよその範囲に基づいて CSS スタイルを適用するために使用されます。
+**`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している{{glossary("gamut", "色域")}}のおおよその範囲に基づいて CSS スタイルを適用するために使用されます。
 
 ## 構文
 
@@ -57,7 +57,7 @@ p {
 
 - [`color()`](/ja/docs/Web/CSS/color_value/color) 関数で、定義された色空間における色を指定します。
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
-- [`@media`](/ja/docs/Web/CSS/@media) アットルールは、 color-gamut 式を指定するために使用します。
+- [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルールは、 color-gamut 式を指定するために使用します。
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries): メディアクエリーをいつ、どうやって使うかを理解する
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) モジュール
 - [sRGB](https://ja.wikipedia.org/wiki/SRGB)（ウィキペディア）

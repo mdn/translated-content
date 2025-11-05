@@ -1,11 +1,11 @@
 ---
 title: font-display
-slug: Web/CSS/@font-face/font-display
+slug: Web/CSS/Reference/At-rules/@font-face/font-display
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`font-display`** は [`@font-face`](/ja/docs/Web/CSS/@font-face) アットルールの記述子で、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
+**`font-display`** は [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) アットルールの記述子で、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
 
 ## 構文
 

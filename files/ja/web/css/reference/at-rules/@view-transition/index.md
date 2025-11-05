@@ -1,6 +1,6 @@
 ---
 title: "@view-transition"
-slug: Web/CSS/@view-transition
+slug: Web/CSS/Reference/At-rules/@view-transition
 l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---

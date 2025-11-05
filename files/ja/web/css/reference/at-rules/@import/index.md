@@ -1,12 +1,12 @@
 ---
 title: "@import"
-slug: Web/CSS/@import
+slug: Web/CSS/Reference/At-rules/@import
 l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
-`@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/@charset) や [@layer](/ja/docs/Web/CSS/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
+`@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/Reference/At-rules/@charset) や [@layer](/ja/docs/Web/CSS/Reference/At-rules/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
 
 ## 構文
 
@@ -29,7 +29,7 @@ l10n:
 - _list-of-media-queries_
   - : [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)のカンマ区切りのリストで、リンクした URL で定義された CSS ルールを適用するためのメディアに依存した条件を指定します。ブラウザーが対応していないメディアクエリーの場合、リンクされたリソースは読み込まれません。
 - _layer-name_
-  - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/@import/layer_function) を参照してください。
+  - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/Reference/At-rules/@import/layer_function) を参照してください。
 - _supports-condition_
   - : このスタイルシートをインポートするために、ブラウザーが対応している必要がある特性を示します。
     ブラウザーが _supports-condition_ で指定された条件に適合しない場合、リンクされたスタイルシートを取得しないことがあり、他にもパスを通してダウンロードしても読み込むことはできません。
@@ -39,7 +39,7 @@ l10n:
 
 ## 解説
 
-ルールのインポートは、 {{CSSxRef("@charset")}} ルールと [`@layer`](/ja/docs/Web/CSS/@layer) 文を作成するレイヤーを除き、他のすべての種類のルールよりも前に来る必要があります。
+ルールのインポートは、 {{CSSxRef("@charset")}} ルールと [`@layer`](/ja/docs/Web/CSS/Reference/At-rules/@layer) 文を作成するレイヤーを除き、他のすべての種類のルールよりも前に来る必要があります。
 
 ```css example-bad
 * {
@@ -69,7 +69,7 @@ l10n:
 これにより、作者は最近導入された CSS 特性の利点を活かしつつ、古いバージョンのブラウザーに対して優雅なフォールバックを提供することができます。
 なお、 `@import` アットルールの `supports()` 関数の条件は、 JavaScript で {{domxref("CSSImportRule.supportsText")}} を用いて取得することができます。
 
-`@import` ルールにより、リンクされたリソースからルールをインポートして[カスケードレイヤー](/ja/docs/Web/CSS/@layer)を作成することもできます。ルールは既存のカスケードレイヤーにインポートすることもできます。そのために `@import` とともに `layer` キーワードまたは `layer()` 関数を使用します。インポートされたスタイルシートのスタイルルールの宣言は、インポートされた時点でスタイルシートに文字どおり書き込まれたかのようにカスケードに作用します。
+`@import` ルールにより、リンクされたリソースからルールをインポートして[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)を作成することもできます。ルールは既存のカスケードレイヤーにインポートすることもできます。そのために `@import` とともに `layer` キーワードまたは `layer()` 関数を使用します。インポートされたスタイルシートのスタイルルールの宣言は、インポートされた時点でスタイルシートに文字どおり書き込まれたかのようにカスケードに作用します。
 
 ## 形式文法
 

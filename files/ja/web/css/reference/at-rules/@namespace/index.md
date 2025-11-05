@@ -1,6 +1,6 @@
 ---
 title: "@namespace"
-slug: Web/CSS/@namespace
+slug: Web/CSS/Reference/At-rules/@namespace
 l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---

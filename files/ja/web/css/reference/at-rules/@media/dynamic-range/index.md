@@ -1,11 +1,11 @@
 ---
 title: dynamic-range
-slug: Web/CSS/@media/dynamic-range
+slug: Web/CSS/Reference/At-rules/@media/dynamic-range
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-**`dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している明るさ、コントラスト比、および色深度の組み合わせを検査することができます。
+**`dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している明るさ、コントラスト比、および色深度の組み合わせを検査することができます。
 
 > [!NOTE]
 > 一部の端末は、高ダイナミックレンジ機能を備えていますが、この機能は常に「オン」になっているわけではなく、アクティブ化する必要がある場合があります（プログラムによって、ユーザーによって、コンテンツに応じてなど）。このメディア機能は、ダイナミックレンジ機能がアクティブであるかどうかを検査するものではありません。端末が高ダイナミックレンジの映像を再生できるかどうかのみを検査します。
@@ -47,4 +47,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

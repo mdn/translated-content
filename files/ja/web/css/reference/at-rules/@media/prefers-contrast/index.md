@@ -1,11 +1,11 @@
 ---
 title: prefers-contrast
-slug: Web/CSS/@media/prefers-contrast
+slug: Web/CSS/Reference/At-rules/@media/prefers-contrast
 l10n:
   sourceCommit: eb20a5272772231852864ddc71b9710de0fa1d4f
 ---
 
-**`prefers-contrast`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い（またはより低い）コントラストで表示するように要求したかどうかを検出するために使用します。
+**`prefers-contrast`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い（またはより低い）コントラストで表示するように要求したかどうかを検出するために使用します。
 
 ## 構文
 
@@ -16,7 +16,7 @@ l10n:
 - `less`
   - : ユーザーが、より低いコントラストを持つインターフェイスにしたいことをシステムに通知したことを示します。
 - `custom`
-  - : ユーザーが、特定の色のセットを使用することをシステムに通知しており、これらの色によって暗示されるコントラストが `more` も `less` にも一致しないことを示します。この値は、 [`forced-colors: active`](/ja/docs/Web/CSS/@media/forced-colors) のユーザーによって指定されたカラーパレットと一致します。
+  - : ユーザーが、特定の色のセットを使用することをシステムに通知しており、これらの色によって暗示されるコントラストが `more` も `less` にも一致しないことを示します。この値は、 [`forced-colors: active`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) のユーザーによって指定されたカラーパレットと一致します。
 
 ## ユーザー設定
 
@@ -62,4 +62,4 @@ l10n:
 
 ## 関連情報
 
-- CSS の [forced-colors](/ja/docs/Web/CSS/@media/forced-colors) メディアクエリー
+- CSS の [forced-colors](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) メディアクエリー

@@ -1,6 +1,6 @@
 ---
 title: "@layer"
-slug: Web/CSS/@layer
+slug: Web/CSS/Reference/At-rules/@layer
 l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
@@ -230,7 +230,7 @@ p {
 
 ## 関連情報
 
-- [`@import`](/ja/docs/Web/CSS/@import)
+- [`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import)
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/ja/docs/Web/CSS/important)

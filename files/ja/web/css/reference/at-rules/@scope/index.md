@@ -1,6 +1,6 @@
 ---
 title: "@scope"
-slug: Web/CSS/@scope
+slug: Web/CSS/Reference/At-rules/@scope
 l10n:
   sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---

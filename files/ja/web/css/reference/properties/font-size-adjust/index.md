@@ -66,7 +66,7 @@ font-size-adjust: unset;
 `font-size-adjust` に対応していないブラウザーとの互換性を保証するために、このプロパティは {{cssxref("font-size")}} プロパティの数値倍数として指定します。この数値は、一般的に最初の選択フォントのアスペクト値と一致する必要があります。
 
 > [!NOTE]
-> 指定した `<font-metric>` が [`@font-face`](/ja/docs/Web/CSS/@font-face) で上書きされた場合、例えば [`size-adjust`](/ja/docs/Web/CSS/@font-face/size-adjust) 記述子を使用することで、上書きされたメトリックが `font-size-adjust` の計算に用いられます。ということは、 `font-size-adjust` と `size-adjust` が一緒に適用されている場合、 `size-adjust` は効果を持たないということです。
+> 指定した `<font-metric>` が [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) で上書きされた場合、例えば [`size-adjust`](/ja/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) 記述子を使用することで、上書きされたメトリックが `font-size-adjust` の計算に用いられます。ということは、 `font-size-adjust` と `size-adjust` が一緒に適用されている場合、 `size-adjust` は効果を持たないということです。
 
 調整されたフォントサイズは、式 `u  =  ( m / m′ ) s` を使用して計算されます。
 

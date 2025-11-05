@@ -19,7 +19,7 @@ l10n:
   - {{cssxref('@page/page-orientation', 'page-orientation')}} 記述子
   - {{cssxref('@page/size', 'size')}} 記述子
   - [マージン記述子](/ja/docs/Web/CSS/Reference/Properties/margin)
-- [マージンのアットルール](/ja/docs/Web/CSS/@page#マージンのアットルール)
+- [マージンのアットルール](/ja/docs/Web/CSS/Reference/At-rules/@page#マージンのアットルール)
 
 > [!NOTE]
 > CSS ページメディアモジュールには、まだ実装されていない `@page` の 2 つの記述子 `bleeds` および `marks`を導入しています。

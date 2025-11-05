@@ -33,7 +33,7 @@ page: unset;
 - `auto`
   - : 既定値。 `auto` 以外の値を持つ最も近い祖先の値を使用します。名前付きページの値が設定されている祖先が存在しない場合、 `auto` に使用される値は空文字列になります。
 - {{cssxref("custom-ident")}}
-  - : [`@page`](/ja/docs/Web/CSS/@page) アットルールで定義されている、大文字小文字を区別する名前。
+  - : [`@page`](/ja/docs/Web/CSS/Reference/At-rules/@page) アットルールで定義されている、大文字小文字を区別する名前。
 
 ## 公式定義
 
@@ -131,7 +131,7 @@ page: unset;
 </article>
 ```
 
-CSS の最初の部分では、**名前付き**ページを設定します。これには、サイズ、方向、および印刷されるページの [`@top-center` マージン](/ja/docs/Web/CSS/@page#マージンのアットルール)に表示されるコンテンツが含まれます。
+CSS の最初の部分では、**名前付き**ページを設定します。これには、サイズ、方向、および印刷されるページの [`@top-center` マージン](/ja/docs/Web/CSS/Reference/At-rules/@page#マージンのアットルール)に表示されるコンテンツが含まれます。
 
 ```css live-sample___page-property
 @page toc {

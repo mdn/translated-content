@@ -109,23 +109,23 @@ _変更なし。_
 - Mozilla 独自仕様である以下の media feature が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
-  - [`-moz-mac-graphite-theme`](/ja/docs/Web/CSS/@media/-moz-mac-graphite-theme)
+  - [`-moz-mac-graphite-theme`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-mac-graphite-theme)
   - `-moz-mac-yosemite-theme`
-  - [`-moz-os-version`](/ja/docs/Web/CSS/@media/-moz-os-version)
+  - [`-moz-os-version`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-os-version)
   - `-moz-overlay-scrollbars`
   - `-moz-physical-home-button`
-  - [`-moz-scrollbar-end-backward`](/ja/docs/Web/CSS/@media/-moz-scrollbar-end-backward)
-  - [`-moz-scrollbar-end-forward`](/ja/docs/Web/CSS/@media/-moz-scrollbar-end-forward)
-  - [`-moz-scrollbar-start-backward`](/ja/docs/Web/CSS/@media/-moz-scrollbar-start-backward)
-  - [`-moz-scrollbar-start-forward`](/ja/docs/Web/CSS/@media/-moz-scrollbar-start-forward)
-  - [`-moz-scrollbar-thumb-proportional`](/ja/docs/Web/CSS/@media/-moz-scrollbar-thumb-proportional)
+  - [`-moz-scrollbar-end-backward`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-scrollbar-end-backward)
+  - [`-moz-scrollbar-end-forward`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-scrollbar-end-forward)
+  - [`-moz-scrollbar-start-backward`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-scrollbar-start-backward)
+  - [`-moz-scrollbar-start-forward`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-scrollbar-start-forward)
+  - [`-moz-scrollbar-thumb-proportional`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-scrollbar-thumb-proportional)
   - `-moz-swipe-animation-enabled`
-  - [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/@media/-moz-windows-accent-color-in-titlebar)
-  - [`-moz-windows-classic`](/ja/docs/Web/CSS/@media/-moz-windows-classic)
-  - [`-moz-windows-compositor`](/ja/docs/Web/CSS/@media/-moz-windows-compositor)
-  - [`-moz-windows-default-theme`](/ja/docs/Web/CSS/@media/-moz-windows-default-theme)
-  - [`-moz-windows-glass`](/ja/docs/Web/CSS/@media/-moz-windows-glass)
-  - [`-moz-windows-theme`](/ja/docs/Web/CSS/@media/-moz-windows-theme)
+  - [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-windows-accent-color-in-titlebar)
+  - [`-moz-windows-classic`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-windows-classic)
+  - [`-moz-windows-compositor`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-windows-compositor)
+  - [`-moz-windows-default-theme`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-windows-default-theme)
+  - [`-moz-windows-glass`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-windows-glass)
+  - [`-moz-windows-theme`](/ja/docs/Web/CSS/Reference/At-rules/@media/-moz-windows-theme)
 
 - Mozilla 独自仕様である `:-moz-styleeditor-transitioning` 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396099](https://bugzil.la/1396099))。
 

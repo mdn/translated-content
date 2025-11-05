@@ -1,6 +1,6 @@
 ---
 title: "@document"
-slug: Web/CSS/@document
+slug: Web/CSS/Reference/At-rules/@document
 l10n:
   sourceCommit: d585bcffcda6ed5a1555c65ab62670567925679f
 ---

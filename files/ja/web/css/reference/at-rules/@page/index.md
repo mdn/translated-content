@@ -1,6 +1,6 @@
 ---
 title: "@page"
-slug: Web/CSS/@page
+slug: Web/CSS/Reference/At-rules/@page
 l10n:
   sourceCommit: 2b3eb646cec5c9bc74e263b7880a52ad52e37913
 ---
@@ -46,9 +46,9 @@ l10n:
 
 - [`margin`](/ja/docs/Web/CSS/Reference/Properties/margin)
   - : ページのマージンを指定します。個々のマージンプロパティ [`margin-top`](/ja/docs/Web/CSS/Reference/Properties/margin-top)、[`margin-right`](/ja/docs/Web/CSS/Reference/Properties/margin-right)、[`margin-bottom`](/ja/docs/Web/CSS/Reference/Properties/margin-bottom)、[`margin-left`](/ja/docs/Web/CSS/Reference/Properties/margin-left) も使用できます。
-- [`page-orientation`](/ja/docs/Web/CSS/@page/page-orientation)
+- [`page-orientation`](/ja/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : ページの方向を指定します。これはページのレイアウトには影響しません。回転は、出力媒体でのレイアウト後に適用されます。
-- [`size`](/ja/docs/Web/CSS/@page/size)
+- [`size`](/ja/docs/Web/CSS/Reference/At-rules/@page/size)
   - : 対象となるページボックスの包含ブロックの寸法と向きを指定します。一般的な場合、 1 つのページボックスが 1 枚の用紙に印刷され、対象となる用紙の寸法を示します。
 
 仕様では、@page アットルールによってページボックスに適用できる CSS プロパティとして、以下のプロパティが挙げられています。しかし、これらはどのユーザーエージェントもまだ対応していません。
@@ -379,7 +379,7 @@ section {
 ## 関連情報
 
 - {{cssxref("page")}} プロパティ
-- `@page` [`size`](/ja/docs/Web/CSS/@page/size) 記述子
+- `@page` [`size`](/ja/docs/Web/CSS/Reference/At-rules/@page/size) 記述子
 - [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール
 - [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/) (pagedjs.org)
 - [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) この件 (ページベースのカウンターなど) に関する進捗の追跡は、 Bugzilla のチケット

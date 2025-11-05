@@ -1,6 +1,6 @@
 ---
 title: "@font-palette-values"
-slug: Web/CSS/@font-palette-values
+slug: Web/CSS/Reference/At-rules/@font-palette-values
 l10n:
   sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
 ---
@@ -22,11 +22,11 @@ l10n:
 
 ### 記述子
 
-- [font-family](/ja/docs/Web/CSS/@font-palette-values/font-family)
+- [font-family](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/font-family)
   - : このパレットを適用できるフォントファミリーの名前を指定します。
-- [base-palette](/ja/docs/Web/CSS/@font-palette-values/base-palette)
+- [base-palette](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)
   - : フォントメーカーが作成した、使用するベースパレットの名前またはインデックスを指定します。
-- [override-colors](/ja/docs/Web/CSS/@font-palette-values/override-colors)
+- [override-colors](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors)
   - : 上書きするベースパレットの色を指定します。
 
 ## 形式文法

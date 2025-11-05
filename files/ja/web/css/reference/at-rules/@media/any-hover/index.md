@@ -1,11 +1,11 @@
 ---
 title: any-hover
-slug: Web/CSS/@media/any-hover
+slug: Web/CSS/Reference/At-rules/@media/any-hover
 l10n:
   sourceCommit: 0fd3414a0e35e6e30a2cd34977de607a23000bef
 ---
 
-**`any-hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、要素の上で停止することができる入力メカニズムが*何らか*利用できるかどうかを検査するために使用することができます。
+**`any-hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、要素の上で停止することができる入力メカニズムが*何らか*利用できるかどうかを検査するために使用することができます。
 
 ## 構文
 
@@ -50,4 +50,4 @@ l10n:
 
 ## 関連情報
 
-- [`hover` メディア特性](/ja/docs/Web/CSS/@media/hover)
+- [`hover` メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media/hover)

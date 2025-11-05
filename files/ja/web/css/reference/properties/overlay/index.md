@@ -131,7 +131,7 @@ html {
 
 アニメーションが双方向で動作するようにするには、以下のような手順も必要になります。
 
-- アニメーションの開始状態を [`@starting-style`](/ja/docs/Web/CSS/@starting-style) アットルール内に設定します。これは予期しない動作を避けるために必要です。既定では、要素の最初のスタイルが更新されたときや、 `display` 型が `none` から別の型に変更されたときには、トランジションは発生しません。 `@starting-style` では、既定で設定されていることを特定の制御された方法で上書きすることができます。これがなければ、出現アニメーションは発生せず、ポップオーバーはただ現れるだけです。
+- アニメーションの開始状態を [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) アットルール内に設定します。これは予期しない動作を避けるために必要です。既定では、要素の最初のスタイルが更新されたときや、 `display` 型が `none` から別の型に変更されたときには、トランジションは発生しません。 `@starting-style` では、既定で設定されていることを特定の制御された方法で上書きすることができます。これがなければ、出現アニメーションは発生せず、ポップオーバーはただ現れるだけです。
 - `display` もトランジションする要素のリストに追加されているので、アニメーションする要素は出現アニメーションと消滅アニメーションの両方を通して表示されます（`display: block` に設定します）。これがなければ、消滅アニメーションでは表示されません。結果的に、ポップオーバーはただ消えてしまいます。この場合も、アニメーションが発生するためには `transition-behavior: allow-discrete` が必要です。
 
 また、開いた時にポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) にトランジションを記載して、暗くなるアニメーションを提供していることに注意してください。ポップオーバーを開くための背景を選択するには `[popover]:popover-open::backdrop` が必要です。
@@ -145,7 +145,7 @@ html {
 > [!NOTE]
 > ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、出現トランジションのたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 >
-> このような場合、出現時と消滅時のスタイル設定を異なるものにすることが可能です。この証明は[スタイル設定を使用する場合のデモンストレーション](/ja/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used)の例を参照してください。
+> このような場合、出現時と消滅時のスタイル設定を異なるものにすることが可能です。この証明は[スタイル設定を使用する場合のデモンストレーション](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used)の例を参照してください。
 
 ## 仕様書
 
@@ -158,6 +158,6 @@ html {
 ## 関連情報
 
 - [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
-- [`@starting-style`](/ja/docs/Web/CSS/@starting-style)
+- [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style)
 - [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior)
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) (developer.chrome.com, 2023)

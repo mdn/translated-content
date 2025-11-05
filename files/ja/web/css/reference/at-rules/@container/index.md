@@ -1,6 +1,6 @@
 ---
 title: "@container"
-slug: Web/CSS/@container
+slug: Web/CSS/Reference/At-rules/@container
 l10n:
   sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
 ---
@@ -139,7 +139,7 @@ l10n:
 
 #### サイズコンテナー記述子
 
-`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/@media) サイズ機能クエリーの場合と同じです。
+`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) サイズ機能クエリーの場合と同じです。
 
 ```css
 @container (min-width: 400px) {
@@ -166,7 +166,7 @@ l10n:
   - : コンテナーの {{cssxref("inline-size")}} を {{cssxref("length")}} 値で表したものです。
 
 - `orientation`
-  - : コンテナーの[方向](/ja/docs/Web/CSS/@media/orientation)で、`landscape` または `portrait` のいずれかです。
+  - : コンテナーの[方向](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)で、`landscape` または `portrait` のいずれかです。
 
 - `width`
   - : コンテナーの幅を {{cssxref("length")}} 値で表したものです。
