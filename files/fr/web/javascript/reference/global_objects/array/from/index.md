@@ -1,5 +1,5 @@
 ---
-title: "Array : méthode from()"
+title: "Array : méthode statique from()"
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 l10n:
