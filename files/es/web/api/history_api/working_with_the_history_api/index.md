@@ -187,5 +187,5 @@ Puede encontrar este ejemplo completo en <https://github.com/mdn/dom-examples/tr
 
 ## véase también
 
-- [History API](/en-US/docs/Web/API/History_API)
+- [History API](/es/docs/Web/API/History_API)
 - Objeto global {{domxref("window.history", "history")}}
