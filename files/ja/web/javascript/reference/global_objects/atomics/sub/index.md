@@ -1,32 +1,33 @@
 ---
 title: Atomics.sub()
+short-title: sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-静的な **`Atomics.sub()`** メソッドは、配列内の指定した位置の値から減算して、その場所にあった古い値を返します。この不可分操作は、修正された値が書き戻されるまで、ほかの書き込みが発生しないことを保証します。
+**`Atomics.sub()`** は静的メソッドで、配列内の指定した位置の値から減算して、その場所にあった古い値を返します。この不可分操作は、修正された値が書き戻されるまで、ほかの書き込みが発生しないことを保証します。
 
 {{InteractiveExample("JavaScript デモ: Atomics.sub()")}}
 
 ```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
+// バイト単位でサイズを指定して SharedArrayBuffer を作成
 const buffer = new SharedArrayBuffer(16);
 const uint8 = new Uint8Array(buffer);
 uint8[0] = 7;
 
 // 7 - 2 = 5
 console.log(Atomics.sub(uint8, 0, 2));
-// Expected output: 7
+// 予想される結果: 7
 
 console.log(Atomics.load(uint8, 0));
-// Expected output: 5
+// 予想される結果: 5
 ```
 
 ## 構文
 
-```js
-Atomics.sub(typedArray, index, value);
+```js-nolint
+Atomics.sub(typedArray, index, value)
 ```
 
 ### 引数
@@ -44,8 +45,10 @@ Atomics.sub(typedArray, index, value);
 
 ### 例外
 
-- typedArray が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
-- index が typedArray の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `typedArray` が許可された整数型のいずれでもない場合に発生します。
+- {{jsxref("RangeError")}}
+  - : `index` が `typedArray` の範囲を超えている場合に発生します。
 
 ## 例
 

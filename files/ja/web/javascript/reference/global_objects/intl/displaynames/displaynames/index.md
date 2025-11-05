@@ -30,7 +30,8 @@ console.log(regionNamesInTraditionalChinese.of("US"));
 new Intl.DisplayNames(locales, options)
 ```
 
-> **メモ:** `Intl.DisplayNames()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Intl.DisplayNames()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

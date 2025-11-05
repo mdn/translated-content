@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e
 ---
 
-{{cssref}}
-
 **미디어 쿼리**를 사용하면 장치의 단말기의 유형(출력물 vs. 화면) 또는 화면 해상도나 방향, {{glossary("aspect ratio", "종횡비")}}, 브라우저 {{glossary("viewport", "뷰포트")}} 너비나 높이, 모션 감소, 데이터 사용량 혹은 투명도와 같은 사용자 선호도 기능이나 특성에 따라 CSS 스타일을 적용할 때 유용합니다.
 
 미디어 쿼리는 다음과 같은 상황에 사용할 수 있습니다.
@@ -66,7 +64,8 @@ l10n:
 미디어 쿼리는 (유형을 지정했다면) 문서를 보여주는 미디어의 유형이 일치하고 모든 미디어 특성 표현식의 계산 값이 참일 때 `true`로 계산됩니다.
 특정할 수 없는 미디어 유형을 가진 쿼리는 언제나 거짓으로 계산됩니다.
 
-> **참고:** [{{HTMLElement("link")}}의 미디어 쿼리가 `false`를 반환하더라도 스타일 시트는 다운로드](https://scottjehl.github.io/CSS-Download-Tests/)됩니다. 다운로드는 진행되지만, 다운로드의 우선순위는 훨씬 낮아집니다.
+> [!NOTE]
+> [{{HTMLElement("link")}}의 미디어 쿼리가 `false`를 반환하더라도 스타일 시트는 다운로드](https://scottjehl.github.io/CSS-Download-Tests/)됩니다. 다운로드는 진행되지만, 다운로드의 우선순위는 훨씬 낮아집니다.
 > 그렇지만 그 안의 내용은 쿼리가 `true` 가 되어야 적용됩니다.
 > 왜 이런 일이 발생할 수 있는지는 Tomayac 의 블로그 [왜 브라우저는 일치하지 않는 미디어 쿼리가 있는 스타일 시트를 다운로드할까](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2) 를 참고해 보세요.
 

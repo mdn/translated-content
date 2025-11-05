@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
-**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: conic-gradient()")}}
 
@@ -88,7 +86,7 @@ conic-gradient(
 - {{CSSxRef("&lt;angle&gt;")}}
   - : `from` キーワードに続いて角度を指定することで、時計回りのグラデーションの位置を定義します。
 - `<position>`
-  - : [`background-position`](/ja/docs/Web/CSS/background-position) プロパティと同じ長さ、順序、キーワード値を使用して、 `position` 値はグラデーションの中心を定義します。指定されていない場合、既定では `position` に `center` 値が使用され、グラデーションが中央に配置されるということになります。
+  - : [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティと同じ長さ、順序、キーワード値を使用して、 `position` 値はグラデーションの中心を定義します。指定されていない場合、既定では `position` に `center` 値が使用され、グラデーションが中央に配置されるということになります。
 - `<angular-color-stop>`
   - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{CSSxRef("&lt;angle&gt;")}}) が続きます。
 - `<color-hint>`

@@ -1,91 +1,193 @@
 ---
-title: Le fonctionnement du Web
+title: Comment fonctionne le Web
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
-original_slug: Learn/Getting_started_with_the_web/How_the_Web_works
 l10n:
-  sourceCommit: 5e00578fd0c3c4ed92c1785a878816a138b55178
+  sourceCommit: 4d0079996a0621722f0a9f45f29ff60c27f1cf4c
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
-Cet article illustre, de façon simplifiée, ce qui se passe quand une page web s'affiche dans un navigateur, sur votre ordinateur ou votre téléphone.
+_Comment fonctionne le Web_ fournit une description générale de ce qui se passe lorsque vous utilisez un navigateur web pour accéder à une page web, en expliquant la «&nbsp;magie&nbsp;» qui s'opère en coulisses pour transmettre le code pertinent à votre ordinateur afin que le navigateur l'assemble en quelque chose que vous pouvez consulter.
 
-Ces éléments théoriques ne sont pas strictement nécessaires pour commencer à faire du développement web dans un premier temps. Cependant, ils seront plus qu'utiles pour mieux comprendre comment le Web fonctionne en arrière-plan.
+Cette théorie n'est pas essentielle pour écrire du code web à court terme, mais vous en tirerez rapidement profit en comprenant ce qui se passe en arrière-plan.
 
-## Des clients et des serveurs
+> [!NOTE]
+> Cet article n'explique pas comment les navigateurs web transforment le code en pages web. Cela est abordé dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
 
-Les ordinateurs connectés à Internet sont appelés des **clients** et des **serveurs**. Voici un diagramme simplifié qui illustre leur interaction&nbsp;:
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>
+        Connaissance de base de votre système d'exploitation, des navigateurs web et des technologies web.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Clients et serveurs et leurs rôles sur le Web.</li>
+          <li>DNS et son fonctionnement général.</li>
+          <li>Rôle de TCP/IP, HTTP et des paquets.</li>
+          <li>Syntaxe HTTP de base.</li>
+          <li>Codes de réponse HTTP courants (par exemple&nbsp;: 200, 301, 403, 404 et 500).</li>
+          <li>Composants de base d'une URL (protocole, domaine, sous-domaine, chemin).</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-![Deux cercles, le premier représentant un client et le deuxième un serveur. Une flèche libellée « requêtes » va du client au serveur, et une flèche libellée « réponses » va du serveur jusqu'au client.](simple-client-server.png)
+## Clients et serveurs
 
-- Les clients correspondent aux appareils connectés sur Internet par les personnes (par exemple, votre ordinateur connecté par Wi-Fi ou votre téléphone connecté sur le réseau mobile) et aux logiciels d'accès au Web (par exemple, les navigateurs comme Firefox ou Chrome).
-- Les serveurs sont des ordinateurs qui stockent des pages web, des sites ou des applications. Lorsqu'un appareil client souhaite accéder à une page web, une copie de la page est téléchargée depuis le serveur vers le client, la machine utilisée affiche alors le contenu dans le navigateur web de l'utilisatrice ou de l'utilisateur.
+Les ordinateurs connectés à internet sont appelés **clients** et **serveurs**. Un schéma simplifié de leur interaction pourrait ressembler à ceci&nbsp;:
 
-## Les autres composants du Web
+![Deux cercles représentant le client et le serveur. Une flèche « requête » va du client vers le serveur, et une flèche « réponse » va du serveur vers le client](simple-client-server.png)
 
-Le client et le serveur ne sont pas les seuls éléments qui interviennent. Il y a beaucoup d'autres composants que nous allons décrire dans la suite de cet article.
+- Les clients sont les appareils connectés à internet des utilisateur·ice·s du Web (par exemple, votre ordinateur connecté à votre Wi-Fi, ou votre téléphone connecté à votre réseau mobile) et les logiciels permettant d'accéder au Web sur ces appareils (généralement un navigateur web comme Firefox ou Chrome).
+- Les serveurs sont des ordinateurs qui stockent des pages web, des sites ou des applications. Lorsqu'un client souhaite accéder à une page web, une copie du code de la page est téléchargée depuis le serveur vers la machine cliente pour être interprétée par le navigateur et affichée à l'utilisateur·rice.
 
-Faisons un parallèle entre le Web et une rue. D'un côté de la rue, il y a une maison qui correspond au client. De l'autre côté, un magasin correspondant au serveur, et dans lequel vous souhaitez acheter quelque chose.
+## Les autres éléments de la boîte à outils
 
-![Une photographie en noir et blanc d'une personne qui traverse à un passage piéton.](road.jpg)
+Le client et le serveur que nous venons de décrire ne racontent pas toute l'histoire. De nombreux autres éléments interviennent, que nous allons détailler ci-dessous.
 
-En plus du client et du serveur, nous devons aussi mentionner&nbsp;:
+Pour l'instant, imaginons qu'Internet est une route. À une extrémité de la route se trouve le client, qui est comme votre maison. À l'autre extrémité se trouve le serveur, qui est comme un magasin où vous souhaitez acheter quelque chose.
 
-- La connexion Internet
-  - : Elle permet l'envoi et la réception de données sur le Web. Dans notre métaphore, elle correspond à la rue entre la maison et le magasin.
-- TCP/IP
-  - : <i lang="en">**T**ransmission **C**ontrol **P**rotocol</i> / <i lang="en">**I**nternet **P**rotocol</i> (en français&nbsp;: protocole de contrôle de transmission d'une part et protocole Internet d'autre part) sont des protocoles définissant comment les données voyagent sur le Web. On peut les comparer aux mécanismes de transport qui vous permettent de passer une commande, d'aller au magasin et d'acheter des marchandises. Dans notre métaphore, il pourrait par exemple s'agir d'un vélo ou d'une voiture.
-- DNS
-  - : <i lang="en">**D**omain **N**ame **S**ystem</i> (système de nom de domaine) est une sorte d'annuaire pour sites web. Lorsque vous saisissez une adresse dans le navigateur, ce dernier consulte le DNS pour trouver l'adresse réelle du site web avant de récupérer son contenu. Le navigateur a besoin de connaître le serveur sur lequel le site web est situé afin de pouvoir envoyer des requêtes HTTP au bon endroit (voir ci-après). Cela correspond à la recherche de l'adresse du magasin pour s'y rendre.
-- HTTP
-  - : <i lang="en">**H**yper**T**ext **T**ransfer **P**rotocol</i> (protocole de transfert hypertexte) est un [protocole](/fr/docs/Glossary/Protocol) d'application définissant le langage de communication entre les clients et les serveurs. Pour notre métaphore, il s'agirait de la langue utilisée pour commander les produits.
-- Les fichiers composants
-  - : Un site web est constitué de divers fichiers. Ils peuvent être vus comme diverses parties des produits qu'on achète au magasin. Ces fichiers peuvent être rangés dans deux catégories&nbsp;:
-    - Les fichiers de code
-      - : Les sites web sont constitués essentiellement de HTML, de CSS et de JavaScript (nous découvrirons d'autres technologies plus tard).
-    - Les ressources
-      - : Ce vocable recouvre tous les autres matériaux utilisés pour construire un site web&nbsp;: les images, les musiques, les vidéos, les documents Word et PDF.
+![Photo en noir et blanc d'une personne traversant une route sur un passage piéton](road.jpg)
 
-## Que se passe-t-il exactement&nbsp;?
+Pour que les données puissent circuler dans les deux sens, il nous faut les éléments suivants&nbsp;:
 
-Lorsque vous saisissez une adresse web dans votre navigateur (dans notre analogie, cela correspond à aller jusqu'au magasin)&nbsp;:
+- **Votre connexion Internet**&nbsp;: permet d'envoyer et de recevoir des données sur Internet. C'est en quelque sorte la rue entre votre maison et le magasin.
+- **TCP/IP**&nbsp;: le **Transmission Control Protocol** et l'**Internet Protocol** (TCP/IP) sont des protocoles de communication qui définissent comment les données doivent circuler sur Internet. Cela correspond aux moyens de transport qui vous permettent de passer commande, d'aller au magasin et d'acheter vos biens. Dans notre exemple, il s'agit d'une voiture ou d'un vélo (ou tout autre moyen de transport sur la route).
+- **DNS**&nbsp;: le **Domain Name System** (DNS) est comme un carnet d'adresses pour les sites web. Lorsque vous saisissez une adresse web dans votre navigateur, celui-ci consulte le DNS pour trouver l'adresse IP du site — l'adresse réelle où se trouve le serveur — avant de pouvoir récupérer le site (voir [Explication du DNS](#explication_du_dns) ci-dessous pour plus d'informations). Le navigateur doit savoir sur quel serveur se trouve le site afin d'envoyer les messages HTTP au bon endroit (voir ci-dessous). C'est comme chercher l'adresse du magasin avant de s'y rendre.
+- **HTTP**&nbsp;: le **Hypertext Transfer Protocol** (HTTP) est un {{Glossary("Protocol", "protocole")}} applicatif qui définit un langage pour que les clients et les serveurs puissent communiquer. C'est comme la langue que vous utilisez pour passer commande. Voir [Notions de base sur HTTP](#notions_de_base_sur_http) ci-dessous.
+- **Fichiers**&nbsp;: un site web est composé de nombreux fichiers différents, qui sont comme les différents biens que vous achetez au magasin. Ces fichiers se répartissent en deux grandes catégories&nbsp;:
+  - **Code**&nbsp;: les sites web sont principalement construits à partir de HTML, CSS et JavaScript — les différents langages de programmation dans lesquels les sites sont écrits, que le navigateur interprète et assemble en une page web à afficher à l'utilisateur·rice.
+  - **Ressources**&nbsp;: terme générique pour tous les autres éléments présents sur un site web — comme les images, la musique, la vidéo, les documents Word et les PDF — qui ne sont pas du code interprété par le navigateur.
 
-1. Le navigateur demande au serveur DNS l'adresse réelle du serveur contenant le site web (vous trouvez l'adresse du magasin).
-2. Le navigateur envoie une requête HTTP au serveur pour lui demander d'envoyer une copie du site web au client (vous allez au magasin et vous passez commande). Ce message, et les autres données envoyées entre le client et le serveur, sont échangés par l'intermédiaire de la connexion internet en utilisant TCP/IP.
-3. Si le serveur accepte la requête émise par le client, le serveur répond par un message «&nbsp;200 OK&nbsp;» au client, qui signifie&nbsp;: «&nbsp;Pas de problème, tu peux consulter ce site web, le voici.&nbsp;». Ensuite le serveur commence à envoyer les fichiers du site web au navigateur sous forme d'une série de petits morceaux qu'on appelle des «&nbsp;paquets de données&nbsp;» (le magasin vous fournit les produits et vous les ramenez chez vous).
-4. Le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur votre écran (les produits sont à votre porte).
+  > [!NOTE]
+  > Vous découvrirez comment le navigateur assemble ces fichiers en une page web plus loin dans ce cours, dans [Comment les navigateurs chargent les sites web](/fr/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites).
 
-## Ordre d'analyse des fichiers composants
+## Que se passe-t-il exactement ?
 
-Lorsque les navigateurs envoient des requêtes aux serveurs pour recevoir des fichiers HTML, ceux-ci contiennent souvent des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) qui référencent des feuilles de style [CSS](/fr/docs/Learn/CSS) externes et des éléments [`<script>`](/fr/docs/Web/HTML/Element/script) qui référencent des scripts [JavaScript](/fr/docs/Learn/JavaScript) externes. Il est important de connaître l'ordre selon lequel ces fichiers sont [analysés par le navigateur](/fr/docs/Web/Performance/How_browsers_work#parsing) lorsqu'il charge la page&nbsp;:
+Lorsque vous saisissez une adresse web (qui fait techniquement partie d'une [URL](#composants_dune_url)) dans la barre d'adresse de votre navigateur, les étapes suivantes se produisent&nbsp;:
 
-- Le navigateur commence par l'analyse du fichier HTML, ce qui lui permet de reconnaître les éventuels éléments `<link>` (pour les feuilles de style CSS externes) et `<script>` (pour les scripts).
-- Pendant l'analyse du fichier HTML, le navigateur envoie des requêtes au serveur pour les différents fichiers CSS indiqués par les éléments `<link>` et pour les fichiers JavaScript indiqués par les éléments `<script>`. Lorsque le navigateur a reçu ces fichiers, il analyse alors leur contenu CSS et JavaScript.
-- En mémoire vive, le navigateur génère une structure à partir du document HTML analysé&nbsp;: un arbre, qu'on appelle le [DOM](/fr/docs/Web/API/Document_Object_Model). Pour le CSS, il génère en mémoire une structure qu'on appelle le [CSSOM](/fr/docs/Glossary/CSSOM). Le code JavaScript analysé est [compilé et exécuté](/fr/docs/Web/Performance/How_browsers_work#compilation_javascript).
-- Quand le navigateur construit l'arbre du DOM, lui applique les styles à partir de l'arbre du CSSOM et exécute le JavaScript, une représentation visuelle de la page est affichée à l'écran&nbsp;: l'utilisatrice ou l'utilisateur peut alors voir le contenu de la page et commencer à interagir avec.
+1. Le navigateur interroge le serveur DNS et trouve l'adresse réelle du serveur sur lequel se trouve le site web.
+2. Le navigateur envoie un message de requête HTTP au serveur, lui demandant d'envoyer une copie du site web au client. Ce message, ainsi que toutes les autres données échangées entre le client et le serveur, transitent par votre connexion Internet en utilisant TCP/IP.
+3. Si le serveur approuve la requête du client, il envoie au client un message «&nbsp;200 OK&nbsp;», ce qui signifie «&nbsp;Bien sûr, vous pouvez consulter ce site&nbsp;! Le voici&nbsp;», puis commence à envoyer les fichiers du site au navigateur sous forme de petits morceaux appelés [paquets](#explication_des_paquets).
+4. Le navigateur assemble les petits morceaux pour reconstituer la page web complète et l'affiche.
 
-## Des explications sur le DNS
+## Explication du DNS
 
-Les vraies adresses web ne sont pas les chaînes pratiques et mémorisables que vous tapez dans votre barre d'adresse pour trouver vos sites web favoris. Il s'agit en réalité de suites de chiffres. Ces suites de chiffre sont des nombres spéciaux qui ressemblent à ceci&nbsp;: 203.0.113.133 ou 2001:db8:f6cb:01b3:a199:edb5:07c7:45ee.
+Les véritables adresses web ([URL](#composants_dune_url)) ne sont pas les jolies chaînes faciles à retenir que vous saisissez dans votre barre d'adresse pour trouver vos sites préférés. Ce sont des nombres spéciaux qui ressemblent à ceci&nbsp;: `192.0.2.172`.
 
-Ce sont des [adresses IP](/fr/docs/Glossary/IP_Address). Elles représentent un endroit unique sur le Web. Elles ne sont en revanche pas très faciles à retenir. C'est pour cela que le système de nom de domaine (DNS) a été conçu. Les serveurs DNS sont des serveurs spéciaux qui font correspondre le domaine d'une adresse web saisie dans le navigateur (par exemple «&nbsp;mozilla.org&nbsp;») avec l'adresse réelle (IP) du serveur du site.
+C'est ce qu'on appelle une {{Glossary("IP Address", "adresse IP")}}, et cela représente un emplacement unique sur le Web. Cependant, ce n'est pas très facile à retenir, n'est-ce pas&nbsp;? C'est pourquoi le système DNS a été inventé. Ce système utilise des serveurs spéciaux qui associent une adresse web saisie dans votre navigateur (comme «&nbsp;mozilla.org&nbsp;») à la véritable adresse (IP) du site.
 
-Il est possible d'atteindre directement les sites web en utilisant leur adresse IP. Vous pouvez utiliser [un outil de recherche DNS](https://www.nslookup.io/website-to-ip-lookup/) pour trouver l'adresse IP d'un site web.
+Les sites web peuvent être atteints directement via leur adresse IP. Vous pouvez utiliser un outil de recherche DNS pour trouver l'adresse IP d'un site web.
 
-## Explications sur les paquets
+Voyons maintenant l'adresse IP de MDN, et prouvons qu'elle pointe bien vers le même endroit que l'adresse web&nbsp;:
 
-Un peu plus haut dans l'article, nous avons utilisé le terme «&nbsp;paquet&nbsp;» pour décrire le format avec lequel les données étaient envoyées depuis le serveur vers le client. Qu'est-ce que cela signifie&nbsp;? Pour simplifier, lorsque des données sont envoyées sur le Web, elles sont envoyées en milliers de petits morceaux. Il y a plusieurs raisons à cela. Tout d'abord, il peut arriver que des paquets soient perdus ou qu'ils soient corrompus et il est alors plus facile de remplacer ces petits morceaux. De plus, les paquets peuvent être dirigés selon différentes routes, ce qui permet un échange plus rapide et qui permet à plusieurs personnes de télécharger un même site web au même moment. Si chaque site web était envoyé sous la forme d'un seul gros paquet, il n'y aurait que peu de personnes qui pourraient le télécharger à la fois, ce qui rendrait le Web beaucoup moins efficace et pratique à utiliser.
+1. Rendez-vous sur l'[outil de recherche DNS NsLookup.io <sup>(angl.)</sup>](https://www.nslookup.io/website-to-ip-lookup/), saisissez `developer.mozilla.org` et appuyez sur le bouton.
+2. Sur l'écran de résultats, copiez l'adresse IP (l'adresse IPv4) dans votre presse-papiers.
+3. Ouvrez un nouvel onglet de navigateur, collez l'adresse IP dans la barre d'adresse et appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>. Vous devriez voir MDN s'afficher, prouvant que l'adresse IP y mène bien.
+
+## Explication des paquets
+
+Plus haut, nous avons utilisé le terme «&nbsp;paquets&nbsp;» pour décrire le format dans lequel les données sont transférées entre le client et le serveur. Que veut-on dire ici&nbsp;?
+
+Lorsque des données sont envoyées sur le Web, elles le sont sous forme de petits morceaux appelés paquets. Chaque paquet contient&nbsp;:
+
+- Un **en-tête** (<i lang="en">header</i>), qui inclut des informations telles que l'adresse IP du serveur et du client, le numéro du paquet, le nombre total de paquets dans la transmission, et des détails sur les protocoles utilisés.
+- Une **charge utile** (<i lang="en">payload</i>), qui contient les données réelles envoyées dans le paquet.
+
+Il existe plusieurs raisons pour lesquelles les données sont envoyées en petits paquets, mais la plus importante est la suivante&nbsp;:
+
+- Ils sont parfois perdus ou corrompus, et dans ce cas, il est plus rapide et plus simple pour le client de redemander les paquets manquants plutôt que l'ensemble du fichier.
+- Les paquets peuvent être acheminés par différents chemins, rendant la transmission aussi efficace que possible et réduisant le risque de ralentir le réseau — surtout lorsque de nombreux utilisateur·ice·s demandent la même ressource en même temps. Les paquets peuvent arriver dans le désordre, mais le client peut utiliser les informations contenues dans les en-têtes pour s'assurer qu'ils sont assemblés dans le bon ordre.
+
+## Notions de base sur HTTP
+
+HTTP utilise un langage simple de verbes pour effectuer des actions comme faire des requêtes (voir [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)). La méthode HTTP {{HTTPMethod("GET")}} est celle normalement utilisée pour effectuer les requêtes HTTP du type décrit ci-dessus. Par exemple, une requête pour la page d'accueil de MDN pourrait ressembler à ceci&nbsp;:
+
+```http
+GET /fr/ HTTP/2
+
+Host: developer.mozilla.org
+```
+
+La réponse envoyée par le serveur pourrait ressembler à ceci&nbsp;:
+
+```http
+HTTP/2 200
+
+date: Tue, 11 Feb 2025 11:13:30 GMT
+expires: Tue, 11 Feb 2025 11:40:01 GMT
+server: Google frontend
+last-modified: Tue, 11 Feb 2025 00:49:32 GMT
+ETag: "65f26b7f6463e2347f4e5a7a2adcee54"
+content-length: 45227
+content-type: text/html
+
+<!doctype html> ... (les 45227 octets du HTML de la page demandée)
+```
+
+La réponse complète est plus complexe que cela, mais nous en avons omis la majeure partie pour plus de clarté. Les principales parties sont les suivantes&nbsp;:
+
+- `HTTP/2 200`
+  - : La version de HTTP utilisée par le serveur pour envoyer la réponse, ici HTTP/2, suivie d'un [code d'état](/fr/docs/Web/HTTP/Reference/Status) indiquant si la requête a réussi. `200` indique le succès.
+- `date`, `expires`, etc.
+  - : [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers) contenant des informations supplémentaires sur la réponse (notez que les requêtes peuvent aussi avoir des en-têtes), qui fournissent des informations additionnelles et/ou modifient son comportement.
+- `<!doctype html>`, etc.
+  - : Le corps de la réponse, qui dans ce cas contient le document HTML de la page d'accueil de MDN.
+
+> [!NOTE]
+> Consultez la [référence HTTP](/fr/docs/Web/HTTP) de MDN pour plus de détails sur HTTP, si cela vous intéresse. [Vue d'ensemble de HTTP](/fr/docs/Web/HTTP/Guides/Overview) est un bon point de départ.
+
+### Autres codes d'état
+
+Plus haut, nous avons rencontré le [code d'état](/fr/docs/Web/HTTP/Reference/Status) `200`, qui indique que la requête HTTP a réussi. Il existe de nombreux codes d'état HTTP avec des significations et des usages spécifiques, mais vous n'en verrez couramment que quelques-uns&nbsp;:
+
+- `301`
+  - : La ressource demandée a été déplacée de façon permanente vers un nouvel emplacement, indiqué dans la réponse. Cela sert à rediriger le contenu lorsqu'il a été déplacé.
+- `400`
+  - : Le serveur ne peut pas traiter la requête. Cela se produit généralement lorsque la requête n'est pas dans un format compris par le serveur, ou contient des erreurs.
+- `403`
+  - : Le serveur ne donnera pas accès à la ressource demandée au client. Cela arrive généralement lorsque le serveur sait qui est le client, mais que celui-ci n'a pas la permission d'accéder à la page demandée.
+- `404`
+  - : Le serveur ne trouve pas la ressource demandée. Ce code est souvent renvoyé si l'URL est incorrecte ou si un contenu a été supprimé sans redirection.
+- `503`
+  - : La requête ne peut pas être traitée à cause d'un problème côté serveur. C'est fréquent lorsque les serveurs sont hors ligne pour maintenance, et c'est censé être temporaire.
+
+## Composants d'une URL
+
+Techniquement, les adresses web que vous saisissez dans la barre d'adresse du navigateur font partie des **Uniform Resource Locators** (**URL**). Les URL définissent l'emplacement de ressources uniques sur Internet.
+
+Une URL est une adresse web plus un protocole&nbsp;: par exemple, si vous ouvrez un nouvel onglet dans votre navigateur, saisissez `developer.mozilla.org` dans la barre d'adresse et appuyez sur <kbd>Entrée</kbd>/<kbd>Retour</kbd>, vous serez redirigé·e vers une URL comme celle-ci&nbsp;:
+
+```plain
+https://developer.mozilla.org/fr/
+```
+
+Les principales parties de l'URL sont&nbsp;:
+
+- `https`
+  - : Le **protocole** utilisé pour envoyer la requête. Dans ce cas, nous utilisons {{Glossary("HTTPS")}}, qui est une version sécurisée de HTTP empêchant des personnes malveillantes de lire vos données pendant leur transport. Sur le Web moderne, pratiquement tous les serveurs utilisent HTTPS, donc si vous ne le précisez pas, le navigateur suppose que c'est ce que vous utilisez et l'ajoute pour vous.
+- `developer.mozilla.org`
+  - : Le [**nom de domaine**](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) de l'URL, qui représente l'emplacement principal du serveur auquel vous vous connectez. Dans ce cas, l'adresse web que vous avez saisie est égale au nom de domaine, mais ce n'est pas toujours le cas — vous pourriez saisir une adresse web plus complexe. Notez que la partie `developer` est un **sous-domaine** (zone de contenu distincte) du domaine `mozilla.org` de Mozilla. Il existe d'autres sous-domaines sur le site de Mozilla qui hébergent des contenus distincts — voir par exemple [support.mozilla.org <sup>(angl.)</sup>](https://support.mozilla.org/) et [bugzilla.mozilla.org <sup>(angl.)</sup>](https://bugzilla.mozilla.org/).
+- `/fr/`
+  - : Le **chemin** vers la ressource sur le serveur à laquelle vous accédez. MDN conserve tout son contenu en français dans un dossier appelé `fr`, ce à quoi cette URL fait référence.
+
+    Si votre navigateur est configuré pour préférer le contenu en français par défaut, alors c'est l'URL vers laquelle vous serez redirigé·e lorsque vous saisissez `developer.mozilla.org`. Si votre navigateur est configuré pour préférer une autre langue prise en charge par MDN, comme l'anglais', vous serez redirigé·e vers une URL différente, comme `https://developer.mozilla.org/en-US/`. Ce n'est pas disponible par défaut sur tous les sites&nbsp;: les développeur·euse·s de MDN ont mis en place ce système pour permettre à chacun·e d'accéder facilement à la langue de son choix.
+
+> [!NOTE]
+> Il existe de nombreux autres composants qui peuvent apparaître dans les URL. Voir [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) pour plus de détails.
 
 ## Voir aussi
 
-- [Le fonctionnement d'Internet](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
-- [Le fonctionnement du DNS, une présentation de Stéphane Bortzmeyer](https://data.iletaitunefoisinternet.fr/dns-bortzmeyer/dns_bortzmeyer_slides.pdf)
-- [<i lang="en">HTTP — an Application-Level Protocol</i> (en anglais)](https://dev.opera.com/articles/http-basic-introduction/)
-- [<i lang="en">HTTP: Let's GET It On!</i> (en anglais)](https://dev.opera.com/articles/http-lets-get-it-on/)
-- [<i lang="en">HTTP: Response Codes</i> (en anglais)](https://dev.opera.com/articles/http-response-codes/)
+- [Comment fonctionne Internet](/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 
 ## Crédit
 
-Photo de rue&nbsp;: [<i lang="en">Street composing</i>](https://www.pinterest.com/pin/400538960580676851/), par [Kevin Digga](https://www.pinterest.com/kevindigga/).
+Photo de rue&nbsp;: [Street composing <sup>(angl.)</sup>](https://www.pinterest.com/pin/400538960580676851/), par [Kevin Digga <sup>(angl.)</sup>](https://www.pinterest.com/kevindigga/).
 
-{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}

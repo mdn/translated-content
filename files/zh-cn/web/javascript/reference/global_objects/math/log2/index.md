@@ -3,10 +3,6 @@ title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`Math.log2()`** 函数返回一个数字以 2 为底的对数。
 
 ## 语法

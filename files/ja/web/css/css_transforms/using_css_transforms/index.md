@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
-
 **CSS 座標変換** (CSS transforms) は、座標空間を編集することで、通常の文書フローを混乱させずに影響下にあるコンテンツの形状や位置を変えることができます。このガイドは座標変換の使用についての解説を行ないます。
 
 CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。座標変換には、回転 (rotation)、歪め (skewing)、変倍 (scaling)、平行移動 (translation) などがあり、平面と 3D 空間の両方で行われます。
@@ -534,7 +532,7 @@ section {
 
 ## 関連情報
 
-- [CSS の `transform` プロパティ](/ja/docs/Web/CSS/transform)および [CSS `<transform-function>` データ型](/ja/docs/Web/CSS/transform-function)
+- [CSS の `transform` プロパティ](/ja/docs/Web/CSS/Reference/Properties/transform)および [CSS `<transform-function>` データ型](/ja/docs/Web/CSS/transform-function)
 - 独立した座標変換プロパティ: {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} （`skew` プロパティはありません）
 - [端末の向きと 3D 座標変換の併用](/ja/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/) (David DeSandro によるブログ記事)

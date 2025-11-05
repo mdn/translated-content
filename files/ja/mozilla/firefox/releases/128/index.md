@@ -16,7 +16,7 @@ l10n:
 ### CSS
 
 - [相対的な色の構文](/ja/docs/Web/CSS/CSS_colors/Relative_colors) をデフォルトで有効にしました。相対的な色の構文により、元の色に対して相対的な色の値を作成できます。また、[色関数](/ja/docs/Web/CSS/CSS_colors#functions) を使用して異なる [色空間](/ja/docs/Glossary/Color_space) の色の値に変換できます ([Firefox bug 1900251](https://bugzil.la/1900251))。
-- [`content`](/ja/docs/Web/CSS/content) プロパティで、画像を含むコンテンツのための [代替テキスト](/ja/docs/Web/CSS/content#alternative_text) をサポートしました。代替テキストは、ブラウザーのアクセシビリティツリーに現れます ([Firefox bug 1281158](https://bugzil.la/1281158)、[Firefox bug 1896047](https://bugzil.la/1896047))。
+- [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティで、画像を含むコンテンツのための [代替テキスト](/ja/docs/Web/CSS/Reference/Properties/content#alternative_text) をサポートしました。代替テキストは、ブラウザーのアクセシビリティツリーに現れます ([Firefox bug 1281158](https://bugzil.la/1281158)、[Firefox bug 1896047](https://bugzil.la/1896047))。
 
 #### 廃止
 
@@ -49,7 +49,7 @@ l10n:
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} をサポートしました。WebRTC のローカルピアが受信したデータをデコードするために使用できるコーデックを、好みの順番で設定します。ウェブアプリケーションは、リモートピアに好みのコーデックを選択させたり、(再送信、冗長化、前方誤り訂正に使用するものを含む) 特定のコーデックのネゴシエーションを無効にしたりするためにこのメソッドを使用できます ([Firefox bug 1396922](https://bugzil.la/1396922))。
 - {{domxref('ShadowRoot.getHTML()')}}、{{domxref('Element.getHTML()')}} メソッド、およびこれらに関連する {{domxref('ShadowRoot.serializable')}}、{{domxref('HTMLTemplateElement.shadowRootSerializable')}} プロパティを含む、[宣言的なシャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#html_で宣言的に) のシリアライズをサポートしました。
 - [`CSSPropertyRule`](/ja/docs/Web/API/CSSPropertyRule) インターフェイスをデフォルトで有効にして、CSS の [`@property`](/ja/docs/Web/CSS/@property) アットルールを表すようになりました。このインターフェイスは [`name`](/ja/docs/Web/API/CSSPropertyRule/name)、[`syntax`](/ja/docs/Web/API/CSSPropertyRule/syntax)、[`inherits`](/ja/docs/Web/API/CSSPropertyRule/inherits)、[`initialValue`](/ja/docs/Web/API/CSSPropertyRule/initialValue) のような、`@property` アットルールを使用して定義した CSS カスタムプロパティの値を取得できます ([Firefox bug 1864818](https://bugzil.la/1864818))。
-- [`registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッドをデフォルトで有効にしました。JavaScript で [CSS カスタムプロパティ](/ja/docs/Web/CSS/--*) を定義できます。これは、CSS の `@property` アットルールを使用することに似ています ([Firefox bug 1864818](https://bugzil.la/1864818))。
+- [`registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッドをデフォルトで有効にしました。JavaScript で [CSS カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) を定義できます。これは、CSS の `@property` アットルールを使用することに似ています ([Firefox bug 1864818](https://bugzil.la/1864818))。
 
 #### Media、WebRTC、Web Audio
 

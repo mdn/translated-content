@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **`autofocus`** 是一个布尔属性，表示元素应在页面加载时或其所属的 {{HTMLElement("dialog")}} 显示时被聚焦。
 
 ```html

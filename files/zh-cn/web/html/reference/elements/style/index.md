@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 176953b8260e0dd4328a7e788e8179accbafb8e1
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) 的 **`<style>`** 元素包含文档的样式信息或文档的部分内容。其中的 CSS 会应用于包含 `<style>` 元素的文档内容。
 
 {{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
@@ -48,7 +46,7 @@ p {
 该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `blocking`
-  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
+  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/Reference/Properties/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
     - `render`：屏幕上的内容渲染被阻断。
 - `media`
   - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。

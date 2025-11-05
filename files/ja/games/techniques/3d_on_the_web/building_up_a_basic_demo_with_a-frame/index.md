@@ -257,7 +257,8 @@ render();
 
 利用可能な VR 機器を持っていれば、それを使ってあなたのシーンを試す良いタイミングです。
 
-> **メモ:** [Github で確認](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html)することもできます。
+> [!NOTE]
+> [Github で確認](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html)することもできます。
 
 思ったより簡単だったでしょう？ A-Frame はウェブ開発者を対象に、簡単に使用できるウェブマークアップと、それがもたらす JavaScript 操作などのあらゆる利点を提供します。簡単に始められるだけでなく、高度なコンセプトや、ブラウザー間の差異などを扱うための強力な API も提供しています。対応する VR 機器の数と同じように、コミュニティも増えてきており、このようなフレームワークの実験を始めるには絶好の機会です。
 

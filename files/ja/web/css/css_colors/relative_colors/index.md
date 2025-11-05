@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
 ---
 
-{{CSSRef}}
-
 [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)は、**相対的な色構文**を定義しており、 CSS の {{cssxref("&lt;color&gt;")}} 値を他の色に関連して定義することができます。これは、既存の色の補色（明度、彩度、半透明、反転など）を簡単に作成できる強力な機能であり、より効果的なカラーパレットの作成を可能にします。
 
 この記事では、相対色の構文について説明し、異なるオプションが何であるかを示し、いくつかの例を示して見ていきます。
@@ -232,7 +230,7 @@ rgb(from red r g b / alpha)
 
 ## 数学関数の使用
 
-出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
+出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
 
 次の CSS は、異なる背景色を持つ 3 つの {{htmlelement("div")}} 要素のスタイルを指定しています。中央の要素には変更されていない `--base-color` が指定され、左右の要素には、その `--base-color` の明度を上げたもの、下げたものがそれぞれ指定されています。これらのバリエーションは相対色を使用して定義されています。 `--base-color` は `lch()` 関数に渡され、 `calc()` 関数を使用して、望みの効果を得るために出力色の明度チャンネルを変更しています。明るくする色には明度チャンネルに 20% を加算し、暗くする色には 20% を減算しています。
 
@@ -656,7 +654,7 @@ CSS の `:root` には既定で `--hue` 値が設定されており、相対 [`l
 - `--bg-color`: 背景色として使用することを意図した、 `--base-color` のかなり明るい色。これは `--base-color` の元の色を取り、その明度値に 40 を加えて作成します。
 - `--complementary-color`: `--base-color` から色相環を 180 度回った補色。これは、 `--base-color` の元の色を取り、その色相値に 180 を加えることで作成します。
 
-これで残りの CSS を見て、これらの色が使用されている場所をすべてメモしてください。これには[背景](/ja/docs/Web/CSS/background)、[境界線](/ja/docs/Web/CSS/border)、[`text-shadow`](/ja/docs/Web/CSS/text-shadow)、そしてスライダーの [`accent-color`](/ja/docs/Web/CSS/accent-color) まで含まれます。
+これで残りの CSS を見て、これらの色が使用されている場所をすべてメモしてください。これには[背景](/ja/docs/Web/CSS/Reference/Properties/background)、[境界線](/ja/docs/Web/CSS/Reference/Properties/border)、[`text-shadow`](/ja/docs/Web/CSS/Reference/Properties/text-shadow)、そしてスライダーの [`accent-color`](/ja/docs/Web/CSS/Reference/Properties/accent-color) まで含まれます。
 
 > [!NOTE]
 > 簡潔にするため、相対色の使用に関連する CSS の部分のみを掲載しています。

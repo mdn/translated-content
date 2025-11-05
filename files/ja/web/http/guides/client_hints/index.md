@@ -1,9 +1,9 @@
 ---
 title: HTTP クライアントヒント
+short-title: クライアントヒント
 slug: Web/HTTP/Guides/Client_hints
-original_slug: Web/HTTP/Guides/Client_hints
 l10n:
-  sourceCommit: 48c0135f31d11eebde3e5bc3899811ddc69d2538
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 **クライアントヒント** (Client hints) は、サーバーがクライアントに積極的にリクエストすることで、端末、ネットワーク、ユーザー、およびユーザーエージェント固有の環境設定に関する情報を取得することができる [HTTP リクエストヘッダー](/ja/docs/Web/HTTP/Reference/Headers) フィールド群です。
@@ -28,7 +28,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 リクエストされなかった場合、クライアントイベントによって送信される可能性のある、[低エントロピーのクライアントヒントヘッダー](#低エントロピーヒント)も少しあります。
 
 > [!NOTE]
-> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#attr-http-equiv) 属性を使用して指定することも可能です。
+> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv) 属性を使用して指定することも可能です。
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -57,16 +57,24 @@ Vary: Accept, Width, ECT
 サーバーが受け取りたいクライアントヒントの集合を置き換えるには、 `Accept-CH` レスポンスヘッダーを新しいリストで再送することで行うことができます。
 例えば、何もリクエストしないようにするには、空のリストで `Accept-CH` を送ります。
 
+> [!NOTE]
+> 特定のオリジンに対して設定されたクライアントヒントは、そのオリジン内の URL に対して {{httpheader("Clear-Site-Data", "Clear-Site-Data: \"clientHints\"")}} レスポンスヘッダーを送信することでクリアすることもできます。
+
 ## 低エントロピーヒント
 
 クライアントヒントは、高エントロピーと低エントロピーのヒントに大別されます。
+低エントロピーヒントは、特定のユーザーを[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)（識別）するために使用される可能性がある情報を多くは与えないものです。
+これらは、サーバーの `Accept-CH` レスポンスヘッダーに関係なく、権限ポリシーに応じて、すべてのクライアントリクエストで既定で送信される可能性があります。
 
-低エントロピーヒントは、特定のユーザーを「フィンガープリント」（識別）するために使用される可能性がある情報を多くは与えないものです。
-これらは、サーバーの `Accept-CH` レスポンスヘッダーに関係なく、許可ポリシーに応じて、すべてのクライアントリクエストで既定で送信される可能性があります。
-これらのヒントには {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}} などがあります。
+- {{HTTPHeader("Save-Data")}}
+- {{HTTPHeader("Sec-CH-UA")}}
+- {{HTTPHeader("Sec-CH-UA-Mobile")}}
+- {{HTTPHeader("Sec-CH-UA-Platform")}}
 
-高エントロピーヒントは、ユーザーのフィンガープリントに使用される可能性のある、より多くの情報を保持することができるものです。したがって、そのため、提供するかどうかをユーザーエージェントが選択できるような形で制限を設けています。
-その決定はユーザーの環境設定、許可リクエスト、または許可ポリシーに基づいて行われる可能性があります。
+## 高エントロピーヒント
+
+高エントロピーヒントは、ユーザーのフィンガープリンティングに使用される可能性のある、より多くの情報を保持することができるものです。したがって、そのため、提供するかどうかをユーザーエージェントが選択できるような形で制限を設けています。
+その決定はユーザーの環境設定、許可リクエスト、または権限ポリシーに基づいて行われる可能性があります。
 低エントロピーヒントでないすべてのクライアントヒントは、高エントロピーヒントとみなされます。
 
 ## 重要なクライアントヒント
@@ -88,7 +96,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **メモ:** `Sec-CH-Prefers-Reduced-Motion` も {{httpheader("Vary")}} ヘッダーに指定することで、ブラウザーに対して、 URL は同じであってもこのヘッダー値に基づいて提供するコンテンツが異なるので、ブラウザーはキャッシュされた既存のレスポンスをそのまま使用せず、このレスポンスを別途キャッシュすべきなのだと示しています。 `Critical-CH` ヘッダーに掲載されている各ヘッダーは `Accept-CH` ヘッダーと `Vary` ヘッダーにも存在しなければなりません。
+> [!NOTE]
+> `Sec-CH-Prefers-Reduced-Motion` も {{httpheader("Vary")}} ヘッダーに指定することで、ブラウザーに対して、 URL は同じであってもこのヘッダー値に基づいて提供するコンテンツが異なるので、ブラウザーはキャッシュされた既存のレスポンスをそのまま使用せず、このレスポンスを別途キャッシュすべきなのだと示しています。 `Critical-CH` ヘッダーに掲載されている各ヘッダーは `Accept-CH` ヘッダーと `Vary` ヘッダーにも存在しなければなりません。
 
 `Sec-CH-Prefers-Reduced-Motion` は元のリクエストにはなかった重要なヒントなので、クライアントは自動的にリクエストを再試行します。今度は `Sec-CH-Prefers-Reduced-Motion` を通じて、動きの少ないアニメーションを好むユーザーであることをサーバーに指示します。
 
@@ -102,10 +111,10 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ### ユーザーエージェントクライアントヒント
 
-ユーザーエージェント (UA) クライアントヒントヘッダーにより、サーバーはユーザーエージェント（ブラウザー）、オペレーティングシステム、および機器に応じてレスポンスを変化させることができるようになります。
-ヘッダーには {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Arch")}}, {{HTTPHeader("Sec-CH-UA-Bitness")}}, {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}, {{HTTPHeader("Sec-CH-UA-Full-Version")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Model")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}, {{HTTPHeader("Sec-CH-UA-Platform-Version")}} などがあります。
+ユーザーエージェント (UA) クライアントヒントヘッダーを使用すると、サーバーはユーザーエージェント（ブラウザー）、オペレーティングシステム、および端末に基づいてレスポンスを変更することができます。
+`Sec-CH-UA-*` ヘッダーの一覧については、[ユーザーエージェントクライアントヒントヘッダー](/ja/docs/Web/HTTP/Reference/Headers#ユーザーエージェントクライアントヒント)を参照してください。
 
-クライアントヒントは、ウェブページの JavaScript で[ユーザーエージェントクライアントヒント API](/ja/docs/Web/API/User-Agent_Client_Hints_API) によって使用することができます。
+クライアントヒントは、[ユーザーエージェントクライアントヒント API](/ja/docs/Web/API/User-Agent_Client_Hints_API) を通じて、ウェブページの JavaScript が利用できます。
 
 > [!NOTE]
 > サーバーは現在、 {{HTTPHeader("User-Agent")}} ヘッダーを解釈することによって、同じ情報のほとんどを取得することができます。
@@ -113,15 +122,18 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 > UA クライアントヒントは、望ましい情報を取得するための、より効率的でプライバシーを維持した方法を提供します。
 > 最終的にこの古い手法を置き換えることが期待されています。
 
+> [!NOTE]
+> ユーザーエージェントのクライアントヒントは、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)では利用できません。これは、クライアントヒントが[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の委任に依存しており、その委任がデータの漏洩に使用される可能性があるためです。
+
 ### ユーザー環境設定メディア特性クライアントヒント
 
-ユーザー環境設定メディア特性クライアントヒントは、配色や動きの縮小などの [CSS メディア特性](/ja/docs/Web/CSS/@media#media_features)に対するユーザーエージェントの環境設定に基づいて、サーバーがレスポンスを変更することを可能にします。
+ユーザー環境設定メディア特性クライアントヒントは、配色や動きの縮小などの [CSS メディア特性](/ja/docs/Web/CSS/@media#media_features)に対するユーザーエージェントの環境設定に基づいて、サーバーがレスポンスを変更することができるようにします。
 ヘッダーには {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} などがあります。
 
 ### 端末クライアントヒント
 
-端末クライアントヒントは、利用できるメモリーや画面のプロパティなど、端末の特性に応じてサーバーがレスポンスを変化させることを可能にします。
-ヘッダーには {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}} などがあります。
+端末クライアントヒントは、利用できるメモリーや画面のプロパティなど、端末の特性に応じてサーバーがレスポンスを変化させることができるようにします。
+ヘッダーには {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}} などがあります。
 
 ### ネットワーククライアントヒント
 
@@ -134,4 +146,4 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 - [`Vary` HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)（英語）
 - [ユーザーエージェントクライアントヒント API](/ja/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)（英語）
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)（英語）

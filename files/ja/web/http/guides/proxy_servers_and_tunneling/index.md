@@ -1,7 +1,8 @@
 ---
 title: プロキシーサーバーとトンネリング
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling
-original_slug: Web/HTTP/Proxy_servers_and_tunneling
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 インターネットのさまざまなネットワークを移動するときに、プロキシーサーバーと HTTP トンネルは、 World Wide Web 上のコンテンツへのアクセスを容易にしています。プロキシーはユーザーのローカルコンピュータ、またはユーザーのコンピュータとインターネット上の送信先サーバーの間の任意の場所に配置できます。このページではプロキシーに関するいくつかの基本を概説し、いくつかの設定オプションを紹介します。
@@ -10,13 +11,13 @@ original_slug: Web/HTTP/Proxy_servers_and_tunneling
 
 ## フォワードプロキシー
 
-フォワードプロキシー、またはゲートウェイ、または単に「プロキシー」は、クライアントまたはクライアントグループにプロキシーサービスを提供します。インターネットには数十万もの公開プロキシーが存在する可能性があります。グループによって使用される帯域幅を減らして制御するために、インターネットサービス (DNS や Web ページなど) を格納して転送します。
+フォワードプロキシー、またはゲートウェイ、または単に「プロキシー」は、クライアントまたはクライアントグループにプロキシーサービスを提供します。インターネットには数十万もの公開プロキシーが存在する可能性があります。グループによって使用される帯域幅を減らして制御するために、インターネットサービス（DNS やウェブページなど）を格納して転送します。
 
-フォワードプロキシーは匿名プロキシーにすることもでき、ユーザーは Web をブラウズしたり他のインターネットサービスを使用している間に自分の IP アドレスを隠すことができます。[TOR](https://www.torproject.org/) (The Onion Router) は、匿名性のために複数のプロキシーを介してインターネットトラフィックをルーティングします。
+フォワードプロキシーは匿名プロキシーにすることもでき、ユーザーはウェブをブラウズしたり他のインターネットサービスを使用している間に自分の IP アドレスを隠すことができます。[TOR](https://www.torproject.org/) (The Onion Router) は、匿名性のために複数のプロキシーを介してインターネットトラフィックをルーティングします。
 
 ## リバースプロキシー
 
-その名前が示すように、リバースプロキシーはフォワードプロキシーとは逆の動作を行います。フォワードプロキシーはクライアント (またはリクエストホスト) に代わって動作し、リバースプロキシーはサーバーに代わって動作します。フォワードプロキシーはクライアントの ID を隠すことができますが、リバースプロキシーはサーバーの ID を隠すことができます。リバースプロキシーにはいくつかの利用法がありますが、一部を紹介します。
+その名前が示すように、リバースプロキシーはフォワードプロキシーとは逆の動作を行います。フォワードプロキシーはクライアント（またはリクエストホスト）に代わって動作し、リバースプロキシーはサーバーに代わって動作します。フォワードプロキシーはクライアントの ID を隠すことができますが、リバースプロキシーはサーバーの ID を隠すことができます。リバースプロキシーにはいくつかの利用法がありますが、一部を紹介します。
 
 - ロードバランシング: 複数のウェブサーバーに負荷を分散すること
 - 静的なコンテンツのキャッシュ: 写真のような静的コンテンツをキャッシュすることによってウェブサーバーの負荷を軽減すること
@@ -53,34 +54,27 @@ HTTP プロトコルは {{HTTPMethod("CONNECT")}} と呼ばれるリクエスト
 
 [Wikipedia の HTTP トンネルの記事](https://en.wikipedia.org/wiki/HTTP_tunnel)も参照してください。
 
-## プロキシーの自動設定 (PAC)
+## プロキシーの自動構成 (PAC)
 
-[プロキシー自動設定 (PAC) ファイル](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)は、ウェブブラウザーのリクエスト (HTTP、HTTPS、および FTP) を直接宛先に送信するか、ウェブプロキシーサーバーに転送するかを決定する [JavaScript](/ja/docs/Web/JavaScript) 関数です。PAC ファイルに含まれる JavaScript 関数は、次の関数を定義します。
+[プロキシー自動構成 (PAC) ファイル](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)は、ウェブブラウザーのリクエスト (HTTP、HTTPS、および FTP) を直接宛先に送信するか、ウェブプロキシーサーバーに転送するかを決定する [JavaScript](/ja/docs/Web/JavaScript) 関数です。PAC ファイルに含まれる JavaScript 関数は、次の関数を定義します。
 
-auto-config ファイルは拡張子が `.pac` のファイルに保存する必要があります。
+自動構成ファイルは拡張子が `.pac` のファイルに保存する必要があります。
 
-```
-proxy.pac
-```
-
-MIME タイプは次のように設定されています。
-
-```
-application/x-ns-proxy-autoconfig
-```
+そして、MIME タイプを `application/x-ns-proxy-autoconfig` に設定します。
 
 このファイルは `FindProxyForURL` という関数で構成されています。以下の例は、内部 DNS サーバーが内部ホスト名のみを解決できるように設定されている環境で動作し、解決できないホストに対してのみプロキシーを使用することを目標としています。
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host)) return "DIRECT";
-  else return "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) {
+    return "DIRECT";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
-他の例については[プロキシー自動設定 (PAC)](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) を参照してください。
-
 ## 関連情報
 
-- {{HTTPMethod("CONNECT")}}
-- [Proxy server on Wikipedia](https://en.wikipedia.org/wiki/Proxy_server)
+- [プロキシー自動構成 (PAC) ファイル](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)
+- {{HTTPMethod("CONNECT")}} メソッド
+- {{glossary("Proxy server", "プロキシーサーバー")}}

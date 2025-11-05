@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f6497ec3b1a28d7b0a99f5d13e81027204293fa3
 ---
 
-{{CSSRef}}
-
 **CSS 背景と境界**モジュールでは、背景、境界、角の丸め、ボックスシャドウを要素に追加します。
 
 さまざまな種類の境界スタイルを追加することができます。ラスター画像から CSS グラデーションまで、どのような種類の画像でも境界を記載することができます。境界は角形または丸めることができ、それぞれの角には異なる半径を設定することができます。要素は、境界があってもなくても丸めることができます。
@@ -177,9 +175,9 @@ div:first-of-type {
 - {{cssxref("text-shadow")}} プロパティ
 
 - {{cssxref("url_value", "&lt;url&gt;")}} データ型
-- [`<color>`](/ja/docs/Web/CSS/color) データ型
+- [`<color>`](/ja/docs/Web/CSS/Reference/Properties/color) データ型
 - [`<image>`](/ja/docs/Web/CSS/image) データ型
-- [`<position>`](/ja/docs/Web/CSS/position) データ型
+- [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position) データ型
 
 - [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) キーワード
 

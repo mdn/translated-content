@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/How_CSS_is_structured
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.
 
@@ -42,7 +42,7 @@ Regardons d'abord les trois méthodes pour appliquer CSS à un document.
 
 ### Feuille de style externe
 
-Dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
+Dans la leçon [Démarrer avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started) nous avons lié une feuille de style externe à notre document. C'est la méthode la plus commune pour appliquer CSS à un document. C'est aussi la plus utile : dans la plupart des cas, les différentes pages d'un site ont à peu près la même apparence, on peut donc utiliser le même jeu de règles pour l'apparence de base. Il est dans ce cas commode d'écrire ces règles une seule fois dans une feuille de style commune à toutes les pages.
 
 Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans un fichier séparé, avec l'extension `.css`. Un élément HTML `<link>` fait référence à ce fichier.
 
@@ -75,7 +75,7 @@ p {
 }
 ```
 
-L'attribut `href` de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) doit pointer vers un fichier dans votre système de fichiers.
+L'attribut `href` de l'élément [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) doit pointer vers un fichier dans votre système de fichiers.
 
 Dans l'exemple ci-dessus, le fichier CSS et le document HTML sont dans le même dossier, mais vous pouvez le placer ailleurs et ajuster le chemin, par exemple :
 
@@ -92,7 +92,7 @@ Dans l'exemple ci-dessus, le fichier CSS et le document HTML sont dans le même 
 
 ### Feuille de style interne
 
-Les règles CSS peuvent être écrites directement dans l'en-tête HTML [`<head>`](/fr/docs/Web/HTML/Element/head) dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style). On parle alors de feuille de style interne.
+Les règles CSS peuvent être écrites directement dans l'en-tête HTML [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) dans un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style). On parle alors de feuille de style interne.
 
 Le code HTML ci-dessous illustre cette technique :
 
@@ -187,7 +187,7 @@ Bonne lecture !
 
 ## Sélecteurs
 
-Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
+Vous ne pouvez pas parler de CSS sans rencontrer les sélecteurs et nous en avons déjà découvert différents types dans le tutoriel [Démarrer avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started). Un sélecteur cible quelque chose dans le document HTML afin de lui appliquer des styles. Quand une mise en forme ne s'applique pas comme prévu, il est probable que le sélecteur concerné ne fonctionne pas comme vous l'attendiez.
 
 Chaque règle CSS commence par un sélecteur ou une liste de sélecteurs afin d'indiquer au navigateur les éléments auxquels les règles doivent s'appliquer. Tous les exemples suivants sont des exemples de sélecteurs valides ou de listes de sélecteurs.
 
@@ -205,7 +205,7 @@ h1, h2, .intro
 Essayez de créer des règles CSS qui utilisent les sélecteurs ci-dessus et du code HTML à styler. Si vous ne savez pas ce que signifie la syntaxe ci-dessus, essayez de la rechercher sur MDN !
 
 > [!NOTE]
-> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors), dans un prochain cours.
+> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), dans un prochain cours.
 
 ### Spécificité
 
@@ -243,13 +243,13 @@ Cependant, dans l'exemple plus haut avec le sélecteur de classe et le sélecteu
 
 **Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special` pour voir comment il affecte le style.**
 
-Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
+Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
 
 ## Propriétés et valeurs
 
 Au niveau le plus fondamental, CSS se compose de deux blocs de construction :
 
-- **Propriétés** : des identifiants lisibles par l'homme indiquant les caractéristiques stylistiques ([`font-size`](/fr/docs/Web/CSS/font-size), [`width`](/fr/docs/Web/CSS/width), [`background-color`](/fr/docs/Web/CSS/background-color), par exemple) que vous souhaitez modifier ;
+- **Propriétés** : des identifiants lisibles par l'homme indiquant les caractéristiques stylistiques ([`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size), [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), par exemple) que vous souhaitez modifier ;
 - **Valeurs** : une valeur est attribuée à chaque propriété spécifiée. Elle indique comment vous souhaitez modifier ces caractéristiques stylistiques (par exemple, en modifiant la couleur de la police, la largeur ou l'arrière-plan).
 
 L'image ci-dessous met en évidence une propriété et une valeur uniques. Le nom de la propriété est `color` et la valeur `blue`.
@@ -268,11 +268,11 @@ Définir les propriétés CSS sur des valeurs spécifiques est la fonction princ
 
 **Recherchez différentes valeurs possibles pour les propriétés suivantes puis écrivez des règles CSS qui les appliquent à différents éléments HTML :**
 
-- **[`font-size`](/fr/docs/Web/CSS/font-size)**
-- **[`width`](/fr/docs/Web/CSS/width)**
-- **[`background-color`](/fr/docs/Web/CSS/background-color)**
-- **[`color`](/fr/docs/Web/CSS/color)**
-- **[`border`](/fr/docs/Web/CSS/border)**
+- **[`font-size`](/fr/docs/Web/CSS/Reference/Properties/font-size)**
+- **[`width`](/fr/docs/Web/CSS/Reference/Properties/width)**
+- **[`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)**
+- **[`color`](/fr/docs/Web/CSS/Reference/Properties/color)**
+- **[`border`](/fr/docs/Web/CSS/Reference/Properties/border)**
 
 > [!WARNING]
 > Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
@@ -311,7 +311,7 @@ La page devrait s'afficher comme ceci :
 
 Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple `calc()` ci-dessus, on demande que la largeur de cette zone soit égale à 90% de la largeur du bloc conteneur, moins 30 pixels. Ce n'est pas quelque chose que l'on peut calculer à l'avance et simplement entrer la valeur dans le CSS, car on ne sait pas ce que seront 90%. Comme pour toutes les valeurs, chaque fonction a sa page de documentation sur MDN avec des exemples d'utilisation pour en voir le fonctionnement.
 
-Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/transform), telles que `rotate()`.
+Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/Reference/Properties/transform), telles que `rotate()`.
 
 #### Exemple transform
 
@@ -335,15 +335,15 @@ La page devrait s'afficher comme ceci :
 
 **Essayez de rechercher différentes valeurs des propriétés suivantes et d'écrire des règles CSS qui les appliquent à différents éléments HTML :**
 
-- **[`transform`](/fr/docs/Web/CSS/transform)**
-- **[`background-image`](/fr/docs/Web/CSS/background-image), en particulier les valeurs de dégradé**
-- **[`color`](/fr/docs/Web/CSS/color), en particulier les valeurs rgb/rgba/hsl/hsla**
+- **[`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)**
+- **[`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), en particulier les valeurs de dégradé**
+- **[`color`](/fr/docs/Web/CSS/Reference/Properties/color), en particulier les valeurs rgb/rgba/hsl/hsla**
 
 ## @rules
 
 e
 
-Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
+Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/CSS_syntax/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
 
 ```css
 @import "styles2.css";
@@ -371,7 +371,7 @@ Tout au long de nos tutoriels CSS, vous rencontrerez d'autres `@rules`.
 
 ## Raccourcis
 
-Certaines propriétés comme [`font`](/fr/docs/Web/CSS/font), [`background`](/fr/docs/Web/CSS/background), [`padding`](/fr/docs/Web/CSS/padding), [`border`](/fr/docs/Web/CSS/border), ou [`margin`](/fr/docs/Web/CSS/margin) sont appelées **propriétés raccourci** — elles permettent d'attribuer plusieurs couples propriété : valeur en une seule ligne. On gagne du temps et le code est plus joli.
+Certaines propriétés comme [`font`](/fr/docs/Web/CSS/Reference/Properties/font), [`background`](/fr/docs/Web/CSS/Reference/Properties/background), [`padding`](/fr/docs/Web/CSS/Reference/Properties/padding), [`border`](/fr/docs/Web/CSS/Reference/Properties/border), ou [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sont appelées **propriétés raccourci** — elles permettent d'attribuer plusieurs couples propriété : valeur en une seule ligne. On gagne du temps et le code est plus joli.
 
 Par exemple, la ligne suivante :
 
@@ -582,6 +582,6 @@ Le navigateur ne connaît pas la propriété `padding-` . Les noms de propriét�
 
 ## À suivre…
 
-Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn/CSS/First_steps/How_CSS_works) — nous examinerons donc ce point.
+Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — nous examinerons donc ce point.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

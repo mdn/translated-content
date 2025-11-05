@@ -2,23 +2,37 @@
 title: Le positionnement
 slug: Learn_web_development/Core/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/Positioning
+l10n:
+  sourceCommit: 2a4d705a12d76ee17e013f8a50007fd25029e0fc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}
 
-Le positionnement permet de sortir les éléments du flux normal de la composition du document, et de les faire se comporter différemment, par exemple en plaçant un élément sur un autre ou en occupant toujours la même place dans la zone d'affichage du navigateur. Cet article explique les diverses valeurs de [`position`](/fr/docs/Web/CSS/position), et comment les utiliser.
+Le positionnement permet de sortir les éléments du flux normal de la composition du document, et de les faire se comporter différemment, par exemple en plaçant un élément sur un autre ou en occupant toujours la même place dans la zone d'affichage du navigateur. Cet article explique les diverses valeurs de {{cssxref("position")}}, et comment les utiliser.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions fondamentales de HTML (voir <a href="/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), et une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Introduction à CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
+          >Structurer le contenu avec HTML</a
+        >,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Bases du style CSS</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals">Fondamentaux du style et des polices de texte</a>,
+        être familiarisé avec les <a href="/fr/docs/Learn_web_development/Core/CSS_layout/Introduction">Concepts fondamentaux de la mise en page CSS</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Apprendre comment fonctionne le positionnement avec CSS.</td>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Le positionnement <code>static</code> est la façon par défaut dont les éléments sont positionnés sur la page.</li>
+          <li>Les éléments positionnés relativement restent dans le flux normal, mais le positionnement absolu (ainsi que fixe/adhérent) retire complètement les éléments du flux normal pour les placer sur un calque séparé.</li>
+          <li>La position finale dans la mise en page peut être modifiée à l'aide des propriétés <code>top</code>, <code>bottom</code>, <code>left</code> et <code>right</code>, mais leurs effets diffèrent selon la valeur de <code>position</code> définie.</li>
+          <li>Définir le contexte de positionnement d'un élément positionné par rapport à un élément parent.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -29,13 +43,13 @@ Nous aimerions que vous suiviez, si possible, les exercices sur votre ordinateur
 
 Le positionnement permet de modifier le cours classique de la mise en page pour produire des effets intéressants. Vous souhaitez modifier légèrement le placement de boîtes par rapport à leur position par défaut dans la mise en page, et donner ainsi une touche d'originalité à votre page&nbsp;? Vous souhaitez créer un élément d'interface utilisateur flottant au‑dessus d'autres parties de la page, et/ou que cet élément reste fixé à la même place dans la fenêtre du navigateur, quel que soit le point de défilement de la page&nbsp;? Le positionnement est l'outil qu'il vous faut, il rend de tels agencements possibles.
 
-Il y a différents types de positionnement que vous pouvez appliquer à des éléments HTML. Pour utiliser un type particulier de positionnement sur un élément, nous utilisons la propriété [`position`](/fr/docs/Web/CSS/position).
+Il y a différents types de positionnement que vous pouvez appliquer à des éléments HTML. Pour utiliser un type particulier de positionnement sur un élément, nous utilisons la propriété {{cssxref("position")}}).
 
 ## Positionnement statique
 
 Le positionnement statique est celui reçu par défaut par chaque élément. Cela veut tout simplement dire «&nbsp;positionner l'élément selon le flux normal, rien de spécial à voir ici&nbsp;».
 
-Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième [`<p>`](/fr/docs/Web/HTML/Element/p) dans le HTML&nbsp;:
+Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième {{htmlelement("p")}} dans le HTML&nbsp;:
 
 ```html
 <p class="positioned">…</p>
@@ -63,11 +77,11 @@ Le positionnement relatif est le premier type de positionnement que nous allons 
 position: relative;
 ```
 
-Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément&nbsp;? Vous avez besoin d'employer les propriétés [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) dont nous parlerons dans le prochain paragraphe.
+Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément&nbsp;? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.
 
 ### Présentation de `top`, `bottom`, `left` et `right`
 
-[`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) sont utilisés conjointement à [`position`](/fr/docs/Web/CSS/position) pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans le CSS&nbsp;:
+{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à [`position`](/fr/docs/Web/CSS/Reference/Properties/position) pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans le CSS&nbsp;:
 
 ```css
 top: 30px;
@@ -75,7 +89,7 @@ left: 30px;
 ```
 
 > [!NOTE]
-> Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
+> Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
 
 Si vous enregistrez et actualisez maintenant, vous verrez ce résultat&nbsp;:
 
@@ -109,7 +123,10 @@ Si vous enregistrez et actualisez maintenant, vous verrez ce résultat&nbsp;:
     >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
     du texte</span
   >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
-  cette image le fait : <img src="long.jpg" />
+  cette image le fait&nbsp;:
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="un extrait de tissu" />
 </p>
 ```
 
@@ -139,7 +156,7 @@ span {
 }
 ```
 
-{{EmbedLiveSample('', '100%', 500)}}
+{{EmbedLiveSample('présentation_de_top_bottom_left_et_right', '100%', 500)}}
 
 Cool, n'est-ce pas&nbsp;? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche)&nbsp;? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposée. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.
 
@@ -188,7 +205,10 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ce
     >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
     du texte</span
   >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
-  cette image le fait : <img src="long.jpg" />
+  cette image le fait&nbsp;:
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="un extrait de tissu" />
 </p>
 ```
 
@@ -218,14 +238,14 @@ span {
 }
 ```
 
-{{EmbedLiveSample('', '100%', 450)}}
+{{EmbedLiveSample('appliquer_position_absolute', '100%', 450)}}
 
 Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existait plus&nbsp;! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste. C'est très utile&nbsp;: cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des boîtes d'informations contextuelles (<i lang="en">popup</i>), des menus de contrôle, des panneaux déroulants (<i lang="en">rollover panels</i>), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.
 
-Ensuite, notez que la position de l'élément a changé. [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de «&nbsp;l'élément conteneur&nbsp;» (il s'agit dans ce cas, l'élément conteneur est le bloc conteneur initial, voir la section ci-dessous pour plus d'informations).
+Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} se comportent différemment avec le positionnement absolu. Au lieu de positionner l'élément en fonction de sa position relative dans la mise en page du document, ils définissent la distance à laquelle l'élément doit se situer par rapport aux côtés de l'élément contenant. Dans ce cas, nous indiquons que l'élément à positionner de manière absolue doit se placer à 30px du haut et à 30px de la gauche de «&nbsp;l'élément conteneur&nbsp;» (il s'agit dans ce cas, l'élément conteneur est le bloc conteneur initial, voir la section ci-dessous pour plus d'informations).
 
 > [!NOTE]
-> Vous pouvez utiliser [`top`](/fr/docs/Web/CSS/top), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right) pour redimensionner les éléments selon vos besoins. Définissez `top: 0; bottom: 0; left: 0; right: 0;` et `margin: 0;` sur les éléments à positionner et voyez ce qui se produit&nbsp;! Réinitialisez le tout ensuite…
+> Vous pouvez utiliser {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} pour redimensionner les éléments selon vos besoins. Définissez `top: 0; bottom: 0; left: 0; right: 0;` et `margin: 0;` sur les éléments à positionner et voyez ce qui se produit&nbsp;! Réinitialisez le tout ensuite…
 
 > [!NOTE]
 > Les marges affectent toujours les éléments à positionner. Toutefois, la fusion de marges ne se fait pas.
@@ -235,11 +255,11 @@ Ensuite, notez que la position de l'élément a changé. [`top`](/fr/docs/Web/CS
 
 ### Contextes de positionnement
 
-Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/Containing_block#identifier_le_bloc_englobant)).
+Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block#identifier_le_bloc_englobant)).
 
-Si aucun élément ancêtre ne voit sa propriété `position` explicitement définie, par défaut, tous les éléments ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans **le bloc englobant initial**. Ce bloc englobant initial a les dimensions de la zone d'affichage (<i lang="en">viewport</i>) et est aussi le bloc qui contient l'élément [`<html>`](/fr/docs/Web/HTML/Element/html). Autrement dit, l'élément positionné de façon absolue sera affiché en dehors de l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) et positionné relativement à la zone d'affichage.
+Si aucun élément ancêtre ne voit sa propriété `position` explicitement définie, par défaut, tous les éléments ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans **le bloc englobant initial**. Ce bloc englobant initial a les dimensions de la zone d'affichage (<i lang="en">viewport</i>) et est aussi le bloc qui contient l'élément {{htmlelement("html")}}. Autrement dit, l'élément positionné de façon absolue sera affiché en dehors de l'élément {{htmlelement("html")}} et positionné relativement à la zone d'affichage.
 
-Dans la structure HTML, l'élément positionné est imbriqué dans l'élément [`<body>`](/fr/docs/Web/HTML/Element/body), mais pour la disposition finale, il est situé à 30px du bord haut et du bord gauche de la page. Vous pouvez modifier **le contexte de positionnement**, c'est-à-dire l'élément par rapport auquel l'élément est positionné de façon absolue. Pour cela, on définira le positionnement d'un des éléments ancêtres. Pour voir cet effet, ajoutez la déclaration suivante dans la règle ciblant `body`&nbsp;:
+Dans la structure HTML, l'élément positionné est imbriqué dans l'élément {{htmlelement("body")}}, mais pour la disposition finale, il est situé à 30px du bord haut et du bord gauche de la page. Vous pouvez modifier **le contexte de positionnement**, c'est-à-dire l'élément par rapport auquel l'élément est positionné de façon absolue. Pour cela, on définira le positionnement d'un des éléments ancêtres. Pour voir cet effet, ajoutez la déclaration suivante dans la règle ciblant `body`&nbsp;:
 
 ```css
 position: relative;
@@ -258,7 +278,7 @@ Cela devrait vous donner le résultat suivant&nbsp;:
 <p class="positioned">
   Maintenant je suis positionné de manière absolue par rapport à l'élément
   <code>&lt;body&gt;</code>, et non par rapport à l'élément
-  <code>&lt;html&gt;</code> !
+  <code>&lt;html&gt;</code>&nbsp;!
 </p>
 
 <p>
@@ -268,16 +288,18 @@ Cela devrait vous donner le résultat suivant&nbsp;:
 </p>
 
 <p>
-  Les éléments « inline » <span>comme celui-ci </span>ou
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci</span> ou
   <span>cet autre</span> sont sur une même ligne que les noeuds de texte
-  adjacents, s'il y a de la place sur la même ligne. Les éléments « inline »
-  débordants
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
   <span
     >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
     du texte</span
-  >
-  ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
-  le fait : <img src="long.jpg" />
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait&nbsp;:
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="un extrait de tissu" />
 </p>
 ```
 
@@ -308,9 +330,9 @@ span {
 }
 ```
 
-{{EmbedLiveSample('','100%', 420)}}
+{{EmbedLiveSample('contextes_de_positionnement','100%', 420)}}
 
-À présent, l'élément a été positionné par rapport à l'élément [`<body>`](/fr/docs/Web/HTML/Element/body).
+À présent, l'élément a été positionné par rapport à l'élément {{htmlelement("body")}}.
 
 > [!NOTE]
 > À ce stade, vous pouvez voir cet exemple ici [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
@@ -332,9 +354,9 @@ p:nth-of-type(1) {
 
 À ce stade, vous verrez le premier paragraphe coloré en vert, déplacé hors du cours normal des documents et positionné un peu au-dessus de l'endroit où il se trouvait à l'origine. Il est également empilé sous le paragraphe `.positioned` original, là où les deux se chevauchent. C'est parce que le paragraphe `.positioned` est le deuxième paragraphe dans l'ordre du code source HTML&nbsp;; les éléments positionnés en dernier dans l'ordre du code source l'emportent sur les éléments positionnés plus en amont dans l'ordre du code source.
 
-Est‑il possible de changer l'ordre d'empilement&nbsp;? Oui, vous le pouvez avec la propriété [`z-index`](/fr/docs/Web/CSS/z-index). «&nbsp;<i lang="en">z-index</i>&nbsp;» est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du cours où nous avions discuté des pages Web en utilisant des coordonnées horizontales (axe x pour les abscisses) et verticales (axe y pour les ordonnées) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. `(0,0)` est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
+Est‑il possible de changer l'ordre d'empilement&nbsp;? Oui, vous le pouvez avec la propriété {{cssxref("z-index")}}. «&nbsp;<i lang="en">z-index</i>&nbsp;» est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du cours où nous avions discuté des pages Web en utilisant des coordonnées horizontales (axe x pour les abscisses) et verticales (axe y pour les ordonnées) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. `(0,0)` est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
 
-Les pages web ont aussi un axe z&nbsp;: une ligne imaginaire qui va de la surface de votre écran, vers votre visage. Les valeurs de [`z-index`](/fr/docs/Web/CSS/z-index) affectent l'emplacement des éléments positionnés sur cet axe&nbsp;; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, la propriété `z-index` des éléments positionnés vaut `auto`, qui est effectivement 0.
+Les pages web ont aussi un axe z&nbsp;: une ligne imaginaire qui va de la surface de votre écran, vers votre visage. Les valeurs de {{cssxref("z-index")}} affectent l'emplacement des éléments positionnés sur cet axe&nbsp;; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, la propriété `z-index` des éléments positionnés vaut `auto`, qui est effectivement 0.
 
 Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle `p:nth-of-type(1)`&nbsp;:
 
@@ -355,7 +377,7 @@ Voici maintenant l'exemple terminé où vous devriez voir le paragraphe vert par
 <p class="positioned">
   Maintenant je suis positionné de manière absolue par rapport à l'élément
   <code>&lt;body&gt;</code>, et non par rapport à l'élément
-  <code>&lt;html&lt;html&gt;</code> !
+  <code>&lt;html&lt;html&gt;</code>&nbsp;!
 </p>
 
 <p>
@@ -365,16 +387,18 @@ Voici maintenant l'exemple terminé où vous devriez voir le paragraphe vert par
 </p>
 
 <p>
-  Les éléments « inline » <span>comme celui-ci </span>ou
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
   <span>cet autre</span> sont sur une même ligne que les noeuds de texte
-  adjacents, s'il y a de la place sur la même ligne. Les éléments « inline »
-  débordants
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
   <span
     >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
     du texte</span
-  >
-  ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
-  le fait : <img src="long.jpg" />
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait&nbsp;:
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="un extrait de tissu" />
 </p>
 ```
 
@@ -413,7 +437,7 @@ p:nth-of-type(1) {
 }
 ```
 
-{{EmbedLiveSample('', '100%', 400)}}
+{{EmbedLiveSample('introduction_au_z-index', '100%', 400)}}
 
 Notez que `z-index` n'accepte que des valeurs d'index sans unité&nbsp;; vous ne pouvez pas préciser que vous voulez qu'un élément soit à 23 pixels sur l'axe des z — cela ne fonctionne pas ainsi. Les plus grandes valeurs vont au‑dessus des valeurs plus faibles et c'est à vous d'indiquer les valeurs. Utiliser 2 et 3 aura le même effet que 300 et 40000.
 
@@ -422,7 +446,7 @@ Notez que `z-index` n'accepte que des valeurs d'index sans unité&nbsp;; vous ne
 
 ## Positionnement fixe
 
-Voyons maintenant le positionnement fixe. Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle&nbsp;: alors que le positionnement absolu fixe un élément en place par rapport à l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) ou son parent positionné le plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
+Voyons maintenant le positionnement fixe. Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle&nbsp;: alors que le positionnement absolu fixe un élément en place par rapport à son parent positionné le plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
 
 Voici un exemple simple pour montrer ce que nous voulons dire. D'abord, supprimez la règle de `p:nth-of-type(1)` et `.positioned` de la CSS.
 
@@ -436,7 +460,7 @@ body {
 }
 ```
 
-Maintenant, donnez la position `fixed` à l'élément [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS&nbsp;:
+Maintenant, donnez la position `fixed` à l'élément {{htmlelement("Heading_Elements", "<code>&lt;h1&gt;</code>")}} et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS&nbsp;:
 
 ```css
 h1 {
@@ -486,7 +510,10 @@ Voici l'exemple terminé&nbsp;:
     >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
     du texte</span
   >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
-  cette image le fait : <img src="long.jpg" />
+  cette image le fait&nbsp;:
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="un extrait de tissu" />
 </p>
 ```
 
@@ -522,7 +549,7 @@ p:nth-of-type(1) {
 }
 ```
 
-{{EmbedLiveSample('', '100%', 400)}}
+{{EmbedLiveSample('positionnement_fixe', '100%', 400)}}
 
 > [!NOTE]
 > À ce stade de l'article, vous pouvez voir un exemple en direct ici [`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
@@ -598,7 +625,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{EmbedLiveSample('exemple_simple', '100%', 200)}}
 
 ### Index déroulant
 
@@ -636,7 +663,7 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 </dl>
 ```
 
-Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
+Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) avec une valeur [`top`](/fr/docs/Web/CSS/Reference/Properties/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
 
 ```css
 dt {
@@ -658,9 +685,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{EmbedLiveSample('index_déroulant', '100%', 200)}}
 
-Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/position) de ses ancêtres.
+Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancêtre qui dispose d'un mécanisme de défilement, ce qui est déterminé d'après la propriété [position](/fr/docs/Web/CSS/Reference/Properties/position) de ses ancêtres.
 
 > [!NOTE]
 > À ce stade de l'article, vous pouvez voir un exemple en direct ici [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
@@ -675,7 +702,7 @@ On espère que vous vous êtes amusé⋅e à jouer avec le positionnement de bas
 
 ## Voir aussi
 
-- Référence de la propriété [`position`](/fr/docs/Web/CSS/position).
-- [Exemples pratiques de positionnement](/fr/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), pour quelques idées utiles supplémentaires.
+- Référence de la propriété {{cssxref("position")}}.
+- [Exemples pratiques de positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples), pour quelques idées utiles supplémentaires.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}

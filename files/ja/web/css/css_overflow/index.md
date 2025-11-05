@@ -2,10 +2,8 @@
 title: CSS オーバーフロー
 slug: Web/CSS/CSS_overflow
 l10n:
-  sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **CSS オーバーフロー**モジュールのプロパティを使用すると、視覚メディアでスクロール可能なオーバーフローを処理することができます。
 
@@ -73,53 +71,6 @@ l10n:
     Rubber Duckie, I'm awfully fond of you
       </pre>
 </article>
-
-<script>
-  const pre = document.querySelector("pre");
-  const val = document.getElementById("overflowValue");
-  const check = document.getElementById("wide");
-  const ocm = document.getElementById("ocm");
-  const scrollL = document.getElementById("scrollL");
-  const scrollT = document.getElementById("scrollT");
-
-  val.addEventListener("change", () => {
-    if (pre.classList.contains("wide")) {
-      pre.className = `wide ${val.value}`;
-    } else {
-      pre.className = `${val.value}`;
-    }
-    scrollExample();
-    clipMargin();
-  });
-
-  wide.addEventListener("change", () => {
-    pre.classList.toggle("wide");
-    scrollExample();
-  });
-
-  ocm.addEventListener("change", () => {
-    clipMargin();
-  });
-
-  scrollL.addEventListener("change", () => {
-    scrollExample();
-  });
-  scrollT.addEventListener("change", () => {
-    scrollExample();
-  });
-
-  function scrollExample() {
-    pre.scrollTo({
-      top: scrollT.value,
-      left: scrollL.value * 2,
-      behavior: "smooth",
-    });
-  }
-
-  function clipMargin() {
-    pre.style.overflowClipMargin = `${ocm.value}em`;
-  }
-</script>
 ```
 
 ```css hidden live-sample___overflow
@@ -208,6 +159,53 @@ article:not(:has(pre.hidden, pre.scroll, pre.auto, pre.overlay))
 }
 ```
 
+```js hidden live-sample___overflow
+const pre = document.querySelector("pre");
+const val = document.getElementById("overflowValue");
+const check = document.getElementById("wide");
+const ocm = document.getElementById("ocm");
+const scrollL = document.getElementById("scrollL");
+const scrollT = document.getElementById("scrollT");
+
+val.addEventListener("change", () => {
+  if (pre.classList.contains("wide")) {
+    pre.className = `wide ${val.value}`;
+  } else {
+    pre.className = `${val.value}`;
+  }
+  scrollExample();
+  clipMargin();
+});
+
+wide.addEventListener("change", () => {
+  pre.classList.toggle("wide");
+  scrollExample();
+});
+
+ocm.addEventListener("change", () => {
+  clipMargin();
+});
+
+scrollL.addEventListener("change", () => {
+  scrollExample();
+});
+scrollT.addEventListener("change", () => {
+  scrollExample();
+});
+
+function scrollExample() {
+  pre.scrollTo({
+    top: scrollT.value,
+    left: scrollL.value * 2,
+    behavior: "smooth",
+  });
+}
+
+function clipMargin() {
+  pre.style.overflowClipMargin = `${ocm.value}em`;
+}
+```
+
 {{EmbedLiveSample("overflow", "", "400px")}}
 
 上のコンテンツボックスにはリンクが記載されていますが、これはキーボードフォーカスがオーバーフローやスクロール動作に与える効果を示すためのものです。リンクに移動したり、コンテンツをプログラムでスクロールしてみてください: 列挙値である `<overflow>` がスクロールコンテナーを生成した場合のみ、コンテンツはスクロールします。
@@ -248,7 +246,7 @@ article:not(:has(pre.hidden, pre.scroll, pre.auto, pre.overlay))
   - : オーバーフローとは何か、どのように管理するかを学びます。
 - [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
   - : スクロールボタン、スクロールマーカー、および生成された段をを使用して、純粋な CSS によるカルーセル UI 機能を作成します。
-- [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
+- [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
   - : CSS スクロールタイムライン {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティと {{cssxref('scroll-timeline')}} の一括指定は、スクロールコンテナーのスクロールオフセットに関連付けられたアニメーションを作成します。
 
 ## 関連概念

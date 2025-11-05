@@ -5,11 +5,10 @@ l10n:
   sourceCommit: 7d82742741cb1474c9ab105316701ec9d18d473a
 ---
 
-{{CSSRef}}
+**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
 
-**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
-
-> **メモ:** {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
+> [!NOTE]
+> {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
 
 ## 構文
 
@@ -20,7 +19,7 @@ l10n:
 
 長さの[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
 
-`<length>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/Web/CSS/line-height)であったり、{{Glossary("viewport", "ビューポート")}}の大きさであったりします。
+`<length>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/Web/CSS/Reference/Properties/line-height)であったり、{{Glossary("viewport", "ビューポート")}}の大きさであったりします。
 相対的な長さの単位を使用するスタイルシートは、ある出力環境から別の出力環境へ、より簡単に変倍することができます。
 
 > [!NOTE]
@@ -309,5 +308,5 @@ inputElem.addEventListener("change", () => {
 ## 関連情報
 
 - [CSS 値と単位チュートリアル](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_values_and_units)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)

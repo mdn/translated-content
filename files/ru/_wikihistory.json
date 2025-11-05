@@ -2441,20 +2441,20 @@
       "saniaky"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
+  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
+    "modified": "2020-07-16T22:25:30.870Z",
+    "contributors": [
+      "Khaidarov-Dinar",
+      "Anonymous"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Splash_page": {
     "modified": "2020-12-01T05:21:19.875Z",
     "contributors": [
       "Furestry",
       "RoPy73",
       "Zekkler",
       "AlekseyCorsello"
-    ]
-  },
-  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
-    "modified": "2020-07-16T22:25:30.870Z",
-    "contributors": [
-      "Khaidarov-Dinar",
-      "Anonymous"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
@@ -2593,14 +2593,6 @@
     "contributors": [
       "shade0602",
       "Ivan961"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:13.122Z",
-    "contributors": [
-      "maxbo8",
-      "trman",
-      "VyacheslavLobanov"
     ]
   },
   "Learn_web_development/Core/Styling_basics/Getting_started": {
@@ -3713,15 +3705,6 @@
     "modified": "2020-07-16T22:35:49.507Z",
     "contributors": [
       "Waterdark"
-    ]
-  },
-  "Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
-    "modified": "2020-12-06T08:00:45.465Z",
-    "contributors": [
-      "valandis",
-      "zloypatrik88",
-      "Glazir",
-      "slychai85"
     ]
   },
   "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
@@ -5976,33 +5959,25 @@
       "mayconrem"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-09-25T18:36:16.946Z",
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2020-11-17T03:43:19.041Z",
     "contributors": [
-      "Problemon",
-      "paxarpp",
-      "Bargamut"
+      "kosarev_va",
+      "RuslanPro01",
+      "ismailaga123",
+      "injashkin",
+      "Corba",
+      "snowydad",
+      "arthurg91",
+      "wbamberg",
+      "LbIdarka",
+      "Dzhabarovm",
+      "Kerminator1973",
+      "kRaVeda",
+      "teoli"
     ]
   },
-  "Web/API/Document_Object_Model/Introduction": {
-    "modified": "2019-10-02T12:18:01.287Z",
-    "contributors": [
-      "shmel3",
-      "newbornfrontender",
-      "GraceAredel",
-      "hardsoncore",
-      "Flaeron",
-      "paxarpp",
-      "rapaich",
-      "miirinjej",
-      "tavira",
-      "sersalex",
-      "tvitcom",
-      "Y-Taras",
-      "Azijkes"
-    ]
-  },
-  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree": {
     "modified": "2019-03-23T22:13:41.294Z",
     "contributors": [
       "tavira"
@@ -10309,19 +10284,6 @@
       "fider"
     ]
   },
-  "Web/API/XMLHttpRequest/loadend_event": {
-    "modified": "2019-03-18T21:41:57.825Z",
-    "contributors": [
-      "dedotmoroz"
-    ]
-  },
-  "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2019-03-23T22:29:55.674Z",
-    "contributors": [
-      "fscholz",
-      "forestbird"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -10425,6 +10387,19 @@
       "Zakhse",
       "nakhodkiin",
       "Salasar"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadend_event": {
+    "modified": "2019-03-18T21:41:57.825Z",
+    "contributors": [
+      "dedotmoroz"
+    ]
+  },
+  "Web/API/XMLHttpRequestEventTarget/loadstart_event": {
+    "modified": "2019-03-23T22:29:55.674Z",
+    "contributors": [
+      "fscholz",
+      "forestbird"
     ]
   },
   "Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data": {
@@ -11278,12 +11253,6 @@
       "surrsoft"
     ]
   },
-  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
-    "modified": "2019-03-18T21:45:05.678Z",
-    "contributors": [
-      "TViglesGoom"
-    ]
-  },
   "Web/CSS/CSS_animations": {
     "modified": "2019-03-23T22:43:47.167Z",
     "contributors": [
@@ -11435,7 +11404,7 @@
       "kasperyan"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-03-23T22:34:32.727Z",
     "contributors": [
       "altsab",
@@ -11807,6 +11776,12 @@
       "TicTacVengria",
       "agoge",
       "BychekRU"
+    ]
+  },
+  "Web/CSS/CSS_values_and_units/CSS_data_types": {
+    "modified": "2019-03-18T21:45:05.678Z",
+    "contributors": [
+      "TViglesGoom"
     ]
   },
   "Web/CSS/CSS_writing_modes": {
@@ -13360,24 +13335,6 @@
       "Mrakobees",
       "torbasow",
       "yaruson"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2020-11-17T03:43:19.041Z",
-    "contributors": [
-      "kosarev_va",
-      "RuslanPro01",
-      "ismailaga123",
-      "injashkin",
-      "Corba",
-      "snowydad",
-      "arthurg91",
-      "wbamberg",
-      "LbIdarka",
-      "Dzhabarovm",
-      "Kerminator1973",
-      "kRaVeda",
-      "teoli"
     ]
   },
   "Web/HTML": {
@@ -15985,7 +15942,7 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/Reference/Classes/Private_properties": {
+  "Web/JavaScript/Reference/Classes/Private_elements": {
     "modified": "2020-10-15T22:33:38.348Z",
     "contributors": [
       "cliggen",
@@ -21966,6 +21923,40 @@
       "Tortik217"
     ]
   },
+  "conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9": {
+    "modified": "2020-07-16T22:28:13.122Z",
+    "contributors": [
+      "maxbo8",
+      "trman",
+      "VyacheslavLobanov"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-10-02T12:18:01.287Z",
+    "contributors": [
+      "shmel3",
+      "newbornfrontender",
+      "GraceAredel",
+      "hardsoncore",
+      "Flaeron",
+      "paxarpp",
+      "rapaich",
+      "miirinjej",
+      "tavira",
+      "sersalex",
+      "tvitcom",
+      "Y-Taras",
+      "Azijkes"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b": {
+    "modified": "2019-09-25T18:36:16.946Z",
+    "contributors": [
+      "Problemon",
+      "paxarpp",
+      "Bargamut"
+    ]
+  },
   "conflicting/Web/CSS/CSS_cascade/Value_processing": {
     "modified": "2019-03-23T22:46:29.428Z",
     "contributors": [
@@ -22008,6 +21999,15 @@
       "redishko",
       "PavelG94",
       "Prographer"
+    ]
+  },
+  "orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
+    "modified": "2020-12-06T08:00:45.465Z",
+    "contributors": [
+      "valandis",
+      "zloypatrik88",
+      "Glazir",
+      "slychai85"
     ]
   }
 }

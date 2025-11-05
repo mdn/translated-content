@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
-{{CSSRef}}
-
-**`cubic-bezier()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 3 次[ベジェ](/ja/docs/Glossary/Bezier_curve)曲線を使用してスムーズな遷移を作成します。 [`<easing-function>`](/ja/docs/Web/CSS/easing-function) として、{{Glossary("Interpolation", "補間")}}の始まりと終わりをスムーズにすることができます。
+**`cubic-bezier()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 3 次[ベジェ](/ja/docs/Glossary/Bezier_curve)曲線を使用してスムーズな遷移を作成します。 [`<easing-function>`](/ja/docs/Web/CSS/easing-function) として、{{Glossary("Interpolation", "補間")}}の始まりと終わりをスムーズにすることができます。
 
 ## 構文
 

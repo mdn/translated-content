@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 883b021c97375f872d0702f0d0747b1373155cef
 ---
 
-{{CSSRef}}
-
 このツールで CSS の {{cssxref("box-shadow")}} 効果を組み立てて、 CSS オブジェクトにボックスの影の効果を追加することができます。
 
 {{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}

@@ -51,7 +51,8 @@ transform: translateY(3ch);
 }
 ```
 
-> **Note :** `translateY(ty)` est équivalent à `translate(0, ty)` ou `translate3d(0, ty, 0)`.
+> [!NOTE]
+> `translateY(ty)` est équivalent à `translate(0, ty)` ou `translate3d(0, ty, 0)`.
 
 ## Syntaxe
 
@@ -64,7 +65,7 @@ transform: translateY(50%);
 ### Valeurs
 
 - `<length-percentage>`
-  - : Valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) représentant l'ordonnée (verticale, coordonnée y) du vecteur de translation [0, ty]. Dans [le système de coordonnées cartésiennes](/fr/docs/Web/CSS/transform-function#le_système_de_coordonnées_cartésiennes), elle représente le déplacement le long de l'axe y. Une valeur en pourcentage fait référence à la hauteur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
+  - : Valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) représentant l'ordonnée (verticale, coordonnée y) du vecteur de translation [0, ty]. Dans [le système de coordonnées cartésiennes](/fr/docs/Web/CSS/transform-function#le_système_de_coordonnées_cartésiennes), elle représente le déplacement le long de l'axe y. Une valeur en pourcentage fait référence à la hauteur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
 
 <table class="standard-table">
   <thead>
@@ -178,5 +179,5 @@ div {
 
 - [`translate()`](/fr/docs/Web/CSS/transform-function/translate)
 - [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX)
-- [`transform`](/fr/docs/Web/CSS/transform)
+- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

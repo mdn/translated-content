@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 **CSS ボックスモデル**は、要素に対して作成され、パディングやマージンを含む長方形のボックスを定義します。これは[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)によってレイアウトされます。
 
 ## ボックスモデルの概要
@@ -62,7 +60,7 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 
 - [境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
   - : 境界のプロパティは、境界の太さ、描画スタイル、色を指定します。
-- [オーバーフロー](/ja/docs/Web/CSS/overflow)
+- [オーバーフロー](/ja/docs/Web/CSS/Reference/Properties/overflow)
   - : 内容物が多すぎてボックスに入りきらない場合に起こることを制御します。
 
 ## ガイド

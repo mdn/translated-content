@@ -3,8 +3,6 @@ title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
 
 {{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
@@ -86,7 +84,7 @@ li {
 
 ## 使用说明
 
-通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/::marker)一起显示，编号标记可以是数字或者字母。
+通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/Reference/Selectors/::marker)一起显示，编号标记可以是数字或者字母。
 
 `<ol>` 和 {{HTMLElement("ul")}} 元素两者可以无限嵌套，既可以同类嵌套，也可以互相嵌套。
 

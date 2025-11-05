@@ -3,8 +3,6 @@ title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
 
-{{AddonSidebar}}
-
 使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的 [\<script>](/zh-CN/docs/Web/HTML/Reference/Elements/script) 和 [\<object>](/zh-CN/docs/Web/HTML/Reference/Elements/object) 的资源来源，并且禁止了潜在的不安全用法如 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 这篇文章简单地解释了 CSP 是什么，默认的策略是什么，这对插件来说意味着什么，以及插件如何改变默认 CSP。

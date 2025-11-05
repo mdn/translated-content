@@ -40,7 +40,8 @@ Access-Control-Allow-Origin: null
 - `null`
   - : オリジンを "null" に指定します。
 
-    > **メモ:** `null` は使用しないでください。 `Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて `null` となるように定義されています。
+    > [!NOTE]
+    > `null` は使用しないでください。 `Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて `null` となるように定義されています。
     > 多くのブラウザーは、そのような文書に `Access-Control-Allow-Origin: null` ヘッダーが付いているとアクセスを許可するので、あらゆるオリジンが `null` を持つ悪意のある文書を生成する可能性があります。したがって、 `null` 値を `Access-Control-Allow-Origin` ヘッダーで使用することは避けるべきです。
 
 ## 例

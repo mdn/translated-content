@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`color()`** 関数記法により、他のほとんどの色関数が暗黙に処理する sRGB {{glossary("color space", "色空間")}}ではなく、特定の指定した色空間で色を指定することができます。
 
 特定の色空間に対応しているかどうかは、CSS メディア特性の [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) で検出することができます。
@@ -44,7 +42,8 @@ color(colorspace c1 c2 c3[ / A])
 - `A` {{optional_inline}}
   - : 色のアルファチャンネル値を表す {{CSSXref("&lt;alpha-value&gt;")}} で、数値 `0` は `0%` （完全に透明）、 `1` は `100%` （完全に不透明）に対応します。さらに、キーワード `none` を使用することで、アルファチャンネルを指定しません。 `A` チャンネルの値が明示的に指定されない場合、既定値として 100% が指定されます。含める場合、値の前にはスラッシュ (`/`) が付きます。
 
-> **メモ:** `none`の効果についての詳細情報は、[色成分の欠落](/ja/docs/Web/CSS/color_value#missing_color_components)を参照してください。
+> [!NOTE]
+> `none`の効果についての詳細情報は、[色成分の欠落](/ja/docs/Web/CSS/color_value#missing_color_components)を参照してください。
 
 #### 相対色の値の構文
 
@@ -295,7 +294,7 @@ div {
 
 この例では、 3 つの {{htmlelement("div")}} 要素を異なる背景色でスタイル設定しています。中央の要素には変更されていない `--base-color` が指定され、左と右の要素には `--base-color` を明るくしたものと暗くしたものが指定されています。
 
-これらのバリエーションは相対色を使用して定義します。 `--base-color` [カスタムプロパティ](/ja/docs/Web/CSS/--*) が `color()` 関数に渡され、出力される色には `g` と `b` のチャンネルが `calc()` 関数を使用して希望の効果を得るために変更されます。明るくされた色はこれらのチャンネルに 15% 追加され、暗くされた色はこれらのチャンネルから 15% 減算されます。
+これらのバリエーションは相対色を使用して定義します。 `--base-color` [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) が `color()` 関数に渡され、出力される色には `g` と `b` のチャンネルが `calc()` 関数を使用して希望の効果を得るために変更されます。明るくされた色はこれらのチャンネルに 15% 追加され、暗くされた色はこれらのチャンネルから 15% 減算されます。
 
 ```html hidden
 <div id="container">
@@ -378,7 +377,7 @@ div {
 
 - [`<color>` データ型](/ja/docs/Web/CSS/color_value): すべての色記法の一覧
 - [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
-- [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
 - [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) メディア特性
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

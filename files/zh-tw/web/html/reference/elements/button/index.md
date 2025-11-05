@@ -3,8 +3,6 @@ title: <button>：按鈕元素
 slug: Web/HTML/Reference/Elements/button
 ---
 
-{{HTMLSidebar}}
-
 **`<button>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個由使用者使用滑鼠、鍵盤、手指、語音命令或其他輔助技術啟動的互動元素。一旦啟動，它將執行一個動作，例如提交一個[表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)或打開對話框。
 
 預設情況下，HTML 按鈕會呈現為與{{Glossary("user agent", "使用者代理")}}所在平台類似的樣式，但你可以使用 [CSS](/zh-TW/docs/Web/CSS) 更改按鈕的外觀。
@@ -187,7 +185,7 @@ slug: Web/HTML/Reference/Elements/button
 
 ### Firefox
 
-Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框是在瀏覽器樣式表中通過 CSS 聲明的，但你可以覆蓋它以添加自己的焦點樣式，使用 [`button::-moz-focus-inner { }`](/zh-TW/docs/Web/CSS/::-moz-focus-inner)。
+Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框是在瀏覽器樣式表中通過 CSS 聲明的，但你可以覆蓋它以添加自己的焦點樣式，使用 [`button::-moz-focus-inner { }`](/zh-TW/docs/Web/CSS/Reference/Selectors/::-moz-focus-inner)。
 
 如果覆蓋了它，**確保當焦點移動到按鈕上時的狀態變化足夠明顯**，以便視力受損的人能夠感知它。
 

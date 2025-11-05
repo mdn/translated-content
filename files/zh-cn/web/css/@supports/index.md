@@ -42,7 +42,7 @@ slug: Web/CSS/@supports
 
 #### `selector()` {{Experimental_Inline}}
 
-测试浏览器是否支持经过测试的选择器语法。如果浏览器支持[子组合器](/zh-CN/docs/Web/CSS/Child_combinator)，则以下示例返回 true：
+测试浏览器是否支持经过测试的选择器语法。如果浏览器支持[子组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Child_combinator)，则以下示例返回 true：
 
 ```css
 @supports selector(A > B) {

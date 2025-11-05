@@ -31,7 +31,7 @@ On peut contrôler l'alignement des éléments dans une zone de la grille, ainsi
 
 ### Contrôle des contenus qui se chevauchent
 
-Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété [`z-index`](/fr/docs/Web/CSS/z-index).
+Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index).
 
 La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
 
@@ -39,7 +39,7 @@ La grille est un module de spécification puissant qui peut être combinée avec
 
 À partir du moment où on crée un _conteneur_ en déclarant la propriété `display: grid` ou `display: inline-grid` sur un élément, tous les _enfants directs_ de cet élément deviennent des _éléments de grille_.
 
-Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Element/div) avec une classe `.wrapper`, avec cinq éléments enfants.
+Cet exemple montre un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) avec une classe `.wrapper`, avec cinq éléments enfants.
 
 ```html
 <div class="wrapper">
@@ -91,7 +91,7 @@ Pour que notre exemple ressemble vraiment à une grille nous devons ajouter des 
 
 ## Pistes
 
-Les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows) permettent de définir des colonnes et des rangées. Celles-ci définissent les pistes. Une _piste_ est l'espace entre deux lignes adjacentes d'une grille. L'image ci-dessous colore une piste de la grille, correspondant à la première rangée de la grille.
+Les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows) permettent de définir des colonnes et des rangées. Celles-ci définissent les pistes. Une _piste_ est l'espace entre deux lignes adjacentes d'une grille. L'image ci-dessous colore une piste de la grille, correspondant à la première rangée de la grille.
 
 ![Une boite avec 3 éléments de grille. Au-dessus des trois éléments, une zone de même longueur est mise en valeur : il s'agit de la piste.](1_grid_track.png)
 
@@ -311,11 +311,11 @@ Cette notation accepte une liste de pistes, on peut donc l'utiliser pour répét
 
 ### Grille implicite et grille explicite
 
-Dans ces exemples, nous avons défini nos colonnes à l'aide de la propriété [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns), et nous avons laissé la grille créer les rangées. Ces rangées font partie de la grille implicite. La grille explicite est constituée des pistes définies par les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/grid-template-rows).
+Dans ces exemples, nous avons défini nos colonnes à l'aide de la propriété [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns), et nous avons laissé la grille créer les rangées. Ces rangées font partie de la grille implicite. La grille explicite est constituée des pistes définies par les propriétés [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) et [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows).
 
 Si un élément est placé en dehors de la grille ainsi définie, ou que la quantité de contenu nécessite d'étendre la grille, alors la grille ajoute implicitement des colonnes et rangées. Les dimensions de ces pistes auront par défaut la valeur `auto`, c'est-à dire qu'elles s'ajusteront à leur contenu.
 
-On peut définir une taille pour les pistes de la grille implicite grâce aux propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns).
+On peut définir une taille pour les pistes de la grille implicite grâce aux propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns).
 
 Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées de la grille implicite aient une hauteur de 200 pixels.
 
@@ -363,7 +363,7 @@ Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées d
 
 Que l'on crée une grille explicite, ou que l'on définisse la taille des pistes créées implicitement, il peut être utile d'assigner une taille minimum, qui s'agrandit pour s'adapter au contenu. Par exemple on peut souhaiter que les rangées ne soient jamais moins hautes que 100 pixels, mais qu'elles aillent jusqu'à 300 pixels de haut si le contenu le nécessite.
 
-La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) permet ce comportement. Dans l'exemple suivant nous utilisons `minmax()` comme valeur de la propriété [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows). Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de `auto`, ce qui signifie que la taille s'adaptera à la hauteur du contenu.
+La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) permet ce comportement. Dans l'exemple suivant nous utilisons `minmax()` comme valeur de la propriété [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows). Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de `auto`, ce qui signifie que la taille s'adaptera à la hauteur du contenu.
 
 ```css
 .wrapper {
@@ -421,7 +421,7 @@ Les lignes sont numérotées selon le sens de lecture du document. Dans un langa
 
 Nous explorerons le placement sur les lignes de manière détaillée dans un prochain article. L'exemple qui suit montre comment l'utiliser de façon simple. Ici, lorsque nous plaçons un élément nous ciblons une ligne plutôt qu'une piste.
 
-Nous plaçons ici les deux premiers éléments en utilisant les propriétés [`grid-column-start`](/fr/docs/Web/CSS/grid-column-start), [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end), [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start) et [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end). En allant de gauche à droite, le premier élément est placé sur la ligne de colonne 1, et va jusqu'à la ligne de colonne 4, qui dans ce cas est la dernière. Il est placé sur la ligne de rangée 1, et va jusqu'à la ligne 3, s'étendant ainsi sur deux rangées.
+Nous plaçons ici les deux premiers éléments en utilisant les propriétés [`grid-column-start`](/fr/docs/Web/CSS/Reference/Properties/grid-column-start), [`grid-column-end`](/fr/docs/Web/CSS/Reference/Properties/grid-column-end), [`grid-row-start`](/fr/docs/Web/CSS/Reference/Properties/grid-row-start) et [`grid-row-end`](/fr/docs/Web/CSS/Reference/Properties/grid-row-end). En allant de gauche à droite, le premier élément est placé sur la ligne de colonne 1, et va jusqu'à la ligne de colonne 4, qui dans ce cas est la dernière. Il est placé sur la ligne de rangée 1, et va jusqu'à la ligne 3, s'étendant ainsi sur deux rangées.
 
 Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule piste. C'est la largeur par défaut, donc il n'est pas nécessaire de spécifier la ligne de fin. Il s'étend aussi sur deux rangées de la ligne 3 à la ligne 5. Les autres éléments se placeront dans les espaces vides de la grille.
 
@@ -483,7 +483,7 @@ Le second élément commence sur la ligne de colonne 1 et s'étend sur une seule
 
 ### Raccourcis de positionnement sur ligne
 
-Les valeurs détaillées utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec [`grid-column`](/fr/docs/Web/CSS/grid-column) et une ligne pour les rangées avec [`grid-row`](/fr/docs/Web/CSS/grid-row). L'exemple suivant donne le même positionnement que le code précédent, mais avec beaucoup moins de CSS. La valeur avant la barre oblique (`/`) représente la ligne de début, celle d'après représente la ligne de fin.
+Les valeurs détaillées utilisées plus haut peuvent être abrégées en une ligne pour les colonnes avec [`grid-column`](/fr/docs/Web/CSS/Reference/Properties/grid-column) et une ligne pour les rangées avec [`grid-row`](/fr/docs/Web/CSS/Reference/Properties/grid-row). L'exemple suivant donne le même positionnement que le code précédent, mais avec beaucoup moins de CSS. La valeur avant la barre oblique (`/`) représente la ligne de début, celle d'après représente la ligne de fin.
 
 Vous pouvez omettre la valeur de la ligne de fin si la zone ne recouvre qu'une piste.
 
@@ -519,7 +519,7 @@ Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colon
 
 ## Les gouttières
 
-Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`row-gap`](/fr/docs/Web/CSS/row-gap), ou de la propriété raccourcie [`gap`](/fr/docs/Web/CSS/gap). Dans l'exemple ci-dessous, nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de `1em` de hauteur entre les rangées.
+Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) et [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), ou de la propriété raccourcie [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap). Dans l'exemple ci-dessous, nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de `1em` de hauteur entre les rangées.
 
 ```css
 .wrapper {
@@ -531,7 +531,7 @@ Les _gouttières_ entre les cellules sont définies à l'aide des propriétés [
 ```
 
 > [!NOTE]
-> Aux débuts de la grille CSS dans les navigateurs, les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) et [`gap`](/fr/docs/Web/CSS/gap) étaient préfixées avec `grid-` et s'écrivaient respectivement `grid-column-gap`, `grid-row-gap` et `grid-gap`.
+> Aux débuts de la grille CSS dans les navigateurs, les propriétés [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap), [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap) et [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap) étaient préfixées avec `grid-` et s'écrivaient respectivement `grid-column-gap`, `grid-row-gap` et `grid-gap`.
 >
 > Les navigateurs prennent désormais en charge les valeurs sans préfixe. Toutefois, les versions préfixées sont conservées comme synonymes à des fins de compatibilité.
 
@@ -642,7 +642,7 @@ En définissant la propriété `display: grid` sur l'élément `box1`, il devien
 
 {{EmbedLiveSample('', '600', '340')}}
 
-Dans ce cas, la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des gouttières paramétrées avec [`gap`](/fr/docs/Web/CSS/gap), et ses lignes ne s'alignent pas avec celles de la grille parent.
+Dans ce cas, la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des gouttières paramétrées avec [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap), et ses lignes ne s'alignent pas avec celles de la grille parent.
 
 ### Sous-grille
 
@@ -663,7 +663,7 @@ Pour utiliser les sous-grilles, nous allons adapter notre exemple précédent po
 
 ## Superposer les éléments avec `z-index`
 
-Plusieurs éléments peuvent être placés dans la même cellule d'une grille. Dans ce cas, il faut utiliser la propriété [`z-index`](/fr/docs/Web/CSS/z-index) pour contrôler l'ordre dans lequel les éléments se chevauchent.
+Plusieurs éléments peuvent être placés dans la même cellule d'une grille. Dans ce cas, il faut utiliser la propriété [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) pour contrôler l'ordre dans lequel les éléments se chevauchent.
 
 ### Chevauchement sans `z-index`
 

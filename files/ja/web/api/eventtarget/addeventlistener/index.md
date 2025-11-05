@@ -12,7 +12,8 @@ l10n:
 
 対象としてよくあるものは {{domxref("Element")}}、{{domxref("Document")}}、{{domxref("Window")}} ですが、イベントに対応したあらゆるオブジェクトが対象になることができます（{{domxref("IDBRequest")}} など）。
 
-> **メモ:** `addEventListener()` メソッドは、イベントリスナーを登録するための*推奨される*方法です。以下のような長所があります。
+> [!NOTE]
+> `addEventListener()` メソッドは、イベントリスナーを登録するための*推奨される*方法です。以下のような長所があります。
 >
 > - 1 つのイベントに対して複数のハンドラーを追加することができます。これは、ライブラリーや JavaScript モジュール、あるいは他のライブラリーや拡張機能とうまく動作させる必要があるその他の種類のコードで特に有効です。
 > - `onXYZ` プロパティを使用するのとは対照的に、リスナーが起動されるときのフェーズ（キャプチャとバブリング）をより細かく制御できます。
@@ -41,7 +42,7 @@ addEventListener(type, listener, useCapture)
 ### 引数
 
 - `type`
-  - : 対象とする[イベントの種類](/ja/docs/Web/Events)を表す文字列です。
+  - : 対象とする[イベントの種類](/ja/docs/Web/API/Document_Object_Model/Events)を表す文字列です。
 - `listener`
   - : 指定された種類のイベントが発生するときに通知（{{domxref("Event")}} インターフェイスを実装しているオブジェクト）を受け取るオブジェクト。これは `null` であるか、`handleEvent()` メソッドのあるオブジェクトか、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)のいずれかでなければなりません。コールバックについて詳しくは、[イベントリスナーのコールバック](#イベントリスナーのコールバック)を参照してください。
 - `options` {{optional_inline}}
@@ -758,5 +759,5 @@ function wheelHandler() {
 ## 関連情報
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)
 - [イベントハンドラー内での `this` の使用方法のさらに詳細な解説](https://www.quirksmode.org/js/this.html)

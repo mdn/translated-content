@@ -3,8 +3,6 @@ title: Diseño de caja flexible CSS
 slug: Web/CSS/CSS_flexible_box_layout
 ---
 
-{{CSSRef}}
-
 El diseño **CSS Flexbox** es un módulo de CSS que define un modelo de caja, optimizado para el diseño de interfaces de usuario. En el diseño flex, los nodos hijo se pueden distribuir en dirección vertical u horizontal y se pueden "flexibilizar" sus tamaños, bien sea rellenando el espacio disponible o encogiéndose para evitar salirse del contorno del nodo padre. Se puede manipular fácilmente tanto la alineación horizontal como la vertical, de los nodos hijo. La anidación de estas cajas (horizontal dentro de vertical o vertical dentro de horizontal) se puede usar para construir diseños en dos dimensiones.
 
 ## Ejemplo Básico

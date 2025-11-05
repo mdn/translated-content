@@ -6,12 +6,11 @@ l10n:
   sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) では、[HTML](/ja/docs/Web/HTML) [要素](/ja/docs/Web/HTML/Reference/Elements)に色を追加し好みの見た目にする方法が多岐に渡ります。
 このガイドは、CSS を使用して HTML 要素に色を適用する方法を紹介する入門書です。このガイドには、[色を設定する CSS プロパティの一覧とその値](#色を設定できるプロパティ)、および[スタイルシート](#スタイルシートで色を値として指定)と[それ以外の方法](#色をつける他の方法)の両方で色を使用する方法を記載しています。
 
-> **メモ:** [色を賢く使用する](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
+> [!NOTE]
+> [色を賢く使用する](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
 
 データ型としての CSS 色についてさらに詳しく知りたい場合は、[CSS `<color>` データ型](/ja/docs/Web/CSS/color_value)リファレンスおよび [CSS 色値ガイド](/ja/docs/Web/CSS/CSS_colors/Color_values)を参照してください。
 
@@ -67,7 +66,7 @@ l10n:
 あらゆる要素で、周囲に[境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
 基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) を参照してください。
 
-{{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/border-width)、[線種](/ja/docs/Web/CSS/border-style)（実線、破線など) などの特性も含んだ）すべての設定をこれ一つで行えます。
+{{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/Reference/Properties/border-width)、[線種](/ja/docs/Web/CSS/Reference/Properties/border-style)（実線、破線など) などの特性も含んだ）すべての設定をこれ一つで行えます。
 
 - {{cssxref("border-color")}} 一括指定
   - : 要素の境界線の各辺に使用する単一の色を指定します。

@@ -3,8 +3,6 @@ title: <form>：表單元素
 slug: Web/HTML/Reference/Elements/form
 ---
 
-{{HTMLSidebar}}
-
 **`<form>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個包含用於提交信息的交互式控制項的文件章節。
 
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
@@ -45,7 +43,7 @@ label {
 }
 ```
 
-可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
+可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
 
 ## 屬性
 

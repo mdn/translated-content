@@ -13,7 +13,7 @@ Les fonctionnalités expérimentales peuvent être activées ou désactivées vi
 
 ### L'élément \<dialog>
 
-L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) et les API du DOM associées permettent de créer des boîtes de dialogue modales en HTML. L'implémentation actuelle manque de finesse mais permet les fonctionnalités de base. Voir [le bug 840640](https://bugzilla.mozilla.org/show_bug.cgi?id=840640) pour plus de détails.
+L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) et les API du DOM associées permettent de créer des boîtes de dialogue modales en HTML. L'implémentation actuelle manque de finesse mais permet les fonctionnalités de base. Voir [le bug 840640](https://bugzilla.mozilla.org/show_bug.cgi?id=840640) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -53,7 +53,7 @@ L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) et les API du DO
 
 ### Attribut global inputmode
 
-L'implémentation de l'attribut global [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode) a été mise à jour afin de suivre la spécification WHATWG ([le bug 1509527](https://bugzilla.mozilla.org/show_bug.cgi?id=1509527)), mais d'autres changements sont encore nécessaires (par exemple, le rendre disponible pour le contenu `contenteditable`), voir [le bug 1205133](https://bugzilla.mozilla.org/show_bug.cgi?id=1205133) pour plus de détails.
+L'implémentation de l'attribut global [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode) a été mise à jour afin de suivre la spécification WHATWG ([le bug 1509527](https://bugzilla.mozilla.org/show_bug.cgi?id=1509527)), mais d'autres changements sont encore nécessaires (par exemple, le rendre disponible pour le contenu `contenteditable`), voir [le bug 1205133](https://bugzilla.mozilla.org/show_bug.cgi?id=1205133) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -218,7 +218,7 @@ Cette fonctionnalité affiche les caractères de contrôle (catégorie Unicode C
 
 ### Propriété initial-letter
 
-La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/initial-letter) fait partie du module de spécification [CSS3 Inline](https://drafts.csswg.org/css-inline/) et permet d'indiquer l'élévation (entre autres) des lettres initiales. Voir [le bug 1223880](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) pour plus de détails.
+La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/Reference/Properties/initial-letter) fait partie du module de spécification [CSS3 Inline](https://drafts.csswg.org/css-inline/) et permet d'indiquer l'élévation (entre autres) des lettres initiales. Voir [le bug 1223880](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -258,7 +258,7 @@ La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/initial-letter) fait part
 
 ### Propriété aspect-ratio
 
-La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/aspect-ratio) est décrite dans le module de spécification [CSS4 Sizing](https://drafts.csswg.org/css-sizing-4/) et permet de créer des boîtes qui respectent des proportions (_aspect ratio_ en anglais) données. Voir [le bug 1639963](https://bugzilla.mozilla.org/show_bug.cgi?id=1639963) et [le bug 1646096](https://bugzilla.mozilla.org/show_bug.cgi?id=1646096) pour plus de détails.
+La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/Reference/Properties/aspect-ratio) est décrite dans le module de spécification [CSS4 Sizing](https://drafts.csswg.org/css-sizing-4/) et permet de créer des boîtes qui respectent des proportions (_aspect ratio_ en anglais) données. Voir [le bug 1639963](https://bugzilla.mozilla.org/show_bug.cgi?id=1639963) et [le bug 1646096](https://bugzilla.mozilla.org/show_bug.cgi?id=1646096) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -378,7 +378,7 @@ Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`numb
 
 ### Propriété backdrop-filter
 
-La propriété [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter) permet d'appliquer des effets de filtre à la zone située derrière un élément. Voir [le bug 1178765](https://bugzilla.mozilla.org/show_bug.cgi?id=1178765) pour plus de détails.
+La propriété [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdrop-filter) permet d'appliquer des effets de filtre à la zone située derrière un élément. Voir [le bug 1178765](https://bugzilla.mozilla.org/show_bug.cgi?id=1178765) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -502,7 +502,7 @@ La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-
 
 ### Propriété math-style
 
-La propriété [`math-style`](/fr/docs/Web/CSS/math-style) indique si les équations MathML doivent être affichées avec une hauteur normale ou compacte. Voir [le bug 1665975](https://bugzilla.mozilla.org/show_bug.cgi?id=1665975) pour plus de détails.
+La propriété [`math-style`](/fr/docs/Web/CSS/Reference/Properties/math-style) indique si les équations MathML doivent être affichées avec une hauteur normale ou compacte. Voir [le bug 1665975](https://bugzilla.mozilla.org/show_bug.cgi?id=1665975) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -580,7 +580,7 @@ La méthode `at()` qui permet d'utiliser une indexation relative a été ajouté
 
 ### Champs de classe privés
 
-Voir la page [sur les champs de classe privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_properties) pour plus d'informations.
+Voir la page [sur les champs de classe privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements) pour plus d'informations.
 
 <table class="standard-table">
   <thead>
@@ -1291,7 +1291,7 @@ Cette fonctionnalité ajoute les méthodes [`appendBufferAsync()`](/fr/docs/Web/
 
 #### Prise en charge du format AVIF (AV1 Image File)
 
-Avec cette fonctionnalité, Firefox prend en charge le format [AV1 Image File (AVIF)](/fr/docs/Web/Media/Formats/Image_types#avif). Il s'agit d'un format d'image tirant parti des algorithmes de compression vidéo AV1 pour réduire la taille des images. Voir [le bug 1443863](https://bugzilla.mozilla.org/show_bug.cgi?id=1443863) pour plus de détails.
+Avec cette fonctionnalité, Firefox prend en charge le format [AV1 Image File (AVIF)](/fr/docs/Web/Media/Guides/Formats/Image_types#avif). Il s'agit d'un format d'image tirant parti des algorithmes de compression vidéo AV1 pour réduire la taille des images. Voir [le bug 1443863](https://bugzilla.mozilla.org/show_bug.cgi?id=1443863) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -1504,7 +1504,7 @@ Cela modifie également l'avertissement de la console : si la mise à niveau ré
 
 #### En-tête Feature-Policy
 
-[Feature-Policy](/fr/docs/Web/HTTP/Permissions_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
+[Feature-Policy](/fr/docs/Web/HTTP/Guides/Permissions_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
 
 > [!NOTE]
 >

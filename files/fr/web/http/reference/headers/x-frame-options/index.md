@@ -4,12 +4,12 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 original_slug: Web/HTTP/Headers/X-Frame-Options
 ---
 
-L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut être utilisé afin d'indiquer si un navigateur devrait être autorisé à afficher une page au sein d'un élément [`<frame>`](/fr/docs/Web/HTML/Element/frame), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<embed>`](/fr/docs/Web/HTML/Element/embed) ou [`<object>`](/fr/docs/Web/HTML/Element/object). Les sites peuvent utiliser cet en-tête afin d'éviter les attaques de _[clickjacking](https://fr.wikipedia.org/wiki/Clickjacking)_ (ou «&nbsp;détournement de clic&nbsp;») pour s'assurer que leur contenu ne soit pas embarqué dans d'autres sites.
+L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut être utilisé afin d'indiquer si un navigateur devrait être autorisé à afficher une page au sein d'un élément [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame), [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) ou [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object). Les sites peuvent utiliser cet en-tête afin d'éviter les attaques de _[clickjacking](https://fr.wikipedia.org/wiki/Clickjacking)_ (ou «&nbsp;détournement de clic&nbsp;») pour s'assurer que leur contenu ne soit pas embarqué dans d'autres sites.
 
 Ce complément de sécurité est uniquement valable lorsque l'utilisateur final visite le document avec un navigateur prenant en charge `X-Frame-Options`.
 
 > [!NOTE]
-> L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
+> L'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) possède une directive [`frame-ancestors`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) qui [supplante](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) cet en-tête pour les navigateurs compatibles.
 
 <table class="properties">
   <tbody>
@@ -46,7 +46,7 @@ Si on utilise `DENY`, le chargement de la page dans une _frame_ échouera sur un
 - `SAMEORIGIN`
   - : La page ne peut être affichée que dans une _frame_ avec une origine qui est la même que la page elle-même. La spécification laisse le choix au navigateur de décider si cela s'applique au niveau le plus haut, au conteneur parent ou à l'ensemble de la chaîne des _frames_ potentiellement imbriquées. Il est parfois avancé que cette option n'est pas très utile à moins que l'ensemble des ancêtres partage la même origine (cf. [bug 725490](https://bugzilla.mozilla.org/show_bug.cgi?id=725490)). Voir aussi [le tableau de compatibilité](#compatibilité_des_navigateurs) ci-après pour plus de détails sur la prise en charge de cette directive.
 - `ALLOW-FROM uri` {{deprecated_inline}}
-  - : Une directive obsolète qui ne fonctionne plus dans les navigateurs récents et qui ne doit donc plus être utilisée. Pour les navigateurs historiques, cette directive permettait d'indiquer une origine via une URI afin d'autoriser l'affichage du document dans les _frames_ chargées depuis cette origine. Pour les anciennes versions de Firefox, on a le même problème qu'avec `SAMEORIGIN`&nbsp;: il n'y a pas de vérifications des différents ancêtres pour voir s'ils partagent la même origine. À la place, on utilisera la directive [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) de l'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy).
+  - : Une directive obsolète qui ne fonctionne plus dans les navigateurs récents et qui ne doit donc plus être utilisée. Pour les navigateurs historiques, cette directive permettait d'indiquer une origine via une URI afin d'autoriser l'affichage du document dans les _frames_ chargées depuis cette origine. Pour les anciennes versions de Firefox, on a le même problème qu'avec `SAMEORIGIN`&nbsp;: il n'y a pas de vérifications des différents ancêtres pour voir s'ils partagent la même origine. À la place, on utilisera la directive [`frame-ancestors`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) de l'en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy).
 
 ## Exemples
 
@@ -136,7 +136,7 @@ app.use(frameguard({ action: "SAMEORIGIN" }));
 
 ## Voir aussi
 
-- [`frame-ancestors`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) lié à la configuration de la stratégie CSP via [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`frame-ancestors`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) lié à la configuration de la stratégie CSP via [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
 - [L'en-tête HTTP `X-Frame-Options` - RFC 7034 (en anglais)](https://datatracker.ietf.org/doc/html/rfc7034)
 - [Protéger contre le détournement de clic - IEBlog (en anglais)](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
 - [Lutter contre le détournement de clic avec l'en-tête `X-Frame-Options` - IEInternals (en anglais)](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}
-
-**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
+**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
 
 ## 構文
 
@@ -62,7 +60,7 @@ h6 {
 
 ### @font-palette-values での使用
 
-`<dashed-ident>` を [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールで使用する場合、先にアットルールを宣言してから、 [font-palette](/ja/docs/Web/CSS/font-palette) プロパティの値として使用します。
+`<dashed-ident>` を [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) アットルールで使用する場合、先にアットルールを宣言してから、 [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) プロパティの値として使用します。
 
 ```css
 @font-palette-values --my-palette {

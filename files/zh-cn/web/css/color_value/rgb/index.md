@@ -224,7 +224,7 @@ body {
 
 本示例使用了不同的背景颜色来设置三个 {{htmlelement("div")}} 元素样式。左边元素被赋予未修改的 `--base-color`，而中间和右边的元素被赋予 `--base-color` 的变体，会逐渐减小红色通道的值，增大蓝色通道的值。
 
-这些变体是使用了相对颜色定义的——`--base-color` [自定义属性](/zh-CN/docs/Web/CSS/--*)被传递到 `rgb()` 函数中，然后通过 `calc()` 函数修改输出颜色的红色和蓝色通道值，得到预期效果，同时绿色通道值保持不变。
+这些变体是使用了相对颜色定义的——`--base-color` [自定义属性](/zh-CN/docs/Web/CSS/Reference/Properties/--*)被传递到 `rgb()` 函数中，然后通过 `calc()` 函数修改输出颜色的红色和蓝色通道值，得到预期效果，同时绿色通道值保持不变。
 
 ```html hidden
 <div id="container">
@@ -364,6 +364,6 @@ div.rgba {
 ## 参见
 
 - {{CSSXref("&lt;color&gt;")}} 数据类型，以了解所有颜色标记的列表
-- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块

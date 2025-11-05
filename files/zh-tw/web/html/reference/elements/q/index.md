@@ -3,8 +3,6 @@ title: <q>
 slug: Web/HTML/Reference/Elements/q
 ---
 
-{{HTMLSidebar}}
-
 _HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引文。這個元素適用於不須換行的短引文，針對長引文，請使用 {{HTMLElement("blockquote")}} 元素。
 
 | [內容類別](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[段落式內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content)、捫及內容。 |

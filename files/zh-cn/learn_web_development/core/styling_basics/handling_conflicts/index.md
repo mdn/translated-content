@@ -115,7 +115,7 @@ span {
 一些属性是不能继承的——举个例子如果你在一个元素上设置 {{cssxref("width")}} 为 50% ，所有的后代不会是父元素的宽度的 50% 。如果这个也可以继承的话，CSS 就会很难使用了！
 
 > [!NOTE]
-> 在 MDN CSS 属性参考页面，你会发现一个名为“形式定义”的技术信息框，其中列举了属性的很多数据信息，包括能否被继承。以 [color 属性的形式定义部分](/zh-CN/docs/Web/CSS/color#形式定义)为例。
+> 在 MDN CSS 属性参考页面，你会发现一个名为“形式定义”的技术信息框，其中列举了属性的很多数据信息，包括能否被继承。以 [color 属性的形式定义部分](/zh-CN/docs/Web/CSS/Reference/Properties/color#形式定义)为例。
 
 ## 理解这些概念是如何协同工作的
 
@@ -234,7 +234,7 @@ body {
 
 ### 重设所有属性值
 
-CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个（`inherit`、`initial`、`unset` 或 `revert`）。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。
+CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/Reference/Properties/all) 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个（`inherit`、`initial`、`unset` 或 `revert`）。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。
 
 下面的示例中有两个块级引用元素。第一个用元素本身的样式，第二个设置 `all` 为 `unset`
 
@@ -324,9 +324,9 @@ h2 {
 - **元素**：选择器中包含元素、伪元素选择器则个位得一分。
 
 > [!NOTE]
-> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/:where)）不会影响优先级。
+> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where)）不会影响优先级。
 
-否定（[`:not()`](/zh-CN/docs/Web/CSS/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
+否定（[`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
 
 下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/CSS_selectors)找到每个选择器的详细信息。
 

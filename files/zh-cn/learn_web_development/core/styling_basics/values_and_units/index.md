@@ -717,7 +717,7 @@ li {
 
 ## 位置
 
-[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
+[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/Reference/Properties/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
 
 一个典型的位置值由两个值组成。第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
 
@@ -772,15 +772,15 @@ li {
 
 在编程中，函数是一段执行特定任务的代码。函数非常有用，因为你可以编写一次代码，然后多次重复使用它，而不必一遍又一遍地编写相同的逻辑。大多数编程语言不仅支持函数，还提供了方便的常用内置函数，因此你不必从头开始自己编写这些函数。
 
-CSS 也有[函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)，其工作方式与其他语言中的函数类似。事实上，我们在上面的[颜色](#颜色)部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
+CSS 也有[函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)，其工作方式与其他语言中的函数类似。事实上，我们在上面的[颜色](#颜色)部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
 
-除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。例如，[变换函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#变换函数)是一种常见的在页面上移动、旋转和缩放元素的方式。你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/transform-function/scale) 用于放大或缩小某物。
+除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。例如，[变换函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#变换函数)是一种常见的在页面上移动、旋转和缩放元素的方式。你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/transform-function/scale) 用于放大或缩小某物。
 
 ### 数学函数
 
 在为项目创建样式时，你可能会从诸如 `300px` 的长度或 `200ms` 的持续时间等数值开始。如果你希望这些值基于其他值发生变化，则需要进行一些数学计算。你可以计算某个值的百分比或将一个数字与另一个数字相加，然后使用结果更新你的 CSS。
 
-CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学函数)，它允许我们执行计算，而不是依赖于静态值或在 JavaScript 中进行计算。最常见的数学函数之一是 [`calc()`](/zh-CN/docs/Web/CSS/calc)，它允许你执行加法、减法、乘法和除法等操作。
+CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学函数)，它允许我们执行计算，而不是依赖于静态值或在 JavaScript 中进行计算。最常见的数学函数之一是 [`calc()`](/zh-CN/docs/Web/CSS/calc)，它允许你执行加法、减法、乘法和除法等操作。
 
 例如，假设我们希望将某个元素的宽度设置为其父容器宽度的 20% 加上 100px。我们无法使用静态值指定此宽度 —— 如果父容器使用百分比宽度（或诸如 `em` 或 `rem` 之类的相对单位），则它会根据使用环境以及其他因素（例如用户的设备或浏览器窗口宽度）而变化。但是，我们可以使用 `calc()` 将该元素的宽度设置为其父容器宽度的 20% 加上 100px。20% 基于父容器（`.wrapper`）的宽度，如果该宽度发生变化，计算结果也会随之变化：
 
@@ -805,7 +805,7 @@ CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Func
 
 {{EmbedLiveSample("calc")}}
 
-CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs/Web/CSS/min)、[`max()`](/zh-CN/docs/Web/CSS/max) 和 [`clamp()`](/zh-CN/docs/Web/CSS/clamp)；它们分别允许你从一组值中选择最小、最大或中间值。你还可以使用[三角函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#三角函数)，例如 [`sin()`](/zh-CN/docs/Web/CSS/sin)、[`cos()`](/zh-CN/docs/Web/CSS/cos) 和 [`tan()`](/zh-CN/docs/Web/CSS/tan)，来计算围绕某点旋转元素的角度，或选择以[色相角度](/zh-CN/docs/Web/CSS/hue)作为参数的颜色。当你需要对某物的移动和外观进行非常精细的控制时，[指数函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#指数函数)也可用于动画和过渡。
+CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs/Web/CSS/min)、[`max()`](/zh-CN/docs/Web/CSS/max) 和 [`clamp()`](/zh-CN/docs/Web/CSS/clamp)；它们分别允许你从一组值中选择最小、最大或中间值。你还可以使用[三角函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#三角函数)，例如 [`sin()`](/zh-CN/docs/Web/CSS/sin)、[`cos()`](/zh-CN/docs/Web/CSS/cos) 和 [`tan()`](/zh-CN/docs/Web/CSS/tan)，来计算围绕某点旋转元素的角度，或选择以[色相角度](/zh-CN/docs/Web/CSS/hue)作为参数的颜色。当你需要对某物的移动和外观进行非常精细的控制时，[指数函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#指数函数)也可用于动画和过渡。
 
 了解 CSS 函数非常有用，这样当你看到它们时就能识别出来。你应该开始在项目中尝试使用它们——它们将帮助你避免编写自定义或重复的代码来实现你可以通过常规 CSS 获得的结果。
 
@@ -815,7 +815,7 @@ CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs
 
 ## 总结
 
-本文简要介绍了你可能会遇到的最常见的值和单位类型。你可以在 [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块页面上查看所有不同的类型——在学习这些课程的过程中，你会遇到许多这样的类型。
+本文简要介绍了你可能会遇到的最常见的值和单位类型。你可以在 [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)模块页面上查看所有不同的类型——在学习这些课程的过程中，你会遇到许多这样的类型。
 
 需要记住的关键点是，每个属性都有一个定义好的允许值类型列表，而每个值类型都有一个定义来解释这些值是什么。然后，你可以在 MDN 上查找详细信息。例如，了解 [`<image>`](/zh-CN/docs/Web/CSS/image) 还允许你创建颜色渐变，这是很有用的，但这可能并不容易学习！
 

@@ -1,12 +1,9 @@
 ---
 title: "<div>: コンテンツ区分要素"
 slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
-
-{{HTMLSidebar}}
 
 **`<div>`** は [HTML](/ja/docs/Web/HTML) の要素で、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる（例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などの何らかのレイアウトモデルが適用されるなど）までは、コンテンツやレイアウトには影響を与えません。
 
@@ -16,15 +13,15 @@ l10n:
 <div class="warning">
   <img
     src="/shared-assets/images/examples/leopard.jpg"
-    alt="An intimidating leopard." />
-  <p>Beware of the leopard</p>
+    alt="威圧的なヒョウ。" />
+  <p>ヒョウに注意</p>
 </div>
 ```
 
 ```css interactive-example
 .warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
+  border: 10px ridge red;
+  background-color: yellow;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -46,33 +43,34 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
+> [!NOTE]
+> `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
 ## 使用上の注意
 
 - `<div>` 要素は、他に適切な意味的要素（{{HTMLElement("article")}} や {{HTMLElement("nav")}} など）がない場合に限り使用してください。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
-`<div>` 要素は [`generic` の暗黙のロール](https://www.w3.org/TR/wai-aria-1.2/#generic)を持っており、まったくない訳ではありません。これは、特定の役割を持つ直接の子孫要素が適切に機能することを期待する、特定の ARIA の組み合わせ宣言に影響を与える可能性があります。
+`<div>` 要素は [`generic` の暗黙のロール](https://w3c.github.io/aria/#generic)を持っており、まったくない訳ではありません。これは、特定の役割を持つ直接の子孫要素が適切に機能することを期待する、特定の ARIA の組み合わせ宣言に影響を与える可能性があります。
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
-```html
+```html-nolint
 <div>
   <p>
-    Any kind of content here. Such as &lt;p&gt;, &lt;table&gt;. You name it!
+    あらゆるコンテンツがここに来ます。 &lt;p&gt; や &lt;table&gt; などです。名前を付けてください！
   </p>
 </div>
 ```
 
 結果はこのようになります。
 
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
+{{EmbedLiveSample("A_basic_example", 650, 60)}}
 
-### スタイル付けを行う例
+### スタイル設定を行う例
 
 この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
 
@@ -80,7 +78,7 @@ l10n:
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
+  <p>素敵な影付きボックスに表示された、とても興味深いメモです。</p>
 </div>
 ```
 
@@ -89,10 +87,10 @@ l10n:
 ```css
 .shadowbox {
   width: 15em;
-  border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
+  border: 1px solid #333333;
+  box-shadow: 8px 8px 5px #444444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  background-image: linear-gradient(180deg, white, #dddddd 40%, #cccccc);
 }
 ```
 
@@ -106,24 +104,24 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >, <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>
+        >, <a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >。<br />または ({{glossary("WHATWG")}} HTML において) 親要素が
-        {{HTMLElement("dl")}} である場合: 1つ以上の
-        {{HTMLElement("dt")}} 要素と、それに続く1つ以上の
+        {{HTMLElement("dl")}} である場合は、 1 つ以上の
+        {{HTMLElement("dt")}} 要素と、それに続く 1 つ以上の
         {{HTMLElement("dd")}} 要素、さらに任意で
         {{HTMLElement("script")}} 要素や
         {{HTMLElement("template")}} 要素が混在。
@@ -136,7 +134,7 @@ l10n:
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
         を受け入れるすべての要素。<br />または ({{glossary("WHATWG")}}
@@ -146,8 +144,10 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

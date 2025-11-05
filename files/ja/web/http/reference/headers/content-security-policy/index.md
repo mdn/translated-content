@@ -1,9 +1,9 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) ヘッダー
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
@@ -169,7 +169,9 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### 'nonce-\<ノンス値>'
 
-この値は、文字列 `nonce-` に続いて {{glossary("Base64", "base64 エンコード")}}された文字列から成ります。この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
+この値は、文字列 `nonce-` にノンス値を続けたものです。ノンス値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
+
+この文字列は、サーバーが HTTP レスポンスごとに生成するランダムな値です。例を示します。
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -188,7 +190,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### '\<ハッシュアルゴリズム>-<ハッシュ値>'
 
-この値は、ハッシュアルゴリズムを識別する文字列に続いて、 {{glossary("Base64", "base64 エンコード")}}された文字列から成り、ハッシュ値を表します。
+この値は、ハッシュアルゴリズムを識別する文字列に `-` を続け、ハッシュ値を続けたものです。ハッシュ値は [Base64](/ja/docs/Glossary/Base64#base64_文字) または [URL セーフ Base64](/ja/docs/Glossary/Base64#url_およびファイル名セーフの_base64) の文字です。
 
 - ハッシュアルゴリズム識別子は、`sha256`、`sha384`、`sha512` のいずれかでなければなりません。
 - ハッシュ値は、 `<script>` または `<style>` リソースの base64 エンコードされた{{glossary("hash function", "ハッシュ")}}であり、SHA-256、SHA-384、SHA-512 のいずれかのハッシュ関数を使用して計算されます。
@@ -302,7 +304,8 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ハッシュ値がインラインイベントハンドラー属性値または `style` 属性値のハッシュと一致する場合、そのコードは実行が許可されます。
 
-> **メモ:** `'unsafe-hashes'` 値は安全ではありません。
+> [!NOTE]
+> `'unsafe-hashes'` 値は安全ではありません。
 >
 > 特に、インラインイベントハンドラー属性のコンテンツが、インライン `<script>` 要素として文書内に注入される攻撃が可能になります。インラインイベントハンドラーが以下であると仮定します。
 >

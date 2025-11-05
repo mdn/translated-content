@@ -90,7 +90,7 @@ CSS にこける同等の値の表し方とは異なる形で表現されてい�
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
 > [!NOTE]
-> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
+> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
 
 #### パーツをまとめる
 
@@ -364,7 +364,8 @@ const endGame = () => {
 };
 ```
 
-> **メモ:** `getAnimations()` と `effect` は、この記事を書いている時点ではすべてのブラウザーで対応しているわけではありませんが、ポリフィルでは対応しています。
+> [!NOTE]
+> `getAnimations()` と `effect` は、この記事を書いている時点ではすべてのブラウザーで対応しているわけではありませんが、ポリフィルでは対応しています。
 
 ## コールバックとプロミス
 

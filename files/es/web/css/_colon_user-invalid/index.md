@@ -3,7 +3,7 @@ title: :-moz-ui-invalid
 slug: Web/CSS/:user-invalid
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

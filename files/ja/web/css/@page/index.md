@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2b3eb646cec5c9bc74e263b7880a52ad52e37913
 ---
 
-{{CSSRef}}
-
 **`@page`** は CSS のアットルールで、印刷されるページのさまざまな側面を変更するために使用されます。ページの寸法、方向、およびマージンを対象として変更します。`@page` アットルールは、さまざまな擬似クラスを使用して、印刷物のすべてのページまたはその一部を対象として使用することができます。
 
 ## 構文
@@ -46,8 +44,8 @@ l10n:
 
 `@page` アットルールには、ページ記述子と[マージンのアットルール](#マージンのアットルール)のみを含めることができます。次の記述子は、少なくとも 1 つのブラウザーで実装されています。
 
-- [`margin`](/ja/docs/Web/CSS/margin)
-  - : ページのマージンを指定します。個々のマージンプロパティ [`margin-top`](/ja/docs/Web/CSS/margin-top)、[`margin-right`](/ja/docs/Web/CSS/margin-right)、[`margin-bottom`](/ja/docs/Web/CSS/margin-bottom)、[`margin-left`](/ja/docs/Web/CSS/margin-left) も使用できます。
+- [`margin`](/ja/docs/Web/CSS/Reference/Properties/margin)
+  - : ページのマージンを指定します。個々のマージンプロパティ [`margin-top`](/ja/docs/Web/CSS/Reference/Properties/margin-top)、[`margin-right`](/ja/docs/Web/CSS/Reference/Properties/margin-right)、[`margin-bottom`](/ja/docs/Web/CSS/Reference/Properties/margin-bottom)、[`margin-left`](/ja/docs/Web/CSS/Reference/Properties/margin-left) も使用できます。
 - [`page-orientation`](/ja/docs/Web/CSS/@page/page-orientation)
   - : ページの方向を指定します。これはページのレイアウトには影響しません。回転は、出力媒体でのレイアウト後に適用されます。
 - [`size`](/ja/docs/Web/CSS/@page/size)
@@ -281,7 +279,7 @@ l10n:
 
 名前付きページは、 {{Cssxref("page")}} プロパティを使用して適用することができます。これにより、ユーザーは印刷レイアウトで使用するさまざまなページ構成を作成することができます。
 
-この例については、 [`page`](/ja/docs/Web/CSS/page#例) の例にあります。
+この例については、 [`page`](/ja/docs/Web/CSS/Reference/Properties/page#例) の例にあります。
 
 ## 例
 

@@ -1,18 +1,55 @@
 ---
 title: -webkit-transform-2d
 slug: Web/CSS/@media/-webkit-transform-2d
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}{{Non-standard_header}}
-
-**`-webkit-transform-2d`** est une [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_caractéristiques_média) booléenne non-standard qui indique si les transformations CSS en 2D (cf. {{cssxref("transform")}}) préfixées sont prises en charge par le navigateur.
+{{Non-standard_header}}
 
 > [!NOTE]
-> Cette caractéristique est uniquement prise en charge par WebKit et Blink. Mieux vaut utiliser la méthode alternative standard avec {{cssxref("@supports")}} à la place si possible.
+> Tous les navigateurs prennent en charge la propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transform-2d`. Aucun navigateur ne prend en charge `transform` sans préfixe ou extension `2d` comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/@supports).
+
+La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-2d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 2D {{cssxref("transform")}} préfixées et les requêtes média non standard préfixées sont prises en charge.
+
+Apple propose [une description dans la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
+
+## Syntaxe
+
+`-webkit-transform-2d` est une caractéristique média booléenne de [CSS](/fr/docs/Web/CSS) qui vaut `true` si le navigateur prend en charge les transformations CSS 2D {{cssxref("transform")}} préfixées `-webkit`.
+
+### Valeurs
+
+- `true`
+  - : Le navigateur prend en charge les transformations CSS 2D préfixées `-webkit`.
+- `false`
+  - : Les transformations CSS 2D préfixées `-webkit` ne sont pas prises en charge par le navigateur.
+
+## Exemples
+
+### Exemple simple
+
+```css
+@media (-webkit-transform-2d) {
+  div {
+    -webkit-transform: translate(100px, 100px);
+  }
+}
+```
+
+Cette caractéristique média n'est prise en charge que par WebKit. La propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform) non préfixée est prise en charge dans tous les navigateurs modernes. Si possible, utilisez plutôt une requête de fonctionnalité {{cssxref("@supports")}}&nbsp;:
+
+```css
+@supports (-webkit-transform: translate(100px, 100px)) {
+  div {
+    -webkit-transform: translate(100px, 100px);
+  }
+}
+```
 
 ## Spécifications
 
-Cette caractéristique média est une caractéristique média propriétaire liée à WebKit/Blink. Elle ne fait partie d'aucune spécification. Elle est décrite plus en détails dans la [référence CSS Apple pour Safari (en anglais)](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3) .
+Ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
@@ -20,7 +57,10 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Voir aussi
 
-- {{cssxref("-webkit-transition")}}
-- {{cssxref("-webkit-transform-3d")}}
-- {{cssxref("-webkit-animation")}}
-- [Page de test sur quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
+- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
+- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
+- [Page de test sur quirksmode.org <sup>(angl.)</sup>](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- {{cssxref("transform")}} et [utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- {{cssxref("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
-
 **`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: brightness()")}}
@@ -72,7 +70,7 @@ brightness(200%)
 
 ### backdrop-filter プロパティを用いた brightness の適用
 
-この例は、段落に `brightness()` フィルターを、 [`backdrop-filter`](/ja/docs/Web/CSS/backdrop-filter) プロパティを介して適用する方法を示します。
+この例は、段落に `brightness()` フィルターを、 [`backdrop-filter`](/ja/docs/Web/CSS/Reference/Properties/backdrop-filter) プロパティを介して適用する方法を示します。
 
 #### CSS
 
@@ -115,7 +113,7 @@ p {
 
 ### 数値とパーセント値を用いた brightness の設定
 
-例えば、 `brightness()` フィルターが、 [`filter`](/ja/docs/Web/CSS/filter) プロパティを介して、コンテンツ、境界線、背景画像を含め、要素全体に適用されます。その結果、異なる明るさの値の 3 つのバリエーションが表示されます。
+例えば、 `brightness()` フィルターが、 [`filter`](/ja/docs/Web/CSS/Reference/Properties/filter) プロパティを介して、コンテンツ、境界線、背景画像を含め、要素全体に適用されます。その結果、異なる明るさの値の 3 つのバリエーションが表示されます。
 
 ```css
 p:first-of-type {

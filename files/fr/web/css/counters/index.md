@@ -10,7 +10,7 @@ La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en re
 - `counters(name, string)`
 - `counters(name, string, style)`
 
-Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
+Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
 
 ```css
 /* Utilisation simple - style decimal par défaut */
@@ -34,7 +34,7 @@ Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`c
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Un nom identifiant les compteurs à utiliser. C'est le même nom qui pourra être utilisé avec les propriétés {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`.
 - `<counter-style>`
-  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/list-style-type#valeurs)) ou une fonction [`symbols()`](/fr/docs/Web/CSS/symbols). En absence de valeur, le style utilisé sera `decimal`.
+  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#valeurs)) ou une fonction [`symbols()`](/fr/docs/Web/CSS/symbols). En absence de valeur, le style utilisé sera `decimal`.
 - {{cssxref("&lt;string&gt;")}}
   - : Une suite de caractères. Les caractères qui ne sont pas latins doivent être encodés avec leur séquence d'échappement Unicode. `\000A9` représentera par exemple le symbole copyright (©).
 - `none`

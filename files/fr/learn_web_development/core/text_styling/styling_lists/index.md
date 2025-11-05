@@ -4,9 +4,9 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Les [listes](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
+Les [listes](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
 
 <table class="standard-table">
   <tbody>
@@ -112,13 +112,13 @@ Le code HTML pour nos exemples de liste ressemble à ceci&nbsp;:
 
 {{EmbedLiveSample('','100%',770)}}
 
-Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
+Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
 
-- Les éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul) et [`<ol>`](/fr/docs/Web/HTML/Element/ol) ont une propriété [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas et une propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de `40px` (`2.5em`).
-- Les éléments de la liste ([`<li>`](/fr/docs/Web/HTML/Element/li)) n'ont aucun paramètre d'espacement par défaut.
-- L'élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) a des propriétés [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas, mais pas de définition du remplissage.
-- Les éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd) ont une propriété [`margin-left`](/fr/docs/Web/CSS/margin-left) de `40px` (`2.5em`).
-- Les éléments [`<p>`](/fr/docs/Web/HTML/Element/p), inclus pour référence, ont des propriétés [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas, identiques à ceux des différents types de listes.
+- Les éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) et [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ont une propriété [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) de `16px` (`1em`) en haut et en bas et une propriété [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left) de `40px` (`2.5em`).
+- Les éléments de la liste ([`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)) n'ont aucun paramètre d'espacement par défaut.
+- L'élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl) a des propriétés [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) de `16px` (`1em`) en haut et en bas, mais pas de définition du remplissage.
+- Les éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd) ont une propriété [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) de `40px` (`2.5em`).
+- Les éléments [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p), inclus pour référence, ont des propriétés [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) de `16px` (`1em`) en haut et en bas, identiques à ceux des différents types de listes.
 
 ## Gestion d'espacement des listes
 
@@ -163,20 +163,20 @@ dt {
 
 - La première règle définit une police de caractères pour l'ensemble du site avec une taille de base de 10px. Elles sont héritées par tous les éléments de la page.
 - Les règles 2 et 3 définissent des tailles relatives de la police pour les titres, les différents types de liste (les enfants des éléments de liste en héritent) et les paragraphes. Cela signifie que les paragraphes et listes auront la même taille de police et les mêmes espacements entre le haut et le bas, ce qui aidera à garder un rythme vertical cohérent.
-- La règle 4 définit la même propriété [`line-height`](/fr/docs/Web/CSS/line-height) pour les paragraphes et éléments de listes — ainsi, les paragraphes et chaque élément de liste individuellement auront le même espacement entre les lignes. Cela aidera également à garder un rythme vertical cohérent.
+- La règle 4 définit la même propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height) pour les paragraphes et éléments de listes — ainsi, les paragraphes et chaque élément de liste individuellement auront le même espacement entre les lignes. Cela aidera également à garder un rythme vertical cohérent.
 - Les règles 5 et 6 s'appliquent à la liste descriptive — nous définissons la même propriété `line-height` pour les termes à décrire et les descriptions, comme celle pour les paragraphes et les éléments de liste. Encore une fois, la cohérence est bonne&nbsp;! Nous écrivons aussi les termes à décrire avec une police en gras, pour les distinguer visuellement plus facilement.
 
 ## Style propre à une liste
 
-Maintenant que nous avons examiné l'espacement général des listes, explorons quelques propriétés propres à une liste. Il y a trois propriétés à connaître pour commencer&nbsp;; elles s'appliquent aux éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul) ou [`<ol>`](/fr/docs/Web/HTML/Element/ol)&nbsp;:
+Maintenant que nous avons examiné l'espacement général des listes, explorons quelques propriétés propres à une liste. Il y a trois propriétés à connaître pour commencer&nbsp;; elles s'appliquent aux éléments [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) ou [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol)&nbsp;:
 
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)&nbsp;: définit le type de puces à utiliser pour la liste, par exemple des puces carrées ou rondes pour une liste non ordonnée ou bien des nombres, des lettres ou des chiffres romains pour une liste ordonnée.
-- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)&nbsp;: définit si les puces seront disposées à l'intérieur ou à l'extérieur du début de l'élément de liste.
-- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)&nbsp;: permet d'utiliser une image personnalisée pour la puce, plutôt qu'un simple carré ou rond.
+- [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type)&nbsp;: définit le type de puces à utiliser pour la liste, par exemple des puces carrées ou rondes pour une liste non ordonnée ou bien des nombres, des lettres ou des chiffres romains pour une liste ordonnée.
+- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)&nbsp;: définit si les puces seront disposées à l'intérieur ou à l'extérieur du début de l'élément de liste.
+- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)&nbsp;: permet d'utiliser une image personnalisée pour la puce, plutôt qu'un simple carré ou rond.
 
 ### Styles de puces
 
-Comme mentionné ci-dessus, la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) vous permet de définir le type de puce à utiliser. Dans notre exemple, nous avons défini une liste ordonnée utilisant les chiffres romains en majuscules avec&nbsp;:
+Comme mentionné ci-dessus, la propriété [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) vous permet de définir le type de puce à utiliser. Dans notre exemple, nous avons défini une liste ordonnée utilisant les chiffres romains en majuscules avec&nbsp;:
 
 ```css
 ol {
@@ -188,11 +188,11 @@ Cela donne l'apparence suivante&nbsp;:
 
 ![Une liste ordonnée avec les puces placées à l'extérieur du texte de l'élément de la liste.](outer-bullets.png)
 
-Vous pouvez trouver beaucoup plus d'options en consultant la page de référence [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
+Vous pouvez trouver beaucoup plus d'options en consultant la page de référence [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type).
 
 ### Position des puces
 
-La propriété [`list-style-position`](/fr/docs/Web/CSS/list-style-position) définit si les puces apparaissent à l'extérieur ou à l'intérieur de la liste devant chaque élément. Par défaut, la valeur est `outside` et les puces apparaissent comme ci-dessus.
+La propriété [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position) définit si les puces apparaissent à l'extérieur ou à l'intérieur de la liste devant chaque élément. Par défaut, la valeur est `outside` et les puces apparaissent comme ci-dessus.
 
 Si vous choisissez la valeur `inside`, les puces seront disposées dans la ligne&nbsp;:
 
@@ -207,7 +207,7 @@ ol {
 
 ### Utilisation d'une puce image personnalisée
 
-La propriété [`list-style-image`](/fr/docs/Web/CSS/list-style-image) vous permet d'utiliser une image pour personnaliser vos puces. La syntaxe est assez simple&nbsp;:
+La propriété [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) vous permet d'utiliser une image pour personnaliser vos puces. La syntaxe est assez simple&nbsp;:
 
 ```css
 ul {
@@ -215,7 +215,7 @@ ul {
 }
 ```
 
-Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de [`background`](/fr/docs/Web/CSS/background), dont vous apprendrez beaucoup plus dans le module [Blocs de base en CSS](/fr/docs/Learn/CSS/Building_blocks). Pour l'instant, voici un avant-goût&nbsp;!
+Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de [`background`](/fr/docs/Web/CSS/Reference/Properties/background), dont vous apprendrez beaucoup plus dans le module [Blocs de base en CSS](/fr/docs/Learn_web_development/Core/Styling_basics). Pour l'instant, voici un avant-goût&nbsp;!
 
 Dans notre exemple achevé, nous avons appliqué un style à la liste non ordonnée (en plus de ce que vous avez déjà vu ci-dessus) comme ceci&nbsp;:
 
@@ -236,13 +236,13 @@ ul li {
 
 Voici ce que nous avons fait&nbsp;:
 
-- Abaissé la valeur de la propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de l'élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) de `40px` par défaut à `20px`, puis défini la même valeur pour les éléments de la liste. Ainsi, l'ensemble des éléments d'une liste non ordonnée seront toujours alignés avec les éléments d'une liste ordonnée et les descriptions d'une liste descriptive&nbsp;; tout en disposant d'un remplissage où les images d'arrière-plan seront placées. Si nous ne le faisions pas, les images d'arrière-plan et le texte de l'élément de liste se superposeraient, ce qui ferait brouillon.
-- Défini la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) à `none`, ainsi aucune puce par défaut n'apparaît. Nous allons utiliser les propriétés de [`background`](/fr/docs/Web/CSS/background) pour gérer les puces.
+- Abaissé la valeur de la propriété [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left) de l'élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) de `40px` par défaut à `20px`, puis défini la même valeur pour les éléments de la liste. Ainsi, l'ensemble des éléments d'une liste non ordonnée seront toujours alignés avec les éléments d'une liste ordonnée et les descriptions d'une liste descriptive&nbsp;; tout en disposant d'un remplissage où les images d'arrière-plan seront placées. Si nous ne le faisions pas, les images d'arrière-plan et le texte de l'élément de liste se superposeraient, ce qui ferait brouillon.
+- Défini la propriété [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) à `none`, ainsi aucune puce par défaut n'apparaît. Nous allons utiliser les propriétés de [`background`](/fr/docs/Web/CSS/Reference/Properties/background) pour gérer les puces.
 - Inséré une puce pour chaque élément de la liste désordonnée. Les propriétés pertinentes sont les suivantes&nbsp;:
-  - [`background-image`](/fr/docs/Web/CSS/background-image)&nbsp;: la référence du chemin d'accès au fichier image utilisé comme puce.
-  - [`background-position`](/fr/docs/Web/CSS/background-position)&nbsp;: l'emplacement de l'image dans l'arrière-plan de l'élément sélectionné — dans ce cas, puisque nous disons `0 0`, la puce apparaîtra dans le coin supérieur gauche de chaque élément de la liste.
-  - [`background-size`](/fr/docs/Web/CSS/background-size)&nbsp;: la taille de l'image d'arrière-plan. L'idéal est que les puces soient de même taille que les éléments de la liste (ou légèrement plus petites ou plus grandes). Nous utilisons une taille de `1.6rem` (`16px`), qui correspond bien au remplissage de `20px` dans lequel la puce est placée — 16px plus 4px d'espace entre la puce et le texte de l'élément de liste fonctionne bien.
-  - [`background-repeat`](/fr/docs/Web/CSS/background-repeat)&nbsp;: par défaut, les images d'arrière-plan se répètent jusqu'à avoir rempli l'espace d'arrière-plan disponible. Nous voulons l'insertion d'une seule copie de l'image sans répétition, donc nous choisissons la valeur `no-repeat`.
+  - [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)&nbsp;: la référence du chemin d'accès au fichier image utilisé comme puce.
+  - [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)&nbsp;: l'emplacement de l'image dans l'arrière-plan de l'élément sélectionné — dans ce cas, puisque nous disons `0 0`, la puce apparaîtra dans le coin supérieur gauche de chaque élément de la liste.
+  - [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)&nbsp;: la taille de l'image d'arrière-plan. L'idéal est que les puces soient de même taille que les éléments de la liste (ou légèrement plus petites ou plus grandes). Nous utilisons une taille de `1.6rem` (`16px`), qui correspond bien au remplissage de `20px` dans lequel la puce est placée — 16px plus 4px d'espace entre la puce et le texte de l'élément de liste fonctionne bien.
+  - [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)&nbsp;: par défaut, les images d'arrière-plan se répètent jusqu'à avoir rempli l'espace d'arrière-plan disponible. Nous voulons l'insertion d'une seule copie de l'image sans répétition, donc nous choisissons la valeur `no-repeat`.
 
 Ceci nous donne le résultat suivant&nbsp;:
 
@@ -250,7 +250,7 @@ Ceci nous donne le résultat suivant&nbsp;:
 
 ### Raccourci de style de liste
 
-Les 3 propriétés mentionnées ci-dessus peuvent toutes être définies en utilisant la propriété abrégée [`list-style`](/fr/docs/Web/CSS/list-style). Par exemple, le CSS suivant&nbsp;:
+Les 3 propriétés mentionnées ci-dessus peuvent toutes être définies en utilisant la propriété abrégée [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style). Par exemple, le CSS suivant&nbsp;:
 
 ```css
 ul {
@@ -276,7 +276,7 @@ Parfois, vous pouvez vouloir numéroter différemment une liste ordonnée — pa
 
 ### Numéro de départ
 
-L'attribut [`start`](/fr/docs/Web/HTML/Element/ol#attr-start) vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1.
+L'attribut [`start`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-start) vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1.
 
 ```html
 <ol start="4">
@@ -301,7 +301,7 @@ L'attribut [`start`](/fr/docs/Web/HTML/Element/ol#attr-start) vous permet de com
 
 ### Numérotation inversée
 
-L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la numérotation de la liste.
+L'attribut [`reversed`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-reversed) inverse la numérotation de la liste.
 
 ```html
 <ol start="4" reversed>
@@ -329,7 +329,7 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la n
 
 ### Valeurs individualisées
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix.
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/ol#attr-value) vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix.
 
 ```html
 <ol>
@@ -353,7 +353,7 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de num
 {{ EmbedLiveSample('', '100%', 150) }}
 
 > [!NOTE]
-> Même si vous utilisez une propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
+> Même si vous utilisez une propriété [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
 
 ## Apprentissage actif&nbsp;: définir le style d'une liste imbriquée
 
@@ -458,12 +458,12 @@ window.addEventListener("load", drawOutput);
 Les compteurs CSS fournissent des outils avancés pour personnaliser le comptage et le style des listes, mais ils sont assez complexes. Nous vous recommandons de les examiner si vous voulez vous étendre sur le sujet. Voir&nbsp;:
 
 - [`@counter-style`](/fr/docs/Web/CSS/@counter-style)
-- [`counter-increment`](/fr/docs/Web/CSS/counter-increment)
-- [`counter-reset`](/fr/docs/Web/CSS/counter-reset)
+- [`counter-increment`](/fr/docs/Web/CSS/Reference/Properties/counter-increment)
+- [`counter-reset`](/fr/docs/Web/CSS/Reference/Properties/counter-reset)
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez une évaluation de vos compétences à la fin de ce module — voir [Composition de la page d'accueil d'une école de communauté](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage). Peut-être que vous voudriez revoir les autres articles avant de l'essayer.
+Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez une évaluation de vos compétences à la fin de ce module — voir [Composition de la page d'accueil d'une école de communauté](/fr/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage). Peut-être que vous voudriez revoir les autres articles avant de l'essayer.
 
 ## Résumé
 

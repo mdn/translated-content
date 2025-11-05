@@ -2,10 +2,8 @@
 title: "<details>: 詳細折りたたみ要素"
 slug: Web/HTML/Reference/Elements/details
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
 ---
-
-{{HTMLSidebar}}
 
 **`<details>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。
 
@@ -22,7 +20,7 @@ l10n:
 
 ```css interactive-example
 details {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
@@ -38,7 +36,7 @@ details[open] {
 }
 
 details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
 ```
@@ -68,7 +66,8 @@ CSS を使用して、折りたたみウィジェットのスタイルを設定�
 
     `name` 属性はグループ名を指定します。複数の `<details>` 要素をグループ化するには、それらに同じ `name` 値を指定してください。グループ化された `<details>` 要素は、一度に 1 つしか開くことができません。1 つを開くと、他の要素は閉じられます。複数のグループ化された `<details>` 要素に `open` 属性が指定されている場合、ソースの順序で最初の要素のみが開きます。
 
-    > **メモ:** `<details>` 要素は、同じグループの一部であるために、ソース内で互いに隣接している必要はありません。
+    > [!NOTE]
+    > `<details>` 要素は、同じグループの一部であるために、ソース内で互いに隣接している必要はありません。
 
 ## イベント
 
@@ -163,7 +162,7 @@ details.addEventListener("toggle", (event) => {
 details {
   font:
     16px "Open Sans",
-    Calibri,
+    "Calibri",
     sans-serif;
   width: 620px;
 }
@@ -171,7 +170,7 @@ details {
 details > summary {
   padding: 2px 6px;
   width: 15em;
-  background-color: #ddd;
+  background-color: #dddddd;
   border: none;
   box-shadow: 3px 3px 4px black;
   cursor: pointer;
@@ -179,14 +178,14 @@ details > summary {
 
 details > p {
   border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+  background-color: #dddddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
 
 details:open > summary {
-  background-color: #ccf;
+  background-color: #ccccff;
 }
 ```
 

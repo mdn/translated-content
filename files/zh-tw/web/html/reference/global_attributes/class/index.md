@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`class`** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)是一個以 [ASCII 空白字元](/zh-TW/docs/Glossary/Whitespace#在_html_中)分隔的元素類別列表。
 
 {{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
@@ -47,7 +45,7 @@ l10n:
 
 ## 描述
 
-類別允許 CSS 和 JavaScript 通過[類別選擇器](/zh-TW/docs/Web/CSS/Class_selectors)或 {{domxref("document.getElementsByClassName()")}} 等函數來選擇和訪問特定元素。
+類別允許 CSS 和 JavaScript 通過[類別選擇器](/zh-TW/docs/Web/CSS/Reference/Selectors/Class_selectors)或 {{domxref("document.getElementsByClassName()")}} 等函數來選擇和訪問特定元素。
 
 雖然規範沒有對類別名稱做出要求，但鼓勵網頁開發人員使用描述元素語義目的的名稱，而不是元素的呈現方式。例如，使用 _attribute_ 來描述屬性而不是使用 _italics_，儘管此類別的元素可能會以斜體呈現。即使頁面的呈現方式發生變化，語義名稱仍然保持邏輯性。
 

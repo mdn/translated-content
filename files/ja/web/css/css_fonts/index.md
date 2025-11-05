@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a7d55b06a92d339bfdf109eef85c20a262ca9032
 ---
 
-{{CSSRef}}
-
 **CSS フォント**モジュールは、フォント関連のプロパティと、フォントリソースを読み込む方法を定義します。フォントファミリ、サイズ、太さなどのフォントのスタイル設定や、単一の文字に複数の字体が利用できる場合に使用する字体バリエーションを定義することができます。
 
 フォントは、文字の視覚的表現を格納したリソースファイルであり、文字コードをある書体の文字、数字、句読点、さらには絵文字を表す字体に割り当てられるものです。フォントファミリは、共通のデザインスタイルとフォントプロパティを共有するフォントのグループであり、グループの各メンバーは、ストロークの太さ、傾き、相対的な幅、他にも様々な属性によって異なる字体の表示方法を提供します。フォントは一般的に、単一のスタイル設定を表します。例えば太字かつイタリックの Helvetica などです。フォントファミリは完全な一連のスタイルです。このようなフォントを文書やデザイン内に含めるには、フォントリソースごとに別個の `@font-face` 宣言を定義します。
@@ -88,7 +86,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-feature-settings` 型:
 
-- [`<feature-tag-value>`](/ja/docs/Web/CSS/font-feature-settings#values)
+- [`<feature-tag-value>`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings#values)
 
 `font-format` 型:
 
@@ -96,7 +94,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-stretch` 型:
 
-- [`<font-stretch-css3>`](/ja/docs/Web/CSS/font-stretch#values)
+- [`<font-stretch-css3>`](/ja/docs/Web/CSS/Reference/Properties/font-stretch#values)
 
 `font-tech` 型:
 
@@ -106,26 +104,26 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 `font-variant` 型:
 
-- [`<font-variant-css2>`](/ja/docs/Web/CSS/font-variant)
-- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/font-variant#values)
-- [`<east-asian-width-values>`](/ja/docs/Web/CSS/font-variant#values)
+- [`<font-variant-css2>`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
+- [`<east-asian-variant-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#values)
+- [`<east-asian-width-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant#values)
 
 `font-variant-ligatures` 型:
 
-- [`<common-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<contextual-alt-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
-- [`<historical-lig-values>`](/ja/docs/Web/CSS/font-variant-ligatures#values)
+- [`<common-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<contextual-alt-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<discretionary-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
+- [`<historical-lig-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures#values)
 
 `font-variant-numeric` 型:
 
-- [`<numeric-figure-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
-- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/font-variant-numeric#values)
+- [`<numeric-figure-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-fraction-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
+- [`<numeric-spacing-values>`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric#values)
 
 `font-weight` 型:
 
-- [`<font-weight-absolute>`](/ja/docs/Web/CSS/font-weight#values)
+- [`<font-weight-absolute>`](/ja/docs/Web/CSS/Reference/Properties/font-weight#values)
 
 ### インターフェイス
 

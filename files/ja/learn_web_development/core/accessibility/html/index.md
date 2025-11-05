@@ -337,7 +337,8 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 追加のおまけとして、ほとんどのブラウザーにおいて、ラベルをフォーム入力欄に結びつけると、ラベルをクリックして当該フォーム要素を選択 / アクティブ化することができます。このため、入力欄に対して、より大きなヒット領域を与えることになり、入力欄が選択しやすくなります。
 
-> **メモ:** [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) と [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html) で、いくつかの良いフォーム例と悪いフォーム例を見られます。
+> [!NOTE]
+> [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) と [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html) で、いくつかの良いフォーム例と悪いフォーム例を見られます。
 
 適切なテキストラベルの重要性と、[Firefox のアクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)を使用してテキストラベルの問題を調査する方法については、以下の動画でうまく説明されています。
 
@@ -443,7 +444,8 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 この場合、`alt` 属性をまったく使っていません。その代わり、画像についての説明を通常のテキスト段落として提示し、その段落に `id` を与え、そして、その `id` を参照するための `aria-labelledby` 属性を用いました。こうすると、スクリーンリーダーに、その段落をその画像についての代替テキスト / ラベルとして使わせることになります。これは、複数の画像に対して同じテキストをラベルとして使いたい場合に、とりわけ有用です（これは、`alt` ではできません）。
 
-> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
+> [!NOTE]
+> [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
 
 ### figure と figcaption
 
@@ -485,7 +487,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ### リンクのスタイル付け
 
-既定では、リンクは色と [text-decoration](/ja/docs/Web/CSS/text-decoration) の両方で他のテキストと視覚的に異なります。既定ではリンクは青で下線、閲覧済みでは紫で下線、キーボードフォーカスを受けると [focus-ring](/ja/docs/Web/CSS/:focus) が付きます。
+既定では、リンクは色と [text-decoration](/ja/docs/Web/CSS/Reference/Properties/text-decoration) の両方で他のテキストと視覚的に異なります。既定ではリンクは青で下線、閲覧済みでは紫で下線、キーボードフォーカスを受けると [focus-ring](/ja/docs/Web/CSS/:focus) が付きます。
 
 色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、既定値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
 

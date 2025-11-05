@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 745950224a21606bb2d953e149b1385b9ea6a3f8
 ---
 
-{{CSSRef}}
-
-**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
+**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: &lt;gradient&gt;")}}
 
@@ -220,6 +218,6 @@ span {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS の単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS の単位と値](/ja/docs/Web/CSS/CSS_values_and_units)
 - [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -5,9 +5,9 @@ l10n:
   sourceCommit: fe427ad725f3cf1add1299de3cadfbb2bb05ed14
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-**`anchor()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、**アンカー位置指定**要素の[インセットプロパティ](#properties_that_accept_anchor_function_values)値内で使用することができ、関連付けられたアンカー要素の端の位置に対する長さの値を返します。
+**`anchor()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、**アンカー位置指定**要素の[インセットプロパティ](#properties_that_accept_anchor_function_values)値内で使用することができ、関連付けられたアンカー要素の端の位置に対する長さの値を返します。
 
 ## 構文
 
@@ -39,9 +39,10 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 引数は次の通りです。
 
 - `<anchor-name>` {{optional_inline}}
-  - : この要素の端に相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値です。これは `<dashed-ident>` 値です。省略された場合は、その要素の**既定のアンカー**で、これはその要素の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されているもの、またはその要素に関連付けられた HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が使用されます。
+  - : この要素の端に相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値です。これは `<dashed-ident>` 値です。省略された場合は、その要素の**既定のアンカー**で、これはその要素の [`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されているもの、またはその要素に関連付けられた HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が使用されます。
 
-    > **メモ:** `<anchor-name>` を `anchor()` 関数内で指定しても、要素とアンカーを関連付けることはできず、そのアンカーに対する要素の位置指定のみとなります。関連付けを作成するには、CSS の [`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティまたは HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が必要です。
+    > [!NOTE]
+    > `<anchor-name>` を `anchor()` 関数内で指定しても、要素とアンカーを関連付けることはできず、そのアンカーに対する要素の位置指定のみとなります。関連付けを作成するには、CSS の [`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティまたは HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性が必要です。
 
 - `<anchor-side>`
   - : アンカーの辺、または要素が位置指定された `start` の辺からの相対距離を指定します。 `anchor()` を設定する際に、インセットプロパティと[互換性](#インセットプロパティと_anchor-side_の値の互換性)のない物理値または論理値が使用された場合、代替値が使用されます。 有効な値としては、次のものがあります。
@@ -79,7 +80,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 
 `anchor()` 関数により、アンカー要素の辺に関連した要素の位置指定をすることができます。これは、絶対位置指定または固定位置指定要素に設定された{{glossary("inset properties", "インセットプロパティ")}}値でのみ有効です。
 
-これは `<length>` 値で、インセット値で指定されたアンカー配置要素側と、選択された `<anchor-side>` 値で指定されたアンカー要素側との間の距離を指定する値を返します。 `<length>` を返すため、長さの値を受け入れる[他の CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)内、例えば {{cssxref("calc()")}}、{{cssxref("clamp()")}} などで使用することができます。
+これは `<length>` 値で、インセット値で指定されたアンカー配置要素側と、選択された `<anchor-side>` 値で指定されたアンカー要素側との間の距離を指定する値を返します。 `<length>` を返すため、長さの値を受け入れる[他の CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)内、例えば {{cssxref("calc()")}}、{{cssxref("clamp()")}} などで使用することができます。
 
 `<anchor-name>` で指定された名前がついたアンカーが存在しない場合、または、位置指定要素に（{{cssxref("position-anchor")}} プロパティを介して）関連付けられたアンカーがない場合、最初の引数は不正なものと見なされ、利用できる場合は、代替の `<length-percentage>` 値が使用されます。例えば、位置指定要素に `top: anchor(bottom, 50px)` が指定されていたものの、その要素に関連付けられたアンカーがなかった場合、代替値が使用されるため、 `top` は `50px` という計算値になります。
 
@@ -154,7 +155,7 @@ CSS の{{glossary("inset properties", "インセットプロパティ")}}のう�
 
 同じ要素上の異なる `<anchor-name>` 値を異なるインセットプロパティの `anchor()` 関数内に指定することで、複数のアンカーに対して要素を相対的に配置することができます（下記の[複数のアンカーに対して相対的に配置された要素](#複数のアンカーに対して相対的に配置された要素)を参照）。 これは、位置指定された要素の角でサイズ変更に使用できるドラッグハンドルを作成するなど、有用な機能を作成するために使用できます。
 
-位置指定要素は、複数のアンカー要素に対して相対的に位置づけることができますが、その要素は、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティ（または HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性）で定義された単一のアンカーと関連付けられたものとなります。これは、ページがスクロールした際に、その要素がスクロールするアンカーです。また、要素が[条件付きで非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)になるタイミングを制御するために使用することもできます。
+位置指定要素は、複数のアンカー要素に対して相対的に位置づけることができますが、その要素は、[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティ（または HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性）で定義された単一のアンカーと関連付けられたものとなります。これは、ページがスクロールした際に、その要素がスクロールするアンカーです。また、要素が[条件付きで非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)になるタイミングを制御するために使用することもできます。
 
 ## 形式文法
 

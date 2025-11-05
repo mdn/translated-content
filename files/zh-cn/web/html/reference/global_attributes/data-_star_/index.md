@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`data-*`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一类被称为**自定义数据属性**的属性，可以通过脚本在 [HTML](/zh-CN/docs/Web/HTML) 与 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 表示之间进行专有数据的交换。
 
 {{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
@@ -65,7 +63,7 @@ li:hover:after {
 - 该名称不应包含任何冒号字符（`:`），因为 XML 会赋予此类名称意义。
 - 该名称不应包含任何大写字母，因为 XML 都是小写字母。
 
-这些都是建议。如果不遵循这些命名建议，将不会发生错误。属性仍将使用 CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)进行匹配，属性不区分大小写，任何属性值都区分大小写。不符合这三项建议的属性仍将被 JavaScript {{domxref("HTMLElement.dataset")}} 属性识别，用户代理将把该属性包含在包含 {{domxref("HTMLElement")}} 的所有自定义数据属性的 {{domxref("DOMStringMap")}} 中。
+这些都是建议。如果不遵循这些命名建议，将不会发生错误。属性仍将使用 CSS [属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)进行匹配，属性不区分大小写，任何属性值都区分大小写。不符合这三项建议的属性仍将被 JavaScript {{domxref("HTMLElement.dataset")}} 属性识别，用户代理将把该属性包含在包含 {{domxref("HTMLElement")}} 的所有自定义数据属性的 {{domxref("DOMStringMap")}} 中。
 
 如果计划使用 {{domxref("HTMLElement.dataset")}}，那么属性名中 `data-` 后面的部分只能包含 JavaScript 属性名中允许使用的字符（以及连字符，连字符将被删除）。属性名的 `dataset` 版本会去掉“data-”前缀，并将名称的其余部分从{{Glossary("Kebab_case", "烤串命名法")}}转换为驼峰命名法。例如，`element.getAttribute("data-test")` 等同于 `element.dataset.test`，而 `data-test-abc ` 将以 `HTMLElement.dataset.testAbc`（或 `HTMLElement.dataset["testAbc"]`）的形式访问。避免使用连字符后的非字母字符，如 `data-test-1` 或 `data--test`，因为 {{domxref("HTMLElement.dataset")}} 无法识别这些字符。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
-{{jsSidebar("Errors")}}
-
 當函式呼叫過多，或函式缺少基礎情況時，會發生 JavaScript 的「too much recursion」或「Maximum call stack size exceeded」例外。
 
 ## 訊息

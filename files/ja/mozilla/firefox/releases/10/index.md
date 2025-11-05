@@ -91,8 +91,8 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - CSS 3D Transforms がサポートされました。これには {{ cssxref("transform-style") }}、{{ cssxref("perspective") }}、{{ cssxref("perspective-origin") }}、{{ cssxref("backface-visibility") }} の各プロパティ、また同様に {{ cssxref("transform") }} および {{ cssxref("transform-function") }} プロパティによる 3D transform 機能が含まれます。詳しくは [Using CSS transforms](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#3d_specific_css_properties) をご覧ください。
 - {{ cssxref("unicode-bidi") }} CSS プロパティへ、新たに 2 つの値 `-moz-isolation` および `-moz-plaintext` が追加されました。値 `-moz-isolation` は、要素がその環境から受けるテキストの方向の見解から切り離すことで、異なる方向のテキストであることを示すことができます。`unicode-bidi:-moz-isolation` を指定した要素は、 {{ HTMLElement("bdi") }} 要素のように動作します。値 `-moz-plaintext` は、テキストの方向の決定に CSS の {{ cssxref("direction") }} プロパティではなく Unicode のヒューリスティックな方法を用いることを示します。
 - CSS の {{ cssxref("linear-gradient") }} プロパティおよび {{ cssxref("repeating-linear-gradient") }} プロパティは、新たに `to` 構文と _magic corner_ アルゴリズムをサポートするよう更新されました。これにより、グラデーションが描画されたボックスの隅へ精密に色を配置することができます。
-- {{ cssxref("text-overflow") }} プロパティに処理法が一つだけ指定されている場合に、ボックスの両側へオーバーフローする場合の `text-overflow` の扱いが [正しくなりました](/ja/docs/Web/CSS/text-overflow#gecko_notes)。
-- ポジショニングされた {{ HTMLElement("table") }} 要素内部での {{ cssxref("position") }} プロパティの扱いが [修正されました](/ja/docs/Web/CSS/position#gecko_notes)。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
+- {{ cssxref("text-overflow") }} プロパティに処理法が一つだけ指定されている場合に、ボックスの両側へオーバーフローする場合の `text-overflow` の扱いが [正しくなりました](/ja/docs/Web/CSS/Reference/Properties/text-overflow#gecko_notes)。
+- ポジショニングされた {{ HTMLElement("table") }} 要素内部での {{ cssxref("position") }} プロパティの扱いが [修正されました](/ja/docs/Web/CSS/Reference/Properties/position#gecko_notes)。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
 - {{ HTMLElement("table") }} 要素のマージンの相殺が、CSS 仕様書に合致するようになりました。以前は table 要素のマージンは隣接する要素のマージンと相殺されなかったため、正しくないレイアウトになっていました。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
 
 ### SVG

@@ -280,7 +280,8 @@ p {
 
 列挙されているフォントがどれも利用できない場合、ブラウザーが少なくともほぼ適切なものを提供できるように、スタックの最後に適切な総称フォント名を指定することをお勧めします。 この点を強調するために、他のオプションが利用できない場合、段落にはブラウザーの既定の serif フォントを使用します — これは通常は Times New Roman です — これは sans-serif フォントには不適切です！
 
-> **メモ:** `Trebuchet MS` のような空白を含むフォントファミリー名も、引用符で囲むことなく使用することができますが、エスケープの間違いを避けるために、空白、数字、ハイフン以外の句読点を含むフォントファミリー名は引用符で囲むことをお勧めします。
+> [!NOTE]
+> `Trebuchet MS` のような空白を含むフォントファミリー名も、引用符で囲むことなく使用することができますが、エスケープの間違いを避けるために、空白、数字、ハイフン以外の句読点を含むフォントファミリー名は引用符で囲むことをお勧めします。
 
 > [!WARNING]
 > 一般的なファミリー名や CSS 全体のキーワードと誤解される可能性のあるフォントファミリー名は、引用符で囲む必要があります。フォントファミリー名は {{cssxref("custom-ident")}} または {{cssxref("string")}} として記述することができますが、 `initial` や `inherit` のような CSS 全体のプロパティ値と同じであるフォントファミリー名や、 `sans-serif` や `fantasy` のような CSS の一般的なフォントファミリー名と同じ名前があるフォントファミリー名は、引用符で囲んだ文字列として記述しなければなりません。そうでない場合、フォントファミリー名は同等の CSS キーワードまたは一般的なフォントファミリー名であると解釈されます。キーワードとして使用する場合、`serif`、`sans-serif`、`monospace`、`cursive`、`fantasy` といった一般的なフォントファミリー名とグローバル CSS キーワードは、引用符で囲んでは**いけません**。文字列は CSS キーワードとして解釈されないためです。
@@ -420,7 +421,7 @@ text-shadow: 4px 4px 5px red;
 1. 元のテキストからの影の水平方向のオフセット。これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができますが、最も一般的には `px` を使用します。この値は含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット。基本的に水平方向のオフセットと同じようにふるまいますが、影を左右ではなく上下に移動する点が異なります。 この値は含める必要があります。
 3. ぼかし半径。値が大きいほど、影はより広く拡散されます。 この値が含まれていない場合、既定値は 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/color) プロパティから導かれます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティから導かれます。
 
 #### 複数の影
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{CSSRef}}
-
 **CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/CSS_animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)の上に構築する機能を提供します。これは、既定の時間ベースによる文書タイムラインの代わりに、スクロールベースのタイムラインに沿った進行に基づいてプロパティ値をアニメーションすることができます。つまり、時間の経過だけでなく、スクロール可能な要素をスクロールすることで、要素をアニメーションすることができます。
 
 スクロールベースのタイムラインには 2 種類あります。
@@ -61,8 +59,8 @@ CSS スクロール駆動アニメーションでは、`<timeline-range-name>` �
 
 無名スクロール進行タイムラインと無名ビュー進行タイムラインを定義するための {{cssxref("animation-timeline")}} プロパティの可能な値（つまり、明示的に名前付きで `scroll-timeline-*` プロパティと `view-timeline-*` プロパティを使用して定義するのではなく、ブラウザーによって暗黙的に定義されます）。
 
-- [`scroll()`](/ja/docs/Web/CSS/animation-timeline/scroll)
-- [`view()`](/ja/docs/Web/CSS/animation-timeline/view)
+- [`scroll()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
+- [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view)
 
 ### JavaScript 機能
 

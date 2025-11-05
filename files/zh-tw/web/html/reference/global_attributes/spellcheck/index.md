@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`spellcheck`** [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)是一個[列舉](/zh-TW/docs/Glossary/Enumerated)屬性，用來定義元素是否可以被檢查拼字錯誤。
 
 > [!NOTE]

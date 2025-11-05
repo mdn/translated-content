@@ -8,7 +8,8 @@ l10n:
 
 La cabecera **`Transfer-Encoding`** especifica la forma de codificación utilizada para transferir de forma segura el {{Glossary("Payload body", "cuerpo de carga útil")}} al usuario.
 
-> **Nota:** [HTTP/2](https://es.wikipedia.org/wiki/HTTP/2) prohíbe todos los usos de la cabecera _Transfer-Encoding_ que no sean los específicos de HTTP/2: `"trailers"`. HTTP 2 proporciona sus propios mecanismos más eficientes para la transmisión de datos que la transferencia fragmentada y prohíbe el uso de la cabecera. El uso de la cabecera en HTTP/2 puede dar como resultado un `error de protocolo` específico, ya que el protocolo HTTP/2 prohíbe su uso.
+> [!NOTE]
+> [HTTP/2](https://es.wikipedia.org/wiki/HTTP/2) prohíbe todos los usos de la cabecera _Transfer-Encoding_ que no sean los específicos de HTTP/2: `"trailers"`. HTTP 2 proporciona sus propios mecanismos más eficientes para la transmisión de datos que la transferencia fragmentada y prohíbe el uso de la cabecera. El uso de la cabecera en HTTP/2 puede dar como resultado un `error de protocolo` específico, ya que el protocolo HTTP/2 prohíbe su uso.
 
 `Transfer-Encoding` es una [cabecera salto por salto](/es/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers), que se aplica a un mensaje entre dos nodos, no a un recurso en sí mismo. Cada segmento de una conexión de múltiples nodos puede usar diferentes valores de `Transfer-Encoding`. Si desea comprimir datos en toda la conexión, use la cabecera de extremo a extremo {{HTTPHeader("Content-Encoding")}} en su lugar.
 

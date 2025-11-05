@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 8e2465af7cac389b70e83d54eeb288448f2ae08d
 ---
 
-{{CSSRef}}
-
-**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
+**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
 
 {{InteractiveExample("CSS デモ: repeating-conic-gradient()")}}
 
@@ -59,7 +57,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 - {{CSSxRef("&lt;angle&gt;")}}
   - : `from` キーワードに続いて角度を指定することで、時計回りのグラデーションの位置を定義します。
 - `<position>`
-  - : [`background-position`](/ja/docs/Web/CSS/background-position) プロパティと同じ長さ、順番、キーワード値を使用して、グラデーションの中心の位置を定義します。省略すると、既定値は`center`、すなわちグラデーションに配置されます。
+  - : [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティと同じ長さ、順番、キーワード値を使用して、グラデーションの中心の位置を定義します。省略すると、既定値は`center`、すなわちグラデーションに配置されます。
 - `<angular-color-stop>`
   - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{CSSxRef("&lt;angle&gt;")}}) が続きます。最後の色経由点から最初の色経由点までの角度が反復グラデーションの大きさを定義します。
 - `<color-hint>`

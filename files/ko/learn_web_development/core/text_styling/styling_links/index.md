@@ -383,9 +383,11 @@ a[href^="http"] {
 
 여기까지입니다. 위의 능동적 학습 섹션을 다시 한 번 살펴보고 이 새로운 기법을 사용해 보세요!
 
-> **참고:** `href` 값이 이상하게 보이는데, 여기서는 실제로 아무데도 연결되지 않는 더미 링크를 사용했습니다. 그 이유는 실제 링크를 사용하면 라이브 예제가 임베드된 `<iframe>`에 외부 사이트가 로드되어 예제가 손실될 수 있기 때문입니다.
+> [!NOTE]
+> `href` 값이 이상하게 보이는데, 여기서는 실제로 아무데도 연결되지 않는 더미 링크를 사용했습니다. 그 이유는 실제 링크를 사용하면 라이브 예제가 임베드된 `<iframe>`에 외부 사이트가 로드되어 예제가 손실될 수 있기 때문입니다.
 
-> **참고:** [배경](/ko/docs/Learn_web_development/Core/Styling_basics)과 [반응형 웹 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)에 아직 익숙하지 않더라도 다른 곳에서 설명되어 있으니 걱정하지 마세요.
+> [!NOTE]
+> [배경](/ko/docs/Learn_web_development/Core/Styling_basics)과 [반응형 웹 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)에 아직 익숙하지 않더라도 다른 곳에서 설명되어 있으니 걱정하지 마세요.
 
 ## 버튼으로 링크 스타일링하기
 

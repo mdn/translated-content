@@ -32,7 +32,8 @@ new Intl.Segmenter(locales);
 new Intl.Segmenter(locales, options);
 ```
 
-> **メモ:** `Intl.Segmenter()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用してのみ構築可能です。`new` を使わずに呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Intl.Segmenter()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使用してのみ構築可能です。`new` を使わずに呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

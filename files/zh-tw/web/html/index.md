@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f08eb478696946da474cf5c5ecdead4f5955f1b4
 ---
 
-{{HTMLSidebar}}
-
 **HTML**（HyperText Markup Language，超文本標記語言）是 Web 最基本的構建塊。它定義了 Web 內容的意義和結構。除了 HTML 之外，通常還會使用其他技術來描述 Web 的外觀／呈現（[CSS](/zh-TW/docs/Web/CSS)）或功能／行為（[JavaScript](/zh-TW/docs/Web/JavaScript)）。
 
 「超文本」（HyperText）指的是將 Web 相互連接的連結，可以在單個網站內部或網站之間進行連接。連結是 Web 的基本方面。通過將內容上傳到互聯網並將其連接到其他人創建的頁面，你成為了全球資訊網的積極參與者。

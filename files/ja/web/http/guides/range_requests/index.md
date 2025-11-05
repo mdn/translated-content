@@ -1,35 +1,49 @@
 ---
 title: HTTP 範囲リクエスト
+short-title: Range requests
 slug: Web/HTTP/Guides/Range_requests
-original_slug: Web/HTTP/Range_requests
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP 範囲リクエストでは、サーバーからクライアントに HTTP メッセージの一部のみを送信できます。部分リクエストは、たとえば、大きなメディアや、一時停止や再開機能を持つファイルのダウンロードに役立ちます。
+HTTP の範囲リクエスト ({{HTTPHeader("Range")}}) では、サーバーからクライアントに HTTP メッセージの一部のみを送信できます。
+範囲リクエストは、ランダムアクセスに対応しているメディアプレーヤー、大きなファイルの一部のみを必要とするデータツール、ダウンロードを一時停止および再開できるダウンロードマネージャーなど、さまざまなクライアントに役立ちます。
 
 ## サーバーが部分リクエストに対応しているかどうかの確認
 
-{{HTTPHeader("Accept-Ranges")}} が HTTP レスポンスに存在した場合 (そして値が "`none`" ではない場合)、サーバーは範囲リクエストに対応しています。これは例えば、 {{HTTPMethod("HEAD")}} リクエストを cURL で発行することで確認することができます。
+HTTP レスポンスに `none` 以外の値を持つ {{HTTPHeader("Accept-Ranges")}} ヘッダーが含まれている場合、サーバーは範囲リクエストに対応しています。
+レスポンスで `Accept-Ranges` ヘッダーが省略されている場合、サーバーは部分リクエストに対応していないことを示しています。
+範囲リクエストに対応していない場合、アプリケーションはこの条件に適応することができます。たとえば、ダウンロードマネージャーは、範囲リクエストに依存してダウンロードを再開する一時停止ボタンを無効にすることができます。
 
+サーバーが範囲リクエストに対応しているかどうかを調べるには、リソース全体をリクエストせずにヘッダーを検査する {{HTTPMethod("HEAD")}} リクエストを発行します。
+[curl](https://curl.se/) を使用する場合は、`-I` フラグを使用して `HEAD` リクエストを行うことができます。
+
+```bash
+curl -I https://i.imgur.com/z4d4kWk.jpg
 ```
-curl -I http://i.imgur.com/z4d4kWk.jpg
 
-HTTP/1.1 200 OK
-...
-Accept-Ranges: bytes
-Content-Length: 146515
+これにより、次の HTTP リクエストが生成されます。
+
+```http
+HEAD /z4d4kWk.jpg HTTP/2
+Host: i.imgur.com
+User-Agent: curl/8.7.1
+Accept: */*
 ```
 
-このレスポンスの中で、 `Accept-Ranges: bytes` は範囲を定義する単位としてバイト数が使えることを示しています。ここで {{HTTPHeader("Content-Length")}} ヘッダーも受け取る画像の全体の長さを示すので有用です。
+レスポンスにはヘッダーのみが含まれており、レスポンス本体は含まれていません。
 
-サイトが `Accept-Ranges` ヘッダーを省略した場合は、おそらく部分リクエストに対応していません。サイトによっては値として明示的に "`none`" を送信して、対応がないことを示すこともあります。アプリによっては、このような場合にダウンロードマネージャーが一時停止ボタンを無効化します。
-
+```http
+HTTP/2 200
+content-type: image/jpeg
+last-modified: Thu, 02 Feb 2017 11:15:53 GMT
+…
+accept-ranges: bytes
+content-length: 146515
 ```
-curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
 
-HTTP/1.1 200 OK
-...
-Accept-Ranges: none
-```
+このレスポンスの中で、 `Accept-Ranges: bytes` は範囲を定義する単位としてバイト数が使えることを示しています（今のところ、使える他の単位はありません）。
+{{HTTPHeader("Content-Length")}} ヘッダーも、`GET` メソッドを使用して同じリクエストを行った場合に、画像の合計サイズを示すので役立ちます。
 
 ## サーバーからの特定の範囲のリクエスト
 
@@ -37,43 +51,52 @@ Accept-Ranges: none
 
 ### 単一部分のリクエスト
 
-リソースから単一の範囲を要求することが可能です。ここで再び、cURL を用いてこれを検証することができます。"`-H`"オプションはリクエストに対して、この場合、最初の 1024 バイトを要求する`Range` ヘッダーラインを付け加えることができます。
+説明のために、curl を使用してリソースから単一の範囲をリクエストすることができます。
+`-H` オプションは、リクエストにヘッダー行を追加します。この例では、最初の 1024 バイトをリクエストする `Range` ヘッダーが追加されます。
+最後のオプションは `--output -` で、バイナリ出力を端末に出力することができます。
 
-```
-curl http://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023"
+```bash
+curl https://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023" --output -
 ```
 
-発行されるリクエストは次のようになります:
+発行されるリクエストは次のようになります。
 
-```
-GET /z4d4kWk.jpg HTTP/1.1
+```http
+GET /z4d4kWk.jpg HTTP/2
 Host: i.imgur.com
+User-Agent: curl/8.7.1
+Accept: */*
 Range: bytes=0-1023
 ```
 
-サーバーは {{HTTPStatus("206")}} `Partial Content` ステータスコードとともに以下のレスポンスを返します:
+サーバーは {{HTTPStatus("206", "206 Partial Content")}} ステータスコードとともに以下のレスポンスを返します。
 
-```
-HTTP/1.1 206 Partial Content
-Content-Range: bytes 0-1023/146515
-Content-Length: 1024
-...
+```http
+HTTP/2 206
+content-type: image/jpeg
+content-length: 1024
+content-range: bytes 0-1023/146515
+…
+
 (binary content)
 ```
 
-{{HTTPHeader("Content-Length")}} はここでの場合、要求された範囲の大きさを返します(画像全体の大きさではありません)。 {{HTTPHeader("Content-Range")}} レスポンスヘッダーはこの部分的なメッセージが全体のリソースのうちのどの部分に属しているのかを指し示しています。
+{{HTTPHeader("Content-Length")}} はここでの場合、要求された範囲の大きさを返します（画像全体の大きさではありません）。
+{{HTTPHeader("Content-Range")}} レスポンスヘッダーはこの部分的なメッセージが全体のリソースのうちのどの部分に属しているのかを指し示しています。
 
 ### 複数部分のリクエスト
 
 {{HTTPHeader("Range")}} ヘッダーはまた、ドキュメントの複数の範囲を一度に取得する手段も提供しています。それら複数の範囲はカンマで区切ることで指定できます。
 
-```
+```bash
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
 ```
 
-サーバーは {{HTTPStatus("206")}} `Partial Content` ステータスコードと {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` ヘッダーを伴ってレスポンスを返し、そこでは指定した複数のバイト範囲に関するデータが後ろに続いていることがわかります。 各々のバイト範囲において対応する `Content-Type` と `Content-Range` ヘッダーフィールドが含まれており、それぞれのボディ部分を区切るための境界文字列が境界パラメーターによって指定されています。
+サーバーは、下記に示す {{HTTPStatus("206", "206 Partial Content")}} ステータスで応答します。
+このレスポンスには、マルチパートのバイト範囲が続くことを示す {{HTTPHeader("Content-Type")}} ヘッダーが含まれています。
+境界文字列 (この例では `3d6b6a416f9b5`) は、本体部分を区切ります。各本体部分には、それぞれ独自の `Content-Type` および `Content-Range` フィールドがあります。
 
-```
+```http
 HTTP/1.1 206 Partial Content
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
 Content-Length: 282
@@ -83,7 +106,7 @@ Content-Type: text/html
 Content-Range: bytes 0-50/1270
 
 <!doctype html>
-<html>
+<html lang="en-US">
 <head>
     <title>Example Do
 --3d6b6a416f9b5
@@ -100,7 +123,7 @@ eta http-equiv="Content-type" content="text/html; c
 
 {{HTTPHeader("If-Range")}} HTTP リクエストヘッダーは範囲リクエストに対して条件付けを付与することができます。条件が満たされた場合、範囲リクエストが発行され、サーバーは適切なボディとともに {{HTTPStatus("206")}} `Partial Content` ステータスを返します。もし条件が満たされなかった場合、全てのリソースが {{HTTPStatus("200")}} `OK` ステータスとともに返されます。このヘッダーは {{HTTPHeader("Last-Modified")}} validator あるいは {{HTTPHeader("ETag")}} を伴って用いられます。両方を同時に使うことはありません。
 
-```
+```http
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
@@ -120,4 +143,3 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 - 関連するステータスコード {{HTTPStatus("200")}}, {{HTTPStatus("206")}}, {{HTTPStatus("416")}}.
 - 関連するヘッダー: {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.
-- [Download resumption in Internet Explorer](https://blogs.msdn.microsoft.com/ieinternals/2011/06/03/download-resumption-in-internet-explorer/)

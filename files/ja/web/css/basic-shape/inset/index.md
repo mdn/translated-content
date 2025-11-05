@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 9a073e360dac285c502d509830b5f9fad245f5f2
 ---
 
-{{CSSRef}}
-
-**`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つを定義するために使用される基本図形関数です。
+**`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)の一つを定義するために使用される基本図形関数です。
 
 {{InteractiveExample("CSS デモ: inset()")}}
 
@@ -56,7 +54,7 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 - `<length-percentage>{1,4}`
   - : 4 つの引数がすべて与えられた場合、参照ボックスの内側に向けた上、右、下、左のオフセットを表し、内部の矩形の辺の位置を定義します。これらの引数は margin 一括指定の構文に従っており、4 つの内側の位置すべてに 1 つ、2 つ、または 4 つの値を設定することができます。
 - `<border-radius>`
-  - : オプションの [`<border-radius>`](/ja/docs/Web/CSS/border-radius) 引数は、 border-radius 一括指定の構文を使用して内部の矩形の角の丸みを定義します。
+  - : オプションの [`<border-radius>`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 引数は、 border-radius 一括指定の構文を使用して内部の矩形の角の丸みを定義します。
 
 ## 例
 

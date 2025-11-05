@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Howto/Create_fancy_boxes
 
 Les boîtes CSS sont des blocs de base pour la construction des pages web. Créer des boîtes agréables à regarder est un défi complexe et intéressant. C'est un défi intéressant parce qu'on peut implémenter une idée de concept, de design, grâce à du code qui fonctionne. C'est un défi complexe car CSS possède à la fois plein de contraintes et de libertés. Dans cet article, nous allons voir de quoi il en retourne en dessinant quelques belles boîtes.
 
-Avant d'attaquer la partie pratique, nous vous recommandons de lire [l'article qui explique le fonctionnement du modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model). Bien que ce ne soit pas strictement nécessaire, il peut également être judicieux que de lire [les bases de la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction).
+Avant d'attaquer la partie pratique, nous vous recommandons de lire [l'article qui explique le fonctionnement du modèle de boîte CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model). Bien que ce ne soit pas strictement nécessaire, il peut également être judicieux que de lire [les bases de la disposition en CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction).
 
 D'un point de vue technique, créer de belles boîtes devient beaucoup plus simple quand on connaît les propriétés de bordure (`border-*`) et d'arrière-plan (`background-*`) et les règles qui permettent de les appliquer sur une boîte donnée. Mais au delà de cet aspect technique, il s'agit aussi de laisser libre cours à votre créativité. Cela ne se fera pas en un jour et certains développeurs web passent beaucoup temps sur ces sujets.
 
@@ -128,7 +128,7 @@ Passons à la manipulation :
 
 ## Les pseudo-éléments
 
-Lorsqu'on met en forme une boîte, on aurait parfois envie d'avoir plus de boîtes pour composer une mise en forme plus complexe et plus belle. La plupart du temps, cela peut nous amener à polluer le DOM en ajoutant des éléments HTML supplémentaires, uniquement pour la mise en forme. Bien que ce soit parfois nécessaire, c'est considéré comme une mauvaise pratique. Pour éviter cela, on peut utiliser [les pseudo-éléments CSS](/fr/docs/Web/CSS/Pseudo-elements).
+Lorsqu'on met en forme une boîte, on aurait parfois envie d'avoir plus de boîtes pour composer une mise en forme plus complexe et plus belle. La plupart du temps, cela peut nous amener à polluer le DOM en ajoutant des éléments HTML supplémentaires, uniquement pour la mise en forme. Bien que ce soit parfois nécessaire, c'est considéré comme une mauvaise pratique. Pour éviter cela, on peut utiliser [les pseudo-éléments CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### Un nuage
 
@@ -330,4 +330,4 @@ Nous allons ici créer un effet d'ombre portée. La propriété {{cssxref("box-s
 
 ## La suite
 
-Pour de nombreux cas, on utilisera des couleurs et des images d'arrière-plans pour composer de belles boîtes. Nous vous invitons donc [à approfondir la gestion des couleurs et des images](/fr/docs/Apprendre/CSS/Comment/Gérer_les_couleurs_et_les_images). Par ailleurs, rien ne sert de créer de belles boîtes si celles-ci ne font pas partie d'une disposition bien organisée. Aussi, si vous ne l'avez pas encore lu, nous vous conseillons de parcourir [les bases de la disposition](/fr/docs/Learn/CSS/CSS_layout/Introduction).
+Pour de nombreux cas, on utilisera des couleurs et des images d'arrière-plans pour composer de belles boîtes. Nous vous invitons donc [à approfondir la gestion des couleurs et des images](/fr/docs/Apprendre/CSS/Comment/Gérer_les_couleurs_et_les_images). Par ailleurs, rien ne sert de créer de belles boîtes si celles-ci ne font pas partie d'une disposition bien organisée. Aussi, si vous ne l'avez pas encore lu, nous vous conseillons de parcourir [les bases de la disposition](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction).

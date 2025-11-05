@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
-{{HTMLSidebar}}
-
 **`<colgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了表格中的一组列。
 
 {{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}
@@ -110,7 +108,7 @@ td {
     > [!NOTE]
     > 在 `<colgroup>` 元素上设置 `vertical-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
     >
-    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，请在每列使用 [`td:nth-of-type()`](/zh-CN/docs/Web/CSS/:nth-of-type) CSS 选择器，例如，`td:nth-of-type(2) { vertical-align: middle; }` 使第二列单元格垂直居中。
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，请在每列使用 [`td:nth-of-type()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-of-type) CSS 选择器，例如，`td:nth-of-type(2) { vertical-align: middle; }` 使第二列单元格垂直居中。
     >
     > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 

@@ -7,7 +7,8 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`upgrade-insecure-requests`** ディレクティブは、ユーザーエージェントに、すべてのサイトの安全でない URL（HTTP 経由で提供される URL）をセキュリティで保護された URL（HTTPS を介して提供されるもの）で置き換えられたかのように処理するよう指示します。このディレクティブは、書き換えが必要な安全ではない古い URL が多数存在するウェブサイトのためのものです。
 
-> **メモ:** `upgrade-insecure-requests` ディレクティブは、 {{CSP("block-all-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方を指定することはできません。
+> [!NOTE]
+> `upgrade-insecure-requests` ディレクティブは、 {{CSP("block-all-mixed-content")}} よりも前に処理され、もし設定されていれば後者は何もしません。どちらかのディレクティブを設定することをお勧めしますが、 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方を指定することはできません。
 
 `upgrade-insecure-requests` ディレクティブは、第三者のサイトのリンクを経由してサイトにアクセスしたユーザーが最上位のナビゲーション用に HTTPS にアップグレードされることを保証しないため、 {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) ヘッダーを置換せず、ユーザーがSSLストリッピング攻撃の対象にならないように、適切な `max-age` を設定するようにしてください。
 

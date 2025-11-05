@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
 **`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{glossary("RGB", "sRGB")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
 
 {{InteractiveExample("CSS デモ: hwb()")}}
@@ -66,7 +64,8 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 > [!NOTE]
 > この関数記法は sRGB 値に直列化され、赤、緑、青の成分の値は直列化の際に丸められる可能性があります。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> [!NOTE]
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 

@@ -5,14 +5,12 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがシステムに要求したカラーテーマが明色か暗色かを検出するために使用します。
 ユーザーはオペレーティングシステムの設定（ライトモードやダークモードなど）やユーザーエージェントの設定で、この設定を示す場合があります。
 
 ## 埋め込み要素
 
-SVG および iframe の場合、 `prefers-color-scheme` を使用すると、 SVG または iframe の CSS スタイルを、ウェブページ内の親要素の [`color-scheme`](/ja/docs/Web/CSS/color-scheme) に基づいて設定することができます。
+SVG および iframe の場合、 `prefers-color-scheme` を使用すると、 SVG または iframe の CSS スタイルを、ウェブページ内の親要素の [`color-scheme`](/ja/docs/Web/CSS/Reference/Properties/color-scheme) に基づいて設定することができます。
 SVG は、HTML にインラインでではなく、埋め込み（すなわち `<img src="circle.svg" alt="circle" />`）で使用する必要があります。
 SVG で `prefers-color-scheme` を使用している例については、「[埋め込み要素で継承される配色](#埋め込み要素で継承される配色)」の節を参照してください。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-{{CSSRef}}
-
 **可変フォント** (Variable fonts) は幅、太さ、スタイルごとに個別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを 1 つのファイルに組み込むことができる OpenType フォント仕様の進化版です。CSS および単一の {{cssxref("@font-face")}} 参照を介して、特定のフォントファイルに含まれるすべてのバリエーションにアクセスできます。この記事では、可変フォントの使用を開始するために知っておく必要があるすべての内容を説明します。
 
 > [!NOTE]
@@ -358,7 +356,7 @@ angle.addEventListener("input", (e) => {
 
 斜体 (`slnt`タグで表される) は、または 'oblique' とも良く呼ばれますが、文字の角度を変えるという点で真のイタリックとは異なりますが、何らかの文字の置換を行うわけではありません。また、数値の範囲で表現されるという点で、可変性があります。これにより、フォントをその軸に沿ってどこでも変化させることができます。許容される範囲は -90 〜 90 度の範囲です。
 
-傾きを制御できるプロパティは、 [`font-style`](/ja/docs/Web/CSS/font-style) と [`font-variation-settings`](/ja/docs/Web/CSS/font-variation-settings) の2つです。次の 2 つのプロパティ宣言は同じです。
+傾きを制御できるプロパティは、 [`font-style`](/ja/docs/Web/CSS/Reference/Properties/font-style) と [`font-variation-settings`](/ja/docs/Web/CSS/Reference/Properties/font-variation-settings) の2つです。次の 2 つのプロパティ宣言は同じです。
 
 ```plain
 font-style: oblique 14deg;
@@ -660,7 +658,7 @@ angle.addEventListener("input", (e) => {
 }
 ```
 
-この場合、 `normal` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で [font-style](/ja/docs/Web/CSS/font-style) プロパティが `normal` であるとき、このフォントファイルを使用しましょうということを示しています。 `oblique 0deg` と `oblique 0deg 20deg` の値は、 `0deg` のため、フォントが通常の正立字体を持っていることも示しています。
+この場合、 `normal` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で [font-style](/ja/docs/Web/CSS/Reference/Properties/font-style) プロパティが `normal` であるとき、このフォントファイルを使用しましょうということを示しています。 `oblique 0deg` と `oblique 0deg 20deg` の値は、 `0deg` のため、フォントが通常の正立字体を持っていることも示しています。
 
 #### イタリック体のみを含み、直立文字を含まないフォントの例
 
@@ -675,7 +673,7 @@ angle.addEventListener("input", (e) => {
 }
 ```
 
-この場合では、 `italic` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で [font-style](/ja/docs/Web/CSS/font-style) プロパティが `italic` であるとき、このフォントファイルを使用しましょうということを示しています。また、 `oblique 14deg` の値は、フォントがイタリック体の字体を持っていることを示しています。
+この場合では、 `italic` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で [font-style](/ja/docs/Web/CSS/Reference/Properties/font-style) プロパティが `italic` であるとき、このフォントファイルを使用しましょうということを示しています。また、 `oblique 14deg` の値は、フォントがイタリック体の字体を持っていることを示しています。
 
 #### 斜体軸を含むフォントの例
 
@@ -690,12 +688,13 @@ angle.addEventListener("input", (e) => {
 }
 ```
 
-この場合、 `oblique 0deg 12deg` の値は、スタイルルール内で `font-family` プロパティが `MyVariableFontName` で、 [font-style](/ja/docs/Web/CSS/font-style) プロパティが `oblique` で角度が 0 度から 12 度までのときに、このフォントファイルを使用しましょうということを示しています。
+この場合、 `oblique 0deg 12deg` の値は、スタイルルール内で `font-family` プロパティが `MyVariableFontName` で、 [font-style](/ja/docs/Web/CSS/Reference/Properties/font-style) プロパティが `oblique` で角度が 0 度から 12 度までのときに、このフォントファイルを使用しましょうということを示しています。
 
 > [!NOTE]
 > すべてのブラウザーがフォント指定形式の完全な構文を実装しているわけではないので、慎重にテストしてください。可変フォントに対応しているブラウザーはすべて、形式を format-variations ではなく、ファイル形式だけに設定してもレンダリングされますが (例：`woff2-variations` ではなく `woff2`)、可能であれば適切な構文を使用することをお勧めします。
 
-> **メモ:** `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
+> [!NOTE]
+> `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
 
 ## 古いブラウザーでの作業
 

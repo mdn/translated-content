@@ -25,7 +25,7 @@ l10n:
 - `minsize`
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、伸縮するときの演算子の最小サイズを示します。
 - `movablelimits`
-  - : [`<boolean>`](/ja/docs/Web/MathML/Reference/Values#mathml-specific_types) で、 [`math-style`](/ja/docs/Web/CSS/math-style) が `compact` に設定されているときに、下・上の文字が下・上付き文字に移動するかどうかを示します。
+  - : [`<boolean>`](/ja/docs/Web/MathML/Reference/Values#mathml-specific_types) で、 [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) が `compact` に設定されているときに、下・上の文字が下・上付き文字に移動するかどうかを示します。
 - `rspace`
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、演算子の後の空間の量を示します。
 - `separator`
@@ -35,7 +35,8 @@ l10n:
 - `symmetric`
   - : [`<boolean>`](/ja/docs/Web/MathML/Reference/Values#mathml-specific_types) で、伸縮する演算子が仮想数式軸（中央の分数線）を中心に上下対称であるべきであるかどうかを示します。
 
-> **メモ:** `lspace`、`maxsize`、`minsize`、`rspace` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
+> [!NOTE]
+> `lspace`、`maxsize`、`minsize`、`rspace` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
 
 ## 例
 

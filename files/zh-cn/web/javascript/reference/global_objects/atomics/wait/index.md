@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
-{{JSRef}}
-
 **`Atomics.wait()`** 静态方法验证共享内存特定位置是否仍然包含给定值，如果是则休眠，直到被唤醒或超时。其返回一个内容为 `"ok"`、`"not-equal"` 或 `"timed-out"` 的字符串。
 
 > [!NOTE]

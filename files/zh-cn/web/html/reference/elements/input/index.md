@@ -3,8 +3,6 @@ title: <input>：输入（表单输入）元素
 slug: Web/HTML/Reference/Elements/input
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<input>`** 元素用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据。取决于设备和{{Glossary("user agent", "用户代理")}}不同，表单可以使用各种类型的输入数据和控件。`<input>` 元素是目前 HTML 中最强大、最复杂的元素之一，因为它有大量的输入类型和属性组合。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
@@ -505,7 +503,7 @@ label {
     参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)以了解更多信息。
 
 - `size`
-  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
+  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
 
 - `src`
   - : 仅对 `image` 输入按钮有效。指定将要在提交按钮上显示的图像的 URL。参见 {{HTMLElement("input/image", "image")}} 输入类型。

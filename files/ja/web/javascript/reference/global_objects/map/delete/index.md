@@ -1,32 +1,31 @@
 ---
 title: Map.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。
+**`delete()`** は {{jsxref("Map")}} インスタンスのメソッドで、このマップからキーを指定して特定の要素を削除します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.delete()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.delete("bar"));
-// Expected result: true
-// True indicates successful removal
+console.log(map.delete("bar"));
+// 予想される結果: true
+// true は正しく削除されたことを示す
 
-console.log(map1.has("bar"));
-// Expected result: false
+console.log(map.has("bar"));
+// 予想される結果: false
 ```
 
 ## 構文
 
 ```js-nolint
-delete(key)
+mapInstance.delete(key)
 ```
 
 ### 引数

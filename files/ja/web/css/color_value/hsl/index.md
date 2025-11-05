@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
 **`hsl()`** 関数記法は、 {{glossary("RGB", "sRGB")}} 色を _色相_、_彩度_、_明度_ の成分によって表現します。オプションの _アルファ_ 成分は、その色の透明度を表します。
 
 > [!NOTE]
@@ -71,7 +69,8 @@ hsl(120deg 75% 25% / 0.6)
 > [!NOTE]
 > この関数記法は sRGB 値にシリアライズされ、赤、緑、青の成分の値はシリアライズの際に丸められる可能性があります。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> [!NOTE]
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -188,7 +187,7 @@ div.hsla {
 
 ## 関連情報
 
-- [すべての色記法の一覧](/ja/docs/Web/CSS/color)
+- [すべての色記法の一覧](/ja/docs/Web/CSS/Reference/Properties/color)
 - {{CSSXref("&lt;hue&gt;")}} データ型
-- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker_tool) (MDN)
+- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter) (MDN)
 - [Color picker](https://colorjs.io/apps/picker/) (Lea Verou)

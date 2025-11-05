@@ -184,7 +184,7 @@ article p:first-child::first-line {
 
 ## ::before および ::after を使用したコンテンツの生成
 
-CSS を使用してコンテンツを文書に挿入するための [`content`](/ja/docs/Web/CSS/content) プロパティと共に使用される特別な擬似要素がいくつかあります。
+CSS を使用してコンテンツを文書に挿入するための [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティと共に使用される特別な擬似要素がいくつかあります。
 
 以下のライブ例のように、これらを使用してテキストの文字列を挿入できます。{{cssxref("content")}} プロパティのテキスト値を変更してみて、出力でそれを確認してください。 `::before` 擬似要素を `::after` に変更して、要素の最初ではなく最後に挿入されたテキストを表示することもできます。
 

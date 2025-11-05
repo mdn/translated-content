@@ -41,7 +41,7 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 ## Exemples
 
-Dans l'exemple suivant, `setAttribute()` est utilisée pour définir des attributs sur un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
+Dans l'exemple suivant, `setAttribute()` est utilisée pour définir des attributs sur un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button).
 
 ### HTML
 

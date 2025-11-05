@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 **`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#非継承プロパティ)の場合は {{cssxref("initial")}} キーワードのように動作します。
 
 **`unset`** は一括指定の {{cssxref("all")}} を含む、あらゆる CSS プロパティに対して適用することができます。
@@ -15,7 +13,7 @@ l10n:
 
 ### 色
 
-[`color`](/ja/docs/Web/CSS/color#formal_definition) は継承プロパティです。
+[`color`](/ja/docs/Web/CSS/Reference/Properties/color#formal_definition) は継承プロパティです。
 
 #### HTML
 
@@ -55,7 +53,7 @@ p {
 
 ### 境界線
 
-[`border`](/ja/docs/Web/CSS/border#formal_definition) は非継承プロパティです。
+[`border`](/ja/docs/Web/CSS/Reference/Properties/border#formal_definition) は非継承プロパティです。
 
 #### HTML
 

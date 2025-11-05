@@ -105,7 +105,8 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-> **メモ:** `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
+> [!NOTE]
+> `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
 
 ### セレクターのスコープ
 
@@ -272,7 +273,7 @@ document.querySelector("#manual-escape").addEventListener("click", () => {
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
 - MDN 学習エリアの[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelector()")}}

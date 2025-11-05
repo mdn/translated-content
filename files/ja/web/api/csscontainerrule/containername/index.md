@@ -22,7 +22,7 @@ l10n:
 
 ## 値
 
-この {{domxref("CSSContainerRule")}} に関連付けられた {{cssxref("@container")}} の [`container-name`](/ja/docs/Web/CSS/container-name) を格納した文字列。
+この {{domxref("CSSContainerRule")}} に関連付けられた {{cssxref("@container")}} の [`container-name`](/ja/docs/Web/CSS/Reference/Properties/container-name) を格納した文字列。
 もし `@container` が[名前付き](/ja/docs/Web/API/CSSContainerRule#unnamed_container_rule)でない場合、この関数は空文字列 (`""`) を返します。
 
 ## 例

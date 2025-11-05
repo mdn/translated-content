@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-{{CSSRef}}
-
 浮動 (floating) ボックスについては、重ね合わせ順序が少し異なります。浮動ボックスは位置指定なしの要素と位置指定要素の間に配置されます。
 
 1. ルート要素の背景と境界
@@ -14,7 +12,7 @@ l10n:
 3. _浮動ボックス_
 4. 位置指定ありの子孫要素、 HTML 内での出現順
 
-位置指定要素、位置指定なしの要素についての説明は、[位置指定の種類](/ja/docs/Web/CSS/position#位置の種類)を参照してください。
+位置指定要素、位置指定なしの要素についての説明は、[位置指定の種類](/ja/docs/Web/CSS/Reference/Properties/position#位置の種類)を参照してください。
 
 > [!NOTE]
 > 位置指定なしの要素（下記の例の DIV #4）の `opacity` の値を変更すると、その要素の背景と境界が、浮動ボックスや位置指定要素の上に飛び出し、おかしな結果になります。これは、仕様書の中で、 `opacity` の値を適用すると新しい重ね合わせコンテキストを作成するという、奇妙な部分によるものです（[What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) を参照してください）。

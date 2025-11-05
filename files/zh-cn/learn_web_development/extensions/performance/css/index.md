@@ -82,7 +82,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
   将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)，以后需要时就很容易覆盖样式。
 
-- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
+- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
 
   ```css
   /* 选择 <body> 元素内的所有元素 */
@@ -131,33 +131,33 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 接下来，动画性能在很大程度上取决于你要进行动画处理的属性。某些属性在进行动画处理时会触发[回流](/zh-CN/docs/Glossary/Reflow)（进一步也会触发[重绘](/zh-CN/docs/Glossary/Repaint)），应该避免使用这些属性。这些属性包括：
 
-- 修改元素的尺寸，例如 [`width`](/zh-CN/docs/Web/CSS/width)、[`height`](/zh-CN/docs/Web/CSS/height)、[`border`](/zh-CN/docs/Web/CSS/border) 和 [`padding`](/zh-CN/docs/Web/CSS/padding)。
-- 重新定位元素，例如 [`margin`](/zh-CN/docs/Web/CSS/margin)、[`top`](/zh-CN/docs/Web/CSS/top)、[`bottom`](/zh-CN/docs/Web/CSS/bottom)、[`left`](/zh-CN/docs/Web/CSS/left) 和 [`right`](/zh-CN/docs/Web/CSS/right)。
-- 更改元素的布局，例如 [`align-content`](/zh-CN/docs/Web/CSS/align-content)、[`align-items`](/zh-CN/docs/Web/CSS/align-items) 和 [`flex`](/zh-CN/docs/Web/CSS/flex)。
-- 添加改变元素几何形状的视觉效果，例如 [`box-shadow`](/zh-CN/docs/Web/CSS/box-shadow)。
+- 修改元素的尺寸，例如 [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width)、[`height`](/zh-CN/docs/Web/CSS/Reference/Properties/height)、[`border`](/zh-CN/docs/Web/CSS/Reference/Properties/border) 和 [`padding`](/zh-CN/docs/Web/CSS/Reference/Properties/padding)。
+- 重新定位元素，例如 [`margin`](/zh-CN/docs/Web/CSS/Reference/Properties/margin)、[`top`](/zh-CN/docs/Web/CSS/Reference/Properties/top)、[`bottom`](/zh-CN/docs/Web/CSS/Reference/Properties/bottom)、[`left`](/zh-CN/docs/Web/CSS/Reference/Properties/left) 和 [`right`](/zh-CN/docs/Web/CSS/Reference/Properties/right)。
+- 更改元素的布局，例如 [`align-content`](/zh-CN/docs/Web/CSS/Reference/Properties/align-content)、[`align-items`](/zh-CN/docs/Web/CSS/Reference/Properties/align-items) 和 [`flex`](/zh-CN/docs/Web/CSS/Reference/Properties/flex)。
+- 添加改变元素几何形状的视觉效果，例如 [`box-shadow`](/zh-CN/docs/Web/CSS/Reference/Properties/box-shadow)。
 
 现代浏览器很智能，只会重新绘制文档中已更改的区域，而不是整个页面。因此，越大的动画成本越高。
 
 如果可以的话，最好对不会引起回流/重绘的属性进行动画处理。这包括：
 
 - [变换](/zh-CN/docs/Web/CSS/CSS_transforms)
-- [`opacity`](/zh-CN/docs/Web/CSS/opacity)
-- [`filter`](/zh-CN/docs/Web/CSS/filter)
+- [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity)
+- [`filter`](/zh-CN/docs/Web/CSS/Reference/Properties/filter)
 
 ### 在 GPU 上进行动画处理
 
 为了进一步提高性能，你应该考虑将动画处理工作转移到主线程之外，并放到设备的 GPU 上进行（也称为合成（compositing））。这可以通过选择特定类型的动画来实现，浏览器会自动将这些动画发送到 GPU 来处理。包括：
 
-- 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)。
-- 具有某些其他属性动画的元素，例如 [`position: fixed`](/zh-CN/docs/Web/CSS/position)。
-- 应用了 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 的元素（请参阅下面的小节）。
+- 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/Reference/Properties/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)。
+- 具有某些其他属性动画的元素，例如 [`position: fixed`](/zh-CN/docs/Web/CSS/Reference/Properties/position)。
+- 应用了 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 的元素（请参阅下面的小节）。
 - 特定的在其自己层中渲染的元素，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 和 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)。
 
 在 GPU 上进行动画处理可以提高性能，尤其是在移动设备上。然而，将动画处理移到 GPU 并不总是那么简单。请阅读 [CSS GPU 动画：正确使用](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/)（smashingmagazine.com，2016）以获取非常有用和详细的分析。
 
 ## 使用 `will-change` 优化元素变化
 
-浏览器可能会在元素实际发生变化之前进行优化设置。这类优化可以通过提前完成可能需要的大量工作，提高页面的响应速度。CSS 的 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性向浏览器提示元素预期的变化方式。
+浏览器可能会在元素实际发生变化之前进行优化设置。这类优化可以通过提前完成可能需要的大量工作，提高页面的响应速度。CSS 的 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性向浏览器提示元素预期的变化方式。
 
 > [!NOTE]
 > `will-change` 应该作为处理现有的性能问题的最后一招。不应该用它来预测性能问题。
@@ -196,7 +196,7 @@ CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对�
 
 ### 字体加载
 
-请记住，字体仅在使用 [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性应用于元素时才会加载，而不是在首次使用 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) at 规则引用时加载：
+请记住，字体仅在使用 [`font-family`](/zh-CN/docs/Web/CSS/Reference/Properties/font-family) 属性应用于元素时才会加载，而不是在首次使用 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) at 规则引用时加载：
 
 ```css
 /* 字体在此处没有加载 */

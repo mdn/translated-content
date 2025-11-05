@@ -5,21 +5,20 @@ l10n:
   sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-{{CSSRef}}
-
 **CSS トランジション**は、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。例えば、ある要素の前景色を白色から黒色に変更した場合、通常は即座に前景色が替わります。 CSS トランジションを有効にすると、加速カーブに従った時間間隔で変更が行われ、その変化のすべてをカスタマイズすることができます。
 
 2 つの状態間のトランジションを含むアニメーションは、開始状態と最終状態の間の状態がブラウザーによって暗黙的に定義されるため、*暗黙的なトランジション*と呼ばれることがあります。
 
 ![CSS トランジションは、初期状態と最終状態の間にある中間状態を描画することで、ユーザーにスムーズな遷移を見せるものです。](transitionsprinciple.png)
 
-CSS トランジションでは、どのプロパティをアニメーションさせるか（[_明示的に列挙する_](/ja/docs/Web/CSS/transition-property)ことで）、いつアニメーションを始めるか（[_delay_](/ja/docs/Web/CSS/transition-delay) を設定することで）、どれくらいの時間でトランジションさせるか（[_duration_](/ja/docs/Web/CSS/transition-duration) を設定することで）、どのようにトランジションさせるか、例えば、直線的に実行するか、始めはすばやく、終わりはゆっくりと実行するか（[_イージング関数_](/ja/docs/Web/CSS/transition-duration)を定義することで）を決めることができます。
+CSS トランジションでは、どのプロパティをアニメーションさせるか（[_明示的に列挙する_](/ja/docs/Web/CSS/Reference/Properties/transition-property)ことで）、いつアニメーションを始めるか（[_delay_](/ja/docs/Web/CSS/Reference/Properties/transition-delay) を設定することで）、どれくらいの時間でトランジションさせるか（[_duration_](/ja/docs/Web/CSS/Reference/Properties/transition-duration) を設定することで）、どのようにトランジションさせるか、例えば、直線的に実行するか、始めはすばやく、終わりはゆっくりと実行するか（[_イージング関数_](/ja/docs/Web/CSS/Reference/Properties/transition-duration)を定義することで）を決めることができます。
 
 ## どの CSS プロパティがトランジション可能か
 
 ウェブの作者は、どのプロパティをどのようにアニメーションさせるかを定義することができます。これにより、複雑なトランジションを作成することができます。しかし、いくつかのプロパティはアニメーションさせる意味がないため、[アニメーション不可](/ja/docs/Web/CSS/CSS_animated_properties)となっています。
 
-> **メモ:** `auto` の値はしばしばとても複雑になります。仕様書では開始値および終了値が `auto` の場合はアニメーションしないよう推奨しています。 Gecko を利用したものなど、一部のユーザーエージェントはこの要件を実装しており、 WebKit を利用したものなどではより制約が少なくなります。 `auto` でアニメーションを利用すると、ブラウザーやそのバージョンによって予測できない結果になる可能性があるため、避けるべきです。
+> [!NOTE]
+> `auto` の値はしばしばとても複雑になります。仕様書では開始値および終了値が `auto` の場合はアニメーションしないよう推奨しています。 Gecko を利用したものなど、一部のユーザーエージェントはこの要件を実装しており、 WebKit を利用したものなどではより制約が少なくなります。 `auto` でアニメーションを利用すると、ブラウザーやそのバージョンによって予測できない結果になる可能性があるため、避けるべきです。
 
 ## トランジションの定義
 
@@ -186,7 +185,7 @@ a:focus {
 
 ### display と content-visibility のトランジション
 
-この例では、 [`display`](/ja/docs/Web/CSS/display) と [`content-visibility`](/ja/docs/Web/CSS/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
+この例では、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display) と [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
 
 対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/CSS_animated_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で切り替えるという意味になります。
 
@@ -197,7 +196,7 @@ a:focus {
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-これらのプロパティをトランジションさせる場合は、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
+これらのプロパティをトランジションさせる場合は、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
 
 `display` をトランジションさせる場合、その要素が最初のスタイル更新を受けたときに、そのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために [`@starting-style`](/ja/docs/Web/CSS/@starting-style) が必要です。これは予期しない動作を避けるために必要です。既定では、CSS のトランジションは、要素が最初に DOM に現れたとき、つまり `display` が `none` から他の状態に変わったときを含め、要素の最初のスタイル更新では発生しません。 `content-visibility` のアニメーションは `@starting-style` ブロックで開始値を指定する必要はありません。これは `content-visibility` が `display` のように DOM から要素を隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
@@ -349,7 +348,8 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **メモ:** `transitionend` イベントは、要素に {{cssxref("display")}}`: none` が適用されたりアニメーション中のプロパティの値が変更されたりして、トランジションが完了する前に中止された場合は発行されません。
+> [!NOTE]
+> `transitionend` イベントは、要素に {{cssxref("display")}}`: none` が適用されたりアニメーション中のプロパティの値が変更されたりして、トランジションが完了する前に中止された場合は発行されません。
 
 ## 仕様書
 

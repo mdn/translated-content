@@ -2606,21 +2606,11 @@
       "shyangs"
     ]
   },
-  "Web/API/Document_Object_Model/Examples": {
-    "modified": "2019-04-22T07:31:11.966Z",
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T22:48:01.128Z",
     "contributors": [
       "jackblackevo",
-      "PJCHENder"
-    ]
-  },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-01-30T13:21:14.453Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jackblackevo",
-      "ethertank",
-      "Mgjbot",
-      "BobChao"
+      "Shiyou"
     ]
   },
   "Web/API/DragEvent": {
@@ -3687,36 +3677,6 @@
       "BobChao"
     ]
   },
-  "Web/CSS/::first-letter": {
-    "modified": "2019-03-23T22:31:14.643Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Web/CSS/:first-child": {
-    "modified": "2019-03-23T22:28:52.270Z",
-    "contributors": [
-      "mgrn"
-    ]
-  },
-  "Web/CSS/:first-of-type": {
-    "modified": "2019-03-23T22:10:08.926Z",
-    "contributors": [
-      "nyngwang"
-    ]
-  },
-  "Web/CSS/:lang": {
-    "modified": "2020-10-15T22:13:50.122Z",
-    "contributors": [
-      "oooooo"
-    ]
-  },
-  "Web/CSS/:target": {
-    "modified": "2019-03-23T22:49:40.294Z",
-    "contributors": [
-      "alk03073135"
-    ]
-  },
   "Web/CSS/@font-face": {
     "modified": "2019-03-23T23:28:16.382Z",
     "contributors": [
@@ -3774,7 +3734,7 @@
       "wildsky"
     ]
   },
-  "Web/CSS/CSS_colors/Color_picker_tool": {
+  "Web/CSS/CSS_colors/Color_format_converter": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
       "Shiyou",
@@ -3869,39 +3829,29 @@
       "xuan0123"
     ]
   },
-  "Web/CSS/Descendant_combinator": {
-    "modified": "2019-03-23T22:47:36.182Z",
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-01-30T13:21:14.453Z",
     "contributors": [
-      "ExE-Boss",
-      "changbenny"
+      "chrisdavidmills",
+      "jackblackevo",
+      "ethertank",
+      "Mgjbot",
+      "BobChao"
     ]
   },
-  "Web/CSS/Pseudo-classes": {
-    "modified": "2019-03-23T22:25:22.712Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Web/CSS/Type_selectors": {
-    "modified": "2020-10-15T22:16:41.850Z",
-    "contributors": [
-      "a1178961372",
-      "YvonneYu"
-    ]
-  },
-  "Web/CSS/animation-fill-mode": {
+  "Web/CSS/Reference/Properties/animation-fill-mode": {
     "modified": "2019-03-18T21:42:33.553Z",
     "contributors": [
       "yoonasy"
     ]
   },
-  "Web/CSS/background-attachment": {
+  "Web/CSS/Reference/Properties/background-attachment": {
     "modified": "2020-10-15T22:23:27.829Z",
     "contributors": [
       "ayugioh2003"
     ]
   },
-  "Web/CSS/background-color": {
+  "Web/CSS/Reference/Properties/background-color": {
     "modified": "2020-10-15T21:39:17.646Z",
     "contributors": [
       "SphinxKnight",
@@ -3910,7 +3860,7 @@
       "Shiyou"
     ]
   },
-  "Web/CSS/border-image": {
+  "Web/CSS/Reference/Properties/border-image": {
     "modified": "2019-03-24T00:08:26.325Z",
     "contributors": [
       "wbamberg",
@@ -3918,7 +3868,7 @@
       "Kennyluck"
     ]
   },
-  "Web/CSS/box-shadow": {
+  "Web/CSS/Reference/Properties/box-shadow": {
     "modified": "2020-09-11T09:09:21.899Z",
     "contributors": [
       "slivenred",
@@ -3928,7 +3878,7 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/box-sizing": {
+  "Web/CSS/Reference/Properties/box-sizing": {
     "modified": "2020-10-15T21:47:19.062Z",
     "contributors": [
       "chih-hsi-chen",
@@ -3941,31 +3891,31 @@
       "YuCheng"
     ]
   },
-  "Web/CSS/clip": {
+  "Web/CSS/Reference/Properties/clip": {
     "modified": "2019-03-23T22:33:08.119Z",
     "contributors": [
       "Jerry-Hong"
     ]
   },
-  "Web/CSS/grid-template": {
+  "Web/CSS/Reference/Properties/grid-template": {
     "modified": "2020-10-15T22:30:52.332Z",
     "contributors": [
       "blueanger31"
     ]
   },
-  "Web/CSS/height": {
+  "Web/CSS/Reference/Properties/height": {
     "modified": "2019-03-23T22:21:15.320Z",
     "contributors": [
       "yvonne6344"
     ]
   },
-  "Web/CSS/ruby-position": {
+  "Web/CSS/Reference/Properties/ruby-position": {
     "modified": "2020-10-15T21:51:03.131Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/CSS/transform": {
+  "Web/CSS/Reference/Properties/transform": {
     "modified": "2020-10-15T21:38:21.566Z",
     "contributors": [
       "allchangechallenge",
@@ -3977,76 +3927,98 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/transform-function/translate3d": {
-    "modified": "2020-11-30T13:00:00.920Z",
-    "contributors": [
-      "chrisdavidmills",
-      "iigmir"
-    ]
-  },
-  "Web/CSS/transform-origin": {
+  "Web/CSS/Reference/Properties/transform-origin": {
     "modified": "2020-10-15T22:05:18.550Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition": {
+  "Web/CSS/Reference/Properties/transition": {
     "modified": "2020-10-15T22:08:09.027Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition-duration": {
+  "Web/CSS/Reference/Properties/transition-duration": {
     "modified": "2020-10-15T22:08:04.691Z",
     "contributors": [
       "willynpi"
     ]
   },
-  "Web/CSS/transition-timing-function": {
+  "Web/CSS/Reference/Properties/transition-timing-function": {
     "modified": "2020-10-15T22:02:01.243Z",
     "contributors": [
       "flyinglimao"
     ]
   },
-  "Web/CSS/white-space": {
+  "Web/CSS/Reference/Properties/white-space": {
     "modified": "2019-03-23T22:06:04.997Z",
     "contributors": [
       "ymcheung",
       "leannechen"
     ]
   },
-  "Web/CSS/width": {
+  "Web/CSS/Reference/Properties/width": {
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": [
       "yutzuch"
     ]
   },
-  "Web/Events": {
-    "modified": "2019-11-28T04:54:28.795Z",
+  "Web/CSS/Reference/Selectors/::first-letter": {
+    "modified": "2019-03-23T22:31:14.643Z",
     "contributors": [
-      "t7yang",
-      "fadeawaygod",
-      "wbamberg",
-      "Septem",
-      "fscholz",
-      "jackblackevo",
-      "Shiyou",
-      "ethertank",
-      "louisremi"
+      "iigmir"
     ]
   },
-  "Web/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:48:01.128Z",
+  "Web/CSS/Reference/Selectors/:first-child": {
+    "modified": "2019-03-23T22:28:52.270Z",
     "contributors": [
-      "jackblackevo",
-      "Shiyou"
+      "mgrn"
     ]
   },
-  "Web/Events/Event_handlers": {
-    "modified": "2020-05-13T00:05:39.122Z",
+  "Web/CSS/Reference/Selectors/:first-of-type": {
+    "modified": "2019-03-23T22:10:08.926Z",
     "contributors": [
-      "ginszme",
-      "jackblackevo"
+      "nyngwang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:lang": {
+    "modified": "2020-10-15T22:13:50.122Z",
+    "contributors": [
+      "oooooo"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:target": {
+    "modified": "2019-03-23T22:49:40.294Z",
+    "contributors": [
+      "alk03073135"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Descendant_combinator": {
+    "modified": "2019-03-23T22:47:36.182Z",
+    "contributors": [
+      "ExE-Boss",
+      "changbenny"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-classes": {
+    "modified": "2019-03-23T22:25:22.712Z",
+    "contributors": [
+      "iigmir"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Type_selectors": {
+    "modified": "2020-10-15T22:16:41.850Z",
+    "contributors": [
+      "a1178961372",
+      "YvonneYu"
+    ]
+  },
+  "Web/CSS/transform-function/translate3d": {
+    "modified": "2020-11-30T13:00:00.920Z",
+    "contributors": [
+      "chrisdavidmills",
+      "iigmir"
     ]
   },
   "Web/HTML": {

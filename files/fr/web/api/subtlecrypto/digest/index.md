@@ -31,7 +31,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ## Algorithmes supportés
 
-Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Cryptographic_hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
+Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage cryptographique](/fr/docs/Glossary/Hash_function), transforme un bloque de données de longueur arbitraire dans un résultat de taille fixe, souvent plus petit que l'entré. Ils ont de nombreuses utilisations en cryptographie.
 
 ### SHA-1
 

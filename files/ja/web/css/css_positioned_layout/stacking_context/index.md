@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-{{CSSRef}}
-
 **重ね合わせコンテキスト** (Stacking context) は、ビューポートまたはウェブページに面していると想定されるユーザーに対する仮想的な Z 軸に沿って並べられた HTML 要素の三次元の概念化です。 HTML 要素は、要素の属性に基づいてこの空間を優先度つきの順序で占有します。
 
 ## 解説
@@ -38,7 +36,7 @@ l10n:
 - {{cssxref("will-change")}} の値が、初期値以外で重ね合わせコンテキストを作成する任意のプロパティを指定している要素。
 - {{cssxref("contain")}} の値が `layout` または `paint` であるか、これらのどちらかを含む複合値（すなわち `contain: strict`, `contain: content`）を持つ要素。
 - [最上位レイヤー](/ja/docs/Glossary/Top_layer)に配置され、対応する {{cssxref("::backdrop")}} がある要素。例えば[全画面](/ja/docs/Web/API/Fullscreen_API)や[ポップオーバー](/ja/docs/Web/API/Popover_API)の要素を含む。
-- 重ね合わせコンテキストを作成するプロパティ（`opacity` など）を持つ要素が、 {{cssxref("@keyframes")}} を使用してアニメーションし、 [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode) が [`forwards`](/ja/docs/Web/CSS/animation-fill-mode#forwards) に設定されている場合。
+- 重ね合わせコンテキストを作成するプロパティ（`opacity` など）を持つ要素が、 {{cssxref("@keyframes")}} を使用してアニメーションし、 [`animation-fill-mode`](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode) が [`forwards`](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) に設定されている場合。
 
 重ね合わせコンテキストの内部で、子要素は前に説明した規則に従って重ね合わせられます。重要なのは、子要素の `z-index` 値は、その親要素に対してのみ意味を持つということです。重ね合わせコンテキストは、その親の重ね合わせコンテキストでは不可分な一つの固まりとして扱われます。
 

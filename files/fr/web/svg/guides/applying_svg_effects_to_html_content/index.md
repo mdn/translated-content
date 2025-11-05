@@ -8,7 +8,7 @@ original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 
 Les navigateurs modernes supportent le format [SVG](/fr/docs/Web/SVG) utilisant du [CSS](/fr/docs/Web/CSS) pour appliquer des effets graphiques au contenu HTML.
 
-Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser : [`mask`](/fr/docs/Web/CSS/mask), [`clip-path`](/fr/docs/Web/CSS/clip-path) et [`filter`](/fr/docs/Web/CSS/filter).
+Vous pouvez éditer un SVG avec du CSS, soit directement dans le document, soit dans une feuille de style externe. Il y a 3 propriétés que vous pouvez utiliser : [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path) et [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter).
 
 > [!NOTE]
 > Dans des fichiers externes, les références à un SVG doivent être à la [même origine](/fr/docs/Web/Security/Same-origin_policy) que le document de référence.
@@ -25,7 +25,7 @@ Pour appliquer un effet CSS à un SVG, vous devez dans un premier temps créer l
 </style>
 ```
 
-Dans l'exemple ci-dessus, tous les paragraphes utilisent un [SVG `<mask>`](/fr/docs/Web/SVG/Element/mask) avec l'[ID](/fr/docs/Web/HTML/Global_attributes/id) de `my-mask`.
+Dans l'exemple ci-dessus, tous les paragraphes utilisent un [SVG `<mask>`](/fr/docs/Web/SVG/Reference/Element/mask) avec l'[ID](/fr/docs/Web/HTML/Reference/Global_attributes/id) de `my-mask`.
 
 ### Appliquer un masque
 
@@ -130,7 +130,7 @@ function toggleRadius() {
 
 ### Exemple : Filtres
 
-Cet exemple montre comment utiliser des filtres avec un SVG. À l'aide du CSS, nous appliquons plusieurs filtres à trois éléments à la fois dans leur état normal, que quand ils sont survolés par la souris ([hover](/fr/docs/Web/CSS/:hover)).
+Cet exemple montre comment utiliser des filtres avec un SVG. À l'aide du CSS, nous appliquons plusieurs filtres à trois éléments à la fois dans leur état normal, que quand ils sont survolés par la souris ([hover](/fr/docs/Web/CSS/Reference/Selectors/:hover)).
 
 ```html
 <p class="target" style="background: lime;">
@@ -230,7 +230,7 @@ pre.target:hover {
 
 ### Exemple : Texte flouté
 
-Pour flouter le texte, Webkit a un filtre CSS (préfixé) appelé blur (voir aussi [CSS filter](/fr/docs/Web/CSS/filter#blur)). Vous pouvez obtenir le même effet en utilisant des filtres SVG.
+Pour flouter le texte, Webkit a un filtre CSS (préfixé) appelé blur (voir aussi [CSS filter](/fr/docs/Web/CSS/Reference/Properties/filter#blur)). Vous pouvez obtenir le même effet en utilisant des filtres SVG.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

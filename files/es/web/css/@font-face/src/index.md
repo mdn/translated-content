@@ -3,8 +3,6 @@ title: src
 slug: Web/CSS/@font-face/src
 ---
 
-{{CSSRef}}
-
 El descriptor CSS **`src`** de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla `@font-face` sea válida.
 
 Su valor es una lista de referencias externas o nombres de fuentes instaladas, separadas por coma según su prioridad. Cuando se necesita una fuente, el agente usuario itera sobre el conjunto de referencias, usando la primera que pueda ser activada exitosamente. Fuentes que contienen datos inválidos o fuentes locales que no se encuentren son ignoradas, y el agente usuario cargará la siguiente en la lista.

@@ -19,7 +19,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレ�
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
-      <td>設定しないと、任意の URL が許可されます。</td>
+      <td>なし。設定しないと、任意の URL が許可されます。</td>
     </tr>
   </tbody>
 </table>

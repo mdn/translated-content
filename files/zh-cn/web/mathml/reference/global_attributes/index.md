@@ -11,13 +11,13 @@ l10n:
 
 除了基本的 MathML 全局属性外，还存在以下全局属性：
 
-- [事件处理器](/zh-CN/docs/Web/Events/Event_handlers)属性，例如 **`onclick`**、**`onfocus`** 等。
+- [事件处理器](/zh-CN/docs/Web/API/Document_Object_Model/Events)属性，例如 **`onclick`**、**`onfocus`** 等。
 - [`href`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/href) 属性，用于将 MathML 元素设置为超链接。
 
 ## 全局属性列表
 
 - [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 元素类的一个空格分隔列表。类允许 CSS 和 JavaScript 通过[类选择器](/zh-CN/docs/Web/CSS/Class_selectors)或诸如方法 {{DOMxRef("Document.getElementsByClassName()")}} 这样的函数来选择和访问特定元素。
+  - : 元素类的一个空格分隔列表。类允许 CSS 和 JavaScript 通过[类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Class_selectors)或诸如方法 {{DOMxRef("Document.getElementsByClassName()")}} 这样的函数来选择和访问特定元素。
 - [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : 形成自定义数据属性类别的属性，允许专有信息在 [MathML](/zh-CN/docs/Web/MathML) 及其 {{glossary("DOM")}} 表示之间进行交换，可能会被脚本使用。所有这些自定义数据都可以通过属性设置的元素的 {{DOMxRef("MathMLElement")}} 接口访问。{{DOMxRef("HTMLElement.dataset")}} 属性提供来对这些属性的访问。
 - [`dir`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/dir)
@@ -26,21 +26,21 @@ l10n:
     - `rtl`，表示*从右到左*，并用于从右到左呈现数学表达式（例如 Maghreb 或 Machrek 风格）；
 
 - [`displaystyle`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/displaystyle)：
-  - : 一个布尔值，用于设置元素的 [math-style](/zh-CN/docs/Web/CSS/math-style)。
+  - : 一个布尔值，用于设置元素的 [math-style](/zh-CN/docs/Web/CSS/Reference/Properties/math-style)。
     - `true`，表示 `normal`。
     - `false`，表示 `compact`。
 - [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)
   - : 定义一个唯一标识符（ID），它必须在整个文档中是唯一的。它的目的是在链接（使用片段标识符）、脚本化或样式化（使用 CSS）时标识元素。
 - [`mathbackground`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/mathbackground)
-  - : 用于元素的 [background-color](/zh-CN/docs/Web/CSS/background-color)。
+  - : 用于元素的 [background-color](/zh-CN/docs/Web/CSS/Reference/Properties/background-color)。
 - [`mathcolor`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/mathcolor)
-  - : 元素的 [color](/zh-CN/docs/Web/CSS/color)。
+  - : 元素的 [color](/zh-CN/docs/Web/CSS/Reference/Properties/color)。
 - [`mathsize`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/mathsize)
-  - : 用作元素的 [font-size](/zh-CN/docs/Web/CSS/font-size) 的 {{cssxref("length-percentage")}}。
+  - : 用作元素的 [font-size](/zh-CN/docs/Web/CSS/Reference/Properties/font-size) 的 {{cssxref("length-percentage")}}。
 - [`nonce`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/nonce)
   - : 一种密码学随机数（nonce，number used once），可用于[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)以确定是否允许给定的获取继续进行。
 - [`scriptlevel`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/scriptlevel)
-  - : 为元素指定 [math-depth](/zh-CN/docs/Web/CSS/math-depth)。有关接受的值和映射，请参阅 [scriptlevel 页面](/zh-CN/docs/Web/MathML/Reference/Global_attributes/scriptlevel#值)。
+  - : 为元素指定 [math-depth](/zh-CN/docs/Web/CSS/Reference/Properties/math-depth)。有关接受的值和映射，请参阅 [scriptlevel 页面](/zh-CN/docs/Web/MathML/Reference/Global_attributes/scriptlevel#值)。
 - [`style`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style)
   - : 包含要应用于元素的 [CSS](/zh-CN/docs/Web/CSS) 样式声明。请注意，建议将样式定义在单独的文件中。这个属性和 {{MathMLElement("style")}} 元素主要用于快速样式设置，例如用于测试目的。
 - [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex)

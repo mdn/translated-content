@@ -3,8 +3,6 @@ title: 无符号右移赋值（>>>=）
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **无符号右移赋值**（**`>>>=`**）运算符向右移动移动指定（二进制）位数，并将结果赋值给变量。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift assignment operator")}}

@@ -34,11 +34,11 @@ p {
 Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque point où nous voulons que le texte soit interrompu. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
 
 > [!NOTE]
-> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Element/p).
+> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p).
 
 ## Attributs
 
-Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs obsolètes
 
@@ -49,7 +49,7 @@ Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/
 
 `<br>` n'a aucun rôle purement stylistique et il sert uniquement à créer une rupture de ligne au sein d'un bloc de texte. Cet élément pourra très peu être mis en forme avec CSS.
 
-Bien qu'il soit possible d'appliquer une marge ([`margin`](/fr/docs/Web/CSS/margin) sur les éléments `<br>` afin d'augmenter l'espacement entre les lignes de texte d'un même bloc, ce n'est pas une bonne pratique. Pour obtenir le même effet, on pourra utiliser la propriété [`line-height`](/fr/docs/Web/CSS/line-height).
+Bien qu'il soit possible d'appliquer une marge ([`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) sur les éléments `<br>` afin d'augmenter l'espacement entre les lignes de texte d'un même bloc, ce n'est pas une bonne pratique. Pour obtenir le même effet, on pourra utiliser la propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height).
 
 ## Exemples
 
@@ -73,7 +73,7 @@ USA<br />
 
 Utiliser une suite d'éléments `<br>` pour uniquement rajouter un espace entre des paragraphes sera source de confusion ou de frustration pour les personnes qui utilisent des outils d'assistance. Les lecteurs d'écran, par exemple, pourront annoncer la présence de l'élément alors qu'il n'y a aucun contenu associé.
 
-Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propriété CSS [`margin`](/fr/docs/Web/CSS/margin).
+Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propriété CSS [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin).
 
 ## Résumé technique
 
@@ -155,6 +155,6 @@ Si on souhaite ajouter un espace supplémentaire, on utilisera plutôt la propri
 
 ## Voir aussi
 
-- L'élément [`<address>`](/fr/docs/Web/HTML/Element/address)
-- L'élément [`<p>`](/fr/docs/Web/HTML/Element/p)
-- L'élément [`<wbr>`](/fr/docs/Web/HTML/Element/wbr)
+- L'élément [`<address>`](/fr/docs/Web/HTML/Reference/Elements/address)
+- L'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)
+- L'élément [`<wbr>`](/fr/docs/Web/HTML/Reference/Elements/wbr)

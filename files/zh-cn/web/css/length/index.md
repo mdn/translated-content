@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
+**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
 
 > [!NOTE]
 > 虽然 {{cssxref("&lt;percentage&gt;")}} 值可以在接受 `<length>` 值的某些相同属性中使用，但它们本身不是 `<length>` 值。具体请参阅 {{cssxref("&lt;length-percentage&gt;")}}。
@@ -19,7 +19,7 @@ l10n:
 
 长度的[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)由其数量和单位表示。长度的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)是解析为绝对长度的指定长度，其单位没有区分。
 
-`<length>` 的单位可以是相对或绝对的。相对长度表示以其他距离为单位的测量值。根据单位的不同，这个距离可以是特定字符的大小、[行高](/zh-CN/docs/Web/CSS/line-height)或{{Glossary("viewport", "视口")}}的大小。使用相对长度单位的样式表可以更容易地从一个输出环境扩展到另一个输出环境。
+`<length>` 的单位可以是相对或绝对的。相对长度表示以其他距离为单位的测量值。根据单位的不同，这个距离可以是特定字符的大小、[行高](/zh-CN/docs/Web/CSS/Reference/Properties/line-height)或{{Glossary("viewport", "视口")}}的大小。使用相对长度单位的样式表可以更容易地从一个输出环境扩展到另一个输出环境。
 
 > [!NOTE]
 > 子元素不会继承父元素的相对值，而是继承计算值。
@@ -50,7 +50,7 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 
 ### 基于根元素字体的相对长度单位
 
-根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
+根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/Reference/Selectors/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
 
 - `rcap`
   - : 表示根元素字体（{{Cssxref("font")}}）的“大写字高”（即大写字母的标称高度）。
@@ -300,5 +300,5 @@ inputElem.addEventListener("change", () => {
 ## 参见
 
 - [CSS 值和单位教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块
+- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)模块
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)
