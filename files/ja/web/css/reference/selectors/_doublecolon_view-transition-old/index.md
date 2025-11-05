@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::view-transition-old`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ビュー遷移の「古い」ビュー状態、すなわちトランジション前の古いビューの静的なスクリーンショットを表します。
+**`::view-transition-old`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、ビュー遷移の「古い」ビュー状態、すなわちトランジション前の古いビューの静的なスクリーンショットを表します。
 
 ビュー遷移の間、 `::view-transition-old` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素ツリーに記載されます。これは {{cssxref("::view-transition-image-pair")}} の子要素でしかなく、子要素を持つことはありません。
 

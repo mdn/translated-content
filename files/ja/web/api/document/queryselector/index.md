@@ -42,7 +42,7 @@ querySelector(selectors)
 
 指定されたセレクターが、誤って文書内で複数回使われている ID に一致する場合は、その ID を持つ最初の要素が返されます。
 
-[CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は[セレクター API](https://www.w3.org/TR/selectors-api/#grammar) で策定されている通り、何も要素を返しません。
+[CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は[セレクター API](https://www.w3.org/TR/selectors-api/#grammar) で策定されている通り、何も要素を返しません。
 
 ### 特殊文字のエスケープ
 

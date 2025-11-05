@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::view-transition`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ビュー遷移](/ja/docs/Web/API/View_Transition_API)のオーバーレイのルートを表します。これはすべてのビュー遷移を含み、他のすべてのページコンテンツの最上位の上に位置します。
+**`::view-transition`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、[ビュー遷移](/ja/docs/Web/API/View_Transition_API)のオーバーレイのルートを表します。これはすべてのビュー遷移を含み、他のすべてのページコンテンツの最上位の上に位置します。
 
 ビュー遷移の間、 `::view-transition` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素ツリーに含まれます。これはこのツリーの最上位ノードであり、 1 つ以上の {{cssxref("::view-transition-group")}} を子として持ちます。
 

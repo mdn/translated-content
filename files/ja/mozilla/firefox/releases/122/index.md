@@ -84,7 +84,7 @@ l10n:
 
 - **Popover API:** `dom.element.popover.enabled`。
 
-  HTML 属性や JavaScript API を使用して、ページコンテンツの上にポップオーバーを表示する機能をサポートしました。これは CSS の [`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスや [`::backdrop`](/ja/docs/Web/CSS/::backdrop) 擬似要素のサポート強化が含まれます。詳しくは [Popover API](/ja/docs/Web/API/Popover_API) のリファレンスをご覧ください ([Firefox bug 1823757](https://bugzil.la/1823757))。
+  HTML 属性や JavaScript API を使用して、ページコンテンツの上にポップオーバーを表示する機能をサポートしました。これは CSS の [`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスや [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) 擬似要素のサポート強化が含まれます。詳しくは [Popover API](/ja/docs/Web/API/Popover_API) のリファレンスをご覧ください ([Firefox bug 1823757](https://bugzil.la/1823757))。
 
 - **クリップボードの読み書き:** `dom.events.asyncClipboard.clipboardItem`、`dom.events.asyncClipboard.readText`、`dom.events.asyncClipboard.writeText`。
 

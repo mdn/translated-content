@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:last-child
 original_slug: Web/CSS/:last-child
 ---
 
-**`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。
+**`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。
 
 ```
 /* 兄弟要素の中で最後の <p> を

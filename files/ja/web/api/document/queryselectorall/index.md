@@ -29,7 +29,7 @@ querySelectorAll(selectors)
 ライブではない {{domxref("NodeList")}} で、指定されたセレクターの少なくとも 1 つに一致する要素ごとに {{domxref("Element")}} を一つずつ含みます。または一致するものがなければ空の {{domxref("NodeList")}} です。
 
 > [!NOTE]
-> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 
@@ -59,7 +59,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-次の例では[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用しており、 `data-src` という名前の属性を持つ、文書内の {{HTMLElement("iframe")}} 要素のリストを返します。
+次の例では[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用しており、 `data-src` という名前の属性を持つ、文書内の {{HTMLElement("iframe")}} 要素のリストを返します。
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
@@ -97,7 +97,7 @@ highlightedItems.forEach((userItem) => {
 ## 関連情報
 
 - [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
+- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - MDN 学習領域の[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Attribute_selectors)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}

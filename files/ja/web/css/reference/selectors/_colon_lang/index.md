@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-**`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、指定された言語に基づいて要素を照合します。
+**`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、指定された言語に基づいて要素を照合します。
 
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
 
@@ -56,7 +56,7 @@ l10n:
 
 ### 指定された言語の子の照合
 
-この例では、 `:lang()` 擬似クラスを使用して引用要素 ({{htmlElement("q")}}) の親を選択するために[子結合子](/ja/docs/Web/CSS/Child_combinator)を使用しています。なお、この例はこの目的のための唯一の方法でも、文書型における最適な方法を示しているわけでもありません。また、 {{glossary("Unicode")}} の値は特殊な引用符を指定するために使用していることに注意してください。
+この例では、 `:lang()` 擬似クラスを使用して引用要素 ({{htmlElement("q")}}) の親を選択するために[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)を使用しています。なお、この例はこの目的のための唯一の方法でも、文書型における最適な方法を示しているわけでもありません。また、 {{glossary("Unicode")}} の値は特殊な引用符を指定するために使用していることに注意してください。
 
 #### HTML
 

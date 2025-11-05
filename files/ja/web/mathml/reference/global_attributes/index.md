@@ -20,7 +20,7 @@ l10n:
 - [`autofocus`](/ja/docs/Web/MathML/Reference/Global_attributes/autofocus)
   - : 論理属性で、この要素がページ読み込み時にフォーカスされるべきであることを示します。
 - [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 要素のクラスの空白区切りのリスト。クラスによって、CSS や JavaScript は[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)や、 {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を通して、特定の要素を選択してアクセスすることができます。
+  - : 要素のクラスの空白区切りのリスト。クラスによって、CSS や JavaScript は[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)や、 {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を通して、特定の要素を選択してアクセスすることができます。
 - [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : [MathML](/ja/docs/Web/MathML) と {{glossary("DOM")}} 表現との間でスクリプトが使用する独自の情報を交換することができるようにする、カスタムデータ属性と呼ばれる属性のクラスを形成します。このようなカスタムデータはすべて、属性が設定されている要素の {{DOMxRef("MathMLElement")}} インターフェイスを通して利用できます。 {{DOMxRef("HTMLElement.dataset")}}プロパティは、それらにアクセスします。
 - [`dir`](/ja/docs/Web/MathML/Global_attributes/dir)

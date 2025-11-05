@@ -49,7 +49,7 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 - **テキストのレイアウトスタイル**: テキストの間隔やその他のレイアウト機能に影響するプロパティで、例えば、行間や文字間のスペースや、コンテンツボックス内でのテキストの配置方法などを操作できます。
 
 > [!NOTE]
-> 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素で囲んだり、[::first-letter](/ja/docs/Web/CSS/::first-letter)（要素のテキストの最初の文字を選択）、[::first-line](/ja/docs/Web/CSS/::first-line)（要素のテキストの最初の行を選択）、[::selection](/ja/docs/Web/CSS/::selection)（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の擬似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
+> 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素で囲んだり、[::first-letter](/ja/docs/Web/CSS/Reference/Selectors/::first-letter)（要素のテキストの最初の文字を選択）、[::first-line](/ja/docs/Web/CSS/Reference/Selectors/::first-line)（要素のテキストの最初の行を選択）、[::selection](/ja/docs/Web/CSS/Reference/Selectors/::selection)（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の擬似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
 
 ## フォント
 

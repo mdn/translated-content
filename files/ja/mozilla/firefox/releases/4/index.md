@@ -59,7 +59,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - CSS での算出値
   - : [`-moz-calc`](/ja/docs/Web/CSS/calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/length) の値を数式で指定できます。
 - セレクターのグルーピング
-  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/:is) がサポートされました。
+  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/Reference/Selectors/:is) がサポートされました。
 - 背景画像の部分領域のサポート
   - : [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) 関数を用いることで、画像の一部分の領域 (subrectangle)を背景画像として利用できるようになります。
 - CSS touch プロパティ群
@@ -79,31 +79,31 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 #### 新しい CSS 擬似クラス
 
-| 擬似クラス                                                        | 説明                                                                                                                       |
-| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-handler-crashed`](/ja/docs/Web/CSS/:-moz-handler-crashed) | プラグインがクラッシュした要素の表示に用いられます。                                                                       |
-| [`:-moz-placeholder`](/ja/docs/Web/CSS/:placeholder-shown)        | フォームフィールドのガイドテキストに適用されます。                                                                         |
-| [`:-moz-submit-invalid`](/ja/docs/Web/CSS/:-moz-submit-invalid)   | 1 つ、もしくは、複数のフォームフィールドの入力が妥当でないときのフォームの送信ボタンに適用されます。                       |
-| [`:-moz-window-inactive`](/ja/docs/Web/CSS/:-moz-window-inactive) | アクティブでないウィンドウの要素に適用されます。                                                                           |
-| [`:invalid`](/ja/docs/Web/CSS/:invalid)                           | 入力が妥当でない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。                |
-| [`:optional`](/ja/docs/Web/CSS/:optional)                         | `required` 属性を指定していない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。 |
-| [`:required`](/ja/docs/Web/CSS/:required)                         | `required` 属性を指定している [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。   |
-| [`:valid`](/ja/docs/Web/CSS/:valid)                               | 入力が妥当であると判断された [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。    |
+| 擬似クラス                                                                          | 説明                                                                                                                       |
+| ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [`:-moz-handler-crashed`](/ja/docs/Web/CSS/:-moz-handler-crashed)                   | プラグインがクラッシュした要素の表示に用いられます。                                                                       |
+| [`:-moz-placeholder`](/ja/docs/Web/CSS/Reference/Selectors/:placeholder-shown)      | フォームフィールドのガイドテキストに適用されます。                                                                         |
+| [`:-moz-submit-invalid`](/ja/docs/Web/CSS/Reference/Selectors/:-moz-submit-invalid) | 1 つ、もしくは、複数のフォームフィールドの入力が妥当でないときのフォームの送信ボタンに適用されます。                       |
+| [`:-moz-window-inactive`](/ja/docs/Web/CSS/:-moz-window-inactive)                   | アクティブでないウィンドウの要素に適用されます。                                                                           |
+| [`:invalid`](/ja/docs/Web/CSS/Reference/Selectors/:invalid)                         | 入力が妥当でない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。                |
+| [`:optional`](/ja/docs/Web/CSS/Reference/Selectors/:optional)                       | `required` 属性を指定していない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。 |
+| [`:required`](/ja/docs/Web/CSS/Reference/Selectors/:required)                       | `required` 属性を指定している [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。   |
+| [`:valid`](/ja/docs/Web/CSS/Reference/Selectors/:valid)                             | 入力が妥当であると判断された [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。    |
 
 #### 新しい CSS 擬似セレクター
 
-| 擬似セレクター                                       | 説明                                                                             |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`:-moz-focusring`](/ja/docs/Web/CSS/:focus-visible) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
+| 擬似セレクター                                                           | 説明                                                                             |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| [`:-moz-focusring`](/ja/docs/Web/CSS/Reference/Selectors/:focus-visible) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
 
 #### 新しい CSS 関数
 
-| 関数                                                  | 説明                                                                                                                                                                                         |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-any`](/ja/docs/Web/CSS/:is)                   | セレクターをグループ化しコンビネータを分解できます。                                                                                                                                         |
-| [`-moz-calc`](/ja/docs/Web/CSS/calc)                  | `<length> の値を数式で指定できます。`                                                                                                                                                        |
-| [`-moz-element`](/ja/docs/Web/CSS/element)            | 任意の要素を [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) および [`background`](/ja/docs/Web/CSS/Reference/Properties/background) の背景として使用できます。 |
-| [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) もしくは [`background`](/ja/docs/Web/CSS/Reference/Properties/background)で利用できます。        |
+| 関数                                                    | 説明                                                                                                                                                                                         |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`:-moz-any`](/ja/docs/Web/CSS/Reference/Selectors/:is) | セレクターをグループ化しコンビネータを分解できます。                                                                                                                                         |
+| [`-moz-calc`](/ja/docs/Web/CSS/calc)                    | `<length> の値を数式で指定できます。`                                                                                                                                                        |
+| [`-moz-element`](/ja/docs/Web/CSS/element)              | 任意の要素を [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) および [`background`](/ja/docs/Web/CSS/Reference/Properties/background) の背景として使用できます。 |
+| [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect)   | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) もしくは [`background`](/ja/docs/Web/CSS/Reference/Properties/background)で利用できます。        |
 
 #### 改名された CSS プロパティ
 

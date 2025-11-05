@@ -83,7 +83,7 @@ supports 条件は、1 つ以上の名前と値のペア （例： `<property>: 
 #### `selector()`
 
 ブラウザーがテストされたセレクターの構文に対応しているかどうかを検査します。
-以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Child_combinator)に対応していれば true を返します。
+以下の例は、ブラウザーが[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)に対応していれば true を返します。
 
 ```css
 @supports selector(h2 > p) {

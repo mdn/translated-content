@@ -283,7 +283,7 @@ li::marker {
 
 ### 属性値の文字列
 
-この例は、印刷用スタイルで有用です。このスタイルシートは[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、完全修飾された保護されたリンクをすべて選択し、リンクテキストの後に `href` 属性の値を {{cssxref("::after")}} 擬似要素のコンテンツとして追加します。
+この例は、印刷用スタイルで有用です。このスタイルシートは[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、完全修飾された保護されたリンクをすべて選択し、リンクテキストの後に `href` 属性の値を {{cssxref("::after")}} 擬似要素のコンテンツとして追加します。
 
 #### HTML
 

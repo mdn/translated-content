@@ -11,7 +11,7 @@ l10n:
 > [!NOTE]
 > [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) では、 {{CSSxRef(":empty")}} セレクターが `:-moz-only-whitespace` のように動作するよう変更されましたが、まだこれに対応しているブラウザーはありません。
 
-**`:-moz-only-whitespace`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{Glossary("whitespace", "ホワイトスペース")}}のみが入ったテキストノードのみを含む要素に一致します。（これには空のテキストノードや子ノードを持たない要素も含みます。）
+**`:-moz-only-whitespace`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{Glossary("whitespace", "ホワイトスペース")}}のみが入ったテキストノードのみを含む要素に一致します。（これには空のテキストノードや子ノードを持たない要素も含みます。）
 
 ## 構文
 

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}の中に生成され、スクロールコンテナーの子孫に生成された {{cssxref("::scroll-marker")}} 擬似要素をすべて含みます。
+**`::scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}の中に生成され、スクロールコンテナーの子孫に生成された {{cssxref("::scroll-marker")}} 擬似要素をすべて含みます。
 
 ## 構文
 
