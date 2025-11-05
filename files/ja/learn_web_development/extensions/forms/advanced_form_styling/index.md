@@ -378,7 +378,7 @@ select {
 }
 ```
 
-次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置きました。それは[`::before`](/ja/docs/Web/CSS/::before)/[`::after`](/ja/docs/Web/CSS/::after) が `<select>` 要素では動作しないためです（これはコンテンツが完全にブラウザーによって制御されているからです）。
+次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置きました。それは[`::before`](/ja/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/ja/docs/Web/CSS/Reference/Selectors/::after) が `<select>` 要素では動作しないためです（これはコンテンツが完全にブラウザーによって制御されているからです）。
 
 ```html
 <label for="select">Select a fruit</label>

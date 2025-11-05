@@ -162,9 +162,9 @@ La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, 
   - : On marque un point dans cette colonne pour chaque sélecteur d'élément ou de pseudo-élément contenu dans le sélecteur composite.
 
 > [!NOTE]
-> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
+> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
 
-Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
+Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/Reference/Selectors/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
 
 Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators).
 

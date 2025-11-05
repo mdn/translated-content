@@ -110,7 +110,7 @@ input:optional {
 
 在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)的用法，现在是一个更详细地谈论它的好时机。
 
-我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
+我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/Reference/Selectors/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/Reference/Selectors/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
 
 当你想给一个元素添加一个视觉指示器，比如一个标签或图标，但又不想让它被辅助技术发现时，这就非常有用。例如，在我们的[自定义单选按钮示例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)中，我们使用生成的内容来处理单选按钮被选中时内圈的位置和动画：
 

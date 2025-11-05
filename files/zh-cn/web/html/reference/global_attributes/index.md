@@ -27,7 +27,7 @@ slug: Web/HTML/Reference/Global_attributes
 - [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : 表示一个元素将在页面加载时自动聚焦，或者在其所属的 {{HTMLElement("dialog")}} 显示时被聚焦。该属性是一个布尔值，初始化为 false。
 - [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)
-  - : 一个以空格分隔的元素的类名列表，它允许 CSS 和 Javascript 通过[类选择器](/zh-CN/docs/Web/CSS/Class_selectors)或 DOM 方法 {{DOMxRef("Document.getElementsByClassName()")}} 来选择和访问特定的元素。
+  - : 一个以空格分隔的元素的类名列表，它允许 CSS 和 Javascript 通过[类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Class_selectors)或 DOM 方法 {{DOMxRef("Document.getElementsByClassName()")}} 来选择和访问特定的元素。
 - [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)
   - : 一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，表示元素是否可被用户编辑。如果可以，浏览器会调整元素的部件以允许编辑。该属性必须是下列值之一：
     - `true` 或者*空字符串*，表明元素是可被编辑的；

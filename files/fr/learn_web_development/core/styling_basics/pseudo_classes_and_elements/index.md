@@ -58,16 +58,16 @@ Mais cette solution est difficile à maintenir — que se passe-t-il si un nouve
 
 Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :
 
-- [`:last-child`](/fr/docs/Web/CSS/:last-child)
-- [`:only-child`](/fr/docs/Web/CSS/:only-child)
-- [`:invalid`](/fr/docs/Web/CSS/:invalid)
+- [`:last-child`](/fr/docs/Web/CSS/Reference/Selectors/:last-child)
+- [`:only-child`](/fr/docs/Web/CSS/Reference/Selectors/:only-child)
+- [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid)
 
 ### Pseudo-classes d'action utilisateur
 
 Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées _pseudo-classes dynamiques_, agissent comme si une classe avait été ajoutée à l'élément lorsque l'utilisateur interagit avec lui. Par exemple :
 
-[`:hover`](/fr/docs/Web/CSS/:hover) — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.
-[`:focus`](/fr/docs/Web/CSS/:focus) — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.
+[`:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover) — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.
+[`:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus) — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
 
@@ -135,7 +135,7 @@ Dans le prochain article, nous aborderons [les combinateurs](/fr/docs/Learn_web_
 
 ## Voir aussi
 
-- [La référence des pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
-- [La référence des pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
+- [La référence des pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [La référence des pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}

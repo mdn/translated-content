@@ -765,7 +765,7 @@ input[pattern] {
 
 ### `::placeholder`
 
-Par défaut, l'affichage du texte de l'attribut [`placeholder`](#placeholder) se fait en transparence ou avec un gris clair. Le pseudo-élément [`::placeholder`](/fr/docs/Web/CSS/::placeholder) permet de cibler le texte de cet attribut et peut être mis en forme avec un sous-ensemble de propriétés CSS.
+Par défaut, l'affichage du texte de l'attribut [`placeholder`](#placeholder) se fait en transparence ou avec un gris clair. Le pseudo-élément [`::placeholder`](/fr/docs/Web/CSS/Reference/Selectors/::placeholder) permet de cibler le texte de cet attribut et peut être mis en forme avec un sous-ensemble de propriétés CSS.
 
 ```css
 ::placeholder {
@@ -773,7 +773,7 @@ Par défaut, l'affichage du texte de l'attribut [`placeholder`](#placeholder) se
 }
 ```
 
-Seul le sous-ensemble des propriétés CSS qui s'appliquent au pseudo-élément [`::first-line`](/fr/docs/Web/CSS/::first-line) peuvent être utilisées dans une règle qui utilise `::placeholder` comme sélecteur.
+Seul le sous-ensemble des propriétés CSS qui s'appliquent au pseudo-élément [`::first-line`](/fr/docs/Web/CSS/Reference/Selectors/::first-line) peuvent être utilisées dans une règle qui utilise `::placeholder` comme sélecteur.
 
 ### `appearance`
 
@@ -876,7 +876,7 @@ Le texte fourni par `placeholder` n'est pas accessible pour les lecteurs d'écra
 > [!WARNING]
 > La validation côté client est utile mais _ne garantit pas_ que le serveur reçoit des données valides. Si les données doivent respecter un format donné, il faudra _toujours_ les vérifier côté serveur et renvoyer [une réponse HTTP `400`](/fr/docs/Web/HTTP/Reference/Status/400) si le format est invalide.
 
-En complément des pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) qui permettent de cibler les contrôles selon leur état de validité, le navigateur fournit une validation côté client pour chaque tentative d'envoi du formulaire. À l'envoi du formulaire, si un des contrôles échoue à respecter les contraintes, les navigateurs qui implémentent cette fonctionnalité afficheront un message d'erreur sur le premier contrôle du formulaire qui est invalide, le message pouvant être un message par défaut selon le type d'erreur ou un message choisi par le site.
+En complément des pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) qui permettent de cibler les contrôles selon leur état de validité, le navigateur fournit une validation côté client pour chaque tentative d'envoi du formulaire. À l'envoi du formulaire, si un des contrôles échoue à respecter les contraintes, les navigateurs qui implémentent cette fonctionnalité afficheront un message d'erreur sur le premier contrôle du formulaire qui est invalide, le message pouvant être un message par défaut selon le type d'erreur ou un message choisi par le site.
 
 Certains types de champ et attributs imposent des limites aux valeurs possibles pour un champ donné. Ainsi, `<input type="number" min="2" max="10" step="2">` signifiera que seuls les nombres 2, 4, 6, 8, et 10 sont valides. Plusieurs erreurs de validation peuvent se produire ici, `rangeUnderflow` si la valeur est inférieure à 2, `rangeOverflow` si elle est supérieure à 10, `stepMismatch` si la valeur est comprise entre 2 et 10, mais n'est pas un entier pair (autrement dit, la contrainte imposée par `step` n'est pas respectée), ou `typeMismatch` si la valeur n'est pas un nombre.
 

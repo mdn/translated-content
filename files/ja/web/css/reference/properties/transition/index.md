@@ -60,7 +60,7 @@ transition: all 1s ease-out;
 }
 ```
 
-トランジション (transition) は、要素の 2 つの状態間の変化を定義するためのものです。それぞれの状態は {{cssxref(":hover")}} や {{cssxref(":active")}} のような[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で定義されたり、 JavaScript を使用して動的に設定されたりします。
+トランジション (transition) は、要素の 2 つの状態間の変化を定義するためのものです。それぞれの状態は {{cssxref(":hover")}} や {{cssxref(":active")}} のような[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で定義されたり、 JavaScript を使用して動的に設定されたりします。
 
 ## 構成要素のプロパティ
 

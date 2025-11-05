@@ -376,7 +376,7 @@ select {
 }
 ```
 
-然后，我们利用生成内容创建了自己的图标。由于 [`::before`](/zh-CN/docs/Web/CSS/::before)/[`::after`](/zh-CN/docs/Web/CSS/::after) 并不适用于 `<select>` 元素（这是因为生成的内容是相对于元素的格式框放置的，而表单输入的工作方式更像是被替换的元素——它们的显示是由浏览器生成并放置的，因此没有格式框），因此我们在控件周围添加了一个额外的封装：
+然后，我们利用生成内容创建了自己的图标。由于 [`::before`](/zh-CN/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/zh-CN/docs/Web/CSS/Reference/Selectors/::after) 并不适用于 `<select>` 元素（这是因为生成的内容是相对于元素的格式框放置的，而表单输入的工作方式更像是被替换的元素——它们的显示是由浏览器生成并放置的，因此没有格式框），因此我们在控件周围添加了一个额外的封装：
 
 ```html
 <label for="select">Select a fruit</label>

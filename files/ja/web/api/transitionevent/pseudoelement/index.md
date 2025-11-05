@@ -8,7 +8,7 @@ l10n:
 
 {{ apiref("CSSOM") }}
 
-**`TransitionEvent.pseudoElement`** は読み取り専用プロパティで、アニメーションが実行されている `'::'` で始まる[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入っている文字列です。トランジションが擬似要素で実行されない場合は、要素は空文字列 (`''`) です。
+**`TransitionEvent.pseudoElement`** は読み取り専用プロパティで、アニメーションが実行されている `'::'` で始まる[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前が入っている文字列です。トランジションが擬似要素で実行されない場合は、要素は空文字列 (`''`) です。
 
 ## 値
 

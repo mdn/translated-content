@@ -75,4 +75,4 @@ const content = window.preamble.textContent;
 - すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("Element.id")}} はこの属性を反映します
 - {{domxref("Document.getElementById")}} メソッド
-- CSS の [ID セレクター](/ja/docs/Web/CSS/ID_selectors)
+- CSS の [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)

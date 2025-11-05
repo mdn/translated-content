@@ -85,7 +85,7 @@ Chaque ombre est spécifiée par deux ou trois valeurs `<length>`, suivies d'une
 
 Lorsque plus d'une ombre est indiquée, les ombres sont appliquées d'avant en arrière, avec la première ombre spécifiée sur le dessus.
 
-Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
+Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
 
 ### Valeurs
 

@@ -138,7 +138,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 ### 示例
 
 - [background-color 属性](/zh-CN/docs/Web/CSS/Reference/Properties/background-color)
-- [:hover 伪类](/zh-CN/docs/Web/CSS/:hover)
+- [:hover 伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/:hover)
 - [@media @ 规则](/zh-CN/docs/Web/CSS/@media)
 
 ### 模板

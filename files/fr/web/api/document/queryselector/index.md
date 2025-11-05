@@ -14,7 +14,7 @@ La correspondance se fait par un parcours en profondeur (pré‑ordre) des nœud
 
 Si le sélecteur correspond à un ID utilisé par erreur plusieurs fois dans le document, le premier élément portant cet ID est retourné.
 
-Les [pseudo‑éléments CSS](/fr/docs/Web/CSS/Pseudo-elements) ne retournent jamais d'éléments.
+Les [pseudo‑éléments CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) ne retournent jamais d'éléments.
 
 ## Syntaxe
 

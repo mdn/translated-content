@@ -514,7 +514,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### :has() 伪类
 
-[`:has()`](/zh-CN/docs/Web/CSS/:has) 伪类会选择包含作为参数传递的选择器的元素。（详见 [Firefox bug 1771896](https://bugzil.la/1771896)）。
+[`:has()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:has) 伪类会选择包含作为参数传递的选择器的元素。（详见 [Firefox bug 1771896](https://bugzil.la/1771896)）。
 
 <table>
   <thead>
@@ -1465,7 +1465,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### CSS 自定义高亮 API
 
-[CSS 自定义高亮 API](/zh-CN/docs/Web/API/CSS_Custom_Highlight_API) 为文档中任意文本范围的样式化提供了一种机制（概括了其他高亮伪元素的行为，如 {{cssxref('::selection')}}、{{cssxref('::spelling-error')}}、{{cssxref('::grammar-error')}} 和 {{cssxref('::target-text')}}）。这些范围在 JavaScript 中使用 [`Range`](/zh-CN/docs/Web/API/Range) 实例进行定义，这些实例在 [`Highlight`](/zh-CN/docs/Web/API/Highlight) 中分组，然后使用 [`HighlightRegistry`](/zh-CN/docs/Web/API/HighlightRegistry) 注册名称。CSS [`::highlight`](/zh-CN/docs/Web/CSS/::highlight) 伪元素用于为已注册的高亮应用样式。详情请参见 [Firefox bug 1703961](https://bugzil.la/1703961)。
+[CSS 自定义高亮 API](/zh-CN/docs/Web/API/CSS_Custom_Highlight_API) 为文档中任意文本范围的样式化提供了一种机制（概括了其他高亮伪元素的行为，如 {{cssxref('::selection')}}、{{cssxref('::spelling-error')}}、{{cssxref('::grammar-error')}} 和 {{cssxref('::target-text')}}）。这些范围在 JavaScript 中使用 [`Range`](/zh-CN/docs/Web/API/Range) 实例进行定义，这些实例在 [`Highlight`](/zh-CN/docs/Web/API/Highlight) 中分组，然后使用 [`HighlightRegistry`](/zh-CN/docs/Web/API/HighlightRegistry) 注册名称。CSS [`::highlight`](/zh-CN/docs/Web/CSS/Reference/Selectors/::highlight) 伪元素用于为已注册的高亮应用样式。详情请参见 [Firefox bug 1703961](https://bugzil.la/1703961)。
 
 <table>
   <thead>
@@ -1602,8 +1602,8 @@ Firefox 现在支持 [Popover API](/zh-CN/docs/Web/API/Popover_API)。
 
 CSS 更新包括：
 
-- [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open)
-- [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已经得到扩展以支持 popover。
+- [`:popover-open`](/zh-CN/docs/Web/CSS/Reference/Selectors/:popover-open)
+- [`::backdrop`](/zh-CN/docs/Web/CSS/Reference/Selectors/::backdrop) 已经得到扩展以支持 popover。
 
 以下 HTML 全局属性得到了支持：
 

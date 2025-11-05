@@ -388,7 +388,7 @@ button.addEventListener("click", () => {
 
 ### @page 伪类示例
 
-请参考 `@page` 的各种[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)以获取示例。
+请参考 `@page` 的各种[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)以获取示例。
 
 - [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}

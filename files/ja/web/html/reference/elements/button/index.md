@@ -209,7 +209,7 @@ l10n:
 
 フォーカスを持つ要素の既定のフォーカスリングは上書きしないことが望ましいです。ボタンスタイルが上書きされる場合、視覚障碍のあるユーザーが認識でき、認知能力に違いのあるユーザーも理解できるように、**フォーカス状態のコントラストが十分であることを保証**することが重要です。
 
-{{cssxref(":focus-visible")}} 擬似クラスを使用すると、ユーザーエージェントのヒューリスティックがフォーカスを強調表示すべきであると判断した場合（たとえば、`<button>` がキーボードのフォーカスを受け取った場合など）にのみ、 {{cssxref(":focus")}} を保有する要素にスタイルを適用することができます。詳細については、[:focus と :focus-visible](/ja/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) を参照してください。
+{{cssxref(":focus-visible")}} 擬似クラスを使用すると、ユーザーエージェントのヒューリスティックがフォーカスを強調表示すべきであると判断した場合（たとえば、`<button>` がキーボードのフォーカスを受け取った場合など）にのみ、 {{cssxref(":focus")}} を保有する要素にスタイルを適用することができます。詳細については、[:focus と :focus-visible](/ja/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_vs_focus-visible) を参照してください。
 
 色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
 

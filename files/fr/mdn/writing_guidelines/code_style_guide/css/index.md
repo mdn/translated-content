@@ -149,7 +149,7 @@ En revanche, si votre règle `@keyframes` contient plus que les frames de début
 
 ### Gestion de la spécificité
 
-Si possible, évitez les surprises liées à l'augmentation ou la diminution de la spécificité, comme l'utilisation excessive de la pseudo-classe [`:where()`](/fr/docs/Web/CSS/:where) ou la duplication de sélecteurs. Privilégiez plutôt les techniques suivantes pour gérer la spécificité&nbsp;:
+Si possible, évitez les surprises liées à l'augmentation ou la diminution de la spécificité, comme l'utilisation excessive de la pseudo-classe [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) ou la duplication de sélecteurs. Privilégiez plutôt les techniques suivantes pour gérer la spécificité&nbsp;:
 
 - Modifier l'ordre des déclarations pour tirer parti de la cascade
 - Réorganiser les propriétés dans chaque déclaration afin qu'elles ne se surchargent pas mutuellement
@@ -255,7 +255,7 @@ Les lignes vides entre les propriétés doivent être utilisées avec parcimonie
 
 ### Utiliser les sélecteurs de classe
 
-En général, privilégiez les [sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (et utilisez `class` au lieu de `id` dans votre HTML). Ils sont composables&nbsp;: plusieurs éléments peuvent utiliser la même classe, et la même classe peut être utilisée pour plusieurs éléments.
+En général, privilégiez les [sélecteurs de classe](/fr/docs/Web/CSS/Reference/Selectors/Class_selectors) (et utilisez `class` au lieu de `id` dans votre HTML). Ils sont composables&nbsp;: plusieurs éléments peuvent utiliser la même classe, et la même classe peut être utilisée pour plusieurs éléments.
 
 ```css example-good
 .footnote {
@@ -273,7 +273,7 @@ Utilisez les classes pour la mise en forme, et réservez les ID à des usages no
 
 ### Anciens sélecteurs de pseudo-éléments
 
-Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` peuvent aussi s'écrire avec un seul deux-points (comme `:before`). Évitez la syntaxe à un seul deux-points car elle est déconseillée et pourrait être confondue avec une [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) (`:hover`) par les lecteurs.
+Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` peuvent aussi s'écrire avec un seul deux-points (comme `:before`). Évitez la syntaxe à un seul deux-points car elle est déconseillée et pourrait être confondue avec une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (`:hover`) par les lecteurs.
 
 ### Listes de sélecteurs complexes
 

@@ -106,7 +106,7 @@ td {
     > [!NOTE]
     > 在 `<colgroup>` 元素上設置 `vertical-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
     >
-    > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，可以使用 [`td:nth-of-type()`](/zh-TW/docs/Web/CSS/:nth-of-type) CSS 選擇器進行每欄的對齊，例如 `td:nth-of-type(2) { vertical-align: middle; }` 使第二欄儲存格垂直居中。
+    > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，可以使用 [`td:nth-of-type()`](/zh-TW/docs/Web/CSS/Reference/Selectors/:nth-of-type) CSS 選擇器進行每欄的對齊，例如 `td:nth-of-type(2) { vertical-align: middle; }` 使第二欄儲存格垂直居中。
     >
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，可以通過組合適當的 CSS 屬性選擇器來達到效果，例如像 `[colspan=n]`，儘管這並不簡單。
 

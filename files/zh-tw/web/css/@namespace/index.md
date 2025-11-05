@@ -51,7 +51,7 @@ svg|a {
 
 ## 描述
 
-定義的命名空間可用於限制[通用](/zh-TW/docs/Web/CSS/Universal_selectors)、[型別](/zh-TW/docs/Web/CSS/Type_selectors)和[屬性](/zh-TW/docs/Web/CSS/Attribute_selectors)[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)，使其僅選取該命名空間內的元素。通常只有在處理包含多個命名空間的文件時（例如帶有行內 SVG 或 MathML 的 HTML，或混合多種詞彙的 XML），`@namespace` 規則才有用。
+定義的命名空間可用於限制[通用](/zh-TW/docs/Web/CSS/Reference/Selectors/Universal_selectors)、[型別](/zh-TW/docs/Web/CSS/Reference/Selectors/Type_selectors)和[屬性](/zh-TW/docs/Web/CSS/Reference/Selectors/Attribute_selectors)[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)，使其僅選取該命名空間內的元素。通常只有在處理包含多個命名空間的文件時（例如帶有行內 SVG 或 MathML 的 HTML，或混合多種詞彙的 XML），`@namespace` 規則才有用。
 
 任何 `@namespace` 規則都必須遵循所有的 {{cssxref("@charset")}} 和 {{cssxref("@import")}} 規則，並位於樣式表中所有其他 at 規則和[樣式宣告](/zh-TW/docs/Web/API/CSSStyleDeclaration)之前。
 

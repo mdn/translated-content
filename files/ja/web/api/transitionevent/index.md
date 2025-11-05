@@ -25,7 +25,7 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 - {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : `float` で、このイベントが発生した時点でトランジションが実行している時間を秒単位で表します。この値は {{cssxref("transition-delay")}} プロパティの影響を受けません。
 - {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 文字列で、 `::` で始まる、アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前が入ります。トランジションが擬似要素上ではなく要素上で実行されている場合は、空文字列 `''` になります。
+  - : 文字列で、 `::` で始まる、アニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前が入ります。トランジションが擬似要素上ではなく要素上で実行されている場合は、空文字列 `''` になります。
 
 ## `TransitionEvent` の種類
 

@@ -91,5 +91,5 @@ Si certains éléments interactifs de la barre d'outils sont désactivés, il pe
 
 ## Voir aussi
 
-- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/:focus)
-- [La pseudo-classe CSS `:focus-within`](/fr/docs/Web/CSS/:focus-within)
+- [La pseudo-classe CSS `:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus)
+- [La pseudo-classe CSS `:focus-within`](/fr/docs/Web/CSS/Reference/Selectors/:focus-within)

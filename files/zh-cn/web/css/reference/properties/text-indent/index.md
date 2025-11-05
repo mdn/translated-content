@@ -142,7 +142,7 @@ p {
 
 在段落缩进的情况下，一种常见的排版实践是跳过第一个段落的缩进。正如*芝加哥格式手册*所述，“紧跟标题后的第一行文本可以左对齐，也可以按照通常的段落缩进进行缩进。”
 
-使用[接续兄弟组合器](/zh-CN/docs/Web/CSS/Next-sibling_combinator)可以对首段与后续段落进行不同处理，如下例所示：
+使用[接续兄弟组合器](/zh-CN/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)可以对首段与后续段落进行不同处理，如下例所示：
 
 #### HTML
 

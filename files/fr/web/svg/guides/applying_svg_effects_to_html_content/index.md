@@ -130,7 +130,7 @@ function toggleRadius() {
 
 ### Exemple : Filtres
 
-Cet exemple montre comment utiliser des filtres avec un SVG. À l'aide du CSS, nous appliquons plusieurs filtres à trois éléments à la fois dans leur état normal, que quand ils sont survolés par la souris ([hover](/fr/docs/Web/CSS/:hover)).
+Cet exemple montre comment utiliser des filtres avec un SVG. À l'aide du CSS, nous appliquons plusieurs filtres à trois éléments à la fois dans leur état normal, que quand ils sont survolés par la souris ([hover](/fr/docs/Web/CSS/Reference/Selectors/:hover)).
 
 ```html
 <p class="target" style="background: lime;">

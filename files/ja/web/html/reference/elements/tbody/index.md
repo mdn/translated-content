@@ -377,6 +377,6 @@ tbody > tr > th {
 
 ## 関連情報
 
-- `<tbody>` 要素のスタイル設定に役立つであろう CSS プロパティと[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes):
+- `<tbody>` 要素のスタイル設定に役立つであろう CSS プロパティと[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes):
   - {{ cssxref(":nth-child") }} 擬似クラス: 列内のセルの配置を設定するため
   - {{ cssxref("text-align") }} プロパティ: すべてのセル内コンテンツを '.' などの同一文字で揃えるための

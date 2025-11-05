@@ -175,7 +175,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 #### 例
 
 - [`background-color` プロパティ](/ja/docs/Web/CSS/Reference/Properties/background-color)
-- [`:hover` 擬似クラス](/ja/docs/Web/CSS/:hover)
+- [`:hover` 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/:hover)
 - [`@media` アットルール](/ja/docs/Web/CSS/@media)
 
 #### テンプレート

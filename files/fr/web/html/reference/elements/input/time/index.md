@@ -269,7 +269,7 @@ Les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`
 
 {{EmbedLiveSample('', 600, 100)}}
 
-Voici la feuille de style CSS utilisée dans l'exemple précédent. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que la valeur saisie est valide ou non. Les icônes qui indiquent cette validité ont été placées dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) à part car Chrome ne permet pas de placer du contenu généré dans le contrôle.
+Voici la feuille de style CSS utilisée dans l'exemple précédent. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) afin de mettre en forme le contrôle selon que la valeur saisie est valide ou non. Les icônes qui indiquent cette validité ont été placées dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) à part car Chrome ne permet pas de placer du contenu généré dans le contrôle.
 
 ```css
 div {

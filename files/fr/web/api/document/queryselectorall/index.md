@@ -28,7 +28,7 @@ querySelectorAll(selectors);
 Une {{DOMxRef("NodeList")}} statique contenant un objet {{DOMxRef("Element")}} pour chaque élément qui correspond à au-moins un des sélecteurs spécifiés ou une {{DOMxRef("NodeList")}} vide si aucune correspondance n'est trouvée.
 
 > [!NOTE]
-> Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
+> Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), la liste retournée sera toujours vide.
 
 ### Exceptions
 
@@ -58,7 +58,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments {{HTMLElement("iframe")}} dans le document qui contient un attribut nommé `"data-src"`&nbsp;:
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) pour renvoyer une liste d'éléments {{HTMLElement("iframe")}} dans le document qui contient un attribut nommé `"data-src"`&nbsp;:
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
@@ -173,7 +173,7 @@ Cliquer sur le premier bouton génère une erreur, tandis que les deuxième et t
 ## Voir aussi
 
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- Le guide des [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) CSS
+- Le guide des [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) CSS
 - [Apprendre&nbsp;: Sélecteurs d'attribut CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - Les méthodes {{DOMxRef("Element.querySelector()", "querySelector()")}} et {{DOMxRef("Element.querySelectorAll()", "querySelectorAll()")}} de l'interface `Element`
 - La méthode {{DOMxRef("Document.querySelector()", "querySelector()")}} de l'interface `Document`

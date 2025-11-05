@@ -58,7 +58,7 @@ En général, quitter un élément sélectionné amène à l'élément sélectio
 
 ## Fonctionnalités CSS requises
 
-Utilisez le sélecteur d'attribut `[aria-checked="true"]` ([sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors)) pour styliser l'état sélectionné des boutons radio.
+Utilisez le sélecteur d'attribut `[aria-checked="true"]` ([sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) pour styliser l'état sélectionné des boutons radio.
 
 Utilisez les pseudo-classes CSS {{CSSXRef(':hover')}} et {{CSSXRef(':focus')}} pour styliser la sélection visuelle au clavier et le survol. L'effet de sélection et de survol doit englober le bouton radio et le label pour faciliter la perception de l'option choisie et indiquer que cliquer sur le label ou le bouton active le bouton radio.
 

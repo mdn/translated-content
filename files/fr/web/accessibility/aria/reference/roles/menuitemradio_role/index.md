@@ -113,7 +113,7 @@ Si le `menuitemradio` se trouve dans un sous-menu d'une `menubar` ou d'un menu o
 
 Le [`tabindex="-1"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) rend le `menuitemradio` sélectionnable au clavier mais ne l'intègre pas dans la séquence de tabulation de la page. Si nous avions inclus `aria-checked="true"`, cela aurait indiqué que le `menuitemradio` était sélectionné, et nous aurions stylisé visuellement l'état sélectionné pour qu'il apparaisse comme coché en utilisant le sélecteur d'attribut `[role='menuitemradio'][aria-checked='true']`. Au contraire, la présence de `aria-checked="false"` indique aux technologies d'assistance que le `menuitemradio` est sélectionnable mais pas actuellement sélectionné. Le nom accessible «&nbsp;Violet&nbsp;» provient du contenu.
 
-L'apparence visuelle de l'état sélectionné est celle d'un bouton radio coché que l'on peut créer avec du [contenu généré](/fr/docs/Web/CSS/CSS_generated_content), en le rendant visible et de la même couleur que le contenu en synchronisant avec la valeur de `aria-checked` grâce aux [sélecteurs d'attributs](/fr/docs/Web/CSS/Attribute_selectors) et en modifiant la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
+L'apparence visuelle de l'état sélectionné est celle d'un bouton radio coché que l'on peut créer avec du [contenu généré](/fr/docs/Web/CSS/CSS_generated_content), en le rendant visible et de la même couleur que le contenu en synchronisant avec la valeur de `aria-checked` grâce aux [sélecteurs d'attributs](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) et en modifiant la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 
 ```css
 [role="menuitemradio"]::before {

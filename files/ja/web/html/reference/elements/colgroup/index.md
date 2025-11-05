@@ -198,7 +198,7 @@ td {
 
 ## 関連情報
 
-- `<col>` 要素のスタイル付けに特に便利な CSS プロパティおよび[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes):
+- `<col>` 要素のスタイル付けに特に便利な CSS プロパティおよび[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes):
   - 列の幅を制御するための {{cssxref("width")}} プロパティ
   - 列内のセルの配置を設定するための {{cssxref(":nth-child")}} 擬似クラス
   - すべてのセル内コンテンツを '.' などの同一文字で揃えるための {{cssxref("text-align")}} プロパティ

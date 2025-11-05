@@ -15,7 +15,7 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 
 ### 选择器
 
-- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
+- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 
 ## 指南
 
@@ -29,7 +29,7 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 ## 相关概念
 
 - [选择器与组合器](/zh-CN/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS 预处理器](/zh-CN/docs/Glossary/CSS_preprocessor)
 
 ## 规范

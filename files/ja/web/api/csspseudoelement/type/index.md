@@ -42,4 +42,4 @@ console.log(mySelector === typeOfPseudoElement); // true を出力
 ## 関連情報
 
 - {{DOMxRef('Element.pseudo()')}}
-- [標準的な擬似要素の索引](/ja/docs/Web/CSS/Pseudo-elements#標準的な擬似要素の索引)
+- [標準的な擬似要素の索引](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#標準的な擬似要素の索引)

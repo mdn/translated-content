@@ -29,7 +29,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ## Notes d'utilisation
 
 - Les éléments [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour soumettre le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input#formmethod). Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour soumettre le formulaire.
-- Le pseudo-élément CSS [`::backdrop`](/fr/docs/Web/CSS/::backdrop) peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal). Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
+- Le pseudo-élément CSS [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop) peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal). Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
 - L'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue modale. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
 
 ## Exemples
@@ -71,7 +71,7 @@ Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la prio
 
 #### CSS
 
-Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop).
+Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop).
 
 ```css
 ::backdrop {
@@ -276,5 +276,5 @@ L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire 
 - L'évènement [`cancel`](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
 - La propriété [`open`](/fr/docs/Web/API/HTMLDialogElement/open) de l'interface `HTMLDialogElement`
 - L'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
-- Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop)
+- Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop)
 - [Guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)

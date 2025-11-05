@@ -26,7 +26,7 @@ l10n:
 
 ## ガイド
 
-- [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- [CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - : すべての CSS 仕様書および WebVTT で定義されている擬似要素のアルファベット順のリスト
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

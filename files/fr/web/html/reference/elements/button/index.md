@@ -120,7 +120,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Referen
 
 Un bouton de soumission avec l'attribut `formaction` défini, mais sans formulaire associé ne fait rien. Vous devez définir un formulaire rattaché, soit en l'enveloppant dans un `<form>`, soit en définissant la valeur de l'attribut `form` avec l'identifiant du formulaire.
 
-Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input). Vous pouvez ajouter du contenu HTML interne (pensez à `<i>`, `<br>`, ou même `<img>`), et utiliser les pseudo-éléments [`::after`](/fr/docs/Web/CSS/::after) et [`::before`](/fr/docs/Web/CSS/::before) pour un rendu complexe.
+Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input). Vous pouvez ajouter du contenu HTML interne (pensez à `<i>`, `<br>`, ou même `<img>`), et utiliser les pseudo-éléments [`::after`](/fr/docs/Web/CSS/Reference/Selectors/::after) et [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) pour un rendu complexe.
 
 Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `button`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
 

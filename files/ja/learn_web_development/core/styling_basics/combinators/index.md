@@ -185,7 +185,7 @@ p ~ img {
 }
 ```
 
-[`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)も、複雑なセレクターを作成するために使用されることがあります。
+[`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)も、複雑なセレクターを作成するために使用されることがあります。
 
 ```css
 p {

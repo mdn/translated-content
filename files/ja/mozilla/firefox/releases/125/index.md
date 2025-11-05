@@ -36,8 +36,8 @@ l10n:
   - [`HTMLElement`](/ja/docs/Web/API/HTMLElement) の [`popover`](/ja/docs/Web/API/HTMLElement/popover) プロパティ、および [`hidePopover()`](/ja/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/ja/docs/Web/API/HTMLElement/showPopover)、[`togglePopover()`](/ja/docs/Web/API/HTMLElement/togglePopover) メソッド、および ([`ToggleEvent`](/ja/docs/Web/API/ToggleEvent) 型の) [`beforetoggle`](/ja/docs/Web/API/HTMLElement/beforetoggle_event)、[`toggle_event`](/ja/docs/Web/API/HTMLElement/toggle_event) イベント。
 
   ポップオーバーと共に使用する、以下の CSS 擬似クラスをサポートしました:
-  - [`:popover-open`](/ja/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/ja/docs/Web/CSS/::backdrop) を、ポップオーバーをサポートするように拡張しました
+  - [`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open)
+  - [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) を、ポップオーバーをサポートするように拡張しました
 
   以下の HTML グローバル属性をサポートしました:
   - [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget)

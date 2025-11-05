@@ -26,7 +26,7 @@ l10n:
 
 ## 指南
 
-- [CSS 伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
+- [CSS 伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - : 所有 CSS 规范和 WebVTT 定义的伪元素字母顺序列表
 
 - [Web 组件](/zh-CN/docs/Web/API/Web_components)

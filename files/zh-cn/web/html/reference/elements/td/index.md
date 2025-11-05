@@ -172,7 +172,7 @@ caption {
 
 #### CSS
 
-表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
+表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
 
 ```css
 td,

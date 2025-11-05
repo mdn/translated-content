@@ -48,9 +48,9 @@ Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour un guide 
 
 ## Fonctionnalités CSS
 
-- [`::backdrop`](/fr/docs/Web/CSS/::backdrop)
+- [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop)
   - : Le pseudo-élément `::backdrop` est un élément plein écran placé directement derrière les éléments <i lang="en">popovers</i>, permettant d'ajouter des effets au contenu de la page derrière les <i lang="en">popovers</i> si nécessaire (par exemple en le floutant).
-- [`:popover-open`](/fr/docs/Web/CSS/:popover-open)
+- [`:popover-open`](/fr/docs/Web/CSS/Reference/Selectors/:popover-open)
   - : La pseudo-classe `:popover-open` correspond à un élément <i lang="en">popover</i> uniquement lorsqu'il est affiché. Elle peut être utilisée pour styliser les éléments <i lang="en">popovers</i> lorsqu'ils sont affichés.
 
 ## Interfaces

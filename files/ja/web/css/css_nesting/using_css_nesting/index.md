@@ -14,11 +14,11 @@ CSS 入れ子は、 CSS プリプロセッサーで事前にコンパイルさ�
 
 ## 子セレクター
 
-CSS 入れ子を使用して、親の子セレクターを作成し、そのセレクターを使用して固有の親の子要素を対象とすることができます。これは [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)を使っても使わなくても可能です。
+CSS 入れ子を使用して、親の子セレクターを作成し、そのセレクターを使用して固有の親の子要素を対象とすることができます。これは [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)を使っても使わなくても可能です。
 
 特定の場面では、 `&` 入れ子セレクターが必要である場合や有益である場合があります。
 
-- [複合セレクター](#複合セレクター)または[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)などを使用して、セレクターを互いに結合する場合。
+- [複合セレクター](#複合セレクター)または[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)などを使用して、セレクターを互いに結合する場合。
 - 後方互換性のため。
 - 読みやすさのための視覚的インジケーターとして、 `&` 入れ子セレクターを見たときに、 CSS 入れ子を使用していることがわかります。
 
@@ -150,7 +150,7 @@ label {
 
 #### 兄弟結合子の入れ子
 
-この例では、それぞれの `<h2>` の直後の段落を[次兄弟結合子 (`+`)](/ja/docs/Web/CSS/Next-sibling_combinator) を使用して CSS の入れ子を使用して対象にしています。
+この例では、それぞれの `<h2>` の直後の段落を[次兄弟結合子 (`+`)](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) を使用して CSS の入れ子を使用して対象にしています。
 
 ##### HTML
 
@@ -438,9 +438,9 @@ CSSOM は、次のように CSS を解釈します。
 ```
 
 > [!WARNING]
-> これは CSS の入れ子ではできません。[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)を用いない場合、入れ子のセレクターは[要素型セレクター](/ja/docs/Web/CSS/Type_selectors)として扱われます。連結を許可すると、これが壊れてしまいます。
+> これは CSS の入れ子ではできません。[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)を用いない場合、入れ子のセレクターは[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)として扱われます。連結を許可すると、これが壊れてしまいます。
 
-[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
+[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
 
 ```css example-good
 .my-class {
@@ -476,7 +476,7 @@ element.my-class {
 ## 関連情報
 
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
-- [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
+- [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [入れ子 `@` アットルール](/ja/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
 - {{domxref("CSSNestedDeclarations")}}

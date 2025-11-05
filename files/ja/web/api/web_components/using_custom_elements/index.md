@@ -218,9 +218,9 @@ customElements.define("my-custom-element", MyCustomElement);
 
 HTML 要素に組み込まれた要素は、「ホバー」、「無効」、「読み取り専用」など、様々な状態を取ります。
 これらの状態の一部は、HTML または JavaScript を使用して属性として設定できますが、内部的なものもあり、設定できないものもあります。
-外部または内部に関わらず、これらの状態には通常、特定の状態にある要素を選択し、スタイルを適用するために使用できる対応する [CSS 擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)が存在します。
+外部または内部に関わらず、これらの状態には通常、特定の状態にある要素を選択し、スタイルを適用するために使用できる対応する [CSS 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)が存在します。
 
-また、自律型カスタム要素（組み込み要素をベースにした要素を除く）では、擬似クラス関数 [`:state()`](/ja/docs/Web/CSS/:state) を使用して状態を定義し、それに対して選択を行うこともできます。
+また、自律型カスタム要素（組み込み要素をベースにした要素を除く）では、擬似クラス関数 [`:state()`](/ja/docs/Web/CSS/Reference/Selectors/:state) を使用して状態を定義し、それに対して選択を行うこともできます。
 以下のコードでは、内部状態 `"collapsed"` を持つ自律型カスタム要素の例を使用して、その動作を示しています。
 
 `collapsed` の状態は、要素の外からは見えない論理値プロパティ（セッターとゲッターメソッド付き）として表現されます。
@@ -254,7 +254,7 @@ customElements.define("my-custom-element", MyCustomElement);
 ```
 
 カスタム要素の `CustomStateSet` (`this._internals.states`) に追加された識別子を使用して、要素のカスタム状態と照合することができます。
-これは、[`:state()`](/ja/docs/Web/CSS/:state) 擬似クラスに識別子を渡すと照合されます。
+これは、[`:state()`](/ja/docs/Web/CSS/Reference/Selectors/:state) 擬似クラスに識別子を渡すと照合されます。
 例えば、下記では、`hidden` セレクターを使用して、`hidden` 状態が `true`（したがって、要素が`collapsed` 状態）であることを選択し、境界線を削除します。
 
 ```css
@@ -266,8 +266,8 @@ my-custom-element:state(hidden) {
 }
 ```
 
-`:state()` 擬似クラスを [`:host()`](/ja/docs/Web/CSS/:host_function) 擬似クラス関数内で使用すると、[カスタム要素のシャドウ DOM 内の](/ja/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom)カスタム状態と照合することもできます。
-さらに、`:state()` 擬似クラスを [`::part()`](/ja/docs/Web/CSS/::part) 擬似要素の後で使用することで、特定の状態にあるカスタム要素の[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)と照合することもできます。
+`:state()` 擬似クラスを [`:host()`](/ja/docs/Web/CSS/Reference/Selectors/:host_function) 擬似クラス関数内で使用すると、[カスタム要素のシャドウ DOM 内の](/ja/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom)カスタム状態と照合することもできます。
+さらに、`:state()` 擬似クラスを [`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) 擬似要素の後で使用することで、特定の状態にあるカスタム要素の[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)と照合することもできます。
 
 {{domxref("CustomStateSet")}} には、これがどのように動作するのかを示すいくつかのライブサンプルがあります。
 

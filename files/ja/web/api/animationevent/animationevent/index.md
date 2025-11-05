@@ -31,7 +31,7 @@ new AnimationEvent(type, options)
         `animationstart` イベントの場合、 `elapsedTime` は `0.0` です。ただし、 {{cssxref("animation-delay")}} に負の値を指定した場合は除きます。
         この場合、イベントは `elapsedTime` に `(-1 * delay)` が含まれた状態で発行されます。既定で `0.0` となります。
     - `pseudoElement` {{optional_inline}}
-      - : 文字列で、アニメーションを動作させる[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を含む、 `"::"` で始まる名前です。もしアニメーションが擬似要素上で動作せず、要素そのもの上で動作するる場合は、空文字列 `""` を指定します。 既定では `""` となります。
+      - : 文字列で、アニメーションを動作させる[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前を含む、 `"::"` で始まる名前です。もしアニメーションが擬似要素上で動作せず、要素そのもの上で動作するる場合は、空文字列 `""` を指定します。 既定では `""` となります。
 
 ## 仕様書
 

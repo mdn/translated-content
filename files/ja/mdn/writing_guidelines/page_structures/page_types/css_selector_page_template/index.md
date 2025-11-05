@@ -30,10 +30,10 @@ l10n:
 >
 > - **title**
 >   - : タイトルの見出しで、ページの先頭に表示されます。書式は _:NameOfTheSelector_ です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのタイトルは _:hover_ です。
+>     例えば、 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) セレクターのタイトルは _:hover_ です。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/:NameOfTheSelector` のような書式です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのスラッグは `Web/CSS/:hover` です。
+>     例えば、 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) セレクターのスラッグは `Web/CSS/:hover` です。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >

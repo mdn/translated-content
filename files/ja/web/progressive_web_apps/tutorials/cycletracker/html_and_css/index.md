@@ -243,7 +243,7 @@ li:nth-of-type(even) {
 
 {{CSSXref("background-color")}} プロパティを使用して、 `body` の背景色を薄い緑色 (`#efe`) に設定します。次に、順序なしリスト、フィールドセット、凡例では、白色 (`#fff`) の背景色を使用し、 {{CSSXref("border")}} プロパティで追加した細い実線の境界線と組み合わせています。凡例の `background-color` を上書きし、凡例とリストアイテムを濃い緑色 (`#cfc`) にします。
 
-[`:nth-of-type(even)`](/ja/docs/Web/CSS/:nth-of-type) 擬似クラス[セレクター](/ja/docs/Web/CSS/CSS_selectors)を使用して、偶数番号のリストアイテムすべてに、その親の背景色を{{CSSXref("inherit", "継承")}}させるように設定します。この場合、 `#fff` の背景色を順序なしリストから継承します。
+[`:nth-of-type(even)`](/ja/docs/Web/CSS/Reference/Selectors/:nth-of-type) 擬似クラス[セレクター](/ja/docs/Web/CSS/CSS_selectors)を使用して、偶数番号のリストアイテムすべてに、その親の背景色を{{CSSXref("inherit", "継承")}}させるように設定します。この場合、 `#fff` の背景色を順序なしリストから継承します。
 
 ```css
 body {

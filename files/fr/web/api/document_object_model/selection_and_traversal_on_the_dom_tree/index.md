@@ -26,11 +26,11 @@ Vous trouverez des exemples et des détails dans la documentation des méthodes 
 
 ## Sélecteurs
 
-Les méthodes de sélection acceptent des [sélecteurs](/fr/docs/Web/CSS/CSS_selectors) pour déterminer quel ou quels éléments doivent être retournés. Cela inclut les [listes de sélecteurs](/fr/docs/Web/CSS/Selector_list), ce qui permet de regrouper plusieurs sélecteurs dans une seule requête.
+Les méthodes de sélection acceptent des [sélecteurs](/fr/docs/Web/CSS/CSS_selectors) pour déterminer quel ou quels éléments doivent être retournés. Cela inclut les [listes de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list), ce qui permet de regrouper plusieurs sélecteurs dans une seule requête.
 
-Pour protéger la vie privée des utilisateur·ice·s, certaines [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) ne sont pas prises en charge ou se comportent différemment. Par exemple, {{CSSxRef(":visited")}} ne retournera aucun résultat et {{CSSxRef(":link")}} est traité comme {{CSSxRef(":any-link")}}.
+Pour protéger la vie privée des utilisateur·ice·s, certaines [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) ne sont pas prises en charge ou se comportent différemment. Par exemple, {{CSSxRef(":visited")}} ne retournera aucun résultat et {{CSSxRef(":link")}} est traité comme {{CSSxRef(":any-link")}}.
 
-Seuls les éléments peuvent être sélectionnés, donc les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) ne sont pas pris en charge.
+Seuls les éléments peuvent être sélectionnés, donc les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) ne sont pas pris en charge.
 
 ## Exemples
 
