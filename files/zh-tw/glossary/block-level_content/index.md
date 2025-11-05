@@ -112,4 +112,4 @@ The following is a complete list of all HTML block level elements (although "blo
 - [行內級元素](/zh-TW/docs/Glossary/Inline-level_content)
 - [Block formatting context](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{cssxref("display")}}
-- [`writing-mode`](/zh-TW/docs/Web/CSS/writing-mode)
+- [`writing-mode`](/zh-TW/docs/Web/CSS/Reference/Properties/writing-mode)

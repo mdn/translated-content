@@ -225,4 +225,4 @@ CSS の `writing-mode` プロパティを文書全体の書字方向を変更す
 {{EmbedLiveSample("display-contents")}}
 
 > [!WARNING]
-> 現在のほとんどのブラウザーの実装では、`display: contents` を持つ要素をアクセシビリティツリーから削除します（ただし、子孫は残ります）。これにより、要素自体がスクリーンリーダー技術でアナウンスされなくなります。これは仕様書によれば正しくない動作です。 [`display: contents`](/ja/docs/Web/CSS/display#display_contents) および　[`display: contents` considered harmful](https://ericwbailey.design/published/display-contents-considered-harmful/)　を参照してください。
+> 現在のほとんどのブラウザーの実装では、`display: contents` を持つ要素をアクセシビリティツリーから削除します（ただし、子孫は残ります）。これにより、要素自体がスクリーンリーダー技術でアナウンスされなくなります。これは仕様書によれば正しくない動作です。 [`display: contents`](/ja/docs/Web/CSS/Reference/Properties/display#display_contents) および　[`display: contents` considered harmful](https://ericwbailey.design/published/display-contents-considered-harmful/)　を参照してください。

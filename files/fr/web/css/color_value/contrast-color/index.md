@@ -179,7 +179,7 @@ pre {
 
 - La fonction CSS {{CSSXref("filter-function/contrast", "contrast()")}}
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
-- [Propriétés personnalisées CSS](/fr/docs/Web/CSS/--*) et {{cssxref("var")}}
+- [Propriétés personnalisées CSS](/fr/docs/Web/CSS/Reference/Properties/--*) et {{cssxref("var")}}
 - Les fonctionnalités {{cssxref("@media")}} [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast) et [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme)
 - [WCAG&nbsp;: contraste des couleurs](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Comment laisser le navigateur choisir une couleur contrastée en CSS <sup>(angl.)</sup>](https://webkit.org/blog/16929/contrast-color/) sur webkit.org (2025)

@@ -112,7 +112,7 @@ menu と menubar 内のアイテムはメニューアイテムです。メニュ
 
 [`tabindex="-1"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) により、`menuitemradio` がフォーカス可能になりますが、ページのタブシーケンスの一部にはなりません。`aria-checked="true"` を含めた場合、`menuitemradio` がチェック済みであることを示し、属性セレクター `[role='menuitemradio'][aria-checked='true']` を使用してチェック済み状態を視覚的にスタイリングします。代わりに、`aria-checked="false"` が存在すると、`menuitemradio` がチェック可能だが現在チェックされていないことが支援技術に示されます。アクセシブル名 "purple" はコンテンツから取得されます。
 
-選択された状態の視覚的外観は、チェック済みラジオボタンです。これは [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content) を使用して作成でき、CSS の [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) を使用して `aria-checked` 値と同期し、[`background-color`](/ja/docs/Web/CSS/background-color) を変更することで、表示されてコンテンツと同じ色にできます。
+選択された状態の視覚的外観は、チェック済みラジオボタンです。これは [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content) を使用して作成でき、CSS の [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors) を使用して `aria-checked` 値と同期し、[`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) を変更することで、表示されてコンテンツと同じ色にできます。
 
 ```css
 [role="menuitemradio"]::before {
@@ -132,7 +132,7 @@ menu と menubar 内のアイテムはメニューアイテムです。メニュ
 }
 ```
 
-ラジオボタン効果を作成するために使用している [`background-clip`](/ja/docs/Web/CSS/background-clip) プロパティを上書きしてしまうため、[`background`](/ja/docs/Web/CSS/background) 一括指定プロパティは使用しないでください。
+ラジオボタン効果を作成するために使用している [`background-clip`](/ja/docs/Web/CSS/Reference/Properties/background-clip) プロパティを上書きしてしまうため、[`background`](/ja/docs/Web/CSS/Reference/Properties/background) 一括指定プロパティは使用しないでください。
 
 ### 好ましい HTML
 

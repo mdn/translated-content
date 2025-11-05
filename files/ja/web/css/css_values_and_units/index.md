@@ -51,7 +51,7 @@ CSS 値と単位モジュールでは、 `calc-mix()`, `crossorigin()`, `first-v
 
 - [`<angle-percentage>`](/ja/docs/Web/CSS/angle-percentage)
 - [`<angle>`](/ja/docs/Web/CSS/angle)
-- [`<animation-timeline>`](/ja/docs/Web/CSS/animation-timeline)
+- [`<animation-timeline>`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`<attr-name>`](/ja/docs/Web/CSS/attr#attr-name)
 - [`<attr-type>`](/ja/docs/Web/CSS/attr#attr-type)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
@@ -68,7 +68,7 @@ CSS 値と単位モジュールでは、 `calc-mix()`, `crossorigin()`, `first-v
 - [`<length>`](/ja/docs/Web/CSS/length)
 - [`<number>`](/ja/docs/Web/CSS/number)
 - [`<percentage>`](/ja/docs/Web/CSS/percentage)
-- [`<position>`](/ja/docs/Web/CSS/position)
+- [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position)
 - [`<ratio>`](/ja/docs/Web/CSS/ratio)
 - [`<resolution>`](/ja/docs/Web/CSS/resolution)
 - [`<rounding-strategy>`](/ja/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)
@@ -78,7 +78,7 @@ CSS 値と単位モジュールでは、 `calc-mix()`, `crossorigin()`, `first-v
 - [`<time>`](/ja/docs/Web/CSS/time)
 - [`<url>`](/ja/docs/Web/CSS/url_value)
 - [`<url-modifier>`](/ja/docs/Web/CSS/url_function#url-modifier)
-- [`<view-timeline-name>`](/ja/docs/Web/CSS/view-timeline-name)
+- [`<view-timeline-name>`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
 
 CSS の値と単位のモジュールでは、 [`<frequency>`](/ja/docs/Web/CSS/frequency) および [`<frequency-percentage>`](/ja/docs/Web/CSS/frequency-percentage) データ型も導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
 

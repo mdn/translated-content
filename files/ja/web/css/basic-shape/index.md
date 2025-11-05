@@ -81,7 +81,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
     最初の 4 つの引数が与えられたときは、参照ボックス内部のそれぞれ上、右、下、左からみた、内部の矩形における各辺の位置を定義するオフセットを表します。これらの引数は {{cssxref("margin")}} 一括指定の構文に従い、1 つ、2 つ、3 つ、4 つの値で全四辺を設定することができます。
 
-    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
+    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
 
     内部の矩形で 2 つの距離の組み合わせが、その軸の長さを超えていた場合（たとえば左右の距離がそれぞれ 75% に設定された場合など）は、何も領域を囲まないシェイプを定義します。この仕様書によれば、これは空の浮動領域を生成します。
 
@@ -94,7 +94,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
     矩形を作成するためには 4 つの値を指定します。 4 つの値はそれぞれ `<length>` か `<percentage>` かキーワード `auto` です。 `rect()` 関数を使用する場合、矩形の幅と高さは定義しません。矩形の寸法は、参照ボックスのサイズとオフセット値に依存します。
 
-    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
+    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 CSS の [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 一括指定プロパティと同じ構文を使用して定義します。
 
 - `{{cssxref("basic-shape/xywh","xywh()")}}`
   - : 参照ボックスの上端と左端からの指定された距離と、指定された矩形の幅と高さを用いて矩形を定義します。
@@ -103,7 +103,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
     ```
 
-    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 [`border-radius`](/ja/docs/Web/CSS/border-radius) 一括指定の構文を使用して定義します。
+    オプションの `round <'border-radius'>` 引数は、内部の矩形の角の丸みを、 [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) 一括指定の構文を使用して定義します。
 
 - `{{cssxref("basic-shape/circle","circle()")}}`
   - : 半径と位置を使用して円を定義します。
@@ -170,7 +170,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 - 省略された値は既定値として含められ計算されます。
 - {{cssxref("&lt;position&gt;")}} 値が `circle()` または `ellipse()` で使用されると、それぞれを絶対的な長さやパーセント値で指定し、左上を原点とした (水平と垂直) オフセットの組として計算されます。
-- [`<border-radius>`](/ja/docs/Web/CSS/border-radius) が `inset()` で使用されると、全 8 つの {{cssxref("length")}} またはパーセント値のリストとして展開され計算されます。
+- [`<border-radius>`](/ja/docs/Web/CSS/Reference/Properties/border-radius) が `inset()` で使用されると、全 8 つの {{cssxref("length")}} またはパーセント値のリストとして展開され計算されます。
 
 ### 基本シェイプの補間
 

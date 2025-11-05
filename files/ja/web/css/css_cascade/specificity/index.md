@@ -21,15 +21,15 @@ l10n:
 ここでは、セレクターの重み分類を、詳細度の高いものから順番に並べています。
 
 - ID 列
-  - : [ID セレクター](/ja/docs/Web/CSS/ID_selectors)、例えば `#example` のみを含みます。一致するセレクターに含まれる ID ごとに、重みの値に 1-0-0 を追加します。
+  - : [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)、例えば `#example` のみを含みます。一致するセレクターに含まれる ID ごとに、重みの値に 1-0-0 を追加します。
 - CLASS 列
-  - : [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)（`.myClass` など）や、属性セレクター（`[type="radio"]` や `[lang|="fr"]` など）、擬似クラスセレクター（`:hover`, `:nth-of-type(3n)`, `:required` など）を指します。一致するセレクターのクラス、属性セレクター、擬似クラスごとに、重みの値に 0-1-0 を追加します。
+  - : [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)（`.myClass` など）や、属性セレクター（`[type="radio"]` や `[lang|="fr"]` など）、擬似クラスセレクター（`:hover`, `:nth-of-type(3n)`, `:required` など）を指します。一致するセレクターのクラス、属性セレクター、擬似クラスごとに、重みの値に 0-1-0 を追加します。
 - TYPE 列
-  - : [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)（`p`, `h1`, `td` など）、擬似要素セレクター（`::before`, `::placeholder`, それ以外のコロン 2 つの表記のセレクターすべて）を指します。一致するセレクター内での型や擬似要素ごとに、重みの値に 0-0-1 を追加します。
+  - : [要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)（`p`, `h1`, `td` など）、擬似要素セレクター（`::before`, `::placeholder`, それ以外のコロン 2 つの表記のセレクターすべて）を指します。一致するセレクター内での型や擬似要素ごとに、重みの値に 0-0-1 を追加します。
 - 値なし
   - : 全称セレクター ({{CSSxRef("Universal_selectors", "*")}}) および擬似クラス {{CSSxRef(":where", ":where()")}} とその引数は、重みの計算にはカウントされませんが、要素には一致します。全称セレクターと擬似クラスの値は 0-0-0 です。これらのセレクターは詳細度の計算に影響を与えません。
 
-結合子（{{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/ja/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）は、何を選択するのかをより具体化することができますが、詳細度の重みに値を追加することはありません。
+結合子（{{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）は、何を選択するのかをより具体化することができますが、詳細度の重みに値を追加することはありません。
 
 `&` 結合子は詳細度の重みを追加しませんが、入れ子になったルールは詳細度を追加します。詳細度および機能性の観点では、入れ子は {{CSSxRef(":is", ":is()")}} 擬似クラスとよく似ています。
 

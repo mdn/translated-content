@@ -282,7 +282,7 @@ body {
 
 {{EmbedLiveSample("scroll-padding", "", "350px")}}
 
-これは、例えばナビゲーションバーなどの[固定](/ja/docs/Web/CSS/position#fixed_positioning)要素があり、スクロールしたコンテンツと重なってしまう場合に便利です。 `scroll-padding` を使用すると、下の例のように、コンテンツがスクロールしても `<h1>` が画面上に残るように、見出しのための空間を確保することができます。パディングがないと、スナップが発生したときに見出しがコンテンツの一部と重なってしまいます。
+これは、例えばナビゲーションバーなどの[固定](/ja/docs/Web/CSS/Reference/Properties/position#fixed_positioning)要素があり、スクロールしたコンテンツと重なってしまう場合に便利です。 `scroll-padding` を使用すると、下の例のように、コンテンツがスクロールしても `<h1>` が画面上に残るように、見出しのための空間を確保することができます。パディングがないと、スナップが発生したときに見出しがコンテンツの一部と重なってしまいます。
 
 ```html hidden live-sample___scroll-padding-sticky
 <article class="scroller">

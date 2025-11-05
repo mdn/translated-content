@@ -108,10 +108,10 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 `minmax()` peut être utilisée pour les propriétés suivantes :
 
-- [grid-template-columns](/fr/docs/Web/CSS/grid-template-columns)
-- [grid-template-rows](/fr/docs/Web/CSS/grid-template-rows)
-- [grid-auto-columns](/fr/docs/Web/CSS/grid-auto-columns)
-- [grid-auto-rows](/fr/docs/Web/CSS/grid-auto-rows)
+- [grid-template-columns](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [grid-template-rows](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows)
+- [grid-auto-columns](/fr/docs/Web/CSS/Reference/Properties/grid-auto-columns)
+- [grid-auto-rows](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows)
 
 ## Exemples
 

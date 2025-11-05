@@ -338,7 +338,7 @@ textarea {
 
 #### 对提交按钮进行样式设计
 
-{{HTMLElement("button")}} 元素非常便于使用 CSS 进行样式设计；你可以随心所欲，甚至可以使用[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)进行设置：
+{{HTMLElement("button")}} 元素非常便于使用 CSS 进行样式设计；你可以随心所欲，甚至可以使用[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)进行设置：
 
 ```css
 button {

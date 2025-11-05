@@ -36,7 +36,7 @@ l10n:
 
 ### 数据类型
 
-- [`<counter>`](/zh-CN/docs/Web/CSS/content#counter)
+- [`<counter>`](/zh-CN/docs/Web/CSS/Reference/Properties/content#counter)
 - [`<counter-name>`](/zh-CN/docs/Web/CSS/counter#counter-name)
 - [`<counter-style>`](/zh-CN/docs/Web/CSS/counter#counter-style)
 

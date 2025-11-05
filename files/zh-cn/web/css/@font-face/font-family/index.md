@@ -7,7 +7,7 @@ l10n:
 
 **`font-family`** CSS 描述符为 {{cssxref("@font-face")}} At 规则中指定的字体设置字体族。
 
-该值用于在使用 [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性对元素进行样式设置时，与特定的 `@font-face` 名称进行匹配。可以使用任何名称，并且该名称会覆盖底层字体数据中指定的任何名称。
+该值用于在使用 [`font-family`](/zh-CN/docs/Web/CSS/Reference/Properties/font-family) 属性对元素进行样式设置时，与特定的 `@font-face` 名称进行匹配。可以使用任何名称，并且该名称会覆盖底层字体数据中指定的任何名称。
 
 ## 语法
 

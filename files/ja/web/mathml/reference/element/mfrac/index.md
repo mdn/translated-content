@@ -23,7 +23,7 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
   - : [スタイルシート](/ja/docs/Web/CSS) で装飾を行なう際に使われます。
 - `denomalign` {{deprecated_inline}}
   - : 分数の下に分母をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
-    この属性は、非推奨で近日中に廃止されます。代わりに CSS を用いて [`text-align`](/ja/docs/Web/CSS/text-align) を指定してください。
+    この属性は、非推奨で近日中に廃止されます。代わりに CSS を用いて [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) を指定してください。
 - `href`
   - : 特定の URI へのハイパーリンクを設定するのに使われます。
 - `linethickness`
@@ -34,7 +34,7 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
   - : 数式自体 (テキストと分数線) の色を設定するために使われます。`#rgb`、`#rrggbb` のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。
 - `numalign` {{deprecated_inline}}
   - : 分数の上に分子をどう揃えるかを指定します。取り得る値は `left`、`center` (既定値) と `right` です。
-    この属性は、非推奨で将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/text-align) を使用してください。
+    この属性は、非推奨で将来削除される予定です。代わりに CSS の [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) を使用してください。
 
 ## 例
 

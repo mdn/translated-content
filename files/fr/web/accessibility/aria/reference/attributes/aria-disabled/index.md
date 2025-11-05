@@ -31,7 +31,7 @@ Un autre cas d'usage de `aria-disabled` plutôt que l'attribut HTML `disabled` c
 <div role="button" aria-disabled="true" tabindex="-1">Modifier</div>
 ```
 
-Comme pour la désactivation fonctionnelle, il faut aussi adapter le style. Contrairement à l'attribut HTML `disabled`, qui applique les styles `:disabled` du navigateur, `aria-disabled="true"` n'applique aucun style par défaut. On peut styliser l'élément avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
+Comme pour la désactivation fonctionnelle, il faut aussi adapter le style. Contrairement à l'attribut HTML `disabled`, qui applique les styles `:disabled` du navigateur, `aria-disabled="true"` n'applique aucun style par défaut. On peut styliser l'élément avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[aria-disabled="true"]`.
 
 ```css
 [aria-disabled="true"] {
@@ -55,7 +55,7 @@ La [requête média `forced-colors`](/fr/docs/Web/CSS/@media/forced-colors) dét
 À noter&nbsp;: avec `aria-disabled`, il faut toujours prévoir le style visuel pour signaler l'état désactivé, notamment en mode contraste élevé sous Windows.
 
 > [!NOTE]
-> Si vous utilisez [`pointer-events: none;`](/fr/docs/Web/CSS/pointer-events) pour rendre un élément non cliquable, pensez à désactiver aussi l'interactivité côté JavaScript. `pointer-events: none;` bloque les clics souris, mais n'empêche pas l'activation clavier.
+> Si vous utilisez [`pointer-events: none;`](/fr/docs/Web/CSS/Reference/Properties/pointer-events) pour rendre un élément non cliquable, pensez à désactiver aussi l'interactivité côté JavaScript. `pointer-events: none;` bloque les clics souris, mais n'empêche pas l'activation clavier.
 
 ```js
 function onClick(event) {

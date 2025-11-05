@@ -3,7 +3,7 @@ title: CSS 参考
 slug: Web/CSS/Reference
 ---
 
-使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -62,37 +62,37 @@ div.menu-bar li:hover > ul {
 
 [基本选择器](/zh-CN/docs/Web/CSS/CSS_selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
 
-- [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors) `*`
-- [元素选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`（元素名称）
-- [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) `.classname`（类名）
-- [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors) `#idname`（ID 名）
-- [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[attr=value]`（属性=值）
+- [通配选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors) `*`
+- [元素选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`（元素名称）
+- [类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`（类名）
+- [ID 选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`（ID 名）
+- [属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`（属性=值）
 
 ### 分组选择器
 
-- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list) `A, B`
+- [选择器列表](/zh-CN/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
   - : 指定同时选择 `A` 和 `B` 元素。这是一种选择多个匹配元素的分组方法。
 
 ### 组合选择器
 
 组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“`A` 是 `B` 的子代”或“`A` 与 `B` 相邻”，它们构成了比较复杂的选择器。
 
-- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
+- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
   - : 指定 `A` 和 `B` 选择的元素具有相同的父元素，并且 `B` 选择的元素在水平方向上紧随 `A` 选择的元素。
-- [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+- [后续兄弟选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
   - : 指定由 `A` 和 `B` 选择的元素共享相同的父元素，并指定 `A` 选择的元素在 `B` 选择的元素之前（但不一定紧接在 `B` 之前）。
-- [子选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
+- [子选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的直接子元素。
-- [后代选择器](/zh-CN/docs/Web/CSS/Descendant_combinator) `A B`
+- [后代选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的后代，但不一定是直接子代。
-- [列选择器](/zh-CN/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
+- [列选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Column_combinator) `A || B` {{Experimental_Inline}}
   - : 指定 `B` 选择的元素在 `A` 指定的表格列中，跨越多列的元素被认为是所有这些列的成员。
 
 ### 伪类
 
-- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) `:`
+- [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
   - : 指定了所选择元素特定的状态。
-- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) `::`
+- [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`
   - : 代表不包含在 HTML 中的实体。
 
 > [!CALLOUT]
@@ -155,8 +155,8 @@ div.menu-bar li:hover > ul {
 
 ## 参见
 
-- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)（以 `-moz` 前缀）
-- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)（大多数时候以 `-webkit` 前缀）
+- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)（以 `-moz` 前缀）
+- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)（大多数时候以 `-webkit` 前缀）
 - [Microsoft CSS 扩展](/zh-CN/docs/Web/CSS/Microsoft_CSS_extensions)（以 `-ms` 前缀）
 
 ## 外部链接

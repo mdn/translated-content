@@ -126,7 +126,7 @@ span {
 いくつかのプロパティは継承されません。例えば、要素に {{cssxref("width")}} 50% と設定した場合、すべての子孫要素は親の幅の 50% の幅を取得しません。もしそんなことになるのなら CSS を使うととてもイライラするでしょう。
 
 > [!NOTE]
-> MDN の CSS プロパティリファレンスページには、「公式定義」という技術情報ボックスがあり、そのプロパティに関するいくつかのデータポイント（継承されるかどうかなど）が記載されています。例として、[color プロパティの公式定義の節](/ja/docs/Web/CSS/color#公式定義)を参照してください。
+> MDN の CSS プロパティリファレンスページには、「公式定義」という技術情報ボックスがあり、そのプロパティに関するいくつかのデータポイント（継承されるかどうかなど）が記載されています。例として、[color プロパティの公式定義の節](/ja/docs/Web/CSS/Reference/Properties/color#公式定義)を参照してください。
 
 ## これらの概念がどう連携するか理解する
 
@@ -241,7 +241,7 @@ body {
 
 ### すべてのプロパティ値のリセット
 
-CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して、これらの継承値の 1 つを（ほぼ）すべてのプロパティに一度に適用できます。その値として、いずれかの継承値（`inherit`、`initial`、`revert`、`revert-layer`、`unset` のいずれか）を指定することができます。新しく変更を開始する際、既知の開始点に戻ることができるように、変更されたスタイルを元に戻す便利な方法です。
+CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/Reference/Properties/all) を使用して、これらの継承値の 1 つを（ほぼ）すべてのプロパティに一度に適用できます。その値として、いずれかの継承値（`inherit`、`initial`、`revert`、`revert-layer`、`unset` のいずれか）を指定することができます。新しく変更を開始する際、既知の開始点に戻ることができるように、変更されたスタイルを元に戻す便利な方法です。
 
 以下の例では 2 つのブロック引用 (blockquote) 要素があります。最初のスタイルは blockquote 要素自体に適用されます。2 つ目には `all` に `unset` を設定するように blockquote に適用されるクラスがあります。
 
@@ -331,9 +331,9 @@ h2 {
 - **要素**: この列は、要素セレクターまたは擬似要素が全体のセレクターの中に含まれている場合に 1 点ずつ評価します。
 
 > [!NOTE]
-> 全称セレクター ([`*`](/ja/docs/Web/CSS/Universal_selectors))、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`、`>`、`~`、' ')、詳細度調整セレクター[`:where()`](/ja/docs/Web/CSS/:where)とその引数は、詳細度に影響しません。
+> 全称セレクター ([`*`](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors))、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`、`>`、`~`、' ')、詳細度調整セレクター[`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where)とその引数は、詳細度に影響しません。
 
-否定 ([`:not()`](/ja/docs/Web/CSS/:not))、関係セレクター ([`:has()`](/ja/docs/Web/CSS/:has))、match-any ([`:is()`](/ja/docs/Web/CSS/:is)) 擬似クラス、[CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)自身は、詳細度に影響を与えませんが、それらの引数や入れ子ルールには影響を及ぼします。それぞれが詳細度重みアルゴリズムに寄与する詳細度の重みは、最も大きな重みを持っている引数または入れ子ルールのセレクターの詳細度です。
+否定 ([`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not))、関係セレクター ([`:has()`](/ja/docs/Web/CSS/Reference/Selectors/:has))、match-any ([`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is)) 擬似クラス、[CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)自身は、詳細度に影響を与えませんが、それらの引数や入れ子ルールには影響を及ぼします。それぞれが詳細度重みアルゴリズムに寄与する詳細度の重みは、最も大きな重みを持っている引数または入れ子ルールのセレクターの詳細度です。
 
 次の表でわかりやすいいくつかの例を示します。これらを試してみて、なぜ詳細度が与えられるのかをしっかり理解してください。セレクターについてはまだ詳しく説明していませんが、MDN の [セレクターリファレンス](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)で詳細を参照することができます。
 
@@ -430,7 +430,7 @@ li {
 
 ID セレクターは高い詳細度を持っています。つまり、ID セレクターに一致するスタイルが適用されると、クラスや要素型セレクターなど、他のセレクターに基づいて適用されるスタイルが上書きされるということです。ID はページに 1 つしか存在できず、ID セレクターの詳細度が高いことから、ID ではなくクラスを要素に追加するほうが望ましいです。
 
-ID を使用することが、その要素を対象とする唯一の方法である場合、例えば、マークアップにアクセスできず、編集できない場合などには、`p[id="header"]` のように、ID を[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)内で使用することを検討してください。
+ID を使用することが、その要素を対象とする唯一の方法である場合、例えば、マークアップにアクセスできず、編集できない場合などには、`p[id="header"]` のように、ID を[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)内で使用することを検討してください。
 
 ### インラインスタイル
 

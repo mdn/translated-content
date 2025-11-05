@@ -7,7 +7,7 @@ l10n:
 
 **`<mi>`** [MathML](/zh-CN/docs/Web/MathML) 元素指示内容应渲染为**标识符**，如函数名、变量或符号常量。
 
-默认情况下，包含多个字符的 `<mi>` 元素将渲染为普通文本，而单个字符将渲染为斜体：与 [CSS `text-transform`](/zh-CN/docs/Web/CSS/text-transform) 属性值为 `math-auto` 相同的格式化行为。值为 `normal` 的 `mathvariant` 属性可用于将单个字符重置为普通字体。
+默认情况下，包含多个字符的 `<mi>` 元素将渲染为普通文本，而单个字符将渲染为斜体：与 [CSS `text-transform`](/zh-CN/docs/Web/CSS/Reference/Properties/text-transform) 属性值为 `math-auto` 相同的格式化行为。值为 `normal` 的 `mathvariant` 属性可用于将单个字符重置为普通字体。
 
 要使用特定形式的字符，如粗体/斜体、衬线体、无衬线体、手写体/书法体、等宽体、双线体等，你应该使用适当的[数学字母数字符号](https://zh.wikipedia.org/wiki/数学字母数字符号)。
 

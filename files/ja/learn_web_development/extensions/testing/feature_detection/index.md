@@ -57,7 +57,7 @@ if ("geolocation" in navigator) {
 
 JavaScriptで _[element.style.プロパティ](/ja/docs/Web/API/HTMLElement/style)_ （例 `paragraph.style.rotate`）の存在をテストすることで、 CSS 機能のテストを書くことができます。
 
-古典的な例は、ブラウザーの[サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)の対応をテストすることです。 [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns) と [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows) のサブグリッドの値として `subgrid` に対応しているブラウザーの場合、レイアウトでサブグリッドを使用することができます。そうでないブラウザーでは、通常のグリッドを使用することができて、動作はうまくいきますが、見た目はあまりよくありません。
+古典的な例は、ブラウザーの[サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)の対応をテストすることです。 [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns) と [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows) のサブグリッドの値として `subgrid` に対応しているブラウザーの場合、レイアウトでサブグリッドを使用することができます。そうでないブラウザーでは、通常のグリッドを使用することができて、動作はうまくいきますが、見た目はあまりよくありません。
 
 この例を用いると、値が対応している場合はサブグリッドのスタイルシートを、対応していない場合は通常のグリッドのスタイルシートを含めることができます。そのためには、 HTML ファイルの見出しに 2 つのスタイルシートを含めることができます。 1 つはすべてのスタイル設定、もう 1 つはサブグリッドに対応していない場合の既定レイアウトを実装するものです。
 

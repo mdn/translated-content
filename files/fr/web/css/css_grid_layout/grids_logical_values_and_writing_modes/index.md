@@ -30,13 +30,13 @@ CSS possède de nombreux mots-clés qui permettent de positionner **physiquement
 </div>
 ```
 
-On rencontre également ces mots-clés physiques avec `text-align: right` afin d'aligner le texte à droite. Il existe aussi des propriétés **physiques** en CSS. On ajoute des marges, du remplissage, des bordures grâces à cs propriétés physiques comme [`margin-left`](/fr/docs/Web/CSS/margin-left), [`padding-left`](/fr/docs/Web/CSS/padding-left), etc.
+On rencontre également ces mots-clés physiques avec `text-align: right` afin d'aligner le texte à droite. Il existe aussi des propriétés **physiques** en CSS. On ajoute des marges, du remplissage, des bordures grâces à cs propriétés physiques comme [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left), [`padding-left`](/fr/docs/Web/CSS/Reference/Properties/padding-left), etc.
 
 On qualifie ces propriétés de physiques, car elles concernent l'écran qu'on regarde&nbsp;: la gauche sera toujours la gauche, quelle que soit la direction du texte.
 
 ### Les problèmes des propriétés physiques
 
-Cela peut devenir un problème lorsqu'on développe un site qui doit fonctionner avec plusieurs langues dont certaines sont écrites de droite à gauche et non de gauche à droite. Les navigateurs savent plutôt bien gérer les différentes directions d'écriture. Dans l'exemple qui suit, on a deux paragraphes. Pour le deuxième, aucune propriété [`text-align`](/fr/docs/Web/CSS/text-align) n'est utilisée, alors que pour le second, on utilise `text-align` avec `left` et on ajoute `dir="rtl"` sur l'élément HTML ce qui a pour effet de changer la direction d'écriture. On peut voir que, dans le second paragraphe, la direction change et le texte est écrit de droite à gauche. Dans le premier cependant, avec `text-align value: left`, l'alignement reste à gauche.
+Cela peut devenir un problème lorsqu'on développe un site qui doit fonctionner avec plusieurs langues dont certaines sont écrites de droite à gauche et non de gauche à droite. Les navigateurs savent plutôt bien gérer les différentes directions d'écriture. Dans l'exemple qui suit, on a deux paragraphes. Pour le deuxième, aucune propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) n'est utilisée, alors que pour le second, on utilise `text-align` avec `left` et on ajoute `dir="rtl"` sur l'élément HTML ce qui a pour effet de changer la direction d'écriture. On peut voir que, dans le second paragraphe, la direction change et le texte est écrit de droite à gauche. Dans le premier cependant, avec `text-align value: left`, l'alignement reste à gauche.
 
 ```html hidden
 <p class="left">
@@ -85,11 +85,11 @@ Lorsqu'on commence à travailler avec les propriétés logiques plutôt qu'avec 
 
 ## Les modes d'écriture CSS
 
-Nous allons ici aborder une autre spécification que nous allons utiliser dans nos exemples&nbsp;: la spécification CSS sur les modes d'écriture (<i lang="en">CSS Writing Modes</i>). Cette spécification régit comment les différents modes d'écriture peuvent être utilisés en CSS, pas seulement pour prendre en charge différentes langues mais aussi pour créer des effets artistiques. Nous allons utiliser la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) afin de modifier le mode d'écriture appliqué à la grille pour observer comment fonctionnent les valeurs logiques. Si vous souhaitez approfondir ces notions autour des modes d'écriture, vous pouvez consulter [l'article <i lang="en">CSS Writing Modes</i> (en anglais), écrit par Jen Simmons](https://24ways.org/2016/css-writing-modes/).
+Nous allons ici aborder une autre spécification que nous allons utiliser dans nos exemples&nbsp;: la spécification CSS sur les modes d'écriture (<i lang="en">CSS Writing Modes</i>). Cette spécification régit comment les différents modes d'écriture peuvent être utilisés en CSS, pas seulement pour prendre en charge différentes langues mais aussi pour créer des effets artistiques. Nous allons utiliser la propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) afin de modifier le mode d'écriture appliqué à la grille pour observer comment fonctionnent les valeurs logiques. Si vous souhaitez approfondir ces notions autour des modes d'écriture, vous pouvez consulter [l'article <i lang="en">CSS Writing Modes</i> (en anglais), écrit par Jen Simmons](https://24ways.org/2016/css-writing-modes/).
 
 ### `writing-mode`
 
-Les modes d'écriture ne se limitent pas à l'écriture de droite à gauche ou de gauche à droite, la propriété `writing-mode` nous permet d'afficher du texte dans plusieurs directions. La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) peut prendre les valeurs suivantes&nbsp;:
+Les modes d'écriture ne se limitent pas à l'écriture de droite à gauche ou de gauche à droite, la propriété `writing-mode` nous permet d'afficher du texte dans plusieurs directions. La propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) peut prendre les valeurs suivantes&nbsp;:
 
 - `horizontal-tb`
 - `vertical-rl`
@@ -352,7 +352,7 @@ Dans l'exemple suivant, on a une grille avec la direction `ltr` et on positionne
 
 ### Placement sur les lignes pour du texte de droite à gauche
 
-Si on ajoute alors la propriété [`direction`](/fr/docs/Web/CSS/direction) avec la valeur `rtl` pour le conteneur de la grille, la colonne 1 sera la plus à droite et la colonne -1 sera à gauche.
+Si on ajoute alors la propriété [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) avec la valeur `rtl` pour le conteneur de la grille, la colonne 1 sera la plus à droite et la colonne -1 sera à gauche.
 
 ```css hidden
 * {
@@ -408,7 +408,7 @@ On voit ici que si on change la direction du texte pour la page ou pour une part
 
 ### L'étrange ordre des valeurs pour `grid-area`
 
-La propriété [`grid-area`](/fr/docs/Web/CSS/grid-area) permet d'indiquer les quatre lignes qui définissent une zone. Lorsqu'on apprend à utiliser cette propriété, on se surprend à voir que les quatre valeurs ne suivent pas le même ordre que celui utilisé par les propriétés raccourcies pour les marges (pour celles-ci, les valeurs suivent le sens horaire&nbsp;: haut, droit, bas, gauche).
+La propriété [`grid-area`](/fr/docs/Web/CSS/Reference/Properties/grid-area) permet d'indiquer les quatre lignes qui définissent une zone. Lorsqu'on apprend à utiliser cette propriété, on se surprend à voir que les quatre valeurs ne suivent pas le même ordre que celui utilisé par les propriétés raccourcies pour les marges (pour celles-ci, les valeurs suivent le sens horaire&nbsp;: haut, droit, bas, gauche).
 
 Pour les valeurs de `grid-area`, l'ordre est le suivant&nbsp;:
 
@@ -498,4 +498,4 @@ Si on utilise le positionnement absolu dans une zone d'une grille, là encore, o
 
 Les nouvelles méthodes de disposition, comme les grilles, permettent d'employer les valeurs logiques afin de placer les éléments. Cependant, dès qu'on combine ces valeurs avec des propriétés physiques, il faut maintenir ces dernières lorsque le mode d'écriture change.
 
-La [spécification sur les propriétés logiques en CSS](https://drafts.csswg.org/css-logical-props/) vise à résoudre ce problème en fournissant [des équivalents logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values) pour chacune des propriétés physiques telles que [`margin-left`](/fr/docs/Web/CSS/margin-left) et [`margin-right`](/fr/docs/Web/CSS/margin-right). Ces propriétés et valeurs sont bien prises en charge par les navigateurs récents. En utilisant les grilles et en manipulant l'axe de bloc et l'axe de ligne, cela vous aidera à comprendre le fonctionnement de ces propriétés logiques.
+La [spécification sur les propriétés logiques en CSS](https://drafts.csswg.org/css-logical-props/) vise à résoudre ce problème en fournissant [des équivalents logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values) pour chacune des propriétés physiques telles que [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) et [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right). Ces propriétés et valeurs sont bien prises en charge par les navigateurs récents. En utilisant les grilles et en manipulant l'axe de bloc et l'axe de ligne, cela vous aidera à comprendre le fonctionnement de ces propriétés logiques.

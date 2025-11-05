@@ -204,7 +204,7 @@ Si on essaie de soumettre le formulaire avec une date incomplète (ou en dehors 
 
 {{EmbedLiveSample('', 600, 100)}}
 
-Voici la feuille de style utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme un indicateur selon que la valeur est valide ou non. On place cet indicateur dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) séparé car pour Chrome, le contenu généré dans les pseudo-classes est intégré dans le contrôle du formulaire et ne peut être mis en forme ou affiché correctement.
+Voici la feuille de style utilisée pour l'exemple. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) afin de mettre en forme un indicateur selon que la valeur est valide ou non. On place cet indicateur dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) séparé car pour Chrome, le contenu généré dans les pseudo-classes est intégré dans le contrôle du formulaire et ne peut être mis en forme ou affiché correctement.
 
 ```css
 label {

@@ -110,7 +110,7 @@ input:optional {
 
 在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)的用法，现在是一个更详细地谈论它的好时机。
 
-我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
+我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/Reference/Selectors/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/Reference/Selectors/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
 
 当你想给一个元素添加一个视觉指示器，比如一个标签或图标，但又不想让它被辅助技术发现时，这就非常有用。例如，在我们的[自定义单选按钮示例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)中，我们使用生成的内容来处理单选按钮被选中时内圈的位置和动画：
 
@@ -516,7 +516,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-基本上，我们使用 `::before` 伪元素建立了单选按钮“内圈”的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/transition) 来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/width)/[`height`](/zh-CN/docs/Web/CSS/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
+基本上，我们使用 `::before` 伪元素建立了单选按钮“内圈”的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/Reference/Properties/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/Reference/Properties/transition) 来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width)/[`height`](/zh-CN/docs/Web/CSS/Reference/Properties/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/Reference/Properties/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
 
 ### :default 和 :indeterminate
 

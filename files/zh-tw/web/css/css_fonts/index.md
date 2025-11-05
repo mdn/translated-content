@@ -84,7 +84,7 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 `font-feature-settings`：
 
-- [`<feature-tag-value>`](/zh-TW/docs/Web/CSS/font-feature-settings#值)
+- [`<feature-tag-value>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-feature-settings#值)
 
 `font-format`：
 
@@ -92,7 +92,7 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 `font-stretch`：
 
-- [`<font-stretch-css3>`](/zh-TW/docs/Web/CSS/font-stretch#值)
+- [`<font-stretch-css3>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-stretch#值)
 
 `font-tech`：
 
@@ -102,26 +102,26 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 `font-variant`：
 
-- [`<font-variant-css2>`](/zh-TW/docs/Web/CSS/font-variant)
-- [`<east-asian-variant-values>`](/zh-TW/docs/Web/CSS/font-variant#值)
-- [`<east-asian-width-values>`](/zh-TW/docs/Web/CSS/font-variant#值)
+- [`<font-variant-css2>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant)
+- [`<east-asian-variant-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant#值)
+- [`<east-asian-width-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant#值)
 
 `font-variant-ligatures`：
 
-- [`<common-lig-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#值)
-- [`<contextual-alt-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#值)
-- [`<discretionary-lig-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#值)
-- [`<historical-lig-values>`](/zh-TW/docs/Web/CSS/font-variant-ligatures#值)
+- [`<common-lig-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-ligatures#值)
+- [`<contextual-alt-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-ligatures#值)
+- [`<discretionary-lig-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-ligatures#值)
+- [`<historical-lig-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-ligatures#值)
 
 `font-variant-numeric`：
 
-- [`<numeric-figure-values>`](/zh-TW/docs/Web/CSS/font-variant-numeric#值)
-- [`<numeric-fraction-values>`](/zh-TW/docs/Web/CSS/font-variant-numeric#值)
-- [`<numeric-spacing-values>`](/zh-TW/docs/Web/CSS/font-variant-numeric#值)
+- [`<numeric-figure-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-numeric#值)
+- [`<numeric-fraction-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-numeric#值)
+- [`<numeric-spacing-values>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-variant-numeric#值)
 
 `font-weight`：
 
-- [`<font-weight-absolute>`](/zh-TW/docs/Web/CSS/font-weight#值)
+- [`<font-weight-absolute>`](/zh-TW/docs/Web/CSS/Reference/Properties/font-weight#值)
 
 ### 介面
 

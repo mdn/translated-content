@@ -23,7 +23,7 @@ revert は、リセットした要素の子に適用されているルールに�
 > [!NOTE]
 > `revert` キーワードは {{cssxref("initial")}} キーワードとは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
 >
-> 例えば、 [`display`](/ja/docs/Web/CSS/display#公式定義) プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
+> 例えば、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#公式定義) プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
 
 ## 例
 
@@ -31,7 +31,7 @@ revert は、リセットした要素の子に適用されているルールに�
 
 `revert` と `unset` は似ていますが、一部の要素、一部のプロパティでは異なります。
 
-以下の例では、グローバルスタイルシートで独自の [`font-weight`](/ja/docs/Web/CSS/font-weight#公式定義) を設定していますが、 HTML 文書のインラインで `revert` および `unset` を適用しようとしています。 `revert` キーワードはテキストを太字に戻します。これはほとんどのブラウザーで見出しの既定値だからです。 `unset` キーワードは、継承されたプロパティとして、 `font-weight` の値を本体から継承するため、テキストを通常のままにします。
+以下の例では、グローバルスタイルシートで独自の [`font-weight`](/ja/docs/Web/CSS/Reference/Properties/font-weight#公式定義) を設定していますが、 HTML 文書のインラインで `revert` および `unset` を適用しようとしています。 `revert` キーワードはテキストを太字に戻します。これはほとんどのブラウザーで見出しの既定値だからです。 `unset` キーワードは、継承されたプロパティとして、 `font-weight` の値を本体から継承するため、テキストを通常のままにします。
 
 #### HTML
 

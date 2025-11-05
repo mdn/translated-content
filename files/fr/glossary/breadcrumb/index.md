@@ -18,7 +18,7 @@ Les fils d'Ariane permettent aux utilisateur·ice·s de connaître leur emplacem
 
 ## Voir aussi
 
-- [Navigation en fil d'Ariane](/fr/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [Navigation en fil d'Ariane](/fr/docs/Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation)
 - [Google Search Central&nbsp;: Données structurées de fil d'Ariane](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb?hl=fr)
 - [Guide APG&nbsp;: Exemple de fil d'Ariane <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)
 - [Comprendre le critère de succès 2.4.8&nbsp;| W3C Comprendre WCAG 2.2 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/location)

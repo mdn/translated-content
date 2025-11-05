@@ -282,8 +282,9 @@ slug: Web/HTML/Guides/Constraint_validation
 
 Вызов метода `checkValidity()` называется _статической_ валидацией ограничений, а вызов метода `reportValidity()` или отправка формы называется _интерактивной_ валидацией ограничений.
 
-> **Примечание:**- Если элементу {{ HTMLElement("form") }} задан атрибут [`novalidate`](/ru/docs/Web/HTML/Reference/Elements/form#novalidate), интерактивная валидация ограничений не произойдёт.
+> [!NOTE]
 >
+> - Если элементу {{ HTMLElement("form") }} задан атрибут [`novalidate`](/ru/docs/Web/HTML/Reference/Elements/form#novalidate), интерактивная валидация ограничений не произойдёт.
 > - Вызов метода `submit()` интерфейса [`HTMLFormElement`](/ru/docs/Web/API/HTMLFormElement) не запускает валидацию ограничений. Другими словами, этот метод отправляет данные формы на сервер, даже если ограничения нарушены. Вместо него вызовите метод `click()` кнопки отправки формы.
 
 ## Сложные ограничения с помощью Constraint Validation API

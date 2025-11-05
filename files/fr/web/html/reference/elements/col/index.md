@@ -154,14 +154,14 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
     > [!NOTE]
     >
     > - Pour obtenir le même effet que les valeurs `left`, `center`, `right` ou `justify` :
-    >   - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
+    >   - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
     >   - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)`. Définissez `a` à zéro et `b` à la position de la colonne dans le tableau, par exemple `td:nth-child(2) { text-align : right ; }` pour aligner à droite la deuxième colonne.
     >   - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
 - **`bgcolor`** {{deprecated_inline}}
   - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/color_value#rgb_colors), préfixé par un « `#` ». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/color_value#color_keywords) prédéfinis peut également être utilisé.
 
-    Pour obtenir un effet similaire, utilisez la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    Pour obtenir un effet similaire, utilisez la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 
 - **`char`** {{deprecated_inline}}
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs typiques de cet attribut incluent un point (.) lorsqu'on tente d'aligner des nombres ou des valeurs monétaires. Si [`align`](#attr-align) n'est pas défini sur `char`, cet attribut est ignoré.
@@ -176,7 +176,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
     > [!NOTE]
     >
-    > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
+    > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
     > - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)` où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `vertical-align` peut être utilisée.
     > - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
@@ -198,6 +198,6 @@ Veuillez consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/tabl
 ## Voir aussi
 
 - Les propriétés et pseudo-classes CSS qui peuvent être spécialement utiles pour mettre en forme l'élément `<col>` :
-  - la propriété [`width`](/fr/docs/Web/CSS/width) pour contrôler la largeur de la colonne ;
-  - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour définir l'alignement des cellules de la colonne ;
-  - la propriété [`text-align`](/fr/docs/Web/CSS/text-align) pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».
+  - la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) pour contrôler la largeur de la colonne ;
+  - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) pour définir l'alignement des cellules de la colonne ;
+  - la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».

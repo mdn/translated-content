@@ -109,7 +109,7 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 > CSS アンカー位置指定では、位置指定要素の既定の位置がビューポートをあふれる場合に備えた、代替位置を指定する仕組みも同時に提供しています。詳細は[代替オプションと条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイドを参照してください。
 
 > [!NOTE]
-> 関連付けと位置指定が動作するには、アンカー要素は可視の DOM ノードでなければなりません。 もし非表示（例えば [`display: none`](/ja/docs/Web/CSS/display#none)）になっている場合、位置指定された要素は、最も近い位置指定祖先要素を基準として位置指定されます。 アンカーが消えた際に、アンカーで位置指定された要素を非表示にする方法については、[`position-visibility` を使用した条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)で説明しています。
+> 関連付けと位置指定が動作するには、アンカー要素は可視の DOM ノードでなければなりません。 もし非表示（例えば [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display#none)）になっている場合、位置指定された要素は、最も近い位置指定祖先要素を基準として位置指定されます。 アンカーが消えた際に、アンカーで位置指定された要素を非表示にする方法については、[`position-visibility` を使用した条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditionally_hiding_anchor-positioned_elements)で説明しています。
 
 ### インセットプロパティで `anchor()` 関数値を使用
 
@@ -124,7 +124,7 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の標準外の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
+  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されたアンカー、または、HTML の標準外の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
     > [!NOTE]
     > `<anchor-name>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-name>` 値](/ja/docs/Web/CSS/anchor#複数のアンカーに相対的な要素の位置指定)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
@@ -535,7 +535,7 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 ```
 
 - `<anchor-name>`
-  - : 相対指定するアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値として設定する `<dashed-ident>` の名前。省略した場合は、その要素の既定のアンカー（[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されているアンカー）が使用されます。
+  - : 相対指定するアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値として設定する `<dashed-ident>` の名前。省略した場合は、その要素の既定のアンカー（[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されているアンカー）が使用されます。
 - [`<anchor-size>`](/ja/docs/Web/CSS/anchor-size#anchor-size)
   - : 位置指定された要素のサイズが相対となるアンカー要素の寸法を指定します。 物理的な値（`width` または `height`）または論理的な値（`inline`, `block`, `self-inline`, `self-block`）を使用して表現することができます。
 - {{cssxref("length-percentage")}}
@@ -663,7 +663,7 @@ left: anchor-size(width);
 inset-inline-end: anchor-size(--my-anchor height, 100px);
 ```
 
-これは、 [`anchor()`](/ja/docs/Web/CSS/anchor) 関数や {{cssxref("position-area")}} プロパティのように要素をアンカーの位置に対して相対的に配置するものではありません（以上、[要素をアンカーに対して相対的に配置する](#要素をアンカーに対して相対的に配置)を参照）。 アンカー要素の位置が変わっても、この要素の位置は変わりません。代わりに、この要素は絶対位置指定 ([`absolute`](/ja/docs/Web/CSS/position#absolute)) または固定位置指定 ([`fixed`](/ja/docs/Web/CSS/position#fixed)) の通常のルールに従って位置指定されます。
+これは、 [`anchor()`](/ja/docs/Web/CSS/anchor) 関数や {{cssxref("position-area")}} プロパティのように要素をアンカーの位置に対して相対的に配置するものではありません（以上、[要素をアンカーに対して相対的に配置する](#要素をアンカーに対して相対的に配置)を参照）。 アンカー要素の位置が変わっても、この要素の位置は変わりません。代わりに、この要素は絶対位置指定 ([`absolute`](/ja/docs/Web/CSS/Reference/Properties/position#absolute)) または固定位置指定 ([`fixed`](/ja/docs/Web/CSS/Reference/Properties/position#fixed)) の通常のルールに従って位置指定されます。
 
 これは状況によっては有用です。例えば、アンカー要素が垂直方向にしか移動できず、常に最も近い位置指定親要素の水平方向の端に隣接して配置される場合、`left: anchor-size(width)` を使用することで、アンカーの幅が変化してもアンカー配置要素が常にアンカーの適切な側に配置されるようにできます。
 

@@ -25,7 +25,7 @@ clip-path: rect(50px 70px 80% 20%);
   - : この値が用いられる辺を、包含ブロックの対応する辺と一致させます。最初の値（上）または4番目の値（左）に `auto` が使用された場合、 `auto` の値は `0` となり、 2 つ目（右）または 3 つ目（下）に使用された場合、 `auto` の値は `100%` となります。
 
 - `round <'border-radius'>`
-  - : CSS は [`border-radius`](/ja/docs/Web/CSS/border-radius) の一括指定プロパティと同じ構文を用いて、矩形の角の丸みの半径を指定します。この引数はオプションです。
+  - : CSS は [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) の一括指定プロパティと同じ構文を用いて、矩形の角の丸みの半径を指定します。この引数はオプションです。
 
 ## 例
 

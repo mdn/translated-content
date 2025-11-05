@@ -42,7 +42,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 - L'élément HTML5 [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress), qui vous permet de créer une barre de progression, est maintenant supporté.
 - L'analyse syntaxique de l'élément HTML5 [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track), qui spécifie les pistes de texte pour les éléments multimédias, est désormais supporté. Cet élément devrait apparaître dans les DOM, si son comportement n'est pas encore implémenté.
-- L'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) est désormais correctement coupé par son conteneur lorsque les coins du conteneur ont été arrondis à l'aide de la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius).
+- L'élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) est désormais correctement coupé par son conteneur lorsque les coins du conteneur ont été arrondis à l'aide de la propriété [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius).
 - Les champs [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) des éléments [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) ne sont plus supportés par la propriété XUL [`maxwidth`](/fr/docs/XUL/Propriétés/maxwidth), cela n'a jamais été volontaire, et est contraire à la spécification HTML. Vous devriez plutôt utiliser l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#attr-size) pour définir la largeur maximum de champs de saisie.
 - Les propriétés `fillStyle` et `strokeStyle` de [`CanvasRenderingContext2d`](/fr/docs/Web/API/CanvasRenderingContext2D) ([`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)) utilisées pour ignorer les déchets inclus après la définition d'une couleur valide, maintenant c'est traité comme une erreur. Par exemple, "rouge bleu" est une couleur utilisée pour être traitée comme du "rouge", alors qu'elle aurait dû être ignorée.
 - La largeur et la hauteur des éléments [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) peuvent être correctement mis à 0px ; avant, lorsque vous essayez de le faire, elles se fixaient à 300px.
@@ -51,26 +51,26 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 ### CSS
 
-- [`-moz-text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color)
+- [`-moz-text-decoration-color`](/fr/docs/Web/CSS/Reference/Properties/text-decoration-color)
   - : Cette nouvelle propriété vous permet de définir la couleur utilisée par les décorations du texte, comme le soulignement, le surlignement et le texte barré.
-- [`-moz-text-decoration-line`](/fr/docs/Web/CSS/text-decoration-line)
+- [`-moz-text-decoration-line`](/fr/docs/Web/CSS/Reference/Properties/text-decoration-line)
   - : Cette nouvelle propriété vous permet de définir le type de décorations du texte ajoutée à un élément.
-- [`-moz-text-decoration-style`](/fr/docs/Web/CSS/text-decoration-style)
+- [`-moz-text-decoration-style`](/fr/docs/Web/CSS/Reference/Properties/text-decoration-style)
   - : Cette nouvelle propriété vous permet de définir le style de décorations du texte, comme le soulignement, le surlignement et le texte barré. Les styles incluent les simples lignes, les lignes doubles, les lignes ondulées, les lignes pointillées, etc.
-- [`-moz-hyphens`](/fr/docs/Web/CSS/hyphens)
+- [`-moz-hyphens`](/fr/docs/Web/CSS/Reference/Properties/hyphens)
   - : Cette nouvelle propriété vous permet de contrôler la façon dont la césure des mots lors de retours à la ligne est gérée.
-- [`-moz-orient`](/fr/docs/Web/CSS/-moz-orient)
+- [`-moz-orient`](/fr/docs/Web/CSS/Reference/Properties/-moz-orient)
   - : Une nouvelle propriété (pour l'instant spécifique à Mozilla) qui vous permet de contrôler l'orientation verticale ou horizontale de certains éléments (en particulier [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress)).
-- [`::-moz-progress-bar`](/fr/docs/Web/CSS/::-moz-progress-bar)
+- [`::-moz-progress-bar`](/fr/docs/Web/CSS/Reference/Selectors/::-moz-progress-bar)
   - : Un pseudo-élément spécifique à Mozilla qui vous permet de définir le style de la zone d'un élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) représentant la fraction d'une tâche.
 
 #### Autres changements
 
 - La propriété [`@-moz-document`](/fr/docs/Web/CSS/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
 - La propriété CSS [`azimuth`](/fr/docs/Web/CSS/azimuth) n'est plus supportée, comme nous avons enlevé le peu de code que nous avions pour le groupe média `aural`. Il n'a jamais été implémenté de manière significative, donc il était plus logique de supprimer cette implémentation crufty pour le moment, au lieu d'essayer de le rafistoler.
-- Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
-- La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
-- La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
+- Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
+- La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/Reference/Selectors/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
+- La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
 - Le [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) change la façon dont le symbole dièse (#) est traité dans les données URI qui peut briser les feuilles de style CSS qui contiennent un tel symbole.
 
 ### DOM

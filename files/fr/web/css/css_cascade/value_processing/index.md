@@ -161,7 +161,7 @@ La **valeur initiale** d'une propriété est la valeur par défaut indiquée dan
 Vous pouvez définir explicitement la valeur initiale en utilisant le mot-clé {{cssxref("initial")}}.
 
 > [!NOTE]
-> La valeur initiale se trouve dans la section de définition formelle de la page de référence de chaque propriété CSS. Par exemple, la [valeur initiale de `font-size` est `medium`](/fr/docs/Web/CSS/font-size#définition_formelle). La valeur initiale ne doit pas être confondue avec la valeur définie par la feuille de style de l'agent utilisateur.
+> La valeur initiale se trouve dans la section de définition formelle de la page de référence de chaque propriété CSS. Par exemple, la [valeur initiale de `font-size` est `medium`](/fr/docs/Web/CSS/Reference/Properties/font-size#définition_formelle). La valeur initiale ne doit pas être confondue avec la valeur définie par la feuille de style de l'agent utilisateur.
 
 ### Valeur calculée
 

@@ -7,7 +7,7 @@ l10n:
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、値が変化する割合を記述する数学的な関数を表します。
 
-この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。イージング関数は、CSS の [transition](/ja/docs/Web/CSS/transition-timing-function) および [animation](/ja/docs/Web/CSS/animation-timing-function) プロパティで指定することができます。
+この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。イージング関数は、CSS の [transition](/ja/docs/Web/CSS/Reference/Properties/transition-timing-function) および [animation](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function) プロパティで指定することができます。
 
 ## 構文
 

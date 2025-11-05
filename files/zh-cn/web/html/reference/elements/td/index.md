@@ -91,7 +91,7 @@ caption {
 以下属性已被弃用，不应再使用。下文记录了这些属性，供更新现有代码时参考，也仅供参考。
 
 - `abbr` {{deprecated_inline}}
-  - : 包含对数据单元格内容的简短描述。某些用户代理（如语音阅读器）可能会在内容本身之前显示该描述。将简短内容放在单元格内，并将较长的描述放在 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性中，因为该属性已被弃用。或者，最好将内容包含在数据单元格中，并使用 CSS 来[可视化地截断溢出的文本](/zh-CN/docs/Web/CSS/text-overflow)。
+  - : 包含对数据单元格内容的简短描述。某些用户代理（如语音阅读器）可能会在内容本身之前显示该描述。将简短内容放在单元格内，并将较长的描述放在 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性中，因为该属性已被弃用。或者，最好将内容包含在数据单元格中，并使用 CSS 来[可视化地截断溢出的文本](/zh-CN/docs/Web/CSS/Reference/Properties/text-overflow)。
 
 - `align` {{deprecated_inline}}
   - : 指定数据单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值包括 `left`、`center`、`right`、`justify` 和 "char"。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请使用 {{cssxref("text-align")}} CSS 属性代替，因为该属性已被弃用。
@@ -172,7 +172,7 @@ caption {
 
 #### CSS
 
-表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
+表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
 
 ```css
 td,

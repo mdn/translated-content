@@ -229,7 +229,7 @@ body:has([value="content-box"]:checked) {
 
 {{ EmbedLiveSample('シェイプの原点', 230, 420) }}
 
-その他の例は、 [`clip-path` のシェイプと形状ボックス](/ja/docs/Web/CSS/clip-path#シェイプと形状ボックス)を参照してください。
+その他の例は、 [`clip-path` のシェイプと形状ボックス](/ja/docs/Web/CSS/Reference/Properties/clip-path#シェイプと形状ボックス)を参照してください。
 
 `clip-path: margin-box` のような値も同様に有用です。クリップパスの縁をマージンボックスの縁に配置して創造的なビジュアルを作成できるほか、 `clip-path` の計算値が `none` 以外である場合、 CSS の `opacity` が `1` 以外の値であった場合と同じように、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作成します。
 

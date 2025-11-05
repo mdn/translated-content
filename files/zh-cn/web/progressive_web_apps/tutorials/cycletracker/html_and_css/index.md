@@ -239,7 +239,7 @@ li:nth-of-type(even) {
 
 我们使用 {{CSSXref("background-color")}} 属性在 `body` 上设置了浅绿色（`#efe`）的背景颜色。然后在无序列表、fieldset 和 legend 上，我们使用白色（`#fff`）作为背景颜色，并使用 {{CSSXref("border")}} 属性添加细实线边框。我们覆盖 legend 的 `background-color`，使 legend 和列表项变成深绿色（`#cfc`）。
 
-我们使用 [`:nth-of-type(even)`](/zh-CN/docs/Web/CSS/:nth-of-type) 伪类[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)将每个偶数列表项设置为 {{CSSXref("inherit")}} 其父元素的背景颜色；在这种情况下，继承来自无序列表的 `#fff` 背景颜色。
+我们使用 [`:nth-of-type(even)`](/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-of-type) 伪类[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)将每个偶数列表项设置为 {{CSSXref("inherit")}} 其父元素的背景颜色；在这种情况下，继承来自无序列表的 `#fff` 背景颜色。
 
 ```css
 body {

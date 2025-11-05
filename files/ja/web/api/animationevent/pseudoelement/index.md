@@ -8,12 +8,12 @@ l10n:
 
 {{APIRef("Web Animations")}}
 
-**`AnimationEvent.pseudoElement`** は読み取り専用のプロパティです。`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を示します。
+**`AnimationEvent.pseudoElement`** は読み取り専用のプロパティです。`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前を示します。
 このアニメーションが擬似要素ではなく、要素上で動作している場合は、空文字列 `''` になります。
 
 ## 値
 
-`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の名前を示します。
+`'::'` で始まる文字列で、このアニメーションが実行される[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の名前を示します。
 
 ## 仕様書
 
