@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::placeholder", "tabbed-shorter")}}
 

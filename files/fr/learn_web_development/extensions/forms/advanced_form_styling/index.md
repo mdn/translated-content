@@ -196,7 +196,7 @@ input[type="checkbox"] {
 }
 ```
 
-Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/:checked) et [`:disabled`](/fr/docs/Web/CSS/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
+Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/Reference/Selectors/:checked) et [`:disabled`](/fr/docs/Web/CSS/Reference/Selectors/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
 
 ```css
 input[type="checkbox"] {
@@ -386,7 +386,7 @@ select {
 }
 ```
 
-Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/::before)/[`::after`](/fr/docs/Web/CSS/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
+Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/fr/docs/Web/CSS/Reference/Selectors/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
 
 ```html
 <div class="select-wrapper">

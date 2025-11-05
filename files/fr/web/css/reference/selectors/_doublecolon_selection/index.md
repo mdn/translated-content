@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::selection`** permet d'appliquer des règles CSS à une portion du document qui a été sélectionnée par l'utilisateur·ice (par exemple en cliquant et en faisant glisser la souris sur le texte).
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::selection`** permet d'appliquer des règles CSS à une portion du document qui a été sélectionnée par l'utilisateur·ice (par exemple en cliquant et en faisant glisser la souris sur le texte).
 
-Le pseudo-élément `::selection` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
+Le pseudo-élément `::selection` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::selection", "tabbed-shorter")}}
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
 
 > [!NOTE]
 > Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258](https://github.com/w3c/csswg-drafts/issues/3258).
@@ -66,11 +66,11 @@ ol {
 
 ### Paramètres
 
-La pseudo-classe `:is()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
+La pseudo-classe `:is()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
 
 ### Différence entre `:is()` et `:where()`
 
-Contrairement à [`:where()`](/fr/docs/Web/CSS/:where) dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique)). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/:where#examples).
+Contrairement à [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique)). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where#examples).
 
 ### Analyse permissive de la liste des sélecteurs
 
@@ -270,5 +270,5 @@ un-element::after {
 ## Voir aussi
 
 - {{CSSxRef(":where", ":where()")}}&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) qui vaut 0.
-- [Liste de sélecteurs](/fr/docs/Web/CSS/Selector_list)
+- [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

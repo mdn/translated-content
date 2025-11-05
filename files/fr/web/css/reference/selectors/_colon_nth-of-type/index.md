@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :nth-of-type", "tabbed-shorter")}}
 
@@ -50,7 +50,7 @@ dd:nth-of-type(even) {
 
 La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
 
-Voir [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour une explication plus détaillée de sa syntaxe.
+Voir [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) pour une explication plus détaillée de sa syntaxe.
 
 ## Exemples
 
@@ -108,5 +108,5 @@ p.fancy:nth-of-type(2n + 1) {
 
 ## Voir aussi
 
-- [`:nth-child`](/fr/docs/Web/CSS/:nth-child)
-- [`:nth-last-of-type`](/fr/docs/Web/CSS/:nth-last-of-type)
+- [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child)
+- [`:nth-last-of-type`](/fr/docs/Web/CSS/Reference/Selectors/:nth-last-of-type)

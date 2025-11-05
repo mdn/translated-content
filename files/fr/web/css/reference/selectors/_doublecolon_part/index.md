@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part()`** représente n'importe quel élément dans un [arbre fantôme (<i lang="en">shadow tree</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes#part) correspondant.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part()`** représente n'importe quel élément dans un [arbre fantôme (<i lang="en">shadow tree</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes#part) correspondant.
 
 ```css
 custom-element::part(foo) {
@@ -22,7 +22,7 @@ Les noms de parties sont similaires aux classes CSS&nbsp;: plusieurs éléments 
 
 Le pseudo-élément `::part()` n'est visible que pour le DOM parent. Cela signifie que lorsqu'un arbre fantôme est imbriqué, les parties ne sont visibles pour aucun ancêtre autre que le parent direct. L'attribut [`exportparts`](/fr/docs/Web/HTML/Reference/Global_attributes/exportparts) résout cette limitation en exportant explicitement les noms de parties déjà définis, les rendant ainsi stylables globalement.
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) (comme `::part(label):hover`) peuvent être ajoutées au sélecteur `::part()`, mais les [pseudo-classes structurelles](/fr/docs/Web/CSS/Pseudo-classes#pseudo-classes_structurelles_darbre) qui correspondent en fonction des informations de l'arbre, telles que `:empty` et `:last-child`, ne peuvent pas être ajoutées.
+Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) (comme `::part(label):hover`) peuvent être ajoutées au sélecteur `::part()`, mais les [pseudo-classes structurelles](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes#pseudo-classes_structurelles_darbre) qui correspondent en fonction des informations de l'arbre, telles que `:empty` et `:last-child`, ne peuvent pas être ajoutées.
 
 Des pseudo-éléments supplémentaires, tels que `::before`, peuvent être ajoutés au sélecteur `::part()`, mais des éléments `::part()` supplémentaires ne peuvent pas être ajoutés. Par exemple, `::part(confirm-button)::part(active)` ne correspond jamais à rien, c'est-à-dire qu'il n'est pas identique à `::part(confirm-button active)`. Cela est dû au fait que cela exposerait plus d'informations structurelles que prévu.
 

@@ -189,7 +189,7 @@ Dans les deux cas, du bloc de code suivant, la seule spécificité provient de `
 }
 ```
 
-En revanche, utiliser `:scope` sélectionne explicitement la racine de la portée et ajoute une spécificité de niveau de classe (0-1-0), puisque `:scope` est une [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes).
+En revanche, utiliser `:scope` sélectionne explicitement la racine de la portée et ajoute une spécificité de niveau de classe (0-1-0), puisque `:scope` est une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
 Dans le bloc de code suivant, `:scope img` a une spécificité de 0-1-1&nbsp;:
 
 ```css

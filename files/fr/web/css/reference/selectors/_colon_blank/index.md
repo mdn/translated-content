@@ -13,7 +13,7 @@ l10n:
 >
 > Voir [l'_issue_ n°1967 à ce propos](https://github.com/w3c/csswg-drafts/issues/1967).
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:blank`** permet de sélectionner les champs saissables par l'utilisateur·ice et qui sont vides (par exemple des éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} où rien n'a encore été saisi).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:blank`** permet de sélectionner les champs saissables par l'utilisateur·ice et qui sont vides (par exemple des éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} où rien n'a encore été saisi).
 
 ## Syntaxe
 

@@ -8,7 +8,7 @@ l10n:
 
 {{deprecated_header}}
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
 
 Normalement, les éléments d'un DOM ombre sont isolés du DOM extérieur. La fonction `:host-context()` vous permet de «&nbsp;jeter un œil à l'extérieur&nbsp;» de ce DOM ombre et de vérifier si l'un des éléments ancêtres correspond à un sélecteur CSS donné. Par exemple, appliquer une couleur de texte différente aux éléments d'une racine ombre lorsqu'une classe `.dark-theme` est appliquée à `<body>`.
 
@@ -21,7 +21,7 @@ Pour limiter le sélecteur uniquement à l'hôte `<greenhouse>` directement ou l
 > [!NOTE]
 > Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
 
-La [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de `:host-context()` est celle d'une [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes), à laquelle s'ajoute la spécificité du sélecteur passé en argument à la fonction.
+La [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de `:host-context()` est celle d'une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), à laquelle s'ajoute la spécificité du sélecteur passé en argument à la fonction.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :host-context()", "tabbed-shorter")}}
 

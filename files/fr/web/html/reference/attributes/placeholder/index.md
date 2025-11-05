@@ -50,5 +50,5 @@ Le texte d'exemple ne peut pas remplacer un label, même pour les personnes qui 
 ## Voir aussi
 
 - L'attribut global [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title)
-- La pseudo-classe CSS [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown)
-- Le pseudo-élément CSS [`::placeholder`](/fr/docs/Web/CSS/::placeholder)
+- La pseudo-classe CSS [`:placeholder-shown`](/fr/docs/Web/CSS/Reference/Selectors/:placeholder-shown)
+- Le pseudo-élément CSS [`::placeholder`](/fr/docs/Web/CSS/Reference/Selectors/::placeholder)

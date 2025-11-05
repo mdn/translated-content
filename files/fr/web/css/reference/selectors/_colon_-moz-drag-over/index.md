@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un événement `drag-over` est appelé dessus.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un événement `drag-over` est appelé dessus.
 
 ## Syntaxe
 

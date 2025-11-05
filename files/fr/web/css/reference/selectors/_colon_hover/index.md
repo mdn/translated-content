@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d64c2d5cb1f04b569e6af5d42feaadbc8c375b03
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur·ice le survole avec le pointeur, sans nécessairement l'activer.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur·ice le survole avec le pointeur, sans nécessairement l'activer.
 
 {{InteractiveExample("CSS Demo: :hover", "tabbed-shorter")}}
 

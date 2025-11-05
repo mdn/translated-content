@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
 
 ```css
 /* Sélectionne un élément dans la portée */
@@ -152,7 +152,7 @@ La portée de `context` est l'élément avec l'attribut [`id`](/fr/docs/Web/HTML
 ## Voir aussi
 
 - La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{CSSxRef("@scope")}}
-- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{CSSxRef(":root")}}
+- La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(":root")}}
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{DOMxRef("Element.querySelector()")}} et {{DOMxRef("Element.querySelectorAll()")}}
 - {{DOMxRef("Document.querySelector()")}} et {{DOMxRef("Document.querySelectorAll()")}}

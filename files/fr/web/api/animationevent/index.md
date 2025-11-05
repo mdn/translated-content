@@ -25,7 +25,7 @@ _Hérite également des propriétés de son parent, [`Event`](/fr/docs/Web/API/E
 - [`elapsedTime`](/fr/docs/Web/API/AnimationEvent/elapsedTime) {{readonlyInline}}
   - : Un nombre à virgule flottante, équivalent à la durée pendant laquelle l'animation s'est déroulée, en secondes, depuis le déclenchement de cet évènement (excluant les temps de pause de l'animation). `elapsedTime` vaudra `0.0` pour un évènement `animationstart`, à moins que [`animation-delay`](/fr/docs/Web/CSS/Reference/Properties/animation-delay) n'ait une valeur négative. Dans ce cas, l'évènement sera déclenché avec une valeur de `(-1 * délai)` pour `elapsedTime`.
 - [`pseudoElement`](/fr/docs/Web/API/AnimationEvent/pseudoElement) {{readonlyInline}}
-  - : Une chaîne commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) sur lequel l'animation s'exécute. Si l'animation est exécutée sur l'élément et non sur un pseudo-élément, la chaîne sera vide (`""`).
+  - : Une chaîne commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) sur lequel l'animation s'exécute. Si l'animation est exécutée sur l'élément et non sur un pseudo-élément, la chaîne sera vide (`""`).
 
 ## Méthodes
 

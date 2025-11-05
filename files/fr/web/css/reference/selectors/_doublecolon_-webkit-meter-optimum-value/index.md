@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-optimum-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'élément {{HTMLElement("meter")}} lorsque sa valeur se situe dans la plage basse-haute ou lorsque la valeur est équivalente à la valeur optimale.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-meter-optimum-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de mettre en forme l'élément {{HTMLElement("meter")}} lorsque sa valeur se situe dans la plage basse-haute ou lorsque la valeur est équivalente à la valeur optimale.
 
 Vert est la couleur par défaut.
 

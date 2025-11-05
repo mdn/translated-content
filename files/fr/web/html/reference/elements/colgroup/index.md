@@ -220,5 +220,5 @@ Veuillez consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/tabl
 
 - Les propriétés et pseudo-classes CSS notamment utiles pour mettre en forme l'élément `<col>` :
   - la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) pour contrôler la largeur de la colonne ;
-  - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour définir l'alignement des cellules de la colonne ;
+  - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) pour définir l'alignement des cellules de la colonne ;
   - la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».

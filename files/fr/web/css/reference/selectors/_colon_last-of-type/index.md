@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :last-of-type", "tabbed-shorter")}}
 
@@ -73,7 +73,7 @@ p:last-of-type {
 
 ### Éléments imbriqués
 
-Cet exemple montre comment les éléments imbriqués peuvent également être ciblés. Notez que le [sélecteur universel](/fr/docs/Web/CSS/Universal_selectors) (`*`) est implicite lorsqu'aucun sélecteur simple n'est écrit.
+Cet exemple montre comment les éléments imbriqués peuvent également être ciblés. Notez que le [sélecteur universel](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors) (`*`) est implicite lorsqu'aucun sélecteur simple n'est écrit.
 
 #### HTML
 

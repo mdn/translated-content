@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-button()`** représente un bouton permettant de contrôler le défilement d'un {{glossary("scroll container","conteneur de défilement")}}. Ces boutons sont générés sur les conteneurs de défilement lorsque leur propriété {{cssxref("content")}} n'est pas définie à `none`. La direction du défilement est déterminée par la valeur du paramètre.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::scroll-button()`** représente un bouton permettant de contrôler le défilement d'un {{glossary("scroll container","conteneur de défilement")}}. Ces boutons sont générés sur les conteneurs de défilement lorsque leur propriété {{cssxref("content")}} n'est pas définie à `none`. La direction du défilement est déterminée par la valeur du paramètre.
 
 ## Syntaxe
 

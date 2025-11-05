@@ -75,4 +75,4 @@ li li {
 
 ## Voir aussi
 
-- [Sélecteur d'enfant](/fr/docs/Web/CSS/Child_combinator)
+- [Sélecteur d'enfant](/fr/docs/Web/CSS/Reference/Selectors/Child_combinator)

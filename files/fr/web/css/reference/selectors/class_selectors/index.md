@@ -34,7 +34,7 @@ L'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#class) est un
 .nomdeclasse { déclarations CSS }
 ```
 
-Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) de la façon suivante :
+Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) de la façon suivante :
 
 ```
 [class~=nomdeclasse] { déclarations CSS }

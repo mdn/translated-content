@@ -26,7 +26,7 @@ p::first-line {
 }
 ```
 
-Les doubles deux-points (`::`) sont utilisés pour les pseudo-éléments. Cela distingue les pseudo-éléments des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) qui utilisent un seul deux-points (`:`) dans leur notation. Notez que les navigateurs prennent en charge la syntaxe à un seul deux-points pour les quatre pseudo-éléments d'origine&nbsp;: `::before`, `::after`, `::first-line` et `::first-letter`.
+Les doubles deux-points (`::`) sont utilisés pour les pseudo-éléments. Cela distingue les pseudo-éléments des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) qui utilisent un seul deux-points (`:`) dans leur notation. Notez que les navigateurs prennent en charge la syntaxe à un seul deux-points pour les quatre pseudo-éléments d'origine&nbsp;: `::before`, `::after`, `::first-line` et `::first-letter`.
 
 Les pseudo-éléments n'existent pas indépendamment. L'élément dont un pseudo-élément fait partie est appelé son _élément d'origine_. Un pseudo-élément doit apparaître après tous les autres composants dans le sélecteur [complexe](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_complexe) ou [composé](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_composé). Le dernier élément du sélecteur est l'élément d'origine du pseudo-élément. Par exemple, vous pouvez sélectionner la première ligne d'un paragraphe en utilisant `p::first-line`, mais pas les enfants de la première ligne. Ainsi, `p::first-line > *` est invalide.
 
@@ -285,7 +285,7 @@ Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments mise en
 ## Voir aussi
 
 - Le module des [pseudo-éléments CSS](/fr/docs/Web/CSS/CSS_pseudo-elements)
-- Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
+- Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - Le module des [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) — Explication détaillée des changements du modèle d'héritage des pseudo-éléments mise en évidence dans Chrome 134

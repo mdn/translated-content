@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-letter`** sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::first-letter", "tabbed-shorter")}}
 
@@ -38,7 +38,7 @@ La première lettre d'un élément n'est pas toujours triviale à identifier&nbs
 - Une combinaison du pseudo-élément {{ cssxref("::before") }} et de la propriété {{ cssxref("content") }} peut injecter du texte au début de l'élément. Dans ce cas, `::first-letter` correspondra à la première lettre de ce contenu généré.
 
 > [!NOTE]
-> CSS a introduit la notation `::first-letter` (avec deux deux-points) pour distinguer [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-elements](/fr/docs/Web/CSS/Pseudo-elements). Pour des raisons de compatibilité, les navigateurs acceptent également `:first-letter`, introduit plus tôt.
+> CSS a introduit la notation `::first-letter` (avec deux deux-points) pour distinguer [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-elements](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Pour des raisons de compatibilité, les navigateurs acceptent également `:first-letter`, introduit plus tôt.
 >
 > La prise en charge des digraphes tels que `IJ` en néerlandais est faible. Consultez le tableau de compatibilité ci-dessous pour voir l'état actuel de la prise en charge.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:disabled`** permet de cibler un élément désactivé. Un élément est désactivé s'il ne peut pas être activé (sélectionné, cliqué ou saisi) ou s'il ne peut pas recevoir le focus de l'utilisateur. L'élément possède également un état activé dans lequel il peut être sélectionné ou recevoir le focus.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:disabled`** permet de cibler un élément désactivé. Un élément est désactivé s'il ne peut pas être activé (sélectionné, cliqué ou saisi) ou s'il ne peut pas recevoir le focus de l'utilisateur. L'élément possède également un état activé dans lequel il peut être sélectionné ou recevoir le focus.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :disabled", "tabbed-standard")}}
 

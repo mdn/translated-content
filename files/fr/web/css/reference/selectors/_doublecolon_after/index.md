@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::after`** crée un pseudo-élément qui sera le dernier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::after`** crée un pseudo-élément qui sera le dernier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::after", "tabbed-standard")}}
 
@@ -45,7 +45,7 @@ a::after {
 ```
 
 > [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
+> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
 
 ## Syntaxe
 
@@ -67,7 +67,7 @@ Un pseudo-élément `::after` avec une valeur {{cssxref("display")}} de `list-it
 Si la propriété {{CSSxRef("content")}} n'est pas indiquée, contient une valeur invalide, vaut `normal`, ou vaut `none`, le pseudo-élément `::after` ne sera pas rendu à l'écran. Il se comportera comme si `display: none` avait été appliqué.
 
 > [!NOTE]
-> CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
+> CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
 
 Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{cssxref("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
 
@@ -142,9 +142,9 @@ On peut mettre en forme du texte ou des images avec la propriété {{CSSxRef("co
 
 ### Bulles d'information
 
-Dans l'exemple suivant, on illustre le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) `::after` avec l'expression CSS [`attr()`](/fr/docs/Web/CSS/attr) et un attribut de données personnalisé `data-descr` afin de créer une bulle d'information de type glossaire en CSS, sans JavaScript.
+Dans l'exemple suivant, on illustre le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::after` avec l'expression CSS [`attr()`](/fr/docs/Web/CSS/attr) et un attribut de données personnalisé `data-descr` afin de créer une bulle d'information de type glossaire en CSS, sans JavaScript.
 
-On peut également aider les personnes qui naviguent au clavier avec cette technique, en ajoutant un `tabindex` de `0` pour faire un `span` focusable, et en utilisant la sélection `:focus`. Cela montre à quel point les options [`::before`](/fr/docs/Web/CSS/::before) and `::after` peuvent être flexibles, bien que, pour l'expérience la plus accessible, un widget de divulgation sémantique créé d'une autre manière serait probablement plus approprié.
+On peut également aider les personnes qui naviguent au clavier avec cette technique, en ajoutant un `tabindex` de `0` pour faire un `span` focusable, et en utilisant la sélection `:focus`. Cela montre à quel point les options [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) and `::after` peuvent être flexibles, bien que, pour l'expérience la plus accessible, un widget de divulgation sémantique créé d'une autre manière serait probablement plus approprié.
 
 #### HTML
 
@@ -198,7 +198,7 @@ span[data-description]:focus::after {
 
 ### Les pseudo-éléments imbriqués `::after::marker`
 
-Les [pseudo-éléments imbriqués](/fr/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) `::after::marker` sélectionnent la liste {{CSSxRef("::marker")}} d'un `::after` pseudo-élément qui est lui-même un élément de liste, c'est-à-dire qu'il a sa {{CSSxRef("display")}} propriété définie sur `list-item`.
+Les [pseudo-éléments imbriqués](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements) `::after::marker` sélectionnent la liste {{CSSxRef("::marker")}} d'un `::after` pseudo-élément qui est lui-même un élément de liste, c'est-à-dire qu'il a sa {{CSSxRef("display")}} propriété définie sur `list-item`.
 
 Dans cette présentation, nous générons des éléments de liste supplémentaires avant et après un menu de navigation en liste à l'aide de `::before` et `::after` (en les définissant sur `display: list-item` afin qu'ils se comportent comme des éléments de liste). Nous utilisons ensuite `ul::before::marker` et `ul::after::marker` pour donner à leurs marqueurs de liste une couleur différente.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} pour lesquels l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:optional`** permet de cibler les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} pour lesquels l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) n'est pas activé. Cela permet ainsi d'indiquer et de mettre en forme les champs facultatifs d'un formulaire.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :optional", "tabbed-standard")}}
 

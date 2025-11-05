@@ -10,7 +10,7 @@ La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en re
 - `counters(name, string)`
 - `counters(name, string, style)`
 
-Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
+Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
 
 ```css
 /* Utilisation simple - style decimal par défaut */

@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-progress`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente la partie inférieure de la _piste_ (c'est-à-dire la rainure) dans laquelle l'indicateur glisse dans un élément {{HTMLElement("input")}} de type `range`. Cette partie correspond aux valeurs inférieures à la valeur actuellement sélectionnée par le _curseur_ (c'est-à-dire le bouton virtuel).
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-range-progress`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente la partie inférieure de la _piste_ (c'est-à-dire la rainure) dans laquelle l'indicateur glisse dans un élément {{HTMLElement("input")}} de type `range`. Cette partie correspond aux valeurs inférieures à la valeur actuellement sélectionnée par le _curseur_ (c'est-à-dire le bouton virtuel).
 
 > [!NOTE]
 > Si `::-moz-range-progress` est utilisé sur autre chose qu'un élément `<input type="range">`, il n'aura aucun effet.

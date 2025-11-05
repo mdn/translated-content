@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{CSSxRef(":scope")}}, de l'élément).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{CSSxRef(":scope")}}, de l'élément).
 
 ```css
 /* Sélectionne un titre h1 avec un
@@ -27,7 +27,7 @@ Cette pseudo-classe `:has()` prend en paramètre une liste de sélecteurs.
 }
 ```
 
-Si la pseudo-classe `:has()` n'est pas prise en charge par un navigateur, l'ensemble du bloc sélecteur échouera, sauf si `:has()` figure dans une liste de sélecteurs tolérants, comme dans [`:is()`](/fr/docs/Web/CSS/:is) et [`:where()`](/fr/docs/Web/CSS/:where).
+Si la pseudo-classe `:has()` n'est pas prise en charge par un navigateur, l'ensemble du bloc sélecteur échouera, sauf si `:has()` figure dans une liste de sélecteurs tolérants, comme dans [`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is) et [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where).
 
 La pseudo-classe `:has()` ne peut pas être imbriquée dans une autre `:has()`.
 
@@ -125,7 +125,7 @@ h1:has(+ h2) {
 
 {{EmbedLiveSample('Avec_le_combinator_de_freres', 600, 150)}}
 
-Cet exemple montre deux textes similaires côte à côte pour comparaison : le gauche avec un titre `H1` suivi d'un paragraphe et le droit avec un titre `H1` suivi d'un titre `H2` et ensuite d'un paragraphe. Dans l'exemple de droite, `:has()` aide à sélectionner l'élément `H1` qui est immédiatement suivi d'un élément `H2` (indiqué par le combinator de frère suivant [`+`](/fr/docs/Web/CSS/Next-sibling_combinator)) et la règle CSS réduit l'espacement après un tel élément `H1`. Sans la pseudo-classe `:has()`, vous ne pouvez pas utiliser les sélecteurs CSS pour sélectionner un frère précédent d'un type différent ou un élément parent.
+Cet exemple montre deux textes similaires côte à côte pour comparaison : le gauche avec un titre `H1` suivi d'un paragraphe et le droit avec un titre `H1` suivi d'un titre `H2` et ensuite d'un paragraphe. Dans l'exemple de droite, `:has()` aide à sélectionner l'élément `H1` qui est immédiatement suivi d'un élément `H2` (indiqué par le combinator de frère suivant [`+`](/fr/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)) et la règle CSS réduit l'espacement après un tel élément `H1`. Sans la pseudo-classe `:has()`, vous ne pouvez pas utiliser les sélecteurs CSS pour sélectionner un frère précédent d'un type différent ou un élément parent.
 
 ### Avec la pseudo-classe :is()
 
@@ -200,7 +200,7 @@ h3 {
 
 {{EmbedLiveSample('Avec_la_pseudo-classe_is', 600, 170)}}
 
-Ici, la première pseudo-classe [`:is()`](/fr/docs/Web/CSS/:is) est utilisée pour sélectionner n'importe quel élément de titre de la liste. La deuxième pseudo-classe `:is()` est utilisée pour passer une liste de sélecteurs de frères suivants en tant qu'argument à `:has()`. La pseudo-classe `:has()` aide à sélectionner n'importe quel élément `H1`, `H2` ou `H3` qui est immédiatement suivi (indiqué par [`+`](/fr/docs/Web/CSS/Next-sibling_combinator)) d'un élément `H2`, `H3` ou `H4` et la règle CSS réduit l'espacement après de tels éléments `H1`, `H2` ou `H3`.
+Ici, la première pseudo-classe [`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is) est utilisée pour sélectionner n'importe quel élément de titre de la liste. La deuxième pseudo-classe `:is()` est utilisée pour passer une liste de sélecteurs de frères suivants en tant qu'argument à `:has()`. La pseudo-classe `:has()` aide à sélectionner n'importe quel élément `H1`, `H2` ou `H3` qui est immédiatement suivi (indiqué par [`+`](/fr/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)) d'un élément `H2`, `H3` ou `H4` et la règle CSS réduit l'espacement après de tels éléments `H1`, `H2` ou `H3`.
 
 Ce sélecteur pourrait également être écrit comme suit&nbsp;:
 
@@ -249,9 +249,9 @@ De même, dans le cas de la recherche négative, dans l'expression régulière `
 
 {{Compat}}
 
-- Les pseudo-classes CSS [`:is()`](/fr/docs/Web/CSS/:is), [`:where()`](/fr/docs/Web/CSS/:where), [`:not()`](/fr/docs/Web/CSS/:not)
+- Les pseudo-classes CSS [`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is), [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where), [`:not()`](/fr/docs/Web/CSS/Reference/Selectors/:not)
 - [Sélecteurs et combinateurs CSS](/fr/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
 - [Structure du sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [Liste des sélecteurs](/fr/docs/Web/CSS/Selector_list)
+- [Liste des sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

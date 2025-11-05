@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::spelling-error`** représente une portion de texte que l'{{glossary("user agent", "agent utilisateur")}} signale comme étant mal orthographiée.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::spelling-error`** représente une portion de texte que l'{{glossary("user agent", "agent utilisateur")}} signale comme étant mal orthographiée.
 
-Le pseudo-élément `::spelling-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de surlignage. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
+Le pseudo-élément `::spelling-error` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de surlignage. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de mise en évidence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Propriétés autoriséees
 

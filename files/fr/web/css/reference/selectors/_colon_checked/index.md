@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :checked", "tabbed-shorter")}}
 

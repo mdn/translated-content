@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::marker`** représente le marqueur d'un élément d'une liste à puces ou numérotée. Il fonctionne sur tout élément ou pseudo-élément défini avec [`display: list-item`](/fr/docs/Web/CSS/Reference/Properties/display), tel que les éléments {{htmlelement("li")}} et {{htmlelement("summary")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::marker`** représente le marqueur d'un élément d'une liste à puces ou numérotée. Il fonctionne sur tout élément ou pseudo-élément défini avec [`display: list-item`](/fr/docs/Web/CSS/Reference/Properties/display), tel que les éléments {{htmlelement("li")}} et {{htmlelement("summary")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::marker", "tabbed-shorter")}}
 

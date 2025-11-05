@@ -6,9 +6,9 @@ l10n:
   sourceCommit: b460458fa125f4ee252d01466c1390d16ba19215
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::target-text`** représente le texte vers lequel l'écran vient de défiler, dans le cas où le navigateur prend en charge les [fragments de texte](/fr/docs/Web/URI/Reference/Fragment/Text_fragments). Il permet aux auteur·ice·s de mettre en évidence cette section de texte.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::target-text`** représente le texte vers lequel l'écran vient de défiler, dans le cas où le navigateur prend en charge les [fragments de texte](/fr/docs/Web/URI/Reference/Fragment/Text_fragments). Il permet aux auteur·ice·s de mettre en évidence cette section de texte.
 
-Le pseudo-élément `::target-text` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de mise en évidence](/fr/docs/Web/CSS/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
+Le pseudo-élément `::target-text` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments de mise en évidence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
 ## Syntaxe
 

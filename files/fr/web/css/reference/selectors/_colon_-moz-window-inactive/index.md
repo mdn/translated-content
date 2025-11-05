@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_header}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-window-inactive`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-window-inactive`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.
 
 `:-moz-window-inactive` fonctionne également pour le contenu des documents HTML.
 
@@ -65,6 +65,6 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 - [Extensions CSS de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - Sélecteurs CSS connexes :
-  - [`:active`](/fr/docs/Web/CSS/:active)
+  - [`:active`](/fr/docs/Web/CSS/Reference/Selectors/:active)
 
 - La propriété {{domxref("Document.activeElement")}} pour le DOM régulier, et la propriété {{domxref("ShadowRoot.activeElement")}} pour les racines du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM).

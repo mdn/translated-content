@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:current`** est une pseudo-classe dimensionnelle temporelle qui représente un élément ou l'ancêtre d'un élément qui est actuellement affiché. Par exemple, cette pseudo-classe peut être utilisée pour représenter une vidéo qui est affichée avec des sous-titres par [WebVTT](/fr/docs/Web/API/WebVTT_API).
+Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:current`** est une pseudo-classe dimensionnelle temporelle qui représente un élément ou l'ancêtre d'un élément qui est actuellement affiché. Par exemple, cette pseudo-classe peut être utilisée pour représenter une vidéo qui est affichée avec des sous-titres par [WebVTT](/fr/docs/Web/API/WebVTT_API).
 
 ```css
 :current(p, span) {

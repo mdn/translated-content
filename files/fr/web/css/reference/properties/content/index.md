@@ -289,7 +289,7 @@ Le contenu généré sur le marqueur de chaque élément de liste ajoute le text
 
 ### Chaînes de caractères avec valeurs d'attribut
 
-Cet exemple est utile pour les feuilles de style d'impression. Il utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour sélectionner chaque lien sécurisé entièrement qualifié, ajoutant la valeur de l'attribut `href` après le texte du lien comme contenu du pseudo-élément {{cssxref("::after")}}.
+Cet exemple est utile pour les feuilles de style d'impression. Il utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) pour sélectionner chaque lien sécurisé entièrement qualifié, ajoutant la valeur de l'attribut `href` après le texte du lien comme contenu du pseudo-élément {{cssxref("::after")}}.
 
 #### HTML
 

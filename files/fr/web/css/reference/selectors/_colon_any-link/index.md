@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{cssxref(":link")}} ou à {{cssxref(":visited")}}.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:any-link`** permet de représenter un élément qui agit comme la source de l'ancre d'un hyperlien (qu'il ait été visité ou non). Elle permet donc de cibler les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} ou {{HTMLElement("link")}} avec un attribut `href`. Autrement dit, elle cible les éléments qui correspondent à {{cssxref(":link")}} ou à {{cssxref(":visited")}}.
 
 {{InteractiveExample("Démontrastion CSS&nbsp;: :any-link", "tabbed-shorter")}}
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::cue`** permet de cibler les indications textuelles [WebVTT](/fr/docs/Web/API/WebVTT_API) d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme [les légendes et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#styling_webtt_cues) pour les médias avec des pistes VTT.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::cue`** permet de cibler les indications textuelles [WebVTT](/fr/docs/Web/API/WebVTT_API) d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme [les légendes et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#styling_webtt_cues) pour les médias avec des pistes VTT.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::cue", "tabbed-shorter")}}
 

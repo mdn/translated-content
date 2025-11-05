@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:popover-open`** représente un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément avec un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)) qui est dans l'état ouvert. Vous pouvez l'utiliser pour appliquer un style aux éléments <i lang="en">popovers</i> uniquement lorsqu'ils sont affichés.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:popover-open`** représente un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément avec un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)) qui est dans l'état ouvert. Vous pouvez l'utiliser pour appliquer un style aux éléments <i lang="en">popovers</i> uniquement lorsqu'ils sont affichés.
 
 ## Syntaxe
 

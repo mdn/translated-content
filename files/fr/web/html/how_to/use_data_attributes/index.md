@@ -48,7 +48,7 @@ article::before {
 }
 ```
 
-Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Attribute_selectors) en CSS pour modifier les styles en fonction des données :
+Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) en CSS pour modifier les styles en fonction des données :
 
 ```css
 article[data-columns="3"] {

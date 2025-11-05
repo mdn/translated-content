@@ -108,4 +108,4 @@ Dans le HTML ci-dessus, les deux voisins de `.monTexte p` sont `span` et `.monTe
 
 ## Voir aussi
 
-- [Sélecteur de voisin direct](/fr/docs/Web/CSS/Next-sibling_combinator)
+- [Sélecteur de voisin direct](/fr/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)
