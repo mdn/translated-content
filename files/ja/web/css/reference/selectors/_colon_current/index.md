@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`:current`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、現在表示されている要素またはその要素の祖先を表す、時間軸の擬似クラスです。例えば、この擬似クラスを使用すると、 [WebVTT](/ja/docs/Web/API/WebVTT_API) によってキャプション付きで表示されている映像を表すことができます。
+**`:current`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)セレクターで、現在表示されている要素またはその要素の祖先を表す、時間軸の擬似クラスです。例えば、この擬似クラスを使用すると、 [WebVTT](/ja/docs/Web/API/WebVTT_API) によってキャプション付きで表示されている映像を表すことができます。
 
 ```css
 :current(p, span) {

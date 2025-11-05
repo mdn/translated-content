@@ -112,7 +112,7 @@ l10n:
 
 上記の例では、基本的な宣言構文を使って対応条件を示しています。
 `supports()` で CSS 関数を指定することもでき、対応していてユーザーエージェントで評価できる場合は `true` と評価されます。
-例えば、下記のコードでは、[子結合子](/ja/docs/Web/CSS/Child_combinator) (`selector()`) と `font-tech()` 関数の両方を条件とする `@import` を表示しています。
+例えば、下記のコードでは、[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator) (`selector()`) と `font-tech()` 関数の両方を条件とする `@import` を表示しています。
 
 ```css
 @import "whatever.css"

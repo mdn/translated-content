@@ -362,7 +362,7 @@ section {
 
 ### @page の擬似クラスの例
 
-様々な `@page` の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)の例を参照してください。
+様々な `@page` の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)の例を参照してください。
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

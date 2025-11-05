@@ -339,7 +339,7 @@ textarea {
 
 #### 送信ボタンにスタイル設定する
 
-{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めて、行いたいことが何でもできます。
+{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含めて、行いたいことが何でもできます。
 
 ```css
 button {

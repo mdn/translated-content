@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:read-write
 original_slug: Web/CSS/:read-write
 ---
 
-**`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
+**`:read-write`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーが編集できる要素 (`input` や `textarea` など) を表します。
 
 ```css
 input:read-write,

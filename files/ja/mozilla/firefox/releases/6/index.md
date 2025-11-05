@@ -30,15 +30,15 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
   - : このプロパティは行送りが発生する際、単語のハイフネーションを制御するプロパティです。
 - [`-moz-orient`](/ja/docs/Web/CSS/Reference/Properties/-moz-orient)
   - : 現在は Mozilla 固有のプロパティで、いくつかの要素 ([`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素など) の縦横の向きを制御します。
-- [`::-moz-progress-bar`](/ja/docs/Web/CSS/::-moz-progress-bar)
+- [`::-moz-progress-bar`](/ja/docs/Web/CSS/Reference/Selectors/::-moz-progress-bar)
   - : Mozilla 固有の擬似要素で、[`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素において、完了した部分のスタイルづけを行うためのものです。
 
 #### その他の変更
 
 - [`@-moz-document`](/ja/docs/Web/CSS/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
 - `aural` 媒体グループのために持っていたコードを削除したため、[`azimuth`](/ja/docs/Web/CSS/azimuth) CSS プロパティのサポートが廃止されました。このプロパティはちゃんと実装されていなかったため、パッチを当て続けるのではなく未完成の実装を省くほうが理にかなっていると考えました。
-- これまで、[`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
-- [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
+- これまで、[`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
+- [`:indeterminate`](/ja/docs/Web/CSS/Reference/Selectors/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
 
 ### DOM
 

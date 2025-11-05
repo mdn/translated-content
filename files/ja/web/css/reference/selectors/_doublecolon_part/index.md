@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の任意の要素を表します。
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の任意の要素を表します。
 
 ```css
 custom-element::part(foo) {
@@ -22,7 +22,7 @@ custom-element::part(foo) {
 
 `::part()` 擬似要素は、親 DOM からしか見えません。つまり、シャドウツリーが入れ子になっている場合、その部分は直接の親以外の祖先には見えません。 [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性は、すでに定義されている `part` 名を明示的にエクスポートして、それらをグローバルにスタイル設定可能にする事で、この制限を解決します。
 
-[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)（`::part(label):hover` など）は `::part()` セレクターに追加できますが、 `:empty` や `:last-child` など、ツリー情報に基づいて照合する[構造擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes)は追加できません。
+[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)（`::part(label):hover` など）は `::part()` セレクターに追加できますが、 `:empty` や `:last-child` など、ツリー情報に基づいて照合する[構造擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#tree-structural_pseudo-classes)は追加できません。
 
 `::before` などの追加の擬似要素は、`::part()` セレクターに追加できますが、追加の `::part()` 要素は追加できません。例えば、 `::part(confirm-button)::part(active)` は何とも一致しません。つまり、 `::part(confirm-button active)` と同じではありません。これは、そうすると意図したよりも多くの構造情報が公開されてしまうためです。
 

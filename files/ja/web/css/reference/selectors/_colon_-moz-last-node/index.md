@@ -6,7 +6,7 @@ original_slug: Web/CSS/:-moz-last-node
 
 {{Non-standard_header}}
 
-**`:-moz-last-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、他の要素の最後の子要素であるあらゆる要素を表します。 {{Cssxref(":last-child")}} とは異なり、最後の子要素の後に（ホワイトスペース以外の）テキストがあると一致しません。
+**`:-moz-last-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions)であり、他の要素の最後の子要素であるあらゆる要素を表します。 {{Cssxref(":last-child")}} とは異なり、最後の子要素の後に（ホワイトスペース以外の）テキストがあると一致しません。
 
 > [!NOTE]
 > 要素の末尾にあるホワイトスペースは `:-moz-last-node` の決定において無視されます。

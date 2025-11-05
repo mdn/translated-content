@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::selection
 original_slug: Web/CSS/::selection
 ---
 
-**`::selection`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ユーザーが (テキストをマウスでクリックやドラッグすることで) 選択した文書の一部にスタイルを適用します。
+**`::selection`** は CSS の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、ユーザーが (テキストをマウスでクリックやドラッグすることで) 選択した文書の一部にスタイルを適用します。
 
 ```css
 ::selection {

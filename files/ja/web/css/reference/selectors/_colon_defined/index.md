@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-**`:defined`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。
+**`:defined`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。
 
 ```css
 /* 定義されたすべての要素を選択 */
@@ -105,7 +105,7 @@ custom-element:defined::before {
 }
 ```
 
-また、 [`::before`](/ja/docs/Web/CSS/::before) 擬似要素を使用して、要素が定義されるまで "読み込み中..." というオーバーレイメッセージを表示しています。定義後、 [`content`](/ja/docs/Web/CSS/Reference/Properties/content) を空文字列に設定することで、このメッセージは除去されます。
+また、 [`::before`](/ja/docs/Web/CSS/Reference/Selectors/::before) 擬似要素を使用して、要素が定義されるまで "読み込み中..." というオーバーレイメッセージを表示しています。定義後、 [`content`](/ja/docs/Web/CSS/Reference/Properties/content) を空文字列に設定することで、このメッセージは除去されます。
 
 独自の要素を定義するために、次の JavaScript を使用しています。定義前後の独自の要素の状態を確認できるように、ボタンがクリックされたときに {{domxref("CustomElementRegistry.define", "define()")}} メソッドを実行しています。
 
