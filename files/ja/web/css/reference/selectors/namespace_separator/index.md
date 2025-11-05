@@ -23,7 +23,7 @@ myNameSpace|a {
 }
 ```
 
-[要素型セレクター](/ja/docs/Web/CSS/Type_selectors)および[全称セレクター](/ja/docs/Web/CSS/Universal_selectors)では、オプションで名前空間要素を使用することができます。 {{CSSXref("@namespace")}} によって名前空間が事前に宣言されている場合、これらのセレクターは、名前空間区切り文字 (`|`) で区切った名前空間の名前をセレクターの前に付加することで、名前空間指定を行うことができます。これは、インライン SVG や MathML を含む HTML、あるいは複数の語彙が混在する XML など、複数の名前空間を含む文書を扱う場合に便利です。
+[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)および[全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)では、オプションで名前空間要素を使用することができます。 {{CSSXref("@namespace")}} によって名前空間が事前に宣言されている場合、これらのセレクターは、名前空間区切り文字 (`|`) で区切った名前空間の名前をセレクターの前に付加することで、名前空間指定を行うことができます。これは、インライン SVG や MathML を含む HTML、あるいは複数の語彙が混在する XML など、複数の名前空間を含む文書を扱う場合に便利です。
 
 - `ns|h1` - `ns` 名前空間内の `<h1>` 要素に一致
 - `*|h1` - すべての `<h1>` 要素に一致
@@ -184,6 +184,6 @@ p {
 - [`@namespace`](/ja/docs/Web/CSS/@namespace)
 - [`Document.createElementNS()`](/ja/docs/Web/API/Document/createElementNS) メソッド
 - [`Element.namespaceURI`](/ja/docs/Web/API/Element/namespaceURI) プロパティ
-- [CSS 要素型セレクター](/ja/docs/Web/CSS/Type_selectors)
-- [CSS 全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
+- [CSS 要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [CSS 全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 - [CSS セレクターモジュール](/ja/docs/Web/CSS/CSS_selectors)

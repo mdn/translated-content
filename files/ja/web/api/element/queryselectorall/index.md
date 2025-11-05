@@ -23,14 +23,14 @@ querySelectorAll(selectors)
 
     HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
 
-    なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
+    なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/Reference/Selectors/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
 
 ### 返値
 
 生きていない {{domxref("NodeList")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxref("Element")}} を含みます。要素は文書順になります。つまり、子要素の前に親要素が来て、手前の兄弟は後の兄弟の前に来ます。
 
 > [!NOTE]
-> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 
@@ -41,7 +41,7 @@ querySelectorAll(selectors)
 
 ### カスタムデータ値ですべての要素を取得
 
-この例では、[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、 `data-name` データ属性に "funnel-chart-percent" を含んでいる複数の属性を選択します。
+この例では、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、 `data-name` データ属性に "funnel-chart-percent" を含んでいる複数の属性を選択します。
 
 ```html
 <section class="box" id="sect1">
@@ -78,7 +78,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-次の例では[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、文書内の {{HTMLElement("iframe")}} 要素のうち `"data-src"` という名前の属性を持つもののリストを返します。
+次の例では[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、文書内の {{HTMLElement("iframe")}} 要素のうち `"data-src"` という名前の属性を持つもののリストを返します。
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");
@@ -110,7 +110,7 @@ highlightedItems.forEach((userItem) => {
 
 ### セレクターのスコープ
 
-`querySelectorAll()` メソッドは、セレクターを文書全体に適用します。このメソッドが呼び出された要素だけのスコープにするわけではありません。セレクターのスコープを設定するには、セレクター文字列の先頭に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを置いてください。
+`querySelectorAll()` メソッドは、セレクターを文書全体に適用します。このメソッドが呼び出された要素だけのスコープにするわけではありません。セレクターのスコープを設定するには、セレクター文字列の先頭に [`:scope`](/ja/docs/Web/CSS/Reference/Selectors/:scope) 擬似クラスを置いてください。
 
 #### HTML
 
@@ -274,7 +274,7 @@ document.querySelector("#manual-escape").addEventListener("click", () => {
 ## 関連情報
 
 - [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
+- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - MDN 学習エリアの[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}

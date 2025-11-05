@@ -26,11 +26,11 @@ l10n:
 
 ## セレクター
 
-セレクターのメソッドは[セレクター](/ja/docs/Web/CSS/CSS_selectors)を受け入れて、どの要素または要素群を返すかを判断します。これは[セレクターリスト](/ja/docs/Web/CSS/Selector_list)を含みますので、単一の問い合わせで複数のセレクターをグループ化することができます。
+セレクターのメソッドは[セレクター](/ja/docs/Web/CSS/CSS_selectors)を受け入れて、どの要素または要素群を返すかを判断します。これは[セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)を含みますので、単一の問い合わせで複数のセレクターをグループ化することができます。
 
-ユーザーのプライバシーを保護するために、一部の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)には対応していなかったり、異なる動作をしたりすることがあります。例えば {{cssxref(":visited")}} に一致するものは返されなかったり、 {{cssxref(":link")}} は {{cssxref(":any-link")}} と同様に扱われたりします。
+ユーザーのプライバシーを保護するために、一部の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)には対応していなかったり、異なる動作をしたりすることがあります。例えば {{cssxref(":visited")}} に一致するものは返されなかったり、 {{cssxref(":link")}} は {{cssxref(":any-link")}} と同様に扱われたりします。
 
-要素のみが選択できますので、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)には対応していません。
+要素のみが選択できますので、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)には対応していません。
 
 ## 例
 

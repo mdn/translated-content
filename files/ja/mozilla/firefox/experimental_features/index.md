@@ -306,7 +306,7 @@ CSS の {{cssxref("::details-content")}} 擬似要素を使用すると、{{html
 
 ### 要素に属する擬似要素の後に擬似要素を使用できるようにする
 
-[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)（{{cssxref("::first-letter")}} や {{cssxref("::before")}} など）を、[要素に属する擬似要素](/ja/docs/Web/CSS/Pseudo-elements#要素に属する擬似要素)に（{{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} など）追加できるようにする作業が始まりました。
+[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（{{cssxref("::first-letter")}} や {{cssxref("::before")}} など）を、[要素に属する擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#要素に属する擬似要素)に（{{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} など）追加できるようにする作業が始まりました。
 
 これにより、例えば、 {{htmlElement("details")}} 要素の最初の文字のスタイルを設定するために CSS セレクター `::details-content::first-letter` を使用したり、 {{HTMLElement("input") }} の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) の前にコンテンツを追加するために CSS セレクター `::file-selector-button::before` を使用したりすることが可能になります。
 

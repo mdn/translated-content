@@ -52,7 +52,7 @@ l10n:
 #### DOM
 
 - カスタム要素の状態を定義して、CSS セレクターを使用してそれらをマッチさせる機能をサポートしました。
-  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
+  カスタム状態は要素の {{domxref("ElementInternals.states")}} プロパティ ({{domxref("CustomStateSet")}}) で追加または削除できる、カスタム識別子として表されます。CSS の [`:state()`](/ja/docs/Web/CSS/Reference/Selectors/:state) 擬似クラスはカスタム識別子を引数として持ち、識別子が状態セットに含まれているカスタム要素にマッチします ([Firefox bug 1887543](https://bugzil.la/1887543))。
 - 選択範囲の方向を示す {{domxref("Selection.direction")}} プロパティをサポートしました ([Firefox bug 1867058](https://bugzil.la/1867058))。
 
 #### Media、WebRTC、Web Audio

@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`:local-link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書内のリンクを表します。したがって、ハイパーリンクのソースアンカーである要素は、その要素の絶対 URL と一致する絶対 URL を持つ要素です。
+**`:local-link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、文書内のリンクを表します。したがって、ハイパーリンクのソースアンカーである要素は、その要素の絶対 URL と一致する絶対 URL を持つ要素です。
 
 ```css
 /* 現在の文書にリンクしている <a> を選択 */

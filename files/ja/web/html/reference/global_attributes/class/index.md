@@ -46,7 +46,7 @@ l10n:
 
 ## 解説
 
-クラスを使用すると、CSS および JavaScript で、[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)または {{domxref("document.getElementsByClassName()")}} などの関数を使用して、特定の要素を選択してアクセスすることができます。
+クラスを使用すると、CSS および JavaScript で、[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)または {{domxref("document.getElementsByClassName()")}} などの関数を使用して、特定の要素を選択してアクセスすることができます。
 
 仕様書ではクラスの名前に関する要求事項はありませんが、ウェブ開発者は、要素の表示ではなく、要素の意味的な目的を記述する名前を使用することが推奨されています。例えば、 _italics_ ではなく _attribute_ を使用して属性を記述します。ただし、このクラスの要素は _italics_ で表示される場合もあります。意味的な名前は、ページの表示が変更されても論理的な意味を保ちます。
 

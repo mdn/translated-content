@@ -183,7 +183,7 @@ body {
 }
 ```
 
-CSS の次の部分では、[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、前回の CSS の章で定義した名前付き `@page` ルールで定義した出力サイズ、方向、およびマージンを、`page` プロパティを使用する要素に適用します。
+CSS の次の部分では、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、前回の CSS の章で定義した名前付き `@page` ルールで定義した出力サイズ、方向、およびマージンを、`page` プロパティを使用する要素に適用します。
 `class="chapter"` の節は同時実行であり、1 ページとして表示されます。
 `break-after: page;` を使用してそれらを分割し、各章を別々に印刷されるページに分割します。
 

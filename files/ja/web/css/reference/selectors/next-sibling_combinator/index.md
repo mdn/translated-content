@@ -56,4 +56,4 @@ li:first-of-type + li {
 
 ## 関連情報
 
-- [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)
+- [後続兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

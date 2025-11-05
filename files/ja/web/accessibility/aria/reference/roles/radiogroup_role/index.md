@@ -57,7 +57,7 @@ HTML のネイティブ入力ラジオボタンである [`<input type="radio">`
 
 ### 必要な CSS 機能
 
-チェックされたラジオボタンのチェック状態をスタイル設定するには、`[aria-checked="true"]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用します。
+チェックされたラジオボタンのチェック状態をスタイル設定するには、`[aria-checked="true"]` [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用します。
 
 視覚的なキーボードフォーカスとホバーのスタイル設定には、CSS の {{CSSXRef(':hover')}} と {{CSSXRef(':focus')}} 疑似クラスを使用します。フォーカスとホバー効果は、どのオプションが選択されているかを認識しやすくし、ラベルまたはボタンのいずれかをクリックするとラジオボタンが有効化されることを示すために、ラジオボタンとラベルの両方を包含すべきです。
 

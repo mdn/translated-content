@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 679f5893a4734fd136b80140e13262422d76b123
 ---
 
-**`::marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、リスト項目の箇条書き記号ボックス（ふつうは黒丸や番号が入ったもの）を選択します。これは [`display: list-item`](/ja/docs/Web/CSS/Reference/Properties/display) が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。
+**`::marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、リスト項目の箇条書き記号ボックス（ふつうは黒丸や番号が入ったもの）を選択します。これは [`display: list-item`](/ja/docs/Web/CSS/Reference/Properties/display) が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。
 
 {{InteractiveExample("CSS デモ: ::marker", "tabbed-shorter")}}
 

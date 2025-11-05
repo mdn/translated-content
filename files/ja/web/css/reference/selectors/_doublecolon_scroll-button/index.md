@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::scroll-button()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}のスクロールをコントロールするためのボタンを表します。これらは、 {{cssxref("content")}} 値が `none` 以外の場合に、スクロールコンテナー上に生成されます。スクロールの方向は、引数の値によって決まります。
+**`::scroll-button()`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、{{glossary("scroll container", "スクロールコンテナー")}}のスクロールをコントロールするためのボタンを表します。これらは、 {{cssxref("content")}} 値が `none` 以外の場合に、スクロールコンテナー上に生成されます。スクロールの方向は、引数の値によって決まります。
 
 ## 構文
 

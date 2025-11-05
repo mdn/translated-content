@@ -20,7 +20,7 @@ button:hover {
 擬似クラスにより、文書ツリーのコンテンツに関するものだけでなく、閲覧履歴（例えば {{CSSxRef(":visited")}}）、内容物の状態（例えばフォーム要素における {{CSSxRef(":checked")}}）、マウスポインターの位置（例えばマウスポインターが要素上にあるかを知ることができる {{CSSxRef(":hover")}}）といった外的要因との関係についてスタイルを適用することができるようになります。
 
 > [!NOTE]
-> 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
+> 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
 
 ## 表示状態擬似クラス
 
@@ -168,15 +168,15 @@ button:hover {
 
 ## 関数擬似クラス
 
-[セレクターリスト](/ja/docs/Web/CSS/Selector_list#セレクターリスト)または[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容なセレクターリスト)を引数として受け取る擬似クラスです。
+[セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#セレクターリスト)または[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)を引数として受け取る擬似クラスです。
 
-- [`:is()`](/ja/docs/Web/CSS/:is)
+- [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is)
   - : matches-any 擬似クラスは、指定されたリストのセレクターのどれかに一致する要素に一致します。リストは寛容です。
-- [`:not()`](/ja/docs/Web/CSS/:not)
+- [`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not)
   - : 否定 (matches-none) 擬似クラスは、引数で表されない要素を表します。
-- [`:where()`](/ja/docs/Web/CSS/:where)
+- [`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where)
   - : 詳細度を調整する擬似クラスは、指定されたリストのセレクターのいずれかに一致する要素であれば、詳細度の重みを追加することなく照合します。リストは寛容です。
-- [`:has()`](/ja/docs/Web/CSS/:has)
+- [`:has()`](/ja/docs/Web/CSS/Reference/Selectors/:has)
   - : 関係擬似クラスは、付属の要素に対してアンカーを付けたときに、相対セレクターのどれかが一致する場合に要素を表します。
 
 ## 構文
@@ -319,4 +319,4 @@ W
 
 ## 関連情報
 
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

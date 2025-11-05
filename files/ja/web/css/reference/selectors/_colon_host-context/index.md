@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-**`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、シャドウホスト（シャドウルートを保有する要素）とその DOM 上の祖先のセレクターに基づいて、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内の要素のスタイルを別々に設定することができます。
+**`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、シャドウホスト（シャドウルートを保有する要素）とその DOM 上の祖先のセレクターに基づいて、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内の要素のスタイルを別々に設定することができます。
 
 通常、シャドウ DOM 内の要素は、その外部の DOM から分離されています。`:host-context()` を使用すると、このシャドウ DOM の「外側を覗き見」して、要素の親要素のいずれかが特定の CSS セレクターと一致するかどうかを確認することができます。例えば、`<body>` に `.dark-theme` クラスが適用されている場合、シャドウルート内の要素に別のテキストの色を適用することができます。
 
@@ -19,7 +19,7 @@ l10n:
 > [!NOTE]
 > これは、シャドウ DOM の外で使用しても効果はありません。
 
-`:host-context()` の[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)は、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)の詳細度と、関数の引数として渡されたセレクターの詳細度の合計です。
+`:host-context()` の[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)は、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)の詳細度と、関数の引数として渡されたセレクターの詳細度の合計です。
 
 {{InteractiveExample("CSS デモ: :host-context()", "tabbed-shorter")}}
 

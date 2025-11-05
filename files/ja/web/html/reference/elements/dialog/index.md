@@ -440,7 +440,7 @@ CSS トランジションで `<dialog>` をアニメーションさせる場合�
 
 この CSS では、`@starting-style` ブロックを記述して、`opacity` および `transform` プロパティのトランジション開始時のスタイル、`dialog:open` 状態のトランジション終了時のスタイル、`<dialog>` が表示された後に元の状態に戻る際の既定の `dialog` 状態のスタイルを定義します。注意してほしいのは、 `<dialog>` の `transition` リストには、これらのプロパティだけでなく、`display` と `overlay` プロパティも含まれ、それぞれに `allow-discrete` が設定されていることです。
 
-また、開いたときに現れる `<dialog>` の背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog:open::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
+また、開いたときに現れる `<dialog>` の背後に現れる [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) の {{cssxref("background-color")}} プロパティに開始時のスタイル値を設定し、素敵な暗転アニメーションを指定しました。 `dialog:open::backdrop` セレクターは、ダイアログが開いているときに、`<dialog>` 要素の背景のみを選択します。
 
 ```css
 /* 開いた状態のダイアログ */

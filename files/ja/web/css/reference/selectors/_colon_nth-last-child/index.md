@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:nth-last-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループにおける末尾からの位置に基づいて選択します。
+**`:nth-last-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、兄弟要素のグループにおける末尾からの位置に基づいて選択します。
 
 {{InteractiveExample("CSS デモ: :nth-last-child", "tabbed-shorter")}}
 
@@ -162,7 +162,7 @@ tr:nth-last-child(2) {
 
 ### 数量クエリー
 
-「数量クエリー」は、要素が存在する数に応じてスタイル付けします。この例では、リストの中に項目が3つ以上ある場合にリスト項目が赤に変わります。これは `nth-last-child` 擬似クラスと [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)の機能を組み合わせることで実現できます。
+「数量クエリー」は、要素が存在する数に応じてスタイル付けします。この例では、リストの中に項目が3つ以上ある場合にリスト項目が赤に変わります。これは `nth-last-child` 擬似クラスと [後続兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)の機能を組み合わせることで実現できます。
 
 #### HTML
 

@@ -13,7 +13,7 @@ l10n:
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) を参照してください。
 
-**`:blank`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、空のユーザー入力要素 (例えば {{HTMLElement("input")}} や {{HTMLElement("textarea")}}) を選択します。
+**`:blank`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、空のユーザー入力要素 (例えば {{HTMLElement("input")}} や {{HTMLElement("textarea")}}) を選択します。
 
 ## 構文
 

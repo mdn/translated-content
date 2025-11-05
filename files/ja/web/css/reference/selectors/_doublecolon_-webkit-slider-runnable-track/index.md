@@ -6,7 +6,7 @@ original_slug: Web/CSS/::-webkit-slider-runnable-track
 
 {{Non-standard_Header}}
 
-**`::-webkit-slider-runnable-track`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で {{HTMLElement("input/range", '&lt;input type="range"&gt;')}} の「トラック」 (インジケータがスライドする溝) を表します。
+**`::-webkit-slider-runnable-track`** は CSS の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で {{HTMLElement("input/range", '&lt;input type="range"&gt;')}} の「トラック」 (インジケータがスライドする溝) を表します。
 
 ## 構文
 

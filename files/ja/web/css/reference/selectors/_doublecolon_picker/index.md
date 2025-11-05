@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-`::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
+`::picker()` は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、要素のピッカー部分を対象とします。例えば、[カスタマイズ可能な select 要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)のドロップダウンピッカーなどが該当します。
 
 ## 構文
 
