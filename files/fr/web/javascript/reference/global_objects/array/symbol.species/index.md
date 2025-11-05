@@ -59,21 +59,21 @@ arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, leng
 
 ## Exemples
 
-### Species in ordinary objects
+### `Species` dans les objets ordinaires
 
-The `[Symbol.species]` property returns the default constructor function, which is the `Array` constructor for `Array`.
+La propriété `[Symbol.species]` retourne la fonction constructeur par défaut, qui est le constructeur `Array` pour `Array`.
 
 ```js
 Array[Symbol.species]; // [Function: Array]
 ```
 
-### Species in derived objects
+### `Species` dans les objets dérivés
 
-In an instance of a custom `Array` subclass, such as `MyArray`, the `MyArray` species is the `MyArray` constructor. However, you might want to overwrite this, in order to return parent `Array` objects in your derived class methods:
+Dans une instance d'une sous-classe personnalisée de `Array`, comme `MyArray`, le species de `MyArray` est le constructeur `MyArray`. Cependant, vous pouvez vouloir le redéfinir afin de retourner des objets `Array` parents dans les méthodes de votre classe dérivée&nbsp;:
 
 ```js
 class MyArray extends Array {
-  // Overwrite MyArray species to the parent Array constructor
+  // Redéfinit le species de MyArrayArray vers le constructeur parent Array
   static get [Symbol.species]() {
     return Array;
   }
