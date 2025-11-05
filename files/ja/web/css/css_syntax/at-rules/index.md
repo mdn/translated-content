@@ -1,6 +1,7 @@
 ---
 title: アットルール
-slug: Web/CSS/CSS_syntax/At-rule
+slug: Web/CSS/CSS_syntax/At-rules
+original_slug: Web/CSS/CSS_syntax/At-rule
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
