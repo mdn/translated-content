@@ -90,7 +90,7 @@ La propriété `all` est définie avec un des mots-clés globaux de CSS. On note
     - Si la règle provient [d'une feuille de style de l'utilisatrice ou de l'utilisateur](/fr/docs/Web/CSS/CSS_cascade/Cascade#feuilles_de_style_de_lutilisatrice_ou_lutilisateur), `revert` remonte [la cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) au niveau de l'agent utilisateur afin que [les valeurs définies](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) soient calculées comme si aucune règle utilisateur ou du site n'avait été spécifiée pour l'élément.
     - Si la règle provient [de l'agent utilisateur](/fr/docs/Web/CSS/CSS_cascade/Cascade#feuilles_de_style_de_lagent_utilisateur), `revert` agira comme `unset`.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - : Indique que toutes les propriétés de l'élément devraient revenir à [une couche de cascade](/fr/docs/Web/CSS/@layer) précédente existante. S'il n'existe pas de telle couche, les propriétés de l'élément reviendront à la règle correspondante existante de la couche courante ou d'une [origine](/fr/docs/Glossary/Style_origin) précédente.
+  - : Indique que toutes les propriétés de l'élément devraient revenir à [une couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente existante. S'il n'existe pas de telle couche, les propriétés de l'élément reviendront à la règle correspondante existante de la couche courante ou d'une [origine](/fr/docs/Glossary/Style_origin) précédente.
 
 ## Définition formelle
 

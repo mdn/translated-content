@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`inherits`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@property")}} contrôle si la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée hérite ou non de sa valeur par défaut.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`inherits`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@property")}} contrôle si la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée hérite ou non de sa valeur par défaut.
 Ce descripteur est obligatoire&nbsp;: s'il est absent ou invalide, la règle `@property` entière est ignorée.
 
 ## Syntaxe

@@ -63,4 +63,4 @@ Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref
 ## Voir aussi
 
 - [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
-- [La caractéristique média aspect-ratio](/fr/docs/Web/CSS/@media/aspect-ratio)
+- [La caractéristique média aspect-ratio](/fr/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio)

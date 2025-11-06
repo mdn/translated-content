@@ -343,7 +343,7 @@ La page devrait s'afficher comme ceci :
 
 e
 
-Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/CSS_syntax/At-rule) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
+Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/CSS_syntax/At-rules) (prononcer "at-rules"). Ce sont des règles spéciales dictant un comportement CSS. Certaines `@rules` simples sont composées d'un nom et d'une valeur. Par exemple, pour importer une feuille de style additionnelle dans le CSS principal on utilisera `@import` :
 
 ```css
 @import "styles2.css";

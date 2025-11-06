@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@counter-style`** vous permet d'étendre les styles de liste prédéfinis et de définir vos propres styles de compteurs qui ne font pas partie de l'ensemble des styles prédéfinis. La règle `@counter-style` contient des [descripteurs](#descripteurs) définissant comment la valeur du compteur est convertie en une représentation sous forme de chaîne de caractères.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@counter-style`** vous permet d'étendre les styles de liste prédéfinis et de définir vos propres styles de compteurs qui ne font pas partie de l'ensemble des styles prédéfinis. La règle `@counter-style` contient des [descripteurs](#descripteurs) définissant comment la valeur du compteur est convertie en une représentation sous forme de chaîne de caractères.
 
 Bien que CSS propose de nombreux styles de compteurs prédéfinis, la règle `@counter-style` offre une méthode ouverte pour créer des compteurs personnalisés. Cette règle répond aux besoins typographiques du monde entier en permettant aux auteur·ice·s de définir leurs propres styles de compteurs lorsque les styles prédéfinis ne conviennent pas.
 

@@ -31,7 +31,7 @@ Ces types incluent des mots-clés et des identifiants ainsi que des chaînes de 
     - {{CSSXref("revert")}}
       - Rétablit la cascade à la valeur de l'origine antérieure.
     - {{CSSXref("revert-layer")}}
-      - Rétablit la cascade à la valeur de la [couche de cascade](/fr/docs/Web/CSS/@layer) antérieure.
+      - Rétablit la cascade à la valeur de la [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) antérieure.
     - {{CSSXref("unset")}}
       - Agit comme `inherit` ou `initial` en fonction de la propriété héritée ou non.
 - {{cssxref("&lt;custom-ident&gt;")}}

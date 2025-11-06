@@ -41,7 +41,7 @@ Ce descripteur accepte une liste de _tuples additifs_ (ensemble d'éléments) s�
 - {{cssxref("integer")}}
   - : Un entier positif ou nul qui indique le poids entier associé au symbole du tuple.
 
-- [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#symbol)
+- [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
   - : Spécifie le symbole du compteur à utiliser pour la valeur de poids définie par l'entier associé du tuple.
 
 > [!NOTE]

@@ -102,7 +102,7 @@ Cependant, l'absence de préchargement n'empêche pas l'image `image/webp` d'êt
 
 ## Récupération de l'activation du <i lang="en">CORS</i>
 
-Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/Guides/CORS) (partage des ressources entre origines multiples), comme par exemple {{DOMxRef("Window.fetch", "fetch()")}}, {{DOMxRef("XMLHttpRequest")}} ou [fonts](/fr/docs/Web/CSS/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/link#crossorigin) sur l'élément {{HTMLElement("link")}}. L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
+Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/Guides/CORS) (partage des ressources entre origines multiples), comme par exemple {{DOMxRef("Window.fetch", "fetch()")}}, {{DOMxRef("XMLHttpRequest")}} ou [fonts](/fr/docs/Web/CSS/Reference/At-rules/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/link#crossorigin) sur l'élément {{HTMLElement("link")}}. L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
 
 Comme mentionné ci-dessus, un cas de figure intéressant est celui qui s'applique aux fichiers de polices. Pour plusieurs raisons, celles-ci doivent être analysées en utilisant le mode anonyme du <i lang="en">CORS</i> (voir cet article en anglais&nbsp;: [<i lang="en">Font fetching requirements</i> <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -137,7 +137,7 @@ En plus de fournir un type MIME avec l'attribut `type`, ce code utilise un attri
 
 ## Inclure des médias
 
-Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
+Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/Reference/At-rules/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
 
 Voici un exemple. Vous pouvez consulter son [code source sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media) ou étudier un [exemple de démonstration <sup>(angl.)</sup>](https://mdn.github.io/html-examples/link-rel-preload/media/)&nbsp;:
 

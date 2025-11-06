@@ -92,7 +92,7 @@ CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de c
 - [`revert`](/fr/docs/Web/CSS/revert)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/@layer) précédente.
+  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente.
 - [`unset`](/fr/docs/Web/CSS/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
 
@@ -242,7 +242,7 @@ Les déclarations conflictuelles seront appliquées dans l'ordre suivant. Celles
 
 ### Ordre des couches de cascade
 
-[Les couches de cascade](/fr/docs/Web/CSS/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
+[Les couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
 
 Lorsqu'on déclare du CSS dans des couches de cascade, la précédence est déterminée par l'ordre de déclaration des couches. Les styles CSS déclarés en dehors des couches sont combinés ensemble, selon leur ordre de déclaration, dans une couche anonyme, agissant comme la dernière couche déclarée. Lorsqu'il y a conflit entre des styles normaux (et pas importants), ce sont les couches ultérieures qui l'emportent sur les couches antérieures. Pour les styles importants (marqués avec `!important`), cet ordre est inversé et ce sont les styles importants des couches antérieures qui l'emportent sur les styles importants des couches ultérieures ou des styles de la couche anonyme. Les styles en incise dans le document l'emportent sur n'importe quel style du site, quelle que soit la couche.
 

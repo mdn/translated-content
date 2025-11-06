@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ee348fc4da928b445f95660fae094269604b1b9c
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`horizontal-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage disposés horizontalement (côte à côte).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`horizontal-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage disposés horizontalement (côte à côte).
 
 En lien avec l'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), la caractéristique `vertical-viewport-segments` permet de créer des conceptions adaptatives qui fonctionnent bien sur les appareils à multiples zones d'affichage — des appareils dont l'écran est divisé en segments logiquement séparés, comme les appareils pliables ou à charnière.
 

@@ -62,4 +62,4 @@ Le schéma de couleurs utilisé dépend des préférences utilisateur·ice, comm
 ## Voir aussi
 
 - La propriété CSS {{CSSxRef("color-scheme")}}
-- La requête média [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme)
+- La requête média [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

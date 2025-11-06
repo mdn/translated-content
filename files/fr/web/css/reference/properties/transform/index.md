@@ -143,7 +143,7 @@ p {
 
 Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessibilité en déclenchant certaines migraines. Si vous devez inclure des animations sur votre site web, vous devez fournir aux utilisateurs une méthode qui leur permette de réduire voire de désactiver les animations sur l'ensemble du site.
 
-À cet égard, on pourra utiliser la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.
+À cet égard, on pourra utiliser la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.
 
 Pour en savoir plus :
 

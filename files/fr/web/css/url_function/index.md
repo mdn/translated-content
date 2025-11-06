@@ -16,7 +16,7 @@ La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/
 Lorsque des URL relatives sont utilisées, elles sont relatives à l'URL de la feuille de style et pas à celle de la page web courante.
 
 La fonction **`url()`** peut être incluse comme valeur pour les propriétés&nbsp;:
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}}, [src](/fr/docs/Web/CSS/@font-face/src) dans le cadre d'un bloc [`@font-face`](/fr/docs/Web/CSS/@font-face) et [@counter-style/`symbol`](/fr/docs/Web/CSS/@counter-style/symbols)
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}}, [src](/fr/docs/Web/CSS/Reference/At-rules/@font-face/src) dans le cadre d'un bloc [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [@counter-style/`symbol`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
 
 ## Syntaxe
 
