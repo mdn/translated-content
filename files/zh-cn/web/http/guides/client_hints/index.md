@@ -94,7 +94,7 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ### 用户首选项媒体特性客户端提示
 
-用户首选项媒体特性客户端提示允许服务器基于用户代理对 [CSS 媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)（例如配色方案或者减少动态效果）的首选项来改变响应。标头包括：{{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}、{{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}。
+用户首选项媒体特性客户端提示允许服务器基于用户代理对 [CSS 媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性)（例如配色方案或者减少动态效果）的首选项来改变响应。标头包括：{{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}、{{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}}。
 
 ### 设备客户端提示
 

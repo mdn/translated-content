@@ -57,7 +57,7 @@ transition: all 1s ease-out;
 }
 ```
 
-Transitions 讓你可以定義元件在兩個狀態之間切換的轉場效果。兩個不同狀態可以使用[虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)定義，像是{{cssxref(":hover")}} 或 {{cssxref(":active")}} 亦或是 使用 JavaScript 設定的狀態變化。
+Transitions 讓你可以定義元件在兩個狀態之間切換的轉場效果。兩個不同狀態可以使用[虛擬類別](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes)定義，像是{{cssxref(":hover")}} 或 {{cssxref(":active")}} 亦或是 使用 JavaScript 設定的狀態變化。
 
 ## 語法
 

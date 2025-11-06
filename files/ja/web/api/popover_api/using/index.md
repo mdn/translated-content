@@ -340,7 +340,7 @@ CSSのトランジションでポップオーバーをアニメーションさ�
 
 #### CSS
 
-トランジションさせたいポップオーバーのプロパティは、 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。ポップオーバーが水平方向に拡大または縮小しながらフェードインまたはフェードアウトするようにします。これを実現するために、これらのプロパティの開始状態をポップオーバー要素の非表示状態（`[popover]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)で選択）に設定し、終了状態をポップオーバーの表示状態（[`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスで選択）に設定します。また、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを使用して、ポップオーバーが表示されたり非表示になったりするときにアニメーションするプロパティとアニメーションの再生時間を定義します。
+トランジションさせたいポップオーバーのプロパティは、 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。ポップオーバーが水平方向に拡大または縮小しながらフェードインまたはフェードアウトするようにします。これを実現するために、これらのプロパティの開始状態をポップオーバー要素の非表示状態（`[popover]` [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)で選択）に設定し、終了状態をポップオーバーの表示状態（[`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスで選択）に設定します。また、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを使用して、ポップオーバーが表示されたり非表示になったりするときにアニメーションするプロパティとアニメーションの再生時間を定義します。
 
 ```css
 html {
@@ -413,7 +413,7 @@ html {
 - トランジションする要素のリストに `overlay` を追加し、アニメーションが完了するまで最上位レイヤーからの要素の除去が延期されるようにします。この効果は、このような基本的なアニメーションでは気にならないかもしれませんが、より複雑なケースでは、このプロパティを省略すると、トランジションの完了前に要素がオーバーレイから除去されてしまう可能性があります。
 - 上記のトランジションの両方のプロパティに `allow-discrete` を設定し、[離散トランジション](/ja/docs/Web/CSS/CSS_animated_properties#離散)ができるようにします。
 
-また、開くためのポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/::backdrop) にトランジションを記述子、暗くなるアニメーションを指定していることに注意してください。
+また、開くためのポップオーバーの背後に現れる [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) にトランジションを記述子、暗くなるアニメーションを指定していることに注意してください。
 
 #### 結果
 

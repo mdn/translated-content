@@ -87,7 +87,7 @@ text-shadow: unset;
 
 複数の影が与えられた場合は、影は手前から奥に向けて適用され、最初に指定された影が一番上になります。
 
-このプロパティは {{cssxref("::first-line")}} および {{cssxref("::first-letter")}} の両方の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)に適用されます。
+このプロパティは {{cssxref("::first-line")}} および {{cssxref("::first-letter")}} の両方の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)に適用されます。
 
 ### 値
 

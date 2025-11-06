@@ -3,11 +3,11 @@ title: 使用特性查询
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
-**特性查询** 使用 CSS 的 at 规则 [@supports](/zh-CN/docs/Web/CSS/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。
+**特性查询** 使用 CSS 的 at 规则 [@supports](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。
 
 ## 语法
 
-CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/) 标准的一部分，这一标准也包含了媒体查询 [@media](/zh-CN/docs/Web/CSS/@media) 规则；在你使用特性查询的时候，你会发现它们的行为方式与媒体查询类似。不同点在于媒体查询是测试网页运行的环境相关内容，但特性查询测试的是浏览器对 CSS 特性的支持。
+CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/) 标准的一部分，这一标准也包含了媒体查询 [@media](/zh-CN/docs/Web/CSS/Reference/At-rules/@media) 规则；在你使用特性查询的时候，你会发现它们的行为方式与媒体查询类似。不同点在于媒体查询是测试网页运行的环境相关内容，但特性查询测试的是浏览器对 CSS 特性的支持。
 
 特性查询由 `@supports` 规则组成，紧跟着是属性名以及你想测试的属性值。你不能测试一个单单的属性名比如 `display`；规则需要你提供一个属性名以及一个值：
 

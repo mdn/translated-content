@@ -50,7 +50,7 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 
 ### 基于根元素字体的相对长度单位
 
-根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
+根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/Reference/Selectors/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
 
 - `rcap`
   - : 表示根元素字体（{{Cssxref("font")}}）的“大写字高”（即大写字母的标称高度）。

@@ -53,7 +53,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 如果使用相对 URL，它是相对于样式表的 URL（而不是相对于网页的 URL）。
 
-**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/@font-face/src)，以及 [@counter-style/`symbol`](/zh-CN/docs/Web/CSS/@counter-style/symbols)。
+**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/src)，以及 [@counter-style/`symbol`](/zh-CN/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)。
 
 ## 语法
 

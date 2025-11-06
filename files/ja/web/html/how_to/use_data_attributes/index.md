@@ -83,7 +83,7 @@ article::before {
 }
 ```
 
-CSS の[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用して、次のようにデータに応じてスタイルを変更することもできます。
+CSS の[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)を使用して、次のようにデータに応じてスタイルを変更することもできます。
 
 ```css
 article[data-columns="3"] {

@@ -51,7 +51,7 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 - {{Glossary("Shadow tree", "シャドウツリー")}} （用語集の用語）
 - {{Glossary("DOM")}} （用語集の用語）
 - [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)（用語）
-- [セレクターリスト](/ja/docs/Web/CSS/Selector_list)（用語）
+- [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)（用語）
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)インターフェイス、プロパティ、メソッド
   - {{DOMxRef("CustomElementRegistry")}} インターフェイス

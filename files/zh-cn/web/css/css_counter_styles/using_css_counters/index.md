@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 
 ## 使用计数器
 
-在使用计数器之前，必须使用 {{cssxref("counter-reset")}} 属性初始化计数器的值。计数器可通过 {{cssxref("counter-increment")}} 属性指定其值为递增或递减。当前计数器的值可通过 {{cssxref("counter", "counter()")}} 或 {{cssxref("counters", "counters()")}} 函数显示出来，这通常会在[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的 {{CSSxRef("content")}} 属性中使用。
+在使用计数器之前，必须使用 {{cssxref("counter-reset")}} 属性初始化计数器的值。计数器可通过 {{cssxref("counter-increment")}} 属性指定其值为递增或递减。当前计数器的值可通过 {{cssxref("counter", "counter()")}} 或 {{cssxref("counters", "counters()")}} 函数显示出来，这通常会在[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)的 {{CSSxRef("content")}} 属性中使用。
 
 请注意，计数器只能在可以生成盒子的元素中使用（设置或重设值、递增）。例如，如果一个元素被设置为了 `display: none`，那么在这个元素上的任何计数器操作都会被忽略。
 

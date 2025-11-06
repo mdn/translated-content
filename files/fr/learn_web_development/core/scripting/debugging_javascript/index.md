@@ -244,7 +244,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-On pourra écrire un test analogue pour la prise en charge d'une fonctionnalité CSS, en testant l'existence de [`element.style.propriete`](/fr/docs/Web/API/HTMLElement/style) (par exemple `paragraph.style.transform !== undefined`). Si vous souhaitez appliquer des styles selon la prise en charge d'une fonctionnalité CSS, vous pouvez directement utiliser la règle @ [`@supports`](/fr/docs/Web/CSS/@supports). Ainsi, si on souhaite déterminer si le navigateur courant prend en charge les requêtes de conteneur, on pourra écrire&nbsp;:
+On pourra écrire un test analogue pour la prise en charge d'une fonctionnalité CSS, en testant l'existence de [`element.style.propriete`](/fr/docs/Web/API/HTMLElement/style) (par exemple `paragraph.style.transform !== undefined`). Si vous souhaitez appliquer des styles selon la prise en charge d'une fonctionnalité CSS, vous pouvez directement utiliser la règle @ [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports). Ainsi, si on souhaite déterminer si le navigateur courant prend en charge les requêtes de conteneur, on pourra écrire&nbsp;:
 
 ```css
 @supports (container-type: inline-size) {

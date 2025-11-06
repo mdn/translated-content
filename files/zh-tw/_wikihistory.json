@@ -3677,51 +3677,6 @@
       "BobChao"
     ]
   },
-  "Web/CSS/::first-letter": {
-    "modified": "2019-03-23T22:31:14.643Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Web/CSS/:first-child": {
-    "modified": "2019-03-23T22:28:52.270Z",
-    "contributors": [
-      "mgrn"
-    ]
-  },
-  "Web/CSS/:first-of-type": {
-    "modified": "2019-03-23T22:10:08.926Z",
-    "contributors": [
-      "nyngwang"
-    ]
-  },
-  "Web/CSS/:lang": {
-    "modified": "2020-10-15T22:13:50.122Z",
-    "contributors": [
-      "oooooo"
-    ]
-  },
-  "Web/CSS/:target": {
-    "modified": "2019-03-23T22:49:40.294Z",
-    "contributors": [
-      "alk03073135"
-    ]
-  },
-  "Web/CSS/@font-face": {
-    "modified": "2019-03-23T23:28:16.382Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "carl_tw"
-    ]
-  },
-  "Web/CSS/@media/height": {
-    "modified": "2019-03-23T22:21:21.278Z",
-    "contributors": [
-      "MashKao",
-      "yvonne6344"
-    ]
-  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2019-03-24T00:13:58.706Z",
     "contributors": [
@@ -3869,17 +3824,19 @@
       "BobChao"
     ]
   },
-  "Web/CSS/Descendant_combinator": {
-    "modified": "2019-03-23T22:47:36.182Z",
+  "Web/CSS/Reference/At-rules/@font-face": {
+    "modified": "2019-03-23T23:28:16.382Z",
     "contributors": [
-      "ExE-Boss",
-      "changbenny"
+      "fscholz",
+      "teoli",
+      "carl_tw"
     ]
   },
-  "Web/CSS/Pseudo-classes": {
-    "modified": "2019-03-23T22:25:22.712Z",
+  "Web/CSS/Reference/At-rules/@media/height": {
+    "modified": "2019-03-23T22:21:21.278Z",
     "contributors": [
-      "iigmir"
+      "MashKao",
+      "yvonne6344"
     ]
   },
   "Web/CSS/Reference/Properties/animation-fill-mode": {
@@ -4007,7 +3964,50 @@
       "yutzuch"
     ]
   },
-  "Web/CSS/Type_selectors": {
+  "Web/CSS/Reference/Selectors/::first-letter": {
+    "modified": "2019-03-23T22:31:14.643Z",
+    "contributors": [
+      "iigmir"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-child": {
+    "modified": "2019-03-23T22:28:52.270Z",
+    "contributors": [
+      "mgrn"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:first-of-type": {
+    "modified": "2019-03-23T22:10:08.926Z",
+    "contributors": [
+      "nyngwang"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:lang": {
+    "modified": "2020-10-15T22:13:50.122Z",
+    "contributors": [
+      "oooooo"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/:target": {
+    "modified": "2019-03-23T22:49:40.294Z",
+    "contributors": [
+      "alk03073135"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Descendant_combinator": {
+    "modified": "2019-03-23T22:47:36.182Z",
+    "contributors": [
+      "ExE-Boss",
+      "changbenny"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Pseudo-classes": {
+    "modified": "2019-03-23T22:25:22.712Z",
+    "contributors": [
+      "iigmir"
+    ]
+  },
+  "Web/CSS/Reference/Selectors/Type_selectors": {
     "modified": "2020-10-15T22:16:41.850Z",
     "contributors": [
       "a1178961372",

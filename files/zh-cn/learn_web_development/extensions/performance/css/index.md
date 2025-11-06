@@ -82,7 +82,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
   将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)，以后需要时就很容易覆盖样式。
 
-- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
+- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
 
   ```css
   /* 选择 <body> 元素内的所有元素 */
@@ -123,7 +123,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 动画可以改善感知性能，使界面更加流畅，让用户在等待页面加载时感觉到进展（例如加载旋转图标）。然而，更大更多的动画自然需要更多的处理能力来处理，这可能会降低性能。
 
-最简单的建议是减少所有不必要的动画。你还可以为用户提供一个控件/站点选项，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。你还可以使用 JavaScript 来控制页面是否应用动画。还有一个名为 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion) 的媒体查询，可以根据用户对动画的操作系统级偏好选择性地提供动画样式。
+最简单的建议是减少所有不必要的动画。你还可以为用户提供一个控件/站点选项，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。你还可以使用 JavaScript 来控制页面是否应用动画。还有一个名为 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) 的媒体查询，可以根据用户对动画的操作系统级偏好选择性地提供动画样式。
 
 对于必要的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种直接使用 JavaScript 连接到 CSS 动画的方法）。
 
@@ -196,7 +196,7 @@ CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对�
 
 ### 字体加载
 
-请记住，字体仅在使用 [`font-family`](/zh-CN/docs/Web/CSS/Reference/Properties/font-family) 属性应用于元素时才会加载，而不是在首次使用 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) at 规则引用时加载：
+请记住，字体仅在使用 [`font-family`](/zh-CN/docs/Web/CSS/Reference/Properties/font-family) 属性应用于元素时才会加载，而不是在首次使用 [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) at 规则引用时加载：
 
 ```css
 /* 字体在此处没有加载 */
@@ -235,7 +235,7 @@ h3 {
 
 在选择用于正文的字体时，很难确定将在其中使用的字形，特别是如果你处理的是用户生成的内容和/或涉及多种语言的内容。
 
-然而，如果你知道你将使用特定的字形集（例如，仅用于标题或特定标点符号字符的字形），你可以限制浏览器需要下载的字形数量。这可以通过创建仅包含所需子集的字体文件来实现，这个过程叫做[子集化](https://fonts.google.com/knowledge/glossary/subsetting)。然后可以使用 `@font-face` 的 [`unicode-range`](/zh-CN/docs/Web/CSS/@font-face/unicode-range) 描述符来指定何时使用你的子集字体。如果页面中没有使用该范围内的任何字符，则不会下载该字体。
+然而，如果你知道你将使用特定的字形集（例如，仅用于标题或特定标点符号字符的字形），你可以限制浏览器需要下载的字形数量。这可以通过创建仅包含所需子集的字体文件来实现，这个过程叫做[子集化](https://fonts.google.com/knowledge/glossary/subsetting)。然后可以使用 `@font-face` 的 [`unicode-range`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range) 描述符来指定何时使用你的子集字体。如果页面中没有使用该范围内的任何字符，则不会下载该字体。
 
 ```css
 @font-face {
@@ -247,7 +247,7 @@ h3 {
 
 ### 使用 `font-display` 描述符定义字体的显示行为
 
-应用于 `@font-face` at 规则的 [`font-display`](/zh-CN/docs/Web/CSS/@font-face/font-display) 描述符定义了浏览器加载和显示字体文件的方式，使得文字在字体正在加载或加载失败时都能以备用字体显示。这通过使文本可见而不是显示空白屏幕来提高性能，但代价是出现未样式化文本的闪烁。
+应用于 `@font-face` at 规则的 [`font-display`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/font-display) 描述符定义了浏览器加载和显示字体文件的方式，使得文字在字体正在加载或加载失败时都能以备用字体显示。这通过使文本可见而不是显示空白屏幕来提高性能，但代价是出现未样式化文本的闪烁。
 
 ```css
 @font-face {

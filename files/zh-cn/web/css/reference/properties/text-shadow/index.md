@@ -82,7 +82,7 @@ text-shadow: unset;
 
 当所给的阴影大于一个时，阴影应用的顺序为从前到后，第一个指定的阴影在顶部。
 
-这个属性同时适用于 {{cssxref("::first-line")}} 以及 {{cssxref("::first-letter")}} [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
+这个属性同时适用于 {{cssxref("::first-line")}} 以及 {{cssxref("::first-letter")}} [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。
 
 ### 值
 

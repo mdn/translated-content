@@ -127,7 +127,7 @@ function toggleRadius() {
 
 ### 示例：Filtering
 
-这个例子演示了如何使用 SVG 对 HTML 内容进行过滤。它建立了几个过滤器，这些过滤器与 CSS 一起作用于正常和鼠标悬停状态 [hover](/zh-CN/docs/Web/CSS/:hover) 下的三个元素。
+这个例子演示了如何使用 SVG 对 HTML 内容进行过滤。它建立了几个过滤器，这些过滤器与 CSS 一起作用于正常和鼠标悬停状态 [hover](/zh-CN/docs/Web/CSS/Reference/Selectors/:hover) 下的三个元素。
 
 ```html
 <p class="target" style="background: lime;">

@@ -92,4 +92,4 @@ ten dpi   Incorrect : seules des expressions numériques sont acceptées.
 ## Voir aussi
 
 - [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
-- [La caractéristique média `resolution`](/fr/docs/Web/CSS/@media/resolution)
+- [La caractéristique média `resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution)

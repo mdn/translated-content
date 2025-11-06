@@ -15,14 +15,14 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 
 ### 結合子とセパレーター
 
-- `+` （[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)）
-- `>` （[子結合子](/ja/docs/Web/CSS/Child_combinator)）
-- `~` （[後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)）
-- " " （[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)）
-- `|` （[名前空間セパレーター](/ja/docs/Web/CSS/Namespace_separator)）
-- `,` （[セレクターリスト](/ja/docs/Web/CSS/Selector_list)）
+- `+` （[次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)）
+- `>` （[子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator)）
+- `~` （[後続兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)）
+- " " （[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)）
+- `|` （[名前空間セパレーター](/ja/docs/Web/CSS/Reference/Selectors/Namespace_separator)）
+- `,` （[セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)）
 
-CSS セレクターモジュールでは、[列結合子](/ja/docs/Web/CSS/Column_combinator) (`||`) も導入されています。現在、この機能に対応しているブラウザーはありません。
+CSS セレクターモジュールでは、[列結合子](/ja/docs/Web/CSS/Reference/Selectors/Column_combinator) (`||`) も導入されています。現在、この機能に対応しているブラウザーはありません。
 
 ### セレクター
 
@@ -88,18 +88,18 @@ CSS セレクターモジュールでは、[列結合子](/ja/docs/Web/CSS/Colum
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
 - [`:-webkit-` 擬似クラス](/ja/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
-- [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
-- [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)
-- [ID セレクター](/ja/docs/Web/CSS/ID_selectors)
-- [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)
-- [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
+- [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+- [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)
+- [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)
+- [要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)
+- [全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
 CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":current")}}、{{CSSXref(":local-link")}}、{{CSSXref(":target-within")}} の各擬似クラスも導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
 
 ## 用語
 
 - {{glossary("Pseudo-class", "擬似クラス")}}（用語集の用語）
-- [関数記法の擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
+- [関数記法の擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#functional_pseudo-classes)
 - [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
 - [単純セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#単純セレクター)
 - [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)
@@ -115,7 +115,7 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
   - : CSS セレクターの構造と、CSS セレクターモジュールで紹介されている用語について、「単純なセレクター」から「寛容な相対セレクターリスト」まで解説しています。
 
-- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
+- [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - : 擬似クラスは、文書ツリーには含まれない状態情報に基づいて要素を選択できるようにするセレクターの一覧で、さまざまな CSS モジュールや HTML で定義されています。
 
 - [セレクターでの `:target` 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
@@ -137,7 +137,7 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 
 - {{CSSXref(":state","state()")}} 擬似クラス
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュール
-  - : [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
+  - : [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
   - {{CSSXref(":host")}} 擬似クラス
   - {{CSSXref(":host_function", ":host()")}} 擬似クラス
@@ -179,7 +179,7 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 - [CSS 位置指定レイアウトモジュール](/ja/docs/Web/CSS/CSS_positioned_layout)
   - {{CSSxRef("::backdrop")}}
 
-- その他の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
+- その他の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - {{CSSxRef("::cue")}}
 
 - {{CSSXref("@namespace")}} アットルール

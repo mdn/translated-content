@@ -150,7 +150,7 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-Cet exemple utilise [`Element.matches()`](/fr/docs/Web/API/Element/matches) pour déterminer programmatiquement si un élément <i lang="en">popover</i> est affiché ou non. La pseudo-classe [`:popover-open`](/fr/docs/Web/CSS/:popover-open) ne correspond qu'aux <i lang="en">popover</i> ouverts. C'est important pour éviter les erreurs qui seront déclenchées si vous essayez d'afficher un <i lang="en">popover</i> déjà affiché ou de masquer un <i lang="en">popover</i> déjà masqué.
+Cet exemple utilise [`Element.matches()`](/fr/docs/Web/API/Element/matches) pour déterminer programmatiquement si un élément <i lang="en">popover</i> est affiché ou non. La pseudo-classe [`:popover-open`](/fr/docs/Web/CSS/Reference/Selectors/:popover-open) ne correspond qu'aux <i lang="en">popover</i> ouverts. C'est important pour éviter les erreurs qui seront déclenchées si vous essayez d'afficher un <i lang="en">popover</i> déjà affiché ou de masquer un <i lang="en">popover</i> déjà masqué.
 
 Une alternative consiste à programmer une seule touche pour afficher _et_ masquer le <i lang="en">popover</i>, comme ceci&nbsp;:
 
@@ -269,7 +269,7 @@ Allez voir [notre exemple de menu imbriqué](https://mdn.github.io/dom-examples/
 
 L'API Popover dispose de quelques fonctionnalités CSS qu'il est bon de connaître.
 
-Pour ce qui est d'appliquer un style aux <i lang="en">popovers</i> eux-mêmes, vous pouvez les cibler avec le sélecteur d'attribut (`[popover]`) ou vous pouvez cibler les popovers ouverts avec la pseudo-classe [`:popover-open`](/fr/docs/Web/CSS/:popover-open).
+Pour ce qui est d'appliquer un style aux <i lang="en">popovers</i> eux-mêmes, vous pouvez les cibler avec le sélecteur d'attribut (`[popover]`) ou vous pouvez cibler les popovers ouverts avec la pseudo-classe [`:popover-open`](/fr/docs/Web/CSS/Reference/Selectors/:popover-open).
 
 Dans les premiers exemples que nous avons donnés dans cet article, vous avez peut-être remarqué que les <i lang="en">popovers</i> s'affichaient au milieu de la zone d'affichage (<i lang="en">viewport</i>). Il s'agit du style par défaut, défini via la feuille de style du navigateur&nbsp;:
 
@@ -304,7 +304,7 @@ Pour surcharger le style par défaut et faire apparaître le <i lang="en">popove
 
 Vous pouvez voir un exemple de cette surcharge dans [notre exemple de positionnement de <i lang="en">popover</i>](https://mdn.github.io/dom-examples/popover-api/popover-positioning/) ([code source correspondant](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-positioning)).
 
-Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop) est un élément plein écran placé directement derrière les éléments <i lang="en">popovers</i> dans [la couche supérieure](/fr/docs/Glossary/Top_layer), ce qui permet d'ajouter des effets au contenu de la page derrière les <i lang="en">popovers</i> si nécessaire. Par exemple, vous pouvez vouloir flouter le contenu de la page derrière un <i lang="en">popover</i> pour aider l'utilisatrice ou l'utilisateur à se concentrer sur le contenu du <i lang="en">popover</i>&nbsp;:
+Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop) est un élément plein écran placé directement derrière les éléments <i lang="en">popovers</i> dans [la couche supérieure](/fr/docs/Glossary/Top_layer), ce qui permet d'ajouter des effets au contenu de la page derrière les <i lang="en">popovers</i> si nécessaire. Par exemple, vous pouvez vouloir flouter le contenu de la page derrière un <i lang="en">popover</i> pour aider l'utilisatrice ou l'utilisateur à se concentrer sur le contenu du <i lang="en">popover</i>&nbsp;:
 
 ```css
 ::backdrop {
@@ -328,7 +328,7 @@ Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: n
 
 Quand on anime un <i lang="en">popover</i> à l'aide des transitions CSS, les éléments suivant sont nécessaires&nbsp;:
 
-- Règle @ [`@starting-style`](/fr/docs/Web/CSS/@starting-style) {{experimental_inline}}
+- Règle @ [`@starting-style`](/fr/docs/Web/CSS/Reference/At-rules/@starting-style) {{experimental_inline}}
   - : Définissez un ensemble de valeurs de départ pour les propriétés appliquées au <i lang="en">popover</i> qui vont être la cible de la transformation. Ces valeurs seront utilisées lors de la première transition pour éviter des comportements inattendus. Par défaut, les transitions CSS ne sont possibles que quand une propriété change de valeur sur un élément visible. Elles ne s'appliquent pas lors du premier affichage d'un élément, ou quand `display` passe de `none` à une autre valeur.
 - La propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
   - : Ajoutez `display` à la liste des transitions pour que le <i lang="en">popover</i> garde la valeur `display: block` (ou tout autre valeur visible de `display`) pendant toute la transition pour s'assurer que le contenu du <i lang="en">popover</i> soit visible tout du long.
@@ -352,7 +352,7 @@ Le code HTML comprend un élément [`<div>`](/fr/docs/Web/HTML/Reference/Element
 
 #### CSS
 
-Les deux propriétés du <i lang="en">popover</i> que nous voulons transitionner sont [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity) et [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform). Nous voulons que le <i lang="en">popover</i> apparaisse/disparaisse avec une transition en fondu enchaîné tout en grossissant ou rapetissant horizontalement. Pour cela, nous définissons un état de départ pour ces propriétés pour le <i lang="en">popover</i> fermé (sélectionné avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[popover]`), et un état final correspondant au <i lang="en">popover</i> ouvert (sélectionné avec la pseudo-classe [`:popover-open`](/fr/docs/Web/CSS/:popover-open)). Nous utilisons également la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition) pour définir les propriétés à animer et la durée de la transition.
+Les deux propriétés du <i lang="en">popover</i> que nous voulons transitionner sont [`opacity`](/fr/docs/Web/CSS/Reference/Properties/opacity) et [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform). Nous voulons que le <i lang="en">popover</i> apparaisse/disparaisse avec une transition en fondu enchaîné tout en grossissant ou rapetissant horizontalement. Pour cela, nous définissons un état de départ pour ces propriétés pour le <i lang="en">popover</i> fermé (sélectionné avec le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[popover]`), et un état final correspondant au <i lang="en">popover</i> ouvert (sélectionné avec la pseudo-classe [`:popover-open`](/fr/docs/Web/CSS/Reference/Selectors/:popover-open)). Nous utilisons également la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition) pour définir les propriétés à animer et la durée de la transition.
 
 ```css
 html {
@@ -427,7 +427,7 @@ Comme vu précédemment, nous avons également&nbsp;:
 - Ajouté `overlay` à la liste des propriétés à transitionner de manière à ce que l'élément popover reste dans [la couche supérieure](/fr/docs/Glossary/Top_layer) jusqu'à la fin de l'animation. L'impact de cet ajout n'est pas nécessairement perceptible pour des animations aussi simples que celle-ci. Cependant, dans certains cas plus complexes, le fait d'omettre cette propriété peut avoir pour conséquence de faire disparaitre l'élément avant la fin de l'animation de transition.
 - Ajouté `allow-discrete` aux transitions des propriétés `display` et `overlay` pour activer les [transitions discrètes](/fr/docs/Web/CSS/CSS_animated_properties#discrete) de ces propriétés.
 
-Vous noterez que nous avons également défini une transition pour le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop) qui apparait derrière le <i lang="en">popover</i> quand il s'ouvre, provoquant un effet d'assombrissement du contenu de la page.
+Vous noterez que nous avons également défini une transition pour le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop) qui apparait derrière le <i lang="en">popover</i> quand il s'ouvre, provoquant un effet d'assombrissement du contenu de la page.
 
 #### Résultat
 
@@ -438,7 +438,7 @@ Le code donne ce résultat&nbsp;:
 > [!NOTE]
 > Parce que les <i lang="en">popovers</i> passent de `display: none` à `display: block` à chaque fois qu'ils apparaissent, le <i lang="en">popover</i> transitionne des styles définis dans `@starting-style` aux styles définis dans `[popover]:popover-open` à chaque fois qu'il apparait. Quand le <i lang="en">popover</i> se ferme, il transitionne des styles définis dans `[popover]:popover-open` aux styles définis dans `[popover]`.
 >
-> Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
+> Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
 
 ### Les animations sur les <i lang="en">popovers</i>
 

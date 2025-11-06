@@ -71,7 +71,7 @@ En plus des mots-clés prédéfinis propres à chaque propriété, toutes les pr
 - {{cssxref("revert")}}
   - : Réinitialise la propriété à la valeur héritée si elle est héritée du parent, ou à la valeur par défaut définie par la feuille de style de l'agent utilisateur (ou par les styles utilisateur s'ils existent).
 - {{cssxref("revert-layer")}}
-  - : Restaure la valeur d'une propriété dans une [couche de cascade](/fr/docs/Web/CSS/@layer) à la valeur de la propriété dans une règle CSS correspondante d'une couche précédente. La valeur de la propriété avec ce mot-clé est recalculée comme si aucune règle n'était spécifiée sur l'élément cible dans la couche de cascade courante.
+  - : Restaure la valeur d'une propriété dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) à la valeur de la propriété dans une règle CSS correspondante d'une couche précédente. La valeur de la propriété avec ce mot-clé est recalculée comme si aucune règle n'était spécifiée sur l'élément cible dans la couche de cascade courante.
 
 ## URL
 

@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 
 {{CSSRef}}
 
-Afin d'aider à identifier la destination d'un lien qui mène vers une portion spécifique du document, les [sélecteurs CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) ont introduit [la pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}}.
+Afin d'aider à identifier la destination d'un lien qui mène vers une portion spécifique du document, les [sélecteurs CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) ont introduit [la pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{cssxref(":target")}}.
 
 ## Choisir une cible
 

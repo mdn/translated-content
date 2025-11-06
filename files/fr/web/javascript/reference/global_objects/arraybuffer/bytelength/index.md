@@ -1,34 +1,29 @@
 ---
-title: ArrayBuffer.prototype.byteLength
+title: "ArrayBuffer : propriété byteLength"
+short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété d'accesseur **`byteLength`** des instances de {{JSxRef("ArrayBuffer")}} retourne la longueur (en octets) de ce tableau de mémoire tampon.
 
-L'accesseur **`byteLength`** est une propriété représentant la longueur d'un {{jsxref("ArrayBuffer")}} en octets.
-
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.byteLength")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Crée un objet ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(8);
 
-// Use byteLength to check the size
+// Utilise byteLength pour vérifier la taille
 const bytes = buffer.byteLength;
 
 console.log(bytes);
-// Expected output: 8
-```
-
-## Syntaxe
-
-```js
-arraybuffer.byteLength;
+// Résultat attendu : 8
 ```
 
 ## Description
 
-La propriété `byteLength` est un accesseur dont le mutateur associé vaut `undefined`. Cela signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau et ne peut pas être changée par la suite. Cette propriété renvoie 0 si ce `ArrayBuffer` a été détaché.
+La propriété `byteLength` est un accesseur dont le mutateur associé vaut `undefined`. Cela signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau et ne peut pas être changée par la suite. Cette propriété retourne 0 si ce `ArrayBuffer` a été détaché.
 
 ## Exemples
 
@@ -47,4 +42,4 @@ buffer.byteLength; // 8
 
 ## Voir aussi
 
-- {{jsxref("ArrayBuffer")}}
+- L'objet global {{JSxRef("ArrayBuffer")}}

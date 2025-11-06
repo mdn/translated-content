@@ -54,7 +54,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 ## Note d'utilisation
 
-En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
+En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/Reference/Selectors/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
 
 Les éléments `<ol>` et {{HTMLElement("ul")}} (ou le synonyme {{HTMLElement("menu")}}) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` (ou `<menu>`) comme vous le souhaitez.
 

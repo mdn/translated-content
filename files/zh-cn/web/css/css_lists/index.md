@@ -52,8 +52,8 @@ l10n:
 
 - [CSS 计数器样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)
   - {{cssxref("@counter-style")}} at 规则
-  - [`<counter-style-name>`](/zh-CN/docs/Web/CSS/@counter-style#counter-style-name) 数据类型
-  - [`<symbol>`](/zh-CN/docs/Web/CSS/@counter-style/symbols#值) 数据类型
+  - [`<counter-style-name>`](/zh-CN/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) 数据类型
+  - [`<symbol>`](/zh-CN/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#值) 数据类型
   - {{cssxref("symbols", "symbols()")}} 函数
 
 - {{HTMLElement("ol")}} `start`、`reversed` 和 `type` 属性

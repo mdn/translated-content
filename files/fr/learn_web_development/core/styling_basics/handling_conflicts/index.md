@@ -92,7 +92,7 @@ CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de c
 - [`revert`](/fr/docs/Web/CSS/revert)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/@layer) précédente.
+  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente.
 - [`unset`](/fr/docs/Web/CSS/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
 
@@ -162,9 +162,9 @@ La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, 
   - : On marque un point dans cette colonne pour chaque sélecteur d'élément ou de pseudo-élément contenu dans le sélecteur composite.
 
 > [!NOTE]
-> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
+> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [les combinateurs](/fr/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
 
-Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
+Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/Reference/Selectors/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/Reference/Selectors/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
 
 Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators).
 
@@ -242,7 +242,7 @@ Les déclarations conflictuelles seront appliquées dans l'ordre suivant. Celles
 
 ### Ordre des couches de cascade
 
-[Les couches de cascade](/fr/docs/Web/CSS/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
+[Les couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
 
 Lorsqu'on déclare du CSS dans des couches de cascade, la précédence est déterminée par l'ordre de déclaration des couches. Les styles CSS déclarés en dehors des couches sont combinés ensemble, selon leur ordre de déclaration, dans une couche anonyme, agissant comme la dernière couche déclarée. Lorsqu'il y a conflit entre des styles normaux (et pas importants), ce sont les couches ultérieures qui l'emportent sur les couches antérieures. Pour les styles importants (marqués avec `!important`), cet ordre est inversé et ce sont les styles importants des couches antérieures qui l'emportent sur les styles importants des couches ultérieures ou des styles de la couche anonyme. Les styles en incise dans le document l'emportent sur n'importe quel style du site, quelle que soit la couche.
 

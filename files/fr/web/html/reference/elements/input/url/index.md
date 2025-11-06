@@ -38,7 +38,7 @@ label {
 }
 ```
 
-La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas de figure.
+La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) sont appliquées automatiquement selon le cas de figure.
 
 > [!NOTE]
 > Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text).

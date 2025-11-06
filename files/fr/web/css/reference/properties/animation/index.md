@@ -399,7 +399,7 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 
 Les animations qui clignotent ou scintillent sont problématiques et notamment pour les personnes souffrant de problèmes cognitifs. De plus, certains types de mouvement peuvent déclencher des désordres vestibulaires, des épilepsies, des migraines ou une sensibilité scotopique.
 
-Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [une requête média avec `prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour les mouvements réduits afin d'obtenir une ergonomie complémentaire pour les personnes souhaitant ne pas avoir d'animations.
+Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [une requête média avec `prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour les mouvements réduits afin d'obtenir une ergonomie complémentaire pour les personnes souhaitant ne pas avoir d'animations.
 
 - [_Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article_ (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [_An Introduction to the Reduced Motion Media Query - CSS-Tricks_ (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)

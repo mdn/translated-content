@@ -3,7 +3,7 @@ title: 层叠层
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 ---
 
-这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
+这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
 
 如果你是 CSS 的新手，刚开始可能会觉得这部分的内容与本课程的其他部分相比不太相关，而且有些学术化。然而，了解层叠层的基本知识对于你在项目中遇到它们时会非常有帮助。随着你对 CSS 的不断使用，理解层叠层以及如何充分利用它们的功能将能够避免在处理来自不同团队、插件和开发人员的 CSS 代码库时遇到的很多问题。
 
@@ -96,7 +96,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 类似于我们有六个基于来源和重要性的优先权级别，层叠层使我们能够在这些来源中创建子来源级别的优先权。
 
-在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
+在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
 
 在普通来源中，层按照创建的顺序排序。优先权顺序是从首个创建的层到最后一个层，然后是未分层的普通样式。
 
@@ -122,7 +122,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层叠层允许创建嵌套层。每个层叠层可以包含嵌套层。
 
-例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
+例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
 
 嵌套层的能力非常适用于开发组件库、框架、第三方小部件和主题的任何人。
 
@@ -138,7 +138,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 - 使用 `@layer` 声明 at 规则，使用 `@layer` 后跟一个或多个层的名称来声明层。这将创建一个没有分配任何样式的具名层。
 - 使用 `@layer` 块 at 规则，在块中的所有样式都将添加到一个命名或未命名的层中。
-- 使用具有 `layer` 关键字或 `layer()` 函数的 [`@import`](/zh-CN/docs/Web/CSS/@import) 规则，将导入文件的内容分配到该层中。
+- 使用具有 `layer` 关键字或 `layer()` 函数的 [`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 规则，将导入文件的内容分配到该层中。
 
 在尚未初始化具有相同名称的层的情况下，这三种方法中的任何一种都会创建一个层。如果在 `@layer` at 规则或带有 `layer()` 的 `@import` 中没有提供层名称，则将创建一个新的匿名层。
 
@@ -151,7 +151,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层的顺序由 CSS 中层出现的顺序确定。使用 `@layer` 后跟一个或多个层的名称而不分配任何样式是定义[层顺序](#根据层的顺序确定优先权)的一种方式。
 
-[`@layer`](/zh-CN/docs/Web/CSS/@layer) CSS at 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
+[`@layer`](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer) CSS at 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
 
 ```css
 @layer theme，layout，utilities;
@@ -290,9 +290,9 @@ body {
 
 ### 使用 @import 将样式表导入具名层和匿名层
 
-[`@import`](/zh-CN/docs/Web/CSS/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
+[`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
 
-导入样式表时，必须在样式表或 `<style>` 块中的任何 CSS 样式之前定义 `@import` 语句。`@import` 语句必须出现在最前面，在任何样式之前，但可以在创建一个或多个层而不向这些层分配任何样式的 `@layer` 规则之后（`@import` 也可以在 [`@charset`](/zh-CN/docs/Web/CSS/@charset) 规则之后）。
+导入样式表时，必须在样式表或 `<style>` 块中的任何 CSS 样式之前定义 `@import` 语句。`@import` 语句必须出现在最前面，在任何样式之前，但可以在创建一个或多个层而不向这些层分配任何样式的 `@layer` 规则之后（`@import` 也可以在 [`@charset`](/zh-CN/docs/Web/CSS/Reference/At-rules/@charset) 规则之后）。
 
 你可以将样式表导入具名层、嵌套具名层或匿名层。以下层分别将样式表导入 `components` 层、`components` 层中的嵌套 `dialog` 层和一个未命名层：
 

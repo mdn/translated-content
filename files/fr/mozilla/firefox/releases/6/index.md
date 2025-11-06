@@ -61,15 +61,15 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
   - : Cette nouvelle propriété vous permet de contrôler la façon dont la césure des mots lors de retours à la ligne est gérée.
 - [`-moz-orient`](/fr/docs/Web/CSS/Reference/Properties/-moz-orient)
   - : Une nouvelle propriété (pour l'instant spécifique à Mozilla) qui vous permet de contrôler l'orientation verticale ou horizontale de certains éléments (en particulier [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress)).
-- [`::-moz-progress-bar`](/fr/docs/Web/CSS/::-moz-progress-bar)
+- [`::-moz-progress-bar`](/fr/docs/Web/CSS/Reference/Selectors/::-moz-progress-bar)
   - : Un pseudo-élément spécifique à Mozilla qui vous permet de définir le style de la zone d'un élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress) représentant la fraction d'une tâche.
 
 #### Autres changements
 
-- La propriété [`@-moz-document`](/fr/docs/Web/CSS/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
+- La propriété [`@-moz-document`](/fr/docs/Web/CSS/Reference/At-rules/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
 - La propriété CSS [`azimuth`](/fr/docs/Web/CSS/azimuth) n'est plus supportée, comme nous avons enlevé le peu de code que nous avions pour le groupe média `aural`. Il n'a jamais été implémenté de manière significative, donc il était plus logique de supprimer cette implémentation crufty pour le moment, au lieu d'essayer de le rafistoler.
-- Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
-- La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
+- Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/Reference/Selectors/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
+- La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/Reference/Selectors/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
 - La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
 - Le [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) change la façon dont le symbole dièse (#) est traité dans les données URI qui peut briser les feuilles de style CSS qui contiennent un tel symbole.
 

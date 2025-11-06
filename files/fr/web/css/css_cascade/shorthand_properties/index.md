@@ -181,7 +181,7 @@ Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Cor
 
 - Les concepts fondamentaux de CSS&nbsp;:
   - [La syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Les règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Les règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules)
   - [Les commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
   - [La spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
   - [L'héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)

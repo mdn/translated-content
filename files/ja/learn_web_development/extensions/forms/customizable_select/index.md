@@ -373,7 +373,7 @@ option::checkmark {
 
 カスタマイズ可能な `<select>` の選択ボタンとドロップダウンピッカーは暗黙的なアンカー参照を持ち、ピッカーは [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning) を介して選択ボタンに自動的に関連付けられます。これにより、{{cssxref("anchor-name")}} や {{cssxref("position-anchor")}} プロパティによる明示的な関連付けを指定する必要はありません。
 
-また、[ブラウザーの既定のスタイルで既定の位置](/ja/docs/Web/CSS/::picker#ピッカーのアンカー位置指定) が提供されており、[要素をアンカーから相対的に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#要素をアンカーから相対的に配置) で説明されているようにカスタマイズできます。
+また、[ブラウザーの既定のスタイルで既定の位置](/ja/docs/Web/CSS/Reference/Selectors/::picker#ピッカーのアンカー位置指定) が提供されており、[要素をアンカーから相対的に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#要素をアンカーから相対的に配置) で説明されているようにカスタマイズできます。
 
 デモでは、ピッカーの位置をアンカーに対して {{cssxref("anchor()")}} 関数を使い、{{cssxref("top")}} と {{cssxref("left")}} プロパティで指定しています。
 

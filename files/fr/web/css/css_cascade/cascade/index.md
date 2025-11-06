@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 193543a2af9350e76864a93bb751270979305cd0
 ---
 
-La **cascade** est un algorithme qui définit comment les agents utilisateur combinent les valeurs des propriétés selon leurs différentes sources. La cascade définit l'origine et la couche qui l'emporte lorsque des déclarations présentes dans plusieurs [origines](#types_dorigine) ou [couches de cascade](/fr/docs/Web/CSS/@layer) définissent une valeur pour une propriété sur un élément.
+La **cascade** est un algorithme qui définit comment les agents utilisateur combinent les valeurs des propriétés selon leurs différentes sources. La cascade définit l'origine et la couche qui l'emporte lorsque des déclarations présentes dans plusieurs [origines](#types_dorigine) ou [couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) définissent une valeur pour une propriété sur un élément.
 
 La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) supérieure.
 
@@ -20,7 +20,7 @@ L'algorithme de la cascade CSS consiste à sélectionner des déclarations CSS a
 - **[Les feuilles de style du site](#feuilles_de_style_du_site)**,
 - **[Les feuilles de style de l'utilisatrice ou l'utilisateur](#feuilles_de_style_de_lutilisatrice_ou_lutilisateur)**.
 
-Bien que les feuilles de style proviennent de ces différentes origines et que chacune d'entre elles peut avoir différentes [couches](/fr/docs/Web/CSS/@layer), leurs portées se chevauchent. Pour que l'ensemble fonctionne, l'algorithme de la cascade définit comment elles interagissent. Avant d'étudier ces interactions, définissons quelques termes.
+Bien que les feuilles de style proviennent de ces différentes origines et que chacune d'entre elles peut avoir différentes [couches](/fr/docs/Web/CSS/Reference/At-rules/@layer), leurs portées se chevauchent. Pour que l'ensemble fonctionne, l'algorithme de la cascade définit comment elles interagissent. Avant d'étudier ces interactions, définissons quelques termes.
 
 ### Feuilles de style de l'agent utilisateur
 
@@ -42,7 +42,7 @@ Dans la plupart des navigateurs, l'utilisatrice ou l'utilisateur du site web peu
 
 ### Couches de la cascade
 
-L'ordre de la cascade est basé sur le type d'origine. La cascade pour chaque type d'origine dépend de l'ordre de déclaration [des couches de cascade](/fr/docs/Web/CSS/@layer) pour chaque type. Quelle que soit l'origine (agent utilisateur, site, utilisatrice ou utilisateur), les styles peuvent être déclarés à l'intérieur ou en dehors de couches nommées ou anonymes. Lorsqu'ils sont déclarés avec [`layer`, `layer()`](/fr/docs/Web/CSS/@import) ou [`@layer`](/fr/docs/Web/CSS/@layer), les styles sont placés dans la couche nommée correspondante, ou dans une couche anonyme si aucun nom n'est fourni. Les styles déclarés en dehors d'une couche sont considérés comme faisant partie d'une couche anonyme déclarée en dernier.
+L'ordre de la cascade est basé sur le type d'origine. La cascade pour chaque type d'origine dépend de l'ordre de déclaration [des couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) pour chaque type. Quelle que soit l'origine (agent utilisateur, site, utilisatrice ou utilisateur), les styles peuvent être déclarés à l'intérieur ou en dehors de couches nommées ou anonymes. Lorsqu'ils sont déclarés avec [`layer`, `layer()`](/fr/docs/Web/CSS/Reference/At-rules/@import) ou [`@layer`](/fr/docs/Web/CSS/Reference/At-rules/@layer), les styles sont placés dans la couche nommée correspondante, ou dans une couche anonyme si aucun nom n'est fourni. Les styles déclarés en dehors d'une couche sont considérés comme faisant partie d'une couche anonyme déclarée en dernier.
 
 Voyons l'interaction de la cascade entre les différents types d'origine avant de voir les couches de chaque type d'origine.
 
@@ -73,7 +73,7 @@ La cascade progresse dans l'ordre croissant des précédences, les animations on
 > [!NOTE]
 > **Transitions et animations**
 >
-> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important)).
+> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important)).
 >
 > Les valeurs des propriétés définies dans une transition ([`transition`](/fr/docs/Web/CSS/Reference/Properties/transition)) l'emportent sur toutes les autres valeurs, y compris celles marquées avec `!important`.
 
@@ -198,7 +198,7 @@ margin-left: 3px;
 
 L'ordre de déclaration des couches a son importance pour la détermination de la précédence. Les styles normaux situés dans une couche l'emportent sur les styles déclarés dans les couches antérieures. Les styles normaux déclarés en dehors de toute couche l'emportent sur les styles normaux situés dans des couches, quelle que soit la spécificité.
 
-Dans cet exemple, le site utilise la règle [`@import`](/fr/docs/Web/CSS/@import) pour importer cinq feuilles de styles externes dans un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style).
+Dans cet exemple, le site utilise la règle [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import) pour importer cinq feuilles de styles externes dans un élément [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style).
 
 ```html
 <style>
@@ -394,21 +394,21 @@ Maintenant que nous avons une meilleure compréhension de la précédence selon 
 
 ## Entités CSS qui participent à la cascade
 
-Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
+Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
 
-Les propriétés et les descripteurs définis dans les règles @ ne participent pas à la cascade. Ce sont les règles @ dans leur intégralité qui participent à la cascade. Ainsi, dans une règle `@font-face`, on a des noms de police identifiés par des descripteurs [`font-family`](/fr/docs/Web/CSS/@font-face/font-family). Si plusieurs règles `@font-face` sont définies pour le même descripteur, seule la règle `@font-face` la plus appropriée sera considérée, _dans son intégralité_. S'il y a plus d'une règle @ appropriée, ce sont les déclarations `@font-face` entières qui sont comparées en utilisant les étapes 1, 2, et 4 de l'algorithme (il n'y a pas de spécificité en ce qui concerne les règles @).
+Les propriétés et les descripteurs définis dans les règles @ ne participent pas à la cascade. Ce sont les règles @ dans leur intégralité qui participent à la cascade. Ainsi, dans une règle `@font-face`, on a des noms de police identifiés par des descripteurs [`font-family`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/font-family). Si plusieurs règles `@font-face` sont définies pour le même descripteur, seule la règle `@font-face` la plus appropriée sera considérée, _dans son intégralité_. S'il y a plus d'une règle @ appropriée, ce sont les déclarations `@font-face` entières qui sont comparées en utilisant les étapes 1, 2, et 4 de l'algorithme (il n'y a pas de spécificité en ce qui concerne les règles @).
 
-Bien que les déclarations contenues dans la plupart des règles @ (comme celles de [`@media`](/fr/docs/Web/CSS/@media), [`@document`](/fr/docs/Web/CSS/@document), ou [`@supports`](/fr/docs/Web/CSS/@supports)) participent à la cascade, la règle @ peut rendre un sélecteur complet hors non-pertinent, comme nous l'avons vu avec le style pour l'impression dans [l'exemple simple](#exemple_simple).
+Bien que les déclarations contenues dans la plupart des règles @ (comme celles de [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media), [`@document`](/fr/docs/Web/CSS/Reference/At-rules/@document), ou [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports)) participent à la cascade, la règle @ peut rendre un sélecteur complet hors non-pertinent, comme nous l'avons vu avec le style pour l'impression dans [l'exemple simple](#exemple_simple).
 
-Les déclarations contenues dans [`@keyframes`](/fr/docs/Web/CSS/@keyframes) ne participent pas à la cascade. À l'instar de `@font-face`, c'est l'ensemble de la déclaration `@keyframes` qui est sélectionné via l'algorithme de la cascade. [L'ordre de précédence des animations est décrit ensuite](#animations_css_et_la_cascade).
+Les déclarations contenues dans [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) ne participent pas à la cascade. À l'instar de `@font-face`, c'est l'ensemble de la déclaration `@keyframes` qui est sélectionné via l'algorithme de la cascade. [L'ordre de précédence des animations est décrit ensuite](#animations_css_et_la_cascade).
 
-En ce qui concerne les règles [`@import`](/fr/docs/Web/CSS/@import), la règle `@import` ne participe pas elle-même à la cascade, mais l'ensemble des styles importés y participent. Si `@import` défini [une couche nommée ou anonyme](/fr/docs/Web/CSS/@layer), le contenu de la feuille de style importée est placé dans la couche indiquée. Dans les autres cas, tout le contenu importé par `@import` est considéré comme appartenant à la dernière couche déclarée, comme nous l'avons vu précédemment.
+En ce qui concerne les règles [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import), la règle `@import` ne participe pas elle-même à la cascade, mais l'ensemble des styles importés y participent. Si `@import` défini [une couche nommée ou anonyme](/fr/docs/Web/CSS/Reference/At-rules/@layer), le contenu de la feuille de style importée est placé dans la couche indiquée. Dans les autres cas, tout le contenu importé par `@import` est considéré comme appartenant à la dernière couche déclarée, comme nous l'avons vu précédemment.
 
-Enfin, [`@charset`](/fr/docs/Web/CSS/@charset) est géré par d'autres algorithmes et ne suit pas l'algorithme de la cascade.
+Enfin, [`@charset`](/fr/docs/Web/CSS/Reference/At-rules/@charset) est géré par d'autres algorithmes et ne suit pas l'algorithme de la cascade.
 
 ## Animations CSS et cascade
 
-[Les animations CSS](/fr/docs/Web/CSS/CSS_animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/@keyframes), et ne mélange jamais plusieurs règles.
+[Les animations CSS](/fr/docs/Web/CSS/CSS_animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes), et ne mélange jamais plusieurs règles.
 
 Si plusieurs images clés d'une animation sont définies avec le même nom, c'est la dernière règle `@keyframes` pour le type d'origine et la couche avec la précédence la plus élevée qui est considérée. Seule une définition `@keyframes` est utilisée, même si elle anime différentes propriétés. Les règles `@keyframes` partageant un même nom ne sont jamais mélangées.
 
@@ -450,7 +450,7 @@ p {
 Dans cet exemple, on a trois déclarations d'animation intitulées `nomRepete`. Lorsque `animation: infinite 5s alternate nomRepete` est appliquée au paragraphe, seule une animation s'applique&nbsp;: l'animation définie dans la règle en dehors des couches prend la précédence sur les règles ajoutées aux couches A et B d'après l'ordre de précédence basé sur l'origine et les couches de la cascade. Dans cet exemple, seule la taille de la police de l'élément sera animé.
 
 > [!NOTE]
-> Il n'existe pas d'animations importantes, car les déclarations des propriétés d'un bloc [`@keyframes`](/fr/docs/Web/CSS/@keyframes) qui contiennent `!important` dans leur valeur sont ignorées.
+> Il n'existe pas d'animations importantes, car les déclarations des propriétés d'un bloc [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) qui contiennent `!important` dans leur valeur sont ignorées.
 
 ## Réinitialiser les styles
 

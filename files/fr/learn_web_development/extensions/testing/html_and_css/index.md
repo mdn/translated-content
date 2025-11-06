@@ -274,7 +274,7 @@ Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color
 Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
 
 > [!NOTE]
-> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/@font-face) et [`@supports`](/fr/docs/Web/CSS/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
+> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
 
 #### Les commentaires conditionnels d'IE
 
@@ -331,7 +331,7 @@ form > #date
 
 (L'input `date` du formulaire n'est pas directement dans le `<form>` ; vous feriez mieux d'utiliser un sélecteur descendant général plutôt qu'un sélecteur d'enfant).
 
-Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme [jQuery](https://jquery.com/) ou [MooTools](http://mootools.net/).
+Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type), [`:not`](/fr/docs/Web/CSS/Reference/Selectors/:not), [`::selection`](/fr/docs/Web/CSS/Reference/Selectors/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme [jQuery](https://jquery.com/) ou [MooTools](http://mootools.net/).
 
 1. Afin de tester cet exemple, faites une copie locale de [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec `p:first-child`, qui ne fonctionne pas sur les anciennes versions d'IE.
 2. Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
@@ -479,7 +479,7 @@ Les fonctionnalités de disposition ne sont pas aussi simples pour fournir des s
 Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs modernes, et aussi appliquer une disposition en float pour les plus vieux navigateurs qui ne supportent pas flexbox.
 
 > [!NOTE]
-> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
+> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
 
 #### Les problèmes de responsive design
 

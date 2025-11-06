@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
-使用 CSS 嵌套可以将任何包含样式规则的 [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)嵌入到另一个规则中。嵌套在 at 规则中的规则从距离它们最近的祖先规则中获得选择器定义。属性可以直接被包含到一个嵌套的 at 规则中，就像被一个 `& {...}` 块所包含的那样。
+使用 CSS 嵌套可以将任何包含样式规则的 [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)嵌入到另一个规则中。嵌套在 at 规则中的规则从距离它们最近的祖先规则中获得选择器定义。属性可以直接被包含到一个嵌套的 at 规则中，就像被一个 `& {...}` 块所包含的那样。
 
 ## 可以被嵌套的 at 规则
 
@@ -97,7 +97,7 @@ At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以�
 
 ### 嵌套级联层（`@layer`）
 
-[级联层](/zh-CN/docs/Web/CSS/@layer)也可以被嵌套以[创建子层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。嵌套层之间使用 `.`（点号）连接。
+[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)也可以被嵌套以[创建子层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer#嵌套层)。嵌套层之间使用 `.`（点号）连接。
 
 #### 定义父层和子层
 
@@ -144,7 +144,7 @@ At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以�
 ## 参见
 
 - [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
-- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
+- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
 - [嵌套容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#嵌套查询)

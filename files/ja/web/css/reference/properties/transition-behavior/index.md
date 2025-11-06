@@ -146,7 +146,7 @@ html {
 }
 ```
 
-アニメーションさせたいプロパティは [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態（`[popover]` で選択）を設定し、終了状態にはポップオーバーを開いた状態（[`:popover-open`](/ja/docs/Web/CSS/:popover-open) 擬似クラスで選択）を設定します。そして、この 2 つの間でアニメーションするように [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを設定します。
+アニメーションさせたいプロパティは [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) と [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) の 2 つです。これらのプロパティの開始状態にはポップオーバー要素の既定の非表示状態（`[popover]` で選択）を設定し、終了状態にはポップオーバーを開いた状態（[`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラスで選択）を設定します。そして、この 2 つの間でアニメーションするように [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) プロパティを設定します。
 
 アニメーションする要素は、表示されると[最上位レイヤー](/ja/docs/Glossary/Top_layer)へ移動し、（[`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) で）非表示になると最上位レイヤーから除去されるため、以下のプロパティをトランジションする要素のリストに追加し、双方向でアニメーションが動作するようにしています。どちらの場合も、 `transition-behavior: allow-discrete` を一括指定して、トランジションのアニメーションを有効にしています。
 

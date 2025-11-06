@@ -371,6 +371,6 @@ tbody > tr > th {
 
 ## 参见
 
-- 对于 `<tbody>` 元素可能特别有用的 CSS 属性和[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)：
+- 对于 `<tbody>` 元素可能特别有用的 CSS 属性和[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)：
   - {{ cssxref(":nth-child") }} 伪类用于设置单元格的对齐方式；
   - {{ cssxref("text-align") }} 属性用于将所有单元格内容对齐在同一个字符上，如 `.`。
