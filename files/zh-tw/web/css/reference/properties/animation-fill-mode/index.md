@@ -141,7 +141,7 @@ animation-fill-mode: unset;
 - `none`
   - : 動畫在未執行時，不會對目標應用任何樣式。元素將改為使用任何其他應用於其上的 CSS 規則來顯示。這是預設值。
 - `forwards`
-  - : 目標將保留執行期間遇到的最後一個[關鍵格](/zh-TW/docs/Web/CSS/@keyframes)所設定的計算值。最後一個關鍵格取決於 {{cssxref("animation-direction")}} 和 {{cssxref("animation-iteration-count")}} 的值：
+  - : 目標將保留執行期間遇到的最後一個[關鍵格](/zh-TW/docs/Web/CSS/Reference/At-rules/@keyframes)所設定的計算值。最後一個關鍵格取決於 {{cssxref("animation-direction")}} 和 {{cssxref("animation-iteration-count")}} 的值：
 
     | `animation-direction` | `animation-iteration-count` | 遇到的最後一個關鍵格 |
     | --------------------- | --------------------------- | -------------------- |
@@ -155,7 +155,7 @@ animation-fill-mode: unset;
     動畫屬性的行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/Reference/Properties/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
 
 - `backwards`
-  - : 動畫一旦應用到目標上，就會立即套用第一個相關[關鍵格](/zh-TW/docs/Web/CSS/@keyframes)中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的關鍵格取決於 {{cssxref("animation-direction")}} 的值：
+  - : 動畫一旦應用到目標上，就會立即套用第一個相關[關鍵格](/zh-TW/docs/Web/CSS/Reference/At-rules/@keyframes)中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的關鍵格取決於 {{cssxref("animation-direction")}} 的值：
 
     | `animation-direction`            | 第一個相關的關鍵格 |
     | -------------------------------- | ------------------ |

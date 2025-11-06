@@ -1,6 +1,6 @@
 ---
 title: "@font-face"
-slug: Web/CSS/@font-face
+slug: Web/CSS/Reference/At-rules/@font-face
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
@@ -60,7 +60,7 @@ l10n:
 通過允許作者提供自己的字型，`@font-face` 使內容設計不再受限於所謂的「Web 安全」字型（即被認為是普遍可用的常見字型）。指定本地安裝字型的名稱，允許在不依賴網際網路連接的情況下，超越基礎字型進行客製化。
 
 > [!NOTE]
-> 有關為舊版瀏覽器加載字型的回退策略，請參考 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/@font-face/src#指定舊版瀏覽器的後備方案)。
+> 有關為舊版瀏覽器加載字型的回退策略，請參考 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/Reference/At-rules/@font-face/src#指定舊版瀏覽器的後備方案)。
 
 `@font-face` 規則不僅可用於 CSS 的頂層，也可以用於任何 [CSS 條件群組 @ 規則](/zh-TW/docs/Web/CSS/CSS_conditional_rules#at_規則)中。
 

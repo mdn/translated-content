@@ -1,11 +1,11 @@
 ---
 title: height
-slug: Web/CSS/@media/height
+slug: Web/CSS/Reference/At-rules/@media/height
 l10n:
   sourceCommit: 421deed53984505909884b3b290002b228d29e7b
 ---
 
-**`height`** [CSS](/zh-TW/docs/Web/CSS) [媒體特性](/zh-TW/docs/Web/CSS/@media#媒體特性)可用於根據{{glossary("viewport", "視區")}}的高度（或[分頁媒體](/zh-TW/docs/Web/CSS/CSS_paged_media)的頁框）套用樣式。
+**`height`** [CSS](/zh-TW/docs/Web/CSS) [媒體特性](/zh-TW/docs/Web/CSS/Reference/At-rules/@media#媒體特性)可用於根據{{glossary("viewport", "視區")}}的高度（或[分頁媒體](/zh-TW/docs/Web/CSS/CSS_paged_media)的頁框）套用樣式。
 
 ## 語法
 
@@ -59,4 +59,4 @@ l10n:
 ## 參見
 
 - [使用媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/zh-TW/docs/Web/CSS/@media)
+- [@media](/zh-TW/docs/Web/CSS/Reference/At-rules/@media)

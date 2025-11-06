@@ -88,7 +88,7 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 `font-format`：
 
-- [`<font-format>`](/zh-TW/docs/Web/CSS/@supports#font-format)
+- [`<font-format>`](/zh-TW/docs/Web/CSS/Reference/At-rules/@supports#font-format)
 
 `font-stretch`：
 
@@ -96,9 +96,9 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 `font-tech`：
 
-- [`<color-font-tech>`](/zh-TW/docs/Web/CSS/@supports#font-tech)
-- [`<font-features-tech>`](/zh-TW/docs/Web/CSS/@supports#font-tech)
-- [`<font-tech>`](/zh-TW/docs/Web/CSS/@supports#font-tech)
+- [`<color-font-tech>`](/zh-TW/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`<font-features-tech>`](/zh-TW/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`<font-tech>`](/zh-TW/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
 
 `font-variant`：
 
