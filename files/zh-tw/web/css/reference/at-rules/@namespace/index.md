@@ -1,7 +1,6 @@
 ---
 title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
-original_slug: Web/CSS/@namespace
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -101,4 +100,4 @@ svg|a {
 ## 參見
 
 - [命名空間速成課程](/zh-TW/docs/Web/SVG/Guides/Namespaces_crash_course)
-- [CSS at 規則函式](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at 規則函式](/zh-TW/docs/Web/CSS/Reference/At-rules/At-rule_functions)
