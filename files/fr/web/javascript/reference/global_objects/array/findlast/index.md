@@ -22,9 +22,9 @@ Si vous souhaitez&nbsp;:
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
-const found = array1.findLast((element) => element > 45);
+const found = array.findLast((element) => element > 45);
 
 console.log(found);
 // Résultat attendu : 130
@@ -154,11 +154,11 @@ Les emplacements vides d'un tableau _sont_ parcourus. Ils sont traités comme s'
 
 ```js
 // On déclare un tableau sans élément pour les indices 2, 3, et 4
-const array = [0, 1, , , , 5, 6];
+const tableau = [0, 1, , , , 5, 6];
 
 // Le parcourt suivant montre tous les indices et pas uniquement
 // ceux avec des valeurs affectées
-array.findLast((valeur, index) => {
+tableau.findLast((valeur, index) => {
   console.log(`Parcours de l'index ${index} avec la valeur ${valeur}`);
 });
 // Parcours de l'index 6 avec la valeur 6
@@ -171,11 +171,11 @@ array.findLast((valeur, index) => {
 
 // Tous les indices sont affichés, y compris ceux qui sont
 // supprimés
-array.findLast((value, index) => {
+tableau.findLast((value, index) => {
   // On supprime l'élément 5 à la première itération
   if (index === 6) {
-    console.log(`Suppression de array[5] avec la valeur ${array[5]}`);
-    delete array[5];
+    console.log(`Suppression de array[5] avec la valeur ${tableau[5]}`);
+    delete tableau[5];
   }
   // L'élément 5 est toujours parcouru, même supprimé
   console.log(`Parcours de l'index ${index} avec la valeur ${value}`);
@@ -217,7 +217,7 @@ console.log(
 
 ## Voir aussi
 
-- [Guide Collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - L'objet global {{JSxRef("Array")}}
 - La méthode {{JSxRef("Array.prototype.find()")}}
 - La méthode {{JSxRef("Array.prototype.findIndex()")}}

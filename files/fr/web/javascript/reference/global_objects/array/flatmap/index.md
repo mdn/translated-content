@@ -93,12 +93,12 @@ Bien que ce qui précède aurait pu être obtenu en utilisant simplement `map`, 
 Générons une liste de mots à partir d'une liste de phrases.
 
 ```js
-let tableau1 = ["Coucou comment", "", "ça va ?"];
+let tableau = ["Coucou comment", "", "ça va ?"];
 
-tableau1.map((x) => x.split(" "));
+tableau.map((x) => x.split(" "));
 // [["Coucou", "comment"], [""], ["ça", "va", "?"]]
 
-tableau1.flatMap((x) => x.split(" "));
+tableau.flatMap((x) => x.split(" "));
 // ["Coucou", "comment", "", "ça", "va", "?"]
 ```
 
@@ -115,13 +115,13 @@ const a = [5, 4, -3, 20, 17, -33, -4, 18];
 //         |\  \  x   |  | \   x   x   |
 //        [4,1, 4,   20, 16, 1,       18]
 
-const result = a.flatMap((n) => {
+const resultat = a.flatMap((n) => {
   if (n < 0) {
     return [];
   }
   return n % 2 === 0 ? [n] : [n - 1, 1];
 });
-console.log(result); // [4, 1, 4, 20, 16, 1, 18]
+console.log(resultat); // [4, 1, 4, 20, 16, 1, 18]
 ```
 
 ### Utiliser le troisième argument de `callbackFn`
@@ -129,9 +129,9 @@ console.log(result); // [4, 1, 4, 20, 16, 1, 18]
 L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les stations en service puis utilise `flatMap()` pour créer un nouveau tableau où chaque élément contient une station et la station suivante. Pour la dernière station, il retourne un tableau vide afin de l'exclure du tableau final.
 
 ```js
-const stations = ["New Haven", "West Haven", "Milford (closed)", "Stratford"];
+const stations = ["New Haven", "West Haven", "Milford (fermé)", "Stratford"];
 const line = stations
-  .filter((name) => !name.endsWith("(closed)"))
+  .filter((name) => !name.endsWith("(fermé)"))
   .flatMap((name, idx, arr) => {
     // Sans l'argument arr, il n'y a aucun moyen d'accéder facilement
     // au tableau intermédiaire sans le stocker dans une variable.
@@ -157,19 +157,21 @@ console.log([1, 2, 3, 4].flatMap((x) => [, x * 2])); // [2, 4, 6, 8]
 La méthode `flatMap()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`. Si la valeur de retour de la fonction de rappel n'est pas un tableau, elle est toujours ajoutée directement au tableau résultat.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 1,
   1: 2,
   2: 3,
   3: 4, // ignoré par flatMap() car length vaut 3
 };
-console.log(Array.prototype.flatMap.call(arrayLike, (x) => [x, x * 2]));
+console.log(
+  Array.prototype.flatMap.call(objetSimilaireTableau, (x) => [x, x * 2]),
+);
 // [1, 2, 2, 4, 3, 6]
 
 // Les objets de type tableau retournés par la fonction de rappel ne seront pas aplatís
 console.log(
-  Array.prototype.flatMap.call(arrayLike, (x) => ({
+  Array.prototype.flatMap.call(objetSimilaireTableau, (x) => ({
     length: 1,
     0: x,
   })),

@@ -14,11 +14,11 @@ Voir aussi la méthode {{JSxRef("Array/find", "find()")}}, qui retourne le premi
 {{InteractiveExample("Démonstrations JavaScript&nbsp;: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
 const isLargeNumber = (element) => element > 13;
 
-console.log(array1.findIndex(isLargeNumber));
+console.log(array.findIndex(isLargeNumber));
 // Résultat attendu : 3
 ```
 
@@ -114,7 +114,7 @@ console.log([1, , 3].findIndex((x) => x === undefined)); // 1
 La méthode `findIndex()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableauemblantTableau = {
   length: 3,
   "-1": 0.1, // ignoré par findIndex() car -1 < 0
   0: 2,
@@ -122,7 +122,10 @@ const arrayLike = {
   2: 4,
 };
 console.log(
-  Array.prototype.findIndex.call(arrayLike, (x) => !Number.isInteger(x)),
+  Array.prototype.findIndex.call(
+    objetSimilaireTableauemblantTableau,
+    (x) => !Number.isInteger(x),
+  ),
 ); // 1
 ```
 

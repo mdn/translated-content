@@ -95,7 +95,7 @@ console.log(array2.flat(2)); // [ 1, 3, undefined, "a", "d", "e", null ]
 La méthode `flat()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`. Si l'élément n'est pas un tableau, il est ajouté directement au résultat. Si l'élément est un tableau, il est aplati selon le paramètre `depth`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: [1, 2],
   // Les objets qui ressemblent à des tableaux ne sont pas aplatis
@@ -103,7 +103,7 @@ const arrayLike = {
   2: 5,
   3: 3, // ignoré par flat() car length vaut 3
 };
-console.log(Array.prototype.flat.call(arrayLike));
+console.log(Array.prototype.flat.call(objetSimilaireTableau));
 // [ 1, 2, { '0': 3, '1': 4, length: 2 }, 5 ]
 ```
 

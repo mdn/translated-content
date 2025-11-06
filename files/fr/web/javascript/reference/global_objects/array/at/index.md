@@ -11,16 +11,16 @@ La méthode **`at()`** des instances de {{JSxRef("Array")}} prend une valeur ent
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.at()")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
 let index = 2;
 
-console.log(`Un indice de ${index} retourne ${array1.at(index)}`);
+console.log(`Un indice de ${index} retourne ${array.at(index)}`);
 // Résultat attendu : "Un indice de 2 retourne 8"
 
 index = -2;
 
-console.log(`Un indice de ${index} retourne ${array1.at(index)}`);
+console.log(`Un indice de ${index} retourne ${array.at(index)}`);
 // Résultat attendu : "Un indice de -2 retourne 130"
 ```
 
@@ -109,14 +109,14 @@ console.log(avecAt);
 La méthode `at()` lit la propriété `length` de `this` et calcule l'indice à accéder.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 2,
   0: "a",
   1: "b",
   2: "c", // ignoré par at() car length vaut 2
 };
-console.log(Array.prototype.at.call(arrayLike, 0)); // "a"
-console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
+console.log(Array.prototype.at.call(objetSimilaireTableau, 0)); // "a"
+console.log(Array.prototype.at.call(objetSimilaireTableau, 2)); // undefined
 ```
 
 ## Spécifications

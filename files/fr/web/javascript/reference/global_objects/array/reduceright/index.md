@@ -227,14 +227,16 @@ console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
 La méthode `reduceRight()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 99, // ignoré par reduceRight() car length vaut 3
 };
-console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+console.log(
+  Array.prototype.reduceRight.call(objetSimilaireTableau, (x, y) => x - y),
+);
 // -1, soit 4 - 3 - 2
 ```
 

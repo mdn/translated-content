@@ -184,14 +184,14 @@ newCar[0].color = bordeaux
 La méthode `slice()` lit la propriété `length` de `this`. Elle lit ensuite les propriétés dont les clés sont des entiers de `start` à `end` et les définit sur un nouveau tableau créé.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 33, // ignoré par slice() car length vaut 3
 };
-console.log(Array.prototype.slice.call(arrayLike, 1, 3));
+console.log(Array.prototype.slice.call(objetSimilaireTableau, 1, 3));
 // [ 3, 4 ]
 ```
 
