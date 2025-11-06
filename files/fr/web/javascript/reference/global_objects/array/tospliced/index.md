@@ -90,13 +90,13 @@ console.log(arr.toSpliced(1, 2)); // [1, 4, undefined, 6]
 La méthode `toSpliced()` lit la propriété `length` de `this`. Elle lit ensuite les propriétés à indices entiers nécessaires et les écrit dans le nouveau tableau.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   0: 5,
   2: 4,
 };
-console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
+console.log(Array.prototype.toSpliced.call(objetSimilaireTableau, 0, 1, 2, 3));
 // [2, 3, undefined, 4]
 ```
 

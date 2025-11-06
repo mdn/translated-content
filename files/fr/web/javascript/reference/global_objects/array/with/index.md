@@ -75,14 +75,14 @@ console.log(arr.with(0, 2)); // [2, undefined, 3, 4, undefined, 6]
 La méthode `with()` crée et retourne un nouveau tableau. Elle lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`. À chaque accès, l'élément du tableau à l'indice correspondant est défini à la valeur de la propriété. Enfin, la valeur à `index` est définie à `value`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   0: 5,
   2: 4,
   3: 3, // ignoré par with() car length vaut 3
 };
-console.log(Array.prototype.with.call(arrayLike, 0, 1));
+console.log(Array.prototype.with.call(objetSimilaireTableau, 0, 1));
 // [ 1, undefined, 4 ]
 ```
 

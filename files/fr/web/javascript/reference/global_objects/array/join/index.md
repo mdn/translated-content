@@ -48,14 +48,14 @@ La méthode `join` est utilisée en interne par [`Array.prototype.toString()`](/
 `Array.prototype.join` convertit récursivement chaque élément, y compris les tableaux imbriqués, en chaînes de caractères. Comme la chaîne retournée par `Array.prototype.toString` (équivalent à `join()`) ne contient pas de séparateurs, les tableaux imbriqués semblent aplatis. Vous ne pouvez contrôler que le séparateur du premier niveau, les niveaux plus profonds utilisent toujours la virgule par défaut.
 
 ```js
-const matrix = [
+const matrice = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
 
-console.log(matrix.join()); // 1,2,3,4,5,6,7,8,9
-console.log(matrix.join(";")); // 1,2,3;4,5,6;7,8,9
+console.log(matrice.join()); // 1,2,3,4,5,6,7,8,9
+console.log(matrice.join(";")); // 1,2,3;4,5,6;7,8,9
 ```
 
 Si un tableau est cyclique (il contient un élément qui fait référence à lui-même), les navigateurs évitent la récursion infinie en ignorant la référence cyclique.
@@ -98,16 +98,16 @@ console.log([1, undefined, 3].join()); // '1,,3'
 La méthode `join()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 5, // ignoré par join() car length vaut 3
 };
-console.log(Array.prototype.join.call(arrayLike));
+console.log(Array.prototype.join.call(objetSimilaireTableau));
 // 2,3,4
-console.log(Array.prototype.join.call(arrayLike, "."));
+console.log(Array.prototype.join.call(objetSimilaireTableau, "."));
 // 2.3.4
 ```
 

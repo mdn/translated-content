@@ -153,14 +153,19 @@ console.log([1, undefined, 1].some((x) => x !== 1)); // true
 La méthode `some()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`, jusqu'à ce qu'elles aient toutes été consultées ou que `callbackFn` retourne `true`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: "a",
   1: "b",
   2: "c",
   3: 3, // ignoré par some() car length vaut 3
 };
-console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
+console.log(
+  Array.prototype.some.call(
+    objetSimilaireTableau,
+    (x) => typeof x === "number",
+  ),
+);
 // false
 ```
 

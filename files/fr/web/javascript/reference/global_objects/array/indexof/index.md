@@ -60,31 +60,31 @@ La méthode `indexOf()` est [générique](/fr/docs/Web/JavaScript/Reference/Glob
 L'exemple suivant utilise `indexOf()` pour localiser des valeurs dans un tableau.
 
 ```js
-const array = [2, 9, 9];
-array.indexOf(2); // 0
-array.indexOf(7); // -1
-array.indexOf(9, 2); // 2
-array.indexOf(2, -1); // -1
-array.indexOf(2, -3); // 0
+const tableau = [2, 9, 9];
+tableau.indexOf(2); // 0
+tableau.indexOf(7); // -1
+tableau.indexOf(9, 2); // 2
+tableau.indexOf(2, -1); // -1
+tableau.indexOf(2, -3); // 0
 ```
 
 Vous ne pouvez pas utiliser `indexOf()` pour rechercher `NaN`.
 
 ```js
-const array = [NaN];
-array.indexOf(NaN); // -1
+const tableau = [NaN];
+tableau.indexOf(NaN); // -1
 ```
 
 ### Trouver toutes les occurences d'un élément
 
 ```js
 const indices = [];
-const array = ["a", "b", "a", "c", "a", "d"];
+const tableau = ["a", "b", "a", "c", "a", "d"];
 const element = "a";
-let idx = array.indexOf(element);
+let idx = tableau.indexOf(element);
 while (idx !== -1) {
   indices.push(idx);
-  idx = array.indexOf(element, idx + 1);
+  idx = tableau.indexOf(element, idx + 1);
 }
 console.log(indices);
 // [0, 2, 4]
@@ -123,16 +123,16 @@ console.log([1, , 3].indexOf(undefined)); // -1
 La méthode `indexOf()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 5, // ignoré par indexOf() car length vaut 3
 };
-console.log(Array.prototype.indexOf.call(arrayLike, 2));
+console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 2));
 // 0
-console.log(Array.prototype.indexOf.call(arrayLike, 5));
+console.log(Array.prototype.indexOf.call(objetSimilaireTableau, 5));
 // -1
 ```
 

@@ -238,14 +238,16 @@ console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
 La méthode `reduce()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 99, // ignoré par reduce() car length vaut 3
 };
-console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
+console.log(
+  Array.prototype.reduce.call(objetSimilaireTableau, (x, y) => x + y),
+);
 // 9
 ```
 

@@ -159,14 +159,14 @@ for (const element of [, "a"].values()) {
 La méthode `values()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: "a",
   1: "b",
   2: "c",
   3: "d", // ignoré par values() car length vaut 3
 };
-for (const entry of Array.prototype.values.call(arrayLike)) {
+for (const entry of Array.prototype.values.call(objetSimilaireTableau)) {
   console.log(entry);
 }
 // a

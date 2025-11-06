@@ -11,17 +11,17 @@ La méthode **`fill()`** des instances de {{JSxRef("Array")}} modifie tous les �
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.fill()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3, 4];
+const array = [1, 2, 3, 4];
 
 // Remplir avec 0 de la position 2 jusqu'à la position 4
-console.log(array1.fill(0, 2, 4));
+console.log(array.fill(0, 2, 4));
 // Sortie attendue : Array [1, 2, 0, 0]
 
 // Remplir avec 5 à partir de la position 1
-console.log(array1.fill(5, 1));
+console.log(array.fill(5, 1));
 // Sortie attendue : Array [1, 5, 5, 5]
 
-console.log(array1.fill(6));
+console.log(array.fill(6));
 // Sortie attendue : Array [6, 6, 6, 6]
 ```
 
@@ -117,8 +117,8 @@ Notez que le tableau était initialement un [tableau creux](/fr/docs/Web/JavaScr
 La méthode `fill()` lit la propriété `length` de `this` et définit la valeur de chaque propriété à clé entière de `start` à `end`.
 
 ```js
-const arrayLike = { length: 2 };
-console.log(Array.prototype.fill.call(arrayLike, 1));
+const objetSimilaireTableau = { length: 2 };
+console.log(Array.prototype.fill.call(objetSimilaireTableau, 1));
 // { '0': 1, '1': 1, length: 2 }
 ```
 
