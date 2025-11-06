@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 Les requêtes média sont utilisées afin :
 
-- D'appliquer certains styles de façon conditionnelle avec le [CSS](/fr/docs/Web/CSS) grâce [aux règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [`@media`](/fr/docs/Web/CSS/@media) et [`@import`](/fr/docs/Web/CSS/@import).
+- D'appliquer certains styles de façon conditionnelle avec le [CSS](/fr/docs/Web/CSS) grâce [aux règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media) et [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import).
 - De cibler certains médias pour les éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link), [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) et d'autres éléments [HTML](/fr/docs/Web/HTML) grâce à l'attribut `media=`.
 - De [tester et surveiller l'état d'un média](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) grâce aux méthodes [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener).
 

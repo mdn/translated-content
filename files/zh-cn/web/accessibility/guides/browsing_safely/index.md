@@ -19,7 +19,7 @@ l10n:
 
 ### 使用现代浏览器。学习个性化和无障碍设置
 
-现代浏览器支持 CSS 媒体特性 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)。浏览器可以检测用户是否请求了减少动画的体验。用户可以通过无障碍界面访问此功能，如下所示。
+现代浏览器支持 CSS 媒体特性 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)。浏览器可以检测用户是否请求了减少动画的体验。用户可以通过无障碍界面访问此功能，如下所示。
 
 ![显示如何在 Windows 10 中关闭动画的截图](android-remove-animations.png)
 

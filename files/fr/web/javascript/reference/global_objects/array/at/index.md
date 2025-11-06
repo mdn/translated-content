@@ -1,78 +1,87 @@
 ---
-title: Array.prototype.at()
+title: "Array : méthode at()"
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`at()`** des instances de {{JSxRef("Array")}} prend une valeur entière et retourne l'élément à cet indice, en acceptant des entiers positifs ou négatifs. Les entiers négatifs comptent à rebours depuis le dernier élément du tableau.
 
-La méthode **`at()`** prend un entier en argument et renvoie l'élément du tableau situé à cet indice. Des valeurs entières positives ou négatives peuvent être utilisées en argument. Dans ce dernier cas, la recherche est effectuée depuis la fin du tableau.
-
-L'accès aux éléments d'un tableau en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `array[0]` renverra le premier élément, `array[array.length-1]` renverra le dernier. Avec `array.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.
-
-{{InteractiveExample("JavaScript Demo: Array.at()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.at()")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];
 
 let index = 2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
-// Expected output: "An index of 2 returns 8"
+console.log(`Un indice de ${index} retourne ${array1.at(index)}`);
+// Résultat attendu : "Un indice de 2 retourne 8"
 
 index = -2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
-// Expected output: "An index of -2 returns 130"
+console.log(`Un indice de ${index} retourne ${array1.at(index)}`);
+// Résultat attendu : "Un indice de -2 retourne 130"
 ```
 
 ## Syntaxe
 
-```js
-at(indice);
+```js-nolint
+at(index)
 ```
 
 ### Paramètres
 
-- `indice`
-  - : L'indice (c'est-à-dire la position) de l'élément du tableau qu'on souhaite récupérer. Il est possible d'utiliser des valeurs négatives pour récupérer un élément en comptant depuis la fin du tableau.
+- `index`
+  - : Indice (commençant à zéro) de l'élément du tableau à retourner, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). Un indice négatif compte à rebours depuis la fin du tableau — si `index < 0`, c'est `index + array.length` qui est utilisé.
 
 ### Valeur de retour
 
-L'élément du tableau situé à l'indice indiqué. Si aucune valeur ne peut être trouvé à l'indice donné, c'est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est renvoyé.
+L'élément du tableau correspondant à l'indice donné. Retourne toujours {{JSxRef("undefined")}} si `index < -array.length` ou `index >= array.length`, sans tenter d'accéder à la propriété correspondante.
+
+## Description
+
+La méthode `at()` est équivalente à la notation avec crochets lorsque `index` est un entier positif ou nul. Par exemple, `array[0]` et `array.at(0)` retournent tous deux le premier élément. Cependant, pour compter à partir de la fin du tableau, on ne peut pas utiliser `array[-1]` comme en Python ou R, car toutes les valeurs entre crochets sont traitées littéralement comme des propriétés de chaîne de caractères, on lit donc `array["-1"]`, qui est simplement une propriété de chaîne de caractères ordinaire et non un indice de tableau.
+
+La pratique courante consiste à accéder à {{JSxRef("Array/length", "length")}} et à calculer l'indice à partir de là — par exemple, `array[array.length - 1]`. La méthode `at()` permet un indexage relatif, ce qui permet de simplifier en écrivant `array.at(-1)`.
+
+En combinant `at()` avec {{JSxRef("Array/with", "with()")}}, on peut lire et écrire (respectivement) dans un tableau en utilisant des indices négatifs.
+
+La méthode `at()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length` et des propriétés à clé entière.
 
 ## Exemples
 
-### Renvoyer la dernière valeur d'un tableau
+### Retourner la dernière valeur d'un tableau
 
-L'exemple qui suit fournit une fonction qui renvoie le dernier élément trouvé dans un tableau.
+L'exemple qui suit fournit une fonction qui retourne le dernier élément trouvé dans un tableau.
 
 ```js
 // Le tableau avec des éléments
-const corbeille = ["pomme", "banane", "poire"];
+const panier = ["pomme", "banane", "poire"];
 
-// Une fonction qui renvoie le dernier
+// Une fonction qui retourne le dernier
 // élément d'un tableau
 function dernierElem(arr) {
   return arr.at(-1);
 }
 
 // On récupère le dernier élément du
-// tableau 'corbeille'
-const item1 = dernierElem(corbeille);
+// tableau 'panier'
+const item1 = dernierElem(panier);
 console.log(item1);
 // Affiche 'poire' dans la console
 
 // On ajoute un élément au tableau
-// 'corbeille'
-corbeille.push("orange");
-const item2 = dernierElem(corbeille);
+// 'panier'
+panier.push("orange");
+const item2 = dernierElem(panier);
 console.log(item2);
 // Affiche 'orange' dans la console
 ```
 
 ### Comparaison de méthodes
 
-On compare ici différentes façons d'accéder à l'avant-dernier élément d'un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)). Bien que toutes les méthodes présentées ici soient valides et équivalentes, on pourra noter la concision et la lisibilité de la méthode `at()`.
+On compare ici différentes façons d'accéder à l'avant-dernier élément d'un tableau ({{JSxRef("Array")}}). Bien que toutes les méthodes présentées ici soient valides et équivalentes, on pourra noter la concision et la lisibilité de la méthode `at()`.
 
 ```js
 // Un tableau de valeurs
@@ -95,6 +104,21 @@ console.log(avecAt);
 // Affiche 'vert' dans la console
 ```
 
+### Utiliser `at()` sur des objets ressemblant à des tableaux
+
+La méthode `at()` lit la propriété `length` de `this` et calcule l'indice à accéder.
+
+```js
+const arrayLike = {
+  length: 2,
+  0: "a",
+  1: "b",
+  2: "c", // ignoré par at() car length vaut 2
+};
+console.log(Array.prototype.at.call(arrayLike, 0)); // "a"
+console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
+```
+
 ## Spécifications
 
 {{Specifications}}
@@ -105,9 +129,12 @@ console.log(avecAt);
 
 ## Voir aussi
 
-- [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find) qui renvoie une valeur selon un test donné
-- [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) qui teste si une valeur existe dans le tableau
-- [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) qui renvoie l'indice d'un élément donné
-- Prothèses d'émulation (<i lang="en">polyfills</i>)
-  - [Celle de la proposition TC39](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-  - [Celle de `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.findIndex()")}}
+- La méthode {{JSxRef("Array.prototype.indexOf()")}}
+- La méthode {{JSxRef("Array.prototype.with()")}}
+- La méthode {{JSxRef("TypedArray.prototype.at()")}}
+- La méthode {{JSxRef("String.prototype.at()")}}
+- [Prothèse d'émulation pour `Array.prototype.at` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Prothèse d'émulation es-shims pour `Array.prototype.at` <sup>(angl.)</sup>](https://www.npmjs.com/package/array.prototype.at)

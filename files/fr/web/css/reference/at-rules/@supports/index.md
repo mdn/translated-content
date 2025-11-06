@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
 L'utilisation de cette règle est couramment appelée «&nbsp;requête de fonctionnalité&nbsp;».
 La règle doit être placée au niveau supérieur de votre code ou imbriquée dans une autre règle conditionnelle de groupe.
 

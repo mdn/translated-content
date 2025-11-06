@@ -116,7 +116,7 @@ input {
 ## 関連概念
 
 - [CSS プロパティと値 API](/ja/docs/Web/CSS/CSS_properties_and_values_API) モジュール
-  - [`@property`](/ja/docs/Web/CSS/@property) アットルール
+  - [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルール
   - [`CSS.registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッド
 
 ## 仕様書

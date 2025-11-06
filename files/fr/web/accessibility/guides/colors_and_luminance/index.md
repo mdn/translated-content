@@ -18,7 +18,7 @@ Le choix des couleurs et leur utilisation est un aspect majeur de l'accessibilit
 
 L'environnement compte. La perception d'une couleur dans une pièce bien éclairée sera différente de la perception de cette même couleur sur le même écran d'ordinateur dans une pièce sombre. En matière d'accessibilité, certaines combinaisons de couleurs ont plus d'impact que d'autres. La taille de la police, le [style de police <sup>(angl.)</sup>](https://www.nngroup.com/articles/glanceable-fonts/) (certaines polices sont si fines ou fantaisistes qu'elles posent des problèmes d'accessibilité à elles seules), la couleur de fond, la taille de l'espace autour du texte, voire la densité de pixels, influent sur la façon dont la couleur est restituée à l'écran.
 
-La distance de l'utilisateur·ice à l'écran, l'environnement ambiant, la santé de ses yeux, etc., influent aussi sur la façon dont la couleur est perçue. La perception de la couleur après qu'elle a atteint les yeux dépend aussi de la santé générale. Heureusement, il existe des [requêtes médias](/fr/docs/Web/CSS/@media) qui permettent aux développeur·euse·s de proposer des styles adaptés aux préférences utilisateur·ice·s, notamment pour le [contraste](/fr/docs/Web/CSS/@media/prefers-contrast) et le [schéma de couleurs](/fr/docs/Web/CSS/@media/prefers-color-scheme).
+La distance de l'utilisateur·ice à l'écran, l'environnement ambiant, la santé de ses yeux, etc., influent aussi sur la façon dont la couleur est perçue. La perception de la couleur après qu'elle a atteint les yeux dépend aussi de la santé générale. Heureusement, il existe des [requêtes médias](/fr/docs/Web/CSS/Reference/At-rules/@media) qui permettent aux développeur·euse·s de proposer des styles adaptés aux préférences utilisateur·ice·s, notamment pour le [contraste](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) et le [schéma de couleurs](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
 
 Lorsque c'est pris en charge, l'interface [Ambient Light Sensor](/fr/docs/Web/API/AmbientLightSensor) retourne le niveau de lumière ambiante autour de l'appareil, permettant à une page web de détecter tout changement d'intensité lumineuse et d'ajuster le texte en conséquence. De plus, les requêtes médias ci-dessus permettent de proposer des expériences alternatives lorsque les préférences utilisateur·ice·s indiquent un niveau de contraste préféré, en ajustant automatiquement selon l'emplacement et le type d'écran utilisé.
 
@@ -218,7 +218,7 @@ L'adaptation à l'obscurité (face à une faible luminance) est lente. Lorsque v
 
 L'adaptation à la lumière est l'inverse. Passer d'une pièce sombre à une lumière solaire intense est plus rapide, mais cela peut aussi être douloureux.
 
-Les développeur·euse·s web qui cherchent à améliorer la lisibilité du texte lorsque les conditions d'éclairage ambiant d'une pièce ont changé peuvent tirer parti de l'interface `AmbientLightSensor` et de la requête média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast).
+Les développeur·euse·s web qui cherchent à améliorer la lisibilité du texte lorsque les conditions d'éclairage ambiant d'une pièce ont changé peuvent tirer parti de l'interface `AmbientLightSensor` et de la requête média [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast).
 
 ## Saturation
 

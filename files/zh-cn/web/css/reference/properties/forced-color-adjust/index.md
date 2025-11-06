@@ -48,7 +48,7 @@ forced-color-adjust: unset;
 
 在下面的示例中，第一个盒子将使用用户设置的颜色方案。例如，在 Windows 高对比度模式黑色主题中，它将使用黑色背景和白色文本。第二个盒子将保留在 `.box` 类上设置的网站颜色。
 
-通过使用 [`forced-colors`](/zh-CN/docs/Web/CSS/@media/forced-colors) 媒体特性，你可以在使用 `forced-color-adjust` 属性的同时添加任何其他针对强制颜色模式的优化。
+通过使用 [`forced-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/forced-colors) 媒体特性，你可以在使用 `forced-color-adjust` 属性的同时添加任何其他针对强制颜色模式的优化。
 
 #### CSS
 

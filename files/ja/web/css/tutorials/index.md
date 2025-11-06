@@ -38,7 +38,7 @@ CSS 2 (Level 1) のリリース後、 CSS に新しい機能が追加されま�
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
   - : CSS でアイテムやページをカウントするのは簡単な作業です。 {{cssxref("counter-reset")}}、{{cssxref("counter-increment")}}、{{cssxref("counters", "counters()")}}、{{cssxref("counter", "counter()")}} の使用方法を学びましょう。
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : CSSアニメーションでは、スタイル設定を[キーフレーム](/ja/docs/Web/CSS/@keyframes)として定義し、その間をアニメーションで遷移させることができます。
+  - : CSSアニメーションでは、スタイル設定を[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)として定義し、その間をアニメーションで遷移させることができます。
 - [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : CSS トランジションを使用すると、複数のスタイル設定間のアニメーションを定義し、この移行の方法を制御することができます。
 - [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

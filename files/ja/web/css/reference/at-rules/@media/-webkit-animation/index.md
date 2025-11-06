@@ -9,9 +9,9 @@ l10n:
 {{Non-standard_header}}{{Deprecated_Header}}
 
 > [!NOTE]
-> すべてのブラウザーが、ベンダー接頭辞なしの [`animation`](/ja/docs/Web/CSS/Reference/Properties/animation#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-animation` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `animation` に対応しているブラウザーはありません。代わりに、 [`@supports (animation)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+> すべてのブラウザーが、ベンダー接頭辞なしの [`animation`](/ja/docs/Web/CSS/Reference/Properties/animation#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-animation` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `animation` に対応しているブラウザーはありません。代わりに、 [`@supports (animation)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
 
-**`-webkit-animation`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
+**`-webkit-animation`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)であり、ベンダー接頭辞つきの CSS {{cssxref("animation")}} に対応していれば値が `true` になります。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
 
@@ -49,9 +49,9 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## 関連情報
 
-- [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transform-2d`](/ja/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transition`](/ja/docs/Web/CSS/@media/-webkit-transition)
+- [`-webkit-transform-3d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d)
+- [`-webkit-transform-2d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-2d)
+- [`-webkit-transition`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transition)
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("animation")}} および [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref("@media")}} および[メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)

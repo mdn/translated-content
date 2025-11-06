@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scan`** permet d'appliquer des styles CSS en fonction du procédé de balayage du périphérique de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scan`** permet d'appliquer des styles CSS en fonction du procédé de balayage du périphérique de sortie.
 
 ## Syntaxe
 
@@ -77,5 +77,5 @@ p {
 
 ## Voir aussi
 
-- La règle at [@media](/fr/docs/Web/CSS/@media), qui permet d'utiliser l'expression `scan`.
+- La règle at [@media](/fr/docs/Web/CSS/Reference/At-rules/@media), qui permet d'utiliser l'expression `scan`.
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour comprendre quand et comment utiliser une requête média.

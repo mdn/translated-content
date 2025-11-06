@@ -54,7 +54,7 @@ scrollbar-color: unset;
     </table>
 
 > [!NOTE]
-> [`@media (forced-colors: active)`](/zh-CN/docs/Web/CSS/@media/forced-colors) 会将 {{cssxref("scrollbar-color")}} 设置为 `auto`。
+> [`@media (forced-colors: active)`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/forced-colors) 会将 {{cssxref("scrollbar-color")}} 设置为 `auto`。
 
 ## 无障碍考虑
 

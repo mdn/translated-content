@@ -50,5 +50,5 @@ new AnimationEvent(type, options);
   - [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name)
   - [`animation-play-state`](/fr/docs/Web/CSS/Reference/Properties/animation-play-state)
   - [`animation-timing-function`](/fr/docs/Web/CSS/Reference/Properties/animation-timing-function)
-  - [`@keyframes`](/fr/docs/Web/CSS/@keyframes)
+  - [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes)
 - L'interface qui porte ce constructeur, [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`hover`** est utilisée pour tester si le _mécanisme_ de saisie principal de l'utilisateur·ice peut survoler des éléments.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`hover`** est utilisée pour tester si le _mécanisme_ de saisie principal de l'utilisateur·ice peut survoler des éléments.
 
 ## Syntaxe
 

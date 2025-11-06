@@ -1,13 +1,14 @@
 ---
-title: Array.prototype.shift()
+title: "Array : méthode shift()"
+short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`shift()`** des instances {{JSxRef("Array")}} supprime le **premier** élément d'un tableau et retourne cet élément supprimé. Cette méthode modifie la longueur du tableau.
 
-La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
-
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.shift()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];
@@ -15,32 +16,35 @@ const array1 = [1, 2, 3];
 const firstElement = array1.shift();
 
 console.log(array1);
-// Expected output: Array [2, 3]
+// Résultat attendu : Array [2, 3]
 
 console.log(firstElement);
-// Expected output: 1
+// Résultat attendu : 1
 ```
 
 ## Syntaxe
 
-```js
-arr.shift();
+```js-nolint
+shift()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-L'élément retiré du tableau ou {{jsxref("undefined")}} si le tableau est vide.
+L'élément retiré du tableau ou {{JSxRef("undefined")}} si le tableau est vide.
 
 ## Description
 
-La méthode `shift` retire l'élément situé à l'index zéro et décrémente l'index des éléments suivant avant de retourner l'élément supprimé. Si la propriété {{jsxref("Array.length", "length")}} vaut 0, {{jsxref("undefined")}} est retourné.
+La méthode `shift()` décale toutes les valeurs vers la gauche de 1 et décrémente la longueur de 1, résultant en la suppression du premier élément. Si la {{JSxRef("Array/length", "length")}} propriété est 0, {{JSxRef("undefined")}} est retourné.
 
-Cette méthode est générique et peut être {{jsxref("Function.call", "appelée","",1)}} ou {{jsxref("Function.apply", "appliquée","",1)}} sur des objets similaires à des tableaux.
+La méthode {{JSxRef("Array/pop", "pop()")}} a un comportement similaire à `shift()`, mais s'applique au dernier élément d'un tableau.
 
-Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
+La méthode `shift()` est une [méthode mutatrice](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle modifie la longueur et le contenu de `this`. Si vous souhaitez que la valeur de `this` reste inchangée mais obtenir un nouveau tableau sans le premier élément, vous pouvez utiliser [`arr.slice(1)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) à la place.
 
-> [!NOTE]
-> La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
+La méthode `shift()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés indexées par des entiers. Bien que les chaînes soient également assimilables à des tableaux, cette méthode ne leur convient pas, car les chaînes sont immuables.
 
 ## Exemples
 
@@ -75,6 +79,28 @@ while ((i = noms.shift()) !== undefined) {
 // André, Édouard, Paul, Christophe, Jean
 ```
 
+### Appeler `shift()` sur des objets qui ne sont pas des tableaux
+
+La méthode `shift()` lit la propriété `length` de `this`. Si la [longueur normalisée](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#normalisation_de_la_propriété_length) vaut 0, `length` est de nouveau définie à `0` (alors qu'elle peut être négative ou `undefined` auparavant). Sinon, la propriété à `0` est retournée, et le reste des propriétés est décalé d'un indice vers la gauche. La propriété à `length - 1` est [supprimée](/fr/docs/Web/JavaScript/Reference/Operators/delete), et la propriété `length` est décrémentée de 1.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
+console.log(Array.prototype.shift.call(arrayLike));
+// undefined, car il s'agit d'une case vide
+console.log(arrayLike);
+// { '1': 4, length: 2, unrelated: 'foo' }
+
+const plainObj = {};
+// Il n'y a pas de propriété `length`, donc `length` vaut 0
+Array.prototype.shift.call(plainObj);
+console.log(plainObj);
+// { length: 0 }
+```
+
 ## Spécifications
 
 {{Specifications}}
@@ -85,7 +111,10 @@ while ((i = noms.shift()) !== undefined) {
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.push()")}}
+- La méthode {{JSxRef("Array.prototype.pop()")}}
+- La méthode {{JSxRef("Array.prototype.unshift()")}}
+- La méthode {{JSxRef("Array.prototype.concat()")}}
+- La méthode {{JSxRef("Array.prototype.splice()")}}

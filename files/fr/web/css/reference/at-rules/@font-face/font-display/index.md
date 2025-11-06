@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7c5497422bc7ec41f0aa1caf940c2e1fd6083941
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-display`** pour la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}} détermine comment une police est affichée en fonction de son état de téléchargement et de disponibilité.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-display`** pour la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-face")}} détermine comment une police est affichée en fonction de son état de téléchargement et de disponibilité.
 
 ## Syntaxe
 

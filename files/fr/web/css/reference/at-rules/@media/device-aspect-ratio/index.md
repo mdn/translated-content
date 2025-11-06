@@ -11,7 +11,7 @@ l10n:
 > [!NOTE]
 > Pour interroger le {{glossary("aspect ratio", "rapport d'aspect")}} de la zone d'affichage, il faut utiliser la caractéristique média {{cssxref("@media/aspect-ratio", "aspect-ratio")}}.
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-aspect-ratio`** peut être utilisée pour tester le {{glossary("aspect ratio", "rapport d'aspect")}} largeur/hauteur d'un périphérique de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-aspect-ratio`** peut être utilisée pour tester le {{glossary("aspect ratio", "rapport d'aspect")}} largeur/hauteur d'un périphérique de sortie.
 
 ## Syntaxe
 

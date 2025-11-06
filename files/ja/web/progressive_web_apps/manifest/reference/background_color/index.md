@@ -42,7 +42,7 @@ l10n:
 マニフェストの `background_color` は、初期読み込み段階における一時的な措置として、また一部の環境におけるスプラッシュ画面の生成のみに使用されます。
 
 > [!NOTE]
-> ブラウザーは、アプリの CSS で定義された [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーに対応するために、マニフェストの `background_color` の値を上書きすることがあります。
+> ブラウザーは、アプリの CSS で定義された [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーに対応するために、マニフェストの `background_color` の値を上書きすることがあります。
 
 ## 例
 

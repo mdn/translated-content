@@ -43,7 +43,7 @@ animation-composition: unset;
 
 ## 解説
 
-[@keyframes](/ja/docs/Web/CSS/@keyframes) アットルールが対象とする各プロパティは、効果スタックに関連付けられています。効果スタックの値は、 CSS スタイルルールのプロパティの基礎値 (_underlying value_) と、キーフレームのプロパティの効果値 (_effect value_) を組み合わせて計算されます。 `animation-composition` プロパティは、基礎値と効果値の合成方法を指定するのに役立ちます。
+[@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) アットルールが対象とする各プロパティは、効果スタックに関連付けられています。効果スタックの値は、 CSS スタイルルールのプロパティの基礎値 (_underlying value_) と、キーフレームのプロパティの効果値 (_effect value_) を組み合わせて計算されます。 `animation-composition` プロパティは、基礎値と効果値の合成方法を指定するのに役立ちます。
 
 例えば、下記の CSS の場合、 `blur(5px)` が基盤値で、 `blur(10px)` が効果値です。 `animation-composition` プロパティは、基礎値と効果値の効果を合成した後、最終的な効果値を生成する処理を指定します。
 

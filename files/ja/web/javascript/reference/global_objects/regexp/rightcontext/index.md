@@ -1,11 +1,12 @@
 ---
 title: RegExp.rightContext ($')
+short-title: rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
 l10n:
-  sourceCommit: d1edcbabf7431e9929c77e70b0c1bc741d887236
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
@@ -43,8 +44,8 @@ RegExp["$'"]; // " world!"
 
 ## 関連情報
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}
+- [`RegExp.input` (`$_`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- [`RegExp.lastMatch` (`$&`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- [`RegExp.lastParen` (`$+`)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- [`RegExp.leftContext` (`` $` ``)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- [`RegExp.$1`, …, `RegExp.$9`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

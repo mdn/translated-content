@@ -40,7 +40,7 @@ will-change: opacity, transform;
 
 ### La propriété `font-display`
 
-Insérée dans une règle [`@font-face`](/fr/docs/Web/CSS/@font-face), la propriété CSS [`font-display`](/fr/docs/Web/CSS/@font-face/font-display) permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.
+Insérée dans une règle [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), la propriété CSS [`font-display`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/font-display) permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.
 
 ```css
 @font-face {

@@ -11,7 +11,7 @@ l10n:
 > [!NOTE]
 > Pour interroger la largeur de la zone d'affichage, il faut utiliser la caractéristique média {{cssxref("@media/width", "width")}}.
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-width`** est utilisée pour tester la largeur de la surface de rendu d'un périphérique de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-width`** est utilisée pour tester la largeur de la surface de rendu d'un périphérique de sortie.
 
 ## Syntaxe
 

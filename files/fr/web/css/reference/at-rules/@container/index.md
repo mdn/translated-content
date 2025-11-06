@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 27e3d279057ebbb559f4725641b1c431914de7b1
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées au conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
@@ -127,7 +127,7 @@ Les requêtes `<container-condition>` incluent les descripteurs de conteneur [si
 
 #### Descripteurs de taille de conteneur
 
-Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes de taille, chacune entre parenthèses. Une requête de taille inclut un descripteur de taille, une valeur et — selon le descripteur — un opérateur de comparaison. Les requêtes mesurent toujours la [boîte de contenu](/fr/docs/Web/CSS/box-edge#content-box) pour la comparaison. La syntaxe pour inclure plusieurs conditions est la même que pour les requêtes de fonctionnalités de taille [`@media`](/fr/docs/Web/CSS/@media).
+Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes de taille, chacune entre parenthèses. Une requête de taille inclut un descripteur de taille, une valeur et — selon le descripteur — un opérateur de comparaison. Les requêtes mesurent toujours la [boîte de contenu](/fr/docs/Web/CSS/box-edge#content-box) pour la comparaison. La syntaxe pour inclure plusieurs conditions est la même que pour les requêtes de fonctionnalités de taille [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media).
 
 ```css
 @container (min-width: 400px) {
@@ -154,7 +154,7 @@ Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes d
   - : Le {{cssxref("inline-size")}} du conteneur, exprimé en {{cssxref("length")}}.
 
 - `orientation`
-  - : L'[orientation](/fr/docs/Web/CSS/@media/orientation) du conteneur, soit `landscape`, soit `portrait`.
+  - : L'[orientation](/fr/docs/Web/CSS/Reference/At-rules/@media/orientation) du conteneur, soit `landscape`, soit `portrait`.
 
 - `width`
   - : La largeur du conteneur, exprimée en {{cssxref("length")}}.

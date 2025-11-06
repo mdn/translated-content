@@ -74,4 +74,4 @@ Par exemple&nbsp;:
 
 - La valeur [`color-scheme`](/fr/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) de l'attribut `name` de `<meta>`
 - La propriété CSS {{CSSxRef("color-scheme")}}
-- La requête média [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme)
+- La requête média [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

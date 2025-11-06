@@ -1,15 +1,16 @@
 ---
 title: RegExp.prototype[Symbol.replace]()
+short-title: "[Symbol.replace]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`[Symbol.replace]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現がパターンとして渡されたときに [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) および[`String.prototype.replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) がどのように動作するかを指定します。
 
-{{InteractiveExample("JavaScript デモ: RegExp.prototype[SYmbol.replace]()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.replace]()")}}
+
+<!-- cSpell:ignore tball -->
 
 ```js interactive-example
 class RegExp1 extends RegExp {
@@ -19,7 +20,7 @@ class RegExp1 extends RegExp {
 }
 
 console.log("football".replace(new RegExp1("foo")));
-// Expected output: "#!@?tball"
+// 予想される結果: "#!@?tball"
 ```
 
 ## 構文
@@ -93,8 +94,8 @@ console.log("😄".replace(/(?:)/gu, " ")); // " 😄 "
 ```js
 const re = /-/g;
 const str = "2016-01-01";
-const newstr = re[Symbol.replace](str, ".");
-console.log(newstr); // 2016.01.01
+const newStr = re[Symbol.replace](str, ".");
+console.log(newStr); // 2016.01.01
 ```
 
 ### サブクラスでの `[Symbol.replace]()` の使用
@@ -119,8 +120,8 @@ class MyRegExp extends RegExp {
 
 const re = new MyRegExp("\\d", "", 3);
 const str = "01234567";
-const newstr = str.replace(re, "#"); // String.prototype.replace は re[Symbol.replace]() を呼び出す
-console.log(newstr); // ###34567
+const newStr = str.replace(re, "#"); // String.prototype.replace は re[Symbol.replace]() を呼び出す
+console.log(newStr); // ###34567
 ```
 
 ## 仕様書

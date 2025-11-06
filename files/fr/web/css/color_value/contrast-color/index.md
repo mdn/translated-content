@@ -107,7 +107,7 @@ updateColor();
 
 ### Exemple : mode clair et sombre
 
-Dans l'exemple suivant, la [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme) est utilisée pour définir une couleur d'arrière‑plan selon les préférences du système d'exploitation ou du navigateur. La fonction `contrast-color()` est utilisée pour définir automatiquement la couleur du texte.
+Dans l'exemple suivant, la [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) est utilisée pour définir une couleur d'arrière‑plan selon les préférences du système d'exploitation ou du navigateur. La fonction `contrast-color()` est utilisée pour définir automatiquement la couleur du texte.
 
 Essayez de changer le mode sombre ou clair du navigateur ou du système pour voir l'effet.
 
@@ -180,7 +180,7 @@ pre {
 - La fonction CSS {{CSSXref("filter-function/contrast", "contrast()")}}
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
 - [Propriétés personnalisées CSS](/fr/docs/Web/CSS/Reference/Properties/--*) et {{cssxref("var")}}
-- Les fonctionnalités {{cssxref("@media")}} [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast) et [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme)
+- Les fonctionnalités {{cssxref("@media")}} [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) et [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)
 - [WCAG&nbsp;: contraste des couleurs](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Comment laisser le navigateur choisir une couleur contrastée en CSS <sup>(angl.)</sup>](https://webkit.org/blog/16929/contrast-color/) sur webkit.org (2025)
 - [WebAIM Contrast Checker <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/) sur webaim.org (2025)

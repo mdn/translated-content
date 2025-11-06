@@ -41,7 +41,7 @@ additive-symbols:
 - {{cssxref("integer")}}
   - : タプルの関連付けられた記号値の整数の加重を指定する非負の整数値。
 
-- [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#symbol)
+- [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
   - : タプルの関連付けられた `<integer>` 加重値で定義される加重値に使用するカウンター記号を指定します。
 
 > [!NOTE]

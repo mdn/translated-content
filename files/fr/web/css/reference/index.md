@@ -3,7 +3,7 @@ title: Référence CSS
 slug: Web/CSS/Reference
 ---
 
-Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
+Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
 
 ## Syntaxe de règle basique
 
@@ -45,7 +45,7 @@ Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel]
 
 ### Syntaxe des règles @
 
-Comme la structure des règles @ varie grandement, veuillez consulter [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) pour trouver la syntaxe que vous souhaitez.
+Comme la structure des règles @ varie grandement, veuillez consulter [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) pour trouver la syntaxe que vous souhaitez.
 
 ## Index des mots-clés
 
@@ -104,7 +104,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 ### Syntaxe et sémantique
 
 - [Syntaxe CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started)
-- [Règles @ (_at-rules_)](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+- [Règles @ (_at-rules_)](/fr/docs/Web/CSS/CSS_syntax/At-rules)
 - [Cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
 - [Descripteurs](/fr/docs/Glossary/CSS_Descriptor)

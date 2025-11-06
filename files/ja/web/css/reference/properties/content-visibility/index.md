@@ -95,7 +95,7 @@ content-visibility: unset;
 `content-visibility` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。これにより、 `content-visibility` のトランジションが有効になります。
 
 > [!NOTE]
-> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
+> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
 ## 公式定義
 

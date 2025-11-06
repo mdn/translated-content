@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scripting`** permet de tester si les scripts (comme JavaScript) sont disponibles.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scripting`** permet de tester si les scripts (comme JavaScript) sont disponibles.
 
 > [!NOTE]
 > La détection est effectuée par les navigateurs selon les paramètres de l'utilisateur. Certaines extensions de navigateur peuvent bloquer les scripts avec différentes techniques. Dans ces cas, la caractéristique média `scripting` peut ne pas fonctionner comme prévu.

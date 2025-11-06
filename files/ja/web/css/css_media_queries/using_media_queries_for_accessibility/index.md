@@ -11,7 +11,7 @@ l10n:
 
 点滅やフラッシュのアニメーションは、注意欠陥障害 (ADHD) のような認知障害を持った人々にとって問題になる可能性があります。加えて、特定の種類の動きが前庭障害、てんかん、片頭痛、スコピック感受性などを引き起こす可能性があります。ユーザーの環境設定に応じてアニメーションを削減したり、アニメーションを完全にオフにしたりすることも、バッテリー残量が少ないユーザーや低スペックの端末を使用しているユーザーにとって好ましいことです。
 
-[`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディアクエリーを使用すると、オペレーティングシステムのアクセシビリティ設定で動きを少なくするように設定しているユーザーに対して、アニメーションやトランジションの少ない、使い勝手の良い体験を提供することができます。これには 2 つの値があります。
+[`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディアクエリーを使用すると、オペレーティングシステムのアクセシビリティ設定で動きを少なくするように設定しているユーザーに対して、アニメーションやトランジションの少ない、使い勝手の良い体験を提供することができます。これには 2 つの値があります。
 
 - `no-preference`
   - : システムが把握している設定をユーザーが行っていないことを示します。
@@ -46,8 +46,8 @@ l10n:
 
 ## 関連情報
 
-- [`prefers-contrast`](/ja/docs/Web/CSS/@media/prefers-contrast): ユーザーのコントラストの環境設定に基づいてページスタイルを調整
-- [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced-transparency)
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme)
-- [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors)
+- [`prefers-contrast`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast): ユーザーのコントラストの環境設定に基づいてページスタイルを調整
+- [`prefers-reduced-transparency`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency)
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)
+- [`inverted-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/inverted-colors)
 - [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

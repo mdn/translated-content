@@ -49,7 +49,7 @@ document.domain = "company.com";
 - {{htmlelement("img")}}的影像；支援格式有 PNG, JPEG, GIF, BMP, SVG 等等
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
 - [`<object>`](/zh-TW/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/zh-TW/docs/Web/HTML/Reference/Elements/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
-- [`@font-face`](/zh-TW/docs/Web/CSS/@font-face) 的字型；有些瀏覽器允許跨來源字型，有些則不。
+- [`@font-face`](/zh-TW/docs/Web/CSS/Reference/At-rules/@font-face) 的字型；有些瀏覽器允許跨來源字型，有些則不。
 - [`<frame>`](/zh-TW/docs/Web/HTML/Reference/Elements/frame)以及[`<iframe>`](/zh-TW/docs/Web/HTML/Reference/Elements/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/Web/HTTP/Reference/Headers/X-Frame-Options)標頭避免。
 
 ### 如何允許跨來源存取

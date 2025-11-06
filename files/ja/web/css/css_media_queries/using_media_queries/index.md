@@ -9,7 +9,7 @@ l10n:
 
 メディアクエリーは以下の用途で使用されます。
 
-- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)により、条件付きでスタイルを適用する。
+- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)により、条件付きでスタイルを適用する。
 - {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性や `sizes="` 属性を付けて特定のメディアを対象とする。
 - [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、 {{domxref("Window.matchMedia()")}} および {{domxref("EventTarget.addEventListener()")}} メソッドを使用する
 
@@ -20,11 +20,11 @@ l10n:
 
 メディアクエリーは、任意の「メディア種別」と任意の数の「メディア特性」の式で構成されます。「論理演算子」を使用して、複数のクエリーを様々な形で組み合わせることができます。メディアクエリーは大文字小文字の区別がありません。
 
-- [メディア種別](/ja/docs/Web/CSS/@media#メディア種別)は、メディアクエリーを適用する機器の大まかな分類を `all`, `print`, `screen` で定義します。
+- [メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)は、メディアクエリーを適用する機器の大まかな分類を `all`, `print`, `screen` で定義します。
 
   種別は省略可能（`all` と見なされる）ですが、 `only` 論理演算子を使用する場合は例外です。
 
-- [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、{{glossary("user agent", "ユーザーエージェント")}}、出力機器、環境などの特定の特徴を記述します。
+- [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)は、{{glossary("user agent", "ユーザーエージェント")}}、出力機器、環境などの特定の特徴を記述します。
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -61,7 +61,7 @@ l10n:
   メディア特性式は、その存在や値をテストするもので、完全にオプションです。
   それぞれのメディア特性式は括弧で囲む必要があります。
 
-- [論理演算子](/ja/docs/Web/CSS/@media#論理演算子)は、複合的なメディアクエリーを構成するために使用します。 `not`, `and`, `only` があります。
+- [論理演算子](/ja/docs/Web/CSS/Reference/At-rules/@media#論理演算子)は、複合的なメディアクエリーを構成するために使用します。 `not`, `and`, `only` があります。
   また、複数のメディアクエリーをカンマで区切って 1 つのルールにまとめることもできます。
 
 メディア種別（指定されている場合）が文書を表示する端末と照合され、かつ、すべてのメディア機能式が `true` と計算されると、メディアクエリーは true と計算されます。
@@ -92,7 +92,7 @@ l10n:
 }
 ```
 
-すべてのメディア種別の一覧は、[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)を参照してください。
+すべてのメディア種別の一覧は、[メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)を参照してください。
 メディア種別は端末をとても大まかに記述するため、元々定義されていたメディア種別のほとんどは非推奨となり、`screen`、`print`、`all` だけが残りました。より詳細な属性を指定するには、代わりに「メディア特性」を使用してください。
 
 ## メディア特性を対象にする
@@ -177,7 +177,7 @@ l10n:
 
 その特性が、ブラウザーが動作している端末で適用されない場合、そのメディア特性を含む式は常に false となります。
 
-その他の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)の例については、それぞれの特性のリファレンスページを参照してください。
+その他の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)の例については、それぞれの特性のリファレンスページを参照してください。
 
 ## 複合メディアクエリーの作成
 
@@ -335,7 +335,7 @@ l10n:
 
 ## 関連情報
 
-- [@media](/ja/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)

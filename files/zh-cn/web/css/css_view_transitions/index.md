@@ -17,7 +17,7 @@ l10n:
 ### At 规则和描述符
 
 - {{cssxref("@view-transition")}}
-  - [`navigation`](/zh-CN/docs/Web/CSS/@view-transition#navigation) 描述符
+  - [`navigation`](/zh-CN/docs/Web/CSS/Reference/At-rules/@view-transition#navigation) 描述符
 
 ### 选择器和伪元素
 

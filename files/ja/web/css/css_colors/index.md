@@ -29,9 +29,9 @@ l10n:
 ### アットルールと記述子
 
 - {{cssxref("@color-profile")}}
-  - [`components`](/ja/docs/Web/CSS/@color-profile#記述子) 記述子
-  - [`rendering-intent`](/ja/docs/Web/CSS/@color-profile#記述子) 記述子
-  - [`src`](/ja/docs/Web/CSS/@color-profile#記述子) 記述子
+  - [`components`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile#記述子) 記述子
+  - [`rendering-intent`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile#記述子) 記述子
+  - [`src`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile#記述子) 記述子
 
 ### 関数
 
@@ -120,10 +120,10 @@ l10n:
 - SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色相環")}}（用語）
 - {{glossary("Interpolation", "補間")}}（用語）
-- [`@font-palette-values`](/ja/docs/Web/CSS/@font-palette-values) アットルールの [`override-colors`](/ja/docs/Web/CSS/@font-palette-values/override-colors) 記述子
-- [`@color-profile`](/ja/docs/Web/CSS/@color-profile) アットルール
-- @media の [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) 特性
-- @media の [`forced-colors`](/ja/docs/Web/CSS/@media/forced-colors) 特性
+- [`@font-palette-values`](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールの [`override-colors`](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) 記述子
+- [`@color-profile`](/ja/docs/Web/CSS/Reference/At-rules/@color-profile) アットルール
+- @media の [`color-gamut`](/ja/docs/Web/CSS/Reference/At-rules/@media/color-gamut) 特性
+- @media の [`forced-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) 特性
 
 ## 仕様書
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
 
 ## Syntaxe
 
@@ -61,9 +61,9 @@ Les navigateurs tentent le téléchargement des ressources selon leur ordre de d
 En permettant de fournir ses propres polices, `@font-face` permet de concevoir du contenu qui ne soit pas limité aux polices universellement disponibles. En permettant d'indiquer le nom d'une police locale, on peut personnaliser le contenu sans pour autant avoir besoin d'une connexion Internet.
 
 > [!NOTE]
-> Les stratégies de repli pour le chargement des polices sur les anciens navigateurs sont décrites dans la page du descripteur [`src`](/fr/docs/Web/CSS/@font-face/src#définir_les_stratégies_de_repli_pour_les_anciens_navigateurs).
+> Les stratégies de repli pour le chargement des polices sur les anciens navigateurs sont décrites dans la page du descripteur [`src`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/src#définir_les_stratégies_de_repli_pour_les_anciens_navigateurs).
 
-La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/CSS_syntax/At-rule#les_règles_de_groupe_conditionnelles).
+La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/CSS_syntax/At-rules#les_règles_de_groupe_conditionnelles).
 
 ### Types MIME pour les polices
 

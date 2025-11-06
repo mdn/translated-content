@@ -589,7 +589,7 @@ Selon le type de liste, adaptez l'écriture comme décrit ci-dessous. Dans les d
 
 ### Section « Voir aussi »
 
-La plupart des guides, pages de référence et même pages de glossaire sur MDN Web Docs contiennent une section _Voir aussi_ à la fin de l'article. Cette section contient des [références](#références_liens) vers des sujets liés au sein de MDN et parfois des liens externes. Par exemple, voici la [section Voir aussi](/fr/docs/Web/CSS/@layer#voir_aussi) de la page `@layer`.
+La plupart des guides, pages de référence et même pages de glossaire sur MDN Web Docs contiennent une section _Voir aussi_ à la fin de l'article. Cette section contient des [références](#références_liens) vers des sujets liés au sein de MDN et parfois des liens externes. Par exemple, voici la [section Voir aussi](/fr/docs/Web/CSS/Reference/At-rules/@layer#voir_aussi) de la page `@layer`.
 
 En général, présentez les liens de la section Voir aussi sous forme de [liste à puces](#listes) avec chaque élément comme un syntagme. Dans la section [Apprendre le développement web](/fr/docs/Learn_web_development), la section Voir aussi suit un format de [liste de définitions](/fr/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists).
 

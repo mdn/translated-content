@@ -11,7 +11,7 @@ l10n:
 
 クエリーの結果を評価できるようにするのに先立ち、メディアクエリーを示す {{domxref("MediaQueryList")}} オブジェクトを作成する必要があります。オブジェクトを作成するには、{{domxref("window.matchMedia")}} メソッドを用います。
 
-例えば、端末の[向き](/ja/docs/Web/CSS/@media/orientation)が横置きか縦置きかを調べるクエリーリストを設定したい場合は、以下のようにします。
+例えば、端末の[向き](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)が横置きか縦置きかを調べるクエリーリストを設定したい場合は、以下のようにします。
 
 ```js
 const mediaQueryList = window.matchMedia("(orientation: portrait)");

@@ -7,7 +7,7 @@ l10n:
 
 **`color()`** 関数記法により、他のほとんどの色関数が暗黙に処理する sRGB {{glossary("color space", "色空間")}}ではなく、特定の指定した色空間で色を指定することができます。
 
-特定の色空間に対応しているかどうかは、CSS メディア特性の [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) で検出することができます。
+特定の色空間に対応しているかどうかは、CSS メディア特性の [`color-gamut`](/ja/docs/Web/CSS/Reference/At-rules/@media/color-gamut) で検出することができます。
 
 ## 構文
 
@@ -243,7 +243,7 @@ div {
 
 ### color-gamut メディアクエリーで color() を使用
 
-この例では、[`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) メディアクエリーを使用して、具体的な色空間への対応を検出し、その色空間を使用して色を指定する方法を示します。
+この例では、[`color-gamut`](/ja/docs/Web/CSS/Reference/At-rules/@media/color-gamut) メディアクエリーを使用して、具体的な色空間への対応を検出し、その色空間を使用して色を指定する方法を示します。
 
 #### HTML
 
@@ -379,5 +379,5 @@ div {
 - [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
 - [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
-- [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) メディア特性
+- [`color-gamut`](/ja/docs/Web/CSS/Reference/At-rules/@media/color-gamut) メディア特性
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

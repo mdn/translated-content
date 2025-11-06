@@ -11,7 +11,7 @@ l10n:
 
 それ以外にも、ページを印刷する際にフォントサイズを大きくしてナビゲーションメニューを非表示にしたり、ページを縦向きまたは横向きで表示する際に段落間のパディングを調整したり、タッチ画面で操作しやすいようにボタンのサイズを大きくしたりといった例が挙げられます。
 
-[CSS](/ja/docs/Web/CSS) では、 {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用して、メディアクエリーの結果に基づいて条件付きでスタイルの一部を適用することができます。 {{cssxref("@import")}} を使用すると、条件付きでスタイルシート全体を適用することもできます。
+[CSS](/ja/docs/Web/CSS) では、 {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を使用して、メディアクエリーの結果に基づいて条件付きでスタイルの一部を適用することができます。 {{cssxref("@import")}} を使用すると、条件付きでスタイルシート全体を適用することもできます。
 
 再利用可能な HTML コンポーネントを設計する場合、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)を使用することもできます。これにより、ビューポートやその他の端末の特性ではなく、コンテナー要素のサイズに基づいてスタイルを適用することができます。
 
@@ -65,10 +65,10 @@ l10n:
 
 ### データ型と演算子
 
-- [`<media-types>`](/ja/docs/Web/CSS/@media#メディア種別)
-- [`<media-features>`](/ja/docs/Web/CSS/@media#メディア特性)
+- [`<media-types>`](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)
+- [`<media-features>`](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)
 - [`<resolution>`](/ja/docs/Web/CSS/resolution)
-- [論理演算子](/ja/docs/Web/CSS/@media#論理演算子)
+- [論理演算子](/ja/docs/Web/CSS/Reference/At-rules/@media#論理演算子)
 
 ### 用語集の用語
 

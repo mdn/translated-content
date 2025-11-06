@@ -267,7 +267,7 @@ Il est également plus facile d'obtenir des dispositions adaptatives en employan
 
 - Prendre en charge les appareils tactiles&nbsp;:
   - [L'API des évènements tactiles](/fr/docs/Web/API/Touch_events) permet d'interpréter l'activité du doigt ou du stylet sur les écrans ou surfaces tactiles, pour implémenter des interfaces utilisateurs tactiles complexes.
-  - Les caractéristiques média [`pointer`](/fr/docs/Web/CSS/@media/pointer) et [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer) permettent d'appliquer du CSS différent en fonction de la prise en charge tactile de l'appareil.
+  - Les caractéristiques média [`pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/pointer) et [`any-pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/any-pointer) permettent d'appliquer du CSS différent en fonction de la prise en charge tactile de l'appareil.
 - [Le guide CSS Tricks sur les requêtes média (en anglais)](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}

@@ -41,7 +41,7 @@ Pour être tout à fait précis, la propriété `overflow` est une [propriété 
 
 ## Les propriétés relatives
 
-Dans le guide sur [les modes d'écriture et la disposition en flux](/fr/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes), nous avons étudié des propriétés plus récentes `block-size` et `inline-size` qui permettent de raisonner avec les modes d'écriture plutôt qu'avec les dimensions physiques de l'écran. La spécification de niveau 3 Overflow inclut également les propriétés correspondantes pour le dépassement : [`overflow-block`](/fr/docs/Web/CSS/@media/overflow-block) et [`overflow-inline`](/fr/docs/Web/CSS/@media/overflow-inline). Ces propriétés « logiques » correspondent aux propriétés « physiques » `overflow-x` et `overflow-y` où la correspondance varie en fonction du mode d'écriture du document.
+Dans le guide sur [les modes d'écriture et la disposition en flux](/fr/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes), nous avons étudié des propriétés plus récentes `block-size` et `inline-size` qui permettent de raisonner avec les modes d'écriture plutôt qu'avec les dimensions physiques de l'écran. La spécification de niveau 3 Overflow inclut également les propriétés correspondantes pour le dépassement : [`overflow-block`](/fr/docs/Web/CSS/Reference/At-rules/@media/overflow-block) et [`overflow-inline`](/fr/docs/Web/CSS/Reference/At-rules/@media/overflow-inline). Ces propriétés « logiques » correspondent aux propriétés « physiques » `overflow-x` et `overflow-y` où la correspondance varie en fonction du mode d'écriture du document.
 
 À l'heure où nous écrivons ces lignes, ces deux propriétés ne sont pas implémentées par les navigateurs et il faut donc s'en tenir aux propriétés physiques et ajuster selon le mode d'écriture.
 

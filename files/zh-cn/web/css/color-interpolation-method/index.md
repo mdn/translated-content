@@ -31,7 +31,7 @@ in <polar-color-space>[ <hue-interpolation method>]
   - : 用于色调插值的算法。默认为 `shorter hue`。
 
 - `<custom-color-space>`
-  - : 一个指向自定义 [@color profile](/zh-CN/docs/Web/CSS/@color-profile) 的 [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident#与_color-profile_一起使用)。
+  - : 一个指向自定义 [@color profile](/zh-CN/docs/Web/CSS/Reference/At-rules/@color-profile) 的 [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident#与_color-profile_一起使用)。
 
 ## 形式语法
 

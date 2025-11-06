@@ -30,7 +30,7 @@ Le descripteur `symbols` est spécifié comme une liste d'une ou plusieurs valeu
 
 ## Description
 
-Un symbole peut être une chaîne de caractères, une image ou un identifiant. Il est utilisé dans la règle {{cssxref("@counter-style")}} [at-rule](/fr/docs/Web/CSS/CSS_syntax/At-rule).
+Un symbole peut être une chaîne de caractères, une image ou un identifiant. Il est utilisé dans la règle {{cssxref("@counter-style")}} [at-rule](/fr/docs/Web/CSS/CSS_syntax/At-rules).
 
 Lorsque la valeur du descripteur {{cssxref('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`, le descripteur `symbols` doit être spécifié. Pour le système `additive`, utilisez le descripteur {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} à la place pour spécifier les symboles.
 

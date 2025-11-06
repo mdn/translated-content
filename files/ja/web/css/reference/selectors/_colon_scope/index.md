@@ -153,7 +153,7 @@ document.getElementById("results").textContent = Array.prototype.map
 
 ## 関連情報
 
-- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
 - {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}

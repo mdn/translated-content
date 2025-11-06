@@ -13,7 +13,7 @@ Traditionnellement, dans le développement web, la seule gamme utilisée était 
 
 Depuis 2021, les navigateurs ont commencé à fournir des fonctionnalités pour d'autres gamuts, comme _[P3](https://fr.wikipedia.org/wiki/DCI-P3)_, largement utilisé dans l'industrie du cinéma, et _[rec2020](https://fr.wikipedia.org/wiki/Rec._2020)_.
 
-Les développeur·euse·s peuvent définir différents jeux de couleurs pour les périphériques prenant en charge des gamuts plus larges à l'aide de la [fonctionnalité média `color-gamut`](/fr/docs/Web/CSS/@media/color-gamut) ou de la [fonctionnalité média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). On peut décrire des couleurs en dehors du gamut RVB à l'aide de fonctions CSS spécifiques comme [`lch()`](/fr/docs/Web/CSS/color_value/lch) pour le système de coordonnées cylindriques LCH, ou [`lab()`](/fr/docs/Web/CSS/color_value/lab) pour le système de coordonnées Lab.
+Les développeur·euse·s peuvent définir différents jeux de couleurs pour les périphériques prenant en charge des gamuts plus larges à l'aide de la [fonctionnalité média `color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut) ou de la [fonctionnalité média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). On peut décrire des couleurs en dehors du gamut RVB à l'aide de fonctions CSS spécifiques comme [`lch()`](/fr/docs/Web/CSS/color_value/lch) pour le système de coordonnées cylindriques LCH, ou [`lab()`](/fr/docs/Web/CSS/color_value/lab) pour le système de coordonnées Lab.
 
 ## Voir aussi
 

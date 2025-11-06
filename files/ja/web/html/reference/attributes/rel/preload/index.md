@@ -101,7 +101,7 @@ l10n:
 
 ## CORS を使用した取得
 
-[CORS](/ja/docs/Web/HTTP/Guides/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
+[CORS](/ja/docs/Web/HTTP/Guides/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/Reference/At-rules/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
 
 上記のように、これが当てはまる興味深いケースの 1 つが、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります（[Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照）。
 
@@ -136,7 +136,7 @@ l10n:
 
 ## media を含める
 
-`<link>` 要素の優れた機能のひとつが、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を受け付けることができるので、レスポンシブな事前読み込みを行うことができます。
+`<link>` 要素の優れた機能のひとつが、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を受け付けることができるので、レスポンシブな事前読み込みを行うことができます。
 
 例を見てみましょう (GitHub 上の[ソースコード](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media)、[デモ](https://mdn.github.io/html-examples/link-rel-preload/media/))。
 

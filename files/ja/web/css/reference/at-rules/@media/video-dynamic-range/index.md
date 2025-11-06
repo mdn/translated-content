@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-**`video-dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}の動画プレーンと出力機器が対応する明るさ、コントラスト比、色深度の組み合わせをテストするために使用できます。
+**`video-dynamic-range`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}の動画プレーンと出力機器が対応する明るさ、コントラスト比、色深度の組み合わせをテストするために使用できます。
 
 一部のユーザーエージェント（多くのテレビを含む）は、動画とグラフィックを、それぞれ異なる画面特性を持つ 2 つの別々のプレーン（バイプレーン）でレンダリングします。`video-dynamic-range` 機能は、動画プレーンの特性を検査するために使用されます。
 
@@ -31,4 +31,4 @@ l10n:
 ## 関連情報
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

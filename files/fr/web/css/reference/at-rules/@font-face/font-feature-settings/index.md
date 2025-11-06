@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-feature-settings`** permet de définir les réglages initiaux à utiliser pour la police définie par la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}}. Vous pouvez également utiliser ce descripteur pour contrôler les fonctionnalités typographiques de la police, telles que les ligatures, petites capitales et ornements, pour la police définie par `@font-face`. Les valeurs de ce descripteur sont identiques à celles de la propriété {{cssxref("font-feature-settings")}}, à l'exception des mots-clés globaux.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-feature-settings`** permet de définir les réglages initiaux à utiliser pour la police définie par la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-face")}}. Vous pouvez également utiliser ce descripteur pour contrôler les fonctionnalités typographiques de la police, telles que les ligatures, petites capitales et ornements, pour la police définie par `@font-face`. Les valeurs de ce descripteur sont identiques à celles de la propriété {{cssxref("font-feature-settings")}}, à l'exception des mots-clés globaux.
 
 Ce descripteur définit les valeurs des fonctionnalités sur l'objet police dans la règle `@font-face` et non sur l'ensemble d'un élément, ainsi seuls certains glyphes d'un élément peuvent être rendus en utilisant ce descripteur.
 

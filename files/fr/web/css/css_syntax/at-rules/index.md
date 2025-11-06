@@ -47,7 +47,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 - {{cssxref("@counter-style")}}
   - : Définit des styles de compteur personnalisés et étend les styles de liste prédéfinis ([Styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)).
 - {{cssxref("@container")}}
-  - : Règle conditionnelle de groupe qui applique son contenu si le conteneur satisfait la [`<container-condition>`](/fr/docs/Web/CSS/@container#container-condition) ([CSS containment](/fr/docs/Web/CSS/CSS_containment)).
+  - : Règle conditionnelle de groupe qui applique son contenu si le conteneur satisfait la [`<container-condition>`](/fr/docs/Web/CSS/Reference/At-rules/@container#container-condition) ([CSS containment](/fr/docs/Web/CSS/CSS_containment)).
 - {{cssxref("@font-face")}}
   - : Définit les emplacements des ressources de police, locales et externes, ainsi que les caractéristiques de style pour l'utilisation de ces ressources avec une {{cssxref("font-family")}} déclarée ([Polices CSS](/fr/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@font-feature-values")}} (ainsi que `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` et `@character-variant`)

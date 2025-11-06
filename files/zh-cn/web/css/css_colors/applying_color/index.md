@@ -364,7 +364,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 #### `color()` 函数
 
-如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
+如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
 
 ```css
 .vibrant {

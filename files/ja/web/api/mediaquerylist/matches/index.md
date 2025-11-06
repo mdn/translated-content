@@ -18,7 +18,7 @@ boolean。 {{DOMxRef("document")}} が現在メディアクエリーのリスト
 
 ## 例
 
-この例では [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。
+この例では [`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation) メディア特性を使用したメディアクエリーを作成することにより、ビューポートの向きの変化を検出します。
 
 ```js
 const mql = window.matchMedia("(orientation:landscape)");

@@ -1,5 +1,5 @@
 ---
-title: "Array : méthode fromAsync()"
+title: "Array : méthode statique fromAsync()"
 short-title: fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 l10n:

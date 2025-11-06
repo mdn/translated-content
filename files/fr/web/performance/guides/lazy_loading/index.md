@@ -51,7 +51,7 @@ Pour cela, il est possible de réaliser certaines [optimisations CSS](/fr/docs/L
 
 Par défaut, les requêtes d'affichage des polices sont différées jusqu'à ce que l'arbre de rendu soit construit, ce qui peut conduire à un délai d'affichage du texte.
 
-Il est possible de surcharger le comportement par défaut et de précharger les polices web en utilisant `<link rel="preload">`, la [propriété CSS `font-display`](/fr/docs/Web/CSS/@font-face/font-display) et the [l'API de chargement des polices](/fr/docs/Web/API/CSS_Font_Loading_API).
+Il est possible de surcharger le comportement par défaut et de précharger les polices web en utilisant `<link rel="preload">`, la [propriété CSS `font-display`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/font-display) et the [l'API de chargement des polices](/fr/docs/Web/API/CSS_Font_Loading_API).
 
 Voir aussi [la documentation de l'élément `Link`](/fr/docs/Web/HTML/Reference/Elements/link)
 

@@ -6,10 +6,10 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-**`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*主要な*ポインティングデバイスにどれだけの正確性があるかを調べます。
+**`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*主要な*ポインティングデバイスにどれだけの正確性があるかを調べます。
 
 > [!NOTE]
-> すべてのポインティングデバイスの正確性を調べたい場合は、代わりに [`any-pointer`](/ja/docs/Web/CSS/@media/any-pointer) を使用してください。
+> すべてのポインティングデバイスの正確性を調べたい場合は、代わりに [`any-pointer`](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) を使用してください。
 
 ## 構文
 
@@ -78,4 +78,4 @@ input[type="checkbox"]:checked {
 
 ## 関連情報
 
-- [`any-pointer` メディア特性](/ja/docs/Web/CSS/@media/any-pointer)
+- [`any-pointer` メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer)

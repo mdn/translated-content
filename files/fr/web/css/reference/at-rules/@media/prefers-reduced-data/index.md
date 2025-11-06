@@ -11,7 +11,7 @@ l10n:
 > [!NOTE]
 > Cette fonctionnalité n'est prise en charge par aucun agent utilisateur et ses spécificités sont susceptibles d'évoluer.
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-data`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web consomme moins de données internet.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-data`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web consomme moins de données internet.
 
 ## Syntaxe
 

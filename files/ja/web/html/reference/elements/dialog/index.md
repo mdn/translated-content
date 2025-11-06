@@ -412,7 +412,7 @@ closeBtns.forEach((btn) => {
 
 CSS トランジションで `<dialog>` をアニメーションさせる場合、以下の機能が要求されます。
 
-- [`@starting-style`](/ja/docs/Web/CSS/@starting-style) アットルール
+- [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) アットルール
   - : `<dialog>` に設定されたプロパティの、開かれるたびにトランジションする開始値のセットを提供します。これは予期せぬ動作を避けるために必要です。既定では、CSS トランジションは、可視要素のプロパティが 1 つの値から別の値に変更された場合のみ発生します。要素の最初のスタイル更新時や、`display` の型が `none` から別の型に変更された場合には発生しません。
 - [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティ
   - : トランジションのリストに `display` を追加すると、トランジションの再生時間中、`<dialog>` が `display: block`（またはダイアログが開いている状態として設定されている他の可視 `display` 値）のままになり、他にもトランジションが確実に表示されます。
@@ -526,7 +526,7 @@ closeBtn.addEventListener("click", () => {
 > [!NOTE]
 > `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog:open` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog:open` 状態から既定の `dialog` 状態にトランジションします。
 >
-> このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used)」をご覧ください。
+> このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used)」をご覧ください。
 
 #### dialog のキーフレームアニメーション
 

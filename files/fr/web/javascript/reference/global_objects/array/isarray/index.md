@@ -1,5 +1,5 @@
 ---
-title: "Array : méthode isArray()"
+title: "Array : méthode statique isArray()"
 short-title: isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 l10n:

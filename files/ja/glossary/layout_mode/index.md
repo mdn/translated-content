@@ -21,7 +21,7 @@ original_slug: Web/CSS/Layout_mode
 
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
   - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
   - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)

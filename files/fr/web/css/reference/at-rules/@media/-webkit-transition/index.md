@@ -9,9 +9,9 @@ l10n:
 {{Deprecated_header}} {{Non-standard_header}}
 
 > [!NOTE]
-> Tous les navigateurs prennent en charge la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transition`. Aucun navigateur ne prend en charge `transition` sans préfixe comme requête média (certains navigateurs prennent en charge {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/@supports).
+> Tous les navigateurs prennent en charge la propriété [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transition`. Aucun navigateur ne prend en charge `transition` sans préfixe comme requête média (certains navigateurs prennent en charge {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne non standard [CSS](/fr/docs/Web/CSS) **`-webkit-transition`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si le contexte de navigation prend en charge les [transitions CSS](/fr/docs/Web/CSS/CSS_transitions).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) booléenne non standard [CSS](/fr/docs/Web/CSS) **`-webkit-transition`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si le contexte de navigation prend en charge les [transitions CSS](/fr/docs/Web/CSS/CSS_transitions).
 
 Apple propose [une description dans la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)&nbsp;; cette propriété s'appelle désormais `transition` dans la documentation Apple.
 
@@ -30,7 +30,7 @@ Apple propose [une description dans la référence CSS de Safari <sup>(angl.)</s
 
 ### Utiliser @supports à la place
 
-N'utilisez pas la caractéristique média `-webkit-transition`. Testez plutôt la prise en charge des transitions avec la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) de CSS {{cssxref("@supports")}}&nbsp;:
+N'utilisez pas la caractéristique média `-webkit-transition`. Testez plutôt la prise en charge des transitions avec la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) de CSS {{cssxref("@supports")}}&nbsp;:
 
 ```css
 @supports (transition: initial) {

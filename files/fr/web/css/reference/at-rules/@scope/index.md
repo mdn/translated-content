@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 943a9ba8905fbdb3966f0dd6d49f7652e3de94b3
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.
 
 En JavaScript, `@scope` est accessible via l'interface du modèle d'objet CSS {{DOMxRef("CSSScopeRule")}}.
 

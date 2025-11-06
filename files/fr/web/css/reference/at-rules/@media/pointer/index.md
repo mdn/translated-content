@@ -6,10 +6,10 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`pointer`** permet de tester si l'utilisateur·ice dispose d'un dispositif de pointage (comme une souris) et, le cas échéant, d'évaluer la précision du dispositif de pointage principal.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`pointer`** permet de tester si l'utilisateur·ice dispose d'un dispositif de pointage (comme une souris) et, le cas échéant, d'évaluer la précision du dispositif de pointage principal.
 
 > [!NOTE]
-> Si on souhaite tester la précision de n'importe quel dispositif de pointage, on utilisera plutôt la caractéristique [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer).
+> Si on souhaite tester la précision de n'importe quel dispositif de pointage, on utilisera plutôt la caractéristique [`any-pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/any-pointer).
 
 ## Syntaxe
 
@@ -76,4 +76,4 @@ input[type="checkbox"]:checked {
 
 ## Voir aussi
 
-- [La caractéristique média `any-pointer`](/fr/docs/Web/CSS/@media/any-pointer)
+- [La caractéristique média `any-pointer`](/fr/docs/Web/CSS/Reference/At-rules/@media/any-pointer)

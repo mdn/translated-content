@@ -274,7 +274,7 @@ Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color
 Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
 
 > [!NOTE]
-> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/@font-face) et [`@supports`](/fr/docs/Web/CSS/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
+> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
 
 #### Les commentaires conditionnels d'IE
 
@@ -479,7 +479,7 @@ Les fonctionnalités de disposition ne sont pas aussi simples pour fournir des s
 Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs modernes, et aussi appliquer une disposition en float pour les plus vieux navigateurs qui ne supportent pas flexbox.
 
 > [!NOTE]
-> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
+> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
 
 #### Les problèmes de responsive design
 

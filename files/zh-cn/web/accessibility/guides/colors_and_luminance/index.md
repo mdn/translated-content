@@ -17,7 +17,7 @@ l10n:
 
 环境很重要。在光线充足的房间里感知颜色会与在黑暗的房间里在同一台电脑屏幕上感知相同颜色时有所不同。在无障碍性方面，某些颜色组合的使用比其他颜色组合更具影响力。字体大小、[字体样式](https://www.nngroup.com/articles/glanceable-fonts/)（有些字体非常细或花哨，本身就会引起无障碍性问题）、背景颜色、文字周围背景空间的大小，甚至像素密度等都会影响屏幕上颜色的传递方式。
 
-观看者与屏幕的距离、周围的环境背景、眼睛的健康状况等都会影响观看者对色彩的接收。观看者在眼睛接收到颜色后如何感知颜色是另一个问题，这可能受整体健康状况的影响。幸运的是，有[媒体查询](/zh-CN/docs/Web/CSS/@media)，使开发人员可以根据用户的偏好（包括[对比度](/zh-CN/docs/Web/CSS/@media/prefers-contrast)和[颜色方案](/zh-CN/docs/Web/CSS/@media/prefers-color-scheme)的偏好）提供样式。
+观看者与屏幕的距离、周围的环境背景、眼睛的健康状况等都会影响观看者对色彩的接收。观看者在眼睛接收到颜色后如何感知颜色是另一个问题，这可能受整体健康状况的影响。幸运的是，有[媒体查询](/zh-CN/docs/Web/CSS/Reference/At-rules/@media)，使开发人员可以根据用户的偏好（包括[对比度](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast)和[颜色方案](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)的偏好）提供样式。
 
 当支持时，[环境光传感器](/zh-CN/docs/Web/API/AmbientLightSensor)接口会返回托管设备周围环境光的当前光级或照度，使网页能够意识到光强度的任何变化，从而相应地调整文本。此外，上述媒体查询使开发人员能够根据用户偏好提供替代用户体验，当用户偏好指示了首选对比度水平时，自动调整水平取决于用户的位置以及他们使用的屏幕类型。
 
@@ -217,7 +217,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 光适应则是相反的。从黑暗房间进入明亮的阳光下适应速度更快，但也可能伤害到眼睛。
 
-这意味着，寻求改善在房间环境条件发生变化时文本可读性的 Web 开发人员可以利用 `AmbientLightSensor` 接口和 [`prefers-contrast`](/zh-CN/docs/Web/CSS/@media/prefers-contrast) 媒体查询。
+这意味着，寻求改善在房间环境条件发生变化时文本可读性的 Web 开发人员可以利用 `AmbientLightSensor` 接口和 [`prefers-contrast`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) 媒体查询。
 
 ## 饱和度
 

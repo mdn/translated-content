@@ -125,7 +125,7 @@ scale(sx, sy)
 
 Les animations utilisées pour les zooms/changement d'échelle peuvent poser problème comme facteurs de déclenchement pour certains types de migraine. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un moyen de désactiver les animations pour le site.
 
-Vous pouvez également tirer parti de la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) et écrire une requête média qui désactivera les animations si l'utilisateur décide de réduire les animations via les préférences du système.
+Vous pouvez également tirer parti de la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) et écrire une requête média qui désactivera les animations si l'utilisateur décide de réduire les animations via les préférences du système.
 
 Pour en savoir plus :
 

@@ -52,7 +52,7 @@ svg {
 
 对于存在认知问题（如，患有注意缺陷多动障碍 (ADHD)）的人来说，闪烁动画可能会引发一些问题。此外，某些动画可能会引起前庭相关疾病、癫痫、偏头痛和光敏综合征（Scotopic sensitivity）。
 
-考虑提供一种暂停或禁用动画的机制，并配合使用[偏好减少动画的媒体查询](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)来为不喜欢动画的用户提供更舒适的体验。
+考虑提供一种暂停或禁用动画的机制，并配合使用[偏好减少动画的媒体查询](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)来为不喜欢动画的用户提供更舒适的体验。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)

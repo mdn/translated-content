@@ -32,7 +32,7 @@ La [référence CSS](/fr/docs/Web/CSS/Reference) est une ressource exhaustive po
 - La [syntaxe et les formes du langage](/fr/docs/Web/CSS/CSS_syntax/Syntax)
 - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity), [héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance) et [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade)
 - [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors), dont les [pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements), [imbrication](/fr/docs/Web/CSS/CSS_nesting), [portée](/fr/docs/Web/CSS/CSS_scoping) et [parties d'ombre](/fr/docs/Web/CSS/CSS_shadow_parts)
-- [Règles CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule), dont les [requêtes média](/fr/docs/Web/CSS/CSS_media_queries) et les [requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment)
+- [Règles CSS](/fr/docs/Web/CSS/CSS_syntax/At-rules), dont les [requêtes média](/fr/docs/Web/CSS/CSS_media_queries) et les [requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment)
 - Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units), dont les [types de données numériques](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types), [types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types) et [notations fonctionnelles](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - Le [modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et la [fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block)

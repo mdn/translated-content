@@ -11,7 +11,7 @@ l10n:
 
 強制色モードでは、作者は `<system-color>` 型の色を、色がオーバーライドされるプロパティの設定にはないすべてのプロパティに使用するべきです。これにより、ページがすべてのプロパティで一貫して同じ色パレットを使用することを保証します。
 
-作者は [`forced-colors`](/ja/docs/Web/CSS/@media/forced-colors) メディア特性を使用して、強制色モードを検出することができます。
+作者は [`forced-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) メディア特性を使用して、強制色モードを検出することができます。
 
 `<system-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/color_value) を使用できる場所であればどこでも使用することができます。
 

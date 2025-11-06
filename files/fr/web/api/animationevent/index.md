@@ -52,4 +52,4 @@ _Hérite des méthodes de son parent, [`Event`](/fr/docs/Web/API/Event)._
   - [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name)
   - [`animation-play-state`](/fr/docs/Web/CSS/Reference/Properties/animation-play-state)
   - [`animation-timing-function`](/fr/docs/Web/CSS/Reference/Properties/animation-timing-function)
-  - [`@keyframes`](/fr/docs/Web/CSS/@keyframes)
+  - [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes)

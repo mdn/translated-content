@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}}. La propriété {{cssxref("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-face")}}. La propriété {{cssxref("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
 
 En général, un·e développeur·euse souhaite utiliser des polices d'une même famille avec différentes graisses. Avec les polices traditionnelles ou _statiques_, un fichier de police contient les caractères d'une famille dans une graisse et un style précis&nbsp;: par exemple, «&nbsp;Helvetica bold italic&nbsp;». Pour permettre l'affichage de polices fines, normales, grasses ou extra-grasses lorsque la propriété `font-weight` demande une graisse spécifique, vous pouvez définir plusieurs règles {{cssxref("@font-face")}} pour la même famille (toutes avec la même valeur de descripteur {{cssxref("@font-face/font-family", "font-family")}}), une pour chaque graisse ou plage de graisses.
 

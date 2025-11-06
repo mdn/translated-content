@@ -92,7 +92,7 @@ all: revert-layer;
     - 如果规则属于[用户来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)回滚到用户代理级别，以便计算[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)，就像没有为元素指定作者级或用户级规则一样。
     - 如果规则属于[用户代理来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)，则 `revert` 值的作用类似于 `unset`。
 - {{cssxref("revert-layer")}}
-  - : 指定元素的所有属性都应回滚到之前的[层叠层](/zh-CN/docs/Web/CSS/@layer)（如果存在）。如果不存在其他层叠层，元素的属性将回滚到当前层中的匹配规则（如果存在）或之前的[样式来源](/zh-CN/docs/Glossary/Style_origin)。
+  - : 指定元素的所有属性都应回滚到之前的[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)（如果存在）。如果不存在其他层叠层，元素的属性将回滚到当前层中的匹配规则（如果存在）或之前的[样式来源](/zh-CN/docs/Glossary/Style_origin)。
 
 ### 形式定义
 

@@ -94,4 +94,4 @@ font.load().then(
 
 ## 関連情報
 
-- [@font-face](/ja/docs/Web/CSS/@font-face)
+- [@font-face](/ja/docs/Web/CSS/Reference/At-rules/@font-face)

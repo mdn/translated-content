@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSImportRule")}} 接口的只读属性 **`href`** 返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)指定的 URL。
+{{domxref("CSSImportRule")}} 接口的只读属性 **`href`** 返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)指定的 URL。
 
 解析后的 URL 将是关联样式表的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/link#href) 属性。
 

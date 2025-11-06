@@ -77,7 +77,7 @@ p {
 
 - Concepts clés CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Règles at](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Règles at](/fr/docs/Web/CSS/CSS_syntax/At-rules)
   - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
   - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
   - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)

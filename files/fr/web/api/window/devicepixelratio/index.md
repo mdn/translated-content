@@ -173,5 +173,5 @@ body {
 
 - [Les requêtes média](/fr/docs/Web/CSS/CSS_media_queries)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [La caractéristique média CSS `resolution`](/fr/docs/Web/CSS/@media/resolution)
+- [La caractéristique média CSS `resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution)
 - La propriété CSS [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)

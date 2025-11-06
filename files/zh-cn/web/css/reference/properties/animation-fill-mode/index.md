@@ -132,7 +132,7 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : 当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。
 - `forwards`
-  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-CN/docs/Web/CSS/@keyframes)计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
+  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-CN/docs/Web/CSS/Reference/At-rules/@keyframes)计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
 
     | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
     | --------------------- | --------------------------- | ------------------------- |

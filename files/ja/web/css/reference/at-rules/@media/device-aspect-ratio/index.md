@@ -9,9 +9,9 @@ l10n:
 {{deprecated_header}}
 
 > [!NOTE]
-> ビューポートの{{glossary("aspect ratio", "アスペクト比")}}を問い合わせる場合、開発者は代わりに [`aspect-ratio`](/ja/docs/Web/CSS/@media/aspect-ratio) メディア特性を使用してください。
+> ビューポートの{{glossary("aspect ratio", "アスペクト比")}}を問い合わせる場合、開発者は代わりに [`aspect-ratio`](/ja/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio) メディア特性を使用してください。
 
-**`device-aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器の幅対高さのアスペクト比を調べるために使用します。
+**`device-aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器の幅対高さのアスペクト比を調べるために使用します。
 
 ## 構文
 

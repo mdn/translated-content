@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`any-hover`** est utilisée pour tester si _n'importe quel_ mécanisme d'entrée disponible peut survoler un élément.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`any-hover`** est utilisée pour tester si _n'importe quel_ mécanisme d'entrée disponible peut survoler un élément.
 
 ## Syntaxe
 
@@ -51,4 +51,4 @@ La caractéristique `any-hover` se définit à l'aide d'un mot-clé choisi parmi
 
 ## Voir aussi
 
-- [La caractéristique média `hover`](/fr/docs/Web/CSS/@media/hover)
+- [La caractéristique média `hover`](/fr/docs/Web/CSS/Reference/At-rules/@media/hover)

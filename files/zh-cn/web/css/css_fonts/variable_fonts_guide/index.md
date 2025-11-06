@@ -182,7 +182,7 @@ font-variation-settings: "GRAD" 88;
 
 ## 使用旧版本浏览器
 
-可以使用 CSS 特性查询检查是否支持可变字体（请参阅 [{{cssxref("@supports")}}](/zh-CN/docs/Web/CSS/@supports)），因此在生产中，可以在特性查询块内使用可变字体。
+可以使用 CSS 特性查询检查是否支持可变字体（请参阅 [{{cssxref("@supports")}}](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports)），因此在生产中，可以在特性查询块内使用可变字体。
 
 ```css
 h1 {

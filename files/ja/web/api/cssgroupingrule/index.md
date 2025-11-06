@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("CSSOM") }}
 
-**`CSSGroupingRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、内部に他のルールを持つあらゆる CSS の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
+**`CSSGroupingRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、内部に他のルールを持つあらゆる CSS の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を表します。
 
 {{InheritanceDiagram}}
 

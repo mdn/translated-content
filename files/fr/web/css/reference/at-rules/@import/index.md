@@ -6,8 +6,8 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@import`** est utilisée pour importer des règles de style depuis d'autres feuilles de style valides.
-Une règle `@import` _doit_ être définie en haut de la feuille de style, avant toute autre règle @ (sauf [@charset](/fr/docs/Web/CSS/@charset) et [@layer](/fr/docs/Web/CSS/@layer)) et toute déclaration de style, sinon elle sera ignorée.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@import`** est utilisée pour importer des règles de style depuis d'autres feuilles de style valides.
+Une règle `@import` _doit_ être définie en haut de la feuille de style, avant toute autre règle @ (sauf [@charset](/fr/docs/Web/CSS/Reference/At-rules/@charset) et [@layer](/fr/docs/Web/CSS/Reference/At-rules/@layer)) et toute déclaration de style, sinon elle sera ignorée.
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ où&nbsp;:
 - _list-of-media-queries_
   - : Est une liste de [requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) séparées par des virgules, qui spécifient les conditions dépendantes du média pour appliquer les règles CSS définies dans l'URL liée. Si le navigateur ne prend en charge aucune de ces requêtes, il ne charge pas la ressource liée.
 - _layer-name_
-  - : Est le nom d'une [couche de cascade](/fr/docs/Web/CSS/@layer) dans laquelle le contenu de la ressource liée est importé. Voir [`layer()`](/fr/docs/Web/CSS/@import/layer_function) pour plus d'informations.
+  - : Est le nom d'une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) dans laquelle le contenu de la ressource liée est importé. Voir [`layer()`](/fr/docs/Web/CSS/Reference/At-rules/@import/layer_function) pour plus d'informations.
 - _supports-condition_
   - : Indique la ou les fonctionnalités que le navigateur doit prendre en charge pour que la feuille de style soit importée.
     Si le navigateur ne respecte pas les conditions spécifiées dans _supports-condition_, il peut ne pas récupérer la feuille de style liée, et même si elle est téléchargée par un autre moyen, elle ne sera pas chargée.
@@ -40,7 +40,7 @@ Utilisez `@import` avec le mot-clé `layer` ou la fonction `layer()` pour import
 
 ## Description
 
-Les règles importées doivent apparaître avant tous les autres types de règles, sauf les règles {{CSSxRef("@charset")}} et les instructions de création de couche [`@layer`](/fr/docs/Web/CSS/@layer).
+Les règles importées doivent apparaître avant tous les autres types de règles, sauf les règles {{CSSxRef("@charset")}} et les instructions de création de couche [`@layer`](/fr/docs/Web/CSS/Reference/At-rules/@layer).
 
 ```css example-bad
 * {
@@ -71,7 +71,7 @@ De même, les agents utilisateur peuvent utiliser la fonction `supports()` dans 
 Cela permet aux auteur·ice·s de profiter des fonctionnalités CSS récemment introduites, tout en assurant une rétrocompatibilité pour les anciennes versions de navigateurs.
 Notez que les conditions de la fonction `supports()` d'une règle at-rule `@import` peuvent être obtenues en JavaScript via {{domxref("CSSImportRule.supportsText")}}.
 
-La règle `@import` peut aussi être utilisée pour créer une [couche de cascade](/fr/docs/Web/CSS/@layer) en important des règles depuis une ressource liée. Les règles peuvent aussi être importées dans une couche de cascade existante. Le mot-clé `layer` ou la fonction `layer()` sont utilisés avec `@import` à cet effet. Les déclarations des règles de style des feuilles importées interagissent avec la cascade comme si elles étaient écrites littéralement dans la feuille de style au point d'importation.
+La règle `@import` peut aussi être utilisée pour créer une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) en important des règles depuis une ressource liée. Les règles peuvent aussi être importées dans une couche de cascade existante. Le mot-clé `layer` ou la fonction `layer()` sont utilisés avec `@import` à cet effet. Les déclarations des règles de style des feuilles importées interagissent avec la cascade comme si elles étaient écrites littéralement dans la feuille de style au point d'importation.
 
 ## Syntaxe formelle
 

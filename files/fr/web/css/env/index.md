@@ -16,7 +16,7 @@ body {
 }
 ```
 
-La fonction `env()` peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une [requête média](/fr/docs/Web/CSS/@media)) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.
+La fonction `env()` peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une [requête média](/fr/docs/Web/CSS/Reference/At-rules/@media)) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.
 
 > [!NOTE]
 > Les variables d'environnement furent initialement fournies par le navigateur iOS afin de permettre aux développeurs de placer le contenu sur une zone sûre de la zone d'affichage (_viewport_) et d'éviter le décrochement formé en haut de l'écran sur certains des appareils.

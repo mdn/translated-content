@@ -1,49 +1,53 @@
 ---
-title: Array.prototype.pop()
+title: "Array : méthode pop()"
+short-title: pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`pop()`** des instances de {{JSxRef("Array")}} supprime le **dernier** élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.
 
-La méthode **`pop()`** supprime le **dernier** élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.
-
-{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.pop()")}}
 
 ```js interactive-example
-const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+const plants = ["brocoli", "chou-fleur", "chou", "chou frisé", "tomate"];
 
 console.log(plants.pop());
-// Expected output: "tomato"
+// Résultat attendu : "tomate"
 
 console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+// Résultat attendu : Array ["brocoli", "chou-fleur", "chou", "chou frisé"]
 
 plants.pop();
 
 console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+// Résultat attendu : Array ["brocoli", "chou-fleur", "chou"]
 ```
 
 ## Syntaxe
 
-```js
-arr.pop();
+```js-nolint
+pop()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-L'élément qui a été retiré du tableau. Si le tableau est vide, elle renvoie {{jsxref("undefined")}}.
+L'élément retiré du tableau&nbsp;; {{JSxRef("undefined")}} si le tableau est vide.
 
 ## Description
 
-La méthode `pop()` supprime le dernier élément d'un tableau et retourne cette valeur.
+La méthode `pop()` supprime le dernier élément d'un tableau et retourne cette valeur. Si vous appelez `pop()` sur un tableau vide, elle retourne {{JSxRef("undefined")}}.
 
-`pop()` est volontairement générique ; cette méthode peut être {{jsxref("Function.call", "appelée")}} ou {{jsxref("Function.apply", "appliquée")}} pour des objets ressemblant à des tableaux. Les objets qui ne contiennent pas une propriété `length` reflétant la fin d'une série de propriétés consécutives numérotées peuvent se comporter bizarrement.
+La méthode {{JSxRef("Array.prototype.shift()")}} possède un comportement analogue à `pop()`, mais appliqué au premier élément d'un tableau.
 
-Si vous appelez `pop()` sur un tableau vide, il renverra la valeur {{jsxref("undefined")}}.
+La méthode `pop()` est une méthode mutatrice. Elle modifie la longueur et le contenu de `this`. Si vous souhaitez que la valeur de `this` reste identique mais retourner un nouveau tableau sans le dernier élément, vous pouvez utiliser [`arr.slice(0, -1)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
 
-> [!NOTE]
-> La méthode {{jsxref("Array.prototype.shift()")}} possède un comportement analogue mais retire le _premier_ élément du tableau.
+La méthode `pop()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend uniquement que la valeur de `this` possède une propriété `length` et des propriétés indexées par des entiers. Bien que les chaînes de caractères ressemblent aussi à des tableaux, cette méthode ne peut pas leur être appliquée car elles sont immuables.
 
 ## Exemples
 
@@ -52,30 +56,68 @@ Si vous appelez `pop()` sur un tableau vide, il renverra la valeur {{jsxref("und
 Le code suivant crée le tableau `mesPoissons` qui contient quatre éléments puis supprime le dernier élément.
 
 ```js
-var mesPoissons = ["angel", "clown", "mandarin", "sturgeon"];
+const myFish = ["ange", "clown", "mandarin", "esturgeon"];
 
-var popped = mesPoissons.pop();
+const popped = myFish.pop();
 
-console.table(mesPoissons); // angel, clown, madarin
-console.log(popped); // sturgeon
+console.log(myFish); // ['ange', 'clown', 'mandarin']
+
+console.log(popped); // 'esturgeon'
 ```
 
-### Utiliser `apply()` ou `call()` sur les objets semblables aux tableaux
+### Appeler `pop()` sur un objet qui n'est pas un tableau
 
-Le code suivant crée un objet `mesPoissons` semblable à un tableau, qui contient 4 propriétés indexées avec des nombres et une propriété `length`. On utilise la méthode {{jsxref("Function.call()")}} pour invoquer `pop()` sur cet objet :
+La méthode `pop()` lit la propriété `length` de `this`. Si la [longueur normalisée](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#normalisation_de_la_propriété_length) est 0, `length` est à nouveau définie à `0` (elle peut être négative ou `undefined` auparavant). Sinon, la propriété à `length - 1` est retournée et [supprimée](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 ```js
-var mesPoissons = {
-  0: "angel",
-  1: "clown",
-  2: "mandarin",
-  3: "sturgeon",
-  length: 4,
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+};
+console.log(Array.prototype.pop.call(arrayLike));
+// 4
+console.log(arrayLike);
+// { length: 2, unrelated: 'foo' }
+
+const plainObj = {};
+// Il n'y a pas de propriété length, donc la longueur est 0
+Array.prototype.pop.call(plainObj);
+console.log(plainObj);
+// { length: 0 }
+```
+
+### Utiliser un objet comme un tableau
+
+`push` et `pop` sont volontairement génériques, et nous pouvons en tirer parti — comme le montre l'exemple suivant.
+
+Notez que dans cet exemple, nous ne créons pas de tableau pour stocker une collection d'objets. À la place, nous stockons la collection sur l'objet lui-même et utilisons `call` sur `Array.prototype.push` et `Array.prototype.pop` pour faire croire à ces méthodes que nous manipulons un tableau.
+
+```js
+const collection = {
+  length: 0,
+  addElements(...elements) {
+    // obj.length sera incrémenté automatiquement
+    // à chaque ajout d'un élément.
+
+    // Retourne ce que push retourne, c'est-à-dire
+    // la nouvelle valeur de la propriété length.
+    return [].push.call(this, ...elements);
+  },
+  removeElement() {
+    // obj.length sera décrémenté automatiquement
+    // à chaque suppression d'un élément.
+
+    // Retourne ce que pop retourne, c'est-à-dire
+    // l'élément supprimé.
+    return [].pop.call(this);
+  },
 };
 
-var popped = Array.prototype.pop.call(mesPoissons); // on aurait pu utiliser apply()
-console.log(mesPoissons); // {0: 'angel', 1: 'clown', 2: 'mandarin', length: 3}
-console.log(popped); // 'sturgeon'
+collection.addElements(10, 20, 30);
+console.log(collection.length); // 3
+collection.removeElement();
+console.log(collection.length); // 2
 ```
 
 ## Spécifications
@@ -88,7 +130,10 @@ console.log(popped); // 'sturgeon'
 
 ## Voir aussi
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("Array.prototype.push()")}}
+- La méthode {{JSxRef("Array.prototype.shift()")}}
+- La méthode {{JSxRef("Array.prototype.unshift()")}}
+- La méthode {{JSxRef("Array.prototype.concat()")}}
+- La méthode {{JSxRef("Array.prototype.splice()")}}

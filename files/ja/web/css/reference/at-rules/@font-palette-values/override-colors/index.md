@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
 ---
 
-**`override-colors`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、選ばれた[ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)の色をカラーフォントに上書きするために使用します。
+**`override-colors`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、選ばれた[ベースパレット](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)の色をカラーフォントに上書きするために使用します。
 
 ## 構文
 
@@ -40,12 +40,12 @@ override-colors:
 
 色インデックスはゼロ基点で、任意の[色値](/ja/docs/Web/CSS/color_value)を使用することができます。
 
-それぞれのインデックスと色のキーと値の組に対して、指定した[ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)内のインデックスの色が上書きされます。カラーフォントが指定したインデックスの色を持たない場合、それは無視されます。
+それぞれのインデックスと色のキーと値の組に対して、指定した[ベースパレット](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)内のインデックスの色が上書きされます。カラーフォントが指定したインデックスの色を持たない場合、それは無視されます。
 
 ### 値
 
 - `[ <integer [0,∞]> <absolute-color-base> ]`
-  - : [ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)の色のインデックスと上書きする色を指定します。
+  - : [ベースパレット](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)の色のインデックスと上書きする色を指定します。
 
 ## 公式定義
 

@@ -33,12 +33,12 @@ system: extends circled-letters;
 
 - キーワード値 `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, `fixed` のいずれか。
 - キーワード値 `fixed` と整数値。
-- キーワード値 `extends` と [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name) の名前。
+- キーワード値 `extends` と [`<counter-style-name>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name) の名前。
 
 値は次のものです。
 
 - `cyclic`
-  - : [`symbols`](/ja/docs/Web/CSS/@counter-style/symbols) 記述子で指定された記号のリストを順番に繰り返します。リストの終わりに到達すると、サイクルは最初に戻り、最初から繰り返されます。この値は、1 つの記号のみを使用する基本的な箇条書きスタイルと、複数の記号を使用するスタイルの両方に役立ちます。`symbols` 記述子には、少なくとも 1 つの記号を指定する必要があります。そうしないと、カウンタースタイルは有効になりません。
+  - : [`symbols`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) 記述子で指定された記号のリストを順番に繰り返します。リストの終わりに到達すると、サイクルは最初に戻り、最初から繰り返されます。この値は、1 つの記号のみを使用する基本的な箇条書きスタイルと、複数の記号を使用するスタイルの両方に役立ちます。`symbols` 記述子には、少なくとも 1 つの記号を指定する必要があります。そうしないと、カウンタースタイルは有効になりません。
 
 - `numeric`
   - : カウンター記号を[位取り記数法](https://ja.wikipedia.org/wiki/%E4%BD%8D%E5%8F%96%E3%82%8A%E8%A8%98%E6%95%B0%E6%B3%95)の桁として解釈します。この記数法は、上で説明した `alphabetic` システムと似ています。主な違いは、 `alphabetic` システムでは、 `symbols` 記述子で与えられた最初のカウンター記号が `1` 、次の記号は `2` 、以下同様に解釈されますが、この記数法では、最初のカウンター記号が 0、次は `1`、次は `2` というように解釈されることです。
@@ -67,7 +67,7 @@ system: extends circled-letters;
     `symbols` または `additive-symbols` 記述子を含んではなりません。そうしないと、カウンタースタイルルールが無効になります。1 つ以上のカウンタースタイル定義が、その `extends` 値で循環を形成している場合、ブラウザーは、その循環に関与するすべてのカウンタースタイルを `decimal` スタイルから拡張したものとして扱います。
 
 > [!NOTE]
-> 値が `cyclic`、`numeric`、`alphabetic`、`symbolic`、`fixed` の場合には、 [`symbols`](/ja/docs/Web/CSS/@counter-style/symbols) 記述子が必要です。 `additive` 値が設定されている場合には、 [`additive-symbols`](/ja/docs/Web/CSS/@counter-style/additive-symbols) 記述子が必要です。
+> 値が `cyclic`、`numeric`、`alphabetic`、`symbolic`、`fixed` の場合には、 [`symbols`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) 記述子が必要です。 `additive` 値が設定されている場合には、 [`additive-symbols`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/additive-symbols) 記述子が必要です。
 
 ## 公式定義
 
