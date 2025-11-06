@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframeRule`** 接口表示给定关键帧的样式集的对象。它对应一个 {{cssxref("@keyframes")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)的单个关键帧的内容。
+**`CSSKeyframeRule`** 接口表示给定关键帧的样式集的对象。它对应一个 {{cssxref("@keyframes")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)的单个关键帧的内容。
 
 {{InheritanceDiagram}}
 
