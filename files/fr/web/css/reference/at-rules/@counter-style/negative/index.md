@@ -20,7 +20,7 @@ negative: "(" ")"; /* Ajoute '(-' avant et ')' après si la valeur du compteur e
 
 ### Valeurs
 
-Le descripteur `negative` accepte jusqu'à deux valeurs [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#valeurs).
+Le descripteur `negative` accepte jusqu'à deux valeurs [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#valeurs).
 
 - `<symbol>`
   - : Si une seule valeur est spécifiée, elle est ajoutée avant la représentation du compteur lorsque celui-ci est négatif. Si deux valeurs sont spécifiées, la première est ajoutée avant et la seconde après la représentation du compteur lorsque celui-ci est négatif.
@@ -43,7 +43,7 @@ Le descripteur `negative` est pertinent dans deux cas&nbsp;: si les styles de co
 
 ### Rendu des compteurs négatifs
 
-Cet exemple [étend](/fr/docs/Web/CSS/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
+Cet exemple [étend](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
 
 #### HTML
 

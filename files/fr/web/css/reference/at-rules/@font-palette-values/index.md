@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-palette-values`** permet de personnaliser les valeurs par défaut de la [palette de police](/fr/docs/Web/CSS/font-palette) créée par le·la créateur·ice de la police.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-palette-values`** permet de personnaliser les valeurs par défaut de la [palette de police](/fr/docs/Web/CSS/font-palette) créée par le·la créateur·ice de la police.
 
 ## Syntaxe
 

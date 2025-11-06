@@ -50,7 +50,7 @@ Liens:
 
 - La proprieté [`mask-type`](/fr/docs/Web/CSS/Reference/Properties/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
 - La propieté [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
-- La fonction [`@font-face`](/fr/docs/Web/CSS/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
+- La fonction [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
 - La notation fonctionnelle [`symbol()`](</fr/docs/Web/CSS/symbol()>) est maintenant supportée([bug 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168)).
 - L'API CSS Font Loading a été implémentée ([bug 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497)).
 - En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).

@@ -20,7 +20,7 @@ fallback: custom-gangnam-style;
 
 Ce descripteur accepte une seule valeur `<counter-style-name>`&nbsp;:
 
-- [`<counter-style-name>`](/fr/docs/Web/CSS/@counter-style#counter-style-name)
+- [`<counter-style-name>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name)
   - : Indique le nom du style de compteur à utiliser comme repli, soit le `<custom-ident>` sensible à la casse d'un style de compteur CSS personnalisé (sans guillemets), soit une valeur de propriété {{cssxref("list-style-type")}} insensible à la casse comme `decimal`, `disc`, etc.
 
 Si la valeur est omise, le style de repli du compteur est `decimal` par défaut.

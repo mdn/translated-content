@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-transparency`** permet de détecter si un·e utilisateur·ice a activé un réglage sur son appareil pour réduire les effets de calques transparents ou translucides. Activer ce réglage peut améliorer le contraste et la lisibilité pour certain·e·s utilisateur·ice·s.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-transparency`** permet de détecter si un·e utilisateur·ice a activé un réglage sur son appareil pour réduire les effets de calques transparents ou translucides. Activer ce réglage peut améliorer le contraste et la lisibilité pour certain·e·s utilisateur·ice·s.
 
 ## Syntaxe
 
@@ -60,5 +60,5 @@ Cet exemple affiche une boîte translucide par défaut. Si le réglage pour réd
 
 ## Voir aussi
 
-- Requête média CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion)
+- Requête média CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)

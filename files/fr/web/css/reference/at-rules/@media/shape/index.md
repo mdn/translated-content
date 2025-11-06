@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`shape`** peut être utilisée pour tester la forme de l'appareil afin de distinguer les affichages rectangulaires et ronds.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`shape`** peut être utilisée pour tester la forme de l'appareil afin de distinguer les affichages rectangulaires et ronds.
 
 ## Syntaxe
 

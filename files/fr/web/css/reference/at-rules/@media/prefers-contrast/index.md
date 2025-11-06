@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web soit présenté avec un contraste plus faible ou plus élevé.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web soit présenté avec un contraste plus faible ou plus élevé.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [
 - `less`
   - : Indique que l'utilisateur·ice a signalé au système qu'il·elle préfère une interface avec un contraste plus faible.
 - `custom`
-  - : Indique que l'utilisateur·ice a signalé au système l'utilisation d'un jeu de couleurs spécifique, et que le contraste impliqué par ces couleurs ne correspond ni à «&nbsp;more&nbsp;» ni à «&nbsp;less&nbsp;». Cette valeur correspond à la palette de couleurs définie par les utilisateur·ice·s de [`forced-colors: active`](/fr/docs/Web/CSS/@media/forced-colors).
+  - : Indique que l'utilisateur·ice a signalé au système l'utilisation d'un jeu de couleurs spécifique, et que le contraste impliqué par ces couleurs ne correspond ni à «&nbsp;more&nbsp;» ni à «&nbsp;less&nbsp;». Cette valeur correspond à la palette de couleurs définie par les utilisateur·ice·s de [`forced-colors: active`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors).
 
 ## Préférences utilisateur
 
@@ -63,4 +63,4 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ## Voir aussi
 
-- La caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
+- La caractéristique média [`forced-colors`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors)

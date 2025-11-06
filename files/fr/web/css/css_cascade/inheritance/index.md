@@ -103,7 +103,7 @@ On voit ici la bordure supplémentaire autour du texte en emphase.
 - [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Règles-at](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Règles-at](/fr/docs/Web/CSS/CSS_syntax/At-rules)
   - [Commentairess](/fr/docs/Web/CSS/CSS_syntax/Comments)
   - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

@@ -45,7 +45,7 @@ Enfin, notez que pour les éléments en ligne non remplacés, l'espace occupé (
 - [Apprendre&nbsp;: Gérer les conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Règles @](/fr/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules)
   - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
   - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
   - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)

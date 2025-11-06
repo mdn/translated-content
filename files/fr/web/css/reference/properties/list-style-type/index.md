@@ -136,7 +136,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 ### Valeurs
 
 - [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
-  - : Un identifiant correspondant à la valeur d'un [`@counter-style`](/fr/docs/Web/CSS/@counter-style) ou à un style prédéfini&nbsp;:
+  - : Un identifiant correspondant à la valeur d'un [`@counter-style`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style) ou à un style prédéfini&nbsp;:
 - [`symbols()`](/fr/docs/Web/CSS/symbols)
   - : Définit un style de puce utilisé.
 - [`<string>`](/fr/docs/Web/CSS/string)

@@ -20,7 +20,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 #### Nouvelles fonctionnalités CSS
 
-- [Gestion des polices téléchargeables](/fr/docs/Web/CSS/@font-face)
+- [Gestion des polices téléchargeables](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
   - : La nouvelle règle-@ `@font-face` permet aux pages web de fournir des polices téléchargeables, afin qu'elles puissent être affichées exactement telles que l'auteur de la page les attend.
 - [Requêtes de média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Firefox 3.5 gère les requêtes de médias, qui améliorent le traitement des feuilles de style destinées à des médias particuliers.

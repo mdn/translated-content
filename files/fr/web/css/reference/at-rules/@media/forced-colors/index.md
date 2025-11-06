@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`forced-colors`** permet de détecter si l'{{Glossary("user agent", "agent utilisateur")}} a activé un mode couleurs forcées, dans lequel il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page. Un exemple de mode couleurs forcées est le mode contraste élevé de Windows.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`forced-colors`** permet de détecter si l'{{Glossary("user agent", "agent utilisateur")}} a activé un mode couleurs forcées, dans lequel il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page. Un exemple de mode couleurs forcées est le mode contraste élevé de Windows.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ La caractéristique média `forced-colors` indique si le navigateur est actuelle
 - `none`
   - : Le mode couleurs forcées n'est pas actif&nbsp;; les couleurs de la page ne sont pas limitées à une palette restreinte.
 - `active`
-  - : Indique que le mode couleurs forcées est actif. Le navigateur fournit la palette de couleurs aux auteur·ice·s via les mots-clés de [couleurs système CSS](/fr/docs/Web/CSS/system-color) et, si nécessaire, déclenche la valeur appropriée de [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme) afin que les auteur·ice·s puissent adapter la page. Le navigateur choisit la valeur de `prefers-color-scheme` en fonction de la clarté de la couleur système `Canvas` (voir la [spécification de color adjust <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced) pour plus de détails).
+  - : Indique que le mode couleurs forcées est actif. Le navigateur fournit la palette de couleurs aux auteur·ice·s via les mots-clés de [couleurs système CSS](/fr/docs/Web/CSS/system-color) et, si nécessaire, déclenche la valeur appropriée de [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) afin que les auteur·ice·s puissent adapter la page. Le navigateur choisit la valeur de `prefers-color-scheme` en fonction de la clarté de la couleur système `Canvas` (voir la [spécification de color adjust <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced) pour plus de détails).
 
 ## Notes d'utilisation
 

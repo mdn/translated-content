@@ -328,7 +328,7 @@ Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: n
 
 Quand on anime un <i lang="en">popover</i> à l'aide des transitions CSS, les éléments suivant sont nécessaires&nbsp;:
 
-- Règle @ [`@starting-style`](/fr/docs/Web/CSS/@starting-style) {{experimental_inline}}
+- Règle @ [`@starting-style`](/fr/docs/Web/CSS/Reference/At-rules/@starting-style) {{experimental_inline}}
   - : Définissez un ensemble de valeurs de départ pour les propriétés appliquées au <i lang="en">popover</i> qui vont être la cible de la transformation. Ces valeurs seront utilisées lors de la première transition pour éviter des comportements inattendus. Par défaut, les transitions CSS ne sont possibles que quand une propriété change de valeur sur un élément visible. Elles ne s'appliquent pas lors du premier affichage d'un élément, ou quand `display` passe de `none` à une autre valeur.
 - La propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
   - : Ajoutez `display` à la liste des transitions pour que le <i lang="en">popover</i> garde la valeur `display: block` (ou tout autre valeur visible de `display`) pendant toute la transition pour s'assurer que le contenu du <i lang="en">popover</i> soit visible tout du long.
@@ -438,7 +438,7 @@ Le code donne ce résultat&nbsp;:
 > [!NOTE]
 > Parce que les <i lang="en">popovers</i> passent de `display: none` à `display: block` à chaque fois qu'ils apparaissent, le <i lang="en">popover</i> transitionne des styles définis dans `@starting-style` aux styles définis dans `[popover]:popover-open` à chaque fois qu'il apparait. Quand le <i lang="en">popover</i> se ferme, il transitionne des styles définis dans `[popover]:popover-open` aux styles définis dans `[popover]`.
 >
-> Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
+> Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/Reference/At-rules/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
 
 ### Les animations sur les <i lang="en">popovers</i>
 

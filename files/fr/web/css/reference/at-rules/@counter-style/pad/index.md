@@ -22,7 +22,7 @@ Ce descripteur accepte les deux valeurs suivantes, séparées par un espace et p
 - {{cssxref("integer")}}
   - : Spécifie la longueur minimale que toutes les représentations de marqueur doivent atteindre. La valeur doit être positive ou nulle. Pour le descripteur `pad`, cette valeur est aussi appelée _longueur de remplissage_.
 
-- [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#symbol)
+- [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
   - : Spécifie le symbole à utiliser pour le remplissage si la longueur minimale définie par `<integer>` n'est pas atteinte. Pour le descripteur `pad`, cette valeur est aussi appelée _symbole de remplissage_.
 
 ## Description

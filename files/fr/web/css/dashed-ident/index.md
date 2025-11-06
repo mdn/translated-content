@@ -46,7 +46,7 @@ h6 {
 
 ### Utilisation avec `@color-profile`
 
-Lorsque `<dashed-ident>` est utilisé avec la règle at [`@color-profile`](/fr/docs/Web/CSS/@color-profile), la règle est d'abord déclarée puis utilisée dans une [fonction CSS `color()`](/fr/docs/Web/CSS/color_value/color).
+Lorsque `<dashed-ident>` est utilisé avec la règle at [`@color-profile`](/fr/docs/Web/CSS/Reference/At-rules/@color-profile), la règle est d'abord déclarée puis utilisée dans une [fonction CSS `color()`](/fr/docs/Web/CSS/color_value/color).
 
 ```css
 @color-profile --my-color-profile {
@@ -60,7 +60,7 @@ Lorsque `<dashed-ident>` est utilisé avec la règle at [`@color-profile`](/fr/d
 
 ### Utilisation avec `@font-palette-values`
 
-Lorsque `<dashed-ident>` est utilisé avec la règle at [`@font-palette-values`](/fr/docs/Web/CSS/@font-palette-values), la règle est d'abord déclarée puis utilisée comme valeur pour la propriété [`font-palette`](/fr/docs/Web/CSS/font-palette).
+Lorsque `<dashed-ident>` est utilisé avec la règle at [`@font-palette-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values), la règle est d'abord déclarée puis utilisée comme valeur pour la propriété [`font-palette`](/fr/docs/Web/CSS/font-palette).
 
 ```css
 @font-palette-values --my-palette {

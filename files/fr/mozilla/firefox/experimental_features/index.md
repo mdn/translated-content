@@ -298,7 +298,7 @@ La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/Reference/Properties/aspect
 
 ### Descripteur size-adjust
 
-Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/@font-face/size-adjust) est décrit dans le module de spécification [CSS5 Fonts](https://drafts.csswg.org/css-fonts-5/) et définit un facteur de multiplication pour les contours des glyphes et les métriques associées à la police. Cela facilite l'harmonisation lorsqu'on utilise plusieurs polices qui sont affichées avec le même corps. Voir [le bug 1698495](https://bugzilla.mozilla.org/show_bug.cgi?id=1698495) pour plus de détails.
+Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) est décrit dans le module de spécification [CSS5 Fonts](https://drafts.csswg.org/css-fonts-5/) et définit un facteur de multiplication pour les contours des glyphes et les métriques associées à la police. Cela facilite l'harmonisation lorsqu'on utilise plusieurs polices qui sont affichées avec le même corps. Voir [le bug 1698495](https://bugzilla.mozilla.org/show_bug.cgi?id=1698495) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -460,7 +460,7 @@ Cette fonctionnalité ajoute la prise en charge pour [les dispositions « en ma�
 
 ### Caractéristique média prefers-contrast
 
-La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast) est utilisée afin de déterminer si une utilisatrice ou un utilisateur indiqué une préférence pour un contraste élevé ou non. Voir [le bug 1506364](https://bugzilla.mozilla.org/show_bug.cgi?id=1506364) pour plus de détails.
+La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) est utilisée afin de déterminer si une utilisatrice ou un utilisateur indiqué une préférence pour un contraste élevé ou non. Voir [le bug 1506364](https://bugzilla.mozilla.org/show_bug.cgi?id=1506364) pour plus de détails.
 
 <table class="standard-table">
   <thead>

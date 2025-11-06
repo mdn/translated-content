@@ -32,7 +32,7 @@ Ces propriétés sont définies sur `AsyncFunction.prototype` et partagées par 
   - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"AsyncFunction"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
 
 > [!NOTE]
-> Les instances de `AsyncFunction` ne possèdent pas la propriété [`prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype).
+> Les instances de `AsyncFunction` ne possèdent pas la propriété [`prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
 ## Méthodes d'instance
 
