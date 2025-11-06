@@ -1,7 +1,6 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/aspect-ratio
-original_slug: Web/CSS/@media/aspect-ratio
 ---
 
 **`aspect-ratio`** [CSS](/zh-CN/docs/Web/CSS) [媒体属性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) 可以用来测试 {{glossary("viewport")}} 的宽高比。

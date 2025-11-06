@@ -1,7 +1,6 @@
 ---
 title: src
 slug: Web/CSS/Reference/At-rules/@font-face/src
-original_slug: Web/CSS/@font-face/src
 l10n:
   sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
 ---

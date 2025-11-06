@@ -1,7 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
-original_slug: Web/CSS/@font-face/font-display
 ---
 
 `font-display` 属性决定了一个 @font-face 在不同的下载时间和可用时间下是如何展示的。

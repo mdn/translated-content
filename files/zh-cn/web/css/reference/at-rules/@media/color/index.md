@@ -1,12 +1,11 @@
 ---
 title: color
 slug: Web/CSS/Reference/At-rules/@media/color
-original_slug: Web/CSS/@media/color
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) **`color`** 可用于检测输出设备每个颜色分量（红、绿、蓝）的位数。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性) **`color`** 可用于检测输出设备每个颜色分量（红、绿、蓝）的位数。
 
 ## 语法
 

@@ -1,13 +1,12 @@
 ---
 title: any-pointer
 slug: Web/CSS/Reference/At-rules/@media/any-pointer
-original_slug: Web/CSS/@media/any-pointer
 ---
 
 **`any-pointer`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) 测试用户是否拥有*任意*定点装置（如鼠标）。以及如果存在定点装置，它的精确度是什么样的。
 
 > [!NOTE]
-> 如果你想测试*主*定点设备的精确度，使用 [`pointer`](/zh-CN/docs/Web/CSS/@media/pointer) 。
+> 如果你想测试*主*定点设备的精确度，使用 [`pointer`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/pointer) 。
 
 ## 语法
 
@@ -77,4 +76,4 @@ input[type="checkbox"]:checked {
 
 ## 参见
 
-- [`pointer` media feature](/zh-CN/docs/Web/CSS/@media/pointer)
+- [`pointer` media feature](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/pointer)

@@ -1,15 +1,14 @@
 ---
 title: -webkit-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio
-original_slug: Web/CSS/@media/-webkit-device-pixel-ratio
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`-webkit-device-pixel-ratio`** [CSS](/zh-CN/docs/Web/CSS) 非标准布尔型[媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)是 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 标准媒体特性的替代方案。
+**`-webkit-device-pixel-ratio`** [CSS](/zh-CN/docs/Web/CSS) 非标准布尔型[媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性)是 [`resolution`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/resolution) 标准媒体特性的替代方案。
 
 > [!NOTE]
-> 如果可以，请改用标准的 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性查询。虽然此前缀媒体特性是 WebKit 特性，但其他浏览器引擎也可能支持它。详见下文的[浏览器兼容性](#浏览器兼容性)。
+> 如果可以，请改用标准的 [`resolution`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/resolution) 媒体特性查询。虽然此前缀媒体特性是 WebKit 特性，但其他浏览器引擎也可能支持它。详见下文的[浏览器兼容性](#浏览器兼容性)。
 
 ## 语法
 
@@ -91,8 +90,8 @@ l10n:
 
 - [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("resolution")}}
-- [`-webkit-transform-2d`](/zh-CN/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transform-3d`](/zh-CN/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transition`](/zh-CN/docs/Web/CSS/@media/-webkit-transition)
-- [`-webkit-animation`](/zh-CN/docs/Web/CSS/@media/-webkit-animation)
+- [`-webkit-transform-2d`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-2d)
+- [`-webkit-transform-3d`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d)
+- [`-webkit-transition`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/-webkit-transition)
+- [`-webkit-animation`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/-webkit-animation)
 - [W3C 建议的去前缀方法](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)

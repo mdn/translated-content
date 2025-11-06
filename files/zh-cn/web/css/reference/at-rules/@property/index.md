@@ -1,7 +1,6 @@
 ---
 title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
-original_slug: Web/CSS/@property
 ---
 
 {{SeeCompatTable}}

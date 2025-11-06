@@ -1,7 +1,6 @@
 ---
 title: hover
 slug: Web/CSS/Reference/At-rules/@media/hover
-original_slug: Web/CSS/@media/hover
 ---
 
 该 **`hover`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。
@@ -47,4 +46,4 @@ original_slug: Web/CSS/@media/hover
 
 ## 参见
 
-- [the `any-hover` media feature](/zh-CN/docs/Web/CSS/@media/any-hover)
+- [the `any-hover` media feature](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/any-hover)

@@ -1,7 +1,6 @@
 ---
 title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
-original_slug: Web/CSS/@layer
 ---
 
 {{SeeCompatTable}}

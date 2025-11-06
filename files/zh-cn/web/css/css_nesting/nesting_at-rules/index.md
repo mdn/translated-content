@@ -97,7 +97,7 @@ At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以�
 
 ### 嵌套级联层（`@layer`）
 
-[级联层](/zh-CN/docs/Web/CSS/@layer)也可以被嵌套以[创建子层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。嵌套层之间使用 `.`（点号）连接。
+[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)也可以被嵌套以[创建子层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer#嵌套层)。嵌套层之间使用 `.`（点号）连接。
 
 #### 定义父层和子层
 

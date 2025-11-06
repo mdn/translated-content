@@ -1,10 +1,7 @@
 ---
 title: "@font-feature-values"
 slug: Web/CSS/Reference/At-rules/@font-feature-values
-original_slug: Web/CSS/@font-feature-values
 ---
-
-## 概要
 
 **`@font-feature-values`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)允许作者在{{cssxref("font-variant-alternates")}} 中使用通用名称，用于在 OpenType 中以不同方式激活功能。它允许在使用几种字体时简化 CSS。
 

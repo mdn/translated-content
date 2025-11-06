@@ -1,7 +1,6 @@
 ---
 title: 初始值
 slug: Web/CSS/Reference/At-rules/@property/initial-value
-original_slug: Web/CSS/@property/initial-value
 ---
 
 {{SeeCompatTable}}

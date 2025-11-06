@@ -114,10 +114,10 @@ l10n:
 - SVG [`color`](/zh-CN/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色环")}}术语
 - {{glossary("Interpolation", "插值")}}术语
-- [`@font-palette-values`](/zh-CN/docs/Web/CSS/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/@font-palette-values/override-colors) 描述符
-- [`@color-profile`](/zh-CN/docs/Web/CSS/@color-profile) At 规则
-- [`color-gamut`](/zh-CN/docs/Web/CSS/@media/color-gamut) @media 特性
-- [`forced-colors`](/zh-CN/docs/Web/CSS/@media/forced-colors) @media 特性
+- [`@font-palette-values`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) 描述符
+- [`@color-profile`](/zh-CN/docs/Web/CSS/Reference/At-rules/@color-profile) At 规则
+- [`color-gamut`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) @media 特性
+- [`forced-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/forced-colors) @media 特性
 
 ## 规范
 

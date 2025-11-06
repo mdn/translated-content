@@ -1,7 +1,6 @@
 ---
 title: syntax
 slug: Web/CSS/Reference/At-rules/@property/syntax
-original_slug: Web/CSS/@property/syntax
 ---
 
 {{SeeCompatTable}}

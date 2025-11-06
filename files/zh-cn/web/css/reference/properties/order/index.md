@@ -81,7 +81,7 @@ order: revert-layer;
 order: unset;
 ```
 
-由于 `order` 仅用于影响元素的*视觉顺序*，而不影响其逻辑顺序或 Tab 顺序，因此不应在非视觉媒体（例如 [speech](/zh-CN/docs/Web/CSS/@media#speech)）上使用。
+由于 `order` 仅用于影响元素的*视觉顺序*，而不影响其逻辑顺序或 Tab 顺序，因此不应在非视觉媒体（例如 [speech](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#speech)）上使用。
 
 定义于 [CSS 显示](/zh-CN/docs/Web/CSS/CSS_display)模块中的这一属性，仅对网格和弹性项产生影响。当在父元素的 {{cssxref("display")}} 属性未创建弹性容器或网格容器的情况下，对子元素设置 `order` 属性是无效的。
 

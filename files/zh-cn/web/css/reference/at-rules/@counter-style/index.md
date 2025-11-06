@@ -1,10 +1,7 @@
 ---
 title: "@counter-style"
 slug: Web/CSS/Reference/At-rules/@counter-style
-original_slug: Web/CSS/@counter-style
 ---
-
-## 概要
 
 `@counter-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)让开发者可以自定义计数器的样式。一个 `@counter-style` 规则定义了如何把一个计数器的值转化为字符串表示。
 

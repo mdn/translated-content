@@ -1,7 +1,6 @@
 ---
 title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
-original_slug: Web/CSS/@page
 l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
@@ -47,9 +46,9 @@ l10n:
 
 - [`margin`](/zh-CN/docs/Web/CSS/Reference/Properties/margin)
   - : 指定页边距。也可使用部分页边距属性 [`margin-top`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-top)、[`margin-right`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-right)、[`margin-bottom`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-bottom) 和 [`margin-left`](/zh-CN/docs/Web/CSS/Reference/Properties/margin-left)。
-- [`page-orientation`](/zh-CN/docs/Web/CSS/@page/page-orientation)
+- [`page-orientation`](/zh-CN/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : 指定文档在页面上的方向，允许它进行正常的布局和格式化或者也可以将其向左或向右旋转。
-- [`size`](/zh-CN/docs/Web/CSS/@page/size)
+- [`size`](/zh-CN/docs/Web/CSS/Reference/At-rules/@page/size)
   - : 指定页面框包含块的目标大小和方向。通常情况下，一个页面框渲染到一页纸上时，它也会指定目标页的大小。
 
 规范中提到以下 CSS 属性可通过 @page at 规则应用于页面框。但目前还*没有*任何用户代理支持这些属性。
@@ -406,7 +405,7 @@ button.addEventListener("click", () => {
 
 ## 参见
 
-- `@page` [`size`](/zh-CN/docs/Web/CSS/@page/size) 描述符
+- `@page` [`size`](/zh-CN/docs/Web/CSS/Reference/At-rules/@page/size) 描述符
 - {{Cssxref("page")}} 属性
 - 参阅 Bugzilla 中的 [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) 工单，以追踪该主题（例如：基于页面的计数器，等等）的进展
 - [CSS 分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)模块

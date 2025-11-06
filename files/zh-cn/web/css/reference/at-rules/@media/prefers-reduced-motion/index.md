@@ -1,10 +1,9 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
-original_slug: Web/CSS/@media/prefers-reduced-motion
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
 

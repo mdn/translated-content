@@ -1,10 +1,9 @@
 ---
 title: scripting
 slug: Web/CSS/Reference/At-rules/@media/scripting
-original_slug: Web/CSS/@media/scripting
 ---
 
-**`scripting`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)可以用来测试脚本（例如 JavaScript）是否可用。
+**`scripting`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体特性)可以用来测试脚本（例如 JavaScript）是否可用。
 
 ## 语法
 
@@ -70,4 +69,4 @@ p {
 ## 参见
 
 - [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/zh-CN/docs/Web/CSS/@media)
+- [@media](/zh-CN/docs/Web/CSS/Reference/At-rules/@media)

@@ -1,7 +1,6 @@
 ---
 title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
-original_slug: Web/CSS/@view-transition
 l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
@@ -97,4 +96,4 @@ l10n:
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
 - [视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API)
 - [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-- [CSS at 规则函数](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS at 规则函数](/zh-CN/docs/Web/CSS/Reference/At-rules/At-rule_functions)

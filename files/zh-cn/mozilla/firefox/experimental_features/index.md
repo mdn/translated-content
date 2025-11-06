@@ -554,7 +554,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### @font-face src 特性检查
 
-`@font-face` [`src` 描述符](/zh-CN/docs/Web/CSS/@font-face/src)现在支持 `tech()` 函数，允许根据用户代理是否支持特定字体特性或技术来决定是否下载字体资源。详情请参见 [Firefox bug 1715546](https://bugzil.la/1715546)。
+`@font-face` [`src` 描述符](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/src)现在支持 `tech()` 函数，允许根据用户代理是否支持特定字体特性或技术来决定是否下载字体资源。详情请参见 [Firefox bug 1715546](https://bugzil.la/1715546)。
 
 <table>
   <thead>
@@ -674,7 +674,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 
 ### page-orientation
 
-**`page-orientation`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@page")}} at-rule 的描述符控制打印页面的旋转。当页面方向发生变化时，它将处理跨页面的内容流。该行为与 [`size`](/zh-CN/docs/Web/CSS/@page/size) 描述符不同，用户可以定义页面的旋转方向。详情请参见（[Firefox bug 1673987](https://bugzil.la/1673987)）。
+**`page-orientation`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@page")}} at-rule 的描述符控制打印页面的旋转。当页面方向发生变化时，它将处理跨页面的内容流。该行为与 [`size`](/zh-CN/docs/Web/CSS/Reference/At-rules/@page/size) 描述符不同，用户可以定义页面的旋转方向。详情请参见（[Firefox bug 1673987](https://bugzil.la/1673987)）。
 
 <table>
   <thead>
@@ -714,7 +714,7 @@ CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根�
 
 ### prefers-reduced-transparency 媒体特性
 
-CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced-transparency) 媒体特性可让你检测用户是否已启用设置，以尽量减少设备上的透明或半透明图层效果。
+CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) 媒体特性可让你检测用户是否已启用设置，以尽量减少设备上的透明或半透明图层效果。
 更多详情请参见（[Firefox bug 1736914](https://bugzil.la/1736914)）。
 
 <table>
@@ -755,7 +755,7 @@ CSS [`prefers-reduced-transparency``](/zh-CN/docs/Web/CSS/@media/prefers-reduced
 
 ### inverted-colors 媒体特性
 
-通过 CSS [`inverted-colors`](/zh-CN/docs/Web/CSS/@media/inverted-colors) 媒体特性，可以检测用户代理或底层操作系统是否正在反转颜色。详情请参阅（[Firefox bug 1794628](https://bugzil.la/1794628)）。
+通过 CSS [`inverted-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/inverted-colors) 媒体特性，可以检测用户代理或底层操作系统是否正在反转颜色。详情请参阅（[Firefox bug 1794628](https://bugzil.la/1794628)）。
 
 <table>
   <thead>
@@ -1385,7 +1385,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### OpenFont COLRv1 字体
 
-该特性支持 [OpenFont COLRv1 字体规范](https://docs.microsoft.com/en-us/typography/opentype/spec/)。这样就可以使用 CSS [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 规则或 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来加载带有渐变、合成和混合特性的压缩友好型彩色矢量字体。详情请参见 [Firefox bug 1740530](https://bugzil.la/1740530)。
+该特性支持 [OpenFont COLRv1 字体规范](https://docs.microsoft.com/en-us/typography/opentype/spec/)。这样就可以使用 CSS [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 规则或 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 来加载带有渐变、合成和混合特性的压缩友好型彩色矢量字体。详情请参见 [Firefox bug 1740530](https://bugzil.la/1740530)。
 
 <table>
   <thead>
@@ -1425,7 +1425,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### CSS 属性和值 API
 
-[CSS 属性和值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API) 允许开发人员通过 JavaScript 中的 [`registerProperty()`](/zh-CN/docs/Web/API/CSS/registerProperty_static)或 CSS 中的 [`@property`](/zh-CN/docs/Web/CSS/@property) 规则注册自定义 CSS 属性。使用这两种方法注册属性时，可以进行类型检查、设置默认值，以及设置是否从父元素继承值。详情请参见 [Firefox bug 1840480](https://bugzil.la/1840480)。
+[CSS 属性和值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API) 允许开发人员通过 JavaScript 中的 [`registerProperty()`](/zh-CN/docs/Web/API/CSS/registerProperty_static)或 CSS 中的 [`@property`](/zh-CN/docs/Web/CSS/Reference/At-rules/@property) 规则注册自定义 CSS 属性。使用这两种方法注册属性时，可以进行类型检查、设置默认值，以及设置是否从父元素继承值。详情请参见 [Firefox bug 1840480](https://bugzil.la/1840480)。
 
 <table>
   <thead>

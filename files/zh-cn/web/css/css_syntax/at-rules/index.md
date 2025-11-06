@@ -58,7 +58,7 @@ original_slug: Web/CSS/CSS_syntax/At-rule
 
 ## 使用 CSS 嵌套来嵌套 @layer
 
-[级联层](/zh-CN/docs/Web/CSS/@layer)可以嵌套以[创建嵌套层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。它们用 `.`（点）连接。这也可以使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules#嵌套级联层（layer）)来实现。
+[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)可以嵌套以[创建嵌套层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer#嵌套层)。它们用 `.`（点）连接。这也可以使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules#嵌套级联层（layer）)来实现。
 
 ## 索引
 

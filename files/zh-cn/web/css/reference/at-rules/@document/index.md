@@ -1,7 +1,6 @@
 ---
 title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
-original_slug: Web/CSS/@document
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

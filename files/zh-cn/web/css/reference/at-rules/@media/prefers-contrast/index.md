@@ -1,7 +1,6 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/Reference/At-rules/@media/prefers-contrast
-original_slug: Web/CSS/@media/prefers-contrast
 l10n:
   sourceCommit: eb20a5272772231852864ddc71b9710de0fa1d4f
 ---
@@ -17,7 +16,7 @@ l10n:
 - `less`
   - : 表示用户已告知系统他们选择使用对比度更低的界面。
 - `custom`
-  - : 表示用户已告知系统他们选择使用特定的颜色组合，这些颜色的对比度既不匹配 `more` 也不匹配 `less`。此值将与用户指定的调色板 [`forced-colors: active`](/zh-CN/docs/Web/CSS/@media/forced-colors) 相匹配。
+  - : 表示用户已告知系统他们选择使用特定的颜色组合，这些颜色的对比度既不匹配 `more` 也不匹配 `less`。此值将与用户指定的调色板 [`forced-colors: active`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/forced-colors) 相匹配。
 
 ## 用户偏好
 
@@ -63,4 +62,4 @@ l10n:
 
 ## 参见
 
-- [forced-colors](/zh-CN/docs/Web/CSS/@media/forced-colors) CSS 媒体查询
+- [forced-colors](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/forced-colors) CSS 媒体查询
