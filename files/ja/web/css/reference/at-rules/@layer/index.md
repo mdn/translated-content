@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
+**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -231,7 +231,7 @@ p {
 
 ## 関連情報
 
-- [`@import`](/ja/docs/Web/CSS/@import)
+- [`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import)
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/ja/docs/Web/CSS/important)

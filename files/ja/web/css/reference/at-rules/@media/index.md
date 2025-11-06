@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6ca92a0367203aee71e98c6c7b1501b5dc9a1fe0
 ---
 
-**`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
+**`@media`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、1 つまたは複数の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の結果に基づいて、スタイルシートの一部を適用するために使用することができます。これによってメディアクエリーを指定し、そのメディアクエリーがコンテンツの使用される端末に一致する場合にのみ、文書に CSS のブロックを適用することができます。
 
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
@@ -111,7 +111,7 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
 - {{cssxref("@media/device-width", "device-width")}}
   - : 出力機器のレンダリング面の幅。メディアクエリーレベル 4 で非推奨。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : アプリケーションが表示されているモード。例えば、[全画面](/ja/docs/Web/CSS/@media/display-mode#fullscreen)モードや[ピクチャインピクチャ](/ja/docs/Web/CSS/@media/display-mode#picture-in-picture)モードなどです。
+  - : アプリケーションが表示されているモード。例えば、[全画面](/ja/docs/Web/CSS/Reference/At-rules/@media/display-mode#fullscreen)モードや[ピクチャインピクチャ](/ja/docs/Web/CSS/Reference/At-rules/@media/display-mode#picture-in-picture)モードなどです。
     メディアクエリーレベル 5 で追加。
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : ユーザーエージェントおよび出力端末が対応している輝度、コントラスト比、および色深度の組み合わせ。メディアクエリーレベル 5 で追加されました。
@@ -169,17 +169,17 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
 - {{cssxref("@media/width", "width")}}
   - : スクロールバーの幅を含むビューポートの幅。
 - {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
-  - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性を `dppx` 単位で使用してください。
+  - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) 特性を `dppx` 単位で使用してください。
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("animation")}} に対応しているかどうか。代わりに [`@supports (animation)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("animation")}} に対応しているかどうか。代わりに [`@supports (animation)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
 - {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
-  - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性を `dppx` 単位で使用してください。
+  - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) 特性を `dppx` 単位で使用してください。
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた 2D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた 2D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた 3D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた 3D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("transition")}} に対応しているかどうか。代わりに [`@supports (transition)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("transition")}} に対応しているかどうか。代わりに [`@supports (transition)`](/ja/docs/Web/CSS/Reference/At-rules/@supports) 機能クエリーを使用してください。
 
 ### 論理演算子
 
@@ -226,7 +226,7 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
 [`em`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) および [`px`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) はどちらも有効な単位ですが、 [`em`](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) はユーザーがブラウザーのテキストの大きさを変更した場合に、よりうまく動作します。
 
 また、ユーザーの使い勝手を向上させるために、メディアクエリーまたは [HTTP ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)を使用することを検討してください。
-例えば、 [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) または同等の HTTP ヘッダーである {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} は、ユーザー設定に基づいて、アニメーションや動きの量を最小化するために使用することができます。
+例えば、 [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) または同等の HTTP ヘッダーである {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} は、ユーザー設定に基づいて、アニメーションや動きの量を最小化するために使用することができます。
 
 ## セキュリティ
 

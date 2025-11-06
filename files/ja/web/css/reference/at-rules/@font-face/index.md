@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
+**`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
 
 ## 構文
 
@@ -62,7 +62,7 @@ l10n:
 `@font-face` で作者が独自のフォントを提供できるようになることで、「ウェブセーフ」フォント (つまり、広く利用できると考えられるほど一般的なフォント) と呼ばれる制限なしにコンテンツをデザインすることができます。ローカルにインストールされているフォントを、名前を指定して検索し使用することができる機能により、インターネット接続に頼らなくてもフォントを基本的なものからカスタマイズすることができるようになります。
 
 > [!NOTE]
-> Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/ja/docs/Web/CSS/@font-face/src#specifying_fallbacks_for_older_browsers).
+> Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src#specifying_fallbacks_for_older_browsers).
 
 `@font-face` アットルールは、 CSS の最上位だけでなく、 [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/CSS_conditional_rules#アットルール)の中でも使用することができます。
 

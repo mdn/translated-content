@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
-**`:left`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使われ、印刷文書の左側のページすべてを表します。
+**`:left`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で使われ、印刷文書の左側のページすべてを表します。
 
 ```css
 /* 印刷時に左側のページを選択 */

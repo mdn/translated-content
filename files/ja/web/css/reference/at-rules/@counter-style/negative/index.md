@@ -20,7 +20,7 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 
 ### 値
 
-`negative` 記述子は、最大 2 つの [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#values) 値を受け入れます。
+`negative` 記述子は、最大 2 つの [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#values) 値を受け入れます。
 
 - `<symbol>`
   - : 1 つの値のみを指定した場合、カウンターが負の値の場合、その値がカウンターの表現の前に追加されます。 2 つの値を指定した場合、カウンターが負の値の場合、最初の値はカウンターの表現の前に追加され、 2 つ目の値はカウンターの表現の後ろに追加されます。
@@ -43,7 +43,7 @@ negative: "(" ")"; /* 負の値の場合に '(' と ')' で囲む */
 
 ### 負のカウンターを描画する
 
-この例では、[`decimal`](/ja/docs/Web/CSS/Reference/Properties/list-style-type#decimal) リストスタイルを[拡張](/ja/docs/Web/CSS/@counter-style/system#extends)しています。 `negative` 記述子は、負のカウンター値の前後に `(-` および `)` を追加するために使用されます。
+この例では、[`decimal`](/ja/docs/Web/CSS/Reference/Properties/list-style-type#decimal) リストスタイルを[拡張](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/system#extends)しています。 `negative` 記述子は、負のカウンター値の前後に `(-` および `)` を追加するために使用されます。
 
 #### HTML
 

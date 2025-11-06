@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
+この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文
 
@@ -48,7 +48,7 @@ div.menu-bar li:hover > ul {
 
 ### アットルールの構文
 
-アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)のページをご覧ください。
+アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)のページをご覧ください。
 
 ## 索引
 
@@ -109,7 +109,7 @@ div.menu-bar li:hover > ul {
 ### 構文と意味
 
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
 - [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)

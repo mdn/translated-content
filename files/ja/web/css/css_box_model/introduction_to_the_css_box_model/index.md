@@ -44,7 +44,7 @@ l10n:
 - [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
   - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
   - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)

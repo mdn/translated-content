@@ -191,7 +191,7 @@ button:active {
 これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは 16 進数の色を指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
 > [!NOTE]
-> [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
+> [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face)、[`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
 
 ### セレクターの対応
 
@@ -251,7 +251,7 @@ form > #date
 
 2 つ目のドットの後にプロパティ名の表現を入力し始めると（JavaScript では、 CSS のプロパティ名は{{Glossary("kebab_case", "ケバブケース")}}ではなく、{{Glossary("camel_case", "小文字のキャメルケース")}}で記述されることに注意してください）、 JavaScript コンソールは、ブラウザーに存在し、これまでに書いたものと一致するプロパティの名前を自動補完し始めるはずです。これは、そのブラウザーで実装されているプロパティを探すのに有益です。
 
-現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
+現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
 
 ### レスポンシブデザインの問題
 

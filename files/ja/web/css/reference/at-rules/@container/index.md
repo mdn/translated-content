@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
 ---
 
-**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
+**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
 この条件は、クエリーされたコンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変化したときに評価されます。
 
@@ -140,7 +140,7 @@ l10n:
 
 #### サイズコンテナー記述子
 
-`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/@media) サイズ機能クエリーの場合と同じです。
+`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) サイズ機能クエリーの場合と同じです。
 
 ```css
 @container (min-width: 400px) {
@@ -167,7 +167,7 @@ l10n:
   - : コンテナーの {{cssxref("inline-size")}} を {{cssxref("length")}} 値で表したものです。
 
 - `orientation`
-  - : コンテナーの[方向](/ja/docs/Web/CSS/@media/orientation)で、`landscape` または `portrait` のいずれかです。
+  - : コンテナーの[方向](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)で、`landscape` または `portrait` のいずれかです。
 
 - `width`
   - : コンテナーの幅を {{cssxref("length")}} 値で表したものです。
@@ -482,4 +482,4 @@ span {
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
 - [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
-- [CSS アットルール関数](/ja/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
