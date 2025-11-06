@@ -396,4 +396,4 @@ select {
 
 ## 関連情報
 
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme)
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)

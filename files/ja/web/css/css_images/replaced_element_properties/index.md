@@ -51,7 +51,7 @@ CSS はマージンの計算時や一部の `auto` 値の時など場合によ�
 - [HTML 仕様書](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
   - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
   - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)

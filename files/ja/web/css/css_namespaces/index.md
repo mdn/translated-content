@@ -9,7 +9,7 @@ l10n:
 
 CSS は HTML のスタイル設定だけのためにあるわけではありません。スタイルシートは、SVG、MathML、XML、HTML のスタイル設定にも使用でき、これらはそれぞれ異なる名前空間があり、または複数の名前空間を含む文書を持っています。
 
-このモジュールで定義されている [`@namespace`](/ja/docs/Web/CSS/@namespace) アットルールを使用すると、異なる名前空間にある同じ名前の要素を判別することができます。要素タグ名は、1 つの言語に固有のものではありません。例えば、 `<a>` 要素は HTML に限定されません。 SVG 内の `<a>` に、HTML 内のリンクとは異なるスタイルを適用したい場合などがあります。{{domxref("Document.querySelectorAll", "querySelectorAll(\"a\")")}} が正しい種類の要素を選択することを保証したい場合もあるでしょう。名前空間で、これらの問題に対処することができます。
+このモジュールで定義されている [`@namespace`](/ja/docs/Web/CSS/Reference/At-rules/@namespace) アットルールを使用すると、異なる名前空間にある同じ名前の要素を判別することができます。要素タグ名は、1 つの言語に固有のものではありません。例えば、 `<a>` 要素は HTML に限定されません。 SVG 内の `<a>` に、HTML 内のリンクとは異なるスタイルを適用したい場合などがあります。{{domxref("Document.querySelectorAll", "querySelectorAll(\"a\")")}} が正しい種類の要素を選択することを保証したい場合もあるでしょう。名前空間で、これらの問題に対処することができます。
 
 `@namespace` ルールは、既定の名前空間宣言、および名前空間を名前空間の接頭辞に結び付けるために使用されます。名前空間モジュールは、これらの接頭辞を使用して名前空間修飾名を表すための構文も定義しています。名前の意味、あるいはその名前が有効であるかどうかは、コンテキストおよびホスト言語によって異なります。
 
@@ -56,6 +56,6 @@ CSS は HTML のスタイル設定だけのためにあるわけではありま�
 
 - SVG の [`<a>`](/ja/docs/Web/SVG/Reference/Element/a#example) 要素
 - [CSS `<url>` 型](/ja/docs/Web/CSS/url_value)
-- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
-- [CSS アットルール関数](/ja/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
+- [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)

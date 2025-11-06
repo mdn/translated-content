@@ -246,7 +246,7 @@ CSS の継承がどのように動作するかについての詳細について�
 ## 関連情報
 
 - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
 - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

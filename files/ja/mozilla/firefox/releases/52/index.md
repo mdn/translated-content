@@ -63,7 +63,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - グリッドコンテナーのベースラインを実装しました。 ([Firefox バグ 1151204](https://bugzil.la/1151204))。
 - スタイルシステムから、`<flex>` 値を最小値として使用する箇所を削除しました ([Firefox バグ 1305244](https://bugzil.la/1305244))。
 - 設定項目 `layout.css.masking.enabled` を削除しました ([Firefox バグ 1308239](https://bugzil.la/1308239))。
-- 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
+- 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
 - 色のプロパティから `-moz-use-text-color` を削除しました。代わりに [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) を使用してください ([Firefox バグ 1306214](https://bugzil.la/1306214))。
 - \[css-grid] グリッドアイテムに 'max-width' を設定するとテキストがはみ出す問題を修正しました ([Firefox バグ 1330380](https://bugzil.la/1330380))。
 

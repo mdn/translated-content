@@ -7,7 +7,7 @@ l10n:
 
 **CSS 条件付きルール** (CSS conditional rules) モジュールは、CSS のメディアクエリーと機能クエリーを定義し、特定の条件が満たされた場合にのみ適用されるスタイルを定義できるようにします。このモジュールで定義される条件付きルールは、端末、ユーザーエージェント、ビューポートなどの能力に基づいています。条件付きルールを使用すると、レンダリングされる文書とは無関係に、クエリー値やブラウザーおよび端末の機能に基づいて、 CSS スタイルをターゲットに指定することができます。
 
-最初の CSS 条件付きルールは、リンクされたスタイルの意図した送信先メディアを指定する [メディア種別](/ja/docs/Web/CSS/@media#メディア種別)でした。例えば、 `screen` や `print` などです。これらは、HTML の {{HTMLElement("link")}} および {{HTMLElement("style")}} 要素の `media` 属性、あるいは {{cssxref("@import")}} 文またはアットルール内のメディア種別のカンマ区切りリストとして設定されていました。CSS ルールを条件付きで適用する機能は、条件付きクエリーをいくつかのメディア種別に制限していた CSS 2.1 および HTML 4.01 の実装から、大幅に拡張されました。
+最初の CSS 条件付きルールは、リンクされたスタイルの意図した送信先メディアを指定する [メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)でした。例えば、 `screen` や `print` などです。これらは、HTML の {{HTMLElement("link")}} および {{HTMLElement("style")}} 要素の `media` 属性、あるいは {{cssxref("@import")}} 文またはアットルール内のメディア種別のカンマ区切りリストとして設定されていました。CSS ルールを条件付きで適用する機能は、条件付きクエリーをいくつかのメディア種別に制限していた CSS 2.1 および HTML 4.01 の実装から、大幅に拡張されました。
 
 CSS 条件付きルールに機能クエリーが記載されるようになりました。アットルール `@supports` を使用すると、ユーザーエージェントの CSS 機能に基づいて CSS スタイルをターゲットに指定することができます。追加の条件としては、対応しているセレクター、フォント形式、フォント技術などが挙げられます。
 
@@ -36,23 +36,23 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 
 ### 関数
 
-- [`style()`](/ja/docs/Web/CSS/@container#コンテナースタイルクエリー)
-- [`font-tech()`](/ja/docs/Web/CSS/@supports#font-tech)
-- [`font-format()`](/ja/docs/Web/CSS/@supports#font-format)
-- [`selector()`](/ja/docs/Web/CSS/@supports#function_syntax)
-- [`supports()`](/ja/docs/Web/CSS/@import#supports-condition)
+- [`style()`](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)
+- [`font-tech()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
+- [`font-format()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`selector()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#function_syntax)
+- [`supports()`](/ja/docs/Web/CSS/Reference/At-rules/@import#supports-condition)
 
 > [!NOTE]
 > CSS 条件付きルールモジュールでは、まだ実装されていない CSS 関数 `media()` が導入されています。
 
 ### データ型
 
-- [`<container-name>`](/ja/docs/Web/CSS/@container#values)
-- [`<style-feature>`](/ja/docs/Web/CSS/@container#コンテナースタイルクエリー)
+- [`<container-name>`](/ja/docs/Web/CSS/Reference/At-rules/@container#values)
+- [`<style-feature>`](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)
 - [相対的な `<length>` 単位のコンテナー](/ja/docs/Web/CSS/length#container_query_length_units)
 - [`<media-query>`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)
-- [`<supports-condition>`](/ja/docs/Web/CSS/@import#importing_css_rules_conditional_on_feature_support)
-- `<supports-feature>` （[`supports()`](/ja/docs/Web/CSS/@import#supports-condition) を参照）
+- [`<supports-condition>`](/ja/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_conditional_on_feature_support)
+- `<supports-feature>` （[`supports()`](/ja/docs/Web/CSS/Reference/At-rules/@import#supports-condition) を参照）
 
 ### インターフェイス
 
@@ -89,11 +89,11 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
   - {{cssxref("@import")}} アットルール
 
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-  - [`<media-feature>`](/ja/docs/Web/CSS/@media#media_features)
-  - [`<media-type>`](/ja/docs/Web/CSS/@media#media_types)
-  - [`<media-condition>`](/ja/docs/Web/CSS/@media#logical_operators)
+  - [`<media-feature>`](/ja/docs/Web/CSS/Reference/At-rules/@media#media_features)
+  - [`<media-type>`](/ja/docs/Web/CSS/Reference/At-rules/@media#media_types)
+  - [`<media-condition>`](/ja/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
   - [`<media-query-list>`](/ja/docs/Web/SVG/Reference/Attribute/media)
-  - [CSS logical operators](/ja/docs/Web/CSS/@media#logical_operators) (`not`, `or`, `and`)
+  - [CSS logical operators](/ja/docs/Web/CSS/Reference/At-rules/@media#logical_operators) (`not`, `or`, `and`)
 
 - [CSSOM view](/ja/docs/Web/CSS/CSSOM_view) モジュール
   - {{domxref("CSS")}} API

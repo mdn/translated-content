@@ -6,10 +6,10 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-**`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、標準の [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性の代替です。
+**`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、標準の [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性の代替です。
 
 > [!NOTE]
-> 可能であれば、代わりに標準のメディア特性である [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性クエリーを使用してください。子の接頭辞付きのメディアクエリーは WebKit の特性であり、他のブラウザーエンジンは対応していない可能性があります。下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+> 可能であれば、代わりに標準のメディア特性である [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性クエリーを使用してください。子の接頭辞付きのメディアクエリーは WebKit の特性であり、他のブラウザーエンジンは対応していない可能性があります。下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 構文
 
@@ -91,8 +91,8 @@ l10n:
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("resolution")}}
-- [`-webkit-transform-2d`](/ja/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transition`](/ja/docs/Web/CSS/@media/-webkit-transition)
-- [`-webkit-animation`](/ja/docs/Web/CSS/@media/-webkit-animation)
+- [`-webkit-transform-2d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-2d)
+- [`-webkit-transform-3d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d)
+- [`-webkit-transition`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transition)
+- [`-webkit-animation`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-animation)
 - [W3C Suggested Method to UnPrefix](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)

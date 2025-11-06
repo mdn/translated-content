@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6da4cf5ad98eff4a623db03164549c4f2e3b001a
 ---
 
-**`scan`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器のスキャンプロセスに基づいて CSS スタイルを適用するために使用されます。
+**`scan`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器のスキャンプロセスに基づいて CSS スタイルを適用するために使用されます。
 
 ## 構文
 
@@ -77,5 +77,5 @@ p {
 
 ## 関連情報
 
-- [@media](/ja/docs/Web/CSS/@media) アットルール、 scan 式を指定するために使用されます。
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルール、 scan 式を指定するために使用されます。
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で、いつどうやってメディアクエリーを使用するかを理解します。

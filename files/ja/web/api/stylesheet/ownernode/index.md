@@ -33,7 +33,7 @@ l10n:
 
 ## メモ
 
-[`@import`](/ja/docs/Web/CSS/@import) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `null` になります。
+[`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) などを使用して、他のスタイルシートをインクルードするスタイルシートでは、このプロパティの値は `null` になります。
 
 ## 仕様書
 

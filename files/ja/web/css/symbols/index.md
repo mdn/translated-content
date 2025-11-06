@@ -7,7 +7,7 @@ l10n:
 
 **`symbols()`** は CSS の関数で、 {{cssxref("list-style")}} などのプロパティの値として、カウンタースタイルをインラインで直接定義することができます。これは、カウンタースタイルを定義する {{cssxref("@counter-style")}} メソッドよりも機能は劣りますが、よりシンプルな代替手段です。
 
-再利用可能なカウンタースタイルを定義する {{cssxref("@counter-style")}} とは異なり、`symbols()` は無名です（つまり、1 回しか使用できません）。この関数は、文字列および画像を値として受け入れます。これに対し、{{cssxref("@counter-style")}} の [`symbols`](/ja/docs/Web/CSS/@counter-style/symbols) 記述子は、識別子も受け入れます。
+再利用可能なカウンタースタイルを定義する {{cssxref("@counter-style")}} とは異なり、`symbols()` は無名です（つまり、1 回しか使用できません）。この関数は、文字列および画像を値として受け入れます。これに対し、{{cssxref("@counter-style")}} の [`symbols`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) 記述子は、識別子も受け入れます。
 
 ## 構文
 

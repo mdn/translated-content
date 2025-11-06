@@ -33,7 +33,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 ### CSS
 
 - [`text-size-adjust`](/ja/docs/Web/CSS/Reference/Properties/text-size-adjust) プロパティがサポートされました。
-- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/Web/CSS/@media)、[@-moz-document](/ja/docs/Web/CSS/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/Web/CSS/CSS_syntax/Syntax) および [CSS at-rules](/ja/docs/Web/CSS/CSS_syntax/At-rule) をご覧ください)。
+- [CSS3](/ja/docs/CSS/CSS3) [Conditional Rules](/ja/docs/CSS/CSS3#Conditional_Rules) のサポートが向上しました: [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)、[@-moz-document](/ja/docs/Web/CSS/Reference/At-rules/@document) に入れ子構文を追加できます ([CSS Syntax](/ja/docs/Web/CSS/CSS_syntax/Syntax) および [CSS at-rules](/ja/docs/Web/CSS/CSS_syntax/At-rules) をご覧ください)。
 
 ### SVG
 

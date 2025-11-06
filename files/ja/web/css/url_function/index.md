@@ -15,7 +15,7 @@ l10n:
 相対 URL が使用された場合は、スタイルシートの URL からの相対となります（ウェブページの URL からではありません）。
 
 **`url()`** 関数は {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[`@font-face`](/ja/docs/Web/CSS/@font-face) ブロック内での [src](/ja/docs/Web/CSS/@font-face/src), [@counter-style/`symbol`](/ja/docs/Web/CSS/@counter-style/symbols) の値として使用することができます。
+[`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) ブロック内での [src](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src), [@counter-style/`symbol`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) の値として使用することができます。
 
 ## 構文
 
