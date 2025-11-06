@@ -3,7 +3,7 @@ title: CSS 参考
 slug: Web/CSS/Reference
 ---
 
-使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -45,7 +45,7 @@ div.menu-bar li:hover > ul {
 
 ### @规则语法
 
-由于 @规则间的结构变化很大，请参阅 [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)以找到你所想要的特定规则语法。
+由于 @规则间的结构变化很大，请参阅 [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)以找到你所想要的特定规则语法。
 
 ## 索引
 
@@ -104,7 +104,7 @@ div.menu-bar li:hover > ul {
 ### 语法和语义
 
 - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-- [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+- [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
 - [层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)

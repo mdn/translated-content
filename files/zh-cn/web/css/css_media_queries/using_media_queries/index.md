@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 媒体查询常被用于以下目的：
 
-- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
+- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
 - 用 `media=` 属性为{{HTMLElement("style")}}、{{HTMLElement("link")}}、{{HTMLElement("source")}}和其他 [HTML](/zh-CN/docs/Web/HTML) 元素指定特定的媒体类型。如：
 
 ```html
