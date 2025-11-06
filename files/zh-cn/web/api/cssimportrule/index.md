@@ -18,7 +18,7 @@ _继承其祖先 {{domxref("CSSRule")}} 的属性。_
 - {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
   - : 返回 {{cssxref("@import")}} 规则中指定的 URL。
 - {{domxref("CSSImportRule.layerName")}} {{ReadOnlyInline}}
-  - : 返回 {{cssxref("@import")}} 规则中声明的[层叠层](/zh-CN/docs/Web/CSS/@layer)的名称；如果层是匿名的，则返回空字符串；如果规则未声明任何层，则返回 `null`。
+  - : 返回 {{cssxref("@import")}} 规则中声明的[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)的名称；如果层是匿名的，则返回空字符串；如果规则未声明任何层，则返回 `null`。
 - {{domxref("CSSImportRule.media")}}
   - : 返回关联样式表的 `media` 属性值。
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}

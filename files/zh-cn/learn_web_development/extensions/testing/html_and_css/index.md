@@ -194,7 +194,7 @@ button:active {
 为了解决这个问题，我们添加了第二个 `background-color` 声明，指定了一个十六进制颜色——这在非常老旧的浏览器中也得到支持，可以作为现代炫酷特性的后备方案。浏览器在访问此页面时，首先会应用第一个 `background-color` 值；当遇到第二个 `background-color` 声明时，如果浏览器支持 RGB 颜色，就会用这个值覆盖之前的值。如果不支持，它就会忽略整个声明，继续执行后续样式。
 
 > [!NOTE]
-> 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
+> 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
 
 ### 选择器支持
 
@@ -254,7 +254,7 @@ form > #date
 
 当你开始在第二个点后输入属性名表示时（请注意，在 JavaScript 中，CSS 属性名是用{{Glossary("camel_case", "小驼峰式命名法")}}而不是{{Glossary("kebab_case", "烤肉串式命名法")}}），JavaScript 控制台应该能够匹配你输入的内容，并自动完成目前浏览器中已存在的属性名。这可以帮助你发现该浏览器中实现了哪些属性。
 
-如果需要使用现代特性，可以使用 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 进行特性支持检测，并在 `@supports` 块中嵌套使用带有前缀的特性或新特性。
+如果需要使用现代特性，可以使用 [`@supports`](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) 进行特性支持检测，并在 `@supports` 块中嵌套使用带有前缀的特性或新特性。
 
 ### 响应式设计问题
 
