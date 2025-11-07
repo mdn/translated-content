@@ -1,9 +1,8 @@
 ---
 title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
-original_slug: Web/CSS/position-anchor
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素が関連付けられる**アンカー要素**（つまり、**アンカー名**が {{cssxref("anchor-name")}} プロパティをで設定された要素）のアンカー名を指定します。
@@ -43,7 +42,7 @@ position-anchor: unset;
 
 位置指定要素をアンカーに固定するには、アンカー要素に対して相対的に配置しなければなりません。これにはアンカー位置指定機能（例: {{cssxref("anchor()")}} 関数（{{glossary("inset properties", "インセットプロパティ")}}の値として設定）や {{cssxref("position-area")}} プロパティ）を使用します。
 
-関連付けられたアンカーが非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} などによって）、または他の要素の[スキップされたコンテンツ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents)の一部となっている場合（その要素に {{cssxref("content-visibility", "content-visibility: hidden")}} が設定されている場合）、アンカー位置指定された要素は表示されません。
+関連付けられたアンカーが非表示の場合（{{cssxref("display", "display: none")}} や {{cssxref("visibility", "visibility: hidden")}} などによって）、または他の要素の[スキップされたコンテンツ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)の一部となっている場合（その要素に {{cssxref("content-visibility", "content-visibility: hidden")}} が設定されている場合）、アンカー位置指定された要素は表示されません。
 
 `position-anchor` プロパティは、位置指定されたすべての要素と、それに加えて[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、例えば {{cssxref("::before")}} や {{cssxref("::after")}} などで対応しています。擬似要素は、特に指定しない限り、その擬似要素の元の要素と同じ要素に暗黙的にアンカーされます。
 
