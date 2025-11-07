@@ -28,11 +28,11 @@ margin-top: 0;
 
 ```html interactive-example
 <section id="default-example">
-<div id="container">
-<div class="row"></div>
-<div class="row transition-all" id="example-element"></div>
-<div class="row"></div>
-</div>
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
 </section>
 ```
 
@@ -65,7 +65,7 @@ margin-top: 0;
 ## Синтаксис
 
 ```css
-/* Ключевые слова */ 
+/* Ключевые слова */
 margin-top: auto;
 
 /* Значения длины */

@@ -34,13 +34,13 @@ justify-content: space-evenly;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-<div class="example-container">
-<div class="transition-all" id="example-element">
-<div>One</div>
-<div>Two</div>
-<div>Three</div>
-</div>
-</div>
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
 </section>
 ```
 
