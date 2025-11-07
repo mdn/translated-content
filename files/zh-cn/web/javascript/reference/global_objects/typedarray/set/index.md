@@ -49,7 +49,8 @@ set(typedarray, targetOffset)
 
 - {{jsxref("RangeError")}}
   - : 在以下情况之一中会抛出该错误：
-    - 由于 `targetOffset` 过大，`array` 或者 `typedarray` 的长度过长，导致元素将被存储到类型化数组的末尾之外。`targetOffset` 为负数。
+    - 由于 `targetOffset` 过大，`array` 或者 `typedarray` 的长度过长，导致元素将被存储到类型化数组的末尾之外。
+    - `targetOffset` 为负数。
 
 ## 示例
 
