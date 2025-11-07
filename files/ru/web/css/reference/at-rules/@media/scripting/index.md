@@ -1,7 +1,6 @@
 ---
 title: scripting
 slug: Web/CSS/Reference/At-rules/@media/scripting
-original_slug: Web/CSS/@media/scripting
 ---
 
 {{cssref}}

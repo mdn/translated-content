@@ -1,7 +1,6 @@
 ---
 title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
-original_slug: Web/CSS/@font-face
 ---
 
 {{CSSRef}}

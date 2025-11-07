@@ -1,7 +1,6 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
-original_slug: Web/CSS/@media/prefers-color-scheme
 ---
 
 [CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`prefers-color-scheme`** может использоваться для определения того, светлую или тёмную тему использует пользователь в операционной системе.

@@ -1,7 +1,6 @@
 ---
 title: Раздельная навигация
 slug: Web/CSS/How_to/Layout_cookbook/Split_navigation
-original_slug: Web/CSS/Layout_cookbook/Split_Navigation
 ---
 
 {{CSSRef}}

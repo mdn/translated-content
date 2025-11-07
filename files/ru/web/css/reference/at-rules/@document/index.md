@@ -1,7 +1,6 @@
 ---
 title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
-original_slug: Web/CSS/@document
 ---
 
 {{SeeCompatTable}}

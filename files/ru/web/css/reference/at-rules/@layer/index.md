@@ -1,7 +1,6 @@
 ---
 title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
-original_slug: Web/CSS/@layer
 l10n:
   sourceCommit: 3c33463072905e81ac620dd9780313369029b498
 ---

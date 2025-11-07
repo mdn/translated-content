@@ -1,7 +1,6 @@
 ---
 title: "@counter-style"
 slug: Web/CSS/Reference/At-rules/@counter-style
-original_slug: Web/CSS/@counter-style
 ---
 
 {{CSSRef}}

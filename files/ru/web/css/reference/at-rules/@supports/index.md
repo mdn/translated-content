@@ -1,7 +1,6 @@
 ---
 title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
-original_slug: Web/CSS/@supports
 ---
 
 {{ CSSRef() }}

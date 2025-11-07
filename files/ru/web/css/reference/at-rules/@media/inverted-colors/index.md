@@ -1,7 +1,6 @@
 ---
 title: inverted-colors
 slug: Web/CSS/Reference/At-rules/@media/inverted-colors
-original_slug: Web/CSS/@media/inverted-colors
 ---
 
 {{cssref}}

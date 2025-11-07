@@ -1,7 +1,6 @@
 ---
 title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
-original_slug: Web/CSS/@page
 ---
 
 {{CSSRef}}

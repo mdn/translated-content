@@ -1,7 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
-original_slug: Web/CSS/@font-face/font-display
 ---
 
 {{CSSRef}}

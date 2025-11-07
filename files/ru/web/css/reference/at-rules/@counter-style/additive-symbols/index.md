@@ -1,7 +1,6 @@
 ---
 title: additive-symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/additive-symbols
-original_slug: Web/CSS/@counter-style/additive-symbols
 ---
 
 {{CSSRef}}

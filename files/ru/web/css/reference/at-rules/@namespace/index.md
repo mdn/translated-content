@@ -1,7 +1,6 @@
 ---
 title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
-original_slug: Web/CSS/@namespace
 ---
 
 {{ CSSRef() }}

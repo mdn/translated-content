@@ -1,7 +1,6 @@
 ---
 title: "Кастомные свойства (--*): CSS переменные"
 slug: Web/CSS/Reference/Properties/--*
-original_slug: Web/CSS/--*
 ---
 
 {{CSSRef}}

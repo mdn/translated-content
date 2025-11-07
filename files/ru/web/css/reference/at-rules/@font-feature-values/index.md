@@ -1,7 +1,6 @@
 ---
 title: "@font-feature-values"
 slug: Web/CSS/Reference/At-rules/@font-feature-values
-original_slug: Web/CSS/@font-feature-values
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
-original_slug: Web/CSS/@media
 ---
 
 {{CSSRef}}

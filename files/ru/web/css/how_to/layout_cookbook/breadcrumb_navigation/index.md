@@ -1,7 +1,6 @@
 ---
 title: Breadcrumb Navigation
 slug: Web/CSS/How_to/Layout_cookbook/Breadcrumb_navigation
-original_slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Sticky footers
 slug: Web/CSS/How_to/Layout_cookbook/Sticky_footers
-original_slug: Web/CSS/Layout_cookbook/Sticky_footers
 ---
 
 {{CSSRef}}
