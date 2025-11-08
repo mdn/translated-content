@@ -27,7 +27,7 @@ slug: Mozilla/Firefox/Releases/3.5
 - {{ cssxref("::before") }} および {{ cssxref("::after") }} の CSS 2.1 への更新
   - : `::before` および `::after` 擬似要素が CSS 2.1 サポートを満たすように更新されました。`position`、`float`、`list-style-*`、そして、いくつかの `display` プロパティのサポートが追加されています。
 - 長さの単位 `ch`
-  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
+  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/Reference/Values/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
 - {{ cssxref("opacity") }}
   - : 標準の `opacity` プロパティの先行実装である `-moz-opacity` という CSS への Mozilla 拡張が削除されました。
 - {{ cssxref("text-shadow") }}

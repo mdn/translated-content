@@ -99,12 +99,12 @@ l10n:
   - [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition)
   - [`visibility`](/ja/docs/Web/CSS/Reference/Properties/visibility)
 - データ型:
-  - [`<angle>`](/ja/docs/Web/CSS/angle)
-  - [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)
-  - [`<length>`](/ja/docs/Web/CSS/length)
-  - [`<number>`](/ja/docs/Web/CSS/number)
-  - [`<percentage>`](/ja/docs/Web/CSS/percentage)
-  - [`<position>`](/ja/docs/Web/CSS/position_value)
+  - [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle)
+  - [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage)
+  - [`<length>`](/ja/docs/Web/CSS/Reference/Values/length)
+  - [`<number>`](/ja/docs/Web/CSS/Reference/Values/number)
+  - [`<percentage>`](/ja/docs/Web/CSS/Reference/Values/percentage)
+  - [`<position>`](/ja/docs/Web/CSS/Reference/Values/position_value)
 - 用語集の用語:
   - [補間](/ja/docs/Glossary/Interpolation)
   - [重ね合わせコンテキスト](/ja/docs/Glossary/Stacking_context)

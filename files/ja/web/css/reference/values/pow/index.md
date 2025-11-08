@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`pow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、数値の累乗の値を返す指数関数です。
+**`pow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の累乗の値を返す指数関数です。
 
 {{CSSxRef("exp")}} 関数は、基数の値が数学定数 [e](https://ja.wikipedia.org/wiki/ネイピア数) である `pow()` の特殊なケースです。
 

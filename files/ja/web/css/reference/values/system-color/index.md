@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-**`<system-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、ウェブページの様々な部分に通常使用する既定の色を反映します。
+**`<system-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、ウェブページの様々な部分に通常使用する既定の色を反映します。
 
 しかし、ユーザーエージェントは強制色モードと呼ばれるアクセシビリティ機能を提供することができ、このモードでは色はユーザーとユーザーエージェントが定義したパレットに制限され、特定のプロパティで作者が選択した色を上書きします。強制色モードでは、 `<system-color>` は選択された色を公開するので、ページの残りの部分はそれらと統合することができます。強制色モードの例としては、 [Windows の高コントラストモード](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)があります。
 
@@ -14,7 +14,7 @@ l10n:
 
 作者は [`forced-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) メディア特性を使用して、強制色モードを検出することができます。
 
-`<system-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/color_value) を使用できる場所であればどこでも使用することができます。
+`<system-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) を使用できる場所であればどこでも使用することができます。
 
 ## 構文
 
@@ -152,4 +152,4 @@ l10n:
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/color_value): これらのキーワードが所属する先のデータ型
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): これらのキーワードが所属する先のデータ型

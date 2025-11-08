@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)は、整数または小数部分のある数値を表します。
+[CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)は、整数または小数部分のある数値を表します。
 
 ## 構文
 
@@ -14,7 +14,7 @@ l10n:
 
 ## 補間
 
-`<number>` データ型の値はアニメーション用に補間可能です。実数、浮動小数点数として補間されます。補間の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/easing-function)で決められます。
+`<number>` データ型の値はアニメーション用に補間可能です。実数、浮動小数点数として補間されます。補間の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で決められます。
 
 ## 例
 

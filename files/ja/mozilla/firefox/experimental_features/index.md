@@ -233,7 +233,7 @@ CSS の [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view
 
 ### `shape()` 関数
 
-CSS の [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数は、[`<basic-shape>`](/ja/docs/Web/CSS/basic-shape) データ型の一つで、 {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティで 1 つ以上の「シェイプコマンド」を使用して、シェイプを定義することができます。これらのコマンドは、 [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) とよく似ています。 `shape()` 関数は、いくつかの点で {{cssxref("basic-shape/path","path()")}} 関数と似ていますが、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用する `path()` とは異なり、`shape()` は標準の CSS 構文を使用します。これにより、シェイプを簡単に作成および編集でき、　CSS 数学関数も使用できます。
+CSS の [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数は、[`<basic-shape>`](/ja/docs/Web/CSS/Reference/Values/basic-shape) データ型の一つで、 {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティで 1 つ以上の「シェイプコマンド」を使用して、シェイプを定義することができます。これらのコマンドは、 [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) とよく似ています。 `shape()` 関数は、いくつかの点で {{cssxref("basic-shape/path","path()")}} 関数と似ていますが、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用する `path()` とは異なり、`shape()` は標準の CSS 構文を使用します。これにより、シェイプを簡単に作成および編集でき、　CSS 数学関数も使用できます。
 詳細については、`clip-path` での `shape()` 関数の対応については [Firefox バグ 1823463](https://bugzil.la/1823463) を、 `offset-path` での関数の対応については [Firefox バグ 1884424](https://bugzil.la/1884424) を、補間処理への対応については [Firefox バグ 1884425](https://bugzil.la/1884425) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -262,7 +262,7 @@ CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した
 
 ### 相対色での `calc()` 色チャンネルの対応
 
-CSS [`calc()`](/ja/docs/Web/CSS/calc) 関数は、これで[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#数学関数の使用)の色チャンネルを解釈できるようになり、異なる色空間や異なる関数記法を使用している場合でも、色の変化を正しく計算できるようになりました。[Firefox バグ 1889561](https://bugzil.la/1889561) を参照してください。
+CSS [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数は、これで[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#数学関数の使用)の色チャンネルを解釈できるようになり、異なる色空間や異なる関数記法を使用している場合でも、色の変化を正しく計算できるようになりました。[Firefox バグ 1889561](https://bugzil.la/1889561) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |

@@ -6,8 +6,8 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-**`<hue>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、色の色相角を表します。
-これは、色相を 1 つの値として受け入れる色関数、具体的には [`hsl()`](/ja/docs/Web/CSS/color_value/hsl)、 [`hwb()`](/ja/docs/Web/CSS/color_value/hwb)、[`lch()`](/ja/docs/Web/CSS/color_value/lch)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch) 関数記法で使用されます。
+**`<hue>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、色の色相角を表します。
+これは、色相を 1 つの値として受け入れる色関数、具体的には [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、 [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch)、[`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch) 関数記法で使用されます。
 
 ![sRGB 色相環](color_wheel.svg)
 
@@ -116,7 +116,7 @@ l10n:
 
 ### 補間
 
-`<hue>` 値は {{CSSXref("&lt;angle&gt;")}} 値として補間され、既定では [`shorter`](/ja/docs/Web/CSS/hue-interpolation-method#values) となります。色関連の CSS 関数の中には、{{CSSXref("&lt;hue-interpolation-method&gt;")}} 成分によってこれを上書きできるものもあります。
+`<hue>` 値は {{CSSXref("&lt;angle&gt;")}} 値として補間され、既定では [`shorter`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#values) となります。色関連の CSS 関数の中には、{{CSSXref("&lt;hue-interpolation-method&gt;")}} 成分によってこれを上書きできるものもあります。
 
 ### 形式文法
 
@@ -126,7 +126,7 @@ l10n:
 
 ### スライダーを使用して色の色相を変更
 
-以下の例は、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) 関数記法の `hue` 値を色に変更したときの効果を示しています。
+以下の例は、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 関数記法の `hue` 値を色に変更したときの効果を示しています。
 
 #### HTML
 
@@ -239,5 +239,5 @@ div {
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/color_value)
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value)
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}

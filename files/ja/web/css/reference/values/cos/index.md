@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-**`cos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、数値の余弦を返す三角関数です。値は `-1` から `1` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;angle&gt;")}} のいずれかに解決する必要があります。つまり、`cos(45deg)`、`cos(0.125turn)`、`cos(3.14159 / 4)` はすべて、ほぼ `0.707` という同じ値を表します。
+**`cos()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、数値の余弦を返す三角関数です。値は `-1` から `1` までの範囲になります。この関数には単一の計算が含まれており、引数の結果をラジアンとして解釈して、{{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;angle&gt;")}} のいずれかに解決する必要があります。つまり、`cos(45deg)`、`cos(0.125turn)`、`cos(3.14159 / 4)` はすべて、ほぼ `0.707` という同じ値を表します。
 
 {{InteractiveExample("CSS デモ: cos()")}}
 

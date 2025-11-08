@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2e65771838405cdbee68bd38fb27a2ce0b1832d9
 ---
 
-**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、一つの色を表します。
+**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、一つの色を表します。
 `<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)の*透過値*を含むことがあり、この色を背景とどれだけ[混合](https://www.w3.org/TR/compositing-1/#simplealphacompositing)するかを示すこともできます。
 
 > [!NOTE]
@@ -111,9 +111,9 @@ background-color: hsl(0deg 100% 50%);
 
 ## 補間
 
-色の補間は[グラデーション](/ja/docs/Web/CSS/gradient)、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)で発生します。
+色の補間は[グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)で発生します。
 
-`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/easing-function)で定められます。
+`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で定められます。
 補間色空間の既定値は Oklab ですが、一部の色関連の関数記法では {{CSSXref("&lt;color-interpolation-method&gt;")}} で上書きできます。
 
 ### 成分が欠落した補間

@@ -69,7 +69,7 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
 
 ## 関連概念
 
-- [`<coord-box>`](/ja/docs/Web/CSS/box-edge#values)
+- [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#values)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("&lt;position&gt;")}}
 - {{cssxref("&lt;url&gt;")}}

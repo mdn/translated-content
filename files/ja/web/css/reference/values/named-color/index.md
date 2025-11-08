@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は [`<ident>`](/ja/docs/Web/CSS/ident) の一種です。
+**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は [`<ident>`](/ja/docs/Web/CSS/Reference/Values/ident) の一種です。
 
-`<named-color>` 値は [`<color>`](/ja/docs/Web/CSS/color_value) が使用できる場所ならどこでも使用できます。
+`<named-color>` 値は [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) が使用できる場所ならどこでも使用できます。
 
 ## 構文
 
@@ -22,7 +22,7 @@ color: transparent;
 
 ### 値
 
-名前付きの色は標準色、[`transparent`](#transparent)、[`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) のキーワードです。
+名前付きの色は標準色、[`transparent`](#transparent)、[`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) のキーワードです。
 
 #### 標準色
 
@@ -976,4 +976,4 @@ color: transparent;
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/color_value): その定義である `<named-color>` を構成要素とするデータ型です。
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): その定義である `<named-color>` を構成要素とするデータ型です。

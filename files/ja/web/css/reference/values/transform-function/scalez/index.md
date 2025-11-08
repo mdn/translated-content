@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: scaleZ()")}}
 
@@ -217,8 +217,8 @@ div {
 
 ## 関連情報
 
-- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX)
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY)
+- [`scaleX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleX)
+- [`scaleY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

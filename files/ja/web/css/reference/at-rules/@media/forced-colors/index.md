@@ -17,7 +17,7 @@ l10n:
 - `none`
   - : 強制カラーモードは有効ではありません。ページの色が限られたパレットに強制されていません。
 - `active`
-  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
+  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/Reference/Values/system-color)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
 
 ## 使用上の注意
 
@@ -46,7 +46,7 @@ l10n:
 - {{cssxref("color-scheme")}} は 'light dark' に強制されます
 - {{cssxref("scrollbar-color")}} は 'auto' に強制されます
 
-上記のプロパティで強制されるシステム色は、要素のコンテキストに依存します。例えば、 button 要素の {{cssxref("color")}} プロパティは `ButtonText` に強制されます。通常のテキストでは `CanvasText` に強制されます。様々な UI コンテキストにおいて、それぞれがどのような場合に適切かについての詳細は[システム色の一覧](/ja/docs/Web/CSS/system-color)を参照してください。
+上記のプロパティで強制されるシステム色は、要素のコンテキストに依存します。例えば、 button 要素の {{cssxref("color")}} プロパティは `ButtonText` に強制されます。通常のテキストでは `CanvasText` に強制されます。様々な UI コンテキストにおいて、それぞれがどのような場合に適切かについての詳細は[システム色の一覧](/ja/docs/Web/CSS/Reference/Values/system-color)を参照してください。
 
 > [!NOTE]
 > ユーザーエージェントは、追加された ARIA ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
@@ -60,7 +60,7 @@ l10n:
 
 要素で {{cssxref("forced-color-adjust")}} が要素に `preserve-parent-color` に設定されており、要素の {{cssxref("color")}} 値がその親から継承されていない場合、その要素は `preserve-parent-color` を `none` に設定した場合と同じように動作します。
 
-[システム色](/ja/docs/Web/CSS/system-color)が指定された場合は、強制的に設定された値の代わりにシステム色が使用されます。
+[システム色](/ja/docs/Web/CSS/Reference/Values/system-color)が指定された場合は、強制的に設定された値の代わりにシステム色が使用されます。
 
 また、強制カラーモードで利用できる制限されたカラーパレットとページの他の部分が統合されるように、上記以外のプロパティでシステム色を使用することもできます。
 

@@ -30,7 +30,7 @@ Functional notation: `oklch(L C H[ / A])`
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
 > [!NOTE]
-> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/Reference/Values/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -151,7 +151,7 @@ div {
 
 ## 関連情報
 
-- [すべての色記法の一覧](/ja/docs/Web/CSS/color_value)
+- [すべての色記法の一覧](/ja/docs/Web/CSS/Reference/Values/color_value)
 - {{CSSXref("&lt;hue&gt;")}} データ型
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)

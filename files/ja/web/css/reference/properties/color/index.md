@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd3fbb8b10186d3466ab16d590978d5c10882875
 ---
 
-**`color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/Reference/Properties/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/color_value)を設定し、 [`currentColor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) の値を設定します。`currentColor` は他のプロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
+**`color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/Reference/Properties/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/Reference/Values/color_value)を設定し、 [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) の値を設定します。`currentColor` は他のプロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
 
 {{InteractiveExample("CSS デモ: color")}}
 
@@ -117,7 +117,7 @@ color: unset;
 
 - {{cssxref("&lt;color&gt;")}}
   - : 要素のテキストや装飾部分の色を設定します。
-- [`currentColor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)
+- [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)
   - : 要素の`color`プロパティの値に色を設定します。ただし、`color`の値として設定された場合、`currentColor`は`inherit`として扱われます。
 
 ## アクセシビリティ

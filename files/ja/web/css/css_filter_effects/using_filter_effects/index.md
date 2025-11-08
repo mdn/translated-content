@@ -56,7 +56,7 @@ CSS フィルター効果モジュールは、 10 個の [`<filter-function>`](/
 
 下のセピア調の画像にカーソルを当てると、フルカラーの画像が即座に表示されます。
 
-画像をセピア調にするには、 `filter` プロパティの値として [`sepia()`](/ja/docs/Web/CSS/filter-function/sepia) フィルター関数を指定します。 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) および [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) の時には、 `filter: none` を設定することでィルターが除去されます。
+画像をセピア調にするには、 `filter` プロパティの値として [`sepia()`](/ja/docs/Web/CSS/Reference/Values/filter-function/sepia) フィルター関数を指定します。 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) および [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) の時には、 `filter: none` を設定することでィルターが除去されます。
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />
@@ -87,7 +87,7 @@ img {
 
 一般的に画像に適用される `filter` および `backdrop-filter` プロパティは、あらゆる要素や擬似要素に適用することができます。
 
-この例では、 [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) フィルターを使用して、 `3px` のぼかしと `0` のオフセットで光彩効果を追加しています。
+この例では、 [`drop-shadow()`](/ja/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) フィルターを使用して、 `3px` のぼかしと `0` のオフセットで光彩効果を追加しています。
 
 ```css
 h1 {
@@ -113,7 +113,7 @@ h1 {
 
 セピア調 `filter` の例では、フィルター関数を 1 つしか指定していませんが、複数のフィルターを設定することができます。 `filter` および `backdrop-filter` プロパティには、空白で区切られたフィルターのリストを受け入れることができ、宣言された順番に適用されます。
 
-この例では、 [`hue-rotate()`](/ja/docs/Web/CSS/filter-function/hue-rotate) と [`blur()`](/ja/docs/Web/CSS/filter-function/blur) の 2 つのフィルターを、 `backdrop-filter` プロパティを介して適用しています。背景（{{HTMLElement("p")}} 要素の背後の領域）には、色の変化とぼかしが適用されています。
+この例では、 [`hue-rotate()`](/ja/docs/Web/CSS/Reference/Values/filter-function/hue-rotate) と [`blur()`](/ja/docs/Web/CSS/Reference/Values/filter-function/blur) の 2 つのフィルターを、 `backdrop-filter` プロパティを介して適用しています。背景（{{HTMLElement("p")}} 要素の背後の領域）には、色の変化とぼかしが適用されています。
 
 ```css
 .container {
@@ -153,7 +153,7 @@ p {
 
 ### 反復フィルターの適用
 
-フィルターは順番に適用されるため、フィルター関数を複数回使用することができます。この例では、 [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) フィルターが 4 回使用されており、その時点ごとに異なる `<shadow>` 値が指定されています。
+フィルターは順番に適用されるため、フィルター関数を複数回使用することができます。この例では、 [`drop-shadow()`](/ja/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) フィルターが 4 回使用されており、その時点ごとに異なる `<shadow>` 値が指定されています。
 
 ```html
 <img src="mandala.svg" alt="Colorful mandala" role="img" />
@@ -220,7 +220,7 @@ h1 {
 3 行目にはフィルター効果を適用せず、比較用に元の効果を表示させています。そのため、3行目は `midnightblue` または `#191970` のままです。 `hue-rotate(180deg)` フィルターは、最初の 2 行のテキストを `#252500` に変更します。
 
 > [!NOTE]
-> 16 進数表記の RGB 色 `#191970` は `hsl(240deg 63.5% 26.9%)` と等しく、一方、`#252500` は `hsl(60deg 100% 7.3%)` です。[色の回転は sRGB 色空間で行われる](/ja/docs/Web/CSS/color_value#補間)ため、彩度が同じ値を示さない場合でも、色相は予想通りに変化します。
+> 16 進数表記の RGB 色 `#191970` は `hsl(240deg 63.5% 26.9%)` と等しく、一方、`#252500` は `hsl(60deg 100% 7.3%)` です。[色の回転は sRGB 色空間で行われる](/ja/docs/Web/CSS/Reference/Values/color_value#補間)ため、彩度が同じ値を示さない場合でも、色相は予想通りに変化します。
 
 ## SVG フィルターの使用
 

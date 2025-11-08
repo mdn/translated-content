@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > [色を賢く使用する](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
 
-データ型としての CSS 色についてさらに詳しく知りたい場合は、[CSS `<color>` データ型](/ja/docs/Web/CSS/color_value)リファレンスおよび [CSS 色値ガイド](/ja/docs/Web/CSS/CSS_colors/Color_values)を参照してください。
+データ型としての CSS 色についてさらに詳しく知りたい場合は、[CSS `<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value)リファレンスおよび [CSS 色値ガイド](/ja/docs/Web/CSS/CSS_colors/Color_values)を参照してください。
 
 ## 色を設定できるプロパティ
 
@@ -34,7 +34,7 @@ l10n:
   - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)を参照してください。
 
 - {{cssxref("text-decoration-color")}}
-  - : テキスト装飾（下線、取り消し線など）の既定の色は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) です。このキーワードは、`color` プロパティの現在の値を表します。ただし、`text-decoration-color` プロパティを使用して、その値を上書きし、異なる色を使用することができます。
+  - : テキスト装飾（下線、取り消し線など）の既定の色は [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) です。このキーワードは、`color` プロパティの現在の値を表します。ただし、`text-decoration-color` プロパティを使用して、その値を上書きし、異なる色を使用することができます。
 
 - {{cssxref("text-emphasis-color")}}
   - : テキスト内の各文字に隣接する強調記号をレンダリングする際に使用する色です。これは主に、東アジア言語のテキストを描画する際に使用します。
@@ -133,7 +133,7 @@ div {
 
 `.wrapper` クラスは、他のすべてのコンテンツを囲む {{HTMLElement("div")}} にスタイルを割り当てるために使っています。これにより、{{cssxref("height")}} を使用してコンテナーの高さが確定し、このブロックレベル要素の幅は既定では親の 100% になります。{{cssxref("display")}} を `flex` に設定し、`10px` の {{cssxref("gap")}} を追加すると、フレックスコンテナーが作成され、コンテナーのすべての要素の間に隙間を空けて子要素が並べられます。{{cssxref("flex")}} を使用すると、フレックスの子要素がコンテナーを埋めるように拡大します。フレックスコンテナーそのものにはまったく効果はありません。
 
-ここでの議論でさらに興味深いのは、{{cssxref("border")}} プロパティで要素の外縁に境界線を設定していることです。この境界線は幅 6 ピクセルの実線で、[名前付き色](/ja/docs/Web/CSS/named-color)は `mediumturquoise` です。
+ここでの議論でさらに興味深いのは、{{cssxref("border")}} プロパティで要素の外縁に境界線を設定していることです。この境界線は幅 6 ピクセルの実線で、[名前付き色](/ja/docs/Web/CSS/Reference/Values/named-color)は `mediumturquoise` です。
 
 ラッパー内には、左ボックスと右ボックスがあります。
 
@@ -192,7 +192,7 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/color_value) データ型
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型
 - [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
 - [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)

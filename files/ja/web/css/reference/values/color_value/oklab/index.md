@@ -38,7 +38,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
 > [!NOTE]
-> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/Reference/Values/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -159,7 +159,7 @@ div {
 
 ## 関連情報
 
-- [`<color>` データ型](/ja/docs/Web/CSS/color_value): すべての色記法の一覧
+- [`<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value): すべての色記法の一覧
 - {{cssxref("color_value/oklch",'oklch()')}} は `oklab()` と同じ色空間を使用しますが、極座標系を使用します
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
 - [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) (observablehq.com)

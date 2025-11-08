@@ -7,7 +7,7 @@ l10n:
 
 **CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
 
-このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
+このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
 
 ### アットルール
 
@@ -21,11 +21,11 @@ l10n:
 ### 主要概念
 
 - {{cssxref("at-rule", "アットルール")}}
-- [文字エスケープ](/ja/docs/Web/CSS/custom-ident#エスケープ文字)
+- [文字エスケープ](/ja/docs/Web/CSS/Reference/Values/custom-ident#エスケープ文字)
 - [CSS コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
 - [CSS 宣言](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS 宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)
 - [無効なもの](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
 - [スタイルルール](/ja/docs/Web/API/CSSStyleRule)
 

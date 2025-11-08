@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`<position-area>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、**位置指定領域グリッド**（中心セルがアンカー要素となる 3x3 グリッド）のセルまたはまたがらせるセルを定義します。
+**`<position-area>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、**位置指定領域グリッド**（中心セルがアンカー要素となる 3x3 グリッド）のセルまたはまたがらせるセルを定義します。
 
 `<position-area>` キーワード値は、{{cssxref("position-area")}} プロパティの値として設定することができ、これによりアンカー位置指定された要素を、関連付けられたアンカー要素に対する相対的な特定の位置に配置することができます。
 
@@ -339,7 +339,7 @@ The y-axis keywords include:
 - {{cssxref("position-area")}}
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
-- [`anchor()`](/ja/docs/Web/CSS/anchor) function
+- [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) function
 - [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド
 - [オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイド
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール

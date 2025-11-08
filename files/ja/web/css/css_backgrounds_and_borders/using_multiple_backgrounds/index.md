@@ -22,7 +22,7 @@ l10n:
 
 ## 例
 
-この例では、3 つの背景が重なっています。Firefox のロゴ、泡の画像、そして[線形グラデーション](/ja/docs/Web/CSS/gradient/linear-gradient)です。
+この例では、3 つの背景が重なっています。Firefox のロゴ、泡の画像、そして[線形グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)です。
 
 ### HTML
 

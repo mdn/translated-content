@@ -6,7 +6,7 @@ l10n:
   sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、指定された寸法を `min(最大サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
+**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指定された寸法を `min(最大サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
 
 {{InteractiveExample("CSS デモ: fit-content()")}}
 
@@ -51,7 +51,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 ```
 
-この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法（すなわち [`minmax(auto, max-content)`](/ja/docs/Web/CSS/minmax)）で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
+この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法（すなわち [`minmax(auto, max-content)`](/ja/docs/Web/CSS/Reference/Values/minmax)）で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
 
 `max-content` および `auto` キーワードについての詳細は、 {{cssxref("grid-template-columns")}} ページを参照してください。
 

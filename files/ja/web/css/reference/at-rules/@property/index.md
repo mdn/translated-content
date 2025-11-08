@@ -56,7 +56,7 @@ l10n:
 </div>
 ```
 
-以下のコードは CSS の `@property` アットルールを使用して、 `--item-size` という名前のカスタムプロパティを定義します。このプロパティは初期値を `40%` に設定し、有効な値をパーセント値 ([`<percentage>`](/ja/docs/Web/CSS/percentage)) のみに制限します。つまり、アイテムのサイズの値として使用する場合、そのサイズは常に親のサイズからの相対値となります。このプロパティは継承可能です。
+以下のコードは CSS の `@property` アットルールを使用して、 `--item-size` という名前のカスタムプロパティを定義します。このプロパティは初期値を `40%` に設定し、有効な値をパーセント値 ([`<percentage>`](/ja/docs/Web/CSS/Reference/Values/percentage)) のみに制限します。つまり、アイテムのサイズの値として使用する場合、そのサイズは常に親のサイズからの相対値となります。このプロパティは継承可能です。
 
 ```css
 @property --item-size {
@@ -66,7 +66,7 @@ l10n:
 }
 ```
 
-第 2 のカスタムプロパティである `--item-color` は、 CSS の代わりに [JavaScript](/ja/docs/Web/JavaScript) を使用して定義します。 JavaScript の {{domxref('CSS.registerProperty_static', 'registerProperty()')}} メソッドは、 `@property` アットルールと同等です。このプロパティは初期値が `aqua` で、[`<color>`](/ja/docs/Web/CSS/color_value) の値のみを受け入れるように定義されており、継承されません。
+第 2 のカスタムプロパティである `--item-color` は、 CSS の代わりに [JavaScript](/ja/docs/Web/JavaScript) を使用して定義します。 JavaScript の {{domxref('CSS.registerProperty_static', 'registerProperty()')}} メソッドは、 `@property` アットルールと同等です。このプロパティは初期値が `aqua` で、[`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) の値のみを受け入れるように定義されており、継承されません。
 
 ```js
 window.CSS.registerProperty({

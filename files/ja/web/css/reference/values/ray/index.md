@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
-**`ray()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、アニメーションする要素がたどることができる [`offset-path`](/ja/docs/Web/CSS/Reference/Properties/offset-path) の線分を定義します。この線分は「光線」と呼ばれます。光線は {{cssxref("offset-position")}} から始まり、指定された角度の方向に伸びます。光線の長さは、サイズを指定し、 `contain` キーワードを使用することで制約することができます。
+**`ray()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、アニメーションする要素がたどることができる [`offset-path`](/ja/docs/Web/CSS/Reference/Properties/offset-path) の線分を定義します。この線分は「光線」と呼ばれます。光線は {{cssxref("offset-position")}} から始まり、指定された角度の方向に伸びます。光線の長さは、サイズを指定し、 `contain` キーワードを使用することで制約することができます。
 
 ## 構文
 
@@ -25,7 +25,7 @@ offset-path: ray(45deg);
 
 引数は任意の順序で指定できます。
 
-- [`<angle>`](/ja/docs/Web/CSS/angle)
+- [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle)
   - : オフセット開始位置から線分が伸びる方向を指定します。角度 `0deg` は、上向きの Y 軸上にあり、正の値は時計回りに増加します。
 
 - `<size>`

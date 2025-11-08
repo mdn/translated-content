@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/-webkit-text-fill-color
 original_slug: Web/CSS/-webkit-text-fill-color
 ---
 
-**`-webkit-text-fill-color`** は CSS のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+**`-webkit-text-fill-color`** は CSS のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/Reference/Values/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
 
 ```css
 /* <color> 値 */

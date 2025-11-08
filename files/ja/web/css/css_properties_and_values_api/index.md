@@ -57,7 +57,7 @@ CSS.registerProperty({
 
 {{EmbedLiveSample("",600,120)}}
 
-このボックスは[背景](/ja/docs/Web/CSS/Reference/Properties/background) が `--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/named-color) までの[線形グラデーション](/ja/docs/Web/CSS/gradient/linear-gradient)で構成されています。
+このボックスは[背景](/ja/docs/Web/CSS/Reference/Properties/background) が `--stop-color` （カスタムプロパティ）から [`lavenderblush`](/ja/docs/Web/CSS/Reference/Values/named-color) までの[線形グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)で構成されています。
 最初、 `--stop-color` の値は `cornflowerblue` に設定されていますが、ボックスにカーソルを合わせると、 2 秒かけて `--stop-color` の[トランジション](/ja/docs/Web/CSS/Reference/Properties/transition) が `aquamarine` まで遷移します（`linear-gradient(to right, aquamarine, lavenderblush)`）。
 
 ## リファレンス
@@ -106,5 +106,5 @@ CSS.registerProperty({
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [Worklet](/ja/docs/Web/API/Worklet) インターフェイス
-- [CSS `env()`](/ja/docs/Web/CSS/env)
+- [CSS `env()`](/ja/docs/Web/CSS/Reference/Values/env)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)

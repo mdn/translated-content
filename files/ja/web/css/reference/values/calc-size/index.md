@@ -8,7 +8,7 @@ l10n:
 
 {{seecompattable}}
 
-**`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、`auto`、 [`fit-content`](/ja/docs/Web/CSS/fit-content)、[`max-content`](/ja/docs/Web/CSS/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
+**`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`auto`、 [`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
 
 `calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/Reference/Properties/interpolate-size) が自動的に適用されます。
 
@@ -42,7 +42,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 - `<calc-size-basis>`
   - : 計算を実行する値（通常は内在サイズ）。
 
-- [`<calc-sum>`](/ja/docs/Web/CSS/calc-sum)
+- [`<calc-sum>`](/ja/docs/Web/CSS/Reference/Values/calc-sum)
   - : `<calc-size-basis>` に対して実行する計算を定義する式です。
 
 ### 返値
@@ -51,7 +51,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 
 ## 解説
 
-特定のブラウザーのレイアウトアルゴリズムは、内在サイズキーワードに対して特別な動作をします。 `calc-size()` 関数は、 [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) ではなく、内在サイズを表すように明示的に定義されており、それによって正確性を確保しています。 `calc-size()` を使用すると、内在サイズの数値に対して、安全かつ明確に定義された方法で計算を行うことができます。
+特定のブラウザーのレイアウトアルゴリズムは、内在サイズキーワードに対して特別な動作をします。 `calc-size()` 関数は、 [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) ではなく、内在サイズを表すように明示的に定義されており、それによって正確性を確保しています。 `calc-size()` を使用すると、内在サイズの数値に対して、安全かつ明確に定義された方法で計算を行うことができます。
 
 ### 最初の引数（`<calc-size-basis>`）の有効な値
 
@@ -105,7 +105,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 
 ### 2 つ目の引数の有効な値 (`<calc-sum>`)
 
-2 つ目の `calc-size()` 引数は、[`<calc-sum>`](/ja/docs/Web/CSS/calc-sum) 式です。
+2 つ目の `calc-size()` 引数は、[`<calc-sum>`](/ja/docs/Web/CSS/Reference/Values/calc-sum) 式です。
 
 この式では、
 
@@ -113,11 +113,11 @@ calc-size(<calc-size-basis>, <calc-sum>)
 - オペランドには、`size` およびコンテキストで意味のある値型を含めることができます。
 - `+`、`-`、`*`、 `/` 演算子を含めることができます。
 - それ以外にも、{{cssxref("round()")}}、{{cssxref("max()")}}、あるいは入れ子にした `calc-size()` などの数学関数を含めることができます。
-- 全体的な表現は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) と一致し、 [`<length>`](/ja/docs/Web/CSS/length) に解決される必要があります。
+- 全体的な表現は [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) と一致し、 [`<length>`](/ja/docs/Web/CSS/Reference/Values/length) に解決される必要があります。
 
 ### 内在サイズの値をアニメーションできるようにする
 
-`calc-size()` の返値は補間処理が可能であり、[`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) 値と `calc-size()` の内在サイズ返値との間でアニメーションを実現することができます。
+`calc-size()` の返値は補間処理が可能であり、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と `calc-size()` の内在サイズ返値との間でアニメーションを実現することができます。
 
 > [!NOTE]
 > レイアウトイベントを削減し、パフォーマンスへの影響を軽減するため、可能であればボックスモデルのプロパティのアニメーションは避けるべきです（[重要なレンダリングパス > レイアウト](/ja/docs/Web/Performance/Guides/Critical_rendering_path#レイアウト)を参照）。
@@ -465,7 +465,7 @@ widthAdjustBtn.addEventListener("click", () => {
 
 ### 関数 `calc-size()` 内で関数を使用する
 
-前述のように、`calc-size()` 内で別の関数を使用することができます。この例では、 [`field-sizing: content`](/ja/docs/Web/CSS/Reference/Properties/field-sizing) を {{htmlelement("input")}} 要素に設定して、入力コンテンツと同じ幅にし、[`max()`](/ja/docs/Web/CSS/max) 関数を使用して、`<input>` が最小サイズ以上であることを確実に保持し、入力テキストがそのサイズより広くなった場合にのみ伸長を開始するようにします。これは、 `fit-content` に `20px` を加算して設定することで実現しています。
+前述のように、`calc-size()` 内で別の関数を使用することができます。この例では、 [`field-sizing: content`](/ja/docs/Web/CSS/Reference/Properties/field-sizing) を {{htmlelement("input")}} 要素に設定して、入力コンテンツと同じ幅にし、[`max()`](/ja/docs/Web/CSS/Reference/Values/max) 関数を使用して、`<input>` が最小サイズ以上であることを確実に保持し、入力テキストがそのサイズより広くなった場合にのみ伸長を開始するようにします。これは、 `fit-content` に `20px` を加算して設定することで実現しています。
 
 #### HTML
 

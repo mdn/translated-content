@@ -71,12 +71,12 @@ CSS では、以下のものを表すために寸法を使います。
 
 | 単位   | 相対値の基準                                                                                        |
 | ------ | --------------------------------------------------------------------------------------------------- |
-| `dvh`  | [動的](/ja/docs/Web/CSS/length#動的ビューポートサイズ)ビューポートの高さの 1%。                     |
-| `dvw`  | [動的](/ja/docs/Web/CSS/length#動的ビューポートサイズ)ビューポートの幅の 1%。                       |
-| `lvh`  | [大](/ja/docs/Web/CSS/length#大ビューポートサイズ)ビューポートの高さの 1%。                         |
-| `lvw`  | [大](/ja/docs/Web/CSS/length#大ビューポートサイズ)ビューポートの幅の 1%。                           |
-| `svh`  | [小](/ja/docs/Web/CSS/length#小ビューポートサイズ)ビューポートの高さの 1%。                         |
-| `svw`  | [小](/ja/docs/Web/CSS/length#小ビューポートサイズ)ビューポートの幅の 1%。                           |
+| `dvh`  | [動的](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポートサイズ)ビューポートの高さの 1%。    |
+| `dvw`  | [動的](/ja/docs/Web/CSS/Reference/Values/length#動的ビューポートサイズ)ビューポートの幅の 1%。      |
+| `lvh`  | [大](/ja/docs/Web/CSS/Reference/Values/length#大ビューポートサイズ)ビューポートの高さの 1%。        |
+| `lvw`  | [大](/ja/docs/Web/CSS/Reference/Values/length#大ビューポートサイズ)ビューポートの幅の 1%。          |
+| `svh`  | [小](/ja/docs/Web/CSS/Reference/Values/length#小ビューポートサイズ)ビューポートの高さの 1%。        |
+| `svw`  | [小](/ja/docs/Web/CSS/Reference/Values/length#小ビューポートサイズ)ビューポートの幅の 1%。          |
 | `vb`   | ルート要素の[ブロック軸](/ja/docs/Glossary/Flow_relative_values)におけるビューポートサイズの 1%。   |
 | `vh`   | ビューポートの高さの 1%。                                                                           |
 | `vi`   | ルート要素の[インライン軸](/ja/docs/Glossary/Flow_relative_values)におけるビューポートサイズの 1%。 |
@@ -213,7 +213,7 @@ CSS では、以下のものを表すために寸法を使います。
 - {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
 
-[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)は、 CSS でより複雑な型を表現したり、特殊な処理を呼び出すことができる値の型です。この構文は、関数名の直後に左括弧 `(` 、関数記法の引数、右括弧 `)` と続きます。関数は複数の引数を取ることができ、CSS のプロパティ値と同様の書式になります。
+[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)は、 CSS でより複雑な型を表現したり、特殊な処理を呼び出すことができる値の型です。この構文は、関数名の直後に左括弧 `(` 、関数記法の引数、右括弧 `)` と続きます。関数は複数の引数を取ることができ、CSS のプロパティ値と同様の書式になります。
 
 括弧内のホワイトスペースは許容されますが、任意です。(ただし、`min()`、`max()`、`minmax()`、`clamp()` 関数については、各ページ内の空白に関する注意事項を参照してください。)
 
@@ -226,6 +226,6 @@ CSS では、以下のものを表すために寸法を使います。
 ## 関連情報
 
 - [テキストデータ型](/ja/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
-- [CSS データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

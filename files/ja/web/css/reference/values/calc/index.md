@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
 ---
 
-**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
+**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}}、{{cssxref("color_value", "&lt;color-function&gt;")}} の値が利用できる場所ならば使用できます。
 
 {{InteractiveExample("CSS デモ: calc()")}}
 
@@ -97,7 +97,7 @@ lch(from aquamarine l c calc(h + 180))
 
 {{cssxref("&lt;integer&gt;")}} が期待される場合、 `calc()` 式は `<number>` として評価され、最も近い整数に丸められます。したがって、 `calc(1.4)` は値 `1` を返します。値の小数点以下の桁数が正確に `0.5` の場合、値は正の無限大に向かって丸められます。例えば、 `calc(1.5)` は値 `2` となり、 `calc(-1.5)` は `-1` に丸められます。
 
-`calc()` は、 IEEE-754 標準に従う浮動小数点演算を実行するため、 `infinity` および `NaN` の値についていくつかの注意事項が あります。定数のシリアル化の詳細については、 [`calc-keyword`](/ja/docs/Web/CSS/calc-keyword) ページを参照してください。
+`calc()` は、 IEEE-754 標準に従う浮動小数点演算を実行するため、 `infinity` および `NaN` の値についていくつかの注意事項が あります。定数のシリアル化の詳細については、 [`calc-keyword`](/ja/docs/Web/CSS/Reference/Values/calc-keyword) ページを参照してください。
 
 ### 入力の注意事項
 
@@ -110,7 +110,7 @@ lch(from aquamarine l c calc(h + 180))
 
 ### 相対色における色チャンネルの計算の対応
 
-`calc()` 関数は、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)のコンテキスト内で色チャンネルを直接操作するために使用することができます。これにより、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb)、[`hsl()`](/ja/docs/Web/CSS/color_value/hsl)、[`lch()`](/ja/docs/Web/CSS/color_value/lch) などの色モデルにおける色チャンネルの動的な調整が可能になります。
+`calc()` 関数は、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)のコンテキスト内で色チャンネルを直接操作するために使用することができます。これにより、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)、[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) などの色モデルにおける色チャンネルの動的な調整が可能になります。
 
 相対色の構文は、いくつかの色チャンネルキーワードを定義しています。それぞれのキーワードは、色チャンネルの値を {{cssxref("&lt;number&gt;")}} として表します（詳細については、[チャンネル値は `<number>` 値に解決される](/ja/docs/Web/CSS/CSS_colors/Relative_colors#number_値に解決するチャンネル値)を参照してください）。 `calc()` 関数では、これらの色チャンネルキーワードを使用して、色チャンネルを動的に調整することができます。例えば、 `calc(r + 10)` などです。
 
@@ -120,7 +120,7 @@ lch(from aquamarine l c calc(h + 180))
 
 ## アクセシビリティ
 
-`calc()` を使用してテキストの大きさを制御する場合は、一方の値が[相対的な長さの単位](/ja/docs/Web/CSS/length#相対的な長さの単位)になることを確認してください。
+`calc()` を使用してテキストの大きさを制御する場合は、一方の値が[相対的な長さの単位](/ja/docs/Web/CSS/Reference/Values/length#相対的な長さの単位)になることを確認してください。
 
 ```css
 h1 {
@@ -211,8 +211,8 @@ input {
 
 `calc()` 関数を使用すると、色チャンネル値を変数として格納する必要なく、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の個々の色チャンネルを調整することができます。
 
-例えば、下記では最初の段落で [`<named-color>`](/ja/docs/Web/CSS/named-color) を使用しています。
-その後の段落では `calc()` を [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) および [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) 関数と組み合わせて使用することで、元の名前付き色に対する各色チャンネルの値を相対的に調整しています。
+例えば、下記では最初の段落で [`<named-color>`](/ja/docs/Web/CSS/Reference/Values/named-color) を使用しています。
+その後の段落では `calc()` を [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) および [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 関数と組み合わせて使用することで、元の名前付き色に対する各色チャンネルの値を相対的に調整しています。
 
 ```html
 <p class="original">元のテキスト色は rebeccapurple</p>
@@ -262,5 +262,5 @@ p {
 
 - {{CSSxRef("&lt;calc-sum&gt;")}}
 - {{CSSxRef("&lt;calc-keyword&gt;")}}
-- [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

@@ -126,6 +126,6 @@ input {
 ## 関連情報
 
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-- [CSS `env()`](/ja/docs/Web/CSS/env) 関数
-- [CSS `calc()`](/ja/docs/Web/CSS/calc) 関数
+- [CSS `env()`](/ja/docs/Web/CSS/Reference/Values/env) 関数
+- [CSS `calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数
 - [`getPropertyValue()`](/ja/docs/Web/API/CSSStyleDeclaration/getPropertyValue) メソッド

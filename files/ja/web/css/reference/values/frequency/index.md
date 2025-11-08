@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-**`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。
+**`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。
 
 ## 構文
 

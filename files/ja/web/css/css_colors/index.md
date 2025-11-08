@@ -11,7 +11,7 @@ l10n:
 
 ### 色の実際
 
-下記の色構文コンバーターは、現在選択されている色の値を [赤緑青](/ja/docs/Web/CSS/color_value/rgb) (RGB), [16 進数](/ja/docs/Web/CSS/hex-color) (HEX), [色相・彩度・明度](/ja/docs/Web/CSS/color_value/hsl) (HSL), and [色相・白色度・黒色度](/ja/docs/Web/CSS/color_value/hwb) (HWB) の CSS 色形式で表示します。ここでの RGB、HEX、HSL、HWB の色値はすべて、書き方は異なりますが、同じ色値を表します。
+下記の色構文コンバーターは、現在選択されている色の値を [赤緑青](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) (RGB), [16 進数](/ja/docs/Web/CSS/Reference/Values/hex-color) (HEX), [色相・彩度・明度](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) (HSL), and [色相・白色度・黒色度](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) (HWB) の CSS 色形式で表示します。ここでの RGB、HEX、HSL、HWB の色値はすべて、書き方は異なりますが、同じ色値を表します。
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
@@ -36,17 +36,17 @@ l10n:
 ### 関数
 
 - 色関数:
-  - [`rgb()`](/ja/docs/Web/CSS/color_value/rgb)
-  - [`hsl()`](/ja/docs/Web/CSS/color_value/hsl)
-  - [`hwb()`](/ja/docs/Web/CSS/color_value/hwb)
-  - [`lab()`](/ja/docs/Web/CSS/color_value/lab)
-  - [`lch()`](/ja/docs/Web/CSS/color_value/lch)
-  - [`oklab()`](/ja/docs/Web/CSS/color_value/oklab)
-  - [`oklch()`](/ja/docs/Web/CSS/color_value/oklch)
-  - [`color()`](/ja/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/ja/docs/Web/CSS/color_value) {{experimental_inline}}
-- [`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/ja/docs/Web/CSS/color_value/device-cmyk)
+  - [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)
+  - [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)
+  - [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb)
+  - [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab)
+  - [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch)
+  - [`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab)
+  - [`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch)
+  - [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color)
+- [`color-contrast()`](/ja/docs/Web/CSS/Reference/Values/color_value) {{experimental_inline}}
+- [`color-mix()`](/ja/docs/Web/CSS/Reference/Values/color_value/color-mix)
+- [`device-cmyk()`](/ja/docs/Web/CSS/Reference/Values/color_value/device-cmyk)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
 ### データ型
@@ -58,15 +58,15 @@ l10n:
 - {{cssxref("alpha-value")}}
 - {{cssxref("hue")}}
 - {{cssxref("system-color")}}
-- [`<colorspace-params>`](/ja/docs/Web/CSS/color_value/color#using_predefined_color_spaces_with_color)
+- [`<colorspace-params>`](/ja/docs/Web/CSS/Reference/Values/color_value/color#using_predefined_color_spaces_with_color)
 
 ### 用語集の用語とキーワード
 
 - {{glossary("color space", "色空間")}}
-- [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)
+- [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード)
 - {{glossary("interpolation")}}
 - {{glossary("RGB")}}
-- [`transparent`](/ja/docs/Web/CSS/named-color#transparent)
+- [`transparent`](/ja/docs/Web/CSS/Reference/Values/named-color#transparent)
 
 ### インターフェイス
 
@@ -132,7 +132,7 @@ l10n:
 ## 関連情報
 
 - [CSS 色調整](/ja/docs/Web/CSS/CSS_color_adjustment)モジュールと {{cssxref("print-color-adjust")}} プロパティ
-- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール（CSS [`<gradient>`](/ja/docs/Web/CSS/gradient) 画像を定義）
+- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール（CSS [`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) 画像を定義）
 - [`VideoColorSpace`](/ja/docs/Web/API/VideoColorSpace) インターフェイス
 - SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Reference/Element/feColorMatrix) 要素
 - [キャンバス API: スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色)

@@ -24,7 +24,7 @@ syntax: "*"; /* 常に有効なトークン */
 
 ## 値
 
-仕様で定義されている対応する構文を持つ文字列。対応する構文は [CSS 型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)のサブセットです。これらは一緒に使うこともできますし、いくつかの型を組み合わせて使うこともできます。
+仕様で定義されている対応する構文を持つ文字列。対応する構文は [CSS 型](/ja/docs/Web/CSS/Reference/Values/Data_types)のサブセットです。これらは一緒に使うこともできますし、いくつかの型を組み合わせて使うこともできます。
 
 - `"<length>"`
   - : あらゆる有効な {{cssxref("&lt;length&gt;")}} の値です。

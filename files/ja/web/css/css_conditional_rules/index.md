@@ -49,7 +49,7 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 
 - [`<container-name>`](/ja/docs/Web/CSS/Reference/At-rules/@container#values)
 - [`<style-feature>`](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)
-- [相対的な `<length>` 単位のコンテナー](/ja/docs/Web/CSS/length#container_query_length_units)
+- [相対的な `<length>` 単位のコンテナー](/ja/docs/Web/CSS/Reference/Values/length#container_query_length_units)
 - [`<media-query>`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)
 - [`<supports-condition>`](/ja/docs/Web/CSS/Reference/At-rules/@import#importing_css_rules_conditional_on_feature_support)
 - `<supports-feature>` （[`supports()`](/ja/docs/Web/CSS/Reference/At-rules/@import#supports-condition) を参照）
