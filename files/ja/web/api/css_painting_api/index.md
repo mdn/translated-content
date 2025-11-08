@@ -9,7 +9,7 @@ CSS Painting API（[CSS Houdini](/ja/docs/Web/API/Houdini_APIs) API の傘の一
 
 ## 概念と使用方法
 
-基本的に、CSS Painting API には、開発者が CSS の [`<image>`](/ja/docs/Web/CSS/image) の関数である {{cssxref('paint', 'paint()')}} のためのカスタム値を作成できる機能が含まれています。 次に、これらの値を {{cssxref("background-image")}} などのプロパティに適用して、要素に複雑なカスタム背景を設定できます。
+基本的に、CSS Painting API には、開発者が CSS の [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) の関数である {{cssxref('paint', 'paint()')}} のためのカスタム値を作成できる機能が含まれています。 次に、これらの値を {{cssxref("background-image")}} などのプロパティに適用して、要素に複雑なカスタム背景を設定できます。
 
 例えば、次のようにです。
 

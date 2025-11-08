@@ -98,7 +98,7 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 ### Valeurs
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.
+  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/Reference/Values/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.
 - `none`
   - : Aucune transformation ne sera appliquée.
 
@@ -111,7 +111,7 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 {{CSSSyntax}}
 
 > [!NOTE]
-> Si on utilise plusieurs fonctions dont [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective), celle-ci devra apparaître en premier.
+> Si on utilise plusieurs fonctions dont [`perspective()`](/fr/docs/Web/CSS/Reference/Values/transform-function/perspective), celle-ci devra apparaître en premier.
 
 ## Exemples
 

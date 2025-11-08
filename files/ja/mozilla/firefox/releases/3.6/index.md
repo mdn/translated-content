@@ -10,7 +10,7 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 ### CSS
 
 - [グラデーションの利用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/Reference/Properties/background) において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/gradient/linear-gradient) と [`-moz-radial-gradient`](/ja/docs/Web/CSS/gradient/radial-gradient) プロパティのサポートが追加されました。
+  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/Reference/Properties/background) において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient) と [`-moz-radial-gradient`](/ja/docs/Web/CSS/Reference/Values/gradient/radial-gradient) プロパティのサポートが追加されました。
 - [複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : [`background`](/ja/docs/Web/CSS/Reference/Properties/background) プロパティ（および [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color)、[`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image)、[`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position)、[`background-repeat`](/ja/docs/Web/CSS/Reference/Properties/background-repeat)、[`background-attachment`](/ja/docs/Web/CSS/Reference/Properties/background-attachment)）が複数の背景をサポートしました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
 - [Mozilla 独自のメディア特性](/ja/docs/Web/CSS/CSS_media_queries#mozilla-specific_media_features)
@@ -24,7 +24,7 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 
 #### その他の CSS の変更
 
-- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
+- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/Reference/Values/length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
 - [`image-rendering`](/ja/docs/Web/CSS/Reference/Properties/image-rendering) が画像、背景画像、ビデオ、canvas でサポートされました。 [バグ 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756)
 - [`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
 - table [`display`](/ja/docs/Web/CSS/Reference/Properties/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。

@@ -120,9 +120,9 @@ for (const value of ofInterest) {
 
 {{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}
 
-実験のために {{cssxref('border-left-color')}} を入れましたが、すべてのプロパティを含めた場合、すべての値が既定値の [`currentcolor`](/ja/docs/Web/CSS/color_value) となり（{{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}} 等を含む）、 `rgb(255, 0, 0)` を返します。リンクは段落のスタイルから `font-weight: bold;` を継承し、`font-weight: 700` としてリストアップされています。カスタムプロパティは、私たちの `--color: red` のように、プロパティです。そのため、 `get()` でアクセスすることができます。
+実験のために {{cssxref('border-left-color')}} を入れましたが、すべてのプロパティを含めた場合、すべての値が既定値の [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value) となり（{{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}} 等を含む）、 `rgb(255, 0, 0)` を返します。リンクは段落のスタイルから `font-weight: bold;` を継承し、`font-weight: 700` としてリストアップされています。カスタムプロパティは、私たちの `--color: red` のように、プロパティです。そのため、 `get()` でアクセスすることができます。
 
-カスタムプロパティはスタイルシートに書かれている通りの値を保持しますが、計算されたスタイルは計算値として表示されることに注意してください。 {{cssxref('color')}} は [`rgb()`](/ja/docs/Web/CSS/color_value) 値として表示され、 {{cssxref('font-weight')}} は {{cssxref('&lt;color&gt;', 'named color')}} を使用しても `bold` を使用しても `700` と返されます。
+カスタムプロパティはスタイルシートに書かれている通りの値を保持しますが、計算されたスタイルは計算値として表示されることに注意してください。 {{cssxref('color')}} は [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value) 値として表示され、 {{cssxref('font-weight')}} は {{cssxref('&lt;color&gt;', 'named color')}} を使用しても `bold` を使用しても `700` と返されます。
 
 ### CSSUnitValue と CSSKeywordValue
 
@@ -224,8 +224,8 @@ for (const value of ofInterest) {
 
 他にも型があります。
 
-- [`<image>`](/ja/docs/Web/CSS/image) は {{domxref('CSSImageValue')}} を返します。
-- [`<color>`](/ja/docs/Web/CSS/color_value) は {{domxref('CSSStyleValue')}} を返します。
+- [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) は {{domxref('CSSImageValue')}} を返します。
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) は {{domxref('CSSStyleValue')}} を返します。
 - {{cssxref('transform')}} は `CSSTransformValue` を返します。
 - [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)は {{domxref('CSSUnparsedValue')}} を返します。
 
@@ -346,7 +346,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-[`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
+[`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) という関数で幅を定義しています。
 
 この `width` を `get()` すると、[`CSSMathSum`](/ja/docs/Web/API/CSSMathSum) が返されます。 {{domxref('CSSMathSum.values')}} は {{domxref('CSSNumericArray')}} で、 2 つの `CSSUnitValues` があります。
 

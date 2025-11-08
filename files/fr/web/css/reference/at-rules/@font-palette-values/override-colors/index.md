@@ -32,7 +32,7 @@ override-colors:
 
 Le descripteur [override-colors](/fr/docs/Glossary/CSS_Descriptor) accepte une liste séparée par des virgules composée d'indices de couleur et de nouvelles valeurs de couleur.
 
-L'indice de couleur commence à zéro et toute [valeur de couleur](/fr/docs/Web/CSS/color_value) peut être utilisée.
+L'indice de couleur commence à zéro et toute [valeur de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) peut être utilisée.
 
 Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) sera remplacée. Si la police couleur ne possède pas de couleur à l'indice indiqué, cette valeur sera ignorée.
 

@@ -274,7 +274,7 @@ Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des 
 ## Concepts associés
 
 - La propriété CSS {{cssxref("will-change")}}
-- Le type de donnée [`<easing-function>`](/fr/docs/Web/CSS/easing-function)
+- Le type de donnée [`<easing-function>`](/fr/docs/Web/CSS/Reference/Values/easing-function)
 - Les requêtes media [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)
 - Le terme du glossaire {{glossary("Bezier curve", "courbe de Bézier")}}
 

@@ -65,7 +65,7 @@ l10n:
 上記の図に示されているように、 `!important` フラグ付きの重要な宣言は、通常の宣言、つまり `!important` フラグのない通常の宣言よりも優先されます。重要なルール間の優先順位は、通常のルールの順序と逆になります。トランジションが最も優先順位が高くなります。次に優先順位が高いのは、重要な{{glossary("user agent", "ユーザーエージェント")}}宣言、重要なユーザー宣言、重要な作成者宣言の順です。ユーザーは、ブラウザーの環境設定、オペレーティングシステムの環境設定、またはブラウザーの拡張機能を使用してスタイルを指定することができます。これらの重要な宣言は、作成者、つまりウェブ開発者が書いた重要な宣言よりも優先されます。
 
 作成者スタイル内では、CSSレイヤー内で宣言されたすべての重要な宣言は、レイヤー外で宣言された重要な宣言を引き継ぎますが、CSSレイヤー内で宣言されたすべての通常の宣言は、レイヤー外で宣言された宣言よりも優先順位が低くなります。
-宣言の順序は重要です。最初に宣言されたレイヤーは最も低い優先順位となり、最後に宣言されたレイヤーは最も高い順位となります。ただし、 [`!important`](/ja/docs/Web/CSS/important) フラグが使用された場合は優先順位が逆転します。
+宣言の順序は重要です。最初に宣言されたレイヤーは最も低い優先順位となり、最後に宣言されたレイヤーは最も高い順位となります。ただし、 [`!important`](/ja/docs/Web/CSS/Reference/Values/important) フラグが使用された場合は優先順位が逆転します。
 
 `@layer` アットルールは、 3 つの方法のいずれかでカスケードレイヤーを作成するために使用します。
 
@@ -234,8 +234,8 @@ p {
 - [`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import)
 - {{domxref("CSSLayerBlockRule")}}
 - {{domxref("CSSLayerStatementRule")}}
-- [`!important`](/ja/docs/Web/CSS/important)
-- [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
+- [`!important`](/ja/docs/Web/CSS/Reference/Values/important)
+- [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer)
 - [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)

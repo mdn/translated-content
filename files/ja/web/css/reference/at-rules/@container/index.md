@@ -430,7 +430,7 @@ span {
 }
 ```
 
-それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_宣言)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/var#values) のいずれかです。
+それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_宣言)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#values) のいずれかです。
 
 ```css
 @container style(--themeBackground),

@@ -84,14 +84,14 @@ while ((i = noms.shift()) !== undefined) {
 La méthode `shift()` lit la propriété `length` de `this`. Si la [longueur normalisée](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#normalisation_de_la_propriété_length) vaut 0, `length` est de nouveau définie à `0` (alors qu'elle peut être négative ou `undefined` auparavant). Sinon, la propriété à `0` est retournée, et le reste des propriétés est décalé d'un indice vers la gauche. La propriété à `length - 1` est [supprimée](/fr/docs/Web/JavaScript/Reference/Operators/delete), et la propriété `length` est décrémentée de 1.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   2: 4,
 };
-console.log(Array.prototype.shift.call(arrayLike));
+console.log(Array.prototype.shift.call(objetSimilaireTableau));
 // undefined, car il s'agit d'une case vide
-console.log(arrayLike);
+console.log(objetSimilaireTableau);
 // { '1': 4, length: 2, unrelated: 'foo' }
 
 const plainObj = {};

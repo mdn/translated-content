@@ -15,11 +15,11 @@ l10n:
 
 ### CSS
 
-- [指数関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#exponential_functions) をデフォルトで有効にしました。
+- [指数関数](/ja/docs/Web/CSS/Reference/Values/Functions#exponential_functions) をデフォルトで有効にしました。
   `pow()`、`sqrt()`、`hypot()`、`log()`、`exp()` の関数を使用できます ([Firefox bug 1814469](https://bugzil.la/1814469))。
 - {{cssxref("overflow")}} のキーワード値 `overlay` を、キーワード値 `auto` の旧来の別名としてサポートしました ([Firefox bug 1817189](https://bugzil.la/1817189))。
 - [`offset-path`](/ja/docs/Web/CSS/Reference/Properties/offset-path) を定義するために使用する `ray()` 関数で、`<ray_size>` 引数が省略可能になりました。`<ray_size>` 引数を与えない場合は `closest-side` が既定値になります ([Firefox bug 1820071](https://bugzil.la/1820071))。
-- `linear()` [イージング関数](/ja/docs/Web/CSS/easing-function) をサポートしました。
+- `linear()` [イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function) をサポートしました。
   これは複数の点の間を直線的に補完するイージング関数を定義するものであり、複雑なアニメーションを近似的に表現することに役立ちます ([Firefox bug 1819447](https://bugzil.la/1819447)、[Firefox bug 1764126](https://bugzil.la/1764126))。
 
 ### JavaScript

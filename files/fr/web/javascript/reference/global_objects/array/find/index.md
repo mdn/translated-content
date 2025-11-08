@@ -186,14 +186,16 @@ array.find((value, index) => {
 La méthode `find()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   "-1": 0.1, // ignoré par find() car -1 < 0
   0: 2,
   1: 7.3,
   2: 4,
 };
-console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
+console.log(
+  Array.prototype.find.call(objetSimilaireTableau, (x) => !Number.isInteger(x)),
+);
 // 7.3
 ```
 

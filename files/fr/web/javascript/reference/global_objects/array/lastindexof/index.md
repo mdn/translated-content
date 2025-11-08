@@ -105,16 +105,16 @@ console.log([1, , 3].lastIndexOf(undefined)); // -1
 La méthode `lastIndexOf()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 2,
   3: 5, // ignoré par lastIndexOf() car length vaut 3
 };
-console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
+console.log(Array.prototype.lastIndexOf.call(objetSimilaireTableau, 2));
 // 2
-console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
+console.log(Array.prototype.lastIndexOf.call(objetSimilaireTableau, 5));
 // -1
 ```
 

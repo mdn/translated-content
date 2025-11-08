@@ -38,7 +38,7 @@ override-colors:
 
 `override-colors` [記述子](/ja/docs/Glossary/CSS_Descriptor)は、色インデックスと新しい色値をカンマで区切ったリストを取ります。
 
-色インデックスはゼロ基点で、任意の[色値](/ja/docs/Web/CSS/color_value)を使用することができます。
+色インデックスはゼロ基点で、任意の[色値](/ja/docs/Web/CSS/Reference/Values/color_value)を使用することができます。
 
 それぞれのインデックスと色のキーと値の組に対して、指定した[ベースパレット](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette)内のインデックスの色が上書きされます。カラーフォントが指定したインデックスの色を持たない場合、それは無視されます。
 

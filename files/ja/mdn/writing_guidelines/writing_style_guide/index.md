@@ -430,7 +430,7 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
-- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
+- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
 
 文章の一部を記事や記事の節にリンクすることができます。リンクテキストとして説明的な語句を使用し、リンクされているページに十分なコンテキストを提供するように注意してください。
 
@@ -573,8 +573,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 - 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは MDN Web Docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
 - MDN では、[リファレンスページへのリンク](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)の節で説明されているように、オプションでマクロを使用することができます。マクロを使用すると、次の例に示すように、リンクテキストのキーワードにコード形式が追加されます。
 - リンクリストアイテムの先頭に冠詞 ("A", "An", "The") は必要ありません。リストアイテムの終わりには句読点は要求されません。
-  - **正**: [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
-  - **語**: The [`revert-layer`](/ja/docs/Web/CSS/revert-layer) keyword.
+  - **正**: [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer)
+  - **語**: The [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer) keyword.
   - **正**: [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API)
   - **語**: The [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API)
 - 上の例で示したように、ページタイトルや節タイトルでは書式を使用しない場合でも、リンクテキストのキーワードやリテラルの部分にバックティック (\`) を使用してコード書式化を追加してください。例えば、 "Array() constructor" というページタイトルの場合、リンクテキストは [`Array()` constructor](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) となります。

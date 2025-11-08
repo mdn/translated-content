@@ -18,9 +18,9 @@ Un élément `<meta name="viewport">` possède les attributs supplémentaires su
   - : L'attribut `content` doit être défini et sa valeur détermine divers comportements liés à la zone d'affichage.
     Sa valeur est une liste séparée par des virgules d'une ou plusieurs paires clé-valeur sous la forme `clé=valeur`. Les clés suivantes sont définies&nbsp;:
     - `width`
-      - : Contrôle la largeur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `width=600`) ou sur la valeur spéciale `device-width`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vw`](/fr/docs/Web/CSS/length#unités_de_longueur_relatives_à_la_zone_daffichage).
+      - : Contrôle la largeur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `width=600`) ou sur la valeur spéciale `device-width`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vw`](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives_à_la_zone_daffichage).
     - `height`
-      - : Contrôle la hauteur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `height=400`) ou sur la valeur spéciale `device-height`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vh`](/fr/docs/Web/CSS/length#unités_de_longueur_relatives_à_la_zone_daffichage).
+      - : Contrôle la hauteur (minimale) en pixels de la zone d'affichage (voir [largeur de la zone d'affichage et largeur de l'écran](#largeur_de_la_zone_daffichage_et_largeur_de_lécran)). Elle peut être définie sur un nombre entier positif de pixels entre 1 et 10 000 (par exemple `height=400`) ou sur la valeur spéciale `device-height`, qui correspond à la taille physique de l'écran de l'appareil en pixels CSS. Cette valeur définit la valeur de l'unité [`vh`](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives_à_la_zone_daffichage).
     - `initial-scale`
       - : Définit le ratio entre la largeur de l'appareil (`device-width` en mode portrait ou `device-height` en mode paysage) et la taille de la zone d'affichage. Elle peut être un nombre compris entre `0.0` et `10.0`.
     - `maximum-scale`
@@ -40,13 +40,13 @@ Un élément `<meta name="viewport">` possède les attributs supplémentaires su
         - `resizes-content`&nbsp;: La {{Glossary("viewport", "zone d'affichage")}} est redimensionnée par le widget interactif.
         - `overlays-content`&nbsp;: Ni la zone d'affichage ni la zone d'affichage visuelle ne sont redimensionnées par le widget interactif.
 
-        Lorsque la {{Glossary("viewport", "zone d'affichage")}} est redimensionnée, le [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block) est également redimensionné, ce qui affecte la taille calculée des [unités de la zone d'affichage](/fr/docs/Web/CSS/length#unités_de_longueur_relatives_à_la_zone_daffichage).
+        Lorsque la {{Glossary("viewport", "zone d'affichage")}} est redimensionnée, le [bloc englobant initial](/fr/docs/Web/CSS/CSS_display/Containing_block) est également redimensionné, ce qui affecte la taille calculée des [unités de la zone d'affichage](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives_à_la_zone_daffichage).
 
     - `viewport-fit`
       - : Définit les portions visibles de la page web. Elle peut prendre comme valeur `auto`, `contain` ou `cover`.
         - `auto`&nbsp;: N'affecte pas la zone d'affichage initiale, et l'ensemble de la page web est visible.
         - `contain`&nbsp;: La zone d'affichage est ajustée pour s'adapter au plus grand rectangle inscrit dans l'écran.
-        - `cover`&nbsp;: La zone d'affichage est ajustée pour remplir l'écran de l'appareil. Il est fortement recommandé d'utiliser les variables [`safe-area-inset-*`](/fr/docs/Web/CSS/env) pour s'assurer que le contenu important ne se retrouve pas hors de l'affichage.
+        - `cover`&nbsp;: La zone d'affichage est ajustée pour remplir l'écran de l'appareil. Il est fortement recommandé d'utiliser les variables [`safe-area-inset-*`](/fr/docs/Web/CSS/Reference/Values/env) pour s'assurer que le contenu important ne se retrouve pas hors de l'affichage.
 
 ### Largeur de la zone d'affichage et largeur de l'écran
 

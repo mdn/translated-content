@@ -13,7 +13,7 @@ Les [animations](/fr/docs/Web/CSS/CSS_animations) et [transitions CSS](/fr/docs/
 > Le type d'animation de chaque propriété CSS est indiqué dans son tableau de «&nbsp;définition formelle&nbsp;» (par exemple&nbsp;: [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle)).
 
 > [!NOTE]
-> La méthode d'interpolation pour chaque type de données CSS est décrite dans sa section «&nbsp;Interpolation&nbsp;» (par exemple&nbsp;: [`<length>`](/fr/docs/Web/CSS/length#interpolation)).
+> La méthode d'interpolation pour chaque type de données CSS est décrite dans sa section «&nbsp;Interpolation&nbsp;» (par exemple&nbsp;: [`<length>`](/fr/docs/Web/CSS/Reference/Values/length#interpolation)).
 
 ## Types d'animations
 

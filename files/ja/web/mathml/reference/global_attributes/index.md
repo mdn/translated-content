@@ -38,7 +38,7 @@ l10n:
 - [`mathcolor`](/ja/docs/Web/MathML/Global_attributes/mathcolor)
   - : 要素の[色](/ja/docs/Web/CSS/Reference/Properties/color)です。
 - [`mathsize`](/ja/docs/Web/MathML/Global_attributes/mathsize)
-  - : 要素の [font-size](/ja/docs/Web/CSS/Reference/Properties/font-size) として使用される [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+  - : 要素の [font-size](/ja/docs/Web/CSS/Reference/Properties/font-size) として使用される [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) です。
 - [`nonce`](/ja/docs/Web/HTML/Reference/Global_attributes/nonce)
   - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)が指定されたフェッチを許可するかどうかを決定するために使用できる暗号化ノンス（「一度だけ使用する番号」）です。
 - [`scriptlevel`](/ja/docs/Web/MathML/Global_attributes/scriptlevel)

@@ -22,7 +22,7 @@ l10n:
 
 - CSS の {{cssxref("ray")}} 関数をデフォルトで有効にしました。この関数を使用して、{{cssxref("offset-position")}} から始まって指定した角度の方向へ伸びる線分として {{cssxref("offset-path")}} を定義できます ([Firefox bug 1598151](https://bugzil.la/1598151))。
 
-- {{CSSxref("clip-path")}} および {{CSSxref("offset-path")}} プロパティが、[`rect()`](/ja/docs/Web/CSS/basic-shape/rect) および [`xywh()`](/ja/docs/Web/CSS/basic-shape/xywh) シェイプ関数を受け入れるようになりました。これらの {{CSSXref("basic-shape")}} 値は、要素の端からの距離で定義する長方形 (`rect()`) または座標とサイズ (`xywh()`) で要素の切り抜きや移動を可能にします ([Firefox bug 1868722](https://bugzil.la/1868722))。
+- {{CSSxref("clip-path")}} および {{CSSxref("offset-path")}} プロパティが、[`rect()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/rect) および [`xywh()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/xywh) シェイプ関数を受け入れるようになりました。これらの {{CSSXref("basic-shape")}} 値は、要素の端からの距離で定義する長方形 (`rect()`) または座標とサイズ (`xywh()`) で要素の切り抜きや移動を可能にします ([Firefox bug 1868722](https://bugzil.la/1868722))。
 
 ### JavaScript
 

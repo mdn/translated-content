@@ -79,8 +79,8 @@ transition-delay: unset;
 
 ### Valeurs
 
-- [`<time>`](/fr/docs/Web/CSS/time)
-  - : Une valeur [`<time>`](/fr/docs/Web/CSS/time) qui indique la durée à attendre avant de démarrer l'effet de transition déclenché par le changement de valeur d'une propriété.
+- [`<time>`](/fr/docs/Web/CSS/Reference/Values/time)
+  - : Une valeur [`<time>`](/fr/docs/Web/CSS/Reference/Values/time) qui indique la durée à attendre avant de démarrer l'effet de transition déclenché par le changement de valeur d'une propriété.
 
 ## Définition formelle
 

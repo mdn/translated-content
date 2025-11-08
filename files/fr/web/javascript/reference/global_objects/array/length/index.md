@@ -72,31 +72,31 @@ Voir aussi [la relation entre longueur et propriétés numériques](/fr/docs/Web
 
 ### Parcourir un tableau
 
-Dans l'exemple suivant, on itère sur le tableau `numbers` en utilisant la propriété `length` afin de connaître son nombre d'éléments. La valeur de chaque élément est ensuite multipliée par deux&nbsp;:
+Dans l'exemple suivant, on itère sur le tableau `nombres` en utilisant la propriété `length` afin de connaître son nombre d'éléments. La valeur de chaque élément est ensuite multipliée par deux&nbsp;:
 
 ```js
-const numbers = [1, 2, 3, 4, 5];
-const length = numbers.length;
-for (let i = 0; i < length; i++) {
-  numbers[i] *= 2;
+const nombres = [1, 2, 3, 4, 5];
+const longueur = nombres.length;
+for (let i = 0; i < longueur; i++) {
+  nombres[i] *= 2;
 }
-// numbers vaut maintenant [2, 4, 6, 8, 10]
+// nombres vaut maintenant [2, 4, 6, 8, 10]
 ```
 
 ### Tronquer un tableau
 
-L'exemple suivant raccourcit le tableau `numbers` à une longueur de 3 si sa longueur actuelle est supérieure à 3.
+L'exemple suivant raccourcit le tableau `nombres` à une longueur de 3 si sa longueur actuelle est supérieure à 3.
 
 ```js
-const numbers = [1, 2, 3, 4, 5];
+const nombres = [1, 2, 3, 4, 5];
 
-if (numbers.length > 3) {
-  numbers.length = 3;
+if (nombres.length > 3) {
+  nombres.length = 3;
 }
 
-console.log(numbers); // [1, 2, 3]
-console.log(numbers.length); // 3
-console.log(numbers[3]); // undefined ; les éléments supplémentaires sont supprimés
+console.log(nombres); // [1, 2, 3]
+console.log(nombres.length); // 3
+console.log(nombres[3]); // undefined ; les éléments supplémentaires sont supprimés
 ```
 
 ### Créer un tableau vide de longueur fixe
@@ -104,9 +104,9 @@ console.log(numbers[3]); // undefined ; les éléments supplémentaires sont sup
 Définir la propriété `length` à une valeur supérieure à la longueur actuelle crée un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux).
 
 ```js
-const numbers = [];
-numbers.length = 3;
-console.log(numbers); // [vide x 3]
+const nombres = [];
+nombres.length = 3;
+console.log(nombres); // [vide x 3]
 ```
 
 ### Tableau avec une propriété `length` non modifiable
@@ -116,10 +116,10 @@ La propriété `length` est automatiquement mise à jour par le tableau lorsque 
 ```js
 "use strict";
 
-const numbers = [1, 2, 3, 4, 5];
-Object.defineProperty(numbers, "length", { writable: false });
-numbers[5] = 6; // TypeError : Cannot assign to read only property 'length' of object '[object Array]'
-numbers.push(5); // TypeError : Cannot assign to read only property 'length' of object '[object Array]'
+const nombres = [1, 2, 3, 4, 5];
+Object.defineProperty(nombres, "length", { writable: false });
+nombres[5] = 6; // TypeError : Cannot assign to read only property 'length' of object '[object Array]'
+nombres.push(5); // TypeError : Cannot assign to read only property 'length' of object '[object Array]'
 ```
 
 ## Spécifications

@@ -22,7 +22,7 @@ l10n:
 
 - CSS 色の関数 `color()`、`lab()`、`lch()`、`oklab()`、`oklch()` をサポートしました。
   これらの機能はデフォルトで無効であり、設定項目 `layout.css.more_color_4.enabled` を true に設定すると有効にできます。
-  詳しくは [CSS color value](/ja/docs/Web/CSS/color_value) の文書をご覧ください ([Firefox bug 1352757](https://bugzil.la/1352757) および [Firefox bug 1128204](https://bugzil.la/1128204))。
+  詳しくは [CSS color value](/ja/docs/Web/CSS/Reference/Values/color_value) の文書をご覧ください ([Firefox bug 1352757](https://bugzil.la/1352757) および [Firefox bug 1128204](https://bugzil.la/1128204))。
 
 #### 廃止
 

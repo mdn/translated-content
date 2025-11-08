@@ -56,7 +56,7 @@ p {
 
 ## 関連情報
 
-- [`color()`](/ja/docs/Web/CSS/color_value/color) 関数で、定義された色空間における色を指定します。
+- [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 関数で、定義された色空間における色を指定します。
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
 - [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルールは、 color-gamut 式を指定するために使用します。
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries): メディアクエリーをいつ、どうやって使うかを理解する

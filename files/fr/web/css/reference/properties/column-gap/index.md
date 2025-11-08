@@ -82,10 +82,10 @@ column-gap: unset;
 
 - `normal`
   - : Un mot-clé qui indique qu'on souhaite utiliser l'espacement par défaut créé par le navigateur. Pour les dispositions en colonnes, cette valeur correspond à `1em`, sinon elle correspond à `0`.
-- [`<length>`](/fr/docs/Web/CSS/length)
-  - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Une valeur de pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
+  - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+  - : Une valeur de pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
 
 ## Définition formelle
 

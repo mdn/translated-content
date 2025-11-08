@@ -88,8 +88,8 @@ grid-column-start: unset;
 La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. Une telle valeur peut être définie avec&nbsp;:
 
 - le mot-clé `auto`
-- un identifiant ([`<custom-ident>`](/fr/docs/Web/CSS/custom-ident))
-- ou une valeur entière ([`<integer>`](/fr/docs/Web/CSS/integer))
+- un identifiant ([`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident))
+- ou une valeur entière ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer))
 - ou un identifiant et un entier séparés par un espace
 - ou le mot-clé `span` avec un identifiant ou un entier ou les deux.
 
@@ -98,7 +98,7 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 - `auto`
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<i lang="en">span</i>) automatique ou une taille par défaut de `1`.
 
-- [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
+- [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident)
   - : S'il existe une ligne nommée avec '\<custom-ident>-start', le début de l'élément coincide avec la première ligne correspondante.
 
     > [!NOTE]

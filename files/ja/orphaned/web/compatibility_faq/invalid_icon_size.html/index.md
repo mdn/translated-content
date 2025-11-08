@@ -48,8 +48,8 @@ slug: orphaned/Web/Compatibility_FAQ/Invalid_Icon_Size.html
 
 1. **ベンダープレフィックス**
     webkit 指定が入っている場合は、他ブラウザー互換用に別途指定を行う必要があります。
-    \-webkit-linear-gradient()関数の場合は、[linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数を追記することで Firefox でも指定を行うことができます。
-    ただし、-webkit-linear-gradient()関数と[linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数は、伴う引数が異なる為、例に従って記載してください。
+    \-webkit-linear-gradient()関数の場合は、[linear-gradient()](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)関数を追記することで Firefox でも指定を行うことができます。
+    ただし、-webkit-linear-gradient()関数と[linear-gradient()](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)関数は、伴う引数が異なる為、例に従って記載してください。
 
     ```css
     input[type="submit"] {

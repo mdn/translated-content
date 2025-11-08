@@ -57,7 +57,7 @@ l10n:
 
 ### 宣言的なダイアログの作成
 
-```html
+```html-nolint
 <button commandfor="mydialog" command="show-modal">モーダルダイアログを表示</button>
 <dialog id="mydialog">
   <button commandfor="mydialog" command="close">閉じる</button>

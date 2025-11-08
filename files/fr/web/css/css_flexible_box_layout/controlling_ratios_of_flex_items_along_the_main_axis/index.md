@@ -33,7 +33,7 @@ Avant de rentrer dans le détail des propriétés, définissons certains concept
 
 Afin de connaître l'espace disponible pour l'organisation des éléments flexibles, le navigateur doit connaître la taille de l'élément. Comment faire lorsque les éléments ne sont pas dimensionnés avec une largeur ou une hauteur exprimée dans une unité de longueur absolue ?
 
-CSS permet d'utiliser les valeurs {{cssxref('width','min-content','#min-content')}} et {{cssxref('width','max-content','#max-content')}} — ces mots-clés sont définis [dans la spécification CSS pour le dimensionnement intrinsèque et extrinsèque](https://drafts.csswg.org/css-sizing-3/#width-height-keywords) et ces valeurs peuvent être utilisées comme [unité de longueurs](/fr/docs/Web/CSS/length).
+CSS permet d'utiliser les valeurs {{cssxref('width','min-content','#min-content')}} et {{cssxref('width','max-content','#max-content')}} — ces mots-clés sont définis [dans la spécification CSS pour le dimensionnement intrinsèque et extrinsèque](https://drafts.csswg.org/css-sizing-3/#width-height-keywords) et ces valeurs peuvent être utilisées comme [unité de longueurs](/fr/docs/Web/CSS/Reference/Values/length).
 
 Dans l'exemple qui suit, on a deux paragraphes qui contiennent chacun une chaîne de caractères. La largeur du premier paragraphe est `min-content`. Si le navigateur utilisé prend en charge ce mot-clé, on peut voir que le texte passe à la ligne dès que c'est possible, sans dépasser de la boîte. Autrement dit, la longueur `min-content` correspond à la taille du plus grand mot du paragraphe.
 

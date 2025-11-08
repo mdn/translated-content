@@ -170,7 +170,7 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 - Le type de donnée {{cssxref("url")}}
 - Le type de donnée {{cssxref("image")}}
 - Le type de donnée {{cssxref("position")}}
-- Le mot-clé [`currentcolor`](/fr/docs/Web/CSS/color_value#le_mot_clé_currentcolor)
+- Le mot-clé [`currentcolor`](/fr/docs/Web/CSS/Reference/Values/color_value#le_mot_clé_currentcolor)
 
 ## Spécifications
 
@@ -180,7 +180,7 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
-- Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
+- Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/Reference/Values/filter-function/drop-shadow)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - [Générateur pour `border-image`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
 - [Générateur pour `border-radius`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)

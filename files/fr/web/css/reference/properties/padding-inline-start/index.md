@@ -71,9 +71,9 @@ padding-inline-start: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La taille de la zone de remplissage exprimée de façon absolue. Les valeurs négatives sont interdites.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : La taille de la zone de remplissage exprimée de façon relative à la _taille en ligne_ (<i lang="en">inline</i> en anglais) du bloc englobant. Les valeurs négatives sont interdites.
 
 ## Description

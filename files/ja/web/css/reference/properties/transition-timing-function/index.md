@@ -298,7 +298,7 @@ const intervalID = setInterval(updateTransition, 10000);
 ## 関連情報
 
 - [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- [`<easing-function>`](/ja/docs/Web/CSS/easing-function)
+- [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

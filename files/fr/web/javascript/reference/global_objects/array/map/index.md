@@ -135,16 +135,16 @@ Voir le sujet de discussion [Un problème d'argument optionnel en JavaScript <su
 Lorsque {{JSxRef("undefined")}} ou rien n'est retourné, le tableau résultant contient `undefined`. Si vous souhaitez supprimer l'élément à la place, chaînez une méthode {{JSxRef("Array/filter", "filter()")}}, ou utilisez la méthode {{JSxRef("Array/flatMap", "flatMap()")}} et retournez un tableau vide pour signifier la suppression.
 
 ```js
-const numbers = [1, 2, 3, 4];
-const filteredNumbers = numbers.map((num, index) => {
+const nombres = [1, 2, 3, 4];
+const nombresFiltres = nombres.map((num, index) => {
   if (index < 3) {
     return num;
   }
 });
 
-// l'index commence à 0, donc filteredNumbers vaut 1, 2, 3 et undefined.
-// filteredNumbers vaut [1, 2, 3, undefined]
-// numbers vaut toujours [1, 2, 3, 4]
+// l'index commence à 0, donc nombresFiltres vaut 1, 2, 3 et undefined.
+// nombresFiltres vaut [1, 2, 3, undefined]
+// nombres vaut toujours [1, 2, 3, 4]
 ```
 
 ### Mapping avec effets de bord
@@ -206,29 +206,29 @@ const productsWithPrice = products.map((product) => ({
 L'argument `array` est utile si vous souhaitez accéder à un autre élément du tableau, en particulier lorsque vous n'avez pas de variable existante qui fait référence au tableau. L'exemple suivant utilise d'abord `filter()` pour extraire les valeurs positives puis utilise `map()` pour créer un nouveau tableau où chaque élément est la moyenne de ses voisins et de lui-même.
 
 ```js
-const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
-const averaged = numbers
+const nombres = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const moyennes = nombres
   .filter((num) => num > 0)
   .map((num, idx, arr) => {
     // Sans l'argument arr, il n'y a aucun moyen d'accéder facilement
     // au tableau intermédiaire sans le stocker dans une variable.
-    const prev = arr[idx - 1];
-    const next = arr[idx + 1];
-    let count = 1;
+    const precedent = arr[idx - 1];
+    const suivant = arr[idx + 1];
+    let compte = 1;
     let total = num;
-    if (prev !== undefined) {
-      count++;
-      total += prev;
+    if (precedent !== undefined) {
+      compte++;
+      total += precedent;
     }
-    if (next !== undefined) {
-      count++;
-      total += next;
+    if (suivant !== undefined) {
+      compte++;
+      total += suivant;
     }
-    const average = total / count;
+    const moyenne = total / compte;
     // Arrondir à deux décimales
-    return Math.round(average * 100) / 100;
+    return Math.round(moyenne * 100) / 100;
   });
-console.log(averaged); // [2, 2.67, 2, 3.33, 5, 5.33, 5.67, 4]
+console.log(moyennes); // [2, 2.67, 2, 3.33, 5, 5.33, 5.67, 4]
 ```
 
 L'argument `array` n'est pas le tableau en cours de construction — il n'est pas possible d'accéder au tableau en cours de construction depuis la fonction de rappel.
@@ -254,14 +254,14 @@ console.log(
 La méthode `map()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 5, // ignoré par map() car length vaut 3
 };
-console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
+console.log(Array.prototype.map.call(objetSimilaireTableau, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 

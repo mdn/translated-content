@@ -115,7 +115,7 @@ counter-increment: unset;
 
 `sevens` という名前のカウンターの初期値を `100` にするために、{{cssxref("counter-reset")}} を使用します。次に、それぞれの {{HTMLElement("i")}} に対して、カウンターを `7`ずつ減らします。
 
-最初の値を `100` に設定するには、 {{cssxref(":first-of-type")}} 擬似クラスを使用して最初の `<i>` 要素を特定し、 `counter-increment: none;` を設定します。さらに、 {{cssxref("content")}} プロパティを {{cssxref("::before")}} 擬似要素で使用して、 [`counter()`](/ja/docs/Web/CSS/counter) 関数を使用してカウンターの値を表示します。
+最初の値を `100` に設定するには、 {{cssxref(":first-of-type")}} 擬似クラスを使用して最初の `<i>` 要素を特定し、 `counter-increment: none;` を設定します。さらに、 {{cssxref("content")}} プロパティを {{cssxref("::before")}} 擬似要素で使用して、 [`counter()`](/ja/docs/Web/CSS/Reference/Values/counter) 関数を使用してカウンターの値を表示します。
 
 ```css
 div {

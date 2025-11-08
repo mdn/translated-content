@@ -47,9 +47,9 @@ dataview.getFloat64(byteOffset [, littleEndian])
 ## 示例
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat64(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getFloat64(1)); // 8.20788039913184e-304
 ```
 
 ## 规范

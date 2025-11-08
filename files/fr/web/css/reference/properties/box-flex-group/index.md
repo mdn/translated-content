@@ -29,7 +29,7 @@ Si la boîte dépasse une fois que l'espace pour l'élément fils a été calcul
 
 ## Syntaxe
 
-Cette propriété est définie avec un entier positif ([`<integer>`](/fr/docs/Web/CSS/integer)).
+Cette propriété est définie avec un entier positif ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)).
 
 ## Définition formelle
 

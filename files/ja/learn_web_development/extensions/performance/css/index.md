@@ -151,7 +151,7 @@ CSSOM の構築を最適化し、ページのパフォーマンスを改善す�
 
 パフォーマンスをさらに向上させるには、アニメーションの処理をメインスレッドから端末の GPU に移動させる（合成とも呼ばれる）ことを検討してください。これは、ブラウザーが GPU に自動的に送信して処理する、特定の種類のアニメーションを選択することで実現できます。これには、次のようなものがあります。
 
-- 3D 座標変換。例えば [`transform: translateZ()`](/ja/docs/Web/CSS/Reference/Properties/transform) や [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d) など。
+- 3D 座標変換。例えば [`transform: translateZ()`](/ja/docs/Web/CSS/Reference/Properties/transform) や [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d) など。
 - 特定の他のプロパティがアニメーションする要素、たとえば [`position: fixed`](/ja/docs/Web/CSS/Reference/Properties/position) など。
 - [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) が適用されている要素（下記の節を参照）。
 - 独自のレイヤーで描画される一部の要素、例えば [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas)、 [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) など。

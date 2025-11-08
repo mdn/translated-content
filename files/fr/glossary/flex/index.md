@@ -9,7 +9,7 @@ l10n:
 
 La propriété {{CSSxRef("flex")}} est un raccourci pour les propriétés {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}} et {{CSSxRef("flex-basis")}}. Cette propriété n'est applicable qu'aux conteneurs flexibles.
 
-De plus {{CSSxRef("&lt;flex&gt;")}} peut se référer à [une longueur flexible](/fr/docs/Web/CSS/flex_value) dans une grille de mise en page CSS.
+De plus {{CSSxRef("&lt;flex&gt;")}} peut se référer à [une longueur flexible](/fr/docs/Web/CSS/Reference/Values/flex_value) dans une grille de mise en page CSS.
 
 ### Propriété CSS associées
 

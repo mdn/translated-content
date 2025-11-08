@@ -79,7 +79,7 @@ li:nth-child(even) {
     - `B` est un décalage entier,
     - `n` représente les entiers positifs à partir de 0.
 
-    Autrement dit, on cible les `An+B`-ième éléments de la liste. `A` et `B` doivent tout deux être des [valeurs entières (type CSS `<integer>`)](/fr/docs/Web/CSS/integer).
+    Autrement dit, on cible les `An+B`-ième éléments de la liste. `A` et `B` doivent tout deux être des [valeurs entières (type CSS `<integer>`)](/fr/docs/Web/CSS/Reference/Values/integer).
 
 ### La syntaxe `of <selector>`
 

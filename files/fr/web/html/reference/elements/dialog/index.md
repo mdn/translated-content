@@ -55,7 +55,7 @@ Cette boîte de dialogue est initialement ouverte en raison de la présence de l
 
 ### Création d'une boîte de dialogue modale
 
-Cet exemple montre une boîte de dialogue modale avec un [arrière-plan](/fr/docs/Web/CSS/gradient). La méthode `.showModal()` ouvre la boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou via la méthode `.close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
+Cet exemple montre une boîte de dialogue modale avec un [arrière-plan](/fr/docs/Web/CSS/Reference/Values/gradient). La méthode `.showModal()` ouvre la boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou via la méthode `.close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
 
 Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la priorité au premier élément qui peut l'être dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la priorité à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture de la boîte de dialogue.
 

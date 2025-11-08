@@ -40,7 +40,7 @@ l10n:
 
 `class` 属性は、 [ASCII ホワイトスペース](/ja/docs/Glossary/Whitespace#html_での使い方)で区切られたクラス値のリストです。
 
-それぞれのクラス値は、 Unicode 文字（もちろん、 ASCII ホワイトスペースを除く）を任意に含めることができます。ただし、 {{domxref("Document.querySelector()")}} のような API を使用して JavaScript から、あるいは CSS スタイルシート内で CSS セレクターとして使用する場合、クラス属性の値は [CSS 識別子](/ja/docs/Web/CSS/ident)として有効でなければなりません。これは、クラス属性値が有効な CSS 識別子ではない場合 (例えば、`my?class` や `1234`)、セレクターで使用する前に、 {{domxref("CSS.escape_static", "CSS.escape()")}} メソッドまたは[手動](/ja/docs/Web/CSS/ident#文字のエスケープ)でエスケープしなければならないことを意味しています。
+それぞれのクラス値は、 Unicode 文字（もちろん、 ASCII ホワイトスペースを除く）を任意に含めることができます。ただし、 {{domxref("Document.querySelector()")}} のような API を使用して JavaScript から、あるいは CSS スタイルシート内で CSS セレクターとして使用する場合、クラス属性の値は [CSS 識別子](/ja/docs/Web/CSS/Reference/Values/ident)として有効でなければなりません。これは、クラス属性値が有効な CSS 識別子ではない場合 (例えば、`my?class` や `1234`)、セレクターで使用する前に、 {{domxref("CSS.escape_static", "CSS.escape()")}} メソッドまたは[手動](/ja/docs/Web/CSS/Reference/Values/ident#文字のエスケープ)でエスケープしなければならないことを意味しています。
 
 このため、開発者は、エスケープを必要としない、有効な CSS 識別子である値をクラス属性として選ぶことをお勧めします。
 

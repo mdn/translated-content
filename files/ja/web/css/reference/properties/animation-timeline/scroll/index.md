@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`scroll()`** は [CSS 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 {{cssxref("animation-timeline")}} と共に使用することができます。 {{cssxref("animation-timeline")}} はスクロール可能な要素 (_scroller_) とスクロールバーの軸を示し、現在の要素をアニメーションさせるための無名スクロール進行タイムラインを提供します。スクロール進行タイムラインは、スクローラーを上下（または左右）にスクロールすることで進行します。スクロール範囲内の位置は進行のパーセント値に変換されます。先頭は 0% で、末尾は 100% です。
+**`scroll()`** は [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 {{cssxref("animation-timeline")}} と共に使用することができます。 {{cssxref("animation-timeline")}} はスクロール可能な要素 (_scroller_) とスクロールバーの軸を示し、現在の要素をアニメーションさせるための無名スクロール進行タイムラインを提供します。スクロール進行タイムラインは、スクローラーを上下（または左右）にスクロールすることで進行します。スクロール範囲内の位置は進行のパーセント値に変換されます。先頭は 0% で、末尾は 100% です。
 
 > [!NOTE]
 > 示された軸がスクロールバーを持たない場合、アニメーションタイムラインは非アクティブになります（進行がゼロになります）。

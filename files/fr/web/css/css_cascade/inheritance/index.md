@@ -55,7 +55,7 @@ Les mots «&nbsp;du texte en emphase&nbsp;» n'ont pas de bordure _en plus_ (car
 
 ## Notes
 
-Le mot-clé [`inherit`](/fr/docs/Web/CSS/inherit) permet d'indiquer explicitement l'héritage et fonctionne sur les propriétés héritées comme sur les propriétés non-héritées.
+Le mot-clé [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit) permet d'indiquer explicitement l'héritage et fonctionne sur les propriétés héritées comme sur les propriétés non-héritées.
 
 Il est possible de contrôler l'héritage de l'ensemble des propriétés d'un coup en utilisant la propriété raccourcie [`all`](/fr/docs/Web/CSS/Reference/Properties/all), qui applique sa valeur à toutes les propriétés. Par exemple&nbsp;:
 
@@ -94,11 +94,11 @@ On voit ici la bordure supplémentaire autour du texte en emphase.
 ## Voir aussi
 
 - Les valeurs CSS qui contrôlent l'héritage&nbsp;:
-  - [`inherit`](/fr/docs/Web/CSS/inherit)
-  - [`initial`](/fr/docs/Web/CSS/initial)
-  - [`revert`](/fr/docs/Web/CSS/revert)
+  - [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
+  - [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
+  - [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
   - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - [`unset`](/fr/docs/Web/CSS/unset)
+  - [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
 - [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade)
 - [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:

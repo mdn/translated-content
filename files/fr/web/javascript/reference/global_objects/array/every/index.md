@@ -13,9 +13,9 @@ La méthode **`every()`** des instances de {{JSxRef("Array")}} retourne `false` 
 ```js interactive-example
 const isBelowThreshold = (currentValue) => currentValue < 40;
 
-const array1 = [1, 30, 39, 29, 10, 13];
+const array = [1, 30, 39, 29, 10, 13];
 
-console.log(array1.every(isBelowThreshold));
+console.log(array.every(isBelowThreshold));
 // Sortie attendue : true
 ```
 
@@ -110,7 +110,7 @@ console.log([2, , 2].every((x) => x === 2)); // true
 La méthode `every()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length` jusqu'à ce qu'elles aient toutes été traitées ou que `callbackFn` retourne `false`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: "a",
   1: "b",
@@ -118,7 +118,10 @@ const arrayLike = {
   3: 345, // ignoré par every() car length vaut 3
 };
 console.log(
-  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+  Array.prototype.every.call(
+    objetSimilaireTableau,
+    (x) => typeof x === "string",
+  ),
 ); // true
 ```
 

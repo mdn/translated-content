@@ -71,17 +71,17 @@ min-height: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La hauteur minimale exprimée de façon absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : La hauteur minimale exprimée de façon relative à la hauteur du bloc englobant grâce à une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage).
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+  - : La hauteur minimale exprimée de façon relative à la hauteur du bloc englobant grâce à une valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage).
 - `auto`
   - : Le navigateur calcule et définit la hauteur minimale de l'élément spécifié.
 - `max-content`
   - : La hauteur intrinsèque préférée.
 - `min-content`
   - : La hauteur intrinsèque minimale préférée.
-- `fit-content` ([`<length-percentage>`](/fr/docs/Web/CSS/length-percentage))
+- `fit-content` ([`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage))
   - : Utilise la formule `fit-content()`, remplaçant l'espace disponible par l'argument passé. Par exemple&nbsp;: `min(max-content, max(min-content, argument))`.
 
 ## Définition formelle

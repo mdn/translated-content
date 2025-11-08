@@ -98,13 +98,13 @@ console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
 La méthode `reverse()` lit la propriété `length` de `this`. Elle parcourt ensuite chaque propriété ayant une clé entière entre `0` et `length / 2`, et échange les deux indices correspondants aux extrémités, en [supprimant](/fr/docs/Web/JavaScript/Reference/Operators/delete) toute propriété de destination pour laquelle la propriété source n'existait pas.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   2: 4,
   3: 33, // ignoré par reverse() car length vaut 3
 };
-console.log(Array.prototype.reverse.call(arrayLike));
+console.log(Array.prototype.reverse.call(objetSimilaireTableau));
 // { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
 // L'indice 2 est supprimé car il n'y avait pas d'indice 0 à l'origine
 // L'indice 3 est inchangé car length vaut 3

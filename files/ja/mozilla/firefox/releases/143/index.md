@@ -13,7 +13,7 @@ Firefox 143 は、米国時間 [2025 年 9 月 16 日](https://whattrainisitnow.
 
 ### HTML
 
-- [`type="color"`](/ja/docs/Web/HTML/Reference/Elements/input/color) の {{HTMLElement("input")}} 要素が `#ff6699` のような 16 進記法だけでなく、たとえば `oklab(50% 0.1 0.1 / 0.5)` などすべての CSS [`<color>`](/ja/docs/Web/CSS/color_value) 値を受け入れるようになりました ([Firefox bug 1965029](https://bugzil.la/1965029))。
+- [`type="color"`](/ja/docs/Web/HTML/Reference/Elements/input/color) の {{HTMLElement("input")}} 要素が `#ff6699` のような 16 進記法だけでなく、たとえば `oklab(50% 0.1 0.1 / 0.5)` などすべての CSS [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 値を受け入れるようになりました ([Firefox bug 1965029](https://bugzil.la/1965029))。
 
 ### CSS
 

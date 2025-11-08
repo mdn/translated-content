@@ -97,7 +97,7 @@ transform: unset;
 ### 値
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。
+  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/Reference/Values/transform-function)です。
     座標変換関数は、左から右へ順に重ねられ、つまり[右から左の順に座標変換の合成の効果が適用されます](#座標変換の順序)。
 - `none`
   - : 座標変換を何も適用しないことを指定します。

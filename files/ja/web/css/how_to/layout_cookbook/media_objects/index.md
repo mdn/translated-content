@@ -57,7 +57,7 @@ original_slug: Web/CSS/Layout_cookbook/Media_objects
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
 - [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [fit-content](/ja/docs/Web/CSS/fit-content)
+- [fit-content](/ja/docs/Web/CSS/Reference/Values/fit-content)
 - [grid-template-areas](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 
 ## ブラウザーの互換性

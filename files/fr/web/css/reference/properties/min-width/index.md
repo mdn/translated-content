@@ -73,9 +73,9 @@ min-width: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La largeur minimale sous la forme d'une valeur absolue. Une largeur négative rendra la déclaration invalide.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : La largeur minimale, exprimée comme une fraction de la largeur du bloc englobant. Les valeurs négatives rendront la déclaration invalide.
 - `auto`
   - : Le navigateur calculera et sélectionnera une valeur de `min-width` pour l'élément ciblé.
@@ -84,7 +84,7 @@ min-width: unset;
 - `min-content`
   - : La valeur intrinsèque minimale pour `min-width`.
 - `fit-content(<length-percentage>)`
-  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) pour le type de valeur qui peut être utilisée en argument.
+  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage) pour le type de valeur qui peut être utilisée en argument.
 
 ## Définition formelle
 

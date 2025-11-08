@@ -183,14 +183,16 @@ console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
 La méthode `filter()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: "a",
   1: "b",
   2: "c",
   3: "a", // ignoré par filter() car length vaut 3
 };
-console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+console.log(
+  Array.prototype.filter.call(objetSimilaireTableau, (x) => x <= "b"),
+);
 // [ 'a', 'b' ]
 ```
 

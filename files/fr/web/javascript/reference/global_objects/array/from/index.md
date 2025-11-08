@@ -11,7 +11,7 @@ La méthode statique **`Array.from()`** crée une nouvelle instance d'`Array` (c
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.from()", "shorter")}}
 
 ```js interactive-example
-console.log(Array.from("foo"));
+console.log(Array.from("toto"));
 // Sortie attendue : Array ["f", "o", "o"]
 
 console.log(Array.from([1, 2, 3], (x) => x + x));
@@ -66,16 +66,16 @@ La méthode `Array.from()` est une méthode de fabrique générique. Par exemple
 ### Tableau à partir d'une chaîne de caractères
 
 ```js
-Array.from("foo");
-// [ "f", "o", "o" ]
+Array.from("toto");
+// [ "t", "o", "t", "o" ]
 ```
 
 ### Tableau à partir d'un ensemble
 
 ```js
-const set = new Set(["foo", "bar", "baz", "foo"]);
-Array.from(set);
-// [ "foo", "bar", "baz" ]
+const collection = new Set(["toto", "tata", "tati", "toto"]);
+Array.from(collection);
+// [ "toto", "tata", "tati" ]
 ```
 
 ### Tableau à partir d'une table de correspondance
@@ -171,9 +171,9 @@ function NotArray(len) {
 }
 
 // Objet itérable
-console.log(Array.from.call(NotArray, new Set(["toto", "tata", "baz"])));
+console.log(Array.from.call(NotArray, new Set(["toto", "tata", "tati"])));
 // NotArray appelé avec la longueur undefined
-// NotArray { '0': 'toto', '1': 'tata', '2': 'baz', length: 3 }
+// NotArray { '0': 'toto', '1': 'tata', '2': 'tati', length: 3 }
 
 // Objet semblable à un tableau
 console.log(Array.from.call(NotArray, { length: 1, 0: "toto" }));

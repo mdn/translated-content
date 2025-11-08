@@ -226,7 +226,7 @@ h1 {
 
 Le problème avec l'approche précédente est qu'elle empêche de zoomer le texte dimensionné à l'aide de l'unité `vw` (car la taille du texte est toujours relative à celle de la zone d'affichage). **Aussi, il ne faut jamais dimensionner du texte en utilisant uniquement des unités relatives à la zone d'affichage.**
 
-Une solution consiste à utiliser [`calc()`](/fr/docs/Web/CSS/calc). En ajoutant la valeur exprimée `vw` à une valeur exprimée dans une unité fixe (comme `em` ou `rem`), on pourra zoomer sur le texte. La valeur en unité `vw` sera ajoutée à la valeur zoomée&nbsp;:
+Une solution consiste à utiliser [`calc()`](/fr/docs/Web/CSS/Reference/Values/calc). En ajoutant la valeur exprimée `vw` à une valeur exprimée dans une unité fixe (comme `em` ou `rem`), on pourra zoomer sur le texte. La valeur en unité `vw` sera ajoutée à la valeur zoomée&nbsp;:
 
 ```css
 h1 {

@@ -11,7 +11,7 @@ l10n:
 
 {{cssxref("flex")}} プロパティもあり、これはフレックスボックスの {{cssxref("flex-grow")}}、{{cssxref("flex-shrink")}}、{{cssxref("flex-basis")}} の各プロパティの一括指定です。このプロパティはフレックスコンテナーにのみ適用されます。
 
-加えて、[`<flex>`](/ja/docs/Web/CSS/flex_value) は CSS グリッドレイアウトにおいて[可変長](/ja/docs/Web/CSS/flex_value)を表すこともあります。
+加えて、[`<flex>`](/ja/docs/Web/CSS/Reference/Values/flex_value) は CSS グリッドレイアウトにおいて[可変長](/ja/docs/Web/CSS/Reference/Values/flex_value)を表すこともあります。
 
 ### 関連する CSS プロパティ
 

@@ -13,7 +13,7 @@ Firefox 143 est sorti le [16 septembre 2025 <sup>(angl.)</sup>](https://whattrai
 
 ### HTML
 
-- L'élément HTML {{HTMLElement("input")}} [`type="color"`](/fr/docs/Web/HTML/Reference/Elements/input/color) accepte désormais non seulement les couleurs HEX comme `#ff6699`, mais aussi toutes les valeurs CSS [`<color>`](/fr/docs/Web/CSS/color_value), par exemple `oklab(50% 0.1 0.1 / 0.5)`. ([Bogue Firefox 1965029 <sup>(angl.)</sup>](https://bugzil.la/1965029)).
+- L'élément HTML {{HTMLElement("input")}} [`type="color"`](/fr/docs/Web/HTML/Reference/Elements/input/color) accepte désormais non seulement les couleurs HEX comme `#ff6699`, mais aussi toutes les valeurs CSS [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), par exemple `oklab(50% 0.1 0.1 / 0.5)`. ([Bogue Firefox 1965029 <sup>(angl.)</sup>](https://bugzil.la/1965029)).
 
 ### CSS
 

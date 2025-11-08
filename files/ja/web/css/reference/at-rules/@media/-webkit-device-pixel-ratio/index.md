@@ -18,7 +18,7 @@ l10n:
 ### 値
 
 - {{cssxref("&lt;number&gt;")}}
-  - : CSS の [`px`](/ja/docs/Web/CSS/length#absolute_length_units) を表すために使われるデバイスピクセルの数です。この値は `<number>` であり、構文的に単位を許可しておらず、暗黙の単位は [`dppx`](/ja/docs/Web/CSS/resolution#units) です。
+  - : CSS の [`px`](/ja/docs/Web/CSS/Reference/Values/length#absolute_length_units) を表すために使われるデバイスピクセルの数です。この値は `<number>` であり、構文的に単位を許可しておらず、暗黙の単位は [`dppx`](/ja/docs/Web/CSS/Reference/Values/resolution#units) です。
 
 ## 実装
 

@@ -11,7 +11,7 @@ Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la co
 > [!NOTE]
 > Il est important de [bien utiliser les couleurs](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely). Choisissez toujours des couleurs appropriées, assurez-vous que le contraste entre le texte et l'arrière-plan est suffisant pour la lisibilité, et gardez à l'esprit les besoins des personnes ayant des capacités visuelles différentes.
 
-Pour en savoir plus sur les couleurs CSS en tant que type de donnée, voir la référence du [type de donnée CSS `<color>`](/fr/docs/Web/CSS/color_value) et le [guide des valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values).
+Pour en savoir plus sur les couleurs CSS en tant que type de donnée, voir la référence du [type de donnée CSS `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) et le [guide des valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values).
 
 ## Propriétés qui peuvent avoir une couleur
 
@@ -33,7 +33,7 @@ Lorsqu'un élément est rendu, ces propriétés déterminent la couleur du texte
   - : Configure un effet d'ombre appliqué au texte. Parmi les options figure la couleur de base de l'ombre (ensuite estompée et mélangée à l'arrière-plan selon les autres paramètres). Voir [Ombres portées sur le texte](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) pour en savoir plus.
 
 - {{cssxref("text-decoration-color")}}
-  - : Par défaut, les décorations de texte (soulignement, barré, etc.) utilisent [`currentColor`](/fr/docs/Web/CSS/color_value#mot-clé_currentcolor), qui représente la valeur actuelle de `color`. Vous pouvez remplacer cette valeur avec `text-decoration-color` pour choisir une autre couleur.
+  - : Par défaut, les décorations de texte (soulignement, barré, etc.) utilisent [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), qui représente la valeur actuelle de `color`. Vous pouvez remplacer cette valeur avec `text-decoration-color` pour choisir une autre couleur.
 
 - {{cssxref("text-emphasis-color")}}
   - : La couleur pour le rendu des symboles d'emphase adjacents à chaque caractère du texte. Principalement utilisée pour les langues d'Asie de l'Est.
@@ -131,7 +131,7 @@ div {
 
 La classe `.conteneur` applique des styles au {{HTMLElement("div")}} englobant le contenu. Elle fixe la hauteur avec {{cssxref("height")}}. La largeur du bloc par défaut vaut 100% de son parent. En définissant {{cssxref("display")}} à `flex` et un {{cssxref("gap")}} de `10px`, on crée un conteneur flex qui aligne les enfants côte à côte avec un espacement. On utilise {{cssxref("flex")}} pour permettre aux enfants de grandir et remplir le conteneur&nbsp;; cela n'affecte pas le conteneur lui-même.
 
-Point central ici&nbsp;: la propriété {{cssxref("border")}} définit une bordure autour de l'élément, ligne pleine de 6 pixels en [couleur nommée](/fr/docs/Web/CSS/named-color) `mediumturquoise`.
+Point central ici&nbsp;: la propriété {{cssxref("border")}} définit une bordure autour de l'élément, ligne pleine de 6 pixels en [couleur nommée](/fr/docs/Web/CSS/Reference/Values/named-color) `mediumturquoise`.
 
 Dans le conteneur, on a une boîte gauche et une boîte droite.
 
@@ -190,7 +190,7 @@ CSS n'est pas la seule technologie Web à gérer la couleur. Par exemple&nbsp;:
 
 ## Voir aussi
 
-- Type de donnée [`<color>`](/fr/docs/Web/CSS/color_value)
+- Type de donnée [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
 - [Bien utiliser les couleurs](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - Le module [Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)

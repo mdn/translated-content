@@ -20074,15 +20074,6 @@
       "TestUser"
     ]
   },
-  "Web/CSS/-moz-image-rect": {
-    "modified": "2020-10-15T21:37:22.128Z",
-    "contributors": [
-      "SphinxKnight",
-      "mrstork",
-      "teoli",
-      "pixoux"
-    ]
-  },
   "Web/CSS/CSSOM_view": {
     "modified": "2020-10-15T21:47:55.001Z",
     "contributors": [
@@ -21100,12 +21091,6 @@
   },
   "Web/CSS/CSS_values_and_units": {
     "modified": "2019-04-06T13:14:19.030Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_values_and_units/CSS_data_types": {
-    "modified": "2019-07-12T07:45:36.764Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -26426,32 +26411,28 @@
       "FredB"
     ]
   },
-  "Web/CSS/Reference/Webkit_extensions": {
-    "modified": "2019-10-07T02:42:25.089Z",
-    "contributors": [
-      "Lo_h",
-      "SphinxKnight",
-      "ExE-Boss",
-      "Goofy",
-      "louuis"
-    ]
-  },
-  "Web/CSS/Tutorials": {
-    "modified": "2019-04-06T13:11:04.601Z",
+  "Web/CSS/Reference/Values/-moz-image-rect": {
+    "modified": "2020-10-15T21:37:22.128Z",
     "contributors": [
       "SphinxKnight",
-      "Oliviermoz",
+      "mrstork",
       "teoli",
-      "Axel_Viala"
+      "pixoux"
     ]
   },
-  "Web/CSS/alpha-value": {
+  "Web/CSS/Reference/Values/Data_types": {
+    "modified": "2019-07-12T07:45:36.764Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Values/alpha-value": {
     "modified": "2019-10-29T08:59:32.213Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/angle": {
+  "Web/CSS/Reference/Values/angle": {
     "modified": "2020-10-15T21:08:35.880Z",
     "contributors": [
       "SphinxKnight",
@@ -26464,13 +26445,13 @@
       "tregagnon"
     ]
   },
-  "Web/CSS/angle-percentage": {
+  "Web/CSS/Reference/Values/angle-percentage": {
     "modified": "2020-10-15T22:14:23.636Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/attr": {
+  "Web/CSS/Reference/Values/attr": {
     "modified": "2020-11-04T08:51:39.350Z",
     "contributors": [
       "chrisdavidmills",
@@ -26485,13 +26466,13 @@
       "philippe97"
     ]
   },
-  "Web/CSS/basic-shape": {
+  "Web/CSS/Reference/Values/basic-shape": {
     "modified": "2020-10-15T21:46:24.284Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/blend-mode": {
+  "Web/CSS/Reference/Values/blend-mode": {
     "modified": "2020-10-15T21:32:22.353Z",
     "contributors": [
       "SphinxKnight",
@@ -26500,7 +26481,7 @@
       "fscholz"
     ]
   },
-  "Web/CSS/calc": {
+  "Web/CSS/Reference/Values/calc": {
     "modified": "2020-11-04T09:09:07.893Z",
     "contributors": [
       "chrisdavidmills",
@@ -26517,14 +26498,14 @@
       "FredB"
     ]
   },
-  "Web/CSS/clamp": {
+  "Web/CSS/Reference/Values/clamp": {
     "modified": "2020-11-05T09:58:32.959Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/color_value": {
+  "Web/CSS/Reference/Values/color_value": {
     "modified": "2020-10-15T21:15:21.928Z",
     "contributors": [
       "SphinxKnight",
@@ -26538,28 +26519,28 @@
       "BenoitL"
     ]
   },
-  "Web/CSS/counter": {
+  "Web/CSS/Reference/Values/counter": {
     "modified": "2020-11-09T07:18:11.964Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/counters": {
+  "Web/CSS/Reference/Values/counters": {
     "modified": "2020-11-09T07:19:24.761Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/cross-fade": {
+  "Web/CSS/Reference/Values/cross-fade": {
     "modified": "2020-11-09T07:22:14.922Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/custom-ident": {
+  "Web/CSS/Reference/Values/custom-ident": {
     "modified": "2019-08-05T13:45:05.582Z",
     "contributors": [
       "SphinxKnight",
@@ -26568,159 +26549,159 @@
       "FredB"
     ]
   },
-  "Web/CSS/dimension": {
+  "Web/CSS/Reference/Values/dimension": {
     "modified": "2020-10-15T22:14:27.905Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/display-box": {
+  "Web/CSS/Reference/Values/display-box": {
     "modified": "2020-10-15T22:10:05.031Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/display-inside": {
+  "Web/CSS/Reference/Values/display-inside": {
     "modified": "2020-10-15T22:09:59.712Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/display-internal": {
+  "Web/CSS/Reference/Values/display-internal": {
     "modified": "2020-10-15T22:10:02.353Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/display-legacy": {
+  "Web/CSS/Reference/Values/display-legacy": {
     "modified": "2020-10-15T22:10:07.242Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/display-listitem": {
+  "Web/CSS/Reference/Values/display-listitem": {
     "modified": "2020-10-15T22:10:07.777Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/display-outside": {
+  "Web/CSS/Reference/Values/display-outside": {
     "modified": "2020-10-15T22:10:04.504Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/easing-function": {
+  "Web/CSS/Reference/Values/easing-function": {
     "modified": "2020-10-15T21:46:31.385Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/element": {
+  "Web/CSS/Reference/Values/element": {
     "modified": "2020-11-10T11:06:03.387Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/env": {
+  "Web/CSS/Reference/Values/env": {
     "modified": "2020-11-10T11:09:42.633Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function": {
+  "Web/CSS/Reference/Values/filter-function": {
     "modified": "2019-04-26T03:07:50.831Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/blur": {
+  "Web/CSS/Reference/Values/filter-function/blur": {
     "modified": "2020-11-05T09:45:36.368Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/brightness": {
+  "Web/CSS/Reference/Values/filter-function/brightness": {
     "modified": "2020-11-05T09:57:14.227Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/contrast": {
+  "Web/CSS/Reference/Values/filter-function/contrast": {
     "modified": "2020-11-09T07:20:47.447Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/drop-shadow": {
+  "Web/CSS/Reference/Values/filter-function/drop-shadow": {
     "modified": "2020-11-10T10:58:25.362Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/grayscale": {
+  "Web/CSS/Reference/Values/filter-function/grayscale": {
     "modified": "2020-11-10T11:18:37.733Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/hue-rotate": {
+  "Web/CSS/Reference/Values/filter-function/hue-rotate": {
     "modified": "2020-11-16T08:50:37.620Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/invert": {
+  "Web/CSS/Reference/Values/filter-function/invert": {
     "modified": "2020-11-16T08:55:25.015Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/opacity": {
+  "Web/CSS/Reference/Values/filter-function/opacity": {
     "modified": "2020-11-16T09:07:46.418Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/saturate": {
+  "Web/CSS/Reference/Values/filter-function/saturate": {
     "modified": "2020-11-30T10:11:43.128Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/filter-function/sepia": {
+  "Web/CSS/Reference/Values/filter-function/sepia": {
     "modified": "2020-11-30T10:24:25.787Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/fit-content": {
+  "Web/CSS/Reference/Values/fit-content": {
     "modified": "2020-10-15T21:50:10.072Z",
     "contributors": [
       "SphinxKnight",
       "lp177"
     ]
   },
-  "Web/CSS/flex_value": {
+  "Web/CSS/Reference/Values/flex_value": {
     "modified": "2020-10-15T21:50:03.779Z",
     "contributors": [
       "SphinxKnight",
       "xdelatour"
     ]
   },
-  "Web/CSS/frequency": {
+  "Web/CSS/Reference/Values/frequency": {
     "modified": "2020-10-15T21:24:47.689Z",
     "contributors": [
       "SphinxKnight",
@@ -26732,19 +26713,19 @@
       "Goofy"
     ]
   },
-  "Web/CSS/frequency-percentage": {
+  "Web/CSS/Reference/Values/frequency-percentage": {
     "modified": "2020-10-15T22:14:25.485Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/gradient": {
+  "Web/CSS/Reference/Values/gradient": {
     "modified": "2020-10-15T21:46:27.099Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/image": {
+  "Web/CSS/Reference/Values/image": {
     "modified": "2020-10-15T21:08:52.732Z",
     "contributors": [
       "SphinxKnight",
@@ -26757,7 +26738,7 @@
       "Goofy"
     ]
   },
-  "Web/CSS/inherit": {
+  "Web/CSS/Reference/Values/inherit": {
     "modified": "2020-10-15T21:16:37.390Z",
     "contributors": [
       "SphinxKnight",
@@ -26769,7 +26750,7 @@
       "Fredchat"
     ]
   },
-  "Web/CSS/initial": {
+  "Web/CSS/Reference/Values/initial": {
     "modified": "2020-10-15T21:16:37.376Z",
     "contributors": [
       "SphinxKnight",
@@ -26782,7 +26763,7 @@
       "Kyodev"
     ]
   },
-  "Web/CSS/integer": {
+  "Web/CSS/Reference/Values/integer": {
     "modified": "2020-10-15T21:04:03.191Z",
     "contributors": [
       "SphinxKnight",
@@ -26794,7 +26775,7 @@
       "Goofy"
     ]
   },
-  "Web/CSS/length": {
+  "Web/CSS/Reference/Values/length": {
     "modified": "2020-10-15T21:15:22.701Z",
     "contributors": [
       "SphinxKnight",
@@ -26812,27 +26793,27 @@
       "Kyodev"
     ]
   },
-  "Web/CSS/length-percentage": {
+  "Web/CSS/Reference/Values/length-percentage": {
     "modified": "2020-10-15T22:14:28.822Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/max": {
+  "Web/CSS/Reference/Values/max": {
     "modified": "2020-11-16T09:02:34.879Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/min": {
+  "Web/CSS/Reference/Values/min": {
     "modified": "2020-11-16T09:04:19.879Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/minmax": {
+  "Web/CSS/Reference/Values/minmax": {
     "modified": "2020-11-16T09:06:07.004Z",
     "contributors": [
       "chrisdavidmills",
@@ -26841,7 +26822,7 @@
       "lp177"
     ]
   },
-  "Web/CSS/number": {
+  "Web/CSS/Reference/Values/number": {
     "modified": "2020-10-15T21:15:34.930Z",
     "contributors": [
       "SphinxKnight",
@@ -26854,7 +26835,7 @@
       "BenoitL"
     ]
   },
-  "Web/CSS/percentage": {
+  "Web/CSS/Reference/Values/percentage": {
     "modified": "2020-10-15T21:15:29.581Z",
     "contributors": [
       "SphinxKnight",
@@ -26867,13 +26848,13 @@
       "BenoitL"
     ]
   },
-  "Web/CSS/position_value": {
+  "Web/CSS/Reference/Values/position_value": {
     "modified": "2020-10-15T21:46:27.417Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/ratio": {
+  "Web/CSS/Reference/Values/ratio": {
     "modified": "2020-10-15T21:21:46.974Z",
     "contributors": [
       "SphinxKnight",
@@ -26882,14 +26863,14 @@
       "FredB"
     ]
   },
-  "Web/CSS/repeat": {
+  "Web/CSS/Reference/Values/repeat": {
     "modified": "2020-11-18T14:44:25.185Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/resolution": {
+  "Web/CSS/Reference/Values/resolution": {
     "modified": "2020-10-15T21:24:52.090Z",
     "contributors": [
       "SphinxKnight",
@@ -26902,20 +26883,20 @@
       "FredB"
     ]
   },
-  "Web/CSS/revert": {
+  "Web/CSS/Reference/Values/revert": {
     "modified": "2020-10-15T21:42:54.151Z",
     "contributors": [
       "SphinxKnight",
       "Zefling"
     ]
   },
-  "Web/CSS/shape": {
+  "Web/CSS/Reference/Values/shape": {
     "modified": "2020-10-15T21:46:30.260Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/string": {
+  "Web/CSS/Reference/Values/string": {
     "modified": "2020-10-15T21:10:36.585Z",
     "contributors": [
       "SphinxKnight",
@@ -26925,14 +26906,14 @@
       "ThePrisoner"
     ]
   },
-  "Web/CSS/symbols": {
+  "Web/CSS/Reference/Values/symbols": {
     "modified": "2020-11-30T10:29:26.349Z",
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
     ]
   },
-  "Web/CSS/time": {
+  "Web/CSS/Reference/Values/time": {
     "modified": "2020-10-15T21:04:47.409Z",
     "contributors": [
       "SphinxKnight",
@@ -26944,13 +26925,13 @@
       "tregagnon"
     ]
   },
-  "Web/CSS/time-percentage": {
+  "Web/CSS/Reference/Values/time-percentage": {
     "modified": "2020-10-15T22:14:23.852Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/transform-function": {
+  "Web/CSS/Reference/Values/transform-function": {
     "modified": "2020-10-15T21:42:33.342Z",
     "contributors": [
       "SphinxKnight",
@@ -26958,7 +26939,7 @@
       "mrstork"
     ]
   },
-  "Web/CSS/transform-function/matrix": {
+  "Web/CSS/Reference/Values/transform-function/matrix": {
     "modified": "2020-11-16T08:59:24.432Z",
     "contributors": [
       "chrisdavidmills",
@@ -26966,7 +26947,7 @@
       "stephane-tessier"
     ]
   },
-  "Web/CSS/transform-function/matrix3d": {
+  "Web/CSS/Reference/Values/transform-function/matrix3d": {
     "modified": "2020-11-16T09:01:09.677Z",
     "contributors": [
       "chrisdavidmills",
@@ -26974,7 +26955,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/perspective": {
+  "Web/CSS/Reference/Values/transform-function/perspective": {
     "modified": "2020-11-16T09:10:28.191Z",
     "contributors": [
       "chrisdavidmills",
@@ -26982,7 +26963,7 @@
       "mrstork"
     ]
   },
-  "Web/CSS/transform-function/rotate": {
+  "Web/CSS/Reference/Values/transform-function/rotate": {
     "modified": "2020-11-19T16:05:47.321Z",
     "contributors": [
       "chrisdavidmills",
@@ -26991,7 +26972,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/rotate3d": {
+  "Web/CSS/Reference/Values/transform-function/rotate3d": {
     "modified": "2020-11-19T16:07:17.057Z",
     "contributors": [
       "chrisdavidmills",
@@ -27001,7 +26982,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/rotateX": {
+  "Web/CSS/Reference/Values/transform-function/rotateX": {
     "modified": "2020-11-19T16:08:58.335Z",
     "contributors": [
       "chrisdavidmills",
@@ -27009,7 +26990,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/rotateY": {
+  "Web/CSS/Reference/Values/transform-function/rotateY": {
     "modified": "2020-11-19T16:09:55.866Z",
     "contributors": [
       "chrisdavidmills",
@@ -27017,7 +26998,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/rotateZ": {
+  "Web/CSS/Reference/Values/transform-function/rotateZ": {
     "modified": "2020-11-30T10:07:33.024Z",
     "contributors": [
       "chrisdavidmills",
@@ -27025,7 +27006,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/scale": {
+  "Web/CSS/Reference/Values/transform-function/scale": {
     "modified": "2020-11-30T10:15:36.688Z",
     "contributors": [
       "chrisdavidmills",
@@ -27035,7 +27016,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/scale3d": {
+  "Web/CSS/Reference/Values/transform-function/scale3d": {
     "modified": "2020-11-30T10:19:17.844Z",
     "contributors": [
       "chrisdavidmills",
@@ -27044,7 +27025,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/scaleX": {
+  "Web/CSS/Reference/Values/transform-function/scaleX": {
     "modified": "2020-11-30T10:20:33.117Z",
     "contributors": [
       "chrisdavidmills",
@@ -27052,7 +27033,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/scaleY": {
+  "Web/CSS/Reference/Values/transform-function/scaleY": {
     "modified": "2020-11-30T10:21:46.233Z",
     "contributors": [
       "chrisdavidmills",
@@ -27060,7 +27041,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/scaleZ": {
+  "Web/CSS/Reference/Values/transform-function/scaleZ": {
     "modified": "2020-11-30T10:23:37.630Z",
     "contributors": [
       "chrisdavidmills",
@@ -27068,7 +27049,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/skew": {
+  "Web/CSS/Reference/Values/transform-function/skew": {
     "modified": "2020-11-30T10:25:40.996Z",
     "contributors": [
       "chrisdavidmills",
@@ -27076,7 +27057,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/skewX": {
+  "Web/CSS/Reference/Values/transform-function/skewX": {
     "modified": "2020-11-30T10:27:10.768Z",
     "contributors": [
       "chrisdavidmills",
@@ -27085,7 +27066,7 @@
       "prayash"
     ]
   },
-  "Web/CSS/transform-function/translate": {
+  "Web/CSS/Reference/Values/transform-function/translate": {
     "modified": "2020-11-30T10:30:22.993Z",
     "contributors": [
       "chrisdavidmills",
@@ -27093,7 +27074,7 @@
       "mrstork"
     ]
   },
-  "Web/CSS/transform-function/translate3d": {
+  "Web/CSS/Reference/Values/transform-function/translate3d": {
     "modified": "2020-11-30T12:56:47.640Z",
     "contributors": [
       "chrisdavidmills",
@@ -27102,7 +27083,7 @@
       "mrstork"
     ]
   },
-  "Web/CSS/transform-function/translateY": {
+  "Web/CSS/Reference/Values/transform-function/translateY": {
     "modified": "2020-11-30T13:01:02.374Z",
     "contributors": [
       "chrisdavidmills",
@@ -27110,7 +27091,7 @@
       "mrstork"
     ]
   },
-  "Web/CSS/transform-function/translateZ": {
+  "Web/CSS/Reference/Values/transform-function/translateZ": {
     "modified": "2020-11-30T13:02:52.702Z",
     "contributors": [
       "chrisdavidmills",
@@ -27118,22 +27099,41 @@
       "mrstork"
     ]
   },
-  "Web/CSS/unset": {
+  "Web/CSS/Reference/Values/unset": {
     "modified": "2020-10-15T21:40:50.115Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/url_function": {
+  "Web/CSS/Reference/Values/url_function": {
     "modified": "2020-10-15T22:20:27.752Z",
     "contributors": [
       "SphinxKnight"
     ]
   },
-  "Web/CSS/var": {
+  "Web/CSS/Reference/Values/var": {
     "modified": "2020-10-15T21:42:32.805Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "Web/CSS/Reference/Webkit_extensions": {
+    "modified": "2019-10-07T02:42:25.089Z",
+    "contributors": [
+      "Lo_h",
+      "SphinxKnight",
+      "ExE-Boss",
+      "Goofy",
+      "louuis"
+    ]
+  },
+  "Web/CSS/Tutorials": {
+    "modified": "2019-04-06T13:11:04.601Z",
+    "contributors": [
+      "SphinxKnight",
+      "Oliviermoz",
+      "teoli",
+      "Axel_Viala"
     ]
   },
   "Web/HTML": {

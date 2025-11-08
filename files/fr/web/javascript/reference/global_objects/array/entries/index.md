@@ -11,14 +11,14 @@ La méthode **`entries()`** des instances de {{JSxRef("Array")}} retourne un nou
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.entries()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-const iterator1 = array1.entries();
+const iterator = array.entries();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Sortie attendue : Array [0, "a"]
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Sortie attendue : Array [1, "b"]
 ```
 
@@ -90,14 +90,14 @@ for (const element of [, "a"].entries()) {
 La méthode `entries()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: "a",
   1: "b",
   2: "c",
   3: "d", // ignoré par entries() car length vaut 3
 };
-for (const entry of Array.prototype.entries.call(arrayLike)) {
+for (const entry of Array.prototype.entries.call(objetSimilaireTableau)) {
   console.log(entry);
 }
 // [ 0, 'a' ]

@@ -99,7 +99,7 @@ perspective-origin: 500% 200%;
 }
 ```
 
-**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 変換関数とは異なります。
+**`perspective-origin`** および {{cssxref('perspective')}} の各プロパティは、三次元空間で座標変換される子の親に設定するものであり、座標変換される要素に設定される [`perspective()`](/ja/docs/Web/CSS/Reference/Values/transform-function/perspective) 変換関数とは異なります。
 
 ## 構文
 
@@ -166,4 +166,4 @@ perspective-origin: unset;
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [`transform: perspective()`](/ja/docs/Web/CSS/transform-function/perspective) 関数
+- [`transform: perspective()`](/ja/docs/Web/CSS/Reference/Values/transform-function/perspective) 関数

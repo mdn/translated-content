@@ -86,7 +86,7 @@ dialog::backdrop {
 
 #### CSS
 
-[CSS グラデーション](/ja/docs/Web/CSS/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
+[CSS グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
 
 ```css
 ::backdrop {

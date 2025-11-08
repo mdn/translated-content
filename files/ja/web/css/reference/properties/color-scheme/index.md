@@ -15,7 +15,7 @@ l10n:
 
 要素の作成者は、[`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディア特性を使用して、残りの要素の色構成に対応する必要があります。
 
-オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/system-color)の使用値が含まれます。
+オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/Reference/Values/system-color)の使用値が含まれます。
 
 {{InteractiveExample("CSS デモ: color-scheme")}}
 
@@ -136,7 +136,7 @@ footer {
 }
 ```
 
-また、 [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
+また、 [`light-dark()`](/ja/docs/Web/CSS/Reference/Values/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/Reference/Values/Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
 
 ```css
 :root {

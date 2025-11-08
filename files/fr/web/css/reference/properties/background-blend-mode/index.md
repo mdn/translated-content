@@ -64,7 +64,7 @@ background-blend-mode: unset;
 ### Valeurs
 
 - `<blend-mode>`
-  - : Une valeur décrivant un mode de fusion (type [`<blend-mode>`](/fr/docs/Web/CSS/blend-mode)) qui doit être appliqué. On peut avoir plusieurs valeurs et dans ce cas, elles doivent être séparées par des virgules.
+  - : Une valeur décrivant un mode de fusion (type [`<blend-mode>`](/fr/docs/Web/CSS/Reference/Values/blend-mode)) qui doit être appliqué. On peut avoir plusieurs valeurs et dans ce cas, elles doivent être séparées par des virgules.
 
 ## Définition formelle
 
@@ -136,5 +136,5 @@ console.log(document.getElementById("div"));
 
 ## Voir aussi
 
-- [`<blend-mode>`](/fr/docs/Web/CSS/blend-mode)
+- [`<blend-mode>`](/fr/docs/Web/CSS/Reference/Values/blend-mode)
 - [`mix-blend-mode`](/fr/docs/Web/CSS/Reference/Properties/mix-blend-mode)

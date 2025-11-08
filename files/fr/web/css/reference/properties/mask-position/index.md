@@ -41,7 +41,7 @@ Cette propriété s'utilise avec une ou plusieurs valeurs de position, séparée
 ### Valeurs
 
 - `<position>`
-  - : Une position CSS (type [`<position>`](/fr/docs/Web/CSS/position_value)) qui représente une position par rapport aux côtés de la boîte de l'élément. Les décalages indiqués peuvent être relatifs ou absolus. On notera que la position obtenue peut être située en dehors de la boîte de l'élément.
+  - : Une position CSS (type [`<position>`](/fr/docs/Web/CSS/Reference/Values/position_value)) qui représente une position par rapport aux côtés de la boîte de l'élément. Les décalages indiqués peuvent être relatifs ou absolus. On notera que la position obtenue peut être située en dehors de la boîte de l'élément.
 
 ## Définition formelle
 

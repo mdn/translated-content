@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Cet outil vous permet de choisir une couleur dans l'{{Glossary("color space", "espace colorimétrique")}} sRGB et de la convertir entre différents [formats de couleurs](/fr/docs/Web/CSS/color_value) CSS, vous aidant ainsi à comprendre la syntaxe des notations de couleurs sRGB suivantes&nbsp;:
+Cet outil vous permet de choisir une couleur dans l'{{Glossary("color space", "espace colorimétrique")}} sRGB et de la convertir entre différents [formats de couleurs](/fr/docs/Web/CSS/Reference/Values/color_value) CSS, vous aidant ainsi à comprendre la syntaxe des notations de couleurs sRGB suivantes&nbsp;:
 
 - {{cssxref("hex-color")}}, une _représentation hexadécimale d'une couleur_ [sRVB](/fr/docs/Glossary/RGB) utilisant ses composantes de couleur primaires (rouge, vert, bleu) écrites sous forme de nombres hexadécimaux, ainsi que sa transparence.
 - {{CSSxRef("color_value/rgb", "rgb()")}}, qui définit une couleur donnée en fonction de ses composantes rouge, verte, bleue et alpha (transparence).

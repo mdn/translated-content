@@ -91,7 +91,7 @@ Nous incluons un {{htmlelement("button")}} qui, lorsqu'il est cliqué, ouvrira l
 
 #### CSS
 
-Nous ajoutons un arrière-plan à l'arrière-plan, créant un donut coloré à l'aide de [dégradés CSS](/fr/docs/Web/CSS/gradient)&nbsp;:
+Nous ajoutons un arrière-plan à l'arrière-plan, créant un donut coloré à l'aide de [dégradés CSS](/fr/docs/Web/CSS/Reference/Values/gradient)&nbsp;:
 
 ```css
 ::backdrop {

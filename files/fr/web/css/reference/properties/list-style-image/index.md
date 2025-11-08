@@ -95,7 +95,7 @@ list-style-image: unset;
 
 ### Valeurs
 
-- [`<image>`](/fr/docs/Web/CSS/image)
+- [`<image>`](/fr/docs/Web/CSS/Reference/Values/image)
   - : Une valeur représentant une image valide, qui sera utilisée comme puce.
 - `none`
   - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) sera utilisé à la place.

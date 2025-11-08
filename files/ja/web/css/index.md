@@ -30,7 +30,7 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)と[継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)と[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)、[擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)、[入れ子](/ja/docs/Web/CSS/CSS_nesting)、[スコープ化](/ja/docs/Web/CSS/CSS_scoping)、[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)
 - [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)（[メディア](/ja/docs/Web/CSS/CSS_media_queries)や[コンテナー](/ja/docs/Web/CSS/CSS_containment)クエリーを含む）
-- [CSS 単位と値](/ja/docs/Web/CSS/CSS_values_and_units)および[関数記法](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS 単位と値](/ja/docs/Web/CSS/CSS_values_and_units)および[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト

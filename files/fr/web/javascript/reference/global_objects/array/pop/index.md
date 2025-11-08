@@ -56,13 +56,13 @@ La méthode `pop()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_O
 Le code suivant crée le tableau `mesPoissons` qui contient quatre éléments puis supprime le dernier élément.
 
 ```js
-const myFish = ["ange", "clown", "mandarin", "esturgeon"];
+const mesPoissons = ["ange", "clown", "mandarin", "esturgeon"];
 
-const popped = myFish.pop();
+const retire = mesPoissons.pop();
 
-console.log(myFish); // ['ange', 'clown', 'mandarin']
+console.log(mesPoissons); // ['ange', 'clown', 'mandarin']
 
-console.log(popped); // 'esturgeon'
+console.log(retire); // 'esturgeon'
 ```
 
 ### Appeler `pop()` sur un objet qui n'est pas un tableau
@@ -70,14 +70,14 @@ console.log(popped); // 'esturgeon'
 La méthode `pop()` lit la propriété `length` de `this`. Si la [longueur normalisée](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#normalisation_de_la_propriété_length) est 0, `length` est à nouveau définie à `0` (elle peut être négative ou `undefined` auparavant). Sinon, la propriété à `length - 1` est retournée et [supprimée](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   2: 4,
 };
-console.log(Array.prototype.pop.call(arrayLike));
+console.log(Array.prototype.pop.call(objetSimilaireTableau));
 // 4
-console.log(arrayLike);
+console.log(objetSimilaireTableau);
 // { length: 2, unrelated: 'foo' }
 
 const plainObj = {};
@@ -96,7 +96,7 @@ Notez que dans cet exemple, nous ne créons pas de tableau pour stocker une coll
 ```js
 const collection = {
   length: 0,
-  addElements(...elements) {
+  ajouterElement(...elements) {
     // obj.length sera incrémenté automatiquement
     // à chaque ajout d'un élément.
 
@@ -104,7 +104,7 @@ const collection = {
     // la nouvelle valeur de la propriété length.
     return [].push.call(this, ...elements);
   },
-  removeElement() {
+  supprimerElement() {
     // obj.length sera décrémenté automatiquement
     // à chaque suppression d'un élément.
 
@@ -114,9 +114,9 @@ const collection = {
   },
 };
 
-collection.addElements(10, 20, 30);
+collection.ajouterElement(10, 20, 30);
 console.log(collection.length); // 3
-collection.removeElement();
+collection.supprimerElement();
 console.log(collection.length); // 2
 ```
 

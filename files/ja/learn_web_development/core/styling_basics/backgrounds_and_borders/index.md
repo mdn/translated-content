@@ -59,10 +59,10 @@ CSS の {{cssxref("background")}} プロパティは一括指定プロパティ�
 
 ### 背景色
 
-{{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な [`<color>`](/ja/docs/Web/CSS/color_value) 値を受け入れます。 `background-color` は、要素のコンテンツおよびパディングボックスの下に広がります。
+{{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 値を受け入れます。 `background-color` は、要素のコンテンツおよびパディングボックスの下に広がります。
 
 次の例では、さまざまな色の値を使用して、ボックス、見出し、 {{htmlelement("span")}} 要素に背景色を指定しています。
-あなた自身で、利用可能な [`<color>`](/ja/docs/Web/CSS/color_value) を使ってみましょう。
+あなた自身で、利用可能な [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) を使ってみましょう。
 
 ```html live-sample___color
 <div class="box">
@@ -288,7 +288,7 @@ span {
 
 グラデーション (gradient) は、背景に使用する場合には画像と同じようにふるまいます。グラデーションは {{cssxref("background-image")}} プロパティを使用して設定されます。
 
-[`<gradient>`](/ja/docs/Web/CSS/gradient) データ型の MDN ページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。ウェブで数多く提供されている CSS グラデーションジェネレーター、たとえば [CSSGradient.io](https://cssgradient.io/) を使用して、グラデーションを楽しく試せます。このウェブサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー & ペーストできます。
+[`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) データ型の MDN ページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。ウェブで数多く提供されている CSS グラデーションジェネレーター、たとえば [CSSGradient.io](https://cssgradient.io/) を使用して、グラデーションを楽しく試せます。このウェブサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー & ペーストできます。
 
 以下の例でいろいろなグラデーションを試してみましょう。 1 つめのボックスには、ボックス全体に広がる線形グラデーション (linear gradient) を指定しています。2 つめのボックスには、サイズを設定して（そのため繰り返されている）放射グラデーション (radial gradient) を指定しています。
 
@@ -440,7 +440,7 @@ background-position:
 
 ## 境界線
 
-[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)について学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/line-style)を指定する一括指定プロパティを使います。
+[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)について学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/Reference/Values/line-style)を指定する一括指定プロパティを使います。
 
 {{cssxref("border")}} を使用すると、ボックスの 4 辺すべてに境界線を設定できます。
 

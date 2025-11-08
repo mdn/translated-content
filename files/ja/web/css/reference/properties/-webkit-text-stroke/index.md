@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c23237c82089ca6c56946ce1be95f11646823b53
 ---
 
-**`-webkit-text-stroke`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト文字の輪郭線の[幅](/ja/docs/Web/CSS/length)と[色](/ja/docs/Web/CSS/color_value)を指定します。これは個別指定プロパティ {{cssxref("-webkit-text-stroke-width")}} および {{cssxref("-webkit-text-stroke-color")}} の一括指定プロパティです。
+**`-webkit-text-stroke`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキスト文字の輪郭線の[幅](/ja/docs/Web/CSS/Reference/Values/length)と[色](/ja/docs/Web/CSS/Reference/Values/color_value)を指定します。これは個別指定プロパティ {{cssxref("-webkit-text-stroke-width")}} および {{cssxref("-webkit-text-stroke-color")}} の一括指定プロパティです。
 
 ```css
 /* 幅と色の値 */

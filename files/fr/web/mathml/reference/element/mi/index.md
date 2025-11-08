@@ -17,15 +17,15 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#mots-cl.c3.a9s).
 - mathsize
   - : La taille du contenu. Les valeurs possibles sont :
     - `small :` La police utilisée sera plus petite que la police courante.
     - `normal :` Équivalent à 100% ou 1em.
     - `big :` La police utilisée sera plus grande que la police courante.
-    - Une [longueur quelconque](/fr/docs/Web/CSS/length).
+    - Une [longueur quelconque](/fr/docs/Web/CSS/Reference/Values/length).
     - ou une valeur sans unité qui multiplie la taille par défaut.
 
 - mathvariant (implémenté en partie : voir [bug Firefox 114365](https://bugzil.la/114365) et [bug Firefox 162405](https://bugzil.la/162405))

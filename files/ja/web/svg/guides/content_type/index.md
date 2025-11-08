@@ -107,7 +107,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## FuncIRI
 
 - \<FuncIRI>
-  - : 参照するための関数記法。この参照の構文は [CSS URI](/ja/docs/Web/CSS/url_value) と同じです。
+  - : 参照するための関数記法。この参照の構文は [CSS URI](/ja/docs/Web/CSS/Reference/Values/url_value) と同じです。
 
 ## Integer（整数）
 

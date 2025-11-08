@@ -108,10 +108,10 @@ Ces valeurs alignent l'élément verticalement, relativement à son élément pa
   - : Aligne le bas de l'élément avec le bas de la police de l'élément parent.
 - `middle`
   - : Aligne le milieu de l'élément avec la hauteur donnée par la ligne de base de l'élément parent à laquelle on ajoute la moitié de sa hauteur en x (<i lang="en">x-height</i>).
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : Aligne la ligne de base de l'élément à la hauteur de la ligne de base de l'élément parent à laquelle on ajoute la hauteur donnée. Les valeurs négatives sont autorisées.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
-  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height). Les valeurs négatives sont autorisées.
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
+  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height). Les valeurs négatives sont autorisées.
 
 #### Valeurs relatives à la ligne
 

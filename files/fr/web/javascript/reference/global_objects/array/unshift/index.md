@@ -92,13 +92,13 @@ arr.unshift([-7, -6], [-5]); // la nouvelle longueur du tableau est 8
 La méthode `unshift()` lit la propriété `length` de `this`. Elle décale tous les indices dans la plage de `0` à `length - 1` vers la droite du nombre d'arguments (en incrémentant leurs valeurs de ce nombre). Ensuite, elle définit chaque indice à partir de `0` avec les arguments passés à `unshift()`. Enfin, elle définit la propriété `length` à l'ancienne longueur plus le nombre d'éléments ajoutés au début.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   2: 4,
 };
-Array.prototype.unshift.call(arrayLike, 1, 2);
-console.log(arrayLike);
+Array.prototype.unshift.call(objetSimilaireTableau, 1, 2);
+console.log(objetSimilaireTableau);
 // { '0': 1, '1': 2, '4': 4, length: 5, unrelated: 'foo' }
 
 const plainObj = {};

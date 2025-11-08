@@ -120,7 +120,7 @@ h3 {
   animation: 3s ease-in 1s 2 reverse both paused slide-in;
   ```
 
-  例として、 [`<time>`](/ja/docs/Web/CSS/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/Reference/Properties/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/Reference/Properties/animation#構文)の詳細をご覧ください。
+  例として、 [`<time>`](/ja/docs/Web/CSS/Reference/Values/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/Reference/Properties/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/Reference/Properties/animation#構文)の詳細をご覧ください。
 
 ### 「モバイルファースト」のメディアクエリーを使う
 

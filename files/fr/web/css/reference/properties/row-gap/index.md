@@ -77,8 +77,8 @@ row-gap: unset;
 
 ### Valeurs
 
-- [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage)
-  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)) sont relatives aux dimensions de l'élément.
+- [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage)
+  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) sont relatives aux dimensions de l'élément.
 
 ## Formal definition
 
