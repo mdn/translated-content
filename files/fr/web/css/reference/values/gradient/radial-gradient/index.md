@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`radial-gradient()`** permet de créer une image CSS représentant un dégradé de couleur. Ce dégradé diffuse depuis une origine, le _centre_ du gradient. La forme du dégradé peut être un cercle ou une ellipse. La valeur renvoyée par cette fonction est un objet CSS de type {{cssxref("&lt;gradient&gt;")}}, qui est un type particulier d'{{cssxref("&lt;image&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`radial-gradient()`** permet de créer une image CSS représentant un dégradé de couleur. Ce dégradé diffuse depuis une origine, le _centre_ du gradient. La forme du dégradé peut être un cercle ou une ellipse. La valeur renvoyée par cette fonction est un objet CSS de type {{cssxref("&lt;gradient&gt;")}}, qui est un type particulier d'{{cssxref("&lt;image&gt;")}}.
 
 {{InteractiveExample("Démonstrations CSS&nbsp;: radial-gradient()")}}
 
@@ -80,9 +80,9 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
     | `farthest-side`   | Cette valeur fonctionne de façon semblable à `closest-side`, sauf que ce seront les côtés les plus éloignés qui seront utilisés.                                                                   |
     | `farthest-corner` | Valeur par défaut. Cette valeur fonctionne de façon semblable à `closest-corner`, sauf que ce sera le coin le plus éloigné du centre qui sera utilisé.                                             |
 
-    Si `<ending-shape>` est définie avec `circle`, la taille pourra être fournie explicitement avec une valeur [`<length>`](/fr/docs/Web/CSS/length), qui indique le rayon du cercle (les valeurs négatives sont invalides).
+    Si `<ending-shape>` est définie avec `circle`, la taille pourra être fournie explicitement avec une valeur [`<length>`](/fr/docs/Web/CSS/Reference/Values/length), qui indique le rayon du cercle (les valeurs négatives sont invalides).
 
-    Si `<ending-shape>` est définie avec `ellipse` (ou que cette valeur est omise), la taille pourra être indiquée explicitement avec une valeur [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage) dont les deux composantes fournissent une taille d'ellipse explicite (la première représentant le rayon horizontal et la seconde le rayon vertical). Les valeurs exprimées en pourcentages sont alors relatives à la dimension correspondante de la boîte du dégradé. Les valeurs négatives sont invalides.
+    Si `<ending-shape>` est définie avec `ellipse` (ou que cette valeur est omise), la taille pourra être indiquée explicitement avec une valeur [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage) dont les deux composantes fournissent une taille d'ellipse explicite (la première représentant le rayon horizontal et la seconde le rayon vertical). Les valeurs exprimées en pourcentages sont alors relatives à la dimension correspondante de la boîte du dégradé. Les valeurs négatives sont invalides.
 
     Lorsque le mot-clé `<ending-shape>` est omis, la forme du dégradé est déterminée par la taille indiquée. Une seule valeur `<length>` donne un cercle, tandis que deux valeurs en unités `<length-percentage>` donnent une ellipse. Une seule valeur `<percentage>` n'est pas valide.
 
@@ -93,7 +93,7 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
 
 ## Description
 
-Comme les autres formes de dégradé, un dégradé radial [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description). Autrement dit, il n'a pas de taille naturelle ou préférée ou de proportions particulières. Sa taille réelle correspondra à la taille de l'élément sur lequel il est appliqué.
+Comme les autres formes de dégradé, un dégradé radial [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description). Autrement dit, il n'a pas de taille naturelle ou préférée ou de proportions particulières. Sa taille réelle correspondra à la taille de l'élément sur lequel il est appliqué.
 
 Pour créer un dégradé radial qui se répète pour remplir son conteneur, on utilisera plutôt la fonction {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}.
 
@@ -193,7 +193,7 @@ div {
 }
 ```
 
-Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/hue) est interpolée.
+Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/Reference/Values/hue) est interpolée.
 
 ```css
 .shorter {
@@ -213,7 +213,7 @@ Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS
 }
 ```
 
-La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/hue-interpolation-method#plus_courte), ce qui signifie que la couleur passe directement du rouge au bleu en utilisant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/hue-interpolation-method#plus_longue), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus long, en traversant les verts, les jaunes et les oranges.
+La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_courte), ce qui signifie que la couleur passe directement du rouge au bleu en utilisant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_longue), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus long, en traversant les verts, les jaunes et les oranges.
 
 {{EmbedLiveSample("Interpolation avec teinte", 240, 200)}}
 

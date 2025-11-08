@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<named-color>`** correspond au nom d'une couleur, comme `red`, `blue`, `black` ou `lightseagreen`. Syntaxiquement, un `<named-color>` est équivalent à un {{CSSXRef("&lt;ident&gt;")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<named-color>`** correspond au nom d'une couleur, comme `red`, `blue`, `black` ou `lightseagreen`. Syntaxiquement, un `<named-color>` est équivalent à un {{CSSXRef("&lt;ident&gt;")}}.
 
 Une valeur `<named-color>` peut être utilisée partout où une valeur {{CSSXRef("&lt;color&gt;")}} est acceptée.
 
@@ -22,7 +22,7 @@ color: transparent;
 
 ### Valeur
 
-Les couleurs nommées comprennent les couleurs standard, ainsi que les mots-clés [`transparent`](#transparent) et [`currentColor`](/fr/docs/Web/CSS/color_value#mot-clé_currentcolor).
+Les couleurs nommées comprennent les couleurs standard, ainsi que les mots-clés [`transparent`](#transparent) et [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor).
 
 #### Couleurs standard
 

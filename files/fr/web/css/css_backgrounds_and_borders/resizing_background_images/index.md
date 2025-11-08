@@ -76,7 +76,7 @@ Comme vous pouvez le voir, le CSS est quasi-identique, seul le nom du fichier a 
 
 ## Les valeurs spéciales `contain` et `cover`
 
-En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/length)), la propriété [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
+En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)), la propriété [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
 
 ### `contain`
 

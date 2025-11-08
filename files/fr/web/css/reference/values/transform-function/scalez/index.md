@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/scaleZ
 
 {{CSSRef}}
 
-La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliquée sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliquée sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 {{InteractiveExample("CSS Demo: scaleZ()")}}
 
@@ -111,7 +111,7 @@ scaleZ(s)
 ### Valeurs
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.
 
 <table class="standard-table">
   <thead>
@@ -203,8 +203,8 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
-- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY)
+- [`scaleX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleX)
+- [`scaleY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleY)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
 - [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)

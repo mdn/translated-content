@@ -18,5 +18,5 @@ Pour tracer une courbe de Bézier quadratique, deux lignes imaginaires sont trac
 ## Voir aussi
 
 - [Courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier) sur Wikipédia
-- [Fonctions d'assouplissement de Bézier cubique en CSS](/fr/docs/Web/CSS/easing-function/cubic-bezier)
+- [Fonctions d'assouplissement de Bézier cubique en CSS](/fr/docs/Web/CSS/Reference/Values/easing-function/cubic-bezier)
 - L'attribut SVG {{SVGAttr("keySplines")}}

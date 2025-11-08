@@ -77,7 +77,7 @@ Cela comprend&nbsp;:
 
 À la suite de cette étape, chaque propriété dispose d'une [valeur définie](#valeur_définie).
 
-Notez que les mots-clés explicites de valeur par défaut ([`initial`](/fr/docs/Web/CSS/initial), [`inherit`](/fr/docs/Web/CSS/inherit), [`unset`](/fr/docs/Web/CSS/unset), [`revert`](/fr/docs/Web/CSS/revert), [`revert-layer`](/fr/docs/Web/CSS/revert-layer)) sont également résolus vers leurs valeurs correspondantes pour déterminer la [valeur définie](#valeur_définie).
+Notez que les mots-clés explicites de valeur par défaut ([`initial`](/fr/docs/Web/CSS/Reference/Values/initial), [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit), [`unset`](/fr/docs/Web/CSS/Reference/Values/unset), [`revert`](/fr/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/fr/docs/Web/CSS/revert-layer)) sont également résolus vers leurs valeurs correspondantes pour déterminer la [valeur définie](#valeur_définie).
 
 ## Étapes de traitement
 
@@ -241,7 +241,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-Alors que les trois valeurs spécifiées — `auto`, `50%` et `inherit` — sont des mots-clés et des valeurs de type {{cssxref("percentage")}}, récupérer la `width` via `window.getComputedStyle(el)["width"];` renvoie une valeur `px` d'[unité de longueur absolue](/fr/docs/Web/CSS/length#absolute_length_units)&nbsp;:
+Alors que les trois valeurs spécifiées — `auto`, `50%` et `inherit` — sont des mots-clés et des valeurs de type {{cssxref("percentage")}}, récupérer la `width` via `window.getComputedStyle(el)["width"];` renvoie une valeur `px` d'[unité de longueur absolue](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units)&nbsp;:
 
 {{ EmbedLiveSample('Example', '80%', 372) }}
 
@@ -282,6 +282,6 @@ CSS 2.0 définissait la _valeur calculée_ comme la dernière étape du calcul d
 
 ## Voir aussi
 
-- Valeurs CSS pour contrôler l'héritage&nbsp;: [`inherit`](/fr/docs/Web/CSS/inherit), [`initial`](/fr/docs/Web/CSS/initial), [`revert`](/fr/docs/Web/CSS/revert), [`revert-layer`](/fr/docs/Web/CSS/revert-layer) et [`unset`](/fr/docs/Web/CSS/unset)
+- Valeurs CSS pour contrôler l'héritage&nbsp;: [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit), [`initial`](/fr/docs/Web/CSS/Reference/Values/initial), [`revert`](/fr/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/fr/docs/Web/CSS/revert-layer) et [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
 - [Module de la cascade et de l'héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
 - [Module de la syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax)

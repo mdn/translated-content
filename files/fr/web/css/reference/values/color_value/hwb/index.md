@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hwb()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} donné selon sa teinte, sa blancheur et sa noirceur. Une composante alpha optionnelle représente l'opacité de la couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hwb()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} donné selon sa teinte, sa blancheur et sa noirceur. Une composante alpha optionnelle représente l'opacité de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: hwb()")}}
 
@@ -88,7 +88,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (totalement transparent) et `1` à `100%` (totalement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement spécifiée, elle vaut par défaut 100&nbsp;%. Si elle est présente, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
 
 > [!NOTE]
 > Les couleurs absolues `hwb()` sont sérialisées en valeurs {{CSSXref("color_value/rgb", "rgb()")}}. Les valeurs des composantes rouge, verte et bleue peuvent être arrondies lors de la sérialisation.
@@ -117,7 +117,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (totalement transparent) et `1` à `100%` (totalement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement spécifiée, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est présente, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Pour permettre la représentation complète de tout le spectre des couleurs visibles, la sortie des fonctions de couleur relatives `hwb()` est sérialisée en `color(srgb)`. Cela signifie que la consultation de la valeur de couleur de sortie via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} retourne la couleur de sortie sous forme de valeur [`color(srgb ...)`](/fr/docs/Web/CSS/color_value/color).
+> Pour permettre la représentation complète de tout le spectre des couleurs visibles, la sortie des fonctions de couleur relatives `hwb()` est sérialisée en `color(srgb)`. Cela signifie que la consultation de la valeur de couleur de sortie via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} retourne la couleur de sortie sous forme de valeur [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 ### Définition des composants de canal de sortie des couleurs relatives
 

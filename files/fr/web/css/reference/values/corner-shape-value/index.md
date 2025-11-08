@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
 
 ## Syntaxe
 
@@ -151,7 +151,7 @@ setCorners();
 {{EmbedLiveSample("value-comparison", "100%", "300")}}
 
 > [!NOTE]
-> Voir aussi l'exemple de [comparaison des valeurs de la fonction `superellipse()`](/fr/docs/Web/CSS/superellipse#comparaison_des_valeurs_superellipse).
+> Voir aussi l'exemple de [comparaison des valeurs de la fonction `superellipse()`](/fr/docs/Web/CSS/Reference/Values/superellipse#comparaison_des_valeurs_superellipse).
 
 ## Spécifications
 

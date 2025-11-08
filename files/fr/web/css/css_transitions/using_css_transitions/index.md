@@ -40,7 +40,7 @@ Les transitions CSS sont généralement contrôlées grâce à la propriété ra
 - {{cssxref("transition-duration")}}
   - : Cette propriété définit la durée de la transition. On peut définir une durée pour toutes les transitions ou une durée pour chacune des propriétés.
 - {{cssxref("transition-timing-function")}}
-  - : Cette propriété définit une fonction qui décrit la façon dont les valeurs intermédiaires sont calculées. On utilise pour cela des [fonctions de temporisation](/fr/docs/Web/CSS/easing-function).
+  - : Cette propriété définit une fonction qui décrit la façon dont les valeurs intermédiaires sont calculées. On utilise pour cela des [fonctions de temporisation](/fr/docs/Web/CSS/Reference/Values/easing-function).
 - {{cssxref("transition-delay")}}
   - : Cette propriété indique le temps à attendre entre le moment où la propriété est modifiée et le début de la transition.
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend deux couleurs ({{cssxref("&lt;color&gt;")}}) et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color-mix()`** prend deux couleurs ({{cssxref("&lt;color&gt;")}}) et retourne le résultat de leur mélange selon des proportions données, dans un espace de couleur donné.
 
 Le choix de l'espace colorimétrique est important pour obtenir le résultat souhaité. Pour les mêmes couleurs, différents espaces peuvent être plus adaptés selon le type d'interpolation recherché&nbsp;:
 
@@ -39,8 +39,8 @@ Notation fonctionnelle&nbsp;: `color-mix(<color-interpolation-method>, <color>[<
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
   - : Définit la méthode d'interpolation à utiliser pour mélanger les couleurs. Elle consiste en le mot-clé `in` suivi du nom d'un {{Glossary("color space", "espace colorimétrique")}}. Trois types sont disponibles&nbsp;:
     - `<rectangular-color-space>`&nbsp;: [`srgb`](/fr/docs/Glossary/Color_space#srgb), [`srgb-linear`](/fr/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/fr/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/fr/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/fr/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/fr/docs/Glossary/Color_space#rec2020), [`lab`](/fr/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/fr/docs/Glossary/Color_space#oklab), [`xyz`](/fr/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/fr/docs/Glossary/Color_space#xyz), et [`xyz-d65`](/fr/docs/Glossary/Color_space#xyz-d50).
-    - `<polar-color-space>`&nbsp;: [`hsl`](/fr/docs/Web/CSS/color_value/hsl), [`hwb`](/fr/docs/Web/CSS/color_value/hwb), [`lch`](/fr/docs/Web/CSS/color_value/lch), et [`oklch`](/fr/docs/Web/CSS/color_value/oklch).
-    - espace colorimétrique personnalisé&nbsp;: [`<dashed-ident>`](/fr/docs/Web/CSS/dashed-ident#using_with_color-profile) faisant référence à un [@color profile](/fr/docs/Web/CSS/Reference/At-rules/@color-profile) personnalisé
+    - `<polar-color-space>`&nbsp;: [`hsl`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/fr/docs/Web/CSS/Reference/Values/color_value/lch), et [`oklch`](/fr/docs/Web/CSS/Reference/Values/color_value/oklch).
+    - espace colorimétrique personnalisé&nbsp;: [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident#using_with_color-profile) faisant référence à un [@color profile](/fr/docs/Web/CSS/Reference/At-rules/@color-profile) personnalisé
 
     > [!NOTE]
     > Lorsque les navigateurs prendront en charge {{cssxref("@color-profile")}}, des espaces colorimétriques personnalisés pourront être utilisés. Actuellement, l'espace doit être l'un de ceux listés dans la [syntaxe formelle](#syntaxe_formelle).
@@ -57,7 +57,7 @@ Notation fonctionnelle&nbsp;: `color-mix(<color-interpolation-method>, <color>[<
     - Si `p2` est omis, alors `p2 = 100% - p1`.
     - Si `p1 = p2 = 0%`, la fonction est invalide.
     - Si `p1 + p2 ≠ 100%`, alors `p1' = p1 / (p1 + p2)` et `p2' = p2 / (p1 + p2)`, où `p1'` et `p2'` sont les valeurs normalisées.
-      - Si `p1 + p2 < 100%`, un multiplicateur alpha de `p1 + p2` est appliqué à la couleur résultante. Cela revient à mélanger avec [`transparent`](/fr/docs/Web/CSS/named-color#transparent), avec un pourcentage `pt = 100% - p1 - p2`.
+      - Si `p1 + p2 < 100%`, un multiplicateur alpha de `p1 + p2` est appliqué à la couleur résultante. Cela revient à mélanger avec [`transparent`](/fr/docs/Web/CSS/Reference/Values/named-color#transparent), avec un pourcentage `pt = 100% - p1 - p2`.
 
 ## Syntaxe formelle
 
@@ -158,7 +158,7 @@ De cette manière, la fonction `color-mix()` peut être utilisée pour ajouter d
 
 ### Utiliser l'interpolation de teinte avec `color-mix()`
 
-Cet exemple montre les méthodes d'interpolation de teinte disponibles pour la fonction `color-mix()`. Lors de l'utilisation de l'[interpolation](/fr/docs/Web/CSS/color_value#interpolation) de teinte, la teinte résultante se situe entre les valeurs de teinte des deux couleurs mélangées. La valeur diffère selon le chemin emprunté sur le cercle chromatique.
+Cet exemple montre les méthodes d'interpolation de teinte disponibles pour la fonction `color-mix()`. Lors de l'utilisation de l'[interpolation](/fr/docs/Web/CSS/Reference/Values/color_value#interpolation) de teinte, la teinte résultante se situe entre les valeurs de teinte des deux couleurs mélangées. La valeur diffère selon le chemin emprunté sur le cercle chromatique.
 
 Pour plus d'informations, voir {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 

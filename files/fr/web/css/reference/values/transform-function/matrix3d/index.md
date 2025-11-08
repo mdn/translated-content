@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/matrix3d
 
 {{CSSRef}}
 
-La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 ## Syntaxe
 
@@ -19,12 +19,12 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 ### Valeurs
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_ _a3_ _b3_ _c3_ _d3_ _d4_
-  - : Des valeurs de type [`<number>`](/fr/docs/Web/CSS/number) qui sont les coefficients de la matrice définissant la transformation linéaire.
+  - : Des valeurs de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui sont les coefficients de la matrice définissant la transformation linéaire.
 - `a4` `b4 c4`
-  - : Les coefficients de type [`<number>`](/fr/docs/Web/CSS/number) qui définissent la translation à appliquer.
+  - : Les coefficients de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui définissent la translation à appliquer.
 
 > [!NOTE]
-> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
+> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) pour les coefficients `a4`, `b4` et `c4`.
 
 <table class="standard-table">
   <thead>
@@ -187,5 +187,5 @@ body {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
 - [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

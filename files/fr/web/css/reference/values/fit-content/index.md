@@ -13,7 +13,7 @@ Le mot-clé **`fit-content`** se comporte comme `fit-content(stretch)`. En prati
 Lorsqu'elle est utilisée comme taille de boîte pour [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width), [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height), [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) et [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height), les tailles maximale et minimale se réfèrent à la taille du contenu.
 
 > [!NOTE]
-> La spécification <i lang="en">CSS Sizing</i> définit également la fonction [`fit-content`](/fr/docs/Web/CSS/fit-content_function). Cette page détaille le mot-clé.
+> La spécification <i lang="en">CSS Sizing</i> définit également la fonction [`fit-content`](/fr/docs/Web/CSS/Reference/Values/fit-content_function). Cette page détaille le mot-clé.
 
 ## Syntaxe
 

@@ -19,7 +19,7 @@ On peut définir une position grâce à deux mots-clés avec chacun un décalage
 
 Un mot-clé représente un côté de la boîte ou la ligne du centre située entre les deux bords. Ce mot-clé sera `left`, `right`, `top`, `bottom` ou `center` (ce dernier représente le milieu entre les côtés droit et gauche ou le milieu entre les côtés haut et bas selon le contexte).
 
-Le décalage peut être une valeur relative, exprimée en pourcentages (valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/length)). Les valeurs positives décalent vers la droite ou vers le bas. Les valeurs négatives décalent dans l'autre sens (vers la gauche ou vers le haut).
+Le décalage peut être une valeur relative, exprimée en pourcentages (valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) ou une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)). Les valeurs positives décalent vers la droite ou vers le bas. Les valeurs négatives décalent dans l'autre sens (vers la gauche ou vers le haut).
 
 Si un seul décalage est indiqué, ce sera le décalage horizontal. Lorsqu'un seul décalage ou mot-clé est utilisé, la valeur par défaut pour l'autre axe est `center`.
 
@@ -59,7 +59,7 @@ mot-clé valeur mot-clé valeur /* Chaque valeur indique le décalage par rappor
 
 ## Interpolation
 
-Les valeurs des coordonnées en abscisses et en ordonnées sont interpolées indépendamment. La vitesse de l'interpolation est définie par une unique fonction de temporisation ([`easing-function`](/fr/docs/Web/CSS/easing-function)), le point se déplacera donc sur une ligne.
+Les valeurs des coordonnées en abscisses et en ordonnées sont interpolées indépendamment. La vitesse de l'interpolation est définie par une unique fonction de temporisation ([`easing-function`](/fr/docs/Web/CSS/Reference/Values/easing-function)), le point se déplacera donc sur une ligne.
 
 ## Exemples
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** crée une image composée d'un dégradé dont les transitions de couleur tournent autour d'un point central (plutôt que de rayonner à partir du centre). Les dégradés coniques sont utilisés, par exemple, pour les graphiques en camembert et les {{glossary("color wheel", "roues chromatiques")}}. Le résultat de la fonction `conic-gradient()` est un objet du type de donnée {{CSSxRef("&lt;gradient&gt;")}}, qui est une forme particulière de {{CSSxRef("&lt;image&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`conic-gradient()`** crée une image composée d'un dégradé dont les transitions de couleur tournent autour d'un point central (plutôt que de rayonner à partir du centre). Les dégradés coniques sont utilisés, par exemple, pour les graphiques en camembert et les {{glossary("color wheel", "roues chromatiques")}}. Le résultat de la fonction `conic-gradient()` est un objet du type de donnée {{CSSxRef("&lt;gradient&gt;")}}, qui est une forme particulière de {{CSSxRef("&lt;image&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: conic-gradient()")}}
 
@@ -98,11 +98,11 @@ conic-gradient(
   - : Une indication d'{{Glossary("interpolation")}} qui définit la façon dont le dégradé progresse entre deux arrêts de couleur adjacents. La longueur définit le point auquel la couleur du dégradé doit être la couleur intermédiaire entre les deux couleurs d'arrêt. Si cette valeur est absente, la valeur intermédiaire est située à mi-parcours entre les deux arrêts de couleur.
 
 > [!NOTE]
-> Le rendu des arrêts de couleur dans les dégradés coniques suit les mêmes règles que pour les [arrêts de couleur dans les dégradés linéaires](/fr/docs/Web/CSS/gradient/linear-gradient#composition_dun_dégradé_linéaire).
+> Le rendu des arrêts de couleur dans les dégradés coniques suit les mêmes règles que pour les [arrêts de couleur dans les dégradés linéaires](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient#composition_dun_dégradé_linéaire).
 
 ## Description
 
-À l'instar des autres dégradés, les dégradés coniques ne possèdent pas [de dimensions intrinsèques](/fr/docs/Web/CSS/image#description) (ils n'ont pas de taille préférentielle ou de ratio)&nbsp;: la taille réelle correspondra à la taille de l'élément auquel le dégradé s'applique ou à la taille de l'image si celle-ci a une taille différente de l'élément.
+À l'instar des autres dégradés, les dégradés coniques ne possèdent pas [de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description) (ils n'ont pas de taille préférentielle ou de ratio)&nbsp;: la taille réelle correspondra à la taille de l'élément auquel le dégradé s'applique ou à la taille de l'image si celle-ci a une taille différente de l'élément.
 
 Pour créer un dégradé conique qui se répète afin de couvrir 360° (un tour complet), on utilisera plutôt la notation fonctionnelle {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}.
 
@@ -117,7 +117,7 @@ Un dégradé conique est semblable à un dégradé radial mais les transitions d
 
 ![Arrêts de couleur le long de la circonférence d'un dégradé conique d'une part et axe d'un dégradé radial d'autre part.](screenshot_2018-11-29_21.09.19.png)
 
-Un dégradé conique est défini en indiquant un angle de rotation, le centre du dégradé puis en indiquant une liste de points d'arrêt de couleur. À la différence des dégradés linéaires et des dégradés radiaux pour lesquels les points d'arrêt de couleur sont placés avec une [longueur](/fr/docs/Web/CSS/length), les points d'arrêt de couleur d'un dégradé conique sont placés à l'aide d'un [angle](/fr/docs/Web/CSS/angle). Les unités utilisables pour les angles sont `deg` (pour les degrés), `rad` (pour les radians), `grad` (pour les grades) et `turn` (pour les tours). Un cercle se divise en 360 degrés, 400 grades, 2π radians et un tour. Les navigateurs qui prennent en charge les dégradés coniques acceptent également les valeurs exprimées en pourcentage (100% correspondant à 360 degrés), mais cela ne fait pas partie de la spécification.
+Un dégradé conique est défini en indiquant un angle de rotation, le centre du dégradé puis en indiquant une liste de points d'arrêt de couleur. À la différence des dégradés linéaires et des dégradés radiaux pour lesquels les points d'arrêt de couleur sont placés avec une [longueur](/fr/docs/Web/CSS/Reference/Values/length), les points d'arrêt de couleur d'un dégradé conique sont placés à l'aide d'un [angle](/fr/docs/Web/CSS/Reference/Values/angle). Les unités utilisables pour les angles sont `deg` (pour les degrés), `rad` (pour les radians), `grad` (pour les grades) et `turn` (pour les tours). Un cercle se divise en 360 degrés, 400 grades, 2π radians et un tour. Les navigateurs qui prennent en charge les dégradés coniques acceptent également les valeurs exprimées en pourcentage (100% correspondant à 360 degrés), mais cela ne fait pas partie de la spécification.
 
 Comme pour les dégradés radiaux, la syntaxe pour les dégradés coniques permet de situer le centre du dégradé à n'importe quel endroit de l'image ou de l'élément, même en dehors. La position s'exprime avec deux valeurs, de façon semblable à la syntaxe de {{CSSxRef("background-position")}}.
 
@@ -125,7 +125,7 @@ L'arc du dégradé représente le périmètre du dégradé. Le _point de départ
 
 #### Personnaliser les dégradés
 
-En ajoutant plusieurs arrêts de couleur sur l'arc du dégradé, il est possible de créer une transition personnalisée entre de nombreuses couleurs. La position d'un arrêt de couleur peut être définie de façon explicite grâce à une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle). Si on ne définit pas l'emplacement d'un arrêt, ce dernier sera placé à mi-chemin entre l'arrêt précédent et le suivant. Si on ne définit pas d'angle pour le premier ou le dernier arrêt de couleur, ils seront respectivement situés à `0deg` et `360deg`. Autrement dit, les deux dégradés suivants sont équivalents&nbsp;:
+En ajoutant plusieurs arrêts de couleur sur l'arc du dégradé, il est possible de créer une transition personnalisée entre de nombreuses couleurs. La position d'un arrêt de couleur peut être définie de façon explicite grâce à une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle). Si on ne définit pas l'emplacement d'un arrêt, ce dernier sera placé à mi-chemin entre l'arrêt précédent et le suivant. Si on ne définit pas d'angle pour le premier ou le dernier arrêt de couleur, ils seront respectivement situés à `0deg` et `360deg`. Autrement dit, les deux dégradés suivants sont équivalents&nbsp;:
 
 ```css
 conic-gradient(red, orange, yellow, green, blue);
@@ -295,7 +295,7 @@ div {
 }
 ```
 
-Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/hue) est interpolée.
+Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/Reference/Values/hue) est interpolée.
 
 ```css
 .shorter {
@@ -307,7 +307,7 @@ Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS
 }
 ```
 
-La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/hue-interpolation-method#plus_courte), c'est-à-dire que la couleur passe directement du rouge au bleu en empruntant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/hue-interpolation-method#plus_longue), c'est-à-dire que la couleur va du rouge au bleu en empruntant l'arc le plus long, en passant par les verts, les jaunes et les oranges.
+La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_courte), c'est-à-dire que la couleur passe directement du rouge au bleu en empruntant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_longue), c'est-à-dire que la couleur va du rouge au bleu en empruntant l'arc le plus long, en passant par les verts, les jaunes et les oranges.
 
 {{EmbedLiveSample("Interpolation de teinte", 240, 200)}}
 

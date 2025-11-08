@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/translateX
 
 {{CSSRef}}
 
-La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 {{InteractiveExample("CSS Demo: translateX()")}}
 
@@ -66,7 +66,7 @@ transform: translateX(50%);
 ### Valeurs
 
 - `<length-percentage>`
-  - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
+  - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
 
 <table class="standard-table">
   <thead>
@@ -193,7 +193,7 @@ div {
 
 ## Voir aussi
 
-- [`translate()`](/fr/docs/Web/CSS/transform-function/translate)
-- [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY)
+- [`translate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate)
+- [`translateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateY)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)

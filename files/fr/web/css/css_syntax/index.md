@@ -7,7 +7,7 @@ l10n:
 
 Le module **Syntaxe CSS** décrit, en termes généraux, la structure et la syntaxe des feuilles de style en cascade, ou CSS. Il définit CSS comme le langage de description du rendu de documents structurés (tels que HTML et XML), sur le web et ailleurs.
 
-Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types), [fonctions](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) ou [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules). Au contraire, il précise comment toutes ces fonctionnalités doivent être définies et comment les agents utilisateurs doivent analyser le CSS.
+Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types), [fonctions](/fr/docs/Web/CSS/Reference/Values/Functions) ou [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules). Au contraire, il précise comment toutes ces fonctionnalités doivent être définies et comment les agents utilisateurs doivent analyser le CSS.
 
 ## Règles @
 
@@ -21,11 +21,11 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/C
 ### Concepts clés
 
 - {{cssxref("CSS_syntax/At-rule", "Règles @")}}
-- [Échappement de caractères](/fr/docs/Web/CSS/custom-ident#escaping_characters)
+- [Échappement de caractères](/fr/docs/Web/CSS/Reference/Values/custom-ident#escaping_characters)
 - [Commentaires CSS](/fr/docs/Web/CSS/CSS_syntax/Comments)
 - [Déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [Bloc de déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [Fonction CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [Fonction CSS](/fr/docs/Web/CSS/Reference/Values/Functions)
 - [Gestion d'erreur](/fr/docs/Web/CSS/CSS_syntax/Error_handling)
 - [Règle de style](/fr/docs/Web/API/CSSStyleRule)
 

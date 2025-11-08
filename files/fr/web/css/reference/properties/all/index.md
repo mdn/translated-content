@@ -78,13 +78,13 @@ La propriété `all` est définie avec un des mots-clés globaux de CSS. On note
 
 ### Valeurs
 
-- [`initial`](/fr/docs/Web/CSS/initial)
+- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
   - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [leurs valeurs initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale).
-- [`inherit`](/fr/docs/Web/CSS/inherit)
+- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
   - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [les valeurs héritées](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
-- [`unset`](/fr/docs/Web/CSS/unset)
+- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
   - : Ce mot-clé indique que toutes les propriétés qui s'appliquent à l'élément prendront leur valeur héritée si elles héritent par défaut, ou leur valeur initiale sinon.
-- [`revert`](/fr/docs/Web/CSS/revert)
+- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
   - : Le comportement obtenu sera différent selon l'origine de la règle&nbsp;:
     - Si la règle provient [du site](/fr/docs/Web/CSS/CSS_cascade/Cascade#feuilles_de_style_du_site), `revert` remonte la [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) au niveau de la feuille de style de l'utilisatrice ou de l'utilisateur afin que [les valeurs définies](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) soient calculées comme si aucune règle du site n'avait été définie pour l'élément. En ce qui concerne `revert`, cette origine (le site) inclut également les origines de surcharge (<i lang="en">override</i>) et d'animation.
     - Si la règle provient [d'une feuille de style de l'utilisatrice ou de l'utilisateur](/fr/docs/Web/CSS/CSS_cascade/Cascade#feuilles_de_style_de_lutilisatrice_ou_lutilisateur), `revert` remonte [la cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) au niveau de l'agent utilisateur afin que [les valeurs définies](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_définie) soient calculées comme si aucune règle utilisateur ou du site n'avait été spécifiée pour l'élément.
@@ -299,8 +299,8 @@ Ici, on n'a pas de couche de cascade définie dans le fichier CSS et l'élément
 
 Les mots-clés indiquant des valeurs globales pour CSS&nbsp;:
 
-- [`initial`](/fr/docs/Web/CSS/initial)
-- [`inherit`](/fr/docs/Web/CSS/inherit)
-- [`unset`](/fr/docs/Web/CSS/unset)
-- [`revert`](/fr/docs/Web/CSS/revert)
+- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
+- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
+- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
+- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)

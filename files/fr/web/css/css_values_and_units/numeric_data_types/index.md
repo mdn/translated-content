@@ -71,12 +71,12 @@ Par exemple, `vw` est relative à la largeur de la vue et `vh` est relative à l
 
 | Unité  | Relative à                                                                                                   |
 | ------ | ------------------------------------------------------------------------------------------------------------ |
-| `dvh`  | 1% de la hauteur de la [vue dynamique](/fr/docs/Web/CSS/length#dynamic_viewport_units).                      |
-| `dvw`  | 1% de la largeur de la [vue dynamique](/fr/docs/Web/CSS/length#dynamic_viewport_units).                      |
-| `lvh`  | 1% de [large de la hauteur de la vue](/fr/docs/Web/CSS/length#large_viewport_units).                         |
-| `lvw`  | 1% de [large de la largeur de la vue](/fr/docs/Web/CSS/length#large_viewport_units).                         |
-| `svh`  | 1% de [small de la hauteur de la vue](/fr/docs/Web/CSS/length#small_viewport_units).                         |
-| `svw`  | 1% de [small de la largeur de la vue](/fr/docs/Web/CSS/length#small_viewport_units).                         |
+| `dvh`  | 1% de la hauteur de la [vue dynamique](/fr/docs/Web/CSS/Reference/Values/length#dynamic_viewport_units).     |
+| `dvw`  | 1% de la largeur de la [vue dynamique](/fr/docs/Web/CSS/Reference/Values/length#dynamic_viewport_units).     |
+| `lvh`  | 1% de [large de la hauteur de la vue](/fr/docs/Web/CSS/Reference/Values/length#large_viewport_units).        |
+| `lvw`  | 1% de [large de la largeur de la vue](/fr/docs/Web/CSS/Reference/Values/length#large_viewport_units).        |
+| `svh`  | 1% de [small de la hauteur de la vue](/fr/docs/Web/CSS/Reference/Values/length#small_viewport_units).        |
+| `svw`  | 1% de [small de la largeur de la vue](/fr/docs/Web/CSS/Reference/Values/length#small_viewport_units).        |
 | `vb`   | 1% de la taille de la vue dans l'[axe de bloc](/fr/docs/Glossary/Flow_relative_values) de l'élément racine.  |
 | `vh`   | 1% de la hauteur de la vue.                                                                                  |
 | `vi`   | 1% de la taille de la vue dans l'[axe en ligne](/fr/docs/Glossary/Flow_relative_values) de l'élément racine. |
@@ -212,7 +212,7 @@ Le type {{cssxref("&lt;position&gt;")}} définit le positionnement 2D d'un objet
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("attr", "attr()")}}
 
-La [notation fonctionnelle](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) est un type de valeur qui peut représenter des types plus complexes ou invoquer un traitement spécial par CSS. La syntaxe commence par le nom de la fonction immédiatement suivi d'une parenthèse gauche `(` suivie de l'argument (ou des arguments) de la notation suivie d'une parenthèse droite `)`. Les fonctions peuvent prendre plusieurs arguments, qui sont formatés de manière similaire à une valeur de propriété CSS.
+La [notation fonctionnelle](/fr/docs/Web/CSS/Reference/Values/Functions) est un type de valeur qui peut représenter des types plus complexes ou invoquer un traitement spécial par CSS. La syntaxe commence par le nom de la fonction immédiatement suivi d'une parenthèse gauche `(` suivie de l'argument (ou des arguments) de la notation suivie d'une parenthèse droite `)`. Les fonctions peuvent prendre plusieurs arguments, qui sont formatés de manière similaire à une valeur de propriété CSS.
 
 L'espace blanc est autorisé, mais optionnel à l'intérieur des parenthèses. (Mais voir les notes concernant l'espace blanc dans les pages pour les fonctions `min()`, `max()`, `minmax()`, et `clamp()`.)
 
@@ -227,6 +227,6 @@ La spécification définit également la fonction `toggle()`. Elle n'a pas encor
 ## Voir aussi
 
 - [Types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
 - Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

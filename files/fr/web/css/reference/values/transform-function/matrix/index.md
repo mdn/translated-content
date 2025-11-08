@@ -21,12 +21,12 @@ matrix(a, b, c, d, tx, ty)
 ### Valeurs
 
 - `a` `b` `c` `d`
-  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la transformation linéaire.
+  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number), qui définissent la transformation linéaire.
 - `tx` `ty`
-  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la translation à appliquer.
+  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number), qui définissent la translation à appliquer.
 
 > [!NOTE]
-> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `tx` et `ty`.
+> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) pour les coefficients `tx` et `ty`.
 
 <table class="standard-table">
   <thead>
@@ -131,6 +131,6 @@ p {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`matrix3d()`](/fr/docs/Web/CSS/transform-function/matrix3d)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- [`matrix3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/matrix3d)
 - [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

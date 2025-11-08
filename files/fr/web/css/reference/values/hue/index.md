@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<hue>`** représente l'angle de teinte d'une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hue>`** représente l'angle de teinte d'une couleur.
 Il est utilisé dans les fonctions couleur qui acceptent la teinte exprimée comme une seule valeur, en particulier les notations fonctionnelles {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/lch", "lch()")}} et {{CSSXref("color_value/oklch", "oklch()")}}.
 
 ## Syntaxe
@@ -117,7 +117,7 @@ Le tableau suivant liste les couleurs typiques à différents angles dans les es
 
 ## Interpolation des valeurs `<hue>`
 
-Les valeurs `<hue>` sont interpolées comme des valeurs {{CSSXref("&lt;angle&gt;")}}, et l'algorithme d'interpolation par défaut est [plus courte](/fr/docs/Web/CSS/hue-interpolation-method#plus_courte). Dans certaines fonctions CSS liées à la couleur, cela peut être remplacé par le composant {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+Les valeurs `<hue>` sont interpolées comme des valeurs {{CSSXref("&lt;angle&gt;")}}, et l'algorithme d'interpolation par défaut est [plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_courte). Dans certaines fonctions CSS liées à la couleur, cela peut être remplacé par le composant {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
 
 ## Syntaxe formelle
 

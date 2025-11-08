@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/scaleY
 
 {{CSSRef}}
 
-La fonction **`scaleY()`** modifie l'ordonnée de chaque sommet de l'élément avec un facteur multiplicateur. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`scaleY()`** modifie l'ordonnée de chaque sommet de l'élément avec un facteur multiplicateur. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 ![](scaley.png)
 
@@ -23,7 +23,7 @@ scaleY(s)
 ### Valeurs
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui indique le facteur d'échelle pour l'homothétie.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui indique le facteur d'échelle pour l'homothétie.
 
 <table class="standard-table">
   <thead>
@@ -127,8 +127,8 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
+- [`scaleX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleX)
+- [`scaleZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
 - [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)

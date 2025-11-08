@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** représente une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** représente une couleur.
 Une valeur `<color>` peut aussi inclure une [_valeur de transparence_ (canal alpha)](https://fr.wikipedia.org/wiki/Alpha_blending), indiquant comment la couleur doit être [composée <sup>(angl.)</sup>](https://drafts.fxtf.org/compositing-1/#simplealphacompositing) avec son arrière-plan.
 
 > [!NOTE]
@@ -123,9 +123,9 @@ background-color: hsl(0deg 100% 50%);
 
 ## Interpolation
 
-L'interpolation des couleurs a lieu avec les [dégradés](/fr/docs/Web/CSS/gradient), les [transitions](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), et les [animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+L'interpolation des couleurs a lieu avec les [dégradés](/fr/docs/Web/CSS/Reference/Values/gradient), les [transitions](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), et les [animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
-Lors de l'interpolation de valeurs `<color>`, elles sont d'abord converties dans un espace colorimétrique donné, puis chaque composant des [valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) est interpolé linéairement, la vitesse de l'interpolation étant déterminée par la [fonction d'accélération](/fr/docs/Web/CSS/easing-function) dans les transitions et animations. L'espace colorimétrique d'interpolation par défaut est Oklab, mais il peut être remplacé via {{CSSXref("&lt;color-interpolation-method&gt;")}} dans certaines notations fonctionnelles liées à la couleur.
+Lors de l'interpolation de valeurs `<color>`, elles sont d'abord converties dans un espace colorimétrique donné, puis chaque composant des [valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) est interpolé linéairement, la vitesse de l'interpolation étant déterminée par la [fonction d'accélération](/fr/docs/Web/CSS/Reference/Values/easing-function) dans les transitions et animations. L'espace colorimétrique d'interpolation par défaut est Oklab, mais il peut être remplacé via {{CSSXref("&lt;color-interpolation-method&gt;")}} dans certaines notations fonctionnelles liées à la couleur.
 
 ### Interpolation avec composants manquants
 

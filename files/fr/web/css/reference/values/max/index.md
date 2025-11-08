@@ -19,7 +19,7 @@ Dans l'exemple précédent, la largeur mesurera au moins 80 pixels de large, ser
 
 La fonction `max()` prend comme arguments une ou plusieurs expressions, séparées par des virgules. Elle renvoie comme valeur le plus grand résultat des évaluations des expressions passées en arguments.
 
-Les expressions passées à cette fonction peuvent utiliser des fonctions mathématiques (cf. {{CSSxRef("calc", "calc()")}}), des valeurs littérales ou d'autres expressions (ex. avec [`attr()`](/fr/docs/Web/CSS/attr)). Il est nécessaire que ces expressions fournissent une valeur d'un type valide (ex. {{cssxref("&lt;length&gt;")}}).
+Les expressions passées à cette fonction peuvent utiliser des fonctions mathématiques (cf. {{CSSxRef("calc", "calc()")}}), des valeurs littérales ou d'autres expressions (ex. avec [`attr()`](/fr/docs/Web/CSS/Reference/Values/attr)). Il est nécessaire que ces expressions fournissent une valeur d'un type valide (ex. {{cssxref("&lt;length&gt;")}}).
 
 Il est tout à fait possible de combiner des valeurs avec différentes unités dans les expressions passées en arguments. On peut également utiliser des parenthèses à l'intérieur des expressions afin de s'assurer de la précédence des opérateurs.
 

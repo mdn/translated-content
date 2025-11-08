@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`superellipse()`** permet de définir la courbure d'une ellipse, et sert à spécifier les [formes de coins](/fr/docs/Web/CSS/corner-shape) soit directement, soit via les mots-clés {{cssxref("&lt;corner-shape-value>")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`superellipse()`** permet de définir la courbure d'une ellipse, et sert à spécifier les [formes de coins](/fr/docs/Web/CSS/corner-shape) soit directement, soit via les mots-clés {{cssxref("&lt;corner-shape-value>")}}.
 
 ## Syntaxe
 
@@ -217,7 +217,7 @@ setCorners();
 {{EmbedLiveSample("value-comparison", "100%", "300")}}
 
 > [!NOTE]
-> Voir aussi l'exemple de [comparaison des valeurs `<corner-shape-value>`](/fr/docs/Web/CSS/corner-shape-value#comparaison_des_valeurs_corner-shape-value).
+> Voir aussi l'exemple de [comparaison des valeurs `<corner-shape-value>`](/fr/docs/Web/CSS/Reference/Values/corner-shape-value#comparaison_des_valeurs_corner-shape-value).
 
 ## Spécifications
 

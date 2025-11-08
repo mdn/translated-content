@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
 
 Vous pouvez détecter la prise en charge d'un espace colorimétrique particulier avec la fonctionnalité média CSS [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut).
 
@@ -376,7 +376,7 @@ Le résultat est le suivant&nbsp;:
 ## Voir aussi
 
 - La propriété {{CSSXref("color")}}
-- [Le type de donnée `<color>`](/fr/docs/Web/CSS/color_value) pour la liste de toutes les notations de couleur
+- [Le type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour la liste de toutes les notations de couleur
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Module des couleurs CSS](/fr/docs/Web/CSS/CSS_colors)

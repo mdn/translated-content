@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) {{glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<content-position>`** est utilisé par les propriétés {{cssxref("justify-content")}} et {{cssxref("align-content")}}, ainsi que par le raccourci {{cssxref("place-content")}}, pour aligner le contenu de la boîte à l'intérieur de celle-ci.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<content-position>`** est utilisé par les propriétés {{cssxref("justify-content")}} et {{cssxref("align-content")}}, ainsi que par le raccourci {{cssxref("place-content")}}, pour aligner le contenu de la boîte à l'intérieur de celle-ci.
 
 ## Syntaxe
 

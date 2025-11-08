@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`image-set()`** permet au navigateur de choisir l'image CSS la plus appropriée parmi un ensemble donné, principalement pour les écrans à haute densité de pixels.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`image-set()`** permet au navigateur de choisir l'image CSS la plus appropriée parmi un ensemble donné, principalement pour les écrans à haute densité de pixels.
 
 La résolution et la bande passante varient selon l'appareil et l'accès au réseau. La fonction `image-set()` fournit la résolution d'image la plus appropriée pour l'appareil de l'utilisateur·ice, en proposant un ensemble d'options d'image — chacune avec une déclaration de résolution associée — parmi lesquelles le navigateur choisit la plus adaptée à l'appareil et aux paramètres. La résolution peut servir de substitut à la taille du fichier&nbsp;: un agent utilisateur sur une connexion mobile lente avec un écran haute résolution peut préférer recevoir des images de plus faible résolution plutôt que d'attendre le chargement d'une image de plus haute résolution.
 

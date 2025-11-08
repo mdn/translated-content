@@ -9,7 +9,7 @@ l10n:
 > [!NOTE]
 > La notation fonctionnelle `rgba()` est un alias de `rgb()`. Elles sont strictement équivalentes. Il est recommandé d'utiliser `rgb()`.
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`rgb()`** exprime une couleur dans l'{{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes rouge, verte et bleue. Un composant alpha optionnel représente la transparence de la couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`rgb()`** exprime une couleur dans l'{{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes rouge, verte et bleue. Un composant alpha optionnel représente la transparence de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: rgb()")}}
 
@@ -84,7 +84,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -102,7 +102,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Pour permettre la représentation complète du spectre visible, la sortie des fonctions de couleur relative `rgb()` est sérialisée en `color(srgb)`. Cela signifie qu'interroger la valeur de couleur de sortie via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} retourne la couleur sous la forme [`color(srgb ...)`](/fr/docs/Web/CSS/color_value/color).
+> Pour permettre la représentation complète du spectre visible, la sortie des fonctions de couleur relative `rgb()` est sérialisée en `color(srgb)`. Cela signifie qu'interroger la valeur de couleur de sortie via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} retourne la couleur sous la forme [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 #### Définition des composants de canal de couleur de sortie relative
 

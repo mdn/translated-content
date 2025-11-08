@@ -53,7 +53,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 ```
 
-Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
+Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/Reference/Values/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
 
 Voir la page [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) pour plus d'informations sur les mots-clés `max-content` et `auto`.
 
@@ -76,9 +76,9 @@ fit-content(40%)
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : Une longueur exprimée de façon absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : Un pourcentage relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relatif à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en bloc pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
 
 ## Exemples

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`linear()`** crée une courbe de transition qui progresse de façon uniforme entre les points.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`linear()`** crée une courbe de transition qui progresse de façon uniforme entre les points.
 En tant que fonction de {{cssxref("&lt;easing-function&gt;")}}, elle crée des transitions où l'{{Glossary("interpolation")}} se fait à un rythme constant du début à la fin.
 
 ## Syntaxe

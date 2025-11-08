@@ -111,11 +111,11 @@ scale3d(sx, sy, sz)
 ### Valeurs
 
 - `sx`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur définissant l'homothétie.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'abscisse du vecteur définissant l'homothétie.
 - `sy`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'ordonnée du vecteur définissant l'homothétie
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'ordonnée du vecteur définissant l'homothétie
 - `sz`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente la composante, selon l'axe Z, du vecteur définissant l'homothétie
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente la composante, selon l'axe Z, du vecteur définissant l'homothétie
 
 <table class="standard-table">
   <thead>
@@ -231,7 +231,7 @@ div {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
-- [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d)
-- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- [`scaleZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
+- [`translate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate3d)
+- [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d)

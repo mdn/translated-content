@@ -118,7 +118,7 @@ Une fois que toutes les variables sont développées, `largeurC` aura la valeur 
 
 ## Accessibilité
 
-Lorsque vous utilisez `calc()` pour définir la taille d'un texte, assurez-vous d'inclure [une unité de longueur relative](/fr/docs/Web/CSS/length#unités_de_longueur_relatives). Par exemple :
+Lorsque vous utilisez `calc()` pour définir la taille d'un texte, assurez-vous d'inclure [une unité de longueur relative](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives). Par exemple :
 
 ```css
 h1 {

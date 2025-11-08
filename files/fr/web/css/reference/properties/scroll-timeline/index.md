@@ -54,7 +54,7 @@ Les valeurs autorisées pour `<scroll-timeline-name>` sont&nbsp;:
 - `none`
   - : La chronologie n'a pas de nom associé.
 - `<custom-ident>`
-  - : Un identifiant personnalisé qui peut être utilisé pour faire référence à la chronologie de défilement dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline). Les valeurs possibles sont décrites sur la page du type [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident).
+  - : Un identifiant personnalisé qui peut être utilisé pour faire référence à la chronologie de défilement dans une déclaration [`animation-timeline`](/fr/docs/Web/CSS/Reference/Properties/animation-timeline). Les valeurs possibles sont décrites sur la page du type [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident).
 
 La valeur `<scroll-timeline-axis>` indique la barre de défilement de l'axe donné, pour l'élément identifié par `<scroll-timeline-name>`, qui fournit la chronologie de défilement. Les valeurs autorisées sont&nbsp;:
 

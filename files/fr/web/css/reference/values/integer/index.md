@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<integer>`** est un type particulier de {{cssxref("number")}} qui représente un nombre entier positif ou négatif. Les entiers peuvent être utilisés dans de nombreuses propriétés et descripteurs CSS, comme les propriétés {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} et le descripteur {{cssxref("@counter-style/range", "range")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<integer>`** est un type particulier de {{cssxref("number")}} qui représente un nombre entier positif ou négatif. Les entiers peuvent être utilisés dans de nombreuses propriétés et descripteurs CSS, comme les propriétés {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} et le descripteur {{cssxref("@counter-style/range", "range")}}.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ Le type de donnée `<integer>` se compose d'un ou plusieurs chiffres décimaux, 
 
 ## Interpolation
 
-Lorsqu'elles sont animées, les valeurs du type `<integer>` sont {{Glossary("interpolation", "interpolées")}} par paliers entiers discrets. Le calcul est réalisé comme s'il s'agissait de nombres réels à virgule flottante&nbsp;; la valeur discrète est obtenue en utilisant la [fonction partie entière](https://fr.wikipedia.org/wiki/Partie_enti%C3%A8re_et_partie_fractionnaire). La rapidité de l'interpolation est déterminée par la [fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
+Lorsqu'elles sont animées, les valeurs du type `<integer>` sont {{Glossary("interpolation", "interpolées")}} par paliers entiers discrets. Le calcul est réalisé comme s'il s'agissait de nombres réels à virgule flottante&nbsp;; la valeur discrète est obtenue en utilisant la [fonction partie entière](https://fr.wikipedia.org/wiki/Partie_enti%C3%A8re_et_partie_fractionnaire). La rapidité de l'interpolation est déterminée par la [fonction de temporisation](/fr/docs/Web/CSS/Reference/Values/easing-function) associée à l'animation.
 
 ## Exemples
 

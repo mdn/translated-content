@@ -74,7 +74,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### CSS
 
-- [`resolution`](/fr/docs/Web/CSS/resolution) accepte désormais [`<number>`](/fr/docs/Web/CSS/number), pas seulement des valeurs [`<integer>`](/fr/docs/Web/CSS/integer) comme avec la spécification.
+- [`resolution`](/fr/docs/Web/CSS/Reference/Values/resolution) accepte désormais [`<number>`](/fr/docs/Web/CSS/Reference/Values/number), pas seulement des valeurs [`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer) comme avec la spécification.
 - Les règles de césure ont été ajoutées pour de nombreuses nouvelles langues lors de l'utilisation de [`hyphens`](/fr/docs/Web/CSS/Reference/Properties/hyphens).
 - Le traitement de [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) a été revu pour mieux correspondre à la spécification.
 - Dans le passé, [`text-decoration`](/fr/docs/Web/CSS/Reference/Properties/text-decoration) en mode quirks avait l'épaisseur de ligne et la position ajustée sur le texte descendant pour correspondre à la descendance. Désormais le mode standard et le mode quirks ont un rendu plus proche.

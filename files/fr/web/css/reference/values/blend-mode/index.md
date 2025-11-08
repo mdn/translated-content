@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0ca040b6a9cfd931558bd1d3a402707abddc1924
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<blend-mode>`** définit la façon dont les couleurs doivent apparaître lorsque des éléments se superposent. Il est utilisé dans les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<blend-mode>`** définit la façon dont les couleurs doivent apparaître lorsque des éléments se superposent. Il est utilisé dans les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.
 
 ## Syntaxe
 

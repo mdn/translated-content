@@ -8,7 +8,7 @@ original_slug: Web/CSS/env
 
 La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une variable d'environnement dans une règle. Les variables d'environnement sont globales pour un document donné, à la différence des [propriétés personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*). Les variables d'environnement sont définies au niveau de l'agent utilisateur et non par l'utilisateur/le concepteur.
 
-`env()` peut être utilisée aux endroits où on souhaite remplacer la valeur, à la façon de la fonction [`var()`](/fr/docs/Web/CSS/var).
+`env()` peut être utilisée aux endroits où on souhaite remplacer la valeur, à la façon de la fonction [`var()`](/fr/docs/Web/CSS/Reference/Values/var).
 
 ```css
 body {

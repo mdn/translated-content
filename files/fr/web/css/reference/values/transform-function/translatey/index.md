@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/translateY
 
 {{CSSRef}}
 
-La fonction **`translateY()`** permet de déplacer un élement verticalement sur le plan. Cette transformation est caractérisée par une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du déplacement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`translateY()`** permet de déplacer un élement verticalement sur le plan. Cette transformation est caractérisée par une longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui définit l'amplitude du déplacement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 {{InteractiveExample("CSS Demo: translateY()")}}
 
@@ -66,7 +66,7 @@ transform: translateY(50%);
 ### Valeurs
 
 - `<length-percentage>`
-  - : Valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) représentant l'ordonnée (verticale, coordonnée y) du vecteur de translation [0, ty]. Dans [le système de coordonnées cartésiennes](/fr/docs/Web/CSS/transform-function#le_système_de_coordonnées_cartésiennes), elle représente le déplacement le long de l'axe y. Une valeur en pourcentage fait référence à la hauteur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
+  - : Valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) ou [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) représentant l'ordonnée (verticale, coordonnée y) du vecteur de translation [0, ty]. Dans [le système de coordonnées cartésiennes](/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes), elle représente le déplacement le long de l'axe y. Une valeur en pourcentage fait référence à la hauteur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/Reference/Properties/transform-box).
 
 <table class="standard-table">
   <thead>
@@ -178,7 +178,7 @@ div {
 
 ## Voir aussi
 
-- [`translate()`](/fr/docs/Web/CSS/transform-function/translate)
-- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX)
+- [`translate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translate)
+- [`translateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateX)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)

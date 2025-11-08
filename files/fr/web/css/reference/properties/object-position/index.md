@@ -65,7 +65,7 @@ object-position: unset;
 ### Valeurs
 
 - `<position>`
-  - : Une valeur de type [`<position>`](/fr/docs/Web/CSS/position_value), c'est-à-dire une à quatre valeurs permettant de définir une position en deux dimensions par rapport aux limites de la boîte dans laquelle est placé l'élément. On peut donner des décalages absolus ou relatifs. On notera que la position peut être définie en dehors de la boîte de l'élément.
+  - : Une valeur de type [`<position>`](/fr/docs/Web/CSS/Reference/Values/position_value), c'est-à-dire une à quatre valeurs permettant de définir une position en deux dimensions par rapport aux limites de la boîte dans laquelle est placé l'élément. On peut donner des décalages absolus ou relatifs. On notera que la position peut être définie en dehors de la boîte de l'élément.
 
 ## Définition formelle
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/rotate3d
 
 {{CSSRef}}
 
-La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 {{InteractiveExample("CSS Demo: rotate3d()")}}
 
@@ -108,13 +108,13 @@ rotate3d(x, y, z, a)
 ### Valeurs
 
 - `x`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en X (l'abscisse) du vecteur qui sera l'axe de la rotation.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui définit la composante en X (l'abscisse) du vecteur qui sera l'axe de la rotation.
 - `y`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en Y (l'ordonnée) du vecteur qui sera l'axe de la rotation.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui définit la composante en Y (l'ordonnée) du vecteur qui sera l'axe de la rotation.
 - `z`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en Z (la côte) du vecteur qui sera l'axe de la rotation.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui définit la composante en Z (la côte) du vecteur qui sera l'axe de la rotation.
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
 
 <table class="standard-table">
   <thead>
@@ -253,4 +253,4 @@ p {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)

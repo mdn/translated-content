@@ -3,7 +3,7 @@ title: Référence CSS
 slug: Web/CSS/Reference
 ---
 
-Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
+Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) et des [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
 
 ## Syntaxe de règle basique
 

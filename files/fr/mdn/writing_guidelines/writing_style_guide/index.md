@@ -133,7 +133,7 @@ Utilisez à la place des formulations descriptives qui identifient clairement la
 
 Par exemple&nbsp;:
 
-- **Correct**&nbsp;: «&nbsp;Reportez-vous à la section [Accessibilité](/fr/docs/Web/CSS/gradient/repeating-conic-gradient#accessibilité) plus loin sur cette page.&nbsp;»
+- **Correct**&nbsp;: «&nbsp;Reportez-vous à la section [Accessibilité](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibilité) plus loin sur cette page.&nbsp;»
 - **Incorrect**&nbsp;: «&nbsp;Reportez-vous à la section d'accessibilité ci-dessous.&nbsp;»
 
 - **Correct**&nbsp;: «&nbsp;Dans l'exemple de code suivant, nous animons un cercle avec des transitions CSS.&nbsp;»
@@ -465,8 +465,8 @@ Suivez un style cohérent pour les liens vers des sections dans une page&nbsp;:
 
 Si la section liée est sur la même page, vous pouvez indiquer sa position avec des formulations descriptives.
 
-- **Correct**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/gradient/repeating-conic-gradient#accessibilité) de ce document.&nbsp;»
-- **Incorrect**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/gradient/repeating-conic-gradient#accessibilité) ci-dessous.&nbsp;»
+- **Correct**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibilité) de ce document.&nbsp;»
+- **Incorrect**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibilité) ci-dessous.&nbsp;»
 
 Sur MDN, une autre façon de lier une page de référence est d'utiliser une macro. Ces macros sont décrites sur la page [Macros couramment utilisées](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references). Par exemple, pour lier une page de référence d'un élément HTML, utilisez la macro `HTMLElement`, et pour une propriété CSS, utilisez `CSSxRef`.
 

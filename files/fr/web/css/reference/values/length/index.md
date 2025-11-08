@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<length>`** correspond à une mesure de distance. Les longueurs peuvent être utilisées dans de nombreuses propriétés CSS, comme {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}} et {{Cssxref("text-shadow")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<length>`** correspond à une mesure de distance. Les longueurs peuvent être utilisées dans de nombreuses propriétés CSS, comme {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}} et {{Cssxref("text-shadow")}}.
 
 > [!NOTE]
 > Bien que les valeurs {{cssxref("&lt;percentage&gt;")}} puissent être utilisées dans certaines propriétés qui acceptent des valeurs `<length>`, elles ne sont pas elles-mêmes des valeurs `<length>`. Voir {{cssxref("&lt;length-percentage&gt;")}}.
