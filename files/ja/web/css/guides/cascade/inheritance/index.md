@@ -57,7 +57,7 @@ p {
 
 ## メモ
 
-[`inherit`](/ja/docs/Web/CSS/inherit) のキーワードで、明示的に継承することを指定することができます。これはこれは継承プロパティでも非継承プロパティでも動作します。
+[`inherit`](/ja/docs/Web/CSS/Reference/Values/inherit) のキーワードで、明示的に継承することを指定することができます。これはこれは継承プロパティでも非継承プロパティでも動作します。
 
 すべてのプロパティに値を適用する [`all`](/ja/docs/Web/CSS/Reference/Properties/all) 一括指定プロパティを使用することで、すべてのプロパティの継承を制御することができます。例えば、
 
@@ -99,7 +99,7 @@ em {
 
 ## 関連情報
 
-- 継承を制御する CSS 値: [`inherit`](/ja/docs/Web/CSS/inherit), [`initial`](/ja/docs/Web/CSS/initial), [`revert`](/ja/docs/Web/CSS/revert), [`revert-layer`](/ja/docs/Web/CSS/revert-layer), [`unset`](/ja/docs/Web/CSS/unset)
+- 継承を制御する CSS 値: [`inherit`](/ja/docs/Web/CSS/Reference/Values/inherit), [`initial`](/ja/docs/Web/CSS/Reference/Values/initial), [`revert`](/ja/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer), [`unset`](/ja/docs/Web/CSS/Reference/Values/unset)
 - [CSS のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
 - [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)

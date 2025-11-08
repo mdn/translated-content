@@ -70,7 +70,7 @@ outline-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 輪郭線の色であり、`<color>` で指定します。
 
-仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は、輪郭線が `auto` に設定されない限り [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) に計算されます。ただし、 [`outline-style`](/ja/docs/Web/CSS/Reference/Properties/outline-style) が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/Reference/Properties/accent-color)に計算されます。
+仕様書では、追加の値として `auto` も挙げられていますが、これは現在どのブラウザーも対応していません。実装された場合、 `auto` は、輪郭線が `auto` に設定されない限り [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) に計算されます。ただし、 [`outline-style`](/ja/docs/Web/CSS/Reference/Properties/outline-style) が `auto` に設定されている場合は、[アクセントカラー](/ja/docs/Web/CSS/Reference/Properties/accent-color)に計算されます。
 
 ## 解説
 

@@ -128,7 +128,7 @@ svg {
 
 #### CSS
 
-`<div>` 要素に {{cssxref("width")}} および {{cssxref("height")}} を設定し、 [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) を {{cssxref("background-image")}} 値として追加します。
+`<div>` 要素に {{cssxref("width")}} および {{cssxref("height")}} を設定し、 [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient) を {{cssxref("background-image")}} 値として追加します。
 
 ```css hidden
 body {

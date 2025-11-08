@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`<custom-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、{{glossary("identifier", "識別子")}}として使われるユーザー定義の任意の文字列を意味します。これは大文字と小文字を区別し、曖昧さを避けるため、いくつかの値は様々なコンテキストで禁止されています。
+**`<custom-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、{{glossary("identifier", "識別子")}}として使われるユーザー定義の任意の文字列を意味します。これは大文字と小文字を区別し、曖昧さを避けるため、いくつかの値は様々なコンテキストで禁止されています。
 
 ## 構文
 
@@ -151,5 +151,5 @@ _このデータ型は実際の型ではありませんが、許可された値�
 
 ## 関連情報
 
-- [&lt;ident&gt;](/ja/docs/Web/CSS/ident)
-- [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident)
+- [&lt;ident&gt;](/ja/docs/Web/CSS/Reference/Values/ident)
+- [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident)

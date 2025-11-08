@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8e2465af7cac389b70e83d54eeb288448f2ae08d
 ---
 
-**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
+**`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
 
 {{InteractiveExample("CSS デモ: repeating-conic-gradient()")}}
 
@@ -65,7 +65,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する{{Glossary("interpolation","補間")}}のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
 > [!NOTE]
-> 反復扇形グラデーションにおける色経由点は、[線形グラデーションにおける色経由点](/ja/docs/Web/CSS/gradient/linear-gradient#線形グラデーションの構成)と同じルールに従います。
+> 反復扇形グラデーションにおける色経由点は、[線形グラデーションにおける色経由点](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient#線形グラデーションの構成)と同じルールに従います。
 
 ## 解説
 
@@ -73,7 +73,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 
 最初と最後の色経由点がどちらも 0 度以上か 360 度未満になっていない場合、 conic-gradient は繰り返されません。
 
-他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
+他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
 
 `<gradient>` は `<image>` データ型に属するため、 `<image>` が使用できるところでしか使用できません。このため、 `conic-gradient()` は {{CSSxRef("background-color")}} や、その他の {{CSSxRef("&lt;color&gt;")}} データ型を使用するプロパティでは動作しません。</p>
 
@@ -215,7 +215,7 @@ div {
 }
 ```
 
-この補間処理の例では、 [hsl](/ja/docs/Web/CSS/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/hue)を補間しています。
+この補間処理の例では、 [hsl](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/Reference/Values/hue)を補間しています。
 
 ```css live-sample___interpolating_with_hue
 .shorter {
@@ -235,7 +235,7 @@ div {
 }
 ```
 
-左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
+左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
 
 {{EmbedLiveSample("Interpolating with hue", 240, 200)}}
 
@@ -255,8 +255,8 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - その他のグラデーション関数: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method)
+- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
+- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

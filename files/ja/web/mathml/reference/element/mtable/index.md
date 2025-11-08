@@ -30,19 +30,19 @@ MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtabl
 - `columnlines` {{Non-standard_Inline}}
   - : 列間罫線を指定します。スペース区切りで複数の値を書くこともでき，その場合、対応する列の間に適用されます（例: `columnlines="none none solid"`）。使用可能な値は `none`（既定値）、`solid`、`dashed` です。
 - `columnspacing` {{Non-standard_Inline}}
-  - : 表の列の間の空間を指定します。スペースで区切られた複数の値を指定することができ、対応する列に適用されます（例: `columnspacing="1em 2em"`）。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+  - : 表の列の間の空間を指定します。スペースで区切られた複数の値を指定することができ、対応する列に適用されます（例: `columnspacing="1em 2em"`）。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) です。
 - `frame` {{Non-standard_Inline}}
   - : 表全体の枠線を指定します。使用可能な値は、 `none`（既定値）、`solid`、`dashed` です。
 - `framespacing` {{Non-standard_Inline}}
-  - : 表とフレームの間に追加される空間を指定します。 1 つ目の値は、右と左の空間を指定し、 2 つ目の値は、上と下の空間を指定します。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+  - : 表とフレームの間に追加される空間を指定します。 1 つ目の値は、右と左の空間を指定し、 2 つ目の値は、上と下の空間を指定します。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) です。
 - `rowalign` {{Non-standard_Inline}}
   - : セルの垂直方向の揃えを指定します。スペース区切りで複数の値を書くこともでき、その場合、対応する行に適用されます（例: `rowalign="top bottom axis"`）。使用可能な値は `axis`、`baseline`（既定値）、`bottom，center`、`top` です。
 - `rowlines` {{Non-standard_Inline}}
   - : 行間罫線を指定します。スペース区切りで複数の値を書くこともでき，その場合、対応する列の間に適用されます。（例: `rowlines="none none solid"`）。使用可能な値は `none`（既定値）、`solid`、`dashed` です。
 - `rowspacing` {{Non-standard_Inline}}
-  - : 表の行間の空間を指定します。スペースで区切られた複数の値を指定でき、対応する行に適用されます（例: `rowspacing="1em 2em"`）。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+  - : 表の行間の空間を指定します。スペースで区切られた複数の値を指定でき、対応する行に適用されます（例: `rowspacing="1em 2em"`）。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) です。
 - `width` {{Non-standard_Inline}}
-  - : 表全体の幅を示す [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) を指定します。
+  - : 表全体の幅を示す [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) を指定します。
 
 > [!NOTE]
 > `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。

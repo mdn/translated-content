@@ -34,7 +34,7 @@ lch(52.2345% 72.2 56.2 / .5);
 > この場合は特別で、 `100%` は `L` 値では `100`、 `C` 値では `150` となります。
 
 > [!NOTE]
-> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/Reference/Values/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -155,6 +155,6 @@ div {
 
 ## 関連情報
 
-- [すべての色記法の一覧](/ja/docs/Web/CSS/color_value)
+- [すべての色記法の一覧](/ja/docs/Web/CSS/Reference/Values/color_value)
 - {{CSSXref("&lt;hue&gt;")}} データ型
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)

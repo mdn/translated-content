@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
-**`<image>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、二次元の画像を表現します。
+**`<image>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、二次元の画像を表現します。
 
 ## 構文
 

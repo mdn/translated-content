@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
+**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
 
 {{InteractiveExample("CSS デモ: radial-gradient()")}}
 
@@ -74,7 +74,7 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
     | `farthest-side`   | `closest-side` と同様ですが、末端図形がその中心から最も遠い辺 (または縦と横の辺) に接するように大きさが調整される点が異なります。             |
     | `farthest-corner` | 既定値で、グラデーションの末端図形は、ボックスの中心から最も遠い頂点に接するように大きさが調整されます。                                      |
 
-    `<ending-shape>` を `circle` と指定した場合、大きさを明示的に [`<length>`](/ja/docs/Web/CSS/length) として与えることができ、円形の広がりの大きさを明示的に指定します。負の値は不正です。
+    `<ending-shape>` を `circle` と指定した場合、大きさを明示的に [`<length>`](/ja/docs/Web/CSS/Reference/Values/length) として与えることができ、円形の広がりの大きさを明示的に指定します。負の値は不正です。
 
     `<ending-shape>` を `ellipse` と指定するか省略した場合、大きさを 2 つの {{cssxref("length-percentage")}} で指定して明示的な楕円の大きさを指定することができます。 1 つ目の値は水平の広がり、 2 つ目の値は垂直の広がりです。パーセント値はグラデーションボックスの対応する長さからの相対値です。負の値は不正です。
 
@@ -87,7 +87,7 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 
 ## 解説
 
-他のグラデーションと同様、放射グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#補間)。つまり、自然な寸法や推奨される寸法、推奨される縦横比もありません。具体的な寸法は、適用先の要素の寸法に一致します。
+他のグラデーションと同様、放射グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#補間)。つまり、自然な寸法や推奨される寸法、推奨される縦横比もありません。具体的な寸法は、適用先の要素の寸法に一致します。
 
 繰り返してコンテナーを埋める放射グラデーションを生成するには、代わりに {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 関数を使用してください。
 
@@ -183,7 +183,7 @@ div {
 }
 ```
 
-この補間処理の例では、 [hsl](/ja/docs/Web/CSS/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/hue)を補間しています。
+この補間処理の例では、 [hsl](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/Reference/Values/hue)を補間しています。
 
 ```css
 .shorter {
@@ -203,7 +203,7 @@ div {
 }
 ```
 
-左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
+左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
 
 {{EmbedLiveSample("色相の補間", 240, 200)}}
 
@@ -223,8 +223,8 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method)
+- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
+- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

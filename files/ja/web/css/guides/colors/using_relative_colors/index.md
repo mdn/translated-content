@@ -25,10 +25,10 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 
 相対色は、絶対色と同じ[色関数](/ja/docs/Web/CSS/CSS_colors#関数)を使用しますが、異なる引数で作成します。
 
-1. 基本的な色関数（上記で _`color-function()`_ で表したもの）である [`rgb()`](/ja/docs/Web/CSS/color_value/rgb), [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) などを用います。どの関数を使用するかは、作成する相対色（**出力色**）に使用する色モデルによって異なります。
+1. 基本的な色関数（上記で _`color-function()`_ で表したもの）である [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) などを用います。どの関数を使用するかは、作成する相対色（**出力色**）に使用する色モデルによって異なります。
 2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
-3. [`color()`](/ja/docs/Web/CSS/color_value/color) 関数の場合、出力色の _[`colorspace`](/ja/docs/Web/CSS/color_value/color#colorspace)_（色空間）を指定します。
-4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/CSS_colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
+3. [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 関数の場合、出力色の _[`colorspace`](/ja/docs/Web/CSS/Reference/Values/color_value/color#colorspace)_（色空間）を指定します。
+4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/CSS_colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
 5. オプションとして、出力色のアルファチャンネル値 (`alpha`) をスラッシュ (`/`) の後に定義することができます。アルファチャンネル値 (`alpha`) が明示的に指定されていない場合、アルファチャンネル値は元の色の既定値となります（絶対的な色値の場合の 100% ではありません）。
 
 ブラウザーは、元の色を色関数と互換性のある構文に変換し、それを部分色チャンネル（元の色にアルファチャンネル (`alpha`) がある場合はアルファチャンネルも）に構造化します。これらは、色関数内で適切な名前付きの値として利用できます。 `rgb()` 関数の場合は `r`、`g`、`b` と `alpha`、 `lab()` 関数の場合は `l`、`a`、`b` と `alpha`、 `hwb()` の場合は `h`、`w`、`b` と `alpha` などです。新しい出力チャンネル値を計算するために使用することができます。
@@ -70,15 +70,15 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 
 {{ EmbedLiveSample("simple-relative-color", "100%", "200") }}
 
-相対色は [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 関数を使用し、 `red` を元の色として、それと等価な `rgb()` 色 (`rgb(255 0 0)`) に変換し、新しい色を赤チャンネルの値が `200` で、緑と青のチャンネルの値が元の色と同じである色として定義します（ブラウザーによって関数の内部でで利用できる `g` と `b` の値はどちらも `0` です）。
+相対色は [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 関数を使用し、 `red` を元の色として、それと等価な `rgb()` 色 (`rgb(255 0 0)`) に変換し、新しい色を赤チャンネルの値が `200` で、緑と青のチャンネルの値が元の色と同じである色として定義します（ブラウザーによって関数の内部でで利用できる `g` と `b` の値はどちらも `0` です）。
 
 この結果、 `rgb(200 0 0)` という出力が得られます。これは、少し暗めの赤です。赤チャンネルの値を `255` （または `r` 値のみ）と指定した場合、出力される色は入力値とまったく同じになります。ブラウザーの最終的な出力色（計算値）は、 `rgb(200 0 0)` と等価な sRGB `color()` 値、つまり `color(srgb 0.784314 0 0)` です。
 
 > [!NOTE]
 > 前述の通り、相対色を計算する際、ブラウザーが最初に行うことは、指定された元の色（例えばこの例では `red`）を使用する色関数（この場合は `rgb()`）と互換性のある値に変換することです。これは、ブラウザーが元の色から出力色を計算できるようにするためです。使用する色関数に対して相対的に計算が行われる一方で、実際の出力色値は色の色空間によって異なります。
 >
-> - 古い sRGB の色関数は、可視色の全スペクトルを表現することができません。（[`hsl()`](/ja/docs/Web/CSS/color_value/hsl)、[`hwb()`](/ja/docs/Web/CSS/color_value/hwb)、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb)）の出力色は、これらの制限を避けるために `color(srgb)` にシリアライズされます。 つまり、 {{domxref("HTMLElement.style")}} プロパティまたは {{domxref("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色値を問い合わせると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されるということです。
-> - より最近の色関数（`lab()`、`oklab()`、`lch()`、`oklch()`）では、相対的な色出力値は使用する色関数と同じ構文で表現されます。例えば、 [`lab()`](/ja/docs/Web/CSS/color_value/lab) 色関数を使用している場合、出力色は `lab()` 値となります。
+> - 古い sRGB の色関数は、可視色の全スペクトルを表現することができません。（[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、[`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb)、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb)）の出力色は、これらの制限を避けるために `color(srgb)` にシリアライズされます。 つまり、 {{domxref("HTMLElement.style")}} プロパティまたは {{domxref("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色値を問い合わせると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 値として返されるということです。
+> - より最近の色関数（`lab()`、`oklab()`、`lch()`、`oklch()`）では、相対的な色出力値は使用する色関数と同じ構文で表現されます。例えば、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) 色関数を使用している場合、出力色は `lab()` 値となります。
 
 これら 5 行はすべて、等価な出力色を生成します。
 
@@ -128,7 +128,7 @@ rgb(from rgb(200 170 0) b g r)
 
 ## 相対色に対応している色関数
 
-ここまでは、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 関数を使用して定義された相対色のみを見てきました。しかし、相対色は、[`color()`](/ja/docs/Web/CSS/color_value/color)、[`hsl()`](/ja/docs/Web/CSS/color_value/hsl)、[`hwb()`](/ja/docs/Web/CSS/color_value/hwb)、[`lab()`](/ja/docs/Web/CSS/color_value/lab)、[`lch()`](/ja/docs/Web/CSS/color_value/lch)、[`oklab()`](/ja/docs/Web/CSS/color_value/oklab)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch)、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb) といった、現代の CSS 色関数を使用して定義することができます。一般的な構文構造は、いずれの場合も同じですが、使用する関数に適した名前付きの元の色値は異なります。
+ここまでは、 [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 関数を使用して定義された相対色のみを見てきました。しかし、相対色は、[`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color)、[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、[`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb)、[`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch)、[`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab)、[`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch)、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) といった、現代の CSS 色関数を使用して定義することができます。一般的な構文構造は、いずれの場合も同じですが、使用する関数に適した名前付きの元の色値は異なります。
 
 下記に、それぞれの色関数に関連する色構文の例をいくつか探してみてください。それぞれのケースは可能な限り最も単純なもので、出力の色チャンネル値は元の色チャンネル値と正確に照合します。
 
@@ -231,7 +231,7 @@ rgb(from red r g b / alpha)
 
 ## 数学関数の使用
 
-出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
+出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
 
 次の CSS は、異なる背景色を持つ 3 つの {{htmlelement("div")}} 要素のスタイルを指定しています。中央の要素には変更されていない `--base-color` が指定され、左右の要素には、その `--base-color` の明度を上げたもの、下げたものがそれぞれ指定されています。これらのバリエーションは相対色を使用して定義されています。 `--base-color` は `lch()` 関数に渡され、 `calc()` 関数を使用して、望みの効果を得るために出力色の明度チャンネルを変更しています。明るくする色には明度チャンネルに 20% を加算し、暗くする色には 20% を減算しています。
 
@@ -303,7 +303,7 @@ rgb(from red r g b / alpha)
 ## 例
 
 > [!NOTE]
-> 相対色構文の使用例は、それぞれの関数記法型ごとに、[`color()`](/ja/docs/Web/CSS/color_value/color#相対色の値の構文)、[`hsl()`](/ja/docs/Web/CSS/color_value/hsl#using_relative_colors_with_hsl)、[`hwb()`](/ja/docs/Web/CSS/color_value/hwb#using_relative_colors_with_hwb)、[`lab()`](/ja/docs/Web/CSS/color_value/lab#using_relative_colors_with_lab)、[`lch()`](/ja/docs/Web/CSS/color_value/lch#using_relative_colors_with_lch)、[`oklab()`](/ja/docs/Web/CSS/color_value/oklab#using_relative_colors_with_oklab)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch#using_relative_colors_with_oklch)、[`rgb()`](/ja/docs/Web/CSS/color_value/rgb#相対値構文) の専用ページで探すことができます。
+> 相対色構文の使用例は、それぞれの関数記法型ごとに、[`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color#相対色の値の構文)、[`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl#using_relative_colors_with_hsl)、[`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb#using_relative_colors_with_hwb)、[`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab#using_relative_colors_with_lab)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch#using_relative_colors_with_lch)、[`oklab()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklab#using_relative_colors_with_oklab)、[`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch#using_relative_colors_with_oklch)、[`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb#相対値構文) の専用ページで探すことができます。
 
 ### 色パレットジェネレーター
 
@@ -390,7 +390,7 @@ rgb(from red r g b / alpha)
 
 最後のルールでは、[一般兄弟セレクター (`~`)](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) を使用して、それぞれのパレット型で使用されていない `<div>` 要素を対象とし、レンダリングされないように [`display: none`](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) を設定しています。
 
-色自体には、`--base-color`、およびその `--base-color` から派生した相対色が設定されます。 相対色には [`lch()`](/ja/docs/Web/CSS/color_value/lch) 関数を使用します。元の色として `--base-color` を渡し、必要に応じて明度または色相チャンネルを調整した出力色を定義します。
+色自体には、`--base-color`、およびその `--base-color` から派生した相対色が設定されます。 相対色には [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) 関数を使用します。元の色として `--base-color` を渡し、必要に応じて明度または色相チャンネルを調整した出力色を定義します。
 
 ```css hidden
 html {
@@ -647,7 +647,7 @@ function setBaseColor(e) {
 
 #### CSS
 
-CSS の `:root` には既定で `--hue` 値が設定されており、相対 [`lch()`](/ja/docs/Web/CSS/color_value/lch) 色で配色を定義し、さらに放射グラデーションで本体全体を塗りつぶしています。
+CSS の `:root` には既定で `--hue` 値が設定されており、相対 [`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) 色で配色を定義し、さらに放射グラデーションで本体全体を塗りつぶしています。
 
 相対色は次のようになります。
 

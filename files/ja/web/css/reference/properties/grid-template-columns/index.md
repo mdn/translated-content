@@ -97,7 +97,7 @@ grid-template-columns: unset;
 - `none`
   - : 明示的なグリッドがないことを示します。どの列も暗黙的に生成され、それらのサイズは {{cssxref("grid-auto-columns")}} プロパティによって決定されます。
 - `[line-name]`
-  - : [`<custom-ident>`](/ja/docs/Web/CSS/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
+  - : [`<custom-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident) で、その位置にある線の名称を指定します。識別子には、予約語の `span` と `auto` 以外の有効な文字列を指定してください。行は、`[line-name-a line-name-b]`のように、角括弧内のスペースで区切られた複数の名前を持つことができます。
 - {{cssxref("&lt;length&gt;")}}
   - : 負の値ではない長さです。
 - {{cssxref("&lt;percentage&gt;")}}

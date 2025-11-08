@@ -50,7 +50,7 @@ l10n:
 
 ### 関数
 
-- [`fit-content()`](/ja/docs/Web/CSS/fit-content_function)
+- [`fit-content()`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
 
 ### 用語集の用語
 

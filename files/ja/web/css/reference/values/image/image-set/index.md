@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---
 
-**`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)表記で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。
+**`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)表記で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。
 
 解像度や帯域幅は、端末や ネットワークのアクセスによって異なります。`image-set()` 関数は、ユーザーの端末に最も適した画像解像度を提供します。画像オプションの集合を提供し、それぞれに関連する解像度宣言を付けて、そこからブラウザーが端末や設定に最も適したものを選び出します。解像度はファイルサイズのプロキシーとして使用することができます。高解像度の画面を持つ遅いモバイル接続のユーザーエージェントは、高解像度の画像を読み込むのを待つよりも、低解像度の画像を受信することを好むかもしれません。
 
@@ -42,11 +42,11 @@ image-set(
 ### 値
 
 - `<image>`
-  - : [`<image>`](/ja/docs/Web/CSS/image) は画像セット以外のあらゆる画像を指定できます。 `image-set()` 関数は他の `image-set()` 関数の中に入れ子にすることはできません。
+  - : [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) は画像セット以外のあらゆる画像を指定できます。 `image-set()` 関数は他の `image-set()` 関数の中に入れ子にすることはできません。
 - `<string>`
   - : 画像への URL です。
 - `<resolution>` {{optional_inline}}
-  - : [`<resolution>`](/ja/docs/Web/CSS/resolution) の単位には、`x` や `dppx` (dots per pixel 単位)、dpi (dots per inch)、dpcm (dots per centimeter) があります。 `image-set()` 内の画像はすべて、解像度が固有でなければなりません。
+  - : [`<resolution>`](/ja/docs/Web/CSS/Reference/Values/resolution) の単位には、`x` や `dppx` (dots per pixel 単位)、dpi (dots per inch)、dpcm (dots per centimeter) があります。 `image-set()` 内の画像はすべて、解像度が固有でなければなりません。
 - `type(<string>)`{{optional_inline}}
   - : 有効な MIME タイプの文字列、例えば "image/jpeg" です。
 

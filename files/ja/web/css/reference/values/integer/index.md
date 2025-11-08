@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b4862a953a358b2f08a181e3a4051433cfa86ca0
 ---
 
-**`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は数多くの CSS プロパティや記述子で使用することができます。例えば {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} プロパティや {{cssxref("@counter-style/range", "range")}} 記述子などです。
+**`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は数多くの CSS プロパティや記述子で使用することができます。例えば {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} プロパティや {{cssxref("@counter-style/range", "range")}} 記述子などです。
 
 ## 構文
 
@@ -17,7 +17,7 @@ l10n:
 
 ## 補間
 
-アニメーション時には、 `<integer>` データ型の値は離散的に整数を使用して{{Glossary("interpolation", "補間")}}されます。実数、すなわち浮動小数点で計算が行われた場合、離散値は [floor 関数](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)を使って求められます。補間の速度は、アニメーションに結びつけられた[タイミング関数](/ja/docs/Web/CSS/easing-function)で決められます。
+アニメーション時には、 `<integer>` データ型の値は離散的に整数を使用して{{Glossary("interpolation", "補間")}}されます。実数、すなわち浮動小数点で計算が行われた場合、離散値は [floor 関数](https://ja.wikipedia.org/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0)を使って求められます。補間の速度は、アニメーションに結びつけられた[タイミング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で決められます。
 
 ## 例
 

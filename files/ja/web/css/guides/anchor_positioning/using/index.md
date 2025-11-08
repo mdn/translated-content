@@ -116,7 +116,7 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 
 従来の絶対位置指定要素および固定位置指定要素は、{{cssxref("length")}} または {{cssxref("percentage")}} の値を{{glossary("inset properties", "インセットプロパティ")}}に設定することで、明示的に位置指定されます。`position: absolute` の場合、このインセット位置値は、最も近い位置指定祖先の端からの絶対距離です。`position: fixed` の場合、インセット位置値はビューポートからの絶対距離です。
 
-CSS のアンカーの位置指定は、この概念を変更し、アンカーに関連付けられた要素を、関連付けられたアンカーの端を基準として配置できるようにします。このモジュールでは、各インセットプロパティの有効な値である [`anchor()`](/ja/docs/Web/CSS/anchor) 関数を定義しています。この関数を使用すると、インセット位置の値を、アンカー要素を定義し、位置指定される要素が相対的に位置指定されるアンカー要素の端、およびその端からの距離を定義することで、アンカー要素に対する絶対距離として設定します。
+CSS のアンカーの位置指定は、この概念を変更し、アンカーに関連付けられた要素を、関連付けられたアンカーの端を基準として配置できるようにします。このモジュールでは、各インセットプロパティの有効な値である [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) 関数を定義しています。この関数を使用すると、インセット位置の値を、アンカー要素を定義し、位置指定される要素が相対的に位置指定されるアンカー要素の端、およびその端からの距離を定義することで、アンカー要素に対する絶対距離として設定します。
 
 関数部分は次のようになります。
 
@@ -127,10 +127,10 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 - `<anchor-name>`
   - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/Reference/Properties/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/Reference/Properties/position-anchor) プロパティで参照されたアンカー、または、HTML の標準外の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
     > [!NOTE]
-    > `<anchor-name>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-name>` 値](/ja/docs/Web/CSS/anchor#複数のアンカーに相対的な要素の位置指定)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
+    > `<anchor-name>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-name>` 値](/ja/docs/Web/CSS/Reference/Values/anchor#複数のアンカーに相対的な要素の位置指定)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
-- [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
-  - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values)のない値が使用された場合、代替値が使用されます。
+- [`<anchor-side>`](/ja/docs/Web/CSS/Reference/Values/anchor#anchor-side)
+  - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values)のない値が使用された場合、代替値が使用されます。
 
 - `<fallback>`
   - : {{cssxref("length-percentage")}} は、要素が絶対位置指定または固定位置指定されていない場合、使用された `<anchor-side>` 値が `anchor()` 関数が設定されたインセットプロパティと互換性がない場合、またはアンカー要素が存在しない場合に、代替値として使用する距離を定義します。
@@ -289,7 +289,7 @@ body {
 - `center` の値は、両方の値が `center` に設定されている場合と同じように動作します（つまり、`center center`）。
 
 > [!NOTE]
-> 利用可能なすべての値の詳細については、[`<position-area>`](/ja/docs/Web/CSS/position-area_value) 値の参照ページをご覧ください。論理値と物理値を混在させると、宣言が無効になります。
+> 利用可能なすべての値の詳細については、[`<position-area>`](/ja/docs/Web/CSS/Reference/Values/position-area_value) 値の参照ページをご覧ください。論理値と物理値を混在させると、宣言が無効になります。
 
 これらの値をいくつか示してみましょう。この例では、HTML とベース CSS は前の例と同じものを使用していますが、 {{htmlelement("select")}} 要素を追加して、配置された要素の `position-area` 値を変更できるようにしています。
 
@@ -664,7 +664,7 @@ left: anchor-size(width);
 inset-inline-end: anchor-size(--my-anchor height, 100px);
 ```
 
-これは、 [`anchor()`](/ja/docs/Web/CSS/anchor) 関数や {{cssxref("position-area")}} プロパティのように要素をアンカーの位置に対して相対的に配置するものではありません（以上、[要素をアンカーに対して相対的に配置する](#要素をアンカーに対して相対的に配置)を参照）。 アンカー要素の位置が変わっても、この要素の位置は変わりません。代わりに、この要素は絶対位置指定 ([`absolute`](/ja/docs/Web/CSS/Reference/Properties/position#absolute)) または固定位置指定 ([`fixed`](/ja/docs/Web/CSS/Reference/Properties/position#fixed)) の通常のルールに従って位置指定されます。
+これは、 [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) 関数や {{cssxref("position-area")}} プロパティのように要素をアンカーの位置に対して相対的に配置するものではありません（以上、[要素をアンカーに対して相対的に配置する](#要素をアンカーに対して相対的に配置)を参照）。 アンカー要素の位置が変わっても、この要素の位置は変わりません。代わりに、この要素は絶対位置指定 ([`absolute`](/ja/docs/Web/CSS/Reference/Properties/position#absolute)) または固定位置指定 ([`fixed`](/ja/docs/Web/CSS/Reference/Properties/position#fixed)) の通常のルールに従って位置指定されます。
 
 これは状況によっては有用です。例えば、アンカー要素が垂直方向にしか移動できず、常に最も近い位置指定親要素の水平方向の端に隣接して配置される場合、`left: anchor-size(width)` を使用することで、アンカーの幅が変化してもアンカー配置要素が常にアンカーの適切な側に配置されるようにできます。
 

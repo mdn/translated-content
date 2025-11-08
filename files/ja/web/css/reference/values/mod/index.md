@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`mod()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、最初の引数を 2 つ目の引数で割ったときのモジュラスを返します。これは、JavaScript の[剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) と似ています。モジュラスは、1 つのオペランド（被除数）を 2 つ目のオペランド（除数）で割ったときに残る値です。常に除数の符号を取ります。
+**`mod()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、最初の引数を 2 つ目の引数で割ったときのモジュラスを返します。これは、JavaScript の[剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) と似ています。モジュラスは、1 つのオペランド（被除数）を 2 つ目のオペランド（除数）で割ったときに残る値です。常に除数の符号を取ります。
 
 計算は `a - (Math.floor(a / b) * b)` です。例えば、CSS の関数 `mod(21, -4)` は、余りの `-3` を返します。完全な計算は `21 - (Math.floor(21 / -4) * -4)` です。`21` を `-4` で割ると、結果は `-5.25` になります。これは `-6` に切り捨てられます。`-6` に `-4` を掛けると `24` になります。この `24` を元の `21` から引くと、余りは -3 になります。
 
@@ -39,7 +39,7 @@ transition-duration: mod(20s / 2, 3000ms * 2); /* 4s */
 
 ### 引数
 
-関数 `mod(dividend, divisor)` は、カンマで区切られた 2 つの値を引数として受け入れます。関数が有効であるためには、両方の引数は同じ型、[数値](/ja/docs/Web/CSS/number)、[サイズ](/ja/docs/Web/CSS/dimension)、{{cssxref("percentage")}} のいずれかである必要があります。2 つの引数の単位は同じである必要はありませんが、{{cssxref("length")}}、{{cssxref("angle")}}、{{cssxref("time")}}、{{cssxref("frequency")}} などの同じサイズの型である必要があります。
+関数 `mod(dividend, divisor)` は、カンマで区切られた 2 つの値を引数として受け入れます。関数が有効であるためには、両方の引数は同じ型、[数値](/ja/docs/Web/CSS/Reference/Values/number)、[サイズ](/ja/docs/Web/CSS/Reference/Values/dimension)、{{cssxref("percentage")}} のいずれかである必要があります。2 つの引数の単位は同じである必要はありませんが、{{cssxref("length")}}、{{cssxref("angle")}}、{{cssxref("time")}}、{{cssxref("frequency")}} などの同じサイズの型である必要があります。
 
 - `dividend`
   - : 被除数を表す {{CSSxREF("&lt;number&gt;")}}、{{CSSxREF("&lt;dimension&gt;")}}、{{CSSxREF("&lt;percentage&gt;")}} に解決される計算式。

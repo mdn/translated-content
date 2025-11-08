@@ -24,7 +24,7 @@ l10n:
 ### 値
 
 - `background_color`
-  - : 有効な[色値](/ja/docs/Web/CSS/color_value)を指定する文字列です。
+  - : 有効な[色値](/ja/docs/Web/CSS/Reference/Values/color_value)を指定する文字列です。
 
 ## 解説
 

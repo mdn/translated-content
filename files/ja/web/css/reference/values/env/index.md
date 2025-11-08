@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/env
 original_slug: Web/CSS/env
 ---
 
-**`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、ユーザーエージェントが定義した環境変数の値を、 {{cssxref("var()")}} 関数や[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)と同じ方法で CSS に挿入するために使用することができます。異なる点は、ユーザーが定義しているのではなくユーザーエージェントが定義しているものであること、カスタムプロパティは宣言されている要素のスコープであるのに対し、環境変数は文書でグローバルなスコープであることです。
+**`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、ユーザーエージェントが定義した環境変数の値を、 {{cssxref("var()")}} 関数や[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)と同じ方法で CSS に挿入するために使用することができます。異なる点は、ユーザーが定義しているのではなくユーザーエージェントが定義しているものであること、カスタムプロパティは宣言されている要素のスコープであるのに対し、環境変数は文書でグローバルなスコープであることです。
 
 加えて、宣言の外部で使用することができないカスタムプロパティとは異なり、 `env()` 関数はプロパティ値の任意の部分、記述子の任意の部分 (例 [メディアクエリールール](/ja/docs/Web/CSS/Reference/At-rules/@media)) で使用することができます。仕様書が発展すると、セレクターなどの他の場所でも使用することができるかもしれません。
 

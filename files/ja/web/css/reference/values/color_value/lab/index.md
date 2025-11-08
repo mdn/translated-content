@@ -34,7 +34,7 @@ lab(52.2345% 40.1645 59.9971 / .5);
 > この場合は特別で、 `100%` は `L` 値では `100`、 `a` 値と `b` 値では `125` となります。
 
 > [!NOTE]
-> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/Reference/Values/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -155,6 +155,6 @@ div {
 
 ## 関連情報
 
-- [`<color>` データ型](/ja/docs/Web/CSS/color_value): すべての色記法の一覧
+- [`<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value): すべての色記法の一覧
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): `lab()` および {{cssxref("color_value/lch",'lch()')}} 色を含む

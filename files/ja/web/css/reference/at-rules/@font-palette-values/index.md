@@ -19,7 +19,7 @@ l10n:
 }
 ```
 
-[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/var)で囲まれていません。
+[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/Reference/Values/var)で囲まれていません。
 
 ### 記述子
 

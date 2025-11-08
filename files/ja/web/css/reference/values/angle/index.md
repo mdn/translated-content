@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-**`<angle>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、度、グラード、ラジアン、周の値で表される角度の値を表します。例えば、 {{cssxref("&lt;gradient&gt;")}} 関数や一部の {{cssxref("transform")}} 関数などで使われています。
+**`<angle>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、度、グラード、ラジアン、周の値で表される角度の値を表します。例えば、 {{cssxref("&lt;gradient&gt;")}} 関数や一部の {{cssxref("transform")}} 関数などで使われています。
 
 {{InteractiveExample("CSS デモ: &lt;angle&gt;")}}
 
@@ -117,9 +117,9 @@ transform: rotate(1.75turn);
 
 ## 関連情報
 
-- [CSS データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
-- [`<gradient>`](/ja/docs/Web/CSS/gradient) 型
-- CSS 回転変換: [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate), [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d), [`rotateX()`](/ja/docs/Web/CSS/transform-function/rotateX), [`rotateY()`](/ja/docs/Web/CSS/transform-function/rotateY), [`rotateZ()`](/ja/docs/Web/CSS/transform-function/rotateZ)
+- [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
+- [`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) 型
+- CSS 回転変換: [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateY), [`rotateZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
 - [CSS 変換](/ja/docs/Web/CSS/CSS_transforms)
 - [CSS 変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)

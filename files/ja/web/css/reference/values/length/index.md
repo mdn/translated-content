@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7d82742741cb1474c9ab105316701ec9d18d473a
 ---
 
-**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
+**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
 
 > [!NOTE]
 > {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
@@ -193,7 +193,7 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 
 ## 補間
 
-アニメーションの場合、 `<length>` データ型の値は浮動小数点の実数として補間されます。補間は計算値に対して行われます。{{glossary("interpolation", "補間")}}の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/easing-function)によって定められます。
+アニメーションの場合、 `<length>` データ型の値は浮動小数点の実数として補間されます。補間は計算値に対して行われます。{{glossary("interpolation", "補間")}}の速度は、アニメーションに関連付けられた[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)によって定められます。
 
 ## 例
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 511208efe18c7a042bad9859dc797e944a1c16ed
 ---
 
-**`xywh()`** は [CSS](/ja/docs/Web/CSS) の関数で、包含ブロックの左端 (`x`) と上端 (`y`) からの距離を指定し、矩形の幅 (`w`) と高さ (`h`) を指定して矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)の基本図形関数です。 `xywh()` 関数を{{cssxref("offset-path")}}のようなCSSプロパティで使用し、要素が移動される矩形のパスを作成したり、{{cssxref("clip-path")}}でクリッピング領域の図形を定義することができます。
+**`xywh()`** は [CSS](/ja/docs/Web/CSS) の関数で、包含ブロックの左端 (`x`) と上端 (`y`) からの距離を指定し、矩形の幅 (`w`) と高さ (`h`) を指定して矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)の基本図形関数です。 `xywh()` 関数を{{cssxref("offset-path")}}のようなCSSプロパティで使用し、要素が移動される矩形のパスを作成したり、{{cssxref("clip-path")}}でクリッピング領域の図形を定義することができます。
 
 ## 構文
 
@@ -95,8 +95,8 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 
 ## 関連情報
 
-- [`inset()`](/ja/docs/Web/CSS/basic-shape#inset) 関数
-- [`rect()`](/ja/docs/Web/CSS/basic-shape#rect) 関数
+- [`inset()`](/ja/docs/Web/CSS/Reference/Values/basic-shape#inset) 関数
+- [`rect()`](/ja/docs/Web/CSS/Reference/Values/basic-shape#rect) 関数
 - {{cssxref("clip-path")}} プロパティ
 - {{cssxref("offset-path")}} プロパティ
 - {{cssxref("&lt;basic-shape&gt;")}} データ型

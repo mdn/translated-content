@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
-**`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
+**`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
 
 ## 構文
 
@@ -59,5 +59,5 @@ awesome string"
 ## 関連情報
 
 - [CSS の単位と値](/ja/docs/Web/CSS/CSS_values_and_units)
-- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS の基本データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS 入門: 単位と値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

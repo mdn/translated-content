@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 745950224a21606bb2d953e149b1385b9ea6a3f8
 ---
 
-**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
+**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: &lt;gradient&gt;")}}
 
@@ -42,7 +42,7 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
+CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
 
 ## 構文
 
@@ -66,7 +66,7 @@ CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/
 
 ## 補間
 
-色に関する他の補間操作と同様、グラデーションはアルファ乗算済み色空間で計算されます。これは、色と透過性が同時に変化するときに、予期しない灰色が現れるのを避けるためです。（古いブラウザーは、 [transparent キーワード](/ja/docs/Web/CSS/named-color#transparent)を使用するとこれを使用しないことがあるので注意してください。）
+色に関する他の補間操作と同様、グラデーションはアルファ乗算済み色空間で計算されます。これは、色と透過性が同時に変化するときに、予期しない灰色が現れるのを避けるためです。（古いブラウザーは、 [transparent キーワード](/ja/docs/Web/CSS/Reference/Values/named-color#transparent)を使用するとこれを使用しないことがあるので注意してください。）
 
 ## 形式文法
 
@@ -219,6 +219,6 @@ span {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [CSS の基本データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS の単位と値](/ja/docs/Web/CSS/CSS_values_and_units)
 - [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

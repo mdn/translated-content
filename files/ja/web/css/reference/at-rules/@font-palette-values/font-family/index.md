@@ -17,7 +17,7 @@ l10n:
 }
 ```
 
-続く他のパレット値は、指定したフォントファミリーにのみ適用されます。他のフォントファミリーの [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) は、同じ [&lt;dashed-ident&gt;s](/ja/docs/Web/CSS/dashed-ident) を用いることで作成することができます。これは、複数のカラーフォントを持っていて、それぞれに同じ識別子を使用することができる、ということを意味しています。
+続く他のパレット値は、指定したフォントファミリーにのみ適用されます。他のフォントファミリーの [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) は、同じ [&lt;dashed-ident&gt;s](/ja/docs/Web/CSS/Reference/Values/dashed-ident) を用いることで作成することができます。これは、複数のカラーフォントを持っていて、それぞれに同じ識別子を使用することができる、ということを意味しています。
 
 ### 値
 

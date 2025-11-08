@@ -71,7 +71,7 @@ hsl(120deg 75% 25% / 0.6)
 > この関数記法は sRGB 値にシリアライズされ、赤、緑、青の成分の値はシリアライズの際に丸められる可能性があります。
 
 > [!NOTE]
-> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/Reference/Values/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
@@ -81,7 +81,7 @@ hsl(120deg 75% 25% / 0.6)
 
 ### hsl() を conic-gradient() と組み合わせて使う
 
-`hsl()` 関数と [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) はどちらも角度を扱うので、相性がよいものです。
+`hsl()` 関数と [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient) はどちらも角度を扱うので、相性がよいものです。
 
 ```html hidden
 <div></div>

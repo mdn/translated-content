@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: conic-gradient()")}}
 
@@ -94,11 +94,11 @@ conic-gradient(
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する{{Glossary("interpolation","補間")}}のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
 > [!NOTE]
-> 扇形グラデーションにおける色経由点は、[線形グラデーションにおける色経由点](/ja/docs/Web/CSS/gradient/linear-gradient#線形グラデーションの構成)と同じルールに従います。
+> 扇形グラデーションにおける色経由点は、[線形グラデーションにおける色経由点](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient#線形グラデーションの構成)と同じルールに従います。
 
 ## 解説
 
-他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
+他のグラデーションと同様、扇形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#description)。つまり、自然の寸法や推奨される寸法、推奨される縦横比もありません。自身の寸法は適用先の要素の寸法、または要素の寸法以外で設定された `<image>` の寸法に一致します。
 
 繰り返して 360 度の回転を埋める扇形グラデーションを生成するには、代わりに {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 関数を使用してください。
 
@@ -113,7 +113,7 @@ conic-gradient(
 
 ![扇形グラデーションの円周と放射グラデーションの軸に沿った色経由点](screenshot_2018-11-29_21.09.19.png)
 
-扇形グラデーションは、回転角度とグラデーションの中心を指定し、色経由点のリストを指定します。長さ ({{cssxref("length")}}) を指定して色経由点を配置する線形グラデーションや放射グラデーションとは異なり、扇形グラデーションの色経由点は角度を指定します。単位には[度](/ja/docs/Web/CSS/angle)を表す `deg`、グラードを表す `grad`、ラジアンを表す `rad`、回転数を表す `turn` があります。 1 つの円は 360 度、 400 グラード、 2π ラジアン、 1 回転になります。扇形グラデーションに対応しているブラウザーはパーセント値も受け付けており、 100% は 360 度に相当しますが、これは仕様にはありません。
+扇形グラデーションは、回転角度とグラデーションの中心を指定し、色経由点のリストを指定します。長さ ({{cssxref("length")}}) を指定して色経由点を配置する線形グラデーションや放射グラデーションとは異なり、扇形グラデーションの色経由点は角度を指定します。単位には[度](/ja/docs/Web/CSS/Reference/Values/angle)を表す `deg`、グラードを表す `grad`、ラジアンを表す `rad`、回転数を表す `turn` があります。 1 つの円は 360 度、 400 グラード、 2π ラジアン、 1 回転になります。扇形グラデーションに対応しているブラウザーはパーセント値も受け付けており、 100% は 360 度に相当しますが、これは仕様にはありません。
 
 放射グラデーションと同様に、扇形グラデーションの構文では、グラデーションの中心を画像内のどこにでも、あるいは画像の外側にでも配置することができます。位置の値は、 2 値の背景位置の構文に似ています。
 
@@ -291,7 +291,7 @@ div {
 }
 ```
 
-この補間処理の例では、 [hsl](/ja/docs/Web/CSS/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/hue)を補間しています。
+この補間処理の例では、 [hsl](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/Reference/Values/hue)を補間しています。
 
 ```css live-sample___interpolating_with_hue
 .shorter {
@@ -303,7 +303,7 @@ div {
 }
 ```
 
-左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
+左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
 
 {{EmbedLiveSample("Interpolating with hue", 240, 200)}}
 
@@ -323,8 +323,8 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method)
+- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
+- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

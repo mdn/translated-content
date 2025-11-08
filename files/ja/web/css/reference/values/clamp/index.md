@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、定義された下限値と上限値の範囲内の値を、その範囲内に制限します。この関数は、最小値、推奨値、および最大許容値の 3 つの引数を取ります。
+**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、定義された下限値と上限値の範囲内の値を、その範囲内に制限します。この関数は、最小値、推奨値、および最大許容値の 3 つの引数を取ります。
 
 {{InteractiveExample("CSS デモ: clamp()")}}
 
@@ -92,7 +92,7 @@ width: clamp(100px, calc(30% / 2rem + 10px), 900px);
 - 段落テキストのフォントサイズ
 - 見出しテキストのフォントサイズ
 
-3 つのケースすべてにおいて、ページはビューポート相対単位（[`vw`](/ja/docs/Web/CSS/length#vw) と {{cssxref("percentage")}}）、ビューポートの幅に応じて変化するサイズを設定し、ビューポート相対ではない値（[`rem`](/ja/docs/Web/CSS/length#rem) と [`px`](/ja/docs/Web/CSS/length#px)）を組み合わせて、最小サイズや最大サイズを実装しています。
+3 つのケースすべてにおいて、ページはビューポート相対単位（[`vw`](/ja/docs/Web/CSS/Reference/Values/length#vw) と {{cssxref("percentage")}}）、ビューポートの幅に応じて変化するサイズを設定し、ビューポート相対ではない値（[`rem`](/ja/docs/Web/CSS/Reference/Values/length#rem) と [`px`](/ja/docs/Web/CSS/Reference/Values/length#px)）を組み合わせて、最小サイズや最大サイズを実装しています。
 
 例は <https://mdn.github.io/css-examples/min-max-clamp/> にあります。新しいウィンドウで開いて、ウィンドウの幅を調整してみてください。
 

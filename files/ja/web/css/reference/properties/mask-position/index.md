@@ -74,7 +74,7 @@ mask-position: unset;
 
 それぞれの `mask-position` は、関連付けられた {{cssxref("mask-origin")}} 値に対する関連付けられたマスクレイヤーの位置を定義します。 `mask-origin` プロパティの値は、同様に `mask-image` の値と順番に照合され、余分な `mask-position` 値は使用されないか、 `mask-position` 値の数が `mask-origin` 値よりも少ない場合は繰り返されます。したがって、各マスクレイヤーには、関連付けられた `mask-origin` および `mask-position` 値が存在します。
 
-`mask-origin` が設定されていない場合、値は既定で `padding-box` になります。これは、各 `mask-position` の原点が要素の[パディングボックス](/ja/docs/Web/CSS/box-edge#padding-box)であることを意味しています。
+`mask-origin` が設定されていない場合、値は既定で `padding-box` になります。これは、各 `mask-position` の原点が要素の[パディングボックス](/ja/docs/Web/CSS/Reference/Values/box-edge#padding-box)であることを意味しています。
 
 ### 単一値の構文
 

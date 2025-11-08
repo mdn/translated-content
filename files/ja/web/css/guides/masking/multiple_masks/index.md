@@ -156,7 +156,7 @@ mask: 100px 100px no-repeat;
 
 `<image> <position> / <size> <repeat> <origin> <clip> <composite> <mode>`
 
-どちらも [`<geometry-box>`](/ja/docs/Web/CSS/box-edge#geometry-box) キーワードを受け入れます。さらに、`mask-clip` は `no-clip` も受け入れます。このため、`mask-clip` を `no-clip` 以外の値に設定する場合は、この 2 つの順序が重要になります。
+どちらも [`<geometry-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#geometry-box) キーワードを受け入れます。さらに、`mask-clip` は `no-clip` も受け入れます。このため、`mask-clip` を `no-clip` 以外の値に設定する場合は、この 2 つの順序が重要になります。
 
 - 1 つの `<geometry-box>` 値が `no-clip` キーワードとともに存在する場合は、`<geometry-box>` が `mask-origin` 値を設定し、`mask-clip` は `no-clip` に設定されます。この場合、順序は関係ありません。
 

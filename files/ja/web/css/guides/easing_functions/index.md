@@ -23,9 +23,9 @@ l10n:
 ### データ型
 
 - {{cssxref("easing-function")}}
-- [`<linear-easing-function>`](/ja/docs/Web/CSS/easing-function#linear-easing-function)
-- [`<cubic-bezier-easing-function>`](/ja/docs/Web/CSS/easing-function#cubic-bezier-easing-function)
-- [`<step-easing-function>`](/ja/docs/Web/CSS/easing-function#step-easing-function)
+- [`<linear-easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function#linear-easing-function)
+- [`<cubic-bezier-easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function#cubic-bezier-easing-function)
+- [`<step-easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function#step-easing-function)
 
 ### 用語の定義
 
@@ -34,7 +34,7 @@ l10n:
 
 ## ガイド
 
-- [CSS 値関数: イージング関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#イージング関数)
+- [CSS 値関数: イージング関数](/ja/docs/Web/CSS/Reference/Values/Functions#イージング関数)
   - : CSS プロパティの CSS 値を返すために、特別なデータ処理または計算を呼び出す CSS 文。
 
 ## 関連概念
@@ -53,5 +53,5 @@ l10n:
 
 ## 関連情報
 
-- [CSS 値関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS 値関数](/ja/docs/Web/CSS/Reference/Values/Functions)
 - CSS の {{cssxref("will-change")}} プロパティ

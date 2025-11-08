@@ -56,7 +56,7 @@ CSS は HTML のスタイル設定だけのためにあるわけではありま�
 ## 関連情報
 
 - SVG の [`<a>`](/ja/docs/Web/SVG/Reference/Element/a#example) 要素
-- [CSS `<url>` 型](/ja/docs/Web/CSS/url_value)
+- [CSS `<url>` 型](/ja/docs/Web/CSS/Reference/Values/url_value)
 - [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
 - [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)

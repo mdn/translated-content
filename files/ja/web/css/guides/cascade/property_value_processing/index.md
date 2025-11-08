@@ -136,7 +136,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-3 つの指定値である `auto`、`50%`、`inherit` はキーワードおよび {{cssxref("percentage")}} 値ですが、 `window.getComputedStyle(el)["width"];` を使用して幅を取得すると、[絶対的な長さ](/ja/docs/Web/CSS/length#絶対的な長さの単位)である `px` の値を返します。
+3 つの指定値である `auto`、`50%`、`inherit` はキーワードおよび {{cssxref("percentage")}} 値ですが、 `window.getComputedStyle(el)["width"];` を使用して幅を取得すると、[絶対的な長さ](/ja/docs/Web/CSS/Reference/Values/length#絶対的な長さの単位)である `px` の値を返します。
 
 {{ EmbedLiveSample('Example', '80%', 372) }}
 
@@ -177,6 +177,6 @@ CSS 2.0 では、プロパティの計算における最後の段階として計
 
 ## 関連情報
 
-- 継承を制御する CSS 値: [`inherit`](/ja/docs/Web/CSS/inherit), [`initial`](/ja/docs/Web/CSS/initial), [`revert`](/ja/docs/Web/CSS/revert), [`revert-layer`](/ja/docs/Web/CSS/revert-layer), [`unset`](/ja/docs/Web/CSS/unset)
+- 継承を制御する CSS 値: [`inherit`](/ja/docs/Web/CSS/Reference/Values/inherit), [`initial`](/ja/docs/Web/CSS/Reference/Values/initial), [`revert`](/ja/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer), [`unset`](/ja/docs/Web/CSS/Reference/Values/unset)
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール

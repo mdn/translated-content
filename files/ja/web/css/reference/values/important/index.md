@@ -110,7 +110,7 @@ p {
 
 ## カスタムプロパティへの影響
 
-`!important` フラグがカスタムプロパティの値宣言に追加されると、その値の割り当てを important にします。 `!important` フラグはカスタムプロパティ値から取り除かれます。 `!important` フラグはカスタムプロパティの値の一部として [`var()`](/ja/docs/Web/CSS/var) 関数に渡されません。
+`!important` フラグがカスタムプロパティの値宣言に追加されると、その値の割り当てを important にします。 `!important` フラグはカスタムプロパティ値から取り除かれます。 `!important` フラグはカスタムプロパティの値の一部として [`var()`](/ja/docs/Web/CSS/Reference/Values/var) 関数に渡されません。
 
 ```css
 :root {

@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`hypot()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/平方根)を返す指数関数です。
+**`hypot()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/平方根)を返す指数関数です。
 
-{{CSSxRef("pow")}} と {{CSSxRef("sqrt")}} は単位のない数値のみを扱いますが、`hypot()` は単位を持つ値を受け入れます。ただし、すべての値は同じ[型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)である必要があります。
+{{CSSxRef("pow")}} と {{CSSxRef("sqrt")}} は単位のない数値のみを扱いますが、`hypot()` は単位を持つ値を受け入れます。ただし、すべての値は同じ[型](/ja/docs/Web/CSS/Reference/Values/Data_types)である必要があります。
 
 ## 構文
 

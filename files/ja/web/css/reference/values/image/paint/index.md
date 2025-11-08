@@ -6,7 +6,7 @@ original_slug: Web/CSS/image/paint
 
 {{SeeCompatTable}}
 
-**`paint()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 PaintWorklet で生成された {{cssxref("&lt;image&gt;")}} の値を定義します。
+**`paint()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 PaintWorklet で生成された {{cssxref("&lt;image&gt;")}} の値を定義します。
 
 ## 構文
 

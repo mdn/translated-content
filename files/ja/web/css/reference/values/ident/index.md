@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types) は、{{glossary("identifier", "識別子")}}として使用される任意の文字列を意味します。
+**`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types) は、{{glossary("identifier", "識別子")}}として使用される任意の文字列を意味します。
 
 ## 構文
 
@@ -70,5 +70,5 @@ _このデータ型は、他の CSS 構文の定義を単純化するために�
 
 ## 関連情報
 
-- [&lt;custom-ident&gt;](/ja/docs/Web/CSS/custom-ident)
-- [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident)
+- [&lt;custom-ident&gt;](/ja/docs/Web/CSS/Reference/Values/custom-ident)
+- [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident)
