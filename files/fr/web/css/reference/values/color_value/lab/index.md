@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} CIE L\*a\*b\*.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} CIE L\*a\*b\*.
 
 Lab représente toute la gamme de couleurs que les humains peuvent voir en définissant la luminosité de la couleur, une valeur d'axe rouge/vert, une valeur d'axe bleu/jaune, et une valeur alpha de transparence optionnelle.
 
@@ -46,7 +46,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe de valeur relative
 

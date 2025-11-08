@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<hex-color>`** est une notation permettant de décrire la _syntaxe de couleur hexadécimale_ d'une couleur [sRGB](/fr/docs/Glossary/RGB) en utilisant ses composantes principales (rouge, vert, bleu) écrites sous forme de nombres hexadécimaux, ainsi que sa transparence.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hex-color>`** est une notation permettant de décrire la _syntaxe de couleur hexadécimale_ d'une couleur [sRGB](/fr/docs/Glossary/RGB) en utilisant ses composantes principales (rouge, vert, bleu) écrites sous forme de nombres hexadécimaux, ainsi que sa transparence.
 
 Une valeur `<hex-color>` peut être utilisée partout où une valeur {{cssxref("&lt;color&gt;")}} peut l'être.
 

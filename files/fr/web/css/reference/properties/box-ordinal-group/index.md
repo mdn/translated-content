@@ -27,7 +27,7 @@ Les groupes ordinaux peuvent être utilisés avec la propriété [`box-direction
 
 ## Syntaxe
 
-Cette propriété se définit avec un entier positif ([`<integer>`](/fr/docs/Web/CSS/integer)).
+Cette propriété se définit avec un entier positif ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)).
 
 ## Définition formelle
 

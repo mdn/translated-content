@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`repeating-radial-gradient()`** crée une image composée de dégradés qui se répètent à partir d'une origine. Elle est similaire à {{cssxref("gradient/radial-gradient", "radial-gradient()")}} et prend les mêmes arguments, mais elle répète les arrêts de couleur indéfiniment dans toutes les directions afin de couvrir l'ensemble du conteneur, comme {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. Le résultat de cette fonction est un objet du type de données {{cssxref("&lt;gradient&gt;")}}, qui est un type particulier de {{cssxref("&lt;image&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-radial-gradient()`** crée une image composée de dégradés qui se répètent à partir d'une origine. Elle est similaire à {{cssxref("gradient/radial-gradient", "radial-gradient()")}} et prend les mêmes arguments, mais elle répète les arrêts de couleur indéfiniment dans toutes les directions afin de couvrir l'ensemble du conteneur, comme {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. Le résultat de cette fonction est un objet du type de données {{cssxref("&lt;gradient&gt;")}}, qui est un type particulier de {{cssxref("&lt;image&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: repeating-radial-gradient()")}}
 
@@ -42,7 +42,7 @@ background: repeating-radial-gradient(
 
 À chaque répétition, les positions des arrêts de couleur sont décalés d'un multiple du dégradé unitaire (ce dernier couvrant la distance entre le premier et le dernier arrêt de couleur). Ainsi, la position de chaque arrêt de couleur final coïncide avec l'arrêt de couleur initial qui suit&nbsp;: si les couleurs sont différentes, on aura une transition abrupte. Pour ne pas obtenir cet effet, on pourra réutiliser la couleur du premier arrêt de couleur pour le dernier arrêt de couleur.
 
-Comme les autres dégradés, un dégradé radial répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
+Comme les autres dégradés, un dégradé radial répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
 
 Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où les `<image>` peuvent l'être. Pour cette raison, `repeating-radial-gradient()` ne fonctionne pas avec {{cssxref("background-color")}} et les autres propriétés qui utilisent le type de données {{cssxref("&lt;color&gt;")}}.
 
@@ -177,7 +177,7 @@ div {
 }
 ```
 
-Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/hue) est interpolée.
+Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) est utilisé et la [teinte](/fr/docs/Web/CSS/Reference/Values/hue) est interpolée.
 
 ```css
 .shorter {
@@ -197,7 +197,7 @@ Dans cet exemple d'interpolation, le système de couleurs [hsl](/fr/docs/Web/CSS
 }
 ```
 
-La boîte de gauche utilise l'[interpolation plus courte](/fr/docs/Web/CSS/hue-interpolation-method#plus_courte), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation plus longue](/fr/docs/Web/CSS/hue-interpolation-method#plus_longue), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus long, en traversant les verts, les jaunes et les oranges.
+La boîte de gauche utilise l'[interpolation plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_courte), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation plus longue](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#plus_longue), ce qui signifie que la couleur passe du rouge au bleu en utilisant l'arc le plus long, en traversant les verts, les jaunes et les oranges.
 
 {{EmbedLiveSample("Interpolation de la teinte", 240, 200)}}
 

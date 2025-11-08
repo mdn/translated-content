@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 896a41d7d9832367a1e24af567fb419e9d4182f8
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<box-edge>`** représentent un mot-clé de [bord de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), comme [`content-box`](#content-box) et [`border-box`](#border-box). Les mots-clés de bord de boîte servent à définir différents aspects du modèle de boîte d'un element et la façon dont les elements sont positionnés et affichés à l'écran.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<box-edge>`** représentent un mot-clé de [bord de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), comme [`content-box`](#content-box) et [`border-box`](#border-box). Les mots-clés de bord de boîte servent à définir différents aspects du modèle de boîte d'un element et la façon dont les elements sont positionnés et affichés à l'écran.
 
 Les mots-clés de bord de boîte sont les composants, entre autres, des types de données `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>` et `<geometry-box>`. Ces types sont utilisés dans des propriétés telles que {{cssxref("transform-box")}} et {{cssxref("background-clip")}}.
 
@@ -41,7 +41,7 @@ Une `<box-edge>` peut être de type `<visual-box>`, `<layout-box>`, `<paint-box>
   - : Désigne la boîte de coordonnées utilisée pour positionner et dimensionner un élément dans son conteneur parent. Elle sert à contrôler la façon dont le contenu se déplace autour des bords de la boîte. Elle exclut la marge. Ce type de valeur est utilisé pour la propriété {{cssxref("offset-path")}}.
 
 - `<geometry-box>`
-  - : Définit la boîte de référence pour une [forme de base](/fr/docs/Web/CSS/basic-shape), ou, si elle est définie seule, fait que les bords de la boîte indiquée, y compris les coins arrondis (comme avec {{cssxref("border-radius")}}), servent de chemin de découpe (<i lang="en">clipping path</i> en anglais). Ce type de valeur est utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}} et l'attribut SVG {{SVGAttr("clip-path")}}.
+  - : Définit la boîte de référence pour une [forme de base](/fr/docs/Web/CSS/Reference/Values/basic-shape), ou, si elle est définie seule, fait que les bords de la boîte indiquée, y compris les coins arrondis (comme avec {{cssxref("border-radius")}}), servent de chemin de découpe (<i lang="en">clipping path</i> en anglais). Ce type de valeur est utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}} et l'attribut SVG {{SVGAttr("clip-path")}}.
 
 ### Mots-clés
 

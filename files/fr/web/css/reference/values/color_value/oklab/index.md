@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
 
 Oklab est un espace de couleur perceptuel et est utile pour&nbsp;:
 
@@ -52,7 +52,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Consultez [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Consultez [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -476,7 +476,7 @@ Le résultat est le suivant&nbsp;:
 
 ## Voir aussi
 
-- Le [type de donnée `<color>`](/fr/docs/Web/CSS/color_value) pour une liste de toutes les notations de couleur
+- Le [type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour une liste de toutes les notations de couleur
 - Les fonctions de couleur {{cssxref("color_value/lab","lab()")}} et {{cssxref("color_value/oklch","oklch()")}}
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)

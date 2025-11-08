@@ -19,19 +19,19 @@ La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une im
 - {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : L'URI de l'image dont on veut obtenir une portion.
 - `top`
-  - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
+  - : La coordonnée du bord haut de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
 - `right`
-  - : La coordonnée du bord droit de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
+  - : La coordonnée du bord droit de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
 - `bottom`
-  - : La coordonnée du bord inférieur de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
+  - : La coordonnée du bord inférieur de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
 - `left`
-  - : La coordonnée du bord gauche de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) à partir du coin supérieur gauche.
+  - : La coordonnée du bord gauche de l'image, définie comme un entier ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) à partir du coin supérieur gauche.
 
 ## Description
 
 Cette propriété fonctionne de façon analogue à [`-moz-image-region`](/fr/docs/Web/CSS/Reference/Properties/clip) qui peut être utilisée pour déterminer la partie d'une image utilisée pour [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image) qui met en forme les puces d'une liste. Grâce à `-moz-image-rect`, on peut avoir le même fonctionnement pour n'importe quel arrière-plan CSS.
 
-La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/shape#syntaxe) qui génère une valeur de type [`<shape>`](/fr/docs/Web/CSS/shape). Les quatre valeurs indiquées font chacune référence au coin supérieur gauche de l'image.
+La syntaxe de cette propriété est similaire à la fonction [`rect()`](/fr/docs/Web/CSS/Reference/Values/shape#syntaxe) qui génère une valeur de type [`<shape>`](/fr/docs/Web/CSS/Reference/Values/shape). Les quatre valeurs indiquées font chacune référence au coin supérieur gauche de l'image.
 
 ## Exemples
 

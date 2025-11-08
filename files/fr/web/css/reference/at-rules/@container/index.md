@@ -127,7 +127,7 @@ Les requêtes `<container-condition>` incluent les descripteurs de conteneur [si
 
 #### Descripteurs de taille de conteneur
 
-Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes de taille, chacune entre parenthèses. Une requête de taille inclut un descripteur de taille, une valeur et — selon le descripteur — un opérateur de comparaison. Les requêtes mesurent toujours la [boîte de contenu](/fr/docs/Web/CSS/box-edge#content-box) pour la comparaison. La syntaxe pour inclure plusieurs conditions est la même que pour les requêtes de fonctionnalités de taille [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media).
+Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes de taille, chacune entre parenthèses. Une requête de taille inclut un descripteur de taille, une valeur et — selon le descripteur — un opérateur de comparaison. Les requêtes mesurent toujours la [boîte de contenu](/fr/docs/Web/CSS/Reference/Values/box-edge#content-box) pour la comparaison. La syntaxe pour inclure plusieurs conditions est la même que pour les requêtes de fonctionnalités de taille [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media).
 
 ```css
 @container (min-width: 400px) {
@@ -417,7 +417,7 @@ Les requêtes de conteneur peuvent aussi évaluer le style calculé de l'éléme
 }
 ```
 
-Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/var#values).
+Le paramètre de chaque `style()` est un seul `<style-feature>`. Un **`<style-feature>`** est une [déclaration CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) valide, une propriété CSS ou un [`<custom-property-name>`](/fr/docs/Web/CSS/Reference/Values/var#values).
 
 ```css
 @container style(--themeBackground),

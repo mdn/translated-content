@@ -20,7 +20,7 @@ La règle `@property` permet d'enregistrer une propriété personnalisée direct
 }
 ```
 
-Le nom de la propriété personnalisée est un [`<dashed-ident>`](/fr/docs/Web/CSS/dashed-ident) qui commence par `--` et est suivi d'un identifiant valide défini par l'utilisateur·ice. Il est sensible à la casse.
+Le nom de la propriété personnalisée est un [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident) qui commence par `--` et est suivi d'un identifiant valide défini par l'utilisateur·ice. Il est sensible à la casse.
 
 ### Descripteurs
 
@@ -63,7 +63,7 @@ Le code suivant utilise la règle CSS `@property` pour définir une propriété 
 }
 ```
 
-On définit une seconde propriété personnalisée, `--item-color`, en utilisant [JavaScript](/fr/docs/Web/JavaScript) au lieu de CSS. La méthode JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} est équivalente à la règle `@property`. La propriété est définie avec une valeur initiale `aqua`, n'accepte que des valeurs de type [`<color>`](/fr/docs/Web/CSS/color_value), et n'est pas héritée.
+On définit une seconde propriété personnalisée, `--item-color`, en utilisant [JavaScript](/fr/docs/Web/JavaScript) au lieu de CSS. La méthode JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} est équivalente à la règle `@property`. La propriété est définie avec une valeur initiale `aqua`, n'accepte que des valeurs de type [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), et n'est pas héritée.
 
 ```js
 window.CSS.registerProperty({
@@ -119,7 +119,7 @@ Pour l'élément trois, la valeur de `--item-size` est définie sur `1000px`. Bi
 
 ### Animer la valeur d'une propriété personnalisée
 
-Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type [`<percentage>`](/fr/docs/Web/CSS/percentage) et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
+Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
 
 ```html
 <div class="bar"></div>

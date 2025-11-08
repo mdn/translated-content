@@ -45,7 +45,7 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
 
 ## Syntaxe
 
-L'angle de la rotation opérée par `rotateX()` est indiquée par une valeur [`<angle>`](/fr/docs/Web/CSS/angle). Si celle-ci est positive, la rotation s'effectuera dans le sens horaire&nbsp;; si la valeur est négative elle s'effectuera dans le sens anti-horaire.
+L'angle de la rotation opérée par `rotateX()` est indiquée par une valeur [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle). Si celle-ci est positive, la rotation s'effectuera dans le sens horaire&nbsp;; si la valeur est négative elle s'effectuera dans le sens anti-horaire.
 
 ```css
 rotateX(a)
@@ -54,7 +54,7 @@ rotateX(a)
 ### Valeurs
 
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
 
 <table class="standard-table">
   <thead>
@@ -142,4 +142,4 @@ div {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)

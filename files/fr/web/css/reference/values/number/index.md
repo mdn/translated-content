@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<number>`** représente un nombre, qu'il s'agisse d'un entier, d'un nombre avec une partie fractionnaire ou d'un exposant en base dix en notation scientifique.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<number>`** représente un nombre, qu'il s'agisse d'un entier, d'un nombre avec une partie fractionnaire ou d'un exposant en base dix en notation scientifique.
 
 ## Syntaxe
 
@@ -16,7 +16,7 @@ Comme pour les entiers, le premier caractère du nombre peut être immédiatemen
 
 ## Interpolation
 
-Les valeurs de type `<number>` peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce [à la fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
+Les valeurs de type `<number>` peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce [à la fonction de temporisation](/fr/docs/Web/CSS/Reference/Values/easing-function) associée à l'animation.
 
 ## Exemples
 

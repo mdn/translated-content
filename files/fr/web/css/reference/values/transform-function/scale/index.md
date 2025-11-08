@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/scale
 
 {{CSSRef}}
 
-La fonction CSS **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction CSS **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 ![](scale.png)
 
@@ -30,9 +30,9 @@ scale(sx, sy)
 ### Valeurs
 
 - `sx`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).
 - `sy`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera **_sx_** (on aura ainsi une transformation homogène).
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera **_sx_** (on aura ainsi une transformation homogène).
 
 <table class="standard-table">
   <thead>
@@ -203,5 +203,5 @@ div {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`scale3d()`](/fr/docs/Web/CSS/transform-function/scale3d)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- [`scale3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scale3d)

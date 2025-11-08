@@ -43,7 +43,7 @@ rect(haut, droite, bas, gauche)
 
 ## Interpolation
 
-Les valeurs de type `<shape>` sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs `haut`, `droite`, `bas` et `gauche` comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à [la fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
+Les valeurs de type `<shape>` sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs `haut`, `droite`, `bas` et `gauche` comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à [la fonction de temporisation](/fr/docs/Web/CSS/Reference/Values/easing-function) associée à l'animation.
 
 ## Exemples
 

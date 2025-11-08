@@ -36,9 +36,9 @@ transform: skewX(0.352rad);
 </section>
 ```
 
-La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
-`skewX(a)` est équivalent à [`skew(a)`](/fr/docs/Web/CSS/transform-function/skew).
+`skewX(a)` est équivalent à [`skew(a)`](/fr/docs/Web/CSS/Reference/Values/transform-function/skew).
 
 ## Syntaxe
 
@@ -49,7 +49,7 @@ skewX(a)
 ### Valeurs
 
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
 
 <table class="standard-table">
   <thead>
@@ -154,4 +154,4 @@ div {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)

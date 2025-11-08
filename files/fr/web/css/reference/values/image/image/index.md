@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`image()`** définit une {{CSSxRef("&lt;image&gt;")}} à la façon de la fonction {{CSSxRef("url_function", "url()")}} mais avec des fonctionnalités supplémentaires comme la définition de la directionnalité, la possibilité d'indiquer une image par défaut si l'image initiale n'est pas prise en charge, l'affichage d'une partie de l'image ou le choix de la couleur à utiliser par défaut si aucune des images indiquées ne peut être affichée.
 
 > [!NOTE]
 > Attention à ne pas confondre cette notation fonctionnelle CSS avec {{DOMxRef("HTMLImageElement/Image", "<code>Image()</code>, constructeur de l'interface DOM <code>HTMLImageElement</code>", "", 1)}}.

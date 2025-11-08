@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{cssxref("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{cssxref("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
 
 ## Syntaxe
 
@@ -58,7 +58,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Consultez [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Consultez [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -545,7 +545,7 @@ Le résultat est le suivant&nbsp;:
 
 ## Voir aussi
 
-- [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/color_value)
+- [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
 - Le type de donnée {{CSSXref("&lt;hue&gt;")}}

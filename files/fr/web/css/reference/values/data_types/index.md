@@ -8,7 +8,7 @@ l10n:
 
 Les **types de données CSS** définissent des valeurs typiques (y compris des mots-clés et des unités) acceptées par les propriétés et les fonctions CSS. Ils sont un type spécial de [type de valeur du composant <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#component-types).
 
-Les types les plus couramment utilisés sont définis dans le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units). Ce module définit également des [notations fonctionnelles](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions), qui permettent des types ou des traitements plus complexes. D'autres types sont définis dans les spécifications auxquelles ils s'appliquent.
+Les types les plus couramment utilisés sont définis dans le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units). Ce module définit également des [notations fonctionnelles](/fr/docs/Web/CSS/Reference/Values/Functions), qui permettent des types ou des traitements plus complexes. D'autres types sont définis dans les spécifications auxquelles ils s'appliquent.
 
 Vous trouverez ci-dessous une référence aux types que vous êtes le plus susceptible de rencontrer, mais ce n'est pas une référence complète pour tous les types définis dans chaque spécification CSS.
 
@@ -125,7 +125,7 @@ Le type de données {{cssxref("&lt;position&gt;")}} est interprété comme défi
 
 ## Types de données de calcul
 
-Ces types de données sont utilisés dans les calculs de [fonction mathématique CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#math_functions).
+Ces types de données sont utilisés dans les calculs de [fonction mathématique CSS](/fr/docs/Web/CSS/Reference/Values/Functions#math_functions).
 
 - {{cssxref("&lt;calc-sum&gt;")}}
   - : Un calcul qui est une séquence de valeurs de calcul entrecoupées d'opérateurs d'addition (`+`) et de soustraction (`-`). Ce type de données nécessite que les deux valeurs aient des unités.
@@ -153,4 +153,4 @@ Les modules [formes CSS](/fr/docs/Web/CSS/CSS_shapes) et [bordures et décoratio
 
 - Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [Fonctions de valeur CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [Fonctions de valeur CSS](/fr/docs/Web/CSS/Reference/Values/Functions)

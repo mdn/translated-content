@@ -101,9 +101,9 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La largeur de l'espace entre les pistes de grille.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : La largeur de l'espace entre les pistes de grille en fonction de la taille de l'élément englobant.
 
 ## Définition formelle

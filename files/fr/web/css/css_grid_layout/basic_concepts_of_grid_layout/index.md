@@ -363,7 +363,7 @@ Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées d
 
 Que l'on crée une grille explicite, ou que l'on définisse la taille des pistes créées implicitement, il peut être utile d'assigner une taille minimum, qui s'agrandit pour s'adapter au contenu. Par exemple on peut souhaiter que les rangées ne soient jamais moins hautes que 100 pixels, mais qu'elles aillent jusqu'à 300 pixels de haut si le contenu le nécessite.
 
-La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) permet ce comportement. Dans l'exemple suivant nous utilisons `minmax()` comme valeur de la propriété [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows). Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de `auto`, ce qui signifie que la taille s'adaptera à la hauteur du contenu.
+La fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) permet ce comportement. Dans l'exemple suivant nous utilisons `minmax()` comme valeur de la propriété [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows). Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de `auto`, ce qui signifie que la taille s'adaptera à la hauteur du contenu.
 
 ```css
 .wrapper {

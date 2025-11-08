@@ -8,11 +8,11 @@ original_slug: Web/CSS/transform-function/rotate
 
 La fonction **`rotate()`** définit une transformation qui déplace un élément autour d'un point fixe (défini par la propriété [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)) sans le déformer (autrement dit, qui applique une rotation plane). C'est une rotation autour de ce point. Par défaut, cette origine correspond au centre de l'élément.
 
-La rotation plane est définie par un angle, l'argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La rotation plane est définie par un angle, l'argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 ## Syntaxe
 
-L'angle de la rotation créée grâce à `rotate()` est fourni comme argument à cette fonction via une aleur de type [`<angle>`](/fr/docs/Web/CSS/angle). Si l'angle est positif, la rotation sera dans le sens des aiguilles d'une montre et s'il est négatif, elle sera dans le sens inverse des aiguilles d'une montre.
+L'angle de la rotation créée grâce à `rotate()` est fourni comme argument à cette fonction via une aleur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle). Si l'angle est positif, la rotation sera dans le sens des aiguilles d'une montre et s'il est négatif, elle sera dans le sens inverse des aiguilles d'une montre.
 
 ```css
 rotate(a)
@@ -177,5 +177,5 @@ div {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("frequency")}} ou une valeur de type {{Cssxref("percentage")}}. Les valeurs de fréquence, par exemple, la hauteur d'une voix parlante, ne sont actuellement utilisées dans aucune propriété CSS.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("frequency")}} ou une valeur de type {{Cssxref("percentage")}}. Les valeurs de fréquence, par exemple, la hauteur d'une voix parlante, ne sont actuellement utilisées dans aucune propriété CSS.
 
 ## Syntaxe
 
@@ -16,7 +16,7 @@ La valeur d'un `<frequency-percentage>` est soit une {{Cssxref("frequency")}}, s
 
 ### Utilisation avec `calc()`
 
-Lorsqu'une valeur de type `<frequency-percentage>` peut être utilisée dans une déclaration, cela signifie que le pourcentage sera résolu comme une fréquence et qu'il peut alors être utilisé dans une expression [`calc()`](/fr/docs/Web/CSS/calc).
+Lorsqu'une valeur de type `<frequency-percentage>` peut être utilisée dans une déclaration, cela signifie que le pourcentage sera résolu comme une fréquence et qu'il peut alors être utilisé dans une expression [`calc()`](/fr/docs/Web/CSS/Reference/Values/calc).
 
 ## Syntaxe formelle
 
@@ -66,7 +66,7 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- Les [types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- Les [types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
 - Les [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units) module
 - Types de données CSS associés&nbsp;:
   - {{cssxref("frequency", "&lt;frequency&gt;")}}

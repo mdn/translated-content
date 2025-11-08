@@ -85,15 +85,15 @@ L'information sur l'héritage ou non de la propriété est présente sur les pag
 
 CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de contrôler l'héritage. Ainsi, chaque propriété CSS acceptera ces valeurs&nbsp;:
 
-- [`inherit`](/fr/docs/Web/CSS/inherit)
+- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
   - : Applique la valeur de l'élément parent sur l'élément ciblé. Cela «&nbsp;force&nbsp;» l'héritage.
-- [`initial`](/fr/docs/Web/CSS/initial)
+- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
   - : Applique la [valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) de la propriété sur l'élément ciblé.
-- [`revert`](/fr/docs/Web/CSS/revert)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
+- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
+  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/Reference/Values/unset) dans la plupart des cas.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente.
-- [`unset`](/fr/docs/Web/CSS/unset)
+- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
 
 > [!NOTE]

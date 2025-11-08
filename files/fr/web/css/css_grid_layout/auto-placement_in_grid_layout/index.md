@@ -106,7 +106,7 @@ Il est toutefois possible de contrôler la taille de ces lignes grâce à la pro
 
 ### Dimensionner les lignes avec `minmax()`
 
-On peut utiliser la fonction [`minmax()`](/fr/docs/Web/CSS/minmax) pour la valeur de [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows) afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.
+On peut utiliser la fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) pour la valeur de [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows) afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.
 
 ```css hidden
 * {

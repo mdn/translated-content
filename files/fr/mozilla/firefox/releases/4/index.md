@@ -85,15 +85,15 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : Le support des transitions CSS est disponible dans Firefox 4.
 - Les valeurs calculées en CSS
-  - : Le support de [`-moz-calc`](/fr/docs/Web/CSS/calc) a été ajouté. Cela permet de spécifier des valeurs de [`<length>`](/fr/docs/Web/CSS/length) comme des expressions mathématiques.
+  - : Le support de [`-moz-calc`](/fr/docs/Web/CSS/Reference/Values/calc) a été ajouté. Cela permet de spécifier des valeurs de [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) comme des expressions mathématiques.
 - Groupement de sélecteurs
   - : Le support de [`:-moz-any`](/fr/docs/Web/CSS/Reference/Selectors/:is) pour grouper les sélecteurs et factoriser des combinateurs.
 - Support subrectangle pour background-image
-  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
+  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/Reference/Values/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
 - Propriétés CSS tactile
   - : Le support des propriétés tactiles a été ajouté. Plus de détails plus tard.
-- [Utilisation arbitraires d'élements comme fond](/fr/docs/Web/CSS/element)
-  - : Vou pouvez utiliser la fonction CSS [`-moz-element`](/fr/docs/Web/CSS/element) et la fonction DOM [`document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) pour une utilisation arbitraire des éléments HTML comme fond.
+- [Utilisation arbitraires d'élements comme fond](/fr/docs/Web/CSS/Reference/Values/element)
+  - : Vou pouvez utiliser la fonction CSS [`-moz-element`](/fr/docs/Web/CSS/Reference/Values/element) et la fonction DOM [`document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) pour une utilisation arbitraire des éléments HTML comme fond.
 - [Sélecteur :visited et confidentialité](/fr/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : Des modifications ont étés apportées sur les informations qui peuvent être obtenues sur le style des liens visités en utilisant les sélecteurs CSS. Certaines applications Web peuvent être affectées.
 
@@ -348,7 +348,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - La propriété [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow) ne s'applique plus au groupe d'éléments de tableaux (`<thead>`, `<tbody>`, and `<tfoot>`).
 - La propriété [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) supporte désormais la valeur `-moz-win-borderless-glass`, qui s'applique à un élément Aero sans bordure.
 - La fonctionnalité de média [`-moz-device-pixel-ratio`](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) a été ajoutée, permettant l'utilisation de pixels de l'appareil par ratio de pixels CSS qui sera utilisé dans les [Media Queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
-- La manipulation des [unités CSS](/fr/docs/Web/CSS/length) dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.
+- La manipulation des [unités CSS](/fr/docs/Web/CSS/Reference/Values/length) dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.
 
 ### Graphisme et vidéo
 

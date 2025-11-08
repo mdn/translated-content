@@ -9,7 +9,7 @@ l10n:
 > [!NOTE]
 > La notation fonctionnelle `hsla()` est un alias de `hsl()`. Elles sont exactement équivalentes. Il est recommandé d'utiliser `hsl()`.
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: hsl()")}}
 
@@ -96,7 +96,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Un {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle vaut par défaut `100%`. Si elle est incluse, elle est précédée d'un slash (`/`).
 
 > [!NOTE]
-> Voir les [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#missing_color_components) pour plus d'informations sur l'effet de `none`.
+> Voir les [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#missing_color_components) pour plus d'informations sur l'effet de `none`.
 
 > [!NOTE]
 > Les couleurs absolues `hsl()` sont sérialisées en valeurs {{CSSXref("color_value/rgb", "rgb()")}}. Les valeurs des composantes rouge, verte et bleue peuvent être arrondies lors de la sérialisation.
@@ -121,7 +121,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, elle est précédée d'un slash (`/`).
 
 > [!NOTE]
-> Pour permettre la représentation de l'ensemble du spectre des couleurs visibles, la sortie des fonctions de couleur relative `hsl()` est sérialisée en `color(srgb)`. Ainsi, l'obtention de la valeur de couleur via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} renvoie la couleur de sortie sous la forme d'une valeur [`color(srgb ...)`](/fr/docs/Web/CSS/color_value/color).
+> Pour permettre la représentation de l'ensemble du spectre des couleurs visibles, la sortie des fonctions de couleur relative `hsl()` est sérialisée en `color(srgb)`. Ainsi, l'obtention de la valeur de couleur via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} renvoie la couleur de sortie sous la forme d'une valeur [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 #### Définition des composantes de canal de sortie pour les couleurs relatives
 
@@ -197,7 +197,7 @@ hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha 
 
 ### Utiliser `hsl()` avec `conic-gradient()`
 
-La fonction `hsl()` fonctionne bien avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient), les deux travaillant avec des angles.
+La fonction `hsl()` fonctionne bien avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient), les deux travaillant avec des angles.
 
 ```html hidden
 <div></div>
@@ -395,9 +395,9 @@ div.legacyHSLA {
 ## Voir aussi
 
 - Le type de donnée {{CSSXref("&lt;hue&gt;")}}
-- Les fonctions de couleur [`lch()`](/fr/docs/Web/CSS/color_value/lch) et [`hwb()`](/fr/docs/Web/CSS/color_value/hwb)
-- [Interpolation de la teinte dans `color-mix()`](/fr/docs/Web/CSS/color_value/color-mix#utiliser_linterpolation_de_teinte_avec_color-mix)
-- [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/color_value)
+- Les fonctions de couleur [`lch()`](/fr/docs/Web/CSS/Reference/Values/color_value/lch) et [`hwb()`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb)
+- [Interpolation de la teinte dans `color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix#utiliser_linterpolation_de_teinte_avec_color-mix)
+- [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)

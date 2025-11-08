@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0fb61080baf21a3efd8f21911bd4554c14f75c17
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} et {{cssxref("offset-path")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} et {{cssxref("offset-path")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;basic-shape&gt;")}}
 
@@ -76,7 +76,7 @@ Les paramètres communs à certaines fonctions de forme de base incluent&nbsp;:
     Le mot-clé `closest-side` utilise la distance du centre de la forme au côté le plus proche de la boîte de référence pour créer la longueur du rayon. Le mot-clé `farthest-side` utilise la distance du centre de la forme au côté le plus éloigné de la boîte de référence.
 
 - `<position>`
-  - : Définit le centre [`<position>`](/fr/docs/Web/CSS/position_value) d'un [cercle](#syntaxe_pour_les_cercles) ou d'une [ellipse](#syntaxe_pour_les_ellipses). Par défaut, la valeur est `center` si omise.
+  - : Définit le centre [`<position>`](/fr/docs/Web/CSS/Reference/Values/position_value) d'un [cercle](#syntaxe_pour_les_cercles) ou d'une [ellipse](#syntaxe_pour_les_ellipses). Par défaut, la valeur est `center` si omise.
 
 - `<fill-rule>`
   - : Définit la règle de remplissage ({{SVGAttr("fill-rule")}}) utilisée pour déterminer comment l'intérieur de la forme définie par les formes de base [polygone](#syntaxe_pour_les_polygones), [chemin](#syntaxe_pour_les_chemins) et [forme](#syntaxe_pour_les_formes) est remplie. Les valeurs possibles sont `nonzero` (par défaut) et `evenodd`.
@@ -168,7 +168,7 @@ Le paramètre `from <coordinate-pair>` représente le point de départ pour la p
 
 Lors de la création d'une forme, la boîte de référence est définie par la propriété qui utilise les valeurs `<basic-shape>`. Le système de coordonnées de la forme a son origine dans le coin supérieur gauche de la boîte de marge de l'élément par défaut, l'axe x allant vers la droite et l'axe y vers le bas. Toutes les longueurs exprimées en pourcentage sont résolues à partir des dimensions de la boîte de référence.
 
-La boîte de référence par défaut est la [`margin-box`](/fr/docs/Web/CSS/box-edge#margin-box), comme illustré dans l'image ci-dessous. L'image montre un cercle créé avec `shape-outside: circle(50%)`, mettant en évidence les différentes parties du modèle de boîte telles qu'affichées dans les outils de développement du navigateur. La forme ici est définie par rapport à la margin-box.
+La boîte de référence par défaut est la [`margin-box`](/fr/docs/Web/CSS/Reference/Values/box-edge#margin-box), comme illustré dans l'image ci-dessous. L'image montre un cercle créé avec `shape-outside: circle(50%)`, mettant en évidence les différentes parties du modèle de boîte telles qu'affichées dans les outils de développement du navigateur. La forme ici est définie par rapport à la margin-box.
 
 ![Une image montrant un cercle inspecté avec l'inspecteur de formes de Firefox DevTools. Les différentes parties du modèle de boîte sont mises en évidence.](shapes-reference-box.png)
 

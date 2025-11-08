@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété (plutôt qu'un [dégradé unique](/fr/docs/Web/CSS/gradient/conic-gradient)), avec des transitions de couleurs qui tournent autour d'un point central (plutôt que de [rayonner depuis le centre](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété (plutôt qu'un [dégradé unique](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient)), avec des transitions de couleurs qui tournent autour d'un point central (plutôt que de [rayonner depuis le centre](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: repeating-conic-gradient()")}}
 
@@ -72,7 +72,7 @@ Parmi les exemples de dégradés coniques répétés, on trouve les motifs en é
 
 Si ni le premier ni le dernier arrêt de couleur ne comporte un angle supérieur à 0deg ou inférieur à 360 degrés respectivement, le dégradé conique ne sera pas répété.
 
-Comme tout autre dégradé, un dégradé conique répété [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description)&nbsp;: il n'a donc pas de taille naturelle ou préférée, ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique, ou à la taille définie pour `<image>` si elle diffère de celle de l'élément.
+Comme tout autre dégradé, un dégradé conique répété [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;: il n'a donc pas de taille naturelle ou préférée, ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique, ou à la taille définie pour `<image>` si elle diffère de celle de l'élément.
 
 Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des `<image>` sont acceptées. Pour cette raison, `repeating-conic-gradient()` ne fonctionnera pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
 
@@ -212,7 +212,7 @@ div {
 }
 ```
 
-Dans cet exemple d'interpolation, on utilise le système de couleurs [hsl](/fr/docs/Web/CSS/color_value/hsl) et la teinte (<i lang="en">hue</i>) est interpolée.
+Dans cet exemple d'interpolation, on utilise le système de couleurs [hsl](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) et la teinte (<i lang="en">hue</i>) est interpolée.
 
 ```css
 .shorter {
@@ -232,7 +232,7 @@ Dans cet exemple d'interpolation, on utilise le système de couleurs [hsl](/fr/d
 }
 ```
 
-La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/hue-interpolation-method#shorter), c'est-à-dire que la couleur passe directement du rouge au bleu en empruntant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/hue-interpolation-method#longer), ce qui signifie que la couleur va du rouge au bleu en passant par les verts, les jaunes et les oranges, en empruntant l'arc le plus long.
+La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#shorter), c'est-à-dire que la couleur passe directement du rouge au bleu en empruntant l'arc le plus court sur la [roue chromatique](/fr/docs/Glossary/Color_wheel). La boîte de droite utilise l'[interpolation la plus longue](/fr/docs/Web/CSS/Reference/Values/hue-interpolation-method#longer), ce qui signifie que la couleur va du rouge au bleu en passant par les verts, les jaunes et les oranges, en empruntant l'arc le plus long.
 
 {{EmbedLiveSample("Interpolation avec teinte", 240, 200)}}
 

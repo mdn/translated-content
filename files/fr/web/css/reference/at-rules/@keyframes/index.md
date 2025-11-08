@@ -25,7 +25,7 @@ La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@
 ### Valeurs
 
 - `<identifier>`
-  - : Un nom ({{cssxref("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/custom-ident).
+  - : Un nom ({{cssxref("custom-ident")}}) qui permet d'identifier la liste d'étapes. Cela doit être [un identifiant valide selon la syntaxe CSS](/fr/docs/Web/CSS/Reference/Values/custom-ident).
 - `from`
   - : Indique le point de départ de l'animation (correspond à un avancement de `0%`).
 - `to`

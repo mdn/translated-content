@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLCH. `oklch()` est la forme cylindrique de {{CSSXref("color_value/oklab", "oklab()")}}, utilisant le même axe `L`, mais avec des coordonnées polaires Chroma (`C`) et teinte (`h` pour <i lang="en">hue</i> en anglais).
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLCH. `oklch()` est la forme cylindrique de {{CSSXref("color_value/oklab", "oklab()")}}, utilisant le même axe `L`, mais avec des coordonnées polaires Chroma (`C`) et teinte (`h` pour <i lang="en">hue</i> en anglais).
 
 ## Syntaxe
 
@@ -58,7 +58,7 @@ Les paramètres sont les suivants&nbsp;:
   - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour définir explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas définie explicitement, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -545,7 +545,7 @@ Le résultat est le suivant&nbsp;:
 
 ## Voir aussi
 
-- [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/color_value)
+- [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
 - Le type de donnée {{CSSXref("&lt;hue&gt;")}}

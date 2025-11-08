@@ -87,7 +87,7 @@ La propriété `background-size` peut être définie de différentes façons&nbs
 
 - Avec l'un des mots-clés [`contain`](#contain) ou [`cover`](#cover)
 - Avec une seule valeur qui indique la largeur de l'image (la hauteur vaut alors [`auto`](#auto) par défaut)
-- Avec deux valeurs dont la première représente la largeur et la seconde la hauteur. Chaque valeur peut être une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou encore [`auto`](#auto).
+- Avec deux valeurs dont la première représente la largeur et la seconde la hauteur. Chaque valeur peut être une longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) ou encore [`auto`](#auto).
 
 Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)).
 
@@ -100,9 +100,9 @@ Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on
 - `auto`
   - : Un mot-clé qui redimensionne l'image d'arrière-plan afin que ses proportions soient conservées.
 - `<length>`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
 - `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/Reference/Properties/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
 
 ### Dimensions intrinsèques et proportions
 
@@ -110,11 +110,11 @@ Le calcul des valeurs dépend des dimensions intrinsèques de l'image (sa largeu
 
 - Une image matricielle (telle qu'une image JPG) possède toujours des dimensions intrinsèques et des proportions intrinsèques.
 - Une image vectorielle (telle qu'une image SVG) ne possède pas nécessairement de dimensions intrinsèques. Si elle possède à la fois une dimension verticale et une dimension horizontale intrinsèques, elle possèdera alors des proportions intrinsèques. Si elle ne possède qu'une ou aucune dimension intrinsèque, elle peut avoir ou ne pas avoir de proportions.
-- Un dégradé CSS (cf. [`<gradient>`](/fr/docs/Web/CSS/gradient)) ne possède ni dimension ni proportion intrinsèque.
-- Les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
+- Un dégradé CSS (cf. [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient)) ne possède ni dimension ni proportion intrinsèque.
+- Les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/Reference/Values/element) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
 
 > [!NOTE]
-> Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
+> Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/Reference/Values/element) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
 
 Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante&nbsp;:
 

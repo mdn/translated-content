@@ -23,7 +23,7 @@ scaleX(s)
 ### Valeurs
 
 - `s`
-  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente le facteur d'échelle de l'homothétie.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number) qui représente le facteur d'échelle de l'homothétie.
 
 <table class="standard-table">
   <thead>
@@ -158,8 +158,8 @@ div {
 
 ## Voir aussi
 
-- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY)
-- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
+- [`scaleY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleY)
+- [`scaleZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
 - [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin)

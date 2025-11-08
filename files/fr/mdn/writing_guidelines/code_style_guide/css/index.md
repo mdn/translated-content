@@ -299,7 +299,7 @@ input:not(:checked):not(:disabled) {
 
 Par défaut, tous les identifiants doivent être en minuscules. Cela s'applique aux sélecteurs, fonctions et mots-clés. Les identifiants personnalisés doivent utiliser le [kebab-case](/fr/docs/Glossary/Kebab_case), comme `--custom-property` ou `my-animation`. Consultez le [guide de style HTML](/fr/docs/MDN/Writing_guidelines/Code_style_guide/HTML#convention_de_casse_sur_mdn) pour les conventions de casse des identifiants et classes HTML référencés comme sélecteurs CSS.
 
-Des exceptions existent pour les mots-clés définis dans SVG, qui pour des raisons historiques sont en [camelCase](/fr/docs/Glossary/Camel_case), et doivent être écrits ainsi pour la lisibilité. Ces mots-clés incluent&nbsp;: [`currentColor`](/fr/docs/Web/CSS/color_value#mot-clé_currentcolor), les valeurs de {{CSSxRef("text-rendering")}}, {{CSSxRef("shape-rendering")}}, {{CSSxRef("pointer-events")}} et {{CSSxRef("color-interpolation-filters")}}.
+Des exceptions existent pour les mots-clés définis dans SVG, qui pour des raisons historiques sont en [camelCase](/fr/docs/Glossary/Camel_case), et doivent être écrits ainsi pour la lisibilité. Ces mots-clés incluent&nbsp;: [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), les valeurs de {{CSSxRef("text-rendering")}}, {{CSSxRef("shape-rendering")}}, {{CSSxRef("pointer-events")}} et {{CSSxRef("color-interpolation-filters")}}.
 
 ## Couleurs
 

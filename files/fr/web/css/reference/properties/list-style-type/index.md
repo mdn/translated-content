@@ -87,7 +87,7 @@ hr {
 }
 ```
 
-La [couleur](/fr/docs/Web/CSS/color_value) de la puce utilisée sera la même que la couleur calculée de l'élément sur lequel elle s'applique.
+La [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) de la puce utilisée sera la même que la couleur calculée de l'élément sur lequel elle s'applique.
 
 Cette propriété s'applique aux éléments d'une liste (c'est-à-dire les éléments pour lesquels on a `display: list-item;`). Cela inclut par défaut les éléments [`li`](/fr/docs/Web/HTML/Reference/Elements/li) et [`summary`](/fr/docs/Web/HTML/Reference/Elements/summary). Il est possible de l'utiliser pour d'autres éléments si on utilise `display: list-item` sur ceux-ci. Cette propriété est héritée et on peut donc l'appliquer aux éléments parents (généralement [`ol`](/fr/docs/Web/HTML/Reference/Elements/ol) ou [`ul`](/fr/docs/Web/HTML/Reference/Elements/ul)) afin qu'elle s'applique à l'ensemble des éléments fils.
 
@@ -135,11 +135,11 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 
 ### Valeurs
 
-- [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
+- [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident)
   - : Un identifiant correspondant à la valeur d'un [`@counter-style`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style) ou à un style prédéfini&nbsp;:
-- [`symbols()`](/fr/docs/Web/CSS/symbols)
+- [`symbols()`](/fr/docs/Web/CSS/Reference/Values/symbols)
   - : Définit un style de puce utilisé.
-- [`<string>`](/fr/docs/Web/CSS/string)
+- [`<string>`](/fr/docs/Web/CSS/Reference/Values/string)
   - : La chaîne de caractères indiquée sera utilisée comme puce.
 - `none`
   - : Aucun marqueur n'est affiché.

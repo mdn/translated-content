@@ -14,7 +14,7 @@ En [CSS](/fr/docs/Glossary/CSS), il existe trois catégories de sources pour les
 - Origine de l'auteur
   - : L'origine de l'auteur est l'origine du style qui contient tous les styles qui font partie du document, qu'ils soient intégrés dans le [HTML](/fr/docs/Glossary/HTML) ou chargés à partir d'un fichier de feuille de style externe.
 
-Les origines de style sont utilisées pour déterminer où arrêter de revenir en arrière (ou de revenir en arrière) à travers la cascade de styles qui ont été appliqués à un élément lors de la suppression de styles, par exemple lors de l'utilisation de mots-clés [`unset`](/fr/docs/Web/CSS/unset) ou [`revert`](/fr/docs/Web/CSS/revert).
+Les origines de style sont utilisées pour déterminer où arrêter de revenir en arrière (ou de revenir en arrière) à travers la cascade de styles qui ont été appliqués à un élément lors de la suppression de styles, par exemple lors de l'utilisation de mots-clés [`unset`](/fr/docs/Web/CSS/Reference/Values/unset) ou [`revert`](/fr/docs/Web/CSS/Reference/Values/revert).
 
 ## Voir aussi
 

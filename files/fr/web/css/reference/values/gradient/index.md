@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<gradient>`** permet de représenter une {{cssxref("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{cssxref("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/image) (elle n'a aucune taille naturelle ou ratio), sa taille réelle sera celle de l'élément auquel elle est appliquée.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<gradient>`** permet de représenter une {{cssxref("&lt;image&gt;")}} contenant un dégradé entre deux ou plusieurs couleurs. Un dégradé CSS n'est pas une couleur CSS (type {{cssxref("&lt;color&gt;")}}) mais une image [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image) (elle n'a aucune taille naturelle ou ratio), sa taille réelle sera celle de l'élément auquel elle est appliquée.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;gradient&gt;")}}
 
@@ -42,7 +42,7 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-Un dégradé CSS est [sans dimension intrinsèque](/fr/docs/Web/CSS/image#description)&nbsp;: il n'a ni taille naturelle ni préférée, ni ratio préféré. Sa taille réelle correspond à celle de l'élément auquel il s'applique.
+Un dégradé CSS est [sans dimension intrinsèque](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;: il n'a ni taille naturelle ni préférée, ni ratio préféré. Sa taille réelle correspond à celle de l'élément auquel il s'applique.
 
 ## Syntaxe
 
@@ -66,7 +66,7 @@ Les dégradés répétitifs dupliquent un dégradé autant que nécessaire pour 
 
 ## Interpolation
 
-Comme pour toute interpolation de couleurs, les dégradés sont calculés dans l'espace colorimétrique alpha-prémultiplié. Cela évite l'apparition de teintes grises inattendues lorsque la couleur et l'opacité varient. (Attention&nbsp;: les anciens navigateurs peuvent ne pas utiliser ce comportement avec le [mot-clé transparent](/fr/docs/Web/CSS/named-color#transparent).)
+Comme pour toute interpolation de couleurs, les dégradés sont calculés dans l'espace colorimétrique alpha-prémultiplié. Cela évite l'apparition de teintes grises inattendues lorsque la couleur et l'opacité varient. (Attention&nbsp;: les anciens navigateurs peuvent ne pas utiliser ce comportement avec le [mot-clé transparent](/fr/docs/Web/CSS/Reference/Values/named-color#transparent).)
 
 ## Syntaxe formelle
 
@@ -219,6 +219,6 @@ span {
 
 - [Manipuler les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Fonctions de dégradé&nbsp;: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [Les types de donnée en CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
 - [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_values_and_units)
 - [Introduction à CSS&nbsp;: les unités et les valeurs](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

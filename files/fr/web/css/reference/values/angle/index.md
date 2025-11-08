@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0fb61080baf21a3efd8f21911bd4554c14f75c17
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{cssxref("&lt;gradient&gt;")}} et dans certaines fonctions {{cssxref("transform")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{cssxref("&lt;gradient&gt;")}} et dans certaines fonctions {{cssxref("transform")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: &lt;angle&gt;")}}
 
@@ -117,9 +117,9 @@ Il peut être précédé d'un seul signe `+` ou `-`. Les nombres positifs repré
 
 ## Voir aussi
 
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
-- Le type de donnée [`<gradient>`](/fr/docs/Web/CSS/gradient)
-- Transformations CSS de rotation&nbsp;: [`rotate()`](/fr/docs/Web/CSS/transform-function/rotate), [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d), [`rotateX()`](/fr/docs/Web/CSS/transform-function/rotateX), [`rotateY()`](/fr/docs/Web/CSS/transform-function/rotateY), [`rotateZ()`](/fr/docs/Web/CSS/transform-function/rotateZ)
+- [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
+- Le type de donnée [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient)
+- Transformations CSS de rotation&nbsp;: [`rotate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateY), [`rotateZ()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
 - [Transformations CSS](/fr/docs/Web/CSS/CSS_transforms)
 - [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)

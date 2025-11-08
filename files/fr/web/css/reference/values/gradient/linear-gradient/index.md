@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/image)).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/Reference/Values/image)).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: linear-gradient()")}}
 
@@ -110,7 +110,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 ## Description
 
-Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique.
+Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique.
 
 Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}.
 
@@ -128,7 +128,7 @@ Le _point de départ_ est situé sur la ligne du dégradé où la première coul
 
 #### Personnaliser des dégradés
 
-En ajoutant plusieurs arrêts de couleur sur la ligne du dégradé, il est possible de créer une transition personnalisée entre plusieurs couleurs. La position d'un point d'arrêt de couleur peut être explicitement définie en utilisant une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Si on n'indique pas l'emplacement d'un arrêt de couleur, celui-ci sera placé à la position intermédiaire entre celui qui précède et le suivant. Ainsi, les deux dégradés qui suivent sont équivalents&nbsp;:
+En ajoutant plusieurs arrêts de couleur sur la ligne du dégradé, il est possible de créer une transition personnalisée entre plusieurs couleurs. La position d'un point d'arrêt de couleur peut être explicitement définie en utilisant une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Si on n'indique pas l'emplacement d'un arrêt de couleur, celui-ci sera placé à la position intermédiaire entre celui qui précède et le suivant. Ainsi, les deux dégradés qui suivent sont équivalents&nbsp;:
 
 ```css
 linear-gradient(red, orange, yellow, green, blue);

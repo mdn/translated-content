@@ -72,7 +72,7 @@ On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur
 
 ## Accessibilité
 
-Lorsqu'on utilise `min()` afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à `min()` dans [`max()`](/fr/docs/Web/CSS/max) utilisant [une unité de longueur relative](/fr/docs/Web/CSS/length#unités_de_longueur_relatives) en deuxième argument afin de garantir une lisibilité minimale :
+Lorsqu'on utilise `min()` afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à `min()` dans [`max()`](/fr/docs/Web/CSS/Reference/Values/max) utilisant [une unité de longueur relative](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives) en deuxième argument afin de garantir une lisibilité minimale :
 
 ```css
 small {

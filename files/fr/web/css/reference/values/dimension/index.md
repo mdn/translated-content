@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de données](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité&nbsp;: par exemple `10px`.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité&nbsp;: par exemple `10px`.
 
 CSS utilise des dimensions pour définir des distances (type {{CSSxRef("&lt;length&gt;")}}), des durées (type {{CSSxRef("&lt;time&gt;")}}), des fréquences (type {{CSSxRef("&lt;frequency&gt;")}}), des résolutions (type {{CSSxRef("&lt;resolution&gt;")}}) ainsi que d'autres quantités.
 
@@ -46,6 +46,6 @@ La syntaxe d'une valeur de type `<dimension>` est un nombre (valeur de type {{CS
 
 ## Voir aussi
 
-- [Types de données CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
+- [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
 - [Apprendre&nbsp;: Mettre en forme HTML avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
 - Les distances ({{CSSxRef("&lt;length&gt;")}}), durées ({{CSSxRef("&lt;time&gt;")}}), fréquences ({{CSSxRef("&lt;frequency&gt;")}}) et résolutions ({{CSSxRef("&lt;resolution&gt;")}}) CSS

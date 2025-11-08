@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`invert()`** permet d'inverser les couleurs de l'image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`invert()`** permet d'inverser les couleurs de l'image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: invert()")}}
 

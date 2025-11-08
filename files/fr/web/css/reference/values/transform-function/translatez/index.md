@@ -6,7 +6,7 @@ original_slug: Web/CSS/transform-function/translateZ
 
 {{CSSRef}}
 
-La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 {{InteractiveExample("CSS Demo: translateZ()")}}
 
@@ -109,7 +109,7 @@ translateZ(tz)
 ### Valeurs
 
 - `t`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui représente la composante en Z du vecteur de translation appliqué. Cet argument ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/percentage), si c'est le cas, la propriété qui contient la transformation est considérée comme invalide.
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui représente la composante en Z du vecteur de translation appliqué. Cet argument ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage), si c'est le cas, la propriété qui contient la transformation est considérée comme invalide.
 
 <table class="standard-table">
   <thead>
@@ -195,7 +195,7 @@ Si la valeur fournie à `perspective()` est inférieure à l'argument de `transl
 
 ## Voir aussi
 
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
 - [Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX) et [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY)
+- [`translateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateX) et [`translateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateY)

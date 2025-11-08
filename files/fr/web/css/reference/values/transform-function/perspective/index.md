@@ -6,9 +6,9 @@ original_slug: Web/CSS/transform-function/perspective
 
 {{CSSRef}}
 
-La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
-Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
 
 {{InteractiveExample("CSS Demo: perspective()")}}
 
@@ -113,7 +113,7 @@ perspective(l)
 ### Valeurs
 
 - _l_
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
 
 <table class="standard-table">
   <thead>
@@ -246,4 +246,4 @@ p + div {
 ## Voir aussi
 
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)

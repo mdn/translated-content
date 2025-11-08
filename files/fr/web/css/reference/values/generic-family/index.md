@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-Le [type de donnée](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types) [CSS](/fr/docs/Web/CSS) **`<generic-family>`** représente les mots-clés des familles de polices génériques utilisés dans la propriété abrégée {{cssxref("font")}} et la propriété longue {{cssxref("font-family")}}. Le `<generic-family>` désigne une ou plusieurs polices installées localement appartenant à cette catégorie.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<generic-family>`** représente les mots-clés des familles de polices génériques utilisés dans la propriété abrégée {{cssxref("font")}} et la propriété longue {{cssxref("font-family")}}. Le `<generic-family>` désigne une ou plusieurs polices installées localement appartenant à cette catégorie.
 
 ## Syntaxe
 

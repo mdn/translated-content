@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction](/fr/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) [CSS](/fr/docs/Web/CSS) **`cubic-bezier()`** permet de créer une transition fluide à l'aide d'une [courbe de Bézier](/fr/docs/Glossary/Bezier_curve) cubique.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`cubic-bezier()`** permet de créer une transition fluide à l'aide d'une [courbe de Bézier](/fr/docs/Glossary/Bezier_curve) cubique.
 En tant que {{cssxref("&lt;easing-function&gt;")}}, elle permet d'adoucir le début et la fin de l'{{Glossary("interpolation")}}.
 
 ## Syntaxe
