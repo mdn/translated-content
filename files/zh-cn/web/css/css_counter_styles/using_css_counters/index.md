@@ -3,15 +3,13 @@ title: 使用 CSS 计数器
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 ---
 
-{{CSSRef}}
-
 **CSS 计数器**可让你根据内容在文档中的位置调整其显示的外观。例如，你可以使用计数器自动为网页中的标题编号，或者更改有序列表的编号。
 
 本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则跟踪使用次数以递增或递减。你可以自定义一个计数器，也可以修改 `list-item` 这一默认生成的应用于所有有序列表的计数器。
 
 ## 使用计数器
 
-在使用计数器之前，必须使用 {{cssxref("counter-reset")}} 属性初始化计数器的值。计数器可通过 {{cssxref("counter-increment")}} 属性指定其值为递增或递减。当前计数器的值可通过 {{cssxref("counter", "counter()")}} 或 {{cssxref("counters", "counters()")}} 函数显示出来，这通常会在[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的 {{CSSxRef("content")}} 属性中使用。
+在使用计数器之前，必须使用 {{cssxref("counter-reset")}} 属性初始化计数器的值。计数器可通过 {{cssxref("counter-increment")}} 属性指定其值为递增或递减。当前计数器的值可通过 {{cssxref("counter", "counter()")}} 或 {{cssxref("counters", "counters()")}} 函数显示出来，这通常会在[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)的 {{CSSxRef("content")}} 属性中使用。
 
 请注意，计数器只能在可以生成盒子的元素中使用（设置或重设值、递增）。例如，如果一个元素被设置为了 `display: none`，那么在这个元素上的任何计数器操作都会被忽略。
 

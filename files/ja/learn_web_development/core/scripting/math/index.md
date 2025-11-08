@@ -99,7 +99,7 @@ twoDecimalPlaces;
 
 ### 数値データ型への変換
 
-たまに、文字列型として格納されている数字で計算ができなくなってしまうことがあります。これは、データが[フォーム](/ja/docs/Learn_web_development/Extensions/Forms)入力に入力され、[input の type が text](/ja/docs/Web/HTML/Element/input/text) である場合によく起こります。この問題を解決する方法があります - 文字列の値を [`Number()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) コンストラクターに渡すと、同じ値の数値バージョンを返します。
+たまに、文字列型として格納されている数字で計算ができなくなってしまうことがあります。これは、データが[フォーム](/ja/docs/Learn_web_development/Extensions/Forms)入力に入力され、[input の type が text](/ja/docs/Web/HTML/Reference/Elements/input/text) である場合によく起こります。この問題を解決する方法があります - 文字列の値を [`Number()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) コンストラクターに渡すと、同じ値の数値バージョンを返します。
 
 例えば、これらの命令をコンソールに入力してみてください。
 
@@ -439,7 +439,7 @@ function updateBtn() {
 
 ## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math) を見てください。
+この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math) を見てください。
 
 ## まとめ
 

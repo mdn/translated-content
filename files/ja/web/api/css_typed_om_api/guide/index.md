@@ -58,7 +58,7 @@ for (const [prop, val] of defaultComputedStyles) {
 }
 ```
 
-`computedStyleMap()` メソッドは {{domxref('StylePropertyMapReadOnly')}} オブジェクトを返し、この [`size`](/ja/docs/Web/API/StylePropertyMapReadOnly/size) プロパティはマップ内にいくつプロパティを持つかを示します。スタイルマップを反復処理し、それぞれのプロパティと値に対して [`<dt>`](/ja/docs/Web/HTML/Element/dt) と [`<dd>`](/ja/docs/Web/HTML/Element/dd) をそれぞれ作成します。
+`computedStyleMap()` メソッドは {{domxref('StylePropertyMapReadOnly')}} オブジェクトを返し、この [`size`](/ja/docs/Web/API/StylePropertyMapReadOnly/size) プロパティはマップ内にいくつプロパティを持つかを示します。スタイルマップを反復処理し、それぞれのプロパティと値に対して [`<dt>`](/ja/docs/Web/HTML/Reference/Elements/dt) と [`<dd>`](/ja/docs/Web/HTML/Reference/Elements/dd) をそれぞれ作成します。
 
 #### 結果
 
@@ -66,7 +66,7 @@ for (const [prop, val] of defaultComputedStyles) {
 
 {{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
 
-リンクの既定の CSS プロパティがいくつもあることが分かりましたか？ JavaScript の 2 行目を更新して、 {{htmlelement("a")}} ではなく {{htmlelement("p")}} を選択するようにしてみてください。 [`margin-top`](/ja/docs/Web/CSS/margin-top) と [`margin-bottom`](/ja/docs/Web/CSS/margin-bottom) の既定の計算値の違いに気が付くでしょう。
+リンクの既定の CSS プロパティがいくつもあることが分かりましたか？ JavaScript の 2 行目を更新して、 {{htmlelement("a")}} ではなく {{htmlelement("p")}} を選択するようにしてみてください。 [`margin-top`](/ja/docs/Web/CSS/Reference/Properties/margin-top) と [`margin-bottom`](/ja/docs/Web/CSS/Reference/Properties/margin-bottom) の既定の計算値の違いに気が付くでしょう。
 
 ### .get() メソッド / カスタムプロパティ
 
@@ -227,7 +227,7 @@ for (const value of ofInterest) {
 - [`<image>`](/ja/docs/Web/CSS/image) は {{domxref('CSSImageValue')}} を返します。
 - [`<color>`](/ja/docs/Web/CSS/color_value) は {{domxref('CSSStyleValue')}} を返します。
 - {{cssxref('transform')}} は `CSSTransformValue` を返します。
-- [カスタムプロパティ](/ja/docs/Web/CSS/--*)は {{domxref('CSSUnparsedValue')}} を返します。
+- [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)は {{domxref('CSSUnparsedValue')}} を返します。
 
 `CSSUnitValue` や `CSSKeywordValue` を使って、他のオブジェクトを作成することもできます。
 
@@ -346,7 +346,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-[`<button>`](/ja/docs/Web/HTML/Element/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
+[`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
 
 この `width` を `get()` すると、[`CSSMathSum`](/ja/docs/Web/API/CSSMathSum) が返されます。 {{domxref('CSSMathSum.values')}} は {{domxref('CSSNumericArray')}} で、 2 つの `CSSUnitValues` があります。
 

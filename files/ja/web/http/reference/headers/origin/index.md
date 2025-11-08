@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0d3e5b809231ce1e1d8b6bf1271d63916d9bff93
 ---
 
-{{HTTPSidebar}}
-
 **`Origin`** リクエストヘッダーは、リクエストが発生した{{glossary("origin", "オリジン")}}（スキーム、ホスト名、ポート番号）を示します。
 例えば、ユーザーエージェントがページに含まれるリソース、または実行するスクリプトによってフェッチされるリソースをリクエストする必要がある場合、ページのオリジンがそのリクエストに含まれることがあります。
 
@@ -18,7 +16,7 @@ l10n:
       <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>
@@ -35,7 +33,6 @@ Origin: <scheme>://<hostname>:<port>
 ## ディレクティブ
 
 - `null`
-
   - : オリジンが「プライバシーに配慮した」ものであるか、HTML仕様で定義された不透明なオリジンである（具体的な事例は[解説](#解説)の節に掲載されています）。
 
 - `<scheme>`
@@ -69,7 +66,8 @@ Origin: <scheme>://<hostname>:<port>
 - ネットワークエラーとなったレスポンス。
 - [`Referrer-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy) が `no-referrer` に設定され、`cors` 以外のリクエストモードが設定された場合（単純な形式の投稿など）。
 
-> **メモ:** `null` を返す可能性のあるケースについて、より詳しいリストが Stack Overflow の [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) に掲載されています。
+> [!NOTE]
+> `null` を返す可能性のあるケースについて、より詳しいリストが Stack Overflow の [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) に掲載されています。
 
 ## 例
 

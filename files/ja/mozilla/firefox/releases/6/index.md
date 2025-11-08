@@ -3,44 +3,42 @@ title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日にリリースされました。このページは Firefox 6 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- プログレスバーを表す HTML5 の [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素がサポートされました。
-- メディア要素にテキストトラックを追加する HTML5 の [`<track>`](/ja/docs/Web/HTML/Element/track) 要素について、そのパース処理部分が実装されました。要素そのものは実装されていませんが、DOM に現れるようにはなります。
-- [`border-radius`](/ja/docs/Web/CSS/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) についても、適切に角が丸められるようになりました。
-- [`<form>`](/ja/docs/Web/HTML/Element/form) 要素の [`<input>`](/ja/docs/Web/HTML/Element/input) テキストフィールドが XUL の `maxwidth` プロパティをサポートしなくなりました。これは意図的なものではなく、また HTML 仕様違反でもあります。要素の最大幅を設定するには、[`size`](/ja/docs/Web/HTML/Element/input#attr-size) 属性を利用します。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) の [`CanvasRenderingContext2d`](/ja/docs/Web/API/CanvasRenderingContext2D 'このインターフェイスのオブジェクトを取得するには、以下のようにのgetContext()の引数に"2d"を指定して呼び出します。') プロパティ `fillStyle` と `strokeStyle` はこれまで、妥当な色の指定の後に続く余計なものを無視する処理をしていましたが、適切にエラーとして処理されるように修正されました。たとえば、"red blue" を指定したとき、これまでは "red" と扱われていましたが、これからは指定そのものが無視されます。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素の width と height を適切に 0px と指定できるようになりました。これまではそう指定しても 300px にされていました。
-- HTML [カスタムデータ属性](/ja/docs/Web/HTML/Global_attributes/data-*) (data-\*) がサポートされました。DOM プロパティ [`element.dataset`](/ja/docs/Web/API/Element/dataset) からデータにアクセスできます。
-- [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素がフォーカスされたとき、テキスト挿入箇所が最後ではなく先頭になりました。これにより、他のブラウザーの挙動と一致します。
+- プログレスバーを表す HTML5 の [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素がサポートされました。
+- メディア要素にテキストトラックを追加する HTML5 の [`<track>`](/ja/docs/Web/HTML/Reference/Elements/track) 要素について、そのパース処理部分が実装されました。要素そのものは実装されていませんが、DOM に現れるようにはなります。
+- [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) についても、適切に角が丸められるようになりました。
+- [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素の [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) テキストフィールドが XUL の `maxwidth` プロパティをサポートしなくなりました。これは意図的なものではなく、また HTML 仕様違反でもあります。要素の最大幅を設定するには、[`size`](/ja/docs/Web/HTML/Reference/Elements/input#attr-size) 属性を利用します。
+- [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) の [`CanvasRenderingContext2d`](/ja/docs/Web/API/CanvasRenderingContext2D 'このインターフェイスのオブジェクトを取得するには、以下のようにのgetContext()の引数に"2d"を指定して呼び出します。') プロパティ `fillStyle` と `strokeStyle` はこれまで、妥当な色の指定の後に続く余計なものを無視する処理をしていましたが、適切にエラーとして処理されるように修正されました。たとえば、"red blue" を指定したとき、これまでは "red" と扱われていましたが、これからは指定そのものが無視されます。
+- [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素の width と height を適切に 0px と指定できるようになりました。これまではそう指定しても 300px にされていました。
+- HTML [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) (data-\*) がサポートされました。DOM プロパティ [`element.dataset`](/ja/docs/Web/API/Element/dataset) からデータにアクセスできます。
+- [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) 要素がフォーカスされたとき、テキスト挿入箇所が最後ではなく先頭になりました。これにより、他のブラウザーの挙動と一致します。
 
 ### CSS
 
-- [`-moz-text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
+- [`-moz-text-decoration-color`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-color)
   - : このプロパティは `text-decoration` で指定する `underline`, `overline`, `strikethrough` などの色を指定します。
-- [`-moz-text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
+- [`-moz-text-decoration-line`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-line)
   - : このプロパティは `text-decoration` の種類を指定します。
-- [`-moz-text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
+- [`-moz-text-decoration-style`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-style)
   - : このプロパティは `text-decoration` で指定する `underline`, `overline`, `strikethrough` などのスタイルを指定します。スタイルには `solid`, `double`, `dotted`, `dashed`, `wavy` などがあります。
-- [`-moz-hyphens`](/ja/docs/Web/CSS/hyphens)
+- [`-moz-hyphens`](/ja/docs/Web/CSS/Reference/Properties/hyphens)
   - : このプロパティは行送りが発生する際、単語のハイフネーションを制御するプロパティです。
-- [`-moz-orient`](/ja/docs/Web/CSS/-moz-orient)
-  - : 現在は Mozilla 固有のプロパティで、いくつかの要素 ([`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素など) の縦横の向きを制御します。
-- [`::-moz-progress-bar`](/ja/docs/Web/CSS/::-moz-progress-bar)
-  - : Mozilla 固有の擬似要素で、[`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素において、完了した部分のスタイルづけを行うためのものです。
+- [`-moz-orient`](/ja/docs/Web/CSS/Reference/Properties/-moz-orient)
+  - : 現在は Mozilla 固有のプロパティで、いくつかの要素 ([`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素など) の縦横の向きを制御します。
+- [`::-moz-progress-bar`](/ja/docs/Web/CSS/Reference/Selectors/::-moz-progress-bar)
+  - : Mozilla 固有の擬似要素で、[`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素において、完了した部分のスタイルづけを行うためのものです。
 
 #### その他の変更
 
-- [`@-moz-document`](/ja/docs/Web/CSS/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
+- [`@-moz-document`](/ja/docs/Web/CSS/Reference/At-rules/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
 - `aural` 媒体グループのために持っていたコードを削除したため、[`azimuth`](/ja/docs/Web/CSS/azimuth) CSS プロパティのサポートが廃止されました。このプロパティはちゃんと実装されていなかったため、パッチを当て続けるのではなく未完成の実装を省くほうが理にかなっていると考えました。
-- これまで、[`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
-- [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
+- これまで、[`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
+- [`:indeterminate`](/ja/docs/Web/CSS/Reference/Selectors/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
 
 ### DOM
 
@@ -55,7 +53,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 - これまでずっと、空文字列を返すだけだった `navigator.securityPolicy` プロパティが完全に削除されました。
 - [`BlobBuilder`](/ja/docs/Web/API/Blob) がサポートされました。現時点では接頭辞付きの実装 (`MozBlobBuilder`) となっています。
-- [`document.height`](/ja/docs/conflicting/Web/API/Element/clientHeight), [`document.width`](/ja/docs/conflicting/Web/API/Element/clientWidth) が削除されました。 [バグ 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
+- `document.height`, `document.width` が削除されました。 [バグ 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
 - [`DocumentType`](/ja/docs/Web/API/DocumentType) オブジェクトの `entities`, `notations` プロパティが削除されました。これは実装されておらず常に `null` を返しており、また仕様からも削除されていました。
 - `DOMConfiguration` インターフェイスと、それを使用していた `document.domConfig` プロパティが削除されました。これらはサポートされておらず、また DOM 仕様からも削除されていました。
 - `hashchange` イベントが適切に [`newURL`, `oldURL` フィールド](/ja/docs/Web/API/Window/hashchange_event#the_hashchange_event) を含むようになりました。
@@ -69,7 +67,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - これまでドキュメントのなかった DOM views が削除されました。これらには実装の詳細が多く、また不必要に様々なものを複雑にしていたため削除されました。もしこの変化に気づいた場合は、何か誤ったことをしている可能性があります。
 - `EventTarget` の関数 [`addEventListener()`](/ja/docs/XPCOM_Interface_Reference/nsIDOMEventTarget) に指定する引数 `useCapture` が optional となりました。これは WebKit の動作とも共通し、また新しい仕様でもそう定義されています。
 - [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) オブジェクトの `mozResponseArrayBuffer` プロパティが `responseType`, `response` プロパティに置き換えられました。
-- [`HTMLElement`](/ja/docs/Web/API/HTMLElement) インターフェイスに [`element.dataset`](/ja/docs/Web/API/Element/dataset) プロパティが追加されました。このプロパティにより [要素の `data-*` グローバル属性](/ja/docs/Web/HTML/Global_attributes/data-*) にアクセスできます。
+- [`HTMLElement`](/ja/docs/Web/API/HTMLElement) インターフェイスに [`element.dataset`](/ja/docs/Web/API/Element/dataset) プロパティが追加されました。このプロパティにより [要素の `data-*` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) にアクセスできます。
 - [`CustomEvent`](/ja/docs/Web/API/CustomEvent) インターフェイスが実装されました ([バグ 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
 - セキュリティの観点から、ユーザーがロケーションバーに `data:` URI と `javascript:` URI を入力した時、現在のページのセキュリティコンテキストを受け継がなくなりました。代わりに、新しい空のセキュリティコンテキストが生成されます。これにより、ロケーションバーに入力した `javascript:` URI から読み込まれたスクリプトは、DOM メソッドなどへのアクセスを持たなくなります。しかし、これらの URI がスクリプトから使用された場合は、これまでと同じように動作します。
 

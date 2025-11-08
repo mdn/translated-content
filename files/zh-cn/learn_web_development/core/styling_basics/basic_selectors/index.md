@@ -3,7 +3,7 @@ title: CSS 选择器
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 {{Glossary("CSS")}}中，选择器用来指定网页上我们想要样式化的{{glossary("HTML")}}元素。有 CSS 选择器提供了很多种方法，所以在选择要样式化的元素时，我们可以做到很精细的地步。本文和本文的子篇中，我们将会详细地讲授选择器的不同使用方式，并了解它们的工作原理。
 
@@ -78,7 +78,45 @@ h1,
 
 在下面的实时示例中，试着把两个有相同声明的选择器组合起来。外观在组合起来以后应该还是一样的。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
+```html live-sample___selector-list
+<h1>Type selectors</h1>
+<p>
+  Veggies es bonus vobis, proinde vos postulo essum magis
+  <span>kohlrabi welsh onion</span> daikon amaranth tatsoi tomatillo melon azuki
+  bean garlic.
+</p>
+
+<p>
+  Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley
+  shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+  wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+</p>
+
+<p>
+  Turnip greens yarrow ricebean rutabaga <em>endive cauliflower</em> sea lettuce
+  kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+  purslane kale. Celery potato scallion desert raisin horseradish spinach
+</p>
+```
+
+```css live-sample___selector-list
+body {
+  font-family: sans-serif;
+}
+span {
+  background-color: yellow;
+}
+
+strong {
+  color: rebeccapurple;
+}
+
+em {
+  color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("selector-list", "", "280px")}}
 
 当你使用选择器列表时，如果任何一个选择器无效 (存在语法错误)，那么整条规则都会被忽略。
 

@@ -135,5 +135,5 @@ fetch(request)
 ## 같이 보기
 
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

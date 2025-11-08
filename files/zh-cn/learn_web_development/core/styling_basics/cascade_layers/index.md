@@ -3,9 +3,7 @@ title: 层叠层
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 ---
 
-{{LearnSidebar}}
-
-这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
+这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
 
 如果你是 CSS 的新手，刚开始可能会觉得这部分的内容与本课程的其他部分相比不太相关，而且有些学术化。然而，了解层叠层的基本知识对于你在项目中遇到它们时会非常有帮助。随着你对 CSS 的不断使用，理解层叠层以及如何充分利用它们的功能将能够避免在处理来自不同团队、插件和开发人员的 CSS 代码库时遇到的很多问题。
 
@@ -68,9 +66,21 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 对于每个属性，“获胜”的声明是来自基于权重（普通或重要）具有优先权的来源的声明。暂时忽略层，来自具有最高优先权的来源的值将被应用。如果获胜来源对于一个元素有多个属性声明，那么将比较这些竞争属性值的选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。不同来源之间的选择器从不比较优先级。
 
-在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
+在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/Reference/Properties/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
+```html live-sample___basic-cascade
+<p><a href="https://example.org">User agent styles</a></p>
+<p><a class="author" href="https://example.org">Author styles</a></p>
+```
+
+```css live-sample___basic-cascade
+:where(a.author) {
+  text-decoration: overline;
+  color: red;
+}
+```
+
+{{EmbedLiveSample("basic-cascade")}}
 
 在撰写本文时，用户代理样式表中“竞争”的选择器是 `a:any-link`，它具有 `0-1-1` 的优先级权重。虽然这大于作者样式表中 `0-0-0` 的选择器，但即使你当前的用户代理中的选择器不同，也没关系：作者和用户代理来源之间从不比较优先级权重。了解更多关于[如何计算优先级权重](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#优先级是如何计算的？)。
 
@@ -86,7 +96,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 类似于我们有六个基于来源和重要性的优先权级别，层叠层使我们能够在这些来源中创建子来源级别的优先权。
 
-在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
+在六个来源中的每一个，都可以有多个层叠层。[层创建的顺序](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)非常重要。层创建的顺序确定了同一来源内层的优先权顺序。
 
 在普通来源中，层按照创建的顺序排序。优先权顺序是从首个创建的层到最后一个层，然后是未分层的普通样式。
 
@@ -112,7 +122,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层叠层允许创建嵌套层。每个层叠层可以包含嵌套层。
 
-例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
+例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[层创建和媒体查询](#层创建和媒体查询)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/orientation)来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
 
 嵌套层的能力非常适用于开发组件库、框架、第三方小部件和主题的任何人。
 
@@ -128,7 +138,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 - 使用 `@layer` 声明 at 规则，使用 `@layer` 后跟一个或多个层的名称来声明层。这将创建一个没有分配任何样式的具名层。
 - 使用 `@layer` 块 at 规则，在块中的所有样式都将添加到一个命名或未命名的层中。
-- 使用具有 `layer` 关键字或 `layer()` 函数的 [`@import`](/zh-CN/docs/Web/CSS/@import) 规则，将导入文件的内容分配到该层中。
+- 使用具有 `layer` 关键字或 `layer()` 函数的 [`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 规则，将导入文件的内容分配到该层中。
 
 在尚未初始化具有相同名称的层的情况下，这三种方法中的任何一种都会创建一个层。如果在 `@layer` at 规则或带有 `layer()` 的 `@import` 中没有提供层名称，则将创建一个新的匿名层。
 
@@ -141,7 +151,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层的顺序由 CSS 中层出现的顺序确定。使用 `@layer` 后跟一个或多个层的名称而不分配任何样式是定义[层顺序](#根据层的顺序确定优先权)的一种方式。
 
-[`@layer`](/zh-CN/docs/Web/CSS/@layer) CSS at 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
+[`@layer`](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer) CSS at 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
 
 ```css
 @layer theme，layout，utilities;
@@ -219,7 +229,30 @@ body {
 
 在下面的交互式示例中，我们将样式分配给两个层，在此过程中创建并命名了它们。因为它们在首次使用时已经存在，所以在最后一行声明它们没有任何影响。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-order.html", '100%', 500)}}
+```html live-sample___layer-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___layer-order
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+
+/* this does nothing */
+@layer site, page;
+```
+
+{{EmbedLiveSample("layer-order")}}
 
 试着将最后一行 `@layer site, page;` 移到第一行。会发生什么？
 
@@ -227,15 +260,39 @@ body {
 
 如果你使用[媒体](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)或[特性](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)查询来定义层，且媒体不匹配或特征不被支持，则不会创建该层。下面的示例展示了改变设备或浏览器的尺寸可能会改变层的顺序。在这个示例中，我们只在更宽的浏览器中创建 `site` 层。然后我们按顺序为 `page` 和 `site` 层分配样式。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
+```html live-sample___media-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___media-order
+@media (min-width: 50em) {
+  @layer site;
+}
+
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+```
+
+{{EmbedLiveSample("media-order")}}
 
 在宽屏上，`site` 层在第一行被声明，这意味着 `site` 的优先权低于 `page`。否则在窄屏上，`site` 的优先权高于 `page`，因为它在后面被声明。如果不起作用，请将媒体查询中的 `50em` 改为 `10em` 或 `100em`。
 
 ### 使用 @import 将样式表导入具名层和匿名层
 
-[`@import`](/zh-CN/docs/Web/CSS/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
+[`@import`](/zh-CN/docs/Web/CSS/Reference/At-rules/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
 
-导入样式表时，必须在样式表或 `<style>` 块中的任何 CSS 样式之前定义 `@import` 语句。`@import` 语句必须出现在最前面，在任何样式之前，但可以在创建一个或多个层而不向这些层分配任何样式的 `@layer` 规则之后（`@import` 也可以在 [`@charset`](/zh-CN/docs/Web/CSS/@charset) 规则之后）。
+导入样式表时，必须在样式表或 `<style>` 块中的任何 CSS 样式之前定义 `@import` 语句。`@import` 语句必须出现在最前面，在任何样式之前，但可以在创建一个或多个层而不向这些层分配任何样式的 `@layer` 规则之后（`@import` 也可以在 [`@charset`](/zh-CN/docs/Web/CSS/Reference/At-rules/@charset) 规则之后）。
 
 你可以将样式表导入具名层、嵌套具名层或匿名层。以下层分别将样式表导入 `components` 层、`components` 层中的嵌套 `dialog` 层和一个未命名层：
 
@@ -336,7 +393,7 @@ body {
 
 接下来是在层外声明的任何样式。`C.css` 中的样式没有导入到层中，并将覆盖任何来自 `firstLayer` 和 `secondLayer` 的冲突样式。在层外声明的普通样式总是比层内的普通样式具有更高的优先权。
 
-内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
+内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
 
 动画样式比所有普通样式都具有更高的优先权，包括内联普通样式。
 
@@ -346,7 +403,51 @@ body {
 
 过渡样式具有最高的优先权。当正在过渡普通属性值时，它优先于所有其他属性值声明，甚至是内联重要样式；但是只在过渡时。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
+```html live-sample___layer-precedence
+<div>
+  <h1 style="color: yellow; background-color: maroon !important;">
+    Inline styles
+  </h1>
+</div>
+```
+
+```css live-sample___layer-precedence
+@layer A, B;
+
+h1 {
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0.2em;
+  color: orange;
+  background-color: green;
+  text-decoration: overline pink !important;
+  box-shadow: 5px 5px lightgreen !important;
+}
+
+@layer A {
+  h1 {
+    color: grey;
+    background-color: black !important;
+    text-decoration: line-through grey;
+    box-shadow: -5px -5px lightblue !important;
+    font-style: normal;
+    font-weight: normal !important;
+  }
+}
+
+@layer B {
+  h1 {
+    color: aqua;
+    background: yellow !important;
+    text-decoration: underline aqua;
+    box-shadow: -5px 5px magenta !important;
+    font-style: italic;
+    font-weight: bold !important;
+  }
+}
+```
+
+{{EmbedLiveSample("layer-precedence")}}
 
 在这个例子中，有两个没有样式的内联层 `A` 和 `B`，一块不分层样式，以及两个具名层 `A` 和 `B` 中的样式块。
 
@@ -410,7 +511,7 @@ body {
 
 ## 技能测试！
 
-你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#任务_2)。
+你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#任务_2)。
 
 ## 总结
 

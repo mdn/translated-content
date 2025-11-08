@@ -95,7 +95,7 @@ Como foi mencionado acima, em geral o problema de automaticamente descobrir se a
 
 ### Referências
 
-O principal conceito de algoritmos do garbage collection depende do conceito de _referência_. Dentro do contexto de gerenciamento de memória, é dito que um objeto faz referência a outro, caso o primeiro tenha acesso a este último (de maneira implícita ou explícita). Por exemplo, um objeto JavaScript tem uma referência ao seu [prototype](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (referência implícita) e para os valores de suas propriedades (referência explícita).
+O principal conceito de algoritmos do garbage collection depende do conceito de _referência_. Dentro do contexto de gerenciamento de memória, é dito que um objeto faz referência a outro, caso o primeiro tenha acesso a este último (de maneira implícita ou explícita). Por exemplo, um objeto JavaScript tem uma referência ao seu [prototype](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (referência implícita) e para os valores de suas propriedades (referência explícita).
 
 Neste contexto, o conceito de "objeto" se extende para algo mais abrangente do que os objetos comuns do JavaScript, e também contém escopos de função (ou o escopo lexical global).
 

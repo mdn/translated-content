@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaRowIndex`** は {{domxref("Element")}} インターフェイスのプロパティで、表やグリッドやツリーグリッド内の行の総数に対する要素の行インデックスや位置を定義する [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性の値を反映します。
+**`ariaRowIndex`** は {{domxref("Element")}} インターフェイスのプロパティで、表やグリッドやツリーグリッド内の行の総数に対する要素の行インデックスや位置を定義する [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) 属性の値を反映します。
 
 ## 値
 

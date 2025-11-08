@@ -33,5 +33,5 @@ CORS セーフリストリクエストヘッダーとなるためには、次の
 ## 関連情報
 
 - {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
-- {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+- {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
 - {{Glossary("Request header", "リクエストヘッダー")}}

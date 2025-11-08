@@ -1,17 +1,14 @@
 ---
 title: mask
 slug: Web/SVG/Reference/Attribute/mask
-original_slug: Web/SVG/Attribute/mask
 l10n:
-  sourceCommit: cd840e78b6027a391fe1f11b745564cf3ebfb8e7
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`mask`** 属性は、主に指定された {{ SVGElement("mask") }} 要素とその属性が属する要素を結びつけるために使用されるプレゼンテーション属性です。
 
 > [!NOTE]
-> プレゼンテーション属性なので、 {{cssxref('mask')}} は CSS プロパティとして使用できます。
+> プレゼンテーション属性であるため、 `mask` には対応する CSS プロパティ {{cssxref("mask")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -93,3 +90,7 @@ SVG2 以降、{{cssxref('mask')}} 属性は CSS プロパティとして定義�
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("mask")}} プロパティ

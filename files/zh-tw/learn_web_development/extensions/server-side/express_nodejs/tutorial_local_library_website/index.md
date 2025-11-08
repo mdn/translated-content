@@ -3,7 +3,7 @@ title: Express 教學 1：本地圖書館網站
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 我們實作教程系列的第一篇文章，會說明將學到什麼東西，並提供「本地圖書館」範例網站的概述 。我們將在接下來的文章中一步一步完成這個網站。
 

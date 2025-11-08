@@ -1,65 +1,17 @@
 ---
 title: width
 slug: Web/SVG/Reference/Attribute/width
-original_slug: Web/SVG/Attribute/width
 l10n:
-  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`width`** 属性は、ユーザー座標系における要素の水平方向の長さを定義します。
 
+## 要素
+
 この属性は以下の SVG 要素で使用することができます。
 
-- {{SVGElement('feBlend')}}
-- {{SVGElement('feColorMatrix')}}
-- {{SVGElement('feComponentTransfer')}}
-- {{SVGElement('feComposite')}}
-- {{SVGElement('feConvolveMatrix')}}
-- {{SVGElement('feDiffuseLighting')}}
-- {{SVGElement('feDisplacementMap')}}
-- {{SVGElement('feDropShadow')}}
-- {{SVGElement('feFlood')}}
-- {{SVGElement('feGaussianBlur')}}
-- {{SVGElement('feImage')}}
-- {{SVGElement('feMerge')}}
-- {{SVGElement('feMorphology')}}
-- {{SVGElement('feOffset')}}
-- {{SVGElement('feSpecularLighting')}}
-- {{SVGElement('feTile')}}
-- {{SVGElement('feTurbulence')}}
-- {{SVGElement('filter')}}
-- {{SVGElement('foreignObject')}}
-- {{SVGElement('image')}}
-- {{SVGElement('mask')}}
-- {{SVGElement('pattern')}}
-- {{SVGElement('rect')}}
-- {{SVGElement('svg')}}
-- {{SVGElement('use')}}
-
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect x="0" y="0" width="0" height="90" />
-  <rect x="0" y="100" width="60" height="90" />
-  <rect x="0" y="200" width="100%" height="90" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-## feBlend
+### `<feBlend>`
 
 {{SVGElement('feBlend')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -92,7 +44,7 @@ svg {
   </tbody>
 </table>
 
-## feColorMatrix
+### `<feColorMatrix>`
 
 {{SVGElement('feColorMatrix')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -125,7 +77,7 @@ svg {
   </tbody>
 </table>
 
-## feComponentTransfer
+### `<feComponentTransfer>`
 
 {{SVGElement('feComponentTransfer')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -158,7 +110,7 @@ svg {
   </tbody>
 </table>
 
-## feComposite
+### `<feComposite>`
 
 {{SVGElement('feComposite')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -191,7 +143,7 @@ svg {
   </tbody>
 </table>
 
-## feConvolveMatrix
+### `<feConvolveMatrix>`
 
 {{SVGElement('feConvolveMatrix')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -224,7 +176,7 @@ svg {
   </tbody>
 </table>
 
-## feDiffuseLighting
+### `<feDiffuseLighting>`
 
 {{SVGElement('feDiffuseLighting')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -257,7 +209,7 @@ svg {
   </tbody>
 </table>
 
-## feDisplacementMap
+### `<feDisplacementMap>`
 
 {{SVGElement('feDisplacementMap')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -290,7 +242,7 @@ svg {
   </tbody>
 </table>
 
-## feDropShadow
+### `<feDropShadow>`
 
 {{SVGElement('feDropShadow')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -323,7 +275,7 @@ svg {
   </tbody>
 </table>
 
-## feFlood
+### `<feFlood>`
 
 {{SVGElement('feFlood')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -356,7 +308,7 @@ svg {
   </tbody>
 </table>
 
-## feGaussianBlur
+### `<feGaussianBlur>`
 
 {{SVGElement('feGaussianBlur')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -389,7 +341,7 @@ svg {
   </tbody>
 </table>
 
-## feImage
+### `<feImage>`
 
 {{SVGElement('feImage')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -422,7 +374,7 @@ svg {
   </tbody>
 </table>
 
-## feMerge
+### `<feMerge>`
 
 {{SVGElement('feMerge')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -455,7 +407,7 @@ svg {
   </tbody>
 </table>
 
-## feMorphology
+### `<feMorphology>`
 
 {{SVGElement('feMorphology')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -488,7 +440,7 @@ svg {
   </tbody>
 </table>
 
-## feOffset
+### `<feOffset>`
 
 {{SVGElement('feOffset')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -521,7 +473,7 @@ svg {
   </tbody>
 </table>
 
-## feSpecularLighting
+### `<feSpecularLighting>`
 
 {{SVGElement('feSpecularLighting')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -554,7 +506,7 @@ svg {
   </tbody>
 </table>
 
-## feTile
+### `<feTile>`
 
 {{SVGElement('feTile')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -587,7 +539,7 @@ svg {
   </tbody>
 </table>
 
-## feTurbulence
+### `<feTurbulence>`
 
 {{SVGElement('feTurbulence')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
 
@@ -620,7 +572,7 @@ svg {
   </tbody>
 </table>
 
-## filter
+### `<filter>`
 
 {{SVGElement('filter')}} の場合、 `width` はフィルターの描画領域の水平方向の長さを定義します。
 
@@ -653,7 +605,7 @@ svg {
   </tbody>
 </table>
 
-## foreignObject
+### `<foreignObject>`
 
 {{SVGElement('foreignObject')}} の場合、 `width` は参照先の文書の描画領域の水平方向の長さを定義します。
 
@@ -690,7 +642,7 @@ svg {
 > [!NOTE]
 > SVG2 から `width` は幾何プロパティであり、この属性は `<foreignObject>` の CSS プロパティとしても使用することができます。
 
-## image
+### `<image>`
 
 {{SVGElement('image')}} の場合、 `width` は画像の水平方向の長さを定義します。
 
@@ -727,7 +679,7 @@ svg {
 > [!NOTE]
 > SVG2 から `width` は幾何プロパティであり、この属性は画像の CSS プロパティとしても使用することができます。
 
-## mask
+### `<mask>`
 
 {{SVGElement('mask')}} の場合、 `width` は効果の領域の水平方向の長さを定義します。この属性の正確な効果は、{{SVGAttr('maskUnits')}} 属性の影響を受けます。
 
@@ -760,7 +712,7 @@ svg {
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 {{SVGElement('pattern')}} の場合、 `width` はタイルパターンの水平方向の長さを定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性の影響を受けます。
 
@@ -787,7 +739,7 @@ svg {
   </tbody>
 </table>
 
-## rect
+### `<rect>`
 
 {{SVGElement('rect')}} の場合、 `width` は矩形の水平方向の長さを定義します。
 
@@ -824,7 +776,7 @@ svg {
 > [!NOTE]
 > SVG2 から `width` は幾何プロパティであり、この属性は矩形の CSS プロパティとしても使用することができます。
 
-## svg
+### `<svg>`
 
 {{SVGElement('svg')}} の場合、 `width` は SVG ビューポートの描画領域の水平方向の長さを定義します。
 
@@ -864,7 +816,7 @@ svg {
 > [!NOTE]
 > SVG2 から `width` は幾何プロパティであり、この属性は `<svg>` の CSS プロパティとしても使用することができます。
 
-## use
+### `<use>`
 
 {{SVGElement('use')}} の場合、 `width` は参照先要素の水平方向の長さを定義します。
 
@@ -904,6 +856,54 @@ svg {
 > [!NOTE]
 > SVG2 から `width` は幾何プロパティであり、この属性は使用される要素の CSS プロパティとしても使用することができます。
 
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+この例では、さまざまな幅属性値を持つ 3 つの {{SVGElement("rect")}} 要素が記載されています。最初の `<rect>` には `width="0"` が設定されています。 幅が `0` 以下である SVG 要素はレンダリングされません。
+
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 幅が 0 以下の場合、何もレンダリングされません。 -->
+  <rect
+    x="0"
+    y="0"
+    width="0"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="100"
+    width="60"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="200"
+    width="100%"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
+
 ## 仕様書
 
 {{Specifications}}
+
+## 関連情報
+
+- CSS の {{cssxref("width")}} プロパティ

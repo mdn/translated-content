@@ -3,9 +3,9 @@ title: HTML中的圖片
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
-最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
+最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Reference/Elements/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
 
 <table>
   <tbody>
@@ -102,10 +102,10 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 
 你應該在`alt`屬性中確切寫些什麼？ 這取決於圖片為何而出現；也就是說，如果圖片不顯示，你將損失什麼：
 
-- **裝飾：** 你可以用 [CSS 背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
-- **內容：** 如果你的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
-- **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#使用明確的字詞)。在这种情况下，你可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
-- **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
+- **裝飾**：你可以用 [CSS 背景圖片](#css_背景圖片)加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
+- **內容**：如果你的圖片提供了重要的資訊，請在簡短的 `alt` 文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
+- **連結**：如果你在 {{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#使用明確的字詞)。在这种情况下，你可以根據適合你的情況，将其写在相同的 `<a>` 元素内，或是写在图像的 `alt` 属性内。
+- **文字**：請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/Reference/Properties/text-shadow) 更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在 `alt` 属性内。
 
 本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。你很快就會意識到，如果看不到圖片，替代文字會很有幫助。
 
@@ -343,7 +343,7 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
 > [!NOTE]
-> From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Reference/Elements/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Reference/Elements/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -493,7 +493,7 @@ textarea.onkeyup = function () {
 
 ## CSS 背景圖片
 
-你還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。CSS [`background-image`](/zh-TW/docs/Web/CSS/background-image) 屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
+你還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。CSS [`background-image`](/zh-TW/docs/Web/CSS/Reference/Properties/background-image) 屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
 
 ```css
 p {
@@ -510,7 +510,7 @@ p {
 
 ## 試試看!
 
-你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images)。
+你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images)。
 
 ## 總結
 

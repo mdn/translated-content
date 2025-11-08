@@ -3,8 +3,6 @@ title: Doctype
 slug: Glossary/Doctype
 ---
 
-{{GlossarySidebar}}
-
 `<!DOCTYPE>`會告知你的{{Glossary("瀏覽器")}}這個文件是用哪個版本的 {{Glossary("HTML")}} （或 {{glossary("XML")}}）撰寫。Doctype 是一種宣告，而非 {{Glossary("tag")}}。你也可以把它想作「document type declaration」（文件類型宣告），或是縮寫的 「DTD」。
 
 ## 了解詳情
@@ -12,7 +10,7 @@ slug: Glossary/Doctype
 ### 基本知識
 
 - 英文維基百科的 [Document type declaration](https://en.wikipedia.org/wiki/Document_type_declaration)
-- [怪異模式與標準模式](/zh-TW/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [怪異模式與標準模式](/zh-TW/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 
 ### 技術參考
 

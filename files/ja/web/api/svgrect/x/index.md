@@ -3,7 +3,7 @@ title: "SVGRect: x プロパティ"
 short-title: x
 slug: Web/API/SVGRect/x
 l10n:
-  sourceCommit: cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
+  sourceCommit: 0496bb2fcef13172325e1cc25a5fc71410506557
 ---
 
 {{APIRef("SVG")}}
@@ -23,10 +23,12 @@ l10n:
     <tr>
       <td>値</td>
       <td>
-        <a href="https://www.w3.org/TR/css3-values/#lengths">&#x3C;length></a
-        > | <a href="https://www.w3.org/TR/css3-values/#percentages"
+        <code>
+        <a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a
+        > | <a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
           >&#x3C;percentage></a
         >
+        </code>
       </td>
     </tr>
     <tr>
@@ -36,17 +38,11 @@ l10n:
     <tr>
       <td>適用先</td>
       <td>
-        {{ SVGElement("mask") }}, '<a
-          href="https://svgwg.org/svg2-draft/struct.html#SVGElement"
-          >svg</a
-        >', '<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"
-          >rect</a
-        >', '<a href="https://svgwg.org/svg2-draft/embedded.html#ImageElement"
-          >image</a
-        >', '<a
-          href="https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement"
-          >foreignObject</a
-        >'
+        {{ SVGElement("mask") }},
+        {{ SVGElement("svg") }},
+        {{ SVGElement("rect") }},
+        {{ SVGElement("image") }},
+        {{ SVGElement("foreignObject") }}
       </td>
     </tr>
     <tr>
@@ -92,3 +88,11 @@ l10n:
 ```
 
 {{EmbedLiveSample("Simple usage", "100%", "100")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

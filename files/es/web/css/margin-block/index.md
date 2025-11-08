@@ -3,7 +3,7 @@ title: margin-block
 slug: Web/CSS/margin-block
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`margin-block`** define el bloque lógico de inicio y fin de las márgenes de un elemento, que se asigna a las márgenes físicas en función del modo de escritura del elemento, la direccionalidad y la orientación del texto.
 

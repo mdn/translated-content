@@ -2,10 +2,8 @@
 title: 421 Misdirected Request
 slug: Web/HTTP/Reference/Status/421
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`421 Misdirected Request`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示該請求被導向到一個無法產生回應的伺服器。這可能是因為伺服器未設定為針對請求 URI 中包含的[方案](/zh-TW/docs/Web/URI/Reference/Schemes)與[權威](/zh-TW/docs/Web/URI/Reference/Authority)組合產生回應而發送的。
 
@@ -47,4 +45,3 @@ Server: Apache/2.4.1 (Unix)
 - [TLS 1.3](/zh-TW/docs/Web/Security/Transport_Layer_Security#tls_1.3)
 - [伺服器名稱指示（SNI）](https://en.wikipedia.org/wiki/Server_Name_Indication)
 - [傳輸層安全性（TLS）配置](/zh-TW/docs/Web/Security/Practical_implementation_guides/TLS)
-- Apache [錯誤代碼 `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) 實作

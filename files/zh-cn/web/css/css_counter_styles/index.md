@@ -3,8 +3,6 @@ title: CSS 计数器样式
 slug: Web/CSS/CSS_counter_styles
 ---
 
-{{CSSRef}}
-
 **CSS 计数器样式**是一个让你自定义计数器样式的 CSS 模块。
 
 ## 参考
@@ -19,14 +17,13 @@ slug: Web/CSS/CSS_counter_styles
 
 ### 数据类型
 
-- [`<counter-style-name>`](/zh-CN/docs/Web/CSS/@counter-style#counter-style-name)
-- [`<symbol>`](/zh-CN/docs/Web/CSS/@counter-style/symbols#值)
+- [`<counter-style-name>`](/zh-CN/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name)
+- [`<symbol>`](/zh-CN/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#值)
 - [`<symbols-type>`](/zh-CN/docs/Web/CSS/symbols#语法)
 
 ### At 规则和描述符
 
 - {{cssxref("@counter-style")}}
-
   - {{cssxref("@counter-style/system","system")}}
   - {{cssxref("@counter-style/symbols", "symbols")}}
   - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}

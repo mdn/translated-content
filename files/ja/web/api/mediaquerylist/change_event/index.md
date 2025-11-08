@@ -31,7 +31,6 @@ onchange = (event) => {};
 _`MediaQueryListEvent` インターフェイスには、親インターフェイスである {{DOMxRef("Event")}} から継承しているプロパティがあります。_
 
 - {{DOMxRef("MediaQueryListEvent.matches")}} {{ReadOnlyInline}}
-
   - : 論理値です。 {{DOMxRef("document")}} が現在メディアクエリーのリストに一致していれば `true` を返し、そうでなければ `false` を返します。
 
 - {{DOMxRef("MediaQueryListEvent.media")}} {{ReadOnlyInline}}

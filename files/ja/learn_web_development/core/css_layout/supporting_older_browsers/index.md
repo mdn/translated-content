@@ -78,7 +78,7 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 
 すべてのブラウザーで対応していない新しいセレクターを記載することは、より慎重に処理する必要があります。セレクターのカンマ区切りリスト内の[セレクターが不正](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#セレクターの対応)な場合、スタイルブロック全体が無視されます。
 
-ブラウザーの対応していないベンダー接頭辞付きの[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)や新しい[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を使用する場合は、 {{cssxref(":is", ":is()")}} や {{cssxref(":where", ":where()")}} を使用して寛容なセレクターリスト内に接頭辞の値を記載して、セレクターブロック全体が[不正で無視されないように](/ja/docs/Web/CSS/Selector_list#無効なセレクターリスト)してください。
+ブラウザーの対応していないベンダー接頭辞付きの[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)や新しい[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)を使用する場合は、 {{cssxref(":is", ":is()")}} や {{cssxref(":where", ":where()")}} を使用して寛容なセレクターリスト内に接頭辞の値を記載して、セレクターブロック全体が[不正で無視されないように](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#無効なセレクターリスト)してください。
 
 ```css
 :is(:-prefix-mistake, :unsupported-pseudo),
@@ -155,7 +155,7 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 
 ## 関連情報
 
-- [`@supports`](/ja/docs/Web/CSS/@supports) アットルール
-- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルール
+- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
 - [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール

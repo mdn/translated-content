@@ -3,8 +3,6 @@ title: 滚动吸附的基本概念
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 ---
 
-{{CSSRef}}
-
 [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块中的属性可以定义用户在滚动文档时滚动吸附到指定点的方式。
 
 滚动吸附特性可以定义吸附位置。[滚动容器](/zh-CN/docs/Glossary/Scroll_container)的滚动口在完成滚动操作后可能会停在或“吸附到”这些位置。
@@ -283,7 +281,7 @@ body {
 
 {{EmbedLiveSample("scroll-padding", "", "350px")}}
 
-如果有像导航栏这种可能遮盖滚动内容的[固定](/zh-CN/docs/Web/CSS/position#固定定位)元素，那么这个属性可以派上用场。使用 `scroll-padding` 可以为固定元素留出空间。例如在下列示例中，当内容在 `<h1>` 元素下方滚动时，`<h1>` 在屏幕上保持不动。如果没有内边距，那么在发生吸附时，标题会遮盖一些内容。
+如果有像导航栏这种可能遮盖滚动内容的[固定](/zh-CN/docs/Web/CSS/Reference/Properties/position#固定定位)元素，那么这个属性可以派上用场。使用 `scroll-padding` 可以为固定元素留出空间。例如在下列示例中，当内容在 `<h1>` 元素下方滚动时，`<h1>` 在屏幕上保持不动。如果没有内边距，那么在发生吸附时，标题会遮盖一些内容。
 
 ```html hidden live-sample___scroll-padding-sticky
 <article class="scroller">

@@ -3,7 +3,6 @@ title: How CSS works
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 我們已經學會基本 CSS 的用途與用法了，這堂課我們就來看看瀏覽器是如何將 CSS 和 HTML 變化成網頁的吧。
@@ -43,10 +42,6 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 4. 瀏覽器解析 (parse) CSS，先按照選擇器的類型(如元素、類別、ID 等等)，將規則放入相對應的「桶子(buckets)」裡。接著再依找到的選擇器，推算哪些規則應該要套用在哪些 DOM 節點上，並將樣式附著上去，最後產生的東西叫做轉譯樹(render tree)。
 5. 當規則都套用完畢後，開始按照網頁結構布局(layout)轉譯樹。
 6. 網頁被呈現在螢幕上，這個步驟稱為繪製(painting)。
-
-下面是此流程的示意圖。
-
-![](rendering.svg)
 
 ## 關於 DOM
 

@@ -2,10 +2,8 @@
 title: 对称密钥密码
 slug: Glossary/Symmetric-key_cryptography
 l10n:
-  sourceCommit: aabd56c814d580e577199239fb27e54cc168cf55
+  sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
-
-{{GlossarySidebar}}
 
 对称密钥密码指使用相同密钥进行密码和解密的密码算法。该密钥通常称为“对称密钥”或“秘密密钥”。
 
@@ -19,8 +17,7 @@ l10n:
 
 - [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto 支持的算法](/zh-CN/docs/Web/API/SubtleCrypto#supported_algorithms)
-- 术语
-
+- 相关术语：
   - {{Glossary("Block cipher mode of operation", "分组密码工作模式")}}
   - {{Glossary("Cryptography", "密码学")}}
-  - {{Glossary("Cryptographic hash function", "密码散列函数")}}
+  - {{Glossary("hash function", "散列函数")}}

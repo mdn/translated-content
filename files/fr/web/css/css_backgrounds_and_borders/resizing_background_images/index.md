@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) [`background-size`](/fr/docs/Web/CSS/background-size) permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer une mosaïque répétant l'image à sa taille normale en indiquant une hauteur et/ou une largeur pour l'image. Il est ainsi possible d'agrandir ou de rapetisser l'image.
+La propriété [CSS](/fr/docs/Web/CSS) [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer une mosaïque répétant l'image à sa taille normale en indiquant une hauteur et/ou une largeur pour l'image. Il est ainsi possible d'agrandir ou de rapetisser l'image.
 
 ## Répéter une grande image
 
@@ -76,7 +76,7 @@ Comme vous pouvez le voir, le CSS est quasi-identique, seul le nom du fichier a 
 
 ## Les valeurs spéciales `contain` et `cover`
 
-En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/length)), la propriété [`background-size`](/fr/docs/Web/CSS/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
+En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)), la propriété [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
 
 ### `contain`
 
@@ -140,6 +140,6 @@ La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite
 
 ## Voir aussi
 
-- [`background-size`](/fr/docs/Web/CSS/background-size)
-- [`background`](/fr/docs/Web/CSS/background)
-- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)
+- [`background`](/fr/docs/Web/CSS/Reference/Properties/background)
+- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)

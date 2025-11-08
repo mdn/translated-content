@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ff95690a38837afa6a80d00c31adc3ea0217a6e
 ---
 
-{{AddonSidebar}}
-
 在页面中触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像、样式表和子框架）可能尚未被加载。
 
 ## 语法
@@ -34,11 +32,9 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 ### 参数
 
 - `callback`
-
   - : 为当此事件发生时需要被调用的函数。该函数将传递以下参数：
-
     - `details`
-      - : `object`。有关导航事件的详细信息。参见 [details](#details_2) 小节以获取更多信息。
+      - : `object`。有关导航事件的详细信息。参见 [details](#details) 一节以获取更多信息。
 
 - `filter`{{optional_inline}}
   - : `object`。包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} {{jsxref("Array")}} 对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个 `UrlFilter` 匹配的 URL。如果省略此参数，则该事件将触发所有转换。
@@ -54,7 +50,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 - `processId`
   - : `integer`。渲染此选项卡的进程的 ID。
 - `frameId`
-  - : `integer`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Element/iframe) 中。正值表示导航发生在嵌套的 iframe 中。对于给定的标签页和进程，框架 ID 是唯一的。
+  - : `integer`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 中。正值表示导航发生在嵌套的 iframe 中。对于给定的标签页和进程，框架 ID 是唯一的。
 - `timeStamp`
   - : `number`。启动 `DOMContentLoaded` 的时间，单位为[自纪元起的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)。
 

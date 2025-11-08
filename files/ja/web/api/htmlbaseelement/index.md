@@ -16,9 +16,9 @@ l10n:
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLBaseElement.href")}}
-  - : 文字列で、 HTML の [`href`](/ja/docs/Web/HTML/Element/base#href) 属性を反映し、文書内の相対 URL の基底 URL を保持します。
+  - : 文字列で、 HTML の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性を反映し、文書内の相対 URL の基底 URL を保持します。
 - {{domxref("HTMLBaseElement.target")}}
-  - : 文字列で、 HTML の [`target`](/ja/docs/Web/HTML/Element/base#target) 属性を反映し、要素にターゲットとなる参照先が指定されなかった場合の既定のターゲットとなる閲覧コンテキストまたはフレームを保持します。
+  - : 文字列で、 HTML の [`target`](/ja/docs/Web/HTML/Reference/Elements/base#target) 属性を反映し、要素にターゲットとなる参照先が指定されなかった場合の既定のターゲットとなる閲覧コンテキストまたはフレームを保持します。
 
 ## インスタンスメソッド
 

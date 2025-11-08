@@ -9,9 +9,9 @@ slug: Web/SVG/Reference/Attribute/display
 
 当应用到容器元素时，将 `display` 设为 `none` 会导致容器与它所有的子元素不可见，如此看来，它在一组元素中表现地像一个元素组。这表示具有 `display="none"` 属性元素的所有子元素都不会被渲染，即使子元素的 `display` 并不是 `none`。
 
-`display` 属性被设为 `none` 的元素不会成为渲染树的一部分。它涉及到 {{SVGElement("tspan")}} 和 {{SVGElement("tref")}} 元素，用于盒边界与路径剪裁计算的事件处理。
+`display` 属性被设为 `none` 的元素不会成为渲染树的一部分。它涉及到 {{SVGElement("tspan")}} 元素，用于盒边界与路径剪裁计算的事件处理。
 
-- 如果在 {{SVGElement("tspan")}} 或 {{SVGElement("tref")}} 元素中 `display` 的属性值被设为 `none`，则为了文字布局，文字字符串会被忽视掉。
+- 如果在 {{SVGElement("tspan")}} 元素中 `display` 的属性值被设为 `none`，则为了文字布局，文字字符串会被忽视掉。
 - 至于事件，如果 `display` 被设为 `none` 则该元素不接受任何事件。
 - [图形元素](/zh-CN/docs/Web/SVG/Reference/Element#图形元素)的 `display` 属性被设为 `none` 则不会被盒边界和路径剪裁计算中包含进去。
 

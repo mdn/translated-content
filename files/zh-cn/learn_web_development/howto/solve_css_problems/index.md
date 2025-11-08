@@ -3,7 +3,6 @@ title: 解决常见的 CSS 问题
 slug: Learn_web_development/Howto/Solve_CSS_problems
 ---
 
-{{LearnSidebar}}
 以下链接提供了一些你在使用 CSS 时可能遇到的常见问题的解决方案。
 
 ## 主要使用事项
@@ -32,10 +31,10 @@ slug: Learn_web_development/Howto/Solve_CSS_problems
 
 - [如何调整 CSS 盒模型大小？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - [如何控制盒模型溢出？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow)
-- [如何控制 CSS 盒模型中背景绘制部分？](/zh-CN/docs/Web/CSS/background-clip)
+- [如何控制 CSS 盒模型中背景绘制部分？](/zh-CN/docs/Web/CSS/Reference/Properties/background-clip)
 - [如何理解 inline、block 以及 inline-block？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - [How to create fancy boxes](/zh-CN/docs/Learn/CSS/Howto/create_fancy_boxes) (请一并查看 [Styling boxes](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 模块)
-- [如何使用 background-clip 控制背景图覆盖？](/zh-CN/docs/Web/CSS/background-clip)
+- [如何使用 background-clip 控制背景图覆盖？](/zh-CN/docs/Web/CSS/Reference/Properties/background-clip)
 - [如何使用 box-sizing 完全改变盒模型？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#替代（ie）盒模型)
 - [如何改变背景色？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders#背景颜色)
 - [如何修改边框？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders#玩转背景和边框)

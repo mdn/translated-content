@@ -3,8 +3,6 @@ title: <frequency>
 slug: Web/CSS/frequency
 ---
 
-{{CSSRef}}
-
 `<frequency>` [CSS](/zh-CN/docs/Web/CSS)数据类型表示频率维度，例如语音的音高。目前它未在任何 CSS 属性中被使用。
 
 ## 语法
@@ -46,7 +44,7 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 {{Specifications}}
 
 > [!NOTE]
-> This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/zh-CN/docs/Web/CSS/@media/aural) [media type](/zh-CN/docs/Web/CSS/@media#media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
+> This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/zh-CN/docs/Web/CSS/Reference/At-rules/@media) [media type](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
 
 ## 浏览器兼容性
 

@@ -3,8 +3,6 @@ title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 55 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -18,7 +16,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Global_attributes/contenteditable#マークアップ生成の違い) をご覧ください。
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#マークアップ生成の違い) をご覧ください。
 - Nightly で、`dom.forms.datetime` をデフォルトで有効にしました ([Firefox バグ 1366188](https://bugzil.la/1366188))。
 
 ### CSS
@@ -74,7 +72,6 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 - 内部で選択範囲が動いたときに editing hosts がどのようにフォーカスを得るかについて、他のブラウザーへ合わせるために [Selection API](/ja/docs/Web/API/Selection) を更新しました ([Firefox バグ 1318312](https://bugzil.la/1318312))。詳しくは[編集ホストのフォーカス変更に関する選択 API の挙動](/ja/docs/Web/API/Selection#編集ホストのフォーカス変更に関する選択_api_の挙動)をご覧ください。
 - 最近の仕様の変更に合致するよう、{{domxref("Selection")}} API を更新しました ([Firefox バグ 1359371](https://bugzil.la/1359371)):
-
   - {{domxref("Selection.collapse", "collapse()")}} および {{domxref("Selection.extend", "extend()")}} メソッドの `offset` 引数を省略可能にしました。
   - {{domxref("Selection.collapse", "collapse()")}} メソッドの `node` 引数を null にすることが可能になりました。
   - {{domxref("Selection.containsNode", "containsNode()")}} メソッドの `partialContainment` 引数が省略可能になりました。
@@ -86,7 +83,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 #### Workers
 
 - ワーカーおよび共有ワーカーを、識別用の `name` プロパティをつけて作成できるようになりました。{{domxref("Worker.Worker", "Worker()")}} および {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクター、{{domxref("DedicatedWorkerGlobalScope")}} および {{domxref("SharedWorkerGlobalScope")}} インターフェイスをご覧ください ([Firefox バグ 1364297](https://bugzil.la/1364297))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
 
 #### Service Workers/Push
 
@@ -137,9 +134,9 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
-- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
-- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
+- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
+- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Reference/Elements/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
+- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
 
 ### CSS
 

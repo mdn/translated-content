@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<math>`** は最上位の [MathML](/ja/docs/Web/MathML) 要素で、一つの数式を記述するのに使われます。これは[フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ)が許可されている HTML コンテンツに置くことができます。
+**`<math>`** は最上位の [MathML](/ja/docs/Web/MathML) 要素で、一つの数式を記述するのに使われます。これは[フローコンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ)が許可されている HTML コンテンツに置くことができます。
 
 > [!NOTE]
 > MathML の数式をウェブページに適切に統合するためのヒントについては [MathML の記述ページ](/ja/docs/Web/MathML/Guides/Authoring#using_mathml)を、その他のデモについては [例](/ja/docs/Web/MathML/Guides)ページを参照してください。
@@ -18,11 +18,9 @@ l10n:
 この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他に以下の属性があります。
 
 - `display`
-
   - : この[列挙](/ja/docs/Glossary/Enumerated)属性は、囲まれた MathML マークアップをレンダリングする方法を指定します。これは、次のいずれかの値を取ることができます。
-
-    - `block` は、この要素が現在のテキストのスパンの外にある独自のブロックに表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `normal` に設定されていることを意味します。
-    - `inline` は、この要素が現在のテキストのスパンの中に表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `compact` に設定されていることを意味します。
+    - `block` は、この要素が現在のテキストのスパンの外にある独自のブロックに表示され、 [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) が `normal` に設定されていることを意味します。
+    - `inline` は、この要素が現在のテキストのスパンの中に表示され、 [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) が `compact` に設定されていることを意味します。
 
     存在しない場合、既定値は `inline` です。
 

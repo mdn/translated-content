@@ -3,16 +3,14 @@ title: 掌握外边距折叠
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
-{{CSSRef}}
-
-区块的[上](/zh-CN/docs/Web/CSS/margin-top)[下](/zh-CN/docs/Web/CSS/margin-bottom)外边距有时会合并（折叠）为单个边距，其大小为两个边距中的最大值（或如果它们相等，则仅为其中一个），这种行为称为**外边距折叠**。注意：有设定[浮动](/zh-CN/docs/Web/CSS/float)和[绝对定位](/zh-CN/docs/Web/CSS/position#定位类型)的元素不会发生外边距折叠。
+区块的[上](/zh-CN/docs/Web/CSS/Reference/Properties/margin-top)[下](/zh-CN/docs/Web/CSS/Reference/Properties/margin-bottom)外边距有时会合并（折叠）为单个边距，其大小为两个边距中的最大值（或如果它们相等，则仅为其中一个），这种行为称为**外边距折叠**。注意：有设定[浮动](/zh-CN/docs/Web/CSS/Reference/Properties/float)和[绝对定位](/zh-CN/docs/Web/CSS/Reference/Properties/position#定位类型)的元素不会发生外边距折叠。
 
 有三种情况会形成外边距折叠：
 
 - 相邻的兄弟元素
-  - : 相邻的同级元素之间的外边距会被折叠（除非后面的元素需要[清除](/zh-CN/docs/Web/CSS/clear)之前的浮动）。
+  - : 相邻的同级元素之间的外边距会被折叠（除非后面的元素需要[清除](/zh-CN/docs/Web/CSS/Reference/Properties/clear)之前的浮动）。
 - 没有内容将父元素和后代元素分开
-  - : 如果没有设定边框（border）、内边距（padding）、行级（inline）内容，也没有创建[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)或[_间隙_](/zh-CN/docs/Web/CSS/clear)来分隔块级元素的上边距（{{cssxref("margin-top")}}）与其内一个或多个子代块级元素的上边距（{{cssxref("margin-top")}}）；或者没有设定边框、内边距、行级内容、高度（{{cssxref("height")}}）或最小高度（{{cssxref("min-height")}}）来分隔块级元素的下边距（{{cssxref("margin-bottom")}}）与其内部的一个或多个后代后代块元素的下边距（{{cssxref("margin-bottom")}}），则会出现这些外边距的折叠，重叠部分最终会溢出到父代元素的外面。
+  - : 如果没有设定边框（border）、内边距（padding）、行级（inline）内容，也没有创建[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)或[_间隙_](/zh-CN/docs/Web/CSS/Reference/Properties/clear)来分隔块级元素的上边距（{{cssxref("margin-top")}}）与其内一个或多个子代块级元素的上边距（{{cssxref("margin-top")}}）；或者没有设定边框、内边距、行级内容、高度（{{cssxref("height")}}）或最小高度（{{cssxref("min-height")}}）来分隔块级元素的下边距（{{cssxref("margin-bottom")}}）与其内部的一个或多个后代后代块元素的下边距（{{cssxref("margin-bottom")}}），则会出现这些外边距的折叠，重叠部分最终会溢出到父代元素的外面。
 - 空的区块
   - : 如果块级元素没有设定边框、内边距、行级内容、高度（{{cssxref("height")}}）、最小高度（{{cssxref("min-height")}}）来分隔块级元素的上边距（{{cssxref("margin-top")}}）及其下边距（{{cssxref("margin-bottom")}}），则会出现其上下外边距的折叠。
 
@@ -67,7 +65,7 @@ p {
 
 - CSS 关键概念：
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -79,6 +77,6 @@ p {
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "可替换元素")}}

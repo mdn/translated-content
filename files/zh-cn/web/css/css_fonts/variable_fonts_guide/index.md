@@ -3,8 +3,6 @@ title: Variable fonts guide
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ---
 
-{{CSSRef}}
-
 **可变字体（Variable fonts）**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。你只需通过 CSS 与一行{{cssxref("@font-face")}}引用，即可获取包含在这个单一文件中的各种字体变体。本文将介绍如何在 Web 中使用可变字体。
 
 > [!WARNING]
@@ -184,7 +182,7 @@ font-variation-settings: "GRAD" 88;
 
 ## 使用旧版本浏览器
 
-可以使用 CSS 特性查询检查是否支持可变字体（请参阅 [{{cssxref("@supports")}}](/zh-CN/docs/Web/CSS/@supports)），因此在生产中，可以在特性查询块内使用可变字体。
+可以使用 CSS 特性查询检查是否支持可变字体（请参阅 [{{cssxref("@supports")}}](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports)），因此在生产中，可以在特性查询块内使用可变字体。
 
 ```css
 h1 {

@@ -1,12 +1,9 @@
 ---
 title: 414 URI Too Long
 slug: Web/HTTP/Reference/Status/414
-original_slug: Web/HTTP/Status/414
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、クライアントがリクエストした URI が、サーバーが解釈しようとするものよりも長いことを示します。
 
@@ -28,7 +25,7 @@ HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](
 
 ### GET を使用してフォームを送信
 
-次の例では、HTML の [`<form>` の method](/ja/docs/Web/HTML/Element/form#method) が誤って `post` ではなく `get` を使用しています。
+次の例では、HTML の [`<form>` の method](/ja/docs/Web/HTML/Reference/Elements/form#method) が誤って `post` ではなく `get` を使用しています。
 大量のフォームデータがフォームの `action` 属性で指定された URL に追加され、 GET リクエストとして送信されます。
 
 ```http

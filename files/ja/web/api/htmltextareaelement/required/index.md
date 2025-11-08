@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`required`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、フォームを送信する前にユーザーが値を入力しなければならないことを指定します。これは、{{htmlelement("textarea")}} 要素の [`required`](/ja/docs/Web/HTML/Element/textarea#required) 属性を反映します。
+**`required`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、フォームを送信する前にユーザーが値を入力しなければならないことを指定します。これは、{{htmlelement("textarea")}} 要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/textarea#required) 属性を反映します。
 
 ## 値
 

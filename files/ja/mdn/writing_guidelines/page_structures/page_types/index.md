@@ -130,7 +130,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [`<video>` 要素](/ja/docs/Web/HTML/Element/video)
+- [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
 
 #### テンプレート
 
@@ -174,9 +174,9 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [`background-color` プロパティ](/ja/docs/Web/CSS/background-color)
-- [`:hover` 擬似クラス](/ja/docs/Web/CSS/:hover)
-- [`@media` アットルール](/ja/docs/Web/CSS/@media)
+- [`background-color` プロパティ](/ja/docs/Web/CSS/Reference/Properties/background-color)
+- [`:hover` 擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/:hover)
+- [`@media` アットルール](/ja/docs/Web/CSS/Reference/At-rules/@media)
 
 #### テンプレート
 

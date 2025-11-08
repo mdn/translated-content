@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块配合使用。如果你想学习弹性盒子，我们将一起找出需要注意的规范以及弹性盒子与其他的模块不同的原因。
 
 > [!NOTE]
@@ -65,7 +63,7 @@ l10n:
 
 {{EmbedLiveSample("writing-modes")}}
 
-请注意目前只有 Firefox 支持 `sideways-rl` 和 `sideways-lr`。关于 `writing-mode` 和弹性盒子还有一些已知的问题。你可以在 [MDN 有关 writing-mode 的文档](/zh-CN/docs/Web/CSS/writing-mode)中查看有关浏览器支持的更多信息。然而，如果你打算在你的布局中使用书写模式，我们建议仔细测试结果——尤其是因为它很容易使内容变得难以阅读！
+请注意目前只有 Firefox 支持 `sideways-rl` 和 `sideways-lr`。关于 `writing-mode` 和弹性盒子还有一些已知的问题。你可以在 [MDN 有关 writing-mode 的文档](/zh-CN/docs/Web/CSS/Reference/Properties/writing-mode)中查看有关浏览器支持的更多信息。然而，如果你打算在你的布局中使用书写模式，我们建议仔细测试结果——尤其是因为它很容易使内容变得难以阅读！
 
 注意，你通常不会使用 CSS 和 `writing-mode` 属性来将整个文档更改为另一种书写模式。这应该通过 HTML 完成，通过为 `html` 元素添加 `dir` 和 `lang` 属性来指示文档语言和默认文本方向。这意味着即使 CSS 没有加载，文档也会正确显示。
 
@@ -202,7 +200,7 @@ l10n:
 请注意，这只会从布局中删除该盒子；子元素并不会以任何其他方式成为直接子元素。你可以看到，我们使用了直接子元素选择器来为弹性元素添加背景和边框，因此这些样式并没有应用到嵌套的子元素上。它们已经被布局为弹性元素，但由于它们不是直接子元素，所以它们不会获得其他样式。
 
 > [!WARNING]
-> 大多数浏览器的当前实现会从无障碍树中移除任何具有 `display: contents` 的元素（但会保留其后代）。这将导致屏幕阅读技术不再宣告该元素。根据规范，这是不正确的行为，参见 [`display: contents`](/zh-CN/docs/Web/CSS/display#display_contents)。
+> 大多数浏览器的当前实现会从无障碍树中移除任何具有 `display: contents` 的元素（但会保留其后代）。这将导致屏幕阅读技术不再宣告该元素。根据规范，这是不正确的行为，参见 [`display: contents`](/zh-CN/docs/Web/CSS/Reference/Properties/display#display_contents)。
 
 此外，删除了盒子后，你就无法使用它来——例如——为嵌套的子元素添加背景色。如果你在该实时示例中删除 `display: contents`，你会看到我们要删除属性的元素的直接子元素的背景色为橙色。当盒子消失时，这个背景色也会消失。
 

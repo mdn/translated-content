@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 6d2bbd133371731c0896cb62803db8251c81b864
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 109 の変更点をまとめています。Firefox 109 は、米国時間 2023 年 1 月 17 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- {{HTMLElement("input/range", "range")}} 要素で、[`list`](/ja/docs/Web/HTML/Element/input/range#list) 属性をサポートしました。これは、Firefox が範囲の途中に目盛りをつけられるようにするため、id によって {{HTMLElement("datalist")}} に関連づけるものです。
+- {{HTMLElement("input/range", "range")}} 要素で、[`list`](/ja/docs/Web/HTML/Reference/Elements/input/range#list) 属性をサポートしました。これは、Firefox が範囲の途中に目盛りをつけられるようにするため、id によって {{HTMLElement("datalist")}} に関連づけるものです。
 
 ### CSS
 

@@ -21,27 +21,25 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
   - : {{domxref("HTMLFormElement")}} で、このボタンが関連付けられているフォームを反映します。ボタンがフォームの子孫要素である場合は、この属性は関連付けられた `HTMLFormElement` への参照になります。
     ボタンがフォーム要素の子孫でない場合は、属性は同じ文書内にある任意の `HTMLFormElement` への参照になる可能性があり、また一致するものがなければ `null` 値になります。
 - {{domxref("HTMLButtonElement.formAction")}}
-  - : 文字列で、ボタンによって送信された情報を処理するリソースの URI を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Element/form#action) 属性を上書きします。
+  - : 文字列で、ボタンによって送信された情報を処理するリソースの URI を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formEnctype")}}
-  - : 文字列で、サーバーにフォームを送信するために使用されるコンテンツの型を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
+  - : 文字列で、サーバーにフォームを送信するために使用されるコンテンツの型を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formMethod")}}
-  - : 文字列で、ブラウザーがフォームを送信するために使用する HTTP メソッドを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`method`](/ja/docs/Web/HTML/Element/form#method) 属性を上書きします。
+  - : 文字列で、ブラウザーがフォームを送信するために使用する HTTP メソッドを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formNoValidate")}}
-  - : 論理値で、フォームの送信時に値の検証が行われないことを示します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性を上書きします。
+  - : 論理値で、フォームの送信時に値の検証が行われないことを示します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formTarget")}}
-  - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`target`](/ja/docs/Web/HTML/Element/form#target) 属性を上書きします。
+  - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性を上書きします。
 - {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、このボタンのラベルとなる {{HTMLElement("label")}} 要素を表します。
 - {{domxref("HTMLButtonElement.name")}}
   - : 文字列で、フォームを送信したときのオブジェクトの名前を表します。指定された場合は、空文字列にすることはできません。
 - {{domxref("HTMLButtonElement.popoverTargetAction")}}
-  - : 制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を取得および設定します。これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性の値を反映します。
+  - : 制御ボタンで制御されるポップオーバー要素で実行されるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を取得および設定します。これは HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性の値を反映します。
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
-  - : ボタンで制御するポップオーバー要素を取得および設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性と同等のものです。
+  - : ボタンで制御するポップオーバー要素を取得および設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性と同等のものです。
 - {{domxref("HTMLButtonElement.type")}}
-
   - : 文字列で、このボタンの動作を示します。これは列挙型属性で、以下の値を取ることができます。
-
     - `submit`: フォームを送信するボタンです。これは属性が指定されていなかった場合の既定値です。または空の値や無効な値に変更された場合の既定値です。
     - `reset`: フォームをリセットするボタンです。
     - `button`: 何もしないボタンです。

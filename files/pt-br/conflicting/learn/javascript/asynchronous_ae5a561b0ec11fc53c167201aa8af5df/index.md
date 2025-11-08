@@ -49,7 +49,8 @@ Como foi dito anteriormente, o [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTi
 - Um número representando o intervalo de tempo em milissegundos (1000 milissegundos equivalem a 1 segundo) para esperar antes de executar o código. Se você especificar um valor de 0 (ou simplesmente omitir o valor), a função será executada assim que possível (mas não imediatamente).
 - Zero ou mais valores que representam quaisquer parâmetros que você quiser passar para a função quando ela for executada.
 
-> **Nota:** **NOTA:** O tempos especificafo **não** é o tempo garantido de execução, mas sim o tempo míniimo de execução. As callback que você passa para essas funções não podem ser executadas até que a main thread esteja vazia.
+> [!NOTE]
+> O tempos especificafo **não** é o tempo garantido de execução, mas sim o tempo míniimo de execução. As callback que você passa para essas funções não podem ser executadas até que a main thread esteja vazia.
 >
 > Como consequência, códigos como `setTimeout(fn, 0)`\_ \_serão executados assim que a fila estiver vazia, **não** imediatamente. Se você executar código como `setTimeout(fn, 0)` e depois imediatamente executar um loop que conta de 1 a 10 bilhões, sua callback será executada depois de alguns segundos.
 
@@ -242,7 +243,7 @@ Ela foi criada em resposta à problemas ocorridos com `setInterval()`, que por e
 ([Leia mais sobre isso em CreativeJS](http://creativejs.com/resources/requestanimationframe/index.html).)
 
 > [!NOTE]
-> Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice).
+> Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice).
 
 O método toma como argumentos uma callback a ser invocada antes da renovação. Esse é o padrão geral que você verá usado em:
 
@@ -624,8 +625,8 @@ So that's it — all the essentials of async loops and intervals covered in one 
 ## In this module
 
 - [General asynchronous programming concepts](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introducing asynchronous JavaScript](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Introducing asynchronous JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Introducing)
 - [Cooperative asynchronous JavaScript: Timeouts and intervals](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - [Making asynchronous programming easier with async and await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
-- [Choosing the right approach](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+- [Choosing the right approach](/pt-BR/docs/Learn_web_development/Extensions/Async_JS)

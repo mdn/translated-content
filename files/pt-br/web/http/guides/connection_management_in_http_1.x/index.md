@@ -20,7 +20,7 @@ Dois novos modelos foram criados no HTTP/1.1.
 > [!NOTE]
 > HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
 
-Um ponto importante para observar, que gerenciamento de conexão HTTP, aplica-se para a conexão entre dois nós consecutivos, que é o [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh) e não [end-to-end](/pt-BR/docs/Web/HTTP/Headers#e2e) . O modelo usado em conexões entre um cliente e seu primeiro proxy pode diferir do modelo entre um proxy e o servidor de destino (ou qualquer proxies intermédios). Os cabeçalhos HTTP envolvidos na definição do modelo de conexão, como {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}}, são [hop-by-hop](/pt-BR/docs/Web/HTTP/Headers#hbh), cabeçalhos com seus valores poderão ser alterados por nós intermediários.
+Um ponto importante para observar, que gerenciamento de conexão HTTP, aplica-se para a conexão entre dois nós consecutivos, que é o [hop-by-hop](/pt-BR/docs/Web/HTTP/Reference/Headers#hbh) e não [end-to-end](/pt-BR/docs/Web/HTTP/Reference/Headers#e2e) . O modelo usado em conexões entre um cliente e seu primeiro proxy pode diferir do modelo entre um proxy e o servidor de destino (ou qualquer proxies intermédios). Os cabeçalhos HTTP envolvidos na definição do modelo de conexão, como {{HTTPHeader("Connection")}} e {{HTTPHeader("Keep-Alive")}}, são [hop-by-hop](/pt-BR/docs/Web/HTTP/Reference/Headers#hbh), cabeçalhos com seus valores poderão ser alterados por nós intermediários.
 
 ## Short-lived connections (Conexões de curta duração)
 

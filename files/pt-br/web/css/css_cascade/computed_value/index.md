@@ -15,9 +15,9 @@ The computation needed to reach the **computed value** for the property typicall
 
 For example, if an element has specified values `font-size: 16px` and `padding-top: 2em`, then the computed value of `padding-top` is `32px` (double the font size).
 
-However, for some properties (those where percentages are relative to something that may require layout to determine, such as `width`, `margin-right`, `text-indent`, and `top`), percentage specified values turn into percentage computed values. Additionally, unitless numbers specified on the `line-height` property become the computed value, as specified. These relative values that remain in the computed value become absolute when the [used value](/pt-BR/docs/Web/CSS/used_value) is determined.
+However, for some properties (those where percentages are relative to something that may require layout to determine, such as `width`, `margin-right`, `text-indent`, and `top`), percentage specified values turn into percentage computed values. Additionally, unitless numbers specified on the `line-height` property become the computed value, as specified. These relative values that remain in the computed value become absolute when the [used value](/pt-BR/docs/Web/CSS/CSS_cascade/used_value) is determined.
 
-The main use of the _computed value_ (other than as a step between the [specified value](/pt-BR/docs/Web/CSS/specified_value) and [used value](/pt-BR/docs/Web/CSS/used_value)) is [inheritance](/pt-BR/docs/Web/CSS/Inheritance), including the {{cssxref("inherit")}} keyword.
+The main use of the _computed value_ (other than as a step between the [specified value](/pt-BR/docs/Web/CSS/CSS_cascade/specified_value) and [used value](/pt-BR/docs/Web/CSS/CSS_cascade/used_value)) is [inheritance](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance), including the {{cssxref("inherit")}} keyword.
 
 ## Notas
 

@@ -2,12 +2,10 @@
 title: Web 遊戲開發介紹
 slug: Games/Introduction
 l10n:
-  sourceCommit: e72890bafe775a38620def9a74beda8cf9c47411
+  sourceCommit: d9e11f88996e97a259d2ec47f47a660062c12c4f
 ---
 
-{{GamesSidebar}}
-
-現代 Web 已迅速成為不僅能創造令人驚嘆的高品質遊戲，也是發佈這些遊戲的重要媒介。
+現代 Web 已迅速成為不僅能創造令人驚嘆的高品質遊戲，也是發佈這些遊戲的重要媒介。本文將介紹以 Web 作為遊戲平台的優勢，以及實作這一切的相關技術。
 
 透過現代 Web 技術和最新的瀏覽器，創造媲美桌機和原生作業系統的遊戲已成為可能。這不僅僅是簡單的卡片遊戲或社交多玩家遊戲，而是 3D 動作射擊遊戲、角色扮演遊戲（RPG）等更多類型。隨著 [JavaScript](/zh-TW/docs/Web/JavaScript) 即時編譯技術和新 API 的性能大幅提升，你可以在瀏覽器或 [HTML5](/zh-TW/docs/Glossary/HTML5) 支援的設備上打造無需妥協的遊戲體驗。
 
@@ -90,7 +88,7 @@ l10n:
   - : 如果你希望玩家能使用遊戲把手或其他遊戲設備進行遊戲，這是必要的 API。
 - [HTML](/zh-TW/docs/Web/HTML) 和 [CSS](/zh-TW/docs/Web/CSS)
   - : 這兩項技術可以幫助你構建、設計和佈局遊戲的用戶界面。其中 HTML 的 {{HTMLElement("canvas")}} 元素是進行 2D 圖形處理的一種方法。
-- [HTML audio](/zh-TW/docs/Web/HTML/Element/audio)
+- [HTML audio](/zh-TW/docs/Web/HTML/Reference/Elements/audio)
   - : {{HTMLElement("audio")}} 元素可讓你輕鬆播放簡單的音效和音樂。如果有更高的需求，請參考 [Web 音頻 API](/zh-TW/docs/Web/API/Web_Audio_API) 以獲取更強大的音頻處理能力！
 - [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)
   - : 一個強大的數據存儲 API，可以在用戶的設備上存儲遊戲數據（例如遊戲狀態等）從而避免每次都需要下載資料。這也能幫助你的遊戲在用戶無法連接網路時（例如長時間飛行時）仍能正常運行。

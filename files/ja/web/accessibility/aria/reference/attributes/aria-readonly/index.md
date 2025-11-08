@@ -24,7 +24,8 @@ l10n:
 > [!NOTE]
 > セマンティック HTML フォームコントロールを使用する場合、`readonly` 属性を設定すると、`aria-readonly="true"` を含める必要はありません。
 
-> **メモ:** `<input type="checkbox">` の値は編集できないため、`readonly` は関係ありません。ただし、`role="checkbox"` でチェックボックスを作成する場合は、`aria-readonly` 属性がサポートされます。
+> [!NOTE]
+> `<input type="checkbox">` の値は編集できないため、`readonly` は関係ありません。ただし、`role="checkbox"` でチェックボックスを作成する場合は、`aria-readonly` 属性がサポートされます。
 
 ## 価
 
@@ -68,5 +69,5 @@ l10n:
 
 ## 関連情報
 
-- [HTML `readonly` 属性](/ja/docs/Web/HTML/Attributes/readonly)
+- [HTML `readonly` 属性](/ja/docs/Web/HTML/Reference/Attributes/readonly)
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)

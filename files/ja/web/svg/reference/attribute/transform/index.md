@@ -1,23 +1,57 @@
 ---
 title: transform
 slug: Web/SVG/Reference/Attribute/transform
-original_slug: Web/SVG/Attribute/transform
 l10n:
-  sourceCommit: 193ee88d26a8ab4dea8f8b70464167edccee92e1
+  sourceCommit: 9c7b277a013b50804cdafdfab79e38018264e434
 ---
-
-{{SVGRef}}
 
 **`transform`** 属性は、要素とその要素の子に適用される座標変換定義のリストを定義します。
 
 > [!NOTE]
-> SVG2 では、 `transform` はプレゼンテーション属性であり、 CSS プロパティとして使用することができます。ただし、 CSS プロパティとこの属性との間には構文の違いがあるので注意が必要です。その場合に使用する具体的な構文については、 CSS プロパティの {{cssxref('transform')}} のドキュメントを参照してください。
+> プレゼンテーション属性であるため、 `transform` には対応する CSS プロパティ {{cssxref("transform")}} があります。両方が指定された場合、 CSS プロパティが優先されます。ただし、 CSS プロパティとこの属性との間には構文の違いがあるので注意が必要です。
 
-この属性はすべての SVG 要素で使用できます。
+## 要素
+
+SVG 2 では、 `transform` 属性は {{SVGElement('svg')}} ルート要素を含む任意の要素に使用できます。
+なお、`<svg>` ルート要素への `transform` 適用は新しい機能であるため、対応状況は[ブラウザーの互換性](#ブラウザーの互換性)を確認する必要があります。
+`<svg>` ルートへの `transform` 適用は、追加のラッパー要素や CSS による回避策を必要とせず、SVG 画像全体に変換を適用するのに便利です。
+
+SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, {{SVGElement('use')}} の 16 要素でのみ使用することができました。
+
+また、 SVG 1.1 の名残として、 {{SVGElement('linearGradient')}} と {{SVGElement('radialGradient')}} は `gradientTransform` 属性に対応しており、 {{SVGElement('pattern')}} は `patternTransform` 属性に対応しており、どちらも `transform` 属性と全く同じように動作します。
+
+## 値
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>
+        <strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#transform-list"
+            ><code>&#x3C;transform-list></code></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">デフォルト値</th>
+      <td><em>なし</em></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 例
 
-```css hidden
+### 座標変換を単一の SVG 要素に適用
+
+この例では、SVG 文書内の単一の {{svgelement("g")}} 要素に `transform` を適用します。
+
+```css hidden live-sample___transform-single-element live-sample___transform-svg-document
 html,
 body,
 svg {
@@ -25,7 +59,7 @@ svg {
 }
 ```
 
-```html
+```html live-sample___transform-single-element
 <svg
   viewBox="-40 0 150 100"
   xmlns="http://www.w3.org/2000/svg"
@@ -45,34 +79,32 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("transform-single-element", '100%', 200)}}
 
-SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, {{SVGElement('use')}} の 16 要素でのみ使用することができました。
+### 座標変換を SVG 文書全体に適用
 
-また、 SVG 1.1 からの遺物として、 {{SVGElement('linearGradient')}} と {{SVGElement('radialGradient')}} は `gradientTransform` 属性に対応しており、 {{SVGElement('pattern')}} は `patternTransform` 属性に対応しており、どちらも `transform` 属性と全く同じように動作します。
+この例では、`transform` を {{svgelement("svg")}} ルート要素に適用します。これは、変換が SVG 文書全体に適用されるということです。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#transform-list"
-            ><code>&#x3C;transform-list></code></a
-          ></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
+```html live-sample___transform-svg-document
+<svg
+  viewBox="-40 0 150 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  transform="rotate(-10 50 100)
+               translate(-36 15.5)
+               skewX(40)
+               scale(1 0.5)">
+  <g fill="grey">
+    <path
+      id="heart"
+      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+  </g>
+
+  <use href="#heart" fill="none" stroke="red" />
+</svg>
+```
+
+{{EmbedLiveSample("transform-svg-document", '100%', 200)}}
 
 ## 座標変換関数
 
@@ -85,9 +117,19 @@ SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('c
 
 `matrix(<a> <b> <c> <d> <e> <f>)` 変換関数は、6 つの値の変換行列の形式で変形を指定します。 `matrix(a,b,c,d,e,f)` は次の変換行列を適用することと等価です。
 
+<!-- prettier-ignore-start -->
 <math display="block">
-  <semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math> これは、前の座標系から新しい座標系への座標の写像を次の行列の等式によって行うものです。<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x_{\mathrm{newCoordSys}} \\ y_{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x_{\mathrm{prevCoordSys}} \\ y_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x_{\mathrm{prevCoordSys}} + c y_{\mathrm{prevCoordSys}} + e \\ b x_{\mathrm{prevCoordSys}} + d y_{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics>
+  <semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{pmatrix}</annotation></semantics>
 </math>
+<!-- prettier-ignore-end -->
+
+これは、前の座標系から新しい座標系への座標の写像を次の行列の等式によって行うものです。
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x_{\mathrm{newCoordSys}} \\ y_{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x_{\mathrm{prevCoordSys}} \\ y_{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x_{\mathrm{prevCoordSys}} + c y_{\mathrm{prevCoordSys}} + e \\ b x_{\mathrm{prevCoordSys}} + d y_{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 #### 例
 
@@ -146,8 +188,8 @@ svg {
 言い換えれば、次の通りです。
 
 ```plain
-xnew = xold + <x>
-ynew = yold + <y>
+xNew = xOld + <x>
+yNew = yOld + <y>
 ```
 
 #### 例
@@ -264,7 +306,7 @@ svg {
 
 ### skewX
 
-`skewX(<a>)` 変換関数は、 X 軸を基準に `a` 度の傾斜変換を指定します。
+`skewX(<a>)` 変換関数は、 X 軸を基準に `a` 度の傾斜座標変換を指定します。
 
 #### 例
 
@@ -288,7 +330,7 @@ svg {
 
 ### skewY
 
-`skewY(<a>)` 変換関数は、 Y 軸を基準に `a` 度の傾斜変換を指定します。
+`skewY(<a>)` 変換関数は、 Y 軸を基準に `a` 度の傾斜座標変換を指定します。
 
 #### 例
 
@@ -313,3 +355,11 @@ svg {
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("transform")}} プロパティ

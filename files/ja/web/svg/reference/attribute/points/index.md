@@ -1,12 +1,9 @@
 ---
 title: points
 slug: Web/SVG/Reference/Attribute/points
-original_slug: Web/SVG/Attribute/points
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`points`** 属性は、点のリストを定義します。各点は、ユーザー座標系における X 座標と Y 座標を表す数値の組で定義されます。属性に奇数の座標が含まれている場合、最後の座標は無視されます。
 
@@ -62,7 +59,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -103,7 +100,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

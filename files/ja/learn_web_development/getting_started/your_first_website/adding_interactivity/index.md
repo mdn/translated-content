@@ -337,7 +337,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **メモ:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
+> [!NOTE]
+> [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
 
 ### イベント
 
@@ -393,7 +394,6 @@ document.querySelector("html").addEventListener("click", () => {
 
 1. 画像の `src` 属性の値を取得します。
 2. 条件文を使って、`src` の値が元の画像のパスと等しいかどうかをチェックします。
-
    1. そうであれば、`src` の値を 2 番目の画像へのパスに変更し、もう一方の画像が強制的に {{htmlelement("img")}} 要素の中に読み込まれるようにします。
    2. そうでない（すでに変更されている）場合、`src` の値を元の画像のパスに戻して、元の状態に戻ります。
 

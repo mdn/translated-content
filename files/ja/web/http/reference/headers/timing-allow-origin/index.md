@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 original_slug: Web/HTTP/Headers/Timing-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 **`Timing-Allow-Origin`** レスポンスヘッダーは、 [Resource Timing API](/ja/docs/Web/API/Performance_API/Resource_timing) の機能を介して取得された属性の値の表示を許可されているオリジンを指定します。そうでない場合、クロスオリジンの制限によりゼロとして報告されます。
 
 <table class="properties">
@@ -18,7 +16,7 @@ original_slug: Web/HTTP/Headers/Timing-Allow-Origin
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

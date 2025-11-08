@@ -52,7 +52,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
   - : 本文从一个模块开始，很好地讲述了性能到底是什么——包括我们在考虑性能时需要考虑的工具、指标、API、网络和人群，以及如何使性能成为 Web 开发工作流程的一部分。
 - [用户如何感知性能？](/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
   - : 比网站在毫秒内的响应速度更重要的是，用户对网站的感知速度有多快。这些感知受到页面实际加载时间、空闲、用户交互响应以及滚动和其他动画的平滑度的影响。在本文中，我们将随着最佳实践来提升用户感知（而不是实际时间）并讨论各种加载指标、动画和响应性指标。
-- [Web 性能基础](/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
+- [Web 性能基础](/zh-CN/docs/Learn_web_development/Extensions/Performance/Best_practices)
   - : 除了 HTML、CSS、JavaScript 和媒体文件这些前端组件之外，还有其他导致应用程序变慢，或在主观和客观上使应用程序变快的因素。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不当做法。我们将在基础层面上介绍这些影响因素，并提供进阶优化其中每一项性能的链接。
 - [HTML 性能特性](/zh-CN/docs/Learn_web_development/Extensions/Performance/HTML)
   - : 标记的某些属性和顺序可能会影响网站性能。通过最大程度地减少 DOM 节点的数量，确保使用最佳顺序和属性（包括样式、脚本、媒体和第三方脚本等内容），可以大大改善用户体验。该文详细介绍了如何使用 HTML 来确保最佳性能。
@@ -118,15 +118,15 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 
 ### HTML
 
-- [`<picture>`](/zh-CN/docs/Web/HTML/Element/picture) 元素
-- [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素
-- [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素
-- 响应式图像的 [`<img> srcset`](/zh-CN/docs/Web/HTML/Element/img#属性) 属性
-- 用于通过 HTML 预加载内容的 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 属性
+- [`<picture>`](/zh-CN/docs/Web/HTML/Reference/Elements/picture) 元素
+- [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 元素
+- [`<source>`](/zh-CN/docs/Web/HTML/Reference/Elements/source) 元素
+- 响应式图像的 [`<img> srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#属性) 属性
+- 用于通过 HTML 预加载内容的 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 属性
 
 ### CSS
 
-- [will-change](/zh-CN/docs/Web/CSS/will-change)
+- [will-change](/zh-CN/docs/Web/CSS/Reference/Properties/will-change)
 
 ### JavaScript
 
@@ -137,13 +137,13 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 ### HTTP
 
 - [Content-encoding](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Encoding)
-- 通过 [dns-prefetch](/zh-CN/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)、[preconnect](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)、[prefetch](/zh-CN/docs/Glossary/Prefetch) 和 prerender 进行资源提示
+- 通过 [dns-prefetch](/zh-CN/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)、[preconnect](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)、[prefetch](/zh-CN/docs/Glossary/Prefetch) 和 prerender 进行资源提示
 - [HTTP/2](/zh-CN/docs/Web/HTTP/Guides/Messages#http2_messages)
 - [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)
 
 ## 参见
 
-- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images) HTML 指南
+- [响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images) HTML 指南
 - [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)，包括[使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 和[使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [离线与后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
 - [缓存](/zh-CN/docs/Web/HTTP/Guides/Caching)

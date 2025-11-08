@@ -31,8 +31,8 @@ URL 経由で他の場所に機密データを渡すことを避けるために�
 
 - サーバー上の {{httpheader("Referrer-Policy")}} ヘッダーで、 {{httpheader("Referer")}} ヘッダーを通してどのような情報を送るかを制御します。繰り返しになりますが、`no-referrer` ディレクティブは Referer ヘッダーを完全に省略します
 - そのような情報が漏れる危険性のある HTML 要素 ({{HTMLElement("img")}} や {{HTMLElement("a")}} など) 上の `referrerpolicy` 属性。これは、例えば、`Referer` ヘッダーが完全に送信されないようにするために、`no-referrer` に設定することができます
-- そのような情報が漏れる危険性のある HTML 属性（{{HTMLElement("form")}} や {{HTMLElement("a")}} など）の [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を [`noreferrer`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) に設定する。
-- {{HTMLElement("meta")}} 要素の [name](/ja/docs/Web/HTML/Element/meta#name) が `referrer` で、コンテンツが `no-referrer` に設定されている場合、文書全体で Referer ヘッダーが無効になります。 [Referrer-Policy と HTML の統合](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy#html_との統合)を参照してください。
+- そのような情報が漏れる危険性のある HTML 属性（{{HTMLElement("form")}} や {{HTMLElement("a")}} など）の [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を [`noreferrer`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) に設定する。
+- {{HTMLElement("meta")}} 要素の [name](/ja/docs/Web/HTML/Reference/Elements/meta#name) が `referrer` で、コンテンツが `no-referrer` に設定されている場合、文書全体で Referer ヘッダーが無効になります。 [Referrer-Policy と HTML の統合](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy#html_との統合)を参照してください。
 - 技術的な[終了ページ](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect)
 
 セキュリティを意識したサーバーサイドのフレームワークは、例えば、このような問題を緩和するための機能が組み込まれていることが多いです。

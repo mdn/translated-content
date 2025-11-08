@@ -28,7 +28,7 @@ ARIA は、アプリケーションで一般的に使用されている対話操
   aria-valuemax="100"></div>
 ```
 
-このプログレスバーは、意味を持たない {{HTMLElement("div")}} を使って作られています。 ARIA ロールとプロパティで意味を追加します。この例では、 [`role="progressbar"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) 属性により、この要素が実際には JavaScript を使用したプログレスバーウィジェットであることをブラウザーに伝えています。 [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) および [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性はプログレスバーの最小値と最大値を指定し、 [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) は現在の状態を表すため、 JavaScript から更新し続けます。
+このプログレスバーは、意味を持たない {{HTMLElement("div")}} を使って作られています。 ARIA ロールとプロパティで意味を追加します。この例では、 [`role="progressbar"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) 属性により、この要素が実際には JavaScript を使用したプログレスバーウィジェットであることをブラウザーに伝えています。 [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) および [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性はプログレスバーの最小値と最大値を指定し、 [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) は現在の状態を表すため、 JavaScript から更新し続けます。
 
 マークアップに直接配置するとともに、 ARIA の属性を要素に追加して、次のような JavaScript コードを使用して動的に更新することができます。
 
@@ -57,7 +57,8 @@ function updateProgress(percentComplete) {
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **メモ:** `min` 属性は {{HTMLElement('progress')}} 要素では許可されません。その最小値は常に `0` です。
+> [!NOTE]
+> `min` 属性は {{HTMLElement('progress')}} 要素では許可されません。その最小値は常に `0` です。
 
 > [!NOTE]
 > HTML のランドマーク要素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} など）は、組み込みの暗黙の ARIA ロールを持っているので、それらを重複指定する必要はありません。

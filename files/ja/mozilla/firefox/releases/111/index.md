@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b4f28b8a92b0839dc7cb0af67166385764a8585
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 111 の変更点をまとめています。Firefox 111 は、米国時間 2023 年 3 月 14 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -15,8 +13,8 @@ l10n:
 
 ### HTML
 
-- [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) グローバル属性をデフォルトで有効にしました。属性の既定値は `none` ですので、大文字化を行いません ([Firefox bug 1692007](https://bugzil.la/1692007))。
-- [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) グローバル属性をサポートしました ([Firefox bug 1418449](https://bugzil.la/1418449))。
+- [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性をデフォルトで有効にしました。属性の既定値は `none` ですので、大文字化を行いません ([Firefox bug 1692007](https://bugzil.la/1692007))。
+- [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性をサポートしました ([Firefox bug 1418449](https://bugzil.la/1418449))。
 
 #### 廃止
 

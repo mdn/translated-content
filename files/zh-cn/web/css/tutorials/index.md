@@ -3,8 +3,6 @@ title: CSS 教程
 slug: Web/CSS/Tutorials
 ---
 
-{{CSSRef}}
-
 学习 CSS 可能是一项令人望而生畏的事情。我们编写了很多的 **CSS 教程**来帮助你。有些教程完全面向新手，而其他文章展现了一些 CSS 的复杂特性，适合拥有丰富经验的开发者。
 
 这个页面展现了这些文章，并且带有简短的描述。这些文章按照难度分组，因此你可以选择最适合你的。
@@ -29,7 +27,7 @@ CSS 2（Level 1）标准放出后，CSS 增加了很多新特性。有些特性�
 - [CSS 计数器样式](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : 对元素及页面计数对于 CSS 来讲是一项简单的事情。学习使用{{cssxref("counter-reset")}}、{{cssxref("counter-increment")}}、{{cssxref("counters", "counters()")}} 及 {{cssxref("counter", "counter()")}}。
 - [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-  - : CSS3 动画允许你通过[关键帧](/zh-CN/docs/Web/CSS/@keyframes)定义样式，之后在关键帧之间变换，来形成一个动画。
+  - : CSS3 动画允许你通过[关键帧](/zh-CN/docs/Web/CSS/Reference/At-rules/@keyframes)定义样式，之后在关键帧之间变换，来形成一个动画。
 - [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : CSS3 过渡可以以动画的形式来定义很多样式的过渡，也可以控制过渡的方式
 - [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

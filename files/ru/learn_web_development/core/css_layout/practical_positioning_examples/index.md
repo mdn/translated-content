@@ -17,7 +17,8 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **Примечание:**Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
+> [!NOTE]
+> Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
 
 Возможно, вы думаете: «Почему бы просто не создавать отдельные вкладки в виде отдельных веб-страниц и просто иметь вкладки, переходящие на отдельные страницы, чтобы создать эффект?» Этот код был бы проще, да, но тогда каждый отдельный «просмотр страницы» на самом деле был бы вновь загруженной веб-страницей, что затрудняло бы сохранение информации между представлениями и интеграцию этой функции в более крупный дизайн пользовательского интерфейса. Кроме того, так называемые «одностраничные приложения» становятся очень популярными - особенно для мобильных веб-интерфейсов - потому что все, что обслуживается как один файл, сокращает количество HTTP-запросов, необходимых для просмотра всего содержимого, тем самым повышая производительность.
 
@@ -230,7 +231,6 @@ This code does the following:
 - First we save a reference to all the tabs and all the panels in two variables called `tabs` and `panels`, so we can easily do things to them later on.
 - Then we use a `for` loop to cycle through all the tabs and run a function called `setTabHandler()` on each one, which sets up the functionality that should occur when each one is clicked on. When run, the function is passed a reference to the particular tab it is being run for, and an index number `i` that indentifies the tab's position in the `tabs` array.
 - In the `setTabHandler()` function, the tab has an `onclick` event handler set on it, so that when the tab is clicked, the following occurs:
-
   - A `for` loop is used to cycle through all the tabs and remove any classes that are present on them.
   - A `class` of `active` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
   - A `for` loop is used to cycle through all the panels and remove any classes that are present on them.

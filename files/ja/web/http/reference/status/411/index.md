@@ -1,14 +1,11 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Reference/Status/411
-original_slug: Web/HTTP/Status/411
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`411 Length Required`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、{{HTTPHeader("Content-Length")}} ヘッダーが定義されていないリクエストをサーバーが受け入れないことを示します。
+HTTP の **`411 Length Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、{{HTTPHeader("Content-Length")}} ヘッダーが定義されていないリクエストをサーバーが受け入れないことを示します。
 
 > [!NOTE]
 > チャンクの連続でデータを送信する場合は、`Content-Length` ヘッダーを省略し、各チャンクの先頭に現在のチャンクの長さを 16 進数形式で記載する必要があります。

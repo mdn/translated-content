@@ -67,14 +67,14 @@ Outras dependências, como database drivers, engine para templates, ferramentas 
 
 Para utilizar o Express, você terá que instalar o Nodejs e o [NPM](https://docs.npmjs.com/) em seu sistema operacional. Nas seções a seguir, vamos explicar o jeito mais fácil de instalar a versão LTS do Nodejs no Ubuntu Linux 16.04, macOS e Windows 10.
 
-> **Nota:** **Dica:** As seções abaixo mostram o jeito mais fácil de instalar o NPM nos Sistemas Operacionais. Se você utilizar outro sistema ou quer ver uma abordagem diferente para as plataformas atuais acesse [Instalando Node.js via NPM](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> [!NOTE]
+> **Dica:** As seções abaixo mostram o jeito mais fácil de instalar o NPM nos Sistemas Operacionais. Se você utilizar outro sistema ou quer ver uma abordagem diferente para as plataformas atuais acesse [Instalando Node.js via NPM](https://nodejs.org/en/download/package-manager/) (nodejs.org).
 
 ### Windows e macOS
 
 Instalar o Node e o NPM no Windows ou no macOS é uma tarefa rápida e simples. Siga os seguintes passos:
 
 1. Baixar o instalador:
-
    1. Vá para <https://nodejs.org/en/>
    2. Selecione o botão de download da versão LTS, que é a recomendada para a maioria dos usuários.
 
@@ -89,7 +89,8 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Aviso:** **Atenção:** Não faça a instalação direto do repositório normal do Ubuntu pois ele contém versões antigas do Node.
+> [!WARNING]
+> **Atenção:** Não faça a instalação direto do repositório normal do Ubuntu pois ele contém versões antigas do Node.
 
 ### Testando a instalação do Nodejs e do NPM
 
@@ -383,11 +384,11 @@ No próximo artigo, nós vamos iniciar um tutorial para construir uma aplicaçã
 
 ## Outros módulos
 
-- [Express/Node introduction](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express/Node introduction](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
 - [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
 - [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
 - [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)

@@ -14,7 +14,6 @@ l10n:
 _`GeolocationPositionError` インターフェイスが継承するプロパティはありません。_
 
 - {{domxref("GeolocationPositionError.code")}} {{ReadOnlyInline}} {{securecontext_inline}}
-
   - : `unsigned short` でエラーコードを表します。以下の値になる可能性があります。
 
     | 値  | 関連付けられた定数     | 説明                                                                                                                                                            |

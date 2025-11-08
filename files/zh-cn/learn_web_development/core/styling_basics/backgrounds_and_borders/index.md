@@ -3,7 +3,7 @@ title: 背景与边框
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 在本课程中，我们将看看可以用 CSS 背景和边框做的一些创造性事情。从添加渐变、背景图像到圆角，背景和边框可以解决 CSS 中的许多样式问题。
 
@@ -540,7 +540,7 @@ h2 {
 
 ## 技能测试！
 
-你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders)。
+你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders)。
 
 ## 总结
 

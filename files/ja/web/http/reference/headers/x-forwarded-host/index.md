@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 original_slug: Web/HTTP/Headers/X-Forwarded-Host
 ---
 
-{{HTTPSidebar}}
-
 **X-Forwarded-Host** (XFH) ヘッダーは、 HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントから要求された元のホストを特定するための事実上の標準となっているヘッダーです。
 
 リバースプロキシー (ロードバランサー、 CDN) のホスト名とポート番号は、リクエストを扱う元のサーバーとは異なってもよく、この場合はもともと使用されていたのがどのホストであるかを特定するのに `X-Forwarded-Host` ヘッダーが便利です。
@@ -21,7 +19,7 @@ original_slug: Web/HTTP/Headers/X-Forwarded-Host
    <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
    <td>いいえ</td>
   </tr>
  </tbody>

@@ -1,9 +1,7 @@
 ---
 title: CSS 단위와 값
-slug: Web/CSS/CSS_Values_and_Units
+slug: Web/CSS/CSS_values_and_units
 ---
-
-{{CSSRef}}
 
 모든 CSS 선언은 속성 / 값 쌍을 포함합니다. 속성에 따라 값은 하나의 정수 또는 키워드, 여러 개의 키워드, 단위가 있거나 없는 값의 나열이 될 수 있습니다. CSS 속성에 허용되는 공통적인 자료형(단위와 값)의 집합이 있습니다. 아래는 이들 자료형 대부분에 대한 개요입니다. 더 자세한 정보를 보려면 각 자료형의 페이지를 참고하세요.
 
@@ -259,5 +257,5 @@ CSS는 치수를 사용해 아래와 같은 것들을 표시합니다:
 
 ## 같이 보기
 
-- [CSS의 기본 자료형](/ko/docs/Web/CSS/CSS_Types)
+- [CSS의 기본 자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
 - [CSS 개론: 값과 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

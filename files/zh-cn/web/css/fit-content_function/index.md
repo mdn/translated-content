@@ -3,8 +3,6 @@ title: fit-content()
 slug: Web/CSS/fit-content_function
 ---
 
-{{CSSRef}}
-
 **`fit-content()`** [CSS](/zh-CN/docs/Web/CSS) 函数将给定大小夹紧为可用大小 根据公式 `min(maximum size, max(minimum size, argument))`.
 
 ```css
@@ -18,7 +16,7 @@ fit-content(100ch)
 fit-content(40%)
 ```
 
-The function can be used as a track size in [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) properties, where the maximum size is defined by [`max-content`](/zh-CN/docs/Web/CSS/grid-template-columns#max-content) and the minimum size by [`auto`](/zh-CN/docs/Web/CSS/grid-template-columns#auto), which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/zh-CN/docs/Web/CSS/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+The function can be used as a track size in [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) properties, where the maximum size is defined by [`max-content`](/zh-CN/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) and the minimum size by [`auto`](/zh-CN/docs/Web/CSS/Reference/Properties/grid-template-columns#auto), which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/zh-CN/docs/Web/CSS/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 
 The function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 

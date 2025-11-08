@@ -28,26 +28,21 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 Используя некоторые из этих событий, вы можете модифицировать запрос. Конкретно, вы можете:
 
 - отменить запрос в:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - перенаправить запрос в:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - модифицировать заголовки запроса в:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - модифицировать заголовки ответа в:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - предоставить учётные данные аутентификации в:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 Чтобы сделать это, вам необходимо передать опцию со значением "blocking" в аргументе `extraInfoSpec` к `addListener()`. Это делает обработчик синхронным. В обработчике, вы можете тогда возвратить объект {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} который индикует модификацию, какую вам нужно сделать: например, модифицированный заголовок запроса который вы хотите отправить.

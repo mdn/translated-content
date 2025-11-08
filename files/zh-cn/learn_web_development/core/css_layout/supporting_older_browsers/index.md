@@ -3,8 +3,6 @@ title: 支持旧浏览器
 slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 ---
 
-{{LearnSidebar}}
-
 本文中，我们推荐使用弹性盒和网格作为你的设计的主要布局方式。但是，你的网站的访客会有人使用旧浏览器，或者是不支持你已经使用的方式。这总是 Web 上存在的情况，因为新的特性被开发出来，不同的浏览器会优先支持不同的特性。本文解释了如何使用现代的 Web 技术，而无需让采用旧技术的用户被拒之门外。
 
 <table>
@@ -90,7 +88,8 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 
 {{ EmbedLiveSample('在 CSS 中构建回滚', '100%', '200') }}
 
-> **备注：**{{cssxref("clear")}}属性也在被清除的物件变为网格物件的时候失效，所以你应该在一个会变成网格布局的布局上，加上被清除的尾部。
+> [!NOTE]
+> {{cssxref("clear")}}属性也在被清除的物件变为网格物件的时候失效，所以你应该在一个会变成网格布局的布局上，加上被清除的尾部。
 
 ### 回滚方式
 
@@ -203,7 +202,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 
 ## 参见
 
-- [`@supports`](/zh-CN/docs/Web/CSS/@supports) at 规则
-- [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+- [`@supports`](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) at 规则
+- [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
 - [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块

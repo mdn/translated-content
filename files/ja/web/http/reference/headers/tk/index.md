@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Tk
 original_slug: Web/HTTP/Headers/Tk
 ---
 
-{{HTTPSidebar}}
-
 **`Tk`** 応答ヘッダーは、該当する要求に適用される追跡状態を示します。
 
 <table class="properties">
@@ -18,7 +16,7 @@ original_slug: Web/HTTP/Headers/Tk
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

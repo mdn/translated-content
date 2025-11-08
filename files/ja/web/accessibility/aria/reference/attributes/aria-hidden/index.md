@@ -24,7 +24,8 @@ l10n:
 
 `aria-hidden="true"` はフォーカスを受け取ることができる要素に使用すべきではありません。さらに、この属性は要素の子要素に継承されるため、フォーカス可能な要素の親要素や祖先要素に追加すべきではありません。
 
-> **警告:** `aria-hidden="true"` をフォーカス可能な要素に使用しないでください。
+> [!WARNING]
+> `aria-hidden="true"` をフォーカス可能な要素に使用しないでください。
 
 要素の非表示状態は、それがレンダリングされているかどうかに基づいています。レンダリングは通常 CSS で制御します。例えば、 CSS で `display` プロパティが `none` に設定されている要素はレンダリングされません。要素は、その要素またはその祖先がレンダリングされていないか、 `aria-hidden` 属性の値が設定するには `true` になっている場合、非表示とみなされます。 `aria-hidden="true"` が宣言されている要素やその子要素は、 CSS によって非表示にされていない限り、表示されることに注意してください。
 
@@ -40,9 +41,9 @@ l10n:
 
 `aria-hidden="true"` は次のような場合には追加しないでください。
 
-- HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性が存在する場合
-- この要素または要素の祖先が [`display: none`](/ja/docs/Web/CSS/display) により非表示になっている場合
-- この要素または要素の祖先が [`visibility: hidden`](/ja/docs/Web/CSS/visibility) により非表示になっている場合
+- HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性が存在する場合
+- この要素または要素の祖先が [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) により非表示になっている場合
+- この要素または要素の祖先が [`visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/visibility) により非表示になっている場合
 
 3 つのシナリオすべてにおいて、要素はすでにアクセシビリティツリーから除去されているため、属性を追加する必要はありません。 `display` や `visibility` で要素を視覚的に隠すと、画面や支援技術からコンテンツを隠すことができます。
 
@@ -88,8 +89,8 @@ l10n:
 ## 関連情報
 
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-- HTML [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性
+- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- HTML [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - CSS {{CSSXref('display')}} プロパティ
 - CSS {{CSSXref('visibility')}} プロパティ

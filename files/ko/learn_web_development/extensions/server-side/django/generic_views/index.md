@@ -120,7 +120,8 @@ class BookListView(generic.ListView):
 - 그리고 새로운 컨텍스트 정보를 추가합니다.
 - 마지막으로 새롭게 업데이트된 컨텍스트를 리턴합니다.
 
-> **참고:** [Built-in class-based generic views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/) (Django docs)를 방문해 다양한 예제를 살펴볼 수 있습니다.
+> [!NOTE]
+> [Built-in class-based generic views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/) (Django docs)를 방문해 다양한 예제를 살펴볼 수 있습니다.
 
 ### 리스트 뷰 템플릿 생성하기
 
@@ -229,7 +230,8 @@ _book-detail URL 패턴은 우리가 원하는 책의 id를 캡처하기 위해 
 > [!NOTE]
 > 앞에서 언급했듯이, 관련된 URL 은 실제로는 `catalog/book/<digits>` 입니다.(우리가 **catalog** application 에 있기때문에, `/catalog/` 를 가정합니다).
 
-> **경고:** **명심**: 통상 class-based detail view 는 **pk** 라는 이름을 가진 파라미터로 전달됩니다. 만일 자체적으로 function view 를 만든다면 어떤 이름이라도 사용 가능합니다. 혹은 이름이 없는 argument 에 정보를 넣어 전달 할 수도 있습니다.
+> [!WARNING]
+> **명심**: 통상 class-based detail view 는 **pk** 라는 이름을 가진 파라미터로 전달됩니다. 만일 자체적으로 function view 를 만든다면 어떤 이름이라도 사용 가능합니다. 혹은 이름이 없는 argument 에 정보를 넣어 전달 할 수도 있습니다.
 
 #### Regular expression 을 이용한 고급 path matching
 
@@ -432,7 +434,8 @@ def book_detail_view(request, primary_key):
 
 이 시점에서 책 목록 페이지와 책 세부 사항 페이지를 보기 위한 모든 것을 만들어 놓았어야 합니다. 명령어 (`python3 manage.py runserver`) 를 입력하여 서버를 실행하고 브라우저를 열어 <http://127.0.0.1:8000/> 에 접속해보세요.
 
-> **경고:** **주의!:** 아직 작가 목록 페이지나 작가 세부 사항 페이지를 클릭하시면 안됩니다. — 당신은 challenge에서 이것들을 만들어보게 될 거에요!
+> [!WARNING]
+> **주의!:** 아직 작가 목록 페이지나 작가 세부 사항 페이지를 클릭하시면 안됩니다. — 당신은 challenge에서 이것들을 만들어보게 될 거에요!
 
 책 목록을 보기 위해 **All books** 링크를 클릭하세요.
 
@@ -474,13 +477,13 @@ class BookListView(generic.ListView):
     <div class="pagination">
       <span class="page-links">
         {% if page_obj.has_previous %}
-          <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+          <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
         {% endif %}
         <span class="page-current">
-          <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+          <p>Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.</p>
         </span>
         {% if page_obj.has_next %}
-          <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+          <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
         {% endif %}
       </span>
     </div>

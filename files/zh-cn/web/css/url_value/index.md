@@ -2,17 +2,15 @@
 title: <url>
 slug: Web/CSS/url_value
 l10n:
-  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`<url>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)是指向资源的指针。资源可以是图像、视频、CSS 文件、字体文件、SVG 特性等。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types) **`<url>`** 是指向资源的指针。资源可以是图像、视频、CSS 文件、字体文件、SVG 特性等。
 
 ## 语法
 
 ```plain
-<url> = <url()> | <src()>
+<url> = <url()>
 ```
 
 ### 值
@@ -21,8 +19,9 @@ l10n:
 
 - [`<url()>`](/zh-CN/docs/Web/CSS/url_function)
   - : `url()` 函数只接受 URL 字面字符串（带引号或不带引号）。
-- `<src()>`
-  - : 此函数可以接受 URL 字符串或 [CSS 变量](/zh-CN/docs/Web/CSS/var)。
+
+> [!NOTE]
+> 规范中定义了一个名为 `src()` 的替代函数，它接受一个 URL 字符串或一个 [CSS 变量](/zh-CN/docs/Web/CSS/var)。但目前尚无任何浏览器实现该函数。
 
 ## 规范
 

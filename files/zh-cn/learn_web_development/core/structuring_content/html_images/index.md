@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 26aeffa549ae61cd863afcb8fdcb3ba0e1e33b0c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 最初，web 仅有文字，非常乏味。幸运的是，不久之后，我们就能在网页中嵌入图片和其他更有趣的内容类型了。尽管有多种多媒体类型需要考虑，但是从在网页中嵌入简单图片的 {{htmlelement("img")}} 元素开始更加合理。在这篇文章中，我们将详细介绍如何使用 {{htmlelement("img")}} 元素，包括它的基本属性，如何用 {{htmlelement("figure")}} 元素为它添加标题，它与 {{glossary("CSS")}} 背景图片的关系，以及其他 web 平台上的图形类型。
 
@@ -73,7 +73,8 @@ l10n:
 
 如果这些图像并非由你创建，你应该查看它们发布的许可证条款，确保自己有使用它们的权限（有关更多信息，请参阅下面的[媒体资源和许可证](#媒体资源和许可)）。
 
-> **警告：** _未经许可_，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
+> [!WARNING]
+> _未经许可_，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
 
 无论是使用绝对 URL 还是相对 URL，上述代码片段将会得到以下结果：
 
@@ -113,7 +114,7 @@ l10n:
 - **装饰**：如果图片仅用于装饰，你应该使用 [CSS 背景图片](#css_背景图片)，但如果必须使用 HTML，请添加空的 `alt=""`。如果图片不是内容的一部分，那么屏幕阅读器不应该浪费时间读取它。
 - **内容**：如果你的图片提供了重要的信息，就要在 `alt` 文本中*简要*的提供相同的信息，甚至更近一步，把这些信息写在主要的文本内容里，这样所有人都能看见。不要写冗余的备选文本（如果在主要文本中将所有的段落都重复两遍，对于没有失明的用户来说多烦啊！），如果在主要文本中已经对图片进行了充分的描述，写 `alt=""` 就好。
 - **链接**：如果你把图片嵌套在 {{htmlelement("a")}} 标签里，来把图片变成链接，那你还必须提供[无障碍的链接文本](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#使用清晰的链接措辞)。在这种情况下，你可以写在同一个 `<a>` 元素里，或者写在图片的 `alt` 属性里，随你喜欢。
-- **文本**：你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/text-shadow) 来达到这个目的，而不是把文本放到图片里。如果*真的必须这么做*，那就把文本也放到 `alt` 里。
+- **文本**：你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/Reference/Properties/text-shadow) 来达到这个目的，而不是把文本放到图片里。如果*真的必须这么做*，那就把文本也放到 `alt` 里。
 
 本质上，关键在于即使图片无法被看见，也能提供可用的体验，这确保了所有人都不会错失某部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。
 
@@ -122,7 +123,7 @@ l10n:
 
 ### 宽度和高度
 
-你可以用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性来指定你的图片的宽度和高度。它们的值是不带单位的整数，以像素为单位表示图像的宽度和高度。
+你可以用 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/img#height) 属性来指定你的图片的宽度和高度。它们的值是不带单位的整数，以像素为单位表示图像的宽度和高度。
 
 你可以用多种方式了解你的图片的宽度和高度，例如在 Mac 上，你可以用 <kbd>Cmd</kbd> + <kbd>I</kbd> 来得到显示的图片文件的信息。回到我们的例子，你可以这样做：
 
@@ -449,7 +450,7 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
 {{htmlelement("figcaption")}} 元素告诉浏览器和辅助技术工具，这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 
 > [!NOTE]
-> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
+> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
 
 figure 里不一定要是图片，只要是这样的独立内容单元即可：
 
@@ -629,7 +630,7 @@ p {
 
 ## 技能测试！
 
-你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images)。
+你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images)。
 
 ## 总结
 

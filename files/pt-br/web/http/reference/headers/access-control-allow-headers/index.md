@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Access-Control-Allow-Headers`** é usado na resposta à uma {{glossary("preflight request")}} na qual incluí o cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} para indicar quais cabeçalhos HTTP podem ser utilizados durante a requisição efetiva.
 
 Este cabeçalho é obrigatório se a requisição tem um cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}}.
@@ -35,7 +33,7 @@ Access-Control-Allow-Headers: *
 - `<nome-do-cabeçalho>`
   - : O nome de um cabeçalho suportado. O cabeçalho pode listar qualquer quantidade de cabeçalhos, desde que sejam separados por vírgula.
 - `*` (coringa)
-  - : O valor "`*`" só conta como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica especial. Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode utilizar um coringa e sempre precisa ser listado explicitamente.
+  - : O valor "`*`" só conta como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Guides/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, isso é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica especial. Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode utilizar um coringa e sempre precisa ser listado explicitamente.
 
 Os cabeçalhos {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} são sempre permitidos e não precisam ser listados por este cabeçalho necessariamente. Entretanto, note que restrições adicionais são aplicadas com estes cabeçalhos envolvidos por listar estes cabeçalhos no cabeçalho `Access-Control-Allow-Headers` também.
 

@@ -26,8 +26,6 @@ console.log(korean.hourCycle, japanese.hourCycle);
 // Expected output: "h23" "h12"
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## 解説
 
 **`Intl.Locale`** オブジェクトは、 Unicode ロケールをより簡単に操作できるようにするために作成されました。 Unicode は、ロケールを*ロケール識別子*と呼ばれる文字列で表します。ロケール識別子は、*言語識別子*と*拡張タグ*から構成されます。言語識別子はロケールの中核となるもので、_言語_、_文字体系_、*地域サブタグ*から構成されます。ロケールに関する追加情報は、オプションの拡張タグに格納されます。*拡張タグ*には、暦の種類や時計の種類、数値表記法の種類などのロケールに関する情報が格納されています。

@@ -108,4 +108,4 @@ Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completam
 
 - Outras pseudo-classes relacionadas com validações: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - Mozilla pseudo-classes relacionadas: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)
+- [Form data validation](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)

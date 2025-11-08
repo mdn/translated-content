@@ -2,7 +2,7 @@
 title: SVG 元素参考
 slug: Web/SVG/Reference/Element
 l10n:
-  sourceCommit: 2befe9ec5792e13f720396535a4aa20111be96ef
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
 SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图像的结构、绘制与布局。在这里，你可以找到每个 SVG 元素的参考文档。
@@ -25,6 +25,7 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
+- {{SVGElement("discard")}}
 
 ### E
 
@@ -117,7 +118,8 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("view")}}
 
-> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+> [!NOTE]
+> [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
 
 ## 按类别划分的 SVG 元素
 
@@ -131,7 +133,7 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### 容器元素
 
-{{SVGElement("a")}}、{{SVGElement("defs")}}、{{SVGElement("g")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("missing-glyph")}}、{{SVGElement("pattern")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}
+{{SVGElement("a")}}、{{SVGElement("defs")}}、{{SVGElement("g")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("pattern")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}
 
 ### 描述性元素
 
@@ -140,10 +142,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 ### 滤镜原语元素
 
 {{SVGElement("feBlend")}}、{{SVGElement("feColorMatrix")}}、{{SVGElement("feComponentTransfer")}}、{{SVGElement("feComposite")}}、{{SVGElement("feConvolveMatrix")}}、{{SVGElement("feDiffuseLighting")}}、{{SVGElement("feDisplacementMap")}}、{{SVGElement("feDropShadow")}}、{{SVGElement("feFlood")}}、{{SVGElement("feFuncA")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncG")}}、{{SVGElement("feFuncR")}}、{{SVGElement("feGaussianBlur")}}、{{SVGElement("feImage")}}、{{SVGElement("feMerge")}}、{{SVGElement("feMergeNode")}}、{{SVGElement("feMorphology")}}、{{SVGElement("feOffset")}}、{{SVGElement("feSpecularLighting")}}、{{SVGElement("feTile")}}、{{SVGElement("feTurbulence")}}
-
-### 字体元素
-
-{{SVGElement("font")}}、{{SVGElement("font-face")}}、{{SVGElement("font-face-format")}}、{{SVGElement("font-face-name")}}、{{SVGElement("font-face-src")}}、{{SVGElement("font-face-uri")}}、{{SVGElement("hkern")}}、{{SVGElement("vkern")}}
 
 ### 渐变元素
 
@@ -173,7 +171,8 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 {{SVGElement("a")}}、{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("foreignObject")}}、{{SVGElement("g")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}、{{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}}、{{SVGElement("use")}}
 
-> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+> [!NOTE]
+> [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
 
 ### 形状元素
 
@@ -185,48 +184,15 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### 文本内容元素
 
-{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tspan")}}
 
 ### 文本内容子元素
 
-{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{SVGElement("textPath")}}、{{SVGElement("tspan")}}
 
 ### 未分类元素
 
-{{SVGElement("clipPath")}}、{{SVGElement("cursor")}}、{{SVGElement("filter")}}、{{SVGElement("foreignObject")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("view")}}
-
-## 过时和弃用的元素
-
-> [!WARNING]
-> 这些都是旧的已弃用 SVG 元素，不应使用。**你不应在新的项目中使用它们，并且应尽快在旧项目中将其替换掉**。在此列出这些信息仅供参考。
-
-### C
-
-{{SVGElement("cursor")}}
-
-### F
-
-{{SVGElement("font")}}、{{SVGElement("font-face")}}、{{SVGElement("font-face-format")}}、{{SVGElement("font-face-name")}}、{{SVGElement("font-face-src")}}、{{SVGElement("font-face-uri")}}
-
-### G
-
-{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}
-
-### H
-
-{{SVGElement("hkern")}}
-
-### M
-
-{{SVGElement("missing-glyph")}}
-
-### T
-
-{{SVGElement("tref")}}
-
-### V
-
-{{SVGElement("vkern")}}
+{{SVGElement("clipPath")}}、{{SVGElement("filter")}}、{{SVGElement("foreignObject")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("view")}}
 
 ## 参见
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Compression
 original_slug: Web/HTTP/Compression
 ---
 
-{{HTTPSidebar}}
-
 A **Compressão** é uma forma importante de aumentar o desempenho de um Web site. Para alguns documentos, a redução de tamanho de até 70% diminui a necessidade de capacidade de largura de banda. Com o passar dos anos, os algoritmos também ficaram mais eficientes e novos têm recebido suporte por clientes e servidores.
 
 Na prática, os desenvolvedores web não precisam implementar mecanismos de compressão de dados, pois ambos os navegadores e servidores já possuem tais mecanismos implementados. Porém, é preciso ter certeza de que o servidor esteja configurado adequadamente. A compressão acontece em três níveis distintos:
@@ -39,7 +37,7 @@ Para compressão, a compressão de ponta a ponta é onde residem as maiores melh
 
 Todos os navegadores e servidores modernos suportam a compressão, bastante somente negociar o algoritmo a ser usado. Esses algoritmos são otimizados para texto. Nos anos 90, a tecnologia de compressão avançava a um ritmo acelerado e numerosos algoritmos sucessivos foram adicionados ao conjunto de escolhas possíveis. Hoje em dia, apenas dois são relevantes: o `gzip`, o mais comum, e `br` o novo desafiante.
 
-Para selecionar o algoritmo a ser usado, os navegadores e servidores usam a [negociação proativa de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation). O navegador envia um cabeçalho {{HTTPHeader("Accept-Encoding")}} com o algoritmo que ele suporta e sua ordem de precedência. O servidor escolhe um, usa-o para comprimir o corpo da resposta e usa o {{HTTPHeader("Content-Encoding")}} para informar ao navegador o algoritmo escolhido. Como a negociação de conteúdo foi usada para escolher uma representação baseada em sua codificação, o servidor deve enviar um cabeçalho {{HTTPHeader("Vary")}} contendo pelo menos {{HTTPHeader("Accept-Encoding")}} ao lado do cabeçalho na resposta. Dessa forma, os caches poderão armazenar em cache as diferentes representações do recurso.
+Para selecionar o algoritmo a ser usado, os navegadores e servidores usam a [negociação proativa de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation). O navegador envia um cabeçalho {{HTTPHeader("Accept-Encoding")}} com o algoritmo que ele suporta e sua ordem de precedência. O servidor escolhe um, usa-o para comprimir o corpo da resposta e usa o {{HTTPHeader("Content-Encoding")}} para informar ao navegador o algoritmo escolhido. Como a negociação de conteúdo foi usada para escolher uma representação baseada em sua codificação, o servidor deve enviar um cabeçalho {{HTTPHeader("Vary")}} contendo pelo menos {{HTTPHeader("Accept-Encoding")}} ao lado do cabeçalho na resposta. Dessa forma, os caches poderão armazenar em cache as diferentes representações do recurso.
 
 ![](httpcompression1.png)
 

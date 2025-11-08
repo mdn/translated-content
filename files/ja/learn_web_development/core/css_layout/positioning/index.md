@@ -620,14 +620,14 @@ body {
 
 {{ EmbedLiveSample('Scrolling_index', '100%', 200) }}
 
-粘着要素は「スクロール機構」を持つ最も近い祖先（[overflow](/ja/docs/Web/CSS/overflow) プロパティによって決定する）に相対的に「粘着」します。
+粘着要素は「スクロール機構」を持つ最も近い祖先（[overflow](/ja/docs/Web/CSS/Reference/Properties/overflow) プロパティによって決定する）に相対的に「粘着」します。
 
 > [!NOTE]
 > このライブ例は [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)）。
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Position_skills)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position)を参照してください。
 
 ## まとめ
 

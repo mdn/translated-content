@@ -20,7 +20,6 @@ l10n:
      > 活动的视图过渡具有关联的 {{domxref("ViewTransition")}} 实例（例如，在同文档（SPA）过渡的情况下，由 `startViewTransition()` 返回）。`ViewTransition` 对象包含多个 Promise，允许你运行代码以响应到达视图过渡过程的不同部分。有关更多信息，请参阅[使用 JavaScript 控制视图过渡](#使用_JavaScript_控制视图过渡)。
 2. 在当前（旧页面）视图上，API 捕获声明了 {{cssxref("view-transition-name")}} 的元素的快照。
 3. 视图更改发生：
-
    - 对于同文档（SPA）过渡，将调用传递给 `startViewTransition()` 的回调，这会导致 DOM 发生更改。
 
      当回调成功运行时，{{domxref("ViewTransition.updateCallbackDone")}} promise 将兑现，允许你响应 DOM 更新。
@@ -217,7 +216,8 @@ figcaption {
 
 第二组伪元素的存在允许将单独的视图过渡样式仅应用于 `<figcaption>` 元素。不同的旧视图捕获和新视图捕获彼此分开处理。
 
-> **备注：** `view-transition-name` 的值可以是你想要的任何值，除了 `none` 以外——`none` 值明确表示元素不会参与视图过渡。
+> [!NOTE]
+> `view-transition-name` 的值可以是你想要的任何值，除了 `none` 以外——`none` 值明确表示元素不会参与视图过渡。
 >
 > `view-transition-name` 值也必须是唯一的。如果两个渲染的元素同时具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将拒绝并跳过过渡。
 
@@ -285,7 +285,8 @@ figcaption {
 
 这之所以有效，是因为默认情况下，`::view-transition-group` 以平滑的比例在新旧视图之间转换 `width` 和 `height`。我们只需要在这两个状态上设置一个固定的 `height` 来使其正常工作。
 
-> **备注：** [使用视图过渡 API 实现平滑过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)包含其他几个自定义示例。
+> [!NOTE]
+> [使用视图过渡 API 实现平滑过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)包含其他几个自定义示例。
 
 ## 使用 JavaScript 控制视图过渡
 
@@ -295,7 +296,6 @@ figcaption {
 
 1. 对于同文档（SPA）过渡，{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 方法返回与过渡关联的 `ViewTransition` 对象。
 2. 对于跨文档（MPA）过渡：
-
    - 当文档由于导航而即将卸载时，将触发 {{domxref("Window.pageswap_event", "pageswap")}} 事件。其事件对象（{{domxref("PageSwapEvent")}}）通过 {{domxref("PageSwapEvent.viewTransition")}} 属性提供对 `ViewTransition` 对象的访问，以及通过 {{domxref("PageSwapEvent.activation")}} 提供对 {{domxref("NavigationActivation")}} 的访问，其中包含导航类型以及当前和目标文档的历史记录条目。
      > [!NOTE]
      > 如果导航在重定向链中的任意位置具有跨源 URL，则 `activation` 属性返回 `null`。
@@ -481,9 +481,9 @@ window.addEventListener("pagereveal", async (e) => {
 2. 加载并运行关键脚本。
 3. 对用户页面的初始视图可见的 HTML 已解析，因此它可以一致地呈现。
 
-默认情况下，样式是被渲染阻塞的，并且脚本可以通过使用 [`blocking="render"`](/zh-CN/docs/Web/HTML/Element/script#blocking) 属性来被渲染阻塞。
+默认情况下，样式是被渲染阻塞的，并且脚本可以通过使用 [`blocking="render"`](/zh-CN/docs/Web/HTML/Reference/Elements/script#blocking) 属性来被渲染阻塞。
 
-要确保初始 HTML 已解析并在过渡动画运行之前始终一致地呈现，你可以使用 [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Attributes/rel#expect)。在此元素中，你将包括以下属性：
+要确保初始 HTML 已解析并在过渡动画运行之前始终一致地呈现，你可以使用 [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#expect)。在此元素中，你将包括以下属性：
 
 - `rel="expect"` 表示你想用这个 `<link>` 元素在页面上渲染一些 HTML。
 - `href="#element-id"` 来表示你想要渲染的块的元素的 ID。
@@ -517,7 +517,7 @@ window.addEventListener("pagereveal", async (e) => {
 
 结果是，在解析潜在内容 `<div>` 之前，文档渲染会被阻止，从而确保视图过渡的一致性。
 
-你还可以在 `<link rel="expect">` 元素上指定 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性。例如，在窄屏幕设备上加载页面时，你可能希望阻止在比在宽屏设备上加载页面时少的内容上呈现。这是有道理的——在移动设备上，页面首次加载时可见的内容比在桌面上要少。
+你还可以在 `<link rel="expect">` 元素上指定 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。例如，在窄屏幕设备上加载页面时，你可能希望阻止在比在宽屏设备上加载页面时少的内容上呈现。这是有道理的——在移动设备上，页面首次加载时可见的内容比在桌面上要少。
 
 这可以通过以下 HTML 来实现：
 

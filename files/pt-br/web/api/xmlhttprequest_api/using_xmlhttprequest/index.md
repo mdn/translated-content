@@ -3,7 +3,7 @@ title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 ---
 
-[`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/Web/HTTP/Status) [HTTP](/pt-BR/docs/Web/HTTP/Status)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
+[`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/Web/HTTP/Reference/Status) [HTTP](/pt-BR/docs/Web/HTTP/Reference/Status)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
 
 ```js
 function reqListener() {
@@ -18,7 +18,7 @@ oReq.send();
 
 ## Tipos de Requisições
 
-Uma requisição feita via XMLHttpRequest pode buscar dados de duas maneiras, sícrona e assíncrona. O tipo de requisição é dado pelo argumento `async` que é opcional (terceiro argumento) e é definido no método XMLHttpRequest [open()](</pt-BR/docs/DOM/XMLHttpRequest#open()> "DOM/XMLHttpRequest#open()"). Se esse argumento for `true` ou não especificado, o `XMLHttpRequest` será processado de maneira assíncrona, caso contrário o processamento será síncrono. Uma discussão detalhada e demonstrações desses dois tipos podem ser encontradas na página [requisições síncronas e assíncronas](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests). No geral a melhor prática é a das solicitações assíncronas.
+Uma requisição feita via XMLHttpRequest pode buscar dados de duas maneiras, sícrona e assíncrona. O tipo de requisição é dado pelo argumento `async` que é opcional (terceiro argumento) e é definido no método XMLHttpRequest [open()](</pt-BR/docs/Web/API/XMLHttpRequest#open()> "DOM/XMLHttpRequest#open()"). Se esse argumento for `true` ou não especificado, o `XMLHttpRequest` será processado de maneira assíncrona, caso contrário o processamento será síncrono. Uma discussão detalhada e demonstrações desses dois tipos podem ser encontradas na página [requisições síncronas e assíncronas](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests). No geral a melhor prática é a das solicitações assíncronas.
 
 ## Manipulando Respostas
 
@@ -596,7 +596,7 @@ AJAXSubmit(myForm);
 
 > [!NOTE]
 > This little _vanilla_ framework **uses the [`FileReader`](/pt-BR/docs/Web/API/FileReader) API**, which is _a recent technique_ (but only when there are files to upload, the `method` of the {{ HTMLElement("form") }} is `POST` and the `enctype` attribute is setted to `multipart/form-data`). For this reason, **the _pure-AJAX_ upload is to be considered an experimental technique**. Instead, if you don't want to upload files, this framework will not use any recent API.
-> Note also that **the best way to send binary content is using [ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [Blobs](/pt-BR/docs/Web/API/Blob) in conjuncton with the [`send()`](/pt-BR/docs/DOM/XMLHttpRequest#send%28%29) method and, possibly, with the [`readAsArrayBuffer()`](</pt-BR/docs/DOM/FileReader#readAsArrayBuffer()>) method of the [`FileReader`](/pt-BR/docs/Web/API/FileReader) API**. But, since the aim of this little script is to work with a _[stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)_ raw data, we used the [`sendAsBinary()`](/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) method in conjunction with the [`readAsBinaryString()`](/pt-BR/docs/DOM/FileReader#readAsBinaryString%28%29) method of the [`FileReader`](/pt-BR/docs/Web/API/FileReader) API. So, this is **the best solution when working with a relatively few data which must be [stringified](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) in order to be reused later**. Anyhow, since working with strings instead of [typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) implies a greater waste of resources, this script makes sense only when you are dealing with _small_ files (like images, documents, mp3, etc.). Otherwise, if you don't want to stringify the submitted or uploaded data, in addition to [typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays), consider also the use of **the [`FormData`](/pt-BR/docs/Web/API/FormData) API**.
+> Note also that **the best way to send binary content is using [ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or [Blobs](/pt-BR/docs/Web/API/Blob) in conjuncton with the [`send()`](/pt-BR/docs/Web/API/XMLHttpRequest#send%28%29) method and, possibly, with the [`readAsArrayBuffer()`](</pt-BR/docs/DOM/FileReader#readAsArrayBuffer()>) method of the [`FileReader`](/pt-BR/docs/Web/API/FileReader) API**. But, since the aim of this little script is to work with a _[stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)_ raw data, we used the [`sendAsBinary()`](/pt-BR/docs/Web/API/XMLHttpRequest#sendAsBinary%28%29) method in conjunction with the [`readAsBinaryString()`](/pt-BR/docs/DOM/FileReader#readAsBinaryString%28%29) method of the [`FileReader`](/pt-BR/docs/Web/API/FileReader) API. So, this is **the best solution when working with a relatively few data which must be [stringified](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) in order to be reused later**. Anyhow, since working with strings instead of [typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) implies a greater waste of resources, this script makes sense only when you are dealing with _small_ files (like images, documents, mp3, etc.). Otherwise, if you don't want to stringify the submitted or uploaded data, in addition to [typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays), consider also the use of **the [`FormData`](/pt-BR/docs/Web/API/FormData) API**.
 
 ### Using FormData objects
 
@@ -773,7 +773,7 @@ The [`FormData`](/pt-BR/docs/Web/API/FormData) constructor lets you compile a se
 
 ## Cross-site XMLHttpRequest
 
-Modern browsers support cross-site requests by implementing the web applications working group's [Access Control for Cross-Site Requests](/pt-BR/docs/Web/HTTP/CORS) standard. As long as the server is configured to allow requests from your web application's origin, `XMLHttpRequest` will work. Otherwise, an `INVALID_ACCESS_ERR` exception is thrown.
+Modern browsers support cross-site requests by implementing the web applications working group's [Access Control for Cross-Site Requests](/pt-BR/docs/Web/HTTP/Guides/CORS) standard. As long as the server is configured to allow requests from your web application's origin, `XMLHttpRequest` will work. Otherwise, an `INVALID_ACCESS_ERR` exception is thrown.
 
 ## Bypassing the cache
 
@@ -830,7 +830,7 @@ var oReq = XMLHttpRequest();
 ## See also
 
 1. [MDC AJAX introduction](/pt-BR/docs/conflicting/Web/Guide/AJAX)
-2. [HTTP access control](/pt-BR/docs/Web/HTTP/CORS)
+2. [HTTP access control](/pt-BR/docs/Web/HTTP/Guides/CORS)
 3. [How to check the security state of an XMLHTTPRequest over SSL](/pt-BR/docs/Web/API/XMLHttpRequest)
 4. [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 5. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)

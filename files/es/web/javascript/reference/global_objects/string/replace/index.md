@@ -31,7 +31,6 @@ replace(patrón, reemplazo)
 ### Parámetros
 
 - `patrón`
-
   - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el ejemplo típico es una [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
 
 - `reemplazo`

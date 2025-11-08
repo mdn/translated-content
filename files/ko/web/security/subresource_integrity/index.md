@@ -10,7 +10,7 @@ l10n:
 **하위 리소스 무결성**(SRI)은 브라우저가 가져온 리소스(예: [CDN](/ko/docs/Glossary/CDN)에서)가 예기치 않은 조작 없이 전달되었는지 검증하는 보안 기능입니다. 가져온 리소스와 일치해야 하는 암호 해시를 제공함으로써 작동합니다.
 
 > [!NOTE]
-> 임베드된 문서 이외의 출처에서 제공되는 하위 리소스 무결성을 검증하기 위해, 브라우저는 추가로 [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS)를 사용하여 리소스를 제공하는 출처가 요청 출처와 리소스를 공유할 수 있는지 확인합니다.
+> 임베드된 문서 이외의 출처에서 제공되는 하위 리소스 무결성을 검증하기 위해, 브라우저는 추가로 [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)를 사용하여 리소스를 제공하는 출처가 요청 출처와 리소스를 공유할 수 있는지 확인합니다.
 
 ## 하위 리소스 무결성이 어떻게 도움이 되는가?
 
@@ -24,7 +24,8 @@ l10n:
 
 `integrity` 값은 하나 이상의 문자열로 시작하고, 각 문자열에는 특정 해시 알고리즘(현재 허용되는 접두사는 `sha256`, `sha384`, 그리고 `sha512`)을 나타내는 접두사가 포함되어 있으며, 대시가 따라온 뒤, 실제 base64로 인코딩된 해시로 끝납니다.
 
-> **참고:** **integrity** 값에는 공백으로 구분된 여러 해시가 포함될 수 있습니다. 해당 해시 중 하나와 일치하는 경우 리소스가 로드됩니다.
+> [!NOTE]
+> **integrity** 값에는 공백으로 구분된 여러 해시가 포함될 수 있습니다. 해당 해시 중 하나와 일치하는 경우 리소스가 로드됩니다.
 
 `integrity` 문자열과 base64로 인코딩된 sha384 해시의 예제입니다.
 
@@ -86,7 +87,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 ### 교차 출처 리소스 공유 및 하위 리소스 무결성
 
-임베드된 문서 이외의 출처에서 제공되는 하위 리소스 무결성을 검증하기 위해, 브라우저는 추가로 [교차 출처 리소스 공유(CORS)](/ko/docs/Web/HTTP/CORS)를 사용하여 리소스를 제공하는 출처가 요청 출처와 리소스를 공유할 수 있는지 확인합니다. 따라서 리소스가 리소스 요청 출처와 공유될 수 있도록 하는 [`Access-Control-Allow-Origin`](/ko/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) 헤더가 함께 제공되어야 합니다. 예를 들어 다음과 같습니다.
+임베드된 문서 이외의 출처에서 제공되는 하위 리소스 무결성을 검증하기 위해, 브라우저는 추가로 [교차 출처 리소스 공유(CORS)](/ko/docs/Web/HTTP/Guides/CORS)를 사용하여 리소스를 제공하는 출처가 요청 출처와 리소스를 공유할 수 있는지 확인합니다. 따라서 리소스가 리소스 요청 출처와 공유될 수 있도록 하는 [`Access-Control-Allow-Origin`](/ko/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) 헤더가 함께 제공되어야 합니다. 예를 들어 다음과 같습니다.
 
 ```http
 Access-Control-Allow-Origin: *
@@ -107,7 +108,8 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **참고:** `crossorigin` 속성의 용도에 대한 자세한 내용은 [CORS 설정 속성](/ko/docs/Web/HTML/Attributes/crossorigin)을 참조하십시오.
+> [!NOTE]
+> `crossorigin` 속성의 용도에 대한 자세한 내용은 [CORS 설정 속성](/ko/docs/Web/HTML/Reference/Attributes/crossorigin)을 참조하십시오.
 
 ## 브라우저가 하위 리소스 무결성을 처리하는 방법
 
@@ -115,7 +117,7 @@ Access-Control-Allow-Origin: *
 
 1. 브라우저가 `integrity` 속성이 있는 {{HTMLElement("script")}}나 {{HTMLElement("link")}} 요소를 발견하면, 브라우저는 스크립트를 실행하거나 {{HTMLElement("link")}} 요소에 지정된 스타일시트를 적용하기 전에 먼저 스크립트 또는 스타일시트를 `integrity` 값에 지정된 기대 해시와 비교해야 합니다.
 
-   임베드된 문서 이외의 출처에서 제공되는 하위 리소스 무결성을 검증하기 위해, 브라우저는 추가로 [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS)를 사용하여 리소스를 제공하는 출처가 요청 출처와 리소스를 공유할 수 있는지 확인합니다.
+   임베드된 문서 이외의 출처에서 제공되는 하위 리소스 무결성을 검증하기 위해, 브라우저는 추가로 [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)를 사용하여 리소스를 제공하는 출처가 요청 출처와 리소스를 공유할 수 있는지 확인합니다.
 
 2. 스크립트 또는 스타일시트가 관련 `integrity` 값과 일치하지 않는 경우, 브라우저는 스크립트 실행 또는 스타일시트 적용을 거부하고, 해당 스크립트나 스타일시트 가져오기가 실패했음을 나타내는 네트워크 오류를 대신 반환해야 합니다.
 
@@ -129,7 +131,7 @@ Access-Control-Allow-Origin: *
 
 ## 같이 보기
 
-- [콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)
+- [콘텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP)
 - {{httpheader("Content-Security-Policy")}} HTTP 헤더
 - [XSS를 할 수 없는 CDN: 하위 리소스 무결성 사용하기](https://frederik-braun.com/using-subresource-integrity.html)
 - [W3C의 하위 리소스 무결성 검사](https://w3c-test.org/subresource-integrity/subresource-integrity.html)

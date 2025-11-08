@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f7daf15512ea736498837b68bcc36d82d6a323f4
 ---
 
-{{CSSRef}}
-
 有时，你的网站或应用程序可能希望改善用户在打印内容时的体验。有几种可能的情况：
 
 - 你希望根据纸张的大小和形状调整布局。
@@ -26,7 +24,7 @@ l10n:
 
 ## 使用媒体查询和 @page 改善布局
 
-你可以使用 CSS {{cssxref("@media")}} at 规则为网页设置打印在纸上和显示在屏幕上时的不同外观。`print` [媒体类型](/zh-CN/docs/Web/CSS/@media#媒体类型)可以设置要打印的媒体使用的样式，这些样式将仅用于印刷内容。
+你可以使用 CSS {{cssxref("@media")}} at 规则为网页设置打印在纸上和显示在屏幕上时的不同外观。`print` [媒体类型](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体类型)可以设置要打印的媒体使用的样式，这些样式将仅用于印刷内容。
 
 将其添加到你的样式表末尾。请注意，[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)规则仍然适用：
 

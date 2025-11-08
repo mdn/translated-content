@@ -5,17 +5,15 @@ l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- {{HTMLElement("ol")}} 要素の [`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性をサポートしました。([Firefox バグ 601912](https://bugzil.la/601912))
-- {{HTMLElement("link")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性をサポートしました。([Firefox バグ 786564](https://bugzil.la/786564))
-- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性が実装され、接頭辞つきの古いもの [`mozallowfullscreen`](/ja/docs/Web/HTML/Element/iframe#mozallowfullscreen) は非推奨になりました。
+- {{HTMLElement("ol")}} 要素の [`reversed`](/ja/docs/Web/HTML/Reference/Elements/ol#reversed) 属性をサポートしました。([Firefox バグ 601912](https://bugzil.la/601912))
+- {{HTMLElement("link")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性をサポートしました。([Firefox バグ 786564](https://bugzil.la/786564))
+- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性が実装され、接頭辞つきの古いもの [`mozallowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#mozallowfullscreen) は非推奨になりました。
 
 ### CSS
 

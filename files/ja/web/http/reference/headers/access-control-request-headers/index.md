@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Request-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Request-Headers`** リクエストヘッダーは{{glossary("preflight request", "プリフライトリクエスト")}}を発行する際にブラウザーが使用し、実際のリクエストが行う際にどの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を使用するかをサーバーに知らせます。
 
 <table class="properties">
@@ -18,7 +16,7 @@ original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>

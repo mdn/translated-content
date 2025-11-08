@@ -3,7 +3,7 @@ title: 使用 Vue event、method 和 model 添加一个新的 todo 表单
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 我们现在已经有了样本数据，还有一个循环，它获取每一位数据并将其呈现在我们应用程序的 `ToDoItem` 中。接下来我们真正需要的是允许我们的用户在应用程序中输入他们自己的待办事项的能力，为此我们需要一个“text”类型的 `<input>`，当数据输入时触发的事件提交，一个在提交时触发以添加数据并重新呈现列表的方法，以及一个控制数据的模型。这就是我们将在本文中介绍的内容。
 
@@ -54,7 +54,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
    </script>
    ```
 
-3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Element/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Element/button)。更新后的模版如下：
+3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Reference/Elements/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Reference/Elements/button)。更新后的模版如下：
 
    ```html
    <template>
@@ -134,7 +134,6 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
    ```
 
 3. 当你运行此程序时，应用程序仍会将数据发布到服务器，从而导致刷新。由于我们在客户端上进行所有处理，因此没有服务器来处理回发。我们还会在页面刷新时丢失所有本地状态。为了防止浏览器发布到服务器，我们需要阻止事件的默认操作通过页面冒泡（[`Event .preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)，在原生 JavaScript 中）。Vue 有一个特殊的语法叫做 **event modifiers** 可以在我们的模板中为我们处理这个问题。修饰符被附加到事件的末尾，带有一个点，如下所示：`@event.modifier`。以下是事件修饰符列表：
-
    - `.stop`：停止传播事件。等效于常规 JavaScript 事件中的 [`Event.stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation)。
    - `.prevent`：阻止事件的默认行为。等效于 [`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。
    - `.self`：仅当事件是从该确切元素分派时触发处理程序。

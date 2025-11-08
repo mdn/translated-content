@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status
 original_slug: Web/HTTP/Status
 ---
 
-{{HTTPSidebar}}
-
 Os códigos de status de resposta HTTP indicam se uma solicitação [HTTP](/pt-BR/docs/Web/HTTP) específica foi concluída com êxito.
 As respostas são agrupadas em cinco classes:
 
@@ -34,9 +32,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
 ## Respostas bem-sucedidas
 
 - {{HTTPStatus(200, "200 OK")}}
-
   - : A solicitação foi bem-sucedida. O significado do resultado de "sucesso" depende do método HTTP:
-
     - `GET`: O recurso foi obtido e transmitido no corpo da mensagem.
     - `HEAD`: Os cabeçalhos de representação são incluídos na resposta sem nenhum corpo de mensagem.
     - `PUT` ou `POST`: O recurso que descreve o resultado da ação é transmitido no corpo da mensagem.
@@ -115,7 +111,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
   - : O método de solicitação é conhecido pelo servidor, mas não é suportado pelo recurso de destino.
     Por exemplo, uma API pode não permitir chamar `DELETE` para remover um recurso.
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : Esta resposta é enviada quando o servidor web, após realizar [negociação de conteúdo orientada pelo servidor](/pt-BR/docs/Web/HTTP/Content_negotiation#negociação_baseada_no_servidor), não encontra nenhum conteúdo que esteja em conformidade com os critérios fornecidos por o agente do usuário.
+  - : Esta resposta é enviada quando o servidor web, após realizar [negociação de conteúdo orientada pelo servidor](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation#negociação_baseada_no_servidor), não encontra nenhum conteúdo que esteja em conformidade com os critérios fornecidos por o agente do usuário.
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : É semelhante a `401 Unauthorized`, mas a autenticação precisa ser feita por um proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}

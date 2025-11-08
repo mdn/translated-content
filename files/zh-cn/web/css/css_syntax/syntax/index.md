@@ -3,8 +3,6 @@ title: 语法
 slug: Web/CSS/CSS_syntax/Syntax
 ---
 
-{{CSSRef}}
-
 层叠样式表（Cascading Stylesheet，简称 [CSS](/zh-CN/docs/Web/CSS)），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色、定位、装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
 
 - **属性**（property）是一个标识符，用可读的名称来表示其特性。
@@ -41,7 +39,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 ![css syntax - ruleset.png](ruleset.png)
 
-一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 [层叠（cascade)](/zh-CN/docs/CSS/Getting_Started/Cascading_and_inheritance) 算法。
+一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为[层叠（cascade）](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)算法。
 
 _有一点需要注意的是，尽管用一组选择器来定义的单个规则集，比用多个单一选择器来定义的多个规则集更加简洁，但这却不适用于规则集的有效性。_
 
@@ -58,7 +56,7 @@ _这会导致一个重要的后果：如果其中的一个选择器是无效的�
 语句类型：
 
 - 规则。如上，将一组 CSS 声明与用选择器定义的条件相关联。
-- [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。以 @（U+0040 COMMERCIAL AT）开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset @import）、条件信息（比如 @media @document）、描述信息（比如 @font-face）。
+- [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)。以 @（U+0040 COMMERCIAL AT）开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset @import）、条件信息（比如 @media @document）、描述信息（比如 @font-face）。
 
 不是上面类型的语句则是非法的，被忽略。
 
@@ -68,9 +66,8 @@ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以�
 ## 参见
 
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -79,7 +76,6 @@ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以�
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
@@ -87,5 +83,5 @@ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以�
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

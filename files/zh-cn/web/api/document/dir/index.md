@@ -23,4 +23,4 @@ l10n:
 
 ## 参见
 
-- [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 全局属性
+- [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir) 全局属性

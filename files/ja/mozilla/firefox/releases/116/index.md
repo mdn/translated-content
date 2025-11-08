@@ -5,15 +5,13 @@ l10n:
   sourceCommit: 7a81d16fadbe5cbee1ad2f8d0ddccda846f4034c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 116 の変更点をまとめています。Firefox 116 は、2023 年 8 月 1 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
-- [`input`](/ja/docs/Web/HTML/Element/input#dirname) および [`textarea`](/ja/docs/Web/HTML/Element/textarea#dirname) 要素で [`dirname`](/ja/docs/Web/HTML/Element/input#dirname) 属性をサポートしました。
+- [`input`](/ja/docs/Web/HTML/Reference/Elements/input#dirname) および [`textarea`](/ja/docs/Web/HTML/Reference/Elements/textarea#dirname) 要素で [`dirname`](/ja/docs/Web/HTML/Reference/Elements/input#dirname) 属性をサポートしました。
   この属性は、フォームをサーバーに送信するときにテキストの書字方向の情報 (`ltr` または `rtl`) を渡すことができます ([Firefox bug 675943](https://bugzil.la/675943))。
 
 ### CSS

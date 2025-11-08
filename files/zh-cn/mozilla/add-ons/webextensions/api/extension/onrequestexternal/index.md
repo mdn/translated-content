@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 > [!WARNING]
 > 因为该方法自 Chrome 33 起被弃用，该 API 在 Firefox 中并未被实现。请改用 [runtime.onMessageExternal](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal)。
 
@@ -38,9 +36,7 @@ chrome.extension.onRequestExternal.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数传递以下参数：
-
     - `request`
       - : `any`。由调用脚本发送的请求。
     - `sender`

@@ -32,5 +32,5 @@ if (input.validity.badInput) {
 
 ## Смотрите также
 
-- [Руководство: Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
+- [Руководство: Валидация ограничений](/ru/docs/Web/HTML/Guides/Constraint_validation)
 - [Учебник: Валидация форм](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)

@@ -42,7 +42,7 @@ HTML 文件的最后一行调用了 `app.js` JavaScript 文件。这就是我们
 
 ## 表单提交
 
-页面包含一个 {{HTMLelement("form")}}，用于选择每个经期的开始日期和结束日期。日期选择器是类型为 {{HTMLElement("input/date", "日期")}} 的 {{HTMLElement("input")}}，其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 分别为 `start-date` 和 `end-date`。
+页面包含一个 {{HTMLelement("form")}}，用于选择每个经期的开始日期和结束日期。日期选择器是类型为 {{HTMLElement("input/date", "日期")}} 的 {{HTMLElement("input")}}，其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 分别为 `start-date` 和 `end-date`。
 
 表单没有方法或动作。取而代之的是，我们使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 为表单添加了一个事件监听器。当用户尝试提交表单时，我们阻止表单提交，存储新的经期，渲染这个经期以及之前的经期，然后重置表单。
 

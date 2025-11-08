@@ -5,7 +5,7 @@ slug: Web/MathML/Reference/Element/math
 
 {{MathMLRef()}}
 
-Элементом верхнего уровня в [MathML](/ru/docs/Web/MathML) является тэг `<math>`, используемый для представления одной математической формулы. Он может находится в HTML-контенте, где разрешено [потоковое содержимое](/ru/docs/Web/HTML/Content_categories#фразовый_контент).
+Элементом верхнего уровня в [MathML](/ru/docs/Web/MathML) является тэг `<math>`, используемый для представления одной математической формулы. Он может находится в HTML-контенте, где разрешено [потоковое содержимое](/ru/docs/Web/HTML/Guides/Content_categories#фразовый_контент).
 
 > [!NOTE]
 > Посмотрите страницу [«Разработка MathML»](/ru/docs/Web/MathML/Guides/Authoring#using_mathml) с советами по правильной интеграции MathML-формул на ваши веб-страницы и [примеры использования MathML](/ru/docs/Web/MathML/Guides).
@@ -15,9 +15,7 @@ slug: Web/MathML/Reference/Element/math
 Атрибуты этого элемента включают [глобальные атрибуты MathML](/ru/docs/Web/MathML/Global_attributes), а также следующий атрибут:
 
 - `display`
-
   - : Этот [перечислимый](/ru/docs/Glossary/Enumerated) атрибут определяет, как должна отображаться разметка MathML. Он может иметь одно из следующих значений:
-
     - `block` означает, что элемент будет отображаться в собственном блоке за пределами текущего диапазона текста и со значением [`math-style`](/ru/docs/Web/CSS/math-style) установленным в `normal`.
     - `inline` означает, что элемент будет отображаться внутри текущего фрагмента текста и со значением [`math-style`](/ru/docs/Web/CSS/math-style) установленным в `compact`.
 

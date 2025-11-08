@@ -16,7 +16,6 @@ _이 인터페이스는 어떤 프라퍼티도 상속하지 않는다._
 - {{domxref("TreeWalker.root")}} {{readonlyInline}}
   - : `TreeWalker` 를 생성할 때 지정한 루트 노드를 나타대는 {{domxref("Node")}}를 반환한다.
 - {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
-
   - : 제공해야할 {{domxref("Node")}} 유형을 기술하는 `unsigned long` 비트마스크를 반환한다. 일치하지 않는 노드들은 건너뛰지만 관련된 경우 그 자식들을 포함할 수 있다. 가능한 값들은:
 
     | 상수                                                     | 숫자 값                           | 설명                                                                                                                                                                                                                                                                                                                      |
@@ -46,7 +45,8 @@ _이 인터페이스는 어떤 프라퍼티도 상속하지 않는다._
 
 _이 인터페이스는 아무 메서드도 상속하지 않는다._
 
-> **참고:** _TreeWalker는 보이는 DOM 노드만 고려한다는 것에주의하라._
+> [!NOTE]
+> _TreeWalker는 보이는 DOM 노드만 고려한다는 것에주의하라._
 
 - {{domxref("TreeWalker.parentNode()")}}
   - : 현재 {{domxref("Node")}}를 도큐먼트 순서의 첫번째 보이는 조상으로 이동하고 찾은 노드를 반환한다. 그런 노드가 없거나 오브젝트 생성시에 정의한 *루트 노드*보다 앞이면 `null`을 반환하고 현재 노드는 바뀌지 않는다.

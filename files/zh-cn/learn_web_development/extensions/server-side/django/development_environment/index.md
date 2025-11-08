@@ -3,7 +3,7 @@ title: 设置 Django 开发环境
 slug: Learn_web_development/Extensions/Server-side/Django/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 现在，你知道什么是 Django。
 那么我们将向你展示如何在 Windows，Linux（Ubuntu）和 Mac OSX 上设置和测试 Django 开发环境—无论你常用哪种操作系统，本文能给你开发 Django 应用所需的一切。
@@ -134,7 +134,6 @@ python3 -V
 你可以轻松地从[python.org](https://www.python.org/) 安装 Python 3（以及 pip3 工具）:
 
 1. 下载所需的安装程序：
-
    1. 点击 <https://www.python.org/downloads/>
    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
@@ -158,7 +157,6 @@ pip3 list
 windows 默认不包含 Python, 但你可以从[python.org](https://www.python.org/) 轻松地安装它（以及 pip3 工具）：
 
 1. 下载所需版本：
-
    1. 点击 <https://www.python.org/downloads/>
    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
@@ -207,7 +205,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 你可以使用`which virtualenvwrapper.sh` 和 `which python3`命令为你的系统找到正确的安装位置。
 
@@ -249,7 +248,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **备注：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS`变量指向 Python3 的常规安装位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`脚本的一般安装位置。如果你在测试时发现*virtualenv*无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。
 >
 > 例如，在 macOS 上的一个安装测试中，启动文件中必须有以下几行代码：
 >

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`digest()`** 方法使用给定的{{glossary("hash function", "哈希函数")}}生成给定数据的*摘要*。摘要是从一些可变长的输入生成的短且具有固定长度的值。密码摘要应表现出抗冲突性，这意味着很难构造出具有相同摘要值的两个不同的输入。
+{{domxref("SubtleCrypto")}} 接口的 **`digest()`** 方法使用指定的{{glossary("hash function", "散列函数")}}生成给定数据的*摘要*。摘要是从一些可变长的输入生成的短且具有固定长度的值。密码学摘要应表现出抗冲突性，这意味着很难构造出具有相同摘要值的两个不同的输入。
 
 它以使用的摘要算法的标识符和计算摘要的数据为参数。并返回一个 {{jsxref("Promise")}}，会兑现数据的摘要值。
 
@@ -22,7 +22,7 @@ digest(algorithm, data)
 ### 参数
 
 - `algorithm`
-  - : 可以是一个字符串或一个仅有 `name` 字符串属性的对象。该字符串为使用的哈希函数的名称。支持的值有：
+  - : 可以是一个字符串或一个仅有 `name` 字符串属性的对象。该字符串为使用的散列函数的名称。支持的值有：
     - `"SHA-1"`（但是请不要在加密应用程序中使用它）
     - `"SHA-256"`
     - `"SHA-384"`
@@ -36,7 +36,7 @@ digest(algorithm, data)
 
 ## 支持的算法
 
-摘要算法（也称为{{glossary("Hash function", "哈希函数")}}）将任意长度的数据块转换为固定长度的输出（通常比输入短得多）。其在密码学中有多种应用。
+摘要算法（也称为{{glossary("hash function", "散列函数")}}）将任意长度的数据块转换为固定长度的输出（通常比输入短得多）。其在密码学中有多种应用。
 
 <table class="standard-table">
   <tbody>
@@ -129,7 +129,7 @@ const text =
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message); // 编码为（utf-8）Uint8Array
-  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // 计算消息的哈希值
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // 计算消息的散列值
   const hashArray = Array.from(new Uint8Array(hashBuffer)); // 将缓冲区转换为字节数组
   const hashHex = hashArray
     .map((b) => b.toString(16).padStart(2, "0"))

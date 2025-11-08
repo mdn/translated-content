@@ -3,7 +3,7 @@ title: 对象原型
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 原型是 JavaScript 对象相互继承特性的机制。在这篇文章中，我们将解释什么是原型，原型链如何工作，以及如何为一个对象设置原型。
 

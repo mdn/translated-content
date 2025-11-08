@@ -3,8 +3,6 @@ title: Fonctionnalités expérimentales dans Firefox
 slug: Mozilla/Firefox/Experimental_features
 ---
 
-{{FirefoxSidebar}}
-
 Cette page détaille les fonctionnalités expérimentales ou partiellement implémentées présentes dans Firefox. Cela inclut les fonctionnalités concernées par les standards web très récents ou en cours de construction. Les informations de cette page permettent de savoir quelles versions contiennent ces fonctionnalités, si elles sont activées par défaut et la _préférence_ qui peut être utilisée pour les activer ou les désactiver. Cela vous permet de tester les fonctionnalités avant leur sortie « générale ».
 
 Les nouvelles fonctionnalités sont d'abord introduites dans [Firefox Nightly](https://nightly.mozilla.org/) où elles sont activées par défaut la plupart du temps. Elles passent ensuite sur la version [Firefox Developer Edition](https://www.mozilla.org/fr/firefox/developer/) puis enfin dans la version finale (_release_). Lorsqu'une fonctionnalité est activée par défaut dans une version _release_, elle n'est plus considérée comme expérimentale et devrait être retiré de cette liste.
@@ -15,7 +13,7 @@ Les fonctionnalités expérimentales peuvent être activées ou désactivées vi
 
 ### L'élément \<dialog>
 
-L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) et les API du DOM associées permettent de créer des boîtes de dialogue modales en HTML. L'implémentation actuelle manque de finesse mais permet les fonctionnalités de base. Voir [le bug 840640](https://bugzilla.mozilla.org/show_bug.cgi?id=840640) pour plus de détails.
+L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) et les API du DOM associées permettent de créer des boîtes de dialogue modales en HTML. L'implémentation actuelle manque de finesse mais permet les fonctionnalités de base. Voir [le bug 840640](https://bugzilla.mozilla.org/show_bug.cgi?id=840640) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -55,7 +53,7 @@ L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) et les API du DO
 
 ### Attribut global inputmode
 
-L'implémentation de l'attribut global [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode) a été mise à jour afin de suivre la spécification WHATWG ([le bug 1509527](https://bugzilla.mozilla.org/show_bug.cgi?id=1509527)), mais d'autres changements sont encore nécessaires (par exemple, le rendre disponible pour le contenu `contenteditable`), voir [le bug 1205133](https://bugzilla.mozilla.org/show_bug.cgi?id=1205133) pour plus de détails.
+L'implémentation de l'attribut global [`inputmode`](/fr/docs/Web/HTML/Reference/Global_attributes/inputmode) a été mise à jour afin de suivre la spécification WHATWG ([le bug 1509527](https://bugzilla.mozilla.org/show_bug.cgi?id=1509527)), mais d'autres changements sont encore nécessaires (par exemple, le rendre disponible pour le contenu `contenteditable`), voir [le bug 1205133](https://bugzilla.mozilla.org/show_bug.cgi?id=1205133) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -220,7 +218,7 @@ Cette fonctionnalité affiche les caractères de contrôle (catégorie Unicode C
 
 ### Propriété initial-letter
 
-La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/initial-letter) fait partie du module de spécification [CSS3 Inline](https://drafts.csswg.org/css-inline/) et permet d'indiquer l'élévation (entre autres) des lettres initiales. Voir [le bug 1223880](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) pour plus de détails.
+La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/Reference/Properties/initial-letter) fait partie du module de spécification [CSS3 Inline](https://drafts.csswg.org/css-inline/) et permet d'indiquer l'élévation (entre autres) des lettres initiales. Voir [le bug 1223880](https://bugzilla.mozilla.org/show_bug.cgi?id=1223880) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -260,7 +258,7 @@ La propriété CSS [`initial-letter`](/fr/docs/Web/CSS/initial-letter) fait part
 
 ### Propriété aspect-ratio
 
-La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/aspect-ratio) est décrite dans le module de spécification [CSS4 Sizing](https://drafts.csswg.org/css-sizing-4/) et permet de créer des boîtes qui respectent des proportions (_aspect ratio_ en anglais) données. Voir [le bug 1639963](https://bugzilla.mozilla.org/show_bug.cgi?id=1639963) et [le bug 1646096](https://bugzilla.mozilla.org/show_bug.cgi?id=1646096) pour plus de détails.
+La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/Reference/Properties/aspect-ratio) est décrite dans le module de spécification [CSS4 Sizing](https://drafts.csswg.org/css-sizing-4/) et permet de créer des boîtes qui respectent des proportions (_aspect ratio_ en anglais) données. Voir [le bug 1639963](https://bugzilla.mozilla.org/show_bug.cgi?id=1639963) et [le bug 1646096](https://bugzilla.mozilla.org/show_bug.cgi?id=1646096) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -300,7 +298,7 @@ La propriété CSS [`aspect-ratio`](/fr/docs/Web/CSS/aspect-ratio) est décrite 
 
 ### Descripteur size-adjust
 
-Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/@font-face/size-adjust) est décrit dans le module de spécification [CSS5 Fonts](https://drafts.csswg.org/css-fonts-5/) et définit un facteur de multiplication pour les contours des glyphes et les métriques associées à la police. Cela facilite l'harmonisation lorsqu'on utilise plusieurs polices qui sont affichées avec le même corps. Voir [le bug 1698495](https://bugzilla.mozilla.org/show_bug.cgi?id=1698495) pour plus de détails.
+Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) est décrit dans le module de spécification [CSS5 Fonts](https://drafts.csswg.org/css-fonts-5/) et définit un facteur de multiplication pour les contours des glyphes et les métriques associées à la police. Cela facilite l'harmonisation lorsqu'on utilise plusieurs polices qui sont affichées avec le même corps. Voir [le bug 1698495](https://bugzilla.mozilla.org/show_bug.cgi?id=1698495) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -340,7 +338,7 @@ Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/@font-face/size-a
 
 ### Nombres seuls pour les proportions dans les requêtes média
 
-Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`number`](/fr/docs/Web/CSS/number)) pour exprimer le [ratio](/fr/docs/Web/CSS/ratio) lors de la définition d'une [requête média](/fr/docs/Web/CSS/CSS_media_queries). Voir [le bug 1565562](https://bugzilla.mozilla.org/show_bug.cgi?id=1565562) pour plus de détails.
+Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`number`](/fr/docs/Web/CSS/Reference/Values/number)) pour exprimer le [ratio](/fr/docs/Web/CSS/Reference/Values/ratio) lors de la définition d'une [requête média](/fr/docs/Web/CSS/CSS_media_queries). Voir [le bug 1565562](https://bugzilla.mozilla.org/show_bug.cgi?id=1565562) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -380,7 +378,7 @@ Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`numb
 
 ### Propriété backdrop-filter
 
-La propriété [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter) permet d'appliquer des effets de filtre à la zone située derrière un élément. Voir [le bug 1178765](https://bugzilla.mozilla.org/show_bug.cgi?id=1178765) pour plus de détails.
+La propriété [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdrop-filter) permet d'appliquer des effets de filtre à la zone située derrière un élément. Voir [le bug 1178765](https://bugzilla.mozilla.org/show_bug.cgi?id=1178765) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -462,7 +460,7 @@ Cette fonctionnalité ajoute la prise en charge pour [les dispositions « en ma�
 
 ### Caractéristique média prefers-contrast
 
-La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast) est utilisée afin de déterminer si une utilisatrice ou un utilisateur indiqué une préférence pour un contraste élevé ou non. Voir [le bug 1506364](https://bugzilla.mozilla.org/show_bug.cgi?id=1506364) pour plus de détails.
+La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) est utilisée afin de déterminer si une utilisatrice ou un utilisateur indiqué une préférence pour un contraste élevé ou non. Voir [le bug 1506364](https://bugzilla.mozilla.org/show_bug.cgi?id=1506364) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -504,7 +502,7 @@ La caractéristique média [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-
 
 ### Propriété math-style
 
-La propriété [`math-style`](/fr/docs/Web/CSS/math-style) indique si les équations MathML doivent être affichées avec une hauteur normale ou compacte. Voir [le bug 1665975](https://bugzilla.mozilla.org/show_bug.cgi?id=1665975) pour plus de détails.
+La propriété [`math-style`](/fr/docs/Web/CSS/Reference/Properties/math-style) indique si les équations MathML doivent être affichées avec une hauteur normale ou compacte. Voir [le bug 1665975](https://bugzilla.mozilla.org/show_bug.cgi?id=1665975) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -582,7 +580,7 @@ La méthode `at()` qui permet d'utiliser une indexation relative a été ajouté
 
 ### Champs de classe privés
 
-Voir la page [sur les champs de classe privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_properties) pour plus d'informations.
+Voir la page [sur les champs de classe privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements) pour plus d'informations.
 
 <table class="standard-table">
   <thead>
@@ -1293,7 +1291,7 @@ Cette fonctionnalité ajoute les méthodes [`appendBufferAsync()`](/fr/docs/Web/
 
 #### Prise en charge du format AVIF (AV1 Image File)
 
-Avec cette fonctionnalité, Firefox prend en charge le format [AV1 Image File (AVIF)](/fr/docs/Web/Media/Formats/Image_types#avif). Il s'agit d'un format d'image tirant parti des algorithmes de compression vidéo AV1 pour réduire la taille des images. Voir [le bug 1443863](https://bugzilla.mozilla.org/show_bug.cgi?id=1443863) pour plus de détails.
+Avec cette fonctionnalité, Firefox prend en charge le format [AV1 Image File (AVIF)](/fr/docs/Web/Media/Guides/Formats/Image_types#avif). Il s'agit d'un format d'image tirant parti des algorithmes de compression vidéo AV1 pour réduire la taille des images. Voir [le bug 1443863](https://bugzilla.mozilla.org/show_bug.cgi?id=1443863) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -1506,7 +1504,7 @@ Cela modifie également l'avertissement de la console : si la mise à niveau ré
 
 #### En-tête Feature-Policy
 
-[Feature-Policy](/fr/docs/Web/HTTP/Permissions_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
+[Feature-Policy](/fr/docs/Web/HTTP/Guides/Permissions_Policy) est un en-tête HTTP qui permet de choisir l'activation, la désactivation ou certaines des fonctionnalités et API dans le navigateur. Cet en-tête est similaire au CSP mais permet de contrôler des fonctionnalités plutôt que des traits liés à la sécurité.
 
 > [!NOTE]
 >

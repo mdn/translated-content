@@ -47,7 +47,6 @@ svg {
   - : Этот атрибут по умолчанию ссылается на пример шаблона для `<pattern>`
     _Value type_: [**\<URL>**](/docs/Web/SVG/Content_type#URL); _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("patternContentUnits")}}
-
   - : Этот атрибут определяет систему координат содержимого {{ SVGElement("pattern") }}.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
@@ -73,7 +72,6 @@ svg {
   - : Этот атрибут определяет смещение координаты x мозаичного изображения.
     _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-
   - : Этот атрибут ссылается на пример шаблона, предоставляющего значения по умолчанию для атрибутов `<pattern>`.
     _Value type_: [**\<URL>**](/docs/Web/SVG/Content_type#URL); _Default value_: _none_; _Animatable_: **yes**
 

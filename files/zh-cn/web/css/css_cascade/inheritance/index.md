@@ -3,8 +3,6 @@ title: 继承
 slug: Web/CSS/CSS_cascade/Inheritance
 ---
 
-{{CSSRef}}
-
 在 css 中，每个 [CSS 属性定义](/zh-CN/docs/Web/CSS/Reference)的概述都指出了这个属性是默认继承的 ("Inherited: Yes") 还是默认不继承的 ("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。
 
 ## 继承属性
@@ -69,9 +67,8 @@ font {
 - [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
 - [层叠和继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -80,7 +77,6 @@ font {
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
@@ -88,5 +84,5 @@ font {
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

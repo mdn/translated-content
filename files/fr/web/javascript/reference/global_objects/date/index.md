@@ -38,7 +38,6 @@ Ainsi, on dispose de méthodes permettant d'obtenir ou de définir les différen
 - {{jsxref("Date.now()")}}
   - : Renvoie la valeur numérique correspondant au moment présent sous la forme du nombre de millisecondes écoulées depuis le premier janvier 1970 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
 - {{jsxref("Date.parse()")}}
-
   - : Analyse la représentation textuelle d'une date et renvoie le nombre de millisecondes écoulées entre cette date et le premier janvier 1970, 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
 
     > [!NOTE]

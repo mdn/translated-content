@@ -6,17 +6,17 @@ original_slug: Web/Guide
 
 **Estes artigos fornecem informações para ajudá-lo a fazer uso de tecnologias e APIs específicas.**
 
-- [Guia do desenvolvedor HTML](/pt-BR/docs/Learn/HTML)
+- [Guia do desenvolvedor HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d)
   - : **HyperText Markup Language** **(HTML)** é a linguagem principal de praticamente todo o conteúdo da Web. Muito do que você vê na tela do seu navegador é descrito, fundamentalmente, em HTML.
-- [Guia do desenvolvedor CSS](/pt-BR/docs/Learn/CSS)
+- [Guia do desenvolvedor CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : Cascading Style Sheets (CSS) é uma linguagem de folhas de estilo utilizada para descrever a apresentação de um documento escrito em HTML.
-- [Distribuição de áudio e vídeo](/pt-BR/docs/Learn/CSS)
+- [Distribuição de áudio e vídeo](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : Podemos distribuir conteúdos de áudio e vídeo na web de muitas maneiras, estendendo de uma mídia 'estática' para streams adaptativas e vivas. Este artigo propõe explorar a variedade de mecanismos de distribuição de mídia baseados na web e sua compatibilidade com os navegadores mais populares.
 - [Manipulação de áudio e vídeo](/pt-BR/docs/Web/Media/Audio_and_video_manipulation)
   - : A beleza da web é que você pode combinar tecnologias para criar novas formas. Possuir áudio nativo e vídeo no navegador significa que você pode usar esses data streams com tecnologias semelhantes ao {{htmlelement("canvas")}}, [WebGL](/pt-BR/docs/Web/API/WebGL_API) or [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API) para modificar o áudio e vídeo diretamente. Por exemplo, adicionando efeitos de reverb/compression ( ressonância/compressão) para áudios, ou filtros de grayscale/sepia (escala cinza/sépia) para vídeos. Esse artigo proporciona uma referência para explicar tudo o que você precisa para fazê-los.
 - [Guia de eventos do desenvolvedor](/pt-BR/docs/Web/Events)
   - : Eventos referem-se tanto à um padrão de design, utilizado para o tratamento assíncrono de vários incidentes que ocorrem durante a vida de uma página web, como para a nomeação, caracterização, e uso de um largo número de ocorrências de diferentes tipos de mecanismos de entregadas da web
-- [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests)
   - : AJAX é um termo que define um grupo de tecnologias que permitem as aplicações web realizarem rapidamente atualizações incrementais na interface do usuário sem ser necessário recarregar a página inteira do navegador. Isso faz com que a aplicação seja mais rápida e mais responsiva as ações do usuário.
 - [Gráficos na Web](/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
   - : Web sites modernos e aplicativos, muitas vezes precisam apresentar gráficos de diferentes graus de satisfação.

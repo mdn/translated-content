@@ -58,9 +58,7 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
 ### Fora
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
-
   - : essas palavras-chave especificam o tipo de exibição externa do elemento, que é essencialmente sua função no layout de fluxo:
-
     - `block`
       - : O elemento gera uma caixa de elemento de bloco, gerando quebras de linha antes e depois do elemento quando no fluxo normal.
     - `inline`
@@ -73,11 +71,8 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
 ### Lado de dentro
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-
   - : Estas palavras-chave especificam o tipo de exibição interna do elemento, que define o tipo de contexto de formatação em que seu conteúdo é apresentado (supondo que seja um elemento não substituído):
-
     - `flow` {{Experimental_Inline}}
-
       - : O elemento apresenta seu conteúdo usando o layout de fluxo (layout de bloco e linha).
 
         Se seu tipo de exibição externa for `inline` ou `run-in`, e estiver participando de um bloco ou contexto de formatação inline, ele gerará uma caixa inline. Caso contrário, gera uma caixa de contêiner de bloco.
@@ -116,10 +111,8 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 ### Interno
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
-
   - : Alguns modelos de layout como `table` e `ruby` possuem uma estrutura interna complexa, com vários papéis diferentes que seus filhos e descendentes podem preencher.
     Esta seção define os valores de exibição "internos", que só têm significado dentro desse modo de layout específico.
-
     - `table-row-group`
       - : Esses elementos se comportam como {{HTMLElement("tbody")}} elementos HTML.
     - `table-header-group`
@@ -148,11 +141,8 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 ### Caixa
 
 - {{CSSxRef("&lt;display-box&gt;")}}
-
   - : Esses valores definem se um elemento gera caixas de exibição.
-
     - `contents`
-
       - : Esses elementos não produzem uma caixa específica por si mesmos. Eles são substituídos por sua pseudocaixa e suas caixas filhas. Observe que a especificação CSS Display Level 3 define como o valor `contents` deve afetar os "elementos incomuns" — elementos que não são renderizados puramente por conceitos de caixa CSS, como elementos substituídos. Consulte [Apêndice B: Efeitos da exibição: conteúdo sobre elementos incomuns](https://drafts.csswg.org/css-display/#unbox) para obter mais detalhes.
 
         _Devido a um bug nos navegadores, isso removerá o elemento da árvore de acessibilidade - os leitores de tela não verão o que está dentro. Consulte a seção [Preocupações de acessibilidade](#accessibility_preocupações) abaixo para obter mais detalhes._
@@ -164,29 +154,23 @@ Isso pode ser usado junto com {{CSSxRef("list-style-type")}} e {{CSSxRef("list-s
 ### Pré-composto
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
-
   - : CSS 2 usava uma palavra-chave única, sintaxe pré-composta para a propriedade `display`, exigindo palavras-chave separadas para variantes de nível de bloco e nível inline do mesmo modo de layout.
-
     - `inline-block`
-
       - : O elemento gera uma caixa de elemento de bloco que fluirá com o conteúdo ao redor como se fosse uma única caixa em linha (comportando-se como um elemento substituído faria).
 
         É equivalente a `inline flow-root`.
 
     - `inline-table`
-
       - : O valor `inline-table` não possui um mapeamento direto em HTML. Ele se comporta como um elemento HTML {{HTMLElement("table")}}, mas como uma caixa embutida, em vez de uma caixa em nível de bloco. Dentro da caixa da tabela há um contexto de nível de bloco.
 
         É equivalente a `tabela inline`.
 
     - `inline-flex`
-
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo flexbox.
 
         É equivalente a `inline flex`.
 
     - `inline-grid`
-
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo de grade.
 
         É equivalente a `inline grid`.

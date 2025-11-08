@@ -92,7 +92,7 @@ const aliceTiming = {
 - 你会注意到的另一件事是，它是 `iterations`，而不是 `iteration-count`。
 
 > [!NOTE]
-> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
+> CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
 
 #### 整合这些特性
 
@@ -336,7 +336,8 @@ const endGame = () => {
 };
 ```
 
-> **备注：** `getAnimations()` and `effect` are not fully supported as of this writing, but the polyfill does support them today.
+> [!NOTE]
+> `getAnimations()` and `effect` are not fully supported as of this writing, but the polyfill does support them today.
 
 ## 回调和 promise
 

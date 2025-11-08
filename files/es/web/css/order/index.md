@@ -3,13 +3,12 @@ title: order
 slug: Web/CSS/order
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad [CSS](/es/docs/Web/CSS) **`order`** especifica el orden utilizado para disponer los elementos en su contenedor flexible. Los elementos estarán dispuestos en orden ascendente según el valor de `order`. Los elementos con el mismo valor de `order` se dispondrán en el orden en el cual aparecen en el código fuente.
 
-> **Nota:** `order` sólo pretende afectar el orden visual de los elementos y no su orden lógico u orden de tabulación. **`order`** no se debe usar en un medio no visual tal como un speech (sintetizador de voz).
+> [!NOTE]
+> `order` sólo pretende afectar el orden visual de los elementos y no su orden lógico u orden de tabulación. **`order`** no se debe usar en un medio no visual tal como un speech (sintetizador de voz).
 
 {{cssinfo}}
 

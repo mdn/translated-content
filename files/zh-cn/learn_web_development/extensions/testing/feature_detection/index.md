@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 特性检测包括确定浏览器是否支持某个代码块，并根据支持（或不支持）运行不同的代码，这样浏览器就能始终提供正常的使用体验，而不会在某些浏览器中崩溃或出错。本文详细介绍了如何编写自己的简单特征检测、如何使用库加快实现速度，以及原生的特征检测特性（如 `@supports`）。
 
@@ -59,7 +59,7 @@ if ("geolocation" in navigator) {
 
 你可以通过在 JavaScript 中测试[_元素.style.属性_](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来检测 CSS 特性。
 
-一个经典的例子可能是在浏览器中测试[子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)的支持情况。对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 属性的 `subgrid` 值的浏览器来说，我们可以在布局中使用子网格。对于不支持的浏览器，我们可以使用常规的网格布局，虽然不太酷，但也能正常工作。
+一个经典的例子可能是在浏览器中测试[子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)的支持情况。对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/Reference/Properties/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/Reference/Properties/grid-template-rows) 属性的 `subgrid` 值的浏览器来说，我们可以在布局中使用子网格。对于不支持的浏览器，我们可以使用常规的网格布局，虽然不太酷，但也能正常工作。
 
 以此为例，我们可用在支持该值的情况下包含子网格样式表，而在不支持的情况下包含常规网格样式表。要实现这一点，我们可以在 HTML 文件的 head 部分包含两个样式表：一个包含所有的样式，另一个在不支持子网格的情况下实现默认的布局。
 
@@ -131,7 +131,6 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 常见的探测特性的模式包括：
 
 - 对象的成员
-
   - : 检查一个特定的方法或属性（通常是使用 API 的入口或你正在检测的其他特性）是否存在于其父 `Object` 中。
 
     我们前面的例子使用这种模式（通过测试 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation` 成员）来检测 [Geolocation](/zh-CN/docs/Web/API/Geolocation_API) 的支持：
@@ -143,7 +142,6 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
     ```
 
 - 元素的属性
-
   - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，然后检查其上是否存在属性。
 
     这个例子展示了一种检测 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 支持的方法：
@@ -161,11 +159,9 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
     > 上例中的双非运算符（`!!`）是一种将返回值强制转换为“适当的”布尔值的方法，而不是{{glossary("Truthy","真值")}}/{{glossary("Falsy","假值")}}，后者可能使结果偏离。
 
 - 方法在元素上的特定返回值
-
   - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，然后检查该元素是否存在方法。如果有的话，检查它的返回值。请参阅[深入了解 HTML 视频格式检测](https://diveinto.html5doctor.com/detect.html#video-formats)中的特性测试，了解这种模式的一个例子。
 
 - 元素保留分配的属性值
-
   - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，将一个属性设置为特定值，然后检查该值是否被保留。关于这种模式的例子，请参见[深入了解 HTML \<input> 类型检测](https://diveinto.html5doctor.com/detect.html#input-types)中的特性测试。
 
 不过要记住，有些特征是无法检测到的。在这种情况下，你需要使用其他的方法，例如使用 {{Glossary("Polyfill", "polyfill")}}。

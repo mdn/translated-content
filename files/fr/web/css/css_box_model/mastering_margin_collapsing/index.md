@@ -1,47 +1,48 @@
 ---
 title: Fusion des marges
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+l10n:
+  sourceCommit: c9fc9aa7a65c5109e64c0f7b6d9e732dd812973f
 ---
 
-{{CSSRef}}Les marges [haute](/fr/docs/Web/CSS/margin-top) et [basse](/fr/docs/Web/CSS/margin-bottom) des blocs sont parfois fusionnées en une seule marge dont la taille est la plus grande des deux marges fusionnées. C'est ce qu'on appelle **la fusion des marges**.
+Les marges [haute](/fr/docs/Web/CSS/Reference/Properties/margin-top) et [basse](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) des blocs sont parfois combinées (fusionnées) en une seule marge dont la taille est la plus grande des marges individuelles (ou simplement l'une d'elles si elles sont égales), un comportement appelé **fusion des marges**. Notez que les marges des éléments [flottants](/fr/docs/Web/CSS/Reference/Properties/float) et [absolument positionnés](/fr/docs/Web/CSS/Reference/Properties/position#types_de_positionnement) ne fusionnent jamais.
 
-La fusion des marges se produit si on a l'un de ces trois cas :
+La fusion des marges se produit dans trois cas principaux&nbsp;:
 
-- Des éléments voisins adjacents
+- Parents adjacents
+  - : Les marges de frères et sœurs adjacents sont fusionnées (sauf lorsque le second doit être [écarté](/fr/docs/Web/CSS/Reference/Properties/clear) des flottants).
+- Aucun contenu ne sépare le parent et les descendants
+  - : Les marges verticales entre un bloc parent et ses descendants peuvent fusionner. Cela se produit lorsqu'il n'y a aucun contenu séparateur entre eux. Plus précisément, cela arrive dans deux cas principaux&nbsp;:
+    - La {{cssxref("margin-top")}} d'un parent fusionne avec la {{cssxref("margin-top")}} de son premier descendant en flux, sauf si le parent possède une {{cssxref("border-top")}}, une {{cssxref("padding-top")}}, contient du contenu en ligne (comme du texte), ou si une _[clearance](/fr/docs/Web/CSS/Reference/Properties/clear)_ est appliquée.
+    - La {{cssxref("margin-bottom")}} d'un parent fusionne avec la {{cssxref("margin-bottom")}} de son dernier descendant en flux, sauf si le parent a une {{cssxref("height")}} ou {{cssxref("min-height")}} définie, une {{cssxref("border-bottom")}}, ou une {{cssxref("padding-bottom")}}.
 
-  - : Les marges des éléments voisins adjacents sont fusionnés (sauf quand le dernier voisin doit passer à la ligne pour [dégager](/fr/docs/Web/CSS/clear) les flottements). Ainsi :
+    Dans les deux cas, créer un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) sur le parent empêche aussi ses marges de fusionner avec celles de ses enfants.
 
-    ```html
-    <p>La marge basse de ce paragraphe est fusionnée…</p>
-    <p>… avec la marge haute de celui-ci.</p>
-    ```
+- Blocs vides
+  - : S'il n'y a ni bordure, ni remplissage, ni contenu en ligne, ni {{cssxref("height")}}, ni {{cssxref("min-height")}} pour séparer la {{cssxref("margin-top")}} d'un bloc de sa {{cssxref("margin-bottom")}}, alors ses marges haute et basse fusionnent.
 
-- Aucun contenu séparant le parent et ses descendants
-  - : S'il n'y a aucune bordure, remplissage, contenu en ligne (_inline_), lorsqu' un [contexte de formatage de blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) est créé ou _[dégagement](/fr/docs/Web/CSS/clear)_ pour séparer la marge haute d'un bloc avec la marge haute d'un ou plusieurs des blocs descendants ou quand il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}}, {{cssxref("min-height")}} ou {{cssxref("max-height")}} pour séparer la marge basse d'un bloc avec la marge basse d'un ou plusieurs des blocs descendants, ces marges sont fusionnées. La marge fusionnée termine en dehors de l'élément parent.
-- Des blocs vides
-  - : S'il n'y a aucune bordure, remplissage, contenu en ligne, {{cssxref("height")}} ou {{cssxref("min-height")}} pour séparer la marge haute d'un bloc de sa marge basse, ces deux marges sont fusionnées.
+À noter&nbsp;:
 
-On peut avoir des cas de fusion plus complexes lorsque ces cas de figures sont combinés.
-
-Ces règles s'appliquent également lorsque les marges sont égales à 0. Ainsi, la marge d'une descendant finit toujours en dehors de l'élément parent (selon la deuxième règle vue ci-avant) quelle que soit la marge de l'élément parent (nulle ou non).
-
-Lorsqu'on manipule des marges négatives, la taille de la marge fusionnée est la somme de la marge positive la plus grande et de la marge négative la plus petite (celle dont la valeur est plus éloignée de 0).
-
-Les marges des éléments [flottants](/fr/docs/Web/CSS/float) et [positionnés de façon absolue](/fr/docs/Web/CSS/position) ne sont jamais fusionnées.
+- Une fusion de marges plus complexe (de plus de deux marges) se produit lorsque les cas ci-dessus sont combinés.
+- Ces règles s'appliquent même aux marges nulles, donc la marge d'un·e descendant·e se retrouve à l'extérieur de son parent (selon les règles ci-dessus) que la marge du parent soit nulle ou non.
+- Lorsque des marges négatives sont impliquées, la taille de la marge fusionnée est la somme de la plus grande marge positive et de la plus petite (la plus négative) marge négative.
+- Lorsque toutes les marges sont négatives, la taille de la marge fusionnée est la plus petite (la plus négative) marge. Cela s'applique aussi bien aux éléments adjacents qu'aux éléments imbriqués.
+- La fusion des marges ne concerne que la direction verticale.
+- Les marges ne fusionnent pas dans un conteneur dont `display` est défini sur `flex` ou `grid`.
 
 ## Exemples
 
 ### HTML
 
 ```html
-<p>La marge basse de ce paragraphe est fusionnée…</p>
+<p>La marge basse de ce paragraphe est fusionnée …</p>
 <p>
   … avec la marge haute de ce paragraphe. On a donc une marge de
   <code>1.2rem</code> entre les deux.
 </p>
 
 <div>
-  Cet élément contient deux paragraphes !
+  Cet élément contient deux paragraphes&nbsp;!
   <p>
     Celui-ci a une marge de <code>.4rem</code> par rapport au texte ci-dessus.
   </p>
@@ -51,7 +52,7 @@ Les marges des éléments [flottants](/fr/docs/Web/CSS/float) et [positionnés d
   </p>
 </div>
 
-<p>Bip bap bop.</p>
+<p>Je suis à <code>2rem</code> sous l'élément ci-dessus.</p>
 ```
 
 ### CSS
@@ -70,12 +71,24 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples','100%',250)}}
-
-## Spécifications
-
-{{Specifications}}
+{{EmbedLiveSample('exemples', 'auto', 350)}}
 
 ## Voir aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
+- Concepts clés CSS&nbsp;:
+  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Règles at](/fr/docs/Web/CSS/CSS_syntax/At-rules)
+  - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
+  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Modes de mise en page](/fr/docs/Glossary/Layout_mode)
+  - [Modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - Valeurs
+    - [Valeurs initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
+    - [Valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
+    - [Valeurs utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
+    - [Valeurs réelle](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - {{glossary("Replaced elements", "Éléments remplacés")}}

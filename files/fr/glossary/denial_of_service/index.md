@@ -1,10 +1,29 @@
 ---
-title: Déni de service
+title: Déni de service (DoS)
 slug: Glossary/Denial_of_Service
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Le **Déni de Service** (ou <abbr>DoS</abbr> pour<i lang="en">Denial of Service</i> en anglais) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{Glossary("server", "serveur")}} en surchargeant celui-ci de requêtes.
 
-Le déni de service ou DoS («&nbsp;<i lang="en">**D**enial **o**f **S**ervice</i>&nbsp;» en anglais) est une catégorie d'attaques réseau. Il consomme les ressources disponibles d'un serveur, souvent en surchargeant celui-ci de requêtes, ce qui le fait fonctionner plus lentement ou le rend indisponible pour ses utilisatrices et utilisateurs légitimes.
+Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
 
-Voir [attaque DOS](/fr/docs/Glossary/DOS_attack) pour plus d'informations.
+Il existe également des attaques {{Glossary("Distributed Denial of Service", "Déni de service distribué (DDoS)")}} dans lesquelles une multitude de serveurs sont utilisés pour épuiser la capacité de calcul d'un ordinateur attaqué.
+
+### Types d'attaques DoS
+
+Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'attaque. Voici une liste non exhaustive de types d'attaques <abbr>DoS</abbr>&nbsp;:
+
+- attaque sur la bande passante
+- saturation par des requêtes sur des services
+- attaque SYN flooding
+- attaque ICMP flood
+- attaque pair-à-pair
+- attaque DoS permanente
+- attaque par saturation au niveau application
+
+## Voir aussi
+
+- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_déni_de_service) sur Wikipédia
+- [Déni de service <sup>(angl.)</sup>](https://www.owasp.org/index.php/Denial_of_Service) sur OWASP

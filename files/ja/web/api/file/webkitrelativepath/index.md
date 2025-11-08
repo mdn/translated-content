@@ -3,12 +3,12 @@ title: "File: webkitRelativePath プロパティ"
 short-title: webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 l10n:
-  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
 
-**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、[`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
+**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、{{HTMLElement("input")}} 要素に [`webkitdirectory`](/ja/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性が設定されている場合に、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
 
 ## 値
 
@@ -21,7 +21,7 @@ l10n:
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <output id="output"></output>
 ```
 
@@ -36,9 +36,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
 
   for (const file of files) {

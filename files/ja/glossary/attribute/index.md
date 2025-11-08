@@ -23,5 +23,5 @@ slug: Glossary/Attribute
 
 ### 技術リファレンス
 
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
-- [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
+- [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)

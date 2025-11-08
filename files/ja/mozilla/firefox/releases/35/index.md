@@ -3,8 +3,6 @@ title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -21,32 +19,29 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
 ### CSS
 
-- [`mask-type`](/ja/docs/Web/CSS/mask-type) プロパティをデフォルトで有効にしました ([バグ 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519))。
-- [`filter`](/ja/docs/Web/CSS/filter) プロパティをデフォルトで有効にしました ([バグ 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180))。
-- [`@font-face`](/ja/docs/Web/CSS/@font-face) @ 規則で WOFF2 フォントをサポートしました ([バグ 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737))。
+- [`mask-type`](/ja/docs/Web/CSS/Reference/Properties/mask-type) プロパティをデフォルトで有効にしました ([バグ 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519))。
+- [`filter`](/ja/docs/Web/CSS/Reference/Properties/filter) プロパティをデフォルトで有効にしました ([バグ 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180))。
+- [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) @ 規則で WOFF2 フォントをサポートしました ([バグ 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737))。
 - [`symbols()`](/ja/docs/Web/CSS/symbols "この項目についての文書はまだ書かれていません。書いてみませんか？") 関数記法をサポートしました ([バグ 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168))。
 - CSS Font Loading API を実装しました ([バグ 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497))。
-- コンボボックスで [`-moz-appearance`](/ja/docs/Web/CSS/appearance) に値 `none` を指定すると、ドロップダウンボタンを表示しないようになりました ([バグ 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849))。
+- コンボボックスで [`-moz-appearance`](/ja/docs/Web/CSS/Reference/Properties/appearance) に値 `none` を指定すると、ドロップダウンボタンを表示しないようになりました ([バグ 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849))。
 - 他ブラウザーに合致させるため、プロパティへのアクセス手段である `element.style["css-property-name"]` を追加しました ([バグ 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension'))。
 
 ### HTML
 
-- [`<body>`](/ja/docs/Web/HTML/Element/body)要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530))。
+- [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body)要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530))。
 
 ### JavaScript
 
 - [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) 宣言の「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」を実装しました。ES6 の `let` のセマンティクスに合わせて、以下の状況ではエラーが発生します。[ニュースグループでの発表](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)や [バグ 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let') もご覧ください。
-
   - 関数ボディの同一スコープ内で、`let` を使用して既存の変数や引数を再度宣言すると構文エラーになります。
   - 関数ボディで `let` を使用して宣言した変数を、その宣言に到達して評価される前に使用すると、実行時エラーが発生します。
 
 - 最近の仕様の変更に合致するよう、ES6 の [`Symbols`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (Nightly チャンネルのみ有効) を更新しました ([バグ 1042602](https://bugzilla.mozilla.org/show_bug.cgi?id=1042602)):
-
   - `String(Symbol("1"))` で [`TypeError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypeError) が発生しないようになりました。代わりに文字列 (`"Symbol(1)"`) が返ります ([バグ 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396))。
 
 - [_TypedArray_ のさまざまなコンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)が `[[Prototype]]` として、ES6 で `%TypedArray%` と示されている単一の関数を持つようになりました (しかし、他には直接公開されません)。各 Typed Array のプロトタイプは、`%TypedArray%.prototype` から継承します。(`%TypedArray%` および `%TypedArray%.prototype` は、それぞれ [`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) および [`Object.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object) から継承しますので、Typed Array のコンストラクターやインスタンスはこれらのオブジェクトに存在するプロパティを持ちます) Typed Array 関数のプロパティは `%TypedArray%.prototype` 上に存在して、Typed Array で動作するようになります。詳しくは [_TypedArray_](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) や [バグ 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) をご覧ください。
 - ES6 の、[オブジェクトリテラルを使用して行うプロトタイプミューテーション](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation)を実装しました ([バグ 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853))。
-
   - オブジェクトリテラル構文内では、`__proto__:value` として指定するメンバーが 1 つだけであれば `[[Prototype]]` のミューテーションを行うようになりました。
   - `__proto__() {}` のようなメソッドメンバーは、`[[Prototype]]` をオーバーライトしないようになりました。
 
@@ -70,12 +65,11 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 - 設定項目 `network.websocket.enabled` (既定値は `true`) を削除しました。今後は [Websocket](/ja/docs/Web/API/WebSockets_API) API を無効化できません ([バグ 1091016](https://bugzilla.mozilla.org/show_bug.cgi?id=1091016))。
 - [`Window.crypto`](/ja/docs/Web/API/Window/crypto) の非標準メソッドおよび非標準プロパティを削除しました ([バグ 1030963](https://bugzilla.mozilla.org/show_bug.cgi?id=1030963))。標準の WebCrypto API で定義されているメソッドおよびプロパティのみが残ります。
 - WebGL 2.0 の実験的な実装を進めています!
-
   - [`WebGL2RenderingContext.copyBufferSubData()`](/ja/docs/Web/API/WebGL2RenderingContext/copyBufferSubData) メソッドを実装しました ([バグ 1048668](https://bugzilla.mozilla.org/show_bug.cgi?id=1048668))。
 
 ### MathML
 
-- 文字が重ねて置かれる場合 (例えば数学のハット記号がついた、ドットがない i) に、OpenType の `dtls` 機能 (デフォルト CSS スタイルシートの [`font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings) による) が MathML 要素へ自動的に適用されるようになりました。
+- 文字が重ねて置かれる場合 (例えば数学のハット記号がついた、ドットがない i) に、OpenType の `dtls` 機能 (デフォルト CSS スタイルシートの [`font-feature-settings`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings) による) が MathML 要素へ自動的に適用されるようになりました。
 
 ### SVG
 

@@ -1,12 +1,9 @@
 ---
 title: patternUnits
 slug: Web/SVG/Reference/Attribute/patternUnits
-original_slug: Web/SVG/Attribute/patternUnits
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`patternUnits`** 属性は、 {{ SVGElement("pattern") }} 要素の幾何プロパティにどの座標系を使用するかを示します。
 
@@ -56,9 +53,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
-## pattern
+## 要素
+
+この属性は、下記で示す SVG 要素で使用することができます。
+
+### `<pattern>`
 
 {{SVGElement('pattern')}} の場合、 `patternUnits` は要素の幾何プロパティ（{{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }}, {{ SVGAttr("height") }}）に使用する座標系を定義します。
 
@@ -82,7 +83,7 @@ svg {
 - `userSpaceOnUse`
   - : この値は、幾何プロパティのすべての座標が、パターンが適用されたときに定義されたユーザー座標系を参照することを示します。
 - `objectBoundingBox`
-  - : この値は、幾何プロパティのすべての座標が、パターンが適用される要素のバウンディングボックスの分数またはパーセント値を表します。バウンディングボックスは {{ SVGElement("pattern") }} のコンテンツが "`0 0 1 1`" {{ SVGAttr("viewBox") }} にバインドされているのと同じと考えることができます。
+  - : この値は、幾何プロパティのすべての座標が、パターンが適用される要素のバウンディングボックスの分数またはパーセント値を表します。バウンディングボックスは {{ SVGElement("pattern") }} のコンテンツが `"0 0 1 1"` {{ SVGAttr("viewBox") }} にバインドされているのと同じと考えることができます。
 
 ## 仕様書
 

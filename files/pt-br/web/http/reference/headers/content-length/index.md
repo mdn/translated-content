@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Length
 original_slug: Web/HTTP/Headers/Content-Length
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de entidade **`Content-Length`** indica o tamanho do corpo da entidade, em bytes, enviado ao destinatário.
 
 <table class="properties">

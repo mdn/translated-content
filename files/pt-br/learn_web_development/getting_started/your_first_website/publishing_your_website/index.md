@@ -18,8 +18,8 @@ Publicar um site não é um tópico simples, principalmente porque há muitas ma
 
 Para ter mais controle sobre o conteúdo e a aparência do site, a maioria das pessoas escolhe comprar hospedagem na web e um nome de domínio:
 
-- Hospedagem é um espaço para arquivos alugado no [servidor](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) de uma compania de hospedagem. O servidor disponibiliza o conteúdo do site para os usuários que o visitam.
-- Um [nome de domínio](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) é o endereço único onde pessoas encontram seu site, como `http://www.mozilla.org`, ou `http://www.bbc.co.uk`. Você aluga seu nome de domínio por tantos anos quanto desejar por meio de um **registrador de domínio**.
+- Hospedagem é um espaço para arquivos alugado no [servidor](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) de uma compania de hospedagem. O servidor disponibiliza o conteúdo do site para os usuários que o visitam.
+- Um [nome de domínio](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) é o endereço único onde pessoas encontram seu site, como `http://www.mozilla.org`, ou `http://www.bbc.co.uk`. Você aluga seu nome de domínio por tantos anos quanto desejar por meio de um **registrador de domínio**.
 
 Muitos sites profissionais ficam online dessa maneira.
 
@@ -39,7 +39,7 @@ Você vai precisar ainda de um programa de {{Glossary("FTP", "Protocolo de Trans
 Algumas ferramentas permitem que você publique seu site online:
 
 - [Github](https://github.com/) é um site de "codificação social". Ele permite que você faça upload de repositórios de código para armazenamento no **sistema de controle de versão** [Git](http://git-scm.com/)**.** Você pode então colaborar em projetos de código, e o sistema é open-source por padrão, o que significa que todo mundo pode encontrar seu código Github, usá-lo, aprender com ele e se aprimorar. O Gitub tem um recurso muito útil chamado [GitHub Pages](https://pages.github.com/), que permite expor o código do site ao vivo na web.
-- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) Para maiores informações.
+- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) Para maiores informações.
 
 Diferente da maioria das hospedagens, essas ferramentas geralmentre são gratuitas, mas você tem um conjunto limitado de recursos.
 
@@ -78,8 +78,8 @@ Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/e
 
 ## Leitura complementar
 
-- [O que é um servidor web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [O que é um servidor web](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- [Entendendo nomes de domínio](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
 - [Quanto custa fazer algo na web?](/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web)
 - [Publicar um site](https://www.codecademy.com/learn/deploy-a-website): Um bom tutorial da Codecademy que vai um pouco além e mostra algumas técnicas adicionais.
 - [Hospedagem baratas ou gratuitas de sites estáticos](https://alignedleft.com/resources/cheap-web-hosting), por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.

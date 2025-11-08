@@ -3,8 +3,6 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad CSS **`background-attachment`** determina si la posición de la imagen de fondo será **fija** dentro de la pantalla o **se desplazará** con su bloque contenedor.

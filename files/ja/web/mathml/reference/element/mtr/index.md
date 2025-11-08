@@ -18,7 +18,6 @@ MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElem
 - groupalign
 
   href
-
   - : Used to set a hyperlink to a specified URI.
 
 - mathbackground

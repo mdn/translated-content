@@ -6,7 +6,7 @@ original_slug: Web/Media/images
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
-{{Glossary("HTML")}} の {{HTMLElement("img")}} 要素で HTML 文書に画像を埋め込むことができ、 {{HTMLElement("picture")}} 要素を使用すると[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)を使用することができます。このガイドでは、ウェブサイトへの画像の追加を扱うリソースへのリンクを紹介します。
+{{Glossary("HTML")}} の {{HTMLElement("img")}} 要素で HTML 文書に画像を埋め込むことができ、 {{HTMLElement("picture")}} 要素を使用すると[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)を使用することができます。このガイドでは、ウェブサイトへの画像の追加を扱うリソースへのリンクを紹介します。
 
 ## リファレンス
 
@@ -15,14 +15,14 @@ original_slug: Web/Media/images
 ### HTML
 
 - {{HTMLElement("img")}}
-  - : **HTML の `<img>` 要素**は、ウェブページに画像を埋め込むために使用されます。画像の振る舞いを制御する幅広い属性に対応しており、画像を見られない人のために [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストのような重要な情報を追加することができます。
+  - : **HTML の `<img>` 要素**は、ウェブページに画像を埋め込むために使用されます。画像の振る舞いを制御する幅広い属性に対応しており、画像を見られない人のために [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストのような重要な情報を追加することができます。
 - {{HTMLElement("picture")}}
   - : **HTML の `<picture>` 要素**は、 0 個以上の {{HTMLElement("source")}} 要素と 1 個の {{HTMLElement("img")}} 要素を含み、様々な画面や端末のシナリオのために画像の別な版を提供します。ブラウザーは、子要素であるそれぞれの `<source>` 要素を考慮して、それらの中から最適なものを選択します。
 
 ### CSS
 
 - {{cssxref("object-fit")}}
-  - : **`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば [`<img>`](/ja/docs/Web/HTML/Element/img) や [`<video>`](/ja/docs/Web/HTML/Element/video) の中身をコンテナーに合わせるために、どのようにリサイズする可を設定します。
+  - : **`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) や [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) の中身をコンテナーに合わせるために、どのようにリサイズする可を設定します。
 - {{cssxref("object-position")}}
   - : **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のボックス内で選択された[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)内のコンテンツの配置を指定します。ボックス内の領域のうちで置換要素のオブジェクトに覆われていない部分には、要素の背景が表示されます。
 - {{cssxref("background-image")}}
@@ -41,5 +41,5 @@ original_slug: Web/Media/images
 
 興味がありそうな関連トピック
 
-- [HTML の学習: レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
+- [HTML の学習: レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
   - : この記事ではレスポンシブ画像の概念、つまり画面サイズや解像度などが大きく異なる端末でも動作する画像について学び、レスポンシブ画像を実装するために HTML が提供するツールについて見ていきます。

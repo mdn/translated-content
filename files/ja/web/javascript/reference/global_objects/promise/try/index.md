@@ -1,11 +1,10 @@
 ---
 title: Promise.try()
+short-title: try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 l10n:
-  sourceCommit: b67fd42cfb01dd4d9504c4182b462851588a0bad
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 **`Promise.try()`** 静的メソッドは、あらゆる種類のコールバック（返す、発生する、同期的、非同期的）を受け取り、その結果を {{jsxref("Promise")}} でラップします。
 
@@ -13,12 +12,17 @@ l10n:
 
 ```js-nolint
 Promise.try(func)
+Promise.try(func, arg1)
+Promise.try(func, arg1, arg2)
+Promise.try(func, arg1, arg2, /* …, */ argN)
 ```
 
 ### 引数
 
 - `func`
-  - : 引数なしで同期的に呼び出される関数です。何らかの処理を行うことができ、返値を返すことも、エラーを発生させることも、プロミスを返すことも可能です。
+  - : 指定された引数 (`arg1`, `arg2`, …, `argN`) とともに同期的に呼び出される関数。値を返す、エラーを発生させる、プロミスを返すなど、何らかの動作を行うことができます。
+- `arg1`, `arg2`, …, `argN`
+  - : `func` に渡す引数。
 
 ### 返値
 
@@ -30,7 +34,7 @@ Promise.try(func)
 
 ## 解説
 
-コールバックを受け取る API もあります。 コールバックは同期または非同期のどちらでも可能です。 結果をプロミスでラップすることで、すべてを統一的に処理したい場合、最もわかりやすい方法は、{{jsxref("Promise/resolve", "Promise.resolve(func())")}} でしょう。 問題は、`func()` で同期敵にエラーが発生した場合、このエラーが補足されず、拒否されたプロミスに変換されないことです。
+コールバックを受け取る API もあります。 コールバックは同期または非同期のどちらでも可能です。 結果をプロミスでラップすることで、すべてを統一的に処理したい場合、最もわかりやすい方法は、{{jsxref("Promise/resolve", "Promise.resolve(func())")}} でしょう。 問題は、`func()` で同期的にエラーが発生した場合、このエラーが補足されず、拒否されたプロミスに変換されないことです。
 
 一般的な手法（履行されたか拒否されたかに関わらず、関数呼び出しの結果をプロミスに持ち上げる）は、以下のようにすることが多いです。
 
@@ -55,6 +59,20 @@ Promise.resolve().then(func);
 違いは、{{jsxref("Promise/then", "then()")}} に渡されたコールバックは常に非同期で呼び出されるのに対し、`Promise()` コンストラクターの実行は同期で呼び出されることです。 `Promise.try` も関数を同期で呼び出し、可能であれば即座にプロミスを解決します。
 
 `Promise.try()` を {{jsxref("Promise/catch", "catch()")}} および {{jsxref("Promise/finally", "finally()")}} と組み合わせて使用することで、単一の連鎖で同期的および非同期的なエラーの両方を処理することができ、プロミスエラー処理を同期的エラー処理とほとんど同じように見せることができます。
+
+{{domxref("Window/setTimeout", "setTimeout()")}} と同様に、 `Promise.try()` はコールバックに渡される追加の引数を受け入れます。これは、次のようにする代わりに、次のように意味しています。
+
+```js
+Promise.try(() => func(arg1, arg2));
+```
+
+このようにすることができます。
+
+```js
+Promise.try(func, arg1, arg2);
+```
+
+これらは同等ですが、後者は余分なクロージャの作成を避け、より効率的です。
 
 ## 例
 

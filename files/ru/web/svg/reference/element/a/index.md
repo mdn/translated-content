@@ -64,32 +64,32 @@ svg|a:active {
 {{EmbedLiveSample("Пример", 100, 100)}}
 
 > [!WARNING]
-> Поскольку имя этого элемента совпадает с [элементом HTML `<a>`](/ru/docs/Web/HTML/Element/a), обращение `a` в CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента, который требуется. Используйте [правило `@namespace`](/ru/docs/Web/CSS/@namespace), чтобы разделять их.
+> Поскольку имя этого элемента совпадает с [элементом HTML `<a>`](/ru/docs/Web/HTML/Reference/Elements/a), обращение `a` в CSS или [`querySelector`](/ru/docs/Web/API/Document/querySelector) может выбрать не тот тип элемента, который требуется. Используйте [правило `@namespace`](/ru/docs/Web/CSS/@namespace), чтобы разделять их.
 
 ## Атрибуты
 
-- [`download`](/ru/docs/Web/HTML/Element/a#download) {{experimental_inline}}
+- [`download`](/ru/docs/Web/HTML/Reference/Elements/a#download) {{experimental_inline}}
   - : Указывает браузеру выполнить загрузку по {{Glossary("URL")}}, вместо того, чтобы переходить по нему. Таким образом пользователю будет предложено сохранить файл локально.
     _Тип_: **\<string>** ;_Значение по умолчанию_: _none_;_Анимируем_: **нет**
 - {{SVGAttr("href")}}
   - : {{Glossary("URL")}} или фрагмент URL для перехода.
     _Тип_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
-- [`hreflang`](/ru/docs/Web/HTML/Element/a#hreflang)
+- [`hreflang`](/ru/docs/Web/HTML/Reference/Elements/a#hreflang)
   - : URL на человеческом языке или фрагмент URL для перехода.
     _Тип_: **\<string>**; _Значение по умолчанию_: _none_; _Анимируем_: **да**
-- [`ping`](/ru/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
+- [`ping`](/ru/docs/Web/HTML/Reference/Elements/a#ping) {{experimental_inline}}
   - : Разделённый пробелами список URL при переходе по которым браузер будет отправлять [`POST`](/ru/docs/Web/HTTP/Reference/Methods/POST) запросы с телом `PING` (в фоне). Обычно используется для трекинга.
     _Тип_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)**; _Значение по умолчанию_: _none_; _Анимируем_: **нет**
-- [`referrerpolicy`](/ru/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
+- [`referrerpolicy`](/ru/docs/Web/HTML/Reference/Elements/a#referrerpolicy) {{experimental_inline}}
   - : Какой [referrer](/ru/docs/Web/HTTP/Reference/Headers/Referer) отправить при получении {{Glossary("URL")}}.
     _Тип_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Значение по умолчанию_: _none_; _Анимируем_: **нет**
-- [`rel`](/ru/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
+- [`rel`](/ru/docs/Web/HTML/Reference/Elements/a#rel) {{experimental_inline}}
   - : Отношение между целевым объектом и объектом link.
     _Тип_: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
 - {{SVGAttr("target")}}
   - : Где отобразить переход {{Glossary("URL")}}.
     _Тип_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Значение по умолчанию_: `_self`; _Анимируем_: **да**
-- [`type`](/ru/docs/Web/HTML/Element/a#type)
+- [`type`](/ru/docs/Web/HTML/Reference/Elements/a#type)
   - : {{Glossary("MIME type")}} для ссылки URL.
     _Тип_: **\<string>** ; _Значение по умолчанию_: _none_; _Анимируем_: **да**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}

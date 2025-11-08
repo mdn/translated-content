@@ -21,7 +21,7 @@ l10n:
 
 ## 解決策 — 無信頼の iframe
 
-`<iframe>` は、[`credentialless`](/ja/docs/Web/HTML/Element/iframe#credentialless) 属性を適用するか、同等の DOM プロパティ {{domxref("HTMLIFrameElement.credentialless")}} を `true` を設定して信頼性を確保することができます。
+`<iframe>` は、[`credentialless`](/ja/docs/Web/HTML/Reference/Elements/iframe#credentialless) 属性を適用するか、同等の DOM プロパティ {{domxref("HTMLIFrameElement.credentialless")}} を `true` を設定して信頼性を確保することができます。
 
 ```html
 <iframe
@@ -47,7 +47,8 @@ iframeElem.src =
   "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
 ```
 
-> **メモ:** {{domxref("Window.credentialless")}} プロパティは、`<iframe>` に埋め込まれた文書が、無信頼のコンテキストで実行されているかどうかを調べるために、問い合わせることができます。値が `true` の場合、埋め込まれている `<iframe>` が無信頼であることを意味します。
+> [!NOTE]
+> {{domxref("Window.credentialless")}} プロパティは、`<iframe>` に埋め込まれた文書が、無信頼のコンテキストで実行されているかどうかを調べるために、問い合わせることができます。値が `true` の場合、埋め込まれている `<iframe>` が無信頼であることを意味します。
 
 この結果、無信頼の `<iframe>` 内の文書は、新しい、一時的なコンテキストを使用して読み込まれることになります。それらのコンテキストは、そのオリジンに関連するデータ、例えば[クッキー](/ja/docs/Web/HTTP/Guides/Cookies)や[ローカルストレージ](/ja/docs/Web/API/Window/localStorage)にアクセスすることはできません。無信頼のストレージは、最上位の文書ごとに 1 回設定されるノンス ("number used once") 値で変更されたストレージキーで別個に分割されます。したがって、ある無信頼の `<iframe>` に設定されたクッキーは、同じ最上位の文書の下に埋め込まれた他の同じオリジンの無信頼の `<iframe>` からしかアクセスできなくなります。
 
@@ -55,7 +56,7 @@ iframeElem.src =
 
 それに加えて、以下のことが言えます。
 
-- 無信頼の iframe で開くためのポップアップは、[`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) を設定して開かれます。これにより、OAuth ポップアップフローが無信頼の iframe で使用されることを防ぐことができます。
+- 無信頼の iframe で開くためのポップアップは、[`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) を設定して開かれます。これにより、OAuth ポップアップフローが無信頼の iframe で使用されることを防ぐことができます。
 - ブラウザーによる自動入力やパスワード管理機能は、無信頼の `<iframe>` では利用できません。
 
 この結果、無信頼の `<iframe>` に読み込まれた文書は、事実上、ユーザーの機密情報でカスタマイズされていないバニラ版または「公開」版となります。これらの文書からは利用できる機密情報がないため、攻撃者にとって使用することはなく、これらの iframe では Cross-Origin Embedder Policy の要件は削除されます。
@@ -82,5 +83,5 @@ iframeElem.src =
 - {{httpheader("Cross-Origin-Embedder-Policy")}}
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - [オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS)
-- `<iframe>` の [`credentialless`](/ja/docs/Web/HTML/Element/iframe#credentialless) 属性
+- `<iframe>` の [`credentialless`](/ja/docs/Web/HTML/Reference/Elements/iframe#credentialless) 属性
 - {{domxref("HTMLIFrameElement.credentialless")}}

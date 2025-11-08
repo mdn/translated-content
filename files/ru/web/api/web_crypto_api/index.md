@@ -23,10 +23,10 @@ Web Crypto API не решает всех проблем, которые кас�
 - Она не заменяет "[с](/ru/docs/Web/Security/Same-origin_policy)обственной модели безопасности" браузера (когда на некоторых Web-сайтах используются свои собственные ключи).
 - Оно не взаимодействует со специальным аппаратным обеспечением (смарт-карты, USB-ключи или генераторы случайных чисел).
 
-> **Предупреждение:** **Внимание!**
+> [!WARNING]
+> Само по себе использование криптографии не делает систему безопасной. Безопасность – это **процесс** постоянной оценки рисков, возникающих в контексте эксплуатации системы. Контекст, как и риски, изменяются с течением времени.
 >
-> - Само по себе использование криптографии не делает систему безопасной. Безопасность – это **процесс** постоянной оценки рисков, возникающих в контексте эксплуатации системы. Контекст, как и риски, изменяются с течением времени.
-> - When dealing with security, the whole **system** must be considered. In the case of the Web Crypto API, Web developers shouldn't consider only the security of the script, but the security of the connection to the server, because using Web Crypto over HTTP is not secure. The overall security can't be stronger than the security of the weakest part of the overall system.
+> When dealing with security, the whole **system** must be considered. In the case of the Web Crypto API, Web developers shouldn't consider only the security of the script, but the security of the connection to the server, because using Web Crypto over HTTP is not secure. The overall security can't be stronger than the security of the weakest part of the overall system.
 
 ## Интерфейсы
 

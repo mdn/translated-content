@@ -96,4 +96,3 @@ SVG 文本还可以应用样式。
 ## 参见
 
 - {{ SVGElement("tspan") }}
-- {{ SVGElement("tref") }}

@@ -64,7 +64,6 @@ addEventListener("pointerrawupdate", (event) => {
 ## 関連情報
 
 - Related events
-
   - [`gotpointercapture`](/ja/docs/Web/API/Element/gotpointercapture_event)
   - [`lostpointercapture`](/ja/docs/Web/API/Element/lostpointercapture_event)
   - [`pointerover`](/ja/docs/Web/API/Element/pointerover_event)

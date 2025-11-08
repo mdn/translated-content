@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 1176e753733ee9d2e8966cc7cf03df495dce9aba
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
 
 {{HTTPHeader("Location")}} と `Content-Location` は異なります。
@@ -23,7 +21,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>
@@ -87,7 +85,7 @@ I made this through `example.com`'s API. I hope it worked.
 
 ### トランザクションの結果の URL を示す
 
-サイトの別のユーザーに送金するための [`<form>`](/ja/docs/Web/HTML/Element/form) があるとします。
+サイトの別のユーザーに送金するための [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) があるとします。
 
 ```html
 <form action="/send-payment" method="post">

@@ -2,10 +2,8 @@
 title: background_color
 slug: Web/Progressive_web_apps/Manifest/Reference/background_color
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `background_color` メンバーは、スタイルシートが読み込まれる前に表示するアプリケーションページの背景色を定義します。
 この色は、スタイルシートが読み込まれる前にマニフェストが利用可能な場合、ショートカットの背景色を描画するために、ユーザーエージェントが使用します。
@@ -26,7 +24,6 @@ l10n:
 ### 値
 
 - `background_color`
-
   - : 有効な[色値](/ja/docs/Web/CSS/color_value)を指定する文字列です。
 
 ## 解説
@@ -45,7 +42,7 @@ l10n:
 マニフェストの `background_color` は、初期読み込み段階における一時的な措置として、また一部の環境におけるスプラッシュ画面の生成のみに使用されます。
 
 > [!NOTE]
-> ブラウザーは、アプリの CSS で定義された [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーに対応するために、マニフェストの `background_color` の値を上書きすることがあります。
+> ブラウザーは、アプリの CSS で定義された [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーに対応するために、マニフェストの `background_color` の値を上書きすることがあります。
 
 ## 例
 

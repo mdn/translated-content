@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLEmbedElement")}} 接口的 **`type`** 属性返回一个反映 {{HTMLElement("embed")}} 元素的 `type` 属性的字符串，用于表示资源的 {{glossary("MIME type", "MIME 类型")}}。它反映 {{htmlelement("embed")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Element/embed#type) 属性。
+{{domxref("HTMLEmbedElement")}} 接口的 **`type`** 属性返回一个反映 {{HTMLElement("embed")}} 元素的 `type` 属性的字符串，用于表示资源的 {{glossary("MIME type", "MIME 类型")}}。它反映 {{htmlelement("embed")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/embed#type) 属性。
 
 ## 值
 

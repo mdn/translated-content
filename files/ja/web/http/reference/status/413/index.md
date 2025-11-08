@@ -1,12 +1,9 @@
 ---
 title: 413 Content Too Large
 slug: Web/HTTP/Reference/Status/413
-original_slug: Web/HTTP/Status/413
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`413 Content Too Large`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。
 サーバーは接続を閉じるか {{HTTPHeader("Retry-After")}} ヘッダーフィールドを返します。
@@ -24,7 +21,7 @@ HTTP の **`413 Content Too Large`** は[クライアントエラーレスポン
 
 ### ファイルのアップロード制限を超えた場合
 
-次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
+次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
 
 ```http
 POST /upload HTTP/1.1

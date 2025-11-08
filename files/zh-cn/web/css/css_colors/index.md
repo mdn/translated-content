@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 30a5a8d5c29feab27ec268c272a945702282994e
 ---
 
-{{CSSRef}}
-
 **CSS 颜色**模块定义了颜色、颜色类型、颜色混合、不透明度，以及如何将这些颜色和效果应用到 HTML 内容中。
 
 虽然此模块仅包含两个 CSS 属性，即 {{cssxref("color")}} 和 {{cssxref("opacity")}}，但有超过 20 个 CSS 和 SVG 属性、CSS 图像、At 规则以及 @media 规则依赖于这两个属性。
@@ -17,7 +15,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-通过[颜色选择器](/zh-CN/docs/Web/HTML/Element/input/color)选择颜色，并通过[滑块](/zh-CN/docs/Web/HTML/Element/input/range)选择透明度以更新 RGB、HEX、HSL 和 HWB 值。当选择新的颜色或不透明度值时，背景颜色和滑块会分别通过 CSS 属性 {{cssxref("background-color")}} 和 {{cssxref("accent-color")}} 进行更新。
+通过[颜色选择器](/zh-CN/docs/Web/HTML/Reference/Elements/input/color)选择颜色，并通过[滑块](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)选择透明度以更新 RGB、HEX、HSL 和 HWB 值。当选择新的颜色或不透明度值时，背景颜色和滑块会分别通过 CSS 属性 {{cssxref("background-color")}} 和 {{cssxref("accent-color")}} 进行更新。
 
 要查看此颜色语法转换器的代码，请[在 GitHub 上查看源代码](https://github.com/mdn/css-examples/blob/main/modules/colors.html)。
 
@@ -116,10 +114,10 @@ l10n:
 - SVG [`color`](/zh-CN/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色环")}}术语
 - {{glossary("Interpolation", "插值")}}术语
-- [`@font-palette-values`](/zh-CN/docs/Web/CSS/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/@font-palette-values/override-colors) 描述符
-- [`@color-profile`](/zh-CN/docs/Web/CSS/@color-profile) At 规则
-- [`color-gamut`](/zh-CN/docs/Web/CSS/@media/color-gamut) @media 特性
-- [`forced-colors`](/zh-CN/docs/Web/CSS/@media/forced-colors) @media 特性
+- [`@font-palette-values`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-palette-values/override-colors) 描述符
+- [`@color-profile`](/zh-CN/docs/Web/CSS/Reference/At-rules/@color-profile) At 规则
+- [`color-gamut`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) @media 特性
+- [`forced-colors`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/forced-colors) @media 特性
 
 ## 规范
 

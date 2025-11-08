@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14c50bd73f6fee50b35b95b9fbb52387ff443321
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 113 の変更点をまとめています。Firefox 113 は、米国時間 2023 年 5 月 9 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -17,13 +15,13 @@ l10n:
 
 ### CSS
 
-- [`color()`](/ja/docs/Web/CSS/color_value/color)、[`lab()`](/ja/docs/Web/CSS/color_value/lab)、[`lch()`](/ja/docs/Web/CSS/color_value/lch)、[`oklab()`](/ja/docs/Web/CSS/color_value/oklab)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch)、[`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix) 関数記法を、[`forced-color-adjust`](/ja/docs/Web/CSS/forced-color-adjust) プロパティと合わせてサポートしました。
+- [`color()`](/ja/docs/Web/CSS/color_value/color)、[`lab()`](/ja/docs/Web/CSS/color_value/lab)、[`lch()`](/ja/docs/Web/CSS/color_value/lch)、[`oklab()`](/ja/docs/Web/CSS/color_value/oklab)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch)、[`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix) 関数記法を、[`forced-color-adjust`](/ja/docs/Web/CSS/Reference/Properties/forced-color-adjust) プロパティと合わせてサポートしました。
   関数記法について、詳しくは [CSS color 値](/ja/docs/Web/CSS/color_value) の文書をご覧ください。
   ([Firefox bug 1352753](https://bugzil.la/1352753)、[Firefox bug 1813497](https://bugzil.la/1813497)、[Firefox bug 1818819](https://bugzil.la/1818819)、[Firefox bug 1824526](https://bugzil.la/1824526))
-- [`:nth-child of <selector>` 構文](/ja/docs/Web/CSS/:nth-child#the_of_selector_syntax) で、定義したセレクターにも一致する、`An+B` 規則に基づく子要素のグループを対象にできるようになりました。
+- [`:nth-child of <selector>` 構文](/ja/docs/Web/CSS/Reference/Selectors/:nth-child#the_of_selector_syntax) で、定義したセレクターにも一致する、`An+B` 規則に基づく子要素のグループを対象にできるようになりました。
   詳しくは ([Firefox bug 1808229](https://bugzil.la/1808229)) をご覧ください。
-- [`scripting`](/ja/docs/Web/CSS/@media/scripting) メディア特性をサポートしました。詳しくは ([Firefox bug 1166581](https://bugzil.la/1166581)) をご覧ください。
-- [`content`](/ja/docs/Web/CSS/content) プロパティで、`<gradient>`、`image-set()`、`url()` を含むすべての画像型をサポートしました。詳しくは ([Firefox bug 1684958](https://bugzil.la/1684958)) をご覧ください。現在は、`::before` および `::after` 擬似セレクターを伴うと `<gradient>` が描画されない不具合があります。詳しくは ([Firefox bug 1832901](https://bugzil.la/1832901)) をご覧ください。
+- [`scripting`](/ja/docs/Web/CSS/Reference/At-rules/@media/scripting) メディア特性をサポートしました。詳しくは ([Firefox bug 1166581](https://bugzil.la/1166581)) をご覧ください。
+- [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティで、`<gradient>`、`image-set()`、`url()` を含むすべての画像型をサポートしました。詳しくは ([Firefox bug 1684958](https://bugzil.la/1684958)) をご覧ください。現在は、`::before` および `::after` 擬似セレクターを伴うと `<gradient>` が描画されない不具合があります。詳しくは ([Firefox bug 1832901](https://bugzil.la/1832901)) をご覧ください。
 
 ### JavaScript
 

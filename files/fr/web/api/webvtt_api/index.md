@@ -5,7 +5,7 @@ slug: Web/API/WebVTT_API
 
 {{DefaultAPISidebar("WebVTT")}}
 
-Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
+Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
 
 ## Fichiers WebVTT
 
@@ -31,7 +31,6 @@ La structure d'un fichier WebVTT se compose des éléments suivants, dont certai
 - Un marqueur optionnel pour l'ordre des octets (BOM).
 - La chaîne de caractères `WEBVTT`.
 - Un texte d'en-tête optionnel à droite de `WEBVTT`.
-
   - Il est nécessaire d'avoir au moins un espace après `WEBVTT`.
   - Ce champ peut être utilisé pour ajouter une description au fichier.
   - Ce champ peut contenir n'importe quoi à l'exception de nouvelles lignes ou de la chaîne de caractères `-->`.
@@ -159,7 +158,7 @@ peut être à revoir.
 
 ## Mettre en forme les sous-titres WebVTT
 
-Les sous-titres WebVTT peuvent être mis en forme en ciblant les éléments correspondants avec le pseudo-élément [`::cue`](/fr/docs/Web/CSS/::cue).
+Les sous-titres WebVTT peuvent être mis en forme en ciblant les éléments correspondants avec le pseudo-élément [`::cue`](/fr/docs/Web/CSS/Reference/Selectors/::cue).
 
 ### Avec le CSS du site
 
@@ -174,7 +173,7 @@ video::cue(b) {
 }
 ```
 
-Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
+Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Reference/Elements/b) auront la couleur `"peachpuff"`.
 
 Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
 
@@ -301,7 +300,7 @@ Ici le troisième.
 
 Un horodatage d'une réplique indique le moment où la réplique est affichée sur la vidéo. Il est composé d'un temps de début et d'un temps de fin. Le temps de fin doit être supérieur au temps de début et le temps de début doit être supérieur ou égal aux temps de début précédents. Les répliques peuvent avoir des horodatages qui se chevauchent.
 
-Si le fichier est utilisé pour des chapitres (c'est-à-dire des éléments [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`), le fichier ne pourra pas contenir de durées qui se chevauchent.
+Si le fichier est utilisé pour des chapitres (c'est-à-dire des éléments [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Reference/Elements/track#attr-kind) vaut `chapters`), le fichier ne pourra pas contenir de durées qui se chevauchent.
 
 Chaque horodatage contient cinq composants&nbsp;:
 
@@ -319,20 +318,16 @@ Les heures doivent être dans l'un de ces formats&nbsp;:
 Où&nbsp;:
 
 - `hh` désigne les heures
-
   - Sur au moins deux chiffres.
   - Qui peuvent être supérieures à deux chiffres (par exemple `9999:00:00.000`).
 
 - `mm` désigne les minutes
-
   - Comprises entre `00` et `59` (inclus).
 
 - `ss` désigne les secondes.
-
   - Comprises entre `00` et `59` (inclus).
 
 - `ttt` désigne les millisecondes.
-
   - Comprises entre `000` et `999` (inclus).
 
 #### Exemple n°10 — exemples d'horodatages simples
@@ -368,7 +363,6 @@ Les paramètres de réplique sont des composants optionnels utilisés afin de po
 Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espace après l'horodatage. Il doit y avoir au moins un espace entre chaque paramètre. Le nom d'un paramètre et la valeur associée sont séparés par deux-points (`:`). Les paramètres sont sensibles à la casse et on utilisera donc les minuscules comme indiqué ici. Il existe cinq paramètres&nbsp;:
 
 - **`vertical`**
-
   - Indique que le texte sera affiché verticalement et pas horizontalement, comme pour certaines langues asiatiques.
 
   <table>
@@ -390,16 +384,13 @@ Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espa
   </table>
 
 - **`line`**
-
   - Indique l'emplacement vertical du texte ou, si le paramètre `vertical` est défini, l'emplacement horizontal du texte.
   - La valeur peut être un numéro de ligne
-
     - La hauteur d'une ligne est la hauteur de la première ligne de la réplique telle qu'elle apparaît sur la vidéo.
     - Les nombres positifs indiquent un placement du haut vers le bas.
     - Les nombres négatifs indiquent un placement du bas vers le haut.
 
   - Ou un pourcentage
-
     - Ce doit alors être un entier (sans partie décimale) compris entre 0 et 100.
     - Qui doit être suivi du signe pourcentage (`%`).
 
@@ -444,7 +435,6 @@ Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espa
   </table>
 
 - **`position`**
-
   - Indique l'emplacement horizontal du texte, ou, si `vertical` est utilisé, l'emplacement vertical du texte.
   - Sa valeur est un pourcentage.
   - Ce doit être un entier, sans partie décimale, compris entre 0 et 100 (inclus).
@@ -479,7 +469,6 @@ Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espa
   </table>
 
 - **`size`**
-
   - Indique la largeur de la zone de texte, ou, si `vertical` est utilisé, la hauteur de la zone de texte.
   - Sa valeur est un pourcentage.
   - Ce doit être un entier, sans partie décimale, compris entre 0 et 100 (inclus).
@@ -514,7 +503,6 @@ Les paramètres sont ajoutés à droite de l'horodatage, après au moins un espa
   </table>
 
 - **`align`**
-
   - Définit l'alignement du texte. Le texte est aligné au sein de l'espace délimité par le paramètre `size` s'il est utilisé.
 
   <table>
@@ -617,10 +605,9 @@ En plus des trois échappements décrits ci-avant, il existe quatre autres écha
 
 ### Balises pour les textes des répliques
 
-Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. Toutefois, si le fichier WebVTT est utilisé dans un élément [`<track>`](/fr/docs/Web/HTML/Element/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#attr-kind) vaut `chapters`, les balises ne pourront pas être utilisées.
+Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. Toutefois, si le fichier WebVTT est utilisé dans un élément [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) dont l'attribut [`kind`](/fr/docs/Web/HTML/Reference/Elements/track#attr-kind) vaut `chapters`, les balises ne pourront pas être utilisées.
 
 - **Balise d'horodatage**
-
   - L'horodatage porté par cette balise doit être supérieur à celui du début de la réplique, supérieur aux horodatages des balises précédentes pour cette réplique, et inférieur à l'horodatage de fin. Le _texte actif_ correspond au texte situé entre l'horodatage et le prochain horodatage (ou l'horodatage de fin de la réplique s'il n'y en a plus d'autres). Tout texte situé avant le _texte actif_ correspondra à du _texte précédent_. Tout texte situé après le _texte actif_ correspondra à du _texte futur_. Cela permet de représenter des sous-titres comme ceux utilisés au karaoké.
 
   ```plain
@@ -640,7 +627,6 @@ Il existe plusieurs balises, telles que `<bold>`, qui peuvent être utilisées. 
 Les balises suivantes sont des balises qui sont autorisées au sein d'une réplique et pour lesquelles il faut avoir la balise ouvrante et la balise fermante (par exemple `<b>texte</b>`).
 
 - **Balise de classe** (`<c></c>`)
-
   - Permet la mise en forme du texte contenu en ciblant la classe avec CSS.
 
   ```html
@@ -648,7 +634,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
   ```
 
 - **Balise d'italique** (`<i></i>`)
-
   - Met en italique le texte contenu.
 
   ```html
@@ -656,7 +641,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
   ```
 
 - **Balise de gras** (`<b></b>`)
-
   - Met en gras le texte contenu.
 
   ```html
@@ -664,7 +648,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
   ```
 
 - **Balise de soulignement** (`<u></u>`)
-
   - Souligne le texte contenu
 
   ```html
@@ -672,7 +655,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
   ```
 
 - **Balise ruby** (`<ruby></ruby>`)
-
   - Utilisée avec les balises de texte ruby afin d'afficher les [annotations ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) (des caractères d'annotation situés au-dessus des autres caractères).
 
   ```html
@@ -680,7 +662,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
   ```
 
 - **Balise de texte ruby** (`<rt></rt>`)
-
   - Utilisée avec les balises ruby afin d'afficher les [annotations ruby](<https://fr.wikipedia.org/wiki/Ruby_(linguistique)>) (des caractères d'annotation situés au-dessus des autres caractères).
 
   ```html
@@ -688,7 +669,6 @@ Les balises suivantes sont des balises qui sont autorisées au sein d'une répli
   ```
 
 - **Balise de voix** (`<v></v>`)
-
   - Semblable à la balise de classe, permet également le ciblage à l'aide de CSS pour la mise en forme du texte.
 
   ```html

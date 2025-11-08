@@ -5,8 +5,6 @@ l10n:
   sourceCommit: edefa50f18613599b92e2eb3e9556fbde220b360
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Host`** {{Glossary("request header", "请求标头")}}指定了接收请求的服务器的主机名和端口号。
 
 如果没有包含端口，则默认使用请求服务的端口（例如，HTTPS URL 默认为 `443`，HTTP URL 默认为 `80`）。

@@ -72,6 +72,6 @@ Se você travar, a versão completa do website pode ser encontrada [aqui no Gith
 
 ## Resumo
 
-Agora que você sabe um pouco mais sobre o website _LocalLIbrary_ e o que você irá aprender, é hora de começar a criar um [escopo do projeto](/pt-BR/docs/Learn/Server-side/Django/skeleton_website).
+Agora que você sabe um pouco mais sobre o website _LocalLIbrary_ e o que você irá aprender, é hora de começar a criar um [escopo do projeto](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website).
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

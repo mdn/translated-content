@@ -255,12 +255,12 @@ video {
 これは、メディアがコンテナーからあふれないように確実に拡大縮小します。
 
 > [!NOTE]
-> 単一の大きな画像を使用し、それを小さな端末に合うように変倍すると、必要以上に大きな画像をダウンロードすることになり、帯域幅が無駄になります。また、見た目も悪くなります。例えば、ワイド画面のモニターでは横長の画像が適していますが、モバイル端末では縦向きの画像の方がよく合う可能性があるからです。このような問題は、 {{htmlelement("picture")}} 要素と、 {{htmlelement("img")}} の `srcset` および `sizes` 属性を使用することで解決できます。これらは高度な機能であり、このコースの対象範囲を超えるものですが、[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)に詳細なガイドがあります。
+> 単一の大きな画像を使用し、それを小さな端末に合うように変倍すると、必要以上に大きな画像をダウンロードすることになり、帯域幅が無駄になります。また、見た目も悪くなります。例えば、ワイド画面のモニターでは横長の画像が適していますが、モバイル端末では縦向きの画像の方がよく合う可能性があるからです。このような問題は、 {{htmlelement("picture")}} 要素と、 {{htmlelement("img")}} の `srcset` および `sizes` 属性を使用することで解決できます。これらは高度な機能であり、このコースの対象範囲を超えるものですが、[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)に詳細なガイドがあります。
 
 その他の有用なコツです。
 
 - ウェブサイトの画像には常に適切な画像形式（PNG や JPG など）を使用し、ウェブサイトに掲載する前にグラフィックエディターを使ってファイルサイズを最適化してください。
-- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
+- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/Reference/Properties/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
 - {{htmlelement("video")}}/{{htmlelement("audio")}} 要素の中にある {{htmlelement("source")}} 要素の media 属性内では、メディアクエリーを使用することができ、様々な端末に最適な映像/音声ファイルを提供することができます。
 
 ## レスポンシブ書体
@@ -436,7 +436,7 @@ h1 {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-この[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
+この[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
 
 なぜこれが必要なのでしょうか？ モバイルブラウザーは、ビューポートの幅について嘘をつく傾向があるためです。
 
@@ -458,7 +458,7 @@ h1 {
 
 - タッチ画面端末での作業:
   - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェイスの高品質な対応を可能にします。
-  - [pointer](/ja/docs/Web/CSS/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
+  - [pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

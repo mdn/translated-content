@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{CSSRef}}
-
 La función [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) de [CSS](/es/docs/Web/CSS) **`:is()`** toma una lista de selectores como argumento y selecciona cualquier elemento que pueda ser seleccionado por uno de los selectores en esa lista. Esto es útil para escribir selectores grandes en una forma más compacta.
 
 > [!NOTE]
@@ -157,7 +155,7 @@ Puedes reemplazarlo con:
 
 ### Simplificando selectores de secciones
 
-La pseudoclase `:is()` es particularmente útil cuando se trata de [secciones y encabezados](/es/docs/Web/HTML/Element/Heading_Elements) HTML. Dado que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} y {{HTMLElement("nav")}} comúnmente están anidados juntos, sin `:is()`, diseñarlos para que coincidan entre sí puede ser complicado.
+La pseudoclase `:is()` es particularmente útil cuando se trata de [secciones y encabezados](/es/docs/Web/HTML/Reference/Elements/Heading_Elements) HTML. Dado que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} y {{HTMLElement("nav")}} comúnmente están anidados juntos, sin `:is()`, diseñarlos para que coincidan entre sí puede ser complicado.
 
 Por ejemplo, sin `:is()`, diseñar todos los elementos {{HTMLElement("Heading_Elements", "h1")}} en diferentes niveles podría ser muy complicado:
 

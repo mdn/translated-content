@@ -3,8 +3,6 @@ title: Firefox 3.5 開発者向け情報
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-US/firefox/3.5/releasenotes/) (_2009 年 7 月 30 日にリリース_) では数多くの新機能が導入され、また、幅広い種類のウェブ標準に対するサポートが追加および改善されます。この記事は主な変更点をカバーする記事へのリンクを伴う広範囲に及ぶ一覧を提供します。
 
 ## Firefox 3.5 の開発者向け新機能
@@ -14,7 +12,7 @@ slug: Mozilla/Firefox/Releases/3.5
 #### HTML 5 サポート
 
 - [Firefox での音声と動画の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-  - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Element/audio) および [video](/ja/docs/Web/HTML/Element/video) 要素がサポートされます。
+  - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Reference/Elements/audio) および [video](/ja/docs/Web/HTML/Reference/Elements/video) 要素がサポートされます。
 - [Firefox でのオフラインリソース](/ja/docs/Web/HTML/Using_the_application_cache)
   - : Firefox 3.5 では HTML 5 のオフラインリソース仕様をすべてサポートしています。
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
@@ -22,7 +20,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しくサポートされる CSS の機能
 
-- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/@font-face)
+- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/Reference/At-rules/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。
@@ -49,7 +47,6 @@ slug: Mozilla/Firefox/Releases/3.5
   `-moz-column-rule-style`
 
   `-moz-column-rule-color`
-
   - : Firefox 3.5 ではこれらの CSS への Mozilla 拡張に対するサポートが追加されます。
 
 - {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} カラー値
@@ -73,7 +70,6 @@ slug: Mozilla/Firefox/Releases/3.5
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : これらのセレクターがすべて Firefox 3.5 で新たにサポートされます。
 
 #### 新しい DOM の機能
@@ -84,7 +80,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : Firefox 3.5 ではウェブアプリケーションでの簡単なマルチスレッドサポートを可能にする Web Workers をサポートします。
 - [位置情報の使用](/ja/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 では Geolocation API をサポートします。これによりウェブアプリケーションはユーザーの現在位置についての情報を提供するプロバイダがインストールされ有効化されていれば、その情報を保持することができます。
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
   - : Selectors API により与えられた選択ルールにマッチする要素を指定するために文書を検索できます。
 - [マウスジェスチャイベント](/ja/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 はトラックパッドスワイプのようなマウスジェスチャイベントをサポートします。
@@ -137,7 +133,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - [Firefox での ICC カラー補正](/ja/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox)
   - : Firefox 3.5 では タグ付けられた画像に対して ICC カラー補正がサポートされています。
-- [script](/ja/docs/Web/HTML/Element/script) 要素で defer 属性がサポート
+- [script](/ja/docs/Web/HTML/Reference/Elements/script) 要素で defer 属性がサポート
   - : この属性はスクリプトが実行し終わるの待たずにブラウザーにパースし描画し続けることを選択させます。
 
 ### その他の改善
@@ -153,7 +149,7 @@ slug: Mozilla/Firefox/Releases/3.5
 - 非 Chrome スコープにおいて、例外でキャッチされるオブジェクトがスローされたオブジェクトを含む [XPConnect](/ja/docs/XPConnect) ラッパーではなく実際にスローされたオブジェクトになりました。
 - SVG ID 参照が動的な変更に対応するようになりました。
 - SVG フィルターが `foreignObject` でも動作するようになりました。
-- 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Element/object) および [`iframe`](/ja/docs/Web/HTML/Element/iframe) 要素に追加されました。
+- 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Reference/Elements/object) および [`iframe`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素に追加されました。
 - JavaScript においてオブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定ではセッターの定義を行わないようになりました。詳細は [オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) というブログ投稿を参照してください。
 - `gDownloadLastDir.path` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDir.file` に名称変更されました。
 - `gDownloadLastDirPath` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDirFile` に名称変更されました。

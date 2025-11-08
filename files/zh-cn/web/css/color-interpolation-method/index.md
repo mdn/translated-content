@@ -5,9 +5,7 @@ l10n:
   sourceCommit: 707a895d09555c873e5e7dbd28135381fde6d01e
 ---
 
-{{CSSRef}}
-
-**`<color-interpolation-method>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的[色彩空间](/zh-CN/docs/Glossary/Color_space)。它可用于覆盖像 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
+**`<color-interpolation-method>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的[色彩空间](/zh-CN/docs/Glossary/Color_space)。它可用于覆盖像 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
 
 在对 `<color>` 值插值时，插值色彩空间默认为 `oklab`。
 
@@ -24,19 +22,16 @@ in <polar-color-space>[ <hue-interpolation method>]
 ### 值
 
 - `<rectangular-color-space>`
-
   - : 关键字 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz`、`xyz-d50` 或 `xyz-d65` 之一。
 
 - `<polar-color-space>`
-
   - : 关键字 `hsl`、`hwb`、`lch` 或 `oklch` 之一。
 
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
-
   - : 用于色调插值的算法。默认为 `shorter hue`。
 
 - `<custom-color-space>`
-  - : 一个指向自定义 [@color profile](/zh-CN/docs/Web/CSS/@color-profile) 的 [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident#与_color-profile_一起使用)。
+  - : 一个指向自定义 [@color profile](/zh-CN/docs/Web/CSS/Reference/At-rules/@color-profile) 的 [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident#与_color-profile_一起使用)。
 
 ## 形式语法
 

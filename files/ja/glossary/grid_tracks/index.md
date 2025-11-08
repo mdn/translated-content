@@ -69,7 +69,6 @@ l10n:
 - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [CSS グリッドレイアウト仕様書におけるグリッドトラックの定義](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - プロパティリファレンス
-
   - {{cssxref("grid-template-columns")}}
   - {{cssxref("grid-template-rows")}}
   - {{cssxref("grid")}}

@@ -3,8 +3,6 @@ title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 的 **`trimStart()`** 方法会从字符串的开头移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`trimLeft()` 是该方法的别名。
 
 {{InteractiveExample("JavaScript Demo: String.trimStart()")}}

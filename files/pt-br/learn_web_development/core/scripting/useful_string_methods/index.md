@@ -43,7 +43,7 @@ sua variável torna-se uma instância do objeto string e, como resultado, tem um
 
 Vamos digitar alguns exemplos em um console novo. Nós fornecemos um abaixo (você também pode abrir este console em uma guia ou janela separada, ou usar o console do desenvolvedor do navegador, se preferir).
 
-Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>

@@ -3,8 +3,6 @@ title: 优先级
 slug: Web/CSS/CSS_cascade/Specificity
 ---
 
-{{CSSRef}}
-
 浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/docs/Web/CSS/Reference#选择器)组成的匹配规则。
 
 ## 优先级是如何计算的？
@@ -22,11 +20,11 @@ slug: Web/CSS/CSS_cascade/Specificity
 
 下面列表中，选择器类型的优先级是递增的：
 
-1. [类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
-2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors)（例如，`.example`），属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
-3. [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
+1. [类型选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
+2. [类选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Class_selectors)（例如，`.example`），属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
+3. [ID 选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/ID_selectors)（例如，`#example`）。
 
-**通配选择器**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择器**（combinator）（{{CSSxRef("Next-sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}、{{CSSxRef("Subsequent-sibling_combinator", "~")}}、[" "](/zh-CN/docs/Web/CSS/Descendant_combinator)、{{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
+**通配选择器**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择器**（combinator）（{{CSSxRef("Next-sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}、{{CSSxRef("Subsequent-sibling_combinator", "~")}}、[" "](/zh-CN/docs/Web/CSS/Reference/Selectors/Descendant_combinator)、{{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
 你可以访问[层叠与继承中的“优先级”](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
@@ -344,9 +342,8 @@ h1 {
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - CSS3 选择器优先级 - <http://www.w3.org/TR/selectors/#specificity>
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -355,7 +352,6 @@ h1 {
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
@@ -363,5 +359,5 @@ h1 {
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

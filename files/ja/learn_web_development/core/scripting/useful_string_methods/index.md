@@ -161,7 +161,8 @@ browserType.slice(2); // "zilla"
 
 これは `"zilla"` を返します。 2 の文字位置指定が文字 `"z"` であり、 2 つ目の引数を指定していないため、文字列の残りの文字がすべて部分文字列として返されるからです。
 
-> **メモ:** `slice()` には他にもオプションがあるので、 {{jsxref("String.prototype.slice()", "slice()")}} のページで調べてみてください。
+> [!NOTE]
+> `slice()` には他にもオプションがあるので、 {{jsxref("String.prototype.slice()", "slice()")}} のページで調べてみてください。
 
 ## 大文字小文字の切り替え
 
@@ -734,7 +735,7 @@ textarea.onkeyup = function () {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 文字列](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 文字列](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings)を見てください。
 
 ## 結論
 

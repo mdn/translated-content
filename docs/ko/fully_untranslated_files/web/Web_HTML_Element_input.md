@@ -7,7 +7,34 @@ slug: Web/HTML/Element/input
 
 **HTML `<input>` 요소**는 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성합니다. {{glossary("user agent", "사용자 에이전트")}}에 따라서 다양한 종류의 입력 데이터 유형과 컨트롤 위젯이 존재합니다. 입력 유형과 특성의 다양한 조합 가능성으로 인해, `<input>` 요소는 HTML에서 제일 강력하고 복잡한 요소 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## `<input>` 유형
 
@@ -372,13 +399,11 @@ A few additional non-standard attributes are listed following the descriptions o
 - `alt`
   - : Valid for the `image` button only, the alt attribute provides alternative text for the image, displaying the value of the attribute if the image [src](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 - `autocomplete`
-
   - : **Not** a Boolean attribute, the [`autocomplete`](/ko/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See [Values](/ko/docs/Web/HTML/Attributes/autocomplete#값) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color` and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types. See [The HTML autocomplete attribute](/ko/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
 - `autofocus`
-
   - : A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading (or when the {{HTMLElement("dialog")}} containing the element has been displayed).
 
     > **참고:** An element with the `autofocus` attribute may gain focus before the {{domxref("DOMContentLoaded")}} event is fired.
@@ -392,7 +417,6 @@ A few additional non-standard attributes are listed following the descriptions o
 - `capture`
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media - microphone, video, or camera - should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - `checked`
-
   - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a radio type, it indicates that that radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`'s `checked` IDL attribute](/ko/docs/Web/API/HTMLInputElement) is updated.)
 
     > **참고:** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
@@ -400,7 +424,6 @@ A few additional non-standard attributes are listed following the descriptions o
     > For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 
 - `dirname`
-
   - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [name](#name) and [value](#value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.
 
     ```
@@ -414,7 +437,6 @@ A few additional non-standard attributes are listed following the descriptions o
     When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
 
 - `disabled`
-
   - : A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 
     Specifically, disabled inputs do not receive the [`click`](/ko/docs/Web/API/Element/click_event) event, and disabled inputs are not submitted with the form.
@@ -422,7 +444,6 @@ A few additional non-standard attributes are listed following the descriptions o
     > **참고:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 - `form`
-
   - : A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its **form owner**). This string's value, if present, must match the [`id`](/ko/docs/Web/HTML/Global_attributes#id) of a `<form>` element in the same document. If this attribute isn't specified, the `<input>` element is associated with the nearest containing form, if any.
 
     The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.
@@ -447,7 +468,6 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include none
     `text`, `tel`, `url`, `email`, `numeric`, `decimal`, and `search`
 - `list`
-
   - : The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/ko/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
     ```html hidden
@@ -514,19 +534,16 @@ A few additional non-standard attributes are listed following the descriptions o
 - [`max`](/ko/docs/Web/HTML/Attributes/max)
   - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](/ko/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 - `maxlength`
-
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
     The input will fail [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See [Client-side validation](#client-side_validation) for more information.
 
 - `min`
-
   - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](/ko/docs/Web/HTML/Element/input#value) entered into the element is less than this this, the element fails [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
 
     This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present by is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See [Client-side validation](#client-side_validation) for more information.
 
 - `minlength`
-
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
     The input will fail [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
@@ -534,7 +551,6 @@ A few additional non-standard attributes are listed following the descriptions o
 - `multiple`
   - : The Boolean multiple attribute, if set, means the user can enter comma separated email addresses in the email widget or can choose more than one file with the `file` input. See the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input type.
 - `name`
-
   - : A string specifying a name for the input control. This name is submitted along with the control's value when the form data is submitted.
 
 ##### What's in a name
@@ -572,7 +588,6 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 > **경고:** You should avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
 
 - `pattern`
-
   - : The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/ko/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
     If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
@@ -582,19 +597,16 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
     See [Client-side validation](#client-side_validation) for more information.
 
 - `placeholder`
-
   - : The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
     > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels and placeholders](/ko/docs/Web/HTML/Element/input#labels) for more information.
 
 - `readonly`
-
   - : A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The `readonly` attribute is supported `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `password` input types.
 
     See the [HTML attribute: `readonly`](/ko/docs/Web/HTML/Attributes/readonly) for more information.
 
 - `required`
-
   - : `required` is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The `required` attribute is supported `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, and `file`.
 
     See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/ko/docs/Web/HTML/Attributes/required) for more information.
@@ -604,7 +616,6 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 - `src`
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 - `step`
-
   - : Valid for the numeric input types, including `number`, date/time input types, and `range`, the [`step`](/ko/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
     If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1 unit type (second, week, month, day) for the date/time input types. The value can must be a positive number - integer or float — or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
@@ -622,7 +633,6 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 - `title`
   - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's [`id`](#id) attribute. See [Labels](#labels) below.
 - `type`
-
   - : A string specifying the type of control to render. For example, to create a checkbox, a value of `checkbox` is used. If omitted (or an unknown value is specified), the input type `text` is used, creating a plaintext input field.
 
     Permitted values are listed in [\<input> types](#input_types) above.

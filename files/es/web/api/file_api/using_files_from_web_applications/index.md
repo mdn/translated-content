@@ -241,7 +241,6 @@ Si el objeto {{ domxref("FileList") }} pasado a `handleFiles()` es `null`, simpl
 1. Un nuevo elemento de lista desordenada ({{ HTMLElement("ul") }} es creado.
 2. El nuevo elemento de la lista es insertado en el bloque {{ HTMLElement("div") }} llamando a si método {{ domxref("element.appendChild()") }}.
 3. Para cada {{ domxref("File") }} en el {{ domxref("FileList") }} representado `files`:
-
    1. Se crea un nuevo elemento de lista ({{ HTMLElement("li") }}) y lo inserta en la lista.
    2. Se crea un nuevo elemento imagen ({{ HTMLElement("img") }}).
    3. Establece en la fuente de la imagen un nuevo blob URL representandoel archivo, usando {{ domxref("window.createBlobURL()") }} para crear el blob URL.

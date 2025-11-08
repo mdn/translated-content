@@ -62,13 +62,11 @@ CSS 型付きオブジェクトモデルは、 CSS のプロパティに割り�
 CSSStyleValue は、すべての CSS 値が表現される基本クラスです。サブクラスは以下の通りです。
 
 - {{domxref('CSSImageValue')}} オブジェクト
-  - : 画像を取るプロパティ、例えば [`background-image`](/ja/docs/Web/CSS/background-image), [`list-style-image`](/ja/docs/Web/CSS/list-style-image), [`border-image-source`](/ja/docs/Web/CSS/border-image-source) の値を表すインターフェイスです。
+  - : 画像を取るプロパティ、例えば [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image), [`list-style-image`](/ja/docs/Web/CSS/Reference/Properties/list-style-image), [`border-image-source`](/ja/docs/Web/CSS/Reference/Properties/border-image-source) の値を表すインターフェイスです。
 - {{domxref('CSSKeywordValue')}}
   - : CSS のキーワードやその他の識別子を表現するオブジェクトを生成する インターフェイスです。文字列が期待される場所で使用された場合、 CSSKeyword.value の値を返します。
 - {{domxref('CSSMathValue')}}
-
   - : 単一の値や単位よりも複雑な数値を表すサブクラスのツリーで、次のようなものがあります。
-
     - {{domxref('CSSMathInvert')}} - CSS の {{cssxref("calc","calc()")}} 値を `calc(1 / <value>)` のように使用したものを表現します。
     - {{domxref('CSSMathMax')}} - CSS の {{cssxref("max","max()")}} 関数を表します。
     - {{domxref('CSSMathMin')}} - CSS の {{cssxref("min","min()")}} 関数を表します。
@@ -77,9 +75,7 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
     - {{domxref('CSSMathSum')}} - {{domxref('CSSNumericValue')}} に対して {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, {{domxref('CSSNumericValue.toSum','toSum()')}} を実行した結果を表します。
 
 - {{domxref('CSSNumericValue')}}
-
   - : すべての数値が実行可能な操作を表すインターフェイスです。
-
     - {{domxref('CSSNumericValue.add')}} - 与えられた数字を `CSSNumericValue` に加算します。
     - {{domxref('CSSNumericValue.sub')}} - 与えられた数値を `CSSNumericValue` から減算します。
     - {{domxref('CSSNumericValue.mul')}} - 与えられた数値を `CSSNumericValue` に乗算します。
@@ -95,11 +91,11 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
 - {{domxref('CSSPositionValue')}}
   - : object-position など、位置を取るプロパティの値を表します。
 - {{domxref('CSSTransformValue')}}
-  - : [`transform`](/ja/docs/Web/CSS/transform) のリスト値を表すインターフェイスです。これらは 1 つ以上の {{domxref('CSSTransformComponent')}} を含んでおり、個々の `transform` 関数値を表します。
+  - : [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) のリスト値を表すインターフェイスです。これらは 1 つ以上の {{domxref('CSSTransformComponent')}} を含んでおり、個々の `transform` 関数値を表します。
 - {{domxref('CSSUnitValue')}}
   - : 単一の単位、または名前付き数値とパーセントで表現できる数値を表すインターフェイスです。
 - {{domxref('CSSUnparsedValue')}}
-  - : [カスタムプロパティ](/ja/docs/Web/CSS/--*)を参照するプロパティ値を表します。文字列の断片と変数参照のリストで構成されます。
+  - : [カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)を参照するプロパティ値を表します。文字列の断片と変数参照のリストで構成されます。
 
 ## 仕様書
 

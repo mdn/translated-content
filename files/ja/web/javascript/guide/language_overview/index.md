@@ -564,10 +564,10 @@ avg(2, 3, 4, 5); // 3.5
 
 関数が引数のリストを受け入れ、それらがすでに配列にある場合、関数呼び出しの中で[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使って、配列を要素のリストとして展開することができます。例えば `avg(...numbers)` のようにします。
 
-JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
+JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
 
 ```js
-// { } 中括弧はオブジェクト野分割代入する
+// { } 中括弧はオブジェクトを構造分解する
 function area({ width, height }) {
   return width * height;
 }
@@ -735,7 +735,7 @@ class Admin extends withAuthentication(Person) {
 }
 ```
 
-静的プロパティは先頭に `static` を付けて作成します。プライベートプロパティは先頭にハッシュ `#` を付けて作成します（`private` ではありません）。ハッシュはプロパティ名の一部です。（`#` は Python の `_` と考えてください。）他の多くの言語とは異なり、派生クラスであっても、クラス本体の外でプライベートプロパティを読み取る方法はありません。
+静的プロパティは先頭に `static` を付けて作成します。プライベート要素は先頭にハッシュ `#` を付けて作成します（`private` ではありません）。ハッシュは要素の名前の不可欠な部分であり、通常の文字列キーのプロパティと区別します。（`#` は Python の `_` と考えてください。）他の多くの言語とは異なり、派生クラスであっても、クラス本体の外でプライベート要素を読み取る方法はありません。
 
 様々なクラス機能の詳細なガイドについては、[ガイドページ](/ja/docs/Web/JavaScript/Guide/Using_classes)を参照してください。
 

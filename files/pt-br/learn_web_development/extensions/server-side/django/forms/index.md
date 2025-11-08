@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-Neste tutorial, vamos te mostrar como trabalhar com formulários HTML no Django e, em particular, a maneira mais fácil de programar formulários para criar, alterar e excluir instâncias de modelos. Como parte desta demonstração, vamos estender o site da [BibliotecaLocal](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) para que bibliotecários possam renovar reservas e criar, alterar e excluir autores usando nossos próprios formulários em vez do "admin" do Django.
+Neste tutorial, vamos te mostrar como trabalhar com formulários HTML no Django e, em particular, a maneira mais fácil de programar formulários para criar, alterar e excluir instâncias de modelos. Como parte desta demonstração, vamos estender o site da [BibliotecaLocal](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) para que bibliotecários possam renovar reservas e criar, alterar e excluir autores usando nossos próprios formulários em vez do "admin" do Django.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -37,9 +37,9 @@ Neste tutorial, vamos te mostrar como trabalhar com formulários HTML no Django 
 
 ## Visão Geral
 
-Um [Formulário HTML](/pt-BR/docs/Learn/Forms) é um grupo de um ou mais campos/_widgets_ em uma página web, que podem ser utilizados para coletar informações dos usuários para submetê-las a um servidor. Formulários são um mecanismo flexível para coletar input de usuário porque há _widgets_ adequados para entrada de variados tipos de dados, incluindo caixas de texto, caixas de seleção, botões radiais, seletores de data etc. Formulários são também um meio relativamente seguro de compartilhar dados com o servidor, pois nos permitem enviar dados em requisições `POST` com proteção contra ataques maliciosos **CSRF** (_**Cross-Site Request Forgery**_ - em inglês, falsificação de solicitação entre sites).
+Um [Formulário HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms) é um grupo de um ou mais campos/_widgets_ em uma página web, que podem ser utilizados para coletar informações dos usuários para submetê-las a um servidor. Formulários são um mecanismo flexível para coletar input de usuário porque há _widgets_ adequados para entrada de variados tipos de dados, incluindo caixas de texto, caixas de seleção, botões radiais, seletores de data etc. Formulários são também um meio relativamente seguro de compartilhar dados com o servidor, pois nos permitem enviar dados em requisições `POST` com proteção contra ataques maliciosos **CSRF** (_**Cross-Site Request Forgery**_ - em inglês, falsificação de solicitação entre sites).
 
-Apesar de ainda não termos criado formulários até o momento neste tutorial, já os encontramos na página do Django Admin — por exemplo, a captura de tela abaixo mostra um formulário para editar um dos nossos modelos de [Livros](/pt-BR/docs/Learn/Server-side/Django/Models), incluindo algumas listas de seleção e editores de texto.
+Apesar de ainda não termos criado formulários até o momento neste tutorial, já os encontramos na página do Django Admin — por exemplo, a captura de tela abaixo mostra um formulário para editar um dos nossos modelos de [Livros](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Models), incluindo algumas listas de seleção e editores de texto.
 
 ![Admin Site - Book Add](admin_book_add.png)
 
@@ -49,7 +49,7 @@ Neste tutorial, vamos te mostrar alguns dos métodos para se criar e trabalhar c
 
 ## Formulários HTML
 
-Antes de mais nada, um breve resumo de [Formulários HTML](/pt-BR/docs/Learn/Forms). Considere um formulário HTML simples, com um único campo de texto para entrada do nome de uma "equipe", e sua respectiva legenda:
+Antes de mais nada, um breve resumo de [Formulários HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms). Considere um formulário HTML simples, com um único campo de texto para entrada do nome de uma "equipe", e sua respectiva legenda:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -73,7 +73,6 @@ A entrada `submit` será exibida como um botão (por padrão) que pode ser press
 
 - `action`: O recurso/URL para onde os dados devem ser enviados para processamento quando o formulário é enviado. Se isso não estiver configurado (ou configurado para uma string vazia), o formulário será enviado de volta para URL da página atual.
 - `method`: O método HTTP method utilizado para enviar os dados: _post_ or _get_.
-
   - O método `POST` deve sempre ser utilizado se os dados forem resultar em uma alteração no banco de dados do servidor, pois é mais resistente a ataques de falsificação de solicitação entre sites.
   - O método `GET` deve ser utilizado somente para formulários que não alteram dados de usuário (um formulário de busca, por exemplo). Ele é recomendado para quando você quiser poder favoritar ou compartilhar a URL.
 
@@ -92,16 +91,13 @@ Um fluxograma do processo de como o Django lida com solicitações de formulári
 Com base no diagrama acima, as principais coisas que o manuseio de formulários do Django faz são:
 
 1. Exiba o formulário padrão na primeira vez em que for solicitado pelo usuário
-
    - O formulário pode conter campos em branco (por exemplo, se você estiver criando um novo registro) ou pode ser preenchido previamente com valores iniciais (por exemplo, se você estiver alterando um registro ou tiver valores iniciais padrão úteis).
    - O formulário é referido como _unbound_ neste momento, porque não está associado a nenhum dado inserido pelo usuário (embora possa ter valores iniciais).
 
 2. Receba dados de uma solicitação de envio e vincule-os ao formulário.
-
    - Vincular dados ao formulário significa que os dados inseridos pelo usuário e quaisquer erros estão disponíveis quando precisamos exibir novamente o formulário.
 
 3. Limpe e valide os dados.
-
    - A limpeza dos dados executa a higienização da entrada (por exemplo, removendo caracteres inválidos que podem ser usados para enviar conteúdo malicioso ao servidor) e os converte em tipos consistentes de Python.
    - A validação verifica se os valores são apropriados para o campo (por exemplo, estão no período certo, não são muito curtos ou muito longos etc.)
 
@@ -318,9 +314,10 @@ Se o formulário não é válido, chamamos `render()` novamente, mas dessa vez o
 
 Se o formulário é válido, então podemos começar a utilizar os dados, acessando-o por meio do atributo`form.cleaned_data` (Ex. `data = form.cleaned_data['renewal_date']`). Aqui, apenas salvamos os dados no atributo `due_back` do objeto `BookInstance` associado.
 
-> **Aviso:** **Importante**: Embora você também possa acessar os dados do formulário diretamente por meio do _request_ (por exemplo, `request.POST['renewal_date']` ou `request.GET['renewal_date']` se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.
+> [!WARNING]
+> **Importante**: Embora você também possa acessar os dados do formulário diretamente por meio do _request_ (por exemplo, `request.POST['renewal_date']` ou `request.GET['renewal_date']` se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.
 
-A estapa final da manipulação de formulário na parte da _view_ é redirecionar para outra página, geralmente uma página de "êxito". Nesse caso, usamos `HttpResponseRedirect` e `reverse()` para redirecionar para a _view_ chamada `'all-borrowed'` (isso foi criado como desafio em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication#challenge_yourself)). Se você não criou está página considere redirecionar para a página principal na URL '/').
+A estapa final da manipulação de formulário na parte da _view_ é redirecionar para outra página, geralmente uma página de "êxito". Nesse caso, usamos `HttpResponseRedirect` e `reverse()` para redirecionar para a _view_ chamada `'all-borrowed'` (isso foi criado como desafio em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself)). Se você não criou está página considere redirecionar para a página principal na URL '/').
 
 Isso é tudo que é necessário para a manipulação do formulario, mas ainda precisamo restringir o acesso a _view_ aos bibliotecários. Provavelmente devemos criar uma nova permissão em `BookInstance` ("`can_renew`"), mas, para simplificar as coisa aqui, apenas usamos o _decorator_ da função*,* `@permission_required` com nossa permissão existente `can_mark_returned`.
 
@@ -459,7 +456,7 @@ Para mais exemplos de como renderizar formulários manualmente em _templates_ e 
 
 ### Testando a página
 
-Se você aceitou o "desafio" em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication#challenge_yourself) você terá uma lista de todos os livros emprestados na biblioteca, que é visível apenas aos funcionários da biblioteca. Podemos adicionar um _link_ para nossa página de renovação ao lado de cada item, usando o código de modelo abaixo.
+Se você aceitou o "desafio" em [Tutorial Django Parte 8: Autenticação de usuário e permissões](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself) você terá uma lista de todos os livros emprestados na biblioteca, que é visível apenas aos funcionários da biblioteca. Podemos adicionar um _link_ para nossa página de renovação ao lado de cada item, usando o código de modelo abaixo.
 
 ```django
 {% if perms.catalog.can_mark_returned %}-
@@ -553,7 +550,8 @@ A classe `RenewBookModelForm` acima agora é funcionalmente equivalente a nossa 
 
 O algoritmo de manipulação de formulários que usamos em nosso exemplo de função _view_ acima, representa um padrão extremamente comum nas _views_ de edição de formulário. Django abstrai grande parte desse "_boilerplate_" (trabalho repetitivo) para você, criando [views genéricas de edição](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/) para views de criação, edição e exclusão baseadas em modelos. Não apenas lidam com o comportamento de visualização, mas também criam automaticamente para você a classe de formulário (uma `ModelForm`) a partir do modelo.
 
-> **Nota:**Além das _views_ de edição descritas aqui, há também uma classe [FormView](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview), que fica em algum lugar entre nossa função _view_ e outra _view_ genérica em termos de "flexibilidade" vs "esforço de codificação". Usando `FormView`, você ainda precisa criar seu `Form`, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.
+> [!NOTE]
+> Além das _views_ de edição descritas aqui, há também uma classe [FormView](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview), que fica em algum lugar entre nossa função _view_ e outra _view_ genérica em termos de "flexibilidade" vs "esforço de codificação". Usando `FormView`, você ainda precisa criar seu `Form`, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.
 
 Nessa seção vamos usar _views_ genericas de edição para criar páginas para adicionar funcionalidades para criar, editar e excluir registros de `Author` da nossa biblioteca — fornecendo efetivamente uma reimplementação básica de parte do site _Admin_ (isso poderá ser útil se você precisa oferecer funcionalidades de administrador de uma maneira mais flexível que possa ser fornecida pelo dite _Admin_).
 

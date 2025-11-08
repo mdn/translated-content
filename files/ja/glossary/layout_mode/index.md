@@ -4,8 +4,6 @@ slug: Glossary/Layout_mode
 original_slug: Web/CSS/Layout_mode
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の**レイアウトモード** (または単に「レイアウト」) は、ボックスの位置やサイズを、兄弟要素や祖先要素のボックスとの相互作用を踏まえて決めるアルゴリズムです。複数のレイアウトモードがあります。
 
 - _[通常フロー](/ja/docs/Web/CSS/CSS_display/Flow_layout)_ — すべての要素は何かの操作をして外さない限り、通常フローの一部です。通常フローは、段落のようなボックスをレイアウトするための*ブロックレイアウト*と、テキストのような行内アイテムをレイアウトするための*インラインレイアウト*を含みます。
@@ -23,7 +21,7 @@ original_slug: Web/CSS/Layout_mode
 
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
   - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
   - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -35,6 +33,6 @@ original_slug: Web/CSS/Layout_mode
     - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
     - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
     - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

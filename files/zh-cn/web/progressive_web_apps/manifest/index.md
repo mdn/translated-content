@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b3d5659a6f16dc6cb8be5c48d19820a67434ecb9
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
-
 [Web 应用清单](https://w3c.github.io/manifest/)规范中定义的 **web 应用清单**是一个提供 web 应用信息的 {{Glossary("JSON")}} 文本文件。
 
 Web 应用清单最常见的用途是提供浏览器在设备上安装[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）所需的信息，如应用程序的名称和图标。
@@ -85,7 +83,7 @@ web 应用清单可通过文档 {{HTMLElement("head")}} 中的 {{HTMLElement("li
 
 规范的[媒体类型注册表](https://w3c.github.io/manifest/#media-type-registration)部分指定了 `.webmanifest` 扩展名（清单文件的响应需返回 `Content-Type: application/manifest+json`）。浏览器通常支持带有其他适当扩展名的清单，如 `.json`（`Content-Type: application/json`）。
 
-如果清单需要凭据才能获取，则必须将 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性设置为 `use-credentials`，即使清单文件与当前页面同源。
+如果清单需要凭据才能获取，则必须将 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin) 属性设置为 `use-credentials`，即使清单文件与当前页面同源。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

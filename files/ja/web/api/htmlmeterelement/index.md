@@ -16,17 +16,17 @@ HTML の {{HTMLElement("meter")}} 要素は **`HTMLMeterElement`** インター�
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLMeterElement.high")}}
-  - : `double` で、[`high`](/ja/docs/Web/HTML/Element/meter#high) 属性を反映し、上の境界値を表します。
+  - : `double` で、[`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) 属性を反映し、上の境界値を表します。
 - {{domxref("HTMLMeterElement.low")}}
-  - : `double` で、[`low`](/ja/docs/Web/HTML/Element/meter#low) 属性を反映し、下の境界値を表します。
+  - : `double` で、[`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) 属性を反映し、下の境界値を表します。
 - {{domxref("HTMLMeterElement.max")}}
-  - : `double` で、[`max`](/ja/docs/Web/HTML/Element/meter#max) 属性を反映し、最大値を表します。
+  - : `double` で、[`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) 属性を反映し、最大値を表します。
 - {{domxref("HTMLMeterElement.min")}}
-  - : `double` で、[`min`](/ja/docs/Web/HTML/Element/meter#min) 属性を反映し、最小値を表します。
+  - : `double` で、[`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min) 属性を反映し、最小値を表します。
 - {{domxref("HTMLMeterElement.optimum")}}
-  - : `double` で、[`optimum`](/ja/docs/Web/HTML/Element/meter#optimum) 属性を反映し、最適な値を表します。
+  - : `double` で、[`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) 属性を反映し、最適な値を表します。
 - {{domxref("HTMLMeterElement.value")}}
-  - : `double` で、[`value`](/ja/docs/Web/HTML/Element/meter#value) 属性を反映し、現在の値を表します。
+  - : `double` で、[`value`](/ja/docs/Web/HTML/Reference/Elements/meter#value) 属性を反映し、現在の値を表します。
 - {{domxref("HTMLMeterElement.labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、この要素に関連付けられた {{HTMLElement("label")}} 要素群を表します。
 

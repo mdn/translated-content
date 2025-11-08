@@ -1,14 +1,11 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Reference/Status/401
-original_slug: Web/HTTP/Status/401
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`401 Unauthorized`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、有効な認証資格情報が不足していることによりリクエストが適用されないことを示します。
+HTTP の **`401 Unauthorized`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、有効な認証資格情報が不足していることによりリクエストが適用されないことを示します。
 このステータスコードは、正しい認証方法を含む {{HTTPHeader("WWW-Authenticate")}} ヘッダーとともに送信されます。そのヘッダーには、サーバーがクライアントがリクエストを正常に行うために必要な[認証スキーム](/ja/docs/Web/HTTP/Guides/Authentication#認証スキーム)に関する情報が含まれています。
 
 `401 Unauthorized` は {{HTTPStatus("403", "403 Forbidden")}} レスポンスに似ていますが、リクエストが有効な資格情報を含んでいるものの、クライアントが特定のアクションを実行する権限を持たない場合に 403 が返されるという点が異なります。

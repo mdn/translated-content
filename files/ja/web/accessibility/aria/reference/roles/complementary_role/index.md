@@ -19,7 +19,8 @@ original_slug: Web/Accessibility/ARIA/Roles/complementary_role
 
 補足 (`complementary`) ロールは[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)です。 ランドマーク (landmark) は、支援技術によって使用され、文書の大きなセクションを迅速に識別してナビゲートすることができます。 補足 (`complementary`) ランドマークロールを持つコンテナー内にリストされたコンテンツは、文書のメインのコンテンツから分離されている場合でも意味をなすべきです。
 
-> **メモ:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
+> [!NOTE]
+> {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
 
 ## 例
 
@@ -98,7 +99,7 @@ TBD
 
 - {{htmlelement("aside")}}: 余談要素
 - [complementary (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#complementary)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

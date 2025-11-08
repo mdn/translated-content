@@ -42,11 +42,11 @@ l10n:
 
 これらの基本的な擬似クラスについては、 もう慣れたことでしょう。 [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)では、他にも HTML フォームに関連する擬似クラスをいくつか提供しています。これらは、これらは、利用することができる有用なターゲット条件をいくつか提供しています。以下の節で詳しく説明しますが、簡単に説明すると、主なものは以下のとおりです。
 
-- {{cssxref(':required')}} および {{cssxref(':optional')}}: 必須となりうる要素（HTML [`required`](/ja/docs/Web/HTML/Attributes/required) 属性に対応している要素など）を、必須かオプションかに基づいて対象とします。
+- {{cssxref(':required')}} および {{cssxref(':optional')}}: 必須となりうる要素（HTML [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性に対応している要素など）を、必須かオプションかに基づいて対象とします。
   必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
-- {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 無効化できる要素（HTML [`disabled`](/ja/docs/Web/HTML/Attributes/disabled) 属性に対応した要素など）については現在有効か無効かに基づいて、また、読み書き可能、読み取り専用のフォームコントロール（HTML [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) 属性が設定された要素など）を対象にします。
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) に [`checked`](/ja/docs/Web/HTML/Element/input#checked) 属性が設定されているもの、または [`<option>`](/ja/docs/Web/HTML/Element/option) 要素に [`selected`](/ja/docs/Web/HTML/Element/option#selected) 属性が設定されているものなどが対象です。）
+- {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 無効化できる要素（HTML [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性に対応した要素など）については現在有効か無効かに基づいて、また、読み書き可能、読み取り専用のフォームコントロール（HTML [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が設定された要素など）を対象にします。
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) に [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性が設定されているもの、または [`<option>`](/ja/docs/Web/HTML/Reference/Elements/option) 要素に [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性が設定されているものなどが対象です。）
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。中にはとても特殊でニッチな問題を解決することを目的としたものもあります。上に挙げた UI 擬似クラスはブラウザーの対応が充実していますが、もちろん、対象とするユーザーに対して確実に動作するよう、フォームの実装を慎重にテストする必要があります。
 
@@ -116,7 +116,7 @@ input:optional {
 
 これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
 
-これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
+これは、 [`::before`](/ja/docs/Web/CSS/Reference/Selectors/::before) と [`::after`](/ja/docs/Web/CSS/Reference/Selectors/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/Reference/Properties/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
 
 これは、すべてのユーザーのアクセシビリティを保証するため代替のインジケーターも利用できる場合に、ラベルやアイコンのような視覚的なインジケーターを要素に追加したい場合に実に有益です。たとえば、[カスタムラジオボタンの例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)では、ラジオボタンが選択されたときにカスタムラジオボタンの内側の円の配置とアニメーションを処理するために生成コンテンツを使用しています。
 
@@ -154,7 +154,7 @@ input[type="radio"]:checked::before {
 
 スクリーンリーダーには、 "required" が追加情報として読み上げられ、目の見えるユーザーには、このラベルが表示されます。
 
-前に述べたように、テキスト入力フィールドは生成コンテンツに対応していないので、生成コンテンツをぶら下げるために空の [`<span>`](/ja/docs/Web/HTML/Element/span) を追加します。
+前に述べたように、テキスト入力フィールドは生成コンテンツに対応していないので、生成コンテンツをぶら下げるために空の [`<span>`](/ja/docs/Web/HTML/Reference/Elements/span) を追加します。
 
 ```html
 <div>
@@ -203,7 +203,7 @@ input:required + span::after {
 
 ## データが妥当が否かでコントロールをスタイル設定する
 
-フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
+フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/HTML/Guides/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
 
 ### :valid と :invalid
 
@@ -212,7 +212,7 @@ input:required + span::after {
 - 制約検証を行わないコントロールは常に有効であり、したがって `:valid` と一致します。
 - `required` が設定されているコントロールで、値がないものは無効とみなされ、 `:invalid` および `:required` と一致します。
 - 組み込みの検証機能を持つコントロール、たとえば `<input type="email">` や `<input type="url">` は、入力されたデータが検索するパターンと一致しない場合、 `:invalid` に一致します（ただし、空の場合は有効になります）。
-- 現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
+- 現在の値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
 - 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
 それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
@@ -268,7 +268,7 @@ input:valid + span::before {
 
 ### 範囲内と範囲外のデータ
 
-上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力フィールドに対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
+上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) によって範囲指定された数値入力フィールドに対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
 > [!NOTE]
 > 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
@@ -479,7 +479,7 @@ textarea:read-write {
 
 チェックされたときは、 {{cssxref(":checked")}} 擬似クラスで照合できます。
 
-これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
+これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/Reference/Properties/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
 
 おさらいですが、 [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) の例の `:checked` コードは以下のようになっています。
 
@@ -507,7 +507,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-基本的には、ラジオボタンの「内側の円」のスタイルを `::before` 擬似要素を使用して構築しますが、それに `scale(0)` を [`transform`](/ja/docs/Web/CSS/transform) を設定します。次に、 [`transition`](/ja/docs/Web/CSS/transition) を使用して、ラジオが選択/チェックされたときにラベルの生成コンテンツがうまくアニメーションして表示されるようにしています。 [`width`](/ja/docs/Web/CSS/width)/[`height`](/ja/docs/Web/CSS/height) を遷移させるのではなく、座標変換を使用することの利点は、円の角から伸びるように見えるのではなく、円の中心から伸びるようにするために [`transform-origin`](/ja/docs/Web/CSS/transform-origin) を使用することができ、かつボックスモデルプロパティ値を更新しないため、ジャンプする動作がないことです。
+基本的には、ラジオボタンの「内側の円」のスタイルを `::before` 擬似要素を使用して構築しますが、それに `scale(0)` を [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) を設定します。次に、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) を使用して、ラジオが選択/チェックされたときにラベルの生成コンテンツがうまくアニメーションして表示されるようにしています。 [`width`](/ja/docs/Web/CSS/Reference/Properties/width)/[`height`](/ja/docs/Web/CSS/Reference/Properties/height) を遷移させるのではなく、座標変換を使用することの利点は、円の角から伸びるように見えるのではなく、円の中心から伸びるようにするために [`transform-origin`](/ja/docs/Web/CSS/Reference/Properties/transform-origin) を使用することができ、かつボックスモデルプロパティ値を更新しないため、ジャンプする動作がないことです。
 
 ### :default と :indeterminate
 
@@ -587,7 +587,8 @@ input[type="radio"]:indeterminate {
 > [!NOTE]
 > この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
 
-> **メモ:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
+> [!NOTE]
+> [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 
 ## その他の擬似クラス
 
@@ -595,16 +596,16 @@ input[type="radio"]:indeterminate {
 
 - {{cssxref(":focus-within")}} 擬似クラスは、フォーカスを保有する要素、あるいはフォーカスを保有する要素を 含む\_ 要素に一致します。これは、フォーム内の入力フィールドにフォーカスが当たったとき、フォーム全体を何らかの方法でハイライトさせたい場合に有用です。
 - {{cssxref(":focus-visible")}} 擬似クラスは、（タッチやマウスではなく）キーボード操作によってフォーカスを受けた要素に一致します。マウス（または他の）フォーカスとは異なるスタイルをキーボードフォーカスのために使用したい場合、有用です。
-- {{cssxref(":placeholder-shown")}} 擬似クラスは、{{htmlelement('input')}} と {{htmlelement('textarea')}} 要素の値が空であるため、そのプレースホルダーを表示している（すなわち [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性の内容を示している）要素に一致します。
+- {{cssxref(":placeholder-shown")}} 擬似クラスは、{{htmlelement('input')}} と {{htmlelement('textarea')}} 要素の値が空であるため、そのプレースホルダーを表示している（すなわち [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性の内容を示している）要素に一致します。
 
 以下のものも興味深いですが、まだブラウザーの対応が十分でありません。
 
 - {{cssxref(":blank")}} 擬似クラスは、空のフォームコントロールを選択します。 {{cssxref(":empty")}} も {{HTMLElement("input")}} のように子を持たない要素に一致しますが、より一般化されており、他の{{glossary("void element", "空要素")}}、例えば {{HTMLElement("br")}} や {{HTMLElement("hr")}} などにも一致します。 `:empty` はそれなりにブラウザーが対応しています。`:blank` 擬似クラスの仕様書はまだ完成していないので、どのブラウザーも対応しているわけではありません。
-- [`:user-invalid`](/ja/docs/Web/CSS/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
+- [`:user-invalid`](/ja/docs/Web/CSS/Reference/Selectors/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms)を見てください。
 
 ## まとめ
 

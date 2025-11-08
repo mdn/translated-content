@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
-{{CSSRef}}
-
 **CSS 背景和边框**模块为元素提供了添加边框、圆角和阴影的属性。
 
 你可以为元素添加各种类型的边框样式，涵盖从光栅图像到 CSS 渐变在内的任意类型图片作为边框素材。边框可以设置为方形或圆角，且每个角均可独立指定不同的圆角半径。无论元素是否有可见边框，均支持对其进行圆角化处理。
@@ -176,9 +174,9 @@ div:first-of-type {
 - {{cssxref("text-shadow")}} 属性
 
 - {{cssxref("url_value", "&lt;url&gt;")}} CSS 类型
-- [`<color>`](/zh-CN/docs/Web/CSS/color) 数据类型
+- [`<color>`](/zh-CN/docs/Web/CSS/Reference/Properties/color) 数据类型
 - [`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型
-- [`<position>`](/zh-CN/docs/Web/CSS/position) 数据类型
+- [`<position>`](/zh-CN/docs/Web/CSS/Reference/Properties/position) 数据类型
 
 - [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 关键字
 

@@ -2,12 +2,11 @@
 title: フロントマターの page-type キー
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: f35cce90b6bfd96bcbe195530ccfba8458e455dd
+  sourceCommit: a1ac64fa4da965d2a152f08221b1a9aed638fd16
 ---
 
-{{MDNSidebar}}
-
-> **注目:** **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
+> [!CALLOUT]
+> **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
 
 フロントマターの `page-type` キーは MDN ページ型を記述します。
 これにより、 MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
@@ -16,10 +15,11 @@ l10n:
 
 ```md
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
+title: 100 Continue
+slug: Web/HTTP/Reference/Status/100
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+sidebar: http
 ---
 ```
 
@@ -29,11 +29,12 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 以下のページ型は MDN の特定の技術分野に依存するものではありません。
 
-- `guide`: 特有の構造を持たない一般的なガイドページです。
-- `landing-page`: 他のページへのリンクが掲載されている、主にナビゲーションの補助として機能するページ。
-- `how-to`: 主に目的志向の手引き記事として機能するページ。
-- `tutorial`: 学習指向の記事の概要ページです。
-- `tutorial-chapter`: 複数部構成のチュートリアルの一部であるページ。
+- `guide`: 特有の構造を持たない一般的なガイドです。
+- `landing-page`: トピックの概要、章の導入部、主要分野へのナビゲーションです。
+- `listing-page`: その章の簡単説明と、その章内のサブページのリストです。
+- `how-to`: 目的志向の手引き記事です。
+- `tutorial`: 学習指向の記事の概要です。
+- `tutorial-chapter`: 複数部構成のチュートリアルの一部です。
 
 ## ドメイン固有のページ型
 
@@ -44,35 +45,35 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では [Learn](/ja/docs/Learn_web_development) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧のいずれか、または一般的なページ型の値のいずれかでなければなりません。
 
 - `learn-topic`: トピックの概要、つまり [_CSS_](/ja/docs/Learn_web_development/Core/Styling_basics) のようなモジュールの集合です。
-- `learn-module` [_HTML 入門_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
+- `learn-module` [_HTML によるコンテンツの構造化_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
 - `learn-module-chapter` [_モバイルアクセシビリティ_](/ja/docs/Learn_web_development/Core/Accessibility/Mobile)のように、モジュールの一部であるガイド。
-- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
+- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
 - `learn-faq`: [_ドメイン名とは何ですか?_](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)のように、ウェブ開発に関する固有の質問に対する答えです。
 
 ### アクセシビリティのページ型
 
-この節では、[Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、 [Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Roles/section_role) など。
-- `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort) など。
+- `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/section_role) など。
+- `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) など。
 
 ### CSS のページ型
 
 この節では、[Web/CSS](/ja/docs/Web/CSS)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)。例えば {{cssxref("@media")}} など。
-- `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/@counter-style/prefix) など。
-- `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)など。
-- `css-function`: [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)。例えば {{cssxref("max")}} など。
+- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)。例えば {{cssxref("@media")}} など。
+- `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/prefix) など。
+- `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)など。
+- `css-function`: [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)。例えば {{cssxref("max")}} など。
 - `css-keyword`: キーワード。例えば {{cssxref("inherit")}} など。
-- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/@media/hover) など。
+- `css-media-feature`: [メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)。例えば [`hover`](/ja/docs/Web/CSS/Reference/At-rules/@media/hover) など。
 - `css-module`: モジュール。例えば [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)など。
 - `css-property`: プロパティ。例えば {{cssxref("background-color")}} など。
-- `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
-- `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)。例えば {{cssxref("::before")}} など。
-- `css-selector`: [基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)など。
+- `css-pseudo-class`: [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)。例えば {{cssxref(":enabled")}} など。
+- `css-pseudo-element`: [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)。例えば {{cssxref("::before")}} など。
+- `css-selector`: [基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)。例えば[クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)など。
 - `css-shorthand-property`: [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)。例えば {{cssxref("background")}} など。
-- `css-type`: [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)。例えば [`<color>`](/ja/docs/Web/CSS/color_value) など。
+- `css-type`: [データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)。例えば [`<color>`](/ja/docs/Web/CSS/color_value) など。
 
 ### 用語集のページ型
 
@@ -85,9 +86,9 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/HTML](/ja/docs/Web/HTML)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `html-attribute`: HTML 属性。例えば [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) など。
-- `html-attribute-value`: HTML 属性の単一の値。例えば [`dns-prefetch`](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch) など。
-- `html-element`: HTML 要素。例えば [`<button>`](/ja/docs/Web/HTML/Element/button) など。
+- `html-attribute`: HTML 属性。例えば [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) など。
+- `html-attribute-value`: HTML 属性の単一の値。例えば [`dns-prefetch`](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch) など。
+- `html-element`: HTML 要素。例えば [`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) など。
 
 ### HTTP のページ型
 
@@ -139,8 +140,6 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/API](/ja/docs/Web/API)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `web-api-overview`: ある Web API の概要。例えば[フェッチ API](/ja/docs/Web/API/Fetch_API) など。
-- `web-api-global-function`: グローバル関数。例えば [`fetch()`](/ja/docs/Web/API/Window/fetch) など。
-- `web-api-global-property`: グローバルプロパティ。
 - `web-api-interface`: Web API インターフェイス。例えば [`Request`](/ja/docs/Web/API/Request) など。
 - `web-api-constructor`: コンストラクター。例えば [`Request()`](/ja/docs/Web/API/Request/Request) など。
 - `web-api-instance-method`: インスタンスメソッド。例えば [`cache.add()`](/ja/docs/Web/API/Cache/add) など。
@@ -199,7 +198,6 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/XSLT](/ja/docs/Web/XML/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XML/XSLT/Reference/Element/message) など。
-- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XML/XPath/Reference/Axes) など。
 
 ### EXSLT のページ型
 

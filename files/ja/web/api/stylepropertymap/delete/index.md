@@ -26,7 +26,7 @@ delete(property)
 
 ## 例
 
-以下の例では、要素の [style 属性](/ja/docs/Web/HTML/Global_attributes/style)から {{cssxref('background-image')}} プロパティを削除します。
+以下の例では、要素の [style 属性](/ja/docs/Web/HTML/Reference/Global_attributes/style)から {{cssxref('background-image')}} プロパティを削除します。
 
 ```js
 // button 要素を取得

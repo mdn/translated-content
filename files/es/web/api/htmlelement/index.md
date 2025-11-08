@@ -56,7 +56,7 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
 - {{domxref("HTMLElement.spellcheck")}}
-  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it hasn't an effect on all of them.
+  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/Web/HTML/Reference/Global_attributes/spellcheck). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
 - {{domxref("HTMLElement.tabIndex")}}

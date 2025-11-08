@@ -41,7 +41,7 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} および {{HTMLElement("legend")}}
-3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) 以外
+3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) 以外
 4. 複数行の {{HTMLElement("textarea")}}
 5. ボタン（{{HTMLElement("input")}} と {{HTMLElement("button")}} の両方）
 6. {{HTMLElement("label")}}
@@ -50,16 +50,16 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 #### スタイル設定が困難なもの
 
 1. チェックボックスとラジオボタン
-2. [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
+2. [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
 
 これら特殊なケースをどのように扱うかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)の記事で見ていきます。
 
 #### 内部が CSS 単独ではスタイル設定できないもの
 
-- [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日時関連コントロール
-- [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)のような日時関連コントロール
+- [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
 - ドロップダウンウィジェットの作成に含まれる要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む。
 - {{HTMLElement("progress")}} と {{HTMLElement("meter")}}
 
@@ -150,7 +150,8 @@ legend {
 
 {{HTMLElement("legend")}} 要素はアクセシビリティにとってとても重要です。フィールドセット内の各フォーム要素のラベルの一部として支援技術によって読み上げられます。しかし、上記のようなテクニックを使用しても問題ありません。 legend の内容はこれまでと同じように読み上げられます。見た目の位置が変更されただけです。
 
-> **メモ:** {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
+> [!NOTE]
+> {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
 
 ## 具体的なスタイル設定の例
 
@@ -338,7 +339,7 @@ textarea {
 
 #### 送信ボタンにスタイル設定する
 
-{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めて、行いたいことが何でもできます。
+{{HTMLElement("button")}} 要素は、 CSS によってより便利になります。[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含めて、行いたいことが何でもできます。
 
 ```css
 button {
@@ -373,7 +374,7 @@ button:focus {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics)をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms)をご覧ください。
 
 ## まとめ
 

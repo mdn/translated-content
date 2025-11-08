@@ -5,11 +5,9 @@ l10n:
   sourceCommit: 2b214f76937f16327c4338ae4a541f54bcf4bf63
 ---
 
-{{CSSRef}}
-
 本文主要介绍 HTML 中使用 CSS 颜色的各种方法。
 
-色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element)添加颜色，以创建所需的外观。
+色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Reference/Elements)添加颜色，以创建所需的外观。
 
 我们将会谈及添加颜色所需要的大部分内容，包括[一系列可以着色的元素与相关的 CSS 属性](#可设置颜色的内容)，[如何描述颜色](#如何描述颜色)，以及[在样式表与脚本中使用颜色的方法](#使用颜色)。同时我们还会了解如何[让用户选择颜色](#让用户选择颜色)。
 
@@ -36,7 +34,7 @@ l10n:
 - {{cssxref("text-emphasis-color")}}
   - : 绘制文本中每个字符旁边的强调符号时使用的颜色。主要用于绘制东亚语言的文本。
 - {{cssxref("caret-color")}}
-  - : 在元素中绘制{{Glossary("caret", "光标")}}时使用的颜色（有时也称为文本输入光标）。这仅对可编辑的元素有用，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 或设置了 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性的元素。
+  - : 在元素中绘制{{Glossary("caret", "光标")}}时使用的颜色（有时也称为文本输入光标）。这仅对可编辑的元素有用，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 或设置了 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) 属性的元素。
 
 ### 盒
 
@@ -55,7 +53,7 @@ l10n:
 
 任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)了解为边框应用样式的更多信息。
 
-你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/border-width)、[样式](/zh-CN/docs/Web/CSS/border-style)（实线、虚线等）等等）。
+你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/Reference/Properties/border-width)、[样式](/zh-CN/docs/Web/CSS/Reference/Properties/border-style)（实线、虚线等）等等）。
 
 - {{cssxref("border-color")}}
   - : 为元素边框的每一侧指定一种颜色。
@@ -366,7 +364,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 #### `color()` 函数
 
-如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
+如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
 
 ```css
 .vibrant {
@@ -488,7 +486,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 ## 让用户选择颜色
 
-在许多情况下，网站可能需要让用户选择一种颜色。也许你有一个可定制的用户界面，或者你正在实现一个绘图应用程序。也许你有可编辑的文本，需要让用户选择文本颜色。或者，你的应用程序可以让用户为文件夹或项目指定颜色。虽然从历史上看，有必要实现自己的[颜色选择器](https://en.wikipedia.org/wiki/Color_picker)，但 HTML 现在支持浏览器通过 {{HTMLElement("input")}} 元素，使用 `"color"` 作为其 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值，提供一个开箱即用的颜色选择器。
+在许多情况下，网站可能需要让用户选择一种颜色。也许你有一个可定制的用户界面，或者你正在实现一个绘图应用程序。也许你有可编辑的文本，需要让用户选择文本颜色。或者，你的应用程序可以让用户为文件夹或项目指定颜色。虽然从历史上看，有必要实现自己的[颜色选择器](https://en.wikipedia.org/wiki/Color_picker)，但 HTML 现在支持浏览器通过 {{HTMLElement("input")}} 元素，使用 `"color"` 作为其 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的值，提供一个开箱即用的颜色选择器。
 
 `<input>` 元素仅使用上述[十六进制字符串表示法](#十六进制字符串表示法)表示一种颜色。
 
@@ -533,7 +531,7 @@ CSS 为盒子设定了大小，并为外观设定了一些基本样式。此外�
 
 #### JavaScript
 
-此处的脚本负责更新边框的起始颜色，使其与颜色选择器的值相匹配。然后添加两个事件处理程序，以处理来自 [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) 元素的输入。
+此处的脚本负责更新边框的起始颜色，使其与颜色选择器的值相匹配。然后添加两个事件处理程序，以处理来自 [`<input type="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color) 元素的输入。
 
 ```js
 const colorPicker = document.getElementById("colorPicker");
@@ -590,7 +588,7 @@ colorPicker.addEventListener(
 
 几个示例（截至本列表最后一次修订时，所有示例均可免费使用）：
 
-- [MDN 的取色工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [MDN 色彩选择工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter)
 - [Paletton](https://paletton.com/)
 - [Adobe Color CC 在线调色盘](https://color.adobe.com/create/color-wheel)
 

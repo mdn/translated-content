@@ -24,7 +24,7 @@ WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de 
 
 ## Tópicos Relacionados
 
-- [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/pt-BR/docs/Web/JavaScript)
+- [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/pt-BR/docs/Web/JavaScript)
 
 ## Veja Também
 

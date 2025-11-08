@@ -416,4 +416,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para mais detalhes.
+Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) para mais detalhes.

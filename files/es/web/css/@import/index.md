@@ -3,8 +3,6 @@ title: "@import"
 slug: Web/CSS/@import
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La regla-at [CSS](/es/docs/Web/CSS) `@import` permite importar reglas desde otras hojas de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas {{ cssxref("@charset") }}; como esto no es una [declaración anidada](/es/docs/Web/CSS/CSS_syntax/Syntax#nested_statements), no puede ser usado dentro de [grupos condicionales de reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules).
@@ -21,7 +19,6 @@ Para que los agentes de usuario puedan evitar recuperar recursos para tipos de m
 Dónde :
 
 - _url_
-
   - : es una {{cssxref("&lt;string&gt;")}} o un {{cssxref("&lt;uri&gt;")}}
 
     Representa la ubicación del recurso a importar. La _url_ puede ser absoluta o relativa.

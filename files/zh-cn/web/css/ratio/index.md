@@ -5,9 +5,7 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{CSSRef}}
-
-**`<ratio>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)用于在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中描述[纵横比](/zh-CN/docs/Web/CSS/@media/aspect-ratio)，表示两个无单位值之间的比例关系。
+**`<ratio>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)用于在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中描述[纵横比](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio)，表示两个无单位值之间的比例关系。
 
 ## 语法
 
@@ -48,4 +46,4 @@ l10n:
 
 ## 参见
 
-- [`aspect-ratio`](/zh-CN/docs/Web/CSS/@media/aspect-ratio) 媒体特性
+- [`aspect-ratio`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio) 媒体特性

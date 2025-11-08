@@ -3,19 +3,14 @@ title: Firefox 3.6 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.6
 ---
 
-{{FirefoxSidebar}}
-
 1. Notes de versions pour développeurs
-
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
-
    1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
    2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
-
    1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
@@ -30,7 +25,6 @@ slug: Mozilla/Firefox/Releases/3.6
    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
 4. Développer et contribuer
-
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
    2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
@@ -47,26 +41,26 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 ### CSS
 
 - [Utilisation de dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/background).
+  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background).
 - [Fonds multiples](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : La propriété [`background`](/fr/docs/Web/CSS/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/background-attachment)[`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-position`](/fr/docs/Web/CSS/background-position) et [`background-repeat`](/fr/docs/Web/CSS/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
+  - : La propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment)[`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) et [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
 - [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#fonctionnalit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_mozilla)
   - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
 - [Redimensionnement d'images de fond](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/background-size).
+  - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size).
 - [Support des polices WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
-  - : [`@font-face`](/fr/docs/Web/CSS/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
-- [Evènements pointeurs](/fr/docs/Web/CSS/pointer-events)
-  - : La propriété [`pointer-events`](/fr/docs/Web/CSS/pointer-events) si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.
+  - : [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
+- [Evènements pointeurs](/fr/docs/Web/CSS/Reference/Properties/pointer-events)
+  - : La propriété [`pointer-events`](/fr/docs/Web/CSS/Reference/Properties/pointer-events) si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.
 
 #### Autres changements CSS
 
-- L'unité de longueur [`rem`](/fr/docs/Web/CSS/length) de [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
-- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
-- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
-- Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/display) table fonctionnent beaucoup mieux.
-- Ajout de [`:-moz-locale-dir(ltr)`](/fr/docs/Web/CSS/:-moz-locale-dir_ltr) et [`:-moz-locale-dir(rtl)`](/fr/docs/Web/CSS/:-moz-locale-dir_rtl) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
-- Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Element/input) `checkbox` dont l'attribut `indeterminate` est `true`.
+- L'unité de longueur [`rem`](/fr/docs/Web/CSS/Reference/Values/length) de [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
+- [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
+- [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
+- Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) table fonctionnent beaucoup mieux.
+- Ajout de [`:-moz-locale-dir(ltr)`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_ltr) et [`:-moz-locale-dir(rtl)`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-locale-dir_rtl) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
+- Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/Reference/Selectors/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) `checkbox` dont l'attribut `indeterminate` est `true`.
 - Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.
 
 ### HTML
@@ -74,13 +68,13 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 - [Utilisation de fichiers à partir d'applications Web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
   - : Le support de la nouvelle API de fichier HTML5 a été ajouté à Gecko, ce qui permet à des applications Web d'accéder à des fichiers locaux sélectionnés par l'utilisateur.
 - Support des affiches pour les vidéos HTML5
-  - : L'attribut `poster` est pris en charge pour l'élément [`<video>`](/fr/docs/Web/HTML/Element/video), ce qui permet au contenu de choisir une image à afficher tant que la vidéo n'a pas commencée.
+  - : L'attribut `poster` est pris en charge pour l'élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video), ce qui permet au contenu de choisir une image à afficher tant que la vidéo n'a pas commencée.
 - Support de la propriété `indeterminate` pour les cases à cocher et boutons radio
-  - : Les éléments HTML [`<input>`](/fr/docs/Web/HTML/Element/input) des types `checkbox` et `radio` supportent désormais la propriété indeterminate qui permet d'avoir un troisième état « indéterminé ».
+  - : Les éléments HTML [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) des types `checkbox` et `radio` supportent désormais la propriété indeterminate qui permet d'avoir un troisième état « indéterminé ».
 - Contrôle du lissage d'images dans canvas
-  - : La nouvelle propriété [`mozImageSmoothingEnabled`](/fr/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) peut être utilisée pour activer et désactiver le lissage lors d'un redimensionnement dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+  - : La nouvelle propriété [`mozImageSmoothingEnabled`](/fr/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) peut être utilisée pour activer et désactiver le lissage lors d'un redimensionnement dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
 - Exécution d'un script asynchrone
-  - : En définissant l'attribut `async` sur un élément [`<script>`](/fr/docs/Web/HTML/Element/script), le `script` ne bloquera pas le chargement ou l'affichage du reste de la page. En revanche, le `script` s'exécutera dès qu'il sera téléchargé.
+  - : En définissant l'attribut `async` sur un élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script), le `script` ne bloquera pas le chargement ou l'affichage du reste de la page. En revanche, le `script` s'exécutera dès qu'il sera téléchargé.
 
 ### JavaScript
 
@@ -118,7 +112,7 @@ Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonction
 ### XPath
 
 - Gestion de la méthode XPath choose()
-  - : La méthode [`choose()`](/fr/docs/Web/XPath/Functions/choose) est à présent gérée par notre implémentation de [XPath](/fr/docs/Web/XPath).
+  - : La méthode [`choose()`](/fr/docs/Web/XPath/Functions/choose) est à présent gérée par notre implémentation de [XPath](/fr/docs/Web/XML/XPath).
 
 ## Pour les développeurs XUL et les développeurs d'extensions
 

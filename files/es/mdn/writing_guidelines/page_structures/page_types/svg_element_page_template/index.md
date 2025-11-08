@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Elimina toda esta nota explicativa antes de publicar_
+> [!NOTE]
+> _Elimina toda esta nota explicativa antes de publicar_
 >
 > ---
 >
@@ -41,7 +42,6 @@ l10n:
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**desaprobada**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
->
 >   - : Reemplaza el valor de marcador de posición `svg.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
 >

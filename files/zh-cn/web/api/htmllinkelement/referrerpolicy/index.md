@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`referrerPolicy`** 属性反映 {{HTMLElement("link")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/link#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址。
+{{domxref("HTMLLinkElement")}} 接口的 **`referrerPolicy`** 属性反映 {{HTMLElement("link")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Reference/Elements/link#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址。
 
 详情请参考 HTTP 标头 {{HTTPHeader("Referrer-Policy")}}。
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Referer
 original_slug: Web/HTTP/Headers/Referer
 ---
 
-{{HTTPSidebar}}
-
 **`Referer`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `Referer` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
 
 > [!WARNING]
@@ -28,7 +26,7 @@ original_slug: Web/HTTP/Headers/Referer
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>

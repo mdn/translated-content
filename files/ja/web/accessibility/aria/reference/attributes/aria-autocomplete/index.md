@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f6310f5cf34dfe4b5c0a45494a83b0a5ef9a6571
 ---
 
-`aria-autocomplete` 属性は、 [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role), [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) において、テキスト入力がユーザーの意図する値の一つ以上の予測を発生させるかどうかを示し、発生した場合にどのように予測を表示するかを指定します。
+`aria-autocomplete` 属性は、 [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role), [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) において、テキスト入力がユーザーの意図する値の一つ以上の予測を発生させるかどうかを示し、発生した場合にどのように予測を表示するかを指定します。
 
 ## 解説
 
@@ -23,9 +23,9 @@ l10n:
 値のリストを実装する際、提案リストが表示されている間、 DOM のフォーカスはテキスト入力のままにしておく必要があります。
 
 - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) に、値の提案リストの id の値を設定してください。
-- [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) には、提案値のリストの集合を含む要素のロールに合うものを入れてください。
+- [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) には、提案値のリストの集合を含む要素のロールに合うものを入れてください。
 - 必要であれば、集合のコンテナーが対応している場合は [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) を使用してフォーカスを管理してください。
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) の状態を使用して、 [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role) の付いた要素のリストが表示されているかどうかを同期してください。
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の状態を使用して、 [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) の付いた要素のリストが表示されているかどうかを同期してください。
 
 フィールドのフォーカスが失われたときに自動補完リストの値が自動的に受け入れられる場合、リストは `aria-activedescendant` に対応するロールに格納されていなければなりません。
 
@@ -44,9 +44,9 @@ l10n:
 
 以下のロールで使用されます。
 
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role) ロール
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) ロール
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) ロール
-- inherits from [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role) ロール
+- inherits from [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) ロール
 
 ## 仕様書
 
@@ -54,14 +54,14 @@ l10n:
 
 ## 関連情報
 
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role) ロール
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) ロール
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) ロール
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role) ロール
-- {{HTMLElement('datalist')}} 要素と [`<input> list` 属性](/ja/docs/Web/HTML/Element/input#list)
+- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) ロール
+- {{HTMLElement('datalist')}} 要素と [`<input> list` 属性](/ja/docs/Web/HTML/Reference/Elements/input#list)
 - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性
-- [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性
+- [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性
 - [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性
 - [Editable Combobox With Both List and Inline Autocomplete Example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/combobox/combobox-autocomplete-both.html)
 - [Event.ariaAutoComplete](/ja/docs/Web/API/Element/ariaAutoComplete)
 

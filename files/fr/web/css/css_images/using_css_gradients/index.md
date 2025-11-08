@@ -7,13 +7,13 @@ l10n:
 
 {{CSSRef}}
 
-Les **dégradés CSS** sont représentés par le type de donnée [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un sous-ensemble du type [`<image>`](/fr/docs/Web/CSS/image). L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de dégradés&nbsp;:
+Les **dégradés CSS** sont représentés par le type de donnée [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient) qui est un sous-ensemble du type [`<image>`](/fr/docs/Web/CSS/Reference/Values/image). L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de dégradés&nbsp;:
 
-- Les dégradés linéaires (créés avec la fonction [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)),
-- Les dégradés radiaux (créés avec la fonction [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient)),
-- Les dégradés coniques (créés avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)).
+- Les dégradés linéaires (créés avec la fonction [`linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient)),
+- Les dégradés radiaux (créés avec la fonction [`radial-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/radial-gradient)),
+- Les dégradés coniques (créés avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient)).
 
-Les dégradés peuvent être répétés avec les fonctions respectives [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient), [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient).
+Les dégradés peuvent être répétés avec les fonctions respectives [`repeating-linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient), [`repeating-radial-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient).
 
 Les dégradés peuvent être utilisés à chaque endroit où on peut utiliser une image (par exemple les arrière-plans). Les dégradés étant générés dynamiquement, ils permettent d'éviter d'utiliser des images matricielles pour ces effets, le temps de téléchargement et la bande passante utilisée sont réduits. En outre, comme le dégradé est généré par le navigateur, les objets concernés se comporteront mieux en cas de zoom et votre mise en page peut être ajustée de manière plus flexible.
 
@@ -583,7 +583,7 @@ div {
 
 #### Longueur pour le dimensionnement des cercles
 
-Les cercles sont dimensionnés via une longueur (une valeur de type [`<length>`](/fr/docs/Web/CSS/length)) qui indique le rayon du cercle.
+Les cercles sont dimensionnés via une longueur (une valeur de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) qui indique le rayon du cercle.
 
 ```html hidden
 <div class="radial-circle-size"></div>
@@ -731,13 +731,13 @@ div {
 
 ## Répéter des dégradés
 
-Les propriétés [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient), [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient) et [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient) ne permettent pas automatiquement de répéter les arrêts de couleur. Toutefois, les fonctions [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient), [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient) offrent cette fonctionnalité.
+Les propriétés [`linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient), [`radial-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/radial-gradient) et [`conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient) ne permettent pas automatiquement de répéter les arrêts de couleur. Toutefois, les fonctions [`repeating-linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient), [`repeating-radial-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient) offrent cette fonctionnalité.
 
 La taille de la portion (ligne ou arc) répétée est donnée par la longueur (ou l'arc) entre le premier arrêt de couleur et le dernier arrêt de couleur. Si on n'indique pas de coordonnées pour le premier et le dernier arrêts, ceux-ci prendront respectivement 0 et 100%. Si aucun n'est déclaré, la ligne du dégradé occupera 100%, ce qui signifie que les dégradés linéaires et coniques ne se répèteront pas et que le dégradé radial ne se répètera que si le rayon du dégradé est plus petit que la distance entre le centre du dégradé et le coin le plus éloigné. Si le premier arrêt de couleur est déclaré et que la valeur est supérieure à 0, le dégradé se répètera, car la taille de la ligne ou de l'arc est donnée par la différence entre le premier et le dernier arrêt de couleur, qui vaudra alors ici moins de 100% ou 360 degrés.
 
 ### Répéter un dégradé linéaire
 
-Dans cet exemple, on utilise la fonction [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient) afin de créer un dégradé linéaire qui se répète le long d'une ligne. Les couleurs forment un cycle lorsque le motif se répète.
+Dans cet exemple, on utilise la fonction [`repeating-linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) afin de créer un dégradé linéaire qui se répète le long d'une ligne. Les couleurs forment un cycle lorsque le motif se répète.
 
 ```html hidden
 <div class="repeating-linear"></div>
@@ -766,7 +766,7 @@ div {
 
 ### Répéter plusieurs dégradés linéaires
 
-Comme les dégradés linéaires et radiaux, il est possible de déclarer plusieurs dégradés, situés les uns sur les autres. Cela n'a d'intérêt que si les dégradés sont partiellement transparents afin de pouvoir voir les couches formées par les autres dégradés. Pour voir les différents dégradés, il est aussi possible d'utiliser des tailles d'arrière-plan différentes ([`background-size`](/fr/docs/Web/CSS/background-size)) et avec des positions ([`background-position`](/fr/docs/Web/CSS/background-position)) différentes pour chaque image de dégradé. Dans l'exemple qui suit, on utilise la transparence.
+Comme les dégradés linéaires et radiaux, il est possible de déclarer plusieurs dégradés, situés les uns sur les autres. Cela n'a d'intérêt que si les dégradés sont partiellement transparents afin de pouvoir voir les couches formées par les autres dégradés. Pour voir les différents dégradés, il est aussi possible d'utiliser des tailles d'arrière-plan différentes ([`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)) et avec des positions ([`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position)) différentes pour chaque image de dégradé. Dans l'exemple qui suit, on utilise la transparence.
 
 Ici, les lignes de dégradé mesurent 300px, 230px, et 300px de long.
 
@@ -921,7 +921,7 @@ div {
 
 ### Répéter des dégradés radiaux
 
-Ici, on utilise la fonction [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient) afin de créer un dégradé radial qui se répète. Les couleurs utilisées forment un cycle lorsque le motif unitaire recommence.
+Ici, on utilise la fonction [`repeating-radial-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) afin de créer un dégradé radial qui se répète. Les couleurs utilisées forment un cycle lorsque le motif unitaire recommence.
 
 ```html hidden
 <div class="repeating-radial"></div>
@@ -990,23 +990,20 @@ div {
 ## Voir aussi
 
 - Les fonctions de manipulation des dégradés&nbsp;:
-
-  - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)
-  - [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient)
-  - [`conic-gradient`](/fr/docs/Web/CSS/gradient/conic-gradient)
-  - [`repeating-linear-gradient`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient)
-  - [`repeating-radial-gradient`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient)
-  - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
+  - [`linear-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient)
+  - [`radial-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/radial-gradient)
+  - [`conic-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient)
+  - [`repeating-linear-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient)
+  - [`repeating-radial-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)
+  - [`repeating-conic-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)
 
 - Les types de donnée CSS relatifs aux dégradés&nbsp;:
-
-  - [`<gradient>`](/fr/docs/Web/CSS/gradient)
-  - [`<image>`](/fr/docs/Web/CSS/image)
+  - [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient)
+  - [`<image>`](/fr/docs/Web/CSS/Reference/Values/image)
 
 - Certaines propriétés CSS qui permettent d'utiliser des dégradés&nbsp;:
-
-  - [`background`](/fr/docs/Web/CSS/background)
-  - [`background-image`](/fr/docs/Web/CSS/background-image)
+  - [`background`](/fr/docs/Web/CSS/Reference/Properties/background)
+  - [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)
 
 - [Une bibliothèque de motifs de dégradés CSS, créée par Lea Verou](https://lea.verou.me/css3patterns/)
 - [Une bibliothèque de motifs de dégragés, par Estelle Weyl](https://standardista.com/cssgradients/)

@@ -67,7 +67,6 @@ Ya hemos visto el elemento {{htmlelement("title")}} en acción — se puede usar
 ### Aprendizaje activo: Análisis de un ejemplo sencillo
 
 1. Para comenzar este aprendizaje activo, te proponemos ir a nuestro repositorio de GitHub y descargues una copia de nuestra página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Lo puedes hacer de las siguientes maneras:
-
    1. Copia y pega el código de la página en un archivo de texto nuevo en tu editor de código, luego guárdalo en un lugar conveniente.
    2. Presiona el botón "Raw" en la página de GitHub, lo cual hace que aparezca el código sin procesar (posiblemente en una nueva pestaña del navegador). A continuación, en el menú de tu navegador elige _Archivo → Guardar página como..._ y selecciona un lugar adecuado para guardar el archivo.
 
@@ -221,25 +220,18 @@ Hoy día hay un montón de otros tipos de iconos a tener presentes. Por ejemplo,
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone con pantalla de alta resolución: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- iPad de primera y segunda generación: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- Dispositivos iPhone sin pantalla Retina, iPod Touch y Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- favicon básico -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 Los comentarios explican para qué se usa cada icono (estos elementos abarcan situaciones como aportar un buen icono de alta resolución para usarlo cuando la página web se guarda en la página de inicio de un iPad).
@@ -286,7 +278,7 @@ Si lo has hecho correctamente, al guardar tu HTML y actualizar tu navegador, deb
 
 ## Establecer el idioma principal del documento
 
-Por último, merece la pena mencionar que puedes (y realmente deberías) especificar el idioma de tu página. Esto se puede hacer añadiendo el atributo [lang](/es/docs/Web/HTML/Global_attributes/lang) a la etiqueta de apertura del HTML (como se ve en el [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) y se muestra abajo).
+Por último, merece la pena mencionar que puedes (y realmente deberías) especificar el idioma de tu página. Esto se puede hacer añadiendo el atributo [lang](/es/docs/Web/HTML/Reference/Global_attributes/lang) a la etiqueta de apertura del HTML (como se ve en el [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) y se muestra abajo).
 
 ```html
 <html lang="es-MX"></html>

@@ -3,8 +3,6 @@ title: 使用 CSS 解決常見問題
 slug: Learn_web_development/Howto/Solve_CSS_problems
 ---
 
-{{LearnSidebar}}
-
 此頁總結問與答，以及 MDN 網站上其它能幫助你解決常見 CSS 問題的資源。
 
 ## 修飾盒子
@@ -54,4 +52,4 @@ slug: Learn_web_development/Howto/Solve_CSS_problems
 - [使用 CSS 生成內容](/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
 
 > [!NOTE]
-> 我們有一本針對 [CSS 布局解法](/zh-TW/docs/Web/CSS/Layout_cookbook)的食譜，內有可正常執行的範例與常見布局任務說明。
+> 我們有一本針對 [CSS 布局解法](/zh-TW/docs/Web/CSS/How_to/Layout_cookbook)的食譜，內有可正常執行的範例與常見布局任務說明。

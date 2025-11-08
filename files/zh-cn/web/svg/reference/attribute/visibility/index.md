@@ -6,7 +6,7 @@ slug: Web/SVG/Reference/Attribute/visibility
 `visibility`属性让你能够控制一个图形元素的可见性。用了值`hidden`或者值`collapse`，当前的图形元素将不可见。
 
 > [!NOTE]
-> 如果 {{ SVGElement("tspan") }} 或 {{ SVGElement("tref") }} 元素上的 `visibility` 属性设置为 `hidden`，则文本变得不可见，但是依然占用文本布局计算的空间。
+> 如果 {{ SVGElement("tspan") }} 元素上的 `visibility` 属性设置为 `hidden`，则文本变得不可见，但是依然占用文本布局计算的空间。
 
 根据属性 {{ SVGAttr("pointer-events") }} 的值，图形元素如果属性 `visibility` 值设置为 `hidden`，依然能够响应事件。
 

@@ -33,7 +33,7 @@ x + y
 
 ## 설명
 
-`+` 연산자는 숫자 덧셈과 문자열 연결 두 가지 작업을 수행합니다. 계산 시에 먼저 [두 개의 피연산자를 원시 타입으로 변환합니다](/ko/docs/Web/JavaScript/Data_structures#primitive_coercion). 그 후에, 두 피연산자의 타입을 확인합니다.
+`+` 연산자는 숫자 덧셈과 문자열 연결 두 가지 작업을 수행합니다. 계산 시에 먼저 [두 개의 피연산자를 원시 타입으로 변환합니다](/ko/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). 그 후에, 두 피연산자의 타입을 확인합니다.
 
 - 만약 한쪽의 피연산자가 문자열인 경우, 나머지 한쪽의 피연산자도 [문자열로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)시킨 뒤 연결합니다.
 - 만약 두 피연산자가 모두 [BigInt](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt)인 경우, BigInt 덧셈을 수행합니다. 만약 한쪽의 피연산자가 BigInt이지만 나머지 한쪽의 피연산자가 BigInt가 아닌 경우, [`TypeError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 발생합니다.

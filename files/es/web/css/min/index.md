@@ -3,8 +3,6 @@ title: min()
 slug: Web/CSS/min
 ---
 
-{{CSSRef}}
-
 La [función](/es/docs/Web/CSS/CSS_Functions) [CSS](/es/docs/Web/CSS) **`min()`** permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS. La función `min()` puede ser usada donde quiera que {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, o {{CSSxRef("&lt;integer&gt;")}} esté permitido.
 
 {{InteractiveExample("CSS Demo: min()")}}
@@ -56,7 +54,7 @@ Se pueden usar distintas unidades de medida para cada valor en la expresion, si 
 
 Cuando use `min()` para establecer el maximo valor de font size, asegurese de que la fuente todavia podra ser escalada por lo menos al 200% para mas legibilidad (sin tecnologia asistente como la funcion de zoom).
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Ejemplos
@@ -108,4 +106,4 @@ Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS Values](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

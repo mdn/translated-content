@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 original_slug: Web/HTTP/Headers/Proxy-Authorization
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシーサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} `Proxy Authentication Required` ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。
 
 <table class="properties">
@@ -18,7 +16,7 @@ HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシー�
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>
@@ -36,9 +34,7 @@ Proxy-Authorization: <type> <credentials>
 - \<type>
   - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)。一般的には ["Basic"](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式) です。[認証方式の IANA レジストリ](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)も参照してください。
 - \<credentials>
-
   - : "Basic" 認証方式を使用している場合、認証情報は次のように構築されます。
-
     - コロンで結合したユーザー名とパスワード (`aladdin:opensesame`)。
     - 結果の文字列は [Base64](/ja/docs/Glossary/Base64) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 

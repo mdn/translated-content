@@ -2,12 +2,12 @@
 title: メディア (CSS)
 slug: Glossary/Media/CSS
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
 {{GlossarySidebar}}
 
-{{Glossary("CSS")}} (Cascading Style Sheets) の文脈において、**_メディア_**という用語は{{Glossary("Engine/Rendering", "レンダリングエンジン")}}によって描画される文書の出力先を参照します。
+{{Glossary("CSS")}} (Cascading Style Sheets) の文脈において、**メディア**という用語は{{Glossary("Engine/Rendering", "レンダリングエンジン")}}によって描画される文書の出力先を参照します。
 
 これはふつうは端末の画面ですが、プリンターや読み上げ装置、点字ディスプレイ、あるいはそのほかの装置の可能性もあります。
 
@@ -17,5 +17,5 @@ CSS には、閲覧者の端末のメディアの**種類**（画面や印刷な
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule): メディアクエリーの結果に基づいて、 CSS のスタイルシートの一部を条件付きで適用します。
+- {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules): メディアクエリーの結果に基づいて、 CSS のスタイルシートの一部を条件付きで適用します。
 - {{domxref("Window.matchMedia()")}}: 出力装置に対するメディアクエリーをテストします。

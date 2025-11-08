@@ -1,73 +1,184 @@
 ---
-title: align-tracks
+title: Mise en page en maçonnerie (masonry)
 slug: Web/CSS/CSS_grid_layout/Masonry_layout
-original_slug: Web/CSS/align-tracks
 l10n:
-  sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
+  sourceCommit: 72a2f0fa7f25ba32ab8e07447a8d4bbc2f936b85
 ---
-
-{{CSSRef}}
 
 {{SeeCompatTable}}
 
-La propriété CSS **`align-tracks`** définit l'alignement dans l'axe de maçonnerie pour les conteneurs de grille qui ont [`masonry`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout) comme axe de bloc.
+Le niveau&nbsp;3 de la spécification [CSS Grid Layout](/fr/docs/Web/CSS/CSS_grid_layout) introduit la valeur `masonry` pour les propriétés {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}}. Ce guide explique ce qu'est la mise en page en maçonnerie et comment l'utiliser.
 
-## Syntaxe
+La mise en page en maçonnerie est une méthode d'agencement où un axe utilise une grille stricte classique, généralement les colonnes, et l'autre axe adopte une disposition en maçonnerie. Sur cet axe, au lieu de laisser des espaces après les éléments plus courts, les éléments suivants remontent pour combler les vides.
 
-```css
-/* Valeurs avec un mot-clé */
-align-tracks: start;
-align-tracks: space-between;
-align-tracks: center;
-align-tracks: start, center, end;
+## Création d'une mise en page en maçonnerie
 
-/* Valeurs globales */
-align-tracks: inherit;
-align-tracks: initial;
-align-tracks: revert;
-align-tracks: unset;
+Pour créer la mise en page en maçonnerie la plus courante, les colonnes servent d'axe de grille et les lignes d'axe de maçonnerie, définis avec `grid-template-columns` et `grid-template-rows`.
+Les éléments enfants du conteneur sont alors placés ligne par ligne, comme avec le placement automatique classique de la grille.
+
+Lorsque les éléments passent sur de nouvelles lignes, ils sont positionnés selon l'algorithme de maçonnerie. Chaque élément est placé dans la colonne où il y a le plus d'espace, ce qui permet d'obtenir une disposition compacte sans alignement strict des lignes.
+
+```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 1.2em sans-serif;
+}
+
+.grid {
+  padding: 10px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.item {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
 ```
 
-La propriété peut prendre une seule valeur, auquel cas les pistes sont toutes alignées de la même façon. Si c'est une liste de valeur qui est utilisée, la première s'applique à la première piste selon l'axe de la grille, la deuxième valeur à la deuxième piste et ainsi de suite.
+```css live-sample___block-axis
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
+```
 
-S'il y a moins de valeurs que de pistes, la dernière valeur est utilisée pour l'ensemble des pistes restantes. S'il y a plus de valeurs que de pistes, les valeurs en excès sont ignorées.
+```html live-sample___block-axis live-sample___inline-axis
+<div class="grid">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
 
-### Valeur
+```js live-sample___block-axis live-sample___spanners live-sample___positioned
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "3.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.blockSize = itemSizes[i];
+}
+```
 
-- `start`
-  - : Les éléments sont regroupés ensemble au début du conteneur d'alignement selon l'axe de maçonnerie.
-- `end`
-  - : Les éléments sont regroupés ensemble à la fin du conteneur d'alignement selon l'axe de maçonnerie.
-- `center`
-  - : Les éléments sont regroupés ensemble au centre du conteneur d'alignement selon l'axe de maçonnerie.
-- `normal`
-  - : Agit comme `start`.
-- `baseline first baseline`
-  `last baseline`
-  - : Indique la participation à l'alignement par rapport à la ligne de base. Aligne la ligne de base de l'alignement de la boîte par rapport à la première ou à la dernière ligne de base définie selon la ligne de base correspondante dans le premier ou dernier ensemble de lignes de base partagées parmi les boîtes du groupe de partage pour les lignes de base.
-    L'alignement par défaut pour `first baseline` correspond à `start`, celui par défaut pour `last baseline` correspond à `end`.
-- `space-between`
-  - : Les éléments sont distribués de façon homogène au sein du conteneur le long de l'axe de maçonnerie. L'espacement est le même entre les éléments adjacents. Le premier élément est collé au bord du début et le dernier élément est collé au bord de fin.
-- `space-around`
-  - : Les éléments sont distribués de façon homogène au sein du conteneur le long de l'axe de maçonnerie. L'espacement est le même entre les éléments adjacents. L'espacement avant le premier élément et après le dernier élément est égal à la moitié de l'espacement entre les éléments adjacents.
-- `space-evenly`
-  - : Les éléments sont distribués de façon homogène au sein du conteneur le long de l'axe de maçonnerie. L'espacement est le même entre les éléments adjacents, entre le bord de début et le premier élément, et entre le bord de fin et le dernier élément.
-- `stretch`
-  - : Les éléments sont étirés le long de l'axe de maçonnerie pour remplir la boîte de contenu. Les éléments avec une taille définie ne sont pas étirés.
+{{EmbedLiveSample("block-axis", "", "250px")}}
 
-## Définition formelle
+Il est également possible de créer une mise en page en maçonnerie où les éléments sont répartis le long des colonnes.
 
-{{cssinfo}}
+```js live-sample___inline-axis
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "2.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.inlineSize = itemSizes[i];
+}
+```
 
-## Syntaxe formelle
+```css live-sample___inline-axis
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: masonry;
+  grid-template-rows: repeat(3, 100px);
+}
+```
 
-{{csssyntax}}
+{{EmbedLiveSample("inline-axis", "", "450px")}}
 
-## Exemples
+## Contrôle de l'axe de la grille
 
-### Disposition en maçonnerie avec plusieurs valeurs pour `align-tracks`
+Sur l'axe de la grille, le comportement est identique à celui d'une grille classique. Vous pouvez faire en sorte que des éléments s'étendent sur plusieurs pistes tout en restant en placement automatique, en utilisant le mot-clé `span`. Les éléments peuvent aussi être positionnés à l'aide du positionnement basé sur les lignes.
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/align-tracks.html", '100%', 900)}}
+### Mise en page en maçonnerie avec des éléments étendus
+
+Dans cet exemple, deux éléments s'étendent sur deux colonnes, et les autres éléments s'organisent autour d'eux selon la logique de maçonnerie.
+
+```html live-sample___spanners
+<div class="grid">
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
+
+```css live-sample___spanners
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
+
+.span-2 {
+  grid-column-end: span 2;
+}
+```
+
+{{EmbedLiveSample("spanners", "", "270px")}}
+
+Cet exemple inclut un élément positionné explicitement sur certaines colonnes. Les éléments avec un placement défini sont placés avant l'application de la disposition en maçonnerie.
+
+```html live-sample___positioned
+<div class="grid">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item positioned">positionné.</div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
+
+```css live-sample___positioned
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
+
+.positioned {
+  padding: 1em;
+  grid-column: 2 / 4;
+}
+```
+
+{{EmbedLiveSample("positioned", "", "290px")}}
+
+## Solutions de repli pour la mise en page en maçonnerie
+
+Dans les navigateurs [qui ne prennent pas en charge la disposition en maçonnerie](#compatibilité_des_navigateurs), le placement automatique classique de la grille sera appliqué à la place.
 
 ## Spécifications
 
@@ -79,6 +190,5 @@ S'il y a moins de valeurs que de pistes, la dernière valeur est utilisée pour 
 
 ## Voir aussi
 
-- Les propriétés CSS associées&nbsp;:
-  - [`justify-tracks`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
-  - [`masonry-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow)
+- La propriété {{CSSxRef("grid-auto-flow")}} pour contrôler le placement automatique des éléments dans la grille
+- [Mise en page en maçonnerie native avec CSS grid <sup>(angl.)</sup>](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) sur Smashing Magazine (2020)

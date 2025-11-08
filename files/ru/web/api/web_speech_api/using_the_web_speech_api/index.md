@@ -106,7 +106,8 @@ recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 ```
 
-> **Примечание:** [`SpeechRecognition.continuous`](/ru/docs/Web/API/SpeechRecognition/continuous) задаёт, отслеживаются ли продолжающиеся результаты или только 1 результат, каждый раз, когда запись начата. Это закомментировано, поскольку данное свойство в ещё не реализовано в Gecko.
+> [!NOTE]
+> [`SpeechRecognition.continuous`](/ru/docs/Web/API/SpeechRecognition/continuous) задаёт, отслеживаются ли продолжающиеся результаты или только 1 результат, каждый раз, когда запись начата. Это закомментировано, поскольку данное свойство в ещё не реализовано в Gecko.
 >
 > Вы можете получить аналогичный результат, просто прекратив распознавание после получения первого результата.
 
@@ -261,7 +262,7 @@ let voices = [];
 
 #### Заполнение выпадающего списка
 
-Чтобы заполнить элемент [`<select>`](/ru/docs/Web/HTML/Element/select) различными вариантами голоса, доступных на устройстве, напишем функцию [`populateVoiceList()`](/ru/docs/Web/API/SpeechSynthesis/getVoices). Сначала мы вызываем [`SpeechSynthesis.getVoices()`](/ru/docs/Web/API/SpeechSynthesis/getVoices), который возвращает список всех доступных вариантов голосов, представленных объектами [`SpeechSynthesisVoice`](/ru/docs/Web/API/SpeechSynthesisVoice). Затем мы проходимся по списку, создавая элемент [`<option>`](/ru/docs/Web/HTML/Element/option) для каждого отдельного случая, задаём его текстовое содержимое, соответствующее названию голоса (взято из [`SpeechSynthesisVoice.name`](/ru/docs/Web/API/SpeechSynthesisVoice/name)), языка голоса (из [`SpeechSynthesisVoice.lang`](/ru/docs/Web/API/SpeechSynthesisVoice/lang)), и "по умолчанию", если голос является голосом по умолчанию для механизма синтеза (проверяется, если функция [`SpeechSynthesisVoice.default`](/ru/docs/Web/API/SpeechSynthesisVoice/default) возвращает значение `true`.)
+Чтобы заполнить элемент [`<select>`](/ru/docs/Web/HTML/Reference/Elements/select) различными вариантами голоса, доступных на устройстве, напишем функцию [`populateVoiceList()`](/ru/docs/Web/API/SpeechSynthesis/getVoices). Сначала мы вызываем [`SpeechSynthesis.getVoices()`](/ru/docs/Web/API/SpeechSynthesis/getVoices), который возвращает список всех доступных вариантов голосов, представленных объектами [`SpeechSynthesisVoice`](/ru/docs/Web/API/SpeechSynthesisVoice). Затем мы проходимся по списку, создавая элемент [`<option>`](/ru/docs/Web/HTML/Reference/Elements/option) для каждого отдельного случая, задаём его текстовое содержимое, соответствующее названию голоса (взято из [`SpeechSynthesisVoice.name`](/ru/docs/Web/API/SpeechSynthesisVoice/name)), языка голоса (из [`SpeechSynthesisVoice.lang`](/ru/docs/Web/API/SpeechSynthesisVoice/lang)), и "по умолчанию", если голос является голосом по умолчанию для механизма синтеза (проверяется, если функция [`SpeechSynthesisVoice.default`](/ru/docs/Web/API/SpeechSynthesisVoice/default) возвращает значение `true`.)
 
 Мы также задаём `data-` атрибуты для каждого варианта, содержащие имя и язык связанного голоса, благодаря чему мы можем легко их собрать их позже, а затем вложить все варианты в качестве дочерних элементов нашего списка (`<select>`).
 
@@ -301,7 +302,7 @@ populateVoiceList();
 
 Затем мы создаём обработчик событий, чтобы начать "произносить" текст, введённый в текстовом поле, при нажатии на кнопку `Enter/Return` или на `Play`. Для этого используем обработчик [`onsubmit`](/ru/docs/Web/API/HTMLFormElement/submit_event) в html-формы. В функции-обработчике `speak()` мы создаём новый экземпляр [`SpeechSynthesisUtterance()`](/ru/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance), передавая значение текстового поля в конструктор.
 
-Затем нам нужно выяснить, какой голос использовать. Мы используем свойство [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) `selectedOptions` для получения выбранного элемента [`<option>`](/ru/docs/Web/HTML/Element/option), у которого берём атрибут data-name, и находим объект [`SpeechSynthesisVoice`](/ru/docs/Web/API/SpeechSynthesisVoice), имя которого соответствует значению имеющегося атрибута. После этого устанавливаем соответствующий "голосовой" объект как значение свойства [`SpeechSynthesisUtterance.voice`](/ru/docs/Web/API/SpeechSynthesisUtterance/voice).
+Затем нам нужно выяснить, какой голос использовать. Мы используем свойство [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) `selectedOptions` для получения выбранного элемента [`<option>`](/ru/docs/Web/HTML/Reference/Elements/option), у которого берём атрибут data-name, и находим объект [`SpeechSynthesisVoice`](/ru/docs/Web/API/SpeechSynthesisVoice), имя которого соответствует значению имеющегося атрибута. После этого устанавливаем соответствующий "голосовой" объект как значение свойства [`SpeechSynthesisUtterance.voice`](/ru/docs/Web/API/SpeechSynthesisUtterance/voice).
 
 Наконец, мы устанавливаем [`SpeechSynthesisUtterance.pitch`](/ru/docs/Web/API/SpeechSynthesisUtterance/pitch) (высота тона) и [`SpeechSynthesisUtterance.rate`](/ru/docs/Web/API/SpeechSynthesisUtterance/rate) (скорость) в соответствии со значениями соответствующих элементов формы. Затем, после всего проделанного, мы запускаем произношение речи, вызывая [`SpeechSynthesis.speak()`](/ru/docs/Web/API/SpeechSynthesis/speak), и передавая ему экземпляр [`SpeechSynthesisUtterance`](/ru/docs/Web/API/SpeechSynthesisUtterance) в качестве аргумента.
 

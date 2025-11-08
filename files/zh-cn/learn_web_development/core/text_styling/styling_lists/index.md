@@ -3,7 +3,7 @@ title: 为列表添加样式
 slug: Learn_web_development/Core/Text_styling/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [列表](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#列表)大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
 
@@ -220,7 +220,6 @@ ul li {
 - 将 {{htmlelement("ul")}} 的 {{cssxref("padding-left")}} 从默认的 `40px` 下调为 `20px`，然后在列表项上设置相同的数值。这就是说，整个列表项仍然排列在列表中，但是列表项产生了一些用于背景图像的填充。如果我们没有设置填充，背景图像将与列表项文本重叠，这看起来会很乱。
 - 将 {{cssxref("list-style-type")}} 设置为 `none`，以便默认情况下不会显示项目符号。我们将使用 {{cssxref("background")}} 属性来代替项目符号。
 - 为每个无序列表项插入项目符号，相关的属性如下：
-
   - {{cssxref("background-image")}}：充当项目符号的图片文件的参照路径。
   - {{cssxref("background-position")}}：这定义了所选元素背景中的图像将出现在哪里——在我们的示例中设置为 `0 0`，这意味着项目符号将出现在每个列表项的最左上侧。
   - {{cssxref("background-size")}}：设置背景图片的大小。理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。我们使用的尺寸为 `1.6rem`（`16px`），它非常吻合我们为项目符号设置的 `20px` 的填充，16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
@@ -258,7 +257,7 @@ ul {
 
 ### start
 
-[`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
+[`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
 
 ```html
 <ol start="4">
@@ -277,7 +276,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将使列表反向计数。以下示例：
+[`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed) 属性将使列表反向计数。以下示例：
 
 ```html
 <ol start="4" reversed>
@@ -299,7 +298,7 @@ ul {
 
 ### value
 
-[`value`](/zh-CN/docs/Web/HTML/Element/ol#value) 属性允许设置列表项指定数值，以下示例：
+[`value`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#value) 属性允许设置列表项指定数值，以下示例：
 
 ```html
 <ol>

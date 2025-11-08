@@ -146,7 +146,8 @@ As seções a seguir explicam algumas das coisas comuns que você verá ao traba
 
 Primeiro, considere o padrão do exemplo do Express [Olá Mundo](http://expressjs.com/pt-br/starter/hello-world.html) (discutiremos cada trecho do código nas seções abaixo e nas seções a seguir).
 
-> **Nota:** **Dica:** Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no [próximo artigo](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment), você pode salvar este código em um arquivo chamado **app.js** e executá-lo em um prompt, ao digitar o comando `node app.js`.
+> [!NOTE]
+> **Dica:** Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no [próximo artigo](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment), você pode salvar este código em um arquivo chamado **app.js** e executá-lo em um prompt, ao digitar o comando `node app.js`.
 
 ```js
 var express = require("express");
@@ -180,7 +181,8 @@ var app = express();
 
 Você também pode criar seus próprios módulos para serem importados da mesma maneira.
 
-> **Nota:** **Dica:** Você vai _**querer**_ criar seus próprios módulos porque isso permite que você organize seu código em peças gerenciáveis - um aplicativo monolítico (de arquivo único) é difícil de entender e manter. O uso de módulos também ajuda você a gerenciar o namespace, pois somente as variáveis que você exporta explicitamente são importadas quando você usa um módulo.
+> [!NOTE]
+> **Dica:** Você vai _**querer**_ criar seus próprios módulos porque isso permite que você organize seu código em peças gerenciáveis - um aplicativo monolítico (de arquivo único) é difícil de entender e manter. O uso de módulos também ajuda você a gerenciar o namespace, pois somente as variáveis que você exporta explicitamente são importadas quando você usa um módulo.
 
 Para tornar os objetos disponíveis fora do módulo, você precisa apenas atribuí-los ao objeto `exports`. Por Exemplo, o módulo **square.js** abaixo é um arquivo que exporta os métodos `area()` e `perimeter()`:
 
@@ -241,9 +243,11 @@ O uso de APIs assíncronas não bloqueadoras é ainda mais importante no Node do
 
 Há várias maneiras de uma API assíncrona notificar para a aplicação que alguma função chegou ao fim. A maneira mais comum é registrar uma função de retorno de chamada quando você invoca a API assíncrona, que será chamada de volta quando a operação for concluída. Usamos essa abordagem acima.
 
-> **Nota:** **Dica:** O uso de callbacks pode ser bastante "bagunçado" se você tiver uma sequência de operações assíncronas dependentes que devem ser executadas em ordem, porque isto resulta em multiplo níveis de callbacks aninhados. Este problema é comumente conhecido como "inferno de callback" ou "código hadouken". Pode-se reduzir o problema ao adotar boas práticas de programação (veja <http://callbackhell.com/>), utilizar um módulo como [async](https://www.npmjs.com/package/async), ou mesmo adotar recursos do ES6, como [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> [!NOTE]
+> **Dica:** O uso de callbacks pode ser bastante "bagunçado" se você tiver uma sequência de operações assíncronas dependentes que devem ser executadas em ordem, porque isto resulta em multiplo níveis de callbacks aninhados. Este problema é comumente conhecido como "inferno de callback" ou "código hadouken". Pode-se reduzir o problema ao adotar boas práticas de programação (veja <http://callbackhell.com/>), utilizar um módulo como [async](https://www.npmjs.com/package/async), ou mesmo adotar recursos do ES6, como [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Nota:** **Dica:** Uma convenção comum para Node e Express é usar as devoluções de retorno de erro. Nesta convenção, o primeiro valor em suas funções de retorno de chamada é um valor de erro, enquanto os argumentos subseqüentes contêm dados de sucesso. Há uma boa explicação de por que essa abordagem é útil neste blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
+> [!NOTE]
+> **Dica:** Uma convenção comum para Node e Express é usar as devoluções de retorno de erro. Nesta convenção, o primeiro valor em suas funções de retorno de chamada é um valor de erro, enquanto os argumentos subseqüentes contêm dados de sucesso. Há uma boa explicação de por que essa abordagem é útil neste blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
 
 ### Criando manipuladores de rotas
 
@@ -257,7 +261,8 @@ app.get("/", function (req, res) {
 
 A função de retorno de chamada requer uma solicitação e um objeto de resposta como argumento. Neste caso, o método simplesmente chama [`send()`](https://expressjs.com/en/4x/api.html#res.send) na resposta para retornar a string "Olá Mundo!" [Há uma série de outros métodos de resposta](https://expressjs.com/en/guide/routing.html#response-methods) para encerrar o ciclo de solicitação / resposta, por exemplo, você poderia chamar [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) para enviar uma resposta JSON ou [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) para enviar um arquivo.
 
-> **Nota:** **Dica JavaScript:** Você pode usar qualquer argumento que você gosta nas funções de retorno de chamada. Quando o retorno de chamada é invocado, o primeiro argumento sempre será o pedido e o segundo sempre será a resposta. Faz sentido nomeá-los de tal forma que você possa identificar o objeto que você está trabalhando no corpo do retorno de chamada.
+> [!NOTE]
+> **Dica JavaScript:** Você pode usar qualquer argumento que você gosta nas funções de retorno de chamada. Quando o retorno de chamada é invocado, o primeiro argumento sempre será o pedido e o segundo sempre será a resposta. Faz sentido nomeá-los de tal forma que você possa identificar o objeto que você está trabalhando no corpo do retorno de chamada.
 
 O Express também fornece métodos para definir manipuladores de rotas para todas as outras requisições HTTP, que são usadas exatamente da mesma maneira: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, e `connect()`.
 
@@ -362,7 +367,8 @@ app.get("/", a_middleware_function);
 app.listen(3000);
 ```
 
-> **Nota:** **Dica JavaScript:** Acima, declaramos a função de middleware separadamente e, em seguida, configuramos como retorno de chamada. Na nossa função anterior do operador de rotas, declaramos a função de retorno de chamada quando foi utilizada. Em JavaScript, ambas abordagens são válidas.
+> [!NOTE]
+> **Dica JavaScript:** Acima, declaramos a função de middleware separadamente e, em seguida, configuramos como retorno de chamada. Na nossa função anterior do operador de rotas, declaramos a função de retorno de chamada quando foi utilizada. Em JavaScript, ambas abordagens são válidas.
 
 A documentação Express possui uma documentação excelente sobre como usar e escrever o middleware Express.
 
@@ -518,11 +524,11 @@ Claro que Express é deliberadamente uma estrutura de aplicativos web muito leve
 
 ## Próximos módulos
 
-- [Introdução Express/Node](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction) - Módulo Atual
-- [Configurando um ambiente de desenvolvimento Node (Express)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Criando um esqueleto de website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Introdução Express/Node](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction) - Módulo Atual
+- [Configurando um ambiente de desenvolvimento Node (Express)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Criando um esqueleto de website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
 - [Express Tutorial Part 4: Rotas e Controladores](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
 - [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
 - [Express Tutorial Part 6: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)

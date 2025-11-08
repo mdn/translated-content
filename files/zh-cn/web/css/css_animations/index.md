@@ -3,8 +3,6 @@ title: CSS 动画
 slug: Web/CSS/CSS_animations
 ---
 
-{{CSSRef}}
-
 CSS 动画模块（CSS Animation）可以让你通过使用关键帧对 CSS 属性的值进行动画处理，例如背景位置和变换。每个关键帧都描述了动画元素在动画序列中的某个特定时间应该如何呈现。你可以使用动画模块中的属性来控制动画的持续时间、重复次数、延迟启动等方面。
 
 ### 正在运行的动画
@@ -247,7 +245,7 @@ input:checked + label::before {
 
 ### 函数
 
-- [`scroll()`](/zh-CN/docs/Web/CSS/animation-timeline/scroll)
+- [`scroll()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
 
 ### 事件
 
@@ -276,7 +274,7 @@ input:checked + label::before {
 
 - {{cssxref("will-change")}} CSS 属性
 - [`<easing-function>`](/zh-CN/docs/Web/CSS/easing-function) 数据类型
-- [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion) 媒体查询
+- [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) 媒体查询
 - 术语{{glossary("Bézier curve", "贝塞尔曲线")}}
 
 ## 规范

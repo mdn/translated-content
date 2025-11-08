@@ -3,8 +3,6 @@ title: CSS 一般問題
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 ---
 
-{{LearnSidebar}}
-
 ## 我的 CSS 合乎規格，但繪出的版面有誤
 
 如果想讓大部分的瀏覽器都能正確繪製標準 HTML/CSS 頁面，便須於 HTML 檔案中放上完整的正確 DOCTYPE。
@@ -190,4 +188,4 @@ div { color: black; }
 
 ## -moz-\* 特性是什麼玩意？
 
-請見 [Mozilla 擴充的 CSS](/zh-TW/docs/Web/CSS/Mozilla_Extensions)。由於這些擴充規格不是 W3C 標準的一部分，因此並不建議使用。
+請見 [Mozilla 擴充的 CSS](/zh-TW/docs/Web/CSS/Reference/Mozilla_extensions)。由於這些擴充規格不是 W3C 標準的一部分，因此並不建議使用。

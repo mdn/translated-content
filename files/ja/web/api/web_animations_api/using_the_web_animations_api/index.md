@@ -47,7 +47,7 @@ l10n:
 }
 ```
 
-これによって、アリスの色とトランスフォーム回転が 3 秒間にわたって一定に（線形で）変化し、それを無限にループします。[@keyframes](/ja/docs/Web/CSS/@keyframes) ブロックで、各ループの 30%（約 0.9 秒）でアリスの色が黒から濃いワイン色に変わり、ループが終わるときにもとに戻ることが分かります。
+これによって、アリスの色とトランスフォーム回転が 3 秒間にわたって一定に（線形で）変化し、それを無限にループします。[@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) ブロックで、各ループの 30%（約 0.9 秒）でアリスの色が黒から濃いワイン色に変わり、ループが終わるときにもとに戻ることが分かります。
 
 ### JavaScript への移行
 
@@ -55,7 +55,7 @@ l10n:
 
 #### キーフレームの表現
 
-最初に必要なことは、CSS の [@keyframes](/ja/docs/Web/CSS/@keyframes) ブロックに対応する [Keyframe オブジェクト](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats) を作成することです。
+最初に必要なことは、CSS の [@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) ブロックに対応する [Keyframe オブジェクト](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats) を作成することです。
 
 ```js
 const aliceTumbling = [
@@ -86,11 +86,11 @@ const aliceTiming = {
 
 CSS にこける同等の値の表し方とは異なる形で表現されていることにお気づきでしょう。
 
-- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
+- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("Window.setTimeout", "setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
 > [!NOTE]
-> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
+> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
 
 #### パーツをまとめる
 
@@ -242,7 +242,7 @@ document.addEventListener("touchstart", goFaster);
 - アニメーションがアクティブなままであり、ブラウザーがその状態を維持しなければならないため、アニメーションが終了してもアニメーションがリソースを消費し続けます。なお、これは[満了したアニメーションの自動削除](#満了したアニメーションの自動削除)をすることでいくらか緩和されます。
 - アニメーションで適用されたスタイルは、指定されたスタイルより[カスケードにおいて高い優先度](/ja/docs/Web/CSS/CSS_cascade/Cascade#カスケード順)を持つため、必要に応じて上書きすることが困難になる場合があります。
 
-より良い方法は、{{domxref("Animation.commitStyles()")}} メソッドを使うことです。これはこのアニメーションの現在のスタイルを、対象要素の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性に書き込むので、その後は通常にスタイル設定しなおすことができます。
+より良い方法は、{{domxref("Animation.commitStyles()")}} メソッドを使うことです。これはこのアニメーションの現在のスタイルを、対象要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性に書き込むので、その後は通常にスタイル設定しなおすことができます。
 
 ## 満了したアニメーションの自動削除
 
@@ -364,7 +364,8 @@ const endGame = () => {
 };
 ```
 
-> **メモ:** `getAnimations()` と `effect` は、この記事を書いている時点ではすべてのブラウザーで対応しているわけではありませんが、ポリフィルでは対応しています。
+> [!NOTE]
+> `getAnimations()` と `effect` は、この記事を書いている時点ではすべてのブラウザーで対応しているわけではありませんが、ポリフィルでは対応しています。
 
 ## コールバックとプロミス
 

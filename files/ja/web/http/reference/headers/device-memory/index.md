@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Device-Memory
 original_slug: Web/HTTP/Headers/Device-Memory
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 **`Device-Memory`** ヘッダーは、[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)のヘッダーのように機能する [Device Memory API](/ja/docs/Web/API/Device_Memory_API) のヘッダーで、クライアントデバイスの RAM の概算量を表します。
 
@@ -18,7 +18,7 @@ original_slug: Web/HTTP/Headers/Device-Memory
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>?</td>
     </tr>

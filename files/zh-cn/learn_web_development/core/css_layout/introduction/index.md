@@ -3,7 +3,7 @@ title: 介绍 CSS 布局
 slug: Learn_web_development/Core/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
+{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 本文将回顾我们以前模块中已经介绍过的一些 CSS 布局特性——例如不同的{{cssxref("display")}}值——并介绍我们将在本模块中使用的一些概念。
 

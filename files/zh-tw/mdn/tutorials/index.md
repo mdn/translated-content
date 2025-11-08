@@ -16,7 +16,7 @@ slug: MDN/Tutorials
 
 - [HTML 入門](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
   - : 此單元，為了孰悉重要的概念和語法，思考將 HTML 轉為文字, 如何建立超連鏈接, 以及如何使用 HTML 架構建立網站做好準備。
-- **[MDN HTML 元素引用](/zh-TW/docs/Web/HTML/Element)**
+- **[MDN HTML 元素引用](/zh-TW/docs/Web/HTML/Reference/Elements)**
   - : HTML 元素綜合參考。以及在不同瀏覽器的支援程度。
 - **[使用 HTML 建立一個簡易網站](https://www.theblogstarter.com/html-for-beginners/) (The Blog Starter)**
   - : 適用於 HTML 初學者的指南，其中包含常見的標籤( tag ), 其中包括利用編碼範例步驟，一步步指導建立一個基本網頁。
@@ -85,7 +85,6 @@ slug: MDN/Tutorials
 ### 初級
 
 - [JavaScript first steps](/zh-TW/docs/Learn_web_development/Core/Scripting)
-
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
 
 - [JavaScript building blocks](/zh-TW/docs/Learn_web_development/Core/Scripting)

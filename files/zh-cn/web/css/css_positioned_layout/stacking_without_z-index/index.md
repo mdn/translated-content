@@ -5,15 +5,13 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 当没有在任何元素上指定 {{cssxref("z-index")}} 属性时，元素的堆叠顺序如下（从下到上）：
 
 1. 根元素的背景和边框。
 2. 后代非定位元素，按在 HTML 中出现的顺序排列。
 3. 后代定位元素，按在 HTML 中出现的顺序排列。
 
-请参阅[定位类型](/zh-CN/docs/Web/CSS/position#定位类型)以了解定位元素和非定位元素的解释。
+请参阅[定位类型](/zh-CN/docs/Web/CSS/Reference/Properties/position#定位类型)以了解定位元素和非定位元素的解释。
 
 请记住，当 {{cssxref("order")}} 属性在 {{cssxref("flex")}} 容器内改变渲染顺序（_基于 HTML 中的出现顺序_）时，它也会影响层叠上下文的顺序。
 

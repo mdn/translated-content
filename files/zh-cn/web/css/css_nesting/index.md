@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---
 
-{{CSSRef}}
-
 **CSS 嵌套**模块定义了嵌套选择器的语法。它提供将一个样式规则嵌套至另一个规则内的能力，其中被嵌套规则的选择器将相对于其父规则的选择器。
 
 CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的一点是，它是被浏览器直接解析的，而不是先经由 CSS 预处理器的预编译。
@@ -17,7 +15,7 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 
 ### 选择器
 
-- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
+- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 
 ## 指南
 
@@ -31,7 +29,7 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 ## 相关概念
 
 - [选择器与组合器](/zh-CN/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+- [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS 预处理器](/zh-CN/docs/Glossary/CSS_preprocessor)
 
 ## 规范

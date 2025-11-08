@@ -3,8 +3,6 @@ title: Firefox 41 for developers
 slug: Mozilla/Firefox/Releases/41
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされました。このページでは、開発者に影響する Firefox 41 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -26,7 +24,6 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 ### CSS
 
 - 縦書き文章のレイアウト機能を、デフォルトで有効にしました ([Firefox バグ 1138384](https://bugzil.la/1138384))。以下の CSS プロパティが使用可能になりました:
-
   - 書字方向を選択する: {{cssxref("writing-mode")}}
   - 文字の向きを制御する: {{cssxref("text-orientation")}}.
   - 方向に依存しない {{cssxref("width")}} および {{cssxref("height")}}: {{cssxref("block-size")}} および {{cssxref("inline-size")}}
@@ -43,7 +40,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 - `href` 属性を持たない {{HTMLElement("a")}} は、インタラクティブコンテンツとして分類しないようになりました。{{HTMLElement("label")}} 要素内でクリックすると、ラベル付けされたコンテンツがアクティブになります ([Firefox バグ 1167816](https://bugzil.la/1167816))。
 - サイトアイコン (favicon およびショートカットアイコン) で、SVG アイコンをサポートしました ([Firefox バグ 366324](https://bugzil.la/366324))。
-- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Element/link) で、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
+- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Reference/Elements/link) で、[`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
 - picture 要素がリサイズやビューポートの変化に反応しない問題を修正しました ([Firefox バグ 1135812](https://bugzil.la/1135812))。
 
 ### JavaScript
@@ -64,7 +61,6 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 #### HTML Editing API
 
 - 切り取り、コピー、貼り付けのコマンド制御を改良して、JS プログラムからウェブコンテンツのコピーや切り取りが可能になりました:
-
   - {{domxref("Document.queryCommandSupported()")}} に引数として `'paste'` コマンドを与えると、実際に操作を行うための十分な権限がない場合に `false` を返します ([Firefox バグ 1161721](https://bugzil.la/1161721))。
   - {{domxref("Document.queryCommandSupported()")}} に引数として `'cut'` または `'copy'` を与えると、ユーザーが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に `true` を返すようになりました ([Firefox バグ 1162952](https://bugzil.la/1162952))。
   - 引数として `'cut'` または `'copy'` を与えた {{domxref("Document.execCommand()")}} は動作しますが、ユーザーが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に限ります ([Firefox バグ 1012662](https://bugzil.la/1012662))。
@@ -89,7 +85,6 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 #### Service Worker
 
 - [Service Worker](/ja/docs/Web/API/Service_Worker_API) の実験的な実装を改良しました:
-
   - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} を実装しました ([Firefox バグ 1131352](https://bugzil.la/1131352))。
   - {{domxref("Clients.claim()")}} を追加しました ([Firefox バグ 1130684](https://bugzil.la/1130684))。
   - Service Worker で機能する上記以外のイベントは {{domxref("ExtendableEvent")}} から継承しており、{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} メソッドにアクセスできます ([Firefox バグ 1160527](https://bugzil.la/1160527))。

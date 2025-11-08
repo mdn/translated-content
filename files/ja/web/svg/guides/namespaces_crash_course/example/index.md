@@ -1,14 +1,11 @@
 ---
 title: 例
 slug: Web/SVG/Guides/Namespaces_crash_course/Example
-original_slug: Web/SVG/Namespaces_Crash_Course/Example
 l10n:
-  sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
+  sourceCommit: e4e57ab3ccb5f93319f8fe13848d4895d3e1e771
 ---
 
-{{SVGRef}}
-
-この例で、私たちは [XHTML](/ja/docs/Glossary/XHTML) 、 [SVG](/ja/docs/Web/SVG) 、 [JavaScript](/ja/docs/Web/JavaScript) と [DOM](/ja/docs/Web/API/Document_Object_Model) を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの簡単な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
+この例で、私たちは [XHTML](/ja/docs/Glossary/XHTML) 、 [SVG](/ja/docs/Web/SVG) 、 [JavaScript](/ja/docs/Web/JavaScript) と [DOM](/ja/docs/Web/API/Document_Object_Model) を「ほこり」の群れを動かすのにつかっています。これらのほこりは 2 つの基本的な法則によって制御されています。1 つめは、それぞれのほこりがマウスカーソルの方向に向かって移動しようとします。2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。組み合わせることで、このとても自然に見える動きができます。
 
 [例を見てみてください](https://mdn.dev/archives/media/samples/svg/swarm-of-motes.xhtml)。このリンク先の例は 2006 年の最善の手法で書かれたものです。下記の例は、現行の JavaScript の最善の手法に更新されています。どちらも動作します。
 
@@ -46,21 +43,21 @@ l10n:
 cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     </svg:svg>
 
-    <p>ほこりの群れは 2 つの簡単な法則によって制御されています。
+    <p>ほこりの群れは 2 つの基本的な法則によって制御されています。
     1 つめは、それぞれのほこりがカーソルの方向に向かって移動しようとします。
     2 つ目はそれぞれのほこりはほこりの位置の平均から遠ざかろうとします。
     組みあわせることで、このとても自然に見える動きができます。
     </p>
 
     <div>
-    (C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
+    (C) 2006 <a id='email-me' href='#'>Nick Johnson</a>
 
-    <script type='text/javascript'>
+    <script>
     <![CDATA[
-      // spam ボット撃退
+      // spam ボット対策
       let email = '@riovia.net';
       email ='nick' + email;
-      document.getElementById('emailme').href = 'mailto:'+email;
+      document.getElementById('email-me').href = 'mailto:'+email;
     ]]>
     </script>
     このソフトは、どのような方法であっても無料で使用することができ、保証はまったくありません。
@@ -86,7 +83,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       </p>
     </form>
 
-  <script type='text/javascript'>
+  <script>
   <![CDATA[
 
     // ほこりの配列
@@ -221,7 +218,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
     }
 
-    // Mote::move() -- ほこりの移動、スクリーンの更新。
+    // Mote::move() - ほこりの移動、スクリーンの更新。
     Mote.prototype.move = function () {
       // カーソルの引力を適応。
       const attract = parseInt(document.getElementById('attract_cursor').value);

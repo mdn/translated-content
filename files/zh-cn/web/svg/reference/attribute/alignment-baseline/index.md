@@ -52,7 +52,6 @@ l10n:
 - `text-bottom`
   - : 将盒子的底部与父元素内容区域的顶部相匹配。
 - `text-before-edge`
-
   - : 正在对齐的对象的对齐点与父文本内容元素的“text-before-edge”基线对齐。
 
     > [!NOTE]
@@ -67,7 +66,6 @@ l10n:
 - `text-top`
   - : 将盒子的顶部与父级内容区域的顶部相匹配。
 - `text-after-edge`
-
   - : 正在对齐的对象的对齐点与父文本内容元素的“text-after-edge”基线对齐。
 
     > [!NOTE]

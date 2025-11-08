@@ -49,7 +49,7 @@ l10n:
 
 ## HTML 扩展
 
-- [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Attributes/rel#expect)
+- [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#expect)
   - : 为用户的页面初始视图标识关联文档中最关键的内容。在解析关键内容之前，文档呈现将被阻碍，以确保在所有支持的浏览器上进行一致的首次绘制，从而实现视图过渡。
 
 ## CSS 扩展

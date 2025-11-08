@@ -17,9 +17,7 @@ new WebAssembly.Table(tableDescriptor);
 ### 引数
 
 - _tableDescriptor_
-
   - : 以下のメンバーを含むことができるオブジェクトです。
-
     - _element_
       - : 文字列で、テーブルに格納される値の型を表します。現時点では、 `"anyfunc"` (関数) の値のみを取ることができます。
     - _initial_

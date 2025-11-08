@@ -16,9 +16,9 @@ l10n:
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLUListElement.type")}} {{deprecated_inline}}
-  - : 文字列値で、[`type`](/ja/docs/Web/HTML/Element/ul#type)を反映し、使用するマーカーの種類を定義します。値はブラウザーに依存し、標準化されたことはありません。
+  - : 文字列値で、[`type`](/ja/docs/Web/HTML/Reference/Elements/ul#type)を反映し、使用するマーカーの種類を定義します。値はブラウザーに依存し、標準化されたことはありません。
 - {{domxref("HTMLUListElement.compact")}} {{deprecated_inline}}
-  - : 論理値で、リスト項目間の空間を縮小することを示します。このプロパティは [`compact`](/ja/docs/Web/HTML/Element/ul#compact) 属性のみを反映し、現代のページでその動作に使用されている CSS の {{cssxref("line-height")}} プロパティは考慮しません。
+  - : 論理値で、リスト項目間の空間を縮小することを示します。このプロパティは [`compact`](/ja/docs/Web/HTML/Reference/Elements/ul#compact) 属性のみを反映し、現代のページでその動作に使用されている CSS の {{cssxref("line-height")}} プロパティは考慮しません。
 
 ## インスタンスメソッド
 

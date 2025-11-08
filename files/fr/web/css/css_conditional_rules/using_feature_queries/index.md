@@ -3,13 +3,11 @@ title: Utiliser les requêtes de fonctionnalité (feature queries)
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
-{{CSSRef}}
-
-**Les requêtes de fonctionnalité (ou _feature queries_)** sont créées à l'aide de la règle [`@supports`](/fr/docs/Web/CSS/@supports) et permettent aux développeurs web de tester la prise en charge d'une fonctionnalité donnée par le navigateur puis de fournir le code CSS qui sera appliqué selon le résultat de ce test. Dans ce guide, nous verrons comment gérer l'amélioration progressive grâce à l'aide des requêtes de fonctionnalité.
+**Les requêtes de fonctionnalité (ou _feature queries_)** sont créées à l'aide de la règle [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) et permettent aux développeurs web de tester la prise en charge d'une fonctionnalité donnée par le navigateur puis de fournir le code CSS qui sera appliqué selon le résultat de ce test. Dans ce guide, nous verrons comment gérer l'amélioration progressive grâce à l'aide des requêtes de fonctionnalité.
 
 ## Syntaxe
 
-Les requêtes de fonctionnalité CSS s'inscrivent dans [le module de spécification CSS Conditional Rules](https://drafts.csswg.org/css-conditional-3/) qui décrit également le fonctionnement de la règle [`@media`](/fr/docs/Web/CSS/@media). Vous pourrez ici voir que les requêtes de fonctionnalité fonctionnent de façon semblable aux requêtes de média. Pour les requêtes de média, on teste une caractéristique de l'environnement dans lequel la page web est affichée/exécutée tandis que pour les requêtes de fonctionnalité, on teste la prise en charge d'une fonctionnalité CSS dans le navigateur.
+Les requêtes de fonctionnalité CSS s'inscrivent dans [le module de spécification CSS Conditional Rules](https://drafts.csswg.org/css-conditional-3/) qui décrit également le fonctionnement de la règle [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media). Vous pourrez ici voir que les requêtes de fonctionnalité fonctionnent de façon semblable aux requêtes de média. Pour les requêtes de média, on teste une caractéristique de l'environnement dans lequel la page web est affichée/exécutée tandis que pour les requêtes de fonctionnalité, on teste la prise en charge d'une fonctionnalité CSS dans le navigateur.
 
 Une requête de fonctionnalité commence par une règle `@supports`, suivi du nom de la propriété et de la valeur qu'on souhaite tester. Il n'est pas possible de tester une propriété seule (ex. `display`) mais uniquement un couple nom/valeur :
 
@@ -83,7 +81,7 @@ Imaginons qu'on veuille créer une disposition avec trois boîtes qui se suivent
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-Lorsque les navigateurs ne comprennent pas une propriété ou une valeur CSS, ils l'ignorent. On peut donc améliorer progressivement notre disposition avec les grilles CSS. Les navigateurs qui ne prennent pas en charge les grilles ignoreront la valeur `grid` pour la propriété `display`. Une fois qu'un objet flottant devient un élément de grille, son caractère flottant est retiré (voir [Prendre en charge les navigateurs plus anciens](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)) et la grille écrase alors la version flottante.
+Lorsque les navigateurs ne comprennent pas une propriété ou une valeur CSS, ils l'ignorent. On peut donc améliorer progressivement notre disposition avec les grilles CSS. Les navigateurs qui ne prennent pas en charge les grilles ignoreront la valeur `grid` pour la propriété `display`. Une fois qu'un objet flottant devient un élément de grille, son caractère flottant est retiré (voir [Prendre en charge les navigateurs plus anciens](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)) et la grille écrase alors la version flottante.
 
 Un problème persiste cependant. La propriété `width`, utilisée par les objets flottants pour afficher trois colonnes, est désormais interprétée par la grille comme étant la largeur de la piste pour la colonne (et pas la largeur du conteneur comme c'était le cas pour la disposition flottante).
 
@@ -107,7 +105,7 @@ Les requêtes de fonctionnalité permettent d'utiliser des fonctionnalités réc
 
 ## Voir aussi
 
-- La règle [@supports](/fr/docs/Web/CSS/@supports)
-- [Apprendre les dispositions en CSS et la prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- La règle [@supports](/fr/docs/Web/CSS/Reference/At-rules/@supports)
+- [Apprendre les dispositions en CSS et la prise en charge des anciens navigateurs](/fr/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout)
 - [Utiliser les requêtes de fonctionnalités en CSS (billet du blog Hacks en anglais)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

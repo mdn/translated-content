@@ -3,8 +3,6 @@ title: parseInt
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 
-{{jsSidebar("Objects")}}
-
 **parseInt(_string_, _radix_)** 解析一个字符串并返回指定基数的十进制整数，`radix` 是 2-36 之间的整数，表示被解析字符串的基数。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
@@ -80,7 +78,8 @@ parseInt('123', 5) // 将'123'看作 5 进制数，返回十进制数 38 => 1*5^
 
 要将一个数字转换为特定的 `radix` 中的字符串字段，请使用 `thatNumber.toString(radix)` 函数。
 
-> **警告：** {{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
+> [!WARNING]
+> {{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
 
 ## 示例
 

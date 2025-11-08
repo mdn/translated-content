@@ -9,7 +9,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 формате, заданном параметром `type` (по умолчанию [PNG](https://ru.wikipedia.org/wiki/PNG)). Возвращаемое изображение имеет
 разрешение 96 dpi.
 
-- Если высота или ширина холста равна `0` или больше [максимального размера холста](/ru/docs/Web/HTML/Element/canvas#maximum_canvas_size),
+- Если высота или ширина холста равна `0` или больше [максимального размера холста](/ru/docs/Web/HTML/Reference/Elements/canvas#maximum_canvas_size),
   возвращается строка `"data:,"`.
 - Если запрошенный тип отличается от `image/png`, но возвращаемое значение начинается с `data:image/png`, то запрошенный тип не поддерживается.
 - Chrome также поддерживает тип `image/webp`.

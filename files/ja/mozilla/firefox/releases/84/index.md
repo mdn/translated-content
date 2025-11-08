@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 84 の変更点をまとめています。Firefox 84 は、2020 年 12 月 15 日にリリースされました。
 
 > [!NOTE]
@@ -65,7 +63,7 @@ _変更なし。_
 - 新しい Fission 互換 API をデフォルトで有効にしました。以前の API に戻すには、設定項目 `marionette.actors.enabled` を `false` に設定します ([Firefox バグ 1669169](https://bugzil.la/1669169))。
 - `WebDriver:SwitchToWindow` を、常にトップレベルの閲覧コンテキストへ戻すように修正しました ([Firefox バグ 1305822](https://bugzil.la/1305822))。
 - `WebDriver:SwitchToParentFrame` の、閲覧コンテキストの確認を改良しました ([Firefox バグ 1671622](https://bugzil.la/1671622))。
-- `WebDriver:Back` で、現在選択されている [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) がアンロードされたときにハングアップする問題を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
+- `WebDriver:Back` で、現在選択されている [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) がアンロードされたときにハングアップする問題を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
 
 #### 既知の不具合
 

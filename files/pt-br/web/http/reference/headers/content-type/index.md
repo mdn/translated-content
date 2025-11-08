@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Type
 original_slug: Web/HTTP/Headers/Content-Type
 ---
 
-{{HTTPSidebar}}O cabeçalho **Content-Type** é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.Em respostas, o `Content-Type` diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor `nosniff`.Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.
+O cabeçalho **Content-Type** é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.Em respostas, o `Content-Type` diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor `nosniff`.Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.
 
 <table class="properties">
   <tbody>
@@ -37,7 +37,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Diretivas
 
 - `media-type`
-  - : O [MIME type](/pt-BR/docs/Web/HTTP/MIME_types) do recurso ou dado.
+  - : O [MIME type](/pt-BR/docs/Web/HTTP/Guides/MIME_types) do recurso ou dado.
 - charset
   - : O encoding da string
 - boundary

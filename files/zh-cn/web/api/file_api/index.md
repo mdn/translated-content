@@ -11,7 +11,7 @@ l10n:
 
 文件 API 使得 web 应用可以访问文件和其中的内容。
 
-当用户提供文件时，Web 应用可以通过使用[文件 `<input>` 元素](/zh-CN/docs/Web/HTML/Element/input/file)或[拖放](/zh-CN/docs/Web/API/DataTransfer/files)来访问它们。
+当用户提供文件时，Web 应用可以通过使用[文件 `<input>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)或[拖放](/zh-CN/docs/Web/API/DataTransfer/files)来访问它们。
 
 以这种方式提供的文件集被表示为 {{domxref("FileList")}} 对象，这使得 web 应用能够检索单个 {{domxref("File")}} 对象。反过来，{{domxref("File")}} 对象提供对元数据的访问，如文件的名称、大小、类型和最后修改日期。
 
@@ -51,7 +51,7 @@ l10n:
 
 ### 读取文件
 
-在这个例子中，我们提供了一个[文件 `<input>` 元素](/zh-CN/docs/Web/HTML/Element/input/file)，当用户选择一个文件时，我们把选择的第一个文件的内容作为文本读取，并把结果显示在 {{HTMLElement("div")}} 元素中。
+在这个例子中，我们提供了一个[文件 `<input>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)，当用户选择一个文件时，我们把选择的第一个文件的内容作为文本读取，并把结果显示在 {{HTMLElement("div")}} 元素中。
 
 #### HTML
 
@@ -98,6 +98,6 @@ fileInput.addEventListener("change", () => {
 
 ## 参见
 
-- [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)：文件 input 元素
+- [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)：文件 input 元素
 - {{domxref("Blob.text()")}}
 - {{domxref("DataTransfer")}} 接口

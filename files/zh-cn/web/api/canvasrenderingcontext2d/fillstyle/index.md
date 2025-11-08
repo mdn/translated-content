@@ -97,7 +97,6 @@ setFillColor(c, m, y, k, a);
 - [Canvas API](/zh-CN/docs/Web/API/Canvas_API)
 - 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - 此属性使用的值：
-
   - {{cssxref("&lt;color&gt;")}} CSS 数据类型
   - {{domxref("CanvasGradient")}} 对象
   - {{domxref("CanvasPattern")}} 对象

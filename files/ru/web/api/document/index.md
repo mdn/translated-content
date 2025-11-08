@@ -9,7 +9,7 @@ slug: Web/API/Document
 
 Объект **document** может быть получен из разных API:
 
-- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Element/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Reference/Elements/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
 - Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
 - Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responsexml) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.

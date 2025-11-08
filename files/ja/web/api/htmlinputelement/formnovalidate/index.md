@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`formNoValidate`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、 {{htmlelement("form")}} がこの {{htmlelement("input")}} から送信されたとき、[制約検証](/ja/docs/Web/HTML/Constraint_validation)を回避するかどうかを示す論理値です。この `<input>` 要素の [`formnovalidate`](/ja/docs/Web/HTML/Element/input#formnovalidate) 属性を反映します。
+**`formNoValidate`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、 {{htmlelement("form")}} がこの {{htmlelement("input")}} から送信されたとき、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を回避するかどうかを示す論理値です。この `<input>` 要素の [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/input#formnovalidate) 属性を反映します。
 
-このプロパティは [`submit`](/ja/docs/Web/HTML/Element/input/submit) および [`image`](/ja/docs/Web/HTML/Element/input/image) 型の `<input>` 要素でのみ有効です。
+このプロパティは [`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit) および [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型の `<input>` 要素でのみ有効です。
 
 この値は、このボタンからフォームを送信する場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.noValidate", "noValidate")}} プロパティを上書きします。このプロパティは値を受け取ったり設定したりすることができます。
 
@@ -41,10 +41,10 @@ console.log(inputElement.formNoValidate);
 - {{domxref("HTMLInputElement.formEnctype")}}
 - {{domxref("HTMLInputElement.formMethod")}}
 - {{domxref("HTMLInputElement.formTarget")}}
-- [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)
-- [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image)
+- [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)
+- [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image)
 - {{HTMLElement("form")}}
 - {{domxref("HTMLFormElement.noValidate")}}
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

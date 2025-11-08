@@ -178,19 +178,16 @@ Olhando para o enunciado, a primeira coisa que devemos fazer é quebrá-lo em pe
 4. Após a tentativa ter sido submetida, primeiro gravar em algum lugar para que o usuário possa ver as tentativas anteriores.
 5. Depois, verificar se o palpite está correto.
 6. Se estiver correto:
-
    1. Escrever mensagem de parabéns.
    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
    3. Mostrar controle que permita ao jogador reiniciar o jogo.
 
 7. Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
-
    1. Dizer ao jogador que ele está errado.
    2. Permitir que ele insira outra resposta.
    3. Incrementar o número do turno em 1.
 
 8. Se o jogador está errado mas não tem turnos sobrando:
-
    1. Dizer ao jogador que o jogo acabou.
    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
    3. Mostrar controle que permita ao jogador reiniciar o jogo.
@@ -271,7 +268,7 @@ O código é executado digitando o nome da função seguido pelos parênteses.
 
 Tente salvar o seu código agora e atualizá-lo no navegador.
 
-Vá até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), e insira a seguinte linha:
+Vá até o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e insira a seguinte linha:
 
 ```js
 conferirPalpite();
@@ -286,7 +283,7 @@ Você deverá ver um alerta aparecer dizendo "Eu sou um placeholder"; nós defin
 
 Os operadores JavaScript nos permite realizar testes, fazer cálculos matemáticos, unir sequências de texto, e outras coisas do tipo.
 
-Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:
+Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:
 
 ```html hidden
 <!doctype html>
@@ -484,7 +481,6 @@ Isso é bastante código — ufa! Vamos abordar cada seção e explicar o que fa
 
 - A linha 6 acrescenta o valor atual de `palpiteUsuario` ao final do parágrafo `palpites`, mais um espaço em branco para que haja espaçamento entre cada palpite mostrado.
 - O próximo bloco (linhas 8–24 acima) fazem as seguintes conferências:
-
   - O primeiro `if(){ }` confere se o palpite do jogador é igual ao número aleatório (`numeroAleatorio`) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo `<p class="baixoOuAlto"></p>`, e executamos uma função chamada `configFimDeJogo()`, que iremos discutir mais tarde.
   - Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura `else if(){ }`. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabenização.
   - O bloco final encadeado ao final do código (`else { }`) contém código que só é executado se nenhum dos outros dois testes retornar verdadeiro (ou seja, o jogador não acertou o número, porém ainda tem mais tentativas restantes). Neste caso nós dizemos a ele que está errado, e então rodamos outro teste condicional para checar se o palpite foi maior ou menor do que a resposta certa, exibindo então uma mensagem apropriada para informá-lo se foi maior ou menor.
@@ -565,7 +561,7 @@ Tudo o que temos que fazer agora neste artigo é falar sobre alguns outros recur
 
 Uma parte do código acima que precisamos olhar mais detalhadamente é o loop [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for). Loop é um conceito muito importante em programação, que permite a você continuar executando um pedaço do código repetidamente, até que determinada condição seja satisfeita.
 
-Para começar, vá novamente até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) do seu navegador, e insira o seguinte:
+Para começar, vá novamente até o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) do seu navegador, e insira o seguinte:
 
 ```js
 for (var i = 1; i < 21; i++) {
@@ -608,7 +604,7 @@ Neste caso particular, nós primeiro criamos a variável `campoPalpite` que arma
 var campoPalpite = document.querySelector(".campoPalpite");
 ```
 
-Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) que seleciona o elemento ao qual você quer referenciar.
+Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que seleciona o elemento ao qual você quer referenciar.
 
 Como agora `campoPalpite` contém referência ao elemento {{htmlelement("input")}}, ele terá agora acesso a um número de propriedades (basicamente variáveis armazenadas dentro de objetos, sendo que alguns não podem ter seus valores alterados) e métodos (basicamente, funções armazenadas dentro de objetos). Um método disponível para elementos de inserção `<input>`, é o `focus()`, então agora podemos usar essa linha para focar o campo de inserção de texto:
 
@@ -623,9 +619,8 @@ Variáveis que não contém referências a elementos de formulário não terão 
 Vamos brincar um pouco com alguns objetos do navegador.
 
 1. Primeiro abra seu programa em um navegador.
-2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
+2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
 3. Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
-
    1. Agora digite o seguinte:
 
       ```js

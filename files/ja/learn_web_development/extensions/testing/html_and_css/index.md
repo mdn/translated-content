@@ -92,7 +92,7 @@ CSS にも同様の話があります — プロパティ名が正しくつづ�
 
 ### 現行機能に対応していないブラウザー
 
-これは、特に古いブラウザーの対応が必要な場合や、一部のブラウザーでは実装されているものの、まだすべてに実装されていない機能を使用している場合によくある問題です。一般に、ほとんどの主要な HTML と CSS の機能（基本的な HTML 要素、CSS の基本色、テキストのスタイル設定など）は、対応したいすべてのブラウザーでうまく動作します。新しい HTML、CSS、API を使用し始めたときには、さらに多くの問題が発覚します。 MDN では、文書化されている各機能について、ブラウザー互換性データを表示しています。例えば、[`:has()` 擬似クラスのブラウザーの互換性表](/ja/docs/Web/CSS/:has#ブラウザーの互換性)を参照してください。
+これは、特に古いブラウザーの対応が必要な場合や、一部のブラウザーでは実装されているものの、まだすべてに実装されていない機能を使用している場合によくある問題です。一般に、ほとんどの主要な HTML と CSS の機能（基本的な HTML 要素、CSS の基本色、テキストのスタイル設定など）は、対応したいすべてのブラウザーでうまく動作します。新しい HTML、CSS、API を使用し始めたときには、さらに多くの問題が発覚します。 MDN では、文書化されている各機能について、ブラウザー互換性データを表示しています。例えば、[`:has()` 擬似クラスのブラウザーの互換性表](/ja/docs/Web/CSS/Reference/Selectors/:has#ブラウザーの互換性)を参照してください。
 
 使用する技術のうち、広く対応していないもののリストが載っていた場合は、それらがどのブラウザーのどのような技術に対応しているのか、また、関連する技術にはどのような有益なものがあるのかを調べておくのはよい考えです。下記の[ヘルプを探す](#ヘルプを探す)を参照してください。
 
@@ -102,7 +102,7 @@ CSS にも同様の話があります — プロパティ名が正しくつづ�
 
 認識されない HTML 要素は、ブラウザーに無名インライン要素（意味づけのないインライン要素、{{htmlelement("span")}}要素に似ています）として扱われます。例えば、それらを名前付きで参照し、CSS でスタイル設定することはできます。望むようにそれらが動作していることを確認する必要があるだけです。必要に応じて `display` プロパティを `inline` 以外に設定するなど、他の要素と同じようにスタイル設定してください。
 
-HTML の [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/HTML/Element/audio), [`<picture>`](/ja/docs/Web/HTML/Element/picture), [`<object>`](/ja/docs/Web/HTML/Element/object), [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) など（他にもあります）のようなより複雑な要素は、リンクされているリソースに対応していない場合に代替手段を追加するための自然なメカニズムを持っています。開始タグと閉じられたタグの間に代替コンテンツを追加することができ、対応していないブラウザーでは、効果的に外側の要素を無視して内側のコンテンツを実行します。
+HTML の [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/ja/docs/Web/HTML/Reference/Elements/audio), [`<picture>`](/ja/docs/Web/HTML/Reference/Elements/picture), [`<object>`](/ja/docs/Web/HTML/Reference/Elements/object), [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) など（他にもあります）のようなより複雑な要素は、リンクされているリソースに対応していない場合に代替手段を追加するための自然なメカニズムを持っています。開始タグと閉じられたタグの間に代替コンテンツを追加することができ、対応していないブラウザーでは、効果的に外側の要素を無視して内側のコンテンツを実行します。
 
 例えば次のようなものです。
 
@@ -123,7 +123,7 @@ HTML の [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/
 
 この例では、HTML 動画プレイヤーでも動作しない場合に動画をダウンロードできる単純リンクを記載しているので、少なくともユーザーは動画にアクセスすることができます。
 
-もう一つの例はフォーム要素です。新しい [`<input>`](/ja/docs/Web/HTML/Element/input) 型が、時間、日付、色、数字など、フォームに固有の情報を入力するために導入されたとき、ブラウザーがその新しい機能に対応していなかった場合、ブラウザーは `type="text"` の既定を使用しました。 入力型が追加されましたが、これはとても有益なものです。特にモバイルプラットフォームでは、データを入力するのに苦労しない方法を提供することが、使い勝手としてとても重要です。プラットフォームは、日付入力用のカレンダーウィジェットのように、入力型によって異なる UI ウィジェットを提供します。ブラウザーが入力型に対応していなくても、ユーザーは必要なデータを入力することができます。
+もう一つの例はフォーム要素です。新しい [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 型が、時間、日付、色、数字など、フォームに固有の情報を入力するために導入されたとき、ブラウザーがその新しい機能に対応していなかった場合、ブラウザーは `type="text"` の既定を使用しました。 入力型が追加されましたが、これはとても有益なものです。特にモバイルプラットフォームでは、データを入力するのに苦労しない方法を提供することが、使い勝手としてとても重要です。プラットフォームは、日付入力用のカレンダーウィジェットのように、入力型によって異なる UI ウィジェットを提供します。ブラウザーが入力型に対応していなくても、ユーザーは必要なデータを入力することができます。
 
 次の例は日付と時刻の入力の例です。
 
@@ -190,13 +190,14 @@ button:active {
 
 これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは 16 進数の色を指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
-> **メモ:** [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
+> [!NOTE]
+> [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face)、[`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
 
 ### セレクターの対応
 
 もちろん、正しい[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を使用してスタイル設定したい要素を選択しなければ、 CSS の特性はまったく適用されません。
 
-カンマ区切りのセレクターリストでは、セレクターの書き方を間違えただけで、どの要素にも一致しなくなることがあります。しかし、セレクターが不正な場合は、スタイルブロック全体とともに、セレクターの**リスト全体**が無視されます。このため、 `:-moz-` 接頭辞のついた擬似クラスや擬似要素は、[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#forgiving_selector_list) の中で、 `:where(::-moz-thumb)` のようにのみ記載してください。 Firefox 以外のすべてのウェブブラウザーはブロック全体を無視するので、 [`:is()`](/ja/docs/Web/CSS/:is) または [`:where()`](/ja/docs/Web/CSS/:where) の寛容なセレクターリストの外側のカンマ区切りのセレクターグループ内に、接頭辞 `:-moz-` が付いた擬似クラスまたは擬似要素を記載しないでください。 `is()` と `:where()` は、他にも [`:has()`](/ja/docs/Web/CSS/:has) や [`:not()`](/ja/docs/Web/CSS/:not) などのセレクターリストの引数として渡すことができることに注意してください。
+カンマ区切りのセレクターリストでは、セレクターの書き方を間違えただけで、どの要素にも一致しなくなることがあります。しかし、セレクターが不正な場合は、スタイルブロック全体とともに、セレクターの**リスト全体**が無視されます。このため、 `:-moz-` 接頭辞のついた擬似クラスや擬似要素は、[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list) の中で、 `:where(::-moz-thumb)` のようにのみ記載してください。 Firefox 以外のすべてのウェブブラウザーはブロック全体を無視するので、 [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is) または [`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where) の寛容なセレクターリストの外側のカンマ区切りのセレクターグループ内に、接頭辞 `:-moz-` が付いた擬似クラスまたは擬似要素を記載しないでください。 `is()` と `:where()` は、他にも [`:has()`](/ja/docs/Web/CSS/Reference/Selectors/:has) や [`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not) などのセレクターリストの引数として渡すことができることに注意してください。
 
 ブラウザー開発ツールを使用してスタイルを設定しようとしている要素を検査し、 DOM インスペクターが提供する傾向がある DOM ツリーのパンくずトレイルを見て、あなたのセレクターがそれと比較して意味があるかどうかを確認することが有益であることがわかります。
 
@@ -250,13 +251,13 @@ form > #date
 
 2 つ目のドットの後にプロパティ名の表現を入力し始めると（JavaScript では、 CSS のプロパティ名は{{Glossary("kebab_case", "ケバブケース")}}ではなく、{{Glossary("camel_case", "小文字のキャメルケース")}}で記述されることに注意してください）、 JavaScript コンソールは、ブラウザーに存在し、これまでに書いたものと一致するプロパティの名前を自動補完し始めるはずです。これは、そのブラウザーで実装されているプロパティを探すのに有益です。
 
-現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
+現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
 
 ### レスポンシブデザインの問題
 
-レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
-解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を含め、たくさんあります。
+解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Guides/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性を含め、たくさんあります。
 
 ## ヘルプを探す
 
@@ -266,7 +267,7 @@ HTML と CSS で遭遇する課題は他にもたくさんあり、オンライ�
 
 Mozilla Developer Network (MDN) を使用するために、ほとんどの人は検索エンジンで情報を探そうとしている技術に "MDN" という単語を加えて検索します（例えば "MDN HTML video"）。MDN にはいくつかの有益な種類のコンテンツが収められています。
 
-- クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Element/video)など。
+- クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Reference/Elements/video)など。
 - その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
 - 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 

@@ -1,12 +1,10 @@
 ---
 title: アニメーションのパフォーマンスとフレームレート
+short-title: アニメーションとフレームレート
 slug: Web/Performance/Guides/Animation_performance_and_frame_rate
-original_slug: Web/Performance/Animation_performance_and_frame_rate
 l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 ウェブ上でのアニメーションは、{{domxref('SVGAnimationElement', 'SVG')}}、{{domxref('window.requestAnimationFrame','JavaScript')}}（{{htmlelement('canvas')}} や {{domxref('WebGL_API','WebGL')}} を含む）、CSS の {{cssxref('animation')}}、{{htmlelement('video')}}、アニメーション GIF、さらにアニメーション PNG やその他の種類の画像もあります。CSS プロパティをアニメーションさせることによるパフォーマンスコストは、プロパティによって異なり、高価な CSS プロパティをアニメーションさせると、ブラウザーが滑らかな{{glossary("FPS", "フレームレート")}}を実現するのに苦労し、{{glossary('jank', "ジャンク")}}となることがあります。
 
@@ -14,7 +12,7 @@ l10n:
 
 ユーザーは、すべてのインターフェイスとスムーズにやり取りできること、そしてすべてのユーザーインターフェイスが応答することを期待しています。アニメーションは、サイトをより速く、レスポンスよく感じさせるのに役立ちますが、アニメーションは正しく行われないと、サイトをより遅く、乱雑に感じさせることもあります。レスポンシブユーザーインターフェイスのフレームレートは 60 フレーム/秒 (fps) です。常に 60fps を維持することは不可能ですが、すべてのアニメーションで高いフレームレートと安定したフレームレートを維持することが重要です。
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)では、いくつかの[キーフレーム](/ja/docs/Web/CSS/@keyframes)を指定して、それぞれのキーフレームがアニメーションの特定の段階での要素の姿を定義するために、 CSS を使用しています。ブラウザーは、各キーフレームから次のキーフレームへの遷移としてアニメーションを作成します。
+[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)では、いくつかの[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)を指定して、それぞれのキーフレームがアニメーションの特定の段階での要素の姿を定義するために、 CSS を使用しています。ブラウザーは、各キーフレームから次のキーフレームへの遷移としてアニメーションを作成します。
 
 JavaScript を使用して要素をアニメーション化するのに比べ、CSS アニメーションは簡単に作成することができます。また、ブラウザーがフレームをレンダリングするタイミングや、必要に応じてフレームを削除することを制御できるので、パフォーマンスも向上します。
 
@@ -37,7 +35,6 @@ JavaScript を使用して要素をアニメーション化するのに比べ、
 レンダリングウォーターフォールの文脈では、一部プロパティは他のプロパティよりもコストが高くなります。
 
 - 要素の**形状**または**位置**に影響するプロパティは、次のものを起動します。
-
   - スタイルの再計算
   - レイアウト
   - 再描画
@@ -45,14 +42,12 @@ JavaScript を使用して要素をアニメーション化するのに比べ、
   例: {{cssxref("left")}}, {{cssxref("max-width")}}, {{cssxref("border-width")}}, {{cssxref("margin-left")}}, {{cssxref("font-size")}}
 
 - 形状や位置に影響しないが、独自のレイヤーで描画されないプロパティは、次のものを起動します。
-
   - スタイルの再計算
   - 再描画
 
   例: {{cssxref("color")}}
 
 - **独自のレイヤー**でレンダリングされるプロパティは、更新が**合成**で処理されるため、再描画が発生することもありません。次のものを起動します。
-
   - スタイルの再計算
 
   例: {{cssxref("transform")}}, {{cssxref("opacity")}}

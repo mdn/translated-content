@@ -8,11 +8,11 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`wrap`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、コントロールがフォーム送信用の値をどのように折り返し表示するかを示します。これは `<textarea>` 要素の [`wrap`](/ja/docs/Web/HTML/Element/textarea#wrap) 属性を反映しています。 `"hard"` 値は、 {{domxref("HTMLTextAreaElement.cols", "cols")}} 属性も設定されている場合にのみ効果があることに注意してください。
+**`wrap`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、コントロールがフォーム送信用の値をどのように折り返し表示するかを示します。これは `<textarea>` 要素の [`wrap`](/ja/docs/Web/HTML/Reference/Elements/textarea#wrap) 属性を反映しています。 `"hard"` 値は、 {{domxref("HTMLTextAreaElement.cols", "cols")}} 属性も設定されている場合にのみ効果があることに注意してください。
 
 ## 値
 
-利用可能な値は [`wrap`](/ja/docs/Web/HTML/Element/textarea#wrap) を参照してください。既定値は `"soft"` です。
+利用可能な値は [`wrap`](/ja/docs/Web/HTML/Reference/Elements/textarea#wrap) を参照してください。既定値は `"soft"` です。
 
 ## 例
 

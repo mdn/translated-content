@@ -27,9 +27,7 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
 - `requestId`
   - : `string`. ID de la requête pour laquelle vous souhaitez obtenir des informations de sécurité. Vous pouvez l'obtenir à partir de l'objet de `details` qui est passé dans n'importe quel écouteur d'événement `webRequest`.
 - `options`
-
   - : `object`. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :
-
     - `certificateChain` {{optional_inline}}
       - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`,
         il n'inclura que le certificat du serveur. La valeur par défaut est `false`.

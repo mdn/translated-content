@@ -3,7 +3,7 @@ title: 弹性盒子
 slug: Learn_web_development/Core/CSS_layout/Flexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 [弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)是一种用于按行或按列布局元素的一维布局方法。元素可以膨胀以填充额外的空间，收缩以适应更小的空间。本文将解释所有的基本原理。
 
@@ -341,7 +341,7 @@ button {
 
 ## 技能测试
 
-我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills)来验证你是否掌握了这些知识。
+我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox)来验证你是否掌握了这些知识。
 
 ## 总结
 

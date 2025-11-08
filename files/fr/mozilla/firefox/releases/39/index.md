@@ -3,8 +3,6 @@ title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 39 est sorti le 2 juillet 2015. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 
 ## Changements pour les développeurs Web
@@ -41,7 +39,6 @@ Points forts:
 - Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ([bug Firefox 1108949](https://bugzil.la/1108949)).
 - La propriété `Object.prototype.__noSuchMethod__` est désormais obsolète et émet un avertissement de console (voir [bug Firefox 1140428](https://bugzil.la/1140428) et cette [annonce de plate-forme](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - L'implémentation de l'objet {{jsxref("Proxy")}} a été mise à jour pour se conformer davantage à la spécification ES6 :
-
   - Les gestionnaires {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} et {{jsxref("Global_Objects/Proxy/handler/set", "set")}} doivent maintenant renvoyer explicitement `true` pour réussir, sinon une exception {{jsxref("TypeError")}} sera lancée en mode strict ([bug Firefox 1132522](https://bugzil.la/1132522)).
   - Si l'objet {{domxref("window")}} est défini comme cible, ces gestionnaires lancent désormais une `TypeError` ([bug Firefox 828137](https://bugzil.la/828137)).
 

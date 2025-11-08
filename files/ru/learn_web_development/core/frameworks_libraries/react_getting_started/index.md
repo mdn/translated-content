@@ -37,9 +37,9 @@ React utilizes features of modern JavaScript for many of its patterns. Its bigge
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-This heading constant is known as a **JSX expression**. React can use it to render that [`<h1>`](/ru/docs/Web/HTML/Element/Heading_Elements) tag in our app.
+This heading constant is known as a **JSX expression**. React can use it to render that [`<h1>`](/ru/docs/Web/HTML/Reference/Elements/Heading_Elements) tag in our app.
 
-Suppose we wanted to wrap our heading in a [`<header>`](/ru/docs/Web/HTML/Element/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
+Suppose we wanted to wrap our heading in a [`<header>`](/ru/docs/Web/HTML/Reference/Elements/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
 
 ```js
 const header = (
@@ -60,7 +60,7 @@ const header = (
 > );
 > ```
 >
-> However, this looks kind of awkward, because the [`<header>`](/ru/docs/Web/HTML/Element/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
+> However, this looks kind of awkward, because the [`<header>`](/ru/docs/Web/HTML/Reference/Elements/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
 
 Of course, your browser can't read JSX without help. When compiled (using a tool like [Babel](https://babeljs.io/) or [Parcel](https://parceljs.org/)), our header expression would look like this:
 
@@ -82,7 +82,7 @@ To read more about JSX, check out the React team's [JSX In Depth](https://reactj
 
 There are many ways to use React, but we're going to use the command-line interface (CLI) tool create-react-app, as mentioned earlier, which expedites the process of developing a React application by installing some packages and creating some files for you, handling the tooling described above.
 
-It's possible to [add React to a website without create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) by copying some [`<script>`](/ru/docs/Web/HTML/Element/script) elements into an HTML file, but the create-react-app CLI is a common starting point for React applications. Using it will allow you spend more time building your app, and less time fussing with setup.
+It's possible to [add React to a website without create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) by copying some [`<script>`](/ru/docs/Web/HTML/Reference/Elements/script) elements into an HTML file, but the create-react-app CLI is a common starting point for React applications. Using it will allow you spend more time building your app, and less time fussing with setup.
 
 ### Requirements
 
@@ -155,7 +155,7 @@ moz-todo-react
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives.
 
-The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/ru/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
+The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/ru/docs/Web/HTML/Reference/Elements/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
 The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
 
@@ -244,9 +244,9 @@ function App() {
 
 The `App` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
-Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/ru/docs/Web/HTML/Element/div) tag has a `className` attribute. This the same as the [`class`](/ru/docs/Web/HTML/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` – it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
+Some elements in the expression have attributes, which are written just like in HTML, following a pattern of `attribute="value"`. On line 3, the opening [`<div>`](/ru/docs/Web/HTML/Reference/Elements/div) tag has a `className` attribute. This the same as the [`class`](/ru/docs/Web/HTML/Reference/Global_attributes/class) attribute in HTML, but because JSX is JavaScript, we can't use the word `class` – it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.
 
-Take a moment to change the [`<p>`](/ru/docs/Web/HTML/Element/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/ru/docs/Web/HTML/Element/a) tag and save; the "Learn React" link will be gone.
+Take a moment to change the [`<p>`](/ru/docs/Web/HTML/Reference/Elements/p) tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Now delete the [`<a>`](/ru/docs/Web/HTML/Reference/Elements/a) tag and save; the "Learn React" link will be gone.
 
 Your `App` component should now look like this:
 

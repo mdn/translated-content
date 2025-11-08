@@ -3,8 +3,6 @@ title: Layout using named grid lines
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 ---
 
-{{CSSRef}}
-
 이전 가이드에선 그리드 트랙을 정의하면 생성되는 라인을 사용해서 아이템을 배치하는 법을 살펴보았으며, 또한 이름이 명명된 템플릿 영역을 가지고 어떻게 아이템들을 배치하는지도 알아보았습니다. 이번 가이드에선 이름이 주어진 라인을 쓰는 상황에서 이 두 가지 방법이 서로 어떻게 작용하는지 알아보겠습니다. 라인에 이름을 지어 주는 것이 매우 유용할 때도 있지만, 이름과 트랙 크기가 혼합돼서 사용되는 그리드 용법을 보고 있으면 매우 헷갈릴 수도 있습니다. 하지만 몇 가지 예제를 가지고 작업해 보시면 점점 명확해지면서 나중엔 작업하기도 훨씬 수월해지실 겁니다.
 
 ## 그리드를 정의할 때 라인의 이름 짓는 법
@@ -453,7 +451,6 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
 3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
-
    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -467,7 +464,6 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
-
    1. [grid](/ko/docs/Web/CSS/grid)
    2. [grid-area](/ko/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
@@ -488,7 +484,6 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**
-
    1. [Grid](/ko/docs/Glossary/Grid)
    2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
    3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)

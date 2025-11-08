@@ -97,7 +97,7 @@ In this section we'll go through the different ways in which you can add SVG vec
 
 ### The quick way: {{htmlelement("img")}}
 
-To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ```html
 <img
@@ -168,7 +168,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 ### How to embed an SVG with an {{htmlelement("iframe")}}
 
-You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
 Here's a quick review:
 

@@ -44,7 +44,7 @@ Estos artículos cubren las características de HTML para los desarrolladores mu
 - [Uso de audio y video en HTML](/es/docs/Web/Media/HTML_media)
   - : Una guía para usar los elementos HTML `<audio>` y `<video>`.
 - [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
-  - : En esta guía, cubrimos las formas en que los diseñadores y desarrolladores web pueden crear contenido que sea accesible para personas con diferentes capacidades. Esto va desde el uso del atributo [`alt`](/es/docs/Web/HTML/Element/img#alt) en elementos {{HTMLElement("img")}} hasta subtítulos y etiquetado de medios para lectores de pantalla.
+  - : En esta guía, cubrimos las formas en que los diseñadores y desarrolladores web pueden crear contenido que sea accesible para personas con diferentes capacidades. Esto va desde el uso del atributo [`alt`](/es/docs/Web/HTML/Reference/Elements/img#alt) en elementos {{HTMLElement("img")}} hasta subtítulos y etiquetado de medios para lectores de pantalla.
 - [Guía de tipos y formatos de medios en la web](/es/docs/Web/Media/Formats)
   - : Una guía de los tipos de archivos y códecs disponibles para imágenes, audio y video en la web. Esto incluye recomendaciones sobre qué formatos usar para qué tipo de contenido, las mejores prácticas que incluyen cómo proporcionar respaldos y cómo priorizar los tipos de medios, y también incluye información general de soporte del navegador para cada contenedor de medios y códec.
 - [Transmisión de audio y video](/es/docs/Web/Media/Streaming)

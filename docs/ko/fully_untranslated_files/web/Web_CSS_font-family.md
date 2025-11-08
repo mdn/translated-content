@@ -7,7 +7,49 @@ slug: Web/CSS/font-family
 
 CSS **`font-family`** 속성은 선택된 요소에 우선 순위가 지정된 font family 이름과 generic family 이름을 지정할 수 있게 해줍니다.
 
-{{EmbedInteractiveExample("pages/css/font-family.html")}}
+{{InteractiveExample("CSS Demo: font-family")}}
+
+```css interactive-example-choice
+font-family: Georgia, serif;
+```
+
+```css interactive-example-choice
+font-family: "Gill Sans", sans-serif;
+```
+
+```css interactive-example-choice
+font-family: sans-serif;
+```
+
+```css interactive-example-choice
+font-family: serif;
+```
+
+```css interactive-example-choice
+font-family: cursive;
+```
+
+```css interactive-example-choice
+font-family: system-ui;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 값은 콤마로 구분하여 대체가 될 수 있음을 나타냅니다. 브라우저는 폰트 목록에서 컴퓨터에 설치되어 있거나 {{cssxref("@font-face")}} 규칙을 이용하여 다운로드 받을 수 있는 폰트 중 가장 첫번째 폰트를 선택할 것입니다.
 
@@ -49,13 +91,10 @@ font-family: Gill Sans Extrabold, sans-serif;
 ### 값
 
 - `<family-name>`
-
   - : The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.
 
 - `<generic-name>`
-
   - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
-
     - `serif`
       - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
         E.g. Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.

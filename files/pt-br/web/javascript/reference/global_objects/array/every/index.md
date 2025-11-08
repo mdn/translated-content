@@ -27,9 +27,7 @@ arr.every(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função que testa cada elemento, recebe três parametros:
-
     - `currentValue` (obrigatório)
       - : O elemento atual sendo processado na array.
     - `index` (opcional)

@@ -125,7 +125,7 @@ TBD
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-- [HTML \<figure> 要素](/ja/docs/Web/HTML/Element/figure)
-- [HTML \<figcaption> 要素](/ja/docs/Web/HTML/Element/figcaption)
+- [HTML \<figure> 要素](/ja/docs/Web/HTML/Reference/Elements/figure)
+- [HTML \<figcaption> 要素](/ja/docs/Web/HTML/Reference/Elements/figcaption)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

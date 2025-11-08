@@ -59,7 +59,7 @@ h1 {
 
 {{EmbedLiveSample("simple-vertical", "", "350px")}}
 
-[`writing-mode`](/ja/docs/Web/CSS/writing-mode) プロパティの 3 つの可能な値は次のとおりです。
+[`writing-mode`](/ja/docs/Web/CSS/Reference/Properties/writing-mode) プロパティの 3 つの可能な値は次のとおりです。
 
 - `horizontal-tb`: 上から下の方向へブロックが流れます。文は横書きになります。
 - `vertical-rl`: 右から左の方向へブロックが流れます。文は縦書きになります。
@@ -339,7 +339,7 @@ img {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 書字方向と論理的プロパティ](/ja/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 書字方向と論理的プロパティ](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)を見てください。
 
 ## まとめ
 

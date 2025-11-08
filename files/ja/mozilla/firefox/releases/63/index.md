@@ -3,8 +3,6 @@ title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされました。このページでは、開発者に影響する Firefox 63 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -32,12 +30,12 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 
 - {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
 - [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
-- [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
+- [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
 - Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
 - [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
-- [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
+- [prefers-reduced-motion](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
 - 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
@@ -72,7 +70,6 @@ _変更なし。_
 #### DOM
 
 - {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} で、以下の部分をデフォルトで有効にしました ([Firefox バグ 1476158](https://bugzil.la/1476158))。
-
   - {{domxref("Animation")}} の {{domxref("Animation.ready", "ready")}} および {{domxref("Animation.finished", "finished")}} プロパティ。`Animation` オブジェクトの `ready` および `finished` {{jsxref("Promise")}} を指定します。
   - {{domxref("Animation")}} オブジェクトの {{domxref("Animation.effect", "effect")}} プロパティ。
   - {{domxref("KeyframeEffect")}} および {{domxref("AnimationEffect")}} インターフェイス。
@@ -182,7 +179,6 @@ _変更なし。_
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} および {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} で、ブラウザーのアクションバッジの文字色を取得および設定できるようになりました ([Firefox バグ 1424620](https://bugzil.la/1424620))。
 - `manifest.json` のテーマ `colors` キーで、新しいタブの文字色を設定する `ntp_text` プロパティと、新しいタブの色を設定する `ntp_background` プロパティをサポートしました ([Firefox バグ 1347204](https://bugzil.la/1347204))。
 - ブックマークサイドバーなど、サイドバーの色をテーマで定義可能になりました ([Firefox バグ 1418602](https://bugzil.la/1418602))。関連プロパティ:
-
   - `sidebar`: サイドバーの背景色。
   - `sidebar_text`: サイドバーの文字色。
   - `sidebar_highlight`: サイドバーで選択したアイテムの背景色。
