@@ -76,7 +76,7 @@ rgb(R G B[ / A])
   - : アルファチャネル値を表す {{CSSXref("&lt;alpha-value&gt;")}} で、数値 `0` は `0%`（完全に透明）、`1` は `100%`（完全に不透明）に対応します。さらにキーワード `none` を使用して明示的にアルファチャネルを指定しないことも可能です。`A` チャネル値が明示的に指定されていない場合、デフォルトは `100%` です。`A` チャネル値を含める場合は、値の前にスラッシュ（`/`）が付きます。
 
 > [!NOTE]
-> `none` の効果については [色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落) を参照してください。
+> `none` の効果については [色成分の欠落](/ja/docs/Web/CSS/Reference/Values/color_value#色成分の欠落) を参照してください。
 
 #### 相対値構文
 
@@ -97,7 +97,7 @@ rgb(from <color> R G B[ / A])
 > `rgba()` エイリアスも相対色の出力や起点色の指定に使用できます。`rgba()` を使用して相対色を出力する場合、カンマのないモダン構文を使用する必要があります。
 
 > [!NOTE]
-> 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリーすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
+> 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリーすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 値として返されます。
 
 #### 相対色出力チャネル成分の定義
 

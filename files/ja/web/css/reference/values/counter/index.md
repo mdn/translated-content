@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
 ---
 
-**`counter()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、指定された名前付きカウンターの現在値があれば、その文字列を返します。
+**`counter()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、指定された名前付きカウンターの現在値があれば、その文字列を返します。
 
-`counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。
+`counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/Reference/Values/string) に対応するすべての箇所で用いることができます。
 
 {{InteractiveExample("CSS デモ: counter()", "tabbed-shorter")}}
 
@@ -157,7 +157,7 @@ li::after {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- CSS の [`counters()`](/ja/docs/Web/CSS/counters) 関数
+- CSS の [`counters()`](/ja/docs/Web/CSS/Reference/Values/counters) 関数
 - [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール

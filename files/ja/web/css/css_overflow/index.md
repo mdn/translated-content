@@ -238,7 +238,7 @@ function clipMargin() {
 
 ### データ型
 
-- [`<overflow>`](/ja/docs/Web/CSS/overflow_value) 列挙値
+- [`<overflow>`](/ja/docs/Web/CSS/Reference/Values/overflow_value) 列挙値
 
 ## ガイド
 

@@ -6,11 +6,11 @@ l10n:
   sourceCommit: 62ebcab471aceef4d843e57e310dae4ab1eda94a
 ---
 
-**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
+**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
 
 ## 構文
 
-`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)で使用される数値の定数を定義します。
+`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#数学関数)で使用される数値の定数を定義します。
 
 ### 値
 
@@ -28,7 +28,7 @@ l10n:
 
 ### メモ
 
-[`calc()`](/ja/docs/Web/CSS/calc) 内の引数のシリアライズは浮動小数点数の IEEE-754 標準に従いますので、 `infinity` や `NaN` のような定数に関していくつか見なされる意味があります。
+[`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 内の引数のシリアライズは浮動小数点数の IEEE-754 標準に従いますので、 `infinity` や `NaN` のような定数に関していくつか見なされる意味があります。
 
 - ゼロで割ると、割られる数の符号に応じて正または負の `infinity` を返します。
 - 何かに対して `infinity` を加算、減算、乗算すると、 `NaN` を生成しない限り、 `infinity` を返します（下記参照）。
@@ -54,7 +54,7 @@ l10n:
 
 ## 解説
 
-数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
+数学定数は [CSS 数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
 例えば、次のようになります。
 
 - `animation-name: pi;` は "pi" という名前のアニメーションを表し、数学定数の `pi` にはなりません。
@@ -97,7 +97,7 @@ NAN
 ### `calc()` における pi の使用
 
 次の例は、要素を指数関数的に増加する角度で回転させるために `calc()` 内で `e` を使用する方法を示しています。
-2 つ目のボックスは [`sin()`](/ja/docs/Web/CSS/sin) 関数の中で `pi` を使用する方法を示しています。
+2 つ目のボックスは [`sin()`](/ja/docs/Web/CSS/Reference/Values/sin) 関数の中で `pi` を使用する方法を示しています。
 
 ```css hidden
 #wrapper {

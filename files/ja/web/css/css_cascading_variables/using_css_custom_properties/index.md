@@ -26,7 +26,7 @@ CSS では、プロパティ名の接頭辞として ダッシュ 2 本を使用
 ### ダッシュ 2 本 (`--`) の接頭辞の使用
 
 ダッシュ 2 本で始まるカスタムプロパティは、`--` で始まってプロパティ名（例: `--my-property`）が続くもので、[有効な CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)であればどのような値でも指定できます。
-他のプロパティと同様に、これはルールのセット内に記述します。次の例では、カスタムプロパティ `--main-bg-color` を作成し、[`<named-color>`](/ja/docs/Web/CSS/named-color) 値として `brown` を使用する方法を示しています。
+他のプロパティと同様に、これはルールのセット内に記述します。次の例では、カスタムプロパティ `--main-bg-color` を作成し、[`<named-color>`](/ja/docs/Web/CSS/Reference/Values/named-color) 値として `brown` を使用する方法を示しています。
 
 ```css
 section {
@@ -51,7 +51,7 @@ section {
 ### `@property` アットルールの使用
 
 {{cssxref("@property")}} アットルールを使用すると、カスタムプロパティの定義をより詳細に表現できるようになり、プロパティに関連付けられた型、既定値の設定、および継承の制御が可能になります。
-次の例では、`--logo-color` というカスタムプロパティが [`<color>`](/ja/docs/Web/CSS/color_value) を期待するものとして作成されます。
+次の例では、`--logo-color` というカスタムプロパティが [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) を期待するものとして作成されます。
 
 ```css
 @property --logo-color {
@@ -281,7 +281,7 @@ div {
 
 `@property` アットルールでは、プロパティを継承するかどうかを明示的に指定できます。
 次の例では、`@property` アットルールを使用してカスタムプロパティを作成しています。
-継承は無効になっており、[`<color>`](/ja/docs/Web/CSS/color_value) データ型が定義され、`cornflowerblue` が初期値として設定されています。
+継承は無効になっており、[`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型が定義され、`cornflowerblue` が初期値として設定されています。
 
 親要素は、`--box-color` の値を緑に設定し、`--box-color` を背景色の値として使用します。
 子要素も `background-color: var(--box-color)` を使用しており、継承が有効になっている場合（または、ダッシュ 2 本の構文を使用して定義されている場合）には、`green` 色が設定されていることが期待されます。
@@ -341,7 +341,7 @@ div {
 
 ### `var()` 関数の代替値の定義
 
-[`var()`](/ja/docs/Web/CSS/var) 関数を使用して、指定された変数が定義されていない場合の**代替値**を複数定義することができます。[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)および[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) で作業するときに便利なことがあります。
+[`var()`](/ja/docs/Web/CSS/Reference/Values/var) 関数を使用して、指定された変数が定義されていない場合の**代替値**を複数定義することができます。[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)および[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) で作業するときに便利なことがあります。
 
 関数の最初の引数は、カスタムプロパティの名前です。関数の 2 番目の引数は、省略可能で、参照されたカスタムプロパティが無効であった場合に代わりに使用される代替値です。
 この関数は引数を 2 つだけ受け付けるので、最初のカンマの後のものは、すべて 2 番目の引数として割り当てます。2 番目の引数が無効な場合、次のように代替処理は失敗します。
@@ -377,7 +377,7 @@ div {
 
 次の例では、`@property` アットルールを使用して、`--box-color` の初期値を `cornflowerblue` に設定しています。
 アットルールに続くルールセットでは、`--box-color` を `aquamarine` に設定したいのですが、値の名前にタイプミスがあります。
-3 番目の `<div>` でも同じことが言有効な [`<color>` 値](/ja/docs/Web/CSS/color_value)を期待するカスタムプロパティに `2rem` を使用しています。
+3 番目の `<div>` でも同じことが言有効な [`<color>` 値](/ja/docs/Web/CSS/Reference/Values/color_value)を期待するカスタムプロパティに `2rem` を使用しています。
 `2rem` と `aqumarine` はどちらもカラー値として無効であるため、`cornflowerblue` の初期値が適用されます。
 
 ```css live-sample___at-property-initial-value
@@ -538,6 +538,6 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 - [カスタムプロパティの構文](/ja/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("@property")}} アットルール
-- [`var()`](/ja/docs/Web/CSS/var)
+- [`var()`](/ja/docs/Web/CSS/Reference/Values/var)
 - [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
 - [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール

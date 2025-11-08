@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
+**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
 
 ## 構文
 
@@ -14,13 +14,13 @@ l10n:
 
 先頭に 2 つのダッシュをつけることで、 CSS コードブロックを読むときに簡単に識別でき、標準 CSS キーワードとの名前の衝突を避けることができます。
 
-[`<custom-ident>`](/ja/docs/Web/CSS/custom-ident) と同様に、 `<dashed-ident>` はユーザーによって識別されますが、 `<custom-ident>` とは異なり、 [CSS](/ja/docs/Web/CSS) は `<dashed-ident>` を定義しません。
+[`<custom-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident) と同様に、 `<dashed-ident>` はユーザーによって識別されますが、 `<custom-ident>` とは異なり、 [CSS](/ja/docs/Web/CSS) は `<dashed-ident>` を定義しません。
 
 ## 例
 
 ### CSS カスタムプロパティでの使用
 
-`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/var)の中で使用されます。
+`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/Reference/Values/var)の中で使用されます。
 
 ```css
 html {
@@ -47,7 +47,7 @@ h6 {
 
 ### @color-profile での使用
 
-`<dashed-ident>` が [@color-profile](/ja/docs/Web/CSS/Reference/At-rules/@color-profile) アットルールで使用される場合、先にアットルールが宣言され、それから [CSS の color() 関数](/ja/docs/Web/CSS/color_value/color)内で使用されます。
+`<dashed-ident>` が [@color-profile](/ja/docs/Web/CSS/Reference/At-rules/@color-profile) アットルールで使用される場合、先にアットルールが宣言され、それから [CSS の color() 関数](/ja/docs/Web/CSS/Reference/Values/color_value/color)内で使用されます。
 
 ```css
 @color-profile --my-color-profile {
@@ -88,5 +88,5 @@ _この型は実際の型ではなく、他の CSS 構文の定義を簡略化�
 
 ## 関連情報
 
-- [&lt;ident&gt;](/ja/docs/Web/CSS/ident)
-- [&lt;custom-ident&gt;](/ja/docs/Web/CSS/custom-ident)
+- [&lt;ident&gt;](/ja/docs/Web/CSS/Reference/Values/ident)
+- [&lt;custom-ident&gt;](/ja/docs/Web/CSS/Reference/Values/custom-ident)

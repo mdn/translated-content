@@ -176,10 +176,10 @@ div:first-of-type {
 
 - {{cssxref("url_value", "&lt;url&gt;")}} データ型
 - [`<color>`](/ja/docs/Web/CSS/Reference/Properties/color) データ型
-- [`<image>`](/ja/docs/Web/CSS/image) データ型
+- [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) データ型
 - [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position) データ型
 
-- [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) キーワード
+- [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) キーワード
 
 ## 仕様書
 
@@ -189,7 +189,7 @@ div:first-of-type {
 
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
-- [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) フィルター関数
+- [`drop-shadow()`](/ja/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) フィルター関数
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - [境界画像作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
 - [境界角丸作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)

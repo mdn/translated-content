@@ -71,7 +71,7 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 | Firefox/3.6-15                   | -moz-linear-gradient();    |
 | Firefox/16(2012.10 リリース)以降 | linear-gradient();         |
 
-mobile 版 Firefox は CSS3 準拠のため、[MDN](/ja/docs/Web/CSS/gradient/linear-gradient)等のリファレンスを参照し、適正な設定を行うことが必要です。
+mobile 版 Firefox は CSS3 準拠のため、[MDN](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)等のリファレンスを参照し、適正な設定を行うことが必要です。
 
 ## 参考
 

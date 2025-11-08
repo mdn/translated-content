@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-**`<transform-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、要素の外見に影響する座標変換を表します。座標変換[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)は、 2D または 3D 空間で要素を回転、拡大縮小、歪曲、移動させることができます。これは {{cssxref("transform")}} プロパティの中で使用されます。
+**`<transform-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、要素の外見に影響する座標変換を表します。座標変換[関数](/ja/docs/Web/CSS/Reference/Values/Functions)は、 2D または 3D 空間で要素を回転、拡大縮小、歪曲、移動させることができます。これは {{cssxref("transform")}} プロパティの中で使用されます。
 
 ## 構文
 
@@ -14,62 +14,62 @@ l10n:
 
 ### 行列変換
 
-- [`matrix()`](/ja/docs/Web/CSS/transform-function/matrix)
+- [`matrix()`](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix)
   - : 2D の同次変換行列を記述します。
-- [`matrix3d()`](/ja/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix3d)
   - : 3D の変換を 4×4 の同次行列で記述します。
 
 ### 視点距離
 
-- [`perspective()`](/ja/docs/Web/CSS/transform-function/perspective)
+- [`perspective()`](/ja/docs/Web/CSS/Reference/Values/transform-function/perspective)
   - : ユーザーと z=0 平面との間の距離を設定します。
 
 ### 回転
 
-- [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate)
+- [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate)
   - : 要素を 2D 平面上で特定の点を中心に回転します。
-- [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
   - : 要素を 3D 空間で特定の軸を中心に回転します。
-- [`rotateX()`](/ja/docs/Web/CSS/transform-function/rotateX)
+- [`rotateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateX)
   - : 要素を水平軸を中心に回転します。
-- [`rotateY()`](/ja/docs/Web/CSS/transform-function/rotateY)
+- [`rotateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateY)
   - : 要素を垂直軸を中心に回転します。
-- [`rotateZ()`](/ja/docs/Web/CSS/transform-function/rotateZ)
+- [`rotateZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
   - : 要素を Z 軸を中心に回転します。
 
 ### 拡大縮小
 
-- [`scale()`](/ja/docs/Web/CSS/transform-function/scale)
+- [`scale()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scale)
   - : 要素を 2D 平面上で拡大または縮小します。
-- [`scale3d()`](/ja/docs/Web/CSS/transform-function/scale3d)
+- [`scale3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scale3d)
   - : 要素を 3D 空間で拡大または縮小します。
-- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX)
+- [`scaleX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleX)
   - : 要素を水平に拡大または縮小します。
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY)
+- [`scaleY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleY)
   - : 要素を垂直に拡大または縮小します。
-- [`scaleZ()`](/ja/docs/Web/CSS/transform-function/scaleZ)
+- [`scaleZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
   - : 要素を Z 軸方向に拡大または縮小します。
 
 ### 歪め
 
-- [`skew()`](/ja/docs/Web/CSS/transform-function/skew)
+- [`skew()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skew)
   - : 要素を 2D 平面上で歪ませます。
-- [`skewX()`](/ja/docs/Web/CSS/transform-function/skewX)
+- [`skewX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skewX)
   - : 要素を水平方向に歪ませます。
-- [`skewY()`](/ja/docs/Web/CSS/transform-function/skewY)
+- [`skewY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skewY)
   - : 要素を垂直方向に歪ませます。
 
 ### 平行移動
 
-- [`translate()`](/ja/docs/Web/CSS/transform-function/translate)
+- [`translate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate)
   - : 要素を 2D 平面上で平行移動させます。
-- [`translate3d()`](/ja/docs/Web/CSS/transform-function/translate3d)
+- [`translate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate3d)
   - : 要素を3D 空間で平行移動させます。
-- [`translateX()`](/ja/docs/Web/CSS/transform-function/translateX)
+- [`translateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translateX)
   - : 要素を水平方向に平行移動させます。
-- [`translateY()`](/ja/docs/Web/CSS/transform-function/translateY)
+- [`translateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translateY)
   - : 要素を垂直方向に平行移動させます。
-- [`translateZ()`](/ja/docs/Web/CSS/transform-function/translateZ)
+- [`translateZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translateZ)
   - : 要素を Z 軸方向に平行移動させます。
 
 ## 解説

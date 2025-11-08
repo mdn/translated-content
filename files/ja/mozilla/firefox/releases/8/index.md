@@ -42,7 +42,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 ### CSS
 
-- [`<resolution>`](/ja/docs/Web/CSS/resolution) が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/integer) だけでなく [`<number>`](/ja/docs/Web/CSS/number) もサポートしました。
+- [`<resolution>`](/ja/docs/Web/CSS/Reference/Values/resolution) が仕様に従い、[`<integer>`](/ja/docs/Web/CSS/Reference/Values/integer) だけでなく [`<number>`](/ja/docs/Web/CSS/Reference/Values/number) もサポートしました。
 - [`hyphens`](/ja/docs/Web/CSS/Reference/Properties/hyphens) 利用時のハイフネーション規則がより多くの言語でサポートされました。
 - [`background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size) の処理が仕様により従ったものになりました。
 - これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/Reference/Properties/text-decoration) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。

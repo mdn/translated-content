@@ -33,7 +33,7 @@ original_slug: Web/CSS/-moz-image-rect
 
 これは、{{CSSxRef("-moz-image-region")}} プロパティとよく似た働きをします。このプロパティは、{{CSSxRef("list-style-image")}} プロパティと一緒に使用され、画像の一部をリストの箇条書きとして使用します。ただし、これはどのような CSS 背景にも使用できます。
 
-長方形の構文は、{{CSSxRef("&lt;shape&gt;")}} を生成する [`rect()`](/ja/docs/Web/CSS/shape#syntax) 関数に似ています。CSS タイプを生成する関数です。4 つの値はすべて、画像の左上隅に対する相対値です。
+長方形の構文は、{{CSSxRef("&lt;shape&gt;")}} を生成する [`rect()`](/ja/docs/Web/CSS/Reference/Values/shape#syntax) 関数に似ています。CSS タイプを生成する関数です。4 つの値はすべて、画像の左上隅に対する相対値です。
 
 <h2 id="Examples">例</h2>
 

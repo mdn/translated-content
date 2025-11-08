@@ -31,7 +31,7 @@ l10n:
 - {{ cssxref("text-emphasis-color") }}
 - {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} プロパティの色の部分
 
-さらに、上記のスタイルであっても、未訪問リンクと訪問済みリンクの透過率の違いは適用されません。この制限により、さまざまな {{cssxref("color_value", "&lt;color&gt;")}} 関数や [`transparent`](/ja/docs/Web/CSS/named-color#transparent) キーワードを使用して、2 つの状態を判別することができなくなります。
+さらに、上記のスタイルであっても、未訪問リンクと訪問済みリンクの透過率の違いは適用されません。この制限により、さまざまな {{cssxref("color_value", "&lt;color&gt;")}} 関数や [`transparent`](/ja/docs/Web/CSS/Reference/Values/named-color#transparent) キーワードを使用して、2 つの状態を判別することができなくなります。
 
 制限内でスタイルづけをする方法を、次の例で示します。
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: linear-gradient()")}}
 
@@ -98,7 +98,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
 ## 解説
 
-他のグラデーションと同様、線形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#解説)。つまり、画像本来の寸法や、推奨される縦横比を持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
+他のグラデーションと同様、線形グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/Reference/Values/image#解説)。つまり、画像本来の寸法や、推奨される縦横比を持たないということです。実際の寸法は、適用先の要素の寸法と一致します。
 
 繰り返して領域を埋め尽くす線形グラデーションを生成するには、代わりに {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 関数を使用してください。
 
@@ -219,7 +219,7 @@ div {
 }
 ```
 
-この補間処理の例では、 [hsl](/ja/docs/Web/CSS/color_value/hsl) 色系が使用され、[色相](/ja/docs/Web/CSS/hue)が補間されています。
+この補間処理の例では、 [hsl](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 色系が使用され、[色相](/ja/docs/Web/CSS/Reference/Values/hue)が補間されています。
 
 ```css live-sample___interpolating_with_hue
 .shorter {
@@ -231,7 +231,7 @@ div {
 }
 ```
 
-上のボックスは、 [shorter の補間](/ja/docs/Web/CSS/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使って、赤から青に直接色が変化することを意味しています。下のボックスは、 [longer の補間](/ja/docs/Web/CSS/hue-interpolation-method#longer)を使用しており、緑、黄、オレンジを読みながら、長い円弧を使って赤から青に色が変化することを意味しています。
+上のボックスは、 [shorter の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使って、赤から青に直接色が変化することを意味しています。下のボックスは、 [longer の補間](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#longer)を使用しており、緑、黄、オレンジを読みながら、長い円弧を使って赤から青に色が変化することを意味しています。
 
 {{EmbedLiveSample("Interpolating with hue", 120, 120)}}
 
@@ -277,7 +277,7 @@ body {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/color-interpolation-method)
+- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
+- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
 - [CSS 画像モジュール](/ja/docs/Web/CSS/CSS_images)

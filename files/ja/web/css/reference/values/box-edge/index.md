@@ -37,7 +37,7 @@ box-edge キーワードは `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coo
   - : 親コンテナー内の要素の位置指定やサイズ指定に用いる座標ボックスを指します。ボックスの端でコンテンツがどのように流れるかを制御するために使用します。マージン領域は除きます。この値型は {{cssxref("offset-path")}} プロパティで用いられます。
 
 - `<geometry-box>`
-  - : [基本シェイプ](/ja/docs/Web/CSS/basic-shape)の参照ボックスを定義します。また、単独で指定した場合は、指定したボックスの辺をクリッピングパスとします（{{cssxref("border-radius")}} のような角の形状を含む）。この値型は {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}} プロパティと SVG の {{SVGAttr("clip-path")}} 属性に使用します。
+  - : [基本シェイプ](/ja/docs/Web/CSS/Reference/Values/basic-shape)の参照ボックスを定義します。また、単独で指定した場合は、指定したボックスの辺をクリッピングパスとします（{{cssxref("border-radius")}} のような角の形状を含む）。この値型は {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}} プロパティと SVG の {{SVGAttr("clip-path")}} 属性に使用します。
 
 ### キーワード
 

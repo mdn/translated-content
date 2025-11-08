@@ -33,7 +33,7 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 - `dark`
   - : フォントの中で 'dark' に一致する最初のパレットを指定します。フォントによっては、位（黒に近い）背景に適用できるパレットを識別するメタデータを含むものがあります。フォントがこのメタデータを持っていない場合、この値は `normal` として動作します。
 - `<palette-identifier>`
-  - : [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールを使用して、フォントパレットに自分自身で値を指定できるようにします。この値は [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident) 形式を使用して指定します。
+  - : [@font-palette-values](/ja/docs/Web/CSS/Reference/At-rules/@font-palette-values) アットルールを使用して、フォントパレットに自分自身で値を指定できるようにします。この値は [&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident) 形式を使用して指定します。
 - {{cssxref("font-palette/palette-mix", "palette-mix()")}}
   - : 指定したパーセント値と色補間方法で、 2 つのフォントパレット値を混合して新しい `font-palette` 値を作成します。
 

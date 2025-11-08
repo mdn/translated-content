@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-**`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: matrix()")}}
 
@@ -189,5 +189,5 @@ div {
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/ja/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix3d)
 - [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

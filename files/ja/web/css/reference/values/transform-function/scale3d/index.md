@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、 3D 空間において要素を変倍する座標変換を定義します。
+**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3D 空間において要素を変倍する座標変換を定義します。
 変倍量はベクトルで定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: scale3d()")}}
@@ -246,9 +246,9 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](/ja/docs/Web/CSS/transform-function/scaleZ)
-- [`translate3d()`](/ja/docs/Web/CSS/transform-function/translate3d)
-- [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d)
+- [`scaleZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
+- [`translate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate3d)
+- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}

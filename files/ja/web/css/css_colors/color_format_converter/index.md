@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
 
-このツールでは、色を入力または選択し、対応する値を任意の CSS [色形式](/ja/docs/Web/CSS/color_value)でコピーできます。生成された色値は、CSSで {{cssxref("color_value", "&lt;color&gt;")}} データ型が対応している場所ならどこでも使用できます。同時に、このツールは様々な色表記の構文を理解するのにも役立ちます。
+このツールでは、色を入力または選択し、対応する値を任意の CSS [色形式](/ja/docs/Web/CSS/Reference/Values/color_value)でコピーできます。生成された色値は、CSSで {{cssxref("color_value", "&lt;color&gt;")}} データ型が対応している場所ならどこでも使用できます。同時に、このツールは様々な色表記の構文を理解するのにも役立ちます。
 
 ## このツールの使い方
 

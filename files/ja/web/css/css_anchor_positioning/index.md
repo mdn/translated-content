@@ -33,15 +33,15 @@ l10n:
 
 ### 関数
 
-- [`anchor()`](/ja/docs/Web/CSS/anchor)
+- [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor)
 - [`anchor-size()`](/ja/docs/Web/CSS/anchor-size)
 
 ### データ型と値
 
 - [`anchor-center`](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
-- [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
+- [`<anchor-side>`](/ja/docs/Web/CSS/Reference/Values/anchor#anchor-side)
 - [`<anchor-size>`](/ja/docs/Web/CSS/anchor-size#anchor-size)
-- [`<position-area>`](/ja/docs/Web/CSS/position-area_value)
+- [`<position-area>`](/ja/docs/Web/CSS/Reference/Values/position-area_value)
 - [`<try-size>`](/ja/docs/Web/CSS/position-try-order#try-size)
 - [`<try-tactic>`](/ja/docs/Web/CSS/position-try-fallbacks#try-tactic)
 

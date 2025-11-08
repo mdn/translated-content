@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-**`<time>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、時間の値を秒単位またはミリ秒単位で表現します。これは {{cssxref("animation")}} や {{cssxref("transition")}} および関連するプロパティで使用されています。
+**`<time>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、時間の値を秒単位またはミリ秒単位で表現します。これは {{cssxref("animation")}} や {{cssxref("transition")}} および関連するプロパティで使用されています。
 
 ## 構文
 

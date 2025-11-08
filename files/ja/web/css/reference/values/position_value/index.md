@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 243dd73fe136031badaef52c3e6133b21bcf7a07
 ---
 
-**`<position>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、 2 次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}}, {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}}, {{cssxref("transform-origin")}} で使用されています。
+**`<position>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 2 次元の座標を表し、要素ボックスからの相対的な位置を示すために用いられます。 {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}}, {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}}, {{cssxref("transform-origin")}} で使用されています。
 
 > [!NOTE]
 > `<position>` 値で記述される最終的な位置は、要素ボックスの中である必要はありません。
@@ -43,7 +43,7 @@ keyword value keyword value /* それぞれの値はその前のキーワード�
 
 ## 補間
 
-アニメーション時、座標の横軸と縦軸の値が独立して補間されます。ただし、補間の速度は両方の座標で 1 つの[イージング関数](/ja/docs/Web/CSS/easing-function)が用いられるため、座標は直線的に移動します。
+アニメーション時、座標の横軸と縦軸の値が独立して補間されます。ただし、補間の速度は両方の座標で 1 つの[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)が用いられるため、座標は直線的に移動します。
 
 ### 形式文法
 

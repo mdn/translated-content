@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-**`skew()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を 2D 平面上でゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`skew()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を 2D 平面上でゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: skew()")}}
 
@@ -260,8 +260,8 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [skewX()](/ja/docs/Web/CSS/transform-function/skewX)
-- [skewY()](/ja/docs/Web/CSS/transform-function/skewY)
+- [skewX()](/ja/docs/Web/CSS/Reference/Values/transform-function/skewX)
+- [skewY()](/ja/docs/Web/CSS/Reference/Values/transform-function/skewY)
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{deprecated_header}}
 
-**`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。
+**`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。
 
 > [!NOTE]
 > `<shape>` と `rect()` は {{cssxref("clip")}} と連携して動作しますが、これは {{cssxref("clip-path")}} に置き換えらえて非推奨となりました。可能であれば、代わりに `clip-path` と {{cssxref("&lt;basic-shape&gt;")}} データ型を使用してください。
@@ -38,7 +38,7 @@ rect(top, right, bottom, left)
 
 ## 補間
 
-アニメーションの際には、`<shape>` データ型の値は、`top`、`right`、`bottom`、`left` の各要素に補間され、それぞれが実数の浮動小数点数として扱われます。補間の速度は、アニメーションに関連する[イージング関数](/ja/docs/Web/CSS/easing-function)によって決定されます。
+アニメーションの際には、`<shape>` データ型の値は、`top`、`right`、`bottom`、`left` の各要素に補間され、それぞれが実数の浮動小数点数として扱われます。補間の速度は、アニメーションに関連する[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)によって決定されます。
 
 ## 例
 

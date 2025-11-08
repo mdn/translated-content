@@ -6,9 +6,9 @@ l10n:
   sourceCommit: ea76241c56cb4cc61dbd2898866f47cf60c745c1
 ---
 
-**`<hex-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)で、[sRGB](/ja/docs/Glossary/RGB) 色の原色成分（赤、緑、青）を 16 進数で記述し、その透明度も記述する記法です。
+**`<hex-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、[sRGB](/ja/docs/Glossary/RGB) 色の原色成分（赤、緑、青）を 16 進数で記述し、その透明度も記述する記法です。
 
-`<hex-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/color_value) が使用できるところならどこでも使用することができます。
+`<hex-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) が使用できるところならどこでも使用することができます。
 
 ## 構文
 
@@ -100,6 +100,6 @@ div {
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/color_value): 色のデータ型
-- [`rgb()`](/ja/docs/Web/CSS/color_value/rgb): 色の 3 成分および透明度を 10 進数で使用するように設定する関数
+- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): 色のデータ型
+- [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb): 色の 3 成分および透明度を 10 進数で使用するように設定する関数
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール

@@ -104,7 +104,7 @@ menu と menubar 内のアイテムはメニューアイテムです。メニュ
 
 [`tabindex="-1"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) により、`menuitemcheckbox` がフォーカス可能になりますが、ページのタブシーケンスの一部にはなりません。`aria-checked="true"` を含めた場合、`menuitemcheckbox` がチェック済みであることを示し、属性セレクター `[role='menuitemcheckbox'][aria-checked='true']` を使用してチェック済み状態を視覚的にスタイリングします。`aria-checked="false"` が存在すると、`menuitemcheckbox` がチェック可能だが現在チェックされていないことが支援技術に示されます。アクセシブル名 "purple" はコンテンツから取得されます。
 
-選択された状態の視覚的外観は、チェック済みチェックボックスです。これは [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content) を使用して作成でき、CSS の [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors) を使用して `aria-checked` 値と同期し、色を [継承](/ja/docs/Web/CSS/inherit) することで、表示されてコンテンツと同じ色にできます。
+選択された状態の視覚的外観は、チェック済みチェックボックスです。これは [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content) を使用して作成でき、CSS の [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors) を使用して `aria-checked` 値と同期し、色を [継承](/ja/docs/Web/CSS/Reference/Values/inherit) することで、表示されてコンテンツと同じ色にできます。
 
 ```css
 [role="menuitemcheckbox"]::before {

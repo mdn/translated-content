@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`sibling-count()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、それが使用されている親要素の直接の子 DOM 要素の総数を表す整数を返します。
+**`sibling-count()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、それが使用されている親要素の直接の子 DOM 要素の総数を表す整数を返します。
 
 > [!NOTE]
 > {{CSSxRef("counter()")}} 関数も同様の結果を提供しますが、 `<string>` を返すのに対し、 `sibling-count()` は計算に使用できる `<integer>` を返します。

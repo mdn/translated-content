@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-**`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: translateX()")}}
 
@@ -66,7 +66,7 @@ transform: translateX(50%);
 ### 値
 
 - `<length-percentage>`
-  - : 変換ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。[直交座標系](/ja/docs/Web/CSS/transform-function#cartesian_coordinates)では X 座標の移動量をを表します。パーセント値は {{cssxref("transform-box")}} プロパティで定義される参照ボックスの幅からの相対値です。
+  - : 変換ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では X 座標の移動量をを表します。パーセント値は {{cssxref("transform-box")}} プロパティで定義される参照ボックスの幅からの相対値です。
 
 <table class="standard-table">
   <thead>
@@ -193,8 +193,8 @@ div {
 
 ## 関連情報
 
-- [`translate()`](/ja/docs/Web/CSS/transform-function/translate)
-- [`translateY()`](/ja/docs/Web/CSS/transform-function/translateY)
+- [`translate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate)
+- [`translateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translateY)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("translate")}}
