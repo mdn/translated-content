@@ -44102,12 +44102,6 @@
       "Wind1808"
     ]
   },
-  "conflicting/Web/API/ServiceWorker/error_event": {
-    "modified": "2020-10-15T22:29:16.925Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "conflicting/Web/API/SVGElement": {
     "modified": "2020-10-15T21:19:56.994Z",
     "contributors": [
