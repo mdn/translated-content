@@ -18,7 +18,7 @@ l10n:
 
 ## 인스턴스 속성
 
-_이 인터페이스는 부모로부터 {{domxref("UIEvent")}}, 간접적으로 {{domxref("Event")}} 를 상속받습니다._
+이 인터페이스는 부모로부터 {{domxref("UIEvent")}}, 간접적으로 {{domxref("Event")}} 를 상속받습니다.
 
 - {{domxref("FocusEvent.relatedTarget")}}
   - : 이 이벤트의 보조 대상을 나타내는 {{domxref("EventTarget")}}입니다. 일부 경우(예: 페이지 안팎으로 탭 이동 시)에는 보안상의 이유로 이 속성이 `null` 로 설정될 수 있습니다.
