@@ -46,7 +46,7 @@ background-image:
 
 여러 개의 배경 이미지는 쌓임 맥락에 따라 서로의 위에 놓입니다. 맨 처음 지정한 이미지가 제일 위에(사용자에게 제일 가까운 것 처럼) 위치합니다.
 
-[테두리](/ko/docs/Web/CSS/border)는 배경 이미지 위에, {{cssxref("background-color")}}는 밑에 그려집니다. 요소 박스와 테두리에 관련하여 배경 이미지를 어떻게 그릴지는 {{cssxref("background-clip")}}과 {{cssxref("background-origin")}} CSS 속성이 정의합니다.
+[테두리](/ko/docs/Web/CSS/Reference/Properties/border)는 배경 이미지 위에, {{cssxref("background-color")}}는 밑에 그려집니다. 요소 박스와 테두리에 관련하여 배경 이미지를 어떻게 그릴지는 {{cssxref("background-clip")}}과 {{cssxref("background-origin")}} CSS 속성이 정의합니다.
 
 브라우저는 값에 유효하지 않은 URI를 지정하는 등 주어진 이미지를 그릴 수 없을 때 `none` 키워드를 사용한 것처럼 처리합니다.
 
