@@ -10,9 +10,9 @@ original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 Les requêtes média sont utilisées afin :
 
-- D'appliquer certains styles de façon conditionnelle avec le [CSS](/fr/docs/Web/CSS) grâce [aux règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media) et [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import).
+- D'appliquer certains styles de façon conditionnelle avec le [CSS](/fr/docs/Web/CSS) grâce [aux règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media) et [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import).
 - De cibler certains médias pour les éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style), [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link), [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) et d'autres éléments [HTML](/fr/docs/Web/HTML) grâce à l'attribut `media=`.
-- De [tester et surveiller l'état d'un média](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) grâce aux méthodes [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener).
+- De [tester et surveiller l'état d'un média](/fr/docs/Web/CSS/Guides/Media_queries/Testing) grâce aux méthodes [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener).
 
 > [!NOTE]
 > Les exemples de cet article utilisent `@media` à des fins d'illustration. Toutefois, la syntaxe est la même pour les différents types de requêtes média.
@@ -33,7 +33,7 @@ Un type de média définit une catégorie générale d'appareil. Le type de méd
 - `all`
   - : Correspond pour tous les appareils.
 - `print`
-  - : Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur [les médias paginés](/fr/docs/Web/CSS/CSS_paged_media).
+  - : Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur [les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media).
 - `screen`
   - : Correspond aux appareils dotés d'un écran.
 - `speech`
@@ -268,7 +268,7 @@ Il est possible d'utiliser l'opérateur `or` pour tester une correspondance sur 
 
 ## Voir aussi
 
-- [Tester des requêtes média en script](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Tester des requêtes média en script](/fr/docs/Web/CSS/Guides/Media_queries/Testing)
 - [Utiliser les animations CSS entre les requêtes média (en anglais)](https://davidwalsh.name/animate-media-queries)
 - [Les caractéristiques média spécifiques à Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions#caractéristiques)
 - [Les caractéristiques média spécifiques à WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions#caractéristiques_média)

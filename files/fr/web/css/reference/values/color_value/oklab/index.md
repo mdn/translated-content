@@ -479,6 +479,6 @@ Le résultat est le suivant&nbsp;:
 - Le [type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour une liste de toutes les notations de couleur
 - Les fonctions de couleur {{cssxref("color_value/lab","lab()")}} et {{cssxref("color_value/oklch","oklch()")}}
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Un espace de couleur perceptuel pour le traitement des images <sup>(angl.)</sup>](https://bottosson.github.io/posts/oklab/) sur bottosson.github.io (2023)
 - [Roue de couleurs OKLAB <sup>(angl.)</sup>](https://observablehq.com/@shan/oklab-color-wheel) sur observablehq.com

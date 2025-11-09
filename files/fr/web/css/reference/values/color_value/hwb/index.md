@@ -44,7 +44,7 @@ background: hwb(0 100% 0% / 50%);
 
 Cette fonction de couleur dans l'[espace colorimétrique `sRGB`](/fr/docs/Glossary/Color_space#srgb) est définie par une valeur d'angle {{CSSXref("&lt;hue&gt;")}}, une valeur de blancheur, une valeur de noirceur et, optionnellement, une valeur alpha représentant la transparence de la couleur.
 
-Les angles correspondant à des teintes particulières diffèrent selon les espaces colorimétriques sRGB (utilisé par {{CSSXref("color_value/hsl", "hsl()")}} et `hwb()`), CIELAB (utilisé par {{CSSXref("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSXref("color_value/oklch", "oklch()")}}). `hwb()` est dans le même espace colorimétrique que `hsl()`, et a donc les mêmes angles de teinte. Consultez la page de référence {{CSSXref("&lt;hue&gt;")}} pour plus de détails et d'exemples, ou essayez de modifier les teintes sur le [sélecteur de couleur](/fr/docs/Web/CSS/CSS_colors#colors_in_action) pour voir le résultat.
+Les angles correspondant à des teintes particulières diffèrent selon les espaces colorimétriques sRGB (utilisé par {{CSSXref("color_value/hsl", "hsl()")}} et `hwb()`), CIELAB (utilisé par {{CSSXref("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSXref("color_value/oklch", "oklch()")}}). `hwb()` est dans le même espace colorimétrique que `hsl()`, et a donc les mêmes angles de teinte. Consultez la page de référence {{CSSXref("&lt;hue&gt;")}} pour plus de détails et d'exemples, ou essayez de modifier les teintes sur le [sélecteur de couleur](/fr/docs/Web/CSS/Guides/Colors#colors_in_action) pour voir le résultat.
 
 Une couleur `hwb()` est complètement saturée lorsque ses valeurs de blancheur (`W`) et de noirceur (`B`) sont toutes deux à `0`. Pour toute valeur de teinte `H`, `hwb(H 0% 0%)` correspond à la même couleur que `hsl(H 100% 50%)`. Augmenter la valeur de blancheur éclaircit la couleur. Augmenter la noirceur assombrit la couleur.
 
@@ -274,7 +274,7 @@ La sortie est la suivante&nbsp;:
 ## Voir aussi
 
 - {{CSSXref("&lt;color&gt;")}}&nbsp;: Pour une liste de toutes les notations de couleur
-- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
+- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- [Module Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- [Module Couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - {{CSSXref("&lt;hue&gt;")}}&nbsp;: le type de donnée représentant un angle de teinte d'une couleur

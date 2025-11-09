@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.
 
 Pour qu'une transition entre documents fonctionne, les documents — actuel et cible — de la navigation doivent également provenir de la même origine.
 
@@ -98,5 +98,5 @@ Voir la démonstration de [l'application multipages avec transitions](https://md
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair()")}}
 - L'[API View Transition](/fr/docs/Web/API/View_Transition_API)
-- [Règle CSS @](/fr/docs/Web/CSS/CSS_syntax/At-rules)
+- [Règle CSS @](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Fonctions des règles CSS @](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)

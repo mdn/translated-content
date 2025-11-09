@@ -17,7 +17,7 @@ La fusion des marges se produit dans trois cas principaux&nbsp;:
     - La {{cssxref("margin-top")}} d'un parent fusionne avec la {{cssxref("margin-top")}} de son premier descendant en flux, sauf si le parent possède une {{cssxref("border-top")}}, une {{cssxref("padding-top")}}, contient du contenu en ligne (comme du texte), ou si une _[clearance](/fr/docs/Web/CSS/Reference/Properties/clear)_ est appliquée.
     - La {{cssxref("margin-bottom")}} d'un parent fusionne avec la {{cssxref("margin-bottom")}} de son dernier descendant en flux, sauf si le parent a une {{cssxref("height")}} ou {{cssxref("min-height")}} définie, une {{cssxref("border-bottom")}}, ou une {{cssxref("padding-bottom")}}.
 
-    Dans les deux cas, créer un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) sur le parent empêche aussi ses marges de fusionner avec celles de ses enfants.
+    Dans les deux cas, créer un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) sur le parent empêche aussi ses marges de fusionner avec celles de ses enfants.
 
 - Blocs vides
   - : S'il n'y a ni bordure, ni remplissage, ni contenu en ligne, ni {{cssxref("height")}}, ni {{cssxref("min-height")}} pour séparer la {{cssxref("margin-top")}} d'un bloc de sa {{cssxref("margin-bottom")}}, alors ses marges haute et basse fusionnent.
@@ -77,19 +77,19 @@ p {
 ## Voir aussi
 
 - Concepts clés CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Règles at](/fr/docs/Web/CSS/CSS_syntax/At-rules)
-  - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
-  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Règles at](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [Commentaires](/fr/docs/Web/CSS/Guides/Syntax/Comments)
+  - [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Modes de mise en page](/fr/docs/Glossary/Layout_mode)
-  - [Modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - [Modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - Valeurs
-    - [Valeurs initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
-    - [Valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
-    - [Valeurs utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
-    - [Valeurs réelle](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+    - [Valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+    - [Valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+    - [Valeurs utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+    - [Valeurs réelle](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "Éléments remplacés")}}

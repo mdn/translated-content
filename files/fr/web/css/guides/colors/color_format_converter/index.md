@@ -22,7 +22,7 @@ Les valeurs de couleur générées peuvent être utilisées partout où le type 
 
 ## Voir aussi
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 - [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
 - [Utiliser la couleur à bon escient](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [Utiliser des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)

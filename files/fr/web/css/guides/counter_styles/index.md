@@ -30,7 +30,7 @@ original_slug: Web/CSS/CSS_counter_styles
 
 ## Guides
 
-- [Manipuler les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [Manipuler les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
   - : Cet article décrit comment utiliser les compteurs CSS afin de numéroter des éléments HTML et de réaliser des comptages complexes.
 
 ## Spécifications

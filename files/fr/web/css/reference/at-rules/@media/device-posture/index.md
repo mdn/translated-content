@@ -51,5 +51,5 @@ Pour voir le code ci-dessus en action, consultez la [démo de l'API Device Postu
 
 - {{domxref("DevicePosture")}}
 - L'[API Device Posture](/fr/docs/Web/API/Device_Posture_API)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}

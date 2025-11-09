@@ -127,5 +127,5 @@ La première plage est la liste des plages qui inclut 2, 3 et 4. La seconde incl
 - Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
 - Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
-- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
-- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)

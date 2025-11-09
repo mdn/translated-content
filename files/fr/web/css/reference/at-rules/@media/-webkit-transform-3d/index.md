@@ -58,6 +58,6 @@ Une meilleure méthode pour vérifier la prise en charge par le navigateur consi
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
 - [Page de test sur quirksmode.org <sup>(angl.)</sup>](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
-- {{cssxref("transform")}} et [utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- {{cssxref("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- {{cssxref("transform")}} et [utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
+- {{cssxref("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
+- {{cssxref("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

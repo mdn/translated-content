@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-variation-settings`**, associé à la [la règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-variation-settings`**, associé à la [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
 
 Depuis que ce descripteur définit des valeurs de variation sur l'objet de police dans la règle `@font-face` et non sur un élément entier, seuls certains glyphes d'un élément peuvent être rendus à l'aide de ce descripteur.
 

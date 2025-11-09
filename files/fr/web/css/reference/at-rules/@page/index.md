@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c699955e1e368bd42d6ea9318a6afc9256c3036f
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
 
 ## Syntaxe
 
@@ -276,7 +276,7 @@ Les propriétés de marge de page sont l'ensemble des propriétés CSS pouvant �
 
 ## Pages nommées
 
-Les pages nommées permettent de réaliser une mise en page par page et d'ajouter des [sauts de page](/fr/docs/Web/CSS/CSS_fragmentation) de manière déclarative lors de l'impression.
+Les pages nommées permettent de réaliser une mise en page par page et d'ajouter des [sauts de page](/fr/docs/Web/CSS/Guides/Fragmentation) de manière déclarative lors de l'impression.
 
 Les pages nommées peuvent être appliquées à l'aide de la propriété {{Cssxref("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
 
@@ -381,5 +381,5 @@ Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseu
 
 - La propriété {{cssxref("page")}}
 - Le descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) de `@page`
-- Le module [Médias paginés CSS](/fr/docs/Web/CSS/CSS_paged_media)
+- Le module [Médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
 - Le ticket [\[META\] CSS Paged Media Module Level 3 <sup>(angl.)</sup>](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)

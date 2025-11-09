@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`light-dark()`** permet de définir deux couleurs pour une propriété&nbsp;: elle retourne l'une des deux couleurs selon que le·a développeur·euse a défini un thème clair ou sombre, ou que l'utilisateur·rice a choisi un thème clair ou sombre, sans avoir besoin d'encapsuler les couleurs dans une requête [media feature](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#cibler_des_types_de_média) [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
+La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`light-dark()`** permet de définir deux couleurs pour une propriété&nbsp;: elle retourne l'une des deux couleurs selon que le·a développeur·euse a défini un thème clair ou sombre, ou que l'utilisateur·rice a choisi un thème clair ou sombre, sans avoir besoin d'encapsuler les couleurs dans une requête [media feature](/fr/docs/Web/CSS/Guides/Media_queries/Using#cibler_des_types_de_média) [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).
 Les utilisateur·ice·s peuvent indiquer leur préférence de thème via les réglages de leur système d'exploitation (par exemple, mode clair ou sombre) ou de leur agent utilisateur. La fonction `light-dark()` permet de fournir deux valeurs de couleur, toute valeur `<color>` étant acceptée. La fonction CSS `light-dark()` retourne la première valeur si la préférence de l'utilisateur·rice est «&nbsp;clair&nbsp;» ou si aucune préférence n'est définie, et la seconde si la préférence est «&nbsp;sombre&nbsp;».
 
 Pour activer la prise en charge de la fonction `light-dark()`, la propriété {{CSSXref("color-scheme")}} doit avoir la valeur `light dark`, généralement définie sur la pseudo-classe {{CSSXref(":root")}}.
@@ -138,7 +138,7 @@ section {
 
 - La propriété {{CSSXref("color-scheme")}}
 - Le type de donnée {{CSSXref("&lt;color&gt;")}}
-- [Module CSS colors](/fr/docs/Web/CSS/CSS_colors)
+- [Module CSS colors](/fr/docs/Web/CSS/Guides/Colors)
 - La propriété [`prefers-contrast`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) de {{cssxref("@media")}}
 - La fonction [`contrast()`](/fr/docs/Web/CSS/Reference/Values/filter-function/contrast)
 - [WCAG&nbsp;: contraste des couleurs](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

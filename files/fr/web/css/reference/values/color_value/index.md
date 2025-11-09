@@ -123,9 +123,9 @@ background-color: hsl(0deg 100% 50%);
 
 ## Interpolation
 
-L'interpolation des couleurs a lieu avec les [dégradés](/fr/docs/Web/CSS/Reference/Values/gradient), les [transitions](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), et les [animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+L'interpolation des couleurs a lieu avec les [dégradés](/fr/docs/Web/CSS/Reference/Values/gradient), les [transitions](/fr/docs/Web/CSS/Guides/Transitions/Using), et les [animations](/fr/docs/Web/CSS/Guides/Animations/Using).
 
-Lors de l'interpolation de valeurs `<color>`, elles sont d'abord converties dans un espace colorimétrique donné, puis chaque composant des [valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) est interpolé linéairement, la vitesse de l'interpolation étant déterminée par la [fonction d'accélération](/fr/docs/Web/CSS/Reference/Values/easing-function) dans les transitions et animations. L'espace colorimétrique d'interpolation par défaut est Oklab, mais il peut être remplacé via {{CSSXref("&lt;color-interpolation-method&gt;")}} dans certaines notations fonctionnelles liées à la couleur.
+Lors de l'interpolation de valeurs `<color>`, elles sont d'abord converties dans un espace colorimétrique donné, puis chaque composant des [valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) est interpolé linéairement, la vitesse de l'interpolation étant déterminée par la [fonction d'accélération](/fr/docs/Web/CSS/Reference/Values/easing-function) dans les transitions et animations. L'espace colorimétrique d'interpolation par défaut est Oklab, mais il peut être remplacé via {{CSSXref("&lt;color-interpolation-method&gt;")}} dans certaines notations fonctionnelles liées à la couleur.
 
 ### Interpolation avec composants manquants
 
@@ -460,6 +460,6 @@ div:nth-child(6) {
 - Le type de donnée {{CSSXref("&lt;hue&gt;")}} représentant l'angle de teinte d'une couleur
 - Les propriétés courantes {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}} utilisant `<color>`
 - La fonction {{CSSXref("color_value/color")}}
-- [Appliquer une couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer une couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
 - [Nouvelles fonctions, dégradés et teintes dans CSS Colors (Niveau 4)](/fr/blog/css-color-module-level-4/) sur le blog MDN (2023)

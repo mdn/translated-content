@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positionin
 
 {{CSSRef}}
 
-[La spécification sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des valeurs logiques qui correspondent aux valeurs physiques utilisées pour {{cssxref("float")}} et {{cssxref("clear")}}. Elle définit aussi des propriétés logiques pour le positionnement lorsqu'on utilise une [disposition positionnée](/fr/docs/Web/CSS/CSS_positioned_layout). Dans ce guide, nous verrons comment utiliser ces valeurs et ces propriétés logiques.
+[La spécification sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des valeurs logiques qui correspondent aux valeurs physiques utilisées pour {{cssxref("float")}} et {{cssxref("clear")}}. Elle définit aussi des propriétés logiques pour le positionnement lorsqu'on utilise une [disposition positionnée](/fr/docs/Web/CSS/Guides/Positioned_layout). Dans ce guide, nous verrons comment utiliser ces valeurs et ces propriétés logiques.
 
 ## Correspondance entre les propriétés et les valeurs
 

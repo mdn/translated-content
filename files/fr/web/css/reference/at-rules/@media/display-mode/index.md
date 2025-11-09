@@ -80,5 +80,5 @@ Voir [Utiliser l'API Document Picture-in-Picture](/fr/docs/Web/API/Document_Pict
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
