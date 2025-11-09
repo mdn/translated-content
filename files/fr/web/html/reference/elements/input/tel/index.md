@@ -135,7 +135,7 @@ Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas ê
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
+L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/Reference/Properties/font)) utilisée.
 
 Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
 
@@ -156,7 +156,8 @@ Un attribut spécifique à Safari qui indique si la correction automatique doit 
 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
-> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
+> [!NOTE]
+> [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
 Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
@@ -542,7 +543,7 @@ input:valid + span:after {
 
 ## Voir aussi
 
-- [Le guide sur les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Le guide sur les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [Les formulaires et l'accessibilité](/fr/docs/Web/Accessibility/ARIA)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
   - [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text)

@@ -345,13 +345,13 @@ Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/doc
 </table>
 
 > [!NOTE]
-> Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
+> Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/Reference/Properties/display)`: none;`, ce qui le masque.
 
 ### Créer des contrôles d'intervalle verticaux
 
 Par défaut, si un navigateur affiche un tel contrôle avec une piste, celle-ci sera affichée afin que le curseur puisse aller de gauche à droite. Selon la prise en charge du navigateur, on pourra afficher le contrôle verticalement et déplacer le curseur vers le haut ou vers le bas en utilisant CSS en déclarant une hauteur supérieure à une largeur. Cette fonctionnalité n'est, à date, implémentée par aucun des navigateurs majeurs (voir [le bug 981916 pour Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=981916), [le bug 341071 pour Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=341071)). La spécification d'un tel rendu vertical est [toujours en discussion](https://github.com/whatwg/html/issues/4177).
 
-En attendant, il est possible de créer un contrôle vertical en utilisant les transformations CSS ou en utilisant les méthodes spécifiques à chaque navigateur&nbsp;: en utilisant la propriété CSS [`appearance`](/fr/docs/Web/CSS/appearance) avec la valeur `slider-vertical`, en utilisant l'attribut non-standard `orient` ou en changeant l'orientation du texte pour Internet Explorer.
+En attendant, il est possible de créer un contrôle vertical en utilisant les transformations CSS ou en utilisant les méthodes spécifiques à chaque navigateur&nbsp;: en utilisant la propriété CSS [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) avec la valeur `slider-vertical`, en utilisant l'attribut non-standard `orient` ou en changeant l'orientation du texte pour Internet Explorer.
 
 #### Contrôle d'intervalle horizontal
 
@@ -386,7 +386,7 @@ Toutefois, aucun navigateur majeur ne prend en charge cette fonctionnalité.
 
 #### Utiliser les transformations CSS
 
-On peut créer un contrôle vertical en dessinant un contrôle horizontal auquel on applique une rotation. Pour cela, on pourra utiliser CSS avec [`transform`](/fr/docs/Web/CSS/transform) pour tourner l'élément. Voyons comment faire.
+On peut créer un contrôle vertical en dessinant un contrôle horizontal auquel on applique une rotation. Pour cela, on pourra utiliser CSS avec [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform) pour tourner l'élément. Voyons comment faire.
 
 Tout d'abord, on enveloppe l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dans un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) afin de pouvoir corriger la disposition une fois que la transformation est effectuée (les transformations n'affectent pas automatiquement la disposition de la page)&nbsp;:
 
@@ -419,13 +419,13 @@ Et ensuite, on met en forme l'élément `<input>` situé dans cet espace réserv
 }
 ```
 
-La taille du contrôle est de 150 pixels de long sur 20 pixels de haut. Les marges sont nulles et [`transform-origin`](/fr/docs/Web/CSS/transform-origin) déplace au milieu de l'espace le centre de rotation (75 étant la moitié de 150). Enfin, on applique une rotation antihoraire de `90°`. On obtient comme résultat un contrôle d'intervalle vertical où le maximum est situé en haut et où le minimum est situé en bas.
+La taille du contrôle est de 150 pixels de long sur 20 pixels de haut. Les marges sont nulles et [`transform-origin`](/fr/docs/Web/CSS/Reference/Properties/transform-origin) déplace au milieu de l'espace le centre de rotation (75 étant la moitié de 150). Enfin, on applique une rotation antihoraire de `90°`. On obtient comme résultat un contrôle d'intervalle vertical où le maximum est situé en haut et où le minimum est situé en bas.
 
 {{EmbedLiveSample("", 200, 200, "orientation_sample3.png")}}
 
 #### Utiliser la propriété `appearance`
 
-La propriété [`appearance`](/fr/docs/Web/CSS/appearance) possède une valeur non-standard `slider-vertical` qui permet de transformer les pistes horizontales en pistes verticales.
+La propriété [`appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) possède une valeur non-standard `slider-vertical` qui permet de transformer les pistes horizontales en pistes verticales.
 
 On utilise le même HTML que pour les exemples précédents&nbsp;:
 
@@ -457,7 +457,7 @@ Le code HTML est semblable à celui utilisé précédemment, on y ajoute l'attri
 
 #### `writing-mode: bt-lr;`
 
-La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) ne devrait pas être utilisée pour modifier la direction du texte pour l'internationalisation et la localisation mais peut être employée pour créer des effets spéciaux.
+La propriété [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode) ne devrait pas être utilisée pour modifier la direction du texte pour l'internationalisation et la localisation mais peut être employée pour créer des effets spéciaux.
 
 Ici, on utilise le même HTML que précédemment&nbsp;:
 
@@ -506,7 +506,7 @@ input[type="range"] {
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
 - [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number)
 - [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow)

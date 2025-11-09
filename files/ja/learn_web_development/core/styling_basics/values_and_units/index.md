@@ -42,9 +42,9 @@ CSS を使用するそれぞれのプロパティには、どのような値を�
 
 ## CSS での値とは
 
-CSS の仕様書や MDN のプロパティページでは、[`<color>`](/ja/docs/Web/CSS/color_value) や {{cssxref("length")}} のような角括弧で囲まれた値を見かけることがあります。特定のプロパティに有効な値の型として `<color>` が表示されている場合、 [`<color>`](/ja/docs/Web/CSS/color_value) のリファレンスページに掲載されているように、そのプロパティの値として有効な色を使用することができることを意味しています。
+CSS の仕様書や MDN のプロパティページでは、[`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) や {{cssxref("length")}} のような角括弧で囲まれた値を見かけることがあります。特定のプロパティに有効な値の型として `<color>` が表示されている場合、 [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) のリファレンスページに掲載されているように、そのプロパティの値として有効な色を使用することができることを意味しています。
 
-値の型とプロパティが同じ名前、または類似した名前になっていることがあります。例えば、 {{cssxref("color")}} プロパティと [`<color>`](/ja/docs/Web/CSS/color_value) データ型があります。このような場合、角括弧を使用して、どちらを調べているのかを明確にすることができます。 HTML 要素も角括弧を使用しますが、どちらを調べているのかはコンテキストから明らかであるはずです。もし不明な場合は、MDN で検索してみてください。
+値の型とプロパティが同じ名前、または類似した名前になっていることがあります。例えば、 {{cssxref("color")}} プロパティと [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型があります。このような場合、角括弧を使用して、どちらを調べているのかを明確にすることができます。 HTML 要素も角括弧を使用しますが、どちらを調べているのかはコンテキストから明らかであるはずです。もし不明な場合は、MDN で検索してみてください。
 
 > [!NOTE]
 > CSSの値の型を「データ型」と呼ぶことがあります。 基本的に、これらの用語は同じ意味で使われており、 CSS でデータ型と呼ばれる何かを見かけた場合、それは実際には値の型を表現するおしゃれな言い方であると考えてください。「値」という用語は、値の型に対応している具体的な表現を指します。
@@ -58,7 +58,7 @@ h1 {
 }
 ```
 
-CSS の値の型とは、許容される値の集合を定義する方法です。つまり、もし `<color>` が有効であると判断した場合、キーワード、16 進数、`rgb()` 関数など、どの型の色値を使用することができるかを考える必要はありません。利用できるすべての `<color>` 値のうち、ブラウザーが対応していると考えられるものを利用することができます。 MDN でそれぞれの値のページを見ると、ブラウザーの対応についての情報が得られます。例えば、 [`<color>`](/ja/docs/Web/CSS/color_value) のページを見ていくと、ブラウザーの互換性の節に、さまざまな色の値の入力型と対応状況が記載されています。
+CSS の値の型とは、許容される値の集合を定義する方法です。つまり、もし `<color>` が有効であると判断した場合、キーワード、16 進数、`rgb()` 関数など、どの型の色値を使用することができるかを考える必要はありません。利用できるすべての `<color>` 値のうち、ブラウザーが対応していると考えられるものを利用することができます。 MDN でそれぞれの値のページを見ると、ブラウザーの対応についての情報が得られます。例えば、 [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) のページを見ていくと、ブラウザーの互換性の節に、さまざまな色の値の入力型と対応状況が記載されています。
 
 ここでは見ることが多いいくつかの値の型や単位を確認しましょう。また例のさまざまな値を変えて試しましょう。
 
@@ -255,7 +255,7 @@ html {
 
 `lh` と `rlh` は `em` と `rem` に似た相対的な長さの単位です。 `lh` と `rlh` の違いは、最初のものは要素そのものの行の高さであるのに対し、 2 つ目のものはルート要素（通常は `<html>`）の行の高さに対する相対値です。
 
-これらの単位を用いることで、ボックスの装飾をテキストに正確に配置することができます。この例では、 `lh` 単位を使用して、 [`repeating-linear-gradient()`](/ja/docs/Web/CSS/gradient/repeating-linear-gradient) を使ってメモ帳のような線を作成しています。テキストの行の高さは関係なく、行は常に正しい場所から始まります。
+これらの単位を用いることで、ボックスの装飾をテキストに正確に配置することができます。この例では、 `lh` 単位を使用して、 [`repeating-linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient) を使ってメモ帳のような線を作成しています。テキストの行の高さは関係なく、行は常に正しい場所から始まります。
 
 ```css hidden live-sample___line_height_units
 body {
@@ -426,7 +426,7 @@ CSS で色を設定するには多くの方法があり、多くのエキサイ�
 
 ### 色キーワード
 
-多くの MDN のサンプルコードで色キーワード（または「名前付き色」）が使用されているのを見かけるでしょう。 [`<named-color>`](/ja/docs/Web/CSS/named-color) データ型は非常に限られた数の色値しか含まれないため、本番のウェブサイトではあまり使用されません。キーワードは人間が読み取り可能なテキスト値として色を表しますので、名前付きカラーは、学習者が教えられているコンテンツに集中できるように、どの色が期待されているかを明確に指示するためにサンプルコードで使用されます。
+多くの MDN のサンプルコードで色キーワード（または「名前付き色」）が使用されているのを見かけるでしょう。 [`<named-color>`](/ja/docs/Web/CSS/Reference/Values/named-color) データ型は非常に限られた数の色値しか含まれないため、本番のウェブサイトではあまり使用されません。キーワードは人間が読み取り可能なテキスト値として色を表しますので、名前付きカラーは、学習者が教えられているコンテンツに集中できるように、どの色が期待されているかを明確に指示するためにサンプルコードで使用されます。
 
 次のライブサンプルででさまざまな色キーワードを試して、それがどのように作用するのか確認してください。
 
@@ -502,7 +502,7 @@ CSS で色を設定するには多くの方法があり、多くのエキサイ�
 
 ### RGB 値
 
-RGB 値を直接作成する場合、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 関数は色の **赤**、**緑**、**青**の各チャンネル値を表す 3 つの引数を取り、オプションの 4 番目の値はスラッシュ ('/') で区切り、16 進値とほぼ同じ方法で不透明度を表します。RGB との違いは、各チャンネルが 2 桁の 16 進数ではなく、0 から 255 までの 10 進数、あるいは 0% から 100% までのパーセントで表します（この 2 つの混合はできません）。
+RGB 値を直接作成する場合、 [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) 関数は色の **赤**、**緑**、**青**の各チャンネル値を表す 3 つの引数を取り、オプションの 4 番目の値はスラッシュ ('/') で区切り、16 進値とほぼ同じ方法で不透明度を表します。RGB との違いは、各チャンネルが 2 桁の 16 進数ではなく、0 から 255 までの 10 進数、あるいは 0% から 100% までのパーセントで表します（この 2 つの混合はできません）。
 
 最後の表記を書き直して、RGB で表現してみましょう。
 
@@ -584,26 +584,26 @@ RGB 値を直接作成する場合、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb
 
 ### 色相を使用して色を指定
 
-色キーワードや 16 進数、 `rgb()` を超えたものを使いたい場合は、 [`<hue>`](/ja/docs/Web/CSS/hue) を使用してみるとよいでしょう。
+色キーワードや 16 進数、 `rgb()` を超えたものを使いたい場合は、 [`<hue>`](/ja/docs/Web/CSS/Reference/Values/hue) を使用してみるとよいでしょう。
 色相は、赤、オレンジ、黄、緑、青などの色の違いや類似性を指示するプロパティです。
-重要な概念は、 [`<angle>`](/ja/docs/Web/CSS/angle) で色相を指定できるということです。なぜなら、ほとんどの色モデルは{{glossary("color wheel", "色相環")}}を使用して色相を記述しているからです。
+重要な概念は、 [`<angle>`](/ja/docs/Web/CSS/Reference/Values/angle) で色相を指定できるということです。なぜなら、ほとんどの色モデルは{{glossary("color wheel", "色相環")}}を使用して色相を記述しているからです。
 
-`hsl()`、`hwb()`、[`lch()`](/ja/docs/Web/CSS/color_value/lch) など、 [`<hue>`](/ja/docs/Web/CSS/hue) 成分を持つ色関数がいくつかあります。他にも、 [`lab()`](/ja/docs/Web/CSS/color_value/lab) のような色関数は、人間が見ることができる色を定義します。
+`hsl()`、`hwb()`、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) など、 [`<hue>`](/ja/docs/Web/CSS/Reference/Values/hue) 成分を持つ色関数がいくつかあります。他にも、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) のような色関数は、人間が見ることができる色を定義します。
 
-これらの関数や色空間についてもっと知りたい場合は、 [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)ガイドを参照してください、 CSS で色を使用することができるすべての異なる方法を掲載している [`<color>`](/ja/docs/Web/CSS/color_value) 参照、および色値を使用するすべてのプロパティの概要を提供された [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors) を参照してください。
+これらの関数や色空間についてもっと知りたい場合は、 [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)ガイドを参照してください、 CSS で色を使用することができるすべての異なる方法を掲載している [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 参照、および色値を使用するすべてのプロパティの概要を提供された [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors) を参照してください。
 
 ### HWB
 
-CSS で色相を使用するための素晴らしい開始点は、 `srgb()` 色を指定する [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) 関数です。
+CSS で色相を使用するための素晴らしい開始点は、 `srgb()` 色を指定する [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb) 関数です。
 3 つの部分は次の通りです。
 
-- **色相** (Hue): 色のベースとなるシェード。これは [`<hue>`](/ja/docs/Web/CSS/hue) の値を 0 から 360 までで取り、色相環の角度を表します。
+- **色相** (Hue): 色のベースとなるシェード。これは [`<hue>`](/ja/docs/Web/CSS/Reference/Values/hue) の値を 0 から 360 までで取り、色相環の角度を表します。
 - **白色度** (Whiteness): どのくらい白い色かです。これは `0%` （白さなし）から `100%` （完全な白）までの値を取ります。
 - **黒色度** (Blackness): どのくらい黒い色かです。これは `0%` （黒さなし）から `100%` （完全な黒）までの値を取ります。
 
 ### HSL
 
-`hwb()` 関数と同様に、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) 関数も `srgb()` 色を指定します。
+`hwb()` 関数と同様に、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 関数も `srgb()` 色を指定します。
 HSL は色相に加えて、彩度と明度を使用します。
 
 - **色相** (Hue)
@@ -683,7 +683,7 @@ RGB の例を HSL の色に更新すると次のようになります。
 
 ## 画像
 
-[`<image>`](/ja/docs/Web/CSS/image) データ型は画像が妥当な値となる場合に使われます。これは `url()` 関数で指定される実際の画像ファイルか、グラデーションです。
+[`<image>`](/ja/docs/Web/CSS/Reference/Values/image) データ型は画像が妥当な値となる場合に使われます。これは `url()` 関数で指定される実際の画像ファイルか、グラデーションです。
 
 下記の例では、画像とグラデーションを CSS の `background-image` プロパティの値として使用する例を示しています。
 
@@ -715,11 +715,11 @@ RGB の例を HSL の色に更新すると次のようになります。
 {{EmbedLiveSample("image", "", "380px")}}
 
 > [!NOTE]
-> `<image>` が取りうる他の値もありますが、それは新しくてブラウザーの対応が貧弱です。知りたい場合、MDN の [`<image>`](/ja/docs/Web/CSS/image) データ型のページを確認してください。
+> `<image>` が取りうる他の値もありますが、それは新しくてブラウザーの対応が貧弱です。知りたい場合、MDN の [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) データ型のページを確認してください。
 
 ## 位置
 
-[`<position>`](/ja/docs/Web/CSS/position_value) データ型は 2 次元の座標を表しており、背景画像のような項目（[`background-position`](/ja/docs/Web/CSS/background-position) にて）の位置を決めるのに使われます。これは `top`, `left`, `bottom`, `right`, `center` のようなキーワードを取って、ボックスの上や左の隅からオフセットさせる長さの値とともに、2 次元のボックスの特定の境界にアイテムを揃えます。
+[`<position>`](/ja/docs/Web/CSS/Reference/Values/position_value) データ型は 2 次元の座標を表しており、背景画像のような項目（[`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) にて）の位置を決めるのに使われます。これは `top`, `left`, `bottom`, `right`, `center` のようなキーワードを取って、ボックスの上や左の隅からオフセットさせる長さの値とともに、2 次元のボックスの特定の境界にアイテムを揃えます。
 
 典型的な位置の値は 2 つの値を持ち — 最初は水平位置を、2 つ目は垂直位置をセットします。1 つの軸だけの値を指定する場合、もう 1 つは既定で `center` となります。
 
@@ -777,12 +777,12 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 関数を使用することで、同じロジックを何度も書く必要がなくなり、一度書いたコードを何度も再利用することができます。
 ほとんどのプログラミング言語は関数に対応しているだけでなく、一般的なタスクのための便利な組み込み関数が決まりますので、自分で一から書く必要はありません。
 
-CSS にも[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)があり、他の言語の関数と同じように動作します。
-実際、すでに CSS 関数としては、上記の[色](#色)の節で、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) と [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) 関数をすでに見てきました。
+CSS にも[関数](/ja/docs/Web/CSS/Reference/Values/Functions)があり、他の言語の関数と同じように動作します。
+実際、すでに CSS 関数としては、上記の[色](#色)の節で、 [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) と [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) 関数をすでに見てきました。
 
 色を適用する以外にも、 CSS で関数を使用して多数のことを行うことができます。
-例えば[座標変換関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#座標変換関数)はページ上の要素を移動したり、回転させたり、変倍したりする一般的な方法です。
-何かを水平や垂直に移動させるには [`translate()`](/ja/docs/Web/CSS/transform-function/translate) を、何かを回転させるには [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate) を、何かを大きくしたり小さくしたりするには [`scale()`](/ja/docs/Web/CSS/transform-function/scale) を使うでしょう。
+例えば[座標変換関数](/ja/docs/Web/CSS/Reference/Values/Functions#座標変換関数)はページ上の要素を移動したり、回転させたり、変倍したりする一般的な方法です。
+何かを水平や垂直に移動させるには [`translate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate) を、何かを回転させるには [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate) を、何かを大きくしたり小さくしたりするには [`scale()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scale) を使うでしょう。
 
 ### 数学関数
 
@@ -790,8 +790,8 @@ CSS にも[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)が
 もしこれらの値を他の値に基づいて変化させたい場合は、いくつかの計算が必要になります。
 値のパーセント値を計算したり、数値を別の数値に追加したりして、その結果で CSS を更新します。
 
-CSS は[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)に対応しており、静的な数値に頼ったり JavaScript で計算したりする代わりに計算を行うことができます。
-最も一般的な数学関数の一つは [`calc()`](/ja/docs/Web/CSS/calc) で、足し算、引き算、掛け算、割り算のような処理を行うことができます。
+CSS は[数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#数学関数)に対応しており、静的な数値に頼ったり JavaScript で計算したりする代わりに計算を行うことができます。
+最も一般的な数学関数の一つは [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) で、足し算、引き算、掛け算、割り算のような処理を行うことができます。
 
 例えば、ある要素の幅を親コンテナーの 20% に 100px を加えた値に設定したいとします。
 この幅を固定値で指定することはできません。親要素がパーセント値の幅 (または `em` や `rem` のような相対単位) を使用している場合、使用するコンテキストや、ユーザーの端末やウィンドウの幅など、他にも要因によって幅が変わります。
@@ -819,9 +819,9 @@ CSS は[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#
 
 {{EmbedLiveSample("calc")}}
 
-他にも CSS で使用することができる数学関数はたくさんあります。[`min()`](/ja/docs/Web/CSS/min)、[`max()`](/ja/docs/Web/CSS/max)、[`clamp()`](/ja/docs/Web/CSS/clamp) などで、それぞれ設定した値の中から最小、最大、中間の値を選ぶことができます。
-また、[三角関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#三角関数)、たとえば [`sin()`](/ja/docs/Web/CSS/sin)、[`cos()`](/ja/docs/Web/CSS/cos)、[`tan()`](/ja/docs/Web/CSS/tan) あんどを使用して、この点を中心に要素を回転させる角度を計算したり、[色相角](/ja/docs/Web/CSS/hue)を引数として色を選んだりすることができます。
-[指数関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#指数関数)は、アニメーションやトランジションに使用することもでき、何かの移動や見てくれを非常に具体的に制御する必要がある場合に使用します。
+他にも CSS で使用することができる数学関数はたくさんあります。[`min()`](/ja/docs/Web/CSS/Reference/Values/min)、[`max()`](/ja/docs/Web/CSS/Reference/Values/max)、[`clamp()`](/ja/docs/Web/CSS/Reference/Values/clamp) などで、それぞれ設定した値の中から最小、最大、中間の値を選ぶことができます。
+また、[三角関数](/ja/docs/Web/CSS/Reference/Values/Functions#三角関数)、たとえば [`sin()`](/ja/docs/Web/CSS/Reference/Values/sin)、[`cos()`](/ja/docs/Web/CSS/Reference/Values/cos)、[`tan()`](/ja/docs/Web/CSS/Reference/Values/tan) あんどを使用して、この点を中心に要素を回転させる角度を計算したり、[色相角](/ja/docs/Web/CSS/Reference/Values/hue)を引数として色を選んだりすることができます。
+[指数関数](/ja/docs/Web/CSS/Reference/Values/Functions#指数関数)は、アニメーションやトランジションに使用することもでき、何かの移動や見てくれを非常に具体的に制御する必要がある場合に使用します。
 
 CSS関数について知っておくことは有益なことです。普通の CSS で取得できる結果を得るために、カスタムコードを書いたり、繰り返しコードを書いたりせずに済むようになります。
 
@@ -831,9 +831,9 @@ CSS関数について知っておくことは有益なことです。普通の C
 
 ## まとめ
 
-ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
+ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
 
-覚えておくべき重要なことは、各プロパティには許可される値の定義されたリストがあり、各値にはサブ値が何であるかを説明する定義があるということです。詳細は MDN で調べることができます。例えば、[`<image>`](/ja/docs/Web/CSS/image) でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう。
+覚えておくべき重要なことは、各プロパティには許可される値の定義されたリストがあり、各値にはサブ値が何であるかを説明する定義があるということです。詳細は MDN で調べることができます。例えば、[`<image>`](/ja/docs/Web/CSS/Reference/Values/image) でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう。
 
 次の記事では、 CSS においてアイテムがどのようにサイズ指定されるかを見ていきます。
 

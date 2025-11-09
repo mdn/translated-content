@@ -1,11 +1,12 @@
 ---
 title: CSS リファレンス
+short-title: リファレンス
 slug: Web/CSS/Reference
 l10n:
-  sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
+この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文
 
@@ -47,7 +48,7 @@ div.menu-bar li:hover > ul {
 
 ### アットルールの構文
 
-アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)のページをご覧ください。
+アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)のページをご覧ください。
 
 ## 索引
 
@@ -67,37 +68,37 @@ div.menu-bar li:hover > ul {
 
 **基本セレクター**は基礎的なセレクターです。これらは最も基本的なセレクターで、他のより複雑なセレクターを作成するために頻繁に組み合わせられます。
 
-- [全称セレクター](/ja/docs/Web/CSS/Universal_selectors) `*`
-- [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
-- [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
-- [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
-- [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+- [全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors) `*`
+- [要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+- [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+- [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+- [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
 
 ### グループ化セレクター
 
-- [セレクターリスト](/ja/docs/Web/CSS/Selector_list) `A, B`
+- [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
   - : `A` と `B` の両方の要素が選択されることを指定します。これは複数の一致する要素をグループ化する方法です。
 
 ### 結合子
 
 結合子 (Combinator) は 2 つ以上の単純セレクターの関係、例えば「`A` は `B` の子である」や「`A` は `B` の子孫である」などを確立し、複合セレクターを作成するためのセレクターです。
 
-- [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
+- [次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を持ち、かつ `B` で選択された要素が `A` で選択された要素の水平的な直後にあることを指定します。
-- [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+- [後続兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を共有しており、かつ `A` で選択された要素が `B` の前に — ただし直前である必要はありませんが — 来た場合を指定します。
-- [子結合子](/ja/docs/Web/CSS/Child_combinator) `A > B`
+- [子結合子](/ja/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
   - : `B` で選択された要素のうち、 `A` で選択された要素の直接の子であるものを指定します。
-- [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator) `A B`
+- [子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
   - : `B` で選択された要素のうち、 `A`で選択された要素の子孫であるものを指定します。直接の子である必要はありません。
-- [列結合子](/ja/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
+- [列結合子](/ja/docs/Web/CSS/Reference/Selectors/Column_combinator) `A || B` {{Experimental_Inline}}
   - : `B` で指定された要素のうち、 `A` で指定された表の列にあるものを指定します。複数の列にまたがる要素は、そのすべての列のメンバーであるとみなされます。
 
 ### 擬似クラスと擬似要素
 
-- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) `:`
+- [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
   - : 選択された要素が特別な状態にあることを指定します。
-- [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
+- [擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
 > [!CALLOUT]
@@ -108,16 +109,16 @@ div.menu-bar li:hover > ul {
 ### 構文と意味
 
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
 - [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)
 - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [優先度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [CSS 単位と値の種類](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [CSS 単位と値の種類](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)
 
 ### 値
 
@@ -135,7 +136,7 @@ div.menu-bar li:hover > ul {
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{glossary("Replaced elements", "置換要素")}}
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
@@ -147,6 +148,11 @@ div.menu-bar li:hover > ul {
 - {{DOMxRef("HTMLElement.style")}}
 - {{DOMxRef("Element.className")}}
 - {{DOMxRef("Element.classList")}}
+- {{DOMxRef("StyleSheetList")}}
+- {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSRule")}}
+- {{DOMxRef("CSSStyleRule")}}
+- {{DOMxRef("CSSStyleDeclaration")}}
 
 ### 重要なメソッド
 
@@ -155,9 +161,9 @@ div.menu-bar li:hover > ul {
 
 ## 関連情報
 
-- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) (`-moz-` 接頭辞付き)
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) (ほとんどが `-webkit-` 接頭辞付き)
+- [Mozilla CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions) (`-moz-` 接頭辞付き)
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions) (ほとんどが `-webkit-` 接頭辞付き)
 
 ## 外部リンク
 
-- [CSS 索引 (w3.org)](https://www.w3.org/TR/CSS/#indices)
+- [CSS 索引 (w3.org)](https://www.w3.org/TR/css/#indices)

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
 ---
 
-**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
+**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
 
 > [!NOTE]
 > {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。
@@ -53,7 +53,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 如果使用相对 URL，它是相对于样式表的 URL（而不是相对于网页的 URL）。
 
-**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/@font-face/src)，以及 [@counter-style/`symbol`](/zh-CN/docs/Web/CSS/@counter-style/symbols)。
+**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/src)，以及 [@counter-style/`symbol`](/zh-CN/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)。
 
 ## 语法
 

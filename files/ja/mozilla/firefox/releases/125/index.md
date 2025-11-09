@@ -16,8 +16,8 @@ l10n:
 ### CSS
 
 - {{cssxref("align-content")}} プロパティを、`display: block;` レイアウトで動作するように更新しました。これは `flex` や `grid` から `block` まですべてのレイアウト位置で、開発者はコンテナーを `flex` や `grid` に変換することなくブロックレベル要素を整列できるようになります ([Firefox bug 1882853](https://bugzil.la/1882853))。
-- CSS の [`transform-box`](/ja/docs/Web/CSS/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [content box](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します ([Firefox bug 1868374](https://bugzil.la/1868374))。
-- [`content-visibility`](/ja/docs/Web/CSS/content-visibility) CSS プロパティの値 `auto` をデフォルトで有効にしました。これは、[ユーザーとの関連性](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user) がない場合にコンテンツのレンダリングを省くことを可能にします。([Firefox bug 1874874](https://bugzil.la/1874874))
+- CSS の [`transform-box`](/ja/docs/Web/CSS/Reference/Properties/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [content box](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します ([Firefox bug 1868374](https://bugzil.la/1868374))。
+- [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) CSS プロパティの値 `auto` をデフォルトで有効にしました。これは、[ユーザーとの関連性](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user) がない場合にコンテンツのレンダリングを省くことを可能にします。([Firefox bug 1874874](https://bugzil.la/1874874))
 
 ### JavaScript
 
@@ -36,8 +36,8 @@ l10n:
   - [`HTMLElement`](/ja/docs/Web/API/HTMLElement) の [`popover`](/ja/docs/Web/API/HTMLElement/popover) プロパティ、および [`hidePopover()`](/ja/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/ja/docs/Web/API/HTMLElement/showPopover)、[`togglePopover()`](/ja/docs/Web/API/HTMLElement/togglePopover) メソッド、および ([`ToggleEvent`](/ja/docs/Web/API/ToggleEvent) 型の) [`beforetoggle`](/ja/docs/Web/API/HTMLElement/beforetoggle_event)、[`toggle_event`](/ja/docs/Web/API/HTMLElement/toggle_event) イベント。
 
   ポップオーバーと共に使用する、以下の CSS 擬似クラスをサポートしました:
-  - [`:popover-open`](/ja/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/ja/docs/Web/CSS/::backdrop) を、ポップオーバーをサポートするように拡張しました
+  - [`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open)
+  - [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) を、ポップオーバーをサポートするように拡張しました
 
   以下の HTML グローバル属性をサポートしました:
   - [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget)

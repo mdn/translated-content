@@ -50,11 +50,11 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
   - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
   - [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)
-  - [动画](/zh-CN/docs/Web/CSS/animation)
+  - [动画](/zh-CN/docs/Web/CSS/Reference/Properties/animation)
 
 ## 技术手册
 
-[CSS 布局技术手册](/zh-CN/docs/Web/CSS/Layout_cookbook)的目的是将一些也许你将要在自己的网站中实现的、常用的布局模式的方法汇集在一起，并且还提供了代码使你可以在项目中作为基础来使用。这些方法突出表现了同一布局规范的不同使用方式，作为开发者你可以自由选择自己想要的方式来实现。
+[CSS 布局技术手册](/zh-CN/docs/Web/CSS/How_to/Layout_cookbook)的目的是将一些也许你将要在自己的网站中实现的、常用的布局模式的方法汇集在一起，并且还提供了代码使你可以在项目中作为基础来使用。这些方法突出表现了同一布局规范的不同使用方式，作为开发者你可以自由选择自己想要的方式来实现。
 
 ## CSS 开发工具
 

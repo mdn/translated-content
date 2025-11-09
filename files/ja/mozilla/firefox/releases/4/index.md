@@ -41,7 +41,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 #### 小さな HTML の変更
 
-- [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) 要素をデフォルトでサイズ変更できるようになりました。これを無効にするために [`resize`](/ja/docs/Web/CSS/resize) CSS プロパティが利用できます。
+- [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) 要素をデフォルトでサイズ変更できるようになりました。これを無効にするために [`resize`](/ja/docs/Web/CSS/Reference/Properties/resize) CSS プロパティが利用できます。
 - `canvas.getContext` および `canvas.toDataURL` が認識できない引数を指定して呼び出したときに例外を投げなくなりました。
 - [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素に Mozilla 固有の `mozGetAsFile()` メソッドが追加されました。これを用いることで、Canvas の内容である画像を含んだメモリーベースのファイルを保持できます。詳細は [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) を参照してください。
 - `canvas2dcontext.lineCap` および `canvas2dcontext.lineJoin` が認識できない値を設定したときに例外を投げなくなりました。
@@ -57,69 +57,69 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [CSS transitions](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : 新しい CSS transitions サポートが Firefox 4 では利用できるようになりました。
 - CSS での算出値
-  - : [`-moz-calc`](/ja/docs/Web/CSS/calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/length) の値を数式で指定できます。
+  - : [`-moz-calc`](/ja/docs/Web/CSS/Reference/Values/calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/Reference/Values/length) の値を数式で指定できます。
 - セレクターのグルーピング
-  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/:is) がサポートされました。
+  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/Reference/Selectors/:is) がサポートされました。
 - 背景画像の部分領域のサポート
-  - : [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) 関数を用いることで、画像の一部分の領域 (subrectangle)を背景画像として利用できるようになります。
+  - : [`-moz-image-rect`](/ja/docs/Web/CSS/Reference/Values/-moz-image-rect) 関数を用いることで、画像の一部分の領域 (subrectangle)を背景画像として利用できるようになります。
 - CSS touch プロパティ群
   - : touch プロパティ群が追加されました。詳細と正式な記事名は後日追記予定です。
-- [CSS 背景として任意の要素を使用する](/ja/docs/Web/CSS/element)
-  - : [`-moz-element`](/ja/docs/Web/CSS/element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
+- [CSS 背景として任意の要素を使用する](/ja/docs/Web/CSS/Reference/Values/element)
+  - : [`-moz-element`](/ja/docs/Web/CSS/Reference/Values/element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
 - [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : CSS セレクターを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
 
 #### 新しい CSS プロパティ
 
-| プロパティ                                                             | 説明                                                                     |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`-moz-font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings) | OpenType フォントの高度な機能を変更できます。                            |
-| [`-moz-tab-size`](/ja/docs/Web/CSS/tab-size)                           | テキストを描画するときのタブ文字 (U+0009) の幅を空白文字数で指定します。 |
-| [`resize`](/ja/docs/Web/CSS/resize)                                    | サイズ変更可能な要素の方向を制御できます。                               |
+| プロパティ                                                                                  | 説明                                                                     |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [`-moz-font-feature-settings`](/ja/docs/Web/CSS/Reference/Properties/font-feature-settings) | OpenType フォントの高度な機能を変更できます。                            |
+| [`-moz-tab-size`](/ja/docs/Web/CSS/Reference/Properties/tab-size)                           | テキストを描画するときのタブ文字 (U+0009) の幅を空白文字数で指定します。 |
+| [`resize`](/ja/docs/Web/CSS/Reference/Properties/resize)                                    | サイズ変更可能な要素の方向を制御できます。                               |
 
 #### 新しい CSS 擬似クラス
 
-| 擬似クラス                                                        | 説明                                                                                                                       |
-| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-handler-crashed`](/ja/docs/Web/CSS/:-moz-handler-crashed) | プラグインがクラッシュした要素の表示に用いられます。                                                                       |
-| [`:-moz-placeholder`](/ja/docs/Web/CSS/:placeholder-shown)        | フォームフィールドのガイドテキストに適用されます。                                                                         |
-| [`:-moz-submit-invalid`](/ja/docs/Web/CSS/:-moz-submit-invalid)   | 1 つ、もしくは、複数のフォームフィールドの入力が妥当でないときのフォームの送信ボタンに適用されます。                       |
-| [`:-moz-window-inactive`](/ja/docs/Web/CSS/:-moz-window-inactive) | アクティブでないウィンドウの要素に適用されます。                                                                           |
-| [`:invalid`](/ja/docs/Web/CSS/:invalid)                           | 入力が妥当でない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。                |
-| [`:optional`](/ja/docs/Web/CSS/:optional)                         | `required` 属性を指定していない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。 |
-| [`:required`](/ja/docs/Web/CSS/:required)                         | `required` 属性を指定している [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。   |
-| [`:valid`](/ja/docs/Web/CSS/:valid)                               | 入力が妥当であると判断された [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。    |
+| 擬似クラス                                                                          | 説明                                                                                                                       |
+| ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [`:-moz-handler-crashed`](/ja/docs/Web/CSS/:-moz-handler-crashed)                   | プラグインがクラッシュした要素の表示に用いられます。                                                                       |
+| [`:-moz-placeholder`](/ja/docs/Web/CSS/Reference/Selectors/:placeholder-shown)      | フォームフィールドのガイドテキストに適用されます。                                                                         |
+| [`:-moz-submit-invalid`](/ja/docs/Web/CSS/Reference/Selectors/:-moz-submit-invalid) | 1 つ、もしくは、複数のフォームフィールドの入力が妥当でないときのフォームの送信ボタンに適用されます。                       |
+| [`:-moz-window-inactive`](/ja/docs/Web/CSS/:-moz-window-inactive)                   | アクティブでないウィンドウの要素に適用されます。                                                                           |
+| [`:invalid`](/ja/docs/Web/CSS/Reference/Selectors/:invalid)                         | 入力が妥当でない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。                |
+| [`:optional`](/ja/docs/Web/CSS/Reference/Selectors/:optional)                       | `required` 属性を指定していない [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。 |
+| [`:required`](/ja/docs/Web/CSS/Reference/Selectors/:required)                       | `required` 属性を指定している [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。   |
+| [`:valid`](/ja/docs/Web/CSS/Reference/Selectors/:valid)                             | 入力が妥当であると判断された [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) フィールドに自動的に適用されます。    |
 
 #### 新しい CSS 擬似セレクター
 
-| 擬似セレクター                                       | 説明                                                                             |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`:-moz-focusring`](/ja/docs/Web/CSS/:focus-visible) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
+| 擬似セレクター                                                           | 説明                                                                             |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| [`:-moz-focusring`](/ja/docs/Web/CSS/Reference/Selectors/:focus-visible) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
 
 #### 新しい CSS 関数
 
-| 関数                                                  | 説明                                                                                                                                               |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-any`](/ja/docs/Web/CSS/:is)                   | セレクターをグループ化しコンビネータを分解できます。                                                                                               |
-| [`-moz-calc`](/ja/docs/Web/CSS/calc)                  | `<length> の値を数式で指定できます。`                                                                                                              |
-| [`-moz-element`](/ja/docs/Web/CSS/element)            | 任意の要素を [`background-image`](/ja/docs/Web/CSS/background-image) および [`background`](/ja/docs/Web/CSS/background) の背景として使用できます。 |
-| [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/background-image) もしくは [`background`](/ja/docs/Web/CSS/background)で利用できます。        |
+| 関数                                                                   | 説明                                                                                                                                                                                         |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`:-moz-any`](/ja/docs/Web/CSS/Reference/Selectors/:is)                | セレクターをグループ化しコンビネータを分解できます。                                                                                                                                         |
+| [`-moz-calc`](/ja/docs/Web/CSS/Reference/Values/calc)                  | `<length> の値を数式で指定できます。`                                                                                                                                                        |
+| [`-moz-element`](/ja/docs/Web/CSS/Reference/Values/element)            | 任意の要素を [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) および [`background`](/ja/docs/Web/CSS/Reference/Properties/background) の背景として使用できます。 |
+| [`-moz-image-rect`](/ja/docs/Web/CSS/Reference/Values/-moz-image-rect) | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) もしくは [`background`](/ja/docs/Web/CSS/Reference/Properties/background)で利用できます。        |
 
 #### 改名された CSS プロパティ
 
-| 旧名称                 | 新名称                                                | 備考                                                                                                                             |
-| ---------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `-moz-background-size` | [`background-size`](/ja/docs/Web/CSS/background-size) | `-moz-background-size` という名称はサポートされません。                                                                          |
-| `-moz-border-radius`   | [`border-radius`](/ja/docs/Web/CSS/border-radius)     | 旧名称は、サイトを更新するための時間を考慮して、限られた期間サポートされます。描画の変更も仕様の最新版に適合するようになります。 |
-| `-moz-box-shadow`      | [`box-shadow`](/ja/docs/Web/CSS/box-shadow)           |                                                                                                                                  |
+| 旧名称                 | 新名称                                                                     | 備考                                                                                                                             |
+| ---------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `-moz-background-size` | [`background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size) | `-moz-background-size` という名称はサポートされません。                                                                          |
+| `-moz-border-radius`   | [`border-radius`](/ja/docs/Web/CSS/Reference/Properties/border-radius)     | 旧名称は、サイトを更新するための時間を考慮して、限られた期間サポートされます。描画の変更も仕様の最新版に適合するようになります。 |
+| `-moz-box-shadow`      | [`box-shadow`](/ja/docs/Web/CSS/Reference/Properties/box-shadow)           |                                                                                                                                  |
 
 #### 小さな CSS の変更
 
-- [`text-shadow`](/ja/docs/Web/CSS/text-shadow) プロパティのぼかし範囲が 300 までに制限されるようになりました。これは健全さとパフォーマンスの理由によるものです。
-- [`overflow`](/ja/docs/Web/CSS/overflow) プロパティがテーブルグループ要素 (`<thead>`、`<tbody>`、および `<tfoot>`) に適用されなくなりました。
-- [`-moz-appearance`](/ja/docs/Web/CSS/appearance) プロパティが要素に境界のない Aero Glass の見た目を適用する `-moz-win-borderless-glass 値をサポートするようになりました。`
+- [`text-shadow`](/ja/docs/Web/CSS/Reference/Properties/text-shadow) プロパティのぼかし範囲が 300 までに制限されるようになりました。これは健全さとパフォーマンスの理由によるものです。
+- [`overflow`](/ja/docs/Web/CSS/Reference/Properties/overflow) プロパティがテーブルグループ要素 (`<thead>`、`<tbody>`、および `<tfoot>`) に適用されなくなりました。
+- [`-moz-appearance`](/ja/docs/Web/CSS/Reference/Properties/appearance) プロパティが要素に境界のない Aero Glass の見た目を適用する `-moz-win-borderless-glass 値をサポートするようになりました。`
 - [`-moz-device-pixel-ratio`](/ja/docs/Web/CSS/CSS_media_queries#-moz-device-pixel-ratio) メディア機能が追加されました。これを用いることで、[Media Query](/ja/docs/Web/CSS/CSS_media_queries) で用いられる、CSS ピクセルを基準としたデバイスのピクセル比率を指定できます。
-- Gecko の [CSS 単位の](/ja/docs/Web/CSS/length) 扱いが他のブラウザーにより良く適合するように、また、絶対的長さをデバイスの DPI を基準にした画面ピクセル数により的確に変換するように修正されました。
+- Gecko の [CSS 単位の](/ja/docs/Web/CSS/Reference/Values/length) 扱いが他のブラウザーにより良く適合するように、また、絶対的長さをデバイスの DPI を基準にした画面ピクセル数により的確に変換するように修正されました。
 
 ### グラフィックとビデオ
 
@@ -132,7 +132,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [SMIL による SVG アニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : SVG の SMIL アニメーションのサポートが利用できるようになりました。[バグ 482402](https://bugzilla.mozilla.org/show_bug.cgi?id=482402 'FIXED: Enable "svg.smil.enabled" pref by default') を参照してください。
 - 画像と CSS 背景としての SVG の利用
-  - : SVG を [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素とともに、また、CSS の [`background-image`](/ja/docs/Web/CSS/background-image) で利用することができるようになりました。
+  - : SVG を [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素とともに、また、CSS の [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image) で利用することができるようになりました。
 - メディア要素での `buffered` 属性サポート
   - : [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) および [`<audio>`](/ja/docs/Web/HTML/Reference/Elements/audio) 要素での `buffered` 属性がサポートされました。これを用いることでメディアファイルでバッファリングされた範囲が判断可能になります。これをサポートするために [`TimeRanges`](/ja/docs/Web/API/TimeRanges) DOM インターフェイスが実装されました。
 - メディア要素での `preload` 属性

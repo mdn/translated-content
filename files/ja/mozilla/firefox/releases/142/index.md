@@ -1,9 +1,9 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Stable)
+short-title: Firefox 142
 slug: Mozilla/Firefox/Releases/142
 l10n:
-  sourceCommit: 7da6f52dac0fcdb22e42b17894a183b8d9eb21e0
+  sourceCommit: 4a54946791694e14bf3742f3f327bbea44c698c8
 ---
 
 このページでは、開発者に影響する Firefox 142 の変更点をまとめています。
@@ -19,7 +19,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 ### CSS
 
-- {{cssxref("@scope")}} の内部の [`&` セレクター](/ja/docs/Web/CSS/Nesting_selector) が、[スコープ開始セレクターの詳細度](/ja/docs/Web/CSS/@scope#scope_の詳細度) を継承しないようになりました。
+- {{cssxref("@scope")}} の内部の [`&` セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) が、[スコープ開始セレクターの詳細度](/ja/docs/Web/CSS/Reference/At-rules/@scope#scope_の詳細度) を継承しないようになりました。
   これにより `@scope` の内部の `&` セレクターは [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) との一貫性が保たれて、予期せぬ詳細度の違いを避けられます ([CSS 入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) をご覧ください) ([Firefox bug 1975531](https://bugzil.la/1975531))。
 
 ### JavaScript
@@ -71,6 +71,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 - {{WebExtAPIRef("cookies.set()")}} で作成した Cookie が Nightly 版で検証されるようになり、無効な Cookie は拒否されます。Nightly 版の実装は、何らかの問題に対して監視を可能にするためです。将来のリリースでは、すべてのチャンネルで検証を強制する予定です ([Firefox bug 1976197](https://bugzil.la/1976197))。
 - 拡張機能の動作に影響を与えるユーザー指定の設定変更をリッスンする、{{WebExtAPIRef("browserAction.onUserSettingsChanged")}} および {{WebExtAPIRef("action.onUserSettingsChanged")}} イベントを追加しました ([Firefox bug 1828220](https://bugzil.la/1828220))。
+- ブラウザーがタブバーを水平に表示するか、垂直に表示するかを拡張機能から制御可能にする {{WebExtAPIRef("browserSettings.verticalTabs")}} を追加しました ([Firefox bug 1946600](https://bugzil.la/1946600))。
 
 ## 実験的なウェブ機能
 
@@ -84,7 +85,7 @@ Firefox 142 は、米国時間 [2025 年 8 月 19 日](https://whattrainisitnow.
 
 - **`view-transition-name: match-element`** (Nightly): `dom.viewTransitions.enabled`
 
-  CSS の {{CSSXRef("view-transition-name")}} プロパティの値 {{CSSXRef("view-transition-name", "match-element", "#match-element")}} は、それぞれの選択された要素に個別の名前をつける代わりに、一意な内部の `view-transition-name` を [自動的](/ja/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) に割り当てます ([Firefox bug 1956141](https://bugzil.la/1956141))。
+  CSS の {{CSSXRef("view-transition-name")}} プロパティの値 {{CSSXRef("view-transition-name", "match-element", "#match-element")}} は、それぞれの選択された要素に個別の名前をつける代わりに、一意な内部の `view-transition-name` を [自動的](/ja/docs/Web/CSS/Reference/Properties/view-transition-name#specifying_view-transition-name_values_automatically) に割り当てます ([Firefox bug 1956141](https://bugzil.la/1956141))。
 
 - スクリプト向けの **`Integrity-Policy` および `Integrity-Policy-Report-Only`** (Nightly): `security.integrity_policy.enabled`
 

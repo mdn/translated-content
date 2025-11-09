@@ -235,7 +235,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-你也可以为 CSS 特性编写这样的测试，例如通过测试 _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ 的存在（比如 `paragraph.style.transform !== undefined`）。如果你希望在支持某个 CSS 特性的情况下应用样式，可以直接使用 [@supports](/zh-CN/docs/Web/CSS/@supports) 规则（也称为特性查询）。例如，要检查浏览器是否支持 CSS 容器查询，可以这样做：
+你也可以为 CSS 特性编写这样的测试，例如通过测试 _[element.style.property](/zh-CN/docs/Web/API/HTMLElement/style)_ 的存在（比如 `paragraph.style.transform !== undefined`）。如果你希望在支持某个 CSS 特性的情况下应用样式，可以直接使用 [@supports](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) 规则（也称为特性查询）。例如，要检查浏览器是否支持 CSS 容器查询，可以这样做：
 
 ```css
 @supports (container-type: inline-size) {

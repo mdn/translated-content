@@ -1,50 +1,70 @@
 ---
-title: Guides pour les développeurs du Web
+title: Guides pour les développeurs Web
+short-title: Guides
 slug: MDN/Guides
 original_slug: Web/Guide
+l10n:
+  sourceCommit: 515d03ad8572b96e88916888156444626dcba193
 ---
 
-**Ces articles sont des tutoriels et guides pratiques permettant d'utiliser certaines API et technologies web.**
+De nombreux guides sur MDN Web Docs vous apprennent à utiliser des fonctionnalités ou des API à travers des exemples concrets.
+Cette page propose une sélection de ressources d'apprentissage parmi les plus populaires et orientées sur ces objectifs.
 
-- [Apprendre - HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
-  - : _HyperText Markup Language_ (HTML) est le langage de base pour la grande partie du contenu web. La plupart de ce que vous voyez à l'écran est décrit en HTML.
-- [Apprendre - CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
-  - : _Cascading Style Sheets_ (CSS) est un langage de feuille de styles utilisé afin de définir la présentation d'un document écrit en HTML.
-- [Fournir de l'audio et/ou de la vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery)
-  - : Il est possible d'intégrer de l'audio et de la vidéo à du contenu web de différentes façons : que ce soit des fichiers statiques ou des flux adaptatifs. Cet article est une introduction à ces différentes méthodes et à la compatibilité pour les principaux navigateurs web.
-- [Manipuler des données audio ou vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation)
-  - : Il est possible de combiner les technologies web et les médias afin de créer de nouveaux usages. Dans cet article, nous verrons comment utiliser des technologies web telles que {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API) afin de modifier les fichiers audio ou vidéo directement (en ajoutant des effets de réverbération ou des filtres de couleurs).
-- [Guide sur les évènements](/fr/docs/Web/API/Document_Object_Model/Events)
-  - : Les évènements peuvent désigner deux concepts : un patron de conception permettant de gérer de façon asynchrone ce qui se produit lors de la vue d'une page web d'une part et la liste, les noms et les caractéristiques desdits évènements d'autre part.
-- [AJAX](/fr/docs/Learn_web_development/Core/Scripting/Network_requests)
-  - : AJAX est un terme regroupant différentes technologies qui permettent aux applications web d'appliquer des mises à jour incrémentales au contenu de la page sans mettre à jour l'intégralité de la page. Cela permet d'obtenir des applications plus rapides et plus réactives.
-- [Les graphismes sur le Web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-  - : Les sites et applications web modernes utilisent généralement des graphismes (avec différents degrés de sophistication).
-- [Guide pour les API web](/fr/docs/Web/API)
-  - : Une liste de l'ensemble des API web et de leur rôle.
-- [JavaScript](/fr/docs/Web/JavaScript)
-  - : JavaScript est un langage de script notamment utilisé pour créer des applications sur le Web.
-- [Localisations et encodages](/fr/docs/Localizations_and_character_encodings)
-  - : En interne, les navigateurs traitent le texte en Unicode. Toutefois, la façon de représenter les caractères sous forme d'octets (l'encodage) est utilisée lors du transfert du texte sur le réseau vers le navigateur. La [spécification HTML recommande l'usage de l'encodage UTF-8](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset) (qui peut représenter l'ensemble des caractères Unicode). Quel que soit l'encodage utilisé, le contenu web doit déclarer l'encodage qu'il utilise.
-- [Développement web pour mobile](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
-  - : Cet article fournit un aperçu des techniques principales utilisées pour concevoir des sites web qui fonctionnent correctement sur les appareils mobiles. Voir aussi [Firefox for Android](/fr/docs/Mozilla/Firefox_pour_Android).
-- [Applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps#core_pwa_guides)
-  - : Les applications web progressives (aussi appelées PWA) utilisent des API web modernes ainsi que des techniques d'amélioration progressive afin de créer des applications web fonctionnant sur différentes plateformes. Ces applications fonctionnent sur différents appareils et fournissent certaines fonctionnalités les rapprochant des applications natives. Dans ce guide, nous verrons ce qu'il vous faut savoir à propos des PWA.
+## HTML
+
+- [Structurer le web avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content)
+  - : La section d'apprentissage HTML propose des tutoriels pour apprendre HTML depuis la base.
+- [Bases de HTML](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+  - : Cet article vous donnera une compréhension de base de HTML. Après ce guide, vous pourrez explorer plus en détail la section d'apprentissage HTML.
+
+## CSS
+
+- [Mettre en forme HTML avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
+  - : Notre tutoriel CSS complet, des premiers pas à la mise en forme du texte, la création de mises en page, et plus encore.
+- [Guides de mise en page CSS](/fr/docs/Web/CSS/Guides)
+  - : Il existe de nombreux guides sur la mise en page CSS sur MDN, cette page les regroupe tous.
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
+  - : Les animations CSS permettent d'animer les transitions entre différentes configurations de style. Ce guide vous aide à débuter avec les propriétés d'animation.
+
+## JavaScript
+
+- [Section d'apprentissage JavaScript](/fr/docs/Learn_web_development/Core/Scripting)
+  - : Que vous soyez totalement débutant·e ou que vous souhaitiez réviser vos connaissances, c'est l'endroit idéal pour commencer.
+
+## Médias
+
+- [Diffusion audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery)
+  - : Il existe plusieurs façons de diffuser de l'audio et de la vidéo sur le web, des fichiers «&nbsp;statiques&nbsp;» aux flux adaptatifs en direct. Cet article est un point de départ pour explorer les différents mécanismes de diffusion et la compatibilité avec les navigateurs populaires.
+- [Manipulation audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation)
+  - : La richesse du web permet de combiner des technologies pour créer de nouvelles formes. La prise en charge native de l'audio et de la vidéo dans le navigateur permet d'utiliser ces flux avec des technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) pour modifier directement l'audio ou la vidéo, par exemple en ajoutant des effets de réverbération ou de compression à l'audio, ou des filtres de niveaux de gris ou sépia à la vidéo. Cet article explique ce qu'il faut faire.
+
+## API
+
+- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+  - : L'objet [`FormData`](/fr/docs/Web/API/FormData) permet de constituer un ensemble de paires clé/valeur à envoyer avec {{domxref("Window/fetch", "fetch()")}}. Il est principalement destiné à l'envoi de données de formulaire, mais peut aussi servir à transmettre des données structurées indépendamment d'un formulaire. L'envoi se fait au même format que la méthode `submit()` d'un formulaire avec l'encodage `multipart/form-data`.
+- [Applications web progressives](/fr/docs/Web/Progressive_web_apps)
+  - : Les applications web progressives (PWA) utilisent les API web modernes et la stratégie d'amélioration progressive pour créer des applications multiplateformes. Elles fonctionnent partout et offrent des fonctionnalités proches des applications natives. Ce guide regroupe tout ce qu'il faut savoir sur les PWA.
+- [Analyser et sérialiser du XML](/fr/docs/Web/XML/Guides/Parsing_and_serializing_XML)
+  - : La plateforme web propose différentes méthodes pour analyser et sérialiser du XML, chacune ayant ses avantages et inconvénients.
+
+## Performance
+
 - [Optimisation et performance](/fr/docs/Web/Performance)
-  - : Lorsqu'on construit des sites et applications web, il est crucial que le contenu soit fourni rapidement et efficacement. Ainsi, votre site ou application fonctionnera au mieux, que ce soit sur un PC puissant ou sur un appareil mobile potentiellement plus léger.
-- [Analyser et sérialiser du XML](/fr/docs/Web/XML/Parsing_and_serializing_XML)
-  - : La plateforme web fournit différentes méthodes pour analyser (_parsing_) et sérialiser du XML dont chacune a ses avantages et ses inconvénients.
-- [_Web Open Font Format_ (WOFF)](/fr/docs/Web/CSS/CSS_fonts/WOFF)
-  - : Le format WOFF (_Web Open Font Format_) est un format pour représenter des polices de caractères afin de les utiliser sur le Web.
-- [Algorithme de texte Unicode bidirectionnel (BiDi)](/fr/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm)
-  - : L'algorithme Unicode® BiDi fait partie du standard Unicode. Il décrit la façon dont le navigateur doit ordonner les caractères lorsqu'il affiche du texte Unicode. Ce guide présente l'algorithme en général et la façon dont il s'applique au contenu que vous créez. Cela s'avère particulièrement utile lorsque vous concevez et implémentez des systèmes avec une localisation et une internationalisation.
-- [Manipuler les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : L'objet [`FormData`](/fr/docs/Web/API/FormData) permet de compiler un ensemble de paires de clés/valeurs et de l'envoyer via une `XMLHttpRequest`. Son but principal est d'envoyer des données de formulaire mais il peut être utilisé sans formulaire afin de transmettre des données utilisant des clés. Le format de la transmission est identique à ce qui serait utilisé par la méthode `submit()` d'un formulaire si l'encodage de celui-ci valait `"multipart/form-data"`.
-- [Gérer la saisie de l'utilisateur et les contrôles](/fr/docs/Learn_web_development/Extensions/Forms/User_input_methods)
-  - : Sur les sites et applications web, un utilisateur peut interagir avec sa souris et son clavier mais aussi avec d'autres outils (écran tactile par exemple). Cet article fournit quelques recommandations sur la gestion de la saisie de l'utilisateur pour les applications web ainsi qu'une FAQ, des exemples concrets et des liens vers des informations supplémentaires détaillées.
-- [Glossaire](/fr/docs/Glossary)
-  - : Définit de nombreux termes techniques relatifs au Web et à Internet.
+  - : Lors de la création d'applications ou de sites web modernes, il est essentiel d'assurer un affichage rapide et efficace. Cela permet un fonctionnement optimal aussi bien sur des ordinateurs puissants que sur des appareils mobiles moins performants.
 
-## Voir aussi
+## Développement web mobile
 
-- [Référence pour les développeurs web](/fr/docs/Web)
+- [Apprendre&nbsp;: conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
+  - : Cet article présente les principales techniques pour concevoir des sites adaptés aux appareils mobiles.
+
+## Polices de caractères
+
+- [Guide des polices variables](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts)
+  - : Découvrez comment utiliser les polices variables dans vos créations.
+- [Le format Web Open Font Format (WOFF)](/fr/docs/Web/CSS/CSS_fonts/WOFF)
+  - : WOFF (Web Open Font Format) est un format de fichier de police librement utilisable sur le web.
+
+## Développement d'interfaces utilisateur
+
+- [Méthodes et contrôles de saisie utilisateur](/fr/docs/Learn_web_development/Extensions/Forms/User_input_methods)
+  - : La saisie utilisateur ne se limite pas à la souris et au clavier&nbsp;: pensez par exemple aux écrans tactiles. Cet article donne des recommandations pour gérer la saisie et implémenter des contrôles dans les applications web ouvertes, avec des questions fréquentes, des exemples concrets et des liens pour approfondir les technologies sous-jacentes.

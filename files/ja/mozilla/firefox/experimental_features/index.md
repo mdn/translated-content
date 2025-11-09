@@ -101,7 +101,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 {{cssxref('scroll-timeline')}} 一括指定プロパティを使用する場合、プロパティ値の順序は {{cssxref('scroll-timeline-name')}} の後に {{cssxref('scroll-timeline-axis')}} を指定する必要があります。
 個別指定プロパティと一括指定プロパティは、設定で両方利用できます。
-あるいは、 [`scroll()`](/ja/docs/Web/CSS/animation-timeline/scroll) 関数記法を {{cssxref('animation-timeline')}} で使用して、親要素のスクロールバー軸をタイムラインに使用することを指定することもできます。
+あるいは、 [`scroll()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) 関数記法を {{cssxref('animation-timeline')}} で使用して、親要素のスクロールバー軸をタイムラインに使用することを指定することもできます。
 
 詳細については、[Firefox バグ 1807685](https://bugzil.la/1807685)、[Firefox バグ 1804573](https://bugzil.la/1804573)、[Firefox バグ 1809005](https://bugzil.la/1809005)、[Firefox バグ 1676791](https://bugzil.la/1676791), [Firefox バグ 1754897](https://bugzil.la/1754897)、[Firefox バグ 1817303](https://bugzil.la/1817303)、[Firefox バグ 1737918](https://bugzil.la/1737918) を参照してください。
 
@@ -119,7 +119,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### @scope アットルール
 
-[@scope](/ja/docs/Web/CSS/@scope) は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 CSS セレクターの詳細度を過度に上げることなく、特定の子要素を選択することができます（[Firefox バグ 1886441](https://bugzil.la/1886441)）。
+[@scope](/ja/docs/Web/CSS/Reference/At-rules/@scope) は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、 CSS セレクターの詳細度を過度に上げることなく、特定の子要素を選択することができます（[Firefox バグ 1886441](https://bugzil.la/1886441)）。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -133,7 +133,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### font-variant-emoji プロパティ
 
-CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji) プロパティを使用すると、絵文字の表示の既定のスタイルを設定できます。
+CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji) プロパティを使用すると、絵文字の表示の既定のスタイルを設定できます。
 詳細については、[Firefox バグ 1461589](https://bugzil.la/1461589) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -148,7 +148,7 @@ CSS の [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji) プロパテ
 
 ### prefers-reduced-transparency メディア特性
 
-CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced-transparency) メディア機能を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
+CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) メディア機能を使用すると、ユーザーが端末で透明または半透明のレイヤー効果を最小限に抑える設定を有効にしているかどうかを検出できます。
 詳細については、[Firefox バグ 1736914](https://bugzil.la/1736914) をご覧ください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -163,7 +163,7 @@ CSS の [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced
 
 ### inverted-colors メディア特性
 
-CSS の [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors) メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
+CSS の [`inverted-colors`](/ja/docs/Web/CSS/Reference/At-rules/@media/inverted-colors) メディア特性を使用すると、ユーザーエージェントまたは基盤となるオペレーティングシステムが色を反転しているかどうかを検出できます。
 詳しくは [Firefox バグ 1794628](https://bugzil.la/1794628) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -178,7 +178,7 @@ CSS の [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors) メディ�
 
 ### 名前付きビュー進行タイムラインプロパティ
 
-CSS の [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) プロパティを使用すると、特定の要素に名前を付け、その要素の親要素であるスクロール要素がビュー進行タイムラインのソースであることを識別することができます。
+CSS の [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name) プロパティを使用すると、特定の要素に名前を付け、その要素の親要素であるスクロール要素がビュー進行タイムラインのソースであることを識別することができます。
 この名前は `animation-timeline` に代入することができ、これにより、関連付けられた要素は、その祖先のスクロールバーの表示領域内を移動する際にアニメーションします。
 詳しくは [Firefox バグ 1737920](https://bugzil.la/1737920) を参照してください。
 
@@ -194,7 +194,7 @@ CSS の [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) プロパテ
 
 ### 無名ビュー進行タイムライン関数
 
-CSS の [`view()`](/ja/docs/Web/CSS/animation-timeline/view) 関数を使用すると、要素の `animation-timeline` をビュー進行タイムラインとして指定することができます。これにより、要素は、その親スクロールバーの表示領域内を移動するにつれてアニメーションします。
+CSS の [`view()`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline/view) 関数を使用すると、要素の `animation-timeline` をビュー進行タイムラインとして指定することができます。これにより、要素は、その親スクロールバーの表示領域内を移動するにつれてアニメーションします。
 この関数は、アニメーションのタイムラインを提供する親要素の軸と、アニメーションの開始位置および開始する可視領域内のインセットを定義します。
 詳しくは ([Firefox バグ 1808410](https://bugzil.la/1808410)) を参照してください。
 
@@ -233,7 +233,7 @@ CSS の [`view()`](/ja/docs/Web/CSS/animation-timeline/view) 関数を使用す�
 
 ### `shape()` 関数
 
-CSS の [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数は、[`<basic-shape>`](/ja/docs/Web/CSS/basic-shape) データ型の一つで、 {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティで 1 つ以上の「シェイプコマンド」を使用して、シェイプを定義することができます。これらのコマンドは、 [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) とよく似ています。 `shape()` 関数は、いくつかの点で {{cssxref("basic-shape/path","path()")}} 関数と似ていますが、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用する `path()` とは異なり、`shape()` は標準の CSS 構文を使用します。これにより、シェイプを簡単に作成および編集でき、　CSS 数学関数も使用できます。
+CSS の [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数は、[`<basic-shape>`](/ja/docs/Web/CSS/Reference/Values/basic-shape) データ型の一つで、 {{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティで 1 つ以上の「シェイプコマンド」を使用して、シェイプを定義することができます。これらのコマンドは、 [SVG パスコマンド](/ja/docs/Web/SVG/Reference/Attribute/d#パスコマンド) とよく似ています。 `shape()` 関数は、いくつかの点で {{cssxref("basic-shape/path","path()")}} 関数と似ていますが、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)構文を使用する `path()` とは異なり、`shape()` は標準の CSS 構文を使用します。これにより、シェイプを簡単に作成および編集でき、　CSS 数学関数も使用できます。
 詳細については、`clip-path` での `shape()` 関数の対応については [Firefox バグ 1823463](https://bugzil.la/1823463) を、 `offset-path` での関数の対応については [Firefox バグ 1884424](https://bugzil.la/1884424) を、補間処理への対応については [Firefox バグ 1884425](https://bugzil.la/1884425) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
@@ -262,7 +262,7 @@ CSS の {{cssxref("letter-spacing")}} プロパティは、これで指定した
 
 ### 相対色での `calc()` 色チャンネルの対応
 
-CSS [`calc()`](/ja/docs/Web/CSS/calc) 関数は、これで[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#数学関数の使用)の色チャンネルを解釈できるようになり、異なる色空間や異なる関数記法を使用している場合でも、色の変化を正しく計算できるようになりました。[Firefox バグ 1889561](https://bugzil.la/1889561) を参照してください。
+CSS [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数は、これで[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#数学関数の使用)の色チャンネルを解釈できるようになり、異なる色空間や異なる関数記法を使用している場合でも、色の変化を正しく計算できるようになりました。[Firefox バグ 1889561](https://bugzil.la/1889561) を参照してください。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -306,7 +306,7 @@ CSS の {{cssxref("::details-content")}} 擬似要素を使用すると、{{html
 
 ### 要素に属する擬似要素の後に擬似要素を使用できるようにする
 
-[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)（{{cssxref("::first-letter")}} や {{cssxref("::before")}} など）を、[要素に属する擬似要素](/ja/docs/Web/CSS/Pseudo-elements#要素に属する擬似要素)に（{{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} など）追加できるようにする作業が始まりました。
+[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（{{cssxref("::first-letter")}} や {{cssxref("::before")}} など）を、[要素に属する擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#要素に属する擬似要素)に（{{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} など）追加できるようにする作業が始まりました。
 
 これにより、例えば、 {{htmlElement("details")}} 要素の最初の文字のスタイルを設定するために CSS セレクター `::details-content::first-letter` を使用したり、 {{HTMLElement("input") }} の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) の前にコンテンツを追加するために CSS セレクター `::file-selector-button::before` を使用したりすることが可能になります。
 

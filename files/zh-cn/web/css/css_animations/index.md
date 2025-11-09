@@ -245,7 +245,7 @@ input:checked + label::before {
 
 ### 函数
 
-- [`scroll()`](/zh-CN/docs/Web/CSS/animation-timeline/scroll)
+- [`scroll()`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
 
 ### 事件
 
@@ -274,7 +274,7 @@ input:checked + label::before {
 
 - {{cssxref("will-change")}} CSS 属性
 - [`<easing-function>`](/zh-CN/docs/Web/CSS/easing-function) 数据类型
-- [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion) 媒体查询
+- [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) 媒体查询
 - 术语{{glossary("Bézier curve", "贝塞尔曲线")}}
 
 ## 规范

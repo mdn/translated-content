@@ -260,7 +260,7 @@ video {
 その他の有用なコツです。
 
 - ウェブサイトの画像には常に適切な画像形式（PNG や JPG など）を使用し、ウェブサイトに掲載する前にグラフィックエディターを使ってファイルサイズを最適化してください。
-- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
+- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/Reference/Properties/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
 - {{htmlelement("video")}}/{{htmlelement("audio")}} 要素の中にある {{htmlelement("source")}} 要素の media 属性内では、メディアクエリーを使用することができ、様々な端末に最適な映像/音声ファイルを提供することができます。
 
 ## レスポンシブ書体
@@ -368,7 +368,7 @@ h1 {
 
 上記の問題は、`vw` 単位を使用するとユーザーがテキストをズームする機能を失うことです。 そのテキストは常にビューポートのサイズに関連しているためです。**したがって、ビューポート単位を単独で使用してテキストを設定しないでください**。
 
-[`calc()`](/ja/docs/Web/CSS/calc) を使用するという解決策があります。 `em` や `rem` などの固定サイズを使用した値に `vw` 単位を加算しても、テキストはズーム可能です。次のように基本的に、`vw` 単位はズームした値に加算します。
+[`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) を使用するという解決策があります。 `em` や `rem` などの固定サイズを使用した値に `vw` 単位を加算しても、テキストはズーム可能です。次のように基本的に、`vw` 単位はズームした値に加算します。
 
 ```css
 h1 {
@@ -436,7 +436,7 @@ h1 {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-この[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
+この[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
 
 なぜこれが必要なのでしょうか？ モバイルブラウザーは、ビューポートの幅について嘘をつく傾向があるためです。
 
@@ -458,7 +458,7 @@ h1 {
 
 - タッチ画面端末での作業:
   - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェイスの高品質な対応を可能にします。
-  - [pointer](/ja/docs/Web/CSS/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
+  - [pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/Reference/At-rules/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

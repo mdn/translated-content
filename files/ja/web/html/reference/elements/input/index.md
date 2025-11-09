@@ -564,7 +564,7 @@ label {
     詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Reference/Attributes/required) を参照してください。
 
 - [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
-  - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の [`width`](/ja/docs/Web/CSS/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
+  - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の [`width`](/ja/docs/Web/CSS/Reference/Properties/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
 
 - `src`
   - : `image` 入力ボタンにのみ有効で、`src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。{{HTMLElement("input/image", "image")}} 入力型を参照してください。

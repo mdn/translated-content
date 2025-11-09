@@ -81,7 +81,7 @@ h1 {
 }
 ```
 
-これは CSS 2 で変わり、[initial](/ja/docs/Web/CSS/initial) キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
+これは CSS 2 で変わり、[initial](/ja/docs/Web/CSS/Reference/Values/initial) キーワードが CSS プロパティの正当な値になりました。これはプロパティを既定値にリセットします。この既定値は、当該プロパティの CSS 仕様で定義されています。
 
 ```css
 /* 見出しの既定の色は黒 */
@@ -267,7 +267,7 @@ text-stroke: 4px navy;
 ```
 
 > [!NOTE]
-> ブラウザー接頭辞付き CSS プロパティの一覧は、[Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions), [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions) を参照してください。
+> ブラウザー接頭辞付き CSS プロパティの一覧は、[Mozilla CSS 拡張](/ja/docs/Web/CSS/Reference/Mozilla_extensions), [WebKit CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions) を参照してください。
 
 ## z-index は位置指定へどのように関係するのか
 

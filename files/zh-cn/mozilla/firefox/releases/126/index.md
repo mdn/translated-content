@@ -47,11 +47,11 @@ l10n:
 
   （[Firefox bug 1322186](https://bugzil.la/1322186)）。
 
-- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
+- 现已支持 {{domxref("Element.currentCSSZoom")}} 只读属性，其用于获取元素的实际 CSS [zoom](/zh-CN/docs/Web/CSS/Reference/Properties/zoom)（[Firefox bug 1880189](https://bugzil.la/1880189)）。
 
 #### DOM
 
-- 定义自定义元素的状态并使用 CSS 选择器进行匹配的特性现已默认可用。自定义状态被表示为可以添加到或从元素的 {{domxref("ElementInternals.states")}} 属性（{{domxref("CustomStateSet")}}）中移除的自定义标识符。CSS [`:state()`](/zh-CN/docs/Web/CSS/:state) 伪类以自定义标识符为参数，并在自定义元素的状态集中存在该标识符时匹配该元素（[Firefox bug 1887543](https://bugzil.la/1887543)）。
+- 定义自定义元素的状态并使用 CSS 选择器进行匹配的特性现已默认可用。自定义状态被表示为可以添加到或从元素的 {{domxref("ElementInternals.states")}} 属性（{{domxref("CustomStateSet")}}）中移除的自定义标识符。CSS [`:state()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:state) 伪类以自定义标识符为参数，并在自定义元素的状态集中存在该标识符时匹配该元素（[Firefox bug 1887543](https://bugzil.la/1887543)）。
 - 现已支持 {{domxref("Selection.direction")}} 属性，其用于指示范围的方向（[Firefox bug 1867058](https://bugzil.la/1867058)）。
 
 #### 媒体、WebRTC 和 Web 音频

@@ -17,7 +17,7 @@ l10n:
 ### At 规则和描述符
 
 - {{cssxref("@view-transition")}}
-  - [`navigation`](/zh-CN/docs/Web/CSS/@view-transition#navigation) 描述符
+  - [`navigation`](/zh-CN/docs/Web/CSS/Reference/At-rules/@view-transition#navigation) 描述符
 
 ### 选择器和伪元素
 
@@ -67,6 +67,6 @@ l10n:
 
 ## 参见
 
-- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
-- [函数式伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#函数式伪类)
+- [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [函数式伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes#函数式伪类)
 - [学习：伪类和伪元素](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

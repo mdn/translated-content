@@ -7,7 +7,8 @@ slug: Web/API/Node/textContent
 
 {{domxref("Node")}} 인터페이스의 **`textContent`** 속성은 노드와 그 자손의 텍스트 콘텐츠를 표현합니다.
 
-> **참고:** `textContent`와 {{domxref("HTMLElement.innerText")}}가 자주 혼동되곤 하지만, 두 속성에는 [몇 가지 중요한 차이점](#innertext와의_차이점)이 있습니다.
+> [!NOTE]
+> `textContent`와 {{domxref("HTMLElement.innerText")}}가 자주 혼동되곤 하지만, 두 속성에는 [몇 가지 중요한 차이점](#innertext와의_차이점)이 있습니다.
 
 ## 구문
 

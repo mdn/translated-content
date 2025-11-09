@@ -49,7 +49,7 @@ CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算�
 - 可替换元素的 [HTML 规范](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
 - CSS 重要概念：
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -65,5 +65,5 @@ CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算�
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

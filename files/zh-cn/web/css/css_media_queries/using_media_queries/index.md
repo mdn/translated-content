@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 媒体查询常被用于以下目的：
 
-- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
+- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
 - 用 `media=` 属性为{{HTMLElement("style")}}、{{HTMLElement("link")}}、{{HTMLElement("source")}}和其他 [HTML](/zh-CN/docs/Web/HTML) 元素指定特定的媒体类型。如：
 
 ```html
@@ -151,7 +151,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 媒体查询 4 级规范对语法进行了一些改进，以使用具有“范围”类型（例如宽度或高度，减少冗余）的功能进行媒体查询。级别 4 添加了用于编写此类的查询范围上下文。例如，使用最大宽度`max-` 功能，我们可以编写以下代码：
 
 > [!NOTE]
-> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 [`@media` browser compatibility table](/zh-CN/docs/Web/CSS/@media#browser_compatibility)。
+> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 [`@media` browser compatibility table](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#browser_compatibility)。
 
 ```css
 @media (max-width: 30em) { ... }
@@ -197,5 +197,5 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 - [使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
-- [Extended Mozilla media features](/zh-CN/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [Extended WebKit media features](/zh-CN/docs/Web/CSS/WebKit_Extensions#media_features)
+- [Extended Mozilla media features](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
+- [Extended WebKit media features](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions#media_features)

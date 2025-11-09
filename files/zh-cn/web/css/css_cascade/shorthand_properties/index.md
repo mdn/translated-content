@@ -45,7 +45,7 @@ p {
 
 - **三值语法**：`border-width: 1em 2em 3em`，第一个值表示 top；第二个值表示水平方向的，即 left 和 right；第三个值表示 bottom：![Box edges with three-value syntax](border3.png)
 
-- **四值语法**：`border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 2、3、4 点钟方向。
+- **四值语法**：`border-width: 1em 2em 3em 4em`，这四个值分别表示 top、right、bottom、left，即总是从 top 开始的顺时针顺序：![Box edges with four-value syntax](border4.png) Top-Right-Bottom-Left 的首字母与英文单词 _trouble_ 的辅音字母顺序一致：TRBL。你可以按照时钟指针旋转的顺序来记忆：`1em` 在 12 点钟方向，而 `2em`、`3em` 及 `4em` 分别在 3、6、9 点钟方向。
 
 #### 盒子角
 
@@ -152,7 +152,7 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
 
 - CSS 重要概念：
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -166,6 +166,6 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
 
 - 简写属性：{{cssxref("all")}}、{{cssxref("animation")}}、{{cssxref("background")}}、{{cssxref("border")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-start")}}、{{cssxref("border-bottom")}}、{{cssxref("border-color")}}、{{cssxref("border-image")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-left")}}、{{cssxref("border-radius")}}、{{cssxref("border-right")}}、{{cssxref("border-style")}}、{{cssxref("border-top")}}、{{cssxref("border-width")}}、{{cssxref("column-rule")}}、{{cssxref("columns")}}、{{cssxref("flex")}}、{{cssxref("flex-flow")}}、{{cssxref("font")}}、{{cssxref("gap")}}、{{cssxref("grid")}}、{{cssxref("grid-area")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("grid-template")}}、{{cssxref("list-style")}}、{{cssxref("margin")}}、{{cssxref("mask")}}、{{cssxref("offset")}}、{{cssxref("outline")}}、{{cssxref("overflow")}}、{{cssxref("padding")}}、{{cssxref("place-content")}}、{{cssxref("place-items")}}、{{cssxref("place-self")}}、{{cssxref("scroll-margin")}}、{{cssxref("scroll-padding")}}、{{cssxref("text-decoration")}}、{{cssxref("text-emphasis")}}、{{cssxref("transition")}}

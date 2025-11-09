@@ -3,7 +3,7 @@ title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: conic-gradient()")}}
 
@@ -77,7 +77,7 @@ background: conic-gradient(
 - {{CSSxRef("&lt;angle&gt;")}}
   - : 在 `from` 关键字之前，以角度作为其值，定义顺时针方向的渐变旋转。
 - `<position>`
-  - : 使用与 [background-position](/zh-CN/docs/Web/CSS/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。如果省略，默认值是 `center`，表示渐变是居中的。
+  - : 使用与 [background-position](/zh-CN/docs/Web/CSS/Reference/Properties/background-position) 属性相同的长度、顺序和关键字值，定义渐变的中心。如果省略，默认值是 `center`，表示渐变是居中的。
 - `<angular-color-stop>`
   - : 色标（color stop）的 {{CSSxRef("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿着渐变圆周轴的 {{CSSxRef("&lt;angle&gt;")}}）。
 - `<color-hint>`

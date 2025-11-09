@@ -541,7 +541,8 @@ monConcat("; ", "éléphant", "girafe", "lion", "singe");
 monConcat(". ", "sauge", "basilic", "origan", "poivre", "échalotte");
 ```
 
-> **Note :** `arguments` est une variable « semblable » à un tableau. Mais ce n'est pas un tableau au sens strict. En effet, il possède un index numéroté ainsi qu'une propriété `length`. En revanche, il ne possède pas les méthodes classiques de manipulation des tableaux (Array).
+> [!NOTE]
+> `arguments` est une variable « semblable » à un tableau. Mais ce n'est pas un tableau au sens strict. En effet, il possède un index numéroté ainsi qu'une propriété `length`. En revanche, il ne possède pas les méthodes classiques de manipulation des tableaux (Array).
 
 Voir la page sur l'objet {{jsxref("Function")}} dans la référence JavaScript pour plus d'informations.
 

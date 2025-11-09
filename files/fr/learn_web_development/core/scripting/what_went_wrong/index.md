@@ -84,7 +84,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 2. Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur&nbsp;! ![](variable-is-null.png)
 3. Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
 
-   > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
+   > [!NOTE]
+   > [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
 
    > [!NOTE]
    > Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
@@ -107,7 +108,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
    console.log(lowOrHi);
    ```
 
-   > **Note :** [`console.log()`](/fr/docs/Web/API/console/log_static) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
+   > [!NOTE]
+   > [`console.log()`](/fr/docs/Web/API/console/log_static) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
 
 7. Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau&nbsp;; il y a bien un problème à la ligne 48.
 8. Quel est ce problème&nbsp;? Réfléchissons. À la ligne 48, nous avons utilisé la méthode [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question&nbsp;:
@@ -203,7 +205,7 @@ let userGuess === Number(guessField.value);
 cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat `true`/`false` (vrai/faux).
 
 > [!NOTE]
-> Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token) pour plus de précisions à propos de cette erreur.
+> Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) pour plus de précisions à propos de cette erreur.
 
 ### Le programme dit que vous avez gagné quelle que soit votre suggestion
 

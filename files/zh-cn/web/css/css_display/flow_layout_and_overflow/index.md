@@ -44,7 +44,7 @@ body {
 
 {{EmbedLiveSample("overflow", "", "370px")}}
 
-内容将进入框中。一旦填充了该框，它将继续以可见的方式溢出，在框外显示内容，可能在随后的内容下显示。控制溢出行为的属性是初始值为 `visible` 的 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 属性。这就是为什么我们可以看到溢出内容。
+内容将进入框中。一旦填充了该框，它将继续以可见的方式溢出，在框外显示内容，可能在随后的内容下显示。控制溢出行为的属性是初始值为 `visible` 的 [`overflow`](/zh-CN/docs/Web/CSS/Reference/Properties/overflow) 属性。这就是为什么我们可以看到溢出内容。
 
 ## 控制溢出
 
@@ -163,7 +163,7 @@ body {
 
 注意：在 [Overflow Level 3 的工作草案](https://www.w3.org/TR/css-overflow-3/)中，还有一个附加值 `overflow: clip`。这将类似于 `overflow: hidden`，但不允许编程滚动，框将变为不可滚动。此外，它不会创建块格式上下文。
 
-实际上，overflow 属性是 [`overflow-x`](/zh-CN/docs/Web/CSS/overflow-x) 和 [`overflow-y`](/zh-CN/docs/Web/CSS/overflow-y) 属性的简写。如果只为溢出指定一个值，则此值用于两个轴。但是，你可以指定两个值，在这种情况下，第一个值用于 `overflow-x`，因此是水平方向，第二个值用于 `overflow-y` 和垂直方向。在下面的示例中，我只指定了 `overflow-y: scroll`，这样我们就不会得到不需要的水平滚动条。
+实际上，overflow 属性是 [`overflow-x`](/zh-CN/docs/Web/CSS/Reference/Properties/overflow-x) 和 [`overflow-y`](/zh-CN/docs/Web/CSS/Reference/Properties/overflow-y) 属性的简写。如果只为溢出指定一个值，则此值用于两个轴。但是，你可以指定两个值，在这种情况下，第一个值用于 `overflow-x`，因此是水平方向，第二个值用于 `overflow-y` 和垂直方向。在下面的示例中，我只指定了 `overflow-y: scroll`，这样我们就不会得到不需要的水平滚动条。
 
 ```html hidden live-sample___overflow-y
 <div class="box">
@@ -202,7 +202,7 @@ body {
 
 ## 流相对属性
 
-在[书写模式和流式布局指南](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)中，我们研究了 `block-size` 和 `inline-size` 这两个较新的属性，这些属性在使用不同的编写模式时比将布局与屏幕的物理尺寸联系起来更有意义。3 级溢出模块还包括溢出——[`overflow-block`](/zh-CN/docs/Web/CSS/@media/overflow-block) 和 [`overflow-inline`](/zh-CN/docs/Web/CSS/@media/overflow-inline) 的流相关属性。这些对应于 `overflow-x` 和 `overflow-y`，但映射取决于文档的书写模式。
+在[书写模式和流式布局指南](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)中，我们研究了 `block-size` 和 `inline-size` 这两个较新的属性，这些属性在使用不同的编写模式时比将布局与屏幕的物理尺寸联系起来更有意义。3 级溢出模块还包括溢出——[`overflow-block`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/overflow-block) 和 [`overflow-inline`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/overflow-inline) 的流相关属性。这些对应于 `overflow-x` 和 `overflow-y`，但映射取决于文档的书写模式。
 
 这些属性当前在浏览器中没有实现，因此你需要在当前使用物理属性并根据你的书写模式进行调整。
 
@@ -212,7 +212,7 @@ body {
 
 ### 行轴溢出
 
-[`text-overflow`](/zh-CN/docs/Web/CSS/text-overflow) 属性处理行方的文本溢出。它采用两个值 `clip` 中的一个值，在这种情况下，内容在溢出时被剪裁，这是初始值，因此是默认行为。我们还有一个省略号，它呈现了一个省略号，可以用一个更好的字符来替换使用中的语言或书写模式。
+[`text-overflow`](/zh-CN/docs/Web/CSS/Reference/Properties/text-overflow) 属性处理行方的文本溢出。它采用两个值 `clip` 中的一个值，在这种情况下，内容在溢出时被剪裁，这是初始值，因此是默认行为。我们还有一个省略号，它呈现了一个省略号，可以用一个更好的字符来替换使用中的语言或书写模式。
 
 ```html hidden live-sample___text-overflow
 <div class="box">

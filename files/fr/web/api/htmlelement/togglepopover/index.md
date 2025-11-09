@@ -34,7 +34,8 @@ togglePopover(force)
 
 `true` si le popup est ouvert après l'appel, et `false` sinon.
 
-> **Note :** [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) peut être retournée dans d'anciennes versions de navigateurs (voir [compatibilité des navigateurs](#compatibilité_des_navigateur)).
+> [!NOTE]
+> [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) peut être retournée dans d'anciennes versions de navigateurs (voir [compatibilité des navigateurs](#compatibilité_des_navigateur)).
 
 ## Exemples
 

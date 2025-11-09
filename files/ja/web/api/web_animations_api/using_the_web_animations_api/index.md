@@ -47,7 +47,7 @@ l10n:
 }
 ```
 
-これによって、アリスの色とトランスフォーム回転が 3 秒間にわたって一定に（線形で）変化し、それを無限にループします。[@keyframes](/ja/docs/Web/CSS/@keyframes) ブロックで、各ループの 30%（約 0.9 秒）でアリスの色が黒から濃いワイン色に変わり、ループが終わるときにもとに戻ることが分かります。
+これによって、アリスの色とトランスフォーム回転が 3 秒間にわたって一定に（線形で）変化し、それを無限にループします。[@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) ブロックで、各ループの 30%（約 0.9 秒）でアリスの色が黒から濃いワイン色に変わり、ループが終わるときにもとに戻ることが分かります。
 
 ### JavaScript への移行
 
@@ -55,7 +55,7 @@ l10n:
 
 #### キーフレームの表現
 
-最初に必要なことは、CSS の [@keyframes](/ja/docs/Web/CSS/@keyframes) ブロックに対応する [Keyframe オブジェクト](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats) を作成することです。
+最初に必要なことは、CSS の [@keyframes](/ja/docs/Web/CSS/Reference/At-rules/@keyframes) ブロックに対応する [Keyframe オブジェクト](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats) を作成することです。
 
 ```js
 const aliceTumbling = [
@@ -90,7 +90,7 @@ CSS にこける同等の値の表し方とは異なる形で表現されてい�
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
 > [!NOTE]
-> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
+> CSS アニメーションで使用される用語とウェブアニメーションで利用される用語とではいくつか小さな違いがあります。例えば、ウェブアニメーションは `"infinite"` という文字列を利用しない代わりに JavaScript の予約語である `Infinity` を利用します。そして、 `timing-function` の代わりに `easing` を利用します。既定の [animation-timing-function](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function) が簡単な `ease` である CSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは `linear` (線形)であるため、ここではイージング値をリストにしていません。
 
 #### パーツをまとめる
 

@@ -41,7 +41,8 @@ input {
 }
 ```
 
-> **Note :** [Les boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs d'[un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
+> [!NOTE]
+> [Les boutons radio](/fr/docs/Web/HTML/Reference/Elements/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs d'[un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
 
 ## Valeur
 
@@ -359,6 +360,6 @@ otherCheckbox.addEventListener("change", () => {
 
 ## Voir aussi
 
-- Les sélecteurs CSS qui permettent de mettre en forme les cases à cocher en fonction de leur état actuel&nbsp;: [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)
+- Les sélecteurs CSS qui permettent de mettre en forme les cases à cocher en fonction de leur état actuel&nbsp;: [`:checked`](/fr/docs/Web/CSS/Reference/Selectors/:checked), [`:indeterminate`](/fr/docs/Web/CSS/Reference/Selectors/:indeterminate)
 - L'interface du DOM qui représente cet élément&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
 - [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn_web_development/Extensions/Forms)

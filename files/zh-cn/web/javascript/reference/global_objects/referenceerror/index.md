@@ -3,8 +3,6 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
 
-{{JSRef}}
-
 **`ReferenceError`**（引用错误）对象代表当一个不存在（或尚未初始化）的变量被引用时发生的错误。
 
 `ReferenceError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。

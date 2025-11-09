@@ -20,14 +20,14 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しくサポートされる CSS の機能
 
-- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/@font-face)
+- [ダウンロードフォントのサポート](/ja/docs/Web/CSS/Reference/At-rules/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。
 - {{ cssxref("::before") }} および {{ cssxref("::after") }} の CSS 2.1 への更新
   - : `::before` および `::after` 擬似要素が CSS 2.1 サポートを満たすように更新されました。`position`、`float`、`list-style-*`、そして、いくつかの `display` プロパティのサポートが追加されています。
 - 長さの単位 `ch`
-  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
+  - : 単位 `ch` が通常の[長さの単位](/ja/docs/Web/CSS/Reference/Values/length#units)として任意の場所で使えるようになりました。"1 ch" は文字 '0' の横幅です。
 - {{ cssxref("opacity") }}
   - : 標準の `opacity` プロパティの先行実装である `-moz-opacity` という CSS への Mozilla 拡張が削除されました。
 - {{ cssxref("text-shadow") }}
@@ -80,7 +80,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : Firefox 3.5 ではウェブアプリケーションでの簡単なマルチスレッドサポートを可能にする Web Workers をサポートします。
 - [位置情報の使用](/ja/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 では Geolocation API をサポートします。これによりウェブアプリケーションはユーザーの現在位置についての情報を提供するプロバイダがインストールされ有効化されていれば、その情報を保持することができます。
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
   - : Selectors API により与えられた選択ルールにマッチする要素を指定するために文書を検索できます。
 - [マウスジェスチャイベント](/ja/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 はトラックパッドスワイプのようなマウスジェスチャイベントをサポートします。

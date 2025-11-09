@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
+**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
 
 ## 语法
 
@@ -21,7 +21,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - `<length-percentage [0,∞]>`
   - : {{cssxref("&lt;length-percentage&gt;")}} 值为指定矩形宽度和高度的非负值。最小值可以为零，最大值没有限制。
 - `round <'border-radius'>`
-  - : 与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 简写属性使用相同的语法来指定矩形圆角的半径。此参数为可选参数。
+  - : 与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/Reference/Properties/border-radius) 简写属性使用相同的语法来指定矩形圆角的半径。此参数为可选参数。
 
 ## 示例
 

@@ -3,8 +3,6 @@ title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 
-{{JSRef}}
-
 **`Number.NEGATIVE_INFINITY`** 静态数据属性表示负无穷值。
 
 {{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}

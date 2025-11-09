@@ -85,7 +85,7 @@ CSSOM の構築を最適化し、ページのパフォーマンスを改善す�
 
   セレクターを複雑で詳細でないものにすると、メンテナンスも容易になります。単純なセレクターは、その動作が理解しやすく、セレクターの[詳細度](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#詳細度_2)が低い場合は、後で必要に応じてスタイルを簡単に上書きすることができます。
 
-- **必要以上に要素にスタイルを適用しないでください**: よくある間違いは、[全称セレクター](/ja/docs/Web/CSS/Universal_selectors)を使用して、すべての要素、あるいは少なくとも必要以上に多くの要素にスタイルを適用することです。この種のスタイル設定は、特に大規模なサイトでは、パフォーマンスに悪影響を及ぼす可能性があります。
+- **必要以上に要素にスタイルを適用しないでください**: よくある間違いは、[全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)を使用して、すべての要素、あるいは少なくとも必要以上に多くの要素にスタイルを適用することです。この種のスタイル設定は、特に大規模なサイトでは、パフォーマンスに悪影響を及ぼす可能性があります。
 
   ```css
   /* Selects every element inside the <body> */
@@ -126,7 +126,7 @@ CSSOM の構築を最適化し、ページのパフォーマンスを改善す�
 
 アニメーションは知覚的パフォーマンスを改善し、インターフェイスをより軽快に感じさせ、ユーザーがページの読み込みを待っている間に進行状況が進んでいることを同様に感じさせることができます（例えば、読み込みスピナーなど）。しかし、アニメーションが大きくなったり、アニメーションの数が増えたりすると、当然、処理能力もより多く要求されるようになり、パフォーマンスが低下する可能性があります。
 
-最も簡単なアドバイスは、不要なアニメーションをすべて削減することです。また、低電力の端末やバッテリー電力が限られているモバイル端末を使用しているユーザー向けに、アニメーションをオフにするコントロール/サイト設定を用意することもできます。 JavaScript を使用して、アニメーションをページに適用するかどうかを最初に制御することもできます。また、ユーザーの OS レベルでのアニメーションに関する環境設定に基づいて、アニメーションのスタイルを適用するかどうかを選択的に指定できる [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) というメディアクエリーも使用できます。
+最も簡単なアドバイスは、不要なアニメーションをすべて削減することです。また、低電力の端末やバッテリー電力が限られているモバイル端末を使用しているユーザー向けに、アニメーションをオフにするコントロール/サイト設定を用意することもできます。 JavaScript を使用して、アニメーションをページに適用するかどうかを最初に制御することもできます。また、ユーザーの OS レベルでのアニメーションに関する環境設定に基づいて、アニメーションのスタイルを適用するかどうかを選択的に指定できる [`prefers-reduced-motion`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) というメディアクエリーも使用できます。
 
 基本的な DOM アニメーションについては、JavaScript アニメーションではなく、可能な場合は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) を使用することをお勧めします（[ウェブアニメーション API] (/ja/docs/Web/API/Web_Animations_API) は、 JavaScript を使用して CSS アニメーションに直接フックする方法を提供しています）。
 
@@ -134,33 +134,33 @@ CSSOM の構築を最適化し、ページのパフォーマンスを改善す�
 
 次に、アニメーションのパフォーマンスは、アニメーションするプロパティに大きく依存します。一部のプロパティは、アニメーションを行うと [再フロー](/ja/docs/Glossary/Reflow) （したがって [再描画](/ja/docs/Glossary/Repaint) も）が発生するため、避ける必要があります。これには、次のようなプロパティがあります。
 
-- 要素の寸法を変更するもの。たとえば、[`width`](/ja/docs/Web/CSS/width)、[`height`](/ja/docs/Web/CSS/height)、[`border`](/ja/docs/Web/CSS/border)、[`padding`](/ja/docs/Web/CSS/padding) など。
-- 要素の位置を変更するもの。たとえば、[`margin`](/ja/docs/Web/CSS/margin)、[`top`](/ja/docs/Web/CSS/top)、[`bottom`](/ja/docs/Web/CSS/bottom)、[`left`](/ja/docs/Web/CSS/left)、[`right`](/ja/docs/Web/CSS/right) など。
-- 要素のレイアウトを変更するもの。たとえば、[`align-content`](/ja/docs/Web/CSS/align-content)、[`align-items`](/ja/docs/Web/CSS/align-items)、[`flex`](/ja/docs/Web/CSS/flex) など。
-- 要素の形状を変化させる視覚効果を追加するもの。たとえば、[`box-shadow`](/ja/docs/Web/CSS/box-shadow) など。
+- 要素の寸法を変更するもの。たとえば、[`width`](/ja/docs/Web/CSS/Reference/Properties/width)、[`height`](/ja/docs/Web/CSS/Reference/Properties/height)、[`border`](/ja/docs/Web/CSS/Reference/Properties/border)、[`padding`](/ja/docs/Web/CSS/Reference/Properties/padding) など。
+- 要素の位置を変更するもの。たとえば、[`margin`](/ja/docs/Web/CSS/Reference/Properties/margin)、[`top`](/ja/docs/Web/CSS/Reference/Properties/top)、[`bottom`](/ja/docs/Web/CSS/Reference/Properties/bottom)、[`left`](/ja/docs/Web/CSS/Reference/Properties/left)、[`right`](/ja/docs/Web/CSS/Reference/Properties/right) など。
+- 要素のレイアウトを変更するもの。たとえば、[`align-content`](/ja/docs/Web/CSS/Reference/Properties/align-content)、[`align-items`](/ja/docs/Web/CSS/Reference/Properties/align-items)、[`flex`](/ja/docs/Web/CSS/Reference/Properties/flex) など。
+- 要素の形状を変化させる視覚効果を追加するもの。たとえば、[`box-shadow`](/ja/docs/Web/CSS/Reference/Properties/box-shadow) など。
 
 現在のブラウザーは、ページ全体ではなく、変更された部分のみを再描画する賢い機能を備えています。その結果、アニメーションが大きくなると、コストもかかります。
 
 可能であれば、再フローや再描画を引き起こさないプロパティをアニメーションさせる方がよいでしょう。これには、次のようなものがあります。
 
 - [座標変換](/ja/docs/Web/CSS/CSS_transforms)
-- [`opacity`](/ja/docs/Web/CSS/opacity)
-- [`filter`](/ja/docs/Web/CSS/filter)
+- [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity)
+- [`filter`](/ja/docs/Web/CSS/Reference/Properties/filter)
 
 ### GPU でのアニメーション
 
 パフォーマンスをさらに向上させるには、アニメーションの処理をメインスレッドから端末の GPU に移動させる（合成とも呼ばれる）ことを検討してください。これは、ブラウザーが GPU に自動的に送信して処理する、特定の種類のアニメーションを選択することで実現できます。これには、次のようなものがあります。
 
-- 3D 座標変換。例えば [`transform: translateZ()`](/ja/docs/Web/CSS/transform) や [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d) など。
-- 特定の他のプロパティがアニメーションする要素、たとえば [`position: fixed`](/ja/docs/Web/CSS/position) など。
-- [`will-change`](/ja/docs/Web/CSS/will-change) が適用されている要素（下記の節を参照）。
+- 3D 座標変換。例えば [`transform: translateZ()`](/ja/docs/Web/CSS/Reference/Properties/transform) や [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d) など。
+- 特定の他のプロパティがアニメーションする要素、たとえば [`position: fixed`](/ja/docs/Web/CSS/Reference/Properties/position) など。
+- [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) が適用されている要素（下記の節を参照）。
 - 独自のレイヤーで描画される一部の要素、例えば [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas)、 [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) など。
 
 GPU でのアニメーションは、特にモバイル端末においてパフォーマンスの改善につながります。しかし、アニメーションを GPU に移動することは、必ずしもそれほど単純ではありません。とても有益で詳細な分析については、 [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) をご覧ください。
 
 ### `will-change` による要素の変更の最適化
 
-ブラウザーは、要素が実際に変更される前に最適化を設定することがあります。この種の最適化は、実際に必要とされる前に高価な可能性のある作業を行うことで、ページのレスポンスを向上させることができます。 CSS の [`will-change`](/ja/docs/Web/CSS/will-change) プロパティは、要素がどのように変化することが予想されるかをブラウザーに示唆します。
+ブラウザーは、要素が実際に変更される前に最適化を設定することがあります。この種の最適化は、実際に必要とされる前に高価な可能性のある作業を行うことで、ページのレスポンスを向上させることができます。 CSS の [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティは、要素がどのように変化することが予想されるかをブラウザーに示唆します。
 
 > [!NOTE]
 > `will-change`は、既存のパフォーマンス問題に対処するための最後の手段として使用することを意図しています。パフォーマンス上の問題を予測するために使用するべきではありません。
@@ -199,7 +199,7 @@ CSS では、メディアクエリーを使用して、スタイルを特定の�
 
 ### フォントの読み込み
 
-フォントは、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティを使用して要素に実際に適用されたときにのみ読み込まれることを覚えておいてください。アットルール [`@font-face`](/ja/docs/Web/CSS/@font-face) を使用して最初に参照されたときではありません。
+フォントは、 [`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family) プロパティを使用して要素に実際に適用されたときにのみ読み込まれることを覚えておいてください。アットルール [`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face) を使用して最初に参照されたときではありません。
 
 ```css
 /* フォントはここでは読み込まれない */
@@ -238,7 +238,7 @@ h3 {
 
 本文のフォントを選択する場合、特にユーザー生成コンテンツや複数の言語のコンテンツを扱う場合は、そのフォントで使用される文字を確実に把握することが困難です。
 
-しかし、特定のグリフのセット（例えば、見出し用のグリフや特定の句読点文字のみ）を使用することが分かっている場合は、ブラウザーがダウンロードするグリフの数を制限することができます。これは、必要なサブセットのみを含むフォントファイルを作成することで実現できます。このプロセスは、[サブセット](https://fonts.google.com/knowledge/glossary/subsetting)と呼ばれています。[`unicode-range`](/ja/docs/Web/CSS/@font-face/unicode-range) `@font-face` 記述子を使用して、サブセットフォントが使用される場合を指定することができます。ページがこの範囲の文字を使用していない場合、フォントはダウンロードされません。
+しかし、特定のグリフのセット（例えば、見出し用のグリフや特定の句読点文字のみ）を使用することが分かっている場合は、ブラウザーがダウンロードするグリフの数を制限することができます。これは、必要なサブセットのみを含むフォントファイルを作成することで実現できます。このプロセスは、[サブセット](https://fonts.google.com/knowledge/glossary/subsetting)と呼ばれています。[`unicode-range`](/ja/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range) `@font-face` 記述子を使用して、サブセットフォントが使用される場合を指定することができます。ページがこの範囲の文字を使用していない場合、フォントはダウンロードされません。
 
 ```css
 @font-face {
@@ -250,7 +250,7 @@ h3 {
 
 ### `font-display` 記述子によるフォント表示の動作の定義
 
-`@font-face` アットルールに適用される [`font-display`](/ja/docs/Web/CSS/@font-face/font-display) 記述子は、フォントファイルがどのようにブラウザーで読み込まれて表示されているのか、フォントの読み込み中、または読み込みが失敗した時に代替フォントでテキストを表示できるようにするかを定義します。これにより、空白の画面を表示することなくテキストを表示することができ、パフォーマンスを向上させることができます。
+`@font-face` アットルールに適用される [`font-display`](/ja/docs/Web/CSS/Reference/At-rules/@font-face/font-display) 記述子は、フォントファイルがどのようにブラウザーで読み込まれて表示されているのか、フォントの読み込み中、または読み込みが失敗した時に代替フォントでテキストを表示できるようにするかを定義します。これにより、空白の画面を表示することなくテキストを表示することができ、パフォーマンスを向上させることができます。
 
 ```css
 @font-face {
