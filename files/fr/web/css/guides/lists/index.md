@@ -19,9 +19,9 @@ original_slug: Web/CSS/CSS_lists
 
 ## Guides
 
-- [Indentation homogène des listes](/fr/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
+- [Indentation homogène des listes](/fr/docs/Web/CSS/Guides/Lists/Indenting)
   - : Explique comment obtenir une indentation homogène dans les différents navigateurs.
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
   - : Explique comment utiliser les propriétés CSS relatives aux compteurs pour numéroter les listes.
 
 ## Spécifications

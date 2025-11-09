@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-L'interface **`TransitionEvent`** représente les évènements qui fournissent des informations relatives aux [transitions](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+L'interface **`TransitionEvent`** représente les évènements qui fournissent des informations relatives aux [transitions](/fr/docs/Web/CSS/Guides/Transitions/Using).
 
 {{InheritanceDiagram}}
 
@@ -30,13 +30,13 @@ _Cette interface hérite également des propriétés de son parent [`Event`](/fr
 ## Évènements de type `TransitionEvent`
 
 - [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
-  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) a été annulée.
+  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) a été annulée.
 - [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) a terminé.
+  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) a terminé.
 - [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
-  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) est créée (c'est-à-dire ajoutée à l'ensemble des transitions lancées), sans qu'elle soit nécessairement démarrée.
+  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) est créée (c'est-à-dire ajoutée à l'ensemble des transitions lancées), sans qu'elle soit nécessairement démarrée.
 - [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
-  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions) a démarré.
+  - : Un [évènement](/fr/docs/Web/API/Event) déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions) a démarré.
 
 ## Méthodes des instances
 
@@ -52,7 +52,7 @@ _Cette interface hérite également des méthodes de son parent [`Event`](/fr/do
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - Les propriétés CSS relatives aux transitions&nbsp;:
   - [`transition`](/fr/docs/Web/CSS/Reference/Properties/transition)
   - [`transition-delay`](/fr/docs/Web/CSS/Reference/Properties/transition-delay)

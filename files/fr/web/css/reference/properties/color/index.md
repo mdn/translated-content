@@ -172,4 +172,4 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 - Le type de donnée {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}} et {{cssxref("color-adjust")}}
-- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)

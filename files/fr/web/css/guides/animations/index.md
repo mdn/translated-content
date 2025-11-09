@@ -267,7 +267,7 @@ Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des 
 
 ## Guides
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
   - : Un tutoriel pas-à-pas qui explique comment créer des animations CSS. Cet article décrit les différentes propriétés et règles @ relatives aux animations et comment elles interagissent.
 - [Utiliser l'API Web Animations](/fr/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
   - : Exemples de besoins courants en animation qui peuvent être résolus avec quelques lignes de JavaScript.
@@ -286,7 +286,7 @@ Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des 
 ## Voir aussi
 
 - [Module CSS d'animations dirigées par le défilement](/fr/docs/Web/CSS/CSS_scroll-driven_animations).
-- Propriétés du module CSS [transitions](/fr/docs/Web/CSS/CSS_transitions) pour déclencher des animations en fonction des actions utilisateur·ice·s.
+- Propriétés du module CSS [transitions](/fr/docs/Web/CSS/Guides/Transitions) pour déclencher des animations en fonction des actions utilisateur·ice·s.
 - La propriété {{cssxref("interpolate-size")}} et la fonction {{cssxref("calc-size()")}} pour permettre des animations vers et depuis des [valeurs de taille intrinsèque](/fr/docs/Glossary/Intrinsic_Size).
 - L'élément HTML {{htmlelement("canvas")}} avec l'[API canvas](/fr/docs/Web/API/Canvas_API) et l'[API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
 - L'interface {{domxref("SVGAnimationElement")}} pour tous les éléments d'animation SVG, incluant {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} et {{domxref("SVGAnimateTransformElement")}}.

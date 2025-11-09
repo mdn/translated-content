@@ -8,14 +8,14 @@ En CSS, **l'héritage** contrôle ce qui se produit lorsqu'aucune valeur n'est i
 
 Les propriétés CSS peuvent être rangées dans deux catégories&nbsp;:
 
-- **Les propriétés héritées**, qui prennent par défaut [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de leur élément parent.
-- **Les propriétés non-héritées**, qui prennent par défaut [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) de la propriété.
+- **Les propriétés héritées**, qui prennent par défaut [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de leur élément parent.
+- **Les propriétés non-héritées**, qui prennent par défaut [la valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) de la propriété.
 
 Voyez sur [les pages des différentes propriétés CSS dans la référence](/fr/docs/Web/CSS/Reference#index_des_mots-clés) la définition qui indique si une propriété donnée hérite par défaut («&nbsp;Héritée&nbsp;: oui&nbsp;») ou non («&nbsp;Héritée&nbsp;: non&nbsp;»).
 
 ## Propriétés héritées
 
-Lorsqu'aucune valeur n'a été fournie pour une **propriété héritée** sur un élément, celle-ci utilise [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) de la propriété sur l'élément parent. Seul l'élément racine du document récupère [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) indiquée dans le résumé de la propriété.
+Lorsqu'aucune valeur n'a été fournie pour une **propriété héritée** sur un élément, celle-ci utilise [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de la propriété sur l'élément parent. Seul l'élément racine du document récupère [la valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) indiquée dans le résumé de la propriété.
 
 Un exemple caractéristique de propriété héritée est la propriété [`color`](/fr/docs/Web/CSS/Reference/Properties/color). Prenons la règle et le fragment de document suivants&nbsp;:
 
@@ -35,7 +35,7 @@ Les mots «&nbsp;du texte en emphase&nbsp;» apparaissent en vert, car l'éléme
 
 ## Propriétés non-héritées
 
-Lorsqu'aucune valeur n'est fournie pour une **propriété non-héritée** sur un élément, celle-ci utilise [la valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) (indiquée dans le résumé de la propriété).
+Lorsqu'aucune valeur n'est fournie pour une **propriété non-héritée** sur un élément, celle-ci utilise [la valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) (indiquée dans le résumé de la propriété).
 
 Un exemple caractéristique de propriété non-héritée est la propriété [`border`](/fr/docs/Web/CSS/Reference/Properties/border). Prenons la règle et le fragment de document suivants&nbsp;:
 
@@ -99,22 +99,22 @@ On voit ici la bordure supplémentaire autour du texte en emphase.
   - [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
   - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
   - [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
-- [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade)
+- [Introduction à la cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
 - [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Règles-at](/fr/docs/Web/CSS/CSS_syntax/At-rules)
-  - [Commentairess](/fr/docs/Web/CSS/CSS_syntax/Comments)
-  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Règles-at](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [Commentairess](/fr/docs/Web/CSS/Guides/Syntax/Comments)
+  - [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
-    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
-    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
-    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [Initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)

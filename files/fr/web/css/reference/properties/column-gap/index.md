@@ -54,7 +54,7 @@ column-gap: 20px;
 }
 ```
 
-La propriété `column-gap` était initialement définie dans le module de spécification [Colonnes CSS](/fr/docs/Web/CSS/CSS_multicol_layout). Cette définition a depuis été élargie afin de pouvoir être utilisée dans les différents modes de disposition et fait désormais partie du module de spécification [_Box Alignment_ (alignement des boîtes en CSS)](/fr/docs/Web/CSS/CSS_box_alignment). Cette propriété peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
+La propriété `column-gap` était initialement définie dans le module de spécification [Colonnes CSS](/fr/docs/Web/CSS/Guides/Multicol_layout). Cette définition a depuis été élargie afin de pouvoir être utilisée dans les différents modes de disposition et fait désormais partie du module de spécification [_Box Alignment_ (alignement des boîtes en CSS)](/fr/docs/Web/CSS/Guides/Box_alignment). Cette propriété peut être utilisée pour les dispositions multi-colonnes, les dispositions flexibles et les dispositions en grille.
 
 ## Syntaxe
 
@@ -197,5 +197,5 @@ column-gap: unset;
 ## Voir aussi
 
 - Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_gouttières)_
-- Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_gouttières)_
+- Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)_

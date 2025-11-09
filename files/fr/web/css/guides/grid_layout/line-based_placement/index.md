@@ -8,9 +8,9 @@ original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
 
-Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.
+Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.
 
-Commencer par utiliser les lignes numérotées est plutôt logique car toutes les grilles possèdent des lignes numérotées. Ces lignes forment les colonnes et les lignes horizontales de la grille, elles sont numérotées à partir de 1. On notera aussi que la numérotation des lignes varie selon le mode d'écriture du document. Dans un document écrit de gauche à droite comme le français, la ligne numéro 1 est située à l'extrêmité gauche de la grille. Si l'écriture va de droite à gauche, la ligne numéro 1 sera celle qui est située le plus à droite. Nous explorerons ces notions sur les modes d'écriture dans [un prochain guide](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes).
+Commencer par utiliser les lignes numérotées est plutôt logique car toutes les grilles possèdent des lignes numérotées. Ces lignes forment les colonnes et les lignes horizontales de la grille, elles sont numérotées à partir de 1. On notera aussi que la numérotation des lignes varie selon le mode d'écriture du document. Dans un document écrit de gauche à droite comme le français, la ligne numéro 1 est située à l'extrêmité gauche de la grille. Si l'écriture va de droite à gauche, la ligne numéro 1 sera celle qui est située le plus à droite. Nous explorerons ces notions sur les modes d'écriture dans [un prochain guide](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes).
 
 ## Un exemple simple
 
@@ -72,7 +72,7 @@ On peut placer les éléments d'une grille en utilisant les numéros de lignes q
 }
 ```
 
-Lorsqu'on positionne des objets sur la grille, les autres continueront d'être placés selon les règles de placement automatique. Nous verrons ces règles dans [un prochain guide](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) mais grâce à cet exemple, on peut voir que les cellules vides sont remplies au fur et à mesure par les objets qui ne sont pas placés explicitement.
+Lorsqu'on positionne des objets sur la grille, les autres continueront d'être placés selon les règles de placement automatique. Nous verrons ces règles dans [un prochain guide](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement) mais grâce à cet exemple, on peut voir que les cellules vides sont remplies au fur et à mesure par les objets qui ne sont pas placés explicitement.
 
 On peut placer chacun des éléments individuellement et on peut également choisir de laisser certaines cellules vides. Un des avantages de la grille CSS est qu'on peut créer des espaces sans avoir à utiliser des marges ou d'autres méthodes de contournement.
 
@@ -363,7 +363,7 @@ On peut aller plus loin et définir une zone pour chaque élément grâce à une
 
 {{EmbedLiveSample('La_propriété_grid-area', '300', '330')}}
 
-L'ordre des valeurs utilisé pour `grid-area` peut sembler un peu étrange quand on connaît celui utilisé par les propriétés raccourcies pour les marges (_margin_) et le remplissage (_padding_). Cet ordre s'explique car les grilles CSS fonctionnent avec les différents modes d'écriture et on utilise des propriétés et des valeurs _logiques_ plutôt que des propriétés et des valeurs _physiques_. Nous aborderons ce point dans [un prochain article](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) mais il faut retenir ici que l'ordre des valeurs correspond aux directions logiques suivantes :
+L'ordre des valeurs utilisé pour `grid-area` peut sembler un peu étrange quand on connaît celui utilisé par les propriétés raccourcies pour les marges (_margin_) et le remplissage (_padding_). Cet ordre s'explique car les grilles CSS fonctionnent avec les différents modes d'écriture et on utilise des propriétés et des valeurs _logiques_ plutôt que des propriétés et des valeurs _physiques_. Nous aborderons ce point dans [un prochain article](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes) mais il faut retenir ici que l'ordre des valeurs correspond aux directions logiques suivantes :
 
 - `block-start`
 - `block-end`

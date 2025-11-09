@@ -279,7 +279,7 @@ Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les 
 
 ## Résumé
 
-Voici un rapide tour des types de valeur et unités que vous pourrez rencontrer en CSS. Vous pouvez consulter la liste exhaustive des différents types sur [la page de référence MDN sur les valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units). Vous verrez de nombreuses types et valeurs à mesure que vous progresserez dans ces leçons.
+Voici un rapide tour des types de valeur et unités que vous pourrez rencontrer en CSS. Vous pouvez consulter la liste exhaustive des différents types sur [la page de référence MDN sur les valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units). Vous verrez de nombreuses types et valeurs à mesure que vous progresserez dans ces leçons.
 
 La notion cruciale à garder en mémoire est que chaque propriété possède une liste de types de valeur autorisés et que chaque type de valeur possède une définition indiquant les valeurs possibles. Vous pourrez trouver toutes les informations et détails sur MDN.
 

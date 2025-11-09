@@ -83,7 +83,7 @@ Cependant, les boîtes ont aussi un type de positionnement intérieur, qui décr
 Ce type de positionnement intérieur peut naturellement être modifié, en utilisant la valeur `flex` de la propriété `display`. Ainsi, si on donne la propriété `display: flex;` à un élément, son type de positionnement extérieur est "en bloc" (`block`), mais son type de positionnement intérieur est modifié en `flex`. Tout élément directement enfant de cette boîte se voit alors changé en élément flex, et sera mis en page selon les règles précisées dans les spécifications de [Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), dont on reparlera plus tard.
 
 > [!NOTE]
-> Pour en apprendre d'avantage sur les valeurs prises par la propriété display, et le comportement des boîtes dans une mise en page en bloc ou en ligne, jettez un coup d'oeil au guide MDN sur la [Disposition en ligne et en bloc](/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow).
+> Pour en apprendre d'avantage sur les valeurs prises par la propriété display, et le comportement des boîtes dans une mise en page en bloc ou en ligne, jettez un coup d'oeil au guide MDN sur la [Disposition en ligne et en bloc](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout).
 
 Lorsque vous en apprendrez plus sur la mise en page en CSS, vous découvrirez une variété d'autres valeurs de positionnement intérieur pour une boîte, tel que `flex`, ou encore [`grid`](/fr/docs/Learn_web_development/Core/CSS_layout/Grids).
 
@@ -249,7 +249,7 @@ Dans l'exemple ci-dessous, nous avons deux paragraphes. Le paragraphe du haut a 
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 700)}}
 
-Il existe quelques règles qui contrôlent la fusion ou non des marges. Pour plus d'informations, référez vous à la page détaillée [Maîtriser la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). Si vous ne devez retenir qu'une chose, c'est que les marges peuvent fusionner, et que si vos marges ne correspondent pas à vos attentes, c'est certainement ce phénomène qui est derrière.
+Il existe quelques règles qui contrôlent la fusion ou non des marges. Pour plus d'informations, référez vous à la page détaillée [Maîtriser la fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing). Si vous ne devez retenir qu'une chose, c'est que les marges peuvent fusionner, et que si vos marges ne correspondent pas à vos attentes, c'est certainement ce phénomène qui est derrière.
 
 ### Les bordures
 

@@ -160,4 +160,4 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Refer
 - [Text Shadow Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Un générateur CSS d'ombre de texte interactif
 - {{cssxref("box-shadow")}}
 - Le type de données {{cssxref("&lt;color&gt;")}} (pour spécifier la couleur d'ombre)
-- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/CSS/Guides/Colors/Applying_color)

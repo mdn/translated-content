@@ -6,7 +6,7 @@ original_slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) ([`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
+La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) ([`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
 
 {{InteractiveExample("CSS Demo: object-fit")}}
 

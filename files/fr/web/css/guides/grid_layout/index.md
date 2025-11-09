@@ -127,18 +127,18 @@ Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes
 
 ## Guides
 
-- [Les concepts de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Le modèle de grille et les autres modèles de disposition](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Le placement automatique sur une grille](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
-- [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [Les concepts de base](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Le modèle de grille et les autres modèles de disposition](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [Définir des zones sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [Le placement automatique sur une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [Les grilles CSS, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
+- [Les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/Guides/Grid_layout)
+- [Construire des dispositions courantes avec des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+- [Les sous-grilles (_subgrid_)](/fr/docs/Web/CSS/Guides/Grid_layout/Subgrid)
 
 ## Ressources externes
 

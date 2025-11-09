@@ -143,4 +143,4 @@ La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite
 
 - [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)
 - [`background`](/fr/docs/Web/CSS/Reference/Properties/background)
-- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)

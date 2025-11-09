@@ -256,6 +256,6 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 - Les autres éléments HTML relatifs aux listes&nbsp;: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>`&nbsp;:
   - {{CSSxRef("list-style")}} permet de choisir la façon dont les nombres ordinaux sont affichés,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer les listes imbriquées complexes,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sont utiles pour gérer les listes imbriquées complexes,
   - {{CSSxRef("line-height")}} permet d'obtenir le même effet que l'attribut `compact` qui est déprécié,
   - {{CSSxRef("margin")}} permet de contrôler l'indentation de la liste.

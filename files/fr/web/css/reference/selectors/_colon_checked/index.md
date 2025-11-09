@@ -49,7 +49,7 @@ input:checked {
 L'utilisateur·ice peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
 
 > [!NOTE]
-> Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
+> Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
 
 ## Syntaxe
 

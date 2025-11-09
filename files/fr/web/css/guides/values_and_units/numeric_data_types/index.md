@@ -35,7 +35,7 @@ Elles sont toutes couvertes dans les sous-sections suivantes.
 
 Lorsqu'une unité de distance, également connue sous le nom de longueur, est autorisée comme valeur pour une propriété, cela est décrit comme le type {{cssxref("&lt;length&gt;")}}. Il existe deux types de longueurs en CSS&nbsp;: relative et absolue. Les unités de longueur relatives spécifient une longueur par rapport à quelque chose d'autre.
 
-Il existe deux types de longueurs relatives&nbsp;: les longueurs relatives à la police et les longueurs relatives au pourcentage de la fenêtre d'affichage. Ces deux types se déclinent en deux catégories. Les unités de longueur relatives à la police sont soit locales, soit racines. Les longueurs relatives au pourcentage de la fenêtre d'affichage sont soit relatives à la hauteur ou à la largeur de la fenêtre d'affichage, soit, comme défini dans le [module de confinement CSS](/fr/docs/Web/CSS/CSS_containment), relatives à un [conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#unités_de_distance_pour_les_requêtes_de_conteneurs).
+Il existe deux types de longueurs relatives&nbsp;: les longueurs relatives à la police et les longueurs relatives au pourcentage de la fenêtre d'affichage. Ces deux types se déclinent en deux catégories. Les unités de longueur relatives à la police sont soit locales, soit racines. Les longueurs relatives au pourcentage de la fenêtre d'affichage sont soit relatives à la hauteur ou à la largeur de la fenêtre d'affichage, soit, comme défini dans le [module de confinement CSS](/fr/docs/Web/CSS/Guides/Containment), relatives à un [conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries#unités_de_distance_pour_les_requêtes_de_conteneurs).
 
 #### Longueurs relatives à la police locales
 
@@ -227,7 +227,7 @@ La spécification définit également la fonction `toggle()`. Elle n'a pas encor
 
 ## Voir aussi
 
-- [Types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
+- [Types de données textuelles](/fr/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
 - [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

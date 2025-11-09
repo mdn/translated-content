@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le niveau&nbsp;3 de la spécification [CSS Grid Layout](/fr/docs/Web/CSS/CSS_grid_layout) introduit la valeur `masonry` pour les propriétés {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}}. Ce guide explique ce qu'est la mise en page en maçonnerie et comment l'utiliser.
+Le niveau&nbsp;3 de la spécification [CSS Grid Layout](/fr/docs/Web/CSS/Guides/Grid_layout) introduit la valeur `masonry` pour les propriétés {{CSSxRef("grid-template-columns")}} et {{CSSxRef("grid-template-rows")}}. Ce guide explique ce qu'est la mise en page en maçonnerie et comment l'utiliser.
 
 La mise en page en maçonnerie est une méthode d'agencement où un axe utilise une grille stricte classique, généralement les colonnes, et l'autre axe adopte une disposition en maçonnerie. Sur cet axe, au lieu de laisser des espaces après les éléments plus courts, les éléments suivants remontent pour combler les vides.
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/min-height
 original_slug: Web/CSS/min-height
 ---
 
-La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée) de la propriété [`height`](/fr/docs/Web/CSS/Reference/Properties/height) devienne inférieure à `min-height`.
+La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété [`height`](/fr/docs/Web/CSS/Reference/Properties/height) devienne inférieure à `min-height`.
 
 {{InteractiveExample("CSS Demo: min-height")}}
 
@@ -116,5 +116,5 @@ form {
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction), [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
 - [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height)

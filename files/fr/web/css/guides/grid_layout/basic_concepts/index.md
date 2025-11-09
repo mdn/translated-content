@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-[Le module de spécification CSS pour les dispositions en grilles (<i lang="en">Grid Layout</i> en anglais)](/fr/docs/Web/CSS/CSS_grid_layout) ajoute un système de grille en deux dimensions à CSS. Les grilles peuvent être utilisées pour agencer des pages entières ou de petits éléments d'interface. Cet article présente ce module de grille, et introduit la terminologie de la spécification de niveau 1 des grilles CSS. Les fonctionnalités évoquées dans cet aperçu seront expliquées plus en détails dans le reste du guide.
+[Le module de spécification CSS pour les dispositions en grilles (<i lang="en">Grid Layout</i> en anglais)](/fr/docs/Web/CSS/Guides/Grid_layout) ajoute un système de grille en deux dimensions à CSS. Les grilles peuvent être utilisées pour agencer des pages entières ou de petits éléments d'interface. Cet article présente ce module de grille, et introduit la terminologie de la spécification de niveau 1 des grilles CSS. Les fonctionnalités évoquées dans cet aperçu seront expliquées plus en détails dans le reste du guide.
 
 ## Qu'est-ce qu'une grille&nbsp;?
 
@@ -34,7 +34,7 @@ On peut contrôler l'alignement des éléments dans une zone de la grille, ainsi
 
 Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index).
 
-La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_flexible_box_layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
+La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/Guides/Flexible_box_layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
 
 ## Conteneur
 
@@ -786,4 +786,4 @@ On peut contrôler l'ordre dans lequel les éléments s'empilent en utilisant la
 
 ## La suite
 
-Dans cet article nous avons parcouru rapidement ce qu'il est possible de construire avec les grilles CSS. Expérimentez et jouez avec les exemples, avant de passer [à la suite de ce guide](/fr/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods) pour commencer à vraiment plonger dans le détail des dispositions en grille.
+Dans cet article nous avons parcouru rapidement ce qu'il est possible de construire avec les grilles CSS. Expérimentez et jouez avec les exemples, avant de passer [à la suite de ce guide](/fr/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods) pour commencer à vraiment plonger dans le détail des dispositions en grille.

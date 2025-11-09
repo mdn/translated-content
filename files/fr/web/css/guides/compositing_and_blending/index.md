@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6cd62fb4482a2d6927cebd0223bf8d0386095340
 ---
 
-Le module **Composition et fusion CSS** définit comment les couches d'arrière-plan d'un élément qui peuvent être fusionnées, comment un élément peut être fusionné avec son conteneur, et si l'élément doit créer un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
+Le module **Composition et fusion CSS** définit comment les couches d'arrière-plan d'un élément qui peuvent être fusionnées, comment un élément peut être fusionné avec son conteneur, et si l'élément doit créer un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
 
 Les propriétés de ce module CSS permettent de définir le mode de fusion à utiliser, le cas échéant, pour fusionner les images et couleurs d'arrière-plan d'un élément en une seule image de fond. Ce module propose 16 modes de fusion. Vous pouvez aussi définir comment les bordures, l'arrière-plan et le contenu d'un élément, y compris le texte, les emojis et les images, doivent être fusionnés avec l'arrière-plan de son conteneur.
 
@@ -111,7 +111,7 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans l'exemple ci-dessus pour voir ou modi
 
 ## Voir aussi
 
-- Les propriétés du module [Effets de filtre CSS](/fr/docs/Web/CSS/CSS_filter_effects) permettent d'appliquer des effets de filtre, comme le flou ou la modification de l'intensité des couleurs, aux images, arrière-plans et bordures.
+- Les propriétés du module [Effets de filtre CSS](/fr/docs/Web/CSS/Guides/Filter_effects) permettent d'appliquer des effets de filtre, comme le flou ou la modification de l'intensité des couleurs, aux images, arrière-plans et bordures.
 - [Composition et fusion en CSS <sup>(angl.)</sup>](https://www.sarasoueidan.com/blog/compositing-and-blending-in-css/) (2015)
 - [Éditer des images en CSS&nbsp;: modes de fusion <sup>(angl.)</sup>](https://webdesign.tutsplus.com/editing-images-in-css-blend-modes--cms-26058t) (2022)
 - [web.dev&nbsp;: modes de fusion <sup>(angl.)</sup>](https://web.dev/learn/css/blend-modes) (2021)

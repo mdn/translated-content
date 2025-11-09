@@ -54,7 +54,7 @@ Dans l'exemple suivant, les paragraphes ont une marge en haut qui mesure 20 pixe
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 > [!NOTE]
 > Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
@@ -75,7 +75,7 @@ La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est 
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 
-Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model).
+Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model).
 
 ## La propriété `display` et la disposition de flux
 
@@ -110,7 +110,7 @@ Dans ce guide, nous avons vu comment les éléments étaient affichés dans le f
 
 ## Voir aussi
 
-- [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_box_model)
+- [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model)
 - [Apprendre - le fonctionnement du flux normal](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction)
 - [Les éléments HTML en ligne](/fr/docs/Glossary/Inline-level_content)
 - [Les éléments HTML de bloc](/fr/docs/Glossary/Block-level_content)

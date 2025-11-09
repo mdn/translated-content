@@ -226,7 +226,7 @@ L'ordre est le même entre background-image et -position.
 
 ## Voir aussi
 
-- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - [`background-position-x`](/fr/docs/Web/CSS/Reference/Properties/background-position-x)
 - [`background-position-y`](/fr/docs/Web/CSS/Reference/Properties/background-position-y)
 - [`background-position-inline`](/fr/docs/Web/CSS/background-position-inline)
