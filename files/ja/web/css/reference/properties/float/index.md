@@ -196,5 +196,5 @@ div {
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - アイテムを浮動要素の下へ強制的に移動させるには {{cssxref("clear")}} を使用します。

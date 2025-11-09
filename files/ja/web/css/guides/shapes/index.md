@@ -10,7 +10,7 @@ l10n:
 
 仕様書では、シェイプを定義する様々な方法を定義しています。コンテンツの回り込みや内部への入り込みが、要素ボックスの長方形に層のではなく、図形に回り込むようになります。
 
-シェイプは、 CSS の値として使用できる形状を定義します。このモジュールは、楕円、多角形、および任意の形状を作成するための関数を提供しています。他の CSS モジュール、例えば [CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path)や [CSS マスク](/ja/docs/Web/CSS/CSS_masking)でも、この仕様書で定義されているシェイプを使用することができます。
+シェイプは、 CSS の値として使用できる形状を定義します。このモジュールは、楕円、多角形、および任意の形状を作成するための関数を提供しています。他の CSS モジュール、例えば [CSS モーションパス](/ja/docs/Web/CSS/Guides/Motion_path)や [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)でも、この仕様書で定義されているシェイプを使用することができます。
 
 ## CSS シェイプの実例
 
@@ -67,25 +67,25 @@ img {
 
 ### 用語
 
-- [参照ボックス](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#参照ボックス)
+- [参照ボックス](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参照ボックス)
 
 ## ガイド
 
-- [シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
   - : `shape-margin` および `clip-path` プロパティで基本的な図形を定義し、基本的なシェイプを開発者ツールでデバッグします。
 
-- [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/From_box_values)
+- [ボックス値からのシェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_box_values)
   - : `border-radius` の曲率と CSS ボックスモデルの値を使用して図形を作成します。
 
-- [`shape-outside` による基本シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [`shape-outside` による基本シェイプ](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
   - : CSS シェイプ、参照ボックス、 `shape-outside` プロパティを使って矩形、円、楕円、多角形を作成します。
 
-- [画像からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [画像からのシェイプ](/ja/docs/Web/CSS/Guides/Shapes/From_images)
   - : シェイプを半透過の画像ファイルや CSS グラデーションから作成します。
 
 ## 関連概念
 
-[CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path)モジュール
+[CSS モーションパス](/ja/docs/Web/CSS/Guides/Motion_path)モジュール
 
 - {{cssxref("offset")}}
 - {{cssxref("offset-anchor")}}
@@ -95,7 +95,7 @@ img {
 - {{cssxref("offset-rotate")}}
 - {{cssxref("ray")}} 関数
 
-[CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+[CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 
 - {{cssxref("clip")}}
 - {{cssxref("clip-path")}}
@@ -104,11 +104,11 @@ img {
 - {{cssxref("mask-origin")}}
 - {{cssxref("mask-position")}}
 
-[CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
+[CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
 
 - {{cssxref("border-radius")}} 一括指定
 
-[CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+[CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
 
 - {{cssxref("box-edge")}} データ型
 

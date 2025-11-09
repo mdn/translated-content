@@ -16,7 +16,7 @@ CSS トランジションでは、どのプロパティをアニメーション�
 
 ## どの CSS プロパティがトランジション可能か
 
-ウェブの作者は、どのプロパティをどのようにアニメーションさせるかを定義することができます。これにより、複雑なトランジションを作成することができます。しかし、いくつかのプロパティはアニメーションさせる意味がないため、[アニメーション不可](/ja/docs/Web/CSS/CSS_animated_properties)となっています。
+ウェブの作者は、どのプロパティをどのようにアニメーションさせるかを定義することができます。これにより、複雑なトランジションを作成することができます。しかし、いくつかのプロパティはアニメーションさせる意味がないため、[アニメーション不可](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties)となっています。
 
 > [!NOTE]
 > `auto` の値はしばしばとても複雑になります。仕様書では開始値および終了値が `auto` の場合はアニメーションしないよう推奨しています。 Gecko を利用したものなど、一部のユーザーエージェントはこの要件を実装しており、 WebKit を利用したものなどではより制約が少なくなります。 `auto` でアニメーションを利用すると、ブラウザーやそのバージョンによって予測できない結果になる可能性があるため、避けるべきです。
@@ -188,7 +188,7 @@ a:focus {
 
 この例では、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display) と [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
 
-対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/CSS_animated_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で切り替えるという意味になります。
+対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で切り替えるという意味になります。
 
 ただし例外があり、それは `display: none` または `content-visibility: hidden` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
 
@@ -359,4 +359,4 @@ el.addEventListener("transitionstart", signalStart, true);
 ## 関連情報
 
 - {{domxref("TransitionEvent")}} インターフェイスと {{domxref("Element/transitionend_event", "transitionend")}} イベント
-- [CSS アニメーションの使い方](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使い方](/ja/docs/Web/CSS/Guides/Animations/Using)

@@ -151,4 +151,4 @@ th {
 
 - {{cssxref("border-collapse")}}
 - [学習: 表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [CSS 表](/ja/docs/Web/CSS/Guides/Table)モジュール

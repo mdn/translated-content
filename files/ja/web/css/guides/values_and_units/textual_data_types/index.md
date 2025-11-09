@@ -92,8 +92,8 @@ left | right | none | inline-start | inline-end
 
 ## 関連情報
 
-- [数値データ型](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types)
+- [数値データ型](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [CSS カスケードと警鐘](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- [CSS カスケードと警鐘](/ja/docs/Web/CSS/Guides/Cascade)モジュール

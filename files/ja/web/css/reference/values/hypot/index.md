@@ -58,7 +58,7 @@ width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 
 #### CSS
 
-ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
+ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
 
 - `--size-1` は、`--size-0` (100px) の斜辺の長さとして計算されます。値は 2 乗され、他に値がないためその平方根が返され、結果は 100px になります。
 - `--size-2` は、2 つの `--size-0` (100px) の斜辺の長さとして計算されます。値は 2 乗され (100px \* 100px = 10000px<sup>2</sup>)、それに再び `--size-0` の 2 乗が加算され (10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>)、その合計値の平方根 (√(20000px<sup>2</sup>)) が返され、結果は 141.42px になります。

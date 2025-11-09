@@ -52,7 +52,7 @@ box-shadow:
 
 `box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/Reference/Properties/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
 
-[ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
+[ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
 
 ## 構文
 
@@ -173,7 +173,7 @@ blockquote {
 
 `x-offset`, `y-offset`, `blur` がすべてゼロの場合、ボックスシャドウはすべての辺に同じ幅の単一色の囲み線になります。影は背後から手前にかけて描かれるため、最初の影はその後の影の最上位に表示されます。既定値通り、 `border-radius` が 0 に設定されていた場合、影の角は同様に尖った形になります。 `border-radius` にそれ以外の値を設定した場合、角は丸みを帯びます。
 
-影が隣接する要素と重ならないように、また、包含ボックスの境界線を超えないように、最も広いボックスシャドウの寸法のマージンを追加しました。ボックスシャドウは[ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)の寸法に影響を与えません。
+影が隣接する要素と重ならないように、また、包含ボックスの境界線を超えないように、最も広いボックスシャドウの寸法のマージンを追加しました。ボックスシャドウは[ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)の寸法に影響を与えません。
 
 #### HTML
 
@@ -212,4 +212,4 @@ p {
 - {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するのに使用）
 - {{cssxref("text-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [CSS を用いた HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を用いた HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)

@@ -793,5 +793,5 @@ container.addEventListener("change", (event) => {
 - {{Cssxref("list-style-image")}} プロパティ
 - {{Cssxref("list-style-position")}} プロパティ
 - {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

@@ -27,7 +27,7 @@ l10n:
 
 CSS の {{cssxref("@media")}} アットルールを使用すると、ウェブページを紙や PDF で印刷する場合と、画面に表示する場合とで、異なるスタイルを設定することができます。`print` [メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)は、印刷メディアのスタイルを設定します。これらのスタイルは、印刷されるコンテンツにのみ使用されます。
 
-これをスタイルシートの最後に追加してください。[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)と優先度のルールは引き続き適用されることにご注意ください。
+これをスタイルシートの最後に追加してください。[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)と優先度のルールは引き続き適用されることにご注意ください。
 
 ```css
 @media print {
@@ -94,6 +94,6 @@ document.getElementById("print_external").addEventListener("click", () => {
 - [`window.print`](/ja/docs/Web/API/Window/print)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} イベント
 - {{ domxref("window.afterprint_event", "afterprint") }} イベント
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
-- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール
+- [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)モジュール

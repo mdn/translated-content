@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
 
-[**CSS メディアクエリー**](/ja/docs/Web/CSS/CSS_media_queries)は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。
+[**CSS メディアクエリー**](/ja/docs/Web/CSS/Guides/Media_queries)は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。
 
 ## 動きの削減
 

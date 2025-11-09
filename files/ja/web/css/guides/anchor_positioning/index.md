@@ -39,7 +39,7 @@ l10n:
 
 ### データ型と値
 
-- [`anchor-center`](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
+- [`anchor-center`](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
 - [`<anchor-side>`](/ja/docs/Web/CSS/Reference/Values/anchor#anchor-side)
 - [`<anchor-size>`](/ja/docs/Web/CSS/anchor-size#anchor-size)
 - [`<position-area>`](/ja/docs/Web/CSS/Reference/Values/position-area_value)
@@ -58,7 +58,7 @@ l10n:
 
 ## ガイド
 
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)
   - : 基本的なアンカー位置指定の概念を紹介するガイドで、アンカーへの関連付け、位置指定、相対的なサイズ指定の方法を示します。
 
 - [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
@@ -66,7 +66,7 @@ l10n:
 
 ## 関連概念
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
   - {{cssxref("inset-block-start")}}
   - {{cssxref("inset-block-end")}}
   - {{cssxref("inset-inline-start")}}
@@ -80,12 +80,12 @@ l10n:
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
   - [Inset プロパティ](/ja/docs/Glossary/Inset_properties) 用語解説
-- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール:
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール:
   - {{cssxref("top")}}
   - {{cssxref("left")}}
   - {{cssxref("bottom")}}
   - {{cssxref("right")}}
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール:
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール:
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("min-width")}}
@@ -93,7 +93,7 @@ l10n:
   - {{cssxref("max-width")}}
   - {{cssxref("max-height")}}
   - {{cssxref("block-size")}}
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール:
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール:
   - {{cssxref("align-items")}}
   - {{cssxref("align-self")}}
   - {{cssxref("justify-items")}}
@@ -108,5 +108,5 @@ l10n:
 ## 関連情報
 
 - [学習: CSS 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
 - [CSS によるサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)

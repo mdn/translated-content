@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-**`@namespace`** は[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、
+**`@namespace`** は[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、
 [CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Glossary/Namespace)を定義します。
 
 {{InteractiveExample("CSS デモ: @namespace", "tabbed-shorter")}}

@@ -38,7 +38,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - {{cssxref("align-self")}} および {{cssxref("justify-self")}} 向けのフレックスボックスレイアウトを実装しました ([Firefox バグ 1221524](https://bugzil.la/1221524))。
 - {{cssxref("touch-action")}} プロパティを、すべてのプラットフォームにおいてデフォルトで有効にしました。(詳しくは [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) および [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M) をご覧ください)
 - Flexbox の {{cssxref("align-content")}} の処理および単一ラインのサイズ調整が、ラインの数ではなく {{cssxref("flex-wrap")}} に依存するようになりました ([Firefox バグ 1090031](https://bugzil.la/1090031))。
-- 補間処理ができないプロパティのアニメーションに [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
+- 補間処理ができないプロパティのアニメーションに [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
 - `baseline|last-baseline` を `[ first | last ]? baseline` に変更しました ([Firefox バグ 1313254](https://bugzil.la/1313254)).
 - block-axis について、`left`/`right` の使用値を `start` にしました ([Firefox バグ 1221565](https://bugzil.la/1221565))。
 - 包含ブロックの長さが不定である、flexible tracks を伸長する際に、最小サイズや最大サイズを重視するようになりました ([Firefox バグ 1309407](https://bugzil.la/1309407))。
@@ -54,7 +54,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 #### CSS グリッド
 
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) を実装しました。
+- [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout) を実装しました。
 
 #### 変更および削除
 

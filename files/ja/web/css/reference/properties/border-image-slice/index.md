@@ -219,4 +219,4 @@ sliceSlider.addEventListener("input", () => {
 
 ## 関連情報
 
-- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)
+- [1 ～ 4 つの値による構文の図による説明](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties#tricky_edge_cases)

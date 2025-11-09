@@ -87,5 +87,5 @@ l10n:
 
 - {{cssxref("var", "var()")}} 関数
 - {{cssxref("@property")}} アットルール
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)ガイド
-- [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール
+- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)ガイド
+- [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュール

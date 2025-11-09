@@ -40,4 +40,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)

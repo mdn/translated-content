@@ -140,10 +140,10 @@ CSS フォントモジュールは可変フォントにも対応しています�
 - [学習: ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)
   - : この初心者向け学習記事では、ウェブページでカスタムフォントを使用して、より多様で独自のテキストスタイル設定を実現する方法を説明します。
 
-- [OpenType フォント特性ガイド](/ja/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
+- [OpenType フォント特性ガイド](/ja/docs/Web/CSS/Guides/Fonts/OpenType_fonts)
   - : フォント特性または変化形は、 OpenType フォントに含まれている様々な字形や文字スタイルを参照します。これらには合字 ('fi' や 'ffl' のような特殊な形の文字の組み合わせ)、カーニング (特定の字形の組み合わせにおける間隔の調整)、分数、数字のスタイル、他にもたくさんあります。これらはすべて OpenType の特性として参照され、特定のプロパティや低水準の制御プロパティ — {{cssxref("font-feature-settings")}} を通してウェブ上で使用することができます。この記事は、 CSS で OpenType フォント特性を使用することについて知る必要があるすべてのことを紹介します。
 
-- [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : この記事は可変フォントを使用し始めるのに役立つでしょう。
 
 - [フォントのパフォーマンスの改善](/ja/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
@@ -161,7 +161,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 ## 関連情報
 
-- [CSS フォント読み込み](/ja/docs/Web/CSS/CSS_font_loading)モジュール
+- [CSS フォント読み込み](/ja/docs/Web/CSS/Guides/Font_loading)モジュール
 - [CSS フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API)
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュール
+- [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュール

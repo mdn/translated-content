@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
+**`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
 {{InteractiveExample("CSS デモ: background")}}
 
@@ -182,5 +182,5 @@ background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ## 関連情報
 
 - {{cssxref("box-decoration-break")}}
-- [グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
+- [複数の背景の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

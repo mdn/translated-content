@@ -24,5 +24,5 @@ l10n:
 - HTML の {{HTMLElement("slot")}} 要素
 - HTML の {{HTMLElement("template")}} 要素
 - CSS の {{CSSXref("::slotted")}} 擬似要素
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

@@ -38,7 +38,7 @@ l10n:
 
 ![下記で説明する位置領域グリッド](/ja/docs/Web/CSS/CSS_anchor_positioning/Using/position-area.svg)
 
-位置指定された要素の `position-area` プロパティの値として使用される場合、中央タイルのサイズは要素の既定のアンカー要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)によって定義されます。グリッドの外縁のサイズは、位置指定要素の包含ブロックによって定義されます。論理キータームは、`self-*`キータームを除き、一般的に包含ブロックの書字モードと方向に基づきます。`self-*` キータームは、位置指定要素から計算されます。
+位置指定された要素の `position-area` プロパティの値として使用される場合、中央タイルのサイズは要素の既定のアンカー要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)によって定義されます。グリッドの外縁のサイズは、位置指定要素の包含ブロックによって定義されます。論理キータームは、`self-*`キータームを除き、一般的に包含ブロックの書字モードと方向に基づきます。`self-*` キータームは、位置指定要素から計算されます。
 
 グリッドタイルは、複数の行と列に分割されています。
 
@@ -136,7 +136,7 @@ position-area: end; /* end end と同等 */
 
 ## 論理的グリッドキーワード
 
-論理的グリッドキーワードは、論理値が使用されている状態で位置領域グリッドの領域を指定します。これらの値では、位置と方向は、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)または、`self` キーワードの場合は位置指定要素自体の {{cssxref("writing-mode")}} および {{cssxref("direction")}} の設定の影響を受けます。論理的キーワードには、一般型と明示型の 2 種類があります。
+論理的グリッドキーワードは、論理値が使用されている状態で位置領域グリッドの領域を指定します。これらの値では、位置と方向は、要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)または、`self` キーワードの場合は位置指定要素自体の {{cssxref("writing-mode")}} および {{cssxref("direction")}} の設定の影響を受けます。論理的キーワードには、一般型と明示型の 2 種類があります。
 
 ### 汎用的な行や列の論理的キーワード
 
@@ -240,7 +240,7 @@ position-area: end; /* end end と同等 */
 
 ## 座標グリッドキーワード
 
-これらのキーワードは、x 座標と y 座標の値を使用して `position-area` グリッドのセルを指定します。その位置/方向は、要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)または（`self` キーワードの場合）要素自体に対する {{cssxref("writing-mode")}} や {{cssxref("direction")}} の設定に影響を受けます。
+これらのキーワードは、x 座標と y 座標の値を使用して `position-area` グリッドのセルを指定します。その位置/方向は、要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)または（`self` キーワードの場合）要素自体に対する {{cssxref("writing-mode")}} や {{cssxref("direction")}} の設定に影響を受けます。
 
 ただし、グリッドセルはブロック方向やインライン方向ではなく、物理軸に基づいて定義されます。
 
@@ -324,7 +324,7 @@ The y-axis keywords include:
 
 {{cssxref("position-area")}} プロパティページを参照してください。
 
-アンカー機能の詳細な情報と使用方法については、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページと、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイドを参照してください。
+アンカー機能の詳細な情報と使用方法については、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと、[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイドを参照してください。
 
 ## 仕様書
 
@@ -340,6 +340,6 @@ The y-axis keywords include:
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) function
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド
 - [オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイド
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール

@@ -235,7 +235,7 @@ filter: url(folder/fileName.svg#contrast); /* 外部 SVG フィルター定義 *
 
 ## 関連情報
 
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)モジュール
+- [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュール
 - その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}

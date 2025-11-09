@@ -8,7 +8,7 @@ l10n:
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-`:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` の[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が常に 0 であるのに対し、 `:is()` は引数の中で最も詳細度の高いセレクターの詳細度を継承する点です。
+`:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が常に 0 であるのに対し、 `:is()` は引数の中で最も詳細度の高いセレクターの詳細度を継承する点です。
 
 {{InteractiveExample("CSS デモ: :where", "tabbed-shorter")}}
 
@@ -65,7 +65,7 @@ ol {
 
 ### 引数
 
-`:where()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは利用できます。
+`:where()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#セレクターリスト)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは利用できます。
 
 ### 寛容なセレクター解釈
 

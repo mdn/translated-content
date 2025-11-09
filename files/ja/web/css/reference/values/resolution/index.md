@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a075805de90029b65fa5cfcc8ea43737728320f5
 ---
 
-**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types) で、[解像度](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution)を[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で記述するのに使われ、出力機器のピクセル密度である解像度を表します。
+**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/Reference/Values/Data_types) で、[解像度](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution)を[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)で記述するのに使われ、出力機器のピクセル密度である解像度を表します。
 
 画面では、長さは物理的な値ではなく、 _CSS_ のインチ、センチメートル、またはピクセルと関連づけられます。
 
@@ -78,4 +78,4 @@ ten dpi    数値は10進数しか使えません。
 
 - [resolution](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) メディア特性
 - {{cssxref("image-resolution")}} プロパティ
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)

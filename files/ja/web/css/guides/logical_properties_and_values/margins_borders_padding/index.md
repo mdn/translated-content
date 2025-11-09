@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
 ---
 
-[CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュールでは、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義しています。
+[CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュールでは、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義しています。
 
-[CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺について 4 つの個別指定値と、一括指定値のすべてがあるためです。
+[CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺について 4 つの個別指定値と、一括指定値のすべてがあるためです。
 
 ## マージン、境界、パティングの対応付け
 

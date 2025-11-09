@@ -267,7 +267,7 @@ my-custom-element:state(hidden) {
 ```
 
 `:state()` 擬似クラスを [`:host()`](/ja/docs/Web/CSS/Reference/Selectors/:host_function) 擬似クラス関数内で使用すると、[カスタム要素のシャドウ DOM 内の](/ja/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom)カスタム状態と照合することもできます。
-さらに、`:state()` 擬似クラスを [`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) 擬似要素の後で使用することで、特定の状態にあるカスタム要素の[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)と照合することもできます。
+さらに、`:state()` 擬似クラスを [`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) 擬似要素の後で使用することで、特定の状態にあるカスタム要素の[シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)と照合することもできます。
 
 {{domxref("CustomStateSet")}} には、これがどのように動作するのかを示すいくつかのライブサンプルがあります。
 

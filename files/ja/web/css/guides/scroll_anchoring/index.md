@@ -25,7 +25,7 @@ l10n:
 
 ## ガイド
 
-- [スクロール固定のガイド](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [スクロール固定のガイド](/ja/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
   - : スクロール固定と抑制トリガーを有効化および無効化する方法、そして、いつ、なぜそれらを使用するべきなのかを説明します。
 
 ## 関連概念
@@ -38,6 +38,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール

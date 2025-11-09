@@ -73,7 +73,7 @@ padding-inline-end: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の[インラインサイズ](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)（横書き言語の場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の[インラインサイズ](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)（横書き言語の場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
@@ -131,6 +131,6 @@ div {
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
 - 対応づけ先の物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

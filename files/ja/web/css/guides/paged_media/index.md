@@ -34,7 +34,7 @@ l10n:
 
 ## 関連概念
 
-- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュール
+- [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール
   - {{cssxref("break-after")}} プロパティ
   - {{cssxref("break-before")}} プロパティ
   - {{cssxref("break-inside")}} プロパティ
@@ -47,6 +47,6 @@ l10n:
 
 ## 関連情報
 
-- [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)ガイド
-- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュール
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
+- [印刷](/ja/docs/Web/CSS/Guides/Media_queries/Printing)ガイド
+- [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)モジュール

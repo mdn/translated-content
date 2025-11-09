@@ -204,7 +204,7 @@ div {
 }
 ```
 
-プロパティの値は、[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content) を使用して表示されます。
+プロパティの値は、[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content) を使用して表示されます。
 
 ```css
 section::before {
@@ -314,4 +314,4 @@ div {
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("background-size")}}
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

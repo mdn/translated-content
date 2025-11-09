@@ -170,4 +170,4 @@ p {
 - [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - {{cssxref("timeline-scope")}}
 - [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

@@ -29,16 +29,16 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 ### CSS
 
 - {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
-- [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
+- [Flexbox レイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
 - [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
-- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
-- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Guides/Media_queries/Using#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
 - [prefers-reduced-motion](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
-- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
+- 適切な [論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
 
 #### 廃止
 

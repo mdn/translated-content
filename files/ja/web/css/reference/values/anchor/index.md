@@ -56,7 +56,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
     - `left`
       - : このアンカー要素の左辺です。
     - `start`
-      - : アンカー要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の、この `anchor()` 関数が設定されているインセットプロパティの軸の論理的な先頭側です。
+      - : アンカー要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の、この `anchor()` 関数が設定されているインセットプロパティの軸の論理的な先頭側です。
     - `end`
       - : アンカー要素の包含ブロックの、この `anchor()` 関数が設定されているインセットプロパティの軸の論理的な末尾側です。
     - `self-start`
@@ -85,7 +85,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 
 `<anchor-name>` で指定された名前がついたアンカーが存在しない場合、または、位置指定要素に（{{cssxref("position-anchor")}} プロパティを介して）関連付けられたアンカーがない場合、最初の引数は不正なものと見なされ、利用できる場合は、代替の `<length-percentage>` 値が使用されます。例えば、位置指定要素に `top: anchor(bottom, 50px)` が指定されていたものの、その要素に関連付けられたアンカーがなかった場合、代替値が使用されるため、 `top` は `50px` という計算値になります。
 
-アンカー機能および使用方法の詳細については、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュールのランディングページ、および「[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド」をご覧ください。
+アンカー機能および使用方法の詳細については、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページ、および「[CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド」をご覧ください。
 
 ### `anchor()` 関数値を受け入れるプロパティ
 
@@ -546,6 +546,6 @@ function makeDraggable(elem) {
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-area")}}
 - {{cssxref("anchor-size()")}} 関数
-- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)ガイド
+- [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド
 - [オーバーフローの扱い: try fallbacks and conditional hiding](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイド
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール

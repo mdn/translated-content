@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-**`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
+**`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
 
 {{InteractiveExample("CSS デモ: overflow")}}
 
@@ -85,7 +85,7 @@ overflow: unset;
 - `hidden`
   - : 溢れたコンテンツは要素のパディングボックスで切り取られます。スクロールバーはなく、切り取られたコンテンツは見えなくなります（つまり、切り取られたコンテンツは非表示になります）が、コンテンツはまだ存在しています。ユーザーエージェントはスクロールバーを追加せず、また、タッチスクリーンでのドラッグやマウスのスクロールホイールなどの操作によって、ユーザーが切り取られた領域の外にあるコンテンツを表示することもできません。コンテンツはプログラムによってスクロールさせることができ（例えば、アンカーテキストへのリンク、非表示でありながらフォーカス可能な要素へのタブ操作、{{domxref("Element.scrollLeft", "scrollLeft")}} プロパティの値や {{domxref("Element.scrollTo", "scrollTo()")}} メソッドの設定など）、この場合、要素ボックスはスクロールコンテナーとなります。
 - `clip`
-  - : 溢れたコンテンツは、[`overflow-clip-margin`](/ja/docs/Web/CSS/Reference/Properties/overflow-clip-margin) プロパティを使用して定義された要素のはみ出しクリップ辺で切り取られます。その結果、コンテンツは要素のパディングボックスを `overflow-clip-margin` の {{cssxref("&lt;length&gt;")}} 値分、または設定されていない場合は `0px` 分はみ出します。切り取られた領域の外側に溢れたコンテンツは表示されず、ユーザーエージェントはスクロールバーを追加せず、プログラムによるスクロールも行われません。新しい[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)は作成されません。整形コンテキストを確立するには、`overflow: clip` を {{cssxref("display", "display: flow-root", "#flow-root")}} とともに使用してください。この要素ボックスはスクロールコンテナーにはなりません。
+  - : 溢れたコンテンツは、[`overflow-clip-margin`](/ja/docs/Web/CSS/Reference/Properties/overflow-clip-margin) プロパティを使用して定義された要素のはみ出しクリップ辺で切り取られます。その結果、コンテンツは要素のパディングボックスを `overflow-clip-margin` の {{cssxref("&lt;length&gt;")}} 値分、または設定されていない場合は `0px` 分はみ出します。切り取られた領域の外側に溢れたコンテンツは表示されず、ユーザーエージェントはスクロールバーを追加せず、プログラムによるスクロールも行われません。新しい[整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)は作成されません。整形コンテキストを確立するには、`overflow: clip` を {{cssxref("display", "display: flow-root", "#flow-root")}} とともに使用してください。この要素ボックスはスクロールコンテナーにはなりません。
 - `scroll`
   - : 溢れたコンテンツは要素のパディングボックスで切り取られ、スクロールバーを使用してスクロールさせることで、溢れたコンテンツを表示することができます。ユーザーエージェントは、コンテンツが溢れているか否かに関わらずスクロールバーを表示します。そのため、このキーワードを使用すると、コンテンツが変化するたびにスクロールバーが表示されたり非表示になったりすることを防ぐことができます。ただし、印刷時には溢れたコンテンツが印刷される場合があります。要素ボックスはスクロールコンテナーになります。
 - `auto`
@@ -100,7 +100,7 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 `overflow` の各キーワードを使用する際には、以下の点に留意してください。
 
-- `overflow` に `visible`（既定値）または `clip` 以外の値を指定すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が作成されます。これは技術的な理由から必要です。浮動ボックスがスクロール要素と交差する場合、スクロールのステップごとにコンテンツが強制的に再配置されるため、スクロールの使い勝手が悪くなります。
+- `overflow` に `visible`（既定値）または `clip` 以外の値を指定すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)が作成されます。これは技術的な理由から必要です。浮動ボックスがスクロール要素と交差する場合、スクロールのステップごとにコンテンツが強制的に再配置されるため、スクロールの使い勝手が悪くなります。
 - `overflow` の設定で期待通りの効果を出すには、溢れる方向が垂直方向の場合は高さ（{{cssxref("height")}} または {{cssxref("max-height")}}）、溢れる方向が水平方向の場合は幅（{{cssxref("width")}} または {{cssxref("max-width")}}）、溢れる方向がブロック方向の場合はブロックサイズ（{{cssxref("block-size")}} または {{cssxref("max-block-size")}}）、溢れる方向がインライン方向の場合はインラインサイズ（{{cssxref("inline-size")}} または {{cssxref("max-inline-size")}}）に加えて {{cssxref("white-space")}} に `nowrap` を、いずれかをブロックレベル要素に設定する必要があります。
 - いずれかの方向で overflow を `visible`（すなわち、`overflow-x` または `overflow-y`）に設定する場合、もう一方の方向を `visible` または `clip` に設定する必要があり、そうしないと、`visible` の値は `auto` として動作します。
 - いずれかの方向で overflow を `clip` に設定する場合、もう一方の方向を `visible` または `clip` に設定する必要があり、そうしないと、`clip` の値は `hidden` として動作します。
@@ -254,5 +254,5 @@ p.overlay {
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - SVG の {{SVGAttr("overflow")}} 属性
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) (adrianroselli.com, 2022)

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)に関する情報を提供するイベントを表します。
+**`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)に関する情報を提供するイベントを表します。
 
 {{InheritanceDiagram}}
 
@@ -30,13 +30,13 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 ## `TransitionEvent` の種類
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が中断されたときに発生します。
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)が中断されたときに発生します。
 - {{domxref("Element/transitionend_event", "transitionend")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の実行が終了したときに発生します。
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)の実行が終了したときに発生します。
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が生成されたとき、実行中のトランジションに追加されたときに発生し、必ずしも開始時に発生するとは限りません。
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)が生成されたとき、実行中のトランジションに追加されたときに発生し、必ずしも開始時に発生するとは限りません。
 - {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の推移が開始したときに発生します。
+  - : {{domxref("Event")}} で、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)の推移が開始したときに発生します。
 
 ## インスタンスメソッド
 
@@ -52,5 +52,5 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}

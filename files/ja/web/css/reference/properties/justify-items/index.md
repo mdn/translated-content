@@ -57,9 +57,9 @@ justify-items: end;
 
 - ブロックレベルレイアウトでは、包含ブロック内のアイテムをインライン軸で配置します。
 - 絶対位置指定の要素では、 top, left, bottom, right の各オフセット値を反映して、包含ブロック内のアイテムをインライン軸で配置します。
-- 表のセルレイアウトでは、このプロパティは無視されます（[ブロック、絶対配置、表レイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)を参照）
-- フレックスボックスレイアウトでは、このプロパティは無視されます（[フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)を参照）
-- グリッドレイアウトでは、グリッド領域内のアイテムに、インライン方向の整列を設定します（[グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)を参照）
+- 表のセルレイアウトでは、このプロパティは無視されます（[ブロック、絶対配置、表レイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)を参照）
+- フレックスボックスレイアウトでは、このプロパティは無視されます（[フレックスボックスでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)を参照）
+- グリッドレイアウトでは、グリッド領域内のアイテムに、インライン方向の整列を設定します（[グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)を参照）
 
 ## 構文
 
@@ -142,7 +142,7 @@ justify-items: unset;
 - `stretch`
   - : アイテムのサイズの合計が配置コンテナーのサイズより小さい場合に、サイズが `auto` であるすべてのアイテムは（比例的にではなく）均等に引き伸ばされます。ただし、 {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} （あるいは同等の機能）による制限は尊重します。これにより、サイズの合計が配置コンテナーを主軸に沿って完全に埋めるようになります。
 - `anchor-center`
-  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
+  - : [アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)要素の場合、関連付けられたアンカー要素のインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 - `safe`
   - : アイテムのサイズが配置コンテナーをあふれた場合、アイテムは配置モードが `start` であったかのように配置されます。
 - `unsafe`
@@ -232,5 +232,5 @@ span {
 - {{CSSxRef("justify-self")}}
 - {{CSSxRef("align-items")}}
 - {{CSSxRef("place-items")}} 一括指定
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

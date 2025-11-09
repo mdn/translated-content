@@ -53,4 +53,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- [CSS 色](/ja/docs/Web/CSS/Guides/Colors)モジュール

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
+**`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
 
 ## 構文
 
@@ -64,7 +64,7 @@ l10n:
 > [!NOTE]
 > Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/ja/docs/Web/CSS/Reference/At-rules/@font-face/src#specifying_fallbacks_for_older_browsers).
 
-`@font-face` アットルールは、 CSS の最上位だけでなく、 [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/CSS_conditional_rules#アットルール)の中でも使用することができます。
+`@font-face` アットルールは、 CSS の最上位だけでなく、 [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/Guides/Conditional_rules#アットルール)の中でも使用することができます。
 
 ### フォントの MIME タイプ
 
@@ -145,7 +145,7 @@ body {
 
 ## 関連情報
 
-- [WOFF について](/ja/docs/Web/CSS/CSS_fonts/WOFF)
+- [WOFF について](/ja/docs/Web/CSS/Guides/Fonts/WOFF)
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

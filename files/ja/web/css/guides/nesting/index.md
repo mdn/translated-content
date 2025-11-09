@@ -20,16 +20,16 @@ CSS 入れ子は、 CSS スタイルシートの可読性、モジュール性�
 
 ## ガイド
 
-- [CSS 入れ子の使用](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+- [CSS 入れ子の使用](/ja/docs/Web/CSS/Guides/Nesting/Using)
   - : CSS 入れ子の使い方を説明します。
-- [CSS 入れ子アットルール](/ja/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [CSS 入れ子アットルール](/ja/docs/Web/CSS/Guides/Nesting/At-rules)
   - : アットルールを入れ子にする方法を説明します。
-- [CSS 入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [CSS 入れ子と詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
   - : CSS を入れ子にした場合の詳細度の違いを説明します。
 
 ## 関連概念
 
-- [セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [セレクターと結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
 - [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS プリプロセッサー](/ja/docs/Glossary/CSS_preprocessor)
 
@@ -39,6 +39,6 @@ CSS 入れ子は、 CSS スタイルシートの可読性、モジュール性�
 
 ## 関連情報
 
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [CSS カスケードと継承モジュール](/ja/docs/Web/CSS/CSS_cascade)
-- [CSS セレクターモジュール](/ja/docs/Web/CSS/CSS_selectors)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [CSS カスケードと継承モジュール](/ja/docs/Web/CSS/Guides/Cascade)
+- [CSS セレクターモジュール](/ja/docs/Web/CSS/Guides/Selectors)

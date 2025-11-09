@@ -177,4 +177,4 @@ row-gap: unset;
 
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)

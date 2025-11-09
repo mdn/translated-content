@@ -41,7 +41,7 @@ l10n:
 - {{domxref("Element.shadowRoot")}} プロパティ
 - {{domxref("Element.attachShadow()")}} メソッド
 - {{domxref("ShadowRoot")}} インターフェイス
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
@@ -53,7 +53,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
 - [Templates: Styling outside of the current scope](https://web.dev/learn/html/template/#styling_outside_of_the_current_scope) on web.dev (2023)

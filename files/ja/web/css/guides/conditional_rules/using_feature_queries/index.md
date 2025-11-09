@@ -12,7 +12,7 @@ l10n:
 
 ## 構文
 
-CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュールの一部で、ここにはメディアクエリーの [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
+CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュールの一部で、ここにはメディアクエリーの [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
 
 機能クエリーは、`@supports` アットルールと、その後に続く対応条件、または `@import` アットルール宣言内の `supports()` 関数と宣言引数で構成されます。
 
@@ -65,7 +65,7 @@ body {
 
 {{EmbedLiveSample("simple")}}
 
-プロパティと値のペアの値の部分は、特定のプロパティの新しい値をテストする場合に重要になります。すべてのブラウザーは `color: red` に対応しています。これは CSS1 にさかのぼります。ただし、CSS では、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)など、対応していない追加の値がプロパティに追加される場合がよくあります。機能クエリーを使うと、プロパティと値のペアを検査することができます。つまり、値の対応を検出することができるということです。
+プロパティと値のペアの値の部分は、特定のプロパティの新しい値をテストする場合に重要になります。すべてのブラウザーは `color: red` に対応しています。これは CSS1 にさかのぼります。ただし、CSS では、[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)など、対応していない追加の値がプロパティに追加される場合がよくあります。機能クエリーを使うと、プロパティと値のペアを検査することができます。つまり、値の対応を検出することができるということです。
 
 上記の `color` プロパティの例をさらに発展させて、ブラウザーが `color： AccentColor` 宣言に対応しているかどうかを調べます。
 
@@ -263,7 +263,7 @@ p {
 
 ## 関連情報
 
-- [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [古いブラウザーの対応: 機能クエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#機能クエリー)
 - [ブラウザーの機能検出: CSS `@supports`](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

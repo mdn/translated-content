@@ -7,9 +7,9 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュールにより、スタイルシートをより読みやすく、よりモジュール化しやすく、より保守しやすく書くことができます。常にセレクターを繰り返すわけではないので、ファイルサイズも縮小することができます。
+[CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) モジュールにより、スタイルシートをより読みやすく、よりモジュール化しやすく、より保守しやすく書くことができます。常にセレクターを繰り返すわけではないので、ファイルサイズも縮小することができます。
 
-CSS 入れ子は、 CSS プリプロセッサーで事前にコンパイルされるのではなく、ブラウザーで解釈できるという点で、 [Sass](https://sass-lang.com/) のような CSS プリプロセッサーとは異なります。また、 CSS 入れ子において、 [`&` 入れ子セレクターの詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)は {{cssxref(':is',':is()')}} 関数に似ており、関連するセレクターリストの中で最も高い詳細度を使用して計算されます。
+CSS 入れ子は、 CSS プリプロセッサーで事前にコンパイルされるのではなく、ブラウザーで解釈できるという点で、 [Sass](https://sass-lang.com/) のような CSS プリプロセッサーとは異なります。また、 CSS 入れ子において、 [`&` 入れ子セレクターの詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)は {{cssxref(':is',':is()')}} 関数に似ており、関連するセレクターリストの中で最も高い詳細度を使用して計算されます。
 
 このガイドでは、CSSで入れ子を配置するさまざまな方法を示します。
 
@@ -189,7 +189,7 @@ h2 {
 
 ## 複合セレクター
 
-入れ子になっている CSS で[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)を使用する場合、 `&` 入れ子セレクターを**使用しなければなりません**。これは、ブラウザーが `&` 入れ子セレクタを使用していないセレクターの間に自動的に空白を追加するためです。
+入れ子になっている CSS で[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)を使用する場合、 `&` 入れ子セレクターを**使用しなければなりません**。これは、ブラウザーが `&` 入れ子セレクタを使用していないセレクターの間に自動的に空白を追加するためです。
 
 `class="a b"` を持つ要素を対象とするためには、 `&` 入れ子セレクタが必要です。そうしないと、空白が複合セレクターを壊してしまいます。
 
@@ -243,7 +243,7 @@ h2 {
 
 ##### CSS
 
-`.notices` のスタイルで[フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)を使用して列を作成します。
+`.notices` のスタイルで[フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して列を作成します。
 
 ```css
 .notices {
@@ -441,7 +441,7 @@ CSSOM は、次のように CSS を解釈します。
 > [!WARNING]
 > これは CSS の入れ子ではできません。[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)を用いない場合、入れ子のセレクターは[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)として扱われます。連結を許可すると、これが壊れてしまいます。
 
-[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
+[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
 
 ```css example-good
 .my-class {
@@ -476,9 +476,9 @@ element.my-class {
 
 ## 関連情報
 
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール
 - [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
-- [入れ子 `@` アットルール](/ja/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-- [入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [入れ子 `@` アットルール](/ja/docs/Web/CSS/Guides/Nesting/At-rules)
+- [入れ子と詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
 - {{domxref("CSSNestedDeclarations")}}
 - [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)

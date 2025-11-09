@@ -10,7 +10,7 @@ l10n:
 
 ## CSS フィルター効果を使用する利点
 
-CSS の[フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)モジュールが提供するプロパティと関数を使用すれば、Photoshopを使用したり、余分なHTTPリクエストを送信することなく、上述の視覚効果を適用することができます。必要なソフトウェアはユーザーのブラウザーだけです。さらに、 CSS のフィルター効果は、あらかじめ設定された画像効果とは異なり、レスポンシブでアニメーションが可能です。
+CSS の[フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュールが提供するプロパティと関数を使用すれば、Photoshopを使用したり、余分なHTTPリクエストを送信することなく、上述の視覚効果を適用することができます。必要なソフトウェアはユーザーのブラウザーだけです。さらに、 CSS のフィルター効果は、あらかじめ設定された画像効果とは異なり、レスポンシブでアニメーションが可能です。
 
 CSS フィルター効果モジュールでは、テキスト、画像、背景、境界線、またはこれらのプロパティを適用するその他の要素のレンダリングに影響を与えるために使用できる {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティが提供されています。 このモジュールでは、不鮮明化や色変化などのグラフィック効果を追加できる {{cssxref("&lt;filter-function&gt;")}} データ型も定義しています。 フィルター関数を使用すると、要素の外観を変更できるだけでなく、作成したフィルターを使用して SVG フィルターを参照することもできます。
 
@@ -321,6 +321,6 @@ SVG の `url()` フィルター値は、SVG の [`<image>`](/ja/docs/Web/SVG/Ref
 
 - {{cssxref("mask")}}
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)
+- [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)
 - SVG の {{SVGElement("filter")}} 要素、 SVG の {{SVGAttr("filter")}} 属性 '[SVG](/ja/docs/Web/SVG))
 - [Applying SVG effects to HTML content](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

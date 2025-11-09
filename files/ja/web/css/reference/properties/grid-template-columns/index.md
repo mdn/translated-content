@@ -128,9 +128,9 @@ grid-template-columns: unset;
   - : `max(minimum, min(limit, max-content))` という式を表し、ここで _minimum_ は `auto` の最小値 （常に {{cssxref("min-content")}} の最小値に等しいわけではありませんが、そうなることが多い） を表し、 _limit_ は fit-content() に引数として渡されるトラックの大きさを計算する関数です。これは基本的に `minmax(auto, max-content)` と `minmax(auto, limit)` の小さい方として計算されます。
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の列をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [`masonry`](/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
   - : masonry の値は、この軸が組積アルゴリズムに従ってレイアウトされるべきであることを示します。
-- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : `subgrid` の値は、グリッドがその軸に親グリッドのスパン部分を採用することを示します。グリッドの行や列のサイズは、明示的に指定されるのではなく、親グリッドの定義から取得されます。
 
 ## 公式定義
@@ -189,6 +189,6 @@ grid-template-columns: unset;
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-template")}}
-- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
+- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#グリッドトラック)
 - 動画チュートリアル: _[Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)

@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**グリッド領域**はグリッド上で一つ以上の {{glossary("grid cell", "グリッドセル")}} からなる長方形の領域です。グリッド領域は[線指定による配置](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)や[名前付きグリッド領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)で領域を定義すると作成されます。
+**グリッド領域**はグリッド上で一つ以上の {{glossary("grid cell", "グリッドセル")}} からなる長方形の領域です。グリッド領域は[線指定による配置](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)や[名前付きグリッド領域](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)で領域を定義すると作成されます。
 
 ![ハイライトされたグリッド領域を示す画像](1_grid_area.png)
 
@@ -76,6 +76,6 @@ l10n:
 
 ### 参考資料
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
-- CSS グリッドレイアウトガイド: _[グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)_
+- CSS グリッドレイアウトガイド: _[グリッドテンプレート領域](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)_
 - [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)

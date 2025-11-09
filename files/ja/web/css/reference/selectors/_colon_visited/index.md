@@ -56,7 +56,7 @@ a:visited {
 - CSS セレクターを介して要素と照合する DOM メソッド（[`querySelector()`](/ja/docs/Web/API/Document/querySelector) や [`querySelectorAll()`](/ja/docs/Web/API/Document/querySelectorAll) など）は、文書内に訪問済みのリンクがある場合でも、常に「空」の結果を返します。前述のメソッドの場合、これはそれぞれ `null` または空の [`NodeList`](/ja/docs/Web/API/NodeList) になります。
 
 > [!NOTE]
-> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)を参照してください。
+> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)を参照してください。
 
 ## 構文
 
@@ -108,5 +108,5 @@ a:visited {
 
 ## 関連情報
 
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
 - リンク関連の擬似クラス: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

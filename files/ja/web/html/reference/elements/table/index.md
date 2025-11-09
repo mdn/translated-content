@@ -236,7 +236,7 @@ HTML の表は構造化されているため、{{Glossary("markup", "マーク�
 
 #### 結果
 
-この表には独自の [CSS](/ja/docs/Web/CSS) や[ユーザースタイルシート](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザースタイルシート)が適用されていません。スタイル設定の結果は純粋に[ユーザーエージェントスタイルシート](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザーエージェントスタイルシート)からのものです。
+この表には独自の [CSS](/ja/docs/Web/CSS) や[ユーザースタイルシート](/ja/docs/Web/CSS/Guides/Cascade/Introduction#ユーザースタイルシート)が適用されていません。スタイル設定の結果は純粋に[ユーザーエージェントスタイルシート](/ja/docs/Web/CSS/Guides/Cascade/Introduction#ユーザーエージェントスタイルシート)からのものです。
 
 {{EmbedLiveSample('Basic_table', 650, 80)}}
 

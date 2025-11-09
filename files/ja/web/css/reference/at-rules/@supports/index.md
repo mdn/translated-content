@@ -6,7 +6,7 @@ l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
 
-**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、ブラウザーが CSS 機能に対応しているかによって、 CSS 宣言を指定することができます。
+**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、ブラウザーが CSS 機能に対応しているかによって、 CSS 宣言を指定することができます。
 このアットルールを使用することは、一般に*機能クエリー*と呼ばれます。
 ルールはコードの最上位または他の条件付きグループアットルールの中に配置しなければなりません。
 
@@ -316,7 +316,7 @@ ul:has(> li li) {
 
 ## 関連情報
 
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - {{DOMxRef("CSSSupportsRule")}}
 - {{DOMxref("CSS.supports_static", "CSS.supports()")}} メソッド

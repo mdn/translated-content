@@ -186,4 +186,4 @@ p {
 - [`Element.namespaceURI`](/ja/docs/Web/API/Element/namespaceURI) プロパティ
 - [CSS 要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)
 - [CSS 全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)
-- [CSS セレクターモジュール](/ja/docs/Web/CSS/CSS_selectors)
+- [CSS セレクターモジュール](/ja/docs/Web/CSS/Guides/Selectors)

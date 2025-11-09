@@ -180,6 +180,6 @@ h2 {
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)
+- [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)
 - [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) (developer.chrome.com)
 - [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) (developer.chrome.com)

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSFontPaletteValuesRule`** インターフェイスは {{cssxref("@font-palette-values")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を表します。
+**`CSSFontPaletteValuesRule`** インターフェイスは {{cssxref("@font-palette-values")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を表します。
 
 {{InheritanceDiagram}}
 

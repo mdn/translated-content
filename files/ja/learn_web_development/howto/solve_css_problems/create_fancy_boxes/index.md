@@ -72,11 +72,11 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 
 ## 背景
 
-装飾的なボックスについて話すとき、それを扱うための中心的なプロパティは [background-\* プロパティ](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。
+装飾的なボックスについて話すとき、それを扱うための中心的なプロパティは [background-\* プロパティ](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。
 
 いくつかの実用的な例に進む前に、背景について知っておくべきことが 2 つあるので、少し後退しましょう。
 
-- 一つのボックスに[複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
+- 一つのボックスに[複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
 - 背景は単色や画像のどちらでもかまいません。 単色は常に表面全体を塗りつぶしますが、画像は拡大縮小して配置することができます。
 
 ```html hidden
@@ -119,7 +119,7 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
 > [!NOTE]
-> グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を見てください。
+> グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/Guides/Images/Using_gradients)を見てください。
 
 ## 擬似要素
 

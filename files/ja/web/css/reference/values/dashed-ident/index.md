@@ -20,7 +20,7 @@ l10n:
 
 ### CSS カスタムプロパティでの使用
 
-`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/Reference/Values/var)の中で使用されます。
+`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/Reference/Values/var)の中で使用されます。
 
 ```css
 html {

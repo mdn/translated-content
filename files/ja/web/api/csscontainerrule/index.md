@@ -201,6 +201,6 @@ log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container-name")}}, {{cssxref("container-type")}}, {{cssxref("container")}} 一括指定プロパティ
-- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
-- [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/Guides/Containment)
+- [コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

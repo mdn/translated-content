@@ -56,7 +56,7 @@ color: hwb(152deg 0% 58% / 70%);
 }
 ```
 
-HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)をご覧ください。
+HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)をご覧ください。
 
 ## 構文
 
@@ -190,5 +190,5 @@ p {
 - 他の色に関するプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("print-color-adjust")}}
 - SVG の {{SVGAttr("color")}} 属性
 - {{CSSXref("color_value/color")}} 関数
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - [WCAG: 色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
