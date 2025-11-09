@@ -6,7 +6,7 @@ original_slug: Web/CSS/object-position
 
 {{CSSRef}}
 
-La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
+La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
 
 > [!NOTE]
 > Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).

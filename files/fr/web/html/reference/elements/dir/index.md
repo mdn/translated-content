@@ -41,6 +41,6 @@ Ne fait pas partie des spécifications actuelles.
 - Les autres éléments HTML utilisés pour les listes : [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol), [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul), [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li), and [`<menu>`](/fr/docs/Web/HTML/Reference/Elements/menu);
 - Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<dir>` :
   - La propriété [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style) est utile pour choisir l'apparence des puces.
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
+  - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) sont utiles pour gérer des listes imbriquées complexes.
   - La propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height) est utile pour reproduire l'attribut déprécié [`compact`](#attr-compact).
   - La propriété [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) est utile pour contrôler l'indentation de la liste.
