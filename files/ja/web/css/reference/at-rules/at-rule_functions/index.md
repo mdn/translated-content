@@ -7,7 +7,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**[CSS](/ja/docs/Web/CSS) [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)関数**は、複雑なルールを表したり、特別なデータ処理や計算を呼び出すことができるアットルール文です。
+**[CSS](/ja/docs/Web/CSS) [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)関数**は、複雑なルールを表したり、特別なデータ処理や計算を呼び出すことができるアットルール文です。
 
 ## 構文
 
@@ -58,4 +58,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール

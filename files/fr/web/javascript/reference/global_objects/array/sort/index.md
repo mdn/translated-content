@@ -318,13 +318,13 @@ console.log([, undefined, "a", "b"].sort()); // ["a", "b", undefined, empty]
 La méthode `sort()` lit la propriété `length` de `this`. Elle collecte ensuite toutes les propriétés à clé entière existantes dans l'intervalle de `0` à `length - 1`, les trie, puis les réécrit. S'il manque des propriétés dans l'intervalle, les propriétés finales correspondantes sont [supprimées](/fr/docs/Web/JavaScript/Reference/Operators/delete), comme si les propriétés inexistantes étaient triées vers la fin.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   0: 5,
   2: 4,
 };
-console.log(Array.prototype.sort.call(arrayLike));
+console.log(Array.prototype.sort.call(objetSimilaireTableau));
 // { '0': 4, '1': 5, length: 3, unrelated: 'foo' }
 ```
 

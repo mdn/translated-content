@@ -64,14 +64,14 @@ console.log([, undefined, "a", "b"].toSorted()); // ["a", "b", undefined, undefi
 La méthode `toSorted()` lit la propriété `length` de `this`. Elle collecte ensuite toutes les propriétés à clé entière existantes dans l'intervalle de `0` à `length - 1`, les trie, puis les écrit dans un nouveau tableau.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   0: 5,
   2: 4,
   3: 3, // ignoré par toSorted() car length vaut 3
 };
-console.log(Array.prototype.toSorted.call(arrayLike));
+console.log(Array.prototype.toSorted.call(objetSimilaireTableau));
 // [4, 5, undefined]
 ```
 

@@ -11,14 +11,14 @@ La méthode **`copyWithin()`** des instances de {{JSxRef("Array")}} copie superf
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.copyWithin()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c", "d", "e"];
+const array = ["a", "b", "c", "d", "e"];
 
 // Copie à l'indice 0 l'élément à l'indice 3
-console.log(array1.copyWithin(0, 3, 4));
+console.log(array.copyWithin(0, 3, 4));
 // Résultat attendu : Array ["d", "b", "c", "d", "e"]
 
 // Copie à l'indice 1 tous les éléments de l'indice 3 à la fin
-console.log(array1.copyWithin(1, 3));
+console.log(array.copyWithin(1, 3));
 // Résultat attendu : Array ["d", "d", "e", "d", "e"]
 ```
 
@@ -98,13 +98,13 @@ console.log([1, , 3].copyWithin(2, 1, 2)); // [1, vide, vide]
 La méthode `copyWithin()` lit la propriété `length` de `this` puis manipule les indices entiers concernés.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 5,
   3: 1,
 };
-console.log(Array.prototype.copyWithin.call(arrayLike, 0, 3));
+console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 0, 3));
 // { '0': 1, '3': 1, length: 5 }
-console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
+console.log(Array.prototype.copyWithin.call(objetSimilaireTableau, 3, 1));
 // { '0': 1, length: 5 }
 // La propriété '3' est supprimée car la source copiée est une case vide
 ```

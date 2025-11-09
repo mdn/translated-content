@@ -267,14 +267,14 @@ button:active {
 }
 ```
 
-Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
+Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/Reference/Values/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
 
 ![](unreadable-button.png)
 
 Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
 
 > [!NOTE]
-> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
+> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using), [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) et [`@supports`](/fr/docs/Web/CSS/Reference/At-rules/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
 
 #### Les commentaires conditionnels d'IE
 
@@ -374,7 +374,7 @@ background-image: linear-gradient(to right, green, yellow);
 
 La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
 
-Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
+Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
 
 1. La première a un préfixe `-moz-`, et montre une version plutôt ancienne de la syntaxe (Firefox)
 2. La seconde a un préfixe `-webkit-`, et montre encore une vieille version de la syntaxe de la propriété (également issue d'une vraiment vieille version du moteur Wekkit)
@@ -483,7 +483,7 @@ Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs
 
 #### Les problèmes de responsive design
 
-Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les [media queries](/fr/docs/Web/CSS/CSS_media_queries), et assurez-vous qu'il est appliqué correctement en utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag). Vous pouvez trouver un bilan précis de telles pratiques dans [The building blocks of responsive design](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les [media queries](/fr/docs/Web/CSS/Guides/Media_queries), et assurez-vous qu'il est appliqué correctement en utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag). Vous pouvez trouver un bilan précis de telles pratiques dans [The building blocks of responsive design](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples [mobile first media queries](/fr/docs/Web/Apps/Progressive/Responsive/Mobile_first), aux plus complexes [responsive image techniques](/fr/docs/Web/HTML/Guides/Responsive_images#resolution_switching_different_sizes).
 

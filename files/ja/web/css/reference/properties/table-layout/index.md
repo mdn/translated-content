@@ -169,4 +169,4 @@ td {
 ## 関連情報
 
 - [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table)
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [CSS 表](/ja/docs/Web/CSS/Guides/Table)モジュール

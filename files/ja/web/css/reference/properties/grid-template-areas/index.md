@@ -181,5 +181,5 @@ grid-template-areas: unset;
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template")}}
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
 - 動画: [Grid template areas](https://gridbyexample.com/video/grid-template-areas/)

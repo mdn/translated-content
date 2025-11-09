@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
 
 ## Syntaxe
 
@@ -32,7 +32,7 @@ override-colors:
 
 Le descripteur [override-colors](/fr/docs/Glossary/CSS_Descriptor) accepte une liste séparée par des virgules composée d'indices de couleur et de nouvelles valeurs de couleur.
 
-L'indice de couleur commence à zéro et toute [valeur de couleur](/fr/docs/Web/CSS/color_value) peut être utilisée.
+L'indice de couleur commence à zéro et toute [valeur de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) peut être utilisée.
 
 Pour chaque paire indice-couleur, la couleur à l'indice spécifié dans la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) sera remplacée. Si la police couleur ne possède pas de couleur à l'indice indiqué, cette valeur sera ignorée.
 

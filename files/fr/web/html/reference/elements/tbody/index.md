@@ -143,7 +143,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Le comportement de la propriété `text-align` équivalent à `align="char"` n'est pas implémenté par les navigateurs à l'heure actuelle. Voir [le tableau de compatibilité des navigateurs `text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align#browser_compatibility) à propos de l'alignement basé sur les une valeur `<string>`.
 
 - `bgcolor` {{Deprecated_inline}}
-  - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un [code hexadécimal à 6 chiffres RGB](/fr/docs/Web/CSS/color_value#couleurs_rgb) précédé d'un `#`. Un des [mots-clés prédéfinis pour les couleurs](/fr/docs/Web/CSS/color_value#les_mots-clés) peut également être utilisé.
+  - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un [code hexadécimal à 6 chiffres RGB](/fr/docs/Web/CSS/Reference/Values/color_value#couleurs_rgb) précédé d'un `#`. Un des [mots-clés prédéfinis pour les couleurs](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés) peut également être utilisé.
 
     Cet attribut étant déprécié, on utilisera la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) à la place.
 

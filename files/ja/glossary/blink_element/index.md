@@ -31,7 +31,7 @@ l10n:
 
 - CSS の {{cssxref("text-decoration-line")}} プロパティには同じ効果を持つはずの `blink` がありますが、ほとんどのモダンブラウザーはこれを無視します。
 - JavaScript の {{jsxref("String.blink()")}} メソッドは、テキスト文字列を `<blink></blink>` タグで囲みますが、前述の通り、この要素はもはやどこでもサポートされていません。
-- [CSS animations](/ja/docs/Web/CSS/CSS_animations) は、点滅するテキストを作成するためにまだ使用することができます。しかし、前述した理由から、ウェブページでのテキストの点滅は避けるべきです。
+- [CSS animations](/ja/docs/Web/CSS/Guides/Animations) は、点滅するテキストを作成するためにまだ使用することができます。しかし、前述した理由から、ウェブページでのテキストの点滅は避けるべきです。
 
 ## 関連情報
 

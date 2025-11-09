@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`animationstart`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が開始したときに発生します。 {{cssxref("animation-delay")}} がある場合、このイベントは待ち時間が経過したときに一度発生します。待ち時間が負の数の場合、イベントは {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} が待ち時間の絶対値と等しくなったときに発生します（および、関連して、アニメーションはシーケンスの中でそのタイムインデックスに再生が始まります）。
+**`animationstart`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が開始したときに発生します。 {{cssxref("animation-delay")}} がある場合、このイベントは待ち時間が経過したときに一度発生します。待ち時間が負の数の場合、イベントは {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} が待ち時間の絶対値と等しくなったときに発生します（および、関連して、アニメーションはシーケンスの中でそのタイムインデックスに再生が始まります）。
 
 ## 構文
 
@@ -160,7 +160,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}

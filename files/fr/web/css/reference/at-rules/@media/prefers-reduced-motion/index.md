@@ -37,7 +37,7 @@ Pour Firefox, la demande `reduce` est prise en compte si&nbsp;:
 
 ## Exemples
 
-Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-reduced-motion`. Si vous activez la réduction des animations dans les préférences d'accessibilité de votre appareil, la requête média `prefers-reduced-motion` détectera votre préférence et le CSS contenu dans la règle de réduction des animations, ayant la même [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) mais apparaissant plus tard dans l'[ordre des sources CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ordre_des_sources), prendra le dessus. Ainsi, l'[animation](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) de la boîte sera atténuée pour utiliser l'animation `dissolve`, plus douce et non déclenchante pour les troubles vestibulaires.
+Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-reduced-motion`. Si vous activez la réduction des animations dans les préférences d'accessibilité de votre appareil, la requête média `prefers-reduced-motion` détectera votre préférence et le CSS contenu dans la règle de réduction des animations, ayant la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) mais apparaissant plus tard dans l'[ordre des sources CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ordre_des_sources), prendra le dessus. Ainsi, l'[animation](/fr/docs/Web/CSS/Guides/Animations/Using) de la boîte sera atténuée pour utiliser l'animation `dissolve`, plus douce et non déclenchante pour les troubles vestibulaires.
 
 ### Atténuer l'animation de mise à l'echelle
 

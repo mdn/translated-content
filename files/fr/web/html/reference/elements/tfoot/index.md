@@ -145,7 +145,7 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) (non implémenté à date).
 
 - `bgcolor` {{Deprecated_inline}}
-  - : Cet attribut définit la couleur d'arrière-plan. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
+  - : Cet attribut définit la couleur d'arrière-plan. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/Reference/Values/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés).
 
     Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
 

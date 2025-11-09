@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.
 
 Pour une police donnée (un ensemble de fontes), les auteur·ice·s peuvent télécharger plusieurs fichiers correspondant à la même police mais pour différents styles. Le descripteur `font-style` peut alors être utilisé afin d'indiquer explicitement le style associé à la fonte. La valeur du descripteur correspond à la propriété de la fonte.
 

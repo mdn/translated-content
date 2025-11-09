@@ -103,7 +103,7 @@ select,
 }
 ```
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) が `<option>` 要素のレイアウトに使用されていると想定します（カスタマイズ可能な選択ボックスの**現在の実装**では実際に使用されています）。この場合、チェックマークを列の先頭から末尾に移動するには、チェックマークに `0` より大きい {{cssxref("order")}} 値を設定し（`0` より小さい値を設定している場合は、それを `0` に設定する）、さらに `auto` を {{cssxref("margin-left")}} に設定して、行末に揃えることで実現できます（詳細は [alignment および auto のマージン](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_および_auto_のマージン)を参照）。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) が `<option>` 要素のレイアウトに使用されていると想定します（カスタマイズ可能な選択ボックスの**現在の実装**では実際に使用されています）。この場合、チェックマークを列の先頭から末尾に移動するには、チェックマークに `0` より大きい {{cssxref("order")}} 値を設定し（`0` より小さい値を設定している場合は、それを `0` に設定する）、さらに `auto` を {{cssxref("margin-left")}} に設定して、行末に揃えることで実現できます（詳細は [alignment および auto のマージン](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox#alignment_および_auto_のマージン)を参照）。
 
 {{cssxref("content")}} プロパティの値を別の絵文字に設定することで、表示されるアイコンを変更することもできます。
 

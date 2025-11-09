@@ -22,7 +22,7 @@ l10n:
 - [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey)
   - : 現在の要素に対するキーボードショートカットを生成するヒントを与えます。この属性の値は、空白区切りの文字のリストです。ブラウザーは、この文字リストの中から、コンピューターのキーボードレイアウトに存在する最初の文字を使用します。
 - [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
-  - : 位置指定要素をアンカー要素に関連付けます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 値です。これにより、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素を位置指定することができます。
+  - : 位置指定要素をアンカー要素に関連付けます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 値です。これにより、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)を使用して要素を位置指定することができます。
 - [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。
 - [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-**`syntax`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用する上で必要であり、そのプロパティで許可される構文を記述します。
+**`syntax`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用する上で必要であり、そのプロパティで許可される構文を記述します。
 
 ## 構文
 
@@ -24,7 +24,7 @@ syntax: "*"; /* 常に有効なトークン */
 
 ## 値
 
-仕様で定義されている対応する構文を持つ文字列。対応する構文は [CSS 型](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types)のサブセットです。これらは一緒に使うこともできますし、いくつかの型を組み合わせて使うこともできます。
+仕様で定義されている対応する構文を持つ文字列。対応する構文は [CSS 型](/ja/docs/Web/CSS/Reference/Values/Data_types)のサブセットです。これらは一緒に使うこともできますし、いくつかの型を組み合わせて使うこともできます。
 
 - `"<length>"`
   - : あらゆる有効な {{cssxref("&lt;length&gt;")}} の値です。
@@ -67,7 +67,7 @@ syntax: "*"; /* 常に有効なトークン */
 
 `--my-color` {{cssxref('--*', 'カスタムプロパティ')}}に、 `<color>` の構文を使用して型チェックを追加します。
 
-[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用すると次のようになります。
+[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用すると次のようになります。
 
 ```css
 @property --my-color {

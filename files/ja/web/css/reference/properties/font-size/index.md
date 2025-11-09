@@ -80,10 +80,10 @@ font-size: unset;
 ### 値
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-  - : [絶対的なサイズ](/ja/docs/Web/CSS/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
+  - : [絶対的なサイズ](/ja/docs/Web/CSS/Reference/Values/absolute-size)のキーワードで、ユーザーの既定のフォントサイズ (つまり `medium`) を基準としたものです。
 
 - `larger`, `smaller`
-  - : [相対的なサイズ](/ja/docs/Web/CSS/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
+  - : [相対的なサイズ](/ja/docs/Web/CSS/Reference/Values/relative-size)のキーワードです。フォントは親要素のフォントサイズから相対的に、上記の絶対的サイズのキーワードで使われている倍率におよそ沿う形で拡大または縮小されます。
 
 - {{cssxref("&lt;length&gt;")}}
   - : 正の {{cssxref("&lt;length&gt;")}} の値。 (`em` や `ex` などの) フォント相対単位のほとんどは、親要素のフォントサイズに対する相対値です。

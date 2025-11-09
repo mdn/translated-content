@@ -51,9 +51,9 @@ La caractéristique `color-gamut` se définit avec l'une des valeurs-mots-clés 
 
 ## Voir aussi
 
-- La fonction [`color()`](/fr/docs/Web/CSS/color_value/color) pour définir des couleurs dans un espace colorimétrique donné.
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- La fonction [`color()`](/fr/docs/Web/CSS/Reference/Values/color_value/color) pour définir des couleurs dans un espace colorimétrique donné.
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - La règle {{cssxref("@media")}} utilisée pour spécifier l'expression `color-gamut`.
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour comprendre quand et comment utiliser une requête média.
-- Le module des [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour comprendre quand et comment utiliser une requête média.
+- Le module des [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
 - [sRGB](https://fr.wikipedia.org/wiki/SRGB) sur Wikipedia

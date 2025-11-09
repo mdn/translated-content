@@ -98,7 +98,7 @@ En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/Refere
 
 ## Voir aussi
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
 - <i lang="en">Styling for Windows high contrast with standards for forced colors</i>
 
   [<i lang="en">Styling for Windows high contrast with standards for forced colors</i> (en anglais)](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)

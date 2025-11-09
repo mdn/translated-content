@@ -8,7 +8,7 @@ l10n:
 
 {{seecompattable}}
 
-**`interpolate-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)を行うときに、[`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) 値と、`auto`、[`fit-content`](/ja/docs/Web/CSS/fit-content)、[`max-content`](/ja/docs/Web/CSS/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値との間で行うことができます。
+**`interpolate-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)を行うときに、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と、`auto`、[`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値との間で行うことができます。
 
 このプロパティは通常、 {{cssxref("width")}} や {{cssxref("height")}} を、 `<length-percentage>` とそのコンテンツのフルサイズの間（つまり、「閉じた」と「開いた」状態、あるいは「非表示」と「表示」状態の間）でアニメーションさせる場合に使用します。 {{cssxref("transform")}} など、ボックスモデル以外の CSS プロパティをアニメーション化する場合、これは実行可能な解決策ではありません。
 
@@ -33,13 +33,13 @@ interpolate-size: unset;
 ### 値
 
 - `allow-keywords`
-  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) 値と内在サイズ値の間の[補間処理](/ja/docs/Glossary/Interpolation)を有効にし、 2 つの間のアニメーションを可能にします。
+  - : [`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と内在サイズ値の間の[補間処理](/ja/docs/Glossary/Interpolation)を有効にし、 2 つの間のアニメーションを可能にします。
 - `numeric-only`
   - : 既定の動作では、内在サイズ値は補間処理できません。
 
 ## 解説
 
-`interpolate-size: allow-keywords` を設定すると、[`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) 値と内在サイズ値の間の補間処理が可能になります。2 つの内在サイズ値間のアニメーションは有効にならないことに注意してください。アニメーションの一方の端は `<length-percentage>` でなければなりません。
+`interpolate-size: allow-keywords` を設定すると、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と内在サイズ値の間の補間処理が可能になります。2 つの内在サイズ値間のアニメーションは有効にならないことに注意してください。アニメーションの一方の端は `<length-percentage>` でなければなりません。
 
 `interpolate-size` の値は継承されるため、文書ルートで設定することで、文書全体に対して内在サイズ値への（または内在サイズ値からの）アニメーションを有効にすることができます。
 

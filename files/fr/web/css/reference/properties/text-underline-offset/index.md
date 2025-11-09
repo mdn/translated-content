@@ -62,7 +62,7 @@ La propriété `text-underline-offset` est définie avec le mot-clé `none` ou a
 - `from-font`
   - : Si le fichier de fonte inclut des informations quant à un décalage préféré, c'est cette valeur qui sera utilisée. Si le fichier de fonte n'a pas cette information, cette valeur se comportera comme `auto`.
 - `<length>`
-  - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) indiquant le décalage à utiliser. Il est recommandé d'utiliser des [`em`](/fr/docs/Web/CSS/length#em) comme unité afin que le décalage suive la taille de la police (quand on zoome par exemple).
+  - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) indiquant le décalage à utiliser. Il est recommandé d'utiliser des [`em`](/fr/docs/Web/CSS/Reference/Values/length#em) comme unité afin que le décalage suive la taille de la police (quand on zoome par exemple).
 
 ### Syntaxe formelle
 

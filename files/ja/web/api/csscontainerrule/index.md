@@ -32,7 +32,7 @@ _固有のメソッドはありません。祖先である {{domxref("CSSConditi
 ### 無名のコンテナールール
 
 下記の例では、無名の {{cssxref("@container")}} ルールを定義し、関連する `CSSContainerRule` のプロパティを表示します。
-CSS は `@container` の例[コンテナーの大きさに基づいたスタイルの設定](/ja/docs/Web/CSS/@container#コンテナーの大きさに基づいたスタイルの設定)と同じです。
+CSS は `@container` の例[コンテナーの大きさに基づいたスタイルの設定](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナーの大きさに基づいたスタイルの設定)と同じです。
 
 コードの最初の部分では、コンテナールールのプロパティをログ出力するためのリストと、プロパティの追加を簡単にするための JavaScript の `log()` メソッドを作成しています。
 
@@ -116,7 +116,7 @@ log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ### 名前付きコンテナーのルール
 
 下記の例では、名前付き {{cssxref("@container")}} ルールを定義し、関連する `CSSContainerRule` のプロパティを表示しています。
-CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
+CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/Reference/At-rules/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
 
 ```html hidden
 <div id="log">
@@ -201,6 +201,6 @@ log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container-name")}}, {{cssxref("container-type")}}, {{cssxref("container")}} 一括指定プロパティ
-- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
-- [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/Guides/Containment)
+- [コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

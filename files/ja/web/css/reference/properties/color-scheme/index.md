@@ -13,9 +13,9 @@ l10n:
 - フォームコントロールの既定の色。
 - その他のブラウザーで指定された UI の既定の色（たとえば、「スペルチェック」のアンダーラインなど）。
 
-要素の作成者は、[`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性を使用して、残りの要素の色構成に対応する必要があります。
+要素の作成者は、[`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディア特性を使用して、残りの要素の色構成に対応する必要があります。
 
-オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/system-color)の使用値が含まれます。
+オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/Guides/Scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/Reference/Values/system-color)の使用値が含まれます。
 
 {{InteractiveExample("CSS デモ: color-scheme")}}
 
@@ -114,7 +114,7 @@ footer {
 
 ### 配色設定に基づいたスタイル設定
 
-配色の好みに基づいて要素をスタイル設定するには、 [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーを用います。下記の例では、`color-scheme` プロパティによってページ全体でオペレーティングシステムの明るい配色と暗い配色の両方を使用することを選択し、 `prefers-color-scheme` を使用して個々の要素にそれらの配色で望ましい前景色と背景色を指定しています。
+配色の好みに基づいて要素をスタイル設定するには、 [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーを用います。下記の例では、`color-scheme` プロパティによってページ全体でオペレーティングシステムの明るい配色と暗い配色の両方を使用することを選択し、 `prefers-color-scheme` を使用して個々の要素にそれらの配色で望ましい前景色と背景色を指定しています。
 
 ```css
 :root {
@@ -136,7 +136,7 @@ footer {
 }
 ```
 
-また、 [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
+また、 [`light-dark()`](/ja/docs/Web/CSS/Reference/Values/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/Reference/Values/Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
 
 ```css
 :root {
@@ -159,9 +159,9 @@ footer {
 
 ## 関連情報
 
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーで、配色設定のユーザー設定を検出することができます。
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリーで、配色設定のユーザー設定を検出することができます。
 - {{CSSXref("color_value/light-dark", "light-dark()")}} カラー関数で、ライトとダークの配色設定の両方に色を設定することができます。
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
-- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
+- [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)

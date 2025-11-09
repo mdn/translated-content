@@ -614,14 +614,14 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
    8. [grid-column-gap](/ko/docs/Web/CSS/column-gap)
    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/ko/docs/Web/CSS/gap)
+   10. [grid-gap](/ko/docs/Web/CSS/Reference/Properties/gap)
    11. [grid-row](/ko/docs/Web/CSS/grid-row)
    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
    13. [grid-row-gap](/ko/docs/Web/CSS/row-gap)
    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
    15. [grid-template](/ko/docs/Web/CSS/grid-template)
    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
+   17. [grid-template-columns](/ko/docs/Web/CSS/Reference/Properties/grid-template-columns)
    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**

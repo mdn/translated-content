@@ -7,7 +7,7 @@ original_slug: Web/CSS/box-lines
 {{Non-standard_header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)を参照してください。
 
 **`box-lines`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの配置行 (水平方向のボックスでは行、垂直方向のボックスでは列) が単一なのか複数なのかを指定します。
 

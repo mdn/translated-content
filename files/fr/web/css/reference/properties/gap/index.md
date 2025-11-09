@@ -6,7 +6,7 @@ original_slug: Web/CSS/gap
 
 {{CSSRef}}
 
-La propriété **`gap`** est [une propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) pour [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap) et [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) qui permet de définir les espaces (les [gouttières](/fr/docs/Glossary/Gutters)) entre les lignes et entre les colonnes d'une grille.
+La propriété **`gap`** est [une propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) pour [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap) et [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap) qui permet de définir les espaces (les [gouttières](/fr/docs/Glossary/Gutters)) entre les lignes et entre les colonnes d'une grille.
 
 {{InteractiveExample("CSS Demo: gap")}}
 
@@ -101,9 +101,9 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/length)
+- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
   - : La largeur de l'espace entre les pistes de grille.
-- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
   - : La largeur de l'espace entre les pistes de grille en fonction de la taille de l'élément englobant.
 
 ## Définition formelle
@@ -234,4 +234,4 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 ## Voir aussi
 
 - Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/Reference/Properties/row-gap), [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_goutti%c3%a8res)_
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_goutti%c3%a8res)_

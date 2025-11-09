@@ -9,7 +9,7 @@ l10n:
 > [!WARNING]
 > このページの下部に埋め込まれた例は、拡大縮小の動きがありますが、一部の読者には問題があるかもしれません。前庭運動障害をお持ちの方は、アニメーションを見る前に、お使いの端末のモーション軽減機能を有効にしてください。
 
-**`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。この設定は、ユーザーがモーションベースのアニメーションを削除、縮小、または置き換えるインターフェイスを推奨していることを、端末のブラウザーに伝えるために使用します。
+**`prefers-reduced-motion`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが余計な動きを最少化するよう要求したことを検出するために使用します。この設定は、ユーザーがモーションベースのアニメーションを削除、縮小、または置き換えるインターフェイスを推奨していることを、端末のブラウザーに伝えるために使用します。
 
 このようなアニメーションは、[前庭運動障碍](https://www.a11yproject.com/posts/understanding-vestibular-disorders/)のある人に不快感を引き起こす可能性があります。大きなオブジェクトを拡大縮小したりパンなどしたりするアニメーションは、前庭運動を引き起こす可能性があります。
 
@@ -44,7 +44,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 ## 例
 
-この例では、 `prefers-reduced-motion` を実証するために、拡大縮小アニメーションを使用しています。端末のアクセシビリティ設定でモーションの削減を有効にすると、 `prefers-reduced-motion` メディアクエリーがユーザーの意向を検出し、同じ[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)で [CSS ソースの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)では後方に位置する、モーション削減ルール内の CSS が優先されます。その結果、ボックスの[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)は、前庭運動を誘発しない、より控えめなアニメーションである `dissolve` アニメーションにトーンダウンします。
+この例では、 `prefers-reduced-motion` を実証するために、拡大縮小アニメーションを使用しています。端末のアクセシビリティ設定でモーションの削減を有効にすると、 `prefers-reduced-motion` メディアクエリーがユーザーの意向を検出し、同じ[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)で [CSS ソースの順序](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)では後方に位置する、モーション削減ルール内の CSS が優先されます。その結果、ボックスの[アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)は、前庭運動を誘発しない、より控えめなアニメーションである `dissolve` アニメーションにトーンダウンします。
 
 ### アニメーションの拡大縮小のトーンダウン
 

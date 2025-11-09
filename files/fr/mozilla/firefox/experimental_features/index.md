@@ -338,7 +338,7 @@ Le descripteur CSS [`@font-face/size-adjust`](/fr/docs/Web/CSS/Reference/At-rule
 
 ### Nombres seuls pour les proportions dans les requêtes média
 
-Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`number`](/fr/docs/Web/CSS/number)) pour exprimer le [ratio](/fr/docs/Web/CSS/ratio) lors de la définition d'une [requête média](/fr/docs/Web/CSS/CSS_media_queries). Voir [le bug 1565562](https://bugzilla.mozilla.org/show_bug.cgi?id=1565562) pour plus de détails.
+Il s'agit ici de la prise en charge permettant d'utiliser un seul nombre ([`number`](/fr/docs/Web/CSS/Reference/Values/number)) pour exprimer le [ratio](/fr/docs/Web/CSS/Reference/Values/ratio) lors de la définition d'une [requête média](/fr/docs/Web/CSS/Guides/Media_queries). Voir [le bug 1565562](https://bugzilla.mozilla.org/show_bug.cgi?id=1565562) pour plus de détails.
 
 <table class="standard-table">
   <thead>
@@ -418,7 +418,7 @@ La propriété [`backdrop-filter`](/fr/docs/Web/CSS/Reference/Properties/backdro
 
 ### Grilles : disposition en maçonnerie
 
-Cette fonctionnalité ajoute la prise en charge pour [les dispositions « en maçonnerie »](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout) basées sur les grilles où un axe est organisé avec une disposition donnée et où l'autre suit une disposition de grille normale. Cela permet aux développeuses et développeurs de créer plus facilement des dispositions pour des galeries. Voir [le bug 1607954](https://bugzilla.mozilla.org/show_bug.cgi?id=1607954) pour plus de détails.
+Cette fonctionnalité ajoute la prise en charge pour [les dispositions « en maçonnerie »](/fr/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) basées sur les grilles où un axe est organisé avec une disposition donnée et où l'autre suit une disposition de grille normale. Cela permet aux développeuses et développeurs de créer plus facilement des dispositions pour des galeries. Voir [le bug 1607954](https://bugzilla.mozilla.org/show_bug.cgi?id=1607954) pour plus de détails.
 
 <table class="standard-table">
   <thead>

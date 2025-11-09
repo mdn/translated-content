@@ -108,16 +108,16 @@ console.log([1, , 3].includes(undefined)); // true
 La méthode `includes()` lit la propriété `length` de `this` puis accède à chaque propriété dont la clé est un entier non négatif inférieur à `length`.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   0: 2,
   1: 3,
   2: 4,
   3: 1, // ignoré par includes() car length vaut 3
 };
-console.log(Array.prototype.includes.call(arrayLike, 2));
+console.log(Array.prototype.includes.call(objetSimilaireTableau, 2));
 // true
-console.log(Array.prototype.includes.call(arrayLike, 1));
+console.log(Array.prototype.includes.call(objetSimilaireTableau, 1));
 // false
 ```
 

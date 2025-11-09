@@ -62,10 +62,10 @@ console.log(denseKeys); // [0, 1, 2]
 La méthode `keys()` lit la propriété `length` de `this` puis génère tous les indices entiers de 0 à `length - 1`. Aucun accès aux indices n'est réellement effectué.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
 };
-for (const entry of Array.prototype.keys.call(arrayLike)) {
+for (const entry of Array.prototype.keys.call(objetSimilaireTableau)) {
   console.log(entry);
 }
 // 0

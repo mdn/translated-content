@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-image-repeat
 original_slug: Web/CSS/border-image-repeat
 ---
 
-**`border-image-repeat`** [CSS](/ko/docs/Web/CSS) 속성은 원본 이미지의 [모서리 영역](/ko/docs/Web/CSS/border-image-slice#edge_region)을 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image) 크기에 맞춰 조절할 때 사용할 방법을 지정합니다.
+**`border-image-repeat`** [CSS](/ko/docs/Web/CSS) 속성은 원본 이미지의 [모서리 영역](/ko/docs/Web/CSS/Reference/Properties/border-image-slice#edge_region)을 요소의 [테두리 이미지](/ko/docs/Web/CSS/Reference/Properties/border-image) 크기에 맞춰 조절할 때 사용할 방법을 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-image-repeat")}}
 

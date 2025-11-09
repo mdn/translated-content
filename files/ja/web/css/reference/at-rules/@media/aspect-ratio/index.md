@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9e7260485703694d47aa360e2db97aae2ea5ae42
 ---
 
-**`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の{{glossary("aspect ratio", "アスペクト比")}}を調べるために使用します。
+**`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の{{glossary("aspect ratio", "アスペクト比")}}を調べるために使用します。
 
 ## 構文
 
@@ -113,6 +113,6 @@ h.onchange = h.oninput = () => {
 
 ## 関連情報
 
-- [`aspect-ratio` の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [`aspect-ratio` の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

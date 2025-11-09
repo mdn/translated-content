@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-**`@property`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 API の [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS カスタムプロパティ')}}を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。
+**`@property`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、 API の [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS カスタムプロパティ')}}を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。
 
 `@property` ルールは、 JS を実行することなく、スタイルシートの中で直接カスタムプロパティの登録を表します。有効な `@property` ルールは、あたかも {{domxref('CSS.registerProperty_static', 'registerProperty()')}} が同等の引数で呼び出されたかのように、登録されたカスタムプロパティを生成します。
 
@@ -56,7 +56,7 @@ l10n:
 </div>
 ```
 
-以下のコードは CSS の `@property` アットルールを使用して、 `--item-size` という名前のカスタムプロパティを定義します。このプロパティは初期値を `40%` に設定し、有効な値をパーセント値 ([`<percentage>`](/ja/docs/Web/CSS/percentage)) のみに制限します。つまり、アイテムのサイズの値として使用する場合、そのサイズは常に親のサイズからの相対値となります。このプロパティは継承可能です。
+以下のコードは CSS の `@property` アットルールを使用して、 `--item-size` という名前のカスタムプロパティを定義します。このプロパティは初期値を `40%` に設定し、有効な値をパーセント値 ([`<percentage>`](/ja/docs/Web/CSS/Reference/Values/percentage)) のみに制限します。つまり、アイテムのサイズの値として使用する場合、そのサイズは常に親のサイズからの相対値となります。このプロパティは継承可能です。
 
 ```css
 @property --item-size {
@@ -66,7 +66,7 @@ l10n:
 }
 ```
 
-第 2 のカスタムプロパティである `--item-color` は、 CSS の代わりに [JavaScript](/ja/docs/Web/JavaScript) を使用して定義します。 JavaScript の {{domxref('CSS.registerProperty_static', 'registerProperty()')}} メソッドは、 `@property` アットルールと同等です。このプロパティは初期値が `aqua` で、[`<color>`](/ja/docs/Web/CSS/color_value) の値のみを受け入れるように定義されており、継承されません。
+第 2 のカスタムプロパティである `--item-color` は、 CSS の代わりに [JavaScript](/ja/docs/Web/JavaScript) を使用して定義します。 JavaScript の {{domxref('CSS.registerProperty_static', 'registerProperty()')}} メソッドは、 `@property` アットルールと同等です。このプロパティは初期値が `aqua` で、[`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) の値のみを受け入れるように定義されており、継承されません。
 
 ```js
 window.CSS.registerProperty({
@@ -135,5 +135,5 @@ window.CSS.registerProperty({
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
 - [Houdini API](/ja/docs/Web/API/Houdini_APIs)
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)ガイド
-- [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール
+- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)ガイド
+- [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュール

@@ -542,7 +542,7 @@ label {
 - `popovertarget`
   - : `<input type="button">` をポップオーバー制御ボタンにします。制御するポップオーバー要素の ID を値として取ります。詳細は{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。 `popovertarget` 属性を使用してポップオーバーとその呼び出しボタンを関連付けると、さらに 2 つの有益な効果があります。
     - ブラウザーは、ポップオーバーと呼び出し元の間に、暗黙的な [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を生成し、ポップオーバーを表示させる際には、キーボードフォーカスナビゲーションの論理的な位置にポップオーバーを配置します。これにより、キーボードや支援技術 (AT) のユーザーにとって、ポップオーバーがよりアクセスしやすくなります（[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)も参照してください）。
-    - ブラウザーは、 2 つの間に暗黙的なアンカー参照を作成し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、ポップオーバーをそのコントローラーに対して相対的に配置することをとても便利にします。詳細は、[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)を参照してください。
+    - ブラウザーは、 2 つの間に暗黙的なアンカー参照を作成し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、ポップオーバーをそのコントローラーに対して相対的に配置することをとても便利にします。詳細は、[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)を参照してください。
 
 - `popovertargetaction`
   - : 制御用の `<input type="button">` で制御されるポップオーバー要素で行われる動作を指定します。取りうる値は次の通りです。
@@ -657,7 +657,7 @@ label {
     `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
 - `orient` {{non-standard_inline}}
-  - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。垂直フォームコントロールを作成する現行の手法については、[垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)を参照してください。
+  - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。垂直フォームコントロールを作成する現行の手法については、[垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)を参照してください。
 
 - `results` {{non-standard_inline}}
   - : `results` 属性は Safari のみが対応しており、 `<input>` 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
@@ -907,7 +907,7 @@ input.custom {
 
 HTML の要素に色を追加することの関する詳しい情報は、次の記事を参照してください。
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 
 こちらも参照してください。
 

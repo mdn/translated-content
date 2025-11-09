@@ -43,7 +43,7 @@ animation-timeline: unset;
 - `none`
   - : L'animation n'est associée à aucune chronologie.
 - `<timeline-name>`
-  - : Un [identifiant (`custom-ident`)](/fr/docs/Web/CSS/custom-ident) ou une chaîne de caractères identifiant la chronologie de défilement, déclarée via une règle [`@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline). Si deux chronologies de défilement (ou plus) partagent le même nom, c'est la dernière déclarée au sein de la cascade qui sera utilisée. Si aucune chronologie de défilement correspondante n'est trouvée, l'animation ne sera pas associée à une chronologie.
+  - : Un [identifiant (`custom-ident`)](/fr/docs/Web/CSS/Reference/Values/custom-ident) ou une chaîne de caractères identifiant la chronologie de défilement, déclarée via une règle [`@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline). Si deux chronologies de défilement (ou plus) partagent le même nom, c'est la dernière déclarée au sein de la cascade qui sera utilisée. Si aucune chronologie de défilement correspondante n'est trouvée, l'animation ne sera pas associée à une chronologie.
 
 ## Définition formelle
 
@@ -117,5 +117,5 @@ Faites défiler le cadre pour observer l'animation.
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - [La règle @ `@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline)

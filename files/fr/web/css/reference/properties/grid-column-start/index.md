@@ -88,8 +88,8 @@ grid-column-start: unset;
 La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. Une telle valeur peut être définie avec&nbsp;:
 
 - le mot-clé `auto`
-- un identifiant ([`<custom-ident>`](/fr/docs/Web/CSS/custom-ident))
-- ou une valeur entière ([`<integer>`](/fr/docs/Web/CSS/integer))
+- un identifiant ([`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident))
+- ou une valeur entière ([`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer))
 - ou un identifiant et un entier séparés par un espace
 - ou le mot-clé `span` avec un identifiant ou un entier ou les deux.
 
@@ -98,7 +98,7 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 - `auto`
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<i lang="en">span</i>) automatique ou une taille par défaut de `1`.
 
-- [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
+- [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident)
   - : S'il existe une ligne nommée avec '\<custom-ident>-start', le début de l'élément coincide avec la première ligne correspondante.
 
     > [!NOTE]
@@ -284,5 +284,5 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 - [`grid-row-start`](/fr/docs/Web/CSS/Reference/Properties/grid-row-start)
 - [`grid-row-end`](/fr/docs/Web/CSS/Reference/Properties/grid-row-end)
 - [`grid-row`](/fr/docs/Web/CSS/Reference/Properties/grid-row)
-- [Guide&nbsp;: le placement sur les lignes d'une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Guide&nbsp;: le placement sur les lignes d'une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - [Tutoriel vidéo en anglais sur le placement sur les lignes](https://gridbyexample.com/video/series-line-based-placement/)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7526c9b4f29818bdca7505de41a4883f4ada2707
 ---
 
-**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)の名前を指定します。
+**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)の名前を指定します。
 
 ## 構成要素のプロパティ
 
@@ -99,8 +99,8 @@ container: unset;
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("contain")}} 一括指定プロパティ
 - CSS {{Cssxref("container-type")}} プロパティ

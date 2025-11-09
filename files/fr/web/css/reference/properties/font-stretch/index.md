@@ -87,7 +87,7 @@ font-stretch: revert;
 font-stretch: unset;
 ```
 
-Cette propriété peut être définie avec un mot-clé ou avec une valeur exprimée en pourcentages (cf. [`<percentage>`](/fr/docs/Web/CSS/percentage)).
+Cette propriété peut être définie avec un mot-clé ou avec une valeur exprimée en pourcentages (cf. [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)).
 
 ### Valeurs
 
@@ -98,7 +98,7 @@ Cette propriété peut être définie avec un mot-clé ou avec une valeur exprim
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Permet de choisir une fonte plus étendue que la normale, `ultra-expanded` correspond à la forme la plus étirée.
 - `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette propriété.
+  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette propriété.
 
 Dans les anciennes versions de la spécification de `font-stretch`, seuls les mots-clés étaient acceptés comme valeurs. Avec la spécification [_CSS Fonts_ de niveau 4](https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch), cette propriété peut également être définie avec un pourcentage. Cela permet d'obtenir un contrôle plus fin sur la largeur. Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `wdth` qui implémente ces largeurs variables. Attention toutefois à la compatibilité, car certains navigateurs ne prennent pas encore en charge cette fonctionnalité (cf. [la section en fin d'article sur la compatibilité des navigateurs](#compatibilité_des_navigateurs)).
 

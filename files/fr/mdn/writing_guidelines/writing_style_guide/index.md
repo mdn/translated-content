@@ -133,7 +133,7 @@ Utilisez à la place des formulations descriptives qui identifient clairement la
 
 Par exemple&nbsp;:
 
-- **Correct**&nbsp;: «&nbsp;Reportez-vous à la section [Accessibilité](/fr/docs/Web/CSS/gradient/repeating-conic-gradient#accessibilité) plus loin sur cette page.&nbsp;»
+- **Correct**&nbsp;: «&nbsp;Reportez-vous à la section [Accessibilité](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibilité) plus loin sur cette page.&nbsp;»
 - **Incorrect**&nbsp;: «&nbsp;Reportez-vous à la section d'accessibilité ci-dessous.&nbsp;»
 
 - **Correct**&nbsp;: «&nbsp;Dans l'exemple de code suivant, nous animons un cercle avec des transitions CSS.&nbsp;»
@@ -146,9 +146,9 @@ Par exemple&nbsp;:
 
 <!-- markdownlint-disable descriptive-link-text -->
 
-- **Correct**&nbsp;: «&nbsp;En savoir plus sur [la façon d'ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items).&nbsp;»
-- **Incorrect**&nbsp;: «&nbsp;Cliquez [ici](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) pour en savoir plus.&nbsp;»
-- **Incorrect**&nbsp;: «&nbsp;Lisez [cet article](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) pour en savoir plus.&nbsp;»
+- **Correct**&nbsp;: «&nbsp;En savoir plus sur [la façon d'ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items).&nbsp;»
+- **Incorrect**&nbsp;: «&nbsp;Cliquez [ici](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items) pour en savoir plus.&nbsp;»
+- **Incorrect**&nbsp;: «&nbsp;Lisez [cet article](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items) pour en savoir plus.&nbsp;»
 
 <!-- markdownlint-enable descriptive-link-text -->
 
@@ -456,8 +456,8 @@ Pour le style et la mise en forme des exemples, voir nos [Recommandations de sty
 
 Lorsque vous faites référence à une autre page MDN ou à une section d'une page par son titre, utilisez la casse phrase dans le texte du lien (faites correspondre le titre). Utilisez la casse phrase même si elle diffère de celle du titre de la page ou de la section liée. N'utilisez pas de guillemets autour du texte du lien. Pour référencer une page par son titre&nbsp;:
 
-- **Correct**&nbsp;: «&nbsp;Reportez-vous au guide [Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items).&nbsp;»
-- **Incorrect**&nbsp;: «&nbsp;Reportez-vous au guide "[Ordering flex items](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)".&nbsp;»
+- **Correct**&nbsp;: «&nbsp;Reportez-vous au guide [Ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items).&nbsp;»
+- **Incorrect**&nbsp;: «&nbsp;Reportez-vous au guide "[Ordering flex items](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)".&nbsp;»
 
 Suivez un style cohérent pour les liens vers des sections dans une page&nbsp;:
 
@@ -465,8 +465,8 @@ Suivez un style cohérent pour les liens vers des sections dans une page&nbsp;:
 
 Si la section liée est sur la même page, vous pouvez indiquer sa position avec des formulations descriptives.
 
-- **Correct**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/gradient/repeating-conic-gradient#accessibilité) de ce document.&nbsp;»
-- **Incorrect**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/gradient/repeating-conic-gradient#accessibilité) ci-dessous.&nbsp;»
+- **Correct**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibilité) de ce document.&nbsp;»
+- **Incorrect**&nbsp;: «&nbsp;Ce concept est décrit plus en détail dans la section [Accessibilité](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient#accessibilité) ci-dessous.&nbsp;»
 
 Sur MDN, une autre façon de lier une page de référence est d'utiliser une macro. Ces macros sont décrites sur la page [Macros couramment utilisées](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references). Par exemple, pour lier une page de référence d'un élément HTML, utilisez la macro `HTMLElement`, et pour une propriété CSS, utilisez `CSSxRef`.
 

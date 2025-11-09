@@ -356,6 +356,6 @@ container.appendChild(secondClone);
 - {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping) モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping) モジュール
 - [宣言的シャドウ DOM （HTML による）](/ja/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) （シャドウ DOM の使用）
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) (developer.chrome.com, 2023)

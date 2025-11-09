@@ -34,7 +34,7 @@ timeline-scope: custom_name_for_timeline;
   - : 子孫要素で定義されている既存の名前付きタイムライン（{{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} を用いて宣言されたもの）の名前を指定します。これにより、タイムラインのスコープは `timeline-scope` が設定された要素とその子孫要素まで拡張されます。
 
     > [!NOTE]
-    > [`<dashed-ident>`](/ja/docs/Web/CSS/custom-ident) の値は `--` で始める必要があり、標準的な CSS キーワードとの名前の衝突を避けるのに役立ちます。
+    > [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident) の値は `--` で始める必要があり、標準的な CSS キーワードとの名前の衝突を避けるのに役立ちます。
 
 ## 公式定義
 
@@ -148,4 +148,4 @@ body {
 - [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
 - [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

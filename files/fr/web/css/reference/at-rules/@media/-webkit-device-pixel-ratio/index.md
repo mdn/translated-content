@@ -18,7 +18,7 @@ La caractéristique `-webkit-device-pixel-ratio` se définit avec une valeur de 
 ### Valeurs
 
 - {{cssxref("&lt;number&gt;")}}
-  - : Le nombre de pixels physiques pour chaque pixel ([`px`](/fr/docs/Web/CSS/length#unités_de_longueur_absolues)) CSS. Bien que la valeur soit un nombre et ne permette pas d'utiliser des unités, l'unité implicite est [`dppx`](/fr/docs/Web/CSS/resolution#unités).
+  - : Le nombre de pixels physiques pour chaque pixel ([`px`](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_absolues)) CSS. Bien que la valeur soit un nombre et ne permette pas d'utiliser des unités, l'unité implicite est [`dppx`](/fr/docs/Web/CSS/Reference/Values/resolution#unités).
 
 ## Implémentation
 
@@ -89,7 +89,7 @@ La caractéristique `-webkit-device-pixel-ratio` se définit avec une valeur de 
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("resolution")}}
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}

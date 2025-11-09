@@ -37,11 +37,11 @@ mask-origin: unset;
 `mask-origin` プロパティは、 `<coord-box>` キーワードの値のカンマで区切られたリストで、以下のものが含まれます。
 
 - `content-box`
-  - : 位置が[コンテンツボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#content-box)からの相対位置になります。
+  - : 位置が[コンテンツボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)からの相対位置になります。
 - `padding-box`
-  - : 位置が[パディングボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#padding-box)からの相対位置になります。
+  - : 位置が[パディングボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box)からの相対位置になります。
 - `border-box`
-  - : 位置が[境界ボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#border-box)からの相対位置になります。
+  - : 位置が[境界ボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#border-box)からの相対位置になります。
 - `fill-box`
   - : 位置がオブジェクトの囲みボックスからの相対位置になります。
 - `stroke-box`
@@ -227,4 +227,4 @@ div {
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} 一括指定
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

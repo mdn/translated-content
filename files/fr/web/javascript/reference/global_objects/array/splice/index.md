@@ -194,15 +194,15 @@ console.log(arr); // [1, 4, empty, 6]
 La méthode `splice()` lit la propriété `length` de `this`. Elle met ensuite à jour les propriétés à clés entières et la propriété `length` si nécessaire.
 
 ```js
-const arrayLike = {
+const objetSimilaireTableau = {
   length: 3,
   unrelated: "foo",
   0: 5,
   2: 4,
 };
-console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3));
+console.log(Array.prototype.splice.call(objetSimilaireTableau, 0, 1, 2, 3));
 // [ 5 ]
-console.log(arrayLike);
+console.log(objetSimilaireTableau);
 // { '0': 2, '1': 3, '3': 4, length: 4, unrelated: 'foo' }
 ```
 

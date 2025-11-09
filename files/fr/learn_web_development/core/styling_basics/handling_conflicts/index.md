@@ -29,15 +29,15 @@ Bien que ce chapitre puisse sembler plus théorique voire académique que d'autr
 
 CSS est l'acronyme pour **<i lang="en">Cascading Style Sheets</i>** (soit «&nbsp;feuilles de style en cascade&nbsp;» en français). Comprendre cette notion de _cascade_, présente dans cet acronyme, est fondamental pour comprendre CSS.
 
-Lorsque vous travaillerez sur un projet, vous rencontrerez peut-être une règle CSS dont vous pensez qu'elle devrait s'appliquer à un élément, mais qui ne fonctionne pas. Il arrive souvent que le problème vienne de deux règles qui appliquent différentes valeurs pour la même propriété sur le même élément. [**La cascade**](/fr/docs/Web/CSS/CSS_cascade/Cascade) et [**la spécificité**](/fr/docs/Web/CSS/CSS_cascade/Specificity) sont des mécanismes qui contrôlent quelle règle s'applique lorsqu'un tel conflit se produit. Autrement dit, la règle qui met en forme votre élément peut ne pas être celle à laquelle vous vous attendez et comprendre ces mécanismes vous aidera à diagnostiquer, corriger voire éviter ces problèmes.
+Lorsque vous travaillerez sur un projet, vous rencontrerez peut-être une règle CSS dont vous pensez qu'elle devrait s'appliquer à un élément, mais qui ne fonctionne pas. Il arrive souvent que le problème vienne de deux règles qui appliquent différentes valeurs pour la même propriété sur le même élément. [**La cascade**](/fr/docs/Web/CSS/Guides/Cascade/Introduction) et [**la spécificité**](/fr/docs/Web/CSS/Guides/Cascade/Specificity) sont des mécanismes qui contrôlent quelle règle s'applique lorsqu'un tel conflit se produit. Autrement dit, la règle qui met en forme votre élément peut ne pas être celle à laquelle vous vous attendez et comprendre ces mécanismes vous aidera à diagnostiquer, corriger voire éviter ces problèmes.
 
-Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/CSS_cascade/Inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
+Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/Guides/Cascade/Inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
 
 Commençons par un aperçu rapide de ces notions avant de les détailler une à une puis d'étudier leurs interactions entre elles et avec votre code CSS. Cela peut sembler complexe de prime abord, mais au fur et à mesure que vous écrirez du CSS, ce fonctionnement deviendra plus naturel.
 
 ### Cascade
 
-Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/CSS_cascade/Cascade). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règles de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
+Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/Guides/Cascade/Introduction). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règles de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
 
 Dans l'exemple qui suit, il y a deux règles qui pourraient s'appliquer à l'élément `<h1>`. Le contenu de cet élément `<h1>` est, en fin de compte, coloré en bleu. Dans cet exemple, les deux règles proviennent de la même source et ont un sélecteur identique&nbsp;: elles ont donc la même spécificité et c'est alors la dernière règle, selon l'ordre du code source, qui l'emporte.
 
@@ -45,7 +45,7 @@ Dans l'exemple qui suit, il y a deux règles qui pourraient s'appliquer à l'él
 
 ### Spécificité
 
-[La spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) est l'algorithme utilisé par le navigateur pour décider la valeur qui est appliquée à un élément pour une propriété donnée. Si plusieurs blocs de style utilisent différents sélecteurs qui configurent la même propriété avec différentes valeurs et qui ciblent le même élément, c'est la spécificité qui permet de décider la valeur de propriété qui est appliquée à l'élément. La spécificité est une mesure de la précision d'un sélecteur&nbsp;:
+[La spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) est l'algorithme utilisé par le navigateur pour décider la valeur qui est appliquée à un élément pour une propriété donnée. Si plusieurs blocs de style utilisent différents sélecteurs qui configurent la même propriété avec différentes valeurs et qui ciblent le même élément, c'est la spécificité qui permet de décider la valeur de propriété qui est appliquée à l'élément. La spécificité est une mesure de la précision d'un sélecteur&nbsp;:
 
 - Un sélecteur d'élément est peu spécifique&nbsp;: il sélectionnera tous les éléments d'un type donné sur la page. Il a donc moins de poids. Les sélecteurs de pseudo-éléments ont la même spécificité que les sélecteurs d'éléments.
 - Un sélecteur de classe sera plus spécifique&nbsp;: il sélectionnera uniquement les éléments d'une page qui ont une valeur d'attribut `class` donnée. Il a donc un poids plus important. Les sélecteurs d'attributs et de pseudo-classes ont le même poids que les sélecteurs de classes.
@@ -85,19 +85,19 @@ L'information sur l'héritage ou non de la propriété est présente sur les pag
 
 CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de contrôler l'héritage. Ainsi, chaque propriété CSS acceptera ces valeurs&nbsp;:
 
-- [`inherit`](/fr/docs/Web/CSS/inherit)
+- [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
   - : Applique la valeur de l'élément parent sur l'élément ciblé. Cela «&nbsp;force&nbsp;» l'héritage.
-- [`initial`](/fr/docs/Web/CSS/initial)
-  - : Applique la [valeur initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale) de la propriété sur l'élément ciblé.
-- [`revert`](/fr/docs/Web/CSS/revert)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
+- [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
+  - : Applique la [valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale) de la propriété sur l'élément ciblé.
+- [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
+  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/Reference/Values/unset) dans la plupart des cas.
 - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
   - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) précédente.
-- [`unset`](/fr/docs/Web/CSS/unset)
+- [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
   - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
 
 > [!NOTE]
-> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/CSS_cascade/Cascade#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
+> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Guides/Cascade/Introduction#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
 
 Utilisons un exemple avec une liste de liens pour observer comment ces valeurs fonctionnent. Dans l'éditeur qui suit, vous pouvez éditer le CSS et voir l'effet de vos changements. Utilisez cette interactivité pour mieux comprendre le comportement de HTML et de CSS.
 

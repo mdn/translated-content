@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2c49a844f820f191f98b13130e0075bbeed530f3
 ---
 
-**`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
+**`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/Guides/Transitions/Using)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
 
 {{InteractiveExample("CSS デモ: transition-timing-function")}}
 
@@ -133,7 +133,7 @@ transition-timing-function: unset;
 
 アニメーションは、ユーザーがどのようなアクションを期待されているのかを理解するためのガイド、ユーザーインターフェイス内の関係性の表示、どのようなアクションが発生したのかをユーザーに通知するなど、役に立つことがあります。アニメーションは、認知的な負荷を軽減し、変化に気づかないことを防ぎ、空間的な関係をよりよく思い出すことに役立ちます。しかし、アニメーションの中には、注意欠陥多動性障害 (ADHD) の人の認知に問題が発生するものや、前庭障害、てんかん、片頭痛、スコトープ過敏症の引き金となるような動きをするものもあります。
 
-アニメーションを一時停止または無効にする機能を提供するとともに、[動きの縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}）を使用して、アニメーションを減らすことを希望するユーザーにも快適な利用環境を提供することを検討してください。
+アニメーションを一時停止または無効にする機能を提供するとともに、[動きの縮減メディアクエリー](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}）を使用して、アニメーションを減らすことを希望するユーザーにも快適な利用環境を提供することを検討してください。
 
 ## 公式定義
 
@@ -297,8 +297,8 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- [`<easing-function>`](/ja/docs/Web/CSS/easing-function)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
+- [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

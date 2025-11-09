@@ -53,7 +53,7 @@ _Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElemen
 
 ### Obtention d'un objet élément de formulaire
 
-Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
+Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/Guides/Selectors) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
 
 {{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
 

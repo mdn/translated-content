@@ -156,4 +156,4 @@ dd.auto {
 - {{Cssxref("content")}}
 - {{cssxref("overflow-wrap")}} （以前の `word-wrap`）
 - {{cssxref("word-break")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)

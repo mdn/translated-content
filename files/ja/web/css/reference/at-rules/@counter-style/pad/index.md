@@ -22,7 +22,7 @@ pad: "+" 5;
 - {{cssxref("integer")}}
   - : すべてのマーカー表現が到達しなければならない最小の長さを指定します。値は負ではない必要があります。 `pad` 記述子の場合、この値は「パッド長」とも呼ばれます。
 
-- [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#symbol)
+- [`<symbol>`](/ja/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
   - : `<integer>` で定義された最小長さに到達しなかった場合に、パディングに使用する記号を指定します。`pad` 記述子の場合、この値は「パディング記号」とも呼ばれます。
 
 ## 解説
@@ -91,5 +91,5 @@ ul {
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール

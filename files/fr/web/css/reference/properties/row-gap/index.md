@@ -77,8 +77,8 @@ row-gap: unset;
 
 ### Valeurs
 
-- [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage)
-  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)) sont relatives aux dimensions de l'élément.
+- [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage)
+  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) sont relatives aux dimensions de l'élément.
 
 ## Formal definition
 
@@ -172,4 +172,4 @@ row-gap: unset;
 ## Voir aussi
 
 - Les autres propriétés relatives aux gouttières&nbsp;: [`column-gap`](/fr/docs/Web/CSS/Reference/Properties/column-gap), [`gap`](/fr/docs/Web/CSS/Reference/Properties/gap)
-- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_goutti%c3%a8res)_
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#les_goutti%c3%a8res)_

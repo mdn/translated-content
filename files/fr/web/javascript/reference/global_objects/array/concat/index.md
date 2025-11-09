@@ -137,14 +137,14 @@ Si la valeur de `this` n'est pas un tableau, elle est convertie en objet puis tr
 ```js
 console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
 console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
-const arrayLike = {
+const objetSimilaireTableau = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
   0: 1,
   1: 2,
   2: 99, // ignoré par concat() car length vaut 2
 };
-console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
+console.log(Array.prototype.concat.call(objetSimilaireTableau, 3, 4)); // [1, 2, 3, 4]
 ```
 
 ## Spécifications

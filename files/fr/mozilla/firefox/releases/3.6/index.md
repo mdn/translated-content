@@ -40,13 +40,13 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 
 ### CSS
 
-- [Utilisation de dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background).
-- [Fonds multiples](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Utilisation de dégradés](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
+  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/Reference/Values/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background).
+- [Fonds multiples](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : La propriété [`background`](/fr/docs/Web/CSS/Reference/Properties/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/Reference/Properties/background-attachment)[`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image), [`background-position`](/fr/docs/Web/CSS/Reference/Properties/background-position) et [`background-repeat`](/fr/docs/Web/CSS/Reference/Properties/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
-- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#fonctionnalit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_mozilla)
-  - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
-- [Redimensionnement d'images de fond](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/Guides/Media_queries/Using#fonctionnalit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_mozilla)
+  - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
+- [Redimensionnement d'images de fond](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size).
 - [Support des polices WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
   - : [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
@@ -55,7 +55,7 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 
 #### Autres changements CSS
 
-- L'unité de longueur [`rem`](/fr/docs/Web/CSS/length) de [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
+- L'unité de longueur [`rem`](/fr/docs/Web/CSS/Reference/Values/length) de [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
 - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
 - [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
 - Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) table fonctionnent beaucoup mieux.

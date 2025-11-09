@@ -7,11 +7,11 @@ l10n:
 
 {{GlossarySidebar}}
 
-**グリッド行**とは [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)における水平トラックであり、 2 つの水平方向のグリッドラインに挟まれた領域のことです。グリッド行は {{cssxref("grid-template-rows")}} プロパティまたは一括指定の {{cssxref("grid")}} や {{cssxref("grid-template")}} プロパティで定義されます。
+**グリッド行**とは [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)における水平トラックであり、 2 つの水平方向のグリッドラインに挟まれた領域のことです。グリッド行は {{cssxref("grid-template-rows")}} プロパティまたは一括指定の {{cssxref("grid")}} や {{cssxref("grid-template")}} プロパティで定義されます。
 
 加えて、明示的グリッド _(explicit grid)_ で作られる行の外にアイテムが配置される場合は、暗黙的グリッド _(implicit grid)_ にもグリッド行が作られます。これらの行はデフォルトでは自動的に大きさが決定されますが、{{cssxref("grid-auto-rows")}} プロパティでサイズ指定することもできます。
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)の中で位置調整 (alignment) をする場合、行が並ぶ軸をインライン軸もしくは行軸と呼びます。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)の中で位置調整 (alignment) をする場合、行が並ぶ軸をインライン軸もしくは行軸と呼びます。
 
 ## 関連情報
 
@@ -24,4 +24,4 @@ l10n:
 
 ### 参考情報
 
-- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS グリッドレイアウトガイド: _[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)_

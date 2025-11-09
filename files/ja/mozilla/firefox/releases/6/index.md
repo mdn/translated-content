@@ -35,14 +35,14 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 #### その他の変更
 
-- [`@-moz-document`](/ja/docs/Web/CSS/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
+- [`@-moz-document`](/ja/docs/Web/CSS/Reference/At-rules/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
 - `aural` 媒体グループのために持っていたコードを削除したため、[`azimuth`](/ja/docs/Web/CSS/azimuth) CSS プロパティのサポートが廃止されました。このプロパティはちゃんと実装されていなかったため、パッチを当て続けるのではなく未完成の実装を省くほうが理にかなっていると考えました。
 - これまで、[`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
 - [`:indeterminate`](/ja/docs/Web/CSS/Reference/Selectors/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
 
 ### DOM
 
-- [コード内でのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [コード内でのメディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Testing)
   - : [`window.matchMedia()`](/ja/docs/Web/API/Window/matchMedia) メソッドと [`MediaQueryList`](/ja/docs/Web/API/MediaQueryList) インターフェイスによって、メディアクエリーの結果をプログラムから検証できます。
 - [Touch events](/ja/docs/Web/API/Touch_events)
   - : Firefox 6 は W3C の標準タッチイベント仕様をサポートします。これにより、タッチスクリーンやトラックパッドなどタッチセンサー式のデバイスでのタッチの解釈が容易になります。
@@ -60,7 +60,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - [`FileReader`](/ja/docs/Web/API/FileReader) インターフェイスの `abort()` メソッドが、ファイルの読み込み中に利用された際に例外を投げるようになりました。
 - [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) メソッドが [structured clone algorithm](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) を使用するようになり、あるウィンドウから他のウィンドウに文字列ではなく JavaScript オブジェクトを渡せるようになりました。
 - [`window.history`](/ja/docs/Web/API/Window/history) API が `pushState()`, `replaceState()` メソッドに渡されたオブジェクトのシリアライズに [structured clone algorithm](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) を使用するようになりました。これによって循環参照などを含むより複雑なオブジェクトも使用可能となりました。
-- 新しく追加された `beforeprint`, `afterprint` イベントによって、[印刷が行われたときと完了したときを検出する](/ja/docs/Web/CSS/CSS_media_queries/Printing#detecting_print_requests) ことができるようになりました。
+- 新しく追加された `beforeprint`, `afterprint` イベントによって、[印刷が行われたときと完了したときを検出する](/ja/docs/Web/CSS/Guides/Media_queries/Printing#detecting_print_requests) ことができるようになりました。
 - `document.strictErrorChecking` プロパティが削除されました。実装されておらず、また DOM 仕様からも削除されていました。
 - 標準である [`event.defaultPrevented`](/ja/docs/Web/API/Event/defaultPrevented) プロパティがサポートされました。[`event.preventDefault()`](/ja/docs/Web/API/Event/preventDefault) がイベントから呼び出されたかを知る際には、非標準の `getPreventdefault()` ではなくこちらを使うようにしましょう。
 - [`window.top`](/ja/docs/Web/API/Window/top) プロパティが、適切に readonly となりました。

@@ -119,7 +119,7 @@ background-size: unset;
 - {{cssxref("element", "element()")}} 関数によって作成された背景画像では、それを作成する要素の内在的な寸法と比率を使用します。
 
 > [!NOTE]
-> Gecko では、 [`element()`](/ja/docs/Web/CSS/element) 関数を使用して作成された背景画像は要素の寸法、または要素が SVG の場合は背景配置領域の寸法を持つ画像として扱われ、適切な内在的な比率を持ちます。これは標準外の動作です。
+> Gecko では、 [`element()`](/ja/docs/Web/CSS/Reference/Values/element) 関数を使用して作成された背景画像は要素の寸法、または要素が SVG の場合は背景配置領域の寸法を持つ画像として扱われ、適切な内在的な比率を持ちます。これは標準外の動作です。
 
 内在的な寸法と比率に基づき、背景画像の描画寸法は以下のようにして計算されます。
 
@@ -180,7 +180,7 @@ background-size: unset;
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-その他の例は[背景画像の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)を参照してください。
+その他の例は[背景画像の変倍](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)を参照してください。
 
 ## 仕様書
 
@@ -192,6 +192,6 @@ background-size: unset;
 
 ## 関連情報
 
-- [背景画像の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [背景 SVG の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [背景画像の変倍](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [背景 SVG の変倍](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
 - {{cssxref("object-fit")}}

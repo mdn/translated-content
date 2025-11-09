@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0326d9301650304ef67a56e88b542b160093042e
 ---
 
-**`@starting-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、トランジションさせる要素に設定されるプロパティ群の開始値を定義するために使用します。これらのプロパティは、最初に要素のスタイルが更新されたとき、つまり要素が前回読み込まれたページに最初に表示されたときに設定されるものです。
+**`@starting-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、トランジションさせる要素に設定されるプロパティ群の開始値を定義するために使用します。これらのプロパティは、最初に要素のスタイルが更新されたとき、つまり要素が前回読み込まれたページに最初に表示されたときに設定されるものです。
 
 ## 構文
 
@@ -34,12 +34,12 @@ l10n:
 
 ## 解説
 
-予期しない動作を避けるため、既定では [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions) は要素の初期スタイル更新時や、 {{CSSxRef("display")}} 型が `none` から別の値に変わった時には発生しません。開始スタイル設定のトランジションを有効にするには、 `@starting-style` ルールが必要です。これは前回状態を持たない要素に開始スタイルを提供し、トランジションするプロパティ値を定義します。
+予期しない動作を避けるため、既定では [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions) は要素の初期スタイル更新時や、 {{CSSxRef("display")}} 型が `none` から別の値に変わった時には発生しません。開始スタイル設定のトランジションを有効にするには、 `@starting-style` ルールが必要です。これは前回状態を持たない要素に開始スタイルを提供し、トランジションするプロパティ値を定義します。
 
 `@starting-style` は、{{glossary("top layer","最上位レイヤー")}}に表示される要素（[ポップオーバー](/ja/docs/Web/API/Popover_API)やモーダルダイアログ ({{htmlelement("dialog")}}) など）、 `display: none` に変更される要素、 DOM に追加されたり除去されたりする要素の出現・消滅トランジションを作成する場合に特に有益です。
 
 > [!NOTE]
-> `@starting-style` は CSS トランジションにのみ関係します。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を使用してそのような効果を実装する場合、 `@starting-style` は必要ありません。例については [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+> `@starting-style` は CSS トランジションにのみ関係します。 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)を使用してそのような効果を実装する場合、 `@starting-style` は必要ありません。例については [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
 
 `@starting-style` を使用するには、単独のルールとして使用する方法と、ルールセットの中に入れ子にして使用する方法とがあります。
 
@@ -209,7 +209,7 @@ btn.addEventListener("click", () => {
 
 ### ポップオーバーのアニメーション
 
-この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)によってアニメーションしています。基本的な出現・消滅のアニメーションは、 {{CSSxRef("transition")}} プロパティを使用して提供しています。
+この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)を [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)によってアニメーションしています。基本的な出現・消滅のアニメーションは、 {{CSSxRef("transition")}} プロパティを使用して提供しています。
 
 #### HTML
 
@@ -465,7 +465,7 @@ div > button {
 
 ## 関連情報
 
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - {{cssxref("overlay")}}
 - {{cssxref("transition-behavior")}}
 - {{domxref("CSSStartingStyleRule")}}

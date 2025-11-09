@@ -126,10 +126,10 @@ animation-direction: unset;
   - : アニメーションを毎回反転させ、初回は<em>逆方向</em>になります。周期が偶数か奇数かを特定する回数は1から始まります。
 
 > [!NOTE]
-> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/Guides/Animations/Using#複数のアニメーションプロパティ値の設定) を参照してください。
 
 > [!NOTE]
-> [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成するとき、 `animation-direction` を指定すると期待通りに動作します。例えば、 `reverse` を指定すると、タイムラインの進行の過程でアニメーションが逆に実行されます。 `alternate` の値（{{cssxref("animation-iteration-count")}} との組み合わせ）を指定すると、タイムラインの進行に合わせてアニメーションを前後に実行させます。
+> [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations) を作成するとき、 `animation-direction` を指定すると期待通りに動作します。例えば、 `reverse` を指定すると、タイムラインの進行の過程でアニメーションが逆に実行されます。 `alternate` の値（{{cssxref("animation-iteration-count")}} との組み合わせ）を指定すると、タイムラインの進行に合わせてアニメーションを前後に実行させます。
 
 ## 公式定義
 
@@ -179,7 +179,7 @@ animation-direction: unset;
 
 {{EmbedLiveSample("逆方向に実行されるアニメーション","100%","250")}}
 
-例については [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+例については [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
 
 ## 仕様書
 
@@ -191,6 +191,6 @@ animation-direction: unset;
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript の {{domxref("AnimationEvent")}} API
 - その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}
