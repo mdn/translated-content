@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
-**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/CSS_display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などを設定します。
+**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/Guides/Display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)などを設定します。
 
-正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
+正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
 
 {{InteractiveExample("CSS デモ: display")}}
 
@@ -140,7 +140,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 > }
 > ```
 >
-> 詳しくは [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)を参照してください。
+> 詳しくは [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)を参照してください。
 
 ### 内側
 
@@ -151,16 +151,16 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
         外側の表示種別が `inline` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックボックスを生成します。
 
-        ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成する、またはコンテンツが親の整形コンテキストに吸収されます。
+        ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) を生成する、またはコンテンツが親の整形コンテキストに吸収されます。
 
     - `flow-root`
-      - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
+      - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
     - `table`
       - : HTML の {{HTMLElement("table")}} 要素と同じように動作します。これは、ブロックレベルボックスを定義します。
     - `flex`
-      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_flexible_box_layout)に従ってレイアウトします。
+      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/Guides/Flexible_box_layout)に従ってレイアウトします。
     - `grid`
-      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
+      - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)に従ってレイアウトします。
     - `ruby`
       - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) 整形モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
@@ -247,7 +247,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### どちらの構文を使用するべきか
 
-[CSS 表示モジュール](/ja/docs/Web/CSS/CSS_display)では、 `display` プロパティに使用できる値を使って複数キーワードの構文を使用すると、明示的に**外側**と**内側**の表示方法を定義することができると説明しています。
+[CSS 表示モジュール](/ja/docs/Web/CSS/Guides/Display)では、 `display` プロパティに使用できる値を使って複数キーワードの構文を使用すると、明示的に**外側**と**内側**の表示方法を定義することができると説明しています。
 単一キーワードの値（構成済みの `<display-legacy>` 値）は後方互換性のために対応しています。
 
 例えば、 2 つの値を用いると、インラインのフレックスコンテナーを次のように指定することができます。
@@ -266,7 +266,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 }
 ```
 
-これらの変更の詳細については、 [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)の記事を参照してください。
+これらの変更の詳細については、 [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)の記事を参照してください。
 
 ## 解説
 
@@ -274,58 +274,58 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### 複数キーワード値
 
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)
 
 ### CSS フローレイアウト (display: block, display: inline)
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
+- [フローレイアウトと書字方向](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [フロー内とフローの外](/ja/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
 
 ### display: flex
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
+- [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
 
 ### display: grid
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [グリッドレイアウトのアイテムの配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [グリッドレイアウトのアイテムの配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
+- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 ### display のアニメーション
 
-[対応しているブラウザー](#ブラウザーの互換性)では、 `display` を[離散アニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)でアニメーションします。これは一般的に、 2 つのプロパティ値の間をアニメーションの 50% で切り替わることを意味しています。
+[対応しているブラウザー](#ブラウザーの互換性)では、 `display` を[離散アニメーション型](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)でアニメーションします。これは一般的に、 2 つのプロパティ値の間をアニメーションの 50% で切り替わることを意味しています。
 
 例外が一つあり、それは `display: none` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
 
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/Web/CSS/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
+この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) で `display` をアニメーションさせる場合、開始する `display` の値を明示的なキーフレームで指定する必要があります（例えば `0%` や `from` を使用します）。例えば、 [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations) で `display` をアニメーションさせる場合、開始する `display` の値を明示的なキーフレームで指定する必要があります（例えば `0%` や `from` を使用します）。例えば、 [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
 
-`display` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 2 つの追加の機能が必要になります。
+`display` を [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)でアニメーションさせる場合、 2 つの追加の機能が必要になります。
 
-- [`@starting-style`](/ja/docs/Web/CSS/@starting-style) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 CSS トランジションは要素の最初のスタイル更新時や、 `display` の型が `none` から他の型へ変更された時には発生しません。
-- [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) は、 {{cssxref("transition-property")}} 宣言（または一括指定の {{cssxref("transition")}}）で `display` のトランジションを有効にするために設定する必要があります。
+- [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) は、アニメーションする要素が最初に表示されたときからトランジションさせたいプロパティの開始値を提供します。これは予期しない動作を避けるために必要です。既定では、 CSS トランジションは要素の最初のスタイル更新時や、 `display` の型が `none` から他の型へ変更された時には発生しません。
+- [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) は、 {{cssxref("transition-property")}} 宣言（または一括指定の {{cssxref("transition")}}）で `display` のトランジションを有効にするために設定する必要があります。
 
-`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior#例) のページを参照してください。
+`display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior#例) のページを参照してください。
 
 ## アクセシビリティ
 
@@ -501,5 +501,5 @@ updateDisplay();
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
 - SVG の {{SVGAttr("display")}} 属性
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)

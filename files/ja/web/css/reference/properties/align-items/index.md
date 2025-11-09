@@ -121,7 +121,7 @@ align-items: unset;
   - : アイテムが配置コンテナーより小さい場合、自動サイズのアイテムは、アイテムの幅と高さの制限を尊重しながら、コンテナーを埋めるために均等に拡大されます。
 
 - `anchor-center`
-  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
+  - : [アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 
 - `safe`
   - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `start` であったかのように配置されます。
@@ -316,9 +316,9 @@ display.addEventListener("change", (evt) => {
 - {{cssxref("align-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("place-items")}} 一括指定
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール

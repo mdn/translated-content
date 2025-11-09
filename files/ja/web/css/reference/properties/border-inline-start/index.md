@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
 
 {{InteractiveExample("CSS デモ: border-inline-start")}}
 
@@ -49,9 +49,9 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-inline-start-color`](/ja/docs/Web/CSS/border-inline-start-color)
-- [`border-inline-start-style`](/ja/docs/Web/CSS/border-inline-start-style)
-- [`border-inline-start-width`](/ja/docs/Web/CSS/border-inline-start-width)
+- [`border-inline-start-color`](/ja/docs/Web/CSS/Reference/Properties/border-inline-start-color)
+- [`border-inline-start-style`](/ja/docs/Web/CSS/Reference/Properties/border-inline-start-style)
+- [`border-inline-start-width`](/ja/docs/Web/CSS/Reference/Properties/border-inline-start-width)
 
 ## 構文
 
@@ -128,6 +128,6 @@ div {
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
 - このプロパティは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のうちの 1 つに対応づけられます。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

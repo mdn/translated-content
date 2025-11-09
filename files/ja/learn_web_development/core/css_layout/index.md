@@ -27,7 +27,7 @@ l10n:
 - [位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
   - : 位置指定を使用すると、文書の通常のレイアウトフローから要素を取り出して異なるふるまいをさせることができます。 例えば、互いの上に重なったり、常にブラウザーのビューポート内の同じ場所に留まったりします。 この記事では、さまざまな {{cssxref("position")}} の値とその使い方について説明します。
 - [フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)は、アイテムを行または列にレイアウトするための 1 次元のレイアウト方式です。アイテムは余った空間を埋めるために伸ばされたり、小さな空間に収まるために縮んだりします。この記事では、基本的なことをすべて説明しています。
+  - : [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)は、アイテムを行または列にレイアウトするための 1 次元のレイアウト方式です。アイテムは余った空間を埋めるために伸ばされたり、小さな空間に収まるために縮んだりします。この記事では、基本的なことをすべて説明しています。
 - [CSS グリッドレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : CSS グリッドレイアウトは、ウェブ用の 2 次元レイアウトシステムです。 これにより、コンテンツを行と列にレイアウトすることができ、複雑なレイアウトを簡単に構築できる多くの機能を備えています。この記事では、グリッドレイアウトを始めるために必要なすべてを説明します。
 - [レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
@@ -52,7 +52,7 @@ l10n:
 
 - [実用的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
   - : この記事では、位置指定でどのようなことができるかを説明するために、実際に使用されるいくつかの例を作成する方法を示します。
-- [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)
+- [CSS レイアウト料理帳](/ja/docs/Web/CSS/How_to/Layout_cookbook)
   - : CSSレイアウトの料理帳は、一般的なレイアウトパターンのレシピをまとめることを目的としています。自分のプロジェクトの出発点として使用することができるコードを提供するだけでなく、これらのレシピは、レイアウト仕様を使用するさまざまな方法と、開発者として行うことができる選択を強調します。
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}

@@ -1,12 +1,11 @@
 ---
 title: border-block
 slug: Web/CSS/Reference/Properties/border-block
-original_slug: Web/CSS/border-block
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
 
 {{InteractiveExample("CSS デモ: border-block")}}
 
@@ -36,8 +35,8 @@ direction: rtl;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -53,9 +52,9 @@ direction: rtl;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-color`](/ja/docs/Web/CSS/border-block-color)
-- [`border-block-style`](/ja/docs/Web/CSS/border-block-style)
-- [`border-block-width`](/ja/docs/Web/CSS/border-block-width)
+- [`border-block-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-color)
+- [`border-block-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-style)
+- [`border-block-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-width)
 
 ## 構文
 
@@ -132,6 +131,6 @@ div {
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
 - このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のいずれかに対応づけられます。
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

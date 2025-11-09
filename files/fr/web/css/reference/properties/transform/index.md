@@ -98,7 +98,7 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 ### Valeurs
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.
+  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/Reference/Values/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.
 - `none`
   - : Aucune transformation ne sera appliquée.
 
@@ -111,7 +111,7 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 {{CSSSyntax}}
 
 > [!NOTE]
-> Si on utilise plusieurs fonctions dont [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective), celle-ci devra apparaître en premier.
+> Si on utilise plusieurs fonctions dont [`perspective()`](/fr/docs/Web/CSS/Reference/Values/transform-function/perspective), celle-ci devra apparaître en premier.
 
 ## Exemples
 
@@ -143,7 +143,7 @@ p {
 
 Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessibilité en déclenchant certaines migraines. Si vous devez inclure des animations sur votre site web, vous devez fournir aux utilisateurs une méthode qui leur permette de réduire voire de désactiver les animations sur l'ensemble du site.
 
-À cet égard, on pourra utiliser la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.
+À cet égard, on pourra utiliser la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.
 
 Pour en savoir plus :
 

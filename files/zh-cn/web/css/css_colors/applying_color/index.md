@@ -53,7 +53,7 @@ l10n:
 
 任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)了解为边框应用样式的更多信息。
 
-你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/border-width)、[样式](/zh-CN/docs/Web/CSS/border-style)（实线、虚线等）等等）。
+你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/Reference/Properties/border-width)、[样式](/zh-CN/docs/Web/CSS/Reference/Properties/border-style)（实线、虚线等）等等）。
 
 - {{cssxref("border-color")}}
   - : 为元素边框的每一侧指定一种颜色。
@@ -364,7 +364,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 #### `color()` 函数
 
-如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
+如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
 
 ```css
 .vibrant {

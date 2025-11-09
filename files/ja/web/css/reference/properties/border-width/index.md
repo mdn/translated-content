@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-**`border-width`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
+**`border-width`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
 
 {{InteractiveExample("CSS デモ: border-width")}}
 
@@ -53,10 +53,10 @@ border-width: 0 4px 8px 12px;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-width`](/ja/docs/Web/CSS/border-bottom-width)
-- [`border-left-width`](/ja/docs/Web/CSS/border-left-width)
-- [`border-right-width`](/ja/docs/Web/CSS/border-right-width)
-- [`border-top-width`](/ja/docs/Web/CSS/border-top-width)
+- [`border-bottom-width`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-width)
+- [`border-left-width`](/ja/docs/Web/CSS/Reference/Properties/border-left-width)
+- [`border-right-width`](/ja/docs/Web/CSS/Reference/Properties/border-right-width)
+- [`border-top-width`](/ja/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## 構文
 

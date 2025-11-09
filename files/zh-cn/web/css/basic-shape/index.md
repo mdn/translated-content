@@ -67,7 +67,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 一些基本形状函数的语法中公共的参数包括：
 
 - `round <'border-radius'>`
-  - : 为[通过容器 inset 定义的矩形](#通过容器_inset_定义矩形的语法)、[通过距离定义的矩形](#通过距离定义矩形的语法)以及[具有尺寸的矩形](#具有尺寸的矩形语法)定义圆角，使用与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 缩写属性相同的语法。
+  - : 为[通过容器 inset 定义的矩形](#通过容器_inset_定义矩形的语法)、[通过距离定义的矩形](#通过距离定义矩形的语法)以及[具有尺寸的矩形](#具有尺寸的矩形语法)定义圆角，使用与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/Reference/Properties/border-radius) 缩写属性相同的语法。
 
 - `<shape-radius>`
   - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的半径。有效值包括 {{cssxref("length")}}、{{cssxref("percentage")}}、`closest-side`（默认值）和 `farthest-side`。负值无效。
@@ -177,7 +177,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 - 对于任何省略值，将使用其默认值。
 - `circle()` 或 `ellipse()` 中的 {{cssxref("position_value", "&lt;position&gt;")}} 值计算为从参考盒子左上角开始的一对偏移量：第一个偏移量是水平方向的，第二个偏移量是垂直方向的。每个偏移量都被指定为 {{cssxref("length-percentage")}} 值。
-- `inset()` 中的 [`<border-radius>`](/zh-CN/docs/Web/CSS/border-radius) 值被扩展为一个包含八个值的列表，每个值要么是 {{cssxref("length")}}，要么是 {{cssxref("percentage")}}。
+- `inset()` 中的 [`<border-radius>`](/zh-CN/docs/Web/CSS/Reference/Properties/border-radius) 值被扩展为一个包含八个值的列表，每个值要么是 {{cssxref("length")}}，要么是 {{cssxref("percentage")}}。
 - {{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/rect","rect()")}} 和 {{cssxref("basic-shape/xywh","xywh()")}} 函数计算为等效的 `inset()` 函数。
 
 ### 基本形状的插值
@@ -206,7 +206,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 ### 动画多边形
 
-在这个示例中，我们使用了 [@keyframes](/zh-CN/docs/Web/CSS/@keyframes) at 规则为两个多边形之间的裁剪路径创建动画效果。请注意，这两个多边形必须具有相同数量的顶点，这是此类动画能够正常工作的必要条件。
+在这个示例中，我们使用了 [@keyframes](/zh-CN/docs/Web/CSS/Reference/At-rules/@keyframes) at 规则为两个多边形之间的裁剪路径创建动画效果。请注意，这两个多边形必须具有相同数量的顶点，这是此类动画能够正常工作的必要条件。
 
 #### HTML
 

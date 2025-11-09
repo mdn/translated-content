@@ -308,7 +308,7 @@ td {
 
 ## 関連情報
 
-- [フレックスボックスの典型的な用途の「アイテムの中央揃え」の節](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#アイテムの中央揃え)
+- [フレックスボックスの典型的な用途の「アイテムの中央揃え」の節](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#アイテムの中央揃え)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

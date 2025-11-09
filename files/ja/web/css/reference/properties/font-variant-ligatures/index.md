@@ -224,10 +224,10 @@ p {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/font-variant)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
-- [CSS フォントモジュール](/ja/docs/Web/CSS/CSS_fonts)
+- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
+- [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
+- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
+- [CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)

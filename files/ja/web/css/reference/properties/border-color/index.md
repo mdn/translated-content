@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-**`border-color`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
+**`border-color`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
 
 {{InteractiveExample("CSS デモ: border-color")}}
 
@@ -51,16 +51,16 @@ border-color: red yellow green transparent;
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 
-境界線の色についての詳細な情報は、 [HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color#境界線_2)にあります。
+境界線の色についての詳細な情報は、 [HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color#境界線_2)にあります。
 
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-color`](/ja/docs/Web/CSS/border-bottom-color)
-- [`border-left-color`](/ja/docs/Web/CSS/border-left-color)
-- [`border-right-color`](/ja/docs/Web/CSS/border-right-color)
-- [`border-top-color`](/ja/docs/Web/CSS/border-top-color)
+- [`border-bottom-color`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-color)
+- [`border-left-color`](/ja/docs/Web/CSS/Reference/Properties/border-left-color)
+- [`border-right-color`](/ja/docs/Web/CSS/Reference/Properties/border-right-color)
+- [`border-top-color`](/ja/docs/Web/CSS/Reference/Properties/border-top-color)
 
 ## 構文
 
@@ -201,4 +201,4 @@ ul {
 - その他の境界線に関する CSS プロパティ: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}
 - {{CSSxRef("&lt;color&gt;")}} データ型
 - その他の色に関するプロパティ: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)

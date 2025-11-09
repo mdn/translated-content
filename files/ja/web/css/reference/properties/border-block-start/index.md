@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`border-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`border-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
 
 {{InteractiveExample("CSS デモ: border-block-start")}}
 
@@ -53,9 +53,9 @@ writing-mode: vertical-lr;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-block-start-color`](/ja/docs/Web/CSS/border-block-start-color)
-- [`border-block-start-style`](/ja/docs/Web/CSS/border-block-start-style)
-- [`border-block-start-width`](/ja/docs/Web/CSS/border-block-start-width)
+- [`border-block-start-color`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-color)
+- [`border-block-start-style`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-style)
+- [`border-block-start-width`](/ja/docs/Web/CSS/Reference/Properties/border-block-start-width)
 
 ## 構文
 
@@ -134,6 +134,6 @@ div {
 
 ## 関連情報
 
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
 - このプロパティは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のうちの一つに対応づけられます。
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

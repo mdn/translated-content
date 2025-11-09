@@ -133,13 +133,13 @@ clip-path: unset;
 - `<geometry-box>`
   - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形（{{cssxref("border-radius")}} など）を含めてクリッピングパスにします。ジオメトリーボックスは以下の値のうちの一つが指定できます。
     - `margin-box`
-      - : [マージンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#margin-box)を参照ボックスとして使用します。
+      - : [マージンボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#margin-box)を参照ボックスとして使用します。
     - `border-box`
-      - : [境界ボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#border-box)を参照ボックスとして使用します。
+      - : [境界ボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#border-box)を参照ボックスとして使用します。
     - `padding-box`
-      - : [パディングボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#padding-box)を参照ボックスとして使用します。
+      - : [パディングボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box)を参照ボックスとして使用します。
     - `content-box`
-      - : [コンテンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#content-box)を参照ボックスとして使用します。
+      - : [コンテンボックス](/ja/docs/Web/CSS/Guides/Shapes/From_box_values#content-box)を参照ボックスとして使用します。
     - `fill-box`
       - : オブジェクトの境界ボックスを参照ボックスとして使用します。
     - `stroke-box`
@@ -151,7 +151,7 @@ clip-path: unset;
   - : クリッピングパスは作成されません。
 
 > [!NOTE]
-> 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
+> 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
 
 ## 公式定義
 
@@ -226,7 +226,7 @@ div:last-of-type {
 
 {{EmbedLiveSample("shapes2", "", "230")}}
 
-`shape()` 関数は {{cssxref("percentage")}} 値（および[カスタムプロパティ](/ja/docs/Web/CSS/--*)）が使用できるため、より堅牢です。
+`shape()` 関数は {{cssxref("percentage")}} 値（および[カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*)）が使用できるため、より堅牢です。
 
 基盤となる要素のサイズを大きくして、これを示します。
 
@@ -271,7 +271,7 @@ div {
 
 #### CSS
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)を使用して、利用可能な空間がある場合に、要素を隙間を空けて横に並べるようにしています。 `<div>` 要素の両方に {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 背景画像を定義し、 {{cssxref("border")}} とともに、クリップしたときの興味深い視覚効果を提供しています。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、利用可能な空間がある場合に、要素を隙間を空けて横に並べるようにしています。 `<div>` 要素の両方に {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 背景画像を定義し、 {{cssxref("border")}} とともに、クリップしたときの興味深い視覚効果を提供しています。
 
 ```css
 body {
@@ -409,7 +409,7 @@ function log(text) {
 - {{CSSxRef("mask")}}
 - {{CSSxRef("filter")}}
 - {{cssxref("background-clip")}}
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{SVGAttr("clip-path")}} 属性
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

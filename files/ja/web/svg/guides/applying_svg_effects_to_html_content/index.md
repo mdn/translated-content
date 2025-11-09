@@ -8,7 +8,7 @@ l10n:
 
 最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
 
-SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/mask), [`clip-path`](/ja/docs/Web/CSS/clip-path), [`filter`](/ja/docs/Web/CSS/filter) の 3 つです。
+SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/Reference/Properties/mask), [`clip-path`](/ja/docs/Web/CSS/Reference/Properties/clip-path), [`filter`](/ja/docs/Web/CSS/Reference/Properties/filter) の 3 つです。
 
 > [!NOTE]
 > 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
@@ -233,7 +233,7 @@ pre.target:hover {
 
 ### 例: ぼかし文字
 
-文字にぼかしを入れるには、 [`blur()`](/ja/docs/Web/CSS/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
+文字にぼかしを入れるには、 [`blur()`](/ja/docs/Web/CSS/Reference/Values/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
 
 ```html
 <p class="blur">Time to clean my glasses</p>

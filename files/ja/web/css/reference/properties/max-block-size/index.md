@@ -12,7 +12,7 @@ l10n:
 
 `max-width` は常に水平方向の寸法に使われ、 `max-height` は常に垂直方向の寸法に使われるため、このプロパティはテキストコンテンツの寸法に基づいて寸法を設定する必要がある場合、書字方向を意識して指定する必要がある場合に便利です。
 
-ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す [`writing-mode` の例](/ja/docs/Web/CSS/writing-mode#例)を参照してください。
+ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す [`writing-mode` の例](/ja/docs/Web/CSS/Reference/Properties/writing-mode#例)を参照してください。
 
 {{InteractiveExample("CSS デモ: max-block-size")}}
 
@@ -97,7 +97,7 @@ max-block-size: unset;
 - `min-content`
   - : コンテンツの最小の `max-block-size` です。
 - `fit-content`
-  - : 利用可能な空間を使用しますが、 [max-content](/ja/docs/Web/CSS/max-content) よりも大きくはなりません。つまり、 `min(max-content, max(min-content, stretch))` です。
+  - : 利用可能な空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) よりも大きくはなりません。つまり、 `min(max-content, max(min-content, stretch))` です。
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 

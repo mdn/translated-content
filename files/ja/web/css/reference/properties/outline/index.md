@@ -6,7 +6,7 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-**`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
+**`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
 
 {{InteractiveExample("CSS デモ: outline")}}
 
@@ -78,7 +78,7 @@ outline: revert-layer;
 outline: unset;
 ```
 
-`outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外したサブ値はその[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に設定されます。
+`outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外したサブ値はその[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)に設定されます。
 
 > [!NOTE]
 > 多くの要素では、スタイルが定義されていないと輪郭線は表示されません。これは style の既定値が `none` だからです。特筆すべき例外は `input` 要素で、ブラウザーが既定のスタイルを与えます。
@@ -94,7 +94,7 @@ outline: unset;
 
 ## 解説
 
-輪郭線は要素の[境界線](/ja/docs/Web/CSS/border)の外側の線です。輪郭線はボックスの他の領域とは異なり、空間を取らないので、文書内のレイアウトに影響を与えません。
+輪郭線は要素の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の外側の線です。輪郭線はボックスの他の領域とは異なり、空間を取らないので、文書内のレイアウトに影響を与えません。
 
 輪郭線の外観に影響を与えるプロパティはいくつかあります。スタイル、色、幅は `outline` プロパティを使用し、境界線からの距離は {{cssxref("outline-offset")}} プロパティを使用し、角の丸みは {{cssxref("border-radius")}} プロパティを使用することで変更することが可能です。
 

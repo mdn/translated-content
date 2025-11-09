@@ -169,10 +169,10 @@ th {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
-- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)
+- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-variant-alternates`](/ja/docs/Web/CSS/Reference/Properties/font-variant-alternates)
+- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
+- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
+- [`font-variant-ligatures`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
+- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)

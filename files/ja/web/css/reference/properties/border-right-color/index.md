@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-**`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
+**`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/Reference/Properties/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
 
 {{InteractiveExample("CSS デモ: border-right-color")}}
 
@@ -128,4 +128,4 @@ border-right-color: unset;
 - 境界に関する CSS 一括指定プロパティ: {{cssxref("border")}}, {{cssxref("border-right")}}, {{cssxref("border-color")}}
 - 他の境界線の色に関する CSS プロパティ: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-top-color")}}
 - 同じ境界に適用される他の境界関連の CSS プロパティ: {{cssxref("border-right-style")}}, {{cssxref("border-right-width")}}
-- 既定値の [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) カラー値
+- 既定値の [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) カラー値

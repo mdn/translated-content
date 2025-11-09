@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e050b876063f44bde9bf011a2dfc94c0d90ca863
 ---
 
-**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
+**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
 
 {{InteractiveExample("CSS デモ: flex")}}
 
@@ -136,7 +136,7 @@ flex: unset;
 - `flex: <number [1,∞]>`: フレックスアイテムの主要サイズは設定した数値に比例します。この値は `flex: <number> 1 0` に展開されます。これは `flex-basis` をゼロに設定し、フレックスアイテムを伸縮自在にします。このアイテムは最小の寸法と同じ幅または高さになり、コンテナー内で利用できる正の値は、このアイテムと兄弟フレックスアイテムの成長係数に基づいて比例配分されます。すべてのフレックスアイテムがこのパターンを使用する場合、すべてのアイテムはその数値に比例したサイズになります。
 
   > [!WARNING]
-  > ブラウザーは `flex` 値で `flex-basis` が指定されていない場合、 `flex-basis` 値に `0%` を使用します。これは仕様で言われている `flex-basis` 値の `0` とは異なります。これはフレックスレイアウトに影響を与える場合があります。この効果を[flex-basis の 0 と 0% の違い](/ja/docs/Web/CSS/flex-basis##flex-basis_の_0_と_0_の違い)の例で見てみましょう。
+  > ブラウザーは `flex` 値で `flex-basis` が指定されていない場合、 `flex-basis` 値に `0%` を使用します。これは仕様で言われている `flex-basis` 値の `0` とは異なります。これはフレックスレイアウトに影響を与える場合があります。この効果を[flex-basis の 0 と 0% の違い](/ja/docs/Web/CSS/Reference/Properties/flex-basis##flex-basis_の_0_と_0_の違い)の例で見てみましょう。
 
 ## 解説
 
@@ -315,6 +315,6 @@ flexAutoItem.addEventListener("click", () => {
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

@@ -82,19 +82,19 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 
 ### CSS
 
-- [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
   - : Le support des transitions CSS est disponible dans Firefox 4.
 - Les valeurs calculées en CSS
-  - : Le support de [`-moz-calc`](/fr/docs/Web/CSS/calc) a été ajouté. Cela permet de spécifier des valeurs de [`<length>`](/fr/docs/Web/CSS/length) comme des expressions mathématiques.
+  - : Le support de [`-moz-calc`](/fr/docs/Web/CSS/Reference/Values/calc) a été ajouté. Cela permet de spécifier des valeurs de [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) comme des expressions mathématiques.
 - Groupement de sélecteurs
-  - : Le support de [`:-moz-any`](/fr/docs/Web/CSS/:is) pour grouper les sélecteurs et factoriser des combinateurs.
+  - : Le support de [`:-moz-any`](/fr/docs/Web/CSS/Reference/Selectors/:is) pour grouper les sélecteurs et factoriser des combinateurs.
 - Support subrectangle pour background-image
-  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
+  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/Reference/Values/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image).
 - Propriétés CSS tactile
   - : Le support des propriétés tactiles a été ajouté. Plus de détails plus tard.
-- [Utilisation arbitraires d'élements comme fond](/fr/docs/Web/CSS/element)
-  - : Vou pouvez utiliser la fonction CSS [`-moz-element`](/fr/docs/Web/CSS/element) et la fonction DOM [`document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) pour une utilisation arbitraire des éléments HTML comme fond.
-- [Sélecteur :visited et confidentialité](/fr/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [Utilisation arbitraires d'élements comme fond](/fr/docs/Web/CSS/Reference/Values/element)
+  - : Vou pouvez utiliser la fonction CSS [`-moz-element`](/fr/docs/Web/CSS/Reference/Values/element) et la fonction DOM [`document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) pour une utilisation arbitraire des éléments HTML comme fond.
+- [Sélecteur :visited et confidentialité](/fr/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
   - : Des modifications ont étés apportées sur les informations qui peuvent être obtenues sur le style des liens visités en utilisant les sélecteurs CSS. Certaines applications Web peuvent être affectées.
 
 #### Nouvelles propriétés CSS
@@ -347,8 +347,8 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - La propriété [`text-shadow`](/fr/docs/Web/CSS/Reference/Properties/text-shadow) plafonne désormais son rayon de flou à 300px, pour des raisons de bon sens et de performances.
 - La propriété [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow) ne s'applique plus au groupe d'éléments de tableaux (`<thead>`, `<tbody>`, and `<tfoot>`).
 - La propriété [`-moz-appearance`](/fr/docs/Web/CSS/Reference/Properties/appearance) supporte désormais la valeur `-moz-win-borderless-glass`, qui s'applique à un élément Aero sans bordure.
-- La fonctionnalité de média [`-moz-device-pixel-ratio`](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) a été ajoutée, permettant l'utilisation de pixels de l'appareil par ratio de pixels CSS qui sera utilisé dans les [Media Queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
-- La manipulation des [unités CSS](/fr/docs/Web/CSS/length) dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.
+- La fonctionnalité de média [`-moz-device-pixel-ratio`](/fr/docs/Web/CSS/Guides/Media_queries/Using#-moz-device-pixel-ratio) a été ajoutée, permettant l'utilisation de pixels de l'appareil par ratio de pixels CSS qui sera utilisé dans les [Media Queries](/fr/docs/Web/CSS/Guides/Media_queries/Using).
+- La manipulation des [unités CSS](/fr/docs/Web/CSS/Reference/Values/length) dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.
 
 ### Graphisme et vidéo
 
@@ -608,7 +608,7 @@ Le support à distance de XUL n'est plus supporté, cela affecte les documents X
 - L'attribut `readonly` fonctionne désormais correctement pour les [champs XBL](/fr/docs/XBL/XBL_1.0_Reference/Elements#field).
 - L'élément [`<xul:resizer>`](/fr/docs/Mozilla/Tech/XUL/resizer) vous permet désormais d'utiliser l'attribut [`element`](/fr/docs/Mozilla/Tech/XUL/Attributs/element) pour spécifier l'élément à redimensionner, au lieu de redimensionner la fenêtre.
 - L'élément [`<xul:resizer>`](/fr/docs/Mozilla/Tech/XUL/resizer) a maintenant un attribut [`type`](/fr/docs/Mozilla/Tech/XUL/Attributs/resizer.type) qui vous permet de spécifier que le redimensionnement est pour la fenêtre au lieu d'un élément, pour également empêcher de redimensionner deux fois une fenêtre en cours de préparation.
-- L'attribut "active" n'est plus accessible sur les fenêtres XUL actives. A la place, vous pouvez utilisez la nouvelle pseudo-classe [`:-moz-window-inactive`](/fr/docs/Web/CSS/:-moz-window-inactive) afin d'attribuer différents styles aux fenêtres en arrière-plan.
+- L'attribut "active" n'est plus accessible sur les fenêtres XUL actives. A la place, vous pouvez utilisez la nouvelle pseudo-classe [`:-moz-window-inactive`](/fr/docs/Web/CSS/Reference/Selectors/:-moz-window-inactive) afin d'attribuer différents styles aux fenêtres en arrière-plan.
 - L'attribut [`emptytext`](/fr/docs/Mozilla/Tech/XUL/Attributs/emptytext) est désormais obsolète, vous devez utiliez [`placeholder`](/fr/docs/Mozilla/Tech/XUL/Attributs/placeholder) à la place.
 - L'élément [`<xul:window>`](/fr/docs/Mozilla/Tech/XUL/window) propose maintenant un attribut [`accelerated`](/fr/docs/Mozilla/Tech/XUL/Attributs/accelerated) ; quand il est vrai, le gestionnaire de la couche matérielle est autorisé à accélérer la fenêtre.
 - L'élément [`<xul:stack>`](/fr/docs/Mozilla/Tech/XUL/stack) supporte maintenant les attributs [`bottom`](/fr/docs/Mozilla/Tech/XUL/Attributs/bottom) et [`right`](/fr/docs/Mozilla/Tech/XUL/Attributs/right).

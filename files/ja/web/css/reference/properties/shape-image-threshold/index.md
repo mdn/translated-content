@@ -158,8 +158,8 @@ shape-image-threshold: unset;
 
 ## 関連情報
 
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)
+- [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

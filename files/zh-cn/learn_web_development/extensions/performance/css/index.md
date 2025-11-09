@@ -82,7 +82,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
   将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)，以后需要时就很容易覆盖样式。
 
-- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
+- **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
 
   ```css
   /* 选择 <body> 元素内的所有元素 */
@@ -123,7 +123,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 动画可以改善感知性能，使界面更加流畅，让用户在等待页面加载时感觉到进展（例如加载旋转图标）。然而，更大更多的动画自然需要更多的处理能力来处理，这可能会降低性能。
 
-最简单的建议是减少所有不必要的动画。你还可以为用户提供一个控件/站点选项，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。你还可以使用 JavaScript 来控制页面是否应用动画。还有一个名为 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion) 的媒体查询，可以根据用户对动画的操作系统级偏好选择性地提供动画样式。
+最简单的建议是减少所有不必要的动画。你还可以为用户提供一个控件/站点选项，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。你还可以使用 JavaScript 来控制页面是否应用动画。还有一个名为 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) 的媒体查询，可以根据用户对动画的操作系统级偏好选择性地提供动画样式。
 
 对于必要的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种直接使用 JavaScript 连接到 CSS 动画的方法）。
 
@@ -131,33 +131,33 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 接下来，动画性能在很大程度上取决于你要进行动画处理的属性。某些属性在进行动画处理时会触发[回流](/zh-CN/docs/Glossary/Reflow)（进一步也会触发[重绘](/zh-CN/docs/Glossary/Repaint)），应该避免使用这些属性。这些属性包括：
 
-- 修改元素的尺寸，例如 [`width`](/zh-CN/docs/Web/CSS/width)、[`height`](/zh-CN/docs/Web/CSS/height)、[`border`](/zh-CN/docs/Web/CSS/border) 和 [`padding`](/zh-CN/docs/Web/CSS/padding)。
-- 重新定位元素，例如 [`margin`](/zh-CN/docs/Web/CSS/margin)、[`top`](/zh-CN/docs/Web/CSS/top)、[`bottom`](/zh-CN/docs/Web/CSS/bottom)、[`left`](/zh-CN/docs/Web/CSS/left) 和 [`right`](/zh-CN/docs/Web/CSS/right)。
-- 更改元素的布局，例如 [`align-content`](/zh-CN/docs/Web/CSS/align-content)、[`align-items`](/zh-CN/docs/Web/CSS/align-items) 和 [`flex`](/zh-CN/docs/Web/CSS/flex)。
-- 添加改变元素几何形状的视觉效果，例如 [`box-shadow`](/zh-CN/docs/Web/CSS/box-shadow)。
+- 修改元素的尺寸，例如 [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width)、[`height`](/zh-CN/docs/Web/CSS/Reference/Properties/height)、[`border`](/zh-CN/docs/Web/CSS/Reference/Properties/border) 和 [`padding`](/zh-CN/docs/Web/CSS/Reference/Properties/padding)。
+- 重新定位元素，例如 [`margin`](/zh-CN/docs/Web/CSS/Reference/Properties/margin)、[`top`](/zh-CN/docs/Web/CSS/Reference/Properties/top)、[`bottom`](/zh-CN/docs/Web/CSS/Reference/Properties/bottom)、[`left`](/zh-CN/docs/Web/CSS/Reference/Properties/left) 和 [`right`](/zh-CN/docs/Web/CSS/Reference/Properties/right)。
+- 更改元素的布局，例如 [`align-content`](/zh-CN/docs/Web/CSS/Reference/Properties/align-content)、[`align-items`](/zh-CN/docs/Web/CSS/Reference/Properties/align-items) 和 [`flex`](/zh-CN/docs/Web/CSS/Reference/Properties/flex)。
+- 添加改变元素几何形状的视觉效果，例如 [`box-shadow`](/zh-CN/docs/Web/CSS/Reference/Properties/box-shadow)。
 
 现代浏览器很智能，只会重新绘制文档中已更改的区域，而不是整个页面。因此，越大的动画成本越高。
 
 如果可以的话，最好对不会引起回流/重绘的属性进行动画处理。这包括：
 
 - [变换](/zh-CN/docs/Web/CSS/CSS_transforms)
-- [`opacity`](/zh-CN/docs/Web/CSS/opacity)
-- [`filter`](/zh-CN/docs/Web/CSS/filter)
+- [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity)
+- [`filter`](/zh-CN/docs/Web/CSS/Reference/Properties/filter)
 
 ### 在 GPU 上进行动画处理
 
 为了进一步提高性能，你应该考虑将动画处理工作转移到主线程之外，并放到设备的 GPU 上进行（也称为合成（compositing））。这可以通过选择特定类型的动画来实现，浏览器会自动将这些动画发送到 GPU 来处理。包括：
 
-- 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)。
-- 具有某些其他属性动画的元素，例如 [`position: fixed`](/zh-CN/docs/Web/CSS/position)。
-- 应用了 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 的元素（请参阅下面的小节）。
+- 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/Reference/Properties/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)。
+- 具有某些其他属性动画的元素，例如 [`position: fixed`](/zh-CN/docs/Web/CSS/Reference/Properties/position)。
+- 应用了 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 的元素（请参阅下面的小节）。
 - 特定的在其自己层中渲染的元素，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 和 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)。
 
 在 GPU 上进行动画处理可以提高性能，尤其是在移动设备上。然而，将动画处理移到 GPU 并不总是那么简单。请阅读 [CSS GPU 动画：正确使用](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/)（smashingmagazine.com，2016）以获取非常有用和详细的分析。
 
 ## 使用 `will-change` 优化元素变化
 
-浏览器可能会在元素实际发生变化之前进行优化设置。这类优化可以通过提前完成可能需要的大量工作，提高页面的响应速度。CSS 的 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 属性向浏览器提示元素预期的变化方式。
+浏览器可能会在元素实际发生变化之前进行优化设置。这类优化可以通过提前完成可能需要的大量工作，提高页面的响应速度。CSS 的 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 属性向浏览器提示元素预期的变化方式。
 
 > [!NOTE]
 > `will-change` 应该作为处理现有的性能问题的最后一招。不应该用它来预测性能问题。
@@ -196,7 +196,7 @@ CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对�
 
 ### 字体加载
 
-请记住，字体仅在使用 [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性应用于元素时才会加载，而不是在首次使用 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) at 规则引用时加载：
+请记住，字体仅在使用 [`font-family`](/zh-CN/docs/Web/CSS/Reference/Properties/font-family) 属性应用于元素时才会加载，而不是在首次使用 [`@font-face`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face) at 规则引用时加载：
 
 ```css
 /* 字体在此处没有加载 */
@@ -235,7 +235,7 @@ h3 {
 
 在选择用于正文的字体时，很难确定将在其中使用的字形，特别是如果你处理的是用户生成的内容和/或涉及多种语言的内容。
 
-然而，如果你知道你将使用特定的字形集（例如，仅用于标题或特定标点符号字符的字形），你可以限制浏览器需要下载的字形数量。这可以通过创建仅包含所需子集的字体文件来实现，这个过程叫做[子集化](https://fonts.google.com/knowledge/glossary/subsetting)。然后可以使用 `@font-face` 的 [`unicode-range`](/zh-CN/docs/Web/CSS/@font-face/unicode-range) 描述符来指定何时使用你的子集字体。如果页面中没有使用该范围内的任何字符，则不会下载该字体。
+然而，如果你知道你将使用特定的字形集（例如，仅用于标题或特定标点符号字符的字形），你可以限制浏览器需要下载的字形数量。这可以通过创建仅包含所需子集的字体文件来实现，这个过程叫做[子集化](https://fonts.google.com/knowledge/glossary/subsetting)。然后可以使用 `@font-face` 的 [`unicode-range`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range) 描述符来指定何时使用你的子集字体。如果页面中没有使用该范围内的任何字符，则不会下载该字体。
 
 ```css
 @font-face {
@@ -247,7 +247,7 @@ h3 {
 
 ### 使用 `font-display` 描述符定义字体的显示行为
 
-应用于 `@font-face` at 规则的 [`font-display`](/zh-CN/docs/Web/CSS/@font-face/font-display) 描述符定义了浏览器加载和显示字体文件的方式，使得文字在字体正在加载或加载失败时都能以备用字体显示。这通过使文本可见而不是显示空白屏幕来提高性能，但代价是出现未样式化文本的闪烁。
+应用于 `@font-face` at 规则的 [`font-display`](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-face/font-display) 描述符定义了浏览器加载和显示字体文件的方式，使得文字在字体正在加载或加载失败时都能以备用字体显示。这通过使文本可见而不是显示空白屏幕来提高性能，但代价是出现未样式化文本的闪烁。
 
 ```css
 @font-face {

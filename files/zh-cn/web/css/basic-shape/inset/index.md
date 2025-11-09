@@ -57,7 +57,7 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
   如果一个维度的一对内嵌值相加超过了该维度的 100%，则两个值都会按比例缩小，使其总和等于 100%。例如，数值 `inset(90% 10% 60% 10%)` 的上嵌套为 `90%`，下嵌套为 `60%`。这些值按比例缩小为 `inset(60% 10% 40% 10%)`。像这样不包含任何区域且没有 {{cssxref("shape-margin")}} 的形状不会影响换行。
 
 - `<border-radius>`
-  - : 可选的 [`<border-radius>`](/zh-CN/docs/Web/CSS/border-radius) 参数使用边框半径简写语法为内嵌矩形定义圆角。
+  - : 可选的 [`<border-radius>`](/zh-CN/docs/Web/CSS/Reference/Properties/border-radius) 参数使用边框半径简写语法为内嵌矩形定义圆角。
 
 ## 形式语法
 

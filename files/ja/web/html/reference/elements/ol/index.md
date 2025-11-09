@@ -53,7 +53,7 @@ li {
 
 ## 使用上の注意
 
-ふつう、順序付きリストの項目は、先頭に数字や文字などの[マーカー](/ja/docs/Web/CSS/::marker)が表示されます。
+ふつう、順序付きリストの項目は、先頭に数字や文字などの[マーカー](/ja/docs/Web/CSS/Reference/Selectors/::marker)が表示されます。
 
 `<ol>` 要素と {{HTMLElement("ul")}} 要素（または同義語である {{HTMLElement("menu")}}）は、必要なだけ深く入れ子にすることができ、 `<ol>` と `<ul>` （または `<menu>`）を好きなだけ変更することもできます。
 
@@ -229,6 +229,6 @@ li {
 - 他のリスト関連の HTML 要素: {{HTMLElement("ul")}}、 {{HTMLElement("li")}}、 {{HTMLElement("menu")}}
 - `<ol>` 要素のスタイル付けに役立つ CSS プロパティ:
   - {{CSSxRef("list-style")}} プロパティは、序数の表示方法を選ぶのに便利です。
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
+  - [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)は、複雑な入れ子のリストを扱うのに便利です。
   - {{CSSxRef("line-height")}} プロパティは、非推奨の `compact` 属性をシミュレートするのに役立ちます。
   - {{CSSxRef("margin")}} プロパティは、リストの字下げを制御するのに役立ちます。

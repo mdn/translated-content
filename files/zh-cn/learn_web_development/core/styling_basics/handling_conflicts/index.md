@@ -115,7 +115,7 @@ span {
 一些属性是不能继承的——举个例子如果你在一个元素上设置 {{cssxref("width")}} 为 50% ，所有的后代不会是父元素的宽度的 50% 。如果这个也可以继承的话，CSS 就会很难使用了！
 
 > [!NOTE]
-> 在 MDN CSS 属性参考页面，你会发现一个名为“形式定义”的技术信息框，其中列举了属性的很多数据信息，包括能否被继承。以 [color 属性的形式定义部分](/zh-CN/docs/Web/CSS/color#形式定义)为例。
+> 在 MDN CSS 属性参考页面，你会发现一个名为“形式定义”的技术信息框，其中列举了属性的很多数据信息，包括能否被继承。以 [color 属性的形式定义部分](/zh-CN/docs/Web/CSS/Reference/Properties/color#形式定义)为例。
 
 ## 理解这些概念是如何协同工作的
 
@@ -187,7 +187,7 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 - {{cssxref("revert")}}
   - : 将应用于选定元素的属性值重置为浏览器的默认样式，而不是应用于该属性的默认值。在许多情况下，此值的作用类似于 {{cssxref("unset")}}。
 - {{cssxref("revert-layer")}}
-  - : 将应用于选定元素的属性值重置为在上一个[层叠层](/zh-CN/docs/Web/CSS/@layer)中建立的值。
+  - : 将应用于选定元素的属性值重置为在上一个[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)中建立的值。
 - {{cssxref("unset")}}
   - : 将属性重置为自然值，也就是如果属性是自然继承那么就是 `inherit`，否则和 `initial` 一样
 
@@ -234,7 +234,7 @@ body {
 
 ### 重设所有属性值
 
-CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个（`inherit`、`initial`、`unset` 或 `revert`）。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。
+CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/Reference/Properties/all) 可以用于同时将这些继承值中的一个应用于（几乎）所有属性。它的值可以是其中任意一个（`inherit`、`initial`、`unset` 或 `revert`）。这是一种撤销对样式所做更改的简便方法，以便回到之前已知的起点。
 
 下面的示例中有两个块级引用元素。第一个用元素本身的样式，第二个设置 `all` 为 `unset`
 
@@ -324,9 +324,9 @@ h2 {
 - **元素**：选择器中包含元素、伪元素选择器则个位得一分。
 
 > [!NOTE]
-> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/:where)）不会影响优先级。
+> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:where)）不会影响优先级。
 
-否定（[`:not()`](/zh-CN/docs/Web/CSS/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
+否定（[`:not()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/Reference/Selectors/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
 
 下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 的[选择器参考页面](/zh-CN/docs/Web/CSS/CSS_selectors)找到每个选择器的详细信息。
 
@@ -493,7 +493,7 @@ p {
 
 ## 级联层的顺序
 
-尽管[级联层](/zh-CN/docs/Web/CSS/@layer)属于高级的主题，你可能不会立刻使用此特性，但了解层是如何级联的非常重要。
+尽管[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)属于高级的主题，你可能不会立刻使用此特性，但了解层是如何级联的非常重要。
 
 在级联层中声明 CSS 时，优先级的顺序由声明层的顺序来决定。在任何层之外声明的 CSS 样式会被按声明的顺序组合在一起，形成一个未命名的层，它会被当作最后声明的层。对于存在冲突的常规（没有 `!important` 声明）样式，后面的层比先前定义的层的优先级高。但对于带有 `!important` 标记的样式，其顺序相反——先前的层中的 important 样式比后面的层以及为在层中声明的 important 样式优先级要高。但内联样式比所有作者定义的样式的优先级都要高，不受级联层规则的影响。
 

@@ -89,6 +89,6 @@ font-synthesis-small-caps: unset;
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/font-synthesis) shorthand, [font-synthesis-style](/ja/docs/Web/CSS/font-synthesis-style), [font-synthesis-weight](/ja/docs/Web/CSS/font-synthesis-weight)
+- [font-synthesis](/ja/docs/Web/CSS/Reference/Properties/font-synthesis) shorthand, [font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style), [font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight)
 - {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-weight")}}
 - [CanvasRenderingContext2D: fontVariantCaps property](/ja/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps)

@@ -38,4 +38,4 @@ original_slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 ## 関連情報
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)

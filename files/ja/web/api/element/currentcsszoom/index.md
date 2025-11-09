@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-**`currentCSSZoom`** は {{domxref("Element")}} インターフェイスの読み取り専用プロパティで、要素とそのすべての親要素に適用されている変倍率を考慮した、要素の「実効的な」[CSS `zoom`](/ja/docs/Web/CSS/zoom) を提供します。
+**`currentCSSZoom`** は {{domxref("Element")}} インターフェイスの読み取り専用プロパティで、要素とそのすべての親要素に適用されている変倍率を考慮した、要素の「実効的な」[CSS `zoom`](/ja/docs/Web/CSS/Reference/Properties/zoom) を提供します。
 
 値は、要素とそのすべての親の `zoom` の値を掛け合わせることによって計算されます。
 例えば、zoom の値が 2、1.5、3 の 3 つの要素が入れ子関係にある場合、最も深く入れ子になっている要素の `currentCSSZoom` の値は 9 になります。
@@ -109,4 +109,4 @@ ID `child3_rendered` の `<div>` には `zoom` は設定されていませんが
 
 ## 関連情報
 
-- [CSS `zoom`](/ja/docs/Web/CSS/zoom)
+- [CSS `zoom`](/ja/docs/Web/CSS/Reference/Properties/zoom)

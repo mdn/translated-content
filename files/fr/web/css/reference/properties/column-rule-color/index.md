@@ -67,7 +67,7 @@ La propriété `column-rule-color` se définit grâce à une valeur de type `<co
 
 ### Valeurs
 
-- [`<color>`](/fr/docs/Web/CSS/color_value)
+- [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
   - : Une valeur de couleur qui indique la couleur du trait entre les colonnes.
 
 ## Définition formelle
@@ -117,6 +117,6 @@ p {
 
 ## Voir aussi
 
-- Le type de donnée [`<color>`](/fr/docs/Web/CSS/color_value)
+- Le type de donnée [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
 - Les autres propriétés relatives aux couleurs&nbsp;: [`color`](/fr/docs/Web/CSS/Reference/Properties/color), [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color), [`border-color`](/fr/docs/Web/CSS/Reference/Properties/border-color), [`outline-color`](/fr/docs/Web/CSS/Reference/Properties/outline-color), [`text-decoration-color`](/fr/docs/Web/CSS/Reference/Properties/text-decoration-color), [`text-emphasis-color`](/fr/docs/Web/CSS/Reference/Properties/text-emphasis-color), [`text-shadow`](/fr/docs/Web/CSS/Reference/Properties/color) et [`caret-color`](/fr/docs/Web/CSS/Reference/Properties/caret-color)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-**`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
+**`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/Guides/Transitions/Using)を適用する CSS プロパティを指定します。
 
 {{InteractiveExample("CSS デモ: transition-property")}}
 
@@ -101,7 +101,7 @@ transition-property: unset;
 
 ### 基本的な例
 
-ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/background-color) です。
+ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) です。
 
 #### HTML
 
@@ -140,7 +140,7 @@ button {
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
 
-`transition-property` のその他の例については、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)ガイドを参照してください。
+`transition-property` のその他の例については、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)ガイドを参照してください。
 
 ## 仕様書
 
@@ -152,7 +152,7 @@ button {
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref('transition')}}
 - {{cssxref('transition-duration')}}
 - {{cssxref('transition-timing-function')}}

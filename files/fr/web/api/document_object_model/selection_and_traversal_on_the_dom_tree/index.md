@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-L'API des sélecteurs fournit des méthodes qui permettent de retrouver rapidement et facilement des nœuds {{DOMxRef("Element")}} dans le DOM en utilisant un ensemble de [sélecteurs](/fr/docs/Web/CSS/CSS_selectors). Cela est bien plus rapide que les techniques anciennes, où il fallait, par exemple, utiliser une boucle en JavaScript pour localiser les éléments recherchés.
+L'API des sélecteurs fournit des méthodes qui permettent de retrouver rapidement et facilement des nœuds {{DOMxRef("Element")}} dans le DOM en utilisant un ensemble de [sélecteurs](/fr/docs/Web/CSS/Guides/Selectors). Cela est bien plus rapide que les techniques anciennes, où il fallait, par exemple, utiliser une boucle en JavaScript pour localiser les éléments recherchés.
 
 ## L'interface NodeSelector
 
@@ -26,11 +26,11 @@ Vous trouverez des exemples et des détails dans la documentation des méthodes 
 
 ## Sélecteurs
 
-Les méthodes de sélection acceptent des [sélecteurs](/fr/docs/Web/CSS/CSS_selectors) pour déterminer quel ou quels éléments doivent être retournés. Cela inclut les [listes de sélecteurs](/fr/docs/Web/CSS/Selector_list), ce qui permet de regrouper plusieurs sélecteurs dans une seule requête.
+Les méthodes de sélection acceptent des [sélecteurs](/fr/docs/Web/CSS/Guides/Selectors) pour déterminer quel ou quels éléments doivent être retournés. Cela inclut les [listes de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list), ce qui permet de regrouper plusieurs sélecteurs dans une seule requête.
 
-Pour protéger la vie privée des utilisateur·ice·s, certaines [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) ne sont pas prises en charge ou se comportent différemment. Par exemple, {{CSSxRef(":visited")}} ne retournera aucun résultat et {{CSSxRef(":link")}} est traité comme {{CSSxRef(":any-link")}}.
+Pour protéger la vie privée des utilisateur·ice·s, certaines [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) ne sont pas prises en charge ou se comportent différemment. Par exemple, {{CSSxRef(":visited")}} ne retournera aucun résultat et {{CSSxRef(":link")}} est traité comme {{CSSxRef(":any-link")}}.
 
-Seuls les éléments peuvent être sélectionnés, donc les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) ne sont pas pris en charge.
+Seuls les éléments peuvent être sélectionnés, donc les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) ne sont pas pris en charge.
 
 ## Exemples
 
@@ -51,7 +51,7 @@ Après l'exécution du code ci-dessus, `el` contient le premier élément du doc
 ## Voir aussi
 
 - [Spécification des sélecteurs <sup>(angl.)</sup>](https://drafts.csswg.org/selectors/)
-- [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - {{DOMxRef("Element.querySelector()")}}
 - {{DOMxRef("Element.querySelectorAll()")}}
 - {{DOMxRef("Document.querySelector()")}}

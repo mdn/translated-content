@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-**`border-top`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。</span>
+**`border-top`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。</span>
 
 {{InteractiveExample("CSS デモ: border-top")}}
 
@@ -68,9 +68,9 @@ border-top: none thick green;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-top-color`](/ja/docs/Web/CSS/border-top-color)
-- [`border-top-style`](/ja/docs/Web/CSS/border-top-style)
-- [`border-top-width`](/ja/docs/Web/CSS/border-top-width)
+- [`border-top-color`](/ja/docs/Web/CSS/Reference/Properties/border-top-color)
+- [`border-top-style`](/ja/docs/Web/CSS/Reference/Properties/border-top-style)
+- [`border-top-width`](/ja/docs/Web/CSS/Reference/Properties/border-top-width)
 
 ## 構文
 
@@ -143,6 +143,6 @@ div {
 
 ## 関連情報
 
-- [`border`](/ja/docs/Web/CSS/border)
-- [`border-block`](/ja/docs/Web/CSS/border-block)
-- [`outline`](/ja/docs/Web/CSS/outline)
+- [`border`](/ja/docs/Web/CSS/Reference/Properties/border)
+- [`border-block`](/ja/docs/Web/CSS/Reference/Properties/border-block)
+- [`outline`](/ja/docs/Web/CSS/Reference/Properties/outline)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`quotes`** プロパティは、HTML の {{HTMLElement("q")}} 要素に自動的に追加される引用符、または CSS の [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` または `close-quotes` 値を使用して追加される引用符（`no-open-quote` および `no-close-quote` を使用して省略される場合もあります）を、ブラウザーがどのようにレンダリングするかを設定します。
+[CSS](/ja/docs/Web/CSS) の **`quotes`** プロパティは、HTML の {{HTMLElement("q")}} 要素に自動的に追加される引用符、または CSS の [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティの `open-quotes` または `close-quotes` 値を使用して追加される引用符（`no-open-quote` および `no-close-quote` を使用して省略される場合もあります）を、ブラウザーがどのようにレンダリングするかを設定します。
 
 {{InteractiveExample("CSS デモ: quotes")}}
 
@@ -282,6 +282,6 @@ li {
 
 ## 関連情報
 
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
 - {{ Cssxref("contain") }}
 - {{ Cssxref("content") }}

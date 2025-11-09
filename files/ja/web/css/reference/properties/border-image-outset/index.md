@@ -6,7 +6,7 @@ l10n:
   sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
-**`border-image-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)が境界ボックスからはみ出す幅を設定します。
+**`border-image-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/Reference/Properties/border-image)が境界ボックスからはみ出す幅を設定します。
 
 境界画像のうち、 `border-image-outset` によって要素の境界ボックスの外に表示された部分は、はみ出した際にスクロールバーを表示させたり、マウスイベントを受け取ったりすることはありません。
 
@@ -136,6 +136,6 @@ border-image-outset: unset;
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/)（MDN ブログ、2023）

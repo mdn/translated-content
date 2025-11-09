@@ -117,4 +117,4 @@ background-position-x: unset;
 - {{cssxref("background-position-y")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

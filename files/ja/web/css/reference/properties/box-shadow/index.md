@@ -50,9 +50,9 @@ box-shadow:
 }
 ```
 
-`box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
+`box-shadow` プロパティで、ほぼすべての要素のフレームからドロップシャドウを作成することができます。 {{cssxref("border-radius")}} が指定された場合は、影もその丸みを反映します。複数のボックスの影の重ね合わせ順は、複数の[テキストの影](/ja/docs/Web/CSS/Reference/Properties/text-shadow)の場合と同様になります (最初に指定された影が最も手前に来ます)。
 
-[ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
+[ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)は、 `box-shadow` を対話的に作成できるツールです。
 
 ## 構文
 
@@ -121,7 +121,7 @@ box-shadow: unset;
 
 ### 補間
 
-影をアニメーションさせる場合、たとえばボックス上の複数の影の値がホバー時に新しい値に遷移する場合、値は補間されます。{{Glossary("Interpolation", "補間")}}は影の遷移に伴って、ぼかし半径、拡散半径、色などのプロパティの中間値を決定します。影のリスト内のそれぞれの影について、色、x、y、ぼかし、拡散が遷移します。色は [`<color>`](/ja/docs/Web/CSS/color_value) として、他の値は {{cssxref("length")}} として遷移します。
+影をアニメーションさせる場合、たとえばボックス上の複数の影の値がホバー時に新しい値に遷移する場合、値は補間されます。{{Glossary("Interpolation", "補間")}}は影の遷移に伴って、ぼかし半径、拡散半径、色などのプロパティの中間値を決定します。影のリスト内のそれぞれの影について、色、x、y、ぼかし、拡散が遷移します。色は [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) として、他の値は {{cssxref("length")}} として遷移します。
 
 カンマで区切られた 2 つのボックスシャドウのリスト間で複数の影を補間する場合、影は順番に対になり、対になった影の間で補間が行われます。影のリストの長さが異なる場合は、短い方のリストの最後に、色が `transparent` であり、X、Y、ぼかしが `0` である影が挿入され、挿入の有無が一致するように設定されます。影のペアのうち、一方に `inset` が設定されていて、もう一方に `inset` が設定されていない場合、影のリスト全体が補間されません。
 
@@ -173,7 +173,7 @@ blockquote {
 
 `x-offset`, `y-offset`, `blur` がすべてゼロの場合、ボックスシャドウはすべての辺に同じ幅の単一色の囲み線になります。影は背後から手前にかけて描かれるため、最初の影はその後の影の最上位に表示されます。既定値通り、 `border-radius` が 0 に設定されていた場合、影の角は同様に尖った形になります。 `border-radius` にそれ以外の値を設定した場合、角は丸みを帯びます。
 
-影が隣接する要素と重ならないように、また、包含ボックスの境界線を超えないように、最も広いボックスシャドウの寸法のマージンを追加しました。ボックスシャドウは[ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)の寸法に影響を与えません。
+影が隣接する要素と重ならないように、また、包含ボックスの境界線を超えないように、最も広いボックスシャドウの寸法のマージンを追加しました。ボックスシャドウは[ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)の寸法に影響を与えません。
 
 #### HTML
 
@@ -212,4 +212,4 @@ p {
 - {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するのに使用）
 - {{cssxref("text-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [CSS を用いた HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を用いた HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)

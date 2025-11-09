@@ -7,7 +7,7 @@ l10n:
 
 Un **cercle chromatique** (<i lang="en">color wheel</i> en anglais), est un graphique représentant une palette de couleurs dans un cercle. Un cercle chromatique peut afficher des couleurs identifiées par deux coordonnées polaires, l'_angle_ et la _distance_ depuis l'origine, le centre du cercle.
 
-Les cercles chromatiques sont pratiques pour comparer les couleurs exprimées en coordonnées polaires ou cylindriques, comme [`hsl()`](/fr/docs/Web/CSS/color_value/hsl), [`hwb()`](/fr/docs/Web/CSS/color_value/hwb) ou [`lch()`](/fr/docs/Web/CSS/color_value/lch).
+Les cercles chromatiques sont pratiques pour comparer les couleurs exprimées en coordonnées polaires ou cylindriques, comme [`hsl()`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb) ou [`lch()`](/fr/docs/Web/CSS/Reference/Values/color_value/lch).
 
 Dans de tels cas, les _couleurs complémentaires_ sont diamétralement opposées sur le cercle. De même, les _couleurs monochromatiques_ — des couleurs du même _ton_ mais de _nuances_ différentes — sont situées sur le même rayon, et les _couleurs triadiques_ — trois couleurs régulièrement espacées autour de la roue chromatique qui conduisent à des couleurs qui fonctionnent bien ensemble — sont également faciles à trouver.
 

@@ -8,12 +8,12 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`view-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインのアニメーションのタイムラインを提供するために使用される、スクロールバーの方向を指定するために使用します。 `view-timeline-axis` は主体要素に設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください。
+**`view-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインのアニメーションのタイムラインを提供するために使用される、スクロールバーの方向を指定するために使用します。 `view-timeline-axis` は主体要素に設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
 
 > [!NOTE]
 > スクローラーの軸方向の寸法がコンテナーをあふれていない場合、またはあふれた部分が非表示またはクリッピングされている場合、タイムラインは作成されません。
 
-`view-timeline-axis` および {{cssxref("view-timeline-name")}} の各プロパティは、 [`view-timeline`](/ja/docs/Web/CSS/view-timeline) 一括指定プロパティを使用して設定することもできます。
+`view-timeline-axis` および {{cssxref("view-timeline-name")}} の各プロパティは、 [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline) 一括指定プロパティを使用して設定することもできます。
 
 ## 構文
 
@@ -175,7 +175,7 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/animation-timeline)
+- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/ja/docs/Web/CSS/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

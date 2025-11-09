@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
+**`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
 
 {{InteractiveExample("CSS デモ: list-style")}}
 
@@ -91,9 +91,9 @@ hr {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`list-style-image`](/ja/docs/Web/CSS/list-style-image)
-- [`list-style-position`](/ja/docs/Web/CSS/list-style-position)
-- [`list-style-type`](/ja/docs/Web/CSS/list-style-type)
+- [`list-style-image`](/ja/docs/Web/CSS/Reference/Properties/list-style-image)
+- [`list-style-position`](/ja/docs/Web/CSS/Reference/Properties/list-style-position)
+- [`list-style-type`](/ja/docs/Web/CSS/Reference/Properties/list-style-type)
 
 ## 構文
 
@@ -159,7 +159,7 @@ Safari では、 `list-style` 値が `none` である場合、それが {{HTMLEl
 </ul>
 ```
 
-ARIA `role` がコードに適さない場合は、代わりに CSS を使用することができます。各リストアイテムの前に、テキストや画像などの空ではない[擬似コンテンツ](/ja/docs/Web/CSS/content)を追加すると、リストの意味を復元できますが、視覚的な外観に影響します。 Safari は、追加された擬似コンテンツがアクセシビリティのあるコンテンツとして十分かどうかを判断し、十分であればリストの意味を復元します。通常、 Safari はテキストと画像で十分であるとみなします。そのため、以下に示す `content: "+ ";` が機能します（ただし、デザインに影響を与えないようにするには、追加のスタイル設定が必要です）。
+ARIA `role` がコードに適さない場合は、代わりに CSS を使用することができます。各リストアイテムの前に、テキストや画像などの空ではない[擬似コンテンツ](/ja/docs/Web/CSS/Reference/Properties/content)を追加すると、リストの意味を復元できますが、視覚的な外観に影響します。 Safari は、追加された擬似コンテンツがアクセシビリティのあるコンテンツとして十分かどうかを判断し、十分であればリストの意味を復元します。通常、 Safari はテキストと画像で十分であるとみなします。そのため、以下に示す `content: "+ ";` が機能します（ただし、デザインに影響を与えないようにするには、追加のスタイル設定が必要です）。
 
 ```css
 ul {
@@ -229,5 +229,5 @@ ul li::before {
 
 - 構成要素のプロパティ: {{Cssxref("list-style-type")}}、{{Cssxref("list-style-image")}}、{{Cssxref("list-style-position")}}
 - {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

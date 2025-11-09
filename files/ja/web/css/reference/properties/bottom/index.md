@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-**`bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
+**`bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/Reference/Properties/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
 
 {{InteractiveExample("CSS デモ: bottom")}}
 
@@ -62,7 +62,7 @@ bottom: 20px;
 
 `bottom` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の[下マージン](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の外側の辺と、包含ブロックの下パディングの外側の辺との間の距離を指定します。
+- `position` が `absolute` または `fixed` に設定されている場合、 `bottom` プロパティは要素の[下マージン](/ja/docs/Web/CSS/Guides/Box_model/Introduction)の外側の辺と、包含ブロックの下パディングの外側の辺との間の距離を指定します。
 - `position` が `relative` に設定されている場合、 `bottom` プロパティは要素の下辺が通常位置から上方向へ移動する量を指定します。
 - `position` が `sticky` に設定されている場合、 `bottom` プロパティは sticky 制約の矩形を計算するために使用されます。
 - `position` が `static` に設定されている場合、 `bottom` プロパティは*効果がありません*。

@@ -13,12 +13,12 @@ Firefox 143 est sorti le [16 septembre 2025 <sup>(angl.)</sup>](https://whattrai
 
 ### HTML
 
-- L'élément HTML {{HTMLElement("input")}} [`type="color"`](/fr/docs/Web/HTML/Reference/Elements/input/color) accepte désormais non seulement les couleurs HEX comme `#ff6699`, mais aussi toutes les valeurs CSS [`<color>`](/fr/docs/Web/CSS/color_value), par exemple `oklab(50% 0.1 0.1 / 0.5)`. ([Bogue Firefox 1965029 <sup>(angl.)</sup>](https://bugzil.la/1965029)).
+- L'élément HTML {{HTMLElement("input")}} [`type="color"`](/fr/docs/Web/HTML/Reference/Elements/input/color) accepte désormais non seulement les couleurs HEX comme `#ff6699`, mais aussi toutes les valeurs CSS [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), par exemple `oklab(50% 0.1 0.1 / 0.5)`. ([Bogue Firefox 1965029 <sup>(angl.)</sup>](https://bugzil.la/1965029)).
 
 ### CSS
 
 - Le pseudo-élément {{cssxref("::details-content")}} est désormais activé par défaut. Il permet de mettre en forme le contenu de l'élément {{htmlElement("details")}}. ([Bogue Firefox 1941406 <sup>(angl.)</sup>](https://bugzil.la/1941406)).
-- Le pseudo-élément {{cssxref("::marker")}} peut maintenant être utilisé pour mettre en forme un élément de liste créé à l'aide des pseudo-éléments {{cssxref("::before")}} ou {{cssxref("::after")}}. Cela se fait via les sélecteurs [`::before::marker`](/fr/docs/Web/CSS/::before#les_pseudo-éléments_imbriqués_beforemarker) et [`::after::marker`](/fr/docs/Web/CSS/::after#les_pseudo-éléments_imbriqués_aftermarker). ([Bogue Firefox 1980215 <sup>(angl.)</sup>](https://bugzil.la/1980215)).
+- Le pseudo-élément {{cssxref("::marker")}} peut maintenant être utilisé pour mettre en forme un élément de liste créé à l'aide des pseudo-éléments {{cssxref("::before")}} ou {{cssxref("::after")}}. Cela se fait via les sélecteurs [`::before::marker`](/fr/docs/Web/CSS/Reference/Selectors/::before#les_pseudo-éléments_imbriqués_beforemarker) et [`::after::marker`](/fr/docs/Web/CSS/Reference/Selectors/::after#les_pseudo-éléments_imbriqués_aftermarker). ([Bogue Firefox 1980215 <sup>(angl.)</sup>](https://bugzil.la/1980215)).
 - Le dimensionnement multi-passes des pistes de grille est désormais activé par défaut et suit l'algorithme défini dans la spécification CSS Grid. Dans cet algorithme, les colonnes sont dimensionnées en premier, puis les lignes&nbsp;: les valeurs en pourcentage sont résolues après que la taille du conteneur est connue. Grâce à cette prise en charge, les pistes de lignes en pourcentage ([basées sur un pourcentage](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows#percentage)) et les éléments de grille avec un rapport d'aspect sont maintenant dimensionnés correctement dans plus de cas. ([Bogue Firefox 1957244 <sup>(angl.)</sup>](https://bugzil.la/1957244)).
 
 ### JavaScript

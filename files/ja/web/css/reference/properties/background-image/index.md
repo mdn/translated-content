@@ -48,7 +48,7 @@ background-image:
 
 画像はお互いの上に積み重ねるコンテキストレイヤーに描画されます。最初に指定されたレイヤーが、ユーザーに対し最も手前にあるかのように描画されます。
 
-要素の[境界](/ja/docs/Web/CSS/border)は背景画像よりも上、 {{cssxref("background-color")}} は背景画像より下に描画されます。画像がボックスとその境界に対し相対的にどう描画されるかは、 {{cssxref("background-clip")}} および {{cssxref("background-origin")}} プロパティによって定義されます。
+要素の[境界](/ja/docs/Web/CSS/Reference/Properties/border)は背景画像よりも上、 {{cssxref("background-color")}} は背景画像より下に描画されます。画像がボックスとその境界に対し相対的にどう描画されるかは、 {{cssxref("background-clip")}} および {{cssxref("background-origin")}} プロパティによって定義されます。
 
 指定された画像を描画することができない (例えば、指定された URI が指し示すファイルをロードできない) 場合、ブラウザーはその指定を `none` 値であるかのように処理します。
 
@@ -84,7 +84,7 @@ background-image: unset;
 - `none`
   - : 画像を用いないことを表すキーワード。
 - `<image>`
-  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
+  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
 
 ## アクセシビリティ
 
@@ -95,7 +95,7 @@ background-image: unset;
 
 さらに、背景画像と前景テキストのコントラスト比を確保し、弱視者がページコンテンツを読めるようにすることも重要です。
 
-カラーコントラスト比は、テキストと背景色の値の輝度を比較して決定されます。[ウェブコンテンツアクセシビリティガイドライン (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) に準拠するには、本文テキストコンテンツでは 4.5:1、見出しなどの大きなテキストでは 3:1 の比率が要求されます。大きなテキストとは、 24px 以上、または[太字](/ja/docs/Web/CSS/font-weight)で 18.66px 以上を定義します。
+カラーコントラスト比は、テキストと背景色の値の輝度を比較して決定されます。[ウェブコンテンツアクセシビリティガイドライン (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) に準拠するには、本文テキストコンテンツでは 4.5:1、見出しなどの大きなテキストでは 3:1 の比率が要求されます。大きなテキストとは、 24px 以上、または[太字](/ja/docs/Web/CSS/Reference/Properties/font-weight)で 18.66px 以上を定義します。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
@@ -171,9 +171,9 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [CSS での画像スプライトの実装](/ja/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
+- [CSS での画像スプライトの実装](/ja/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
+- [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
 
 - 背景に関するプロパティ
   - {{cssxref("background-attachment")}}
@@ -185,6 +185,6 @@ div {
   - {{cssxref("background-size")}}
   - {{cssxref("background")}} 一括指定
 - [CSS の学習: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [複数の背景画像の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
+- [複数の背景画像の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール

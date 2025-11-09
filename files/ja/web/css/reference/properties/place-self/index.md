@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b505d75f1dbc5f31dd06eecab86e0b86159a4caa
 ---
 
-**`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
+**`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
 
 {{InteractiveExample("CSS デモ: place-self")}}
 
@@ -56,8 +56,8 @@ place-self: end center;
 
 根のプロパティは以下の CSS プロパティの一括指定です。
 
-- [`align-self`](/ja/docs/Web/CSS/align-self)
-- [`justify-self`](/ja/docs/Web/CSS/justify-self)
+- [`align-self`](/ja/docs/Web/CSS/Reference/Properties/align-self)
+- [`justify-self`](/ja/docs/Web/CSS/Reference/Properties/justify-self)
 
 ## 構文
 
@@ -116,7 +116,7 @@ place-self: unset;
 - `stretch`
   - : アイテムの交差軸方向の寸法の合計値が、配置コンテナーの寸法よりも小さく、アイテムの寸法が `auto` であった場合、アイテムの寸法は {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) で課された制約を尊重しつつ、均等の寸法 (比例的ではない) に拡大されるので、 `auto` が指定されたアイテムすべての寸法の合計は、ちょうど配置コンテナーの交差軸方向を埋めるようになります。
 - `anchor-center`
-  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のブロックおよびインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
+  - : [アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)要素の場合、関連付けられたアンカー要素のブロックおよびインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 
 ## 公式定義
 
@@ -130,7 +130,7 @@ place-self: unset;
 
 ### 簡単なデモ
 
-以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには [`justify-items`](/ja/docs/Web/CSS/justify-items) および [`align-items`](/ja/docs/Web/CSS/align-items) の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
+以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには [`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) および [`align-items`](/ja/docs/Web/CSS/Reference/Properties/align-items) の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
 2 番目、3 番目、4 番目のグリッドアイテムは、別々な `place-self` の値を指定し、これらが既定の配置をオーバーライドする様子を表示します。これらの値はグリッドアイテムの幅や高さを内容物の幅や高さに設定し、セルごとにブロック方向とインライン方向の両方で異なる位置に配置しています。
 
@@ -205,7 +205,7 @@ span {
 
 - {{cssxref("align-self")}}
 - {{cssxref("justify-self")}}
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

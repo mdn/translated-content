@@ -457,7 +457,7 @@ window.addEventListener("load", drawOutput);
 
 Les compteurs CSS fournissent des outils avancés pour personnaliser le comptage et le style des listes, mais ils sont assez complexes. Nous vous recommandons de les examiner si vous voulez vous étendre sur le sujet. Voir&nbsp;:
 
-- [`@counter-style`](/fr/docs/Web/CSS/@counter-style)
+- [`@counter-style`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style)
 - [`counter-increment`](/fr/docs/Web/CSS/Reference/Properties/counter-increment)
 - [`counter-reset`](/fr/docs/Web/CSS/Reference/Properties/counter-reset)
 

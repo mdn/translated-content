@@ -19,7 +19,7 @@ l10n:
 
 长度的[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)由其数量和单位表示。长度的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)是解析为绝对长度的指定长度，其单位没有区分。
 
-`<length>` 的单位可以是相对或绝对的。相对长度表示以其他距离为单位的测量值。根据单位的不同，这个距离可以是特定字符的大小、[行高](/zh-CN/docs/Web/CSS/line-height)或{{Glossary("viewport", "视口")}}的大小。使用相对长度单位的样式表可以更容易地从一个输出环境扩展到另一个输出环境。
+`<length>` 的单位可以是相对或绝对的。相对长度表示以其他距离为单位的测量值。根据单位的不同，这个距离可以是特定字符的大小、[行高](/zh-CN/docs/Web/CSS/Reference/Properties/line-height)或{{Glossary("viewport", "视口")}}的大小。使用相对长度单位的样式表可以更容易地从一个输出环境扩展到另一个输出环境。
 
 > [!NOTE]
 > 子元素不会继承父元素的相对值，而是继承计算值。
@@ -50,7 +50,7 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 
 ### 基于根元素字体的相对长度单位
 
-根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
+根元素字体相对长度单位以[根](/zh-CN/docs/Web/CSS/Reference/Selectors/:root)元素的特定字符或字体属性的大小来定义 `<length>` 值：
 
 - `rcap`
   - : 表示根元素字体（{{Cssxref("font")}}）的“大写字高”（即大写字母的标称高度）。

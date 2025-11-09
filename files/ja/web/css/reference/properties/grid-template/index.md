@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-**`grid-template`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティとして {{glossary("grid column", "グリッド列")}}、{{glossary("grid_row", "グリッド行")}}、{{glossary("grid areas", "グリッド領域")}} を定義します。
+**`grid-template`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティとして {{glossary("grid column", "グリッド列")}}、{{glossary("grid_row", "グリッド行")}}、{{glossary("grid areas", "グリッド領域")}} を定義します。
 
 {{InteractiveExample("CSS デモ: grid-template")}}
 
@@ -74,9 +74,9 @@ grid-template:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-template-areas`](/ja/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows)
+- [`grid-template-areas`](/ja/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## 構文
 
@@ -200,6 +200,6 @@ footer {
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#グリッド定義の一括指定)
 - 動画: [Grid template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)

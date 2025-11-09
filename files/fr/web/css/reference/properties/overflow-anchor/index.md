@@ -58,4 +58,4 @@ body {
 
 ## Voir aussi
 
-- [Guide sur l'ancrage du défilement (_scroll anchoring_)](/fr/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [Guide sur l'ancrage du défilement (_scroll anchoring_)](/fr/docs/Web/CSS/Guides/Scroll_anchoring/Overview)

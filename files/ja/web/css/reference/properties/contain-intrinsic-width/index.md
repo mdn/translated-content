@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-**`contain-intrinsic-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の主体となっている場合に、ブラウザーがレイアウトに使用する要素の幅を設定します。
+**`contain-intrinsic-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が[サイズ拘束](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ拘束)の主体となっている場合に、ブラウザーがレイアウトに使用する要素の幅を設定します。
 
 ## 構文
 
@@ -42,14 +42,14 @@ contain-intrinsic-width: unset;
 
 ## 解説
 
-このプロパティは、[`contain.size`](/ja/docs/Web/CSS/contain) や [`content-visibility`](/ja/docs/Web/CSS/content-visibility) のような、サイズ拘束が発生する要素の横に並んだプロパティとして一般的に適用され、[`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size) [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)を使用して設定することもできます。
+このプロパティは、[`contain.size`](/ja/docs/Web/CSS/Reference/Properties/contain) や [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) のような、サイズ拘束が発生する要素の横に並んだプロパティとして一般的に適用され、[`contain-intrinsic-size`](/ja/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を使用して設定することもできます。
 
 サイズ拘束により、ユーザーエージェントは要素が固定されたサイズであるかのようにレイアウトすることができ、実際のサイズを決定するための子要素の再描画を避けることで不必要な再フローを防ぐことができます（これにより、ユーザーの使い心地が向上します）。
 既定では、サイズ拘束は要素をコンテンツがないものとして扱い、コンテンツに幅または高さがない場合と同じ方法でレイアウトを崩す可能性があります。
 `contain-intrinsic-width` プロパティにより、レイアウトに使用する幅を指定することができます。
 
 `auto <length>` 値は、要素が（子要素とともに）「通常レンダリング」される場合に要素の幅を格納し、要素がその内容をスキップするときに指定した幅の代わりに使用することができます。
-これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/content-visibility) を持つ画面外の要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
+これにより、[`content-visibility: auto`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を持つ画面外の要素は、開発者が要素のサイズを正確に推定することなく、サイズ拘束の恩恵を受けることができます。
 子要素がレンダリングされる場合、記憶された値は使用されません（サイズ拘束が有効な場合、`<length>` が使用されます）。
 
 ## 公式定義
@@ -74,7 +74,7 @@ contain-intrinsic-width: unset;
 </div>
 ```
 
-下記の CSS では、`contained_element` の [`content-visibility`](/ja/docs/Web/CSS/content-visibility) を `auto` に設定し、要素を非表示にするとサイズが制約されるようにしています。
+下記の CSS では、`contained_element` の [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) を `auto` に設定し、要素を非表示にするとサイズが制約されるようにしています。
 サイズ拘束されたときに使用する幅と高さは、それぞれ `contain-intrinsic-width` と `contain-intrinsic-height` を使用して同時に設定します。
 
 ```css

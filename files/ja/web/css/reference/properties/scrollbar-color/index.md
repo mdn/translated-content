@@ -55,7 +55,7 @@ scrollbar-color: unset;
     </table>
 
 > [!NOTE]
-> [`@media (forced-colors: active)`](/ja/docs/Web/CSS/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
+> [`@media (forced-colors: active)`](/ja/docs/Web/CSS/Reference/At-rules/@media/forced-colors) とすると、`scrollbar-color` が `auto` になります。
 
 ## アクセシビリティ
 
@@ -110,8 +110,8 @@ scrollbar-color: unset;
 
 ## 関連情報
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/Guides/Scrollbars_styling)モジュール
 - {{CSSxRef("overflow")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-width")}}

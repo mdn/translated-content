@@ -99,7 +99,7 @@ perspective-origin: 500% 200%;
 }
 ```
 
-Les propriétés `perspective-origin` et {{cssxref("perspective")}} sont à rattacher à l'élément parent de l'élément qu'on veut placer dans un espace 3D. En revanche, la fonction [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective) s'applique à même l'élément qu'on veut placer en 3D.
+Les propriétés `perspective-origin` et {{cssxref("perspective")}} sont à rattacher à l'élément parent de l'élément qu'on veut placer dans un espace 3D. En revanche, la fonction [`perspective()`](/fr/docs/Web/CSS/Reference/Values/transform-function/perspective) s'applique à même l'élément qu'on veut placer en 3D.
 
 ## Syntaxe
 
@@ -449,4 +449,4 @@ section {
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}
-- [La fonction de transformation `perspective()`](/fr/docs/Web/CSS/transform-function/perspective)
+- [La fonction de transformation `perspective()`](/fr/docs/Web/CSS/Reference/Values/transform-function/perspective)

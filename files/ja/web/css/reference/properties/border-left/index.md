@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-**`border-left`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
+**`border-left`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-left")}}
 
@@ -146,5 +146,5 @@ div {
 - {{cssxref("border")}}
 - {{cssxref("border-block")}}
 - {{cssxref("outline")}}
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

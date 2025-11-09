@@ -64,7 +64,7 @@ alignment-baseline: unset;
   - : ボックスの数式ベースラインを、その親ボックスの数式ベースラインと一致させます。これは、数式文字が設計されている中心のベースラインに対応します。
 
 - `middle`
-  - : ボックスの垂直方向の中心を、親ボックスのベースラインと親ボックスの x 高さの半分を加えた位置に揃えます。 x-middle ベースラインを使用します。ただし、 [`text-orientation: upright;`](/ja/docs/Web/CSS/text-orientation) （アルファベットと x 高さのベースラインが本質的に意味を持たない場合）の場合は、代わりに `central` ベースラインを使用します。
+  - : ボックスの垂直方向の中心を、親ボックスのベースラインと親ボックスの x 高さの半分を加えた位置に揃えます。 x-middle ベースラインを使用します。ただし、 [`text-orientation: upright;`](/ja/docs/Web/CSS/Reference/Properties/text-orientation) （アルファベットと x 高さのベースラインが本質的に意味を持たない場合）の場合は、代わりに `central` ベースラインを使用します。
 
 - `text-bottom`
   - : インラインコンテンツボックスの下端を使用して、ボックスの下端を親コンテンツ領域の上端に一致させます。
@@ -153,5 +153,5 @@ text:nth-of-type(8) {
 
 - {{cssxref("dominant-baseline")}}
 - SVG の {{SVGAttr("alignment-baseline")}} 属性
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュール
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

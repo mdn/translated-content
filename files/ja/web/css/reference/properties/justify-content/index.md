@@ -113,13 +113,13 @@ justify-content: unset;
   - : 各アイテムは、主軸方向で配置コンテナーの中央に向けて互いに寄せて配置されます。
 
 - `left`
-  - : アイテムは配置コンテナーの左端に向かって同じ高さに詰められます。プロパティの水平軸がインライン軸と平行でない場合、例えば [`flex-direction: column;`](/ja/docs/Web/CSS/flex-direction) が設定されている場合、この値は `start` のように動作します。
+  - : アイテムは配置コンテナーの左端に向かって同じ高さに詰められます。プロパティの水平軸がインライン軸と平行でない場合、例えば [`flex-direction: column;`](/ja/docs/Web/CSS/Reference/Properties/flex-direction) が設定されている場合、この値は `start` のように動作します。
 
 - `right`
   - : アイテムは、適切な軸で配置コンテナーの右端に向かって、互いに同じ高さに詰められます。このプロパティの軸が（グリッドコンテナーの）インライン軸や（フレックスボックスコンテナーの）主軸と平行でない場合、この値は `start` のように動作します。
 
 - `normal`
-  - : `stretch` として動作します。ただし、[`column-width`](/ja/docs/Web/CSS/column-width) が `auto` でない段組みコンテナーの場合、段はコンテナーいっぱいに引き延ばされるのではなく、指定した `column-width` の幅を取ります。フレックスコンテナーでは `stretch` は `start` として動作するので、`normal` も `start` として動作します。
+  - : `stretch` として動作します。ただし、[`column-width`](/ja/docs/Web/CSS/Reference/Properties/column-width) が `auto` でない段組みコンテナーの場合、段はコンテナーいっぱいに引き延ばされるのではなく、指定した `column-width` の幅を取ります。フレックスコンテナーでは `stretch` は `start` として動作するので、`normal` も `start` として動作します。
 
 - `space-between`
   - : 各アイテムは、配置コンテナーの中で主軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは主軸の先頭側に寄せられ、最後のアイテムは主軸の末尾側に寄せられます。
@@ -134,7 +134,7 @@ justify-content: unset;
   - : 各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。
 
     > [!NOTE]
-    > [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)では、`stretch` の値は `flex-start` または `start` として動作します。そのため、伸縮は {{CSSXref("flex-grow")}} プロパティを使用して制御します。
+    > [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)では、`stretch` の値は `flex-start` または `start` として動作します。そのため、伸縮は {{CSSXref("flex-grow")}} プロパティを使用して制御します。
 
 - `safe`
   - : アイテムが配置コンテナーをあふれる場合、そのアイテムは配置モードが `start` であるかのように配置されます。指定した配置は行われません。
@@ -144,13 +144,13 @@ justify-content: unset;
 
 ## 解説
 
-[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールで定義する `justify-content` は、段組みコンテナー、フレックスコンテナー、グリッドコンテナーに適用されます。このプロパティはブロックコンテナーには適用されず、効果もありません。
+[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュールで定義する `justify-content` は、段組みコンテナー、フレックスコンテナー、グリッドコンテナーに適用されます。このプロパティはブロックコンテナーには適用されず、効果もありません。
 
 このプロパティは {{cssxref("align-content")}} プロパティと多くのキーワード値を共有 していますが、すべてではありません。 `justify-content` はベースラインの配置には関与しないため、ベースラインの値を取りません。
 
-[フレックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)では、このプロパティは、主軸に沿った正の自由空間を、フレックスアイテムの間や周囲に、どのように配分するかを定義します。このプロパティは行内の要素間の空間に影響し、行間の空間には影響しません。配置は、長さと auto マージンが適用された後に行われます。ということは、行の中の 1 つ以上のフレックスアイテムの {{cssxref("flex-grow")}} 係数が `0` より大きい場合、その行の方向に分配する空間がないので、このプロパティは何の効果もありません。また、主軸に沿った引き伸ばしは {{cssxref("flex")}} によって制御されるため、 `stretch` 値は `flex-start` と同じように動作します。
+[フレックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)では、このプロパティは、主軸に沿った正の自由空間を、フレックスアイテムの間や周囲に、どのように配分するかを定義します。このプロパティは行内の要素間の空間に影響し、行間の空間には影響しません。配置は、長さと auto マージンが適用された後に行われます。ということは、行の中の 1 つ以上のフレックスアイテムの {{cssxref("flex-grow")}} 係数が `0` より大きい場合、その行の方向に分配する空間がないので、このプロパティは何の効果もありません。また、主軸に沿った引き伸ばしは {{cssxref("flex")}} によって制御されるため、 `stretch` 値は `flex-start` と同じように動作します。
 
-[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)の場合、このプロパティはグリッドアイテムではなく、グリッド列の間や周囲に利用できる空間を分配します。グリッドコンテナーがグリッドそのものよりも大きい場合、 `justify-content` プロパティを使用して、インライン軸に沿ってグリッドを揃え、グリッドの列を配置することができます。
+[グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)の場合、このプロパティはグリッドアイテムではなく、グリッド列の間や周囲に利用できる空間を分配します。グリッドコンテナーがグリッドそのものよりも大きい場合、 `justify-content` プロパティを使用して、インライン軸に沿ってグリッドを揃え、グリッドの列を配置することができます。
 
 グリッドのトラックサイズを `auto` である（かつトラックサイズが `auto` のみである）場合は、 `align-content` と `justify-content` プロパティによって引き伸ばすことができます。したがって既定では、トラックサイズが `auto` のものは残りの空間を占めます。グリッドのインラインサイズがグリッドコンテナーのインラインサイズより小さくなければ、配置する空間がないため、このプロパティはこの場合何の効果もありません。
 
@@ -424,7 +424,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)

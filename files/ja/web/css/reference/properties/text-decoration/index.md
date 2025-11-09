@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b782b7d57e7040d5d9644a19017f4683044b5c90
 ---
 
-**`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
+**`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
 
 {{InteractiveExample("CSS デモ: text-decoration")}}
 
@@ -52,10 +52,10 @@ p {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness)
+- [`text-decoration-color`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-color)
+- [`text-decoration-line`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-line)
+- [`text-decoration-style`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-style)
+- [`text-decoration-thickness`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
 
 ## 構文
 

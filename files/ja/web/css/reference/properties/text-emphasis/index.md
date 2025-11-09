@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-**`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
 
 {{InteractiveExample("CSS デモ: text-emphasis")}}
 
@@ -53,8 +53,8 @@ p {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`text-emphasis-color`](/ja/docs/Web/CSS/text-emphasis-color)
-- [`text-emphasis-style`](/ja/docs/Web/CSS/text-emphasis-style)
+- [`text-emphasis-color`](/ja/docs/Web/CSS/Reference/Properties/text-emphasis-color)
+- [`text-emphasis-style`](/ja/docs/Web/CSS/Reference/Properties/text-emphasis-style)
 
 ## 構文
 

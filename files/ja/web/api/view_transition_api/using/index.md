@@ -123,7 +123,7 @@ function updateView(event) {
 
 ## アニメーションのカスタマイズ
 
-ビュー遷移の擬似要素は、既定で [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が設定されています。（詳細は[リファレンスページ](/ja/docs/Web/API/View_Transition_API#擬似要素)を参照）。
+ビュー遷移の擬似要素は、既定で [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が設定されています。（詳細は[リファレンスページ](/ja/docs/Web/API/View_Transition_API#擬似要素)を参照）。
 
 ほとんどの外観の遷移には、前述のとおり、既定でスムーズなクロスフェードのアニメーションが指定されています。ただし、例外もあります。
 

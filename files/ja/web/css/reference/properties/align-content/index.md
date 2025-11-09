@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8b4e6b773d03959d5a5b2d02200243c4714079b9
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
+[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の交差軸または[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
 
@@ -132,7 +132,7 @@ align-content: unset;
   - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
 
 > [!NOTE]
-> `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
+> `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
 
 ## 公式定義
 
@@ -276,7 +276,7 @@ function updatePage() {
 
 {{EmbedLiveSample("Examples", 260, 310)}}
 
-[ブロックレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content)では、子要素は単一の要素として扱われるため、 `space-between`、`space-around`、`space-evenly` の動作が異なります。
+[ブロックレイアウト](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables#align-content_and_justify-content)では、子要素は単一の要素として扱われるため、 `space-between`、`space-around`、`space-evenly` の動作が異なります。
 
 ## 仕様書
 
@@ -288,10 +288,10 @@ function updatePage() {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
-- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)
+- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [ブロックレベルコンテンツ](/ja/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

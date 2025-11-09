@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-**`grid-column`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid column", "グリッド列")}}内での位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
+**`grid-column`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid column", "グリッド列")}}内での位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
 
 {{InteractiveExample("CSS デモ: grid-column")}}
 
@@ -61,8 +61,8 @@ grid-column: 1 / span 2;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-column-end`](/ja/docs/Web/CSS/grid-column-end)
-- [`grid-column-start`](/ja/docs/Web/CSS/grid-column-start)
+- [`grid-column-end`](/ja/docs/Web/CSS/Reference/Properties/grid-column-end)
+- [`grid-column-start`](/ja/docs/Web/CSS/Reference/Properties/grid-column-start)
 
 ## 構文
 
@@ -201,5 +201,5 @@ grid-column: unset;
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
 
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

@@ -1,9 +1,8 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
-original_slug: Web/CSS/font-feature-settings
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-feature-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
@@ -158,14 +157,14 @@ td.tabular {
   font-feature-settings: "frac";
 }
 
-/* 利用可能な2番目のスウォッシュ文字を使用 */
+/* 利用可能な 2 番目のスウォッシュ文字を使用 */
 .swash {
   font-feature-settings: "swsh" 2;
 }
 
-/* スタイリッシュセット 7 を有効にする */
+/* スタイルセット 7 を有効にする */
 .fancy-style {
-  font-family: Gabriola;
+  font-family: "Gabriola", cursive;
   font-feature-settings: "ss07";
 }
 ```

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
+**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
 
 `grid` を使用すると、一方の軸を {{cssxref("grid-template-rows")}} または {{cssxref("grid-template-columns")}} を使用して設定し、もう一方の軸でどのように内容物を自動反復させるかを、暗黙のグリッドプロパティである {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}} で設定します。
 
@@ -70,12 +70,12 @@ grid: repeat(3, 80px) / auto-flow;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-auto-columns`](/ja/docs/Web/CSS/grid-auto-columns)
-- [`grid-auto-flow`](/ja/docs/Web/CSS/grid-auto-flow)
-- [`grid-auto-rows`](/ja/docs/Web/CSS/grid-auto-rows)
-- [`grid-template-areas`](/ja/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ja/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ja/docs/Web/CSS/grid-template-rows)
+- [`grid-auto-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-columns)
+- [`grid-auto-flow`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-flow)
+- [`grid-auto-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-auto-rows)
+- [`grid-template-areas`](/ja/docs/Web/CSS/Reference/Properties/grid-template-areas)
+- [`grid-template-columns`](/ja/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [`grid-template-rows`](/ja/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 ## 構文
 
@@ -188,5 +188,5 @@ grid: unset;
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-flow")}}
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#グリッド定義の一括指定)

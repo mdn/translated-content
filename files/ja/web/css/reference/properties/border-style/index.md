@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 59593341146f085e57cec84f0928c7b7e18f3e97
 ---
 
-**`border-style`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
+**`border-style`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
 
 {{InteractiveExample("CSS デモ: border-style")}}
 
@@ -61,10 +61,10 @@ body {
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-style`](/ja/docs/Web/CSS/border-bottom-style)
-- [`border-left-style`](/ja/docs/Web/CSS/border-left-style)
-- [`border-right-style`](/ja/docs/Web/CSS/border-right-style)
-- [`border-top-style`](/ja/docs/Web/CSS/border-top-style)
+- [`border-bottom-style`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-style)
+- [`border-left-style`](/ja/docs/Web/CSS/Reference/Properties/border-left-style)
+- [`border-right-style`](/ja/docs/Web/CSS/Reference/Properties/border-right-style)
+- [`border-top-style`](/ja/docs/Web/CSS/Reference/Properties/border-top-style)
 
 ## 構文
 
