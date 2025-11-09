@@ -130,4 +130,4 @@ scroll-timeline-name: --custom_name_for_timeline;
 - [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - [`scroll-timeline`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline), [`scroll-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-axis)
 - {{cssxref("timeline-scope")}}
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

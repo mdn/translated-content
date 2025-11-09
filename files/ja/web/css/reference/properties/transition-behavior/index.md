@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-**`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
+**`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
 
 ## 構文
 
@@ -85,7 +85,7 @@ transition-behavior: unset;
 
 ### ポップオーバーのトランジション
 
-この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)が非表示から表示へ[トランジション](/ja/docs/Web/CSS/CSS_transitions)したり、戻したりするアニメーションをしています。
+この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)が非表示から表示へ[トランジション](/ja/docs/Web/CSS/Guides/Transitions)したり、戻したりするアニメーションをしています。
 
 #### HTML
 
@@ -177,5 +177,5 @@ html {
 
 - [`overlay`](/ja/docs/Web/CSS/Reference/Properties/overlay)
 - [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) (developer.chrome.com, 2023)

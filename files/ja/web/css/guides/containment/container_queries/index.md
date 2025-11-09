@@ -12,9 +12,9 @@ l10n:
 - コンテナーに適用されているスタイル
 - コンテナーのスクロール状態、またはそのスクロール祖先のスクロール状態
 
-コンテナークエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
+コンテナークエリーは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
 
-この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)クエリーについて詳しく解説しているガイドもあります。
+この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)クエリーについて詳しく解説しているガイドもあります。
 
 ![2 つの異なる種類のクエリー。ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
 
@@ -26,10 +26,10 @@ l10n:
 これらの値は以下のような効果があります。
 
 - `size`
-  - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    レイアウト、スタイル設定、[サイズ抑制](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)をコンテナーに適用します。
+  - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)軸の寸法に基づきます。
+    レイアウト、スタイル設定、[サイズ抑制](/ja/docs/Web/CSS/Guides/Containment/Using)をコンテナーに適用します。
 - `inline-size`
-  - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
+  - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)軸の寸法に基づきます。
     その要素にレイアウト、スタイル設定、インラインサイズ抑制を適用します。
 - `normal`
   - : 要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、コンテナースタイルクエリーのクエリーコンテナーであることに変わりはありません。
@@ -166,14 +166,14 @@ l10n:
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
 - CSS {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("contain")}} プロパティ
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ
 - CSS {{cssxref("content-visibility")}} プロパティ
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) (Ahmad Shadeed)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

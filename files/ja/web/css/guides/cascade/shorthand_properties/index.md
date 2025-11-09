@@ -169,7 +169,7 @@ inset: 0 20px 0 20px;
 
 CSS は全体の一括指定プロパティとして {{cssxref("all")}} を提供しており、値を文書中のすべてのプロパティに適用させます。これは、プロパティの継承モデルを変更するためのものです。
 
-CSS の継承がどのように動作するかについての詳細については、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)または [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)をご覧ください。
+CSS の継承がどのように動作するかについての詳細については、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)または [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)をご覧ください。
 
 ## 一括指定プロパティ
 
@@ -246,13 +246,13 @@ CSS の継承がどのように動作するかについての詳細について�
 
 ## 関連情報
 
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値), [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値), [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値), [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値), [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値), [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値), [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)

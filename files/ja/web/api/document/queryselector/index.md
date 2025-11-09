@@ -29,7 +29,7 @@ querySelector(selectors)
 
 ### 返値
 
-{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
+{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
 
 指定されたセレクターに一致するすべての要素のリストが必要な場合は、代わりに {{domxref("Document.querySelectorAll", "querySelectorAll()")}} を使用してください。
 

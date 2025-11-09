@@ -24,7 +24,7 @@ color(from #0000FF xyz calc(x + 0.75) y calc(z - 0.35))
 
 ### 値
 
-以下は、絶対色と[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の両方で許容される値の説明です。
+以下は、絶対色と[相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の両方で許容される値の説明です。
 
 #### 絶対色の値の構文
 
@@ -377,8 +377,8 @@ div {
 ## 関連情報
 
 - [`<color>` データ型](/ja/docs/Web/CSS/Reference/Values/color_value): すべての色記法の一覧
-- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
-- [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [sRGB カラーピッカーおよび変換ツール](/ja/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [CSS 色](/ja/docs/Web/CSS/Guides/Colors)モジュール
 - [`color-gamut`](/ja/docs/Web/CSS/Reference/At-rules/@media/color-gamut) メディア特性
 - [Wide Gamut Color in CSS with Display-p3](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

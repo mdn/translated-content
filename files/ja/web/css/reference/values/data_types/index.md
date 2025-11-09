@@ -8,7 +8,7 @@ l10n:
 
 **CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。
 
-よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)仕様書で定義されています。この仕様書は[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
+よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)仕様書で定義されています。この仕様書は[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
 
 以下に、最もよく目にする型のリファレンスを掲載していますが、すべての CSS 仕様書で定義されている型を網羅しているわけではありません。
 
@@ -41,7 +41,7 @@ CSS の形式文法では、データ型は "`<`" と "`>`" の不等号で囲�
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : ユーザー定義の識別子です。例えば、{{cssxref("grid-area")}} プロパティを使って割り当てる名前などです。
 - {{cssxref("&lt;dashed-ident&gt;")}}
-  - : `<custom-ident>` に 2 つのダッシュで始めなければならないという制限を追加したものです。例えば、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)などです。
+  - : `<custom-ident>` に 2 つのダッシュで始めなければならないという制限を追加したものです。例えば、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)などです。
 - {{cssxref("&lt;string&gt;")}}
   - : 引用符で囲まれた文字列で、{{cssxref("content")}} プロパティの値など使用されます。
 - {{cssxref("url_value", "url()")}}
@@ -62,7 +62,7 @@ CSS の形式文法では、データ型は "`<`" と "`>`" の不等号で囲�
 - {{cssxref("&lt;ratio&gt;")}} (比率)
   - : `<number> / <number>` という構文で表される比率です。
 - {{cssxref("&lt;flex&gt;")}}
-  - : [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)に導入された柔軟な長さで、 `fr` の単位が付加された `<dimension>` として記述され、グリッドトラックのサイズ調整に使用されます。
+  - : [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)に導入された柔軟な長さで、 `fr` の単位が付加された `<dimension>` として記述され、グリッドトラックのサイズ調整に使用されます。
 
 ## 数量
 
@@ -146,6 +146,6 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 
 ## 関連情報
 
-- [CSS 単位と値](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 単位と値](/ja/docs/Web/CSS/Guides/Values_and_units)
 - [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS 関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)

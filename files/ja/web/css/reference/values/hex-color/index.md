@@ -102,4 +102,4 @@ div {
 
 - [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value): 色のデータ型
 - [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb): 色の 3 成分および透明度を 10 進数で使用するように設定する関数
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- [CSS 色](/ja/docs/Web/CSS/Guides/Colors)モジュール

@@ -84,7 +84,7 @@ order: unset;
 
 `order` は要素の視覚上の順序にのみ影響を与えるものであり、論理的な順序やタブオーダーには影響を与えないので、 [speech](https://drafts.csswg.org/css-speech/) など、視覚的ではないメディアで使用してはいけません。
 
-[CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュールで定義されているこのプロパティは、グリッドおよびフレックスアイテムにのみ影響します。親要素の {{cssxref("display")}} プロパティがフレックスまたはグリッドコンテナーを作成していない要素に `order` を設定しても、効果はありません。
+[CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュールで定義されているこのプロパティは、グリッドおよびフレックスアイテムにのみ影響します。親要素の {{cssxref("display")}} プロパティがフレックスまたはグリッドコンテナーを作成していない要素に `order` を設定しても、効果はありません。
 
 ### 値
 
@@ -130,7 +130,7 @@ order: unset;
 
 #### CSS
 
-メイン領域は、[フレキシブルボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) モジュールの機能を使用してスタイルを設定します。{{cssxref("display")}} を `flex` に設定すると、{{htmlelement("main")}} 要素がフレックスコンテナーになります。既定では、これにより、垂直サイズが等しいフレックスアイテムが作成されます。サイドバーにはどちらも絶対的な {{cssxref("width")}} が指定されており、 {{htmlelement("article")}} は[正の余白](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#正と負の余白)を、 {{cssxref("flex")}} 一括指定で設定した {{cssxref("flex-grow")}} 係数に応じて消費します。
+メイン領域は、[フレキシブルボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout) モジュールの機能を使用してスタイルを設定します。{{cssxref("display")}} を `flex` に設定すると、{{htmlelement("main")}} 要素がフレックスコンテナーになります。既定では、これにより、垂直サイズが等しいフレックスアイテムが作成されます。サイドバーにはどちらも絶対的な {{cssxref("width")}} が指定されており、 {{htmlelement("article")}} は[正の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)を、 {{cssxref("flex")}} 一括指定で設定した {{cssxref("flex-grow")}} 係数に応じて消費します。
 
 次に、フレックスコンテナーの 3 つの子要素それぞれに異なる `order` プロパティの値を設定します。これは、 CSS が HTML で宣言された順序ではなく、その要素の視覚的な順序を定義していることを意味します。
 
@@ -169,8 +169,8 @@ main > aside {
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
 - {{glossary("Reading order")}}

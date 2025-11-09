@@ -417,7 +417,7 @@ selectElem.addEventListener("change", () => {
 
 ## 関連情報
 
-- [CSS 合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュールで、 `<blend-mode>` の値を定義しています。
+- [CSS 合成と混合](/ja/docs/Web/CSS/Guides/Compositing_and_blending)モジュールで、 `<blend-mode>` の値を定義しています。
 - このデータ型を使用するプロパティ: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 様々な混合モードの他のウェブサイトにおける解説:

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/CSS_values_and_units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
+**CSS 値関数**は、 [CSS](/ja/docs/Web/CSS) プロパティで使用される[値](/ja/docs/Web/CSS/Guides/Values_and_units)を返すために、特別なデータ処理や計算を呼び出す文です。 CSS の値関数はより複雑な[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)を表し、返値を計算するためにいくつかの入力引数を取ることがあります。
 
 ## 構文
 
@@ -92,7 +92,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 
 数学関数は、 CSS の数値を数式として記述することができるものです。
 
-下記の各ページには、数学関数の構文、ブラウザー互換性データ、例などの詳細情報が格納されています。CSS 数学関数の全体的な紹介は、[CSS 数学関数の使用](/ja/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions)を参照してください。
+下記の各ページには、数学関数の構文、ブラウザー互換性データ、例などの詳細情報が格納されています。CSS 数学関数の全体的な紹介は、[CSS 数学関数の使用](/ja/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)を参照してください。
 
 ### 基本演算
 
@@ -285,7 +285,7 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
 - {{CSSxRef("env", "env()")}}
   - : ユーザーエージェントが定義した環境変数の値です。
 - {{CSSxRef("if", "if()")}}
-  - : [スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries)、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)の結果に応じて、プロパティ値を条件付きで設定します。
+  - : [スタイルクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries)、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)、[機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)の結果に応じて、プロパティ値を条件付きで設定します。
 - {{cssxref("url_function", "url()")}}
   - : 値としてファイルを含めるために使用します。
 - {{CSSxRef("var", "var()")}}
@@ -293,7 +293,7 @@ CSS カウンター関数は一般に {{CSSxRef("content")}} プロパティと�
 
 ## グリッド関数
 
-以下の関数は、[CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)を定義するために使用されます。
+以下の関数は、[CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)を定義するために使用されます。
 
 - {{CSSxRef("fit-content_function", "fit-content()")}}
   - : 指定された寸法を `min(最大寸法, max(最小寸法, 引数))` の式に従って有効な範囲の寸法に収めます。
@@ -359,5 +359,5 @@ CSS フォント関数は {{CSSxRef("font-variant-alternates")}} プロパティ
 
 ## 関連情報
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

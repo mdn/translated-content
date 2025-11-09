@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-**`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値を増加または減少させたり、すべてのカウンターまたはここのカウンターが変化することを防いだりするためのプロパティです。
+**`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値を増加または減少させたり、すべてのカウンターまたはここのカウンターが変化することを防いだりするためのプロパティです。
 
 空白で区切られたカウンターと値のリストに掲載されている名前付きカウンターが存在しない場合、作成されます。カウンターのリストでカウンターに値が指定されていない場合、カウンターは `1` だけ増加します。
 
@@ -164,6 +164,6 @@ i {
 - カウンターのプロパティ: {{cssxref("counter-set")}}, {{cssxref("counter-reset")}}
 - カウンターのアットルール: {{cssxref("@counter-style")}}
 - カウンターの関数: {{cssxref("counter", "counter()")}} および {{cssxref("counters", "counters()")}}
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)ガイド
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)ガイド
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

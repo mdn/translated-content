@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 44f398527f2b0195a7c3b35db0a53c80aebe8e48
 ---
 
-[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)を使うと、特定のコンテナー内に含まれている要素に、そのコンテナーの特性に基づいてスタイルを適用することができます。クエリーは、クエリー条件がコンテナーに対して真であるかどうかによって、真または偽を返します。
+[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)を使うと、特定のコンテナー内に含まれている要素に、そのコンテナーの特性に基づいてスタイルを適用することができます。クエリーは、クエリー条件がコンテナーに対して真であるかどうかによって、真または偽を返します。
 
-コンテナークエリーは[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)と似ています。 {{cssxref("@media")}} アットルールは、ビューポートのサイズや端末のその他の特性に基づいて要素にスタイル設定を適用します。同様に、 {{cssxref("@container")}} アットルールは、ビューポートではなく、コンテナー要素のサイズやその他のスタイル特性に基づいて要素にスタイルを適用します。コンテナークエリーは、メディアクエリーと同じ構文ルールと論理演算子があります。
+コンテナークエリーは[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と似ています。 {{cssxref("@media")}} アットルールは、ビューポートのサイズや端末のその他の特性に基づいて要素にスタイル設定を適用します。同様に、 {{cssxref("@container")}} アットルールは、ビューポートではなく、コンテナー要素のサイズやその他のスタイル特性に基づいて要素にスタイルを適用します。コンテナークエリーは、メディアクエリーと同じ構文ルールと論理演算子があります。
 
 ```css
 @container <container-condition># {
@@ -22,9 +22,9 @@ l10n:
   - : サイズクエリーによって、コンテナー要素の現在の[サイズ](/ja/docs/Web/CSS/Reference/At-rules/@container#記述子)に基づいて要素にスタイルを適用することができます。このコンテナー要素は、明示的に _サイズクエリーコンテナー_ として宣言しておく必要があります。
 
 - **コンテナースタイルクエリー**
-  - : スタイル クエリーを使用すると、コンテナー要素のスタイル機能に基づいて要素にスタイルを適用できます。空でない要素がスタイルクエリーコンテナーになることができます。現在、スタイルクエリーが対応しているスタイル特性は、 CSS の[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)だけです。この場合、クエリーは、格納する要素のカスタムプロパティの計算値において真か偽を返します。コンテナースタイルクエリーが完全に対応していると、例えば、コンテナーが `display: inline flex` であったり、背景色が非透明である場合など、任意のプロパティ、宣言、計算値に基づいて、要素の子孫にスタイルを適用できるようになります。
+  - : スタイル クエリーを使用すると、コンテナー要素のスタイル機能に基づいて要素にスタイルを適用できます。空でない要素がスタイルクエリーコンテナーになることができます。現在、スタイルクエリーが対応しているスタイル特性は、 CSS の[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)だけです。この場合、クエリーは、格納する要素のカスタムプロパティの計算値において真か偽を返します。コンテナースタイルクエリーが完全に対応していると、例えば、コンテナーが `display: inline flex` であったり、背景色が非透明である場合など、任意のプロパティ、宣言、計算値に基づいて、要素の子孫にスタイルを適用できるようになります。
 
-- **[コンテナースクロール状態クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)**
+- **[コンテナースクロール状態クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)**
   - : スクロール状態クエリーを使用すると、スクロール状態の条件に基づいて、コンテナーの子孫に CSS ルールを選択的に適用することができます。例えば、クエリー対象の要素が部分的にスクロールされているか、コンテナーがスクロールスナップコンテナーに固定されているか、といった条件です。包含要素は、明示的に「スクロール状態クエリーコンテナー」として宣言する必要があります。
 
 このガイドでは、コンテナークエリーの基本的なことを見ていきます。
@@ -33,7 +33,7 @@ l10n:
 2. スコープを制限するための[名前付きコンテナー](#名前付きコンテナー)
 3. `style()` 関数記法を {{cssxref("@container")}} アットルール内の `<container-condition>` で使用して、[カスタムプロパティによるスタイルクエリー](#カスタムプロパティによるスタイルクエリー)の作成
 
-スクロール状態クエリーは、[コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)で解説しています。
+スクロール状態クエリーは、[コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)で解説しています。
 
 ## コンテナーサイズクエリー
 
@@ -51,7 +51,7 @@ l10n:
 }
 ```
 
-サイズクエリーコンテナーを宣言すると、[抑制](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)が追加されます。これはパフォーマンス上必要なことです。DOM 内のすべての要素のサイズを常に問い合わせることは、パフォーマンスと使い勝手に悪影響を及ぼします。さらに、子孫のスタイルがコンテナー要素のサイズを変更した場合、無限ループが発生する可能性があります。
+サイズクエリーコンテナーを宣言すると、[抑制](/ja/docs/Web/CSS/Guides/Containment/Using)が追加されます。これはパフォーマンス上必要なことです。DOM 内のすべての要素のサイズを常に問い合わせることは、パフォーマンスと使い勝手に悪影響を及ぼします。さらに、子孫のスタイルがコンテナー要素のサイズを変更した場合、無限ループが発生する可能性があります。
 
 コンテナーサイズクエリーでは、 `<container-condition>` に 1 つ以上の `<size-query>` を記述します。各サイズクエリーはサイズ特性の名前、比較演算子、値を記載します。問い合わせ可能なサイズ特性は `width`、`height`、`inline-size`、`block-size`、`aspect-ratio`、`orientation` に制限されています。 1 つ以上の `<size-query>` を組み合わせた論理値と構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) のサイズ特性クエリーと同じです。
 
@@ -117,7 +117,7 @@ form {
 
 ## コンテナースタイルクエリー
 
-コンテナースタイルクエリーは、 1 つ以上の `style()` 関数記法で定義されたコンテナー要素のスタイルを評価する `@container` クエリーです。スタイル特性をスタイルクエリーで組み合わせて使用するための論理構文とロジックは、 [CSS 機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) と同じです。唯一の違いは関数名で、`<support-condition>` 内では `supports()` となるのに対して、`<style-feature>` 内では `style()` になります。
+コンテナースタイルクエリーは、 1 つ以上の `style()` 関数記法で定義されたコンテナー要素のスタイルを評価する `@container` クエリーです。スタイル特性をスタイルクエリーで組み合わせて使用するための論理構文とロジックは、 [CSS 機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) と同じです。唯一の違いは関数名で、`<support-condition>` 内では `supports()` となるのに対して、`<style-feature>` 内では `style()` になります。
 
 ```css
 @container style(<style-feature>),
@@ -128,7 +128,7 @@ form {
 }
 ```
 
-それぞれの `style()` 関数の引数は単一の **`<style-feature>`** です。 CSS コンテナー仕様書によれば、 `<style-feature>` は有効な CSS [宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言)、 CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#値) のいずれかになります。現在対応しているスタイル特性はカスタムプロパティのみで、値の有無は問いません。[ブラウザー互換性表](#ブラウザーの互換性)を参照してください。
+それぞれの `style()` 関数の引数は単一の **`<style-feature>`** です。 CSS コンテナー仕様書によれば、 `<style-feature>` は有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)、 CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#値) のいずれかになります。現在対応しているスタイル特性はカスタムプロパティのみで、値の有無は問いません。[ブラウザー互換性表](#ブラウザーの互換性)を参照してください。
 
 `<style-feature>` に値が記載されている場合、 `style()` 引数として渡されたカスタムプロパティ（将来的には CSS 宣言）の計算値が、クエリー対象のコンテナーに対して真であれば、スタイルクエリーは真と評価されます。そうでない場合は、偽に解決されます。
 値のないスタイル設定は、計算値が指定されたプロパティの[初期値](#登録済みプロパティ)と異なる場合に真と評価されます。
@@ -167,7 +167,7 @@ form {
 
 ### カスタムプロパティによるスタイルクエリー
 
-カスタムプロパティ用のスタイルクエリーでは、親要素の[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)（「CSS 変数」とも呼ばれます）を問い合わせることができます。カスタムプロパティは、通常の CSS プロパティを機能クエリーに記載するのと同じように `<style-query>` に記載します。
+カスタムプロパティ用のスタイルクエリーでは、親要素の[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)（「CSS 変数」とも呼ばれます）を問い合わせることができます。カスタムプロパティは、通常の CSS プロパティを機能クエリーに記載するのと同じように `<style-query>` に記載します。
 
 #### スタンドアロンのカスタムプロパティクエリー
 
@@ -224,7 +224,7 @@ main {
 }
 ```
 
-このコンテナースタイルクエリーは、`--accent-color` カスタムプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)として `blue` を持つ要素に一致します。
+このコンテナースタイルクエリーは、`--accent-color` カスタムプロパティの[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)として `blue` を持つ要素に一致します。
 
 この場合、他にも sRGB の `blue` に相当する色の値（16 進コードの `#0000ff` など）が一致するのは、次のように `--accent-color` プロパティが `@property` や `CSS.registerProperty()` で色として定義されている場合のみです。
 
@@ -340,7 +340,7 @@ output {
 
 テキストボックスに様々な色の値を入力してみてください。 sRGB の `red` に相当する値にすると、`<output>` は `style(--theme: red)` に一致して赤になりますが、 `style(--theme)` はアットルール `@property` で定義された `--theme` の初期値と同じ値を返すので、輪郭線は除去されます。 `currentcolor` や `hsl(180 100% 50%)` など、赤以外の sRGB の有効な色の値を記載すると、最初のスタイルクエリーが真を返します。これらは `initial-value` とは異なる値です。
 
-`syntax: "<color>";` を設定しているため、この CSS 変数には有効な `<color>` 値しか代入できません。 {{cssxref("color")}} プロパティの有効な値のうち `<color>` 値ではないもの、例えば `unset` や `inherit` など、このカスタムプロパティでは[不正な値](/ja/docs/Web/CSS/CSS_syntax/Error_handling)であり、無視されます。
+`syntax: "<color>";` を設定しているため、この CSS 変数には有効な `<color>` 値しか代入できません。 {{cssxref("color")}} プロパティの有効な値のうち `<color>` 値ではないもの、例えば `unset` や `inherit` など、このカスタムプロパティでは[不正な値](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)であり、無視されます。
 
 `unset` または `gibberish` を入力すると、 JavaScript は {{HTMLElement("body")}} の `style` を `--theme: unset` または `--theme: gibberish` に更新します。どちらも色ではありません。どちらも不正な色であり、無視されます。これは初期値が継承され、変更されないことを意味しています。 `style(-theme)` は偽を返し、 `style(-theme: red)` は真を返します。
 
@@ -410,12 +410,12 @@ output {
 
 ## 関連情報
 
-- [Media queries](/ja/docs/Web/CSS/CSS_media_queries)
+- [Media queries](/ja/docs/Web/CSS/Guides/Media_queries)
 - CSS {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("contain")}} プロパティ
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ
-- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-- [`aspect-ratio` を理解する](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [`aspect-ratio` を理解する](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [Getting Started with Style Queries](https://developer.chrome.com/docs/css-ui/style-queries) (2022)
 - [Style queries](https://una.im/style-queries/) (una.im, 2022)

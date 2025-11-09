@@ -62,14 +62,14 @@ article {
 }
 ```
 
-レイアウトは通常、文書全体がスコープになっています。つまり、文書全体の中から 1 つの要素を動かしただけで、すべてが動かされたかのように扱われます。 `contain: layout` を使うことで、ブラウザーに対して必要な要素のみを伝えることができます。要素の中にあるものはすべてその要素にスコープされ、ページの他の部分には影響せず、包含ボックスは独立した[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)を確立します。
+レイアウトは通常、文書全体がスコープになっています。つまり、文書全体の中から 1 つの要素を動かしただけで、すべてが動かされたかのように扱われます。 `contain: layout` を使うことで、ブラウザーに対して必要な要素のみを伝えることができます。要素の中にあるものはすべてその要素にスコープされ、ページの他の部分には影響せず、包含ボックスは独立した[整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)を確立します。
 
 加えて以下のことが言えます。
 
 - {{cssxref("float")}} レイアウトは指定した要素の内部で独立して行われます。
 - レイアウト抑制の境界でマージンが相殺されることはありません。
-- レイアウトのコンテナーは `absolute`/`fixed` で位置指定された子孫要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)になります。
-- この包含ボックスは[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作ります。従って {{cssxref("z-index")}} を使用することができます。
+- レイアウトのコンテナーは `absolute`/`fixed` で位置指定された子孫要素の[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)になります。
+- この包含ボックスは[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を作ります。従って {{cssxref("z-index")}} を使用することができます。
 
 > [!NOTE]
 > `contain` の `style` および `layout` の値は、 {{cssxref("container-type")}} および {{cssxref("container-name")}} プロパティを使用すると自動的に適用されます。
@@ -82,7 +82,7 @@ article {
 }
 ```
 
-描画抑制は、基本的に、ボックスを[主要ボックス](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#主ボックス)のパディング境界でクリッピングします。視覚的なはみ出しは行われません。 `paint` 抑制にも `layout` 抑制と同じことが当てはまります（上記を参照）。
+描画抑制は、基本的に、ボックスを[主要ボックス](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model#主ボックス)のパディング境界でクリッピングします。視覚的なはみ出しは行われません。 `paint` 抑制にも `layout` 抑制と同じことが当てはまります（上記を参照）。
 
 もうひとつの利点は、包含ボックスが画面外にある場合、ブラウザーはその内包する要素を描く必要がないことです — これらはそのボックスによって完全に内包されているので、画面外にあるに違いないからです。
 
@@ -114,7 +114,7 @@ article {
 ```
 
 名前に反して、スタイル抑制は、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) や {{cssxref("@scope")}} のようにスタイルのスコープを提供するものではありません。
-`style` 値の主な用途は、 [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
+`style` 値の主な用途は、 [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
 
 `contain: style` を使用すると、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティがそのサブツリーにのみ限定された新しいカウンターを作成することを保証します。
 
@@ -187,12 +187,12 @@ article {
 これは上記のどちらの場合でも起こりますが、 `content-visibility: auto` の場合、コンテンツは検索でき、フォーカスを受け取ることができ、関連性のないものから関連性のあるものへと移行することができます。これは `content-visibility: hidden` では起こりません。
 
 > [!NOTE]
-> `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#display_と_content-visibility_のトランジション) を参照してください。
+> `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/Guides/Transitions/Using#display_と_content-visibility_のトランジション) を参照してください。
 
 ## 関連情報
 
-- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/Guides/Containment)
 - [学習: CSS のパフォーマンス最適化](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) (Igalia.com, 2019)
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント

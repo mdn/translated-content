@@ -82,7 +82,7 @@ l10n:
 
 - **相対的な色で `calc()` カラーチャンネルをサポート:** `layout.css.relative-color-syntax.enabled`。
 
-  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
+  CSS の [`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数で、[相対的な色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions) のカラーチャンネルを解析できるようになりました ([Firefox bug 1889561](https://bugzil.la/1889561))。
 
 - **JavaScript `Float16Array` 型付き配列**: `javascript.options.experimental.float16array`。
 

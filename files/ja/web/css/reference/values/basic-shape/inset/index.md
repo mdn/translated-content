@@ -76,5 +76,5 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes) モジュール
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes) モジュール
+- [基本シェイプのガイド](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

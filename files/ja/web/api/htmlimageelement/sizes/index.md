@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("HTMLImageElement")}} の **`sizes`** プロパティによって、メディア条件のリストごとに、[画像](/ja/docs/Web/HTML/Reference/Elements/img)のレイアウト幅を指定することができます。これにより、様々なメディア条件に合わせて文書の状態が変化したときに、異なる画像（方向やアスペクト比の異なる画像も含む）を自動的に選択する機能が提供されます。
 
-それぞれの条件は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で使われているのと同じ条件指定の形式を使用します。
+それぞれの条件は、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)で使われているのと同じ条件指定の形式を使用します。
 
 ## 値
 
@@ -18,7 +18,7 @@ l10n:
 
 ### メディア条件
 
-それぞれのソースサイズ記述子は、メディアクエリー規格で定義されるメディア条件から構成される。ソースサイズ記述子は、ページのレイアウト中に画像に使用する幅を指定するために使用されるので、メディア条件は通常、[幅](/ja/docs/Web/CSS/Reference/At-rules/@media/width)の情報のみに基づきます（必ずしもそうとは限りません）。メディア条件の構築方法の詳細は、[メディアクエリーの使用の構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)を参照してください。
+それぞれのソースサイズ記述子は、メディアクエリー規格で定義されるメディア条件から構成される。ソースサイズ記述子は、ページのレイアウト中に画像に使用する幅を指定するために使用されるので、メディア条件は通常、[幅](/ja/docs/Web/CSS/Reference/At-rules/@media/width)の情報のみに基づきます（必ずしもそうとは限りません）。メディア条件の構築方法の詳細は、[メディアクエリーの使用の構文](/ja/docs/Web/CSS/Guides/Media_queries/Using#構文)を参照してください。
 
 ### ソースサイズ値
 
@@ -131,8 +131,8 @@ break50.addEventListener(
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [HTML における画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 - [`srcset` および `sizes` 属性の使用](/ja/docs/Web/HTML/Reference/Elements/img#srcset_および_sizes_属性の使用)

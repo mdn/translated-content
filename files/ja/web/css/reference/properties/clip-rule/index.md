@@ -279,8 +279,8 @@ div:last-of-type {
 
 - {{cssxref("fill-rule")}}
 - {{cssxref("clip-path")}}
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{SVGAttr("clip-rule")}} 属性
 - SVG の {{SVGElement("clipPath")}} 要素
 - SVG の {{SVGAttr("fill-rule")}} 属性

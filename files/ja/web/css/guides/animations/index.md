@@ -268,7 +268,7 @@ input:checked + label::before {
 
 ## ガイド
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
   - : CSS を使用してアニメーションを作成する方法についての一歩一歩進むチュートリアルです。この記事では、関連する CSS プロパティとアットルール、それに互いにどのように関係するのかを説明します。
 - [ウェブアニメーション API の使用](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
   - : JavaScript で数行で解決できる一般的なアニメーションの要件です。
@@ -286,8 +286,8 @@ input:checked + label::before {
 
 ## 関連情報
 
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)モジュール
-- CSS [トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュールのプロパティは、ユーザーの操作に基づいてアニメーションを起動します。
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
+- CSS [トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュールのプロパティは、ユーザーの操作に基づいてアニメーションを起動します。
 - {{cssxref("interpolate-size")}} プロパティと {{cssxref("calc-size()")}} 関数で、[内在的なサイズの値](/ja/docs/Glossary/Intrinsic_Size)を起点または終点としたアニメーションが利用できます。
 - HTML の {{htmlelement("canvas")}} 要素と[キャンバス API](/ja/docs/Web/API/Canvas_API) および [WebGL API](/ja/docs/Web/API/WebGL_API) でグラフィックとアニメーションを描画できます。
 - {{domxref("SVGAnimationElement")}} インターフェイスはすべてのアニメーション関連要素、例えば {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, {{domxref("SVGAnimateTransformElement")}} に使用します。

@@ -8,7 +8,7 @@ l10n:
 
 {{seecompattable}}
 
-**`interpolate-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)を行うときに、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と、`auto`、[`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値との間で行うことができます。
+**`interpolate-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)を行うときに、[`<length-percentage>`](/ja/docs/Web/CSS/Reference/Values/length-percentage) 値と、`auto`、[`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値との間で行うことができます。
 
 このプロパティは通常、 {{cssxref("width")}} や {{cssxref("height")}} を、 `<length-percentage>` とそのコンテンツのフルサイズの間（つまり、「閉じた」と「開いた」状態、あるいは「非表示」と「表示」状態の間）でアニメーションさせる場合に使用します。 {{cssxref("transform")}} など、ボックスモデル以外の CSS プロパティをアニメーション化する場合、これは実行可能な解決策ではありません。
 

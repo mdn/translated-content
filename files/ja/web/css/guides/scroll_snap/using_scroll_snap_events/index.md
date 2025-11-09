@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュールでは、 2 つの**スクロールスナップイベント**、 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} と {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} が定義されています。これらは、ブラウザーが新しい[スクロールスナップのターゲット](/ja/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)がそれぞれ待機中または選択されたと判断したことに応じて、それぞれ JavaScript を実行できるようにします。
+[CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュールでは、 2 つの**スクロールスナップイベント**、 {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} と {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} が定義されています。これらは、ブラウザーが新しい[スクロールスナップのターゲット](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)がそれぞれ待機中または選択されたと判断したことに応じて、それぞれ JavaScript を実行できるようにします。
 
 このガイドでは、これらのイベントの概要と完全な例を紹介します。
 
@@ -308,7 +308,7 @@ h2 {
 
 この例の CSS は、前回の例の CSS と類似しています。最も大きな違いは以下の通りです。
 
-最初の `<main>` 要素のスタイルを見てみましょう。 `<section>` 要素をグリッドレイアウトで配置したいので、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を使用して、 7 列で表示されるように、 {{cssxref("grid-template-columns")}} の値に `repeat(7, 1fr)` を使用します。また、 `<section>` 要素の周囲の余白を指定するために、 `<main>` 要素の `padding` と {{cssxref("gap")}} を設定し、 `<section>` 要素のマージンではなくします。
+最初の `<main>` 要素のスタイルを見てみましょう。 `<section>` 要素をグリッドレイアウトで配置したいので、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)を使用して、 7 列で表示されるように、 {{cssxref("grid-template-columns")}} の値に `repeat(7, 1fr)` を使用します。また、 `<section>` 要素の周囲の余白を指定するために、 `<main>` 要素の `padding` と {{cssxref("gap")}} を設定し、 `<section>` 要素のマージンではなくします。
 
 最後に、この例では両方向にスクロールするので、 {{cssxref("scroll-snap-type")}} を `both mandatory` に設定し、ブロック方向とインライン方向のスナップ対象を常にスナップするようにします。
 
@@ -526,5 +526,5 @@ window.addEventListener("scrollsnapchange", (event) => {
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} イベント
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} イベント
 - {{domxref("SnapEvent")}}
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) (developer.chrome.com, 2024)

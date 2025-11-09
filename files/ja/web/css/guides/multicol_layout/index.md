@@ -265,7 +265,7 @@ blockquote p::after {
 {{EmbedLiveSample("multicol", "", "800px")}}
 
 > [!NOTE]
-> 段組みレイアウトは、文書全体が印刷ページに分割されるように行ボックスに分割することから、[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)に密接に関連します。従って、 [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)仕様書に定義されているプロパティが、段間のコンテンツの区切り位置を制御するために必要になりました。
+> 段組みレイアウトは、文書全体が印刷ページに分割されるように行ボックスに分割することから、[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)に密接に関連します。従って、 [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)仕様書に定義されているプロパティが、段間のコンテンツの区切り位置を制御するために必要になりました。
 
 ## リファレンス
 
@@ -294,17 +294,17 @@ blockquote p::after {
 
 ## ガイド
 
-- [段組みレイアウトの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [段組みレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
   - : 段組みレイアウト仕様の概要です。
-- [段組みレイアウトの使用](/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [段組みレイアウトの使用](/ja/docs/Web/CSS/Guides/Multicol_layout/Using)
   - : テキストのレイアウトに段組みプロパティを使用するためのガイドです。
-- [段のスタイル設定](/ja/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
+- [段のスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
   - : 段間罫と段間の空間の管理方法です。
-- [段抜きと段の均衡](/ja/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [段抜きと段の均衡](/ja/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
   - : すべての段にまたがる要素の作り方と、段を埋める方法の制御です。
-- [段組みでのオーバーフローの処理](/ja/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
+- [段組みでのオーバーフローの処理](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_overflow)
   - : アイテムが段をオーバーフローときに起こることと、段内のコンテンツが多すぎてコンテナーに収まらない場合に起こることです。
-- [段組みにおけるコンテンツの分割の処理](/ja/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
+- [段組みにおけるコンテンツの分割の処理](/ja/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
   - : 断片化仕様と、段のコンテンツの分割位置を制御する方法について説明します。
 
 ## 関連概念
@@ -316,7 +316,7 @@ blockquote p::after {
 - CSS の {{cssxref("height")}}, {{cssxref("max-height")}}, {{cssxref("block-size")}} プロパティ
 - CSS の {{cssxref("width")}}, {{cssxref("max-width")}}, {{cssxref("inline-size")}} プロパティ
 - {{cssxref("line-style")}} 列挙型データ型
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)ガイド
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)ガイド
 
 ## 仕様書
 
@@ -325,7 +325,7 @@ blockquote p::after {
 ## 関連情報
 
 - [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール
+- [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)モジュール

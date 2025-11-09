@@ -103,7 +103,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 ### 二重バー
 
-2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の値定義に使われます。
+2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の値定義に使われます。
 
 {{CSSSyntaxRaw(`example = <number> || <length> || <color>`)}}
 
@@ -412,20 +412,20 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 ## 関連情報
 
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
   - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+    - [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
   - **値定義構文**
-  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "置換要素")}}

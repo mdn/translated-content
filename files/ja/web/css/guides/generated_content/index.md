@@ -99,7 +99,7 @@ div::before {
 
 {{EmbedLiveSample("generated_content", "", "400px")}}
 
-このサンプルの HTML は、空の {{HTMLElement("body")}} 内に 1 つの空の {{HTMLElement("div")}} があるだけです。雪だるまは、[CSS 画像](/ja/docs/Web/CSS/CSS_images)、[CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)を使用して作成されています。ニンジンの鼻は、生成コンテンツを使用して追加されています。これは、 {{cssxref("::before")}} 擬似要素に、幅の広いオレンジ色の[左境界線](/ja/docs/Web/CSS/Reference/Properties/border-left)が付いた空のボックスを追加したものです。テキストも生成コンテンツです。 {{cssxref("::after")}} 擬似要素に {{cssxref("content")}} プロパティを適用して、"only one &lt;div>" が生成されています。
+このサンプルの HTML は、空の {{HTMLElement("body")}} 内に 1 つの空の {{HTMLElement("div")}} があるだけです。雪だるまは、[CSS 画像](/ja/docs/Web/CSS/Guides/Images)、[CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)を使用して作成されています。ニンジンの鼻は、生成コンテンツを使用して追加されています。これは、 {{cssxref("::before")}} 擬似要素に、幅の広いオレンジ色の[左境界線](/ja/docs/Web/CSS/Reference/Properties/border-left)が付いた空のボックスを追加したものです。テキストも生成コンテンツです。 {{cssxref("::after")}} 擬似要素に {{cssxref("content")}} プロパティを適用して、"only one &lt;div>" が生成されています。
 
 上記の例で "Play" をクリックすると、 MDN Playground でコードを表示または編集できます。
 
@@ -136,23 +136,23 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
 
 ## 関連概念
 
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
   - {{cssxref("::before")}} 擬似要素
   - {{cssxref("::after")}} 擬似要素
   - {{cssxref("::marker")}} 擬似要素
 
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
   - {{cssxref("counter", "counter()")}} 関数
   - {{cssxref("counters", "counters()")}} 関数
   - {{cssxref("counter-increment")}} プロパティ
   - {{cssxref("counter-reset")}} プロパティ
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
   - {{cssxref("::scroll-button()")}} 擬似要素
   - {{cssxref("::scroll-marker")}} 擬似要素
   - {{cssxref(":target-current")}} 擬似クラス
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
   - {{cssxref("attr", "attr()")}} 関数
   - {{cssxref("string")}} データ型
   - {{cssxref("image")}} データ型
@@ -163,6 +163,6 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
 
 ## 関連情報
 
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
 - {{glossary("Replaced elements", "置換要素")}}

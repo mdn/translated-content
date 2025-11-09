@@ -245,7 +245,7 @@ function clipMargin() {
 
 - [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : オーバーフローとは何か、どのように管理するかを学びます。
-- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
   - : スクロールボタン、スクロールマーカー、および生成された段をを使用して、純粋な CSS によるカルーセル UI 機能を作成します。
 - [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
   - : CSS スクロールタイムライン {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティと {{cssxref('scroll-timeline')}} の一括指定は、スクロールコンテナーのスクロールオフセットに関連付けられたアニメーションを作成します。
@@ -283,7 +283,7 @@ function clipMargin() {
 
 ## 関連情報
 
-- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
-- [CSSOM view](/ja/docs/Web/CSS/CSSOM_view) モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/Guides/Scrollbars_styling)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [CSSOM view](/ja/docs/Web/CSS/Guides/CSSOM_view) モジュール
 - [スクロール可能なオーバーフローのデバッグ](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)の方法

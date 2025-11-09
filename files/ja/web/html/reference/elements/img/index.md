@@ -198,14 +198,14 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。
 
     **ソースサイズ**は次のものから構成されます。
-    1. [メディア条件](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)で、リストの最後のアイテムでは省略されます。
+    1. [メディア条件](/ja/docs/Web/CSS/Guides/Media_queries/Using#構文)で、リストの最後のアイテムでは省略されます。
     2. ソースサイズ値。
 
     メディア条件は**ビューポート**の特性を記述するものであり、**画像**の特性ではありません。例えば、`(height <= 500px) 1000px` は、ビューポートの高さが 500px 以下の場合に幅 1000px の画像ソースを使用することを提案します。ソースサイズ記述子はレイアウト時に使用する画像の幅を指定しますため、メディア条件は通常（必ずしもそうとは限らないが） [width](/ja/docs/Web/CSS/Reference/At-rules/@media/width) に基づいています。
 
     ソースサイズ値は、画像の表示サイズを指定するものです。{{glossary("User agent", "ユーザーエージェント")}}は `srcset` 属性で与えられたソースからひとつを選択するために、現在のソースサイズを使用します。そのとき、ソースは幅記述子 ('`w`') を使用して説明します。選択したソースサイズは画像の{{glossary("intrinsic size", "固有の寸法")}}（{{glossary("CSS")}} スタイルが適用されていない場合の、画像の表示サイズ）に影響します。`srcset` 属性がない場合、あるいは幅記述子 (`w`) を持つ値がない場合は、`sizes` 属性の効果はありません。
 
-    ソースサイズの値は、非負の任意の[長さ](/ja/docs/Web/CSS/Reference/Values/length)でなければなりません。また、[数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#math_functions)以外の CSS 関数を使用してはなりません。単位は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)と同様に解釈されます。つまり、すべての相対長の単位は `<img>` 要素ではなく文書ルートを基準とします。例えば `em` 値は画像のフォントサイズではなく、ルートフォントサイズを基準とします。[パーセント値](/ja/docs/Web/CSS/Reference/Values/percentage) は使用できません。
+    ソースサイズの値は、非負の任意の[長さ](/ja/docs/Web/CSS/Reference/Values/length)でなければなりません。また、[数学関数](/ja/docs/Web/CSS/Reference/Values/Functions#math_functions)以外の CSS 関数を使用してはなりません。単位は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)と同様に解釈されます。つまり、すべての相対長の単位は `<img>` 要素ではなく文書ルートを基準とします。例えば `em` 値は画像のフォントサイズではなく、ルートフォントサイズを基準とします。[パーセント値](/ja/docs/Web/CSS/Reference/Values/percentage) は使用できません。
 
     `auto` キーワードは、サイズの一覧全体または一覧の最初の項目を置き換えることができます。これは `loading="lazy"` と組み合わせてのみ有効であり、画像の[具体的なサイズ](/ja/docs/Web/CSS/Reference/Values/image)に解決されます。画像の内在サイズは未確定であるため、ブラウザが既定の幅 300px を想定しないよう、`width` および `height` 属性（または CSS の同等プロパティ）も同時に指定してください。
     `auto` に対応していないブラウザーとの後方互換性を高めるため、`sizes` 属性内で `auto` の後に代替サイズを記載することができます。

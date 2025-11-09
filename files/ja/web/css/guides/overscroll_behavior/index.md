@@ -39,8 +39,8 @@ l10n:
 ## 関連概念
 
 - [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA ロール
-- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の概念
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール:
+- [包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の概念
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール:
   - {{cssxref("overflow")}} 一括指定プロパティ
     - {{Cssxref("overflow-x")}}
     - {{Cssxref("overflow-y")}}
@@ -51,14 +51,14 @@ l10n:
   - {{CSSxRef("text-overflow")}} プロパティ
 - {{Glossary("Scroll_container", "スクロールコンテナー")}}と[スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)（用語集の用語）
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール:
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール:
   - {{cssxref("scroll-padding")}} 一括指定プロパティ
   - {{cssxref("scroll-snap-type")}} プロパティ
   - {{cssxref("scroll-margin")}} 一括指定プロパティ
   - {{cssxref("scroll-snap-stop")}} プロパティ
   - {{cssxref("scroll-snap-align")}} プロパティ
 
-- [CSSOM view](/ja/docs/Web/CSS/CSSOM_view) モジュール:
+- [CSSOM view](/ja/docs/Web/CSS/Guides/CSSOM_view) モジュール:
   - {{domxref("Element.getBoundingClientRect()")}} メソッド
   - {{domxref("Element.scroll()")}} メソッド
   - {{domxref("Element.scrollBy()")}} メソッド
@@ -72,7 +72,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) (developer.chrome.com, 2017)

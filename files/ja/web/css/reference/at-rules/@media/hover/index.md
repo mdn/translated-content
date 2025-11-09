@@ -57,5 +57,5 @@ a:hover {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

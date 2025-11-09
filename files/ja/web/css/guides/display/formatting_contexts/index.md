@@ -30,7 +30,7 @@ l10n:
 - {{cssxref("contain", "contain: layout", "#layout")}}, `content`, `strict` のいずれかの要素
 - {{Glossary("Flex Item", "フレックスアイテム")}}
 - グリッドアイテム
-- [段組みコンテナー](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [段組みコンテナー](/ja/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
 - {{cssxref("column-span")}} が `all` に設定された要素
 
 これは、新しい BFC がメインレイアウトの中でミニレイアウトとなり、一番外側の文書のように動作するので便利です。 BFC はその中にすべてを含み、 {{cssxref("float")}} と {{cssxref("clear")}} は同じ整形コンテキスト内の項目にのみ適用され、マージンは同じ整形コンテキスト内の要素間でのみ相殺されます。
@@ -39,7 +39,7 @@ l10n:
 
 新しい BFC を生成する効果を見るために、いくつかの例を見てみましょう。
 
-下の例では、境界が適用された `<div>` の中に浮動ボックスがあります。その `<div>` の内容は、その浮動ボックスの横に並んでいます。その浮動ボックスの内容は、その横にある内容よりも高さが高いため、 `<div>` の境界線がその浮動ボックスを通過するようになりました。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)で説明されているように、浮動ボックスはフローから外れているので、 `<div>` の背景と境界には内容だけが含まれ、浮動ボックスは含まれません。
+下の例では、境界が適用された `<div>` の中に浮動ボックスがあります。その `<div>` の内容は、その浮動ボックスの横に並んでいます。その浮動ボックスの内容は、その横にある内容よりも高さが高いため、 `<div>` の境界線がその浮動ボックスを通過するようになりました。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)で説明されているように、浮動ボックスはフローから外れているので、 `<div>` の背景と境界には内容だけが含まれ、浮動ボックスは含まれません。
 
 ```html live-sample___float
 <div class="box">
@@ -180,10 +180,10 @@ strong {
 
 ## まとめ
 
-このガイドでは、ブロックおよびインライン整形コンテキストにおける詳細と、ブロック整形コンテキスト (BFC) を生成することの重要な目的を見てきました。次のガイドでは、[通常フローがどのように様々な所持方向に対応するか](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)を見ていきます。
+このガイドでは、ブロックおよびインライン整形コンテキストにおける詳細と、ブロック整形コンテキスト (BFC) を生成することの重要な目的を見てきました。次のガイドでは、[通常フローがどのように様々な所持方向に対応するか](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)を見ていきます。
 
 ## 関連情報
 
-- [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
+- [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)

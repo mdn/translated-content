@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Containment")}}
 
-**`ContentVisibilityAutoStateChangeEvent`** インターフェイスは {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントのイベントオブジェクトです。これは、{{cssxref("content-visibility", "content-visibility: auto")}}が設定されている要素で、[ユーザーとの関連](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#ユーザーとの関連)、[コンテンツをスキップ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)することを開始または停止するときに発行されます。
+**`ContentVisibilityAutoStateChangeEvent`** インターフェイスは {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントのイベントオブジェクトです。これは、{{cssxref("content-visibility", "content-visibility: auto")}}が設定されている要素で、[ユーザーとの関連](/ja/docs/Web/CSS/Guides/Containment/Using#ユーザーとの関連)、[コンテンツをスキップ](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)することを開始または停止するときに発行されます。
 
 要素が関係ない間（開始イベントと終了イベントの間）、ユーザーエージェントはレイアウトと描画を含む要素のレンダリングをスキップします。
 これにより、ページのレンダリング速度が大幅に向上します。
@@ -67,6 +67,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:has()`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この擬似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
+**`:has()`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、引数として渡される[相対セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#相対セレクター)のいずれかが、その要素から辿ってアンカーとして少なくとも一つの要素とマッチする場合に、その要素を表します。この擬似クラスは、[相対セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容な相対セレクターリスト)を引数として取ることで、参照している要素に関して親要素や前の兄弟要素を選択する方法を提供します。
 
 ```css
 /* h1 見出し要素の直後に段落要素がある場合、
@@ -16,7 +16,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 擬似クラスは {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} と同様に、引数の中で最も大きい[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が `:has()` の詳細度として与えられます。
+`:has()` 擬似クラスは {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} と同様に、引数の中で最も大きい[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が `:has()` の詳細度として与えられます。
 
 ## 構文
 
@@ -227,8 +227,8 @@ CSS における類似の構成は `.abc:has(+ .xyz)` です。これは、次�
 ## 関連情報
 
 - [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is), [`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where), [`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not)
-- [CSS セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [CSS セレクターと結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+- [CSS セレクターの構造](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure)
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)
 - [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)

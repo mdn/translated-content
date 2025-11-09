@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[線ベースの配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)では、グリッド線と、その線に対してアイテムを位置指定する方法をご紹介しました。CSS グリッドレイアウトでは、常に線が存在しており、グリッド上にアイテムを位置指定することを簡単にしています。しかし、グリッド上のアイテムを位置指定する別の方法があります。この方法は、単独で使用することも、線を使った位置指定と組み合わせて使用することもできます。この方法では、名前の付いたテンプレート領域を使ってアイテムを位置指定します。この方法を「アスキーアート方式のグリッドレイアウト」と呼んでいるのも、すぐにお分かりいただけるでしょう。
+[線ベースの配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)では、グリッド線と、その線に対してアイテムを位置指定する方法をご紹介しました。CSS グリッドレイアウトでは、常に線が存在しており、グリッド上にアイテムを位置指定することを簡単にしています。しかし、グリッド上のアイテムを位置指定する別の方法があります。この方法は、単独で使用することも、線を使った位置指定と組み合わせて使用することもできます。この方法では、名前の付いたテンプレート領域を使ってアイテムを位置指定します。この方法を「アスキーアート方式のグリッドレイアウト」と呼んでいるのも、すぐにお分かりいただけるでしょう。
 
 ## グリッド領域に名前を付ける
 
@@ -287,7 +287,7 @@ l10n:
 }
 ```
 
-その後、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の中でレイアウトを再定義して、2 列のレイアウトにしたり、さらに広い空間が必要な場合は 3 列のレイアウトにすることもできます。広いレイアウトでは、9 列のトラックグリッドを維持し、 `grid-template-areas` を使用してアイテムを配置する場所を再定義します。
+その後、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)の中でレイアウトを再定義して、2 列のレイアウトにしたり、さらに広い空間が必要な場合は 3 列のレイアウトにすることもできます。広いレイアウトでは、9 列のトラックグリッドを維持し、 `grid-template-areas` を使用してアイテムを配置する場所を再定義します。
 
 ```css-nolint
 @media (width >= 30em) {
@@ -481,8 +481,8 @@ l10n:
 }
 ```
 
-この一括指定プロパティが提供するその他の機能については、[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)および `grid-auto-flow` プロパティを見ていく際に再確認します。
+この一括指定プロパティが提供するその他の機能については、[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement)および `grid-auto-flow` プロパティを見ていく際に再確認します。
 
 ## 次のステップ
 
-[グリッドガイド](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)に沿って学習を進めてきた場合は、[線ベースの配置](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)または[名前付き領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)を使用してグリッドレイアウトを作成できるはずです。それでは、[名前付きグリッド線を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)の作成を見ていきましょう。
+[グリッドガイド](/ja/docs/Web/CSS/Guides/Grid_layout#ガイド)に沿って学習を進めてきた場合は、[線ベースの配置](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)または[名前付き領域](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)を使用してグリッドレイアウトを作成できるはずです。それでは、[名前付きグリッド線を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)の作成を見ていきましょう。

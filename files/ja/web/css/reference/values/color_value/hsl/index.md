@@ -190,5 +190,5 @@ div.hsla {
 
 - [すべての色記法の一覧](/ja/docs/Web/CSS/Reference/Properties/color)
 - {{CSSXref("&lt;hue&gt;")}} データ型
-- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter) (MDN)
+- [色選択ツール](/ja/docs/Web/CSS/Guides/Colors/Color_format_converter) (MDN)
 - [Color picker](https://colorjs.io/apps/picker/) (Lea Verou)

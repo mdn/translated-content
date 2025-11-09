@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
+この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文
 
@@ -44,11 +44,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて ({{Glossary("ASCII")}}) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
+初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて ({{Glossary("ASCII")}}) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
 
 ### アットルールの構文
 
-アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)のページをご覧ください。
+アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)のページをご覧ください。
 
 ## 索引
 
@@ -62,7 +62,7 @@ div.menu-bar li:hover > ul {
 
 ## セレクター
 
-以下は様々な[セレクター](/ja/docs/Web/CSS/CSS_selectors)で、DOM 内の要素の様々な特徴に基づいた条件付きのスタイル付けを可能にします。
+以下は様々な[セレクター](/ja/docs/Web/CSS/Guides/Selectors)で、DOM 内の要素の様々な特徴に基づいた条件付きのスタイル付けを可能にします。
 
 ### 基本セレクター
 
@@ -108,37 +108,37 @@ div.menu-bar li:hover > ul {
 
 ### 構文と意味
 
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-- [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-- [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- [カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
+- [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [優先度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [CSS 単位と値の種類](/ja/docs/Web/CSS/CSS_values_and_units)
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- [優先度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [CSS 単位と値の種類](/ja/docs/Web/CSS/Guides/Values_and_units)
 - [CSS 関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)
 
 ### 値
 
-- [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-- [解決値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#解決値)
-- [指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)
-- [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+- [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)
+- [解決値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#解決値)
+- [指定値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定値)
+- [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)
 
 ### レイアウト
 
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
+- [包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - {{glossary("Replaced elements", "置換要素")}}
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

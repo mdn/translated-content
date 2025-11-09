@@ -54,7 +54,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 ### CSS
 
-- [CSS transitions](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS transitions](/ja/docs/Web/CSS/Guides/Transitions/Using)
   - : 新しい CSS transitions サポートが Firefox 4 では利用できるようになりました。
 - CSS での算出値
   - : [`-moz-calc`](/ja/docs/Web/CSS/Reference/Values/calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/Reference/Values/length) の値を数式で指定できます。
@@ -66,7 +66,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : touch プロパティ群が追加されました。詳細と正式な記事名は後日追記予定です。
 - [CSS 背景として任意の要素を使用する](/ja/docs/Web/CSS/Reference/Values/element)
   - : [`-moz-element`](/ja/docs/Web/CSS/Reference/Values/element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
   - : CSS セレクターを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
 
 #### 新しい CSS プロパティ
@@ -118,7 +118,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`text-shadow`](/ja/docs/Web/CSS/Reference/Properties/text-shadow) プロパティのぼかし範囲が 300 までに制限されるようになりました。これは健全さとパフォーマンスの理由によるものです。
 - [`overflow`](/ja/docs/Web/CSS/Reference/Properties/overflow) プロパティがテーブルグループ要素 (`<thead>`、`<tbody>`、および `<tfoot>`) に適用されなくなりました。
 - [`-moz-appearance`](/ja/docs/Web/CSS/Reference/Properties/appearance) プロパティが要素に境界のない Aero Glass の見た目を適用する `-moz-win-borderless-glass 値をサポートするようになりました。`
-- [`-moz-device-pixel-ratio`](/ja/docs/Web/CSS/CSS_media_queries#-moz-device-pixel-ratio) メディア機能が追加されました。これを用いることで、[Media Query](/ja/docs/Web/CSS/CSS_media_queries) で用いられる、CSS ピクセルを基準としたデバイスのピクセル比率を指定できます。
+- [`-moz-device-pixel-ratio`](/ja/docs/Web/CSS/Guides/Media_queries#-moz-device-pixel-ratio) メディア機能が追加されました。これを用いることで、[Media Query](/ja/docs/Web/CSS/Guides/Media_queries) で用いられる、CSS ピクセルを基準としたデバイスのピクセル比率を指定できます。
 - Gecko の [CSS 単位の](/ja/docs/Web/CSS/Reference/Values/length) 扱いが他のブラウザーにより良く適合するように、また、絶対的長さをデバイスの DPI を基準にした画面ピクセル数により的確に変換するように修正されました。
 
 ### グラフィックとビデオ

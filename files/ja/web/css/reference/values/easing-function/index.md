@@ -215,7 +215,7 @@ selectElem.addEventListener("change", () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
 - [cubic-bezier.com](https://cubic-bezier.com/) - Lea Verou (2011)
 - [`linear()` easing generator](https://linear-easing-generator.netlify.app/) - Jake Archibald

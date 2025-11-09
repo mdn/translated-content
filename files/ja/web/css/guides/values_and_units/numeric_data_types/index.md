@@ -35,7 +35,7 @@ CSS では、以下のものを表すために寸法を使います。
 
 長さ (距離) の単位がプロパティの値として使用できるとき、これを {{cssxref("&lt;length&gt;")}} 型と呼びます。CSS の長さには、相対的な長さと絶対的な長さの 2 種類があります。相対的な長さの単位は、他の何かからの相対的な長さを指定します。
 
-相対的な長さには、フォント相対長とビューポートパーセント値の 2 種類があります。 どちらも 2 つの型に分かれます。 フォント相対長の単位には、ローカルフォント相対長またはルートフォント相対長があります。ビューポートのパーセント値の長さは、ビューポートの高さまたは幅のサイズに関連しているか、または [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュールで定義されているように、[コンテナー](/ja/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units)から相対的なものです。
+相対的な長さには、フォント相対長とビューポートパーセント値の 2 種類があります。 どちらも 2 つの型に分かれます。 フォント相対長の単位には、ローカルフォント相対長またはルートフォント相対長があります。ビューポートのパーセント値の長さは、ビューポートの高さまたは幅のサイズに関連しているか、または [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)モジュールで定義されているように、[コンテナー](/ja/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units)から相対的なものです。
 
 #### ローカルフォント相対長
 
@@ -87,7 +87,7 @@ CSS では、以下のものを表すために寸法を使います。
 
 #### コンテナー単位
 
-コンテナークエリー長単位は、[クエリーコンテナー](/ja/docs/Web/CSS/CSS_containment/Container_queries)の寸法に対する長さを指定します。
+コンテナークエリー長単位は、[クエリーコンテナー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)の寸法に対する長さを指定します。
 例えば、 `cqw` はクエリーコンテナーの幅に対する相対値であり、 `cqh` はクエリーコンテナーの高さに対する相対値です。
 
 | 単位    | 相対値の基準                              |
@@ -226,7 +226,7 @@ CSS では、以下のものを表すために寸法を使います。
 
 ## 関連情報
 
-- [テキストデータ型](/ja/docs/Web/CSS/CSS_values_and_units/Textual_data_types)
+- [テキストデータ型](/ja/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール
 - [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

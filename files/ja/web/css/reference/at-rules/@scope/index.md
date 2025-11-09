@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---
 
-**`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を使用すると、特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
+**`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用すると、特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
 
 JavaScript で `@scope` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSScopeRule")}} からアクセスすることができます。
 
@@ -125,7 +125,7 @@ body
 }
 ```
 
-実際、`:scope` はすべてのスコープ付きスタイルルールに暗黙的に付加されます。必要であれば、明示的に `:scope` を前置したり、[入れ子](/ja/docs/Web/CSS/CSS_nesting)セレクター (`&`) を前置したりして、同じ効果を得ることができます。
+実際、`:scope` はすべてのスコープ付きスタイルルールに暗黙的に付加されます。必要であれば、明示的に `:scope` を前置したり、[入れ子](/ja/docs/Web/CSS/Guides/Nesting)セレクター (`&`) を前置したりして、同じ効果を得ることができます。
 
 以下のブロックにある 3 つのルールは、選択するものがすべて同じです。
 
@@ -214,7 +214,7 @@ body
 
 ### `@scope` の競合の解決方法
 
-`@scope` は [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade)に新しい基準、**スコープの近接性**を追加します。これは、 2 つのスコープに競合するスタイル設定がある場合、スコープルートまでの DOM ツリー階層のホップ数が最も少ないスタイルを適用するという状態です。この意味を例で見ていきましょう。
+`@scope` は [CSS カスケード](/ja/docs/Web/CSS/Guides/Cascade)に新しい基準、**スコープの近接性**を追加します。これは、 2 つのスコープに競合するスタイル設定がある場合、スコープルートまでの DOM ツリー階層のホップ数が最も少ないスタイルを適用するという状態です。この意味を例で見ていきましょう。
 
 以下の HTML スニペットでは、異なるテーマのカードが互いに入れ子になっています。
 
@@ -277,7 +277,7 @@ body
 これで一番内側の段落は正しく黒く色づけされました。これは、 `.light-theme` のスコープルートからは DOM ツリーの階層が1階層しか離れておらず、 `.dark-theme` のスコープルートからは 2 階層しか離れていないためです。したがって、 light スタイルが勝ちます。
 
 > [!NOTE]
-> スコープの近さはソースの順序を上書きしますが、[重要度](/ja/docs/Web/CSS/Reference/Values/important)、[レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)のような他にも優先度の高い仕様によって上書きされます。
+> スコープの近さはソースの順序を上書きしますが、[重要度](/ja/docs/Web/CSS/Reference/Values/important)、[レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)のような他にも優先度の高い仕様によって上書きされます。
 
 ## 形式文法
 

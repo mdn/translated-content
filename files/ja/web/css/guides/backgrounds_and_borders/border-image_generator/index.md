@@ -12,7 +12,7 @@ l10n:
 
 ## 関連情報
 
-- [境界角丸作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+- [境界角丸作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
   - : この対話ツールを使うと、角丸（{{cssxref("border-radius")}} プロパティ）を視覚的に作成することができます。
-- [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
+- [ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
   - : この対話ツールを使うと、要素の後ろに影を視覚的に作成することができます（{{cssxref("box-shadow")}} プロパティ）。

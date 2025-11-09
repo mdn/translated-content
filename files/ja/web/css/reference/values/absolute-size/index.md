@@ -121,4 +121,4 @@ li {
 
 - CSS の {{cssxref("relative-size")}} データ型
 - CSS の {{cssxref("font")}} および {{cssxref("font-size")}} プロパティ
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

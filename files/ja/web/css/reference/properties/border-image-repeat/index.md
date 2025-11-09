@@ -149,5 +149,5 @@ repetition.addEventListener("change", (evt) => {
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

@@ -57,7 +57,7 @@ l10n:
   - : ボックスに挿入する影とドロップシャドウ効果を構成します。それぞれの影のオプションには、影の基本色（これはぼかされ、他の引数に基づいて背景と混合されます）が含まれます。
 
 - {{cssxref("column-rule-color")}}
-  - : [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)を使用しているときに、テキストの列を区切る線に使う色です。
+  - : [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)を使用しているときに、テキストの列を区切る線に使う色です。
 
 - {{cssxref("outline-color")}}
   - : 要素の外側に輪郭を描画する際に使用する色です。この輪郭は、文書内の補助的な空間を確保しないという点で、ボーダーとは異なります。輪郭は[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)には参加せず、他のコンテンツと重複します。輪郭は一般的にフォーカスインジケーターとして使用され、現在どの要素がフォーカスを持っており、キーボード入力イベントを受信するかを示します。
@@ -196,6 +196,6 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 - [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) データ型
 - [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
 - [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
-- [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)
+- [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)
 - [グラフィックの描画](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [ウェブのグラフィック](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブ上のその他のグラフィック)

@@ -30,7 +30,7 @@ l10n:
 
 ## 例
 
-[CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)に、 `::scroll-marker` 擬似要素のその他の使用例があります。
+[CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)に、 `::scroll-marker` 擬似要素のその他の使用例があります。
 
 ### カルーセルのスクロールマーカーの作成
 
@@ -145,7 +145,7 @@ li::scroll-marker:target-current {
 
 ### スクロールマーカーグループを anchor-positioning で位置指定
 
-この例は、前回の例を拡張し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、カルーセルに対してスクロールマーカーグループを相対的に位置指定する方法を示しています。
+この例は、前回の例を拡張し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、カルーセルに対してスクロールマーカーグループを相対的に位置指定する方法を示しています。
 
 #### CSS
 
@@ -188,7 +188,7 @@ ul::scroll-marker-group {
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
-- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

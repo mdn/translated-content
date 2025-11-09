@@ -61,4 +61,4 @@ l10n:
 ## 関連情報
 
 - CSS の [prefers-reduced-motion](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディアクエリー
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)

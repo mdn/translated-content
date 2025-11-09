@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 32142cbf6ab60da6987aee2e11f59c5ee916ea49
 ---
 
-**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
+**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
 
 {{InteractiveExample("CSS デモ: animation")}}
 
@@ -98,7 +98,7 @@ animation:
 - アニメーションの名前は任意で、 `none`, {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}} のいずれかになります。
 
 > [!NOTE]
-> {{cssxref("animation-timeline")}}、{{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} は、現在の実装ではリセットのみであるため、現在のところこのリストには掲載されていません。つまり、 `animation` があると、それ以前に宣言した `animation-timeline` の値は `auto` に、それ以前に宣言した `animation-range-start` と `animation-range-end` の値は `normal` にリセットされますが、これらのプロパティを `animation` で設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成する場合、 `animation` の一括指定を宣言した後に、これらのプロパティを宣言しなければ効果を得ることはできません。
+> {{cssxref("animation-timeline")}}、{{cssxref("animation-range-start")}}、{{cssxref("animation-range-end")}} は、現在の実装ではリセットのみであるため、現在のところこのリストには掲載されていません。つまり、 `animation` があると、それ以前に宣言した `animation-timeline` の値は `auto` に、それ以前に宣言した `animation-range-start` と `animation-range-end` の値は `normal` にリセットされますが、これらのプロパティを `animation` で設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations) を作成する場合、 `animation` の一括指定を宣言した後に、これらのプロパティを宣言しなければ効果を得ることはできません。
 
 ### 値
 
@@ -148,7 +148,7 @@ animation:
 ## 例
 
 > [!NOTE]
-> [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。
+> [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。
 
 ### 日の出
 
@@ -330,7 +330,7 @@ animation:
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
 
 ## 仕様書
 
@@ -342,5 +342,5 @@ animation:
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript の {{domxref("AnimationEvent")}} API

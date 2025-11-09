@@ -42,7 +42,7 @@ clip-pathプロパティは、クリップを適用します。このプロパ�
 
 `clip-path` は、クリップされた領域の外側をすべて非表示にします。最も基本的なクリップは、形状ボックスを使用して行います。要素は、そのマージン、境界線、パディング、コンテンツに基づいてクリップすることができます。これらの視覚的なボックスの値の効果は、 {{cssxref("border-color")}} を透明に設定したり、 {{cssxref("background-origin")}} を目的の視覚的なボックスに設定したりするなど、他の CSS プロパティを使用して実現できます。これらの値を見ていくのは、主に、これらの値が、後で説明するシェイプ関数と組み合わせて、シェイプクリップパスの原点を定義するために使用されているためです。
 
-CSS シェイプで使用されている[参照ボックスを理解する](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box)ことは、 `clip-path` を使用する場合、特に[基本シェイプ](#基本シェイプへのクリップ)を使用する場合に重要です。参照ボックスは、シェイプの座標系を定義するからです。
+CSS シェイプで使用されている[参照ボックスを理解する](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box)ことは、 `clip-path` を使用する場合、特に[基本シェイプ](#基本シェイプへのクリップ)を使用する場合に重要です。参照ボックスは、シェイプの座標系を定義するからです。
 
 #### 視覚的ボックス値
 
@@ -232,7 +232,7 @@ body:has([value="content-box"]:checked) {
 
 その他の例は、 [`clip-path` のシェイプと形状ボックス](/ja/docs/Web/CSS/Reference/Properties/clip-path#シェイプと形状ボックス)を参照してください。
 
-`clip-path: margin-box` のような値も同様に有用です。クリップパスの縁をマージンボックスの縁に配置して創造的なビジュアルを作成できるほか、 `clip-path` の計算値が `none` 以外である場合、 CSS の `opacity` が `1` 以外の値であった場合と同じように、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作成します。
+`clip-path: margin-box` のような値も同様に有用です。クリップパスの縁をマージンボックスの縁に配置して創造的なビジュアルを作成できるほか、 `clip-path` の計算値が `none` 以外である場合、 CSS の `opacity` が `1` 以外の値であった場合と同じように、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を作成します。
 
 ## 基本シェイプへのクリップ
 
@@ -540,7 +540,7 @@ cite {
 - {{cssxref("basic-shape")}}
 - {{cssxref("shape-image-threshold")}}
 - {{cssxref("shape-margin")}}
-- [シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [CSS マスク入門](/ja/docs/Web/CSS/CSS_masking/Masking)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)モジュール
+- [シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール

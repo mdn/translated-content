@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
 ---
 
-CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
+CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
 
 視覚整形モデルでは、文書ツリーの各要素は、モデルに応じてゼロ個以上のボックスを生成します。これらのボックスのレイアウトは、次のようにして制御されます。
 
@@ -29,7 +29,7 @@ CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエ
 
 **ボックスの生成**は CSS の視覚整形モデルの一部で、文書内の要素からボックスを作ることです。生成されたボックスは様々な種類を持ち、視覚整形モデルに影響します。生成されるボックスの種類は CSS の {{cssxref("display")}} プロパティによって決まります。
 
-当初 CSS2 で定義された `display` プロパティは、 [CSS 表示方法](/ja/docs/Web/CSS/CSS_display)、[CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)、[CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout) で拡張されました。これに加え、 display にまつわる用語の一部が CSS2 から何年にもわたって更新され明確化されました。
+当初 CSS2 で定義された `display` プロパティは、 [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)、[CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)、[CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout) で拡張されました。これに加え、 display にまつわる用語の一部が CSS2 から何年にもわたって更新され明確化されました。
 
 CSS はソース文書を読み取り、キャンバスにレンダリングします。これを行うために、中間的な構造である**ボックスツリー**を生成し、レンダリングされる文書の書式構造を表現します。ボックスツリー内のそれぞれのボックスは、キャンバス上の空間や時間において対応する要素（または擬似要素）を表現しており、ボックスツリー内のテキストは対応するテキストノードの内容のように表現します。
 
@@ -104,7 +104,7 @@ body {
 
 **インライン無名ボックス**は、文字列がインライン要素によって分割されたとき、例えば文に `<em></em>` で囲まれた区間がある場合に作成されます。これにより、文が3つのインラインボックスに分割されます。強調された区間の前の無名インラインボックス、 `<em>` 要素で包まれた区間、そして最後の無名インラインボックスです。無名ブロックボックスと同様に、これらの無名インラインボックスは `<em>` の場合とは異なり、独立してスタイルを設定することはできず、コンテナーのスタイルを継承するだけです。
 
-他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/CSS_table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
+他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/Guides/Table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
 
 ### 行ボックス
 
@@ -148,7 +148,7 @@ CSS では、ボックスをレイアウトするための配置の仕組みが 
 
 CSS において、**通常フロー** (normal flow) にはブロックボックスのブロックレベル整形、インラインボックスのインラインレベル整形、それにブロックレベルおよびインラインレベルボックスの相対位置指定と粘着位置指定があります。
 
-詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)を参照してください。
+詳しくは [フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)を参照してください。
 
 ### 浮動ボックス
 
@@ -158,11 +158,11 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ### 絶対位置指定
 
-絶対位置指定モデルでは（固定位置指定 (`fixed`) も含む）、ボックスは完全に通常フローから外され、包含ブロック（固定位置指定の場合はビューポート）または [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)における 1 つ以上のアンカー要素を基準とした位置に配置されます。
+絶対位置指定モデルでは（固定位置指定 (`fixed`) も含む）、ボックスは完全に通常フローから外され、包含ブロック（固定位置指定の場合はビューポート）または [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)における 1 つ以上のアンカー要素を基準とした位置に配置されます。
 
 要素が浮動ボックス、絶対位置指定、ルート要素のいずれかであれば、**フロー外**と呼ばれます。フロー外ではない要素は**フロー内**と呼ばれます。
 
-詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)を参照してください。
+詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)を参照してください。
 
 ## 整形コンテキストと display プロパティ
 
@@ -170,23 +170,23 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ボックスには内部表示型もあり、これは子がどのように動作するかを示します。通常ブロックかつインラインレイアウト、または通常フローであれば、この表示型は `flow` です。これは、子要素が `block` または `inline` のどちらかであることを示します。
 
-しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
+しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
 
 ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxref("display")}} のプロパティリファレンスで説明しています。
 
 また、 display の特定の値については、ボックスレイアウトの観点から、これらの整形コンテキストがどのように機能するかを以下のリファレンスで説明しています。
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール
+- [CSS 表](/ja/docs/Web/CSS/Guides/Table)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
 
 ### 独立整形コンテキスト
 
 要素は、それを含むブロックの整形コンテキストに参加するか、独立整形コンテキストを確立するかのどちらかです。例えば、グリッドコンテナーは、その子に対して新しい**グリッド整形コンテキスト**を確立します。
 
-**独立整形コンテキスト**は浮動ボックスを含み、マージンは整形コンテキストの境界を越えて相殺されることはありません。そのため、新しいブロック整形コンテキストを作成することで、ボックス内に浮動ボックスが収まるようにすることができます。このためには、 `display: flow-root` を新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を生成したいボックスに追加してください。
+**独立整形コンテキスト**は浮動ボックスを含み、マージンは整形コンテキストの境界を越えて相殺されることはありません。そのため、新しいブロック整形コンテキストを作成することで、ボックス内に浮動ボックスが収まるようにすることができます。このためには、 `display: flow-root` を新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)を生成したいボックスに追加してください。
 
 次の例は、 `display: flow-root` の効果を示しています。黒い背景のボックスが、浮動アイテムとテキストを包み込むように見えます。編集可能な CSS から `display: flow-root` を削除すると、浮動アイテムがボックスの底から突き出てしまい、アイテムが収まらなくなります。
 
@@ -248,15 +248,15 @@ body {
 
 ## 関連情報
 
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
-- [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)ガイド
+- [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - {{glossary("Replaced elements", "置換要素")}}
 - {{DOMxRef("VisualViewport")}} インターフェイス
 - {{glossary("Scroll container", "スクロールコンテナー")}}

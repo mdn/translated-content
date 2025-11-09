@@ -83,7 +83,7 @@ bottom top
 
 ## 関連情報
 
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
 - [CSS 値と単位の紹介](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}

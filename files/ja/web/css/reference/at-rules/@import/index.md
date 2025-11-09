@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-**`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
+**`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
 `@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/Reference/At-rules/@charset) や [@layer](/ja/docs/Web/CSS/Reference/At-rules/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
 
 ## 構文
@@ -28,7 +28,7 @@ l10n:
 - _url_
   - : インポートするリソースの位置を表す {{CSSxRef("string")}} または {{cssxref("url_value", "&lt;url&gt;")}} です。 URL は絶対パスでも相対パスでも構いません。
 - _list-of-media-queries_
-  - : [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)のカンマ区切りのリストで、リンクした URL で定義された CSS ルールを適用するためのメディアに依存した条件を指定します。ブラウザーが対応していないメディアクエリーの場合、リンクされたリソースは読み込まれません。
+  - : [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)のカンマ区切りのリストで、リンクした URL で定義された CSS ルールを適用するためのメディアに依存した条件を指定します。ブラウザーが対応していないメディアクエリーの場合、リンクされたリソースは読み込まれません。
 - _layer-name_
   - : リンクされたリソースのコンテンツがインポートされる[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の名前です。詳しくは [`layer()`](/ja/docs/Web/CSS/@import/layer_function) を参照してください。
 - _supports-condition_
@@ -62,9 +62,9 @@ l10n:
 /* それ以外のスタイル */
 ```
 
-`@import` ルールは[入れ子になる文](/ja/docs/Web/CSS/CSS_syntax/Syntax#入れ子の文)ではありません。従って、[条件付きアットルールグループ](/ja/docs/Web/CSS/CSS_conditional_rules#アットルール)の中で使うことはできません。
+`@import` ルールは[入れ子になる文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#入れ子の文)ではありません。従って、[条件付きアットルールグループ](/ja/docs/Web/CSS/Guides/Conditional_rules#アットルール)の中で使うことはできません。
 
-{{glossary("user agent", "ユーザーエージェント")}}は未知のメディア種別のリソースを受け取ることを拒否することができるので、特定のメディアに依存した `@import` ルールを指定することができます。これらの条件付きインポートは、 URL の後でカンマ区切りの[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で指定します。メディアクエリーがないと、インポートは無条件で行われます。メディアに `all` を指定しても同じ効果になります。
+{{glossary("user agent", "ユーザーエージェント")}}は未知のメディア種別のリソースを受け取ることを拒否することができるので、特定のメディアに依存した `@import` ルールを指定することができます。これらの条件付きインポートは、 URL の後でカンマ区切りの[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)で指定します。メディアクエリーがないと、インポートは無条件で行われます。メディアに `all` を指定しても同じ効果になります。
 
 同様に、ユーザーエージェントは `@import` アットルールで `supports()` 関数を使用して、具体的な特性の集合に対応している（または対応していない）場合のみリソースを取得することができます。
 これにより、作者は最近導入された CSS 特性の利点を活かしつつ、古いバージョンのブラウザーに対して優雅なフォールバックを提供することができます。
@@ -159,5 +159,5 @@ l10n:
 
 - {{CSSxRef("@media")}}
 - {{CSSxRef("@supports")}}
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
 - [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)

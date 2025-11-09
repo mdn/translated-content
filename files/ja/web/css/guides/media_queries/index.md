@@ -12,9 +12,9 @@ l10n:
 
 それ以外にも、ページを印刷する際にフォントサイズを大きくしてナビゲーションメニューを非表示にしたり、ページを縦向きまたは横向きで表示する際に段落間のパディングを調整したり、タッチ画面で操作しやすいようにボタンのサイズを大きくしたりといった例が挙げられます。
 
-[CSS](/ja/docs/Web/CSS) では、 {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を使用して、メディアクエリーの結果に基づいて条件付きでスタイルの一部を適用することができます。 {{cssxref("@import")}} を使用すると、条件付きでスタイルシート全体を適用することもできます。
+[CSS](/ja/docs/Web/CSS) では、 {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用して、メディアクエリーの結果に基づいて条件付きでスタイルの一部を適用することができます。 {{cssxref("@import")}} を使用すると、条件付きでスタイルシート全体を適用することもできます。
 
-再利用可能な HTML コンポーネントを設計する場合、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)を使用することもできます。これにより、ビューポートやその他の端末の特性ではなく、コンテナー要素のサイズに基づいてスタイルを適用することができます。
+再利用可能な HTML コンポーネントを設計する場合、[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)を使用することもできます。これにより、ビューポートやその他の端末の特性ではなく、コンテナー要素のサイズに基づいてスタイルを適用することができます。
 
 ## リファレンス
 
@@ -78,19 +78,19 @@ l10n:
 
 ## ガイド
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
   - : メディアクエリーと、その構文や演算子、メディアクエリー式を構築するために使用するメディア機能を紹介します。
 
 - [学習: メディアクエリーの基本](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)
   - : メディアクエリーと、それを使用してレスポンシブデザインを作成するための手法の概要です。
 
-- [プログラムからのメディアクエリーのテスト](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [プログラムからのメディアクエリーのテスト](/ja/docs/Web/CSS/Guides/Media_queries/Testing)
   - : JavaScript の中でメディアクエリーを使用して端末の状態を特定する方法、メディアクエリーの結果が変化したとき（ユーザーが画面を回転させたり、ブラウザーの大きさを変更したりしたとき）にコードに通知されるよう、リスナーを設定する方法を説明します。
 
-- [アクセシビリティのためのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
+- [アクセシビリティのためのメディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using_for_accessibility)
   - : ユーザーがウェブサイトをより理解できるように、メディアクエリーが支援できることを学びます。
 
-- [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)
+- [印刷](/ja/docs/Web/CSS/Guides/Media_queries/Printing)
   - : ウェブコンテンツの印刷出力を改善するためのヒントとテクニック。
 
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
@@ -98,14 +98,14 @@ l10n:
 
 ## 関連概念
 
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュール
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)モジュール
   - {{cssxref("@container")}} アットルール
-  - [コンテナークエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-  - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
+  - [コンテナークエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+  - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール
   - {{cssxref("@supports")}} アットルール
-  - [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール
+  - [機能クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
+- [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)モジュール
   - {{cssxref("@page")}} アットルール
 - [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)モジュール
   - {{DOMxRef("MediaQueryList")}} インターフェイス
@@ -129,7 +129,7 @@ l10n:
 
 ## 関連情報
 
-- [コンテナークエリ－](/ja/docs/Web/CSS/CSS_containment/Container_queries)
+- [コンテナークエリ－](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
 - [`srcset` および `sizes` 属性の使用](/ja/docs/Web/HTML/Reference/Elements/img#srcset_および_sizes_属性の使用)
-- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)
 - {{cssxref("@supports")}} を使用すると、ブラウザーのさまざまな CSS の技術への対応状況に応じてスタイルを適用することができます。

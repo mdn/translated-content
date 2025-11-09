@@ -34,29 +34,29 @@ l10n:
 
 **マージン領域**は、マージン境界に囲まれた領域で、境界領域に、隣の要素と分離するために使用する空の領域を含めて拡張したものです。この領域の寸法は、*マージンボックスの幅*と*マージンボックスの高さ*になります。
 
-マージン領域の寸法は、 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}} の各プロパティおよび一括指定プロパティである {{cssxref("margin")}} で決定されます。[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)が発生したときは、マージンがボックス間で共有されるため、マージン領域が明確に定義されません。
+マージン領域の寸法は、 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}} の各プロパティおよび一括指定プロパティである {{cssxref("margin")}} で決定されます。[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)が発生したときは、マージンがボックス間で共有されるため、マージン領域が明確に定義されません。
 
 置換要素ではないインライン要素については、空間の大きさは {{cssxref('line-height')}} プロパティによって決定され、行の高さに寄与します。この場合も境界とパディングは、コンテンツの周囲に視覚的に現れます。
 
 ## 関連情報
 
-- [レイアウトと包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
-- [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [レイアウトと包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)
+- [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+  - [値の定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)

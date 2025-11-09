@@ -8,7 +8,7 @@ l10n:
 
 **`revert-layer`** は [CSS 全体のキーワード](/ja/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords)で、[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)内のプロパティの値を、前回カスケードレイヤー内の要素に一致した CSS ルール内のプロパティの値にロールバックします。このキーワードが指定されたプロパティの値は、現在のカスケードレイヤーで対象とする要素にルールを指定していないものとして再計算されます。
 
-一致する CSS ルールに対して他に戻すカスケードレイヤーがない場合、プロパティ値は現在のレイヤーから派生した[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)にロールバックします。さらに、現在のレイヤーに一致する CSS ルールがない場合、要素のプロパティ値は、前回の[スタイルオリジン](/ja/docs/Glossary/Style_origin)で定義したスタイルにロールバックされます。
+一致する CSS ルールに対して他に戻すカスケードレイヤーがない場合、プロパティ値は現在のレイヤーから派生した[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)にロールバックします。さらに、現在のレイヤーに一致する CSS ルールがない場合、要素のプロパティ値は、前回の[スタイルオリジン](/ja/docs/Glossary/Style_origin)で定義したスタイルにロールバックされます。
 
 このキーワードは、 CSS の一括指定プロパティ {{cssxref("all")}} を含めるために、あらゆる CSS プロパティに適用することができます。
 
@@ -156,4 +156,4 @@ l10n:
 - {{cssxref("revert")}}
 - {{cssxref("unset")}}
 - {{cssxref("all")}}
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール

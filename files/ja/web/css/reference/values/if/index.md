@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`if()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、条件付き検査の結果に応じて、プロパティに異なる値を設定することができます。この検査は、[スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)に基づいて行うことができます。
+**`if()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、条件付き検査の結果に応じて、プロパティに異なる値を設定することができます。この検査は、[スタイルクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー)、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)、[機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)に基づいて行うことができます。
 
 ## 構文
 
@@ -58,7 +58,7 @@ if(
 - `<if-condition>`
   - : `<if-test>` または `else` キーワード。
     - `<if-test>`
-      - : [スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)のいずれか。
+      - : [スタイルクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー)、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)、[機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)のいずれか。
 
     - `else`
       - : 常に true と評価される `<if-condition>` を表すキーワード。
@@ -148,7 +148,7 @@ background-image: if();
 
 #### スタイルクエリー
 
-[スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー) の `<if-test>` を使用すると、要素に特定のプロパティ値が設定されているかどうかを検査し、その結果に応じて別のプロパティに値を適用することができます。先ほど、いくつかのスタイルクエリーの例を追ってみましたが、もう 1 つ例を見てみましょう。
+[スタイルクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー) の `<if-test>` を使用すると、要素に特定のプロパティ値が設定されているかどうかを検査し、その結果に応じて別のプロパティに値を適用することができます。先ほど、いくつかのスタイルクエリーの例を追ってみましたが、もう 1 つ例を見てみましょう。
 
 ```css-nolint
 background-image: if(
@@ -189,7 +189,7 @@ if(
 
 #### メディアクエリー
 
-[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries) の `<if-test>` を使用すると、メディアクエリー検査の返値が true であるかどうかに応じて、プロパティの値を設定することができます。
+[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using) の `<if-test>` を使用すると、メディアクエリー検査の返値が true であるかどうかに応じて、プロパティの値を設定することができます。
 
 メディア種別を使用することができます。例えば、次の `<if-test> : <value>` ペアは、印刷メディアでは `white` の値を返しますが、`else` 節は、印刷以外のメディアでは `#eeeeee` を返します。
 
@@ -232,7 +232,7 @@ background-color: if(
 
 #### 機能クエリー
 
-[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) の `<if-test>` を使用すると、ブラウザーが特定のプロパティ値に対応しているかどうかによって、プロパティの値を設定することができます。
+[機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) の `<if-test>` を使用すると、ブラウザーが特定のプロパティ値に対応しているかどうかによって、プロパティの値を設定することができます。
 
 例えば、`lch()` 色に対応している場合は {{cssxref("color_value/lch()")}} 色を、対応していない場合は {{cssxref("color_value/rgb()")}} 色を返します。
 
@@ -360,7 +360,7 @@ width: calc(if(
 
 #### CSS
 
-CSS では、最初に `<section>` 要素を対象とし、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) でレイアウトし、2 つの子要素 `<article>` 要素の間に {{cssxref("gap")}} を設定します。次に、 [`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation) メディアクエリー `<if-test>` を含む `if()` 関数を使用して、文書が横向きの場合に {{cssxref("flex-direction")}} プロパティの値を `row` に、縦向きの場合に `column` に設定します。これにより、広い画面では `article` 要素が横に並んだレイアウトになり、狭い画面では上下に並んだレイアウトになります。
+CSS では、最初に `<section>` 要素を対象とし、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) でレイアウトし、2 つの子要素 `<article>` 要素の間に {{cssxref("gap")}} を設定します。次に、 [`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation) メディアクエリー `<if-test>` を含む `if()` 関数を使用して、文書が横向きの場合に {{cssxref("flex-direction")}} プロパティの値を `row` に、縦向きの場合に `column` に設定します。これにより、広い画面では `article` 要素が横に並んだレイアウトになり、狭い画面では上下に並んだレイアウトになります。
 
 ```css hidden live-sample___basic
 html {
@@ -395,7 +395,7 @@ section {
 }
 ```
 
-次に、`<h2>` 要素の {{cssxref("::before")}} 擬似要素をターゲットとし、その {{cssxref("content")}} プロパティをリンゴの絵文字に設定します。ただし、`--show-apple: true` が設定されている場合のみです（これは、HTML でインライン {{htmlelement("style")}} を使用して、先ほど設定しました）。これは、[スタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー) の `<if-test>` に対応する `if()` 関数を使用して実現しています。
+次に、`<h2>` 要素の {{cssxref("::before")}} 擬似要素をターゲットとし、その {{cssxref("content")}} プロパティをリンゴの絵文字に設定します。ただし、`--show-apple: true` が設定されている場合のみです（これは、HTML でインライン {{htmlelement("style")}} を使用して、先ほど設定しました）。これは、[スタイルクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー) の `<if-test>` に対応する `if()` 関数を使用して実現しています。
 
 ```css-nolint live-sample___basic
 h2::before {
@@ -603,7 +603,7 @@ h1::before {
 
 ## 関連情報
 
-- [コンテナースタイルクエリー](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS 値と単位モジュール](/ja/docs/Web/CSS/CSS_values_and_units)
+- [コンテナースタイルクエリー](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー)
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
+- [CSS 値と単位モジュール](/ja/docs/Web/CSS/Guides/Values_and_units)

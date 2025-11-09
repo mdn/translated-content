@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Element/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
+**`animationcancel`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が予期せず中断されたときに発生します。言い換えれば、 {{domxref("Element/animationend_event", "animationend")}} イベントを送出せずに実行が停止するときはいつでもです。これは {{cssxref("animation-name")}} が変更されてアニメーションが削除されたり、動いているノードが CSS を使用して非表示にされた場合などに起こることがあります。したがって、直接または原因として、その包含ノードのいずれかが隠されています。
 
 このイベントのイベントハンドラーは `onanimationcancel` プロパティを設定するか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用することにより追加することができます。
 
@@ -165,7 +165,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}

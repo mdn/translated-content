@@ -45,4 +45,4 @@ console.log(inputElement.width);
 - CSS の {{CSSXRef("inline-size")}} プロパティ
 - CSS の {{CSSXRef("width")}} プロパティ
 - CSS の {{CSSXRef("aspect-ratio")}} プロパティ
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール

@@ -34,7 +34,7 @@ l10n:
 
 ## ガイド
 
-- [インライン整形コンテキスト](/ja/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- [インライン整形コンテキスト](/ja/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
   - : インライン整形コンテキストを説明します。
 
 ## 関連概念
@@ -52,6 +52,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
-- [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール
+- [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュール
