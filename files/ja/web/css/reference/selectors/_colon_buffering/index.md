@@ -53,4 +53,4 @@ video:buffering {
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)

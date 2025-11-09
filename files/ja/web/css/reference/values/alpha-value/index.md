@@ -54,5 +54,5 @@ shape-image-threshold: 0.7;
 
 - [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)
+- [CSS 色](/ja/docs/Web/CSS/Guides/Colors)
 - [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value)

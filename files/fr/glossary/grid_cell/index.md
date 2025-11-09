@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-Dans une [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout), une **cellule de grille** est la plus petite unité de la grille. C'est l'espace créé entre 4 intersections de {{Glossary("grid lines", "lignes de grille")}}. D'une certaine façon, une cellule de grille est assimilable à une cellule de tableau.
+Dans une [grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout), une **cellule de grille** est la plus petite unité de la grille. C'est l'espace créé entre 4 intersections de {{Glossary("grid lines", "lignes de grille")}}. D'une certaine façon, une cellule de grille est assimilable à une cellule de tableau.
 
 ![Un diagramme mettant en avant une cellule de grille en bleu turquoise en haut à gauche d'une grille de 3 colonnes par 2 lignes.](1_grid_cell.png)
 
@@ -62,5 +62,5 @@ Dans l'exemple, nous avons créé une grille de trois colonnes. Les cinq éléme
   - {{CSSxRef("grid-template-rows")}}
   - {{CSSxRef("grid-auto-rows")}}
   - {{CSSxRef("grid-auto-columns")}}
-- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [Définition des cellules de grille dans la spécification CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-grid/#grid-track-concept)

@@ -54,4 +54,4 @@ Les valeurs de type `<number>` peuvent être interpolées afin d'être utilisée
 
 - Le type de donnée {{CSSxRef("&lt;integer&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;ratio&gt;")}}
-- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)

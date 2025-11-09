@@ -173,6 +173,6 @@ html {
 
 ## 関連情報
 
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
-- [CSS スクロールアンカリング](/ja/docs/Web/CSS/CSS_scroll_anchoring)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール
+- [CSS スクロールアンカリング](/ja/docs/Web/CSS/Guides/Scroll_anchoring)モジュール
 - [スクロールを制御する: 引いて更新や末端の効果のカスタマイズ（英語）](https://developer.chrome.com/blog/overscroll-behavior/#demo)

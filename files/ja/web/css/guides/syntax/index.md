@@ -8,7 +8,7 @@ l10n:
 
 **CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
 
-このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
+このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)、[関数](/ja/docs/Web/CSS/Reference/Values/Functions)、[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。
 
 ### アットルール
 
@@ -23,11 +23,11 @@ l10n:
 
 - {{cssxref("at-rule", "アットルール")}}
 - [文字エスケープ](/ja/docs/Web/CSS/Reference/Values/custom-ident#エスケープ文字)
-- [CSS コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+- [CSS コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
 - [CSS 宣言](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS 宣言ブロック](/ja/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
 - [CSS 関数](/ja/docs/Web/CSS/Reference/Values/Functions)
-- [無効なもの](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
+- [無効なもの](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [スタイルルール](/ja/docs/Web/API/CSSStyleRule)
 
 ### 用語集の用語
@@ -39,13 +39,13 @@ l10n:
 
 ## ガイド
 
-- [CSS 構文の概要: 宣言、ルールセット、文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [CSS 構文の概要: 宣言、ルールセット、文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
   - : CSS の全体的な構文、および宣言、宣言ブロック、ルールセット、文がスタイルルールを形成する方法について説明します。
 
-- [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [値の定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - : CSS プロパティと関数の有効な値を定義するための正式な文法を、意味づけ制約とともに説明します。 CSS の成分値の型、結合子、乗算子を理解するためのガイドです。
 
-- [CSS のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
+- [CSS のエラー処理](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)
   - : ブラウザーが不正な CSS を処理する方法の概要。
 
 - [CSS 第一歩の学習: CSS の構文](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文)
@@ -53,27 +53,27 @@ l10n:
 
 ## 関連概念
 
-[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール:
+[CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール:
 
-- [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [CSS 詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
 
-[CSS カスケード](/ja/docs/Web/CSS/CSS_cascade)モジュール:
+[CSS カスケード](/ja/docs/Web/CSS/Guides/Cascade)モジュール:
 
 - {{cssxref("@import")}} アットルール
 - {{cssxref("important")}} フラグ
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-- [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-- [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [CSS 継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)
+- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)
+- [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)
+- [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [CSS 継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
 - {{Glossary("Property/CSS", "CSS プロパティ")}}
 
-[変数のカスケードのための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール:
+[変数のカスケードのための CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュール:
 
 - [カスタムプロパティ (`--*`)](/ja/docs/Web/CSS/Reference/Properties/--*)
 - {{cssxref("var")}} 関数
 
-[CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules) モジュール:
+[CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules) モジュール:
 
 - {{cssxref("@media")}} アットルール
 - {{cssxref("@supports")}} アットルール
@@ -98,5 +98,5 @@ l10n:
 ## 関連情報
 
 - [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

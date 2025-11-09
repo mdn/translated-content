@@ -41,4 +41,4 @@ L'événement `animationend est déclenché quand une animation CSS est terminé
 
 ## Voir aussi
 
-- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utilisation des animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)

@@ -19,7 +19,7 @@ l10n:
 > [!NOTE]
 > これは、シャドウ DOM の外で使用しても効果はありません。
 
-`:host-context()` の[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)は、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)の詳細度と、関数の引数として渡されたセレクターの詳細度の合計です。
+`:host-context()` の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)は、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)の詳細度と、関数の引数として渡されたセレクターの詳細度の合計です。
 
 {{InteractiveExample("CSS デモ: :host-context()", "tabbed-shorter")}}
 
@@ -144,4 +144,4 @@ style.textContent =
 - CSS {{cssxref(":state",":state()")}} 擬似クラス
 - CSS {{CSSXref("::slotted")}} 擬似要素
 - HTML {{HTMLElement("template")}} 要素
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール

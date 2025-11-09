@@ -151,5 +151,5 @@ overflow-anchor: unset;
 
 ## 関連情報
 
-- [スクロールアンカリングの紹介](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
-- [CSS スクロール固定](/ja/docs/Web/CSS/CSS_scroll_anchoring)モジュール
+- [スクロールアンカリングの紹介](/ja/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- [CSS スクロール固定](/ja/docs/Web/CSS/Guides/Scroll_anchoring)モジュール

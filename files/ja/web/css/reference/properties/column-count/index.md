@@ -111,4 +111,4 @@ column-count: unset;
 - {{CSSXref("column-width")}}, {{CSSXref("columns")}} 一括指定
 - {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} 一括指定
 - [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
-- [段組みの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [段組みの基本概念](/ja/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

@@ -41,7 +41,7 @@ CSS 宣言ブロックは以下の図のように表すことができます。
 
 もしスタイルシートが、1 つの宣言をウェブページのどの要素にも適用するとしたら、それはひどく使えないものになるでしょう。本当の目的は、それぞれの宣言を文書のそれぞれの部品に適用することです。
 
-CSS ではこれを、宣言ブロックと条件を関連付けることで実現します。それぞれの（妥当な）宣言ブロックの前に、ページの要素を選択する条件である[**セレクター**](/ja/docs/Web/CSS/CSS_selectors)を置きます。[セレクターのグループ](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)と宣言ブロックの組を**ルールセット**、またはしばしば単に**ルール**と呼びます。
+CSS ではこれを、宣言ブロックと条件を関連付けることで実現します。それぞれの（妥当な）宣言ブロックの前に、ページの要素を選択する条件である[**セレクター**](/ja/docs/Web/CSS/Guides/Selectors)を置きます。[セレクターのグループ](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)と宣言ブロックの組を**ルールセット**、またはしばしば単に**ルール**と呼びます。
 
 CSS のルールセット（またはルール）は下記の図のように表現することができます。
 
@@ -64,28 +64,28 @@ CSS のルールセット（またはルール）は下記の図のように表�
 
 文には 2 種類があります。
 
-- **ルールセット** （またはルール）。ここまで見てきたように、 CSS の宣言の集合を、[セレクター](/ja/docs/Web/CSS/CSS_selectors)によって記述された条件に関連付けています。
-- **アットルール**。アットマーク `@` (U+0040 COMMERCIAL AT) で始まり、識別子が後続し、ブロックの外のセミコロンまたは次のブロックの終わりに至るまで続きます。それぞれの種類の [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)は、識別子によって定義され、当然ながら独自の内部構文や意味を持つことがあります。アットルールはメタデータ情報（{{ cssxref("@layer") }} や {{ cssxref("@import") }} など）を伝えたり、条件情報（{{ cssxref("@media") }} や {{ cssxref("@document") }} など）を伝えたり、記述的情報（{{ cssxref("@font-face") }} など）を伝えたりするために使用します。
+- **ルールセット** （またはルール）。ここまで見てきたように、 CSS の宣言の集合を、[セレクター](/ja/docs/Web/CSS/Guides/Selectors)によって記述された条件に関連付けています。
+- **アットルール**。アットマーク `@` (U+0040 COMMERCIAL AT) で始まり、識別子が後続し、ブロックの外のセミコロンまたは次のブロックの終わりに至るまで続きます。それぞれの種類の [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)は、識別子によって定義され、当然ながら独自の内部構文や意味を持つことがあります。アットルールはメタデータ情報（{{ cssxref("@layer") }} や {{ cssxref("@import") }} など）を伝えたり、条件情報（{{ cssxref("@media") }} や {{ cssxref("@document") }} など）を伝えたり、記述的情報（{{ cssxref("@font-face") }} など）を伝えたりするために使用します。
 
 ルールまたはアットルールではない文は、すべて妥当ではなく、無視されます。
 
 ## 入れ子の文
 
-他にも文のグループとして、**入れ子の文**があります。これらはアットルール特有のサブセットである*条件付きグループルール*の中で使用することができます。これらの文は、特定の条件が一致した場合にのみ適用されます。例えば、 `@media` アットルールの内容は、示された条件に一致するブラウザーが実行されている端末でのみ適用されるなどです。 CSS1 と CSS2.1 では、条件付きグループルール内では*ルールセット*のみが利用できました。それではあまりに厳しかったので、 [_CSS Conditionals Level 3_](/ja/docs/Web/CSS/CSS_conditional_rules) では、この制約は撤廃されました。現在、それは今でも試験的でどのブラウザーでも対応しているわけではないものの、条件付きグループルールはより広い範囲の内容を持つことができ、ルールセットだけではなく、すべてではないものの、一部のアットルールを含むこともできます。
+他にも文のグループとして、**入れ子の文**があります。これらはアットルール特有のサブセットである*条件付きグループルール*の中で使用することができます。これらの文は、特定の条件が一致した場合にのみ適用されます。例えば、 `@media` アットルールの内容は、示された条件に一致するブラウザーが実行されている端末でのみ適用されるなどです。 CSS1 と CSS2.1 では、条件付きグループルール内では*ルールセット*のみが利用できました。それではあまりに厳しかったので、 [_CSS Conditionals Level 3_](/ja/docs/Web/CSS/Guides/Conditional_rules) では、この制約は撤廃されました。現在、それは今でも試験的でどのブラウザーでも対応しているわけではないものの、条件付きグループルールはより広い範囲の内容を持つことができ、ルールセットだけではなく、すべてではないものの、一部のアットルールを含むこともできます。
 
 ## 関連情報
 
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
-- [セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [セレクター構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [エラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-- [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール
+- [セレクターと結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+- [セレクター構造](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure)
+- [エラー処理](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
+- [値の定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 - 値
-  - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-  - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-  - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-  - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)
+  - [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)
+  - [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)
+  - [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

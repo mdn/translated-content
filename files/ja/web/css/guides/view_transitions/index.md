@@ -54,14 +54,14 @@ l10n:
 - {{domxref("PageSwapEvent", "pageswap")}} イベント
 - {{domxref("Document.visibilityState")}}
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
   - {{domxref("CSSStyleRule")}}
   - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
 
-- [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)モジュール
+- [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms)モジュール
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

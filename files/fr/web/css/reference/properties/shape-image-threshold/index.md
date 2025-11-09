@@ -154,8 +154,8 @@ Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une 
 
 ## Voir aussi
 
-- [Les formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Les formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

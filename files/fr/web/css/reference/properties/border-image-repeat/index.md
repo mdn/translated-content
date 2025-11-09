@@ -148,5 +148,5 @@ repetition.addEventListener("change", function (evt) {
 
 ## Voir aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

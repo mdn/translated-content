@@ -50,4 +50,4 @@ Pour SVG et MathML, les éléments qui ne peuvent pas avoir de nœud enfant peuv
 
 ## Voir aussi
 
-- [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- [Les éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)

@@ -99,7 +99,7 @@ Chaque objet peut contenir les propriétés suivantes&nbsp;:
     - `"relative_to"`
       - : Dans le cas d'une condition `"href_matches"`, ça permet de définir où cette condition doit être évaluée relativement. Fonctionne exactement comme la clé `"relative_to"` au niveau de la règle (voir plus bas), sauf qu'elle ne concerne qu'une seule condition `"href_matches"` à l'intérieur d'une clé `"where"`.
     - `"selector_matches"`
-      - : Une chaîne de caractères contenant un [sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors), ou un tableau contenant plusieurs sélecteurs CSS. Les liens du document correspondant à ces sélecteurs auront la règle appliquée.
+      - : Une chaîne de caractères contenant un [sélecteur CSS](/fr/docs/Web/CSS/Guides/Selectors), ou un tableau contenant plusieurs sélecteurs CSS. Les liens du document correspondant à ces sélecteurs auront la règle appliquée.
     - `"and"`
       - : Un tableau contenant un ou plusieurs objets de conditions (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"` ou `"or"`), qui doivent tous être vérifiées pour que la règle s'applique.
     - `"not"`

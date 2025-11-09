@@ -6,8 +6,8 @@ l10n:
   sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
-**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/Reference/At-rules/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
-コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先の[サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries)または[スクロール状態](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)に基づいて、要素にスタイルを適用します。
+**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/Reference/At-rules/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
+コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先の[サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries)または[スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)に基づいて、要素にスタイルを適用します。
 コンテナーコンテキストの名前が指定されたとき、コンテナーコンテキストのある最も近い祖先の代わりに、 {{Cssxref("@container")}} アットルールを用いて固有のターゲットを指定することができます。
 
 > [!NOTE]
@@ -107,7 +107,7 @@ container-name: unset;
 }
 ```
 
-コンテナークエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のページを参照してください。
+コンテナークエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)のページを参照してください。
 
 ### 複数のコンテナー名の使用
 
@@ -147,9 +147,9 @@ container-name: unset;
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [コンテナーのスクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [コンテナーのスクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-type")}} プロパティ

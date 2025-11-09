@@ -378,7 +378,7 @@ Le résultat est le suivant&nbsp;:
 - La propriété {{CSSXref("color")}}
 - [Le type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour la liste de toutes les notations de couleur
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [Module des couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [Module des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Fonctionnalité média [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut)
 - [Large gamme de couleurs en CSS avec Display-p3 <sup>(angl.)</sup>](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

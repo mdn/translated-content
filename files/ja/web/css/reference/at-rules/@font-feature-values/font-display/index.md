@@ -70,4 +70,4 @@ font-display: optional;
 ## 関連情報
 
 - {{cssxref("@font-face/font-display", "font-display")}} 記述子（{{cssxref("@font-face")}} アットルール）
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

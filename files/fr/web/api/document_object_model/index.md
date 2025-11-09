@@ -52,7 +52,7 @@ Il possède un arbre DOM qui ressemble à ceci&nbsp;:
 
 ![Le DOM comme représentation arborescente d'un document ayant une racine et des nœuds contenant du contenu](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-Bien que l'arbre ci-dessus soit similaire à l'arbre DOM du document, ils ne sont pas identiques, car l'arbre DOM réel préserve les [espaces blancs](/fr/docs/Web/CSS/CSS_text/Whitespace).
+Bien que l'arbre ci-dessus soit similaire à l'arbre DOM du document, ils ne sont pas identiques, car l'arbre DOM réel préserve les [espaces blancs](/fr/docs/Web/CSS/Guides/Text/Whitespace).
 
 Lorsqu'un navigateur web analyse un document HTML, il construit un arbre DOM puis l'utilise pour afficher le document.
 

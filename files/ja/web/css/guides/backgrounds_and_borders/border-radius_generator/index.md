@@ -12,7 +12,7 @@ l10n:
 
 ## 関連情報
 
-- [境界画像作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
+- [境界画像作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
   - : この対話ツールは、視覚的に境界画像（{{cssxref("border-image")}} プロパティ）を作成することができます。
-- [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
+- [ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
   - : この対話ツールを使うと、要素の後ろに影を視覚的に作成することができます（{{cssxref("box-shadow")}} プロパティ）。

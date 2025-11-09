@@ -45,13 +45,13 @@ Le support de la version préfixée est généralement abandonné par la suite, 
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{deprecated_inline}}&nbsp;: Version préfixée toujours prise en charge.
 - `-moz-background-clip` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("background-clip")}}.
 - `-moz-background-origin` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("background-origin")}}.
-- `-moz-box-align` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("align-items")}}.
+- `-moz-box-align` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("align-items")}}.
 - `-moz-background-inline-policy` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("box-decoration-break")}}.
-- `-moz-box-direction` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- `-moz-box-flex` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
-- `-moz-box-ordinal-group` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("order")}}.
-- `-moz-box-orient` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
-- `-moz-box-pack` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec {{CSSxRef("justify-content")}}.
+- `-moz-box-direction` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- `-moz-box-flex` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-grow")}}.
+- `-moz-box-ordinal-group` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("order")}}.
+- `-moz-box-orient` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("flex-direction")}}.
+- `-moz-box-pack` {{deprecated_inline}}&nbsp;: Utilisez [CSS flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) avec {{CSSxRef("justify-content")}}.
 - `-moz-background-size` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("background-size")}}.
 - `-moz-border-end` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("border-inline-end")}}.
 - `-moz-border-end-color` {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("border-inline-end-color")}}.

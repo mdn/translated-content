@@ -21,5 +21,5 @@ l10n:
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)モジュール
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)モジュール

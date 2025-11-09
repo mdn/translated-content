@@ -57,7 +57,7 @@ width: calc(100px * sqrt(100)); /* 1000px */
 
 #### CSS
 
-ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
+ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
 
 - `--size-1` は、`--size-0` の値 (50px) に 4 の平方根 (2) を掛けて、100px になります。
 - `--size-2` は、`--size-0` の値 (50px) に 9 の平方根 (3) を掛けて、150px になります。

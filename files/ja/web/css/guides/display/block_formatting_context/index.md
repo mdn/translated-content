@@ -21,8 +21,8 @@ l10n:
 - {{cssxref("display", "display: flow-root")}} である要素。
 - {{htmlelement("button")}} 要素およびボタン型の {{htmlelement("input")}} 要素で既定値の `display: flow-root` であるもの。
 - {{cssxref("contain", "contain: layout")}}, `content`, `paint` の付いた要素
-- フレックスアイテム ({{cssxref("display", "display: flex")}} または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
-- グリッドアイテム ({{cssxref("display", "display: grid")}} または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
+- フレックスアイテム ({{cssxref("display", "display: flex")}} または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/Guides/Table)でもない場合
+- グリッドアイテム ({{cssxref("display", "display: grid")}} または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/Guides/Table)でもない場合
 - 段組みコンテナー ({{ cssxref("column-count") }} または {{ cssxref("column-width") }} が `auto` ではない要素、 `column-count: 1` の要素も含む)
 - {{cssxref("column-span", "column-span: all")}} は、 `column-span: all` の要素が段組みコンテナーに含まれていなくても、常に新たな整形コンテキストを生成します。
 
@@ -30,7 +30,7 @@ l10n:
 
 - 内部の浮動ボックスを収めます。
 - 外部の浮動ボックスを追いやります。
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を抑止します。
+- [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)を抑止します。
 
 要素の {{ cssxref("display") }} を `flex`、`grid`、`inline-flex`、`inline-grid` のいずれかに設定すると、フレックス／グリッドコンテナーとなり、新しいフレックス／グリッド整形コンテキストを確立します。これらはブロック整形コンテキストに似ていますが、フレックスコンテナーやグリッドコンテナー内では浮動ボックスを利用できないという点が異なります。ただし、これらのコンテキストでは外部浮動ボックスは除外され、マージンの相殺は抑制されます。
 
@@ -40,7 +40,7 @@ l10n:
 
 ### 内部の浮動ブロックを収める
 
-以下の例では、`border`が適用された `<div>` の中に浮動ボックスがあります。その `<div>` のコンテンツは浮動ボックスの横に並んだ状態になっています。浮動ボックスのコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動ボックスを貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)で説明しているように、浮動ボックスがフローから外れたので、 `<div>` の `background` と `border` には浮動ボックスはなく、コンテンツだけが保持されています。
+以下の例では、`border`が適用された `<div>` の中に浮動ボックスがあります。その `<div>` のコンテンツは浮動ボックスの横に並んだ状態になっています。浮動ボックスのコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動ボックスを貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)で説明しているように、浮動ボックスがフローから外れたので、 `<div>` の `background` と `border` には浮動ボックスはなく、コンテンツだけが保持されています。
 
 **`overflow: auto` の使用**
 
@@ -157,7 +157,7 @@ section {
 
 ### マージンの相殺を抑止する
 
-新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を避けることができます。
+新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)を避けることができます。
 
 #### マージンの相殺の例
 
@@ -226,13 +226,13 @@ section {
 
 ## 関連情報
 
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)

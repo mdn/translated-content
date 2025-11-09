@@ -282,6 +282,6 @@ li {
 
 ## 関連情報
 
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
 - {{ Cssxref("contain") }}
 - {{ Cssxref("content") }}

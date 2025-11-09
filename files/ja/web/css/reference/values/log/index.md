@@ -45,7 +45,7 @@ width: calc(100px * log(625, 5)); /* 400px */
 
 ### 対数スケールでの `log()` 関数の使用
 
-この例では、[対数スケール](https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB) を用いてデータ値を視覚化するために、`log()` 関数をどのように使用できるかを示しています。この例では、それぞれの横棒の幅は、底 10 の対数スケール上のデータ値に対応しています。各要素において、それぞれの値は `--value` という名前の [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) に割り当てられ、`.bar` クラスによってその幅が計算されています。
+この例では、[対数スケール](https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB) を用いてデータ値を視覚化するために、`log()` 関数をどのように使用できるかを示しています。この例では、それぞれの横棒の幅は、底 10 の対数スケール上のデータ値に対応しています。各要素において、それぞれの値は `--value` という名前の [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) に割り当てられ、`.bar` クラスによってその幅が計算されています。
 
 #### HTML
 

@@ -58,7 +58,7 @@ p ~ span {
 
 ### 複合セレクターによる結合子の使用
 
-この例には2つの[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)があり、どちらも後続兄弟結合子 `.foo p ~ span` と `.foo p ~ .foo span` を使用しています。
+この例には2つの[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector)があり、どちらも後続兄弟結合子 `.foo p ~ span` と `.foo p ~ .foo span` を使用しています。
 
 - 最初の複合セレクターである `.foo p ~ span` は、もし span と段落の親が同じで、**かつ**その親またはその親の祖先がクラス `.foo` を持っている場合、段落の後に来るすべての span に一致します。
 - 2 つ目の複合セレクター `.foo p ~ .foo span` は、クラス `.foo` を持っている要素の子孫であるすべての span に一致します。

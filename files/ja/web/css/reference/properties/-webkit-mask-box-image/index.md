@@ -8,11 +8,11 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 `-webkit-mask-box-image` はマスク画像を要素の境界ボックスに設定します。
 
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値): なし
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値): なし
 - 適用先: すべての要素
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance): なし
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance): なし
 - メディア: {{cssxref("Media/Visual", "visual")}}
-- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値): 指定通り
+- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値): 指定通り
 
 ## 構文
 

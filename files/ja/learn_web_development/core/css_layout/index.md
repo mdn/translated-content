@@ -27,7 +27,7 @@ l10n:
 - [位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
   - : 位置指定を使用すると、文書の通常のレイアウトフローから要素を取り出して異なるふるまいをさせることができます。 例えば、互いの上に重なったり、常にブラウザーのビューポート内の同じ場所に留まったりします。 この記事では、さまざまな {{cssxref("position")}} の値とその使い方について説明します。
 - [フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)は、アイテムを行または列にレイアウトするための 1 次元のレイアウト方式です。アイテムは余った空間を埋めるために伸ばされたり、小さな空間に収まるために縮んだりします。この記事では、基本的なことをすべて説明しています。
+  - : [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)は、アイテムを行または列にレイアウトするための 1 次元のレイアウト方式です。アイテムは余った空間を埋めるために伸ばされたり、小さな空間に収まるために縮んだりします。この記事では、基本的なことをすべて説明しています。
 - [CSS グリッドレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)
   - : CSS グリッドレイアウトは、ウェブ用の 2 次元レイアウトシステムです。 これにより、コンテンツを行と列にレイアウトすることができ、複雑なレイアウトを簡単に構築できる多くの機能を備えています。この記事では、グリッドレイアウトを始めるために必要なすべてを説明します。
 - [レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

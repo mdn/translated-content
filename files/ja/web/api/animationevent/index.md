@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Animations")}}
 
-**`AnimationEvent`** インターフェイスは、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)に関する情報を提供するイベントを表します。
+**`AnimationEvent`** インターフェイスは、[アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)に関する情報を提供するイベントを表します。
 
 {{InheritanceDiagram}}
 
@@ -41,5 +41,5 @@ _親である {{domxref("Event")}} からメソッドを継承しています_�
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - アニメーションに関する CSS プロパティとアットルール: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

@@ -9,7 +9,7 @@ l10n:
 
 ## 説明
 
-`scrollbar` は、ビューポートのコンテンツのどの部分が現在ビューポートのフレーム内で見えるかを制御する領域です。ビューポートがブラウザーの完全なサイズ、iframe、または任意の要素の [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) であるかに関係ありません。
+`scrollbar` は、ビューポートのコンテンツのどの部分が現在ビューポートのフレーム内で見えるかを制御する領域です。ビューポートがブラウザーの完全なサイズ、iframe、または任意の要素の [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) であるかに関係ありません。
 
 ### スクロールバーとは
 

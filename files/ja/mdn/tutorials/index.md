@@ -47,7 +47,7 @@ l10n:
   - : CSS (Cascading Style Sheets) は、ウェブページのスタイルづけやレイアウトに使用されます。例えば、コンテンツのフォント、色、サイズ、間隔を変更したり、複数の段に分割したり、アニメーションやその他の装飾機能を追加したりすることができます。このモジュールでは、 CSS がどのように機能するか、どのような構文になっているか、そして HTML にスタイルを追加するためにどのように使い始めるか、といった基本的な内容で、 CSS マスターへの道を順番に始めます。
 - [セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
   - : HTML 要素を、要素の状態に基づくなどして、CSS で対象とします。
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
   - : ある要素に競合する宣言がある場合、どの CSS 宣言が適用されるかを決定するためのブラウザーアルゴリズムを、[詳細度クイズ](https://estelle.github.io/CSS/selectors/exercises/specificity.html)（英語）を使って理解します。
 - [競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : カスケード、詳細度、継承は、 CSS が HTML にどのように適用されるか、およびスタイル宣言間の競合がどのように解決されるかを制御します。
@@ -69,9 +69,9 @@ l10n:
 
 ### 高度な CSS のトピック
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
   - : CSS を使って、回転、傾き、拡大、縮小、移動を行います。
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS トランジションでは、CSS プロパティの変化を即時に行うのではなく、アニメーションで行う方法を提供します。
 - [キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)
   - : canvas 要素を使用するスクリプトを書いてグラフィックを描く方法を学ぶことができます。

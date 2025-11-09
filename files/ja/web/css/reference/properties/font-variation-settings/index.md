@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-**`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)に対する低水準の制御できるようにします。
+**`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)に対する低水準の制御できるようにします。
 
 {{InteractiveExample("CSS デモ: font-variation-settings")}}
 
@@ -136,7 +136,7 @@ font-variation-settings: unset;
 
 ## 例
 
-他にも多数の可変フォントの例が、[可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)にあります。
+他にも多数の可変フォントの例が、[可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)にあります。
 
 ### フォントの太さの変数の制御 (wght)
 
@@ -318,7 +318,7 @@ angle.addEventListener("input", (e) => {
 
 ## 関連情報
 
-- [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [OpenType font variations overview](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview) (microsoft.com)
 - [OpenType design-variation axis tag registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) (microsoft.com)
 - [OpenType variable fonts](https://www.axis-praxis.org/) (axis-praxis.org)

@@ -63,9 +63,9 @@ CSS を使用すると、 HTML 要素がブラウザー上でどのように見�
 > [!NOTE]
 > ブラウザーは{{Glossary("User agent","ユーザーエージェント")}}と呼ばれることがあり、基本的にはコンピューターシステム内でユーザーを代理するコンピュータープログラムという意味です。
 
-CSS はテキストの装飾に使用することができます。例えば、見出しやリンクの[色](/ja/docs/Web/CSS/Reference/Values/color_value)や[サイズ](/ja/docs/Web/CSS/Reference/Properties/font-size)を変更することができます。また、 CSS はレイアウトの作成にも使用することができます。例えば、段組みのないテキストを、[メインコンテンツ領域と関連情報のサイドバーを持つレイアウトに変える](/ja/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)ことができます。さらに、 CSS は[アニメーション](/ja/docs/Web/CSS/CSS_animations)などの効果にも使用することができます。具体的な例については、この段落内のリンクを参照してください。
+CSS はテキストの装飾に使用することができます。例えば、見出しやリンクの[色](/ja/docs/Web/CSS/Reference/Values/color_value)や[サイズ](/ja/docs/Web/CSS/Reference/Properties/font-size)を変更することができます。また、 CSS はレイアウトの作成にも使用することができます。例えば、段組みのないテキストを、[メインコンテンツ領域と関連情報のサイドバーを持つレイアウトに変える](/ja/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts)ことができます。さらに、 CSS は[アニメーション](/ja/docs/Web/CSS/Guides/Animations)などの効果にも使用することができます。具体的な例については、この段落内のリンクを参照してください。
 
-CSS 言語は、関連する機能を含むモジュールに分類されています。例えば、 MDN のリファレンスページで「[背景と境界線](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)」モジュールを参照すると、その目的や含まれるプロパティや機能について知ることができます。また、そのモジュールには、技術を定義する仕様書へのリンクも含まれています。
+CSS 言語は、関連する機能を含むモジュールに分類されています。例えば、 MDN のリファレンスページで「[背景と境界線](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)」モジュールを参照すると、その目的や含まれるプロパティや機能について知ることができます。また、そのモジュールには、技術を定義する仕様書へのリンクも含まれています。
 
 ## CSS の構文の基本
 

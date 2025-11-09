@@ -106,7 +106,7 @@ select {
 
 ### 従来の select のスタイル設定
 
-最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_fonts)の操作に限定されています。 {{cssxref("appearance")}} プロパティを使用して、システムの既定の `appearance` を削除することもできます。
+最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/Guides/Fonts)の操作に限定されています。 {{cssxref("appearance")}} プロパティを使用して、システムの既定の `appearance` を削除することもできます。
 
 しかし、従来の `<select>` 要素では、ブラウザー間で一貫した結果を得ることは困難です。完全に制御したいのであれば、スタイル設定をするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) を使用して独自のドロップダウンメニューを実装することを検討してください。
 

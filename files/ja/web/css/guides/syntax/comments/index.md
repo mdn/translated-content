@@ -47,6 +47,6 @@ span {
 
 ## 関連情報
 
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
-- [CSS のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール
+- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)ガイド
+- [CSS のエラー処理](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)

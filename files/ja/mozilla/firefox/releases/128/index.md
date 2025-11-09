@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- [相対的な色の構文](/ja/docs/Web/CSS/CSS_colors/Relative_colors) をデフォルトで有効にしました。相対的な色の構文により、元の色に対して相対的な色の値を作成できます。また、[色関数](/ja/docs/Web/CSS/CSS_colors#functions) を使用して異なる [色空間](/ja/docs/Glossary/Color_space) の色の値に変換できます ([Firefox bug 1900251](https://bugzil.la/1900251))。
+- [相対的な色の構文](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors) をデフォルトで有効にしました。相対的な色の構文により、元の色に対して相対的な色の値を作成できます。また、[色関数](/ja/docs/Web/CSS/Guides/Colors#functions) を使用して異なる [色空間](/ja/docs/Glossary/Color_space) の色の値に変換できます ([Firefox bug 1900251](https://bugzil.la/1900251))。
 - [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティで、画像を含むコンテンツのための [代替テキスト](/ja/docs/Web/CSS/Reference/Properties/content#alternative_text) をサポートしました。代替テキストは、ブラウザーのアクセシビリティツリーに現れます ([Firefox bug 1281158](https://bugzil.la/1281158)、[Firefox bug 1896047](https://bugzil.la/1896047))。
 
 #### 廃止

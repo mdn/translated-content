@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
 ---
 
-**CSS セレクター**モジュールは、要素を選択するパターンを定義し、一連の CSS ルールをその[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)とともに適用します。 CSS セレクターモジュールには、 60 以上のセレクターと 5 つの結合子が用意されています。[他のモジュール](#関連概念)は、さらに擬似クラスセレクターと擬似要素が提供されています。
+**CSS セレクター**モジュールは、要素を選択するパターンを定義し、一連の CSS ルールをその[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)とともに適用します。 CSS セレクターモジュールには、 60 以上のセレクターと 5 つの結合子が用意されています。[他のモジュール](#関連概念)は、さらに擬似クラスセレクターと擬似要素が提供されています。
 
 CSS では、セレクターはスタイルを設定したい要素と照合、または選択するために使用されるパターンです。セレクターは JavaScript でも使用され、 [`NodeList`](/ja/docs/Web/API/NodeList) として返すDOMノードを選択することができます。
 
@@ -101,28 +101,28 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 
 - {{glossary("Pseudo-class", "擬似クラス")}}（用語集の用語）
 - [関数記法の擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes#functional_pseudo-classes)
-- [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
-- [単純セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#単純セレクター)
-- [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)
-- [複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)
-- [関連セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#関連セレクター)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#結合子)
+- [単純セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#単純セレクター)
+- [複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複合セレクター)
+- [複雑セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)
+- [関連セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#関連セレクター)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
 
 ## ガイド
 
-- [CSS セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [CSS セレクターと結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
   - : CSS セレクターと CSS 擬似モジュールで定義されている、さまざまな種類の単純なセレクターとさまざまな結合子の概要です。
 
-- [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [CSS セレクターの構造](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure)
   - : CSS セレクターの構造と、CSS セレクターモジュールで紹介されている用語について、「単純なセレクター」から「寛容な相対セレクターリスト」まで解説しています。
 
 - [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
   - : 擬似クラスは、文書ツリーには含まれない状態情報に基づいて要素を選択できるようにするセレクターの一覧で、さまざまな CSS モジュールや HTML で定義されています。
 
-- [セレクターでの `:target` 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [セレクターでの `:target` 擬似クラスの利用](/ja/docs/Web/CSS/Guides/Selectors/Using_:target)
   - : {{CSSXref(":target")}} 擬似クラスを使って、 URL のフラグメント識別子をターゲット要素にスタイルを設定する方法を学びます。
 
-- [プライバシーと `:visited` セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+- [プライバシーと `:visited` セレクター](/ja/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
   - : ユーザーのプライバシー保護のために、`:visited` クラスに設定されているスタイル制限を追求します。
 
 - [CSS の構成要素: CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
@@ -137,31 +137,31 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 ## 関連概念
 
 - {{CSSXref(":state","state()")}} 擬似クラス
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュール
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting) モジュール
   - : [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール
   - {{CSSXref(":host")}} 擬似クラス
   - {{CSSXref(":host_function", ":host()")}} 擬似クラス
   - {{CSSXref(":host-context", ":host-context()")}} 擬似クラス
   - {{CSSXref(":has-slotted")}} 擬似クラス
   - {{CSSXref("::slotted")}} 擬似要素
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール
   - {{cssxref("::column")}}
 
-- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール
+- [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)モジュール
   - {{CSSXref(":left")}} 擬似クラス
   - {{CSSXref(":right")}} 擬似クラス
   - {{CSSXref(":first")}} 擬似クラス
   - `:blank` 擬似クラス
 
-- [CSS 擬似要素モジュール](/ja/docs/Web/CSS/CSS_pseudo-elements)（HTML に含まれないものを表すために使用）
+- [CSS 擬似要素モジュール](/ja/docs/Web/CSS/Guides/Pseudo-elements)（HTML に含まれないものを表すために使用）
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
   - {{CSSXref("::file-selector-button")}}
@@ -174,10 +174,10 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
   - {{CSSXref("::spelling-error")}}
   - {{CSSXref("::target-text")}}
 
-- [CSS シャドウ部品モジュール](/ja/docs/Web/CSS/CSS_shadow_parts)
+- [CSS シャドウ部品モジュール](/ja/docs/Web/CSS/Guides/Shadow_parts)
   - {{CSSXref("::part")}} 擬似要素
 
-- [CSS 位置指定レイアウトモジュール](/ja/docs/Web/CSS/CSS_positioned_layout)
+- [CSS 位置指定レイアウトモジュール](/ja/docs/Web/CSS/Guides/Positioned_layout)
   - {{CSSxRef("::backdrop")}}
 
 - その他の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
@@ -186,8 +186,8 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 - {{CSSXref("@namespace")}} アットルール
 
 - {{cssxref("important", "!important")}}
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 
 - {{domxref("Document.querySelector")}} メソッド
 - {{domxref("Document.querySelectorAll")}} メソッド
@@ -199,7 +199,7 @@ CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":cur
 
 ## 関連情報
 
-- [CSS 擬似要素モジュール](/ja/docs/Web/CSS/CSS_pseudo-elements)
-- [CSS カスケードと継承モジュール](/ja/docs/Web/CSS/CSS_cascade)
-- [CSS 入れ子モジュール](/ja/docs/Web/CSS/CSS_nesting)
+- [CSS 擬似要素モジュール](/ja/docs/Web/CSS/Guides/Pseudo-elements)
+- [CSS カスケードと継承モジュール](/ja/docs/Web/CSS/Guides/Cascade)
+- [CSS 入れ子モジュール](/ja/docs/Web/CSS/Guides/Nesting)
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)

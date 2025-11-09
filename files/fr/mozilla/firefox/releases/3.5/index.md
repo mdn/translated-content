@@ -22,7 +22,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 
 - [Gestion des polices téléchargeables](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
   - : La nouvelle règle-@ `@font-face` permet aux pages web de fournir des polices téléchargeables, afin qu'elles puissent être affichées exactement telles que l'auteur de la page les attend.
-- [Requêtes de média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Requêtes de média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
   - : Firefox 3.5 gère les requêtes de médias, qui améliorent le traitement des feuilles de style destinées à des médias particuliers.
 - Mise à jour de {{ cssxref(":before") }} et {{ cssxref(":after") }} pour CSS 2.1
   - : Les pseudo-éléments `:before` et `:after` ont été mis à jour pour respecter complètement CSS 2.1, avec l'ajout des propriétés `position`, `float` et `list-style-*`, ainsi que de certaines valeurs de `display`.
@@ -55,7 +55,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   - : Ces nouvelles fonctionnalités CSS ont été ajoutées pour faciliter la mise en place de thèmes.
 - Nouvelles valeurs pour {{ cssxref("-moz-appearance") }}
   - : Les valeurs `-moz-win-glass` et `-moz-mac-unified-toolbar` ont été ajoutées à `-moz-appearance`.
-- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utilisation des transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
   - : Firefox 3.5 gère les transformations CSS. Consultez {{ cssxref("-moz-transform") }} et {{ cssxref("-moz-transform-origin") }} pour plus de détails.
 - {{ cssxref(":nth-child") }}
 

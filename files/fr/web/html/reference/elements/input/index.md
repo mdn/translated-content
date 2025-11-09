@@ -812,13 +812,13 @@ input.custom {
 
 ### `object-position` et `object-fit`
 
-Dans certains cas (le plus souvent pour les champs non-texte et les interfaces spécialisées), l'élément `<input>` est un [élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties). Lorsque c'est le cas, la taille et la position de l'élément au sein de son cadre peuvent être ajustées grâce aux propriétés CSS [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
+Dans certains cas (le plus souvent pour les champs non-texte et les interfaces spécialisées), l'élément `<input>` est un [élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties). Lorsque c'est le cas, la taille et la position de l'élément au sein de son cadre peuvent être ajustées grâce aux propriétés CSS [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
 
 ### Mise en forme
 
 Pour plus d'informations sur l'ajout de couleurs aux éléments HTML, voir&nbsp;:
 
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color).
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color).
 
 Voir également&nbsp;:
 

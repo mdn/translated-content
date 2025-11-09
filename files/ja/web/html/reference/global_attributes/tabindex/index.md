@@ -55,7 +55,7 @@ div:focus {
 - もし `tabindex` 属性が値なしで記述された場合、その要素をフォーカス可能にするかどうかは、ユーザーエージェントが決定します。
 
   > [!WARNING]
-  > `tabindex` の値として、`0` と `-1` のみを使用することをお勧めします。`tabindex` の値を `0` より大きくしたり、フォーカス可能な HTML 要素の順序を変更できる CSS プロパティ（[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)）を使用したりしないようにしましょう。これは、キーボードによるナビゲーションや支援技術を使用している人にとって、ページのコンテンツを操作することが難しくなります。代わりに、論理的な順序で要素を記述してください。
+  > `tabindex` の値として、`0` と `-1` のみを使用することをお勧めします。`tabindex` の値を `0` より大きくしたり、フォーカス可能な HTML 要素の順序を変更できる CSS プロパティ（[フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)）を使用したりしないようにしましょう。これは、キーボードによるナビゲーションや支援技術を使用している人にとって、ページのコンテンツを操作することが難しくなります。代わりに、論理的な順序で要素を記述してください。
 
 フォーカス可能な HTML 要素の中には、[ユーザーエージェント](/ja/docs/Glossary/User_agent)によって、`tabindex` に `0` の既定値が与えられるものがあります。これらの要素は `href` 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}}、{{HTMLElement("button")}}、{{HTMLElement("frame")}} {{deprecated_inline}}、{{HTMLElement("iframe")}}、{{HTMLElement("input")}}、{{HTMLElement("object")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}、SVG の {{SVGElement("a")}} 要素、あるいは {{HTMLElement("details")}} 要素の概要を提供する {{HTMLElement("summary")}} 要素があります。開発者は既定の動作を変更しない限り、これらの要素に `tabindex` 属性を追加しないでください（例えば、負の値を記載すると、フォーカスされたナビゲーション順序から要素が削除されます）。
 

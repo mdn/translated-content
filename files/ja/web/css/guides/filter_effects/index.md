@@ -28,7 +28,7 @@ original_slug: Web/CSS/CSS_filter_effects
 
 ## ガイド
 
-- [CSS フィルター効果の使用](/ja/docs/Web/CSS/CSS_filter_effects/Using_filter_effects)
+- [CSS フィルター効果の使用](/ja/docs/Web/CSS/Guides/Filter_effects/Using)
   - : CSS フィルター効果に関する概念の概要、プロパティ、フィルター機能、SVG フィルターを含め、フィルター値、ソース順序、値の操作について説明します。
 
 ## 関連概念

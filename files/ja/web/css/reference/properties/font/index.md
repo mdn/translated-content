@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-**`font`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のフォントの様々なプロパティをすべて設定します。また、要素のフォントにシステムフォントを設定することもできます。
+**`font`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のフォントの様々なプロパティをすべて設定します。また、要素のフォントにシステムフォントを設定することもできます。
 
 {{InteractiveExample("CSS デモ: font")}}
 

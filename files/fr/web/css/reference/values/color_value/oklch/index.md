@@ -547,7 +547,7 @@ Le résultat est le suivant&nbsp;:
 
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Le type de donnée {{CSSXref("&lt;hue&gt;")}}
 - Les fonctions de couleur {{cssxref("color_value/lch","lch()")}} et {{cssxref("color_value/oklab","oklab()")}}
 - [Article interactif sur l'espace de couleur OkLCh <sup>(angl.)</sup>](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)

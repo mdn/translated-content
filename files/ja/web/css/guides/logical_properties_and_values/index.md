@@ -17,13 +17,13 @@ l10n:
 
 このモジュールで定義される論理的プロパティにより、物理的な方向ではなく、コンテンツの書き方向に対する相対的なプロパティを定義することができます。これは、異なる書き方を持つ言語に翻訳されたコンテンツも、意図通りに表示されることを意味します。
 
-論理的プロパティおよび値は、そのフローの方向を記述するために、「ブロック」と「インライン」という抽象的な用語を使用します。これらの用語の物理的な意味は、[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)によって異なります。
+論理的プロパティおよび値は、そのフローの方向を記述するために、「ブロック」と「インライン」という抽象的な用語を使用します。これらの用語の物理的な意味は、[書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)によって異なります。
 
 **ブロック寸法** は、行内のテキストのフローに対して垂直な寸法、つまり横書きでは縦の寸法、縦書きでは横の寸法です。標準的な英語のテキストでは、縦の寸法になります。
 
 **インライン寸法** は、行内のテキストのフローと並列です。つまり、横書きでは水平方向、縦書きでは垂直方向です。標準的な英語のテキストでは、水平方向です。
 
-CSS は当初、物理的な座標のみで設計されていました。論理的プロパティおよび値モジュールは、多くの[値](/ja/docs/Web/CSS/CSS_values_and_units)およびプロパティについて、フローに関連した同等のものを定義します。以前は物理値のみを受け入れていたプロパティ (`top`, `bottom`, `left`, `right`) は、これでフローに関連した論理値 (`block-start`, `block-end`, `inline-start`, `inline-end`) も受け入れるようになりました。
+CSS は当初、物理的な座標のみで設計されていました。論理的プロパティおよび値モジュールは、多くの[値](/ja/docs/Web/CSS/Guides/Values_and_units)およびプロパティについて、フローに関連した同等のものを定義します。以前は物理値のみを受け入れていたプロパティ (`top`, `bottom`, `left`, `right`) は、これでフローに関連した論理値 (`block-start`, `block-end`, `inline-start`, `inline-end`) も受け入れるようになりました。
 
 ## リファレンス
 
@@ -103,16 +103,16 @@ CSS は当初、物理的な座標のみで設計されていました。論理�
 
 ### ガイド
 
-- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)
   - : フロー関連プロパティと値の概要です。
 
-- [寸法の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [寸法の論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
   - : フロー関連の物理プロパティと論理プロパティ間の対応付け。ページ上の要素のサイズ決定に使用されます。
 
-- [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
+- [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding)
   - : さまざまなマージン、境界線、パディングのプロパティとその一括指定に対するフローに関連した割り当て。
 
-- [浮動ボックスと位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [浮動ボックスと位置指定の論理的プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning)
   - : `float`、`clear`、[インセットプロパティ](/ja/docs/Glossary/Inset_properties)、`resize` の物理値と論理値間の詳細な対応付け。
 
 ## 関連概念
@@ -123,19 +123,19 @@ CSS は当初、物理的な座標のみで設計されていました。論理�
 - {{CSSxRef("resize")}}
 - {{CSSxRef("text-align")}}
 
-[CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
+[CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)
 
 - {{CSSxRef("margin")}} 一括指定
 - {{CSSxRef("padding")}} 一括指定
 
-[CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)
+[CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)
 
 - {{CSSxRef("max-height")}}
 - {{CSSxRef("max-width")}}
 - {{CSSxRef("min-height")}}
 - {{CSSxRef("min-width")}}
 
-[CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
+[CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)
 
 - {{CSSxRef("border-color")}}
 - {{CSSxRef("border-style")}}
@@ -143,30 +143,30 @@ CSS は当初、物理的な座標のみで設計されていました。論理�
 - {{CSSxRef("border")}} 一括指定
 - {{CSSxRef("border-radius")}}
 
-[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)
+[CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)
 
 - {{CSSxRef("top")}}
 - {{CSSxRef("right")}}
 - {{CSSxRef("bottom")}}
 - {{CSSxRef("left")}}
 
-[CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
+[CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)
 
 - {{CSSxRef("direction")}}
 - {{CSSxRef("text-orientation")}}
 - {{CSSxRef("writing-mode")}}
 
-[CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
+[CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)
 
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
 
-[CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)
+[CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)
 
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-inline")}}
 
-[CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)
+[CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)
 
 - {{CSSxRef("overscroll-behavior-block")}}
 - {{CSSxRef("overscroll-behavior-inline")}}
@@ -177,6 +177,6 @@ CSS は当初、物理的な座標のみで設計されていました。論理�
 
 ## 関連情報
 
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+- [フローレイアウトと書字方向](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール

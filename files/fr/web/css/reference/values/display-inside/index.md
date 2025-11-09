@@ -17,16 +17,16 @@ Valeurs valides pour `<display-inside>`&nbsp;:
 
     Si son type d'affichage externe est `inline` et qu'il participe à un contexte de formatage bloc ou en ligne, il génère une boîte en ligne. Sinon, il génère une boîte conteneur de bloc.
 
-    Selon la valeur d'autres propriétés (comme {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) et selon qu'il participe lui-même à un contexte de formatage bloc ou en ligne, il établit soit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) pour son contenu, soit il intègre son contenu dans le contexte de formatage parent.
+    Selon la valeur d'autres propriétés (comme {{CSSxRef("position")}}, {{CSSxRef("float")}} ou {{CSSxRef("overflow")}}) et selon qu'il participe lui-même à un contexte de formatage bloc ou en ligne, il établit soit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) pour son contenu, soit il intègre son contenu dans le contexte de formatage parent.
 
 - `flow-root`
-  - : L'élément génère une boîte de type bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context), définissant la racine du formatage.
+  - : L'élément génère une boîte de type bloc qui établit un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context), définissant la racine du formatage.
 - `table`
   - : Ces éléments se comportent comme les éléments HTML {{HTMLElement("table")}}. Ils définissent une boîte de niveau bloc.
 - `flex`
-  - : L'élément se comporte comme un élément de type bloc et dispose son contenu selon le [modèle flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout).
+  - : L'élément se comporte comme un élément de type bloc et dispose son contenu selon le [modèle flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
 - `grid`
-  - : L'élément se comporte comme un élément de type bloc et dispose son contenu selon le [modèle de grille](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
+  - : L'élément se comporte comme un élément de type bloc et dispose son contenu selon le [modèle de grille](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
 - `ruby`
   - : L'élément se comporte comme un élément en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
 
@@ -90,5 +90,5 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Concepts de base des boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Concepts de base des boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Concepts de base des grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)

@@ -113,4 +113,4 @@ ul {
 ## 関連情報
 
 - このデータ型を使用するプロパティ: {{cssxref("font-family")}} と {{cssxref("font")}}
-- [CSS フォントモジュール](/ja/docs/Web/CSS/CSS_fonts)
+- [CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)

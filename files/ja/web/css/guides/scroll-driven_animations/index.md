@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-**CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/CSS_animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)の上に構築する機能を提供します。これは、既定の時間ベースによる文書タイムラインの代わりに、スクロールベースのタイムラインに沿った進行に基づいてプロパティ値をアニメーションすることができます。つまり、時間の経過だけでなく、スクロール可能な要素をスクロールすることで、要素をアニメーションすることができます。
+**CSS スクロール駆動アニメーション**モジュールは、[CSS アニメーションモジュール](/ja/docs/Web/CSS/Guides/Animations)と[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)の上に構築する機能を提供します。これは、既定の時間ベースによる文書タイムラインの代わりに、スクロールベースのタイムラインに沿った進行に基づいてプロパティ値をアニメーションすることができます。つまり、時間の経過だけでなく、スクロール可能な要素をスクロールすることで、要素をアニメーションすることができます。
 
 スクロールベースのタイムラインには 2 種類あります。
 
@@ -77,5 +77,5 @@ CSS スクロール駆動アニメーションでは、`<timeline-range-name>` �
 ## 関連情報
 
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) (developer.chrome.com)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)

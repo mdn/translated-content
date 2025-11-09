@@ -7,7 +7,7 @@ l10n:
   sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は、[CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)を実装しています。これは、フレックスコンテナー内のアイテムの配置に使用される[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)と同じ標準です。配置モジュールでは、すべてのレイアウトメソッドで配置がどのように動作すべきかを詳しく説明しています。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)は、[CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)を実装しています。これは、フレックスコンテナー内のアイテムの配置に使用される[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)と同じ標準です。配置モジュールでは、すべてのレイアウトメソッドで配置がどのように動作すべきかを詳しく説明しています。
 
 このガイドでは、ボックス配置プロパティを使用して、グリッドレイアウト内のアイテムを配置する方法を見ていきます。
 
@@ -258,7 +258,7 @@ l10n:
 `align-self` と `align-items` と同様に、グリッドコンテナーに `justify-items` を適用することで、すべてのアイテムに `justify-self` の値を設定することができます。
 
 > [!NOTE]
-> `justify-self` および `justify-items` プロパティはフレックスボックスには実装されていません。これは[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)が 1 次元であるという性質によるもの、軸に沿って複数のアイテムがあるかもしれず、単一のアイテムを揃えることができないことによります。フレックスボックスの主軸・インライン軸に沿って配置するには、 {{cssxref("justify-content")}} プロパティを使用します。
+> `justify-self` および `justify-items` プロパティはフレックスボックスには実装されていません。これは[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)が 1 次元であるという性質によるもの、軸に沿って複数のアイテムがあるかもしれず、単一のアイテムを揃えることができないことによります。フレックスボックスの主軸・インライン軸に沿って配置するには、 {{cssxref("justify-content")}} プロパティを使用します。
 
 ### 一括指定プロパティ
 
@@ -685,14 +685,14 @@ align プロパティと justify プロパティを組み合わせると、グ�
 
 CSS グリッドレイアウトと CSS ボックス配置は、CSS の書字方向と連動しています。アラビア語などの右書きの言語を表示する場合、グリッドの開始位置は右上になるため、`justify-content: start` の既定では、グリッドトラックはグリッドの右側から始まります。
 
-{{glossary("physical properties", "物理的プロパティ")}}を設定した場合、例えば {{cssxref("margin-right")}} や {{cssxref("margin-left")}} を使用して auto マージンを設定したり、{{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}} オフセットを使用してアイテムを絶対位置指定したりしても、書字方向は反映されません。[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) ガイドでは、CSS グリッドレイアウト、ボックスの配置、および書字方向の間の相互作用についてさらに詳しく見ていきます。これは、複数の言語で表示されるサイトを開発する場合、またはデザインで言語や書字方向を混在させる場合、理解しておくことが重要です。
+{{glossary("physical properties", "物理的プロパティ")}}を設定した場合、例えば {{cssxref("margin-right")}} や {{cssxref("margin-left")}} を使用して auto マージンを設定したり、{{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}} オフセットを使用してアイテムを絶対位置指定したりしても、書字方向は反映されません。[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes) ガイドでは、CSS グリッドレイアウト、ボックスの配置、および書字方向の間の相互作用についてさらに詳しく見ていきます。これは、複数の言語で表示されるサイトを開発する場合、またはデザインで言語や書字方向を混在させる場合、理解しておくことが重要です。
 
 ## 関連情報
 
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)

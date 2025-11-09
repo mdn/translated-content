@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 943a9ba8905fbdb3966f0dd6d49f7652e3de94b3
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs). Elle permet aux développeur·euse·s de définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs). Elle permet aux développeur·euse·s de définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
 
 La règle `@property` permet d'enregistrer une propriété personnalisée directement dans une feuille de style, sans avoir à exécuter de JavaScript. Une règle `@property` valide enregistre une propriété personnalisée, ce qui équivaut à appeler {{domxref('CSS.registerProperty_static', 'registerProperty()')}} avec des paramètres équivalents.
 
@@ -169,5 +169,5 @@ Dans cet exemple, on définit une propriété personnalisée appelée `--progres
 - [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
 - [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Houdini](/fr/docs/Web/API/Houdini_APIs)
-- [Guide d'utilisation des propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
-- [Module des propriétés CSS personnalisées pour les variables en cascade](/fr/docs/Web/CSS/CSS_cascading_variables)
+- [Guide d'utilisation des propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
+- [Module des propriétés CSS personnalisées pour les variables en cascade](/fr/docs/Web/CSS/Guides/Cascading_variables)

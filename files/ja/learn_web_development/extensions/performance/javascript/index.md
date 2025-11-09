@@ -48,7 +48,7 @@ l10n:
 - **組み込みのブラウザー機能を検討してください**。 JavaScript を使用して自分自身で作成するよりも、ブラウザーがすでに保有する機能を使用できる場合があります。例えば、次のようにします。
   - [組み込みのクライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#組み込みフォーム検証の利用)を使用してください。
   - ブラウザーの {{htmlelement("video")}} プレーヤーを使用してください。
-  - JavaScript アニメーションライブラリーではなく、[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) を使用してください（[アニメーションの処理](#javascript_アニメーションの処理)も参照してください）。
+  - JavaScript アニメーションライブラリーではなく、[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using) を使用してください（[アニメーションの処理](#javascript_アニメーションの処理)も参照してください）。
 
 また、JavaScript を、重要な部分と重要でない部分を表す複数のファイルに分割することをお勧めします。 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)を使用すると、別個の外部 JavaScript ファイルを使用するよりも、これをより効率的に行うことができます。
 
@@ -230,7 +230,7 @@ function yield() {
 
 アニメーションに関する最も明白なアドバイスは、アニメーションの使用を少なくすることです。必要のないアニメーションは削除し、例えば、低電力の端末やバッテリー電力が限られているモバイル端末を使用しているユーザーのために、環境設定でアニメーションをオフに設定できるようにすることを検討してください。
 
-重要な DOM アニメーションについては、JavaScript アニメーションではなく、可能な場合は [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を使用することをお勧めします（[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)では、JavaScript を使用して CSS アニメーションに直接フックする方法を提供しています）。JavaScript を使用してインラインスタイルを操作するよりも、ブラウザーを使用して DOM アニメーションを直接実行するほうが、はるかに高速で効率的です。[CSS のパフォーマンスの最適化 > アニメーションの処理](/ja/docs/Learn_web_development/Extensions/Performance/CSS#アニメーションの処理) もご参照ください。
+重要な DOM アニメーションについては、JavaScript アニメーションではなく、可能な場合は [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)を使用することをお勧めします（[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)では、JavaScript を使用して CSS アニメーションに直接フックする方法を提供しています）。JavaScript を使用してインラインスタイルを操作するよりも、ブラウザーを使用して DOM アニメーションを直接実行するほうが、はるかに高速で効率的です。[CSS のパフォーマンスの最適化 > アニメーションの処理](/ja/docs/Learn_web_development/Extensions/Performance/CSS#アニメーションの処理) もご参照ください。
 
 JavaScript で処理できないアニメーション、例えば HTML の {{htmlelement("canvas")}} のアニメーションなどについては、{{domxref("Window.setInterval()")}} などの古いオプションではなく、 {{domxref("Window.requestAnimationFrame()")}} を使用することをお勧めします。 `requestAnimationFrame()` メソッドは、アニメーションフレームを効率的かつ一貫して処理し、スムーズな使い勝手を実現するために特別に設計されています。基本的なパターンは、次のように見ていきます。
 

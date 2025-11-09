@@ -47,7 +47,7 @@ counter(counter-name);
 counter(counter-name, upper-roman)
 ```
 
-[カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counter()` 関数 (および {{cssxref("counters", "counters()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
+[カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)自身には視覚的効果が何もありません。 `counter()` 関数 (および {{cssxref("counters", "counters()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
 
 ### 値
 
@@ -56,7 +56,7 @@ counter(counter-name, upper-roman)
 - `<counter-name>`
   - : カウンターを識別する {{cssxref("&lt;custom-ident&gt;")}} であり、{{cssxref("counter-reset")}} および {{cssxref("counter-increment")}} に用いた名前と同じもので、大文字小文字を区別します。カウンター名は名前をダッシュ 2 つで始めることはできず、また `none`, `unset`, `initial`, `inherit` という名前にすることはできません。
 - `<counter-style>`
-  - : {{cssxref("&lt;list-style-type&gt;")}} 名、 {{cssxref("&lt;@counter-style&gt;")}} 名、 {{cssxref("symbols()")}} 関数の何れかです。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)があります。省略された場合は、既定で `decimal` になります。
+  - : {{cssxref("&lt;list-style-type&gt;")}} 名、 {{cssxref("&lt;@counter-style&gt;")}} 名、 {{cssxref("symbols()")}} 関数の何れかです。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)があります。省略された場合は、既定で `decimal` になります。
 
 > [!NOTE]
 > 入れ子になったカウンターの値を結合する場合は、 {{cssxref("counters", "counters()")}} 関数を使用します。こちらは追加の {{cssxref("string")}} 引数があります。
@@ -152,12 +152,12 @@ li::after {
 
 ## 関連情報
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
 - CSS の [`counters()`](/ja/docs/Web/CSS/Reference/Values/counters) 関数
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール

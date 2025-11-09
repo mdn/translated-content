@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)**アニメーション可能な**プロパティの概念に頼っており、特に指定しない限り、すべての CSS プロパティはアニメーション可能です。各プロパティのアニメーションの種類は、このプロパティに対する値の[結合](https://drafts.csswg.org/css-values/#combining-values)方法（補間、追加、累積）を決定します。トランジションは補間のみを使用しますが、アニメーションは 3 つの組み合わせ方法をすべてを使用することができます。
+[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)**アニメーション可能な**プロパティの概念に頼っており、特に指定しない限り、すべての CSS プロパティはアニメーション可能です。各プロパティのアニメーションの種類は、このプロパティに対する値の[結合](https://drafts.csswg.org/css-values/#combining-values)方法（補間、追加、累積）を決定します。トランジションは補間のみを使用しますが、アニメーションは 3 つの組み合わせ方法をすべてを使用することができます。
 
 > [!NOTE]
 > 各 CSS プロパティのアニメーションの種類は、その「公式定義」表に掲載されています（例: {{CSSXref("color", "", "#公式定義")}}）。
@@ -45,5 +45,5 @@ l10n:
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)

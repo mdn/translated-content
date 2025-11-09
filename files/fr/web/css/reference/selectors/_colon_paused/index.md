@@ -44,4 +44,4 @@ Une ressource est mise en pause si l'utilisateur·ice l'a explicitement mise en 
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- Les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- Les [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

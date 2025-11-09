@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
+要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
 
 ユーザーエージェント（ブラウザーなど）が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは 4 つの領域に分かれます。
 
@@ -257,13 +257,13 @@ p {
 - {{cssxref("box-sizing")}} プロパティ
 - {{cssxref("min-content")}} および {{cssxref("max-content")}} のサイズ値
 - [学習: CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
 - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)
 - {{glossary("Intrinsic Size", "内在サイズ")}}

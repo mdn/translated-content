@@ -138,4 +138,4 @@ p {
 ## 関連情報
 
 - {{cssxref("hyphens")}}
-- [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)
+- [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)

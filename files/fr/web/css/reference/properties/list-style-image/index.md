@@ -171,5 +171,5 @@ ul {
 - {{Cssxref("list-style-type")}} property
 - {{Cssxref("list-style-position")}} property
 - {{cssxref("::marker")}} pseudo-element
-- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
-- Le module des [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module des [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

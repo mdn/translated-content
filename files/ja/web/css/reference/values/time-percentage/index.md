@@ -67,4 +67,4 @@ l10n:
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;time&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 943a9ba8905fbdb3966f0dd6d49f7652e3de94b3
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.
 
 En JavaScript, `@scope` est accessible via l'interface du modèle d'objet CSS {{DOMxRef("CSSScopeRule")}}.
 
@@ -167,7 +167,7 @@ Voici quelques points à considérer pour `:scope` dans les blocs `@scope`&nbsp;
 ### Spécificité dans `@scope`
 
 À l'intérieur d'une règle `@scope`, les sélecteurs simples et le sélecteur d'imbrication [`&`](/fr/docs/Web/CSS/Nesting_selector) se comportent comme si `:where(:scope)` était préfixé au sélecteur.
-Comme {{cssxref(":where", ":where()")}} a une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) nulle, les sélecteurs simples et `&` n'ajoutent aucun poids. Le poids de spécificité est déterminé par le reste du sélecteur.
+Comme {{cssxref(":where", ":where()")}} a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) nulle, les sélecteurs simples et `&` n'ajoutent aucun poids. Le poids de spécificité est déterminé par le reste du sélecteur.
 Par exemple, la spécificité du sélecteur `& img` est équivalente à celle de `:where(:scope) img` (0-0-1).
 
 > [!WARNING]
@@ -267,7 +267,7 @@ Pour corriger cela, vous pouvez utiliser `@scope` comme suit&nbsp;:
 Désormais, le paragraphe le plus à l'intérieur est correctement coloré en noir. Cela s'explique par le fait qu'il n'est qu'à un niveau de hiérarchie du DOM de la racine de portée `.light-theme`, mais à deux niveaux de la racine de portée `.dark-theme`. Ainsi, le style clair l'emporte.
 
 > [!NOTE]
-> La proximité de portée prévaut sur l'ordre du code source mais est elle-même supplantée par d'autres critères de priorité supérieure tels que [l'importance](/fr/docs/Web/CSS/important), [les couches](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) et [la spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity).
+> La proximité de portée prévaut sur l'ordre du code source mais est elle-même supplantée par d'autres critères de priorité supérieure tels que [l'importance](/fr/docs/Web/CSS/important), [les couches](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) et [la spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ## Syntaxe formelle
 
@@ -459,6 +459,6 @@ Dans le code affiché, notez que tous les éléments `<img>` sont stylisés avec
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
-- La [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
+- La [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Définir le sélecteur `&` dans une règle `@scope` <sup>(angl.)</sup>](https://css.oddbird.net/scope/parent-selector/) sur css.oddbird.net (2025)
 - [Limiter la portée de vos sélecteurs avec la règle @ CSS `@scope` <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/at-scope) sur developer.chrome.com (2023)

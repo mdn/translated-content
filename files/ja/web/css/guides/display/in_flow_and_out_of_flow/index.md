@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-[前のガイド](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。
+[前のガイド](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。
 
 ## フロー内の要素の例
 
@@ -62,7 +62,7 @@ ul {
 - `position: absolute` のアイテム (同様に機能する `position: fixed` を含む)
 - ルート要素 (`html`)
 
-フローの外のアイテムは、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を作成するので、その中のものはページの残りから独立して、小さなレイアウトのように見えます。したがってルート要素はフローの外で、文書内のすべてのコンテナーとして、文書のブロック整形コンテキストを確立します。
+フローの外のアイテムは、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) を作成するので、その中のものはページの残りから独立して、小さなレイアウトのように見えます。したがってルート要素はフローの外で、文書内のすべてのコンテナーとして、文書のブロック整形コンテキストを確立します。
 
 ### 浮動アイテム
 
@@ -212,7 +212,7 @@ p {
 
 ## まとめ
 
-このガイドでは、特定の種類の位置指定を実現するために、要素をフローの外に持ち出す方法を紹介しました。次のガイドでは、[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を作成する上での関連する問題を[整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)の中で見てみます。
+このガイドでは、特定の種類の位置指定を実現するために、要素をフローの外に持ち出す方法を紹介しました。次のガイドでは、[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)を作成する上での関連する問題を[整形コンテキストの紹介](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)の中で見てみます。
 
 ## 関連情報
 

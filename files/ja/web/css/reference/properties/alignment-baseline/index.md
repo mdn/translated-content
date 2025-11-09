@@ -153,5 +153,5 @@ text:nth-of-type(8) {
 
 - {{cssxref("dominant-baseline")}}
 - SVG の {{SVGAttr("alignment-baseline")}} 属性
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュール
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout)モジュール
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

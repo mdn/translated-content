@@ -13,7 +13,7 @@ L'**API CSSOM view** vous permet de manipuler la vue visuelle d'un document, y c
 
 - [Systèmes de coordonnées](/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : Les systèmes de coordonnées utilisés pour spécifier une position dans un contexte d'affichage tel qu'une fenêtre sur un moniteur, une zone d'affichage sur un appareil mobile ou une position sur une feuille de papier lors de l'impression.
-- [Concepts relatifs au viewport](/fr/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [Concepts relatifs au viewport](/fr/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : Le concept de la zone d'affichage — ce que c'est, son impact en termes de CSS, SVG et appareils mobiles — et la différence entre la zone d'affichage visuelle et la zone d'affichage de mise en page.
 
 ## Interfaces
@@ -123,10 +123,10 @@ Ce module définit des méthodes utilitaires géométriques qui s'appliquent aux
 ## Voir aussi
 
 - L'API [CSS Object Model (CSSOM)](/fr/docs/Web/API/CSS_Object_Model)
-- Le module de [vue CSSOM](/fr/docs/Web/CSS/CSSOM_view)
-- Le module de [débordement CSS](/fr/docs/Web/CSS/CSS_overflow)
+- Le module de [vue CSSOM](/fr/docs/Web/CSS/Guides/CSSOM_view)
+- Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - Le module de [comportement de défilement excessif CSS](/fr/docs/Web/CSS/CSS_overscroll_behavior)
-- Le module de [défilement par accrochage CSS](/fr/docs/Web/CSS/CSS_scroll_snap)
+- Le module de [défilement par accrochage CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
 - L'entrée du glossaire {{glossary("Viewport", "Vue")}}
 - L'entrée du glossaire {{glossary("Layout viewport", "Vue de mise en page")}}
 - L'entrée du glossaire {{glossary("Visual viewport", "Vue visuelle")}}

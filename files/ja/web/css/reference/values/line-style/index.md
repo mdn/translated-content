@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-**`<line-style>`** {{glossary("enumerated", "列挙値")}}型は、線のスタイル、または線がないことを定義するキーワード値を表します。 `<line-style>` キーワード値は、[境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)や[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)の以下の個別指定プロパティで用いられます。
+**`<line-style>`** {{glossary("enumerated", "列挙値")}}型は、線のスタイル、または線がないことを定義するキーワード値を表します。 `<line-style>` キーワード値は、[境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)や[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)の以下の個別指定プロパティで用いられます。
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
@@ -285,6 +285,6 @@ div::before {
 
 ## 関連情報
 
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
-- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)モジュール
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
+- [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/Guides/Basic_user_interface)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール

@@ -163,7 +163,7 @@ body {
 
 {{EmbedLiveSample("auto", "", "370px")}}
 
-すでに学んだように、 `visible` という既定値以外のいずれかの値を使用すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が作成されます。
+すでに学んだように、 `visible` という既定値以外のいずれかの値を使用すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)が作成されます。
 
 > [!NOTE]
 > [オーバーフローレベル 3](https://www.w3.org/TR/css-overflow-3/) の草案では、 `overflow: clip` という追加の値があります。これは `overflow: hidden` のような動作をしますが、プログラムによるスクロールは許可されず、ボックスはスクロール不可能になります。さらに、ブロック整形コンテキストも作成されません。
@@ -207,7 +207,7 @@ body {
 
 ## フローに相対的なプロパティ
 
-[書字方向とフローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)のガイドでは、 `block-size` と `inline-size` のプロパティについて説明しました。これらは、画面の物理的な寸法にレイアウトを合わせるよりも、さまざまな書字方向で作業する際に意味をなすものです。 [CSS オーバーフローモジュール](/ja/docs/Web/CSS/CSS_overflow)には、 overflow 用のフロー相対プロパティとして、 [`overflow-block`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-block) と [`overflow-inline`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-inline) も含んでいます。これらは、 `overflow-x` と `overflow-y` に対応しますが、対応付けは文書内の書字方向によって異なります。
+[書字方向とフローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)のガイドでは、 `block-size` と `inline-size` のプロパティについて説明しました。これらは、画面の物理的な寸法にレイアウトを合わせるよりも、さまざまな書字方向で作業する際に意味をなすものです。 [CSS オーバーフローモジュール](/ja/docs/Web/CSS/Guides/Overflow)には、 overflow 用のフロー相対プロパティとして、 [`overflow-block`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-block) と [`overflow-inline`](/ja/docs/Web/CSS/Reference/At-rules/@media/overflow-inline) も含んでいます。これらは、 `overflow-x` と `overflow-y` に対応しますが、対応付けは文書内の書字方向によって異なります。
 
 ## オーバーフローの指示
 
@@ -270,5 +270,5 @@ body {
 ## 関連情報
 
 - [コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)ガイド
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)モジュール

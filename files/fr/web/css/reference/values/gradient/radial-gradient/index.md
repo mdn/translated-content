@@ -219,7 +219,7 @@ La boîte de gauche utilise l'[interpolation la plus courte](/fr/docs/Web/CSS/Re
 
 ### More radial-gradient examples
 
-Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -231,7 +231,7 @@ Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
 - Les autres fonctions de dégradés&nbsp;: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
 - Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}

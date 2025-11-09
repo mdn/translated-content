@@ -149,4 +149,4 @@ h2:has(+ p, > ul::after, + ul.red) {
 ## 関連情報
 
 - 擬似クラス [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is)、[`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where)、[`:not()`](/ja/docs/Web/CSS/Reference/Selectors/:not)、[`:has()`](/ja/docs/Web/CSS/Reference/Selectors/:has) は、寛容なセレクターリストを受け付けます。
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)

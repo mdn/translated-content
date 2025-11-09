@@ -197,5 +197,5 @@ div {
 - [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
 - [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
 - [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
-- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/CSS_overflow)
+- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/Guides/Overflow)
 - [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

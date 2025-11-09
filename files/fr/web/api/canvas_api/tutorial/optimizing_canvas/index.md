@@ -79,7 +79,7 @@ Si comme pour la plupart des jeux, vous utilisez une image de fond statique, pr�
 
 ### Redimensionner les canvas avec CSS transform
 
-[Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) sont plus rapides car elles utilisent le GPU. Le mieux est d'utiliser un canvas plus grand et de réduire sa taille. Pour Firefox OS, les dimensions sont de 480 x 320 px.
+[Les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) sont plus rapides car elles utilisent le GPU. Le mieux est d'utiliser un canvas plus grand et de réduire sa taille. Pour Firefox OS, les dimensions sont de 480 x 320 px.
 
 ```js
 var scaleX = window.innerWidth / canvas.width;

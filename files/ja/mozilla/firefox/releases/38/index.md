@@ -36,7 +36,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
   - 書字方向に依存しない {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} および幅、スタイル、色の個別指定プロパティ: {{cssxref("border-block-start")}}、{{cssxref("border-block-start-width")}}、{{cssxref("border-block-start-style")}}、{{cssxref("border-block-start-color")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-end-width")}}、{{cssxref("border-block-end-style")}}、{{cssxref("border-block-end-color")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-inline-start-width")}}、{{cssxref("border-inline-start-style")}}、{{cssxref("border-inline-start-color")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-end-width")}}、{{cssxref("border-inline-end-style")}}、{{cssxref("border-inline-end-color")}} ([Firefox バグ 649142](https://bugzil.la/649142))。
   - 書字方向に依存しない {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}}: {{cssxref("inset-block-start")}}、`offset-block-end`、`offset-inline-start`、`offset-inline-end` ([Firefox バグ 1120283](https://bugzil.la/1120283))。
 
-- ブラウザー間で相互運用性がある動作を目指して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の始まり方を、最近の仕様変更に合致するよう変更しました ([Firefox バグ 960465](https://bugzil.la/960465))。
+- ブラウザー間で相互運用性がある動作を目指して、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)の始まり方を、最近の仕様変更に合致するよう変更しました ([Firefox バグ 960465](https://bugzil.la/960465))。
 
 ### HTML
 

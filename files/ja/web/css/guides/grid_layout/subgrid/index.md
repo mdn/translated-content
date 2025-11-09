@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュールは、 `subgrid` の値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しています。このガイドでは、サブグリッドでできること、いくつかの使用例と、この機能で解決されるデザインパターンを詳述します。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュールは、 `subgrid` の値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しています。このガイドでは、サブグリッドでできること、いくつかの使用例と、この機能で解決されるデザインパターンを詳述します。
 
 ## サブグリッドの導入
 
@@ -16,7 +16,7 @@ l10n:
 
 `subgrid` の値を `grid-template-columns` および `grid-template-rows` の両方またはどちらかに設定すると、新しいトラックリストを作成するのではなく、入れ子のグリッドが親要素上で定義されたトラックを利用します。
 
-例えば、`grid-template-columns: subgrid` を使用し、入れ子のグリッドが親のトラック 3 列にまたがる場合、入れ子のグリッドは、親グリッドのサイズと同じトラック 3 列分になります。その列の[溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)は継承されますが、異なる {{cssxref("gap")}} 値で上書きすることもできます。[線名](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)は親からサブグリッドへ渡されますが、サブグリッドが独自の線名を定義することもできます。
+例えば、`grid-template-columns: subgrid` を使用し、入れ子のグリッドが親のトラック 3 列にまたがる場合、入れ子のグリッドは、親グリッドのサイズと同じトラック 3 列分になります。その列の[溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)は継承されますが、異なる {{cssxref("gap")}} 値で上書きすることもできます。[線名](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)は親からサブグリッドへ渡されますが、サブグリッドが独自の線名を定義することもできます。
 
 ## 列のサブグリッド
 
@@ -409,7 +409,7 @@ body {
 
 ## 名前付きグリッド線
 
-CSS のグリッドを利用する時、その[グリッド線に名前を付けて](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)、線番号ではなく、これらの名前でアイテムを配置することができます。親グリッドの線名がサブグリッドに渡されるので、それらを使用してアイテムを配置できます。以下の例では、親の線に `col-start` および `col-end` という名前を付けました。これらはサブアイテムの配置に使用されます。
+CSS のグリッドを利用する時、その[グリッド線に名前を付けて](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)、線番号ではなく、これらの名前でアイテムを配置することができます。親グリッドの線名がサブグリッドに渡されるので、それらを使用してアイテムを配置できます。以下の例では、親の線に `col-start` および `col-end` という名前を付けました。これらはサブアイテムの配置に使用されます。
 
 ```html live-sample___line-names
 <div class="grid">

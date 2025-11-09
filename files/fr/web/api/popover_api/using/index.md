@@ -316,13 +316,13 @@ Allez voir [notre exemple de <i lang="en">popover</i> avec arrière-plan flouté
 
 ## Animer les <i lang="en">popovers</i>
 
-Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: none;` quand ils sont fermés et avec `display: block;` quand ils sont ouverts, et sont respectivement retirés/ajoutés à [la couche supérieure](/fr/docs/Glossary/Top_layer) et à [l'arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construire_larbre_daccessibilité). En conséquence, pour que les <i lang="en">popovers</i> puissent être animés, la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs) animent `display` avec [une variation discrète](/fr/docs/Web/CSS/CSS_animated_properties#discrete). Concrètement, le navigateur passera de la valeur `none` à une autre valeur de manière à ce que l'animation affiche le contenu tout du long. Ainsi&nbsp;:
+Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: none;` quand ils sont fermés et avec `display: block;` quand ils sont ouverts, et sont respectivement retirés/ajoutés à [la couche supérieure](/fr/docs/Glossary/Top_layer) et à [l'arbre d'accessibilité](/fr/docs/Web/Performance/Guides/How_browsers_work#construire_larbre_daccessibilité). En conséquence, pour que les <i lang="en">popovers</i> puissent être animés, la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display) doit pouvoir être animée. Les [navigateurs compatibles](/fr/docs/Web/CSS/Reference/Properties/display#compatibilité_des_navigateurs) animent `display` avec [une variation discrète](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete). Concrètement, le navigateur passera de la valeur `none` à une autre valeur de manière à ce que l'animation affiche le contenu tout du long. Ainsi&nbsp;:
 
 - Quand `display` est animé de `none` à `block` (ou toute autre valeur visible de `display`), la valeur passera à `block` à 0% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 - Quand `display` est animé de `block` (ou toute autre valeur visible de `display`) à `none`, la valeur passera à `none` à 100% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 
 > [!NOTE]
-> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/CSS_animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
+> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/Guides/Animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
 
 ### Les transitions sur les <i lang="en">popovers</i>
 
@@ -425,7 +425,7 @@ Comme vu précédemment, nous avons également&nbsp;:
 - Défini un état de départ pour la `transition` dans un bloc `@starting-style`
 - Ajouté `display` à la liste des propriétés à transitionner de manière à ce que l'élément animé soit visible (avec `display: block`) pendant toute l'animation. Sans cela, la transition de fermeture ne serait pas visible, le popover disparaîtrait instantanément.
 - Ajouté `overlay` à la liste des propriétés à transitionner de manière à ce que l'élément popover reste dans [la couche supérieure](/fr/docs/Glossary/Top_layer) jusqu'à la fin de l'animation. L'impact de cet ajout n'est pas nécessairement perceptible pour des animations aussi simples que celle-ci. Cependant, dans certains cas plus complexes, le fait d'omettre cette propriété peut avoir pour conséquence de faire disparaitre l'élément avant la fin de l'animation de transition.
-- Ajouté `allow-discrete` aux transitions des propriétés `display` et `overlay` pour activer les [transitions discrètes](/fr/docs/Web/CSS/CSS_animated_properties#discrete) de ces propriétés.
+- Ajouté `allow-discrete` aux transitions des propriétés `display` et `overlay` pour activer les [transitions discrètes](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete) de ces propriétés.
 
 Vous noterez que nous avons également défini une transition pour le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/Reference/Selectors/::backdrop) qui apparait derrière le <i lang="en">popover</i> quand il s'ouvre, provoquant un effet d'assombrissement du contenu de la page.
 

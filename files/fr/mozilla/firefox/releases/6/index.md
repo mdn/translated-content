@@ -75,7 +75,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 ### DOM
 
-- [Utilisation de media queries à partir de code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Utilisation de media queries à partir de code](/fr/docs/Web/CSS/Guides/Media_queries/Testing)
   - : Vous pouvez désormais tester le résultat d'une chaîne media query en programmant la méthode [`window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et l'interface [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList).
 - [Evènements tactile](/fr/docs/Web/API/Touch_events)
   - : Firefox 6 ajout le support du standard W3C sur les évènements tactile, cela facilite l'interprétation d'une ou plusieurs touches à la fois sur les surfaces tactiles comme les écrans tactiles et pavés tactiles.

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`transitionstart`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が実際に始まったとき、すなわち {{cssxref("transition-delay")}} が終了した後に発生します。
+**`transitionstart`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)が実際に始まったとき、すなわち {{cssxref("transition-delay")}} が終了した後に発生します。
 
 このイベントはキャンセルできません。
 

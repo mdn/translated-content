@@ -107,7 +107,7 @@ Dans la prochaine section, nous verrons un meilleur exemple pour indiquer les ch
 
 ## Utiliser du contenu généré avec des pseudo-classes
 
-Dans les articles précédents, nous avons vu l'utilisation [de contenu généré](/fr/docs/Web/CSS/CSS_generated_content). C'est un bon moment pour y revenir en détails.
+Dans les articles précédents, nous avons vu l'utilisation [de contenu généré](/fr/docs/Web/CSS/Guides/Generated_content). C'est un bon moment pour y revenir en détails.
 
 L'idée consiste ici à utiliser les pseudo-éléments [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) et [`::after`](/fr/docs/Web/CSS/Reference/Selectors/::after) avec la propriété [`content`](/fr/docs/Web/CSS/Reference/Properties/content) afin de faire apparaître du contenu avant ou après l'élément concerné. Le fragment de contenu n'est pas ajouté au DOM, il fait partie du style du document, et il est donc invisible pour les outils d'assistance comme les lecteurs d'écran. S'agissant d'un pseudo-élément, il peut être ciblé par des règles de mise en forme comme tout autre nœud du DOM.
 

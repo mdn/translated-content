@@ -15,7 +15,7 @@ l10n:
 - 横書きでは、ボックスは左から右に横方向に並べられます。
 - 縦書きの場合、文字は上から下に向かって縦に並べられます。
 
-下記の例では、黒い境界線のある 2 つの {{HTMLElement("div")}} 要素は[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)の一部であり、各ボックス内の単語はインライン整形コンテキストに属しています。横書きの単語は水平方向に並べられ、縦書きの単語は垂直方向に並べられます。
+下記の例では、黒い境界線のある 2 つの {{HTMLElement("div")}} 要素は[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)の一部であり、各ボックス内の単語はインライン整形コンテキストに属しています。横書きの単語は水平方向に並べられ、縦書きの単語は垂直方向に並べられます。
 
 ```html live-sample___inline
 <div class="example horizontal">いち に さん</div>
@@ -108,7 +108,7 @@ span {
 {{EmbedLiveSample("mbp", "", "340px")}}
 
 > [!NOTE]
-> 私は、テキストが水平でも垂直でもインライン次元で動作するように、論理的なフロー相対プロパティ（{{cssxref("padding-left")}} ではなく {{cssxref("padding-inline-start")}}）を使用しています。これらのプロパティの詳細については、「[論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)」をご覧ください。
+> 私は、テキストが水平でも垂直でもインライン次元で動作するように、論理的なフロー相対プロパティ（{{cssxref("padding-left")}} ではなく {{cssxref("padding-inline-start")}}）を使用しています。これらのプロパティの詳細については、「[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)」をご覧ください。
 
 ## ブロック方向の配置
 
@@ -227,5 +227,5 @@ body {
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)

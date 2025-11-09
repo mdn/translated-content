@@ -309,4 +309,4 @@ p {
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 - [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

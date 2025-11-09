@@ -9,7 +9,7 @@ l10n:
 
 **幾何インターフェイス** は、 3D および 2D グラフィックを操作するためのインターフェイスを提供する CSS モジュールです。特に、点、長方形、四角形、[座標変換行列](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web#変換行列) （グラフィックを移動、拡大縮小、回転、歪め/傾け、反転、乗算/連鎖させ、逆演算/元に戻す処理）を演算するためのインターフェイスを提供します。
 
-ウェブ開発者であれば、常に幾何インターフェイスを直接使用するわけではありませんが、その代わりに裏で幾何インターフェイスに頼っている他の機能、たとえば [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)、[キャンバス API](/ja/docs/Web/API/Canvas_API) 、[WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) の一部、そして（より直接的に）{{domxref('VideoFrame.visibleRect')}}、{{domxref('Element.getClientRects()')}}、{{domxref('Element.getBoundingClientRect()')}} などを使用しています。
+ウェブ開発者であれば、常に幾何インターフェイスを直接使用するわけではありませんが、その代わりに裏で幾何インターフェイスに頼っている他の機能、たとえば [CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms)、[キャンバス API](/ja/docs/Web/API/Canvas_API) 、[WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) の一部、そして（より直接的に）{{domxref('VideoFrame.visibleRect')}}、{{domxref('Element.getClientRects()')}}、{{domxref('Element.getBoundingClientRect()')}} などを使用しています。
 
 ## インターフェイス
 

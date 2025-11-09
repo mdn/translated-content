@@ -255,7 +255,7 @@ Ensuite, notez que la position de l'élément a changé. {{cssxref("top")}}, {{c
 
 ### Contextes de positionnement
 
-Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block#identifier_le_bloc_englobant)).
+Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant)).
 
 Si aucun élément ancêtre ne voit sa propriété `position` explicitement définie, par défaut, tous les éléments ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans **le bloc englobant initial**. Ce bloc englobant initial a les dimensions de la zone d'affichage (<i lang="en">viewport</i>) et est aussi le bloc qui contient l'élément {{htmlelement("html")}}. Autrement dit, l'élément positionné de façon absolue sera affiché en dehors de l'élément {{htmlelement("html")}} et positionné relativement à la zone d'affichage.
 

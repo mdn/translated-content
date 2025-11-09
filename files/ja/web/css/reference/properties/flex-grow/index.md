@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a9280d06d6e78ec8fc35d3a7a0f7f98d921370e0
 ---
 
-**`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナー内の[**正の余白**](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)のうち、フレックスアイテムの[主軸長](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)に割り当てる量を指定するフレックス成長率を設定します。
+**`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナー内の[**正の余白**](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)のうち、フレックスアイテムの[主軸長](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)に割り当てる量を指定するフレックス成長率を設定します。
 
 フレックスコンテナーの主軸長が、そのフレックスアイテムの主軸長を結合した長さよりも長い場合、この正の余白はフレックスアイテム間で分配され、各フレックスアイテムが伸長する大きさは、コンテナーのすべてのアイテムのフレックス伸長係数の合計の割合で按分した値になります。
 
@@ -156,7 +156,7 @@ div > div {
 ## 関連情報
 
 - {{cssxref("flex")}} 一括指定プロパティ
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
 - [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) (CSS-Tricks, 2017)

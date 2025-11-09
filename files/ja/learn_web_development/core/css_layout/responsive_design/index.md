@@ -74,7 +74,7 @@ HTML は基本的にレスポンシブ、つまり流動的です。CSS を含�
 
 ## メディアクエリー
 
-[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を使用すると、一連の検査（ユーザーの画面が特定の幅より大きいかどうか、または特定の解像度かどうかなど）を実行し、 CSS を選択的に適用して、ユーザーのニーズに合わせてページを適切にスタイル設定することができます。
+[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を使用すると、一連の検査（ユーザーの画面が特定の幅より大きいかどうか、または特定の解像度かどうかなど）を実行し、 CSS を選択的に適用して、ユーザーのニーズに合わせてページを適切にスタイル設定することができます。
 
 例えば、次のメディアクエリーは、現在のウェブページが画面メディアとして表示され（したがって印刷文書ではない）、ビューポートの幅が `80rem` 以上であるかどうかを検査します。 `.container` セレクターの CSS は、これら 2 つのことが当てはまる場合にのみ適用されます。
 
@@ -260,7 +260,7 @@ video {
 その他の有用なコツです。
 
 - ウェブサイトの画像には常に適切な画像形式（PNG や JPG など）を使用し、ウェブサイトに掲載する前にグラフィックエディターを使ってファイルサイズを最適化してください。
-- [グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)や[影](/ja/docs/Web/CSS/Reference/Properties/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
+- [グラデーション](/ja/docs/Web/CSS/Guides/Images/Using_gradients)や[影](/ja/docs/Web/CSS/Reference/Properties/box-shadow)のような CSS の機能を使用することで、画像を使用せずに視覚効果を実装することができます。
 - {{htmlelement("video")}}/{{htmlelement("audio")}} 要素の中にある {{htmlelement("source")}} 要素の media 属性内では、メディアクエリーを使用することができ、様々な端末に最適な映像/音声ファイルを提供することができます。
 
 ## レスポンシブ書体

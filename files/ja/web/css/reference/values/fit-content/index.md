@@ -70,4 +70,4 @@ block-size: fit-content;
 ## 関連情報
 
 - 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("max-content")}}
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール

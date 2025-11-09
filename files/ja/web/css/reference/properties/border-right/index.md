@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-**`border-right`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
+**`border-right`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/Reference/Properties/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS デモ: border-right")}}
 

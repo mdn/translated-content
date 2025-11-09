@@ -198,7 +198,7 @@ Prenons une image d'une taille qui ne correspond pas forcément à notre documen
 
 {{EmbedLiveSample("", 340, 340)}}
 
-Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) pour plus d'exemples.
+Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images) pour plus d'exemples.
 
 ## Spécifications
 
@@ -210,6 +210,6 @@ Voir [Redimensionner des images d'arrière-plan](/fr/docs/Web/CSS/CSS_background
 
 ## Voir aussi
 
-- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Redimensionner les arrière-plans SVG](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [Redimensionner les arrière-plans SVG](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
 - [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)

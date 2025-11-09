@@ -39,7 +39,7 @@ l10n:
 - {{cssxref("vertical-align")}} プロパティ
 - {{cssxref("text-align")}} プロパティ
 
-- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- [CSS ボックスサイズ指定](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
   - {{cssxref("box-sizing")}}
   - {{cssxref("height")}}
   - {{cssxref("max-width")}}
@@ -48,7 +48,7 @@ l10n:
   - {{cssxref("width")}}
   - {{cssxref("min-content")}} キーワード
 
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール
   - {{cssxref("border")}} 一括指定
   - {{cssxref("border-width")}}
   - {{cssxref("border-style")}}
@@ -75,7 +75,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュール
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS 断片化](/ja/docs/Web/CSS/Guides/Fragmentation)モジュール

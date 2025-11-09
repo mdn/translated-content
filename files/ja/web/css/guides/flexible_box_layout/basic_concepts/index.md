@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 40590706f9ab23242bcd8c8966cc683d7d5b18aa
 ---
 
-[フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)（通常フレックスボックスと呼ばれる）は、アイテム間の余白を分配するための一次元レイアウトモデルで、数多くの配置機能を含んでいます。この記事ではフレックスボックスの主な機能の概要を説明し、このガイドの残りの部分でさらに詳しく説明します。
+[フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)（通常フレックスボックスと呼ばれる）は、アイテム間の余白を分配するための一次元レイアウトモデルで、数多くの配置機能を含んでいます。この記事ではフレックスボックスの主な機能の概要を説明し、このガイドの残りの部分でさらに詳しく説明します。
 
-フレックスボックスが一次元であることは、フレックスボックスが一つの次元、つまり行か列のいずれかの方向にしかレイアウトしないことを述べています。これは [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)が行と列の二次元を同時に制御するモデルであることと対照的です。
+フレックスボックスが一次元であることは、フレックスボックスが一つの次元、つまり行か列のいずれかの方向にしかレイアウトしないことを述べています。これは [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)が行と列の二次元を同時に制御するモデルであることと対照的です。
 
 ## フレックスボックス 2 つの軸
 
@@ -43,9 +43,9 @@ l10n:
 
 ## 行の先頭と末尾
 
-フレックスボックスが文書の書字方向を前提としないことも、重要な理解のひとつです。フレックスボックスは、テキストのすべての行が文書の左上から始まり、右側に向かって実行し、新しい行が他の行の下に1行ずつ現れることを想定しているわけではありません。むしろ、他の[論理プロパティや値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)のように、すべての書字方向に対応しています。
+フレックスボックスが文書の書字方向を前提としないことも、重要な理解のひとつです。フレックスボックスは、テキストのすべての行が文書の左上から始まり、右側に向かって実行し、新しい行が他の行の下に1行ずつ現れることを想定しているわけではありません。むしろ、他の[論理プロパティや値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)のように、すべての書字方向に対応しています。
 
-後述する[フレックスボックスと書字方向の関係を読む](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods#書字方向)こともできますが、フレックスアイテムが流れる方向を説明するときに、左右や上下の話をしない理由は、以下の説明で理解できると思います。
+後述する[フレックスボックスと書字方向の関係を読む](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods#書字方向)こともできますが、フレックスアイテムが流れる方向を説明するときに、左右や上下の話をしない理由は、以下の説明で理解できると思います。
 
 もし `flex-direction` が `row` で言語が英語の場合、主軸の先頭は左で末尾は右になります。
 
@@ -165,7 +165,7 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 {{EmbedLiveSample("flex-wrap")}}
 
-フレックスアイテムの折り返しについての詳細は、[フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)を参照してください。
+フレックスアイテムの折り返しについての詳細は、[フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)を参照してください。
 
 ## flex-flow 一括指定プロパティ
 
@@ -207,7 +207,7 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-以下でこれらのプロパティを簡単に見ていきますが、より包括的な情報が必要な場合は、[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)を参照してください。
+以下でこれらのプロパティを簡単に見ていきますが、より包括的な情報が必要な場合は、[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)を参照してください。
 
 上述のプロパティについて理解する前に、**分配可能な余白** (available space) の概念について考える必要があります。上述のプロパティを変更するということは、アイテム間での分配可能な余白の分配のしかたを変えるということです。この分配可能な余白についての考え方は、アイテムの配置について考える時に重要になります。
 
@@ -233,7 +233,7 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 `flex-grow` プロパティが主軸上の余白の追加を扱う一方で、`flex-shrink` は余白の取りあげ方を制御します。 アイテムを配置するのに十分な余白がコンテナーになく、`flex-shrink` に正の整数が設定されていれば、アイテムは `flex-basis` よりも小さくなります。`flex-grow` と同様に、あるアイテムの収縮するスピードを他のアイテムより早くするために、異なる値を設定することができます。 つまり `flex-shrink` により大きな値が設定されているアイテムは、他のより小さな値が設定されている兄弟要素よりも早く収縮します。
 
-アイテムは {{cssxref("min-content")}} のサイズまで縮小することができます。この最小サイズは、実際に起こる収縮量を計算する際に考慮されるため、 `flex-shrink` は `flex-grow` よりも挙動が安定しないように見えてしまう可能性があります。そのため、そのアルゴリズムがどのように動くかについての詳細は、[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)の記事に書かれています。
+アイテムは {{cssxref("min-content")}} のサイズまで縮小することができます。この最小サイズは、実際に起こる収縮量を計算する際に考慮されるため、 `flex-shrink` は `flex-grow` よりも挙動が安定しないように見えてしまう可能性があります。そのため、そのアルゴリズムがどのように動くかについての詳細は、[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)の記事に書かれています。
 
 > [!NOTE]
 > `flex-grow` や `flex-shrink` に指定する値は比率です。一般的には、たとえばあるアイテムを他の `flex: 1 1 200px` に設定したアイテムより 2 倍の比率で拡大させたいときには、 `flex: 2 1 200px` を設定します。しかし、望むならば `flex: 10 1 200px` と `flex: 20 1 200px` という書き方もできます。
@@ -286,7 +286,7 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 - `flex: none`
 - `flex: <正の数>`
 
-`initial` のは [CSS 全般の値](/ja/docs/Web/CSS/CSS_values_and_units#css_全般の値)で、プロパティの初期値を表します。 `flex: initial` を設定すると、 3 つの個別指定プロパティの[初期値](#初期値)にリセットされ、`flex: 0 1 auto` と同じになります。この場合 `flex-grow` は `0` となるため、アイテムが `flex-basis` よりも大きくなることはありません。`flex-shrink` は `1` なので、必要な場合にははみ出さずに収縮します。 `flex-basis` の値は `auto` です。アイテムに設定されている主軸方向の寸法か、またはアイテムの内容の寸法がフレックスアイテムの寸法として使用されます。
+`initial` のは [CSS 全般の値](/ja/docs/Web/CSS/Guides/Values_and_units#css_全般の値)で、プロパティの初期値を表します。 `flex: initial` を設定すると、 3 つの個別指定プロパティの[初期値](#初期値)にリセットされ、`flex: 0 1 auto` と同じになります。この場合 `flex-grow` は `0` となるため、アイテムが `flex-basis` よりも大きくなることはありません。`flex-shrink` は `1` なので、必要な場合にははみ出さずに収縮します。 `flex-basis` の値は `auto` です。アイテムに設定されている主軸方向の寸法か、またはアイテムの内容の寸法がフレックスアイテムの寸法として使用されます。
 
 `flex: auto` を使用すると、 `flex: 1 1 auto` を使用することと同等になります。これは `flex: initial` と似ていますが、アイテムがコンテナーを埋めるように引き伸ばされる点を除きます。
 
@@ -425,7 +425,7 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 {{EmbedLiveSample("justify-content")}}
 
-[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)の記事では、これらのプロパティがどのように動作するのか深く理解するために、より詳細に述べています。しかし上述の簡潔な例でもほとんどの用途で役に立つでしょう。
+[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)の記事では、これらのプロパティがどのように動作するのか深く理解するために、より詳細に述べています。しかし上述の簡潔な例でもほとんどの用途で役に立つでしょう。
 
 ### justify-items
 
@@ -435,8 +435,8 @@ CSS のすべてのプロパティと同様に、いくつかの初期値が定�
 
 [`place-items`](/ja/docs/Web/CSS/Reference/Properties/place-items) プロパティは `align-items` と `justify-items` の一括指定プロパティです。フレックスコンテナーに設定すると、配置は設定されますが位置ぞろえは設定されず、 `justify-items` はフレックスボックスでは無視されます。
 
-別な一括指定プロパティとして [`place-content`](/ja/docs/Web/CSS/Reference/Properties/place-content) があり、これは {{cssxref("align-content")}} プロパティと `justify-content` プロパティを定義します。 `align-content` プロパティは折り返しのあるフレックスコンテナーにのみ効果があり、[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)で解説しています。
+別な一括指定プロパティとして [`place-content`](/ja/docs/Web/CSS/Reference/Properties/place-content) があり、これは {{cssxref("align-content")}} プロパティと `justify-content` プロパティを定義します。 `align-content` プロパティは折り返しのあるフレックスコンテナーにのみ効果があり、[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)で解説しています。
 
 ## 次のステップ
 
-この記事で、フレックスボックスの基本的な特徴についての理解ができたと思います。次の記事では[フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)を見ていきます。
+この記事で、フレックスボックスの基本的な特徴についての理解ができたと思います。次の記事では[フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)を見ていきます。

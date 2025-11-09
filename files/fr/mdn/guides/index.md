@@ -23,7 +23,7 @@ Cette page propose une sélection de ressources d'apprentissage parmi les plus p
   - : Notre tutoriel CSS complet, des premiers pas à la mise en forme du texte, la création de mises en page, et plus encore.
 - [Guides de mise en page CSS](/fr/docs/Web/CSS/Guides)
   - : Il existe de nombreux guides sur la mise en page CSS sur MDN, cette page les regroupe tous.
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
   - : Les animations CSS permettent d'animer les transitions entre différentes configurations de style. Ce guide vous aide à débuter avec les propriétés d'animation.
 
 ## JavaScript
@@ -59,7 +59,7 @@ Cette page propose une sélection de ressources d'apprentissage parmi les plus p
 
 ## Polices de caractères
 
-- [Guide des polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [Guide des polices variables](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : Découvrez comment utiliser les polices variables dans vos créations.
 - [Le format Web Open Font Format (WOFF)](/fr/docs/Web/CSS/CSS_fonts/WOFF)
   - : WOFF (Web Open Font Format) est un format de fichier de police librement utilisable sur le web.

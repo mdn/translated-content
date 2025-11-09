@@ -6,7 +6,7 @@ original_slug: Web/CSS/border-width
 
 {{CSSRef}}
 
-La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui définit la largeur de la bordure d'un élément.
+La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui définit la largeur de la bordure d'un élément.
 
 Cette propriété raccourcie définit les propriétés détaillées
 

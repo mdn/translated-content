@@ -26,18 +26,18 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 
 [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、経験豊富なウェブ開発者向けの包括的なリファレンスであり、CSS のすべてのプロパティと概念を記述しています。
 
-- [言語の構文と書式](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)と[継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)と[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)、[擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)、[入れ子](/ja/docs/Web/CSS/CSS_nesting)、[スコープ化](/ja/docs/Web/CSS/CSS_scoping)、[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)
-- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)（[メディア](/ja/docs/Web/CSS/CSS_media_queries)や[コンテナー](/ja/docs/Web/CSS/CSS_containment)クエリーを含む）
-- [CSS 単位と値](/ja/docs/Web/CSS/CSS_values_and_units)および[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
-- [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [CSS 一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)レイアウト
-- [アニメーション](/ja/docs/Web/CSS/Reference/Properties/animation)、[トランジション](/ja/docs/Web/CSS/CSS_transitions)、[座標変換](/ja/docs/Web/CSS/CSS_transforms)
+- [言語の構文と書式](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)と[継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)と[カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)、[擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)、[入れ子](/ja/docs/Web/CSS/Guides/Nesting)、[スコープ化](/ja/docs/Web/CSS/Guides/Scoping)、[シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)
+- [CSS アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)（[メディア](/ja/docs/Web/CSS/Guides/Media_queries)や[コンテナー](/ja/docs/Web/CSS/Guides/Containment)クエリーを含む）
+- [CSS 単位と値](/ja/docs/Web/CSS/Guides/Values_and_units)および[関数記法](/ja/docs/Web/CSS/Reference/Values/Functions)
+- [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)と[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)
+- [重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)コンテキスト
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [CSS 一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- [CSS フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)レイアウト
+- [アニメーション](/ja/docs/Web/CSS/Reference/Properties/animation)、[トランジション](/ja/docs/Web/CSS/Guides/Transitions)、[座標変換](/ja/docs/Web/CSS/Guides/Transforms)
 
 ## 料理帳
 

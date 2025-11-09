@@ -381,7 +381,7 @@ article div:last-child {
 
 ## CSS シェイプ
 
-CSSではすべてが長方形のボックスであり、画像は物理的に長方形のボックスであることは事実ですが、[CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)を使用することで、コンテンツが長方形でないものの周りを流れるように見せることができます。
+CSSではすべてが長方形のボックスであり、画像は物理的に長方形のボックスであることは事実ですが、[CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)を使用することで、コンテンツが長方形でないものの周りを流れるように見せることができます。
 
 CSS シェイプ仕様書では、長方形以外の図形にテキストを回り込ませることができます。特に、テキストを回り込ませることができる余白のある画像で作業するときに有益です。
 
@@ -415,7 +415,7 @@ img {
 > [!NOTE]
 > Firefox では、開発者ツールの[シェイプインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)を使用してシェイプを検査することができます。
 
-`circle()` 関数はいくつか定義されている基本的なシェイプの一つに過ぎませんが、シェイプを作成する方法はいくつもあります。CSS シェイプの詳細情報とサンプルコードについては、MDN の [CSS シェイプガイド](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)を参照してください。
+`circle()` 関数はいくつか定義されている基本的なシェイプの一つに過ぎませんが、シェイプを作成する方法はいくつもあります。CSS シェイプの詳細情報とサンプルコードについては、MDN の [CSS シェイプガイド](/ja/docs/Web/CSS/Guides/Shapes/Overview)を参照してください。
 
 ## -webkit-background-clip: text
 

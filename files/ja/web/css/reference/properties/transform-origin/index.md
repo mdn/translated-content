@@ -205,7 +205,7 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)にリセットされます。
+`transform-origin` プロパティは、オフセットを表す 1 ～ 3 つの値を使用して指定することができます。明示的に定義されなかったオフセットは、それぞれの対応する[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)にリセットされます。
 
 単一の {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} が定義された場合、これは水平方向のオフセットを表します。
 
@@ -451,5 +451,5 @@ transform-origin: 100% -30%;
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

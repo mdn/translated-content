@@ -34,10 +34,10 @@ CSS ルビレイアウトモジュールは、以下の値を {{cssxref("display
 
 ## 関連概念
 
-- [CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュール
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
   - {{cssxref("display")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration)モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/Guides/Text_decoration)モジュール
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-emphasis-position")}}
   - {{cssxref("text-emphasis-style")}}

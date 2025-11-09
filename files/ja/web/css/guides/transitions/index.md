@@ -24,7 +24,7 @@ l10n:
 
 ## ガイド
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
   - : CSS を使ってスムーズな変化を作る方法についての、ステップバイステップのチュートリアルです。この記事では関連する各 CSS プロパティと、それらがどのように作用するかを解説します。
 
 ## 仕様書
@@ -33,4 +33,4 @@ l10n:
 
 ## 関連情報
 
-- CSS トランジションに関連して、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)では、より細かいプロパティの動きの制御を提供します。
+- CSS トランジションに関連して、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)では、より細かいプロパティの動きの制御を提供します。

@@ -184,7 +184,7 @@ details:last-of-type summary::-webkit-details-marker {
 }
 ```
 
-CSS には、 `[open]` [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)が含まれており、 `open` 属性が存在する（`<details>` が開いている）場合にのみ一致します。 {{cssxref(":first-of-type")}} および {{cssxref(":last-of-type")}} 擬似クラスは、同じ型の最初の要素および兄弟要素をターゲットにします。`-webkit-` 接頭辞付き擬似要素を {{cssxref(":is()")}} 擬似クラスの中に含めて[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)にし、接頭辞付き擬似要素がブラウザーにとって不正な場合でも、セレクターブロック全体が不正になることを防ぎます。また、CSS の[入れ子](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)も使用しています。[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールを参照してください。
+CSS には、 `[open]` [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)が含まれており、 `open` 属性が存在する（`<details>` が開いている）場合にのみ一致します。 {{cssxref(":first-of-type")}} および {{cssxref(":last-of-type")}} 擬似クラスは、同じ型の最初の要素および兄弟要素をターゲットにします。`-webkit-` 接頭辞付き擬似要素を {{cssxref(":is()")}} 擬似クラスの中に含めて[寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)にし、接頭辞付き擬似要素がブラウザーにとって不正な場合でも、セレクターブロック全体が不正になることを防ぎます。また、CSS の[入れ子](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)も使用しています。[CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュールを参照してください。
 
 #### HTML
 

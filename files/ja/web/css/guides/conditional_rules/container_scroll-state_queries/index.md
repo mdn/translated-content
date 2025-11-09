@@ -8,14 +8,14 @@ l10n:
 
 **コンテナースクロール状態クエリー**は、[コンテナークエリー](/ja/docs/Web/CSS/Reference/At-rules/@container)の一種です。コンテナーのサイズに基づいて子孫要素にスタイルを選択的に適用する代わりに、スクロール状態クエリーを使用すると、コンテナーのスクロール状態に基づいて子孫要素にスタイルを選択的に適用することができます。これには、コンテナーが部分的にスクロールされているかどうか、[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)の祖先にスナップされているかどうか、 [`position: sticky`](/ja/docs/Web/CSS/Reference/Properties/position) によって配置され、{{glossary("scroll container", "スクロールコンテナー")}}の祖先の境界に固定されているかどうかを含めることができます。
 
-この記事では、コンテナーのスクロール状態クエリーの使用方法について、それぞれの種類の例を交えて説明します。コンテナークエリーに関する基礎知識がある方を対象としています。コンテナークエリーについてよく分からない方は、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)を一読してから続けてください。
+この記事では、コンテナーのスクロール状態クエリーの使用方法について、それぞれの種類の例を交えて説明します。コンテナークエリーに関する基礎知識がある方を対象としています。コンテナークエリーについてよく分からない方は、[CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)を一読してから続けてください。
 
 ## コンテナーのスクロール状態クエリーの種類
 
 `scroll-state()` クエリーで使用できる `@container` の記述子は 3 つあります。
 
 - `scrollable`: コンテナーが、ユーザーによるスクロール（例えば、スクロールバーをドラッグしたり、トラックパッドのジェスチャーを使用したり）によって、指定された方向にスクロールできるかどうかを問い合わせます。つまり、指定された方向にスクロールできるコンテンツが溢れているか、ということです。これは、スクロールコンテナーのスクロール位置に関連するスタイルを適用する場合に便利です。例えば、スクロールバーが上部に表示されているときに、ユーザーにスクロールしてコンテンツをさらに表示するよう促すヒントを表示し、ユーザーが実際にスクロールを開始したらそのヒントを非表示にすることができます。
-- `snapped`: コンテナーが、指定された軸に沿って[スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)コンテナーの祖先にスナップされているか、またはスナップされるかどうかを照会します。これは、要素がスクロールスナップコンテナーにスナップされている場合にスタイルを適用するのに役立ちます。例えば、スナップされた要素を何らかの方法で強調表示したり、前回は非表示だったコンテンツの一部を表示したりする場合などです。
+- `snapped`: コンテナーが、指定された軸に沿って[スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)コンテナーの祖先にスナップされているか、またはスナップされるかどうかを照会します。これは、要素がスクロールスナップコンテナーにスナップされている場合にスタイルを適用するのに役立ちます。例えば、スナップされた要素を何らかの方法で強調表示したり、前回は非表示だったコンテンツの一部を表示したりする場合などです。
 - `stuck`: {{cssxref("position")}} 値が `sticky` のコンテナーが、そのスクロールコンテナーの祖先の端に固定されているかどうかを照会します。これは、固定されたときに `position: sticky` 要素のスタイルを別々に指定する場合に便利です。たとえば、異なる配色やレイアウトを指定することができます。
 
 ## 構文概要
@@ -328,7 +328,7 @@ html {
 
 ## `snapped` クエリーの使用
 
-[スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)が実装されている場合にのみ関連しますが、スクロール状態の [`snapped`](/ja/docs/Web/CSS/Reference/At-rules/@container#snapped) クエリー（`scroll-state(snapped: value)` と記述）は、コンテナーが、指定された軸に沿って[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)の祖先にスナップされているか、またはスナップされるかどうかを検査します。そうでない場合、クエリーは false を返します。
+[スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)が実装されている場合にのみ関連しますが、スクロール状態の [`snapped`](/ja/docs/Web/CSS/Reference/At-rules/@container#snapped) クエリー（`scroll-state(snapped: value)` と記述）は、コンテナーが、指定された軸に沿って[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)の祖先にスナップされているか、またはスナップされるかどうかを検査します。そうでない場合、クエリーは false を返します。
 
 この場合の `value` は、要素のスナップする方向を示すものです。例えば、
 
@@ -841,7 +841,7 @@ header p {
 - {{Cssxref("container-type")}}
 - {{Cssxref("position")}}
 - {{Cssxref("@container")}}
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [CSS 条件付きクエリー](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
-- [CSS 位置指定](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [CSS 条件付きクエリー](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール
+- [CSS 位置指定](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール

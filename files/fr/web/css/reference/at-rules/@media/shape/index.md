@@ -74,7 +74,7 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
 - Le module d'[affichage arrondi CSS](/fr/docs/Web/CSS/CSS_round_display)
 - [Utiliser les variables d'environnement](/fr/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)

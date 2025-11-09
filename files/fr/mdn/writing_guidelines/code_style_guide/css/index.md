@@ -419,7 +419,7 @@ Si vous avez différents styles alternatifs sélectionnés par des seuils de req
 
 ### Requêtes de média « mobile first »
 
-Dans une feuille de style qui contient des styles [media query](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour différentes tailles cibles de zone d'affichage (<i lang="en">viewport</i>), incluez d'abord la mise en forme pour les écrans étroits/mobiles avant toute autre media query. Ajoutez la mise en forme pour les tailles de zone d'affichage plus larges via des media queries successives. Suivre cette règle présente de nombreux avantages expliqués dans [Conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+Dans une feuille de style qui contient des styles [media query](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour différentes tailles cibles de zone d'affichage (<i lang="en">viewport</i>), incluez d'abord la mise en forme pour les écrans étroits/mobiles avant toute autre media query. Ajoutez la mise en forme pour les tailles de zone d'affichage plus larges via des media queries successives. Suivre cette règle présente de nombreux avantages expliqués dans [Conception réactive](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Mise en page CSS par défaut pour les écrans étroits */

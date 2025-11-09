@@ -15,7 +15,7 @@ l10n:
 
 ### CSS
 
-- [CSS Nesting](/ja/docs/Web/CSS/CSS_nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
+- [CSS Nesting](/ja/docs/Web/CSS/Guides/Nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
 
 - [`math-style`](/ja/docs/Web/CSS/Reference/Properties/math-style) および [`math-depth`](/ja/docs/Web/CSS/Reference/Properties/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 

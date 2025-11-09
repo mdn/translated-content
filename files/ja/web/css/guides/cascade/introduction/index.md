@@ -8,7 +8,7 @@ l10n:
 
 **カスケード**は、異なるソースから来るプロパティ値を組み合わせる方法を定義するアルゴリズムです。カスケードでは、複数の[オリジン](#オリジンの種類)や[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)の宣言が要素のプロパティに値を設定する場合に、何が優先されるかを定義します。
 
-これは*カスケーディング*スタイルシートという名前で強調されているように、 CSS の中心を占めるものです。[セレクター](/ja/docs/Web/CSS/CSS_selectors)が要素に一致する場合、優先順位の低いオリジンやレイヤーのセレクターがより高い[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を持っていたとしても、優先順位の最も高いオリジンのプロパティ値が適用されます。
+これは*カスケーディング*スタイルシートという名前で強調されているように、 CSS の中心を占めるものです。[セレクター](/ja/docs/Web/CSS/Guides/Selectors)が要素に一致する場合、優先順位の低いオリジンやレイヤーのセレクターがより高い[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)を持っていたとしても、優先順位の最も高いオリジンのプロパティ値が適用されます。
 
 この記事では、カスケードとは何か、 {{Glossary("CSS")}} の[宣言](/ja/docs/Web/API/CSSStyleDeclaration)をカスケードする順番、そしてウェブ開発者にどのように影響するかを説明します。
 
@@ -26,7 +26,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
 
 ユーザーエージェントスタイルシートに関するいくつかの制約は HTML 仕様書によって設定されていますが、ブラウザーにはまだ多くの自由度があります。つまり、ブラウザーごとに大きな違いがあります。開発プロセスを簡素化するために、ウェブ開発者は多くの場合、 CSS リセットスタイルシート（例えば [normalize.css](https://github.com/necolas/normalize.css)）を使用して、あらゆるブラウザーが特定のニーズに合わせて変更を開始する前に、共通のプロパティ値を既知の状態にします。
 
-ユーザーエージェントスタイルシートがプロパティの隣に [`!important`](/ja/docs/Web/CSS/CSS_cascade/Specificity#important_の例外) を含み、それを "important" にしない限り、リセットスタイルシートを含む作成者スタイルによって宣言されたスタイルは、関連するセレクターの詳細度にかかわらず、ユーザーエージェントスタイルより優先さ れます。
+ユーザーエージェントスタイルシートがプロパティの隣に [`!important`](/ja/docs/Web/CSS/Guides/Cascade/Specificity#important_の例外) を含み、それを "important" にしない限り、リセットスタイルシートを含む作成者スタイルによって宣言されたスタイルは、関連するセレクターの詳細度にかかわらず、ユーザーエージェントスタイルより優先さ れます。
 
 ### 作成者スタイルシート
 
@@ -60,7 +60,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
    | 7              | ユーザーエージェント（ブラウザー） | `!important` |
    | 8              | CSS トランジション                 |              |
 
-3. **詳細度**: あるオリジンと等しい場合、ルールの[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を考慮して、ある値を選択することができる。セレクターの詳細度を比較し、最も高い詳細度を持つ宣言が勝利します。
+3. **詳細度**: あるオリジンと等しい場合、ルールの[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)を考慮して、ある値を選択することができる。セレクターの詳細度を比較し、最も高い詳細度を持つ宣言が勝利します。
 4. **スコープ近接性**: 優先順位を持つオリジンレイヤーの 2 つのセレクターが同じ詳細度である場合、 DOM 階層内でスコープルートまでのホップ数が最も少ないスコープルール内のプロパティ値が優先されます。詳細および例えばについては、 [`@scope` の競合の解決方法](/ja/docs/Web/CSS/Reference/At-rules/@scope#scope_の競合の解決方法)をご覧ください。
 5. **出現順**: 優先順位を持つオリジンでは、ある特性に対して、同等の詳細度を持つセレクターに一致するスタイルブロックに競合する値がある場合、スタイルの順序の最後の宣言が適用されます。
 
@@ -73,7 +73,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
 > [!NOTE]
 > **トランジションとアニメーション**
 >
-> アニメーションで設定されたプロパティ値 {{cssxref('@keyframes')}} は、すべての通常のスタイル（[`!important`](/ja/docs/Web/CSS/CSS_cascade/Specificity#important_の例外)を設定していないもの）よりも優先されます。
+> アニメーションで設定されたプロパティ値 {{cssxref('@keyframes')}} は、すべての通常のスタイル（[`!important`](/ja/docs/Web/CSS/Guides/Cascade/Specificity#important_の例外)を設定していないもの）よりも優先されます。
 >
 > {{cssxref('transition')}} で設定されているプロパティ値は、たとえ `!important` でマークされているものであっても、他のすべての設定値より優先されます。
 
@@ -336,7 +336,7 @@ CSS 宣言のみが、つまりプロパティ/値の組だけが、カスケー
 
 ### アットルール
 
-宣言以外のエンティティを含む CSS [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)、例えば記述子を含む {{ cssxref("@font-face")}} などは、カスケードには関与しません。
+宣言以外のエンティティを含む CSS [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)、例えば記述子を含む {{ cssxref("@font-face")}} などは、カスケードには関与しません。
 
 ほとんどの場合、アットルールで定義されたプロパティと記述子はカスケードには関与しません。アットルール全体だけがカスケードに関与します。例えば、`@font-face`ルールの中では、フォント名は [`font-family`](/ja/docs/Web/CSS/Reference/At-rules/@font-face/font-family) 記述子によって識別されます。同じ記述子を持つ複数の `@font-face` ルールが定義されている場合、全体として最も適切な `@font-face` のみが考慮されます。同じように適切なものが複数ある場合は、アルゴリズムのステップ 1、2、および 4 を使用して `@font-face` 宣言全体が比較されます（アットルールに関しては詳細度がありません）。
 
@@ -358,7 +358,7 @@ CSS 宣言のみが、つまりプロパティ/値の組だけが、カスケー
 
 ## CSS アニメーションとカスケード
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)は、 {{cssxref("@keyframes")}} アットルールを使用して、状態変化のアニメーションを定義します。キーフレームはカスケードされません。つまり、 CSS は常に単一の `@keyframes` から値を取得し、複数の値を混在させることはありません。複数のキーフレームアニメーションが同じアニメーション名で定義されている場合、最後に定義された `@keyframes` がオリジンとレイヤーで最も優先されます。たとえ、 `@keyframes` が異なるプロパティをアニメーションさせる場合でも、 1 つの `@keyframes` 定義だけが使用されます。同じ名前の `@keyframes` は決して結合されません。
+[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)は、 {{cssxref("@keyframes")}} アットルールを使用して、状態変化のアニメーションを定義します。キーフレームはカスケードされません。つまり、 CSS は常に単一の `@keyframes` から値を取得し、複数の値を混在させることはありません。複数のキーフレームアニメーションが同じアニメーション名で定義されている場合、最後に定義された `@keyframes` がオリジンとレイヤーで最も優先されます。たとえ、 `@keyframes` が異なるプロパティをアニメーションさせる場合でも、 1 つの `@keyframes` 定義だけが使用されます。同じ名前の `@keyframes` は決して結合されません。
 
 ```css
 p {
@@ -416,9 +416,9 @@ p {
 
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値), [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値), [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値), [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
+- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値), [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値), [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値), [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)

@@ -60,7 +60,7 @@ sRGB 色を表現するために、`rgba()` 関数も使用できます。これ
 
 ### 値
 
-以下は、絶対値および [相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors) の両方に対して許可される値の説明です。
+以下は、絶対値および [相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors) の両方に対して許可される値の説明です。
 
 #### 絶対値構文
 
@@ -366,6 +366,6 @@ div.rgba {
 ## 関連情報
 
 - {{CSSXref("&lt;color&gt;")}} データ型: すべての色記法の一覧
-- [色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)
+- [色選択ツール](/ja/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS 色](/ja/docs/Web/CSS/Guides/Colors)

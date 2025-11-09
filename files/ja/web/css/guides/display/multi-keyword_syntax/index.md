@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-[CSS 表示方法モジュール](/ja/docs/Web/CSS/CSS_display)は、 CSS の [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
+[CSS 表示方法モジュール](/ja/docs/Web/CSS/Guides/Display)は、 CSS の [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
 
 > [!NOTE]
 > 複数キーワード構文は、「2 値構文」または「複数値構文」とも呼ばれています。
@@ -21,7 +21,7 @@ h1 {
 }
 ```
 
-`display` プロパティを使うと、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)も `display: grid` や `display: flex` を設定することで使用することができます。理解する上で重要なことは、要素の `display` 値を変更することで、その要素の直接の子要素の整形コンテキストを変更することができるという考え方です。 `display: flex` や `display: grid` を使用すると、要素の子はフレックスやグリッドのアイテムとなり、グリッドまたはフレックスボックス仕様のプロパティに応答します。
+`display` プロパティを使うと、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)も `display: grid` や `display: flex` を設定することで使用することができます。理解する上で重要なことは、要素の `display` 値を変更することで、その要素の直接の子要素の整形コンテキストを変更することができるという考え方です。 `display: flex` や `display: grid` を使用すると、要素の子はフレックスやグリッドのアイテムとなり、グリッドまたはフレックスボックス仕様のプロパティに応答します。
 
 しかし、グリッドとフレックスボックスが示すのは、要素には**外部**と**内部**の両方の表示型があるということです。外側の表示型は、その要素がブロックレベルかインラインレベルかを表します。内側の表示型は、そのボックスの子要素がどのように動作するかを記述します。
 
@@ -142,14 +142,14 @@ body {
 
 ## display: block flow-root と display: inline flow-root
 
-これらの新しい値が CSS レイアウトの明確化にどのように役立つかについて、表にあるあまり馴染みがないと思われる値について見てみましょう。複数キーワードの `display: block flow-root` は、単一の値 `display: flow-root` に対応します。この値の唯一の目的は、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成することです。 BFC は、ボックスの中にあるものがボックスの中に留まり、ボックスの外にあるものがボックスの中に侵入できないことを保証します。
+これらの新しい値が CSS レイアウトの明確化にどのように役立つかについて、表にあるあまり馴染みがないと思われる値について見てみましょう。複数キーワードの `display: block flow-root` は、単一の値 `display: flow-root` に対応します。この値の唯一の目的は、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) を生成することです。 BFC は、ボックスの中にあるものがボックスの中に留まり、ボックスの外にあるものがボックスの中に侵入できないことを保証します。
 
 以下の例では、 2 つの `<p>` 要素があり、そのうち 1 つは `<div>` の中にあって、どのように display の値が整形コンテキストに影響するかを表しています。
 デモコントロールのある最初の `<div>` 要素は表示していないので、その後に続く要素に集中します。
 注目すべき要素は「親」、「子」、「兄弟」の `<div>` 要素と `<p>` 要素で、これらの要素は ID によって区別することができます。
 
 このレイアウトで注目すべき点は、親要素と子要素の間にコンテンツがないことと、子要素に上マージンが適用されていることです。
-上マージンが効果的に子要素を親要素内に押し下げると思うかもしれませんが、代わりに起こるのは[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)と呼ばれる現象です。
+上マージンが効果的に子要素を親要素内に押し下げると思うかもしれませんが、代わりに起こるのは[マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)と呼ばれる現象です。
 この場合、子要素のマージンは親の外接ボックスよりかなり上まで広がり、親要素をページのさらに下に押し下げます。
 これは、子要素のボックスモデルを[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ブラウザーの開発ツールを利用して、ボックスモデルを見てみる)で検査するとわかります。
 

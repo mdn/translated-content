@@ -13,7 +13,7 @@ l10n:
 
 - [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : 表示コンテキスト（モニター上のウィンドウや、モバイル端末のビューポートなど）の中の位置や、印刷時の用紙上の位置などを指定するために使用する座標系です。
-- [ビューポートの概念](/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [ビューポートの概念](/ja/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : ビューポートの概念、すなわちその定義、CSS・SVG・モバイル端末における影響、そして視覚的ビューポートとレイアウトビューポートの違いについて。
 
 ## インターフェイス
@@ -123,10 +123,10 @@ l10n:
 ## 関連情報
 
 - [CSS オブジェクトモデル (CSSOM)](/ja/docs/Web/API/CSS_Object_Model) API
-- [CSSOM ビュー](/ja/docs/Web/CSS/CSSOM_view)モジュール
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSSOM ビュー](/ja/docs/Web/CSS/Guides/CSSOM_view)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - {{glossary("Viewport", "ビューポート")}}
 - {{glossary("Layout viewport", "レイアウトビューポート")}}
 - {{glossary("Visual viewport", "視覚的ビューポート")}}

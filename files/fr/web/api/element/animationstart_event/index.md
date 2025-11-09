@@ -41,4 +41,4 @@ L'évènement **`animationstart`** est déclenché quand une animation CSS a com
 
 ## Voir aussi
 
-- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utilisation des animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)

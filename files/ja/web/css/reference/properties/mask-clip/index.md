@@ -155,4 +155,4 @@ body {
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

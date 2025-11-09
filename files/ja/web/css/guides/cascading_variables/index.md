@@ -108,15 +108,15 @@ input {
 
 ## ガイド
 
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
   - : CSS や JavaScript でカスタムプロパティを使用する方法を、未定義値や不正な値の処理、代替値、継承などのヒントを交えて解説します。
 
-- [不正なカスタムプロパティ](/ja/docs/Web/CSS/CSS_syntax/Error_handling#不正なカスタムプロパティ)
+- [不正なカスタムプロパティ](/ja/docs/Web/CSS/Guides/Syntax/Error_handling#不正なカスタムプロパティ)
   - : カスタムプロパティの値がそのプロパティにとって不正なデータ型であった場合に、ブラウザーがプロパティ値を処理する方法について説明します。
 
 ## 関連概念
 
-- [CSS プロパティと値 API](/ja/docs/Web/CSS/CSS_properties_and_values_API) モジュール
+- [CSS プロパティと値 API](/ja/docs/Web/CSS/Guides/Properties_and_values_API) モジュール
   - [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルール
   - [`CSS.registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッド
 
@@ -126,7 +126,7 @@ input {
 
 ## 関連情報
 
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
 - [CSS `env()`](/ja/docs/Web/CSS/Reference/Values/env) 関数
 - [CSS `calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 関数
 - [`getPropertyValue()`](/ja/docs/Web/API/CSSStyleDeclaration/getPropertyValue) メソッド

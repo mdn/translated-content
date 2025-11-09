@@ -306,5 +306,5 @@ l10n:
 
 - [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API)
 - [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [端末の方向のためのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [端末の方向のためのメディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [学習: レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

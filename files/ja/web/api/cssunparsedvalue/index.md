@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}
 
-**`CSSUnparsedValue`** は {{domxref('CSS_Object_Model#css_型付きオブジェクトモデル_experimental','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を参照するプロパティ値を表します。これは、文字列の断片と変数の参照のリストから成ります。
+**`CSSUnparsedValue`** は {{domxref('CSS_Object_Model#css_型付きオブジェクトモデル_experimental','CSS 型付きオブジェクトモデル','',' ')}}のインターフェイスで、[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を参照するプロパティ値を表します。これは、文字列の断片と変数の参照のリストから成ります。
 
 カスタムプロパティは `CSSUnparsedValue` と {{cssxref("var", "var()")}} の参照（これは {{domxref('CSSVariableReferenceValue')}} で参照される）で表現されます。
 

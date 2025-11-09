@@ -69,10 +69,10 @@ l10n:
 ## 関連情報
 
 - [`aspect-ratio`](/ja/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio) メディア記述子
-- [アスペクト比の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)ガイド
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)ガイド
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュール
-- [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)モジュール
+- [アスペクト比の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)ガイド
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)ガイド
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)モジュール
+- [CSS コンテナー](/ja/docs/Web/CSS/Guides/Containment)モジュール
+- [CSS ボックスサイズ](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

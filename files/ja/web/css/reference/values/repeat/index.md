@@ -6,7 +6,7 @@ l10n:
   sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-**`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、[トラックリスト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
+**`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、[トラックリスト](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
 
 {{InteractiveExample("CSS デモ: repeat()")}}
 
@@ -93,7 +93,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 `repeat()` 関数は 2 つの引数を取ります。
 
 - **反復回数**: 最初の引数は、トラックリストが繰り返される回数を指定します。これは 1 以上の整数値で指定するか、キーワード値 [`auto-fill`](#auto-fill) または [`auto-fit`](#auto-fit) で指定します。これらのキーワード値は、グリッドコンテナーを埋めるのに必要な回数だけトラックの組み合わせを繰り返します。
-- **トラック**: 2 番目の引数は、繰り返されるトラックの組み合わせを指定します。基本的にこれは 1 つ以上の値で構成され、それぞれの値はそのトラックのサイズを表します。それぞれのサイズは [`<track-size>`](#track-size) または [`<fixed-size>`](#fixed-size) で指定します。また、トラックサイズの前後に [`<line-names>`](#line-names) 値を提供することで、各トラックの前後に 1 つ以上の[行名](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)を指定することもできます。
+- **トラック**: 2 番目の引数は、繰り返されるトラックの組み合わせを指定します。基本的にこれは 1 つ以上の値で構成され、それぞれの値はそのトラックのサイズを表します。それぞれのサイズは [`<track-size>`](#track-size) または [`<fixed-size>`](#fixed-size) で指定します。また、トラックサイズの前後に [`<line-names>`](#line-names) 値を提供することで、各トラックの前後に 1 つ以上の[行名](/ja/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)を指定することもできます。
 
 [`auto-fill`](#auto-fill) や [`auto-fit`](#auto-fit) を使用して反復回数を設定する場合、[`<fixed-size>`](#fixed-size) 型を使用してのみトラックサイズを指定することができ、 [`<track-size>`](#track-size) 型を使用することはできません。これで `repeat()` の構文が 3 種類になりました。
 
@@ -117,7 +117,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 }
 ```
 
-サブグリッドに行名を追加するために使用する `<name-repeat>` という第 4 の形式があります。これは [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid) キーワードでのみ使用し、行名のみを指定し、トラックサイズは指定しません。
+サブグリッドに行名を追加するために使用する `<name-repeat>` という第 4 の形式があります。これは [`subgrid`](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid) キーワードでのみ使用し、行名のみを指定し、トラックサイズは指定しません。
 
 ### 値
 
@@ -218,5 +218,5 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-flow")}}
-- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#グリッド定義の一括指定)

@@ -60,34 +60,34 @@ l10n:
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
 
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール
   - {{cssxref("::column")}}
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
-- [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ化](/ja/docs/Web/CSS/Guides/Scoping)モジュール
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
-- [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
+- [CSS シャドウ部品](/ja/docs/Web/CSS/Guides/Shadow_parts)モジュール
   - {{CSSXref("::part")}}
 
-- [CSS ビュー遷移](/ja/docs/Web/CSS/CSS_view_transitions)モジュール
+- [CSS ビュー遷移](/ja/docs/Web/CSS/Guides/View_transitions)モジュール
   - {{cssxref("::view-transition")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)
   - [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
-  - [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
+  - [結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#結合子)
   - [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)
   - [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)
   - [型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)
@@ -97,7 +97,7 @@ l10n:
 - [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性（`<input>` 要素）
 - [`:placeholder-shown`](/ja/docs/Web/CSS/Reference/Selectors/:placeholder-shown) セレクター
 
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)
   - {{cssxref("content")}} プロパティ
   - {{cssxref("quotes")}} プロパティ
 
@@ -113,9 +113,9 @@ l10n:
 
 ## 関連情報
 
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
-- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
+- [CSS シャドウ部品](/ja/docs/Web/CSS/Guides/Shadow_parts)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)

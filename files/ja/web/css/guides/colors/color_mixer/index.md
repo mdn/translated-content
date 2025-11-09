@@ -887,4 +887,4 @@ init();
 - {{CSSXref("&lt;color&gt;")}}
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}
-- [CSS 相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
+- [CSS 相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)

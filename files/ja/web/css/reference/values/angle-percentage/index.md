@@ -29,5 +29,5 @@ l10n:
 ## 関連情報
 
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient) および [`repeating-conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)

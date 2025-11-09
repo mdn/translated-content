@@ -13,7 +13,7 @@ CSS セレクターは、ツリー構造内の要素または要素の特定の�
 
 ### 単純セレクター
 
-**単純セレクター**とは、単一の型セレクター、属性セレクター、擬似クラスなどの単一の成分を持つセレクターのことで、他のセレクター成分や結合子と組み合わせたり含んだりすることがないものです。指定された要素が単純セレクターに一致すると言うのは、その単純セレクターが要素を正確に説明している場合です。単一の[基本セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#基本セレクター)、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含むセレクターは単純セレクターです。
+**単純セレクター**とは、単一の型セレクター、属性セレクター、擬似クラスなどの単一の成分を持つセレクターのことで、他のセレクター成分や結合子と組み合わせたり含んだりすることがないものです。指定された要素が単純セレクターに一致すると言うのは、その単純セレクターが要素を正確に説明している場合です。単一の[基本セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#基本セレクター)、[属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)、[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含むセレクターは単純セレクターです。
 
 ```css
 #myId {
@@ -25,7 +25,7 @@ CSS セレクターは、ツリー構造内の要素または要素の特定の�
 
 ### 複合セレクター
 
-**複合セレクター**は、[結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)で区切られていない一連の[単純セレクター](#単純セレクター)です。複合セレクターは、単一の要素に対する同時条件の集合を表します。指定された要素が複合セレクターに一致するというのは、その要素が複合セレクターに含まれるすべての単純セレクターに一致するときです。
+**複合セレクター**は、[結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#結合子)で区切られていない一連の[単純セレクター](#単純セレクター)です。複合セレクターは、単一の要素に対する同時条件の集合を表します。指定された要素が複合セレクターに一致するというのは、その要素が複合セレクターに含まれるすべての単純セレクターに一致するときです。
 
 ```css
 a#selected {
@@ -98,9 +98,9 @@ dt:has(+ img) ~ dd {
 
 ## 関連情報
 
-- [CSS セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [CSS セレクターと結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
 - [寛容なセレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list#寛容なセレクターリスト)
 - {{DOMXref("Document.querySelector()")}}
 - {{DOMXref("Document.querySelectorAll()")}}
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール

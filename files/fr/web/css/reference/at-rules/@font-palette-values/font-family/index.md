@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour spécifier à quelle famille de police les valeurs de palette doivent s'appliquer. Cette valeur doit correspondre exactement à celle utilisée lors de la définition de la propriété CSS {{cssxref("font-family")}}.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour spécifier à quelle famille de police les valeurs de palette doivent s'appliquer. Cette valeur doit correspondre exactement à celle utilisée lors de la définition de la propriété CSS {{cssxref("font-family")}}.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font
 }
 ```
 
-Les autres valeurs de palette qui suivent ne s'appliquent qu'à la famille de police spécifiée. Vous pouvez créer des [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-palette-values")}} pour d'autres familles de police en utilisant le même {{cssxref("dashed-ident", "&lt;dashed-ident&gt;")}}. Cela signifie que si vous avez plusieurs polices couleur, vous pouvez utiliser le même identifiant pour chacune.
+Les autres valeurs de palette qui suivent ne s'appliquent qu'à la famille de police spécifiée. Vous pouvez créer des [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} pour d'autres familles de police en utilisant le même {{cssxref("dashed-ident", "&lt;dashed-ident&gt;")}}. Cela signifie que si vous avez plusieurs polices couleur, vous pouvez utiliser le même identifiant pour chacune.
 
 ### Valeurs
 

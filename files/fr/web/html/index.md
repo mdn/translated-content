@@ -63,5 +63,5 @@ Les [guides HTML](/fr/docs/Web/HTML/Guides) vous aident à construire avec HTML 
 
 ## Sujets associés
 
-- [Appliquer de la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer de la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
   - : Cet article présente la plupart des façons d'utiliser CSS pour ajouter de la couleur au contenu HTML, en listant les parties des documents HTML qui peuvent être colorées et les propriétés CSS à utiliser.

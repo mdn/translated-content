@@ -139,8 +139,8 @@ Ici, vous pouvez voir les résultats en action. Lorsque vous déplacez la souris
 
 ## Voir aussi
 
-- Le [concept de viewport](/fr/docs/Web/CSS/CSSOM_view/Viewport_concepts)
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) : comment modifier un système de coordonnées
+- Le [concept de viewport](/fr/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) : comment modifier un système de coordonnées
 - Les coordonnées relatives à {{domxref("MouseEvent")}}&nbsp;:
   - {{domxref("MouseEvent.offsetX")}} et {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} et {{domxref("MouseEvent.clientY")}}

@@ -153,5 +153,5 @@ svg:hover path {
 - {{cssxref("stroke")}}
 - {{cssxref("basic-shape/path", "path()")}} 関数
 - {{cssxref("basic-shape")}} データ型
-- [CSS 図形の概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [CSS 図形](/ja/docs/Web/CSS/CSS_shapes)モジュール
+- [CSS 図形の概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS 図形](/ja/docs/Web/CSS/Guides/Shapes)モジュール

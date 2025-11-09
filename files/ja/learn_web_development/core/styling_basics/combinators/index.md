@@ -173,7 +173,7 @@ h1 ~ p {
 
 ## 入れ子による複雑なセレクターの作成
 
-[CSS 入れ子モジュール](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#結合子)により、結合子を使って[複雑なセレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑なセレクター)を作るルールを書くことができます。
+[CSS 入れ子モジュール](/ja/docs/Web/CSS/Guides/Nesting/Using#結合子)により、結合子を使って[複雑なセレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑なセレクター)を作るルールを書くことができます。
 
 ```css
 p {

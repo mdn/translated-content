@@ -16,6 +16,6 @@ CSS の**物理的プロパティ**は、物理的な次元もしくは要素の
 
 ## 関連情報
 
-- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
-- [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
+- [CSS ボックスサイズ](/ja/docs/Web/CSS/Guides/Box_sizing)モジュール

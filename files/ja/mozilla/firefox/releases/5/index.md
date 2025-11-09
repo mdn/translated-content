@@ -33,7 +33,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 
 ### CSS
 
-- [CSS Animations](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS Animations](/ja/docs/Web/CSS/Guides/Animations/Using)
   - : CSS Animations がサポートされました。`-moz-` 接頭辞をつければ利用可能です。
 
 ### DOM

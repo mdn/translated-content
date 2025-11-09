@@ -8,7 +8,7 @@ original_slug: Web/SVG/Element/use
 
 L'élement **`<use>`** permet la duplication de _nodes_ (noeuds du DOM, NDR) définis par [\<defs>](/fr/docs/Web/SVG/Reference/Element/defs) afin de les insérer par ailleurs. L'effet est le même que si les noeuds étaient créés dans une partie non-rendue (au sens de non-affichée) au sein du DOM puis "clonés" là où est utilisé l'élément `use` tel que le permet les [éléments de gabarit](/fr/docs/Web/HTML/Reference/Elements/template) grâce à HTML5.
 
-Puisque les noeuds clonés par `use` ne sont pas exposés, vous devez être attentif lorsque vous utilisez des règles de style [CSS](/fr/docs/Web/CSS) sur l'élément `use` et ses enfants "cachés". En effet les attributs CSS ne sont pas garantis d'être hérités lorsqu'ils seront clonés si vous n'explicitez pas correctement les [héritages CSS](/fr/docs/Web/CSS/CSS_cascade/Inheritance).
+Puisque les noeuds clonés par `use` ne sont pas exposés, vous devez être attentif lorsque vous utilisez des règles de style [CSS](/fr/docs/Web/CSS) sur l'élément `use` et ses enfants "cachés". En effet les attributs CSS ne sont pas garantis d'être hérités lorsqu'ils seront clonés si vous n'explicitez pas correctement les [héritages CSS](/fr/docs/Web/CSS/Guides/Cascade/Inheritance).
 
 Pour des raisons de sécurité, certains navigateurs peuvent appliquer la politique de _même-origine_ (c'est-à-dire le couple domaine et port identiques) pour l'élément `use` ce qui peut conduire à un refus de charger une URI depuis une origine différente conernant l'attribut {{SVGAttr("href")}}.
 

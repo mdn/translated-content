@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 484d4b26862be446f4c3a3d034e6de448bf4f659
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、アイテムをブロック方向とインライン方向の両方に一度に配置します。これは {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティの値を設定します。 2 つ目の値が設定されていない場合、1 つ目の値が使用されます。
+[CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、アイテムをブロック方向とインライン方向の両方に一度に配置します。これは {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティの値を設定します。 2 つ目の値が設定されていない場合、1 つ目の値が使用されます。
 
 {{InteractiveExample("CSS デモ: place-items")}}
 
@@ -352,7 +352,7 @@ values.addEventListener("change", (evt) => {
 - {{CSSxRef("align-self")}}
 - {{CSSxRef("justify-items")}}
 - {{CSSxRef("justify-self")}}
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール

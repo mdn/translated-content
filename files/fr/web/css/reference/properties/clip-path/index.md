@@ -144,13 +144,13 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 - `<geometry-box>`
   - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec {{cssxref("border-radius")}}) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
     - `margin-box`
-      - : La [boîte de marge](/fr/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
+      - : La [boîte de marge](/fr/docs/Web/CSS/Guides/Shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`
-      - : La [boîte de bordure](/fr/docs/Web/CSS/CSS_shapes/From_box_values#border-box) est utilisée comme boîte de référence.
+      - : La [boîte de bordure](/fr/docs/Web/CSS/Guides/Shapes/From_box_values#border-box) est utilisée comme boîte de référence.
     - `padding-box`
-      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
+      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/Guides/Shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
     - `content-box`
-      - : La [boîte de contenu](/fr/docs/Web/CSS/CSS_shapes/From_box_values#content-box) est utilisée comme boîte de référence.
+      - : La [boîte de contenu](/fr/docs/Web/CSS/Guides/Shapes/From_box_values#content-box) est utilisée comme boîte de référence.
     - `fill-box`
       - : La boîte englobante (<i lang="en">bounding box</i>) est utilisée comme boîte de référence.
     - `stroke-box`
@@ -162,7 +162,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Aucun chemin de rognage n'est créé.
 
 > [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context) (de la même façon qu'{{cssxref("opacity")}} avec des valeurs différentes de `1`).
+> Si [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (de la même façon qu'{{cssxref("opacity")}} avec des valeurs différentes de `1`).
 
 ## Définition formelle
 
@@ -282,7 +282,7 @@ Nous incluons deux {{htmlElement("div")}} éléments et un élément `<svg>` con
 
 #### CSS
 
-Nous utilisons [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) pour permettre à nos éléments de s'asseoir côte à côte avec un espace entre eux, s'il y a de l'espace disponible. Nous définissons une image de fond {{cssxref("gradient/conic-gradient", "conic-gradient()")}} sur les deux éléments `<div>`, fournissant un visuel intéressant à rogner, ainsi qu'une {{cssxref("border")}}.
+Nous utilisons [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) pour permettre à nos éléments de s'asseoir côte à côte avec un espace entre eux, s'il y a de l'espace disponible. Nous définissons une image de fond {{cssxref("gradient/conic-gradient", "conic-gradient()")}} sur les deux éléments `<div>`, fournissant un visuel intéressant à rogner, ainsi qu'une {{cssxref("border")}}.
 
 ```css
 body {
@@ -421,6 +421,6 @@ Sélectionnez différentes options pour changer la valeur de `clip-path`.
 - {{CSSxRef("filter")}}
 - {{cssxref("background-clip")}}
 - [Introduction au découpage CSS](/fr/docs/Web/CSS/CSS_masking/Clipping)
-- Le module de [masquage CSS](/fr/docs/Web/CSS/CSS_masking)
+- Le module de [masquage CSS](/fr/docs/Web/CSS/Guides/Masking)
 - L'attribut SVG {{SVGAttr("clip-path")}}
 - [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

@@ -125,4 +125,4 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 ## 関連情報
 
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール

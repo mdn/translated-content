@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 81cab7a9c34e7bb3867f5d6d7e70fc73d0308087
 ---
 
-**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) の既定値をカスタマイズすることができます。
+**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/Reference/Properties/font-palette) の既定値をカスタマイズすることができます。
 
 ## 構文
 
@@ -19,7 +19,7 @@ l10n:
 }
 ```
 
-[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/Reference/Values/var)で囲まれていません。
+[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/Reference/Values/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/Reference/Values/var)で囲まれていません。
 
 ### 記述子
 

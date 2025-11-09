@@ -7,7 +7,7 @@ l10n:
   sourceCommit: f5fd4776d1c0cd6e4cffc9649f7c4f44badb7ae2
 ---
 
-[CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュールは、ブラウザーによって生成され、開発者がスタイルを設定したスクロールボタンおよびスクロールマーカーを備えた、柔軟でアクセシビリティの高い純粋な CSS カルーセルを作成するための機能を定義します。このガイドでは、これらの機能を使用してカルーセルを作成する方法について説明します。
+[CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュールは、ブラウザーによって生成され、開発者がスタイルを設定したスクロールボタンおよびスクロールマーカーを備えた、柔軟でアクセシビリティの高い純粋な CSS カルーセルを作成するための機能を定義します。このガイドでは、これらの機能を使用してカルーセルを作成する方法について説明します。
 
 ## カルーセルの概念
 
@@ -41,7 +41,7 @@ CSS カルーセル機能は、 CSS と HTML だけを使用してカルーセ�
 - {{cssxref(":target-current")}}
   - : この擬似クラスは、現在アクティブなスクロールマーカーを選択するために使用できます。現在アクティブなマーカーにハイライトスタイルを提供するために使用でき、これはユーザビリティとアクセシビリティにとって重要です。
 - {{cssxref("::column")}}
-  - : この擬似要素は、[CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)を使用して、コンテンツを複数の段で表示するようにコンテナーが設定されている場合に生成される、個々の段を表します。 {{cssxref("::scroll-marker")}} と組み合わせて使用することで、各列にスクロールマーカーを生成することができます。
+  - : この擬似要素は、[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)を使用して、コンテンツを複数の段で表示するようにコンテナーが設定されている場合に生成される、個々の段を表します。 {{cssxref("::scroll-marker")}} と組み合わせて使用することで、各列にスクロールマーカーを生成することができます。
 
 ## 単一ページのカルーセル
 
@@ -71,7 +71,7 @@ HTML は、[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elemen
 
 ### フレックスボックスによるカルーセルレイアウト
 
-[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)を使用して、アイテムの単一の行を作成します。 `<ul>` はフレックスコンテナーであり、 `<li>` の子リストアイテムは、各アイテムがカルーセルの全幅を占めるように水平方向に表示されます。
+[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、アイテムの単一の行を作成します。 `<ul>` はフレックスコンテナーであり、 `<li>` の子リストアイテムは、各アイテムがカルーセルの全幅を占めるように水平方向に表示されます。
 
 順序なしリストは、{{cssxref("width")}} が `100vw` でビューポートの全幅を埋めるように作成されています。また、 {{cssxref("height")}} が `300px` と、いくらかの {{cssxref("padding")}} も指定されています。次に、フレックスボックスを使用して（{{cssxref("display")}} に `flex` を指定して）リストをレイアウトします。子リストアイテムが 1 行に表示されるように（{{cssxref("flex-direction")}} の既定値が `row` であるため）、各アイテムの間の {{cssxref("gap")}} を `4vw` に設定しています。
 
@@ -122,9 +122,9 @@ li:nth-child(even) {
 
 ### リスト内のスクロールスナップの設定
 
-この節では、 `<ul>` にオーバーフロー値を設定して{{glossary("scroll container", "スクロールコンテナー")}}にし、 [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)を適用して、コンテンツがスクロールされるとリストが各リストアイテムの中央にスナップするようにします。
+この節では、 `<ul>` にオーバーフロー値を設定して{{glossary("scroll container", "スクロールコンテナー")}}にし、 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を適用して、コンテンツがスクロールされるとリストが各リストアイテムの中央にスナップするようにします。
 
-`<ul>` の　{{cssxref("overflow-x")}} の値を `scroll` に設定して、そのコンテンツがビューポート全体ではなくリスト内で水平方向にスクロールするようにします。 [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)を使用して、それぞれの「ページ」にスナップするようにします。 {{cssxref("scroll-snap-type")}} の値を `x mandatory` を設定して、リストを[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)にします。 `x` キーワードにより、コンテナーの[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)を水平方向にスナップするようにします。 `mandatory` キーワードは、コンテナーがスクロール動作の終わりに、常にスナップターゲットにスナップすることを意味します。
+`<ul>` の　{{cssxref("overflow-x")}} の値を `scroll` に設定して、そのコンテンツがビューポート全体ではなくリスト内で水平方向にスクロールするようにします。 [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)を使用して、それぞれの「ページ」にスナップするようにします。 {{cssxref("scroll-snap-type")}} の値を `x mandatory` を設定して、リストを[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)にします。 `x` キーワードにより、コンテナーの[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)を水平方向にスナップするようにします。 `mandatory` キーワードは、コンテナーがスクロール動作の終わりに、常にスナップターゲットにスナップすることを意味します。
 
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 ul {
@@ -204,7 +204,7 @@ ul::scroll-button(right) {
 
 ### スクロールボタンの位置指定
 
-スクロールボタンを作成しました。これで、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、カルーセルに対して相対的な位置にボタンを配置します。
+スクロールボタンを作成しました。これで、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、カルーセルに対して相対的な位置にボタンを配置します。
 
 まず、参照 {{cssxref("anchor-name")}} がリストに設定されます。次に、各スクロールボタンの {{cssxref("position")}} が `absolute` に設定され、 {{cssxref("position-anchor")}} プロパティがリストで定義された同じ参照名に設定され、2 つが関連付けられます。
 
@@ -272,7 +272,7 @@ ul::scroll-marker-group {
 }
 ```
 
-次に、スクロールマーカー自体の外観を処理します。スクロールマーカーは、他の[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)と同様にスタイルを設定することができます。スクロールマーカーを実際に生成するには、 `none` 以外の値を `content` プロパティに設定する必要があることに注意してください。また、マーカーが概要の円として現れるように、いくつかの基本的なスタイルも設定します。
+次に、スクロールマーカー自体の外観を処理します。スクロールマーカーは、他の[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)と同様にスタイルを設定することができます。スクロールマーカーを実際に生成するには、 `none` 以外の値を `content` プロパティに設定する必要があることに注意してください。また、マーカーが概要の円として現れるように、いくつかの基本的なスタイルも設定します。
 
 ```css live-sample___first-example
 li::scroll-marker {
@@ -313,7 +313,7 @@ li::scroll-marker:target-current {
 
 2 つ目のデモは、 1 ページに複数のアイテムが表示されるカルーセルです。このデモにも、ページを移動するための[スクロールボタン](#スクロールボタンの作成)と[スクロールマーカー](#スクロールマーカーの作成)が含まれています。このデモもレスポンシブ対応で、ビューポートの幅に応じて各ページに表示されるアイテムの数も異なります。
 
-このデモは、[単一ページカルーセル](#単一ページのカルーセル)のデモとよく似ていますが、レイアウトにフレックスボックスを使用せず、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)と {{cssxref("::column")}} 擬似要素を使用して、カルーセルの全幅にまたがり、複数のアイテムを含むことができる任意の段を作成しています。
+このデモは、[単一ページカルーセル](#単一ページのカルーセル)のデモとよく似ていますが、レイアウトにフレックスボックスを使用せず、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)と {{cssxref("::column")}} 擬似要素を使用して、カルーセルの全幅にまたがり、複数のアイテムを含むことができる任意の段を作成しています。
 
 この手法を使用すると、アイテムのサイズが一定で、ビューポートが伸長または縮小しても、スクロールポートの端からアイテムの一部がはみ出すことがありません。この場合、スクロールマーカーは、アイテムごとに子要素に作成されるのではなく、段ごとにスクロールコンテナーのフラグメントに作成されます。
 
@@ -382,7 +382,7 @@ HTML は前回のデモとよく似ていますが、リストアイテムの数
 
 ### 段組みを使用したカルーセルレイアウト
 
-この例では、フレックスボックスではなく [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)を使用して、カルーセルアイテムのレイアウトを行っています。 {{cssxref("columns")}} の値を `1` に設定すると、それぞれの列はコンテナーの全幅になり、コンテンツは 1 列ずつ表示されます。また、 {{cssxref("text-align")}} の値を `center` に設定して、コンテンツをリストの中央に配置しています。
+この例では、フレックスボックスではなく [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)を使用して、カルーセルアイテムのレイアウトを行っています。 {{cssxref("columns")}} の値を `1` に設定すると、それぞれの列はコンテナーの全幅になり、コンテンツは 1 列ずつ表示されます。また、 {{cssxref("text-align")}} の値を `center` に設定して、コンテンツをリストの中央に配置しています。
 
 ```css hidden live-sample___second-example
 * {
@@ -547,7 +547,7 @@ ul::column::scroll-marker:target-current {
 
 ## 関連情報
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) (chrome.dev, 2025)

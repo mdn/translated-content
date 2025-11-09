@@ -297,7 +297,7 @@ div:nth-child(odd) {
 
 - その他のスクロールポートのプロパティ: {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}
 - スクロールの子のプロパティ: {{cssxref("scroll-snap-align")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-stop")}}
-- [スクロールスナップの基本概念](/ja/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
-- [スクロールスナップの使用](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
-- [CSS scroll snap](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [スクロールスナップの基本概念](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
+- [スクロールスナップの使用](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
+- [CSS scroll snap](/ja/docs/Web/CSS/Guides/Scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

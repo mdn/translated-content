@@ -21,7 +21,7 @@ aspect-ratio: unset;
 ### Valeurs
 
 - {{cssxref("&lt;auto&gt;")}}
-  - : Les [éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) ayant leur propre ratio d'affichage intrinsèque, ils utilisent _ce dernier_. Sinon, la boîte n'a pas de ratio d'affichage préférentiel. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu.
+  - : Les [éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) ayant leur propre ratio d'affichage intrinsèque, ils utilisent _ce dernier_. Sinon, la boîte n'a pas de ratio d'affichage préférentiel. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu.
 - {{cssxref("&lt;ratio&gt;")}}
   - : Le ratio d'affichage préférentiel de la boîte est le ratio spécifié par `width` / `height`. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par `box-sizing`.
 
@@ -44,7 +44,7 @@ aspect-ratio: 16 / 9;
 
 ## Correspondance entre largeur et hauteur avec aspect-ratio
 
-Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties) et à d'autres éléments liés qui acceptent les attributs `width` et `height`. Cela se passe dans la feuille de styles interne du navigateur.
+Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'applique aux [éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) et à d'autres éléments liés qui acceptent les attributs `width` et `height`. Cela se passe dans la feuille de styles interne du navigateur.
 
 Sur Firefox, la règle de la feuille de styles interne ressemble à cela&nbsp;:
 

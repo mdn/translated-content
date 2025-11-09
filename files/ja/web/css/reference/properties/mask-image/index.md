@@ -284,5 +284,5 @@ body:has(:checked) img {
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
-- [CSS マスク入門](/ja/docs/Web/CSS/CSS_masking/Masking)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

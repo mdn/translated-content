@@ -145,7 +145,7 @@ l10n:
 
 - [座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : モニター上のウィンドウ、モバイル機器のビューポート、印刷時の紙上の位置などのディスプレイコンテキストにおける位置を特定するために使われる座標系についてのガイドです。
-- [ビューポートの概念](/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [ビューポートの概念](/ja/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : ビューポートの概念（それが何か、CSS、SVG、モバイル端末への影響）と、視覚的ビューポートとレイアウトビューポートの違いについてです。
 
 ## 関連する概念
@@ -163,6 +163,6 @@ l10n:
 ## 関連情報
 
 - [CSS オブジェクトモデル (CSSOM)](/ja/docs/Web/API/CSS_Object_Model) API
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール

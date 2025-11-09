@@ -79,4 +79,4 @@ width: calc(100% - 200px);
 
 - Le type de donnée {{cssxref("&lt;percentage&gt;")}}
 - Le type de donnée {{cssxref("&lt;length&gt;")}}
-- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)

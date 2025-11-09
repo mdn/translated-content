@@ -108,4 +108,4 @@ globalThis.customElements.define(
 - [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性
 - {{CSSxRef(":state",":state()")}} 擬似クラス関数
 - [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性
-- [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
+- [CSS シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)モジュール

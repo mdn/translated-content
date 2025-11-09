@@ -339,7 +339,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : WebXR の選択イベント ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) の前に発行されます。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-  - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#ユーザーとの関連)、[コンテンツのスキップ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)を開始または終了するときに、その要素を対象に発行されます。
+  - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/Guides/Containment/Using#ユーザーとの関連)、[コンテンツのスキップ](/ja/docs/Web/CSS/Guides/Containment/Using#コンテンツのスキップ)を開始または終了するときに、その要素を対象に発行されます。
 - {{domxref("Element/input_event","input")}}
   - : ユーザー操作の結果として要素の値が変更されたときに発行されます。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
@@ -500,13 +500,13 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 ### トランジションイベント
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)がキャンセルされたときに発行されます。
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)がキャンセルされたときに発行されます。
 - {{domxref("Element/transitionend_event", "transitionend")}}
-  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)の再生が終了したときに発行されます。
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)の再生が終了したときに発行されます。
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)が作成されたとき（すなわち、実行する一連のトランジションが追加されたとき）に発行されます。開始されているとは限りません。
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)が作成されたとき（すなわち、実行する一連のトランジションが追加されたとき）に発行されます。開始されているとは限りません。
 - {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)のトランジションが開始したときに発行されます。
+  - : {{domxref("Event")}} で、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)のトランジションが開始したときに発行されます。
 
 ## 仕様書
 

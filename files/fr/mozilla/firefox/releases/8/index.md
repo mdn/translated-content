@@ -79,7 +79,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 - Le traitement de [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) a été revu pour mieux correspondre à la spécification.
 - Dans le passé, [`text-decoration`](/fr/docs/Web/CSS/Reference/Properties/text-decoration) en mode quirks avait l'épaisseur de ligne et la position ajustée sur le texte descendant pour correspondre à la descendance. Désormais le mode standard et le mode quirks ont un rendu plus proche.
 - Le positionnement horizontal des éléments est davantage conforme à la spécification dans beaucoup de cas. La documentation est à venir, mais pour l'instant, pour plus de détails voir le commentaire 23 du [bug 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780).
-- [Les images SVG sont désormais correctement mise à l'échelle](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) lorsqu'elles sont utilisées comme images de fond.
+- [Les images SVG sont désormais correctement mise à l'échelle](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds) lorsqu'elles sont utilisées comme images de fond.
 
 ### Réseau
 

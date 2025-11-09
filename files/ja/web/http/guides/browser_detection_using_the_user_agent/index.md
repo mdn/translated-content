@@ -96,7 +96,7 @@ if ("virtualKeyboard" in navigator) {
 ```
 
 スタイルについては、 CSS で機能検出を行うこともできます。 [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルールを使用し、機能がないことを調べたい場合は `not` キーワードを組み合わます。
-CSS での使用方法については、[機能クエリーの使い方](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)を参照してください。
+CSS での使用方法については、[機能クエリーの使い方](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)を参照してください。
 
 ```css
 @supports (display: grid) {
@@ -128,9 +128,9 @@ if (navigator.maxTouchPoints > 1) {
 }
 ```
 
-レイアウトなど、それ以外の問題については、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) や [グリッド](/ja/docs/Web/CSS/CSS_grid_layout) などの最新の CSS を使用して、柔軟なレイアウトを実現してください。
+レイアウトなど、それ以外の問題については、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) や [グリッド](/ja/docs/Web/CSS/Guides/Grid_layout) などの最新の CSS を使用して、柔軟なレイアウトを実現してください。
 小さな画面でコンテンツを非表示にする代わりに、レイアウトを動的に調整してください。
-[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使用すると、ほとんどのレイアウトの変更を処理でき、JavaScript による調整の必要性を縮小できます。
+[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使用すると、ほとんどのレイアウトの変更を処理でき、JavaScript による調整の必要性を縮小できます。
 
 ユーザーが端末を回転させたり、画面モードを切り替えたときにトランジションをスムーズにしたい場合は、[端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)を参照してください。
 折りたたみ式端末については、[端末姿勢 API](/ja/docs/Web/API/Device_Posture_API) などの新しい API がありますが、対応状況は端末によって大きく異なるため、互換性に関するデータを必ず確認してください。
@@ -308,7 +308,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/201001
 
 ## 関連情報
 
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
 - [HTTP クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)
 - [機能検出の実装](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)
 - [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch#strategy_legacy_support) on web.dev (2021)

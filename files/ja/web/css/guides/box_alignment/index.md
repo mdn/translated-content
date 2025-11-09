@@ -12,7 +12,7 @@ l10n:
 
 配置は、書字方向とリンクしています。アイテムを配置する場合、そのアイテムを物理的な寸法である上、右、下、左のどこに配置するかは考慮しません。代わりに、作業している具体的な次元の先頭と末尾で配置を記述します。これにより、文書がどの書字方向であっても、配置が確実に同じように動作します。
 
-テキストレベル、インラインレベルのコンテンツの配置は、それぞれ [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)と [CSS インラインモジュール](/ja/docs/Web/CSS/CSS_inline_layout)で定義されています。
+テキストレベル、インラインレベルのコンテンツの配置は、それぞれ [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)と [CSS インラインモジュール](/ja/docs/Web/CSS/Guides/Inline_layout)で定義されています。
 
 ## リファレンス
 
@@ -43,26 +43,26 @@ l10n:
 
 - {{Glossary("Alignment container", "配置コンテナー")}}
 - {{Glossary("Alignment subject", "配置対象物")}}
-- [ベースライン揃え](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment#ベースライン揃え)
-- [分配配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment#分配配置)
+- [ベースライン揃え](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#ベースライン揃え)
+- [分配配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#分配配置)
 - {{Glossary("Fallback alignment", "代替配置")}}
-- [位置指定配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment#positional_alignment)
+- [位置指定配置](/ja/docs/Web/CSS/Guides/Box_alignment/Overview#positional_alignment)
 
 ## ガイド
 
-- [ボックス配置の概要](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [ボックス配置の概要](/ja/docs/Web/CSS/Guides/Box_alignment/Overview)
   - : CSS ボックス配置モジュールで使える一般概念の概要です。
 
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
   - : フレックスボックスのコンテキストにおけるボックスの配置の動作です。
 
-- [CSS グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [CSS グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : グリッドレイアウトのコンテキストにおけるボックスの配置の動作です。
 
-- [段組みレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
+- [段組みレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
   - : 段組みのコンテキストにおけるボックスの配置の動作です。
 
-- [ブロック、絶対配置、表レイアウトのブロック配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [ブロック、絶対配置、表レイアウトのブロック配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
   - : ブロックレイアウトのコンテキストにおけるボックスの配置の動作。浮動ボックス、位置指定要素、表要素も含まれます。
 
 ## 関連概念
@@ -80,9 +80,9 @@ l10n:
 
 ## 関連情報
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [フレックスコンテナーのアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS 表示方法](/ja/docs/Web/CSS/CSS_display)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [フレックスコンテナーのアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール

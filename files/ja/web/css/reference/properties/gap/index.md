@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-**`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)コンテナーに適用します。
+**`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーに適用します。
 
 {{InteractiveExample("CSS デモ: gap")}}
 
@@ -111,7 +111,7 @@ gap: unset;
 
 ## 解説
 
-このプロパティは、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)の段間、 [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)のフレックスアイテム間とフレックス行間、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)の行と列の間のすき間を定義します。
+このプロパティは、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)の段間、 [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)のフレックスアイテム間とフレックス行間、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)の行と列の間のすき間を定義します。
 
 生成されたすき間は、空のアイテムやトラックのように、指定したサイズの幅や高さを持った空の空間を生成します。要素間の目に見える空間は指定された `gap` の値とは異なるかもしれません。マージン、パディング、分配配置によって、 `gap` が決定する値よりも要素間の間隔を広がるかもしれないからです。
 
@@ -357,8 +357,8 @@ body > div {
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
-- [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール
-- [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
+- [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#溝)
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュール

@@ -241,7 +241,7 @@ div {
 
 ### その他の repeating-conic-gradient の例
 
-それ以外の例は [CSS グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を参照してください。
+それ以外の例は [CSS グラデーション](/ja/docs/Web/CSS/Guides/Images/Using_gradients)を参照してください。
 
 ## 仕様書
 
@@ -253,7 +253,7 @@ div {
 
 ## 関連情報
 
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - その他のグラデーション関数: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
 - [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8798af276e64ba373bc999c9a5ba5997716cc05c
 ---
 
-本体にスタイルルールを含む[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)は、 CSS の入れ子を使って別のスタイルルールの中に入れ子にすることができます。アットルール内に入れ子になったスタイル ルールは、最も近い祖先のスタイル ルールから入れ子のセレクタ定義を取得します。入れ子になったアットルールの内部には、 `& {...}` ブロックに入れ子になっているかのように動作するプロパティを直接含めることができます。
+本体にスタイルルールを含む[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)は、 CSS の入れ子を使って別のスタイルルールの中に入れ子にすることができます。アットルール内に入れ子になったスタイル ルールは、最も近い祖先のスタイル ルールから入れ子のセレクタ定義を取得します。入れ子になったアットルールの内部には、 `& {...}` ブロックに入れ子になっているかのように動作するプロパティを直接含めることができます。
 
 ## 入れ子にすることができるアットルール
 
@@ -144,7 +144,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール
 - [`&` 入れ子セレクター](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector)
-- [CSS 入れ子の使用](/ja/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [入れ子と詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [CSS 入れ子の使用](/ja/docs/Web/CSS/Guides/Nesting/Using)
+- [入れ子と詳細度](/ja/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)

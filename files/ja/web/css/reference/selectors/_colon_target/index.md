@@ -108,4 +108,4 @@ p:target i {
 
 ## 関連情報
 
-- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/Guides/Selectors/Using_:target)

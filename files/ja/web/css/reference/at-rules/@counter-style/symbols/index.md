@@ -30,7 +30,7 @@ symbols: indic-numbers;
 
 ## 解説
 
-記号は文字列、画像、識別子の何れかで指定することができます。これは {{cssxref("@counter-style")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)の中で使用されます。
+記号は文字列、画像、識別子の何れかで指定することができます。これは {{cssxref("@counter-style")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)の中で使用されます。
 
 `symbols` 記述子は、 {{cssxref('@counter-style/system', 'system')}} 記述子の値が `cyclic`, `numeric`, `alphabetic`, `symbolic`, `fixed` の何れかである場合に指定する必要があります。 `additive` システムを使用する場合は、 symbols を指定する代わりに {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} を使用してください。
 
@@ -95,4 +95,4 @@ symbols: indic-numbers;
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}} 関数
 - {{cssxref("url_value", "&lt;url&gt;")}} 型
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

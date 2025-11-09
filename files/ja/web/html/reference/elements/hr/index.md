@@ -1,37 +1,34 @@
 ---
 title: "<hr>: 主題区切り（水平線）要素"
 slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
-
-{{HTMLSidebar}}
 
 **`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
 {{InteractiveExample("HTML デモ: &lt;hr&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+<p>§1: ファイトクラブの第一のルール：ファイトクラブについて話してはならない。</p>
 
 <hr />
 
-<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+<p>§2: ファイトクラブの第二のルール：カップケーキを必ず持参すること。</p>
 ```
 
 ```css interactive-example
 hr {
   border: none;
-  border-top: 3px double #333;
-  color: #333;
+  border-top: 3px double #333333;
+  color: #333333;
   overflow: visible;
   text-align: center;
   height: 5px;
 }
 
 hr::after {
-  background: #fff;
+  background: white;
   content: "§";
   padding: 0 4px;
   position: relative;
@@ -84,12 +81,12 @@ hr::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -105,9 +102,10 @@ hr::after {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >を受け入れるすべての要素
+        <ul>
+          <li><a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</li>
+          <li><a href="/ja/docs/Web/HTML/Reference/Elements/select"><code>&lt;select></code></a> 要素</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -138,3 +136,4 @@ hr::after {
 ## 関連情報
 
 - {{HTMLElement('p')}}
+- [`<select>` の中の `<hr>`](/ja/docs/Web/HTML/Reference/Elements/select#グループ化された選択肢のある_select)

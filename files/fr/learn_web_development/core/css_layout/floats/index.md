@@ -236,7 +236,7 @@ body {
 
 {{EmbedLiveSample('', '100%', 500)}}
 
-Les [lignes du paragraphe](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model) suivant la boîte flottante ont été raccourcies pour que le texte entoure cette boîte, mais comme elle a été sortie du cours normal, la boîte du contenu du paragraphe reste sur toute la largeur du conteneur.
+Les [lignes du paragraphe](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model) suivant la boîte flottante ont été raccourcies pour que le texte entoure cette boîte, mais comme elle a été sortie du cours normal, la boîte du contenu du paragraphe reste sur toute la largeur du conteneur.
 
 ## Dégagement des boîtes flottantes
 

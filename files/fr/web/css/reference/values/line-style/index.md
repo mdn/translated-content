@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/CSS_backgrounds_and_borders) et [column](/fr/docs/Web/CSS/CSS_multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [column](/fr/docs/Web/CSS/Guides/Multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
@@ -267,6 +267,6 @@ Remarquez que la couleur presque noire `#000001` peut être différente du noir 
 
 ## Voir aussi
 
-- Le module des [arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
-- Le module de [l'interface utilisateur de base CSS](/fr/docs/Web/CSS/CSS_basic_user_interface)
-- Le module de [disposition multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout)
+- Le module des [arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
+- Le module de [l'interface utilisateur de base CSS](/fr/docs/Web/CSS/Guides/Basic_user_interface)
+- Le module de [disposition multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout)

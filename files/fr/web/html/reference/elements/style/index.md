@@ -40,14 +40,14 @@ L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}}
 
 Si plusieurs éléments `<style>` et `<link>` sont appliqués au document, ils seront appliqués dans l'ordre dans lequel ils sont inclus dans le document. Aussi, vérifiez l'ordre afin d'éviter tout problème de cascade.
 
-À l'instar des éléments `<link>`, les éléments `<style>` peuvent inclure des attributs `media` qui décrivent des [requêtes média](/fr/docs/Web/CSS/CSS_media_queries) qui permettent d'appliquer des feuilles de styles selon certains critères provenant du média utilisé (la largeur de l'écran par exemple).
+À l'instar des éléments `<link>`, les éléments `<style>` peuvent inclure des attributs `media` qui décrivent des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries) qui permettent d'appliquer des feuilles de styles selon certains critères provenant du média utilisé (la largeur de l'écran par exemple).
 
 ## Attributs
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `media`
-  - : Cet attribut est [une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) qui indique le média auquel la mise en forme doit s'appliquer. Cet attribut est optionnel, la valeur par défaut est `all`.
+  - : Cet attribut est [une requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using) qui indique le média auquel la mise en forme doit s'appliquer. Cet attribut est optionnel, la valeur par défaut est `all`.
 - `nonce`
   - : Un _nonce_ cryptographique utilisé pour inscrire les styles en ligne sur une liste blanche pour la règle [`style-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) de la CSP (_Content Security Policy_). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.
 - `type`

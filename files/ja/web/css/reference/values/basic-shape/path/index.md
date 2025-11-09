@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/basic-shape/path
 original_slug: Web/CSS/basic-shape/path
 ---
 
-**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
+**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
 
 {{InteractiveExample("CSS デモ: path()")}}
 
@@ -126,6 +126,6 @@ svg {
 ## 関連情報
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)
+- [CSS シェイプの概要](/ja/docs/Web/CSS/Guides/Shapes/Overview)
 - [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)

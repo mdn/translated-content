@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
 ---
 
-[CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)は、**相対的な色構文**を定義しており、 CSS の {{cssxref("&lt;color&gt;")}} 値を他の色に関連して定義することができます。これは、既存の色の補色（明度、彩度、半透明、反転など）を簡単に作成できる強力な機能であり、より効果的なカラーパレットの作成を可能にします。
+[CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors)は、**相対的な色構文**を定義しており、 CSS の {{cssxref("&lt;color&gt;")}} 値を他の色に関連して定義することができます。これは、既存の色の補色（明度、彩度、半透明、反転など）を簡単に作成できる強力な機能であり、より効果的なカラーパレットの作成を可能にします。
 
 この記事では、相対色の構文について説明し、異なるオプションが何であるかを示し、いくつかの例を示して見ていきます。
 
@@ -23,12 +23,12 @@ color(from origin-color colorspace channel1 channel2 channel3)
 color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
 
-相対色は、絶対色と同じ[色関数](/ja/docs/Web/CSS/CSS_colors#関数)を使用しますが、異なる引数で作成します。
+相対色は、絶対色と同じ[色関数](/ja/docs/Web/CSS/Guides/Colors#関数)を使用しますが、異なる引数で作成します。
 
 1. 基本的な色関数（上記で _`color-function()`_ で表したもの）である [`rgb()`](/ja/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) などを用います。どの関数を使用するかは、作成する相対色（**出力色**）に使用する色モデルによって異なります。
-2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
+2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
 3. [`color()`](/ja/docs/Web/CSS/Reference/Values/color_value/color) 関数の場合、出力色の _[`colorspace`](/ja/docs/Web/CSS/Reference/Values/color_value/color#colorspace)_（色空間）を指定します。
-4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/CSS_colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
+4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/Guides/Colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
 5. オプションとして、出力色のアルファチャンネル値 (`alpha`) をスラッシュ (`/`) の後に定義することができます。アルファチャンネル値 (`alpha`) が明示的に指定されていない場合、アルファチャンネル値は元の色の既定値となります（絶対的な色値の場合の 100% ではありません）。
 
 ブラウザーは、元の色を色関数と互換性のある構文に変換し、それを部分色チャンネル（元の色にアルファチャンネル (`alpha`) がある場合はアルファチャンネルも）に構造化します。これらは、色関数内で適切な名前付きの値として利用できます。 `rgb()` 関数の場合は `r`、`g`、`b` と `alpha`、 `lab()` 関数の場合は `l`、`a`、`b` と `alpha`、 `hwb()` の場合は `h`、`w`、`b` と `alpha` などです。新しい出力チャンネル値を計算するために使用することができます。
@@ -173,7 +173,7 @@ rgb(from red r g b / alpha)
 
 ## カスタムプロパティの使用
 
-相対色を作成する際に、元の色と出力される色チャンネル値の定義の両方で、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で定義された値を使用することができます。 例えば、次の例をご覧ください。
+相対色を作成する際に、元の色と出力される色チャンネル値の定義の両方で、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)で定義された値を使用することができます。 例えば、次の例をご覧ください。
 
 下記の CSS では、 2 つのカスタムプロパティを定義しています。
 
@@ -286,7 +286,7 @@ rgb(from red r g b / alpha)
 - チャンネル値を元々 `<percentage>` で指定した場合、出力色関数に適した `<number>` に解決されます。
 - チャンネル値を元々 {{cssxref("&lt;hue&gt;")}} 角度として指定した場合、 `0` から `360` （両端を含む）の範囲の角度の数値に置き換わります。
 
-元のチャンネル値がどのような仕様になっているかについては、それぞれの[色関数ページ](/ja/docs/Web/CSS/CSS_colors#関数)を調べてください。
+元のチャンネル値がどのような仕様になっているかについては、それぞれの[色関数ページ](/ja/docs/Web/CSS/Guides/Colors#関数)を調べてください。
 
 ## ブラウザーの対応チェック
 
@@ -768,7 +768,7 @@ function setHue(e) {
 ## 関連情報
 
 - {{CSSXref("&lt;color&gt;")}} データ型
-- [CSS 色](/ja/docs/Web/CSS/CSS_colors)モジュール
+- [CSS 色](/ja/docs/Web/CSS/Guides/Colors)モジュール
 - [sRGB](https://en.wikipedia.org/wiki/SRGB) (Wikipedia)
 - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) (Wikipedia)
 - [CSS relative color syntax](https://developer.chrome.com/blog/css-relative-color-syntax) (developer.chrome.com, 2023)

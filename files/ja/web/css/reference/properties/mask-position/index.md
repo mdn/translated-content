@@ -177,6 +177,6 @@ div {
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} 一括指定
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - {{cssxref("background-position")}}
 - {{cssxref("&lt;position&gt;")}}

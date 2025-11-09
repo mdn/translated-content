@@ -94,7 +94,7 @@ XML 派生言語は独自の要素を定義しているだけでなく、独自�
 
 ### 名前空間付きの XML のスプクリプト操作
 
-名前空間はマークアップだけでなく、スクリプト操作（[および CSS](/ja/docs/Web/CSS/CSS_namespaces)）にも影響します。もし SVG のような 名前空間付きの XML 用のスクリプトを書くなら次をお読みください。
+名前空間はマークアップだけでなく、スクリプト操作（[および CSS](/ja/docs/Web/CSS/Guides/Namespaces)）にも影響します。もし SVG のような 名前空間付きの XML 用のスクリプトを書くなら次をお読みください。
 
 [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) 勧告はオリジナルの [original Namespaces in XML](https://www.w3.org/TR/REC-xml-names/) 勧告がリリースされる前に作られたので、 DOM1 は名前空間を認識しません。これは SVG のような 名前空間付きの XML で問題を引き起こします。それらの問題を解決するために [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) は全て DOM Level 1 のメソッドの適切な名前空間を認識する同等のメソッドを加えました。SVG でスクリプトを書くとき、[名前空間を認識するメソッド](https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)を使うことが大切です。下の表は SVG で使うべきではない DOM1 のメソッドと、代わりに使うべき同等な DOM2 の対応するメソッドを示しています。
 

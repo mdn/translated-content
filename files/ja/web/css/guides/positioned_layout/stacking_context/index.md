@@ -10,15 +10,15 @@ l10n:
 
 ## 解説
 
-この記事の前の部分である [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index)では、ある要素の描画順はそれらの `z-index` の値に影響を受けていました。これは、要素が「重ね合わせコンテキスト」を生じさせる特別なプロパティを持っていたからです。
+この記事の前の部分である [z-index の使用](/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)では、ある要素の描画順はそれらの `z-index` の値に影響を受けていました。これは、要素が「重ね合わせコンテキスト」を生じさせる特別なプロパティを持っていたからです。
 
 重ね合わせコンテキストは以下のような場面で、文書の随所に様々な要素によって構成されます。
 
 - 文書のルート要素 (`<html>`)
 - {{cssxref("position")}} の値が `absolute` または `relative` であり、かつ {{cssxref("z-index")}} の値が `auto` 以外の要素
 - {{cssxref("position")}} の値が `fixed` または `sticky` の要素（sticky はすべてのモバイルブラウザーにありますが、古いデスクトップブラウザーにはありません）。
-- {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
-- [フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
+- {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
+- [フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - グリッド ({{cssxref("grid")}}) コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - {{cssxref("opacity")}} の値が `1` 未満である要素。
 - {{cssxref("mix-blend-mode")}} の値が `normal` 以外の要素。
@@ -216,10 +216,10 @@ h1 {
 
 ## 関連情報
 
-- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全階層の `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
+- [z-index の使用](/ja/docs/Web/CSS/Guides/Positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1): 2 階層の HTML 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2): 2 階層の HTML 構造、全階層の `z-index`
+- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
 - [最上位レイヤー](/ja/docs/Glossary/Top_layer)

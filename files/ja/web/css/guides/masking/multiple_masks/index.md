@@ -47,7 +47,7 @@ mask-border-width: auto;
 
 ### `mask-image` を使用してマスクレイヤーを定義
 
-カンマ区切りの {{cssxref("mask-image")}} プロパティ宣言に `none` 以外の値が 1 つ以上含まれている限り、宣言内のすべての値について、 `none` 値についてもマスクレイヤーが作成されます。この動作は、 `mask-image` プロパティを使用している場合でも、 `mask` 一括指定を使用している場合でも適用されます。これらのマスク画像は、グラデーション、画像、または SVG ソースにすることができます。これらは、 [CSS グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)、ラスター画像（PNG など）、または SVG の {{svgelement("mask")}} 要素を使用して定義することができます。
+カンマ区切りの {{cssxref("mask-image")}} プロパティ宣言に `none` 以外の値が 1 つ以上含まれている限り、宣言内のすべての値について、 `none` 値についてもマスクレイヤーが作成されます。この動作は、 `mask-image` プロパティを使用している場合でも、 `mask` 一括指定を使用している場合でも適用されます。これらのマスク画像は、グラデーション、画像、または SVG ソースにすることができます。これらは、 [CSS グラデーション](/ja/docs/Web/CSS/Guides/Images/Using_gradients)、ラスター画像（PNG など）、または SVG の {{svgelement("mask")}} 要素を使用して定義することができます。
 
 ```css
 .gradient-mask {
@@ -63,7 +63,7 @@ mask-border-width: auto;
 }
 ```
 
-[マスクの入門ガイド](/ja/docs/Web/CSS/CSS_masking) では、さまざまな種類のマスク画像とそのモードについて紹介しています。
+[マスクの入門ガイド](/ja/docs/Web/CSS/Guides/Masking) では、さまざまな種類のマスク画像とそのモードについて紹介しています。
 `mask-image` プロパティは、{{cssxref("background-image")}} プロパティと似ています。 `background-image` プロパティと同様に、複数のマスク画像を含めるには、画像の値をカンマで区切ります。
 
 ```css
@@ -120,7 +120,7 @@ mask: 100px 100px no-repeat;
 
 プロパティ全体が `none` に解決された場合、マスキングは発生せず、要素は完全に表示されます。一方、値に複数のレイヤーが含まれており、そのうちの少なくとも 1 つが `none` ではない場合、 `none` のレイヤーは要素のどの部分も表示しません（または要素のどの部分も表示可能にはしません）。この例では、値は `none` に解決されませんが、 `none` 以外の画像はすべて不正であるため、マスクが発生し、要素は完全に非表示になります。
 
-計算値が `none` 以外の場合、[CSS 重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)が作成されます。
+計算値が `none` 以外の場合、[CSS 重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)が作成されます。
 
 ### マスクレイヤーが `mask-*` プロパティに与える影響
 
@@ -202,7 +202,7 @@ mask: url(star.svg) top right / 100px 100px;
 
 ## 関連情報
 
-- [CSS マスク入門](/ja/docs/Web/CSS/CSS_masking/Masking)
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
 - [CSS マスクプロパティ](/ja/docs/Web/CSS/CSS_masking/Mask_properties)
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

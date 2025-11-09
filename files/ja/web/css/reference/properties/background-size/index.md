@@ -180,7 +180,7 @@ background-size: unset;
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-その他の例は[背景画像の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)を参照してください。
+その他の例は[背景画像の変倍](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)を参照してください。
 
 ## 仕様書
 
@@ -192,6 +192,6 @@ background-size: unset;
 
 ## 関連情報
 
-- [背景画像の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [背景 SVG の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [背景画像の変倍](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [背景 SVG の変倍](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
 - {{cssxref("object-fit")}}

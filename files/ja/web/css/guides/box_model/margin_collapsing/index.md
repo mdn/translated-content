@@ -13,7 +13,7 @@ l10n:
 - 隣接兄弟要素
   - : 隣接兄弟要素のマージンは相殺されます (後ろの兄弟要素がそれ以前の浮動状態を[解除](/ja/docs/Web/CSS/Reference/Properties/clear) する必要がある場合を除く)。
 - 親と子孫を隔てるコンテンツがない場合
-  - : あるブロックの {{cssxref("margin-top")}} と、1 つ以上の子孫ブロックの {{cssxref("margin-top")}} を隔てる境界、パディング、インライン部分、 [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)の生成、_[浮動の解除](/ja/docs/Web/CSS/Reference/Properties/clear)_ のいずれもがない場合、もしくは、あるブロックの {{cssxref("margin-bottom")}} と1つ以上の子孫ブロックの {{cssxref("margin-bottom")}} を隔て境界、パディング、インラインコンテンツ、 {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}} のいずれもがない場合、それぞれマージンが折り畳まれます。折り畳まれた側のマージンは、親要素の外側に出ます。
+  - : あるブロックの {{cssxref("margin-top")}} と、1 つ以上の子孫ブロックの {{cssxref("margin-top")}} を隔てる境界、パディング、インライン部分、 [ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)の生成、_[浮動の解除](/ja/docs/Web/CSS/Reference/Properties/clear)_ のいずれもがない場合、もしくは、あるブロックの {{cssxref("margin-bottom")}} と1つ以上の子孫ブロックの {{cssxref("margin-bottom")}} を隔て境界、パディング、インラインコンテンツ、 {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}} のいずれもがない場合、それぞれマージンが折り畳まれます。折り畳まれた側のマージンは、親要素の外側に出ます。
 - 空ブロック
   - : あるブロックの {{cssxref("margin-top")}} を {{cssxref("margin-bottom")}} と隔てる境界、パディング、インラインコンテンツ、 {{cssxref("height")}}, {{cssxref("min-height")}} のいずれもがない場合、上端と下端のマージンは相殺されます。
 
@@ -70,19 +70,19 @@ p {
 ## 関連情報
 
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
-  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
   - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+  - [値の定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)

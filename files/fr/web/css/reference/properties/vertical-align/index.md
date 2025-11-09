@@ -97,7 +97,7 @@ La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 Ces valeurs alignent l'élément verticalement, relativement à son élément parent.
 
 - `baseline`
-  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties), comme [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
+  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties), comme [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
 - `sub`
   - : Aligne la ligne de base sur la ligne de base inférieure (celle utilisée pour les indices) de l'élément parent.
 - `super`
@@ -299,7 +299,7 @@ td {
 
 ## Voir aussi
 
-- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#centrer_des_%c3%a9l%c3%a9ments)
+- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#centrer_des_%c3%a9l%c3%a9ments)
 - [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height)
 - [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)
 - [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)

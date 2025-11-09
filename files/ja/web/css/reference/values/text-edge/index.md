@@ -62,4 +62,4 @@ See [`text-box-edge` examples](/ja/docs/Web/CSS/Reference/Properties/text-box-ed
 ## 関連情報
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}, {{cssxref("text-box-trim")}}
-- [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout) module
+- [CSS インラインレイアウト](/ja/docs/Web/CSS/Guides/Inline_layout) module

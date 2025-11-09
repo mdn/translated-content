@@ -70,7 +70,7 @@ Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels
 
 ## Mise en forme avec CSS
 
-Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model), [la police utilisée](/fr/docs/Web/CSS/CSS_fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
+Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model), [la police utilisée](/fr/docs/Web/CSS/Guides/Fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
 
 Toutefois, ces propriétés peuvent fournir des résultats incohérents entre les différents navigateurs et il peut être difficile d'aligner différents contrôles sur une colonne.Aussi, si la structure interne de cet élément est trop complexe, on pourra créer un tel contrôle en utilisant des éléments non sémantiques, du code JavaScript et WAI-ARIA afin de décrire la sémantique du contrôle.
 

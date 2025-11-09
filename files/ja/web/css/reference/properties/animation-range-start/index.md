@@ -13,7 +13,7 @@ l10n:
 `animation-range-start` および {{cssxref("animation-range-end")}} のプロパティは、 [`animation-range`](/ja/docs/Web/CSS/Reference/Properties/animation-range) 一括指定プロパティを使用して設定することもできます。
 
 > [!NOTE]
-> {{cssxref("animation-range-start")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-start` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-start` を宣言しないと、その効果を得ることができません。
+> {{cssxref("animation-range-start")}} はリセット専用の値として {{cssxref("animation")}} の一括指定に含まれています。これは、`animation` を記載することで、前回宣言した `animation-range-start` の値が `normal` にリセットされることを意味していますが、`animation` によって固有の値を設定することはできません。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に `animation-range-start` を宣言しないと、その効果を得ることができません。
 
 ## 構文
 
@@ -175,4 +175,4 @@ p {
 - {{cssxref("timeline-scope")}}
 - [`view-timeline-inset`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-inset)
 - JavaScript の同等のもの: `rangeStart` （{{domxref("Element.animate()")}} 呼び出しで利用可能）
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

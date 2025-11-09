@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-CSS ルールには[宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言)が含まれており、その宣言はプロパティと値で構成されています。
+CSS ルールには[宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言)が含まれており、その宣言はプロパティと値で構成されています。
 CSS を使用するそれぞれのプロパティには、どのような値を使用することができるかを記述する**値の型**があります。
 このレッスンでは、最も頻繁に使用する値の型と、それが何であるか、そしてそれらがどのように動作するかを見ていきます。
 
@@ -590,7 +590,7 @@ RGB 値を直接作成する場合、 [`rgb()`](/ja/docs/Web/CSS/Reference/Value
 
 `hsl()`、`hwb()`、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch) など、 [`<hue>`](/ja/docs/Web/CSS/Reference/Values/hue) 成分を持つ色関数がいくつかあります。他にも、 [`lab()`](/ja/docs/Web/CSS/Reference/Values/color_value/lab) のような色関数は、人間が見ることができる色を定義します。
 
-これらの関数や色空間についてもっと知りたい場合は、 [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)ガイドを参照してください、 CSS で色を使用することができるすべての異なる方法を掲載している [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 参照、および色値を使用するすべてのプロパティの概要を提供された [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors) を参照してください。
+これらの関数や色空間についてもっと知りたい場合は、 [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)ガイドを参照してください、 CSS で色を使用することができるすべての異なる方法を掲載している [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) 参照、および色値を使用するすべてのプロパティの概要を提供された [CSS 色モジュール](/ja/docs/Web/CSS/Guides/Colors) を参照してください。
 
 ### HWB
 
@@ -831,7 +831,7 @@ CSS関数について知っておくことは有益なことです。普通の C
 
 ## まとめ
 
-ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
+ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
 
 覚えておくべき重要なことは、各プロパティには許可される値の定義されたリストがあり、各値にはサブ値が何であるかを説明する定義があるということです。詳細は MDN で調べることができます。例えば、[`<image>`](/ja/docs/Web/CSS/Reference/Values/image) でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう。
 

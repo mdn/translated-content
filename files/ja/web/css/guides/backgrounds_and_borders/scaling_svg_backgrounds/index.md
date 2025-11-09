@@ -654,4 +654,4 @@ div {
 ## 関連情報
 
 - {{cssxref("background-size")}}
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール

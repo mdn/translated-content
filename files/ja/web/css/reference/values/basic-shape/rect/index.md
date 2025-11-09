@@ -113,5 +113,5 @@ clip-path: rect(50px 70px 80% 20%);
 - {{cssxref("clip-path")}} プロパティ
 - {{cssxref("offset-path")}} プロパティ
 - {{cssxref("&lt;basic-shape&gt;")}} データ型
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)モジュール
-- [基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS シェイプ](/ja/docs/Web/CSS/Guides/Shapes)モジュール
+- [基本シェイプのガイド](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

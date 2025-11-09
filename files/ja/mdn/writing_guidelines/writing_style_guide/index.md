@@ -421,8 +421,8 @@ MDN Web Docs のサンプルコードをどのようにスタイルまたは整�
 
 MDN で他のページやページの節のタイトルで参照する場合、リンクテキストでは文章の大文字小文字表記に従ってください（ページや節ののタイトルと同じです）。リンク先のページタイトルや節のタイトルと異なっていても、リンクテキストでは文章の大文字小文字表記を使用してください（ページタイトルや節タイトルで使用している大文字小文字表記が間違っている可能性があります）。リンクテキストに引用符を使用しないでください。 MDN でページをタイトルで参照するには、以下のスタイル設定を使用してください。
 
-- **正**: [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)ガイドを参照してください。
-- **語**: 「[フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)」ガイドを参照してください。
+- **正**: [フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)ガイドを参照してください。
+- **語**: 「[フレックスアイテムの順序](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)」ガイドを参照してください。
 
 次のように、ページの節にリンクする場合も同様のスタイル設定を行ってください。
 
@@ -434,9 +434,9 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 文章の一部を記事や記事の節にリンクすることができます。リンクテキストとして説明的な語句を使用し、リンクされているページに十分なコンテキストを提供するように注意してください。
 
-- **正**: 詳しくは[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)を参照してください。
-- **語**: 詳しくは[こちら](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)をクリックしてください。
-- **語**: 詳しくは[この記事](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)を読んでください。
+- **正**: 詳しくは[フレックスアイテムの並べ替え](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)を参照してください。
+- **語**: 詳しくは[こちら](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)をクリックしてください。
+- **語**: 詳しくは[この記事](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)を読んでください。
 
 MDN で、リファレンスページにリンクするもう一つの方法はマクロを使用することです。これらのマクロは[よく使われるマクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)ページに記述されています。例えば、 HTML 要素のリファレンスページにリンクするには `HTMLElement` マクロを使用し、 CSS プロパティのリファレンスページにリンクするには `CSSxRef` マクロを使用します。
 

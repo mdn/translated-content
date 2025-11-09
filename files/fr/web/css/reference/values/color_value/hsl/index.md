@@ -398,7 +398,7 @@ div.legacyHSLA {
 - Les fonctions de couleur [`lch()`](/fr/docs/Web/CSS/Reference/Values/color_value/lch) et [`hwb()`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb)
 - [Interpolation de la teinte dans `color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix#utiliser_linterpolation_de_teinte_avec_color-mix)
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
-- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
+- [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Outil de sélection de couleur <sup>(angl.)</sup>](https://apps.colorjs.io/picker/) par Lea Verou

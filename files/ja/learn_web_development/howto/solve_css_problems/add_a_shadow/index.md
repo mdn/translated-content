@@ -62,5 +62,5 @@ button {
 
 ## 関連情報
 
-- [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
+- [ボックスの影作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
 - [CSS の学習: 高度なスタイル設定の効果](/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)

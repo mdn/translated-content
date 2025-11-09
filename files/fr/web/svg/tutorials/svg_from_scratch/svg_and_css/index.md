@@ -13,7 +13,7 @@ Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SV
 Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécuter dans votre navigateur (à la condition que celui-ci soit compatible avec SVG).
 
 > [!NOTE]
-> Les éléments référencés par des éléments [`<use>`](/fr/docs/Web/SVG/Reference/Element/use) héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser [les propriétés CSS personnalisées (_custom properties_)](/fr/docs/Web/CSS/CSS_cascading_variables).
+> Les éléments référencés par des éléments [`<use>`](/fr/docs/Web/SVG/Reference/Element/use) héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser [les propriétés CSS personnalisées (_custom properties_)](/fr/docs/Web/CSS/Guides/Cascading_variables).
 
 ## Exemple
 

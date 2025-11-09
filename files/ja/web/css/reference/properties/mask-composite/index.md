@@ -303,4 +303,4 @@ body > img {
 - {{cssxref("mask")}} 一括指定
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-mode")}}
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

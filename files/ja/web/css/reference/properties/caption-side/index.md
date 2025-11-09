@@ -99,7 +99,7 @@ caption-side: unset;
   - : キャプションボックスを表のブロック方向の末尾に配置します。
 
 > [!NOTE]
-> [CSS の論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュールでは、キャプションボックスをテーブルのインライン先頭側の端およびインライン末尾側の端にそれぞれ配置するための 2 つの論理値、 `inline-start` および `inline-end` を定義しています。これらの値は、どのブラウザーでも対応していません。
+> [CSS の論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュールでは、キャプションボックスをテーブルのインライン先頭側の端およびインライン末尾側の端にそれぞれ配置するための 2 つの論理値、 `inline-start` および `inline-end` を定義しています。これらの値は、どのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -174,5 +174,5 @@ td {
 ## 関連情報
 
 - {{HTMLelement("caption")}}
-- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
+- [CSS 表](/ja/docs/Web/CSS/Guides/Table)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール

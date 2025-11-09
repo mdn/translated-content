@@ -60,6 +60,6 @@ new ViewTimeline(options)
 ## 関連情報
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
 - {{domxref("ViewTimeline")}}
 - {{domxref("AnimationTimeline")}}, {{domxref("ScrollTimeline")}}

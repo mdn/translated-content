@@ -137,7 +137,7 @@ En plus de fournir un type MIME avec l'attribut `type`, ce code utilise un attri
 
 ## Inclure des médias
 
-Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/Reference/At-rules/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
+Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/Reference/At-rules/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Guides/Media_queries/Using) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
 
 Voici un exemple. Vous pouvez consulter son [code source sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media) ou étudier un [exemple de démonstration <sup>(angl.)</sup>](https://mdn.github.io/html-examples/link-rel-preload/media/)&nbsp;:
 
@@ -177,7 +177,7 @@ Voici un exemple. Vous pouvez consulter son [code source sur GitHub <sup>(angl.)
 </body>
 ```
 
-Dans cet exemple nous incluons les attributs `media` dans notre élément `<link>` pour qu'une image plus fine soit préchargée si la personne visitant le site dispose d'un écran plus petit, et pour qu'une image plus large soit chargée sur les écrans plus larges. Pour cela, nous utilisons {{DOMxRef("Window.matchMedia")}} et {{DOMxRef("MediaQueryList")}} (consultez la page [Tester les requêtes média en JavaScript](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) pour en savoir plus).
+Dans cet exemple nous incluons les attributs `media` dans notre élément `<link>` pour qu'une image plus fine soit préchargée si la personne visitant le site dispose d'un écran plus petit, et pour qu'une image plus large soit chargée sur les écrans plus larges. Pour cela, nous utilisons {{DOMxRef("Window.matchMedia")}} et {{DOMxRef("MediaQueryList")}} (consultez la page [Tester les requêtes média en JavaScript](/fr/docs/Web/CSS/Guides/Media_queries/Testing) pour en savoir plus).
 
 Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit «&nbsp;flash de texte sans mis en forme&nbsp;» en français).
 

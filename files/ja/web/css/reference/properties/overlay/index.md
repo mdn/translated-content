@@ -13,7 +13,7 @@ l10n:
 `overlay` はブラウザーによってのみ設定することができることに注意してください。作成者のスタイルは要素の `overlay` 値を変更することはできません。しかし、要素に設定する[トランジションする要素のリスト](/ja/docs/Web/CSS/Reference/Properties/transition-property)に `overlay` を追加することはできます。これにより、最上位レイヤーからの除去が延期され、すぐに消えずにアニメーションが発生するようになります。
 
 > [!NOTE]
-> オーバーレイ `overlay` のアニメーションをトランジションさせるには、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。 `overlay` のアニメーションは通常の[離散アニメーション](/ja/docs/Web/CSS/CSS_animated_properties#離散)と異なり、開始状態か終了状態かに関わらず、可視状態（つまり `auto`）がトランジションの再生時間全体にわたって常に表示されます。
+> オーバーレイ `overlay` のアニメーションをトランジションさせるには、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) を設定する必要があります。 `overlay` のアニメーションは通常の[離散アニメーション](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)と異なり、開始状態か終了状態かに関わらず、可視状態（つまり `auto`）がトランジションの再生時間全体にわたって常に表示されます。
 
 ## 構文
 
@@ -49,7 +49,7 @@ display: unset;
 
 ### ポップオーバーのトランジション
 
-この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)が [トランジション](/ja/docs/Web/CSS/CSS_transitions)で非表示から表示させたり戻したりするアニメーションをします。
+この例では、[ポップオーバー](/ja/docs/Web/API/Popover_API)が [トランジション](/ja/docs/Web/CSS/Guides/Transitions)で非表示から表示させたり戻したりするアニメーションをします。
 
 #### HTML
 
@@ -157,7 +157,7 @@ html {
 
 ## 関連情報
 
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
 - [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style)
 - [`transition-behavior`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior)
 - [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/) (developer.chrome.com, 2023)

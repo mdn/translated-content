@@ -340,5 +340,5 @@ DOM 要素のレイアウトやスタイル設定を行う際には、多くの�
 ## 終わりに
 
 - CSS の数学関数を使用すると、 JavaScript コードを一切書くことなく、レスポンシブなユーザーインターフェイスを作成することができます。
-- CSS のレイアウトブレークポイントを定義する際に、 CSS の数学関数を [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)の代わりに使用できる場合があります。
+- CSS のレイアウトブレークポイントを定義する際に、 CSS の数学関数を [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)の代わりに使用できる場合があります。
 - 2023 年、 Interop Project のメンバーが[「CSS 数学関数」を改善の重点分野として採択](https://github.com/web-platform-tests/interop/blob/main/2023/README.md#css-math-functions)しました。これは、ブラウザーベンダーが協力し、 CSS の数学関数がブラウザーや端末を問わず同じように動作するように保証する作業を行うということです。

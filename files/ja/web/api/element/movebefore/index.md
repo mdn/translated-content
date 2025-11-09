@@ -44,7 +44,7 @@ moveBefore(movedNode, referenceNode)
 
 `moveBefore()` メソッドは、指定されたノードをこの DOM 内の新しい場所に移動します。これは `Node.insertBefore()` メソッドと同様の機能を提供しますが、ノードを除去せずに、再挿入される点が異なります。つまり、 `insertBefore()` や類似のメカニズムで移動した場合にリセットされる、次のようなノードの状態が、移動後も保持されます。
 
-- [アニメーション](/ja/docs/Web/CSS/CSS_animations)や[トランジション](/ja/docs/Web/CSS/CSS_transitions)の状態。
+- [アニメーション](/ja/docs/Web/CSS/Guides/Animations)や[トランジション](/ja/docs/Web/CSS/Guides/Transitions)の状態。
 - {{htmlelement("iframe")}} の読み込み状態。
 - 操作の状態（例えば {{cssxref(":focus")}} や {{cssxref(":active")}}）。
 - 要素の[全画面](/ja/docs/Web/API/Fullscreen_API)の状態。
@@ -98,7 +98,7 @@ moveBefore(movedNode, referenceNode)
 
 #### CSS
 
-ボックスの外観や間隔に対して基本的なスタイル設定を提供し、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)を使用してコンテンツを中央揃えにします。
+ボックスの外観や間隔に対して基本的なスタイル設定を提供し、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用してコンテンツを中央揃えにします。
 
 ```css live-sample___movebefore-basic
 #section1,
@@ -185,7 +185,7 @@ moveBtn.addEventListener("click", () => {
 
 #### CSS
 
-このレイアウトには[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)を使用し、2 つの`<section>` 要素を横に並んでいるように配置し、`controls` の `<div>` 内のボタンを均等に空間を空けて配置します。
+このレイアウトには[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用し、2 つの`<section>` 要素を横に並んでいるように配置し、`controls` の `<div>` 内のボタンを均等に空間を空けて配置します。
 
 ```css live-sample___movebefore-state
 #wrapper,

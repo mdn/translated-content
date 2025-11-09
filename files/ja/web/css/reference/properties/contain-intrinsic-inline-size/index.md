@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-**`contain-intrinsic-inline-size`** は [CSS](/ja/docs/Web/CSS) の[論理プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)で、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の対象となっている場合に、ブラウザーがレイアウトに使用することができる要素のインラインサイズを定義します。
+**`contain-intrinsic-inline-size`** は [CSS](/ja/docs/Web/CSS) の[論理プロパティ](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)で、要素が[サイズ拘束](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ拘束)の対象となっている場合に、ブラウザーがレイアウトに使用することができる要素のインラインサイズを定義します。
 
 インラインサイズとは、行内のテキストの流れに対して並列方向の要素のサイズのことです。
 標準的な英語のような横書きの[書字方向](/ja/docs/Web/CSS/Reference/Properties/writing-mode)では、インラインサイズは水平方向（幅）です。縦書きの場合、インラインサイズは垂直方向です。

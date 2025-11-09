@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`transitioncancel`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)がキャンセルされたときに発生します。
+**`transitioncancel`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)がキャンセルされたときに発生します。
 
 ## 構文
 

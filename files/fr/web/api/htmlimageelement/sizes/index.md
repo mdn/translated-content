@@ -10,7 +10,7 @@ l10n:
 
 La propriété **`sizes`** de l'interface {{domxref("HTMLImageElement")}} permet de définir la largeur de présentation de l'[image](/fr/docs/Web/HTML/Reference/Elements/img) pour chaque condition média d'une liste. Cela permet de sélectionner automatiquement différentes images — même de différentes orientations ou proportions — lorsque l'état du document change pour correspondre à différentes conditions média.
 
-Chaque condition est définie en utilisant le même format conditionnel que celui des [requêtes média](/fr/docs/Web/CSS/CSS_media_queries).
+Chaque condition est définie en utilisant le même format conditionnel que celui des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries).
 
 ## Valeur
 
@@ -122,8 +122,8 @@ La page est mieux {{LiveSampleLink("sélection_dune_image_adaptée_à_la_largeur
 
 ## Voir aussi
 
-- [Requêtes média](/fr/docs/Web/CSS/CSS_media_queries)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Requêtes média](/fr/docs/Web/CSS/Guides/Media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - [Images HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Images réactives](/fr/docs/Web/HTML/Guides/Responsive_images)
 - [Utiliser les attributs `srcset` et `sizes`](/fr/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)

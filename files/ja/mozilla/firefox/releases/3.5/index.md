@@ -22,7 +22,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - [ダウンロードフォントのサポート](/ja/docs/Web/CSS/Reference/At-rules/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。
 - {{ cssxref("::before") }} および {{ cssxref("::after") }} の CSS 2.1 への更新
   - : `::before` および `::after` 擬似要素が CSS 2.1 サポートを満たすように更新されました。`position`、`float`、`list-style-*`、そして、いくつかの `display` プロパティのサポートが追加されています。
@@ -55,7 +55,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : これらの新しい CSS 機能はテーマ作成を手助けするために追加されました。
 - `-moz-appearance` 向けの新しい値
   - : `-moz-win-glass` および `-moz-mac-unified-toolbar` という値が `-moz-appearance` 向けに追加されました。
-- [CSS transforms の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS transforms の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
   - : Firefox 3.5 では CSS transform がサポートされます。詳細は {{ cssxref("-moz-transform") }} および {{ cssxref("-moz-transform-origin") }} を参照してください。
 - {{ cssxref(":nth-child") }}
 

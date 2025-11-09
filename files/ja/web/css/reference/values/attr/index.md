@@ -104,7 +104,7 @@ attr(<attr-name> <attr-type>? , <fallback-value>?)
         ```
 
     - `<attr-unit>`
-      - : `<attr-unit>` 識別子は、数値が持つべき単位（ある場合）を指定します。これは、`%` 文字（パーセント値）、または [CSS の距離単位](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#distance_units) （`px`、`rem`、`deg`、`s` など）です。
+      - : `<attr-unit>` 識別子は、数値が持つべき単位（ある場合）を指定します。これは、`%` 文字（パーセント値）、または [CSS の距離単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#distance_units) （`px`、`rem`、`deg`、`s` など）です。
 
         ```css
         attr(data-size rem)

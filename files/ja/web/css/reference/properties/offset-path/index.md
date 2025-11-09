@@ -126,7 +126,7 @@ offset-path: unset;
   - : 要素がオフセットパスをたどらないことを指定します。値 `none` は、要素が[オフセット変換](/ja/docs/Web/CSS/Reference/Properties/offset)を持たないことと同じです。この場合、要素の動きは、オフセットパスではなく、 {{cssxref("top")}} や {{cssxref("left")}} などの既定の位置プロパティによって決まります。これは既定値です。
 
 - `<offset-path>`
-  - : `ray()` 関数、 `<url>` 値、または `<basic-shape>` 値で、幾何学的オフセットのパスを指定します。省略した場合、 `<coord-box>` 値のパス形状は `inset(0 round X)` となります。ここで `X` は、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)を確立する要素の {{cssxref("border-radius")}} の値です。
+  - : `ray()` 関数、 `<url>` 値、または `<basic-shape>` 値で、幾何学的オフセットのパスを指定します。省略した場合、 `<coord-box>` 値のパス形状は `inset(0 round X)` となります。ここで `X` は、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)を確立する要素の {{cssxref("border-radius")}} の値です。
     - {{cssxref("ray","ray()")}}
       - : 指定した位置から、指定した長さで、指定した角度で伸びる線を定義します。 `ray()` 関数は、最大 4 つの引数（{{CSSxRef("angle")}}、オプションのサイズ値、オプションのキーワード `contain`、およびオプションの `at <position>`）を受け取ります。
 
@@ -137,7 +137,7 @@ offset-path: unset;
       - : オフセットパスを、 [CSS 基本図形関数](/ja/docs/Web/CSS/Reference/Values/basic-shape)（ {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/path","path()")}}, {{cssxref("basic-shape/polygon","polygon()")}}, {{cssxref("basic-shape/rect","rect()")}}, {{cssxref("basic-shape/xywh","xywh()")}} など）と同等のパスとして指定します。例えば、 `<basic_shape>` が `ellipse()` 関数である場合、パスは、楕円の右端の点から時計回りに 1 回転した楕円の概要になります。 `at <position>` 引数を受け入れる `ellipse()` および `circle()` では、 `<position>` が省略された場合、要素に {{cssxref("offset-position")}} が指定されていない限り、位置は既定で `center` になります。この場合、 `offset-position` の値が `at <position>` 引数に使用されます。より複雑な形状は、 {{cssxref("basic-shape/shape","shape()")}} 関数を使用して定義することができます。
 
 - [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#値)
-  - : パスを含む[参照ボックス](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#参照ボックス)のサイズ情報を指定します。参照ボックスは、この要素の包含ブロックを確立する要素から派生します。このパラメータはオプションです。指定しない場合、CSS コンテキストでは既定値は `border-box` です。 SVG のコンテキストでは、この値は `view-box` として扱われます。 `ray()` または `<basic-shape>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、それぞれ、ray または `<basic-shape>` の参照ボックスを提供します。 `<url>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、図形要素のビューポートおよびユーザー座標系を提供し、原点 (`0 0`) は左上隅、サイズは `1px` となります。
+  - : パスを含む[参照ボックス](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参照ボックス)のサイズ情報を指定します。参照ボックスは、この要素の包含ブロックを確立する要素から派生します。このパラメータはオプションです。指定しない場合、CSS コンテキストでは既定値は `border-box` です。 SVG のコンテキストでは、この値は `view-box` として扱われます。 `ray()` または `<basic-shape>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、それぞれ、ray または `<basic-shape>` の参照ボックスを提供します。 `<url>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、図形要素のビューポートおよびユーザー座標系を提供し、原点 (`0 0`) は左上隅、サイズは `1px` となります。
 
 ## 解説
 

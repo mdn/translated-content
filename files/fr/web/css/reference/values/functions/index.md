@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9036ccca6d55b90913ca424e6706b0c9ed1fa93b
 ---
 
-Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour renvoyer une [valeur](/fr/docs/Web/CSS/CSS_values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
+Les **fonctions de valeur CSS** (<i lang="en">CSS value functions</i> en anglais) sont des instructions qui invoquent un traitement de données spécial ou des calculs pour renvoyer une [valeur](/fr/docs/Web/CSS/Guides/Values_and_units) [CSS](/fr/docs/Web/CSS) pour une propriété CSS. Les fonctions de valeur CSS représentent des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) plus complexes et peuvent prendre certains arguments d'entrée pour calculer la valeur de retour.
 
 ## Syntaxe
 
@@ -91,7 +91,7 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) CSS {{CSSxRe
 
 Les fonctions mathématiques permettent d'écrire des valeurs numériques CSS sous forme d'expressions mathématiques.
 
-Chacune des pages ci-dessous contient des informations détaillées sur la syntaxe d'une fonction mathématique, des données de compatibilité avec les navigateurs, des exemples, etc. Pour une introduction complète aux fonctions mathématiques CSS, regardez [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/CSS_values_and_units/Using_CSS_math_functions).
+Chacune des pages ci-dessous contient des informations détaillées sur la syntaxe d'une fonction mathématique, des données de compatibilité avec les navigateurs, des exemples, etc. Pour une introduction complète aux fonctions mathématiques CSS, regardez [Utiliser les fonctions mathématiques CSS](/fr/docs/Web/CSS/Guides/Values_and_units/Using_math_functions).
 
 ### Les opérations arithmétiques de base
 
@@ -291,7 +291,7 @@ Les fonctions suivantes sont utilisées comme valeur des propriétés pour réf�
 - {{CSSxRef("env", "env()")}}
   - : Utilise la variable d'environnement définie par l'agent utilisateur.
 - {{CSSxRef("if", "if()")}}
-  - : Définit conditionnellement une valeur de propriété en fonction du résultat d'une [requête de style](/fr/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), d'une [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) ou d'une [requête de fonctionnalité](/fr/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+  - : Définit conditionnellement une valeur de propriété en fonction du résultat d'une [requête de style](/fr/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), d'une [requête média](/fr/docs/Web/CSS/Guides/Media_queries/Using) ou d'une [requête de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries).
 - {{cssxref("url_function", "url()")}}
   - : Utilise un fichier à partir de l'URL spécifiée.
 - {{CSSxRef("var", "var()")}}
@@ -299,7 +299,7 @@ Les fonctions suivantes sont utilisées comme valeur des propriétés pour réf�
 
 ## Les fonctions de grille
 
-Les fonctions suivantes sont utilisées pour définir une [grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)&nbsp;:
+Les fonctions suivantes sont utilisées pour définir une [grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)&nbsp;:
 
 - {{CSSxRef("fit-content_function", "fit-content()")}}
   - : Limite une taille donnée à une taille disponible selon la formule `min(maximum size, max(minimum size, argument))`.
@@ -365,5 +365,5 @@ Les fonctions suivantes renvoient une valeur entière basée sur l'arbre DOM, pl
 
 ## Voir aussi
 
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

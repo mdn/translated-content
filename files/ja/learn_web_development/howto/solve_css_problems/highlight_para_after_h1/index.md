@@ -15,7 +15,7 @@ l10n:
 
 ## 次兄弟結合子
 
-CSS の [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors) のグループには、複数のセレクターを組み合わせて選択することから**結合子**と呼ばれるものが存在します。この例では、[次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)を使用することにします。この結合子は、ある要素が他の要素の隣にあることを基準に選択します。HTML は {{htmlelement("Heading_Elements", "h1")}} の後に {{htmlelement("p")}} が続いています。`<p>` は `<h1>` の隣接する兄弟要素なので、`h1 + p` で選択することができます。
+CSS の [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors) のグループには、複数のセレクターを組み合わせて選択することから**結合子**と呼ばれるものが存在します。この例では、[次兄弟結合子](/ja/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)を使用することにします。この結合子は、ある要素が他の要素の隣にあることを基準に選択します。HTML は {{htmlelement("Heading_Elements", "h1")}} の後に {{htmlelement("p")}} が続いています。`<p>` は `<h1>` の隣接する兄弟要素なので、`h1 + p` で選択することができます。
 
 ```html live-sample___highlight_h1_plus_para
 <div class="wrapper">

@@ -208,7 +208,7 @@ registerPaint(
 );
 ```
 
-`paint()` 関数の 3 つの引数には、描画コンテキスト、描画サイズ、プロパティが含まれます。プロパティにアクセスできるようにするために、静的な `inputProperties()` メソッドを含めています。これは、通常のプロパティや[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を含む CSS プロパティへの動的なアクセスを提供し、プロパティ名の{{jsxref("Array", "配列")}}を返します。最後に`inputArguments` について見ていきます。
+`paint()` 関数の 3 つの引数には、描画コンテキスト、描画サイズ、プロパティが含まれます。プロパティにアクセスできるようにするために、静的な `inputProperties()` メソッドを含めています。これは、通常のプロパティや[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を含む CSS プロパティへの動的なアクセスを提供し、プロパティ名の{{jsxref("Array", "配列")}}を返します。最後に`inputArguments` について見ていきます。
 
 3 種類の色と 3 種類の幅の間で周回する背景画像を使って、項目一覧を作成してみましょう。
 
@@ -389,7 +389,7 @@ registerPaint(
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-それぞれのヘッダーは、それぞれ異なった値の `--highColor` [カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)を持つことができます。
+それぞれのヘッダーは、それぞれ異なった値の `--highColor` [カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を持つことができます。
 
 ```css
 .fancy {

@@ -8,7 +8,7 @@ l10n:
 
 _通常フロー_ (Normal Flow) 、またはフローレイアウトは、レイアウトに変更が加えられる前にブロック要素やインライン要素がページに表示される方法です。このフローは本質的に、共に動作するすべてのものの組み合わせで、レイアウトの中で互いについてを知っています。いったん何かがフローの外に出ると、独立して動作します。
 
-通常フローでは、 **{{Glossary("Inline-level_content", "インライン")}}** 要素はインライン方向、つまり文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に従って、文の中で言葉が表示される方向に表示されます。 **{{Glossary("Block/CSS", "ブロック")}}** 要素は、文書の書字方向の中で、段落として一つが他の物の後に表示されます。従って英語では、インライン要素は左から始まり、一つが他の物の後に表示され、ブロック要素は上から始まり、ページの下に向かいます。
+通常フローでは、 **{{Glossary("Inline-level_content", "インライン")}}** 要素はインライン方向、つまり文書の[書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)に従って、文の中で言葉が表示される方向に表示されます。 **{{Glossary("Block/CSS", "ブロック")}}** 要素は、文書の書字方向の中で、段落として一つが他の物の後に表示されます。従って英語では、インライン要素は左から始まり、一つが他の物の後に表示され、ブロック要素は上から始まり、ページの下に向かいます。
 
 ## 基本的な例
 
@@ -51,8 +51,8 @@ span {
 
 ## 関連情報
 
-- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
-- [整形コンテキストの解説](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [通常フローでのブロック及びインラインレイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [フロー内とフローの外](/ja/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
+- [整形コンテキストの解説](/ja/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [フローレイアウトと書字方向](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)

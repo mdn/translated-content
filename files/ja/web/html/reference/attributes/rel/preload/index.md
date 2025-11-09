@@ -136,7 +136,7 @@ l10n:
 
 ## media を含める
 
-`<link>` 要素の優れた機能のひとつが、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)を受け付けることができるので、レスポンシブな事前読み込みを行うことができます。
+`<link>` 要素の優れた機能のひとつが、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を受け付けることができるので、レスポンシブな事前読み込みを行うことができます。
 
 例を見てみましょう (GitHub 上の[ソースコード](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media)、[デモ](https://mdn.github.io/html-examples/link-rel-preload/media/))。
 
@@ -176,7 +176,7 @@ l10n:
 </body>
 ```
 
-`media` 属性を `<link>` 要素に設定することで、ビューポートが狭い場合は幅の狭い画像を、ビューポートが広い場合は幅の広い画像を事前読み込みするようにします。このために {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} を使用しています（詳しくは[メディアクエリーのテスト](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)を参照）。
+`media` 属性を `<link>` 要素に設定することで、ビューポートが狭い場合は幅の狭い画像を、ビューポートが広い場合は幅の広い画像を事前読み込みするようにします。このために {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} を使用しています（詳しくは[メディアクエリーのテスト](/ja/docs/Web/CSS/Guides/Media_queries/Testing)を参照）。
 
 これにより、ページのレンダリング時にそのフォントが利用できる可能性が高くなり、 FOUT （スタイル付け前のテキストの点滅）を減らすことができます。
 

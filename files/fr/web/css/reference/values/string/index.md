@@ -49,6 +49,6 @@ de caractères"
 
 ## Voir aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- [Valeurs et unités en CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
 - [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Types de donnée en CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)

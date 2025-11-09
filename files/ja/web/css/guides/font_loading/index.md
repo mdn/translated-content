@@ -50,4 +50,4 @@ l10n:
 
 ## 関連情報
 
-- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
+- [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

@@ -162,6 +162,6 @@ img.luminanceMaskType {
 
 - {{cssxref("mask")}}
 - {{cssxref("mask-mode")}}
-- [CSS マスク入門](/ja/docs/Web/CSS/CSS_masking/Masking)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{svgattr("mask-type")}} 属性

@@ -57,4 +57,4 @@ a:local-link {
 ## 関連情報
 
 - リンクに関する擬似クラス: {{ cssxref(":link") }}, {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール

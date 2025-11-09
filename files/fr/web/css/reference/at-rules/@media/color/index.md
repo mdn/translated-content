@@ -15,7 +15,7 @@ La caractéristique `color` est définie avec un entier (type CSS {{cssxref("&lt
 > [!NOTE]
 > Si les différentes composantes sont représentées sur un nombre différent de bits, c'est le plus petit de ces nombres qui est utilisé. Par exemple, si un affichage utilise 5 bits pour le bleu et le rouge mais 6 bits pour le vert, on considèrera que l'appareil utilise 5 bits par couleur. Si l'appareil utilise des couleur indexées, c'est le nombre minimal de bits par composantes parmi les couleurs de l'index qui est utilisé.
 
-Consultez la page [Appliquer des couleurs au HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color) pour en savoir plus sur l'utilisation de CSS pour appliquer des couleurs aux éléments HTML.
+Consultez la page [Appliquer des couleurs au HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color) pour en savoir plus sur l'utilisation de CSS pour appliquer des couleurs aux éléments HTML.
 
 ## Exemples
 

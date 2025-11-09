@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-**`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、画像の指定した領域をマスクまたはクリップして、要素を（部分的にまたは完全に）非表示にします。これは、すべての `mask-*` プロパティの一括指定です。このプロパティは、カンマで区切られた 1 つ以上の値を受け入れ、各値は `<mask-layer>` に対応します。
+**`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、画像の指定した領域をマスクまたはクリップして、要素を（部分的にまたは完全に）非表示にします。これは、すべての `mask-*` プロパティの一括指定です。このプロパティは、カンマで区切られた 1 つ以上の値を受け入れ、各値は `<mask-layer>` に対応します。
 
 ## 構成要素のプロパティ
 
@@ -189,6 +189,6 @@ div {
 
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("filter")}}
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{SVGAttr("mask")}} 属性
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

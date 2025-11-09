@@ -15,7 +15,7 @@ Comme vous pouvez le voir, la couleur sans canal alpha bloque complètement le t
 
 ## Voir aussi
 
-- [Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- [Couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Apprendre&nbsp;: Unités et valeurs CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Guide des types et formats des fichiers d'images](/fr/docs/Web/Media/Guides/Formats/Image_types)
 - [Alpha blending](https://fr.wikipedia.org/wiki/Alpha_blending) sur Wikipedia

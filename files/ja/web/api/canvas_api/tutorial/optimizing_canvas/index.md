@@ -81,7 +81,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### CSS 座標変換を使用してキャンバスを拡大縮小する
 
-[CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)は、 GPU を使用しますのでより高速です。もっともよいのは拡大縮小しないことですが、そうでなければ大きなキャンバスを縮小するよりも小さなキャンバスを拡大したほうが良好です。
+[CSS 座標変換](/ja/docs/Web/CSS/Guides/Transforms/Using)は、 GPU を使用しますのでより高速です。もっともよいのは拡大縮小しないことですが、そうでなければ大きなキャンバスを縮小するよりも小さなキャンバスを拡大したほうが良好です。
 
 ```js
 const scaleX = window.innerWidth / canvas.width;

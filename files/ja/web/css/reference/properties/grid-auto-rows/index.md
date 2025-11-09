@@ -195,5 +195,5 @@ grid-auto-rows: unset;
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-flow")}}
 - {{cssxref("grid")}}
-- [CSS グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
+- [CSS グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement#暗黙のグリッド内での行の大きさ)
 - 動画: [Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

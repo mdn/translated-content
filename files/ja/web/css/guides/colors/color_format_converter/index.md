@@ -561,10 +561,10 @@ init();
 
 ## 関連情報
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - [CSS 色の値](/ja/docs/Web/CSS/CSS_colors/Color_values)
 - [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
-- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
+- [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [色と明るさの理解](/ja/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [WCAG 1.4.1: 色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [学習: CSS を使用した背景と境界のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

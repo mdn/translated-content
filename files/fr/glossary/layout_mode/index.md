@@ -9,24 +9,24 @@ Un **mode de disposition CSS** (_layout mode_), parfois raccourci en «&nbsp;dis
 
 Il existe plusieurs modes de disposition&nbsp;:
 
-- **[Disposition en flux ou flux normal](/fr/docs/Web/CSS/CSS_display/Flow_layout)**
+- **[Disposition en flux ou flux normal](/fr/docs/Web/CSS/Guides/Display/Flow_layout)**
   - : Tous les éléments font partie du flux normal jusqu'à ce qu'une propriété les en sorte. Le flux normal inclut&nbsp;:
-    - **[Disposition en bloc](/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)**
+    - **[Disposition en bloc](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)**
       - : Conçue pour organiser des boîtes comme les paragraphes.
     - **[Disposition en ligne](/fr/docs/Web/CSS/CSS_inline_layout)**
       - : Conçue pour organiser des éléments en ligne comme le texte.
 
-- **[Disposition en tableau](/fr/docs/Web/CSS/CSS_table)**
+- **[Disposition en tableau](/fr/docs/Web/CSS/Guides/Table)**
   - : Conçue pour organiser des tableaux.
 - **Disposition flottante**
   - : Conçue pour positionner un élément à gauche ou à droite, le reste du contenu du flux normal s'enroulant autour.
-- **[Disposition positionnée](/fr/docs/Web/CSS/CSS_positioned_layout)**
+- **[Disposition positionnée](/fr/docs/Web/CSS/Guides/Positioned_layout)**
   - : Conçue pour positionner des éléments sans grande interaction avec les autres.
-- **[Disposition en colonnes multiples](/fr/docs/Web/CSS/CSS_multicol_layout)**
+- **[Disposition en colonnes multiples](/fr/docs/Web/CSS/Guides/Multicol_layout)**
   - : Conçue pour organiser le contenu en colonnes, comme dans un journal.
-- **[Disposition avec des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout)**
+- **[Disposition avec des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout)**
   - : Conçue pour organiser des pages complexes pouvant être redimensionnées facilement.
-- **[Disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout)**
+- **[Disposition en grille](/fr/docs/Web/CSS/Guides/Grid_layout)**
   - : Conçue pour organiser les éléments selon une grille fixe.
 
 > [!NOTE]
@@ -34,5 +34,5 @@ Il existe plusieurs modes de disposition&nbsp;:
 
 ## Voir aussi
 
-- [Modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- Le module [d'affichage CSS](/fr/docs/Web/CSS/CSS_display)
+- [Modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- Le module [d'affichage CSS](/fr/docs/Web/CSS/Guides/Display)

@@ -129,9 +129,9 @@ grid-template-rows: unset;
   - : `min(max-content, max(auto, argument))` の式を表し、 `auto` と同様に（すなわち `minmax(auto, max-content)` と）計算されますが、トラックのサイズが `auto` の最小値よりも大きい場合は _argument_ でクランプされるところが異なります。
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : トラックリストの繰り返しフラグメントを表し、繰り返しパターンを示す多数の行をよりコンパクトな形式で記述できるようにします。
-- [`masonry`](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+- [`masonry`](/ja/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
   - : masonry の値は、この軸がメイソンリーアルゴリズムに従ってレイアウトされるべきであることを示します。
-- [`subgrid`](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [`subgrid`](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : グリッドが、その親グリッドのその軸方向の部分に合わせられることを示します。グリッドの行や列のサイズは明示的に指定されず、親グリッドの定義から取得されます。
 
 ## 公式定義
@@ -190,6 +190,6 @@ grid-template-rows: unset;
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-template")}}
-- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#グリッドトラック)
+- [グリッドレイアウトの基本概念: グリッドトラック](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#グリッドトラック)
 - 動画: [Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)
-- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [サブグリッド](/ja/docs/Web/CSS/Guides/Grid_layout/Subgrid)

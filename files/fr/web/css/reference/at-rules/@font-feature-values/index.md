@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-feature-values`** permet d'utiliser un nom commun dans la propriété {{cssxref("font-variant-alternates")}} pour des fonctionnalités activées différemment en OpenType. Cela peut simplifier votre CSS lorsque vous utilisez plusieurs polices.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-feature-values`** permet d'utiliser un nom commun dans la propriété {{cssxref("font-variant-alternates")}} pour des fonctionnalités activées différemment en OpenType. Cela peut simplifier votre CSS lorsque vous utilisez plusieurs polices.
 
 La règle `@font-feature-values` peut être utilisée soit au début de votre CSS, soit à l'intérieur de n'importe quelle règle conditionnelle CSS.
 

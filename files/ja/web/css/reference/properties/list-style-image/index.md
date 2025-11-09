@@ -138,7 +138,7 @@ ul {
 
 ### グラデーションの使用
 
-この例では [CSS グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)をマーカーとして使用しており、 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 画像関数を用いて作成しています。
+この例では [CSS グラデーション](/ja/docs/Web/CSS/Guides/Images/Using_gradients)をマーカーとして使用しており、 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 画像関数を用いて作成しています。
 
 #### HTML
 
@@ -176,5 +176,5 @@ ul {
 - {{Cssxref("list-style-type")}} プロパティ
 - {{Cssxref("list-style-position")}} プロパティ
 - {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

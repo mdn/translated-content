@@ -62,7 +62,7 @@ Dans la suite de cet article, nous verrons les différentes fonctionnalités de 
 
 ## Les requêtes média (<i lang="en>media queries</i>)
 
-[Les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) permettent d'effectuer différents tests (par exemple pour déterminer si l'écran utilisé dépasse une largeur ou une résolution donnée) et d'appliquer du CSS en fonction pour mettre en forme la page.
+[Les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) permettent d'effectuer différents tests (par exemple pour déterminer si l'écran utilisé dépasse une largeur ou une résolution donnée) et d'appliquer du CSS en fonction pour mettre en forme la page.
 
 Dans l'exemple qui suit, la requête média teste si la page web est affichée sur un écran (plutôt que d'être imprimée) et si la largeur de la zone d'affichage est supérieure ou égale à `80rem`. Le fragment CSS pour le sélecteur `.container` s'appliquera uniquement si ces deux critères sont vérifiés.
 
@@ -82,7 +82,7 @@ Lorsqu'on utilise des points d'arrêts, une bonne pratique consiste à utiliser 
 
 Il existe différentes approches pour les styles définis à l'intérieur d'un bloc d'une requête média. On peut utiliser des requêtes média, ou des feuilles de styles pointées par des éléments [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) selon les caractéristiques du navigateur pour inclure uniquement des variables de propriétés personnalisés contenant les valeurs associées à chaque point d'arrêt.
 
-Pour en savoir plus sur les requêtes média, voir [la documentation MDN à ce sujet](/fr/docs/Web/CSS/CSS_media_queries).
+Pour en savoir plus sur les requêtes média, voir [la documentation MDN à ce sujet](/fr/docs/Web/CSS/Guides/Media_queries).
 
 Les requêtes média peuvent aider au <i lang="en">responsive design</i>, mais elles ne sont pas strictement nécessaires. Les grilles flexibles, les unités relatives, les valeurs minimales et maximales des unités peuvent très bien être utilisées sans requêtes média.
 
@@ -172,7 +172,7 @@ L'élément `<picture>` permet de fournir plusieurs tailles d'images à l'aide d
 Quelques conseils complémentaires&nbsp;:
 
 - Assurez vous d'utiliser un format d'image approprié pour les images de votre site (comme PNG ou JPG), et d'optimiser la taille des fichiers à l'aide d'un éditeur graphique avant de publier les images sur votre site web.
-- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/Reference/Properties/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
+- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/Reference/Properties/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
 - Il est possible d'utiliser des requêtes média grâce à l'attribut `media` des éléments [`<source>`](/fr/docs/Web/HTML/Reference/Elements/source) dans les éléments [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video)/[`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) afin de servir des fichiers pertinents selon l'appareil utilisé.
 
 ## Typographie adaptative

@@ -147,5 +147,5 @@ img {
 - {{cssxref("object-position")}}
 - {{cssxref("image-orientation")}}
 - {{cssxref("image-resolution")}}
-- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール
+- [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
 - SVG の {{SVGAttr("image-rendering")}} 属性

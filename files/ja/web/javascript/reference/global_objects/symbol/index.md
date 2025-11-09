@@ -2,10 +2,8 @@
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{JSRef}}
 
 **`Symbol`** は組み込みオブジェクトであり、コンストラクターは一意であることが保証されているシンボル[プリミティブ](/ja/docs/Glossary/Primitive)（**シンボル値**または単に**シンボル**）を返します。シンボルは、他のコードがオブジェクトに追加する可能性のあるキーと衝突しないように、また、他のコードがオブジェクトにアクセスするために通常使用するメカニズムから隠されるるように、一意のプロパティキーをオブジェクトに追加するためによく使用されます。これによって弱い{{Glossary("encapsulation","カプセル化")}}、または弱い形の[情報隠蔽](https://ja.wikipedia.org/wiki/情報隠蔽)が実現できます。
 
@@ -84,8 +82,12 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 
 静的プロパティはすべてウェルノウンシンボルです。これらのシンボルの説明では、「`Symbol.hasInstance` は ... を決定するメソッドです」というような言葉を使っていますが、これはオブジェクトのメソッドがこのシンボルをメソッド名として持つという意味であり（ウェルノウンシンボルは「プロトコル」として機能するため）、シンボルそのものの値を説明しているわけではないことを覚えておいてください。
 
+- {{jsxref("Symbol.asyncDispose")}}
+  - : オブジェクトがスコープ外になった際に、そのオブジェクトのリソースを非同期的に破棄するメソッドです。[`await using`](/ja/docs/Web/JavaScript/Reference/Statements/await_using) 宣言で使用されます。
 - {{jsxref("Symbol.asyncIterator")}}
   - : オブジェクトの既定の非同期イテレーター (AsyncIterator) を返すメソッドです。[`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) から使用されます。
+- {{jsxref("Symbol.dispose")}}
+  - : オブジェクトがスコープ外に出た際に、そのオブジェクトのリソースを解放するメソッドです。 [`using`](/ja/docs/Web/JavaScript/Reference/Statements/using) 宣言で使用されます。
 - {{jsxref("Symbol.hasInstance")}}
   - : コンストラクターオブジェクトがあるオブジェクトを自分のインスタンスとして認識するかどうかどうかを決定するメソッドです。{{jsxref("Operators/instanceof", "instanceof")}} から使用されます。
 - {{jsxref("Symbol.isConcatSpreadable")}}

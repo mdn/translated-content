@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
-**CSS 合成と混合** (compositing and blending) モジュールは、要素の背景レイヤーをどのように互いに合成するか、どのように要素をコンテナーと合成するか、要素が新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成する必要があるかどうかを定義します。
+**CSS 合成と混合** (compositing and blending) モジュールは、要素の背景レイヤーをどのように互いに合成するか、どのように要素をコンテナーと合成するか、要素が新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)を生成する必要があるかどうかを定義します。
 
 この CSS モジュールのプロパティを使用して、要素の背景画像と色を単一の背景画像に合成するために使用する混合モードを定義することができます。モジュールが提供する混合モードは 16 種類あります。また、要素の境界線、背景、およびテキスト、絵文字、画像を含むコンテンツを、コンテナーの背景とどのように合成するかを定義することもできます。
 
@@ -109,7 +109,7 @@ span {
 
 ## 関連情報
 
-- [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)モジュールのプロパティでは、画像、背景、境界線に対してぼかしや色の強弱の変更などのフィルター効果を適用することができます。
+- [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュールのプロパティでは、画像、背景、境界線に対してぼかしや色の強弱の変更などのフィルター効果を適用することができます。
 - [Compositing And Blending In CSS](https://www.sarasoueidan.com/blog/compositing-and-blending-in-css/) (2015)
 - [Editing Images in CSS: Blend Modes](https://webdesign.tutsplus.com/editing-images-in-css-blend-modes--cms-26058t) (2022)
 - [web.dev: blend modes](https://web.dev/learn/css/blend-modes) (2021)

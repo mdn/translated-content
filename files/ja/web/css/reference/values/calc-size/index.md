@@ -10,7 +10,7 @@ l10n:
 
 **`calc-size()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`auto`、 [`fit-content`](/ja/docs/Web/CSS/Reference/Values/fit-content)、[`max-content`](/ja/docs/Web/CSS/Reference/Values/max-content) などの[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)値に対して計算を行うことができます。これは、通常の {{cssxref("calc()")}} 関数では対応していません。
 
-`calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/CSS_animations)および[トランジション](/ja/docs/Web/CSS/CSS_transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/Reference/Properties/interpolate-size) が自動的に適用されます。
+`calc-size()` の返値は[補間処理](/ja/docs/Glossary/Interpolation)も可能であり、サイズキーワードの値を[アニメーション](/ja/docs/Web/CSS/Guides/Animations)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions)で使用することができます。事実上、プロパティ値に `calc-size()` を含めると、選択範囲に [`interpolate-size: allow-keywords`](/ja/docs/Web/CSS/Reference/Properties/interpolate-size) が自動的に適用されます。
 
 ただし、 `interpolate-size` は継承されるため、要素に適用すると、その要素とその子要素に適用されているすべてのプロパティの、内在サイズのキーワードの補間処理が可能になります。そのため、内在サイズのアニメーションを有効にするには、`interpolate-size` を使用することをお勧めします。内在サイズのアニメーションを有効にするために `calc-size()` を使用するのは、計算も必要な場合のみにしてください。
 
@@ -65,7 +65,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 
 この引数には、いくつかの特別な値も取ることができます。
 
-- 入れ子になった `calc-size()` 値。これはあまり頻繁に行うことではないでしょうが、 [CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を使用することで確実に利用できます。これは、 `<calc-size-basis>` は、変数が `calc-size()` が設定されているプロパティに対して有効な値である場合に常に機能するためです。例えば、これはうまく動作します。
+- 入れ子になった `calc-size()` 値。これはあまり頻繁に行うことではないでしょうが、 [CSS 変数](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)を使用することで確実に利用できます。これは、 `<calc-size-basis>` は、変数が `calc-size()` が設定されているプロパティに対して有効な値である場合に常に機能するためです。例えば、これはうまく動作します。
 
   ```css
   section {
@@ -122,7 +122,7 @@ calc-size(<calc-size-basis>, <calc-sum>)
 > [!NOTE]
 > レイアウトイベントを削減し、パフォーマンスへの影響を軽減するため、可能であればボックスモデルのプロパティのアニメーションは避けるべきです（[重要なレンダリングパス > レイアウト](/ja/docs/Web/Performance/Guides/Critical_rendering_path#レイアウト)を参照）。
 
-例えば、[トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用して、コンテナーの `width` を `0` から `auto` まで同様にアニメーションすることができます。
+例えば、[トランジション](/ja/docs/Web/CSS/Guides/Transitions)を使用して、コンテナーの `width` を `0` から `auto` まで同様にアニメーションすることができます。
 
 ```css
 section {
@@ -218,7 +218,7 @@ p {
 }
 ```
 
-CSS では、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) を使用して、`<section>` 内の子要素を中央に配置し、`<section>` の `width` および `height` を `calc-size()` 関数に設定します。`width` は `fit-content` に `6rem` を加えた値に設定します。`height` は `auto` に 2 を掛けた値に設定します。
+CSS では、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) を使用して、`<section>` 内の子要素を中央に配置し、`<section>` の `width` および `height` を `calc-size()` 関数に設定します。`width` は `fit-content` に `6rem` を加えた値に設定します。`height` は `auto` に 2 を掛けた値に設定します。
 
 ```css
 section {

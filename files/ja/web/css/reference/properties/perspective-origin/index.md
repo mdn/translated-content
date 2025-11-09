@@ -150,7 +150,7 @@ perspective-origin: unset;
 
 ### 視点の原点の変更
 
-`perspective-origin` の変更方法を示す例は、 [CSS 座標変換の使用 > 視点の変更](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#視点の変更)にあります。
+`perspective-origin` の変更方法を示す例は、 [CSS 座標変換の使用 > 視点の変更](/ja/docs/Web/CSS/Guides/Transforms/Using#視点の変更)にあります。
 
 ## 仕様書
 
@@ -162,7 +162,7 @@ perspective-origin: unset;
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref('transform-style')}}
 - {{cssxref('transform-function')}}
 - {{cssxref('perspective')}}

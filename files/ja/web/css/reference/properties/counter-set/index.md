@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
 ---
 
-**`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値に設定します。
+**`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)を指定された値に設定します。
 
 そのカウンターが存在しない場合、`counter-set`プロパティは、空白で区切られたカウンターと値のペアのリストに名前付きカウンターが含まれている場合、新しいカウンターを作成します。しかし、新しいカウンターを作成するには、 {{cssxref("counter-reset")}} プロパティを使用することをお勧めします。
 
@@ -137,11 +137,11 @@ h1 {
 
 ## 関連情報
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter", "counter()")}} および {{cssxref("counters", "counters()")}} 関数
 - {{cssxref("content")}} プロパティ
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

@@ -10,9 +10,9 @@ l10n:
 
 メディアクエリーは以下の用途で使用されます。
 
-- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)により、条件付きでスタイルを適用する。
+- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)により、条件付きでスタイルを適用する。
 - {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性や `sizes="` 属性を付けて特定のメディアを対象とする。
-- [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、 {{domxref("Window.matchMedia()")}} および {{domxref("EventTarget.addEventListener()")}} メソッドを使用する
+- [メディアの状態の検査と監視](/ja/docs/Web/CSS/Guides/Media_queries/Testing)をするために、 {{domxref("Window.matchMedia()")}} および {{domxref("EventTarget.addEventListener()")}} メソッドを使用する
 
 > [!NOTE]
 > このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
@@ -337,8 +337,8 @@ l10n:
 ## 関連情報
 
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)
-- [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/Guides/Media_queries/Testing)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Mozilla 拡張のメディア特性](/ja/docs/Web/CSS/Reference/Mozilla_extensions#メディア特性)
 - [WebKit 拡張のメディア特性](/ja/docs/Web/CSS/Reference/Webkit_extensions#メディア特性)

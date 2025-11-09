@@ -6,9 +6,9 @@ original_slug: Web/CSS/display
 
 {{CSSRef}}
 
-La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/CSS_display/Flow_layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/CSS_grid_layout) ou [boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout).
+La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/Guides/Display/Flow_layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
 
-Le type d'affichage donné par `display` possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au [flux](/fr/docs/Web/CSS/CSS_display/Flow_layout) et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+Le type d'affichage donné par `display` possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au [flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
 
 Certaines valeurs de `display` sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.
 
@@ -121,8 +121,8 @@ On pourra obtenir un comportement équivalent en écrivant cela avec une seule v
 
 En plus de l'exemple qui suit, vous pouvez voir d'autres exemples sur les sections dédiées aux différents modes de disposition :
 
-- [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
+- [Boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Apprendre la disposition en CSS](/fr/docs/Learn_web_development/Core/CSS_layout)
 
 ### HTML
@@ -183,5 +183,5 @@ Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML
 - {{cssxref("position")}}
 - {{cssxref("flex")}}
 - {{cssxref("grid")}}
-- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)

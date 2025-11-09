@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`animationiteration`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxref("Element/animationend_event", "animationend")}} イベントと同時には発生せず、従って `animation-iteration-count` が 1 のアニメーションでは発生しません。
+**`animationiteration`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)の反復が 1 回分終了し、次の回が始まったときに発生します。このイベントは {{domxref("Element/animationend_event", "animationend")}} イベントと同時には発生せず、従って `animation-iteration-count` が 1 のアニメーションでは発生しません。
 
 ## 構文
 
@@ -166,7 +166,7 @@ applyAnimation.addEventListener("click", () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}

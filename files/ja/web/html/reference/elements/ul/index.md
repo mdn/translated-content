@@ -210,6 +210,6 @@ li li {
 - その他のリスト関連要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - `<ul>` 要素の整形に有益な CSS プロパティ:
   - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
+  - [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters): 複雑に入れ子になったリストの扱い
   - {{CSSxRef("line-height")}} プロパティ: 非推奨の [`compact`](#compact) 属性のシミュレート
   - {{CSSxRef("margin")}} プロパティ: リストのインデントの制御

@@ -51,7 +51,7 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 
 - {{Glossary("Shadow tree", "シャドウツリー")}} （用語集の用語）
 - {{Glossary("DOM")}} （用語集の用語）
-- [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)（用語）
+- [複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector)（用語）
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)（用語）
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)インターフェイス、プロパティ、メソッド
@@ -65,7 +65,7 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
   - {{DOMxRef("ShadowRoot")}} インターフェイス
 
 > [!NOTE]
-> セレクターが一致する参照点（またはスコープ）となる要素を表す {{CSSXref(":scope")}} 擬似クラスは、名前とは裏腹に、[セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールで定義されています。これは CSS スコープモジュールとは無関係で、シャドウ DOM のスコープ機構に関連するスコープに焦点を当てています。
+> セレクターが一致する参照点（またはスコープ）となる要素を表す {{CSSXref(":scope")}} 擬似クラスは、名前とは裏腹に、[セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュールで定義されています。これは CSS スコープモジュールとは無関係で、シャドウ DOM のスコープ機構に関連するスコープに焦点を当てています。
 
 ## 仕様書
 
@@ -73,9 +73,9 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-- [CSS 名前空間](/ja/docs/Web/CSS/CSS_namespaces)モジュール
-- [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [CSS 名前空間](/ja/docs/Web/CSS/Guides/Namespaces)モジュール
+- [CSS シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)モジュール
 - [Template, slot, and shadow](https://web.dev/learn/html/template/) (web.dev, 2023)
 - [Custom element best practices](https://web.dev/articles/custom-elements-best-practices) (web.dev, 2019)

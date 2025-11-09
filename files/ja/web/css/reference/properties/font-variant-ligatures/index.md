@@ -230,4 +230,4 @@ p {
 - [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
 - [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
 - [`font-variant-position`](/ja/docs/Web/CSS/Reference/Properties/font-variant-position)
-- [CSS フォントモジュール](/ja/docs/Web/CSS/CSS_fonts)
+- [CSS フォントモジュール](/ja/docs/Web/CSS/Guides/Fonts)

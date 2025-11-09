@@ -212,7 +212,7 @@ Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [l
 
 ## Positionnement et redimensionnement
 
-En tant qu'[élément remplacé](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties), la position, l'alignement et le redimensionnement du document embarqué via `<iframe>` peuvent être ajustés via les propriétés [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
+En tant qu'[élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties), la position, l'alignement et le redimensionnement du document embarqué via `<iframe>` peuvent être ajustés via les propriétés [`object-position`](/fr/docs/Web/CSS/Reference/Properties/object-position) et [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
 
 ## Exemples
 

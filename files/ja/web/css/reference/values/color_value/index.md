@@ -73,7 +73,7 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) 色空間: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}}
   - [Oklab](https://bottosson.github.io/posts/oklab/) 色空間: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}}
   - その他の色空間: {{CSSXref("color_value/color", "color()")}}
-- [相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の構文を用いると、既存の色に基づく新しい色を出力することができます。上記の色関数はいずれも、**原色**の前に `from` キーワードが先行し、その後に新しい**出力色**のためのチャンネル値の定義を続けることができます。
+- [相対色](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)の構文を用いると、既存の色に基づく新しい色を出力することができます。上記の色関数はいずれも、**原色**の前に `from` キーワードが先行し、その後に新しい**出力色**のためのチャンネル値の定義を続けることができます。
 - 2 色の混合: {{CSSXref("color_value/color-mix", "color-mix()")}}
 - 2 つの色の指定。 1 つ目の色は明るいカラースキームに、 2 つ目は暗いカラースキームに使用: {{CSSXref("color_value/light-dark", "light-dark()")}}
 
@@ -111,9 +111,9 @@ background-color: hsl(0deg 100% 50%);
 
 ## 補間
 
-色の補間は[グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)で発生します。
+色の補間は[グラデーション](/ja/docs/Web/CSS/Reference/Values/gradient)、[トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)、[アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)で発生します。
 
-`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で定められます。
+`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)で定められます。
 補間色空間の既定値は Oklab ですが、一部の色関連の関数記法では {{CSSXref("&lt;color-interpolation-method&gt;")}} で上書きできます。
 
 ### 成分が欠落した補間
@@ -448,5 +448,5 @@ div:nth-child(6) {
 - {{CSSXref("opacity")}} プロパティは要素レベルで色の透明度を定義できます。
 - {{CSSXref("&lt;hue&gt;")}} データ型は色を色相関で表します。
 - このデータ型を使用するよく使われるプロパティ: {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) (MDN blog, 2023)

@@ -10,14 +10,14 @@ CSS において、**継承** (inheritance) はある要素のあるプロパテ
 
 CSS プロパティは 2 種類に分類することができます。
 
-- **継承プロパティ**は、既定で親要素の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)に設定されるものです
-- **非継承プロパティ**は、既定でそのプロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に設定されるものです
+- **継承プロパティ**は、既定で親要素の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)に設定されるものです
+- **非継承プロパティ**は、既定でそのプロパティの[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)に設定されるものです
 
 [いずれかの CSS プロパティ](/ja/docs/Web/CSS/Reference#keyword_index)の定義を参照して、それぞれのプロパティが既定値を継承するか ("継承: あり") しないか ("継承: なし") を確認してください。
 
 ## 継承プロパティ
 
-要素の**継承プロパティ**に値が指定されなかった場合、要素はその親要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)を取得します。文書のルート要素だけは、プロパティの概要で与えられた[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を取得します。
+要素の**継承プロパティ**に値が指定されなかった場合、要素はその親要素のプロパティの[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)を取得します。文書のルート要素だけは、プロパティの概要で与えられた[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)を取得します。
 
 継承プロパティの一般例として [`color`](/ja/docs/Web/CSS/Reference/Properties/color) プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
 
@@ -37,7 +37,7 @@ p {
 
 ## 非継承プロパティ
 
-値を持たない**非継承プロパティ**が要素に指定された場合、要素はプロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)（プロパティのページの「概要」の節に記されています）を取得します。
+値を持たない**非継承プロパティ**が要素に指定された場合、要素はプロパティの[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)（プロパティのページの「概要」の節に記されています）を取得します。
 
 非継承プロパティの一般的な例としては {{ Cssxref("border") }} プロパティが挙げられます。以下のスタイルルールとマークアップを考えてみましょう。
 
@@ -100,14 +100,14 @@ em {
 ## 関連情報
 
 - 継承を制御する CSS 値: [`inherit`](/ja/docs/Web/CSS/Reference/Values/inherit), [`initial`](/ja/docs/Web/CSS/Reference/Values/initial), [`revert`](/ja/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/ja/docs/Web/CSS/Reference/Values/revert-layer), [`unset`](/ja/docs/Web/CSS/Reference/Values/unset)
-- [CSS のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
-- [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [CSS のエラー処理](/ja/docs/Web/CSS/Guides/Syntax/Error_handling)
+- [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
-- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rules)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
-- [値定義構文](/ja/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
+- [CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)モジュール
+- [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)ガイド
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール
+- [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
+- [値定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール

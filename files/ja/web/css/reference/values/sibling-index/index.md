@@ -14,7 +14,7 @@ l10n:
 > {{CSSxRef(":nth-child()")}} 擬似クラスと同様に、`sibling-index()` は 0 からではなく 1 から始まります。
 
 > [!NOTE]
-> {{CSSxRef("counter()")}} 関数は同様の結果を `<string>` で返す（これは[生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)により適しています）のに対し、 `sibling-index()` は `<integer>` で返します（これは計算に使用することができます）。
+> {{CSSxRef("counter()")}} 関数は同様の結果を `<string>` で返す（これは[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)により適しています）のに対し、 `sibling-index()` は `<integer>` で返します（これは計算に使用することができます）。
 
 {{InteractiveExample("CSS デモ: sibling-index()")}}
 

@@ -10,7 +10,7 @@ l10n:
 
 ## 段の間隔
 
-段と段の間（段間）は、 {{CSSXref("column-gap")}} または {{CSSXref("gap")}} プロパティで制御されます。 `column-gap` プロパティは[段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュールで定義されています。 `gap` プロパティは[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールで定義されています。これは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)や [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)など、間隔に対応しているすべてのレイアウトで、ボックス間の間隔を定義するための統一プロパティです。
+段と段の間（段間）は、 {{CSSXref("column-gap")}} または {{CSSXref("gap")}} プロパティで制御されます。 `column-gap` プロパティは[段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールで定義されています。 `gap` プロパティは[ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュールで定義されています。これは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)や [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)など、間隔に対応しているすべてのレイアウトで、ボックス間の間隔を定義するための統一プロパティです。
 
 段組みにおける `column-gap` の初期値は `1em` です。つまり、段同士は互いに接しません。他のレイアウト方法では、 `column-gap` は `gap` の別名として対応していますが、初期値は `0` です。キーワード値 `normal` は、`column-gap` を初期値に設定します。
 
@@ -134,4 +134,4 @@ body {
 
 ## まとめ
 
-ここでは、現在段ボックスに対してスタイル付けすることができるすべての方法を説明しました。次のガイドでは、コンテナー内で[すべての段をまたがる](/ja/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)要素の作成を見てみましょう。
+ここでは、現在段ボックスに対してスタイル付けすることができるすべての方法を説明しました。次のガイドでは、コンテナー内で[すべての段をまたがる](/ja/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)要素の作成を見てみましょう。

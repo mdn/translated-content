@@ -53,5 +53,5 @@ shape-image-threshold: 0.7;
 
 - [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [Types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
-- [Couleur CSS](/fr/docs/Web/CSS/CSS_colors)
+- [Couleur CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Le type de donnée [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)

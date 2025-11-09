@@ -33,7 +33,7 @@ l10n:
 
 ## ガイド
 
-- [z-index を理解する](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [z-index を理解する](/ja/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
   - : 重ね合わせコンテキストの記述法と Z 順の動作方法の説明を、いくつかの例と共に紹介します。
 
 ## 関連する概念

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
-**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。
+**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Guides/Paged_media)、領域、[段](/ja/docs/Web/CSS/Guides/Multicol_layout)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。
 
 組版において、ウィドウ (_widow_) とは (段落が前のページから続いている場合に) 段落の最後の行がページの先頭に単独で現れることです。
 
@@ -85,4 +85,4 @@ p:first-child {
 ## 関連情報
 
 - {{cssxref("orphans")}}
-- [ページメディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)

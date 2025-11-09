@@ -6,7 +6,7 @@ original_slug: Web/CSS/counter-set
 
 {{CSSRef}}
 
-La propriété CSS **`counter-set`** définit un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) avec une certaine valeur. Elle permet de manipuler les valeurs des compteurs existants et ne créera qu'un nouveau compteur que lorsqu'il n'existe pas de compteur avec le nom indiqué sur l'élément.
+La propriété CSS **`counter-set`** définit un [compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) avec une certaine valeur. Elle permet de manipuler les valeurs des compteurs existants et ne créera qu'un nouveau compteur que lorsqu'il n'existe pas de compteur avec le nom indiqué sur l'élément.
 
 > [!NOTE]
 > La valeur d'un compteur peut être incrémentée ou décrémentée grâce à la propriété CSS {{cssxref("counter-increment")}}.
@@ -76,7 +76,7 @@ h1 {
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}

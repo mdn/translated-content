@@ -46,5 +46,5 @@ body {
 
 - Terme associé du glossaire&nbsp;:
   - {{Glossary("Block-level content", "Contenu de niveau bloc")}}
-- [Contexte de formatage en ligne](/fr/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- [Contexte de formatage en ligne](/fr/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
 - La propriété CSS {{CSSxRef("display")}}

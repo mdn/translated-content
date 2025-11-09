@@ -155,13 +155,13 @@ On écoutera ces évènements à l'aide de `addEventListener()` ou en affectant 
 ### Évènements de transition
 
 - [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est annulée. Également disponible via la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) est annulée. Également disponible via la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
 - [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est terminée. Également disponible via la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) est terminée. Également disponible via la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
 - [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est initialement créée. Également disponible via la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) est initialement créée. Également disponible via la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
 - [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a effectivement démarré. Également disponible via la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) a effectivement démarré. Également disponible via la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
 
 ## Spécifications
 

@@ -51,5 +51,5 @@ l10n:
 
 - {{domxref("DevicePosture")}}
 - [Device Posture API](/ja/docs/Web/API/Device_Posture_API)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

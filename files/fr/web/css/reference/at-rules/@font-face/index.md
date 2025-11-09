@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
 
 ## Syntaxe
 
@@ -63,7 +63,7 @@ En permettant de fournir ses propres polices, `@font-face` permet de concevoir d
 > [!NOTE]
 > Les stratégies de repli pour le chargement des polices sur les anciens navigateurs sont décrites dans la page du descripteur [`src`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/src#définir_les_stratégies_de_repli_pour_les_anciens_navigateurs).
 
-La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/CSS_syntax/At-rules#les_règles_de_groupe_conditionnelles).
+La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuille de styles et aussi [au sein d'une règle de groupe conditionnelle](/fr/docs/Web/CSS/Guides/Syntax/At-rules#les_règles_de_groupe_conditionnelles).
 
 ### Types MIME pour les polices
 

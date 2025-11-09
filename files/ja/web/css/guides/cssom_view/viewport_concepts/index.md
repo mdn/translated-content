@@ -28,7 +28,7 @@ l10n:
 - 多くのモバイル端末やブラウザーが全画面モードである場合、ビューポートは画面全体です。
 - 全画面モードでは、ビューポートは端末の画面であり、ウィンドウはブラウザーのウィンドウであり、ビューポートと同じか小さく、文書はウェブサイトで、これはビューポートよりも高さや幅が大きくなることがあります。
 
-[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)の場合、最初の包含ブロックはページ領域に基づきます。ページ領域は {{cssxref("@page")}} ルールで設定することができます。
+[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)の場合、最初の包含ブロックはページ領域に基づきます。ページ領域は {{cssxref("@page")}} ルールで設定することができます。
 
 まとめると、ビューポートは基本的に文書のうち、現在見えている部分です。
 
@@ -101,13 +101,13 @@ iframe、オブジェクト、外部 SVG などがあるページでは、コン
 
 前述のレイアウトビューポートと視覚的ビューポートは、遭遇するビューポートの唯一の例ではありません。レイアウトビューポート内に完全にまたは部分的に表示されるすべてのサブビューポートは、視覚的ビューポートとみなされます。
 
-一般的に、 [`width`](/ja/docs/Web/CSS/Reference/At-rules/@media/width) と [`height`](/ja/docs/Web/CSS/Reference/At-rules/@media/height) のメディアクエリーは、ブラウザーウィンドウの幅と高さに関連していると考えられています。実際には、ビューポート（メインの文書のウィンドウ）に相対するものですが、オブジェクト、iframe、SVG などの埋め込まれた閲覧コンテキストにおいては、要素の親の内在サイズでもあります。 CSS では、[ビューポートのサイズに基づいた長さの単位](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ビューポート単位)もあります。 `vh` の単位は、レイアウトビューポートの高さの 1% です。 同様に、 `vw` の単位は、レイアウトビューポートの幅の 1% です。
+一般的に、 [`width`](/ja/docs/Web/CSS/Reference/At-rules/@media/width) と [`height`](/ja/docs/Web/CSS/Reference/At-rules/@media/height) のメディアクエリーは、ブラウザーウィンドウの幅と高さに関連していると考えられています。実際には、ビューポート（メインの文書のウィンドウ）に相対するものですが、オブジェクト、iframe、SVG などの埋め込まれた閲覧コンテキストにおいては、要素の親の内在サイズでもあります。 CSS では、[ビューポートのサイズに基づいた長さの単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ビューポート単位)もあります。 `vh` の単位は、レイアウトビューポートの高さの 1% です。 同様に、 `vw` の単位は、レイアウトビューポートの幅の 1% です。
 
 #### `<iframe>`
 
 {{htmlelement("iframe")}} 内では、視覚的ビューポートは親文書ではなく、 iframe の内側の幅と高さのサイズになります。 iframe には任意の幅と高さを設定できますが、文書全体が表示されない場合があります。
 
-iframe 文書内の CSS で[ビューポート単位](/ja/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#ビューポート単位)を使用している場合、 `1vh` は iframe の高さの 1%、 `1vw` は文書の幅の 1% となります。
+iframe 文書内の CSS で[ビューポート単位](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ビューポート単位)を使用している場合、 `1vh` は iframe の高さの 1%、 `1vw` は文書の幅の 1% となります。
 
 ```css
 iframe {
@@ -173,4 +173,4 @@ HTML に SVG ファイルを記載すると、 SVG のビューポートは初�
 - [ビューポートメタタグを使用してモバイルブラウザーのレイアウトを制御](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)
 - [視覚的ビューポート API](/ja/docs/Web/API/Visual_Viewport_API)
 - [CSS ビューポート](/ja/docs/Web/CSS/CSS_viewport)モジュール
-- [CSSOM ビュー](/ja/docs/Web/CSS/CSSOM_view)モジュール
+- [CSSOM ビュー](/ja/docs/Web/CSS/Guides/CSSOM_view)モジュール

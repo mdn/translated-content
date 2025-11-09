@@ -50,12 +50,12 @@ l10n:
 - [長さの単位 `q`](/ja/docs/Web/CSS/Reference/Values/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
 - {{cssxref("overflow-wrap")}} をサポートしました。 `word-wrap` を置き換えるものですが、こちらも別名としてサポートを続けます ([Firefox バグ 955857](https://bugzil.la/955857))。
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) の実験的な実装が進展しました。
+- [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout) の実験的な実装が進展しました。
   - {{cssxref("&lt;percentage&gt;")}} を `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティで対応しました ([Firefox バグ 1266268](https://bugzil.la/1266268))。
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。
   - グリッドアイテムの Baseline Content Alignment を実装しました ([Firefox バグ 1256429](https://bugzil.la/1256429))。
 
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking) の実験的な実装が進展しました。
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking) の実験的な実装が進展しました。
   - {{cssxref("mask-origin")}} プロパティの初期値を、仕様書に合わせて `padding-box` から `border-box` に変更しました ([Firefox バグ 1258286](https://bugzil.la/1258286))。
   - {{cssxref("mask-repeat")}} プロパティで値 `space` および `round` をサポートしました ([Firefox バグ 1258626](https://bugzil.la/1258626))。
   - {{cssxref("mask-position")}} 属性でアニメーションを行えない問題を修正しました ([Firefox バグ 1273804](https://bugzil.la/1273804))。
@@ -258,7 +258,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 - `WebKitCSSMatrix` インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。
 - 以下のメディアクエリー特性を実装しました:
-  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
+  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/Guides/Media_queries/Using#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
   - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
   - [`-webkit-transform-3d`](/ja/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
 

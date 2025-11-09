@@ -7,9 +7,9 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)ガイドでは、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
+[グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)ガイドでは、線番号を使ってグリッド上にアイテムを配置する方法をご紹介しました。今回は、この仕様の基本的な機能について詳しくご紹介します。
 
-グリッドの探索は、番号が付けられた線から始めるのが最も論理的です。グリッドレイアウトを使用する場合、常に番号が付けられた線があるからです。線は列と行に番号が付けられ、`1` から順に番号が振られます。なお、グリッドは、文書の書字方向に従って番号が振られます。英語などの左書きの言語では、1 本目はグリッドの左側にあります。アラビア語などの右書きの言語で作業している場合、1 本目はグリッドの右側にあります。書字方向とグリッドの相互作用の詳細については、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)のガイドで学びます。
+グリッドの探索は、番号が付けられた線から始めるのが最も論理的です。グリッドレイアウトを使用する場合、常に番号が付けられた線があるからです。線は列と行に番号が付けられ、`1` から順に番号が振られます。なお、グリッドは、文書の書字方向に従って番号が振られます。英語などの左書きの言語では、1 本目はグリッドの左側にあります。アラビア語などの右書きの言語で作業している場合、1 本目はグリッドの右側にあります。書字方向とグリッドの相互作用の詳細については、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)のガイドで学びます。
 
 ### 基本的な例
 
@@ -73,7 +73,7 @@ l10n:
 }
 ```
 
-いくつかのアイテムを位置指定すると、グリッド上の他のアイテムは自動配置ルールを使用してレイアウトされ続けます。この動作については、[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) ガイドで説明しています。ここでは、グリッドが、配置されていないアイテムをグリッドの空のセルにどのようにレイアウトしているかを観察してください。
+いくつかのアイテムを位置指定すると、グリッド上の他のアイテムは自動配置ルールを使用してレイアウトされ続けます。この動作については、[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement) ガイドで説明しています。ここでは、グリッドが、配置されていないアイテムをグリッドの空のセルにどのようにレイアウトしているかを観察してください。
 
 各アイテムに同じプロパティを使用しますが、値はそれぞれ異なる値を設定して、行と列のトラックにまたがる 4 つのアイテムをすべて配置します。
 
@@ -142,7 +142,7 @@ l10n:
 
 ## `grid-column` および `grid-row` の一括指定
 
-前の例では、各アイテムを配置するためにかなり多くのコードを使用しています。当然のことですが、[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)があることはご存じでしょう。 {{cssxref("grid-column-start")}} と {{cssxref("grid-column-end")}} のプロパティは併せて {{cssxref("grid-column")}} となり、{{cssxref("grid-row-start")}} と {{cssxref("grid-row-end")}} は併せて {{cssxref("grid-row")}} となります。この例では、これらの一括指定プロパティを使用して、上記の例を再現します。
+前の例では、各アイテムを配置するためにかなり多くのコードを使用しています。当然のことですが、[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)があることはご存じでしょう。 {{cssxref("grid-column-start")}} と {{cssxref("grid-column-end")}} のプロパティは併せて {{cssxref("grid-column")}} となり、{{cssxref("grid-row-start")}} と {{cssxref("grid-row-end")}} は併せて {{cssxref("grid-row")}} となります。この例では、これらの一括指定プロパティを使用して、上記の例を再現します。
 
 ```css hidden
 * {
@@ -376,7 +376,7 @@ l10n:
 
 {{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-`grid-area` の値のこの順序は、少し奇妙に見えるかもしれません。これは、例えば、マージンやパディングを一括指定で指定する場合の方向と逆になっているからです。これは、CSS グリッドレイアウトが [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)で定義されているフロー関連方向を使用しているためであることを理解すると理解しやすいでしょう。グリッドが書き込みモードでどのように動作するのかについては、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)で説明しています。ここでは、4 つの{{glossary("Flow relative values", "フロー関連")}}方向の概念について考えてみましょう。
+`grid-area` の値のこの順序は、少し奇妙に見えるかもしれません。これは、例えば、マージンやパディングを一括指定で指定する場合の方向と逆になっているからです。これは、CSS グリッドレイアウトが [CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)で定義されているフロー関連方向を使用しているためであることを理解すると理解しやすいでしょう。グリッドが書き込みモードでどのように動作するのかについては、[グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)で説明しています。ここでは、4 つの{{glossary("Flow relative values", "フロー関連")}}方向の概念について考えてみましょう。
 
 - `block-start`
 - `block-end`

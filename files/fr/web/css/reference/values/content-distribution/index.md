@@ -38,6 +38,6 @@ Les mots-clés suivants sont représentés par le terme de grammaire `<content-d
 
 - Propriétés utilisant ce type de donnée&nbsp;: {{cssxref("align-content")}}, {{cssxref("justify-content")}}, {{cssxref("place-content")}}
 - Autres types de données d'alignement de boîte&nbsp;: {{cssxref("baseline-position")}}, {{cssxref("content-position")}}, {{cssxref("overflow-position")}} et {{cssxref("self-position")}}
-- Le module [d'Alignement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_alignment)
-- Le module [Flexbox CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
-- Le module de [Grille CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- Le module [d'Alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+- Le module [Flexbox CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
+- Le module de [Grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout)

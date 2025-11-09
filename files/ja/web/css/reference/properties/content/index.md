@@ -108,7 +108,7 @@ content: unset;
   - : {{cssxref("&lt;image&gt;")}} で、表示する画像を表します。 {{cssxref("url_value", "&lt;url&gt;")}}、{{cssxref("image/image-set", "image-set()")}}、{{cssxref("&lt;gradient&gt;")}} のデータ型、または {{cssxref("element", "element()")}} 関数で定義されるウェブページ自身の一部です。
 
 - `<counter>`
-  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができます。
+  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができます。
     - {{cssxref("counter", "counter()")}}
       - : {{cssxref("counter", "counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
     - {{cssxref("counters", "counters()")}}
@@ -459,7 +459,7 @@ div {
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{glossary("Replaced elements", "置換要素")}}
-- [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
 
 - ブラウザーのアクセシビリティパネル: [Firefox アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome のアクセシビリティパネル](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)、[Safari のアクセシビリティツリー](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

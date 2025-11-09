@@ -117,5 +117,5 @@ Faites défiler le cadre pour observer l'animation.
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - [La règle @ `@scroll-timeline`](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline)

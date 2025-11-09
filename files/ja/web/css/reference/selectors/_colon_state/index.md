@@ -32,7 +32,7 @@ CSS の `:state()` 擬似クラスは、引数として渡された識別子が�
 `:state()` 擬似クラスは、カスタム要素の実装内でカスタム状態を一致させるためにも使用することができます。
 これは、 `:state()` を [`:host()`](/ja/docs/Web/CSS/Reference/Selectors/:host_function) 擬似クラス関数内で使用することで実現され、現在のカスタム要素のシャドウ DOM 内でのみ状態を一致させます。
 
-さらに、[`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) 擬似要素に `:state()` 擬似クラスが続くことで、特定の状態にあるカスタム要素の[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)と照合することができます。
+さらに、[`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) 擬似要素に `:state()` 擬似クラスが続くことで、特定の状態にあるカスタム要素の[シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)と照合することができます。
 （**シャドウパーツ**とは、カスタム要素のシャドウツリーの一部で、スタイル設定のため、コンテナーページに明示的に公開される部分です。）
 
 ## 例
@@ -68,7 +68,7 @@ labeled-checkbox:state(checked) {
 
 ### シャドウパーツでカスタム状態との照合
 
-この例では、カスタム要素の `:state()` 擬似クラスを[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)を対象として使用できることを示しています。
+この例では、カスタム要素の `:state()` 擬似クラスを[シャドウパーツ](/ja/docs/Web/CSS/Guides/Shadow_parts)を対象として使用できることを示しています。
 
 シャドウパーツは、[`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を使用して定義し、名前を付けます。
 例えば、`<question-box>` という名前のカスタム要素が、`<labeled-checkbox>` カスタム要素を `checkbox` という名前のシャドウパーツとして使用しているとします。

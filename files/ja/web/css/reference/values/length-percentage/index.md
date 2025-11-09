@@ -77,4 +77,4 @@ width: calc(100% - 200px);
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;length&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)

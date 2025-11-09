@@ -65,11 +65,11 @@ clear: both;
 }
 ```
 
-浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
+浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/Guides/Box_model/Introduction#border_area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/Guides/Box_model/Introduction#margin_area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
 
 一方で、二つの浮動要素の垂直マージンは折り畳まれません。浮動要素に適用された場合、下の要素のマージンの辺が、すべての関連する浮動要素のマージンの辺よりも下に移動します。これは後の浮動要素が前のものよりも高い位置に配置されることがないため、後の浮動要素の位置に影響します。
 
-解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)内の先行する浮動要素です。
+解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)内の先行する浮動要素です。
 
 > [!NOTE]
 > 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/Reference/Properties/display#flow-root) に設定してください。
@@ -276,4 +276,4 @@ p {
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model/Introduction)

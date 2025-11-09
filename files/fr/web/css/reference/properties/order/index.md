@@ -156,6 +156,6 @@ La propriété `order` créera une incohérence entre l'ordre de présentation v
 
 ## Voir aussi
 
-- Le guide CSS sur les boîtes flexibles : _[Les concepts de base](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Le guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
-- Le guide sur la grille CSS : _[La disposition en grille et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_
+- Le guide CSS sur les boîtes flexibles : _[Les concepts de base](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- Le guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)_
+- Le guide sur la grille CSS : _[La disposition en grille et l'accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility)_

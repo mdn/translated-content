@@ -106,6 +106,6 @@ original_slug: Web/CSS/Layout_cookbook/Column_layouts
 
 ## MDN の関連資料
 
-- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_multicol_layout)
-- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_flexible_box_layout)
-- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_grid_layout)
+- [段組みレイアウトのガイド](/ja/docs/Web/CSS/Guides/Multicol_layout)
+- [フレックスボックスのガイド](/ja/docs/Web/CSS/Guides/Flexible_box_layout)
+- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/Guides/Grid_layout)

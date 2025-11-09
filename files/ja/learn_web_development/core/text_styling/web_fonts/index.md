@@ -198,7 +198,7 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 
 ## 関連情報
 
-- [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可変フォントガイド](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : 可変フォントを使用すると、幅、太さ、スタイルごとに別個のフォントファイルを保有するのではなく、単一のファイルにさまざまなバリエーションの書体を組み込むことができます。このコースの初心者向けの内容としては少し高度ですが、自分自身を伸ばしたいとお考えの場合は、このガイドを見ていくと良いでしょう。
 - [Fonts knowledge](https://fonts.google.com/knowledge), Google Fonts
   - : フォントを使用するさまざまな側面に応じた、有益な詳細記事のシリーズ。

@@ -78,4 +78,4 @@ p {
 ## Voir aussi
 
 - La règle at [@media](/fr/docs/Web/CSS/Reference/At-rules/@media), qui permet d'utiliser l'expression `scan`.
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour comprendre quand et comment utiliser une requête média.
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour comprendre quand et comment utiliser une requête média.

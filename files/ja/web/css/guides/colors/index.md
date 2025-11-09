@@ -75,13 +75,13 @@ l10n:
 
 ## ガイド
 
-- [CSS を使った HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS を使った HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
   - : 様々な種類のコンテンツに CSS を使って色を適用するためのガイドです。色に関するすべての CSS プロパティが関係します。
 - [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)
   - : 色空間と CSS で利用できるさまざまな `<color>` 関数記法の概要です。
 - [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
   - : 色彩理論とリソース、例えばアクセシブルなカラーパレットを作成するために正しい色を探すこと、コントラスト、カラーで出力される印刷などです。
-- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
+- [相対色の使用](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors)
   - : この記事では、 CSS の相対色の構文について説明し、さまざまなオプションが何であるかを示し、いくつかの例を見ていきます。
 - [色と明るさの理解](/ja/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : 色覚障碍（色盲）ユーザー、弱視ユーザー、前庭障碍やその他の神経障碍を持つユーザーを念頭に置いた色知覚と使用することです。
@@ -132,8 +132,8 @@ l10n:
 
 ## 関連情報
 
-- [CSS 色調整](/ja/docs/Web/CSS/CSS_color_adjustment)モジュールと {{cssxref("print-color-adjust")}} プロパティ
-- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール（CSS [`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) 画像を定義）
+- [CSS 色調整](/ja/docs/Web/CSS/Guides/Color_adjustment)モジュールと {{cssxref("print-color-adjust")}} プロパティ
+- [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール（CSS [`<gradient>`](/ja/docs/Web/CSS/Reference/Values/gradient) 画像を定義）
 - [`VideoColorSpace`](/ja/docs/Web/API/VideoColorSpace) インターフェイス
 - SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Reference/Element/feColorMatrix) 要素
 - [キャンバス API: スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色)

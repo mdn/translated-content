@@ -50,7 +50,7 @@ l10n:
     リストはそれぞれのソースのサイズをカンマ区切りで並べたものです。サイズは、条件と長さの組です。この情報は [`srcset`](#srcset) で指定されたどの画像を使用するかを決めるため、ページのレイアウトを行う前にブラウザーが使用します。なお、 `sizes` は `srcset` でピクセル倍率ではなく幅指定子が提供された時（例えば 2x ではなく 200w の場合）のみ、効果があることに注意してください。
 
 - `media`
-  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)です。
+  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)です。
 
 - `height`
   - : 画像の本来の高さをピクセル単位で指定します。この `source` 要素の親が {{HTMLElement("picture")}} 要素である場合は指定可能ですが、`source` 要素の親が {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の場合は指定できません。
@@ -124,7 +124,7 @@ l10n:
 ### `picture` で `height` および `width` 属性を使う例
 
 この例では、`height` と `width` 属性を持つ 3 つの`<source>`要素が、{{HTMLElement("picture")}} 要素に含まれています。
-[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)により、[ビューポート](/ja/docs/Glossary/Viewport)の寸法に基づいて、`height` および `width` 属性により表示すべき画像をブラウザーに選択させます。
+[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)により、[ビューポート](/ja/docs/Glossary/Viewport)の寸法に基づいて、`height` および `width` 属性により表示すべき画像をブラウザーに選択させます。
 
 ```html
 <picture>

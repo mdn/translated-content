@@ -26,4 +26,4 @@ l10n:
 - [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) インターフェイス
 - {{DOMxRef("Element.part")}} プロパティ
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS スコープ](/ja/docs/Web/CSS/CSS_scoping)モジュール
+- [CSS スコープ](/ja/docs/Web/CSS/Guides/Scoping)モジュール

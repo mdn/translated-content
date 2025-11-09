@@ -136,7 +136,7 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : 引数 `<shadow>` を画像の輪郭に沿ってドロップシャドウとして適用します。影の構文は `<box-shadow>` （[CSS 背景と境界モジュール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)で定義されています）と似ていますが、`inset` キーワードと `spread` 引数は使用できません。すべての `filter` プロパティ値と同様に、`drop-shadow()` 以降のフィルターが影に適用されます。
+  - : 引数 `<shadow>` を画像の輪郭に沿ってドロップシャドウとして適用します。影の構文は `<box-shadow>` （[CSS 背景と境界モジュール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)で定義されています）と似ていますが、`inset` キーワードと `spread` 引数は使用できません。すべての `filter` プロパティ値と同様に、`drop-shadow()` 以降のフィルターが影に適用されます。
 
     ```css
     filter: drop-shadow(16px 16px 10px black);
@@ -274,7 +274,7 @@ img:nth-of-type(2) {
 ## 関連情報
 
 - CSS {{cssxref("backdrop-filter")}} プロパティ
-- CSS [合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュール（CSS の {{cssxref("background-blend-mode")}} および {{cssxref("mix-blend-mode")}} プロパティを含む）
+- CSS [合成と混合](/ja/docs/Web/CSS/Guides/Compositing_and_blending)モジュール（CSS の {{cssxref("background-blend-mode")}} および {{cssxref("mix-blend-mode")}} プロパティを含む）
 - CSS の {{cssxref("mask")}} プロパティ
 - [SVG](/ja/docs/Web/SVG) （SVG の {{SVGElement("filter")}} 要素や {{SVGAttr("filter")}} 属性を含む）
 - [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

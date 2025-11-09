@@ -63,4 +63,4 @@ l10n:
 ## 関連情報
 
 - {{cssxref("&lt;length-percentage&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/CSS_values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)

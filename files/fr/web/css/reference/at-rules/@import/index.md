@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@import`** est utilisée pour importer des règles de style depuis d'autres feuilles de style valides.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@import`** est utilisée pour importer des règles de style depuis d'autres feuilles de style valides.
 Une règle `@import` _doit_ être définie en haut de la feuille de style, avant toute autre règle @ (sauf [@charset](/fr/docs/Web/CSS/Reference/At-rules/@charset) et [@layer](/fr/docs/Web/CSS/Reference/At-rules/@layer)) et toute déclaration de style, sinon elle sera ignorée.
 
 ## Syntaxe
@@ -28,7 +28,7 @@ où&nbsp;:
 - _url_
   - : Est une chaîne de caractères ({{CSSxRef("string")}}) ou une valeur de type {{cssxref("url_value", "&lt;url&gt;")}} représentant l'emplacement de la ressource à importer. L'URL peut être absolue ou relative.
 - _list-of-media-queries_
-  - : Est une liste de [requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) séparées par des virgules, qui spécifient les conditions dépendantes du média pour appliquer les règles CSS définies dans l'URL liée. Si le navigateur ne prend en charge aucune de ces requêtes, il ne charge pas la ressource liée.
+  - : Est une liste de [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) séparées par des virgules, qui spécifient les conditions dépendantes du média pour appliquer les règles CSS définies dans l'URL liée. Si le navigateur ne prend en charge aucune de ces requêtes, il ne charge pas la ressource liée.
 - _layer-name_
   - : Est le nom d'une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) dans laquelle le contenu de la ressource liée est importé. Voir [`layer()`](/fr/docs/Web/CSS/Reference/At-rules/@import/layer_function) pour plus d'informations.
 - _supports-condition_
@@ -62,9 +62,9 @@ Comme la règle at-rule `@import` est déclarée après les styles, elle est inv
 /* autres styles */
 ```
 
-La règle `@import` n'est pas une [instruction imbriquée](/fr/docs/Web/CSS/CSS_syntax/Syntax#nested_statements). Elle ne peut donc pas être utilisée à l'intérieur de [groupes conditionnels des règles @](/fr/docs/Web/CSS/CSS_conditional_rules#règles-@).
+La règle `@import` n'est pas une [instruction imbriquée](/fr/docs/Web/CSS/Guides/Syntax/Introduction#nested_statements). Elle ne peut donc pas être utilisée à l'intérieur de [groupes conditionnels des règles @](/fr/docs/Web/CSS/Guides/Conditional_rules#règles-@).
 
-Pour que les {{glossary("user agent", "agents utilisateur")}} puissent éviter de récupérer des ressources pour des types de média non pris en charge, les auteur·ice·s peuvent spécifier des conditions d'importation dépendantes du média. Ces importations conditionnelles spécifient des [requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) séparées par des virgules après l'URL. En l'absence de requête média, l'importation n'est pas conditionnée au média utilisé. Spécifier `all` pour la `list-of-media-queries` a le même effet.
+Pour que les {{glossary("user agent", "agents utilisateur")}} puissent éviter de récupérer des ressources pour des types de média non pris en charge, les auteur·ice·s peuvent spécifier des conditions d'importation dépendantes du média. Ces importations conditionnelles spécifient des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) séparées par des virgules après l'URL. En l'absence de requête média, l'importation n'est pas conditionnée au média utilisé. Spécifier `all` pour la `list-of-media-queries` a le même effet.
 
 De même, les agents utilisateur peuvent utiliser la fonction `supports()` dans une règle at-rule `@import` pour ne récupérer les ressources que si un ensemble de fonctionnalités particulier est (ou n'est pas) pris en charge.
 

@@ -290,9 +290,9 @@ article.snapDisabled ul {
 
 ## ガイド
 
-- [CSS スクロールスナップの基本概念](/ja/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [CSS スクロールスナップの基本概念](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
   - : CSS のスクロールスナップ機能の概要と例です。
-- [ブラウザーの互換性とスクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+- [ブラウザーの互換性とスクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
   - : スクロールスナップイベントである {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} および {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} の使用方法に関するガイドです。ブラウザーが新しいスナップターゲットが保留中または選択されていると判断したときに発生します。
 
 ## 関連概念
@@ -314,9 +314,9 @@ article.snapDisabled ul {
 
 ## ブラウザーの互換性
 
-- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
-- [CSS スクロール固定](/ja/docs/Web/CSS/CSS_scroll_anchoring)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/Guides/Scrollbars_styling)モジュール
+- [CSS スクロール固定](/ja/docs/Web/CSS/Guides/Scroll_anchoring)モジュール
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
 - [Scroll snap examples](https://codepen.io/collection/KpqBGW) on CodePen (2022)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2021)
