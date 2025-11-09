@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-image-source
 original_slug: Web/CSS/border-image-source
 ---
 
-**`border-image-source`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image)로 사용할 원본 이미지를 지정합니다.
+**`border-image-source`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 [테두리 이미지](/ko/docs/Web/CSS/Reference/Properties/border-image)로 사용할 원본 이미지를 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-image-source")}}
 

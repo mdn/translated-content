@@ -56,11 +56,11 @@ animation: 0.5s linear 1s infinite alternate slidein;
 
 이 속성은 다음 CSS 속성의 단축형입니다.
 
-- [`animation-delay`](/ko/docs/Web/CSS/animation-delay)
-- [`animation-direction`](/ko/docs/Web/CSS/animation-direction)
-- [`animation-duration`](/ko/docs/Web/CSS/animation-duration)
-- [`animation-fill-mode`](/ko/docs/Web/CSS/animation-fill-mode)
-- [`animation-iteration-count`](/ko/docs/Web/CSS/animation-iteration-count)
+- [`animation-delay`](/ko/docs/Web/CSS/Reference/Properties/animation-delay)
+- [`animation-direction`](/ko/docs/Web/CSS/Reference/Properties/animation-direction)
+- [`animation-duration`](/ko/docs/Web/CSS/Reference/Properties/animation-duration)
+- [`animation-fill-mode`](/ko/docs/Web/CSS/Reference/Properties/animation-fill-mode)
+- [`animation-iteration-count`](/ko/docs/Web/CSS/Reference/Properties/animation-iteration-count)
 - [`animation-name`](/ko/docs/Web/CSS/animation-name)
 - [`animation-play-state`](/ko/docs/Web/CSS/animation-play-state)
 - [`animation-timing-function`](/ko/docs/Web/CSS/animation-timing-function)
@@ -145,7 +145,7 @@ animation:
 ## 예제
 
 > [!NOTE]
-> [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
+> [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 속성에 애니메이션을 적용하는 것은 권장되지 않습니다. 어떤 박스 모델 속성을 애니메이션하는 것은 본질적으로 CPU를 많이 사용합니다. 대신 [transform](/ko/docs/Web/CSS/Reference/Properties/transform) 속성에 애니메이션을 적용하는 것을 고려하십시오.
 
 ### 해 뜨기
 

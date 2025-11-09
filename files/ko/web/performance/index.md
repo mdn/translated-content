@@ -126,7 +126,7 @@ HTML
 
 CSS
 
-- [will-change](/ko/docs/Web/CSS/will-change)
+- [will-change](/ko/docs/Web/CSS/Reference/Properties/will-change)
 - GPU v CPU
 - Measuring layout
 - Font-loading best practices
