@@ -53,7 +53,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 ```
 
-Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/Reference/Values/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
+Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives [aux grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout) où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](/fr/docs/Web/CSS/Reference/Values/minmax)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
 
 Voir la page [`grid-template-columns`](/fr/docs/Web/CSS/Reference/Properties/grid-template-columns) pour plus d'informations sur les mots-clés `max-content` et `auto`.
 
@@ -140,5 +140,5 @@ fit-content(40%)
   - [`grid-auto-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-rows)
   - [`grid-auto-flow`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow)
 - Les guides à propos de la disposition en grille
-  - [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [Les propriétés raccourcies pour les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)
+  - [Placer les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+  - [Les propriétés raccourcies pour les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)

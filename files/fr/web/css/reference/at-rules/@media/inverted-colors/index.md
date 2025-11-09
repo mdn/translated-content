@@ -82,5 +82,5 @@ p {
 ## See also
 
 - {{cssxref("@media")}}
-- Le module des [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- Le module des [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)

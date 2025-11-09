@@ -20,7 +20,7 @@ Les **transitions CSS** permettent de créer des transitions harmonieuses entre 
 
 ## Guides
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
   - : Cet article est un tutoriel expliquant, étape par étape, comment créer une transition CSS. Il décrit chaque propriété CSS utilisée dans le cadre de ces transitions et comment elles interagissent.
 
 ## Spécifications
@@ -29,4 +29,4 @@ Les **transitions CSS** permettent de créer des transitions harmonieuses entre 
 
 ## Voir aussi
 
-- Apparentées aux transitions CSS, les [animations CSS](/fr/docs/Web/CSS/CSS_animations) peuvent déclencher des animations indépendamment du changement des valeurs spécifiées.
+- Apparentées aux transitions CSS, les [animations CSS](/fr/docs/Web/CSS/Guides/Animations) peuvent déclencher des animations indépendamment du changement des valeurs spécifiées.

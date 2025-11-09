@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`line-gap-override`** pour la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-face")}} définit la mesure de l'écart de lignes de la police. La mesure de l'écart de lignes est l'écart recommandé par la police ou l'écart externe.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`line-gap-override`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}} définit la mesure de l'écart de lignes de la police. La mesure de l'écart de lignes est l'écart recommandé par la police ou l'écart externe.
 
 ## Syntaxe
 

@@ -248,7 +248,7 @@ Si vous comprenez chacune de ces lignes, n'hésitez pas à copier les règles pr
 
 On utilise la propriété [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) pour créer un arrière-plan vert clair (`#efe`) sur le corps du document (`body`). Pour la liste non-ordonnée, l'ensemble des champs et la légende, on utilise un arrière-plan blanc (`#fff`) et une fine bordure grâce à la propriété [`border`](/fr/docs/Web/CSS/Reference/Properties/border). On surcharge la valeur de `background-color` pour la légende et les éléments de la liste en utilisant un vert plus foncé (`#cfc`).
 
-On utilise [le sélecteur](/fr/docs/Web/CSS/CSS_selectors) de pseudo-classe [`:nth-of-type(even)`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type) pour cibler chaque élément pair de la liste et lui affecter [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit) pour qu'il ait la couleur d'arrière-plan de son parent. Ici, cela signifie que les éléments pairs de la liste auront un arrière-plan blanc (`#fff`), comme celui de la liste.
+On utilise [le sélecteur](/fr/docs/Web/CSS/Guides/Selectors) de pseudo-classe [`:nth-of-type(even)`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type) pour cibler chaque élément pair de la liste et lui affecter [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit) pour qu'il ait la couleur d'arrière-plan de son parent. Ici, cela signifie que les éléments pairs de la liste auront un arrière-plan blanc (`#fff`), comme celui de la liste.
 
 ```css
 body {
@@ -323,7 +323,7 @@ li:nth-of-type(even) {
 }
 ```
 
-Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/CSS_selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started).
+Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/Guides/Selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started).
 
 Que vous utilisiez le CSS précédent tel quel, ou que vous ayez adapté cette mise en forme, voire que vous ayez écrit votre feuille de style à partir de 0, incluez ce contenu CSS dans un nouveau fichier et enregistrez-le avec le nom [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), dans le même répertoire que le fichier `index.html`.
 

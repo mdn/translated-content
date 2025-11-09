@@ -29,7 +29,7 @@ Les styles ajoutés à un élément dans la balise HTML (ex.&nbsp;: `style="font
 
 ### L'exception !important
 
-Lorsqu'une règle `important` est utilisée dans une déclaration de style, cette déclaration est prioritaire par rapport à toute autre déclaration. Même si, techniquement, `!important` n'a rien à voir avec la spécificité, elle interagit directement avec elle. Cependant, utiliser `!important,` est une **mauvaise pratique** et devrait être évité car cela rend le débogage difficile en affectant le traitement naturel en [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) dans vos feuilles de styles. Lorsque deux déclarations en conflit avec la règle `!important` sont appliquées au même élément, la déclaration avec la plus haute spécificité sera prise en compte.
+Lorsqu'une règle `important` est utilisée dans une déclaration de style, cette déclaration est prioritaire par rapport à toute autre déclaration. Même si, techniquement, `!important` n'a rien à voir avec la spécificité, elle interagit directement avec elle. Cependant, utiliser `!important,` est une **mauvaise pratique** et devrait être évité car cela rend le débogage difficile en affectant le traitement naturel en [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) dans vos feuilles de styles. Lorsque deux déclarations en conflit avec la règle `!important` sont appliquées au même élément, la déclaration avec la plus haute spécificité sera prise en compte.
 
 **Quelques règles de base&nbsp;:**
 
@@ -337,18 +337,18 @@ Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, m
 - Calculateur de spécificité&nbsp;: un site web interactif permettant de tester et comprendre vos propres règles CSS - <https://specificity.keegan.st/>
 - Spécificité des sélecteurs CSS3 - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
-    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
-    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
-    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [Initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)

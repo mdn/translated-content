@@ -29,7 +29,7 @@ Le module **_CSS Transforms_** (ou module des transformations CSS) est un module
 
 ## Guides
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
   - : Un tutoriel pas-à-pas pour manipuler des transformations sur des éléments mis en forme avec CSS.
 
 ## Spécifications

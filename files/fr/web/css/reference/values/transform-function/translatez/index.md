@@ -196,6 +196,6 @@ Si la valeur fournie à `perspective()` est inférieure à l'argument de `transl
 ## Voir aussi
 
 - [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
-- [Les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
 - [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
 - [`translateX()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateX) et [`translateY()`](/fr/docs/Web/CSS/Reference/Values/transform-function/translateY)

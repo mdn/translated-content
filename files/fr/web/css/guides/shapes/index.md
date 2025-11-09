@@ -28,10 +28,10 @@ Dans l'exemple qui suit, on a une image qui flotte à gauche et la propriété `
 
 ## Guides
 
-- [Un aperçu des formes CSS (_CSS Shapes_)](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Les formes appliquées aux différentes boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values)
-- [Des formes simples](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
-- [Des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [Un aperçu des formes CSS (_CSS Shapes_)](/fr/docs/Web/CSS/Guides/Shapes/Overview)
+- [Les formes appliquées aux différentes boîtes](/fr/docs/Web/CSS/Guides/Shapes/From_box_values)
+- [Des formes simples](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
+- [Des formes à partir d'images](/fr/docs/Web/CSS/Guides/Shapes/From_images)
 - [Éditer les contours d'une forme en CSS dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
 
 ## Ressources externes

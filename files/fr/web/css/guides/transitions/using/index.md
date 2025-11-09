@@ -21,7 +21,7 @@ Les transitions CSS vous permettent de choisir :
 
 ## Quelles sont les propriétés CSS qui peuvent être animées ?
 
-On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et [la liste des propriétés concernées est limitée](/fr/docs/Web/CSS/CSS_animated_properties).
+On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et [la liste des propriétés concernées est limitée](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties).
 
 > [!NOTE]
 > La gestion de la valeur `auto` représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec `auto`.
@@ -292,4 +292,4 @@ el.addEventListener("transitionstart", signalStart, true);
 ## Voir aussi
 
 - L'interface {{domxref("TransitionEvent")}} et l'événement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)

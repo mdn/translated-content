@@ -6,7 +6,7 @@ original_slug: Web/CSS/background
 
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) qui permet de définir les différentes valeurs des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.).
+La propriété [CSS](/fr/docs/Web/CSS) **`background`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir les différentes valeurs des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.).
 
 {{InteractiveExample("CSS Demo: background")}}
 
@@ -174,5 +174,5 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 ## Voir aussi
 
 - [`box-decoration-break`](/fr/docs/Web/CSS/Reference/Properties/box-decoration-break)
-- [Les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Les dégradés](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
+- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

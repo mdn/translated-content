@@ -6,19 +6,19 @@ l10n:
   sourceCommit: 3157f78e4c4131d85ff82a4d4ab7d67e91c32b69
 ---
 
-Pour chaque élément de l'arbre du document, le navigateur assigne une valeur à chaque propriété CSS qui s'applique à cet élément. La valeur rendue de chaque propriété CSS pour un élément ou une boîte donnée résulte d'un calcul fondé sur les définitions des feuilles de style, l'héritage, la [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade), les dépendances, la conversion d'unités et l'environnement d'affichage. Ce guide donne un aperçu des étapes de traitement appliquées pour déterminer comment chaque valeur CSS est finalement rendue, en explorant des concepts clés tels que valeurs spécifiées, calculées, utilisées et réelles.
+Pour chaque élément de l'arbre du document, le navigateur assigne une valeur à chaque propriété CSS qui s'applique à cet élément. La valeur rendue de chaque propriété CSS pour un élément ou une boîte donnée résulte d'un calcul fondé sur les définitions des feuilles de style, l'héritage, la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction), les dépendances, la conversion d'unités et l'environnement d'affichage. Ce guide donne un aperçu des étapes de traitement appliquées pour déterminer comment chaque valeur CSS est finalement rendue, en explorant des concepts clés tels que valeurs spécifiées, calculées, utilisées et réelles.
 
 ## Valeurs des propriétés
 
-Chaque style appliqué à un élément ou pseudo-élément repose sur une seule déclaration de propriété CSS. Chaque propriété CSS ne peut avoir qu'une seule valeur. La valeur appliquée est déterminée par les [valeurs en cascade](#valeur_en_cascade) de l'ensemble des déclarations de cette propriété qui s'appliquent à l'élément ou au pseudo-élément, la valeur effectivement appliquée provenant de la déclaration de propriété qui a le rang le plus élevé dans [l'ordre de tri de la cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade#ordre_de_la_cascade) selon l'[algorithme de la cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade).
+Chaque style appliqué à un élément ou pseudo-élément repose sur une seule déclaration de propriété CSS. Chaque propriété CSS ne peut avoir qu'une seule valeur. La valeur appliquée est déterminée par les [valeurs en cascade](#valeur_en_cascade) de l'ensemble des déclarations de cette propriété qui s'appliquent à l'élément ou au pseudo-élément, la valeur effectivement appliquée provenant de la déclaration de propriété qui a le rang le plus élevé dans [l'ordre de tri de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction#ordre_de_la_cascade) selon l'[algorithme de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction).
 
 Lorsqu'il existe plusieurs [valeurs déclarées](#valeur_déclarée) — plusieurs déclarations fournissant la même ou des valeurs de propriété différentes pour le même élément — chaque valeur de propriété doit néanmoins provenir d'une seule paire nom-valeur, car une seule valeur est appliquée pour chaque propriété, même si cette valeur est une liste séparée par des virgules.
 
 Pour déterminer quelle [valeur déclarée](#valeur_déclarée) est appliquée, l'agent utilisateur rassemble et traite tous les styles provenant de différentes sources, telles que les styles en ligne et les feuilles de style internes et externes.
 
-La [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) détermine quelle valeur doit être appliquée lorsque plusieurs styles en conflit ciblent le même élément. L'[algorithme de la cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade#ordre_de_la_cascade) définit comment les agents utilisateurs combinent les valeurs de propriété provenant de différentes origines, portées et/ou [couches](/fr/docs/Web/CSS/CSS_cascade/Cascade#couches_de_la_cascade). Lorsqu'un sélecteur correspond à un élément, la [valeur déclarée](#valeur_déclarée) de la propriété provenant de l'[origine](/fr/docs/Web/CSS/CSS_cascade/Cascade#types_dorigine) ayant la plus haute priorité est appliquée, même si un sélecteur d'une [origine](/fr/docs/Web/CSS/CSS_cascade/Cascade#types_dorigine) ou d'une [couche](/fr/docs/Web/CSS/CSS_cascade/Cascade#couches_de_la_cascade) de moindre priorité possède une plus grande {{cssxref("specificity")}}.
+La [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) détermine quelle valeur doit être appliquée lorsque plusieurs styles en conflit ciblent le même élément. L'[algorithme de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction#ordre_de_la_cascade) définit comment les agents utilisateurs combinent les valeurs de propriété provenant de différentes origines, portées et/ou [couches](/fr/docs/Web/CSS/Guides/Cascade/Introduction#couches_de_la_cascade). Lorsqu'un sélecteur correspond à un élément, la [valeur déclarée](#valeur_déclarée) de la propriété provenant de l'[origine](/fr/docs/Web/CSS/Guides/Cascade/Introduction#types_dorigine) ayant la plus haute priorité est appliquée, même si un sélecteur d'une [origine](/fr/docs/Web/CSS/Guides/Cascade/Introduction#types_dorigine) ou d'une [couche](/fr/docs/Web/CSS/Guides/Cascade/Introduction#couches_de_la_cascade) de moindre priorité possède une plus grande {{cssxref("specificity")}}.
 
-Certaine·s propriétés héritent des valeurs de leurs éléments parents sauf si elles sont explicitement remplacées. L'[héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance) peut intervenir lorsqu'aucune information de style n'existe pour une propriété spécifique sur un élément. Si la propriété est héritée, la valeur est définie sur la [valeur calculée](#valeur_calculée) de l'élément parent. Si la propriété n'est pas héritée, sa valeur est définie sur la [valeur initiale](#valeur_initiale) pour cet élément.
+Certaine·s propriétés héritent des valeurs de leurs éléments parents sauf si elles sont explicitement remplacées. L'[héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance) peut intervenir lorsqu'aucune information de style n'existe pour une propriété spécifique sur un élément. Si la propriété est héritée, la valeur est définie sur la [valeur calculée](#valeur_calculée) de l'élément parent. Si la propriété n'est pas héritée, sa valeur est définie sur la [valeur initiale](#valeur_initiale) pour cet élément.
 
 Après application pas à pas des règles de la [cascade](#cascade) et du processus de valeur par défaut, le navigateur s'assure que la présentation visuelle correspond au CSS traité.
 
@@ -31,7 +31,7 @@ Avant d'examiner les différentes étapes du traitement d'une valeur, il est imp
 Le **filtrage** consiste à identifier toutes les déclarations qui s'appliquent à chaque élément. Une déclaration ne s'applique à un élément que si&nbsp;:
 
 - La déclaration appartient à une feuille de style qui s'applique actuellement au document
-- Toutes les [règles conditionnelles](/fr/docs/Web/CSS/CSS_conditional_rules) (comme {{cssxref("@media")}} ou {{cssxref("@supports")}}) contenant la déclaration sont actuellement vraies
+- Toutes les [règles conditionnelles](/fr/docs/Web/CSS/Guides/Conditional_rules) (comme {{cssxref("@media")}} ou {{cssxref("@supports")}}) contenant la déclaration sont actuellement vraies
 - La déclaration appartient à une règle de style dont le sélecteur correspond à l'élément
 - La déclaration est syntaxiquement valide&nbsp;: le nom de propriété est reconnu par le navigateur et la valeur correspond à la syntaxe attendue pour cette propriété
 
@@ -51,7 +51,7 @@ Une fois le filtrage terminé, chaque élément possède zéro ou plusieurs [val
 
 ### Cascade
 
-La [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) résout les conflits lorsqu'un même élément se voit appliquer plusieurs déclarations pour une même propriété. La cascade trie les déclarations à l'aide de [l'ordre de tri de la cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade#ordre_de_la_cascade).
+La [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) résout les conflits lorsqu'un même élément se voit appliquer plusieurs déclarations pour une même propriété. La cascade trie les déclarations à l'aide de [l'ordre de tri de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction#ordre_de_la_cascade).
 
 Par exemple, les deux déclarations de {{cssxref("font-size")}} correspondent à `<p class="large">CSS is fun!</p>`, mais la seconde déclaration est appliquée parce qu'elle a une {{cssxref("specificity")}} plus élevée. Les deux déclarations proviennent de l'origine auteur·ice, mais le second sélecteur a une spécificité `0-1-1` alors que le premier a `0-0-1`&nbsp;:
 
@@ -72,8 +72,8 @@ Après la cascade, le navigateur détermine la [**valeur en cascade**](#valeur_e
 L'**application des valeurs par défaut** garantit que chaque propriété de chaque élément possède une valeur. Cela implique d'appliquer les valeurs par défaut lorsque aucune déclaration CSS ne définit explicitement la valeur de la propriété.
 Cela comprend&nbsp;:
 
-- Définir les **valeurs héritées** pour les [propriétés héritées](/fr/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)
-- Définir les **valeurs initiales** pour les [propriétés non héritées](/fr/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties)
+- Définir les **valeurs héritées** pour les [propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties)
+- Définir les **valeurs initiales** pour les [propriétés non héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#non-inherited_properties)
 
 À la suite de cette étape, chaque propriété dispose d'une [valeur définie](#valeur_définie).
 
@@ -135,7 +135,7 @@ S'il n'existe aucune valeur déclarée pour une propriété, il n'y a pas de val
 La **valeur définie** est le résultat du processus d'[application des valeurs par défaut](#application_des_valeurs_par_défaut). Elle est garantie pour chaque propriété de chaque élément. La valeur définie est déterminée comme suit&nbsp;:
 
 1. Si une [valeur en cascade](#valeur_en_cascade) existe, elle est la valeur définie.
-2. S'il n'y a _pas_ de valeur en cascade et que la propriété est [héritée](/fr/docs/Web/CSS/CSS_cascade/Inheritance), la valeur définie est la [valeur calculée](#valeur_calculée) de l'élément parent.
+2. S'il n'y a _pas_ de valeur en cascade et que la propriété est [héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance), la valeur définie est la [valeur calculée](#valeur_calculée) de l'élément parent.
 3. S'il n'y a _pas_ de valeur en cascade et que la propriété n'est _pas_ héritée, la valeur définie est la [valeur initiale](#valeur_initiale) de la propriété.
 
 Dans notre exemple, comme nous avons une [valeur en cascade](#valeur_en_cascade) de `2em`, celle-ci devient la valeur définie&nbsp;:
@@ -144,7 +144,7 @@ Dans notre exemple, comme nous avons une [valeur en cascade](#valeur_en_cascade)
 font-size: 2em;
 ```
 
-Pour les propriétés sans valeur en cascade, le processus de valeurs par défaut détermine la valeur. Par exemple, si `color` n'est pas spécifié, la `color` est héritée de la valeur calculée du parent puisque c'est une propriété héritée. Si `margin` n'est pas spécifié, la valeur `initial` de `0` est utilisée puisque `margin` n'est pas une [propriété héritée](/fr/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)&nbsp;:
+Pour les propriétés sans valeur en cascade, le processus de valeurs par défaut détermine la valeur. Par exemple, si `color` n'est pas spécifié, la `color` est héritée de la valeur calculée du parent puisque c'est une propriété héritée. Si `margin` n'est pas spécifié, la valeur `initial` de `0` est utilisée puisque `margin` n'est pas une [propriété héritée](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties)&nbsp;:
 
 ```css
 color: inherit;
@@ -155,8 +155,8 @@ margin: 0;
 
 La **valeur initiale** d'une propriété est la valeur par défaut indiquée dans son tableau de définition dans la spécification. La valeur initiale est utilisée lors de l'application des valeurs par défaut lorsque&nbsp;:
 
-- Pour les [propriétés héritées](/fr/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), la valeur initiale est utilisée uniquement pour l'élément racine, qui n'a pas d'élément parent, lorsqu'aucune valeur en cascade n'existe.
-- Pour les [propriétés non héritées](/fr/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties), la valeur initiale est utilisée sur tous les éléments lorsqu'aucune valeur en cascade n'existe.
+- Pour les [propriétés héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), la valeur initiale est utilisée uniquement pour l'élément racine, qui n'a pas d'élément parent, lorsqu'aucune valeur en cascade n'existe.
+- Pour les [propriétés non héritées](/fr/docs/Web/CSS/Guides/Cascade/Inheritance#non-inherited_properties), la valeur initiale est utilisée sur tous les éléments lorsqu'aucune valeur en cascade n'existe.
 
 Vous pouvez définir explicitement la valeur initiale en utilisant le mot-clé {{cssxref("initial")}}.
 
@@ -257,7 +257,7 @@ La **valeur réelle** d'une propriété est la [valeur utilisée](#valeur_utilis
 
 Le calcul inclut les étapes suivantes&nbsp;:
 
-1. D'abord, la [valeur définie](#valeur_définie) est déterminée en fonction du résultat de la [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade), de l'[héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance) ou en utilisant la [valeur initiale](#valeur_initiale).
+1. D'abord, la [valeur définie](#valeur_définie) est déterminée en fonction du résultat de la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction), de l'[héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance) ou en utilisant la [valeur initiale](#valeur_initiale).
 2. Ensuite, la [valeur calculée](#valeur_calculée) est calculée conformément à la spécification (par ex., un `span` avec `position: absolute` verra sa valeur calculée pour `display` modifiée en `block`).
 3. Puis, le layout est calculé, conduisant à la [valeur utilisée](#valeur_utilisée).
 4. Enfin, la valeur utilisée est transformée selon les limitations de l'environnement local, donnant la valeur réelle.
@@ -284,4 +284,4 @@ CSS 2.0 définissait la _valeur calculée_ comme la dernière étape du calcul d
 
 - Valeurs CSS pour contrôler l'héritage&nbsp;: [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit), [`initial`](/fr/docs/Web/CSS/Reference/Values/initial), [`revert`](/fr/docs/Web/CSS/Reference/Values/revert), [`revert-layer`](/fr/docs/Web/CSS/revert-layer) et [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
 - [Module de la cascade et de l'héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
-- [Module de la syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax)
+- [Module de la syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax)

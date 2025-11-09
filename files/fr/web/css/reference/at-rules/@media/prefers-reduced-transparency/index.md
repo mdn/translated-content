@@ -61,4 +61,4 @@ Cet exemple affiche une boîte translucide par défaut. Si le réglage pour réd
 ## Voir aussi
 
 - Requête média CSS [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)

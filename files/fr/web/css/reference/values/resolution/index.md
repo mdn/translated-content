@@ -6,7 +6,7 @@ original_slug: Web/CSS/resolution
 
 {{CSSRef}}
 
-Le type de donnée CSS **`<resolution>`**, utilisé dans les _[media queries](/fr/docs/Web/CSS/CSS_media_queries)_, décrit la densité de pixels d'un appareil d'affichage, c'est-à-dire sa résolution.
+Le type de donnée CSS **`<resolution>`**, utilisé dans les _[media queries](/fr/docs/Web/CSS/Guides/Media_queries)_, décrit la densité de pixels d'un appareil d'affichage, c'est-à-dire sa résolution.
 
 Les dimensions font référence aux unités CSS (un pixel CSS, un centimètre CSS, etc.) et non aux dimensions physiques.
 
@@ -92,5 +92,5 @@ ten dpi   Incorrect : seules des expressions numériques sont acceptées.
 
 ## Voir aussi
 
-- [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
+- [Les _media queries_ CSS](/fr/docs/Web/CSS/Guides/Media_queries)
 - [La caractéristique média `resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution)

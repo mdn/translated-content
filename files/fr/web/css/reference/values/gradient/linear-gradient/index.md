@@ -223,7 +223,7 @@ body {
 
 ### D'autres exemples de dégradés linéaires
 
-Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -235,9 +235,9 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
 - Les autres fonctions de dégradés&nbsp;: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;image&gt;")}}
-- Le module d'[images CSS](/fr/docs/Web/CSS/CSS_images)
+- Le module d'[images CSS](/fr/docs/Web/CSS/Guides/Images)

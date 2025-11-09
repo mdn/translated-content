@@ -175,27 +175,27 @@ inset: 0 20px 0 20px;
 
 CSS fournit une propriété raccourcie universelle, [`all`](/fr/docs/Web/CSS/Reference/Properties/all), qui applique sa valeur à toutes les propriétés du document. Elle permet ainsi de changer le modèle d'héritage des propriétés.
 
-Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
+Voir les articles [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
 
 ## Voir aussi
 
 - Les concepts fondamentaux de CSS&nbsp;:
-  - [La syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Les règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules)
-  - [Les commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
-  - [La spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [L'héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [La syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Les règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [Les commentaires](/fr/docs/Web/CSS/Guides/Syntax/Comments)
+  - [La spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [L'héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Les modes de disposition](/fr/docs/Glossary/Layout_mode)
-  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [La fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [La fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Les différentes valeurs
-    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
-    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
-    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
-    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [Les éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [Initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
+  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [Les éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)
 - Les propriétés raccourcies&nbsp;:
   - [`all`](/fr/docs/Web/CSS/Reference/Properties/all)
   - [`animation`](/fr/docs/Web/CSS/Reference/Properties/animation)

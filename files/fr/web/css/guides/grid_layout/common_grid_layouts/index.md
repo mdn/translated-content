@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-Pour clôturer ces différents guides, nous allons maintenant voir différentes dispositions sur lesquelles nous appliquerons des techniques avec les grilles CSS. Nous prendrons un exemple qui utilise [les zones nommées d'une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), un système de grille flexible avec 12 colonnes, et aussi une liste de produits avec un placement automatique. Comme nous le verrons, il existe plusieurs méthodes pour obtenir chaque résultat. À vous de choisir la méthode qui vous paraît la plus pertinente et utile pour les problèmes que vous avez à résoudre et les dispositions que vous devez implémenter.
+Pour clôturer ces différents guides, nous allons maintenant voir différentes dispositions sur lesquelles nous appliquerons des techniques avec les grilles CSS. Nous prendrons un exemple qui utilise [les zones nommées d'une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas), un système de grille flexible avec 12 colonnes, et aussi une liste de produits avec un placement automatique. Comme nous le verrons, il existe plusieurs méthodes pour obtenir chaque résultat. À vous de choisir la méthode qui vous paraît la plus pertinente et utile pour les problèmes que vous avez à résoudre et les dispositions que vous devez implémenter.
 
 ## Une disposition adaptative avec une à trois colonnes en utilisant `grid-template-areas`
 
@@ -16,7 +16,7 @@ De nombreux sites web sont construits comme une variation autour de cette dispos
 
 ![Image de trois dispositions différentes, créées en définissant trois grilles pour trois tailles.](11-responsive-areas.png)
 
-Ici, on crée une disposition avec des zones nommées comme on a pu le voir _[dans l'article correspondant](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_.
+Ici, on crée une disposition avec des zones nommées comme on a pu le voir _[dans l'article correspondant](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)_.
 
 Dans le document on a un conteneur qui contient un en-tête, un pied de page, du contenu principal, une barre de navigation, une barre latérale et un bloc dans lequel on souhaite placer de la publicité.
 
@@ -96,7 +96,7 @@ On utilise [`grid-template-areas`](/fr/docs/Web/CSS/Reference/Properties/grid-te
 }
 ```
 
-Avec ces différentes règles, on n'a pas encore de disposition, uniquement des noms qu'on pourra utiliser. Ensuite, on définit la disposition qu'on aura par défaut et qui sera utilisée pour les mobiles. Dans cette règle, on garde le même ordre que celui utilisé dans le document (cf. [le guide sur les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)). On ne définit aucune piste (colonne ou ligne) mais cela suffit pour décrire une disposition sur une seule colonne, les lignes seront créées implicitement lorsqu'elles seront nécessaires.
+Avec ces différentes règles, on n'a pas encore de disposition, uniquement des noms qu'on pourra utiliser. Ensuite, on définit la disposition qu'on aura par défaut et qui sera utilisée pour les mobiles. Dans cette règle, on garde le même ordre que celui utilisé dans le document (cf. [le guide sur les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility)). On ne définit aucune piste (colonne ou ligne) mais cela suffit pour décrire une disposition sur une seule colonne, les lignes seront créées implicitement lorsqu'elles seront nécessaires.
 
 ```css
 .wrapper {
@@ -112,7 +112,7 @@ Avec ces différentes règles, on n'a pas encore de disposition, uniquement des 
 }
 ```
 
-Après cette disposition par défaut pour les appareils mobiles, on peut ajouter une [requête média (<i lang="en">media query</i>)](/fr/docs/Web/CSS/CSS_media_queries) et redéfinir la disposition lorsqu'on a plus d'espace et qu'on peut afficher deux colonnes&nbsp;:
+Après cette disposition par défaut pour les appareils mobiles, on peut ajouter une [requête média (<i lang="en">media query</i>)](/fr/docs/Web/CSS/Guides/Media_queries) et redéfinir la disposition lorsqu'on a plus d'espace et qu'on peut afficher deux colonnes&nbsp;:
 
 ```css
 @media (min-width: 500px) {
@@ -229,7 +229,7 @@ Et on place ces éléments sur la grille en utilisant les noms utilisés précé
 
 {{EmbedLiveSample('', '800', '450')}}
 
-Comme nous l'avons vu dans [le guide sur le nommage des lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), on utilise les noms des lignes pour placer nos éléments. On a ici 12 lignes verticales avec le même nom, on utilise donc ce nom et l'indice qui indique le numéro. On pourrait tout aussi bien utiliser seulement le numéro si on voulait se passer des noms pour les lignes.
+Comme nous l'avons vu dans [le guide sur le nommage des lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines), on utilise les noms des lignes pour placer nos éléments. On a ici 12 lignes verticales avec le même nom, on utilise donc ce nom et l'indice qui indique le numéro. On pourrait tout aussi bien utiliser seulement le numéro si on voulait se passer des noms pour les lignes.
 
 Plutôt que d'indiquer le numéro de la dernière ligne pour chaque élément, on a ici utilisé le mot-clé `span` pour indiquer la taille de chaque élément. Cette approche permet de revoir plus clairement la taille de chaque élément lorsqu'on ajoute une nouvelle disposition pour une nouvelle taille d'écran. Dans la capture qui suit, on peut voir comment les blocs sont positionnés sur la grille. Pour cela, on a utilisé [l'inspecteur de grille de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) qui indique de façon claire comment les objets sont placés.
 
@@ -378,7 +378,7 @@ On notera qu'il n'a pas été nécessaire de redéfinir explicitement la positio
 
 ## Une liste produit utilisant le placement automatique
 
-De nombreuses dispositions sont essentiellement composées de cartes ou tuiles&nbsp;: des listes produit, des galeries d'image, etc. Avec une grille, on peut facilement créer ce genre de liste de façon adaptative, sans avoir à ajouter de [requêtes média](/fr/docs/Web/CSS/CSS_media_queries). Dans l'exemple qui suit, nous allons combiner les grilles CSS et les boîtes flexibles afin d'obtenir une liste de produits.
+De nombreuses dispositions sont essentiellement composées de cartes ou tuiles&nbsp;: des listes produit, des galeries d'image, etc. Avec une grille, on peut facilement créer ce genre de liste de façon adaptative, sans avoir à ajouter de [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries). Dans l'exemple qui suit, nous allons combiner les grilles CSS et les boîtes flexibles afin d'obtenir une liste de produits.
 
 Le document utilisé contient une liste d'objets non ordonnée. Pour chaque produit, on a un titre, un texte dont la taille n'est pas fixe et un lien pour effectuer une action.
 
@@ -509,7 +509,7 @@ Le résultat est plutôt abouti, mais on a parfois des cartes qui ont beaucoup p
 
 ![La disposition crée des trous, car il n'y a pas d'espace pour disposer un élément qui s'étale sur deux pistes.](11-grid-auto-flow-sparse.png)
 
-Si on veut éviter ces trous, on peut utiliser la règle [`grid-auto-flow: dense`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow) sur le conteneur de la grille. Attention à l'utilisation de cette valeur&nbsp;: l'ordre logique n'est plus respecté. Aussi, il faut _uniquement_ utiliser cette valeur lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille. Cette méthode entraîne [certains problèmes d'accessibilité](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#un_ré-ordonnancement_visuel_et_non_logique) dont il faut avoir conscience.
+Si on veut éviter ces trous, on peut utiliser la règle [`grid-auto-flow: dense`](/fr/docs/Web/CSS/Reference/Properties/grid-auto-flow) sur le conteneur de la grille. Attention à l'utilisation de cette valeur&nbsp;: l'ordre logique n'est plus respecté. Aussi, il faut _uniquement_ utiliser cette valeur lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille. Cette méthode entraîne [certains problèmes d'accessibilité](/fr/docs/Web/CSS/Guides/Grid_layout/Accessibility#un_ré-ordonnancement_visuel_et_non_logique) dont il faut avoir conscience.
 
 ```html hidden
 <ul class="listing">
@@ -636,7 +636,7 @@ Cette technique de placement automatique peut s'avérer extrêmement utile si vo
 
 La meilleure façon d'apprendre à utiliser les grilles CSS est de continuer à construire des exemples comme ceux que nous avons vus ici. Prenez un cas d'utilisation que vous auriez construit avec un _framework_ ou avec un autre mode de disposition et voyez si vous pouvez le construire à l'aide d'une grille. N'oubliez pas de trouver des exemples de disposition encore impossibles à construire avec les méthodes actuelles&nbsp;: prenez différentes sources d'inspiration comme les magazines et affiches. Le modèle de grille offre un nouvel éventail de possibilités et il serait dommage de rester sur nos acquis.
 
-- [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
+- [Les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout)
 - [Apprendre les grilles CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [CSS-Tricks&nbsp;: Un guide complet sur les grilles CSS (en anglais)](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Les grilles CSS par l'exemple (en anglais)](https://gridbyexample.com)

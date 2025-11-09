@@ -20,7 +20,7 @@ Comme pour [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident), l
 
 ### Utilisation avec les propriétés personnalisées CSS
 
-Lorsque `<dashed-ident>` est utilisé avec les [propriétés personnalisées CSS](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), la propriété est d'abord déclarée puis utilisée dans une [fonction CSS `var()`](/fr/docs/Web/CSS/Reference/Values/var).
+Lorsque `<dashed-ident>` est utilisé avec les [propriétés personnalisées CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), la propriété est d'abord déclarée puis utilisée dans une [fonction CSS `var()`](/fr/docs/Web/CSS/Reference/Values/var).
 
 ```css
 html {

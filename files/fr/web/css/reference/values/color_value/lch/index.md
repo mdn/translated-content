@@ -547,6 +547,6 @@ Le résultat est le suivant&nbsp;:
 
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Le type de donnée {{CSSXref("&lt;hue&gt;")}}
 - [Les couleurs LCH en CSS&nbsp;: qu'est-ce que c'est, pourquoi et comment&nbsp;? <sup>(angl.)</sup>](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) par Lea Verou (2020)

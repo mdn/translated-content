@@ -133,13 +133,13 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 
 ## Guides
 
-- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : Dans cet article, on voit comment paramétrer un ou plusieurs arrière-plans pour un élément.
-- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : Dans cet article, on voit comment modifier la taille et paramétrer la répétition d'une image d'arrière-plan.
-- [Redimensionner les images d'arrière-plan SVG](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Redimensionner les images d'arrière-plan SVG](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
   - : Comment le rapport d'aspect SVG, les valeurs de dimension SVG et la propriété CSS `background-size` impactent le redimensionnement des images d'arrière-plan SVG.
-- [Utilisation de dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Utilisation de dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Dans cet article, on voit comment créer des images d'arrière-plan dégradées CSS.
 - [Apprendre CSS&nbsp;: Arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Dans cet article, on voit comment implémenter des images décoratives à l'aide d'images d'arrière-plan CSS.
@@ -182,6 +182,6 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 - {{cssxref("filter")}}
 - {{cssxref("backdrop-filter")}}
 - Le filtre de fonction [`drop-shadow()`](/fr/docs/Web/CSS/Reference/Values/filter-function/drop-shadow)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-- [Générateur pour `border-image`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-- [Générateur pour `border-radius`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
+- [Générateur pour `border-image`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+- [Générateur pour `border-radius`](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)

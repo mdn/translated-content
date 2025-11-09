@@ -45,5 +45,5 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - La règle @ {{cssxref("@page")}}

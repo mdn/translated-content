@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-Les [animations](/fr/docs/Web/CSS/CSS_animations) et [transitions CSS](/fr/docs/Web/CSS/CSS_transitions) reposent sur le concept de propriétés pouvant être animées. Sauf indication contraire, toutes les propriétés CSS peuvent être animées. Le type d'_animation_ de chaque propriété détermine la manière dont les valeurs se [combinent <sup>angl.</sup>](https://drafts.csswg.org/css-values/#combining-values) en s'interpolant, s'additionnant, ou en s'accumulant. Les transitions n'impliquent que l'interpolation, tandis que les animations peuvent utiliser les trois méthodes de combinaison.
+Les [animations](/fr/docs/Web/CSS/Guides/Animations) et [transitions CSS](/fr/docs/Web/CSS/Guides/Transitions) reposent sur le concept de propriétés pouvant être animées. Sauf indication contraire, toutes les propriétés CSS peuvent être animées. Le type d'_animation_ de chaque propriété détermine la manière dont les valeurs se [combinent <sup>angl.</sup>](https://drafts.csswg.org/css-values/#combining-values) en s'interpolant, s'additionnant, ou en s'accumulant. Les transitions n'impliquent que l'interpolation, tandis que les animations peuvent utiliser les trois méthodes de combinaison.
 
 > [!NOTE]
 > Le type d'animation de chaque propriété CSS est indiqué dans son tableau de «&nbsp;définition formelle&nbsp;» (par exemple&nbsp;: [`color`](/fr/docs/Web/CSS/Reference/Properties/color#définition_formelle)).
@@ -47,5 +47,5 @@ Pour les propriétés personnalisées non enregistrées, le type d'animation est
 
 ## Voir aussi
 
-- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Utilisation des transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Utilisation des animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
+- [Utilisation des transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)

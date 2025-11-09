@@ -75,7 +75,7 @@ Le module Couleurs CSS introduit également l'interface `CSSColorProfileRule`. A
 
 ## Guides
 
-- [Appliquer la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
+- [Appliquer la couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
   - : Un guide pour utiliser CSS afin d'appliquer la couleur à différents types de contenu, y compris toutes les propriétés CSS acceptant `<color>` comme valeur.
 - [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
   - : Un aperçu des espaces colorimétriques et des différentes notations fonctionnelles `<color>` disponibles en CSS.
@@ -83,7 +83,7 @@ Le module Couleurs CSS introduit également l'interface `CSSColorProfileRule`. A
   - : Théorie des couleurs et ressources, y compris comment trouver les bonnes couleurs pour créer une palette accessible, le contraste et l'impression en couleur.
 - [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
   - : Cet article explique la syntaxe relative des couleurs CSS, présente les différentes options et propose des exemples illustratifs.
-- [Convertisseur de format de couleur](/fr/docs/Web/CSS/CSS_colors/Color_format_converter)
+- [Convertisseur de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
   - : Un outil permettant de saisir ou de choisir une couleur et de copier sa valeur correspondante dans n'importe quel [format de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) CSS.
 - [Comprendre la couleur et la luminance](/fr/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Perception des couleurs et utilisation des couleurs en tenant compte des utilisateur·ice·s daltonien·ne·s, malvoyant·e·s et des utilisateur·ice·s avec des troubles vestibulaires ou d'autres troubles neurologiques.
@@ -129,7 +129,7 @@ Le module Couleurs CSS introduit également l'interface `CSSColorProfileRule`. A
 ## Voir aussi
 
 - [Module d'ajustement des couleurs CSS](/fr/docs/Web/CSS/CSS_color_adjustment) et la propriété {{CSSXref("print-color-adjust")}}.
-- [Module d'images CSS](/fr/docs/Web/CSS/CSS_images), où sont définies les images CSS [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient).
+- [Module d'images CSS](/fr/docs/Web/CSS/Guides/Images), où sont définies les images CSS [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient).
 - L'interface [`VideoColorSpace`](/fr/docs/Web/API/VideoColorSpace)
 - L'élément SVG [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
 - [API Canvas&nbsp;: appliquer des styles et des couleurs](/fr/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)

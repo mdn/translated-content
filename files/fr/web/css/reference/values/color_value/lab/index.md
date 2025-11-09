@@ -476,8 +476,8 @@ Le résultat est le suivant&nbsp;:
 ## Voir aussi
 
 - Le type de donnée {{cssxref("&lt;color&gt;")}}
-- Le type de donnée [`<color-function>`](/fr/docs/Web/CSS/CSS_colors#fonctions)
+- Le type de donnée [`<color-function>`](/fr/docs/Web/CSS/Guides/Colors#fonctions)
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Les couleurs LCH en CSS&nbsp;: qu'est-ce que c'est, pourquoi et comment&nbsp;? <sup>(angl.)</sup>](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) par Lea Verou (2020)
 - [Notes de version pour Safari Technology Preview 122 <sup>(angl.)</sup>](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/)&nbsp;: contient `lab()` et les couleurs {{cssxref("color_value/lch",'lch()')}}

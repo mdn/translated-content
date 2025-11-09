@@ -182,11 +182,11 @@ p {
 
 ## Voir aussi
 
-- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/CSS_shapes)
-- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values)
-- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
-- [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/Guides/Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
+- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/Guides/Shapes/From_box_values)
+- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
+- [Créer des formes à partir d'images](/fr/docs/Web/CSS/Guides/Shapes/From_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

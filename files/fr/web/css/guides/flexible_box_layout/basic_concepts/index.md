@@ -8,7 +8,7 @@ original_slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Le module des boîtes flexibles, aussi appelé « _flexbox_ », a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous verrons les fonctionnalités principales des _flexbox_ que nous approfondirons ensuite dans d'autres articles.
 
-Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les _flexbox_ gèrent une seule dimension à la fois : une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de [la disposition en grille (CSS Grid)](/fr/docs/Web/CSS/CSS_grid_layout) qui contrôle à la fois les colonnes et les lignes.
+Lorsqu'on décrit les boîtes flexibles comme une méthode de disposition unidimensionnelle, on indique en fait que les _flexbox_ gèrent une seule dimension à la fois : une ligne ou une colonne. Ce modèle est à comparer au modèle bidimensionnel de [la disposition en grille (CSS Grid)](/fr/docs/Web/CSS/Guides/Grid_layout) qui contrôle à la fois les colonnes et les lignes.
 
 ## Les deux axes des boîtes flexibles
 
@@ -96,7 +96,7 @@ Pour obtenir ce « passage à la ligne », on ajoute la propriété {{cssxref("f
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
 
-Pour approfondir ces notions, vous pouvez consulter l'article [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items).
+Pour approfondir ces notions, vous pouvez consulter l'article [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items).
 
 ## La propriété raccourcie `flex-flow`
 
@@ -114,7 +114,7 @@ Pour mieux contrôler les éléments flexibles, on peut les cibler directement a
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-Nous verrons ici un rapide aperçu de ces propriétés que nous approfondirons dans l'article [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis).
+Nous verrons ici un rapide aperçu de ces propriétés que nous approfondirons dans l'article [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios).
 
 Avant de revenir à ces propriétés, il nous faut définir le concept d'**espace disponible**. Lorsque nous modifierons l'une de ces propriétés, cela modifiera la façon dont l'espace disponible est distribué parmi les éléments. Ce concept est également important lorsqu'on aligne les éléments.
 
@@ -210,8 +210,8 @@ Vous pouvez essayer les valeurs suivantes dans l'exemple suivant :
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
 
-Dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container), nous verrons plus en détails comment ces propriétés fonctionnent. Ces premiers exemples permettent toutefois de comprendre comment utiliser ces propriétés sur une majorité de cas.
+Dans l'article [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items), nous verrons plus en détails comment ces propriétés fonctionnent. Ces premiers exemples permettent toutefois de comprendre comment utiliser ces propriétés sur une majorité de cas.
 
 ## Prochaines étapes
 
-Avec cet article, vous devriez comprendre les différentes fonctionnalités et concepts relatifs aux _flexbox_. Dans le prochain article, nous verrons [comment cette spécification s'articule avec les autres modules CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods).
+Avec cet article, vous devriez comprendre les différentes fonctionnalités et concepts relatifs aux _flexbox_. Dans le prochain article, nous verrons [comment cette spécification s'articule avec les autres modules CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods).

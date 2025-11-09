@@ -278,5 +278,5 @@ function sepia() {
 
 ## Voir aussi
 
-- Les propriétés du module [Composition et fusion CSS](/fr/docs/Web/CSS/CSS_compositing_and_blending) permettent de fusionner les couches d'arrière-plan d'un élément et de fusionner un élément avec son conteneur.
+- Les propriétés du module [Composition et fusion CSS](/fr/docs/Web/CSS/Guides/Compositing_and_blending) permettent de fusionner les couches d'arrière-plan d'un élément et de fusionner un élément avec son conteneur.
 - L'élément SVG {{SVGElement("filter")}} et les primitives de filtre SVG&nbsp;: {{SVGElement("feSpotLight")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}

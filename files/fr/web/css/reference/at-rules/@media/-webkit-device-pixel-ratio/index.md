@@ -89,7 +89,7 @@ La caractéristique `-webkit-device-pixel-ratio` se définit avec une valeur de 
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("resolution")}}
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
