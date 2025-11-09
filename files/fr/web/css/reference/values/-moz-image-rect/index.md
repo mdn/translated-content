@@ -131,4 +131,4 @@ Cette fonction ne fait partie d'aucun standard.
 ## Voir aussi
 
 - [Les extensions spécifiques à Mozilla pour CSS extensions](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- [Le module de spécification CSS sur les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Le module de spécification CSS sur les arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)

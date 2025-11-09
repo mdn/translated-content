@@ -202,7 +202,7 @@ La boîte de gauche utilise l'[interpolation plus courte](/fr/docs/Web/CSS/Refer
 {{EmbedLiveSample("Interpolation de la teinte", 240, 200)}}
 
 > [!NOTE]
-> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
+> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -214,7 +214,7 @@ La boîte de gauche utilise l'[interpolation plus courte](/fr/docs/Web/CSS/Refer
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
 - Autres fonctions de dégradés&nbsp;: {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
 - Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}

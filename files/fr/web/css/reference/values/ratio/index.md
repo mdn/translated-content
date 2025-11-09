@@ -6,7 +6,7 @@ original_slug: Web/CSS/ratio
 
 {{CSSRef}}
 
-Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans les _media queries_](/fr/docs/Web/CSS/CSS_media_queries) (N.D.T. pour « requête média » qui est moins usité). entre deux valeurs sans unité.
+Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans les _media queries_](/fr/docs/Web/CSS/Guides/Media_queries) (N.D.T. pour « requête média » qui est moins usité). entre deux valeurs sans unité.
 
 ## Syntaxe
 
@@ -63,5 +63,5 @@ Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref
 
 ## Voir aussi
 
-- [Les _media queries_ CSS](/fr/docs/Web/CSS/CSS_media_queries)
+- [Les _media queries_ CSS](/fr/docs/Web/CSS/Guides/Media_queries)
 - [La caractéristique média aspect-ratio](/fr/docs/Web/CSS/Reference/At-rules/@media/aspect-ratio)

@@ -378,5 +378,5 @@ Afin d'être tout à fait complet, voici le code HTML qui peut être utilisé et
 
 - {{domxref("AnimationEvent")}}
 - [Détecter la prise en charge des animations CSS](/fr/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-- [Manipuler les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Manipuler les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - [CSS](https://www.cssdebutant.com)

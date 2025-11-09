@@ -16,7 +16,7 @@ Par exemple, on pourra utiliser une police de caractères plus petite pour les a
 
 ![Un ordinateur portable et un smartphone, chacun avec une taille de zone d'affichage différente, où le contenu est agencé différemment grâce aux media queries.](media-queries.svg)
 
-C'est [la règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media) qui est utilisée en [CSS](/fr/docs/Web/CSS) pour appliquer de façon conditionnelle un fragment d'une feuille de styles selon le résultat d'une requête média. Si on souhaite appliquer de façon conditionnelle une feuille de styles entière, on utilisera [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import).
+C'est [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media) qui est utilisée en [CSS](/fr/docs/Web/CSS) pour appliquer de façon conditionnelle un fragment d'une feuille de styles selon le résultat d'une requête média. Si on souhaite appliquer de façon conditionnelle une feuille de styles entière, on utilisera [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import).
 
 Lorsqu'on conçoit des composants HTML réutilisables, on peut également utiliser [les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries) qui permettent d'appliquer des mises en forme selon la taille de l'élément englobant plutôt que par rapport à la zone d'affichage ou aux caractéristiques de l'appareil.
 
@@ -32,7 +32,7 @@ En [HTML](/fr/docs/Web/HTML), on peut appliquer des requêtes média à différe
 
 En [JavaScript](/fr/docs/Web/JavaScript), on peut utiliser la méthode [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) pour tester une requête média par rapport à la fenêtre courante. On peut également utiliser [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener) pour réagir aux changements d'états d'une requête média. Grâce à cette méthode, votre site ou application peut réagir aux modifications de configuration, d'orientation ou d'état.
 
-Pour en savoir plus sur les tests des requêtes média dans des programmes, voir l'article [Tester les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries).
+Pour en savoir plus sur les tests des requêtes média dans des programmes, voir l'article [Tester les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Testing).
 
 ## Référence
 
@@ -43,11 +43,11 @@ Pour en savoir plus sur les tests des requêtes média dans des programmes, voir
 
 ## Guides
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
   - : Cet article présente les requêtes média, leur syntaxe, les opérateurs et caractéristiques média utilisées pour les construire.
-- [Tester les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Tester les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Testing)
   - : Cet article explique comment tester une requête média grâce à un programme JavaScript. On pourra par exemple déterminer l'état de l'appareil, mettre en place des gestionnaires d'évènements afin d'être notifié·e lorsque les résultats d'une requête média évoluent (par exemple lorsque la personne tourne son appareil ou redimensionne la fenêtre de son navigateur).
-- [Utiliser des requêtes média pour l'accessibilité](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
+- [Utiliser des requêtes média pour l'accessibilité](/fr/docs/Web/CSS/Guides/Media_queries/Using_for_accessibility)
   - : Cet article explique comment les requêtes média peuvent être utilisées afin de rendre un site plus accessible.
 
 ## Spécifications

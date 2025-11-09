@@ -8,7 +8,7 @@ l10n:
 
 La **cascade** est un algorithme qui définit comment les agents utilisateur combinent les valeurs des propriétés selon leurs différentes sources. La cascade définit l'origine et la couche qui l'emporte lorsque des déclarations présentes dans plusieurs [origines](#types_dorigine) ou [couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) définissent une valeur pour une propriété sur un élément.
 
-La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) supérieure.
+La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/Guides/Selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) supérieure.
 
 Dans cet article, on explique ce qu'est la cascade et l'ordre dans lequel les [déclarations](/fr/docs/Web/API/CSSStyleDeclaration) [CSS](/fr/docs/Glossary/CSS) cascadent. Nous aborderons également les couches de cascade et les types d'origine. Comprendre la précédence des origines est un prérequis fondamental pour comprendre le fonctionnement de la cascade.
 
@@ -30,7 +30,7 @@ Certains navigateurs permettent aux utilisatrices et utilisateurs de modifier le
 
 Bien que certaines contraintes soient imposées aux navigateurs sur leurs feuilles de style via la spécification HTML, ils ont une grande latitude. Cela signifie qu'il existe certaines différences entre les navigateurs. Pour simplifier le développement web, certaines équipes de développement peuvent utiliser une feuille de style de réinitialisation telle que [normalize.css](https://github.com/necolas/normalize.css), qui définit les valeurs des propriétés communes avec un état connu, avant de procéder à des modifications spécifiques.
 
-À moins que la feuille de style de l'agent utilisateur inclut [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important) à côté d'une propriété pour la rendre importante, les styles déclarés par le site, y compris les feuilles de style de réinitialisation, l'emporteront sur les styles de l'agent utilisateur, quelle que soit la spécificité du sélecteur associé.
+À moins que la feuille de style de l'agent utilisateur inclut [`!important`](/fr/docs/Web/CSS/Guides/Cascade/Specificity#lexception_!important) à côté d'une propriété pour la rendre importante, les styles déclarés par le site, y compris les feuilles de style de réinitialisation, l'emporteront sur les styles de l'agent utilisateur, quelle que soit la spécificité du sélecteur associé.
 
 ### Feuilles de style du site
 
@@ -65,7 +65,7 @@ L'algorithme de la cascade détermine quelle valeur s'applique pour chaque propr
    | 7                                    | Agent utilisateur (navigateur) | `!important` |
    | 8                                    | Transitions CSS                |              |
 
-3. **Spécificité**&nbsp;: En cas d'égalité pour une même origine, [la spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) d'une règle est considérée pour déterminer laquelle choisir. La spécificité des sélecteurs est comparée, et c'est la déclaration avec la plus grande spécificité qui l'emporte.
+3. **Spécificité**&nbsp;: En cas d'égalité pour une même origine, [la spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) d'une règle est considérée pour déterminer laquelle choisir. La spécificité des sélecteurs est comparée, et c'est la déclaration avec la plus grande spécificité qui l'emporte.
 4. **Ordre d'apparence**&nbsp;: Si plusieurs valeurs pour une même propriété sont décrites dans des règles avec des sélecteurs de même spécificité, c'est la dernière déclaration, dans l'ordre des styles, qui est appliquée.
 
 La cascade progresse dans l'ordre croissant des précédences, les animations ont donc la précédence sur les valeurs normales, qu'elles soient déclarées par l'utilisatrice ou l'utilisateur, le site, ou l'agent utilisateur. Les valeurs importantes l'emportent sur les animations, et les transitions l'emportent sur les valeurs importantes.
@@ -73,7 +73,7 @@ La cascade progresse dans l'ordre croissant des précédences, les animations on
 > [!NOTE]
 > **Transitions et animations**
 >
-> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/CSS_cascade/Specificity#lexception_!important)).
+> Les valeurs de propriétés définies par une animation avec [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) sont plus importantes que celles de styles normaux (c'est-à-dire sans [`!important`](/fr/docs/Web/CSS/Guides/Cascade/Specificity#lexception_!important)).
 >
 > Les valeurs des propriétés définies dans une transition ([`transition`](/fr/docs/Web/CSS/Reference/Properties/transition)) l'emportent sur toutes les autres valeurs, y compris celles marquées avec `!important`.
 
@@ -394,7 +394,7 @@ Maintenant que nous avons une meilleure compréhension de la précédence selon 
 
 ## Entités CSS qui participent à la cascade
 
-Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
+Seules les déclarations de paires de propriété/valeur CSS participent à la cascade. Cela signifie que les [règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) contenant des entités autres que des déclarations, comme une règle [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) qui contiendrait _des descripteurs_, ne participent pas à la cascade.
 
 Les propriétés et les descripteurs définis dans les règles @ ne participent pas à la cascade. Ce sont les règles @ dans leur intégralité qui participent à la cascade. Ainsi, dans une règle `@font-face`, on a des noms de police identifiés par des descripteurs [`font-family`](/fr/docs/Web/CSS/Reference/At-rules/@font-face/font-family). Si plusieurs règles `@font-face` sont définies pour le même descripteur, seule la règle `@font-face` la plus appropriée sera considérée, _dans son intégralité_. S'il y a plus d'une règle @ appropriée, ce sont les déclarations `@font-face` entières qui sont comparées en utilisant les étapes 1, 2, et 4 de l'algorithme (il n'y a pas de spécificité en ce qui concerne les règles @).
 
@@ -408,7 +408,7 @@ Enfin, [`@charset`](/fr/docs/Web/CSS/Reference/At-rules/@charset) est géré par
 
 ## Animations CSS et cascade
 
-[Les animations CSS](/fr/docs/Web/CSS/CSS_animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes), et ne mélange jamais plusieurs règles.
+[Les animations CSS](/fr/docs/Web/CSS/Guides/Animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes), et ne mélange jamais plusieurs règles.
 
 Si plusieurs images clés d'une animation sont définies avec le même nom, c'est la dernière règle `@keyframes` pour le type d'origine et la couche avec la précédence la plus élevée qui est considérée. Seule une définition `@keyframes` est utilisée, même si elle anime différentes propriétés. Les règles `@keyframes` partageant un même nom ne sont jamais mélangées.
 
@@ -471,18 +471,18 @@ Après que le contenu a fini de modifier les styles, on peut être dans une situ
 
 - [Une introduction simple à la cascade CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Modes d'affichage](/fr/docs/Glossary/Layout_mode)
-  - [Modèles de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Valeurs
-    - [Initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
-    - [Calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
-    - [Utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
-    - [Réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [Propriétés raccourcies](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [Éléments remplacés](/fr/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [Initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+    - [Calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+    - [Utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+    - [Réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
+- [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [Propriétés raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- [Éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)

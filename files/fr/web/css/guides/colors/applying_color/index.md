@@ -56,7 +56,7 @@ Chaque élément est une boîte avec un contenu, un arrière-plan et une bordure
   - : Configure des ombres internes et externes sur la boîte. Chaque ombre possède notamment une couleur de base (puis estompée et mélangée selon les autres paramètres).
 
 - {{cssxref("column-rule-color")}}
-  - : La couleur de la ligne séparant des colonnes de texte en [mise en page multicolonne CSS](/fr/docs/Web/CSS/CSS_multicol_layout).
+  - : La couleur de la ligne séparant des colonnes de texte en [mise en page multicolonne CSS](/fr/docs/Web/CSS/Guides/Multicol_layout).
 
 - {{cssxref("outline-color")}}
   - : La couleur du contour tracé autour de l'extérieur de l'élément. À la différence de la bordure, aucun espace ne lui est réservé dans le document. Les contours ne participent pas au [modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et peuvent chevaucher d'autres contenus. Les contours servent souvent d'indicateurs de focus.
@@ -194,5 +194,5 @@ CSS n'est pas la seule technologie Web à gérer la couleur. Par exemple&nbsp;:
 - Type de donnée [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
 - [Bien utiliser les couleurs](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely)
-- Le module [Couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- Le module [Couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Dessiner des graphiques](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)

@@ -51,19 +51,19 @@ Les propriétés `align-content`, `align-self`, `align-items` et `justify-conten
 
 ## Guides
 
-- [Les concepts de base des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Les concepts de base des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : Un aperçu des différentes fonctionnalités offertes par les boîtes flexibles.
-- [Les liens entre _flexbox_ et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [Les liens entre _flexbox_ et les autres méthodes de disposition](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
   - : Comment _flexbox_ s'articule avec les autres méthodes de disposition et les différents modules de spécification CSS.
-- [L'alignement des éléments au sein d'un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [L'alignement des éléments au sein d'un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : Le fonctionnement des propriétés d'alignement des boîtes dans le contexte des boîtes flexibles.
-- [Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [Ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
   - : Ce guide explique les différentes méthodes qui permettent de modifier l'ordre et la direction des éléments dans le conteneur flexible et aborde également les problèmes que cela peut causer.
-- [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : Cet article explique le fonctionnement des propriétés `flex-grow`, `flex-shrink` et `flex-basis`.
-- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
   - : Comment créer des conteneur flexibles qui s'étendent sur plusieurs lignes et contrôler l'affichage des éléments sur ces lignes.
-- [Les cas d'utilisation classiques des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [Les cas d'utilisation classiques des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : Des _design patterns_ pouvant être résolus avec les boîtes flexibles.
 - [La rétrocompatibilité de _flexbox_](/fr/docs/Glossary/Flexbox)
   - : L'état de la compatibilité des navigateurs pour les boîtes flexibles, les différents problème d'interopérabilité, la gestion des anciens navigateurs et l'évolution de la spécification.

@@ -111,4 +111,4 @@ ul {
 ## Voir aussi
 
 - Propriétés utilisant ce type de donnée&nbsp;: {{cssxref("font-family")}} et {{cssxref("font")}}
-- Le module des [polices CSS](/fr/docs/Web/CSS/CSS_fonts)
+- Le module des [polices CSS](/fr/docs/Web/CSS/Guides/Fonts)

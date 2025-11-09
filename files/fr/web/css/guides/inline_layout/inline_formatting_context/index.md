@@ -15,7 +15,7 @@ Le contexte de formatage en ligne est une des méthodes permettant de créer le 
 - Pour un mode d'écriture horizontal, les boîtes en ligne sont disposées horizontalement de la gauche vers la droite.
 - Pour une mode d'écriture vertical, les boîtes en lignes sont disposées verticalement du haut vers le bas.
 
-Dans l'exemple qui suit, on a deux éléments ({{HTMLElement("div")}}) avec une bordure noire qui forment chacuns [un contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) au sein duquel chaque mot contribue à un contexte de formatage en ligne. Les boîtes utilisées dans le mode d'écriture horizontal sont organisées horizontalement tandis que celles dans l'élément avec un mode d'écriture vertical sont disposées verticalement.
+Dans l'exemple qui suit, on a deux éléments ({{HTMLElement("div")}}) avec une bordure noire qui forment chacuns [un contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) au sein duquel chaque mot contribue à un contexte de formatage en ligne. Les boîtes utilisées dans le mode d'écriture horizontal sont organisées horizontalement tandis que celles dans l'élément avec un mode d'écriture vertical sont disposées verticalement.
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
@@ -30,7 +30,7 @@ Les marges, les bordures et le remplissage (_padding_) le long de la direction e
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
 > [!NOTE]
-> Dans ces exemples, on utilise les propriétés logiques (relatives à la direction du flux avec le mode d'écriture et la directionnalité) (ex. {{cssxref("padding-inline-start")}} plutôt que {{cssxref("padding-left")}}) afin qu'elles s'appliquent le long de la direction en ligne, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, voir [les propriétés et les valeurs logiques en CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
+> Dans ces exemples, on utilise les propriétés logiques (relatives à la direction du flux avec le mode d'écriture et la directionnalité) (ex. {{cssxref("padding-inline-start")}} plutôt que {{cssxref("padding-left")}}) afin qu'elles s'appliquent le long de la direction en ligne, que le texte soit horizontal ou vertical. Pour en savoir plus sur ces propriétés, voir [les propriétés et les valeurs logiques en CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 ## Alignement sur la direction de bloc (_block_)
 
@@ -52,5 +52,5 @@ Les boîtes de ligne ont généralement la même taille sur l'axe en ligne (c'es
 
 ## Voir aussi
 
-- [Le contexte de formatage en bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Le modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Le contexte de formatage en bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Le modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)

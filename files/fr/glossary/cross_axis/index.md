@@ -36,9 +36,9 @@ L'alignement des articles sur l'axe transversal est réalisé avec la propriét�
 
 Guides sur le flexbox CSS&nbsp;:
 
-- [Concepts de base du flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Alignement des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Gestion de l'enroulement des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Concepts de base du flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alignement des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Gestion de l'enroulement des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
 - Termes associés du glossaire&nbsp;:
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container", "Conteneur flexible")}}

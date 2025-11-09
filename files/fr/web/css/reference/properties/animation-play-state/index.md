@@ -85,7 +85,7 @@ animation-play-state: unset;
   - : L'animation est en pause.
 
 > [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, elles seront respectivement affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : [paramétrer les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+> Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, elles seront respectivement affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : [paramétrer les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using).
 
 ## Définition formelle
 
@@ -156,5 +156,5 @@ p {
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

@@ -29,7 +29,7 @@ _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.crossOrigin")}}
   - : Une chaîne de caractères indiquant le paramétrage CORS pour cet élément image. Voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus de détails. Peut valoir `null` si CORS n'est pas utilisé.
 - {{domxref("HTMLImageElement.currentSrc")}} {{ReadOnlyInline}}
-  - : Retourne une chaîne de caractères représentant l'URL depuis laquelle l'image actuellement affichée a été chargée. Cette valeur peut changer si l'image est modifiée en fonction des conditions, par exemple via des [requêtes média](/fr/docs/Web/CSS/CSS_media_queries).
+  - : Retourne une chaîne de caractères représentant l'URL depuis laquelle l'image actuellement affichée a été chargée. Cette valeur peut changer si l'image est modifiée en fonction des conditions, par exemple via des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries).
 - {{domxref("HTMLImageElement.decoding")}}
   - : Une chaîne de caractères optionnelle indiquant une préférence sur la façon dont le navigateur doit décoder l'image. Les valeurs possibles sont&nbsp;: `sync` (décodage synchrone), `async` (décodage asynchrone), ou `auto` (pas de préférence, valeur par défaut). Voir la page {{domxref("HTMLImageElement.decoding", "decoding")}} pour plus de détails.
 - {{domxref("HTMLImageElement.fetchPriority")}}

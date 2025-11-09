@@ -14,7 +14,7 @@ Malheureusement, ce n'est pas possible actuellement. Il est impossible de cibler
 
 ## L'espaceement : la propriété `column-gap`
 
-L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)).
+L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)).
 
 Dans une disposition multi-colonne, la valeur initiale de la propriété `column-gap` est `1em`. Cela signifie que les colonnes ne se touchent pas les unes les autres. Pour les autres méthodes de disposition, la valeur initiale de `column-gap` est 0. Le mot-clé `normal` est une valeur qui permet d'obtenir un écart de 1em.
 
@@ -42,4 +42,4 @@ Dans le prochain exemple, on utilise une ligne très large de 40 pixels et un es
 
 ## Résumé
 
-Voici comment mettre en forme les colonnes avec les contraintes actuelles. Dans le prochain guide, nous verrons comment [propager les éléments du conteneur sur l'ensemble des colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns).
+Voici comment mettre en forme les colonnes avec les contraintes actuelles. Dans le prochain guide, nous verrons comment [propager les éléments du conteneur sur l'ensemble des colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns).

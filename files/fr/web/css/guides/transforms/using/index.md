@@ -11,7 +11,7 @@ En modifiant l'espace des coordonnées, les **transformations CSS** permettent d
 Elles sont implémentées en utilisant un ensemble de propriétés CSS qui permettent d'appliquer des transformations linéaires affines aux éléments HTML. Ces transformations incluent la rotation, l'inclinaison, l'homothétie, et la translation à la fois dans le plan (2D) et dans l'espace (3D).
 
 > [!WARNING]
-> Seuls les éléments positionnés selon [le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model) peuvent être transformés. Pour simplifier, on peut se souvenir que tout élément avec `display: block` est positionné selon le modèle de boîtes.
+> Seuls les éléments positionnés selon [le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model) peuvent être transformés. Pour simplifier, on peut se souvenir que tout élément avec `display: block` est positionné selon le modèle de boîtes.
 
 ## Propriétés des transformations CSS
 

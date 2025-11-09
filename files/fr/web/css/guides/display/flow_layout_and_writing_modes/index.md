@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Display/Flow_layout_and_writing_modes
 original_slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
 ---
 
-La spécification CSS 2.1, qui décrit le comportement classique du flux normal, prend l'hypothèse d'un mode d'écriture horizontal. [Les propriétés liées à la disposition](/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow) devraient fonctionner de façon identique pour les modes d'écritures verticaux. Dans ce guide, nous verrons comment le flux normal se comporte selon les différents modes d'écriture.
+La spécification CSS 2.1, qui décrit le comportement classique du flux normal, prend l'hypothèse d'un mode d'écriture horizontal. [Les propriétés liées à la disposition](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) devraient fonctionner de façon identique pour les modes d'écritures verticaux. Dans ce guide, nous verrons comment le flux normal se comporte selon les différents modes d'écriture.
 
 Ce guide n'est pas un guide exhaustif sur l'utilisation des modes d'écriture en CSS. Son objectif est de documenter les interactions, éventuellement inattendues, entre le flux et les modes d'écriture. Pour plus de ressources à ce sujet, vous pouvez vour référer aux [ressources externes](#ressources_externes) ainsi qu'à la section [Voir aussi](#voir_aussi) en fin de page.
 
@@ -64,7 +64,7 @@ C'est pour cela que des propriétés _logiques_ ont fait leur apparition comme {
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-Le module de spécification [CSS sur les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
+Le module de spécification [CSS sur les propriétés et valeurs logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
 
 ## Résumé
 
@@ -72,7 +72,7 @@ Dans la plupart des cas, la disposition de flux fonctionne comme on s'y attend l
 
 ## Voir aussi
 
-- [Les modes d'écritures](/fr/docs/Web/CSS/CSS_writing_modes)
+- [Les modes d'écritures](/fr/docs/Web/CSS/Guides/Writing_modes)
 
 ## Ressources externes
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.
 
 ## Syntaxe
 

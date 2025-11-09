@@ -13,8 +13,8 @@ Cette distinction est importante, notamment sur mobile, où un geste de pincemen
 
 - {{Glossary("Viewport", "Zone d'affichage")}}
 - {{Glossary("Visual viewport", "Zone d'affichage visuelle")}}
-- [Concepts de zone d'affichage](/fr/docs/Web/CSS/CSSOM_view/Viewport_concepts)
-- Le module [CSSOM view](/fr/docs/Web/CSS/CSSOM_view)
+- [Concepts de zone d'affichage](/fr/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
+- Le module [CSSOM view](/fr/docs/Web/CSS/Guides/CSSOM_view)
 - [L'API Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API)
 - [Zone d'affichage <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Viewport) sur Wikipédia
 - [Une histoire de deux zones d'affichage <sup>(angl.)</sup>](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

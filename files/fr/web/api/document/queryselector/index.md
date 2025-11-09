@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
+La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/Guides/Selectors) spécifié, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
 
 La correspondance se fait par un parcours en profondeur (pré‑ordre) des nœuds du document, en commençant par le premier élément du balisage et en parcourant ensuite les nœuds dans l'ordre séquentiel.
 
@@ -31,7 +31,7 @@ querySelector(selectors)
 
 ### Valeur de retour
 
-Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
+Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
 
 Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 

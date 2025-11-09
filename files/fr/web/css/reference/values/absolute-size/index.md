@@ -121,4 +121,4 @@ li {
 
 - Le type de donnée CSS {{cssxref("relative-size")}}
 - Les propriétés CSS {{cssxref("font")}} et {{cssxref("font-size")}}
-- [Le module CSS fonts](/fr/docs/Web/CSS/CSS_fonts)
+- [Le module CSS fonts](/fr/docs/Web/CSS/Guides/Fonts)

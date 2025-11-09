@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3d06d82cbddf640291fd66cf85cd9014c4e867c5
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/Guides/Transitions).
 
 ## Syntaxe
 
@@ -142,7 +142,7 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
 
 ### Exemples d'animation CSS
 
-Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) et [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) pour des exemples.
+Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) et [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) pour des exemples.
 
 ## Spécifications
 
@@ -156,7 +156,7 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS
 
 - {{cssxref("animation-range")}}
 - [Animation déclenchée par le défilement en CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- Le module d'[animations CSS](/fr/docs/Web/CSS/CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
+- Le module d'[animations CSS](/fr/docs/Web/CSS/Guides/Animations)
 - [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

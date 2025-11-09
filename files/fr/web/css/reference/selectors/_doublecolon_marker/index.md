@@ -34,12 +34,12 @@ li::marker {
 
 Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règle qui utilise `::marker`&nbsp;:
 
-- Toutes les [propriétés de police](/fr/docs/Web/CSS/CSS_fonts)
+- Toutes les [propriétés de police](/fr/docs/Web/CSS/Guides/Fonts)
 - La propriété {{CSSxRef("white-space")}}
 - {{CSSxRef("color")}}
 - Les propriétés {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} et {{CSSxRef("direction")}}
 - La propriété {{CSSxRef("content")}}
-- Toutes les propriétés d'[animation](/fr/docs/Web/CSS/CSS_animations#propriétés_css) et de [transition](/fr/docs/Web/CSS/CSS_transitions#propriétés_css)
+- Toutes les propriétés d'[animation](/fr/docs/Web/CSS/Guides/Animations#propriétés_css) et de [transition](/fr/docs/Web/CSS/Guides/Transitions#propriétés_css)
 
 > [!NOTE]
 > La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.
@@ -91,6 +91,6 @@ ul li::marker {
   - {{htmlelement("ol")}}
   - {{htmlelement("li")}}
   - {{htmlelement("summary")}}
-- Le module [Contenu généré par CSS](/fr/docs/Web/CSS/CSS_generated_content)
-- Le module [Listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
-- Le module [Styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module [Contenu généré par CSS](/fr/docs/Web/CSS/Guides/Generated_content)
+- Le module [Listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [Styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

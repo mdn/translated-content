@@ -29,18 +29,18 @@ Nos [modules de base pour apprendre le développement web](/fr/docs/Learn_web_de
 
 La [référence CSS](/fr/docs/Web/CSS/Reference) est une ressource exhaustive pour les développeur·euse·s web expérimenté·e·s, décrivant chaque propriété et concept de CSS, notamment&nbsp;:
 
-- La [syntaxe et les formes du langage](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-- [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity), [héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance) et [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade)
-- [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors), dont les [pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements), [imbrication](/fr/docs/Web/CSS/CSS_nesting), [portée](/fr/docs/Web/CSS/CSS_scoping) et [parties d'ombre](/fr/docs/Web/CSS/CSS_shadow_parts)
-- [Règles CSS](/fr/docs/Web/CSS/CSS_syntax/At-rules), dont les [requêtes média](/fr/docs/Web/CSS/CSS_media_queries) et les [requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment)
-- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units), dont les [types de données numériques](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types), [types de données textuelles](/fr/docs/Web/CSS/CSS_values_and_units/Textual_data_types) et [notations fonctionnelles](/fr/docs/Web/CSS/Reference/Values/Functions)
-- Le [modèle de boîte](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et la [fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block)
-- Contextes de [superposition](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context) et de [formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- Valeurs [initiale](/fr/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [utilisée](/fr/docs/Web/CSS/CSS_cascade/Value_processing#used_value) et [réelle](/fr/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
-- Les [propriétés raccourcies CSS](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- Mise en page de [boîte flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout), [multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout) et [grille](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Animations](/fr/docs/Web/CSS/CSS_animations), [transitions](/fr/docs/Web/CSS/CSS_transitions) et [transformations](/fr/docs/Web/CSS/CSS_transforms)
+- La [syntaxe et les formes du langage](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+- [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity), [héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance) et [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
+- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors), dont les [pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements), [imbrication](/fr/docs/Web/CSS/CSS_nesting), [portée](/fr/docs/Web/CSS/CSS_scoping) et [parties d'ombre](/fr/docs/Web/CSS/CSS_shadow_parts)
+- [Règles CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rules), dont les [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries) et les [requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment)
+- Le module des [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units), dont les [types de données numériques](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types), [types de données textuelles](/fr/docs/Web/CSS/Guides/Values_and_units/Textual_data_types) et [notations fonctionnelles](/fr/docs/Web/CSS/Reference/Values/Functions)
+- Le [modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction) et la [fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [Bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block)
+- Contextes de [superposition](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) et de [formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- Valeurs [initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value), [calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value), [utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) et [réelle](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#actual_value)
+- Les [propriétés raccourcies CSS](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- Mise en page de [boîte flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout), [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) et [grille](/fr/docs/Web/CSS/Guides/Grid_layout)
+- [Animations](/fr/docs/Web/CSS/Guides/Animations), [transitions](/fr/docs/Web/CSS/Guides/Transitions) et [transformations](/fr/docs/Web/CSS/Guides/Transforms)
 
 ## Recettes CSS
 

@@ -35,29 +35,29 @@ L'épaisseur des bordures est déterminée par les propriétés {{cssxref("borde
 
 La **zone de marge**, délimitée par le bord de la marge, étend la zone de bordure pour inclure une zone vide utilisée pour séparer l'élément de ses voisins. Ses dimensions sont la _largeur de la boîte de marge_ et la _hauteur de la boîte de marge_.
 
-La taille de la zone de marge est déterminée par les propriétés {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} et la propriété abrégée {{cssxref("margin")}}. Lorsque la [fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) se produit, la zone de marge n'est pas clairement définie car les marges sont partagées entre les boîtes.
+La taille de la zone de marge est déterminée par les propriétés {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} et la propriété abrégée {{cssxref("margin")}}. Lorsque la [fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing) se produit, la zone de marge n'est pas clairement définie car les marges sont partagées entre les boîtes.
 
 Enfin, notez que pour les éléments en ligne non remplacés, l'espace occupé (la contribution à la hauteur de la ligne) est déterminé par la propriété {{cssxref('line-height')}}, même si les bordures et le remplissage sont toujours affichés autour du contenu.
 
 ## Voir aussi
 
-- [Disposition et bloc conteneur](/fr/docs/Web/CSS/CSS_display/Containing_block)
-- [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade)
+- [Disposition et bloc conteneur](/fr/docs/Web/CSS/Guides/Display/Containing_block)
+- [Introduction à la cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Apprendre&nbsp;: Gérer les conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Concepts clés de CSS&nbsp;:
-  - [Syntaxe CSS](/fr/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Règles @](/fr/docs/Web/CSS/CSS_syntax/At-rules)
-  - [Commentaires](/fr/docs/Web/CSS/CSS_syntax/Comments)
-  - [Spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [Commentaires](/fr/docs/Web/CSS/Guides/Syntax/Comments)
+  - [Spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Modes de disposition](/fr/docs/Glossary/Layout_mode)
-  - [Modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Valeurs&nbsp;:
-    - [Valeurs initiales](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_initiale)
-    - [Valeurs calculées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_calculée)
-    - [Valeurs utilisées](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_utilisée)
-    - [Valeurs réelles](/fr/docs/Web/CSS/CSS_cascade/Value_processing#valeur_réelle)
-  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [Propriétés abrégées](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+    - [Valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+    - [Valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+    - [Valeurs utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+    - [Valeurs réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [Propriétés abrégées](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{Glossary("Replaced elements", "Éléments remplacés")}}

@@ -92,7 +92,7 @@ article {
 }
 ```
 
-Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on pourrait l'avoir avec un [_Shadow_ DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM). Cette valeur sert principlament pour les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) qui pourraient changer sur un élément et affecter le reste de l'arborescence.
+Malgré son nom, cette valeur ne fournit pas un style compartimenté comme on pourrait l'avoir avec un [_Shadow_ DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM). Cette valeur sert principlament pour les [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) qui pourraient changer sur un élément et affecter le reste de l'arborescence.
 
 En utilisant `contain: style`, on s'assure que les propriétés {{cssxref("counter-increment")}} et {{cssxref("counter-set")}} créent de nouveaux compteurs limités à ce sous-arbre.
 
