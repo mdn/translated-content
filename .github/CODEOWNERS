@@ -50,3 +50,4 @@
 
 # Reset until https://github.com/prettier/prettier/issues/11828 is fixed
 /.prettierignore
+/SECURITY.md @mdn/engineering
