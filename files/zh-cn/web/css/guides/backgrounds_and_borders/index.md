@@ -1,7 +1,6 @@
 ---
 title: CSS 背景和边框
 slug: Web/CSS/Guides/Backgrounds_and_borders
-original_slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
   sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
@@ -141,13 +140,13 @@ div:first-of-type {
 
 - [学习 CSS：背景与边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : 解释如何使用 CSS 背景图像实现装饰性图像。
-- [多个背景的应用](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [多个背景的应用](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : 解释如何在元素上设置一个或多个背景。
-- [调整背景图片的大小](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [调整背景图片的大小](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : 描述如何更改背景图像的大小和重复行为。
 - [学习 CSS：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : 解释边框以及其他模型属性如何影响 CSS 盒模型。
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
   - : 解释如何创建 CSS 渐变背景图像。
 
 ## 相关概念
@@ -176,10 +175,10 @@ div:first-of-type {
 
 - {{cssxref("url_value", "&lt;url&gt;")}} CSS 类型
 - [`<color>`](/zh-CN/docs/Web/CSS/Reference/Properties/color) 数据类型
-- [`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型
+- [`<image>`](/zh-CN/docs/Web/CSS/Reference/Values/image) 数据类型
 - [`<position>`](/zh-CN/docs/Web/CSS/Reference/Properties/position) 数据类型
 
-- [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 关键字
+- [`currentcolor`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#currentcolor_关键字) 关键字
 
 ## 规范
 
@@ -188,8 +187,8 @@ div:first-of-type {
 ## 参见
 
 - 可以让你直观创建边框、圆角和阴影效果的交互工具：
-  - [Border-image 生成器](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [Border-radius 生成器](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - [Box-shadow 生成器](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)，包括边框。
-- [`drop-shadow()`](/zh-CN/docs/Web/CSS/filter-function/drop-shadow) 过滤函数将下拉阴影效果应用于输入图像。该函数由 {{cssxref("filter")}} 和 {{cssxref("backdrop-filter")}} 属性使用。
+  - [Border-image 生成器](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Border-radius 生成器](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+  - [Box-shadow 生成器](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
+- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)，包括边框。
+- [`drop-shadow()`](/zh-CN/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) 过滤函数将下拉阴影效果应用于输入图像。该函数由 {{cssxref("filter")}} 和 {{cssxref("backdrop-filter")}} 属性使用。

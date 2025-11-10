@@ -1,7 +1,6 @@
 ---
 title: 使用命名线布局
 slug: Web/CSS/Guides/Grid_layout/Named_grid_lines
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 ---
 
 在前几篇文章中，我们已经学习了根据网格轨道创建出的网格线来定位，以及根据命名的模块区域来定位，在本文中我们将探讨如何通过为网格线命名来把这两种方法结合起来。命名网格线不可思议地有用，但是它那把名字和轨道尺寸混在一起的语法看上去令人困惑，不过通过学习本文的示例，它们会变得清晰而简单。

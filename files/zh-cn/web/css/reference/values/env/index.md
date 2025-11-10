@@ -1,7 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/Reference/Values/env
-original_slug: Web/CSS/env
 ---
 
 **`env()`** [CSS](/zh-CN/docs/Web/CSS) 函数以类似于 {{cssxref("var")}} 函数和 [custom properties](/zh-CN/docs/Web/CSS/Reference/Properties/--*) 的方式将用户代理定义的环境变量值插入你的 CSS 中。区别在于，环境变量除了由用户代理定义而不是由用户定义外，还被全局作用在文档中，而自定义属性则限定在声明它们的元素中。为了告诉浏览器使用屏幕上所有的可用空间，并以此使用`env()`变量，我们需要添加一个新的视口元值：
@@ -108,9 +107,9 @@ padding: env(
 ## 参见
 
 - {{CSSxRef("var", "var(…)")}}
-- [用作层叠式变量的 CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables)模块
+- [用作层叠式变量的 CSS 自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables)模块
 - [自定义属性（`--*`）：CSS 变量](/zh-CN/docs/Web/CSS/Reference/Properties/--*)
-- [使用 CSS 自定义属性（变量）](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [使用 CSS 自定义属性（变量）](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [自定义 PWA 标题栏的窗口控件叠加层](https://web.developers.google.cn/articles/window-controls-overlay)
 - [在标题栏中显示内容](https://learn.microsoft.com/zh-cn/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [打破盒子](https://alistapart.com/article/breaking-out-of-the-box/)

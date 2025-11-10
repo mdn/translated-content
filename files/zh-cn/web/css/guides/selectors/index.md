@@ -1,7 +1,6 @@
 ---
 title: CSS 选择器
 slug: Web/CSS/Guides/Selectors
-original_slug: Web/CSS/CSS_selectors
 ---
 
 **CSS 选择器**规定了 CSS 规则会被应用到哪些元素上。
@@ -110,4 +109,4 @@ original_slug: Web/CSS/CSS_selectors
 
 ## 参见
 
-- [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
+- [CSS 优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)

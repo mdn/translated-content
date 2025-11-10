@@ -1,7 +1,6 @@
 ---
 title: 使用特性查询
 slug: Web/CSS/Guides/Conditional_rules/Using_feature_queries
-original_slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
 **特性查询** 使用 CSS 的 at 规则 [@supports](/zh-CN/docs/Web/CSS/Reference/At-rules/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。
@@ -173,7 +172,7 @@ body {
 
 让我们看一个非常简单的例子，在这个例子中，特性查询就派上用场了，它使用上述的方式来组织 CSS。
 
-假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
+假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/Guides/Grid_layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
@@ -201,7 +200,7 @@ body {
 
 ## 参见
 
-- [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
-- [使用 CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS 条件规则](/zh-CN/docs/Web/CSS/Guides/Conditional_rules)模块
+- [使用 CSS 媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
 - [支持旧浏览器：特性查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#特性查询)
 - [浏览器特性检测：CSS `@supports`](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

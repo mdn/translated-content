@@ -1,7 +1,6 @@
 ---
 title: lch()
 slug: Web/CSS/Reference/Values/color_value/lch
-original_slug: Web/CSS/color_value/lch
 ---
 
 函数记号 **`lch()`** 在 LCH 颜色空间中表示指定颜色。此函数记号与 {{CSSXref("color_value/lab", "lab()")}} 有相同的 L 轴，但使用极坐标 C（色度）和 H（色相）。
@@ -145,6 +144,6 @@ div {
 
 ## 参见
 
-- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/color_value)所列的所有颜色记号
+- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/Reference/Values/color_value)所列的所有颜色记号
 - [CSS 中的 LCH 颜色——是什么，为什么，怎么用？](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
 - [Safari 技术预览 122 发布记录](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/)：含 `lch()` 和 {{CSSXref("color_value/lab", "lab()")}} 颜色

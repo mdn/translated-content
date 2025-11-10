@@ -1,10 +1,9 @@
 ---
 title: perspective()
 slug: Web/CSS/Reference/Values/transform-function/perspective
-original_slug: Web/CSS/transform-function/perspective
 ---
 
-**`perspective()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)用于定义一个变换，设置用户与 z=0 平面之间的距离，即二维界面变为三维时用户的观看视角。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
+**`perspective()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)用于定义一个变换，设置用户与 z=0 平面之间的距离，即二维界面变为三维时用户的观看视角。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: perspective()")}}
 
@@ -116,7 +115,7 @@ perspective(d)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> <a href="/zh-CN/docs/Web/CSS/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> <a href="/zh-CN/docs/Web/CSS/Reference/Values/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
       <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影平面">ℝℙ^2</a> <a href="https://zh.wikipedia.org/wiki/齐次坐标">齐次坐标</a></th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a> 笛卡尔坐标</th>
       <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影空间">ℝℙ^3</a> 齐次坐标</th>

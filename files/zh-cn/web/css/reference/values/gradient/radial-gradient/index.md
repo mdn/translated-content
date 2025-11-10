@@ -1,10 +1,9 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/radial-gradient
-original_slug: Web/CSS/gradient/radial-gradient
 ---
 
-**`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成，其形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+**`radial-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)创建一个图像，该图像由从原点辐射的两种或多种颜色之间的渐进过渡组成，其形状可以是圆形或椭圆形。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{InteractiveExample("CSS Demo: radial-gradient()")}}
 
@@ -65,9 +64,9 @@ radial-gradient(circle at center, red 0, blue, green 100%)
     | `farthest-side`   | 类似于 `closest-side`，但是结束形状与容器距离渐变中心点最远的一边（或最远的垂直和水平边）相切。                    |
     | `farthest-corner` | 默认值，渐变的结束形状与容器距离渐变中心点最远的一个角相交。                                                       |
 
-    如果 `<ending-shape>` 被指定为 `circle`，则可以为大小指定一个 [`<length>`](/zh-CN/docs/Web/CSS/length) 值，它明确了圆的半径。负值是无效的。
+    如果 `<ending-shape>` 被指定为 `circle`，则可以为大小指定一个 [`<length>`](/zh-CN/docs/Web/CSS/Reference/Values/length) 值，它明确了圆的半径。负值是无效的。
 
-    如果 `<ending-shape>` 被指定为 `ellipse`，则可以使用带有两个值的 [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框在相应维度上的大小的。负值是无效的。
+    如果 `<ending-shape>` 被指定为 `ellipse`，则可以使用带有两个值的 [`<length-percentage>`](/zh-CN/docs/Web/CSS/Reference/Values/length-percentage) 来指定椭圆的大小。第一个值表示水平半径，第二个值表示垂直半径。百分比值是相对于渐变框在相应维度上的大小的。负值是无效的。
 
     如果 `<ending-shape>` 关键词被省略，渐变形状会由给定的大小决定。一个 `<length>` 产生圆，两个 `<length-percentage>` 单位的值产生椭圆。一个 `<percentage>` 值是无效的。
 
@@ -78,7 +77,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 描述
 
-与其他渐变一样，径向渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，径向渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 如要创建重复的径向渐变来填充容器，请使用 {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} 函数替代。
 
@@ -148,7 +147,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ### 更多径向渐变示例
 
-请参见 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)获取更多示例。
+请参见 [CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)获取更多示例。
 
 ## 规范
 
@@ -160,7 +159,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
 - 其他的渐变函数：{{cssxref("repeating-radial-gradient")}}、{{cssxref("linear-gradient")}}、{{cssxref("repeating-linear-gradient")}}、{{cssxref("conic-gradient")}}、{{cssxref("repeating-conic-gradient")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 为 HTML 元素应用颜色
 slug: Web/CSS/Guides/Colors/Applying_color
-original_slug: Web/CSS/CSS_colors/Applying_color
 l10n:
   sourceCommit: 2b214f76937f16327c4338ae4a541f54bcf4bf63
 ---
@@ -86,7 +85,7 @@ CSS 并不是唯一支持颜色的 web 技术。同时还有其他支持颜色�
 
 我们定义了一套标准颜色名称，如果你选择这种方式来描述颜色，可以使用关键字来代替数字表示，但必须有一个关键字来代表你想使用的确切颜色。颜色关键字包括标准的主色和次色（如 `red`、`blue` 或 `orange`）、灰度（从 `black` 到 `white`，包括 `darkgray` 和 `lightgray`）以及各种其他混合色，包括 `lightseagreen`、`cornflowerblue` 和 `rebeccapurple`。
 
-有关颜色关键字的更多信息，请参见[具名颜色](/zh-CN/docs/Web/CSS/named-color)一节。
+有关颜色关键字的更多信息，请参见[具名颜色](/zh-CN/docs/Web/CSS/Reference/Values/named-color)一节。
 
 ### RGB 值
 
@@ -124,13 +123,13 @@ RGB（红/绿/蓝）函数表示法与十六进制字符串表示法一样，都
 
 ### 含有色相分量的颜色函数
 
-除了 `rgb()` 以外，你还可以使用 `hsl()` 和 `hwb()`，它们都需要包含 `<hue>` 分量。[`<hue>`](/zh-CN/docs/Web/CSS/hue) 是一种属性，可以让我们分辨出红、橙、黄、绿、蓝等颜色之间的差异或相似性。关键的是，可以在 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 中指定色相，因为大多数颜色模型都是使用{{glossary("color wheel", "色轮")}}来描述色相的。有关这些函数分类的更多信息，请参阅[色彩空间和色彩模型](#色彩空间和色彩模型)部分。
+除了 `rgb()` 以外，你还可以使用 `hsl()` 和 `hwb()`，它们都需要包含 `<hue>` 分量。[`<hue>`](/zh-CN/docs/Web/CSS/Reference/Values/hue) 是一种属性，可以让我们分辨出红、橙、黄、绿、蓝等颜色之间的差异或相似性。关键的是，可以在 [`<angle>`](/zh-CN/docs/Web/CSS/Reference/Values/angle) 中指定色相，因为大多数颜色模型都是使用{{glossary("color wheel", "色轮")}}来描述色相的。有关这些函数分类的更多信息，请参阅[色彩空间和色彩模型](#色彩空间和色彩模型)部分。
 
 #### HSL 函数表示法
 
 设计师和艺术家通常喜欢使用 [HSL](https://zh.wikipedia.org/wiki/HSL和HSV色彩空间)（色相/饱和度/亮度）色彩方法。另外，CSS 的 `hsl()` 函数与 `rgb()` 函数的用法类似。
 
-下图显示了一个 HSL 颜色柱。色相将颜色定义为圆形{{glossary("color wheel", "色轮")}}上的 [`<angle>`](/zh-CN/docs/Web/CSS/angle)。饱和度是一个百分比，表示在灰色阴影和给定色调的最大可能量之间的百分比。随着亮度（或明度）值的增加，颜色会从最暗过渡到最亮（从黑到白）。
+下图显示了一个 HSL 颜色柱。色相将颜色定义为圆形{{glossary("color wheel", "色轮")}}上的 [`<angle>`](/zh-CN/docs/Web/CSS/Reference/Values/angle)。饱和度是一个百分比，表示在灰色阴影和给定色调的最大可能量之间的百分比。随着亮度（或明度）值的增加，颜色会从最暗过渡到最亮（从黑到白）。
 
 ![HSL 颜色柱](640px-hsl_color_solid_cylinder.png)
 
@@ -218,7 +217,7 @@ th {
 
 #### HWB 函数表示法
 
-与上面的 HSL 函数表示法类似，[hwb()](/zh-CN/docs/Web/CSS/color_value/hwb) 函数使用相同的色相值。不过，指定的白度和黑度值不是亮度和饱和度，而是百分比。数值之间**不用**逗号分隔，还可以包含一个可选的 alpha 值（必须在前面加上斜线 `/`）。
+与上面的 HSL 函数表示法类似，[hwb()](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb) 函数使用相同的色相值。不过，指定的白度和黑度值不是亮度和饱和度，而是百分比。数值之间**不用**逗号分隔，还可以包含一个可选的 alpha 值（必须在前面加上斜线 `/`）。
 
 下面是一些用 HWB 符号表示的颜色示例：
 
@@ -365,7 +364,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 #### `color()` 函数
 
-如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
+如果想在定义颜色时明确控制色彩空间，可以使用 [`color()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/color) 函数。这对使用更宽[色域](/zh-CN/docs/Glossary/Gamut)的高清设备描述颜色非常有用。例如，如果我们想显示超出 sRGB 色域的 `display-p3 0 0 1` 颜色，可以使用 [`@media`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/color-gamut) at 规则来检测客户端硬件是否支持此范围内的颜色：
 
 ```css
 .vibrant {
@@ -447,7 +446,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 }
 ```
 
-简而言之，`.box` 确定了每个盒子的大小以及内部使用的字体配置。我们还利用 [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)，轻松将每个盒子的内容居中。我们使用 {{cssxref("display", "display: flex")}} 启用 `flex` 模式，并将 {{cssxref("justify-content")}} 和 {{cssxref("align-items")}} 都设置为 `center`。然后，我们就可以为两个盒子分别创建一个类，定义两者不同的属性。
+简而言之，`.box` 确定了每个盒子的大小以及内部使用的字体配置。我们还利用 [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)，轻松将每个盒子的内容居中。我们使用 {{cssxref("display", "display: flex")}} 启用 `flex` 模式，并将 {{cssxref("justify-content")}} 和 {{cssxref("align-items")}} 都设置为 `center`。然后，我们就可以为两个盒子分别创建一个类，定义两者不同的属性。
 
 ```css
 .boxLeft {
@@ -589,7 +588,7 @@ colorPicker.addEventListener(
 
 几个示例（截至本列表最后一次修订时，所有示例均可免费使用）：
 
-- [MDN 色彩选择工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter)
+- [MDN 色彩选择工具](/zh-CN/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Paletton](https://paletton.com/)
 - [Adobe Color CC 在线调色盘](https://color.adobe.com/create/color-wheel)
 
@@ -669,4 +668,4 @@ colorPicker.addEventListener(
 
 - [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [Web 上的图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#web_上的其他图形)
-- [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)
+- [CSS 颜色模块](/zh-CN/docs/Web/CSS/Guides/Colors)

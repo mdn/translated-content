@@ -1,7 +1,6 @@
 ---
 title: CSS 分页媒体
 slug: Web/CSS/Guides/Paged_media
-original_slug: Web/CSS/CSS_paged_media
 l10n:
   sourceCommit: d303345cabd0cd9ab33fdfe51957479c8fb35424
 ---
@@ -35,5 +34,5 @@ l10n:
 
 ## 参见
 
-- [打印](/zh-CN/docs/Web/CSS/CSS_media_queries/Printing)指南
-- [CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)模块
+- [打印](/zh-CN/docs/Web/CSS/Guides/Media_queries/Printing)指南
+- [CSS 媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)模块

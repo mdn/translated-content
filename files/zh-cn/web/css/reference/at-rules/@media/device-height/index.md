@@ -5,7 +5,7 @@ slug: Web/CSS/Reference/At-rules/@media/device-height
 
 {{deprecated_header}}
 
-**`device-height`** [CSS](/zh-CN/docs/Web/CSS) [media feature](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) 可以用来测试设备的渲染高度。注意，该条媒体查询将会在 媒体查询 level4（目前处于候选草案）中废弃
+**`device-height`** [CSS](/zh-CN/docs/Web/CSS) [media feature](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using#media_features) 可以用来测试设备的渲染高度。注意，该条媒体查询将会在 媒体查询 level4（目前处于候选草案）中废弃
 
 ## 语法
 

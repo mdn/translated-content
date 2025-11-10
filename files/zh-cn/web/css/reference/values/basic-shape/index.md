@@ -1,12 +1,11 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
-original_slug: Web/CSS/basic-shape
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
+**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
 
 {{InteractiveExample("CSS 演示：&lt;basic-shape&gt;")}}
 
@@ -76,7 +75,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     `closest-side` 关键字值使用从形状中心到参考盒子最近边的长度来创建半径长度。`farthest-side` 关键字值使用从形状中心到参考盒子最远边的长度。
 
 - `<position>`
-  - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的中心 [`<position>`](/zh-CN/docs/Web/CSS/position_value)。如果省略，则默认为 `center`。
+  - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的中心 [`<position>`](/zh-CN/docs/Web/CSS/Reference/Values/position_value)。如果省略，则默认为 `center`。
 
 - `<fill-rule>`
   - : 设置 {{SVGAttr("fill-rule")}} 用于确定由基本形状[多边形](#多边形语法)、[路径](#路径语法)和[形状](#形状语法)定义的形状内部应如何填充。可能的值为 `nonzero`（默认值）和 `evenodd`。
@@ -168,7 +167,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 在创建形状时，参考盒子由使用 `<basic-shape>` 值的属性定义。形状的坐标系默认以元素的外边距框的左上角为原点，x 轴向右延伸，y 轴向下延伸。所有以百分比表示的长度都是根据参考盒子的尺寸来确定的。
 
-默认的参考盒子是 [`margin-box`](/zh-CN/docs/Web/CSS/box-edge#margin-box)，如下图所示。该图展示了一个使用 `shape-outside: circle(50%)` 创建的圆形，在浏览器开发者工具中高亮可见的盒模型的不同部分。此处的形状是相对于外边距框来定义的。
+默认的参考盒子是 [`margin-box`](/zh-CN/docs/Web/CSS/Reference/Values/box-edge#margin-box)，如下图所示。该图展示了一个使用 `shape-outside: circle(50%)` 创建的圆形，在浏览器开发者工具中高亮可见的盒模型的不同部分。此处的形状是相对于外边距框来定义的。
 
 ![一张图片，展示了使用 Firefox 开发者工具的形状检查器检查的圆形。盒模型的不同部分已被高亮显示。](shapes-reference-box.png)
 
@@ -280,8 +279,8 @@ div {
 ## 参见
 
 - 使用此数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("offset-path")}}、{{cssxref("shape-outside")}}。
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
-- [CSS 形状概览](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [CSS 遮罩介绍](/zh-CN/docs/Web/CSS/CSS_masking/Masking)
-- [CSS 遮罩](/zh-CN/docs/Web/CSS/CSS_masking)模块
+- [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)模块
+- [CSS 形状概览](/zh-CN/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS 遮罩介绍](/zh-CN/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS 遮罩](/zh-CN/docs/Web/CSS/Guides/Masking)模块
 - [在 CSS 中编辑形状路径——Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

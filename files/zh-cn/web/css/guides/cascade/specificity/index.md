@@ -1,7 +1,6 @@
 ---
 title: 优先级
 slug: Web/CSS/Guides/Cascade/Specificity
-original_slug: Web/CSS/CSS_cascade/Specificity
 ---
 
 浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/docs/Web/CSS/Reference#选择器)组成的匹配规则。
@@ -343,22 +342,22 @@ h1 {
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - CSS3 选择器优先级 - <http://www.w3.org/TR/selectors/#specificity>
 - CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
   - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
+    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

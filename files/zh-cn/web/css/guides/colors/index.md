@@ -1,7 +1,6 @@
 ---
 title: CSS 颜色
 slug: Web/CSS/Guides/Colors
-original_slug: Web/CSS/CSS_colors
 l10n:
   sourceCommit: 30a5a8d5c29feab27ec268c272a945702282994e
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ### 色彩运用
 
-下面的颜色语法转换器显示了当前选定颜色在[红—绿—蓝](/zh-CN/docs/Web/CSS/color_value/rgb)（RGB）、[十六进制](/zh-CN/docs/Web/CSS/hex-color)（HEX）、[色相、饱和度和亮度](/zh-CN/docs/Web/CSS/color_value/hsl)（HSL）以及[色相、白度和黑度](/zh-CN/docs/Web/CSS/color_value/hwb)（HWB）CSS 颜色格式中的值。这里所有的 RGB、HEX、HSL 和 HWB 颜色值虽然书写方式不同，但表示的是相同的颜色值。
+下面的颜色语法转换器显示了当前选定颜色在[红—绿—蓝](/zh-CN/docs/Web/CSS/Reference/Values/color_value/rgb)（RGB）、[十六进制](/zh-CN/docs/Web/CSS/Reference/Values/hex-color)（HEX）、[色相、饱和度和亮度](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl)（HSL）以及[色相、白度和黑度](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb)（HWB）CSS 颜色格式中的值。这里所有的 RGB、HEX、HSL 和 HWB 颜色值虽然书写方式不同，但表示的是相同的颜色值。
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
@@ -35,15 +34,15 @@ l10n:
 ### 函数
 
 - 颜色函数：
-  - [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb)
-  - [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)
-  - [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)
-  - [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)
-  - [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch)
-  - [`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab)
-  - [`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)
-  - [`color()`](/zh-CN/docs/Web/CSS/color_value/color)
-- [`color-mix()`](/zh-CN/docs/Web/CSS/color_value/color-mix)
+  - [`rgb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/rgb)
+  - [`hsl()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl)
+  - [`hwb()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hwb)
+  - [`lab()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/lab)
+  - [`lch()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/lch)
+  - [`oklab()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/oklab)
+  - [`oklch()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/oklch)
+  - [`color()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/color)
+- [`color-mix()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/color-mix)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
 > [!NOTE]
@@ -58,15 +57,15 @@ l10n:
 - {{cssxref("alpha-value")}}
 - {{cssxref("hue")}}
 - {{cssxref("system-color")}}
-- [`<colorspace-params>`](/zh-CN/docs/Web/CSS/color_value/color#将_color_与预定义的色彩空间一起使用)
+- [`<colorspace-params>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/color#将_color_与预定义的色彩空间一起使用)
 
 ### 术语和关键字
 
 - {{glossary("color space", "色彩空间")}}
-- [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字)
+- [`currentcolor`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#currentcolor_关键字)
 - {{glossary("interpolation", "插值")}}
 - {{glossary("RGB")}}
-- [`transparent`](/zh-CN/docs/Web/CSS/named-color#transparent)
+- [`transparent`](/zh-CN/docs/Web/CSS/Reference/Values/named-color#transparent)
 
 ### 接口
 
@@ -75,13 +74,13 @@ l10n:
 
 ## 指南
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)
   - : 使用 CSS 为各种类型的内容应用颜色的指南，包括所有接受 `<color>` 值的 CSS 属性。
-- [CSS 颜色值](/zh-CN/docs/Web/CSS/CSS_colors/Color_values)
+- [CSS 颜色值](/zh-CN/docs/Web/CSS/Guides/Colors/Color_values)
   - : 色彩空间的概述以及 CSS 中可用的不同 `<color>` 函数表示法。
-- [明智地使用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [明智地使用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_color_wisely)
   - : 色彩理论及资源，包括找到合适的颜色以创建无障碍的调色板、对比度以及彩色打印。
-- [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
+- [使用相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors)
   - : 本文解释了相对 CSS 颜色语法，展示了不同的选项，并给出了一些说明性的示例。
 - [理解颜色和亮度](/zh-CN/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : 色彩感知以及考虑到色弱（色盲）用户、视力减退用户以及患有前庭障碍或其他神经障碍的用户如何使用色彩。
@@ -126,8 +125,8 @@ l10n:
 
 ## 参见
 
-- [CSS 颜色调整](/zh-CN/docs/Web/CSS/CSS_color_adjustment)模块和 {{cssxref("print-color-adjust")}} 属性。
-- [CSS 图像](/zh-CN/docs/Web/CSS/CSS_images)模块，其中定义了 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 图像。
+- [CSS 颜色调整](/zh-CN/docs/Web/CSS/Guides/Color_adjustment)模块和 {{cssxref("print-color-adjust")}} 属性。
+- [CSS 图像](/zh-CN/docs/Web/CSS/Guides/Images)模块，其中定义了 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/Reference/Values/gradient) 图像。
 - [`VideoColorSpace`](/zh-CN/docs/Web/API/VideoColorSpace) 接口
 - [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Reference/Element/feColorMatrix) SVG 元素
 - [Canvas API：应用样式及颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色彩)

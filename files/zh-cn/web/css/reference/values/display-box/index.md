@@ -1,7 +1,6 @@
 ---
 title: <display-box>
 slug: Web/CSS/Reference/Values/display-box
-original_slug: Web/CSS/display-box
 ---
 
 这些关键词定义一个元素到底是否产生显示盒（display boxes）。

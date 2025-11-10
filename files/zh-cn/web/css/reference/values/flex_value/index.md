@@ -1,10 +1,9 @@
 ---
 title: <flex>
 slug: Web/CSS/Reference/Values/flex_value
-original_slug: Web/CSS/flex_value
 ---
 
-**`<flex>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types) 表示了网格（grid）容器中的一段可变长度。于 {{cssxref("grid-template-columns")}}、{{cssxref("grid-template-rows")}} 及相关属性中使用。
+**`<flex>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types) 表示了网格（grid）容器中的一段可变长度。于 {{cssxref("grid-template-columns")}}、{{cssxref("grid-template-rows")}} 及相关属性中使用。
 
 ## 语法
 
@@ -27,4 +26,4 @@ original_slug: Web/CSS/flex_value
 
 ## 参见
 
-- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)

@@ -2,7 +2,6 @@
 title: 格式化上下文简介
 short-title: 格式化上下文
 slug: Web/CSS/Guides/Display/Formatting_contexts
-original_slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -31,7 +30,7 @@ l10n:
 - 具有 {{cssxref("contain", "contain: layout", "#layout")}}、`content` 或 `strict` 的元素
 - {{Glossary("flex item", "弹性项目")}}
 - 网格项目素
-- [多栏容器](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [多栏容器](/zh-CN/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
 - 具有 {{cssxref("column-span")}} 为 `all` 的元素
 
 这很有用，因为新的 BFC 会具有像最外层文档那样的行为——它会在主布局中形成一个微型布局。BFC 包含其内部的所有内容，{{cssxref("float")}} 和 {{cssxref("clear")}} 仅适用于同一格式化上下文内的元素，边距也仅在同一格式化上下文内的元素之间合并。
@@ -40,7 +39,7 @@ l10n:
 
 让我们看看几个示例，来理解创建 BFC 的效果。
 
-在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 `<div>` 的边框贯穿了 float。如[应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 div 的背景和边框仅包含内容，而不包含浮动。
+在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 `<div>` 的边框贯穿了 float。如[应用或脱离流式布局](/zh-CN/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 div 的背景和边框仅包含内容，而不包含浮动。
 
 ```html live-sample___float
 <div class="box">
@@ -179,10 +178,10 @@ strong {
 
 ## 总结
 
-在本指南中，我们更详细地介绍了区块和行内格式化上下文以及创建区块格式化上下文（BFC）的重要主题。在下一个指南中，我们将了解[正常流如何与不同的写入模式交互](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)。
+在本指南中，我们更详细地介绍了区块和行内格式化上下文以及创建区块格式化上下文（BFC）的重要主题。在下一个指南中，我们将了解[正常流如何与不同的写入模式交互](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)。
 
 ## 参见
 
-- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model)

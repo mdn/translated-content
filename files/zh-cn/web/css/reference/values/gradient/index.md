@@ -1,10 +1,9 @@
 ---
 title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
-original_slug: Web/CSS/gradient
 ---
 
-**`<gradient>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types) 是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，包含两种或多种颜色的过渡转变。
+**`<gradient>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types) 是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，包含两种或多种颜色的过渡转变。
 
 {{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 
@@ -40,7 +39,7 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 ## 语法
 
@@ -64,7 +63,7 @@ CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说�
 
 ## 插值
 
-就像很多包含颜色的插值一样，渐变是在 alpha 预乘的颜色空间中插值的。这会避免在颜色和不透明度都在改变时出现未预料的灰色阴影。（注意旧的浏览器可能在使用 [transparent 关键字](/zh-CN/docs/Web/CSS/named-color#transparent) 时不使用此行为。）
+就像很多包含颜色的插值一样，渐变是在 alpha 预乘的颜色空间中插值的。这会避免在颜色和不透明度都在改变时出现未预料的灰色阴影。（注意旧的浏览器可能在使用 [transparent 关键字](/zh-CN/docs/Web/CSS/Reference/Values/named-color#transparent) 时不使用此行为。）
 
 ## 形式语法
 
@@ -200,8 +199,8 @@ div {
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
 - 渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)
-- [CSS 单位和值](/zh-CN/docs/Web/CSS/CSS_values_and_units)
+- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)
+- [CSS 单位和值](/zh-CN/docs/Web/CSS/Guides/Values_and_units)
 - [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

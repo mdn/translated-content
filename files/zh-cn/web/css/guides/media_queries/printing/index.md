@@ -1,7 +1,6 @@
 ---
 title: 打印
 slug: Web/CSS/Guides/Media_queries/Printing
-original_slug: Web/CSS/CSS_media_queries/Printing
 l10n:
   sourceCommit: f7daf15512ea736498837b68bcc36d82d6a323f4
 ---
@@ -27,7 +26,7 @@ l10n:
 
 你可以使用 CSS {{cssxref("@media")}} at 规则为网页设置打印在纸上和显示在屏幕上时的不同外观。`print` [媒体类型](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#媒体类型)可以设置要打印的媒体使用的样式，这些样式将仅用于印刷内容。
 
-将其添加到你的样式表末尾。请注意，[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)规则仍然适用：
+将其添加到你的样式表末尾。请注意，[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)规则仍然适用：
 
 ```css
 @media print {
@@ -94,6 +93,6 @@ document.getElementById("print_external").addEventListener("click", () => {
 - [`window.print`](/zh-CN/docs/Web/API/Window/print)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} 事件
 - {{ domxref("window.afterprint_event", "afterprint") }} 事件
-- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
-- [CSS 分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)模块
+- [CSS 分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)模块

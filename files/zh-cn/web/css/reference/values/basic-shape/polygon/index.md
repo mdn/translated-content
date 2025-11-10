@@ -1,12 +1,11 @@
 ---
 title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
-original_slug: Web/CSS/basic-shape/polygon
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
+**`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
 
 {{InteractiveExample("CSS 演示：polygon()")}}
 
@@ -70,7 +69,7 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : 一个可选的值，可以是 `nonzero`（默认值，当省略时）或 `evenodd`，指定填充规则。
 - {{cssxref("length-percentage")}}
-  - : 每个多边形的顶点由一对 `<length-percentage>` 值表示，给出了相对于形状的[参考盒子](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考盒子)的顶点的 x/y 坐标。
+  - : 每个多边形的顶点由一对 `<length-percentage>` 值表示，给出了相对于形状的[参考盒子](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参考盒子)的顶点的 x/y 坐标。
 
 ### 返回值
 
@@ -188,4 +187,4 @@ p {
 ## 参见
 
 - 使用此数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [基本形状指南](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

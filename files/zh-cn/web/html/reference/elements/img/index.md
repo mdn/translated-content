@@ -195,16 +195,16 @@ Web 最常用的图像格式是：
   - : 一个或多个用逗号分隔的值，可以是资源尺寸或 `auto` 关键字。
 
     每一个**资源尺寸**包括：
-    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。列表中的最后一项省略该条件。
+    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using#语法)。列表中的最后一项省略该条件。
     2. 一个资源尺寸的值。
 
     媒体条件描述的是*视口*的属性，而非*图像*本身。例如，`(height <= 500px) 1000px` 表示当*视口*高度小于等于 500 像素时，应使用宽度为 1000 像素的图像源。由于源尺寸描述符指定了布局过程中图像应采用的宽度，媒体条件通常（但非必然）基于[宽度](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/width)属性。
 
     资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "固有尺寸")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
 
-    资源尺寸值可以是任何非负的[长度](/zh-CN/docs/Web/CSS/length)。它不得使用除[数学函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions#数学函数)之外的 CSS 函数。单位的解释方式与[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)相同，即所有相对长度单位均相对于文档根元素而非 `<img>` 元素。例如，`em` 值相对于根字体大小而非图像的字体大小。[百分比](/zh-CN/docs/Web/CSS/percentage)值不被允许。
+    资源尺寸值可以是任何非负的[长度](/zh-CN/docs/Web/CSS/Reference/Values/length)。它不得使用除[数学函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions#数学函数)之外的 CSS 函数。单位的解释方式与[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)相同，即所有相对长度单位均相对于文档根元素而非 `<img>` 元素。例如，`em` 值相对于根字体大小而非图像的字体大小。[百分比](/zh-CN/docs/Web/CSS/Reference/Values/percentage)值不被允许。
 
-    `auto` 关键字可替代整个尺寸列表或列表中的首个条目。该关键字仅在与 `loading="lazy"` 组合使用时有效，并将解析为图像的[具体尺寸](/zh-CN/docs/Web/CSS/image)。由于图像的固有尺寸尚未确定，应同时指定 `width` 和 `height` 属性（或 CSS 等效属性），以防止浏览器默认采用 300px 宽度。
+    `auto` 关键字可替代整个尺寸列表或列表中的首个条目。该关键字仅在与 `loading="lazy"` 组合使用时有效，并将解析为图像的[具体尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image)。由于图像的固有尺寸尚未确定，应同时指定 `width` 和 `height` 属性（或 CSS 等效属性），以防止浏览器默认采用 300px 宽度。
 
     为提升与不支持 `auto` 的浏览器的向后兼容性，可在 `sizes` 属性中 `auto` 之后添加后备尺寸：
 

@@ -1,12 +1,11 @@
 ---
 title: rect()
 slug: Web/CSS/Reference/Values/basic-shape/rect
-original_slug: Web/CSS/basic-shape/rect
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`rect()`** [CSS](/zh-CN/docs/Web/CSS) 函数可以创建一个矩形，该矩形位于包含块的顶部和左侧边缘的指定距离处。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `rect()` 函数，例如 {{cssxref("offset-path")}} 创建元素移动的矩形路径，以及在 {{cssxref("clip-path")}} 中定义裁剪区域的形状。
+**`rect()`** [CSS](/zh-CN/docs/Web/CSS) 函数可以创建一个矩形，该矩形位于包含块的顶部和左侧边缘的指定距离处。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)的基本形状函数。你可以在 CSS 属性中使用 `rect()` 函数，例如 {{cssxref("offset-path")}} 创建元素移动的矩形路径，以及在 {{cssxref("clip-path")}} 中定义裁剪区域的形状。
 
 ## 语法
 
@@ -117,5 +116,5 @@ clip-path: rect(50px 70px 80% 20%);
 - {{cssxref("clip-path")}} 属性
 - {{cssxref("offset-path")}} 属性
 - {{cssxref("&lt;basic-shape&gt;")}} 数据类型
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)模块
+- [基本形状指南](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

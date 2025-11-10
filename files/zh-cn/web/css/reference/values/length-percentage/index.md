@@ -1,10 +1,9 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/Reference/Values/length-percentage
-original_slug: Web/CSS/length-percentage
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) **`<length-percentage>`** [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示一个值，该值可以是 {{Cssxref("length")}} 或 {{Cssxref("percentage")}}。
+[CSS](/zh-CN/docs/Web/CSS) **`<length-percentage>`** [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)表示一个值，该值可以是 {{Cssxref("length")}} 或 {{Cssxref("percentage")}}。
 
 ## 语法
 
@@ -75,4 +74,4 @@ width: calc(100% - 200px);
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;length&gt;")}}
-- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)
+- [CSS 值和单位](/zh-CN/docs/Web/CSS/Guides/Values_and_units)

@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 计数器
 slug: Web/CSS/Guides/Counter_styles/Using_counters
-original_slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 ---
 
 **CSS 计数器**可让你根据内容在文档中的位置调整其显示的外观。例如，你可以使用计数器自动为网页中的标题编号，或者更改有序列表的编号。
@@ -86,7 +85,7 @@ h3::before {
 {{cssxref("counters", "counters()")}} 函数也同样有两种形式：`counters(<counter-name>, <separator>)` 和 `counters(<counter-name>, <separator>, <counter-style>)`。生成的文本由在伪元素范围内所有指定名称的计数器的值组成。这些值从最外层到最内层，使用指定的字符串（`<separator>`）分隔。
 
 以上两个函数均可以使用指定的 `<counter-style>` 来渲染其值（默认值为 `decimal`）。你也可以使用
-{{cssxref("list-style-type")}} 属性其他可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)。
+{{cssxref("list-style-type")}} 属性其他可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/Guides/Counter_styles)。
 
 [基础示例](#基础示例)和[计数器嵌套示例](#计数器嵌套示例)这两个示例分别展示了 `counter()` 和 `counters()` 的使用方法。
 

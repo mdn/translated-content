@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 局限
 slug: Web/CSS/Guides/Containment/Using
-original_slug: Web/CSS/CSS_containment/Using_CSS_containment
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
@@ -60,14 +59,14 @@ article {
 }
 ```
 
-布局通常限定在整个文档范围，这意味着如果移动一个元素，整个文档需要被视为可能有任何元素移动。通过使用 `contain: layout`，你可以告诉浏览器它只需要检查这个元素——元素内部的所有内容都限定在该元素内，并且不影响页面的其余部分，包含盒子建立了一个独立的[格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)。
+布局通常限定在整个文档范围，这意味着如果移动一个元素，整个文档需要被视为可能有任何元素移动。通过使用 `contain: layout`，你可以告诉浏览器它只需要检查这个元素——元素内部的所有内容都限定在该元素内，并且不影响页面的其余部分，包含盒子建立了一个独立的[格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Formatting_contexts)。
 
 此外：
 
 - {{cssxref("float")}} 布局将在指定元素内独立执行。
 - 外边距不会跨越布局局限边界折叠。
-- 布局容器是 `absolute` 和 `fixed` 定位子元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
-- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
+- 布局容器是 `absolute` 和 `fixed` 定位子元素的[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)。
+- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
 
 > [!NOTE]
 > 当使用 {{cssxref("container-type")}} 和 {{cssxref("container-name")}} 属性时，`contain` 的 `style` 和 `layout` 值会自动应用。
@@ -80,7 +79,7 @@ article {
 }
 ```
 
-绘制局限本质上将盒子裁剪到[主盒子](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#主盒子)的内边距边缘。不能有可见的溢出。`paint` 局限的其他附加说明与 `layout` 局限相同（见上文）。
+绘制局限本质上将盒子裁剪到[主盒子](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model#主盒子)的内边距边缘。不能有可见的溢出。`paint` 局限的其他附加说明与 `layout` 局限相同（见上文）。
 
 另一个优点是，如果应用了局限的元素不在屏幕上，浏览器不需要绘制其子元素——因为它们完全被该盒子包含，也不在屏幕上。
 
@@ -111,7 +110,7 @@ article {
 }
 ```
 
-尽管名称如此，样式局限并不提供像[影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 或 {{cssxref("@scope")}} 那样的域限（scoped）样式。`style` 值的主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
+尽管名称如此，样式局限并不提供像[影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 或 {{cssxref("@scope")}} 那样的域限（scoped）样式。`style` 值的主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
 
 使用 `contain: style` 将确保由 {{cssxref("counter-increment")}} 和 {{cssxref("counter-set")}} 属性所创建的新计数器的作用域被限制为此子树。
 
@@ -184,12 +183,12 @@ article {
 这两种情况下都会发生上述情况，但使用 `content-visibility: auto` 时，内容仍然可以被搜索、接收焦点，并且可以从不相关变为相关。而 `content-visibility: hidden` 则不具备这种情况。
 
 > [!NOTE]
-> 要对从 `content-visibility: hidden` 到可见值的过渡进行动画处理，需要设置 {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} 和 {{cssxref("@starting-style")}} 样式。请参阅[过渡 `display` 和 `content-visibility`](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#过渡_display_和_content-visibility) 了解更多信息。
+> 要对从 `content-visibility: hidden` 到可见值的过渡进行动画处理，需要设置 {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} 和 {{cssxref("@starting-style")}} 样式。请参阅[过渡 `display` 和 `content-visibility`](/zh-CN/docs/Web/CSS/Guides/Transitions/Using#过渡_display_和_content-visibility) 了解更多信息。
 
 ## 参见
 
-- [CSS 局限模块](/zh-CN/docs/Web/CSS/CSS_containment)
+- [CSS 局限模块](/zh-CN/docs/Web/CSS/Guides/Containment)
 - [学习：CSS 性能优化](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS)
-- [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_queries)
+- [CSS 容器查询](/zh-CN/docs/Web/CSS/Guides/Containment/Container_queries)
 - [CSS 局限介绍](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)，来自 Igalia.com（2019）
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件

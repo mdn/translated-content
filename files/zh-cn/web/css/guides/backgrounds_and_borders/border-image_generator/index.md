@@ -1,7 +1,6 @@
 ---
 title: Border-image 生成器
 slug: Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 ---
 
 这个工具用于生成 CSS {{cssxref("border-image")}} 的值。

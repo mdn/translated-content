@@ -1,10 +1,9 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-radial-gradient
-original_slug: Web/CSS/gradient/repeating-radial-gradient
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 并且采用相同的参数，但是它会在所有方向上无限重复色标，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 并且采用相同的参数，但是它会在所有方向上无限重复色标，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
 
@@ -40,7 +39,7 @@ background: repeating-radial-gradient(
 
 每次重复时，色标（color stop）的位置的偏移量都是基准径向渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的颜色应该与第一个颜色的颜色保持一致；如果不一致，会导致非常突兀的渐变效果，可以通过将第一个色标重复添加到最后一个中来解决。
 
-与其他渐变一样，径向重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，径向重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在可以使用 `<image>` 的地方。因此，`repeating-radial-gradient()` 在{{Cssxref("background-color")}} 以及其他使用 {{cssxref("&lt;color&gt;")}} 数据类型上不起作用。
 
@@ -148,7 +147,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 这个椭圆形渐变会位于左上角靠中心 20% 的位置，在中心和最远角（右下角）之间重复 10 次。支持多位置色标的浏览器会显示为红色和绿色条纹的椭圆形。不支持这个语法的浏览器仍会从红色到黑色再由蓝色到绿色的渐变。
 
 > [!NOTE]
-> 更多例子请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
+> 更多例子请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)。
 
 ## 规范
 
@@ -160,7 +159,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
 - 其他渐变函数：{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

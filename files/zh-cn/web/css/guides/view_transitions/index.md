@@ -1,7 +1,6 @@
 ---
 title: CSS 视图过渡
 slug: Web/CSS/Guides/View_transitions
-original_slug: Web/CSS/CSS_view_transitions
 l10n:
   sourceCommit: ee7620b98800392073f3c8f94a9b2d048191356d
 ---
@@ -51,14 +50,14 @@ l10n:
 - {{domxref("PageSwapEvent", "pageswap")}} 事件
 - {{domxref("Document.visibilityState")}}
 
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
+- [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)模块
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
   - {{domxref("CSSStyleRule")}}
   - [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 
-- [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)模块
+- [CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transforms)模块
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

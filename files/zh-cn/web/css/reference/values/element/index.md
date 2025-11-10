@@ -1,7 +1,6 @@
 ---
 title: element
 slug: Web/CSS/Reference/Values/element
-original_slug: Web/CSS/element
 ---
 
 {{SeeCompatTable}}

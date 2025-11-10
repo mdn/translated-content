@@ -1,7 +1,6 @@
 ---
 title: 行内格式化上下文
 slug: Web/CSS/Guides/Inline_layout/Inline_formatting_context
-original_slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 ---
 
 该指南将解释什么是行内格式化上下文（inline formatting context）。
@@ -13,7 +12,7 @@ original_slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 - 对于水平书写模式，各个框从左边开始水平地排列
 - 对于垂直书写模式，各个框从顶部开始水平地排列
 
-在下面给出的例子中，带黑色边框的两个 {{HTMLElement("div")}} 元素组成了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
+在下面给出的例子中，带黑色边框的两个 {{HTMLElement("div")}} 元素组成了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
 
 ```html live-sample___inline
 <div class="example horizontal">One Two Three</div>
@@ -106,7 +105,7 @@ span {
 {{EmbedLiveSample("mbp", "", "340px")}}
 
 > [!NOTE]
-> 此处使用了 logical, flow-relative properties — {{cssxref("padding-inline-start")}}，而不是 {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values).
+> 此处使用了 logical, flow-relative properties — {{cssxref("padding-inline-start")}}，而不是 {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values).
 
 ## 在块的方向上对齐
 
@@ -225,5 +224,5 @@ body {
 
 ## 参见
 
-- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)

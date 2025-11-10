@@ -99,7 +99,7 @@ slug: Web/API/Document_Object_Model/Events
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/CSS/CSS_transitions">CSS 过渡</a>相关的事件。
+          <a href="/zh-CN/docs/Web/CSS/Guides/Transitions">CSS 过渡</a>相关的事件。
         </p>
         <p>
           当 CSS 过渡开始、停止或取消等事件发生时发出通知。

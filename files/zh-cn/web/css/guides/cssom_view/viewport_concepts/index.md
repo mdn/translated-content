@@ -1,7 +1,6 @@
 ---
 title: 视口概念
 slug: Web/CSS/Guides/CSSOM_view/Viewport_concepts
-original_slug: Web/CSS/CSSOM_view/Viewport_concepts
 ---
 
 这篇文章阐述了**视口**（viewport）的概念，对视觉视口（visual viewport）和布局视口（layout viewport）进行区分，并让你了解视口的意义是什么，以及它在 CSS、SVG 和移动设备方面的影响。

@@ -1,14 +1,13 @@
 ---
 title: CSS 网格布局和无障碍
 slug: Web/CSS/Guides/Grid_layout/Accessibility
-original_slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 ---
 
 我们这些做 web 开发多年的人和比我们更早入行的人，可能都觉得 CSS 网格有一点像曾经用过的“表格布局”。在 web 设计的早期，构建页面布局的方式是使用 HTML 表格，通过把设计分割成表格的单元格来创建布局。这比后来的“CSS 定位”的优势在于，可以利用表格显示能力提供的对齐和全高度的列。最大的负面影响在于它将设计和 HTML 标记绑在一起，经常会造成无障碍的问题。为了将设计摆到表格中，内容被打散了，如果用屏幕阅读器去读它，读出来的内容就是毫无意义的。
 
 在转向 CSS 布局时，我们经常说 CSS 把内容标记与内容表现分离了。最终的目标是，我们可以创建一个语义和结构良好的文档，然后应用 CSS 来创建我们想要的布局。[CSS Zen Garden](http://www.csszengarden.com/) 等网站展示了这种能力，[CSS Zen Garden](http://www.csszengarden.com/) 提供的挑战是，对于一个具有固定标记的 HTML 页面，却能用 CSS 来创建各种独特的设计。
 
-[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)没有表格布局的那种问题，网格结构是在 CSS 中而不是在 HTML 标记中定义的。如果我们需要添加一个元素，我们可以使用一些没有语义的标记。理论上，网格可以帮助我们延续 CSS 的承诺——标记与表现分离，但是这个方案有可能会做得过火吗？是否会因为使用了网格而导致无障碍问题？
+[CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)没有表格布局的那种问题，网格结构是在 CSS 中而不是在 HTML 标记中定义的。如果我们需要添加一个元素，我们可以使用一些没有语义的标记。理论上，网格可以帮助我们延续 CSS 的承诺——标记与表现分离，但是这个方案有可能会做得过火吗？是否会因为使用了网格而导致无障碍问题？
 
 ## 在 CSS 网格布局中重排内容
 
@@ -92,7 +91,7 @@ Firefox 中一个[久已存在的 bug](https://bugzilla.mozilla.org/show_bug.cgi
 - 从结构化的、可访问的文档开始
   - : 网格布局意味着不需要改变文档源代码，就可以获得想要的布局。因此，开发页面的起点应该是一个结构良好的，可访问的源文档。正如 CSS 网格布局规范指出的，这通常也要求为最小的屏幕设备提供一个良好的文档结构。如果用户在移动设备上滚动长文档，那么用户优先要看到的内容也应在文档中位于优先的位置。
 - 创建响应式的、自适应的网格
-  - : 有了一个结构稳固的文档，就可以创建布局了，很可能要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)来创建额外的列，并对不同的屏幕尺寸和设备改变布局。网格此时大有用武之地，例如，在移动设备上优先级不高的元素，在桌面设备上会被移到边栏中显示。此时的关键环节是要持续测试，一个非常简单的测试方法就是用 tab 键浏览文档。这个浏览顺序还有意义吗？检查是否有什么奇怪的从布局顶部跳到底部的情况，如果有的话，这就是一个信号，要赶快找找布局哪里出了问题。
+  - : 有了一个结构稳固的文档，就可以创建布局了，很可能要使用[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)来创建额外的列，并对不同的屏幕尺寸和设备改变布局。网格此时大有用武之地，例如，在移动设备上优先级不高的元素，在桌面设备上会被移到边栏中显示。此时的关键环节是要持续测试，一个非常简单的测试方法就是用 tab 键浏览文档。这个浏览顺序还有意义吗？检查是否有什么奇怪的从布局顶部跳到底部的情况，如果有的话，这就是一个信号，要赶快找找布局哪里出了问题。
 - 回到源代码
   - : 如果在设计布局的过程中发现自己在使用网格重新定位元素的位置，就要考虑是否应该返回到文档并对逻辑顺序进行更改。使用 CSS 网格布局的一大好处是能够移动源文档中的项目以匹配逻辑顺序，而无需对布局进行大的更改。例如，对于基于 {{cssxref("float")}} 的布局，这是一个巨大的改进，其中文档的源代码非常重要，以便在不同的断点处获取布局。然而，作为开发人员，我们需要记得回到源代码并更新它以维护逻辑顺序。
 
@@ -100,7 +99,7 @@ Firefox 中一个[久已存在的 bug](https://bugzilla.mozilla.org/show_bug.cgi
 
 CSS 网格布局中需要注意的另一个问题（在 CSS Flex 布局中程度较轻），是标记*变平*的诱惑。我们已经知道，一个项目要成为一个网格项目，它需是网格容器的直接子项目，因此，如果在网格容器中有一个 {{HTMLElement("ul")}} 元素，那么*这个* `ul` 是一个网格项目，但子元素 {{HTMLElement("li")}} 并不是网格项目。
 
-如果 {{cssxref("display")}} 属性的 `subgrid` 值得以实现，则可以通过将 `ul` 元素声明为 _subgrid_ 来使网格项目的这些子元素参与到整个网格布局中。目前唯一的解决方法是使用 `display：contents` 使 `ul` 生成的方框从 DOM 中消失。有关此相互影响的更多信息，请参阅本指南的[网格布局与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)一文及文中的 [`display: contents`](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods#grid_and_display_contents) 部分。
+如果 {{cssxref("display")}} 属性的 `subgrid` 值得以实现，则可以通过将 `ul` 元素声明为 _subgrid_ 来使网格项目的这些子元素参与到整个网格布局中。目前唯一的解决方法是使用 `display：contents` 使 `ul` 生成的方框从 DOM 中消失。有关此相互影响的更多信息，请参阅本指南的[网格布局与其他布局方法的关系](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)一文及文中的 [`display: contents`](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods#grid_and_display_contents) 部分。
 
 由于对可互相影响的 `display: contents` 的支持有限，而且 subgrid 还没得到支持，所以当开发一个使用 CSS 网格布局的网站时，为了简单地创建布局，不可避免地要受到标签扁平化和移除语义元素的诱惑。例如，某些内容在语义上被标记为列表，但是为了通过 `display: grid` 将这些元素设置为容器的直接子元素，可能会决定用一组 {{HTMLElement("div")}} 标签来替代。要抵抗这种诱惑，找到不删除标记的设计方法。从一个结构良好的文档开始，是避免这个问题是一个好办法，当不得已去修改文档时，你就会意识到，你将仅是为了让布局工作而要删除语义元素！
 

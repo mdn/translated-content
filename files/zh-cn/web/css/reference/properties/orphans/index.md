@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`orphans`** 用于设置区块容器中，在[页面](/zh-CN/docs/Web/CSS/CSS_paged_media)、区域或[列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)的*底部*必须显示的最少行数。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`orphans`** 用于设置区块容器中，在[页面](/zh-CN/docs/Web/CSS/Guides/Paged_media)、区域或[列](/zh-CN/docs/Web/CSS/Guides/Multicol_layout)的*底部*必须显示的最少行数。
 
 在排版学中，*孤行*指的是段落的第一行单独出现在页面底部（段落的其余部分延续到下一页）。
 
@@ -85,4 +85,4 @@ p:first-child {
 ## 参见
 
 - {{cssxref("widows")}}
-- [分页查询](/zh-CN/docs/Web/CSS/CSS_paged_media)
+- [分页查询](/zh-CN/docs/Web/CSS/Guides/Paged_media)

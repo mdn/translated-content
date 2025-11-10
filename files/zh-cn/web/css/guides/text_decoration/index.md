@@ -1,7 +1,6 @@
 ---
 title: CSS 文本装饰
 slug: Web/CSS/Guides/Text_decoration
-original_slug: Web/CSS/CSS_text_decoration
 l10n:
   sourceCommit: cb8f4ede62e0cc821eef8820f2c9eaea514111e2
 ---
@@ -83,7 +82,7 @@ l10n:
 
 ## 参见
 
-- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块
-- [CSS ruby 布局](/zh-CN/docs/Web/CSS/CSS_ruby_layout)模块
-- [CSS 文本](/zh-CN/docs/Web/CSS/CSS_text)模块
-- [CSS 书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)模块
+- [CSS 字体](/zh-CN/docs/Web/CSS/Guides/Fonts)模块
+- [CSS ruby 布局](/zh-CN/docs/Web/CSS/Guides/Ruby_layout)模块
+- [CSS 文本](/zh-CN/docs/Web/CSS/Guides/Text)模块
+- [CSS 书写模式](/zh-CN/docs/Web/CSS/Guides/Writing_modes)模块

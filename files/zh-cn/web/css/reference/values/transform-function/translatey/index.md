@@ -1,12 +1,53 @@
 ---
 title: translateY()
 slug: Web/CSS/Reference/Values/transform-function/translateY
-original_slug: Web/CSS/transform-function/translateY
 ---
 
 `translateY()` 在页面垂直移动元素，结果是 CSS 数据类型 {{cssxref("&lt;transform-function&gt;")}}。
 
-![](translatey.png)
+{{InteractiveExample("CSS 演示：translateY()")}}
+
+```css interactive-example-choice
+transform: translateY(0);
+```
+
+```css interactive-example-choice
+transform: translateY(42px);
+```
+
+```css interactive-example-choice
+transform: translateY(-2.1rem);
+```
+
+```css interactive-example-choice
+transform: translateY(3ch);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 > [!NOTE]
 > `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。

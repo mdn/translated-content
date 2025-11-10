@@ -1,12 +1,11 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/Reference/Values/blend-mode
-original_slug: Web/CSS/blend-mode
 l10n:
   sourceCommit: 245715b48674c1729cb63417e4a27628e30ae28c
 ---
 
-**`<blend-mode>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)描述当元素重叠时，颜色应当如何呈现。它被用于 {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
+**`<blend-mode>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)描述当元素重叠时，颜色应当如何呈现。它被用于 {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
 
 ## 语法
 
@@ -398,7 +397,7 @@ selectElem.addEventListener("change", () => {
 
 ## 参见
 
-- [CSS 合成和混合](/zh-CN/docs/Web/CSS/CSS_compositing_and_blending)模块定义了 `<blend-mode>` 值。
+- [CSS 合成和混合](/zh-CN/docs/Web/CSS/Guides/Compositing_and_blending)模块定义了 `<blend-mode>` 值。
 - 使用此数据类型的属性：{{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}}
 
 其他网站上对各种混合模式的说明与介绍：

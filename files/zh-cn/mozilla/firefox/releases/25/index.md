@@ -8,7 +8,7 @@ slug: Mozilla/Firefox/Releases/25
 ### CSS
 
 - 新增了 {{cssxref("background-attachment")}} 属性值 `local`（[Firefox bug 483446](https://bugzil.la/483446)）。
-- 新增了一个 Mozilla 私有的媒体查询属性：[`-moz-os-version`](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version)，目前该属性只支持 Windows（[Firefox bug 810399](https://bugzil.la/810399)）。
+- 新增了一个 Mozilla 私有的媒体查询属性：[`-moz-os-version`](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using#-moz-os-version)，目前该属性只支持 Windows（[Firefox bug 810399](https://bugzil.la/810399)）。
 - 实现了新的 {{cssxref("-moz-osx-font-smoothing")}} CSS 属性（[Firefox bug 857142](https://bugzil.la/857142)）
 
 ### HTML

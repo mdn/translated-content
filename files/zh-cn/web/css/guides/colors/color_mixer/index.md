@@ -1,7 +1,6 @@
 ---
 title: 颜色混合器
 slug: Web/CSS/Guides/Colors/Color_mixer
-original_slug: Web/CSS/CSS_colors/Color_mixer
 l10n:
   sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
 ---
@@ -887,4 +886,4 @@ init();
 - {{CSSXref("&lt;color&gt;")}}
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
 - {{cssxref("&lt;hue&gt;")}}
-- [CSS 相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
+- [CSS 相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors)

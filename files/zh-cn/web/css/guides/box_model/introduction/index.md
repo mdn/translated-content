@@ -1,7 +1,6 @@
 ---
 title: CSS 基础框盒模型介绍
 slug: Web/CSS/Guides/Box_model/Introduction
-original_slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
 当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 **CSS 基础框盒模型**（**CSS basic box model**），将所有元素表示为一个个矩形的盒子（box）。CSS 决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸…）。
@@ -32,33 +31,33 @@ original_slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 **外边距区域**（margin area）由外边距边界限制，用空白区域扩展边框区域，以分开相邻的元素。它的尺寸为 *margin-box 宽度*和 _margin-box 高度_。
 
-外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
+外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
 
-最后，请注意，除[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)外，对于行内元素来说，尽管内容周围存在内边距与边框，但其占用空间（每一行文字的高度）则由 {{cssxref('line-height')}} 属性决定，即使边框和内边距仍会显示在内容周围。
+最后，请注意，除[可替换元素](/zh-CN/docs/Web/CSS/Guides/Images/Replaced_element_properties)外，对于行内元素来说，尽管内容周围存在内边距与边框，但其占用空间（每一行文字的高度）则由 {{cssxref('line-height')}} 属性决定，即使边框和内边距仍会显示在内容周围。
 
 ## 参见
 
-- [布局与包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
-- [CSS 层叠介绍](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
+- [布局与包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)
+- [CSS 层叠介绍](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)
 - [层叠和继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
   - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
+    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [可替换元素](/zh-CN/docs/Web/CSS/Guides/Images/Replaced_element_properties)

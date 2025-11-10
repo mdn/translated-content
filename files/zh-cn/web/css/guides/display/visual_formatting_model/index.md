@@ -1,12 +1,11 @@
 ---
 title: 视觉格式化模型
 slug: Web/CSS/Guides/Display/Visual_formatting_model
-original_slug: Web/CSS/CSS_display/Visual_formatting_model
 l10n:
   sourceCommit: 6d55eec58e38583da60aa635d41393ad051d1c6d
 ---
 
-在 CSS 中，**视觉格式化模型**（visual formatting model）描述了用户代理如何获取文档树，并将其处理后显示在视觉媒体上。这包括{{glossary("continuous media", "连续媒体")}}（例如电脑屏幕）和[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)（例如书籍或浏览器打印功能打印的文档）。大部分信息同样适用于连续媒体和分页媒体。
+在 CSS 中，**视觉格式化模型**（visual formatting model）描述了用户代理如何获取文档树，并将其处理后显示在视觉媒体上。这包括{{glossary("continuous media", "连续媒体")}}（例如电脑屏幕）和[分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)（例如书籍或浏览器打印功能打印的文档）。大部分信息同样适用于连续媒体和分页媒体。
 
 在视觉格式化模型中，文档树中的每个元素都会根据盒子模型生成一个个盒子。这些盒子的布局由以下因素决定：
 
@@ -29,7 +28,7 @@ CSS2 中定义了许多有关视觉格式化模型的信息，但是不同的 CS
 
 **盒子生成**是 CSS 视觉格式化模型的一部分，用于从文档元素生成盒子。生成的盒子有不同的类型，影响它们视觉格式化的东西也不同。生成的盒子的类型取决于 CSS {{cssxref("display")}} 属性的值。
 
-最初定义于 CSS2 中的 `display` 属性在 [CSS 显示](/zh-CN/docs/Web/CSS/CSS_display)、[CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)、[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)和 [CSS 旁注布局](/zh-CN/docs/Web/CSS/CSS_ruby_layout)模块中得到了扩展。此外，自 CSS2 以来，一些与显示有关的术语已经得到更新和澄清。
+最初定义于 CSS2 中的 `display` 属性在 [CSS 显示](/zh-CN/docs/Web/CSS/Guides/Display)、[CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)、[CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)和 [CSS 旁注布局](/zh-CN/docs/Web/CSS/Guides/Ruby_layout)模块中得到了扩展。此外，自 CSS2 以来，一些与显示有关的术语已经得到更新和澄清。
 
 CSS 获取源文档并将其渲染到画布上。为此，它会生成一个中间结构，即**盒子树**，它表示被渲染文档的格式化结构。盒子树中的每一个盒子都表示画布上特定空间和/或时间点所对应的元素（或伪元素），而盒子树中的每个文本流同样表示其对应文本节点的内容。
 
@@ -104,7 +103,7 @@ body {
 
 **行内匿名盒子**（inline anonymous box）是在字符串被行级元素分割时创建的，例如，一段文本中包含一个被 `<em></em>` 包裹的句子。这会将句子分割成三个行内盒子——强调（em）部分之前的行内匿名盒子、在 `<em>` 元素中包裹的部分，以及最后的行内匿名盒子。与匿名区块盒子一样，行内匿名盒子不能像 `<em>` 那样单独设置样式，它们只能继承容器的样式。
 
-其他格式化上下文也会创建匿名盒子。[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的表现与上述[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的示例相同，会将文本字符串转换为带有匿名盒子的网格元素。[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)布局会在对列创建匿名列盒子，这些盒子也无法设置样式或被定位。[表格布局](/zh-CN/docs/Web/CSS/CSS_table)会添加匿名盒子以创建适当的表格结构——例如，如果没有具有 `display: table-row` 的盒子，则会添加匿名表格行。
+其他格式化上下文也会创建匿名盒子。[网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)的表现与上述[弹性盒](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)的示例相同，会将文本字符串转换为带有匿名盒子的网格元素。[多列](/zh-CN/docs/Web/CSS/Guides/Multicol_layout)布局会在对列创建匿名列盒子，这些盒子也无法设置样式或被定位。[表格布局](/zh-CN/docs/Web/CSS/Guides/Table)会添加匿名盒子以创建适当的表格结构——例如，如果没有具有 `display: table-row` 的盒子，则会添加匿名表格行。
 
 ### 行内盒子
 
@@ -148,7 +147,7 @@ body {
 
 在 CSS 中，常规流包含块级盒子的区块格式化、行内盒子的行内格式化，也包含块级和行内盒子的相对和粘性定位。
 
-阅读有关 CSS [流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)的更多信息。
+阅读有关 CSS [流式布局](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout)的更多信息。
 
 ### 浮动
 
@@ -158,11 +157,11 @@ body {
 
 ### 绝对定位
 
-在绝对定位模型（也包含 `fixed` 定位）中，盒子会从常规流中完全移除，并分配一个相对于包含区块（在固定定位的情况下为视口）或 [CSS 锚点定位](/zh-CN/docs/Web/CSS/CSS_anchor_positioning)中的一个或多个锚点元素的位置。
+在绝对定位模型（也包含 `fixed` 定位）中，盒子会从常规流中完全移除，并分配一个相对于包含区块（在固定定位的情况下为视口）或 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)中的一个或多个锚点元素的位置。
 
 如果元素是浮动或绝对定位的，或是根元素，则该元素被称为是**脱离流**的。如果元素没有脱离流，那么元素被称为是**应用流**的。
 
-阅读有关 [CSS 定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)的信息。
+阅读有关 [CSS 定位布局](/zh-CN/docs/Web/CSS/Guides/Positioned_layout)的信息。
 
 ## 格式化上下文和 display 属性
 
@@ -170,23 +169,23 @@ body {
 
 盒子还具有内部显示类型，指明其子元素的行为。对于常规区块和行内布局，或常规流布局，显示类型为 `flow`。这意味着子元素也将是 `block` 或 `inline`。
 
-但是，内部显示类型可能是 `grid` 或 `flex`，在这种情况下，直接子元素将显示为网格或弹性元素。这种情况下的元素被描述为创建了网格或弹性[格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)。在许多方面，这类似于区块格式化上下文，但是，子元素的行为是弹性或网格元素，而不是常规流中的元素。
+但是，内部显示类型可能是 `grid` 或 `flex`，在这种情况下，直接子元素将显示为网格或弹性元素。这种情况下的元素被描述为创建了网格或弹性[格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Formatting_contexts)。在许多方面，这类似于区块格式化上下文，但是，子元素的行为是弹性或网格元素，而不是常规流中的元素。
 
 {{cssxref("display")}} 属性参考中描述了块级盒子和行级盒子之间的交互。
 
 此外，display 具体值的参考解释了这些格式化上下文在盒子布局中如何工作。
 
-- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)模块
-- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)模块
-- [CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)模块
-- [CSS 表格](/zh-CN/docs/Web/CSS/CSS_table)模块
-- [CSS 列表和计数器](/zh-CN/docs/Web/CSS/CSS_lists)模块
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)模块
+- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)模块
+- [CSS 多列布局](/zh-CN/docs/Web/CSS/Guides/Multicol_layout)模块
+- [CSS 表格](/zh-CN/docs/Web/CSS/Guides/Table)模块
+- [CSS 列表和计数器](/zh-CN/docs/Web/CSS/Guides/Lists)模块
 
 ### 独立格式化上下文
 
 元素要么参与其包含区块的格式化上下文，要么建立独立的格式化上下文。例如，网格容器为其子元素创建新的**网格格式化上下文**。
 
-**独立格式化上下文**包含浮动，且外边距不会跨过格式化上下文的边界被折叠。因此，创建新的区块格式化上下文可以确保浮动与外边距保留在盒子内。要实现这一点，请将 `display: flow-root` 添加到希望创建新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的盒子上。
+**独立格式化上下文**包含浮动，且外边距不会跨过格式化上下文的边界被折叠。因此，创建新的区块格式化上下文可以确保浮动与外边距保留在盒子内。要实现这一点，请将 `display: flow-root` 添加到希望创建新的[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)的盒子上。
 
 以下示例展示了 `display: flow-root` 的效果。带有黑色背景的盒子看起来会将浮动元素和文本包装在一起。如果删除 `display: flow-root`，则浮动元素会从盒子底部弹出，因为它不再被包含在盒子中。
 
@@ -248,15 +247,15 @@ body {
 
 ## 参见
 
-- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)指南
-- [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-- [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)指南
+- [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+- [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+- [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [盒子模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
 - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-- [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - {{glossary("Replaced elements", "可替换元素")}}
 - {{DOMxRef("VisualViewport")}} 接口
 - {{glossary("Scroll container", "滚动容器")}}

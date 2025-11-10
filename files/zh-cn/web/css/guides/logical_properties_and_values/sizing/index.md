@@ -1,7 +1,6 @@
 ---
 title: 逻辑尺寸属性
 slug: Web/CSS/Guides/Logical_properties_and_values/Sizing
-original_slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 ---
 
 实体尺度属性和逻辑属性用于在页面上设置元素尺寸，而我们将在本指南中解释两者之间相对于流的对应关系。

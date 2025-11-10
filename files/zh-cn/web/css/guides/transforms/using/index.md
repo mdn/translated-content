@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 变换
 slug: Web/CSS/Guides/Transforms/Using
-original_slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
 通过改变坐标空间，**CSS 变换**（CSS transform）可以在不影响正常文档流的情况下改变作用内容的位置。这篇指南提供了有关使用 CSS 变换的介绍。
@@ -9,7 +8,7 @@ original_slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 CSS 变换通过一系列 CSS 属性实现，通过使用这些属性，可以对 HTML 元素进行线性仿射变换（affine linear transformation）。可以进行的变换包括旋转、倾斜、缩放以及位移，这些变换同时适用于平面与三维空间。
 
 > [!WARNING]
-> 只有使用[盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)（Box Model）来定位的元素可以*被变换*（`transform`ed）。拥有 `display: block` 的元素是由盒模型定位的。
+> 只有使用[盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model)（Box Model）来定位的元素可以*被变换*（`transform`ed）。拥有 `display: block` 的元素是由盒模型定位的。
 
 ## CSS 变换属性
 
@@ -531,7 +530,7 @@ section {
 
 ## 参见
 
-- [CSS `transform` 属性](/zh-CN/docs/Web/CSS/Reference/Properties/transform)和 [CSS `<transform-function>` 数据类型](/zh-CN/docs/Web/CSS/transform-function)
+- [CSS `transform` 属性](/zh-CN/docs/Web/CSS/Reference/Properties/transform)和 [CSS `<transform-function>` 数据类型](/zh-CN/docs/Web/CSS/Reference/Values/transform-function)
 - 单独的变换属性：{{cssxref('translate')}}、{{cssxref('rotate')}} 和 {{cssxref('scale')}}（没有 `skew` 属性）
 - [将设备方向与 3D 变换结合使用](/zh-CN/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
 - [CSS 3D 变换简介](https://3dtransforms.desandro.com/)（由 David DeSandro 撰写的博客）

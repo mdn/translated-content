@@ -1,7 +1,6 @@
 ---
 title: 隐私与:visited 选择器
 slug: Web/CSS/Guides/Selectors/Privacy_and_:visited
-original_slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 ---
 
 在大概 2010 年时，[CSS](/zh-CN/docs/Web/CSS) 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。
@@ -26,7 +25,7 @@ original_slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 - {{ cssxref("outline-color") }}
 - `fill` 和 `stroke` 属性的颜色部分
 
-此外，即便是上述样式，你也不能给访问过和未访问过设置不同的透明度。你不能使用[`rgba()`](/zh-CN/docs/Web/CSS/color_value/rgb)、[`hsla()`](/zh-CN/docs/Web/CSS/color_value/hsl)或是 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 关键词。
+此外，即便是上述样式，你也不能给访问过和未访问过设置不同的透明度。你不能使用[`rgba()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/rgb)、[`hsla()`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/hsl)或是 [`transparent`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#transparent_关键字) 关键词。
 
 这是一个使用被限样式的例子：
 

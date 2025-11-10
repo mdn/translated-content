@@ -1,7 +1,6 @@
 ---
 title: CSS 的简写属性
 slug: Web/CSS/Guides/Cascade/Shorthand_properties
-original_slug: Web/CSS/CSS_cascade/Shorthand_properties
 ---
 
 **简写属性**是可以让你同时设置好几个 CSS 属性值的 CSS 属性。使用简写属性，Web 开发人员可以编写更简洁、更具可读性的样式表，节省时间和精力。
@@ -147,26 +146,26 @@ Margin 对于多个值有以下的简写规则：
 
 CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于文档里所有的属性。它的目的是改变属性的继承模型。
 
-查看[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)以了解更多关于继承的信息。
+查看[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)以了解更多关于继承的信息。
 
 ## 参见
 
 - CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
   - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
+    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 
 - 简写属性：{{cssxref("all")}}、{{cssxref("animation")}}、{{cssxref("background")}}、{{cssxref("border")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-start")}}、{{cssxref("border-bottom")}}、{{cssxref("border-color")}}、{{cssxref("border-image")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-left")}}、{{cssxref("border-radius")}}、{{cssxref("border-right")}}、{{cssxref("border-style")}}、{{cssxref("border-top")}}、{{cssxref("border-width")}}、{{cssxref("column-rule")}}、{{cssxref("columns")}}、{{cssxref("flex")}}、{{cssxref("flex-flow")}}、{{cssxref("font")}}、{{cssxref("gap")}}、{{cssxref("grid")}}、{{cssxref("grid-area")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("grid-template")}}、{{cssxref("list-style")}}、{{cssxref("margin")}}、{{cssxref("mask")}}、{{cssxref("offset")}}、{{cssxref("outline")}}、{{cssxref("overflow")}}、{{cssxref("padding")}}、{{cssxref("place-content")}}、{{cssxref("place-items")}}、{{cssxref("place-self")}}、{{cssxref("scroll-margin")}}、{{cssxref("scroll-padding")}}、{{cssxref("text-decoration")}}、{{cssxref("text-emphasis")}}、{{cssxref("transition")}}

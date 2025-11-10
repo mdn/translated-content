@@ -1,10 +1,9 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/conic-gradient
-original_slug: Web/CSS/gradient/conic-gradient
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: conic-gradient()")}}
 
@@ -89,7 +88,7 @@ background: conic-gradient(
 
 ## 描述
 
-与其他渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，锥形渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image#描述)，也就是说没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 要创建重复的锥形渐变来填充 360 度旋转，应该使用 {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数。
 
@@ -104,7 +103,7 @@ background: conic-gradient(
 
 ![沿着锥形渐变的圆周和径向渐变的轴的色标](screenshot_2018-11-29_21.09.19.png)
 
-锥形渐变是通过指示旋转角度、渐变中心，然后指定色标列表来指定的。与线性渐变和径向渐变不同，线性渐变和径向渐变的色标是通过[长度](/zh-CN/docs/Web/CSS/length)指定的，而锥形渐变的色标是通过[角度](/zh-CN/docs/Web/CSS/angle)指定的。单位包括角度 `deg`、梯度 `grad`、弧度 `rad` 和整圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
+锥形渐变是通过指示旋转角度、渐变中心，然后指定色标列表来指定的。与线性渐变和径向渐变不同，线性渐变和径向渐变的色标是通过[长度](/zh-CN/docs/Web/CSS/Reference/Values/length)指定的，而锥形渐变的色标是通过[角度](/zh-CN/docs/Web/CSS/Reference/Values/angle)指定的。单位包括角度 `deg`、梯度 `grad`、弧度 `rad` 和整圈的 `turn`。在一个圆中有 360 度，400 个梯度，2π 弧度，1 圈。支持锥形渐变的浏览器也接受百分比值，100% 等于 360 度，但这不在规范中。
 
 与径向渐变类似，锥形渐变语法用于将渐变中心定位在图像内部甚至外部的任何位置。位置的值类似于两个值的 background-position 语法。
 
@@ -256,7 +255,7 @@ div {
 
 ### 更多锥形渐变的例子
 
-更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
+更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)。
 
 ## 规范
 
@@ -268,7 +267,7 @@ div {
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
 - 其他渐变函数：{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}、{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

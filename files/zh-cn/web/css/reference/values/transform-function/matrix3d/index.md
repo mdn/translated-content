@@ -1,12 +1,11 @@
 ---
 title: matrix3d()
 slug: Web/CSS/Reference/Values/transform-function/matrix3d
-original_slug: Web/CSS/transform-function/matrix3d
 l10n:
   sourceCommit: 802978f38824a4132b4f9b3d3c23fb6970beba74
 ---
 
-**`matrix3d()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)以 4x4 齐次矩阵的形式定义一个 3D 变换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
+**`matrix3d()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)以 4x4 齐次矩阵的形式定义一个 3D 变换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: matrix3d()")}}
 
@@ -81,7 +80,7 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实坐标空间">ℝ^2</a> 上的<a href="/zh-CN/docs/Web/CSS/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实坐标空间">ℝ^2</a> 上的<a href="/zh-CN/docs/Web/CSS/Reference/Values/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
       <th scope="col"><a href="https://zh.wikipedia.org/zh-cn/实射影平面">ℝℙ^2</a> 上的<a href="https://zh.wikipedia.org/zh-cn/齐次坐标">齐次坐标</a></th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a> 上的笛卡尔坐标</th>
       <th scope="col"><a href="https://zh.wikipedia.org/zh-cn/实射影空间">ℝℙ^3</a> 上的齐次坐标</th>

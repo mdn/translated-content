@@ -1,12 +1,11 @@
 ---
 title: <box-edge>
 slug: Web/CSS/Reference/Values/box-edge
-original_slug: Web/CSS/box-edge
 l10n:
   sourceCommit: 255a29f9e5bae99fd3bd98f6af1204a98be634bb
 ---
 
-**`<box-edge>`** 值类型表示一个[盒子边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)关键字，例如 [`content-box`](#content-box) 和 [`border-box`](#border-box)。盒子边界关键字用于定义元素盒模型的不同方向，以及元素在屏幕上的定位和呈现方式。
+**`<box-edge>`** 值类型表示一个[盒子边界](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)关键字，例如 [`content-box`](#content-box) 和 [`border-box`](#border-box)。盒子边界关键字用于定义元素盒模型的不同方向，以及元素在屏幕上的定位和呈现方式。
 
 盒子边界关键字是构成数据类型（但不限于） `<visual-box>`、`<layout-box>`、`<paint-box>`、`<coord-box>` 和 `<geometry-box>` 的组成部分。这些类型被应用于诸如 {{cssxref("transform-box")}} 和 {{cssxref("background-clip")}} 属性。
 
@@ -37,7 +36,7 @@ l10n:
   - : 指的是用于在父容器内定位和调整元素大小的坐标盒。它用于控制内容如何围绕盒的边界流动。此值不包括外边距区域。此值类型用于 {{cssxref("offset-path")}} 属性。
 
 - `<geometry-box>`
-  - : 定义[基本形状](/zh-CN/docs/Web/CSS/basic-shape)的参考框，或者如果单独指定，则会使指定盒的边界，包括任何角落形状（如 {{cssxref("border-radius")}}）成为裁剪路径。此值类型用于 {{cssxref("clip-path")}}、{{cssxref("mask-clip")}} 和 {{cssxref("mask-origin")}} 属性以及 SVG 的 {{SVGAttr("clip-path")}} 属性。
+  - : 定义[基本形状](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape)的参考框，或者如果单独指定，则会使指定盒的边界，包括任何角落形状（如 {{cssxref("border-radius")}}）成为裁剪路径。此值类型用于 {{cssxref("clip-path")}}、{{cssxref("mask-clip")}} 和 {{cssxref("mask-origin")}} 属性以及 SVG 的 {{SVGAttr("clip-path")}} 属性。
 
 ### 关键字
 
@@ -72,4 +71,4 @@ l10n:
 
 ## 参见
 
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)模块
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model)模块

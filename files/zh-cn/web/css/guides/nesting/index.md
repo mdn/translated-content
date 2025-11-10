@@ -1,7 +1,6 @@
 ---
 title: CSS 嵌套
 slug: Web/CSS/Guides/Nesting
-original_slug: Web/CSS/CSS_nesting
 l10n:
   sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---
@@ -20,16 +19,16 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 
 ## 指南
 
-- [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+- [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting/Using)
   - : 解释如何使用 CSS 嵌套。
-- [CSS at 规则嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [CSS at 规则嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting/At-rules)
   - : 解释如何嵌套 CSS at 规则。
-- [CSS 嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [CSS 嵌套与优先级](/zh-CN/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity)
   - : 解释嵌套 CSS 时出现的优先级差异。
 
 ## 相关概念
 
-- [选择器与组合器](/zh-CN/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [选择器与组合器](/zh-CN/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
 - [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - [CSS 预处理器](/zh-CN/docs/Glossary/CSS_preprocessor)
 
@@ -39,6 +38,6 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 
 ## 参见
 
-- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-- [CSS 层叠与继承模块](/zh-CN/docs/Web/CSS/CSS_cascade)
-- [CSS 选择器模块](/zh-CN/docs/Web/CSS/CSS_selectors)
+- [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+- [CSS 层叠与继承模块](/zh-CN/docs/Web/CSS/Guides/Cascade)
+- [CSS 选择器模块](/zh-CN/docs/Web/CSS/Guides/Selectors)

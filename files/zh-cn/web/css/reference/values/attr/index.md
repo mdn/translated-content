@@ -1,7 +1,6 @@
 ---
 title: attr
 slug: Web/CSS/Reference/Values/attr
-original_slug: Web/CSS/attr
 ---
 
 ## 概述

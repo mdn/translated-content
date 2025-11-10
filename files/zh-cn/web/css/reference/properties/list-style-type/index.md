@@ -84,7 +84,7 @@ hr {
 }
 ```
 
-The [color](/zh-CN/docs/Web/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
+The [color](/zh-CN/docs/Web/CSS/Reference/Values/color_value) of the marker will be the same as the computed color of the element it applies to.
 
 只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 `display: list-item`。但是， `list-style-type` 属性可以应用在任何 {{cssxref("display")}} 的值为 `list-item` 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。
 

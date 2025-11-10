@@ -1,12 +1,11 @@
 ---
 title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
-original_slug: Web/CSS/basic-shape/circle
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
+**`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
 
 {{InteractiveExample("CSS 演示：circle()")}}
 
@@ -112,4 +111,4 @@ img {
 ## 参见
 
 - 使用该数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [基本形状指南](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

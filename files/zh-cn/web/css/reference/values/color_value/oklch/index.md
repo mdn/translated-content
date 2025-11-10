@@ -1,7 +1,6 @@
 ---
 title: oklch()
 slug: Web/CSS/Reference/Values/color_value/oklch
-original_slug: Web/CSS/color_value/oklch
 ---
 
 函数记号 **`oklch()`** 在 Oklch 颜色空间中表示指定颜色。此函数记号与 {{CSSXref("color_value/oklab", "oklab()")}} 有相同的 L 轴，但使用极坐标 C（色度）和 H（色相）。
@@ -142,7 +141,7 @@ div {
 
 ## 参见
 
-- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/color_value)所列的所有颜色记号
+- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/Reference/Values/color_value)所列的所有颜色记号
 - [一个用于图像处理的感知颜色空间](https://bottosson.github.io/posts/oklab/)
 - [CSS 中的 OKLCH](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [Safari 技术预览 137 发布记录](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/)：含 `oklch()` and {{CSSXref("color_value/oklab", "oklab()")}} 颜色

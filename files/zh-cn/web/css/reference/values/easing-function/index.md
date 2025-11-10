@@ -1,10 +1,9 @@
 ---
 title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
-original_slug: Web/CSS/easing-function
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types) **`<easing-function>`** 表示描述某数值变化速率的数学函数。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types) **`<easing-function>`** 表示描述某数值变化速率的数学函数。
 
 这种两值之间的过渡可应用于不同情境，可用于描述属性值在动画中变化的快慢程度，由此得以在动画的持续过程中改变其速度。你可为 CSS [过渡](/zh-CN/docs/Web/CSS/Reference/Properties/transition-timing-function)和[动画](/zh-CN/docs/Web/CSS/Reference/Properties/animation-timing-function)指定缓动函数。
 
@@ -317,6 +316,6 @@ steps(0, jump-none)
 
 ## 参见
 
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)
-- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)
+- [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)
 - [cubic-bezier](https://cubic-bezier.com/)

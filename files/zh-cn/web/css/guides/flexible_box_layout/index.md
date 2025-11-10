@@ -1,7 +1,6 @@
 ---
 title: CSS 弹性盒子布局
 slug: Web/CSS/Guides/Flexible_box_layout
-original_slug: Web/CSS/CSS_flexible_box_layout
 ---
 
 **CSS 弹性盒子布局**是 CSS 的模块之一，定义了一种针对用户界面设计而优化的 CSS 盒子模型。在弹性布局模型中，弹性容器的子元素可以在任何方向上排布，也可以“弹性伸缩”其尺寸，既可以增加尺寸以填满未使用的空间，也可以收缩尺寸以避免父元素溢出。子元素的水平对齐和垂直对齐都能很方便的进行操控。通过嵌套这些框（水平框在垂直框内，或垂直框在水平框内）可以在两个维度上构建布局。
@@ -76,23 +75,23 @@ body {
 
 ## 指南
 
-- [弹性盒子基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [弹性盒子基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : 概述 flexbox 的功能
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : 循序渐进的讲解如何用此特性来建立布局。
-- [Flexbox 与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [Flexbox 与其他布局方法的关系](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
   - : Flexbox 如何与其他布局方法和其他 CSS 规范相关
-- [对齐 Flex 容器中的项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [对齐 Flex 容器中的项目](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : Box Alignment 属性如何与 flexbox 一起使用。
-- [弹性项顺序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [弹性项顺序](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
   - : 解释改变项目顺序和方向的不同方法，并解决这样做的潜在问题。
-- [控制柔性项沿主轴的比率](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [控制柔性项沿主轴的比率](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : 本文介绍了 flex-grow，flex-shrink 和 flex-basis 属性。
-- [精通包装弹性项](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [精通包装弹性项](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
   - : 如何使用多行创建 Flex 容器并控制这些行中项目的显示。
-- [Flexbox 的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [Flexbox 的典型用例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : 常见的设计模式是典型的 flexbox 用例。
-- [用弹性盒子进行 Web 应用布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [用弹性盒子进行 Web 应用布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : 讲解在 Web 应用的特定环境下如何应用弹性盒子。
 
 ## 规范

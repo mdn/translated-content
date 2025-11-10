@@ -1,10 +1,9 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient
 ---
 
-**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
+**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}
 
@@ -75,11 +74,11 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 ## 描述
 
-和其他渐变一样，线性渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+和其他渐变一样，线性渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 要创建一个能够重复填满容器的线性渐变，请使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 函数。
 
-由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 [`<image>`](/zh-CN/docs/Web/CSS/image) 的地方。因此，`linear-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
+由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 [`<image>`](/zh-CN/docs/Web/CSS/Reference/Values/image) 的地方。因此，`linear-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
 ### 线性渐变的合成
 
@@ -192,7 +191,7 @@ body {
 
 ### 更多线性渐变示例
 
-更多示例请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
+更多示例请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)。
 
 ## 规范
 
@@ -204,12 +203,12 @@ body {
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
 - 其他渐变函数：{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("&lt;image&gt;")}}
 - {{cssxref("element", "element()")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("image/image-set","image-set()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
-- [CSS 图像模块](/zh-CN/docs/Web/CSS/CSS_images)
+- [CSS 图像模块](/zh-CN/docs/Web/CSS/Guides/Images)
 - MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](/en-US/blog/css-color-module-level-4/)（2023 年）

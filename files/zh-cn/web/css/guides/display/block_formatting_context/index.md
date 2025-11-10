@@ -1,7 +1,6 @@
 ---
 title: 区块格式化上下文
 slug: Web/CSS/Guides/Display/Block_formatting_context
-original_slug: Web/CSS/CSS_display/Block_formatting_context
 ---
 
 **区块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
@@ -18,8 +17,8 @@ original_slug: Web/CSS/CSS_display/Block_formatting_context
 - {{ cssxref("overflow") }} 值不为 `visible` 或 `clip` 的块级元素。
 - {{ cssxref("display") }} 值为 `flow-root` 的元素。
 - {{ cssxref("contain") }} 值为 `layout`、`content` 或 `paint` 的元素。
-- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/CSS_table)容器。
-- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/CSS_table)容器。
+- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
+- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是[弹性](/zh-CN/docs/Glossary/Flex_Container)、[网格](/zh-CN/docs/Glossary/Grid_Container)也不是[表格](/zh-CN/docs/Web/CSS/Guides/Table)容器。
 - 多列容器（{{ cssxref("column-count") }} 或 {{ cssxref("column-width") }} 值不为 `auto`，且含有 `column-count: 1` 的元素）。
 - `column-span` 值为 `all` 的元素始终会创建一个新的格式化上下文，即使该元素没有包裹在一个多列容器中（[规范变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51)、[Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362)）
 
@@ -27,7 +26,7 @@ original_slug: Web/CSS/CSS_display/Block_formatting_context
 
 - 包含内部浮动。
 - 排除外部浮动。
-- 阻止[外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
+- 阻止[外边距重叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
 > [!NOTE]
 > 弹性/网格容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的弹性/网格格式化上下文，除布局之外，它与区块格式化上下文类似。弹性/网格容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
@@ -40,7 +39,7 @@ BFC 使得让浮动内容和周围的内容等高。
 
 为了更好的理解 BFC，我们先看看下面这些内容。
 
-在下面的例子中，我们让 `<div>` 元素浮动，并给它应用 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在[应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)指南中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
+在下面的例子中，我们让 `<div>` 元素浮动，并给它应用 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在[应用或脱离流式布局](/zh-CN/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)指南中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
 
 **使用 `overflow: auto`**
 
@@ -160,7 +159,7 @@ section {
 
 ### 防止外边距重叠
 
-你可以创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
+你可以创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
 #### 外边距重叠示例
 
@@ -231,20 +230,20 @@ section {
 
 - {{ cssxref("float") }}、{{ cssxref("clear") }}
 - CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
   - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "可替换元素")}}

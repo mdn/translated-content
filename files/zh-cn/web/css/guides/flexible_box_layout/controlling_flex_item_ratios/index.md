@@ -1,7 +1,6 @@
 ---
 title: 控制弹性元素在主轴上的比例
 slug: Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios
-original_slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 ---
 
 在这篇指南中我们将探索应用于弹性（flex）元素的三个属性，它们能使我们在主轴方向上控制弹性元素的尺寸和伸缩性——{{cssxref("flex-grow")}}、{{cssxref("flex-shrink")}} 和 {{cssxref("flex-basis")}}。充分了解这些属性如何与伸张和缩小的元素一起工作是掌握弹性盒子（flexbox）的关键所在。
@@ -22,7 +21,7 @@ original_slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_
 }
 ```
 
-如果你阅读过文章[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)，那么你应该已经对这些属性有了初步了解。为了让你能明白当你在用它们的时候浏览器在做什么，我们将进一步探讨它们。
+如果你阅读过文章[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)，那么你应该已经对这些属性有了初步了解。为了让你能明白当你在用它们的时候浏览器在做什么，我们将进一步探讨它们。
 
 ## 工作于主轴的重要概念
 
@@ -32,7 +31,7 @@ original_slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_
 
 为了计算出有多少可用空间能用于放置弹性元素，浏览器必须知道这个元素有多大。它是如何解决没有应用绝对单位的宽度和高度的弹性元素？
 
-在 CSS 中还有 {{CSSxRef('min-content')}} 和 {{CSSxRef('max-content')}} 这两个概念；这两个关键字可以用来代替[长度单位](/zh-CN/docs/Web/CSS/length)。
+在 CSS 中还有 {{CSSxRef('min-content')}} 和 {{CSSxRef('max-content')}} 这两个概念；这两个关键字可以用来代替[长度单位](/zh-CN/docs/Web/CSS/Reference/Values/length)。
 
 例如下面的例子，我们有两段包含一个文本字符串的段落。第一段设置了 `min-content` 的宽度。在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行，使之变得尽可能小且没有溢出。这就是该字符串的 `min-content` 大小。本质上讲，字符串中最长的单词决定了大小。
 

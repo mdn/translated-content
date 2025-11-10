@@ -1,10 +1,9 @@
 ---
 title: 流式布局和书写模式
 slug: Web/CSS/Guides/Display/Flow_layout_and_writing_modes
-original_slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
 ---
 
-CSS 2.1 规范详细描述了正常流的行为，它采用了水平书写模式。[布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)属性在垂直写入模式中的工作方式应该相同。在本指南中，我们将研究流式布局在与不同的文档写入模式一起使用时的行为。
+CSS 2.1 规范详细描述了正常流的行为，它采用了水平书写模式。[布局](/zh-CN/docs/Web/CSS/Guides/Display/Block_and_inline_layout)属性在垂直写入模式中的工作方式应该相同。在本指南中，我们将研究流式布局在与不同的文档写入模式一起使用时的行为。
 
 这不是 CSS 中书写模式使用的全面指南，这里的目的是以可能未预料到的方式记录流式布局与书写模式交互的区域。本文档的[参见](#参见)章节链接了更多书写模式的资源。
 
@@ -316,7 +315,7 @@ body {
 
 {{EmbedLiveSample("inline-size", "", "200px")}}
 
-[CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)规范包括用于控制页边距、填充和边框的属性的逻辑版本，以及用于我们通常使用物理方向指定的内容的其他映射。
+[CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)规范包括用于控制页边距、填充和边框的属性的逻辑版本，以及用于我们通常使用物理方向指定的内容的其他映射。
 
 ## 总结
 
@@ -324,6 +323,6 @@ body {
 
 ## 参见
 
-- [书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)
+- [书写模式](/zh-CN/docs/Web/CSS/Guides/Writing_modes)
 - [书写模式和 CSS 布局](https://www.smashingmagazine.com/2019/08/writing-modes-layout/)
 - [CSS 书写模式](https://24ways.org/2016/css-writing-modes/)

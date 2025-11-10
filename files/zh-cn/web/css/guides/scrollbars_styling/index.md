@@ -1,7 +1,6 @@
 ---
 title: CSS Scrollbars
 slug: Web/CSS/Guides/Scrollbars_styling
-original_slug: Web/CSS/CSS_scrollbars_styling
 ---
 
 **CSS Scrollbars** 标准化了由 ie5 引入的废弃的滚动条颜色属性

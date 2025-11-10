@@ -1,7 +1,6 @@
 ---
 title: CSS 层叠
 slug: Web/CSS/Guides/Cascade/Introduction
-original_slug: Web/CSS/CSS_cascade/Cascade
 ---
 
 层叠是 CSS 的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在 CSS 处于核心地位，CSS 的全称层叠样式表正是强调了这一点。
@@ -42,7 +41,7 @@ CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值
    | 7   | 用户代理                   | `!important` |
    | 8   | css 过渡 (css transitions) |              |
 
-3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。
+3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)。
 
 ## 重置样式
 
@@ -52,7 +51,7 @@ all 属性让你能够立刻把所有的属性都还原到它们初始（默认�
 
 ## CSS 动画与层叠
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
+[CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
 
 当有多个满足条件的关键帧时，在最重要的文档里面最后定义的关键帧会被选中，而不会是将它们组合在一起。
 
@@ -141,22 +140,22 @@ margin-left: 3px;
 
 - CSS 教程中层叠知识的[介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
 - CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
   - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
+    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)

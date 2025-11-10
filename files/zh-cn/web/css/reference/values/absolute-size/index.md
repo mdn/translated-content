@@ -1,12 +1,11 @@
 ---
 title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
-original_slug: Web/CSS/absolute-size
 l10n:
   sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
-**`<absolute-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)描述了绝对大小关键字。此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
+**`<absolute-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)描述了绝对大小关键字。此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
 
 字体大小关键字映射到已弃用的 HTML `size` 属性，请参阅下面的 [HTML size 属性](#html_size_属性)部分。
 
@@ -114,4 +113,4 @@ li {
 
 - CSS {{cssxref("relative-size")}} 数据类型
 - CSS {{cssxref("font")}} 和 {{cssxref("font-size")}} 属性
-- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块
+- [CSS 字体](/zh-CN/docs/Web/CSS/Guides/Fonts)模块

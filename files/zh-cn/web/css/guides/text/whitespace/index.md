@@ -1,7 +1,6 @@
 ---
 title: HTML、CSS 和 DOM 中的空白符是如何处理的
 slug: Web/CSS/Guides/Text/Whitespace
-original_slug: Web/CSS/CSS_text/Whitespace
 ---
 
 在 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 中，空白符的存在会导致布局问题，并使内容树的操作变得困难，这取决于它的位置。这篇文章探讨了什么时候会出现困难，并研究了如何缓解由此产生的问题。
@@ -89,7 +88,7 @@ original_slug: Web/CSS/CSS_text/Whitespace
 - 一个行内元素（`<span>`，包含一个空格和一个单词“World!”）。
 - 另外一个文本节点（只包含制表符和空格）。
 
-正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
+正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
 
 在这个上下文中，空白符的处理可以总结如下：
 
@@ -139,7 +138,7 @@ original_slug: Web/CSS/CSS_text/Whitespace
 
 ### 在区块格式化上下文的空白符
 
-上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。
+上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)。
 
 这种情况下，空白符的处理方式非常不同。
 

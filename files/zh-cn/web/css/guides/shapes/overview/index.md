@@ -1,7 +1,6 @@
 ---
 title: CSS 的图形（Shape）概览
 slug: Web/CSS/Guides/Shapes/Overview
-original_slug: Web/CSS/CSS_shapes/Overview_of_shapes
 ---
 
 [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) 在 CSS 中描述了几何图形的 shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。
@@ -122,7 +121,7 @@ body {
 
 {{EmbedLiveSample("box", "", "320px")}}
 
-详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values)。
+详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/Guides/Shapes/From_box_values)。
 
 ### 由 Image 创建的形状
 
@@ -214,7 +213,7 @@ body {
 
 {{EmbedLiveSample("threshold", "", "280px")}}
 
-下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)学习。
+下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/Guides/Shapes/From_images)学习。
 
 ## `shape-margin` 属性
 

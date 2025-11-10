@@ -1,7 +1,6 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/Reference/Values/filter-function/drop-shadow
-original_slug: Web/CSS/filter-function/drop-shadow
 l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---

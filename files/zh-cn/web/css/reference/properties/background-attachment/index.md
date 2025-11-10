@@ -173,4 +173,4 @@ p {
 
 ## 参见
 
-- [更多背景图](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [更多背景图](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

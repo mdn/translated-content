@@ -27,5 +27,5 @@ slug: Web/CSS/How_to/Layout_cookbook/Center_an_element
 
 ## MDN 上相关的资源
 
-- [弹性盒中的盒对齐方式（Box Alignment）](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS 盒对齐指南](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- [弹性盒中的盒对齐方式（Box Alignment）](/zh-CN/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [CSS 盒对齐指南](/zh-CN/docs/Web/CSS/Guides/Box_alignment)

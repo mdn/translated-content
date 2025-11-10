@@ -1,10 +1,9 @@
 ---
 title: <named-color>
 slug: Web/CSS/Reference/Values/named-color
-original_slug: Web/CSS/named-color
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types) **`<named-color>`** 为颜色名——如 `red`、`blue`、`black` 或 `lightseagreen`。`<named-color>` 在语法上为 [`<ident>`](/zh-CN/docs/Web/CSS/ident)。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types) **`<named-color>`** 为颜色名——如 `red`、`blue`、`black` 或 `lightseagreen`。`<named-color>` 在语法上为 [`<ident>`](/zh-CN/docs/Web/CSS/Reference/Values/ident)。
 
 在可使用 {{CSSXref("&lt;color&gt;")}} 的任意位置均可使用 `<named-color>` 值。
 
@@ -20,7 +19,7 @@ color: transparent;
 
 ### 取值
 
-命名颜色包含标准颜色、[`transparent`](#transparent) 和 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_keyword) 关键字。
+命名颜色包含标准颜色、[`transparent`](#transparent) 和 [`currentcolor`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) 关键字。
 
 #### 标准颜色
 
@@ -970,4 +969,4 @@ color: transparent;
 
 ## 参见
 
-- [`<color>`](/zh-CN/docs/Web/CSS/color_value)——`<named-color>` 为此数据类型定义的构成部分
+- [`<color>`](/zh-CN/docs/Web/CSS/Reference/Values/color_value)——`<named-color>` 为此数据类型定义的构成部分

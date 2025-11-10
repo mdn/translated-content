@@ -1,7 +1,6 @@
 ---
 title: CSS 影子部件
 slug: Web/CSS/Guides/Shadow_parts
-original_slug: Web/CSS/CSS_shadow_parts
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
@@ -41,7 +40,7 @@ l10n:
 - {{domxref("Element.shadowRoot")}} 属性
 - {{domxref("Element.attachShadow()")}} 方法
 - {{domxref("ShadowRoot")}} 接口
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
@@ -53,7 +52,7 @@ l10n:
 
 ## 参见
 
-- [CSS 伪元素](/zh-CN/docs/Web/CSS/CSS_pseudo-elements)模块
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
+- [CSS 伪元素](/zh-CN/docs/Web/CSS/Guides/Pseudo-elements)模块
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)模块
 - [使用影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)
 - web.dev 上的[模板：当前作用域外的样式设置](https://web.developers.google.cn/learn/html/template/#styling_outside_of_the_current_scope)（2023）

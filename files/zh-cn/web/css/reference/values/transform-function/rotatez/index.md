@@ -1,7 +1,6 @@
 ---
 title: rotateZ()
 slug: Web/CSS/Reference/Values/transform-function/rotateZ
-original_slug: Web/CSS/transform-function/rotateZ
 ---
 
 **`rotateZ()`** 函数定义了一个转换，它可以让一个元素围绕横 Z 轴旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。

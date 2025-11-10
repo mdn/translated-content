@@ -154,8 +154,8 @@ shape-image-threshold: unset;
 
 ## 参见
 
-- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes)
-- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [CSS Shapes](/zh-CN/docs/Web/CSS/Guides/Shapes)
+- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/Guides/Shapes/Overview)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

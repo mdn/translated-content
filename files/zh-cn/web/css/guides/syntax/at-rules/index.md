@@ -1,10 +1,9 @@
 ---
 title: At 规则
 slug: Web/CSS/Guides/Syntax/At-rules
-original_slug: Web/CSS/CSS_syntax/At-rules
 ---
 
-**At 规则**是一个 [CSS 语句](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句)，用来指示 CSS 如何运行。以 at 符号开头，'`@`'（`U+0040 COMMERCIAL AT`），后跟一个标识符，并包括直到下一个分号的所有内容，'`;`'（`U+003B SEMICOLON`），或下一个 [CSS 块](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明块)，以先到者为准。
+**At 规则**是一个 [CSS 语句](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction#css_语句)，用来指示 CSS 如何运行。以 at 符号开头，'`@`'（`U+0040 COMMERCIAL AT`），后跟一个标识符，并包括直到下一个分号的所有内容，'`;`'（`U+003B SEMICOLON`），或下一个 [CSS 块](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction#css_声明块)，以先到者为准。
 
 ## 语法
 
@@ -58,7 +57,7 @@ original_slug: Web/CSS/CSS_syntax/At-rules
 
 ## 使用 CSS 嵌套来嵌套 @layer
 
-[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)可以嵌套以[创建嵌套层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer#嵌套层)。它们用 `.`（点）连接。这也可以使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_at-rules#嵌套级联层（layer）)来实现。
+[级联层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)可以嵌套以[创建嵌套层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer#嵌套层)。它们用 `.`（点）连接。这也可以使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting/At-rules#嵌套级联层（layer）)来实现。
 
 ## 索引
 
@@ -89,19 +88,19 @@ original_slug: Web/CSS/CSS_syntax/At-rules
 ## 参见
 
 - CSS 关键概念
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
   - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-  - [值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [CSS 嵌套模块](/zh-CN/docs/Web/CSS/CSS_nesting)
+    - [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+    - [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
+  - [值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [CSS 嵌套模块](/zh-CN/docs/Web/CSS/Guides/Nesting)

@@ -1,10 +1,9 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-linear-gradient
-original_slug: Web/CSS/gradient/repeating-linear-gradient
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("linear-gradient")}}，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions) **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("linear-gradient")}}，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
 
@@ -41,7 +40,7 @@ background:
 
 重复渐变的长度是第一个色标和最后一个色标之间的距离。如果第一种颜色没有色标长度，则色标长度默认为 0。每次重复时，色标的位置都会以基本线性渐变长度的倍数移动。因此，每个结束色标的位置都会与起始色标的位置重合；如果色值不同，就会产生鲜明的视觉过渡。可以通过重复第一种颜色值作为最后一种颜色值来改变这种情况。
 
-与其他渐变一样，线性重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+与其他渐变一样，线性重复渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/Reference/Values/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在可以使用 `<image>` 的地方。因此，`repeating-linear-gradient()` 在{{Cssxref("background-color")}} 以及其他使用 {{cssxref("&lt;color&gt;")}} 数据类型上不起作用。
 
@@ -142,7 +141,7 @@ body {
 由于最后一个色标是 10%，且渐变是竖直的，因此重复渐变中的每个渐变都是高度的 10%，正好满足 10 个水平线。
 
 > [!NOTE]
-> 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
+> 更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)。
 
 ## 规范
 
@@ -154,7 +153,7 @@ body {
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
 - 其他渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

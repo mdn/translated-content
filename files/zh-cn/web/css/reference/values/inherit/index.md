@@ -1,14 +1,13 @@
 ---
 title: inherit
 slug: Web/CSS/Reference/Values/inherit
-original_slug: Web/CSS/inherit
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
+**`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
 
-对于[继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#继承属性)，该关键字只是增强了属性的默认行为，通常只在覆盖原有的值的时候使用。
+对于[继承属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance#继承属性)，该关键字只是增强了属性的默认行为，通常只在覆盖原有的值的时候使用。
 
 > [!NOTE]
 > 继承始终来自文档树中的父元素，即使父元素不是包含区块。
@@ -49,7 +48,7 @@ div#current {
 
 ## 参见
 
-- [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
+- [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
 - 使用 {{cssxref("initial")}} 将属性设置为其初始值。
 - 使用 {{cssxref("revert")}} 将属性重置为用户代理样式表指定的值（或用户样式，如果存在）。
 - 使用 {{cssxref("revert-layer")}} 将属性重置为之前层叠层中设定的值。

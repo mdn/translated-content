@@ -1,7 +1,6 @@
 ---
 title: 使用 box 值指定形状
 slug: Web/CSS/Guides/Shapes/From_box_values
-original_slug: Web/CSS/CSS_shapes/From_box_values
 l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
@@ -242,4 +241,4 @@ body {
 
 {{EmbedLiveSample("bottom-margin-box", "", "240px")}}
 
-对于更复杂的形状，你需要使用[基本形状](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)中的一种作为值，或者根据本节其他指南中涉及的图像定义你的形状。
+对于更复杂的形状，你需要使用[基本形状](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)中的一种作为值，或者根据本节其他指南中涉及的图像定义你的形状。

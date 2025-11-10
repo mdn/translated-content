@@ -1,7 +1,6 @@
 ---
 title: CSS 文本
 slug: Web/CSS/Guides/Text
-original_slug: Web/CSS/CSS_text
 l10n:
   sourceCommit: cb8f4ede62e0cc821eef8820f2c9eaea514111e2
 ---
@@ -38,7 +37,7 @@ l10n:
 
 ### 指南
 
-- [文本换行与断字](/zh-CN/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [文本换行与断字](/zh-CN/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
   - : 以下是关于如何在 CSS 中管理溢出文本的各种方式的指南。
 
 ## 相关概念
@@ -73,8 +72,8 @@ l10n:
 
 ## 参见
 
-- [CSS 书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)模块
-- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块
-- [CSS ruby 布局](/zh-CN/docs/Web/CSS/CSS_ruby_layout)模块
-- [CSS 文本装饰](/zh-CN/docs/Web/CSS/CSS_text_decoration)模块
+- [CSS 书写模式](/zh-CN/docs/Web/CSS/Guides/Writing_modes)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)模块
+- [CSS 字体](/zh-CN/docs/Web/CSS/Guides/Fonts)模块
+- [CSS ruby 布局](/zh-CN/docs/Web/CSS/Guides/Ruby_layout)模块
+- [CSS 文本装饰](/zh-CN/docs/Web/CSS/Guides/Text_decoration)模块

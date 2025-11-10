@@ -1,14 +1,13 @@
 ---
 title: 层叠上下文
 slug: Web/CSS/Guides/Positioned_layout/Stacking_context
-original_slug: Web/CSS/CSS_positioned_layout/Stacking_context
 ---
 
 我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，**层叠上下文**就是对这些 HTML 元素的一个三维构想。众 HTML 元素基于其元素属性按照优先级顺序占据这个空间。
 
 ## 层叠上下文
 
-在本篇之前的部分——[运用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)，（我们认识到）某些元素的渲染顺序是由其 `z-index` 的值影响的。这是因为这些元素具有能够使他们形成一个*层叠上下文*的特殊属性。
+在本篇之前的部分——[运用 z-index](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)，（我们认识到）某些元素的渲染顺序是由其 `z-index` 的值影响的。这是因为这些元素具有能够使他们形成一个*层叠上下文*的特殊属性。
 
 文档中的层叠上下文由满足以下任意一个条件的元素形成：
 
@@ -205,10 +204,10 @@ h1 {
 
 ## 参见
 
-- [堆叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)：在不使用 `z-index` 的情况下应用的堆叠规则。
-- [堆叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
-- [使用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)：如何使用 `z-index` 来改变默认堆叠。
-- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
-- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2)：2 级 HTML 层级，z-index 在所有层级
-- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
+- [堆叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)：在不使用 `z-index` 的情况下应用的堆叠规则。
+- [堆叠浮动元素](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
+- [使用 z-index](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)：如何使用 `z-index` 来改变默认堆叠。
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1)：2 级 HTML 层级，z-index 在最后一级
+- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2)：2 级 HTML 层级，z-index 在所有层级
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3)：3 级 HTML 层级，z-index 在第二级
 - [顶层](/zh-CN/docs/Glossary/Top_layer)

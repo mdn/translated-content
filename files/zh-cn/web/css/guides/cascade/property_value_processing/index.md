@@ -2,12 +2,11 @@
 title: CSS 属性值处理
 short-title: 属性值处理
 slug: Web/CSS/Guides/Cascade/Property_value_processing
-original_slug: Web/CSS/CSS_cascade/Value_processing
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-对于文档树中的每个元素，浏览器都会为适用于该元素的每个 CSS 属性赋值。特定元素或盒子的每个 CSS 属性的渲染值都是基于样式表定义、继承、[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)、依赖关系、单位转换和显示环境的计算结果。本指南通过探讨指定值、计算值、应用值和实际值等关键概念，概述了用于定义每个 CSS 值最终如何渲染的处理步骤。
+对于文档树中的每个元素，浏览器都会为适用于该元素的每个 CSS 属性赋值。特定元素或盒子的每个 CSS 属性的渲染值都是基于样式表定义、继承、[层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)、依赖关系、单位转换和显示环境的计算结果。本指南通过探讨指定值、计算值、应用值和实际值等关键概念，概述了用于定义每个 CSS 值最终如何渲染的处理步骤。
 
 ## 属性值
 
@@ -17,9 +16,9 @@ l10n:
 
 为确定应用哪个指定值，用户代理会收集并处理来自不同来源的所有样式，如内联样式、内部和外部样式表。
 
-某些属性会继承父元素的值，除非明确覆写。当元素上的特定属性没有样式信息时，就会出现[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)。如果属性被继承，其值将被设置为父元素的[计算值](#计算值)。如果属性没有被继承，其值将被设置为该元素的[初始值](#初始值)。
+某些属性会继承父元素的值，除非明确覆写。当元素上的特定属性没有样式信息时，就会出现[继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)。如果属性被继承，其值将被设置为父元素的[计算值](#计算值)。如果属性没有被继承，其值将被设置为该元素的[初始值](#初始值)。
 
-[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)决定了当多个相互冲突的样式针对同一元素时该应用哪个值。级联算法定义了用户代理如何组合来自不同来源、作用域和/或层的属性值。当选择器与元素匹配时，即使优先级较低的来源或层的选择器具有更大的 {{cssxref("specificity")}}，也会应用优先级最高的来源的属性[指定值](#指定值)。
+[层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)决定了当多个相互冲突的样式针对同一元素时该应用哪个值。级联算法定义了用户代理如何组合来自不同来源、作用域和/或层的属性值。当选择器与元素匹配时，即使优先级较低的来源或层的选择器具有更大的 {{cssxref("specificity")}}，也会应用优先级最高的来源的属性[指定值](#指定值)。
 
 在逐步应用层叠规则和解析值后，浏览器会确保视觉呈现与处理过的 CSS 相匹配。
 
@@ -38,8 +37,8 @@ l10n:
 
 属性的**初始值**（initial value）是其默认值，如其定义表中所列。初始值的使用取决于属性是否被继承：
 
-- 对于[继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#继承属性)，只要没有提供[指定值](#指定值)，初始值*只能*被用于没有指定值的*根元素*上。
-- 对于[非继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#非继承属性)，只要没有提供[指定值](#指定值)，初始值可以被用于*任意*没有指定值的元素上。
+- 对于[继承属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance#继承属性)，只要没有提供[指定值](#指定值)，初始值*只能*被用于没有指定值的*根元素*上。
+- 对于[非继承属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance#非继承属性)，只要没有提供[指定值](#指定值)，初始值可以被用于*任意*没有指定值的元素上。
 
 你可以使用 {{cssxref("initial")}} 关键字明确指定初始值。
 
@@ -136,7 +135,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-虽然三个指定值 `auto`、`50%` 和 `inherit` 都是关键字和 {{cssxref("percentage")}} 值，但使用 `window.getComputedStyle(el)[‘width’];` 获取 `width` 时，返回的是[绝对长度](/zh-CN/docs/Web/CSS/length#绝对长度单位) `px` 值：
+虽然三个指定值 `auto`、`50%` 和 `inherit` 都是关键字和 {{cssxref("percentage")}} 值，但使用 `window.getComputedStyle(el)[‘width’];` 获取 `width` 时，返回的是[绝对长度](/zh-CN/docs/Web/CSS/Reference/Values/length#绝对长度单位) `px` 值：
 
 {{ EmbedLiveSample('示例', '80%', 372) }}
 
@@ -152,7 +151,7 @@ window.addEventListener("resize", updateAllUsedWidths);
 
 计算分为三步：
 
-1. 首先，根据[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)、[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)或使用[初始值](#初始值)的结果确定[指定值](#指定值)。
+1. 首先，根据[级联](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)、[继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)或使用[初始值](#初始值)的结果确定[指定值](#指定值)。
 2. 接下来，[计算值](#计算值)将根据规范进行计算（例如，具有 `position: absolute` 的 `span` 将把其计算的 `display` 更改为 `block`）。
 3. 然后计算布局，得出[应用值](#应用值)。
 4. 最后，根据本地环境的限制对已用值进行转换，得出实际值。
@@ -177,6 +176,6 @@ CSS 2.0 将*计算值*定义为属性计算的最后一步。CSS 2.1 引入了�
 
 ## 参见
 
-- 控制继承的 CSS 值：[`inherit`](/zh-CN/docs/Web/CSS/inherit)、[`initial`](/zh-CN/docs/Web/CSS/initial)、[`revert`](/zh-CN/docs/Web/CSS/revert)、[`revert-layer`](/zh-CN/docs/Web/CSS/revert-layer) 和 [`unset`](/zh-CN/docs/Web/CSS/unset)
-- [CSS 层叠与继承](/zh-CN/docs/Web/CSS/CSS_cascade)模块
-- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax)模块
+- 控制继承的 CSS 值：[`inherit`](/zh-CN/docs/Web/CSS/Reference/Values/inherit)、[`initial`](/zh-CN/docs/Web/CSS/Reference/Values/initial)、[`revert`](/zh-CN/docs/Web/CSS/Reference/Values/revert)、[`revert-layer`](/zh-CN/docs/Web/CSS/Reference/Values/revert-layer) 和 [`unset`](/zh-CN/docs/Web/CSS/Reference/Values/unset)
+- [CSS 层叠与继承](/zh-CN/docs/Web/CSS/Guides/Cascade)模块
+- [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax)模块

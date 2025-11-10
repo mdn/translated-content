@@ -1,10 +1,9 @@
 ---
 title: sqrt()
 slug: Web/CSS/Reference/Values/sqrt
-original_slug: Web/CSS/sqrt
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`sqrt()`** 为指数型函数，返回某数的[平方根](https://zh.wikipedia.org/wiki/平方根)。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions) **`sqrt()`** 为指数型函数，返回某数的[平方根](https://zh.wikipedia.org/wiki/平方根)。
 
 函数 `pow(x, 0.5)` 等价于 `sqrt(x)`。
 
@@ -55,7 +54,7 @@ width: calc(100px * sqrt(100)); /* 1000px */
 
 #### CSS
 
-此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
+此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
 
 - `--size-1` 所计算的为 `--size-0` 的值（50px）乘以 4 的平方根（2），结果为 100px。
 - `--size-2` 所计算的为 `--size-0` 的值（50px）乘以 9 的平方根（3），结果为 150px。

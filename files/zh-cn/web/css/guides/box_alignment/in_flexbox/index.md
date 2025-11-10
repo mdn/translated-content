@@ -1,10 +1,9 @@
 ---
 title: 弹性盒布局中的盒对齐方式
 slug: Web/CSS/Guides/Box_alignment/In_flexbox
-original_slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 ---
 
-[Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment) 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与[Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment) 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。
+[Box Alignment](/zh-CN/docs/Web/CSS/Guides/Box_alignment) 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与[Box Alignment](/zh-CN/docs/Web/CSS/Guides/Box_alignment) 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。
 
 ## 基础示例
 
@@ -177,4 +176,4 @@ Flexbox 与文档的写入模式有关，因此如果你使用英语并将{{cssx
 
 ## 指南
 
-- [弹性盒布局中的对齐方式](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [弹性盒布局中的对齐方式](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)

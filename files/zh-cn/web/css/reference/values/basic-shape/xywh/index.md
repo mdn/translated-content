@@ -1,12 +1,11 @@
 ---
 title: xywh()
 slug: Web/CSS/Reference/Values/basic-shape/xywh
-original_slug: Web/CSS/basic-shape/xywh
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
+**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
 
 ## 语法
 
@@ -95,10 +94,10 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 
 ## 参见
 
-- [`inset()`](/zh-CN/docs/Web/CSS/basic-shape#inset) 函数
-- [`rect()`](/zh-CN/docs/Web/CSS/basic-shape#rect) 函数
+- [`inset()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape#inset) 函数
+- [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape#rect) 函数
 - {{cssxref("clip-path")}} 属性
 - {{cssxref("offset-path")}} 属性
 - {{cssxref("&lt;basic-shape&gt;")}} 数据类型
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)模块
+- [基本形状指南](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

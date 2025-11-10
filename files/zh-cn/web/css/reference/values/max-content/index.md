@@ -1,7 +1,6 @@
 ---
 title: max-content
 slug: Web/CSS/Reference/Values/max-content
-original_slug: Web/CSS/max-content
 l10n:
   sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
@@ -104,4 +103,4 @@ grid-template-columns: 200px 1fr max-content;
 ## 参见
 
 - 相关尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
-- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块

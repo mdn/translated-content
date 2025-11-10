@@ -1,10 +1,9 @@
 ---
 title: <position>
 slug: Web/CSS/Reference/Values/position_value
-original_slug: Web/CSS/position_value
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
+[CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
 
 > [!NOTE]
 > 由 `<position>` 值表述的最终位置并不需要位于元素的盒子中。
@@ -41,7 +40,7 @@ keyword value keyword value /* 每个值都是其前面的关键字的偏移量 
 
 ## 插值
 
-横坐标值和纵坐标值都独立进行插值。而由于两者插值速度都由同一[缓动函数](/zh-CN/docs/Web/CSS/easing-function)定义，点将沿一条直线移动。
+横坐标值和纵坐标值都独立进行插值。而由于两者插值速度都由同一[缓动函数](/zh-CN/docs/Web/CSS/Reference/Values/easing-function)定义，点将沿一条直线移动。
 
 ## 形式语法
 
@@ -81,7 +80,7 @@ bottom top
 
 ## 参见
 
-- [CSS 值与单位](/zh-CN/docs/Web/CSS/CSS_values_and_units)
+- [CSS 值与单位](/zh-CN/docs/Web/CSS/Guides/Values_and_units)
 - [CSS 值与单位介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}

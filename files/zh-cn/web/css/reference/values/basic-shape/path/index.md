@@ -1,14 +1,13 @@
 ---
 title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
-original_slug: Web/CSS/basic-shape/path
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-`path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)和[运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/Reference/Properties/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Reference/Attribute/d) 属性。
+`path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)和[运动路径](/zh-CN/docs/Web/CSS/Guides/Motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/Reference/Properties/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/Reference/Properties/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Reference/Attribute/d) 属性。
 
-使用 `path()` 函数有一些限制。路径必须定义为单个字符串，因此不能使用变量（[`var()`](/zh-CN/docs/Web/CSS/var) 函数）创建自定义路径。此外，路径中的所有长度都隐式定义为[像素](/zh-CN/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#绝对长度单位)（`px`）单位；不能使用其他单位。与 `path()` 函数相比，[`shape()`](/zh-CN/docs/Web/CSS/basic-shape/shape) 函数提供了更大的灵活性。
+使用 `path()` 函数有一些限制。路径必须定义为单个字符串，因此不能使用变量（[`var()`](/zh-CN/docs/Web/CSS/Reference/Values/var) 函数）创建自定义路径。此外，路径中的所有长度都隐式定义为[像素](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#绝对长度单位)（`px`）单位；不能使用其他单位。与 `path()` 函数相比，[`shape()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/shape) 函数提供了更大的灵活性。
 
 {{InteractiveExample("CSS 演示：path()")}}
 
@@ -178,6 +177,6 @@ svg {
 ## 参见
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)
-- [CSS 形状概述](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)
+- [CSS 形状概述](/zh-CN/docs/Web/CSS/Guides/Shapes/Overview)
 - [SVG 路径语法图解指南](https://css-tricks.com/svg-path-syntax-illustrated-guide/)

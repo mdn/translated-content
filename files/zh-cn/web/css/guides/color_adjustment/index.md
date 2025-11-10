@@ -1,7 +1,6 @@
 ---
 title: CSS 颜色调整
 slug: Web/CSS/Guides/Color_adjustment
-original_slug: Web/CSS/CSS_color_adjustment
 l10n:
   sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
@@ -53,4 +52,4 @@ l10n:
 
 ## 参见
 
-- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块
+- [CSS 颜色](/zh-CN/docs/Web/CSS/Guides/Colors)模块

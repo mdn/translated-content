@@ -1,7 +1,6 @@
 ---
 title: 弹性盒子的典型用例
 slug: Web/CSS/Guides/Flexible_box_layout/Use_cases
-original_slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 l10n:
   sourceCommit: 1c77ac467c2afcc0f2a407435023c2a3e9434548
 ---
@@ -10,7 +9,7 @@ l10n:
 
 ## 为什么选择弹性盒子？
 
-在浏览器支持完美的环境中，选择使用弹性盒子的原因是你希望把一系列项目沿着同一方向布局。因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制它们彼此之间的间距。弹性盒子就是为此设计的。你可以阅读[弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)来了解更多关于弹性盒子和 CSS 网格布局的区别，在这篇文章中我们会讨论弹性盒子如何运用于 CSS 的整体布局。
+在浏览器支持完美的环境中，选择使用弹性盒子的原因是你希望把一系列项目沿着同一方向布局。因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制它们彼此之间的间距。弹性盒子就是为此设计的。你可以阅读[弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)来了解更多关于弹性盒子和 CSS 网格布局的区别，在这篇文章中我们会讨论弹性盒子如何运用于 CSS 的整体布局。
 
 实际上，我们也经常使用弹性盒子来完成使用网格布局可能更好的工作，作为网格布局的后备方案，同时也是为了获得对齐功能。一旦在区块布局中实现了盒子对齐，这种情况就会得到改善。在这个教程中，我们会介绍一些目前使用弹性盒子的典型用例。
 
@@ -22,7 +21,7 @@ l10n:
 
 ### 在元素外部分布空间
 
-为了让多余的空间分布在多个元素之间或周围，我们使用弹性盒子中相应的对齐属性以及 {{cssxref("justify-content")}} 属性。你可以在[对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)中了解关于该属性（专门用来处理主轴对齐）的更多信息。
+为了让多余的空间分布在多个元素之间或周围，我们使用弹性盒子中相应的对齐属性以及 {{cssxref("justify-content")}} 属性。你可以在[对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)中了解关于该属性（专门用来处理主轴对齐）的更多信息。
 
 在下面的示例中，我们通过使用 `justify-content: space-between` 使元素之间拥有相同的空间，让各元素都以其自身的尺寸展示。你可以通过 `space-around`（或 `space-evenly`，如果支持）值来改变分布空间的方式。你也可以使用 `flex-start` 让空间排布在所有元素末尾。使用 `flex-end` 让空间排布在所有元素之前，`center` 可以居中导航元素。
 
@@ -65,7 +64,7 @@ nav ul {
 
 ### 让元素自己处理空间分布
 
-导航的另一个不同模式是让元素自己去决定如何分布额外的空间，而不是将空间分布在它们之间。在这种情况下，我们使用 {{cssxref("flex")}} 属性来允许各元素彼此成比例的拉伸和收缩，正如[控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)所描述的。
+导航的另一个不同模式是让元素自己去决定如何分布额外的空间，而不是将空间分布在它们之间。在这种情况下，我们使用 {{cssxref("flex")}} 属性来允许各元素彼此成比例的拉伸和收缩，正如[控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)所描述的。
 
 如果你想要遵循导航元素的 size 属性，但又要在它们之间平均分配额外的空间，那么你可以使用 `flex: auto`，这是 `flex: 1 1 auto` 的简写——所有元素都在它们的 flex-basis 的基础上自动伸缩。这意味着较长的元素将具有更多的空间，因为它从一个较大的尺寸开始，即使它们都分配了相同的可用空间。
 
@@ -112,7 +111,7 @@ nav li {
 
 ## 拆分导航
 
-另一种在主轴上对齐元素的方式就是使用自动外边距。这使得导航栏中一组元素左对齐而另一组元素右对齐的设计模式成为可能。这里我们使用在[使用自动的外边距在主轴上对齐](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#使用自动的外边距在主轴上对齐)这篇文章中介绍的自动外边距技术。
+另一种在主轴上对齐元素的方式就是使用自动外边距。这使得导航栏中一组元素左对齐而另一组元素右对齐的设计模式成为可能。这里我们使用在[使用自动的外边距在主轴上对齐](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#使用自动的外边距在主轴上对齐)这篇文章中介绍的自动外边距技术。
 
 元素在主轴上按照弹性盒子的初始行为 `flex-start` 进行对齐。使用 [`gap`](/zh-CN/docs/Web/CSS/Reference/Properties/gap) 属性以在元素之间创建间隔。同时我们为最后需要右对齐的元素添加自动左边距以对齐它们。你可以将那个类转移到其他元素上以改变分割作用的位置。
 
@@ -315,7 +314,7 @@ img {
 }
 ```
 
-你还可以为每一侧指定不同的 {{cssxref("flex-grow")}} 因子，例如将图像侧设置为 `flex: 1`，将内容侧设置为 `flex: 3`。这意味着它们使用 `flex-basis` 为 `0`，但根据你分配的 `flex-grow` 因子以不同的速度分配空间。我们使用的弹性属性在[控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)中有详细描述。
+你还可以为每一侧指定不同的 {{cssxref("flex-grow")}} 因子，例如将图像侧设置为 `flex: 1`，将内容侧设置为 `flex: 3`。这意味着它们使用 `flex-basis` 为 `0`，但根据你分配的 `flex-grow` 因子以不同的速度分配空间。我们使用的弹性属性在[控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)中有详细描述。
 
 ```css
 .media .content {

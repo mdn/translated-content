@@ -1,7 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/Reference/Values/calc
-original_slug: Web/CSS/calc
 ---
 
 calc() 此 [CSS](/zh-CN/docs/Web/CSS) 函数允许在声明 CSS 属性值时执行一些计算。它可以用在如下场合：{{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、或 {{cssxref("&lt;integer&gt;")}}。
@@ -114,7 +113,7 @@ input {
 
 ## 无障碍相关考量
 
-当 `calc()` 被用于控制文本的长度时，确保值中包含一个[相对长度单位](/zh-CN/docs/Web/CSS/length#%E7%9B%B8%E5%AF%B9%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D)，例如：
+当 `calc()` 被用于控制文本的长度时，确保值中包含一个[相对长度单位](/zh-CN/docs/Web/CSS/Reference/Values/length#%E7%9B%B8%E5%AF%B9%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D)，例如：
 
 ```css
 h1 {

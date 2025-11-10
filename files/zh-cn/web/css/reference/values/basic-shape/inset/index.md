@@ -1,12 +1,11 @@
 ---
 title: inset()
 slug: Web/CSS/Reference/Values/basic-shape/inset
-original_slug: Web/CSS/basic-shape/inset
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`inset()`** [CSS](/zh-CN/docs/Web/CSS) 函数定义了一个矩形，其位于参考框的每一边内侧的指定的距离处。它是用于定义 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)之一的基本形状函数。
+**`inset()`** [CSS](/zh-CN/docs/Web/CSS) 函数定义了一个矩形，其位于参考框的每一边内侧的指定的距离处。它是用于定义 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)之一的基本形状函数。
 
 {{InteractiveExample("CSS 演示：inset()")}}
 
@@ -112,5 +111,5 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 ## 参见
 
 - 使用该数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)模块
+- [基本形状指南](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

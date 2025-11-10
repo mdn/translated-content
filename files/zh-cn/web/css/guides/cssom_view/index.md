@@ -1,7 +1,6 @@
 ---
 title: CSS 对象模型视图
 slug: Web/CSS/Guides/CSSOM_view
-original_slug: Web/CSS/CSSOM_view
 l10n:
   sourceCommit: 896a41d7d9832367a1e24af567fb419e9d4182f8
 ---
@@ -41,7 +40,7 @@ l10n:
 
 - [坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)
   - : 用于指定显示上下文中位置的坐标系系统，包括：显示器窗口坐标系、移动设备视口坐标系以及打印纸张位置坐标系。
-- [视口概念](/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [视口概念](/zh-CN/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : 视口的概念解析：涵盖视口的本质定义，对 CSS、SVG 和移动设备的影响，以及可视视口与布局视口的关键区别。
 
 ## 相关概念
@@ -63,7 +62,7 @@ l10n:
 
 - [CSS 对象模型（CSSOM）](/zh-CN/docs/Web/API/CSS_Object_Model)API
 - [CSSOM 视图 API](/zh-CN/docs/Web/API/CSSOM_view_API)
-- [CSS 视口](/zh-CN/docs/Web/CSS/CSS_viewport)模块
-- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 滚动边界](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块
+- [CSS 视口](/zh-CN/docs/Web/CSS/Guides/Viewport)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)模块
+- [CSS 滚动边界](/zh-CN/docs/Web/CSS/Guides/Overscroll_behavior)模块
+- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/Guides/Scroll_snap)模块

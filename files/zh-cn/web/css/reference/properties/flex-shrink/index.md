@@ -17,7 +17,7 @@ flex-shrink: unset;
 
 {{cssinfo}}
 
-更多属性和定义请参见[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+更多属性和定义请参见[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 
 ## 语法
 
@@ -85,4 +85,4 @@ flex-shrink: unset;
 
 ## 参考
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

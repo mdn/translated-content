@@ -1,7 +1,6 @@
 ---
 title: blur()
 slug: Web/CSS/Reference/Values/filter-function/blur
-original_slug: Web/CSS/filter-function/blur
 ---
 
 **`blur()`** [CSS](/zh-CN/docs/Web/CSS) 方法将[高斯模糊](https://en.wikipedia.org/wiki/Gaussian_blur)应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.

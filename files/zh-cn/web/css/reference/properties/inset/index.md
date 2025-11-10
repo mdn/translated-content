@@ -61,7 +61,7 @@ inset: 0;
 }
 ```
 
-虽然该属性属于 [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)模块，但它并不定义*逻辑*偏移量。它定义的是*物理*偏移量，与元素的书写模式、文本方向或文字排列方向无关。
+虽然该属性属于 [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)模块，但它并不定义*逻辑*偏移量。它定义的是*物理*偏移量，与元素的书写模式、文本方向或文字排列方向无关。
 
 ## 组成属性
 
@@ -157,5 +157,5 @@ div {
 - {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}}
 - {{cssxref("inset-block")}} 和 {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
-- [CSS 定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)模块
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 定位布局](/zh-CN/docs/Web/CSS/Guides/Positioned_layout)模块
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)

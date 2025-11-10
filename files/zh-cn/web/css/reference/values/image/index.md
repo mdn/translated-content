@@ -1,7 +1,6 @@
 ---
 title: <image>
 slug: Web/CSS/Reference/Values/image
-original_slug: Web/CSS/image
 ---
 
 CSS 的 **`<image>`** 数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。

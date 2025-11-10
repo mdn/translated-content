@@ -1,10 +1,9 @@
 ---
 title: var()
 slug: Web/CSS/Reference/Values/var
-original_slug: Web/CSS/var
 ---
 
-**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/Reference/Properties/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
+**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/Reference/Properties/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
 
 {{InteractiveExample("CSS Demo: var()")}}
 
@@ -119,4 +118,4 @@ body {
 ## 参见
 
 - {{cssxref("env","env(…)")}}——由 user‑agent 控制的只读环境变量。
-- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)

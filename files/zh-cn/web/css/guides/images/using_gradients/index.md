@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 渐变
 slug: Web/CSS/Guides/Images/Using_gradients
-original_slug: Web/CSS/CSS_images/Using_CSS_gradients
 ---
 
 **CSS 渐变**由 {{cssxref("&lt;gradient&gt;")}} 数据类型表示，它是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，由两种或多种颜色之间的渐变过渡构成。你可以选择三种类型的渐变：_线性_（由 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} 函数创建）、_径向_（由 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 函数创建）和*锥形*（由 {{cssxref("gradient/conic-gradient", "conic-gradient()")}} 函数创建）。你还可以使用 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 和 {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} 函数创建重复渐变。
@@ -553,7 +552,7 @@ div {
 
 #### 示例：圆形渐变的长度
 
-对于圆，尺寸可以用 [\<length>](/zh-CN/docs/Web/CSS/length) 提供，这就是圆的尺寸。
+对于圆，尺寸可以用 [\<length>](/zh-CN/docs/Web/CSS/Reference/Values/length) 提供，这就是圆的尺寸。
 
 ```html hidden
 <div class="radial-circle-size"></div>

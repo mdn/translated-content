@@ -1,7 +1,6 @@
 ---
 title: 形状生成器
 slug: Web/CSS/Guides/Shapes/Shape_generator
-original_slug: Web/CSS/CSS_shapes/Shape_generator
 l10n:
   sourceCommit: efebdd806165ea668d49fc67fd5b1d7f6229907b
 ---

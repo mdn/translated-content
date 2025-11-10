@@ -1,7 +1,6 @@
 ---
 title: rgb()
 slug: Web/CSS/Reference/Values/color_value/rgb
-original_slug: Web/CSS/color_value/rgb
 l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
@@ -60,7 +59,7 @@ rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
 ### 值
 
-下面是对绝对颜色和[相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)的描述。
+下面是对绝对颜色和[相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors)的描述。
 
 #### 绝对值语法
 
@@ -76,7 +75,7 @@ rgb(R G B[ / A])
   - : {{CSSXref("&lt;alpha-value&gt;")}} 表示输出颜色的 alpha 通道值，其中数字 `0` 对应于 `0%`（完全透明），`1` 对应 `100%`（完全不透明），关键字 `none` 用于显式地指定无 alpha 通道。未明确指定 `A` 通道值，则会默认为 100%。若包含此值，需在值的前面添加斜杠（`/`）。
 
 > [!NOTE]
-> 参见[缺失颜色分量](/zh-CN/docs/Web/CSS/color_value#缺失颜色分量)以了解 `none` 的效果。
+> 参见[缺失颜色分量](/zh-CN/docs/Web/CSS/Reference/Values/color_value#缺失颜色分量)以了解 `none` 的效果。
 
 #### 相对值语法
 
@@ -97,7 +96,7 @@ rgb(from <color> R G B[ / A])
 > 别名 `rgba()` 也可用于输出指定原始颜色的相对颜色，当使用 `rgba()` 输出相对颜色时，必须使用无逗号的现代语法。
 
 > [!NOTE]
-> 要完全启用可见颜色的全光谱表示，相对 `rgb()` 颜色函数的输出会被序列化为 `color(srgb)`。这意味着通过 {{DOMxRef("HTMLElement.style")}} 属性或 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} 方法查询输出颜色值时，会以 [`color(srgb ...)`](/zh-CN/docs/Web/CSS/color_value/color) 值返回输出颜色。
+> 要完全启用可见颜色的全光谱表示，相对 `rgb()` 颜色函数的输出会被序列化为 `color(srgb)`。这意味着通过 {{DOMxRef("HTMLElement.style")}} 属性或 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} 方法查询输出颜色值时，会以 [`color(srgb ...)`](/zh-CN/docs/Web/CSS/Reference/Values/color_value/color) 值返回输出颜色。
 
 #### 定义相对颜色输出通道分量
 
@@ -365,6 +364,6 @@ div.rgba {
 ## 参见
 
 - {{CSSXref("&lt;color&gt;")}} 数据类型，以了解所有颜色标记的列表
-- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/CSS_colors/Color_format_converter)
-- [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
-- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块
+- [sRGB 色彩选择和转换工具](/zh-CN/docs/Web/CSS/Guides/Colors/Color_format_converter)
+- [使用相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors)
+- [CSS 颜色](/zh-CN/docs/Web/CSS/Guides/Colors)模块

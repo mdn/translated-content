@@ -1,12 +1,11 @@
 ---
 title: skewY()
 slug: Web/CSS/Reference/Values/transform-function/skewY
-original_slug: Web/CSS/transform-function/skewY
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`skewY()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)用于定义在二维平面上沿垂直方向倾斜元素的变换。其结果是 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
+**`skewY()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)用于定义在二维平面上沿垂直方向倾斜元素的变换。其结果是 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS 演示：skewY()")}}
 
@@ -52,7 +51,7 @@ skewY(a)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> 上的<a href="/zh-CN/docs/Web/CSS/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> 上的<a href="/zh-CN/docs/Web/CSS/Reference/Values/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
       <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影平面">ℝℙ^2</a> 上的<a href="https://zh.wikipedia.org/wiki/齐次坐标">齐次坐标</a></th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a> 上的笛卡尔坐标</th>
       <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影空间">ℝℙ^3</a> 上的齐次坐标</th>

@@ -1,7 +1,6 @@
 ---
 title: CSS 动画
 slug: Web/CSS/Guides/Animations
-original_slug: Web/CSS/CSS_animations
 ---
 
 CSS 动画模块（CSS Animation）可以让你通过使用关键帧对 CSS 属性的值进行动画处理，例如背景位置和变换。每个关键帧都描述了动画元素在动画序列中的某个特定时间应该如何呈现。你可以使用动画模块中的属性来控制动画的持续时间、重复次数、延迟启动等方面。
@@ -266,7 +265,7 @@ input:checked + label::before {
 
 ## 指南
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)
   - : 关于如何使用 CSS 创建动画的分步教程，本文介绍每个相关的 CSS 属性和规则，并解释它们如何交互。
 - [CSS 动画提示和技巧](/zh-CN/docs/Web/API/Web_Animations_API/Tips)
   - : 帮助你充分利用 CSS 动画的技巧和窍门。
@@ -274,7 +273,7 @@ input:checked + label::before {
 ## 相关概念
 
 - {{cssxref("will-change")}} CSS 属性
-- [`<easing-function>`](/zh-CN/docs/Web/CSS/easing-function) 数据类型
+- [`<easing-function>`](/zh-CN/docs/Web/CSS/Reference/Values/easing-function) 数据类型
 - [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) 媒体查询
 - 术语{{glossary("Bézier curve", "贝塞尔曲线")}}
 
@@ -285,6 +284,6 @@ input:checked + label::before {
 ## 参见
 
 - {{Experimental_Inline}} CSS 滚动时间线 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性，以及 {{cssxref('scroll-timeline')}} 简写属性，创建与滚动容器的滚动偏移相关的动画。
-- [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transitions)模块中的属性根据用户的动作触发动画。
+- [CSS 变换](/zh-CN/docs/Web/CSS/Guides/Transitions)模块中的属性根据用户的动作触发动画。
 - HTML {{htmlelement("canvas")}} 元素与 [canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)一起用来绘制图形和动画。
 - 所有动画相关元素的 {{domxref("SVGAnimationElement")}} 接口，包括 {{domxref("SVGAnimateElement")}}、{{domxref("SVGSetElement")}}、{{domxref("SVGAnimateColorElement")}}、{{domxref("SVGAnimateMotionElement")}} 以及 {{domxref("SVGAnimateTransformElement")}}。

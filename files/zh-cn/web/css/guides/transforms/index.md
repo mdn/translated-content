@@ -1,7 +1,6 @@
 ---
 title: CSS Transforms
 slug: Web/CSS/Guides/Transforms
-original_slug: Web/CSS/CSS_transforms
 ---
 
 **CSS Transforms** 是一个 CSS 模块，它定义了如何在二维或三维空间中转换元素的 CSS 样式。
@@ -20,7 +19,7 @@ original_slug: Web/CSS/CSS_transforms
 
 ## 使用指南
 
-- [CSS transforms 使用](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS transforms 使用](/zh-CN/docs/Web/CSS/Guides/Transforms/Using)
   - : 循序渐进的教程，教你如何使用 CSS 对进行元素变形处理。
 
 ## 规范

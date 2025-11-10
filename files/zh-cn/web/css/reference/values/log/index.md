@@ -1,10 +1,9 @@
 ---
 title: log()
 slug: Web/CSS/Reference/Values/log
-original_slug: Web/CSS/log
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) **`log()`** 为指数型函数，返回某数的对数。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions) **`log()`** 为指数型函数，返回某数的对数。
 
 [对数](https://zh.wikipedia.org/wiki/对数)为指数的逆运算。固定底数的此数次方将产生传入的第一个参数。
 
@@ -58,7 +57,7 @@ width: calc(100px * log(625, 5)); /* 400px */
 
 #### CSS
 
-此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
+此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
 
 - `--size-1` 所计算的为 `log(7.389)` 的值（2）乘 `--size-0`（50px），结果为 100px。
 - `--size-2` 所计算的为 `log(8, 2)` 的值（3）乘 `--size-0`（50px），结果为 150px。

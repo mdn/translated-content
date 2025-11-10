@@ -1,7 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/Reference/Values/transform-function/translate
-original_slug: Web/CSS/transform-function/translate
 ---
 
 **`translate()`** 这个 [CSS](/zh-CN/docs/Web/CSS) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。

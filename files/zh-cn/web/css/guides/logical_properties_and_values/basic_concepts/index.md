@@ -1,7 +1,6 @@
 ---
 title: 逻辑属性与逻辑值的基本概念
 slug: Web/CSS/Guides/Logical_properties_and_values/Basic_concepts
-original_slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 ---
 
 逻辑属性与逻辑值规范为 CSS 中的许多属性和值引入了相对于流的对应关系。本文介绍此规范，并解释相对于流的属性与值。
@@ -91,7 +90,7 @@ body {
 
 ## 参见
 
-- [网格布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [弹性布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [网格布局中的盒对齐](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [弹性布局中的盒对齐](/zh-CN/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
 - [理解逻辑属性与逻辑值](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [书写模式](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [书写模式](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)

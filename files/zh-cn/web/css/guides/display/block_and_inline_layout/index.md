@@ -1,7 +1,6 @@
 ---
 title: 常规流中的块和内联布局
 slug: Web/CSS/Guides/Display/Block_and_inline_layout
-original_slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 ---
 
 在这篇指南中，我们会探讨块级元素和内联元素在常规流中是怎样工作的。
@@ -151,7 +150,7 @@ p {
 
 {{EmbedLiveSample("normal-flow-collapsing", "", "230px")}}
 
-你可以在我们的文章《[掌握外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)》中阅读更多关于这一部分的内容。
+你可以在我们的文章《[掌握外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)》中阅读更多关于这一部分的内容。
 
 > [!NOTE]
 > 如果不确定是否发生了外边距折叠，你可以使用浏览器的开发人员工具查看盒模型。准确的外边距值可以帮助你判断是否有外边距折叠发生。
@@ -258,7 +257,7 @@ strong {
 
 ## 参见
 
-- [CSS Basic Box Model](/zh-CN/docs/Web/CSS/CSS_box_model)
+- [CSS Basic Box Model](/zh-CN/docs/Web/CSS/Guides/Box_model)
 - _[Normal Flow](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction)_ - Learn Layout
 - [Inline elements](/zh-CN/docs/Glossary/Inline-level_content)
 - [Block-level elements](/zh-CN/docs/Glossary/Block-level_content)

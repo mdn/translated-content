@@ -1,12 +1,11 @@
 ---
 title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
-original_slug: Web/CSS/basic-shape/ellipse
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)之一。
+**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)之一。
 
 {{InteractiveExample("CSS 演示：ellipse()")}}
 
@@ -140,4 +139,4 @@ body {
 ## 参见
 
 - 使用该数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [基本形状指南](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

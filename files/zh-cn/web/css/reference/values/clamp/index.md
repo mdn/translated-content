@@ -1,7 +1,6 @@
 ---
 title: clamp()
 slug: Web/CSS/Reference/Values/clamp
-original_slug: Web/CSS/clamp
 ---
 
 **`clamp()`** 函数的作用是把一个值限制在一个上限和下限之间，当这个值超过最小值和最大值的范围时，在最小值和最大值之间选择一个值使用。它接收三个参数：最小值、首选值、最大值。 `clamp()` 被用在 {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} 中都是被允许的。
@@ -62,7 +61,7 @@ font-size: clamp(1rem, 10vw, 2rem);
 
 ### min, max, and clamp comparison
 
-这个示例中，我们用 `min()`、[`max()`](/zh-CN/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
+这个示例中，我们用 `min()`、[`max()`](/zh-CN/docs/Web/CSS/Reference/Values/max) 和 `clamp()` 实现一个简单的响应式效果。
 
 [`<body>`](/zh-CN/docs/Web/HTML/Reference/Elements/body) 元素的 [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width) 设置为 `min(1000px, calc(70% + 100px))`。其含义是宽度设置为 `1000px`，当 `calc(70% + 100px)` 比 `1000px` 小时，宽度为 `calc(70% + 100px)` 。 `min()` 允许你设置一个上限值。
 

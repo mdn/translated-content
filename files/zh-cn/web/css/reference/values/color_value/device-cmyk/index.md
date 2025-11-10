@@ -1,7 +1,6 @@
 ---
 title: device-cmyk()
 slug: Web/CSS/Reference/Values/color_value/device-cmyk
-original_slug: Web/CSS/color_value/device-cmyk
 ---
 
 **`device-cmyk()`** 函数标记用于以设备依赖的方式表达 CMYK 颜色，指定其青色、品红色、黄色和黑色成分。

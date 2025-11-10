@@ -1,12 +1,11 @@
 ---
 title: 网格布局的基本概念
 slug: Web/CSS/Guides/Grid_layout/Basic_concepts
-original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 l10n:
   sourceCommit: 21ed195dd72d2f11c0c7e0fdd0ed0aaf31068de1
 ---
 
-[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域或小型用户界面元素。本文介绍了 CSS 网格布局与 CSS 网格布局规范第 1 版中的新术语。这篇简介中所展示的每种特性，将在本指南的其余部分中详细介绍。
+[CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域或小型用户界面元素。本文介绍了 CSS 网格布局与 CSS 网格布局规范第 1 版中的新术语。这篇简介中所展示的每种特性，将在本指南的其余部分中详细介绍。
 
 ## 什么是网格？
 
@@ -32,7 +31,7 @@ l10n:
 
 多个项目可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以使用 {{cssxref("z-index")}} 属性来控制重叠区域显示的优先级。
 
-网格布局是一个强大的规范，当与 CSS 的其他部分（如[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助你创建以前不可能在 CSS 中构建的布局。这一切都是通过在**网格容器**上创建一个网格来开始的。
+网格布局是一个强大的规范，当与 CSS 的其他部分（如[弹性盒](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)）结合使用时，可以帮助你创建以前不可能在 CSS 中构建的布局。这一切都是通过在**网格容器**上创建一个网格来开始的。
 
 ## 网格容器
 
@@ -782,4 +781,4 @@ _网格单元_（grid cell）是网格项中最小的单位，从概念上来讲
 
 ## 下一步
 
-在本文中，我们快速了解了网格布局的各种可能性。探索并玩转代码示例，然后进入[本指南的下一部分](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)，在这里我们将真正开始挖掘 CSS 网格布局的细节。
+在本文中，我们快速了解了网格布局的各种可能性。探索并玩转代码示例，然后进入[本指南的下一部分](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)，在这里我们将真正开始挖掘 CSS 网格布局的细节。

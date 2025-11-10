@@ -1,14 +1,13 @@
 ---
 title: 使用媒体查询
 slug: Web/CSS/Guides/Media_queries/Using
-original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 ---
 
 **媒体查询**（**Media query**）非常实用，尤其是当你想要根据设备的大致类型（如打印设备与带屏幕的设备）或者特定的特征和设备参数（例如屏幕分辨率和浏览器{{glossary("viewport", "视口")}}宽度）来修改网站或应用程序时。
 
 媒体查询常被用于以下目的：
 
-- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
+- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
 - 用 `media=` 属性为{{HTMLElement("style")}}、{{HTMLElement("link")}}、{{HTMLElement("source")}}和其他 [HTML](/zh-CN/docs/Web/HTML) 元素指定特定的媒体类型。如：
 
 ```html
@@ -16,7 +15,7 @@ original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 <link rel="stylesheet" src="styles.css" media="print" />
 ```
 
-- 使用{{domxref("Window.matchMedia()")}} 和{{domxref("MediaQueryList.addListener()")}} 方法来[测试和监控媒体状态](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)。
+- 使用{{domxref("Window.matchMedia()")}} 和{{domxref("MediaQueryList.addListener()")}} 方法来[测试和监控媒体状态](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)。
 
 > [!NOTE]
 > 本页的例子使用 CSS `@media` 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。
@@ -196,7 +195,7 @@ original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 ## 参见
 
-- [使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Extended WebKit media features](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions#media_features)

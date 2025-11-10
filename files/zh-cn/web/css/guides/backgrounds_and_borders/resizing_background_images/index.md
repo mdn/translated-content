@@ -1,7 +1,6 @@
 ---
 title: 调整背景图片的大小
 slug: Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 ---
 
 CSS 属性 **{{cssxref("background-size")}}** 可以用于调整元素的背景图片大小，通过指定图像的宽度和/或高度，覆盖默认的以全尺寸平铺图像的行为。通过这样做，你可以根据需要放大或缩小图像。
@@ -135,4 +134,4 @@ background-size: 300px 150px;
 
 - {{ cssxref("background-size") }}
 - {{ cssxref("background") }}
-- [缩放 SVG 背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [缩放 SVG 背景](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)

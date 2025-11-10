@@ -1,12 +1,11 @@
 ---
 title: <color>
 slug: Web/CSS/Reference/Values/color_value
-original_slug: Web/CSS/color_value
 l10n:
   sourceCommit: 31e158bf22cece84ba7de3de3551f2807fe587d0
 ---
 
-**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
+**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
 
 > [!NOTE]
 > 尽管 `<color>` 被精确定义，但在不同的输出设备上仍然有可能表现不一致（有时甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
@@ -72,7 +71,7 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
   - [CIELAB](https://zh.wikipedia.org/wiki/CIELAB色彩空间) 色彩空间：{{CSSXref("color_value/lab", "lab()")}} 和 {{CSSXref("color_value/lch", "lch()")}}。
   - [Oklab](https://bottosson.github.io/posts/oklab/) 色彩空间：{{CSSXref("color_value/oklab", "oklab()")}} 和 {{CSSXref("color_value/oklch", "oklch()")}}。
   - 其他色彩空间：{{CSSXref("color_value/color", "color()")}}。
-- 通过使用[相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)语法基于现有颜色输出一个新的颜色。上述任何颜色函数都可以接受由 `from` 关键字引导并后跟新**输出颜色**的通道值定义的**原始颜色**。
+- 通过使用[相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors)语法基于现有颜色输出一个新的颜色。上述任何颜色函数都可以接受由 `from` 关键字引导并后跟新**输出颜色**的通道值定义的**原始颜色**。
 - 通过混合两个颜色：{{CSSXref("color_value/color-mix", "color-mix()")}}。
 - 通过指定两个颜色，第一个用于浅色模式，第二个用于深色模式：{{CSSXref("color_value/light-dark", "light-dark()")}}。
 
@@ -110,9 +109,9 @@ background-color: hsl(0deg 100% 50%);
 
 ## 插值
 
-颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/gradient)、[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)和[动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)中。
+颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/Reference/Values/gradient)、[过渡](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)和[动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)中。
 
-当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
+当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/Reference/Values/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
 
 ### 带有缺失分量时的插值
 
@@ -445,6 +444,6 @@ div:nth-child(6) {
 - {{CSSXref("opacity")}}：在元素级别上设备透明度的属性
 - {{CSSXref("&lt;hue&gt;")}}：表示一个颜色的色相角度的数据类型
 - {{CSSXref("color")}}、{{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("box-shadow")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-shadow")}}：使用 `<color>` 的常见属性
-- [使用 CSS 给 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
-- [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
+- [使用 CSS 给 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)
+- [使用相对颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - MDN 博客中的文章 [CSS 颜色（第 4 版）中的新功能、渐变和色调](/zh-CN/blog/css-color-module-level-4/)（2023 年）

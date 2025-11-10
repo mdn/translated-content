@@ -1,7 +1,6 @@
 ---
 title: hsl()
 slug: Web/CSS/Reference/Values/color_value/hsl
-original_slug: Web/CSS/color_value/hsl
 ---
 
 **`hsl()`** 函数标记根据其*色相*、*饱和度*和*明度*来表达 {{glossary("RGB", "sRGB")}} 颜色。可选的 _alpha_ 成分代表了颜色的透明度。
@@ -66,7 +65,7 @@ hsl(120deg 75% 25% / 0.6)
   - : {{CSSXref("&lt;alpha-value&gt;")}} 或者关键字 `none`，其中数字 `1` 代表 `100%`（完全不透明）。
 
 > [!NOTE]
-> 参见[缺失颜色成分](/zh-CN/docs/Web/CSS/color_value#缺失颜色成分) 以了解 `none` 的效果。
+> 参见[缺失颜色成分](/zh-CN/docs/Web/CSS/Reference/Values/color_value#缺失颜色成分) 以了解 `none` 的效果。
 
 ### 形式语法
 
@@ -76,7 +75,7 @@ hsl(120deg 75% 25% / 0.6)
 
 ### 使用 hsl() 和 conic-gradient()
 
-`hsl()` 函数和 [`conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/conic-gradient) 可以很好地配合使用，因为这两个都处理角度。
+`hsl()` 函数和 [`conic-gradient()`](/zh-CN/docs/Web/CSS/Reference/Values/gradient/conic-gradient) 可以很好地配合使用，因为这两个都处理角度。
 
 ```html hidden
 <div></div>

@@ -1,7 +1,6 @@
 ---
 title: CSS 逻辑属性与逻辑值
 slug: Web/CSS/Guides/Logical_properties_and_values
-original_slug: Web/CSS/CSS_logical_properties_and_values
 ---
 
 **CSS 逻辑属性与逻辑值**这一 [CSS](/zh-CN/docs/Web/CSS) 模块引入了逻辑属性和逻辑值，由此得以通过逻辑的——而不是实体的——方向与尺度映射控制布局。
@@ -10,7 +9,7 @@ original_slug: Web/CSS/CSS_logical_properties_and_values
 
 ### 块向与行向
 
-逻辑属性和逻辑值用抽象术语*块向*和*行向*描述其流向。这些术语的实体含义取决于[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)。
+逻辑属性和逻辑值用抽象术语*块向*和*行向*描述其流向。这些术语的实体含义取决于[书写模式](/zh-CN/docs/Web/CSS/Guides/Writing_modes)。
 
 - 块向尺度
   - : 与行内文本流向垂直的方向上的尺度，如横排书写模式中的竖直尺度，以及竖排书写模式中的水平尺度。对于标准的英文文本，此尺度指竖直尺度。
@@ -112,10 +111,10 @@ original_slug: Web/CSS/CSS_logical_properties_and_values
 
 ## 指南
 
-- [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
-- [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)
+- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
+- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding)
+- [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning)
 
 ## 规范
 

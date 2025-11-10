@@ -1,7 +1,6 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/Reference/Values/display-listitem
-original_slug: Web/CSS/display-listitem
 l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---

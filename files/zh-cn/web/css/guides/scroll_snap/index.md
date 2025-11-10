@@ -1,7 +1,6 @@
 ---
 title: CSS 滚动吸附
 slug: Web/CSS/Guides/Scroll_snap
-original_slug: Web/CSS/CSS_scroll_snap
 ---
 
 **CSS 滚动吸附**模块所提供的属性可通过定义吸附位置控制滑屏和滚动行为。当用户在{{Glossary("Scroll container", "滚动容器")}}中滚动溢出的内容时，内容可吸附至特定位置，由此提供分页和滚动定位效果。
@@ -278,7 +277,7 @@ article.snapDisabled ul {
 
 ## 指南
 
-- [CSS 滚动吸附的基本概念](/zh-CN/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [CSS 滚动吸附的基本概念](/zh-CN/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
   - : CSS 滚动吸附特性的概览和示例。
 
 ## 相关概念
@@ -299,8 +298,8 @@ article.snapDisabled ul {
 
 ## 参见
 
-- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 滚动条样式化](/zh-CN/docs/Web/CSS/CSS_scrollbars_styling)模块
+- [CSS 溢出](/zh-CN/docs/Web/CSS/Guides/Overflow)模块
+- [CSS 滚动条样式化](/zh-CN/docs/Web/CSS/Guides/Scrollbars_styling)模块
 - [纯键盘滚动区域](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html)（载于 adrianroselli.com，2022 年）
 - [滚动吸附示例](https://codepen.io/collection/KpqBGW)（载于 Codepen，2022 年）
 - [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)（载于 web.developers.google.cn，2021 年）

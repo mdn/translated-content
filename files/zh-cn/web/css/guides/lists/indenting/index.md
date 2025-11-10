@@ -1,7 +1,6 @@
 ---
 title: 使列表缩进一致
 slug: Web/CSS/Guides/Lists/Indenting
-original_slug: Web/CSS/CSS_lists/Consistent_list_indentation
 l10n:
   sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---

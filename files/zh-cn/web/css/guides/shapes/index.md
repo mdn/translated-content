@@ -1,7 +1,6 @@
 ---
 title: CSS 形状
 slug: Web/CSS/Guides/Shapes
-original_slug: Web/CSS/CSS_shapes
 l10n:
   sourceCommit: 4ecbac9e89961a132c1e7f5493ec94f60dcb1ee4
 ---
@@ -10,7 +9,7 @@ l10n:
 
 规范定义了几种创建形状的方法。内容可以包裹形状或在形状内而不是遵循元素盒子的默认矩形形状。
 
-形状模块定义了可以用作 CSS 值的几何形状。该模块提供了用于创建椭圆、多边形和任意几何形状的函数。其他 CSS 模块可以使用该规范定义的形状，包括 [CSS 运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)和 [CSS 遮盖](/zh-CN/docs/Web/CSS/CSS_masking)。
+形状模块定义了可以用作 CSS 值的几何形状。该模块提供了用于创建椭圆、多边形和任意几何形状的函数。其他 CSS 模块可以使用该规范定义的形状，包括 [CSS 运动路径](/zh-CN/docs/Web/CSS/Guides/Motion_path)和 [CSS 遮盖](/zh-CN/docs/Web/CSS/Guides/Masking)。
 
 ## CSS 形状实例
 
@@ -46,22 +45,22 @@ l10n:
 
 ### 术语
 
-- [参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)
+- [参考框](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参考框)
 
 ## 指南
 
-- [形状概览](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [形状概览](/zh-CN/docs/Web/CSS/Guides/Shapes/Overview)
   - : 定义使用 `shape-margin` 和 `clip-path` 属性的基本形状，并使用开发者工具调试基本形状。
-- [使用 box 值指定形状](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values)
+- [使用 box 值指定形状](/zh-CN/docs/Web/CSS/Guides/Shapes/From_box_values)
   - : 使用 `border-radius` 圆角和 CSS 盒子模型的值创建形状。
-- [使用 `shape-outside` 的基本形状](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [使用 `shape-outside` 的基本形状](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
   - : 使用 CSS 形状、参考框和 `shape-outside` 属性创建矩形、圆形、椭圆形和多边形。
-- [来自图像的形状](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [来自图像的形状](/zh-CN/docs/Web/CSS/Guides/Shapes/From_images)
   - : 根据半透明图像文件和 CSS 渐变创建形状。
 
 ## 相关概念
 
-[CSS 运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块
+[CSS 运动路径](/zh-CN/docs/Web/CSS/Guides/Motion_path)模块
 
 - {{cssxref("offset")}}
 - {{cssxref("offset-anchor")}}
@@ -71,7 +70,7 @@ l10n:
 - {{cssxref("offset-rotate")}}
 - {{cssxref("ray")}} 函数
 
-[CSS 遮盖](/zh-CN/docs/Web/CSS/CSS_masking)模块
+[CSS 遮盖](/zh-CN/docs/Web/CSS/Guides/Masking)模块
 
 - {{cssxref("clip")}}
 - {{cssxref("clip-path")}}
@@ -80,11 +79,11 @@ l10n:
 - {{cssxref("mask-origin")}}
 - {{cssxref("mask-position")}}
 
-[CSS 背景和边框](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)模块
+[CSS 背景和边框](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders)模块
 
 - {{cssxref("border-radius")}} 简写
 
-[CSS 盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model)模块
+[CSS 盒子模型](/zh-CN/docs/Web/CSS/Guides/Box_model)模块
 
 - {{cssxref("box-edge")}} 数据类型
 

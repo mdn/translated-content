@@ -1,7 +1,6 @@
 ---
 title: CSS 书写模式
 slug: Web/CSS/Guides/Writing_modes
-original_slug: Web/CSS/CSS_writing_modes
 l10n:
   sourceCommit: d68cfd06575158736a37dcacc970cf909d009469
 ---
@@ -20,7 +19,7 @@ l10n:
 
 ## 指南
 
-- [创建垂直排列的表单控件](/zh-CN/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [创建垂直排列的表单控件](/zh-CN/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
   - : 本文阐述如何运用 CSS 的 {{cssxref("writing-mode")}} 和 {{cssxref("direction")}} 属性来创建并配置垂直排列的表单控件。
 
 ## 规范

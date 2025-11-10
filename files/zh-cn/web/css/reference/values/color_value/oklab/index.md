@@ -1,7 +1,6 @@
 ---
 title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
-original_slug: Web/CSS/color_value/oklab
 ---
 
 函数记号 **`oklab()`** 在 Oklab 颜色空间中表示指定颜色，此颜色空间尽力模仿人眼感知颜色的方式。`oklab()` 在 Oklab 颜色空间中使用直角坐标系，有 a 轴和 b 轴。若想要极坐标颜色系统——色度和色相，请使用 {{CSSXref("color_value/oklch", "oklch()")}}。
@@ -153,6 +152,6 @@ div {
 
 ## 参见
 
-- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/color_value)所列的所有颜色记号
+- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/Reference/Values/color_value)所列的所有颜色记号
 - {{CSSXref("color_value/oklch", "oklch()")}}：另一使用与 `oklab()` 相同的颜色空间但在极坐标系中的函数记号
 - [一个用于图像处理的感知颜色空间](https://bottosson.github.io/posts/oklab/)

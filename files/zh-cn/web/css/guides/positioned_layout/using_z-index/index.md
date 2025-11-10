@@ -1,12 +1,11 @@
 ---
 title: 使用 z-index
 slug: Web/CSS/Guides/Positioned_layout/Using_z-index
-original_slug: Web/CSS/CSS_positioned_layout/Using_z-index
 ---
 
 ### 使用 {{ cssxref("z-index") }}
 
-在第一个例子 [Stacking without z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。
+在第一个例子 [Stacking without z-index](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。
 
 该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成“层叠”，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。
 
@@ -27,7 +26,7 @@ original_slug: Web/CSS/CSS_positioned_layout/Using_z-index
 > [!NOTE]
 >
 > - 当没有指定 z-index 的时候，所有元素都在会被渲染在默认层（0 层）
-> - 当多个元素的 z-index 属性相同的时候（在同一个层里面），那么将按照[不带 z-index 的层叠](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)中描述的规则进行布局。
+> - 当多个元素的 z-index 属性相同的时候（在同一个层里面），那么将按照[不带 z-index 的层叠](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)中描述的规则进行布局。
 
 在下一个例子中，所有的层都是用 z-index 进行排序的。元素 div#5 的 z-index 无效，因为他没有被指定 position 属性。
 
@@ -138,10 +137,10 @@ original_slug: Web/CSS/CSS_positioned_layout/Using_z-index
 
 ### 参见
 
-- [堆叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)：在不使用 `z-index` 的情况下应用的堆叠规则。
-- [堆叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
-- [使用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)：如何使用 `z-index` 来改变默认堆叠。
-- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
-- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2)：2 级 HTML 层级，z-index 在所有层级
-- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
+- [堆叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index)：在不使用 `z-index` 的情况下应用的堆叠规则。
+- [堆叠浮动元素](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
+- [使用 z-index](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)：如何使用 `z-index` 来改变默认堆叠。
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1)：2 级 HTML 层级，z-index 在最后一级
+- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2)：2 级 HTML 层级，z-index 在所有层级
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3)：3 级 HTML 层级，z-index 在第二级
 - [顶层](/zh-CN/docs/Glossary/Top_layer)

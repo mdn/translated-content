@@ -1,12 +1,11 @@
 ---
 title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
-original_slug: Web/CSS/basic-shape/shape
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
+**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
 
 ## 语法
 
@@ -63,7 +62,7 @@ clip-path: shape(
     > `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
 
 - `from <coordinate-pair>`
-  - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考盒子](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考盒子)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
+  - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考盒子](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参考盒子)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
 
 - `<shape-command>`
   - : 指定一个或多个逗号分隔的命令列表，用于定义形状，其语法类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#路径命令)。命令包括 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close`。每个命令的起始点是前一个命令的结束点，形状的第一个点由 [`from <coordinate-pair>`](#from_coordinate-pair) 参数定义。
@@ -316,6 +315,6 @@ body {
 
 - {{cssxref("clip-path")}}
 - {{cssxref("offset-path")}}
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
-- [形状概述](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)指南
-- [基本形状](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)指南
+- [CSS 形状](/zh-CN/docs/Web/CSS/Guides/Shapes)模块
+- [形状概述](/zh-CN/docs/Web/CSS/Guides/Shapes/Overview)指南
+- [基本形状](/zh-CN/docs/Web/CSS/Guides/Shapes/Using_shape-outside)指南

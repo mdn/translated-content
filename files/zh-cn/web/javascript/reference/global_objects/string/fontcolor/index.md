@@ -19,7 +19,7 @@ fontcolor(color)
 ### 参数
 
 - `color`
-  - : 该参数可以接受十六进制 RGB 三元组或字符串字面量来表示颜色。颜色名称的字符串字面量可以参考 [CSS 颜色参考](/zh-CN/docs/Web/CSS/color_value)。
+  - : 该参数可以接受十六进制 RGB 三元组或字符串字面量来表示颜色。颜色名称的字符串字面量可以参考 [CSS 颜色参考](/zh-CN/docs/Web/CSS/Reference/Values/color_value)。
 
 ### 返回值
 
