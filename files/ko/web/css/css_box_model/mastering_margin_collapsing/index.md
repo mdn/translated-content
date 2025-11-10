@@ -3,14 +3,14 @@ title: 여백 상쇄 정복
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
-여러 블록의 [위쪽](/ko/docs/Web/CSS/margin-top) 및 [아래쪽](/ko/docs/Web/CSS/margin-bottom) 바깥 여백(마진)은 경우에 따라 제일 큰 여백의 크기를 가진 단일 여백으로 결합(상쇄)되곤 합니다. 이런 동작을 **여백 상쇄**라고 부릅니다. 단, [플로팅](/ko/docs/Web/CSS/float) 요소와 [절대 위치를 지정](/ko/docs/Web/CSS/position#absolute)한 요소의 여백은 절대 상쇄되지 않습니다.
+여러 블록의 [위쪽](/ko/docs/Web/CSS/Reference/Properties/margin-top) 및 [아래쪽](/ko/docs/Web/CSS/Reference/Properties/margin-bottom) 바깥 여백(마진)은 경우에 따라 제일 큰 여백의 크기를 가진 단일 여백으로 결합(상쇄)되곤 합니다. 이런 동작을 **여백 상쇄**라고 부릅니다. 단, [플로팅](/ko/docs/Web/CSS/Reference/Properties/float) 요소와 [절대 위치를 지정](/ko/docs/Web/CSS/Reference/Properties/position#absolute)한 요소의 여백은 절대 상쇄되지 않습니다.
 
 여백 상쇄는 다음과 같은 세 가지 기본 상황에 발생합니다.
 
 - 인접 형제
-  - : 인접 형제 요소간의 바깥 여백은 서로 상쇄됩니다. (단, 뒤쪽 형제가 플로팅을 [해제](/ko/docs/Web/CSS/clear)해야 하는 경우는 예외)
+  - : 인접 형제 요소간의 바깥 여백은 서로 상쇄됩니다. (단, 뒤쪽 형제가 플로팅을 [해제](/ko/docs/Web/CSS/Reference/Properties/clear)해야 하는 경우는 예외)
 - 부모와 자손을 분리하는 콘텐츠 없음
-  - : 부모 블록에 테두리, 안쪽 여백, 인라인 부분이 없고 블록 서식 맥락이 생성되지 않았으며 부모의 {{cssxref("margin-top")}}을 자손의 `margin-top`과 분리할 [권한](/ko/docs/Web/CSS/clear)이 없는 경우, 또는, 부모 블록에 테두리, 안쪽 여백, 인라인 콘텐츠가 없으며 부모의 {{cssxref("margin-bottom")}}과 자손의 `margin-bottom`을 분리할 {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}가 존재하지 않는 경우 부모와 자손의 여백이 상쇄됩니다. 상쇄된 여백은 부모 블록 바깥에 위치합니다.
+  - : 부모 블록에 테두리, 안쪽 여백, 인라인 부분이 없고 블록 서식 맥락이 생성되지 않았으며 부모의 {{cssxref("margin-top")}}을 자손의 `margin-top`과 분리할 [권한](/ko/docs/Web/CSS/Reference/Properties/clear)이 없는 경우, 또는, 부모 블록에 테두리, 안쪽 여백, 인라인 콘텐츠가 없으며 부모의 {{cssxref("margin-bottom")}}과 자손의 `margin-bottom`을 분리할 {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}가 존재하지 않는 경우 부모와 자손의 여백이 상쇄됩니다. 상쇄된 여백은 부모 블록 바깥에 위치합니다.
 - 빈 블록
   - : 테두리, 안쪽 여백, 인라인 콘텐츠, {{cssxref("height")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}가 없으면 블록의 {{cssxref("margin-top")}}과 {{cssxref("margin-bottom")}}이 서로 상쇄됩니다.
 

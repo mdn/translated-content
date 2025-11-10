@@ -90,7 +90,7 @@ background-color: unset;
 
 낮은 시력을 가진 사용자도 페이지의 콘텐츠를 읽을 수 있도록 글자 색과 배경색의 대비를 높게 유지하는 것이 중요합니다.
 
-색상 대비율은 배경색과 투명도를 적용한 글자 색의 밝기를 비교해서 얻어낼 수 있습니다. 현재 [웹 콘텐츠 접근성 가이드라인](https://www.w3.org/WAI/standards-guidelines/wcag/)(WCAG)을 만족하려면, 텍스트 콘텐츠는 4.5:1, 제목 등 큰 텍스트는 3:1의 대비율이 필요합니다. 큰 텍스트란 18.66px 이상의 [굵은](/ko/docs/Web/CSS/font-weight) 글씨 혹은 24px 이상의 텍스트로 정의하고 있습니다.
+색상 대비율은 배경색과 투명도를 적용한 글자 색의 밝기를 비교해서 얻어낼 수 있습니다. 현재 [웹 콘텐츠 접근성 가이드라인](https://www.w3.org/WAI/standards-guidelines/wcag/)(WCAG)을 만족하려면, 텍스트 콘텐츠는 4.5:1, 제목 등 큰 텍스트는 3:1의 대비율이 필요합니다. 큰 텍스트란 18.66px 이상의 [굵은](/ko/docs/Web/CSS/Reference/Properties/font-weight) 글씨 혹은 24px 이상의 텍스트로 정의하고 있습니다.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)

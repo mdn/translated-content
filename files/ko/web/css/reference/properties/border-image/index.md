@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-image
 original_slug: Web/CSS/border-image
 ---
 
-**`border-image`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 주위에 이미지를 그립니다. 일반 [테두리](/ko/docs/Web/CSS/border)를 대체합니다.
+**`border-image`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 주위에 이미지를 그립니다. 일반 [테두리](/ko/docs/Web/CSS/Reference/Properties/border)를 대체합니다.
 
 {{InteractiveExample("CSS Demo: border-image")}}
 

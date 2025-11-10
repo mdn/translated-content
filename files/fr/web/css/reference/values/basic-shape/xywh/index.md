@@ -104,5 +104,5 @@ Dans l'exemple ci-dessous, la propriété {{cssxref("offset-path")}} utilise la 
 - La propriété {{cssxref("clip-path")}}
 - La propriété {{cssxref("offset-path")}}
 - Le type de données {{cssxref("&lt;basic-shape&gt;")}}
-- Le module des [formes CSS](/fr/docs/Web/CSS/CSS_shapes)
-- [Guide des formes de base](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- Le module des [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
+- [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

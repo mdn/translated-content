@@ -235,7 +235,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 이 예시는 `<iframe>`을 사용하기 위한 가장 기본적인 필수 요소를 포함하고 있습니다.
 
-- [`border: none`](/ko/docs/Web/CSS/border)
+- [`border: none`](/ko/docs/Web/CSS/Reference/Properties/border)
   - : 이를 적용하면, `<iframe>` 은 테두리 없이 표시됩니다. 적용하지 않으면 브라우저는 `<iframe>`을 기본적으로 테두리가 있는 상태로 표시하는데, 일반적으로 바람직하지는 않습니다.
 - [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : 이를 설정하면, `<iframe>`에서 [Fullscreen API](/ko/docs/Web/API/Fullscreen_API)를 통해 전제화면 모드를 실행할 수 있습니다. Fullscreen API는 본문에서 다루는 범위를 넘어선 내용입니다.

@@ -67,7 +67,7 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 ## Voir aussi
 
 - Les [types de données CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
-- Les [valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units) module
+- Les [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units) module
 - Types de données CSS associés&nbsp;:
   - {{cssxref("frequency", "&lt;frequency&gt;")}}
   - {{cssxref("percentage", "&lt;percentage&gt;")}}

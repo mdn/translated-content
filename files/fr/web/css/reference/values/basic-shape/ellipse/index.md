@@ -155,4 +155,4 @@ body {
 ## Voir aussi
 
 - Propriétés qui utilisent ce type de données&nbsp;: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
-- [Guide des formes de base](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

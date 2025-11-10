@@ -101,7 +101,7 @@ transition-property: unset;
 
 ### 기본 예제
 
-버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다. 여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/background-color)입니다.
+버튼을 호버하거나 포커싱하면, 1초 동안 색상이 트랜지션됩니다. 여기서 `transition-property`는 [`background-color`](/ko/docs/Web/CSS/Reference/Properties/background-color)입니다.
 
 #### HTML
 

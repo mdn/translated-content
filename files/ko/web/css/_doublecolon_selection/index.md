@@ -89,7 +89,7 @@ p::selection {
 
 만일 텍스트가 변경되었다면, 선택 영역의 텍스트와 배경 색상 사이의 **대비 비율**이 저시력을 가진 사람들에게도 충분히 읽을 수 있을 정도로 높아야 한다는 것을 중요하게 생각해야 합니다.
 
-색상 대비 비율은 선택된 텍스트와 선택된 텍스트의 배경 색상의 명도를 비교하여 찾습니다.[웹 콘텐츠 접근성 가이드라인 (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)을 충족시키기 위해서는, 텍스트 콘텐츠에는 4.5:1의 비율이 요구되고 머릿말 같은 큰 텍스트는 3:1 의 비율이 요구됩니다. 큰 텍스트는 18.66px의 [굵은 글씨체](/ko/docs/Web/CSS/font-weight) 혹은 24px 이상으로 정의됩니다.
+색상 대비 비율은 선택된 텍스트와 선택된 텍스트의 배경 색상의 명도를 비교하여 찾습니다.[웹 콘텐츠 접근성 가이드라인 (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)을 충족시키기 위해서는, 텍스트 콘텐츠에는 4.5:1의 비율이 요구되고 머릿말 같은 큰 텍스트는 3:1 의 비율이 요구됩니다. 큰 텍스트는 18.66px의 [굵은 글씨체](/ko/docs/Web/CSS/Reference/Properties/font-weight) 혹은 24px 이상으로 정의됩니다.
 
 - [WebAIM: 색상 대비 확인](https://webaim.org/resources/contrastchecker/)
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)

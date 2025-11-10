@@ -226,7 +226,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### CSS
 
-CSS에서는 `<div>` 에 초기에 `content-visibility: hidden;` 를 적용하여 콘텐츠를 숨깁니다. 그리고 `@keyframe` 애니메이션을 설정하고, 이로 인해 `<div>` 가 보이거나 숨겨질 수 있도록 클래스에 추가합니다. 이 과정에서 `content-visibility` 와 [`색상`](/ko/docs/Web/CSS/color)을 애니메이션화하여 콘텐츠가 보이거나 숨겨질 때 부드러운 애니메이션 효과로 동작할 수 있게 합니다.
+CSS에서는 `<div>` 에 초기에 `content-visibility: hidden;` 를 적용하여 콘텐츠를 숨깁니다. 그리고 `@keyframe` 애니메이션을 설정하고, 이로 인해 `<div>` 가 보이거나 숨겨질 수 있도록 클래스에 추가합니다. 이 과정에서 `content-visibility` 와 [`색상`](/ko/docs/Web/CSS/Reference/Properties/color)을 애니메이션화하여 콘텐츠가 보이거나 숨겨질 때 부드러운 애니메이션 효과로 동작할 수 있게 합니다.
 
 ```css
 div {

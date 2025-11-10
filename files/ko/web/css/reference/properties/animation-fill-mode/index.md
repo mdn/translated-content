@@ -18,7 +18,7 @@ animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
 ```
 
-축약 속성 [`animation`](/ko/docs/Web/CSS/animation)을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.
+축약 속성 [`animation`](/ko/docs/Web/CSS/Reference/Properties/animation)을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.
 
 {{cssinfo}}
 

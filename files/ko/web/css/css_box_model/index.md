@@ -60,7 +60,7 @@ CSS에서 박스는 콘텐츠 영역을 포함하며, 이는 텍스트, 이미�
 
 - [테두리](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
   - : 테두리 속성은 가장자리의 두께, 테두리 스타일, 색상을 정의합니다.
-- [Overflow](/ko/docs/Web/CSS/overflow)
+- [Overflow](/ko/docs/Web/CSS/Reference/Properties/overflow)
   - : 박스에 들어갈 내용이 너무 많을 때 발생하는 작업을 제어합니다.
 
 ## 안내서

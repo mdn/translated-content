@@ -67,7 +67,7 @@ clip-path: shape(
     > `<fill-rule>` n'est pas pris en charge dans {{cssxref("offset-path")}} et son utilisation invalide la propriété.
 
 - `from <coordinate-pair>`
-  - : Définit le point de départ de la première `<shape-command>` comme une paire de coordonnées mesurées à partir du coin supérieur gauche de la [boîte de référence](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box). Les coordonnées sont spécifiées comme des valeurs `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} séparées par un espace, représentant respectivement le décalage à gauche et le décalage en haut. Les pourcentages sont relatifs à la largeur et à la hauteur de la boîte de référence de l'élément. Ajoutez une virgule après ce paramètre.
+  - : Définit le point de départ de la première `<shape-command>` comme une paire de coordonnées mesurées à partir du coin supérieur gauche de la [boîte de référence](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box). Les coordonnées sont spécifiées comme des valeurs `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} séparées par un espace, représentant respectivement le décalage à gauche et le décalage en haut. Les pourcentages sont relatifs à la largeur et à la hauteur de la boîte de référence de l'élément. Ajoutez une virgule après ce paramètre.
 
 - `<shape-command>`
   - : Définit une liste d'une ou plusieurs commandes séparées par des virgules qui décrivent la forme, en utilisant une syntaxe similaire aux [commandes de chemin SVG](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands). Les commandes incluent `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>` et `close`. Le point de départ de chaque commande est le point d'arrivée de la commande précédente, le premier point étant défini par le paramètre [`from <coordinate-pair>`](#from_coordinate-pair).
@@ -319,6 +319,6 @@ body {
 
 - {{cssxref("clip-path")}}
 - {{cssxref("offset-path")}}
-- Le module des [formes de base](/fr/docs/Web/CSS/CSS_shapes)
-- [Présentation des formes](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Guide des formes de base](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- Le module des [formes de base](/fr/docs/Web/CSS/Guides/Shapes)
+- [Présentation des formes](/fr/docs/Web/CSS/Guides/Shapes/Overview)
+- [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

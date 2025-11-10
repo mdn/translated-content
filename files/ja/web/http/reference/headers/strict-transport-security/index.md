@@ -1,15 +1,14 @@
 ---
-title: Strict-Transport-Security
+title: Strict-Transport-Security ヘッダー
+short-title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
-original_slug: Web/HTTP/Headers/Strict-Transport-Security
 l10n:
-  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
-HTTP の **`Strict-Transport-Security`** は{{Glossary("response header", "レスポンスヘッダー")}}で（しばしば {{Glossary("HSTS")}} と略されます）、ブラウザーに、そのサイトは HTTPS を使用してのみアクセスすべきであり、今後 HTTP を使用してアクセスしようとした場合は自動的に HTTPS にアップグレードされるべきであるという情報を通知します。
-
-> [!NOTE]
-> これは、サーバー上で HTTP から HTTPS への ({{HTTPStatus("301")}}) リダイレクトを構成するよりも安全です。最初の HTTP 接続は、依然として中間者攻撃に対して脆弱であるためです。
+HTTP の **`Strict-Transport-Security`** は{{Glossary("response header", "レスポンスヘッダー")}}で（しばしば {{Glossary("HSTS")}} と略されます）、ブラウザーに、その{{Glossary("host", "ホスト")}}は HTTPS のみを使用してアクセスすべきであり、今後 HTTP を使用してアクセスしようとした場合は自動的に HTTPS にアップグレードされるべきであるという情報を通知します。
+さらに、このホストへの今後の接続において、ブラウザーはユーザーが無効な証明書などの保護された接続エラーをバイパスすることを許可しません。
+HSTS はホストをドメイン名のみで識別します。
 
 <table class="properties">
   <tbody>
@@ -37,61 +36,109 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 - `max-age=<expire-time>`
   - : 秒単位で、そのサイトに HTTPS だけで接続することをブラウザーが記憶する時間です。
 - `includeSubDomains` {{optional_inline}}
-  - : 省略可能で、この引数が指定されると、この規則がサイトのすべてのサブドメインにも適用されます。
-- `preload` {{optional_inline}}
+  - : このディレクティブが指定されると、この規則がサイトのすべてのサブドメインにも適用されます。
+- `preload` {{optional_inline}} {{non-standard_inline}}
   - : 詳しくは[厳格トランスポートセキュリティの事前読み込み](#厳格トランスポートセキュリティの事前読み込み)を参照してください。 `preload` を使用している場合、 `max-age` ディレクティブは `31536000` （1 年）以上でなければならず、 `includeSubDomains` ディレクティブが存在している必要があります。
-    仕様書で定義されているものではありません。
 
 ## 解説
 
-もし、訪問者が `http://www.foo.com/` または単に foo.com と入力したとき、ウェブサイトが接続を HTTP で受け付け、 HTTPS にリダイレクトするようになっていると、訪問者はリダイレクトされる前にまず、暗号化されないバージョンのサイトと通信する可能性があります。
-これは中間者攻撃の機会を作ってしまいます。
-リダイレクトは訪問者を、本来のサイトの安全なバージョンではなく、悪意のあるサイトに導くために利用される可能性があるからです。
+`Strict-Transport-Security` ヘッダーは、ホストへのすべての接続が HTTPS を使用しなければならないことをブラウザーに通知します。
+これはレスポンスヘッダーですが、ブラウザが現在のレスポンスを処理する方法には影響せず、将来のリクエストの生成方法に影響を与えます。
 
-`Strict-Transport-Security` ヘッダーは、ブラウザーに対してサイトを HTTP を使用して読み込まず、サイトへのすべてのアクセスを、自動的に HTTP から HTTPS リクエストに変換するよう指示することができます。
+HTTPS レスポンスに `Strict-Transport-Security` ヘッダーが含まれている場合、ブラウザーはそのホストのドメイン名を HSTS ホストの永続リストに追加します。
+ドメイン名が既にリストにある場合、有効期限と `includeSubDomains` ディレクティブが更新されます。
+ホストはドメイン名のみで識別されます。IP アドレスは HSTS ホストにはなりません。
+HSTS は、リクエストに使用されたポートに関係なく、ホストの全ポートに適用されます。
+
+`http` の URL を読み込む前に、ブラウザーはドメイン名を HSTS ホストリストと照合します。
+ドメイン名が HSTS ホストと大文字小文字を区別しない一致をする場合、または `includeSubDomains` を指定したホストのサブドメインである場合、ブラウザーは URL スキームを `https` に置換します。
+URL がポート 80 を指定している場合、ブラウザーはこれを 443 に変更します。
+その他の明示的なポート番号は変更されず、ブラウザーは HTTPS を使用してそのポートに接続します。
+
+TLS の警告やエラー（無効な証明書など）が HSTS ホストへの接続時に発生した場合、ブラウザーはユーザーにエラーメッセージを「クリックして進む」方法を提供しません。これは厳格なセキュリティの意図を損なうことになります。
 
 > [!NOTE]
-> サイトに HTTP を使用してアクセスしたとき、ブラウザーは `Strict-Transport-Security` ヘッダーを無視します。
-> これは攻撃者が HTTP 接続に介入して、ヘッダーを挿入したり削除したりするかもしれないからです。ウェブサイトに HTTPS でアクセスして、証明書のエラーがない場合、ブラウザーはサイトが HTTPS でアクセスできることを知り、 `Strict-Transport-Security` ヘッダーを信用します。
+> ホストは、`Strict-Transport-Security` ヘッダーを HTTPS のみで送信しなければならず、安全でない HTTP では送信してはなりません。
+> ブラウザーは、HTTP 経由で送信された場合、このヘッダーを無視します。これは、[中間者攻撃 (MITM)](/ja/docs/Web/Security/Attacks/MITM) によってヘッダーが改ざんされ、早期に期限切れとなったり、HTTPS に対応していないホスト向けにヘッダーが追加されたりするのを防ぐためです。
+
+### 期限
+
+ブラウザーが `Strict-Transport-Security` ヘッダーを受信するたびに、現在の時刻に `max-age` を加算することでホストの HSTS 有効期限を更新します。
+`max-age` に固定値を設定すると、以降のレスポンスごとに有効期限が先延ばしされるため、HSTS が期限切れになるのを防げます。
+
+以前に送信していたホストからのレスポンスで `Strict-Transport-Security` ヘッダーが欠落している場合、以前のヘッダーは有効期限まで有効なままとなります。
+
+HSTS を無効化するには、`max-age=0` を設定します。
+これは、ブラウザーが保護されたリクエストを行い、レスポンスヘッダーを受信した時点で初めて有効になります。
+設計上、保護されていない HTTP 上で HSTS を無効化することはできません。
+
+### サブドメイン
+
+`includeSubDomains` ディレクティブは、ブラウザーに対し、ドメインの HSTS ポリシーをそのサブドメインにも適用するよう指示します。
+`secure.example.com` の HSTS ポリシーは `includeSubDomains` がある場合、`login.secure.example.com` や `admin.login.secure.example.com` にも適用されます。ただし、`example.com` や `insecure.example.com` には適用されません。
+
+それぞれのサブドメインホストは、親ドメインが `includeSubDomains` を使用している場合でも、レスポンスに `Strict-Transport-Security` ヘッダーを含めるべきです。なぜなら、ブラウザーは親ドメインよりも先にサブドメインホストにアクセスする可能性があるからです。
+たとえば、`example.com` が `includeSubDomains` を含む HSTS ヘッダーを含んでいるが、既存のリンクがすべて `www.example.com` に直接リンクしている場合、ブラウザーは `example.com` の HSTS ヘッダーを認識することはありません。
+したがって、`www.example.com` も HSTS ヘッダーを送信する必要があります。
+
+ブラウザーは、`includeSubDomains` ディレクティブの有無にかかわらず、各ドメインおよびサブドメインごとに HSTS ポリシーを個別に保存します。
+`example.com` と `login.example.com` の両方が HSTS ヘッダーを送信する場合、ブラウザーは 2 つの別々の HSTS ポリシーを保存し、それらは独立して期限切れになる可能性があります。`example.com` が `includeSubDomains` を使用していた場合、いずれかのポリシーが期限切れになっても `login.example.com` は引き続き保護されます。
+
+`max-age=0` の場合、`includeSubDomains` は効果を持ちません。これは、`includeSubDomains` を指定したドメインが HSTS ホストリストから直ちに削除されるためです。ただし、各サブドメインの個別の HSTS ポリシーは削除されません。
+
+### 保護されていない HTTP リクエスト
+
+ホストが保護されていない HTTP リクエストを受け付けた場合、恒久リダイレクト（ステータスコード {{HTTPStatus("301")}} など）で、`https` の URL を {{HTTPHeader("Location")}} ヘッダーに設定して応答すべきです。
+リダイレクトには `Strict-Transport-Security` ヘッダーを含めてはなりません。これは、リクエストが安全でない HTTP を使用しているためですが、このヘッダーは HTTPS 経由でのみ送信しなければなりません。
+ブラウザーがリダイレクトに従い HTTPS を使用して新たなリクエストを行った後、レスポンスには `Strict-Transport-Security` ヘッダーを含める必要があります。これにより、将来 `http` URL を読み込もうとしたときに、リダイレクトをすることなく即座に HTTPS を使用するように保証されます。
+
+HSTS の弱点の一つは、ブラウザーがホストに対して少なくとも1回の保護された接続を確立して `Strict-Transport-Security` ヘッダーを受信するまで有効にならない点です。
+ブラウザーがホストが HSTS ホストであることを認識する前に、保護されていない `http` URL を読み込んだ場合、最初のリクエストはネットワーク攻撃に対して脆弱です。
+[事前読み込み](#厳格トランスポートセキュリティの事前読み込み)は、この問題を軽減します。
 
 ### 厳格トランスポートセキュリティのシナリオの例
 
-空港で無料の Wi-Fi アクセスポイントにログインしてウェブの利用を開始し、オンラインバンキングサービスで残高の確認や取引を行ったとします。
-しかし不運にも、使用したアクセスポイントはハッカーのノートパソコンであり、そのハッカーはあなたの HTTP リクエストを傍受して、本物の銀行のサイトではなく偽のサイトへリダイレクトしたとします。こうなると、あなたの個人情報はハッカーにさらされてしまいます。
+1. 自宅で、ユーザーは初めて `http://example.com/` を訪問します。
+2. URL スキームが `http` であり、ブラウザーの HSTS ホストリストの中にこれがないため、この接続は保護されていない HTTP を使用します。
+3. サーバーは `301 Moved Permanently` リダイレクトで `https://example.com/` にリダイレクトします。
+4. ブラウザーは新しいリクエストを作成し、この時は HTTPS を使用します。
+5. レスポンスは HTTPS 経由で返され、次のヘッダーを含みます。
 
-厳格トランスポートセキュリティはこの問題を解決します。いったん銀行のウェブサイトへ HTTPS でアクセスすれば、そして銀行のウェブサイトが 厳格トランスポートセキュリティを利用していれば、ブラウザーは自動的に HTTPS のみを用いるよう理解して、ハッカーによるこの種の中間者攻撃の実行を防ぎます。
+   ```http
+   Strict-Transport-Security: max-age=31536000; includeSubDomains
+   ```
 
-### ブラウザーは厳格トランスポートセキュリティをどう扱うか
+   ブラウザーは `example.com` を HSTS ホストとして記憶し、`includeSubDomains` が指定されたことを認識します。
 
-最初にサイトに HTTPS でアクセスして `Strict-Transport-Security` ヘッダーが返されると、ブラウザーはこの情報を記録し、以降は HTTP を使用してサイトを読み込みもうとすると、自動的に HTTPS を使用するようになります。
+6. 数週間後、ユーザーは空港で無料 Wi-Fi を利用することにします。しかし知らずに、攻撃者のノートパソコン上で動作する不正アクセスポイントに接続してしまいます。
+7. ユーザーが `http://login.example.com/` を開きます。ブラウザーは `example.com` を HSTS ホストとして記憶しており、`includeSubDomains` ディレクティブが使用されているため、ブラウザーは HTTPS を使用します。
+8. 攻撃者は偽の HTTPS サーバーでリクエストを傍受しますが、そのドメインに対する有効な証明書を所有していません。
+9. ブラウザーは不正な証明書エラーを表示し、ユーザーがこれを回避することを許可しないため、攻撃者にパスワードを教えることを防ぎます。
 
-`Strict-Transport-Security` ヘッダーで指定された有効期限が経過すると、次回は自動的に HTTPS を使用するのではなく、通常通りに HTTP でサイトを読み込もうとします。
+### 厳格トランスポートセキュリティの事前読み込み
 
-なお、 `Strict-Transport-Security` ヘッダーがブラウザーへ送られるたびに、そのウェブサイトに対する有効期限が更新されるので、サイトはこの情報を更新して期限切れを防ぐことができます。
-厳格トランスポートセキュリティを無効にする必要がある場合は、 HTTPS 通信時に `max-age` の値を `0` に設定することで `Strict-Transport-Security` ヘッダーが失効し、ブラウザーからの HTTP 接続が許されるようになります。
-
-## 厳格トランスポートセキュリティの事前読み込み
-
-Google は [HSTS 事前読み込みサービス](https://hstspreload.org/) を行っています。
+Google は [HSTS 事前読み込みサービス](https://hstspreload.org/)を行っています。
 ガイドラインに従ってドメインを登録すれば、ブラウザーはドメインに安全ではない接続を行わないようになります。
-サービスは Google によって運営されており、すべてのブラウザーが事前読み込みリストを使用する意志を示しています (または既に使用を始めています)。
+サービスは Google によって運営されており、すべてのブラウザーが事前読み込みリストを使用する意志を示しています（または既に使用を始めています）。
 但し、これは HSTS 仕様書にあるものではなく、公式なものとして扱うべきではありません。
 
-- Chrome が実装している HSTS 事前読み込みリストに関する情報: https://www.chromium.org/hsts
-- Firefox が実装している HSTS 事前読み込みリストに関する参照: [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+- Chrome の HSTS 事前読み込みリストに関する情報: https://www.chromium.org/hsts/
+- Firefox の HSTS 事前読み込みリストに関する参照: [nsSTSPreloadList.inc](https://searchfox.org/firefox-main/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## 例
 
 ### Strict-Transport-Security の使用
 
-既存および将来のすべてのサブドメインで、1 年間を期限として HTTPS を使用する設定です。
-これは HTTP のみで提供できるページやサブドメインへのアクセスをブロックします。
+現在および将来のすべてのサブドメインは、`max-age` により 1 年間、HTTPS で提供されます。
+これにより、HTTP 経由でのみ提供可能なページやサブドメインへのアクセスがブロックされます。
 
 ```http
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-以下の例では、 `max-age` は前回の 1 年間を期限とする `max-age` を延長して 2 年間に設定します。なお、1 年間はブラウザーの HSTS 事前読み込みリストに含まれるドメインで有効です。しかし、2 年間は <https://hstspreload.org> で説明されているとおり、ウェブサイトの最終的な HSTS 設定のゴールとして推奨されています。また、最後の `preload` は Chromium, Edge, Firefox などの主要なブラウザーの HSTS 事前読み込みリストで必要です。
+ドメインに対して `max-age` を 1 年に設定することは許容されますが、 https://hstspreload.org で説明されているように、推奨値は 2 年です。
+
+以下の例では、`max-age` を 2 年に設定し、`preload` を付加しています。これは Chromium、Edge、Firefox などの主要なウェブブラウザーの HSTS 事前読み込みリストに含めるために必要です。
 
 ```http
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
