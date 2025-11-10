@@ -23,7 +23,7 @@ syntax: "*"; /* 任何有效字符 */
 
 ## 取值
 
-规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)的子集。这些可以单独使用，一些类型也可以结合使用。
+规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)的子集。这些可以单独使用，一些类型也可以结合使用。
 
 - `"<length>"`
   - : 任何有效的 {{cssxref("&lt;length&gt;")}} 值。
@@ -66,7 +66,7 @@ syntax: "*"; /* 任何有效字符 */
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules):
 
 ```css
 @property --my-color {

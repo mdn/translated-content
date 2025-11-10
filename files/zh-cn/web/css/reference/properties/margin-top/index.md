@@ -3,7 +3,7 @@ title: margin-top
 slug: Web/CSS/Reference/Properties/margin-top
 ---
 
-**`margin-top`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的顶部外边距[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
+**`margin-top`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的顶部外边距[外边距区域](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
 
 {{InteractiveExample("CSS Demo: margin-top")}}
 
@@ -57,7 +57,7 @@ margin-top: 0;
 }
 ```
 
-此属性对于*不*[_可替换_](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
+此属性对于*不*[_可替换_](/zh-CN/docs/Web/CSS/Guides/Images/Replaced_element_properties)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
 
 ## 语法
 
@@ -85,7 +85,7 @@ margin-top: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 设置固定边距大小。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的内联尺寸（对于竖排语言则是*宽度*，这由 {{cssxref("writing-mode")}} 定义）的百分比边距大小。
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)的内联尺寸（对于竖排语言则是*宽度*，这由 {{cssxref("writing-mode")}} 定义）的百分比边距大小。
 - `auto`
   - : 浏览器选择一个合适的值来使用。参见 {{cssxref("margin")}}。
 

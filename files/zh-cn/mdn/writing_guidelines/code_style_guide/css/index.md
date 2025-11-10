@@ -119,11 +119,11 @@ h3 {
   animation: 3s ease-in 1s 2 reverse both paused slidein;
   ```
 
-  在该示例中，第一个可以解析为 [`<time>`](/zh-CN/docs/Web/CSS/time) 的值会被赋值给 [`animation-duration`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-duration) 属性，第二个可以解析为时间的值会被赋值给 [`animation-delay`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-delay)。（更多信息请参阅 [animation 语法](/zh-CN/docs/Web/CSS/Reference/Properties/animation#语法)的详细内容。）
+  在该示例中，第一个可以解析为 [`<time>`](/zh-CN/docs/Web/CSS/Reference/Values/time) 的值会被赋值给 [`animation-duration`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-duration) 属性，第二个可以解析为时间的值会被赋值给 [`animation-delay`](/zh-CN/docs/Web/CSS/Reference/Properties/animation-delay)。（更多信息请参阅 [animation 语法](/zh-CN/docs/Web/CSS/Reference/Properties/animation#语法)的详细内容。）
 
 ## 移动优先的媒体查询
 
-在包含针对不同目标视口大小的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)样式的样式表中，首先包含窄屏/移动设备的样式，然后再添加任何其他媒体查询。通过连续的媒体查询添加更宽视口大小的样式。遵循这个规则有很多优点，这些优点在[移动优先](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)文章中有详细的解释。
+在包含针对不同目标视口大小的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)样式的样式表中，首先包含窄屏/移动设备的样式，然后再添加任何其他媒体查询。通过连续的媒体查询添加更宽视口大小的样式。遵循这个规则有很多优点，这些优点在[移动优先](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)文章中有详细的解释。
 
 ```css example-good
 /* 适用于窄屏的默认 CSS 布局 */

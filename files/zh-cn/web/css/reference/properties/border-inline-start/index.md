@@ -3,7 +3,7 @@ title: border-inline-start
 slug: Web/CSS/Reference/Properties/border-inline-start
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-start`** 为[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑行首边框的各属性值。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-start`** 为[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑行首边框的各属性值。
 
 {{InteractiveExample("CSS Demo: border-inline-start")}}
 
@@ -125,6 +125,6 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)
 - 此属性对应的实体边框属性：{{CSSXref("border-top")}}、{{CSSXref("border-right")}}、{{CSSXref("border-bottom")}} 或 {{CSSXref("border-left")}}
 - {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

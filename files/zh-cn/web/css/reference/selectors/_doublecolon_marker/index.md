@@ -31,12 +31,12 @@ li::marker {
 
 在将 `::marker` 作为选择器的规则中，只能使用某些 CSS 属性：
 
-- 所有的[字体属性](/zh-CN/docs/Web/CSS/CSS_fonts)
+- 所有的[字体属性](/zh-CN/docs/Web/CSS/Guides/Fonts)
 - {{CSSxRef("white-space")}} 属性
 - {{CSSxRef("color")}} 属性
 - {{CSSxRef("text-combine-upright")}}、{{CSSxRef("unicode-bidi")}} 和 {{CSSxRef("direction")}} 属性
 - {{CSSxRef("content")}} 属性
-- 所有的 [animation](/zh-CN/docs/Web/CSS/CSS_animations#css_属性) 和 [transition](/zh-CN/docs/Web/CSS/CSS_transitions#css_属性) 属性
+- 所有的 [animation](/zh-CN/docs/Web/CSS/Guides/Animations#css_属性) 和 [transition](/zh-CN/docs/Web/CSS/Guides/Transitions#css_属性) 属性
 
 > [!NOTE]
 > 规范指出，将来可能会支持其他 CSS 属性。

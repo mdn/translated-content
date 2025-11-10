@@ -64,5 +64,5 @@ HTML 注释只能作为内容使用。不能在标签中使用，例如在 HTML 
 ## 参见
 
 - [JavaScript 中的注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#注释)
-- [CSS 中的注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+- [CSS 中的注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
 - {{domxref("Comment")}} API（`Comment` 继承自 {{domxref("Node")}}）

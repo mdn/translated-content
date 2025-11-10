@@ -310,7 +310,7 @@ td {
 
 ## 参见
 
-- [弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#元素居中)
+- [弹性盒子的典型用例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#元素居中)
 - {{Cssxref("line-height")}}、{{Cssxref("text-align")}}、{{Cssxref("margin")}}
 - [理解 `vertical-align`，如何（不）垂直居中内容](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align：你要知道的事](https://christopheraue.net/design/vertical-align)

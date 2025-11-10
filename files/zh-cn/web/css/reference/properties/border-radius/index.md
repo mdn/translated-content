@@ -52,7 +52,7 @@ border-radius: 50% 20% / 10% 40%;
 }
 ```
 
-该属性是一个 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，是为了将这四个属性 {{Cssxref("border-top-left-radius")}}、{{Cssxref("border-top-right-radius")}}、{{Cssxref("border-bottom-right-radius")}} 和 {{Cssxref("border-bottom-left-radius")}} 简写为一个属性。
+该属性是一个 [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)，是为了将这四个属性 {{Cssxref("border-top-left-radius")}}、{{Cssxref("border-top-right-radius")}}、{{Cssxref("border-bottom-right-radius")}} 和 {{Cssxref("border-bottom-left-radius")}} 简写为一个属性。
 
 即使元素没有边框，圆角也可以用到 {{ Cssxref("background") }} 上面，具体效果受 {{ Cssxref("background-clip") }} 影响。
 

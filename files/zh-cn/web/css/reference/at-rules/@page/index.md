@@ -278,7 +278,7 @@ l10n:
 
 ## 具名页面
 
-具名页面可以在打印时以声明方式执行每页布局和添加[页面分隔符](/zh-CN/docs/Web/CSS/CSS_fragmentation)。
+具名页面可以在打印时以声明方式执行每页布局和添加[页面分隔符](/zh-CN/docs/Web/CSS/Guides/Fragmentation)。
 
 可使用 {{Cssxref("page")}} 属性应用命名页面。这样，用户就可以创建不同的页面配置，用于打印布局。
 
@@ -408,5 +408,5 @@ button.addEventListener("click", () => {
 - `@page` [`size`](/zh-CN/docs/Web/CSS/Reference/At-rules/@page/size) 描述符
 - {{Cssxref("page")}} 属性
 - 参阅 Bugzilla 中的 [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) 工单，以追踪该主题（例如：基于页面的计数器，等等）的进展
-- [CSS 分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)模块
+- [CSS 分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)模块
 - [Paged.js：W3C 分页媒体 polyfill](https://pagedjs.org/documentation/1-the-big-picture)

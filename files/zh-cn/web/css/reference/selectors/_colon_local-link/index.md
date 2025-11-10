@@ -56,4 +56,4 @@ a:local-link {
 ## 参见
 
 - 与链接相关的伪类：{{ cssxref(":link") }}、{{ cssxref(":visited") }}、{{ cssxref(":hover") }}、{{ cssxref(":active") }}、{{ cssxref(":any-link") }}
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)模块

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
 
-**`@view-transition`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)用于在跨文档导航的情况下选择当前文档和目标文档进行[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)。
+**`@view-transition`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)用于在跨文档导航的情况下选择当前文档和目标文档进行[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)。
 
 要使跨文档视图过渡正常工作，导航的当前文档和目标文档也需要同源。
 
@@ -95,5 +95,5 @@ l10n:
 - {{cssxref("::view-transition-group", "::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
 - [视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API)
-- [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
+- [CSS at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
 - [CSS at 规则函数](/zh-CN/docs/Web/CSS/Reference/At-rules/At-rule_functions)

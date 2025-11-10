@@ -47,7 +47,7 @@ slug: Learn_web_development/Extensions/Performance/JavaScript
 - **考虑使用浏览器内置特性**：也许你可以使用浏览器已经具备的特性，而不是通过 JavaScript 自己创建。例如：
   - 使用[内置的客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用内置表单数据校验)。
   - 使用浏览器自带的 {{htmlelement("video")}} 播放器。
-  - 使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)而不是 JavaScript 动画库（参见[处理动画](#处理_javascript_动画)）。
+  - 使用 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)而不是 JavaScript 动画库（参见[处理动画](#处理_javascript_动画)）。
 
 你还应该将 JavaScript 分成表示关键部分和非关键部分的多个文件。通过使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)可以比仅使用单独的外部 JavaScript 文件更高效地实现这一点。
 
@@ -237,7 +237,7 @@ async function main() {
 
 最显然的动画建议是使用更少的动画——去除任何非必要的动画，或考虑为用户提供一个偏好设置，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。
 
-对于关键的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种通过 JavaScript 直接连接到 CSS 动画的方式）。直接使用浏览器执行 DOM 动画而不是使用 JavaScript 操纵内联样式表的效率更高。另请参阅 [CSS 性能优化 > 处理动画](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS#处理动画)。
+对于关键的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种通过 JavaScript 直接连接到 CSS 动画的方式）。直接使用浏览器执行 DOM 动画而不是使用 JavaScript 操纵内联样式表的效率更高。另请参阅 [CSS 性能优化 > 处理动画](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS#处理动画)。
 
 对于无法在 JavaScript 中处理的动画，例如在 HTML {{htmlelement("canvas")}} 上创建动画，建议使用 {{domxref("Window.requestAnimationFrame()")}} 而不是旧的选项，例如 {{domxref("Window.setInterval()")}}。`requestAnimationFrame()` 方法专门设计用于高效、一致地处理动画帧，以获得流畅的用户体验。基本模式如下所示：
 

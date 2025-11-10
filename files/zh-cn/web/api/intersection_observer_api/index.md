@@ -354,7 +354,7 @@ const intersectionCallback = (entries) => {
 
 ### CSS
 
-在本示例中，CSS 并不是非常重要；它将元素排列出来，并确定 {{cssxref("background-color")}} 和 {{cssxref("border")}} 属性可以参与 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)，我们将使用 CSS 过渡来影响元素的变化，使其变得或多或少模糊不清。
+在本示例中，CSS 并不是非常重要；它将元素排列出来，并确定 {{cssxref("background-color")}} 和 {{cssxref("border")}} 属性可以参与 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)，我们将使用 CSS 过渡来影响元素的变化，使其变得或多或少模糊不清。
 
 ```css
 #box {

@@ -55,7 +55,7 @@ if ("virtualKeyboard" in navigator) {
 
 ### 使用 CSS 环境变量检测虚拟键盘的几何信息
 
-虚拟键盘 API 还公开了以下 [CSS 环境变量](/zh-CN/docs/Web/CSS/env)：`keyboard-inset-top`、`keyboard-inset-right`、`keyboard-inset-bottom`、`keyboard-inset-left`、`keyboard-inset-width` 和 `keyboard-inset-height`。
+虚拟键盘 API 还公开了以下 [CSS 环境变量](/zh-CN/docs/Web/CSS/Reference/Values/env)：`keyboard-inset-top`、`keyboard-inset-right`、`keyboard-inset-bottom`、`keyboard-inset-left`、`keyboard-inset-width` 和 `keyboard-inset-height`。
 
 `keyboard-inset-*` CSS 环境变量对于使用 CSS 根据虚拟键盘的出现调整布局非常有用。它们通过距离视口边缘的顶部、右侧、底部和左侧插入定义一个矩形。如果需要，还可以使用 `width` 和 `height` 变量。
 

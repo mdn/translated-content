@@ -3,7 +3,7 @@ title: scroll-padding
 slug: Web/CSS/Reference/Properties/scroll-padding
 ---
 
-[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding`** 同时设置元素的所有滚动内边距，其赋值方式较为类似 {{CSSXref("padding")}} 属性为元素内边距赋值的方式。
+[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`scroll-padding`** 同时设置元素的所有滚动内边距，其赋值方式较为类似 {{CSSXref("padding")}} 属性为元素内边距赋值的方式。
 
 {{InteractiveExample("CSS Demo: scroll-padding")}}
 
@@ -122,5 +122,5 @@ scroll-padding: unset;
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
+- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/Guides/Scroll_snap)
 - [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

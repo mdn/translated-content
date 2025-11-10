@@ -47,5 +47,5 @@ video:volume-locked {
 - {{cssxref(":playing")}}
 - {{cssxref(":seeking")}}
 - {{cssxref(":stalled")}}
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)
 - {{domxref("HTMLMediaElement")}} 对象的 [`volume`](/zh-CN/docs/Web/API/HTMLMediaElement/volume) 实例属性
