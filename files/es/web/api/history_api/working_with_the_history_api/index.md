@@ -184,7 +184,7 @@ Cuando el usuario vuelve al punto de partida, el evento `popstate` contendrá es
 
 ## Ejemplo completo de la API de historial
 
-Puede encontrar este ejemplo completo en <https://github.com/mdn/dom-examples/tree/main/history-api> y ver la demostración en directo en <https://mdn.github.io/dom-examples/history-api/>.
+Puedes encontrar este ejemplo completo en <https://github.com/mdn/dom-examples/tree/main/history-api> y ver la demostración en directo en <https://mdn.github.io/dom-examples/history-api/>.
 
 ## véase también
 
