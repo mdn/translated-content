@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 55ace19185180eaaec2faa470d044d7c2cea7cd7
 ---
 
-**アットルール**は CSS がどのように動作するかを指示する [CSS 文](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_statements)です。これらは、スタイルルールやその他のアットルールをグループ化・構造化するため、選択されたコンテンツと直接関連しないスタイル情報を宣言するため、およびインポートや名前空間キーワードマッピングといった構文構造を管理するために使用されます。アット記号 `@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。
+**アットルール**は CSS がどのように動作するかを指示する [CSS 文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_statements)です。これらは、スタイルルールやその他のアットルールをグループ化・構造化するため、選択されたコンテンツと直接関連しないスタイル情報を宣言するため、およびインポートや名前空間キーワードマッピングといった構文構造を管理するために使用されます。アット記号 `@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。
 
 ## アットルールとアットルール記述子の索引
 
@@ -114,6 +114,6 @@ l10n:
 ## 関連情報
 
 - [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- [入れ子アットルール](/ja/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
-- [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
+- [入れ子アットルール](/ja/docs/Web/CSS/Guides/Nesting/At-rules)
+- [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール
+- [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール

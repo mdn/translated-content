@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-**CSS セレクター**は、 [CSS ルール](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_rulesets)で使用されるパターンであり、スタイル設定のために特定の要素をターゲットとして選択するためのものです。
+**CSS セレクター**は、 [CSS ルール](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_rulesets)で使用されるパターンであり、スタイル設定のために特定の要素をターゲットとして選択するためのものです。
 
 例えば、段落にスタイル設定するには、 `p` [要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)を使用してすべての {{HTMLElement("p")}} 要素を選択し、スタイルを適用します。
 
@@ -46,11 +46,11 @@ p {
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール
+- [CSS セレクターの構造](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure)
 - [CSS 結合子](/ja/docs/Web/CSS/Reference/Selectors/Combinators)
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)
-- [セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
-- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [セレクターと結合子](/ja/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators)
+- [CSS 擬似要素](/ja/docs/Web/CSS/Guides/Pseudo-elements)モジュール
+- [CSS 入れ子](/ja/docs/Web/CSS/Guides/Nesting)モジュール
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
