@@ -1,7 +1,6 @@
 ---
 title: 使用多重背景
 slug: Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ## 範例
 
-在這個範例中，堆疊了三個背景：Firefox logo、一個泡泡的圖片，以及一個[線性漸層](/zh-TW/docs/Web/CSS/gradient/linear-gradient)：
+在這個範例中，堆疊了三個背景：Firefox logo、一個泡泡的圖片，以及一個[線性漸層](/zh-TW/docs/Web/CSS/Reference/Values/gradient/linear-gradient)：
 
 ### HTML
 
@@ -45,5 +44,5 @@ l10n:
 
 ## 參見
 
-- [使用 CSS 漸層](/zh-TW/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [CSS 背景與邊框](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders)模組
+- [使用 CSS 漸層](/zh-TW/docs/Web/CSS/Guides/Images/Using_gradients)
+- [CSS 背景與邊框](/zh-TW/docs/Web/CSS/Guides/Backgrounds_and_borders)模組

@@ -2,7 +2,6 @@
 title: 使用 CSS 動畫
 short-title: 使用動畫
 slug: Web/CSS/Guides/Animations/Using
-original_slug: Web/CSS/CSS_animations/Using_CSS_animations
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -393,7 +392,7 @@ function listener(event) {
 
 這個範例展示了 [`display`](/zh-TW/docs/Web/CSS/Reference/Properties/display) 和 [`content-visibility`](/zh-TW/docs/Web/CSS/Reference/Properties/content-visibility) 如何加上動畫。這種行為對於建立進入／離開動畫很有用，例如你想要用 `display: none` 從 DOM 中移除一個容器，但希望它能用 [`opacity`](/zh-TW/docs/Web/CSS/Reference/Properties/opacity) 平滑地淡出，而不是立即消失。
 
-支援的瀏覽器會使用[離散動畫類型](/zh-TW/docs/Web/CSS/CSS_animated_properties#離散)的變體來為 `display` 和 `content-visibility` 加上動畫。這通常意味著屬性將在兩個值之間動畫的中途（50%）翻轉。
+支援的瀏覽器會使用[離散動畫類型](/zh-TW/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)的變體來為 `display` 和 `content-visibility` 加上動畫。這通常意味著屬性將在兩個值之間動畫的中途（50%）翻轉。
 
 然而，有一個例外，那就是當從 `display: none` 或 `content-visibility: hidden` 動畫到一個可見值時。在這種情況下，瀏覽器將在兩個值之間翻轉，以便被加上動畫的內容在整個動畫持續時間內都是可見的。
 
@@ -513,5 +512,5 @@ function showHide() {
 ## 參見
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [使用 CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [使用 CSS 轉場](/zh-TW/docs/Web/CSS/Guides/Transitions/Using)
 - [使用 Web 動畫 API](/zh-TW/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)

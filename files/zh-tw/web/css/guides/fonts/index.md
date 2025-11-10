@@ -1,7 +1,6 @@
 ---
 title: CSS 字型
 slug: Web/CSS/Guides/Fonts
-original_slug: Web/CSS/CSS_fonts
 ---
 
 **CSS 字型**模組定義了與字型相關的屬性以及字體資源的載入方式。它允許你定義字型的樣式，例如其字族、大小和粗細，以及當多個字形可用於單一字元時要使用的字形變體。
@@ -138,10 +137,10 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 - [Web 字型](/zh-TW/docs/Learn_web_development/Core/Text_styling/Web_fonts)
   - : 在這篇給初學者的文章中，我們詳細介紹如何在網頁上使用自訂字型以實現更多樣化的自訂文字樣式。
 
-- [OpenType 字型特性指南](/zh-TW/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
+- [OpenType 字型特性指南](/zh-TW/docs/Web/CSS/Guides/Fonts/OpenType_fonts)
   - : 字型功能或變體是指 OpenType 字型中包含的不同字形或字元樣式，其中包括連字（組合「fi」或「ffl」等字元的特殊字形）、字距調整（調整特定字母形式對之間的間距）、分數、數字樣式以及許多其他內容。 這些都稱為 OpenType 功能，並且可以透過特定屬性和低階控制屬性 {{cssxref("font-feature-settings")}} 在 Web 上使用。本文提供了有關在 CSS 中使用 OpenType 字型功能所需的所有資訊。
 
-- [可變字型指南](/zh-TW/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+- [可變字型指南](/zh-TW/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : 本文將協助你開始使用可變字型。
 
 - [提升字型效能](/zh-TW/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
@@ -159,7 +158,7 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 ## 參見
 
-- [CSS 字型載入](/zh-TW/docs/Web/CSS/CSS_font_loading)模組
+- [CSS 字型載入](/zh-TW/docs/Web/CSS/Guides/Font_loading)模組
 - [CSS 字型載入 API](/zh-TW/docs/Web/API/CSS_Font_Loading_API)
-- [CSS 文本](/zh-TW/docs/Web/CSS/CSS_text)模組
-- [CSS 書寫模式](/zh-TW/docs/Web/CSS/CSS_writing_modes)模組
+- [CSS 文本](/zh-TW/docs/Web/CSS/Guides/Text)模組
+- [CSS 書寫模式](/zh-TW/docs/Web/CSS/Guides/Writing_modes)模組

@@ -1,7 +1,6 @@
 ---
 title: 繼承
 slug: Web/CSS/Guides/Cascade/Inheritance
-original_slug: Web/CSS/CSS_cascade/Inheritance
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -10,14 +9,14 @@ l10n:
 
 CSS 屬性可以分為兩種類型：
 
-- **繼承屬性**，預設會設定為其父元素的[計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)。
-- **非繼承屬性**，預設會設定為該屬性的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+- **繼承屬性**，預設會設定為其父元素的[計算值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算值)。
+- **非繼承屬性**，預設會設定為該屬性的[初始值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)。
 
 請參閱[任何 CSS 屬性](/zh-TW/docs/Web/CSS/Reference#索引)的定義，以查看特定屬性預設是否繼承（「Inherited: yes」）或不繼承（「Inherited: no」）。
 
 ## 繼承屬性
 
-當元素上未指定**繼承屬性**的值時，該元素會取得其父元素上該屬性的[計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)。只有文件的根元素會取得屬性摘要中給定的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+當元素上未指定**繼承屬性**的值時，該元素會取得其父元素上該屬性的[計算值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算值)。只有文件的根元素會取得屬性摘要中給定的[初始值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)。
 
 繼承屬性的一個典型範例是 [`color`](/zh-TW/docs/Web/CSS/Reference/Properties/color) 屬性。請看以下樣式規則和標記：
 
@@ -37,7 +36,7 @@ p {
 
 ## 非繼承屬性
 
-當元素上未指定**非繼承屬性**的值時，該元素會取得該屬性的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)（如屬性摘要中所指定）。
+當元素上未指定**非繼承屬性**的值時，該元素會取得該屬性的[初始值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)（如屬性摘要中所指定）。
 
 非繼承屬性的一個典型範例是 {{ Cssxref("border") }} 屬性。請看以下樣式規則和標記：
 
@@ -57,7 +56,7 @@ p {
 
 ## 備註
 
-[`inherit`](/zh-TW/docs/Web/CSS/inherit) 關鍵字允許作者明確指定繼承。它對繼承和非繼承屬性都有效。
+[`inherit`](/zh-TW/docs/Web/CSS/Reference/Values/inherit) 關鍵字允許作者明確指定繼承。它對繼承和非繼承屬性都有效。
 
 你可以使用 [`all`](/zh-TW/docs/Web/CSS/Reference/Properties/all) 簡寫屬性一次控制所有屬性的繼承，它會將其值應用於所有屬性。例如：
 
@@ -99,15 +98,15 @@ em {
 
 ## 參見
 
-- 用於控制繼承的 CSS 值：[`inherit`](/zh-TW/docs/Web/CSS/inherit)、[`initial`](/zh-TW/docs/Web/CSS/initial)、[`revert`](/zh-TW/docs/Web/CSS/revert)、[`revert-layer`](/zh-TW/docs/Web/CSS/revert-layer) 和 [`unset`](/zh-TW/docs/Web/CSS/unset)
-- [CSS 錯誤處理](/zh-TW/docs/Web/CSS/CSS_syntax/Error_handling)
-- [CSS 層疊介紹](/zh-TW/docs/Web/CSS/CSS_cascade/Cascade)
+- 用於控制繼承的 CSS 值：[`inherit`](/zh-TW/docs/Web/CSS/Reference/Values/inherit)、[`initial`](/zh-TW/docs/Web/CSS/Reference/Values/initial)、[`revert`](/zh-TW/docs/Web/CSS/Reference/Values/revert)、[`revert-layer`](/zh-TW/docs/Web/CSS/Reference/Values/revert-layer) 和 [`unset`](/zh-TW/docs/Web/CSS/Reference/Values/unset)
+- [CSS 錯誤處理](/zh-TW/docs/Web/CSS/Guides/Syntax/Error_handling)
+- [CSS 層疊介紹](/zh-TW/docs/Web/CSS/Guides/Cascade/Introduction)
 - [學習：處理衝突](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [學習：層疊層](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS 層疊與繼承](/zh-TW/docs/Web/CSS/CSS_cascade)模組
-- [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)指南
-- [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax)模組
-- [At 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
-- [初始](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)、[計算](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)、[應用](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#應用值)和[實際](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#實際值)值
+- [CSS 層疊與繼承](/zh-TW/docs/Web/CSS/Guides/Cascade)模組
+- [CSS 語法](/zh-TW/docs/Web/CSS/Guides/Syntax/Introduction)指南
+- [CSS 語法](/zh-TW/docs/Web/CSS/Guides/Syntax)模組
+- [At 規則](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules)
+- [初始](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)、[計算](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算值)、[應用](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#應用值)和[實際](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#實際值)值
 - [值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [CSS 巢狀模組](/zh-TW/docs/Web/CSS/CSS_nesting)
+- [CSS 巢狀模組](/zh-TW/docs/Web/CSS/Guides/Nesting)

@@ -1,7 +1,6 @@
 ---
 title: CSS 行內布局
 slug: Web/CSS/Guides/Inline_layout
-original_slug: Web/CSS/CSS_inline_layout
 l10n:
   sourceCommit: 113279ab09692d869866519106e25cba8a20abb8
 ---
@@ -34,7 +33,7 @@ l10n:
 
 ## 指南
 
-- [行內格式化上下文](/zh-TW/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- [行內格式化上下文](/zh-TW/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
   - : 說明格式化上下文。
 
 ## 相關概念
@@ -52,6 +51,6 @@ l10n:
 
 ## 參見
 
-- [CSS 文本](/zh-TW/docs/Web/CSS/CSS_text)模組
-- [CSS 字體](/zh-TW/docs/Web/CSS/CSS_fonts)模組
-- [CSS 書寫模式](/zh-TW/docs/Web/CSS/CSS_writing_modes)模組
+- [CSS 文本](/zh-TW/docs/Web/CSS/Guides/Text)模組
+- [CSS 字體](/zh-TW/docs/Web/CSS/Guides/Fonts)模組
+- [CSS 書寫模式](/zh-TW/docs/Web/CSS/Guides/Writing_modes)模組

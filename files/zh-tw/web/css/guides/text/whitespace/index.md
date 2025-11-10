@@ -1,7 +1,6 @@
 ---
 title: 處理空白
 slug: Web/CSS/Guides/Text/Whitespace
-original_slug: Web/CSS/CSS_text/Whitespace
 ---
 
 #### 問題說明

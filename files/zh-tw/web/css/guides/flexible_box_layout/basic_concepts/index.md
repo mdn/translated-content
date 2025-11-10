@@ -2,14 +2,13 @@
 title: Flexbox 的基本概念
 short-title: 基本概念
 slug: Web/CSS/Guides/Flexible_box_layout/Basic_concepts
-original_slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[彈性盒子版面配置](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)模組（通常稱為 flexbox）是一種一維的版面配置模型，用於在項目之間分配空間，並包含多種對齊功能。本文概述了 flexbox 的主要特性，我們將在後續的指南中更詳細地探討這些特性。
+[彈性盒子版面配置](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout)模組（通常稱為 flexbox）是一種一維的版面配置模型，用於在項目之間分配空間，並包含多種對齊功能。本文概述了 flexbox 的主要特性，我們將在後續的指南中更詳細地探討這些特性。
 
-當我們說 flexbox 是一維的，我們描述的是 flexbox 一次只處理一個維度的版面配置——要麼是列，要麼是欄。這與 [CSS 網格版面配置](/zh-TW/docs/Web/CSS/CSS_grid_layout)的二維模型形成對比，後者可以同時控制欄和列。
+當我們說 flexbox 是一維的，我們描述的是 flexbox 一次只處理一個維度的版面配置——要麼是列，要麼是欄。這與 [CSS 網格版面配置](/zh-TW/docs/Web/CSS/Guides/Grid_layout)的二維模型形成對比，後者可以同時控制欄和列。
 
 ## flexbox 的兩個軸線
 
@@ -44,9 +43,9 @@ l10n:
 
 ## 起始線與終點線
 
-另一個需要理解的重點是，flexbox 對文件的書寫模式沒有任何假設。Flexbox 不會只假設所有文字行都從文件的左上角開始，向右側延伸，新行則出現在下方。相反地，它支援所有書寫模式，就像其他的[邏輯屬性與值](/zh-TW/docs/Web/CSS/CSS_logical_properties_and_values)一樣。
+另一個需要理解的重點是，flexbox 對文件的書寫模式沒有任何假設。Flexbox 不會只假設所有文字行都從文件的左上角開始，向右側延伸，新行則出現在下方。相反地，它支援所有書寫模式，就像其他的[邏輯屬性與值](/zh-TW/docs/Web/CSS/Guides/Logical_properties_and_values)一樣。
 
-你可以在後續的文章中[閱讀更多關於 flexbox 與書寫模式之間的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods#書寫模式)；然而，以下的描述應該有助於解釋為什麼我們在描述 flex 項目流動方向時，不使用左、右、上、下這些詞。
+你可以在後續的文章中[閱讀更多關於 flexbox 與書寫模式之間的關係](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods#書寫模式)；然而，以下的描述應該有助於解釋為什麼我們在描述 flex 項目流動方向時，不使用左、右、上、下這些詞。
 
 如果 `flex-direction` 是 `row`，且我正在使用英文，那麼主軸的起始邊將在左側，終點邊在右側。
 
@@ -166,7 +165,7 @@ l10n:
 
 {{EmbedLiveSample("flex-wrap")}}
 
-在[精通 flex 項目的換行](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)指南中了解更多關於 flex 項目換行的資訊。
+在[精通 flex 項目的換行](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)指南中了解更多關於 flex 項目換行的資訊。
 
 ## flex-flow 簡寫屬性
 
@@ -208,7 +207,7 @@ l10n:
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-我們將在下面簡要介紹這些屬性，但如果你想要更全面的資訊，請參閱[控制主軸上 flex 項目的比例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)指南。
+我們將在下面簡要介紹這些屬性，但如果你想要更全面的資訊，請參閱[控制主軸上 flex 項目的比例](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)指南。
 
 在我們能夠理解這些屬性之前，我們需要考慮**可用空間**的概念。當我們改變這些 flex 屬性的值時，我們正在改變可用空間在我們的項目之間分配的方式。這個可用空間的概念在我們討論對齊項目時也很重要。
 
@@ -234,7 +233,7 @@ l10n:
 
 `flex-grow` 屬性處理在主軸上增加空間，而 `flex-shrink` 屬性則控制如何減少空間。如果我們在容器中沒有足夠的空間來排版我們的項目，並且 `flex-shrink` 設定為正整數，那麼項目可以變得比 `flex-basis` 更小。與 `flex-grow` 一樣，可以分配不同的值以使一個項目比其他項目收縮得更快——`flex-shrink` 值設定較高的項目將比其同層級值較低的項目收縮得更快。
 
-一個項目可以縮小到其 {{cssxref("min-content")}} 尺寸。在計算將發生的實際收縮量時，會考慮到這個最小尺寸，這意味著 `flex-shrink` 的行為可能看起來不如 `flex-grow` 一致。因此，我們將在[控制主軸上項目比例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)一文中更詳細地探討這個演算法的運作方式。
+一個項目可以縮小到其 {{cssxref("min-content")}} 尺寸。在計算將發生的實際收縮量時，會考慮到這個最小尺寸，這意味著 `flex-shrink` 的行為可能看起來不如 `flex-grow` 一致。因此，我們將在[控制主軸上項目比例](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)一文中更詳細地探討這個演算法的運作方式。
 
 > [!NOTE]
 > `flex-grow` 和 `flex-shrink` 的這些值是比例。通常，如果我們將所有項目都設定為 `flex: 1 1 200px`，然後希望一個項目以兩倍的速度增長，我們會將該項目設定為 `flex: 2 1 200px`。但是，如果你願意，也可以使用 `flex: 10 1 200px` 和 `flex: 20 1 200px`。
@@ -426,7 +425,7 @@ flexbox 的一個關鍵特性是能夠在主軸和交錯軸上對齊和兩端對
 
 {{EmbedLiveSample("justify-content")}}
 
-[在 flex 容器中對齊項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)一文更深入地探討了這些屬性，以便更好地理解它們的運作方式。然而，這些基本範例在大多數使用情境中都很有用。
+[在 flex 容器中對齊項目](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)一文更深入地探討了這些屬性，以便更好地理解它們的運作方式。然而，這些基本範例在大多數使用情境中都很有用。
 
 ### justify-items
 
@@ -436,8 +435,8 @@ flexbox 的一個關鍵特性是能夠在主軸和交錯軸上對齊和兩端對
 
 [`place-items`](/zh-TW/docs/Web/CSS/Reference/Properties/place-items) 屬性是 `align-items` 和 `justify-items` 的簡寫屬性。如果設定在 flex 容器上，它會設定對齊方式，但不會設定兩端對齊，因為 `justify-items` 在 flexbox 中會被忽略。
 
-還有另一個簡寫屬性，[`place-content`](/zh-TW/docs/Web/CSS/Reference/Properties/place-content)，它定義了 {{cssxref("align-content")}} 和 `justify-content` 屬性。`align-content` 屬性只影響會換行的 flex 容器，其詳細說明請參閱 [flex 容器中的項目對齊](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)。
+還有另一個簡寫屬性，[`place-content`](/zh-TW/docs/Web/CSS/Reference/Properties/place-content)，它定義了 {{cssxref("align-content")}} 和 `justify-content` 屬性。`align-content` 屬性只影響會換行的 flex 容器，其詳細說明請參閱 [flex 容器中的項目對齊](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)。
 
 ## 後續步驟
 
-閱讀本文後，你應該對 flexbox 的基本特性有了了解。在下一篇文章中，我們將探討[此規範如何與 CSS 的其他部分相關](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)。
+閱讀本文後，你應該對 flexbox 的基本特性有了了解。在下一篇文章中，我們將探討[此規範如何與 CSS 的其他部分相關](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)。

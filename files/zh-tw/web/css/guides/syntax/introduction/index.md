@@ -1,7 +1,6 @@
 ---
 title: 語法
 slug: Web/CSS/Guides/Syntax/Introduction
-original_slug: Web/CSS/CSS_syntax/Syntax
 ---
 
 串接式樣式表 ([CSS](/zh-TW/docs/Web/CSS)) 語言的基礎目標是是讓瀏覽器引擎用特定的功能將元素寫在頁面上，像是顏色、位置與裝飾。CSS 語法反映出了目的，而它的基本組成為：
@@ -58,7 +57,7 @@ A **statement** is a building block that begins with any non-space characters an
 There are two kinds of statements:
 
 - **Rulesets** (or _rules_) that, as seen, associate a collection of CSS declarations to a condition described by a selector.
-- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/zh-TW/docs/Web/CSS/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
+- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
 
 Any statement which isn't a ruleset or an at-rule is invalid and ignored.
 
@@ -67,23 +66,23 @@ There is another group of statements - the **nested statements**. These are stat
 ## See also
 
 - CSS 重要概念：
-  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
-  - [註釋](/zh-TW/docs/Web/CSS/Comments)
-  - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 語法](/zh-TW/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [@ 規則](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [註釋](/zh-TW/docs/Web/CSS/Guides/Syntax/Comments)
+  - [優先級](/zh-TW/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [繼承](/zh-TW/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-TW/docs/Web/CSS/Guides/Box_model/Introduction)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
-  - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [視覺格式化模型](/zh-TW/docs/Web/CSS/Guides/Display/Visual_formatting_model)
+  - [外邊距合併](/zh-TW/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - 值
-    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-TW/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-TW/docs/Web/CSS/CSS_cascade/specified_value)
-    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
-    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初始值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [計算值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算值)
+    - [解析值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#解析值)
+    - [指定值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)
+    - [應用值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#應用值)
+    - [實際值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#實際值)
 
   - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [簡寫屬性](/zh-TW/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("replaced elements", "可置換元素")}}

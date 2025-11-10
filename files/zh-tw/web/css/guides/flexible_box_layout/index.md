@@ -1,7 +1,6 @@
 ---
 title: CSS 彈性盒佈局
 slug: Web/CSS/Guides/Flexible_box_layout
-original_slug: Web/CSS/CSS_flexible_box_layout
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -68,33 +67,33 @@ body {
 
 ## 指南
 
-- [彈性盒的基本概念](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [彈性盒的基本概念](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : 彈性盒功能概覽。
-- [彈性盒與其他佈局方法的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+- [彈性盒與其他佈局方法的關係](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
   - : 彈性盒如何與其他佈局方法及其他 CSS 規範相關聯。
-- [在彈性容器中對齊項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [在彈性容器中對齊項目](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : 盒對齊屬性如何與 Flexbox 一同運作。
-- [排序彈性項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [排序彈性項目](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
   - : 解釋改變項目順序和方向的不同方法，並涵蓋這樣做可能產生的問題。
-- [控制彈性項目沿主軸的比例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [控制彈性項目沿主軸的比例](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
   - : 解釋 flex-grow、flex-shrink 和 flex-basis 屬性。
-- [精通彈性項目的換行](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [精通彈性項目的換行](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
   - : 如何建立具有多行的彈性容器，並控制這些行中項目的顯示方式。
-- [彈性盒的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [彈性盒的典型用例](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : 彈性盒典型的常見設計模式。
 - [CSS 佈局：彈性盒](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : 學習如何使用彈性盒佈局來建立 Web 佈局。
-- [彈性盒中的盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-  - : 詳細介紹 [CSS 盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment)中專屬於彈性盒的功能。
+- [彈性盒中的盒對齊](/zh-TW/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+  - : 詳細介紹 [CSS 盒對齊](/zh-TW/docs/Web/CSS/Guides/Box_alignment)中專屬於彈性盒的功能。
 
 ## 相關概念
 
-[CSS display 模組](/zh-TW/docs/Web/CSS/CSS_display)
+[CSS display 模組](/zh-TW/docs/Web/CSS/Guides/Display)
 
 - {{cssxref("display")}}
 - {{cssxref("order")}}
 
-[CSS 盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment)模組
+[CSS 盒對齊](/zh-TW/docs/Web/CSS/Guides/Box_alignment)模組
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
@@ -106,7 +105,7 @@ body {
 - {{cssxref("place-items")}}
 - {{cssxref("row-gap")}}
 
-[CSS 盒尺寸](/zh-TW/docs/Web/CSS/CSS_box_sizing)模組
+[CSS 盒尺寸](/zh-TW/docs/Web/CSS/Guides/Box_sizing)模組
 
 - {{cssxref("aspect-ratio")}}
 - {{cssxref("max-content")}} 值
@@ -120,6 +119,6 @@ body {
 
 ## 參見
 
-- [CSS 網格佈局](/zh-TW/docs/Web/CSS/CSS_grid_layout)模組
-- [CSS 書寫模式](/zh-TW/docs/Web/CSS/CSS_writing_modes)模組
-- [在 CSS display 中使用多關鍵字語法](/zh-TW/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
+- [CSS 網格佈局](/zh-TW/docs/Web/CSS/Guides/Grid_layout)模組
+- [CSS 書寫模式](/zh-TW/docs/Web/CSS/Guides/Writing_modes)模組
+- [在 CSS display 中使用多關鍵字語法](/zh-TW/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)

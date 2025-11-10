@@ -1,7 +1,6 @@
 ---
 title: 為替換元素設定樣式
 slug: Web/CSS/Guides/Images/Replaced_element_properties
-original_slug: Web/CSS/CSS_images/Replaced_element_properties
 l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
@@ -14,7 +13,7 @@ l10n:
 
 在某些情況下，CSS 會特別處理替換元素，例如在計算外距和一些 `auto` 值時。只有替換元素才能擁有{{glossary("intrinsic size", "固有尺寸")}}。一些（但非全部）替換元素具有固有尺寸或已定義的基線，某些 CSS 屬性（例如 {{cssxref("vertical-align")}}）會使用這些特性。
 
-雖然文件樣式可以設定替換元素的大小和位置，但文件樣式不會影響替換元素的內容，但有一些例外：[CSS 圖片模組](/zh-TW/docs/Web/CSS/CSS_images)包含了一些屬性，支援控制元素內容在其盒子內的定位。
+雖然文件樣式可以設定替換元素的大小和位置，但文件樣式不會影響替換元素的內容，但有一些例外：[CSS 圖片模組](/zh-TW/docs/Web/CSS/Guides/Images)包含了一些屬性，支援控制元素內容在其盒子內的定位。
 
 ## 控制內容框內的物件位置
 
@@ -143,7 +142,7 @@ img {
 
 ## 參見
 
-- [理解長寬比](/zh-TW/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [CSS 圖片](/zh-TW/docs/Web/CSS/CSS_images)模組
-- [CSS display](/zh-TW/docs/Web/CSS/CSS_display) 模組
-- [CSS 背景與邊框](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders) 模組
+- [理解長寬比](/zh-TW/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [CSS 圖片](/zh-TW/docs/Web/CSS/Guides/Images)模組
+- [CSS display](/zh-TW/docs/Web/CSS/Guides/Display) 模組
+- [CSS 背景與邊框](/zh-TW/docs/Web/CSS/Guides/Backgrounds_and_borders) 模組

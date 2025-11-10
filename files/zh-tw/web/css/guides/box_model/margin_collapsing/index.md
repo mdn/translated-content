@@ -1,7 +1,6 @@
 ---
 title: 精通外距摺疊
 slug: Web/CSS/Guides/Box_model/Margin_collapsing
-original_slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 l10n:
   sourceCommit: c9fc9aa7a65c5109e64c0f7b6d9e732dd812973f
 ---
@@ -15,7 +14,7 @@ l10n:
 - 沒有內容分隔父元素和後代元素
   - : 父區塊與其後代元素之間的垂直外距可以摺疊。當它們之間沒有任何內容分隔時，就會發生這種情況。具體來說，這發生在兩種主要情況下：
     - 父元素的 {{cssxref("margin-top")}} 會與其第一個在流中的後代元素的 {{cssxref("margin-top")}} 摺疊，除非父元素有 {{cssxref("border-top")}}、{{cssxref("padding-top")}}、包含任何行內內容（例如文字），或已套用 [_clearance_](/zh-TW/docs/Web/CSS/Reference/Properties/clear)。
-    - 父元素的 {{cssxref("margin-bottom")}} 會與其最後一個在流中的後代元素的 {{cssxref("margin-bottom")}} 摺疊，除非父元素有已定義的 {{cssxref("height")}} 或 {{cssxref("min-height")}}、{{cssxref("border-bottom")}} 或 {{cssxref("padding-bottom")}}。在這兩種情況下，在父元素上建立一個新的[區塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)也會防止其外距與其子元素的外距摺疊。
+    - 父元素的 {{cssxref("margin-bottom")}} 會與其最後一個在流中的後代元素的 {{cssxref("margin-bottom")}} 摺疊，除非父元素有已定義的 {{cssxref("height")}} 或 {{cssxref("min-height")}}、{{cssxref("border-bottom")}} 或 {{cssxref("padding-bottom")}}。在這兩種情況下，在父元素上建立一個新的[區塊格式化上下文](/zh-TW/docs/Web/CSS/Guides/Display/Block_formatting_context)也會防止其外距與其子元素的外距摺疊。
 - 空區塊
   - : 如果沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔一個區塊的 {{cssxref("margin-top")}} 和其 {{cssxref("margin-bottom")}}，那麼它的上外距和下外距就會摺疊。
 
@@ -66,19 +65,19 @@ p {
 ## 參見
 
 - CSS 關鍵概念：
-  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
-  - [At 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
-  - [註解](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
-  - [權重](/zh-TW/docs/Web/CSS/CSS_cascade/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [CSS 語法](/zh-TW/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [At 規則](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [註解](/zh-TW/docs/Web/CSS/Guides/Syntax/Comments)
+  - [權重](/zh-TW/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [繼承](/zh-TW/docs/Web/CSS/Guides/Cascade/Inheritance)
+  - [盒模型](/zh-TW/docs/Web/CSS/Guides/Box_model/Introduction)
   - [排版模式](/zh-TW/docs/Glossary/Layout_mode)
-  - [視覺化格式模型](/zh-TW/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - [視覺化格式模型](/zh-TW/docs/Web/CSS/Guides/Display/Visual_formatting_model)
   - 值
-    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)
-    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#應用值)
-    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#實際值)
+    - [初始值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+    - [計算值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算值)
+    - [應用值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#應用值)
+    - [實際值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#實際值)
   - [值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [簡寫屬性](/zh-TW/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
   - {{glossary("Replaced elements", "替換元素")}}

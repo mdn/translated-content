@@ -1,10 +1,9 @@
 ---
 title: 格線佈局的基本概念
 slug: Web/CSS/Guides/Grid_layout/Basic_concepts
-original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
-[CSS 格線佈局](/zh-TW/docs/Web/CSS/CSS_grid_layout)介紹了二維的 CSS 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 CSS 格線 Level 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
+[CSS 格線佈局](/zh-TW/docs/Web/CSS/Guides/Grid_layout)介紹了二維的 CSS 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 CSS 格線 Level 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
 
 ## 什麽是格線？
 
@@ -30,7 +29,7 @@ original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 數個單位也能被放進 grid cell、或是區域的一部分相互重疊。我們可以透過 {{cssxref("z-index")}} 控制該分層。
 
-格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
+格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/Guides/Flexible_box_layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
 
 ## 格線容器
 
@@ -684,4 +683,4 @@ We can control the order in which items stack up by using the `z-index` property
 
 ## 下一步
 
-In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/zh-TW/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
+In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/zh-TW/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods).

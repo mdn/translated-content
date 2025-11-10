@@ -1,7 +1,6 @@
 ---
 title: 簡寫屬性
 slug: Web/CSS/Guides/Cascade/Shorthand_properties
-original_slug: Web/CSS/CSS_cascade/Shorthand_properties
 ---
 
 **_簡寫屬性_**是一種可以同時設定許多其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，Web 開發者可以寫出更簡潔、且通常更具可讀性的樣式表，省時又省力。
@@ -218,4 +217,4 @@ margin: 10px 5px 10px 5px;
 
 ## 參見
 
-- [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
+- [CSS 語法](/zh-TW/docs/Web/CSS/Guides/Syntax/Introduction)

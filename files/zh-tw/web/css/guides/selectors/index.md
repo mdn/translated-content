@@ -1,7 +1,6 @@
 ---
 title: CSS Selectors
 slug: Web/CSS/Guides/Selectors
-original_slug: Web/CSS/CSS_selectors
 ---
 
 **選擇器**可以定義某組 CSS 樣式要套用到哪些元素上。
@@ -75,4 +74,4 @@ See the [pseudo-class](/zh-TW/docs/Web/CSS/Reference/Selectors/Pseudo-classes#sp
 
 ## 參見
 
-- [CSS Specificity](/zh-TW/docs/Web/CSS/Specificity)
+- [CSS Specificity](/zh-TW/docs/Web/CSS/Guides/Cascade/Specificity)

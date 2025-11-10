@@ -1,7 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/Reference/Values/transform-function/translate3d
-original_slug: Web/CSS/transform-function/translate3d
 ---
 
 **`translate3d()`** [CSS](/zh-TW/docs/Web/CSS) 函式以 3D 場境的方式定位元素。其結果為 {{cssxref("&lt;transform-function&gt;")}} 資料型別。
@@ -219,7 +218,7 @@ div {
 
 ## 瀏覽器相容性
 
-請參見 [`<transform-function>`](/zh-TW/docs/Web/CSS/transform-function#Browser_compatibility)。
+{{Compat}}
 
 ## 參見
 

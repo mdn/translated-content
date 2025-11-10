@@ -1,12 +1,11 @@
 ---
 title: 顏色選擇器
 slug: Web/CSS/Guides/Colors/Color_format_converter
-original_slug: Web/CSS/CSS_colors/Color_format_converter
 l10n:
   sourceCommit: c148812e0874220770cab62c16f33f48ceb98e99
 ---
 
-這個工具讓你可以在 sRGB {{glossary("color space", "色彩空間")}}中選擇一個顏色，並在各種 CSS [顏色格式](/zh-TW/docs/Web/CSS/color_value)之間進行轉換，幫助你了解以下 sRGB 顏色標記法的語法：
+這個工具讓你可以在 sRGB {{glossary("color space", "色彩空間")}}中選擇一個顏色，並在各種 CSS [顏色格式](/zh-TW/docs/Web/CSS/Reference/Values/color_value)之間進行轉換，幫助你了解以下 sRGB 顏色標記法的語法：
 
 - {{cssxref("hex-color")}}，一種 [sRGB](/zh-TW/docs/Glossary/RGB) 顏色的*十六進位顏色表示法*，使用其主要顏色元件（紅、綠、藍）以及其透明度，以十六進位數字書寫。
 - {{CSSxRef("color_value/rgb", "rgb()")}}，根據其紅、綠、藍和 alpha（透明度）元件來定義一個給定的顏色。
@@ -22,10 +21,10 @@ l10n:
 
 ## 參見
 
-- [使用 CSS 屬性應用顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
-- [CSS 顏色值](/zh-TW/docs/Web/CSS/CSS_colors/Color_values)
-- [明智地使用顏色](/zh-TW/docs/Web/CSS/CSS_colors/Using_color_wisely)
-- [使用相對顏色](/zh-TW/docs/Web/CSS/CSS_colors/Relative_colors)
+- [使用 CSS 屬性應用顏色](/zh-TW/docs/Web/CSS/Guides/Colors/Applying_color)
+- [CSS 顏色值](/zh-TW/docs/Web/CSS/Guides/Colors/Color_values)
+- [明智地使用顏色](/zh-TW/docs/Web/CSS/Guides/Colors/Using_color_wisely)
+- [使用相對顏色](/zh-TW/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [了解顏色與亮度](/zh-TW/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [WCAG 1.4.1：顏色對比](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [學習：使用 CSS 設定背景與邊框樣式](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
