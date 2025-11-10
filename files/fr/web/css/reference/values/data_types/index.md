@@ -8,7 +8,7 @@ l10n:
 
 Les **types de données CSS** définissent des valeurs typiques (y compris des mots-clés et des unités) acceptées par les propriétés et les fonctions CSS. Ils sont un type spécial de [type de valeur du composant <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#component-types).
 
-Les types les plus couramment utilisés sont définis dans le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units). Ce module définit également des [notations fonctionnelles](/fr/docs/Web/CSS/Reference/Values/Functions), qui permettent des types ou des traitements plus complexes. D'autres types sont définis dans les spécifications auxquelles ils s'appliquent.
+Les types les plus couramment utilisés sont définis dans le module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units). Ce module définit également des [notations fonctionnelles](/fr/docs/Web/CSS/Reference/Values/Functions), qui permettent des types ou des traitements plus complexes. D'autres types sont définis dans les spécifications auxquelles ils s'appliquent.
 
 Vous trouverez ci-dessous une référence aux types que vous êtes le plus susceptible de rencontrer, mais ce n'est pas une référence complète pour tous les types définis dans chaque spécification CSS.
 
@@ -37,7 +37,7 @@ Ces types incluent des mots-clés et des identifiants ainsi que des chaînes de 
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Un identifiant défini par l'utilisateur·ice, par exemple le nom attribué à l'aide de la propriété {{cssxref("grid-area")}}.
 - {{cssxref("&lt;dashed-ident&gt;")}}
-  - : Un `<custom-ident>` avec la restriction supplémentaire qu'il doit commencer par deux tirets, par exemple avec les [propriétés CSS personnalisées](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties).
+  - : Un `<custom-ident>` avec la restriction supplémentaire qu'il doit commencer par deux tirets, par exemple avec les [propriétés CSS personnalisées](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
 - {{cssxref("&lt;string&gt;")}}
   - : Une chaîne de caractères entre guillemets, comme utilisée pour une valeur de la propriété {{cssxref("content")}}.
 - {{cssxref("url_value", "&lt;url&gt;")}}
@@ -45,7 +45,7 @@ Ces types incluent des mots-clés et des identifiants ainsi que des chaînes de 
 
 ## Types de données numériques
 
-Ces types de données sont utilisés pour indiquer des quantités, des index et des positions. La majorité d'entre eux sont définis dans le module des valeurs et unités CSS, cependant d'autres types sont décrits dans d'autres modules où ils sont spécifiques à cette spécification seule - par exemple l'unité `fr` dans le module [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout).
+Ces types de données sont utilisés pour indiquer des quantités, des index et des positions. La majorité d'entre eux sont définis dans le module des valeurs et unités CSS, cependant d'autres types sont décrits dans d'autres modules où ils sont spécifiques à cette spécification seule - par exemple l'unité `fr` dans le module [Grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout).
 
 - {{cssxref("&lt;integer&gt;")}}
   - : Un ou plusieurs chiffres décimaux de 0 à 9.
@@ -58,7 +58,7 @@ Ces types de données sont utilisés pour indiquer des quantités, des index et 
 - {{cssxref("&lt;ratio&gt;")}}
   - : Un rapport, écrit avec la syntaxe `<number> / <number>`.
 - {{cssxref("&lt;flex&gt;")}}
-  - : Une longueur flexible introduite pour [Grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout), écrite comme un `<number>` avec l'unité `fr` attachée et utilisée pour le dimensionnement des pistes de grille.
+  - : Une longueur flexible introduite pour [Grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout), écrite comme un `<number>` avec l'unité `fr` attachée et utilisée pour le dimensionnement des pistes de grille.
 
 ## Quantités
 
@@ -90,7 +90,7 @@ Certaines propriétés CSS peuvent accepter une dimension ou une valeur de pourc
 
 ## Couleur
 
-Le module [Couleur CSS](/fr/docs/Web/CSS/CSS_colors) définit le type de données {{cssxref("&lt;color&gt;")}}, ainsi que d'autres types liés à la couleur en CSS.
+Le module [Couleur CSS](/fr/docs/Web/CSS/Guides/Colors) définit le type de données {{cssxref("&lt;color&gt;")}}, ainsi que d'autres types liés à la couleur en CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Définit comme un mot-clé ou une valeur numérique de couleur.
@@ -101,7 +101,7 @@ Le module [Couleur CSS](/fr/docs/Web/CSS/CSS_colors) définit le type de donnée
 
 ## Images
 
-Le module [Images CSS](/fr/docs/Web/CSS/CSS_images) définit les types de données qui traitent des images, y compris les dégradés.
+Le module [Images CSS](/fr/docs/Web/CSS/Guides/Images) définit les types de données qui traitent des images, y compris les dégradés.
 
 - {{cssxref("&lt;image&gt;")}}
   - : Une référence d'URL à une image ou à un dégradé de couleur.
@@ -138,7 +138,7 @@ Ces types de données sont utilisés dans les calculs de [fonction mathématique
 
 ## Types de données de forme
 
-Les modules [formes CSS](/fr/docs/Web/CSS/CSS_shapes) et [bordures et décorations de boîtes CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations) définissent des types de données de forme&nbsp;:
+Les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [bordures et décorations de boîtes CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations) définissent des types de données de forme&nbsp;:
 
 - {{cssxref("&lt;basic-shape&gt;")}}
   - : Décrit les fonctions de forme utilisées dans les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} et {{cssxref("offset-path")}}.
@@ -151,6 +151,6 @@ Les modules [formes CSS](/fr/docs/Web/CSS/CSS_shapes) et [bordures et décoratio
 
 ## Voir aussi
 
-- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/CSS_values_and_units)
+- Le module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
 - [Apprendre&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Fonctions de valeur CSS](/fr/docs/Web/CSS/Reference/Values/Functions)

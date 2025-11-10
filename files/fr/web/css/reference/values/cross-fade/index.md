@@ -127,7 +127,7 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
 - Fonctions de création de dégradés&nbsp;:
   - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
   - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
