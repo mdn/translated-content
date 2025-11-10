@@ -213,6 +213,6 @@ li li {
 - Les autres éléments HTML relatifs aux listes : {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} (et l'élément obsolète {{HTMLElement("dir")}}).
 - Les propriétés CSS particulièrement utiles pour mettre en forme l'élément `<ul>` :
   - La propriété {{cssxref("list-style")}} qui permet de choisir la façon dont l'indicateur ordinal est affiché,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), qui permettent de gérer des listes imbriquées complexes,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters), qui permettent de gérer des listes imbriquées complexes,
   - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](#compact) désormais déprécié,
   - La propriété {{cssxref("margin")}} peut être utilisée pour contrôler l'indentation de la liste.

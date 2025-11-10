@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-posture`** permet de détecter la [posture actuelle](/fr/docs/Web/API/Device_Posture_API) d'un appareil, c'est-à-dire si la zone d'affichage est à plat (`continuous`) ou repliée (`folded`).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-posture`** permet de détecter la [posture actuelle](/fr/docs/Web/API/Device_Posture_API) d'un appareil, c'est-à-dire si la zone d'affichage est à plat (`continuous`) ou repliée (`folded`).
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ La caractéristique `device-posture` se définit à l'aide d'une valeur-mot-clé
 
 ## Exemples
 
-Dans cet exemple, la caractéristique média `device-posture` détecte lorsqu'un appareil est en posture repliée, et ajoute une marge selon son [`orientation`](/fr/docs/Web/CSS/@media/orientation) pour créer un espace plus large entre les deux panneaux de l'application et faciliter la lecture.
+Dans cet exemple, la caractéristique média `device-posture` détecte lorsqu'un appareil est en posture repliée, et ajoute une marge selon son [`orientation`](/fr/docs/Web/CSS/Reference/At-rules/@media/orientation) pour créer un espace plus large entre les deux panneaux de l'application et faciliter la lecture.
 
 ```css
 @media (device-posture: folded) and (orientation: landscape) {
@@ -51,5 +51,5 @@ Pour voir le code ci-dessus en action, consultez la [démo de l'API Device Postu
 
 - {{domxref("DevicePosture")}}
 - L'[API Device Posture](/fr/docs/Web/API/Device_Posture_API)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}

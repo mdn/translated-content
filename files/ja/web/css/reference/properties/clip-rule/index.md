@@ -128,7 +128,7 @@ svg {
 
 #### CSS
 
-`<div>` 要素に {{cssxref("width")}} および {{cssxref("height")}} を設定し、 [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient) を {{cssxref("background-image")}} 値として追加します。
+`<div>` 要素に {{cssxref("width")}} および {{cssxref("height")}} を設定し、 [`conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient) を {{cssxref("background-image")}} 値として追加します。
 
 ```css hidden
 body {
@@ -279,8 +279,8 @@ div:last-of-type {
 
 - {{cssxref("fill-rule")}}
 - {{cssxref("clip-path")}}
-- [CSS クリップ入門](/ja/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
+- [CSS クリップ入門](/ja/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{SVGAttr("clip-rule")}} 属性
 - SVG の {{SVGElement("clipPath")}} 要素
 - SVG の {{SVGAttr("fill-rule")}} 属性

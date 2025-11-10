@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
-**`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
+**`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
 
 {{InteractiveExample("CSS デモ: transition")}}
 
@@ -121,7 +121,7 @@ transition: unset;
   - 値を指定しない場合、値は `all` とみなされ、指定したトランジションは変化するすべてのプロパティに適用されます。
 - 使用するイージング関数を表す 0 ～ 1 個の {{cssxref("&lt;easing-function&gt;")}} の値。
 - 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる再生時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる待ち時間として解釈されます。
-- アニメーション動作が[離散的](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 つの値。この値が存在する場合、キーワード `allow-discrete` またはキーワード `normal` のどちらかになります。
+- アニメーション動作が[離散的](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)であるプロパティに対して、トランジションを始めるかどうかを宣言する 0 または 1 つの値。この値が存在する場合、キーワード `allow-discrete` またはキーワード `normal` のどちらかになります。
 
 単体プロパティのトランジションに、 `all` をトランジションするプロパティとして指定したものの、その後で {{cssxref("&lt;custom-ident&gt;")}} の値によって単体のプロパティを指定した場合、後のトランジションが先のものを上書きします。例えば次のように指定されていたとします。
 
@@ -133,7 +133,7 @@ transition:
 
 この場合、要素の状態が変わると変化するプロパティは、 {{cssxref("opacity")}} を除き、すべて 200ms の再生時間でトランジションします。
 
-プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
+プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/Guides/Transitions/Using#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
 
 ## 公式定義
 
@@ -182,6 +182,6 @@ transition:
 
 ## 関連情報
 
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)モジュール
+- [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

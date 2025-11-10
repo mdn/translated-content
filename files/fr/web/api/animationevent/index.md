@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Animations API")}}
 
-L'interface **`AnimationEvent`** représente les évènements apportant des informations sur les [animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+L'interface **`AnimationEvent`** représente les évènements apportant des informations sur les [animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using).
 
 {{InheritanceDiagram}}
 
@@ -41,7 +41,7 @@ _Hérite des méthodes de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - Les propriétés CSS et règles @ relatives aux animations&nbsp;:
   - [`animation`](/fr/docs/Web/CSS/Reference/Properties/animation)
   - [`animation-delay`](/fr/docs/Web/CSS/Reference/Properties/animation-delay)
@@ -52,4 +52,4 @@ _Hérite des méthodes de son parent, [`Event`](/fr/docs/Web/API/Event)._
   - [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name)
   - [`animation-play-state`](/fr/docs/Web/CSS/Reference/Properties/animation-play-state)
   - [`animation-timing-function`](/fr/docs/Web/CSS/Reference/Properties/animation-timing-function)
-  - [`@keyframes`](/fr/docs/Web/CSS/@keyframes)
+  - [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes)

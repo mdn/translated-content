@@ -8,10 +8,10 @@ l10n:
 
 {{Non-standard_header}} {{Deprecated_header}}
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`-moz-device-pixel-ratio`** (spécifique à Gecko) permet d'appliquer des styles en fonction du nombre de pixels physiques par pixel CSS.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`-moz-device-pixel-ratio`** (spécifique à Gecko) permet d'appliquer des styles en fonction du nombre de pixels physiques par pixel CSS.
 
 > [!WARNING]
-> N'utilisez pas cette caractéristique. Préférez la caractéristique [`resolution`](/fr/docs/Web/CSS/@media/resolution) avec l'unité `dppx`.
+> N'utilisez pas cette caractéristique. Préférez la caractéristique [`resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) avec l'unité `dppx`.
 
 > [!NOTE]
 > Cette caractéristique média est aussi implémentée par WebKit sous le nom `-webkit-device-pixel-ratio`. Les préfixes min et max sont nommés `min--moz-device-pixel-ratio` et `max--moz-device-pixel-ratio` chez Gecko, mais `-webkit-min-device-pixel-ratio` et `-webkit-max-device-pixel-ratio` chez WebKit.
@@ -53,5 +53,5 @@ Ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}

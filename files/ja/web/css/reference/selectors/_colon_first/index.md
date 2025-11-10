@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2b3eb646cec5c9bc74e263b7880a52ad52e37913
 ---
 
-**`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使用され、印刷文書の最初のページを表します。（一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。）
+**`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で使用され、印刷文書の最初のページを表します。（一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。）
 
 ```css
 /* 印刷時に最初のページを選択 */
@@ -17,7 +17,7 @@ l10n:
 ```
 
 > [!NOTE]
-> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#絶対的な長さの単位)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
+> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/Reference/Values/length#絶対的な長さの単位)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
 
 ## 構文
 

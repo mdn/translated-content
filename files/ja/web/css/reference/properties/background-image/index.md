@@ -84,7 +84,7 @@ background-image: unset;
 - `none`
   - : 画像を用いないことを表すキーワード。
 - `<image>`
-  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
+  - : 表示する背景を記述する {{cssxref("&lt;image&gt;")}}。[複数の背景](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)に対応している場合は、カンマ区切りで複数指定することができます。
 
 ## アクセシビリティ
 
@@ -171,9 +171,9 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [CSS での画像スプライトの実装](/ja/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
+- [CSS での画像スプライトの実装](/ja/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
+- [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
 
 - 背景に関するプロパティ
   - {{cssxref("background-attachment")}}
@@ -185,6 +185,6 @@ div {
   - {{cssxref("background-size")}}
   - {{cssxref("background")}} 一括指定
 - [CSS の学習: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [複数の背景画像の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
+- [複数の背景画像の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [CSS 背景と境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)モジュール

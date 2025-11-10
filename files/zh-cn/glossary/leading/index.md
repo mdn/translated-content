@@ -17,6 +17,6 @@ l10n:
 
 - {{cssxref("line-height")}}
 - {{cssxref("text-box")}}
-- [CSS 行内布局](/zh-CN/docs/Web/CSS/CSS_inline_layout)模块
+- [CSS 行内布局](/zh-CN/docs/Web/CSS/Guides/Inline_layout)模块
 - 维基百科上的[行距](https://zh.wikipedia.org/wiki/行距)
 - matthiasott.com 上的 [CSS 中的行距](https://matthiasott.com/notes/the-thing-with-leading-in-css)（2022）

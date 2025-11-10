@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`shape`** peut être utilisée pour tester la forme de l'appareil afin de distinguer les affichages rectangulaires et ronds.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`shape`** peut être utilisée pour tester la forme de l'appareil afin de distinguer les affichages rectangulaires et ronds.
 
 ## Syntaxe
 
@@ -74,7 +74,7 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
 - Le module d'[affichage arrondi CSS](/fr/docs/Web/CSS/CSS_round_display)
 - [Utiliser les variables d'environnement](/fr/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)

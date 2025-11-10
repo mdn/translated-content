@@ -9,9 +9,9 @@ l10n:
 {{Non-standard_header}}
 
 > [!NOTE]
-> Tous les navigateurs prennent en charge la propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transform-2d`. Aucun navigateur ne prend en charge `transform` sans préfixe ou extension `2d` comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/@supports).
+> Tous les navigateurs prennent en charge la propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform#compatibilité_des_navigateurs) sans préfixe. Seuls les navigateurs basés sur WebKit (Safari), et non Chromium, prennent en charge la caractéristique média `-webkit-transform-2d`. Aucun navigateur ne prend en charge `transform` sans préfixe ou extension `2d` comme requête média. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-2d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 2D {{cssxref("transform")}} préfixées et les requêtes média non standard préfixées sont prises en charge.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-2d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 2D {{cssxref("transform")}} préfixées et les requêtes média non standard préfixées sont prises en charge.
 
 Apple propose [une description dans la référence CSS de Safari <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
@@ -62,6 +62,6 @@ Ne fait partie d'aucun standard.
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
 - [Page de test sur quirksmode.org <sup>(angl.)</sup>](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
-- {{cssxref("transform")}} et [utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- {{cssxref("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- {{cssxref("transform")}} et [utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
+- {{cssxref("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
+- {{cssxref("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

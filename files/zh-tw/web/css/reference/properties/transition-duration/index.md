@@ -369,11 +369,11 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{cssinfo}}
 
-## 瀏覽器支援情形
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 更多資訊
+## 參見
 
-- [CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [CSS 轉場](/zh-TW/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

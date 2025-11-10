@@ -22,7 +22,7 @@ Ce descripteur accepte les deux valeurs suivantes, séparées par un espace et p
 - {{cssxref("integer")}}
   - : Spécifie la longueur minimale que toutes les représentations de marqueur doivent atteindre. La valeur doit être positive ou nulle. Pour le descripteur `pad`, cette valeur est aussi appelée _longueur de remplissage_.
 
-- [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#symbol)
+- [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
   - : Spécifie le symbole à utiliser pour le remplissage si la longueur minimale définie par `<integer>` n'est pas atteinte. Pour le descripteur `pad`, cette valeur est aussi appelée _symbole de remplissage_.
 
 ## Description
@@ -91,5 +91,5 @@ ul {
 - Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
 - Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
-- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
-- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)

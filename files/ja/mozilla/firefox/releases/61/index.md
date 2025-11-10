@@ -58,9 +58,9 @@ _変更なし。_
 
 - CSS のパース処理を並列化しました ([Firefox バグ 1346988](https://bugzil.la/1346988))。
 - {{cssxref("font-variation-settings")}} および {{cssxref("font-optical-sizing")}} のサポートを、デフォルトで有効にしました ([Firefox バグ 1447163](https://bugzil.la/1447163))。
-- `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティを {{cssxref("gap")}}、{{cssxref("row-gap")}}、{{cssxref("column-gap")}} に改名しました。これらはグリッド固有のプロパティではなくなりました ([Firefox バグ 1398482](https://bugzil.la/1398482))。詳しくは [Box alignment; Gaps between boxes](/ja/docs/Web/CSS/CSS_box_alignment#gaps_between_boxes) をご覧ください。ウェブ互換性のために、古い名称を別名として維持しています。
+- `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティを {{cssxref("gap")}}、{{cssxref("row-gap")}}、{{cssxref("column-gap")}} に改名しました。これらはグリッド固有のプロパティではなくなりました ([Firefox バグ 1398482](https://bugzil.la/1398482))。詳しくは [Box alignment; Gaps between boxes](/ja/docs/Web/CSS/Guides/Box_alignment#gaps_between_boxes) をご覧ください。ウェブ互換性のために、古い名称を別名として維持しています。
 - {{cssxref("flex-basis")}} の値 `content` をサポートしました ([Firefox バグ 1105111](https://bugzil.la/1105111))。
-- {{cssxref("column-gap")}} のパーセンテージ値を、[CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout) でサポートしました ([Firefox バグ 1398537](https://bugzil.la/1398537))。
+- {{cssxref("column-gap")}} のパーセンテージ値を、[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout) でサポートしました ([Firefox バグ 1398537](https://bugzil.la/1398537))。
 - CSS の {{cssxref(":host")}} 擬似クラスをサポートしました。これは、shadow DOM 内のカスタム要素を選択します ([Firefox バグ 992245](https://bugzil.la/992245))。
 - {{cssxref("overflow")}} が 2 値構文を受け入れるようになりました ([Firefox バグ 1453148](https://bugzil.la/1453148))。
 - 内容物によってサイズが決まる Flex アイテムは、`fit-content` ではなく `max-content` を使用してサイズが決まるようになりました ([Firefox バグ 1282821](https://bugzil.la/1282821))。これらの値について、詳しくは [`width` の値の定義](/ja/docs/Web/CSS/Reference/Properties/width#values) をご覧ください。

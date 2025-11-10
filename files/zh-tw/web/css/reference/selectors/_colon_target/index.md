@@ -105,4 +105,4 @@ p:target i {
 
 ## 參見
 
-- [在選擇器中使用 :target 偽類](/zh-TW/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [在選擇器中使用 :target 偽類](/zh-TW/docs/Web/CSS/Guides/Selectors/Using_:target)

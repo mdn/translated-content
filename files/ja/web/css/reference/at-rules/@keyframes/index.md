@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
-**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_transitions)よりも詳細に制御できます。
+**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/Guides/Transitions)よりも詳細に制御できます。
 
 ## 構文
 
@@ -33,7 +33,7 @@ l10n:
 - {{cssxref("&lt;percentage&gt;")}}
   - : 指定したキーフレームがアニメーションの中で作動する時間を示すパーセント値です。
 - `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}}
-  - : 指定したアニメーション範囲の、指定したキーフレームが発生する時点までの割合。名前付きタイムライン範囲を使用するアニメーションの種類については、[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください。
+  - : 指定したアニメーション範囲の、指定したキーフレームが発生する時点までの割合。名前付きタイムライン範囲を使用するアニメーションの種類については、[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
 
 ## 解説
 
@@ -144,7 +144,7 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 
 ### CSS アニメーションの例
 
-[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)および [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) を参照してください。
+[CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)および [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) を参照してください。
 
 ## 仕様書
 
@@ -157,7 +157,7 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 ## 関連情報
 
 - {{cssxref("animation-range")}}
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

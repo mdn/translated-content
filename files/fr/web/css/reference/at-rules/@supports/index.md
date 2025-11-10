@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9944f7b12ef1a6aecd54d4b2f0c188a82fdeaaf0
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
 L'utilisation de cette règle est couramment appelée «&nbsp;requête de fonctionnalité&nbsp;».
 La règle doit être placée au niveau supérieur de votre code ou imbriquée dans une autre règle conditionnelle de groupe.
 
@@ -317,7 +317,7 @@ L'exemple suivant applique le style CSS si le navigateur prend en charge le form
 
 ## Voir aussi
 
-- [Utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [Utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - {{DOMxRef("CSSSupportsRule")}}
 - La méthode {{DOMxref("CSS.supports_static", "CSS.supports()")}}

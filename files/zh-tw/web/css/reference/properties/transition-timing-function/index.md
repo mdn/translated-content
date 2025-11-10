@@ -3,7 +3,7 @@ title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
 ---
 
-**`transition-timing-function`** CSS 屬性用於表示各個被[動畫特效](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)影響的屬性的區間值計算方式。
+**`transition-timing-function`** CSS 屬性用於表示各個被[動畫特效](/zh-TW/docs/Web/CSS/Guides/Transitions/Using)影響的屬性的區間值計算方式。
 
 {{InteractiveExample("CSS Demo: transition-timing-function")}}
 
@@ -630,17 +630,17 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{EmbedLiveSample("transition-timing-function: steps(4, end)",275,150)}}
 
-## 規格
+## 規範
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## 相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 看更多
+## 參見
 
-- [使用 CSS transitions](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [使用 CSS transitions](/zh-TW/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

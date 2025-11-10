@@ -50,7 +50,7 @@ Voici quelques exemples de ressources qui peuvent être embarqués malgré leur 
 - Images avec [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
 - Fichiers média avec [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio).
 - Objets avec [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
-- Fontes de polices avec [`@font-face`](/fr/docs/Web/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
+- Fontes de polices avec [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
 - N'importe quoi avec [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/Web/HTTP/Reference/Headers/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
 
 ### Autoriser l'accès cross-origin

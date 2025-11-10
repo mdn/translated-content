@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`overflow-inline`** permet de tester la façon dont l'appareil de sortie gère le contenu qui déborde du [bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block) initial selon l'axe en ligne.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`overflow-inline`** permet de tester la façon dont l'appareil de sortie gère le contenu qui déborde du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) initial selon l'axe en ligne.
 
 > [!NOTE]
 > La propriété `overflow-inline` ne détermine pas si un dépassement a lieu&nbsp;; elle indique comment l'appareil gère ce dépassement. En général, sur les écrans dans la plupart des navigateurs, le comportement sera «&nbsp;scroll&nbsp;»&nbsp;: lorsque le contenu dépasse l'espace horizontal disponible, l'appareil permet de faire défiler pour accéder au contenu débordant.

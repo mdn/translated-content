@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ee348fc4da928b445f95660fae094269604b1b9c
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`vertical-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage (<i lang="en">viewport</i>) disposés verticalement (de haut en bas).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`vertical-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage (<i lang="en">viewport</i>) disposés verticalement (de haut en bas).
 
 En lien avec l'[API Viewport Segments](/fr/docs/Web/API/Viewport_segments_API), la caractéristique `vertical-viewport-segments` permet de créer des conceptions réactives adaptées aux appareils multi-vues&nbsp;: des appareils dont l'écran est divisé en segments de zone d'affichage logiquement séparés, comme les appareils pliables ou à charnière.
 

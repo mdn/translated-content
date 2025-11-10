@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color-gamut`** est utilisée pour appliquer des styles CSS en fonction de l'intervalle approximatif des couleurs {{glossary("gamut")}} pris en charge par l'agent utilisateur et l'appareil de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color-gamut`** est utilisée pour appliquer des styles CSS en fonction de l'intervalle approximatif des couleurs {{glossary("gamut")}} pris en charge par l'agent utilisateur et l'appareil de sortie.
 
 ## Syntaxe
 
@@ -51,9 +51,9 @@ La caractéristique `color-gamut` se définit avec l'une des valeurs-mots-clés 
 
 ## Voir aussi
 
-- La fonction [`color()`](/fr/docs/Web/CSS/color_value/color) pour définir des couleurs dans un espace colorimétrique donné.
-- Le module des [couleurs CSS](/fr/docs/Web/CSS/CSS_colors)
+- La fonction [`color()`](/fr/docs/Web/CSS/Reference/Values/color_value/color) pour définir des couleurs dans un espace colorimétrique donné.
+- Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - La règle {{cssxref("@media")}} utilisée pour spécifier l'expression `color-gamut`.
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour comprendre quand et comment utiliser une requête média.
-- Le module des [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour comprendre quand et comment utiliser une requête média.
+- Le module des [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
 - [sRGB](https://fr.wikipedia.org/wiki/SRGB) sur Wikipedia

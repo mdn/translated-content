@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`@counter-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルにあらかじめ設定されたものではないカウンターのスタイルを定義することができます。 `@counter-style` ルールには[記述子](#記述子)を設定し、カウンター値を文字列表現に変換する方法を定義します。
+**`@counter-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、スタイルにあらかじめ設定されたものではないカウンターのスタイルを定義することができます。 `@counter-style` ルールには[記述子](#記述子)を設定し、カウンター値を文字列表現に変換する方法を定義します。
 
 CSS は多くの便利な定義済みカウンタースタイルを提供していますが、`@counter-style` アットルールは、カウンターを作成するための自由度の高い方法を提供します。このアットルールは、定義済みスタイルが要件に合わない場合に、作成者が自分自身でカウンタースタイルを定義できるようにすることで、世界中の字組みのニーズに対応しています。
 
@@ -25,7 +25,7 @@ CSS は多くの便利な定義済みカウンタースタイルを提供して�
 ### カウンタースタイル名
 
 - `<counter-style-name>`
-  - : カウンタスタイルの名前を提供します。大文字と小文字を区別する {{cssxref("custom-ident")}} として、引用符で囲まずに指定します。値は `none` と同じであってはなりません。すべての独自の識別子と同様に、カウンタースタイルの値は [CSS 全体のキーワード](/ja/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css-wide_keywords) にはできません。[リスト](/ja/docs/Web/CSS/CSS_lists#プロパティ)および[カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles#プロパティ)プロパティの値を含む、それ以外の列挙された CSS プロパティの値は避けてください。カウンタの名前は、大文字と小文字を区別せず {{cssxref("list-style-type")}} プロパティの値である `decimal`、`disc`、`square`、`circle`、`disclosure-open`、`disclosure-closed` にはできません。
+  - : カウンタスタイルの名前を提供します。大文字と小文字を区別する {{cssxref("custom-ident")}} として、引用符で囲まずに指定します。値は `none` と同じであってはなりません。すべての独自の識別子と同様に、カウンタースタイルの値は [CSS 全体のキーワード](/ja/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) にはできません。[リスト](/ja/docs/Web/CSS/Guides/Lists#プロパティ)および[カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles#プロパティ)プロパティの値を含む、それ以外の列挙された CSS プロパティの値は避けてください。カウンタの名前は、大文字と小文字を区別せず {{cssxref("list-style-type")}} プロパティの値である `decimal`、`disc`、`square`、`circle`、`disclosure-open`、`disclosure-closed` にはできません。
 
     > [!NOTE]
     > 上書きできないカウンタースタイル名 `decimal`、`disc`、`square`、`circle`、`disclosure-open`、および `disclosure-closed` は、独自のカウンターの名前として使用することはできません。ただし、 `<counter-style-name>` データ型が期待されるその他のコンテキスト、例えば `system: extends <counter-style-name>` では、これらは有効です。
@@ -129,4 +129,4 @@ CSS は多くの便利な定義済みカウンタースタイルを提供して�
 - {{Cssxref("counters", "counters()")}}
 - {{cssxref("symbols", "symbols()")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

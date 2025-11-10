@@ -233,7 +233,7 @@ pre.target:hover {
 
 ### 例: ぼかし文字
 
-文字にぼかしを入れるには、 [`blur()`](/ja/docs/Web/CSS/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
+文字にぼかしを入れるには、 [`blur()`](/ja/docs/Web/CSS/Reference/Values/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
 
 ```html
 <p class="blur">Time to clean my glasses</p>

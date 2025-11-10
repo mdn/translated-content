@@ -62,7 +62,7 @@ inset: 0;
 }
 ```
 
-これは [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)の仕様書で定義されているものですが、論理的なオフセットを定義するものではありません。これは物理的なオフセットであり、要素の書字方向やテキストの向きには関係がありません。
+これは [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)の仕様書で定義されているものですが、論理的なオフセットを定義するものではありません。これは物理的なオフセットであり、要素の書字方向やテキストの向きには関係がありません。
 
 ## 構成要素のプロパティ
 
@@ -158,5 +158,5 @@ div {
 - {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
 - {{cssxref("inset-block")}} および {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
-- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
-- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)

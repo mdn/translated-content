@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`display-mode`** permet de tester si une application web est affichée dans un onglet de navigateur classique ou d'une autre manière, comme une application autonome ou en mode plein écran.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`display-mode`** permet de tester si une application web est affichée dans un onglet de navigateur classique ou d'une autre manière, comme une application autonome ou en mode plein écran.
 
 Par exemple&nbsp;:
 
@@ -80,5 +80,5 @@ Voir [Utiliser l'API Document Picture-in-Picture](/fr/docs/Web/API/Document_Pict
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}

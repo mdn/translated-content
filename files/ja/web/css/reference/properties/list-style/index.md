@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-**`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
+**`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
 
 {{InteractiveExample("CSS デモ: list-style")}}
 
@@ -229,5 +229,5 @@ ul li::before {
 
 - 構成要素のプロパティ: {{Cssxref("list-style-type")}}、{{Cssxref("list-style-image")}}、{{Cssxref("list-style-position")}}
 - {{cssxref("::marker")}} 擬似要素
-- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール

@@ -124,5 +124,5 @@ columns: unset;
 
 - {{cssxref("widows")}}
 - {{cssxref("orphans")}}
-- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [ページ化メディア](/ja/docs/Web/CSS/Guides/Paged_media)
 - [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)

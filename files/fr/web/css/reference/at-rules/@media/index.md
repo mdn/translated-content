@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7860297e91985460147c2bd6ced2bfa8cab5aba7
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Guides/Media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
 > [!NOTE]
 > Il est possible de manipuler la règle `@media` via le CSSOM (et JavaScript) grâce à l'interface {{domxref("CSSMediaRule")}}.
@@ -67,7 +67,7 @@ abbr {
 
 La règle `@media` peut être placée au niveau le plus haut du code ou imbriquée dans une autre règle @ conditionnelle.
 
-Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using).
 
 ## Description
 
@@ -80,7 +80,7 @@ _Les types de média_ décrivent la catégorie générale d'un appareil. Sauf qu
 - `all`
   - : Applicable à tous les appareils.
 - `print`
-  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/CSS_paged_media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
+  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
 - `screen`
   - : Destiné principalement aux écrans.
 
@@ -113,7 +113,7 @@ Les expressions de caractéristique média testent leur présence, leur valeur o
 - {{cssxref("@media/device-width", "device-width")}}
   - : Largeur de la surface de rendu du périphérique de sortie. Déprécié dans Media Queries niveau 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : Mode dans lequel une application s'affiche&nbsp;: par exemple, [plein écran](/fr/docs/Web/CSS/@media/display-mode#fullscreen) ou [mode image dans l'image](/fr/docs/Web/CSS/@media/display-mode#image_dans_limage).
+  - : Mode dans lequel une application s'affiche&nbsp;: par exemple, [plein écran](/fr/docs/Web/CSS/Reference/At-rules/@media/display-mode#fullscreen) ou [mode image dans l'image](/fr/docs/Web/CSS/Reference/At-rules/@media/display-mode#image_dans_limage).
     Ajouté dans Media Queries niveau 5.
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : Combinaison de la luminosité, du contraste et de la profondeur de couleur prise en charge par l'agent utilisateur et le périphérique de sortie. Ajouté dans Media Queries niveau 5.
@@ -172,17 +172,17 @@ Les expressions de caractéristique média testent leur présence, leur valeur o
 - {{cssxref("@media/width", "width")}}
   - : Largeur de la zone d'affichage (<i lang="en">viewport</i> en anglais), y compris la largeur de la barre de défilement.
 - {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
-  - : Nombre de pixels du périphérique par pixel CSS. Utilisez plutôt la caractéristique [`resolution`](/fr/docs/Web/CSS/@media/resolution) avec l'unité `dppx`.
+  - : Nombre de pixels du périphérique par pixel CSS. Utilisez plutôt la caractéristique [`resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) avec l'unité `dppx`.
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-  - : Le navigateur prend en charge l'animation CSS {{cssxref("animation")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/@supports).
+  - : Le navigateur prend en charge l'animation CSS {{cssxref("animation")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (animation)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 - {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
-  - : Nombre de pixels du périphérique par pixel CSS. Utilisez plutôt la caractéristique [`resolution`](/fr/docs/Web/CSS/@media/resolution) avec l'unité `dppx`.
+  - : Nombre de pixels du périphérique par pixel CSS. Utilisez plutôt la caractéristique [`resolution`](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) avec l'unité `dppx`.
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
-  - : Le navigateur prend en charge la transformation CSS 2D {{cssxref("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/@supports).
+  - : Le navigateur prend en charge la transformation CSS 2D {{cssxref("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
-  - : Le navigateur prend en charge la transformation CSS 3D {{cssxref("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/@supports).
+  - : Le navigateur prend en charge la transformation CSS 3D {{cssxref("transform")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transform)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
-  - : Le navigateur prend en charge la transition CSS {{cssxref("transition")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/@supports).
+  - : Le navigateur prend en charge la transition CSS {{cssxref("transition")}} préfixée `-webkit`. Utilisez plutôt la requête de fonctionnalité [`@supports (transition)`](/fr/docs/Web/CSS/Reference/At-rules/@supports).
 
 ### Opérateurs logiques
 
@@ -216,11 +216,11 @@ Elles incluent {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} et {{HTTPHeader("Se
 
 ## Accessibilité
 
-Pour une meilleure accessibilité, notamment pour les personnes qui ajustent la taille du texte d'un site, il convient d'utiliser l'unité [`em`](/fr/docs/Web/CSS/CSS_values_and_units/Numeric_data_types) lorsqu'une valeur de type {{cssxref("&lt;length&gt;")}} est nécessaire pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Pour une meilleure accessibilité, notamment pour les personnes qui ajustent la taille du texte d'un site, il convient d'utiliser l'unité [`em`](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) lorsqu'une valeur de type {{cssxref("&lt;length&gt;")}} est nécessaire pour [les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using).
 
 Les unités [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) et [`px`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) sont toutes les deux valides, mais [`em`](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) s'adapte mieux si l'utilisateur·ice modifie la taille du texte du navigateur.
 
-Il est également pertinent de prendre en compte les requêtes média ou les [indications du client](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client) pour améliorer l'expérience utilisateur·ice. Par exemple, la requête média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) ou l'en-tête HTTP équivalent {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} peuvent servir à limiter les animations ou les déplacements selon les préférences de l'utilisateur·ice.
+Il est également pertinent de prendre en compte les requêtes média ou les [indications du client](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client) pour améliorer l'expérience utilisateur·ice. Par exemple, la requête média [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) ou l'en-tête HTTP équivalent {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} peuvent servir à limiter les animations ou les déplacements selon les préférences de l'utilisateur·ice.
 
 ## Sécurité
 
@@ -272,7 +272,7 @@ Avec la mise à jour de la spécification pour les requêtes média, une nouvell
 }
 ```
 
-Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using).
 
 ## Spécifications
 
@@ -284,8 +284,8 @@ Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_
 
 ## Voir aussi
 
-- Le module de [requêtes média CSS](/fr/docs/Web/CSS/CSS_media_queries)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- Le module de [requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - L'interface {{domxref("CSSMediaRule")}}
 - [Extensions CSS préfixées pour Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Extensions CSS préfixées pour WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions#media_features)

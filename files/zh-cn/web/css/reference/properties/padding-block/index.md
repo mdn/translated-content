@@ -3,7 +3,7 @@ title: padding-block
 slug: Web/CSS/Reference/Properties/padding-block
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`padding-block`** 定义了元素的逻辑块首和块末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`padding-block`** 定义了元素的逻辑块首和块末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
 {{InteractiveExample("CSS Demo: padding-block")}}
 
@@ -137,6 +137,6 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values)
 - 对应的实体属性：{{CSSXref("padding-top")}}、{{CSSXref("padding-right")}}、{{CSSXref("padding-bottom")}} 和 {{CSSXref("padding-left")}}
 - {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

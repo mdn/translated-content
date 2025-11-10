@@ -32,7 +32,7 @@ animation-composition: unset;
 ```
 
 > [!NOTE]
-> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/Reference/Properties/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 ### Valeurs
 
@@ -45,7 +45,7 @@ animation-composition: unset;
 
 ## Description
 
-Chaque propriété ciblée par une règle @ [`@keyframes`](/fr/docs/Web/CSS/@keyframes) est associée avec une pile d'effets. La valeur de la pile d'effets est calculée en combinant la valeur _sous-jacente_ d'une propriété CSS dans une règle de style avec la valeur _d'effet_ de cette propriété dans l'image-clé (<i lang="en">keyframe</i>). La propriété `animation-composition` aide à indiquer la façon dont sont combinées la valeur sous-jacente et la valeur d'effet.
+Chaque propriété ciblée par une règle @ [`@keyframes`](/fr/docs/Web/CSS/Reference/At-rules/@keyframes) est associée avec une pile d'effets. La valeur de la pile d'effets est calculée en combinant la valeur _sous-jacente_ d'une propriété CSS dans une règle de style avec la valeur _d'effet_ de cette propriété dans l'image-clé (<i lang="en">keyframe</i>). La propriété `animation-composition` aide à indiquer la façon dont sont combinées la valeur sous-jacente et la valeur d'effet.
 
 Par exemple, dans le fragment CSS qui suit, `blur(5px)` est la valeur sous-jacente, et `blur(10px)` est la valeur d'effet. La propriété `filter` est modifiée par les deux animations, `pulse` et `brightness-pulse`. La propriété `animation-composition` indique l'opération à réaliser afin de produire l'effet final, après avoir combiné l'effet de la valeur sous-jacente et de la valeur d'effet.
 
@@ -169,5 +169,5 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
 ## Voir aussi
 
-- [Utiliser des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Utiliser des animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 - [La propriété `composite` de l'interface `KeyFrameEffect` de l'API Web Animations](/fr/docs/Web/API/KeyframeEffect/composite)

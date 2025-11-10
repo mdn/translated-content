@@ -167,8 +167,8 @@ div:nth-child(3) {
 
 ## 参考
 
-- CSS Flexbox 指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox 指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid 指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- CSS Flexbox 指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS Flexbox 指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
+- CSS Grid 指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/Guides/Box_alignment)
 - {{cssxref("align-items")}} 属性

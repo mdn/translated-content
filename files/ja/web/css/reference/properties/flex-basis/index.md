@@ -1,15 +1,14 @@
 ---
 title: flex-basis
 slug: Web/CSS/Reference/Properties/flex-basis
-original_slug: Web/CSS/flex-basis
 l10n:
-  sourceCommit: c63daf697d8f22ba17d4633f018ad7dfa65e4770
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("flex item","フレックスアイテム")}}の主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。
 
 > [!NOTE]
-> {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
+> {{cssxref("flex")}} の一括指定を `auto` や `initial` などの値で使用する方が、`flex-basis` 宣言を単独で使用するよりも推奨されます。 [キーワード値](/ja/docs/Web/CSS/Reference/Properties/flex#値)は、{{cssxref("flex-grow")}}、{{cssxref("flex-shrink")}}、`flex-basis` の信頼性の高い組み合わせに展開され、一般的に望まれるフレックスの動作を実現しやすくなります。
 
 {{InteractiveExample("CSS デモ: flex-basis")}}
 
@@ -42,7 +41,7 @@ flex-basis: 200px;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -86,6 +85,9 @@ flex-basis: unset;
 
 ### 値
 
+- `content`
+  - : フレックスアイテムのコンテンツに基づいて、自動的に大きさを決めます。
+
 - `<'width'>`
   - : 以下の単位のいずれかです。
     - {{cssxref("&lt;length&gt;")}} は絶対的な値を設定します。
@@ -94,9 +96,6 @@ flex-basis: unset;
     - {{cssxref("max-content")}} は幅の内在的な推奨値を設定します。
     - {{cssxref("min-content")}} は幅の内在的な最小値を設定します。
     - {{cssxref("fit-content")}} は、現在の要素のコンテンツに基づいて計算された、 `min-content` と `max-content` の値で囲まれた、包含ブロックのコンテンツ領域の使用可能な最大サイズを設定します。
-
-- `content`
-  - : フレックスアイテムの内容物に基づいて、自動的に大きさを決めます。
 
 ## 公式定義
 
@@ -114,15 +113,15 @@ flex-basis: unset;
 
 ```html live-sample___setting_flex_item_initial_sizes
 <ul class="container">
-  <li class="flex flex1">1: flex-basis test</li>
-  <li class="flex flex2">2: flex-basis test</li>
-  <li class="flex flex3">3: flex-basis test</li>
-  <li class="flex flex4">4: flex-basis test</li>
-  <li class="flex flex5">5: flex-basis test</li>
+  <li class="flex flex1">1: flex-basis テスト</li>
+  <li class="flex flex2">2: flex-basis テスト</li>
+  <li class="flex flex3">3: flex-basis テスト</li>
+  <li class="flex flex4">4: flex-basis テスト</li>
+  <li class="flex flex5">5: flex-basis テスト</li>
 </ul>
 
 <ul class="container">
-  <li class="flex flex6">6: flex-basis test</li>
+  <li class="flex flex6">6: flex-basis テスト</li>
 </ul>
 ```
 
@@ -130,7 +129,7 @@ flex-basis: unset;
 
 ```css live-sample___setting_flex_item_initial_sizes
 .container {
-  font-family: arial, sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -156,7 +155,7 @@ flex-basis: unset;
   top: 100%;
   margin-top: 10px;
   width: 100%;
-  color: #333;
+  color: #333333;
   font-size: 12px;
 }
 
@@ -211,7 +210,7 @@ flex-basis: unset;
 
 #### HTML
 
-同じ構造のフレックスコンテナーを 2 つ設置しています。これらのコンテナーは、 `flex-basis` の値以外は同じようにスタイル設定されています。コンテナーはそれぞれ見出しの `<div>` と `<section>` の 2 つの子要素を持っています。 `<section>` 要素はコンテンツとして `<div>` を持っていますが、これはフレックスアイテムとしては設定されませんが、高さは指定されます。
+同じ構造のフレックスコンテナーを 2 つ設置しており、`flex-basis` の値以外は同じようにスタイル設定されています。コンテナーはそれぞれ見出しの `<div>` と `<section>` の 2 つの子要素を持っています。 `<section>` 要素はコンテンツとして `<div>` を持っていますが、これはフレックスアイテムとしては設定されませんが、高さは指定されます。
 
 ```html-nolint live-sample___flex_basis_0_vs_0
 <div class="container basis-0">
@@ -282,6 +281,6 @@ section {
 
 - {{cssxref("flex")}} 一括指定
 - {{cssxref("inline-size")}}
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

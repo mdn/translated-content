@@ -127,4 +127,4 @@ h2 {
 ## 関連情報
 
 - `white-space-collapse` と {{CSSxRef("text-wrap")}} の一括指定: {{CSSxRef("white-space")}} プロパティ
-- [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)
+- [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)

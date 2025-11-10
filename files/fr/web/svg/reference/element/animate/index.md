@@ -84,7 +84,7 @@ Cet élément implémente l'interface [`SVGAnimateElement`](/fr/docs/Web/API/SVG
 
 Les animations de clignotement ou de flash peuvent être problématiques pour les personnes avec des troubles de l'attention. De plus, certains types de mouvement peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
 
-Veillez à fournir un mécanisme pour suspendre ou désactiver les animations, par exemple en utilisant [la caractéristique média `@prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour proposer une expérience alternative aux personnes qui ont exprimé une préférence pour l'absence d'animations.
+Veillez à fournir un mécanisme pour suspendre ou désactiver les animations, par exemple en utilisant [la caractéristique média `@prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour proposer une expérience alternative aux personnes qui ont exprimé une préférence pour l'absence d'animations.
 
 - [Concevoir des animations web plus sûres, tenant compte de la sensibilité aux mouvements, un article <i lang="en">A List Apart</i> (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [Une introduction aux requêtes média pour la réduction des mouvements sur CSS-Tricks (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)

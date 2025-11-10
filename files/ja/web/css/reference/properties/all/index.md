@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-**`all`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、要素のすべてのプロパティを ({{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を除いて) 初期化します。プロパティは初期値または継承値、または他のカスケードレイヤーまたはスタイルシートに由来して指定した値に設定される可能性があります。
+**`all`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、要素のすべてのプロパティを ({{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)を除いて) 初期化します。プロパティは初期値または継承値、または他のカスケードレイヤーまたはスタイルシートに由来して指定した値に設定される可能性があります。
 
 {{InteractiveExample("CSS デモ: all")}}
 
@@ -63,7 +63,7 @@ all: revert;
 
 ## 構成要素のプロパティ
 
-このプロパティは、{{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を除くすべての CSS プロパティの一括指定です。
+このプロパティは、{{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)を除くすべての CSS プロパティの一括指定です。
 
 ## 構文
 
@@ -81,18 +81,18 @@ all: revert-layer;
 ### 値
 
 - {{cssxref("initial")}}
-  - : その要素のすべてのプロパティを[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に変更するべきであることを指定します。
+  - : その要素のすべてのプロパティを[初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)に変更するべきであることを指定します。
 - {{cssxref("inherit")}}
-  - : その要素のすべてのプロパティを[継承値](/ja/docs/Web/CSS/CSS_cascade/Inheritance)に変更するべきであることを指定します。
+  - : その要素のすべてのプロパティを[継承値](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)に変更するべきであることを指定します。
 - {{cssxref("unset")}}
   - : その要素のすべてのプロパティを、既定値が inherit のものは継承値に、そうでなければ初期値に変更するべきであることを指定します。
 - {{cssxref("revert")}}
   - : 宣言が所属するスタイルシートの出所に応じて動作を指定します。
-    - [作成者オリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#作成者スタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーのレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作成者レベルのルールが指定されていないかのように計算されます。 `revert` の用途では、作成者オリジンはオーバーライドおよびアニメーションのオリジンも含まれます。
-    - [ユーザーオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザースタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーエージェントレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作成者レベルまたはユーザーレベルのルールが指定されていないかのように計算されます。
-    - [ユーザーエージェントオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザーエージェントスタイルシート)では、 `revert` の値は `unset` と同様に動作します。
+    - [作成者オリジン](/ja/docs/Web/CSS/Guides/Cascade/Introduction#作成者スタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)をユーザーのレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定値)は、作成者レベルのルールが指定されていないかのように計算されます。 `revert` の用途では、作成者オリジンはオーバーライドおよびアニメーションのオリジンも含まれます。
+    - [ユーザーオリジン](/ja/docs/Web/CSS/Guides/Cascade/Introduction#ユーザースタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/Guides/Cascade/Introduction)をユーザーエージェントレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定値)は、作成者レベルまたはユーザーレベルのルールが指定されていないかのように計算されます。
+    - [ユーザーエージェントオリジン](/ja/docs/Web/CSS/Guides/Cascade/Introduction#ユーザーエージェントスタイルシート)では、 `revert` の値は `unset` と同様に動作します。
 - {{cssxref("revert-layer")}}
-  - : その要素のすべてのプロパティを、直前の[カスケードレイヤー](/ja/docs/Web/CSS/@layer)が存在すれば、そこまでカスケードをロールバックすることを指定します。 他にカスケードレイヤーが存在しない場合、要素のプロパティは、現在のレイヤーに一致するルールが存在する場合はそのルール、または直前の[スタイルオリジン](/ja/docs/Glossary/Style_origin)にロールバックします。
+  - : その要素のすべてのプロパティを、直前の[カスケードレイヤー](/ja/docs/Web/CSS/Reference/At-rules/@layer)が存在すれば、そこまでカスケードをロールバックすることを指定します。 他にカスケードレイヤーが存在しない場合、要素のプロパティは、現在のレイヤーに一致するルールが存在する場合はそのルール、または直前の[スタイルオリジン](/ja/docs/Glossary/Style_origin)にロールバックします。
 
 ## 公式定義
 

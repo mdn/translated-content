@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** peut être utilisée pour tester le {{glossary("aspect ratio", "rapport d'aspect")}} de la {{glossary("viewport", "zone d'affichage")}}.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** peut être utilisée pour tester le {{glossary("aspect ratio", "rapport d'aspect")}} de la {{glossary("viewport", "zone d'affichage")}}.
 
 ## Syntaxe
 
@@ -114,5 +114,5 @@ Depuis l'état initial, lorsque vous réduisez la hauteur, le rapport d'aspect c
 ## Voir aussi
 
 - [Comprendre `aspect-ratio`](/fr/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}

@@ -8,7 +8,7 @@ l10n:
 {{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> 这是最初版 CSS 弹性盒布局模块草案中的一个属性。它在规范中已经被替代。关于当前标准的信息，请参见[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)。
+> 这是最初版 CSS 弹性盒布局模块草案中的一个属性。它在规范中已经被替代。关于当前标准的信息，请参见[弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)。
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`box-ordinal-group`** 用于将弹性盒子的子元素分配到一个序号组中。
 

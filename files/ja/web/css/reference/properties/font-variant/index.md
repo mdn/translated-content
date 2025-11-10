@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9172a95797019960c7baa9e0916f4e25efcf3f27
 ---
 
-**`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、フォントのすべての変化形を設定することができます。
+**`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、フォントのすべての変化形を設定することができます。
 
 CSS Level 2 (Revision 1) で定義されたにおける `font-variant` の `<font-variant-css2>` 値（つまり、 `normal` や `small-caps`）は、一括指定の [`font`](/ja/docs/Web/CSS/Reference/Properties/font) を用いて設定することもできます。
 

@@ -113,7 +113,7 @@ svg {
 
 ## 関連情報
 
-- [CSS 変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}

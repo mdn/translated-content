@@ -55,7 +55,7 @@ CSS를 비동기적으로 로드하려면 media 타입을 print로 설정한 다
 
 EOT와 TTF 형식은 기본적으로 압축되지 않습니다. 이러한 파일 유형들에 대해 GZIP 또는 Brotli와 같은 압축을 적용하세요. WOFF와 WOFF2를 사용하세요. 이 형식들은 압축이 내장되어 있습니다.
 
-@font-face 내에서 font-display: swap을 사용하세요. font display swap을 사용하면 브라우저는 렌더링을 차단하지 않고 정의된 백업 시스템 폰트를 사용할 것입니다. 웹 폰트와 가능한 한 유사하도록 [font weight](/ko/docs/Web/CSS/font-weight)를 최적화하세요.
+@font-face 내에서 font-display: swap을 사용하세요. font display swap을 사용하면 브라우저는 렌더링을 차단하지 않고 정의된 백업 시스템 폰트를 사용할 것입니다. 웹 폰트와 가능한 한 유사하도록 [font weight](/ko/docs/Web/CSS/Reference/Properties/font-weight)를 최적화하세요.
 
 #### 아이콘 웹 폰트
 

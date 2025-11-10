@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base-palette`** de la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-palette-values")}} est utilisé pour spécifier le nom ou l'index d'une palette prédéfinie à utiliser pour créer une nouvelle palette. Si la `base-palette` indiquée n'existe pas, alors la palette définie à l'index 0 sera utilisée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base-palette`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour spécifier le nom ou l'index d'une palette prédéfinie à utiliser pour créer une nouvelle palette. Si la `base-palette` indiquée n'existe pas, alors la palette définie à l'index 0 sera utilisée.
 
 ## Syntaxe
 

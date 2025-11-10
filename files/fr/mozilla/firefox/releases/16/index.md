@@ -16,16 +16,16 @@ Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résum
 
 ### CSS
 
-- Le support du standard des [Animations CSS](/fr/docs/Web/CSS/CSS_animations) a été lancé sans préfixe. ([bug Firefox 762302](https://bugzil.la/762302))
+- Le support du standard des [Animations CSS](/fr/docs/Web/CSS/Guides/Animations) a été lancé sans préfixe. ([bug Firefox 762302](https://bugzil.la/762302))
 - Le support pour l'inversion de la direction de l'animation (mots-clés `reverse` et `alternate-reverse` sur la propriété {{cssxref("animation-direction")}}) a été ajouté. ([bug Firefox 655920](https://bugzil.la/655920))
 - Vous pouvez désormais animer les propriétés CSS {{cssxref("height")}} et {{cssxref("width")}}.
 - Les propriétés CSS {{cssxref("animation-duration")}} et {{cssxref("transition-duration")}} rejettent désormais les valeurs négatives (et ne les traitent plus comme `0s`) ([bug Firefox 773102](https://bugzil.la/773102))
-- Le support du standard des [Transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) a été lancé sans préfixe. ([bug Firefox 745523](https://bugzil.la/745523))
-- Le support du standard des [Dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) a été lancé sans préfixe. Notez que la syntaxe a considérablement évoluée depuis la version préfixée. ([bug Firefox 752187](https://bugzil.la/752187))
+- Le support du standard des [Transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using) a été lancé sans préfixe. ([bug Firefox 745523](https://bugzil.la/745523))
+- Le support du standard des [Dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) a été lancé sans préfixe. Notez que la syntaxe a considérablement évoluée depuis la version préfixée. ([bug Firefox 752187](https://bugzil.la/752187))
 - L'implémentation de {{cssxref("box-sizing", "-moz-box-sizing")}} a été actualisée pour aussi s'appliquer aux cellules du tableau. ([bug Firefox 338554](https://bugzil.la/338554))
 - Le support du standard de {{cssxref("calc")}} a été lancé sans préfixe. ([bug Firefox 771678](https://bugzil.la/771678))
 - Le type de données de {{cssxref("&lt;resolution&gt;")}} a été étendu et supporte le `dppx`. ([bug Firefox 741644](https://bugzil.la/741644))
-- Sur l'écran, pour les [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), `dppx`, `dpi` et `dpcm` représentent désormais des valeurs basés sur des pixels CSS et non plus avec les unités physiques. ([bug Firefox 771390](https://bugzil.la/771390))
+- Sur l'écran, pour les [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using), `dppx`, `dpi` et `dpcm` représentent désormais des valeurs basés sur des pixels CSS et non plus avec les unités physiques. ([bug Firefox 771390](https://bugzil.la/771390))
 - Trois nouvelles pseudo-classes, `:-moz-meter-optimum`, `:-moz-meter-sub-optimum` et `:-moz-meter-sub-sub-optimum`, ont été ajoutées pour accéder à/styliser un élément {{HTMLElement("meter")}} dans un état particulier. ([bug Firefox 660238](https://bugzil.la/660238))
 - La propriété {{cssxref("-moz-appearance")}} gagnes deux nouvelles valeurs : `meterbar` et `meterchunk`. Elles représentent des composants dans l'élément {{HTMLElement("meter")}}. ([bug Firefox 659999](https://bugzil.la/659999))
 - {{cssxref("min-width")}} et {{cssxref("min-height")}} supportent désormais le mot-clé `auto` pour les articles flexibles (et règlent les autres articles à `0` ). ([bug Firefox 763689](https://bugzil.la/763689))

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-**`color`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器の色成分（赤、緑、青）当たりのビット数を調べるために使用します。
+**`color`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器の色成分（赤、緑、青）当たりのビット数を調べるために使用します。
 
 ## 構文
 
@@ -15,7 +15,7 @@ l10n:
 > [!NOTE]
 > それぞれの色成分が異なるビット数で表現される場合は、最も小さい値が使用されます。例えば、ディスプレイが青と赤に 5 ビット、緑に 6 ビット使用する場合は、機器は色成分当たり 5 ビットを使用していると見なされます。機器がインデックス色を使用している場合は、色テーブル内の色成分当たりのビット数の最小値が使用されます。
 
-CSS を使用して HTML に色を適用することについて、詳しくは [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)をご覧ください。
+CSS を使用して HTML に色を適用することについて、詳しくは [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)をご覧ください。
 
 ## 例
 

@@ -295,7 +295,7 @@ body {
 
 Les rangées de trame de 100 pixels de haut ne seront pas très utiles si nous y plaçons des contenus de plus de 100 pixels de haut&nbsp;: il y aurait alors débordement. Il est préférable d'avoir des pistes d'_au moins_ 100 pixels de haut, mais susceptibles de s'agrandir si le contenu déposé le nécessite. C'est un constat classique à propos du web&nbsp;: vous ne savez jamais vraiment quelle sera la hauteur d'un élément — du contenu supplémentaire ou des tailles de police plus grandes peuvent amener des problèmes avec des designs en pixels visant la perfection dans toute dimension.
 
-La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
+La fonction [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
 
 ```css
 .container {
@@ -310,7 +310,7 @@ Si vous ajoutez du contenu supplémentaire, vous verrez que la trame grandit pou
 
 ### Autant de chaînes que possible
 
-Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](/fr/docs/Web/CSS/minmax) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](/fr/docs/Web/CSS/repeat) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
+Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](/fr/docs/Web/CSS/Reference/Values/minmax) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](/fr/docs/Web/CSS/Reference/Values/repeat) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
 
 Essayez ceci dans le fichier avec la CSS ci-dessous&nbsp;:
 
@@ -360,7 +360,7 @@ Il a été créé autant de chaînes de 200 pixels qu'il y a de place dans le co
 
 ## Placement sur les lignes
 
-Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/CSS_writing_modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
+Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/Guides/Writing_modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
 
 Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes&nbsp;:
 
@@ -762,7 +762,7 @@ Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mi
 
 ## Voir aussi
 
-- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_grid_layout#guides)
+- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/Guides/Grid_layout#guides)
 - [Inspecteur de grille CSS&nbsp;: examiner les grilles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

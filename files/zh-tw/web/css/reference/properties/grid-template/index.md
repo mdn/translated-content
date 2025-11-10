@@ -3,7 +3,7 @@ title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
 ---
 
-CSS 的 **`grid-template`** 屬性是一個用於定義{{glossary("grid column","網格欄")}}、{{glossary("grid rows","列")}}和{{glossary("grid areas","區域")}}的[簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
+CSS 的 **`grid-template`** 屬性是一個用於定義{{glossary("grid column","網格欄")}}、{{glossary("grid rows","列")}}和{{glossary("grid areas","區域")}}的[簡寫屬性](/zh-TW/docs/Web/CSS/Guides/Cascade/Shorthand_properties)。
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 
@@ -115,7 +115,7 @@ grid-template: unset;
 
 {{csssyntax}}
 
-## Examples
+## 範例
 
 ### CSS
 
@@ -163,23 +163,23 @@ footer {
 </section>
 ```
 
-### Result
+### 結果
 
-{{EmbedLiveSample("Examples", "100%", "200px")}}
+{{EmbedLiveSample("範例", "100%", "200px")}}
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#Grid_definition_shorthands)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-TW/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
+- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/zh-TW/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#Grid_definition_shorthands)_
 - Video tutorial: [Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)

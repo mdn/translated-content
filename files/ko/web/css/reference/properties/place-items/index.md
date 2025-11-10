@@ -58,7 +58,7 @@ place-items: end center;
 
 이 속성은 다음 CSS의 단축형입니다.
 
-- [`align-items`](/ko/docs/Web/CSS/align-items)
+- [`align-items`](/ko/docs/Web/CSS/Reference/Properties/align-items)
 - [`justify-items`](/ko/docs/Web/CSS/justify-items)
 
 ## 구문

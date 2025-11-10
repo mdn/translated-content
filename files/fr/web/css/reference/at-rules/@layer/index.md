@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: @layer", "tabbed-standard")}}
 
@@ -114,7 +114,7 @@ La troisième façon consiste à créer une couche de cascade sans nom, par exem
 
 Cela crée une _couche de cascade anonyme_. Cette couche fonctionne de façon analogue aux couches nommées. Toutefois, il n'est pas possible d'y affecter des règles après la déclaration. L'ordre de précédence des couches anonymes est l'ordre dans lequel les couches sont déclarées, qu'elles soient nommées ou non. La précédence d'une couche anonyme a une précédence inférieure aux styles déclarés en dehors d'une couche.
 
-Une autre façon pour créer une couche de cascade consiste à utiliser [`@import`](/fr/docs/Web/CSS/@import). Dans ce cas, les règles associées proviendraient de la feuille de style importée.
+Une autre façon pour créer une couche de cascade consiste à utiliser [`@import`](/fr/docs/Web/CSS/Reference/At-rules/@import). Dans ce cas, les règles associées proviendraient de la feuille de style importée.
 
 ```css
 @import "theme.css" layer(utilities);
@@ -238,7 +238,7 @@ Dans l'exemple qui suit, on crée deux couches sans leur affecter de règle puis
 - {{domxref("CSSLayerStatementRule")}}
 - {{cssxref("important", "!important")}}
 - {{cssxref("revert-layer")}}
-- [Introduction à la cascade CSS](/fr/docs/Web/CSS/CSS_cascade/Cascade)
+- [Introduction à la cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
 - [Apprendre&nbsp;: Gérer les conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Apprendre&nbsp;: Les couches de cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [L'avenir du CSS&nbsp;: les couches de cascade <sup>(angl.)</sup>](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) sur bram.us (2021)

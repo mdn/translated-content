@@ -184,14 +184,14 @@ button:active {
 }
 ```
 
-ここでは、 [RGB](/ja/docs/Web/CSS/color_value/rgb) で {{cssxref("background-color")}} を提供し、ボタンが操作可能であることをユーザーに示唆するために、ホバー時に不透明度を変更し、半透明の影 {{cssxref("box-shadow")}} でボタンに質感と奥行きを与えています。これで完全に対応しているとはいえ、 RGB 色とボックスシャドウはずっと存在していたわけではありません。 IE9 から始まったものです。 RGB 色に対応していないブラウザーは宣言を無視します。つまり、古いブラウザーでは背景がまったく表示されないので、テキストが読めなくなり、まったく意味がありません！
+ここでは、 [RGB](/ja/docs/Web/CSS/Reference/Values/color_value/rgb) で {{cssxref("background-color")}} を提供し、ボタンが操作可能であることをユーザーに示唆するために、ホバー時に不透明度を変更し、半透明の影 {{cssxref("box-shadow")}} でボタンに質感と奥行きを与えています。これで完全に対応しているとはいえ、 RGB 色とボックスシャドウはずっと存在していたわけではありません。 IE9 から始まったものです。 RGB 色に対応していないブラウザーは宣言を無視します。つまり、古いブラウザーでは背景がまったく表示されないので、テキストが読めなくなり、まったく意味がありません！
 
 ![ほぼ白い背景に白い文字の見づらい錠剤型ボタン](unreadable-button.png)
 
 これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは 16 進数の色を指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
 > [!NOTE]
-> [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
+> [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)、[`@font-face`](/ja/docs/Web/CSS/Reference/At-rules/@font-face)、[`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
 
 ### セレクターの対応
 
@@ -251,11 +251,11 @@ form > #date
 
 2 つ目のドットの後にプロパティ名の表現を入力し始めると（JavaScript では、 CSS のプロパティ名は{{Glossary("kebab_case", "ケバブケース")}}ではなく、{{Glossary("camel_case", "小文字のキャメルケース")}}で記述されることに注意してください）、 JavaScript コンソールは、ブラウザーに存在し、これまでに書いたものと一致するプロパティの名前を自動補完し始めるはずです。これは、そのブラウザーで実装されているプロパティを探すのに有益です。
 
-現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
+現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
 
 ### レスポンシブデザインの問題
 
-レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
 解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Guides/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性を含め、たくさんあります。
 

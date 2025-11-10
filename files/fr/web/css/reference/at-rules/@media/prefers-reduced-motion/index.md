@@ -9,7 +9,7 @@ l10n:
 > [!WARNING]
 > Un exemple intégré en bas de cette page comporte un mouvement de mise à l'echelle qui peut être problématique pour certain·e·s lecteur·ice·s. Les personnes souffrant de troubles vestibulaires liés au mouvement peuvent activer la fonctionnalité de réduction des animations sur leur appareil avant de visualiser l'animation.
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** permet de détecter si un·e utilisateur·ice a activé un réglage sur son appareil pour minimiser la quantité de mouvements non essentiels. Ce réglage indique au navigateur que l'utilisateur·ice préfère une interface qui supprime, réduit ou remplace les animations basées sur le mouvement.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** permet de détecter si un·e utilisateur·ice a activé un réglage sur son appareil pour minimiser la quantité de mouvements non essentiels. Ce réglage indique au navigateur que l'utilisateur·ice préfère une interface qui supprime, réduit ou remplace les animations basées sur le mouvement.
 
 De telles animations peuvent provoquer un inconfort chez les personnes souffrant de [troubles vestibulaires liés au mouvement <sup>(angl.)</sup>](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Les animations comme la mise à l'echelle ou le déplacement de grands objets peuvent déclencher ces troubles.
 
@@ -37,7 +37,7 @@ Pour Firefox, la demande `reduce` est prise en compte si&nbsp;:
 
 ## Exemples
 
-Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-reduced-motion`. Si vous activez la réduction des animations dans les préférences d'accessibilité de votre appareil, la requête média `prefers-reduced-motion` détectera votre préférence et le CSS contenu dans la règle de réduction des animations, ayant la même [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) mais apparaissant plus tard dans l'[ordre des sources CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ordre_des_sources), prendra le dessus. Ainsi, l'[animation](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) de la boîte sera atténuée pour utiliser l'animation `dissolve`, plus douce et non déclenchante pour les troubles vestibulaires.
+Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-reduced-motion`. Si vous activez la réduction des animations dans les préférences d'accessibilité de votre appareil, la requête média `prefers-reduced-motion` détectera votre préférence et le CSS contenu dans la règle de réduction des animations, ayant la même [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) mais apparaissant plus tard dans l'[ordre des sources CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ordre_des_sources), prendra le dessus. Ainsi, l'[animation](/fr/docs/Web/CSS/Guides/Animations/Using) de la boîte sera atténuée pour utiliser l'animation `dissolve`, plus douce et non déclenchante pour les troubles vestibulaires.
 
 ### Atténuer l'animation de mise à l'echelle
 

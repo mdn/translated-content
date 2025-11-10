@@ -41,7 +41,7 @@ Ce descripteur accepte une liste de _tuples additifs_ (ensemble d'éléments) s�
 - {{cssxref("integer")}}
   - : Un entier positif ou nul qui indique le poids entier associé au symbole du tuple.
 
-- [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#symbol)
+- [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#symbol)
   - : Spécifie le symbole du compteur à utiliser pour la valeur de poids définie par l'entier associé du tuple.
 
 > [!NOTE]
@@ -127,4 +127,4 @@ Pour l'élément de liste ayant la valeur `109`, le chiffre `C` représente `100
 - Descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
 - Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
-- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

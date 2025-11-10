@@ -11,7 +11,7 @@ l10n:
 `getAnimations()` は {{domxref("Element")}} インターフェイスのメソッドで（`Animatable` ミックスインで指定されており）、この要素に影響を与える、あるいは将来的に影響を与える予定のすべての {{domxref("Animation")}} オブジェクトの配列を返します。オプションとして、子孫要素の {{domxref("Animation")}} オブジェクトも返すことができます。
 
 > [!NOTE]
-> この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API)が含まれます。
+> この配列には [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)、[CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API)が含まれます。
 
 ## 構文
 
@@ -53,7 +53,7 @@ Promise.all(
 ## 関連情報
 
 - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)
+- [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions)
 - {{domxref("Document.getAnimations()")}} - 文書内のすべてのアニメーションを読み取る
 - {{domxref("Animation")}}

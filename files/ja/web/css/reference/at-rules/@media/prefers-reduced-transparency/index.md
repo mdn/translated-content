@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`prefers-reduced-transparency`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが端末で使用される透明または半透明のレイヤー効果を縮小する設定を有効にしているかどうかを検出するために使用されます。この設定をオンにすると、一部のユーザーのコントラストや読みやすさを改善することができます。
+**`prefers-reduced-transparency`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが端末で使用される透明または半透明のレイヤー効果を縮小する設定を有効にしているかどうかを検出するために使用されます。この設定をオンにすると、一部のユーザーのコントラストや読みやすさを改善することができます。
 
 ## 構文
 
@@ -60,5 +60,5 @@ l10n:
 
 ## 関連情報
 
-- CSS の [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディアクエリー
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- CSS の [prefers-reduced-motion](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) メディアクエリー
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)

@@ -65,7 +65,7 @@ ol {
 
 ### 引数
 
-擬似クラス `:is()` には、引数として、1 つ以上のセレクターをカンマで区切ったリストである[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)が要求されます。このリストには、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は含まれていてはなりませんが、その他の単純、複合、複雑セレクターは使用できます。
+擬似クラス `:is()` には、引数として、1 つ以上のセレクターをカンマで区切ったリストである[セレクターリスト](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#セレクターリスト)が要求されます。このリストには、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)は含まれていてはなりませんが、その他の単純、複合、複雑セレクターは使用できます。
 
 ### :is() と :where() の違い
 
@@ -268,6 +268,6 @@ some-element::after {
 
 ## 関連情報
 
-- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が 0 です。
+- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が 0 です。
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

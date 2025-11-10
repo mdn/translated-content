@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@counter-style`** vous permet d'étendre les styles de liste prédéfinis et de définir vos propres styles de compteurs qui ne font pas partie de l'ensemble des styles prédéfinis. La règle `@counter-style` contient des [descripteurs](#descripteurs) définissant comment la valeur du compteur est convertie en une représentation sous forme de chaîne de caractères.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@counter-style`** vous permet d'étendre les styles de liste prédéfinis et de définir vos propres styles de compteurs qui ne font pas partie de l'ensemble des styles prédéfinis. La règle `@counter-style` contient des [descripteurs](#descripteurs) définissant comment la valeur du compteur est convertie en une représentation sous forme de chaîne de caractères.
 
 Bien que CSS propose de nombreux styles de compteurs prédéfinis, la règle `@counter-style` offre une méthode ouverte pour créer des compteurs personnalisés. Cette règle répond aux besoins typographiques du monde entier en permettant aux auteur·ice·s de définir leurs propres styles de compteurs lorsque les styles prédéfinis ne conviennent pas.
 
@@ -25,7 +25,7 @@ La règle `@counter-style` est identifiée par un [nom de style de compteur](#no
 ### Nom du style de compteur
 
 - `<counter-style-name>`
-  - : Fournit un nom pour votre style de compteur. Il est spécifié comme un {{cssxref("custom-ident")}} sensible à la casse, sans guillemets. La valeur ne doit pas être égale à `none`. Comme tous les identifiants personnalisés, la valeur de votre style de compteur ne peut pas être un [mot-clé global CSS](/fr/docs/Web/CSS/CSS_values_and_units/CSS_data_types#css-wide_keywords). Évitez les autres valeurs énumérées des propriétés CSS, y compris les valeurs des propriétés de [liste](/fr/docs/Web/CSS/CSS_lists#properties) et de [style de compteur](/fr/docs/Web/CSS/CSS_counter_styles#properties). Le nom de votre compteur ne peut pas être une valeur insensible à la casse de la propriété {{cssxref("list-style-type")}} comme `decimal`, `disc`, `square`, `circle`, `disclosure-open` et `disclosure-closed`.
+  - : Fournit un nom pour votre style de compteur. Il est spécifié comme un {{cssxref("custom-ident")}} sensible à la casse, sans guillemets. La valeur ne doit pas être égale à `none`. Comme tous les identifiants personnalisés, la valeur de votre style de compteur ne peut pas être un [mot-clé global CSS](/fr/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords). Évitez les autres valeurs énumérées des propriétés CSS, y compris les valeurs des propriétés de [liste](/fr/docs/Web/CSS/Guides/Lists#properties) et de [style de compteur](/fr/docs/Web/CSS/Guides/Counter_styles#properties). Le nom de votre compteur ne peut pas être une valeur insensible à la casse de la propriété {{cssxref("list-style-type")}} comme `decimal`, `disc`, `square`, `circle`, `disclosure-open` et `disclosure-closed`.
 
     > [!NOTE]
     > Les noms de styles de compteur non surchargés `decimal`, `disc`, `square`, `circle`, `disclosure-open` et `disclosure-closed` ne peuvent pas être utilisés comme nom de compteur personnalisé. Cependant, ils sont valides dans d'autres contextes où le type de donnée `<counter-style-name>` est attendu, comme dans `system: extends <counter-style-name>`.
@@ -123,4 +123,4 @@ Le [convertisseur de styles de compteurs <sup>(angl.)</sup>](https://r12a.github
 - {{Cssxref("counters", "counters()")}}
 - {{cssxref("symbols", "symbols()")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
-- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

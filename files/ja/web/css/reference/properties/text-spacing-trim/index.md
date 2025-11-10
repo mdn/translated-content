@@ -41,7 +41,7 @@ text-spacing-trim: unset;
       - : `normal` と同様に動作しますが、 CJK 全角の開始用約物文字が各行の先頭に来た場合には半角幅で設定します。
 
     > [!NOTE]
-    > [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
+    > [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
 
 ## 解説
 
@@ -171,5 +171,5 @@ p {
 
 ## 関連情報
 
-- [`ic`](/ja/docs/Web/CSS/CSS_values_and_units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/CSS_values_and_units#root_font-relative_lengths) の単位
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュール
+- [`ic`](/ja/docs/Web/CSS/Guides/Values_and_units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/Guides/Values_and_units#root_font-relative_lengths) の単位
+- [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュール

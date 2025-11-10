@@ -7,7 +7,7 @@ slug: Web/CSS/Reference/Properties/flex-flow
 
 {{cssinfo}}
 
-更多信息参见 [使用 CSS 弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+更多信息参见 [使用 CSS 弹性盒](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 
 ## 语法
 
@@ -59,4 +59,4 @@ element {
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

@@ -8,10 +8,10 @@ l10n:
 
 {{Non-standard_header}} {{Deprecated_header}}
 
-**`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
+**`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
 
 > [!WARNING]
-> この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性と `dppx` の単位を使用してください。
+> この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/Reference/At-rules/@media/resolution) 特性と `dppx` の単位を使用してください。
 
 > [!NOTE]
 > このメディア特性は Webkit でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が WebKit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
@@ -53,5 +53,5 @@ l10n:
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

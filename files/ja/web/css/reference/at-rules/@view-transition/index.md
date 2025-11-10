@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。
+**`@view-transition`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、文書間のナビゲーションの場合に、移動元及び移動先の文書で[ビュー遷移](/ja/docs/Web/API/View_Transition_API)を行うように指定するために使用します。
 
 文書間のビュー遷移を機能させるには、ナビゲーションの移動元と移動先の文書が同じオリジンにある必要があります。
 
@@ -100,5 +100,5 @@ l10n:
 - {{cssxref("::view-transition-group", "::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
 - [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
-- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [CSS アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
 - [CSS アットルール関数](/ja/docs/Web/CSS/At-rule_functions)

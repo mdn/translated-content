@@ -11,7 +11,7 @@ l10n:
 > [!NOTE]
 > Pour interroger la hauteur de la zone d'affichage, il faut utiliser la caractéristique média {{cssxref("@media/height", "height")}}.
 
-La [caractéristique média](/fr/docs/Web/CSS/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-height`** peut être utilisée pour tester la hauteur de la surface de rendu d'un périphérique de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`device-height`** peut être utilisée pour tester la hauteur de la surface de rendu d'un périphérique de sortie.
 
 ## Syntaxe
 
@@ -38,5 +38,5 @@ La caractéristique `device-height` est définie comme une longueur (type {{cssx
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}

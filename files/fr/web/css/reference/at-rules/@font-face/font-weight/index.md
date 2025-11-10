@@ -6,14 +6,14 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@font-face")}}. La propriété {{cssxref("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}}. La propriété {{cssxref("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
 
 En général, un·e développeur·euse souhaite utiliser des polices d'une même famille avec différentes graisses. Avec les polices traditionnelles ou _statiques_, un fichier de police contient les caractères d'une famille dans une graisse et un style précis&nbsp;: par exemple, «&nbsp;Helvetica bold italic&nbsp;». Pour permettre l'affichage de polices fines, normales, grasses ou extra-grasses lorsque la propriété `font-weight` demande une graisse spécifique, vous pouvez définir plusieurs règles {{cssxref("@font-face")}} pour la même famille (toutes avec la même valeur de descripteur {{cssxref("@font-face/font-family", "font-family")}}), une pour chaque graisse ou plage de graisses.
 
 Pour déclarer la police à utiliser pour une plage de graisses, indiquez une paire de valeurs de graisse séparées par un espace comme valeur du descripteur `font-weight`. Lorsque les règles CSS définissent une graisse via la propriété {{cssxref("font-weight")}} ou la propriété raccourcie {{cssxref("font")}}, la police appropriée sera alors utilisée.
 
 Par exemple, si le descripteur est `font-weight: 400 600;`, lorsque la propriété est `font-weight: 450` ou `font-weight: 550`, cette police sera utilisée pour cette famille de polices.
-Que la police soit statique ou une [police variable](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), la police correspondant à la plage sera utilisée. Dans ce cas, si la police est statique, `450` et `550` apparaîtront identiques. Si la police est variable, la seconde sera plus grasse.
+Que la police soit statique ou une [police variable](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts), la police correspondant à la plage sera utilisée. Dans ce cas, si la police est statique, `450` et `550` apparaîtront identiques. Si la police est variable, la seconde sera plus grasse.
 
 Le descripteur est le même pour toutes les polices, mais la plage que vous définirez pour une police variable sera généralement plus large, parfois même `1 1000` pour utiliser la même police pour toutes les valeurs de la propriété font-weight.
 
@@ -153,7 +153,7 @@ Les trois autres déclarations utilisent les versions light, bold et extra-bold 
 - la police bold à la plage 500-700
 - la police extra-bold à la plage 700-1000
 
-La [cascade](/fr/docs/Web/CSS/CSS_cascade/Cascade) CSS garantit que les trois dernières déclarations remplacent les parties de la plage définies dans la déclaration `FiraSans-Regular`.
+La [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) CSS garantit que les trois dernières déclarations remplacent les parties de la plage définies dans la déclaration `FiraSans-Regular`.
 
 ```css
 @font-face {

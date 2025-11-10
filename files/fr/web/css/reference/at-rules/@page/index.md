@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c699955e1e368bd42d6ea9318a6afc9256c3036f
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
 
 ## Syntaxe
 
@@ -47,9 +47,9 @@ La règle `@page` ne peut contenir que des descripteurs de page et des [règles 
 
 - [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
   - : Définit les marges de la page. Les propriétés individuelles [`margin-top`](/fr/docs/Web/CSS/Reference/Properties/margin-top), [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right), [`margin-bottom`](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) et [`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) peuvent aussi être utilisées.
-- [`page-orientation`](/fr/docs/Web/CSS/@page/page-orientation)
+- [`page-orientation`](/fr/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : Définit l'orientation de la page. Cela n'affecte pas la mise en page&nbsp;: la rotation est appliquée après la mise en page sur le support de sortie.
-- [`size`](/fr/docs/Web/CSS/@page/size)
+- [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size)
   - : Définit la taille cible et l'orientation du bloc englobant de la boîte de page. Dans le cas général, où une boîte de page est rendue sur une feuille de page, cela indique aussi la taille de la feuille de destination.
 
 La spécification mentionne que les propriétés CSS suivantes pourraient s'appliquer aux boîtes de page via la règle @page. Cependant, elles ne sont _pas encore prises en charge_ par les navigateurs.
@@ -276,7 +276,7 @@ Les propriétés de marge de page sont l'ensemble des propriétés CSS pouvant �
 
 ## Pages nommées
 
-Les pages nommées permettent de réaliser une mise en page par page et d'ajouter des [sauts de page](/fr/docs/Web/CSS/CSS_fragmentation) de manière déclarative lors de l'impression.
+Les pages nommées permettent de réaliser une mise en page par page et d'ajouter des [sauts de page](/fr/docs/Web/CSS/Guides/Fragmentation) de manière déclarative lors de l'impression.
 
 Les pages nommées peuvent être appliquées à l'aide de la propriété {{Cssxref("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
 
@@ -380,6 +380,6 @@ Voir les différentes [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseu
 ## Voir aussi
 
 - La propriété {{cssxref("page")}}
-- Le descripteur [`size`](/fr/docs/Web/CSS/@page/size) de `@page`
-- Le module [Médias paginés CSS](/fr/docs/Web/CSS/CSS_paged_media)
+- Le descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) de `@page`
+- Le module [Médias paginés CSS](/fr/docs/Web/CSS/Guides/Paged_media)
 - Le ticket [\[META\] CSS Paged Media Module Level 3 <sup>(angl.)</sup>](https://bugzil.la/286443) du Bugzilla pour suivre l'avancement du sujet (compteurs par page, etc.)

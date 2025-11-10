@@ -20,7 +20,7 @@ negative: "(" ")"; /* Ajoute '(-' avant et ')' après si la valeur du compteur e
 
 ### Valeurs
 
-Le descripteur `negative` accepte jusqu'à deux valeurs [`<symbol>`](/fr/docs/Web/CSS/@counter-style/symbols#valeurs).
+Le descripteur `negative` accepte jusqu'à deux valeurs [`<symbol>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols#valeurs).
 
 - `<symbol>`
   - : Si une seule valeur est spécifiée, elle est ajoutée avant la représentation du compteur lorsque celui-ci est négatif. Si deux valeurs sont spécifiées, la première est ajoutée avant et la seconde après la représentation du compteur lorsque celui-ci est négatif.
@@ -43,7 +43,7 @@ Le descripteur `negative` est pertinent dans deux cas&nbsp;: si les styles de co
 
 ### Rendu des compteurs négatifs
 
-Cet exemple [étend](/fr/docs/Web/CSS/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
+Cet exemple [étend](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/system#extends) le style de liste [`decimal`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#decimal). Le descripteur `negative` est utilisé pour ajouter `(-` et `)` avant et après les valeurs négatives du compteur.
 
 #### HTML
 
@@ -90,5 +90,5 @@ Le préfixe et le suffixe indiqués comme valeur du descripteur `negative` ne so
 - Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
 - Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
-- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
-- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)

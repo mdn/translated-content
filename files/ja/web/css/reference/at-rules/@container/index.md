@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
 ---
 
-**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
+**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
 この条件は、クエリーされたコンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変化したときに評価されます。
 
@@ -140,7 +140,7 @@ l10n:
 
 #### サイズコンテナー記述子
 
-`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/@media) サイズ機能クエリーの場合と同じです。
+`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) サイズ機能クエリーの場合と同じです。
 
 ```css
 @container (min-width: 400px) {
@@ -167,7 +167,7 @@ l10n:
   - : コンテナーの {{cssxref("inline-size")}} を {{cssxref("length")}} 値で表したものです。
 
 - `orientation`
-  - : コンテナーの[方向](/ja/docs/Web/CSS/@media/orientation)で、`landscape` または `portrait` のいずれかです。
+  - : コンテナーの[方向](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)で、`landscape` または `portrait` のいずれかです。
 
 - `width`
   - : コンテナーの幅を {{cssxref("length")}} 値で表したものです。
@@ -230,7 +230,7 @@ l10n:
     ```
 
 - `snapped`
-  - : コンテナーが、指定された軸に沿って[スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)コンテナーの祖先にスナップされているか、またはスナップされるかどうかを問い合わせます。有効な `snapped` の値としては、次のキーワードがあります。
+  - : コンテナーが、指定された軸に沿って[スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)コンテナーの祖先にスナップされているか、またはスナップされるかどうかを問い合わせます。有効な `snapped` の値としては、次のキーワードがあります。
     - `none`
       - : コンテナーは、その親スクロールコンテナーのスクロール[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)ではありません。 `snapped: none` クエリーを実装している場合、スクロールコンテナーのスナップターゲットであるコンテナーには `@container` スタイルは適用されませんが、スナップターゲットではないコンテナーにはスタイルが適用されます。
     - `x`
@@ -419,7 +419,7 @@ span {
 
 ### コンテナースタイルクエリー
 
-コンテナークエリーは、対象のコンテナー要素のスタイルを計算して評価することもできます。コンテナースタイルクエリーは、1 つ以上の `style()` 関数記法を使用する `@container` クエリーです。 論理値の構文と、スタイル機能をスタイルクエリーに結合するロジックは、[CSS 機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) と同じです。
+コンテナークエリーは、対象のコンテナー要素のスタイルを計算して評価することもできます。コンテナースタイルクエリーは、1 つ以上の `style()` 関数記法を使用する `@container` クエリーです。 論理値の構文と、スタイル機能をスタイルクエリーに結合するロジックは、[CSS 機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) と同じです。
 
 ```css
 @container style(<style-feature>),
@@ -430,7 +430,7 @@ span {
 }
 ```
 
-それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_宣言)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/var#values) のいずれかです。
+それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_宣言)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/Reference/Values/var#values) のいずれかです。
 
 ```css
 @container style(--themeBackground),
@@ -445,7 +445,7 @@ span {
 
 `style()` 関数の引数として渡した `<style-feature>` が宣言である場合、スタイルクエリーは、宣言の値がクエリー対象のコンテナーのそのプロパティの計算値と同じであれば真と評価されます。 そうでない場合は、偽と評価されます。
 
-以下のコンテナークエリーは、コンテナー要素の `--accent-color` の[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)が `blue` かどうかを調べます。
+以下のコンテナークエリーは、コンテナー要素の `--accent-color` の[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)が `blue` かどうかを調べます。
 
 ```css
 @container style(--accent-color: blue) {
@@ -462,7 +462,7 @@ span {
 
 ### スクロール状態クエリー
 
-スクロール状態クエリーの例の手順を追って説明については、「[コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)」をご覧ください。
+スクロール状態クエリーの例の手順を追って説明については、「[コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)」をご覧ください。
 
 ## 仕様書
 
@@ -474,12 +474,12 @@ span {
 
 ## 関連情報
 
-- [コンテナークエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [コンテナースクロール状態クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [コンテナークエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_queries)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
+- [コンテナースクロール状態クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
-- [CSS アットルール関数](/ja/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/Guides/Containment)
+- [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)

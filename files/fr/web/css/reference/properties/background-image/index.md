@@ -163,9 +163,9 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
-- [Utiliser des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Implémenter des sprites en CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- Le module d'[images CSS](/fr/docs/Web/CSS/CSS_images)
+- [Utiliser des dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
+- [Implémenter des sprites en CSS](/fr/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
+- Le module d'[images CSS](/fr/docs/Web/CSS/Guides/Images)
 
 - Les propriétés CSS relatives aux arrière-plans&nbsp;:
   - {{cssxref("background-attachment")}}
@@ -177,6 +177,6 @@ div {
   - {{cssxref("background-size")}}
   - {{cssxref("background")}} shorthand
 - [Apprendre&nbsp;: Bordures et arrière-plans](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- Le module [sur les arrière-plans et bordures CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [Redimensionner les images d'arrière-plan](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- Le module [sur les arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)

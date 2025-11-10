@@ -8,7 +8,7 @@ l10n:
 
 {{seecompattable}}
 
-**`device-posture`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の[現在の状態](/ja/docs/Web/API/Device_Posture_API)、つまり、ビューポートが平ら (`continuous`) 状態か、折り曲げられた (`folded`) 状態かを検出することができます。
+**`device-posture`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、端末の[現在の状態](/ja/docs/Web/API/Device_Posture_API)、つまり、ビューポートが平ら (`continuous`) 状態か、折り曲げられた (`folded`) 状態かを検出することができます。
 
 ## 構文
 
@@ -21,7 +21,7 @@ l10n:
 
 ## 例
 
-この例では、 `device-posture` メディア特性により、端末が折られた状態にあることを検出すると、その向き ([`orientation`](/ja/docs/Web/CSS/@media/orientation)) に応じてマージンが追加され、アプリケーションの 2 つのパネル間の余白が広くなり、読みやすくなります。
+この例では、 `device-posture` メディア特性により、端末が折られた状態にあることを検出すると、その向き ([`orientation`](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)) に応じてマージンが追加され、アプリケーションの 2 つのパネル間の余白が広くなり、読みやすくなります。
 
 ```css
 @media (device-posture: folded) and (orientation: landscape) {
@@ -51,5 +51,5 @@ l10n:
 
 - {{domxref("DevicePosture")}}
 - [Device Posture API](/ja/docs/Web/API/Device_Posture_API)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

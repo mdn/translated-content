@@ -227,7 +227,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Cet attribut ne doit être utilisé que lorsque l'attribut `rel` vaut `stylesheet`, `preload` ou `modulepreload`.
     Voir [Subresource Integrity](/fr/docs/Web/Security/Subresource_Integrity).
 - `media`
-  - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être un type de média ou une [requête média](/fr/docs/Web/CSS/CSS_media_queries).
+  - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être un type de média ou une [requête média](/fr/docs/Web/CSS/Guides/Media_queries).
     Cet attribut est principalement utilisé pour lier des feuilles de style externes&nbsp;: il permet à l'agent utilisateur de sélectionner la plus adaptée à l'appareil utilisé.
 
 - `referrerpolicy`

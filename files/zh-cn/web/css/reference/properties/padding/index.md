@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-**`padding`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)一次性设置元素所有四条边的[内边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内边距区域)。
+**`padding`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)一次性设置元素所有四条边的[内边距区域](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction#内边距区域)。
 
 {{InteractiveExample("CSS Demo: padding")}}
 
@@ -101,7 +101,7 @@ padding: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 作为定值的内边距尺寸。必须是非负值。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行内尺寸（水平语言中的*宽度*，由 {{cssxref("writing-mode")}} 定义）的百分比。必须是非负值。
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)的行内尺寸（水平语言中的*宽度*，由 {{cssxref("writing-mode")}} 定义）的百分比。必须是非负值。
 
 ## 形式定义
 
@@ -170,6 +170,6 @@ padding: 1em 3px 30px 5px; /* 上边：1em 的内边距*/
 
 ## 参见
 
-- [CSS 基本盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS 基本盒模型介绍](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
 - {{cssxref("padding-top")}}、{{cssxref("padding-right")}}、{{cssxref("padding-left")}} 和 {{cssxref("padding-left")}}。
 - 映射的逻辑属性：{{cssxref("padding-block-start")}}、{{cssxref("padding-block-end")}}、{{cssxref("padding-inline-start")}} 和 {{cssxref("padding-inline-end")}} 以及简写属性 {{cssxref("padding-block")}} 和 {{cssxref("padding-inline")}}

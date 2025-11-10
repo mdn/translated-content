@@ -121,4 +121,4 @@ column-width: unset;
 ## 参见
 
 - [学习：多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（学习布局）
-- [多列布局基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [多列布局基础概念](/zh-CN/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

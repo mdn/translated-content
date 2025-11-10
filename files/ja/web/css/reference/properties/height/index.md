@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-**`height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の高さを指定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)の高さを定義します。{{cssxref("box-sizing")}} が `border-box` に設定されていた場合は、 [境界領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#境界領域)の高さを定義します。
+**`height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の高さを指定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)の高さを定義します。{{cssxref("box-sizing")}} が `border-box` に設定されていた場合は、 [境界領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#境界領域)の高さを定義します。
 
 {{InteractiveExample("CSS デモ: height")}}
 
@@ -85,7 +85,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 絶対値で高さを定義します。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の高さのパーセント値で高さを定義します。
+  - : [包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の高さのパーセント値で高さを定義します。
 - `auto`
   - : 指定された要素の高さをブラウザーが計算して決めます。
 - `max-content`
@@ -93,11 +93,11 @@ height: unset;
 - `min-content`
   - : 本来の最小の高さです。
 - `fit-content`
-  - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
+  - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : 利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち `min(max-content, max(min-content, <length-percentage>))` です。
 - `stretch`
-  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の高さを、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)の高さに設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 100% と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
+  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の高さを、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)の高さに設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 100% と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
     > [!NOTE]
     > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
@@ -179,5 +179,5 @@ div {
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("clamp", "minmax()")}}
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

@@ -23,9 +23,9 @@ MathML の `<munder>` 要素は式の下にアクセントや範囲を付ける�
 - href
   - : 指定された URI へのハイパーリンクを設定するために使用します。
 - mathbackground
-  - : 背景色です。 `#rgb` や `#rrggbb`、 [HTML 色名](/ja/docs/Web/CSS/color_value#色キーワード)を使用することができます。
+  - : 背景色です。 `#rgb` や `#rrggbb`、 [HTML 色名](/ja/docs/Web/CSS/Reference/Values/color_value#色キーワード)を使用することができます。
 - mathcolor
-  - : テキスト色です。 `#rgb` や `#rrggbb`、 [HTML 色名](/ja/docs/Web/CSS/color_value#色キーワード)を使用することができます。
+  - : テキスト色です。 `#rgb` や `#rrggbb`、 [HTML 色名](/ja/docs/Web/CSS/Reference/Values/color_value#色キーワード)を使用することができます。
 
 ## 例
 

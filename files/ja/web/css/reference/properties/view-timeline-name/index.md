@@ -35,7 +35,7 @@ view-timeline-name: --custom_name_for_timeline;
   - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) プロパティで参照することができます。
 
     > [!NOTE]
-    > [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
+    > [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 
@@ -170,4 +170,4 @@ p {
 - [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
 - {{cssxref("timeline-scope")}}
 - [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis)
-- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

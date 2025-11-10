@@ -49,7 +49,7 @@ a::before {
 }
 ```
 
-[`content`](/ko/docs/Web/CSS/content) 속성이 정의되지 않았거나 유효하지 않은 값을 가지거나, 값으로 `normal` 이나 `none` 을 가지고 있다면 `::before` 가상 요소는 렌더되지 않고 `display: none` 이 설정된 것처럼 동작합니다.
+[`content`](/ko/docs/Web/CSS/Reference/Properties/content) 속성이 정의되지 않았거나 유효하지 않은 값을 가지거나, 값으로 `normal` 이나 `none` 을 가지고 있다면 `::before` 가상 요소는 렌더되지 않고 `display: none` 이 설정된 것처럼 동작합니다.
 
 > **Note:** [선택자 레벨 3](https://drafts.csswg.org/selectors-3/#gen-content) 에서는 콜론 표기법인 `::before` 를 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements) 의 [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 의 하나로 소개합니다. 브라우저는 세미콜론 표기인 `:before` 도 수용하며, 이는 CSS2에서 소개되어 있습니다.
 

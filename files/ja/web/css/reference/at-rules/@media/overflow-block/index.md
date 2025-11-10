@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-**`overflow-block`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。
+**`overflow-block`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。
 
 > [!NOTE]
 > `overflow-block` プロパティは、オーバーフローが発生するかどうかを判別するものではありません。これは、端末がオーバーフローをどのように処理するかを明らかにするものです。通常、ほとんどのブラウザーの画面では、動作は "scroll" になります。コンテンツが利用可能な縦方向の空間を超えると、オーバーフローしたコンテンツにアクセスするためにスクロールできるようになります。
@@ -65,5 +65,5 @@ l10n:
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

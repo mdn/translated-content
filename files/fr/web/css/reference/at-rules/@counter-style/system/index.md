@@ -33,12 +33,12 @@ Ce descripteur peut prendre l'une des trois formes suivantes&nbsp;:
 
 - L'une des valeurs clés&nbsp;: `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive` ou `fixed`.
 - La valeur clé `fixed` suivie d'un entier.
-- La valeur clé `extends` suivie d'une valeur [`<counter-style-name>`](/fr/docs/Web/CSS/@counter-style#counter-style-name).
+- La valeur clé `extends` suivie d'une valeur [`<counter-style-name>`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style#counter-style-name).
 
 Les valeurs incluent&nbsp;:
 
 - `cyclic`
-  - : Parcourt la liste des symboles fournie dans le descripteur [`symbols`](/fr/docs/Web/CSS/@counter-style/symbols). Une fois la fin de la liste atteinte, le cycle recommence au début. Cette valeur est utile aussi bien pour les styles de puces simples avec un seul symbole que pour les styles avec plusieurs symboles. Au moins un symbole doit être spécifié dans le descripteur `symbols`, sinon le style de compteur n'est pas valide.
+  - : Parcourt la liste des symboles fournie dans le descripteur [`symbols`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols). Une fois la fin de la liste atteinte, le cycle recommence au début. Cette valeur est utile aussi bien pour les styles de puces simples avec un seul symbole que pour les styles avec plusieurs symboles. Au moins un symbole doit être spécifié dans le descripteur `symbols`, sinon le style de compteur n'est pas valide.
 
 - `numeric`
   - : Interprète les symboles du compteur comme des chiffres dans un système de numérotation à valeur de position (<i lang="en">place-value numbering system</i>). Le système numérique est similaire au système `alphabetic` décrit ci-dessus. La principale différence est que dans le système `alphabetic`, le premier symbole du compteur donné dans le descripteur `symbols` est interprété comme `1`, le suivant comme `2`, etc. Cependant, dans le système numérique, le premier symbole du compteur est interprété comme 0, le suivant comme `1`, puis `2`, etc.
@@ -67,7 +67,7 @@ Les valeurs incluent&nbsp;:
     Il ne doit pas contenir de descripteur `symbols` ou `additive-symbols`, sinon la règle de style de compteur sera invalide. Si une ou plusieurs définitions de styles de compteur forment un cycle avec leurs valeurs `extends`, le navigateur considérera que tous les styles de compteur concernés étendent le style `decimal`.
 
 > [!NOTE]
-> Le descripteur [`symbols`](/fr/docs/Web/CSS/@counter-style/symbols) est requis lorsque la valeur est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`. Le descripteur [`additive-symbols`](/fr/docs/Web/CSS/@counter-style/additive-symbols) est requis si la valeur `additive` est définie.
+> Le descripteur [`symbols`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols) est requis lorsque la valeur est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`. Le descripteur [`additive-symbols`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/additive-symbols) est requis si la valeur `additive` est définie.
 
 ## Définition formelle
 
@@ -384,5 +384,5 @@ ul {
 - Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
 - Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
 - La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
-- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles)
-- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/CSS_lists)
+- Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)

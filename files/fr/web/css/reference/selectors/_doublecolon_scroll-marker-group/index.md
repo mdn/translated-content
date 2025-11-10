@@ -189,5 +189,5 @@ ul::scroll-marker-group {
 - {{cssxref(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
-- Le module de [débordement CSS](/fr/docs/Web/CSS/CSS_overflow)
+- Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

@@ -6,12 +6,12 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`page-orientation`** pour la [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}} contrôle la rotation d'une page imprimée. Il gère le flux du contenu d'une page à l'autre lorsque l'orientation de la page est modifiée. Ce comportement diffère du descripteur [`size`](/fr/docs/Web/CSS/@page/size) car l'utilisateur·rice peut définir la direction de rotation de la page.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`page-orientation`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@page")}} contrôle la rotation d'une page imprimée. Il gère le flux du contenu d'une page à l'autre lorsque l'orientation de la page est modifiée. Ce comportement diffère du descripteur [`size`](/fr/docs/Web/CSS/Reference/At-rules/@page/size) car l'utilisateur·rice peut définir la direction de rotation de la page.
 
 Ce descripteur facilite la mise en page et l'orientation des documents imprimés, en particulier lorsque les documents sont imprimés recto‑verso. L'utilisateur·rice peut préciser comment les pages seront tournées à l'impression. C'est utile pour disposer du contenu tel que des tableaux, qui peuvent être plus larges que le reste du document, dans une orientation différente.
 
 > [!NOTE]
-> Les [boîtes de marge](/fr/docs/Web/CSS/@page#règles_de_marge) et les autres éléments positionnels n'interagissent pas spécialement avec ce descripteur. Les marges sont posées comme d'habitude sur la page non tournée, puis tournées avec le reste du contenu.
+> Les [boîtes de marge](/fr/docs/Web/CSS/Reference/At-rules/@page#règles_de_marge) et les autres éléments positionnels n'interagissent pas spécialement avec ce descripteur. Les marges sont posées comme d'habitude sur la page non tournée, puis tournées avec le reste du contenu.
 
 ## Syntaxe
 
@@ -53,7 +53,7 @@ Ce descripteur facilite la mise en page et l'orientation des documents imprimés
 
 ### Rotation des pages imprimées
 
-Cet exemple montre comment le contenu d'un document imprimé peut être tourné pour s'adapter au contenu de la page et à la position de la page. Dans la première partie du code CSS, les [pages nommées](/fr/docs/Web/CSS/@page#named_pages) sont configurées pour définir la direction de rotation du contenu.
+Cet exemple montre comment le contenu d'un document imprimé peut être tourné pour s'adapter au contenu de la page et à la position de la page. Dans la première partie du code CSS, les [pages nommées](/fr/docs/Web/CSS/Reference/At-rules/@page#named_pages) sont configurées pour définir la direction de rotation du contenu.
 
 ```css live-sample___rotating-pages
 @page upright {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
 ---
 
-La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/fr/docs/Web/CSS) **`@starting-style`** est utilisée pour définir les valeurs de départ des propriétés appliquées à un élément, à partir desquelles vous souhaitez effectuer une transition lors de la première mise à jour de style de l'élément, c'est-à-dire lorsqu'un élément est affiché pour la première fois sur une page déjà chargée.
+La [règle @](/fr/docs/Web/CSS/CSS_syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@starting-style`** est utilisée pour définir les valeurs de départ des propriétés appliquées à un élément, à partir desquelles vous souhaitez effectuer une transition lors de la première mise à jour de style de l'élément, c'est-à-dire lorsqu'un élément est affiché pour la première fois sur une page déjà chargée.
 
 ## Syntaxe
 

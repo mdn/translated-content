@@ -184,4 +184,4 @@ checkbox.addEventListener("change", () => {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)

@@ -6,7 +6,7 @@ original_slug: Web/CSS/flex-flow
 
 {{ CSSRef}}
 
-La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
+La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
 
 {{InteractiveExample("CSS Demo: flex-flow")}}
 
@@ -55,7 +55,7 @@ flex-flow: column wrap;
 }
 ```
 
-Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts).
 
 ## Syntaxe
 
@@ -117,5 +117,5 @@ element {
 
 ## Voir aussi
 
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Guide sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- Guide sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)_
