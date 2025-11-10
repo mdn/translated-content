@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-**`@font-face`** [CSS](/zh-TW/docs/Web/CSS) [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)用來指定一個自定義的字型，用於顯示文本；該字型可以從遠端伺服器加載，或者使用者本地安裝的字型。
+**`@font-face`** [CSS](/zh-TW/docs/Web/CSS) [@ 規則](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules)用來指定一個自定義的字型，用於顯示文本；該字型可以從遠端伺服器加載，或者使用者本地安裝的字型。
 
 ## 語法
 
@@ -62,7 +62,7 @@ l10n:
 > [!NOTE]
 > 有關為舊版瀏覽器加載字型的回退策略，請參考 [`src` 描述符頁面](/zh-TW/docs/Web/CSS/Reference/At-rules/@font-face/src#指定舊版瀏覽器的後備方案)。
 
-`@font-face` 規則不僅可用於 CSS 的頂層，也可以用於任何 [CSS 條件群組 @ 規則](/zh-TW/docs/Web/CSS/CSS_conditional_rules#at_規則)中。
+`@font-face` 規則不僅可用於 CSS 的頂層，也可以用於任何 [CSS 條件群組 @ 規則](/zh-TW/docs/Web/CSS/Guides/Conditional_rules#at_規則)中。
 
 ### 字型 MIME 類型
 
@@ -143,7 +143,7 @@ body {
 
 ## 參見
 
-- [關於 WOFF](/zh-TW/docs/Web/CSS/CSS_fonts/WOFF)
+- [關於 WOFF](/zh-TW/docs/Web/CSS/Guides/Fonts/WOFF)
 - [FontSquirrel @font-face 生成器](https://www.fontsquirrel.com/tools/webfont-generator)
 - [使用 @font-face 的漂亮字型](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

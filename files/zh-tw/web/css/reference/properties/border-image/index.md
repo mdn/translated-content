@@ -94,7 +94,7 @@ border-image: unset;
 `border-image` 屬性可以用下面列出的一到五個值來指定。
 
 > [!NOTE]
-> 如果 {{cssxref("border-image-source")}} 的[計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)是 `none`，或者圖片無法顯示，則會改為顯示 {{cssxref("border-style")}}。
+> 如果 {{cssxref("border-image-source")}} 的[計算值](/zh-TW/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算值)是 `none`，或者圖片無法顯示，則會改為顯示 {{cssxref("border-style")}}。
 
 ### 值
 
