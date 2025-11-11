@@ -84,4 +84,4 @@ Actuellement, aucun navigateur ne prend en charge cette fonctionnalité.
 - [Format Web Video Text Tracks (WebVTT)](/fr/docs/Web/API/WebVTT_API)
 - {{cssxref(":past")}}
 - {{cssxref(":future")}}
-- Le module des [Sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)
+- Le module des [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

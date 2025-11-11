@@ -21,7 +21,7 @@ Pour limiter le sélecteur uniquement à l'hôte `<greenhouse>` directement ou l
 > [!NOTE]
 > Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
 
-La [spécificité](/fr/docs/Web/CSS/CSS_cascade/Specificity) de `:host-context()` est celle d'une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), à laquelle s'ajoute la spécificité du sélecteur passé en argument à la fonction.
+La [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) de `:host-context()` est celle d'une [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes), à laquelle s'ajoute la spécificité du sélecteur passé en argument à la fonction.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :host-context()", "tabbed-shorter")}}
 
