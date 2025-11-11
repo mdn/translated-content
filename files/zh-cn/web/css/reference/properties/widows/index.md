@@ -3,7 +3,7 @@ title: widows
 slug: Web/CSS/Reference/Properties/widows
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/CSS_paged_media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)的**顶部**需要结合在一起的最小行数。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/Guides/Paged_media)，区域或者[列](/zh-CN/docs/Web/CSS/Guides/Multicol_layout)的**顶部**需要结合在一起的最小行数。
 
 ```css
 /* <integer> values */
@@ -87,4 +87,4 @@ p:first-child {
 ## 参见
 
 - {{cssxref("orphans")}}
-- [分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)
+- [分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)

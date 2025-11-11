@@ -27,7 +27,7 @@ l10n:
 
 - CSS 的 {{cssxref("text-decoration-line")}} 属性有一个 `blink` 值，理论上能产生一样的效果，但现代浏览器基本都忽略了它。
 - JavaScript 的 {{jsxref("String.blink()")}} 方法会将字符串包裹在 `<blink></blink>` 标签中，但如前文所述，这个标签不再被任何地方支持。
-- 你仍可用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)实现闪烁文本。但出于上述原因，不建议在网页中使用闪烁文本。
+- 你仍可用 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)实现闪烁文本。但出于上述原因，不建议在网页中使用闪烁文本。
 
 ## 参见
 

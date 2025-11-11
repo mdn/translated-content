@@ -3,7 +3,7 @@ title: scroll-margin-inline
 slug: Web/CSS/Reference/Properties/scroll-margin-inline
 ---
 
-[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-margin-inline`** 设置了元素的行向滚动外边距。
+[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`scroll-margin-inline`** 设置了元素的行向滚动外边距。
 
 {{InteractiveExample("CSS Demo: scroll-margin-inline")}}
 
@@ -209,5 +209,5 @@ scroll-margin-inline: unset;
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
+- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/Guides/Scroll_snap)
 - [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

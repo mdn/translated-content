@@ -52,7 +52,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 [响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)彻底改变了在不同设备上处理网页内容布局的方式。它的一个关键优势是可以动态切换根据不同的屏幕尺寸优化后的布局，例如宽屏布局与窄屏（移动设备）布局之间的切换。它还可以根据其他设备属性，如分辨率或亮色或暗色配色方案的偏好，来处理内容的动态切换。
 
-所谓的“移动优先”技术可以确保默认布局适用于小屏幕设备，因此移动设备只需下载适合其屏幕的图像，无需下载更大的桌面图像，以此提高性能。然而，由于这是通过 CSS 中的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)来控制的，因此它只能对在 CSS 中加载的图像的性能产生积极影响。
+所谓的“移动优先”技术可以确保默认布局适用于小屏幕设备，因此移动设备只需下载适合其屏幕的图像，无需下载更大的桌面图像，以此提高性能。然而，由于这是通过 CSS 中的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)来控制的，因此它只能对在 CSS 中加载的图像的性能产生积极影响。
 
 在下面的小节中，我们将总结如何实现响应式的替代元素。你可以在[视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)和[响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)指南中找到更多关于这些实现的详细信息。
 

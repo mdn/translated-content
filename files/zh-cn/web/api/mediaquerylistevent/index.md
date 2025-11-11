@@ -58,7 +58,7 @@ mql.addListener(screenTest);
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}

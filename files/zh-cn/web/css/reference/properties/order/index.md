@@ -83,7 +83,7 @@ order: unset;
 
 由于 `order` 仅用于影响元素的*视觉顺序*，而不影响其逻辑顺序或 Tab 顺序，因此不应在非视觉媒体（例如 [speech](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#speech)）上使用。
 
-定义于 [CSS 显示](/zh-CN/docs/Web/CSS/CSS_display)模块中的这一属性，仅对网格和弹性项产生影响。当在父元素的 {{cssxref("display")}} 属性未创建弹性容器或网格容器的情况下，对子元素设置 `order` 属性是无效的。
+定义于 [CSS 显示](/zh-CN/docs/Web/CSS/Guides/Display)模块中的这一属性，仅对网格和弹性项产生影响。当在父元素的 {{cssxref("display")}} 属性未创建弹性容器或网格容器的情况下，对子元素设置 `order` 属性是无效的。
 
 ### 值
 
@@ -129,7 +129,7 @@ order: unset;
 
 #### CSS
 
-我们使用[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)模块的特性来设置主区域的样式；通过将 {{cssxref("display")}} 设置为 `flex`，{{htmlelement("main")}} 元素就变成了一个弹性容器。默认情况下，这会创建具有相同垂直高度的弹性项。两个侧边栏都被赋予了一个固定的 {{cssxref("width")}}，而 {{htmlelement("article")}} 将通过 {{cssxref("flex")}} 简写属性设置的 {{cssxref("flex-grow")}} 因子来占据所有[正可用空间](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#正负可用空间)。
+我们使用[弹性盒子布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)模块的特性来设置主区域的样式；通过将 {{cssxref("display")}} 设置为 `flex`，{{htmlelement("main")}} 元素就变成了一个弹性容器。默认情况下，这会创建具有相同垂直高度的弹性项。两个侧边栏都被赋予了一个固定的 {{cssxref("width")}}，而 {{htmlelement("article")}} 将通过 {{cssxref("flex")}} 简写属性设置的 {{cssxref("flex-grow")}} 因子来占据所有[正可用空间](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正负可用空间)。
 
 然后，我们在弹性容器的三个子元素上分别设置了不同的 `order` 属性值；这意味着 CSS 定义了组件的视觉顺序，而不是按照 HTML 中声明的顺序显示。
 
@@ -168,8 +168,8 @@ main > aside {
 
 ## 参见
 
-- [弹性布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [弹性项排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS 显示](/zh-CN/docs/Web/CSS/CSS_display)模块
+- [弹性布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [弹性项排序](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [CSS 显示](/zh-CN/docs/Web/CSS/Guides/Display)模块
 - {{glossary("Reading order", "阅读顺序")}}

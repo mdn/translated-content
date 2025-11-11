@@ -232,5 +232,5 @@ p {
   - [`text-transform`](/zh-CN/docs/Web/CSS/Reference/Properties/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
-- [CSS 文本装饰](/zh-CN/docs/Web/CSS/CSS_text_decoration) CSS 模块
-- [CSS 文本模块](/zh-CN/docs/Web/CSS/CSS_text)
+- [CSS 文本装饰](/zh-CN/docs/Web/CSS/Guides/Text_decoration) CSS 模块
+- [CSS 文本模块](/zh-CN/docs/Web/CSS/Guides/Text)

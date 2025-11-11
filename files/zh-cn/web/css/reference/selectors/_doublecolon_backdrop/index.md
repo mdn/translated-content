@@ -87,7 +87,7 @@ dialog::backdrop {
 
 #### CSS
 
-我们为背景遮罩添加了背景，使用 [CSS 渐变](/zh-CN/docs/Web/CSS/gradient)创建了一个色彩斑斓的甜甜圈效果：
+我们为背景遮罩添加了背景，使用 [CSS 渐变](/zh-CN/docs/Web/CSS/Reference/Values/gradient)创建了一个色彩斑斓的甜甜圈效果：
 
 ```css
 ::backdrop {

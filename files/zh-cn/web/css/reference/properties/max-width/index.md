@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-**`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)大于 `max-width` 指定的值。
+**`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)大于 `max-width` 指定的值。
 
 {{InteractiveExample("CSS Demo: max-width")}}
 
@@ -83,7 +83,7 @@ max-width: unset;
 - `min-content`
   - : 固有最小 `max-width`。
 - `fit-content`
-  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/max-content)，即 `min(max-content,max(min-content,stretch))`。
+  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/Reference/Values/max-content)，即 `min(max-content,max(min-content,stretch))`。
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, max(min-content, argument))`。
 
@@ -145,6 +145,6 @@ max-width: unset;
 
 ## 参见
 
-- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)，{{cssxref("box-sizing")}}
+- [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)，{{cssxref("box-sizing")}}
 - {{cssxref("width")}}、{{cssxref("min-width")}}
 - 映射的逻辑属性：{{cssxref("max-inline-size")}}、{{cssxref("max-block-size")}}

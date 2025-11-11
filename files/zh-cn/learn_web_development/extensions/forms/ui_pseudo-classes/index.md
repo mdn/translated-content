@@ -108,7 +108,7 @@ input:optional {
 
 ## 使用伪类生成内容
 
-在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)的用法，现在是一个更详细地谈论它的好时机。
+在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/Guides/Generated_content)的用法，现在是一个更详细地谈论它的好时机。
 
 我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/Reference/Selectors/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/Reference/Selectors/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/Reference/Properties/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
 

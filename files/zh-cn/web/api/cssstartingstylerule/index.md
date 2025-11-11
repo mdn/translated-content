@@ -30,5 +30,5 @@ _从其祖先 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 继承�
 ## 参见
 
 - {{CSSxRef("@starting-style")}}
-- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)模块
+- [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)模块
 - [使用动态样式信息](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

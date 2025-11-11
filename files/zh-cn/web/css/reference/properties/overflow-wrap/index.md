@@ -168,4 +168,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [换行和折行文本的指引](/zh-CN/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [换行和折行文本的指引](/zh-CN/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)

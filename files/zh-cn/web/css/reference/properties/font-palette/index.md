@@ -24,7 +24,7 @@ font-palette: --one;
 - `dark`
   - : 指定字体中第一个与“dark”匹配的调色板，并作用于当前字体。某些字体包含可确定适用于深色（接近黑色）背景的元数据，如果一个字体没有该元数据，则该值的表现等同于 `normal`。
 - `<palette-identifier>`
-  - : 允许使用 [@font-palette-values](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-palette-values) @ 规则指定字体调色板的自定义值。该值使用 [&lt;dashed-ident&gt;](/zh-CN/docs/Web/CSS/dashed-ident) 格式指定。
+  - : 允许使用 [@font-palette-values](/zh-CN/docs/Web/CSS/Reference/At-rules/@font-palette-values) @ 规则指定字体调色板的自定义值。该值使用 [&lt;dashed-ident&gt;](/zh-CN/docs/Web/CSS/Reference/Values/dashed-ident) 格式指定。
 
 ## 形式定义
 

@@ -333,4 +333,4 @@ customElements.define(
 - [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 接口
 - {{DOMxRef("Element.part")}} 属性
 - [使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/Guides/Scoping)模块

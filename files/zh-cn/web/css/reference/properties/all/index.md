@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`all`** 将除了 {{cssxref("unicode-bidi")}}、{{cssxref("direction")}} 与 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)之外的所有属性重设。它可以将属性设置为初始值或继承值，也可以设置为其他层叠层或样式表来源中指定的值。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`all`** 将除了 {{cssxref("unicode-bidi")}}、{{cssxref("direction")}} 与 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)之外的所有属性重设。它可以将属性设置为初始值或继承值，也可以设置为其他层叠层或样式表来源中指定的值。
 
 {{InteractiveExample("CSS 演示：all")}}
 
@@ -63,7 +63,7 @@ all: revert;
 
 ## 组成属性
 
-该属性是除 {{cssxref("unicode-bidi")}}、{{cssxref("direction")}} 和[自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)以外的所有 CSS 属性的简写。
+该属性是除 {{cssxref("unicode-bidi")}}、{{cssxref("direction")}} 和[自定义属性](/zh-CN/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)以外的所有 CSS 属性的简写。
 
 ## 语法
 
@@ -81,16 +81,16 @@ all: revert-layer;
 ### 取值
 
 - {{cssxref("initial")}}
-  - : 指定将元素的所有属性都更改为它们的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+  - : 指定将元素的所有属性都更改为它们的[初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)。
 - {{cssxref("inherit")}}
-  - : 指定将元素的所有属性都更改为它们的[继承值](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)。
+  - : 指定将元素的所有属性都更改为它们的[继承值](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)。
 - {{cssxref("unset")}}
   - : 如果是默认继承值，则指定元素的所有属性更改为继承值；如果不是默认继承值，则指定元素的所有属性更改为初始值。
 - {{cssxref("revert")}}
   - : 指定依赖于声明所属的样式表来源的行为：
-    - 如果规则属于[作者来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#作者样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)回滚到用户级别，以便计算[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)，就像没有为该元素指定作者级别的规则一样。就“还原”而言，作者来源包括覆盖来源和动画来源。
-    - 如果规则属于[用户来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)回滚到用户代理级别，以便计算[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)，就像没有为元素指定作者级或用户级规则一样。
-    - 如果规则属于[用户代理来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)，则 `revert` 值的作用类似于 `unset`。
+    - 如果规则属于[作者来源](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#作者样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)回滚到用户级别，以便计算[指定值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)，就像没有为该元素指定作者级别的规则一样。就“还原”而言，作者来源包括覆盖来源和动画来源。
+    - 如果规则属于[用户来源](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#用户样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)回滚到用户代理级别，以便计算[指定值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)，就像没有为元素指定作者级或用户级规则一样。
+    - 如果规则属于[用户代理来源](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#用户代理样式表)，则 `revert` 值的作用类似于 `unset`。
 - {{cssxref("revert-layer")}}
   - : 指定元素的所有属性都应回滚到之前的[层叠层](/zh-CN/docs/Web/CSS/Reference/At-rules/@layer)（如果存在）。如果不存在其他层叠层，元素的属性将回滚到当前层中的匹配规则（如果存在）或之前的[样式来源](/zh-CN/docs/Glossary/Style_origin)。
 

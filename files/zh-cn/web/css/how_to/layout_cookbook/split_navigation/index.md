@@ -29,4 +29,4 @@ slug: Web/CSS/How_to/Layout_cookbook/Split_navigation
 
 ## 参见
 
-- [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)

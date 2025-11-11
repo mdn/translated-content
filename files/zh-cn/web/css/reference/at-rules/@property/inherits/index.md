@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符是在使用 {{cssxref("@property")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)时所必须的，它控制着由 `@property` 指定的自定义属性注册是否默认继承。
+**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符是在使用 {{cssxref("@property")}} [At 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)时所必须的，它控制着由 `@property` 指定的自定义属性注册是否默认继承。
 
 ## 语法
 
@@ -42,7 +42,7 @@ l10n:
 
 为 `--my-color` [自定义属性](/zh-CN/docs/Web/CSS/Reference/Properties/--*)添加类型检查，将其限定为颜色类型，并设置默认值，同时禁止其继承值。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)：
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [At 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)：
 
 ```css
 @property --my-color {

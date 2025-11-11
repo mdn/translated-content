@@ -3,7 +3,7 @@ title: color
 slug: Web/CSS/Reference/Properties/color
 ---
 
-CSS **`color`** 属性设置元素的文本以及[文本装饰](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration)的前景色[颜色值](/zh-CN/docs/Web/CSS/color_value)，并设置 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 值。`currentcolor` 可以用作*其他*属性的间接值，且为其他颜色属性（如 {{cssxref("border-color")}}）的默认值。
+CSS **`color`** 属性设置元素的文本以及[文本装饰](/zh-CN/docs/Web/CSS/Reference/Properties/text-decoration)的前景色[颜色值](/zh-CN/docs/Web/CSS/Reference/Values/color_value)，并设置 [`currentcolor`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#currentcolor_关键字) 值。`currentcolor` 可以用作*其他*属性的间接值，且为其他颜色属性（如 {{cssxref("border-color")}}）的默认值。
 
 {{InteractiveExample("CSS Demo: color")}}
 
@@ -53,7 +53,7 @@ color: hwb(152deg 0% 58% / 70%);
 }
 ```
 
-对于在 HTML 中使用颜色的概述，请参考[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
+对于在 HTML 中使用颜色的概述，请参考[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)。
 
 ## 语法
 
@@ -112,7 +112,7 @@ color: unset;
 
 - {{cssxref("&lt;color&gt;")}}
   - : 设置元素的文本和装饰部分的颜色。
-- [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字)
+- [`currentcolor`](/zh-CN/docs/Web/CSS/Reference/Values/color_value#currentcolor_关键字)
   - : 将颜色设置为元素的 `color` 属性值。但是，如果设置为 `color` 的值，`currentcolor` 将被视为 `inherit`。
 
 ## 无障碍考虑
@@ -183,4 +183,4 @@ p {
 
 - 颜色 {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}} 和 {{cssxref("print-color-adjust")}}
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)

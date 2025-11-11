@@ -90,7 +90,7 @@ l10n:
 
 - **CSS `shape()` 函数**：`layout.css.basic-shape-shape.enabled`。
 
-  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
+  你可以在 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性中使用 [`shape()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/shape) 函数来定义形状。此函数使你可以更精细地控制可被定义的形状，并提供了比 {{cssxref("path","path()")}} 函数更多的优点（参见 [Firefox bug 1823463](https://bugzil.la/1823463) 以了解 `shape()` 函数在 `clip-path` 中的支持；参见 [Firefox bug 1884424](https://bugzil.la/1884424) 以了解 `shape()` 函数在 `offset-path` 中的支持；参见 [Firefox bug 1884425](https://bugzil.la/1884425) 以了解 `shape()` 的插值支持）。
 
 ## 更早期的版本
 

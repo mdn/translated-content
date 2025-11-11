@@ -133,7 +133,7 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : 使用 `<shadow>` 参数沿图像的轮廓生成阴影效果。阴影语法类似于 `<box-shadow>`（在 [CSS 背景和边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)中定义），但不允许使用 `inset` 关键字以及 `spread` 参数。与所有 `filter` 属性值一样，任何在 `drop-shadow()` 后的滤镜同样会应用在阴影上。
+  - : 使用 `<shadow>` 参数沿图像的轮廓生成阴影效果。阴影语法类似于 `<box-shadow>`（在 [CSS 背景和边框模块](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders)中定义），但不允许使用 `inset` 关键字以及 `spread` 参数。与所有 `filter` 属性值一样，任何在 `drop-shadow()` 后的滤镜同样会应用在阴影上。
 
     ```css
     filter: drop-shadow(16px 16px 10px black);
@@ -271,7 +271,7 @@ img:nth-of-type(2) {
 ## 参见
 
 - CSS {{cssxref("backdrop-filter")}} 属性
-- CSS [合成和混合](/zh-CN/docs/Web/CSS/CSS_compositing_and_blending)模块，包括 CSS {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
+- CSS [合成和混合](/zh-CN/docs/Web/CSS/Guides/Compositing_and_blending)模块，包括 CSS {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
 - CSS {{cssxref("mask")}} 属性
 - [SVG](/zh-CN/docs/Web/SVG)，包括 SVG {{SVGElement("filter")}} 元素以及 SVG {{SVGAttr("filter")}} 属性。
 - [将 SVG 效果应用于 HTML 内容](/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

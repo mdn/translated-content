@@ -330,7 +330,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : 在派发 WebXR 选择事件（{{domxref("XRSession/select_event", "select")}}、{{domxref("XRSession/selectstart_event", "selectstart")}}、{{domxref("XRSession/selectend_event", "selectend")}}）前触发此事件。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
+  - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/Guides/Containment#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/Guides/Containment#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
 - {{domxref("Element/input_event","input")}}
   - : 当用户操作直接导致元素值发生变化时触发此事件。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
@@ -491,13 +491,13 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 ### 过渡事件
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)被取消时触发的 {{domxref("Event")}}。
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)被取消时触发的 {{domxref("Event")}}。
 - {{domxref("Element/transitionend_event", "transitionend")}}
-  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)结束播放时触发的 {{domxref("Event")}}。
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)结束播放时触发的 {{domxref("Event")}}。
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
-  - : 当创建 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)（即当它被添加到一组正在运行的过渡中时）时，一个 {{domxref("Event")}} 会被触发，但不一定会被启动。
+  - : 当创建 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)（即当它被添加到一组正在运行的过渡中时）时，一个 {{domxref("Event")}} 会被触发，但不一定会被启动。
 - {{domxref("Element/transitionstart_event", "transitionstart")}}
-  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)开始过渡时触发的 {{domxref("Event")}}。
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)开始过渡时触发的 {{domxref("Event")}}。
 
 ## 规范
 

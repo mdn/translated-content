@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
-**`margin-right`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素右侧的[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使其远离相邻元素，负值使其更加靠近。
+**`margin-right`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素右侧的[外边距区域](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction#外边距区域)。正值使其远离相邻元素，负值使其更加靠近。
 
 {{InteractiveExample("CSS Demo: margin-right")}}
 
@@ -57,7 +57,7 @@ margin-right: 0;
 }
 ```
 
-两个相邻的盒子的垂直边距可能会合并。这被称为[_外边距折叠_](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
+两个相邻的盒子的垂直边距可能会合并。这被称为[_外边距折叠_](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。
 
 ## 语法
 
@@ -85,7 +85,7 @@ margin-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 外边距的大小为固定值。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
+  - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
 - `auto`
   - : 右边距接收未使用的水平空间中的一部分（这主要由所使用的布局模式确定）。如果 `margin-left` 和 `margin-right` 的值都是 `auto`，则最后计算的空间是均匀分布的。下表总结了不同的情况：
 

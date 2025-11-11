@@ -165,6 +165,6 @@ grid-template-columns: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-areas")}}、{{cssxref("grid-template")}}
-- 网格布局教程：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- 网格布局教程：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_tracks)_
 - 视频教程：_[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- [子网格](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Subgrid)

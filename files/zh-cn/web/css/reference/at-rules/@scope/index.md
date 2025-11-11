@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f28085e76dfe4ef1987473b101db1338b41ed27f
 ---
 
-**`@scope`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)能够让你选中特定的 DOM 子树中的元素，无需编写过于具体的难以覆盖的选择器就能准确地定位元素，也不用将选择器与 DOM 结构紧密地耦合。
+**`@scope`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)能够让你选中特定的 DOM 子树中的元素，无需编写过于具体的难以覆盖的选择器就能准确地定位元素，也不用将选择器与 DOM 结构紧密地耦合。
 
 在 JavaScript 中，可以通过 CSS 对象模型接口 {{DOMxRef("CSSScopeRule")}} 访问 `@scope`。
 
@@ -129,7 +129,7 @@ body
 }
 ```
 
-实际上，`:scope` 隐式地添加到所有域限样式规则的前面。只要你想，你也可以显式地在样式规则前面添加 `:scope` 或者[嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)选择器（`&`）以实现同样的效果。
+实际上，`:scope` 隐式地添加到所有域限样式规则的前面。只要你想，你也可以显式地在样式规则前面添加 `:scope` 或者[嵌套](/zh-CN/docs/Web/CSS/Guides/Nesting)选择器（`&`）以实现同样的效果。
 
 下列区块中的三种规则所选中的元素都是等同的：
 
@@ -217,7 +217,7 @@ body
 
 ### 如何解决 `@scope` 冲突
 
-`@scope` 为 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade)添加了一个新的标准：**作用域就近原则**。这说明，当两个作用域的样式存在冲突时，在 DOM 树中跳到域根所需层级数最少的样式将会被应用。让我们看一个例子，看看这意味着什么。
+`@scope` 为 [CSS 层叠](/zh-CN/docs/Web/CSS/Guides/Cascade)添加了一个新的标准：**作用域就近原则**。这说明，当两个作用域的样式存在冲突时，在 DOM 树中跳到域根所需层级数最少的样式将会被应用。让我们看一个例子，看看这意味着什么。
 
 以下面的 HTML 代码片段为例，不同主题的卡片互相嵌套：
 
@@ -280,7 +280,7 @@ body
 现在最深层的段落的字体颜色正确地设置为黑色，这是因为在 DOM 树中距离 `.light-theme` 域根只有一个层级，而距离 `.dark-theme` 域根有两个层级。因此，浅色样式的优先级高。
 
 > [!NOTE]
-> 作用域就近原则将无视源代码顺序，但其自身会被其它优先级更高的标准覆盖，比如：[importance](/zh-CN/docs/Web/CSS/important)、[层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)和[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。
+> 作用域就近原则将无视源代码顺序，但其自身会被其它优先级更高的标准覆盖，比如：[importance](/zh-CN/docs/Web/CSS/Reference/Values/important)、[层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)和[优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)。
 
 ## 形式语法
 

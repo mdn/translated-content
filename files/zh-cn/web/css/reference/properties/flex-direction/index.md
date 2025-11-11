@@ -30,7 +30,7 @@ flex-direction: unset;
 
 {{cssinfo}}
 
-查看[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)以了解更多的属性和信息。
+查看[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)以了解更多的属性和信息。
 
 ## 语法
 
@@ -118,4 +118,4 @@ flex-direction: unset;
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

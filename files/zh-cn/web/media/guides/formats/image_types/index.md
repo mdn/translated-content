@@ -1022,7 +1022,7 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
     <tr>
       <th scope="row">支持的颜色模式</th>
       <td>
-        SVG 中的颜色是使用 <a href="/zh-CN/docs/Web/CSS/color_value">CSS 颜色语法</a>指定的。
+        SVG 中的颜色是使用 <a href="/zh-CN/docs/Web/CSS/Reference/Values/color_value">CSS 颜色语法</a>指定的。
       </td>
     </tr>
     <tr>

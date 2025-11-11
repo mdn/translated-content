@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSFontFaceRule")}} 接口的只读属性 **`style`** 返回 {{cssxref("@font-face")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)的样式信息。这些信息以 {{domxref("CSSStyleDeclaration")}} 对象的形式提供。
+{{domxref("CSSFontFaceRule")}} 接口的只读属性 **`style`** 返回 {{cssxref("@font-face")}} [At 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)的样式信息。这些信息以 {{domxref("CSSStyleDeclaration")}} 对象的形式提供。
 
 ## 值
 

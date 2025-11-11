@@ -7,7 +7,7 @@ l10n:
 
 在 CSS 中，元素的*固有尺寸*是指基于其内容的尺寸，不考虑它所在的上下文影响。例如，CSS [盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)属性应用的尺寸。元素的固有尺寸由其 {{cssxref("min-content")}} 和 {{cssxref("max-content")}} 尺寸表示。
 
-行级元素的尺寸是固有的：[尺寸](/zh-CN/docs/Web/CSS/CSS_box_sizing)和[盒](/zh-CN/docs/Web/CSS/CSS_box_model)属性，包括 {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("block-size")}}、{{cssxref("inline-size")}}、{{cssxref("padding-block")}} 和 {{cssxref("margin-block")}} 都对其没有影响（尽管 {{cssxref("margin-inline")}} 和 {{cssxref("padding-inline")}} 有影响）。
+行级元素的尺寸是固有的：[尺寸](/zh-CN/docs/Web/CSS/Guides/Box_sizing)和[盒](/zh-CN/docs/Web/CSS/Guides/Box_model)属性，包括 {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("block-size")}}、{{cssxref("inline-size")}}、{{cssxref("padding-block")}} 和 {{cssxref("margin-block")}} 都对其没有影响（尽管 {{cssxref("margin-inline")}} 和 {{cssxref("padding-inline")}} 有影响）。
 
 例如，行级元素 {{htmlelement("span")}} 的最小固有尺寸是在不应用其他 CSS 盒属性的情况下，它在一个行向尺寸为 `0px` 的容器内浮动时的最小尺寸。最大的固有尺寸则相反，是指其容器的行向尺寸为无限时的大小。
 
@@ -15,7 +15,7 @@ l10n:
 
 像素密度和分辨率影响固有尺寸。默认情况下，假定图像具有“1x”像素密度（1 设备像素=1 CSS 像素），此时固有尺寸只是像素高度和宽度。图像的固有尺寸和分辨率可以在其 {{Glossary("EXIF")}} 数据中明确指定。图像的像素密度也可以使用 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性设置。请注意，如果同时使用两种机制，则 `srcset` 值覆盖 EXIF 值。
 
-固有尺寸及其计算方式在 [CSS 尺寸模块](/zh-CN/docs/Web/CSS/CSS_box_sizing)中定义。
+固有尺寸及其计算方式在 [CSS 尺寸模块](/zh-CN/docs/Web/CSS/Guides/Box_sizing)中定义。
 
 #### 最小固有尺寸
 
@@ -63,5 +63,5 @@ p {
 
 - CSS {{cssxref("min-content")}}、{{cssxref("max-content")}} 和 {{cssxref("fit-content")}}属性值。
 - CSS {{cssxref("aspect-ratio")}} 属性
-- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块
 - [CSS 尺寸规范：固有尺寸](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes)

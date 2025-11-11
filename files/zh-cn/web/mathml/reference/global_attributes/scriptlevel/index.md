@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
-**`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/Reference/Properties/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)的规则。
+**`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/Reference/Properties/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction#用户代理样式表)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/Reference/Properties/font-size)的规则。
 
 ## 示例
 
@@ -33,7 +33,7 @@ l10n:
 
 ### 值
 
-如果 `<U>` 是一个无符号[整数](/zh-CN/docs/Web/CSS/integer)（即移除了前缀符号的整数），则接受的值为：
+如果 `<U>` 是一个无符号[整数](/zh-CN/docs/Web/CSS/Reference/Values/integer)（即移除了前缀符号的整数），则接受的值为：
 
 - `<U>`
   - : 将 math-depth 设置为值 `<U>`。这将使元素的 `font-size` 与指定深度的元素的字体大小相同。

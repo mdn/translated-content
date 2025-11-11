@@ -7,7 +7,7 @@ l10n:
 
 **HTML 颜色代码**是用于描述在网页上指定颜色的最早方法的一个通用术语。这包括 HTML 颜色名称（如 `black`、`purple` 和 `aqua`）以及十六进制表示法（如 `#000000`、`#800080` 和 `#00ffff`）。这些最初在 HTML 规范中定义——例如参见 [HTML 3.2 颜色定义](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors)中给出的 16 种原始 HTML 颜色。
 
-现在将 Web 上的颜色称为“HTML 颜色代码”或“HTML 颜色名称”已不再准确。颜色现在由 [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)规范，并通常称为 CSS 颜色或 Web 颜色。
+现在将 Web 上的颜色称为“HTML 颜色代码”或“HTML 颜色名称”已不再准确。颜色现在由 [CSS 颜色模块](/zh-CN/docs/Web/CSS/Guides/Colors)规范，并通常称为 CSS 颜色或 Web 颜色。
 
 ## 参见
 

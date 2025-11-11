@@ -114,5 +114,5 @@ changeButton.addEventListener("click", change);
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

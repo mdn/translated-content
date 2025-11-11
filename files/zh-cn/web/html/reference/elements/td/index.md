@@ -100,7 +100,7 @@ caption {
   - : 包含以空格分隔的字符串列表，每个字符串与数据单元格适用的单元格组的 `id` 属性相对应。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 定义数据单元格的背景颜色。该值是 HTML 颜色；可以是以 `#` 为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。由于该属性已被弃用，请使用 {{cssxref("background-color")}} CSS 属性代替。
+  - : 定义数据单元格的背景颜色。该值是 HTML 颜色；可以是以 `#` 为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/Reference/Values/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/Reference/Values/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。由于该属性已被弃用，请使用 {{cssxref("background-color")}} CSS 属性代替。
 
 - `char` {{deprecated_inline}}
   - : 没有任何作用。其最初目的是指定内容与数据单元格中的某个字符对齐。当尝试对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略。

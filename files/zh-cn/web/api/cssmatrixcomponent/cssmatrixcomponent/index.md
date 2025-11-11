@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-**`CSSMatrixComponent()`** 构造函数创建一个用于表示 CSS 中的 [matrix()](/zh-CN/docs/Web/CSS/transform-function/matrix) 和 [matrix3d()](/zh-CN/docs/Web/CSS/transform-function/matrix3d) 值的新的 {{domxref("CSSMatrixComponent")}} 对象。
+**`CSSMatrixComponent()`** 构造函数创建一个用于表示 CSS 中的 [matrix()](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/matrix) 和 [matrix3d()](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/matrix3d) 值的新的 {{domxref("CSSMatrixComponent")}} 对象。
 
 ## 语法
 

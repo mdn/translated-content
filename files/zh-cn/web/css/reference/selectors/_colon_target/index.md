@@ -192,4 +192,4 @@ p:target i {
 
 ## 参见
 
-- [在选择器中使用 :target 伪类](/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [在选择器中使用 :target 伪类](/zh-CN/docs/Web/CSS/Guides/Selectors/Using_:target)

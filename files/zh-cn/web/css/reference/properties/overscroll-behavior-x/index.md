@@ -71,4 +71,4 @@ main > div {
 - {{cssxref("overscroll-behavior-y")}}
 - {{cssxref("overscroll-behavior-inline")}}
 - {{cssxref("overscroll-behavior-block")}}
-- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
+- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/Guides/Overscroll_behavior)模块

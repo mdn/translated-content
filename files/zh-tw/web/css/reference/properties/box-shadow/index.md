@@ -51,7 +51,7 @@ box-shadow:
 
 `box-shadow` 屬性讓你能為幾乎任何元素的框架投下陰影。如果在帶有盒狀陰影的元素上指定了 {{cssxref("border-radius")}}，盒狀陰影會呈現相同的圓角。多個盒狀陰影的 Z 軸順序與多個[文字陰影](/zh-TW/docs/Web/CSS/Reference/Properties/text-shadow)相同（第一個指定的陰影在最上面）。
 
-[盒狀陰影產生器](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)是一個互動式工具，讓你可以產生 `box-shadow`。
+[盒狀陰影產生器](/zh-TW/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)是一個互動式工具，讓你可以產生 `box-shadow`。
 
 ## 語法
 
@@ -119,7 +119,7 @@ box-shadow: unset;
 
 ### 插值
 
-在為陰影製作動畫時，例如當方塊上的多個陰影值在懸停時過渡到新值時，這些值會被插值。{{Glossary("Interpolation", "插值")}}決定了屬性的中間值，例如模糊半徑、擴散半徑和顏色，因為陰影在過渡。對於陰影列表中的每個陰影，顏色、x、y、模糊和擴散都會過渡；顏色作為 [`<color>`](/zh-TW/docs/Web/CSS/color_value)，其他值作為 {{cssxref("length")}}。
+在為陰影製作動畫時，例如當方塊上的多個陰影值在懸停時過渡到新值時，這些值會被插值。{{Glossary("Interpolation", "插值")}}決定了屬性的中間值，例如模糊半徑、擴散半徑和顏色，因為陰影在過渡。對於陰影列表中的每個陰影，顏色、x、y、模糊和擴散都會過渡；顏色作為 [`<color>`](/zh-TW/docs/Web/CSS/Reference/Values/color_value)，其他值作為 {{cssxref("length")}}。
 
 在兩個以逗號分隔的多個盒狀陰影列表之間進行多個陰影的插值時，陰影會按順序配對，並在配對的陰影之間進行插值。如果陰影列表的長度不同，則較短的列表會在末尾用顏色為 `transparent`、X、Y 和模糊為 `0` 的陰影進行填充，並設定 `inset` 或缺少 `inset` 以匹配。如果在任何一對陰影中，一個設定了 `inset` 而另一個沒有，則整個陰影列表不會進行插值；陰影將變為新值而沒有動畫效果。
 
@@ -171,7 +171,7 @@ blockquote {
 
 當 `x-offset`、`y-offset` 和 `blur` 都為零時，盒狀陰影將是一個在所有側面大小相等的純色輪廓。陰影是從後到前繪製的，所以第一個陰影位於後續陰影之上。當 `border-radius` 設定為 0（預設值）時，陰影的角將是直角。如果我們設定了任何其他值的 `border-radius`，角將會是圓形的。
 
-我們添加了一個與最寬的盒狀陰影大小相同的邊界，以確保陰影不會與相鄰元素重疊或超出包含框的邊界。盒狀陰影不會影響[盒模型](/zh-TW/docs/Web/CSS/CSS_box_model)的尺寸。
+我們添加了一個與最寬的盒狀陰影大小相同的邊界，以確保陰影不會與相鄰元素重疊或超出包含框的邊界。盒狀陰影不會影響[盒模型](/zh-TW/docs/Web/CSS/Guides/Box_model)的尺寸。
 
 #### HTML
 
@@ -210,4 +210,4 @@ p {
 - {{cssxref("&lt;color&gt;")}} 資料類型（用於指定陰影顏色）
 - {{cssxref("text-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [使用 CSS 為 HTML 元素套用顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用 CSS 為 HTML 元素套用顏色](/zh-TW/docs/Web/CSS/Guides/Colors/Applying_color)

@@ -192,5 +192,5 @@ div {
 
 ## 参见
 
-- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - 使用 {{cssxref("clear")}} 强制元素移至浮动元素下方。

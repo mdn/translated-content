@@ -58,9 +58,9 @@ column-fill: unset;
 - `auto`
   - : 按顺序填充列。内容只占用其所需的空间，可能导致某些列保持空白。
 - `balance`
-  - : 内容平均分配到各列。在片段式上下文中，如 [CSS 分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)，只有最后一个片段是平衡的。因此，在分页媒体中，只有最后一页是平衡的。
+  - : 内容平均分配到各列。在片段式上下文中，如 [CSS 分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)，只有最后一个片段是平衡的。因此，在分页媒体中，只有最后一页是平衡的。
 - `balance-all` {{Experimental_Inline}}
-  - : 内容平均分配到各列。在片段式上下文中，如 [CSS 分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)，所有片段都是平衡的。
+  - : 内容平均分配到各列。在片段式上下文中，如 [CSS 分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)，所有片段都是平衡的。
 
 ## 形式定义
 

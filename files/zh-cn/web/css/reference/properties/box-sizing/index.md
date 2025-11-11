@@ -56,7 +56,7 @@ padding: 5px;
 }
 ```
 
-在 [CSS 盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)的默认定义里，你对一个元素所设置的 {{Cssxref("width")}} 与 {{Cssxref("height")}} 只会应用到这个元素的内容区。如果这个元素有任何的 {{Cssxref("border")}} 或 {{Cssxref("padding")}} ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。
+在 [CSS 盒子模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)的默认定义里，你对一个元素所设置的 {{Cssxref("width")}} 与 {{Cssxref("height")}} 只会应用到这个元素的内容区。如果这个元素有任何的 {{Cssxref("border")}} 或 {{Cssxref("padding")}} ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。
 
 box-sizing 属性可以被用来调整这些表现：
 
@@ -90,7 +90,7 @@ box-sizing 属性可以被用来调整这些表现：
     宽度和高度的计算值都不包含内容的边框（border）和内边距（padding）。
 
 - `border-box`
-  - : {{Cssxref("width")}} 和 {{Cssxref("height")}} 属性包括内容，内边距和边框，但不包括外边距。这是当文档处于 Quirks 模式 时 Internet Explorer 使用的[盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)。注意，填充和边框将在盒子内 , 例如， `.box {width: 350px; border: 10px solid black;}` 导致在浏览器中呈现的宽度为 350px 的盒子。内容框不能为负，并且被分配到 0，使得不可能使用 border-box 使元素消失。
+  - : {{Cssxref("width")}} 和 {{Cssxref("height")}} 属性包括内容，内边距和边框，但不包括外边距。这是当文档处于 Quirks 模式 时 Internet Explorer 使用的[盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)。注意，填充和边框将在盒子内 , 例如， `.box {width: 350px; border: 10px solid black;}` 导致在浏览器中呈现的宽度为 350px 的盒子。内容框不能为负，并且被分配到 0，使得不可能使用 border-box 使元素消失。
 
     尺寸计算公式：
     - `width` = border + padding + 内容的宽度
@@ -156,4 +156,4 @@ div {
 
 ## 参见
 
-- [CSS 框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS 框盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)

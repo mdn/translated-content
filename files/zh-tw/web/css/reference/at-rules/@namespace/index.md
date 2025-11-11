@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`@namespace`** 是一個用於定義要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespace)的 [at 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)。
+**`@namespace`** 是一個用於定義要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespace)的 [at 規則](/zh-TW/docs/Web/CSS/Guides/Syntax/At-rules)。
 
 {{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
 

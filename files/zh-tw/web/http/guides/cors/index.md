@@ -23,7 +23,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 - Web 字體（在 CSS 中使用 `@font-face` 進行跨域字體使用），[以便伺服器可以部署僅允許跨來源加載並由被允許的網站使用的 TrueType 字體。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL 紋理](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 繪製到畫布上的圖像/影片幀。
-- [從圖像生成的 CSS 形狀。](/zh-TW/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [從圖像生成的 CSS 形狀。](/zh-TW/docs/Web/CSS/Guides/Shapes/From_images)
 
 這是一篇關於跨來源資源共享的通用文章，包含對必要 HTTP 標頭的討論。
 

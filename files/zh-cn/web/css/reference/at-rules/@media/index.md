@@ -3,7 +3,7 @@ title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 ---
 
-**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > [!NOTE]
 > 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
@@ -39,7 +39,7 @@ abbr {
 
 ## 语法
 
-`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules#条件规则组)中。
+`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules#条件规则组)中。
 
 ```css
 /* 在你的代码的顶层 */
@@ -59,7 +59,7 @@ abbr {
 }
 ```
 
-有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。
+有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using#语法)。
 
 ## 描述
 
@@ -70,7 +70,7 @@ _媒体类型_（media type）描述设备的一般类别。除非使用 `not` �
 - `all`
   - : 适用于所有设备。
 - `print`
-  - : 适用于在打印预览模式下在屏幕上查看的分页材料和文档。（有关特定于这些格式的格式问题的信息，请参阅[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)。）
+  - : 适用于在打印预览模式下在屏幕上查看的分页材料和文档。（有关特定于这些格式的格式问题的信息，请参阅[分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)。）
 - `screen`
   - : 主要用于屏幕。
 
@@ -165,7 +165,7 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ## 无障碍考虑
 
-为了最好地适应调整了网站文本大小的用户，当你需要在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)中使用 {{cssxref("&lt;length&gt;")}} 时，请使用 [`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 单位。
+为了最好地适应调整了网站文本大小的用户，当你需要在[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)中使用 {{cssxref("&lt;length&gt;")}} 时，请使用 [`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 单位。
 
 [`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 的效果会更好。
 
@@ -227,7 +227,7 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 }
 ```
 
-更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)。
+更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)。
 
 ## 规范
 
@@ -239,7 +239,7 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)
 - 在 JavaScript 中，可以通过 CSS 对象模型接口 {{domxref("CSSMediaRule")}} 访问 `@media`。
 - [扩展的 Mozilla 媒体特性](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions#媒体特性)
 - [扩展的 WebKit 媒体特性](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions#媒体特性)

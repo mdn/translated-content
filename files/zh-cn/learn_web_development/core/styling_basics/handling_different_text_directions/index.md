@@ -70,7 +70,7 @@ h1 {
 
 ## 书写模式、块级布局和行级布局
 
-我们已经讨论了[块级布局和行级布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)，以及有些东西显示为块级元素，有些显示为行级元素。如上文所述，区块元素和行内元素与文档的书写模式有关，而与物理屏幕无关。只有在使用横向显示文本的书写模式（如英语）时，才会从页面顶部到底部显示块元素。
+我们已经讨论了[块级布局和行级布局](/zh-CN/docs/Web/CSS/Guides/Display/Block_and_inline_layout)，以及有些东西显示为块级元素，有些显示为行级元素。如上文所述，区块元素和行内元素与文档的书写模式有关，而与物理屏幕无关。只有在使用横向显示文本的书写模式（如英语）时，才会从页面顶部到底部显示块元素。
 
 用一个例子可以更清楚地说明这一点。下一个例子中有两个盒子，分别包含一个标题和一个段落。第一个盒子应用的是 `writing-mode: horizontal-tb`，这是一个从上到下的横向的书写模式。第二个盒子应用的是 `writing-mode: vertical-rl`，这是一个从右到左的纵向的书写模式。
 
@@ -287,7 +287,7 @@ h2 {
 
 {{EmbedLiveSample("logical-mbp", "", "200px")}}
 
-如果考虑到所有单独的边框完整表述，属性的数量是非常庞大的，你可以在[逻辑属性和逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values) MDN 页面上看到所有映射的属性。
+如果考虑到所有单独的边框完整表述，属性的数量是非常庞大的，你可以在[逻辑属性和逻辑值](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values) MDN 页面上看到所有映射的属性。
 
 ### 逻辑值
 

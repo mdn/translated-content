@@ -47,7 +47,7 @@ flex-wrap: wrap-reverse;
 }
 ```
 
-参考 [flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) 查看更多的属性和信息。
+参考 [flex 布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) 查看更多的属性和信息。
 
 ## 语法
 
@@ -170,5 +170,5 @@ flex-wrap: unset;
 
 ## 参见
 
-- CSS 弹性盒子指南：[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- CSS 弹性盒子指南：[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- CSS 弹性盒子指南：[flex 布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- CSS 弹性盒子指南：[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)

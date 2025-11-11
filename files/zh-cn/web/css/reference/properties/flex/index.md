@@ -3,7 +3,7 @@ title: flex
 slug: Web/CSS/Reference/Properties/flex
 ---
 
-`flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
+`flex` [CSS 简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
 
 {{InteractiveExample("CSS Demo: flex")}}
 
@@ -296,5 +296,5 @@ flex.addEventListener("click", function () {
 
 ## 参见
 
-- CSS Flexbox 指南：_[Flexbox 基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox 指南：_[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- CSS Flexbox 指南：_[Flexbox 基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS Flexbox 指南：_[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)_

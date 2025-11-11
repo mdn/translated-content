@@ -326,7 +326,7 @@ body {
 
 ### 设置 break-inside
 
-我们可以使用 [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_fragmentation) 中声明的属性控制这一特性。这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 `.card` 上添加属性{{cssxref("break-inside")}}，并设值 `avoid` 。`.card` 是标题和文本的容器，我们不想拆开这个盒子。
+我们可以使用 [CSS Fragmentation](/zh-CN/docs/Web/CSS/Guides/Fragmentation) 中声明的属性控制这一特性。这份规范提供了一些属性来控制 multicol 和多页媒体中的内容拆分、折断。比如，在规则 `.card` 上添加属性{{cssxref("break-inside")}}，并设值 `avoid` 。`.card` 是标题和文本的容器，我们不想拆开这个盒子。
 
 现阶段，增加旧属性 `page-break-inside: avoid` 能够获得更好的浏览器支持。
 
@@ -450,5 +450,5 @@ body {
 
 ## 参考
 
-- [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_fragmentation)
-- [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [CSS Fragmentation](/zh-CN/docs/Web/CSS/Guides/Fragmentation)
+- [Using multi-column layouts](/zh-CN/docs/Web/CSS/Guides/Multicol_layout/Using)

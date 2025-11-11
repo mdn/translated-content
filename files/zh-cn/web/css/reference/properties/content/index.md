@@ -282,7 +282,7 @@ li {
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{glossary("Replaced elements", "可替换元素")}}
-- [CSS 生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)模块
-- [CSS 列表和计数器](/zh-CN/docs/Web/CSS/CSS_lists)模块
+- [CSS 生成内容](/zh-CN/docs/Web/CSS/Guides/Generated_content)模块
+- [CSS 列表和计数器](/zh-CN/docs/Web/CSS/Guides/Lists)模块
 
 - 浏览器无障碍面板：[Firefox 无障碍检查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome 无障碍面板](https://developer.chrome.google.cn/docs/devtools/accessibility/reference#pane)和 [Safari 无障碍树](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

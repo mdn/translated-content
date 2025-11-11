@@ -3,7 +3,7 @@ title: place-items
 slug: Web/CSS/Reference/Properties/place-items
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，它允许你在相关的布局（如[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）中可以同时沿着块级和内联方向对齐元素（例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性）。如果未提供第二个值，则第一个值作为第二个值的默认值。
+[CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties) ，它允许你在相关的布局（如[网格](/zh-CN/docs/Web/CSS/Guides/Grid_layout)或[弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)）中可以同时沿着块级和内联方向对齐元素（例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性）。如果未提供第二个值，则第一个值作为第二个值的默认值。
 
 {{InteractiveExample("CSS Demo: place-items")}}
 
@@ -283,10 +283,10 @@ display.addEventListener("change", function (evt) {
 
 ## 参见
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/Guides/Box_alignment)
 - The {{CSSxRef("align-items")}} property
 - The {{CSSxRef("align-self")}} property
 - The {{CSSxRef("justify-items")}} property

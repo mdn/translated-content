@@ -5,9 +5,9 @@ l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
+[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)。
 
-形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
+形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
 {{InteractiveExample("CSS Demo: display")}}
 
@@ -140,7 +140,7 @@ display: unset;
 > }
 > ```
 >
-> 参见 [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display)，以获得更多信息。
+> 参见 [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)，以获得更多信息。
 
 ### 内部表现
 
@@ -151,16 +151,16 @@ display: unset;
 
         如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个区块或者行级格式上下文，那么它将生成一个行级盒子。否则它将生成一个块容器盒。
 
-        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到区块或者行级格式化上下文，它要么为它的内容建立新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
+        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到区块或者行级格式化上下文，它要么为它的内容建立新的[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
 
     - `flow-root`
-      - : 该元素生成一个块级元素盒，其会建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，定义格式化上下文的根元素。
+      - : 该元素生成一个块级元素盒，其会建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)，定义格式化上下文的根元素。
     - `table`
       - : 该元素的行为类似于 HTML 中的 {{HTMLElement("table")}} 元素。它定义了一个块级别的盒子。
     - `flex`
-      - : 该元素的行为类似块级元素并且根据[弹性盒模型](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)布局它的内容。
+      - : 该元素的行为类似块级元素并且根据[弹性盒模型](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)布局它的内容。
     - `grid`
-      - : 该元素的行为类似块级元素并且根据[网格模型](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)布局它的内容。
+      - : 该元素的行为类似块级元素并且根据[网格模型](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)布局它的内容。
     - `ruby`
       - : 该元素的行为类似行级元素并且根据 ruby 格式化模型布局它的内容。它的行为像关联的 HTML 的 {{HTMLElement("ruby")}} 元素。
 
@@ -243,7 +243,7 @@ display: unset;
 
 ### 你现在应该使用什么语法？
 
-[CSS display 模块](/zh-CN/docs/Web/CSS/CSS_display)描述了多关键字语法，你可以使用 `display` 属性明确地定义**外部**和**内部** display 值。支持单个关键字值（预组合 `<display-legacy>` 值）以实现向后兼容性。
+[CSS display 模块](/zh-CN/docs/Web/CSS/Guides/Display)描述了多关键字语法，你可以使用 `display` 属性明确地定义**外部**和**内部** display 值。支持单个关键字值（预组合 `<display-legacy>` 值）以实现向后兼容性。
 
 例如，你可以按以下方式使用两个值指定一个行级的弹性容器：
 
@@ -261,7 +261,7 @@ display: unset;
 }
 ```
 
-有关规范中的这些更改的更多信息，请参考指南 [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
+有关规范中的这些更改的更多信息，请参考指南 [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)。
 
 ### 全局值
 
@@ -278,42 +278,42 @@ display: unset;
 
 ### 多关键字值
 
-- [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
+- [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/Guides/Display/Multi-keyword_syntax)。
 
 ### CSS 流式布局（display: block、display: inline）
 
-- [常规流中的块向和行向布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
-- [流布局和书写模式](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [常规流中的块向和行向布局](/zh-CN/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [流布局和溢出](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout_and_overflow)
+- [流布局和书写模式](/zh-CN/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
+- [格式化上下文简介](/zh-CN/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [应用或脱离流式布局](/zh-CN/docs/Web/CSS/Guides/Display/In_flow_and_out_of_flow)
 
 ### display: flex
 
-- [弹性盒基础概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [弹性元素排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-- [弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [弹性盒的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [弹性盒基础概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
+- [掌握弹性物件的包装](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- [弹性元素排序](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
+- [弹性盒的典型用例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
 
 ### display: grid
 
-- [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [网格布局和其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [基于线的定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [网格模板区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [利用网格布局实现常用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [网格布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [网格布局和其他布局方法的联系](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [基于线的定位](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [网格模板区域](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [使用命名线布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
+- [网格布局中的自动定位](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
+- [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Accessibility)
+- [利用网格布局实现常用布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 ### display 动画
 
-[支持的浏览器](#浏览器兼容性)使用[离散的动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#离散)设置 `display` 动画。这通常意味着，属性的值将在动画播放到 `50%` 时在两个值之间切换。
+[支持的浏览器](#浏览器兼容性)使用[离散的动画类型](/zh-CN/docs/Web/CSS/Guides/Animations/Animatable_properties#离散)设置 `display` 动画。这通常意味着，属性的值将在动画播放到 `50%` 时在两个值之间切换。
 
 有一个例外，那就是将 `display: none` 设置为动画的开始或结束。这种情况下，浏览器会在这两个值之间切换，以便于在整个动画持续时间内显示动画内容。例如：
 
@@ -322,9 +322,9 @@ display: unset;
 
 此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity) 将其淡出（而不是立即消失）。
 
-在使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
+在使用 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)。
 
-在使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)为 `display` 设置动画时，需要两个额外的附加条件：
+在使用 [CSS 过渡](/zh-CN/docs/Web/CSS/Guides/Transitions)为 `display` 设置动画时，需要两个额外的附加条件：
 
 - [`@starting-style`](/zh-CN/docs/Web/CSS/Reference/At-rules/@starting-style) 提供了要从第一次显示动画元素时开始过渡的属性的起始值。这是避免意外行为所必需的。默认情况下，CSS 过渡不会在元素的第一次样式更新时触发，也不会在 `display` 类型从 `none` 更改为另一种类型时触发。
 - [`transition-behavior: allow-discrete`](/zh-CN/docs/Web/CSS/Reference/Properties/transition-behavior) 需要在 {{cssxref("transition-property")}} 声明上设置，已启用 `display` 过渡。
@@ -478,7 +478,7 @@ updateDisplay();
 
 ## 参见
 
-- [常规流中的块向和行向布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [常规流中的块向和行向布局](/zh-CN/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
+- [格式化上下文简介](/zh-CN/docs/Web/CSS/Guides/Display/Formatting_contexts)
 - {{CSSxRef("visibility")}}、{{CSSxRef("float")}}、{{CSSxRef("position")}}
 - {{CSSxRef("grid")}}、{{CSSxRef("flex")}}

@@ -76,9 +76,9 @@ h2 {
 > [!NOTE]
 > 为此属性使用 `layout`、`paint`、`strict` 或 `content` 值将创建：
 >
-> 1. 新的[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `fixed` 的后代元素）。
-> 2. 新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。
-> 3. 新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。
+> 1. 新的[包含区块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `fixed` 的后代元素）。
+> 2. 新的[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。
+> 3. 新的[区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)。
 
 ## 语法
 
@@ -236,7 +236,7 @@ div {
 
 ### 样式局限
 
-样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/Reference/Properties/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
+样式局限将[计数器](/zh-CN/docs/Web/CSS/Guides/Counter_styles/Using_counters)和[引号](/zh-CN/docs/Web/CSS/Reference/Properties/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
 
 #### 局限与计数器
 
@@ -316,7 +316,7 @@ body {
 
 ## 参见
 
-- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
-- [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_queries)
+- [CSS 局限](/zh-CN/docs/Web/CSS/Guides/Containment)
+- [CSS 容器查询](/zh-CN/docs/Web/CSS/Guides/Containment/Container_queries)
 - CSS 属性 {{CSSXref("content-visibility")}}
 - CSS 属性 {{CSSXref("position")}}

@@ -164,5 +164,5 @@ body {
 - {{cssxref("filter")}}
 - {{cssxref("&lt;filter-function&gt;")}}
 - {{cssxref("background-blend-mode")}}、{{cssxref("mix-blend-mode")}}
-- [CSS 滤镜效果](/zh-CN/docs/Web/CSS/CSS_filter_effects)
-- [CSS 合成与混合](/zh-CN/docs/Web/CSS/CSS_compositing_and_blending)
+- [CSS 滤镜效果](/zh-CN/docs/Web/CSS/Guides/Filter_effects)
+- [CSS 合成与混合](/zh-CN/docs/Web/CSS/Guides/Compositing_and_blending)

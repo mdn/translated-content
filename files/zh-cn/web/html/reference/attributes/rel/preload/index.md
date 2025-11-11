@@ -145,7 +145,7 @@ slug: Web/HTML/Reference/Attributes/rel/preload
 
 ## 包括 media
 
-`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，让你可以进行响应式的预加载！
+`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)，让你可以进行响应式的预加载！
 
 让我们来看一个例子（在 GitHub 上查看，包括[源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)和[在线示例](https://mdn.github.io/html-examples/link-rel-preload/media/)）：
 
@@ -185,7 +185,7 @@ slug: Web/HTML/Reference/Attributes/rel/preload
 </body>
 ```
 
-我们在 `<link>` 元素上包含 `media` 属性，以便在用户的视口较窄时预加载窄图像，在视口较宽时加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（查看[测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)以获取更多信息）。
+我们在 `<link>` 元素上包含 `media` 属性，以便在用户的视口较窄时预加载窄图像，在视口较宽时加载宽图像。我们使用 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} 来实现这一点（查看[测试媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Testing)以获取更多信息）。
 
 这使得字体在页面渲染时更有可能可用，减少了 FOUT（未经样式处理的文本闪烁）。
 

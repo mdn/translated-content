@@ -62,7 +62,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
     media="screen and (max-width: 480px)" />
   ```
 
-  上面的示例提供了三组样式——始终会加载的默认样式、只有在打印文档时才会加载的样式，以及仅在窄屏设备上加载的样式。默认情况下，浏览器会假设每个指定的样式表都会阻塞渲染。你可以通过添加包含[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的 `media` 属性来告诉浏览器何时应用样式表。当浏览器看到只需要在特定情况下应用的样式表时，它仍然会下载样式表，但不会阻塞渲染。通过将 CSS 拆分为多个文件，主要的渲染阻塞文件（在本例中为 `styles.css`）会小得多，从而减少渲染阻塞的时间。
+  上面的示例提供了三组样式——始终会加载的默认样式、只有在打印文档时才会加载的样式，以及仅在窄屏设备上加载的样式。默认情况下，浏览器会假设每个指定的样式表都会阻塞渲染。你可以通过添加包含[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)的 `media` 属性来告诉浏览器何时应用样式表。当浏览器看到只需要在特定情况下应用的样式表时，它仍然会下载样式表，但不会阻塞渲染。通过将 CSS 拆分为多个文件，主要的渲染阻塞文件（在本例中为 `styles.css`）会小得多，从而减少渲染阻塞的时间。
 
 - **最小化和压缩你的 CSS**：最小化包括在代码进入生产环境后，在文件中删除仅为了人类可读性而存在的所有空格。通过对 CSS 进行最小化，你可以大大减少加载时间。通常，最小化是作为构建过程的一部分进行的（例如，大多数 JavaScript 框架在构建项目准备部署时会对代码进行最小化）。除了最小化之外，还要确保你的站点所在的服务器在提供文件之前对文件使用诸如 gzip 的压缩。
 
@@ -125,7 +125,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 最简单的建议是减少所有不必要的动画。你还可以为用户提供一个控件/站点选项，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。你还可以使用 JavaScript 来控制页面是否应用动画。还有一个名为 [`prefers-reduced-motion`](/zh-CN/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) 的媒体查询，可以根据用户对动画的操作系统级偏好选择性地提供动画样式。
 
-对于必要的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种直接使用 JavaScript 连接到 CSS 动画的方法）。
+对于必要的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种直接使用 JavaScript 连接到 CSS 动画的方法）。
 
 ### 选择要进行动画处理的属性
 
@@ -140,7 +140,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 如果可以的话，最好对不会引起回流/重绘的属性进行动画处理。这包括：
 
-- [变换](/zh-CN/docs/Web/CSS/CSS_transforms)
+- [变换](/zh-CN/docs/Web/CSS/Guides/Transforms)
 - [`opacity`](/zh-CN/docs/Web/CSS/Reference/Properties/opacity)
 - [`filter`](/zh-CN/docs/Web/CSS/Reference/Properties/filter)
 
@@ -148,7 +148,7 @@ slug: Learn_web_development/Extensions/Performance/CSS
 
 为了进一步提高性能，你应该考虑将动画处理工作转移到主线程之外，并放到设备的 GPU 上进行（也称为合成（compositing））。这可以通过选择特定类型的动画来实现，浏览器会自动将这些动画发送到 GPU 来处理。包括：
 
-- 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/Reference/Properties/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)。
+- 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/Reference/Properties/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/Reference/Values/transform-function/rotate3d)。
 - 具有某些其他属性动画的元素，例如 [`position: fixed`](/zh-CN/docs/Web/CSS/Reference/Properties/position)。
 - 应用了 [`will-change`](/zh-CN/docs/Web/CSS/Reference/Properties/will-change) 的元素（请参阅下面的小节）。
 - 特定的在其自己层中渲染的元素，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 和 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)。
@@ -186,7 +186,7 @@ CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对�
   media="screen and (max-width: 480px)" />
 ```
 
-默认情况下，浏览器假设每个指定的样式表都会阻塞渲染。通过添加具有[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的 `media` 属性告诉浏览器样式表应该何时应用。当浏览器看到一个样式表时，它会知道它只需要将其应用于特定的情况，它仍然会下载样式表，但不会阻塞渲染。通过将 CSS 拆分为多个文件，主要的阻塞渲染文件（在本例中是 `styles.css`）会变得更小，从而减少了渲染阻塞的时间。
+默认情况下，浏览器假设每个指定的样式表都会阻塞渲染。通过添加具有[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries/Using)的 `media` 属性告诉浏览器样式表应该何时应用。当浏览器看到一个样式表时，它会知道它只需要将其应用于特定的情况，它仍然会下载样式表，但不会阻塞渲染。通过将 CSS 拆分为多个文件，主要的阻塞渲染文件（在本例中是 `styles.css`）会变得更小，从而减少了渲染阻塞的时间。
 
 ## 改善字体性能
 
@@ -261,7 +261,7 @@ h3 {
 
 ### 使用 CSS 局限优化样式重新计算
 
-通过使用 [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)模块中定义的属性，你可以指示浏览器将页面的不同部分隔离开来，并独立地优化它们的渲染。这允许在渲染各个部分时提高性能。例如，你可以指定浏览器在特定容器于视口中可见之前不要渲染它们。
+通过使用 [CSS 局限](/zh-CN/docs/Web/CSS/Guides/Containment)模块中定义的属性，你可以指示浏览器将页面的不同部分隔离开来，并独立地优化它们的渲染。这允许在渲染各个部分时提高性能。例如，你可以指定浏览器在特定容器于视口中可见之前不要渲染它们。
 
 `contain` 属性允许作者精确指定要应用于页面上各个容器的局限类型。这使得浏览器可以针对 DOM 的一部分重新计算布局、样式、绘制、大小或它们的任意组合。
 

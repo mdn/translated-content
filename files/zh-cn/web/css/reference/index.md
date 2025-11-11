@@ -3,7 +3,7 @@ title: CSS 参考
 slug: Web/CSS/Reference
 ---
 
-使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/Reference/Values/Data_types)、[功能表记](/zh-CN/docs/Web/CSS/Reference/Values/Functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -41,11 +41,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
+有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
 
 ### @规则语法
 
-由于 @规则间的结构变化很大，请参阅 [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)以找到你所想要的特定规则语法。
+由于 @规则间的结构变化很大，请参阅 [@规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)以找到你所想要的特定规则语法。
 
 ## 索引
 
@@ -56,11 +56,11 @@ div.menu-bar li:hover > ul {
 
 ## 选择器
 
-以下是一些[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
+以下是一些[选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)的列表，它们允许根据 DOM 内元素的各种特征对样式进行条件限制。
 
 ### 基本选择器
 
-[基本选择器](/zh-CN/docs/Web/CSS/CSS_selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
+[基本选择器](/zh-CN/docs/Web/CSS/Guides/Selectors#基本选择器)是选择器中最初级的，通常由它们的组合构成其他更复杂的选择器。
 
 - [通配选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Universal_selectors) `*`
 - [元素选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`（元素名称）
@@ -103,37 +103,37 @@ div.menu-bar li:hover > ul {
 
 ### 语法和语义
 
-- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-- [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rules)
-- [层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
-- [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+- [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+- [@ 规则](/zh-CN/docs/Web/CSS/Guides/Syntax/At-rules)
+- [层叠](/zh-CN/docs/Web/CSS/Guides/Cascade/Introduction)
+- [注释](/zh-CN/docs/Web/CSS/Guides/Syntax/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
-- [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-- [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-- [值定义语法](/zh-CN/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
-- [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/CSS_values_and_units)
-- [CSS 函数表记](/zh-CN/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [继承](/zh-CN/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- [优先级](/zh-CN/docs/Web/CSS/Guides/Cascade/Specificity)
+- [值定义语法](/zh-CN/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/Guides/Values_and_units)
+- [CSS 函数表记](/zh-CN/docs/Web/CSS/Reference/Values/Functions)
 
 ### 值
 
-- [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-- [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-- [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-- [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
-- [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
-- [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
+- [实际值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#实际值)
+- [计算值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#计算值)
+- [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)
+- [解析值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#解析值)
+- [指定值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#指定值)
+- [应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)
 
 ### 布局
 
-- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [盒模型](/zh-CN/docs/Web/CSS/Guides/Box_model/Introduction)
+- [包含块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)
 - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-- [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [外边距合并](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [可替换元素](/zh-CN/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+- [层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

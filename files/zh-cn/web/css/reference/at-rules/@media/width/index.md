@@ -3,7 +3,7 @@ title: width
 slug: Web/CSS/Reference/At-rules/@media/width
 ---
 
-可以使用 `width` [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@media")}} 基于{{glossary("viewport", "视口")}}宽度（或页面框，用于[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)）应用样式。
+可以使用 `width` [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@media")}} 基于{{glossary("viewport", "视口")}}宽度（或页面框，用于[分页媒体](/zh-CN/docs/Web/CSS/Guides/Paged_media)）应用样式。
 
 ## 语法
 

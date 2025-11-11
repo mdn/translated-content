@@ -515,4 +515,4 @@ tbody tr :nth-child(3) {
 - {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
 - {{ Cssxref(":has", ":has()") }}：用于选择父元素的伪类
 - [树结构的伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes#树结构的伪类)
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)模块

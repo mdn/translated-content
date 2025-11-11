@@ -53,4 +53,4 @@ body {
 
 ## See also
 
-- [Guide to scroll anchoring](/zh-CN/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [Guide to scroll anchoring](/zh-CN/docs/Web/CSS/Guides/Scroll_anchoring/Overview)

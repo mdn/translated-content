@@ -220,7 +220,7 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Refer
 
 ### content-visibility: auto 值
 
-如果内容[不与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)，[`content-visibility`](/zh-CN/docs/Web/CSS/Reference/Properties/content-visibility) CSS 属性值 `auto` 允许跳过渲染。（详见 [Firefox bug 1798485](https://bugzil.la/1798485)）。
+如果内容[不与用户相关](/zh-CN/docs/Web/CSS/Guides/Containment#与用户相关)，[`content-visibility`](/zh-CN/docs/Web/CSS/Reference/Properties/content-visibility) CSS 属性值 `auto` 允许跳过渲染。（详见 [Firefox bug 1798485](https://bugzil.la/1798485)）。
 
 <table>
   <thead>
@@ -258,11 +258,11 @@ HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Refer
   </tbody>
 </table>
 
-请注意，相关的 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件和相关的 {{domxref("ContentVisibilityAutoStateChangeEvent")}} 接口是在版本 110 中添加的，并由相同的首选项控制。应用程序代码可使用这些特性监控可见性变化，并在用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其中内容)时停止与渲染元素相关的进程。（详见 [Firefox bug 1791759](https://bugzil.la/1791759)。）
+请注意，相关的 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件和相关的 {{domxref("ContentVisibilityAutoStateChangeEvent")}} 接口是在版本 110 中添加的，并由相同的首选项控制。应用程序代码可使用这些特性监控可见性变化，并在用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/Guides/Containment#跳过其中内容)时停止与渲染元素相关的进程。（详见 [Firefox bug 1791759](https://bugzil.la/1791759)。）
 
 ### 在媒体查询中将单个数字作为纵横比
 
-在为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)指定宽高比时，支持将单个 {{cssxref("number")}} 用作 {{cssxref("ratio")}} 。（详见 [Firefox bug 1565562](https://bugzil.la/1565562)）。
+在为[媒体查询](/zh-CN/docs/Web/CSS/Guides/Media_queries)指定宽高比时，支持将单个 {{cssxref("number")}} 用作 {{cssxref("ratio")}} 。（详见 [Firefox bug 1565562](https://bugzil.la/1565562)）。
 
 <table>
   <thead>
@@ -386,7 +386,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### Masonry grid 布局
 
-新增对基于网格布局的 [masonry 风格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Masonry_layout)的支持，其中一个轴为 masonry 布局，另一个轴为普通网格布局。这样，开发人员就能像在 Pinterest 上一样轻松创建画廊风格的布局。更多详情，请参阅 [Firefox bug 1607954](https://bugzil.la/1607954)。
+新增对基于网格布局的 [masonry 风格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)的支持，其中一个轴为 masonry 布局，另一个轴为普通网格布局。这样，开发人员就能像在 Pinterest 上一样轻松创建画廊风格的布局。更多详情，请参阅 [Firefox bug 1607954](https://bugzil.la/1607954)。
 
 <table>
   <thead>
@@ -468,7 +468,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### 滚动驱动的动画
 
-滚动驱动动画早先被称为“滚动链接动画”，它取决于滚动条的滚动位置，而不是时间或其他维度。通过 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性（以及 {{cssxref('scroll-timeline')}} 速记属性），你可以指定特定命名容器中的特定滚动条作为滚动驱动动画的源。然后，通过将 {{cssxref('animation-timeline')}} 属性设置为使用 `scroll-timeline-name` 定义的名称值，可以将滚动时间轴与[动画](/zh-CN/docs/Web/CSS/CSS_animations)关联。
+滚动驱动动画早先被称为“滚动链接动画”，它取决于滚动条的滚动位置，而不是时间或其他维度。通过 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性（以及 {{cssxref('scroll-timeline')}} 速记属性），你可以指定特定命名容器中的特定滚动条作为滚动驱动动画的源。然后，通过将 {{cssxref('animation-timeline')}} 属性设置为使用 `scroll-timeline-name` 定义的名称值，可以将滚动时间轴与[动画](/zh-CN/docs/Web/CSS/Guides/Animations)关联。
 
 使用 {{cssxref('scroll-timeline')}} 速记属性时，属性值的顺序必须是 {{cssxref('scroll-timeline-name')}} 后跟 {{cssxref('scroll-timeline-axis')}}。完整属性和速记属性均可在首选项后面使用。
 
@@ -594,7 +594,7 @@ CSS {{cssxref("ray")}} 函数是定义 {{cssxref("offset-path")}} 的一种方�
 
 ### round() 数学函数
 
-CSS [`round()`](/zh-CN/docs/Web/CSS/round) 函数是一个数学函数，可根据选定的舍入策略对数字（或表达式的结果）进行舍入。详情请参见 [Firefox bug 1764850](https://bugzil.la/1764850)。
+CSS [`round()`](/zh-CN/docs/Web/CSS/Reference/Values/round) 函数是一个数学函数，可根据选定的舍入策略对数字（或表达式的结果）进行舍入。详情请参见 [Firefox bug 1764850](https://bugzil.la/1764850)。
 
 <table>
   <thead>
@@ -915,7 +915,7 @@ CSS {{cssxref("offset-position")}} 属性定义了元素在路径上的初始位
 
 ### abs() 和 sign() 数学函数
 
-CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 数学函数允许你分别获取参数的绝对值和符号。详情请参见 [Firefox bug 1814588](https://bugzil.la/1814588) 和 [Firefox bug 1814589](https://bugzil.la/1814589)。
+CSS [`abs()`](/zh-CN/docs/Web/CSS/Reference/Values/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/Reference/Values/sign) 数学函数允许你分别获取参数的绝对值和符号。详情请参见 [Firefox bug 1814588](https://bugzil.la/1814588) 和 [Firefox bug 1814589](https://bugzil.la/1814589)。
 
 <table>
   <thead>
@@ -957,7 +957,7 @@ CSS [`abs()`](/zh-CN/docs/Web/CSS/abs) 和 [`sign()`](/zh-CN/docs/Web/CSS/sign) 
 
 ### rect() 和 xywh() 基本图形函数
 
-通过 CSS [`rect()`](/zh-CN/docs/Web/CSS/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/basic-shape/xywh) 形状函数，你可以使用 [`<basic-shape>`](/zh-CN/docs/Web/CSS/basic-shape) 数据类型定义矩形。在 CSS 属性（如 {{cssxref("offset-path")}}）中，这些函数用于定义元素移动路径的形状。使用 `rect()` 函数，可以指定矩形边缘与包含块的顶部边缘和左侧边缘的偏移量。使用 `xywh()` 函数，可以指定矩形边缘与包含块的左边缘和顶边缘的偏移量，以及矩形的宽度和高度。在这两个函数中，都可以选择对边角进行舍入。有关详细信息，请参阅 `rect()` 函数的 [Firefox bug 1786161](https://bugzil.la/1786161) 和 `xywh()` 函数的 [Firefox bug 1786160](https://bugzil.la/1786160)。
+通过 CSS [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/rect) 和 [`xywh()`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape/xywh) 形状函数，你可以使用 [`<basic-shape>`](/zh-CN/docs/Web/CSS/Reference/Values/basic-shape) 数据类型定义矩形。在 CSS 属性（如 {{cssxref("offset-path")}}）中，这些函数用于定义元素移动路径的形状。使用 `rect()` 函数，可以指定矩形边缘与包含块的顶部边缘和左侧边缘的偏移量。使用 `xywh()` 函数，可以指定矩形边缘与包含块的左边缘和顶边缘的偏移量，以及矩形的宽度和高度。在这两个函数中，都可以选择对边角进行舍入。有关详细信息，请参阅 `rect()` 函数的 [Firefox bug 1786161](https://bugzil.la/1786161) 和 `xywh()` 函数的 [Firefox bug 1786160](https://bugzil.la/1786160)。
 
 <table>
   <thead>

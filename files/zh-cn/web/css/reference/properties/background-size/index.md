@@ -205,6 +205,6 @@ background-size: unset;
 
 ## 参见
 
-- [调整背景图片的大小](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [SVG 背景缩放](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [调整背景图片的大小](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [SVG 背景缩放](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
 - {{cssxref("object-fit")}}

@@ -3,7 +3,7 @@ title: width
 slug: Web/CSS/Reference/Properties/width
 ---
 
-The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area).
+The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/Guides/Box_model/Introduction#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/Guides/Box_model/Introduction#border-area).
 
 ```css
 /* <length> values */
@@ -316,6 +316,6 @@ p.minblue {
 
 {{Compat}}
 
-## 參考
+## 參見
 
-- [box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [box model](/zh-TW/docs/Web/CSS/Guides/Box_model/Introduction), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

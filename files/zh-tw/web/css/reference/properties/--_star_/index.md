@@ -81,5 +81,5 @@ l10n:
 
 - {{cssxref("var", "var()")}} 函數
 - {{cssxref("@property")}} @ 規則
-- [使用 CSS 自訂屬性（變數）](/zh-TW/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)指南
-- [CSS 自訂屬性用於層疊變數](/zh-TW/docs/Web/CSS/CSS_cascading_variables)模組
+- [使用 CSS 自訂屬性（變數）](/zh-TW/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)指南
+- [CSS 自訂屬性用於層疊變數](/zh-TW/docs/Web/CSS/Guides/Cascading_variables)模組

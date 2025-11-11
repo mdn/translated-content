@@ -123,4 +123,4 @@ Color alone should not be used to convey meaning. For example, change of text an
 - 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
 - {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他与颜色相关的属性：{{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和 {{cssxref("column-rule-color")}}
-- [使用 CSS 为 HTML 设置颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用 CSS 为 HTML 设置颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)

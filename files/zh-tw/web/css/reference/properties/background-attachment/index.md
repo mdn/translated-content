@@ -165,4 +165,4 @@ p {
 
 ## 參見
 
-- [使用多重背景](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [使用多重背景](/zh-TW/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

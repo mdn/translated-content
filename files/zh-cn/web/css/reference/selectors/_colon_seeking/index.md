@@ -47,4 +47,4 @@ video:seeking {
 - {{cssxref(":playing")}}
 - {{cssxref(":stalled")}}
 - {{cssxref(":volume-locked")}}
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/Guides/Selectors)

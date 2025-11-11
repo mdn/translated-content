@@ -255,7 +255,7 @@ form {
 }
 ```
 
-请注意，我们使用了 [CSS 网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)和[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)来布局表单。这样，我们就可以轻松定位元素，包括标题和所有表单元素：
+请注意，我们使用了 [CSS 网格](/zh-CN/docs/Web/CSS/Guides/Grid_layout)和[弹性盒](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)来布局表单。这样，我们就可以轻松定位元素，包括标题和所有表单元素：
 
 ```css
 h1 {

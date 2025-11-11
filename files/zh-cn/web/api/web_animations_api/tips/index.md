@@ -11,7 +11,7 @@ CSS 动画使得你能够实现一些难以置信的效果点缀你的文档或�
 
 ## 重新播放动画
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在动画结束后，你不能直接通过将元素的 {{cssxref("animation-play-state")}} 设置为 `"running"` 来使动画重新“跑起来”。相反，你必须使用 JavaScript 来使已经停止的动画重新播放。
+[CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)的规范并没有提供使得动画重新激活的方法。在动画结束后，你不能直接通过将元素的 {{cssxref("animation-play-state")}} 设置为 `"running"` 来使动画重新“跑起来”。相反，你必须使用 JavaScript 来使已经停止的动画重新播放。
 
 这里有一种足够稳定和可靠的方法。
 
@@ -129,4 +129,4 @@ function playAnimation() {
 
 - [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - [动画接口](/zh-CN/docs/Web/API/Animation/Animation)
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
+- [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)模块

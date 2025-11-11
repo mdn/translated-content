@@ -182,7 +182,7 @@ footer {
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}
 - 网格布局指导：
-  - _[CSS 网格中基于线的定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-  - _[网格定义的简写规则](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#网格定义的简写规则)_
+  - _[CSS 网格中基于线的定位](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
+  - _[网格定义的简写规则](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#网格定义的简写规则)_
 
 - 视频教程：_ [Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

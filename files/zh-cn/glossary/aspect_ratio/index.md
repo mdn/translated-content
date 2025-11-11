@@ -41,8 +41,8 @@ myTrack.applyConstraints(constraints);
 ## 参见
 
 - CSS {{cssxref("aspect-ratio")}} 属性
-- [理解纵横比](/zh-CN/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)教程
-- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
+- [理解纵横比](/zh-CN/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)教程
+- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块
 - 相关术语：
   - {{glossary("intrinsic size", "固有尺寸")}}
 - CSS {{cssxref("min-content")}}、{{cssxref("max-content")}} 和 {{cssxref("fit-content")}} 属性值

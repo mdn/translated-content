@@ -45,9 +45,9 @@ background:
 }
 ```
 
-此属性是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}} 和 {{cssxref("background-attachment")}}。
+此属性是一个[简写属性](/zh-CN/docs/Web/CSS/Guides/Cascade/Shorthand_properties)，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}} 和 {{cssxref("background-attachment")}}。
 
-对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#初始值)。
 
 ## 语法
 
@@ -147,5 +147,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## 参见
 
 - {{ cssxref("-moz-background-size") }}, {{ cssxref("-moz-background-inline-policy") }}
-- [使用渐变背景](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [多重背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [使用渐变背景](/zh-CN/docs/Web/CSS/Guides/Images/Using_gradients)
+- [多重背景](/zh-CN/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

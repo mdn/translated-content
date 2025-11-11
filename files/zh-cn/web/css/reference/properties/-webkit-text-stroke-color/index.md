@@ -3,7 +3,7 @@ title: -webkit-text-stroke-color
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
 ---
 
-CSS 属性 **`-webkit-text-stroke-color`** 指定了文本字符的笔触[颜色](/zh-CN/docs/Web/CSS/color_value)。若未设置此属性，则使用 {{CSSXref("color")}} 属性的值。
+CSS 属性 **`-webkit-text-stroke-color`** 指定了文本字符的笔触[颜色](/zh-CN/docs/Web/CSS/Reference/Values/color_value)。若未设置此属性，则使用 {{CSSXref("color")}} 属性的值。
 
 ```css
 /* 颜色值 */

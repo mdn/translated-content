@@ -3,7 +3,7 @@ title: contain-intrinsic-inline-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-inline-size
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values) **`contain-intrinsic-inline-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素行向尺寸。
+[CSS](/zh-CN/docs/Web/CSS) [逻辑属性](/zh-CN/docs/Web/CSS/Guides/Logical_properties_and_values) **`contain-intrinsic-inline-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/Guides/Containment#尺寸局限)时浏览器用于布局的元素行向尺寸。
 
 行向尺寸为元素在平行于行内文本流的方向上的尺寸。在如标准英文等横向{{CSSXref("writing-mode", "书写模式")}}中，行向尺寸为横向尺度（宽度）；在纵向书写模式中，行向尺寸为纵向尺度。
 

@@ -3,7 +3,7 @@ title: overflow-inline
 slug: Web/CSS/Reference/At-rules/@media/overflow-inline
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media_features) **`overflow-inline`** 可用于测试输出设备如何处理沿行向轴溢出初始[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的内容。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Reference/At-rules/@media#media_features) **`overflow-inline`** 可用于测试输出设备如何处理沿行向轴溢出初始[包含区块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block)的内容。
 
 ## 语法
 
