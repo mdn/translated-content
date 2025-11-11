@@ -1,9 +1,9 @@
 ---
 title: CSS セレクター
+short-title: セレクター
 slug: Web/CSS/Guides/Selectors
-original_slug: Web/CSS/CSS_selectors
 l10n:
-  sourceCommit: bc761c19c07b875eb889d4aad87b18d8443da339
+  sourceCommit: 11d748f9e217b6a9fd16291d7815a6f803f0136d
 ---
 
 **CSS セレクター**モジュールは、要素を選択するパターンを定義し、一連の CSS ルールをその[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)とともに適用します。 CSS セレクターモジュールには、 60 以上のセレクターと 5 つの結合子が用意されています。[他のモジュール](#関連概念)は、さらに擬似クラスセレクターと擬似要素が提供されています。
@@ -88,14 +88,14 @@ CSS セレクターモジュールでは、[列結合子](/ja/docs/Web/CSS/Refer
 - {{CSSXref(":visited")}}
 - {{CSSXref(":volume-locked")}}
 - {{CSSXref(":where", ":where()")}}
-- [`:-webkit-` 擬似クラス](/ja/docs/Web/CSS/Reference/Webkit_extensions#pseudo-classes)
+- [`:-webkit-` 擬似クラス](/ja/docs/Web/CSS/Reference/Webkit_extensions#擬似クラス)
 - [属性セレクター](/ja/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
 - [クラスセレクター](/ja/docs/Web/CSS/Reference/Selectors/Class_selectors)
 - [ID セレクター](/ja/docs/Web/CSS/Reference/Selectors/ID_selectors)
 - [要素型セレクター](/ja/docs/Web/CSS/Reference/Selectors/Type_selectors)
 - [全称セレクター](/ja/docs/Web/CSS/Reference/Selectors/Universal_selectors)
 
-CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":current")}}、{{CSSXref(":local-link")}}、{{CSSXref(":target-within")}} の各擬似クラスも導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
+CSS セレクターモジュールは、 {{CSSXref(":blank")}}、{{CSSXref(":current")}}、{{CSSXref(":local-link")}} の各擬似クラスも導入しています。現在のところ、これらの機能に対応しているブラウザーはありません。
 
 ## 用語
 
